@@ -587,30 +587,36 @@ If the credential has a client secret that is about to expire, a new secret can 
 > [!NOTE]  
 > If you are using EKM in an availability group (AG), you will need to alter the credential and restart the SQL Server service on all nodes of the AG.
 
-## Rotating Asymmetric Key with a new AKV Key or a new AKV Key Version
+## Rotate asymmetric key with a new AKV key or a new AKV key version
 
-Currently, SQL Server doesn't have a mechanism to automatically rotate the Certificate or Asymmetric Key used for TDE.
-At high level, below are the steps to rotate Asymmetric Key manually.
+Currently, SQL Server doesn't have a mechanism to automatically rotate the certificate or asymmetric key used for TDE.
+The steps to rotate an asymmetric key manually are as follows.
 
-1. Create NEW_ASYMMETRIC_KEY pointing to same AKV key (points to most recent valid Key Version) or a new AKV key
-2. Create new TDE_LOGIN_NEW from NEW_ASYMMETRIC_KEY
-  ```sql
-   CREATE LOGIN TDE_LOGIN_NEW FROM ASYMMETRIC KEY NEW_ASYMMETRIC_KEY
-   ```
-3. Map AKV Credential to TDE_LOGIN_NEW
+1. Create NEW_ASYMMETRIC_KEY pointing to same AKV key (points to most recent valid key version) or a new AKV key.
+2. Create a new login from the new asymmetric key:
+
    ```sql
-   ALTER LOGIN TDE_Login_New
-   ADD CREDENTIAL AKV_Credential
+   CREATE LOGIN TDE_LOGIN_NEW FROM ASYMMETRIC KEY NEW_ASYMMETRIC_KEY;
    ```
-4. Alter the Database Encryption Key to re-encrypt with new Asymmetric Key
+
+3. Map AKV credential to the new login:
+
    ```sql
-   ALTER DATABASE ENCRYPTION KEY ENCRYPTION BY SERVER ASYMMETRIC KEY NEW_ASYMMETRIC_KEY
+   ALTER LOGIN TDE_LOGIN_NEW;
+   ADD CREDENTIAL AKV_Credential;
    ```
+
+4. Alter the database encryption key (DEK) to re-encrypt with the new asymmetric key:
+
+   ```sql
+   ALTER DATABASE ENCRYPTION KEY ENCRYPTION BY SERVER ASYMMETRIC KEY NEW_ASYMMETRIC_KEY;
+   ```
+
 > [!NOTE]
-> Rotating the logical TDE protector for a server means to switch to a new asymmetric key or a certificate that protects the Database Encryption Key. Key rotation is an online operation and should only take a few seconds to complete, because this only decrypts and re-encrypts the database's Database Encryption Key, not the entire database.
+> Rotating the logical TDE protector for a server means switching to a new asymmetric key or certificate that protects the database encryption key (DEK). Key rotation is an online operation and should only take a few seconds to complete, because this only decrypts and re-encrypts the DEK, not the entire database.
 
 > [!IMPORTANT]
-> Do not delete previous versions of the key after rotation. When keys are rotated, some data is still encrypted with the previous keys, such as older database backups, backed-up log files and transaction log files.
+> Don't delete previous versions of the key after rotation. When keys are rotated, some data is still encrypted with the previous keys, such as older database backups, backed-up log files, and transaction log files.
 
 ## Next steps
 

@@ -5,7 +5,7 @@ description: Learn how to analyze deadlocks and prevent them from reoccurring in
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mathoma, dfurman, wiassaf
-ms.date: 03/10/2023
+ms.date: 03/14/2023
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: conceptual
@@ -266,7 +266,7 @@ GO
 ## Cause a deadlock in AdventureWorksLT
 
 > [!NOTE]
-> This example works in the AdventureWorksLT database with the default schema and data when RCSI has been enabled. See [Create the AdventureWorksLT database](#create-the-adventureworkslt-database) for instructions to create the database.
+> This example works in the `AdventureWorksLT` database with the default schema and data when RCSI has been enabled. See [Create the AdventureWorksLT database](#create-the-adventureworkslt-database) for instructions to create the database.
 
 To cause a deadlock, you will need to connect two sessions to the `AdventureWorksLT` database. We'll refer to these sessions as **Session A** and **Session B**.
 

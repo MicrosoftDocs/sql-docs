@@ -18,7 +18,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 This article discusses deadlocks in the SQL Server Database Engine in depth. Deadlocks are caused competing, concurrent locks in the database, often in multi-step transactions. For more on transaction locking, see [Transaction locking and row versioning guide](sql-server-transaction-locking-and-row-versioning-guide.md).
 
-For more specific information on identification and prevention of deadlocks in Azure SQL Database, see [Analyze and prevent deadlocks in Azure SQL Database](/azure/azure-sql/database/analyze-prevent-deadlocks.md).
+For more specific information on identification and prevention of deadlocks in Azure SQL Database, see [Analyze and prevent deadlocks in Azure SQL Database](/azure/azure-sql/database/analyze-prevent-deadlocks).
 
 ## <a id="deadlocks"></a> Understand deadlocks
 
@@ -519,5 +519,5 @@ You can view the XML in the `Deadlock_XML` column inside SSMS, by selecting the 
 
 ## Next steps
 
-- [Analyze and prevent deadlocks in Azure SQL Database](/azure/azure-sql/database/analyze-prevent-deadlocks.md)
+- [Analyze and prevent deadlocks in Azure SQL Database](/azure/azure-sql/database/analyze-prevent-deadlocks)
 - [Open, view, and print a deadlock file in SQL Server Management Studio (SSMS)](performance/open-view-and-print-a-deadlock-file-sql-server-management-studio.md)

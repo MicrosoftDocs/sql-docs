@@ -3,8 +3,8 @@ title: CREATE TABLE (Azure Synapse Analytics)
 description: "CREATE TABLE (Azure Synapse Analytics) creates a new table in Azure Synapse Analytics or Analytics Platform System (PDW)."
 author: markingmyname
 ms.author: maghan
-ms.reviewer: vanto, xiaoyul
-ms.date: 01/25/2023
+ms.reviewer: vanto, xiaoyul, mariyaali
+ms.date: 03/14/2023
 ms.service: sql
 ms.topic: reference
 dev_langs:
@@ -146,22 +146,20 @@ Stores the table as a clustered columnstore index. The clustered columnstore ind
   
 ### <a name="TableDistributionOptions"></a> Table distribution options
 
-To understand how to choose the best distribution method and use distributed tables, see [Guidance for designing distributed tables using dedicated SQL pool in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-distribute). For recommendations on which distribution to choose for a table based on actual usage or sample queries, see [Distribution Advisor in Azure Synapse SQL](/azure/synapse-analytics/sql/distribution-advisor).
+To understand how to choose the best distribution method and use distributed tables, see [Distributing tables in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-distribute/). 
 
+For recommendations on the best distribution strategy to use based on your workloads, see the [Synapse SQL Distribution Advisor (Preview)](/azure/synapse-analytics/sql/distribution-advisor).
 
 `DISTRIBUTION = HASH` ( *distribution_column_name* )
 Assigns each row to one distribution by hashing the value stored in *distribution_column_name*. The algorithm is deterministic, which means it always hashes the same value to the same distribution.  The distribution column should be defined as NOT NULL because all rows that have NULL are assigned to the same distribution.
 
-`DISTRIBUTION = HASH ( [distribution_column_name [, ...n]] )` (*Currently in preview*) 
-Distributes the rows based on the hash values of up to eight columns, allowing for more even distribution of the base table data, reducing the data skew over time and improving query performance. 
-
 >[!NOTE]
-> - To enable this preview feature, join the preview by changing the database's compatibility level to 9000 with this command. For more information on setting the database compatibility level, see [ALTER DATABSE SCOPED CONFIGURATION](./alter-database-scoped-configuration-transact-sql.md). For example: `ALTER DATABASE SCOPED CONFIGURATION SET DW_COMPATIBILITY_LEVEL = 9000;`
-> - To opt-out the preview, run this command to change the database's compatibility level to AUTO. For example: `ALTER DATABASE SCOPED CONFIGURATION SET DW_COMPATIBILITY_LEVEL = AUTO;` This will disable the multi-column distribution (MCD) feature (preview). Existing MCD tables will stay but become unreadable. Queries over MCD tables will return this error: `Related table/view is not readable because it distributes data on multiple columns and multi-column distribution is not supported by this product version or this feature is disabled.`
->     - To regain access to MCD tables, opt-in the preview again. 
->     - To load data into a MCD table, use CTAS statement and the data source needs be Synapse SQL tables.  
-> - Using SSMS for [generating a script](../../ssms/scripting/generate-scripts-sql-server-management-studio.md) to create MCD tables isn't currently supported.
-> - Preview features are meant for testing only and should not be used on production instances or production data. Please keep a copy of your test data if the data is important.
+>
+> - To enable feature, change the database's compatibility level to 50 with this command. For more information on setting the database compatibility level, see [ALTER DATABASE SCOPED CONFIGURATION](./alter-database-scoped-configuration-transact-sql.md). For example: `ALTER DATABASE SCOPED CONFIGURATION SET DW_COMPATIBILITY_LEVEL = 50;`
+> - To disable the multi-column distribution (MCD) feature, run this command to change the database's compatibility level to AUTO. For example: `ALTER DATABASE SCOPED CONFIGURATION SET DW_COMPATIBILITY_LEVEL = AUTO;` Existing MCD tables will stay but become unreadable. Queries over MCD tables will return this error: `Related table/view is not readable because it distributes data on multiple columns and multi-column distribution is not supported by this product version or this feature is disabled.`
+>   - To regain access to MCD tables, enable the feature again.
+>   - To load data into a MCD table, use CTAS statement and the data source needs be Synapse SQL tables.  
+> - Using SSMS for [generating a script](../../ssms/scripting/generate-scripts-sql-server-management-studio.md) to create MCD tables is currently supported beyond SSMS version 19.
 
 `DISTRIBUTION = ROUND_ROBIN`
 Distributes the rows evenly across all the distributions in a round-robin fashion. This behavior is the default for [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].

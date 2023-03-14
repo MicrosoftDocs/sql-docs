@@ -134,6 +134,23 @@ The following table lists the requirements to connect to SQL Server on Azure VM.
 > [!TIP]
 > The steps in the preceding table are done for you when you configure connectivity in the portal. Use these steps only to confirm your configuration or to set up connectivity manually for SQL Server.
 
+## Best Practices to Secure your Connections to SQL Server on Azure VM to protect from intrusions and Malware
+
+- Use a non-default port for SQL Server and block port 1433.
+- See [Security Best Practices](https://learn.microsoft.com/azure/azure-sql/virtual-machines/windows/security-considerations-best-practices?view=azuresql).
+- Place SQL Server behind a firewall. 
+  - Only allow connections from designated sources.
+- Control data access with stored procedures and grant access to those instead of `db_datareader` and `db_datawriter` permissions to the data.
+- Set a password on the SA account and restrict its use. 
+  - Change the password periodically.
+- Remove `BUILTIN/Administrators` from the sysadmin role. 
+  - Give sysadmin rights in SQL to domain accounts that need it.
+- Use Windows Authentication and Windows Only Mode if possible. 
+  - Do not run SQL on the domain controller.
+- Enable the **Failed Login** option (**Server Properties** > **Security** tab), to check failed logins for unauthorized persons.
+- Enable Windows Firewall/NSG for your SQL VM.
+- Restrict access to SQL Server from an IP address.Create an inbound NSG rule. See [Security rules](https://docs.microsoft.com/azure/virtual-network/network-security-groups-overview#security-rules) to access the SQL server on the port you use with the IP address.
+- 
 ## Next steps
 
 To see provisioning instructions along with these connectivity steps, see [Provisioning a SQL Server virtual machine on Azure](create-sql-vm-portal.md).

@@ -89,7 +89,7 @@ Distributes the rows based on the hash values of up to eight columns, allowing f
 > [!NOTE]
 >
 > - To enable the Multi-Column Distribution feature, change the database's compatibility level to 50 with this command. For more information on setting the database compatibility level, see [ALTER DATABASE SCOPED CONFIGURATION](./alter-database-scoped-configuration-transact-sql.md). For example: `ALTER DATABASE SCOPED CONFIGURATION SET DW_COMPATIBILITY_LEVEL = 50;`
-> - To opt-out the preview, run this command to change the database's compatibility level to AUTO. For example: `ALTER DATABASE SCOPED CONFIGURATION SET DW_COMPATIBILITY_LEVEL = AUTO;` This will disable the multi-column distribution (MCD) feature. Existing MCD materialized views will stay but become unreadable.
+> - To disable MCD, run this command to change the database's compatibility level to AUTO. For example: `ALTER DATABASE SCOPED CONFIGURATION SET DW_COMPATIBILITY_LEVEL = AUTO;` Existing MCD materialized views will stay but become unreadable.
 >   - To regain access to MCD materialized views, enable the feature again.
 
 #### *select_statement*   

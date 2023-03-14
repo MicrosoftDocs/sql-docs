@@ -87,17 +87,16 @@ If an instance of SQL Server is configured with a license only type of license, 
 
 ## Manage best practices assessment
 
-After you have enabled best practices assessment, you can do the following additional tasks:
+After you have enabled the best practices assessment, you can do the following additional tasks:
 
-- To run assessment on-demand, select **Run Assessment**.
+
+> [!NOTE]
+> Performing any of the tasks below on a specific SQL Server instance will be applied to all SQL Server instances running on the machine.
+
+- To run the assessment on-demand, select **Run Assessment**.  
 - To change the default schedule, select **Configuration** and **Schedule assessment**.
 
-   :::image type="content" source="media/assess/sql-best-practices-assessment-change-schedule.png" alt-text="Screenshot showing how to change the schedule of best practices assessment and scheduled screen of an Arc-enabled SQL Server resource.":::
-
 - To disable an assessment select **Configuration** and **Disable assessment**.
-
-   :::image type="content" source="media/assess/sql-best-practices-assessment-disable.png" alt-text="Screenshot showing how to disable the best practices assessment of an Arc-enabled SQL Server resource.":::
-
 ## View best practices assessment results
 
 - On the **Best practices assessment** pane, select the **View assessment results** button.

@@ -48,7 +48,7 @@ dev_langs:
 |**sys.sysxsrvs**|Exists in the **master** database only. Contains a row for each local, linked, or remote server.|  
 |**sys.sysrmtlgns**|This system base table exists in the **master** database only. Contains a row for each remote login mapping. This is used to map incoming logins that claim to be coming from a corresponding server to an actual local login.|  
 |**sys.syslnklgns**|Exists in the **master** database only. Contains a row for each linked login mapping. Linked login mappings are used by remote procedure calls and distributed queries that emanate from a local server out to a corresponding linked server.|  
-|**sys.sysxlgns**|Exists in the **master** database only. Contains a row for each server principal.|  
+|**sys.sysxlgns**|Exists in the **master** database only. Contains a row for each server principal and its corresponding password hash.|  
 |**sys.sysdbfiles**|Exists in every database. If the column **dbid** is zero, the row represents a file that belongs to this database. In the **master** database, the column **dbid** can be nonzero. When this is the case, the row represents a master file.|  
 |**sys.sysusermsg**|Exists in the **master** database only. Each row represents a user-defined error message.|  
 |**sys.sysprivs**|Exists in every database. Contains a row for each database- or server-level permission.<br /><br /> Note: Server-level permissions are stored in the **master** database.|  

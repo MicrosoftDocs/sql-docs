@@ -12,7 +12,7 @@ ms.topic: conceptual
 
 # Configure automated patching for Arc-enabled SQL Servers preview
 
-You can configure automated patching for Azure Arc-enabled SQL Servers
+You can configure automated patching for Azure Arc-enabled SQL Servers.
 
 Automated patching:
 

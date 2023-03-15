@@ -86,22 +86,25 @@ If an instance of SQL Server is configured with a license only type of license, 
 
 ## Manage best practices assessment
 
-After you have enabled the best practices assessment, you can do the following additional tasks:
+After you have enabled the best practices assessment, you can schedule or disable the assessment as required.
+
+:::image type="content" source="media/assess/configure-assessment.png" alt-text="Screenshot showing configure assessment.":::
 
 > [!NOTE]
 > Performing any of the tasks below on a specific SQL Server instance will be applied to all SQL Server instances running on the machine.
 
-- To run the assessment on-demand, select **Run Assessment**.  
-- To change the default schedule, select **Configuration** and **Schedule assessment**.
+- To run the assessment on-demand, select :::image type="content" source="media/assess/red-number-1.png" alt-text="Number 1, Run assessment, from the screenshot."::: **Run assessment**.  
 
-- To disable an assessment select **Configuration** and **Disable assessment**.
+- :::image type="content" source="media/assess/red-number-2.png" alt-text="Number 2, view assessment results, from the screenshot."::: **View assessment results** remains disabled until the results are ready in Log Analytics. This process might take up to two hours after the data files are processed on the target machine.
+
+- To disable an assessment select :::image type="content" source="media/assess/red-number-3.png" alt-text="Number 3, configuration, from the screenshot."::: **Configuration** and :::image type="content" source="media/assess/red-number-4.png" alt-text="Number 4, schedule assessment, from the screenshot."::: **Disable assessment**.
+
+- To change the default schedule, select :::image type="content" source="media/assess/red-number-3.png" alt-text="Number 3, configuration, from the screenshot."::: **Configuration** and :::image type="content" source="media/assess/red-number-5.png" alt-text="Number 5, schedule assessment, from the screenshot.":::  **Schedule assessment**.
+
 ## View best practices assessment results
 
-- On the **Best practices assessment** pane, select the **View assessment results** button.
+- On the **Best practices assessment** pane, select **View assessment results**.
 
-     The **View assessment results** button remains disabled until the results are ready in Log Analytics. This process might take up to two hours after the data files are processed on the target machine.
-
-     :::image type="content" source="media/assess/sql-best-practices-assessment-view.png" alt-text="Screenshot showing the View Assessment results.":::
 
 ## Results page
 

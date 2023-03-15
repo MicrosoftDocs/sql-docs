@@ -41,7 +41,7 @@ For audit to write to a storage account behind a VNet or firewall, the following
 > * You must have `Microsoft.Authorization/roleAssignments/write` permission on the selected storage account. For more information, see [Azure built-in roles](/azure/role-based-access-control/built-in-roles).
 
 > [!NOTE]
-> When Auditing to stoarge account is already enabled on a server / db, and if the target storage account is moved behind a firewall, we lose write access to 
+> When Auditing to storage account is already enabled on a server / db, and if the target storage account is moved behind a firewall, we lose write access to 
 the storage account and audit logs stop getting written to it.To make auditing work we have to resave the audit settings from portal. 
    
 

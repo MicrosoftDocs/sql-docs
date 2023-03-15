@@ -57,7 +57,7 @@ The benefits of using private endpoints over a VNet-local or public endpoint inc
 
 ## Create a private endpoint in a virtual network
 
-Create a private endpoints by using the Azure portal, Azure PowerShell, or the Azure CLI:
+Create a private endpoint by using the Azure portal, Azure PowerShell, or the Azure CLI:
 
 - [Azure portal](/azure/private-link/create-private-endpoint-portal)
 - [Azure PowerShell](/azure/private-link/create-private-endpoint-powershell)
@@ -87,7 +87,7 @@ To approve a private endpoint, follow these steps:
 
 1. Review the connections that have a **Pending state** and check the box to choose one or more private endpoint connections to approve or reject.
 
-   ![Screenshot of the Azure portal, one private endpoint connection selected for approval](media/private-endpoint/pec-select.png)
+   ![Screenshot of the Azure portal, one private endpoint connection selected for approval.](media/private-endpoint/pec-select.png)
 
 1. Choose **Approve** or **Reject**, and then select **Yes** on the dialog box verifying your action. 
 
@@ -133,7 +133,7 @@ After you complete these steps, SQL clients connecting to `<instance-name>.<dns-
 4. In the DNS zone, create a new record set with the following values:
    - Name: `<instance-name>`
    - Type: A
-   - IP address: IP address of the private endpoint obtained in the previous set..
+   - IP address: IP address of the private endpoint obtained in the previous set.
 
 ### [Same virtual networks](#tab/same-vnet)
 

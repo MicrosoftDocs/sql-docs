@@ -4,7 +4,7 @@ description: Describes how to enable event tracing or logging in SqlClient by im
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-davidengel
-ms.date: 06/01/2022
+ms.date: 03/15/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -141,7 +141,9 @@ class Program
 
 ## External resources
 
-For more information, see the following resources.
+For another set of examples on how to trace Microsoft.Data.SqlClient cross-platform, see the [CSS SQL Networking Tools wiki](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/Collect-a-.NET-Core-SQL-Driver-Trace).
+
+For more information about event tracing, see the following resources.
 
 |Resource|Description|
 |--------------|-----------------|

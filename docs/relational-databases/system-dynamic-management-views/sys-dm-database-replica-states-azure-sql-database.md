@@ -21,7 +21,7 @@ dev_langs:
 # sys.dm_database_replica_states (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-  Returns a row for the database, exposing state for the local replica.  
+  Returns a state information for each database that is participating in primary and secondary replica. On a secondary replica, this view returns a row for every secondary database on the instance. On the primary replica, this view returns a row for primary database and an additional row for every secondary database.  
   
 > [!IMPORTANT]
 > Depending on the action and higher-level states, database-state information may be unavailable or out of date. Furthermore, the values have only local relevance. 

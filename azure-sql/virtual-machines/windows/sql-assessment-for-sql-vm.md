@@ -35,7 +35,7 @@ Assessment run time depends on your environment (number of databases, objects, a
 
 To use the SQL best practices assessment feature, you must have the following prerequisites: 
 
-- Your SQL Server VM must be registered with the [SQL Server IaaS extension in full mode](sql-agent-extension-manually-register-single-vm.md#full-mode). 
+- Your SQL Server VM must be registered with the [SQL Server IaaS extension](sql-agent-extension-manually-register-single-vm.md#register-with-extension). 
 - A [Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace) in the same subscription as your SQL Server VM to upload assessment results to. 
 - SQL Server needs to be 2012 or higher version.
 

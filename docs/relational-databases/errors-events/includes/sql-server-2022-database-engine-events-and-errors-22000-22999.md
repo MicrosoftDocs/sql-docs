@@ -2,7 +2,7 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 03/02/2023
+ms.date: 03/07/2023
 ms.topic: include
 ---
 | Error| Severity | Event logged | Description|
@@ -540,6 +540,9 @@ ms.topic: include
 | 22886 | 10 | No | An update-delete conflict was detected. The row could not be updated since the row does not exist. The incoming update was skipped. |
 | 22887 | 16 | No | Could not enable Change Data Capture for database '%s'. Change Data Capture cannot be enabled on a DB with Change Feed enabled. |
 | 22888 | 16 | No | Could not alter captured column of a CDC tracked table with character/binary/unicode as target data type with ansi warnings turned off. |
+| 22889 | 10 | No | Warning: Unable to get database version for the subscription database '%s'. The sp_replmonitorsubscriptionpendingcmds may report incorrect number of pending commands for P2P replication. |
+| 22891 | 16 | No | Could not enable '%S_MSG' for database '%s'. '%S_MSG' cannot be enabled on a DB with delayed durability set. |
+| 22892 | 16 | No | Could not enable delayed durability on DB. Delayed durability cannot be enabled on a DB while '%S_MSG' is enabled. |
 | 22901 | 16 | No | The database '%s' is not enabled for Change Data Capture. Ensure that the correct database context is set and retry the operation. To report on the databases enabled for Change Data Capture, query the is_cdc_enabled column in the sys.databases catalog view. |
 | 22902 | 16 | No | Caller is not authorized to initiate the requested action. %s privileges are required. |
 | 22903 | 16 | No | Another connection with session ID %I64d is already running 'sp_replcmds' for Change Data Capture in the current database. |

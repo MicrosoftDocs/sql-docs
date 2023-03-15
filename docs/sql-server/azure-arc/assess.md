@@ -86,25 +86,28 @@ If an instance of SQL Server is configured with a license only type of license, 
 
 ## Manage best practices assessment
 
-After you have enabled the best practices assessment, you can schedule or disable the assessment as required.
+After you have enabled the best practices assessment, you can run, or configure the assessment as required.
 
-:::image type="content" source="media/assess/configure-assessment.png" alt-text="Screenshot showing configure assessment.":::
+- To run the assessment on demand from the portal, select **Run assessment**.
 
-> [!NOTE]
-> Performing any of the tasks below on a specific SQL Server instance will be applied to all SQL Server instances running on the machine.
+   :::image type="content" source="media/assess/run-assessment.png" alt-text="Screenshot showing run assessment.":::
 
-- To run the assessment on-demand, select :::image type="content" source="media/assess/red-number-1.png" alt-text="Number 1, Run assessment, from the screenshot."::: **Run assessment**.  
+   > [!NOTE]
+   > Performing any of the tasks below on a specific SQL Server instance will be applied to all SQL Server instances running on the machine.
 
-- :::image type="content" source="media/assess/red-number-2.png" alt-text="Number 2, view assessment results, from the screenshot."::: **View assessment results** remains disabled until the results are ready in Log Analytics. This process might take up to two hours after the data files are processed on the target machine.
+   The **View assessment results** is inactive until the results are ready in Log Analytics. This process might take up to two hours after the data files are processed on the target machine.
 
-- To disable an assessment select :::image type="content" source="media/assess/red-number-3.png" alt-text="Number 3, configuration, from the screenshot."::: **Configuration** and :::image type="content" source="media/assess/red-number-4.png" alt-text="Number 4, schedule assessment, from the screenshot."::: **Disable assessment**.
+   :::image type="content" source="media/assess/configure-schedule.png" alt-text="Screen shot showing configuration control and schedule control. ":::
 
-- To change the default schedule, select :::image type="content" source="media/assess/red-number-3.png" alt-text="Number 3, configuration, from the screenshot."::: **Configuration** and :::image type="content" source="media/assess/red-number-5.png" alt-text="Number 5, schedule assessment, from the screenshot.":::  **Schedule assessment**.
+- To schedule assessments, select **Configuration** > **Schedule assessment**.
+
+   :::image type="content" source="media/assess/configure-disable.png" alt-text="Screen shot showing configuration control and disable assessment control. ":::
+
+- To disable an assessment select **Configuration** > **Disable assessment**.
 
 ## View best practices assessment results
 
 - On the **Best practices assessment** pane, select **View assessment results**.
-
 
 ## Results page
 

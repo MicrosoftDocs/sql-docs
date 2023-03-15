@@ -363,20 +363,18 @@ sections:
       - question: |
           Connectivity 
         answer: |
-          ### Can I connect to my managed instance using IP address?
+          ### Can I connect to my managed instance using its IP address?
           
           No, this is not supported. A managed instance's host name maps to the load balancer in front of the managed instance's virtual cluster. As one virtual cluster can host multiple managed instances, a connection cannot be routed to the proper managed instance without specifying its name.
           For more information on SQL Managed Instance virtual cluster architecture, see [Virtual cluster connectivity architecture](connectivity-architecture-overview.md#virtual-cluster-connectivity-architecture).
           
           ### Can my managed instance have a static IP address?
           
-          This is currently not supported.
+          This is currently only supported for [private endpoints](connectivity-architecture-overview.md#private-endpoint-preview).
           
           In rare but necessary situations, we might need to do an online migration of a managed instance to a new virtual cluster. If needed, this migration is because of changes in our technology stack aimed to improve security and reliability of the service. Migrating to a new virtual cluster results in changing the IP address that is mapped to the managed instance host name. The managed instance service doesn't claim static IP address support and reserves the right to change it without notice as a part of regular maintenance cycles.
           
-          The above holds for both VNet-local and public endpoints. Both should only be accessed via their associated domain names.
-          
-          For this reason, we strongly discourage relying on immutability of the IP address as it could cause unnecessary downtime.
+          For the above reason, VNet-local and public endpoints should only be accessed via their associated domain names. We strongly discourage relying on immutability of their IP address as doing so may lead to prolonged unavailability while the service is healthy.
           
           ### Does SQL Managed Instance have a public endpoint?
           

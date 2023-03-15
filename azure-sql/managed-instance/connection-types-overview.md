@@ -33,7 +33,7 @@ In the redirect connection type, after the TCP session is established to the SQL
 ![Diagram shows an on-premises network with redirect-find-db connected to a gateway in an Azure virtual network and a redirect-query connected to a database primary node in the virtual network.](./media/connection-types-overview/redirect.png)
 
 > [!IMPORTANT]
-> The redirect connection type currently works only for the VNet-local endpoint. Regardless of the connection type setting, connections coming through the public endpoint would be through a proxy.
+> The redirect connection type currently works only for the VNet-local endpoint. Regardless of the connection type setting, connections coming through the public or private endpoints are handled using the proxy connection type.
 
 ## Proxy connection type
 
@@ -44,7 +44,7 @@ In the proxy connection type, the TCP session is established using the gateway a
 ## Changing Connection Type
 
 - **Using the Portal:**
-To change the Connection Type using the Azure portal,open the Virtual Network page and use the **Connection type** setting to change the connection type and save the changes.
+To change the Connection Type using the Azure portal, open the Virtual Network page and use the **Connection type** setting to change the connection type and save the changes.
 
 - **Script to change connection type settings using PowerShell:**
 

@@ -10443,6 +10443,8 @@ items:
         href: sql-server/azure-arc/delete-from-azure-arc.md
       - name: Manage SQL Server license and billing options
         href: sql-server/azure-arc/manage-license-type.md
+      - name: Configure automated patching
+        href: sql-server/azure-arc/patch.md
     - name: Secure
       items:
       - name: Configure advanced data Security

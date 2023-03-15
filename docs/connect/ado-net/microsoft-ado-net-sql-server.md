@@ -1,6 +1,6 @@
 ---
 title: "Microsoft ADO.NET"
-description: "Microsoft ADO.NET for SQL Server is the core data access technology for .NET languages. Use the Microsoft.Data.SqlClient namespace to access SQL Server."
+description: "Microsoft ADO.NET for SQL Server and Azure SQL is the core data access technology for .NET languages. Use the Microsoft.Data.SqlClient namespace to access SQL Server."
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-kaywon
@@ -9,19 +9,37 @@ ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
 ---
-# Microsoft ADO.NET for SQL Server
+# Microsoft ADO.NET for SQL Server and Azure SQL
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-ADO.NET is the core data access technology for .NET languages. Use the Microsoft.Data.SqlClient namespace to access SQL Server, or providers from other suppliers to access their stores. Use System.Data.Odbc or System.Data.Oledb to access data from .NET languages using other data access technologies. Use System.Data.Dataset when you need an offline data cache in client applications. It also provides local persistence and XML capabilities that can be useful in web services.
+ADO.NET is the core data access technology for .NET languages. Use the Microsoft.Data.SqlClient namespace and Entity Framework to access SQL Server, or providers from other suppliers to access their stores. Use System.Data.Odbc or System.Data.Oledb to access data from .NET languages using other data access technologies. Use System.Data.Dataset when you need an offline data cache in client applications. It also provides local persistence and XML capabilities that can be useful in web services.
+
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 ## Getting started
+
 * [Step 1: Configure development environment for ADO.NET development](step-1-configure-development-environment-ado-net-development.md)
 * [Step 2: Create a SQL database for ADO.NET development](step-2-create-sql-database-ado-net-development.md)
 * [Step 3: Proof of concept connecting to SQL using ADO.NET](step-3-connect-sql-ado-net.md)
 * [Step 4: Connect resiliently to SQL with ADO.NET](step-4-connect-resiliently-sql-ado-net.md)
 
+::: moniker-end
+
+::: moniker range="=azuresqldb-current"
+
+* [Step 1: Configure development environment for ADO.NET development](step-1-configure-development-environment-ado-net-development.md)
+* [Step 2: Create a SQL database for ADO.NET development](/azure/azure-sql/database/single-database-create-quickstart)
+* [Step 3: Proof of concept connecting to SQL using ADO.NET](step-3-connect-sql-ado-net.md)
+* Step 4: Connect resiliently to SQL with ADO.NET
+   * [Microsoft.Data.SqlClient with a password](step-4-connect-resiliently-sql-ado-net.md)
+   * [Microsoft.Data.SqlClient without a password](/azure/azure-sql/database/azure-sql-dotnet-quickstart)
+   * [Entity Framework without a password](/azure-sql/database/azure-sql-dotnet-entity-framework-core-quickstart)
+
+::: moniker-end
+
 ## Documentation
+
 * [ADO.NET Overview](/dotnet/framework/data/adonet/)
 * [Getting started with the SqlClient driver](get-started-sqlclient-driver.md)
 * [Overview of the SqlClient driver](overview-sqlclient-driver.md)
@@ -30,10 +48,12 @@ ADO.NET is the core data access technology for .NET languages. Use the Microsoft
 * [SQL Server and ADO.NET](./sql/index.md)
 
 ## Community
+
 * [ADO.NET Managed Providers Forum](https://social.msdn.microsoft.com/Forums/home?forum=adodotnetdataproviders)
 * [ADO.NET DataSet Forum](https://social.msdn.microsoft.com/Forums/home?forum=adodotnetdataset)
 
 ## More samples
+
 * [ADO.NET Code Examples](/dotnet/framework/data/adonet/ado-net-code-examples)
 * [Getting Started with .NET Framework on Windows](https://www.microsoft.com/sql-server/developer-get-started/csharp/win/)
 * [Getting Started with .NET Core on macOS](https://www.microsoft.com/sql-server/developer-get-started/csharp/macos/)

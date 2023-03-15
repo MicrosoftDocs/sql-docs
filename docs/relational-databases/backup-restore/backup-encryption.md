@@ -44,7 +44,7 @@ The sequence to restore an encrypted database to a new location is to:
   
 1. This feature supports multiple encryption algorithms up to AES 256 bit. This gives you the option to select an algorithm that aligns with your requirements.  
   
-1. You can integrate encryption keys with Extended Key Management (EKM) providers.  
+1. You can integrate encryption keys with Extensible Key Management (EKM) providers.  
  
 ##  <a name="Prerequisites"></a> Prerequisites  
  The following are prerequisites for encrypting a backup:  
@@ -54,7 +54,7 @@ The sequence to restore an encrypted database to a new location is to:
 1. Create a certificate or asymmetric Key to use for backup encryption. For more information on creating a certificate, see [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md). For more information on creating an asymmetric key, see [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md).  
   
     > [!IMPORTANT]  
-    >  Only asymmetric keys residing in an Extended Key Management (EKM) are supported.  
+    >  Only asymmetric keys residing in an Extensible Key Management (EKM) are supported.  
   
 ##  <a name="Restrictions"></a> Restrictions  
  The following are restrictions that apply to the encryption options:  

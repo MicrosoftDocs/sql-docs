@@ -1,18 +1,15 @@
 ---
+title: "Using Microsoft Component Services"
 description: "Using Microsoft Component Services"
-title: "Using Microsoft Component Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "ODBC driver for Oracle [ODBC], component services"
-  - "component services [ODBC]"
-ms.assetid: 06450562-d8f3-4987-b7bd-4a70223ff937
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "ODBC driver for Oracle [ODBC], component services"
+  - "component services [ODBC]"
 ---
 # Using Microsoft Component Services
 > [!IMPORTANT]  

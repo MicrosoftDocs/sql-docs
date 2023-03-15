@@ -7,7 +7,6 @@ ms.date: 07/22/2020
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "Availability Groups [SQL Server], server instance"
   - "Availability Groups [SQL Server], deploying"

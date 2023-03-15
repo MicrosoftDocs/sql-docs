@@ -1,17 +1,15 @@
 ---
+title: "MSSQL_ENG021797"
 description: "MSSQL_ENG021797"
-title: "MSSQL_ENG021797 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: reference
-helpviewer_keywords: 
-  - "MSSQL_ENG021797 error"
-ms.assetid: 54d83a1e-43fd-449c-a2b2-fdda2609a534
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: reference
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "MSSQL_ENG021797 error"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # MSSQL_ENG021797

@@ -1,20 +1,17 @@
 ---
+title: "Create Packages in SQL Server Data Tools"
 description: "Create Packages in SQL Server Data Tools"
-title: "Create Packages in SQL Server Data Tools | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SSIS packages, creating"
   - "Integration Services packages, creating"
   - "packages [Integration Services], creating"
   - "SQL Server Integration Services packages, creating"
-ms.assetid: bb3c085b-1458-49fa-8348-6a76b6e97ea6
-author: chugugrace
-ms.author: chugu
 ---
 # Create Packages in SQL Server Data Tools
 

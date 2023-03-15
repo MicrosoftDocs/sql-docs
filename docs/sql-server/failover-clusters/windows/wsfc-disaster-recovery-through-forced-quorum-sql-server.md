@@ -1,21 +1,18 @@
 ---
 title: "Disaster Recovery through forced quorum"
 description: Recovery from a quorum failure requires manual intervention. Learn how to force quorum in the event of a disaster of a SQL Server failover cluster instance.
-ms.custom: "seo-lt-2019"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: failover-cluster-instance
 ms.topic: how-to
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], WSFC clusters"
   - "quorum [SQL Server], AlwaysOn and WSFC quorum"
   - "quorum [SQL Server], Always On and WSFC quorum"
   - "failover clustering [SQL Server], AlwaysOn Availability Groups"
   - "failover clustering [SQL Server], Always On Availability Groups"
-ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
-author: MashaMSFT
-ms.author: mathoma
 ---
 # WSFC Disaster Recovery through Forced Quorum (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

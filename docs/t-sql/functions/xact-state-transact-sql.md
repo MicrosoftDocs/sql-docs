@@ -3,12 +3,10 @@ title: "XACT_STATE (Transact-SQL)"
 description: "XACT_STATE (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "XACT_STATE"
   - "XACT_STATE_TSQL"

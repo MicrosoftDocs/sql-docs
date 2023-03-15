@@ -7,12 +7,10 @@ ms.date: "03/05/2017"
 ms.service: sql
 ms.subservice: xevents
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "SQL Trace, extended events equivalents"
   - "extended events [SQL Server], SQL Trace equivalents"
   - "extended events [SQL Server], user configurable events"
-ms.assetid: 7f24104c-201d-4361-9759-f78a27936011
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # View the Extended Events Equivalents to SQL Trace Event Classes

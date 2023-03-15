@@ -1,15 +1,12 @@
 ---
+title: "LOCALDB_ERROR_INVALID_PARAMETER"
 description: "LOCALDB_ERROR_INVALID_PARAMETER"
-title: "LOCALDB_ERROR_INVALID_PARAMETER | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: "reference"
-ms.assetid: 70cbcae2-1686-4507-9326-b95206b3089b
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: performance
+ms.topic: "reference"
 ---
 # LOCALDB_ERROR_INVALID_PARAMETER
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

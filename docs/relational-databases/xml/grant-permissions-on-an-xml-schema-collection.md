@@ -1,17 +1,16 @@
 ---
 title: "Grant Permissions on an XML Schema Collection"
 description: Learn how to grant permissions to create an XML schema collection and also to grant permissions on an XML schema collection object.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
 ms.date: 05/05/2022
 ms.service: sql
-ms.reviewer: randolphwest
 ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "granting permissions [SQL Server], XML schema collections"
   - "ALTER permission"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Grant permissions on an XML schema collection
 

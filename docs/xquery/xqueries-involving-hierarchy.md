@@ -1,20 +1,17 @@
 ---
-title: "XQueries Involving Hierarchy | Microsoft Docs"
+title: "XQueries Involving Hierarchy"
 description: View examples of XQueries that involve hierarchies.
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: xml
-ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "hierarchies [XQuery]"
-  - "XQuery, hierarchies"
-ms.assetid: 6953d8b7-bad8-4b64-bf7b-12fa4f10f65c
 author: "rothja"
 ms.author: "jroth"
+ms.date: "08/09/2016"
+ms.service: sql
+ms.subservice: xml
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "hierarchies [XQuery]"
+  - "XQuery, hierarchies"
+dev_langs:
+  - "XML"
 ---
 # XQueries Involving Hierarchy
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]

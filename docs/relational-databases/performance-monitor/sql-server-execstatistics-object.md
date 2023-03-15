@@ -1,18 +1,16 @@
 ---
 title: "SQL Server, Exec Statistics object"
-description: Learn about the SQLServer:Exec Statistics object, which provides counters to monitor various executions.
-ms.custom: ""
+description: "Learn about the SQLServer:Exec Statistics object, which provides counters to monitor various executions."
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "07/13/2021"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: performance
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQLServer:ExecStatistics"
   - "SQLServer:Exec Statistics"
   - "ExecStatistics object"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # SQL Server, Exec Statistics object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

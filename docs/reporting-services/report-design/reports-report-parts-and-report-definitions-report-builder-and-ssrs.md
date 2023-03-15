@@ -1,18 +1,15 @@
 ---
-title: "Reports, Report Parts, and Report Definitions (Report Builder) | Microsoft Docs"
+title: "Reports, Report Parts, and Report Definitions (Report Builder)"
 description: Discover the terms used to describe reports in different states in Report Builder. These states include the initial definition and the published report.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 05/24/2018
 ms.service: reporting-services
 ms.subservice: report-design
-
-
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "report definitions"
   - "reports"
-ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Reports, Report Parts, and Report Definitions (Report Builder and SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uses a variety of terms to describe a paginated report in different states, including the initial definition, the published report, and the viewed report as it appears to the user.  

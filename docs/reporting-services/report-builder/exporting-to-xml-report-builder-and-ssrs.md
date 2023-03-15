@@ -1,15 +1,12 @@
 ---
-title: "Export a paginated report to XML (Report Builder) | Microsoft Docs"
+title: "Export a paginated report to XML (Report Builder)"
 description: In Report Builder, the XML rendering extension renders a paginated report to XML format. Import XML into a database, use as a message, or send to applications.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 09/02/2021
 ms.service: reporting-services
 ms.subservice: report-builder
-
-
 ms.topic: conceptual
-ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Export a paginated report to XML (Report Builder)
 

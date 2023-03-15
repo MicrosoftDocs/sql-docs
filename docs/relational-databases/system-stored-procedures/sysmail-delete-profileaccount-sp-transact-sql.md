@@ -1,22 +1,19 @@
 ---
+title: "sysmail_delete_profileaccount_sp (Transact-SQL)"
 description: "sysmail_delete_profileaccount_sp (Transact-SQL)"
-title: "sysmail_delete_profileaccount_sp (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sysmail_delete_profileaccount_sp"
-  - "sysmail_delete_profileaccount_sp_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sysmail_delete_profileaccount_sp"
-ms.assetid: b58d06f2-d6c9-4c8e-95bd-027c50f4621a
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sysmail_delete_profileaccount_sp"
+  - "sysmail_delete_profileaccount_sp_TSQL"
+helpviewer_keywords:
+  - "sysmail_delete_profileaccount_sp"
+dev_langs:
+  - "TSQL"
 ---
 # sysmail_delete_profileaccount_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

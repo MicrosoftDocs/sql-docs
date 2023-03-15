@@ -1,22 +1,19 @@
 ---
+title: "Prepared Execution"
 description: "Prepared Execution"
-title: "Prepared Execution | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "deferred statement preparation"
   - "prepared execution [ODBC]"
   - "SQLPrepare function"
   - "ODBC applications, statements"
   - "SQLExecute function"
   - "statements [ODBC], prepared execution"
-ms.assetid: f3a9d32b-6cd7-4f0c-b38d-c8ccc4ee40c3
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Prepared Execution

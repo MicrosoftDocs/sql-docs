@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "sysdac_instances_internal"
 dev_langs:
   - "TSQL"
-ms.assetid: d2d52cc4-3463-431a-b779-6fbfdeee1dfc
 ---
 # Data-tier Application Tables - sysdac_instances_internal
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

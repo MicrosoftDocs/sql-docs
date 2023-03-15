@@ -31,7 +31,7 @@ Generally, XML and non-XML format files are interchangeable. However, we recomme
 
 ## Create a Non-XML format file
 
-To use a **bcp** command to create a format file, specify the **format** argument and use `nul` instead of a data-file path. The **format** option also requires the **-f** option, such as: `bcp _table_or_view_ format nul -f_format_file_name_`.
+To use a **bcp** command to create a format file, specify the **format** argument and use `nul` instead of a data-file path. The **format** option also requires the **-f** option, such as: `bcp _table_or_view_ format nul -f _format_file_name_`.
 
 > [!NOTE]  
 > To distinguish a non-XML format file, we recommend that you use .fmt as the file name extension, for example, `MyTable.fmt`.
@@ -50,7 +50,7 @@ The **bcp** command contains the following qualifiers.
 
 |Qualifiers|Description|  
 |----------------|-----------------|  
-|**formatnul-f** _format_file_|Specifies the non-XML format file.|  
+|**format nul -f** _format_file_|Specifies the non-XML format file.|  
 |**-n**|Specifies native data types.|  
 |**-T**|Specifies that the **bcp** utility connects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with a trusted connection using integrated security. If **-T** is not specified, you must specify **-U** and **-P** to successfully log in.|
 
@@ -81,7 +81,7 @@ The **bcp** command contains the following qualifiers.
 
 |Qualifiers|Description|  
 |----------------|-----------------|  
-|**formatnul-f** _format_file_|Specifies a non-XML format file.|  
+|**format nul -f** _format_file_|Specifies a non-XML format file.|  
 |**-c**|Specifies character data.|  
 |**-T**|Specifies that the **bcp** utility connects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with a trusted connection using integrated security. If **-T** is not specified, you must specify **-U** and **-P** to successfully log in.|
 
@@ -181,7 +181,7 @@ The **bcp** command contains the following qualifiers.
 
 |Qualifiers|Description|  
 |----------------|-----------------|  
-|**formatnul-f** _format_file_ **-x**|Specifies the XML format file.|  
+|**format nul -x -f** _format_file_|Specifies the XML format file.|  
 |**-c**|Specifies character data.|  
 |**-t** `,`|Specifies a comma (**,**) as the field terminator.<br /><br /> Note: If the data file uses the default field terminator (`\t`), the **-t** switch is unnecessary.|  
 |**-T**|Specifies that the **bcp** utility connects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with a trusted connection using integrated security. If **-T** is not specified, you must specify **-U** and **-P** to successfully log in.|
@@ -222,7 +222,7 @@ The **bcp** command contains the following qualifiers.
 
 |Qualifiers|Description|  
 |----------------|-----------------|  
-|**formatnul-f** _format_file_ **-x**|Specifies the XML format file.|  
+|**format nul -x -f** _format_file_|Specifies the XML format file.|  
 |**-n**|Specifies native data types.|  
 |**-T**|Specifies that the **bcp** utility connects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with a trusted connection using integrated security. If **-T** is not specified, you must specify **-U** and **-P** to successfully log in.|
 

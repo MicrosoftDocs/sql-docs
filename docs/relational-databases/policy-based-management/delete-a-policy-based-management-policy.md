@@ -1,17 +1,14 @@
 ---
+title: "Delete a Policy-Based Management Policy"
 description: "Delete a Policy-Based Management Policy"
-title: "Delete a Policy-Based Management Policy | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Policy-Based Management, delete policies"
-ms.assetid: 488f0305-190c-4223-aa5c-e9bd43b520eb
 author: VanMSFT
 ms.author: vanto
+ms.date: "08/01/2016"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Policy-Based Management, delete policies"
 ---
 # Delete a Policy-Based Management Policy
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

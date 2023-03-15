@@ -1,20 +1,14 @@
 ---
+title: "LocalDBGetInstances Function"
 description: "LocalDBGetInstances Function"
-title: "LocalDBGetInstances Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-ms.topic: "reference"
-apiname: 
-  - "LocalDBGetInstances"
-apilocation: 
-  - "sqluserinstance.dll"
-apitype: "DLLExport"
-ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.topic: "reference"
+apilocation: "sqluserinstance.dll"
+apiname: "LocalDBGetInstances"
+apitype: "DLLExport"
 ---
 # LocalDBGetInstances Function
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

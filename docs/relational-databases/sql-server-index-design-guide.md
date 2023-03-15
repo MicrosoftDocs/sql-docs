@@ -1,14 +1,14 @@
 ---
 title: "SQL Server and Azure SQL index architecture and design guide"
 description: Learn about designing efficient indexes in SQL Server and Azure SQL to achieve good database and application performance. Read about index architecture and best practices.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 01/19/2022
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: supportability
 ms.topic: conceptual
-helpviewer_keywords: 
-  - "index design guide" 
+helpviewer_keywords:
+  - "index design guide"
   - "index design guidance"
   - "guide, index design"
   - "guidance, index design"
@@ -18,9 +18,6 @@ helpviewer_keywords:
   - "sql server index architecture"
   - "sql server index design guide"
   - "sql server index design guidance"
-ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server and Azure SQL index architecture and design guide

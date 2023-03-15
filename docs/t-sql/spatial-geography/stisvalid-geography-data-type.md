@@ -1,19 +1,16 @@
 ---
+title: "STIsValid (geography Data Type)"
 description: "STIsValid (geography Data Type)"
-title: "STIsValid (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STIsValid method (geography)"
-ms.assetid: 1bfe787f-ddf0-4fc7-af6a-570a58faab23
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STIsValid (geography Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

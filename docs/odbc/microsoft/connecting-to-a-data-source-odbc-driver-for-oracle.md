@@ -1,18 +1,15 @@
 ---
+title: "Connecting to a Data Source (ODBC Driver for Oracle)"
 description: "Connecting to a Data Source (ODBC Driver for Oracle)"
-title: "Connecting to a Data Source (ODBC Driver for Oracle) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "connecting to data source [ODBC], ODBC driver for Oracle"
-  - "ODBC driver for Oracle [ODBC], connecting to data sources"
-ms.assetid: f724a9c5-342a-4f4e-a030-ec34f7378eaf
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "connecting to data source [ODBC], ODBC driver for Oracle"
+  - "ODBC driver for Oracle [ODBC], connecting to data sources"
 ---
 # Connecting to a Data Source (ODBC Driver for Oracle)
 > [!IMPORTANT]  

@@ -9,9 +9,9 @@ ms.service: sql-database
 ms.subservice: performance
 ms.topic: conceptual
 ms.custom:
-  - "references_regions"
-  - "ignite-fall-2021"
-  - "azure-sql-split"
+  - references_regions
+  - ignite-fall-2021
+  - azure-sql-split
 ---
 # vCore purchasing model - Azure SQL Database 
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

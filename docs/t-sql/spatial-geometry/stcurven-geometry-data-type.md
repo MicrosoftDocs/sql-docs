@@ -1,19 +1,16 @@
 ---
+title: "STCurveN (geometry Data Type)"
 description: "STCurveN (geometry Data Type)"
-title: "STCurveN (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "08/03/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STCurveN method (geometry)"
-ms.assetid: 64adf1a1-3a41-41fb-b7d1-44390c3e4ea9
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STCurveN (geometry Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

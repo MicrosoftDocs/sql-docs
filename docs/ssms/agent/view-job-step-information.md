@@ -1,20 +1,17 @@
 ---
-description: "View Job Step Information"
 title: "View Job Step Information"
-ms.custom: seo-lt-2019
+description: "View Job Step Information"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "displaying job step information"
   - "jobs [SQL Server Agent], viewing"
   - "SQL Server Agent jobs, viewing"
   - "viewing job step information"
-ms.assetid: e3f06492-dc86-4e06-b186-ea58aff6d591
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # View Job Step Information

@@ -1,15 +1,12 @@
 ---
+title: "Connect to an Oracle Data Source (SQL Server Import and Export Wizard)"
 description: "Connect to an Oracle Data Source (SQL Server Import and Export Wizard)"
-title: "Connect to an Oracle Data Source (SQL Server Import and Export Wizard) | Microsoft Docs"
-ms.custom: ""
-ms.date: 06/29/2020
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: b0bd1f5a-34dd-4be3-9ac8-f9f87727781b
 author: chugugrace
 ms.author: chugu
+ms.date: 06/29/2020
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Connect to an Oracle Data Source (SQL Server Import and Export Wizard)
 

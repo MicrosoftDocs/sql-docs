@@ -1,22 +1,19 @@
 ---
+title: "Excel Connection Manager"
 description: "Excel Connection Manager"
-title: "Excel Connection Manager | Microsoft Docs"
+author: chugugrace
+ms.author: chugu
 ms.date: "04/02/2018"
 ms.service: sql
-ms.reviewer: ""
-ms.custom: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.excelconnection.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "files [Integration Services], connections"
   - "connections [Integration Services], Excel"
   - "Excel [Integration Services]"
   - "connection managers [Integration Services], Excel"
-ms.assetid: 667419f2-74fb-4b50-b963-9197d1368cda
-author: chugugrace
-ms.author: chugu
 ---
 # Excel Connection Manager
 

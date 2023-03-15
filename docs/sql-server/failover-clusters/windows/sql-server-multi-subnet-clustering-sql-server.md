@@ -1,22 +1,19 @@
 ---
 title: "SQL Server Multi-Subnet Clustering"
 description: Learn about configuring a SQL Server failover cluster instance in a multi-subnet environment, which provides disaster recovery in addition to high availability.
-ms.custom: seo-lt-2019
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "09/01/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: failover-cluster-instance
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "stretch cluster"
   - "Availability Groups [SQL Server], WSFC clusters"
   - "failover clustering [SQL Server], AlwaysOn Availability Groups"
   - "failover clustering [SQL Server], Always On Availability Groups"
   - "multi-site failover cluster"
   - "failover clustering [SQL Server]"
-ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
-author: MashaMSFT
-ms.author: mathoma
 ---
 # SQL Server Multi-Subnet Clustering (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

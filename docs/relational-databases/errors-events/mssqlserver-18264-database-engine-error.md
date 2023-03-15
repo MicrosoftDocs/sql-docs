@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_18264"
 description: "MSSQLSERVER_18264"
-title: "MSSQLSERVER_18264 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "18264 (Database Engine error)"
-ms.assetid: 3050fc56-2be5-43cf-916b-50a3ac5f89aa
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "18264 (Database Engine error)"
 ---
 # MSSQLSERVER_18264
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

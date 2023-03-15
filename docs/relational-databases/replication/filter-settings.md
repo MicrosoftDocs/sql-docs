@@ -1,17 +1,15 @@
 ---
+title: "Filter Settings"
 description: "Filter Settings"
-title: "Filter Settings | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.monitor.filtersettings.f1"
-ms.assetid: 1b401d7d-db8a-4ba1-acb1-b8dec14e3311
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.monitor.filtersettings.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Filter Settings

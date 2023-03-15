@@ -1,20 +1,17 @@
 ---
-description: "Run Jobs"
 title: "Run Jobs"
-ms.custom: seo-lt-2019
+description: "Run Jobs"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Agent jobs, manually running"
   - "multiserver job processing [SQL Server]"
   - "jobs [SQL Server Agent], manually running"
   - "manual job processing [SQL Server]"
-ms.assetid: cd445949-dc10-42fc-8785-4db74c9723ad
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Run Jobs

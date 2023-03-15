@@ -1,12 +1,12 @@
 ---
+title: "Spatial Data (SQL Server)"
 description: "Spatial Data (SQL Server)"
-title: "Spatial Data (SQL Server) | Microsoft Docs"
+author: MladjoA
+ms.author: mlandzic
 ms.date: "10/11/2019"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "geography data type [SQL Server], spatial storage design"
   - "planar spatial data [SQL Server], designing"
   - "spatial data types [SQL Server]"
@@ -14,9 +14,6 @@ helpviewer_keywords:
   - "geometry data type [SQL Server], spatial storage design"
   - "spatial storage [SQL Server]"
   - "geodetic spatial data [SQL Server], designing"
-ms.assetid: 41a132a1-09e2-4426-b9df-225270cb8e15
-author: MladjoA
-ms.author: mlandzic
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Spatial Data

@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "authorization [CLR integration]"
   - "common language runtime [SQL Server], security"
   - "database objects [CLR integration], security"
-ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 ---
 
 # CLR Integration Security

@@ -1,13 +1,13 @@
 ---
+title: "dtutil Utility"
 description: "dtutil Utility"
-title: "dtutil Utility | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "verifying packages"
   - "checking packages"
   - "moving packages"
@@ -22,9 +22,6 @@ helpviewer_keywords:
   - "dtutil utility"
   - "removing packages"
   - "relocating packages"
-ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
-author: chugugrace
-ms.author: chugu
 ---
 # dtutil Utility
 

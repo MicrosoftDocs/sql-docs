@@ -1,18 +1,16 @@
 ---
-title: "Create and Apply the Initial Snapshot | Microsoft Docs"
+title: "Create and Apply the Initial Snapshot"
 description: Learn how to create and apply the initial snapshot in SQL Server by using SQL Server Management Studio, Transact-SQL, or Replication Management Objects.
-ms.custom: ""
-ms.date: "11/20/2018"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "snapshots [SQL Server replication], creating"
-  - "snapshot replication [SQL Server], initial snapshots"
-ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "11/20/2018"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "snapshots [SQL Server replication], creating"
+  - "snapshot replication [SQL Server], initial snapshots"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Create and Apply the Initial Snapshot
@@ -277,4 +275,4 @@ To work around this issue, specify a different subscriber database for each publ
  [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)   
  [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
- [Use sqlcmd with Scripting Variables](/sql/tools/sqlcmd/sqlcmd-use-scripting-variables)
+ [Use sqlcmd with Scripting Variables](../../tools/sqlcmd/sqlcmd-use-scripting-variables.md)

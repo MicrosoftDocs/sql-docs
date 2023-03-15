@@ -1,19 +1,16 @@
 ---
+title: "Using Microsoft Internet Information Services"
 description: "Using Microsoft Internet Information Services"
-title: "Using Microsoft Internet Information Services | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ODBC driver for Oracle [ODBC], IIS"
   - "internet information services [ODBC]"
   - "IIS [ODBC]"
-ms.assetid: 3328f2f1-b34a-472f-82cf-ad49768ff061
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Using Microsoft Internet Information Services
 > [!IMPORTANT]  

@@ -1,26 +1,23 @@
 ---
+title: "sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)"
 description: "sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)"
-title: "sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_estimated_rowsize_reduction_for_vardecimal"
   - "sp_estimated_rowsize_reduction_for_vardecimal_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_estimated_rowsize_reduction_for_vardecimal"
   - "decimal data type, compressing"
   - "numeric data type, compressing"
   - "estimate decimal compression"
   - "table compression [SQL Server]"
-ms.assetid: 0fe45983-f9f2-4c7f-938a-0fd96e1cbe8d
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

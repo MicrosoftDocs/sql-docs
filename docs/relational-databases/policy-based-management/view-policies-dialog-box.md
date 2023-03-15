@@ -1,17 +1,14 @@
 ---
+title: "View Policies Dialog Box"
 description: "View Policies Dialog Box"
-title: "View Policies Dialog Box | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.dmf.managepolicies.general.f1"
-ms.assetid: 06b9b092-fceb-4be5-b712-5aff89b5ba92
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.dmf.managepolicies.general.f1"
 ---
 # View Policies Dialog Box
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

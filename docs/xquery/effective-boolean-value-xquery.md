@@ -1,22 +1,19 @@
 ---
-title: "Effective Boolean Value (XQuery) | Microsoft Docs"
+title: "Effective Boolean Value (XQuery)"
 description: Learn about effective Boolean values in XQuery.
-ms.custom: ""
+author: "rothja"
+ms.author: "jroth"
 ms.date: "03/06/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: xml
 ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "effective Boolean value [XQuery]"
   - "Boolean values"
   - "XQuery, effective Boolean values"
   - "EBV"
-ms.assetid: 506682b1-b6c9-45e2-aa54-7abd5844c3f1
-author: "rothja"
-ms.author: "jroth"
+dev_langs:
+  - "XML"
 ---
 # Effective Boolean Value (XQuery)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]

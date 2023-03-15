@@ -7,7 +7,6 @@ ms.date: 01/11/2019
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "queries [SQLXML]"
   - "inline schemas [SQLXML]"
@@ -19,7 +18,6 @@ helpviewer_keywords:
   - "annotated XSD schemas, queries"
   - "XSD schemas [SQLXML], queries"
   - "templates [SQLXML], annotated XSD schemas in queries"
-ms.assetid: 927a30a2-eae8-420d-851d-551c5f884f3c
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Annotated XSD Schemas in Queries (SQLXML 4.0)

@@ -1,12 +1,13 @@
 ---
-description: "Rules for Entering Search Values (Visual Database Tools)"
 title: Rules for Entering Search Values
-ms.custom: seo-lt-2019
+description: "Rules for Entering Search Values (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "time [SQL Server], searches"
   - "date searches"
   - "dates [SQL Server], searches"
@@ -16,11 +17,6 @@ helpviewer_keywords:
   - "search criteria [SQL Server], rules"
   - "text value searches [SQL Server]"
   - "numeric value searches [SQL Server]"
-ms.assetid: 3c8134b7-83f4-41b4-99c8-e3949a685ff5
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Rules for Entering Search Values (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

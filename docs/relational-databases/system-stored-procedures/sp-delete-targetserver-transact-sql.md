@@ -1,22 +1,19 @@
 ---
+title: "sp_delete_targetserver (Transact-SQL)"
 description: "sp_delete_targetserver (Transact-SQL)"
-title: "sp_delete_targetserver (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_delete_targetserver"
-  - "sp_delete_targetserver_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_delete_targetserver"
-ms.assetid: cc438701-ad91-419d-9f23-ebc4c548c700
 author: markingmyname
 ms.author: maghan
+ms.date: "08/09/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_delete_targetserver"
+  - "sp_delete_targetserver_TSQL"
+helpviewer_keywords:
+  - "sp_delete_targetserver"
+dev_langs:
+  - "TSQL"
 ---
 # sp_delete_targetserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,23 +1,16 @@
 ---
-description: "ServerNetworkProtocol Class"
 title: "ServerNetworkProtocol Class"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-
-ms.topic: "reference"
-apiname: 
-  - "ServerNetworkProtocol Class"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "ServerNetworkProtocol class"
-ms.assetid: 0f9f7f7d-f8ab-426e-a85d-4eda3a241eb5
+description: "ServerNetworkProtocol Class"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.topic: "reference"
+helpviewer_keywords:
+  - "ServerNetworkProtocol class"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "ServerNetworkProtocol Class"
+apitype: "MOFDef"
 ---
 # ServerNetworkProtocol Class
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "syspolicy_policy_execution_history view"
 dev_langs:
   - "TSQL"
-ms.assetid: b13c44a7-6d49-4d50-abe1-e657fc52bb05
 ---
 # syspolicy_policy_execution_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

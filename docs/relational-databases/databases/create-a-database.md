@@ -1,18 +1,16 @@
 ---
 title: "Create a Database"
 description: "Find out how to create a database in SQL Server 2019 by using SQL Server Management Studio or Transact-SQL. View recommendations for the procedure."
-ms.custom: FY22Q2Fresh
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "10/21/2021"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "databases [SQL Server], creating"
   - "database creation [SQL Server], SQL Server Management Studio"
   - "creating databases"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # Create a Database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

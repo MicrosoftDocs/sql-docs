@@ -1,20 +1,17 @@
 ---
-description: "View Job Activity"
 title: "View Job Activity"
-ms.custom: seo-lt-2019
+description: "View Job Activity"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "viewing job activity"
   - "jobs [SQL Server Agent], viewing"
   - "SQL Server Agent jobs, viewing"
   - "displaying job activity"
-ms.assetid: 5c284e5e-7775-435d-ac49-f3f12a27ddc7
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # View Job Activity

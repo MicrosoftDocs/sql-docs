@@ -1,17 +1,14 @@
 ---
+title: "View Facets Dialog Box"
 description: "View Facets Dialog Box"
-title: "View Facets Dialog Box | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.dmf.viewfacet.f1"
-ms.assetid: 70adec34-078c-4ae0-9961-d6a8318340e7
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.dmf.viewfacet.f1"
 ---
 # View Facets Dialog Box
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,21 +1,17 @@
 ---
-description: "Remove Tables from Queries (Visual Database Tools)"
 title: Remove Tables from Queries
-ms.custom: seo-lt-2019
+description: "Remove Tables from Queries (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "deleting tables"
   - "removing tables"
   - "dropping tables"
   - "queries [SQL Server], tables"
-ms.assetid: 8fea0b4f-99b7-4050-8d6f-a97ffb839619
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Remove Tables from Queries (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,20 +1,18 @@
 ---
-title: "Enable TDE on SQL Server Using EKM | Microsoft Docs"
+title: "Enable TDE on SQL Server Using EKM"
 description: Enable transparent data encryption in SQL Server to protect a database key by using an asymmetric key in an extensible key management module with Transact-SQL.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: vanto
 ms.date: "07/25/2019"
 ms.service: sql
-ms.reviewer: vanto
 ms.subservice: security
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "encryption [SQL Server], TDE using an EKM"
   - "TDE, EKM how to"
   - "EKM, TDE how to"
   - "Transparent Data Encryption, using EKM"
-ms.assetid: b892e7a7-95bd-4903-bf54-55ce08e225af
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # Enable TDE on SQL Server Using EKM
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

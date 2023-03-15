@@ -1,14 +1,13 @@
 ---
 title: SqlPackage Export
 description: Learn how to automate database development tasks with SqlPackage Export. View examples and available parameters, properties, and SQLCMD variables.
-ms.service: sql
-ms.subservice: tools-other
-ms.topic: conceptual
-ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: "dzsquared"
 ms.author: "drskwier"
 ms.reviewer: "maghan"
 ms.date: 9/29/2022
+ms.service: sql
+ms.subservice: tools-other
+ms.topic: conceptual
 ---
 
 # SqlPackage Export parameters and properties
@@ -45,7 +44,7 @@ SqlPackage /Action:Export /TargetFile:"C:\AdventureWorksLT.bacpac" \
     /SourceConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;Authentication=Active Directory Password;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;User ID={yourusername};Password={yourpassword}"
 
 # example export connecting using Azure Active Directory universal authentication
-SqlPackage /Action:Export /TargetFile:"C:\AdventureWorksLT.bacpac" /UniversalAuthentication=True \
+SqlPackage /Action:Export /TargetFile:"C:\AdventureWorksLT.bacpac" /UniversalAuthentication:True \
     /SourceConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
 ```
 
@@ -100,7 +99,7 @@ SqlPackage /at:$($AccessToken_Object.Token) /Action:Export /TargetFile:"C:\Adven
 |**/p:**|IgnoreIndexesStatisticsOnEnclaveEnabledColumns=(BOOLEAN 'False')|Specifies whether indexes or statistics on columns encrypted using randomized encryption and enclave-enabled column encryption keys should be ignored (not included in the generated bacpac). By default (false) any index or a statistic on a column encrypted using randomized encryption and an enclave-enabled column encryption key will block the export action.|
 |**/p:**|LongRunningCommandTimeout=(INT32 '0')|Specifies the long running command timeout in seconds when executing queries against SQL Server. Use 0 to wait indefinitely.|
 |**/p:**|Storage=({File&#124;Memory})|Specifies the type of backing storage for the schema model used during extraction. 'Memory' is default for .NET Core version of SqlPackage. 'File' is only available and default for .NET Framework version of SqlPackage. |
-|**/p:**|TableData=(STRING[])|Indicates the table from which data will be extracted. Specify the table name with or without the brackets surrounding the name parts in the following format: schema_name.table_identifier. This option may be specified multiple times.|
+|**/p:**|TableData=(STRING)|Indicates the table from which data will be extracted. Specify the table name with or without the brackets surrounding the name parts in the following format: schema_name.table_identifier. This property may be specified multiple times to indicate multiple options.|
 |**/p:**|TargetEngineVersion=({Default&#124;Latest&#124;V11&#124;V12} 'Latest')|This property is deprecated and use is not recommended. Specifies the version the target engine for Azure SQL Database is expected to be.|
 |**/p:**|TempDirectoryForTableData=(STRING)|Specifies an alternative temporary directory used to buffer table data before being written to the package file. The space required in this location may be large and is relative to the full size of the database.|
 |**/p:**|VerifyExtraction=(BOOLEAN 'True')|Specifies whether the extracted schema model should be verified. If set to true, schema validation rules are run on the dacpac or bacpac.|

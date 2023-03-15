@@ -1,20 +1,17 @@
 ---
+title: "Bulk Copying Text and Image Data"
 description: "Bulk Copying Text and Image Data"
-title: "Bulk Copying Text and Image Data | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/03/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "bulk copy [ODBC], text data"
   - "SQL Server Native Client ODBC driver, bulk copy"
   - "bulk copy [ODBC], image data"
   - "ODBC, bulk copy operations"
-ms.assetid: 87155bfa-3a73-4158-9d4d-cb7435dac201
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Bulk Copying Text and Image Data

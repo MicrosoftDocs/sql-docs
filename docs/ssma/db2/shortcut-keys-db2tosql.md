@@ -1,15 +1,12 @@
 ---
+title: "Shortcut Keys (DB2ToSQL)"
 description: "Shortcut Keys (DB2ToSQL)"
-title: "Shortcut Keys (DB2ToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: cb20a327-e565-49a3-a5d0-4cc79a48c179
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Shortcut Keys (DB2ToSQL)
 You can use keyboard shortcuts to navigate through SSMA application. For more information, see the following topics.  

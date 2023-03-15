@@ -1,23 +1,19 @@
 ---
-description: Learn how Dynamic SQL can affect the performance of your application and how prepared statements in ODBC may be a faster solution.
-
 title: Dynamic SQL performance in ODBC
-ms.custom: ""
+description: Learn how Dynamic SQL can affect the performance of your application and how prepared statements in ODBC may be a faster solution.
+author: David-Engel
+ms.author: v-davidengel
 ms.date: 04/02/2020
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL [ODBC], embedded SQL"
   - "SQL statements [ODBC], dynamic SQL"
   - "SQL statements [ODBC], embedded SQL"
   - "dynamic SQL [ODBC]"
   - "SQL [ODBC], dynamic SQL"
   - "embedded SQL [ODBC]"
-ms.assetid: 0bfb9ab7-9c15-4433-93bc-bad8b6c9d287
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Dynamic SQL performance in ODBC
 

@@ -1,16 +1,15 @@
 ---
-title: "Query columns using Always Encrypted with SQL Server Management Studio | Microsoft Docs"
+title: "Query columns using Always Encrypted with SQL Server Management Studio"
 description: Learn how to query columns in Always Encrypted using SQL Server Management Studio. Retrieve ciphertext or text values stored in encrypted columns.
-ms.custom: ""
-ms.date: 02/15/2023
-ms.service: sql
-ms.reviewer: vanto
-ms.subservice: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Always Encrypted, configure with SSMS"
 author: jaszymas
 ms.author: jaszymas
+ms.reviewer: vanto
+ms.date: 02/15/2023
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Always Encrypted, configure with SSMS"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Query columns using Always Encrypted with SQL Server Management Studio

@@ -1,17 +1,14 @@
 ---
+title: "Audit Object Derived Permission Event Class"
 description: "Audit Object Derived Permission Event Class"
-title: "Audit Object Derived Permission Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "Audit Object Derived Permission event class"
-ms.assetid: cf61b789-a326-47f9-9d0c-19470782328f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "Audit Object Derived Permission event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Object Derived Permission Event Class

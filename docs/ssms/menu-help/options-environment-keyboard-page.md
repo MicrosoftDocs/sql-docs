@@ -1,18 +1,15 @@
 ---
-description: "Options (Environment - Keyboard Page)"
 title: "Options (Environment - Keyboard Page)"
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: ssms
-ms.topic: ui-reference
-f1_keywords: 
-  - "VS.TOOLSOPTIONSPAGES.ENVIRONMENT.KEYBOARD.GENERAL"
-  - "VS.ToolsOptionsPages.Environment.SQLEnvironmentKeyboard"
-ms.assetid: 0ad77fd5-95bf-4da3-9797-c1e1b9a1102e
+description: "Options (Environment - Keyboard Page)"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: ui-reference
+f1_keywords:
+  - "VS.TOOLSOPTIONSPAGES.ENVIRONMENT.KEYBOARD.GENERAL"
+  - "VS.ToolsOptionsPages.Environment.SQLEnvironmentKeyboard"
 ---
 # Options (Environment - Keyboard Page)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

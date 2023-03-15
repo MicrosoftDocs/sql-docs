@@ -1,19 +1,16 @@
 ---
+title: "Location of Cache"
 description: "Location of Cache"
-title: "Location of Cache | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ODBC cursor library [ODBC], cache"
   - "cursor library [ODBC], cache"
   - "cache [ODBC]"
-ms.assetid: 240d6162-4da6-4b1f-96c7-f379f4ecb16f
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Location of Cache
 > [!IMPORTANT]  

@@ -8,7 +8,6 @@ ms.date: 08/17/2022
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "database backups [SQL Server], recovery models"
   - "recovery [SQL Server], recovery model"

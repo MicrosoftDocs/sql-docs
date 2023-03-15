@@ -7,7 +7,6 @@ ms.date: "01/28/2020"
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: how-to
-ms.custom: seodec18
 ---
 # Configure an Always On distributed availability group  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -304,11 +303,21 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [distributedag]
 
 ## <a name="join_secondary"></a> Join the database on the secondary of the second availability group
 
-After the database on the secondary replica of the second availability group is in a restoring state, you have to manually join it to the availability group.
+If the second availability group was set up to use automatic seeding, then move to step 2.
 
-```sql  
-ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];   
-```
+1. If the second availability group is using manual seeding, then restore the backup you took on the global primary to the secondary of the second availability group:
+
+  ```sql
+  RESTORE DATABASE [db1] 
+  FROM DISK = '<full backup location>' WITH NORECOVERY
+  RESTORE LOG [db1] FROM DISK = '<log backup location>' WITH NORECOVERY
+  ```
+
+2. After the database on the secondary replica of the second availability group is in a restoring state, you have to manually join it to the availability group.
+
+  ```sql  
+  ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];   
+  ```
 
 ## <a name="failover"></a> Fail over to a secondary availability group
 

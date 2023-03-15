@@ -1,13 +1,13 @@
 ---
-title: IClientVirtualDeviceSet2::MapBufferHandle
-titlesuffix: SQL Server VDI reference
-description: This article provides reference for the IClientVirtualDeviceSet2::MapBufferHandle command.
+title: "IClientVirtualDeviceSet2::MapBufferHandle"
+titleSuffix: SQL Server VDI reference
+description: "This article provides reference for the IClientVirtualDeviceSet2::MapBufferHandle command."
+author: MashaMSFT
+ms.author: mathoma
 ms.date: 08/30/2019
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: reference
-author: MashaMSFT
-ms.author: mathoma
 ---
 
 # IClientVirtualDeviceSet2::MapBufferHandle (VDI)

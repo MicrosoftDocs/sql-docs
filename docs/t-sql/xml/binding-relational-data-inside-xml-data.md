@@ -1,23 +1,21 @@
 ---
 title: Binding Relational Data Inside XML Data
 description: "Binding Relational Data Inside XML Data"
+author: MikeRayMSFT
+ms.author: mikeray
+ms.date: "07/26/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "relational data binding [SQL Server]"
   - "XML [SQL Server], binding relational data"
   - "xml data type [SQL Server], relational data binding"
   - "binding relational data [XML in SQL Server]"
   - "variables [XML in SQL Server], relational data binding"
   - "columns [XML in SQL Server], relational data binding"
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "07/26/2017"
+dev_langs:
+  - "TSQL"
 ---
 
 # Binding Relational Data Inside XML Data

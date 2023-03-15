@@ -2,15 +2,12 @@
 title: Replay Traces
 titleSuffix: SQL Server Profiler
 description: See how to replay SQL Server Profiler data from a single computer and how to use breakpoints and simulated user connections in replay to troubleshoot problems.
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: profiler
-ms.topic: conceptual
-ms.assetid: da958d3c-7f3e-44c9-aecc-8a9493bea7c0
 author: markingmyname
 ms.author: maghan
-ms.custom: seo-lt-2019
 ms.date: 03/14/2017
+ms.service: sql
+ms.subservice: profiler
+ms.topic: conceptual
 ---
 
 # Replay Traces

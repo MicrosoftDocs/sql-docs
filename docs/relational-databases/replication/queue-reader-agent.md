@@ -1,19 +1,17 @@
 ---
+title: "Queue Reader Agent"
 description: "Queue Reader Agent"
-title: "Queue Reader Agent | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.monitor.queuereaderagent.f1"
-helpviewer_keywords: 
-  - "Queue Reader Agent dialog box"
-ms.assetid: f02d24b6-dcb5-4126-b56e-fab41cfe4337
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/07/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.monitor.queuereaderagent.f1"
+helpviewer_keywords:
+  - "Queue Reader Agent dialog box"
 ---
 # Queue Reader Agent
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

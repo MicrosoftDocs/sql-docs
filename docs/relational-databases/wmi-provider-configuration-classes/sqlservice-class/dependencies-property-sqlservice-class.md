@@ -1,22 +1,17 @@
 ---
-description: "Dependencies Property (SqlService Class)"
 title: "Dependencies Property (SqlService)"
-ms.custom: seo-lt-2019
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "Dependencies Property (SqlService Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "Dependencies property"
-ms.assetid: 92d54b7e-de2f-4978-b601-0196e37cbb41
+description: "Dependencies Property (SqlService Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "Dependencies property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "Dependencies Property (SqlService Class)"
+apitype: "MOFDef"
 ---
 # Dependencies Property (SqlService Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -1,15 +1,13 @@
 ---
-description: "Shortcut Query Files (MDS Add-in for Excel)"
 title: Shortcut Query Files
-ms.custom: microsoft-excel-add-in
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-ms.assetid: 1ba0219a-6c40-41fa-aff9-8c8f41ef3220
+description: "Shortcut Query Files (MDS Add-in for Excel)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+ms.custom: microsoft-excel-add-in
 ---
 # Shortcut Query Files (MDS Add-in for Excel)
 

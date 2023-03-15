@@ -1,20 +1,17 @@
 ---
-description: "Designate a Fail-Safe Operator"
 title: "Designate a Fail-Safe Operator"
-ms.custom: seo-lt-2019
+description: "Designate a Fail-Safe Operator"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Agent jobs, operators"
   - "fail-safe operator [SQL Server]"
   - "jobs [SQL Server Agent], operators"
   - "notifications [SQL Server], job status"
-ms.assetid: 0f4eb513-5c0a-4523-974e-e85c1deeb57f
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Designate a Fail-Safe Operator

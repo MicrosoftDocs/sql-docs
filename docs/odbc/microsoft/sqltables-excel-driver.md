@@ -1,18 +1,15 @@
 ---
+title: "SQLTables (Excel Driver)"
 description: "SQLTables (Excel Driver)"
-title: "SQLTables (Excel Driver) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Excel driver [ODBC], SQLTables"
-  - "SQLTables function [ODBC], Excel Driver"
-ms.assetid: 9410b686-4b5b-4b51-b5ef-f9d2e7a48faa
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Excel driver [ODBC], SQLTables"
+  - "SQLTables function [ODBC], Excel Driver"
 ---
 # SQLTables (Excel Driver)
 > [!NOTE]  

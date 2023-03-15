@@ -1,15 +1,12 @@
 ---
+title: "Oracle Supplemental Logging Script"
 description: "Oracle Supplemental Logging Script"
-title: "Oracle Supplemental Logging Script | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Oracle Supplemental Logging Script
 

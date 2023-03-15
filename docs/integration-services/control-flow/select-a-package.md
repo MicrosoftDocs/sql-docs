@@ -1,19 +1,16 @@
 ---
+title: "Select a Package"
 description: "Select a Package"
-title: "Select a Package | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.designer.selectapackage.f1"
-helpviewer_keywords: 
-  - "Select a Package dialog box"
-ms.assetid: 92b47a2b-21b5-460a-885d-6cc4bb567249
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.designer.selectapackage.f1"
+helpviewer_keywords:
+  - "Select a Package dialog box"
 ---
 # Select a Package
 

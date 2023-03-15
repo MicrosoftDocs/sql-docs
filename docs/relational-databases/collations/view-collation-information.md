@@ -1,17 +1,13 @@
 ---
+title: "View Collation Information"
 description: "View Collation Information"
-title: "View Collation Information | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "collations [SQL Server], view"
-ms.assetid: 1338b4ea-7142-44bc-a3b9-44e54431405f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.topic: conceptual
+helpviewer_keywords:
+  - "collations [SQL Server], view"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # View Collation Information

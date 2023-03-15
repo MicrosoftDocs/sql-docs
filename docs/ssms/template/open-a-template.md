@@ -1,18 +1,15 @@
 ---
-description: "Open a Template"
 title: "Open a Template"
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: ssms
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "templates [Transact-SQL], opening"
-  - "opening templates"
-ms.assetid: 605b0f4c-5ba1-4249-ad1c-6341df77cd7a
+description: "Open a Template"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+helpviewer_keywords:
+  - "templates [Transact-SQL], opening"
+  - "opening templates"
 ---
 # Open a Template
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

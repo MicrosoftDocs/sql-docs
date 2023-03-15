@@ -1,18 +1,15 @@
 ---
+title: "LN (SSIS Expression)"
 description: "LN (SSIS Expression)"
-title: "LN (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "LN function"
-  - "natural logarithm of expression [Integration Services]"
-ms.assetid: 55d7b657-b5fd-4753-9c81-54ed7575e720
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "LN function"
+  - "natural logarithm of expression [Integration Services]"
 ---
 # LN (SSIS Expression)
 

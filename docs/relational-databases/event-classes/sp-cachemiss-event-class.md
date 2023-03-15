@@ -1,17 +1,14 @@
 ---
+title: "SP:CacheMiss Event Class"
 description: "SP:CacheMiss Event Class"
-title: "SP:CacheMiss Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "SP:CacheMiss event class"
-ms.assetid: 82229233-f772-4558-95a0-d54584d1b1ae
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "SP:CacheMiss event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SP:CacheMiss Event Class

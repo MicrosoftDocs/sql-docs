@@ -1,22 +1,19 @@
 ---
+title: "sp_replrestart (Transact-SQL)"
 description: "sp_replrestart (Transact-SQL)"
-title: "sp_replrestart (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_replrestart_TSQL"
-  - "sp_replrestart"
-helpviewer_keywords: 
-  - "sp_replrestart"
-ms.assetid: 111b3dbf-92f8-4670-b156-1468c63e4fc1
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_replrestart_TSQL"
+  - "sp_replrestart"
+helpviewer_keywords:
+  - "sp_replrestart"
+dev_langs:
+  - "TSQL"
 ---
 # sp_replrestart (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

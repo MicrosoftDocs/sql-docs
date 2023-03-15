@@ -8,7 +8,6 @@ ms.date: "08/10/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: seo-lt-2019​
 dev_langs:
   - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"

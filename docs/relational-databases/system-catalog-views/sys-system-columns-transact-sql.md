@@ -7,7 +7,6 @@ ms.date: "05/24/2022"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "system_columns_TSQL"
   - "system_columns"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.system_columns catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 4ab1d48a-d57a-4e76-a08c-9627eeaf4588
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.system_columns (Transact-SQL)

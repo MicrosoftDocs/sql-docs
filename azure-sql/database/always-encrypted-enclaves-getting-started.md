@@ -7,6 +7,7 @@ ms.reviewer: vanto
 ms.date: 02/15/2023
 ms.service: sql-database
 ms.subservice: security
+ms.custom: devx-track-azurepowershell
 ms.topic: conceptual
 ---
 # Getting started using Always Encrypted with secure enclaves
@@ -25,8 +26,8 @@ These tutorials teach you how to get started with [Always Encrypted with secure 
 
 ## Always Encrypted with secure enclaves in Azure SQL Database
 
-- [Tutorial: Getting started using Always Encrypted with Intel SGX enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started-sgx)
-- [Tutorial: Getting started using Always Encrypted with VBS enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started-vbs)
+- [Tutorial: Getting started using Always Encrypted with Intel SGX enclaves in Azure SQL Database](./always-encrypted-enclaves-getting-started-sgx.md)
+- [Tutorial: Getting started using Always Encrypted with VBS enclaves in Azure SQL Database](./always-encrypted-enclaves-getting-started-vbs.md)
 
 ## Next steps
 

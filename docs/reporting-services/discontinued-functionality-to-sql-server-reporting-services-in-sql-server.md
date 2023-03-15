@@ -1,14 +1,12 @@
 ---
 title: Discontinued functionality in SQL Server Reporting Services (SSRS)
 description: Learn details about SQL Server Reporting Services features that are no longer available in different versions of Reporting Services.
+author: maggiesMSFT
+ms.author: maggies
+ms.date: 11/2/2022
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-author: maggiesMSFT 
-ms.author: maggies
-ms.reviewer: ""
-ms.custom: seodec18
-ms.date: 11/2/2022
 ---
 
 # Discontinued functionality in SQL Server Reporting Services (SSRS)

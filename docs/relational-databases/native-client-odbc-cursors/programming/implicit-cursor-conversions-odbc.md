@@ -1,19 +1,16 @@
 ---
+title: "Implicit Cursor Conversions (ODBC)"
 description: "Implicit Cursor Conversions (ODBC)"
-title: "Implicit Cursor Conversions (ODBC) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/06/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ODBC cursors, implicit cursor conversions"
   - "implicit cursor conversions"
   - "cursors [ODBC], implicit cursor conversions"
-ms.assetid: fe29a58d-8448-4512-9ffd-b414784ba338
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Implicit Cursor Conversions (ODBC)

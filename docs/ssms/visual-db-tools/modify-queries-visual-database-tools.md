@@ -1,19 +1,15 @@
 ---
-description: "Modify Queries (Visual Database Tools)"
 title: Modify Queries
-ms.custom: seo-lt-2019
+description: "Modify Queries (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "modifying queries"
   - "queries [SQL Server], modifying"
-ms.assetid: e2618a89-90fb-43d8-ac4e-cabd2aa3f1dc
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Modify Queries (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

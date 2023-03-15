@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_8992"
 description: "MSSQLSERVER_8992"
-title: "MSSQLSERVER_8992 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "8992 (Database Engine error)"
-ms.assetid: 68467e6a-09d8-478f-8bd9-3bb09453ada3
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "8992 (Database Engine error)"
 ---
 # MSSQLSERVER_8992
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -7,9 +7,7 @@ ms.date: 11/01/2022
 ms.service: sql
 ms.subservice: install
 ms.topic: conceptual
-ms.custom:
-  - intro-installation
-  - event-tier1-build-2022
+ms.custom: intro-installation
 helpviewer_keywords:
   - "installing SQL Server, command prompt"
   - "installing SQL Server, command line"

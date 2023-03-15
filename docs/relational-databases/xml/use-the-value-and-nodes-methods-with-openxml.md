@@ -1,18 +1,17 @@
 ---
 title: "Use the value() and nodes() Methods with OPENXML"
 description: Learn how to extract a rowset of XML values in an SQL query using the value() and nodes() methods or the OpenXML() method.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
 ms.date: 05/05/2022
 ms.service: sql
-ms.reviewer: randolphwest
 ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "OpenXML method [XML in SQL Server]"
   - "value method [XML in SQL Server]"
   - "nodes method [XML in SQL Server]"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Use the value() and nodes() methods with OPENXML
 

@@ -1,19 +1,17 @@
 ---
+title: "Subscriber Properties"
 description: "Subscriber Properties"
-title: "Subscriber Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.configdistwizard.subscribers.f1"
-helpviewer_keywords: 
-  - "Subscriber Properties dialog box"
-ms.assetid: 32aa0347-64e4-4aa4-ac57-6bd3e5d52070
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.configdistwizard.subscribers.f1"
+helpviewer_keywords:
+  - "Subscriber Properties dialog box"
 monikerRange: "=azuresqldb-current||>=sql-server-2016"
 ---
 # Subscriber Properties

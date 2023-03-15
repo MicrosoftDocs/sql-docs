@@ -1,22 +1,19 @@
 ---
+title: "sp_addrolemember (Transact-SQL)"
 description: "sp_addrolemember (Transact-SQL)"
-title: "sp_addrolemember (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/30/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_addrolemember_TSQL"
-  - "sp_addrolemember"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_addrolemember"
-ms.assetid: a583c087-bdb3-46d2-b9e5-3921b3e6d10b
 author: VanMSFT
 ms.author: vanto
+ms.date: "01/30/2019"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_addrolemember_TSQL"
+  - "sp_addrolemember"
+helpviewer_keywords:
+  - "sp_addrolemember"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_addrolemember (Transact-SQL)

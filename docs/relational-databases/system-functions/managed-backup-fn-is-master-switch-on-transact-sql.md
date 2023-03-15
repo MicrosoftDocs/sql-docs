@@ -1,25 +1,22 @@
 ---
+title: "managed_backup.fn_is_master_switch_on (Transact-SQL)"
 description: "managed_backup.fn_is_master_switch_on (Transact-SQL)"
-title: "managed_backup.fn_is_master_switch_on (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "06/10/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "fn_is_master_switch_on"
   - "fn_is_master_switch_on_TSQL"
   - "smart_admin.fn_is_master_switch_on"
   - "smart_admin.fn_is_master_switch_on_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "smart_admin.fn_is_master_switch_on"
   - "fn_is_master_switch_on"
-ms.assetid: e8c2108d-b104-46cb-9645-a15f46112c86
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 ---
 # managed_backup.fn_is_master_switch_on (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

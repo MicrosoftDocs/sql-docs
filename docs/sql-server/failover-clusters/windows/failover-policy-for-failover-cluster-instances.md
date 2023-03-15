@@ -1,17 +1,14 @@
 ---
 title: "Failover policy for failover cluster instances"
-description: A description of the different failover policies available for a SQL Server failover cluster instance. 
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: failover-cluster-instance
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "flexible failover policy"
-ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
+description: A description of the different failover policies available for a SQL Server failover cluster instance.
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: failover-cluster-instance
+ms.topic: conceptual
+helpviewer_keywords:
+  - "flexible failover policy"
 ---
 # Failover Policy for Failover Cluster Instances
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

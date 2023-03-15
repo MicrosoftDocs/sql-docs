@@ -1,22 +1,19 @@
 ---
+title: "sp_helpsrvrolemember (Transact-SQL)"
 description: "sp_helpsrvrolemember (Transact-SQL)"
-title: "sp_helpsrvrolemember (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_helpsrvrolemember"
-  - "sp_helpsrvrolemember_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_helpsrvrolemember"
-ms.assetid: d0714913-8d6b-4de3-b042-3ae9934f839d
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helpsrvrolemember"
+  - "sp_helpsrvrolemember_TSQL"
+helpviewer_keywords:
+  - "sp_helpsrvrolemember"
+dev_langs:
+  - "TSQL"
 ---
 # sp_helpsrvrolemember (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

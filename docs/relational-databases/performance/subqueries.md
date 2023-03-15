@@ -7,7 +7,6 @@ ms.date: 07/25/2022
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
-ms.custom: contperf-fy21q4
 helpviewer_keywords:
   - "Subquery"
   - "Subqueries"

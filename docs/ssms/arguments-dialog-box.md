@@ -1,18 +1,15 @@
 ---
 title: "Arguments Dialog Box"
 description: "Arguments Dialog Box"
+author: "markingmyname"
+ms.author: "maghan"
+ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: ssms
 ms.topic: ui-reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Arguments dialog box"
   - "arguments [SQL Server Management Studio]"
-ms.assetid: 9a918855-efb8-44dc-9e6b-df0a2dac3651
-author: "markingmyname"
-ms.author: "maghan"
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
 ---
 
 # Arguments Dialog Box

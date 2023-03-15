@@ -1,29 +1,18 @@
---- 
- 
-# required metadata 
-title: "BaseLearner,coef_,fit,get_algo_args,predict,summary_,FastTrees,get_train_node,OneClassSvm,get_train_node,FastForest,get_train_node,FastLinear,get_train_node,LogisticRegression,aic,coef_,deviance_,get_algo_args,get_train_node,NeuralNetwork,get_train_node,OneClassSvm,get_train_node: Learners Python Objects" 
-description: "An instance of the following objects is returned by every training function. They all inherit from the class BaseLearner and implement common methods.get_algo_args returns the training parameters,  coef_ retrieves the coefficients,  summary_ returns training information.The content changes based on the trained learner." 
-keywords: "models, learners" 
-author: WilliamDAssafMSFT
-ms.author: wiassaf 
-ms.date: 07/15/2019
-ms.topic: "reference" 
-ms.service: sql
-ms.subservice: "machine-learning-services" 
-ms.assetid: "" 
- 
-# optional metadata 
-ROBOTS: "" 
-audience: "" 
-ms.devlang: "Python" 
-ms.reviewer: "" 
-ms.suite: "" 
-ms.tgt_pltfrm: "" 
-ms.custom: "" 
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
- 
 ---
-
+title: "BaseLearner,coef_,fit,get_algo_args,predict,summary_,FastTrees,get_train_node,OneClassSvm,get_train_node,FastForest,get_train_node,FastLinear,get_train_node,LogisticRegression,aic,coef_,deviance_,get_algo_args,get_train_node,NeuralNetwork,get_train_node,OneClassSvm,get_train_node: Learners Python Objects"
+description: "An instance of the following objects is returned by every training function. They all inherit from the class BaseLearner and implement common methods.get_algo_args returns the training parameters,  coef_ retrieves the coefficients,  summary_ returns training information.The content changes based on the trained learner."
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 07/15/2019
+ms.service: sql
+ms.subservice: "machine-learning-services"
+ms.topic: "reference"
+keywords:
+  - models
+  - learners
+ms.devlang: Python
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
+---
 # MicrosoftML Learners Objects
 
 

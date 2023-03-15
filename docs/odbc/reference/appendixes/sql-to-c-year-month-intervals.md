@@ -1,20 +1,17 @@
 ---
+title: "SQL to C: Year-Month Intervals"
 description: "SQL to C: Year-Month Intervals"
-title: "SQL to C: Year-Month Intervals | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2019"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "converting data from SQL to c types [ODBC], about converting"
   - "data conversions from SQL to C types [ODBC], year-month intervals"
   - "intervals [ODBC], converting"
   - "year-month intervals [ODBC]"
-ms.assetid: 1233634b-8214-420f-b872-3b2630105ba4
-author: David-Engel
-ms.author: v-davidengel
 ---
 # SQL to C: Year-Month Intervals
 

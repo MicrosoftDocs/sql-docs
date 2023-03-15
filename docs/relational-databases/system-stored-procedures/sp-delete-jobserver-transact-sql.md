@@ -1,22 +1,19 @@
 ---
+title: "sp_delete_jobserver (Transact-SQL)"
 description: "sp_delete_jobserver (Transact-SQL)"
-title: "sp_delete_jobserver (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_delete_jobserver"
-  - "sp_delete_jobserver_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_delete_jobserver"
-ms.assetid: 6d63ed32-68cf-4d8f-aa40-05a3826e05b8
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_delete_jobserver"
+  - "sp_delete_jobserver_TSQL"
+helpviewer_keywords:
+  - "sp_delete_jobserver"
+dev_langs:
+  - "TSQL"
 ---
 # sp_delete_jobserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

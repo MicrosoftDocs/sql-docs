@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_945"
 description: "MSSQLSERVER_945"
-title: "MSSQLSERVER_945 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "945 (Database Engine error)"
-ms.assetid: ee501d13-0bd9-4627-896c-ed5b1bdb88b3
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "945 (Database Engine error)"
 ---
 # MSSQLSERVER_945
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

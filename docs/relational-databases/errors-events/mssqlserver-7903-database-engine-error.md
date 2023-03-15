@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_7903"
 description: "MSSQLSERVER_7903"
-title: "MSSQLSERVER_7903 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "7903 (Database Engine error)"
-ms.assetid: 991a86df-42cd-435e-85b3-f42e4cb13039
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "7903 (Database Engine error)"
 ---
 # MSSQLSERVER_7903
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

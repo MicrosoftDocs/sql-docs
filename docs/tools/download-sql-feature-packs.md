@@ -1,15 +1,14 @@
 ---
 title: Download SQL Server extended features and tools
 description: This article provides a brief explanation of the various downloads and stand-alone packages Microsoft provides to add value for SQL Server.
+author: markingmyname
+ms.author: maghan
+ms.reviewer: mikeray
+ms.date: 09/17/2021
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: conceptual
 keywords: feature pack
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
-ms.custom: seo-lt-2019
-ms.date: 09/17/2021
 ---
 # Download SQL Server extended features and tools
 
@@ -34,7 +33,7 @@ This article provides a brief explanation of the various downloads and stand-alo
 
 | Feature | Description |
 |----|-----|
-| [Command Line Utilities for SQL Server](/sql/tools/sqlcmd/sqlcmd-utility) | The SQLCMD utility allows users to connect to, send Transact-SQL batches from, and output rowset information from SQL Server instances. |
+| [Command Line Utilities for SQL Server](./sqlcmd/sqlcmd-utility.md) | The SQLCMD utility allows users to connect to, send Transact-SQL batches from, and output rowset information from SQL Server instances. |
 | [Drivers for PHP for SQL Server](../connect/php/download-drivers-php-sql-server.md) | The Microsoft Drivers for PHP for SQL Server are PHP extensions that allow for the reading and writing of SQL Server data from within PHP scripts. |
 | [JDBC Driver for SQL Server](../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md) | The Microsoft JDBC Driver for SQL Server provides access to SQL Server from any Java application, application server, or Java-enabled applet.|
 | [SQL Server Data-Tier Application Framework](sqlpackage/sqlpackage-download.md#dacfx) | The SQL Server Data-tier Application framework (DacFx) is a .NET component that provides application lifecycle services for database development and management and is available in the [SqlPackage](sqlpackage/sqlpackage-download.md) CLI and as a [NuGet package](https://www.nuget.org/packages/Microsoft.SqlServer.DacFx). The Data-tier Application Framework includes TransactSql.ScriptDOM. |
@@ -47,7 +46,7 @@ This article provides a brief explanation of the various downloads and stand-alo
 
 | Feature | Description |
 |----|-----|
-| [Command Line Utilities for SQL Server](/sql/tools/sqlcmd/sqlcmd-utility) | The SQLCMD utility allows users to connect to, send Transact-SQL batches from, and output rowset information from SQL Server instances. |
+| [Command Line Utilities for SQL Server](./sqlcmd/sqlcmd-utility.md) | The SQLCMD utility allows users to connect to, send Transact-SQL batches from, and output rowset information from SQL Server instances. |
 | [Remote Blob Store](https://go.microsoft.com/fwlink/?linkid=2109005) | The SQL Server Remote Blob Store is a method for storing blobs of unstructured data in an external Content Addressable data store. The component consists of a client-side DLL that is linked into a user application, and a set of stored procedures to be installed on SQL Server. |
 | [SQL Server Upgrade Advisor](../database-engine/install-windows/supported-version-and-edition-upgrades-2019.md) | Microsoft Upgrade Advisor analyzes instances of SQL Server in preparation for upgrading to SQL Server. |
 

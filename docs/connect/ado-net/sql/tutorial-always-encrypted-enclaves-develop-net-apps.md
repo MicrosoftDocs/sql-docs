@@ -8,7 +8,6 @@ ms.date: 02/15/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: tutorial
-ms.custom: event-tier1-build-2022
 ---
 
 # Tutorial: Develop a .NET application using Always Encrypted with secure enclaves

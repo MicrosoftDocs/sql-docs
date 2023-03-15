@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "sys.database_audit_specifications catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: bf80e5c6-0588-4eb7-86ff-aa7c73461335
 ---
 # sys.database_audit_specifications (Transact-SQL)
 

@@ -1,17 +1,14 @@
 ---
+title: "SAP BW Destination Editor (Error Output Page)"
 description: "SAP BW Destination Editor (Error Output Page)"
-title: "SAP BW Destination Editor (Error Output Page) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.designer.sapbwdestination.erroroutput.f1"
-ms.assetid: a543d811-0bd2-4890-a0d3-f5fdcd4524b8
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.designer.sapbwdestination.erroroutput.f1"
 ---
 # SAP BW Destination Editor (Error Output Page)
 

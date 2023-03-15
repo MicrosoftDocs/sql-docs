@@ -1,19 +1,17 @@
 ---
-description: "Remove a Registered Server (SQL Server Management Studio)"
 title: Remove a Registered Server
-ms.service: sql
-ms.subservice: ssms
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "removing registered servers"
-  - "deleting registered servers"
-  - "Registered Servers [SQL Server], removing servers"
-ms.assetid: 1f7f755f-7ed2-4572-aa18-13cdd92e350e
+description: "Remove a Registered Server (SQL Server Management Studio)"
 author: markingmyname
 ms.author: maghan
 ms.reviewer: "mikeray"
-ms.custom: seo-lt-2019
 ms.date: 03/01/2017
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+helpviewer_keywords:
+  - "removing registered servers"
+  - "deleting registered servers"
+  - "Registered Servers [SQL Server], removing servers"
 ---
 
 # Remove a Registered Server (SQL Server Management Studio)

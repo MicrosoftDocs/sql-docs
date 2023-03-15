@@ -1,14 +1,13 @@
 ---
-title: "Release notes for Reporting Services 2017 and later | Microsoft Docs"
+title: "Release notes for Reporting Services 2017 and later"
 description: Learn details about the changes in SQL Server Reporting Services (SSRS), for versions 2017 and later.
-ms.date: 02/06/2023
-ms.service: reporting-services
-ms.subservice: reporting-services
-
-ms.topic: conceptual
-ms.reviewer: maggies
 author: casualoak
 ms.author: petebro
+ms.reviewer: maggies
+ms.date: 03/09/2023
+ms.service: reporting-services
+ms.subservice: reporting-services
+ms.topic: conceptual
 monikerRange: ">=sql-server-2017"
 ---
 # Release notes for SQL Server Reporting Services (SSRS) 2017 and later
@@ -104,6 +103,7 @@ Release Candidate 0 (RC0)
 - Fixed issue with certain parameters causing connection error to certain data sources.
 - Fixed issue with date time in some locales.
 - Fixed issue with spacing in PDF exports.
+- Fixed issue with email priority in a subscription set incorrectly.
 - Updated versions of some utilized open-source software.
 - Security fixes
 
@@ -170,7 +170,19 @@ Initial release.
 
 ## SQL Server 2017 Reporting Services
 
-## 14.0.600.1860, 2022/04/26 
+## 14.0.601.20, 2023/02/14
+*(Product Version: 14.0.601.20)*
+
+- New [Power BI Migration experience](/power-bi/guidance/migrate-ssrs-reports-to-power-bi#migration-tool-for-sql-server-2022) in the portal.
+
+| Fixed issue | Details |
+| :---------- | :------ |
+| Fixed issue with RTL alignment of toggles in RDL reports.  | &nbsp; |
+| Fixed formatting loss of empty cells exported to Word.  | &nbsp; |
+| Changes to telemetry configuration and logging.  | &nbsp; |
+| Security fixes.  | &nbsp; |
+
+## 14.0.600.1860, 2022/04/26
 *(Product Version: 14.0.600.1860)*
 
 | Fixed issue | Details |

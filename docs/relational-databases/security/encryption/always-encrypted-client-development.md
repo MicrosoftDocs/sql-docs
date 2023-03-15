@@ -1,17 +1,15 @@
 ---
-title: "Develop applications using Always Encrypted | Microsoft Docs"
+title: "Develop applications using Always Encrypted"
 description: Learn about Always Encrypted client-side technology that ensures sensitive data are never revealed to the SQL Server or Azure SQL Database.
-ms.custom: ""
-ms.date: "10/30/2019"
-ms.service: sql
-ms.reviewer: vanto
-ms.subservice: security
-ms.topic: conceptual
-dev_langs: 
-  - "CSharp"
-ms.assetid: 9595eb66-284c-4474-828f-8961a05ce989
 author: jaszymas
 ms.author: jaszymas
+ms.reviewer: vanto
+ms.date: "10/30/2019"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+dev_langs:
+  - "CSharp"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Develop applications using Always Encrypted

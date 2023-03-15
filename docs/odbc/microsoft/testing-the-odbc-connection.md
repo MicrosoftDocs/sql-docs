@@ -1,18 +1,15 @@
 ---
+title: "Testing the ODBC Connection"
 description: "Testing the ODBC Connection"
-title: "Testing the ODBC Connection | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "testing connections [ODBC]"
-  - "ODBC driver for Oracle [ODBC], testing connections"
-ms.assetid: 5e671665-2aba-49a7-8871-70784d8b3cc9
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "testing connections [ODBC]"
+  - "ODBC driver for Oracle [ODBC], testing connections"
 ---
 # Testing the ODBC Connection
 > [!IMPORTANT]  

@@ -3,11 +3,11 @@ title: Java data types
 titleSuffix: SQL Server Language Extensions
 description: Map data types from Java to SQL Server for input and output data structures, and for input parameters on the sp_execute_external_script.
 author: rothja
-ms.author: jroth 
+ms.author: jroth
 ms.date: 11/05/2019
-ms.topic: conceptual
 ms.service: sql
 ms.subservice: language-extensions
+ms.topic: conceptual
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 # Java and SQL Server supported data types

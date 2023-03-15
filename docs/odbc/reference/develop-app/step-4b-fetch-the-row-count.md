@@ -1,19 +1,16 @@
 ---
+title: "Step 4b: Fetch the Row Count"
 description: "Step 4b: Fetch the Row Count"
-title: "Step 4b: Fetch the Row Count | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "fetches [ODBC], fetching row count"
   - "row count [ODBC]"
   - "application process [ODBC], fetching row count"
-ms.assetid: 3af481b1-d694-446e-948d-e3a5edcad050
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Step 4b: Fetch the Row Count
 The next step is to fetch the row count, as shown in the following illustration.  

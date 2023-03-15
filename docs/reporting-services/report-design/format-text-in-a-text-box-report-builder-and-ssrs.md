@@ -1,15 +1,12 @@
 ---
-title: "Format text in a text box in paginated reports | Microsoft Docs"
-description: Discover how to format text in a text box in paginated reports, and how to mix placeholder text and static text to create mail merges or templates for text in Report Builder. 
+title: "Format text in a text box in paginated reports"
+description: Discover how to format text in a text box in paginated reports, and how to mix placeholder text and static text to create mail merges or templates for text in Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/01/2017
 ms.service: reporting-services
 ms.subservice: report-design
-
-
 ms.topic: conceptual
-ms.assetid: df0794b5-96b0-4034-bd17-1be7f31e29db
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Format text in a text box in paginated reports (Report Builder)
 

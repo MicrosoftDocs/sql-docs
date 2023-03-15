@@ -1,13 +1,12 @@
 ---
+title: "Write International Transact-SQL Statements"
 description: "Write International Transact-SQL Statements"
-title: "Write International Transact-SQL Statements | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "04/24/2019"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "writing international statements"
   - "Transact-SQL international considerations"
   - "international considerations [SQL Server], Transact-SQL"
@@ -15,9 +14,6 @@ helpviewer_keywords:
   - "statements [SQL Server], international"
   - "database international considerations [SQL Server], Transact-SQL"
   - "dates [SQL Server], international considerations"
-ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Write International Transact-SQL Statements

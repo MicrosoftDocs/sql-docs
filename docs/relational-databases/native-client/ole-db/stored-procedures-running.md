@@ -1,19 +1,16 @@
 ---
+title: "Running Stored Procedures (OLE DB)"
 description: "Stored Procedures - Running in SQL Server Native Client"
-title: "Running Stored Procedures (OLE DB) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "stored procedures [OLE DB], executing"
   - "OLE DB, stored procedures"
   - "SQL Server Native Client OLE DB provider, stored procedures"
-ms.assetid: c77d9be9-2176-4438-8c7a-04b63ebece08
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Stored Procedures - Running in SQL Server Native Client

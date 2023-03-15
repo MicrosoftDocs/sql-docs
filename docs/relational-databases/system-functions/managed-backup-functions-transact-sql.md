@@ -1,20 +1,17 @@
 ---
+title: "Managed Backup Functions (Transact-SQL)"
 description: "Managed Backup Functions (Transact-SQL)"
-title: "Managed Backup Functions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "smart admin functions"
-  - "functions, smart admin"
-ms.assetid: 1d513d9c-05af-446d-8eba-42f55efcc221
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+helpviewer_keywords:
+  - "smart admin functions"
+  - "functions, smart admin"
+dev_langs:
+  - "TSQL"
 ---
 # Managed Backup Functions (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

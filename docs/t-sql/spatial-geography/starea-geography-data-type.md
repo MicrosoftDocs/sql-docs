@@ -1,22 +1,19 @@
 ---
+title: "STArea (geography Data Type)"
 description: "STArea (geography Data Type)"
-title: "STArea (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STArea (geography Data Type)"
   - "STArea_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STArea method"
-ms.assetid: cfc0b0e0-7fde-431a-863f-d13f3b1b1bef
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STArea (geography Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

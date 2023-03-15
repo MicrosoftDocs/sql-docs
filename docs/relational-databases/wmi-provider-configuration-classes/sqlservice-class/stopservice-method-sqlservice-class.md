@@ -1,22 +1,17 @@
 ---
-description: "StopService Method (SqlService Class)"
 title: "StopService Method (SqlService)"
-ms.custom: seo-lt-2019
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "StopService Method (SqlService Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "StopService method"
-ms.assetid: ef8e1856-4930-417a-8f52-be470fd3f15c
+description: "StopService Method (SqlService Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "StopService method"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "StopService Method (SqlService Class)"
+apitype: "MOFDef"
 ---
 # StopService Method (SqlService Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -1,22 +1,19 @@
 ---
+title: "Cursor Library Operations"
 description: "Cursor Library Operations"
-title: "Cursor Library Operations | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ODBC cursor library [ODBC], backward compatibility"
   - "compatibility [ODBC], cursor library"
   - "upgrading applications [ODBC], cursor library"
   - "application upgrades [ODBC], cursor library"
   - "backward compatibility [ODBC], cursor library"
   - "cursor library [ODBC], backward compatibility"
-ms.assetid: 04d514b1-dc4d-4b84-bf35-60f4657ef1f6
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Cursor Library Operations
 > [!IMPORTANT]  

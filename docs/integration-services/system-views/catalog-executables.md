@@ -1,15 +1,12 @@
 ---
+title: "catalog.executables"
 description: "catalog.executables"
-title: "catalog.executables | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "language-reference"
-ms.assetid: bae22d0c-e190-426f-a074-c1d1170e8dd8
 author: chugugrace
 ms.author: chugu
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
 ---
 # catalog.executables 
 

@@ -1,22 +1,17 @@
 ---
+title: "bcp_batch"
 description: "bcp_batch"
-title: "bcp_batch | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-apiname: 
-  - "bcp_batch"
-apilocation: 
-  - "sqlncli11.dll"
-apitype: "DLLExport"
-helpviewer_keywords: 
-  - "bcp_batch function"
-ms.assetid: 0bda489e-86bc-4a7e-80f6-96047e03f281
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "bcp_batch function"
+apilocation: "sqlncli11.dll"
+apiname: "bcp_batch"
+apitype: "DLLExport"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # bcp_batch

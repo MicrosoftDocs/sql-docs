@@ -1,23 +1,20 @@
 ---
+title: "sp_syscollector_update_collector_type (Transact-SQL)"
 description: "sp_syscollector_update_collector_type (Transact-SQL)"
-title: "sp_syscollector_update_collector_type (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_syscollector_update_collector_type_TSQL"
-  - "sp_syscollector_update_collector_type"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_syscollector_update_collector_type"
-  - "data collector [SQL Server], stored procedures"
-ms.assetid: 3c414dfd-d9ca-4320-81aa-949465b967bf
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_syscollector_update_collector_type_TSQL"
+  - "sp_syscollector_update_collector_type"
+helpviewer_keywords:
+  - "sp_syscollector_update_collector_type"
+  - "data collector [SQL Server], stored procedures"
+dev_langs:
+  - "TSQL"
 ---
 # sp_syscollector_update_collector_type (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

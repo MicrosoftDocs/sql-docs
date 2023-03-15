@@ -1,24 +1,19 @@
 ---
+title: "SQLRemoveTranslator Function"
 description: "SQLRemoveTranslator Function"
-title: "SQLRemoveTranslator Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLRemoveTranslator"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLRemoveTranslator"
-helpviewer_keywords: 
-  - "SQLRemoveTranslator function [ODBC]"
-ms.assetid: c6feda49-0359-4224-8de9-77125cf2397b
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLRemoveTranslator"
+helpviewer_keywords:
+  - "SQLRemoveTranslator function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLRemoveTranslator"
+apitype: "dllExport"
 ---
 # SQLRemoveTranslator Function
 **Conformance**  

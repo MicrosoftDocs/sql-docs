@@ -1,20 +1,17 @@
 ---
-description: "Associate a Query with a Connection in a Project"
 title: "Associate a Query with a Connection in a Project"
-ms.custom: seo-lt-2019
+description: "Associate a Query with a Connection in a Project"
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "connections [SQL Server Management Studio], query associations"
   - "projects [SQL Server Management Studio], connections"
   - "projects [SQL Server Management Studio], query connections"
   - "query associations [SQL Server Management Studio]"
-ms.assetid: c9625ae0-29c1-4179-a709-51b7e2f9e23d
-author: "markingmyname"
-ms.author: "maghan"
 ---
 # Associate a Query with a Connection in a Project
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

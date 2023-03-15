@@ -1,21 +1,19 @@
 ---
 title: "Implement custom conflict resolver (Merge)"
 description: Learn how to implement a custom conflict resolver for a Merge Publication in SQL Server.
-ms.custom: seo-lt-2019
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "merge replication conflict resolution [SQL Server replication], stored procedure-based resolvers"
   - "articles [SQL Server replication], conflict resolution"
   - "conflict resolution [SQL Server replication], merge replication"
-ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
-author: "MashaMSFT"
-ms.author: "mathoma"
+dev_langs:
+  - "TSQL"
 ---
 # Implement a custom conflict resolver for a Merge article
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

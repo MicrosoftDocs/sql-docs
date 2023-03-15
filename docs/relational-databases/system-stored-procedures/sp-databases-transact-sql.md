@@ -1,22 +1,19 @@
 ---
+title: "sp_databases (Transact-SQL)"
 description: "sp_databases (Transact-SQL)"
-title: "sp_databases (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_databases_TSQL"
-  - "sp_databases"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_databases"
-ms.assetid: 2a83b92a-9ecc-43c4-8ff4-e91e3a940b5a
 author: markingmyname
 ms.author: maghan
+ms.date: "06/10/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_databases_TSQL"
+  - "sp_databases"
+helpviewer_keywords:
+  - "sp_databases"
+dev_langs:
+  - "TSQL"
 ---
 # sp_databases (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

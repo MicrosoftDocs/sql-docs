@@ -7,14 +7,12 @@ ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "<after> block"
   - "updategrams [SQLXML], deleting data"
   - "<before> block"
   - "mapping-schema attribute"
   - "record deletions [SQLXML]"
-ms.assetid: 4fb116d7-7652-474a-a567-cb475a20765c
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Deleting Data Using XML Updategrams (SQLXML 4.0)

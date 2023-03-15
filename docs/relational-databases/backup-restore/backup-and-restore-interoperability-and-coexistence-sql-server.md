@@ -1,21 +1,18 @@
 ---
 title: "Backup & restore: feature interoperability"
 description: This article describes backup-and-restore features in SQL Server, including database startup, online restore and disabled indexes, and database mirroring.
-ms.custom: seo-lt-2019
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "12/17/2019"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "file restores [SQL Server], related features"
   - "restoring [SQL Server], files"
   - "restoring files [SQL Server], related features"
   - "backups [SQL Server], files or filegroups"
   - "file backups [SQL Server], related features"
-ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Backup and Restore: Interoperability and Coexistence (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

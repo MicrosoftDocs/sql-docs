@@ -1,18 +1,15 @@
 ---
+title: "SQLStatistics (Excel Driver)"
 description: "SQLStatistics (Excel Driver)"
-title: "SQLStatistics (Excel Driver) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Excel driver [ODBC], SQLStatistics"
-  - "SQLStatistics function [ODBC], Excel Driver"
-ms.assetid: 02506664-8dcc-4bd0-a8bb-d49fcbdd5722
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Excel driver [ODBC], SQLStatistics"
+  - "SQLStatistics function [ODBC], Excel Driver"
 ---
 # SQLStatistics (Excel Driver)
 > [!NOTE]  

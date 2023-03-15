@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "restorehistory system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 9140ecc1-d912-4d76-ae70-e2a857da6d44
 ---
 # restorehistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

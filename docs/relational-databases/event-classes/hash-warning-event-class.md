@@ -1,17 +1,14 @@
 ---
+title: "Hash Warning Event Class"
 description: "Hash Warning Event Class"
-title: "Hash Warning Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "Hash Warning event class"
-ms.assetid: cb93c620-4be9-4362-8bf0-af3f2048bdaf
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "Hash Warning event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Hash Warning Event Class

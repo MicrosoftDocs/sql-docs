@@ -1,17 +1,15 @@
 ---
 title: "Log Reader Agent Security (SSMS)"
 description: Describes the 'Log Reader Agent Security' page for a Transaction and Peer-to-peer Publication within SQL Server Management Studio (SSMS).
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.p2pwizard.LRA.f1"
-ms.assetid: 6575e2a8-16bb-449c-bdca-4a4202d0972f
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.p2pwizard.LRA.f1"
 ---
 # Log Reader Agent Security (Peer-to-Peer Replication)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

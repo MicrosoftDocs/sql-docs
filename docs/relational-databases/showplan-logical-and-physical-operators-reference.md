@@ -1,13 +1,12 @@
 ---
-description: "Showplan Logical and Physical Operators Reference"
 title: "Showplan Logical & Physical Operators Reference"
-ms.custom: seo-dt-2019
+description: "Showplan Logical and Physical Operators Reference"
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "10/12/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.showplan.leftouterjoin.f1"
   - "sql13.swb.showplan.remotedelete.f1"
   - "sql13.swb.showplan.parallelism.f1"
@@ -119,7 +118,7 @@ f1_keywords:
   - "sql13.swb.showplan.concatenation.f1"
   - "sql13.swb.showplan.computescalar"
   - "sql13.swb.showplan.foreignkeyreferencescheck"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "execution plans [SQL Server], operators"
   - "ActualRows attribute"
   - "reading execution plan output"
@@ -133,9 +132,6 @@ helpviewer_keywords:
   - "physical operators [SQL Server]"
   - "ActualRebinds attribute"
   - "execution plans [SQL Server], reading output"
-ms.assetid: e43fd0fe-5ea7-4ffe-8d52-759ef6a7c361
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Showplan Logical and Physical Operators Reference

@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_5245"
 description: "MSSQLSERVER_5245"
-title: "MSSQLSERVER_5245 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "5245 (Database Engine error)"
-ms.assetid: 6005c9ec-ccdd-4def-9eb4-37cdb599ddb3
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "5245 (Database Engine error)"
 ---
 # MSSQLSERVER_5245
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

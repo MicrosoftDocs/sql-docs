@@ -1,21 +1,18 @@
 ---
-title: "XQuery Functions against the xml Data Type | Microsoft Docs"
+title: "XQuery Functions against the xml Data Type"
 description: Learn about the XQuery functions that are supported for use against the xml data type.
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "03/09/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: xml
 ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "XQuery, functions"
   - "xml data type [SQL Server], XQuery"
   - "functions [SQL Server], XQuery"
-ms.assetid: 8df0877d-a03f-4ca9-b84e-908c4bb42b5e
-author: rothja
-ms.author: jroth
+dev_langs:
+  - "XML"
 ---
 # XQuery Functions against the xml Data Type
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]

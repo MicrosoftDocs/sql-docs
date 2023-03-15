@@ -1,17 +1,15 @@
 ---
+title: "Other Non-SQL Server Subscribers"
 description: "Other Non-SQL Server Subscribers"
-title: "Other Non-SQL Server Subscribers | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/08/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "non-SQL Server Subscribers, other types"
-ms.assetid: 96b8beb9-38e8-4ce4-97ca-c0f8656b73b4
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/08/2016"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "non-SQL Server Subscribers, other types"
 ---
 # Other Non-SQL Server Subscribers
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

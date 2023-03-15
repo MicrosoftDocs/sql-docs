@@ -1,20 +1,17 @@
 ---
+title: "Update Statistics Task"
 description: "Update Statistics Task"
-title: "Update Statistics Task | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.designer.updatestatisticstask.f1"
-helpviewer_keywords: 
-  - "updating statistics"
-  - "Update Statistics task [Integration Services]"
-ms.assetid: 0247483b-f092-4511-8fa8-3610108bd1bc
 author: chugugrace
 ms.author: chugu
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.designer.updatestatisticstask.f1"
+helpviewer_keywords:
+  - "updating statistics"
+  - "Update Statistics task [Integration Services]"
 ---
 # Update Statistics Task
 

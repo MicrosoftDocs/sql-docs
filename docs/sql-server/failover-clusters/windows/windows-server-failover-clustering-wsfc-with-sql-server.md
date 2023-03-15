@@ -1,22 +1,19 @@
 ---
 title: "Windows Server Failover Cluster with SQL Server"
-description: Learn about using the Windows Server Failover Cluster service with SQL Server and failover cluster instances. 
-ms.custom: seo-lt-2019
+description: Learn about using the Windows Server Failover Cluster service with SQL Server and failover cluster instances.
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "01/18/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: failover-cluster-instance
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], WSFC clusters"
   - "Windows Server Failover Clustering, with SQL Server"
   - "WSFC, with SQL Server"
   - "quorum [SQL Server]"
   - "failover clustering [SQL Server], AlwaysOn Availability Groups"
   - "failover clustering [SQL Server], Always On Availability Groups"
-ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Windows Server Failover Clustering with SQL Server
 

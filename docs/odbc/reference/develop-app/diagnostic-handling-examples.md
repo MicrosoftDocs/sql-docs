@@ -1,19 +1,16 @@
 ---
+title: "Diagnostic Handling Examples"
 description: "Diagnostic Handling Examples"
-title: "Diagnostic Handling Examples | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "diagnostic information [ODBC], examples"
   - "error messages [ODBC], diagnostic messages"
   - "diagnostic messages [ODBC]"
-ms.assetid: 57f88c22-e7fa-4270-a0bf-443a2684cf6e
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Diagnostic Handling Examples
 The following examples show how various components in an ODBC connection might generate diagnostic messages and how various drivers might return diagnostics to the application with **SQLGetDiagRec**.  

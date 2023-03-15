@@ -1,22 +1,19 @@
 ---
+title: "sp_helpdbfixedrole (Transact-SQL)"
 description: "sp_helpdbfixedrole (Transact-SQL)"
-title: "sp_helpdbfixedrole (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_helpdbfixedrole"
-  - "sp_helpdbfixedrole_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_helpdbfixedrole"
-ms.assetid: ad87e9a0-b901-4e37-9950-aa517d680fc3
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helpdbfixedrole"
+  - "sp_helpdbfixedrole_TSQL"
+helpviewer_keywords:
+  - "sp_helpdbfixedrole"
+dev_langs:
+  - "TSQL"
 ---
 # sp_helpdbfixedrole (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

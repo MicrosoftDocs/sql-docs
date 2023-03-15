@@ -1,19 +1,16 @@
 ---
+title: "SQL Statements Entered by the User"
 description: "SQL Statements Entered by the User"
-title: "SQL Statements Entered by the User | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "user-entered SQL statements [ODBC]"
   - "SQL statements [ODBC], constructing"
   - "SQL statements [ODBC], entered by user"
-ms.assetid: 109af162-93ba-425a-8fe5-49c7dc7cc784
-author: David-Engel
-ms.author: v-davidengel
 ---
 # SQL Statements Entered by the User
 Applications that perform ad hoc analysis also commonly allow the user to enter SQL statements directly. For example:  

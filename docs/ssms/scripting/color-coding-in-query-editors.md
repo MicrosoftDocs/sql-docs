@@ -1,18 +1,15 @@
 ---
 title: "Color Coding in Query Editors"
 description: Learn how text categories are color coded to help you more easily find specific text, and how you can configure a custom color scheme.
+author: markingmyname
+ms.author: maghan
+ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Query Editor [SQL Server Management Studio], color coding"
   - "color coding [Query Editor]"
-ms.assetid: 802882dc-c997-4e3f-8a01-994bb43169ae
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

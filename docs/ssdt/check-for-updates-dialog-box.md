@@ -1,14 +1,12 @@
 ---
 title: Check for Updates Dialog Box
 description: "Find out how to install the most recent SQL Server Data Tools (SSDT) version on your computer. Become familiar with the Check for Updates dialog box."
+author: markingmyname
+ms.author: maghan
+ms.date: 02/09/2017
 ms.service: sql
 ms.subservice: ssdt
 ms.topic: conceptual
-ms.assetid: 40f942cc-8c87-45de-9456-44bd53b519e7
-author: markingmyname
-ms.author: maghan
-ms.custom: seo-lt-2019
-ms.date: 02/09/2017
 ---
 
 # Check for Updates Dialog Box

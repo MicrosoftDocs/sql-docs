@@ -1,14 +1,12 @@
 ---
-title: "WideWorldImporters OLTP database catalog - SQL | Microsoft Docs"
+title: "WideWorldImporters OLTP database catalog - SQL"
 description: Understand the schemas, tables, stored procedures, and design considerations for the WideWorldImporters sample database catalog.
-ms.service: sql
-ms.subservice: samples
-ms.custom: ""
-ms.date: "04/04/2018"
-ms.reviewer: ""
-ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2018"
+ms.service: sql
+ms.subservice: samples
+ms.topic: conceptual
 ---
 # WideWorldImporters database catalog
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]

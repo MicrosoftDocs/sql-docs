@@ -1,22 +1,19 @@
 ---
+title: "sp_help_spatial_geometry_histogram (Transact-SQL)"
 description: "sp_help_spatial_geometry_histogram (Transact-SQL)"
-title: "sp_help_spatial_geometry_histogram (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_help_spatial_geometry_histogram"
-  - "sp_help_spatial_geometry_histogram_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_help_spatial_geometry_histogram"
-ms.assetid: 036aaf61-df3e-40f7-aa4e-62983c5a37bd
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_help_spatial_geometry_histogram"
+  - "sp_help_spatial_geometry_histogram_TSQL"
+helpviewer_keywords:
+  - "sp_help_spatial_geometry_histogram"
+dev_langs:
+  - "TSQL"
 ---
 # sp_help_spatial_geometry_histogram (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

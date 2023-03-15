@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_8993"
 description: "MSSQLSERVER_8993"
-title: "MSSQLSERVER_8993 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "8993 (Database Engine error)"
-ms.assetid: 06aac110-a41c-4853-bc8e-a83e8535b8be
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "8993 (Database Engine error)"
 ---
 # MSSQLSERVER_8993
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

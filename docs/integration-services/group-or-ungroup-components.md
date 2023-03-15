@@ -1,20 +1,17 @@
 ---
+title: "Group or Ungroup Components"
 description: "Group or Ungroup Components"
-title: "Group or Ungroup Components | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "grouping containers"
   - "tasks [Integration Services], grouping"
   - "containers [Integration Services], grouping"
   - "grouping tasks"
-ms.assetid: 34320838-c271-4f8c-90b3-1254690890bb
-author: chugugrace
-ms.author: chugu
 ---
 # Group or Ungroup Components
 

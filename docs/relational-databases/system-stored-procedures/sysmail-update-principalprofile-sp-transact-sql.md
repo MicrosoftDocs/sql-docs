@@ -1,22 +1,19 @@
 ---
+title: "sysmail_update_principalprofile_sp (Transact-SQL)"
 description: "sysmail_update_principalprofile_sp (Transact-SQL)"
-title: "sysmail_update_principalprofile_sp (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sysmail_update_principalprofile_sp"
-  - "sysmail_update_principalprofile_sp_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sysmail_update_principalprofile_sp"
-ms.assetid: 9fe96e9a-4758-4e4a-baee-3e1217c4426c
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sysmail_update_principalprofile_sp"
+  - "sysmail_update_principalprofile_sp_TSQL"
+helpviewer_keywords:
+  - "sysmail_update_principalprofile_sp"
+dev_langs:
+  - "TSQL"
 ---
 # sysmail_update_principalprofile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

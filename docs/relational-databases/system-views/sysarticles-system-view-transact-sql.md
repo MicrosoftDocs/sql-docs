@@ -1,21 +1,19 @@
 ---
+title: "sysarticles (System View) (Transact-SQL)"
 description: "sysarticles (System View) (Transact-SQL)"
-title: "sysarticles (System View) (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-f1_keywords: 
-  - "sysarticles"
-  - "sysarticles_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sysarticles view"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sysarticles"
+  - "sysarticles_TSQL"
+helpviewer_keywords:
+  - "sysarticles view"
+dev_langs:
+  - "TSQL"
 ---
 # sysarticles (System View) (Transact-SQL)
 

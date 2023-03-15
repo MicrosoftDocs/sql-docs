@@ -1,22 +1,19 @@
 ---
+title: "sp_attachsubscription (Transact-SQL)"
 description: "sp_attachsubscription (Transact-SQL)"
-title: "sp_attachsubscription (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_attachsubscription"
-  - "sp_attachsubscription_TSQL"
-helpviewer_keywords: 
-  - "sp_attachsubscription"
-ms.assetid: b9bbda36-a46a-4327-a01e-9cd632e4791b
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_attachsubscription"
+  - "sp_attachsubscription_TSQL"
+helpviewer_keywords:
+  - "sp_attachsubscription"
+dev_langs:
+  - "TSQL"
 ---
 # sp_attachsubscription (Transact-SQL)
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]

@@ -3,12 +3,10 @@ title: "KILL (Transact-SQL)"
 description: "KILL (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: ""
 ms.date: "08/31/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "KILL_TSQL"
   - "KILL"

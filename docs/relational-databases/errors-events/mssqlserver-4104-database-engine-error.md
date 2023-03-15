@@ -1,17 +1,14 @@
 ---
-title: "MSSQLSERVER_4104 | Microsoft Docs"
+title: "MSSQLSERVER_4104"
 description: The specified multi-part identifier could not be mapped to an existing entity. See an explanation of the error and possible resolutions.
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "4104 (Database Engine error)"
-ms.assetid: 52dc32d8-97ad-4ef0-834d-2e68f215d007
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "4104 (Database Engine error)"
 ---
 # MSSQLSERVER_4104
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

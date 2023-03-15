@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "MSsubscription_agents system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 86ad5891-0bef-4963-9381-7d5b45245a0c
 ---
 # MSsubscription_agents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

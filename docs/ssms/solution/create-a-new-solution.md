@@ -1,17 +1,14 @@
 ---
-description: "Create a New Solution"
 title: "Create a New Solution"
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: ssms
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "solutions [SQL Server Management Studio], creating"
-ms.assetid: 05a7edd9-8acc-4ccd-abc9-33ced53265de
+description: "Create a New Solution"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+helpviewer_keywords:
+  - "solutions [SQL Server Management Studio], creating"
 ---
 # Create a New Solution
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

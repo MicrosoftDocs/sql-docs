@@ -3,7 +3,7 @@ title: "sys.dm_resource_governor_configuration (Transact-SQL)"
 description: sys.dm_resource_governor_configuration (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "06/10/2016"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_resource_governor_configuration dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: c89aab6a-0434-4ce6-af8c-f8a1a3284e38
 ---
 # sys.dm_resource_governor_configuration (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,7 +56,11 @@ go
 ## Permissions  
  Requires VIEW SERVER STATE permission.  
   
-## See Also  
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
+## See also  
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [sys.resource_governor_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-configuration-transact-sql.md)   
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)  

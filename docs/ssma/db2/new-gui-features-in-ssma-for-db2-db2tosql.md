@@ -1,15 +1,12 @@
 ---
+title: "New GUI features in SSMA for DB2 (DB2ToSQL)"
 description: "New GUI features in SSMA for DB2 (DB2ToSQL)"
-title: "New GUI features in SSMA for DB2 (DB2ToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: a8ed33e9-185a-492d-a4cf-2fded1aa5c70
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # New GUI features in SSMA for DB2 (DB2ToSQL)
 This chapter describes new features of SSMA User Interface.  

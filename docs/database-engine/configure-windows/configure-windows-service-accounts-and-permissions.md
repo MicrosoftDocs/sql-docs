@@ -7,7 +7,6 @@ ms.date: 08/10/2022
 ms.service: sql
 ms.subservice: configuration
 ms.topic: reference
-ms.custom: contperf-fy20q4
 ---
 
 # Configure Windows service accounts and permissions

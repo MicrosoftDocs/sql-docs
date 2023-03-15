@@ -10,7 +10,6 @@ ms.topic: "reference"
 helpviewer_keywords:
   - "common language runtime [SQL Server], .NET Framework libraries"
   - ".NET Framework [CLR Integration]"
-ms.assetid: 417544ff-c25c-496e-add4-2f278f8a4911
 ---
 # Supported .NET Framework Libraries
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

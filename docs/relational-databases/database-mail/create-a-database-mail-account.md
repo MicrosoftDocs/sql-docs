@@ -1,18 +1,14 @@
 ---
+title: "Create a Database Mail Account"
 description: "Create a Database Mail Account"
-title: "Create a Database Mail Account | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Database Mail [SQL Server], accounts"
-  - "accounts [Database Mail]"
-ms.assetid: c07abbc6-fc6a-470b-8fa3-532f2e06b16a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Database Mail [SQL Server], accounts"
+  - "accounts [Database Mail]"
 ---
 # Create a Database Mail Account
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -1,23 +1,21 @@
 ---
+title: "Replication System Stored Procedures Concepts"
 description: "Replication System Stored Procedures Concepts"
-title: "Replication System Stored Procedures Concepts | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "stored procedures [SQL Server replication], programming"
   - "programming [SQL Server replication], system stored procedures"
   - "programming interfaces [SQL Server replication]"
   - "system stored procedures [SQL Server replication]"
   - "replication [SQL Server], how-to topics"
-ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
-author: "MashaMSFT"
-ms.author: "mathoma"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Replication System Stored Procedures Concepts

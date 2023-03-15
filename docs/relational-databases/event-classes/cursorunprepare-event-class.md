@@ -1,17 +1,14 @@
 ---
+title: "CursorUnprepare Event Class"
 description: "CursorUnprepare Event Class"
-title: "CursorUnprepare Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "CursorUnprepare event class"
-ms.assetid: 34055a2f-7d0f-4e13-a62e-7ee5b6c23b86
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "CursorUnprepare event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CursorUnprepare Event Class

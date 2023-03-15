@@ -1,21 +1,19 @@
 ---
-title: "Create a push subscription | Microsoft Docs"
+title: "Create a push subscription"
 description: Learn how to create a push subscription in SQL Server by using SQL Server Management Studio, Transact-SQL, or Replication Management Objects.
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "08/25/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "push subscriptions [SQL Server replication], creating"
   - "merge replication subscribing [SQL Server replication], push subscriptions"
   - "subscriptions [SQL Server replication], push"
   - "snapshot replication [SQL Server], subscribing"
   - "transactional replication, subscribing"
-ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-current||>=sql-server-2016"
 ---
 # Create a push subscription
@@ -259,4 +257,4 @@ You can create push subscriptions programmatically by using replication stored p
  [Replication management objects concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Synchronize a push subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)   
  [Subscribe to publications](../../relational-databases/replication/subscribe-to-publications.md)   
- [Use sqlcmd with scripting variables](/sql/tools/sqlcmd/sqlcmd-use-scripting-variables)
+ [Use sqlcmd with scripting variables](../../tools/sqlcmd/sqlcmd-use-scripting-variables.md)

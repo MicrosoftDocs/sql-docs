@@ -1,22 +1,19 @@
 ---
+title: "sp_helpdevice (Transact-SQL)"
 description: "sp_helpdevice (Transact-SQL)"
-title: "sp_helpdevice (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_helpdevice"
-  - "sp_helpdevice_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_helpdevice"
-ms.assetid: 1a5eafa7-384e-4691-ba05-978eb73bbefb
 author: markingmyname
 ms.author: maghan
+ms.date: "06/10/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helpdevice"
+  - "sp_helpdevice_TSQL"
+helpviewer_keywords:
+  - "sp_helpdevice"
+dev_langs:
+  - "TSQL"
 ---
 # sp_helpdevice (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

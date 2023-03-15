@@ -1,13 +1,13 @@
 ---
+title: "Use Property Expressions in Packages"
 description: "Use Property Expressions in Packages"
-title: "Use Property Expressions in Packages | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "packages [Integration Services], expressions"
   - "Integration Services packages, expressions"
   - "SQL Server Integration Services packages, expressions"
@@ -16,9 +16,6 @@ helpviewer_keywords:
   - "SSIS packages, expressions"
   - "expressions [Integration Services], property expressions"
   - "property expressions [Integration Services]"
-ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
-author: chugugrace
-ms.author: chugu
 ---
 # Use Property Expressions in Packages
 

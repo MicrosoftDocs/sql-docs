@@ -7,12 +7,10 @@ ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: clr
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "common language runtime [SQL Server], performance"
   - "monitoring [CLR integration]"
   - "performance [CLR integration]"
-ms.assetid: a7b589ac-104d-4b68-b4aa-9f5fc192b13d
 ---
 # Monitoring and Troubleshooting Managed Database Objects
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

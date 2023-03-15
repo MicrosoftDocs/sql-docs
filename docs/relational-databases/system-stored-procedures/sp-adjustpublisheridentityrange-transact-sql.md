@@ -1,22 +1,19 @@
 ---
+title: "sp_adjustpublisheridentityrange (Transact-SQL)"
 description: "sp_adjustpublisheridentityrange (Transact-SQL)"
-title: "sp_adjustpublisheridentityrange (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_adjustpublisheridentityrange_TSQL"
-  - "sp_adjustpublisheridentityrange"
-helpviewer_keywords: 
-  - "sp_adjustpublisheridentityrange"
-ms.assetid: 64f111fd-fb7d-4459-93f7-65f0f8dd7efe
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_adjustpublisheridentityrange_TSQL"
+  - "sp_adjustpublisheridentityrange"
+helpviewer_keywords:
+  - "sp_adjustpublisheridentityrange"
+dev_langs:
+  - "TSQL"
 ---
 # sp_adjustpublisheridentityrange (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

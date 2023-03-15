@@ -3,12 +3,10 @@ title: "COMMIT TRANSACTION (Transact-SQL)"
 description: "COMMIT TRANSACTION (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: ""
 ms.date: "09/09/2016"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "COMMIT"
   - "COMMIT TRANSACTION"

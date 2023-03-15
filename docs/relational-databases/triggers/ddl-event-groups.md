@@ -1,19 +1,15 @@
 ---
+title: "DDL Event Groups"
 description: "DDL Event Groups"
-title: "DDL Event Groups | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/28/2018"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "event groups"
   - "DDL event groups"
   - "DDL triggers, event groups"
-ms.assetid: 12b45cc3-2f91-4609-bb8a-3e82e28bf642
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DDL Event Groups

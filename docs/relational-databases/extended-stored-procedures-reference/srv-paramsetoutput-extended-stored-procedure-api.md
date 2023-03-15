@@ -7,7 +7,6 @@ ms.date: "03/04/2017"
 ms.service: sql
 ms.subservice: stored-procedures
 ms.topic: "reference"
-ms.custom: seo-dt-2019
 helpviewer_keywords:
   - "srv_paramsetoutput"
 dev_langs:
@@ -15,7 +14,6 @@ dev_langs:
 apilocation: opends60.dll
 apiname: srv_paramsetoutput
 apitype: "DLLExport"
-ms.assetid: f2810e19-e513-458b-8925-5756b6ee1313
 ---
 # srv_paramsetoutput (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

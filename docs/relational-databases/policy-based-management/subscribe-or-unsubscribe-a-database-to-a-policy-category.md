@@ -1,17 +1,14 @@
 ---
 title: "Subscribe or unsubscribe a database to a policy category"
 description: Describes how to subscribe or unsubscribe a database to a policy category for Policy-Based Management using SQL Server Management Studio and Transact-SQL (T-SQL).
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.dmf.groupsubscription.f1"
-ms.assetid: d2c31769-7098-428e-ad9c-ef56541b7c52
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.dmf.groupsubscription.f1"
 ---
 # Subscribe or Unsubscribe a Database  to a Policy Category
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

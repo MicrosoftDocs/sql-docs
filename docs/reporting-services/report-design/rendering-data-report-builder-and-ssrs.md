@@ -1,15 +1,12 @@
 ---
-title: "Rendering data in a paginated report | Microsoft Docs"
+title: "Rendering data in a paginated report"
 description: Find out how to use data renderers in a paginated report to import data into a database or Excel, to XSLT transformations, or data exchange/EDI in Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/07/2017
 ms.service: reporting-services
 ms.subservice: report-design
-
-
 ms.topic: conceptual
-ms.assetid: a458fdf9-fb2a-4fee-9fbd-b38f36e91753
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Rendering data in a paginated report (Report Builder)
 

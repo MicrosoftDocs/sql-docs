@@ -1,17 +1,15 @@
 ---
+title: "Replication Monitor, Main Page"
 description: "Replication Monitor, Main Page"
-title: "Replication Monitor, Main Page | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.monitor.main.f1"
-ms.assetid: 65ea76db-d809-439d-be64-08b6965aaea1
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/07/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.monitor.main.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Replication Monitor, Main Page

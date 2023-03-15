@@ -2,12 +2,12 @@
 title: Python tutorials
 titleSuffix: SQL machine learning
 description: This article describes Python tutorials for SQL machine learning. Learn how to run scripts and build machine learning models.
-ms.service: sql
-ms.subservice: machine-learning
-ms.date: 05/21/2020
-ms.topic: tutorial
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: 05/21/2020
+ms.service: sql
+ms.subservice: machine-learning
+ms.topic: tutorial
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # Python tutorials for SQL machine learning

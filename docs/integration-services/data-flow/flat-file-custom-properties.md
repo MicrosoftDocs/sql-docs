@@ -1,15 +1,12 @@
 ---
+title: "Flat File Custom Properties"
 description: "Flat File Custom Properties"
-title: "Flat File Custom Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: 7f2caeab-784c-4b0c-9b3e-6a88d1ccdbf9
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Flat File Custom Properties
 

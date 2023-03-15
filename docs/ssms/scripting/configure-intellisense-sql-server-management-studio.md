@@ -1,18 +1,16 @@
 ---
 title: "Configure IntelliSense (SQL Server Management Studio)"
 description: Most IntelliSense options are on by default. Learn how you can turn off an IntelliSense option and invoke it instead through a menu command or keystroke combination.
+author: markingmyname
+ms.author: maghan
+ms.date: "01/25/2022"
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Options [SQL Server Management Studio], IntelliSense"
   - "modifying IntelliSense options"
   - "IntelliSense [SQL Server], modifying options"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: "01/25/2022"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

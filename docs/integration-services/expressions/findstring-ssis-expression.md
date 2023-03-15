@@ -1,17 +1,14 @@
 ---
+title: "FINDSTRING (SSIS Expression)"
 description: "FINDSTRING (SSIS Expression)"
-title: "FINDSTRING (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "FINDSTRING function"
-ms.assetid: c83cb1b1-3c52-4496-b518-4c9253b9336d
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "FINDSTRING function"
 ---
 # FINDSTRING (SSIS Expression)
 

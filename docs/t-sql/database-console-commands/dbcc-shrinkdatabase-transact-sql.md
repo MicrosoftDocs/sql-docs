@@ -4,11 +4,10 @@ description: DBCC SHRINKDATABASE shrinks the size of the data and log files in t
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: umajay, KevinConanMSFT, dplessMSFT, randolphwest
-ms.date: "01/06/2023"
+ms.date: 03/14/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: "language-reference"
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "DBCC_SHRINKDATABASE_TSQL"
   - "DBCC SHRINKDATABASE"
@@ -109,7 +108,7 @@ Suppresses all informational messages that have severity levels from 0 through 1
 
 ### WAIT_AT_LOW_PRIORITY with shrink operations
 
-**Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later versions
+**Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later versions, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]
 
 The wait at low priority feature reduces lock contention. For more information, see [Understanding concurrency issues with DBCC SHRINKDATABASE](#understand-concurrency-issues-with-dbcc-shrinkdatabase).
 

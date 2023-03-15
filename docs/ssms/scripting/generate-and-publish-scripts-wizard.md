@@ -1,11 +1,13 @@
 ---
 title: Generate and Publish Scripts Wizard
 description: Learn how to use the Generate and Publish Scripts Wizard to create scripts to transfer a database between database instances. The instances can be instances of the SQL Server Database Engine or Azure SQL Database.
+author: markingmyname
+ms.author: maghan
+ms.date: 04/07/2020
 ms.service: sql
 ms.subservice: ssms
-ms.reviewer: ""
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql9.swb.generatescriptswizard.chooseviews.f1"
   - "sql13.swb.generatescriptswizard.manageproviders.f1"
   - "sql9.swb.generatescriptswizard.scriptwizarddescription.f1"
@@ -30,18 +32,13 @@ f1_keywords:
   - "sql13.swb.generatescriptswizard.advancedscriptingoptions.f1"
   - "sql9.swb.generatescriptswizard.choosescriptoptions.f1"
   - "sql9.swb.generatescriptswizard.chooseudf.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "databases [SQL Server], publishing"
   - "publishing databases"
   - "scripts [SQL Server], generating"
   - "scripts [SQL Server], publishing"
   - "databases [SQL Server], generating scripts"
   - "Publish Database Wizard"
-ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
-author: markingmyname
-ms.author: maghan
-ms.custom: seo-lt-2019
-ms.date: 04/07/2020
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

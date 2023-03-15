@@ -1,22 +1,19 @@
 ---
-description: "Updating Data in SQL Server Cursors in SQL Server Native Client"
 title: Update data in cursors (Native Client OLE DB provider)
-ms.custom: ""
+description: "Updating Data in SQL Server Cursors in SQL Server Native Client"
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "updating data [SQL Server]"
   - "isolation levels [SQL Server]"
   - "delayed update mode [OLE DB]"
   - "immediate update mode [OLE DB]"
   - "cursors [OLE DB]"
   - "data updates [SQL Server], OLE DB"
-ms.assetid: 732dafee-f2d5-4aef-aad7-3a8bf3b1e876
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Updating Data in SQL Server Cursors in SQL Server Native Client

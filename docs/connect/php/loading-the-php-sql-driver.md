@@ -3,7 +3,7 @@ title: "Loading the Microsoft Drivers for PHP"
 description: "This page provides instructions for loading the Microsoft Drivers for PHP for SQL Server into the PHP process space."
 author: David-Engel
 ms.author: v-davidengel
-ms.date: "02/11/2019"
+ms.date: 02/28/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -36,11 +36,11 @@ To load the SQLSRV driver when PHP is started, first move a driver file into you
   
     On Windows: 
     ```  
-    extension=php_sqlsrv_72_ts.dll  
+    extension=php_sqlsrv_82_ts.dll  
     ```  
     On Linux, if you have downloaded the prebuilt binaries for your distribution: 
     ```  
-    extension=php_sqlsrv_72_nts.so  
+    extension=php_sqlsrv_82_nts.so  
     ```
     If you have compiled the SQLSRV binary from source or with PECL, it will instead be named sqlsrv.so:
     ```
@@ -57,7 +57,7 @@ To load the SQLSRV driver when PHP is started, first move a driver file into you
 
     To find out which directory the extension-specific .ini files are located, run `php --ini` and note the directory listed under `Scan for additional .ini files in:`. Find the file that loads pdo.so. It is likely prefixed by a number, such as 10-pdo.ini. The numerical prefix indicates the loading order of the .ini files, while files that do not have a numerical prefix are loaded alphabetically. Create a file to load the PDO_SQLSRV driver file called either 30-pdo_sqlsrv.ini (any number larger than the one that prefixes pdo.ini works) or pdo_sqlsrv.ini (if pdo.ini is not prefixed by a number), and add the following line to it, changing the filename as appropriate:  
     ```
-    extension=php_pdo_sqlsrv_72_nts.so
+    extension=php_pdo_sqlsrv_82_nts.so
     ```
     As with SQLSRV, if you have compiled the PDO_SQLSRV binary from source or with PECL, it will instead be named pdo_sqlsrv.so:
     ```

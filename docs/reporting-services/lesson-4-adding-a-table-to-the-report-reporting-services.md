@@ -1,14 +1,12 @@
 ---
-title: "Lesson 4: Add a Table to the Report | Microsoft Docs"
+title: "Lesson 4: Add a Table to the Report"
 description: You create a report layout by dragging and dropping report objects, like a table, from the Toolbox pane to the Design surface.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 12/16/2019
 ms.service: reporting-services
 ms.subservice: reporting-services
-
 ms.topic: conceptual
-ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Lesson 4: Add a Table to the Report (Reporting Services)
 

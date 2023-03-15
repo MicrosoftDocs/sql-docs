@@ -8,7 +8,6 @@ ms.date: 12/22/2022
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "sql13.Security.NT_AUTHORITY.SYSTEM"
   - "sql13.Security.BUILTIN.administrators"

@@ -1,17 +1,14 @@
 ---
+title: "ODBC SQL Type for Table-Valued Parameters"
 description: "ODBC SQL Type for Table-Valued Parameters"
-title: "ODBC SQL Type for Table-Valued Parameters | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "SQL_SS_TABLE"
-ms.assetid: 6725bfb9-5f10-4115-be09-fd9c9f5779ea
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "SQL_SS_TABLE"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ODBC SQL Type for Table-Valued Parameters

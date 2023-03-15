@@ -1,15 +1,12 @@
 ---
+title: "Look Up Process Chain"
 description: "Look Up Process Chain"
-title: "Look Up Process Chain | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: f6303ea4-fbbf-4cba-bc60-828df62be8c2
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Look Up Process Chain
 

@@ -1,19 +1,16 @@
 ---
+title: "Events Logged by the Integration Services Service"
 description: "Events Logged by the Integration Services Service"
-title: "Events Logged by the Integration Services Service | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "service [Integration Services], events"
   - "events [Integration Services], service"
   - "Integration Services service, events"
-ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
-author: chugugrace
-ms.author: chugu
 ---
 # Events Logged by the Integration Services Service
 

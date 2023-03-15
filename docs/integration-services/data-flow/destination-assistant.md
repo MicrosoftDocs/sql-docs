@@ -1,18 +1,15 @@
 ---
+title: "Destination Assistant"
 description: "Destination Assistant"
-title: "Destination Assistant | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.designer.destinationassistant.f1"
-  - "sql13.DTS.DESIGNER.DESTINATIONASSIST.F1"
-ms.assetid: 10a40921-a2c2-4ac8-be28-311f8500fbf6
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.designer.destinationassistant.f1"
+  - "sql13.DTS.DESIGNER.DESTINATIONASSIST.F1"
 ---
 # Destination Assistant
 

@@ -72,7 +72,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
         DECRYPTION BY CERTIFICATE cert_keyProtection;  
     GO  
     DECLARE @blob varbinary(8000);  
-    SET @blob = SELECT CONVERT(varchar(8000), decryptbykey(@blob));  
+    SELECT CONVERT(varchar(8000), decryptbykey(@blob));  
     GO  
     ```  
   

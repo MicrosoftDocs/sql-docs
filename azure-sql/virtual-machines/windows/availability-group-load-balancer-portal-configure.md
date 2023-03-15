@@ -15,7 +15,7 @@ editor: monicar
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
 > [!TIP]
-> Eliminate the need for an Azure Load Balancer for your Always On availability (AG) group by creating your SQL Server VMs in [multiple subnets](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md) within the same Azure virtual network.
+> There are many [methods to deploy an availability group](availability-group-overview.md#deployment-options). Simplify your deployment and eliminate the need for an Azure load balancer or distributed network name (DNN) for your Always On availability group by creating your SQL Server virtual machines (VMs) in [multiple subnets](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md) within the same Azure virtual network.
 
 
 This article explains how to create a load balancer for a SQL Server Always On availability group in Azure Virtual Machines within a single subnet that are running with Azure Resource Manager. An availability group requires a load balancer when the SQL Server instances are on Azure Virtual Machines. The load balancer stores the IP address for the availability group listener. If an availability group spans multiple regions, each region needs a load balancer.
@@ -32,6 +32,18 @@ View related articles:
 * [Configure a VNet-to-VNet connection by using Azure Resource Manager and PowerShell](/azure/vpn-gateway/vpn-gateway-vnet-vnet-rm-ps)
 
 By walking through this article, you create and configure a load balancer in the Azure portal. After the process is complete, you configure the cluster to use the IP address from the load balancer for the availability group listener.
+
+## Need for Load balancer on Azure Single Subnet
+
+In regular WSFC (Windows server failover cluster) on-premises setup, when AG listener is created, it will create a DNS record for AG listener with the IP(s) provided. This IP address has to map now to MAC address of the current Primary node in ARP tables of switches/routers in the network.
+
+The cluster does this by using Gratuitous ARP (GARP) where it will broadcast to the network the latest IP-to-MAC mapping whenever a new Primary is elected after failover. Here, the IP is listener’s and MAC is of current Primary.
+
+This GARP should force an update on ARP table entries for the switches/routers and to a user connection to the listener IP address seamlessly goes to the current Primary.  GARP (even ARP) is not supported on any public clouds (Azure, GCP, and AWS) due to security reasons.
+
+In short, any kind of broadcast is not supported on cloud setup.  So, in public cloud’s network infrastructure, load balancers provide traffic routing. In short, the load balancers are set up with a frontend IP, corresponding to the listener, and a probe port is assigned where Load Balancer will periodically poll for status.
+
+The VM which responds successfully to probe on this port will be forwarded incoming traffic. At one time only one SQL VM (Primary) will respond for this TCP probe. There is also configuration made at WSFC level, where corresponding probe port is set up at cluster IP resource level, thereby ensuring that Primary node does respond to TCP probe.
 
 ## Create & configure load balancer
 
@@ -172,7 +184,7 @@ The load-balancing rules configure how the load balancer routes traffic to the S
    | **Health Probe** |The name you specified for the probe | SQLAlwaysOnEndPointProbe |
    | **Session Persistence** | Drop down list | **None** |
    | **Idle Timeout** | Minutes to keep a TCP connection open | 4 |
-   | **Floating IP (direct server return)** | |Enabled |
+   | **Floating IP (direct server return)** | A flow topology and an IP address mapping scheme |Enabled |
 
    > [!WARNING]
    > Direct server return is set during creation. It cannot be changed.
@@ -226,7 +238,7 @@ The WSFC IP address also needs to be on the load balancer. If you're using Windo
    | **Probe** |The name you specified for the probe | WSFCEndPointProbe |
    | **Session Persistence** | Drop down list | **None** |
    | **Idle Timeout** | Minutes to keep a TCP connection open | 4 |
-   | **Floating IP (direct server return)** | |Enabled |
+   | **Floating IP (direct server return)** | A flow topology and an IP address mapping scheme |Enabled |
 
    > [!WARNING]
    > Direct server return is set during creation. It cannot be changed.
@@ -348,8 +360,16 @@ After you have added an IP address for the listener, configure the additional av
  
 6. [Set the cluster parameters in PowerShell](#setparam).
 
-After you configure the availability group to use the new IP address, configure the connection to the listener. 
+After you configure the availability group to use the new IP address, configure the connection to the listener. If you are unable to connect using SQL Server listener 
+to Secondary replica, run the below script to Validate Probe Port configuration for Always On
 
+```ps
+Clear-Host
+Get-ClusterResource `
+| Where-Object {$_.ResourceType.Name -like "IP Address"} `
+| Get-ClusterParameter `
+| Where-Object {($_.Name -like "Network") -or ($_.Name -like "Address") -or ($_.Name -like "ProbePort") -or ($_.Name -like "SubnetMask")}
+```
 ## Add load-balancing rule for distributed availability group
 
 If an availability group participates in a distributed availability group, the load balancer needs an additional rule. This rule stores the port used by the distributed availability group listener.

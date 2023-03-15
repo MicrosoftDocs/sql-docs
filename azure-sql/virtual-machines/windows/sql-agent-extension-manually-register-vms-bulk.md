@@ -14,20 +14,22 @@ tags: azure-resource-manager
 # Register multiple SQL VMs in Azure with the SQL IaaS Agent extension
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
-This article describes how to register your SQL Server virtual machines (VMs) in bulk in Azure with the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md) by using the `Register-SqlVMs`Azure  PowerShell cmdlet. 
+This article describes how to register your SQL Server virtual machines (VMs) in bulk in Azure with the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md) by using the `Register-SqlVMs`Azure PowerShell cmdlet. 
 
 
-This article teaches you to register SQL Server VMs manually in bulk. Alternatively, you can register [all SQL Server VMs automatically](sql-agent-extension-automatic-registration-all-vms.md) or [individual SQL Server VMs manually](sql-agent-extension-manually-register-single-vm.md). 
+Alternatively, you can register [all SQL Server VMs automatically](sql-agent-extension-automatic-registration-all-vms.md) or [individual SQL Server VMs manually](sql-agent-extension-manually-register-single-vm.md). 
 
 [!INCLUDE [SQL VM feature benefits](../../includes/sql-vm-iaas-extension-permissions.md)]
 
 ## Overview
 
-The `Register-SqlVMs` cmdlet can be used to register all virtual machines in a given list of subscriptions, resource groups, or a list of specific virtual machines. The cmdlet will register the virtual machines in [lightweight management mode](sql-server-iaas-agent-extension-automate-management.md#management-modes), and then generate both a [report and a log file](#output-description). 
+The `Register-SqlVMs` cmdlet can be used to register all virtual machines in a given list of subscriptions, resource groups, or a list of specific virtual machines. The cmdlet will register the virtual machines and then generate both a [report and a log file](#output-description). 
 
 The registration process carries no risk, has no downtime, and will not restart the SQL Server service or the virtual machine. 
 
-By default, Azure VMs with SQL Server 2016 or later installed will be automatically registered with the SQL IaaS Agent extension when detected by the [CEIP service](/sql/sql-server/usage-and-diagnostic-data-configuration-for-sql-server).  See the [SQL Server privacy supplement](/sql/sql-server/sql-server-privacy#non-personal-data) for more information.
+By default, Azure VMs with SQL Server 2016 or later are automatically registered with the SQL IaaS Agent extension when detected by the [CEIP service](/sql/sql-server/usage-and-diagnostic-data-configuration-for-sql-server). You can use bulk registration to register any SQL Server VMs that are not detected by the CEIP service. 
+
+For information about privacy, see the [SQL IaaS Agent extension privacy statements](sql-server-iaas-agent-extension-automate-management.md#in-region-data-residency). 
 
 ## Prerequisites
 
@@ -221,7 +223,7 @@ Errors are logged in the log file named `VMsNotRegisteredDueToError<Timestamp>.l
 
 When you register SQL Server VMs with the extension by using the provided script, consider the following:
 
-- Registration with the extension requires a guest agent running on the SQL Server VM. Windows Server 2008 images do not have a guest agent, so these virtual machines will fail and must be registered manually using the [NoAgent management mode](sql-server-iaas-agent-extension-automate-management.md#management-modes).
+- Registration with the extension requires a guest agent running on the SQL Server VM. Windows Server 2008 images do not have a guest agent, so these virtual machines will fail and must be [registered manually](sql-agent-extension-manually-register-single-vm.md#register-with-extension)  with [limited functionality](sql-server-iaas-agent-extension-automate-management.md#feature-benefits). 
 - There is retry logic built-in to overcome transparent errors. If the virtual machine is successfully registered, then it is a rapid operation. However, if the registration fails, then each virtual machine will be retried.  As such, you should allow significant time to complete the registration process -  though actual time requirement is dependent on the type and number of errors. 
 
 
@@ -233,11 +235,16 @@ Copy the full script and save it as `RegisterSqLVMs.psm1`.
 
 ## Next steps
 
-[Troubleshoot known issues with the extension](sql-agent-extension-troubleshoot-known-issues.md).
+- Review the benefits provided by the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md).
+- [Manually register a single VM](sql-agent-extension-manually-register-single-vm.md)
+- [Automatically register all VMs in a subscription](sql-agent-extension-automatic-registration-all-vms.md).
+- [Troubleshoot known issues with the extension](sql-agent-extension-troubleshoot-known-issues.md).
+- Review the [SQL IaaS Agent extension privacy statements](sql-server-iaas-agent-extension-automate-management.md#in-region-data-residency).
+- Review the [best practices checklist](performance-guidelines-best-practices-checklist.md) to optimize for performance and security. 
 
-For more information, see the following articles: 
+To learn more, review the following articles:
 
 * [Overview of SQL Server on a Windows VM](sql-server-on-azure-vm-iaas-what-is-overview.md)
 * [FAQ for SQL Server on a Windows VM](frequently-asked-questions-faq.yml)
-* [Pricing guidance for SQL Server on a Windows VM](pricing-guidance.md)
-* [What's new for SQL Server on Azure VMs](doc-changes-updates-release-notes-whats-new.md)
+* [Pricing guidance for SQL Server on a Azure VMs](../windows/pricing-guidance.md)
+* [What's new for SQL Server on Azure VMs](../windows/doc-changes-updates-release-notes-whats-new.md)

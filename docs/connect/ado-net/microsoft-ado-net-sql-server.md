@@ -9,7 +9,7 @@ ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
 ---
-# Microsoft ADO.NET for SQL Server and Azure SQL
+# Microsoft ADO.NET for SQL Server and Azure SQL Database
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
@@ -17,7 +17,7 @@ ADO.NET is the core data access technology for .NET languages. Use the Microsoft
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
-## Getting started
+## Getting started (SQL Server)
 
 * [Step 1: Configure development environment for ADO.NET development](step-1-configure-development-environment-ado-net-development.md)
 * [Step 2: Create a SQL database for ADO.NET development](step-2-create-sql-database-ado-net-development.md)
@@ -27,6 +27,8 @@ ADO.NET is the core data access technology for .NET languages. Use the Microsoft
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-current"
+
+## Getting started (Azure SQL Database)
 
 * [Step 1: Configure development environment for ADO.NET development](step-1-configure-development-environment-ado-net-development.md)
 * [Step 2: Create a SQL database for ADO.NET development](/azure/azure-sql/database/single-database-create-quickstart)

@@ -56,8 +56,7 @@ Create your failover group and add your single database to it using the Azure po
 
 
 > [!NOTE]
-> The Failover Group needs to be created in a different region.
-> 
+> The failover group must be created in a different region.
 
    - **Databases within the group**: Choose the database you want to add to your failover group. Adding the database to the failover group will automatically start the geo-replication process.
 

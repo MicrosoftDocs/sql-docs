@@ -4,7 +4,7 @@ description: Learn about new features for SQL Server 2022 (16.x), which gives yo
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: wiassaf, randolphwest
-ms.date: 12/07/2022
+ms.date: 03/15/2023
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: "article"
@@ -57,7 +57,7 @@ The following sections identify features that are improved our introduced in [!I
 | :--- | :--- |
 | Azure Synapse Link for SQL | Get near real time analytics over operational data in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)]. With a seamless integration between operational stores in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] and Azure Synapse Analytics dedicated SQL pools, Azure Synapse Link for SQL enables you to run analytics, business intelligence and machine learning scenarios on your operational data with minimum impact on source databases with a new change feed technology.<br /><br />For more information, see [What is Azure Synapse Link for SQL? - Azure Synapse Analytics](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview).<br /><br />See also, [Known issues](/azure/synapse-analytics/synapse-link/synapse-link-for-sql-known-issues). |
 | Object storage integration | [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] introduces new object storage integration to the data platform, enabling you to integrate SQL Server with S3-compatible object storage, in addition to Azure Storage. The first is [backup to URL](../relational-databases/backup-restore/sql-server-backup-to-url-s3-compatible-object-storage.md) and the second is Data Lake Virtualization.<br /><br />Data Lake Virtualization integrates [PolyBase with S3-compatible object storage](../relational-databases/polybase/polybase-configure-s3-compatible.md), adds support for to querying parquet files with T-SQL. |
-| Data Virtualization | Query different types of data on different types of data sources from SQL Server. |
+| Data Virtualization | Query different types of data on different types of data sources from SQL Server. <br/><br/> [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] Cumulative update 2 now introduces support for Oracle TNS files. For more information and samples, see [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-connection-options.md).|
 
 ## Availability
 

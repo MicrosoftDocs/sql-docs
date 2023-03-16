@@ -1,5 +1,5 @@
 ---
-title: "Retrieve and query XML data"
+title: "XML query options and preserved data"
 description: Learn about the query options that must be specified when querying XML data, and about the parts of XML instances that aren't preserved when stored in databases.
 author: MikeRayMSFT
 ms.author: mikeray
@@ -12,11 +12,27 @@ helpviewer_keywords:
   - "XML data [SQL Server], retrieving"
   - "XML instance retrieval"
 ---
-# Retrieve and query XML data
+# XML query options and preserved data"
 
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This article describes the query options that you have to specify to query XML data. It also describes the parts of XML instances that aren't preserved when they're stored in databases.
+
+## <a id="query"></a> Set required query options
+
+When querying **xml** type columns or variables using **xml** data type methods, the following options must be set as shown.
+
+|SET Options|Required Values|
+|-----------------|---------------------|
+|ANSI_NULLS|ON|
+|ANSI_PADDING|ON|
+|ANSI_WARNINGS|ON|
+|ARITHABORT|ON|
+|CONCAT_NULL_YIELDS_NULL|ON|
+|NUMERIC_ROUNDABORT|OFF|
+|QUOTED_IDENTIFIER|ON|
+
+If the options aren't set as shown, queries and modifications on **xml** data type methods will fail.
 
 ## <a id="features"></a> Features of an XML instance that aren't preserved
 
@@ -81,22 +97,6 @@ The namespace prefix in the result may be different. For example:
 ```xml
 <p1:root xmlns:p1="abc"><p1:SomeElement/></p1:root>
 ```
-
-## <a id="query"></a> Sett required query options
-
-When querying **xml** type columns or variables using **xml** data type methods, the following options must be set as shown.
-
-|SET Options|Required Values|
-|-----------------|---------------------|
-|ANSI_NULLS|ON|
-|ANSI_PADDING|ON|
-|ANSI_WARNINGS|ON|
-|ARITHABORT|ON|
-|CONCAT_NULL_YIELDS_NULL|ON|
-|NUMERIC_ROUNDABORT|OFF|
-|QUOTED_IDENTIFIER|ON|
-
-If the options aren't set as shown, queries and modifications on **xml** data type methods will fail.
 
 ## See also
 

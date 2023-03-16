@@ -1995,7 +1995,7 @@ items:
         href: relational-databases/xml/create-views-over-xml-columns.md
       - name: Computed Columns
         href: relational-databases/xml/use-xml-in-computed-columns.md
-      - name: Retrieve & Query
+      - name: Query options and data
         href: relational-databases/xml/retrieve-and-query-xml-data.md
       - name: Add namespaces to queries
         href: relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md

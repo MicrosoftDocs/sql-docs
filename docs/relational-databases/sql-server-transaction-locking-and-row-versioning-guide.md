@@ -30,7 +30,7 @@ In any database, mismanagement of transactions often leads to contention and per
 > - To determine if optimized locking is enabled on your database, see [Is optimized locking enabled?](performance/optimized-locking.md#is-optimized-locking-enabled)
 >
 > Optimized locking has significantly updated some sections of this article, including:
-> - [Locking in the Database Engine](#Lock_Engine)
+> - [Locking in the Database Engine](#lock_engine)
 > - [Delete operation](#delete-operation)
 > - [Insert operation](#insert-operation)
 > - [Lock escalation](#lock-escalation)
@@ -361,7 +361,7 @@ ODBC applications call `SQLSetConnectAttr` with `Attribute` set to `SQL_ATTR_TXN
   
 For snapshot transactions, applications call `SQLSetConnectAttr` with Attribute set to `SQL_COPT_SS_TXN_ISOLATION` and `ValuePtr` set to `SQL_TXN_SS_SNAPSHOT`. A snapshot transaction can be retrieved using either `SQL_COPT_SS_TXN_ISOLATION` or `SQL_ATTR_TXN_ISOLATION`.  
   
-## <a id="Lock_Engine"></a> Locking in the Database Engine
+## <a id="lock_engine"></a> Locking in the Database Engine
 
 Locking is a mechanism used by the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] to synchronize access by multiple users to the same piece of data at the same time.  
   

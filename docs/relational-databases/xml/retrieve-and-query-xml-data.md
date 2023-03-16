@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "XML data [SQL Server], retrieving"
   - "XML instance retrieval"
 ---
-# XML query options and preserved data"
+# XML query options and preserved data
 
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 

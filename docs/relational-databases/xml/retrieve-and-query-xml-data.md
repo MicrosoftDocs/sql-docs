@@ -20,7 +20,7 @@ This article describes the query options that you have to specify to query XML d
 
 ## <a id="query"></a> Set required query options
 
-When querying **xml** type columns or variables using **xml** data type methods, the following options must be set as shown.
+When you query **xml** type columns or variables using **xml** data type methods, the following options must be set as shown.
 
 |SET Options|Required Values|
 |-----------------|---------------------|
@@ -36,7 +36,7 @@ If the options aren't set as shown, queries and modifications on **xml** data ty
 
 ## <a id="features"></a> Features of an XML instance that aren't preserved
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] preserves the content of the XML instance, but doesn't preserve aspects of the XML instance that aren't considered to be significant in the XML data model. This means that a retrieved XML instance might not be identical to the instance that was stored in the server, but will contain the same information.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] preserves the content of the XML instance, but doesn't preserve aspects of the XML instance that aren't considered significant in the XML data model. This means that a retrieved XML instance might not be identical to the instance that was stored in the server, but will contain the same information.
 
 ### XML declaration
 

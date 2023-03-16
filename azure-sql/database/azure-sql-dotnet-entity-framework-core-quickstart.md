@@ -13,7 +13,7 @@ monikerRange: "= azuresql || = azuresql-db"
 
 # Connect to and query Azure SQL Database using .NET and Entity Framework Core
 
-This quickstart describes how to connect an application to a database in Azure SQL Database and perform queries using .NET and Entity Framework Core. You will also learn how to use passwordless connections to query the database without the use of connection strings. You can learn more about passwordless connections on the [passwordless hub](/azure/developer/intro/passwordless-overview).
+This quickstart describes how to connect an application to a database in Azure SQL Database and perform queries using .NET and Entity Framework Core. This quickstart follows the recommended passwordless approach to connect to the database. You can learn more about passwordless connections on the [passwordless hub](/azure/developer/intro/passwordless-overview).
 
 ## Prerequisites
 

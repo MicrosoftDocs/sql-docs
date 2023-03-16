@@ -4265,6 +4265,8 @@ items:
     href: relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md
   - name: Optimized locking
     href: relational-databases/performance/optimized-locking.md
+  - name: Deadlocks guide
+    href: relational-databases/sql-server-deadlocks-guide.md
   - name: Memory Management Architecture
     href: relational-databases/memory-management-architecture-guide.md
   - name: Diagnosing latch contention

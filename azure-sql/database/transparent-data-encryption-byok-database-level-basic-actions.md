@@ -17,9 +17,9 @@ monikerRange: "= azuresql || = azuresql-db"
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 > [!NOTE]
-> Database Level CMK is in public preview.
+> Database Level TDE CMK is in public preview.
 >
-> This preview feature is available for Azure SQL Database (all SQL DB editions). It is not available for Managed Instance, SQL Server 2022 on-premises, Azure VMs and Dedicated SQL Pools (formerly SQL DW).
+> This preview feature is available for Azure SQL Database (all SQL DB editions). It is not available for Managed Instance, SQL Server on-premises, Azure VMs and Dedicated SQL Pools (formerly SQL DW).
 
 In this guide, we'll go through the steps to create, update, and retrieve an Azure SQL Database with transparent data encryption (TDE) and customer-managed keys (CMK) at the database level, utilizing a [user-assigned managed identity](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) to access [Azure Key Vault](/azure/key-vault/general/quick-create-portal) that is in an Azure Active Directory (Azure AD) that is distinct from the Azure SQL logical server tenant. For more information, see [Cross-tenant customer-managed keys with transparent data encryption](transparent-data-encryption-byok-cross-tenant.md).
 
@@ -434,7 +434,7 @@ GET https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{
 Retrieve the basic database level customer-managed key settings from a database and all the keys ever added
 
 ```rest
-GET https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}?api-version=2022-08-01-preview$expand=keys
+GET https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}?api-version=2022-08-01-preview&$expand=keys
 ```
 
 Retrieve the basic database level customer-managed key settings from a database and the current keys in use
@@ -446,14 +446,14 @@ GET https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{
 Retrieve the basic database level customer-managed key settings from a database and the keys in use at a particular point in time
 
 ```rest
-GET https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}?api-version=2022-08-01-preview$expand=keys($filter=pointInTime('2023-02-04T01:57:42.49Z'))
+GET https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}?api-version=2022-08-01-preview&$expand=keys($filter=pointInTime('2023-02-04T01:57:42.49Z'))
 ```
 
 ---
 
 ## Revalidate the database level customer-managed key on an Azure SQL Database
 
-In case of an inaccessible TDE protector as described in [Transparent Data Encryption (TDE) with BYOK](transparent-data-encryption-byok-overview.md), once the key access has been corrected, revalidate key operation can be used make the database accessible. This guide covers this in depth.
+In case of an inaccessible TDE protector as described in [Transparent Data Encryption (TDE) with CMK](transparent-data-encryption-byok-overview.md), once the key access has been corrected, revalidate key operation can be used make the database accessible. This guide covers this in depth.
 
 # [Azure CLI](#tab/azure-cli2)
 

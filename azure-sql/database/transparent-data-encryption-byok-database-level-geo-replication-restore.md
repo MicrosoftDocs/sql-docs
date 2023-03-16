@@ -17,9 +17,9 @@ monikerRange: "= azuresql || = azuresql-db"
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 > [!NOTE]
-> Database Level CMK is in public preview.
+> Database Level TDE CMK is in public preview.
 >
-> This preview feature is available for Azure SQL Database (all SQL DB editions). It is not available for Managed Instance, SQL Server 2022 on-premises, Azure VMs and Dedicated SQL Pools (formerly SQL DW).
+> This preview feature is available for Azure SQL Database (all SQL DB editions). It is not available for Managed Instance, SQL Server on-premises, Azure VMs and Dedicated SQL Pools (formerly SQL DW).
 
 In this guide, we'll go through the steps to configure geo replication and restore an Azure SQL Database which is configured with transparent data encryption (TDE) and customer-managed keys (CMK) at the database level, utilizing a [user-assigned managed identity](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) to access [Azure Key Vault](/azure/key-vault/general/quick-create-portal) that is in an Azure Active Directory (Azure AD) that the same as the Azure SQL database tenant. This guide presupposes that you have an Azure SQL Database configured with customer-managed keys at the database level which is the source database for these operations.
 

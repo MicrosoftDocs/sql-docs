@@ -1,19 +1,15 @@
 ---
-title: "Data Collection | Microsoft Docs"
+title: "Data Collection"
 description: Learn introductory information about the data collector, a component of SQL Server 2019 that collects different sets of data.
-ms.custom: ""
-ms.date: "07/18/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: conceptual
-keywords: 
-  - "Data Collection"
-helpviewer_keywords: 
-  - "data collection [SQL Server]"
-ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "07/18/2016"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: conceptual
+helpviewer_keywords:
+  - "data collection [SQL Server]"
+keywords: Data Collection
 ---
 # Data Collection
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

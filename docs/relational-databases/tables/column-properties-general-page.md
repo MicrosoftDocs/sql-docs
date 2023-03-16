@@ -1,17 +1,14 @@
 ---
+title: "Column Properties (General Page)"
 description: "Column Properties (General Page)"
-title: "Column Properties (General Page) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: table-view-index
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.columnproperties.general.f1"
-ms.assetid: a745890b-994e-4c23-8028-5c83751e60c4
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: table-view-index
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.columnproperties.general.f1"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Column Properties (General Page)

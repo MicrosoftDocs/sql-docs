@@ -1,21 +1,19 @@
 ---
-title: "Encryption Hierarchy | Microsoft Docs"
+title: "Encryption Hierarchy"
 description: Learn about the hierarchical encryption and key management infrastructure in SQL Server. Store keys in an Extensible Key Management module.
-ms.custom: ""
+author: jaszymas
+ms.author: jaszymas
+ms.reviewer: vanto
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: vanto
 ms.subservice: security
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "encryption [SQL Server], hierarchies"
   - "cryptography [SQL Server], hierarchies"
   - "encryption keys [SQL Server]"
   - "security [SQL Server], encryption"
   - "hierarchies [SQL Server], encryption"
-ms.assetid: 96c276d5-1bba-4e95-b678-10f059f1fbcf
-author: jaszymas
-ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Encryption Hierarchy

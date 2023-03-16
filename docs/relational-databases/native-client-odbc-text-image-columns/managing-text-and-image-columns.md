@@ -1,13 +1,13 @@
 ---
+title: "Managing Text and Image Columns"
 description: "Managing Text and Image Columns"
-title: "Managing Text and Image Columns | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "text columns [ODBC]"
   - "SQL Server Native Client ODBC driver, image columns"
   - "SQL Server Native Client ODBC driver, text columns"
@@ -17,9 +17,6 @@ helpviewer_keywords:
   - "data types [ODBC], mapping"
   - "ODBC data types, text columns"
   - "image columns [ODBC]"
-ms.assetid: 7b543556-ff36-4d35-ac08-de96223d92cd
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Managing Text and Image Columns

@@ -1,18 +1,15 @@
 ---
-description: "Filter Settings (Object Explorer and Utility Explorer)"
 title: "Filter Settings (Object Explorer and Utility Explorer)"
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: ssms
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.common.filtersettings.f1"
-  - "sql13.ag.job.filtersettings.f1"
-ms.assetid: 4aab04bc-e1ab-4d4b-ab74-b287fc805bc2
+description: "Filter Settings (Object Explorer and Utility Explorer)"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.common.filtersettings.f1"
+  - "sql13.ag.job.filtersettings.f1"
 ---
 # Filter Settings (Object Explorer and Utility Explorer)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

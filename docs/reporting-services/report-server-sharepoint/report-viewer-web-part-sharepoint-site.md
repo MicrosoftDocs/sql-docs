@@ -1,14 +1,12 @@
 ---
-title: "Report Viewer web part on a SharePoint site - SSRS | Microsoft Docs"
+title: "Report Viewer web part on a SharePoint site - SSRS"
 description: Use the Report Viewer custom web part to view, navigate, print, and export SQL Server Reporting Services reports in a SharePoint site.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 02/11/2020
 ms.service: reporting-services
 ms.subservice: report-server-sharepoint
-
-
 ms.topic: conceptual
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Report Viewer web part on a SharePoint site - Reporting Services
 

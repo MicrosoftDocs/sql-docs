@@ -1,17 +1,14 @@
 ---
+title: "SQLCloseCursor_ODBC"
 description: "SQLCloseCursor_ODBC"
-title: "SQLCloseCursor_ODBC | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-helpviewer_keywords: 
-  - "SQLCloseCursor function [ODBC], ODBC"
-ms.assetid: 5e47e3f7-e1b8-451f-bf75-daa19b7c7271
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "SQLCloseCursor function [ODBC], ODBC"
 ---
 # SQLCloseCursor_ODBC
 > [!IMPORTANT]  

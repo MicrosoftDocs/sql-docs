@@ -1,15 +1,12 @@
 ---
+title: "Legal Notice (DB2toSQL)"
 description: "Legal Notice (DB2toSQL)"
-title: "Legal Notice (DB2toSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: d2e558b8-7208-44b4-82b3-4b411a34a8c9
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Legal Notice (DB2toSQL)
 This documentation, including sample applications herein, is provided for information purposes only, and this documentation is provided without any warranties, either express or implied. Information in this documentation, including URL and other Internet Web site references, is subject to change without notice. The entire risk of the use or the results of the use of this documentation remains with the user.  

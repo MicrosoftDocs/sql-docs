@@ -4,11 +4,10 @@ description: Returns the current status of resource semaphores used to throttle 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: wiassaf
-ms.date: "04/06/2017"
+ms.date: "02/24/2023"
 ms.service: sql
 ms.subservice: performance
 ms.topic: "reference"
-ms.custom: seo-dt-2019
 f1_keywords:
   - "dm_exec_query_optimizer_memory_gateways_TSQL"
   - "dm_exec_query_optimizer_memory_gateways"
@@ -43,6 +42,9 @@ SQL Server requires VIEW SERVER STATE permission on the server.
 
 Azure SQL Database requires the VIEW DATABASE STATE permission in the database.
 
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 
 ## Remarks  
 SQL Server uses a tiered gateway approach to throttle the number of permitted concurrent compilations.  Three gateways are used, including small, medium and big. Gateways help prevent the exhausting of overall memory resources by larger compilation memory-requiring consumers.

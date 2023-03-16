@@ -1,17 +1,14 @@
 ---
 title: Connect to Microsoft Azure Storage
 description: "Connect to Microsoft Azure Storage"
+author: markingmyname
+ms.author: maghan
+ms.date: 07/12/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: ui-reference
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.windowsazurestorage.connect.f1"
-  - "SQL13.SWB.WINDOWSAZURESTORAGE.CONNECT.F1"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 07/12/2017
 ---
 
 # Connect to Microsoft Azure Storage

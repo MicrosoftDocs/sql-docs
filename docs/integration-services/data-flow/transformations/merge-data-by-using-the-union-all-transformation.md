@@ -1,21 +1,18 @@
 ---
+title: "Merge Data by Using the Union All Transformation"
 description: "Merge Data by Using the Union All Transformation"
-title: "Merge Data by Using the Union All Transformation | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "merging datasets [Integration Services]"
   - "merging inputs [Integration Services]"
   - "combining datasets"
   - "Union All transformation"
   - "datasets [Integration Services], merging"
-ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
-author: chugugrace
-ms.author: chugu
 ---
 # Merge Data by Using the Union All Transformation
 

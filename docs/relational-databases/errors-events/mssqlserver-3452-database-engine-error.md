@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_3452"
 description: "MSSQLSERVER_3452"
-title: "MSSQLSERVER_3452 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "3452 (Database Engine error)"
-ms.assetid: bf838f02-7186-4b33-b01e-361b0c02de1f
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "3452 (Database Engine error)"
 ---
 # MSSQLSERVER_3452
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

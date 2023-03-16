@@ -1,20 +1,17 @@
 ---
-title: "expanded-QName (XQuery) | Microsoft Docs"
+title: "expanded-QName (XQuery)"
 description: Learn how to use the expanded-QName() function to return the namespace URI and local name part of a QName.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: xml
-ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "expanded-QName function"
-  - "fn:expanded-QName function"
-ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: "rothja"
 ms.author: "jroth"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: xml
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "expanded-QName function"
+  - "fn:expanded-QName function"
+dev_langs:
+  - "XML"
 ---
 # Functions Related to QNames - expanded-QName
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]

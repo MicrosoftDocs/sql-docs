@@ -187,6 +187,9 @@ Due to the high latency of wide area networks, geo-replication uses an asynchron
 > [!NOTE]
 > `sp_wait_for_database_copy_sync` prevents data loss after geo-failover for specific transactions, but does not guarantee full synchronization for read access. The delay caused by a `sp_wait_for_database_copy_sync` procedure call can be significant and depends on the size of the not yet transmitted transaction log on the primary at the time of the call.
 
+## <a name="failback"></a> Failback
+
+When Auto-Failover groups is configured with automatic failover policy, then failover to geo secondary server will be initiated during a disaster scenario as per the defined grace period. Failback to the old primary will need to be initiated manually. 
 
 ## Permissions
 

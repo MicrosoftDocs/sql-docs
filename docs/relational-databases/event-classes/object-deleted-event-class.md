@@ -1,17 +1,14 @@
 ---
+title: "Object:Deleted Event Class"
 description: "Object:Deleted Event Class"
-title: "Object:Deleted Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "Object:Deleted event class"
-ms.assetid: d4db32bc-972d-4429-809a-a62047c33e79
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "Object:Deleted event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Object:Deleted Event Class

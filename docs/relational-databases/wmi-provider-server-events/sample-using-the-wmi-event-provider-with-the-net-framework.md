@@ -1,19 +1,16 @@
 ---
 title: "Sample: Use the WMI Event Provider in .NET"
-description: A sample C# application uses the WMI Event Provider to return event data for all data definition language events that occur on an instance of SQL Server.
-ms.custom: seo-lt-2019
+description: "A sample C# application uses the WMI Event Provider to return event data for all data definition language events that occur on an instance of SQL Server."
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: wmi
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "WMI Provider for Server Events, samples"
   - "sample applications [WMI]"
   - "managed code [WMI]"
-ms.assetid: 3d7aa7e9-0bb3-4a5b-9a3c-047f3240a6f8
-author: markingmyname
-ms.author: maghan
 ---
 # Sample: Using the WMI Event Provider with the .NET Framework
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

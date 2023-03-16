@@ -1,22 +1,17 @@
 ---
-description: "ProtocolDLL Property (ServerNetworkProtocol Class)"
 title: "ProtocolDLL Property (ServerNetworkProtocol)"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "ProtocolDLL Property (ServerNetworkProtocol Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "ProtocolDLL property"
-ms.assetid: ac386558-392e-46f3-97f8-382f267b7fca
+description: "ProtocolDLL Property (ServerNetworkProtocol Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "ProtocolDLL property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "ProtocolDLL Property (ServerNetworkProtocol Class)"
+apitype: "MOFDef"
 ---
 # ProtocolDLL Property (ServerNetworkProtocol Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -1,22 +1,19 @@
 ---
+title: "sp_add_data_file_recover_suspect_db (Transact-SQL)"
 description: "sp_add_data_file_recover_suspect_db (Transact-SQL)"
-title: "sp_add_data_file_recover_suspect_db (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_add_data_file_recover_suspect_db"
-  - "sp_add_data_file_recover_suspect_db_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_add_data_file_recover_suspect_db"
-ms.assetid: b25262aa-a228-48b7-8739-6581c760b171
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "03/16/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_add_data_file_recover_suspect_db"
+  - "sp_add_data_file_recover_suspect_db_TSQL"
+helpviewer_keywords:
+  - "sp_add_data_file_recover_suspect_db"
+dev_langs:
+  - "TSQL"
 ---
 # sp_add_data_file_recover_suspect_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

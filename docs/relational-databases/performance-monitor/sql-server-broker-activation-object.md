@@ -1,17 +1,15 @@
 ---
 title: "SQL Server, Broker Activation object"
-description: Learn about the SQLServer:Broker Activation performance object, which contains performance counters that report information on stored procedure activation. 
-ms.custom: ""
-ms.date: "07/12/2021"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQLServer:Broker Activation"
-  - "Broker Activation object"
+description: "Learn about the SQLServer:Broker Activation performance object, which contains performance counters that report information on stored procedure activation."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "07/12/2021"
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQLServer:Broker Activation"
+  - "Broker Activation object"
 ---
 # SQL Server, Broker Activation object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

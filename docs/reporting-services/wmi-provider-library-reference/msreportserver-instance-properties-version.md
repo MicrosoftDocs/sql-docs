@@ -1,17 +1,14 @@
 ---
+title: "Version Property (WMI MSReportServer_Instance)"
 description: "Version Property (WMI MSReportServer_Instance)"
-title: "Version Property (WMI MSReportServer_Instance) | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/01/2017
 ms.service: reporting-services
 ms.subservice: wmi-provider-library-reference
-
-
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Version property"
-ms.assetid: eea6bfe9-3130-4272-b3c2-c334349a7afd
-author: maggiesMSFT
-ms.author: maggies
 ---
 # MSReportServer_Instance Properties - Version
   Returns the version of the report server in the format Major.Minor.Build.Revision. Read-only.  

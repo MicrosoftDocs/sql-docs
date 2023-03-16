@@ -9,7 +9,6 @@ ms.subservice: data-warehouse
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-ms.assetid: 0a284d18-3c46-4ffa-bcc9-689e660ee8b4
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.dm_pdw_dms_workers (Transact-SQL)

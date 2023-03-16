@@ -1,17 +1,14 @@
 ---
+title: "Lock:Cancel Event Class"
 description: "Lock:Cancel Event Class"
-title: "Lock:Cancel Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "Cancel event class"
-ms.assetid: d9203e58-40ba-4712-a918-2c34a5d396d7
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "Cancel event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Lock:Cancel Event Class

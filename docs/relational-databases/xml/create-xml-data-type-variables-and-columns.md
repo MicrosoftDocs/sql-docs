@@ -1,17 +1,16 @@
 ---
 title: Create XML data type variables and columns
 description: Learn how to create columns and variables of the XML data type in SQL Server.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
 ms.date: 05/05/2022
 ms.service: sql
-ms.reviewer: randolphwest
 ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "xml data type [SQL Server], variables"
   - "xml data type [SQL Server], columns"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Create XML data type variables and columns
 

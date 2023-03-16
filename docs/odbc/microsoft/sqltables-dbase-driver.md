@@ -1,18 +1,15 @@
 ---
+title: "SQLTables (dBASE Driver)"
 description: "SQLTables (dBASE Driver)"
-title: "SQLTables (dBASE Driver) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "DBase driver [ODBC], SQLTables"
-  - "SQLTables function [ODBC], dBASE Driver"
-ms.assetid: 45938efb-b678-47d8-9345-644fa26ad679
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "DBase driver [ODBC], SQLTables"
+  - "SQLTables function [ODBC], dBASE Driver"
 ---
 # SQLTables (dBASE Driver)
 > [!NOTE]  

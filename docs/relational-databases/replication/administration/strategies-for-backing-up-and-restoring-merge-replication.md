@@ -1,20 +1,18 @@
 ---
 title: "Strategies for backup & restore (Merge)"
 description: Strategies for backing up and restoring data used in Merge Replication.
-ms.custom: seo-lt-2019
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "recovery [SQL Server replication], merge replication"
   - "backups [SQL Server replication], merge replication"
   - "restoring [SQL Server replication], merge replication"
   - "merge replication [SQL Server replication], backup and restore"
-ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Strategies for Backing Up and Restoring Merge Replication
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

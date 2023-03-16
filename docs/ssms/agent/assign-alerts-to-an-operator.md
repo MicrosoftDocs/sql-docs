@@ -1,22 +1,19 @@
 ---
-description: "Assign Alerts to an Operator"
 title: "Assign Alerts to an Operator"
-ms.custom: seo-lt-2019
+description: "Assign Alerts to an Operator"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Agent jobs, operators"
   - "assigning alerts to operator"
   - "SQL Server Agent, alerts"
   - "alerts [SQL Server], assigning to operator"
   - "jobs [SQL Server Agent], operators"
   - "notifications [SQL Server], job status"
-ms.assetid: aa818155-6fa2-4565-a09f-5c7e31c89754
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Assign Alerts to an Operator
@@ -55,7 +52,7 @@ Only members of the **sysadmin** fixed server role can assign alerts to operator
   
 4.  Right-click the operator to which you want to assign an alert and select **Properties**, and select the **Notifications** page.  
   
-5.  In the _operator\_name_**Properties** dialog box, under **Select a page**, select **Notifications**.  
+5.  In the _operator\_name_ **Properties** dialog box, under **Select a page**, select **Notifications**.  
   
 6.  Under **View notifications sent to this user by**, select **Alerts** to view a list of alerts sent to this operator or select **Jobs** to view a list of jobs that send notifications to this operator. Select one or more of the following checkboxes to define the notification method for each notification as necessary: **E-mail**, **Pager**, or **Net send**.  
   

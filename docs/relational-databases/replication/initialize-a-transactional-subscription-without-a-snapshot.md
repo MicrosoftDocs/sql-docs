@@ -1,19 +1,17 @@
 ---
 title: "Initialize a subscription without a snapshot (Transactional)"
-description: Learn how to initialize a Transactional Replication without using a snapshot for SQL Server. 
-ms.custom: seo-lt-2019
+description: Learn how to initialize a Transactional Replication without using a snapshot for SQL Server.
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/07/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "transactional replication, initializing"
   - "replication [SQL Server], initializing"
   - "initializing subscriptions [SQL Server replication], without snapshots"
-ms.assetid: 75c8c1f8-60bc-44a8-944b-d18d1f6bda11
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Initialize a Transactional Subscription Without a Snapshot

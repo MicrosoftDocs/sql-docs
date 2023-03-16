@@ -1,10 +1,14 @@
 ---
 title: bcp Utility
 description: The bulk copy program (bcp) utility bulk copies data between an instance of SQL Server and a data file in a user-specified format.
+author: markingmyname
+ms.author: maghan
+ms.reviewer: v-davidengel
+ms.date: 12/13/2021
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "bcp utility [SQL Server]"
   - "exporting data"
   - "row exporting [SQL Server]"
@@ -21,11 +25,6 @@ helpviewer_keywords:
   - "importing data, bcp utility"
   - "file importing [SQL Server]"
   - "column exporting [SQL Server]"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: v-davidengel
-ms.custom: seo-lt-2019
-ms.date: 12/13/2021
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 

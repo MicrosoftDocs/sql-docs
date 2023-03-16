@@ -1,18 +1,15 @@
 ---
-description: "Set the SQL Server Connection for the SQL Server Agent Service"
 title: Set the SQL Server Connection for the SQL Server Agent Service
+description: "Set the SQL Server Connection for the SQL Server Agent Service"
+author: markingmyname
+ms.author: maghan
+ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Agent, connections"
   - "connections [SQL Server], SQL Server Agent service"
-ms.assetid: 28b6178b-0a9e-4f2c-8562-7a62d2d2a285
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 

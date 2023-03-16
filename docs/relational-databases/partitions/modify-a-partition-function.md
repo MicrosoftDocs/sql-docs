@@ -6,7 +6,6 @@ ms.author: vanto
 ms.date: "4/22/2022"
 ms.service: sql
 ms.topic: conceptual
-ms.assetid: ae5bfc09-f27a-4ea9-9518-485278b11674
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Modify a partition function

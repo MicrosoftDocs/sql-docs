@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.system_objects catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 069e9045-97f2-4463-8e8f-c73855f3ea0a
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.system_objects (Transact-SQL)

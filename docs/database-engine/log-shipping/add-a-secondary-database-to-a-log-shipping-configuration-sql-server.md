@@ -7,7 +7,6 @@ ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: log-shipping
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "adding secondary databases"
   - "secondary databases [SQL Server], in log shipping"

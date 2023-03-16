@@ -1,14 +1,16 @@
 ---
 title: SSMS components and configuration"
-description: A tutorial that describes the components and basic configuration options for your SQL Server Management Studio environment. 
+description: A tutorial that describes the components and basic configuration options for your SQL Server Management Studio environment.
+author: markingmyname
+ms.author: maghan
+ms.date: 03/16/2018
 ms.service: sql
 ms.subservice: ssms
 ms.topic: tutorial
-keywords: SQL Server, SSMS, SQL Server Management Studio
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-ms.date: 03/16/2018
+keywords:
+  - SQL Server
+  - SSMS
+  - SQL Server Management Studio
 ---
 
 # SQL Server Management Studio components and configuration

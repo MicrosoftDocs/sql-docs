@@ -1,21 +1,16 @@
 ---
-description: "AcceptPause Property (SqlService Class)"
 title: "AcceptPause Property (SqlService)"
-ms.custom: seo-lt-2019
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "AcceptPause Property (SqlService Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-helpviewer_keywords: 
-  - "AcceptPause property"
-ms.assetid: 4339e903-35ee-4395-b005-ca58b3a24a84
+description: "AcceptPause Property (SqlService Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "AcceptPause property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "AcceptPause Property (SqlService Class)"
 ---
 # AcceptPause Property (SqlService Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -1,18 +1,15 @@
 ---
+title: "Azure HDInsight Connection Manager"
 description: "Azure HDInsight Connection Manager"
-title: "Azure HDInsight Connection Manager | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/28/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "SQL13.DTS.DESIGNER.AFPHDICM.F1"
-  - "SQL14.DTS.DESIGNER.AFPHDICM.F1"
-ms.assetid: 29d01bd9-8b38-43b1-b937-67f8aea57c0f
 author: "Lingxi-Li"
 ms.author: "lingxl"
+ms.date: "02/28/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "SQL13.DTS.DESIGNER.AFPHDICM.F1"
+  - "SQL14.DTS.DESIGNER.AFPHDICM.F1"
 ---
 # Azure HDInsight Connection Manager
 

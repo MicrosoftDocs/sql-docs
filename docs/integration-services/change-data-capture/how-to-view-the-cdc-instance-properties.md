@@ -1,15 +1,12 @@
 ---
+title: "How to View the CDC Instance Properties"
 description: "How to View the CDC Instance Properties"
-title: "How to View the CDC Instance Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: 4bce9b82-7bbd-41df-b3f4-4b40b8bad474
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # How to View the CDC Instance Properties
 

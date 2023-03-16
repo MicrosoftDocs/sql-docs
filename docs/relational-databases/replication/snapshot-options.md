@@ -1,18 +1,16 @@
 ---
 title: "Modify snapshot initialization options"
-description: Modify various Replication snapshot initialization options such as the snapshot format, and the snapshot folder location in SQL Server Management Studio. 
-ms.custom: seo-lt-2019
-ms.date: "11/20/2018"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "snapshot replication [SQL Server], options"
-  - "snapshots [SQL Server replication], options"
-ms.assetid: 759fab42-66c7-4541-a7a3-bb6fb868493c
+description: Modify various Replication snapshot initialization options such as the snapshot format, and the snapshot folder location in SQL Server Management Studio.
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "11/20/2018"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "snapshot replication [SQL Server], options"
+  - "snapshots [SQL Server replication], options"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Modify Snapshot Initialization Options for SQL Replication 

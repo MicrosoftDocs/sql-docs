@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "SAFE assemblies"
   - "code access security [CLR integration]"
   - "EXTERNAL_ACCESS assemblies"
-ms.assetid: 2111cfe0-d5e0-43b1-93c3-e994ac0e9729
 ---
 # CLR Integration Code Access Security
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

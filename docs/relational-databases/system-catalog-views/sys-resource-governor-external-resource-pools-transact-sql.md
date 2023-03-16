@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "resource_governor_external_resource_pools"
 dev_langs:
   - "TSQL"
-ms.assetid: 75063e36-a91b-496f-9936-88f3d57bd447
 ---
 # sys.resource_governor_external_resource_pools (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

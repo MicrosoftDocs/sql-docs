@@ -1,13 +1,14 @@
 ---
 title: "Advanced conflict detection & resolution (Merge)"
 description: Learn advanced methods of conflict detection and resolution with Merge Replication.
-ms.custom: seo-lt-2019
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "merge replication conflict resolution [SQL Server replication], about conflict resolution"
   - "default conflict resolver"
   - "column-level conflict tracking"
@@ -16,9 +17,6 @@ helpviewer_keywords:
   - "resolving merge replication conflicts"
   - "logical record-level conflict tracking [SQL Server replication]"
   - "conflict resolution [SQL Server replication], merge replication"
-ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Advanced Merge Replication - Conflict Detection and Resolution
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

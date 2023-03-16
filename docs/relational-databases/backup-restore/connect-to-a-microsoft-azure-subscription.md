@@ -1,14 +1,12 @@
 ---
-title: "Connect to a Microsoft Azure Subscription | Microsoft Docs"
+title: "Connect to a Microsoft Azure Subscription"
 description: Register an Azure Blob Storage container with your instance of SQL Server, which creates a shared access signature, stored access policy, and SQL Server Credential.
-ms.custom: ""
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: conceptual
-ms.assetid: cca5a270-643f-4677-8802-98464f19f82a
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Connect to a Microsoft Azure Subscription
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

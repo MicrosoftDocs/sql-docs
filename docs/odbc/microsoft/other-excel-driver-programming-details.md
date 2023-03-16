@@ -1,19 +1,16 @@
 ---
+title: "Other Excel Driver Programming Details"
 description: "Other Excel Driver Programming Details"
-title: "Other Excel Driver Programming Details | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Jet-based ODBC drivers [ODBC], Excel driver"
   - "desktop database drivers [ODBC], Excel driver"
   - "ODBC desktop database drivers [ODBC], Excel driver"
-ms.assetid: 92453ef5-86d6-4d13-bdd6-a4f5cf9c453f
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Other Excel Driver Programming Details
 > [!NOTE]  

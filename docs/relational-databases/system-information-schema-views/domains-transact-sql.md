@@ -1,23 +1,20 @@
 ---
+title: "DOMAINS (Transact-SQL)"
 description: "DOMAINS (Transact-SQL)"
-title: "DOMAINS (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "DOMAINS_TSQL"
-  - "DOMAINS"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "DOMAINS view"
-  - "INFORMATION_SCHEMA.DOMAINS view"
-ms.assetid: f0b734d5-816f-4b10-a60c-615931b515c2
 author: markingmyname
 ms.author: maghan
+ms.date: "03/15/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "DOMAINS_TSQL"
+  - "DOMAINS"
+helpviewer_keywords:
+  - "DOMAINS view"
+  - "INFORMATION_SCHEMA.DOMAINS view"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DOMAINS (Transact-SQL)

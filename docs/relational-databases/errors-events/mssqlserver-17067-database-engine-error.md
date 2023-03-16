@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_17067"
 description: "MSSQLSERVER_17067"
-title: "MSSQLSERVER_17067 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "17067 (Database Engine error)"
-ms.assetid: 32c1f0e8-db70-4836-95b2-8833be9e0ad1
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "17067 (Database Engine error)"
 ---
 # MSSQLSERVER_17067
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

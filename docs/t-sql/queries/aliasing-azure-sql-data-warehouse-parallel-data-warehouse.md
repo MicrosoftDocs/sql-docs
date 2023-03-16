@@ -1,16 +1,13 @@
 ---
 title: "Aliasing"
-description: "Aliasing in Azure Synapse Analytics and Parallel Data Warehouse."
 titleSuffix: Azure Synapse Analytics
+description: "Aliasing in Azure Synapse Analytics and Parallel Data Warehouse."
+author: MikeRayMSFT
+ms.author: mikeray
+ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: conceptual
-ms.assetid: 7b3a5c74-05cf-4385-8ee6-6176d003cb8a
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: ""
-ms.custom: "seo-lt-2019"
-ms.date: "03/16/2017"
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 

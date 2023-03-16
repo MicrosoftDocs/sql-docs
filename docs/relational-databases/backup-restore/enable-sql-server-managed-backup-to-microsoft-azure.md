@@ -1,15 +1,13 @@
 ---
 title: Use managed backup to Azure
 description: Learn how to enable SQL Server Managed Backup to Microsoft Azure at the database and instance level, and enable notifications and monitor backup activity.
-ms.custom: seo-lt-2019, devx-track-azurecli
-ms.date: "12/17/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: backup-restore
-ms.topic: conceptual
-ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "12/17/2019"
+ms.service: sql
+ms.subservice: backup-restore
+ms.topic: conceptual
+ms.custom: devx-track-azurecli, devx-track-azurepowershell
 ---
 
 # Enable SQL Server managed backup to Azure

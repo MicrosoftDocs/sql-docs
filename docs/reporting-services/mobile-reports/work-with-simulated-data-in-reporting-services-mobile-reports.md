@@ -1,14 +1,12 @@
 ---
-title: "Work with simulated data in Reporting Services mobile reports | Microsoft Docs"
+title: "Work with simulated data in Reporting Services mobile reports"
 description: When you place a gallery element on the design surface, Mobile Report Publisher generates simulated data for it. Design your prototypes with the simulated data.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 07/21/2022
 ms.service: reporting-services
 ms.subservice: mobile-reports
-
 ms.topic: conceptual
-ms.assetid: 6baabc36-58fb-4a98-bb9c-c42bafb16d0f
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Work with simulated data in Reporting Services mobile reports
 

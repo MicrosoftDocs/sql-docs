@@ -1,22 +1,17 @@
 ---
-description: "ResumeService Method (SqlService Class)"
 title: "ResumeService Method (SqlService)"
-ms.custom: seo-lt-2019
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "ResumeService Method (SqlService Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "ResumeService method"
-ms.assetid: 0b0a5f08-b95e-4626-bf81-309da7a0aacd
+description: "ResumeService Method (SqlService Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "ResumeService method"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "ResumeService Method (SqlService Class)"
+apitype: "MOFDef"
 ---
 # ResumeService Method (SqlService Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

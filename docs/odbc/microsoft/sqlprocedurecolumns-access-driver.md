@@ -1,18 +1,15 @@
 ---
+title: "SQLProcedureColumns (Access Driver)"
 description: "SQLProcedureColumns (Access Driver)"
-title: "SQLProcedureColumns (Access Driver) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Access driver [ODBC], SQLProcedureColumns"
-  - "SQLProcedureColumns function [ODBC], Access Driver"
-ms.assetid: 34fee995-5848-4ecb-bda0-fc362a77b2d9
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Access driver [ODBC], SQLProcedureColumns"
+  - "SQLProcedureColumns function [ODBC], Access Driver"
 ---
 # SQLProcedureColumns (Access Driver)
 > [!NOTE]  

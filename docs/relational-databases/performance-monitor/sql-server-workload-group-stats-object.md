@@ -1,17 +1,15 @@
 ---
 title: "SQL Server, Workload Group Stats object"
-description: Learn about the SQLServer:Workload Group Stats object, which contains performance counters that report about Resource Governor workload group statistics.
-ms.custom: ""
-ms.date: "07/13/2021"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Workload Group Stats object"
-  - "SQLServer: Workload Group Stats"
+description: "Learn about the SQLServer:Workload Group Stats object, which contains performance counters that report about Resource Governor workload group statistics."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "07/13/2021"
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Workload Group Stats object"
+  - "SQLServer: Workload Group Stats"
 ---
 # SQL Server, Workload Group Stats object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

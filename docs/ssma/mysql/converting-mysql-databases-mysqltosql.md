@@ -1,17 +1,14 @@
 ---
-title: "Converting MySQL Databases (MySQLToSQL) | Microsoft Docs"
+title: "Converting MySQL Databases (MySQLToSQL)"
 description: Learn how to convert MySQL database objects to SQL Server or Azure SQL Database objects with SSMA, after you connect and set project and data mapping options.
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: ac21850b-fb32-4704-9985-5759b7c688c7
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
-    - "ssma.mysql.convert.f1"
+f1_keywords:
+  - "ssma.mysql.convert.f1"
 ---
 # Converting MySQL Databases (MySQLToSQL)
 After you have connected to MySQL, connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, and set project and data mapping options, you can convert MySQL database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Database objects.  

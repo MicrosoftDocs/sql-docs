@@ -3,7 +3,7 @@ title: "sys.dm_exec_sessions (Transact-SQL)"
 description: sys.dm_exec_sessions returns one row per authenticated session on SQL Server.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 01/25/2023
+ms.date: "02/24/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -91,6 +91,10 @@ Everyone can see their own session information.
 **[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]:** Requires `VIEW SERVER STATE` permission on [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] to see all sessions on the server.  
 
 **[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]:** Requires `VIEW DATABASE STATE` to see all connections to the current database. `VIEW DATABASE STATE` can't be granted in the `master` database.
+
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 
 ## Remarks
 

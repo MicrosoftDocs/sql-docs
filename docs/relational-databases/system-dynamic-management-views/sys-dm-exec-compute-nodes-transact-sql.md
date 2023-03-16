@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "dm_exec_compute_nodes management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 0de4b7a4-401f-4e2d-9ab0-c54587e05154
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_compute_nodes (Transact-SQL)

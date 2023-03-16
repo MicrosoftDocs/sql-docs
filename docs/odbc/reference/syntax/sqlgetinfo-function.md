@@ -1,24 +1,19 @@
 ---
+title: "SQLGetInfo Function"
 description: "SQLGetInfo Function"
-title: "SQLGetInfo Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/28/2020"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLGetInfo"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLGetInfo"
-helpviewer_keywords: 
-  - "SQLGetInfo function [ODBC]"
-ms.assetid: 49dceccc-d816-4ada-808c-4c6138dccb64
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "05/28/2020"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLGetInfo"
+helpviewer_keywords:
+  - "SQLGetInfo function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLGetInfo"
+apitype: "dllExport"
 ---
 
 # SQLGetInfo Function

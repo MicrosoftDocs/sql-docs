@@ -1,18 +1,15 @@
 ---
+title: "SQLSetConnectOption Mapping"
 description: "SQLSetConnectOption Mapping"
-title: "SQLSetConnectOption Mapping | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-helpviewer_keywords: 
-  - "SQLSetConnectOption function [ODBC], mapping"
-  - "mapping deprecated functions [ODBC], SQLSetConnectOption"
-ms.assetid: a1b325cf-0c42-41c1-b141-b5a4fee7e708
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "SQLSetConnectOption function [ODBC], mapping"
+  - "mapping deprecated functions [ODBC], SQLSetConnectOption"
 ---
 # SQLSetConnectOption Mapping
 When an ODBC 2.*x* application calls **SQLSetConnectOption** through an ODBC 3*.x* driver, the call to  

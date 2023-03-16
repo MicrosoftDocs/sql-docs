@@ -1,22 +1,19 @@
 ---
+title: "sp_droplinkedsrvlogin (Transact-SQL)"
 description: "sp_droplinkedsrvlogin (Transact-SQL)"
-title: "sp_droplinkedsrvlogin (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_droplinkedsrvlogin_TSQL"
-  - "sp_droplinkedsrvlogin"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_droplinkedsrvlogin"
-ms.assetid: 75a4a040-72d5-4d29-8304-de0aa481ad4b
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_droplinkedsrvlogin_TSQL"
+  - "sp_droplinkedsrvlogin"
+helpviewer_keywords:
+  - "sp_droplinkedsrvlogin"
+dev_langs:
+  - "TSQL"
 ---
 # sp_droplinkedsrvlogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

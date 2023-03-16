@@ -1,22 +1,19 @@
 ---
+title: "Time and Date Functions (Visual FoxPro ODBC Driver)"
 description: "Time and Date Functions (Visual FoxPro ODBC Driver)"
-title: "Time and Date Functions (Visual FoxPro ODBC Driver) | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ODBC date functions [ODBC]"
   - "Visual FoxPro ODBC driver [ODBC], time and date functions"
   - "FoxPro ODBC driver [ODBC], time and date functions"
   - "time and date functions [ODBC]"
   - "ODBC time and date functions [ODBC]"
   - "date functions [ODBC]"
-ms.assetid: c1fb63b7-af50-45d6-8dec-ae6ea7119527
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Time and Date Functions (Visual FoxPro ODBC Driver)
 The following table lists ODBC time and date functions supported by the Visual FoxPro ODBC Driver; when the Visual FoxPro grammar for the same function differs from the ODBC syntax, the Visual FoxPro equivalent is listed.  

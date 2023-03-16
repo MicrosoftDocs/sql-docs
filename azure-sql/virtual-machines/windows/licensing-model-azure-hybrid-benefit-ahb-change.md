@@ -8,7 +8,6 @@ ms.date: 11/13/2019
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to
-ms.custom: devx-track-azurepowershell
 tags: azure-resource-manager
 ---
 # Change the license model for a SQL virtual machine in Azure

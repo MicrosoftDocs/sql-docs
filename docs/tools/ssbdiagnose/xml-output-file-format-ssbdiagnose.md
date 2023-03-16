@@ -1,18 +1,15 @@
 ---
 title: XML Output File Format
 description: In SQL Server, the ssbdiagnose utility can deliver its output as an XML file. Create an application to analyze or report errors or view them in an XML editor.
+author: markingmyname
+ms.author: maghan
+ms.date: 03/01/2017
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "XML output file format [ssbdiagnose]"
   - "ssbdiagnose"
-ms.assetid: 3ceb991b-6f15-4504-8828-de5adf448bc5
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 03/01/2017
 ---
 
 # XML Output File Format (ssbdiagnose)

@@ -1,22 +1,17 @@
 ---
-description: "IsReadOnly Property (SqlServiceAdvancedProperty Class)"
 title: "IsReadOnly Property (SqlServiceAdvancedProperty)"
-ms.custom: seo-lt-2019
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "IsReadOnly Property (SqlServiceAdvancedProperty Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "IsReadOnly property"
-ms.assetid: 9672e70f-1d8c-4133-ac73-3b5733a1c4ee
+description: "IsReadOnly Property (SqlServiceAdvancedProperty Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "IsReadOnly property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "IsReadOnly Property (SqlServiceAdvancedProperty Class)"
+apitype: "MOFDef"
 ---
 # IsReadOnly Property (SqlServiceAdvancedProperty Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

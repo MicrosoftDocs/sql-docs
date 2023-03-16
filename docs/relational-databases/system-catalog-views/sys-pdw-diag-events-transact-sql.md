@@ -9,7 +9,6 @@ ms.subservice: system-objects
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-ms.assetid: 59bb3e9c-2829-49a0-b382-652ed1f54f88
 monikerRange: ">=aps-pdw-2016"
 ---
 # sys.pdw_diag_events (Transact-SQL)

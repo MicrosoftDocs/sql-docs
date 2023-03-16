@@ -1,25 +1,22 @@
 ---
+title: "core.sp_update_data_source (Transact-SQL)"
 description: "core.sp_update_data_source (Transact-SQL)"
-title: "core.sp_update_data_source (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/03/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_update_data_source"
   - "sp_update_data_source_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_update_data_source"
   - "management data warehouse, data collector stored procedures"
   - "core.sp_update_data_source stored procedure"
   - "data collector [SQL Server], stored procedures"
-ms.assetid: 66b95f96-6df7-4657-9b3c-86a58c788ca5
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # core.sp_update_data_source (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

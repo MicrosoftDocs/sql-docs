@@ -1,22 +1,19 @@
 ---
+title: "sp_articlecolumn (Transact-SQL)"
 description: "sp_articlecolumn (Transact-SQL)"
-title: "sp_articlecolumn (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_articlecolumn"
-  - "sp_articlecolumn_TSQL"
-helpviewer_keywords: 
-  - "sp_articlecolumn"
-ms.assetid: 8abaa8c1-d99e-4788-970f-c4752246c577
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_articlecolumn"
+  - "sp_articlecolumn_TSQL"
+helpviewer_keywords:
+  - "sp_articlecolumn"
+dev_langs:
+  - "TSQL"
 ---
 # sp_articlecolumn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

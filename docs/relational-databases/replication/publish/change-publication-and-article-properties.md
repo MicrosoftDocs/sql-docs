@@ -1,21 +1,19 @@
 ---
+title: "Change Publication and Article Properties"
 description: "Change Publication and Article Properties"
-title: "Change Publication and Article Properties | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/17/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "modifying article properties"
   - "modifying publication properties"
   - "administering replication, properties"
   - "publications [SQL Server replication], changing properties"
   - "articles [SQL Server replication], properties"
-ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Change Publication and Article Properties

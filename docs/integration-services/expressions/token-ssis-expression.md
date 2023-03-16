@@ -1,15 +1,12 @@
 ---
+title: "TOKEN  (SSIS Expression)"
 description: "TOKEN  (SSIS Expression)"
-title: "TOKEN  (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # TOKEN  (SSIS Expression)
 

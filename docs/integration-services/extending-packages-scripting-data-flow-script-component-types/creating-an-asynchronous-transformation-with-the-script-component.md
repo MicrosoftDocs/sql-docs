@@ -1,21 +1,18 @@
 ---
+title: "Creating an Asynchronous Transformation with the Script Component"
 description: "Creating an Asynchronous Transformation with the Script Component"
-title: "Creating an Asynchronous Transformation with the Script Component | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/17/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "asynchronous outputs [Integration Services]"
   - "transformation components [Integration Services]"
   - "Script component [Integration Services], transformation components"
-ms.assetid: 0d814404-21e4-4a68-894c-96fa47ab25ae
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
 ---
 # Creating an Asynchronous Transformation with the Script Component
 

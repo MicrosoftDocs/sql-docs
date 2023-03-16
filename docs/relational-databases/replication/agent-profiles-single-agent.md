@@ -1,19 +1,17 @@
 ---
+title: "Agent Profiles (single agent)"
 description: "Agent Profiles (single agent)"
-title: "Agent Profiles (single agent) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.profiles.perfprofileagentname.f1"
-helpviewer_keywords: 
-  - "Agent Profile dialog box"
-ms.assetid: 22713555-c496-4ce1-8ec7-4ae75cfadca8
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.profiles.perfprofileagentname.f1"
+helpviewer_keywords:
+  - "Agent Profile dialog box"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Agent Profiles (single agent)

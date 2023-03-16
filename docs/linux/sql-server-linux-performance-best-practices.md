@@ -4,7 +4,7 @@ description: This article provides performance best practices and guidelines for
 author: tejasaks
 ms.author: tejasaks
 ms.reviewer: vanto, randolphwest
-ms.date: 11/24/2022
+ms.date: 02/21/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -25,11 +25,11 @@ Consider using the following Linux OS configuration settings to experience the b
 
 #### Use storage subsystem with appropriate IOPS, throughput, and redundancy
 
-The storage subsystem hosting data, transaction logs, and other associated files (such as checkpoint files for in-memory OLTP) should be capable of managing both average and peak workload gracefully. Normally, in on-premises environments, the storage vendor support appropriate hardware RAID configuration with striping across multiple disks to ensure appropriate IOPS, throughput, and redundancy. Though, this can differ across different storage vendors and different storage offerings with varying architectures.
+The storage subsystem hosting data, transaction logs, and other associated files (such as checkpoint files for in-memory OLTP) should be capable of managing both average and peak workload gracefully. Normally, in on-premises environments, the storage vendor supports appropriate hardware RAID configuration with striping across multiple disks to ensure appropriate IOPS, throughput, and redundancy. Though, this can differ across different storage vendors and different storage offerings with varying architectures.
 
 For [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux deployed on Azure Virtual Machines, consider using software RAID to ensure appropriate IOPS and throughput requirements are achieved. When configuring [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Azure virtual machines with similar storage considerations, see [Storage configuration for SQL Server VMs](/azure/azure-sql/virtual-machines/windows/storage-configuration).
 
-The following is an example of how to create software raid in Linux on Azure Virtual Machines. An example is provided below, but you should use the appropriate number of data disks for the required throughput and IOPS for volumes based on the data, transaction log, and `tempdb` IO requirements. In this example, eight data disks were attached to the Azure Virtual Machine; 4 to host data files, 2 for transaction logs, and 2 for `tempdb` workload.
+The following example shows how to create software RAID in Linux on Azure Virtual Machines. Keep in mind that you should use the appropriate number of data disks for the required throughput and IOPS for volumes based on the data, transaction log, and `tempdb` I/O requirements. In the following example, eight data disks were attached to the Azure Virtual Machine; 4 to host data files, 2 for transaction logs, and 2 for `tempdb` workload.
 
 ```bash
 # To locate the devices (for example /dev/sdc) for RAID creation, use the lsblk command
@@ -45,7 +45,7 @@ mdadm --create --verbose /dev/md2 --level=raid0 --chunk=64K --raid-devices=2 /de
 
 #### Disk partitioning and configuration recommendations
 
-For [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], it is recommended to use RAID configurations. The deployed filesystem stripe unit (sunit) and stripe width should match the RAID geometry. Here is an XFS filesystem-based example for a log volume.
+For [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], you should use a RAID configuration. The deployed file system stripe unit (`sunit`) and stripe width should match the RAID geometry. For example, this is an XFS-based example for a log volume.
 
 ```bash
 # Creating a log volume, using 6 devices, in RAID 10 configuration with 64KB stripes
@@ -89,11 +89,11 @@ mkfs.xfs /dev/md2 -f -L tempdb
 
 ##### Persistent memory filesystem recommendation
 
-For the filesystem configuration on Persistent Memory devices, the block allocation for the underlying filesystem should be 2 MB. For more information on this topic, review the article [Technical considerations](sql-server-linux-configure-pmem.md#technical-considerations).
+For the filesystem configuration on Persistent Memory devices, the block allocation for the underlying filesystem should be 2 MB. For more information on this article, review the article [Technical considerations](sql-server-linux-configure-pmem.md#technical-considerations).
 
 ##### Open file limitation
 
-The default open file limit is often set at 1024. Your production environment may require more connections than the default limit. We recommend you set a soft limit of 16000, and a hard limit of 32727. For example, in [RHEL](https://access.redhat.com/solutions/61334), edit the `/etc/security/limits.d/99-mssql-server.conf` file to have the following values:
+Your production environment may require more connections than the default open file limit of 1024. We recommend you set a soft limit of 16000, and a hard limit of 32727. For example, in [RHEL](https://access.redhat.com/solutions/61334), edit the `/etc/security/limits.d/99-mssql-server.conf` file to have the following values:
 
 ```ini
 mssql hard nofile 32727
@@ -102,9 +102,9 @@ mssql soft nofile 16000
 
 #### Disable last accessed date/time on file systems for SQL Server data and log files
 
-To ensure that the drive(s) attached to the system are remounted automatically after a reboot, they must be added to the `/etc/fstab` file. It's also highly recommended that the UUID (Universally Unique Identifier) is used in `/etc/fstab` to refer to the drive rather than just the device name (such as `/dev/sdc1`).
+To ensure that the drive(s) attached to the system remount automatically after a reboot, add them to the `/etc/fstab` file. You should also use the UUID (Universally Unique Identifier) in `/etc/fstab` to refer to the drive, rather than just the device name (such as `/dev/sdc1`).
 
-Use of `noatime` attribute with any file system that is used to store [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] data and log files is highly recommended. Refer to your Linux documentation on how to set this attribute. An example of how to enable `noatime` option for a volume mounted in Azure Virtual Machine is below.
+Use the `noatime` attribute with any file system that stores [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] data and log files. Refer to your Linux documentation on how to set this attribute. An example of how to enable `noatime` option for a volume mounted in Azure Virtual Machine follows.
 
 The mount point entry in `/etc/fstab`:
 
@@ -116,29 +116,11 @@ In the example above, UUID represents the device that you can find using the **b
 
 #### SQL Server and Forced Unit Access (FUA) I/O subsystem capability
 
-Certain versions of supported Linux distributions provide support for FUA I/O subsystem capability, which provides data durability. [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] uses FUA capability to provide highly efficient and reliable I/O for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] workloads. For more information on FUA support by Linux distribution and its effect on [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], see [SQL Server On Linux: Forced Unit Access (FUA) Internals](https://techcommunity.microsoft.com/t5/sql-server-blog/sql-server-on-linux-forced-unit-access-fua-internals/ba-p/3199102).
-
-SUSE Linux Enterprise Server 12 SP5 and Red Hat Enterprise Linux 8.0 onwards support FUA capability in the I/O subsystem. If you're using [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] CU6 and later versions, you should use following configuration for high performing and efficient I/O implementation with FUA by [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)].
-
-Use the recommended configuration listed below if the following conditions are met.
-
-- Using [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] CU6 and later versions
-- Using a Linux distribution and version that supports FUA capability (Red Hat Enterprise Linux 8.0 or higher, or SUSE Linux Enterprise Server 12 SP5)
-- On storage subsystem and/or hardware that supports and is configured for FUA capability
-
-Recommended configuration:
-
-1. Enable Trace Flag 3979 as a startup parameter
-1. Use **mssql-conf** to configure `control.writethrough = 1` and `control.alternatewritethrough = 0`
-
-For almost all other configuration that doesn't meet the previous conditions, the recommended configuration is as follows:
-
-1. Enable Trace Flag 3982 as a startup parameter (which is the default for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] in the Linux ecosystem), while ensuring Trace Flag 3979 isn't enabled as a startup parameter
-1. Use **mssql-conf** to configure `control.writethrough = 1` and `control.alternatewritethrough = 1`
+[!INCLUDE [linux-forced-unit-access](includes/linux-forced-unit-access.md)]
 
 ### Kernel and CPU settings for high performance
 
-The following section describes the recommended Linux OS settings related to high performance and throughput for a [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] installation. See your Linux OS documentation for the process to configure these settings. Using [TuneD](https://tuned-project.org) as described helps configure many CPUs and kernel configurations described below.
+The following section describes the recommended Linux OS settings related to high performance and throughput for a [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] installation. See your Linux distribution's documentation for the process to configure these settings. You can use [TuneD](https://tuned-project.org) as described, to configure many CPUs and kernel configurations, described in the next section.
 
 #### Use *TuneD* to configure kernel settings
 
@@ -189,7 +171,7 @@ chmod +x /usr/lib/tuned/mssql/tuned.conf
 tuned-adm profile mssql
 ```
 
-Verify it's enabled with the following command:
+Verify that the profile is active, with the following command:
 
 ```bash
 tuned-adm active
@@ -279,9 +261,9 @@ Using the `mssql` TuneD profile configures the `transparent_hugepage` option.
 
 #### Network setting recommendations
 
-Like there are storage and CPU recommendations, there are Network specific recommendations as well listed below for reference. Not all settings mentioned below are available across different NICs. Refer and consult with NIC vendors for guidance for each of these options. Test and configure this on development environments before applying them on production environments. The options mentioned below are explained with examples, and the commands used are specific to NIC type and vendor.
+Like there are storage and CPU recommendations, there are Network specific recommendations as well listed below for reference. Not all settings in the following examples are available across different NICs. Refer and consult with NIC vendors for guidance for each of these options. Test and configure this on development environments before applying them on production environments. The following options are explained with examples, and the commands used are specific to NIC type and vendor.
 
-1. Configuring network port buffer size: In the example below, the NIC is named 'eth0', which is an Intel-based NIC. For Intel based NIC, the recommended buffer size is 4 KB (4096). Verify the pre-set maximums and then configure it using the sample commands shown below:
+1. Configuring network port buffer size: In the example below, the NIC is named 'eth0', which is an Intel-based NIC. For Intel based NIC, the recommended buffer size is 4 KB (4096). Verify the pre-set maximums and then configure it using the following example:
 
    ```bash
    #To check the pre-set maximums please run the command, example NIC name used here is:"eth0"
@@ -308,7 +290,7 @@ Like there are storage and CPU recommendations, there are Network specific recom
    GO
    ```
 
-1. By default, we recommend setting the port for adaptive RX/TX IRQ coalescing, meaning interrupt delivery will be adjusted to improve latency when packet rate is low and improve throughput when packet rate is high. This setting might not be available across all the different network infrastructure, so review the existing network infrastructure and confirm that this is supported. The example below is for the NIC named 'eth0', which is an intel-based NIC:
+1. By default, we recommend setting the port for adaptive RX/TX IRQ coalescing, meaning interrupt delivery is adjusted to improve latency when packet rate is low and improve throughput when packet rate is high. This setting might not be available across all the different network infrastructure, so review the existing network infrastructure and confirm that this is supported. The example below is for the NIC named 'eth0', which is an intel-based NIC:
 
    ```bash
    #command to set the port for adaptive RX/TX IRQ coalescing
@@ -333,7 +315,7 @@ Like there are storage and CPU recommendations, there are Network specific recom
    ethtool -c eth0
    ```
 
-1. We also recommend RSS (Receive-Side Scaling) enabled and by default, combining the RX and TX side of RSS queues. There have been specific scenarios where when working with Microsoft Support, disabling RSS has improved the performance as well. Test this setting in test environments before applying it on production environments. The example command shown below is for Intel NICs.
+1. We also recommend RSS (Receive-Side Scaling) enabled and by default, combining the RX and TX side of RSS queues. There have been specific scenarios, when working with Microsoft Support, where disabling RSS has improved the performance as well. Test this setting in test environments before applying it on production environments. The following example is for Intel NICs.
 
    ```bash
    #command to get pre-set maximums
@@ -347,7 +329,7 @@ Like there are storage and CPU recommendations, there are Network specific recom
 
 1. Working with NIC port IRQ affinity. To achieve expected performance by tweaking the IRQ affinity, consider few important parameters like Linux handling of the server topology, NIC driver stack, default settings, and irqbalance setting. Optimizations of the NIC port IRQ affinities settings are done with the knowledge of server topology, disabling the irqbalance, and using the NIC vendor-specific settings.
 
-    Below is an example of Mellanox specific network infrastructure to help explain the configuration. For more information, see [​​Performance Tuning tools for Mellanox Network Adapters](https://support.mellanox.com/s/article/MLNX2-117-2523kn). The commands will change based on the environment. Contact the NIC vendor for further guidance:
+   The following example of Mellanox specific network infrastructure helps to explain the configuration. For more information, see [​​Performance Tuning tools for Mellanox Network Adapters](https://support.mellanox.com/s/article/MLNX2-117-2523kn). The commands change based on the environment. Contact the NIC vendor for further guidance:
 
    ```bash
    #disable irqbalance or get a snapshot of the IRQ settings and force the daemon to exit
@@ -387,11 +369,11 @@ Like there are storage and CPU recommendations, there are Network specific recom
    ethtool eth0 | grep -i Speed
    ```
 
-#### Additional advanced kernel/OS configuration
+#### Advanced kernel and OS configuration
 
-- For best storage IO performance, the use of Linux multiqueue scheduling for block devices is recommended. This enables the block layer performance to scale well with fast solid-state drives (SSDs) and multi-core systems. Check the documentation if it is enabled by default in your Linux distributions. In most other cases, booting the kernel with `scsi_mod.use_blk_mq=y` enables it, though documentation of the Linux distribution in use may have additional guidance on it. This is consistent to the upstream Linux kernel.
+- For best storage IO performance, use Linux multiqueue scheduling for block devices, which enables the block layer performance to scale well with fast solid-state drives (SSDs) and multi-core systems. Check the documentation if it is enabled by default in your Linux distribution. In most other cases, booting the kernel with `scsi_mod.use_blk_mq=y` enables it, though documentation of the Linux distribution in use may have further guidance on it. This is consistent with the upstream Linux kernel.
 
-- As multipath IO is often used for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] deployments, the device mapper (DM) multi-queue target should also be configured to use the `blk-mq` infrastructure by enabling the `dm_mod.use_blk_mq=y` kernel boot option. The default value is `n` (disabled). This setting, when the underlying SCSI devices are using `blk-mq`, reduces locking overhead at the DM layer. Refer to the documentation of the Linux distribution in use for additional guidance on how to configure it.
+- As multipath IO is often used for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] deployments, configure the device mapper (DM) multi-queue target to use the `blk-mq` infrastructure, by enabling the `dm_mod.use_blk_mq=y` kernel boot option. The default value is `n` (disabled). This setting, when the underlying SCSI devices are using `blk-mq`, reduces locking overhead at the DM layer. For more information on how to configure multipath IO, refer to your Linux distribution's documentation.
 
 #### Configure swapfile
 
@@ -403,13 +385,13 @@ If you're running [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on 
 
 ## SQL Server configuration
 
-It is recommended to perform the following configuration tasks after you install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux to achieve best performance for your application.
+Perform the following configuration tasks after you install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux to achieve best performance for your application.
 
 ### Best practices
 
 - **Use PROCESS AFFINITY for node and/or CPUs**
 
-  It's recommended to use `ALTER SERVER CONFIGURATION` to set `PROCESS AFFINITY` for all the `NUMANODE`s and/or CPUs you're using for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] (which is typically for all NODEs and CPUs) on a Linux OS. Processor affinity helps maintain efficient Linux and SQL Scheduling behavior. Using the `NUMANODE` option is the simplest method. Use `PROCESS AFFINITY` even if you have only a single NUMA Node on your computer. For more information on how to set `PROCESS AFFINITY`, see the [ALTER SERVER CONFIGURATION](../t-sql/statements/alter-server-configuration-transact-sql.md) article.
+  Use `ALTER SERVER CONFIGURATION` to set `PROCESS AFFINITY` for all the `NUMANODE`s and/or CPUs you're using for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] (which is typically for all NODEs and CPUs) on a Linux OS. Processor affinity helps maintain efficient Linux and SQL Scheduling behavior. Using the `NUMANODE` option is the simplest method. Use `PROCESS AFFINITY` even if you have only a single NUMA Node on your computer. For more information on how to set `PROCESS AFFINITY`, see the [ALTER SERVER CONFIGURATION](../t-sql/statements/alter-server-configuration-transact-sql.md) article.
 
 - **Configure multiple `tempdb` data files**
 

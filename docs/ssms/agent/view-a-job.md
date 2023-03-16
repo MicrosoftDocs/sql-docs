@@ -1,20 +1,17 @@
 ---
-description: "View a Job"
 title: "View a Job"
+description: "View a Job"
+author: markingmyname
+ms.author: maghan
+ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "jobs [SQL Server Agent], viewing"
   - "viewing jobs"
   - "SQL Server Agent jobs, viewing"
   - "displaying jobs"
-ms.assetid: d2241a3f-dbcf-433c-b7bc-f96bdf0eac8c
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 

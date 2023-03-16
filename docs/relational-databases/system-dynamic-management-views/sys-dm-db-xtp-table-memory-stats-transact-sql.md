@@ -3,7 +3,7 @@ title: "sys.dm_db_xtp_table_memory_stats (Transact-SQL)"
 description: sys.dm_db_xtp_table_memory_stats returns memory usage statistics for each In-Memory OLTP table (user and system) in the current database.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "03/02/2022"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -41,6 +41,10 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-curren
   
  System tables are returned only for users with VIEW DATABASE STATE permission.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW DATABASE PERFORMANCE STATE permission on the database.
+
 ## Examples  
  You can query the following DMV to get the memory allocated for the tables and indexes within the database:  
   

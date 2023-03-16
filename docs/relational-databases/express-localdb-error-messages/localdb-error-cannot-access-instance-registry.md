@@ -1,15 +1,12 @@
 ---
+title: "LOCALDB_ERROR_CANNOT_ACCESS_INSTANCE_REGISTRY"
 description: "LOCALDB_ERROR_CANNOT_ACCESS_INSTANCE_REGISTRY"
-title: "LOCALDB_ERROR_CANNOT_ACCESS_INSTANCE_REGISTRY | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: "reference"
-ms.assetid: f1458ca8-54dd-48c4-86ae-a8bbedbb7db3
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: performance
+ms.topic: "reference"
 ---
 # LOCALDB_ERROR_CANNOT_ACCESS_INSTANCE_REGISTRY
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

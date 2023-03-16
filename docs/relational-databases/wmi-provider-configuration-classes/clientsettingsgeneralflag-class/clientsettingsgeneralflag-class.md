@@ -1,22 +1,15 @@
 ---
-description: "ClientSettingsGeneralFlag Class"
 title: "ClientSettingsGeneralFlag Class"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-
-ms.topic: "reference"
-apiname: 
-  - "ClientSettingsGeneralFlag Class"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-helpviewer_keywords: 
-  - "ClientSettingsGeneralFlag class"
-ms.assetid: 8a0291a8-e8ef-42f6-a521-079410c5eeb1
+description: "ClientSettingsGeneralFlag Class"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.topic: "reference"
+helpviewer_keywords:
+  - "ClientSettingsGeneralFlag class"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "ClientSettingsGeneralFlag Class"
 ---
 # ClientSettingsGeneralFlag Class
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

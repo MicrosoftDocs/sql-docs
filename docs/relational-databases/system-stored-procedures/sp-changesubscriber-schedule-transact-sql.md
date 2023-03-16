@@ -1,22 +1,19 @@
 ---
+title: "sp_changesubscriber_schedule (Transact-SQL)"
 description: "sp_changesubscriber_schedule (Transact-SQL)"
-title: "sp_changesubscriber_schedule (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_changesubscriber_schedule"
-  - "sp_changesubscriber_schedule_TSQL"
-helpviewer_keywords: 
-  - "sp_changesubscriber_schedule"
-ms.assetid: ff84e8e2-d496-482c-b23e-38a6626596e6
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_changesubscriber_schedule"
+  - "sp_changesubscriber_schedule_TSQL"
+helpviewer_keywords:
+  - "sp_changesubscriber_schedule"
+dev_langs:
+  - "TSQL"
 ---
 # sp_changesubscriber_schedule (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

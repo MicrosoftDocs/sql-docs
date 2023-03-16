@@ -1,18 +1,15 @@
 ---
+title: "CONVERT Function Limitations"
 description: "CONVERT Function Limitations"
-title: "CONVERT Function Limitations | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-helpviewer_keywords: 
-  - "ODBC SQL grammar, CONVERT function limitations"
-  - "Convert function limitations [ODBC]"
-ms.assetid: 3c81fc58-57f0-4dd7-be16-2b146eb15cbc
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "ODBC SQL grammar, CONVERT function limitations"
+  - "Convert function limitations [ODBC]"
 ---
 # CONVERT Function Limitations
 Type conversion failures result in the affected column being set to NULL.  

@@ -3,7 +3,7 @@ title: "sys.dm_db_mirroring_auto_page_repair (Transact-SQL)"
 description: Database Mirroring - sys.dm_db_mirroring_auto_page_repair
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "03/15/2017"
+ms.date: "02/24/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "sys.dm_db_mirroring_auto_page_repair dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 49f0fc2a-e25e-47e1-a135-563adb509af1
 ---
 # Database Mirroring - sys.dm_db_mirroring_auto_page_repair
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,17 +33,15 @@ ms.assetid: 49f0fc2a-e25e-47e1-a135-563adb509af1
 |**page_status**|**int**|The status of the page-repair attempt:<br /><br /> 2 = Queued for request from partner.<br /><br /> 3 = Request sent to partner.<br /><br /> 4 = Queued for automatic page repair (response received from partner).<br /><br /> 5 = Automatic page repair succeeded and the page should be usable.<br /><br /> 6 = Irreparable. This indicates that an error occurred during page-repair attempt, for example, because the page is also corrupted on the partner, the partner is disconnected, or a network problem occurred. This state is not terminal; if corruption is encountered again on the page, the page will be requested again from the partner.|  
 |**modification_time**|**datetime**|Time of last change to the page status.|  
   
-## Security  
-  
-### Permissions  
+## Permissions  
  Requires VIEW SERVER STATE permission on the server.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## See Also  
  [Automatic Page Repair &#40;Availability Groups: Database Mirroring&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [suspect_pages &#40;Transact-SQL&#41;](../../relational-databases/system-tables/suspect-pages-transact-sql.md)   
  [Manage the suspect_pages Table &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)  
-  
-  
-
-

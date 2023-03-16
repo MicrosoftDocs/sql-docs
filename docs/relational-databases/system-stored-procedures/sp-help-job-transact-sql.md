@@ -1,22 +1,19 @@
 ---
+title: "sp_help_job (Transact-SQL)"
 description: "sp_help_job (Transact-SQL)"
-title: "sp_help_job (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/02/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_help_job_TSQL"
-  - "sp_help_job"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_help_job"
-ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
 author: markingmyname
 ms.author: maghan
+ms.date: "08/02/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_help_job_TSQL"
+  - "sp_help_job"
+helpviewer_keywords:
+  - "sp_help_job"
+dev_langs:
+  - "TSQL"
 ---
 # sp_help_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

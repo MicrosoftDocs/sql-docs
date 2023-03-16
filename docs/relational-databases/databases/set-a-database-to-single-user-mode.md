@@ -1,16 +1,13 @@
 ---
 title: "Set a database to single-user mode"
 description: "Set a database to single-user mode"
-ms.service: sql
-ms.subservice: 
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "single-user mode [SQL Server], database option"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: ""
-ms.custom: FY22Q2Fresh
 ms.date: "10/21/2021"
+ms.service: sql
+ms.topic: conceptual
+helpviewer_keywords:
+  - "single-user mode [SQL Server], database option"
 ---
 # Set a database to single-user mode
 
@@ -22,7 +19,7 @@ This article describes how to set a user-defined database to single-user mode in
   
 -   If other users are connected to the database at the time that you set the database to single-user mode, their connections to the database will be closed without warning. 
   
--   The database remains in single-user mode even if the after the user that set the option is disconnected. At that point, a different user, but only one, can connect to the database.  
+-   The database remains in single-user mode even after the user that set the option is disconnected. At that point, a different user, but only one, can connect to the database.  
   
 ##  <a name="Prerequisites"></a> Prerequisites  
   

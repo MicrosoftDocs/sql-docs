@@ -1,20 +1,17 @@
 ---
-description: "Specify Job Responses"
 title: "Specify Job Responses"
-ms.custom: seo-lt-2019
+description: "Specify Job Responses"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "jobs [SQL Server Agent], responses"
   - "SQL Server Agent jobs, responses"
   - "actions [SQL Server Agent jobs]"
   - "responding to jobs"
-ms.assetid: 050242e1-9b79-4ade-91a9-580707b9d2d9
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Specify Job Responses

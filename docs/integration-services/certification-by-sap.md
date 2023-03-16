@@ -1,15 +1,12 @@
 ---
+title: "Certification by SAP"
 description: "Certification by SAP"
-title: "Certification by SAP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: 44213071-a98e-4bd4-acf5-c9872536269e
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Certification by SAP
 

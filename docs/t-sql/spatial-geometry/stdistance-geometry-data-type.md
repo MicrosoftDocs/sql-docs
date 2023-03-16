@@ -1,22 +1,19 @@
 ---
+title: "STDistance (geometry Data Type)"
 description: "STDistance (geometry Data Type)"
-title: "STDistance (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STDistance_TSQL"
   - "STDistance (geometry Data Type)"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STDistance (geometry Data Type)"
-ms.assetid: ac815bc7-5342-4cc4-af40-c80a1c4c8b68
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STDistance (geometry Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

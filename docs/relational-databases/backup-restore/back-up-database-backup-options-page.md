@@ -1,18 +1,15 @@
 ---
-title: "Back Up Database (Backup Options Page) | Microsoft Docs"
+title: "Back Up Database (Backup Options Page)"
 description: In SQL Server, use the Backup Options page of the Back Up Database dialog box to view or modify options for backup set, compression, and encryption.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: backup-restore
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.backupdatabase.options.f1"
-  - "swb.backupdatabase.options.f1"
-ms.assetid: df0ddcdb-c94e-472b-b786-469ae8117b93
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: backup-restore
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.backupdatabase.options.f1"
+  - "swb.backupdatabase.options.f1"
 ---
 # Back Up Database (Backup Options Page)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

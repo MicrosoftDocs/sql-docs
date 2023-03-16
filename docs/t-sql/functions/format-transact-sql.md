@@ -120,7 +120,7 @@ Sunday, November 22, 2020   22 November 2020       Sonntag, 22. November 2020  2
   
 ### B. FORMAT with custom formatting strings
 
- The following example shows formatting numeric values by specifying a custom format. The example assumes that the current date is September 27, 2012. For more information about these and other custom formats, see [Custom Numeric Format Strings](/dotnet/standard/base-types/custom-numeric-format-strings).  
+ The following example shows formatting numeric values by specifying a custom format. The example assumes that the current date is November 22, 2020. For more information about these and other custom formats, see [Custom Numeric Format Strings](/dotnet/standard/base-types/custom-numeric-format-strings).  
   
 ```sql  
 DECLARE @d DATE = GETDATE();  

@@ -3,12 +3,10 @@ title: "Transaction Isolation Levels"
 description: "Transaction Isolation Levels"
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: ""
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 helpviewer_keywords:
   - "locking [SQL Server], hints"
   - "isolation levels [SQL Server], metadata access"

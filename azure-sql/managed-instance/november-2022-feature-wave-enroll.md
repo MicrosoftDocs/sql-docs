@@ -1,5 +1,5 @@
 ---
-title: Enroll in November 2022 feature wave 
+title: Enroll in November 2022 feature wave
 titleSuffix: Azure SQL Managed Instance
 description: Learn how to enroll new and existing instances in the November 2022 feature wave.
 author: MashaMSFT
@@ -8,7 +8,6 @@ ms.date: 11/16/2022
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: how-to
-ms.custom:
 ---
 # Enroll in November 2022 feature wave for Azure SQL Managed Instance
 

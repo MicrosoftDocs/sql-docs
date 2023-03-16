@@ -1,20 +1,17 @@
 ---
+title: "Cursor Properties"
 description: "Cursor Properties"
-title: "Cursor Properties | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/03/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, cursors"
   - "cursors [ODBC], cursor behaviors"
   - "ODBC applications, cursors"
   - "ODBC cursors, cursor behaviors"
-ms.assetid: e70960e1-2085-46ed-9d55-aeb8c3532c84
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Cursor Properties

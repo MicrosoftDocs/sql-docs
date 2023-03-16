@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "CLR assembly catalog views"
 dev_langs:
   - "TSQL"
-ms.assetid: b2e71480-92b2-4610-a4ff-dafb121087d9
 ---
 # CLR Assembly Catalog Views (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

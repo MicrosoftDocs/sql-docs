@@ -7,7 +7,6 @@ ms.date: "06/13/2017"
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: how-to
-ms.custom: seo-lt-2019
 ---
 # Evaluate health of the Always On availability group using group policies
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

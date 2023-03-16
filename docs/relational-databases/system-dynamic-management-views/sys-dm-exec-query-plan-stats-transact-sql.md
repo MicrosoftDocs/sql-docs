@@ -3,7 +3,7 @@ title: "sys.dm_exec_query_plan_stats (Transact-SQL)"
 description: sys.dm_exec_query_plan_stats (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 12/14/2022
+ms.date: "02/24/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: conceptual
@@ -91,11 +91,15 @@ Under the following conditions, *no output is returned* from `sys.dm_exec_query_
 - The query plan wasn't cacheable in the first place. For more information, see [Execution Plan Caching and Reuse](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse).
 
 > [!NOTE]  
-> A limitation in the number of nested levels allowed in the **xml** data type, means that `sys.dm_exec_query_plan` cannot return query plans that meet or exceed 128 levels of nested elements. In earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this condition prevented the query plan from returning and generates [error 6335](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-6000-to-6999). In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 and later versions, the `query_plan` column returns NULL.
+> A limitation in the number of nested levels allowed in the **xml** data type, means that `sys.dm_exec_query_plan` cannot return query plans that meet or exceed 128 levels of nested elements. In earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this condition prevented the query plan from returning and generates [error 6335](../errors-events/database-engine-events-and-errors-6000-to-6999.md). In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 and later versions, the `query_plan` column returns NULL.
 
 ## Permissions
 
  Requires `VIEW SERVER STATE` permission on the server.
+
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 
 ## Examples
 

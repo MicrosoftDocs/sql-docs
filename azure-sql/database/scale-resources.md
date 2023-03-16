@@ -42,7 +42,7 @@ The service tier, compute tier, and resource limits for a database, elastic pool
 You can adjust the resources allocated to your database by changing service objective, or scaling, to meet workload demands. This also enables you to only pay for the resources that you need, when you need them. Please refer to the [note](#impact-of-scale-up-or-scale-down-operations) on the potential impact that a scale operation might have on an application.
 
 > [!NOTE]
-> Dynamic scalability is different from autoscale. Autoscale is when a service scales automatically based on criteria, whereas dynamic scalability allows for manual scaling with a minimal downtime. Single databases in Azure SQL Database can be scaled manually, or in the case of the [Serverless tier](serverless-tier-overview.md), set to automatically scale the compute resources. [Elastic pools](elastic-pool-overview.md), which allow databases to share resources in a pool, can currently only be scaled manually.
+> Dynamic scaling is different from autoscaling. Autoscaling is when a service scales automatically based on criteria, whereas dynamic scaling allows for manual scaling with a minimal downtime. Single databases in Azure SQL Database can be scaled manually, or in the case of the [Serverless tier](serverless-tier-overview.md), set to automatically scale the compute resources. [Elastic pools](elastic-pool-overview.md), which allow databases to share resources in a pool, can currently only be scaled manually.
 
 Azure SQL Database offers the ability to dynamically scale your databases:
 

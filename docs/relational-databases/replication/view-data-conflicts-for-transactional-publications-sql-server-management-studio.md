@@ -1,19 +1,17 @@
 ---
 title: "View data conflicts (Transactional) - SSMS"
 description: View data conflicts for Transactional Replication using SQL Server Management Studio (SSMS).
-ms.custom: seo-lt-2019
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/17/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "conflict resolution [SQL Server replication], queued updating subscriptions"
   - "queued updating subscriptions [SQL Server replication]"
   - "viewing conflict information"
-ms.assetid: 9977dd75-b0de-4376-9c13-86d80567d8aa
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # View Data Conflicts for Transactional Publications (SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

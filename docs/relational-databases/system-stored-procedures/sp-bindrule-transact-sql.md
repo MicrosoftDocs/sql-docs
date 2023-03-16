@@ -1,22 +1,19 @@
 ---
+title: "sp_bindrule (Transact-SQL)"
 description: "sp_bindrule (Transact-SQL)"
-title: "sp_bindrule (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/25/2015"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_bindrule_TSQL"
-  - "sp_bindrule"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_bindrule"
-ms.assetid: 2606073e-c52f-498d-a923-5026b9d97e67
 author: markingmyname
 ms.author: maghan
+ms.date: "11/25/2015"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_bindrule_TSQL"
+  - "sp_bindrule"
+helpviewer_keywords:
+  - "sp_bindrule"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_bindrule (Transact-SQL)

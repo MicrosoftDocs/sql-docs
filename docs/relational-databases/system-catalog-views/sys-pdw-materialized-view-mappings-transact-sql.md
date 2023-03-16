@@ -9,7 +9,6 @@ ms.subservice: data-warehouse
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
 monikerRange: "=azure-sqldw-latest"
 ---
 # sys.pdw_materialized_view_mappings (Transact-SQL)  

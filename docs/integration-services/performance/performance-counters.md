@@ -1,21 +1,19 @@
 ---
+title: "Performance Counters"
 description: "Performance Counters"
-title: "Performance Counters | Microsoft Docs"
-ms.custom: supportability
+author: chugugrace
+ms.author: chugu
 ms.date: "08/27/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: supportability
+helpviewer_keywords:
   - "logs [Integration Services], performance counters"
   - "performance counters [Integration Services]"
   - "data flow [Integration Services], performance"
   - "counters [Integration Services]"
   - "data flow engine [Integration Services]"
-ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
-author: chugugrace
-ms.author: chugu
 ---
 # Performance Counters
 

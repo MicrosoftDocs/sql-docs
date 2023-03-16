@@ -8,9 +8,7 @@ ms.date: 05/03/2022
 ms.service: sql-database
 ms.subservice: elastic-jobs
 ms.topic: how-to
-ms.custom:
-  - "seo-lt-2019"
-  - "sqldbrb=1"
+ms.custom: sqldbrb=1
 dev_langs:
   - "TSQL"
 ---

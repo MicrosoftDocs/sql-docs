@@ -1,15 +1,12 @@
 ---
 title: Data Transfer of Table-Valued Parameters
 description: Describe Data Transfer of Table-Valued Parameters
+author: markingmyname
+ms.author: maghan
+ms.date: 07/01/2020
 ms.service: sql
 ms.subservice: native-client
 ms.topic: "reference"
-ms.assetid: 0a2ea462-d613-42b6-870f-c7fa086a6b42
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: ""
-ms.date: 07/01/2020
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

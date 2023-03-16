@@ -1,15 +1,12 @@
 ---
-description: "Connect to a SQL Server or Azure SQL Database"
 title: "Connect to a SQL Server or Azure SQL Database"
-ms.custom: seo-lt-2019
-ms.date: "01/28/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: ssms
-ms.topic: conceptual
-ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
+description: "Connect to a SQL Server or Azure SQL Database"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "01/28/2019"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
 ---
 # Connect to a SQL Server or Azure SQL Database
 

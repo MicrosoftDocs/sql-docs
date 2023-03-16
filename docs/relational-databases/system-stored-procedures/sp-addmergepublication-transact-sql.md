@@ -1,22 +1,19 @@
 ---
+title: "sp_addmergepublication (Transact-SQL)"
 description: "sp_addmergepublication (Transact-SQL)"
-title: "sp_addmergepublication (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_addmergepublication"
-  - "sp_addmergepublication_TSQL"
-helpviewer_keywords: 
-  - "sp_addmergepublication"
-ms.assetid: 28a629a1-7374-4614-9b04-279d290a942a
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_addmergepublication"
+  - "sp_addmergepublication_TSQL"
+helpviewer_keywords:
+  - "sp_addmergepublication"
+dev_langs:
+  - "TSQL"
 ---
 # sp_addmergepublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

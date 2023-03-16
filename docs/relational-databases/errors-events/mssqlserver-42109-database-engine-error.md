@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_42109"
 description: "MSSQLSERVER_42109"
-title: "MSSQLSERVER_42109 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/05/2021"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "42109 (Database Engine error)"
-ms.assetid: 5e5acb07-16ca-4329-8210-cd2bab0c904f
 author: azaricstefan
 ms.author: stefanazaric
+ms.date: "08/05/2021"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "42109 (Database Engine error)"
 ---
 # MSSQLSERVER_42109
 

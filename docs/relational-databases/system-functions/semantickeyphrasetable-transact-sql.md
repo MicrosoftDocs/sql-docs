@@ -1,22 +1,19 @@
 ---
+title: "semantickeyphrasetable (Transact-SQL)"
 description: "semantickeyphrasetable (Transact-SQL)"
-title: "semantickeyphrasetable (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "semantickeyphrasetable"
-  - "semantickeyphrasetable_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "semantickeyphrasetable function"
-ms.assetid: d33b973a-2724-4d4b-aaf7-67675929c392
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "06/10/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "semantickeyphrasetable"
+  - "semantickeyphrasetable_TSQL"
+helpviewer_keywords:
+  - "semantickeyphrasetable function"
+dev_langs:
+  - "TSQL"
 ---
 # semantickeyphrasetable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

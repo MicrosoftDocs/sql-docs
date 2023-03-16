@@ -1,19 +1,16 @@
 ---
-title: "Databases | Microsoft Docs"
+title: "Databases"
 description: "Learn about database schemas, tables, filegroups, logins, and roles. See how you can use the SQL Server Management Studio tool to work with databases."
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data warehouse [SQL Server]"
   - "OLTP databases [SQL Server]"
   - "databases [SQL Server], about databases"
-ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Databases

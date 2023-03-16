@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "data providers [SQLXML], listed"
   - "providers [SQLXML]"
   - "providers [SQLXML], listed"
-ms.assetid: 5001e9fd-555c-4332-a57d-4d29a537454a
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLXML 4.0 Data Access Components - SQLXMLOLEDB Provider

@@ -1,22 +1,19 @@
 ---
+title: "sp_columns_ex (Transact-SQL)"
 description: "sp_columns_ex (Transact-SQL)"
-title: "sp_columns_ex (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_columns_ex"
-  - "sp_columns_ex_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_columns_ex"
-ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_columns_ex"
+  - "sp_columns_ex_TSQL"
+helpviewer_keywords:
+  - "sp_columns_ex"
+dev_langs:
+  - "TSQL"
 ---
 # sp_columns_ex (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

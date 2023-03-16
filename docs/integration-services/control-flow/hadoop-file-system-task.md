@@ -1,17 +1,14 @@
 ---
+title: "Hadoop File System Task"
 description: "Hadoop File System Task"
-title: "Hadoop File System Task | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.ssis.designer.hadoopfiletask.f1"
-ms.assetid: 594aaf5d-7703-4788-897d-fb95aca798c5
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.ssis.designer.hadoopfiletask.f1"
 ---
 # Hadoop File System Task
 

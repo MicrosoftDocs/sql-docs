@@ -1,19 +1,15 @@
 ---
+title: "Improve Access to Trace Data"
 description: "Improve Access to Trace Data"
-title: "Improve Access to Trace Data | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Profiler [SQL Server Profiler], space"
   - "SQL Server Profiler, space"
   - "space [SQL Server], SQL Server Profiler"
-ms.assetid: c260c000-fd53-4831-993f-df6894f3228b
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Improve Access to Trace Data
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

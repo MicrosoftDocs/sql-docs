@@ -9,8 +9,8 @@ ms.service: sql-database
 ms.subservice: performance
 ms.topic: conceptual
 ms.custom:
-  - "fasttrack-edit"
-  - "sqldbrb=1"
+  - fasttrack-edit
+  - sqldbrb=1
 ---
 # Database Advisor performance recommendations for Azure SQL Database
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

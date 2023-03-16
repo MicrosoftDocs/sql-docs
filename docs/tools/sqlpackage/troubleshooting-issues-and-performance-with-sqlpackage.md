@@ -1,14 +1,13 @@
 ---
 title: Troubleshooting issues and performance with SqlPackage
 description: Learn how to troubleshoot with SqlPackage.
-ms.service: sql
-ms.subservice: tools-other
-ms.topic: conceptual
-ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: "dzsquared"
 ms.author: "drskwier"
 ms.reviewer: "maghan"
 ms.date: 7/29/2022
+ms.service: sql
+ms.subservice: tools-other
+ms.topic: conceptual
 ---
 
 # Troubleshooting issues and performance with SqlPackage

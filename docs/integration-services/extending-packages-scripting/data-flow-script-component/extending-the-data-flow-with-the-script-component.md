@@ -1,15 +1,13 @@
 ---
+title: "Extending the Data Flow with the Script Component"
 description: "Extending the Data Flow with the Script Component"
-title: "Extending the Data Flow with the Script Component | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/17/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data flow task [Integration Services], components"
   - "data flow [Integration Services], extending"
   - "debugging [Integration Services], components"
@@ -21,9 +19,8 @@ helpviewer_keywords:
   - "Script component [Integration Services], about Script component"
   - "Script component [Integration Services]"
   - "data flow [Integration Services], components"
-ms.assetid: 072bc4b8-363a-4131-87c3-240338e2fa5c
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
 ---
 # Extending the Data Flow with the Script Component
 

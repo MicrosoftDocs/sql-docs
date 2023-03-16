@@ -1,19 +1,16 @@
 ---
+title: "SQL to C: Numeric"
 description: "SQL to C: Numeric"
-title: "SQL to C: Numeric | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2019"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data conversions from SQL to C types [ODBC], numeric"
   - "numeric data type [ODBC], converting"
   - "converting data from SQL to C types [ODBC], numeric"
-ms.assetid: 76f8b5d5-4bd0-4dcb-a90a-698340e0d36e
-author: David-Engel
-ms.author: v-davidengel
 ---
 # SQL to C: Numeric
 

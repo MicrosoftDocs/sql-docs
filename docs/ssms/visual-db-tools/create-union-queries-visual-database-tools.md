@@ -1,22 +1,18 @@
 ---
-description: "Create UNION Queries (Visual Database Tools)"
 title: Create UNION Queries
-ms.custom: seo-lt-2019
+description: "Create UNION Queries (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "queries [SQL Server], types"
   - "UNION queries"
   - "Select query"
   - "combining query results"
   - "merged SELECT query [SQL Server]"
-ms.assetid: b5aafb1d-e4ed-4922-b790-56abc5ec551a
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Create UNION Queries (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

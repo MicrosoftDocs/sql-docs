@@ -1,14 +1,12 @@
 ---
 title: Connect to SQL Server with strict encryption
 description: This article describes how to connect to SQL Server using the strict encryption type
-ms.service: sql
-ms.subservice: security
-ms.topic: how-to
-ms.custom:
-- event-tier1-build-2022
 author: VanMSFT
 ms.author: vanto
 ms.date: "05/24/2022"
+ms.service: sql
+ms.subservice: security
+ms.topic: how-to
 monikerRange: ">= sql-server-ver16||>= sql-server-linux-ver16"
 ---
 
@@ -26,7 +24,7 @@ In this article, we'll show you how to connect to [!INCLUDE [sssql22-md](../../.
 - ODBC or OLE DB Driver for SQL Server
   - [ODBC Driver for SQL Server](../../../connect/odbc/download-odbc-driver-for-sql-server.md) version 18.1.2.1 or higher
   - [OLE DB Driver for SQL Server](../../../connect/oledb/download-oledb-driver-for-sql-server.md) version 19.2.0 or higher
-- Create and install a TLS certificate in SQL Server. For more information, see [Enable encrypted connections to the Database Engine](/sql/database-engine/configure-windows/configure-sql-server-encryption)
+- Create and install a TLS certificate in SQL Server. For more information, see [Enable encrypted connections to the Database Engine](../../../database-engine/configure-windows/configure-sql-server-encryption.md)
 
 ## Connect to SQL Server using a .NET application
 

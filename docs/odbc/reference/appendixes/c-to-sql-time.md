@@ -1,19 +1,16 @@
 ---
+title: "C to SQL: Time"
 description: "C to SQL: Time"
-title: "C to SQL: Time | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data conversions from C to SQL types [ODBC], time"
   - "time data type [ODBC]"
   - "converting data from c to SQL types [ODBC], time"
-ms.assetid: a8da43c9-d9a5-45e5-bd9a-1dd633db2ee0
-author: David-Engel
-ms.author: v-davidengel
 ---
 # C to SQL: Time
 The identifier for the time ODBC C data type is:  

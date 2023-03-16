@@ -1,17 +1,14 @@
 ---
-title: "SQL Server Login Password Expiration | Microsoft Docs"
-description: Check whether password expiration of each SQL Server login is enabled to help counter a possible attack in SQL Server. 
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Best Practices [Database Engine]"
-ms.assetid: 7e3bf9da-a436-433d-847a-47c30428cad3
+title: "SQL Server Login Password Expiration"
+description: Check whether password expiration of each SQL Server login is enabled to help counter a possible attack in SQL Server.
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Best Practices [Database Engine]"
 ---
 # SQL Server Login Password Expiration
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

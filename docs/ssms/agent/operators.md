@@ -1,12 +1,13 @@
 ---
-description: "Operators"
 title: "Operators"
-ms.custom: seo-lt-2019
+description: "Operators"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "operators (users) [Database Engine]"
   - "fail-safe operator [SQL Server]"
   - "aliases [SQL Server], operators"
@@ -19,10 +20,6 @@ helpviewer_keywords:
   - "operators (users) [Database Engine], defining"
   - "jobs [SQL Server Agent], operators"
   - "alerts [SQL Server], operators"
-ms.assetid: 38e8488f-2669-4cea-b9c3-5f394a663678
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Operators

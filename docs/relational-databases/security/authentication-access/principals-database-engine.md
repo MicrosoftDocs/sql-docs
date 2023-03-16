@@ -1,16 +1,16 @@
 ---
-title: "Principals (Database Engine) | Microsoft Docs"
+title: "Principals (Database Engine)"
 description: Learn about principals in Database Engine, which are entities that can request SQL Server resources. There are SQL Server-level and database-level principals.
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "01/09/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: security
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.roleproperties.selectroll.f1"
   - "sql13.swb.databaseuser.permissions.user.f1--May use common.permissions"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "certificates [SQL Server], principals"
   - "roles [SQL Server], principals"
   - "permissions [SQL Server], principals"
@@ -25,9 +25,6 @@ helpviewer_keywords:
   - "security [SQL Server], principals"
   - "users [SQL Server], principals"
   - "##MS_SQLReplicationSigningCertificate##"
-ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
-author: VanMSFT
-ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Principals (Database Engine)

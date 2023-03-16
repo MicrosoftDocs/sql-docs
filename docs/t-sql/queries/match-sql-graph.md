@@ -1,24 +1,22 @@
 ---
+title: "MATCH (SQL Graph)"
 description: "MATCH (Transact-SQL)"
-title: "MATCH (SQL Graph) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "06/26/2019"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "MATCH"
   - "MATCH_TSQL"
   - "SHORTEST_PATH"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MATCH statement [SQL Server], SQL graph"
   - "SQL graph, MATCH statement"
   - "Shortest Path, shortest_path"
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # MATCH (Transact-SQL)

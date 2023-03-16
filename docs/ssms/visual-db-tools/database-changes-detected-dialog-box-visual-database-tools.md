@@ -1,20 +1,16 @@
 ---
-description: "Database Changes Detected Dialog Box (Visual Database Tools)"
 title: Database Changes Detected Dialog Box
-ms.custom: seo-lt-2019
+description: "Database Changes Detected Dialog Box (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "vdt.dlgbox.schema.databasechangesdetected"
   - "vdtsql.chm:65543"
   - "vdtsql.chm:65554"
-ms.assetid: 91f13086-371f-46a2-9f46-804c1415f3ed
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Database Changes Detected Dialog Box (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

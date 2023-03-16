@@ -1,15 +1,12 @@
 ---
+title: "catalog.rename_customized_logging_level"
 description: "catalog.rename_customized_logging_level"
-title: "catalog.rename_customized_logging_level | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "language-reference"
-ms.assetid: b1a57d5e-3f03-4901-8b2b-bb8b371b595b
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
 ---
 # catalog.rename_customized_logging_level 
 

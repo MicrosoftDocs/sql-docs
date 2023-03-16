@@ -1,15 +1,12 @@
 ---
+title: "Legal Notice (SSMA for Sybase)"
 description: "Legal Notice (SSMA for Sybase)"
-title: "Legal Notice (SSMA for Sybase) | Microsoft Docs"
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: fe086e53-e2a9-4bb8-9534-94369d32ab41
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Legal Notice (SSMA for Sybase)
 This documentation, including sample applications herein, is provided for information purposes only, and this documentation is provided without any warranties, either express or implied. Information in this documentation, including URL and other Internet Web site references, is subject to change without notice. The entire risk of the use or the results of the use of this documentation remains with the user.  

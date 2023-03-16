@@ -1,20 +1,17 @@
 ---
-description: "Errors and Warnings Event Category (Database Engine)"
 title: "Errors and Warnings Event Category"
+description: "Errors and Warnings Event Category (Database Engine)"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 06/03/2020
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: supportability
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Errors and Warnings event category [SQL Server]"
   - "SQL Server event classes, Errors and Warnings event category"
   - "event classes [SQL Server], Errors and Warnings event category"
-ms.assetid: 249c19b5-af68-4433-80f6-337395176641
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
-ms.custom: "seo-lt-2019"
 ---
 # Errors and Warnings Event Category (Database Engine)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

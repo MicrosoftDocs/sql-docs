@@ -1,22 +1,19 @@
 ---
+title: "sp_dbremove (Transact-SQL)"
 description: "sp_dbremove (Transact-SQL)"
-title: "sp_dbremove (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_dbremove"
-  - "sp_dbremove_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_dbremove"
-ms.assetid: a8513f4a-c025-49c8-99c3-4c83cb7f51ed
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_dbremove"
+  - "sp_dbremove_TSQL"
+helpviewer_keywords:
+  - "sp_dbremove"
+dev_langs:
+  - "TSQL"
 ---
 # sp_dbremove (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

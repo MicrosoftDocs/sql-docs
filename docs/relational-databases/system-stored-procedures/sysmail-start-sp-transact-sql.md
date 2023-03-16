@@ -1,22 +1,19 @@
 ---
+title: "sysmail_start_sp (Transact-SQL)"
 description: "sysmail_start_sp (Transact-SQL)"
-title: "sysmail_start_sp (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sysmail_start_sp"
-  - "sysmail_start_sp_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sysmail_start_sp"
-ms.assetid: 25fd7bb6-cfdd-463f-bea8-c6fcb805d3f5
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sysmail_start_sp"
+  - "sysmail_start_sp_TSQL"
+helpviewer_keywords:
+  - "sysmail_start_sp"
+dev_langs:
+  - "TSQL"
 ---
 # sysmail_start_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

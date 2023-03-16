@@ -1,13 +1,11 @@
 ---
-title: "Uninstall Reporting Services | Microsoft Docs"
-description: This article describes how to uninstall Reporting Services, which does not remove content you created or configuration you have modified. 
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: reporting-services
-ms.reviewer: ""
-ms.topic: conceptual
-author: maggiesMSFT 
+title: "Uninstall Reporting Services"
+description: This article describes how to uninstall Reporting Services, which does not remove content you created or configuration you have modified.
+author: maggiesMSFT
 ms.author: maggies
+ms.date: "03/01/2017"
+ms.service: reporting-services
+ms.topic: conceptual
 ---
 # Uninstall Reporting Services
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]

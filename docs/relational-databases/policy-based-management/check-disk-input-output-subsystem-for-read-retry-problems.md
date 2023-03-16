@@ -1,17 +1,14 @@
 ---
 title: "Check disk IO Subsystem for read retry problems - Policy-Based Management"
-description: This rule checks the event log for SQL Server error message 825, which indicates SQL Server was unable to read data from the disk on the first try. 
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Best Practices [Database Engine]"
-ms.assetid: cedf4097-5b73-4964-9935-74a101847019
+description: This rule checks the event log for SQL Server error message 825, which indicates SQL Server was unable to read data from the disk on the first try.
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Best Practices [Database Engine]"
 ---
 # Check Disk Input-Output Subsystem for Read Retry Problems
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

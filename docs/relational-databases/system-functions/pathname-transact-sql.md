@@ -1,22 +1,19 @@
 ---
+title: "PathName (Transact-SQL)"
 description: "PathName (Transact-SQL)"
-title: "PathName (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/02/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "PathName_TSQL"
-  - "PathName"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "PathName FILESTREAM [SQL Server]"
-ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "06/02/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "PathName_TSQL"
+  - "PathName"
+helpviewer_keywords:
+  - "PathName FILESTREAM [SQL Server]"
+dev_langs:
+  - "TSQL"
 ---
 # PathName (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

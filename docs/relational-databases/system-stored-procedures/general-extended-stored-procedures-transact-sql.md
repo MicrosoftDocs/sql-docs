@@ -1,24 +1,21 @@
 ---
+title: "General Extended Stored Procedures (Transact-SQL)"
 description: "General Extended Stored Procedures (Transact-SQL)"
-title: "General Extended Stored Procedures (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/16/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "external routines [SQL Server]"
   - "system stored procedures [SQL Server], extended"
   - "instances of SQL Server, external routines"
   - "extended stored procedures [SQL Server], listed"
   - "stored procedures [SQL Server], extended"
   - "extending SQL Server functionality"
-ms.assetid: 9129f571-d162-42e6-a66b-340fbbf0acd1
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # General Extended Stored Procedures (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

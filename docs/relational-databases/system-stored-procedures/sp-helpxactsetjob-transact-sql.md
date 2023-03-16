@@ -1,22 +1,19 @@
 ---
+title: "sp_helpxactsetjob (Transact-SQL)"
 description: "sp_helpxactsetjob (Transact-SQL)"
-title: "sp_helpxactsetjob (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_helpxactsetjob"
-  - "sp_helpxactsetjob_TSQL"
-helpviewer_keywords: 
-  - "sp_helpxactsetjob"
-ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helpxactsetjob"
+  - "sp_helpxactsetjob_TSQL"
+helpviewer_keywords:
+  - "sp_helpxactsetjob"
+dev_langs:
+  - "TSQL"
 ---
 # sp_helpxactsetjob (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "MSsnapshot_agents system table"
 dev_langs:
   - "TSQL"
-ms.assetid: aeae0a2e-4c21-4c45-be65-1e426fa52bdd
 ---
 # MSsnapshot_agents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

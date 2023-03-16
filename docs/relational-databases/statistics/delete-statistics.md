@@ -1,18 +1,15 @@
 ---
-title: "Delete Statistics | Microsoft Docs"
+title: "Delete Statistics"
 description: Learn how to delete, or drop, statistics from tables and views in SQL Server by using SQL Server Management Studio or Transact-SQL.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "statistics [SQL Server], deleting"
-  - "deleting statistics"
-ms.assetid: eccce0aa-591e-4a1d-bd10-373b022f8749
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+helpviewer_keywords:
+  - "statistics [SQL Server], deleting"
+  - "deleting statistics"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Delete Statistics

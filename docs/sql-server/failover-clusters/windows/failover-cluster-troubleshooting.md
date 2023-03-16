@@ -1,19 +1,16 @@
 ---
-title: "Failover Cluster Troubleshooting | Microsoft Docs"
+title: "Failover Cluster Troubleshooting"
 description: Learn about troubleshooting failover clusters, including recovering from a failure, resolving common problems, and using extended stored procedures/COM objects.
-ms.custom: ""
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "10/21/2015"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: failover-cluster-instance
 ms.topic: how-to
-helpviewer_keywords: 
+helpviewer_keywords:
   - "troublshooting, failover clustering"
   - "failover clustering, troubleshooting"
   - "cluster troubleshooting"
-ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Failover Cluster Troubleshooting
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

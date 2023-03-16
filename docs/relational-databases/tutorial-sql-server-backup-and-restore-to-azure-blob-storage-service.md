@@ -1,16 +1,13 @@
 ---
 title: "Quickstart: Backup & restore to Azure Blob Storage"
 description: "Quickstart: learn how to write backups to and restore from the Azure Blob Storage. Create an Azure Blob Storage container, write a backup, and then restore."
-ms.custom:
-  - seo-dt-2019
-  - intro-quickstart
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "12/21/2020"
 ms.service: sql
 ms.subservice: backup-restore
-ms.reviewer: ""
 ms.topic: quickstart
-author: rwestMSFT
-ms.author: randolphwest
+ms.custom: intro-quickstart
 ---
 
 # Quickstart: SQL backup and restore to Azure Blob Storage

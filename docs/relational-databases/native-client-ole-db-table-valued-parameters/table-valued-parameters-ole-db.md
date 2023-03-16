@@ -1,18 +1,15 @@
 ---
-description: "Table-Valued Parameters  in SQL Server Native Client (OLE DB)"
 title: Table-valued parameters (Native Client OLE DB provider)
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "OLE DB, table-valued parameters"
-  - "table-valued parameters (OLE DB)"
-ms.assetid: 4298b73d-615b-4d28-9843-03b4d5fc489e
+description: "Table-Valued Parameters  in SQL Server Native Client (OLE DB)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "OLE DB, table-valued parameters"
+  - "table-valued parameters (OLE DB)"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Table-Valued Parameters  in SQL Server Native Client (OLE DB)

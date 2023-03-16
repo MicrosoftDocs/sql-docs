@@ -1,15 +1,12 @@
 ---
+title: "How to Work with CDC Services"
 description: "How to Work with CDC Services"
-title: "How to Work with CDC Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: db5c718a-6e7f-48ec-82a3-9d5b131716e5
 author: chugugrace
 ms.author: chugu
+ms.date: "03/20/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # How to Work with CDC Services
 

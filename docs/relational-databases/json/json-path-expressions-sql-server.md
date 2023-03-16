@@ -1,18 +1,15 @@
 ---
-description: "JSON Path Expressions (SQL Server)"
 title: "JSON Path Expressions"
-ms.date: 06/03/2020
-ms.service: sql
-ms.subservice: 
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "JSON, path expressions"
-  - "path expressions (JSON)"
-ms.assetid: 25ea679c-84cc-4977-867c-2cbe9d192553
+description: "JSON Path Expressions (SQL Server)"
 author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
-ms.custom: seo-dt-2019
+ms.date: 06/03/2020
+ms.service: sql
+ms.topic: conceptual
+helpviewer_keywords:
+  - "JSON, path expressions"
+  - "path expressions (JSON)"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # JSON Path Expressions (SQL Server)

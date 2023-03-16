@@ -1,19 +1,16 @@
 ---
+title: "Change Data Capture Functions (Transact-SQL)"
 description: "Change Data Capture Functions (Transact-SQL)"
-title: "Change Data Capture Functions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "change data capture [SQL Server], functions"
-ms.assetid: e5270557-aca3-44ab-8715-daccd498b88d
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+helpviewer_keywords:
+  - "change data capture [SQL Server], functions"
+dev_langs:
+  - "TSQL"
 ---
 # Change Data Capture Functions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

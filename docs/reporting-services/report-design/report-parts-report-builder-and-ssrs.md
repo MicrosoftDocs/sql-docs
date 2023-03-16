@@ -1,17 +1,14 @@
 ---
-title: "Report Parts (Report Builder) | Microsoft Docs"
+title: "Report Parts (Report Builder)"
 description: Create tables, matrices, charts, and images to be published as separate report parts available so you can reuse them in other paginated reports in Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/14/2017
 ms.service: reporting-services
 ms.subservice: report-design
-
-
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "10543"
-ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Report Parts (Report Builder and SSRS)
 

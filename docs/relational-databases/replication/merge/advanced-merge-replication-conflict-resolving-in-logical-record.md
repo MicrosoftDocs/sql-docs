@@ -1,18 +1,16 @@
 ---
 title: "Detect & resolve conflicts in logical records (Merge)"
-description: Learn about the various combinations of conflict detection and conflict resolution approaches possible when using logical records with Merge replication. 
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "logical records [SQL Server replication]"
-  - "conflict resolution [SQL Server replication], merge replication"
-ms.assetid: f2e55040-ca69-4ccf-97d1-c362e1633f26
+description: Learn about the various combinations of conflict detection and conflict resolution approaches possible when using logical records with Merge replication.
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "logical records [SQL Server replication]"
+  - "conflict resolution [SQL Server replication], merge replication"
 ---
 # Advanced Merge Replication Conflict - Resolving in Logical Record
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

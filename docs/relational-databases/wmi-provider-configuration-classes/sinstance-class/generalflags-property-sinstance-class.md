@@ -1,22 +1,17 @@
 ---
-description: "GeneralFlags Property (SInstance Class)"
 title: "GeneralFlags Property (SInstance)"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "GeneralFlags Property (SInstance Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "GeneralFlags property"
-ms.assetid: 36faf960-e49b-4866-bce0-f8bbf50fd225
+description: "GeneralFlags Property (SInstance Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "GeneralFlags property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "GeneralFlags Property (SInstance Class)"
+apitype: "MOFDef"
 ---
 # GeneralFlags Property (SInstance Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

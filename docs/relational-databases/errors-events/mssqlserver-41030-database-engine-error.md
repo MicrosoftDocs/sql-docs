@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_41030"
 description: "MSSQLSERVER_41030"
-title: "MSSQLSERVER_41030 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "41030 (Database Engine error)"
-ms.assetid: c85341ae-0fbf-42ae-9275-4cfe678238f0
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "41030 (Database Engine error)"
 ---
 # MSSQLSERVER_41030
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

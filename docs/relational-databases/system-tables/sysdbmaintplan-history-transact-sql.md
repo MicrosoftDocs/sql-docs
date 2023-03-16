@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "sysdbmaintplan_history system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 02d36f08-ac93-4463-bb59-284c5cd6ed04
 ---
 # sysdbmaintplan_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,13 +1,13 @@
 ---
-title: "Manage the suspect_pages Table (SQL Server) | Microsoft Docs"
+title: "Manage the suspect_pages Table (SQL Server)"
 description: Learn how to manage the suspect_pages table in SQL Server by using SQL Server Management Studio or Transact-SQL. Pages that produce certain errors are suspect.
-ms.custom: ""
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "03/15/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "824 (Database Engine error)"
   - "restoring pages [SQL Server]"
   - "pages [SQL Server], suspect"
@@ -15,9 +15,6 @@ helpviewer_keywords:
   - "suspect_pages system table"
   - "suspect pages [SQL Server]"
   - "restoring [SQL Server], pages"
-ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Manage the suspect_pages Table (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

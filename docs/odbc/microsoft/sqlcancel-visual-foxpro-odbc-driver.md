@@ -1,17 +1,14 @@
 ---
+title: "SQLCancel (Visual FoxPro ODBC Driver)"
 description: "SQLCancel (Visual FoxPro ODBC Driver)"
-title: "SQLCancel (Visual FoxPro ODBC Driver) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQLCancel function [ODBC], Visual FoxPro ODBC Driver"
-ms.assetid: 4f7baa1d-37ef-4051-ae13-7dc38033af16
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQLCancel function [ODBC], Visual FoxPro ODBC Driver"
 ---
 # SQLCancel (Visual FoxPro ODBC Driver)
 > [!NOTE]  

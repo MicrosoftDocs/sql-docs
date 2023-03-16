@@ -1,18 +1,15 @@
 ---
-description: "Table-Valued Parameters (SQL Server Native Client)"
 title: "Table-Valued Parameters"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "SQL Server Native Client, table-valued parameters"
-  - "table-valued parameters (SQL Server Native Client)"
-ms.assetid: 5ee6bdcd-0309-4a20-b5c2-0e6b6839f34f
+description: "Table-Valued Parameters (SQL Server Native Client)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "SQL Server Native Client, table-valued parameters"
+  - "table-valued parameters (SQL Server Native Client)"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Table-Valued Parameters (SQL Server Native Client)

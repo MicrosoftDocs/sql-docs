@@ -1,17 +1,14 @@
 ---
+title: "Configure Dialog Security for Event Notifications"
 description: "Configure Dialog Security for Event Notifications"
-title: "Configure Dialog Security for Event Notifications | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "event notifications [SQL Server], security"
-ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/09/2017"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "event notifications [SQL Server], security"
 ---
 # Configure Dialog Security for Event Notifications
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

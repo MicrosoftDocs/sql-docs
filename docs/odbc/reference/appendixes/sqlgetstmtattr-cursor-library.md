@@ -1,17 +1,14 @@
 ---
+title: "SQLGetStmtAttr (Cursor Library)"
 description: "SQLGetStmtAttr (Cursor Library)"
-title: "SQLGetStmtAttr (Cursor Library) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-helpviewer_keywords: 
-  - "SQLGetStmtAttr function [ODBC], Cursor Library"
-ms.assetid: 6c34e1ef-4273-4afb-a7d3-f9017ab69c5e
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "SQLGetStmtAttr function [ODBC], Cursor Library"
 ---
 # SQLGetStmtAttr (Cursor Library)
 > [!IMPORTANT]  

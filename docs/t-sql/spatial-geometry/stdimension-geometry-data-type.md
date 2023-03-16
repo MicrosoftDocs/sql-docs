@@ -1,22 +1,19 @@
 ---
+title: "STDimension (geometry Data Type)"
 description: "STDimension (geometry Data Type)"
-title: "STDimension (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "08/03/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STDimension_TSQL"
   - "STDimension (geometry Data Type)"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STDimension (geometry Data Type)"
-ms.assetid: 4fbd27dd-317b-4916-a8ae-4df1b8a6f27c
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STDimension (geometry Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

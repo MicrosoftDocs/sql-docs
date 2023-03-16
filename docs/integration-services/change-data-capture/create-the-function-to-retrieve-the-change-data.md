@@ -1,16 +1,15 @@
 ---
-description: "Create the Function to Retrieve the Change Data"
 title: "Create the Function to Retrieve the Change Data"
-ms.custom: ""
-ms.date: "07/26/2021"
-ms.service: sql
-ms.reviewer: "wiassaf"
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "incremental load [Integration Services],creating function"
+description: "Create the Function to Retrieve the Change Data"
 author: chugugrace
 ms.author: chugu
+ms.reviewer: "wiassaf"
+ms.date: "07/26/2021"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "incremental load [Integration Services],creating function"
 ---
 # Create the function to retrieve the change data
 

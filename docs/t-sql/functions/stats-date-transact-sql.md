@@ -3,12 +3,10 @@ title: "STATS_DATE (Transact-SQL)"
 description: "STATS_DATE (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
 ms.date: "12/18/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "STATS_DATE_TSQL"
   - "STATS_DATE"

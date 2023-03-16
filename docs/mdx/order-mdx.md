@@ -1,14 +1,14 @@
 ---
+title: "Order (MDX)"
 description: "Order (MDX)"
-title: "Order (MDX) | Microsoft Docs"
+author: minewiskan
+ms.author: owend
+ms.reviewer: owend
 ms.date: 02/17/2022
 ms.service: sql
 ms.subservice: analysis-services
-ms.custom: mdx
 ms.topic: reference
-ms.author: owend
-ms.reviewer: owend
-author: minewiskan
+ms.custom: mdx
 ---
 # Order (MDX)
 
@@ -46,7 +46,7 @@ Order(Set_Expression, String_Expression
   
 ## Examples  
  The following example returns, from the **Adventure Works** cube, the number of reseller orders for all Calendar Quarters from the Calendar hierarchy on the Date dimension.The **Order** function reorders the set for the ROWS axis. The **Order** function orders the set by `[Reseller Order Count]` in descending hierarchical order as determined by the `[Calendar]` hierarchy.  
- 
+  
 ```
 SELECT
   Measures.[Reseller Order Count] ON COLUMNS,
@@ -59,7 +59,7 @@ FROM [Adventure Works]
 ```
   
  Notice how in this example, when the **DESC** flag is changed to **BDESC**, the hierarchy is broken and the list of Calendar Quarters is returned with no regard for the hierarchy:  
- 
+  
 ```
 SELECT
   Measures.[Reseller Order Count] ON COLUMNS,

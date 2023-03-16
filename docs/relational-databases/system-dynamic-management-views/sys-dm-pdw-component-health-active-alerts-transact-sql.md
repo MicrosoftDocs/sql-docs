@@ -7,10 +7,8 @@ ms.date: "03/07/2017"
 ms.service: sql
 ms.subservice: data-warehouse
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 dev_langs:
   - "TSQL"
-ms.assetid: c53e4a36-b841-424a-b8e2-255b1878deb6
 monikerRange: ">=aps-pdw-2016"
 ---
 # sys.dm_pdw_component_health_active_alerts (Transact-SQL)

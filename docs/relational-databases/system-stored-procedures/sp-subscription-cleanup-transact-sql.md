@@ -1,22 +1,19 @@
 ---
+title: "sp_subscription_cleanup (Transact-SQL)"
 description: "sp_subscription_cleanup (Transact-SQL)"
-title: "sp_subscription_cleanup (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_subscription_cleanup_TSQL"
-  - "sp_subscription_cleanup"
-helpviewer_keywords: 
-  - "sp_subscription_cleanup"
-ms.assetid: bdc8aaa0-ff2d-40c2-84b2-4ba513ced279
 author: markingmyname
 ms.author: maghan
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_subscription_cleanup_TSQL"
+  - "sp_subscription_cleanup"
+helpviewer_keywords:
+  - "sp_subscription_cleanup"
+dev_langs:
+  - "TSQL"
 ---
 # sp_subscription_cleanup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

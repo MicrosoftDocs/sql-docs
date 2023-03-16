@@ -1,24 +1,19 @@
 ---
+title: "SQLGetDescField Function"
 description: "SQLGetDescField Function"
-title: "SQLGetDescField Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLGetDescField"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLGetDescField"
-helpviewer_keywords: 
-  - "SQLGetDescField function [ODBC]"
-ms.assetid: f09ff660-1e4a-4370-be85-90d4da0487d3
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLGetDescField"
+helpviewer_keywords:
+  - "SQLGetDescField function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLGetDescField"
+apitype: "dllExport"
 ---
 # SQLGetDescField Function
 **Conformance**  

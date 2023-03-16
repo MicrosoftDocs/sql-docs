@@ -1,19 +1,16 @@
 ---
+title: "Retrieving Bookmarks"
 description: "Retrieving Bookmarks"
-title: "Retrieving Bookmarks | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "retrieving bookmarks [ODBC]"
   - "result sets [ODBC], bookmarks"
   - "bookmarks [ODBC]"
-ms.assetid: a34c8f09-b786-4835-a44b-b7294c970aff
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Retrieving Bookmarks
 If the application will use bookmarks, it must set the SQL_ATTR_USE_BOOKMARKS statement attribute to SQL_UB_VARIABLE before preparing or executing the statement. This is necessary because building and maintaining bookmarks can be an expensive operation, so bookmarks should be enabled only when an application can make good use of them.  

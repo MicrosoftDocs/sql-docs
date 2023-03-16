@@ -1,11 +1,14 @@
 ---
+title: "Use the Full-Text Indexing Wizard"
 description: "Use the Full-Text Indexing Wizard"
-title: "Use the Full-Text Indexing Wizard | Microsoft Docs"
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray
 ms.date: "08/19/2016"
 ms.service: sql
 ms.subservice: search
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.fulltextindexingwizard.welcome.f1"
   - "sql13.swb.fulltextindexingwizard.selectorcreatepopschedules.f1"
   - "sql13.swb.fulltextindexingwizard.progress.f1"
@@ -15,13 +18,9 @@ f1_keywords:
   - "sql13.swb.fulltextindexingwizard.selectanindex.f1"
   - "sql13.swb.fulltextindexingwizard.summary.f1"
   - "sql13.swb.fulltextindexingwizard.selecttablecolumns.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Full-Text Indexing Wizard"
   - "full-text search [SQL Server], Full-Text Indexing Wizard"
-ms.assetid: 3e9d9605-6525-4781-9168-fdaa06db3459
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use the Full-Text Indexing Wizard

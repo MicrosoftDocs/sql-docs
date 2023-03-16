@@ -1,24 +1,19 @@
 ---
+title: "SQLFreeConnect Function"
 description: "SQLFreeConnect Function"
-title: "SQLFreeConnect Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLFreeConnect"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLFreeConnect"
-helpviewer_keywords: 
-  - "SQLFreeConnect function [ODBC]"
-ms.assetid: 0d22eaeb-3c75-47fb-af9a-6f7397e61b9c
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLFreeConnect"
+helpviewer_keywords:
+  - "SQLFreeConnect function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLFreeConnect"
+apitype: "dllExport"
 ---
 # SQLFreeConnect Function
 **Conformance**  

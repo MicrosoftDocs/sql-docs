@@ -1,21 +1,17 @@
 ---
-description: "Navigate in the Query and View Designer (Visual Database Tools)"
 title: Navigate in the Query and View Designer
-ms.custom: seo-lt-2019
+description: "Navigate in the Query and View Designer (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "View Designer, navigating"
   - "shortcuts [SQL Server]"
   - "Query Designer [SQL Server], navigating"
   - "keyboard shortcuts [Visual Database Tools]"
-ms.assetid: 1c65acef-6dfa-463a-bf37-5a5335fe3865
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Navigate in the Query and View Designer (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

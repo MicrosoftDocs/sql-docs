@@ -7,7 +7,6 @@ ms.date: 10/05/2021
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "change tracking [SQL Server], AlwaysOn Availability Groups"
   - "change tracking [SQL Server], Always On Availability Groups"

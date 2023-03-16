@@ -1,17 +1,14 @@
 ---
+title: "Conversion Settings (MySQLToSQL)"
 description: "Conversion Settings (MySQLToSQL)"
-title: "Conversion Settings (MySQLToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: f551cf6e-1575-4206-9cca-975b5b43a6b8
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
-    - "ssma.mysql.preferencesdetailcontrol.f1"
+f1_keywords:
+  - "ssma.mysql.preferencesdetailcontrol.f1"
 ---
 # Conversion Settings (MySQLToSQL)
 The **'Settings'** tab allows the user to set node level settings. The tab will be available at the following Metabase nodes:  

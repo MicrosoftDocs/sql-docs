@@ -1,13 +1,12 @@
 ---
+title: "Deploy a Database By Using a DAC"
 description: "Deploy a Database By Using a DAC"
-title: "Deploy a Database By Using a DAC | Microsoft Docs"
-ms.custom:
-  - intro-deployment
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
 ms.topic: conceptual
+ms.custom: intro-deployment
 f1_keywords:
   - "sql13.swb.dbdeployment.settings.f1"
   - "sql13.swb.dbdeployment.progress.f1"
@@ -17,9 +16,6 @@ f1_keywords:
 helpviewer_keywords:
   - "deploy database wizard"
   - "database deploy [SQL Server]"
-ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # Deploy a Database By Using a DAC
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

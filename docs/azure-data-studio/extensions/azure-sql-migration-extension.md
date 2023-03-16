@@ -59,22 +59,22 @@ The Azure SQL migration extension supports assessment and generates Azure recomm
 
 - SQL Server on Azure Virtual Machines
 - Azure SQL Managed Instance
-- Azure SQL Database (Preview)
+- Azure SQL Database
 
 ### Migration modes
 
 The following migration modes are supported for the corresponding Azure SQL targets.
 
 - **Online** - The source SQL Server database is available for reading and writing activity, while database backups are continuously restored on target Azure SQL. Application downtime is limited to the duration of the cutover at the end of migration.
-- **Offline** - The source database can't be used for writing activity while backup files are restored on the target Azure SQL database (Preview). Application downtime persists from the start until the completion of the migration process.
+- **Offline** - The source database can't be used for writing activity while backup files are restored on the target Azure SQL database. Application downtime persists from the start until the completion of the migration process.
 
 ### Support matrix
 
 | Azure SQL target | Migration mode |
-| --- | --- |
-Azure SQL Managed Instance| [Online](/azure/dms/tutorial-sql-server-managed-instance-online-ads) / [Offline](/azure/dms/tutorial-sql-server-managed-instance-offline-ads)
-SQL Server on Azure Virtual Machine|[Online](/azure/dms/tutorial-sql-server-to-virtual-machine-online-ads) / [Offline](/azure/dms/tutorial-sql-server-to-virtual-machine-offline-ads)
-Azure SQL Database (Preview)| [Offline](/azure/dms/tutorial-sql-server-azure-sql-database-offline-ads)
+| ---------------- | -------------- |
+Azure SQL Managed Instance | [Online](/azure/dms/tutorial-sql-server-managed-instance-online-ads) / [Offline](/azure/dms/tutorial-sql-server-managed-instance-offline-ads) |
+SQL Server on Azure Virtual Machine|[Online](/azure/dms/tutorial-sql-server-to-virtual-machine-online-ads) / [Offline](/azure/dms/tutorial-sql-server-to-virtual-machine-offline-ads) |
+Azure SQL Database  | [Offline](/azure/dms/tutorial-sql-server-azure-sql-database-offline-ads) |
 
 > [!TIP]  
 > For information on pre-requisites, features and migration workflow, see [Migration using Azure Data Studio](/azure/dms/migration-using-azure-data-studio)
@@ -83,7 +83,7 @@ Azure SQL Database (Preview)| [Offline](/azure/dms/tutorial-sql-server-azure-sql
 
 You can raise a support request to get Microsoft support assistance if you encounter issues or errors with your database migrations using the Azure SQL Migration extension.
 
-Select the **New support request** button in the upper section of the extension. It will automatically take you to the Azure portal, where you can fill in the details and then submit a support request.
+Select the **New support request** button in the upper section of the extension. It automatically takes you to the Azure portal, where you can fill in the details and then submit a support request.
 :::image type="content" source="media/azure-sql-migration-extension/extension-support.png" alt-text="Get help from Microsoft support for the extension.":::
 
 You can submit ideas/suggestions for improvement, and other feedback, including bugs, in the [Azure Community forum — Azure Database Migration Service](https://feedback.azure.com/d365community/forum/2dd7eb75-ef24-ec11-b6e6-000d3a4f0da0).

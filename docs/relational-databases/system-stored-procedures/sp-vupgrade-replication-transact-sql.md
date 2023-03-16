@@ -1,22 +1,19 @@
 ---
+title: "sp_vupgrade_replication (Transact-SQL)"
 description: "sp_vupgrade_replication (Transact-SQL)"
-title: "sp_vupgrade_replication (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_vupgrade_replication_TSQL"
-  - "sp_vupgrade_replication"
-helpviewer_keywords: 
-  - "sp_vupgrade_replication"
-ms.assetid: d2c0ed66-07d1-4adc-82e5-a654376879bc
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_vupgrade_replication_TSQL"
+  - "sp_vupgrade_replication"
+helpviewer_keywords:
+  - "sp_vupgrade_replication"
+dev_langs:
+  - "TSQL"
 ---
 # sp_vupgrade_replication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

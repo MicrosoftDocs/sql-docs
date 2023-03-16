@@ -1,21 +1,19 @@
 ---
+title: "sysarticlecolumns (System View) (Transact-SQL)"
 description: "sysarticlecolumns (System View) (Transact-SQL)"
-title: "sysarticlecolumns (System View) (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-f1_keywords: 
-  - "sysarticlecolumns"
-  - "sysarticlecolumns_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sysarticlecolumns view"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sysarticlecolumns"
+  - "sysarticlecolumns_TSQL"
+helpviewer_keywords:
+  - "sysarticlecolumns view"
+dev_langs:
+  - "TSQL"
 ---
 
 # sysarticlecolumns (System View) (Transact-SQL)

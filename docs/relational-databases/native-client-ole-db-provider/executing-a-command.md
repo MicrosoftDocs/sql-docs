@@ -1,21 +1,18 @@
 ---
+title: "Executing a command (Native Client OLE DB provider)"
 description: "Executing a command (Native Client OLE DB provider)"
-title: "Executing a command (Native Client OLE DB provider) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/17/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "commands [SQL Server Native Client]"
   - "OLE DB, executing commands"
   - "sessions [SQL Server Native Client]"
   - "OLE DB extensions for XML"
   - "SQL Server Native Client OLE DB provider, command execution"
-ms.assetid: bb0b3cbf-fe45-46ba-b2ec-c5a39e3c7081
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing a SQL Server Native Client Command

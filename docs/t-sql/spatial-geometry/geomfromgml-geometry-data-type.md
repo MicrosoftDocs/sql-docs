@@ -1,21 +1,19 @@
 ---
 title: GeomFromGml (geometry Data Type)
 description: "GeomFromGml (geometry Data Type)"
+author: MladjoA
+ms.author: mlandzic
+ms.date: "08/03/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "GeomFromGML_TSQL"
   - "GeomFromGML"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "GeomFromGML (geometry Data Type)"
-author: MladjoA
-ms.author: mlandzic 
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "08/03/2017"
+dev_langs:
+  - "TSQL"
 ---
 
 # GeomFromGml (geometry Data Type)

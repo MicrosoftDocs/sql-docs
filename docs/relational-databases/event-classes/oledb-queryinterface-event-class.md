@@ -1,17 +1,14 @@
 ---
+title: "OLEDB QueryInterface Event Class"
 description: "OLEDB QueryInterface Event Class"
-title: "OLEDB QueryInterface Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "OLEDB QueryInterface event class"
-ms.assetid: f54c9ef9-3add-497c-a09b-42c4ce3c623d
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "OLEDB QueryInterface event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # OLEDB QueryInterface Event Class

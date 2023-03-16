@@ -1,21 +1,19 @@
 ---
+title: "IBM DB2 Subscribers"
 description: "IBM DB2 Subscribers"
-title: "IBM DB2 Subscribers | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/02/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "non-SQL Server Subscribers, IBM DB2"
   - "data types [SQL Server replication], non-SQL Server Subscribers"
   - "IBM DB2 Subscribers"
   - "mapping data types [SQL Server replication]"
   - "heterogeneous Subscribers, IBM DB2"
-ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # IBM DB2 Subscribers
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

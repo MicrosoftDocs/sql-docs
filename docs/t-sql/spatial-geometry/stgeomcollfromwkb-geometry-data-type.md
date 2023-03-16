@@ -1,22 +1,19 @@
 ---
+title: "STGeomCollFromWKB (geometry Data Type)"
 description: "STGeomCollFromWKB (geometry Data Type)"
-title: "STGeomCollFromWKB (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "08/03/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STGeomCollFromWKB (geometry Data Type)"
   - "STGeomCollFromWKB_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STGeomCollFromWKB (geometry Data Type)"
-ms.assetid: 6c55032c-7f5e-4181-8e67-c0265032db63
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STGeomCollFromWKB (geometry Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

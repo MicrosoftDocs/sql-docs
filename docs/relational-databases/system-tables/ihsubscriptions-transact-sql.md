@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "IHsubscriptions system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 9ec21119-35f1-4e39-abaa-b2c790c485b1
 ---
 # IHsubscriptions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

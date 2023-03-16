@@ -24,7 +24,7 @@ The following Microsoft JDBC Drivers are supported, until the indicated End of S
 
 |Driver Name|Driver Package Version|Applicable JAR(s)|End of Mainstream Support|
 |-|-|-|-|
-|Microsoft JDBC Driver 12.2 for SQL Server|11.2|mssql-jdbc-12.2.0.jre11.jar<br> mssql-jdbc-12.2.0.jre8.jar|January 31, 2028|
+|Microsoft JDBC Driver 12.2 for SQL Server|12.2|mssql-jdbc-12.2.0.jre11.jar<br> mssql-jdbc-12.2.0.jre8.jar|January 31, 2028|
 |Microsoft JDBC Driver 11.2 for SQL Server|11.2|mssql-jdbc-11.2.0.jre18.jar<br> mssql-jdbc-11.2.0.jre17.jar<br> mssql-jdbc-11.2.0.jre11.jar<br> mssql-jdbc-11.2.0.jre8.jar|August 4, 2027|
 |Microsoft JDBC Driver 10.2 for SQL Server|10.2|mssql-jdbc-10.2.0.jre17.jar<br> mssql-jdbc-10.2.0.jre11.jar<br> mssql-jdbc-10.2.0.jre8.jar|January 31, 2027|
 |Microsoft JDBC Driver 9.4 for SQL Server|9.4|mssql-jdbc-9.4.1.jre16.jar<br> mssql-jdbc-9.4.1.jre11.jar<br> mssql-jdbc-9.4.1.jre8.jar|July 30, 2026|

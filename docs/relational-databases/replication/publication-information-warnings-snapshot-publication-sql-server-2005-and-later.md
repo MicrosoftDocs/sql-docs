@@ -1,18 +1,15 @@
 ---
-description: "Publication Information, Warnings (Snapshot Publication, SQL Server 2005 and Later)"
 title: "Warnings (Snapshot - Replication Monitor)"
-decription: Describes the 'Warnings' tab for a Snapshot Publication in the Replication Monitor found in SQL Server Management Studio (SSMS).
-ms.custom: seo-lt-2019
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.monitor.publicationinfo.warningsandagents.snapshot.f1"
-ms.assetid: 7aa2eb52-b6b7-4dd3-8483-8ef00d9f0435
+description: "Publication Information, Warnings (Snapshot Publication, SQL Server 2005 and Later)"
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.monitor.publicationinfo.warningsandagents.snapshot.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Publication Information, Warnings (Snapshot Publication, SQL Server 2005 and Later)

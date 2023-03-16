@@ -1,24 +1,22 @@
 ---
 title: "Publication Properties - Dialog box"
-description: Describes the pages found within the 'Publication Properties" Dialog Box in SQL Server Management Studio (SSMS).
-ms.custom: seo-lt-2019
+description: Describes the pages found within the 'Publication Properties Dialog Box in SQL Server Management Studio (SSMS).
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: updatefrequency5
+f1_keywords:
   - "sql13.rep.newpubwizard.pubproperties.agentsecurity.f1"
   - "sql13.rep.newpubwizard.pubproperties.filterrows.f1"
   - "sql13.rep.newpubwizard.pubproperties.internetsynchronization.f1"
   - "sql13.rep.newpubwizard.pubproperties.general.f1"
   - "sql13.rep.newpubwizard.pubproperties.publicationaccesslist.f1"
   - "sql13.rep.newpubwizard.pubproperties.snapshotformat.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Publication Properties dialog box"
-ms.assetid: 66e845e9-1308-4288-9110-ad2f22f1fc58
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # SQL Server Replication 'Publication Properties'  dialog box

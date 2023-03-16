@@ -1,22 +1,19 @@
 ---
+title: "sp_grantlogin (Transact-SQL)"
 description: "sp_grantlogin (Transact-SQL)"
-title: "sp_grantlogin (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_grantlogin_TSQL"
   - "sp_grantlogin"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_grantlogin"
-ms.assetid: 0c873d99-c3bf-4eb1-948b-a46cb235ccd4
-ms.author: vanto
-author: VanMSFT
+dev_langs:
+  - "TSQL"
 ---
 # sp_grantlogin (Transact-SQL)
 

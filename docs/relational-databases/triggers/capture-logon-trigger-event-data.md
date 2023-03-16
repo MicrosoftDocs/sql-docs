@@ -1,15 +1,11 @@
 ---
+title: "Capture Logon Trigger Event Data"
 description: "Capture Logon Trigger Event Data"
-title: "Capture Logon Trigger Event Data | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice:
-ms.topic: conceptual
-ms.assetid: e05b1ab4-c10b-402a-9591-f6ec1e3db8c0
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "03/06/2017"
+ms.service: sql
+ms.topic: conceptual
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Capture Logon Trigger Event Data

@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_2511"
 description: "MSSQLSERVER_2511"
-title: "MSSQLSERVER_2511 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "2511 (Database Engine error)"
-ms.assetid: 9a00c0ed-eb4b-4fae-8016-192396006c37
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "2511 (Database Engine error)"
 ---
 # MSSQLSERVER_2511
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

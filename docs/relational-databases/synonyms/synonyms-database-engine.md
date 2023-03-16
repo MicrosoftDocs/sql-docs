@@ -1,19 +1,16 @@
 ---
+title: "Synonyms (Database Engine)"
 description: "Synonyms (Database Engine)"
-title: "Synonyms (Database Engine) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: t-sql
-ms.topic: "conceptual"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "synonyms [SQL Server], about synonyms"
-ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 author: markingmyname
 ms.author: maghan
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: t-sql
+ms.topic: "conceptual"
+helpviewer_keywords:
+  - "synonyms [SQL Server], about synonyms"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Synonyms (Database Engine)

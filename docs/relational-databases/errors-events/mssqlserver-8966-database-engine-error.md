@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_8966"
 description: "MSSQLSERVER_8966"
-title: "MSSQLSERVER_8966 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "8966 (Database Engine error)"
-ms.assetid: 6b1150fd-9dfd-4df9-8f08-8eca237667db
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "8966 (Database Engine error)"
 ---
 # MSSQLSERVER_8966
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

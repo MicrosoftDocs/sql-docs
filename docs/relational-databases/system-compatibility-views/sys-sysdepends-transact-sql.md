@@ -1,25 +1,22 @@
 ---
+title: "sys.sysdepends (Transact-SQL)"
 description: "sys.sysdepends (Transact-SQL)"
-title: "sys.sysdepends (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.sysdepends_TSQL"
   - "sysdepends"
   - "sysdepends_TSQL"
   - "sys.sysdepends"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sysdepends system table"
   - "sys.sysdepends compatibility view"
-ms.assetid: f9c182cb-386f-4e72-859f-9f1115b389f9
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.sysdepends (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

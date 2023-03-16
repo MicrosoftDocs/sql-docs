@@ -1,22 +1,17 @@
 ---
+title: "SetUnattendedExecutionAccount Method (WMI MSReportServer_ConfigurationSetting)"
 description: "SetUnattendedExecutionAccount Method (WMI MSReportServer_ConfigurationSetting)"
-title: "SetUnattendedExecutionAccount Method (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/01/2017
 ms.service: reporting-services
 ms.subservice: wmi-provider-library-reference
-
-
 ms.topic: conceptual
-apiname: 
-  - "SetUnattendedExecutionAccount (WMI MSReportServer_ConfigurationSetting Class)"
-apilocation: 
-  - "reportingservices.mof"
-apitype: MOFDef
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SetUnattendedExecutionAccount method"
-ms.assetid: 1ba6be6f-b05c-4ea0-af98-cd0780290b70
-author: maggiesMSFT
-ms.author: maggies
+apilocation: "reportingservices.mof"
+apiname: "SetUnattendedExecutionAccount (WMI MSReportServer_ConfigurationSetting Class)"
+apitype: MOFDef
 ---
 # ConfigurationSetting Method - SetUnattendedExecutionAccount
   Specifies the account used to execute reports unattended.  

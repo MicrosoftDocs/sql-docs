@@ -10,8 +10,8 @@ ms.service: sql-database
 ms.subservice: connect
 ms.topic: quickstart
 ms.custom:
-  - "sqldbrb=2"
-  - "mode-other"
+  - sqldbrb=2
+  - mode-other
 keywords:
   - "connect to sql database"
   - "sql server management studio"

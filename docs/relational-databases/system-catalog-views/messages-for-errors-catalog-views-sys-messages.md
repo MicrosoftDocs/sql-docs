@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "error numbers [SQL Server]"
 dev_langs:
   - "TSQL"
-ms.assetid: 8c16ecdf-68f4-4a2a-b594-086e3344e58a
 ---
 # Messages (for errors) Catalog Views - sys.messages
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

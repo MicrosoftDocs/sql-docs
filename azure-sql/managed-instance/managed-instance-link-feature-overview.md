@@ -28,7 +28,7 @@ The link supports single node SQL Server instances without existing availability
 
 The link feature currently offers the following functionality:
 
-- **One-way replication (SQL Server versions 2017 to 2019)**: Use the link feature to replicate data one way from a SQL Server instance to your managed instance. Although you can manually fail over to your managed instance if there's a disaster, doing so breaks the link, and failing back isn't supported. 
+- **One-way replication (SQL Server versions 2016 and 2019)**: Use the link feature to replicate data one way from a SQL Server instance to your managed instance. Although you can manually fail over to your managed instance if there's a disaster, doing so breaks the link, and failing back isn't supported. 
 - **Disaster recovery (SQL Server 2022)**: Use the link feature to replicate data from a SQL Server 2022 instance to your managed instance, manually fail over to your managed instance during a disaster, and fail back to the SQL Server instance after you've mitigated the disaster.  
 
     This feature is currently in limited public preview. [You must sign up for limited public preview](https://aka.ms/mi-link-dr-preview-signup) so that the product group can configure your environment for the preview. 
@@ -143,7 +143,7 @@ Data replication limitations include:
 
 - Only user databases can be replicated. Replication of system databases isn't supported.
 - The solution doesn't replicate server-level objects, agent jobs, or user logins from SQL Server to SQL Managed Instance.
-- For SQL Server versions 2016 to 2019, replication of user databases from SQL Server instances to SQL Managed Instance deployments is one way. User databases from SQL Managed Instance deployments can't be replicated back to SQL Server instances. Two-way replication with failback to a SQL Server instance is available only for SQL Server 2022.
+- For SQL Server versions 2016 and 2019, replication of user databases from SQL Server instances to SQL Managed Instance deployments is one way. User databases from SQL Managed Instance deployments can't be replicated back to SQL Server instances. Two-way replication with failback to a SQL Server instance is available only for SQL Server 2022.
 
 Configuration limitations include: 
 
@@ -155,7 +155,7 @@ Configuration limitations include:
 
   - Managed Instance link authentication between SQL Server and SQL Managed Instance is certificate-based and available only through an exchange of certificates. Using Windows authentication to establish the link between the SQL Server instance and the managed instance isn't supported.
 
-  - Only a private endpoint (VPN/virtual network) is supported to establish a link with SQL Managed Instance. You can't use a public endpoint to establish the link with the managed instance.
+  - Only [VNet-local endpoint](connectivity-architecture-overview.md#vnet-local-endpoint) is supported to establish a link with SQL Managed Instance. You can't use public endpoint or private endpoints to establish the link with the managed instance.
 
 Feature limitations include:
 

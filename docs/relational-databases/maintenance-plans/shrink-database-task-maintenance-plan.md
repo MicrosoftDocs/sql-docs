@@ -13,7 +13,6 @@ f1_keywords:
   - "sql13.swb.maint.shrink.f1"
 helpviewer_keywords:
   - "Shrink Database Task dialog box"
-ms.assetid: a9874cac-cded-4145-9c38-8aafd267dbee
 ---
 # Shrink Database Task (Maintenance Plan)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

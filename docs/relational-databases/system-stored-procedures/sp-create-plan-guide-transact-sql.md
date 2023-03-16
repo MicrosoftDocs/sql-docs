@@ -1,21 +1,19 @@
 ---
-description: "sp_create_plan_guide (Transact-SQL)"
 title: "sp_create_plan_guide (Transact-SQL)"
-ms.custom: ""
-ms.date: "06/22/2021"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_create_plan_guide"
-  - "sp_create_plan_guide_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_create_plan_guide"
+description: "sp_create_plan_guide (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
+ms.date: "06/22/2021"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_create_plan_guide"
+  - "sp_create_plan_guide_TSQL"
+helpviewer_keywords:
+  - "sp_create_plan_guide"
+dev_langs:
+  - "TSQL"
 ---
 # sp_create_plan_guide (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

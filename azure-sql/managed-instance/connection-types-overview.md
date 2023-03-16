@@ -2,8 +2,8 @@
 title: Connection types
 titleSuffix: Azure SQL Managed Instance
 description: Learn about Azure SQL Managed Instance connection types
-author: srdan-bozovic-msft
-ms.author: srbozovi
+author: zoran-rilak-msft
+ms.author: zoranrilak
 ms.reviewer: vanto
 ms.date: 12/01/2021
 ms.service: sql-managed-instance
@@ -19,10 +19,12 @@ This article explains how clients connect to Azure SQL Managed Instance dependin
 
 ## Connection types
 
-Azure SQL Managed Instance supports the following two connection types:
+Azure SQL Managed Instance's VNet-local endpoint supports the following two connection types:
 
 - **Redirect (recommended):** Clients establish connections directly to the node hosting the database. To enable connectivity using redirect, you must open firewalls and Network Security Groups (NSG) to allow access on ports 1433, and 11000-11999. Packets go directly to the database, and hence there are latency and throughput performance improvements using redirect over proxy. Impact of planned maintenance events of gateway component is also minimized with redirect connection type compared to proxy since connections, once established, have no dependency on gateway. 
 - **Proxy (default):** In this mode, all connections are using a proxy gateway component. To enable connectivity, only port 1433 for private networks and port 3342 for public connection need to be opened. Choosing this mode can result in higher latency and lower throughput, depending on nature of the workload. Also, planned maintenance events of gateway component break all live connections in proxy mode. We highly recommend the redirect connection policy over the proxy connection policy for the lowest latency, highest throughput, and minimized impact of planned maintenance.
+
+Both public and private endpoints to Azure SQL Managed Instance always operate in proxy mode regardless of the set connection type.
 
 ## Redirect connection type
 
@@ -31,7 +33,7 @@ In the redirect connection type, after the TCP session is established to the SQL
 ![Diagram shows an on-premises network with redirect-find-db connected to a gateway in an Azure virtual network and a redirect-query connected to a database primary node in the virtual network.](./media/connection-types-overview/redirect.png)
 
 > [!IMPORTANT]
-> The redirect connection type currently works only for the VNet-local endpoint. Regardless of the connection type setting, connections coming through the public endpoint would be through a proxy.
+> The redirect connection type currently works only for the VNet-local endpoint. Regardless of the connection type setting, connections coming through the public or private endpoints are handled using the proxy connection type.
 
 ## Proxy connection type
 
@@ -42,7 +44,7 @@ In the proxy connection type, the TCP session is established using the gateway a
 ## Changing Connection Type
 
 - **Using the Portal:**
-To change the Connection Type using the Azure portal,open the Virtual Network page and use the **Connection type** setting to change the connection type and save the changes.
+To change the Connection Type using the Azure portal, open the Virtual Network page and use the **Connection type** setting to change the connection type and save the changes.
 
 - **Script to change connection type settings using PowerShell:**
 

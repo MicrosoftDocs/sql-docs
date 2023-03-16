@@ -1,20 +1,17 @@
 ---
 title: "sqlagent90 Application"
 description: The sqlagent90 application starts SQL Server Agent from the command prompt. Use it when diagnosing SQL Server Agent or when directed by your support provider.
-ms.custom: seo-lt-2019
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: tools-other
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "starting SQL Server Agent"
   - "sqlagent90 application"
   - "SQL Server Agent, starting"
   - "command prompt utilities [SQL Server], sqlagent90"
-ms.assetid: e8b80e8d-d0c9-4500-a868-0ce08233da08
-author: markingmyname
-ms.author: maghan
 ---
 # sqlagent90 Application
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]

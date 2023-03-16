@@ -1,17 +1,15 @@
 ---
 title: "SQL Server, Locks object"
-description: Learn about the SQLServer:Locks object, which provides information about SQL Server locks on individual resource types. 
-ms.custom: ""
-ms.date: "07/13/2021"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Locks object"
-  - "SQLServer:Locks"
+description: "Learn about the SQLServer:Locks object, which provides information about SQL Server locks on individual resource types."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "07/13/2021"
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Locks object"
+  - "SQLServer:Locks"
 ---
 # SQL Server, Locks object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

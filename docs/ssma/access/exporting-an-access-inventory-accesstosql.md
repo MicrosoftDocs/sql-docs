@@ -1,13 +1,13 @@
 ---
+title: "Exporting an Access Inventory (AccessToSQL)"
 description: "Exporting an Access Inventory (AccessToSQL)"
-title: "Exporting an Access Inventory (AccessToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Access databases"
   - "Access databases, exporting metadata"
   - "exporting"
@@ -16,9 +16,6 @@ helpviewer_keywords:
   - "exporting, querying exported metadata"
   - "inventories of Access databases"
   - "querying exported metadata"
-ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Exporting an Access Inventory (AccessToSQL)
 If you have multiple Access databases and you are not sure which ones to migrate into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can export an inventory of all Access databases in a project. You can then review and query the inventory metadata to determine which databases and objects within those databases to migrate. This inventory lets you quickly find answers to questions, such as the following:  

@@ -1,14 +1,14 @@
 ---
 title: Azure Synapse Pathway Report Generation
 description: Azure Synapse Pathway provides comprehensive reporting on scripts translated.
-author: WilliamDAssafMSFT 
-ms.author: wiassaf 
-ms.topic: tutorial
-ms.service: sql
-ms.subservice: tools-other 
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 09/09/2021
+ms.service: sql
+ms.subservice: tools-other
+ms.topic: tutorial
+ms.custom: template-tutorial
 monikerRange: "=azure-sqldw-latest"
-ms.custom: template-tutorial 
 ---
 
 # Report Generation for Azure Synapse Pathway

@@ -1,13 +1,13 @@
 ---
+title: "Command Line Options in SSMA Console (MySQLToSQL)"
 description: "Command Line Options in SSMA Console (MySQLToSQL)"
-title: "Command Line Options in SSMA Console (MySQLToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Command line options, help option"
   - "Command line options, log file option"
   - "Command line options, project environment folder option"
@@ -17,9 +17,6 @@ helpviewer_keywords:
   - "Command line options, server connection file option"
   - "Command line options, variable value file option"
   - "Command line options, XML output option"
-ms.assetid: a2310b10-68ad-4285-a08b-c8694cf84416
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Command Line Options in SSMA Console (MySQLToSQL)
 Microsoft provides you with a robust set command line options to execute and control SSMA activities. The ensuing sections detail the same.  

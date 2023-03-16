@@ -9,9 +9,8 @@ ms.service: sql-database
 ms.subservice: elastic-pools
 ms.topic: reference
 ms.custom:
-  - "sqldbrb=1"
-  - "references_regions"
-
+  - sqldbrb=1
+  - references_regions
 ---
 # Resource limits for elastic pools using the vCore purchasing model
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

@@ -1,22 +1,19 @@
 ---
+title: "sp_bindsession (Transact-SQL)"
 description: "sp_bindsession (Transact-SQL)"
-title: "sp_bindsession (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_bindsession"
-  - "sp_bindsession_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_bindsession"
-ms.assetid: 1436fe21-ad00-4a98-aca1-1451a5e571d2
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_bindsession"
+  - "sp_bindsession_TSQL"
+helpviewer_keywords:
+  - "sp_bindsession"
+dev_langs:
+  - "TSQL"
 ---
 # sp_bindsession (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

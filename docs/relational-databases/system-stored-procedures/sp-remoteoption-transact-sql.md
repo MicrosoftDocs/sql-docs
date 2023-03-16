@@ -1,22 +1,19 @@
 ---
+title: "sp_remoteoption (Transact-SQL)"
 description: "sp_remoteoption (Transact-SQL)"
-title: "sp_remoteoption (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_remoteoption_TSQL"
-  - "sp_remoteoption"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_remoteoption"
-ms.assetid: c9a7309b-eab7-4192-a414-e282581af4e5
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_remoteoption_TSQL"
+  - "sp_remoteoption"
+helpviewer_keywords:
+  - "sp_remoteoption"
+dev_langs:
+  - "TSQL"
 ---
 # sp_remoteoption (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

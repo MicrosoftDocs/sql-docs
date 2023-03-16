@@ -2,14 +2,13 @@
 title: Modify controller and client services accounts
 titleSuffix: SQL Server Distributed Replay
 description: Learn how to modify the Distributed Replay controller and client service accounts, and then reapply the access control lists.
-ms.service: sql
-ms.subservice: distributed-replay
-ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: mikeray
-ms.custom: seo-lt-2019
 ms.date: 06/20/2022
+ms.service: sql
+ms.subservice: distributed-replay
+ms.topic: conceptual
 monikerRange: ">= sql-server-2016 || >= sql-server-linux-2017"
 ---
 

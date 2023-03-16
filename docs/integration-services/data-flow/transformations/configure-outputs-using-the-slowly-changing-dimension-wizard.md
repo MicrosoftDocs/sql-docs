@@ -1,19 +1,16 @@
 ---
+title: "Configure Outputs Using the Slowly Changing Dimension Wizard"
 description: "Configure Outputs Using the Slowly Changing Dimension Wizard"
-title: "Configure Outputs Using the Slowly Changing Dimension Wizard | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Slowly Changing Dimension transformation"
   - "slowly changing dimensions"
   - "Slowly Changing Dimension Wizard"
-ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
-author: chugugrace
-ms.author: chugu
 ---
 # Configure Outputs Using the Slowly Changing Dimension Wizard
 

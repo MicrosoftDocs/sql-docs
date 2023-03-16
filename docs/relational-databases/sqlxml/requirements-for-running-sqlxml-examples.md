@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "sample applications [SQLXML]"
   - "SQLXML, samples"
   - "examples [SQLXML], requirements"
-ms.assetid: acfee2eb-cf35-4377-9fde-82ad1d938011
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Requirements for Running SQLXML Examples

@@ -1,24 +1,19 @@
 ---
+title: "SQLSetDescField Function"
 description: "SQLSetDescField Function"
-title: "SQLSetDescField Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLSetDescField"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLSetDescField"
-helpviewer_keywords: 
-  - "SQLSetDescField function [ODBC]"
-ms.assetid: 8c544388-fe9d-4f94-a0ac-fa0b9c9c88a5
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2019"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLSetDescField"
+helpviewer_keywords:
+  - "SQLSetDescField function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLSetDescField"
+apitype: "dllExport"
 ---
 # SQLSetDescField Function
 

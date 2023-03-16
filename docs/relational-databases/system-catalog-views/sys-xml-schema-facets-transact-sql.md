@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.xml_schema_facets catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 4402dde9-1877-4872-8550-140dc2a177d2
 ---
 # sys.xml_schema_facets (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

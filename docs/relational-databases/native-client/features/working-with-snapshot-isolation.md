@@ -1,13 +1,13 @@
 ---
+title: "Working with Snapshot Isolation"
 description: "Working with Snapshot Isolation in SQL Server Native Client"
-title: "Working with Snapshot Isolation | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data access [SQL Server Native Client], snapshot isolation"
   - "SQLNCLI, snapshot isolation"
   - "isolation levels [SQL Server], snapshot"
@@ -20,9 +20,6 @@ helpviewer_keywords:
   - "SQLGetInfo function"
   - "concurrency [SQL Server Native Client]"
   - "SQLSetConnectAttr function"
-ms.assetid: 39e87eb1-677e-45dd-bc61-83a4025a7756
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Working with Snapshot Isolation in SQL Server Native Client

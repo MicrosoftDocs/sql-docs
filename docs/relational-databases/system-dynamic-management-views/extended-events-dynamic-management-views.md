@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "dynamic management objects (SQL Server)"
 dev_langs:
   - "TSQL"
-ms.assetid: 6d337c2f-71e9-4e0c-8877-9780baa7699d
 ---
 # Extended Events Dynamic Management Views
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

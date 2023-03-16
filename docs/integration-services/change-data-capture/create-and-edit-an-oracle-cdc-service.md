@@ -1,16 +1,14 @@
 ---
 title: Create and Edit an Oracle CDC Service
 description: "Create and Edit an Oracle CDC Service"
+author: chugugrace
+ms.author: chugu
+ms.date: "03/20/2017"
 ms.service: sql
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "createSrv"
-author: chugugrace
-ms.author: chugu
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "03/20/2017"
 ---
 
 # Create and Edit an Oracle CDC Service

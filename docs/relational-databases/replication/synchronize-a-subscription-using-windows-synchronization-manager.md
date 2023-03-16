@@ -1,18 +1,16 @@
 ---
 title: "Synchronize subscription (Windows Synchronization Manager)"
-description: Learn how to synchronize subscriptions using the Windows Synchronization Manager. 
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "synchronization [SQL Server replication], Windows Synchronization Manager"
-  - "Windows Synchronization Manager"
-ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
+description: Learn how to synchronize subscriptions using the Windows Synchronization Manager.
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "synchronization [SQL Server replication], Windows Synchronization Manager"
+  - "Windows Synchronization Manager"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Synchronize a Subscription Using Windows Synchronization Manager

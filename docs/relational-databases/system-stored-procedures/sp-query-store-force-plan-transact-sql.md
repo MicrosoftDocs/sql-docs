@@ -7,7 +7,6 @@ ms.date: 10/14/2022
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "SYS.SP_QUERY_STORE_FORCE_PLAN"
   - "SP_QUERY_STORE_FORCE_PLAN"

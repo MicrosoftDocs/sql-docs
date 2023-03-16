@@ -1,15 +1,12 @@
 ---
 title: "Report Server Properties (Log On Tab)"
 description: Learn about the Log On tab of the Report Server Properties dialog box in SQL Server. See how to use it to specify an account and to start or stop the service.
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: tools-other
-ms.topic: conceptual
-ms.assetid: f54be594-f290-4db2-bf18-fd2521728a4a
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: tools-other
+ms.topic: conceptual
 monikerRange: ">=sql-server-2016"
 ---
 # Report Server Properties (Log On Tab)

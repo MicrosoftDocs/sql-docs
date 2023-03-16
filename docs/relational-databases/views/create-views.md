@@ -1,17 +1,14 @@
 ---
+title: "Create Views"
 description: "Create Views"
-title: "Create Views | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: table-view-index
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "views [SQL Server], creating"
-ms.assetid: 0b7bd2a1-544c-42ba-8e7b-4822f34d7b64
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: table-view-index
+ms.topic: conceptual
+helpviewer_keywords:
+  - "views [SQL Server], creating"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Views

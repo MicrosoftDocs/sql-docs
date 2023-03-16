@@ -7,10 +7,8 @@ ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "updategrams [SQLXML], about updategrams"
-ms.assetid: b5231859-14e2-4276-bc17-db2817b6f235
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Guidelines and Limitations of XML Updategrams (SQLXML 4.0)

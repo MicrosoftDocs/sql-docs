@@ -3,7 +3,7 @@ title: "sys.dm_db_wait_stats (Azure SQL Database)"
 description: sys.dm_db_wait_stats (Azure SQL Database)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "03/12/2021"
+ms.date: "02/27/2023"
 ms.service: sql-database
 ms.topic: "reference"
 f1_keywords:
@@ -54,7 +54,7 @@ monikerRange: "=azuresqldb-current"
 > These statistics are not persisted after SQL Database failover events, and all data is cumulative since the last time the statistics were reset or the database engine started. Use the `sqlserver_start_time` column in [sys.dm_os_sys_info](sys-dm-os-sys-info-transact-sql.md) to find the last database engine startup time.   
   
 ## Permissions  
- Requires VIEW DATABASE STATE permission on the server.  
+ Requires VIEW DATABASE STATE permission on the database.  
   
 ##  <a name="WaitTypes"></a> Types of Waits  
  Resource waits  

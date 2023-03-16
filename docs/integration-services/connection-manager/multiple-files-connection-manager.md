@@ -1,22 +1,19 @@
 ---
+title: "Multiple Files Connection Manager"
 description: "Multiple Files Connection Manager"
-title: "Multiple Files Connection Manager | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/03/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "folders [Integration Services], connections"
   - "files [Integration Services], connections"
   - "Multiple Files connection manager"
   - "connection managers [Integration Services], Multiple Files"
   - "connections [Integration Services], files"
   - "multiple file connections"
-ms.assetid: 10bdc56e-c5cd-4ddb-b2f7-375fe57fe8b2
-author: chugugrace
-ms.author: chugu
 ---
 # Multiple Files Connection Manager
 

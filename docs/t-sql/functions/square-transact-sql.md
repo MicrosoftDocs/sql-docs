@@ -3,12 +3,10 @@ title: "SQUARE (Transact-SQL)"
 description: "SQUARE (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
 ms.date: "03/03/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "SQUARE"
   - "SQUARE_TSQL"

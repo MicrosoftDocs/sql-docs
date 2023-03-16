@@ -1,19 +1,16 @@
 ---
-description: "System Functions by category for Transact-SQL"
 title: "System Functions by category"
-ms.date: "11/02/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "system stored functions [SQL Server]"
-ms.assetid: 8ad860e7-e054-4186-80a2-03977e42531d
+description: "System Functions by category for Transact-SQL"
 author: rwestMSFT
 ms.author: randolphwest
-ms.custom: seo-dt-2019
+ms.date: "11/02/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+helpviewer_keywords:
+  - "system stored functions [SQL Server]"
+dev_langs:
+  - "TSQL"
 ---
 # System Functions by category for Transact-SQL
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

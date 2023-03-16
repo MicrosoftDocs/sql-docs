@@ -1,19 +1,15 @@
 ---
+title: "Get Information About DDL Triggers"
 description: "Get Information About DDL Triggers"
-title: "Get Information About DDL Triggers | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/06/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice:
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "metadata [SQL Server], triggers"
   - "status information [SQL Server], DDL triggers"
   - "DDL triggers, metadata"
-ms.assetid: 462becea-292a-4b9e-bb98-533e89733911
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Get Information About DDL Triggers

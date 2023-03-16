@@ -1,19 +1,16 @@
 ---
+title: "Add Analysis Services Connection Manager Dialog Box UI Reference"
 description: "Add Analysis Services Connection Manager Dialog Box UI Reference"
-title: "Add Analysis Services Connection Manager Dialog Box UI Reference | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.designer.olapconnection.f1"
-helpviewer_keywords: 
-  - "Add Analysis Services Connection Manager"
-ms.assetid: 9d5e1bb1-adda-4985-80f6-56e14d5d295c
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.designer.olapconnection.f1"
+helpviewer_keywords:
+  - "Add Analysis Services Connection Manager"
 ---
 # Add Analysis Services Connection Manager Dialog Box UI Reference
 

@@ -1,17 +1,15 @@
 ---
+title: "Objects Created on the Oracle Publisher"
 description: "Objects Created on the Oracle Publisher"
-title: "Objects Created on the Oracle Publisher | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Oracle publishing [SQL Server replication], objects created"
-ms.assetid: c58a124b-4da7-46e2-9292-af8ce9e6664b
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "Oracle publishing [SQL Server replication], objects created"
 ---
 # Objects Created on the Oracle Publisher
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

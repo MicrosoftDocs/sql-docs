@@ -1,17 +1,14 @@
 ---
 title: "MSSQLSERVER error 823  | mssqlserver_823"
-description: A description and some common solutions to Microsoft SQL Server Error 823 (mssqlserver_823), which is a severe system-level error condition that threatens database integrity and must be addressed immediately. 
-ms.custom: ""
-ms.date: "01/27/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "823 (Database Engine error)"
-ms.assetid: 0d9fce3c-3772-46ce-a7a3-4f4988dc6cae
+description: A description and some common solutions to Microsoft SQL Server Error 823 (mssqlserver_823), which is a severe system-level error condition that threatens database integrity and must be addressed immediately.
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "01/27/2019"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "823 (Database Engine error)"
 ---
 # MSSQLSERVER error 823
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

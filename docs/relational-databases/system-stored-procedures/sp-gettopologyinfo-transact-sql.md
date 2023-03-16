@@ -1,22 +1,19 @@
 ---
+title: "sp_gettopologyinfo (Transact-SQL)"
 description: "sp_gettopologyinfo (Transact-SQL)"
-title: "sp_gettopologyinfo (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_gettopologyinfo_TSQL"
-  - "sp_gettopologyinfo"
-helpviewer_keywords: 
-  - "sp_gettopologyinfo"
-ms.assetid: 8bbe8a06-a4aa-4219-8402-12db6a4682c6
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_gettopologyinfo_TSQL"
+  - "sp_gettopologyinfo"
+helpviewer_keywords:
+  - "sp_gettopologyinfo"
+dev_langs:
+  - "TSQL"
 ---
 # sp_gettopologyinfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

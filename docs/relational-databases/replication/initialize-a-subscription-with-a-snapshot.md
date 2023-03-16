@@ -1,18 +1,16 @@
 ---
-description: "Initialize a Subscription with a Snapshot for a New Publication"
 title: Initialize subscription with snapshot
-ms.custom:
+description: "Initialize a Subscription with a Snapshot for a New Publication"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: 03/23/2020
 ms.service: sql
-ms.reviewer:
 ms.subservice: replication
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "snapshots [SQL Server replication], initializing subscriptions"
   - "initializing subscriptions [SQL Server replication], snapshots"
-ms.assetid: 77a9ade2-cdc0-4ae9-a02d-6e29d7c2ada0
-author: MashaMSFT
-ms.author: mathoma
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Initialize a Subscription with a Snapshot for a New Publication

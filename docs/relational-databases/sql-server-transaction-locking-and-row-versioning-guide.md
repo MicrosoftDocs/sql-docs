@@ -617,7 +617,7 @@ WHERE name = 'Bob';
   
 #### Delete operation, with optimized locking
 
- When deleting a value within a transaction, the low-level locks are taken and released incrementally, and not held for the duration of the transaction. For example, given this DELETE statement:  
+ When deleting a value within a transaction, the row and page locks are taken and released incrementally, and not held for the duration of the transaction. For example, given this DELETE statement:  
   
 ```sql  
 DELETE mytable  
@@ -640,7 +640,7 @@ INSERT mytable VALUES ('Dan');
 
 #### Insert operation, with optimized locking
 
- When inserting a value within a transaction, the range the value falls into does not have to be locked for the duration of the transaction performing the insert operation. Taking a shared TID lock on the inserted key value until the end of the transaction is sufficient to maintain serializability. For example, given this INSERT statement:  
+ When inserting a value within a transaction, the range the value falls into does not have to be locked for the duration of the transaction performing the insert operation. Taking an exclusive TID lock on the inserted key value until the end of the transaction is sufficient to maintain serializability. For example, given this INSERT statement:  
   
 ```sql  
 INSERT mytable VALUES ('Dan');  
@@ -692,9 +692,9 @@ No attempt is made to escalate locks on `TableB` because there was no active ref
 
 ## Lock escalation with optimized locking
 
-Optimized locking helps to reduce lock memory as very few locks are held for large transactions. As the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] acquires low-level locks, lock escalation can occur similarly, but far less frequently. Optimized locking typically succeeds in avoiding lock escalations, lowing the number of locks and amount of lock memory necessary. 
+Optimized locking helps to reduce lock memory as very few locks are held for the duration of the transaction. As the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] acquires row and page locks, lock escalation can occur similarly, but far less frequently. Optimized locking typically succeeds in avoiding lock escalations, lowering the number of locks and amount of lock memory necessary. 
 
-When optimized locking is enabled, the database engine releases low-level locks as soon as the write is complete. No low-level locks are held for the duration of the transaction, except for a single Transaction ID (TID) lock.
+When optimized locking is enabled, and in the READ_COMMITTED_SNAPSHOT isolation level, the database engine releases row and page locks as soon as the write is complete.  No row and page locks are held for the duration of the transaction, except for a single Transaction ID (TID) lock. This reduces the likelihood of lock escalation.
 
 ### Lock escalation thresholds
 
@@ -750,9 +750,10 @@ If the SELECT statement acquires enough locks to trigger lock escalation and the
 
 In most cases, the [!INCLUDE[ssDE-md](../includes/ssde-md.md)] delivers the best performance when operating with its default settings for locking and lock escalation.
 
-- Enable optimized locking where available. [Optimized locking](performance/optimized-locking.md) offers an improved transaction locking mechanism that reduces lock memory consumption and blocking for concurrent transactions. **Lock escalation is far less likely to ever occur when optimized locking is enabled.**
+- Take advantage of optimized locking where available. [Optimized locking](performance/optimized-locking.md) offers an improved transaction locking mechanism that reduces lock memory consumption and blocking for concurrent transactions. **Lock escalation is far less likely to ever occur when optimized locking is enabled.**
+    - Currently, optimized locking is available in limited regions for Azure SQL Database only. 
     - Avoid using [table hints with optimized locking](performance/optimized-locking.md#avoid-locking-hints). Table hints may reducing the effectiveness of optimized locking. 
-    - Enable [READ_COMMITTED_SNAPSHOT](../t-sql/statements/alter-database-transact-sql-set-options.md#read_committed_snapshot--on--off-) in the database for the most benefit from optimized locking.
+    - Enable [READ_COMMITTED_SNAPSHOT](../t-sql/statements/alter-database-transact-sql-set-options.md#read_committed_snapshot--on--off-) in the database for the most benefit from optimized locking. This is the default isolation level in Azure SQL Database.
     - Optimized locking requires [accelerated database recovery (ADR)](/azure/azure-sql/accelerated-database-recovery) to be enabled on the database.
 
 If an instance of the [!INCLUDE[ssDE-md](../includes/ssde-md.md)] generates a lot of locks and is seeing frequent lock escalations, consider reducing the amount of locking with the following strategies:
@@ -765,7 +766,7 @@ If an instance of the [!INCLUDE[ssDE-md](../includes/ssde-md.md)] generates a lo
     > [!NOTE]
     > Changing the isolation level affects all tables on the instance of the [!INCLUDE[ssDE-md](../includes/ssde-md.md)].
 
-- When optimized locking is not enabled, use the PAGLOCK or TABLOCK table hints to have the Database Engine use page, heap, or index locks instead of of locks. Using this option, however, increases the problems of users blocking other users attempting to access the same data and should not be used in systems with more than a few concurrent users.
+- Use the PAGLOCK or TABLOCK table hints to have the Database Engine use page, heap, or index locks instead of of locks. Using this option, however, increases the problems of users blocking other users attempting to access the same data and should not be used in systems with more than a few concurrent users.
 
 - When optimized locking is not enabled, for partitioned tables, use the LOCK_ESCALATION option of [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md) to escalate locks to the HoBT level instead of the table or to disable lock escalation.
 
@@ -1039,7 +1040,7 @@ Transactions running under snapshot isolation take an optimistic approach to dat
 
 #### Modifying data with optimized locking
 
-With optimized locking enabled, readers don't take any locks, and writers take short duration low-level locks, instead of locks that expire at the end of the transaction. 
+With optimized locking enabled and in the READ_COMMITTED_SNAPSHOT isolation level, readers don't take any locks, and writers take short duration low-level locks, instead of locks that expire at the end of the transaction. 
 
 The READ_COMMITTED_SNAPSHOT isolation level is recommended for most efficiency with optimized locking. When using stricter isolation levels like repeatable read or serializable, the Database Engine is forced to hold row and page locks until the end of the transaction, for both readers and writers, resulting in increased blocking and lock memory.
 
@@ -1054,7 +1055,7 @@ With RCSI enabled, and when using read committed isolation level, writers qualif
 |The database option that must be set to ON to enable the required support.|READ_COMMITTED_SNAPSHOT|ALLOW_SNAPSHOT_ISOLATION|  
 |How a session requests the specific type of row versioning.|Use the default read-committed isolation level, or run the SET TRANSACTION ISOLATION LEVEL statement to specify the READ COMMITTED isolation level. This can be done after the transaction starts.|Requires the execution of SET TRANSACTION ISOLATION LEVEL to specify the SNAPSHOT isolation level before the start of the transaction.|  
 |The version of data read by statements.|All data that was committed before the start of each statement.|All data that was committed before the start of each transaction.|  
-|How updates are handled.|Reverts from row versions to actual data to select rows to update and uses update locks on the data rows selected. Acquires exclusive locks on actual data rows to be modified. No update conflict detection.|Uses row versions to select rows to update. Tries to acquire an exclusive lock on the actual data row to be modified, and if the data has been modified by another transaction, an update conflict occurs and the snapshot transaction is terminated.|  
+|TODO: How updates are handled.|Reverts from row versions to actual data to select rows to update and uses update locks on the data rows selected. Acquires exclusive locks on actual data rows to be modified. No update conflict detection.|Uses row versions to select rows to update. Tries to acquire an exclusive lock on the actual data row to be modified, and if the data has been modified by another transaction, an update conflict occurs and the snapshot transaction is terminated.|  
 |Update conflict detection without optimized locking.|None.|Integrated support. Cannot be disabled.|  
 |Update conflict detection with optimized locking.|Automatic retry upon update conflict.|Integrated support. Cannot be disabled.|  
   
@@ -1642,7 +1643,7 @@ In [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], the `LOCK_ESCALAT
 
 ### Customize locking for an index
 
-When optimized locking is enabled, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] does not keep low-level locks for the duration of a transaction. There is no need to customize locking strategies for an index or to disable low-level locks.
+When optimized locking is enabled and in the READ_COMMITTED_SNAPSHOT isolation level, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] does not keep low-level locks for the duration of a transaction. There is no need to customize locking strategies for an index or to disable low-level locks. It is not recommended to use UPDLOCK, XLOCK, READCOMMITTEDLOCK hints, which force locks to be held. PAGLOCK and ROWLOCK hints are fine to use with optimized locking.
 
 When optimized locking is not enabled, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] uses a dynamic locking strategy that automatically chooses the best locking granularity for queries in most cases. We recommend that you do not override the default locking levels, which have page and row locking on, unless table or index access patterns are well understood and consistent, and there is a resource contention problem to solve. Overriding a locking level can significantly impede concurrent access to a table or index. For example, specifying only table-level locks on a large table that users access heavily can cause bottlenecks because users must wait for the table-level lock to be released before accessing the table.  
 

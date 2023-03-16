@@ -36,7 +36,7 @@ ADO.NET is the core data access technology for .NET languages. Use the Microsoft
 * Step 4: Connect resiliently to SQL with ADO.NET
    * [Microsoft.Data.SqlClient with a password](step-4-connect-resiliently-sql-ado-net.md)
    * [Microsoft.Data.SqlClient without a password](/azure/azure-sql/database/azure-sql-dotnet-quickstart)
-   * [Entity Framework without a password](/azure-sql/database/azure-sql-dotnet-entity-framework-core-quickstart)
+   * [Entity Framework without a password](/azure/azure-sql/database/azure-sql-dotnet-entity-framework-core-quickstart)
 
 ::: moniker-end
 

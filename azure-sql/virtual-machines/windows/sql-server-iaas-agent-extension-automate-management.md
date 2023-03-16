@@ -67,11 +67,11 @@ The SQL Server IaaS Agent extension allows for integration with the Azure portal
 
 Prior to March 2023, the SQL Iaas Agent extension relied on management modes to define the security model, and unlock feature benefits. In March 2023, the extension architecture was updated to remove management modes entirely, instead relying on the principle of least privilege to give customers control over how they want to use the extension on a feature-by-feature basis. 
 
-Starting in March 2023, when you first register with the extension, binaries are saved to your virtual machine to provide you with limited functionality such as license management. Once you enable any feature that relies on the agent, the binaries are used to install the SQL IaaS agent to your virtual machine, and [permissions](#permissions-models) are assigned to the SQL IaaS agent service as needed by each feature that you enable. 
+Starting in March 2023, when you first register with the extension, binaries are saved to your virtual machine to provide you with basic functionality such as license management. Once you enable any feature that relies on the agent, the binaries are used to install the SQL IaaS agent to your virtual machine, and [permissions](#permissions-models) are assigned to the SQL IaaS Agent service as needed by each feature that you enable. 
 
 ## Feature benefits 
 
-The SQL Server IaaS Agent extension unlocks a number of feature benefits for managing your SQL Server VM, letting you pick and choose which benefit suits your business needs. When you first register with the extension, the functionality is limited to a few features that don't rely on the SQL IaaS agent. Once you enable a feature that requires it, the agent is installed to the SQL Server VM. 
+The SQL Server IaaS Agent extension unlocks a number of feature benefits for managing your SQL Server VM, letting you pick and choose which benefit suits your business needs. When you first register with the extension, the functionality is limited to a few features that don't rely on the SQL IaaS Agent. Once you enable a feature that requires it, the agent is installed to the SQL Server VM. 
 
 The following table details the benefits available through the SQL IaaS Agent extension, and whether or not the agent is required: 
 

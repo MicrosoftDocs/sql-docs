@@ -4,7 +4,7 @@ description: "Transaction locking and row versioning guide"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 03/14/2023
+ms.date: 03/16/2023
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
@@ -36,8 +36,8 @@ In any database, mismanagement of transactions often leads to contention and per
 > - [Lock escalation](#lock-escalation)
 > - [Reduce locking and escalation](#reducing-locking-and-escalation)
 > - [Behavior when modifying data](#behavior-when-modifying-data)
+> - [Behavior in summary](#behavior-in-summary)
 > - [Locking hints](#locking-hints)
-> - [Customize locking for an index](#customize-locking-for-an-index)
 
 ## <a id="Basics"></a> Transaction basics
 
@@ -321,11 +321,11 @@ The ISO standard defines the following isolation levels, all of which are suppor
 |**Repeatable read**|The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] keeps read and write locks that are acquired on selected data until the end of the transaction. However, because range-locks are not managed, phantom reads can occur.|  
 |**Serializable**|The highest level where transactions are completely isolated from one another. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] keeps read and write locks acquired on selected data to be released at the end of the transaction. Range-locks are acquired when a SELECT operation uses a ranged WHERE clause, especially to avoid phantom reads.<br /><br /> **Note:** DDL operations and transactions on replicated tables may fail when serializable isolation level is requested. This is because replication queries use hints that may be incompatible with serializable isolation level.|  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] also supports two additional transaction isolation levels that use row versioning. One is an implementation of read committed isolation, and one is a transaction isolation level, snapshot.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] also supports two additional transaction isolation levels that use row versioning. One is an implementation of READ COMMITTED isolation, and one is a transaction isolation level, snapshot.  
   
 |Row Versioning Isolation Level|Definition|  
 |------------------------------------|----------------|  
-|**Read Committed Snapshot (RCSI)**|When the READ_COMMITTED_SNAPSHOT database option is set ON, read committed isolation uses row versioning to provide statement-level read consistency. Read operations require only SCH-S table level locks and no page or row locks. That is, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] uses row versioning to present each statement with a transactionally consistent snapshot of the data as it existed at the start of the statement. Locks are not used to protect the data from updates by other transactions. A user-defined function can return data that was committed after the time the statement containing the UDF began.<br /><br /> When the `READ_COMMITTED_SNAPSHOT` database option is set OFF, which is the default setting, read committed isolation uses shared locks to prevent other transactions from modifying rows while the current transaction is running a read operation. The shared locks also block the statement from reading rows modified by other transactions until the other transaction is completed. Both implementations meet the ISO definition of read committed isolation.|  
+|**Read Committed Snapshot (RCSI)**|When the READ_COMMITTED_SNAPSHOT database option is set ON, READ COMMITTED isolation uses row versioning to provide statement-level read consistency. Read operations require only SCH-S table level locks and no page or row locks. That is, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] uses row versioning to present each statement with a transactionally consistent snapshot of the data as it existed at the start of the statement. Locks are not used to protect the data from updates by other transactions. A user-defined function can return data that was committed after the time the statement containing the UDF began.<br /><br /> When the `READ_COMMITTED_SNAPSHOT` database option is set OFF, which is the default setting, READ COMMITTED isolation uses shared locks to prevent other transactions from modifying rows while the current transaction is running a read operation. The shared locks also block the statement from reading rows modified by other transactions until the other transaction is completed. Both implementations meet the ISO definition of READ COMMITTED isolation.|  
 |**Snapshot**|The snapshot isolation level uses row versioning to provide transaction-level read consistency. Read operations acquire no page or row locks; only SCH-S table locks are acquired. When reading rows modified by another transaction, they retrieve the version of the row that existed when the transaction started. You can only use Snapshot isolation against a database when the `ALLOW_SNAPSHOT_ISOLATION` database option is set ON. By default, this option is set OFF for user databases.<br /><br /> **Note:**  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not support versioning of metadata. For this reason, there are restrictions on what DDL operations can be performed in an explicit transaction that is running under snapshot isolation. The following DDL statements are not permitted under snapshot isolation after a BEGIN TRANSACTION statement: ALTER TABLE, CREATE INDEX, CREATE XML INDEX, ALTER INDEX, DROP INDEX, DBCC REINDEX, ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME, or any common language runtime (CLR) DDL statement. These statements are permitted when you are using snapshot isolation within implicit transactions. An implicit transaction, by definition, is a single statement that makes it possible to enforce the semantics of snapshot isolation, even with DDL statements. Violations of this principle can cause error 3961: `Snapshot isolation transaction failed in database '%.*ls' because the object accessed by the statement has been modified by a DDL statement in another concurrent transaction since the start of this transaction. It is not allowed because the metadata is not versioned. A concurrent update to metadata could lead to inconsistency if mixed with snapshot isolation.`|  
   
 The following table shows the concurrency side effects enabled by the different isolation levels.  
@@ -611,7 +611,7 @@ DELETE mytable
 WHERE name = 'Bob';  
 ```  
   
- An exclusive (X) lock is placed on the index entry corresponding to the name `Bob`. Other transactions can insert or delete values before or after the deleted value `Bob`. However, any transaction that attempts to read, insert, or delete the value `Bob` will be blocked until the deleting transaction either commits or rolls back. (Certain isolation levels like READ_COMMITTED_SNAPSHOT and SNAPSHOT may allow reads from a row-version of the previously-committed state.)
+ An exclusive (X) lock is placed on the index entry corresponding to the name `Bob`. Other transactions can insert or delete values before or after the deleted value `Bob`. However, any transaction that attempts to read, insert, or delete the value `Bob` will be blocked until the deleting transaction either commits or rolls back. (The READ_COMMITTED_SNAPSHOT database option and the SNAPSHOT isolation level also allow reads from a row-version of the previously-committed state.)
   
  Range delete can be executed using three basic lock modes: row, page, or table lock. The row, page, or table locking strategy is decided by Query Optimizer or can be specified by the user through Query Optimizer hints such as ROWLOCK, PAGLOCK, or TABLOCK. When PAGLOCK or TABLOCK is used, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] immediately deallocates an index page if all rows are deleted from this page. In contrast, when ROWLOCK is used, all deleted rows are marked only as deleted; they are removed from the index page later using a background task.  
   
@@ -624,7 +624,7 @@ DELETE mytable
 WHERE name = 'Bob';  
 ```  
 
- A TID lock is placed on all the modified rows for the duration of the transaction. A lock is taken on the TID of the index entries corresponding to the name `Bob`. With optimized locking, page and row locks continue to be taken for updates, but each page and row lock is released as soon as each row is updated. The TID lock protects the rows from being updated until the transaction is complete. Any transaction that attempts to read, insert, or delete the value `Bob` will be blocked until the deleting transaction either commits or rolls back. (Certain isolation levels like READ_COMMITTED_SNAPSHOT and SNAPSHOT may allow reads from a row-version of the previously-committed state.)
+ A TID lock is placed on all the modified rows for the duration of the transaction. A lock is taken on the TID of the index entries corresponding to the name `Bob`. With optimized locking, page and row locks continue to be taken for updates, but each page and row lock is released as soon as each row is updated. The TID lock protects the rows from being updated until the transaction is complete. Any transaction that attempts to read, insert, or delete the value `Bob` will be blocked until the deleting transaction either commits or rolls back. (The READ_COMMITTED_SNAPSHOT database option and the SNAPSHOT isolation level also allow reads from a row-version of the previously-committed state.)
 
  Otherwise, the locking mechanics of a delete operation are the same as without optimized locking.
    
@@ -636,17 +636,17 @@ WHERE name = 'Bob';
 INSERT mytable VALUES ('Dan');  
 ```  
   
- The RangeI-N mode key-range lock is placed on the index entry corresponding to the name David to test the range. If the lock is granted, `Dan` is inserted and an exclusive (X) lock is placed on the value `Dan`. The RangeI-N mode key-range lock is necessary only to test the range and is not held for the duration of the transaction performing the insert operation. Other transactions can insert or delete values before or after the inserted value `Dan`. However, any transaction attempting to read, insert, or delete the value `Dan` will be locked until the inserting transaction either commits or rolls back.  
+ The RangeI-N mode key-range lock is placed on the index entry corresponding to the name `David` to test the range. If the lock is granted, `Dan` is inserted and an exclusive (X) lock is placed on the value `Dan`. The RangeI-N mode key-range lock is necessary only to test the range and is not held for the duration of the transaction performing the insert operation. Other transactions can insert or delete values before or after the inserted value `Dan`. However, any transaction attempting to read, insert, or delete the value `Dan` will be locked until the inserting transaction either commits or rolls back.  
 
-#### Insert operation, with optimized locking
+#### Insert operation with optimized locking
 
- When inserting a value within a transaction, the range the value falls into does not have to be locked for the duration of the transaction performing the insert operation. Taking an exclusive TID lock on the inserted key value until the end of the transaction is sufficient to maintain serializability. For example, given this INSERT statement:  
+ When inserting a value within a transaction, the range the value falls into does not have to be locked for the duration of the transaction performing the insert operation. Row and page locks are rarely acquired, only when there is an online index rebuild in progress, or when there are serailizable transactions in the instance. If row and page locks are acquired, they are released quickly and not held for the duration of the transaction. Placing an exclusive TID lock on the inserted key value until the end of the transaction is sufficient to maintain serializability. For example, given this INSERT statement:  
   
 ```sql  
 INSERT mytable VALUES ('Dan');  
 ```  
   
- The RangeI-N mode key-range lock is placed on the index entry corresponding to the name David to test the range. If the lock is granted, `Dan` is inserted and an exclusive (X) lock is placed on the value `Dan`. The RangeI-N mode key-range lock is necessary only to test the range and is not held for the duration of the transaction performing the insert operation. Other transactions can insert or delete values before or after the inserted value `Dan`. However, any transaction attempting to read, insert, or delete the value `Dan` will be locked until the inserting transaction either commits or rolls back.  
+ With optimized locking, a RangeI-N lock is only acquired if there at least one transaction that is using the SERIALIZABLE isolation level in the instance. The RangeI-N mode key-range lock is placed on the index entry corresponding to the name `David` to test the range. If the lock is granted, `Dan` is inserted and an exclusive (X) lock is placed on the value `Dan`. The RangeI-N mode key-range lock is necessary only to test the range and is not held for the duration of the transaction performing the insert operation. Other transactions can insert or delete values before or after the inserted value `Dan`. However, any transaction attempting to read, insert, or delete the value `Dan` will be locked until the inserting transaction either commits or rolls back.  
 
   
 ## Lock escalation
@@ -692,9 +692,9 @@ No attempt is made to escalate locks on `TableB` because there was no active ref
 
 ## Lock escalation with optimized locking
 
-Optimized locking helps to reduce lock memory as very few locks are held for the duration of the transaction. As the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] acquires row and page locks, lock escalation can occur similarly, but far less frequently. Optimized locking typically succeeds in avoiding lock escalations, lowering the number of locks and amount of lock memory necessary. 
+Optimized locking helps to reduce lock memory as very few locks are held for the duration of the transaction. As the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] acquires row and page locks, lock escalation can occur similarly, but far less frequently. Optimized locking typically succeeds in avoiding lock escalations, lowering the number of locks and amount of lock memory necessary.
 
-When optimized locking is enabled, and in the READ_COMMITTED_SNAPSHOT isolation level, the database engine releases row and page locks as soon as the write is complete.  No row and page locks are held for the duration of the transaction, except for a single Transaction ID (TID) lock. This reduces the likelihood of lock escalation.
+When optimized locking is enabled, and in the default READ COMMITTED isolation level, the database engine releases row and page locks as soon as the write is complete. No row and page locks are held for the duration of the transaction, except for a single Transaction ID (TID) lock. This reduces the likelihood of lock escalation.
 
 ### Lock escalation thresholds
 
@@ -750,8 +750,8 @@ If the SELECT statement acquires enough locks to trigger lock escalation and the
 
 In most cases, the [!INCLUDE[ssDE-md](../includes/ssde-md.md)] delivers the best performance when operating with its default settings for locking and lock escalation.
 
-- Take advantage of optimized locking where available. [Optimized locking](performance/optimized-locking.md) offers an improved transaction locking mechanism that reduces lock memory consumption and blocking for concurrent transactions. **Lock escalation is far less likely to ever occur when optimized locking is enabled.**
-    - Currently, optimized locking is available in limited regions for Azure SQL Database only. 
+- Take advantage of [optimized locking where available](performance/optimized-locking.md#availability). 
+    - [Optimized locking](performance/optimized-locking.md) offers an improved transaction locking mechanism that reduces lock memory consumption and blocking for concurrent transactions. **Lock escalation is far less likely to ever occur when optimized locking is enabled.**
     - Avoid using [table hints with optimized locking](performance/optimized-locking.md#avoid-locking-hints). Table hints may reducing the effectiveness of optimized locking. 
     - Enable [READ_COMMITTED_SNAPSHOT](../t-sql/statements/alter-database-transact-sql-set-options.md#read_committed_snapshot--on--off-) in the database for the most benefit from optimized locking. This is the default isolation level in Azure SQL Database.
     - Optimized locking requires [accelerated database recovery (ADR)](/azure/azure-sql/accelerated-database-recovery) to be enabled on the database.
@@ -971,7 +971,7 @@ Row versioning is a general framework in [!INCLUDE[ssNoVersion](../includes/ssno
 -   Support Multiple Active Result Sets (MARS). If a MARS session issues a data modification statement (such as `INSERT`, `UPDATE`, or `DELETE`) at a time there is an active result set, the rows affected by the modification statement are versioned.  
 -   Support index operations that specify the ONLINE option.  
 -   Support row versioning-based transaction isolation levels:  
-    -   A new implementation of read committed isolation level that uses row versioning to provide statement-level read consistency.  
+    -   A new implementation of READ COMMITTED isolation level that uses row versioning to provide statement-level read consistency.  
     -   A new isolation level, snapshot, to provide transaction-level read consistency.  
   
 The `tempdb` database must have enough space for the version store. When `tempdb` is full, update operations will stop generating versions and continue to succeed, but read operations might fail because a particular row version that is needed no longer exists. This affects operations like triggers, MARS, and online indexing.  
@@ -981,7 +981,7 @@ Using row versioning for read-committed and snapshot transactions is a two-step 
 1. Set either or both the `READ_COMMITTED_SNAPSHOT` and `ALLOW_SNAPSHOT_ISOLATION` database options ON.  
 1. Set the appropriate transaction isolation level in an application:  
 
-    -   When the `READ_COMMITTED_SNAPSHOT` database option is ON, transactions setting the read committed isolation level use row versioning.  
+    -   When the `READ_COMMITTED_SNAPSHOT` database option is ON, transactions setting the READ COMMITTED isolation level use row versioning.  
     -   When the `ALLOW_SNAPSHOT_ISOLATION` database option is ON, transactions can set the snapshot isolation level.  
   
 When either `READ_COMMITTED_SNAPSHOT` or `ALLOW_SNAPSHOT_ISOLATION` database option is set ON, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] assigns a transaction sequence number (XSN) to each transaction that manipulates data using row versioning. Transactions start at the time a `BEGIN TRANSACTION` statement is executed. However, the transaction sequence number starts with the first read or write operation after the BEGIN TRANSACTION statement. The transaction sequence number is incremented by one each time it is assigned.  
@@ -1028,7 +1028,7 @@ In a read-committed transaction using row versioning, the selection of rows to u
 Transactions running under snapshot isolation take an optimistic approach to data modification by acquiring locks on data before performing the modification only to enforce constraints. Otherwise, locks are not acquired on data until the data is to be modified. When a data row meets the update criteria, the snapshot transaction verifies that the data row has not been modified by a concurrent transaction that committed after the snapshot transaction began. If the data row has been modified outside of the snapshot transaction, an update conflict occurs and the snapshot transaction is terminated. The update conflict is handled by the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] and there is no way to disable the update conflict detection.  
   
 > [!NOTE]  
-> Update operations running under snapshot isolation internally execute under read committed isolation when the snapshot transaction accesses any of the following:  
+> Update operations running under snapshot isolation internally execute under READ COMMITTED isolation when the snapshot transaction accesses any of the following:  
 >  
 > A table with a FOREIGN KEY constraint.  
 >  
@@ -1036,29 +1036,32 @@ Transactions running under snapshot isolation take an optimistic approach to dat
 >  
 > An indexed view referencing more than one table.  
 >  
-> However, even under these conditions the update operation will continue to verify that the data has not been modified by another transaction. If data has been modified by another transaction, the snapshot transaction encounters an update conflict and is terminated.  
+> However, even under these conditions the update operation will continue to verify that the data has not been modified by another transaction. If data has been modified by another transaction, the snapshot transaction encounters an update conflict and is terminated. Update conflicts must be handled and retried manually by the application.
 
 #### Modifying data with optimized locking
 
-With optimized locking enabled and in the READ_COMMITTED_SNAPSHOT isolation level, readers don't take any locks, and writers take short duration low-level locks, instead of locks that expire at the end of the transaction. 
+With optimized locking enabled and with the READ_COMMITTED_SNAPSHOT (RCSI) database option enabled, and using the default READ COMMITTED isolation level, readers don't take any locks, and writers take short duration low-level locks, instead of locks that expire at the end of the transaction.
 
-The READ_COMMITTED_SNAPSHOT isolation level is recommended for most efficiency with optimized locking. When using stricter isolation levels like repeatable read or serializable, the Database Engine is forced to hold row and page locks until the end of the transaction, for both readers and writers, resulting in increased blocking and lock memory.
+Enabling RCSI is recommended for most efficiency with optimized locking. When using stricter isolation levels like repeatable read or serializable, the Database Engine is forced to hold row and page locks until the end of the transaction, for both readers and writers, resulting in increased blocking and lock memory.
 
-With RCSI enabled, and when using read committed isolation level, writers qualify rows per the predicate based on the latest committed version of the row, without acquiring U locks. A query will wait only if the row qualifies and there is an active write transaction on that row or page. Qualifying based on the latest committed version and locking only the qualified rows reduces blocking and increases concurrency.
+With RCSI enabled, and when using the default READ COMMITTED isolation level, writers qualify rows per the predicate based on the latest committed version of the row, without acquiring U locks. A query will wait only if the row qualifies and there is an active write transaction on that row or page. Qualifying based on the latest committed version and locking only the qualified rows reduces blocking and increases concurrency.
+
+If update conflicts are detected with RCSI and in the default READ COMMITTED isolation level, they are handled and retried automatically without any impact to customer workloads.
+
+With optimized locking enabled, using the SNAPSHOT isolation level, the behavior of update conflicts is the same. Update conflicts must be handled and retried manually by the application.
 
 ### Behavior in summary
 
- The following table summarizes the differences between snapshot isolation and read committed isolation using row versioning.  
+ The following table summarizes the differences between snapshot isolation and READ COMMITTED isolation using row versioning.  
   
 |Property|Read-committed isolation level using row versioning|Snapshot isolation level|  
 |--------------|----------------------------------------------------------|------------------------------|  
 |The database option that must be set to ON to enable the required support.|READ_COMMITTED_SNAPSHOT|ALLOW_SNAPSHOT_ISOLATION|  
 |How a session requests the specific type of row versioning.|Use the default read-committed isolation level, or run the SET TRANSACTION ISOLATION LEVEL statement to specify the READ COMMITTED isolation level. This can be done after the transaction starts.|Requires the execution of SET TRANSACTION ISOLATION LEVEL to specify the SNAPSHOT isolation level before the start of the transaction.|  
 |The version of data read by statements.|All data that was committed before the start of each statement.|All data that was committed before the start of each transaction.|  
-|TODO: How updates are handled.|Reverts from row versions to actual data to select rows to update and uses update locks on the data rows selected. Acquires exclusive locks on actual data rows to be modified. No update conflict detection.|Uses row versions to select rows to update. Tries to acquire an exclusive lock on the actual data row to be modified, and if the data has been modified by another transaction, an update conflict occurs and the snapshot transaction is terminated.|  
-|Update conflict detection without optimized locking.|None.|Integrated support. Cannot be disabled.|  
-|Update conflict detection with optimized locking.|Automatic retry upon update conflict.|Integrated support. Cannot be disabled.|  
-  
+|How updates are handled.|**Without optimized locking:** Reverts from row versions to actual data to select rows to update and uses update locks on the data rows selected. Acquires exclusive locks on actual data rows to be modified. No update conflict detection.<br><br>**With optimized locking:** Rows are selected based on the last committed version without any locks being acquired. If rows qualify for the update, exclusive row or page locks are acquired. If update conflicts are detected, they are handled and retried automatically.|Uses row versions to select rows to update. Tries to acquire an exclusive lock on the actual data row to be modified, and if the data has been modified by another transaction, an update conflict occurs and the snapshot transaction is terminated. |  
+|Update conflict detection|**Without optimized locking:** None.<br><br>**With optimized locking:** If update conflicts are detected, they are handled and retried automatically.|Integrated support. Cannot be disabled.|  
+
 ### Row versioning resource usage
 
 The row versioning framework supports the following features available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
@@ -1457,7 +1460,7 @@ Row versioning-based isolation levels are enabled at the database level. Any app
         SET READ_COMMITTED_SNAPSHOT ON;  
     ```  
   
-     When the database is enabled for `READ_COMMITTED_SNAPSHOT`, all queries running under the read committed isolation level use row versioning, which means that read operations do not block update operations.  
+     When the database is enabled for `READ_COMMITTED_SNAPSHOT`, all queries running under the READ COMMITTED isolation level use row versioning, which means that read operations do not block update operations.  
   
 -   Snapshot isolation by setting the `ALLOW_SNAPSHOT_ISOLATION` database option to `ON` as shown in the following code example:  
   
@@ -1643,11 +1646,9 @@ In [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], the `LOCK_ESCALAT
 
 ### Customize locking for an index
 
-When optimized locking is enabled and in the READ_COMMITTED_SNAPSHOT isolation level, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] does not keep low-level locks for the duration of a transaction. There is no need to customize locking strategies for an index or to disable low-level locks. It is not recommended to use UPDLOCK, XLOCK, READCOMMITTEDLOCK hints, which force locks to be held. PAGLOCK and ROWLOCK hints are fine to use with optimized locking.
+The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] uses a dynamic locking strategy that automatically chooses the best locking granularity for queries in most cases. We recommend that you do not override the default locking levels, which have page and row locking on, unless table or index access patterns are well understood and consistent, and there is a resource contention problem to solve. Overriding a locking level can significantly impede concurrent access to a table or index. For example, specifying only table-level locks on a large table that users access heavily can cause bottlenecks because users must wait for the table-level lock to be released before accessing the table.  
 
-When optimized locking is not enabled, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] uses a dynamic locking strategy that automatically chooses the best locking granularity for queries in most cases. We recommend that you do not override the default locking levels, which have page and row locking on, unless table or index access patterns are well understood and consistent, and there is a resource contention problem to solve. Overriding a locking level can significantly impede concurrent access to a table or index. For example, specifying only table-level locks on a large table that users access heavily can cause bottlenecks because users must wait for the table-level lock to be released before accessing the table.  
-
-When optimized locking is not enabled, there are a few cases where disallowing page or row locking can be beneficial, if the access patterns are well understood and consistent. For example, a database application uses a lookup table that is updated weekly in a batch process. Concurrent readers access the table with a shared (S) lock and the weekly batch update accesses the table with an exclusive (X) lock. Turning off page and row locking on the table reduces the locking overhead throughout the week by allowing readers to concurrently access the table through shared table locks. When the batch job runs, it can complete the update efficiently because it obtains an exclusive table lock.  
+There are a few cases where disallowing page or row locking can be beneficial, if the access patterns are well understood and consistent. For example, a database application uses a lookup table that is updated weekly in a batch process. Concurrent readers access the table with a shared (S) lock and the weekly batch update accesses the table with an exclusive (X) lock. Turning off page and row locking on the table reduces the locking overhead throughout the week by allowing readers to concurrently access the table through shared table locks. When the batch job runs, it can complete the update efficiently because it obtains an exclusive table lock.  
   
 Turning off page and row locking might or might not be acceptable because the weekly batch update will block the concurrent readers from accessing the table while the update runs. If the batch job only changes a few rows or pages, you can change the locking level to allow row or page level locking, which will enable other sessions to read from the table without blocking. If the batch job has a large number of updates, obtaining an exclusive lock on the table may be the best way to ensure the batch job finishes efficiently.  
   

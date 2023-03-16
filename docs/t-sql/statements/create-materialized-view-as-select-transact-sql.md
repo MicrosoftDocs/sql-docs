@@ -83,7 +83,7 @@ Only HASH and ROUND_ROBIN distributions are supported. For more information on d
 `DISTRIBUTION` = `HASH` ( *distribution_column_name* )     
 Distributes the rows based on the values of a single column.
 
-`DISTRIBUTION = HASH ( [distribution_column_name [, ...n]] )` (*preview*) 
+`DISTRIBUTION = HASH ( [distribution_column_name [, ...n]] )`
 Distributes the rows based on the hash values of up to eight columns, allowing for more even distribution of materialized view data, reducing the data skew over time and improving query performance. 
 
 > [!NOTE]

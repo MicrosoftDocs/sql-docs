@@ -342,7 +342,7 @@ GO
 
 ### DMVs to view metadata of distributed AG
 
-The below queries will display information about endpoint URLs used by the availability groups, including the distributed availability group. *(Reproduced with permission from [David Barbarin](https://blog.dbi-services.com/sql-server-2016-alwayson-distributed-availability-groups/).)*
+The below queries will display information about endpoint URLs used by the availability groups, including the distributed availability group. *(Reproduced with permission from [David Barbarin](https://www.dbi-services.com/blog/sql-server-2016-alwayson-distributed-availability-groups/).)*
 
 ```sql
 -- shows endpoint url and sync state for ag, and dag
@@ -366,7 +366,7 @@ GO
 
 ### DMV to show current state of seeding
 
-The below query displays information about the current state of seeding. This is useful for troubleshooting synchronization errors between replicas. *(Reproduced with permission from [David Barbarin](https://blog.dbi-services.com/sql-server-2016-alwayson-distributed-availability-groups/).)*
+The below query displays information about the current state of seeding. This is useful for troubleshooting synchronization errors between replicas. *(Reproduced with permission from [David Barbarin](https://www.dbi-services.com/blog/sql-server-2016-alwayson-distributed-availability-groups/).)*
 
 ```sql
 -- shows current_state of seeding

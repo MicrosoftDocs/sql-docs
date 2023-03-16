@@ -267,8 +267,8 @@ The following best practices are optional but will result in better manageabilit
   - Server (special roles in the `master` database) in Azure
   - Database
   - Schema
-    - It is a best practice to use schemas to grant permissions inside a database. (also see: [Schema-design: Recommendations for Schema design with security in mind](http://andreas-wolter.com/en/schema-design-for-sql-server-recommendations-for-schema-design-with-security-in-mind/))
-  - Object (table, view, procedure, etc.)
+    - It is a best practice to use schemas to grant permissions inside a database.
+  - Object (table, view, procedure, and so on)
 
   > [!NOTE]  
   > It is not recommended to apply permissions on the object level because this level adds unnecessary complexity to the overall implementation. If you decide to use object-level permissions, those should be clearly documented. The same applies to column-level-permissions, which are even less recommendable for the same reasons. Also be aware that by default a table-level [DENY](/sql/t-sql/statements/deny-object-permissions-transact-sql) does not override a column-level GRANT. This would require the [common criteria compliance Server Configuration](/sql/database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option) to be activated.

@@ -31,10 +31,7 @@ You can monitor the use of deprecated features by using the [!INCLUDE[ssNoVersio
 
 The values of these counters are also available by executing the following statement:
 
-```sql
-SELECT * FROM sys.dm_os_performance_counters
-WHERE object_name = 'SQLServer:Deprecated Features';
-```
+[!INCLUDE [deprecated_os_performance_counters](../../includes/deprecated_os_performance_counters.md)]
 
 > [!NOTE]  
 > This list is identical to the [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] list. There are no new deprecated or discontinued Database Engine features announced for [!INCLUDE[sssql17-md](../includes/sssql17-md.md)].

@@ -120,5 +120,5 @@ When you restore a `master` database backup, any existing user databases that we
 ## Next steps
 
 - [Troubleshoot SQL Server on Linux](sql-server-linux-troubleshooting-guide.md)
-- [sqlcmd Utility](../tools/sqlcmd-utility.md)
+- [sqlcmd Utility](../tools/sqlcmd/sqlcmd-utility.md)
 - [Start, stop, and restart SQL Server services on Linux](sql-server-linux-start-stop-restart-sql-server-services.md)

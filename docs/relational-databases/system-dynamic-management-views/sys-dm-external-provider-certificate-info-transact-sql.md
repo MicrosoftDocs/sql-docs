@@ -14,7 +14,7 @@ ms.topic: "reference"
 > [!NOTE]
 > This view is introduced in SQL Server 2022 CU1.
 
-Returns information about the Azure cloud certificates used in SQL Server to set up and maintain an Azure AD administrator required to support Azure AD authentication. For more information, see [Set up Azure Active Directory authentication for SQL Server](/sql/relational-databases/security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial).
+Returns information about the Azure cloud certificates used in SQL Server to set up and maintain an Azure AD administrator required to support Azure AD authentication. For more information, see [Set up Azure Active Directory authentication for SQL Server](../security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial.md).
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -28,11 +28,11 @@ Returns information about the Azure cloud certificates used in SQL Server to set
 
 Principals must have the **VIEW SERVER SECURITY STATE** permission.
   
-The visibility of the metadata in catalog views is limited to securables that a user either owns or on which the user has been granted some permission. For more information, see [Metadata Visibility Configuration](/sql/relational-databases/security/metadata-visibility-configuration).
+The visibility of the metadata in catalog views is limited to securables that a user either owns or on which the user has been granted some permission. For more information, see [Metadata Visibility Configuration](../security/metadata-visibility-configuration.md).
   
 ## See also
 
-- [Set up Azure Active Directory authentication for SQL Server](/sql/relational-databases/security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial)
-- [Azure Active Directory authentication for SQL Server](/sql/relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview)
-- [Linked server for SQL Server with Azure Active Directory authentication](/sql/relational-databases/security/authentication-access/azure-ad-authentication-sql-server-linked-server)
+- [Set up Azure Active Directory authentication for SQL Server](../security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial.md)
+- [Azure Active Directory authentication for SQL Server](../security/authentication-access/azure-ad-authentication-sql-server-overview.md)
+- [Linked server for SQL Server with Azure Active Directory authentication](../security/authentication-access/azure-ad-authentication-sql-server-linked-server.md)
 - [Tutorial: Using automation to set up the Azure Active Directory admin for SQL Server](/sql/relational-databases/security/azure-ad-authentication-sql-server-automation-setup-tutorial)

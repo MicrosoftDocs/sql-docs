@@ -33,7 +33,7 @@ You can monitor the use of deprecated features by using the [!INCLUDE[ssNoVersio
 
 The value of these counters is also available by executing the following statement:
 
-[!INCLUDE [deprecated_os_performance_counters](../../includes/deprecated_os_performance_counters.md)]
+[!INCLUDE [deprecated_os_performance_counters](../includes/deprecated_os_performance_counters.md)]
 
 ## Features deprecated in the next version of SQL Server
 

@@ -90,7 +90,6 @@ You can manually register your SQL Server VM with the SQL IaaS Agent extension b
 Provide the SQL Server license type as either pay-as-you-go (`PAYG`) to pay per usage, Azure Hybrid Benefit (`AHUB`) to use your own license, or disaster recovery (`DR`) to activate the [free DR replica license](business-continuity-high-availability-disaster-recovery-hadr-overview.md#free-dr-replica-in-azure).
 
 
-
 ### [Azure PowerShell](#tab/azure-powershell)
 
 Register a SQL Server VM with Azure PowerShell:
@@ -100,7 +99,7 @@ Register a SQL Server VM with Azure PowerShell:
 $vm = Get-AzVM -Name <vm_name> -ResourceGroupName <resource_group_name>
 
 New-AzSqlVM -Name $vm.Name -ResourceGroupName $vm.ResourceGroupName -Location $vm.Location `
--LicenseType <license_type> -SqlManagementType Full
+-LicenseType <license_type> 
 ```
 
 ### [Azure CLI](#tab/azure-cli)
@@ -109,7 +108,7 @@ Register a SQL Server with the Azure CLI:
 
 ```azurecli-interactive
 # Register Enterprise or Standard self-installed VM
-az sql vm create --name <vm_name> --resource-group <resource_group_name> --location <vm_location> --license-type <license_type> --sql-mgmt-type Full
+az sql vm create --name <vm_name> --resource-group <resource_group_name> --location <vm_location> --license-type <license_type> 
 ```
 
 ### [Azure portal](#tab/azure-portal)

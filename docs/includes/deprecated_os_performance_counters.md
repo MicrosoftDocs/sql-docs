@@ -2,7 +2,7 @@
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 03/16/2023
-ms.topic: conceptual
+ms.topic: include
 ms.service: sql
 ---
 

@@ -27,7 +27,7 @@ The permissions required to enable change data capture depend on the product. Se
 | Product|Role|
 | -------- | -------- |
 |SQL Server|sysadmin   |
-|Azure SQL Database|sysadm or db_owner|
+|Azure SQL Database|sysadmin or db_owner|
 |Azure SQL Managed Instance | sysadmin | 
 
 To enable change data capture, run the stored procedure [sys.sp_cdc_enable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) in the database context. To determine if a database is already enabled, query the **is_cdc_enabled** column in the **sys.databases** catalog view.  

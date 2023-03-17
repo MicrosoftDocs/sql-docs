@@ -375,7 +375,7 @@ For more information, see [Microsoft.Sql managedInstances/azureADOnlyAuthenticat
 
 ### Checking Azure AD-only authentication using T-SQL
 
-The [SEVERPROPERTY](/sql/t-sql/functions/serverproperty-transact-sql) `IsExternalAuthenticationOnly` has been added to check if Azure AD-only authentication is enabled for your server or managed instance. `1` indicates that the feature is enabled, and `0` represents the feature is disabled.
+The [SERVERPROPERTY](/sql/t-sql/functions/serverproperty-transact-sql) `IsExternalAuthenticationOnly` has been added to check if Azure AD-only authentication is enabled for your server or managed instance. `1` indicates that the feature is enabled, and `0` represents the feature is disabled.
 
 ```sql
 SELECT SERVERPROPERTY('IsExternalAuthenticationOnly') 

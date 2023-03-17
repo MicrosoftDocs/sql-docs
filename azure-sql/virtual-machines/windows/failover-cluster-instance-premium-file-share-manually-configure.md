@@ -169,11 +169,13 @@ After you've configured the failover cluster, you can create the SQL Server FCI.
 > Azure Marketplace gallery images come with SQL Server Management Studio installed. If you didn't use a marketplace image [Download SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms).
 
 
-## Register with SQL IaaS extension 
+## Register with SQL IaaS Agent extension 
 
-To manage your SQL Server VM from the portal, register it with the SQL IaaS Agent extension in [lightweight management mode](sql-agent-extension-manually-register-single-vm.md#lightweight-mode), currently the only mode that's supported with FCI and SQL Server on Azure VMs. 
+To manage your SQL Server VM from the portal, register it with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md). Note that only [limited functionality](sql-server-iaas-agent-extension-automate-management.md#feature-benefits) will be available on SQL VMs that have failover clustered instances of SQL Server (FCIs).
 
-Register a SQL Server VM in lightweight mode with PowerShell (-LicenseType can be `PAYG` or `AHUB`):
+If your SQL Server VM has already been registered with the SQL IaaS Agent extension and you've enabled any features that require the agent, you'll need to [unregister](sql-agent-extension-manually-register-single-vm.md#unregister-from-extension) the SQL Server VM from the extension and register it again after your FCI is installed. 
+
+Register a SQL Server VM with PowerShell (-LicenseType can be `PAYG` or `AHUB`):
 
 ```powershell-interactive
 # Get the existing compute VM
@@ -181,8 +183,10 @@ $vm = Get-AzVM -Name <vm_name> -ResourceGroupName <resource_group_name>
          
 # Register SQL VM with 'Lightweight' SQL IaaS agent
 New-AzSqlVM -Name $vm.Name -ResourceGroupName $vm.ResourceGroupName -Location $vm.Location `
-   -LicenseType ???? -SqlManagementType LightWeight  
+   -LicenseType <license_type> 
 ```
+
+ 
 
 ## Configure connectivity
 
@@ -192,11 +196,21 @@ If you deployed your SQL Server VMs in multiple subnets, skip this step. If you 
 
 - Microsoft Distributed Transaction Coordinator (MSDTC) is not supported on Windows Server 2016 and earlier. 
 - Filestream isn't supported for a failover cluster with a premium file share. To use filestream, deploy your cluster by using [Storage Spaces Direct](failover-cluster-instance-storage-spaces-direct-manually-configure.md) or [Azure shared disks](failover-cluster-instance-azure-shared-disks-manually-configure.md) instead.
-- Only registering with the SQL IaaS Agent extension in [lightweight management mode](sql-server-iaas-agent-extension-automate-management.md#management-modes) is supported. 
+- SQL Server FCIs registered with the extension do not support features that require the agent, such as automated backup, patching, and advanced portal management. See the [table of benefits](sql-server-iaas-agent-extension-automate-management.md#feature-benefits).
 - Database Snapshots are not currently supported with [Azure Files due to sparse files limitations](/rest/api/storageservices/features-not-supported-by-the-azure-file-service).
 - Since database snapshots are not supported, CHECKDB for user databases falls back to CHECKDB WITH TABLOCK. TABLOCK limits the checks that are performed - DBCC CHECKCATALOG is not run on the database, and Service Broker data is not validated.
 - DBCC CHECKDB on `master` and `msdb` database is not supported. 
 - Databases that use the in-memory OLTP feature are not supported on a failover cluster instance deployed with a premium file share. If your business requires in-memory OLTP, consider deploying your FCI with [Azure shared disks](failover-cluster-instance-azure-shared-disks-manually-configure.md) or [Storage Spaces Direct](failover-cluster-instance-storage-spaces-direct-manually-configure.md) instead.
+
+### Limited extension support
+
+At this time, SQL Server failover cluster instances on Azure virtual machines registered with the SQL IaaS Agent extension only support a limited number of features. See the [table of benefits](sql-server-iaas-agent-extension-automate-management.md#feature-benefits). 
+
+If your SQL Server VM has already been registered with the SQL IaaS Agent extension and you've enabled any features that require the agent, you'll need to [unregister](sql-agent-extension-manually-register-single-vm.md#unregister-from-extension) from the extension by deleting the **SQL virtual machine** resource for the corresponding VMs and then register it with the SQL IaaS Agent extension again. When you're deleting the **SQL virtual machine** resource by using the Azure portal, clear the check box next to the correct virtual machine to avoid deleting the virtual machine. 
+
+
+
+
 
 ## Next steps
 

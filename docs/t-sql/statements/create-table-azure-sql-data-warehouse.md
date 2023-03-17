@@ -484,7 +484,7 @@ CREATE TABLE myTable
 WITH ( CLUSTERED COLUMNSTORE INDEX );  
 ```  
   
-### <a name="HashDistributed"></a> G. Create a table that's hash-distributed on multiple columns (preview)
+### <a name="HashDistributed"></a> G. Create a table that's hash-distributed on multiple columns
 
 The following example creates the same table as the previous example. However, for this table, rows are distributed (on `id` and `zipCode` columns). The table is created with a clustered columnstore index, which gives better performance and data compression than a heap or rowstore clustered index.  
   

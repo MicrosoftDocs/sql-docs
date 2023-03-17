@@ -523,7 +523,7 @@ The **SA** account is a system administrator on the [!INCLUDE [ssnoversion-md](.
 
 ## Connect to SQL Server
 
-The following steps use the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] command-line tool, [**sqlcmd**](../tools/sqlcmd-utility.md), inside the container to connect to [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)].
+The following steps use the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] command-line tool, [**sqlcmd**](../tools/sqlcmd/sqlcmd-utility.md), inside the container to connect to [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)].
 
 1. Use the `docker exec -it` command to start an interactive bash shell inside your running container. In the following example `sql1` is name specified by the `--name` parameter when you created the container.
 
@@ -648,7 +648,7 @@ The following steps use **sqlcmd** outside of your container to connect to [!INC
 
 1. Find the IP address for your container's host machine, using `ifconfig` or `ip addr`.
 
-1. For this example, install the **sqlcmd** tool on your client machine. For more information, see [Install **sqlcmd** on Windows](../tools/sqlcmd-utility.md) or [Install **sqlcmd** on Linux](sql-server-linux-setup-tools.md).
+1. For this example, install the **sqlcmd** tool on your client machine. For more information, see [Install **sqlcmd** on Windows](../tools/sqlcmd/sqlcmd-utility.md) or [Install **sqlcmd** on Linux](sql-server-linux-setup-tools.md).
 
 1. Run **sqlcmd** specifying the IP address and the port mapped to port 1433 in your container. In this example, the port is the same as port 1433 on the host machine. If you specified a different mapped port on the host machine, you would use it here. You'll also need to open the appropriate inbound port on your firewall to allow the connection.
 

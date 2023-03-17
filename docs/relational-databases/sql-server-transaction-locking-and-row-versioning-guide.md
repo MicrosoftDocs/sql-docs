@@ -298,7 +298,7 @@ Transactions specify an isolation level that defines the degree to which one tra
   
 Transaction isolation levels control:  
 
-- Whether locks are taken when data is read, and what type of locks are requested.  
+- Whether locks are acquired when data is read, and what type of locks are requested.  
 - How long the read locks are held.  
 - Whether a read operation referencing rows modified by another transaction:
     - Blocks until the exclusive lock on the row is freed.
@@ -617,14 +617,14 @@ WHERE name = 'Bob';
   
 #### Delete operation, with optimized locking
 
- When deleting a value within a transaction, the row and page locks are taken and released incrementally, and not held for the duration of the transaction. For example, given this DELETE statement:  
+ When deleting a value within a transaction, the row and page locks are acquired and released incrementally, and not held for the duration of the transaction. For example, given this DELETE statement:  
   
 ```sql  
 DELETE mytable  
 WHERE name = 'Bob';  
 ```  
 
- A TID lock is placed on all the modified rows for the duration of the transaction. A lock is taken on the TID of the index entries corresponding to the name `Bob`. With optimized locking, page and row locks continue to be taken for updates, but each page and row lock is released as soon as each row is updated. The TID lock protects the rows from being updated until the transaction is complete. Any transaction that attempts to read, insert, or delete the value `Bob` will be blocked until the deleting transaction either commits or rolls back. (The READ_COMMITTED_SNAPSHOT database option and the SNAPSHOT isolation level also allow reads from a row-version of the previously-committed state.)
+ A TID lock is placed on all the modified rows for the duration of the transaction. A lock is acquired on the TID of the index entries corresponding to the name `Bob`. With optimized locking, page and row locks continue to be acquired for updates, but each page and row lock is released as soon as each row is updated. The TID lock protects the rows from being updated until the transaction is complete. Any transaction that attempts to read, insert, or delete the value `Bob` will be blocked until the deleting transaction either commits or rolls back. (The READ_COMMITTED_SNAPSHOT database option and the SNAPSHOT isolation level also allow reads from a row-version of the previously-committed state.)
 
  Otherwise, the locking mechanics of a delete operation are the same as without optimized locking.
    
@@ -1023,7 +1023,7 @@ The behavior of data writes is significantly different with and without optimize
 
 #### Modifying data without optimized locking
 
-In a read-committed transaction using row versioning, the selection of rows to update is done using a blocking scan where an update (U) lock is taken on the data row as data values are read. This is the same as a read-committed transaction that does not use row versioning. If the data row does not meet the update criteria, the update lock is released on that row and the next row is locked and scanned.  
+In a read-committed transaction using row versioning, the selection of rows to update is done using a blocking scan where an update (U) lock is acquired on the data row as data values are read. This is the same as a read-committed transaction that does not use row versioning. If the data row does not meet the update criteria, the update lock is released on that row and the next row is locked and scanned.  
   
 Transactions running under snapshot isolation take an optimistic approach to data modification by acquiring locks on data before performing the modification only to enforce constraints. Otherwise, locks are not acquired on data until the data is to be modified. When a data row meets the update criteria, the snapshot transaction verifies that the data row has not been modified by a concurrent transaction that committed after the snapshot transaction began. If the data row has been modified outside of the snapshot transaction, an update conflict occurs and the snapshot transaction is terminated. The update conflict is handled by the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] and there is no way to disable the update conflict detection.  
   
@@ -1040,7 +1040,7 @@ Transactions running under snapshot isolation take an optimistic approach to dat
 
 #### Modifying data with optimized locking
 
-With optimized locking enabled and with the READ_COMMITTED_SNAPSHOT (RCSI) database option enabled, and using the default READ COMMITTED isolation level, readers don't take any locks, and writers take short duration low-level locks, instead of locks that expire at the end of the transaction.
+With optimized locking enabled and with the READ_COMMITTED_SNAPSHOT (RCSI) database option enabled, and using the default READ COMMITTED isolation level, readers don't acquire any locks, and writers acquire short duration low-level locks, instead of locks that expire at the end of the transaction.
 
 Enabling RCSI is recommended for most efficiency with optimized locking. When using stricter isolation levels like repeatable read or serializable, the Database Engine is forced to hold row and page locks until the end of the transaction, for both readers and writers, resulting in increased blocking and lock memory.
 
@@ -1613,7 +1613,7 @@ For more information about the specific locking hints and their behaviors, see [
   
 The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] might have to acquire locks when reading metadata, even when processing a select with a locking hint that prevents requests for share locks when reading data. For example, a `SELECT` using the `NOLOCK` hint does not acquire share locks when reading data, but might sometime request locks when reading a system catalog view. This means it is possible for a `SELECT` statement using `NOLOCK` to be blocked.  
   
-As shown in the following example, if the transaction isolation level is set to `SERIALIZABLE`, and the table-level locking hint `NOLOCK` is used with the `SELECT` statement, key-range locks typically used to maintain serializable transactions are not taken.  
+As shown in the following example, if the transaction isolation level is set to `SERIALIZABLE`, and the table-level locking hint `NOLOCK` is used with the `SELECT` statement, key-range locks typically used to maintain serializable transactions are not acquired.  
   
 ```sql  
 USE AdventureWorks2019;  
@@ -1640,7 +1640,7 @@ ROLLBACK;
 GO  
 ```  
   
-The only lock taken that references `HumanResources.Employee` is a schema stability (Sch-S) lock. In this case, serializability is no longer guaranteed.  
+The only lock acquired that references `HumanResources.Employee` is a schema stability (Sch-S) lock. In this case, serializability is no longer guaranteed.  
 
 In [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], the `LOCK_ESCALATION` option of `ALTER TABLE` can disfavor table locks, and enable HoBT locks on partitioned tables. This option is not a locking hint, but can be used to reduce lock escalation. For more information, see [ALTER TABLE (Transact-SQL)](../t-sql/statements/alter-table-transact-sql.md).
 
@@ -1668,7 +1668,7 @@ The granularity of locking used on an index can be set using the `CREATE INDEX` 
 
 Explicit transactions can be nested. This is primarily intended to support transactions in stored procedures that can be called either from a process already in a transaction or from processes that have no active transaction.  
   
-The following example shows the intended use of nested transactions. The procedure *TransProc* enforces its transaction regardless of the transaction mode of any process that executes it. If *TransProc* is called when a transaction is active, the nested transaction in *TransProc* is largely ignored, and its `INSERT` statements are committed or rolled back based on the final action taken for the outer transaction. If `TransProc` is executed by a process that does not have an outstanding transaction, the `COMMIT TRANSACTION` at the end of the procedure effectively commits the `INSERT` statements.  
+The following example shows the intended use of nested transactions. The procedure *TransProc* enforces its transaction regardless of the transaction mode of any process that executes it. If *TransProc* is called when a transaction is active, the nested transaction in *TransProc* is largely ignored, and its `INSERT` statements are committed or rolled back based on the final action acquired for the outer transaction. If `TransProc` is executed by a process that does not have an outstanding transaction, the `COMMIT TRANSACTION` at the end of the procedure effectively commits the `INSERT` statements.  
   
 ```sql  
 SET QUOTED_IDENTIFIER OFF;  
@@ -1703,7 +1703,7 @@ SELECT * FROM TestTrans;
 GO  
 ```  
   
-Committing inner transactions is ignored by the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. The transaction is either committed or rolled back based on the action taken at the end of the outermost transaction. If the outer transaction is committed, the inner nested transactions are also committed. If the outer transaction is rolled back, then all inner transactions are also rolled back, regardless of whether or not the inner transactions were individually committed.  
+Committing inner transactions is ignored by the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. The transaction is either committed or rolled back based on the action acquired at the end of the outermost transaction. If the outer transaction is committed, the inner nested transactions are also committed. If the outer transaction is rolled back, then all inner transactions are also rolled back, regardless of whether or not the inner transactions were individually committed.  
   
 Each call to `COMMIT TRANSACTION` or `COMMIT WORK` applies to the last executed `BEGIN TRANSACTION`. If the `BEGIN TRANSACTION` statements are nested, then a `COMMIT` statement applies only to the last nested transaction, which is the innermost transaction. Even if a `COMMIT TRANSACTION transaction_name` statement within a nested transaction refers to the transaction name of the outer transaction, the commit applies only to the innermost transaction.  
   

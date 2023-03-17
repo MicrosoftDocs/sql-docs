@@ -20,7 +20,7 @@ helpviewer_keywords:
   
  The value of these counters are also available by executing the following statement:  
   
-[!INCLUDE [deprecated_os_performance_counters](../../includes/deprecated_os_performance_counters.md)]
+[!INCLUDE [deprecated-os-performance-counters](../../includes/deprecated-os-performance-counters.md)]
 
 This following table describes the SQL Server **Deprecated Features** performance object.
 

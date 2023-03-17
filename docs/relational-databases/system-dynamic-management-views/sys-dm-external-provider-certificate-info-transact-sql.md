@@ -35,4 +35,4 @@ The visibility of the metadata in catalog views is limited to securables that a 
 - [Set up Azure Active Directory authentication for SQL Server](../security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial.md)
 - [Azure Active Directory authentication for SQL Server](../security/authentication-access/azure-ad-authentication-sql-server-overview.md)
 - [Linked server for SQL Server with Azure Active Directory authentication](../security/authentication-access/azure-ad-authentication-sql-server-linked-server.md)
-- [Tutorial: Using automation to set up the Azure Active Directory admin for SQL Server](/sql/relational-databases/security/azure-ad-authentication-sql-server-automation-setup-tutorial)
+- [Tutorial: Using automation to set up the Azure Active Directory admin for SQL Server](../security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial.md)

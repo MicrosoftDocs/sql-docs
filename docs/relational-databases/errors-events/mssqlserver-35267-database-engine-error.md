@@ -131,15 +131,15 @@ If the SQL Server worker threads are running into scheduler problems for various
 A typical non-yielding scheduler issue is recorded in SQL Server error log after 70 seconds of non-yield state. However, SQL Server checks the state of schedulers more frequently than that and reports those intermediate non-yielding states in Extended events. If you uncover scheduler issues on the remote node that correspond to the time of error 35267, focus on resolving those first.
 Here's how you can check for short-lived occurrences of scheduler issues that don't reach the 70-second threshold, but occur for say 10 or 20 seconds.
 
-**Use the [System Health](/sql/relational-databases/extended-events/use-the-system-health-session) extended event file**
+**Use the [System Health](../extended-events/use-the-system-health-session.md) extended event file**
 
-1. Locate the [System Health](/sql/relational-databases/extended-events/use-the-system-health-session) extended event file from the time of the event.
+1. Locate the [System Health](../extended-events/use-the-system-health-session.md) extended event file from the time of the event.
 1. Double-click on the  `system_health_0_xxxxxxxxxxxxxxxxxx.xel` to open it in SQL Server Management Studio (SSMS). Alternatively, you can use `sys.fn_xe_file_target_read_file` to view or import the file as a table for easier filtering.
 1. Search for any occurrences of **scheduler_monitor_non_yielding_ring_buffer_recorded** event. If you find any, that's an indication that SQL Server detected non-yielding scheduler events and is recording them. These events are recorded earlier than the actual non-yiedling scheduler memory dumps and error log entries, which occur after 60-70 seconds of non-yielding state. In other words, you can use the **scheduler_monitor_non_yielding_ring_buffer_recorded** to detect short-lived non-yielding scheduler issues that aren't logged in the Error log but still occurred. Those could be reasons for intermittent, or short-lived lack of connectivity between AG nodes.
 
-**Use the [SQLDIAG Extended events log](/sql/sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log)**
+**Use the [SQLDIAG Extended events log](../../sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log.md)**
 
-1. Locate the [SQLDIAG Extended events log](/sql/sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log) in the \Log directory from the time of the event (applicable to Windows Cluster systems). The file name format is like this `SERVERNAME_MSSQLSERVER_SQLDIAG_x_xxxxxxxxxxxxxxxxxx.xel`.
+1. Locate the [SQLDIAG Extended events log](../../sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log.md) in the \Log directory from the time of the event (applicable to Windows Cluster systems). The file name format is like this `SERVERNAME_MSSQLSERVER_SQLDIAG_x_xxxxxxxxxxxxxxxxxx.xel`.
 1. Double-click to open the file in SQL Server Management Studio (SSMS). Alternatively, you can use `sys.fn_xe_file_target_read_file` to view or import the file as a table for easier filtering.
 1. Once opened in SSMS, locate an instance of **component_health_result** event and right-click on the following and choose **Show Column in Table**: **component**, **state_desc**
 1. Then right-click on each column and choose **Filter by this value** to apply the following filters:

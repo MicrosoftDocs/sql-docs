@@ -18,7 +18,7 @@ This quickstart describes how to connect an application to a database in Azure S
 ## Prerequisites
 
 * An [Azure subscription](https://azure.microsoft.com/free/dotnet/).
-* A SQL database configured with Azure Active Directory (Azure AD) authentication. You can create one using the [Create database quickstart](/azure/azure-sql/database/single-database-create-quickstart).
+* A SQL database configured with Azure Active Directory (Azure AD) authentication. You can create one using the [Create database quickstart](./single-database-create-quickstart.md).
 * The latest version of the [Azure CLI](/cli/azure/get-started-with-azure-cli).
 * [Visual Studio](https://visualstudio.microsoft.com/vs/) or later with the **ASP.NET and web development** workload.
 * [.NET 7.0](https://dotnet.microsoft.com/download) or later.
@@ -289,9 +289,9 @@ The Azure portal allows you to work with managed identities and run queries agai
 >
 > You can read more about configuring database roles and security on the following resources:
 >
-> [Tutorial: Secure a database in Azure SQL Database](/azure/azure-sql/database/secure-database-tutorial)
+> [Tutorial: Secure a database in Azure SQL Database](./secure-database-tutorial.md)
 >
-> [Authorize database access to SQL Database](/azure/azure-sql/database/logins-create-manage)
+> [Authorize database access to SQL Database](./logins-create-manage.md)
 
 ## Test the deployed application
 

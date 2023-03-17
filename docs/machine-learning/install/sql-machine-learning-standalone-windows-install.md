@@ -191,7 +191,7 @@ On disconnected servers, extra steps are required. You must obtain the cumulativ
 
 3. If you enabled operationalization to run as web nodes and compute nodes for web service deployments, back up the **AppSettings.json** file as a precaution. Applying SQL Server 2017 CU13 or later revises this file, so you might want a backup copy to preserve the original version.
 
-4. On an internet connected machine, download the latest cumulative update for your version from the [Latest updates for Microsoft SQL Server](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md).
+4. On an internet connected machine, download the latest cumulative update for your version from the [Latest updates for Microsoft SQL Server](/troubleshoot/sql/releases/download-and-install-latest-updates?bc=%2fsql%2fbreadcrumb%2ftoc.json&toc=%2fsql%2ftoc.json).
 
 5. Download the latest cumulative update. It is an executable file.
 

@@ -67,7 +67,7 @@ $conn = new PDO( 'sqlsrv:server=(localdb)\\myInstance;'
     . 'database=myData', NULL, NULL);
 ```
 
-For instructions on installing LocalDB, see the [LocalDB documentation](../../database-engine/configure-windows/sql-server-express-localdb.md). If you use sqlcmd.exe to modify data in your LocalDB instance, you will need the [sqlcmd utility](../../tools/sqlcmd-utility.md).
+For instructions on installing LocalDB, see the [LocalDB documentation](../../database-engine/configure-windows/sql-server-express-localdb.md). If you use sqlcmd.exe to modify data in your LocalDB instance, you will need the [sqlcmd utility](../../tools/sqlcmd/sqlcmd-utility.md).
 
 ## See Also
 

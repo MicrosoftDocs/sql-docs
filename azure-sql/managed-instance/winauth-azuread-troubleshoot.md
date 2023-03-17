@@ -5,7 +5,7 @@ description: Learn to troubleshoot Azure Active Directory Kerberos authenticatio
 author: sravanisaluru
 ms.author: srsaluru
 ms.reviewer: mathoma, bonova, urmilano, wiassaf, randolphwest
-ms.date: 12/23/2022
+ms.date: 03/16/2023
 ms.service: sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: how-to
@@ -33,7 +33,14 @@ klist get MSSQLSvc/<miname>.<dnszone>.database.windows.net:1433
 The following are some well-known error codes:
 
 - **0x6fb: SQL SPN not found** - Check that you've entered a valid SPN. If you've implemented the incoming trust-based authentication flow, revisit steps to [create and configure the Azure AD Kerberos Trusted Domain Object](winauth-azuread-setup-incoming-trust-based-flow.md#create-and-configure-the-azure-ad-kerberos-trusted-domain-object) to validate that you've performed all the configuration steps.
-- **0x51f** - This error is likely related to a conflict with the Fiddler tool. Turn on Fiddler to mitigate the issue.
+
+- **0x51f** - This error is likely related to a conflict with the Fiddler tool. To mitigate the issue, follow these steps:
+
+  1. Run `netsh winhttp reset autoproxy`
+  2. Run `netsh winhttp reset proxy`
+  3. In the Windows registry, find `Computer\HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\iphlpsvc\Parameters\ProxyMgr` and delete any subentry that has a configuration with a port `:8888`
+  4. Reboot the machine and try again using Windows Authentication
+
 - **0x52f** - Indicates that a referenced user name and authentication information are valid, but some user account restriction has prevented successful authentication. This can happen if you have an Azure AD conditional access policy configured. To mitigate the issue, you must exclude the Azure SQL Managed Instance Service Principal (named `<instance name> principal`) application in the CA rules.
 
 ## Investigate message flow failures

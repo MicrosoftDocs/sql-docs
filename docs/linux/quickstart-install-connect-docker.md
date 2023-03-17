@@ -4,7 +4,7 @@ description: This quickstart shows how to use Docker to run the SQL Server Linux
 author: amitkh-msft
 ms.author: amitkh
 ms.reviewer: vanto, randolphwest
-ms.date: 07/18/2022
+ms.date: 03/17/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: quickstart
@@ -642,7 +642,7 @@ Now, run a query to return data from the `Inventory` table.
 
 ## <a id="connectexternal"></a> Connect from outside the container
 
-You can also connect to the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] instance on your Docker machine from any external Linux, Windows, or macOS tool that supports SQL connections.
+You can also connect to the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] instance on your Docker machine from any external Linux, Windows, or macOS tool that supports SQL connections. The external tool will use the IP address for the host machine.
 
 The following steps use **sqlcmd** outside of your container to connect to [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] running in the container. These steps assume that you already have the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] command-line tools installed outside of your container. The same principles apply when using other tools, but the process of connecting is unique to each tool.
 

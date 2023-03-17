@@ -8833,8 +8833,6 @@ items:
             href: ssms/scripting/search-documents-using-results-lists.md
           - name: Search Text with Wildcards
             href: ssms/scripting/search-text-with-wildcards.md
-          - name: Search Text with Regular Expressions
-            href: ssms/scripting/search-text-with-regular-expressions.md
           - name: Find & Replace
             href: ssms/scripting/find-and-replace.md
           - name: Find in Files

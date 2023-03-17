@@ -36,7 +36,7 @@ You can monitor the use of deprecated features by using the [!INCLUDE[ssNoVersio
 
 The values of these counters are also available by executing the following statement:
 
-[!INCLUDE [deprecated_os_performance_counters](../includes/deprecated_os_performance_counters.md)]
+[!INCLUDE [deprecated-os-performance-counters](../includes/deprecated-os-performance-counters.md)]
 
 ## See also
 

@@ -1,8 +1,8 @@
 ---
 title: "SQL Server Backup to URL for Microsoft Azure Blob Storage"
 description: Learn about the concepts, requirements, and components necessary for SQL Server to use the Microsoft Azure Blob Storage as a backup destination.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: dplessMSFT
+ms.author: dpless
 ms.date: 03/01/2023
 ms.service: sql
 ms.subservice: backup-restore
@@ -103,7 +103,7 @@ The following are security considerations and requirements when backing up to or
 
 ## <a id="limitations"></a> Limitations of backup/restore to Azure Blob Storage
 
-- SQL Server limits the maximum backup size supported using a page blob to 1 TB. The maximum backup size supported using block blobs is limited to approximately 200 GB (50,000 blocks * 4 MB MAXTRANSFERSIZE). Block blobs support striping to support substantially larger backup sizes.  
+- SQL Server limits the maximum backup size supported using a page blob to 1 TB. The maximum backup size supported using block blobs is limited to approximately 200 GB (50,000 blocks * 4 MB MAXTRANSFERSIZE). Block blobs support striping to support substantially larger backup sizes - the limit is a maximum of 64 URLs, which results in  the following formula: `64 stripes * 50,000 blocks * 4MB maxtransfersize = 12.8 TB`.  
 
     > [!IMPORTANT]  
     >  Although the maximum backup size supported by a single block blob is 200 GB, it's possible for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to write in smaller block sizes, which can lead [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to reach the 50,000 block limit before the entire backup is transferred. Stripe backups (even if they're smaller than 200 GB) to avoid the block limit, especially when if you use differential or uncompressed backups.

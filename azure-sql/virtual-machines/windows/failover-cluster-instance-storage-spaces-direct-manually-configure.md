@@ -207,7 +207,7 @@ $vm = Get-AzVM -Name <vm_name> -ResourceGroupName <resource_group_name>
          
 # Register SQL VM with 'Lightweight' SQL IaaS agent
 New-AzSqlVM -Name $vm.Name -ResourceGroupName $vm.ResourceGroupName -Location $vm.Location `
-   -LicenseType ????
+   -LicenseType <license_type>
 ```
 
 ## Configure connectivity

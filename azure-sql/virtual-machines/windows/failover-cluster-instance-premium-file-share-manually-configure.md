@@ -186,7 +186,7 @@ New-AzSqlVM -Name $vm.Name -ResourceGroupName $vm.ResourceGroupName -Location $v
    -LicenseType <license_type> 
 ```
 
-
+ 
 
 ## Configure connectivity
 

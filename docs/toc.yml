@@ -10192,8 +10192,12 @@ items:
         href: linux/sql-server-linux-configure-msdtc.md
       - name: Configure persistent memory PMEM
         href: linux/sql-server-linux-configure-pmem.md
-      - name: Configure the time zone
+      - name: Configure time zone on SQL Server 2022
         href: linux/sql-server-linux-configure-time-zone.md
+      - name: Configure time zone on SQL Server 2019
+        href: linux/sql-server-linux-configure-time-zone-2019.md
+      - name: Configure time zone on SQL Server 2017
+        href: linux/sql-server-linux-configure-time-zone-2017.md
       - name: Configure to send usage and diagnostic data to Microsoft
         href: linux/usage-and-diagnostic-data-configuration-for-sql-server-linux.md
     - name: Containers

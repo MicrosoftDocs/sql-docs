@@ -1,6 +1,6 @@
 ---
-title: Configure the time zone for SQL Server 2022 on Linux
-description: In this article, learn how to configure the time zone on for SQL Server 2022 on Linux.
+title: Configure the time zone for SQL Server 2019 on Linux
+description: In this article, learn how to configure the time zone on for SQL Server 2019 on Linux.
 author: ericjulien
 ms.author: ericjulien
 ms.reviewer: randolphwest
@@ -9,17 +9,17 @@ ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
 ---
-# Configure the time zone for SQL Server 2022 on Linux
+# Configure the time zone for SQL Server 2019 on Linux
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-This article describes how to configure the time zone for [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] on Linux. You can also configure the time zone on Linux for [SQL Server 2017](sql-server-linux-configure-time-zone-2017.md) and [SQL Server 2019](sql-server-linux-configure-time-zone-2019.md).
+This article describes how to configure the time zone for [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] on Linux. You can also configure the time zone on Linux for [SQL Server 2017](sql-server-linux-configure-time-zone-2017.md) and [SQL Server 2022](sql-server-linux-configure-time-zone.md).
 
 ## Overview
 
-[!INCLUDE [sssql22-md](../includes/sssql22-md.md)] on Linux uses Windows time zones internally. All Transact-SQL (T-SQL) commands use Windows time zones, for example the [CURRENT_TIMEZONE_ID](../t-sql/functions/current-timezone-transact-sql.md) function and [AT TIME ZONE](../t-sql/queries/at-time-zone-transact-sql.md) query operator.
+[!INCLUDE [sssql19-md](../includes/sssql19-md.md)] on Linux uses Windows time zones internally. All Transact-SQL (T-SQL) commands use Windows time zones, for example the [CURRENT_TIMEZONE_ID](../t-sql/functions/current-timezone-transact-sql.md) function and [AT TIME ZONE](../t-sql/queries/at-time-zone-transact-sql.md) query operator.
 
-1. [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] on Linux first determines which time zone to use, using the first valid result from the following sequence:
+1. [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] on Linux first determines which time zone to use, using the first valid result from the following sequence:
 
    - the `TZ` environment variable, if set;
    - the `/etc/localtime` symbolic link, if it exists;
@@ -34,10 +34,10 @@ The Windows time zone is derived from the Linux `tz` timezone using the followin
 
 Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. For instance, if `TZ` is set to `America/Knox_IN` and the `/usr/share/zoneinfo/America/Knox_IN` entry is a symbolic link to `/usr/share/zoneinfo/America/Indiana/Knox`, the Windows time zone is resolved to `Central Standard Time` via the `America/Indiana/Knox` mapping entry.
 
-- [SQL Server 2022 CU 2 and later versions](#sql-server-2022-cu-2-and-later-versions)
-- [SQL Server 2022 CU 1 and earlier versions](#sql-server-2022-cu-1-and-earlier-versions)
+- [SQL Server 2019 CU 20 and later versions](#sql-server-2019-cu-20-and-later-versions)
+- [SQL Server 2019 CU 19 and earlier versions](#sql-server-2019-cu-19-and-earlier-versions)
 
-### SQL Server 2022 CU 2 and later versions
+### SQL Server 2019 CU 20 and later versions
 
 | TZ time zone | Windows time zone |
 | --- | --- |
@@ -516,7 +516,7 @@ Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. 
 | Pacific/Wake | UTC+12 |
 | Pacific/Wallis | UTC+12 |
 
-### SQL Server 2022 CU 1 and earlier versions
+### SQL Server 2019 CU 19 and earlier versions
 
 | TZ time zone | Windows time zone |
 | --- | --- |
@@ -545,9 +545,9 @@ Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. 
 | Africa/Gaborone | South Africa Standard Time |
 | Africa/Harare | South Africa Standard Time |
 | Africa/Johannesburg | South Africa Standard Time |
-| Africa/Juba | South Sudan Standard Time |
+| Africa/Juba | E. Africa Standard Time |
 | Africa/Kampala | E. Africa Standard Time |
-| Africa/Khartoum | Sudan Standard Time |
+| Africa/Khartoum | E. Africa Standard Time |
 | Africa/Kigali | South Africa Standard Time |
 | Africa/Kinshasa | W. Central Africa Standard Time |
 | Africa/Lagos | W. Central Africa Standard Time |
@@ -568,7 +568,7 @@ Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. 
 | Africa/Nouakchott | Greenwich Standard Time |
 | Africa/Ouagadougou | Greenwich Standard Time |
 | Africa/Porto-Novo | W. Central Africa Standard Time |
-| Africa/Sao_Tome | Sao Tome Standard Time |
+| Africa/Sao_Tome | Greenwich Standard Time |
 | Africa/Tripoli | Libya Standard Time |
 | Africa/Tunis | W. Central Africa Standard Time |
 | Africa/Windhoek | Namibia Standard Time |
@@ -611,8 +611,8 @@ Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. 
 | America/Creston | US Mountain Standard Time |
 | America/Cuiaba | Central Brazilian Standard Time |
 | America/Curacao | SA Western Standard Time |
-| America/Danmarkshavn | Greenwich Standard Time |
-| America/Dawson | Yukon Standard Time |
+| America/Danmarkshavn | UTC |
+| America/Dawson | Pacific Standard Time |
 | America/Dawson_Creek | US Mountain Standard Time |
 | America/Denver | Mountain Standard Time |
 | America/Detroit | Eastern Standard Time |
@@ -689,7 +689,6 @@ Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. 
 | America/Port_of_Spain | SA Western Standard Time |
 | America/Porto_Velho | SA Western Standard Time |
 | America/Puerto_Rico | SA Western Standard Time |
-| America/Punta_Arenas | Magallanes Standard Time |
 | America/Rainy_River | Central Standard Time |
 | America/Rankin_Inlet | Central Standard Time |
 | America/Recife | SA Eastern Standard Time |
@@ -717,17 +716,17 @@ Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. 
 | America/Toronto | Eastern Standard Time |
 | America/Tortola | SA Western Standard Time |
 | America/Vancouver | Pacific Standard Time |
-| America/Whitehorse | Yukon Standard Time |
+| America/Whitehorse | Pacific Standard Time |
 | America/Winnipeg | Central Standard Time |
 | America/Yakutat | Alaskan Standard Time |
 | America/Yellowknife | Mountain Standard Time |
-| Antarctica/Casey | Central Pacific Standard Time |
+| Antarctica/Casey | W. Australia Standard Time |
 | Antarctica/Davis | SE Asia Standard Time |
 | Antarctica/DumontDUrville | West Pacific Standard Time |
-| Antarctica/Macquarie | Tasmania Standard Time |
+| Antarctica/Macquarie | Central Pacific Standard Time |
 | Antarctica/Mawson | West Asia Standard Time |
 | Antarctica/McMurdo | New Zealand Standard Time |
-| Antarctica/Palmer | SA Eastern Standard Time |
+| Antarctica/Palmer | Pacific SA Standard Time |
 | Antarctica/Rothera | SA Eastern Standard Time |
 | Antarctica/Syowa | E. Africa Standard Time |
 | Antarctica/Vostok | Central Asia Standard Time |
@@ -739,7 +738,6 @@ Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. 
 | Asia/Aqtau | West Asia Standard Time |
 | Asia/Aqtobe | West Asia Standard Time |
 | Asia/Ashgabat | West Asia Standard Time |
-| Asia/Atyrau | West Asia Standard Time |
 | Asia/Baghdad | Arabic Standard Time |
 | Asia/Bahrain | Arab Standard Time |
 | Asia/Baku | Azerbaijan Standard Time |
@@ -748,7 +746,7 @@ Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. 
 | Asia/Beirut | Middle East Standard Time |
 | Asia/Bishkek | Central Asia Standard Time |
 | Asia/Brunei | Singapore Standard Time |
-| Asia/Kolkata | India Standard Time |
+| Asia/Kolkatav | India Standard Time |
 | Asia/Chita | Transbaikal Standard Time |
 | Asia/Choibalsan | Ulaanbaatar Standard Time |
 | Asia/Colombo | Sri Lanka Standard Time |
@@ -757,10 +755,8 @@ Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. 
 | Asia/Dili | Tokyo Standard Time |
 | Asia/Dubai | Arabian Standard Time |
 | Asia/Dushanbe | West Asia Standard Time |
-| Asia/Famagusta | GTB Standard Time |
 | Asia/Gaza | West Bank Standard Time |
 | Asia/Hebron | West Bank Standard Time |
-| Asia/Ho Chi Minh City | SE Asia Standard Time |
 | Asia/Hong_Kong | China Standard Time |
 | Asia/Hovd | W. Mongolia Standard Time |
 | Asia/Irkutsk | North Asia East Standard Time |
@@ -790,9 +786,10 @@ Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. 
 | Asia/Pontianak | SE Asia Standard Time |
 | Asia/Pyongyang | North Korea Standard Time |
 | Asia/Qatar | Arab Standard Time |
-| Asia/Qostanay | Central Asia Standard Time |
-| Asia/Qyzylorda | Qyzylorda Standard Time |
+| Asia/Qyzylorda | Central Asia Standard Time |
+| Asia/Rangoon | Myanmar Standard Time |
 | Asia/Riyadh | Arab Standard Time |
+| Asia/Saigon | SE Asia Standard Time |
 | Asia/Sakhalin | Sakhalin Standard Time |
 | Asia/Samarkand | West Asia Standard Time |
 | Asia/Seoul | Korea Standard Time |
@@ -812,7 +809,6 @@ Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. 
 | Asia/Vientiane | SE Asia Standard Time |
 | Asia/Vladivostok | Vladivostok Standard Time |
 | Asia/Yakutsk | Yakutsk Standard Time |
-| Asia/Yangon (Rangoon) | Myanmar Standard Time |
 | Asia/Yekaterinburg | Ekaterinburg Standard Time |
 | Asia/Yerevan | Caucasus Standard Time |
 | Atlantic/Azores | Azores Standard Time |
@@ -856,7 +852,7 @@ Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. 
 | Etc/GMT-10 | West Pacific Standard Time |
 | Etc/GMT-11 | Central Pacific Standard Time |
 | Etc/GMT-12 | UTC+12 |
-| Etc/GMT-13 | UTC+13 |
+| Etc/GMT-13 | Tonga Standard Time |
 | Etc/GMT-14 | Line Islands Standard Time |
 | Etc/GMT-2 | South Africa Standard Time |
 | Etc/GMT-3 | E. Africa Standard Time |
@@ -866,7 +862,6 @@ Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. 
 | Etc/GMT-7 | SE Asia Standard Time |
 | Etc/GMT-8 | Singapore Standard Time |
 | Etc/GMT-9 | Tokyo Standard Time |
-| Etc/UTC | UTC |
 | Europe/Amsterdam | W. Europe Standard Time |
 | Europe/Andorra | W. Europe Standard Time |
 | Europe/Astrakhan | Astrakhan Standard Time |
@@ -885,7 +880,7 @@ Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. 
 | Europe/Guernsey | GMT Standard Time |
 | Europe/Helsinki | FLE Standard Time |
 | Europe/Isle_of_Man | GMT Standard Time |
-| Europe/Istanbul | Türkiye Standard Time |
+| Europe/Istanbul | Turkey Standard Time |
 | Europe/Jersey | GMT Standard Time |
 | Europe/Kaliningrad | Kaliningrad Standard Time |
 | Europe/Kyiv | FLE Standard Time |
@@ -909,7 +904,6 @@ Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. 
 | Europe/Samara | Russia Time Zone 3 |
 | Europe/San_Marino | W. Europe Standard Time |
 | Europe/Sarajevo | Central European Standard Time |
-| Europe/Saratov | Saratov Standard Time |
 | Europe/Simferopol | Russian Standard Time |
 | Europe/Skopje | Central European Standard Time |
 | Europe/Sofia | FLE Standard Time |
@@ -922,7 +916,7 @@ Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. 
 | Europe/Vatican | W. Europe Standard Time |
 | Europe/Vienna | W. Europe Standard Time |
 | Europe/Vilnius | FLE Standard Time |
-| Europe/Volgograd | Volgograd Standard Time |
+| Europe/Volgograd | Russian Standard Time |
 | Europe/Warsaw | Central European Standard Time |
 | Europe/Zagreb | Central European Standard Time |
 | Europe/Zaporozhye | FLE Standard Time |
@@ -946,8 +940,8 @@ Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. 
 | Pacific/Chatham | Chatham Islands Standard Time |
 | Pacific/Easter | Easter Island Standard Time |
 | Pacific/Efate | Central Pacific Standard Time |
-| Pacific/Enderbury | UTC+13 |
-| Pacific/Fakaofo | UTC+13 |
+| Pacific/Enderbury | Tonga Standard Time |
+| Pacific/Fakaofo | Tonga Standard Time |
 | Pacific/Fiji | Fiji Standard Time |
 | Pacific/Funafuti | UTC+12 |
 | Pacific/Galapagos | Central America Standard Time |

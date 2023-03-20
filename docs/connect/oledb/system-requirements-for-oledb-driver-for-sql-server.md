@@ -1,9 +1,9 @@
 ---
-title: "System requirements for OLE DB Driver for SQL Server"
+title: System requirements for OLE DB Driver for SQL Server
 description: Learn about the software prerequisites necessary to use data access features of SQL Server such as MARS in OLE DB Driver for SQL Server.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: "03/18/2020"
+ms.date: 03/20/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: "reference"
@@ -16,7 +16,7 @@ helpviewer_keywords:
 
 # System requirements for OLE DB Driver for SQL Server
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
@@ -34,7 +34,7 @@ For a list of operating systems that support OLE DB Driver for SQL Server, see [
 
 ## Azure Active Directory authentication requirements  
 
-When using Azure Active Directory authentication methods with versions of the OLE DB driver for SQL Server ***prior to*** 18.3, ensure that the [Active Directory Authentication Library for SQL Server](https://go.microsoft.com/fwlink/?LinkID=513072) has been installed. (Version 18.3 includes the dependency as part of its installer package.) ADAL isn't required for the other authentication methods or OLE DB operations. For more information, see: [Using Azure Active Directory](features/using-azure-active-directory.md).
+When using Azure Active Directory authentication methods with versions of the OLE DB driver for SQL Server ***prior to*** 18.3, ensure that the Active Directory Authentication Library for SQL Server has been installed. (Version 18.3 includes the dependency as part of its installer package.) This requirement isn't needed for the other authentication methods or OLE DB operations. For more information, see: [Using Azure Active Directory](features/using-azure-active-directory.md).
 
 ## SQL Server requirements  
 
@@ -51,15 +51,15 @@ For upgrades:
 * English-language versions of OLE DB Driver for SQL Server can be upgraded to any localized version of OLE DB Driver for SQL Server.  
 * Localized versions of OLE DB Driver for SQL Server can be upgraded to localized versions of OLE DB Driver for SQL Server of the same language.  
 * Localized version of OLE DB Driver for SQL Server can be upgraded to the English-language version of OLE DB Driver for SQL Server.  
-* Localized versions of OLE DB Driver for SQL Server cannot be upgraded to localized OLE DB Driver for SQL Server versions of a different localized language.  
+* Localized versions of OLE DB Driver for SQL Server can't be upgraded to localized OLE DB Driver for SQL Server versions of a different localized language.  
 
 ## Data type compatibility for client versions  
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and OLE DB Driver for SQL Server map new data types to older datatypes that are compatible with down-level clients, as shown in the table below.  
 
-OLE DB and ADO applications can use the **DataTypeCompatibility** connection string keyword with OLE DB Driver for SQL Server to operate with older data types. When **DataTypeCompatibility=80**, OLE DB clients will connect using the [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] tabular data stream (TDS) version, rather than the TDS version. This means that for data types in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions, down-level conversion will be performed by the server, rather than by OLE DB Driver for SQL Server. It also means that the features available on the connection will be limited to the [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] feature set. Attempts to use new datatypes or features are detected as early as possible on API calls and errors are returned to the calling application, rather than attempting to pass invalid requests to the server.  
+OLE DB and ADO applications can use the **DataTypeCompatibility** connection string keyword with OLE DB Driver for SQL Server to operate with older data types. When **DataTypeCompatibility=80**, OLE DB clients connect using the [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] tabular data stream (TDS) version, rather than the TDS version. This behavior means that for data types in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions, down-level conversion is performed by the server, rather than by OLE DB Driver for SQL Server. It also means that the features available on the connection are limited to the [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] feature set. Attempts to use new datatypes or features are detected as early as possible on API calls and errors are returned to the calling application, rather than attempting to pass invalid requests to the server.  
 
-IDBInfo::GetKeywords will always return a keyword list that corresponds to the server version on the connection and is not affected by **DataTypeCompatibility**.  
+IDBInfo::GetKeywords always returns a keyword list that corresponds to the server version on the connection and isn't affected by **DataTypeCompatibility**.  
 
 |Data type|SQL Server Native Client<br /><br />SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|OLE DB Driver for SQL Server|Windows Data Access Components, MDAC, and<br /><br /> OLE DB Driver for SQL Server OLE DB applications with DataTypeCompatibility=80|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  

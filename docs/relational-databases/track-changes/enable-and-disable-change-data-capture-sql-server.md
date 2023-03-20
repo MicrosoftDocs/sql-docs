@@ -27,8 +27,8 @@ The permissions required to enable change data capture depend on the product. Se
 | Product|Role|
 | -------- | -------- |
 |SQL Server|sysadmin   |
-|Azure SQL Database|sysadmin or db_owner|
-|Azure SQL Managed Instance | sysadmin | 
+|Azure SQL Database|db_owner|
+|Azure SQL Managed Instance |sysadmin |
 
 To enable change data capture, run the stored procedure [sys.sp_cdc_enable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) in the database context. To determine if a database is already enabled, query the **is_cdc_enabled** column in the **sys.databases** catalog view.  
 
@@ -74,7 +74,7 @@ GO
   
  **Columns in the source table to be captured**.  
   
- By default, all of the columns in the source table are identified as captured columns. If only a subset of columns need to be tracked, such as for privacy or performance reasons, use the *\@captured_column_list* parameter to specify the subset of columns.  
+ By default, all of the columns in the source table are identified as captured columns. If only a subset of columns needs to be tracked, such as for privacy or performance reasons, use the *\@captured_column_list* parameter to specify the subset of columns.  
   
  **A filegroup to contain the change table.**  
   
@@ -95,9 +95,10 @@ EXEC sys.sp_cdc_enable_table
 @supports_net_changes = 1  
 GO  
 ```
+
  **A role for controlling access to a change table.**  
   
- The purpose of the named role is to control access to the change data. The specified role can be an existing fixed server role or a database role. If the specified role does not already exist, a database role of that name is created automatically. Members of either the **sysadmin** (only in SQL Server / Azure SQL Managed Instance) or **db_owner** role have full access to the data in the change tables. All other users must have SELECT permission on all the captured columns of the source table. In addition, when a role is specified, users who are not members of either the **sysadmin** or **db_owner** role must also be members of the specified role.  
+ The purpose of the named role is to control access to the change data. The specified role can be an existing fixed server role or a database role. If the specified role does not already exist, a database role of that name is created automatically. In SQL Server and Azure SQL Managed Instance, members the **sysadmin** have full access to the data in the changed tables. In Azure SQL Database, members of **db_owner** role have full access to the data in the change tables. All other users must have SELECT permission on all the captured columns of the source table. In addition, when a role is specified, users who are not members of either the **sysadmin** or **db_owner** role must also be members of the specified role.  
   
  If you do not want to use a gating role, explicitly set the *\@role_name* parameter to NULL. See the **Enable a Table Without Using a Gating Role** template for an example of enabling a table without a gating role.  
   
@@ -164,7 +165,4 @@ GO
  [About change data capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [Work with Change Data &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)   
  [Administer and Monitor change data capture &#40;SQL Server&#41;](../../relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md)  
-  
-  
-  
 

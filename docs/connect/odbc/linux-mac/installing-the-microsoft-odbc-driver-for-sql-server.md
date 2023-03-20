@@ -4,7 +4,7 @@ description: Learn how to install the Microsoft ODBC Driver for SQL Server on Li
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: randolphwest
-ms.date: 01/31/2023
+ms.date: 03/20/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -449,7 +449,7 @@ ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 
 ### Offline installation
 
-If you need the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ODBC Driver 13 to be installed on a computer with no Internet connection, you'll need to resolve package dependencies manually. The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ODBC Driver 13 has the following direct dependencies:
+If you need the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ODBC Driver 13 to be installed on a computer with no Internet connection, you must resolve package dependencies manually. The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ODBC Driver 13 has the following direct dependencies:
 
 - Ubuntu: libc6 (>= 2.21), libstdc++6 (>= 4.9), libkrb5-3, libcurl3, openssl, debconf (>= 0.5), unixodbc (>= 2.3.1-1)
 - Red Hat: ```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
@@ -554,9 +554,11 @@ The ODBC driver on Linux consists of the following components:
 
 ## Resource file loading
 
-The driver needs to load the resource file to function. This file is called `msodbcsqlr17.rll` or `msodbcsqlr13.rll` depending on the driver version. The location of the `.rll` file is relative to the location of the driver itself (`so` or `dylib`), as noted in the table above. As of version 17.1 the driver will also attempt to load the `.rll` from the default directory if loading from the relative path fails. The default resource file path on Linux is `/opt/microsoft/msodbcsql17/share/resources/en_US/`.
+The driver needs to load the resource file to function. This file is called `msodbcsqlr17.rll` or `msodbcsqlr13.rll` depending on the driver version. The location of the `.rll` file is relative to the location of the driver itself (`so` or `dylib`), as noted in the table above. As of version 17.1 the driver also attempts to load the `.rll` from the default directory if loading from the relative path fails. The default resource file path on Linux is `/opt/microsoft/msodbcsql17/share/resources/en_US/`.
 
 ## Troubleshoot
+
+If a version of the driver has been previously installed and registered with unixODBC, installation may fail with an error like `Installation failed, ODBC Driver $1 for SQL Server detected!`. To resolve the problem, unregister that version of the driver. You can unregister drivers via the `odbcinst` command: `odbcinst -u -d -n "ODBC Driver $1 for SQL Server`. (Replace `$1` with the version of the driver reported in the installation error.) If uninstall via the `odbcinst` command fails, you can manually remove driver sections from the `odbcinst.ini` file. You can find the location of the `odbcinst.ini` file via the command `odbcinst -j`.
 
 If you're unable to make a connection to SQL Server using the ODBC driver, see the known issues article on [troubleshooting connection problems](known-issues-in-this-version-of-the-driver.md#connectivity).
 

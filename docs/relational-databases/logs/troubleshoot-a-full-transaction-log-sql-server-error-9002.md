@@ -72,7 +72,7 @@ To discover what is preventing log truncation in a given case, use the `log_reus
 The following set of T-SQL commands will help you identify if a database transaction log isn't truncated and the reason for it. The following script will also recommend steps to resolve the issue:
 
 
-```tsql
+```sql
 SET NOCOUNT ON
 DECLARE @SQL VARCHAR (8000), @log_reuse_wait tinyint, @log_reuse_wait_desc nvarchar(120), @dbname sysname, @database_id int, @recovery_model_desc varchar (24)
 
@@ -269,7 +269,7 @@ Under the FULL or BULK_LOGGED recovery model, if the transaction log has not bee
 
 A complete history of all SQL Server backup and restore operations on a server instance is stored in the `msdb` system database. To review the complete backup history of a database, use the following sample script:
 
-```tsql
+```sql
 SELECT bs.database_name
 , backuptype = CASE 
 	WHEN bs.type = 'D' and bs.is_copy_only = 0 THEN 'Full Database'
@@ -384,7 +384,7 @@ For more information see [Add Data or Log Files to a Database](../../relational-
 These steps can be partly automated by running this T-SQL script which will identify logs files that using a large percentage of disk space and suggest actions:
 
 
-```tsql
+```sql
 DECLARE @log_reached_disk_size BIT = 0
 
 SELECT 
@@ -452,7 +452,7 @@ END
 
 Error 9002 can be generated if the transaction log size has been set to an upper limit or Autogrow is not allowed. In this case, enabling autogrow or increasing the log size manually can help resolve the issue. Use this T-SQL command to find such log files and follow the recommendations provided:
 
-```tsql
+```sql
 SELECT DB_NAME(database_id) DbName,
        name LogName,
        physical_name,

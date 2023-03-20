@@ -3,7 +3,7 @@ title: "Assessment rules for SQL Server to Azure SQL Database migration"
 description: Assessment rules to identify issues with the source SQL Server instance that must be addressed before migrating to Azure SQL Database.
 author: rajeshsetlem
 ms.author: rsetlem
-ms.reviewer: mathoma, kendralittle
+ms.reviewer: mathoma
 ms.date: 12/15/2020
 ms.service: sql-database
 ms.subservice: migration-guide

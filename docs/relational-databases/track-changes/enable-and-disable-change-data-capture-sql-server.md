@@ -74,7 +74,7 @@ GO
   
  **Columns in the source table to be captured**.  
   
- By default, all of the columns in the source table are identified as captured columns. If only a subset of columns need to be tracked, such as for privacy or performance reasons, use the *\@captured_column_list* parameter to specify the subset of columns.  
+ By default, all of the columns in the source table are identified as captured columns. If only a subset of columns needs to be tracked, such as for privacy or performance reasons, use the *\@captured_column_list* parameter to specify the subset of columns.  
   
  **A filegroup to contain the change table.**  
   
@@ -95,9 +95,10 @@ EXEC sys.sp_cdc_enable_table
 @supports_net_changes = 1  
 GO  
 ```
+
  **A role for controlling access to a change table.**  
   
- The purpose of the named role is to control access to the change data. The specified role can be an existing fixed server role or a database role. If the specified role does not already exist, a database role of that name is created automatically. Members of either the **sysadmin** (only in SQL Server / Azure SQL Managed Instance) or **db_owner** role have full access to the data in the change tables. All other users must have SELECT permission on all the captured columns of the source table. In addition, when a role is specified, users who are not members of either the **sysadmin** or **db_owner** role must also be members of the specified role.  
+ The purpose of the named role is to control access to the change data. The specified role can be an existing fixed server role or a database role. If the specified role does not already exist, a database role of that name is created automatically. In SQL Server and Azure SQL Managed Instance, members the **sysadmin** have full access to the data in the changed tables. In Azure SQL Database, members of **db_owner** role have full access to the data in the change tables. All other users must have SELECT permission on all the captured columns of the source table. In addition, when a role is specified, users who are not members of either the **sysadmin** or **db_owner** role must also be members of the specified role.  
   
  If you do not want to use a gating role, explicitly set the *\@role_name* parameter to NULL. See the **Enable a Table Without Using a Gating Role** template for an example of enabling a table without a gating role.  
   

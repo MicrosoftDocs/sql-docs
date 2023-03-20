@@ -79,9 +79,9 @@ To modify data in an existing row, select the value you want to change, make you
 
 To add a new row, select **Create New Row** and enter the values you want to add. There are certain data types you cannot add or work with in this context.
 
-- If the column is an identity column, you cannot add a value in that field. You will see the error "Save failed: Can not set value in identity columns <column name>" at the bottom. 
+- If the column is an identity column, you cannot add a value in that field. You will see the error "Save failed: Can not set value in identity columns *column_name*" at the bottom. 
 - Columns with default constraints are not honored. The data editor will not generate the default value, it expects you to enter a value. It is not recommended to use the data editor for tables that have default column constraints. 
-- Computed columns are not calculated. You will see the error "Save failed: Failed to execute query. Error: The column <column name> cannot be modified because it is either a computed column or is the result of a UNION operator." It is not recommended to use the data editor for tables that have computed columns.
+- Computed columns are not calculated. You will see the error "Save failed: Failed to execute query. Error: The column *column_name* cannot be modified because it is either a computed column or is the result of a UNION operator." It is not recommended to use the data editor for tables that have computed columns.
 
 To delete a row of data, select the row and select **Delete Row**.
 
@@ -126,7 +126,7 @@ The following considerations and limitations apply when connecting to and queryi
   - Verify that your computer's clock is set to the right time and time zone. You can try to match your computer's time zone with Azure by searching for the time zone for your database location, such as East US.
   - If you're on a proxy network, make sure that the request header `X-CSRF-Signature` isn't being modified or dropped.
 
-- If your database is serverless and you see the error message "Database *name* on server *name.database.windows.net* is not currently available. Please retry the connection later. If the problem persists, contact customer support, and provide them the session tracing ID <ID>", this indicates your serverless database is currently paused. If this occurs, selecting `Continue as <user@domain>` sends a request to the database to resume. Wait approximately one minute, refresh the page, and try again.
+- If your database is serverless and you see the error message "Database *name* on server *name.database.windows.net* is not currently available. Please retry the connection later. If the problem persists, contact customer support, and provide them the session tracing ID *ID*", this indicates your serverless database is currently paused. If this occurs, selecting `Continue as <user@domain>` sends a request to the database to resume. Wait approximately one minute, refresh the page, and try again.
 
 - If you see the error message "Login failed for user `<token-identified principal>`. The server is not currently configured to accept this token." when you attempt to use AD authentication, your user does not have access to the database.
 

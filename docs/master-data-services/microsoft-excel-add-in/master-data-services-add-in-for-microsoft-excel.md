@@ -19,6 +19,12 @@ If you're an administrator, you can use the [!INCLUDE[ssMDSXLS](../../includes/s
   
 With the [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], you can use Data Quality Services (DQS) to match data before loading it into MDS. This feature helps to prevent duplicate data in MDS.
 
+> [!NOTE]
+> Be aware of the following size limitations when interacting with the workbook in MDS Excel add-in.
+>
+> - Excel on the web has a payload size limit for requests and responses of 5 MB. A `RichAPI.Error` will be thrown if that limit is exceeded.
+> - A range is limited to five million cells for get operations.
+
 ## Downloads
 
 - [Master Data Services Add-in for Excel for SQL Server 2016 SP2](https://www.microsoft.com/download/details.aspx?id=56838).
@@ -74,4 +80,4 @@ When working with the add-in, you might come across the following terms. For mor
 - [Data quality matching in the MDS Add-in for Excel](../../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)  
 - [Building a model &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/building-a-model-mds-add-in-for-excel.md)
 - [Setting properties for Master Data Services Add-in for Excel](../../master-data-services/microsoft-excel-add-in/setting-properties-for-master-data-services-add-in-for-excel.md)  
-- [Security &#40;Master Data Services&#41;](../../master-data-services/security-master-data-services.md)  
+- [Security &#40;Master Data Services&#41;](../../master-data-services/security-master-data-services.md)

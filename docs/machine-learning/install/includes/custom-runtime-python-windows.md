@@ -10,7 +10,7 @@ ms.topic: include
 
 Before installing a Python custom runtime, install:
 
-+ If you use an existing SQL Server instance, install [Cumulative Update (CU) 3 or later](../../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md) for SQL Server 2019.
++ If you use an existing SQL Server instance, install [Cumulative Update (CU) 3 or later](/troubleshoot/sql/releases/download-and-install-latest-updates?bc=%2fsql%2fbreadcrumb%2ftoc.json&toc=%2fsql%2ftoc.json) for SQL Server 2019.
 
 ## Install Language Extensions
 
@@ -43,7 +43,7 @@ Follow the steps below to install [SQL Server Language Extensions](../../../lang
 1. After the setup is complete, restart the machine if you're asked to do so.
 
 > [!IMPORTANT]
-> If you install a new instance of SQL Server 2019 with Language Extensions, then install the [Cumulative Update (CU) 3 or later](../../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md) before you continue to the next step.
+> If you install a new instance of SQL Server 2019 with Language Extensions, then install the [Cumulative Update (CU) 3 or later](/troubleshoot/sql/releases/download-and-install-latest-updates?bc=%2fsql%2fbreadcrumb%2ftoc.json&toc=%2fsql%2ftoc.json) before you continue to the next step.
 
 ## Install Python
 

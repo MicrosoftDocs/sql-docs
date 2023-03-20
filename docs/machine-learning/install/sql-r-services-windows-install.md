@@ -174,7 +174,7 @@ On disconnected servers, extra steps are required. For more information, see [In
 
 1. Start with a baseline instance already installed: SQL Server 2016 initial release, SQL Server 2016 SP 1, or SQL Server 2016 SP 2.
 
-1. Go to the cumulative update list: [Latest updates for Microsoft SQL Server](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
+1. Go to the cumulative update list: [Latest updates for Microsoft SQL Server](/troubleshoot/sql/releases/download-and-install-latest-updates?bc=%2fsql%2fbreadcrumb%2ftoc.json&toc=%2fsql%2ftoc.json)
 
 1. Select the latest service pack (of not already installed as the baseline instance) and cumulative update. An executable is downloaded and extracted automatically.
 

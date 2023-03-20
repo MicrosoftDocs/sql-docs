@@ -181,7 +181,7 @@ The vCPU count can be constrained to one-half to one-quarter of the original VM 
 
 These new VM sizes have a suffix that specifies the number of active vCPUs to make them easier to identify.
 
-For example, the [M64-32ms](/azure/virtual-machines/constrained-vcpu) requires licensing only 32 SQL Server vCores with the memory, I/O, and throughput of the [M64ms](/azure/virtual-machines/m-series) and the [M64-16ms](/azure/virtual-machines/constrained-vcpu) requires licensing only 16 vCores. Though while the [M64-16ms](/azure/virtual-machines/constrained-vcpu) has a quarter of the SQL Server licensing cost of the M64ms, the compute cost of the virtual machines are the same.
+For example, the [M64-32ms](/azure/virtual-machines/constrained-vcpu) requires licensing only 32 SQL Server vCores with the memory, I/O, and throughput of the [M64ms](/azure/virtual-machines/m-series) and the [M64-16ms](/azure/virtual-machines/constrained-vcpu) requires licensing only 16 vCores. Though while the [M64-16ms](/azure/virtual-machines/constrained-vcpu) has a quarter of the SQL Server licensing cost of the M64ms, the compute cost of the virtual machines is the same.
 
 > [!NOTE]  
 >  

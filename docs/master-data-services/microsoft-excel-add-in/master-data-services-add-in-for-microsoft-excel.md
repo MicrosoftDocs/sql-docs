@@ -1,9 +1,9 @@
 ---
-title: Overview
+title: Master Data Services Add-in for Microsoft Excel
 description: Learn how to load data from Master Data Services into Excel, and then publish it back to MDS by using the Master Data Services Add-in for Excel.
 author: CordeliaGrey
 ms.author: jiwang6
-ms.date: 03/13/2023
+ms.date: 03/20/2023
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: conceptual
@@ -29,7 +29,8 @@ With the [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], you can use Data Q
 
 - [Master Data Services Add-in for Excel for SQL Server 2016 SP2](https://www.microsoft.com/download/details.aspx?id=56838).
 - [[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] for SQL Server 2017](https://go.microsoft.com/fwlink/?linkid=836867).
-- [Master Data Services Add-in for Excel for SQL Server 2019 CTP](https://go.microsoft.com/fwlink/?linkid=2086948).
+- [Master Data Services Add-in for Excel for SQL Server 2019](https://go.microsoft.com/fwlink/?linkid=2086948).
+- [Master Data Services Add-in for Excel for SQL Server 2022](https://www.microsoft.com/download/details.aspx?id=104535).
 
 > [!NOTE]
 > The Master Data Services Add-in for Excel requires the Office Automation Security to be set to one of the following:
@@ -79,4 +80,4 @@ When working with the add-in, you might come across the following terms. For mor
 - [Data quality matching in the MDS Add-in for Excel](../../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)  
 - [Building a model &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/building-a-model-mds-add-in-for-excel.md)
 - [Setting properties for Master Data Services Add-in for Excel](../../master-data-services/microsoft-excel-add-in/setting-properties-for-master-data-services-add-in-for-excel.md)  
-- [Security &#40;Master Data Services&#41;](../../master-data-services/security-master-data-services.md)  
+- [Security &#40;Master Data Services&#41;](../../master-data-services/security-master-data-services.md)

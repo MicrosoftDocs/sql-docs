@@ -31,7 +31,7 @@ You need to install a Cumulative Update (CU) to change the default R or Python l
 - **SQL Server 2016:** Services Pack (SP) 2 Cumulative Update (CU) 14 or later
 - **SQL Server 2017:** Cumulative Update (CU) 22 or later
 
-To download the latest Cumulative Update, see the [Latest updates for Microsoft SQL Server](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md).
+To download the latest Cumulative Update, see the [Latest updates for Microsoft SQL Server](/troubleshoot/sql/releases/download-and-install-latest-updates?bc=%2fsql%2fbreadcrumb%2ftoc.json&toc=%2fsql%2ftoc.json).
 
 > [!NOTE]
 > If you slipstream the Cumulative Update with a new installation of SQL Server, only the newest versions of the R and Python runtime will be installed.

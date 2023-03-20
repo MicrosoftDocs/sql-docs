@@ -4,7 +4,7 @@ description: This article contains the release notes and supported features for 
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
-ms.date: 02/24/2023
+ms.date: 03/15/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -42,20 +42,20 @@ This section lists the latest versions of each package per distribution, for [!I
 | Distribution | Package name | Package version | Download |
 | --- | --- | --- | --- |
 | **Red Hat Enterprise Linux** | | | |
-| RHEL 8 | Database Engine | 15.0.4298.1-1 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-15.0.4298.1-1.x86_64.rpm) |
-| RHEL 8 | Extensibility | 15.0.4298.1-1 | [Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-15.0.4298.1-1.x86_64.rpm) |
-| RHEL 8 | Full-Text Search | 15.0.4298.1-1 | [Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-fts-15.0.4298.1-1.x86_64.rpm) |
-| RHEL 8 | High Availability | 15.0.4298.1-1 | [High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-ha-15.0.4298.1-1.x86_64.rpm) |
-| RHEL 8 | Java Extensibility | 15.0.4298.1-1 | [Java Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-java-15.0.4298.1-1.x86_64.rpm) |
-| RHEL 8 | PolyBase | 15.0.4298.1-1 | [PolyBase RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-polybase-15.0.4298.1-1.x86_64.rpm) |
-| RHEL 8 | SSIS | 15.0.4063.15-88 | [SSIS RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-is-15.0.4063.15-88.x86_64.rpm) |
+| RHEL 8 | Database Engine | 15.0.4298.1-1 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/Packages/m/mssql-server-15.0.4298.1-1.x86_64.rpm) |
+| RHEL 8 | Extensibility | 15.0.4298.1-1 | [Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/Packages/m/mssql-server-extensibility-15.0.4298.1-1.x86_64.rpm) |
+| RHEL 8 | Full-Text Search | 15.0.4298.1-1 | [Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/Packages/m/mssql-server-fts-15.0.4298.1-1.x86_64.rpm) |
+| RHEL 8 | High Availability | 15.0.4298.1-1 | [High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/Packages/m/mssql-server-ha-15.0.4298.1-1.x86_64.rpm) |
+| RHEL 8 | Java Extensibility | 15.0.4298.1-1 | [Java Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/Packages/m/mssql-server-extensibility-java-15.0.4298.1-1.x86_64.rpm) |
+| RHEL 8 | PolyBase | 15.0.4298.1-1 | [PolyBase RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/Packages/m/mssql-server-polybase-15.0.4298.1-1.x86_64.rpm) |
+| RHEL 8 | SSIS | 15.0.4063.15-88 | [SSIS RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/Packages/m/mssql-server-is-15.0.4063.15-88.x86_64.rpm) |
 | **SUSE Enterprise Linux Server** | | | |
-| SLES 15 | Database Engine | 15.0.4298.1-1 | [Database Engine RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-15.0.4298.1-1.x86_64.rpm) |
-| SLES 15 | Extensibility | 15.0.4298.1-1 | [Extensibility RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-extensibility-15.0.4298.1-1.x86_64.rpm) |
-| SLES 15 | Full-Text Search | 15.0.4298.1-1 | [Full-Text Search RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-fts-15.0.4298.1-1.x86_64.rpm) |
-| SLES 15 | High Availability | 15.0.4298.1-1 | [High Availability RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-ha-15.0.4298.1-1.x86_64.rpm) |
-| SLES 15 | Java Extensibility | 15.0.4298.1-1 | [Java Extensibility RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-extensibility-java-15.0.4298.1-1.x86_64.rpm) |
-| SLES 15 | PolyBase | 15.0.4298.1-1 | [PolyBase RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-polybase-15.0.4298.1-1.x86_64.rpm) |
+| SLES 15 | Database Engine | 15.0.4298.1-1 | [Database Engine RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/Packages/m/mssql-server-15.0.4298.1-1.x86_64.rpm) |
+| SLES 15 | Extensibility | 15.0.4298.1-1 | [Extensibility RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/Packages/m/mssql-server-extensibility-15.0.4298.1-1.x86_64.rpm) |
+| SLES 15 | Full-Text Search | 15.0.4298.1-1 | [Full-Text Search RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/Packages/m/mssql-server-fts-15.0.4298.1-1.x86_64.rpm) |
+| SLES 15 | High Availability | 15.0.4298.1-1 | [High Availability RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/Packages/m/mssql-server-ha-15.0.4298.1-1.x86_64.rpm) |
+| SLES 15 | Java Extensibility | 15.0.4298.1-1 | [Java Extensibility RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/Packages/m/mssql-server-extensibility-java-15.0.4298.1-1.x86_64.rpm) |
+| SLES 15 | PolyBase | 15.0.4298.1-1 | [PolyBase RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/Packages/m/mssql-server-polybase-15.0.4298.1-1.x86_64.rpm) |
 | **Ubuntu** | | | |
 | Ubuntu 20.04 | Database Engine | 15.0.4298.1-1 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server/mssql-server_15.0.4298.1-1_amd64.deb) |
 | Ubuntu 20.04 | Extensibility | 15.0.4298.1-1 | [Extensibility Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.4298.1-1_amd64.deb) |

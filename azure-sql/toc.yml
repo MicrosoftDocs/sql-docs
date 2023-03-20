@@ -1022,8 +1022,6 @@
       items:
       - name: Service-aided subnet configuration
         href: managed-instance/subnet-service-aided-configuration-enable.md
-      - name: Public endpoint
-        href: managed-instance/public-endpoint-configure.md
       - name: Minimal TLS version
         href: managed-instance/minimal-tls-version-configure.md
       - name: Client VM connection
@@ -1367,6 +1365,10 @@
         href: managed-instance/vnet-existing-add-subnet.md
       - name: Configure service endpoint policies for SQL MI
         href: managed-instance/service-endpoint-policies-configure.md
+      - name: Configure public endpoint
+        href: managed-instance/public-endpoint-configure.md
+      - name: Configure private endpoint
+        href: managed-instance/private-endpoint-overview.md
       - name: Move SQL MI to another subnet
         href: managed-instance/vnet-subnet-move-instance.md
       - name: Delete subnet after deleting SQL MI

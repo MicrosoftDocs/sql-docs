@@ -16,7 +16,7 @@ tags: azure-service-management
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
 > [!TIP]
-> Eliminate the need for an Azure load balancer for your Always On availability group by creating your SQL Server virtual machines (VMs) in [multiple subnets](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md) within the same Azure virtual network.
+> There are many [methods to deploy an availability group](availability-group-overview.md#deployment-options). Simplify your deployment and eliminate the need for an Azure load balancer or distributed network name (DNN) for your Always On availability group by creating your SQL Server virtual machines (VMs) in [multiple subnets](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md) within the same Azure virtual network.
 
 This tutorial shows how to create an Always On availability group for SQL Server on Azure VMs within a single subnet. The complete tutorial creates an availability group with a database replica on two SQL Server instances.
 
@@ -456,7 +456,7 @@ To configure the load balancer, you need to create a backend pool, create a prob
    | **Health Probe** |The name that you specified for the probe | **SQLAlwaysOnEndPointProbe** |
    | **Session Persistence** | Dropdown list | **None** |
    | **Idle Timeout** | Minutes to keep a TCP connection open | **4** |
-   | **Floating IP (direct server return)** | |**Enabled** |
+   | **Floating IP (direct server return)** |A flow topology and an IP address mapping scheme |**Enabled** |
 
    > [!WARNING]
    > Direct server return is set during creation. You can't change it.
@@ -497,7 +497,7 @@ The IP address for the Windows Server failover cluster also needs to be on the l
    | **Probe** |The name that you specified for the probe | **WSFCEndPointProbe** |
    | **Session Persistence** | Dropdown list | **None** |
    | **Idle Timeout** | Minutes to keep a TCP connection open | **4** |
-   | **Floating IP (direct server return)** | |**Enabled** |
+   | **Floating IP (direct server return)** |A flow topology and an IP address mapping scheme |**Enabled** |
 
    > [!WARNING]
    > Direct server return is set during creation. You can't change it.

@@ -34,7 +34,7 @@ If you reached this page because you're having trouble connecting to [!INCLUDE[s
   
 - [Connect to Any SQL Server Component from SQL Server Management Studio](../../ssms/f1-help/connect-to-any-sql-server-component-from-sql-server-management-studio.md)
   
-- [Connect to the Database Engine With sqlcmd](../../ssms/scripting/sqlcmd-connect-to-the-database-engine.md)
+- [Connect to the Database Engine With sqlcmd](../../tools/sqlcmd/sqlcmd-connect-database-engine.md)
   
 - [How to Troubleshoot Connecting to the SQL Server Database Engine](/troubleshoot/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection)
 
@@ -93,4 +93,4 @@ For more information, see [Server Configuration Options &#40;SQL Server&#41;](..
 
 - [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)
 - [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)
-- [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
+- [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)

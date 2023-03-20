@@ -2,7 +2,7 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 03/02/2023
+ms.date: 03/07/2023
 ms.topic: include
 ---
 | Error| Severity | Event logged | Description|
@@ -1227,6 +1227,9 @@ ms.topic: include
 | 37532 | 16 | No | Ledger table '%.\*ls' cannot contain check constraints, filtered indexes and statistics or computed columns that reference columns using a multi-part identifier. |
 | 37533 | 16 | No | Computed column '%.\*ls' cannot be added to ledger table '%.\*ls'. Ledger tables do not support computed columns that use CLR functions or types. |
 | 37534 | 16 | No | Error while trying to read database information from master metadata. Transaction is not active anymore. |
+| 37536 | 16 | Yes | Internal error occurred while obtaining version information from IMDS endpoint. Substate: '%ls', status: 0x%08x. |
+| 37537 | 16 | Yes | Internal error occurred while obtaining version information from IMDS endpoint. Error code: '%ls'. Error message: '%ls'. Return code: '0x%08x'. |
+| 37538 | 16 | Yes | Internal error occurred while obtaining version information from IMDS endpoint. Return code: '0x%08x'. |
 | 38001 | 16 | No | Cannot find the file id %d in the database '%s'. |
 | 38002 | 16 | No | Only users having %s permission can execute this stored procedure. |
 | 39001 | 16 | No | Only SELECT statement is supported for input data query to 'sp_execute_external_script' stored procedure. |
@@ -1249,7 +1252,7 @@ ms.topic: include
 | 39018 | 16 | No | Parameter '%.\*ls' uses a data type that is not supported by the runtime for '%.\*s' script. Unsupported types are timestamp, datetime2, datetimeoffset, time, text, ntext, image, hierarchyid, xml, sql_variant and user-defined type. External script request id is %ls. |
 | 39019 | 10 | No | An external script error occurred: %.\*ls%.\*ls |
 | 39020 | 16 | No | Feature 'Advanced Analytics Extensions' is not installed. Please consult Books Online for more information on this feature. |
-| 39021 | 16 | No | Unable to launch runtime for '%.\*s' script for request id: %ls. Please check the configuration of the '%.\*s' runtime. See '[https://learn.microsoft.com/sql/machine-learning/install/sql-machine-learning-services-windows-install-sql-2022](/sql/machine-learning/install/sql-machine-learning-services-windows-install-sql-2022)' for setup instructions. |
+| 39021 | 16 | No | Unable to launch runtime for '%.\*s' script for request id: %ls. Please check the configuration of the '%.\*s' runtime. See '[https://learn.microsoft.com/sql/machine-learning/install/sql-machine-learning-services-windows-install-sql-2022](../../../machine-learning/install/sql-machine-learning-services-windows-install-sql-2022.md)' for setup instructions. |
 | 39022 | 10 | No | STDERR message(s) from external script: %.\*ls%.\*ls |
 | 39023 | 16 | No | 'sp_execute_external_script' is disabled on this instance of SQL Server. Use sp_configure 'external scripts enabled' to enable it. |
 | 39024 | 16 | No | Parallel execution of 'sp_execute_external_script' failed. Specify WITH RESULT SETS clause with output schema. |

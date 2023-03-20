@@ -176,7 +176,7 @@ Error Message: Failed to run one or more assessment components with an unknown e
 
 Possible causes: An unknown internal error has occurred.
 
-Remediation actions: Try to create a new assessment. To investigate further, go through the [log](/sql/azure-data-studio/extensions/database-migration-assessment-for-oracle-extension) to understand the reason for the error. If the issue persists, [contact Microsoft for help](azure-postgresql-migration-extension.md#get-help-from-microsoft-support).
+Remediation actions: Try to create a new assessment. To investigate further, go through the [log](./database-migration-assessment-for-oracle-extension.md) to understand the reason for the error. If the issue persists, [contact Microsoft for help](azure-postgresql-migration-extension.md#get-help-from-microsoft-support).
 
 ### Error Code: GE-1002
 
@@ -216,7 +216,7 @@ Error Message: Failed to process the performance data.
 
 Possible causes: This Error occurred during the collection of PostgreSQL performance data.
 
-Remediation actions: Try to create a new assessment. To investigate further, go through the [log](/sql/azure-data-studio/extensions/database-migration-assessment-for-oracle-extension) to understand the reason for the error. If the issue persists, [contact Microsoft for help](azure-postgresql-migration-extension.md#get-help-from-microsoft-support).
+Remediation actions: Try to create a new assessment. To investigate further, go through the [log](./database-migration-assessment-for-oracle-extension.md) to understand the reason for the error. If the issue persists, [contact Microsoft for help](azure-postgresql-migration-extension.md#get-help-from-microsoft-support).
 
 ### Error Code: PGSQLA-1000
 

@@ -13,12 +13,12 @@ monikerRange: "= azuresql || = azuresql-db"
 
 # Connect to and query Azure SQL Database using .NET and Entity Framework Core
 
-This quickstart describes how to connect an application to a database in Azure SQL Database and perform queries using .NET and Entity Framework Core. You will also learn how to use passwordless connections to query the database without the use of connection strings. You can learn more about passwordless connections on the [passwordless hub](/azure/developer/intro/passwordless-overview).
+This quickstart describes how to connect an application to a database in Azure SQL Database and perform queries using .NET and Entity Framework Core. This quickstart follows the recommended passwordless approach to connect to the database. You can learn more about passwordless connections on the [passwordless hub](/azure/developer/intro/passwordless-overview).
 
 ## Prerequisites
 
 * An [Azure subscription](https://azure.microsoft.com/free/dotnet/).
-* A SQL database configured with Azure Active Directory (Azure AD) authentication. You can create one using the [Create database quickstart](/azure/azure-sql/database/single-database-create-quickstart).
+* A SQL database configured with Azure Active Directory (Azure AD) authentication. You can create one using the [Create database quickstart](./single-database-create-quickstart.md).
 * [.NET 7.0](https://dotnet.microsoft.com/download) or later.
 * [Visual Studio](https://visualstudio.microsoft.com/vs/) or later with the **ASP.NET and web development** workload.
 * The latest version of the [Azure CLI](/cli/azure/get-started-with-azure-cli).
@@ -28,17 +28,7 @@ This quickstart describes how to connect an application to a database in Azure S
 
 ## Configure the database server
 
-Secure, passwordless connections to Azure SQL Database with .NET require certain database configurations. Verify the following settings on your [logical server in Azure](logical-servers.md) to properly connect to Azure SQL Database in both local and hosted environments:
-
-1) For local development connections, make sure your logical server has a firewall rule enabled to allow your client IP address to connect. You can configure firewall rules on the **Networking** page of your server by selecting **Add your client IPv4 address(xx.xx.xx.xx)**.
-
-    :::image type="content" source="media/passwordless-connections/configure-firewall-small.png" lightbox="media/passwordless-connections/configure-firewall.png" alt-text="A screenshot showing how to configure firewall rules.":::
-
-1) The server must also have Azure AD authentication enabled with an Azure Active Directory admin account assigned. For local development connections, the Azure Active Directory admin account should be an account you can also log into Visual Studio or the Azure CLI with locally. You can verify whether your server has Azure AD authentication enabled on the **Azure Active Directory** page.
-
-    :::image type="content" source="media/passwordless-connections/enable-active-directory-small.png" lightbox="media/passwordless-connections/enable-active-directory.png" alt-text="A screenshot showing how to enable Active Directory authentication.":::
-
-1) If you're using a personal Azure account, make sure you have [Azure Active Directory setup and configured for Azure SQL Database](/azure/azure-sql/database/authentication-aad-configure) in order to assign your account as a server admin. If you're using a corporate account, Azure Active Directory will most likely already be configured for you.
+[!INCLUDE [passwordless-configure-server-networking](../includes/passwordless-configure-server-networking.md)]
 
 ## Create the project
 
@@ -338,9 +328,9 @@ The Azure portal allows you to work with managed identities and run queries agai
 >
 > You can read more about configuring database roles and security on the following resources:
 >
-> [Tutorial: Secure a database in Azure SQL Database](/azure/azure-sql/database/secure-database-tutorial)
+> [Tutorial: Secure a database in Azure SQL Database](./secure-database-tutorial.md)
 >
-> [Authorize database access to SQL Database](/azure/azure-sql/database/logins-create-manage)
+> [Authorize database access to SQL Database](./logins-create-manage.md)
 
 ## Test the deployed application
 
@@ -350,7 +340,7 @@ The person you created locally should display in the browser. Congratulations! Y
 
 ## Next steps
 
-- [Tutorial: Secure a database in Azure SQL Database](/azure/azure-sql/database/secure-database-tutorial)
-- [Authorize database access to SQL Database](/azure/azure-sql/database/logins-create-manage)
+- [Tutorial: Secure a database in Azure SQL Database](./secure-database-tutorial.md)
+- [Authorize database access to SQL Database](./logins-create-manage.md)
 - [An overview of Azure SQL Database security capabilities](security-overview.md)
 - [Azure SQL Database security best practices](security-best-practice.md)

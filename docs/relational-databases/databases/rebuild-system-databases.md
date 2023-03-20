@@ -189,7 +189,7 @@ If the `tempdb` database is damaged or suspect and the database engine fails to 
    sqlservr -c -f -T3608 -T4022 -s <instance> -mSQLCMD
    ```
 
-   For a default instance name use `MSSQLSERVER`, for named instance use `MSSQL$<instance_name>`. Trace flag 4022 disables execution of startup stored procedures. The `-mSQLCMD` allows only [sqlcmd.exe](../../ssms/scripting/sqlcmd-use-the-utility.md) to connect to the server. For more information, see [Other Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md#other-startup-options).
+   For a default instance name use `MSSQLSERVER`, for named instance use `MSSQL$<instance_name>`. Trace flag 4022 disables execution of startup stored procedures. The `-mSQLCMD` allows only [sqlcmd.exe](../../tools/sqlcmd/sqlcmd-use-utility.md) to connect to the server. For more information, see [Other Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md#other-startup-options).
 
    > [!NOTE]  
    > Make sure that the command prompt window remains open after the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] starts. Closing the command prompt window will terminate the process.

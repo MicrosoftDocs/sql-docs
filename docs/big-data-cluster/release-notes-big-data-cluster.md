@@ -5,7 +5,7 @@ description: This article describes the latest updates and known issues for SQL 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei, randolphwest
-ms.date: 03/07/2023
+ms.date: 03/16/2023
 ms.service: sql
 ms.subservice: big-data-cluster
 ms.topic: conceptual
@@ -14,8 +14,7 @@ ms.topic: conceptual
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-> [!IMPORTANT]  
-> The Microsoft SQL Server 2019 Big Data Clusters add-on will be retired. Support for SQL Server 2019 Big Data Clusters will end on January 14, 2025. All existing users of SQL Server 2019 with Software Assurance will be fully supported on the platform and the software will continue to be maintained through SQL Server cumulative updates until that time. For more information, see [the announcement blog post](https://aka.ms/sqlserver_bigdataclusters) and [Big data options on the Microsoft SQL Server platform](../big-data-cluster/big-data-options.md).
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 The following release notes apply to [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)]. This article is broken into sections for each release describing the CU changes. The article also lists [known issues](#known-issues) for the most recent releases of [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)].
 
@@ -62,8 +61,8 @@ The following table lists the release history for [!INCLUDE[ssbigdataclusters-ve
 
 | Release <sup>1</sup> | [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] version | [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] version <sup>2</sup> | Release date |
 | --- | --- | --- | --- |
-| CU19 [KB 5023049](https://support.microsoft.com/help/5023049) | 15.0.4298.1 | 20.3.12 | February 16 2023 |
-| CU18 GDR [KB KB5021124](https://support.microsoft.com/help/5021124) | 15.0.4280.7 | 20.3.12 | February 14 2023 |
+| [CU19](release-notes-cumulative-update-19.md) | 15.0.4298.1 | 20.3.12 | February 16 2023 |
+| CU18 GDR [KB 5021124](https://support.microsoft.com/help/5021124) | 15.0.4280.7 | 20.3.12 | February 14 2023 |
 | [CU18](release-notes-cumulative-update-18.md) | 15.0.4261.1 | 20.3.12 | September 28 2022 |
 | [CU17](release-notes-cumulative-update-17.md) | 15.0.4249.2 | 20.3.12 | August 11 2022 |
 | CU16 GDR [KB 5014356](https://support.microsoft.com/help/5014356) | 15.0.4236.7 | 20.3.12 | June 14 2022 |

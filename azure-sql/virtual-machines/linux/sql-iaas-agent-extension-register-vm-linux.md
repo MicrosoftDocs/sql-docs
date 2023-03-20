@@ -106,7 +106,7 @@ Register a SQL Server VM in lightweight mode with Azure PowerShell:
 $vm = Get-AzVM -Name <vm_name> -ResourceGroupName <resource_group_name>
 # Register SQL VM with 'Lightweight' SQL IaaS agent
 New-AzSqlVM -Name $vm.Name -ResourceGroupName $vm.ResourceGroupName -Location $vm.Location `
-  -LicenseType <license_type>  -SqlManagementType LightWeight  
+  -LicenseType <license_type> 
 ```
 
 ---

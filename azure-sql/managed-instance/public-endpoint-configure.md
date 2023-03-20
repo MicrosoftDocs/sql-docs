@@ -1,5 +1,5 @@
 ---
-title: Configure public endpoint - Azure SQL Managed Instance
+title: Configure public endpoint
 description: "Learn how to configure a public endpoint for Azure SQL Managed Instance"
 author: zoran-rilak-msft
 ms.author: zoranrilak
@@ -15,9 +15,9 @@ ms.custom:
 # Configure public endpoint in Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-Public endpoint for a [managed instance](./sql-managed-instance-paas-overview.md) enables data access to your managed instance from outside the [virtual network](/azure/virtual-network/virtual-networks-overview). You are able to access your managed instance from multi-tenant Azure services like Power BI, Azure App Service, or an on-premises network. By using the public endpoint on a managed instance, you do not need to use a VPN, which can help avoid VPN throughput issues.
+Public endpoint for a [managed instance](./sql-managed-instance-paas-overview.md) enables data access to your managed instance from outside the [virtual network](/azure/virtual-network/virtual-networks-overview). You're able to access your managed instance from multi-tenant Azure services like Power BI, Azure App Service, or an on-premises network. By using the public endpoint on a managed instance, you don't need to use a VPN, which can help avoid VPN throughput issues.
 
-In this article, you'll learn how to:
+In this article, you learn how to:
 
 > [!div class="checklist"]
 >
@@ -69,7 +69,7 @@ $mi = $mi | Set-AzSqlInstance -PublicDataEndpointEnabled $true -force
 
 ### Disable public endpoint
 
-To disable the public endpoint using PowerShell, you would execute the following command (and also do not forget to close the NSG for the inbound port 3342 if you have it configured):
+To disable the public endpoint using PowerShell, you would execute the following command (and also don't forget to close the NSG for the inbound port 3342 if you've configured it):
 
 ```powershell
 Set-AzSqlInstance -PublicDataEndpointEnabled $false -force
@@ -107,7 +107,7 @@ Set-AzSqlInstance -PublicDataEndpointEnabled $false -force
 ## Obtaining the managed instance public endpoint connection string
 
 1. Navigate to the managed instance configuration page that has been enabled for public endpoint. Select the **Connection strings** tab under the **Settings** configuration.
-1. Note that the public endpoint host name comes in the format <mi_name>.**public**.<dns_zone>.database.windows.net and that the port used for the connection is 3342. Here's an example of a server value of the connection string denoting the public endpoint port that can be used in SQL Server Management Studio or Azure Data Studio connections: `<mi_name>.public.<dns_zone>.database.windows.net,3342`
+1. The public endpoint host name comes in the format <mi_name>.**public**.<dns_zone>.database.windows.net and that the port used for the connection is 3342. Here's an example of a server value of the connection string denoting the public endpoint port that can be used in SQL Server Management Studio or Azure Data Studio connections: `<mi_name>.public.<dns_zone>.database.windows.net,3342`
 
     ![Screenshot shows the connection strings for your public and VNet-local endpoints.](./media/public-endpoint-configure/mi-public-endpoint-conn-string.png)
 

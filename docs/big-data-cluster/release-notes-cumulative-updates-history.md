@@ -24,7 +24,16 @@ Cumulative Update 19 (CU19) release for [!INCLUDE[sssql19-md](../includes/sssql1
 
 | Package version | Image tag | Contents |
 | --- | --- | --- |
-| 15.0.4298.1 | [2019-CU19-ubuntu-20.04] |
+| 15.0.4298.1 | [2019-CU19-ubuntu-20.04] | [SQL Server Big Data Clusters Cumulative Update 19](release-notes-cumulative-update-19.md) |
+
+## <a id="cu18GDR"></a> CU18 GDR (February 2023)
+
+Cumulative Update 18 (CU18) GDR release for [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] Big Data Clusters, [KB 5021124](https://support.microsoft.com/help/5021124).
+
+| Package version | Image tag | Contents |
+| --- | --- | --- |
+| 15.0.4261.1 | [2019-CU18-ubuntu-20.04] | [SQL Server Big Data Clusters Cumulative Update 18](release-notes-cumulative-update-18.md) |
+
 
 ## <a id="cu18"></a> CU18 (September 2022)
 

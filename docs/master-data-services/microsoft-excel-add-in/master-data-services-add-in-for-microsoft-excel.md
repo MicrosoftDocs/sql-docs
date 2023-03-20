@@ -1,9 +1,9 @@
 ---
-title: Overview
+title: Master Data Services Add-in for Microsoft Excel
 description: Learn how to load data from Master Data Services into Excel, and then publish it back to MDS by using the Master Data Services Add-in for Excel.
 author: CordeliaGrey
 ms.author: jiwang6
-ms.date: 07/25/2017
+ms.date: 03/20/2023
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: conceptual
@@ -23,7 +23,8 @@ With the [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], you can use Data Q
 
 - [Master Data Services Add-in for Excel for SQL Server 2016 SP2](https://www.microsoft.com/download/details.aspx?id=56838).
 - [[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] for SQL Server 2017](https://go.microsoft.com/fwlink/?linkid=836867).
-- [Master Data Services Add-in for Excel for SQL Server 2019 CTP](https://go.microsoft.com/fwlink/?linkid=2086948).
+- [Master Data Services Add-in for Excel for SQL Server 2019](https://go.microsoft.com/fwlink/?linkid=2086948).
+- [Master Data Services Add-in for Excel for SQL Server 2022](https://www.microsoft.com/download/details.aspx?id=104535).
 
 > [!NOTE]
 > The Master Data Services Add-in for Excel requires the Office Automation Security to be set to one of the following:

@@ -232,7 +232,7 @@ BEGIN
     BEGIN
         select 'The oldest page on the database might be older than the checkpoint log sequence number (LSN). In this case, the oldest page can delay log truncation.' as Finding
         select 'This state should be short-lived, but if you find it is taking a long time, you can consider disabling Indirect Checkpoint temporarily' as Recommendation
-        select 'ALTER DATABASE [' +@dbname+ '] SET TARGET_RECOVERY_TIME = 0' as DisableIndirectCheckpointTemporarily
+        select 'ALTER DATABASE [' +@dbname+ '] SET TARGET_RECOVERY_TIME = 0 SECONDS' as DisableIndirectCheckpointTemporarily
     END    
     else if (@log_reuse_wait = 16)
     BEGIN

@@ -37,7 +37,20 @@ The Windows audit policy can affect [!INCLUDE[ssNoVersion](../../../includes/ssn
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
  Administrators of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] computer should understand that local settings for the Security log can be overwritten by a domain policy. In this case, the domain policy might overwrite the subcategory setting (**auditpol /get /subcategory:"application generated"**). This can affect [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ability to log events without having any way to detect that the events that [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is trying to audit are not going to be recorded.  
-  
+ 
+> [!WARNING]
+> SQL Audit records contain significantly more data than regular Windows Event log entries. In addition, depending on the configuration of the SQL Audit specification, SQL Server may generate many thousands of audit records in a very short period of time (thousands per second). 
+> Under periods of high load, this may result in adverse impact if the audit records are written to either the Application Event Log or the Security Event Log.  
+> 
+> These adverse impacts may include:
+> 1. Rapid cycling of the event log (events are overwritten very quickly as the log file reaches its size limit)
+> 2. Other applications or services that read from the Windows event log may be negatively impacted
+> 3. The targeted event log may be unusable by administrators due to events being overwritten so quickly
+> 
+> Steps that administrators may take to mitigate these adverse conditions:
+> 1. Increase the size of the target log (4 GB is not unreasonable when the audit specification is very detailed
+> 2. Reduce the number of events being audited
+
 ###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> Permissions  

@@ -5,7 +5,7 @@ description: Links to Azure SQL Database quickstarts showing how to connect to a
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: wiassaf, mathoma
-ms.date: 01/16/2023
+ms.date: 03/20/2023
 ms.service: sql-database
 ms.subservice: connect
 ms.topic: conceptual
@@ -23,8 +23,8 @@ The following document includes links to Azure examples showing how to connect a
 | Quickstart | Description |
 | --- | --- |
 | [SQL Server Management Studio](connect-query-ssms.md) | This quickstart demonstrates how to use SSMS to connect to a database, and then use Transact-SQL statements to query, insert, update, and delete data in the database. |
-| [Azure Data Studio](/sql/azure-data-studio/quickstart-sql-database?toc=%2fazure%2fsql-database%2ftoc.json) | This quickstart demonstrates how to use Azure Data Studio to connect to a database, and then use Transact-SQL (T-SQL) statements to create the TutorialDB used in Azure Data Studio tutorials. |
-| [Azure portal](connect-query-portal.md) | This quickstart demonstrates how to use the Query editor to connect to a database (Azure SQL Database only), and then use Transact-SQL statements to query, insert, update, and delete data in the database. |
+| [Azure Data Studio](/sql/azure-data-studio/quickstart-sql-database?toc=%2fazure%2fsql-database%2ftoc.json) | This quickstart demonstrates how to use Azure Data Studio to connect to a database, and then use Transact-SQL (T-SQL) statements to create the `TutorialDB` used in Azure Data Studio tutorials. |
+| [Azure portal](connect-query-portal.md) | This quickstart demonstrates how to use the [query editor](query-editor.md) to connect to a database (Azure SQL Database only), and then use Transact-SQL statements to query, insert, update, and delete data in the database. |
 | [Visual Studio Code](connect-query-vscode.md) | This quickstart demonstrates how to use Visual Studio Code to connect to a database, and then use Transact-SQL statements to query, insert, update, and delete data in the database. |
 | [.NET with Visual Studio](connect-query-dotnet-visual-studio.md) | This quickstart demonstrates how to use the .NET framework to create a C# program with Visual Studio to connect to a database and use Transact-SQL statements to query data. |
 | [.NET core](connect-query-dotnet-core.md) | This quickstart demonstrates how to use .NET Core on Windows/Linux/macOS to create a C# program to connect to a database and use Transact-SQL statements to query data. |

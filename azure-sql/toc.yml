@@ -160,6 +160,8 @@
     items:
     - name: Connect and query from apps
       items:
+      - name: Connect and query
+        href: database/connect-query-content-reference-guide.md
       - name: .NET with Visual Studio
         href: database/connect-query-dotnet-visual-studio.md
       - name: .NET with Windows, Linux, and macOS
@@ -578,7 +580,6 @@
     - name: Plan and manage costs 
       href: database/cost-management.md      
     - name: Connect and query
-      href: database/connect-query-content-reference-guide.md
       items:
       - name: Connect and run ad-hoc queries
         items:

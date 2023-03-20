@@ -72,7 +72,7 @@ To discover what is preventing log truncation in a given case, use the `log_reus
 The following set of T-SQL commands will help you identify if a database transaction log isn't truncated and the reason for it. The following script will also recommend steps to resolve the issue:
 
 
-```tsql
+```sql
 SET NOCOUNT ON
 DECLARE @SQL VARCHAR (8000), @log_reuse_wait tinyint, @log_reuse_wait_desc nvarchar(120), @dbname sysname, @database_id int, @recovery_model_desc varchar (24)
 
@@ -220,7 +220,7 @@ BEGIN
     BEGIN
         select 'Always On transactions still undelivered from primary database ''' +@dbname+ ''' to Secondary replicas. Check the Health of AG nodes and if there is latency is Log block movement to Secondaries' as Recommendation
         select 'select availability_group=cast(ag.name as varchar(30)), primary_replica=cast(ags.primary_replica as varchar(30)),primary_recovery_health_desc=cast(ags.primary_recovery_health_desc as varchar(30)), synchronization_health_desc=cast(ags.synchronization_health_desc as varchar(30)),ag.failure_condition_level, ag.health_check_timeout, automated_backup_preference_desc=cast(ag.automated_backup_preference_desc as varchar(10))  from sys.availability_groups ag join sys.dm_hadr_availability_group_states ags on ag.group_id=ags.group_id' as CheckAGHealth
-        select 'SELECT  group_name=cast(arc.group_name as varchar(30)), replica_server_name=cast(arc.replica_server_name as varchar(30)), node_name=cast(arc.node_name as varchar(30)),role_desc=cast(ars.role_desc as varchar(30)), ar.availability_mode_Desc, operational_state_desc=cast(ars.operational_state_desc as varchar(30)), connected_state_desc=cast(ars.connected_state_desc as varchar(30)), recovery_health_desc=cast(ars.recovery_health_desc as varchar(30)), synhcronization_health_desc=cast(ars.synchronization_health_desc as varchar(30)), ars.last_connect_error_number, last_connect_error_description=cast(ars.last_connect_error_description as varchar(30)), ars.last_connect_error_timestamp, primary_role_allow_connections_desc=cast(ar.primary_role_allow_connections_desc as varchar(30)) from sys.dm_hadr_availability_replica_cluster_nodes arc join sys.dm_hadr_availability_replica_cluster_states arcs on arc.replica_server_name=arcs.replica_server_name join sys.dm_hadr_availability_replica_states ars on arcs.replica_id=ars.replica_id join sys.availability_replicas ar on ars.replica_id=ar.replica_id join sys.availability_groups ag on ag.group_id = arcs.group_id and ag.name = arc.group_name ORDER BY cast(arc.group_name as varchar(30)), cast(ars.role_desc as varchar(30))' as CheckReplicaHealth
+        select 'SELECT  group_name=cast(arc.group_name as varchar(30)), replica_server_name=cast(arc.replica_server_name as varchar(30)), node_name=cast(arc.node_name as varchar(30)),role_desc=cast(ars.role_desc as varchar(30)), ar.availability_mode_Desc, operational_state_desc=cast(ars.operational_state_desc as varchar(30)), connected_state_desc=cast(ars.connected_state_desc as varchar(30)), recovery_health_desc=cast(ars.recovery_health_desc as varchar(30)), synchronization_health_desc=cast(ars.synchronization_health_desc as varchar(30)), ars.last_connect_error_number, last_connect_error_description=cast(ars.last_connect_error_description as varchar(30)), ars.last_connect_error_timestamp, primary_role_allow_connections_desc=cast(ar.primary_role_allow_connections_desc as varchar(30)) from sys.dm_hadr_availability_replica_cluster_nodes arc join sys.dm_hadr_availability_replica_cluster_states arcs on arc.replica_server_name=arcs.replica_server_name join sys.dm_hadr_availability_replica_states ars on arcs.replica_id=ars.replica_id join sys.availability_replicas ar on ars.replica_id=ar.replica_id join sys.availability_groups ag on ag.group_id = arcs.group_id and ag.name = arc.group_name ORDER BY cast(arc.group_name as varchar(30)), cast(ars.role_desc as varchar(30))' as CheckReplicaHealth
         select 'select database_name=cast(drcs.database_name as varchar(30)), drs.database_id, drs.group_id, drs.replica_id, drs.is_local,drcs.is_failover_ready,drcs.is_pending_secondary_suspend, drcs.is_database_joined, drs.is_suspended, drs.is_commit_participant, suspend_reason_desc=cast(drs.suspend_reason_desc as varchar(30)), synchronization_state_desc=cast(drs.synchronization_state_desc as varchar(30)), synchronization_health_desc=cast(drs.synchronization_health_desc as varchar(30)), database_state_desc=cast(drs.database_state_desc as varchar(30)), drs.last_sent_lsn, drs.last_sent_time, drs.last_received_lsn, drs.last_received_time, drs.last_hardened_lsn, drs.last_hardened_time,drs.last_redone_lsn, drs.last_redone_time, drs.log_send_queue_size, drs.log_send_rate, drs.redo_queue_size, drs.redo_rate, drs.filestream_send_rate, drs.end_of_log_lsn, drs.last_commit_lsn, drs.last_commit_time, drs.low_water_mark_for_ghosts, drs.recovery_lsn, drs.truncation_lsn, pr.file_id, pr.error_type, pr.page_id, pr.page_status, pr.modification_time from sys.dm_hadr_database_replica_cluster_states drcs join sys.dm_hadr_database_replica_states drs on drcs.replica_id=drs.replica_id and drcs.group_database_id=drs.group_database_id left outer join sys.dm_hadr_auto_page_repair pr on drs.database_id=pr.database_id  order by drs.database_id' as LogMovementHealth
         select 'For more information see https://learn.microsoft.com/troubleshoot/sql/availability-groups/error-9002-transaction-log-large' as OnlineDOCResource
     END    
@@ -232,7 +232,7 @@ BEGIN
     BEGIN
         select 'The oldest page on the database might be older than the checkpoint log sequence number (LSN). In this case, the oldest page can delay log truncation.' as Finding
         select 'This state should be short-lived, but if you find it is taking a long time, you can consider disabling Indirect Checkpoint temporarily' as Recommendation
-        select 'ALTER DATABASE [' +@dbname+ '] SET TARGET_RECOVERY_TIME = 0' as DisableIndirectCheckpointTemporarily
+        select 'ALTER DATABASE [' +@dbname+ '] SET TARGET_RECOVERY_TIME = 0 SECONDS' as DisableIndirectCheckpointTemporarily
     END    
     else if (@log_reuse_wait = 16)
     BEGIN
@@ -269,7 +269,7 @@ Under the FULL or BULK_LOGGED recovery model, if the transaction log has not bee
 
 A complete history of all SQL Server backup and restore operations on a server instance is stored in the `msdb` system database. To review the complete backup history of a database, use the following sample script:
 
-```tsql
+```sql
 SELECT bs.database_name
 , backuptype = CASE 
 	WHEN bs.type = 'D' and bs.is_copy_only = 0 THEN 'Full Database'
@@ -384,7 +384,7 @@ For more information see [Add Data or Log Files to a Database](../../relational-
 These steps can be partly automated by running this T-SQL script which will identify logs files that using a large percentage of disk space and suggest actions:
 
 
-```tsql
+```sql
 DECLARE @log_reached_disk_size BIT = 0
 
 SELECT 
@@ -452,7 +452,7 @@ END
 
 Error 9002 can be generated if the transaction log size has been set to an upper limit or Autogrow is not allowed. In this case, enabling autogrow or increasing the log size manually can help resolve the issue. Use this T-SQL command to find such log files and follow the recommendations provided:
 
-```tsql
+```sql
 SELECT DB_NAME(database_id) DbName,
        name LogName,
        physical_name,

@@ -25,9 +25,10 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 
 Query editor (preview) is a tool to run SQL queries against Azure SQL Database in the Azure portal. It's designed for lightweight querying and object exploration in your database. 
 
-For more advanced object explorer capabilities and management functions, use [Azure Data Studio](/sql/azure-data-studio/quickstart-sql-database) or [SQL Server Management Studio (SSMS)](connect-query-ssms.md). 
+- For a quickstart on the query editor, see [Quickstart: Use the Azure portal query editor (preview) to query Azure SQL Database](connect-query-portal.md).
+- For more advanced object explorer capabilities and management functions, use [Azure Data Studio](/sql/azure-data-studio/quickstart-sql-database) or [SQL Server Management Studio (SSMS)](connect-query-ssms.md).
 
-### Connect to the query editor
+## Connect via the query editor
 
 There are two authentication options for query editor - SQL Authentication and Azure Active Directory Authentication.
 
@@ -76,7 +77,8 @@ The data editor allows you to modify data in an existing row, add a new row of d
 
 To modify data in an existing row, select the value you want to change, make your change, and then select **Save** at the top. 
 
-To add a new row, select **Create New Row** and enter the values you want to add. There are certain data types you cannot add or work with in this context. 
+To add a new row, select **Create New Row** and enter the values you want to add. There are certain data types you cannot add or work with in this context.
+
 - If the column is an identity column, you cannot add a value in that field. You will see the error "Save failed: Can not set value in identity columns <column name>" at the bottom. 
 - Columns with default constraints are not honored. The data editor will not generate the default value, it expects you to enter a value. It is not recommended to use the data editor for tables that have default column constraints. 
 - Computed columns are not calculated. You will see the error "Save failed: Failed to execute query. Error: The column <column name> cannot be modified because it is either a computed column or is the result of a UNION operator." It is not recommended to use the data editor for tables that have computed columns.
@@ -124,10 +126,11 @@ The following considerations and limitations apply when connecting to and queryi
   - Verify that your computer's clock is set to the right time and time zone. You can try to match your computer's time zone with Azure by searching for the time zone for your database location, such as East US.
   - If you're on a proxy network, make sure that the request header `X-CSRF-Signature` isn't being modified or dropped.
 
-- If your database is serverless and you see the error message "Database *name* on server *name.database.windows.net* is not currently available. Please retry the connection later. If the problem persists, contact customer support, and provide them the session tracing ID <ID>", this indicates your serverless database is currently paused. If this occurs, selecting `Continue as <user@domain>` will send a request to the database to resume. Wait approximately one minute, refresh the page, and try again.
+- If your database is serverless and you see the error message "Database *name* on server *name.database.windows.net* is not currently available. Please retry the connection later. If the problem persists, contact customer support, and provide them the session tracing ID <ID>", this indicates your serverless database is currently paused. If this occurs, selecting `Continue as <user@domain>` sends a request to the database to resume. Wait approximately one minute, refresh the page, and try again.
 
 - If you see the error message "Login failed for user `<token-identified principal>`. The server is not currently configured to accept this token." when you attempt to use AD authentication, your user does not have access to the database.
-    - For more information on creating an user from an Azure AD prinicpal, see [Configure and manage Azure AD authentication with Azure SQL](authentication-aad-configure.md) and use `CREATE USER [group or user] FROM EXTERNAL PROVIDER` in the user database.
+
+    - For more information on creating a user from an Azure AD principal, see [Configure and manage Azure AD authentication with Azure SQL](authentication-aad-configure.md) and use `CREATE USER [group or user] FROM EXTERNAL PROVIDER` in the user database.
 
 - You might get one of the following errors in the query editor:
 

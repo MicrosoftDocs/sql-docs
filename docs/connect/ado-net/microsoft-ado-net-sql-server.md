@@ -1,6 +1,7 @@
 ---
 title: "Microsoft ADO.NET"
-description: "Microsoft ADO.NET, for SQL Server and Azure SQL, is the core data access technology for .NET languages. Use the Microsoft.Data.SqlClient namespace to access SQL Server."
+description: "Microsoft ADO.NET, for SQL Server and Azure SQL, is the core data access technology for .NET languages. Use the Microsoft.Data.SqlClient library to access SQL Server."
+
 
 author: David-Engel
 ms.author: v-davidengel
@@ -14,7 +15,8 @@ ms.topic: conceptual
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-ADO.NET is the core data access technology for .NET languages. Use the Microsoft.Data.SqlClient library or Entity Framework to access SQL Server, or providers from other suppliers to access their stores. Use System.Data.Odbc or System.Data.Oledb to access data from .NET languages using other data access technologies. Use System.Data.Dataset when you need an offline data cache in client applications. It also provides local persistence and XML capabilities that can be useful in web services.
+ADO.NET is the core data access technology for .NET languages. Use the Microsoft.Data.SqlClient library or Entity Framework to access SQL Server, or providers from other suppliers to access their stores. Use System.Data.Odbc or System.Data.OleDb to access data from .NET languages using other data access technologies. Use System.Data.DataSet when you need an offline data cache in client applications. It also provides local persistence and XML capabilities that can be useful in web services.
+
 
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"

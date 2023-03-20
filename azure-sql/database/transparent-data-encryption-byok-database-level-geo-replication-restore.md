@@ -72,7 +72,7 @@ For Az PowerShell module installation instructions, see [Install Azure PowerShel
 $database = Get-AzSqlDatabase -ResourceGroupName <ResourceGroupName> -ServerName <ServerName> -DatabaseName <DatabaseName> -ExpandKeyList -KeysFilter "current"
 ```
 
-- Select the user assigned identity (and federated client id if configuring cross tenant access). 
+- Select the user assigned identity (and federated client id if configuring cross tenant access).
 - Create a new database as a secondary using [New-AzSqlDatabaseSecondary](/powershell/module/az.sql/new-azsqldatabasesecondary) and provide the pre-populated list of keys obtained from the source database and the above identity (and federated client id if configuring cross tenant access) in the API call using the -KeyList, -AssignIdentity, -UserAssignedIdentityId, -EncryptionProtector (and -FederatedClientId) parameters.
 
 ```powershell

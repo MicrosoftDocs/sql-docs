@@ -86,6 +86,8 @@ For information on installing the current release of Azure CLI, see [Install the
 
 Create a database configured with user-assigned managed identity and cross-tenant customer-managed TDE using the [az sql db create](/cli/azure/sql/db) command. The **Key Identifier** from the second tenant can be used in the `encryption-protector` field. The **Application ID** of the multi-tenant application can be used in the `federated-client-id` field.
 
+To get your user-assigned managed identity **Resource ID**, search for **Managed Identities** in the [Azure portal](https://portal.azure.com). Find your managed identity, and go to **Properties**. An example of your UMI **Resource ID** looks like `/subscriptions/<subscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/<managedIdentity>`
+
 ```azurecli
 az sql db create \
     --resource-group $resourceGroupName \
@@ -208,6 +210,8 @@ This guide will walk you through the process of updating an existing database on
 For information on installing the current release of Azure CLI, see [Install the Azure CLI](/cli/azure/install-azure-cli) article.
 
 Update a database configured with user-assigned managed identity and cross-tenant customer-managed TDE using the [az sql db create](/cli/azure/sql/db) command. The **Key Identifier** from the second tenant can be used in the `encryption-protector` field. The **Application ID** of the multi-tenant application can be used in the `federated-client-id` field.
+
+To get your user-assigned managed identity **Resource ID**, search for **Managed Identities** in the [Azure portal](https://portal.azure.com). Find your managed identity, and go to **Properties**. An example of your UMI **Resource ID** looks like `/subscriptions/<subscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/<managedIdentity>`
 
 ```azurecli
 az sql db update \

@@ -1,16 +1,13 @@
 ---
 title: Install SQL Server 2016 R Services
-titleSuffix: 
 description: Learn how to install SQL Server 2016 R Services on Windows. You can use R Services to execute R scripts in-database.
-ms.service: sql
-ms.subservice: machine-learning-services
-ms.date: 08/06/2020
-ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.custom:
-  - contperf-fy20q4
-  - intro-installation
+ms.date: 08/06/2020
+ms.service: sql
+ms.subservice: machine-learning-services
+ms.topic: how-to
+ms.custom: intro-installation
 monikerRange: "=sql-server-2016"
 ---
 # Install SQL Server 2016 R Services
@@ -177,7 +174,7 @@ On disconnected servers, extra steps are required. For more information, see [In
 
 1. Start with a baseline instance already installed: SQL Server 2016 initial release, SQL Server 2016 SP 1, or SQL Server 2016 SP 2.
 
-1. Go to the cumulative update list: [Latest updates for Microsoft SQL Server](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
+1. Go to the cumulative update list: [Latest updates for Microsoft SQL Server](/troubleshoot/sql/releases/download-and-install-latest-updates?bc=%2fsql%2fbreadcrumb%2ftoc.json&toc=%2fsql%2ftoc.json)
 
 1. Select the latest service pack (of not already installed as the baseline instance) and cumulative update. An executable is downloaded and extracted automatically.
 

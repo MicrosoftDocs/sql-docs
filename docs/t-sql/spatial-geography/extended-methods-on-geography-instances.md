@@ -1,17 +1,14 @@
 ---
+title: "Extended Methods on Geography Instances"
 description: "Extended Methods on Geography Instances"
-title: "Extended Methods on Geography Instances | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
+dev_langs:
   - "TSQL"
-ms.assetid: d1822f1b-c1dd-4f2f-ab7c-6617c05a2b6c
-author: MladjoA
-ms.author: mlandzic 
 ---
 # Extended Methods on Geography Instances
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

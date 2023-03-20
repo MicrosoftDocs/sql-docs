@@ -1,10 +1,13 @@
 ---
 title: "Delete an Alert"
 description: "Delete an Alert"
+author: markingmyname
+ms.author: maghan
+ms.date: 02/04/2021
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Agent, alerts"
   - "alerts [SQL Server], deleting"
   - "deleting alerts"
@@ -12,11 +15,6 @@ helpviewer_keywords:
   - "dropping alerts"
   - "disabling alerts"
   - "removing alerts"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 02/04/2021
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 

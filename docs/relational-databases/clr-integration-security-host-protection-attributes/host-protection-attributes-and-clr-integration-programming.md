@@ -7,7 +7,6 @@ ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: clr
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "host protection attributes [CLR integration]"
   - "HostProtectionAttribute [CLR integration]"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "disallowed types and members [CLR integration]"
   - "common language runtime [SQL Server], disallowed types and members"
   - "HPAs [CLR integration]"
-ms.assetid: 268078df-63ca-4c03-a8e7-7108bcea9697
 ---
 # Host Protection Attributes and CLR Integration Programming
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

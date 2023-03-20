@@ -1,17 +1,15 @@
 ---
 title: "Considerations & limitations (Oracle Publishers)"
-description: Describes the design considerations & limitations when configuring a SQL Server subscriber with an Oracle Publisher. 
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Oracle publishing [SQL Server replication], design considerations and limitations"
-ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
+description: Describes the design considerations & limitations when configuring a SQL Server subscriber with an Oracle Publisher.
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "Oracle publishing [SQL Server replication], design considerations and limitations"
 ---
 # Design Considerations and Limitations for Oracle Publishers
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

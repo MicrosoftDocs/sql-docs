@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "backupfilegroup system table"
 dev_langs:
   - "TSQL"
-ms.assetid: d26e8fbe-f5c5-4e10-b2bd-0d8e16ea21f9
 ---
 # backupfilegroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

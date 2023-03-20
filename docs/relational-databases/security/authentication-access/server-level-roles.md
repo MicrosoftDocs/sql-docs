@@ -8,7 +8,6 @@ ms.date: 12/22/2022
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "sql13.Security.NT_AUTHORITY.SYSTEM"
   - "sql13.Security.BUILTIN.administrators"
@@ -70,7 +69,7 @@ The following table shows additional fixed server-level roles that are introduce
 | --- | --- |
 | **##MS_DatabaseConnector##** | Members of the **##MS_DatabaseConnector##** fixed server role can connect to any database without requiring a User-account in the database to connect to.<br /><br />To deny the **CONNECT** permission to a specific database, users can create a matching user account for this login in the database and then **DENY** the **CONNECT** permission to the database-user. This **DENY** permission will overrule the **GRANT CONNECT** permission coming from this role. |
 | **##MS_LoginManager##** | Members of the **##MS_LoginManager##** fixed server role can create, delete and modify logins. Contrary to the old fixed server role **securityadmin**, this role doesn't allow members to `GRANT` privileges. It is a more limited role that helps to comply with the *Principle of least Privilege*. |
-| **##MS_DatabaseManager##** | Members of the **##MS_DatabaseManager##** fixed server role can create and delete databases. A member of the **##MS_DatabaseManager##** role that creates a database, becomes the owner of that database, which allows that user to connect to that database as the `dbo` user. The `dbo` user has all database permissions in the database. Members of the **##MS_DatabaseManager##** role don't necessarily have permission to access databases that they don't own. |
+| **##MS_DatabaseManager##** | Members of the **##MS_DatabaseManager##** fixed server role can create and delete databases. A member of the **##MS_DatabaseManager##** role that creates a database, becomes the owner of that database, which allows that user to connect to that database as the `dbo` user. The `dbo` user has all database permissions in the database. Members of the **##MS_DatabaseManager##** role don't necessarily have permission to access databases that they don't own. This server role has the same privileges as the dbcreator role in SQL Server, but we recommend using this new role over the former, since this role exists also in Azure SQL Database and thus helps using the same scripts accross different environments. |
 | **##MS_ServerStateManager##** | Members of the **##MS_ServerStateManager##** fixed server role have the same permissions as the **##MS_ServerStateReader##** role. Also, it holds the **ALTER SERVER STATE** permission, which allows access to several management operations, such as: `DBCC FREEPROCCACHE`, `DBCC FREESYSTEMCACHE ('ALL')`, `DBCC SQLPERF()` |
 | **##MS_ServerStateReader##** | Members of the **##MS_ServerStateReader##** fixed server role can read all dynamic management views (DMVs) and functions that are covered by **VIEW SERVER STATE**, and respectively has **VIEW DATABASE STATE** permission on any database on which the member of this role has a user account. |
 | **##MS_ServerPerformanceStateReader##** | Members of the **##MS_ServerPerformanceStateReader##** fixed server role can read all dynamic management views (DMVs) and functions that are covered by **VIEW SERVER PERFORMANCE STATE**, and respectively has **VIEW DATABASE PERFORMANCE STATE** permission on any database on which the member of this role has a user account. This is a subset of what the **##MS_ServerStateReader##** server role has access to which helps to comply with the *Principle of least Privilege*. |
@@ -106,7 +105,7 @@ The following graphic shows the permissions assigned to the legacy server roles 
 :::image type="content" source="media/server-level-roles/permissions-of-server-roles.png" alt-text="Diagram showing fixed server role permissions.":::
 
 > [!IMPORTANT]  
-> The **CONTROL SERVER** permission is similar but not identical to the **sysadmin** fixed server role. Permissions do not imply role memberships and role memberships do not grant permissions. (E.g. **CONTROL SERVER** does not imply membership in the **sysadmin** fixed server role.) However, it is sometimes possible to impersonate between roles and equivalent permissions. Most **DBCC** commands and many system procedures require membership in the **sysadmin** fixed server role. For a list of 171 system stored procedures that require **sysadmin** membership, see the following post by Andreas Wolter, [CONTROL SERVER vs. sysadmin/sa](http://web.archive.org/web/20220620082758/http://andreas-wolter.com/en/control-server-vs-sysadmin-sa/) *(archived link)*.
+> The **CONTROL SERVER** permission is similar but not identical to the **sysadmin** fixed server role. Permissions do not imply role memberships and role memberships do not grant permissions. (E.g. **CONTROL SERVER** does not imply membership in the **sysadmin** fixed server role.) However, it is sometimes possible to impersonate between roles and equivalent permissions. Most **DBCC** commands and many system procedures require membership in the **sysadmin** fixed server role.
 
 ## Server-level permissions
 

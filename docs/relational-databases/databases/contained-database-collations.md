@@ -1,17 +1,14 @@
 ---
-title: "Contained Database Collations | Microsoft Docs"
+title: "Contained Database Collations"
 description: "Learn how collation works in contained and non-contained databases. See issues that can arise when sessions cross between contained and non-contained contexts."
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: configuration
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "contained database, collations"
-ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
+helpviewer_keywords:
+  - "contained database, collations"
 ---
 # Contained Database Collations
  [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

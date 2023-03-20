@@ -1,17 +1,14 @@
 ---
+title: "Create the RSExecRole"
 description: "Create the RSExecRole"
-title: "Create the RSExecRole | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 06/12/2019
 ms.service: reporting-services
 ms.subservice: security
-
-
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "RSExecRole"
-ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
-author: maggiesMSFT
-ms.author: maggies
 ---
 
 # Create the RSExecRole

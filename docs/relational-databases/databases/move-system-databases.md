@@ -1,13 +1,12 @@
 ---
-description: "Move System Databases"
 title: "Move System Databases"
-ms.custom: ""
+description: "Move System Databases"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "02/24/2022"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "moving system databases"
   - "disaster recovery [SQL Server], moving database files"
   - "database files [SQL Server], moving"
@@ -24,8 +23,6 @@ helpviewer_keywords:
   - "model database [SQL Server], moving"
   - "Resource database [SQL Server]"
   - "databases [SQL Server], moving"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # Move system databases
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -107,7 +104,7 @@ If the `msdb` database is moved and [Database Mail](../../relational-databases/d
 2.  Verify that Database Mail is working by sending a test mail.  
   
 ##  <a name="Failure"></a> Failure Recovery Procedure  
- If a file must be moved because of a hardware failure, follow these steps to relocate the file to a new location. This procedure applies to all system databases except the `master` and `Resource` databases. The following examples use the Windows command-line prompt and [sqlcmd Utility](../../ssms/scripting/sqlcmd-use-the-utility.md).  
+ If a file must be moved because of a hardware failure, follow these steps to relocate the file to a new location. This procedure applies to all system databases except the `master` and `Resource` databases. The following examples use the Windows command-line prompt and [sqlcmd Utility](../../tools/sqlcmd/sqlcmd-use-utility.md).  
   
 > [!IMPORTANT]  
 >  If the database cannot be started, if it is in suspect mode or in an unrecovered state, only members of the sysadmin fixed role can move the file.  
@@ -147,9 +144,9 @@ If the `msdb` database is moved and [Database Mail](../../relational-databases/d
     sqlcmd -S localhost\instancename
     ```
 
-    For more information on **sqlcmd** syntax, see [sqlcmd utility](../../tools/sqlcmd-utility.md). 
+    For more information on **sqlcmd** syntax, see [sqlcmd utility](../../tools/sqlcmd/sqlcmd-utility.md). 
     
-    For each file to be moved, use **sqlcmd** commands or [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to run the following statement. For more information about using the **sqlcmd** utility, see [Use the sqlcmd Utility](../../ssms/scripting/sqlcmd-use-the-utility.md). Once the **sqlcmd** session is open, run the following statement once for each file to be moved:
+    For each file to be moved, use **sqlcmd** commands or [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to run the following statement. For more information about using the **sqlcmd** utility, see [Use the sqlcmd Utility](../../tools/sqlcmd/sqlcmd-use-utility.md). Once the **sqlcmd** session is open, run the following statement once for each file to be moved:
 
     ```cmd  
     ALTER DATABASE database_name MODIFY FILE( NAME = logical_name , FILENAME = 'new_path\os_file_name' )  
@@ -317,5 +314,4 @@ If you have moved all of the system databases to a new volume or have migrated t
 - [Move Database Files](../../relational-databases/databases/move-database-files.md)   
 - [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
 - [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
-- [Rebuild System Databases](../../relational-databases/databases/rebuild-system-databases.md)  
-   
+- [Rebuild System Databases](../../relational-databases/databases/rebuild-system-databases.md)

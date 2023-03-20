@@ -1,20 +1,16 @@
 ---
-description: "Discard Changes Made to Diagrams (Visual Database Tools)"
 title: Discard Changes Made to Diagrams
-ms.custom: seo-lt-2019
+description: "Discard Changes Made to Diagrams (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "discarding database diagram changes"
   - "database diagrams [SQL Server], discarding changes"
   - "diagrams [SQL Server], discarding changes"
-ms.assetid: a3e8e874-60f2-4d96-ae81-272c8319c3d7
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Discard Changes Made to Diagrams (Visual Database Tools)
 

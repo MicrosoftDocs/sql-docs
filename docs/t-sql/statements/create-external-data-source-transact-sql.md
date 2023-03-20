@@ -4,11 +4,10 @@ description: CREATE EXTERNAL DATA SOURCE creates an external data source used to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 12/16/2022
+ms.date: 03/15/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "CREATE EXTERNAL DATA SOURCE"
   - "CREATE_EXTERNAL_DATA_SOURCE"
@@ -738,6 +737,11 @@ The `key_value_pair` is the keyword and the value for a specific connection opti
 
 Possible key value pairs are specific to the provider for the external data source vendor. For more information for each provider, see [CREATE EXTERNAL DATA SOURCE (Transact-SQL) CONNECTION_OPTIONS](create-external-data-source-connection-options.md).
 
+Starting in [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] cumulative update 19, additional keywords was introduced to support Oracle TNS files:
+
+- The keyword `TNSNamesFile` specifies the filepath to the `tnsnames.ora` file located on the Oracle server.
+- The keyword `ServerName` specifies the alias used inside the `tnsnames.ora` that will be used to replace the host name and the port.
+
 #### Pushdown = ON | OFF
 
 Specified for [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] only. States whether computation can be pushed down to the external data source. It is **ON** by default.
@@ -887,6 +891,25 @@ CREATE EXTERNAL DATA SOURCE [OracleSalesSrvr]
 WITH (LOCATION = 'oracle://145.145.145.145:1521',
 CONNECTION_OPTIONS = 'ImpersonateUser=%CURRENT_USER',
 CREDENTIAL = [OracleProxyCredential]);
+```
+
+Alternatively, you can use TNS authentication.
+
+
+Starting in [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] Cumulative Update 19, `CREATE EXTERNAL DATA SOURCE` now supports the use of TNS files when connecting to Oracle.
+The `CONNECTION_OPTIONS` parameter was expanded and now uses `TNSNamesFile` and `ServerName` as variables to browse the `tnsnames.ora` file and establish connection with the server.
+
+In the example below, during runtime SQL Server will search for the `tnsnames.ora` file location especified by `TNSNamesFile` and search for the host and network port especified by `ServerName`.
+
+```sql
+CREATE EXTERNAL DATA SOURCE [external_data_source_name]
+WITH (
+LOCATION = N'oracle://XE', 
+CREDENTIAL = [OracleCredentialTest], 
+CONNECTION_OPTIONS = N'TNSNamesFile=C:\Temp\tnsnames.ora;ServerName=XE'
+)
+GO
+
 ```
 
 For additional examples to other data sources such as MongoDB, see [Configure PolyBase to access external data in MongoDB][mongodb_pb].
@@ -1257,6 +1280,12 @@ The `key_value_pair` is the keyword and the value for a specific connection opti
 
 Possible key value pairs are specific to the driver. For more information for each provider, see [CREATE EXTERNAL DATA SOURCE (Transact-SQL) CONNECTION_OPTIONS](create-external-data-source-connection-options.md).
 
+Starting in [!INCLUDE[SQL2022](../../includes/applies-to-version/sqlserver2022.md)] cumulative update 2, additional keywords was introduced to support Oracle TNS files:
+
+- The keyword `TNSNamesFile` specifies the filepath to the `tnsnames.ora` file located on the Oracle server.
+- The keyword `ServerName` specifies the alias used inside the `tnsnames.ora` that will be used to replace the host name and the port.
+
+
 #### PUSHDOWN = ON | OFF
 
 **Applies to: [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later.** States whether computation can be pushed down to the external data source. It is on by default.
@@ -1288,8 +1317,10 @@ There are multiple ways to create a shared access signature:
     |    ------    |    ----------    |
     |    Read data from a file    |    Read    |
     |    Read data from multiple files and subfolders    |    Read and List    |
-    |    Use Create External Table as Select (CETAS)    |    Read, Create and Write    |
+    |    Use Create External Table as Select (CETAS)    |    Read, Create, List and Write    |
 
+- For Azure Blog Storage `Allowed Services`: `Blob` checkbox must be selected to generate the SAS token.
+- For Azure Data Lake Gen2 `Allowed Services`: `Container` and `Object` checkbox must be selected to generate the SAS token.
 - When the `TYPE` = `BLOB_STORAGE`, the credential must be created using `SHARED ACCESS SIGNATURE` as the identity. Furthermore, the SAS token should be configured as follows:
   - Exclude the leading `?` when configured as the secret.
   - Have at least read permission on the file that should be loaded (for example `srt=o&sp=r`).
@@ -1421,6 +1452,24 @@ CREATE EXTERNAL DATA SOURCE [OracleSalesSrvr]
 WITH (LOCATION = 'oracle://145.145.145.145:1521',
 CONNECTION_OPTIONS = 'ImpersonateUser=%CURRENT_USER',
 CREDENTIAL = [OracleProxyCredential]);
+```
+
+Alternatively, you can authenticate using TNS. 
+
+Starting in [!INCLUDE[SQL2022](../../includes/applies-to-version/sqlserver2022.md)] Cumulative Update 2, `CREATE EXTERNAL DATA SOURCE` now supports the use of TNS files when connecting to Oracle.
+The `CONNECTION_OPTIONS` parameter was expanded and now uses `TNSNamesFile` and `ServerName` as variables to browse the `tnsnames.ora` file and establish connection with the server.
+
+In the example below, during runtime SQL Server will search for the `tnsnames.ora` file location especified by `TNSNamesFile` and search for the host and network port especified by `ServerName`.
+
+```sql
+CREATE EXTERNAL DATA SOURCE [external_data_source_name]
+WITH (
+LOCATION = N'oracle://XE', 
+CREDENTIAL = [OracleCredentialTest], 
+CONNECTION_OPTIONS = N'TNSNamesFile=C:\Temp\tnsnames.ora;ServerName=XE'
+)
+GO
+
 ```
 
 ### B. Create external data source to reference a SQL Server named instance via PolyBase connectivity

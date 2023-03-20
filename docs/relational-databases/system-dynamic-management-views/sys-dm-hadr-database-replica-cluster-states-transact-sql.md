@@ -3,7 +3,7 @@ title: "sys.dm_hadr_database_replica_cluster_states (Transact-SQL)"
 description: sys.dm_hadr_database_replica_cluster_states (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "06/10/2016"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "sys.dm_hadr_database_replica_cluster_states dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 6f719071-ebce-470d-aebd-1f55ee8cd70a
 ---
 # sys.dm_hadr_database_replica_cluster_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,12 +43,14 @@ ms.assetid: 6f719071-ebce-470d-aebd-1f55ee8cd70a
 |**recovery_lsn**|**numeric(25,0)**|On the primary replica, the end of the transaction log before the replica writes any new log records after recovery or failover. On the primary replica, the row for a given secondary database will have the value to which the primary replica needs the secondary replica to synchronize to (that is, to revert to and reinitialize to).<br /><br /> On secondary replicas this value is NULL. Note that each secondary replica will have either the MAX value or a lower value that the primary replica has told the secondary replica to go back to.|  
 |**truncation_lsn**|**numeric(25,0)**|The [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] log truncation value, which may be higher than the local truncation LSN if local log truncation is blocked (such as by a backup operation).|  
   
-## Security  
-  
-### Permissions  
+## Permissions  
  Requires VIEW SERVER STATE permission on the server.  
   
-## See Also  
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
+## See also  
  [Always On Availability Groups Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
  [Always On Availability Groups Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
  [Monitor Availability Groups &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   

@@ -42,7 +42,7 @@ Make sure that you meet the following requirements for SQL Server:
 - A log backup (not split for a transaction log file).
 - For SQL Server versions 2008 to 2016, take a backup locally and [manually upload](#copy-existing-backups-to-your-blob-storage-account) it to your Azure Blob Storage account. 
 - For SQL Server 2016 and later, you can [take your backup directly](#take-backups-directly-to-your-blob-storage-account) to your Azure Blob Storage account. 
-- For SQL Server 2022, you can choose to use a managed identity instead of a shared access signature (SAS) token to authenticate to your Azure Blob Storage account. 
+
 
 
 Although having `CHECKSUM` enabled for backups isn't required, we highly recommend it for faster restore operations. 
@@ -75,7 +75,7 @@ When you're using LRS, consider the following best practices:
 - Enable backup compression to help the network transfer speeds.
 - Use Cloud Shell to run PowerShell or CLI scripts, because it will always be updated to use the latest released cmdlets.
 - Configure a [maintenance window](../database/maintenance-window.md) to allow scheduling of system updates at a specific day and time. This configuration helps achieve a more predictable time for database migrations, because system upgrades can interrupt in-progress migrations.
-- Plan to complete a single LRS migration job within a maximum of 30 days. On expiration of this time frame, the LRS job will be automatically canceled.
+- Plan to complete a single LRS migration job within a maximum of 30 days. On expiration of this time frame, the LRS job is automatically canceled.
 - For a faster database restore, enable `CHECKSUM` when you're taking your backups. SQL Managed Instance performs an integrity check on backups without `CHECKSUM`, which increases restore time. 
 
 System updates for SQL Managed Instance take precedence over database migrations in progress. During a system update on an instance, all pending LRS migrations are suspended and resumed only after the update is applied. This system behavior might prolong migration time, especially for large databases. 
@@ -115,6 +115,40 @@ You use an Azure Blob Storage account as intermediary storage for backup files b
 
 1. [Create a storage account](/azure/storage/common/storage-account-create?tabs=azure-portal).
 1. [Create a blob container](/azure/storage/blobs/storage-quickstart-blobs-portal) inside the storage account.
+
+### Configure Azure storage behind a firewall
+
+Using Azure Blob storage that's protected behind a firewall is supported, but requires additional configuration. To enable read / write access to Azure Storage with Azure Firewall turned on, you have to add the subnet of the SQL managed instance to the firewall rules of the vNet for the storage account by using MI subnet delegation and the Storage service endpoint. The storage account and the managed instance must be in the same region, or two paired regions. 
+
+If your Azure storage is behind a firewall, you] may see the following message in the SQL managed instance error log: 
+
+```
+Audit: Storage access denied user fault. Creating an email notification:
+```
+
+This generates an email that notifies you that auditing for the SQL managed instance is failing to write audit logs to the storage account.  If you see this error, or receive this email, follow the steps in this section to configure your firewall. 
+
+To configure the firewall, follow these steps: 
+
+1. Go to your managed instance in the [Azure portal](https://portal.azure.com) and select the subnet to open the **Subnets** page.
+
+   :::image type="content" source="media/log-replay-service-migrate/sql-managed-instance-overview-page.png" alt-text="Screenshot of the SQL managed instance Overview page of the Azure portal, with the subnet selected.":::
+
+1. On the **Subnets** page, select the name of the subnet to open the subnet configuration page. 
+
+   :::image type="content" source="media/log-replay-service-migrate/sql-managed-instance-subnet.png" alt-text="Screenshot of the SQL managed instance Subnet page of the Azure portal, with the subnet selected.":::
+
+1. Under **Subnet delegation**, choose **Microsoft.Sql/managedInstances** from the **Delegate subnet to a service** drop-down menu. Wait about an hour for permissions to propagate, and then, under **Service endpoints**, choose **Microsoft.Storage** from the **Services** drop-down. 
+
+   :::image type="content" source="media/log-replay-service-migrate/sql-managed-instance-subnet-configuration.png" alt-text="Screenshot of the SQL managed instance Subnet configuration page of the Azure portal.":::
+
+1. Next, go to your storage account in the Azure portal, select **Networking** under **Security + networking** and then choose the **Firewalls and virtual networks**  tab. 
+1. On the **Firewalls and virtual networks** tab for your storage account, choose **+Add existing virtual network** to open the **Add networks** page. 
+
+   :::image type="content" source="media/log-replay-service-migrate/storage-neteworking.png" alt-text="Screenshot of the Storage Account Networking page of the Azure portal, with Add existing virtual network selected.":::
+
+1. Select the appropriate subscription, virtual network, and managed instance subnet from the drop-down menus and then select **Add** to add the virtual network of the SQL managed instance to the storage account. 
+
 
 ## Authenticate to your Blob Storage account
 
@@ -314,11 +348,7 @@ After your backups are ready, and you want to start migrating databases to a man
 
 If you're on a supported version of SQL Server (starting with SQL Server 2012 SP1 CU2 and SQL Server 2014), and your corporate and network policies allow it, you can take backups from SQL Server directly to your Blob Storage account by using the native SQL Server [BACKUP TO URL](/sql/relational-databases/backup-restore/sql-server-backup-to-url) option. If you can use `BACKUP TO URL`, you don't need to take backups to local storage and upload them to your Blob Storage account.
 
-When you take native backups directly to your Blob Storage account, you have to authenticate to the storage account. You can do so by using a SAS token or, if you're on SQL Server 2022, you can also use a managed identity.  
-
-
-
-### [SAS token](#tab/sas-token)
+When you take native backups directly to your Blob Storage account, you have to authenticate to the storage account. 
 
 Use the following command to create a credential that imports the SAS token to your SQL Server instance: 
 
@@ -330,20 +360,6 @@ SECRET = '<SAS_TOKEN>';
 
 For detailed instructions working with SAS tokens, review the tutorial [Use Azure Blob Storage with SQL Server](/sql/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016#1---create-stored-access-policy-and-shared-access-storage).
 
-
-
-### [Managed identity](#tab/managed-identity)
-
-SQL Server 2022 has added support for managed identities. If you're on SQL Server 2022, you can authenticate to your storage account by using a managed identity. 
-
-Use the following command to create a credential that uses the managed identity on your SQL Server instance: 
-
-```sql
-CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<containername>] 
-WITH IDENTITY = 'MANAGED IDENTITY'
-```
-
----
 
 After you've created the credential to authenticate your SQL Server instance with Blob Storage, you can use the [BACKUP TO URL](/sql/relational-databases/backup-restore/sql-server-backup-to-url) command to take backups directly to the storage account. `CHECKSUM` is recommended, but not required. 
 
@@ -401,7 +417,7 @@ When you use autocomplete mode, the migration finishes automatically when the la
 
 When you use continuous mode, the service continuously scans the Azure Blob Storage folder and restores any new backup files that get added while migration is in progress. The migration finishes only after the manual cutover has been requested. You need to use continuous mode migration when you don't have the entire backup chain in advance, and when you plan to add new backup files after the migration is in progress. We recommend this mode for active workloads for which data catch-up is required.
 
-Plan to complete a single LRS migration job within a maximum of 30 days. When this time expires, the LRS job will be automatically canceled.
+Plan to complete a single LRS migration job within a maximum of 30 days. When this time expires, the LRS job is automatically canceled.
 
 > [!NOTE]
 > When you're migrating multiple databases, LRS must be started separately for each database and point to the full URI path of the Azure Blob Storage container and the individual database folder.

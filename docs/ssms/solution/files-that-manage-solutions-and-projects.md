@@ -1,13 +1,13 @@
 ---
-description: "Files That Manage Solutions and Projects"
 title: "Files That Manage Solutions and Projects"
-ms.custom: seo-lt-2019
+description: "Files That Manage Solutions and Projects"
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "projects [SQL Server Management Studio], files"
   - ".ssmssln files"
   - ".ssmsmobileproj files"
@@ -15,9 +15,6 @@ helpviewer_keywords:
   - ".ssmssqlproj files"
   - ".sqlsuo files"
   - "files [SQL Server Management Studio], projects"
-ms.assetid: e19d2859-0b97-4727-ac27-c4c226d86b2f
-author: "markingmyname"
-ms.author: "maghan"
 ---
 # Files That Manage Solutions and Projects
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

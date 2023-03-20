@@ -1,14 +1,14 @@
 ---
+title: "Order (MDX)"
 description: "Order (MDX)"
-title: "Order (MDX) | Microsoft Docs"
+author: minewiskan
+ms.author: owend
+ms.reviewer: owend
 ms.date: 02/17/2022
 ms.service: sql
 ms.subservice: analysis-services
-ms.custom: mdx
 ms.topic: reference
-ms.author: owend
-ms.reviewer: owend
-author: minewiskan
+ms.custom: mdx
 ---
 # Order (MDX)
 
@@ -47,61 +47,44 @@ Order(Set_Expression, String_Expression
 ## Examples  
  The following example returns, from the **Adventure Works** cube, the number of reseller orders for all Calendar Quarters from the Calendar hierarchy on the Date dimension.The **Order** function reorders the set for the ROWS axis. The **Order** function orders the set by `[Reseller Order Count]` in descending hierarchical order as determined by the `[Calendar]` hierarchy.  
   
- `SELECT`  
-  
- `Measures.[Reseller Order Count] ON COLUMNS,`  
-  
- `Order(`  
-  
- `[Date].[Calendar].[Calendar Quarter].MEMBERS`  
-  
- `,Measures.[Reseller Order Count]`  
-  
- `,DESC`  
-  
- `) ON ROWS`  
-  
- `FROM [Adventure Works]`  
+```
+SELECT
+  Measures.[Reseller Order Count] ON COLUMNS,
+  Order(
+    [Date].[Calendar].[Calendar Quarter].MEMBERS,
+    Measures.[Reseller Order Count],
+    DESC
+  ) ON ROWS
+FROM [Adventure Works]
+```
   
  Notice how in this example, when the **DESC** flag is changed to **BDESC**, the hierarchy is broken and the list of Calendar Quarters is returned with no regard for the hierarchy:  
   
- `SELECT`  
-  
- `Measures.[Reseller Order Count] ON COLUMNS,`  
-  
- `Order(`  
-  
- `[Date].[Calendar].[Calendar Quarter].MEMBERS`  
-  
- `,Measures.[Reseller Order Count]`  
-  
- `,BDESC`  
-  
- `) ON ROWS`  
-  
- `FROM [Adventure Works]`  
+```
+SELECT
+  Measures.[Reseller Order Count] ON COLUMNS,
+  Order (
+    [Date].[Calendar].[Calendar Quarter].MEMBERS,
+    Measures.[Reseller Order Count],
+    BDESC
+  ) ON ROWS
+FROM [Adventure Works]
+```
   
  The following example returns the Reseller Sales Measure for the top five selling subcategories of products, irrespective of hierarchy, based on Reseller Gross Profit. The **Subset** function is used to return only the first 5 tuples in the set after the result is ordered using the **Order** function.  
   
- `SELECT Subset`  
-  
- `(Order`  
-  
- `([Product].[Product Categories].[SubCategory].members`  
-  
- `,[Measures].[Reseller Gross Profit]`  
-  
- `,BDESC`  
-  
- `)`  
-  
- `,0`  
-  
- `,5`  
-  
- `) ON 0`  
-  
- `FROM [Adventure Works]`  
+```
+SELECT Subset
+  (
+    Order
+      (
+        [Product].[Product Categories].[SubCategory].members,
+        [Measures].[Reseller Gross Profit], 
+        BDESC
+      ), 0, 5
+  ) ON 0
+FROM [Adventure Works]
+```
   
  The following example uses the **Rank** function to rank the members of the City hierarchy, based on the Reseller Sales Amount measure, and then displays them in ranked order. By using the **Order** function to first order the set of members of the City hierarchy, the sorting is done only once and then followed by a linear scan before being presented in sorted order.  
   

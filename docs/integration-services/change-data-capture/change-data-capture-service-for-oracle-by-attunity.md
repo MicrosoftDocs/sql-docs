@@ -1,15 +1,12 @@
 ---
+title: "Change Data Capture Service for Oracle by Attunity"
 description: "Change Data Capture Service for Oracle by Attunity"
-title: "Change Data Capture Service for Oracle by Attunity | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: 22ec8a5c-9550-4d38-8a4a-485ec3e53ea8
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Change Data Capture Service for Oracle by Attunity
 
@@ -18,7 +15,7 @@ ms.author: chugu
 ## Installation  
 
 > [!NOTE]
-> Microsoft Change Data Capture for Oracle by Attunity supports SQL server 2019 and below.  
+> Microsoft Change Data Capture for Oracle by Attunity supports SQL Server 2019 and below.  
 
 Download Microsoft Change Data Capture Designer and Service for Oracle by Attunity for corresponding SQL Server version from below links:
 
@@ -51,8 +48,8 @@ Download Microsoft Change Data Capture Designer and Service for Oracle by Attuni
 -   Oracle Database 10g Release 2
 -   Oracle Database 11g Release 1 and Release 2
 -   Oracle Database 12c in classic installation (Multitenant installation is not supported)  
--   Oracle Database 18c in classic installation (Multitenant installation is not supported), for SQL server 2019 only
--   Oracle Database 19c in classic installation. (Multitenant installation is not supported), for SQL server 2019 only
+-   Oracle Database 18c in classic installation (Multitenant installation is not supported), for SQL Server 2019 only
+-   Oracle Database 19c in classic installation. (Multitenant installation is not supported), for SQL Server 2019 only
   
 ### Target SQL Server Database  
  For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  

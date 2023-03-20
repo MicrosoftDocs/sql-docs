@@ -1,17 +1,15 @@
 ---
-description: "Use Column Sets to designate a column set to return all sparse columns in the table. A column set is an untyped XML representation that combines all the sparse columns of a table into a structured output."
 title: "Use Column Sets"
-ms.custom: ""
-ms.date: "04/25/2022"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: table-view-index
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "sparse columns, column sets"
-  - "column sets"
+description: "Use Column Sets to designate a column set to return all sparse columns in the table. A column set is an untyped XML representation that combines all the sparse columns of a table into a structured output."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "04/25/2022"
+ms.service: sql
+ms.subservice: table-view-index
+ms.topic: conceptual
+helpviewer_keywords:
+  - "sparse columns, column sets"
+  - "column sets"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use column sets

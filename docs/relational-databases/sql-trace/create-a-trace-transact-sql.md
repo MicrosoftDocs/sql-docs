@@ -1,18 +1,14 @@
 ---
+title: "Create a Trace (Transact-SQL)"
 description: "Create a Trace (Transact-SQL)"
-title: "Create a Trace (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "traces [SQL Server], example"
-  - "traces [SQL Server], creating"
-ms.assetid: 79dd4254-e3c6-467a-bb6f-f99e51757e99
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.topic: conceptual
+helpviewer_keywords:
+  - "traces [SQL Server], example"
+  - "traces [SQL Server], creating"
 ---
 # Create a Trace (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

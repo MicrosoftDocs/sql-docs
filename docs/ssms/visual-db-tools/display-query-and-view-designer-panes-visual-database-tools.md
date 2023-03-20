@@ -1,23 +1,19 @@
 ---
-description: "Display Query and View Designer Panes (Visual Database Tools)"
 title: Display Query and View Designer Panes
-ms.custom: seo-lt-2019
+description: "Display Query and View Designer Panes (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Query Designer [SQL Server], panes"
   - "viewing View Designer panes"
   - "viewing Query Designer panes"
   - "View Designer, panes"
   - "displaying View Designer panes"
   - "displaying Query Designer panes"
-ms.assetid: 605c63af-f91e-410d-8d60-5cf6f899d756
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Display Query and View Designer Panes (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

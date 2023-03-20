@@ -1,17 +1,14 @@
 ---
-title: "FileTable Schema | Microsoft Docs"
+title: "FileTable Schema"
 description: Learn about the pre-defined and fixed schema of FileTables, a SQL Server feature that uses a directory structure to store files.
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: filestream
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "FileTables [SQL Server], table schema"
-ms.assetid: e1cb3880-cfda-40ac-91fc-d08998287f44
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: filestream
+ms.topic: conceptual
+helpviewer_keywords:
+  - "FileTables [SQL Server], table schema"
 ---
 # FileTable Schema
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

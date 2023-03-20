@@ -1,12 +1,13 @@
 ---
-description: "Monitor and Respond to Events"
 title: "Monitor and Respond to Events"
-ms.custom: seo-lt-2019
+description: "Monitor and Respond to Events"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "notifications [SQL Server], alert"
   - "events [SQL Server], alerts"
   - "alerts [SQL Server]"
@@ -17,10 +18,6 @@ helpviewer_keywords:
   - "SQL Server Agent alerts"
   - "monitoring [SQL Server], events"
   - "responding to events automatically"
-ms.assetid: f7fbe155-5b68-4777-bc71-a47637471f32
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Monitor and Respond to Events

@@ -1,18 +1,15 @@
 ---
-description: "Use FOR JSON output in SQL Server and in client apps (SQL Server)"
 title: "Use FOR JSON output in SQL Server and in client apps"
-ms.date: 06/03/2020
-ms.service: sql
-ms.subservice: 
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "FOR JSON, using in client apps"
-  - "FOR JSON, using in SQL Server"
-ms.assetid: 302e5397-b499-4ea3-9a7f-c24ccad698eb
+description: "Use FOR JSON output in SQL Server and in client apps (SQL Server)"
 author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
-ms.custom: seo-dt-2019
+ms.date: 06/03/2020
+ms.service: sql
+ms.topic: conceptual
+helpviewer_keywords:
+  - "FOR JSON, using in client apps"
+  - "FOR JSON, using in SQL Server"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use FOR JSON output in SQL Server and in client apps (SQL Server)

@@ -1,29 +1,19 @@
 ---
+title: "SQLNumResultCols Function"
 description: "SQLNumResultCols Function"
-title: "SQLNumResultCols Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/18/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLNumResultCols"
-apilocation: 
-  - "sqlsrv32.dll"
-  - "odbc32.dll"
-  - "Msodbcsql11.dll"
-  - "Sqlncli10.dll"
-  - "Sqlncli11.dll"
-  - "Sqlncli11e.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLNumResultCols"
-helpviewer_keywords: 
-  - "SQLNumResultCols function [ODBC]"
-ms.assetid: d863179f-12a9-4b55-ac6b-7d84202d3da3
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "07/18/2019"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLNumResultCols"
+helpviewer_keywords:
+  - "SQLNumResultCols function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLNumResultCols"
+apitype: "dllExport"
 ---
 # SQLNumResultCols Function
 **Conformance**  

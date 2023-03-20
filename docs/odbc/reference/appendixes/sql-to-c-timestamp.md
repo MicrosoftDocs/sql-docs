@@ -1,19 +1,16 @@
 ---
+title: "SQL to C: Timestamp"
 description: "SQL to C: Timestamp"
-title: "SQL to C: Timestamp | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2019"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "timestamp data type [ODBC]"
   - "converting data from SQL to C types [ODBC], timestamp"
   - "data conversions from SQL to C types [ODBC], timestamp"
-ms.assetid: 6a0617cf-d8c0-4316-8bb4-e6ddb45d7bf1
-author: David-Engel
-ms.author: v-davidengel
 ---
 # SQL to C: Timestamp
 

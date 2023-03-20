@@ -1,13 +1,12 @@
 ---
+title: "Schedule Traces"
 description: "Schedule Traces"
-title: "Schedule Traces | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "filters [SQL Server], events"
   - "traces [SQL Server]"
   - "traces [SQL Server], stopping"
@@ -15,9 +14,6 @@ helpviewer_keywords:
   - "scheduling traces [SQL Server]"
   - "traces [SQL Server], scheduling"
   - "stopping traces"
-ms.assetid: 620b79db-924b-4502-8af3-39efcfca245d
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Schedule Traces
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

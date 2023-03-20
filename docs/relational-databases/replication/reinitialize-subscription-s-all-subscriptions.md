@@ -1,19 +1,17 @@
 ---
+title: "Reinitialize Subscription(s) - All Subscriptions"
 description: "Reinitialize Subscription(s) - All Subscriptions"
-title: "Reinitialize Subscription(s) - All Subscriptions | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.reinit.all.f1"
-helpviewer_keywords: 
-  - "Reinitialize Subscription(s) dialog box"
-ms.assetid: e1122018-9f74-43e3-8489-7eae33ff23d9
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.reinit.all.f1"
+helpviewer_keywords:
+  - "Reinitialize Subscription(s) dialog box"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Reinitialize Subscription(s) - All Subscriptions

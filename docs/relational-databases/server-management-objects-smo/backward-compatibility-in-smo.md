@@ -1,16 +1,11 @@
 ---
+title: "Backward Compatibility in SMO"
 description: "Backward Compatibility in SMO"
-title: "Backward Compatibility in SMO | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-
-ms.topic: "reference"
-ms.assetid: 2f986436-aaf2-4eaf-9809-df849d97d4fb
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.topic: "reference"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Backward Compatibility in SMO

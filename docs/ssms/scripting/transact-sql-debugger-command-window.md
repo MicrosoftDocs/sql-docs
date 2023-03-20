@@ -1,18 +1,15 @@
 ---
 title: Command Window
-description: Learn how to use the Command Window of the Transact-SQL debugger to run debug commands and to edit commands on the code you are debugging. 
 titleSuffix: T-SQL debugger
+description: Learn how to use the Command Window of the Transact-SQL debugger to run debug commands and to edit commands on the code you are debugging.
+author: markingmyname
+ms.author: maghan
+ms.date: 12/04/2019
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Command Window [Transact-SQL]"
-ms.assetid: e567ebf9-0793-451b-92c7-26193a02d9da
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 12/04/2019
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

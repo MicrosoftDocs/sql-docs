@@ -1,17 +1,14 @@
 ---
+title: "Audit Login GDR Event Class"
 description: "Audit Login GDR Event Class"
-title: "Audit Login GDR Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "Audit Login GDR event class"
-ms.assetid: cc0560d9-bbb9-4263-a1f3-827c80167f8c
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "Audit Login GDR event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Login GDR Event Class

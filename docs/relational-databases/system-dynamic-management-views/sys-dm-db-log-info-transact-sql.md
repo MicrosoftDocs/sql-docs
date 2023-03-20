@@ -4,7 +4,7 @@ description: "The sys.dm_db_log_info (Transact-SQL) dynamic management function 
 author: "savjani"
 ms.author: "pariks"
 ms.reviewer: wiassaf
-ms.date: 06/20/2022
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: conceptual
@@ -62,7 +62,11 @@ The `sys.dm_db_log_info` dynamic management function replaces the `DBCC LOGINFO`
 The formula for how many VLFs are created based on a growth event is detailed in the [SQL Server Transaction Log Architecture and Management Guide](../sql-server-transaction-log-architecture-and-management-guide.md#virtual-log-files-vlfs). This formula changed slightly starting in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
 
 ## Permissions  
-Requires the `VIEW DATABASE STATE` permission in the database.  
+Requires the `VIEW SERVER STATE` permission in the database.  
+
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW DATABASE PERFORMANCE STATE permission on the database.
 
 ## Examples  
   

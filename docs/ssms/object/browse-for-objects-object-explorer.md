@@ -1,18 +1,15 @@
 ---
-description: "Browse for Objects (Object Explorer)"
 title: "Browse for Objects (Object Explorer)"
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: ssms
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.common.matchingobjects.f1"
-  - "sql13.swb.common.browseobjects.f1"
-ms.assetid: 6e8b5900-1990-48e9-8666-d9a20ed786be
+description: "Browse for Objects (Object Explorer)"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.common.matchingobjects.f1"
+  - "sql13.swb.common.browseobjects.f1"
 ---
 # Browse for Objects (Object Explorer)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

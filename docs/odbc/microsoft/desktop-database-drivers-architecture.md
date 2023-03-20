@@ -1,19 +1,16 @@
 ---
+title: "Desktop Database Drivers Architecture"
 description: "Desktop Database Drivers Architecture"
-title: "Desktop Database Drivers Architecture | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Jet-based ODBC drivers [ODBC], architecture"
   - "ODBC desktop database drivers [ODBC], architecture"
   - "desktop database drivers [ODBC], architecture"
-ms.assetid: 8b4d13f7-ab37-40b4-a9c6-145e7385352f
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Desktop Database Drivers Architecture
 These drivers are designed for use on Microsoft Windows 95 or later, or Windows NT 4.0 and Windows 2000. Only 32-bit applications are supported on Windows 95 or later; 16-bit and 32-bit applications are supported on Windows NT 4.0 and Windows 2000.  

@@ -1,21 +1,18 @@
 ---
-description: "Write the Job Status to the Windows Application Log"
 title: Write the Job Status to the Windows Application Log
+description: "Write the Job Status to the Windows Application Log"
+author: markingmyname
+ms.author: maghan
+ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "status information [SQL Server], jobs"
   - "SQL Server Agent jobs, status"
   - "writing job status to log"
   - "jobs [SQL Server Agent], status"
   - "logs [SQL Server], jobs"
-ms.assetid: 3b813702-8f61-40ec-bf3b-ce9deb7e68be
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 

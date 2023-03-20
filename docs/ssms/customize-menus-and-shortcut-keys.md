@@ -1,12 +1,13 @@
 ---
-description: "Customize Menus and Shortcut Keys"
 title: "Customize Menus and Shortcut Keys"
-ms.custom: seo-lt-2019
+description: "Customize Menus and Shortcut Keys"
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: 06/03/2020
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Management Studio [SQL Server], shortcuts"
   - "keyboard shortcuts [SQL Server Management Studio]"
   - "menu shortcuts [SQL Server Management Studio]"
@@ -16,10 +17,6 @@ helpviewer_keywords:
   - "customizing shortcut keys [SQL Server]"
   - "customizing menus [SQL Server]"
   - "accelerator keys"
-ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
-author: "markingmyname"
-ms.author: "maghan"
-ms.reviewer: ""
 ---
 
 # Customize Menus and Shortcut Keys

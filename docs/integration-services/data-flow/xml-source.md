@@ -1,24 +1,21 @@
 ---
+title: "XML Source"
 description: "XML Source"
-title: "XML Source | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.xmlsource.f1"
   - "sql13.dts.designer.xmlsourceadapter.connectionmanager.f1"
   - "sql13.dts.designer.xmlsourceadapter.columns.f1"
   - "sql13.dts.designer.xmlsourceadapter.erroroutput.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sources [Integration Services], XML"
   - "XML source [Integration Services]"
   - "XML Source Editor"
-ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
-author: chugugrace
-ms.author: chugu
 ---
 # XML Source
 

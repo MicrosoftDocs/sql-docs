@@ -1,22 +1,19 @@
 ---
+title: "Data Conversion Transformation"
 description: "Data Conversion Transformation"
-title: "Data Conversion Transformation | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/16/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.dataconversiontrans.f1"
   - "sql13.dts.designer.dataconversiontransformation.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "converting data types [Integration Services]"
   - "Data Conversion transformation"
   - "data types [Integration Services], converting"
-ms.assetid: fd515bbc-6f49-4d0c-ae7f-6ea3c3f24a1c
-author: chugugrace
-ms.author: chugu
 ---
 # Data Conversion Transformation
 

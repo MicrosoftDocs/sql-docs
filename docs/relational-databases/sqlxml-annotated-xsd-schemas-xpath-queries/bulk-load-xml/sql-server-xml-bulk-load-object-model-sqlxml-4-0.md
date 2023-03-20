@@ -7,7 +7,6 @@ ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "bulk load [SQLXML], object model"
   - "ErrorLogFile property"
@@ -29,7 +28,6 @@ helpviewer_keywords:
   - "FireTriggers property"
   - "Execute method"
   - "XML Bulk Load [SQLXML], object model"
-ms.assetid: a9efbbde-ed2b-4929-acc1-261acaaed19d
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server XML Bulk Load Object Model (SQLXML 4.0)

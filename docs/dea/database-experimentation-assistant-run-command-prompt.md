@@ -8,9 +8,7 @@ ms.date: 05/18/2022
 ms.service: sql
 ms.subservice: dea
 ms.topic: how-to
-ms.custom:
-  - "seo-lt-2019"
-  - kr2b-contr-experiment
+ms.custom: kr2b-contr-experiment
 ---
 
 # Run Database Experimentation Assistant at a command prompt

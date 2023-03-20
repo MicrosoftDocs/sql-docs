@@ -1,12 +1,13 @@
 ---
-description: "Supported Query Types (Visual Database Tools)"
 title: Supported Query Types
-ms.custom: seo-lt-2019
+description: "Supported Query Types (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Delete query"
   - "queries [SQL Server], types"
   - "Update query"
@@ -18,11 +19,6 @@ helpviewer_keywords:
   - "Insert Results query"
   - "Diagram pane [Visual Database Tools]"
   - "View Designer, query types"
-ms.assetid: 72b9116c-c128-4078-a78d-257a2955a3f6
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Supported Query Types (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

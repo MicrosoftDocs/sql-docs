@@ -1,20 +1,18 @@
 ---
 title: Use Schema Compare to Compare Different Database Definitions
 description: Learn how to compare database definitions with Schema Compare. See how to exclude specific differences and either update the target or create an update script.
+author: markingmyname
+ms.author: maghan
+ms.date: 02/09/2017
 ms.service: sql
 ms.subservice: ssdt
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql.data.tools.schemacompare.SchemaCompareOptionsDialog"
   - "sql.data.tools.schemacompare.watermark.f1"
   - "sql.data.tools.schemacompare.f1"
   - "sql.data.tools.schemacompare.connectiondialog.f1"
   - "sql.data.tools.schemacompare.connectiondialog.error.f1"
-ms.assetid: 7f0905a4-081c-46e2-bd7d-325b63e5c675
-author: markingmyname
-ms.author: maghan
-ms.custom: seo-lt-2019
-ms.date: 02/09/2017
 ---
 
 # How to: Use Schema Compare to Compare Different Database Definitions

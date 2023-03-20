@@ -1,17 +1,15 @@
 ---
+title: "Best Practices for Time-Based Row Filters"
 description: "Best Practices for Time-Based Row Filters"
-title: "Best Practices for Time-Based Row Filters | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "best practices"
-ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "best practices"
 ---
 # Best Practices for Time-Based Row Filters
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

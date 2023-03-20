@@ -1,15 +1,12 @@
 ---
+title: "catalog.rename_folder (SSISDB Database)"
 description: "catalog.rename_folder (SSISDB Database)"
-title: "catalog.rename_folder (SSISDB Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "language-reference"
-ms.assetid: 336ab467-c32f-4d2e-a79c-174dc6fab75e
 author: chugugrace
 ms.author: chugu
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
 ---
 # catalog.rename_folder (SSISDB Database)
 

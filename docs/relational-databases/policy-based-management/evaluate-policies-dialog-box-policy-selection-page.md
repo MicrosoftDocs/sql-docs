@@ -1,17 +1,14 @@
 ---
 title: "'Policy Selection' page of the 'Evaluate Policies' dialog box"
 description: Describes the 'Policy Selection' page of the 'Evaluate Policies' dialog box for Policy-Based Management in SQL Server Management Studio (SSMS).
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.dmf.runnow.f1"
-ms.assetid: 20075fbe-0b48-42c8-b747-690f1aa23dcf
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.dmf.runnow.f1"
 ---
 # Evaluate Policies Dialog Box, Policy Selection Page
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

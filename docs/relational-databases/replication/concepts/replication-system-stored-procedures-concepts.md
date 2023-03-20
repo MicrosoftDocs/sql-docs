@@ -1,23 +1,21 @@
 ---
+title: "Replication System Stored Procedures Concepts"
 description: "Replication System Stored Procedures Concepts"
-title: "Replication System Stored Procedures Concepts | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "stored procedures [SQL Server replication], programming"
   - "programming [SQL Server replication], system stored procedures"
   - "programming interfaces [SQL Server replication]"
   - "system stored procedures [SQL Server replication]"
   - "replication [SQL Server], how-to topics"
-ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
-author: "MashaMSFT"
-ms.author: "mathoma"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Replication System Stored Procedures Concepts
@@ -150,7 +148,7 @@ SET @publisher = $(DistPubServer);
 ```  
   
 ### Using the sqlcmd Utility from the Command Line  
- The following example shows how the command line is used to execute the `instdistpub.sql` script file using the [sqlcmd utility](../../../tools/sqlcmd-utility.md):  
+ The following example shows how the command line is used to execute the `instdistpub.sql` script file using the [sqlcmd utility](../../../tools/sqlcmd/sqlcmd-utility.md):  
   
 ```  
 sqlcmd.exe -E -S sqlserverinstance -i C:\instdistpub.sql -o C:\output.log -v DistPubServer="N'MyDistributorAndPublisher'"  
@@ -222,5 +220,4 @@ REM -- The following must be supplied on one line.
 ## See Also  
  [Replication Programming Concepts](../../../relational-databases/replication/concepts/replication-programming-concepts.md)   
  [Replication Stored Procedures &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)  
-  
+ [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)

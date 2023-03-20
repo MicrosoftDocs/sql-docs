@@ -1,16 +1,13 @@
 ---
+title: "Assessment Report (OracleToSQL)"
 description: "Assessment Report (OracleToSQL)"
-title: "Assessment Report (OracleToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 168b7465-a6d6-4329-b46e-fc6c5a3f2d9d
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
+f1_keywords:
   - "ssma.oracle.assessmentreport.f1"
 ---
 # Assessment Report (OracleToSQL)

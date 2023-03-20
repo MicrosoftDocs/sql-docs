@@ -7,10 +7,10 @@ ms.date: 08/09/2022
 ms.service: sql
 ms.subservice: configuration
 ms.topic: how-to
+ms.custom: template-how-to
 helpviewer_keywords:
   - "starting SQL Server on Linux, single-user mode"
   - "single-user mode [SQL Server] Linux"
-ms.custom: template-how-to
 ---
 # Restore the master database on Linux in single-user mode
 
@@ -120,5 +120,5 @@ When you restore a `master` database backup, any existing user databases that we
 ## Next steps
 
 - [Troubleshoot SQL Server on Linux](sql-server-linux-troubleshooting-guide.md)
-- [sqlcmd Utility](../tools/sqlcmd-utility.md)
+- [sqlcmd Utility](../tools/sqlcmd/sqlcmd-utility.md)
 - [Start, stop, and restart SQL Server services on Linux](sql-server-linux-start-stop-restart-sql-server-services.md)

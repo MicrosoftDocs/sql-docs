@@ -8,7 +8,6 @@ ms.date: 01/25/2023
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "Transact-SQL statements, executing"
   - "command prompt utilities [SQL Server], sqlcmd"

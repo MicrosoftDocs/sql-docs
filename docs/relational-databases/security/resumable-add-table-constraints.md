@@ -1,17 +1,14 @@
 ---
 title: "Resumable add table constraints"
-description: New resumable capabilities to support pausing and resuming a running ALTER TABLE ADD CONSTRAINT operation for SQL Server 2022 and Azure SQL. 
-ms.custom:
-- event-tier1-build-2022
-ms.date: 11/16/2022
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
+titleSuffix: SQL Server & Azure SQL
+description: New resumable capabilities to support pausing and resuming a running ALTER TABLE ADD CONSTRAINT operation for SQL Server 2022 and Azure SQL.
 author: VanMSFT
 ms.author: vanto
+ms.date: 11/16/2022
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
 monikerRange: ">=sql-server-ver16||>= sql-server-linux-ver16"
-titleSuffix: SQL Server & Azure SQL
 ---
 
 # Resumable add table constraints

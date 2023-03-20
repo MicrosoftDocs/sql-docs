@@ -8,6 +8,7 @@ ms.date: 01/30/2023
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "publications [SQL Server replication], creating"
   - "articles [SQL Server replication], defining"
@@ -101,7 +102,7 @@ Publications can be created programmatically using replication stored procedures
 1. At the Publisher, execute [sp_addpublication_snapshot (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Specify the publication name used in step 3 for `@publication` and the Windows credentials under which the Snapshot Agent runs for `@snapshot_job_name` and `@password`. If the agent will use SQL Server Authentication when connecting to the Publisher, you must also specify a value of `0` for `@publisher_security_mode` and the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login information for `@publisher_login` and `publisher_password`. This creates a Snapshot Agent job for the publication.
 
     > [!IMPORTANT]  
-    >  When configuring a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine (SQL Server Configuration Manager)](/sql/database-engine/configure-windows/configure-sql-server-encryption).
+    >  When configuring a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine (SQL Server Configuration Manager)](../../../database-engine/configure-windows/configure-sql-server-encryption.md).
 
 1. Add articles to the publication. For more information, see [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).
 
@@ -121,7 +122,7 @@ Publications can be created programmatically using replication stored procedures
 1. At the Publisher, execute [sp_addpublication_snapshot (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Specify the publication name used in step 2 for `@publication` and the Windows credentials under which the Snapshot Agent runs for `@snapshot_job_name` and `@password`. If the agent will use SQL Server Authentication when connecting to the Publisher, you must also specify a value of `0` for `@publisher_security_mode` and the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login information for `@publisher_login` and `@publisher_password`. This creates a Snapshot Agent job for the publication.
 
     > [!IMPORTANT]  
-    >  When configuring a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine (SQL Server Configuration Manager)](/sql/database-engine/configure-windows/configure-sql-server-encryption).
+    >  When configuring a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine (SQL Server Configuration Manager)](../../../database-engine/configure-windows/configure-sql-server-encryption.md).
 
 1. Add articles to the publication. For more information, see [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).
 
@@ -184,7 +185,7 @@ You can create publications programmatically by using Replication Management Obj
 1. Call the <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> method to create the publication.
 
    > [!IMPORTANT]  
-   >  When configuring a Publisher with a remote Distributor, the values supplied for all properties, including <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before calling the <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> method. For more information, see [Enable Encrypted Connections to the Database Engine (SQL Server Configuration Manager)](/sql/database-engine/configure-windows/configure-sql-server-encryption).
+   >  When configuring a Publisher with a remote Distributor, the values supplied for all properties, including <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before calling the <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> method. For more information, see [Enable Encrypted Connections to the Database Engine (SQL Server Configuration Manager)](../../../database-engine/configure-windows/configure-sql-server-encryption.md).
 
 1. Call the <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> method to create the Snapshot Agent job for the publication.
 
@@ -214,7 +215,7 @@ You can create publications programmatically by using Replication Management Obj
 1. Call the <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> method to create the publication.
 
     > [!IMPORTANT]  
-    >  When configuring a Publisher with a remote Distributor, the values supplied for all properties, including <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before calling the <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> method. For more information, see [Enable Encrypted Connections to the Database Engine (SQL Server Configuration Manager)](/sql/database-engine/configure-windows/configure-sql-server-encryption).
+    >  When configuring a Publisher with a remote Distributor, the values supplied for all properties, including <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before calling the <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> method. For more information, see [Enable Encrypted Connections to the Database Engine (SQL Server Configuration Manager)](../../../database-engine/configure-windows/configure-sql-server-encryption.md).
 
 1. Call the <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> method to create the Snapshot Agent job for the publication.
 
@@ -234,7 +235,7 @@ This example enables the `AdventureWorks` database for merge publishing and crea
 
 ## See also
 
-- [Use sqlcmd with Scripting Variables](../../../ssms/scripting/sqlcmd-use-with-scripting-variables.md)
+- [Use sqlcmd with Scripting Variables](../../../tools/sqlcmd/sqlcmd-use-scripting-variables.md)
 - [Publish Data and Database Objects](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)
 - [Replication Management Objects Concepts](../../../relational-databases/replication/concepts/replication-management-objects-concepts.md)
 - [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)

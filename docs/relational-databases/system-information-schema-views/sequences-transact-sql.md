@@ -1,22 +1,20 @@
 ---
+title: "SEQUENCES (Transact-SQL)"
 description: "SEQUENCES (Transact-SQL)"
-title: "SEQUENCES (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "SEQUENCES"
-  - "SEQUENCES_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "SEQUENCES view"
-  - "INFORMATION_SCHEMA.SEQUENCES view"
 author: markingmyname
 ms.author: maghan
+ms.date: "12/30/2019"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "SEQUENCES"
+  - "SEQUENCES_TSQL"
+helpviewer_keywords:
+  - "SEQUENCES view"
+  - "INFORMATION_SCHEMA.SEQUENCES view"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SEQUENCES (Transact-SQL)

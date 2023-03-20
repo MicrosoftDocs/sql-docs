@@ -1,20 +1,17 @@
 ---
+title: "Database Suspect Data Page Event Class"
 description: "Database Suspect Data Page Event Class"
-title: "Database Suspect Data Page Event Class | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/15/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: supportability
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "event notifications [SQL Server], database mirroring"
   - "suspect_pages system table"
   - "database mirroring [SQL Server], event notifications"
   - "Database Suspect Data Page event class"
-ms.assetid: 098e1443-a8a0-425c-9311-0a479b1370ed
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Database Suspect Data Page Event Class

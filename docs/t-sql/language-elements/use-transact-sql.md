@@ -3,12 +3,10 @@ title: "USE (Transact-SQL)"
 description: "USE (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: ""
 ms.date: "11/28/2016"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "USE_TSQL"
   - "USE"

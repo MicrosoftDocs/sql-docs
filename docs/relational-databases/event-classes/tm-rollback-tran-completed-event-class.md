@@ -1,17 +1,14 @@
 ---
+title: "TM: Rollback Tran Completed Event Class"
 description: "TM: Rollback Tran Completed Event Class"
-title: "TM: Rollback Tran Completed Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "TM: Rollback Tran Completed event class"
-ms.assetid: af4043db-bc9f-4cd8-8d07-ef3efae85148
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "TM: Rollback Tran Completed event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TM: Rollback Tran Completed Event Class

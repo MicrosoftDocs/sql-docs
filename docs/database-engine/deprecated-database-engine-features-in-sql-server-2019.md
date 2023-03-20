@@ -9,7 +9,6 @@ ms.date: 07/25/2022
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "deprecated changes 2019 [SQL Server]"
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
@@ -37,10 +36,7 @@ You can monitor the use of deprecated features by using the [!INCLUDE[ssNoVersio
 
 The values of these counters are also available by executing the following statement:
 
-```sql
-SELECT * FROM sys.dm_os_performance_counters
-WHERE object_name = 'SQLServer:Deprecated Features';
-```
+[!INCLUDE [deprecated-os-performance-counters](../includes/deprecated-os-performance-counters.md)]
 
 ## See also
 

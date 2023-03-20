@@ -1,13 +1,14 @@
 ---
 title: "Add & drop articles (existing Publication)"
 description: Learn how to add articles to and drop articles from existing publications for SQL Server.
-ms.custom: seo-lt-2019
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/07/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "articles [SQL Server replication], dropping"
   - "deleting articles"
   - "removing articles"
@@ -16,9 +17,6 @@ helpviewer_keywords:
   - "administering replication, articles"
   - "publications [SQL Server replication], adding and dropping articles"
   - "articles [SQL Server replication], adding"
-ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Add Articles to and Drop Articles from Existing Publications

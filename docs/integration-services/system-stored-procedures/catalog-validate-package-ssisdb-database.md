@@ -1,18 +1,15 @@
 ---
+title: "catalog.validate_package (SSISDB Database)"
 description: "catalog.validate_package (SSISDB Database)"
-title: "catalog.validate_package (SSISDB Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "language-reference"
-helpviewer_keywords: 
-  - "validate_package stored procedure [Integration Services]"
-  - "catalog.validate_package stored procedure [Integration Services]"
-ms.assetid: 0dc03df1-b793-408f-af4c-c11188729abf
 author: chugugrace
 ms.author: chugu
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "validate_package stored procedure [Integration Services]"
+  - "catalog.validate_package stored procedure [Integration Services]"
 ---
 # catalog.validate_package (SSISDB Database)
 

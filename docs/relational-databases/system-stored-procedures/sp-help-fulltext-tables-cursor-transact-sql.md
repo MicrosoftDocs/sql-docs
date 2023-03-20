@@ -1,22 +1,19 @@
 ---
+title: "sp_help_fulltext_tables_cursor (Transact-SQL)"
 description: "sp_help_fulltext_tables_cursor (Transact-SQL)"
-title: "sp_help_fulltext_tables_cursor (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_help_fulltext_tables_cursor"
-  - "sp_help_fulltext_tables_cursor_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_help_fulltext_tables_cursor"
-ms.assetid: 155791eb-8832-4596-8487-7fc70dfba5b9
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_help_fulltext_tables_cursor"
+  - "sp_help_fulltext_tables_cursor_TSQL"
+helpviewer_keywords:
+  - "sp_help_fulltext_tables_cursor"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_help_fulltext_tables_cursor (Transact-SQL)

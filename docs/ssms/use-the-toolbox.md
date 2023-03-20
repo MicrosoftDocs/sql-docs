@@ -1,19 +1,17 @@
 ---
 title: "Use the Toolbox"
 description: "Use the Toolbox"
-ms.custom: seo-lt-2019
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "adding controls"
   - "Toolbox [SQL Server Management Studio]"
   - "dragging and dropping text"
   - "designer controls [SQL Server Management Studio]"
-author: "markingmyname"
-ms.author: "maghan"
 ---
 
 # Use the Toolbox

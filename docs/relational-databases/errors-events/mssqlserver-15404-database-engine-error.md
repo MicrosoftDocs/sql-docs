@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_15404"
 description: "MSSQLSERVER_15404"
-title: "MSSQLSERVER_15404 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "15404 (Database Engine error)"
-ms.assetid: 69677f02-bc81-4e4a-99b8-5c1bd1de36df
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "15404 (Database Engine error)"
 ---
 # MSSQLSERVER_15404
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

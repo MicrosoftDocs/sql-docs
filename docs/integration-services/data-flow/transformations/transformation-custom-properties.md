@@ -1,16 +1,13 @@
 ---
+title: "Transformation Custom Properties"
 description: "Transformation Custom Properties"
-title: "Transformation Custom Properties | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Aggregate transformation [Integration Services]"
   - "Slowly Changing Dimension transformation"
   - "Import Column transformation [Integration Services]"
@@ -38,9 +35,9 @@ helpviewer_keywords:
   - "OLE DB Command transformation"
   - "Copy Column transformation custom properties [Integration Services]"
   - "Character Map transformation custom properties [Integration Services]"
-ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
+  - "CSharp"
 ---
 # Transformation Custom Properties
 

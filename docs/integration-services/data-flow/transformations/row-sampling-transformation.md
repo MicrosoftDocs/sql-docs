@@ -1,17 +1,17 @@
 ---
+title: "Row Sampling Transformation"
 description: "Row Sampling Transformation"
-title: "Row Sampling Transformation | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.rowsamplingtrans.f1"
   - "sql13.DTS.DESIGNER.ROWSAMPLINGTRANSFORMATION.COLUMNS.F1"
   - "sql13.dts.designer.rowsamplingtransformation.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sampling seeds [Integration Services]"
   - "random seeds"
   - "random sampling"
@@ -19,9 +19,6 @@ helpviewer_keywords:
   - "Row Sampling transformation"
   - "packages [Integration Services], samples"
   - "datasets [Integration Services], sample"
-ms.assetid: b6caafd3-30b2-4368-82af-a44611d4cd39
-author: chugugrace
-ms.author: chugu
 ---
 # Row Sampling Transformation
 

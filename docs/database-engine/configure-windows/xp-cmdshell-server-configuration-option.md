@@ -7,7 +7,6 @@ ms.date: 06/12/2020
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
-ms.custom: contperf-fy20q4
 helpviewer_keywords:
   - "xp_cmdshell"
 ---

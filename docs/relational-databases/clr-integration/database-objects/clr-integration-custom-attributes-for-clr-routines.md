@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "SqlFunction attribute"
   - "common language runtime [SQL Server], attributes"
   - "SqlUserDefinedTypeAttribute attribute"
-ms.assetid: 95069d22-b05d-4670-b053-15ee2a664e33
 ---
 # CLR Integration Custom Attributes for CLR Routines
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

@@ -4,13 +4,11 @@ description: Learn about new features for SQL Server 2022 (16.x), which gives yo
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: wiassaf, randolphwest
-ms.date: 12/07/2022
+ms.date: 03/15/2023
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: "article"
-ms.custom:
-  - intro-whats-new
-  - event-tier1-build-2022
+ms.custom: intro-whats-new
 monikerRange: ">= sql-server-2016"
 ---
 
@@ -59,7 +57,7 @@ The following sections identify features that are improved our introduced in [!I
 | :--- | :--- |
 | Azure Synapse Link for SQL | Get near real time analytics over operational data in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)]. With a seamless integration between operational stores in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] and Azure Synapse Analytics dedicated SQL pools, Azure Synapse Link for SQL enables you to run analytics, business intelligence and machine learning scenarios on your operational data with minimum impact on source databases with a new change feed technology.<br /><br />For more information, see [What is Azure Synapse Link for SQL? - Azure Synapse Analytics](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview).<br /><br />See also, [Known issues](/azure/synapse-analytics/synapse-link/synapse-link-for-sql-known-issues). |
 | Object storage integration | [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] introduces new object storage integration to the data platform, enabling you to integrate SQL Server with S3-compatible object storage, in addition to Azure Storage. The first is [backup to URL](../relational-databases/backup-restore/sql-server-backup-to-url-s3-compatible-object-storage.md) and the second is Data Lake Virtualization.<br /><br />Data Lake Virtualization integrates [PolyBase with S3-compatible object storage](../relational-databases/polybase/polybase-configure-s3-compatible.md), adds support for to querying parquet files with T-SQL. |
-| Data Virtualization | Query different types of data on different types of data sources from SQL Server. |
+| Data Virtualization | Query different types of data on different types of data sources from SQL Server. <br/><br/> [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] Cumulative update 2 now introduces support for Oracle TNS files. For more information and samples, see [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-connection-options.md).|
 
 ## Availability
 
@@ -112,7 +110,7 @@ The [intelligent query processing (IQP)](../relational-databases/performance/int
 | Query Store on secondary replicas | Query Store on secondary replicas enables the same Query Store functionality on secondary replica workloads that is available for primary replicas. Learn more in [Query Store for secondary replicas](../relational-databases/performance/query-store-for-secondary-replicas.md).<br /><br />For more information, see [Query Store improvements](#query-store-improvements) later in this article. |
 | Query Store hints | [Query Store hints](../relational-databases/performance/query-store-hints.md) leverage the Query Store to provide a method to shape query plans without changing application code. Previously only available on Azure SQL Database and Azure SQL Managed Instance, Query Store hints are now available in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]. Requires the Query Store to be enabled and in "Read write" mode. |
 | Memory grant feedback | Memory grant feedback adjusts the size of the memory allocated for a query based on past performance. [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] introduces [Percentile and Persistence mode memory grant feedback](../relational-databases/performance/intelligent-query-processing-feedback.md#percentile-and-persistence-mode-memory-grant-feedback). Requires enabling Query Store.<br /><br />- **Persistence**: A capability that allows the memory grant feedback for a given cached plan to be persisted in the Query Store so that feedback can be reused after cache evictions. Persistence benefits memory grant feedback as well as the new DOP and CE feedback features.<br />- **Percentile**: A new algorithm improves performance of queries with widely oscillating memory requirements, using memory grant information from several previous query executions over, instead of just the memory grant from the immediately preceding query execution. Requires enabling Query Store. Query Store is enabled by default for newly created databases as of SQL Server 2022 CTP 2.1. |
-| Parameter sensitive plan optimization | Automatically enables multiple, active cached plans for a single parameterized statement. Cached execution plans accommodate largely different data sizes based on the customer-provided runtime parameter value(s). For more information, see [Parameter Sensitive Plan optimization](/sql/relational-databases/performance/parameter-sensitive-plan-optimization). |
+| Parameter sensitive plan optimization | Automatically enables multiple, active cached plans for a single parameterized statement. Cached execution plans accommodate largely different data sizes based on the customer-provided runtime parameter value(s). For more information, see [Parameter Sensitive Plan optimization](../relational-databases/performance/parameter-sensitive-plan-optimization.md). |
 | Degree of parallelism (DOP) feedback | A new database scoped configuration option `DOP_FEEDBACK` automatically adjusts degree of parallelism for repeating queries to optimize for workloads where inefficient parallelism can cause performance issues. Similar to optimizations in Azure SQL Database. Requires the Query Store to be enabled and in "Read write" mode.<br /><br />Beginning with RC 0, every query recompilation SQL Server compares the runtime stats of the query using existing feedback to the runtime stats of the previous compilation with the existing feedback. If the performance isn't the same or better, we clear all DOP feedback and trigger a reanalysis of the query starting from the compiled DOP.<br /><br />See [Degree of parallelism (DOP) feedback](../relational-databases/performance/intelligent-query-processing-feedback.md#degree-of-parallelism-dop-feedback). |
 | Cardinality estimation feedback | Identifies and corrects suboptimal query execution plans for repeating queries, when these issues are caused by incorrect estimation model assumptions. Requires the Query Store to be enabled and in "Read write" mode. See [Cardinality estimation (CE) feedback](../relational-databases/performance/intelligent-query-processing-feedback.md#cardinality-estimation-ce-feedback). |
 | Optimized plan forcing | Uses compilation replay to improve the compilation time for forced plan generation by pre-caching non-repeatable plan compilation steps. Learn more in [Optimized plan forcing with Query Store](../relational-databases/performance/optimized-plan-forcing-query-store.md). |
@@ -162,7 +160,7 @@ The [intelligent query processing (IQP)](../relational-databases/performance/int
 | :--- | :--- |
 | Azure Data Studio | Get the latest release at [Download and install Azure Data Studio](../azure-data-studio/download-azure-data-studio.md). The latest release includes support for [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]. |
 | Distributed Replay | SQL Server setup no longer includes the Distributed Replay client and controller executables. These will be available, along with the Admin executable, as a separate download |
-| SQL Server Management Studio | SSMS version 19.0 Preview 3 is now available and is the recommended version of SSMS for [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]. [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms-19.md). |
+| SQL Server Management Studio | SSMS version 19.0 is now available and is the recommended version of SSMS for [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]. [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md). |
 | SqlPackage.exe | Version 19 of SqlPackage provides support for [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]. Get the latest version at [Download and install sqlpackage](../tools/sqlpackage/sqlpackage-download.md). |
 | VS Code | Version 1.67 of VS Code and higher support [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]. Get the latest release at <https://code.visualstudio.com/>. |
 

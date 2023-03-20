@@ -8,7 +8,6 @@ ms.date: 11/04/2022
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: event-tier1-build-2022
 helpviewer_keywords:
   - "online database state [SQL Server]"
   - "database options [SQL Server]"

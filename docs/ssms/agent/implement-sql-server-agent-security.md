@@ -1,20 +1,17 @@
 ---
-description: "Implement SQL Server Agent Security"
 title: "Implement SQL Server Agent Security"
-ms.custom: seo-lt-2019
+description: "Implement SQL Server Agent Security"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Agent, security"
   - "security [SQL Server Agent], about security"
   - "security [SQL Server Agent]"
   - "security [SQL Server], SQL Server Agent"
-ms.assetid: d770d35c-c8de-4e00-9a85-7d03f45a0f0d
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Implement SQL Server Agent Security

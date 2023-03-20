@@ -7,7 +7,9 @@ ms.reviewer: maghan
 ms.date: 09/22/2020
 ms.service: azure-data-studio
 ms.topic: how-to
-ms.custom: intro-deployment
+ms.custom:
+  - intro-deployment
+  - updatefrequency5
 ---
 
 # Deploy Azure SQL Edge with Azure Data Studio (Preview)

@@ -1,20 +1,16 @@
 ---
+title: "ISSAsynchStatus (Native Client OLE DB provider)"
 description: "ISSAsynchStatus (Native Client OLE DB provider)"
-title: "ISSAsynchStatus (Native Client OLE DB provider) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-apiname: 
-  - "ISSAsynchStatus (OLE DB)"
-apitype: "COM"
-helpviewer_keywords: 
-  - "ISSAsynchStatus interface"
-ms.assetid: c643f09f-9ccc-4d8b-9243-3cde86c2bd46
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "ISSAsynchStatus interface"
+apiname: "ISSAsynchStatus (OLE DB)"
+apitype: "COM"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ISSAsynchStatus (Native Client OLE DB Provider)

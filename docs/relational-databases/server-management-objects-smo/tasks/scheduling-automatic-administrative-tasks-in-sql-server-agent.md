@@ -1,20 +1,15 @@
 ---
-description: "Scheduling Automatic Administrative Tasks in SQL Server Agent"
 title: "Scheduling Automatic Administrative Tasks in SQL Server Agent"
-ms.custom: seo-dt-2019
+description: "Scheduling Automatic Administrative Tasks in SQL Server Agent"
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: "08/06/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "scheduling administrative tasks [SMO]"
   - "SQL Server Agent [SMO]"
   - "automatic administrative SMO tasks"
-ms.assetid: 900242ad-d6a2-48e9-8a1b-f0eea4413c16
-author: "markingmyname"
-ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Scheduling Automatic Administrative Tasks in SQL Server Agent

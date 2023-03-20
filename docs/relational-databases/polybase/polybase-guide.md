@@ -1,10 +1,14 @@
 ---
 title: "Introducing data virtualization with PolyBase"
 description: PolyBase enables your SQL Server instance to process Transact-SQL queries that read data from external data sources such as Azure Blob Storage.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: hudequei
 ms.date: 08/22/2022
 ms.service: sql
 ms.subservice: polybase
 ms.topic: "overview"
+ms.custom: intro-overview
 f1_keywords:
   - "PolyBase"
   - "PolyBase, guide"
@@ -15,13 +19,6 @@ helpviewer_keywords:
   - "Hadoop export"
   - "Hadoop export, PolyBase overview"
   - "Hadoop import, PolyBase overview"
-ms.custom:
-- contperf-fy21q2
-- intro-overview
-- event-tier1-build-2022
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: hudequei
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||>=aps-pdw-2016||=azure-sqldw-latest"
 ---
 
@@ -47,7 +44,7 @@ PolyBase provides these same functionalities for the following SQL products from
 - [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 > [!NOTE]
-> Data virtualization using PolyBase feature is available in preview for **Azure SQL Managed Instance**, scoped to querying external data stored in files in Azure Data Lake Storage (ADLS) Gen2 and Azure Blob Storage. Visit [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview) to learn more.
+> Data virtualization using PolyBase feature is available for **Azure SQL Managed Instance**, scoped to querying external data stored in files in Azure Data Lake Storage (ADLS) Gen2 and Azure Blob Storage. Visit [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview) to learn more.
 
 ### SQL Server 2022 PolyBase enhancements
 
@@ -80,7 +77,8 @@ For an example using PolyBase in [!INCLUDE[sssql22-md](../../includes/sssql22-md
 * [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] introduced PolyBase with support for connections to Hadoop and Azure Blob Storage.
 * [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] introduced additional connectors, including [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, Teradata, and MongoDB.
 * [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] introduced the S3-compatible storage connector.
-
+* [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] Cumulative update 19 introduced support for Oracle TNS.
+* [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Cumulative update 2 introduced support for Oracle TNS.
 
  Examples of external connectors include:
 

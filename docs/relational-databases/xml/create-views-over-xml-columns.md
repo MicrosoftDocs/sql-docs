@@ -1,15 +1,15 @@
 ---
 title: "Create views over XML columns"
 description: Learn how to create a view in which the value from an xml type column is retrieved using the value() method of the xml data type.
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
 ms.date: 05/05/2022
 ms.service: sql
-ms.reviewer: randolphwest
 ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "views [XML in SQL Server]"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Create views over XML columns
 

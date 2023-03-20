@@ -1,12 +1,13 @@
 ---
-description: "Multiuser Environments (Visual Database Tools)"
 title: Multiuser Environments
-ms.custom: seo-lt-2019
+description: "Multiuser Environments (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "users [SQL Server], multiuser environments"
   - "conflict resolution [Visual Database Tools]"
   - "multiple users making database changes"
@@ -14,11 +15,6 @@ helpviewer_keywords:
   - "database modifications [SQL Server]"
   - "version control [Visual Database Tools]"
   - "Visual Database Tools [SQL Server], multiuser environments"
-ms.assetid: 330bd48c-9427-4967-b58e-b7c492d5ee36
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Multiuser Environments (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

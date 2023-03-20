@@ -1,19 +1,16 @@
 ---
-description: "Define the Response to an Alert"
 title: Define the Response to an Alert
+description: "Define the Response to an Alert"
+author: markingmyname
+ms.author: maghan
+ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Agent, alerts"
   - "alerts [SQL Server], responding to"
   - "responding to alerts"
-ms.assetid: c86ca6eb-c59f-46e9-bc32-d474e7c3b170
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 

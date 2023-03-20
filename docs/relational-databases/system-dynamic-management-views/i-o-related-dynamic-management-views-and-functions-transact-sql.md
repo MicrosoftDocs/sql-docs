@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "dynamic management objects [SQL Server], I/O"
 dev_langs:
   - "TSQL"
-ms.assetid: f876d32b-c07f-4ccc-a691-5e580bc50c40
 ---
 # I/O Related Dynamic Management Views and Functions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

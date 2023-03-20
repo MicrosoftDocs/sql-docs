@@ -1,17 +1,15 @@
 ---
+title: "New Subscription Wizard (UI Reference)"
 description: "New Subscription Wizard (UI Reference)"
-title: "New Subscription Wizard (UI Reference) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "New Subscription Wizard"
-ms.assetid: fd201921-7c96-4fcc-85fe-61d91396429b
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "New Subscription Wizard"
 monikerRange: "=azuresqldb-current||>=sql-server-2016"
 ---
 # New Subscription Wizard (UI Reference)

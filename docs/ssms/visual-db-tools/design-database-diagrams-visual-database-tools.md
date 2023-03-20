@@ -1,23 +1,20 @@
 ---
-description: "Design Database Diagrams (Visual Database Tools)"
 title: Design Database Diagrams
-ms.custom: seo-lt-2019
+description: "Design Database Diagrams (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "vdtsql.chm:65536"
   - "vdt.DatabaseDesigner"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Database Diagram Designer"
   - "Visual Database Tools [SQL Server], database diagrams"
   - "database diagrams [SQL Server], designing"
   - "diagrams [SQL Server], designing"
-ms.assetid: 6d2c14e1-3d73-4d10-ae5b-7f2b5d6c4ea8
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
 ---
 
 # Design Database Diagrams (Visual Database Tools)

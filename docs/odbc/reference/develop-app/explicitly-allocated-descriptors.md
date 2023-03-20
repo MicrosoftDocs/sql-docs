@@ -1,19 +1,16 @@
 ---
+title: "Explicitly Allocated Descriptors"
 description: "Explicitly Allocated Descriptors"
-title: "Explicitly Allocated Descriptors | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "descriptors [ODBC], allocating and freeing"
   - "explicitly allocated descriptors [ODBC]"
   - "allocating and freeing descriptors [ODBC]"
-ms.assetid: f590251d-56a6-4d58-a405-9e85e68fbc47
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Explicitly Allocated Descriptors
 An application can explicitly allocate an application descriptor on a connection at any time it is connected to the database. By specifying that descriptor handle as an attribute of a statement handle using **SQLSetStmtAttr**, the application directs the driver to use that descriptor in place of the corresponding implicitly allocated application descriptors. The application cannot specify alternate implementation descriptors.  

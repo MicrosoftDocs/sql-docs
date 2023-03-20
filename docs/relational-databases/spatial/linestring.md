@@ -1,17 +1,14 @@
 ---
+title: "LineString"
 description: "LineString"
-title: "LineString | Microsoft Docs"
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "LineString geometry subtype [SQL Server]"
-  - "geometry subtypes [SQL Server]"
-ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
 author: MladjoA
 ms.author: mlandzic
+ms.date: "03/03/2017"
+ms.service: sql
+ms.topic: conceptual
+helpviewer_keywords:
+  - "LineString geometry subtype [SQL Server]"
+  - "geometry subtypes [SQL Server]"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # LineString

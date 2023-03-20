@@ -1,17 +1,14 @@
 ---
+title: "Trustworthy Bit"
 description: "Trustworthy Bit"
-title: "Trustworthy Bit | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Best Practices [Database Engine]"
-ms.assetid: 3198188a-2b59-4865-9560-10f760934b8e
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Best Practices [Database Engine]"
 ---
 # Trustworthy Bit
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

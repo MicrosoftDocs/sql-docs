@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "MStracer_tokens system table"
 dev_langs:
   - "TSQL"
-ms.assetid: b273aa48-8188-4213-8e2c-311543c3236f
 ---
 # MStracer_tokens (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,13 +1,13 @@
 ---
-title: "Credentials (Database Engine) | Microsoft Docs"
+title: "Credentials (Database Engine)"
 description: Learn about credentials in SQL Server. Get acquainted with the authentication information required to connect to a resource outside SQL Server.
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "06/27/2019"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: security
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "principals [SQL Server], credentials"
   - "schemas [SQL Server], credentials"
   - "permissions [SQL Server], credentials"
@@ -18,9 +18,6 @@ helpviewer_keywords:
   - "users [SQL Server], credentials"
   - "credentials [SQL Server], about credentials"
   - "credentials [SQL Server]"
-ms.assetid: c8df6022-e0b4-46b8-9670-3f86938d3177
-author: VanMSFT
-ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Credentials (Database Engine)

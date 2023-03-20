@@ -1,20 +1,17 @@
 ---
-title: "empty Function (XQuery) | Microsoft Docs"
+title: "empty Function (XQuery)"
 description: Learn about the XQuery function empty() that returns a value indicating whether a specified sequence of items is empty.
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: xml
-ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "empty function"
-  - "fn:empty function"
-ms.assetid: 46da89a8-0cd9-4913-8521-4087589a04ba
 author: "rothja"
 ms.author: "jroth"
+ms.date: "03/09/2017"
+ms.service: sql
+ms.subservice: xml
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "empty function"
+  - "fn:empty function"
+dev_langs:
+  - "XML"
 ---
 # Functions on Sequences - empty
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]

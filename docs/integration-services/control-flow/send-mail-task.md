@@ -1,25 +1,22 @@
 ---
+title: "Send Mail Task"
 description: "Send Mail Task"
-title: "Send Mail Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.sendmailtask.f1"
   - "sql13.dts.designer.sendmailtask.general.f1"
   - "sql13.dts.designer.sendmailtask.mail.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "mail [Integration Services]"
   - "Send Mail task"
   - "e-mail [Integration Services]"
   - "messages [Integration Services]"
   - "sending messages"
-ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
-author: chugugrace
-ms.author: chugu
 ---
 # Send Mail Task
 

@@ -1,16 +1,11 @@
 ---
+title: "SQL Server Express LocalDB Reference"
 description: "SQL Server Express LocalDB Reference"
-title: "SQL Server Express LocalDB Reference | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-
-ms.topic: "reference"
-ms.assetid: 25b71829-bdb1-46f4-ac36-80ddced52f3d
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.topic: "reference"
 ---
 # SQL Server Express LocalDB Reference
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]

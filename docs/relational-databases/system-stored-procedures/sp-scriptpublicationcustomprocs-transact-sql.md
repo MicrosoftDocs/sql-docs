@@ -1,22 +1,19 @@
 ---
+title: "sp_scriptpublicationcustomprocs (Transact-SQL)"
 description: "sp_scriptpublicationcustomprocs (Transact-SQL)"
-title: "sp_scriptpublicationcustomprocs (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_scriptpublicationcustomprocs"
-  - "sp_scriptpublicationcustomprocs_TSQL"
-helpviewer_keywords: 
-  - "sp_scriptpublicationcustomprocs"
-ms.assetid: b06102d5-4284-4834-b126-bc0baea49be5
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_scriptpublicationcustomprocs"
+  - "sp_scriptpublicationcustomprocs_TSQL"
+helpviewer_keywords:
+  - "sp_scriptpublicationcustomprocs"
+dev_langs:
+  - "TSQL"
 ---
 # sp_scriptpublicationcustomprocs (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

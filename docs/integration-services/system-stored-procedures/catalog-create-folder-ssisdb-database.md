@@ -1,15 +1,12 @@
 ---
+title: "catalog.create_folder (SSISDB Database)"
 description: "catalog.create_folder (SSISDB Database)"
-title: "catalog.create_folder (SSISDB Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "language-reference"
-ms.assetid: 06fb3549-e970-4ca2-a61f-59affb9c6dcc
 author: chugugrace
 ms.author: chugu
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
 ---
 # catalog.create_folder (SSISDB Database)
 

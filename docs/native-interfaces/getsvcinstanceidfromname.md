@@ -1,18 +1,14 @@
 ---
+title: "GetSvcInstanceIDFromName"
 description: "GetSvcInstanceIDFromName()"
-title: "GetSvcInstanceIDFromName | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/18/2021"
-ms.service: sql
-ms.reviewer: ""
-apiname: 
-  - "GetSvcInstanceIDFromName"
-apilocation: 
-  - "instapi.dll"
-apitype: "DllExport"
-ms.topic: reference
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "06/18/2021"
+ms.service: sql
+ms.topic: reference
+apilocation: "instapi.dll"
+apiname: "GetSvcInstanceIDFromName"
+apitype: "DllExport"
 ---
 
 # GetSvcInstanceIDFromName()

@@ -1,25 +1,22 @@
 ---
+title: "managed_backup.sp_backup_on_demand (Transact-SQL)"
 description: "managed_backup.sp_backup_on_demand (Transact-SQL)"
-title: "managed_backup.sp_backup_on_demand (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "06/10/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "smart_admin.sp_backup_on_demand"
   - "smart_admin.sp_backup_on_demand_TSQL"
   - "sp_backup_on_demand_TSQL"
   - "sp_backup_on_demand"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "smart_admin.sp_backup_on_demand"
   - "sp_backup_on_demand"
-ms.assetid: 638f809f-27fa-4c44-a549-9cf37ecc920c
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # managed_backup.sp_backup_on_demand (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

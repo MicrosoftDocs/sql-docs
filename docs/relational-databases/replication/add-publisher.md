@@ -1,19 +1,17 @@
 ---
+title: "Add Publisher"
 description: "Add Publisher"
-title: "Add Publisher | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.monitor.addpublisher.f1"
-helpviewer_keywords: 
-  - "Add Publisher dialog box"
-ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.monitor.addpublisher.f1"
+helpviewer_keywords:
+  - "Add Publisher dialog box"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Add Publisher

@@ -7,7 +7,6 @@ ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "explicit schema mapping [SQLXML]"
   - "updategrams [SQLXML], mapping schema specifying"
@@ -20,7 +19,6 @@ helpviewer_keywords:
   - "namespaces [SQLXML], updategrams"
   - "executing updategrams [SQLXML]"
   - "implicit schema mapping"
-ms.assetid: cfe24e82-a645-4f93-ab16-39c21f90cce6
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Introduction to Updategrams (SQLXML 4.0)

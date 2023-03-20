@@ -1,21 +1,19 @@
 ---
 title: Work with Database Diagrams
 description: "Work with Database Diagrams (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
+ms.date: 07/09/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.workingwithsql2000diagrams"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "database diagrams [SQL Server], about database diagrams"
   - "diagrams [SQL Server], about diagrams"
   - "database diagrams [SQL Server]"
   - "diagrams [SQL Server]"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-ms.custom: seo-lt-2019
-ms.date: 07/09/2017
 ---
 
 # Work with Database Diagrams (Visual Database Tools)

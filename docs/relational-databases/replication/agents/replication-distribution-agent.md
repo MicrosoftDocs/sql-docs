@@ -1,20 +1,18 @@
 ---
-title: "Replication Distribution Agent | Microsoft Docs"
+title: "Replication Distribution Agent"
 description: Move a snapshot and the transactions held in the distribution database tables to the Subscribers destination tables by using the Replication Distribution Agent.
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "10/29/2018"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "Distribution Agent, executables"
   - "agents [SQL Server replication], Distribution Agent"
   - "Distribution Agent, parameter reference"
   - "command prompt [SQL Server replication]"
-ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-current||>=sql-server-2016"
 ---
 # Replication Distribution Agent

@@ -1,17 +1,15 @@
 ---
+title: "Glossary of Terms for Oracle Publishing"
 description: "Glossary of Terms for Oracle Publishing"
-title: "Glossary of Terms for Oracle Publishing | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Oracle publishing [SQL Server replication], glossary"
-ms.assetid: e21dfa4b-6144-4be7-9cbf-ca2709b2bd9f
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "Oracle publishing [SQL Server replication], glossary"
 ---
 # Glossary of Terms for Oracle Publishing
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

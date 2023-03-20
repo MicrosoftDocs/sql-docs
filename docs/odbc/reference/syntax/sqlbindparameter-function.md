@@ -1,25 +1,19 @@
 ---
+title: "SQLBindParameter Function"
 description: "SQLBindParameter Function"
-title: "SQLBindParameter Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLBindParameter"
-apilocation: 
-  - "sqlsrv32.dll"
-  - "odbc32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLBindParameter"
-helpviewer_keywords: 
-  - "SQLBindParameter function [ODBC]"
-ms.assetid: 38349d4b-be03-46f9-9d6a-e50dd144e225
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2019"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLBindParameter"
+helpviewer_keywords:
+  - "SQLBindParameter function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLBindParameter"
+apitype: "dllExport"
 ---
 # SQLBindParameter Function
 

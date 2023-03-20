@@ -1,19 +1,15 @@
 ---
+title: "Database Mail External Program"
 description: "Database Mail External Program"
-title: "Database Mail External Program | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "external programs [Database Mail]"
   - "DatabaseMail90.exe"
   - "Database Mail [SQL Server], external programs"
-ms.assetid: bc124164-eb6e-4b7f-bf66-98a3113d02f7
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # Database Mail External Program
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

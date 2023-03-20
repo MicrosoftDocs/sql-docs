@@ -1,15 +1,12 @@
 ---
+title: "catalog.set_object_parameter_value (SSISDB Database)"
 description: "catalog.set_object_parameter_value (SSISDB Database)"
-title: "catalog.set_object_parameter_value (SSISDB Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "language-reference"
-ms.assetid: fb887543-f92f-404d-9495-a1dd23a6716e
 author: chugugrace
 ms.author: chugu
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
 ---
 # catalog.set_object_parameter_value (SSISDB Database)
 

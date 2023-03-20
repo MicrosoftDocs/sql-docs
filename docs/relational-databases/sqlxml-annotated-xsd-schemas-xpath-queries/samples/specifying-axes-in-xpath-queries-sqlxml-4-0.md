@@ -7,7 +7,6 @@ ms.date: "03/04/2017"
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "XPath queries [SQLXML], axes"
   - "context node [SQLXML]"
@@ -16,7 +15,6 @@ helpviewer_keywords:
   - "child axis"
   - "parent axis"
   - "axes [SQLXML]"
-ms.assetid: d17b8278-da58-4576-95b4-7a92772566d8
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specifying Axes in XPath Queries (SQLXML 4.0)

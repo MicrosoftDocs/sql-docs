@@ -1,22 +1,17 @@
 ---
-description: "FlagValue Property (ClientSettingsGeneralFlag Class)"
 title: "FlagValue Property (ClientSettingsGeneralFlag)"
-ms.custom: seo-lt-2019
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "FlagValue Property (ClientSettingsGeneralFlag Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "FlagValue property"
-ms.assetid: 7af9e5b2-1b99-4eea-8a49-1129c0d46086
+description: "FlagValue Property (ClientSettingsGeneralFlag Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "FlagValue property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "FlagValue Property (ClientSettingsGeneralFlag Class)"
+apitype: "MOFDef"
 ---
 # FlagValue Property (ClientSettingsGeneralFlag Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -1,21 +1,19 @@
 ---
 title: "Execute scripts during synchronization (Replication SP)"
 description: Learn how to use Replication stored procedures to execute on-demand scripts during the synchronization process of a Transactional or Merge Publication.
-ms.custom: seo-lt-2019
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "synchronization [SQL Server replication], scripts"
   - "scripts [SQL Server replication], synchronization and"
   - "sp_addscriptexec"
-ms.assetid: b58a0877-4e43-4fab-a281-24e6022d3fb1
-author: "MashaMSFT"
-ms.author: "mathoma"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Execute Scripts During Synchronization (Replication Transact-SQL Programming)

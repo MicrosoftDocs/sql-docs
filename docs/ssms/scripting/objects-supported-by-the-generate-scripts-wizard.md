@@ -1,15 +1,12 @@
 ---
 title: "Objects Supported by the Generate Scripts Wizard"
 description: See what object types that the Generate and Publish Scripts Wizard can help you publish.
-ms.custom: seo-lt-2019
+author: markingmyname
+ms.author: maghan
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: ssms
-ms.reviewer: ""
 ms.topic: conceptual
-ms.assetid: 071eb2cb-f073-41ca-9f4d-11d3b8803495
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Objects Supported by the Generate Scripts Wizard

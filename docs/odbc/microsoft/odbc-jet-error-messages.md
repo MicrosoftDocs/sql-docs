@@ -1,17 +1,14 @@
 ---
+title: "ODBC Jet Error Messages"
 description: "ODBC Jet Error Messages"
-title: "ODBC Jet Error Messages | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "error messages (ODBC driver for oracle)"
-ms.assetid: f8d2a8f2-0316-42c4-bc34-5367661634ae
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "error messages (ODBC driver for oracle)"
 ---
 # ODBC Jet Error Messages
 For errors that occur in the data source, the ODBC driver returns an error message returned to it by the ODBC File Library. For errors that occur in the ODBC driver or the Driver Manager, the driver returns an error message based on the text associated with the SQLSTATE.  

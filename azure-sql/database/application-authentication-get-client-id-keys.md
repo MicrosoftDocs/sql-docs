@@ -9,9 +9,9 @@ ms.service: sql-database
 ms.subservice: development
 ms.topic: how-to
 ms.custom:
-  - "sqldbrb=1"
-  - "devx-track-azurecli"
-  - "devx-track-azurepowershell"
+  - sqldbrb=1
+  - devx-track-azurecli
+  - devx-track-azurepowershell
 ---
 # Get the required values for authenticating an application to access Azure SQL Database from code
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

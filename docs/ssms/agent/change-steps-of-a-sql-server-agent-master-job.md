@@ -1,15 +1,12 @@
 ---
-description: "Change Steps of a SQL Server Agent Master Job"
 title: "Change Steps of a SQL Server Agent Master Job"
-ms.custom: seo-lt-2019
+description: "Change Steps of a SQL Server Agent Master Job"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.assetid: 8f1a0ee6-49ff-4080-94ca-d661daeff2a6
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Change Steps of a SQL Server Agent Master Job

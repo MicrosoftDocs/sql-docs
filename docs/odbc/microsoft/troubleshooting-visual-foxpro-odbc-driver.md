@@ -1,13 +1,13 @@
 ---
+title: "Troubleshooting (Visual FoxPro ODBC Driver)"
 description: "Troubleshooting (Visual FoxPro ODBC Driver)"
-title: "Troubleshooting (Visual FoxPro ODBC Driver) | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "set ANSI [ODBC]"
   - "troubleshooting Visual FoxPro ODBC driver [ODBC]"
   - "remote views [ODBC]"
@@ -16,9 +16,6 @@ helpviewer_keywords:
   - "fetches [ODBC], Visual FoxPro ODBC driver"
   - "positioned updates [ODBC]"
   - "background fetching [ODBC]"
-ms.assetid: fd478dd8-666a-4f0a-a2d6-b94e81cbbe4b
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Troubleshooting (Visual FoxPro ODBC Driver)
 The following sections discuss how to improve performance and solve problems you might encounter while using the Visual FoxPro ODBC Driver.  

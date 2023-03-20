@@ -13,18 +13,10 @@
   items:
   - name: Billing options
     items:
-    - name: vCore purchasing model 
-      href: database/service-tiers-vcore.md
     - name: Azure Hybrid Benefit
       href: azure-hybrid-benefit.md
     - name: Reserved capacity
       href: database/reserved-capacity-overview.md
-  - name: Service tiers
-    items:
-    - name: General Purpose
-      href: database/service-tier-general-purpose.md
-    - name: Business Critical
-      href: database/service-tier-business-critical.md
 
   - name: Shared concepts 
     items: 
@@ -79,9 +71,13 @@
         href: /azure/defender-for-cloud/sql-azure-vulnerability-assessment-overview?toc=/azure/azure-sql/toc.json
       - name: Logins, user accounts, roles, and permissions
         href: database/logins-create-manage.md
-      - name: Azure AD Authentication
-        href: database/authentication-aad-overview.md
+      - name: Azure AD authentication
         items:
+        - name: Azure AD authentication documentation
+          href: database/authentication-azure-ad-landing.yml
+          displayName: Azure Active Directory authentication
+        - name: Azure AD authentication overview
+          href: database/authentication-aad-overview.md
         - name: Configure Azure AD auth
           href: database/authentication-aad-configure.md
         - name: Multi-factor Azure AD auth
@@ -110,6 +106,8 @@
           href: database/transparent-data-encryption-byok-overview.md
         - name: Managed identities with CMK
           href: database/transparent-data-encryption-byok-identity.md
+        - name: Cross-tenant CMK
+          href: database/transparent-data-encryption-byok-cross-tenant.md
 
     - name: Business continuity
       displayName: Backup, back up, restore, recovery
@@ -313,6 +311,12 @@
         href: database/firewall-create-server-level-portal-quickstart.md
       - name: Database project in a local dev environment
         href: database/local-dev-experience-quickstart.md
+    - name: Connect and query
+      items:
+      - name: .NET with SqlClient
+        href: database/azure-sql-dotnet-quickstart.md
+      - name: .NET with EF Core
+        href: database/azure-sql-dotnet-entity-framework-core-quickstart.md
     - name: GitHub Actions
       href: database/connect-github-actions-sql-db.md
 
@@ -342,6 +346,11 @@
       items:
       - name: Always Encrypted with secure enclaves
         href: database/always-encrypted-enclaves-getting-started.md
+        items: 
+        - name: Always Encrypted with secure enclaves using SGX
+          href: database/always-encrypted-enclaves-getting-started-sgx.md
+        - name: Always Encrypted with secure enclaves using VBS
+          href: database/always-encrypted-enclaves-getting-started-vbs.md
       - name: Configure security
         href: database/secure-database-tutorial.md
       - name: Create users using service principals
@@ -425,10 +434,10 @@
           items:
           - name: Configure and use Always Encrypted with secure enclaves >
             href: /sql/relational-databases/security/encryption/configure-always-encrypted-enclaves
-          - name: Plan for Intel SGX enclaves and attestation
+          - name: Plan for secure enclaves and attestation
             href: database/always-encrypted-enclaves-plan.md
-          - name: Enable Intel SGX
-            href: database/always-encrypted-enclaves-enable-sgx.md
+          - name: Enable secure enclaves
+            href: database/always-encrypted-enclaves-enable.md
           - name: Configure Azure Attestation
             href: database/always-encrypted-enclaves-configure-attestation.md
         - name: Azure SQL Auditing
@@ -479,6 +488,8 @@
         href: database/active-geo-replication-overview.md
       - name: Auto-failover groups
         href: database/auto-failover-group-sql-db.md
+      - name: HA/DR checklist
+        href: database/high-availability-disaster-recovery-checklist.md
       - name: Outage recovery guidance
         href: database/disaster-recovery-guidance.md
       - name: Recovery drills
@@ -649,8 +660,6 @@
           href: database/elastic-jobs-powershell-create.md
         - name: Create and manage (T-SQL)
           href: database/elastic-jobs-tsql-create-manage.md
-        - name: Migrate (from old Elastic jobs)
-          href: database/elastic-jobs-migrate.md
 
     - name: Secure 
       items: 
@@ -678,6 +687,8 @@
         href: database/dynamic-data-masking-configure-portal.md
       - name: Create server configured with UMI and customer-managed TDE
         href: database/transparent-data-encryption-byok-create-server.md
+      - name: Create server configured with cross-tenant customer-managed TDE
+        href: database/transparent-data-encryption-byok-create-server-cross-tenant.md
       - name: IP-based firewall
         href: database/firewall-configure.md
       - name: Ledger
@@ -734,6 +745,8 @@
         href: database/analyze-prevent-deadlocks.md
       - name: Configure the max degree of parallelism (MAXDOP)
         href: database/configure-max-degree-of-parallelism.md
+      - name: Optimized locking
+        href: /sql/relational-databases/performance/optimized-locking
 
     - name: Load and move data 
       items: 
@@ -1009,8 +1022,6 @@
       items:
       - name: Service-aided subnet configuration
         href: managed-instance/subnet-service-aided-configuration-enable.md
-      - name: Public endpoint
-        href: managed-instance/public-endpoint-configure.md
       - name: Minimal TLS version
         href: managed-instance/minimal-tls-version-configure.md
       - name: Client VM connection
@@ -1354,6 +1365,10 @@
         href: managed-instance/vnet-existing-add-subnet.md
       - name: Configure service endpoint policies for SQL MI
         href: managed-instance/service-endpoint-policies-configure.md
+      - name: Configure public endpoint
+        href: managed-instance/public-endpoint-configure.md
+      - name: Configure private endpoint
+        href: managed-instance/private-endpoint-overview.md
       - name: Move SQL MI to another subnet
         href: managed-instance/vnet-subnet-move-instance.md
       - name: Delete subnet after deleting SQL MI
@@ -1534,6 +1549,8 @@
           href: virtual-machines/windows/change-sql-server-version.md
         - name: Storage
           href: virtual-machines/windows/storage-configuration.md
+        - name: Azure AD authentication
+          href: virtual-machines/windows/configure-azure-ad-authentication-for-sql-vm.md
         - name: Automated Patching
           href: virtual-machines/windows/automated-patching.md
         - name: SQL best practices assessment
@@ -1700,11 +1717,13 @@
         href: virtual-machines/linux/sql-iaas-agent-extension-register-vm-linux.md
     - name: Tutorials
       items:
-      - name: Setting up Azure RHEL VM availability group with STONITH
+      - name: Set up Azure RHEL VM availability group with STONITH
         href: virtual-machines/linux/rhel-high-availability-stonith-tutorial.md
+      - name: Set up Azure SLES VM availability group with STONITH
+        href: virtual-machines/linux/sles-high-availability-stonith-tutorial.md
       - name: Configure availability group listener for SQL Server on RHEL virtual machines in Azure
         href: virtual-machines/linux/rhel-high-availability-listener-tutorial.md
-      - name: Setup Always On availability group with DH2i DxEnterprise
+      - name: Set up Always On availability group with DH2i DxEnterprise
         href: virtual-machines/linux/dh2i-high-availability-tutorial.md
     - name: Resources
       items:
@@ -1825,6 +1844,14 @@
     href: https://social.msdn.microsoft.com/Forums/home
   - name: Stack Overflow
     href: https://stackoverflow.com/questions/tagged/azure-sql-database
+  - name: What's New Archives
+    items: 
+    - name: Azure SQL Database
+      href: database/doc-changes-updates-release-notes-whats-new-archive.md
+    - name: Azure SQL Managed Instance
+      href: managed-instance/doc-changes-updates-release-notes-whats-new-archive.md
+    - name: SQL Server on Azure VMs
+      href: virtual-machines/windows/doc-changes-updates-release-notes-whats-new-archive.md
   - name: Troubleshoot
     items:
     - name: Known issues with Azure SQL Managed Instance 

@@ -1,17 +1,14 @@
 ---
+title: "Verify Max Worker Threads Setting"
 description: "Verify Max Worker Threads Setting"
-title: "Verify Max Worker Threads Setting | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Best Practices [Database Engine]"
-ms.assetid: 2d94adfd-3ba1-493a-b29a-b436f9d583df
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Best Practices [Database Engine]"
 ---
 # Verify Max Worker Threads Setting
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

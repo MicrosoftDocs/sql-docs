@@ -1,18 +1,16 @@
 ---
 title: "Subscription Properties dialog box"
 description: Describes the 'Subscription Properties' dialog box within SQL Server Management Studio (SSMS).
-ms.custom: seo-lt-2019
-ms.date: "11/20/2018"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.newsubwizard.subproperties.publisher.f1"
-  - "sql13.rep.newsubwizard.subproperties.subscriber.f1"
-ms.assetid: db2be511-c76e-4f21-8be4-6a8c60a50d30
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "11/20/2018"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.newsubwizard.subproperties.publisher.f1"
+  - "sql13.rep.newsubwizard.subproperties.subscriber.f1"
 monikerRange: "=azuresqldb-current||>=sql-server-2016"
 ---
 # SQL Server Replication Subscription Properties dialog box 

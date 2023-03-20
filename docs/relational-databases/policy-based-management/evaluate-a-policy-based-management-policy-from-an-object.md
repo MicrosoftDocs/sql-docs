@@ -1,17 +1,14 @@
 ---
 title: "Evaluate Policy-Based Management policy from an object"
 description: Learn how to evaluate a policy from a SQL Server instance, database, or database object using SQL Server Management Studio (SSMS).
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Policy-Based Management, evaluate policy"
-ms.assetid: b9e9d646-4894-4dee-a02a-0c71a8dc020e
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Policy-Based Management, evaluate policy"
 ---
 # Evaluate a Policy-Based Management Policy from an Object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

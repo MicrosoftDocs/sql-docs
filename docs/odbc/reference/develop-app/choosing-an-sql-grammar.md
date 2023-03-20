@@ -1,19 +1,16 @@
 ---
+title: "Choosing an SQL Grammar"
 description: "Choosing an SQL Grammar"
-title: "Choosing an SQL Grammar | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL statements [ODBC], interoperability"
   - "interoperability of SQL statements [ODBC], SQL grammar"
   - "SQL grammar [ODBC], selecting"
-ms.assetid: 4e0d189b-e407-47e0-92a9-f9982230dd0e
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Choosing an SQL Grammar
 The first decision to make when constructing SQL statements is which grammar to use. In addition to the grammars available from the various standards bodies, such as Open Group, ANSI, and ISO, virtually every DBMS vendor defines its own grammar, each of which varies slightly from the standard.  

@@ -1,17 +1,14 @@
 ---
+title: "Setting Parameter Values"
 description: "Setting Parameter Values"
-title: "Setting Parameter Values | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "parameter values [ODBC]"
-ms.assetid: 13e5da79-b60c-48d0-b467-773f481ef2a4
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "parameter values [ODBC]"
 ---
 # Setting Parameter Values
 To set the value of a parameter, the application simply sets the value of the variable bound to the parameter. It is not important when this value is set, as long as it is set before the statement is executed. The application can set the value before or after binding the variable, and it can change the value as many times as it wants. When the statement is executed, the driver simply retrieves the current value of the variable. This is particularly useful when a prepared statement is executed more than once; the application sets new values for some or all of the variables each time the statement is executed. For an example of this, see [Prepared Execution](../../../odbc/reference/develop-app/prepared-execution-odbc.md), earlier in this section.  

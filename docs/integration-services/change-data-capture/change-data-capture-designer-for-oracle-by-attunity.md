@@ -1,17 +1,14 @@
 ---
+title: "Change Data Capture Designer for Oracle by Attunity"
 description: "Change Data Capture Designer for Oracle by Attunity"
-title: "Change Data Capture Designer for Oracle by Attunity | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "desCons"
-ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "desCons"
 ---
 # Change Data Capture Designer for Oracle by Attunity
 
@@ -24,7 +21,7 @@ ms.author: chugu
 -   CDC Instance Properties Editor: This dialog box is used to edit any existing Oracle CDC Service instance. For information about editing the CDC instance properties, see [Edit Instance Properties](../../integration-services/change-data-capture/edit-instance-properties.md).  
 
 > [!NOTE]
-> Microsoft Change Data Capture for Oracle by Attunity supports SQL server 2019 and below.  
+> Microsoft Change Data Capture for Oracle by Attunity supports SQL Server 2019 and below.  
   
  Download Microsoft Change Data Capture Designer for Oracle by Attunity for corresponding SQL Server version from below links:
 

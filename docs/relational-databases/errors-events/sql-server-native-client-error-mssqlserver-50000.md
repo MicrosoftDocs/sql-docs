@@ -1,17 +1,14 @@
 ---
-title: "MSSQLSERVER_50000 | Microsoft Docs"
+title: "MSSQLSERVER_50000"
 description: An error from an attempt was made to install or update SQL Server Native Client. See an explanation of the error and possible resolutions.
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "50000 [SQL Server Native Client setup error]"
-ms.assetid: 5426d87a-d5d9-4984-b211-b07d69e834a2
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "50000 [SQL Server Native Client setup error]"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Error MSSQLSERVER_50000 in SQL Server Native Client 

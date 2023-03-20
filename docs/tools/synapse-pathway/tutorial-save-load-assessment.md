@@ -1,12 +1,12 @@
 ---
 title: Save and load assessments with Azure Synapse Pathway
 description: Save and load data warehouse assessments with Azure Synapse Pathway
-author: WilliamDAssafMSFT 
-ms.author: wiassaf 
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 03/02/2021
 ms.service: sql
 ms.subservice: tools-other
-ms.topic: tutorial 
-ms.date: 03/02/2021
+ms.topic: tutorial
 monikerRange: "=azure-sqldw-latest"
 ---
 

@@ -4,11 +4,10 @@ description: Returns information about all the waits encountered by threads that
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: randolphwest
-ms.date: 10/31/2022
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
-ms.custom: contperf-fy21q3
 f1_keywords:
   - "dm_os_wait_stats_TSQL"
   - "dm_os_wait_stats"
@@ -43,6 +42,10 @@ Returns information about all the waits encountered by threads that executed. Yo
 On [!INCLUDE [ssNoVersion_md](../../includes/ssnoversion-md.md)] and SQL Managed Instance, requires `VIEW SERVER STATE` permission.
 
 On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databases in **elastic pools**, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account, the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account, or membership in the `##MS_ServerStateReader##` [server role](/azure/azure-sql/database/security-server-roles) is required. On all other SQL Database service objectives, either the `VIEW DATABASE STATE` permission on the database, or membership in the `##MS_ServerStateReader##` server role is required.
+
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 
 ## <a id="WaitTypes"></a> Types of waits
 
@@ -267,6 +270,38 @@ GO
 | <a id="ft_comprowset_rwlock"></a>FT_COMPROWSET_RWLOCK | Full-text is waiting on fragment metadata operation. Documented for informational purposes only. Not supported. Future compatibility isn't guaranteed. |
 | <a id="ft_ifts_rwlock"></a>FT_IFTS_RWLOCK | Full-text is waiting on internal synchronization. Documented for informational purposes only. Not supported. Future compatibility isn't guaranteed. |
 | <a id="ft_ifts_scheduler_idle_wait"></a>FT_IFTS_SCHEDULER_IDLE_WAIT | Full-text scheduler sleep wait type. The scheduler is idle. |
+| <a id="ft_ifts_async_write_pipe"></a>FT_IFTS_ASYNC_WRITE_PIPE|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_blob_hash"></a>FT_IFTS_BLOB_HASH|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_catealog_source"></a>FT_IFTS_CATEALOG_SOURCE|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_chunk_buffer_client_manager"></a>FT_IFTS_CHUNK_BUFFER_CLIENT_MANAGER|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_chunk_buffer_proto_word_list"></a>FT_IFTS_CHUNK_BUFFER_PROTO_WORD_LIST|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_comp_desc_manager"></a>FT_IFTS_COMP_DESC_MANAGER|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_consumer_plugin"></a>FT_IFTS_CONSUMER_PLUGIN|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_crawl_batch_list"></a>FT_IFTS_CRAWL_BATCH_LIST|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_crawl_children"></a>FT_IFTS_CRAWL_CHILDREN|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_docid_interface_list"></a>FT_IFTS_DOCID_INTERFACE_LIST|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_docid_list"></a>FT_IFTS_DOCID_LIST|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_fp_info_list"></a>FT_IFTS_FP_INFO_LIST|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_host_controller"></a>FT_IFTS_HOST_CONTROLLER|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_master_merge_task_list"></a>FT_IFTS_MASTER_MERGE_TASK_LIST|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_memregpool"></a>FT_IFTS_MEMREGPOOL|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_merge_fragment_sync"></a>FT_IFTS_MERGE_FRAGMENT_SYNC|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_noise_words_collection_cache"></a>FT_IFTS_NOISE_WORDS_COLLECTION_CACHE|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_noise_words_resource"></a>FT_IFTS_NOISE_WORDS_RESOURCE|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_occurrence_buffer_pool"></a>FT_IFTS_OCCURRENCE_BUFFER_POOL|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_pipeline"></a>FT_IFTS_PIPELINE|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_pipeline_list"></a>FT_IFTS_PIPELINE_LIST|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_pipeline_manager"></a>FT_IFTS_PIPELINE_MANAGER|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_project_fd_info_map"></a>FT_IFTS_PROJECT_FD_INFO_MAP|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_scheduler"></a>FT_IFTS_SCHEDULER|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_shared_memory"></a>FT_IFTS_SHARED_MEMORY|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_shutdown_pipe"></a>FT_IFTS_SHUTDOWN_PIPE|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_srch_fd_manager"></a>FT_IFTS_SRCH_FD_MANAGER|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_srch_fd_service"></a>FT_IFTS_SRCH_FD_SERVICE|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_stoplist_cache_manager"></a>FT_IFTS_STOPLIST_CACHE_MANAGER|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_thesaurus"></a>FT_IFTS_THESAURUS|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_version_manager"></a>FT_IFTS_VERSION_MANAGER|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_work_queue"></a>FT_IFTS_WORK_QUEUE|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
 | <a id="ft_iftshc_mutex"></a>FT_IFTSHC_MUTEX | Full-text is waiting on an fdhost control operation. Documented for informational purposes only. Not supported. Future compatibility isn't guaranteed. |
 | <a id="ft_iftsism_mutex"></a>FT_IFTSISM_MUTEX | Full-text is waiting on communication operation. Documented for informational purposes only. Not supported. Future compatibility isn't guaranteed. |
 | <a id="ft_master_merge"></a>FT_MASTER_MERGE | Full-text is waiting on master merge operation. Documented for informational purposes only. Not supported. Future compatibility isn't guaranteed. |

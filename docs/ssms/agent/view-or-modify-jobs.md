@@ -1,12 +1,13 @@
 ---
-description: "View or Modify Jobs"
 title: "View or Modify Jobs"
-ms.custom: seo-lt-2019
+description: "View or Modify Jobs"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "jobs [SQL Server Agent], modifying"
   - "jobs [SQL Server Agent], viewing"
   - "modifying jobs"
@@ -14,10 +15,6 @@ helpviewer_keywords:
   - "SQL Server Agent jobs, viewing"
   - "SQL Server Agent jobs, modifying"
   - "displaying jobs"
-ms.assetid: 57f649b8-190c-4304-abd7-7ca5297deab7
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # View or Modify Jobs

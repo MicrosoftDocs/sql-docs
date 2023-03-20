@@ -1,17 +1,14 @@
 ---
 title: "Correct affinity mask & affinity IO mask overlap policy"
-description: Learn how to enable a policy that checks whether an instance of SQL Server has one ore more processors that are assigned to be used with both the affinity mask and the affinity I/O mask options for Policy-Based Management in SQL Server. 
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Best Practices [Database Engine]"
-ms.assetid: 1a0da6df-57ff-4f3f-aae9-2fbc4897508c
+description: Learn how to enable a policy that checks whether an instance of SQL Server has one ore more processors that are assigned to be used with both the affinity mask and the affinity I/O mask options for Policy-Based Management in SQL Server.
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Best Practices [Database Engine]"
 ---
 # Correct Affinity Mask and Affinity Input and Output Mask Overlap
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

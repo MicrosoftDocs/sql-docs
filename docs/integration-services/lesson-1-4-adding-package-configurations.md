@@ -1,15 +1,12 @@
 ---
+title: "Step 4: Adding Package Configurations"
 description: "Lesson 1-4 - Adding Package Configurations"
-title: "Step 4: Adding Package Configurations | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: tutorial
-ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: tutorial
 ---
 # Lesson 1-4 - Adding Package Configurations
 

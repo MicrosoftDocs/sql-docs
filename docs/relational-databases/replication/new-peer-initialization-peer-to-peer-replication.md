@@ -1,17 +1,15 @@
 ---
-title: "New Peer Initialization (Peer-to-Peer) | Microsoft Docs"
+title: "New Peer Initialization (Peer-to-Peer)"
 description: Describes the 'New Peer Initialization' used for Peer to Peer Replication in SQL Server Management Studio (SSMS).
-ms.custom: seo-lt-2019
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.p2pwizard.init.f1"
-ms.assetid: 050c00e1-78bd-4d9c-affe-40e22feb4d94
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.p2pwizard.init.f1"
 ---
 # New Peer Initialization (Peer-to-Peer Replication)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

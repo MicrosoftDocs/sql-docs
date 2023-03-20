@@ -1,15 +1,12 @@
 ---
 title: "Configure HealthCheckTimeout for availability group"
 description: Configure HealthCheckTimeout for an Always On availability group, which specifies how long the SQL Server resource DLL waits before reporting unresponsiveness.
-ms.custom: "seo-lt-2019"
-ms.date: "03/09/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: failover-cluster-instance
-ms.topic: how-to
-ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "03/09/2017"
+ms.service: sql
+ms.subservice: failover-cluster-instance
+ms.topic: how-to
 ---
 # Configure HealthCheckTimeout Property Settings
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -1,14 +1,17 @@
 ---
 title: "Object Explorer"
 description: "Object Explorer"
+author: "markingmyname"
+ms.author: "maghan"
+ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.objectexplorer.scriptingoptions"
   - "sql13.swb.objectexplorer.commandsoptions"
   - "sql13.swb.oe.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "multi-select [SQL Server Management Studio]"
   - "Registered Servers [SQL Server], Object Explorer"
   - "Query Editor [SQL Server Management Studio], Object Explorer"
@@ -19,11 +22,6 @@ helpviewer_keywords:
   - "viewing objects"
   - "filtering objects [SQL Server]"
   - "Object Explorer, about Object Explorer"
-author: "markingmyname"
-ms.author: "maghan"
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
 ---
 
 # Object Explorer

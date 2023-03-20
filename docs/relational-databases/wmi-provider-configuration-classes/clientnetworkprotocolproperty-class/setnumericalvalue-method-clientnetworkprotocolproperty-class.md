@@ -1,22 +1,17 @@
 ---
-description: "SetNumericalValue Method (ClientNetworkProtocolProperty Class)"
 title: "SetNumericalValue Method (ClientNetworkProtocolProperty)"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "SetNumericalValue Method (ClientNetworkProtocolProperty"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "SetNumericalValue method"
-ms.assetid: d4d6df52-9e68-4003-9e28-ece6716ba7f1
+description: "SetNumericalValue Method (ClientNetworkProtocolProperty Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "SetNumericalValue method"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "SetNumericalValue Method (ClientNetworkProtocolProperty"
+apitype: "MOFDef"
 ---
 # SetNumericalValue Method (ClientNetworkProtocolProperty Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

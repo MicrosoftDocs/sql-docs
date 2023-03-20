@@ -1,14 +1,12 @@
 ---
 title: Change the default R or Python language runtime version
 description: Learn how to change the default version of the R or Python runtime used by a SQL instance with SQL Server 2017 Machine Learning Services or SQL Server R Services.
-ms.custom: ""
-ms.service: sql
-ms.subservice: machine-learning-services
-ms.date: 08/14/2020
-ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-
+ms.date: 08/14/2020
+ms.service: sql
+ms.subservice: machine-learning-services
+ms.topic: how-to
 monikerRange: "=sql-server-2016||=sql-server-2017"
 ---
 # Change the default R or Python language runtime version
@@ -33,7 +31,7 @@ You need to install a Cumulative Update (CU) to change the default R or Python l
 - **SQL Server 2016:** Services Pack (SP) 2 Cumulative Update (CU) 14 or later
 - **SQL Server 2017:** Cumulative Update (CU) 22 or later
 
-To download the latest Cumulative Update, see the [Latest updates for Microsoft SQL Server](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md).
+To download the latest Cumulative Update, see the [Latest updates for Microsoft SQL Server](/troubleshoot/sql/releases/download-and-install-latest-updates?bc=%2fsql%2fbreadcrumb%2ftoc.json&toc=%2fsql%2ftoc.json).
 
 > [!NOTE]
 > If you slipstream the Cumulative Update with a new installation of SQL Server, only the newest versions of the R and Python runtime will be installed.

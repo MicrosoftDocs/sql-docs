@@ -1,15 +1,16 @@
 ---
 title: sp_refreshsqlmodule (Transact-SQL)
 description: "sp_refreshsqlmodule updates the metadata for the specified non-schema-bound stored procedure, user-defined function, view, DML trigger, database-level DDL trigger, or server-level DDL trigger in the current database."
+author: markingmyname
+ms.author: maghan
+ms.date: 01/03/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_refreshsqlmodule_TSQL"
   - "sp_refreshsqlmodule"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "metadata [SQL Server], stored procedures"
   - "metadata [SQL Server], triggers"
   - "metadata [SQL Server], views"
@@ -19,10 +20,8 @@ helpviewer_keywords:
   - "metadata [SQL Server], functions"
   - "stored procedures [SQL Server], refreshing metadata"
   - "user-defined functions [SQL Server], refreshing metadata"
-author: markingmyname
-ms.author: maghan
-ms.custom: ""
-ms.date: 01/03/2023
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
 ---
 

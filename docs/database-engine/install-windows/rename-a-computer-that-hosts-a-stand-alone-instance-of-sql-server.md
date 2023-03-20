@@ -7,7 +7,6 @@ ms.date: 10/28/2022
 ms.service: sql
 ms.subservice: install
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "remote login errors [SQL Server]"
   - "standalone computer names [SQL Server]"

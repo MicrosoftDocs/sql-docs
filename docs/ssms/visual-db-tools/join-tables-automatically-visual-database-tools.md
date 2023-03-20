@@ -1,20 +1,16 @@
 ---
-description: "Join Tables Automatically (Visual Database Tools)"
 title: Join Tables Automatically
-ms.custom: seo-lt-2019
+description: "Join Tables Automatically (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "automatic joins"
   - "joins [SQL Server], creating"
   - "joins [SQL Server], automatic"
-ms.assetid: f152af82-bcb6-49ca-af19-48cdb7fc9ac6
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Join Tables Automatically (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

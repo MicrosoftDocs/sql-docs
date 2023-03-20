@@ -1,31 +1,30 @@
 ---
 title: Create a SQL Server Utility Control Point (SQL Server Utility)
 description: Get help identifying resource use bottlenecks and consolidation opportunities by creating a SQL Server utility control point (UCP).
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: configuration
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.SWB.create.ucp.validation.F1"
   - "sql13.SWB.create.ucp.Summary.F1"
   - "sql13.SWB.create.ucp.progress.F1"
   - "sql13.SWB.create.ucp.agentconfiguration.F1"
   - "sql13.SWB.create.ucp.welcome.F1"
   - "sql13.SWB.create.ucp.instancename.F1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Create UCP"
   - "UCP"
-ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Create a SQL Server Utility Control Point (SQL Server Utility)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   An enterprise can have multiple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utilities, and each [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility can manage many instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and data-tier applications. Every [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility has one and only one utility control point (UCP). You must create a new UCP for each [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility. Each managed instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and every data-tier application is a member of one and only one [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility, and is managed by a single UCP.  
   
  The UCP collects configuration and performance information from managed instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] every 15 minutes. This information is stored in the utility management data warehouse (UMDW) on the UCP; the UMDW file name is sysutility_mdw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] performance data is compared to policies to help identify resource use bottlenecks and consolidation opportunities.  
+
+[!INCLUDE[instances-managed-by-utility](../../includes/instances-managed-by-utility.md)]
   
 ## Before You Begin  
  Before you create a UCP, review the following requirements and recommendations.  

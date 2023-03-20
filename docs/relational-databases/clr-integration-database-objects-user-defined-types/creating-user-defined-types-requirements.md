@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "user-defined serialization [CLR integration]"
   - "user-defined types [CLR integration], Native serialization"
   - "UDTs [CLR integration], Native serialization"
-ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
 ---
 # Creating User-Defined Types - Requirements
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

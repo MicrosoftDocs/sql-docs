@@ -8,7 +8,6 @@ ms.date: 11/25/2022
 ms.service: sql
 ms.subservice: clr
 ms.topic: "reference"
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "CLR [SQL Server] See common language runtime [SQL Server]"
   - "Database Engine [SQL Server], .NET Framework"

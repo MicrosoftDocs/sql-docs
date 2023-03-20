@@ -10,8 +10,8 @@ ms.service: sql-database
 ms.subservice: connect
 ms.topic: quickstart
 ms.custom:
-  - "sqldbrb=2"
-  - "mode-api"
+  - sqldbrb=2
+  - mode-api
 ms.devlang: golang
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---

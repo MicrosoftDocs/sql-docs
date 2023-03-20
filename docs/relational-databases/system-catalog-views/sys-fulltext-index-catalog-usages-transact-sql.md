@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "sys.fulltext_index_catalog_usages catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: d095ab62-270b-484b-a541-9f9e7c951cf0
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.fulltext_index_catalog_usages (Transact-SQL)

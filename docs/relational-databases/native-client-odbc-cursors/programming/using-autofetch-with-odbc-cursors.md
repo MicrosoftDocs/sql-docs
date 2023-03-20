@@ -1,19 +1,16 @@
 ---
+title: "Using Autofetch with ODBC Cursors"
 description: "Using Autofetch with ODBC Cursors"
-title: "Using Autofetch with ODBC Cursors | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ODBC cursors, autofetch"
   - "autofetch option"
   - "cursors [ODBC], autofetch"
-ms.assetid: 57bd55f4-8945-4d8d-9f58-d30c81d2a514
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Autofetch with ODBC Cursors

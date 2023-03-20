@@ -1,17 +1,14 @@
 ---
+title: "sys.fn_db_backup_file_snapshots (Transact-SQL)"
 description: "sys.fn_db_backup_file_snapshots (Transact-SQL)"
-title: "sys.fn_db_backup_file_snapshots (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/03/2015"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-ms.assetid: 45010ff2-219f-4086-9ea4-016a6c17cddd
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "06/03/2015"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+dev_langs:
+  - "TSQL"
 ---
 # sys.fn_db_backup_file_snapshots (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

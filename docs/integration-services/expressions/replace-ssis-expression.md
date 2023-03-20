@@ -1,18 +1,15 @@
 ---
+title: "REPLACE (SSIS Expression)"
 description: "REPLACE (SSIS Expression)"
-title: "REPLACE (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "replacing string expression"
-  - "REPLACE function"
-ms.assetid: a6837043-ea70-4c6a-9c7a-6868b02b2adc
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "replacing string expression"
+  - "REPLACE function"
 ---
 # REPLACE (SSIS Expression)
 

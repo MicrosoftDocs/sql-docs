@@ -7,8 +7,6 @@ ms.date: "08/29/2016"
 ms.service: sql
 ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.custom: seo-dt-2019
-ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
 ---
 # Bind a Database with Memory-Optimized Tables to a Resource Pool
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

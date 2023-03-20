@@ -1,19 +1,16 @@
 ---
+title: "Sequence of Status Records"
 description: "Sequence of Status Records"
-title: "Sequence of Status Records | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "diagnostic information [ODBC], diagnostic records"
   - "status records [ODBC]"
   - "diagnostic records [ODBC]"
-ms.assetid: 0e0436cc-230f-44b0-b373-04a57e83ee76
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Sequence of Status Records
 If two or more status records are returned, the Driver Manager and driver rank them according to the following rules. The record with the highest rank is the first record. The source of a record (Driver Manager, driver, gateway, and so on) is not considered when ranking records.  

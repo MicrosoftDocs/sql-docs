@@ -1,24 +1,21 @@
 ---
-title: "Comparison Expressions (XQuery) | Microsoft Docs"
+title: "Comparison Expressions (XQuery)"
 description: Learn how to use XQuery comparison expressions that contain general, value, node, and node order comparison operators.
-ms.custom: ""
+author: "rothja"
+ms.author: "jroth"
 ms.date: "08/09/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: xml
 ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "node comparison operators [XQuery]"
   - "comparison expressions [XQuery]"
   - "node order comparison operators [XQuery]"
   - "expressions [XQuery], comparison"
   - "comparison operators [XQuery]"
   - "value comparison operators"
-ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
-author: "rothja"
-ms.author: "jroth"
+dev_langs:
+  - "XML"
 ---
 # Comparison Expressions (XQuery)
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]

@@ -1,22 +1,19 @@
 ---
+title: "sp_setdefaultdatatypemapping (Transact-SQL)"
 description: "sp_setdefaultdatatypemapping (Transact-SQL)"
-title: "sp_setdefaultdatatypemapping (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_setdefaultdatatypemapping"
-  - "sp_setdefaultdatatypemapping_TSQL"
-helpviewer_keywords: 
-  - "sp_setdefaultdatatypemapping"
-ms.assetid: 7394e8ca-4ce1-4e99-a784-205007c2c248
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_setdefaultdatatypemapping"
+  - "sp_setdefaultdatatypemapping_TSQL"
+helpviewer_keywords:
+  - "sp_setdefaultdatatypemapping"
+dev_langs:
+  - "TSQL"
 ---
 # sp_setdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

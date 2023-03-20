@@ -1,18 +1,13 @@
 ---
+title: "Using Linked Servers in SMO"
 description: "Using Linked Servers in SMO"
-title: "Using Linked Servers in SMO | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "linked servers [SQL Server], SMO"
-ms.assetid: 0ea8837b-2596-4df1-b065-3bb717c9f22c
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "08/06/2017"
+ms.service: sql
+ms.topic: "reference"
+helpviewer_keywords:
+  - "linked servers [SQL Server], SMO"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Linked Servers in SMO

@@ -1,13 +1,13 @@
 ---
+title: "Binding Columns for Use with Block Cursors"
 description: "Binding Columns for Use with Block Cursors"
-title: "Binding Columns for Use with Block Cursors | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "column-wise binding [ODBC]"
   - "row-wise binding [ODBC]"
   - "result sets [ODBC], binding columns"
@@ -15,9 +15,6 @@ helpviewer_keywords:
   - "binding columns [ODBC]"
   - "block cursors [ODBC]"
   - "result sets [ODBC], block cursors"
-ms.assetid: 231beede-cdfa-4e28-8b10-2760b983250f
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Binding Columns for Use with Block Cursors
 Because block cursors return multiple rows, applications that use them must bind an array of variables to each column instead of a single variable. These arrays are collectively known as the *rowset buffers*. Following are the two styles of binding:  

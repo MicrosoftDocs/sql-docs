@@ -1,19 +1,16 @@
 ---
+title: "MSSQLSERVER_3169"
 description: "MSSQLSERVER_3169"
-title: "MSSQLSERVER_3169 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-f1_keywords: 
-  - "3169"
-helpviewer_keywords: 
-  - "3169 (Database Engine error)"
-ms.assetid: 7d4dbed6-bb94-4908-bc03-2040a9cf63bc
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+f1_keywords:
+  - "3169"
+helpviewer_keywords:
+  - "3169 (Database Engine error)"
 ---
 # MSSQLSERVER_3169
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

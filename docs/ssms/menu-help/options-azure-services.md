@@ -1,17 +1,17 @@
 ---
 title: SQL Server Options page - Azure Services
 description: Options (Azure Services)
-ms.service: sql
-ms.subservice: ssms
-ms.topic: ui-reference
-f1_keywords: 
-  - VS.ToolsOptionsPages.Azure_Services.Azure_Cloud
-dev_langs: 
-  - TSQL
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan
 ms.date: 01/26/2023
+ms.service: sql
+ms.subservice: ssms
+ms.topic: ui-reference
+f1_keywords:
+  - "VS.ToolsOptionsPages.Azure_Services.Azure_Cloud"
+dev_langs:
+  - TSQL
 ---
 
 # Options (Azure Services)

@@ -1,25 +1,22 @@
 ---
+title: "Developing a Custom Destination Component"
 description: "Developing a Custom Destination Component"
-title: "Developing a Custom Destination Component | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/16/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "validation [Integration Services], components"
   - "destinations [Integration Services], components"
   - "ProcessInput method"
   - "external data sources [Integration Services]"
   - "custom data flow components [Integration Services], destination components"
   - "data flow components [Integration Services], destination components"
-ms.assetid: 24619363-9535-4c0e-8b62-1d22c6630e40
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
+  - "CSharp"
 ---
 # Developing a Custom Destination Component
 

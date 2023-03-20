@@ -3,7 +3,7 @@ title: "sys.dm_xtp_transaction_stats (Transact-SQL)"
 description: sys.dm_xtp_transaction_stats (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "03/12/2021"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -60,6 +60,10 @@ dev_langs:
 ## Permissions  
  Requires VIEW SERVER STATE permission on the server.  
   
-## See Also  
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
+## See also  
  [Memory-Optimized Table Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   

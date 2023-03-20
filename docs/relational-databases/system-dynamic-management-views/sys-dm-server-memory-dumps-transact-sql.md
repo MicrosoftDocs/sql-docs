@@ -3,7 +3,7 @@ title: "sys.dm_server_memory_dumps (Transact-SQL)"
 description: sys.dm_server_memory_dumps (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "06/10/2016"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_server_memory_dumps dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 41782719-f54d-4e11-941a-c050c7576e23
 ---
 # sys.dm_server_memory_dumps (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,4 +39,6 @@ Introduced in [!INCLUDE[sql2008r2-md](../../includes/sql2008r2-md.md)] Service P
 ### Permissions  
  Requires VIEW SERVER STATE permission.  
   
-  
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.

@@ -4,11 +4,10 @@ description: DBCC SHRINKDATABASE shrinks the size of the data and log files in t
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: umajay, KevinConanMSFT, dplessMSFT, randolphwest
-ms.date: "01/06/2023"
+ms.date: 03/14/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: "language-reference"
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "DBCC_SHRINKDATABASE_TSQL"
   - "DBCC SHRINKDATABASE"
@@ -60,17 +59,11 @@ DBCC SHRINKDATABASE
 ]
 
 < wait_at_low_priority_option_list > ::=  
-	<wait_at_low_priority_option>
-	| <wait_at_low_priority_option_list> , <wait_at_low_priority_option>
+    <wait_at_low_priority_option>
+    | <wait_at_low_priority_option_list> , <wait_at_low_priority_option>
 
 < wait_at_low_priority_option > ::=
-	MAX_DURATION = { 'timeout' } [ MINUTES ]
-    | , ABORT_AFTER_WAIT = { SELF | BLOCKERS }
-```  
-
-
-< wait_at_low_priority_option_list > ::=
- ABORT_AFTER_WAIT = { SELF | BLOCKERS }
+  ABORT_AFTER_WAIT = { SELF | BLOCKERS }
 ```
 
 Syntax for Azure Synapse Analytics:
@@ -115,7 +108,7 @@ Suppresses all informational messages that have severity levels from 0 through 1
 
 ### WAIT_AT_LOW_PRIORITY with shrink operations
 
-**Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later versions
+**Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later versions, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]
 
 The wait at low priority feature reduces lock contention. For more information, see [Understanding concurrency issues with DBCC SHRINKDATABASE](#understand-concurrency-issues-with-dbcc-shrinkdatabase).
 
@@ -175,6 +168,8 @@ Specify either the `NOTRUNCATE` option or the `TRUNCATEONLY` option when you run
 The shrunk database doesn't have to be in single user mode. Other users can be working in the database when it's shrunk, including system databases.
 
 You can't shrink a database while the database is being backed up. Conversely, you can't back up a database while a shrink operation on the database is in process.
+
+When specified with WAIT_AT_LOW_PRIORITY, the shrink operation's Sch-M lock request will wait with low priority when executing the command for 1 minute. If the operation is blocked for the duration, the specified ABORT_AFTER_WAIT action will be executed.
 
 ## How DBCC SHRINKDATABASE works
 

@@ -1,17 +1,14 @@
 ---
-description: "Executing SQL Server Native Client Commands Containing Table-Valued Parameters"
 title: "Commands with Table-Valued Parameters"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "table-valued parameters, executing commands containing"
-ms.assetid: 7ecba6f6-fe7a-462a-9aa3-d5115b6d4529
+description: "Executing SQL Server Native Client Commands Containing Table-Valued Parameters"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "table-valued parameters, executing commands containing"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing SQL Server Native Client Commands Containing Table-Valued Parameters

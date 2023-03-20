@@ -7,12 +7,10 @@ ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "SQLXML, updategrams"
   - "security [SQLXML], updategrams"
   - "updategrams [SQLXML], security"
-ms.assetid: 00dc6cf4-a2e8-4cca-bdd6-d5122102a82d
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Updategram Security Considerations (SQLXML 4.0)

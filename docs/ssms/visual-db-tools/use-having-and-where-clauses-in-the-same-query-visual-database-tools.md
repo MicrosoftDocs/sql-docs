@@ -1,12 +1,13 @@
 ---
-description: "Use HAVING and WHERE Clauses in the Same Query (Visual Database Tools)"
 title: Use HAVING and WHERE Clauses in the Same Query
-ms.custom: seo-lt-2019
+description: "Use HAVING and WHERE Clauses in the Same Query (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/28/2022
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "search criteria [SQL Server], excluding rows"
   - "search criteria [SQL Server], WHERE clause"
   - "search conditions [SQL Server], HAVING clause"
@@ -16,9 +17,6 @@ helpviewer_keywords:
   - "search conditions [SQL Server], WHERE clause"
   - "WHERE clause, search criteria"
   - "excluding rows"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
 ---
 # Use HAVING and WHERE Clauses in the Same Query (Visual Database Tools)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

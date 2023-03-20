@@ -1,17 +1,16 @@
 ---
 title: "Wildcard Components and Content Validation"
 description: Learn how the XML Element and Attribute wildcard components are used to increase flexibility in what is allowed to appear in a content model.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
 ms.date: 05/05/2022
 ms.service: sql
-ms.reviewer: randolphwest
 ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "wildcard components [XML]"
   - "content validation [XML]"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Wildcard components and content validation
 

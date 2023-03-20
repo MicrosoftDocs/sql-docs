@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.trace_event_bindings catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 22f534e1-4ed6-4b3e-9ead-1d1001a1b0f5
 ---
 # sys.trace_event_bindings (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

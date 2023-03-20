@@ -1,22 +1,19 @@
 ---
+title: "sp_deletepeerrequesthistory (Transact-SQL)"
 description: "sp_deletepeerrequesthistory (Transact-SQL)"
-title: "sp_deletepeerrequesthistory (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_deletepeerrequesthistory"
-  - "sp_deletepeerrequesthistory_TSQL"
-helpviewer_keywords: 
-  - "sp_deletepeerrequesthistory"
-ms.assetid: 63a4ec6e-ce79-4bf1-9d37-5ac88f8d6beb
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_deletepeerrequesthistory"
+  - "sp_deletepeerrequesthistory_TSQL"
+helpviewer_keywords:
+  - "sp_deletepeerrequesthistory"
+dev_langs:
+  - "TSQL"
 ---
 # sp_deletepeerrequesthistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

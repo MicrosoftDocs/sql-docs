@@ -1,22 +1,19 @@
 ---
+title: "sp_addrole (Transact-SQL)"
 description: "sp_addrole (Transact-SQL)"
-title: "sp_addrole (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_addrole"
-  - "sp_addrole_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_addrole"
-ms.assetid: e8a21642-8440-419a-8585-93d3d9d44f00
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_addrole"
+  - "sp_addrole_TSQL"
+helpviewer_keywords:
+  - "sp_addrole"
+dev_langs:
+  - "TSQL"
 ---
 # sp_addrole (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

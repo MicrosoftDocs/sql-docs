@@ -1,12 +1,13 @@
 ---
-description: "Monitor Job Activity"
 title: "Monitor Job Activity"
-ms.custom: seo-lt-2019
+description: "Monitor Job Activity"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Agent, monitoring"
   - "jobs [SQL Server Agent], monitoring"
   - "monitoring [SQL Server], jobs"
@@ -17,10 +18,6 @@ helpviewer_keywords:
   - "SQL Server Agent jobs, monitoring"
   - "performance [SQL Server], jobs"
   - "current activity"
-ms.assetid: 71cb432b-631d-4b8b-9965-e731b3d8266d
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Monitor Job Activity

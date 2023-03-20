@@ -1,13 +1,13 @@
 ---
-title: "Backup Overview (SQL Server) | Microsoft Docs"
+title: "Backup Overview (SQL Server)"
 description: Learn about the SQL Server backup component, including backup types and restrictions, and also backup devices and backup media.
-ms.custom: ""
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "07/15/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "tables [SQL Server], backing up data"
   - "backups [SQL Server]"
   - "database backups [SQL Server]"
@@ -19,9 +19,6 @@ helpviewer_keywords:
   - "restoring [SQL Server], backup types"
   - "backups [SQL Server], about"
   - "backups [SQL Server], table-level backups unsupported"
-ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Backup Overview (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

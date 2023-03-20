@@ -1,17 +1,14 @@
 ---
 title: "SQL Native Client 11.0 Configuration"
 description: Find out about the settings that are configured in the SQL Server Native Client Configuration dialog boxes in Microsoft SQL Server Configuration Manager.
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: tools-other
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "client configuration [SQL Server], SQL Server Native Client"
-ms.assetid: e73143e9-5e7b-4d0a-8827-ab900efdcb35
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: tools-other
+ms.topic: conceptual
+helpviewer_keywords:
+  - "client configuration [SQL Server], SQL Server Native Client"
 monikerRange: ">=sql-server-2016"
 ---
 # SQL Native Client 11.0 Configuration

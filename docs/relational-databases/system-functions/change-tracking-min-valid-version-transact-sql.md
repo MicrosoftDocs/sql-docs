@@ -1,23 +1,20 @@
 ---
+title: "CHANGE_TRACKING_MIN_VALID_VERSION (Transact-SQL)"
 description: "CHANGE_TRACKING_MIN_VALID_VERSION (Transact-SQL)"
-title: "CHANGE_TRACKING_MIN_VALID_VERSION (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "CHANGE_TRACKING_CLEANUP_VERSION"
-  - "CHANGE_TRACKING_CLEANUP_VERSION_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "CHANGE_TRACKING_MIN_VALID_VERSION"
-  - "change tracking [SQL Server], CHANGE_TRACKING_MIN_VALID_VERSION"
-ms.assetid: 5a43d23f-adcf-4c0b-95ad-07cee03c1f9d
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "08/08/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "CHANGE_TRACKING_CLEANUP_VERSION"
+  - "CHANGE_TRACKING_CLEANUP_VERSION_TSQL"
+helpviewer_keywords:
+  - "CHANGE_TRACKING_MIN_VALID_VERSION"
+  - "change tracking [SQL Server], CHANGE_TRACKING_MIN_VALID_VERSION"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CHANGE_TRACKING_MIN_VALID_VERSION (Transact-SQL)

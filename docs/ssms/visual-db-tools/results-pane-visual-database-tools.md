@@ -1,12 +1,13 @@
 ---
-description: "Results Pane (Visual Database Tools)"
 title: Results Pane
-ms.custom: seo-lt-2019
+description: "Results Pane (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "View Designer, Results pane"
   - "result sets [SQL Server], queries"
   - "synchronization [SQL Server], query results with definition"
@@ -18,11 +19,6 @@ helpviewer_keywords:
   - "viewing query results"
   - "queries [SQL Server], results"
   - "Results pane"
-ms.assetid: 6309a1bc-a628-4141-8bb5-b35924bd19f9
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Results Pane (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

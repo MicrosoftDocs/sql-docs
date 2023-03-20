@@ -1,25 +1,22 @@
 ---
+title: "sys.sp_flush_commit_table (Transact-SQL)"
 description: "sys.sp_flush_commit_table (Transact-SQL)"
-title: "sys.sp_flush_commit_table (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: JetterMcTedder
+ms.author: bspendolini
 ms.date: "10/20/2022"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_flush_commit_table"
   - "sp_flush_commit_table_TSQL"
   - "sys.sp_flush_commit_table"
   - "sys.sp_flush_commit_table_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.sp_flush_commit_tables"
   - "sp_flush_commit_tables"
-ms.assetid: 
-author: JetterMcTedder
-ms.author: bspendolini
+dev_langs:
+  - "TSQL"
 ---
 # sys.sp_flush_commit_table (Transact-SQL)
 

@@ -1,17 +1,14 @@
 ---
+title: "Convert Types no Conversion Checking (SQL Server Import-Export Wizard)"
 description: "Convert Types without Conversion Checking (SQL Server Import and Export Wizard)"
-title: "Convert Types no Conversion Checking (SQL Server Import-Export Wizard) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/11/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.impexpwizard.nomappingfile.f1"
-ms.assetid: 87d9d3e5-477f-4117-a37f-bff53ea3e14d
 author: chugugrace
 ms.author: chugu
+ms.date: "01/11/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.impexpwizard.nomappingfile.f1"
 ---
 # Convert Types without Conversion Checking (SQL Server Import and Export Wizard)
 

@@ -1,20 +1,16 @@
 ---
+title: "Logon Triggers"
 description: "Logon Triggers"
-title: "Logon Triggers | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/19/2018"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice:
-ms.topic: conceptual
-f1_keywords: 
-  - "logon triggers"
-  - "login triggers"
-helpviewer_keywords: 
-  - "triggers [SQL Server], logon"
-ms.assetid: 2f0ebb2f-de10-482d-9806-1a5de5b312b8
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "03/19/2018"
+ms.service: sql
+ms.topic: conceptual
+f1_keywords:
+  - "logon triggers"
+  - "login triggers"
+helpviewer_keywords:
+  - "triggers [SQL Server], logon"
 ---
 # Logon Triggers
 

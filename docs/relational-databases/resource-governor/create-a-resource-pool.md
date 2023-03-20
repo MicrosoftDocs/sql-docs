@@ -1,18 +1,15 @@
 ---
-title: "Create a Resource Pool | Microsoft Docs"
+title: "Create a Resource Pool"
 description: Learn how to create a resource pool by using SQL Server Management Studio or Transact-SQL. You must have the CONTROL SERVER permission.
-ms.custom: ""
-ms.date: "03/17/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "resource pools [SQL Server], create"
-  - "Resource Governor, resource pool create"
-ms.assetid: 44dd0567-a4c8-4c72-89ff-e76f6ddef344
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/17/2016"
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+helpviewer_keywords:
+  - "resource pools [SQL Server], create"
+  - "Resource Governor, resource pool create"
 ---
 # Create a Resource Pool
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

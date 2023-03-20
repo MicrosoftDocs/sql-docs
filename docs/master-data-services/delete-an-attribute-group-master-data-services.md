@@ -1,18 +1,15 @@
 ---
-description: "Delete an Attribute Group (Master Data Services)"
 title: Delete an Attribute Group
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "deleting attribute groups [Master Data Services]"
-  - "attribute groups [Master Data Services], deleting"
-ms.assetid: f915e89b-629d-4725-aea6-a7f051978244
+description: "Delete an Attribute Group (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/15/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "deleting attribute groups [Master Data Services]"
+  - "attribute groups [Master Data Services], deleting"
 ---
 # Delete an Attribute Group (Master Data Services)
 

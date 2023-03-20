@@ -1,15 +1,13 @@
 ---
 title: "Key features in DW WideWorldImporters database"
-description: Learn how the WideWorldImportersDW database showcases key features of SQL Server that are suitable for data warehousing and analytics. 
-ms.service: sql
-ms.subservice: "samples"
-ms.date: 07/01/2020
-ms.reviewer: ""
-ms.topic: conceptual
+description: Learn how the WideWorldImportersDW database showcases key features of SQL Server that are suitable for data warehousing and analytics.
 author: MashaMSFT
 ms.author: mathoma
+ms.date: 07/01/2020
+ms.service: sql
+ms.subservice: "samples"
+ms.topic: conceptual
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=azuresqldb-mi-current"
-ms.custom: "seo-lt-2019"
 ---
 # WideWorldImportersDW use of SQL Server features and capabilities
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]

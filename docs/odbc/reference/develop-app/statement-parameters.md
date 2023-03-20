@@ -1,17 +1,14 @@
 ---
+title: "Statement Parameters"
 description: "Statement Parameters"
-title: "Statement Parameters | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "statement parameters [ODBC]"
-ms.assetid: 58d5b166-2578-4699-a560-1f1e6d86c49a
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "statement parameters [ODBC]"
 ---
 # Statement Parameters
 A *parameter* is a variable in an SQL statement. For example, suppose a Parts table has columns named PartID, Description, and Price. To add a part without parameters would require constructing an SQL statement such as:  

@@ -1,21 +1,18 @@
 ---
-description: "Combine Conditions When AND Has Precedence (Visual Database Tools)"
 title: Combine Conditions When AND Has Precedence
+description: "Combine Conditions When AND Has Precedence (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
+ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "search conditions [SQL Server], combining"
   - "precedence [SQL Server], Criteria pane"
   - "search criteria [SQL Server], combining conditions"
   - "combining search conditions"
   - "AND, Criteria pane"
-ms.assetid: 450eb2eb-6ea3-405b-8dd2-1ff926c016e7
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 ---
 
 # Combine Conditions When AND Has Precedence (Visual Database Tools)

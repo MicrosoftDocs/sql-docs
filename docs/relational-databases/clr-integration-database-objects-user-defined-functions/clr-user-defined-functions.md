@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "common language runtime [SQL Server], user-defined functions"
   - "database objects [CLR integration], user-defined functions"
   - "user-defined functions [CLR integration]"
-ms.assetid: 6f7491f1-9a46-4146-ae09-056248634de2
 ---
 # CLR User-Defined Functions
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

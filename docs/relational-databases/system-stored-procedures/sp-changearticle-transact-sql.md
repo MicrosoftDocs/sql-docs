@@ -1,22 +1,19 @@
 ---
+title: "sp_changearticle (Transact-SQL)"
 description: "sp_changearticle (Transact-SQL)"
-title: "sp_changearticle (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/28/2015"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_changearticle"
-  - "sp_changearticle_TSQL"
-helpviewer_keywords: 
-  - "sp_changearticle"
-ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: markingmyname
 ms.author: maghan
+ms.date: "10/28/2015"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_changearticle"
+  - "sp_changearticle_TSQL"
+helpviewer_keywords:
+  - "sp_changearticle"
+dev_langs:
+  - "TSQL"
 ---
 # sp_changearticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -1,22 +1,19 @@
 ---
+title: "sp_attach_single_file_db (Transact-SQL)"
 description: "sp_attach_single_file_db (Transact-SQL)"
-title: "sp_attach_single_file_db (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_attach_single_file_db"
-  - "sp_attach_single_file_db_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_attach_single_file_db"
-ms.assetid: 13bd1044-9497-4293-8390-1f12e6b8e952
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_attach_single_file_db"
+  - "sp_attach_single_file_db_TSQL"
+helpviewer_keywords:
+  - "sp_attach_single_file_db"
+dev_langs:
+  - "TSQL"
 ---
 # sp_attach_single_file_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,22 +1,19 @@
 ---
+title: "sp_addmessage (Transact-SQL)"
 description: "sp_addmessage (Transact-SQL)"
-title: "sp_addmessage (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_addmessage"
-  - "sp_addmessage_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_addmessage"
-ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
 author: markingmyname
 ms.author: maghan
+ms.date: "03/16/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_addmessage"
+  - "sp_addmessage_TSQL"
+helpviewer_keywords:
+  - "sp_addmessage"
+dev_langs:
+  - "TSQL"
 ---
 # sp_addmessage (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

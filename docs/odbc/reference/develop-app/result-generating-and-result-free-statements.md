@@ -1,21 +1,18 @@
 ---
+title: "Result-Generating and Result-Free Statements"
 description: "Result-Generating and Result-Free Statements"
-title: "Result-Generating and Result-Free Statements | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "result-generating statements [ODBC]"
   - "batches [ODBC], result-generating statements"
   - "batches [ODBC], result-free statements"
   - "SQL statements [ODBC], batches"
   - "result-free statements [ODBC]"
-ms.assetid: 2f3475d1-3999-4dd8-aba2-a6e1299c95f8
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Result-Generating and Result-Free Statements
 SQL statements can be loosely divided into the following five categories:  

@@ -1,15 +1,13 @@
 ---
-description: "XML Data Modification Language (XML DML)"
 title: XML Data Modification Language (XML DML)
-ms.custom: ""
+description: "XML Data Modification Language (XML DML)"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/16/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "modifying data [SQL Server], XML DML"
   - "XML [SQL Server], DML"
   - "XML DML [SQL Server]"
@@ -18,9 +16,8 @@ helpviewer_keywords:
   - "DML [XML in SQL Server]"
   - "XQuery, XML DML"
   - "xml data type [SQL Server], XML DML"
-ms.assetid: 20ce50d2-c07b-4e41-93a7-1380d2cd49cb
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 ---
 # XML Data Modification Language (XML DML)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

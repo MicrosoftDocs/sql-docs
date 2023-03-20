@@ -1,17 +1,14 @@
 ---
+title: "Set the AUTO_SHRINK Database Option to OFF"
 description: "Set the AUTO_SHRINK Database Option to OFF"
-title: "Set the AUTO_SHRINK Database Option to OFF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Best Practices [Database Engine]"
-ms.assetid: 16403850-d745-4754-b84f-5f01aaecd24e
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Best Practices [Database Engine]"
 ---
 # Set the AUTO_SHRINK Database Option to OFF
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

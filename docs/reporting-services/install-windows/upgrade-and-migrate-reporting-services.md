@@ -1,16 +1,16 @@
 ---
+title: "Upgrade and Migrate Reporting Services"
 description: "Upgrade and Migrate Reporting Services"
-title: "Upgrade and Migrate Reporting Services | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
+ms.date: 05/06/2021
 ms.service: reporting-services
-helpviewer_keywords: 
+ms.topic: conceptual
+helpviewer_keywords:
   - "SSRS, upgrading"
   - "Reporting Services, upgrades"
   - "SQL Server Reporting Services, upgrading"
   - "upgrading Reporting Services"
-author: maggiesMSFT
-ms.author: maggies
-ms.topic: conceptual
-ms.date: 05/06/2021
 ---
 
 # Upgrade and Migrate Reporting Services

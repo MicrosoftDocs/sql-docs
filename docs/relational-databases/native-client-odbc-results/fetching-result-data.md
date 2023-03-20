@@ -1,13 +1,13 @@
 ---
+title: "Fetching Result Data"
 description: "Fetching Result Data"
-title: "Fetching Result Data | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQLFetchScroll function"
   - "SQL Server Native Client ODBC driver, result sets"
   - "ODBC applications, result sets"
@@ -19,9 +19,6 @@ helpviewer_keywords:
   - "SQLFetch function"
   - "SQL Server Native Client ODBC driver, data types"
   - "SQLGetData function"
-ms.assetid: b289c7fb-5017-4d7e-a2d3-19401e9fc4cd
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Fetching Result Data

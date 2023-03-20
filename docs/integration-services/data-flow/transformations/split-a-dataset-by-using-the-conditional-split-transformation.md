@@ -1,19 +1,16 @@
 ---
+title: "Split a Dataset by Using the Conditional Split Transformation"
 description: "Split a Dataset by Using the Conditional Split Transformation"
-title: "Split a Dataset by Using the Conditional Split Transformation | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Conditional Split transformation"
   - "splitting dataset"
   - "datasets [Integration Services], splitting"
-ms.assetid: 23b3e84f-9296-4dc9-81c0-c7f06ae3f1ff
-author: chugugrace
-ms.author: chugu
 ---
 # Split a Dataset by Using the Conditional Split Transformation
 

@@ -1,18 +1,14 @@
 ---
-description: "Table-Valued Object (Column) Properties (Visual Database Tools)"
 title: Table-Valued Object (Column) Properties
-ms.custom: seo-lt-2019
+description: "Table-Valued Object (Column) Properties (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "vdt.designers.properties.QueryViewColumn"
-ms.assetid: 212d9bcd-aded-4313-a6b9-d7e2270e5954
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Table-Valued Object (Column) Properties (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

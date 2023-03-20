@@ -1,13 +1,13 @@
 ---
 title: "Troubleshoot orphaned users"
-description: Orphaned users occur when a database user login no longer exist in the master database. This topic discusses how to identify and resolve orphaned users. 
-ms.custom: "seo-lt-2019"
+description: Orphaned users occur when a database user login no longer exist in the master database. This topic discusses how to identify and resolve orphaned users.
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "07/14/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: high-availability
 ms.topic: troubleshooting
-helpviewer_keywords: 
+helpviewer_keywords:
   - "orphaned users [SQL Server]"
   - "logins [SQL Server], orphaned users"
   - "troubleshooting [SQL Server], user accounts"
@@ -15,9 +15,6 @@ helpviewer_keywords:
   - "failover [SQL Server], managing metadata"
   - "database mirroring [SQL Server], metadata"
   - "users [SQL Server], orphaned"
-ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
-author: MashaMSFT
-ms.author: mathoma
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016"
 ---
 # Troubleshoot orphaned users (SQL Server)

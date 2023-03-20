@@ -1,21 +1,18 @@
 ---
+title: "Creating a Source with the Script Component"
 description: "Creating a Source with the Script Component"
-title: "Creating a Source with the Script Component | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/17/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Script component [Integration Services], source components"
   - "output columns [Integration Services]"
   - "sources [Integration Services], components"
-ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
 ---
 # Creating a Source with the Script Component
 

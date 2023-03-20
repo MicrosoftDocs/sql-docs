@@ -6,11 +6,9 @@ ms.author: vanto
 ms.date: "03/16/2017"
 ms.service: sql
 ms.topic: "reference"
-ms.custom: seo-dt-2019
 helpviewer_keywords:
   - "extended stored procedures [SQL Server], sending result sets"
   - "result sets [SQL Server], extended stored procedures"
-ms.assetid: 9d54673d-ea9d-4ac6-825a-f216ad8b0e34
 ---
 # Sending Result Sets to the Server (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

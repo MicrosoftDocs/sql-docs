@@ -1,24 +1,22 @@
 ---
-description: "sys.fn_all_changes_&lt;capture_instance&gt; (Transact-SQL)"
 title: "sys.fn_all_changes_&lt;capture_instance&gt; (Transact-SQL)"
-ms.custom: ""
+description: "sys.fn_all_changes_&lt;capture_instance&gt; (Transact-SQL)"
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "09/29/2021"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "fn_all_changes"
   - "sys.fn_all_changes"
   - "fn_all_changes_TSQL"
   - "sys.fn_all_changes_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "fn_all_changes_<capture_instance>"
   - "sys.fn_all_changes_<capture_instance>"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.fn_all_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

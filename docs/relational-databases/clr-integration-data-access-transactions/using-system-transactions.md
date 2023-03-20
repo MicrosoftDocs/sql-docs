@@ -14,7 +14,6 @@ helpviewer_keywords:
 dev_langs:
   - "VB"
   - "CSharp"
-ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
 ---
 # Using System.Transactions
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

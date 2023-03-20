@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.database_filestream_options catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 3383c607-0bbc-456a-ab37-7230f4cbf0e9
 ---
 # sys.database_filestream_options (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

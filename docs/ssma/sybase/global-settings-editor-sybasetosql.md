@@ -1,17 +1,14 @@
 ---
+title: "Global Settings (Editor) (SybaseToSQL)"
 description: "Global Settings (Editor) (SybaseToSQL)"
-title: "Global Settings (Editor) (SybaseToSQL) | Microsoft Docs"
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 0bc0d5e8-b092-413e-a0ee-7ef2c516d324
-author: cpichuka 
-f1_keywords: 
-    - "ssma.sybase.globalsettingeditor.f1"
-ms.author: cpichuka 
+f1_keywords:
+  - "ssma.sybase.globalsettingeditor.f1"
 ---
 # Global Settings (Editor) (SybaseToSQL)
 Use the Editor page of the **Global Settings** dialog box to specify settings for code editor windows.  

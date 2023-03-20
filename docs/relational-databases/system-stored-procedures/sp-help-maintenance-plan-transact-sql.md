@@ -1,22 +1,19 @@
 ---
+title: "sp_help_maintenance_plan (Transact-SQL)"
 description: "sp_help_maintenance_plan (Transact-SQL)"
-title: "sp_help_maintenance_plan (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_help_maintenance_plan_TSQL"
-  - "sp_help_maintenance_plan"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_help_maintenance_plan"
-ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
 author: markingmyname
 ms.author: maghan
+ms.date: "08/09/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_help_maintenance_plan_TSQL"
+  - "sp_help_maintenance_plan"
+helpviewer_keywords:
+  - "sp_help_maintenance_plan"
+dev_langs:
+  - "TSQL"
 ---
 # sp_help_maintenance_plan (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

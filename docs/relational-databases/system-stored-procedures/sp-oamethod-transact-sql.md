@@ -1,22 +1,19 @@
 ---
+title: "sp_OAMethod (Transact-SQL)"
 description: "sp_OAMethod (Transact-SQL)"
-title: "sp_OAMethod (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_OAMethod"
-  - "sp_OAMethod_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_OAMethod"
-ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_OAMethod"
+  - "sp_OAMethod_TSQL"
+helpviewer_keywords:
+  - "sp_OAMethod"
+dev_langs:
+  - "TSQL"
 ---
 # sp_OAMethod (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

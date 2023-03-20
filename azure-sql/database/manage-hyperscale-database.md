@@ -7,6 +7,7 @@ ms.reviewer: wiassaf, mathoma
 ms.date: 09/26/2022
 ms.service: sql-database
 ms.subservice: service-overview
+ms.custom: devx-track-azurepowershell
 ms.topic: conceptual
 ---
 

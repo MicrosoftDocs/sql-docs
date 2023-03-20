@@ -1,19 +1,16 @@
 ---
+title: "MSSQLSERVER_17194"
 description: "MSSQLSERVER_17194"
-title: "MSSQLSERVER_17194 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-f1_keywords: 
-  - "17194"
-helpviewer_keywords: 
-  - "17194 (Database Engine error)"
-ms.assetid: 0d03eb20-28a7-4ceb-8903-7f9420a620f7
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+f1_keywords:
+  - "17194"
+helpviewer_keywords:
+  - "17194 (Database Engine error)"
 ---
 # MSSQLSERVER_17194
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

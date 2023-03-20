@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_41333"
 description: "MSSQLSERVER_41333"
-title: "MSSQLSERVER_41333 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "41333 (Database Engine error)"
-ms.assetid: c3c3ae9a-1e4c-4de6-ba72-2f393375b053
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "41333 (Database Engine error)"
 ---
 # MSSQLSERVER_41333
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

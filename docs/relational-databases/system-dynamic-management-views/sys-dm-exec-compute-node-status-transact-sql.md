@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "sys.dm_exec_compute_node_status management view"
 dev_langs:
   - "TSQL"
-ms.assetid: b606f91f-3a08-4a4f-bb57-32ae155b3738
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_compute_node_status (Transact-SQL)

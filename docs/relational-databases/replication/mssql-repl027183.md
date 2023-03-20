@@ -1,17 +1,15 @@
 ---
+title: "MSSQL_REPL027183"
 description: "MSSQL_REPL027183"
-title: "MSSQL_REPL027183 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: reference
-helpviewer_keywords: 
-  - "MSSQL_REPL027183 error"
-ms.assetid: 52c271ac-1a0e-43d5-85d4-35886d1efd32
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/07/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: reference
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "MSSQL_REPL027183 error"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # MSSQL_REPL027183

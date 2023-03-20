@@ -1,19 +1,16 @@
 ---
-description: "Set the Polling Interval for Target Servers"
 title: "Set the Polling Interval for Target Servers"
-ms.custom: seo-lt-2019
+description: "Set the Polling Interval for Target Servers"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "interval for polling [SQL Server]"
   - "target servers [SQL Server], polling interval"
   - "polling interval [SQL Server]"
-ms.assetid: 4ffbbefa-77fb-442e-a77c-cb8c6cab9f3c
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Set the Polling Interval for Target Servers

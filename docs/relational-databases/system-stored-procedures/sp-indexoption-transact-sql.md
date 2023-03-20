@@ -1,22 +1,19 @@
 ---
+title: "sp_indexoption (Transact-SQL)"
 description: "sp_indexoption (Transact-SQL)"
-title: "sp_indexoption (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_indexoption"
-  - "sp_indexoption_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_indexoption"
-ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_indexoption"
+  - "sp_indexoption_TSQL"
+helpviewer_keywords:
+  - "sp_indexoption"
+dev_langs:
+  - "TSQL"
 ---
 # sp_indexoption (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,13 +1,13 @@
 ---
 title: "Viewing the Windows Application Log"
 description: Find out how to view and manage the Windows application log. You can configure SQL Server to write event information to this log.
-ms.custom: seo-lt-2019
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: tools-other
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "application logs [SQL Server]"
   - "Windows application logs [SQL Server]"
   - "viewing Windows application logs"
@@ -16,9 +16,6 @@ helpviewer_keywords:
   - "security logs [SQL Server]"
   - "displaying Windows application logs"
   - "logs [SQL Server], Windows application logs"
-ms.assetid: f9853b74-7db7-47cc-b957-e49ed5bc0a1a
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=sql-server-2016"
 ---
 # Viewing the Windows Application Log

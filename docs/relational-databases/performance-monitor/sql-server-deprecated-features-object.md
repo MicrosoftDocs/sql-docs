@@ -1,19 +1,17 @@
 ---
 title: "SQL Server, Deprecated Features object"
-description: Learn about the SQLServer:Deprecated Features object, which provides a counter to monitor the features designated as deprecated. 
-ms.custom: ""
+description: "Learn about the SQLServer:Deprecated Features object, which provides a counter to monitor the features designated as deprecated."
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "07/13/2021"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: performance
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQLServer:Deprecated Features"
   - "performance counters [SQL Server], deprecated features"
   - "deprecation [SQL Server], performance counters"
   - "Deprecated Features object"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # SQL Server, Deprecated Features object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -22,10 +20,7 @@ ms.author: wiassaf
   
  The value of these counters are also available by executing the following statement:  
   
-```sql  
-SELECT * FROM sys.dm_os_performance_counters   
-WHERE object_name LIKE '%SQL%Deprecated Features%';  
-```  
+[!INCLUDE [deprecated-os-performance-counters](../../includes/deprecated-os-performance-counters.md)]
 
 This following table describes the SQL Server **Deprecated Features** performance object.
 

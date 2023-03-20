@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.database_scoped_credentials catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 68e8aa6b-bcdc-42aa-93d8-d498f724c188
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.database_scoped_credentials (Transact-SQL)

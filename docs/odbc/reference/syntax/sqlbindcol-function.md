@@ -1,29 +1,19 @@
 ---
+title: "SQLBindCol Function"
 description: "SQLBindCol Function"
-title: "SQLBindCol Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLBindCol"
-apilocation: 
-  - "sqlsrv32.dll"
-  - "odbc32.dll"
-  - "Msodbcsql11.dll"
-  - "Sqlncli10.dll"
-  - "Sqlncli11.dll"
-  - "Sqlncli11e.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLBindCol"
-helpviewer_keywords: 
-  - "SQLBindCol function [ODBC]"
-ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLBindCol"
+helpviewer_keywords:
+  - "SQLBindCol function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLBindCol"
+apitype: "dllExport"
 ---
 # SQLBindCol Function
 **Conformance**  

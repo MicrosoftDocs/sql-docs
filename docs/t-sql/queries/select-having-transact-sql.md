@@ -1,25 +1,22 @@
 ---
+title: "HAVING (Transact-SQL)"
 description: "SELECT - HAVING (Transact-SQL)"
-title: "HAVING (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "01/21/2020"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "HAVING"
   - "HAVING_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "restricting conditions for result set"
   - "search conditions [SQL Server], HAVING clause"
   - "HAVING clause"
   - "HAVING clause, about HAVING clause"
-ms.assetid: 55650709-001e-42f4-902f-ead09a3c34af
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SELECT - HAVING (Transact-SQL)

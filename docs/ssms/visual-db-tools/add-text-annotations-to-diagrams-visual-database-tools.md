@@ -1,18 +1,15 @@
 ---
-description: "Add Text Annotations to Diagrams (Visual Database Tools)"
 title: Add Text Annotations to Diagrams
+description: "Add Text Annotations to Diagrams (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
+ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "annotations [SQL Server]"
   - "database diagrams [SQL Server], annotations"
-ms.assetid: 0dced59b-06cc-4600-9c27-430f501279e2
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 ---
 
 # Add Text Annotations to Diagrams (Visual Database Tools)

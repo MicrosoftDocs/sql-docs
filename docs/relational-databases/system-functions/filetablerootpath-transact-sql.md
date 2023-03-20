@@ -1,22 +1,19 @@
 ---
+title: "FileTableRootPath (Transact-SQL)"
 description: "FileTableRootPath (Transact-SQL)"
-title: "FileTableRootPath (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "FileTableRootPath_TSQL"
-  - "FileTableRootPath"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "FileTableRootPath function"
-ms.assetid: 0cba908a-c85c-4b09-b16a-df1cb333c629
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "FileTableRootPath_TSQL"
+  - "FileTableRootPath"
+helpviewer_keywords:
+  - "FileTableRootPath function"
+dev_langs:
+  - "TSQL"
 ---
 # FileTableRootPath (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,22 +1,19 @@
 ---
+title: "sysmail_help_principalprofile_sp (Transact-SQL)"
 description: "sysmail_help_principalprofile_sp (Transact-SQL)"
-title: "sysmail_help_principalprofile_sp (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/02/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sysmail_help_principalprofile_sp_TSQL"
-  - "sysmail_help_principalprofile_sp"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sysmail_help_principalprofile_sp"
-ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
 author: markingmyname
 ms.author: maghan
+ms.date: "08/02/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sysmail_help_principalprofile_sp_TSQL"
+  - "sysmail_help_principalprofile_sp"
+helpviewer_keywords:
+  - "sysmail_help_principalprofile_sp"
+dev_langs:
+  - "TSQL"
 ---
 # sysmail_help_principalprofile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

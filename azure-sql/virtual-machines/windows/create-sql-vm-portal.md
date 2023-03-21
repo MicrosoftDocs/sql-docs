@@ -280,6 +280,11 @@ The following sections show how to connect over the internet to your SQL Server 
   > [!NOTE]
   > This example uses the common port 1433. However, this value will need to be modified if a different port (such as 1401) was specified during the deployment of the SQL Server VM. 
 
+## Known Issues
+
+**I am unable to change the SQL Binary files installation path**
+
+When you deploy a SQL marketplace image, we would install SQL Server binaries on the C Drive. You cannot change this as of today during deployment. The only available workaround is to manually remove and reinstall SQL Server inside the VM to change the binary files location
 
 ## Next steps
 

@@ -20,8 +20,7 @@ This article describes how to change the version of Microsoft SQL Server on a Wi
 ## Prerequisites
 
 To do an in-place upgrade of SQL Server, the following conditions apply:
-
-- The setup media of the desired version of SQL Server is required. Customers who have [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) can obtain their installation media from the [Volume Licensing Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx). Customers who don't have Software Assurance can use the setup media from an Azure Marketplace SQL Server VM image that has a later version of SQL Server (typically located in C:\SQLServerFull).
+- You have the SQL Server media.
 - Version upgrades should follow the [support upgrade paths](/sql/database-engine/install-windows/supported-version-and-edition-upgrades-version-15).
 
 ## Planning for version change
@@ -96,8 +95,26 @@ After you change the version of SQL Server, register your SQL Server VM with the
 
 :::image type="content" source="./media/change-sql-server-version/verify-portal.png" alt-text="Verify version":::
 
-> [!NOTE]
-> If you have already registered with the SQL IaaS Agent extension, [unregister from the RP](sql-agent-extension-manually-register-single-vm.md#unregister-from-extension) and then [Register the SQL VM resource](sql-agent-extension-manually-register-single-vm.md#register-with-extension) again so that it detects the correct version and edition of SQL Server that is installed on the VM. This updates the metadata and billing information that is associated with this VM.
+
+## Common Known Issues
+
+**I want to downgrade SQL Version. How can I get the media/SQL Setup file for the version I want to move to?**
+   
+   To get the SQL Server media,
+
+   1. Deploy SQL Server marketplace image with the desired version of SQL server you need.
+   1. Copy the media once the VM gets deployed to your existing VM.
+   1. Uninstall the Higher version of SQL Server 
+   1. Install the SQL Server version from the media copied in step 2
+   1. Reinstall the SQL IaaS extension
+
+**Where Can I find the SQL Setup media file? Where Can I find the SQL Setup media file?**
+
+The setup media of the desired version of SQL Server is required. Customers who have [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) can obtain their installation media from the [Volume Licensing Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx). Customers who don't have Software Assurance can use the setup media from an Azure Marketplace SQL Server VM image that has a later version of SQL Server (typically located in C:\SQLServerFull).
+
+**After upgrade or downgrade of SQL Server version, the version details are not correctly reflected in Azure portal**
+
+After you change the version of SQL Server, register your SQL Server VM with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md) again so that you can use the Azure portal to view the version of SQL Server. The listed version number should now reflect the newly upgraded version of your SQL Server installation.
 
 ## Remarks
 

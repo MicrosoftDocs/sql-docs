@@ -343,13 +343,13 @@ Here is an example on how to review "Azure VM Overall IO Exhaustion event" on th
 1. Select the **date and time** to see the graph.
 1. Select **Apply**
 
-![Identify IO Latency](./media/hadr-cluster-best-practices/hadr-metrics-cached-uncached.png)
+![Identify IO Latency-ss](./media/hadr-cluster-best-practices/hadr-metrics-cached-uncached.png)
 
 **Azure VM HostEvents can cause AG failovers on Always On SQL Server on Azure VM**
 
 Below are two places where you should search if there was an Azure VM Host event that caused the AG node unhealthy state.
 
-1. [Azure Monitor Activity Log](https://learn.microsoft.com/azure/azure-monitor/essentials/activity-log?tabs=powershell)
+1. [Azure Monitor Activity Log-ss](https://learn.microsoft.com/azure/azure-monitor/essentials/activity-log?tabs=powershell)
 
 The Azure Monitor activity log is a platform log in Azure that provides insight into subscription-level events. The activity log includes information like when a resource is modified or a virtual machine is started. You can view the activity log in the Azure portal or retrieve entries with PowerShell and the Azure CLI. This article provides information on how to view the activity log and send it to different destinations.
 
@@ -357,7 +357,7 @@ The Azure Monitor activity log is a platform log in Azure that provides insight 
 1. Select **Activity Log** on the Virtual Machine blade
 1. Select the **date and time** and Select **Apply**
 
-![Activity-log](./media/hadr-cluster-best-practices/activity-log.png)
+![Activity-log-ss](./media/hadr-cluster-best-practices/activity-log.png)
  
 2. [Azure VM - Resource Health overview](https://learn.microsoft.com/azure/service-health/resource-health-overview#root-cause-information)
 
@@ -366,7 +366,7 @@ If Azure has further information about the root cause of a platform-initiated un
 1. Navigate to your Virtual Machine in Azure Portal
 1. Select **Resource Health** under the **Health** blade.
 
-![Resource-health](./media/hadr-cluster-best-practices/resource-health.png)
+![Resource-health-ss](./media/hadr-cluster-best-practices/resource-health.png)
 
 **Cluster node removed from membership**
 

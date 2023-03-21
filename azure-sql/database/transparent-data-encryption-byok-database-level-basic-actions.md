@@ -358,6 +358,9 @@ az sql db show --resource-group $resourceGroupName --server $serverName --name m
 
 # Retrieve the basic database level customer-managed key settings from a database and the keys in use at a particular point in time
 az sql db show --resource-group $resourceGroupName --server $serverName --name mySampleDatabase --expand-keys --keys-filter 01-01-2015
+
+# Retrieve all the databases in a server to check which ones are configured with database level customer-managed keys
+az sql db list --resource-group $resourceGroupName --server $serverName
 ```
 
 # [PowerShell](#tab/azure-powershell2)
@@ -378,6 +381,9 @@ Get-AzSqlDatabase -ResourceGroupName <ResourceGroupName> -ServerName <ServerName
 
 # Retrieve the basic database level customer-managed key settings from a database and the keys in use at a particular point in time
 Get-AzSqlDatabase -ResourceGroupName <ResourceGroupName> -ServerName <ServerName> -DatabaseName <DatabaseName> -ExpandKeyList -KeysFilter '2023-02-03 00:00:00'
+
+# Retrieve all the databases in a server to check which ones are configured with database level customer-managed keys
+Get-AzSqlDatabase -resourceGroupName $resourceGroupName -ServerName $serverName | Select DatabaseName, EncryptionProtector
 ```
 
 # [REST API](#tab/rest-api2)

@@ -89,19 +89,7 @@ Create a database configured with user-assigned managed identity and cross-tenan
 To get your user-assigned managed identity **Resource ID**, search for **Managed Identities** in the [Azure portal](https://portal.azure.com). Find your managed identity, and go to **Properties**. An example of your UMI **Resource ID** looks like `/subscriptions/<subscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/<managedIdentity>`
 
 ```azurecli
-az sql db create \
-    --resource-group $resourceGroupName \
-    --server $serverName \
-    --name mySampleDatabase \
-    --sample-name AdventureWorksLT \
-    --edition GeneralPurpose \
-    --compute-model Serverless \
-    --family Gen5 \
-    --capacity 2
-    --assign-identity \
-    --user-assigned-identity-id $identityid \
-    --encryption-protector $keyid \
-    --federated-client-id $federatedclientid
+az sql db create --resource-group $resourceGroupName --server $serverName --name mySampleDatabase --sample-name AdventureWorksLT --edition GeneralPurpose --compute-model Serverless --family Gen5 --capacity 2 --assign-identity --user-assigned-identity-id $identityid --encryption-protector $keyid --federated-client-id $federatedclientid
 ```
 
 # [PowerShell](#tab/azure-powershell)
@@ -118,7 +106,6 @@ Replace the following values in the example:
 - `<DatabaseName>`: Use a unique Azure SQL database name
 - `<ServerName>`: Use a unique Azure SQL logical server name
 - `<UserAssignedIdentityId>`: The list of user-assigned managed identities to be assigned to the server (can be one or multiple)
-- `<PrimaryUserAssignedIdentityId>`: The user-assigned managed identity that should be used as the primary or default on this server
 - `<CustomerManagedKeyId>`: The **Key Identifier** from the second tenant Key Vault
 - `<FederatedClientId>`: The **Application ID** of the multi-tenant application
 
@@ -214,21 +201,7 @@ Update a database configured with user-assigned managed identity and cross-tenan
 To get your user-assigned managed identity **Resource ID**, search for **Managed Identities** in the [Azure portal](https://portal.azure.com). Find your managed identity, and go to **Properties**. An example of your UMI **Resource ID** looks like `/subscriptions/<subscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/<managedIdentity>`
 
 ```azurecli
-az sql db update \
-    --resource-group $resourceGroupName \
-    --server $serverName \
-    --name mySampleDatabase \
-    --sample-name AdventureWorksLT \
-    --edition GeneralPurpose \
-    --compute-model Serverless \
-    --family Gen5 \
-    --capacity 2
-    --assign-identity \
-    --user-assigned-identity-id $identityid \
-    --encryption-protector $keyid \
-    --federated-client-id $federatedclientid \
-    --keys $keys
-    --keys-to-remove $keysToRemove
+az sql db update --resource-group $resourceGroupName --server $serverName --name mySampleDatabase --sample-name AdventureWorksLT --edition GeneralPurpose --compute-model Serverless --family Gen5 --capacity 2 --assign-identity --user-assigned-identity-id $identityid --encryption-protector $keyid --federated-client-id $federatedclientid --keys $keys --keys-to-remove $keysToRemove
 ```
 
 The list of keys $keys here is a space separated list of keys which are to be added on the database and $keysToRemove is a space separated list of keys which have to be removed from the database
@@ -253,7 +226,6 @@ Replace the following values in the example:
 - `<DatabaseName>`: Use a unique Azure SQL database name
 - `<ServerName>`: Use a unique Azure SQL logical server name
 - `<UserAssignedIdentityId>`: The list of user-assigned managed identities to be assigned to the server (can be one or multiple)
-- `<PrimaryUserAssignedIdentityId>`: The user-assigned managed identity that should be used as the primary or default on this server
 - `<CustomerManagedKeyId>`: The **Key Identifier** from the second tenant Key Vault
 - `<FederatedClientId>`: The **Application ID** of the multi-tenant application
 - `<ListOfKeys>`: The comma separated list of database level customer-managed keys to be added to the database
@@ -376,33 +348,16 @@ For information on installing the current release of Azure CLI, see [Install the
 
 ```azurecli
 # Retrieve the basic database level customer-managed key settings from a database
-az sql db show \
-    --resource-group $resourceGroupName \
-    --server $serverName \
-    --name mySampleDatabase \
+az sql db show --resource-group $resourceGroupName --server $serverName --name mySampleDatabase
 
 # Retrieve the basic database level customer-managed key settings from a database and all the keys ever added
-az sql db show \
-    --resource-group $resourceGroupName \
-    --server $serverName \
-    --name mySampleDatabase \
-    --expand-keys
+az sql db show --resource-group $resourceGroupName --server $serverName --name mySampleDatabase --expand-keys
 
 # Retrieve the basic database level customer-managed key settings from a database and the current keys in use
-az sql db show \
-    --resource-group $resourceGroupName \
-    --server $serverName \
-    --name mySampleDatabase \
-    --expand-keys
-    --keys-filter current
+az sql db show --resource-group $resourceGroupName --server $serverName --name mySampleDatabase --expand-keys --keys-filter current
 
 # Retrieve the basic database level customer-managed key settings from a database and the keys in use at a particular point in time
-az sql db show \
-    --resource-group $resourceGroupName \
-    --server $serverName \
-    --name mySampleDatabase \
-    --expand-keys
-    --keys-filter 01-01-2015
+az sql db show --resource-group $resourceGroupName --server $serverName --name mySampleDatabase --expand-keys --keys-filter 01-01-2015
 ```
 
 # [PowerShell](#tab/azure-powershell2)
@@ -464,10 +419,7 @@ In case of an inaccessible TDE protector as described in [Transparent Data Encry
 For information on installing the current release of Azure CLI, see [Install the Azure CLI](/cli/azure/install-azure-cli) article.
 
 ```azurecli
-az sql db tde key revalidate \
-    --resource-group $resourceGroupName \
-    --server $serverName \
-    --name mySampleDatabase \
+az sql db tde key revalidate --resource-group $resourceGroupName --server $serverName --name mySampleDatabase
 ```
 
 # [PowerShell](#tab/azure-powershell2)
@@ -499,10 +451,7 @@ A database configured with database level CMK can be reverted to server level en
 For information on installing the current release of Azure CLI, see [Install the Azure CLI](/cli/azure/install-azure-cli) article.
 
 ```azurecli
-az sql db tde key revert \
-    --resource-group $resourceGroupName \
-    --server $serverName \
-    --name mySampleDatabase \
+az sql db tde key revert --resource-group $resourceGroupName --server $serverName --name mySampleDatabase
 ```
 
 # [PowerShell](#tab/azure-powershell2)

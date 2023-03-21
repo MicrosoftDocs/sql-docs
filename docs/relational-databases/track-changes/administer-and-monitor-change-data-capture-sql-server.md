@@ -21,7 +21,9 @@ This topic describes how to administer and monitor change data capture.
 
 ## <a name="Capture"></a> Capture job
 
-The capture job is initiated by running the parameterless stored procedure `sp_MScdc_capture_job`. This stored procedure starts by extracting the configured values for `maxtrans`, `maxscans`, `continuous`, and `pollinginterval` for the capture job from `msdb.dbo.cdc_jobs`. These configured values are then passed as parameters to the stored procedure `sp_cdc_scan`. This is used to invoke `sp_replcmds` to perform the log scan.  
+The capture job is initiated by running the parameterless stored procedure `sp_MScdc_capture_job`. This stored procedure starts by extracting the configured values for `maxtrans`, `maxscans`, `continuous`, and `pollinginterval` for the capture job from `msdb.dbo.cdc_jobs`. These configured values are then passed as parameters to the stored procedure `sp_cdc_scan`. This is used to invoke `sp_replcmds` to perform the log scan. 
+
+In Azure SQL Database, `continuous` and `pollinginterval` parameters do not apply. For more information, see [CDC in Azure SQL Database](#cdc-in-azure-sql-database).
   
 ### Capture Job Parameters  
 
@@ -179,13 +181,14 @@ When you apply cumulatives updates or service packs to an instance, at restart, 
 
 ## CDC in Azure SQL Database
 
-In Azure SQL Database, the capture and cleanup SQL Server Agent jobs are replaced by a change data capture scheduler that invokes stored procedures to start periodic capture and cleanup of the change tables. The same capture and cleanup SQL Server Agent jobs in SQL Server are replaced in Azure SQL Database by a change data capture scheduler, so the same configuration options and objects are not available. 
+In Azure SQL Database, the same configuration options and objects are not available because the capture and cleanup SQL Server Agent jobs are replaced by a change data capture scheduler. The scheduler invokes stored procedures to start periodic capture and cleanup of the change tables. 
 
-However, some limited customizations may be possible and supported.
+However, some limited customizations are supported.
 
 - The frequency of the CDC capture and cleanup jobs cannot be customized.
 - The `pollinginterval` and `continuous` values are not used in Azure SQL DB for capture and cleanup jobs.
 - Dropping the capture job entry from the `cdc.cdc_jobs` table will not stop the capture job running in the background.
+- Dropping the cleanup job causes the cleanup job to not run.
 - The `cdc.cdc_jobs` table exists in the `cdc` schema, not `msdb`.
 
 Given those limitations, it is possible to:

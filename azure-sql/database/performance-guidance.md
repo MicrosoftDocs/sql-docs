@@ -46,7 +46,7 @@ Although Azure SQL Database and Azure SQL Managed Instance service tiers are des
 
    Applications that have inherent data access concurrency issues, for example deadlocking, might not benefit from a higher compute size. Consider reducing round trips against the database by caching data on the client side with the Azure Caching service or another caching technology. See [Application tier caching](#application-tier-caching).
 
-    To prevent deadlocks from reoccurring in Azure SQL Database, see [Analyze and prevent deadlocks in Azure SQL Database](analyze-prevent-deadlocks.md). For Azure SQL Managed Instance, refer to the [Deadlocks](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide#deadlock_tools) of the [Transaction locking and row versioning guide](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide).
+    To prevent deadlocks from reoccurring in Azure SQL Database, see [Analyze and prevent deadlocks in Azure SQL Database](analyze-prevent-deadlocks.md). For Azure SQL Managed Instance, refer to the [Deadlock tools](/sql/relational-databases/sql-server-deadlocks-guide#deadlock_tools) of the [Deadlocks guide](/sql/relational-databases/sql-server-deadlocks-guide).
 
 ## Tune your database
 

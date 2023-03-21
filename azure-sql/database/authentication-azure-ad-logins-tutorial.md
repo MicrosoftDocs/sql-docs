@@ -4,7 +4,7 @@ description: This article guides you through creating and utilizing Azure Active
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: vanto
-ms.date: 03/14/2022
+ms.date: 03/21/2023
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: tutorial
@@ -39,7 +39,7 @@ In this tutorial, you learn how to:
 1. Create an Azure SQL Database login for an Azure AD account. In our example, we'll use `bob@contoso.com` that exists in our Azure AD domain called `contoso`. A login can also be created from an Azure AD group or [service principal (applications)](authentication-aad-service-principal.md). For example, `mygroup` that is an Azure AD group consisting of Azure AD accounts that are a member of that group. For more information, see [CREATE LOGIN (Transact-SQL)](/sql/t-sql/statements/create-login-transact-sql?view=azuresqldb-current&preserve-view=true).
 
    > [!NOTE]
-   > The first Azure AD login must be created by the Azure Active Directory admin. A SQL login cannot create Azure AD logins.
+   > The first Azure AD login must be created by the Azure Active Directory admin. The Azure AD admin can be an Azure AD user or group. A SQL login cannot create Azure AD logins.
 
 1. Using [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms), log into your SQL Database with the Azure AD admin account set up for the server.
 1. Run the following query:

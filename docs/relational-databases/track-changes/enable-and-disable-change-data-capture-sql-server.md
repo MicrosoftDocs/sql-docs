@@ -16,19 +16,20 @@ helpviewer_keywords:
 # Enable and disable change data capture
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   This topic describes how to enable and disable change data capture for a database and a table.  
-  
-## Enable for a database  
 
-Before you can create a capture instance for individual tables, you must enable the database for change data capture. 
-
-The permissions required to enable change data capture depend on the product. See the following table.
-
+The permissions required to enable or disable change data capture depend on the product. See the following table.
 
 | Product|Role|
 | -------- | -------- |
-|SQL Server|sysadmin   |
-|Azure SQL Database|db_owner|
-|Azure SQL Managed Instance |sysadmin |
+|SQL Server| sysadmin |
+|Azure SQL Database| db_owner |
+|Azure SQL Managed Instance | sysadmin |
+
+Members of these roles have full access to the data in the changed tables for the specified products.
+
+## Enable for a database  
+
+Before you can create a capture instance for individual tables, you must enable the database for change data capture. 
 
 To enable change data capture, run the stored procedure [sys.sp_cdc_enable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) in the database context. To determine if a database is already enabled, query the **is_cdc_enabled** column in the **sys.databases** catalog view.  
 
@@ -50,7 +51,8 @@ EXEC sys.sp_cdc_enable_db
 GO  
 ```
 ## Disable for a database  
- A member of the **sysadmin** fixed server role can run the stored procedure [sys.sp_cdc_disable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) in the database context to disable change data capture for a database. It is not necessary to disable individual tables before you disable the database. Disabling the database removes all associated change data capture metadata, including the **cdc** user and schema and the change data capture jobs. However, any gating roles created by change data capture will not be removed automatically and must be explicitly deleted. To determine if a database is enabled, query the **is_cdc_enabled** column in the sys.databases catalog view.  
+
+Use [sys.sp_cdc_disable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) in the database context to disable change data capture for a database. It is not necessary to disable individual tables before you disable the database. Disabling the database removes all associated change data capture metadata, including the **cdc** user and schema and the change data capture jobs. However, any gating roles created by change data capture will not be removed automatically and must be explicitly deleted. To determine if a database is enabled, query the **is_cdc_enabled** column in the sys.databases catalog view.  
   
  If a change data capture enabled database is dropped, change data capture jobs are automatically removed.  
   
@@ -68,6 +70,7 @@ EXEC sys.sp_cdc_disable_db
 GO  
 ```
 ## Enable for a table  
+
  After a database has been enabled for change data capture, members of the **db_owner** fixed database role can create a capture instance for individual source tables by using the stored procedure **sys.sp_cdc_enable_table**. To determine whether a source table has already been enabled for change data capture, examine the is_tracked_by_cdc column in the **sys.tables** catalog view.  
   
  The following options can be specified when creating a capture instance:  
@@ -98,7 +101,7 @@ GO
 
  **A role for controlling access to a change table.**  
   
- The purpose of the named role is to control access to the change data. The specified role can be an existing fixed server role or a database role. If the specified role does not already exist, a database role of that name is created automatically. In SQL Server and Azure SQL Managed Instance, members the **sysadmin** have full access to the data in the changed tables. In Azure SQL Database, members of **db_owner** role have full access to the data in the change tables. All other users must have SELECT permission on all the captured columns of the source table. In addition, when a role is specified, users who are not members of either the **sysadmin** or **db_owner** role must also be members of the specified role.  
+ The purpose of the named role is to control access to the change data. The specified role can be an existing fixed server role or a database role. If the specified role does not already exist, a database role of that name is created automatically. Users must have SELECT permission on all the captured columns of the source table. In addition, when a role is specified, users who are not members of either the **sysadmin** or **db_owner** role must also be members of the specified role.  
   
  If you do not want to use a gating role, explicitly set the *\@role_name* parameter to NULL. See the **Enable a Table Without Using a Gating Role** template for an example of enabling a table without a gating role.  
   

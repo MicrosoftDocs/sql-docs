@@ -98,7 +98,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  Special notations define patterns of text to match. For a list, see [Search Text with Regular Expressions](./search-text-with-regular-expressions.md).  
   
  **Wildcards**  
- Special characters such as asterisks (`*`) and question marks (`?`) represent one or more characters. For a list, see [Search Text with Wildcards](./search-text-with-wildcards.md).  
+ Special characters such as asterisks (`*`) and question marks (`?`) represent one or more characters. For a list, see [Search text with regular expressions](./search-text-with-regular-expressions.md).  
   
  **Look at these file types**  
  This list indicates the types of files to search through in the directories specified in **Look in**. If this box is left blank, all of the files in the directories specified in **Look in** will be searched.  

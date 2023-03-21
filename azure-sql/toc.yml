@@ -311,8 +311,12 @@
         href: database/firewall-create-server-level-portal-quickstart.md
       - name: Database project in a local dev environment
         href: database/local-dev-experience-quickstart.md
-    - name: Connect to and query a database using .NET
-      href: database/azure-sql-dotnet-quickstart.md
+    - name: Connect and query
+      items:
+      - name: .NET with SqlClient
+        href: database/azure-sql-dotnet-quickstart.md
+      - name: .NET with EF Core
+        href: database/azure-sql-dotnet-entity-framework-core-quickstart.md
     - name: GitHub Actions
       href: database/connect-github-actions-sql-db.md
 
@@ -1018,8 +1022,6 @@
       items:
       - name: Service-aided subnet configuration
         href: managed-instance/subnet-service-aided-configuration-enable.md
-      - name: Public endpoint
-        href: managed-instance/public-endpoint-configure.md
       - name: Minimal TLS version
         href: managed-instance/minimal-tls-version-configure.md
       - name: Client VM connection
@@ -1363,6 +1365,10 @@
         href: managed-instance/vnet-existing-add-subnet.md
       - name: Configure service endpoint policies for SQL MI
         href: managed-instance/service-endpoint-policies-configure.md
+      - name: Configure public endpoint
+        href: managed-instance/public-endpoint-configure.md
+      - name: Configure private endpoint
+        href: managed-instance/private-endpoint-overview.md
       - name: Move SQL MI to another subnet
         href: managed-instance/vnet-subnet-move-instance.md
       - name: Delete subnet after deleting SQL MI
@@ -1711,11 +1717,13 @@
         href: virtual-machines/linux/sql-iaas-agent-extension-register-vm-linux.md
     - name: Tutorials
       items:
-      - name: Setting up Azure RHEL VM availability group with STONITH
+      - name: Set up Azure RHEL VM availability group with STONITH
         href: virtual-machines/linux/rhel-high-availability-stonith-tutorial.md
+      - name: Set up Azure SLES VM availability group with STONITH
+        href: virtual-machines/linux/sles-high-availability-stonith-tutorial.md
       - name: Configure availability group listener for SQL Server on RHEL virtual machines in Azure
         href: virtual-machines/linux/rhel-high-availability-listener-tutorial.md
-      - name: Setup Always On availability group with DH2i DxEnterprise
+      - name: Set up Always On availability group with DH2i DxEnterprise
         href: virtual-machines/linux/dh2i-high-availability-tutorial.md
     - name: Resources
       items:

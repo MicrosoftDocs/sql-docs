@@ -12,15 +12,27 @@ helpviewer_keywords:
   - "change data capture, disabling databases"
   - "change data capture, disabling tables"
 ---
+
 # Enable and disable change data capture
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   This topic describes how to enable and disable change data capture for a database and a table.  
   
 ## Enable for a database  
 
- Before a capture instance can be created for individual tables, a member of the **sysadmin** fixed server role (only in SQL Server / Azure SQL Managed Instance) or db_owner must first enable the database for change data capture. This is done by running the stored procedure [sys.sp_cdc_enable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) in the database context. To determine if a database is already enabled, query the **is_cdc_enabled** column in the **sys.databases** catalog view.  
-  
- When a database is enabled for change data capture, the **cdc** schema, **cdc** user, metadata tables, and other system objects are created for the database. The **cdc** schema contains the change data capture metadata tables and, after source tables are enabled for change data capture, the individual change tables serve as a repository for change data. The **cdc** schema also contains associated system functions used to query for change data.  
+Before you can create a capture instance for individual tables, you must enable the database for change data capture. 
+
+The permissions required to enable change data capture depend on the product. See the following table.
+
+
+| Product|Role|
+| -------- | -------- |
+|SQL Server|sysadmin   |
+|Azure SQL Database|sysadmin or db_owner|
+|Azure SQL Managed Instance | sysadmin | 
+
+To enable change data capture, run the stored procedure [sys.sp_cdc_enable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) in the database context. To determine if a database is already enabled, query the **is_cdc_enabled** column in the **sys.databases** catalog view.  
+
+When a database is enabled for change data capture, the **cdc** schema, **cdc** user, metadata tables, and other system objects are created for the database. The **cdc** schema contains the change data capture metadata tables and, after source tables are enabled for change data capture, the individual change tables serve as a repository for change data. The **cdc** schema also contains associated system functions used to query for change data.  
   
  Change data capture requires exclusive use of the **cdc** schema and **cdc** user. If either a schema or a database user named *cdc* currently exists in a database, the database cannot be enabled for change data capture until the schema and or user are dropped or renamed.  
   
@@ -28,7 +40,6 @@ helpviewer_keywords:
   
 > [!IMPORTANT]  
 >  To locate the templates in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], go to **View**, click **Template Explorer**, and then select **SQL Server Templates**. **change data capture** is a sub-folder. Under this folder, you will find all the templates referenced in this topic. There is also a **Template Explorer** icon on the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] toolbar.  
-  
 ```sql  
 -- ====  
 -- Enable Database for CDC template   
@@ -37,8 +48,7 @@ USE MyDB
 GO  
 EXEC sys.sp_cdc_enable_db  
 GO  
-```  
-  
+```
 ## Disable for a database  
  A member of the **sysadmin** fixed server role can run the stored procedure [sys.sp_cdc_disable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) in the database context to disable change data capture for a database. It is not necessary to disable individual tables before you disable the database. Disabling the database removes all associated change data capture metadata, including the **cdc** user and schema and the change data capture jobs. However, any gating roles created by change data capture will not be removed automatically and must be explicitly deleted. To determine if a database is enabled, query the **is_cdc_enabled** column in the sys.databases catalog view.  
   
@@ -48,7 +58,6 @@ GO
   
 > [!IMPORTANT]  
 >  To locate the templates in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], go to **View**, click **Template Explorer**, and then click **SQL Server Templates**. **change data capture** is a sub-folder where you will find all the templates that are referenced in this topic. There is also a **Template Explorer** icon on the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] toolbar.  
-  
 ```sql  
 -- =======  
 -- Disable Database for change data capture template   
@@ -57,8 +66,7 @@ USE MyDB
 GO  
 EXEC sys.sp_cdc_disable_db  
 GO  
-```  
-  
+```
 ## Enable for a table  
  After a database has been enabled for change data capture, members of the **db_owner** fixed database role can create a capture instance for individual source tables by using the stored procedure **sys.sp_cdc_enable_table**. To determine whether a source table has already been enabled for change data capture, examine the is_tracked_by_cdc column in the **sys.tables** catalog view.  
   
@@ -86,8 +94,7 @@ EXEC sys.sp_cdc_enable_table
 @filegroup_name = N'MyDB_CT',  
 @supports_net_changes = 1  
 GO  
-```  
-  
+```
  **A role for controlling access to a change table.**  
   
  The purpose of the named role is to control access to the change data. The specified role can be an existing fixed server role or a database role. If the specified role does not already exist, a database role of that name is created automatically. Members of either the **sysadmin** (only in SQL Server / Azure SQL Managed Instance) or **db_owner** role have full access to the data in the change tables. All other users must have SELECT permission on all the captured columns of the source table. In addition, when a role is specified, users who are not members of either the **sysadmin** or **db_owner** role must also be members of the specified role.  
@@ -107,8 +114,7 @@ EXEC sys.sp_cdc_enable_table
 @supports_net_changes = 1  
 GO  
   
-```  
-  
+```
  **A function to query for net changes.**  
   
  A capture instance will always include a table valued function for returning all change table entries that occurred within a defined interval. This function is named by appending the capture instance name to "cdc.fn_cdc_get_all_changes_". For more information, see [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md).  
@@ -131,11 +137,9 @@ EXEC sys.sp_cdc_enable_table
 @role_name     = N'MyRole',  
 @supports_net_changes = 1  
 GO  
-```  
-  
+```
 > [!NOTE]
 >  If change data capture is enabled on a table with an existing primary key, and the *\@index_name* parameter is not used to identify an alternative unique index, the change data capture feature will use the primary key. Subsequent changes to the primary key will not be allowed without first disabling change data capture for the table. This is true regardless of whether support for net changes queries was requested when change data capture was configured. If there is no primary key on a table at the time it is enabled for change data capture, the subsequent addition of a primary key is ignored by change data capture. Because change data capture will not use a primary key that is created after the table was enabled, the key and key columns can be removed without restrictions.  
-  
 ## Disable for a table  
  Members of the **db_owner** fixed database role can remove a capture instance for individual source tables by using the stored procedure **sys.sp_cdc_disable_table**. To determine whether a source table is currently enabled for change data capture, examine the **is_tracked_by_cdc** column in the **sys.tables** catalog view. If there are no tables enabled for the database after the disabling takes place, the change data capture jobs are also removed.  
   
@@ -154,8 +158,7 @@ EXEC sys.sp_cdc_disable_table
 @source_name   = N'MyTable',  
 @capture_instance = N'dbo_MyTable'  
 GO  
-```  
-  
+```
 ## See Also  
  [Track Data Changes &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [About change data capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
@@ -163,3 +166,5 @@ GO
  [Administer and Monitor change data capture &#40;SQL Server&#41;](../../relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md)  
   
   
+  
+

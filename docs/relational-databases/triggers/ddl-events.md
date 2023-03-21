@@ -419,13 +419,13 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_SEQUENCE_EVENTS
+        CREATE_SEQUENCE
     :::column-end:::
     :::column:::
-        CREATE_SEQUENCE_EVENTS
+        ALTER_SEQUENCE
     :::column-end:::
     :::column:::
-        CREATE_SEQUENCE_EVENTS
+        DROP_SEQUENCE
     :::column-end:::
 :::row-end:::  
 :::row:::

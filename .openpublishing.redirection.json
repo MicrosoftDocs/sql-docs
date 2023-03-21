@@ -50001,6 +50001,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/ssms/scripting/search-text-with-regular-expressions.md",
+      "redirect_url": "https://learn.microsoft.com/visualstudio/ide/finding-and-replacing-text",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/2014/analysis-services/scripting/datasourceviewid-element-assl.md",
       "redirect_url": "/bi-reference/assl/properties/datasourceviewid-element-assl",
       "redirect_document_id": false
@@ -59607,6 +59612,11 @@
     },
     {
       "source_path": "docs/relational-databases/errors-events/mssqlserver-1-database-engine-error.md",
+      "redirect_url": "/troubleshoot/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/errors-events/mssqlserver--1-database-engine-error.md",
       "redirect_url": "/troubleshoot/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection",
       "redirect_document_id": false
     },

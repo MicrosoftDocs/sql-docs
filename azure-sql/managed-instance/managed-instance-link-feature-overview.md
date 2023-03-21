@@ -155,7 +155,7 @@ Configuration limitations include:
 
   - Managed Instance link authentication between SQL Server and SQL Managed Instance is certificate-based and available only through an exchange of certificates. Using Windows authentication to establish the link between the SQL Server instance and the managed instance isn't supported.
 
-  - Only a private endpoint (VPN/virtual network) is supported to establish a link with SQL Managed Instance. You can't use a public endpoint to establish the link with the managed instance.
+  - Only [VNet-local endpoint](connectivity-architecture-overview.md#vnet-local-endpoint) is supported to establish a link with SQL Managed Instance. You can't use public endpoint or private endpoints to establish the link with the managed instance.
 
 Feature limitations include:
 

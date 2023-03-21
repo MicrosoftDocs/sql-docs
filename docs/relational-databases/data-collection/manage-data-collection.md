@@ -56,7 +56,7 @@ keywords: Data Collection
 > [!IMPORTANT]  
 > Unlike regular stored procedures, the data collector stored procedures use strictly typed parameters and do not support automatic data type conversion. If these parameters are not called with the correct input parameter data types, as specified in the argument description, the stored procedure returns an error.  
   
- Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to create and execute the provided code samples. For more information, see [Object Explorer](../../ssms/object/object-explorer.md). As an alternative you can create the query in any editor and save it in a text file that has a .sql file name extension. You can execute the query from the Windows command prompt using the **sqlcmd** utility. For more information, see [Use the sqlcmd Utility](../../ssms/scripting/sqlcmd-use-the-utility.md).  
+ Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to create and execute the provided code samples. For more information, see [Object Explorer](../../ssms/object/object-explorer.md). As an alternative you can create the query in any editor and save it in a text file that has a .sql file name extension. You can execute the query from the Windows command prompt using the **sqlcmd** utility. For more information, see [Use the sqlcmd Utility](../../tools/sqlcmd/sqlcmd-use-utility.md).  
   
 ### Stored Procedures and Views  
  **Working with the data collector**  
@@ -166,5 +166,4 @@ keywords: Data Collection
 ## See also  
  [Execute a Stored Procedure](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)   
  [Use SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)   
- [Data Collection](../../relational-databases/data-collection/data-collection.md)  
-  
+ [Data Collection](../../relational-databases/data-collection/data-collection.md)

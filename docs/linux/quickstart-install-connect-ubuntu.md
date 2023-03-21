@@ -249,7 +249,7 @@ At this point, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is run
 
 ## <a id="tools"></a> Install the SQL Server command-line tools
 
-To create a database, you need to connect with a tool that can run Transact-SQL statements on [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. The following steps install the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] command-line tools: [**sqlcmd**](../tools/sqlcmd-utility.md) and [**bcp**](../tools/bcp-utility.md).
+To create a database, you need to connect with a tool that can run Transact-SQL statements on [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. The following steps install the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] command-line tools: [**sqlcmd**](../tools/sqlcmd/sqlcmd-utility.md) and [**bcp**](../tools/bcp-utility.md).
 
 Use the following steps to install the **mssql-tools** on Ubuntu. If **curl** isn't installed, you can run this code:
 

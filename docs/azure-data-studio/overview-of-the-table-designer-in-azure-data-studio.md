@@ -64,7 +64,7 @@ The SQL server connection in which your database resides needs to be active in o
     Ensure that the query editor is connected to the database on which the script is to be ran. This is done by selecting the **Connect** button in the query editor window. This will pull up the connection dialog box where you can enter in the credentials for the server you are running your database script on.
 
     >[!NOTE]
-    > Please note that changes to the table design can be made manually in the query editor by editing the T-SQL script. **SQLCMD** mode must be enabled to successfully execute Transact-SQL scripts. This is done by toggling this button as shown in the image above (already enabled, which is why it shows **Disable SQLCMD**). To learn more about this, please refer to the [SQLCMD utility documentation](../tools/sqlcmd-utility.md).
+    > Please note that changes to the table design can be made manually in the query editor by editing the T-SQL script. **SQLCMD** mode must be enabled to successfully execute Transact-SQL scripts. This is done by toggling this button as shown in the image above (already enabled, which is why it shows **Disable SQLCMD**). To learn more about this, please refer to the [SQLCMD utility documentation](../tools/sqlcmd/sqlcmd-utility.md).
 
 6. Remember to save changes made on the table designer. Unsaved changes are indicated by the black shaded dot as shown below:
 

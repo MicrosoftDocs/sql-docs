@@ -415,7 +415,7 @@ Restore-AzSqlDatabase -FromGeoBackup -ResourceId "/subscriptions/{subscriptionId
 > Long term retention (LTR) backups don't provide the list of keys used by the backup. To restore an LTR backup, all the keys used by the source database must be passed to the LTR restore target.
 
 > [!NOTE]
-> The ARM template highlighted in the 'Create an Azure SQL Database with database level customer-managed keys as a secondary or copy' section can be referenced to restore the database with an ARM template by changing the `createMode` parameter.
+> The ARM template highlighted in the [Create an Azure SQL Database with database level customer-managed keys as a secondary or copy](#create-an-azure-sql-database-with-database-level-customer-managed-keys-as-a-secondary-or-copy) section can be referenced to restore the database with an ARM template by changing the `createMode` parameter.
 
 ## Next steps
 

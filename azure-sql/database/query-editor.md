@@ -48,9 +48,9 @@ To use Active Directory authentication to connect to an Azure SQL database via t
 
 There are three main sections of the query editor:
 
-1. Navigation bar
-1. Object explorer
-1. Query window
+- Navigation bar
+- Object explorer
+- Query window
 
    :::image type="content" source="media/query-editor/query-editor.png" alt-text="Screenshot that shows the query editor window with three red rectangles highlighting the sections.":::
 

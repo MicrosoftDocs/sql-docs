@@ -1,5 +1,5 @@
 ---
-title: Configure geo replication for transparent data encryption (TDE) with database level customer-managed keys
+title: Configure geo replication and backup restore for transparent data encryption (TDE) with database level customer-managed keys
 titleSuffix: Azure SQL Database
 description: How-to guide for configuring geo replication for transparent data encryption (TDE) with database level customer-managed keys for Azure SQL Database
 author: strehan1993
@@ -21,7 +21,7 @@ monikerRange: "= azuresql || = azuresql-db"
 >
 > This preview feature is available for Azure SQL Database (all SQL Database editions). It is not available for Azure SQL Managed Instance, SQL Server on-premises, Azure VMs, and Azure Synapse Analytics (dedicated SQL pools (formerly SQL DW)).
 
-In this guide, we go through the steps to configure geo replication and restore an Azure SQL Database. The Azure SQL Database is configured with transparent data encryption (TDE) and customer-managed keys (CMK) at the database level, utilizing a [user-assigned managed identity](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) to access [Azure Key Vault](/azure/key-vault/general/quick-create-portal). The Azure Key Vault is in an Azure Active Directory (Azure AD) that is in the same tenant as the Azure SQL logical server tenant.
+In this guide, we go through the steps to configure geo replication and backup restore on an Azure SQL Database. The Azure SQL Database is configured with transparent data encryption (TDE) and customer-managed keys (CMK) at the database level, utilizing a [user-assigned managed identity](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) to access [Azure Key Vault](/azure/key-vault/general/quick-create-portal). The Azure Key Vault is in an Azure Active Directory (Azure AD) that is in the same tenant as the Azure SQL logical server tenant.
 
 ## Prerequisites
 

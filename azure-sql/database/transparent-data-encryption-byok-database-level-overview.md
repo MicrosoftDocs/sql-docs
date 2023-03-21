@@ -172,7 +172,7 @@ To establish active geo-replication for a database that has been configured with
 >
 > Databases configured with database level CMK do not support automated secondary creation when added to a failover group.
 
-For more information, [Configure geo replication for transparent data encryption with database level customer-managed keys](transparent-data-encryption-byok-database-level-geo-replication-restore.md) describes how to setup geo replication and failover groups using REST APIs, PowerShell, and the Azure CLI.
+For more information, [Configure geo replication and backup restore for transparent data encryption with database level customer-managed keys](transparent-data-encryption-byok-database-level-geo-replication-restore.md) describes how to setup geo replication and failover groups using REST APIs, PowerShell, and the Azure CLI.
 
 > [!NOTE]
 > All the best practices regarding geo replication and high availability highlighted in [**transparent data encryption (TDE) with CMK**](transparent-data-encryption-byok-overview.md) for server level CMK apply to database level CMK.
@@ -217,7 +217,7 @@ The following steps are needed for a geo restore of a database configured with d
 > [!NOTE]
 > long-term backup retention (LTR) backups don't provide the list of keys used by the backup. To restore an LTR backup, all the keys used by the source database must be passed to the LTR restore target.
 >
-> To learn more about backup recovery for SQL Database with database level CMK with examples using Powershell, the Azure CLI, and REST APIs, see [Configure geo replication for transparent data encryption with database level customer-managed keys](transparent-data-encryption-byok-database-level-geo-replication-restore.md).
+> To learn more about backup recovery for SQL Database with database level CMK with examples using Powershell, the Azure CLI, and REST APIs, see [Configure geo replication and backup restore for transparent data encryption with database level customer-managed keys](transparent-data-encryption-byok-database-level-geo-replication-restore.md).
 
 ## Limitations
 
@@ -249,4 +249,4 @@ Check the following documentation on various database level CMK operations:
 
 - [Identity and key management for TDE with database level customer-managed keys](transparent-data-encryption-byok-database-level-basic-actions.md)
 
-- [Configure geo replication for transparent data encryption with database level customer-managed keys](transparent-data-encryption-byok-database-level-geo-replication-restore.md)
+- [Configure geo replication and backup restore for transparent data encryption with database level customer-managed keys](transparent-data-encryption-byok-database-level-geo-replication-restore.md)

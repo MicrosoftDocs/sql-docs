@@ -45,4 +45,4 @@ You can also revise the application to avoid deadlocks. The transaction that was
   
 To prevent or avoid deadlocks from occurring, consider having all transactions access rows in the same order (**Table1**, then **Table2**). This way, although blocking might occur, a deadlock will be avoided.  
   
-For more information, see [Handling Deadlocks](../sql-server-transaction-locking-and-row-versioning-guide.md?#handling-deadlocks) and [Minimizing Deadlocks](../sql-server-transaction-locking-and-row-versioning-guide.md#deadlock_minimizing).
+For more information, see [Handling Deadlocks](../sql-server-deadlocks-guide.md?#handle-deadlocks) and [Minimizing Deadlocks](../sql-server-deadlocks-guide.md#minimize-deadlocks).

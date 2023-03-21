@@ -21,11 +21,11 @@ The permissions required to enable or disable change data capture depend on the 
 
 | Product|Role|
 | -------- | -------- |
-|SQL Server|sysadmin   |
-|Azure SQL Database|db_owner|
-|Azure SQL Managed Instance |sysadmin 
+|SQL Server| sysadmin |
+|Azure SQL Database| db_owner |
+|Azure SQL Managed Instance | sysadmin |
 
-Members of these roles have full access to the data in the changed tables for the specified products.|
+Members of these roles have full access to the data in the changed tables for the specified products.
 
 ## Enable for a database  
 

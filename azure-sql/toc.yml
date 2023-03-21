@@ -55,7 +55,7 @@
         displayName: regulatory, compliance, standards, domains
         href: ./database/security-controls-policy.md
       - name: Security baseline
-        href: /security/benchmark/azure/baselines/sql-database-security-baseline?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
+        href: /security/benchmark/azure/baselines/sql-database-security-baseline?toc=/azure/azure-sql/toc.json
       - name: Always Encrypted
         href: database/always-encrypted-landing.yml
       - name: Microsoft Defender for SQL
@@ -131,6 +131,8 @@
         href: database/monitor-tune-overview.md
       - name: Intelligent Insights
         href: database/intelligent-insights-overview.md
+      - name: SQL Analytics
+        href: /azure/azure-monitor/insights/azure-sql
       - name: SQL Insights (preview)
         items:
         - name: Overview

@@ -327,6 +327,47 @@ If the **health probe fails** to get a response from a backend instance, then **
 
 Review the resolutions for some commonly known issues and errors: 
 
+
+**Resource contention (IO in particular) causing AG failover on SQL Server on Azure VM**
+
+Exhaust of IO VM capacity or CPU causes AG failover. Identifying contention exactly before the failover is the most reliable symptom to identify this cause of an Always On automatic failover. You can [Monitor Azure Virtual Machines](https://learn.microsoft.com/azure/virtual-machines/monitor-vm) to look at the [Storage IO Utilization metrics](https://learn.microsoft.com/azure/virtual-machines/disks-metrics#storage-io-utilization-metrics) to understand VM or Disk level latency
+
+Here is an example on how to review "Azure VM Overall IO Exhaustion event" on the portal with the below metrics: 
+
+
+1. Navigate to your Virtual Machine in Azure Portal
+2. Select **Metrics** under Monitoring
+3. Select **VM Cached Bandwidth Consumed Percentage** in the metric dropdown
+1. Select **Add metric**
+1. Select  **VM Uncached Bandwidth Consumed Percentage** in the metric dropdown
+1. Select the **date and time** to see the graph.
+1. Select **Apply**
+
+![Identify IO Latency](./media/hadr-cluster-best-practices/hadr-metrics-cached-uncached.png)
+
+**Azure VM HostEvents can cause AG failovers on Always On SQL Server on Azure VM**
+
+Below are two places where you should search if there was an Azure VM Host event that caused the AG node unhealthy state.
+
+1. [Azure Monitor Activity Log](https://learn.microsoft.com/azure/azure-monitor/essentials/activity-log?tabs=powershell)
+
+The Azure Monitor activity log is a platform log in Azure that provides insight into subscription-level events. The activity log includes information like when a resource is modified or a virtual machine is started. You can view the activity log in the Azure portal or retrieve entries with PowerShell and the Azure CLI. This article provides information on how to view the activity log and send it to different destinations.
+
+1. Navigate to your Virtual Machine in Azure Portal
+1. Select **Activity Log** on the Virtual Machine blade
+1. Select the **date and time** and Select **Apply**
+
+![Activity-log](./media/hadr-cluster-best-practices/activity-log.png)
+ 
+2. [Azure VM - Resource Health overview](https://learn.microsoft.com/azure/service-health/resource-health-overview#root-cause-information)
+
+If Azure has further information about the root cause of a platform-initiated unavailability, that information may be posted in resource health up to 72 hours after the initial unavailability. This information is only available for virtual machines at this time.
+
+1. Navigate to your Virtual Machine in Azure Portal
+1. Select **Resource Health** under the **Health** blade.
+
+![Resource-health](./media/hadr-cluster-best-practices/resource-health.png)
+
 **Cluster node removed from membership**
 
 

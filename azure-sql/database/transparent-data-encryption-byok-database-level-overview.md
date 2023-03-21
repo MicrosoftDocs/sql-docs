@@ -227,6 +227,8 @@ The database level customer-managed keys feature doesn't support key rotations w
 
 To further understand this scenario, let's consider the following timeline:
 
+![An example timeline of key rotations on a database configured with database level customer-managed keys](./media/transparent-data-encryption-byok-database-level-overview/timeline.PNG)
+
 - Time t0 = A database is created without encryption
 - Time t1 = This database is protected by `Thumbprint A`, which is a database level customer-managed key.
 - Time t2 = The database protector is rotated to a new database level customer-managed key, `Thumbprint B`.

@@ -521,6 +521,33 @@ The **SA** account is a system administrator on the [!INCLUDE [ssnoversion-md](.
    ```
    ::: zone-end
 
+## Change the system administrator password, if you have lost/forgotten the SA password
+In this scenario, you have lost/forgotten your password for the **SA** account and have to set a new one.
+
+1. Shutdown the docker container
+
+   ::: zone pivot="cs1-bash"
+   ```bash
+   sudo docker stop sql1
+   ```
+   ::: zone-end
+   
+2. Set an new password using invokesqlservr.sh
+
+   ::: zone pivot="cs1-bash"
+   ```bash
+   sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=Your.New.Secure.Password" -v "/your/path/to/local/mssql:/var/opt/mssql" -it --rm "mcr.microsoft.com/mssql/server:2022-latest" '/opt/mssql/lib/mssql-conf/invokesqlservr.sh' '--setup' '--reset-sa-password'
+   ```
+   ::: zone-end
+
+3. Start the docker container
+
+   ::: zone pivot="cs1-bash"
+   ```bash
+   sudo docker start sql1
+   ```
+   ::: zone-end
+
 ## Connect to SQL Server
 
 The following steps use the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] command-line tool, [**sqlcmd**](../tools/sqlcmd/sqlcmd-utility.md), inside the container to connect to [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)].

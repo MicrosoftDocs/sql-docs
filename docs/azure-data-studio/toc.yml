@@ -10,6 +10,8 @@
   items:
   - name: Azure Data Studio
     href: what-is-azure-data-studio.md
+  - name: Azure connectivity
+    href: azure-connectivity.md
 - name: Quickstarts
   items:
   - name: Connect & query SQL Server
@@ -201,7 +203,7 @@
   - name: Code snippets
     href: code-snippets.md
   - name: Explore Azure SQL resources
-    href: azure-resource-explorer.md
+    href: azure-view.md
   - name: Keyboard shortcuts
     href: keyboard-shortcuts.md
   - name: Usage data collection

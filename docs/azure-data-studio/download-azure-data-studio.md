@@ -225,7 +225,7 @@ sudo zypper install libxss1 libgconf-2-4 libunwind8
 
 #### Install with a .deb file
 
-1. Download Azure Data Studio for Ubuntu or Debian by using the [.deb](https://go.microsoft.com/fwlink/?linkid=2215528) file.
+1. Download Azure Data Studio for Ubuntu or Debian by using the [.deb](https://go.microsoft.com/fwlink/?linkid=2222875) file.
 
 1. To extract the .deb file, open a new terminal window, and then run the following commands:
 

@@ -4,8 +4,8 @@ titleSuffix: SQL Server (Transact-SQL)
 description: Enable several database configuration settings at the individual database level.
 author: markingmyname
 ms.author: maghan
-ms.reviewer: katsmith, jovanpop, wiassaf
-ms.date: 1/5/2023
+ms.reviewer: katsmith, jovanpop, wiassaf, mariyaali
+ms.date: 03/14/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -131,7 +131,7 @@ ALTER DATABASE SCOPED CONFIGURATION
 
 < set_options > ::=
 {
-    DW_COMPATIBILITY_LEVEL = { AUTO | 10 | 20 | 30 | 40 | 9000 }
+    DW_COMPATIBILITY_LEVEL = { AUTO | 10 | 20 | 30 | 40 | 50 | 9000 }
 }
 ```
 
@@ -432,7 +432,7 @@ The current value for this option is displayed in [sys.database_scoped_configura
 
 Allows you to control whether a [Row-Level Security](../../relational-databases/security/row-level-security.md) (RLS) predicate affects the cardinality of the execution plan of the overall user query. The default is **OFF**.  When ISOLATE_SECURITY_POLICY_CARDINALITY is ON, an RLS predicate does not affect the cardinality of an execution plan. For example, consider a table containing 1 million rows and an RLS predicate that restricts the result to 10 rows for a specific user issuing the query. With this database scoped configuration set to OFF, the cardinality estimate of this predicate will be 10. When this database scoped configuration is ON, query optimization will estimate 1 million rows. It is recommended to use the default value for most workloads.
 
-#### DW_COMPATIBILITY_LEVEL = { AUTO | 10 | 20 | 30 | 40 | 9000 }
+#### DW_COMPATIBILITY_LEVEL = { AUTO | 10 | 20 | 30 | 40 | 50 | 9000 }
 
 **Applies to:** [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] only
 
@@ -445,6 +445,7 @@ Sets [!INCLUDE[tsql](../../includes/tsql-md.md)] and query processing behaviors 
 |**20**| First compatibility level that includes gated Transact-SQL and query engine behaviors. The system stored procedure [sp_describe_undeclared_parameters](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md) is supported under this level.|
 |**30**| Includes new query engine behaviors.|
 |**40**| Includes new query engine behaviors.|
+|**50**| Multi-Column Distribution is supported under this level. To learn more, see [CREATE TABLE](./create-table-azure-sql-data-warehouse.md), [CREATE TABLE AS SELECT](./create-table-as-select-azure-sql-data-warehouse.md) and [CREATE MATERIALIZED VIEW](./create-materialized-view-as-select-transact-sql.md).
 |**9000**| Preview compatibility level. Preview features gated under this level are called out in feature-specific documentation. This level also includes abilities of highest non-9000 level.|
 
 #### EXEC_QUERY_STATS_FOR_SCALAR_FUNCTIONS = { ON | OFF }

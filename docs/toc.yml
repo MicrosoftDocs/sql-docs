@@ -1995,7 +1995,7 @@ items:
         href: relational-databases/xml/create-views-over-xml-columns.md
       - name: Computed Columns
         href: relational-databases/xml/use-xml-in-computed-columns.md
-      - name: Retrieve & Query
+      - name: Query options and data
         href: relational-databases/xml/retrieve-and-query-xml-data.md
       - name: Add namespaces to queries
         href: relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md
@@ -8831,8 +8831,6 @@ items:
             href: ssms/scripting/search-documents-interactively.md
           - name: Search Documents Using Results Lists
             href: ssms/scripting/search-documents-using-results-lists.md
-          - name: Search Text with Wildcards
-            href: ssms/scripting/search-text-with-wildcards.md
           - name: Search Text with Regular Expressions
             href: ssms/scripting/search-text-with-regular-expressions.md
           - name: Find & Replace
@@ -10194,8 +10192,12 @@ items:
         href: linux/sql-server-linux-configure-msdtc.md
       - name: Configure persistent memory PMEM
         href: linux/sql-server-linux-configure-pmem.md
-      - name: Configure the time zone
+      - name: Configure time zone on SQL Server 2022
         href: linux/sql-server-linux-configure-time-zone.md
+      - name: Configure time zone on SQL Server 2019
+        href: linux/sql-server-linux-configure-time-zone-2019.md
+      - name: Configure time zone on SQL Server 2017
+        href: linux/sql-server-linux-configure-time-zone-2017.md
       - name: Configure to send usage and diagnostic data to Microsoft
         href: linux/usage-and-diagnostic-data-configuration-for-sql-server-linux.md
     - name: Containers

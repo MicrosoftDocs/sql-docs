@@ -148,7 +148,7 @@ SET @publisher = $(DistPubServer);
 ```  
   
 ### Using the sqlcmd Utility from the Command Line  
- The following example shows how the command line is used to execute the `instdistpub.sql` script file using the [sqlcmd utility](../../../tools/sqlcmd-utility.md):  
+ The following example shows how the command line is used to execute the `instdistpub.sql` script file using the [sqlcmd utility](../../../tools/sqlcmd/sqlcmd-utility.md):  
   
 ```  
 sqlcmd.exe -E -S sqlserverinstance -i C:\instdistpub.sql -o C:\output.log -v DistPubServer="N'MyDistributorAndPublisher'"  
@@ -220,5 +220,4 @@ REM -- The following must be supplied on one line.
 ## See Also  
  [Replication Programming Concepts](../../../relational-databases/replication/concepts/replication-programming-concepts.md)   
  [Replication Stored Procedures &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)  
-  
+ [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)

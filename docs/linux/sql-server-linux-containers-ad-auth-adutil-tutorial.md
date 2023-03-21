@@ -256,7 +256,7 @@ SELECT name FROM sys.server_principals;
 
 To connect using [SSMS](../ssms/download-sql-server-management-studio-ssms.md) or [ADS](../azure-data-studio/download-azure-data-studio.md), sign in to the SQL Server with Windows credentials using the SQL Server name and port number (name could be the container name or the host name). For our example, the server name would be `sql1.contoso.com, 5433`.
 
-You can also use a tool like [sqlcmd](../tools/sqlcmd-utility.md) to connect to the SQL Server in your container.
+You can also use a tool like [sqlcmd](../tools/sqlcmd/sqlcmd-utility.md) to connect to the SQL Server in your container.
 
 ```bash
 sqlcmd -E -S 'sql1.contoso.com, 5433'

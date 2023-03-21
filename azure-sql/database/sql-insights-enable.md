@@ -39,7 +39,7 @@ The instructions below cover the process per type of SQL that you can monitor. T
 > SQL Insights (preview) has limited support for the following Azure SQL Database scenarios:
 > - **Serverless tier**: Metrics can be gathered for databases using the [serverless compute tier](./serverless-tier-overview.md). However, the process of gathering metrics will reset the auto-pause delay timer, preventing the database from entering an auto-paused state.
 
-Connect to an Azure SQL database with [SQL Server Management Studio](./connect-query-ssms.md), [Query Editor (preview)](./connect-query-portal.md) in the Azure portal, or any other SQL client tool.
+Connect to an Azure SQL database with [SQL Server Management Studio](./connect-query-ssms.md), [Query Editor (preview)](./query-editor.md) in the Azure portal, or any other SQL client tool.
 
 Run the following script to create a user with the required permissions. Replace *user* with a username and *mystrongpassword* with a strong password.
 

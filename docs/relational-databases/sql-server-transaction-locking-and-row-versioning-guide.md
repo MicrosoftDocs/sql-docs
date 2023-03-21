@@ -4,7 +4,7 @@ description: "Transaction locking and row versioning guide"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 03/16/2023
+ms.date: 03/21/2023
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
@@ -752,7 +752,7 @@ In most cases, the [!INCLUDE[ssDE-md](../includes/ssde-md.md)] delivers the best
 
 - Take advantage of [optimized locking where available](performance/optimized-locking.md#availability). 
     - [Optimized locking](performance/optimized-locking.md) offers an improved transaction locking mechanism that reduces lock memory consumption and blocking for concurrent transactions. **Lock escalation is far less likely to ever occur when optimized locking is enabled.**
-    - Avoid using [table hints with optimized locking](performance/optimized-locking.md#avoid-locking-hints). Table hints may reducing the effectiveness of optimized locking. 
+    - Avoid using [table hints with optimized locking](performance/optimized-locking.md#avoid-locking-hints). Table hints may reduce the effectiveness of optimized locking.
     - Enable [READ_COMMITTED_SNAPSHOT](../t-sql/statements/alter-database-transact-sql-set-options.md#read_committed_snapshot--on--off-) in the database for the most benefit from optimized locking. This is the default isolation level in Azure SQL Database.
     - Optimized locking requires [accelerated database recovery (ADR)](/azure/azure-sql/accelerated-database-recovery) to be enabled on the database.
 
@@ -761,12 +761,12 @@ If an instance of the [!INCLUDE[ssDE-md](../includes/ssde-md.md)] generates a lo
 - Use an isolation level that does not generate shared locks for read operations:
     -  READ COMMITTED isolation level when the READ_COMMITTED_SNAPSHOT database option is ON.
     -  SNAPSHOT isolation level.
-    -  READ UNCOMMITTED isolation level. This can only be used for systems that can operate with dirty reads.    
+    -  READ UNCOMMITTED isolation level. This can only be used for systems that can operate with dirty reads.
   
     > [!NOTE]
     > Changing the isolation level affects all tables on the instance of the [!INCLUDE[ssDE-md](../includes/ssde-md.md)].
 
-- Use the PAGLOCK or TABLOCK table hints to have the Database Engine use page, heap, or index locks instead of of locks. Using this option, however, increases the problems of users blocking other users attempting to access the same data and should not be used in systems with more than a few concurrent users.
+- Use the PAGLOCK or TABLOCK table hints to have the Database Engine use page, heap, or index locks instead of low-level locks. Using this option, however, increases the problems of users blocking other users attempting to access the same data and should not be used in systems with more than a few concurrent users.
 
 - When optimized locking is not enabled, for partitioned tables, use the LOCK_ESCALATION option of [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md) to escalate locks to the HoBT level instead of the table or to disable lock escalation.
 

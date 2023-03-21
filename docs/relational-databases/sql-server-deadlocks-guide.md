@@ -4,7 +4,7 @@ description: "Learn about deadlocks in the SQL Server database engine."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 03/10/2023
+ms.date: 03/21/2023
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
@@ -126,7 +126,7 @@ The deadlock graph captured typically has three distinct nodes:
 
 Opening the `system_health` session file or ring buffer, if the `xml_deadlock_report` xEvent is recorded, [!INCLUDE[ssManStudio](../includes/ssManStudio-md.md)] presents a graphical depiction of the tasks and resources involved in a deadlock, as seen in the following example: 
 
-:::image type="content" source="media/sql-server-deadlocks-guide/extended-event-xevent-deadlock-graph.png" alt-text="XEvent Deadlock Graph." lightbox="media/sql-server-deadlocks-guide/extended-event-xevent-deadlock-graph.png":::
+:::image type="content" source="media/sql-server-deadlocks-guide/extended-event-xevent-deadlock-graph.png" alt-text="A screenshot from SSMS of a XEvent Deadlock Graph visual diagram." lightbox="media/sql-server-deadlocks-guide/extended-event-xevent-deadlock-graph.png":::
 
 The following query can view all deadlock events captured by the `system_health` session ring buffer:
 

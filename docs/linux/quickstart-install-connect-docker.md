@@ -521,6 +521,10 @@ The **SA** account is a system administrator on the [!INCLUDE [ssnoversion-md](.
    ```
    ::: zone-end
 
+
+
+
+
 ## Connect to SQL Server
 
 The following steps use the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] command-line tool, [**sqlcmd**](../tools/sqlcmd/sqlcmd-utility.md), inside the container to connect to [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)].

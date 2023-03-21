@@ -243,7 +243,7 @@ If you believe that something is holding up your log for a longer than expected,
 
 ## Next steps
 
-You may also want to check the following documentation on various database level CMK operations:
+Check the following documentation on various database level CMK operations:
 
 - [Identity and key management for TDE with database level customer-managed keys](transparent-data-encryption-byok-database-level-basic-actions.md)
 

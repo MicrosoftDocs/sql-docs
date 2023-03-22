@@ -5,7 +5,7 @@ description: Learn how to restore a database to an earlier point in time for Azu
 author: MilanMSFT
 ms.author: mlazic
 ms.reviewer: mathoma, nvraparl
-ms.date: 03/01/2023
+ms.date: 03/25/2023
 ms.service: sql-managed-instance
 ms.subservice: backup-restore
 ms.topic: how-to
@@ -109,9 +109,9 @@ If you restore to a different subscription, the [Create or Update v5.0.2022](/re
 
     :::image type="content" source="./media/point-in-time-restore/database-data-source.png" alt-text="Screenshot of the Azure portal that shows the data source tab of the Create Azure SQL Managed Database page, with point-in-time restore selected.":::
 
-1. On the **Additional settings** tab, you can check the box to inherit the retention policy from the source database, or, alternatively, you can select **Configure retention** to open the **Configure policies** page, and set your desired retention policies for your restored database.  Select **Review + create**. 
+1. On the **Additional settings** tab, you can check the box to inherit the retention policy from the source database, or, alternatively, you can select **Configure retention** to open the **Configure policies** page, and set your desired retention policies for your restored database.  When finished, select **Review + create**. 
 
-1. In **Review + create**, when validation is successful, select **Create** to restore your database.
+1. On **Review + create**, when validation is successful, select **Create** to restore your database.
 
 This action starts the restore process, which creates a new database and populates it with data from the original database at the specified point in time. For more information about the recovery process, see [Recovery time](../database/recovery-using-backups.md#recovery-time).
 

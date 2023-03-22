@@ -5,7 +5,7 @@ description: Learn about point-in-time restore, which enables you to roll back a
 author: MilanMSFT
 ms.author: mlazic
 ms.reviewer: wiassaf, mathoma, danil
-ms.date: 11/16/2022
+ms.date: 03/25/2023
 ms.service: sql-managed-instance
 ms.subservice: backup-restore
 ms.topic: how-to

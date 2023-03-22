@@ -4,7 +4,7 @@ description: Learn how to store and restore automated backups on separate Azure 
 author: SudhirRaparla
 ms.author: nvraparl
 ms.reviewer: mathoma
-ms.date: 09/12/2021
+ms.date: 03/25/2023
 ms.service: sql-managed-instance
 ms.subservice: backup-restore
 ms.topic: how-to
@@ -170,7 +170,9 @@ To view available long-term backups from the Azure portal, follow these steps:
 
    ![view backups](./media/long-term-backup-retention-configure/ltr-available-backups.png)
 
-You can also restore from this page. Alternatively, to restore a backup from long-term retention by using the Azure portal, follow these steps: 
+You can also restore from this page by choosing the backup and selecting **Restore**. 
+
+Alternatively, to restore a backup from long-term retention by using the Azure portal, follow these steps: 
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 1. Go to the target SQL Managed Instance where you plan to restore your database to. 
@@ -186,9 +188,9 @@ You can also restore from this page. Alternatively, to restore a backup from lon
 
     :::image type="content" source="./media/long-term-backup-retention-configure/restore-long-term-backup.png" alt-text="Screenshot of the Azure portal that shows the data source tab of the Create Azure SQL Managed Database page, with long-term retention selected.":::
 
-1. On the **Additional settings** tab, you can check the box to inherit the retention policy from the source database, or, alternatively, you can select **Configure retention** to open the **Configure policies** page, and set your desired retention policies for your restored database.  Select **Review + create**. 
+1. On the **Additional settings** tab, you can check the box to inherit the retention policy from the source database, or, alternatively, you can select **Configure retention** to open the **Configure policies** page, and set your desired retention policies for your restored database. When finished, select **Review + create**. 
 
-1. In **Review + create**, when validation is successful, select **Create** to restore your database.
+1. On **Review + create**, when validation is successful, select **Create** to restore your database.
 
 This action starts the restore process, which creates a new database and populates it with data from the original database at the specified point in time. For more information about the recovery process, see [Recovery time](../database/recovery-using-backups.md#recovery-time).
 

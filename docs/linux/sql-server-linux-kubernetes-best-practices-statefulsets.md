@@ -4,29 +4,28 @@ description: This article provides best practices and guidance for running SQL S
 author: amitkh-msft
 ms.author: amitkh
 ms.reviewer: randolphwest
-ms.date: 11/29/2022
+ms.date: 05/03/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
 ---
-
 # Deploy SQL Server Linux containers on Kubernetes with StatefulSets
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This article contains best practices and guidance for running SQL Server containers on Kubernetes with StatefulSets. We recommend deploying one SQL Server container (instance) per pod in Kubernetes. Thus, you have one SQL Server instance deployed per pod in the Kubernetes cluster.
 
-Similarly, the deployment script recommendation is to deploy one SQL Server instance by setting the `replicas` value to `1`. If you enter a number greater than `1` as the `replicas` value, you will get that many SQL Server instances with co-related names. For example, in the below script, if you assigned the number `2` as the value for `replicas`, you would deploy two SQL Server pods, with the names `mssql-0` and `mssql-1` respectively.
+Similarly, the deployment script recommendation is to deploy one SQL Server instance by setting the `replicas` value to `1`. If you enter a number greater than `1` as the `replicas` value, you get that many SQL Server instances with corelated names. For example, in the below script, if you assigned the number `2` as the value for `replicas`, you would deploy two SQL Server pods, with the names `mssql-0` and `mssql-1` respectively.
 
 Another reason we recommend one SQL Server per deployment script is to allow changes to configuration values, edition, trace flags, and other settings to be made independently for each SQL Server instance deployed.
 
 In the following example, the StatefulSet workload name should match the `.spec.template.metadata.labels` value, which in this case is `mssql`. For more information, see [StatefulSets](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/).
 
-```yml
+```yaml
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
- name: mssql # name of the StatefulSet workload, the SQL Server instance name is derived from this. We suggest to keep this name same as the .spec.template.metadata.labels, .spec.selector.matchLabels and .spec.serviceName to avoid confusion. 
+ name: mssql # name of the StatefulSet workload, the SQL Server instance name is derived from this. We suggest to keep this name same as the .spec.template.metadata.labels, .spec.selector.matchLabels and .spec.serviceName to avoid confusion.
 spec:
  serviceName: "mssql" # serviceName is the name of the service that governs this StatefulSet. This service must exist before the StatefulSet, and is responsible for the network identity of the set.
  replicas: 1 # only one pod, with one SQL Server instance deployed.
@@ -88,9 +87,9 @@ There are two values possible for this setting:
 
 - **OrderedReady**: This is the default value, and the behavior is as described in the [deployment and scaling guarantees](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/#deployment-and-scaling-guarantees).
 
-- **Parallel**: This is the alternate policy that will create and launch the pods (in this case SQL Server pods) in parallel, without waiting for other pods to be created Similarly, all pods are deleted in parallel during termination. You can use this option when you're deploying SQL Server instances that are independent of each other, and when you don't intend to follow an order to start or delete the SQL Server instances.
+- **Parallel**: This is the alternate policy that creates and launches the pods (in this case SQL Server pods) in parallel, without waiting for other pods to be created Similarly, all pods are deleted in parallel during termination. You can use this option when you're deploying SQL Server instances that are independent of each other, and when you don't intend to follow an order to start or delete the SQL Server instances.
 
-  ```yml
+  ```yaml
   apiVersion: apps/v1
   kind: StatefulSet
   metadata:
@@ -184,9 +183,9 @@ marketing         Active   7s
 sales             Active   26m
 ```
 
-Now you can deploy SQL Server containers in each of these namespaces using the sample YAML shown in the following example. Notice the `namespace` metadata added to the deployment YAML, so all the containers and services of this deployment will be deployed in the `sales` namespace.
+Now you can deploy SQL Server containers in each of these namespaces using the sample YAML shown in the following example. Notice the `namespace` metadata added to the deployment YAML, so all the containers and services of this deployment are deployed in the `sales` namespace.
 
-```yml
+```yaml
 kind: StorageClass
 apiVersion: storage.k8s.io/v1
 metadata:
@@ -288,11 +287,11 @@ When deploying multiple pods on a single Kubernetes cluster, you must share reso
 
 Kubernetes uses QoS *classes* to make decisions about scheduling and evicting pods. For more information about the different QoS classes, see [Configure Quality of Service for Pods](https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/).
 
-From the SQL Server perspective, we recommend that you deploy SQL Server pods using the QoS as `Guaranteed` for production-based workloads. Considering that a SQL Server pod only has one SQL Server container instance running to achieve guaranteed QoS for that pod, you'll need to specify the CPU and memory *requests* for the container that should be equal to the memory and CPU *limits*. This ensures that the nodes will provide and commit the required resources specified during the deployment and have predictable performance for the SQL Server pods.
+From the SQL Server perspective, we recommend that you deploy SQL Server pods using the QoS as `Guaranteed` for production-based workloads. Considering that a SQL Server pod only has one SQL Server container instance running to achieve guaranteed QoS for that pod, you need to specify the CPU and memory *requests* for the container that should be equal to the memory and CPU *limits*. This ensures that the nodes provide and commit the required resources specified during the deployment, and have predictable performance for the SQL Server pods.
 
-Here is a sample deployment YAML that deploys one SQL Server container in the default namespace, and because the resource requests weren't specified but the limits were specified as per the guidelines in the [Guaranteed Quality of Service](https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/#create-a-pod-that-gets-assigned-a-qos-class-of-guaranteed) example, we see that the pod that was created below had the QoS set as `Guaranteed`. When you don't specify the resource requests, then Kubernetes considers the resource *limits* equal to the resource *requests*.
+Here is a sample deployment YAML that deploys one SQL Server container in the default namespace, and because the resource requests weren't specified but the limits were specified as per the guidelines in the [Guaranteed Quality of Service](https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/#create-a-pod-that-gets-assigned-a-qos-class-of-guaranteed) example, we see that the pod that is created in the following example has the QoS set as `Guaranteed`. When you don't specify the resource requests, then Kubernetes considers the resource *limits* equal to the resource *requests*.
 
-```yml
+```yaml
 kind: StorageClass
 apiVersion: storage.k8s.io/v1
 metadata:
@@ -412,7 +411,7 @@ For non-production workloads, where performance and availability aren't a high p
 
 To define a `Burstable` YAML example, you specify the resource *requests*, not the resource *limits*; or you specify the *limits*, which is higher than *requests*. The following code displays only the difference from the previous example, in order to define a [burstable](https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/#create-a-pod-that-gets-assigned-a-qos-class-of-burstable) workload.
 
-```yml
+```yaml
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
@@ -461,7 +460,7 @@ Tolerations:               node.kubernetes.io/memory-pressure:NoSchedule op=Exis
 
 To define a `BestEffort` YAML example, remove the resource *requests* and resource *limits*. You'll end up with the best effort QoS, as defined in [Create a Pod that gets assigned a QoS class of BestEffort](https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/#create-a-pod-that-gets-assigned-a-qos-class-of-besteffort). As before, the following code displays only the difference from the `Guaranteed` example, in order to define a [best effort](https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/#create-a-pod-that-gets-assigned-a-qos-class-of-besteffort) workload. These are the least recommended options for SQL Server pods, as they would probably be the first ones to be terminated in the case of resource contention. Even for test and QA scenarios, we recommend using the Burstable option for SQL Server.
 
-```yml
+```yaml
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
@@ -506,6 +505,6 @@ Tolerations:               node.kubernetes.io/memory-pressure:NoSchedule op=Exis
 
 ## Next steps
 
-- [Quickstart: Deploy a SQL Server container with Azure Kubernetes Services (AKS)](quickstart-sql-server-containers-kubernetes.md)
+- [Quickstart: Deploy a SQL Server container cluster on Azure](quickstart-sql-server-containers-azure.md)
 - [Quickstart: Deploy a SQL Server Linux container to Kubernetes using Helm charts](sql-server-linux-containers-deploy-helm-charts-kubernetes.md)
 - [Deploy availability group with DH2i for SQL Server containers on AKS](tutorial-sql-server-containers-kubernetes-dh2i.md)

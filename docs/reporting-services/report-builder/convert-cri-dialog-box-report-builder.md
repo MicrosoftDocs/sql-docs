@@ -7,6 +7,7 @@ ms.date: 08/17/2018
 ms.service: reporting-services
 ms.subservice: report-builder
 ms.topic: reference
+ms.custom: updatefrequency5
 f1_keywords:
   - "10008"
 helpviewer_keywords:

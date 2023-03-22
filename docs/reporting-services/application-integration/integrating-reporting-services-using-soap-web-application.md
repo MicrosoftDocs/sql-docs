@@ -7,6 +7,7 @@ ms.date: 06/26/2019
 ms.service: reporting-services
 ms.subservice: application-integration
 ms.topic: reference
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "SOAP [Reporting Services], Web applications"
   - "impersonation [Reporting Services]"

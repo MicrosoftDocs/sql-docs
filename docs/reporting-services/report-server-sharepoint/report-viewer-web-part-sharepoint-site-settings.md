@@ -7,6 +7,7 @@ ms.date: 11/15/2018
 ms.service: reporting-services
 ms.subservice: report-server-sharepoint
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # SharePoint site settings for the Report Viewer web part - Reporting Services
 

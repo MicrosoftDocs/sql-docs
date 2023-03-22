@@ -7,6 +7,7 @@ ms.date: 09/06/2016
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Expressions in a paginated report (Report Builder)
 

@@ -7,6 +7,7 @@ ms.date: 04/06/2017
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "page breaks [Reporting Services], expressions"
   - "green-bar reports [Reporting Services]"

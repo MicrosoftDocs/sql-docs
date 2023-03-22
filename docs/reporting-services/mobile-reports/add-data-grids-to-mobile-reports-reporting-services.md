@@ -7,6 +7,7 @@ ms.date: 07/21/2022
 ms.service: reporting-services
 ms.subservice: mobile-reports
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Add data grids to mobile reports | Reporting Services
 

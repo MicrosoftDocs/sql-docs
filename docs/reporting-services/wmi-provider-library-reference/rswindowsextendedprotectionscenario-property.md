@@ -7,6 +7,7 @@ ms.date: 03/20/2017
 ms.service: reporting-services
 ms.subservice: wmi-provider-library-reference
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # RSWindowsExtendedProtectionScenario Property
   Returns a string value that indicates the extended protection scenario the report server is configured to allow.  

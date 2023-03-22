@@ -7,6 +7,7 @@ ms.date: 05/31/2016
 ms.service: reporting-services
 ms.subservice: troubleshooting
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Troubleshoot Reporting Services Subscriptions and Delivery
   

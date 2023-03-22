@@ -7,6 +7,7 @@ ms.date: 05/25/2022
 ms.service: reporting-services
 ms.subservice: extensions
 ms.topic: reference
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "security [Reporting Services], extensions"
   - "forms-based authentication [Reporting Services]"

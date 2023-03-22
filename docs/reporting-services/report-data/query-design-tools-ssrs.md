@@ -7,6 +7,7 @@ ms.date: 03/20/2017
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "graphical query designer [Reporting Services]"
   - "MDX query designer [Reporting Services]"

@@ -7,6 +7,7 @@ ms.date: 03/03/2017
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
+ms.custom: updatefrequency5
 f1_keywords:
   - "10214"
   - "sql13.rtp.rptdesigner.charttitleproperties.shadow.f1"

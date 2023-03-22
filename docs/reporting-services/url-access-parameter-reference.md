@@ -7,6 +7,7 @@ ms.date: 05/22/2020
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "reports [Reporting Services], display options"
   - "URL access [Reporting Services], report display parameters"

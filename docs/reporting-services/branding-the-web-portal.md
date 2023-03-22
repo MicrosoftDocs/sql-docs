@@ -7,6 +7,7 @@ ms.date: 11/23/2021
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Branding the web portal

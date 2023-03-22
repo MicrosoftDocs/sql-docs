@@ -7,6 +7,7 @@ ms.date: 03/07/2017
 ms.service: reporting-services
 ms.subservice: report-builder
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Interactive Functionality - Different Report Rendering Extensions
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides features for interacting with a paginated report at run time. Not all of the report rendering formats support the full range of interactive features. Use the following table to understand how each interactive feature works in specific formats.  

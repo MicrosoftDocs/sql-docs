@@ -7,6 +7,7 @@ ms.date: 06/10/2019
 ms.service: reporting-services
 ms.subservice: report-server-sharepoint
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Comparing native and SharePoint Reporting Services report servers

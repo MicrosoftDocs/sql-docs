@@ -7,6 +7,7 @@ ms.date: 01/16/2020
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "time-outs [Reporting Services]"
   - "query time-outs [Reporting Services]"

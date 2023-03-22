@@ -7,6 +7,7 @@ ms.date: 12/09/2019
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Lesson 2: Specifying Connection Information (Reporting Services)
 

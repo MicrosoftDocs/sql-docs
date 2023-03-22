@@ -7,6 +7,7 @@ ms.date: 03/16/2017
 ms.service: reporting-services
 ms.subservice: report-builder
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Work Around the Excel 2003 Row Limitation
   This topic explains how to work around the Excel 2003 row limitation when you export paginated reports to Excel. The workaround is for a report that contains only a table.  

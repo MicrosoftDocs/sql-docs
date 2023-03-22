@@ -7,6 +7,7 @@ ms.date: 12/19/2019
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Add an expand or collapse action to a paginated report (Report Builder)
 

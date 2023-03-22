@@ -7,6 +7,7 @@ ms.date: 05/24/2018
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "Report Builder 2.0, F1 help"
   - "Reporting Services, getting assistance"

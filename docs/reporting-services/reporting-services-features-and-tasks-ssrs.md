@@ -7,6 +7,7 @@ ms.date: 12/18/2015
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "Reporting Services, programming"
   - "development [Reporting Services]"

@@ -7,6 +7,7 @@ ms.date: 03/14/2017
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Dataset Fields Collection (Report Builder and SSRS)
   Dataset fields represent the data from a data connection. A field can represent either numeric or non-numeric data. Examples include sales amounts, total sales, customer names, database identifiers, URLs, images, spatial data, and e-mail addresses. On the design surface, fields appear as expressions in report items such as text boxes, tables, and charts.  

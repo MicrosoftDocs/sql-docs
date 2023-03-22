@@ -6,6 +6,7 @@ ms.author: maggies
 ms.date: 08/24/2022
 ms.service: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "rsSharePoint"
 monikerRange: ">=sql-server-2016 <=sql-server-2016"

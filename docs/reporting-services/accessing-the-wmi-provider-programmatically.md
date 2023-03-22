@@ -7,6 +7,7 @@ ms.date: 11/02/2016
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: reference
+ms.custom: updatefrequency5
 ---
 # Accessing the WMI Provider Programmatically
 

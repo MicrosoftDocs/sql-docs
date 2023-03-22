@@ -7,6 +7,7 @@ ms.date: 03/04/2017
 ms.service: reporting-services
 ms.subservice: report-server-web-service
 ms.topic: reference
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "methods [Reporting Services], batches"
   - "BatchHeader SOAP header"

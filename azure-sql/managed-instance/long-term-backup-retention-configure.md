@@ -184,7 +184,7 @@ You can also restore from this page. Alternatively, to restore a backup from lon
 
 1. On the **Data source** tab, choose **Point-in-time restore** under **Use existing data**. Provide the subscription, resource group and managed instance that contains the source database. From the **Managed database** drop-down, choose the database you want to restore, and then choose the point in time you want to restore the database from. The source and target instance can be the same, or two different instances. Select **Next : Additional settings >**
 
-    :::image type="content" source="./media/point-in-time-restore/restore-long-term-backup.png" alt-text="Screenshot of the Azure portal that shows the data source tab of the Create Azure SQL Managed Database page, with long-term retention selected.":::
+    :::image type="content" source="./media/long-term-backup-retention-configure/restore-long-term-backup.png" alt-text="Screenshot of the Azure portal that shows the data source tab of the Create Azure SQL Managed Database page, with long-term retention selected.":::
 
 1. On the **Additional settings** tab, you can check the box to inherit the retention policy from the source database, or, alternatively, you can select **Configure retention** to open the **Configure policies** page, and set your desired retention policies for your restored database.  Select **Review + create**. 
 

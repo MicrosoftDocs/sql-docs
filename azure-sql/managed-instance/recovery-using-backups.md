@@ -95,11 +95,15 @@ You generally restore a database to an earlier point for recovery purposes. You 
   
 ### [Azure portal](#tab/azure-portal)
 
-To recover a database in SQL Managed Instance to a point in time by using the Azure portal, open the source database overview page, and select **Restore** on the toolbar. Provide target managed instance details on the **Basics** tab, and source managed instance details on the **Data source** tab. Configure retention settings on the **Additional settings** tab. 
+To recover a database in SQL Managed Instance to a point in time by using the Azure portal, open the target SQL Managed Instance overview page, and select **+ New database** on the toolbar to open the **Create Azure SQL Managed Database** page. 
 
-:::image type="content" source="media/point-in-time-restore/choose-database-to-restore.png" alt-text="Screenshot of the Azure portal, SQL Managed Instance overview blade, with a database selected. ":::
+:::image type="content" source="media/point-in-time-restore/choose-database-to-restore.png" alt-text="Screenshot that shows the SQL Managed Instance overview pane in the Azure portal, with adding a new database selected. ":::
 
-:::image type="content" source="./media/point-in-time-restore/restore-database-to-mi.png" alt-text="Screenshot of the Azure portal, database overview page, Restore is highlighted.":::
+Provide target managed instance details on the **Basics** tab, and choose a type of backup from the **Data source** tab. 
+
+:::image type="content" source="./media/point-in-time-restore/database-data-source.png" alt-text="Screenshot of the Azure portal that shows the data source tab of the Create Azure SQL Managed Database page, with point-in-time restore selected.":::
+
+For greater details, review the [Point in time restore](point-in-time-restore.md#restore-an-existing-database) article. 
 
 ### [Azure CLI](#tab/azure-cli)
 

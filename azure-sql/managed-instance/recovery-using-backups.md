@@ -168,7 +168,7 @@ From the Azure portal, you can restore a geo-replicated backup to an existing in
 
 To restore to an existing instance, follow the steps in [Point-in-time restore](#point-in-time-restore), and be sure to choose the appropriate source and target instances to restore your database to your intended instance. 
 
-To gep-restore to a new instance by using the Azure portal, follow these steps: 
+To geo-restore to a new instance by using the Azure portal, follow these steps: 
 
 1. Go to your new managed instance. 
 1. Select **New database**.

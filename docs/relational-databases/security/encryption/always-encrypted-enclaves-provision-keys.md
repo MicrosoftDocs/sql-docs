@@ -1,10 +1,10 @@
 ---
 title: "Provision enclave-enabled keys"
 description: "Provision enclave-enabled keys"
-author: jaszymas
-ms.author: jaszymas
+author: PieterVanhove
+ms.author: pivanho
 ms.reviewer: vanto
-ms.date: 02/15/2023
+ms.date: 3/22/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
@@ -63,7 +63,7 @@ To provision an enclave-enabled column encryption key, follow the steps in [Prov
 
 ## Provision enclave-enabled keys using PowerShell
 
-To provision enclave-enabled keys using PowerShell, you need the SqlServer PowerShell module version 21.1.18179 or higher.
+To provision enclave-enabled keys using PowerShell, you need the SqlServer PowerShell module version 22 or higher.
 
 In general, PowerShell key provisioning workflows (with and without role separation) for Always Encrypted, described in [Provision Always Encrypted Keys using PowerShell](configure-always-encrypted-keys-using-powershell.md) also apply to enclave-enabled keys. This section describes details specific to enclave-enabled keys.
 
@@ -134,8 +134,8 @@ $databaseName = "<database name>"
 $connStr = "Server = " + $serverName + "; Database = " + $databaseName + "; Integrated Security = True"
 $database = Get-SqlDatabase -ConnectionString $connStr
 
-# Authenticate to Azure - it is required before calling the next cmdlet.
-Add-SqlAzureAuthenticationContext -Interactive
+# Obtain an access token for key vaults.
+$keyVaultAccessToken = (Get-AzAccessToken -ResourceUrl https://vault.azure.net).Token 
 
 # Create a SqlColumnMasterKeySettings object for your column master key. 
 $cmkSettings = New-SqlAzureKeyVaultColumnMasterKeySettings -KeyURL $akvKey.ID -AllowEnclaveComputations
@@ -146,7 +146,7 @@ New-SqlColumnMasterKey -Name $cmkName -InputObject $database -ColumnMasterKeySet
 
 # Generate a column encryption key, encrypt it with the column master key and create column encryption key metadata in the database. 
 $cekName = "CEK1"
-New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKey $cmkName
+New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKey $cmkName -KeyVaultAccessToken $keyVaultAccessToken
 ```
 
 ## Next steps

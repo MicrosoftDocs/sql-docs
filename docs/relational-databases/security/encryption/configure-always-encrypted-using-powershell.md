@@ -28,7 +28,7 @@ You can use PowerShell to manage Always Encrypted keys both with and without rol
 Install the [SqlServer module](/powershell/sqlserver/sqlserver/vlatest/sqlserver) on a secure computer that is NOT a computer hosting your SQL Server instance. The module can be installed directly from the PowerShell gallery.  See the [download](../../../powershell/download-sql-server-ps-module.md) instructions for more details.
 
 
-## Importing the SqlServer module 
+## <a name="importsqlservermodule"></a> Importing the SqlServer module 
 
 To load the SqlServer module:
 
@@ -42,7 +42,7 @@ This example loads the SqlServer module.
 Import-Module "SqlServer" 
 ```
 
-## Connecting to a database
+## <a name="connectingtodatabase"></a> Connecting to a database
 
 Some of the Always Encrypted cmdlets work with data or metadata in the database and require that you connect to the database first. There are two recommended methods of connecting to a database when configuring Always Encrypted using the SqlServer module: 
 1. Connect using the **Get-SqlDatabase** cmdlet.

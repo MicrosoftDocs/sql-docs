@@ -2,7 +2,7 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 02/17/2023
+ms.date: 03/22/2023
 ms.topic: include
 ---
 | Error| Severity | Event logged | Description|
@@ -16,7 +16,7 @@ ms.topic: include
 | 41407 | 16 | No | Some availability replicas are not synchronizing data. |
 | 41408 | 16 | No | In this availability group, at least one secondary replica has a NOT SYNCHRONIZING synchronization state and is not receiving data from the primary replica. |
 | 41409 | 16 | No | Some synchronous replicas are not synchronized. |
-| 41410 | 16 | No | In this availability group, at least one synchronous replica is not currently synchronized. The replica synchronization state could be either SYNCHONIZING or NOT SYNCHRONIZING. |
+| 41410 | 16 | No | In this availability group, at least one synchronous replica is not currently synchronized. The replica synchronization state could be either SYNCHRONIZING or NOT SYNCHRONIZING. |
 | 41411 | 16 | No | Some availability replicas do not have a healthy role. |
 | 41412 | 16 | No | In this availability group, at least one availability replica does not currently have the primary or secondary role. |
 | 41413 | 16 | No | Some availability replicas are disconnected. |

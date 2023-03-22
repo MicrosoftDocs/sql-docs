@@ -2,7 +2,7 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 02/17/2023
+ms.date: 03/22/2023
 ms.topic: include
 ---
 | Error| Severity | Event logged | Description|
@@ -460,7 +460,7 @@ ms.topic: include
 | 13777 | 16 | No | Stored procedure 'sp_cleanup_temporal_history' is temporarily disabled. Please contact customer support for more information. |
 | 13778 | 16 | No | The only allowed ALTER TABLE operations on temporal in-memory history table '%.\*ls' are ADD INDEX, DROP INDEX and ALTER INDEX. |
 | 13779 | 16 | No | Defining a column store index on temporal in-memory history table '%.\*ls' is not supported. |
-| 13780 | 16 | No | Setting finite retention period failed on system-versioned temporal table '%.\*ls' beacause the history table '%.\*ls' is clustered column store that contains large object columns. |
+| 13780 | 16 | No | Setting finite retention period failed on system-versioned temporal table '%.\*ls' because the history table '%.\*ls' is clustered column store that contains large object columns. |
 | 13781 | 16 | No | Wrong type for column '%.\*ls': the system-versioned temporal table '%.\*ls' cannot contain large object columns, because it has finite retention and the clustered column store history table '%.\*ls'. |
 | 13782 | 16 | No | Cannot create clustered column store index '%.\*ls' on table '%.\*ls' because it contains large object columns and is the history table of temporal table '%.\*ls' that has finite retention. |
 | 13783 | 16 | No | Data modification failed on system-versioned table '%.\*ls' because column '%.\*ls' cannot be output into the history table '%.\*ls'. |

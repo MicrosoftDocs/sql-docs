@@ -96,35 +96,24 @@ If you restore to a different subscription, the [Create or Update v5.0.2022](/re
 # [Portal](#tab/azure-portal)
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
-1. In SQL Managed Instance, go to your source managed instance.
-1. In **Managed Instance databases**, select the database to restore.
+1. Go to the target SQL Managed Instance where you plan to restore your database to. 
+1. On the **Overview** page, choose **+ New database** to open the **Create Azure SQL Managed Database** page. 
 
-   :::image type="content" source="media/point-in-time-restore/choose-database-to-restore.png" alt-text="Screenshot that shows the SQL Managed Instance overview pane in the Azure portal, with a database selected. ":::
+   :::image type="content" source="media/point-in-time-restore/choose-database-to-restore.png" alt-text="Screenshot that shows the SQL Managed Instance overview pane in the Azure portal, with adding a new database selected. ":::
 
-1. In the command bar, select **Restore**.
+1. On the **Basics** tab of the **Create Azure SQL Managed Database page**, provide subscription and resource group details under **Project details**. Then, under **Database details** provide the new name of the database you plan to restore. Confirm the correct managed instance is listed in the drop down. Then select **Next: Data source >**
 
-    :::image type="content" source="./media/point-in-time-restore/restore-database-to-mi.png" alt-text="Screenshot that shows a database overview pane in the Azure portal, with the Restore button highlighted.":::
+    :::image type="content" source="./media/point-in-time-restore/create-database-page.png" alt-text="Screenshot of the Azure portal that shows the Basics tab of the Create Azure SQL Managed Database page.":::
 
-1. In **Create Azure SQL Managed Database** on the **Basics** tab:
+1. On the **Data source** tab, choose **Point-in-time restore** under **Use existing data**. Provide the subscription, resource group and managed instance that contains the source database. From the **Managed database** drop-down, choose the database you want to restore, and then choose the point in time you want to restore the database from. The source and target instance can be the same, or two different instances. Select **Next : Additional settings >**
 
-    1. Under **Project details**, select the target destination subscription and resource group that contain the managed instance to restore the database to.
-    1. Under **Database details**, enter a new name for your restored database and the target managed instance to restore the database to.
-    1. Select the **Data source** tab.
+    :::image type="content" source="./media/point-in-time-restore/database-data-source.png" alt-text="Screenshot of the Azure portal that shows the data source tab of the Create Azure SQL Managed Database page, with point-in-time restore selected.":::
 
-1. In **Data source**:
-
-   1. Select **Continuous backup**. Select the subscription and resource group for the source database to restore.
-   1. In **Managed Database**, select the database to restore. Select the point-in-time restore point to restore the database from.
-   1. Select the **Additional settings** tab.
-
-1. In **Additional settings**:
-
-   1. Either select or clear the option for your restored database to inherit the retention settings of the source database. If you don't use this option, select **Configure retention** to set a new retention policy.
-   1. Select the **Review + create** tab to validate your database restore settings.
+1. On the **Additional settings** tab, you can check the box to inherit the retention policy from the source database, or, alternatively, you can select **Configure retention** to open the **Configure policies** page, and set your desired retention policies for your restored database.  Select **Review + create**. 
 
 1. In **Review + create**, when validation is successful, select **Create** to restore your database.
 
-   This action starts the restore process, which creates a new database and populates it with data from the original database at the specified point in time. For more information about the recovery process, see [Recovery time](../database/recovery-using-backups.md#recovery-time).
+This action starts the restore process, which creates a new database and populates it with data from the original database at the specified point in time. For more information about the recovery process, see [Recovery time](../database/recovery-using-backups.md#recovery-time).
 
 # [PowerShell](#tab/azure-powershell)
 

@@ -159,9 +159,10 @@ Set-AzSqlInstanceDatabaseBackupLongTermRetentionPolicy @LTRPolicy
 
 # [Portal](#tab/portal)
 
-View the backups that are retained for a specific database with an LTR policy, and restore from those backups.
 
-1. In the Azure portal, select your managed instance and then click **Backups**. On the **Available backups** tab, select the database for which you want to see available backups. Click **Manage**.
+To view available long-term backups from the Azure portal, follow these steps: 
+
+1. In the Azure portal, select your managed instance and then select **Backups**. On the **Available backups** tab, select the database for which you want to see available backups. Select **Manage**.
 
    ![select database](./media/long-term-backup-retention-configure/ltr-available-backups-select-database.png)
 
@@ -169,19 +170,27 @@ View the backups that are retained for a specific database with an LTR policy, a
 
    ![view backups](./media/long-term-backup-retention-configure/ltr-available-backups.png)
 
-1. Select the backup from which you want to restore, click **Restore**, then on the restore page specify the new database name. The backup and source will be pre-populated on this page. 
+You can also restore from this page. Alternatively, to restore a backup from long-term retention by using the Azure portal, follow these steps: 
 
-   ![select backup for restore](./media/long-term-backup-retention-configure/ltr-available-backups-restore.png)
-   
-   ![restore](./media/long-term-backup-retention-configure/ltr-restore.png)
+1. Sign in to the [Azure portal](https://portal.azure.com).
+1. Go to the target SQL Managed Instance where you plan to restore your database to. 
+1. On the **Overview** page, choose **+ New database** to open the **Create Azure SQL Managed Database** page. 
 
-1. Click **Review + Create** to review your Restore details. Then click **Create** to restore your database from the chosen backup.
+   :::image type="content" source="media/point-in-time-restore/choose-database-to-restore.png" alt-text="Screenshot that shows the SQL Managed Instance overview pane in the Azure portal, with adding a new database selected. ":::
 
-1. On the toolbar, click the notification icon to view the status of the restore job.
+1. On the **Basics** tab of the **Create Azure SQL Managed Database page**, provide subscription and resource group details under **Project details**. Then, under **Database details** provide the new name of the database you plan to restore. Confirm the correct managed instance is listed in the drop down. Then select **Next: Data source >**
 
-   ![restore job progress](./media/long-term-backup-retention-configure/restore-job-progress-long-term.png)
+    :::image type="content" source="./media/point-in-time-restore/create-database-page.png" alt-text="Screenshot of the Azure portal that shows the Basics tab of the Create Azure SQL Managed Database page.":::
 
-1. When the restore job is completed, open the **Managed Instance Overview** page to view the newly restored database.
+1. On the **Data source** tab, choose **Point-in-time restore** under **Use existing data**. Provide the subscription, resource group and managed instance that contains the source database. From the **Managed database** drop-down, choose the database you want to restore, and then choose the point in time you want to restore the database from. The source and target instance can be the same, or two different instances. Select **Next : Additional settings >**
+
+    :::image type="content" source="./media/point-in-time-restore/restore-long-term-backup.png" alt-text="Screenshot of the Azure portal that shows the data source tab of the Create Azure SQL Managed Database page, with long-term retention selected.":::
+
+1. On the **Additional settings** tab, you can check the box to inherit the retention policy from the source database, or, alternatively, you can select **Configure retention** to open the **Configure policies** page, and set your desired retention policies for your restored database.  Select **Review + create**. 
+
+1. In **Review + create**, when validation is successful, select **Create** to restore your database.
+
+This action starts the restore process, which creates a new database and populates it with data from the original database at the specified point in time. For more information about the recovery process, see [Recovery time](../database/recovery-using-backups.md#recovery-time).
 
 > [!NOTE]
 > From here, you can connect to the restored database using SQL Server Management Studio to perform needed tasks, such as to [extract a bit of data from the restored database to copy into the existing database or to delete the existing database and rename the restored database to the existing database name](../database/recovery-using-backups.md#point-in-time-restore).

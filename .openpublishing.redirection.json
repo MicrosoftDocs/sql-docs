@@ -59673,6 +59673,11 @@
       "source_path": "docs/relational-databases/system-stored-procedures/sp-change-feed-table.md",
       "redirect_url": "/sql/relational-databases/system-stored-procedures/sp-help-change-feed-table",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/azure-resource-explorer.md",
+      "redirect_url": "/sql/azure-data-studio/azure-view",
+      "redirect_document_id": false
     }
   ]
 }

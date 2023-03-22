@@ -7,6 +7,7 @@ ms.date: 02/28/2016
 ms.service: reporting-services
 ms.subservice: troubleshooting
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Troubleshoot Publishing or Viewing a Report on a Native Mode Report Server
   

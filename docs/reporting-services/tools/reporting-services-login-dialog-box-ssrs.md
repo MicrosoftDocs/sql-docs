@@ -7,6 +7,7 @@ ms.date: 03/01/2017
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: reference
+ms.custom: updatefrequency5
 f1_keywords:
   - "sql13.rtp.rptdesigner.reportservicelogin.f1"
 ---

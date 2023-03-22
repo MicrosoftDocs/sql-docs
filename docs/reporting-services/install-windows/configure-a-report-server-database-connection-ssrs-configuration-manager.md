@@ -6,6 +6,7 @@ ms.author: maggies
 ms.date: 01/04/2020
 ms.service: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Configure a Report Server Database Connection (Report Server Configuration Manager)

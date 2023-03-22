@@ -7,7 +7,9 @@ ms.date: 11/15/2018
 ms.service: reporting-services
 ms.subservice: report-server-sharepoint
 ms.topic: conceptual
-ms.custom: intro-deployment
+ms.custom:
+  - intro-deployment
+  - updatefrequency5
 ---
 
 # Deploy the SQL Server Reporting Services Report Viewer web part on a SharePoint site

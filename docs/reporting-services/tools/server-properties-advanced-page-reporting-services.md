@@ -7,6 +7,7 @@ ms.date: 1/12/2023
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
+ms.custom: updatefrequency5
 monikerRange: ">=sql-server-2016"
 ---
 

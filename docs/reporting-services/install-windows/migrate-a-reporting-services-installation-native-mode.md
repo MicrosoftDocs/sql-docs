@@ -6,7 +6,9 @@ ms.author: maggies
 ms.date: 05/01/2020
 ms.service: reporting-services
 ms.topic: conceptual
-ms.custom: intro-migration
+ms.custom:
+  - intro-migration
+  - updatefrequency5
 ---
 
 # Migrate a Reporting Services Installation (Native Mode)

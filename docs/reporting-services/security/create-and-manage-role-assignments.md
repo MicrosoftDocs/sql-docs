@@ -7,6 +7,7 @@ ms.date: 05/07/2017
 ms.service: reporting-services
 ms.subservice: security
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "removing role assignments"
   - "roles [Reporting Services], assignments"

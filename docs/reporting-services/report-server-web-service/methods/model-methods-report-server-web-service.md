@@ -7,6 +7,7 @@ ms.date: 03/06/2017
 ms.service: reporting-services
 ms.subservice: report-server-web-service
 ms.topic: reference
+ms.custom: updatefrequency5
 ---
 # Model Methods - Report Server Web Service
   You can use these methods to manage models.  

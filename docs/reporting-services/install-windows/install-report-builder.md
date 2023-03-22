@@ -6,7 +6,9 @@ ms.author: maggies
 ms.date: 08/15/2022
 ms.service: reporting-services
 ms.topic: conceptual
-ms.custom: intro-installation
+ms.custom:
+  - intro-installation
+  - updatefrequency5
 ---
 # Install Microsoft Report Builder
 

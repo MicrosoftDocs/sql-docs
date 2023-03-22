@@ -7,6 +7,7 @@ ms.date: 12/09/2019
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Display percentage values on pie chart in a paginated report (Report Builder)
 

@@ -7,6 +7,7 @@ ms.date: 09/16/2016
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Report Parts and Datasets in Report Builder
 

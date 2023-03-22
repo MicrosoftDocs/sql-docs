@@ -7,6 +7,7 @@ ms.date: 06/26/2019
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Add a Snapshot to Report History

@@ -7,6 +7,7 @@ ms.date: 06/30/2021
 ms.service: reporting-services
 ms.subservice: security
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Configure Reporting Services to use a Subject Alternative Name (SAN)
 

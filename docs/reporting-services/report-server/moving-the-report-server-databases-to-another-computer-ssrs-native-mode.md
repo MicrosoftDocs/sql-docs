@@ -7,6 +7,7 @@ ms.date: 12/16/2019
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Moving Report Server Databases to Another Computer (SSRS Native Mode)

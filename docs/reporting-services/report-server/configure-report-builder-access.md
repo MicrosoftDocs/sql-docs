@@ -7,6 +7,7 @@ ms.date: 03/07/2021
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Configure Report Builder Access

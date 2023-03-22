@@ -7,6 +7,7 @@ ms.date: 03/07/2017
 ms.service: reporting-services
 ms.subservice: subscriptions
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "subscriptions [Reporting Services], creating"
   - "subscriptions [Reporting Services], deleting"

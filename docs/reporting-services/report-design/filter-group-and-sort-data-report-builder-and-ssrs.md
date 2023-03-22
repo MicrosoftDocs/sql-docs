@@ -7,6 +7,7 @@ ms.date: 08/27/2021
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
+ms.custom: updatefrequency5
 f1_keywords:
   - "sql13.rtp.rptdesigner.categorygroupproperties.general.f1"
   - "10403"

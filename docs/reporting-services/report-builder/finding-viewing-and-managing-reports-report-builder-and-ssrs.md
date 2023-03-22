@@ -7,6 +7,7 @@ ms.date: 12/16/2019
 ms.service: reporting-services
 ms.subservice: report-builder
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Find, view, and manage reports (Report Builder and SSRS)
 

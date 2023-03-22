@@ -7,6 +7,7 @@ ms.date: 02/11/2020
 ms.service: reporting-services
 ms.subservice: report-server-sharepoint
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Report Viewer web part on a SharePoint site - Reporting Services
 

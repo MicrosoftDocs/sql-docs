@@ -51,7 +51,7 @@ The following sources are supported:
 > [!NOTE]
 > - We recommend that you automate the migration of databases from SQL Server to Azure SQL Managed Instance by using the Azure SQL migration extension for Azure Data Studio. Consider using LRS to orchestrate migrations when the Azure SQL migration extension doesn't fully support your scenarios.
 > - LRS is the only method to restore differential backups on managed instances. It isn't possible to manually restore differential backups on managed instances or to manually set the `NORECOVERY` mode by using T-SQL.
->
+
 
 ## How LRS works
 
@@ -73,6 +73,9 @@ If you're migrating several databases, you need to:
 Although having `CHECKSUM` enabled for backups isn't required, we highly recommend it. Restoring databases without `CHECKSUM` takes longer, because SQL Managed Instance performs an integrity check on backups that are restored without `CHECKSUM` enabled. 
 
 For more information, see [Migrate databases from a SQL Server instance to a SQL Managed Instance deployment by using Log Replay Service](log-replay-service-migrate.md). 
+
+> [!CAUTION]
+> Taking backups on SQL Server with `CHECKSUM` enabled is highly recommended as there is a risk to restoring a corrupt database to Azure without it. 
 
 
 ### Autocomplete vs. continuous mode migration

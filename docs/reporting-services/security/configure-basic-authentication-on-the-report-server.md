@@ -7,6 +7,7 @@ ms.date: 02/10/2021
 ms.service: reporting-services
 ms.subservice: security
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "Reporting Services, configuration"
   - "Basic authentication"

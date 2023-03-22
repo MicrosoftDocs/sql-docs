@@ -7,6 +7,7 @@ ms.date: 04/29/2019
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Lesson 5: Formatting a report (Reporting Services)
 

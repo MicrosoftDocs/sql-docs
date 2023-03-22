@@ -8,6 +8,7 @@ ms.date: 03/09/2023
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 monikerRange: ">=sql-server-2017"
 ---
 # Release notes for SQL Server Reporting Services (SSRS) 2017 and later

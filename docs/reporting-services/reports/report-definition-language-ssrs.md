@@ -7,6 +7,7 @@ ms.date: 01/24/2019
 ms.service: reporting-services
 ms.subservice: reports
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "SQL Server Reporting Services, RDL"
   - "Reporting Services, RDL"

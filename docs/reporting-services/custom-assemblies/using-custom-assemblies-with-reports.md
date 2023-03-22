@@ -7,6 +7,7 @@ ms.date: 03/14/2017
 ms.service: reporting-services
 ms.subservice: custom-assemblies
 ms.topic: reference
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "custom assemblies [Reporting Services]"
   - "assemblies [Reporting Services], custom"

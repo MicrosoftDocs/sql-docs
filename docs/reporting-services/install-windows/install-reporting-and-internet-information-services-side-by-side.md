@@ -6,7 +6,9 @@ ms.author: maggies
 ms.date: 07/02/2017
 ms.service: reporting-services
 ms.topic: conceptual
-ms.custom: intro-installation
+ms.custom:
+  - intro-installation
+  - updatefrequency5
 helpviewer_keywords:
   - "deploying [Reporting Services], IIS"
 ---

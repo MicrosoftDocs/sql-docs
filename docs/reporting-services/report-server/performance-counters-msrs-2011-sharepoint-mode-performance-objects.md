@@ -7,6 +7,7 @@ ms.date: 02/17/2021
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "performance counters [Reporting Services]"
   - "counters [Reporting Services]"

@@ -7,6 +7,7 @@ ms.date: 03/15/2017
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Modify a Reporting Services Configuration File (RSreportserver.config)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stores application settings in a set of configuration files. Setup creates the configuration files for each report server instance you install. Within each file, values are either set during installation or when you use tools and applications to configure a server for operation. In some cases, you must modify a file directly to add or configure advanced settings. Configuration settings are specified as either XML elements or attributes. If you understand XML and configuration files, you can use a text or code editor to modify user-definable settings.  

@@ -7,6 +7,7 @@ ms.date: 01/18/2022
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Display page numbers or other paginated report properties (Report Builder)
 

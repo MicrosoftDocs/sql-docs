@@ -7,6 +7,7 @@ ms.date: 09/06/2022
 ms.service: reporting-services
 ms.subservice: report-builder
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Export paginated reports (Report Builder)

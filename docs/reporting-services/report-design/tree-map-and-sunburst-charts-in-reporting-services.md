@@ -7,6 +7,7 @@ ms.date: 04/26/2019
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Treemap and sunburst charts in a paginated report in SQL Server Reporting Services (Report Builder)

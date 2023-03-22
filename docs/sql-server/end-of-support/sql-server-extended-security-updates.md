@@ -52,6 +52,10 @@ You can receive Extended Security Updates in several ways:
 
 [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends applying ESU patches as soon as they're available to keep your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance protected. For detailed information about ESUs, see the [ESU FAQ page](https://www.microsoft.com/cloud-platform/extended-security-updates).
 
+For more information about end of support options, watch the following video:
+
+> [!VIDEO https://learn-video.azurefd.net/vod/player?show=data-exposed&ep=azure-sql-vm-sql-server-201220082008r2-end-of-support-eos-what-are-customers-options-now-ep-9-data-exposed]
+
 ## Extended support dates
 
 For the versions in the table below, consider using [Extended Security Updates](/azure/azure-sql/virtual-machines/windows/sql-server-extend-end-of-support) described in this article, or other migration options. For more information, see [End of support options](sql-server-end-of-support-overview.md).

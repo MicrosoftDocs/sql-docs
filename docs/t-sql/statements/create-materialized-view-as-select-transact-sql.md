@@ -3,8 +3,8 @@ title: "CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL) creates a materialized
 description: CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)
 author: markingmyname
 ms.author: maghan
-ms.reviewer: xiaoyul
-ms.date: 01/25/2023
+ms.reviewer: xiaoyul, mariyaali
+ms.date: 03/14/2023
 ms.service: sql
 ms.subservice: data-warehouse
 ms.topic: reference
@@ -83,14 +83,14 @@ Only HASH and ROUND_ROBIN distributions are supported. For more information on d
 `DISTRIBUTION` = `HASH` ( *distribution_column_name* )     
 Distributes the rows based on the values of a single column.
 
-`DISTRIBUTION = HASH ( [distribution_column_name [, ...n]] )` (*preview*) 
+`DISTRIBUTION = HASH ( [distribution_column_name [, ...n]] )`
 Distributes the rows based on the hash values of up to eight columns, allowing for more even distribution of materialized view data, reducing the data skew over time and improving query performance. 
 
 > [!NOTE]
-> - To enable this preview feature, join the preview by changing the database's compatibility level to 9000 with this command. For more information on setting the database compatibility level, see [ALTER DATABSE SCOPED CONFIGURATION](./alter-database-scoped-configuration-transact-sql.md). For example: `DATABASE SCOPED CONFIGURATION SET DW_COMPATIBILITY_LEVEL = 9000;`
-> - To opt-out the preview, run this command to change the database's compatibility level to AUTO. For example: `ALTER DATABASE SCOPED CONFIGURATION SET DW_COMPATIBILITY_LEVEL = AUTO;` This will disable the multi-column distribution (MCD) feature (preview). Existing MCD materialized views will stay but become unreadable. 
->     - To regain access to MCD materialized views, opt-in the preview again. 
-> - Preview features are meant for testing only and should not be used on production instances or production data. Please keep a copy of your test data if the data is important.
+>
+> - To enable the Multi-Column Distribution feature, change the database's compatibility level to 50 with this command. For more information on setting the database compatibility level, see [ALTER DATABASE SCOPED CONFIGURATION](./alter-database-scoped-configuration-transact-sql.md). For example: `ALTER DATABASE SCOPED CONFIGURATION SET DW_COMPATIBILITY_LEVEL = 50;`
+> - To disable MCD, run this command to change the database's compatibility level to AUTO. For example: `ALTER DATABASE SCOPED CONFIGURATION SET DW_COMPATIBILITY_LEVEL = AUTO;` Existing MCD materialized views will stay but become unreadable.
+>   - To regain access to MCD materialized views, enable the feature again.
 
 #### *select_statement*   
 The SELECT list in the materialized view definition needs to meet at least one of these two criteria:

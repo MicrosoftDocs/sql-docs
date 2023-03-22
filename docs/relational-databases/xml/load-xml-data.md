@@ -36,7 +36,7 @@ This example shows how to insert a row in table T. The value of the XML column i
 INSERT INTO T
 SELECT 10, xCol
 FROM    (SELECT *
-    FROM OPENROWSET (BULK 'C:\MyFile\xmlfile.xml', SINGLE_CLOB)
+    FROM OPENROWSET (BULK 'C:\MyFile\xmlfile.xml', SINGLE_BLOB)
 AS xCol) AS R(xCol);
 ```
 

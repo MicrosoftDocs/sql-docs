@@ -160,6 +160,8 @@
     items:
     - name: Connect and query from apps
       items:
+      - name: Connect and query
+        href: database/connect-query-content-reference-guide.md
       - name: .NET with Visual Studio
         href: database/connect-query-dotnet-visual-studio.md
       - name: .NET with Windows, Linux, and macOS
@@ -317,6 +319,8 @@
         href: database/azure-sql-dotnet-quickstart.md
       - name: .NET with EF Core
         href: database/azure-sql-dotnet-entity-framework-core-quickstart.md
+      - name: Use the Azure portal query editor 
+        href: database/connect-query-portal.md
     - name: GitHub Actions
       href: database/connect-github-actions-sql-db.md
 
@@ -578,7 +582,6 @@
     - name: Plan and manage costs 
       href: database/cost-management.md      
     - name: Connect and query
-      href: database/connect-query-content-reference-guide.md
       items:
       - name: Connect and run ad-hoc queries
         items:
@@ -586,8 +589,8 @@
           href: /sql/azure-data-studio/quickstart-sql-database?toc=/azure/azure-sql/toc.json
         - name: SSMS
           href: database/connect-query-ssms.md
-        - name: Azure portal
-          href: database/connect-query-portal.md
+        - name: Azure portal query editor
+          href: database/query-editor.md
         - name: VS Code
           href: database/connect-query-vscode.md
       - name: Connect and query from apps

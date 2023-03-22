@@ -3,8 +3,8 @@ title: CREATE TABLE (Azure Synapse Analytics)
 description: "CREATE TABLE (Azure Synapse Analytics) creates a new table in Azure Synapse Analytics or Analytics Platform System (PDW)."
 author: markingmyname
 ms.author: maghan
-ms.reviewer: vanto, xiaoyul
-ms.date: 01/25/2023
+ms.reviewer: vanto, xiaoyul, mariyaali
+ms.date: 03/14/2023
 ms.service: sql
 ms.topic: reference
 dev_langs:
@@ -99,16 +99,16 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 ## Arguments
 
- *database_name*  
+#### *database_name*  
  The name of the database that will contain the new table. The default is the current database.  
   
- *schema_name*  
- The schema for the table. Specifying *schema* is optional. If blank, the default schema will be used.  
+#### *schema_name*  
+ The schema for the table. Specifying *schema* is optional. If blank, the default schema is used.  
   
- *table_name*  
+#### *table_name*  
  The name of the new table. To create a local temporary table, precede the table name with `#`.  For explanations and guidance on temporary tables, see [Temporary tables in dedicated SQL pool in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-temporary). 
 
- *column_name*  
+#### *column_name*  
  The name of a table column.
 
 ### <a name="ColumnOptions"></a> Column options
@@ -146,28 +146,29 @@ Stores the table as a clustered columnstore index. The clustered columnstore ind
   
 ### <a name="TableDistributionOptions"></a> Table distribution options
 
-To understand how to choose the best distribution method and use distributed tables, see [Guidance for designing distributed tables using dedicated SQL pool in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-distribute). For recommendations on which distribution to choose for a table based on actual usage or sample queries, see [Distribution Advisor in Azure Synapse SQL](/azure/synapse-analytics/sql/distribution-advisor).
+To understand how to choose the best distribution method and use distributed tables, see [designing distributed tables using dedicated SQL pool in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-distribute).
 
+For recommendations on the best distribution strategy to use based on your workloads, see the [Synapse SQL Distribution Advisor (Preview)](/azure/synapse-analytics/sql/distribution-advisor).
 
 `DISTRIBUTION = HASH` ( *distribution_column_name* )
 Assigns each row to one distribution by hashing the value stored in *distribution_column_name*. The algorithm is deterministic, which means it always hashes the same value to the same distribution.  The distribution column should be defined as NOT NULL because all rows that have NULL are assigned to the same distribution.
 
-`DISTRIBUTION = HASH ( [distribution_column_name [, ...n]] )` (*Currently in preview*) 
-Distributes the rows based on the hash values of up to eight columns, allowing for more even distribution of the base table data, reducing the data skew over time and improving query performance. 
+`DISTRIBUTION = HASH ( [distribution_column_name [, ...n]] )` 
+Distributes the rows based on the hash values of up to eight columns, allowing for more even distribution of the base table data, reducing the data skew over time and improving query performance.
 
 >[!NOTE]
-> - To enable this preview feature, join the preview by changing the database's compatibility level to 9000 with this command. For more information on setting the database compatibility level, see [ALTER DATABSE SCOPED CONFIGURATION](./alter-database-scoped-configuration-transact-sql.md). For example: `ALTER DATABASE SCOPED CONFIGURATION SET DW_COMPATIBILITY_LEVEL = 9000;`
-> - To opt-out the preview, run this command to change the database's compatibility level to AUTO. For example: `ALTER DATABASE SCOPED CONFIGURATION SET DW_COMPATIBILITY_LEVEL = AUTO;` This will disable the multi-column distribution (MCD) feature (preview). Existing MCD tables will stay but become unreadable. Queries over MCD tables will return this error: `Related table/view is not readable because it distributes data on multiple columns and multi-column distribution is not supported by this product version or this feature is disabled.`
->     - To regain access to MCD tables, opt-in the preview again. 
->     - To load data into a MCD table, use CTAS statement and the data source needs be Synapse SQL tables.  
-> - Using SSMS for [generating a script](../../ssms/scripting/generate-scripts-sql-server-management-studio.md) to create MCD tables isn't currently supported.
-> - Preview features are meant for testing only and should not be used on production instances or production data. Please keep a copy of your test data if the data is important.
+>
+> - To enable the Multi-Column Distribution (MCD) feature, change the database's compatibility level to 50 with this command. For more information on setting the database compatibility level, see [ALTER DATABASE SCOPED CONFIGURATION](./alter-database-scoped-configuration-transact-sql.md). For example: `ALTER DATABASE SCOPED CONFIGURATION SET DW_COMPATIBILITY_LEVEL = 50;`
+> - To disable the Multi-Column distribution (MCD) feature, run this command to change the database's compatibility level to AUTO. For example: `ALTER DATABASE SCOPED CONFIGURATION SET DW_COMPATIBILITY_LEVEL = AUTO;` Existing MCD tables will stay but become unreadable. Queries over MCD tables will return this error: `Related table/view is not readable because it distributes data on multiple columns and multi-column distribution is not supported by this product version or this feature is disabled.`
+>   - To regain access to MCD tables, enable the feature again.
+>   - To load data into a MCD table, use CTAS statement and the data source needs be Synapse SQL tables.  
+> - Using SSMS for [generating a script](../../ssms/scripting/generate-scripts-sql-server-management-studio.md) to create MCD tables is currently supported beyond SSMS version 19.
 
 `DISTRIBUTION = ROUND_ROBIN`
 Distributes the rows evenly across all the distributions in a round-robin fashion. This behavior is the default for [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
 
 `DISTRIBUTION = REPLICATE`
-Stores one copy of the table on each Compute node. For [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] the table is stored on a distribution database on each Compute node. For [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], the table is stored in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] filegroup that spans the Compute node. This behavior is the default for [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+Stores one copy of the table on each Compute node. For [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], the table is stored on a distribution database on each Compute node. For [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], the table is stored in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] filegroup that spans the Compute node. This behavior is the default for [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
   
 ### <a name="TablePartitionOptions"></a> Table partition options
 For guidance on using table partitions, see [Partitioning tables in dedicated SQL pool](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-partition).
@@ -197,7 +198,7 @@ Check [Performance tuning with ordered clustered columnstore index](/azure/sql-d
 
 ### <a name="DataTypes"></a> Data type
 
-[!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] supports the most commonly used data types. Below is a list of the supported data types along with their details and storage bytes. To better understand data types and how to use them, see [Data types for tables in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-data-types).
+[!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] supports the most commonly used data types. To better understand data types and how to use them, see [Data types for tables in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-data-types).
 
 >[!NOTE]
 >Similar to SQL Server, there is an 8060 byte per row limit. This may become a blocking issue for tables that have many columns, or columns with large data types, such as `nvarchar(max)` or `varbinary(max)`. Inserts or updates that violate the 8060 byte limit will result in error codes 511 or 611. For more information, see [Pages and Extents Architecture Guide](../../relational-databases/pages-and-extents-architecture-guide.md?view=azure-sqldw-latest&preserve-view=true#row-overflow-considerations).
@@ -206,6 +207,8 @@ For a table of data type conversions, see the Implicit Conversions section, of [
 
 >[!NOTE]
 >See [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../functions/date-and-time-data-types-and-functions-transact-sql.md) for more details.
+
+The following is a list of the supported data types along with their details and storage bytes. 
 
 `datetimeoffset` [ ( *n* ) ]  
  The default value for *n* is 7.  
@@ -295,7 +298,7 @@ Same as `datetime`, except that you can specify the number of fractional seconds
  Fixed-length Unicode character data with a length of *n* characters. *n* must be a value from `1` through `4000`. The storage size is two times *n* bytes.  
   
  `varchar` [ ( *n*  | `max` ) ]  -- `max` applies only to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].   
- Variable-length, non-Unicode character data with a length of *n* bytes. *n* must be a value from `1` to `8000`. `max` indicates that the maximum storage size is 2^31-1 bytes (2 GB).The storage size is the actual length of data entered + 2 bytes.  
+ Variable-length, non-Unicode character data with a length of *n* bytes. *n* must be a value from `1` to `8000`. `max` indicates that the maximum storage size is 2^31-1 bytes (2 GB). The storage size is the actual length of data entered + 2 bytes.  
   
  `char` [ ( *n* ) ]  
  Fixed-length, non-Unicode character data with a length of *n* bytes. *n* must be a value from `1` to `8000`. The storage size is *n* bytes. The default for *n* is `1`.  
@@ -436,7 +439,7 @@ WITH
 ## Examples for table structure
 
 ### <a name="ClusteredColumnstoreIndex"></a> D. Create a table with a clustered columnstore index  
- The following example creates a distributed table with a clustered columnstore index. Each distribution will be stored as a columnstore.  
+ The following example creates a distributed table with a clustered columnstore index. Each distribution is stored as a columnstore.  
   
  The clustered columnstore index doesn't affect how the data is distributed; data is always distributed by row. The clustered columnstore index affects how the data is stored within each distribution.  
   
@@ -481,7 +484,7 @@ CREATE TABLE myTable
 WITH ( CLUSTERED COLUMNSTORE INDEX );  
 ```  
   
-### <a name="HashDistributed"></a> G. Create a table that's hash-distributed on multiple columns (preview)
+### <a name="HashDistributed"></a> G. Create a table that's hash-distributed on multiple columns
 
 The following example creates the same table as the previous example. However, for this table, rows are distributed (on `id` and `zipCode` columns). The table is created with a clustered columnstore index, which gives better performance and data compression than a heap or rowstore clustered index.  
   

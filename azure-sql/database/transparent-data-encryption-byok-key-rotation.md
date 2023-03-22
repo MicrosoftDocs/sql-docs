@@ -5,7 +5,7 @@ description: Learn how to rotate the Transparent data encryption (TDE) protector
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 02/10/2023
+ms.date: 03/21/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: how-to
@@ -153,15 +153,14 @@ Using the [Azure portal](https://portal.azure.com):
 3. Check the **Auto-rotate key** checkbox.
 4. Select **Save**.
 
-   :::image type="content" source="media/transparent-data-encryption-byok-key-rotation/auto-rotate-key-primary.png" lightbox="media/transparent-data-encryption-byok-key-rotation/auto-rotate-key.png" alt-text="Screenshot of auto rotate key configuration for transparent data encryption in a geo-replication scenario on the primary server.":::
+   :::image type="content" source="media/transparent-data-encryption-byok-key-rotation/auto-rotate-key-primary.png" lightbox="media/transparent-data-encryption-byok-key-rotation/auto-rotate-key-primary.png" alt-text="Screenshot of auto rotate key configuration for transparent data encryption in a geo-replication scenario on the primary server.":::
 
 5. Browse to the **Transparent data encryption** section for the **secondary** server.
 6. Select the **Customer-managed key** option and select the key vault and key to be used as the TDE protector. Use the same key as you used for the primary server.
 7. Uncheck **Make this key the default TDE protector**.
-8. Check the **Auto-rotate key** checkbox.
-9. Select **Save**.
+8. Select **Save**.
 
-   :::image type="content" source="media/transparent-data-encryption-byok-key-rotation/auto-rotate-key-secondary.png" lightbox="media/transparent-data-encryption-byok-key-rotation/auto-rotate-key.png" alt-text="Screenshot of auto rotate key configuration for transparent data encryption in a geo-replication scenario on the secondary server.":::
+   :::image type="content" source="media/transparent-data-encryption-byok-key-rotation/auto-rotate-key-secondary.png" lightbox="media/transparent-data-encryption-byok-key-rotation/auto-rotate-key-secondary.png" alt-text="Screenshot of auto rotate key configuration for transparent data encryption in a geo-replication scenario on the secondary server.":::
 
 When the key is rotated on the primary server, it's automatically transferred to the secondary server.
 

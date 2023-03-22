@@ -30,7 +30,7 @@ The present article devotes separate sections to these two kinds of connection d
 
 | Language | Download the SQL driver |
 | :------- | :---------------------- |
-| C# | [ADO.NET](https://www.microsoft.com/net/download/)<br />[Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient/)<br /><br />[.NET Core for: Linux-Ubuntu, macOS, Windows](https://dotnet.microsoft.com/download) |
+| C# | [ADO.NET](https://www.microsoft.com/net/download/)<br />[Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient/)<br />[.NET Core for: Linux-Ubuntu, macOS, Windows](https://dotnet.microsoft.com/download) <br /> [Entity Framework Core](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore) <br /> [Entity Framework](https://www.nuget.org/packages/EntityFramework) |
 | C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](./oledb/download-oledb-driver-for-sql-server.md) |
 | Java | [JDBC](./jdbc/download-microsoft-jdbc-driver-for-sql-server.md) |
 | Node.js | [Node.js driver, install instructions](./node-js/step-1-configure-development-environment-for-node-js-development.md) |

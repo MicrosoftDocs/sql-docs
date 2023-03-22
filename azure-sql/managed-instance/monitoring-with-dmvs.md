@@ -626,7 +626,7 @@ In some cases, two or more queries may mutually block one another, resulting in 
 
 You can create an Extended Events trace a database to capture deadlock events, then find related queries and their execution plans in Query Store. 
 
-For Azure SQL Managed Instance, refer to the [Deadlocks](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide#deadlock_tools) in the [Transaction locking and row versioning guide](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide).
+For Azure SQL Managed Instance, refer to the [Deadlock tools](/sql/relational-databases/sql-server-deadlocks-guide#deadlock_tools) in the [Deadlocks guide](/sql/relational-databases/sql-server-deadlocks-guide).
 
 ### Monitoring query plans
 
@@ -672,5 +672,5 @@ Azure Monitor provides a variety of diagnostic data collection groups, metrics, 
 - [Introduction to Azure SQL Database and Azure SQL Managed Instance](../database/sql-database-paas-overview.md)
 - [Tune applications and databases for performance in Azure SQL Database and Azure SQL Managed Instance](../database/performance-guidance.md)
 - [Understand and resolve SQL Server blocking problems](/troubleshoot/sql/performance/understand-resolve-blocking)
-- [Analyze and prevent deadlocks in Azure SQL Managed Instance](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide#deadlock_tools)
+- [Analyze and prevent deadlocks in Azure SQL Managed Instance](/sql/relational-databases/sql-server-deadlocks-guide#deadlock_tools)
 - [sys.server_resource_stats (Azure SQL Managed Instance)](/sql/relational-databases/system-catalog-views/sys-server-resource-stats-azure-sql-database)

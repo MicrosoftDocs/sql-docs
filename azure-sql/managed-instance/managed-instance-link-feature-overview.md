@@ -5,7 +5,7 @@ description: This article describes the link feature of Azure SQL Managed Instan
 author: danimir
 ms.author: danil
 ms.reviewer: mathoma, randolphwest
-ms.date: 02/03/2023
+ms.date: 03/27/2023
 ms.service: sql-managed-instance
 ms.subservice: data-movement
 ms.topic: conceptual
@@ -46,9 +46,9 @@ The following table lists the functionality of the link feature and the supporte
 | SQL Server version  | Operating system (OS)  | One-way replication |  Disaster recovery | Servicing update requirement |
 | --- | --- | --- | --- | --- |
 | SQL Server 2022 (16.x) | Windows Server and Linux |  Generally available | [Must sign up for limited public preview](https://aka.ms/mi-link-dr-preview-signup)  | SQL Server 2022 RTM | 
-| SQL Server 2019 (15.x) | Windows Server | Preview |Not supported | [SQL Server 2019 CU15 (KB5008996)](https://support.microsoft.com/help/5008996) or later for Enterprise and Developer editions, and [CU17 (KB5016394)](https://support.microsoft.com/help/5016394) or later for Standard editions |
+| SQL Server 2019 (15.x) | Windows Server | Generally available |Not supported | [SQL Server 2019 CU15 (KB5008996)](https://support.microsoft.com/help/5008996) or later for Enterprise and Developer editions, and [CU17 (KB5016394)](https://support.microsoft.com/help/5016394) or later for Standard editions |
 | SQL Server 2017 (14.x) | N/A | Not supported | Not supported | N/A | 
-| SQL Server 2016 (13.x) | Windows Server | Preview | Not supported|   [SQL Server 2016 SP3 (KB 5003279)](https://support.microsoft.com/help/5003279) and [SQL Server 2016 Azure Connect pack (KB 5014242)](https://support.microsoft.com/help/5014242) |
+| SQL Server 2016 (13.x) | Windows Server | Generally available | Not supported|   [SQL Server 2016 SP3 (KB 5003279)](https://support.microsoft.com/help/5003279) and [SQL Server 2016 Azure Connect pack (KB 5014242)](https://support.microsoft.com/help/5014242) |
 
 SQL Server versions 2008 to 2014 aren't supported, because the link feature relies on distributed availability group technology, which was introduced in SQL Server 2016. 
 

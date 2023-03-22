@@ -7,6 +7,7 @@ ms.date: 06/26/2019
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "Report Server service, performance counters"
 monikerRange: ">=sql-server-2016 <=sql-server-2016"

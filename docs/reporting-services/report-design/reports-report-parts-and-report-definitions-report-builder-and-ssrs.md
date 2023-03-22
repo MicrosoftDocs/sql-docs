@@ -7,6 +7,7 @@ ms.date: 05/24/2018
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "report definitions"
   - "reports"

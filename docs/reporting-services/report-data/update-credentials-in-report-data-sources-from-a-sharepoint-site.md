@@ -7,6 +7,7 @@ ms.date: 03/01/2017
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Update Credentials in Report Data Sources from a SharePoint Site
   This topic describes how to update data sources embedded in reports and shared data sources that are saved in a SharePoint document library.  

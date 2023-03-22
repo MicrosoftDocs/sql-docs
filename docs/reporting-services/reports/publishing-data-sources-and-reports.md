@@ -7,6 +7,7 @@ ms.date: 03/07/2017
 ms.service: reporting-services
 ms.subservice: reports
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "publishing data sources [Reporting Services]"
   - "publishing reports [Reporting Services]"

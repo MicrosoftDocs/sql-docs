@@ -7,6 +7,7 @@ ms.date: 01/17/2018
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Troubleshoot charts in a paginated report (Report Builder)
 

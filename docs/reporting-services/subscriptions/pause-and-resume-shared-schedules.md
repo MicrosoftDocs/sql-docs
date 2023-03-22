@@ -7,6 +7,7 @@ ms.date: 03/14/2017
 ms.service: reporting-services
 ms.subservice: subscriptions
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "pausing schedules"
   - "report-specific schedules [Reporting Services]"

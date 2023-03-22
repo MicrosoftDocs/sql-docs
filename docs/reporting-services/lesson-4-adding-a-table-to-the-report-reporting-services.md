@@ -7,6 +7,7 @@ ms.date: 12/16/2019
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Lesson 4: Add a Table to the Report (Reporting Services)
 

@@ -7,6 +7,7 @@ ms.date: 08/15/2022
 ms.service: reporting-services
 ms.subservice: report-builder
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "Report Builder, launching"
   - "launching Report Builder"

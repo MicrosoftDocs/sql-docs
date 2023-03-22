@@ -7,6 +7,7 @@ ms.date: 06/26/2019
 ms.service: reporting-services
 ms.subservice: reports
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "viewing report history"
   - "report history [Reporting Services], viewing history"

@@ -6,6 +6,7 @@ ms.author: maggies
 ms.date: 09/20/2017
 ms.service: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "Reporting Services Configuration tool"
   - "configuration options [Reporting Services]"

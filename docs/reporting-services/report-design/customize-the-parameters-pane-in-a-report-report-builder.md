@@ -7,6 +7,7 @@ ms.date: 06/15/2020
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Customize the parameters pane in a paginated report (Report Builder)
 

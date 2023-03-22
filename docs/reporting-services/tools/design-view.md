@@ -7,6 +7,7 @@ ms.date: 05/31/2016
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
+ms.custom: updatefrequency5
 f1_keywords:
   - "sql13.rtp.rptdesigner.layoutview.f1"
 helpviewer_keywords:

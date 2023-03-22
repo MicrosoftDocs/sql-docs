@@ -7,6 +7,7 @@ ms.date: 03/08/2017
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Report Builder functions - InScope function in a paginated report (Report Builder)
 

@@ -7,7 +7,9 @@ ms.date: 09/01/2020
 ms.service: reporting-services
 ms.subservice: application-integration
 ms.topic: conceptual
-ms.custom: intro-get-started
+ms.custom:
+  - intro-get-started
+  - updatefrequency5
 ---
 # Integrate Reporting Services Using the Report Viewer Controls - Get Started
 

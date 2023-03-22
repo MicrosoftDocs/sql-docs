@@ -7,6 +7,7 @@ ms.date: 03/14/2017
 ms.service: reporting-services
 ms.subservice: extensions
 ms.topic: reference
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "connections [Reporting Services], data processing extensions"
   - "Connection class"

@@ -6,6 +6,7 @@ ms.author: maggies
 ms.date: 08/15/2021
 ms.service: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "SharePoint mode"
   - "add-in for sharepoint"

@@ -7,6 +7,7 @@ ms.date: 08/26/2016
 ms.service: reporting-services
 ms.subservice: troubleshooting
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Troubleshoot Processing of Reporting Services Reports
 After the report data is retrieved, the report processor combines the data and layout information. Each report item property that has an expression is evaluated in the context of the combined data and layout. Use this topic to help troubleshoot these issues.   

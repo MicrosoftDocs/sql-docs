@@ -7,6 +7,7 @@ ms.date: 03/14/2017
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: reference
+ms.custom: updatefrequency5
 f1_keywords:
   - "sql13.rtp.rptdesigner.mapandlayerwizard.f1"
   - "10542"

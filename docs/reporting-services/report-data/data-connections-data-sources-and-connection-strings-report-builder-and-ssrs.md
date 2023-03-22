@@ -7,6 +7,7 @@ ms.date: 12/02/2021
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Create data connection strings - Report Builder & SSRS
 

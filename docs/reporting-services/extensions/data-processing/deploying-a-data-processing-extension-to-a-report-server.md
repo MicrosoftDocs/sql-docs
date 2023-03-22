@@ -7,7 +7,9 @@ ms.date: 03/06/2017
 ms.service: reporting-services
 ms.subservice: extensions
 ms.topic: reference
-ms.custom: intro-deployment
+ms.custom:
+  - intro-deployment
+  - updatefrequency5
 helpviewer_keywords:
   - "data processing extensions [Reporting Services], deploying"
   - "assemblies [Reporting Services], data processing extension deployments"

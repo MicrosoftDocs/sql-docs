@@ -7,6 +7,7 @@ ms.date: 03/14/2017
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "Web service [Reporting Services], scripts"
   - "rs utility"

@@ -7,6 +7,7 @@ ms.date: 03/16/2017
 ms.service: reporting-services
 ms.subservice: application-integration
 ms.topic: reference
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "links [Reporting Services], URL access"
   - "URL access [Reporting Services], Web applications"

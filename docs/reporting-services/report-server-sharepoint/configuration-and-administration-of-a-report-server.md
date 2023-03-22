@@ -7,6 +7,7 @@ ms.date: 08/17/2018
 ms.service: reporting-services
 ms.subservice: report-server-sharepoint
 ms.topic: conceptual
+ms.custom: updatefrequency5
 monikerRange: ">=sql-server-2016 <=sql-server-2016"
 ---
 # Configuration and administration of a SQL Server Reporting Services (SSRS) report server

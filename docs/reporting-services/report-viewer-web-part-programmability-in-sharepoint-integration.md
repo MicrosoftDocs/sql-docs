@@ -7,6 +7,7 @@ ms.date: 03/04/2017
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: reference
+ms.custom: updatefrequency5
 ---
 # Report Viewer Web Part Programmability in SharePoint Integration
   The Report Viewer Web Part is a  server control, which contains a set of public application programming interfaces (API) that enables developers to create custom SharePoint applications. You can create custom Web Parts that supply report path and parameters to Report Viewer Web Part using Web Part connections. You can also embed the Web Part in a custom SharePoint Web Part page and customize it using the public API.  

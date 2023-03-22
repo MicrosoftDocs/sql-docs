@@ -217,10 +217,10 @@ The following diagram shows how these tables are related to each other. Some of 
 
 2. Right-click the following links and save them into the *sampleData* folder.
 
-   - [SampleCourseData](https://sqldbtutorial.blob.core.windows.net/tutorials/SampleCourseData)
-   - [SamplePersonData](https://sqldbtutorial.blob.core.windows.net/tutorials/SamplePersonData)
-   - [SampleStudentData](https://sqldbtutorial.blob.core.windows.net/tutorials/SampleStudentData)
-   - [SampleCreditData](https://sqldbtutorial.blob.core.windows.net/tutorials/SampleCreditData)
+   - [SampleCourseData](https://github.com/microsoft/sql-server-samples/releases/download/sqldbtutorial/SampleCourseData)
+   - [SamplePersonData](https://github.com/microsoft/sql-server-samples/releases/download/sqldbtutorial/SamplePersonData)
+   - [SampleStudentData](https://github.com/microsoft/sql-server-samples/releases/download/sqldbtutorial/SampleStudentData)
+   - [SampleCreditData](https://github.com/microsoft/sql-server-samples/releases/download/sqldbtutorial/SampleCreditData)
 
 3. Open a command prompt window and navigate to the *sampleData* folder.
 

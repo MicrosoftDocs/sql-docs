@@ -7,6 +7,7 @@ ms.date: 03/03/2017
 ms.service: reporting-services
 ms.subservice: report-server-web-service
 ms.topic: reference
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "XML Web service [Reporting Services], delivery extension settings"
   - "Report Server Web service, delivery extension settings"

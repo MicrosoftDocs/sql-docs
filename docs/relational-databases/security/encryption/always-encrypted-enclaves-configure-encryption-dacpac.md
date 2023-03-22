@@ -1,7 +1,7 @@
 ---
 title: "Configure column encryption using Always Encrypted with secure enclaves with a DAC package"
 description: "Configure column encryption using Always Encrypted with secure enclaves with a DAC package"
-author: pivanho
+author: PieterVanhove
 ms.author: pivanho
 ms.reviewer: vanto
 ms.date: 3/20/2023

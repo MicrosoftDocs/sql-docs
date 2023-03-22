@@ -1,7 +1,7 @@
 ---
 title: "Configure column encryption using Always Encrypted with secure enclaves with PowerShell"
 description: "Configure column encryption using Always Encrypted with secure enclaves with PowerShell"
-author: pivanho
+author: Pietervanhove
 ms.author: pivanho
 ms.reviewer: vanto
 ms.date: "3/20/2023"
@@ -251,7 +251,7 @@ for($i=0; $i -lt $tables.Count; $i++){
 }
 
 # Decrypt all columns.
-Set-SqlColumnEncryption -ColumnEncryptionSettings $ces -InputObject $database -LogFileDirectory . -EnclaveAttestationProtocol "AAS" -EnclaveAttestationURL "https://<attestationURL>" KeyVaultAccessToken $keyVaultAccessToken
+Set-SqlColumnEncryption -ColumnEncryptionSettings $ces -InputObject $database -LogFileDirectory . -EnclaveAttestationProtocol "AAS" -EnclaveAttestationURL "https://<attestationURL>" -KeyVaultAccessToken $keyVaultAccessToken
 ```
  
 ## Next Steps

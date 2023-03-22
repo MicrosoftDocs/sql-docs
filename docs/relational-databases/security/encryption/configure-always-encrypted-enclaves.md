@@ -60,6 +60,8 @@ For details, see the following articles:
 
 - [Configure column encryption in-place using Always Encrypted with secure enclaves - overview](always-encrypted-enclaves-configure-encryption.md)
 - [Configure column encryption in-place with Transact-SQL](always-encrypted-enclaves-configure-encryption-tsql.md)
+- [Configure column encryption in-place with PowerShell](always-encrypted-enclaves-configure-encryption-powershell.md)
+- [Configure column encryption in-place with Dac Package](always-encrypted-enclaves-configure-encryption-dacpac.md)
 - [Enable Always Encrypted with secure enclaves for existing encrypted columns](always-encrypted-enclaves-enable-for-encrypted-columns.md)
 
 ## Run Transact-SQL statements using secure enclaves

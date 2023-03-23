@@ -14,9 +14,9 @@ ms.topic: conceptual
 To maximize the value of Azure Arc, Microsoft provides an automated process to onboarding your SQL Server instances running on the machines already connected to Azure Arc (Azure Arc-enabled servers).
 Azure extension for SQL Server provides benefits help to you manage, secure, protect, and govern all your SQL Servers from a single point of control in Azure. To learn more, see [Azure Arc-enabled SQL Server](overview.md).
 
-## Automatically install Azure SQL extension on new machines connected to Arc
+## Automatically install Azure SQL extension on new servers connected to Arc
 
-Microsoft automatically installs Azure extension for SQL Server on each machine connected to Azure Arc if it has SQL Server instance(s) installed on the machine. This automated process involves the following tasks:
+Starting from April 11, 2023, Microsoft automatically installs Azure extension for SQL Server on each machine connected to Azure Arc if it has SQL Server instance(s) installed on the machine. This automated process involves the following tasks:
 
 1. Registers the  `Microsoft.AzureArcData` resource provider, if not already registered.
 1. Installs the Azure extension for SQL Server.

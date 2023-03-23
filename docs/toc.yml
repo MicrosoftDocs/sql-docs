@@ -10431,10 +10431,12 @@ items:
             href: sql-server/azure-arc/connect-already-enabled.md
         - name: Connect at scale
           items:
-          - name: Connect at scale | Azure policy
+          - name: Azure policy
             href: sql-server/azure-arc/connect-at-scale-policy.md
-          - name: Connect at scale | Script
+          - name: Script
             href: sql-server/azure-arc/connect-at-scale-script.md
+          - name: Autodeploy
+            href: sql-server/azure-arc/connect-at-scale-autodeploy.md
           - name: Connect machines using Configuration Manager custom task sequence
             href: sql-server/azure-arc/onboard-configuration-manager-custom-task.md
     - name: Manage

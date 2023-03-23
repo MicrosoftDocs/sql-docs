@@ -190,6 +190,8 @@ Alternatively, to restore a backup from long-term retention by using the Azure p
 
 1. On the **Additional settings** tab, you can check the box to inherit the retention policy from the source database, or, alternatively, you can select **Configure retention** to open the **Configure policies** page, and set your desired retention policies for your restored database. When finished, select **Review + create**. 
 
+    :::image type="content" source="./media/point-in-time-restore/additional-settings-page" alt-text="Screenshot of the Azure portal that shows the additional settings tab of the Create Azure SQL Managed Database page.":::
+
 1. On **Review + create**, when validation is successful, select **Create** to restore your database.
 
 This action starts the restore process, which creates a new database and populates it with data from the original database at the specified point in time. For more information about the recovery process, see [Recovery time](../database/recovery-using-backups.md#recovery-time).

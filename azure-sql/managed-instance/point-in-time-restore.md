@@ -95,6 +95,10 @@ If you restore to a different subscription, the [Create or Update v5.0.2022](/re
 
 # [Portal](#tab/azure-portal)
 
+To restore an existing database, you can do so by going to the database page in the Azure portal, and selecting **Restore**. 
+
+Alternatively to restore your database, you can follow these steps: 
+
 1. Sign in to the [Azure portal](https://portal.azure.com).
 1. Go to the target SQL Managed Instance where you plan to restore your database to. 
 1. On the **Overview** page, choose **+ New database** to open the **Create Azure SQL Managed Database** page. 
@@ -110,6 +114,9 @@ If you restore to a different subscription, the [Create or Update v5.0.2022](/re
     :::image type="content" source="./media/point-in-time-restore/database-data-source.png" alt-text="Screenshot of the Azure portal that shows the data source tab of the Create Azure SQL Managed Database page, with point-in-time restore selected.":::
 
 1. On the **Additional settings** tab, you can check the box to inherit the retention policy from the source database, or, alternatively, you can select **Configure retention** to open the **Configure policies** page, and set your desired retention policies for your restored database.  When finished, select **Review + create**. 
+
+    :::image type="content" source="./media/point-in-time-restore/additional-settings-page" alt-text="Screenshot of the Azure portal that shows the additional settings tab of the Create Azure SQL Managed Database page.":::
+
 
 1. On **Review + create**, when validation is successful, select **Create** to restore your database.
 

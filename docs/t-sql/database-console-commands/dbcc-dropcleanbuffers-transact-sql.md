@@ -79,13 +79,13 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 
 ## Permissions
 
-Applies to: SQL Server 2022 and later, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
-
-- Requires **ALTER SERVER STATE** permission on the server
-
-Applies to: SQL Server 2019 and previous versions
+Applies to: SQL Server, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 - Requires **sysadmin** permission on the server
+
+Applies to: SQL Server 2022 and later
+
+- Requires **ALTER SERVER STATE** permission on the server
 
 Applies to: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 

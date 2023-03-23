@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 # Auto onboarding of Arc enabled SQL Servers
 
-Microsoft goal is to help customers onboard their Arc Servers to Arc enabled SQL Servers to simplify deployment in an automated process so that customers can receive the full benefits of connecting the SQL Servers to Azure Arc.
+To simplify deployment, Microsoft provides an automated process for you to onboard your Azure Arc-enabled servers to Arc-enabled SQL Server so that you can receive the full benefits of connecting the SQL Servers to Azure Arc.
 Installing Azure extension for SQL Server will provide free benefits help to manage, secure, protect and govern all your SQL Servers from a single point of control in Azure.  Learn more the benefits of Arc enabled SQL Servers.  [Lear more](https://learn.microsoft.com/en-us/sql/sql-server/azure-arc/overview?view=sql-server-ver16)
 
 ## Automatically insall Azure SQL extension on new machines connected to Arc

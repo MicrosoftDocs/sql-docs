@@ -34,11 +34,35 @@ This error is a generic error that occurs when a backup or restore operation is 
 
 ## Cause
 
-There could be many various causes for an abnormal termination of a backup or a restore in SQL Server. But a common group of problems is associated with storage device or I/O issues. Another cause can be a SQL Server bug that's leading to the problem. 
+There could be many various causes for an abnormal termination of a backup or a restore in SQL Server. Here is a list of common reasons:
+
+- Insufficient disk space
+- Incorrect path to the backup storage device
+- The backup file/device is already open by another program
+- Backup media device failure or malfunction
+- Database corruption - if the database is corrupt, the backup or restore operation may fail.
+- Lack of BACKUP DATABASE, BACKUP LOG or CREATE DATABASE permissions to be able to backup or restore respectively
+- SQL Server service account lack of access to the backup device
 
 ## User action
 
+
 Examine the SQL Error log for other messages that occur alongside this error for additional information and troubleshooting.  
+
+
+- For insufficient disk space, ensure sure that the drive where you are writing the backup has enough free space available or use a different device. See [Examples with errors 3203 and 3203](#examples-with-errors-3203-and-3203)
+
+- For incorrect file path, double-check and correct the path and file name specified in the BACKUP or RESTORE command. 
+
+- For backup media failure if you are backing up to a tape drive or other backup device, make sure that the device is functioning properly and is not experiencing any hardware errors. See [Examples with errors 3203 and 3203](#examples-with-errors-3203-and-3203) and [Example with error 3241](#example-with-error-3241)
+
+- For database corruption issues you will likely observe other errors in SQL Server. If the database is corrupt, run DBCC CHECKDB to identify any errors in the database and resolve. For more information, see [Troubleshoot database consistency errors reported by DBCC CHECKDB](/troubleshoot/sql/database-engine/database-file-operations/troubleshoot-dbcc-checkdb-errors)
+
+- If your server principal account lacks permissions to do a backup or a restore operation, ensure account that is granted those permissions. See [Backup permissions](/sql/t-sql/statements/backup-transact-sql#permissions) and [Restore permissions](/sql/t-sql/statements/restore-statements-transact-sql#permissions)
+
+- For SQL Server service account permission issues, ensure that the SQL Server service account has read and write access to the backup device or the file system where the backup file is written. See [Backup permissions](/sql/t-sql/statements/backup-transact-sql#permissions). 
+
+
 Here are examples of commonly observed errors together with 3013.
 
 ### Example with error 3241
@@ -59,7 +83,7 @@ Also, see KB5014298 for backup/restores of TDE databases - [FIX: Error 3241 occu
 
 For more troubleshooting ideas, see [Media-related errors when you restore a database from a backup](/troubleshoot/sql/database-engine/backup-restore/backup-restore-operations#media-related-errors-when-you-restore-a-database-from-a-backup)
 
-### Examples with error 3203 and 3203
+### Examples with errors 3203 and 3203
 
 Errors 3202 and 3203 are backup errors raised when there are I/O-related issues. These two errors indicate whether a read or a write request was performed and show the underlying OS error that resulted from the I/O failure. These examples have been observed:
 
@@ -116,7 +140,7 @@ Review the SQL Server error log and use the methodology outlined in this article
 - Update your SQL Server to a later build (Cumulative update)
 - Ensure no external component is interfering and causing the failure
 
-### Example with 4303
+### Example with error 4303
 
 This example illustrates a restore of a transaction log sequence that failed and raised error 3013. The specific error indicates that more transaction log restores are missing prior to this one or that the transaction log backup file is damaged. For example the LSN = 4294967295429496729565535 doesn't appear to be a valid LSN and that may be a result of a corrupt backup file or media.
 
@@ -130,6 +154,8 @@ RESTORE DATABASE is terminating abnormally.
 **Resolution:**
 
 If you encounter errors such as 4303 together with 3013, find an alternative good backup to restore. Also check the stability of the storage media where backups are placed. 
+
+
 
 
 ## See also

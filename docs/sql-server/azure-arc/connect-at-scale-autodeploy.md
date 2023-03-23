@@ -29,7 +29,7 @@ Once the onboarding is complete, you can benefit with the Azure features for SQL
 > [!NOTE]
 > There is no cost associated with this change. But If you would like to opt out of the automatic installation of Azure extension for SQL Server, follow the instructions in the [How to opt out of automatic onboarding](#how-to-opt-out-automatic-onboarding) section.
 
-## Automatically fix incomplete onboarding of Arc enabled SQL Servers
+## Automatically remediate incompletely onboarded Arc enabled SQL Servers
 
 There are certain cases where the attempt to connect SQL Server machines to Azure may result in incomplete onboarding to Azure. The following are the few reason that can result in incomplete onboarding of SQL Servers to Azure Arc.
 

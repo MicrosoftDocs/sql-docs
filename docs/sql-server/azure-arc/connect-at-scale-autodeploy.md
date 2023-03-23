@@ -1,5 +1,5 @@
 ---
-title: Automatically connect Azure Arc enabled SQL Servers
+title: Automatically connect Azure Arc-enabled SQL Servers
 description: In this article, you learn how Microsoft helps you automatically connect SQL Server instances to Azure Arc at scale.
 author: pochiraju
 ms.author: rajpo
@@ -9,7 +9,7 @@ ms.service: sql
 ms.topic: conceptual
 ---
 
-# Automatically connect Azure Arc enabled SQL Servers
+# Automatically connect Azure Arc-enabled SQL Servers
 
 To streamline the experience of connecting SQL Servers to Azure, Microsoft automatically installs the Azure extension for SQL Server on all Arc-enabled servers that have SQL Server installed which will result in all of the SQL Server instances being automatically created in Azure. To learn more, see [Azure Arc-enabled SQL Server](overview.md).
 
@@ -61,7 +61,7 @@ There can be few cases where the attempt to connect SQL Server machines to Azure
 
 To fulfill the intent of connecting SQL Servers to Azure Arc and get the most out of Azure, Microsoft will automatically deploy the Azure extension for SQL Server on the machine.
 
-The steps to automatically connect Azure Arc enabled SQL Server are:
+The steps to automatically connect Azure Arc-enabled SQL Server are:
 
 1. **Initial notification**: Microsoft sends a first email notification 14 days prior to automatically connecting SQL Servers to Azure. The email goes to subscription owners if both of the following points are true:
 

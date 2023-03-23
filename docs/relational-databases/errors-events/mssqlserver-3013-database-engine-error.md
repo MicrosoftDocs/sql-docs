@@ -29,12 +29,12 @@ helpviewer_keywords:
 
 ## Explanation
 
-This is a generic error that occurs when a backup or restore operation is interrupted unexpectedly. You'll frequently see 3013 together with other error messages that provide more specific insight into the cause of the backup failure. Examples would include read or writes failure from/to the backup media, registry read/write operations, or other unexpected Win32 API call failures.
+This error is a generic error that occurs when a backup or restore operation is interrupted unexpectedly. You'll frequently see 3013 together with other error messages that provide more specific insight into the cause of the backup failure. Examples would include read or writes failure from/to the backup media, registry read/write operations, or other unexpected Win32 API call failures.
 
 ## User action
 
 Examine the SQL Error log for other messages that occur alongside this error for additional information and troubleshooting.  
-Here are examples of commonly-observed errors together with 3013.
+Here are examples of commonly observed errors together with 3013.
 
 ### Example with error 3241
 
@@ -56,7 +56,7 @@ For more troubleshooting ideas, see [Media-related errors when you restore a dat
 
 ### Examples with error 3203 and 3203
 
-Errors 3202 and 3203 are backup errors raised when there are I/O-related issues. These two errors indicate whether a read or a write request was performed and show the underlying OS error that resulted from the I/O failure. These are examples observed:
+Errors 3202 and 3203 are backup errors raised when there are I/O-related issues. These two errors indicate whether a read or a write request was performed and show the underlying OS error that resulted from the I/O failure. These examples have been observed:
 
   ```output
   Msg 3203, Level 16, State 1, Line 1
@@ -81,7 +81,7 @@ Errors 3202 and 3203 are backup errors raised when there are I/O-related issues.
 
 **Resolution:**
 
-- The examples with OS 483 and 1117 indicate I/O device failure. Check for malfunction or damage of the storage media. Review System event logs, hardware configuration and logs and work with hardware admiistrator and vendor to address any issues with the media that stores the backups. Here is an example of a message you may find in the System Event log which indicates of I/O issues that need to be addressed:
+- The examples with OS 483 and 1117 indicate I/O device failure. Check for malfunction or damage of the storage media. Review System event logs, hardware configuration and logs and work with hardware administrator and vendor to address any issues with the media that stores the backups. Here's an example of a message you may find in the System Event log, which indicates of I/O issues that need to be addressed:
 
   ```
   Warning PM,Disk,153,None,The IO operation at logical block address 0xe90525a0 for Disk 3 (PDO name: \Device\00000017) was retried.
@@ -91,7 +91,7 @@ Errors 3202 and 3203 are backup errors raised when there are I/O-related issues.
 
 ### Example with 3624
 
-In some cases error 3013 may be raised together with a system assertion. If a backup fails with a assertion, then the main focus is to address the assertion itself. Here is an example of an issue observed:
+In some cases error 3013 may be raised together with a system assertion. If a backup fails with an assertion, then the main focus is to address the assertion itself. Here's an example of an issue observed:
 
 ```output
 Msg 3013, Sev 16, State 1, Line 1 : VERIFY DATABASE is terminating abnormally.

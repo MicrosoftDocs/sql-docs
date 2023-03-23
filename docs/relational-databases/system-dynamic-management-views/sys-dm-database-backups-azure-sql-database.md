@@ -93,3 +93,22 @@ INNER JOIN sys.databases AS db
     ON ddb.physical_database_name = db.physical_database_name
 ORDER BY backup_start_date DESC;
 ```
+
+----------
+Query exposed to run in user database needs correction in the JOIN clause because as it is, it will return duplicate rows, since the same [physical_database_name] will be presented for the user database itself and master (in sys.databases), hence the JOIN clause should be corrected by simply adding "AND (db.database_id <> 1)" like this:
+
+SELECT backup_start_date
+    , backup_finish_date
+    , CASE backup_type
+        WHEN 'D' THEN 'Full'
+        WHEN 'I' THEN 'Differential'
+        WHEN 'L' THEN 'Transaction Log'
+        END AS BackupType
+    , CASE in_retention
+        WHEN 1 THEN 'In Retention'
+    WHEN 0 THEN 'Out of Retention'
+    END AS is_Bakcup_Available
+FROM sys.dm_database_backups AS ddb
+INNER JOIN sys.databases AS db
+    ON (ddb.physical_database_name = db.physical_database_name) AND (db.database_id <> 1) 
+ORDER BY backup_start_date DESC;

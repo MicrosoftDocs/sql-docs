@@ -7,6 +7,7 @@ ms.date: 03/14/2017
 ms.service: reporting-services
 ms.subservice: application-integration
 ms.topic: reference
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "rendered reports [Reporting Services]"
   - "Windows applications [Reporting Services]"

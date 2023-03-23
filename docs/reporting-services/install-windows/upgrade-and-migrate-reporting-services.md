@@ -6,6 +6,7 @@ ms.author: maggies
 ms.date: 05/06/2021
 ms.service: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "SSRS, upgrading"
   - "Reporting Services, upgrades"

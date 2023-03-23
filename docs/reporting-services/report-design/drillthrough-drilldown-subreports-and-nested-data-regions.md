@@ -7,6 +7,7 @@ ms.date: 03/07/2023
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Drillthrough, drilldown, subreports, and nested data regions in a paginated report (Report Builder)
 

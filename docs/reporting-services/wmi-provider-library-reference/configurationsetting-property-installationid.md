@@ -7,7 +7,9 @@ ms.date: 03/01/2017
 ms.service: reporting-services
 ms.subservice: wmi-provider-library-reference
 ms.topic: conceptual
-ms.custom: intro-installation
+ms.custom:
+  - intro-installation
+  - updatefrequency5
 helpviewer_keywords:
   - "InstanceID property"
 apilocation: "reportingservices.mof"

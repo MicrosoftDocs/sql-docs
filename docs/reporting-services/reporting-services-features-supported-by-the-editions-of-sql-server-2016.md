@@ -7,6 +7,7 @@ ms.date: 10/12/2022
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # SQL Server Reporting Services features supported by editions

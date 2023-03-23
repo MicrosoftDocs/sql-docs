@@ -7,6 +7,7 @@ ms.date: 06/06/2019
 ms.service: reporting-services
 ms.subservice: reports
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "XML schemas [Reporting Services]"
   - "Report Definition Language, XML schema"

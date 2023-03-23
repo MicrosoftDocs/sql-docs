@@ -7,7 +7,9 @@ ms.date: 11/23/2020
 ms.service: reporting-services
 ms.subservice: custom-assemblies
 ms.topic: reference
-ms.custom: intro-deployment
+ms.custom:
+  - intro-deployment
+  - updatefrequency5
 helpviewer_keywords:
   - "deploying custom assemblies [Reporting Services]"
   - "custom assemblies [Reporting Services], deploying"

@@ -6,6 +6,7 @@ ms.author: maggies
 ms.date: 05/31/2016
 ms.service: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "encryption keys [Reporting Services]"
   - "deleting encryption keys"

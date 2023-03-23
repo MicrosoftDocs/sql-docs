@@ -6,6 +6,7 @@ ms.author: maggies
 ms.date: 01/16/2020
 ms.service: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "URL reservations"
   - "URL registration"

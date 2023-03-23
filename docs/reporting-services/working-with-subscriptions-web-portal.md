@@ -7,6 +7,7 @@ ms.date: 01/24/2022
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Working with subscriptions (web portal)

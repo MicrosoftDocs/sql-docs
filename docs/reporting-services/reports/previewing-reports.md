@@ -7,6 +7,7 @@ ms.date: 12/14/2018
 ms.service: reporting-services
 ms.subservice: reports
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Preview Reports in SQL Server Reporting Services (SSRS)
 

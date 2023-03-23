@@ -6,6 +6,7 @@ ms.author: maggies
 ms.date: 08/26/2021
 ms.service: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "report servers [Reporting Services], deployments"
   - "deploying [Reporting Services], scale-out deployment model"

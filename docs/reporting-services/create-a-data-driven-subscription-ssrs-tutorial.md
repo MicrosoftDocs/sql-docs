@@ -7,6 +7,7 @@ ms.date: 05/26/2016
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "subscriptions [Reporting Services], tutorials"
   - "walkthroughs [Reporting Services]"

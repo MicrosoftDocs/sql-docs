@@ -281,7 +281,7 @@ Restore-AzSqlinstanceDatabase -FromPointInTimeBackup -Name $deletedDatabase.Name
                               -TargetInstanceName $targetInstanceName 
 ```
 
-To restore the database to another subscription, set the context to the the target subscription (`Set-AzContext`) and be sure to provide values for the required parameters `-TargetSubscriptionID`, and `-DeleteDate`: 
+To restore the database to another subscription, set the context to the target subscription (`Set-AzContext`) and be sure to provide values for the required parameters `-TargetSubscriptionID`, and `-DeleteDate`: 
 
 ```powershell-interactive
 Set-AzContext -SubscriptionID "targetSubscriptionID"

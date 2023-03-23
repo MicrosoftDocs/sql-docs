@@ -45,6 +45,10 @@ SET PARSEONLY { ON | OFF }
  The setting of SET PARSEONLY is set at parse time and not at execute or run time.  
   
  Do not use PARSEONLY in a stored procedure or a trigger. SET PARSEONLY returns offsets if the OFFSETS option is ON and no errors occur.  
+ 
+ As *"SET PARSEONLY"* is applied during Parse Time, it is not conditional.
+ 
+ That is *if ( 1=0) set parseonly on* will be acted upon, and though the rest of the SQL will be parsed, successive SQL Statements will not be executed.
   
 ## Permissions  
  Requires membership in the **public** role.  

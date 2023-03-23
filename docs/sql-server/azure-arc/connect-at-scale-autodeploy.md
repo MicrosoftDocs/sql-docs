@@ -135,3 +135,4 @@ resources
 - [Azure Arc-enabled SQL Server](overview.md)
 - [Deployment options for Azure Arc-enabled SQL Server](deployment-options.md)
 - [Prerequisites](prerequisites.md)
+- [Data collected by Arc enabled SQL Server](data-collection.md)

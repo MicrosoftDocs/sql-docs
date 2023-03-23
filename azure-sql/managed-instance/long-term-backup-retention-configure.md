@@ -43,7 +43,7 @@ Prepare your environment for PowerShell.
 For **Get-AzSqlInstanceDatabaseLongTermRetentionBackup** and **Restore-AzSqlInstanceDatabase**, you will need to have one of the following roles:
 
 - Subscription Owner role or
-- Managed Instance Contributor role or
+- SQL Managed Instance Contributor role or
 - Custom role with the following permissions:
   - `Microsoft.Sql/locations/longTermRetentionManagedInstanceBackups/read`
   - `Microsoft.Sql/locations/longTermRetentionManagedInstances/longTermRetentionManagedInstanceBackups/read`
@@ -56,7 +56,7 @@ For **Remove-AzSqlInstanceDatabaseLongTermRetentionBackup**, you will need to ha
   - `Microsoft.Sql/locations/longTermRetentionManagedInstances/longTermRetentionDatabases/longTermRetentionManagedInstanceBackups/delete`
 
 > [!NOTE]
-> The Managed Instance Contributor role does not have permission to delete LTR backups.
+> The SQL Managed Instance Contributor role does not have permission to delete LTR backups.
 
 Azure RBAC permissions could be granted in either *subscription* or *resource group* scope. However, to access LTR backups that belong to a dropped instance, the permission must be granted in the *subscription* scope of that instance.
 
@@ -85,7 +85,7 @@ You can configure SQL Managed Instance to [retain automated backups](../database
 
 # [Azure CLI](#tab/azure-cli)
 
-1. Run the [az sql midb show](/cli/azure/sql/midb#az-sql-midb-show) command to get the details for the Managed Instance database.
+1. Run the [az sql midb show](/cli/azure/sql/midb#az-sql-midb-show) command to get the details for the SQL Managed Instance database.
 
     ```azurecli
     az sql midb show /

@@ -29,7 +29,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||>=sq
 |**query_id**|**bigint**|Primary key.|  
 |**query_text_id**|**bigint**|Foreign key. Joins to [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|  
 |**context_settings_id**|**bigint**|Foreign key. Joins to [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md).<br/>**Note:** Azure Synapse Analytics will always return one (1).|  
-|**object_id**|**bigint**|ID of the database object that the query is part of (stored procedure, trigger, CLR UDF/UDAgg, etc.). 0 if the query is not executed as part of a database object (ad-hoc query).<br/>**Note:** Azure Synapse Analytics will always return zero (0).|  
+|**object_id**|**bigint**|ID of the database object that the query is part of (stored procedure, trigger, CLR UDF/UDAgg, etc.). 0 if the query is not executed as part of a database object (ad hoc query).<br/>**Note:** Azure Synapse Analytics will always return zero (0).|  
 |**batch_sql_handle**|**varbinary(64)**|ID of the statement batch the query is part of. Populated only if query references temporary tables or table variables.<br/>**Note:** Azure Synapse Analytics will always return *NULL*.|  
 |**query_hash**|**binary(8)**|MD5 hash of the individual query, based on the logical query tree. Includes optimizer hints.|  
 |**is_internal_query**|**bit**|The query was generated internally.<br/>**Note:** Azure Synapse Analytics will always return zero (0).|  

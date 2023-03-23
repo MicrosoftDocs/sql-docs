@@ -495,7 +495,7 @@ Query hints can be specified only in the top-level query, not in subqueries. Whe
 
 ## Specify table hints as query hints
 
-We recommend using the INDEX, FORCESCAN, or FORCESEEK table hint as a query hint only in the context of a [plan guide](../../relational-databases/performance/plan-guides.md). Plan guides are useful when you can't modify the original query, for example, because it's a third-party application. The query hint specified in the plan guide is added to the query before it's compiled and optimized. For ad-hoc queries, use the TABLE HINT clause only when testing plan guide statements. For all other ad-hoc queries, we recommend specifying these hints only as table hints.
+We recommend using the INDEX, FORCESCAN, or FORCESEEK table hint as a query hint only in the context of a [plan guide](../../relational-databases/performance/plan-guides.md). Plan guides are useful when you can't modify the original query, for example, because it's a third-party application. The query hint specified in the plan guide is added to the query before it's compiled and optimized. For ad hoc queries, use the TABLE HINT clause only when testing plan guide statements. For all other ad hoc queries, we recommend specifying these hints only as table hints.
 
 When specified as a query hint, the INDEX, FORCESCAN, and FORCESEEK table hints are valid for the following objects:
 

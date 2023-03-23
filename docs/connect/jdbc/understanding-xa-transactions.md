@@ -26,7 +26,7 @@ The classes for the distributed transaction implementation are as follows:
 | Class                                              | Implements                      | Description                                       |
 | -------------------------------------------------- | ------------------------------- | ------------------------------------------------- |
 | com.microsoft.sqlserver.jdbc.SQLServerXADataSource | javax.sql.XADataSource          | The class factory for distributed connections.    |
-| com.microsoft.sqlserver.jdbc.SQLServerXAResource   | javax.transaction.xa.XAResource | The resource adaptor for the transaction manager. |
+| com.microsoft.sqlserver.jdbc.SQLServerXAResource   | javax.transaction.xa.XAResource | The resource adapter for the transaction manager. |
   
 > [!NOTE]  
 > XA distributed transaction connections default to the Read Committed isolation level.  

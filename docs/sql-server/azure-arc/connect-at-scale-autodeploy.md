@@ -24,7 +24,7 @@ Starting from April 11, 2023, Microsoft automatically installs Azure extension f
 
 Configure the appropriate license type. For instructions, see [Specify License Type value in auto onboarding tag](#specify-license-type-value-in-auto-onboarding-tag). Microsoft uses this value when the SQL Server extension is deployed via the automatic onboarding work flow.
 
-After the preceding steps are complete, the benefits of Arc SQL Server core features are available for free. To learn more, see [Manage SQL Server license and billing options](manage-license-type.md).
+Once the onboarding is complete, you can benefit with the Azure features for SQL Server. To learn more, see [Manage SQL Server license and billing options](manage-license-type.md).
 
 > [!NOTE]
 > There is no cost associated with this change. But If you would like to opt out of the automatic installation of Azure extension for SQL Server, follow the instructions in the [How to opt out of automatic onboarding](#how-to-opt-out-automatic-onboarding) section.
@@ -38,9 +38,9 @@ There are certain cases where the attempt to connect SQL Server machines to Azur
 
 To fulfill your intent of connecting SQL Servers to Azure Arc and get the most out of Azure, Microsoft will automatically deploy the Azure extension for SQL Server to your Arc-enabled servers that have SQL Server installed. There is no cost associated with this change.
 
-The auto onboarding of Arc enabled SQL Servers is executed in multiple steps. This following list explains those steps.
+The steps for auto onboarding of Arc enabled SQL Server are:
 
-1. Microsoft sends a first email notification 14 days prior to the auto onboarding SQL Servers to Azure. The email goes to subscription owners if both of the following points are true:
+1. **Initial notification**: Microsoft sends a first email notification 14 days prior to the auto onboarding SQL Servers to Azure. The email goes to subscription owners if both of the following points are true:
 
    - The subscription contains one or more Arc Servers with SQL Server installed
      and
@@ -57,9 +57,9 @@ The auto onboarding of Arc enabled SQL Servers is executed in multiple steps. Th
 
    - Provides the instructions to opt out, if you decide to opt out of the automatic onboarding that Microsoft plan to execute.
 
-2. Microsoft sends a second notification 7 days prior to the auto onboarding SQL Servers to Azure.
-3. Microsoft sends a final notification 1 day prior to the auto onboarding SQL Servers to Azure.
-1. If there is no opt out received, Microsoft automatically onboards SQL Servers to Azure Arc.
+2. **Reminder**: Microsoft sends a second notification 7 days prior to the auto onboarding SQL Servers to Azure.
+3. **Reminder**: Microsoft sends a final notification 1 day prior to the auto onboarding SQL Servers to Azure.
+1. **Execution**: If there is no opt out received, Microsoft automatically onboards SQL Servers to Azure Arc.
    - If it is not already registered, Microsoft registers Microsoft.AzureArcData resource provider with your subscription.
    - If it is not deployed already, Microsoft deploys the Azure extension for SQL Servers on SQL Server machine.
    - If License type is provided in the onboarding tag, set the SQL Server license type to the value provided. Learn more.

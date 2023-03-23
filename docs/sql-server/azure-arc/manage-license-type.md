@@ -129,10 +129,10 @@ $Settings = @{ SqlManagement = @{ IsEnabled = $true }; ExcludedSqlInstances = @(
 New-AzConnectedMachineExtension -Name "WindowsAgent.SqlServer" -ResourceGroupName {your resource group name} -MachineName {your machine name} -Location {azure region} -Publisher "Microsoft.AzureData" -Settings $Settings -ExtensionType "WindowsAgent.SqlServer"
 ```
 
-To modify the license type for a larger scope, such as a resource group, subscription or multiple subscriptions with a single command, use [Modify license type script](https://github.com/anosov1960/sql-server-samples/tree/master/samples/manage/azure-arc-enabled-sql-server/modify-license-type). It is published as an open source SQL Server sample and includes the step-by-step instructions.
+To modify the license type for a larger scope, such as a resource group, subscription or multiple subscriptions with a single command, use [Modify license type script](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/azure-arc-enabled-sql-server/modify-license-type). It is published as an open source SQL Server sample and includes the step-by-step instructions.
 
 > [!TIP]  
-> Run the script from Azure Cloud shell as it has the required Azure PowerShell modules pre-installed and you will be automatically authenticated. For details, see [Running the script using Cloud Shell](https://github.com/anosov1960/sql-server-samples/tree/master/samples/manage/azure-arc-enabled-sql-server/modify-license-type#running-the-script-using-cloud-shell).
+> Run the script from Azure Cloud shell as it has the required Azure PowerShell modules pre-installed and you will be automatically authenticated. For details, see [Running the script using Cloud Shell](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/azure-arc-enabled-sql-server/modify-license-type#running-the-script-using-cloud-shell).
 
 ### [Azure CLI](#tab/az)
 

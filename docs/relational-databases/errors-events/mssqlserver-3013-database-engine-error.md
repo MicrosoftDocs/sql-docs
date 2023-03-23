@@ -29,7 +29,12 @@ helpviewer_keywords:
 
 ## Explanation
 
-This error is a generic error that occurs when a backup or restore operation is interrupted unexpectedly. You see 3013 raised together with other error messages that provide more specific insight into the cause of the backup failure. Examples would include read or writes failure from/to the backup media, registry read/write operations, or other unexpected Win32 API call failures.
+This error is a generic error that occurs when a backup or restore operation is interrupted unexpectedly. You see 3013 raised together with other error messages that provide more specific insight into the cause of the backup failure. Examples would include read or writes failure from/to the backup media or other unexpected Win32 API call failures. 
+
+
+## Cause
+
+There could be many various causes for an abnormal termination of a backup or a restore in SQL Server. But a common group of problems is associated with storage device or I/O issues. Another cause can be a SQL Server bug that's leading to the problem. 
 
 ## User action
 
@@ -113,7 +118,7 @@ Review the SQL Server error log and use the methodology outlined in this article
 
 ### Example with 4303
 
-This example illustrates a restore of a transaction log sequence that failed and raised error 3013. The specific error indicates that more transaction log restores are missing prior to this one or that the transaction log backup file is damaged. For example the LSN = 4294967295429496729565535 doesn't appear to be a valid LSN and that may be a result from corrupt log backup file/media.
+This example illustrates a restore of a transaction log sequence that failed and raised error 3013. The specific error indicates that more transaction log restores are missing prior to this one or that the transaction log backup file is damaged. For example the LSN = 4294967295429496729565535 doesn't appear to be a valid LSN and that may be a result of a corrupt backup file or media.
 
 ```output
 Msg 4303, Level 16, State 1, Line 3

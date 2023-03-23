@@ -3,7 +3,7 @@ title: DBCC DROPCLEANBUFFERS (Transact-SQL)
 description: DBCC DROPCLEANBUFFERS removes all clean buffers from the buffer pool, and columnstore objects from the columnstore object pool.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 12/05/2022
+ms.date: 03/23/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: "language-reference"
@@ -79,9 +79,13 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 
 ## Permissions
 
-Applies to: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+Applies to: SQL Server 2022 and later, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 - Requires **ALTER SERVER STATE** permission on the server
+
+Applies to: SQL Server 2019 and previous versions
+
+- Requires **sysadmin** permission on the server
 
 Applies to: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 

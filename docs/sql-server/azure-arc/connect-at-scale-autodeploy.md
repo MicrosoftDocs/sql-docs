@@ -1,6 +1,6 @@
 ---
 title: Auto onboarding of Arc enabled SQL Servers
-description: In this article, you learn how to Microsoft help by auto onboarding SQL Server instances to Azure Arc at scale.
+description: In this article, you learn how Microsoft helps you automatically onboard SQL Server instances to Azure Arc at scale.
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mikeray, randolphwest
@@ -11,14 +11,14 @@ ms.topic: conceptual
 
 # Auto onboarding of Arc enabled SQL Servers
 
-To simplify deployment, Microsoft provides an automated process for you to onboard your Azure Arc-enabled servers to Arc-enabled SQL Server so that you can receive the full benefits of connecting the SQL Servers to Azure Arc.
-Azure extension for SQL Server provides free benefits help to you manage, secure, protect, and govern all your SQL Servers from a single point of control in Azure. To learn more, see [Azure Arc-enabled SQL Server](overview.md).
+To maximize the value of Azure Arc, Microsoft provides an automated process to onboarding your SQL Server instances running on the machines already connected to Azure Arc (Azure Arc-enabled servers).
+Azure extension for SQL Server provides benefits help to you manage, secure, protect, and govern all your SQL Servers from a single point of control in Azure. To learn more, see [Azure Arc-enabled SQL Server](overview.md).
 
 ## Automatically install Azure SQL extension on new machines connected to Arc
 
-Starting from the \<date> Microsoft automatically deploys Azure extension for SQL Server, Arc enable SQL Server when you connect SQL Server machine to Azure Arc. In this process, Microsoft does the following tasks:
+Microsoft automatically installs Azure extension for SQL Server on each machine connected to Azure Arc if it has SQL Server instance(s) installed on the machine. This automated process involves the following tasks:
 
-1. Attempts to register the  `Microsoft.AzureArcData` resource provider.
+1. Registers the  `Microsoft.AzureArcData` resource provider, if not already registered.
 1. Installs the Azure extension for SQL Server on the machines that have one or more instances of SQL Server installed.
 1. Creates Arc enabled SQL Server resource in Azure.
 

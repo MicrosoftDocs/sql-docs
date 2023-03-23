@@ -29,7 +29,7 @@ helpviewer_keywords:
 
 ## Explanation
 
-This error is a generic error that occurs when a backup or restore operation is interrupted unexpectedly. You'll frequently see 3013 together with other error messages that provide more specific insight into the cause of the backup failure. Examples would include read or writes failure from/to the backup media, registry read/write operations, or other unexpected Win32 API call failures.
+This error is a generic error that occurs when a backup or restore operation is interrupted unexpectedly. You see 3013 raised together with other error messages that provide more specific insight into the cause of the backup failure. Examples would include read or writes failure from/to the backup media, registry read/write operations, or other unexpected Win32 API call failures.
 
 ## User action
 
@@ -110,6 +110,22 @@ Review the SQL Server error log and use the methodology outlined in this article
 
 - Update your SQL Server to a later build (Cumulative update)
 - Ensure no external component is interfering and causing the failure
+
+### Example with 4303
+
+This example illustrates a restore of a transaction log sequence that failed and raised error 3013. The specific error indicates that more transaction log restores are missing prior to this one or that the transaction log backup file is damaged. For example the LSN = 4294967295429496729565535 doesn't appear to be a valid LSN and that may be a result from corrupt log backup file/media.
+
+```output
+Msg 4303, Level 16, State 1, Line 3
+The roll forward start point is now at log sequence number (LSN) 8177105000003941300003. Additional roll forward past LSN 4294967295429496729565535 is required to complete the restore sequence.
+Msg 3013, Level 16, State 1, Line 3
+RESTORE DATABASE is terminating abnormally.
+```
+
+**Resolution:**
+
+If you encounter errors such as 4303 together with 3013, find an alternative good backup to restore. Also check the stability of the storage media where backups are placed. 
+
 
 ## See also
 

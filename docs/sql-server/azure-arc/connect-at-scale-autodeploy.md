@@ -49,13 +49,13 @@ The auto onboarding of Arc enabled SQL Servers is executed in multiple phases as
    The email:
 
    - Explains the reason resulted in incomplete onboarding of SQL Servers to Azure Arc.
-   - Provides specific guidance that help you to complete the onboarding process of SQL Servers to Azure Arc on your own.
+   - Provides specific guidance that helps you to complete the onboarding process of SQL Servers to Azure Arc on your own.
 
       If you'd like register `Microsoft.AzureArcData` yourself, follow the steps at [Register resource providers](prerequisites.md#register-resource-providers).
 
       If you'd like to deploy the Azure extension for SQL Server yourself right away, follow the steps at [Connect your SQL Server to Azure Arc on a server already connected to Azure Arc](connect-already-enabled.md#connect-your-sql-server-to-azure-arc-on-a-server-already-connected-to-azure-arc) to deploy the extension to one server at a time using the Azure portal. Alternatively you can use Azure Policy to deploy the extension to all servers that have SQL Server installed. ` |
 
-   - Provides the opt out instructions, if you decide to opt out of the automatic onboarding that Microsoft plan to execute.
+   - Provides the instructions to opt out, if you decide to opt out of the automatic onboarding that Microsoft plan to execute.
 
 2. Microsoft sends a second notification 7 days prior to the auto onboarding SQL Servers to Azure.
 3. Microsoft sends a final notification 1 day prior to the auto onboarding SQL Servers to Azure.
@@ -66,7 +66,7 @@ The auto onboarding of Arc enabled SQL Servers is executed in multiple phases as
 
 ## Fix missing License type
 
-You may have SQL Server machines successfully connected to Arc but need to set the proper “License Type” to unlock the free Arc enabled SQL Server benefits. To list Arc SQL Severs that are missing proper license type, run the resource graph query below.
+You may have SQL Server machines successfully connected to Arc but need to set the proper “License Type” to unlock the free Arc enabled SQL Server benefits. To check if any Arc SQL Servers are missing proper license type, run the resource graph query below.
 
 ```msgraph-interactive
 resources

@@ -326,8 +326,6 @@
         "odbc/reference/develop-driver/*.md": "UpdateFrequency5",
         "odbc/reference/install/*.md": "UpdateFrequency5",
         "powershell/*.md": "UpdateFrequency5",
-        "reporting-services/*.md": "UpdateFrequency5",
-        "reporting-services/**/*.md": "UpdateFrequency5",
         "relational-databases/blob/*.md": "UpdateFrequency5",
         "relational-databases/clr-integration/*.md": "UpdateFrequency5",
         "relational-databases/clr-integration/database-objects/*.md": "UpdateFrequency5",

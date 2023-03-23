@@ -19,10 +19,10 @@ Azure extension for SQL Server provides benefits help to you manage, secure, pro
 Microsoft automatically installs Azure extension for SQL Server on each machine connected to Azure Arc if it has SQL Server instance(s) installed on the machine. This automated process involves the following tasks:
 
 1. Registers the  `Microsoft.AzureArcData` resource provider, if not already registered.
-1. Installs the Azure extension for SQL Server on the machines that have one or more instances of SQL Server installed.
+1. Installs the Azure extension for SQL Server.
 1. Creates Arc enabled SQL Server resource in Azure.
 
-You should specify your desired license type. For instructions, see [Specify License Type value in auto onboarding tag](#specify-license-type-value-in-auto-onboarding-tag). Microsoft uses that value when the SQL Server extension is deployed via the automatic onboarding work flow.
+Configure the appropriate license type. For instructions, see [Specify License Type value in auto onboarding tag](#specify-license-type-value-in-auto-onboarding-tag). Microsoft uses this value when the SQL Server extension is deployed via the automatic onboarding work flow.
 
 After the preceding steps are complete, the benefits of Arc SQL Server core features are available for free. To learn more, see [Manage SQL Server license and billing options](manage-license-type.md).
 

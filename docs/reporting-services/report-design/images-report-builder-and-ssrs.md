@@ -7,6 +7,7 @@ ms.date: 11/4/2022
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Images in paginated reports (Report Builder)
 

@@ -7,6 +7,7 @@ ms.date: 06/22/2022
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Microsoft Report Builder support policy
 

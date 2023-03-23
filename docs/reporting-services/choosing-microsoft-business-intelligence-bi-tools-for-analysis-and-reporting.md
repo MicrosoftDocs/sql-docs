@@ -7,6 +7,7 @@ ms.date: 07/22/2020
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Analysis and reporting with Microsoft business intelligence (BI) tools
 

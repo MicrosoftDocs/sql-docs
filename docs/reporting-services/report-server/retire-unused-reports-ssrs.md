@@ -7,6 +7,7 @@ ms.date: 11/21/2022
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Find and retire unused reports (SSRS)

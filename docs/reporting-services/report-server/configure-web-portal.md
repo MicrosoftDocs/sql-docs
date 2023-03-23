@@ -7,6 +7,7 @@ ms.date: 05/10/2017
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "the web portal [Reporting Services], configuring"
 ---

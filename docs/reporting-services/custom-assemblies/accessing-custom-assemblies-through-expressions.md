@@ -7,6 +7,7 @@ ms.date: 03/04/2017
 ms.service: reporting-services
 ms.subservice: custom-assemblies
 ms.topic: reference
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "expressions [Reporting Services], custom assemblies"
   - "static member calls"

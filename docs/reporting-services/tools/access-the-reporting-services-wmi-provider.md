@@ -7,6 +7,7 @@ ms.date: 11/02/2016
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "WMI provider [Reporting Services]"
   - "programming [Reporting Services]"

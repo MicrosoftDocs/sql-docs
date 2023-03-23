@@ -7,6 +7,7 @@ ms.date: 08/16/2022
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # The web portal of a report server (SSRS Native Mode)
 

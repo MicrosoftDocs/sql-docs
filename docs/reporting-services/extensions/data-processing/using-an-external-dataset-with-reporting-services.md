@@ -7,6 +7,7 @@ ms.date: 03/06/2017
 ms.service: reporting-services
 ms.subservice: extensions
 ms.topic: reference
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "DataSet objects [Reporting Services]"
   - "data processing extensions [Reporting Services], custom DataSet objects"

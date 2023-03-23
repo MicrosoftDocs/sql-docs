@@ -7,6 +7,7 @@ ms.date: 04/18/2017
 ms.service: reporting-services
 ms.subservice: security
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "Forms authentication, configuring"
   - "custom authentication [Reporting Services]"

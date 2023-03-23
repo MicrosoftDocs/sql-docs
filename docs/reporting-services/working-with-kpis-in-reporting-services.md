@@ -7,6 +7,7 @@ ms.date: 01/06/2022
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Working with KPIs in Reporting Services

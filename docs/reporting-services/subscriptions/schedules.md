@@ -7,6 +7,7 @@ ms.date: 07/01/2016
 ms.service: reporting-services
 ms.subservice: subscriptions
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "schedules [Reporting Services]"
   - "schedules [Reporting Services], about schedules"

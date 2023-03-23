@@ -7,6 +7,7 @@ ms.date: 06/01/2016
 ms.service: reporting-services
 ms.subservice: reports
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "production environments [Reporting Services]"
   - "report projects [Reporting Services]"

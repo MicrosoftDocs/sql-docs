@@ -7,6 +7,7 @@ ms.date: 04/18/2019
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Lesson 6: Adding Grouping and Totals (Reporting Services)

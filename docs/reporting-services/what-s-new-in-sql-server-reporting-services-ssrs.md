@@ -7,7 +7,9 @@ ms.date: 09/16/2022
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: intro-whats-new
+ms.custom:
+  - intro-whats-new
+  - updatefrequency5
 ---
 
 # What's new in SQL Server Reporting Services (SSRS)

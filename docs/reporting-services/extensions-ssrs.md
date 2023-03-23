@@ -7,6 +7,7 @@ ms.date: 12/14/2018
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Extensions for SQL Server Reporting Services (SSRS)

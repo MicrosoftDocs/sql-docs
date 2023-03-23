@@ -6,7 +6,9 @@ ms.author: maggies
 ms.date: 01/09/2018
 ms.service: reporting-services
 ms.topic: conceptual
-ms.custom: intro-installation
+ms.custom:
+  - intro-installation
+  - updatefrequency5
 helpviewer_keywords:
   - "command line"
 monikerRange: "= sql-server-2016"

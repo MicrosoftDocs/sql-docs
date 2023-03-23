@@ -16,7 +16,7 @@ Azure extension for SQL Server provides benefits help to you manage, secure, pro
 
 ## Automatically install Azure SQL extension on new servers connected to Arc
 
-Starting from April 11, 2023, Microsoft automatically installs Azure extension for SQL Server on each machine connected to Azure Arc if it has SQL Server instance(s) installed on the machine. This automated process involves the following tasks:
+Beginning April 11, 2023, Microsoft automatically installs Azure extension for SQL Server on each machine connected to Azure Arc if it has SQL Server instance(s) installed on the machine. This automated process involves the following tasks:
 
 1. Registers the  `Microsoft.AzureArcData` resource provider, if not already registered.
 1. Installs the Azure extension for SQL Server.

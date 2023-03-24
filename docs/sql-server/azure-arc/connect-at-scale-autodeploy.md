@@ -50,8 +50,8 @@ Microsoft automatically installs Azure extension for SQL Server on each machine 
 
 1. Installs the Azure extension for SQL Server.
 
-> [!NOTE]
-> The license type is set if the `ArcSQLServerExtensionDeployment` tag value is set.
+    > [!NOTE]
+    > The license type is set if the `ArcSQLServerExtensionDeployment` tag value is set.
 
 1. Creates Arc-enabled SQL Server instance resource in Azure.
 

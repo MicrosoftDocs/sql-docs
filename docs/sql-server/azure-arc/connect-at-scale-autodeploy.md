@@ -13,6 +13,9 @@ ms.topic: conceptual
 
 Azure Arc-enabled SQL Server is a cloud-native solution provided by Microsoft to simplify the management, protection, and governance of SQL Server instances running on Azure Arc-enabled servers. This solution streamlines the experience of connecting SQL Servers to Azure by automatically installing the Azure extension for SQL Server on all Arc-enabled servers that have SQL Server installed. For more information, visit [Azure Arc-enabled SQL Server](overview.md). All the SQL Server instance resources are automatically created in Azure, providing a centralized management platform for all your SQL Servers.
 
+> [!IMPORTANT]
+> Microsoft will begin automatically connecting Azure Arc-enabled SQL Servers on April 11, 2023.
+
 This article details how the streamlined process of connecting SQL Server to Azure works.
 
 ## Prerequisites

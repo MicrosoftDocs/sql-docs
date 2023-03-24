@@ -23,7 +23,7 @@ Complete the [Prerequisites](prerequisites.md).
 
 Optionally, specify the license type for each instance of SQL Server.
 
-To specify the desired license type, provide the license type value tag. The automatic connecting workflow requires that tag. [Tag resources, resource groups, and subscriptions for a logical organization - Azure Resource Manager | Microsoft Learn](/azure/azure-resource-manager/management/tag-resources).
+To specify the desired license type, provide the license type value tag. The automatic connecting workflow requires that tag. [Tag resources, resource groups, and subscriptions for a logical organization](/azure/azure-resource-manager/management/tag-resources).
 
 Add one of the tags and values below to a subscription, resource group(s), or Arc Server resource(s).
 

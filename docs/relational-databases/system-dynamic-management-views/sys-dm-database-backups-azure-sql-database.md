@@ -57,10 +57,10 @@ FROM sys.dm_database_backups
 ORDER BY backup_finish_date DESC;
 ```
 
-You can get a friendlier resultset by joining to `sys.databases` and using a `CASE` statement. Run this query in the `master` database to get backup history for all databases in the Azure SQL Database server.
+To get a user friendly list of backups for a database, please run:
 
 ```sql
-SELECT db.name,
+SELECT backup_file_id, 
     backup_start_date,
     backup_finish_date,
     CASE backup_type
@@ -72,29 +72,6 @@ SELECT db.name,
         WHEN 1 THEN 'In retention'
         WHEN 0 THEN 'Out of retention'
         END AS IsBackupAvailable
-FROM sys.dm_database_backups AS ddb
-INNER JOIN sys.databases AS db
-    ON ddb.physical_database_name = db.physical_database_name
-ORDER BY backup_start_date DESC;
-```
-
-Run the following query in the user database context to get backup history for a single database.
-
-```sql
-SELECT backup_start_date,
-    backup_finish_date,
-    CASE backup_type
-        WHEN 'D' THEN 'Full'
-        WHEN 'I' THEN 'Differential'
-        WHEN 'L' THEN 'Transaction log'
-        END AS BackupType,
-    CASE in_retention
-        WHEN 1 THEN 'In retention'
-        WHEN 0 THEN 'Out of retention'
-        END AS IsBackupAvailable
-FROM sys.dm_database_backups AS ddb
-INNER JOIN sys.databases AS db
-    ON ddb.physical_database_name = db.physical_database_name
-        AND db.database_id <> 1 -- exclude the master database
+FROM sys.dm_database_backups
 ORDER BY backup_start_date DESC;
 ```

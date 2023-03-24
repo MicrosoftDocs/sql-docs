@@ -96,7 +96,7 @@ Errors 3202 and 3203 are backup errors raised when there are I/O-related issues.
 
   ```output
   Msg 3202, Level 16, State 1, Line 2
-  Write on "???" failed: 1117(The request could not be performed because of an I/O device error.)
+  Write on "Y:\SQLDATA\ProductionDb.bak" failed: 1117(The request could not be performed because of an I/O device error.)
   Msg 3013, Level 16, State 1, Line 2
   RESTORE DATABASE is terminating abnormally.
   ```
@@ -123,9 +123,12 @@ Errors 3202 and 3203 are backup errors raised when there are I/O-related issues.
 In some cases error 3013 may be raised together with a system assertion. If a backup fails with an assertion, then the main focus is to address the assertion itself. Here's an example of an issue observed:
 
 ```output
-Msg 3013, Sev 16, State 1, Line 1 : VERIFY DATABASE is terminating abnormally.
-Msg 3624, Sev 20, State 1, Line 1 : A system assertion check has failed. Check the SQL Server error log for details. Typically, an assertion failure is caused by a software bug or data corruption. To check for database corruption, consider running DBCC CHECKDB. If you agreed to send dumps to Microsoft during setup, a mini dump will be sent to Microsoft. An update might be available from Microsoft in the latest Service Pack or in a Hotfix from Technical Support.
-Msg 3624, Sev 20, State 1, Line 1 : Location:     mediaRead.cpp:429 Expression:     !m_ActiveConsumptionList.IsEmpty () || !m_ActiveReads.IsEmpty () || !m_DecodeOutputQ.IsEmpty () || (CFeatureSwitchesMin::GetCurrentInstance ()->FEnableCheckingActiveDecodeQueueEnabled () && !m_ActiveDecodeInput.IsEmpty ()) SPID:         74 Process ID:     25440
+Msg 3013, Sev 16, State 1, Line 1
+VERIFY DATABASE is terminating abnormally.
+Msg 3624, Sev 20, State 1, Line 1
+A system assertion check has failed. Check the SQL Server error log for details. Typically, an assertion failure is caused by a software bug or data corruption. To check for database corruption, consider running DBCC CHECKDB. If you agreed to send dumps to Microsoft during setup, a mini dump will be sent to Microsoft. An update might be available from Microsoft in the latest Service Pack or in a Hotfix from Technical Support.
+Error: 17066, Severity: 16, State: 1.
+SQL Server Assertion: File:     mediaRead.cpp:429 Expression:     !m_ActiveConsumptionList.IsEmpty () || !m_ActiveReads.IsEmpty () || !m_DecodeOutputQ.IsEmpty () || (CFeatureSwitchesMin::GetCurrentInstance ()->FEnableCheckingActiveDecodeQueueEnabled () && !m_ActiveDecodeInput.IsEmpty ()) SPID:         74 Process ID:     25440
 ```
 
 **Resolution:**
@@ -133,16 +136,16 @@ Msg 3624, Sev 20, State 1, Line 1 : Location:     mediaRead.cpp:429 Expression: 
 Review the SQL Server error log and use the methodology outlined in this article [MSSQLSERVER_3624](mssqlserver-3624-database-engine-error.md) to troubleshoot the assert failures:
 
 - Run DBCC CHECKDB on your databases and ensure all components on the I/O path are functioning properly.
-- Lookup part or all of the assert expression online for any known issues. For example in this case if you look up "m_ActiveConsumptionList.IsEmpty" you may encounter this article:
+- Lookup part or all of the assert expression online for any known issues. For example in this case if you look up "m_ActiveConsumptionList.IsEmpty" you may find this article:
 
-[KB4469554 - FIX: Assertion error occurs during restore of compressed backups in SQL Server 2014, 2016 and 2017](https://prod.support.services.microsoft.com/topic/kb4469554-fix-assertion-error-occurs-during-restore-of-compressed-backups-in-sql-server-2014-2016-and-2017-37cb5d08-d697-c3e4-a598-cb797425615c)
+  [KB4469554 - FIX: Assertion error occurs during restore of compressed backups in SQL Server 2014, 2016 and 2017](https://prod.support.services.microsoft.com/topic/kb4469554-fix-assertion-error-occurs-during-restore-of-compressed-backups-in-sql-server-2014-2016-and-2017-37cb5d08-d697-c3e4-a598-cb797425615c)
 
 - Update your SQL Server to a later build (Cumulative update)
 - Ensure no external component is interfering and causing the failure
 
 ### Example with error 4303
 
-This example illustrates a restore of a transaction log sequence that failed and raised error 3013. The specific error indicates that more transaction log restores are missing prior to this one or that the transaction log backup file is damaged. For example, the LSN = 4294967295429496729565535 doesn't appear to be a valid LSN and that may be a result of a corrupt backup file or media.
+This example illustrates a restore of a transaction log sequence that failed and raised error 3013. The specific error 4303 indicates that either more transaction log restores are missing prior to this one or that the transaction log backup file is damaged. For example, the LSN = 4294967295429496729565535 doesn't appear to be a valid LSN and that may be a result of a corrupt backup file or media.
 
 ```output
 Msg 4303, Level 16, State 1, Line 3
@@ -153,9 +156,7 @@ RESTORE DATABASE is terminating abnormally.
 
 **Resolution:**
 
-If you encounter errors such as 4303 together with 3013, find an alternative good backup to restore. Also check the stability of the storage media where backups are placed. 
-
-
+If you encounter errors such as 4303 together with 3013, find an alternative good backup to restore. Also check the stability of the storage media where backups are placed and repair as necessary.
 
 
 ## See also

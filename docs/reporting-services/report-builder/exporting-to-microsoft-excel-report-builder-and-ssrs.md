@@ -3,7 +3,7 @@ title: "Export a paginated report to Microsoft Excel (Report Builder)"
 description: In Report Builder, the Excel rendering extension renders a paginated report to the Office Open XML format to use with Microsoft Excel.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/02/2021
+ms.date: 03/24/2023
 ms.service: reporting-services
 ms.subservice: report-builder
 ms.topic: conceptual
@@ -261,7 +261,13 @@ The Excel rendering extension renders a paginated report to the [!INCLUDE[ofprex
   
 ##  <a name="ConditionalFormat"></a> Changing Reports at Run-Time  
  If a report must render to multiple formats and it is not possible to create a report layout that renders the way you want in all required formats, then you might consider using the value in the RenderFormat built-in global to conditionally change the report appearance at run time. This way you can hide or show report items depending the renderer used to get the best results in each format. For more information, see [Built-in Globals and Users References &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
-  
+
+## Troubleshooting export to Excel
+
+### Export to Excel or Word fails when using Virtual Service Account and Execution Account
+
+The workaround for this issue is to give Read permission to the Execution account for the described registry entry under the Virtual User Account branch, and restart the computer. For example, one possible registry entry is `HKEY_USERS\S-1-5-80-4050220999-2730734961-1537482082-519850261-379003301\Software\Microsoft\Avalon.Graphics`.
+
 ## See Also  
  [Pagination in Reporting Services &#40;Report Builder  and SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Rendering Behaviors &#40;Report Builder  and SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   

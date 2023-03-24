@@ -67,6 +67,17 @@ To leverage TDS 8.0, [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] ad
 
 In order to prevent a man-in-the-middle attack with `strict` connection encryption, users won't be able to set the `TrustServerCertificate` option to **true** and trust any certificate the server provided. Instead, users would use the `HostNameInCertificate` option to specify the certificate that should be trusted. The certificate supplied by the server would need to pass the certificate validation.
 
+> [!NOTE]  
+> "Force Strict Encryption" option in SQL Server Network Configuration will force all clients to use Strict as Encryption, just like "Force Encryption", so any clients or features do not use Strict Encryption fail to connect SQL Server.
+> 
+> Following features or tools are some example that does not work for now:
+> - AlwaysOn Failover Cluster Instance (FCI)
+> - AlwaysOn Availability Group
+> - Replication
+> - SQL Server Management Studio (SSMS)
+> - sqlcmd utility
+> - bcp utility
+
 ## Additional changes to connection string encryption properties
 
 The following additions are added to connection strings for encryption:

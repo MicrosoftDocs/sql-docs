@@ -52,7 +52,7 @@ Microsoft automatically installs Azure extension for SQL Server on each machine 
 
 1. Creates Arc-enabled SQL Server instance resource in Azure.
 
-Once the connecting is complete, you can benefit from the Azure features for SQL Server. See [Manage SQL Server license and billing options](manage-license-type.md) to learn more.
+Once the connecting is complete, you can benefit from the Azure features for SQL Server. For more information, visit [Manage SQL Server license and billing options](manage-license-type.md).
 
 ## Set appropriate license type
 

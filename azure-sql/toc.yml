@@ -583,7 +583,7 @@
       href: database/cost-management.md      
     - name: Connect and query
       items:
-      - name: Connect and run ad-hoc queries
+      - name: Connect and run ad hoc queries
         items:
         - name: Azure Data Studio
           href: /sql/azure-data-studio/quickstart-sql-database
@@ -877,7 +877,7 @@
             href: database/saas-multitenantdb-provision-and-catalog.md
           - name: Monitor database performance
             href: database/saas-multitenantdb-performance-monitoring.md
-          - name: Run ad-hoc queries
+          - name: Run ad hoc queries
             href: database/saas-multitenantdb-adhoc-reporting.md
           - name: Manage tenant schema
             href: database/saas-multitenantdb-schema-management.md

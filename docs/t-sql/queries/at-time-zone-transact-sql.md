@@ -140,11 +140,13 @@ The following example converts values between different time zones. The **inputd
 USE AdventureWorks2016;
 GO
 
+DECLARE @CustomerTimeZone nvarchar(128) = 'Central European Standard Time';
+
 SELECT SalesOrderID, OrderDate,
     --Assign the known offset only
     OrderDate AT TIME ZONE 'Pacific Standard Time' AS OrderDate_TimeZonePST,
     --Assign the known offset, then convert to another time zone
-    OrderDate AT TIME ZONE 'Pacific Standard Time' AT TIME ZONE 'Central European Standard Time' AS OrderDate_TimeZoneCET
+    OrderDate AT TIME ZONE 'Pacific Standard Time' AT TIME ZONE @CustomerTimeZone AS OrderDate_TimeZoneCustomer
 FROM Sales.SalesOrderHeader;
 ```
 

@@ -44,7 +44,7 @@ Completing this quickstart requires the following items:
   > [!IMPORTANT]
   > The scripts in this article are written to use the Adventure Works database. With a managed instance, you must either import the Adventure Works database into an instance database or modify the scripts in this article to use the Wide World Importers database.
 
-If you simply want to run some ad-hoc queries without installing SSMS, use [the Azure portal's query editor to query a database in Azure SQL Database](query-editor.md).
+If you simply want to run some ad hoc queries without installing SSMS, use [the Azure portal's query editor to query a database in Azure SQL Database](query-editor.md).
 
 ## Get server connection information
 

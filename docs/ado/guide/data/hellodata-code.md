@@ -129,7 +129,7 @@ Private Sub ExamineData()
             m_oRecordset.AbsolutePosition & " using bookmark.", , _  
             "Hello Data"  
   
-    ' Display meta-data about each field. See WalkFields() sub.  
+    ' Display metadata about each field. See WalkFields() sub.  
     Call WalkFields  
   
     ' Apply a filter on the type field.  

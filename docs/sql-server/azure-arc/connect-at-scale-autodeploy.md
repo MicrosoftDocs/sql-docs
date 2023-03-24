@@ -8,6 +8,7 @@ ms.date: 03/23/2023
 ms.service: sql
 ms.topic: conceptual
 ---
+
 # Automatically connect Azure Arc-enabled SQL Servers
 
 Azure Arc-enabled SQL Server is a cloud-native solution provided by Microsoft to simplify the management, protection, and governance of SQL Server instances running on Azure Arc-enabled servers. This solution streamlines the experience of connecting SQL Servers to Azure by automatically installing the Azure extension for SQL Server on all Arc-enabled servers that have SQL Server installed. Visit [Azure Arc-enabled SQL Server](overview.md) to learn more. All the SQL Server instance resources are automatically created in Azure, providing a centralized management platform for all your SQL Servers.
@@ -36,9 +37,9 @@ Microsoft uses this value when the automatic connecting workflow deploys the SQL
 
 When onboarding SQL Server instances to Azure Arc, Microsoft provides an automated process that sets the license type (LT) to "LicenseOnly." However, suppose your SQL Server is covered by Software Assurance (SA) or Subscription and Support (SS). In that case, it's essential to set the LT to "Paid" to enable valuable management features provided to SA customers or customers using the Pay-as-you-go (PAYG) model.
 
-## Opt-out
+## Opt out
 
-There's no cost associated with connecting SQL Server to Azure. However, if you opt out of automatically installing the SQL Server extension on Arc servers with SQL Server, follow the instructions in the [How to opt out of automatic connecting](#how-to-opt-out-automatic-connecting) section.
+There's no cost associated with connecting SQL Server to Azure. However, if you opt out of automatically installing the SQL Server extension on Arc servers with SQL Server, follow the instructions in the [How to opt out of automatic connecting](#how-to-opt-out-of-automatic-connecting) section.
 
 ## Automatically connect on new servers connected to Arc
 

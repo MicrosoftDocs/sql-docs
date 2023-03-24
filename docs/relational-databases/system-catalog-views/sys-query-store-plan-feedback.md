@@ -54,4 +54,3 @@ Requires the `VIEW DATABASE STATE` permission.
 - [sys.query_store_query (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)
 - [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
 - [Best Practice with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md)
-- 

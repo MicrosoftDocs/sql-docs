@@ -260,7 +260,7 @@ DATEPART(weekday, @d)
   
 **Workaround:** None.  
   
-#### Register through SSMS adds DAC meta-data with mismatched instance IDs  
+#### Register through SSMS adds DAC metadata with mismatched instance IDs  
 **Issue:** When registering or deleting a Data-Tier Application package (.dacpac) through SQL Server Management Studio, the sysdac* tables are not updated correctly to allow a user to query dacpac history for the database.  The instance_id for sysdac_history_internal and sysdac_instances_internal do not match to allow for a join.  
   
 **Workaround:** This issue is fixed with the feature pack redistribution of the [Data-Tier Application Framework](https://www.microsoft.com/download/details.aspx?id=100297).  After the update is applied, all new history entries will use the value listed for the instance_id in the sysdac_instances_internal table.  

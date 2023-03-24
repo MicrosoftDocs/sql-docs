@@ -21,7 +21,7 @@ The data virtualization feature of Azure SQL Managed Instance allows you to exec
 
 Data virtualization provides two ways of querying files intended for different sets of scenarios:
 
-- [OPENROWSET syntax](#query-data-sources-using-openrowset) – optimized for ad-hoc querying of files. Typically used to quickly explore the content and the structure of a new set of files.
+- [OPENROWSET syntax](#query-data-sources-using-openrowset) – optimized for ad hoc querying of files. Typically used to quickly explore the content and the structure of a new set of files.
 - [CREATE EXTERNAL TABLE syntax](#external-tables) – optimized for repetitive querying of files using identical syntax as if data were stored locally in the database. External tables require several preparation steps compared to the OPENROWSET syntax, but allow for more control over data access. External tables are typically used for analytical workloads and reporting.
 
 In either case, an [external data source](#external-data-source) must be created using the [CREATE EXTERNAL DATA SOURCE](/sql/t-sql/statements/create-external-data-source-transact-sql?view=azuresqldb-mi-current&preserve-view=true) T-SQL syntax, as demonstrated below.
@@ -144,7 +144,7 @@ WITH (
 
 ## Query data sources using OPENROWSET
 
-The [OPENROWSET](/sql/t-sql/functions/openrowset-transact-sql) syntax enables instant ad-hoc querying while only creating the minimal number of database objects necessary.
+The [OPENROWSET](/sql/t-sql/functions/openrowset-transact-sql) syntax enables instant ad hoc querying while only creating the minimal number of database objects necessary.
 
 `OPENROWSET` only requires creating the external data source (and possibly the credential) as opposed to the external table approach, which requires an [external file format](/sql/t-sql/statements/create-external-file-format-transact-sql?view=azuresqldb-mi-current&preserve-view=true) and the [external table]](/sql/t-sql/statements/create-external-table-transact-sql?view=azuresqldb-mi-current&preserve-view=true) itself.
 

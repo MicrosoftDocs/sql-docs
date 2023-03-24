@@ -94,9 +94,9 @@ Cross database queries spanning two different Azure SQL databases or databases h
 
 ## Security Note: Bypassing masking using inference or brute-force techniques
 
-Dynamic Data Masking is designed to simplify application development by limiting data exposure in a set of pre-defined queries used by the application. While Dynamic Data Masking can also be useful to prevent accidental exposure of sensitive data when accessing a production database directly, it's important to note that unprivileged users with ad-hoc query permissions can apply techniques to gain access to the actual data. If there's a need to grant such ad-hoc access, Auditing should be used to monitor all database activity and mitigate this scenario.
+Dynamic Data Masking is designed to simplify application development by limiting data exposure in a set of pre-defined queries used by the application. While Dynamic Data Masking can also be useful to prevent accidental exposure of sensitive data when accessing a production database directly, it's important to note that unprivileged users with ad hoc query permissions can apply techniques to gain access to the actual data. If there's a need to grant such ad hoc access, Auditing should be used to monitor all database activity and mitigate this scenario.
  
-As an example, consider a database principal that has sufficient privileges to run ad-hoc queries on the database, and tries to 'guess' the underlying data and ultimately infer the actual values. Assume that we have a mask defined on the `[Employee].[Salary]` column, and this user connects directly to the database and starts guessing values, eventually inferring the `[Salary]` value of a set of Employees:
+As an example, consider a database principal that has sufficient privileges to run ad hoc queries on the database, and tries to 'guess' the underlying data and ultimately infer the actual values. Assume that we have a mask defined on the `[Employee].[Salary]` column, and this user connects directly to the database and starts guessing values, eventually inferring the `[Salary]` value of a set of Employees:
  
 
 ```sql
@@ -109,7 +109,7 @@ WHERE Salary > 99999 and Salary < 100001;
 >    |  62543 | Jane Doe | 0 | 
 >    |  91245 | John Smith | 0 |  
 
-This demonstrates that Dynamic Data Masking shouldn't be used as an isolated measure to fully secure sensitive data from users running ad-hoc queries on the database. It's appropriate for preventing accidental sensitive data exposure, but won't protect against malicious intent to infer the underlying data.
+This demonstrates that Dynamic Data Masking shouldn't be used as an isolated measure to fully secure sensitive data from users running ad hoc queries on the database. It's appropriate for preventing accidental sensitive data exposure, but won't protect against malicious intent to infer the underlying data.
  
 It's important to properly manage the permissions on the database, and to always follow the minimal required permissions principle. Also, remember to have Auditing enabled to track all activities taking place on the database.
 

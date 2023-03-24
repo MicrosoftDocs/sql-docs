@@ -40,7 +40,7 @@ Starting with SQL Server 2016, and in Azure SQL Database, there are no limitatio
   
 -   Through natively compiled stored procedures.  
   
--   Through interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)], outside of a natively-compiled stored procedure. These [!INCLUDE[tsql](../../includes/tsql-md.md)] statements may be either inside interpreted stored procedures or they may be ad-hoc [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.  
+-   Through interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)], outside of a natively-compiled stored procedure. These [!INCLUDE[tsql](../../includes/tsql-md.md)] statements may be either inside interpreted stored procedures or they may be ad hoc [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.  
   
 ## Accessing Data in Memory-Optimized Tables  
 

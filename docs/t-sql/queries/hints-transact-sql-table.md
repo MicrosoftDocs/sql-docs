@@ -456,7 +456,7 @@ During query optimization, the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] wi
 
 ## Use a table hint as a query hint
 
-*Table hints* can also be specified as a query hint by using the OPTION (TABLE HINT) clause. We recommend using a table hint as a query hint only in the context of a [plan guide](../../relational-databases/performance/plan-guides.md). For ad-hoc queries, specify these hints only as table hints. For more information, see [Query Hints (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md).
+*Table hints* can also be specified as a query hint by using the OPTION (TABLE HINT) clause. We recommend using a table hint as a query hint only in the context of a [plan guide](../../relational-databases/performance/plan-guides.md). For ad hoc queries, specify these hints only as table hints. For more information, see [Query Hints (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md).
 
 ## Permissions
 

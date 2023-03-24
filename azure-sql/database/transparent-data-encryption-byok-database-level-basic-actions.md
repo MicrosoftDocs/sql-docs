@@ -339,7 +339,7 @@ An example of the `encryption_protector` and `keys_to_add` parameter is:
 
 ## View the database level customer-managed key settings on an Azure SQL Database
 
-The following are examples of retrieving the database level customer-managed keys for a database. The ARM resource `Microsoft.Sql/servers/databases` by default only shows the TDE protector and managed identity configured on the database. To expand the full list of keys use the parameter, `-ExpandKeyList`. Additionally, filters such as `-KeysFilter "current"` and a point in time value (for example, `2023-01-01`) can be used to retrieve the current keys used and keys used in the past at a specific point in time.
+The following are examples of retrieving the database level customer-managed keys for a database. The ARM resource `Microsoft.Sql/servers/databases` by default only shows the TDE protector and managed identity configured on the database. To expand the full list of keys use the parameter, `-ExpandKeyList`. Additionally, filters such as `-KeysFilter "current"` and a point in time value (for example, `2023-01-01`) can be used to retrieve the current keys used and keys used in the past at a specific point in time. Note that these filters are only supported for individual database queries and not for server level database list queries.
 
 # [Azure CLI](#tab/azure-cli2)
 
@@ -382,7 +382,7 @@ Get-AzSqlDatabase -ResourceGroupName <ResourceGroupName> -ServerName <ServerName
 Get-AzSqlDatabase -ResourceGroupName <ResourceGroupName> -ServerName <ServerName> -DatabaseName <DatabaseName> -ExpandKeyList -KeysFilter '2023-02-03 00:00:00'
 
 # Retrieve all the databases in a server to check which ones are configured with database level customer-managed keys
-Get-AzSqlDatabase -resourceGroupName $resourceGroupName -ServerName $serverName | Select DatabaseName, EncryptionProtector
+Get-AzSqlDatabase -resourceGroupName <ResourceGroupName> -ServerName <ServerName> | Select DatabaseName, EncryptionProtector
 ```
 
 # [REST API](#tab/rest-api2)
@@ -411,6 +411,24 @@ Retrieve the basic database level customer-managed key settings from a database 
 
 ```rest
 GET https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}?api-version=2022-08-01-preview&$expand=keys($filter=pointInTime('2023-02-04T01:57:42.49Z'))
+```
+
+---
+
+To fetch the list of all the keys (and not just the primary protector) used by each database under the server, it must be individually queried with the key filters. The following is an example of such a query.
+
+# [PowerShell](#tab/azure-powershell2)
+
+For Az PowerShell module installation instructions, see [Install Azure PowerShell](/powershell/azure/install-az-ps). For specific cmdlets, see [AzureRM.Sql](/powershell/module/AzureRM.Sql/).
+
+Use the [Get-AzSqlDatabase](/powershell/module/az.sql/Get-AzSqlDatabase) cmdlet.
+
+```powershell
+$dbs = Get-AzSqlDatabase -resourceGroupName <ResourceGroupName> -ServerName <ServerName>
+foreach ($db in $dbs)
+{
+Get-AzSqlDatabase -DatabaseName $db.DatabaseName -ServerName $db.ServerName -ResourceGroupName $db.ResourceGroupName -ExpandKeyList
+}
 ```
 
 ---

@@ -40,20 +40,20 @@ Microsoft uses this value when the automatic connecting workflow deploys the SQL
 
 When onboarding SQL Server instances to Azure Arc, Microsoft provides an automated process that sets the license type (LT) to **LicenseOnly**. However, suppose your SQL Server is covered by Software Assurance (SA) or Subscription and Support (SS). In that case, it's essential to set the LT to "Paid" to enable valuable management features provided to SA customers or customers using the Pay-as-you-go (PAYG) model.
 
-## Automatically connect on new servers connected to Arc
+## Automatically install the Azure Extension for SQL Server on new servers connected to Arc
 
-Microsoft automatically installs Azure extension for SQL Server on each machine connected to Azure Arc if it has installed SQL Server instance(s). This automated process involves the following tasks:
+Microsoft automatically installs Azure extension for SQL Server on each Arc-enabled server connected to Azure Arc if it has any installed SQL Server instances. This automated process involves the following tasks:
 
-1. Registers the  `Microsoft.AzureArcData` resource provider if not already registered.
+1. Register the  `Microsoft.AzureArcData` resource provider if not already registered.
 
-1. Sets the license type if the `ArcSQLServerExtensionDeployment` tag value is set.
+1. Set the license type if the `ArcSQLServerExtensionDeployment` tag value is set.
 
-1. Installs the Azure extension for SQL Server.
+1. Install the Azure extension for SQL Server.
 
     > [!NOTE]
     > The license type is set if the `ArcSQLServerExtensionDeployment` tag value is set.
 
-1. Creates Arc-enabled SQL Server instance resource in Azure.
+1. Create Arc-enabled SQL Server instance resource in Azure.
 
 Once the connecting is complete, you can benefit from the Azure features for SQL Server. For more information, visit [Manage SQL Server license and billing options](manage-license-type.md).
 

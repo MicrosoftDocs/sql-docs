@@ -17,8 +17,7 @@ Azure Arc-enabled SQL Server is a cloud-native solution provided by Microsoft to
 > Microsoft will begin automatically connecting newly created Arc servers with SQL Server installed on them starting from April 11, 2023.
 
 > [!IMPORTANT]
-> Microsoft will only automatically connect Arc servers with SQL Server installed on them when the Arc server resource is in [one of the regions supported by Arc-enabled SQL Server](prerequisites?view=sql-server-ver15&tabs=azure#supported-regions).
-
+> Microsoft only automatically connects Arc servers with SQL Server installed on them when the Arc server resource is in [one of the regions supported by Arc-enabled SQL Server](prerequisites.md#supported-regions).
 
 This article details how the streamlined process of connecting SQL Server to Azure works.
 

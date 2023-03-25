@@ -79,9 +79,11 @@ LEFT JOIN [dbo].[LocationDepartments]
 LEFT JOIN [dbo].[Department]
    ON LocationDepartments.DeptID = [Department].DeptID;
 GO
-/* Querying view AS OF */
+/* Querying view AS OF with local time*/
+DECLARE @LocalTime datetimeoffset = '2021-09-01 10:00:00.7230011 -07:00';
+
 SELECT * FROM [vw_GetOrgChart]
-FOR SYSTEM_TIME AS OF '2021-09-01 T10:00:00.7230011';
+FOR SYSTEM_TIME AS OF @LocalTime AT TIME ZONE 'UTC';
 ```
 
 ## Query for changes to specific rows over time
@@ -127,6 +129,7 @@ ORDER BY [DeptID], [ValidFrom] DESC;
 
 - [Temporal Tables](../../relational-databases/tables/temporal-tables.md)
 - [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)
+- [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)
 - [Creating a System-Versioned Temporal Table](../../relational-databases/tables/creating-a-system-versioned-temporal-table.md)
 - [Modifying Data in a System-Versioned Temporal Table](../../relational-databases/tables/modifying-data-in-a-system-versioned-temporal-table.md)
 - [Changing the Schema of a System-Versioned Temporal Table](../../relational-databases/tables/changing-the-schema-of-a-system-versioned-temporal-table.md)

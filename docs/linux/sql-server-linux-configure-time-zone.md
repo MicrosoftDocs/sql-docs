@@ -374,7 +374,7 @@ Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. 
 | CST6CDT | Central Standard Time |
 | EST5EDT | Eastern Standard Time |
 | Etc/GMT | UTC |
-| Etc/GMT+1 | Cabo Verde Standard Time |
+| Etc/GMT+1 | Cape Verde Standard Time |
 | Etc/GMT+10 | Hawaiian Standard Time |
 | Etc/GMT+11 | UTC-11 |
 | Etc/GMT+12 | Dateline Standard Time |

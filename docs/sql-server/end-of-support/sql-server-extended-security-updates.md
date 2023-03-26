@@ -3,7 +3,7 @@ title: "What are Extended Security Updates?"
 description: Learn how to use Azure Arc to get extended security updates for your end-of-support and end-of-life SQL Server products, such as SQL Server 2008, SQL Server 2008 R2, and SQL Server 2012.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 11/01/2022
+ms.date: 04/05/2023
 ms.service: sql
 ms.subservice: install
 ms.topic: conceptual
@@ -36,7 +36,10 @@ You can receive Extended Security Updates in several ways:
 
   - **Connected**. Install the Azure Connected Machine agent along with the Azure extension for SQL Server, with direct connectivity to Azure. You'll benefit from the features that [Azure Arc-enabled SQL Server](../azure-arc/overview.md) provides.
 
-  - **Registered**. Manually add your instance using a process similar to the deprecated SQL Server registry. The instance will be added in a *disconnected* state. See [below](#prerequisites) for required prerequisites.
+  - **Registered**. Manually add your instance using a process similar to the deprecated SQL Server registry. The instance will be added in a *disconnected* state. For more information, see the [Prerequisites](#prerequisites) later in this article.
+
+  > [!NOTE]  
+  > Connecting or registering instances is free of charge. Both *connected* and *registered* instances do not incur additional charges when downloading ESUs, which are delivered through the Azure portal.
 
 - **Azure services**. Free and enabled by default when migrating on-premises servers to one of the following Azure services:
 
@@ -46,7 +49,7 @@ You can receive Extended Security Updates in several ways:
 
   - [Azure Stack Hub](/azure-stack#azure-stack-hub)
 
-  - [Azure VMware Solution &#40;AVS&#41;](/azure/azure-vmware/)
+  - [Azure VMware Solution (AVS)](/azure/azure-vmware/)
 
   - [Nutanix Cloud Clusters on Azure](https://nutanix.com/azure/)
 
@@ -163,13 +166,13 @@ You can either register a [single SQL Server instance](#single-sql-server-instan
 
 1. Provide the required information as is detailed in this table, and then select **Next**:
 
-   |Value|Description|Additional information|
-   |---|---|---|
-   |**Instance Name**|Enter the output of command `SELECT @@SERVERNAME`, such as `MyServer\Instance01`.|If you have a named instance, you must replace the backslash (`\`) with a hyphen (`-`). For example, `MyServer\Instance01` will become `MyServer-Instance01`.|
-   |**SQL Server Version**|Select your version from the drop-down.||
-   |**Edition**| Select the applicable edition from the drop-down: Datacenter, Developer (free to deploy if purchased ESUs), Enterprise, Standard, Web, Workgroup.||
-   |**Cores**|Enter the number of cores for this instance||
-   |**Host Type**|Select the applicable host type from the drop-down: Virtual machine (on-premises), Physical Server (on-premises), Azure Virtual Machine, Amazon EC2, Google Compute Engine, Other.||
+   | Value | Description | Additional information |
+   | --- | --- | --- |
+   | **Instance Name** | Enter the output of command `SELECT @@SERVERNAME`, such as `MyServer\Instance01`. | If you have a named instance, you must replace the backslash (`\`) with a hyphen (`-`). For example, `MyServer\Instance01` will become `MyServer-Instance01`. |
+   | **SQL Server Version** | Select your version from the drop-down. | |
+   | **Edition** | Select the applicable edition from the drop-down: Datacenter, Developer (free to deploy if purchased ESUs), Enterprise, Standard, Web, Workgroup. | |
+   | **Cores** | Enter the number of cores for this instance | |
+   | **Host Type** | Select the applicable host type from the drop-down: Virtual machine (on-premises), Physical Server (on-premises), Azure Virtual Machine, Amazon EC2, Google Compute Engine, Other. | |
 
 1. You must confirm that you have the rights to receive Extended Security Updates, using the checkbox provided.
 
@@ -205,7 +208,7 @@ Now you can continue to the [Confirmation](#confirmation) section.
 
 1. We recommend using the `Year1OrderID` tag to link your SQL Server instances to your ESU invoice number for easy reference. The `Year1EntitlementConfirmed` tag is automatically filled in.
 
-    > [!NOTE]
+    > [!NOTE]  
     > If you use Azure services such as Azure Dedicated Host, Azure VMware Solution, Azure Nutanix Solution, and Azure Stack (Hub, Edge, and HCI), you can set the ESU invoice number to `InvoiceNotNeeded`.
 
     :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-tags.png" alt-text="Screenshot of confirmation tags.":::

@@ -75,7 +75,7 @@ sp_add_log_shipping_secondary_primary
   
  0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication.  
   
- *monitor_server_security_mode* is **bit** and cannot be NULL.  
+ *monitor_server_security_mode* is **bit** with a default of 1, and cannot be NULL.
   
 `[ @monitor_server_login = ] 'monitor_server_login'`
  Is the username of the account used to access the monitor server.  

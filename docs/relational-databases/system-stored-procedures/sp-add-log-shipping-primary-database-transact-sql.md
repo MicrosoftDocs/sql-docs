@@ -69,7 +69,9 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
   
  1 = Windows Authentication.  
   
- 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. *monitor_server_security_mode* is **bit** and cannot be NULL.  
+ 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.
+
+ *monitor_server_security_mode* is **bit** with a default of 1, and cannot be NULL.
   
 `[ @monitor_server_login = ] 'monitor_server_login'`
  Is the username of the account used to access the monitor server.  

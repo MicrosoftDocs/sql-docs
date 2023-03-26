@@ -60,7 +60,7 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
   
  0 = SQL Server Authentication.  
   
- *monitor_server_security_mode* is **bit** and cannot be NULL.  
+ *monitor_server_security_mode* is **bit** and defaults to NULL.  
   
 `[ @monitor_server_login = ] 'monitor_server_login'`
  Is the username of the account used to access the monitor server.  

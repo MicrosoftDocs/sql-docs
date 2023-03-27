@@ -47,7 +47,9 @@ After a distribution database in the AG is configured based on the steps describ
 
 ## Limitations or exclusions
 
-- Local distributor is not supported. For example, publisher and distributor must be different SQL Server instances. These instances can be hosted on the same sets of nodes.  A publisher using itself as distributor (a.k.a. local distributor) cannot support distribution databases in an AG.
+- Local distributor (where publisher is using itself as a distributor) is not supported, meaning the publisher and distributor must be separate SQL Server instances. These instances can be hosted on the same sets of nodes. A couple reasons that local distributor is not supported are:
+	- If the distributor is configured as local, the distributor AG listener cannot be used which would cause the replication agents to continuously error after failover. 
+	- If a local distributor is configured and then the distributor AG fails over to the original secondary, the publisher connection to the distributor changes from local to remote. This would cause stored procedures/agents to fail.
 - Oracle publisher is not supported.
 - Merge replication is not supported.
 - Transactional replication with immediate or queued updating subscriber is not supported.

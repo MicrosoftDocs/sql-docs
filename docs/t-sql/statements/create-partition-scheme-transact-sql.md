@@ -59,7 +59,7 @@ ALL
 Specifies that all partitions map to the filegroup provided in *file_group_name*, or to the primary filegroup if **[**PRIMARY**]** is specified. If ALL is specified, only one *file_group_name* can be specified.  
  
 *file_group_name* | **[** PRIMARY **]** [ **,**_...n_]  
-Specifies the names of the filegroups to hold the partitions specified by*partition_function_name*. *file_group_name* must already exist in the database.  
+Specifies the names of the filegroups to hold the partitions specified by *partition_function_name*. *file_group_name* must already exist in the database.  
  
 If **[**PRIMARY**]** is specified, the partition is stored on the primary filegroup. If ALL is specified, only one *file_group_name* can be specified. Partitions are assigned to filegroups,starting with partition 1, in the order in which the filegroups are listed in [ **,**_...n_]. The same *file_group_name* can be specified more than one time in [ **,**_...n_]. If *n* is not sufficient to hold the number of partitions specified in *partition_function_name*, CREATEPARTITION SCHEME fails with an error.  
  

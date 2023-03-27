@@ -4,7 +4,7 @@ description: This detailed guide explains available configuration options when d
 author: bluefooted
 ms.author: pamela
 ms.reviewer: mathoma
-ms.date: 12/21/2021
+ms.date: 03/27/2023
 ms.service: virtual-machines-sql
 ms.subservice: deployment
 ms.topic: how-to
@@ -240,9 +240,7 @@ For more information, see [Automated Backup for SQL Server in Azure Virtual Mach
 
 ### Machine Learning Services
 
-You have the option to enable [Machine Learning Services](/sql/advanced-analytics/). This option lets you use machine learning with Python and R in SQL Server 2017. Select **Enable** on the **SQL Server Settings** window.
-
-SQL Service would require a restart if you are enabling this feature on an already existing SQL Server VM using the **Additional Features** blade on SQL Virtual Machine resource.
+You have the option to enable [Machine Learning Services](/sql/advanced-analytics/). This option lets you use machine learning with Python and R in SQL Server 2017. Select **Enable** on the **SQL Server Settings** window. Enabling this feature from the Azure portal after the SQL Server VM deploys requires restarting the SQL Server service. 
 
 
 ## 4. Review + create
@@ -282,9 +280,10 @@ The following sections show how to connect over the internet to your SQL Server 
 
 ## Known Issues
 
-**I am unable to change the SQL Binary files installation path**
+### I am unable to change the SQL Binary files installation path**
 
-When you deploy a SQL marketplace image, we would install SQL Server binaries on the C Drive. You cannot change this as of today during deployment. The only available workaround is to manually remove and reinstall SQL Server inside the VM to change the binary files location
+SQL Server images from Azure Marketplace install the SQL Server binaries to the C drive. It is not currently possible to change this during deployment. The only available workaround is to manually uninstall SQL Server from within the VM, then reinstall SQL Server and choose a different location for the binary files during the installation process. 
+
 
 ## Next steps
 

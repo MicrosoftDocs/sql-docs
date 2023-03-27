@@ -81,11 +81,16 @@ sections:
              No. For virtual machine gallery images that include SQL Server, you must select one of the provided images either through the Azure portal or via [PowerShell](create-sql-vm-powershell.md). However, you have the ability to deploy a Windows VM and self-install SQL Server to it. You must then [register your SQL Server VM with the SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md) to manage your SQL Server VM in the Azure portal, as well as utilize features such as automated patching and automatic backups. 
 
       - question: |
-          Cannot find or download SQL Express,Evaluation or Developer Version images. Is there a free SQL edition?
+          I can't find the version and edition of SQL Server that I want from the images available on Azure Marketplace. 
         answer: |
-             1. **SQL 2008/2008 R2, SQL 2012, SQL 2014 and SQL 2016 developer images** are not available on the Azure portal. To work around this issue, create a Windows-only image and manually install the SQL Developer version on it. Install the [SQL IaaS Extension](https://learn.microsoft.com/azure/azure-sql/virtual-machines/windows/sql-agent-extension-manually-register-single-vm?tabs=bash%2Cazure-cli&view=azuresql) and [change the licensing](https://learn.microsoft.com/azure/azure-sql/virtual-machines/windows/licensing-model-azure-hybrid-benefit-ahb-change?tabs=azure-portal&view=azuresql#change-license-model) from the Azure portal, if required for compliance. 
-             2. To deploy SQL Express images, create a Windows-only image and manually install the specific version of SQL Express on it. Install the [SQL IaaS Extension](https://learn.microsoft.com/azure/azure-sql/virtual-machines/windows/sql-agent-extension-manually-register-single-vm?tabs=bash%2Cazure-cli&view=azuresql) and [change the licensing](https://learn.microsoft.com/azure/azure-sql/virtual-machines/windows/licensing-model-azure-hybrid-benefit-ahb-change?tabs=azure-portal&view=azuresql#change-license-model) from the Azure portal, if required for compliance. 
-          
+             If the version and edition of SQL Server you're looking for isn't available in the **Images** drop-down on Azure Marketplace, deploy a Windows-only Azure virtual machine, and then manually install the version and edition of SQL Server you want. Register your SQL Server VM with the [SQL IaaS Extension](sql-agent-extension-manually-register-single-vm.md) if you want to manage your SQL Server VM from the Azure portal. 
+ 
+      - question: |
+          Is there a free edition of SQL Server available on Azure Marketplace? 
+        answer: |
+             Developer and Express editions of SQL Server are available on Azure Marketplace, which do not charge you for the SQL Server license. If the Express or Developer edition isn't available for the version of SQL Server you're looking for, deploy a Windows-only Azure virtual machine, and then manually install the version and edition of SQL Server you want. Register your SQL Server VM with the [SQL IaaS Extension](sql-agent-extension-manually-register-single-vm.md) if you want to manage your SQL Server VM from the Azure portal.
+ 
+
           
   - name: Creation
     questions:
@@ -219,11 +224,9 @@ sections:
              Customers can change their version/edition of SQL Server by using setup media that contains their desired version or edition of SQL Server. Once the edition has been changed, use the Azure portal to modify the edition property of the VM to accurately reflect billing for the VM. For more information, see [change edition of a SQL Server VM](change-sql-server-edition.md). There is no billing difference for different versions of SQL Server, so once the version of SQL Server has been changed, no further action is needed.
           
       - question: |
-          How do I get SQL Server installation media or SQL product key?
-        answer: |
-             
-             1. The **SQL Server installation media** is located at **C:\SQLServerFull** inside your SQL Azure VM. Run Setup.exe from that location to add new SQL Server instances or to change other installed features of SQL Server on the machine. Customers who have [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default?rtc=1&activetab=software-assurance-default-pivot%3aprimaryr3) can obtain their installation media from the [Volume Licensing Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx). Customers that do not have software assurance can use the setup media from a Marketplace SQL Server VM image that has their desired edition and version of SQL they want to install
-             2. To **get the SQL Server setup product key**, launch setup.exe from C:\SQLServerFull on the Azure VM that has the desired edition and version, copy the product key that appears in the install process, and exit the installer.
+          How do I get the SQL Server installation media? 
+        answer: |             
+             For SQL Server VMs deployed through Azure Marketplace, the installation media is at **C:\SQLServerFull** . Run Setup.exe from that location to add new SQL Server instances or to change other installed features of SQL Server on the machine. You can also copy this setup media to other virtual machines to install, or upgrade, that same version and edition of SQL Server.  Customers who have [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default?rtc=1&activetab=software-assurance-default-pivot%3aprimaryr3) can obtain their installation media from the [Volume Licensing Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx). 
              
       - question: |
           How are updates and service packs applied on a SQL Server VM?
@@ -238,7 +241,7 @@ sections:
       - question: |
           How can I get free extended security updates for my end of support instances?
         answer: |
-             You can get [free extended security updates](sql-server-extend-end-of-support.md) by moving your SQL Server as-is to an Azure virtual machine. Updates will be available via Windows Update channel. For more information, see [end of support options](/sql/sql-server/end-of-support/sql-server-end-of-support-overview). 
+             You can get [free extended security updates](sql-server-extend-end-of-support.md) by moving your SQL Server as-is to an Azure virtual machine. Updates are available through the Windows Update channel. For more information, see [end of support options](/sql/sql-server/end-of-support/sql-server-end-of-support-overview). 
             
              
           

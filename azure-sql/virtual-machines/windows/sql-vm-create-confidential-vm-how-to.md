@@ -46,7 +46,7 @@ To deploy a SQL Server VM to a confidential Azure VM, select the following value
 
 ## Identify available images
 
-To view all SQL Server images that support confidential VMs, begin to deploy a SQL Server virtual machine from the [Azure portal](https://portal.azure.com), and then select **See all images**  under **Images** on the **Basics tab** to open the Azure Marketplace. Filter the options by selecting **Security type = Confidential** to view all SQL Server images that support confidential VMs. 
+To view all SQL Server images that support confidential VMs, begin to deploy a SQL Server virtual machine from the [Azure portal](https://portal.azure.com), and then select **See all images**  under **Images** on the **Basics tab** to open the Azure Marketplace. Type `sql` in the search box, and then filter the options by choosing **Security type = Trusted Launch** to view all SQL Server images that support confidential VMs. 
 
 ## Limitations
 
@@ -54,9 +54,8 @@ To view all SQL Server images that support confidential VMs, begin to deploy a S
     - `SQL Server 2019 Enterprise on Windows Server 2022 Database Engine Only`. 
     - `SQL Server 2017 Enterprise on Windows Server 2019 Database Engine Only`
 - Confidential VMs aren't currently available in all regions. To validate region supportability, look for the `ECadsv5-series` or `DCadsv5-series` in [VM products Available by Azure region](https://azure.microsoft.com/explore/global-infrastructure/products-by-region/?products=virtual-machines). 
+- The Trusted Launch feature is only available on [generation 2 VMs on Azure](/azure/virtual-machines/generation-2). 
 
- >[!IMPORTANT]
-   > Trusted Launch feature would work only with Gen 2 images. Confidential VM is not supported with SQL Standard edition as of today.
 
 ## Next steps
 

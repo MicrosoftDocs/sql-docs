@@ -10,7 +10,7 @@ ms.subservice: management
 ms.topic: how-to
 tags: azure-resource-manager
 ---
-# In-place change of SQL Server edition on Azure VM
+# In-place change of SQL Server edition - SQL Server on Azure VMs
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
 This article describes how to change the edition of SQL Server on a Windows virtual machine in Azure. 
@@ -25,8 +25,7 @@ To do an in-place change of the edition of SQL Server, you need the following:
 
 - An [Azure subscription](https://azure.microsoft.com/free/).
 - A [SQL Server VM on Windows](./create-sql-vm-portal.md) registered with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md).
-- Setup media with the **desired edition** of SQL Server. Customers who have [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) can obtain their installation media from the [Volume Licensing Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx). Customers who don't have Software Assurance can use the setup media from an Azure Marketplace SQL Server VM image that has their desired edition (typically located in `C:\SQLServerFull`). 
-
+- Setup media with the **desired edition** of SQL Server. Customers who have [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) can obtain their installation media from the [Volume Licensing Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx). Customers who don't have Software Assurance can deploy an Azure Marketplace SQL Server VM image with the desired edition of SQL Server and then copy the setup media (typically located in `C:\SQLServerFull`) from it to their target SQL Server VM. 
 
 ## Upgrade an edition
 
@@ -43,11 +42,11 @@ To upgrade the edition of SQL Server, obtain the SQL Server setup media for the 
 1. Select **Next** until you reach the **Ready to upgrade edition** page, and then select **Upgrade**. The setup window might stop responding for a few minutes while the change is taking effect. A **Complete** page will confirm that your edition upgrade is finished. 
 1. After the SQL Server edition is upgraded, modify the edition property of the SQL Server virtual machine in the Azure portal. This will update the metadata and billing associated with this VM.
 
-
+After you change the edition of SQL Server, register your SQL Server VM with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md) again so that you can use the Azure portal to view the edition of SQL Server. Then be sure to [Change the edition of SQL Server in the Azure portal](#change-edition-in-portal). 
 
 ## Downgrade an edition
 
-To downgrade the edition of SQL Server, you need to completely uninstall SQL Server, and reinstall it again with the desired edition setup media. 
+To downgrade the edition of SQL Server, you need to completely uninstall SQL Server, and reinstall it again with the desired edition setup media. You can get the setup media by deploying a SQL Server VM from the marketplace image with your desired edition, and then copying the setup media to the target SQL S
 
 > [!WARNING]
 > Uninstalling SQL Server might incur additional downtime. 
@@ -63,7 +62,7 @@ You can downgrade the edition of SQL Server by following these steps:
 1. Replace the new system databases that were created during installation with the system databases that you previously moved to a different location. 
 1. After the SQL Server edition is downgraded, modify the edition property of the SQL Server virtual machine in the Azure portal. This will update the metadata and billing associated with this VM. 
 
-
+After you change the edition of SQL Server, register your SQL Server VM with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md) again so that you can use the Azure portal to view the edition of SQL Server. Then be sure to [Change the edition of SQL Server in the Azure portal](#change-edition-in-portal). 
 
 ## Change edition in portal 
 
@@ -77,28 +76,6 @@ Once you've changed the edition of SQL Server using the installation media, and 
 
 1. Review the warning that says you must change the SQL Server edition first, and that the edition property must match the SQL Server edition. 
 1. Select **Apply** to apply your edition metadata changes. 
-
-
-## Common Known Issues
-
-**I want to downgrade SQL Edition. How can I get the media/SQL Setup file for the version I want to move to?**
-   
-   To get the SQL Server media,
-
-   1. Deploy SQL Server marketplace image with the desired edition of SQL server you need.
-   1. Copy the media once the VM gets deployed to your existing VM.
-   1. Uninstall the Higher edition of SQL Server 
-   1. Install the SQL Server edition from the media copied in step 2
-   1. Reinstall the SQL IaaS extension
-
-
-**Where Can I find the SQL Setup media file? Where Can I find the SQL Setup media file?**
-
-The setup media of the desired edition of SQL Server is required. Customers who have [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) can obtain their installation media from the [Volume Licensing Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx). Customers who don't have Software Assurance can use the setup media from an Azure Marketplace SQL Server VM image that has a later version of SQL Server (typically located in C:\SQLServerFull).
-
-**After upgrade or downgrade of SQL Server edition, the edition details are not correctly reflected in Azure portal**
-
-After you change the edition of SQL Server, register your SQL Server VM with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md) again so that you can use the Azure portal to view the edition of SQL Server. 
 
 ## Remarks
 

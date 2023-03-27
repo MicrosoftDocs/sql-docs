@@ -4,7 +4,7 @@ description: "Learn about the supported cluster configurations when you configur
 author: tarynpratt
 ms.author: tarynpratt
 ms.reviewer: mathoma
-ms.date: 11/10/2021
+ms.date: 03/27/2023
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: conceptual
@@ -325,50 +325,50 @@ If the **health probe fails** to get a response from a backend instance, then **
 
 ## Known issues
 
-Review the resolutions for some commonly known issues and errors: 
+Review the resolutions for some commonly known issues and errors. 
 
 
-**Resource contention (IO in particular) causing AG failover on SQL Server on Azure VM**
+## Resource contention (IO in particular) causes failover
 
-Exhaust of IO VM capacity or CPU causes AG failover. Identifying contention exactly before the failover is the most reliable symptom to identify this cause of an Always On automatic failover. You can [Monitor Azure Virtual Machines](https://learn.microsoft.com/azure/virtual-machines/monitor-vm) to look at the [Storage IO Utilization metrics](https://learn.microsoft.com/azure/virtual-machines/disks-metrics#storage-io-utilization-metrics) to understand VM or Disk level latency
-
-Here is an example on how to review "Azure VM Overall IO Exhaustion event" on the portal with the below metrics: 
+Exhausting IP or CPU capacity for the VM can cause your availability group to failover. Identifying the contention that happens right before failover is the most reliable way to identify what is causing automatic failover. [Monitor Azure Virtual Machines](/azure/virtual-machines/monitor-vm) to look at the [Storage IO Utilization metrics](/azure/virtual-machines/disks-metrics#storage-io-utilization-metrics) to understand VM or disk level latency. 
 
 
-1. Navigate to your Virtual Machine in Azure Portal
-2. Select **Metrics** under Monitoring
-3. Select **VM Cached Bandwidth Consumed Percentage** in the metric dropdown
-1. Select **Add metric**
-1. Select  **VM Uncached Bandwidth Consumed Percentage** in the metric dropdown
-1. Select the **date and time** to see the graph.
-1. Select **Apply**
+Follow these steps to review the **Azure VM Overall IO Exhaustion event**: 
 
-![Identify IO Latency-ss](./media/hadr-cluster-best-practices/hadr-metrics-cached-uncached.png)
+1. Navigate to your Virtual Machine in the [Azure Portal](https://portal.azure.com). 
+1. Select **Metrics** under **Monitoring** to open the **Metrics** page.
+1. Select **Add metric** to add the following two metrics to see the graph: 
+   - **VM Cached Bandwidth Consumed Percentage**
+   - **VM Uncached Bandwidth Consumed Percentage**
 
-**Azure VM HostEvents can cause AG failovers on Always On SQL Server on Azure VM**
+:::image type="content" source="./media/hadr-cluster-best-practices/hadr-metrics-cached-uncached.png" alt-text="Identify IO Latency-ss":::
 
-Below are two places where you should search if there was an Azure VM Host event that caused the AG node unhealthy state.
+### Azure VM HostEvents causes failover
 
-1. [Azure Monitor Activity Log-ss](https://learn.microsoft.com/azure/azure-monitor/essentials/activity-log?tabs=powershell)
+It's possible that an Azure VM HostEvent causes your availability group to failover. If you believe an Azure VM HostEvent caused a failover, you can check the Azure Monitor Activity log, and the Azure VM Resource Health overview. 
 
-The Azure Monitor activity log is a platform log in Azure that provides insight into subscription-level events. The activity log includes information like when a resource is modified or a virtual machine is started. You can view the activity log in the Azure portal or retrieve entries with PowerShell and the Azure CLI. This article provides information on how to view the activity log and send it to different destinations.
+The [Azure Monitor activity log](/azure/azure-monitor/essentials/activity-log) is a platform log in Azure that provides insight into subscription-level events. The activity log includes information like when a resource is modified or a virtual machine is started. You can view the activity log in the Azure portal or retrieve entries with PowerShell and the Azure CLI.
+
+To check the Azure Monitor activity log, follow these steps: 
 
 1. Navigate to your Virtual Machine in Azure Portal
 1. Select **Activity Log** on the Virtual Machine blade
-1. Select the **date and time** and Select **Apply**
+1. Select **Timespan** and then choose the time frame when your availability group failed over. Select **Apply**. 
 
-![Activity-log-ss](./media/hadr-cluster-best-practices/activity-log.png)
+:::image type="content" source="./media/hadr-cluster-best-practices/activity-log.png" alt-text="Screenshot of the Azure portal, showing the Activity log. ":::
  
-2. [Azure VM - Resource Health overview](https://learn.microsoft.com/azure/service-health/resource-health-overview#root-cause-information)
+If Azure has further information about the root cause of a platform-initiated unavailability, that information may be posted on the [Azure VM - Resource Health overview](/azure/service-health/resource-health-overview#root-cause-information) page up to 72 hours after the initial unavailability. This information is only available for virtual machines at this time.
 
-If Azure has further information about the root cause of a platform-initiated unavailability, that information may be posted in resource health up to 72 hours after the initial unavailability. This information is only available for virtual machines at this time.
+
 
 1. Navigate to your Virtual Machine in Azure Portal
 1. Select **Resource Health** under the **Health** blade.
 
-![Resource-health-ss](./media/hadr-cluster-best-practices/resource-health.png)
+:::image type="content" source="./media/hadr-cluster-best-practices/resource-health.png" alt-text="Screenshot of the Resource Health page in the Azure portal.":::
 
-**Cluster node removed from membership**
+You can also configure alerts based on health events from this page. 
+
+### Cluster node removed from membership
 
 
 If the [Windows Cluster heartbeat and threshold settings](#heartbeat-and-threshold) are too aggressive for your environment, you may see following message in the system event log frequently. 
@@ -383,14 +383,13 @@ for hardware or software errors related to the network adapters on this node. Al
 failures in any other network components to which the node is connected such as hubs, switches, or bridges.
 ```
 
-
-For more information, review [Troubleshooting cluster issue with Event ID 1135.](/windows-server/troubleshoot/troubleshooting-cluster-event-id-1135)
-
-
-**Lease has expired** / **Lease is no longer valid**
+For more information, review [Troubleshooting cluster issue with Event ID 1135](/windows-server/troubleshoot/troubleshooting-cluster-event-id-1135).
 
 
-If [monitoring](#relaxed-monitoring) is too aggressive for your environment, you may see frequent AG or FCI restarts, failures, or failovers. Additionally for availability groups, you may see the following messages in the SQL Server error log: 
+### Lease has expired** / **Lease is no longer valid
+
+
+If [monitoring](#relaxed-monitoring) is too aggressive for your environment, you may see frequent availability group or FCI restarts, failures, or failovers. Additionally for availability groups, you may see the following messages in the SQL Server error log: 
 
 ```
 Error 19407: The lease between availability group 'PRODAG' and the Windows Server Failover Cluster has expired. 
@@ -404,7 +403,7 @@ Error 19419: The renewal of the lease between availability group '%.*ls' and the
 failed because the existing lease is no longer valid. 
 ``` 
 
-**Connection timeout**
+### Connection timeout
 
 If the **session timeout** is too aggressive for your availability group environment, you may see following messages frequently:
 
@@ -421,15 +420,40 @@ replica 'replicaname' with ID [availability_group_id]. Either a networking or a 
 exists, or the availability replica has transitioned to the resolving role. 
 ```
 
-**Not failing over group**
-
-
+### Group not failing over
 
 If the **Maximum Failures in the Specified Period** value is too low and you're experiencing intermittent failures due to transient issues, your availability group could end in a failed state. Increase this value to tolerate more transient failures. 
 
 ```
 Not failing over group <Resource name>, failoverCount 3, failoverThresholdSetting <Number>, computedFailoverThreshold 2. 
 ```
+
+### Event 1196
+
+* **Event 1196**: Network name resource failed registration of associated DNS name
+
+   * Check the NIC settings for each of your cluster nodes to make sure there are no external DNS records present
+
+   * Ensure the A record for your cluster exists on your internal DNS servers. If not, create a new A Record manual in DNS Server for the Cluster Access Control object and check the Allow any authenticated users to update DNS Records with the same owner name.
+    
+   * Take the Resource "Cluster Name" with IP Resource offline and fix it.
+
+### Event 157 - Disk has been surprised removed.
+
+
+This can happen if the Storage Spaces property `AutomaticClusteringEnabled` is set to `True` for an AG environment. Change it to `False`. Also, running a Validation Report with Storage option can trigger the disk reset or surprise removed event. The storage system [Throttling](https://docs.microsoft.com/azure/virtual-machines/windows/disk-performance-windows#storage-io-utilization-metrics) can also trigger the disk surprise remove event.
+
+### Event 1206 - Cluster network name resource cannot be brought online.
+
+The computer object associated with the resource could not be updated in the domain. Make sure you have [appropriate permissions on domain](https://techcommunity.microsoft.com/t5/sql-server-support/error-during-installation-of-an-sql-server-failover-cluster/ba-p/317873)
+
+### Windows Clustering errors
+
+You may encounter issues while setting up a Windows failover cluster or its connectivity if you don't have [Cluster Service Ports open for communication](https://docs.microsoft.com/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements#cluster-service). 
+
+If you are on Windows Server 2019 and you do not see a Windows Cluster IP, you have configured [Distributed Network Name](https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/failover-cluster-instance-distributed-network-name-dnn-configure), which is only supported on SQL Server 2019. If you have previous versions of SQL Server, you can remove and [Recreate the Cluster using Network Name](https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/availability-group-manually-configure-tutorial#create-the-cluster).
+
+Review other Windows Failover [Clustering Events Errors and their Solutions here](https://docs.microsoft.com/windows-server/failover-clustering/system-events) 
 
 
 ## Next steps

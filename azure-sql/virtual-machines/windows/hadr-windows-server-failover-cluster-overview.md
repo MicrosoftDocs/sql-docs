@@ -163,41 +163,6 @@ On Azure Virtual Machines, MSDTC isn't supported for Windows Server 2016 or earl
 - The clustered MSDTC resource can't be configured to use shared storage. On Windows Server 2016, if you create an MSDTC resource, it won't show any shared storage available for use, even if storage is available. This issue has been fixed in Windows Server 2019.
 - The basic load balancer doesn't handle RPC ports.
 
-## Known issues
-
-Review the resolutions for some commonly known issues and errors: 
-
-* **Event 1135:** Cluster node was removed from the cluster membership.
-
-   Relax the [Cluster Network Threshold](https://techcommunity.microsoft.com/t5/sql-server-support/iaas-with-sql-alwayson-tuning-failover-cluster-network/ba-p/318322) and validate the communication between the nodes. Also check network connectivity or latency issues and make sure you have configured the [Windows Cluster Network](https://docs.microsoft.com/archive/blogs/askcore/configuring-windows-failover-cluster-networks).
-
-* **Event 1196**: Network name resource failed registration of associated DNS name
-
-     * Check the NIC settings for each of your cluster nodes to make sure there are no external DNS records present
-
-    * Ensure the A record for your cluster exists on your internal DNS servers. If not, create a new A Record manual in DNS Server for the Cluster Access Control object and check the Allow any authenticated users to update DNS Records with the same owner name.
-    
-   * Take the Resource "Cluster Name" with IP Resource offline and fix it.
-
-* **Availability Group Lease Timeout Error:**
-    
-  Relax the four [Cluster timeout values](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/availability-group-lease-healthcheck-timeout?view=sql-server-ver15#updating-cluster-and-always-on-timeout-values). This issue can happen if you are having performance issues on your server. Upsizing the VM/Disk can also help. You can check for any [Disk/VM Throttling using Metrics](https://docs.microsoft.com/azure/virtual-machines/windows/disk-performance-windows) on Azure Portal. [Learn more](https://docs.microsoft.com/archive/blogs/alwaysonpro/improved-alwayson-availability-group-lease-timeout-diagnostics#what-kind-of-health-issues-cause-lease-timeout).
-
-* **Event 157 :** Disk has been surprised removed.
-
-  This can happen if the Storage Spaces property `AutomaticClusteringEnabled` is set to `True` for an AG environment. Change it to `False`. Also, running a Validation Report with Storage option can trigger the disk reset or surprise removed event. The storage system [Throttling](https://docs.microsoft.com/azure/virtual-machines/windows/disk-performance-windows#storage-io-utilization-metrics) can also trigger the disk surprise remove event.
-
-* **Event 1206:** Cluster network name resource cannot be brought online. The computer object associated with the resource could not be updated in the domain.
-
-   Make sure you have [appropriate permissions on domain](https://techcommunity.microsoft.com/t5/sql-server-support/error-during-installation-of-an-sql-server-failover-cluster/ba-p/317873)
-
-*  **Other Windows Clustering errors**  
-
-   You may encounter issues while setting up a Windows failover cluster or its connectivity if you don't have [Cluster Service Ports open for communication](https://docs.microsoft.com/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements#cluster-service)
-
-   If you are on Windows Server 2019 and you do not see a Windows Cluster IP, you have configured [Distributed Network Name](https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/failover-cluster-instance-distributed-network-name-dnn-configure), which is only supported on SQL Server 2019. If you have previous versions of SQL Server, you can remove and [Recreate the Cluster using Network Name](https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/availability-group-manually-configure-tutorial#create-the-cluster).
-
-   Review Other Windows Failover [Clustering Events Errors and their Solutions here](https://docs.microsoft.com/windows-server/failover-clustering/system-events) 
 
 ## Next steps
 

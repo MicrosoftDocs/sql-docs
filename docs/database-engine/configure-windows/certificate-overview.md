@@ -32,7 +32,7 @@ Enabling TLS encryption increases the security of data transmitted across networ
 
 ## Digital certificate overview
 
-Digital certificates are electronic files that work like an online password to verify the identity of a user or a computer. They're used to create the encrypted channel that's used for client communications. A certificate is a digital statement that's issued by a certification authority (CA) that vouches for the identity of the certificate holder and enables the parties to communicate securely manner by using encryption.
+Digital certificates are electronic files that work like an online password to verify the identity of a user or a computer. They're used to create the encrypted channel that's used for client communications. A certificate is a digital statement that's issued by a certification authority (CA) that vouches for the identity of the certificate holder and enables the parties to communicate securely by using encryption.
 
 Digital certificates provide the following services:
 

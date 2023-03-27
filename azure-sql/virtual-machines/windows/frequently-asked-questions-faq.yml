@@ -309,8 +309,8 @@ sections:
         answer: October 2022 introduced the least privilege permissions model for the extension, granting minimal permissions necessary for each feature used by the extension. SQL Server VMs deployed after October 2022 via Azure Marketplace have the least privilege permissions model enabled by default. The extension uses sysadmin rights for SQL Server VMs that were deployed prior to October 2022, or self-installed SQL Server VMs, that have not manually enabled the least privilege model in the Azure portal. Review [SQL IaaS Agent extension permissions](sql-server-iaas-agent-extension-automate-management.md#permissions-models) to learn more. 
 
       - question: | 
-           Why do I see SQL Virtual Machine Resource? Who created it? Do I get billed for this?
-         answer: SQL Virtual Machine Resource is a free resource that gives you management capability of the SQL VM from the portal. SQL VM resource is created when you deploy a SQL VM image. Azure can also create this resource automatically on an existing VM if a SQL instance is detected. There is no cost associated with SQL VM resource.
+           Why do I see SQL virtual machines resource in the Azure portal? Who created it? Do I get billed for this?
+        answer: The [SQL virtual machines resource](manage-sql-vm-portal.md) is a free resource that allows you to manage you SQL Server VM from the Azure portal. The SQL virtual machines resource is created when you deploy a SQL Server VM image from Azure Marketplace, or manually register a SQL Server VM with the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md). Azure can also create this resource automatically for existing VMs if a SQL Server instance is detected. There is no cost associated with SQL virtual machines resource.
 
       - question: |
           Will registering with the SQL IaaS Agent extension restart SQL Server on my VM?

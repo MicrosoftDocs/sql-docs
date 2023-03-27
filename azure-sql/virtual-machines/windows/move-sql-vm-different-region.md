@@ -32,7 +32,7 @@ Moving a SQL Server VM to a different region requires doing the following:
         - Permissions to create a VM in the selected virtual network. 
         - Permissions to write to the selected storage account. 
         - Permissions to manage Azure Site Recovery operations. The *Site Recovery Contributor* role has all the permissions that are required to manage Site Recovery operations in a Recovery Services vault.
-- Moving the [SQL virtual machine resource](manage-sql-vm-portal.md) is not supported. You need to [reinstall the SQL IaaS Agent extension](./sql-agent-extension-manually-register-single-vm.md) on the target region where you have planned your move. If you are moving your resources between subscriptions or tenants, make sure you've registerd your [subscription with the resource provider](https://learn.microsoft.com/azure/azure-sql/virtual-machines/windows/sql-agent-extension-manually-register-single-vm?view=azuresql&tabs=azure-portal#register-subscription-with-rp) before attempting to register your migrated SQL Server VM with the SQL IaaS Agent extension. 
+- Moving the [SQL virtual machine resource](manage-sql-vm-portal.md) is not supported. You need to [reinstall the SQL IaaS Agent extension](./sql-agent-extension-manually-register-single-vm.md) on the target region where you have planned your move. If you are moving your resources between subscriptions or tenants, make sure you've registerd your [subscription with the resource provider](sql-agent-extension-manually-register-single-vm.md#register-subscription-with-rp) before attempting to register your migrated SQL Server VM with the SQL IaaS Agent extension. 
 
 ## Prepare to move
 Prepare both the source SQL Server VM and the target region for the move. 

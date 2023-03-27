@@ -4,7 +4,7 @@ description: This article shows you how to deploy SQL Server to an Azure confide
 author: bluefooted
 ms.author: pamela
 ms.reviewer: mathoma
-ms.date: 10/14/2022
+ms.date: 03/27/2023
 ms.service: virtual-machines-sql
 ms.subservice: deployment
 ms.topic: quickstart
@@ -46,15 +46,16 @@ To deploy a SQL Server VM to a confidential Azure VM, select the following value
 
 ## Identify available images
 
-To view all SQL Server images that support confidential VMs, begin to deploy a SQL Server virtual machine from the [Azure portal](https://portal.azure.com), and then select **See all images**  under **Images** on the **Basics tab** to open the Azure Marketplace. Type `sql` in the search box, and then filter the options by choosing **Security type = Trusted Launch** to view all SQL Server images that support confidential VMs. 
+To view all SQL Server images that support confidential VMs, begin to deploy a SQL Server virtual machine from the [Azure portal](https://portal.azure.com), and then select **See all images**  under **Images** on the **Basics tab** to open the Azure Marketplace. Type `sql` in the search box, and then filter the options by choosing **Security type = Confidential** to view all SQL Server images that support confidential VMs. 
 
 ## Limitations
 
 - Currently, only the following SQL Server images support Azure confidential VMs: 
-    - `SQL Server 2019 Enterprise on Windows Server 2022 Database Engine Only`. 
-    - `SQL Server 2017 Enterprise on Windows Server 2019 Database Engine Only`
+    - `SQL Server 2022 Enterprise on Windows Server 2022 Database Engine Only - x64 Gen 2`
+    - `SQL Server 2019 Enterprise on Windows Server 2022 Database Engine Only - x64 Gen 2`. 
+    - `SQL Server 2017 Enterprise on Windows Server 2019 Database Engine Only - x64 Gen 2`
 - Confidential VMs aren't currently available in all regions. To validate region supportability, look for the `ECadsv5-series` or `DCadsv5-series` in [VM products Available by Azure region](https://azure.microsoft.com/explore/global-infrastructure/products-by-region/?products=virtual-machines). 
-- The Trusted Launch feature is only available on [generation 2 VMs on Azure](/azure/virtual-machines/generation-2). 
+
 
 
 ## Next steps

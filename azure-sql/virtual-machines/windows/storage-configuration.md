@@ -88,7 +88,7 @@ You can use the following quickstart template to deploy a SQL Server VM using st
 
 
 > [!NOTE]
-> Some VM sizes may not have [temporary or local storage](https://learn.microsoft.com/azure/virtual-machines/azure-vms-no-temp-disk). If you deploy a SQL Server on Azure VM without temporary or local storage, all of your data, and log files, including tempdb, are stored to the same drive. 
+> Some VM sizes may not have [temporary or local storage](/azure/virtual-machines/azure-vms-no-temp-disk). If you deploy a SQL Server on Azure VM without temporary or local storage, all of your data, and log files, including tempdb, are stored to the same drive. 
 
 ## Existing VMs
 
@@ -250,7 +250,7 @@ In Windows Server 2008 to 2012 R2, the default value for `-StorageSubsystemFrien
 
 ### Configure Disk option or Storage configuration blade on SQL Virtual Machine Resource is Grayed Out
 
-Storage Configuration blade can be grayed out if your SQL IaaS Agent extension is in a failed state. [Repair the SQL IaaS Agent extension](https://learn.microsoft.com/azure/azure-sql/virtual-machines/windows/sql-agent-extension-manually-register-single-vm?tabs=azure-portal&view=azuresql#repair-extension). 
+Storage Configuration blade can be grayed out if your SQL IaaS Agent extension is in a failed state. [Repair the SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md#repair-extension). 
 
 The Configure option on the Storage configuration blade can be grayed out if you've customized your storage pool. 
 

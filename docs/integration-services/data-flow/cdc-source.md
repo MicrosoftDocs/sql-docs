@@ -106,7 +106,7 @@ use <cdc-enabled-database-name>
   
  To open the **Advanced Editor** dialog box:  
   
--   In the **Data Flow** screen of your [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] project, right click the CDC source and select **Show Advanced Editor**.  
+-   In the **Data Flow** screen of your [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] project, right-click the CDC source and select **Show Advanced Editor**.  
   
  For more information about the properties that you can set in the **Advanced Editor** dialog box, see [CDC Source Custom Properties](../../integration-services/data-flow/cdc-source-custom-properties.md).  
   

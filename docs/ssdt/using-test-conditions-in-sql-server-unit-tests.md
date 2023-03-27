@@ -68,7 +68,7 @@ Any unspecified parameters are ignored. You pass these parameters to the **THROW
 For an example of how to use expected exceptions and a negative SQL Server unit test, see [Walkthrough: Creating and Running a SQL Server Unit Test](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md).  
   
 ## <a name="SpecifyDataChecksum"></a>Specifying a Data Checksum  
-To display the SQL Server Unit Test Designer, double click the unit test source code file in **Solution Explorer**.  
+To display the SQL Server Unit Test Designer, double-click the unit test source code file in **Solution Explorer**.  
   
 After you add a Data Checksum test condition to your database unit test, you must configure the expected checksum by using the following procedure:  
   

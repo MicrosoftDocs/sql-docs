@@ -192,7 +192,7 @@ You create and edit data alert definitions in Data Alert Designer. An alert defi
 ##  <a name="EditAlert"></a> Edit a Data Alert Definition  
  After you save your data alert definition, you can reopen and then edit it in Data Alert Designer. You can add, change, or delete rules and clauses and change the schedule and email settings. If the report data feed that the alert uses has changed and no longer provides the fields that the alert rules reference or the data types or other metadata of the fields have changed, the alert definition is no longer valid, and you must correct it before you can resave it. If you want to use a different data feed, you must create a new alert definition.  
   
- To edit a data alert definition, you right click it in Data Alert Manager and click **Edit**. The following picture shows you the context menu on a data alert in Data Alert Manager.  
+ To edit a data alert definition, you right-click it in Data Alert Manager and click **Edit**. The following picture shows you the context menu on a data alert in Data Alert Manager.  
   
  ![Open Data Alert Designer by clicking Edit](../reporting-services/media/rs-alertmanageriwopendesigner.gif "Open Data Alert Designer by clicking Edit")  
   

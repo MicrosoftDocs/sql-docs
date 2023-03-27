@@ -63,7 +63,7 @@ You have two options for creating a SQL Server unit test:
   
     You can also add additional tests by:.  
   
-    -   Right clicking on a test project in **Solution Explorer**, selecting **Add**, **New Test**, and then **SQL Server Unit Test**.  
+    -   Right-clicking on a test project in **Solution Explorer**, selecting **Add**, **New Test**, and then **SQL Server Unit Test**.  
   
     -   In SQL Server Object Explorer, select Create Unit Tests.  
   
@@ -71,7 +71,7 @@ You have two options for creating a SQL Server unit test:
   
 ### To create a SQL Server unit test inside an existing test class  
   
-1.  Open an existing SQL Server unit test class in the **SQL Server Unit Test Designer**. You can access the **SQL Server Unit Test Designer** by double clicking the unit test source code file in **Solution Explorer**.  
+1.  Open an existing SQL Server unit test class in the **SQL Server Unit Test Designer**. You can access the **SQL Server Unit Test Designer** by double-clicking the unit test source code file in **Solution Explorer**.  
   
 2.  Click the plus (**+**) sign in the navigation bar to display the **Specify a unit test name** dialog box.  
   

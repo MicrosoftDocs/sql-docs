@@ -386,7 +386,7 @@ failures in any other network components to which the node is connected such as 
 For more information, review [Troubleshooting cluster issue with Event ID 1135](/windows-server/troubleshoot/troubleshooting-cluster-event-id-1135).
 
 
-### Lease has expired** / **Lease is no longer valid
+### Lease has expired / Lease is no longer valid
 
 
 If [monitoring](#relaxed-monitoring) is too aggressive for your environment, you may see frequent availability group or FCI restarts, failures, or failovers. Additionally for availability groups, you may see the following messages in the SQL Server error log: 
@@ -428,20 +428,16 @@ If the **Maximum Failures in the Specified Period** value is too low and you're 
 Not failing over group <Resource name>, failoverCount 3, failoverThresholdSetting <Number>, computedFailoverThreshold 2. 
 ```
 
-### Event 1196
+### Event 1196 - Network name resource failed registration of associated DNS name
 
-* **Event 1196**: Network name resource failed registration of associated DNS name
-
-   * Check the NIC settings for each of your cluster nodes to make sure there are no external DNS records present
-
-   * Ensure the A record for your cluster exists on your internal DNS servers. If not, create a new A Record manual in DNS Server for the Cluster Access Control object and check the Allow any authenticated users to update DNS Records with the same owner name.
-    
-   * Take the Resource "Cluster Name" with IP Resource offline and fix it.
+* Check the NIC settings for each of your cluster nodes to make sure there are no external DNS records present
+* Ensure the A record for your cluster exists on your internal DNS servers. If not, create a new A Record manual in DNS Server for the Cluster Access Control object and check the Allow any authenticated users to update DNS Records with the same owner name.
+* Take the Resource "Cluster Name" with IP Resource offline and fix it.
 
 ### Event 157 - Disk has been surprised removed.
 
 
-This can happen if the Storage Spaces property `AutomaticClusteringEnabled` is set to `True` for an AG environment. Change it to `False`. Also, running a Validation Report with Storage option can trigger the disk reset or surprise removed event. The storage system [Throttling](https://docs.microsoft.com/azure/virtual-machines/windows/disk-performance-windows#storage-io-utilization-metrics) can also trigger the disk surprise remove event.
+This can happen if the Storage Spaces property `AutomaticClusteringEnabled` is set to `True` for an AG environment. Change it to `False`. Also, running a Validation Report with Storage option can trigger the disk reset or surprise removed event. The storage system [Throttling](/azure/virtual-machines/windows/disk-performance-windows#storage-io-utilization-metrics) can also trigger the disk surprise remove event.
 
 ### Event 1206 - Cluster network name resource cannot be brought online.
 
@@ -449,11 +445,11 @@ The computer object associated with the resource could not be updated in the dom
 
 ### Windows Clustering errors
 
-You may encounter issues while setting up a Windows failover cluster or its connectivity if you don't have [Cluster Service Ports open for communication](https://docs.microsoft.com/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements#cluster-service). 
+You may encounter issues while setting up a Windows failover cluster or its connectivity if you don't have [Cluster Service Ports open for communication](/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements#cluster-service). 
 
-If you are on Windows Server 2019 and you do not see a Windows Cluster IP, you have configured [Distributed Network Name](https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/failover-cluster-instance-distributed-network-name-dnn-configure), which is only supported on SQL Server 2019. If you have previous versions of SQL Server, you can remove and [Recreate the Cluster using Network Name](https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/availability-group-manually-configure-tutorial#create-the-cluster).
+If you are on Windows Server 2019 and you do not see a Windows Cluster IP, you have configured [Distributed Network Name](failover-cluster-instance-distributed-network-name-dnn-configure.md), which is only supported on SQL Server 2019. If you have previous versions of SQL Server, you can remove and [Recreate the Cluster using Network Name](availability-group-manually-configure-tutorial.md#create-the-cluster).
 
-Review other Windows Failover [Clustering Events Errors and their Solutions here](https://docs.microsoft.com/windows-server/failover-clustering/system-events) 
+Review other Windows Failover [Clustering Events Errors and their Solutions here](/windows-server/failover-clustering/system-events) 
 
 
 ## Next steps

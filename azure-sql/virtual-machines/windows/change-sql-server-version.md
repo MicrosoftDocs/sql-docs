@@ -39,7 +39,7 @@ Consider the following prerequisites before upgrading your version of SQL Server
 
 To do an in-place upgrade of SQL Server, you need the following: 
 
-- You have the SQL Server media. Customers who have [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) can obtain their installation media from the [Volume Licensing Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx). Customers who don't have Software Assurance can deploy an Azure Marketplace SQL Server VM image with the desired version of SQL Server and then copy the setup media (typically located in `C:\SQLServerFull`) from it to their target SQL Server VM. 
+- SQL Server installation media. Customers who have [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) can obtain their installation media from the [Volume Licensing Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx). Customers who don't have Software Assurance can deploy an Azure Marketplace SQL Server VM image with the desired version of SQL Server and then copy the setup media (typically located in `C:\SQLServerFull`) from it to their target SQL Server VM. 
 - Version upgrades should follow the [support upgrade paths](/sql/database-engine/install-windows/supported-version-and-edition-upgrades-version-15).
 
 

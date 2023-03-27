@@ -38,7 +38,7 @@ To use Automated Backup v2, review the following prerequisites:
 **Database configuration**:
 
 - Target _user_ databases must use the full recovery model. System databases don't have to use the full recovery model. However, if you require log backups to be taken for `model` or `msdb`, you must use the full recovery model. For more information about the impact of the full recovery model on backups, see [Backup under the full recovery model](/previous-versions/sql/sql-server-2008-r2/ms190217(v=sql.105)). 
-- The SQL Server VM has been registered with the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md) and the **automated backup** feature is enabled. Since automated backup relies on the extension, automated backup is only supported on target databases from the default instance, or a single named instance. If there's no default instance, and multiple named instances, the SQL IaaS Agent extension fails and automated backup won't work. 
+- The SQL Server VM has been registered with the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md) and the **Automated Backup** feature is enabled. Since Automated Backup relies on the extension, Automated Backup is only supported on target databases from the default instance, or a single named instance. If there's no default instance, and multiple named instances, the SQL IaaS Agent extension fails and Automated Backup won't work. 
 
 ## Settings
 
@@ -112,7 +112,7 @@ Then, on Tuesday at 10 for 6 hours, full backups of all databases start again.
 Use the Azure portal to configure Automated Backup when you create a new SQL Server 2016 or later machine in the Resource Manager deployment model.
 
 In the **SQL Server settings** tab, select **Enable** under **Automated backup**. 
-When you enable automated backup, you can configure the following settings:
+When you enable Automated Backup, you can configure the following settings:
 
 * Retention period for backups (up to 90 days)
 * Storage account, and storage container, to use for backups
@@ -133,9 +133,9 @@ The following Azure portal screenshot shows the **Automated Backup** settings wh
 
 ## Configure existing VMs
 
-For existing SQL Server virtual machines, go to the [SQL virtual machines resource](manage-sql-vm-portal.md#access-the-resource) and then select **Backups** to configure your automated backups. 
+For existing SQL Server virtual machines, go to the [SQL virtual machines resource](manage-sql-vm-portal.md#access-the-resource) and then select **Backups** to configure your Automated Backups. 
 
-Select **Enable** to configure your automated backup settings. 
+Select **Enable** to configure your Automated Backup settings. 
 
 You can configure the retention period (up to 90 days), the container for the storage account where you want to store your backups, as well as the encryption, and the backup schedule. By default, the schedule is automated.
 
@@ -334,7 +334,7 @@ Another option is to take advantage of the built-in Database Mail feature for no
 
 ## Known issues
 
-Consider these known issues when working Auto
+Consider these known issues when working with the Automated Backup feature. 
 
 ### Can't enable Automated backup in the Azure portal
 
@@ -344,11 +344,11 @@ The following table lists the possible solutions if you're having issues enablin
 | Symptom | Solution |
 |--|--|
 | **Enabling Automated backups will fail if your IaaS extension is in a failed state** | Repair the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md#repair-extension) if its in a failed state. | 
-| **Enabling automated backup fails if you have 100+ databases** | This is a known issue. To work around this issue, enable [Managed backup](/sql/relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure#enable-managed-backup-to-azure) instead of automated backup.  | 
-| **Enabling Automated backup fails due to metadata issues** | Stop the SQL IaaS Agent service.  Run the T-SQL command: `use msdb exec autoadmin_metadata_delete`. Start the SQL IaaS Agent service and try to re-enable automated backup from Azure portal.  |
+| **Enabling Automated Backup fails if you have 100+ databases** | This is a known issue. To work around this issue, enable [Managed backup](/sql/relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure#enable-managed-backup-to-azure) instead of Automated Backup.  | 
+| **Enabling Automated backup fails due to metadata issues** | Stop the SQL IaaS Agent service.  Run the T-SQL command: `use msdb exec autoadmin_metadata_delete`. Start the SQL IaaS Agent service and try to re-enable Automated Backup from Azure portal.  |
 | **Enabling Automated backups for FCI** | Back ups using private endpoints are unsupported. Use the full storage account URI for your backup.  |
-| **Backup Multiple SQL instances using Automated backup**   | Automated Backup currently only supports one SQL Server instance. If you have multiple named instances, and the default instance, Automated Backup works with the default instance. If you have multiple named instances and no default instance, turning on automated backup will fail. |
-| **Automated backup cannot be enabled due to account and permissions** | Check the following:  <br /> - The SQL Server Agent is running. <br /> - The  **NT Service\SqlIaaSExtensionQuery**  account has proper [permissions](sql-server-iaas-agent-extension-automate-management.md#permissions-models) for Automated Backups both within SQL Server, and also for the SQL Server resource in the Azure portal. <br /> - The **SA** account hasn't been renamed, though disabling it is acceptable.   | 
+| **Backup Multiple SQL instances using Automated backup**   | Automated Backup currently only supports one SQL Server instance. If you have multiple named instances, and the default instance, Automated Backup works with the default instance. If you have multiple named instances and no default instance, turning on Automated Backup will fail. |
+| **Automated backup cannot be enabled due to account and permissions** | Check the following:  <br /> - The SQL Server Agent is running. <br /> - The  **NT Service\SqlIaaSExtensionQuery**  account has proper [permissions](sql-server-iaas-agent-extension-automate-management.md#permissions-models) for the Automated Backup feature both within SQL Server, and also for the [SQL virtual machines](manage-sql-vm-portal.md) resource in the Azure portal. <br /> - The **SA** account hasn't been renamed, though disabling it is acceptable.   | 
 | **Automated backup fails for SQL 2016/2017**| **Allow Blob Public Access** is enabled on the storage Account. This provides a temporary workaround to a known issue. |
 
 
@@ -359,11 +359,11 @@ The following table lists possible errors and solutions when working with Automa
 
 | Symptom | Solution |
 |--|--|
-| **Backup failed when using Automated backup** | Check that you've configured the [Azure Backup service](/azure/backup/backup-overview) to back up SQL databases and not to backup your VM. If the Azure Backup Service is backing up your databases, [add the USEVSSCOPYBACKUP registry keys](https://docs.microsoft.com/azure/backup/backup-azure-vms-troubleshoot#troubleshoot-vm-snapshot-issues) to the VM that hosts your SQL Server instance. Backups should succeed after the registry is updated.  | 
+| **Backup failed when using Automated backup** | Check that you've configured the [Azure Backup service](/azure/backup/backup-overview) to back up SQL databases and not to backup your VM. If the Azure Backup Service is backing up your databases, [add the USEVSSCOPYBACKUP key](/azure/backup/backup-azure-vms-troubleshoot#troubleshoot-vm-snapshot-issues) to the registry for the VM that hosts your SQL Server instance. Backups should succeed after the registry is updated.  | 
 | **Automated/managed backup fails due to connectivity to storage account/Timeout errors** | Check that the Network Security Group (NSG) for the virtual network, and the Windows Firewall aren't blocking outbound connections from the virtual machine (VM) to the storage account on port 443. |
-| **Automated/managed backup fails due to Memory/IO Pressure** | See if you can increase the Max Server memory and resize the disk/VM if you're running out of [IO/VM limit](https://devblogs.microsoft.com/premier-developer/azure-vm-and-disk-throttling/). If you're using Availability group, offload your backups to the secondary node| 
-| **Automated backup fails after Server Rename** | If you've renamed your machine hostname, you need to also [rename the hostname inside SQL Server](/sql/database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server?view=sql-server-ver16#rename-a-computer-that-hosts-a-stand-alone-instance-of-).  |
-| **Error: The operation failed because of an internal error. The argument must not be empty string.\\r\\nParameter name: sas Token Please retry later** | Changing the SQL Agent service should fix this problem as it doesnt seem to have the correct impersonation permissions | 
+| **Automated/managed backup fails due to Memory/IO Pressure** | See if you can increase the Max Server memory and/or resize the disk/VM if you're running out of [IO/VM limits](https://devblogs.microsoft.com/premier-developer/azure-vm-and-disk-throttling/). If you're using  an availability group, consider offloading your backups to the secondary replica. | 
+| **Automated backup fails after Server Rename** | If you've renamed your machine hostname, you need to also [rename the hostname inside SQL Server](/sql/database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server#rename-a-computer-that-hosts-a-stand-alone-instance-of-).  |
+| **Error: The operation failed because of an internal error. The argument must not be empty string.\\r\\nParameter name: sas Token Please retry later** | This is likely caused by the SQL Server Agent service not having correct impersonation permissions. Change the SQL Server Agent service to use a different account to fix this issue. | 
 | **Error: SQL Server Managed Backup to Microsoft Azure cannot configure the default backup settings for the SQLServer instance because the container URL was invalid. It is also possible that your SAS credential is invalid** | You may see this error if you have a large number of databases. Use [Managed backup](/sql/relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure) instead of Automated Backup. | 
 | **Automated backup job failed after VM Restart**| Check that the SQL Agent service is up and running. | 
 | **Managed backup fails intermittently/Error:Execution timeout Expired** | This is a known issue fixed in [CU18 for SQL Server 2019](https://support.microsoft.com/topic/kb5017593-cumulative-update-18-for-sql-server-2019-5fa00c36-edeb-446c-94e3-c4882b7526bc#bkmk_14913295).|
@@ -372,7 +372,7 @@ The following table lists possible errors and solutions when working with Automa
 
 
 
-### Disabling automated backup or managed backup fails
+### Disabling Automated Backup or managed backup fails
 
 The following table lists the possible solutions if you're having issues disabling Automated Backup from the Azure portal: 
 
@@ -380,14 +380,14 @@ The following table lists the possible solutions if you're having issues disabli
 | Symptom | Solution |
 |--|--|
 | **Disabling Auto backups will fail if your IaaS extension is in a failed state** | Repair the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md#repair-extension) if its in a failed state. | 
-| **Disabling Automated backup fails due to metadata issues** | Stop agent service, Run the T-SQL command: `use msdb exec autoadmin_metadata_delete`, start SQL Server agent service and try to disable automated backup from Azure portal |
-| **Automated backup cannot be disabled due to account and permissions** | Check the following: <br /> - The SQL Server Agent is running. <br /> - The  **NT Service\SqlIaaSExtensionQuery**  account has proper [permissions](sql-server-iaas-agent-extension-automate-management.md#permissions-models) for Automated Backups both within SQL Server, and also for the SQL Server resource in the Azure portal. <br /> - The **SA** account hasn't been renamed, though disabling it is acceptable.  | 
+| **Disabling Automated backup fails due to metadata issues** | Stop the SQL IaaS Agent service. Run the T-SQL command: `use msdb exec autoadmin_metadata_delete`. Start SQL Server agent service and try to disable Automated Backup from Azure portal.  |
+| **Automated backup cannot be disabled due to account and permissions** | Check the following: <br /> - The SQL Server Agent is running. <br /> - The  **NT Service\SqlIaaSExtensionQuery**  account has proper [permissions](sql-server-iaas-agent-extension-automate-management.md#permissions-models) for the Automated Backup feature both within SQL Server, and also for the [SQL virtual machines](manage-sql-vm-portal.md) resource in the Azure portal. <br /> - The **SA** account hasn't been renamed, though disabling it is acceptable.  | 
 
 
-### I want to find out what service/application is taking the backup of SQL Server
+### I want to find out what service/application is taking SQL Server backups
 
 - In SQL Server Management Studio (SSMS) **Object Explorer**, right-click the database > Select **Reports** > **Standard Reports** > **Backup and Restore Events**. In the report, you can expand the **Successful Backup Operations** section to see the backup history.
-- If you see multiple backups on Azure or to a virtual device, check if you're using [Azure Backup](https://docs.microsoft.com/azure/backup/backup-azure-sql-database) to back up individual SQL databases or taking a virtual machine snapshot to a virtual device, which uses the `NT Authority/SYSTEM` account. If you're not, check the Windows **Services** console (services.msc) to identify any third-party applications which may be taking backups. 
+- If you see multiple backups on Azure or to a virtual device, check if you're using [Azure Backup](/azure/backup/backup-azure-sql-database) to back up individual SQL databases or taking a virtual machine snapshot to a virtual device, which uses the `NT Authority/SYSTEM` account. If you're not, check the Windows **Services** console (services.msc) to identify any third-party applications which may be taking backups. 
 
 
 ## Next steps

@@ -51,7 +51,7 @@ To view all SQL Server images that support confidential VMs, begin to deploy a S
 ## Limitations
 
 - Currently, only the following SQL Server images support Azure confidential VMs: 
-    - `SQL Server 2022 Enterprise on Windows Server 2022 Database Engine Only - x64 Gen 2`
+    - `SQL Server 2022 Enterprise / Developer / Standard / Web on Windows Server 2022 Database Engine Only - x64 Gen 2`
     - `SQL Server 2019 Enterprise on Windows Server 2022 Database Engine Only - x64 Gen 2`. 
     - `SQL Server 2017 Enterprise on Windows Server 2019 Database Engine Only - x64 Gen 2`
 - Confidential VMs aren't currently available in all regions. To validate region supportability, look for the `ECadsv5-series` or `DCadsv5-series` in [VM products Available by Azure region](https://azure.microsoft.com/explore/global-infrastructure/products-by-region/?products=virtual-machines). 

@@ -88,7 +88,7 @@ You can use the following quickstart template to deploy a SQL Server VM using st
 
 
 > [!NOTE]
-> Some VM sizes may not have [temporary or local storage](/azure/virtual-machines/azure-vms-no-temp-disk). If you deploy a SQL Server on Azure VM without temporary or local storage, all of your data, and log files, including tempdb, are stored to the same drive. 
+> Some VM sizes may not have [temporary or local storage](/azure/virtual-machines/azure-vms-no-temp-disk). If you deploy a SQL Server on Azure VM without temporary storage, tempdb data and log files are placed in the data folder. 
 
 ## Existing VMs
 

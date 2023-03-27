@@ -280,7 +280,7 @@ The following sections show how to connect over the internet to your SQL Server 
 
 ## Known Issues
 
-### I am unable to change the SQL Binary files installation path**
+### I am unable to change the SQL Binary files installation path
 
 SQL Server images from Azure Marketplace install the SQL Server binaries to the C drive. It is not currently possible to change this during deployment. The only available workaround is to manually uninstall SQL Server from within the VM, then reinstall SQL Server and choose a different location for the binary files during the installation process. 
 

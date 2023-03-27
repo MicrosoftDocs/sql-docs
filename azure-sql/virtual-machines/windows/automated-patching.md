@@ -27,26 +27,8 @@ To use Automated Patching, you need the following prerequisites:
 - Automated Patching relies on the SQL Server IaaS Agent Extension. Current SQL virtual machine gallery images add this extension by default. For more information, review [SQL Server IaaS Agent Extension](sql-server-iaas-agent-extension-automate-management.md). 
 - [Install the latest Azure PowerShell commands](/powershell/azure/) if you plan to configure Automated Patching by using PowerShell.
 
-Automated Patching is supported on the following versions of the Windows OS and SQL Server: 
+Automated Patching is supported starting with SQL Server 2008 R2 on Windows Server 2012. 
 
-:::row:::
-    :::column:::
-      SQL Server 2022
-      SQL Server 2019
-      SQL Server 2017
-      SQL Server 2016
-      SQL Server 2014
-      SQL Server 2012
-      SQL Server 2008 R2
-    :::column-end:::
-    :::column:::
-      Windows Server 2022 
-      Windows Server 2019
-      Windows Server 2016 
-      Windows Server 2012 R2
-      Windows Server 2012
-    :::column-end:::
-:::row-end:::
 
 Additionally, consider the following: 
 

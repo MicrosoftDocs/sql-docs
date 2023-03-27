@@ -18,12 +18,12 @@ monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ve
 
 ::: zone pivot="as1-azure-sql-database"
 
-This article provides information on configuring a [ledger database](ledger-overview.md) using the Azure portal, T-SQL, PowerShell, or the Azure CLI for **Azure SQL Database**. For information on creating a ledger database in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)], use the switch at the top of this page to toggle over to SQL Server.
+This article provides information on configuring a [ledger database](ledger-overview.md) using the Azure portal, T-SQL, PowerShell, or the Azure CLI for **Azure SQL Database**. For information on creating a ledger database in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] or Azure Managed Instance, use the switch at the top of this page.
 
 ## Prerequisites
 
 - Have an active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
-- An Azure SQL Database.
+- A logical server.
 
 ## Enable ledger database
 
@@ -105,9 +105,69 @@ az sql db create \
 
 ::: zone-end
 
+::: zone pivot="as1-azure-managed-instance"
+
+This article provides information on configuring a [ledger database](ledger-overview.md) using the T-SQL, PowerShell, or the Azure CLI for **Azure Managed Instance Database**. For information on creating a ledger database in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] or Azure SQL Database, use the switch at the top of this page.
+
+## Prerequisites
+
+- Have an active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
+- An Azure Managed Instance.
+
+## Enable ledger database
+
+> [!NOTE]
+> Enabling the ledger functionality at the database level will make all tables in this database updatable ledger tables. This option cannot be changed after the database is created. Creating a table with the option `LEDGER = OFF` will throw an error message.
+
+## Enable ledger database using T-SQL
+
+1. Sign into your managed instance using SSMS or Azure Data Studio.
+1. Create a ledger database using the following T-SQL statement:
+
+   ```sql
+   CREATE DATABASE MyLedgerDB  WITH LEDGER = ON;
+   ```
+
+For more information, see [CREATE DATABASE (Transact-SQL)](../../../t-sql/statements/create-database-transact-sql.md).
+
+# [PowerShell](#tab/PowerShell)
+
+## Enable ledger database using PowerShell
+
+Create a single ledger database with the [New-AzSqlInstanceDatabase](/powershell/module/az.sql/New-AzSqlInstanceDatabase) cmdlet.
+The below example creates a ledger database on a specified instance. The parameter -EnableLedger will create the ledger database.
+*Note: Make sure you modify the parameters ResourceGroupName, InstanceName and Name*
+
+```azurepowershell-interactive
+Write-host "Creating a ledger database..."
+$database = New-AzSqlInstanceDatabase -ResourceGroupName "ResourceGroup01" `
+    -InstanceName  "ManagedInstance1" `
+    -Name "Database01" `
+    -EnableLedger
+$database
+```
+
+# [Azure CLI](#tab/AzureCLI)
+
+## Enable ledger database using the Azure CLI
+
+Create a ledger database with the [az sql midb create](/cli/azure/sql/midb) command. The below example creates a ledger database on a specified instance. *Note: Make sure you modify the parameters resource-group, managed-instance and name*
+
+```azurecli-interactive
+az sql midb create \
+    --resource-group ResourceGroup01 \
+    --managed-instance Server01 \
+    --name Database01 \
+    --ledger-on
+```
+
+---
+
+::: zone-end
+
 ::: zone pivot="as1-sql-server"
 
-This article provides information on creating a [ledger database](ledger-overview.md) using T-SQL in **[!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)]**. For information on creating a ledger database in Azure SQL Database, use the switch at the top of this page to toggle over to Azure SQL Database.
+This article provides information on creating a [ledger database](ledger-overview.md) using T-SQL in **[!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)]**. For information on creating a ledger database in Azure SQL Database or Azure Managed Instance, use the switch at the top of this page.
 
 ## Prerequisites
 

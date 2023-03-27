@@ -44,7 +44,7 @@ Because this is a regular table update, the system automatically guarantees its 
 
 For more information on how ledger provides data integrity, see the articles, [Digest management](ledger-digest-management.md) and [Database verification](ledger-database-verification.md).
 
-## Where are database transaction and block data stored?
+## Where are database transactions and block data stored?
 
 The data for transactions and blocks is physically stored as rows in two system catalog views:
 

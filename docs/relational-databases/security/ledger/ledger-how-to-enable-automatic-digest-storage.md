@@ -67,14 +67,61 @@ $ledgerDigestUploadConfig
 
 Update the database to start uploading ledger digests to the Azure Blob Storage account or Azure Confidential Ledger, by using the [az sql db ledger-digest-uploads enable](/cli/azure/sql/db) command.  
 
-> [!NOTE]
-> Modify the parameters `name`, `resource-group`, `server` and `endpoint` (ACL endpoint or Azure Storage endpoint)
+*Note: Make sure you modify the parameters resource-group, server, name and endpoint (ACL endpoint or Azure Storage endpoint)*
 
 ```azurecli-interactive
 az sql db ledger-digest-uploads enable \
-    --name Database01 \
     --resource-group ResourceGroup01 \
     --server Server01 \
+    --name Database01 \
+    --endpoint https://ledgerstorage.blob.core.windows.net
+```
+
+---
+::: zone-end
+
+::: zone pivot="as1-azure-sql-managedinstance"
+
+In this article, we'll describe how you can configure automatic generation and storage of database digests through the PowerShell, or the Azure CLI.
+
+## Prerequisites
+
+- Have an active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
+- An Azure Managed Database
+
+## Enable automatic digest storage using the Azure portal
+
+# [PowerShell](#tab/PowerShell)
+
+## Enable database digest uploads using PowerShell
+
+Update the database to start uploading ledger digests to the Azure Blob Storage account or Azure Confidential Ledger, by using the [Enable-AzSqlInstanceDatabaseLedgerDigestUpload](/powershell/module/az.sql/enable-azsqlinstancedatabaseledgerdigestupload) cmdlet. When the endpoint parameter is an Azure Blob Storage endpoint, the database server will create a new container, named **sqldbledgerdigests**, within the storage account and it will start writing ledger digests to the container.
+  
+*Note: Make sure you modify the parameters ResourceGroupName, InstanceName, DatabaseName and Endpoint (ACL endpoint or Azure Storage endpoint)*
+
+```azurepowershell-interactive
+Write-host "Enabling ledger digest upload..." 
+$ledgerDigestUploadConfig = Enable-AzSqlDatabaseLedgerDigestUpload `
+     -ResourceGroupName "ResourceGroup01" `
+     -InstanceName "ManagedInstance01" `
+     -DatabaseName "Database01" `
+     -Endpoint "https://ledgerstorage.blob.core.windows.net"
+$ledgerDigestUploadConfig
+```
+
+# [Azure CLI](#tab/AzureCLI)
+
+## Enable database digest uploads using the Azure CLI
+
+Update the database to start uploading ledger digests to the Azure Blob Storage account or Azure Confidential Ledger, by using the [az sql midb ledger-digest-uploads enable](/cli/azure/sql/midb) command.  
+
+*Note: Make sure you modify the parameters resource-group, managed-instance, name and endpoint (ACL endpoint or Azure Storage endpoint)*
+
+```azurecli-interactive
+az sql midb ledger-digest-uploads enable \
+    --resource-group ResourceGroup01 \
+    --managed-instance ManagedInstance01 \
+    --name Database01 \
     --endpoint https://ledgerstorage.blob.core.windows.net
 ```
 

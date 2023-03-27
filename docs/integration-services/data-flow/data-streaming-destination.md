@@ -44,7 +44,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
 >  For detailed steps, see [Walkthrough: Publish an SSIS Package as a SQL View](../../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md).  
 
 ## Configure Data Streaming Destination
-  Configure the Data Streaming Destination by using the **Advanced Editor for Data Streaming Destination** dialog box. Open this dialog box by double clicking the component or by right-clicking the component in the data flow designer and then clicking **Edit**.  
+  Configure the Data Streaming Destination by using the **Advanced Editor for Data Streaming Destination** dialog box. Open this dialog box by double-clicking the component or by right-clicking the component in the data flow designer and then clicking **Edit**.  
   
  This dialog box has three tabs: **Component Properties**, **Input Columns**, and **Input and Output Properties**.  
   

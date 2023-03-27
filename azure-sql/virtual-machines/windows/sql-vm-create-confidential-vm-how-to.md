@@ -55,6 +55,9 @@ To view all SQL Server images that support confidential VMs, begin to deploy a S
     - `SQL Server 2017 Enterprise on Windows Server 2019 Database Engine Only`
 - Confidential VMs aren't currently available in all regions. To validate region supportability, look for the `ECadsv5-series` or `DCadsv5-series` in [VM products Available by Azure region](https://azure.microsoft.com/explore/global-infrastructure/products-by-region/?products=virtual-machines). 
 
+ >[!IMPORTANT]
+   > Trusted Launch feature would work only with Gen 2 images. Confidential VM is not supported with SQL Standard edition as of today.
+
 ## Next steps
 
 In this article, you learned to deploy SQL Server to a confidential virtual machine in the Azure portal. To learn more about how to migrate your data to the new SQL Server, see the following article.

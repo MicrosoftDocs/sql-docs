@@ -242,6 +242,8 @@ For more information, see [Automated Backup for SQL Server in Azure Virtual Mach
 
 You have the option to enable [Machine Learning Services](/sql/advanced-analytics/). This option lets you use machine learning with Python and R in SQL Server 2017. Select **Enable** on the **SQL Server Settings** window.
 
+SQL Service would require a restart if you are enabling this feature on an already existing SQL Server VM using the **Additional Features** blade on SQL Virtual Machine resource.
+
 
 ## 4. Review + create
 
@@ -278,6 +280,11 @@ The following sections show how to connect over the internet to your SQL Server 
   > [!NOTE]
   > This example uses the common port 1433. However, this value will need to be modified if a different port (such as 1401) was specified during the deployment of the SQL Server VM. 
 
+## Known Issues
+
+**I am unable to change the SQL Binary files installation path**
+
+When you deploy a SQL marketplace image, we would install SQL Server binaries on the C Drive. You cannot change this as of today during deployment. The only available workaround is to manually remove and reinstall SQL Server inside the VM to change the binary files location
 
 ## Next steps
 

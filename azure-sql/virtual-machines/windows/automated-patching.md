@@ -114,6 +114,8 @@ To disable Automated Patching, run the same script without the **-Enable** param
 
 > [!NOTE]
 > There are also several other ways to enable automatic patching of Azure VMs, such as [Update Management](/azure/automation/update-management/overview) or [Automatic VM guest patching](/azure/virtual-machines/automatic-vm-guest-patching). Choose only one option to automatically update your VM as overlapping tools may lead to failed updates. 
+> For getting ESU on SQL Azure VM, you can use windows Update channel if you are not using the automated patching feature.
+> If you have Availability Groups with availability zones, we recommend to set the automated patching schedule to be different for the VMS participating in Always on Availability Group.
 
 
 ## Next steps

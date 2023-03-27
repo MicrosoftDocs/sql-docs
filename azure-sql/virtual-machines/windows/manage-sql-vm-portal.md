@@ -23,7 +23,7 @@ The **SQL virtual machines** resource management point is different to the **Vir
 
 ## Prerequisite 
 
-The **SQL virtual machines** resource is only available to SQL Server VMs that have been [registered with the SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md). 
+The **SQL virtual machines** resource is only available to SQL Server VMs that have been [registered with the SQL RP](https://learn.microsoft.com/azure/azure-sql/virtual-machines/windows/sql-agent-extension-manually-register-single-vm?view=azuresql&tabs=azure-portal#register-subscription-with-rp). 
 
 
 ## Access the resource
@@ -100,7 +100,7 @@ To learn more, see, [Automated patching](automated-backup.md).
 
 ## Additional features
 
-Manage additional features of SQL Server on the **Additional features** tab, such as enabling [R Services (Advanced analytics)](/sql/machine-learning/r/sql-server-r-services) or [least privilege mode](sql-server-iaas-agent-extension-automate-management.md). 
+Manage additional features of SQL Server on the **Additional features** tab, such as enabling [R Services (Advanced analytics)](/sql/machine-learning/r/sql-server-r-services) or [least privilege mode](sql-server-iaas-agent-extension-automate-management.md). Enabling R Services would restart your SQL Server service.
 
 ## High availability (Preview)
 

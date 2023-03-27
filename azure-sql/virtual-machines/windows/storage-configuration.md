@@ -86,6 +86,10 @@ You can use the following quickstart template to deploy a SQL Server VM using st
 * [Create VM with storage optimization](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.sqlvirtualmachine/sql-vm-new-storage/)
 * [Create VM using UltraSSD](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.sqlvirtualmachine/sql-vm-new-storage-ultrassd)
 
+
+> [!NOTE]
+> Some VM Sizes may not have [temporary or local storage](https://learn.microsoft.com/azure/virtual-machines/azure-vms-no-temp-disk). In you deploy a SQL Server Azure VM with a VM Size that does not provide temporary storage, we will put data/log and TempDB files on one drive
+
 ## Existing VMs
 
 For existing SQL Server VMs, you can modify some storage settings in the Azure portal. Open your [SQL virtual machines resource](manage-sql-vm-portal.md#access-the-resource), and select **Overview**. The SQL Server **Overview** page shows the current storage usage of your VM. All drives that exist on your VM are displayed in this chart. For each drive, the storage space displays in four sections:
@@ -242,6 +246,16 @@ In Windows Server 2008 to 2012 R2, the default value for `-StorageSubsystemFrien
 
   * Determine the number of disks associated with your storage pool based on your load expectations. Keep in mind that different VM sizes allow different numbers of attached data disks. For more information, see [Sizes for virtual machines](/azure/virtual-machines/sizes?toc=/azure/virtual-machines/windows/toc.json).
 
+## Known issues
+
+**Configure Disk option or Storage configuration blade on SQL Virtual Machine Resource is Grayed Out**
+
+Storage Configuration blade can be grayed out if your IaaS Extension is in a failed,[Repair IaaS extension](https://learn.microsoft.com/azure/azure-sql/virtual-machines/windows/sql-agent-extension-manually-register-single-vm?tabs=azure-portal&view=azuresql#repair-extension)
+
+Configure option on Storage configuration blade can be grayed out if you've customized your Storage Pool. 
+
+**I have a disk with 1TB of unallocated space that I cannot remove from storage pool**
+There is no option to remove the unallocated space from a disk that belongs to a storage pool.
 
 ## Next steps
 

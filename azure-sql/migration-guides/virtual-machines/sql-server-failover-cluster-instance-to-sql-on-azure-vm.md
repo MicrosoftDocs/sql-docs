@@ -5,7 +5,7 @@ description: Learn how to lift and shift your Always On failover cluster instanc
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mathoma
-ms.date: 10/27/2022
+ms.date: 03/22/2023
 ms.service: virtual-machines-sql
 ms.subservice: migration-guide
 ms.topic: how-to
@@ -162,9 +162,9 @@ It may take some time after installation for discovered machines to appear in Az
 To prepare source machines, you'll need information from the cluster.
 
 > [!CAUTION]
->
+>  
 > - Maintain disk ownership throughout the replication process until the final cutover. If there is a change in disk ownership, there is a chance that the volumes could be corrupted and replication would need to be to retriggered. Set the preferred owner for each disk to avoid transfer of ownership during the replication process.
->
+>  
 > - Avoid patching activities and system reboots during the replication process to avoid transfer of disk ownership.
 
 To prepare source machines, do the following:
@@ -191,13 +191,13 @@ For the cluster and cluster roles to respond properly to requests, an Azure Load
 
    | **Parameter** | **Type** | **Description** |
    | --- | --- | --- |
-   | ConfigFilePath | Mandatory |  Specify the path for the `Cluster-Config.csv` file that you have filled out in the previous step. |
-   | ResourceGroupName | Mandatory| Specify the name of the resource Group in which the load balancer is to be created. |
-   | VNetName | Mandatory| Specify the name of the Azure virtual network that the load balancer will be associated to. |
-   | SubnetName | Mandatory| Specify the name of the subnet in the Azure virtual network that the load balancer will be associated to. |
-   | VNetResourceGroupName | Mandatory| Specify the name of the resource group for the Azure virtual network that the load balancer will be associated to. |
-   | Location | Mandatory| Specify the location in which the load balancer should be created. |
-   | LoadBalancerName | Mandatory| Specify the name of the load balancer to be created. |
+   | ConfigFilePath | Mandatory | Specify the path for the `Cluster-Config.csv` file that you have filled out in the previous step. |
+   | ResourceGroupName | Mandatory | Specify the name of the resource Group in which the load balancer is to be created. |
+   | VNetName | Mandatory | Specify the name of the Azure virtual network that the load balancer will be associated to. |
+   | SubnetName | Mandatory | Specify the name of the subnet in the Azure virtual network that the load balancer will be associated to. |
+   | VNetResourceGroupName | Mandatory | Specify the name of the resource group for the Azure virtual network that the load balancer will be associated to. |
+   | Location | Mandatory | Specify the location in which the load balancer should be created. |
+   | LoadBalancerName | Mandatory | Specify the name of the load balancer to be created. |
 
    ```powershell
    ./Create-ClusterLoadBalancer.ps1 -ConfigFilePath ./cluster-config.csv -ResourceGroupName $resoucegroupname -VNetName $vnetname -subnetName $subnetname -VnetResourceGroupName $vnetresourcegroupname -Location "eastus" -LoadBalancerName $loadbalancername
@@ -313,8 +313,8 @@ After your VMs have migrated, reconfigure the cluster. Follow these steps:
 
    | **Parameter** | **Type** | **Description** |
    | --- | --- | --- |
-   | ResourceGroupName | Mandatory |  Specify the name of the resource group containing the migrated servers. |
-   | NumberofNodes | Optional | Specify the number of nodes in your failover cluster instance. This parameter is used to identify the right SKU for the shared disks to be    created. By default, the script assumes the number of nodes in the cluster to be 2. |
+   | ResourceGroupName | Mandatory | Specify the name of the resource group containing the migrated servers. |
+   | NumberofNodes | Optional | Specify the number of nodes in your failover cluster instance. This parameter is used to identify the right SKU for the shared disks to be created. By default, the script assumes the number of nodes in the cluster to be 2. |
    | DiskNamePrefix | Optional | Specify the prefix that you'd want to add to the names of your shared disks. |
 
    ```powershell
@@ -323,10 +323,10 @@ After your VMs have migrated, reconfigure the cluster. Follow these steps:
 
 1. Attach the shared disks to the migrated servers by running the `Attach-SharedDisks.ps1` script.
 
-   | **Parameter** | **Type** |**Description** |
-   | --- | ---  | --- |
+   | **Parameter** | **Type** | **Description** |
+   | --- | --- | --- |
    | ResourceGroupName | Mandatory | Specify the name of the resource group containing the migrated servers. |
-   | StartingLunNumber | Optional |Specify the starting LUN number that is available for the shared disks to be attached to. By default, the script tries to attach shared    disks to LUN starting 0. |
+   | StartingLunNumber | Optional | Specify the starting LUN number that is available for the shared disks to be attached to. By default, the script tries to attach shared disks to LUN starting 0. |
 
    ```powershell
    ./Attach-ShareDisks.ps1 -ResourceGroupName $resoucegroupname
@@ -359,12 +359,9 @@ Your SQL Server failover cluster instance  is ready.
 ## Post-migration best practices
 
 - For SQL Server:
-  - Install [SQL Server IaaS Agent extension](../../virtual-machines/windows/sql-server-iaas-agent-extension-automate-management.md) to automate management and administration tasks.
+  - Install [SQL Server IaaS Agent extension](../../virtual-machines/windows/sql-server-iaas-agent-extension-automate-management.md) to automate management and administration tasks. The SQL IaaS Agent extension only supports limited functionality on SQL Server failover clustered instances.
   - [Optimize](../../virtual-machines/windows/performance-guidelines-best-practices-checklist.md) SQL Server performance on Azure VMs.
   - Understand [pricing](../../virtual-machines/windows/pricing-guidance.md#free-licensed-sql-server-editions) for SQL Server on Azure.
-- For increased resilience:
-  - Keep data secure by backing up Azure VMs using the [Azure Backup service](/azure/backup/quick-backup-vm-portal).
-  - Keep workloads running and continuously available by replicating Azure VMs to a secondary region with [Site Recovery](/azure/site-recovery/azure-to-azure-tutorial-enable-replication).
 - For increased security:
   - Lock down and limit inbound traffic access with [Microsoft Defender for Cloud - Just in time administration](/azure/security-center/security-center-just-in-time).
   - Restrict network traffic to management endpoints with [Network Security Groups](/azure/virtual-network/network-security-groups-overview).

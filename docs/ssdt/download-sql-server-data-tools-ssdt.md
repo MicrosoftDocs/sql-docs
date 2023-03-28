@@ -108,7 +108,7 @@ For more details you can follow the [Step-by-Step Guidelines for Offline Install
 |-------------------|--------------------|
 |Relational databases| SQL Server 2012 - SQL Server 2019<br /><br />Azure SQL Database, Azure SQL Managed Instance<br /><br />Azure Synapse Analytics (dedicated pools only)|
 |Analysis Services models<br /><br />Reporting Services reports | SQL Server 2008 - SQL Server 2019|
-|Integration Services packages| SQL Server 2012 - SQL Server 2019 |
+|Integration Services packages| SQL Server 2012 - SQL Server 2022 |
 
 
 ## Previous versions

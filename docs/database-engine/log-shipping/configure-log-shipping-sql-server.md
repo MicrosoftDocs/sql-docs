@@ -51,7 +51,7 @@ helpviewer_keywords:
   
 #### To configure log shipping  
   
-1.  Right click the database you want to use as your primary database in the log shipping configuration, and then click **Properties**.  
+1.  Right-click the database you want to use as your primary database in the log shipping configuration, and then click **Properties**.  
   
 2.  Under **Select a page**, click **Transaction Log Shipping**.  
   

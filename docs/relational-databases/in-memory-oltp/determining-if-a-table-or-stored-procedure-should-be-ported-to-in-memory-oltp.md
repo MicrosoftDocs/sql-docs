@@ -98,7 +98,7 @@ Scan and contention statistics on the table details report is gathered and aggre
   
 **To generate a migration checklist using the UI command**  
   
-1.  In **Object Explorer**, right click a database other than the system database, click **Tasks**, and then click **Generate In-Memory OLTP Migration Checklists**.  
+1.  In **Object Explorer**, right-click a database other than the system database, click **Tasks**, and then click **Generate In-Memory OLTP Migration Checklists**.  
   
 2.  In the Generate In-Memory OLTP Migration Checklists dialog box, click Next to navigate to the **Configure Checklist Generation Options** page. On this page do the following.  
   

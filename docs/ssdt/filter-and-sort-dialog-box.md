@@ -13,7 +13,7 @@ f1_keywords:
 
 # Filter and Sort Dialog Box
 
-In SQL Server Object Explorer, you can right click a table or view and select **View Data** (for more information see [How to: View and Edit Data in a Table](../ssdt/how-to-view-and-edit-data-in-a-table.md)). Beginning in the March 2014 release of SQL Server Data Tools, the **Data Editor** has a Sort and filter button in the toolbar. You can modify the data that is displayed in a table or view.  
+In SQL Server Object Explorer, you can right-click a table or view and select **View Data** (for more information see [How to: View and Edit Data in a Table](../ssdt/how-to-view-and-edit-data-in-a-table.md)). Beginning in the March 2014 release of SQL Server Data Tools, the **Data Editor** has a Sort and filter button in the toolbar. You can modify the data that is displayed in a table or view.  
   
 In the **Filter and Sort** dialog box, you can specify which data will be displayed in the **Data Editor**:  
   
@@ -27,7 +27,7 @@ In the **Filter and Sort** dialog box, you can specify which data will be displa
   
 -   Sort order of columns.  
   
-You can also right click on a row and in the **Filter and Sort** dialog box and select an operation to perform on a row.  
+You can also right-click on a row and in the **Filter and Sort** dialog box and select an operation to perform on a row.  
   
 ## See Also  
 [Connected Database Development](../ssdt/connected-database-development.md)  

@@ -59,7 +59,7 @@ helpviewer_keywords:
   
 3.  Expand the **Databases** node.  
   
-4.  Right click the database you want to deploy, select **Tasks**, and then select **Deploy Database to Microsoft Azure SQL Database**  
+4.  Right-click the database you want to deploy, select **Tasks**, and then select **Deploy Database to Microsoft Azure SQL Database**  
   
 5.  Complete the Wizard dialogs:  
   

@@ -117,7 +117,7 @@ For more information, see one of the following topics:
 The **Advanced Editor** dialog box contains the properties that can be set programmatically.
 To open the **Advanced Editor** dialog box:
 
-- In the **Data Flow** screen of your Integration Services project, right click the Teradata destination and select **Show Advanced Editor**.
+- In the **Data Flow** screen of your Integration Services project, right-click the Teradata destination and select **Show Advanced Editor**.
 
 For more information about the properties that you can set in the Advanced Editor dialog box, see [Teradata destination custom properties](#teradata-destination-custom-properties).
 

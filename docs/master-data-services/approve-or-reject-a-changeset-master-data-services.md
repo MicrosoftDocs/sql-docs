@@ -32,7 +32,7 @@ ms.topic: conceptual
   
 2.  Click an entity on the **Entities** menu.  
   
-3.  In the right pane, select **Changesets** and double click the changeset you want to approve or reject.  
+3.  In the right pane, select **Changesets** and double-click the changeset you want to approve or reject.  
   
 4.  Click **Apply** to apply the changeset and review the pending changes.  
   

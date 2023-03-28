@@ -68,7 +68,7 @@ You use database project settings to control aspects of your database, debugging
   
 1.  In **Solution Explorer**, right-click the database project for which you want to configure properties, and select **Properties**.  
   
-    Alternatively, double click the **Properties** node of the project in **Solution Explorer**.  
+    Alternatively, double-click the **Properties** node of the project in **Solution Explorer**.  
   
 2.  The properties sheet for your database project appears.  
   

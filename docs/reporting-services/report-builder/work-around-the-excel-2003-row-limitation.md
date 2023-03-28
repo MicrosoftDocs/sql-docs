@@ -21,7 +21,7 @@ ms.custom: updatefrequency5
   
 1.  Open the report in [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] or the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web portal.  
   
-2.  Right click the Data row in the table, and then click **Add Group** > **Parent Group** to add an outer table group.  
+2.  Right-click the Data row in the table, and then click **Add Group** > **Parent Group** to add an outer table group.  
   
      ![Select the Parent Group](../../reporting-services/report-builder/media/datarow-selectparentgroup.png "Select the Parent Group")  
   
@@ -37,7 +37,7 @@ ms.custom: updatefrequency5
   
      ![Delete a group column](../../reporting-services/report-builder/media/groupcolumn-delete-updated.png "Delete a group column")  
   
-5.  Right click **Group 1** in the **Row Groups** section, and then click **Group Properties**.  
+5.  Right-click **Group 1** in the **Row Groups** section, and then click **Group Properties**.  
   
      ![View group properties](../../reporting-services/report-builder/media/groupproperties-updated.png "View group properties")  
   

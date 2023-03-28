@@ -103,7 +103,7 @@ The following steps can be considered to rectify this issue:
 - Clean up the Query Store, or modify the data retention period to "auto" by using T-SQL, or increase Query Store maximum size. See how to [configure recommended retention and capture policy for Query Store](./query-performance-insight-use.md#recommended-retention-and-capture-policy).
 - Use SQL Server Management Studio (SSMS) and follow these steps:
   - Connect to the Azure SQL Database
-  - Right click on the database
+  - Right-click on the database
   - Go to Properties and click on Query Store
   - Change the Operation Mode to Read-Write
   - Change the Store Capture Mode to Auto

@@ -57,7 +57,10 @@ alter login [third-party-login] disable;
 ```
 
 # [Azure AD Authetication](#tab/AAD-Authentication)
-Not required for Azure AD Authetication
+
+```sql
+alter login [bob@contoso.com] disable;
+```
 
 ---
 
@@ -124,6 +127,8 @@ create login [third-party-login] with password = 'Just4STRONG_PAZzW0rd!', sid = 
 
 # [Azure AD Authetication](#tab/AAD-Authentication)
 
+Connect to the `master` database on the logical server hosting the named replica, created in the previous step and add the login.
+
 ```sql
 create login [bob@contoso.com] from external provider;
 ```
@@ -147,7 +152,7 @@ GRANT SELECT ON [Application].[Cities] to [third-party-user];
 # [Azure AD authentication](#tab/AAD-Authentication)
 
 ```sql
-GRANT SELECT ON [Application].[Cities] to [third-party-login@contoso.com]
+GRANT SELECT ON [Application].[Cities] to [bob@contoso.com];
 ```
 
 ---

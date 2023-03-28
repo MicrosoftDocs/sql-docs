@@ -3,7 +3,7 @@ title: "CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)"
 description: CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
-ms.date: "04/13/2022"
+ms.date: 03/15/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -51,17 +51,19 @@ Specifies the name of the database scoped credential being created. *credential_
 
 Specifies the name of the account to be used when connecting outside the server. 
 
-- To import a file from Azure Blob Storage or Azure Data Lake Storage using a shared key, the identity name must be `SHARED ACCESS SIGNATURE`. For more information about shared access signatures, see [Using Shared Access Signatures (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1).
+- To import a file from Azure Blob Storage or Azure Data Lake Storage using a shared key, the identity name must be `SHARED ACCESS SIGNATURE`. For more information about shared access signatures, see [Using Shared Access Signatures (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1). Only use `IDENTITY = SHARED ACCESS SIGNATURE` for a shared access signature.
 - To import a file from Azure Blob Storage using a managed identity, the identity name must be `MANAGED IDENTITY`.
-- To load data into Azure Synapse Analytics, any valid value can be used for identity. 
 - When using Kerberos (Windows Active Directory or MIT KDC) do not use the domain name in the IDENTITY argument. It should just be the account name.
-- When on SQL Server, if creating a database scoped credential with a Storage Access Key used as the SECRET, IDENTITY is ignored.
+- In a SQL Server instance, if creating a database scoped credential with a Storage Access Key used as the SECRET, IDENTITY is ignored.
+- WITH IDENTITY is not required if the container in Azure Blob storage is enabled for anonymous access. For an example querying Azure Blob storage, see [Importing into a table from a file stored on Azure Blob storage](../functions/openrowset-transact-sql.md#j-importing-into-a-table-from-a-file-stored-on-azure-blob-storage).
 
 > [!IMPORTANT]
 > The only PolyBase external data source that supports Kerberos authentication is Hadoop. All other external data sources (SQL Server, Oracle, Teradata, MongoDB, generic ODBC) only support Basic Authentication.
 
-> [!NOTE]
-> WITH IDENTITY is not required if the container in Azure Blob storage is enabled for anonymous access. For an example querying Azure Blob storage, see [Importing into a table from a file stored on Azure Blob storage](../functions/openrowset-transact-sql.md#j-importing-into-a-table-from-a-file-stored-on-azure-blob-storage).
+- To load data into Azure Synapse Analytics, any valid value can be used for IDENTITY.
+- In an Azure Synapse Analytics serverless SQL pool, database-scoped credentials can specify workspace Managed Identity, service principal name, or shared access signature (SAS) token. Access is also possible via user identity, also known as "Azure AD pass-through" is possible in the databased-scoped credential, as is anonymous access to publicly available storage. For more information, see [Supported storage authorization types](/azure/synapse-analytics/sql/develop-storage-files-storage-access-control?tabs=user-identity#supported-storage-authorization-types). 
+- In an Azure Synapse Analytics dedicated SQL pool, database-scoped credentials can specify shared access signature (SAS) token, custom application identity, workspace Managed Identity, or storage access key.
+
 
 #### SECRET **='**_secret_**'**
 
@@ -79,7 +81,6 @@ Before creating a database scoped credential, the database must have a master ke
 When IDENTITY is a Windows user, the secret can be the password. The secret is encrypted using the service master key. If the service master key is regenerated, the secret is re-encrypted using the new service master key.
 
 When granting permissions for a shared access signatures (SAS) for use with a PolyBase external table, select both **Container** and **Object** as allowed resource types. If not granted, you may receive error 16535 or 16561 when attempting to access the external table.
-
 
 Information about database scoped credentials is visible in the [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md) catalog view.
 

@@ -147,7 +147,9 @@ Azure Event Hubs | *.servicebus.windows.net
 Azure Event Grid | *.eventgrid.azure.net
 Azure Cognitive Services | *.cognitiveservices.azure.com
 PowerApps / Dataverse | *.api.crm.dynamics.com
+Microsoft Dynamics | *.dynamics.com
 Azure Container Instances | *.azurecontainer.io
+Azure Container Apps | *.azurecontainerapps.io
 Power BI | api.powerbi.com
 Microsoft Graph | graph.microsoft.com
 Analysis Services | *.asazure.windows.net
@@ -244,6 +246,12 @@ With this IDENTITY value, the DATABASE SCOPED CREDENTIAL the authentication info
 CREATE DATABASE SCOPED CREDENTIAL [https://<APP_NAME>.azurewebsites.net/api/<FUNCTION_NAME>]
 WITH IDENTITY = 'Managed Identity', SECRET = '{"resourceid":"<APP_ID>"}';
 ```
+
+Both System-Assigned and User-Assigned Managed Identities are supported:
+ - If there is at least one User Managed Identity assigned, the defined Primary Identity will be used for authenticating when using a Managed Identity based Database Scoped Credential. 
+ - If there are no User Managed Identity assigned then the System Assigned Managed Identity will be used, if enabled, for authenticating when using a Managed Identity based Database Scoped Credential. 
+ - In case there are both User and System Managed Identitis defined,the User-Assigned Managed Identity will be used. 
+ - If there are more than one User Managed Identity assigned, only the Primary Identity will be used. 
 
 ---
 

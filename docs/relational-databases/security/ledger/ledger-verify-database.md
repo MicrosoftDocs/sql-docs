@@ -13,13 +13,13 @@ monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ve
 
 # Verify a ledger table to detect tampering
 
-[!INCLUDE [SQL Server 2022 Azure SQL Database](../../../includes/applies-to-version/sqlserver2022-asdb.md)]
+[!INCLUDE [SQL Server 2022 Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
 In this article, you'll verify the integrity of the data in your ledger tables. If you've configured the **Automatic digest storage** on your database, follow the *[T-SQL using automatic digest storage](#run-ledger-verification-for-the-database)* section. Otherwise, follow the *[T-SQL using a manual generated digest](#run-ledger-verification-for-the-database)* section.
 
 ## Prerequisites
 
-- Have an active Azure subscription if you're using Azure SQL Database or Azure Managed Instance. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
+- Have an active Azure subscription if you're using Azure SQL Database or Azure SQL Managed Instance. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
 - [Create and use updatable ledger tables](ledger-how-to-updatable-ledger-tables.md) or [create and use append-only ledger tables](ledger-how-to-append-only-ledger-tables.md).
 - [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md).
 - The database option [ALLOW_SNAPSHOT_ISOLATION](../../../t-sql/statements/alter-database-transact-sql-set-options.md) has to be enabled on the database before you can run the verifcation stored procedures.

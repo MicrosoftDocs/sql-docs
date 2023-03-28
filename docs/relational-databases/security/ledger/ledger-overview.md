@@ -13,7 +13,10 @@ monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ve
 
 # Ledger overview
 
-[!INCLUDE [SQL Server 2022 Azure SQL Database](../../../includes/applies-to-version/sqlserver2022-asdb.md)]
+[!INCLUDE [SQL Server 2022 Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
+
+> [!NOTE]
+> Ledger in Azure SQL Managed Instance is currently in public preview.
 
 Establishing trust around the integrity of data stored in database systems has been a longstanding problem for all organizations that manage financial, medical, or other sensitive data. The ledger feature provides tamper-evidence capabilities in your database. You can cryptographically attest to other parties, such as auditors or other business parties, that your data hasn't been tampered with.
 
@@ -69,9 +72,6 @@ Ledger functionality is introduced to tables in two forms:
 - [Append-only ledger tables](#append-only-ledger-tables), which only allow insertions to your tables.
 
 Both updatable ledger tables and append-only ledger tables provide tamper-evidence and digital forensics capabilities. 
-
-> [!NOTE]
-> Ledger in Azure Managed Instance is currently in public preview.
 
 ### Updatable ledger tables
 

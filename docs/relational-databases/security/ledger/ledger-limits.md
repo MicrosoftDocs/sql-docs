@@ -13,12 +13,12 @@ monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ve
 
 # Ledger considerations and limitations
 
-[!INCLUDE [SQL Server 2022 Azure SQL Database](../../../includes/applies-to-version/sqlserver2022-asdb.md)]
+[!INCLUDE [SQL Server 2022 Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
 There are some considerations and limitations to be aware of when working with ledger tables due to the nature of system-versioning and immutable data.
 
 > [!NOTE]
-> Ledger in Azure Managed Instance is currently in public preview.
+> Ledger in Azure SQL Managed Instance is currently in public preview.
 
 ## General considerations and limitations
 

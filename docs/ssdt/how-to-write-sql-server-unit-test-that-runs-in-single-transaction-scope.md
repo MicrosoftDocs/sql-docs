@@ -27,7 +27,7 @@ For some procedures in this topic, the Distributed Transaction Coordinator servi
   
 #### To create a transaction using Transact\-SQL  
   
-1.  Open a unit test in the SQL Server Unit Test Designer. (Double click the source code file for the unit test to display the designer.)  
+1.  Open a unit test in the SQL Server Unit Test Designer. (Double-click the source code file for the unit test to display the designer.)  
   
 2.  Specify the type of script for which you want to create the transaction. For example, you can specify pre-test, test, or post-test.  
   

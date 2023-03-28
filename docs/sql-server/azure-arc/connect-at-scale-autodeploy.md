@@ -4,17 +4,20 @@ description: In this article, you learn how Microsoft helps you automatically co
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mikeray, randolphwest
-ms.date: 03/22/2023
+ms.date: 03/23/2023
 ms.service: sql
 ms.topic: conceptual
 ---
 
 # Automatically connect Azure Arc-enabled SQL Servers
 
-To streamline the experience of connecting SQL Servers to Azure, Microsoft automatically installs the Azure extension for SQL Server on all Arc-enabled servers that have SQL Server installed which will result in all of the SQL Server instance resources being automatically created in Azure. To learn more, see [Azure Arc-enabled SQL Server](overview.md).
+Azure Arc-enabled SQL Server is a cloud-native solution provided by Microsoft to simplify the management, protection, and governance of SQL Server instances running on Azure Arc-enabled servers. This solution streamlines the experience of connecting SQL Servers to Azure by automatically installing the Azure extension for SQL Server on all Arc-enabled servers that have SQL Server installed. For more information, visit [Azure Arc-enabled SQL Server](overview.md). All the SQL Server instance resources are automatically created in Azure, providing a centralized management platform for all your SQL Servers.
 
 > [!IMPORTANT]
-> Microsoft will begin automatically connecting Azure Arc-enabled SQL Servers on April 11, 2023.
+> Microsoft will begin automatically connecting newly created Arc servers with SQL Server installed on them starting from April 11, 2023.
+
+> [!IMPORTANT]
+> Microsoft only automatically connects Arc servers with SQL Server installed on them when the Arc server resource is in [one of the regions supported by Arc-enabled SQL Server](prerequisites.md#supported-regions).
 
 This article details how the streamlined process of connecting SQL Server to Azure works.
 
@@ -24,38 +27,42 @@ Complete the [Prerequisites](prerequisites.md).
 
 ## Specify license type
 
-Optionally, you can specify the license type for each instance of SQL Server.
+Optionally, specify the license type for each instance of SQL Server.
 
-To specify the desired license type, provide the license type value tag. The automatic connecting work flow requires that tag.  [Tag resources, resource groups, and subscriptions for logical organization - Azure Resource Manager | Microsoft Learn](/azure/azure-resource-manager/management/tag-resources).
+To specify the desired license type, provide the license type value tag. The automatic connecting workflow requires that tag. For more information, visit [Tag resources, resource groups, and subscriptions for a logical organization](/azure/azure-resource-manager/management/tag-resources).
 
-Add one of the tags and values below to a subscription or resource group(s) or Arc Server resource(s).
+Add one of the tags and values below to a subscription, resource group(s), or Arc Server resource(s).
 
-|Tag  |Value  |
-|---------|---------|
-|`ArcSQLServerExtensionDeployment` |`Paid`|
-|`ArcSQLServerExtensionDeployment` |`PAYG`|
-|`ArcSQLServerExtensionDeployment` |`LicenseOnly`|
+| Tag | Value |
+| --- | ----- |
+| `ArcSQLServerExtensionDeployment` | `Paid` |
+| `ArcSQLServerExtensionDeployment` | `PAYG` |
+| `ArcSQLServerExtensionDeployment` | `LicenseOnly` |
 
-Microsoft uses this value when the SQL Server extension is deployed via the automatic connecting work flow.
+Microsoft uses this value when the automatic connecting workflow deploys the SQL Server extension.
 
-## Opt out
+When onboarding SQL Server instances to Azure Arc, Microsoft provides an automated process that sets the license type (LT) to **LicenseOnly**. However, suppose your SQL Server is covered by Software Assurance (SA) or Subscription and Support (SS). In that case, it's essential to set the LT to "Paid" to enable valuable management features provided to SA customers or customers using the Pay-as-you-go (PAYG) model.
 
-There is no cost associated with connecting SQL Server to Azure. However, if you decide to opt out from automatically installing the SQL Server extension on Arc servers that have SQL Server, follow the instructions in the [How to opt out of automatic connecting](#how-to-opt-out-automatic-connecting) section.
+## Automatically install the Azure Extension for SQL Server on new servers connected to Arc
 
-## Automatically connect on new servers connected to Arc
+Microsoft automatically installs Azure extension for SQL Server on each Arc-enabled server connected to Azure Arc if it has any installed SQL Server instances. This automated process involves the following tasks:
 
-Microsoft automatically installs Azure extension for SQL Server on each machine connected to Azure Arc if it has SQL Server instance(s) installed on the machine. This automated process involves the following tasks:
+1. Register the  `Microsoft.AzureArcData` resource provider if not already registered.
 
-1. Registers the  `Microsoft.AzureArcData` resource provider, if not already registered.
-1. Sets the license type, if the `ArcSQLServerExtensionDeployment` tag value is set.
-1. Installs the Azure extension for SQL Server.
-1. Creates Arc-enabled SQL Server instance resource in Azure.
+1. Set the license type if the `ArcSQLServerExtensionDeployment` tag value is set.
 
-Once the connecting is complete, you can benefit with the Azure features for SQL Server. To learn more, see [Manage SQL Server license and billing options](manage-license-type.md).
+1. Install the Azure extension for SQL Server.
 
-## Fix missing License type
+    > [!NOTE]
+    > The license type is set if the `ArcSQLServerExtensionDeployment` tag value is set.
 
-There can be SQL Server machines successfully connected to Arc but missing the proper “License Type” to unlock the free Arc enabled SQL Server benefits. To verify, run this resource graph query.
+1. Create Arc-enabled SQL Server instance resource in Azure.
+
+Once the connecting is complete, you can benefit from the Azure features for SQL Server. For more information, visit [Manage SQL Server license and billing options](manage-license-type.md).
+
+## Set appropriate license type
+
+SQL Server machines can be successfully connected to Arc but missing the proper "License Type" to unlock the free Arc-enabled SQL Server benefits. To verify, run this resource graph query.
 
 ```msgraph-interactive
 resources
@@ -65,28 +72,26 @@ resources
 |where type =="microsoft.azurearcdata/sqlserverinstances" and licenseType in('Configuration needed')
 |project id,tenantId,ResourceName,licenseType
 ```
-To know more about license types and modify, see [Manage SQL Server license and billing options](manage-license-type.md).
 
+Visit [Manage SQL Server license and billing options](manage-license-type.md) to learn more about license types and modifications.
 
-## How to opt out automatic connecting
+## How to opt out of automatic connecting
 
-If you would like to opt out of the automatic installation of Azure extension for SQL Server, you can add the tag and value below to a subscription or resource group(s) or Arc Server resource(s).
+If you want to opt out of the automatic installation of Azure extension for SQL Server, you can add the tag and value below to a subscription or resource group(s) or Arc Server resource(s).
 
-|Tag  |Value  |
-|---------|---------|
-|`ArcSQLServerExtensionDeployment`|`Disabled`|
+| Tag | Value |
+| --- | ----- |
+| `ArcSQLServerExtensionDeployment` | `Disabled` |
 
-Alternatively, you can also limit which extensions can be installed on your server, you can configure lists of the extensions you wish to allow and block on the server. To learn more, see [Extension allowlists and blocklists](/azure/azure-arc/servers/security-overview#extension-allowlists-and-blocklists).
+Alternatively, you can limit which extensions can be installed on your server. You can configure lists of the extensions you wish to allow and block on the server. To learn more, see [Extension allowlists and blocklists](/azure/azure-arc/servers/security-overview#extension-allowlists-and-blocklists).
 
-## Learn how Microsoft automatically deploy Azure extension for SQL Server
+## Learn how Microsoft automatically installs Azure extension for SQL Server
 
-Microsoft can run extension installations on an Arc-enabled server through the Windows service Guest Configuration Extension service (`ExtensionService`). When the server is connected to Arc, the Windows service Guest Configuration Extension service (`ExtensionService`) is installed. This service is responsible for installing, upgrading, and deleting extensions (agents, scripts, or other software) on the machine. The guest configuration and extension services run as Local System on Windows, and as root on Linux. For details about the Arc agent services and service accounts review [Agent security and permissions | Agent security and permissions](/azure/azure-arc/servers/security-overview#agent-security-and-permissions)
+Microsoft can run extension installations on an Arc-enabled server through the Windows service Guest Configuration Extension service (`ExtensionService`). When the server is connected to Arc, the Windows service Guest Configuration Extension service (`ExtensionService`) is installed. This service is responsible for installing, upgrading, and deleting extensions (agents, scripts, or other software) on the machine. The guest configuration and extension services run as Local System on Windows and as root on Linux. For details about the Arc agent services and service accounts, review [Agent security and permissions | Agent security and permissions](/azure/azure-arc/servers/security-overview#agent-security-and-permissions)
 
-Microsoft can call APIs to deploy Azure extension for SQL Server and automatically connecting to Arc enabled SQL Server
+Microsoft can call APIs to deploy Azure extension for SQL Server and automatically connect to Arc-enabled SQL Server.
 
-You can also install the extensions using the Azure portal, Azure Resource Manager (ARM) APIs, Azure Policy, ARM templates, the Azure CLI, or the Azure PowerShell module. [Deployment options for Azure Arc-enabled SQL Server](deployment-options.md) 
-
-
+You can also install the extensions using the Azure portal, Azure Resource Manager (ARM) APIs, Azure Policy, ARM templates, the Azure CLI, or the Azure PowerShell module. [Deployment options for Azure Arc-enabled SQL Server](deployment-options.md)
 
 ## Find SQL Servers connected to Arc, but missing Azure extension for SQL Server
 
@@ -95,7 +100,7 @@ Use the Azure graph query below to list the machine and subscription IDs that co
 ```msgraph-interactive
 resources
 | where type == "microsoft.hybridcompute/machines" and properties['detectedProperties']['mssqldiscovered'] has "true"
-| extend 
+| extend
     joinID = toupper(id)
 | join kind= inner  (
     resources
@@ -106,7 +111,6 @@ resources
     | where allExtensions !has ("SqlServer")
 ) on $left.joinID == $right.machineId
 | project id, subscriptionId, tenantId
-
 ```
 
 ## Next steps

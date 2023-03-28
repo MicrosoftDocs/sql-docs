@@ -95,7 +95,7 @@ Create a job using the same jobs 'system' stored procedures.
 
 1. Open SSMS and connect to the _catalog-dpt-&lt;user&gt;.database.windows.net_ server
 1. Open the file _…\\Learning Modules\\Schema Management\\OnlineReindex.sql_
-1. Right click, select Connection, and connect to the _catalog-dpt-&lt;user&gt;.database.windows.net_ server, if not already connected
+1. Right-click, select Connection, and connect to the _catalog-dpt-&lt;user&gt;.database.windows.net_ server, if not already connected
 1. Ensure you are connected to the _jobagent_ database and press **F5** to run the script
 
 Observe the following elements in the _OnlineReindex.sql_ script:

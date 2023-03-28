@@ -29,7 +29,7 @@ ms.topic: conceptual
   
 2.  Click an entity on the **Entities** menu.  
   
-3.  In the right pane, select **Changesets** and double click the changeset you want to commit.  
+3.  In the right pane, select **Changesets** and double-click the changeset you want to commit.  
   
 4.  Click **Commit**.  
   
@@ -40,7 +40,7 @@ ms.topic: conceptual
   
 2.  Click an entity on the **Entities** menu.  
   
-3.  In the right pane, select **Changesets** and double click the changeset you want to submit.  
+3.  In the right pane, select **Changesets** and double-click the changeset you want to submit.  
   
 4.  Click **Submit**.  
   

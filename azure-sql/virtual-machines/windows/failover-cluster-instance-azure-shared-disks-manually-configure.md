@@ -124,7 +124,7 @@ To add disks to your cluster, follow these steps:
 1. In the **Server Manager** dashboard, select **Tools**, and then select **Failover Cluster Manager**.
 1. Select the cluster and expand it in the navigation pane. 
 1. Select **Storage** and then select **Disks**. 
-1. Right click **Disks** and select **Add Disk**: 
+1. Right-click **Disks** and select **Add Disk**: 
 
     :::image type="content" source="./media/failover-cluster-instance-azure-shared-disk-manually-configure/cluster-add-disk.png" alt-text="Add Disk":::
 

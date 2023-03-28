@@ -212,7 +212,7 @@ GO
     ```  
   
     > [!IMPORTANT]  
-    >  Update folder name, project name, and package name if needed. If the OPENQUERY function fails, in the **SQL Server Management Studio**, expand **Server Objects**, expand **Linked Servers**, expand **Providers**, and double click **SSISOLEDB** provider, and ensure that the **Allow inprocess** option is enabled.  
+    >  Update folder name, project name, and package name if needed. If the OPENQUERY function fails, in the **SQL Server Management Studio**, expand **Server Objects**, expand **Linked Servers**, expand **Providers**, and double-click **SSISOLEDB** provider, and ensure that the **Allow inprocess** option is enabled.  
   
 2.  Create a view in the database **TestDB** for the purpose of this walkthrough) by running the following query.  
   

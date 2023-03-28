@@ -28,13 +28,13 @@ END
   
 1.  In **Solution Explorer**, expand your database project to display the Scripts folder.  
   
-2.  Right click on the Scripts folder and select Add.  
+2.  Right-click on the Scripts folder and select Add.  
   
 3.  Select Scripts in the context menu.  
   
 4.  Select Pre-Deployment Script or Post-Deployment Script. Optionally, specify a non-default name. Click Add to finish.  
   
-5.  Double click the file in the Scripts folder.  
+5.  Double-click the file in the Scripts folder.  
   
     The Transact\-SQL editor opens, displaying the contents of the file.  
   

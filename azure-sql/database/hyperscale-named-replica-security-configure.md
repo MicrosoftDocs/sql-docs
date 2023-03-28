@@ -28,7 +28,7 @@ create login [third-party-login] with password = 'Just4STRONG_PAZzW0rd!';
 # [Azure AD Authetication](#tab/AAD-Authentication)
 
 ```sql
-create login [third-party-login@contoso.com] from external provider;
+create login [bob@contoso.com] from external provider;
 ```
 
 ---
@@ -56,7 +56,10 @@ alter login [third-party-login] disable;
 ```
 
 # [Azure AD Authetication](#tab/AAD-Authentication)
-Not required for Azure AD Authetication
+
+```sql
+alter login [bob@contoso.com] disable;
+```
 
 ---
 
@@ -74,7 +77,7 @@ create user [third-party-user] from login [third-party-login];
 # [Azure AD Authetication](#tab/AAD-Authentication)
 
 ```sql
-create user [third-party-login@contoso.com] from login [third-party-login@contoso.com];
+create user [bob@contoso.com] from login [bob@contoso.com];
 ```
 
 ---
@@ -90,7 +93,7 @@ drop login [third-party-login];
 # [Azure AD Authetication](#tab/AAD-Authentication)
 
 ```sql
-drop login [third-party-login@contoso.com];
+drop login [bob@contoso.com];
 ```
 
 ---
@@ -123,19 +126,21 @@ create login [third-party-login] with password = 'Just4STRONG_PAZzW0rd!', sid = 
 
 # [Azure AD Authetication](#tab/AAD-Authentication)
 
+Connect to the `master` database on the logical server hosting the named replica, created in the previous step and create the login.
+
 ```sql
-create login [third-party-login@contoso.com] from external provider;
+create login [bob@contoso.com] from external provider;
 ```
 
 ---
 
-At this point, users and applications using `third-party-login` can connect to the named replica, but not to the primary replica.
+At this point, users and applications using `third-party-login` or `bob@contoso.com` can connect to the named replica, but not to the primary replica.
 
 ## Grant object-level permissions within the database
 
 Once you have set up login authentication as described, you can use regular `GRANT`, `DENY` and `REVOKE` statements to manage authorization, or object-level permissions within the database. In these statements, reference the name of the user you created in the database, or a database role that includes this user as a member. Remember to execute these commands on the primary replica. The changes will propagate to all secondary replicas, however they will only be effective on the named replica where the server-level login was created.
 
-Remember that by default a newly created user has a minimal set of permissions granted (for example, it cannot access any user tables). If you want to allow `third-party-user` to read data in a table, you need to explicitly grant the `SELECT` permission:
+Remember that by default a newly created user has a minimal set of permissions granted (for example, it cannot access any user tables). If you want to allow `third-party-user` or `bob@contoso.com` to read data in a table, you need to explicitly grant the `SELECT` permission:
 
 # [SQL Authetication](#tab/SQL-Authentication)
 
@@ -146,7 +151,7 @@ GRANT SELECT ON [Application].[Cities] to [third-party-user];
 # [Azure AD Authetication](#tab/AAD-Authentication)
 
 ```sql
-GRANT SELECT ON [Application].[Cities] to [third-party-login@contoso.com]
+GRANT SELECT ON [Application].[Cities] to [bob@contoso.com];
 ```
 
 ---

@@ -57,7 +57,7 @@ If your Python or R scripts need access to any other directory, you need give ei
 
 Follow the steps below to grant access.
 
-1. In File Explorer, right click on the folder you want to use as working directory, and select **Properties**.
+1. In File Explorer, right-click on the folder you want to use as working directory, and select **Properties**.
 1. Select **Security** and click **Edit...** to change permissions.
 1. Click **Add...**
 1. Make sure the **From this location** is the local computer name.

@@ -335,7 +335,7 @@ You should usually enable synchronous commit only when the two nodes are in the 
 
 1. Open SSMS and connect to the listener DNS name you just created in the [Create an Availability Group](#create-an-availability-group) section. In this example, it is MDSSQLServer.
 
-2. In **Object Explorer**, expand the **Always On High Availability** folder, right click the AG you just created in the [Create an Availability Group](#create-an-availability-group) section, and then click **Show Dashboard**. See Figure 20. The status of the new AG and its replicas appears.
+2. In **Object Explorer**, expand the **Always On High Availability** folder, right-click the AG you just created in the [Create an Availability Group](#create-an-availability-group) section, and then click **Show Dashboard**. See Figure 20. The status of the new AG and its replicas appears.
 
    ![View the dashboard](media/Fig20_ShowDashboard.png)
 

@@ -58,7 +58,7 @@ Within the Top Operations tab, in addition to sorting columns, the Filter window
 
 :::image type="content" source="media/query-plan-viewer/top-operations-filtered.png" alt-text="Screenshot of a Top Operations tab after filtering for clustered.":::
 
-For any operator in the list, select on the operator name to jump to that operator's location in the query plan (a green box will surround the operator).
+For any operator in the list, select the operator name to jump to that operator's location in the query plan (a green box will surround the operator).
 
 ## Plan comparison
 

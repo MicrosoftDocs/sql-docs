@@ -339,7 +339,7 @@ An example of the `encryption_protector` and `keys_to_add` parameter is:
 
 ## View the database level customer-managed key settings on an Azure SQL Database
 
-The following are examples of retrieving the database level customer-managed keys for a database. The ARM resource `Microsoft.Sql/servers/databases` by default only shows the TDE protector and managed identity configured on the database. To expand the full list of keys use the parameter, `-ExpandKeyList`. Additionally, filters such as `-KeysFilter "current"` and a point in time value (for example, `2023-01-01`) can be used to retrieve the current keys used and keys used in the past at a specific point in time. Note that these filters are only supported for individual database queries and not for server level database list queries.
+The following are examples of retrieving the database level customer-managed keys for a database. The ARM resource `Microsoft.Sql/servers/databases` by default only shows the TDE protector and managed identity configured on the database. To expand the full list of keys use the parameter, `-ExpandKeyList`. Additionally, filters such as `-KeysFilter "current"` and a point in time value (for example, `2023-01-01`) can be used to retrieve the current keys used and keys used in the past at a specific point in time. These filters are only supported for individual database queries and not for server level queries.
 
 # [Azure CLI](#tab/azure-cli2)
 
@@ -415,11 +415,9 @@ GET https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{
 
 ---
 
-To fetch the list of all the keys (and not just the primary protector) used by each database under the server, it must be individually queried with the key filters. The following is an example of such a query.
+### List all keys in a logical server
 
-# [PowerShell](#tab/azure-powershell2)
-
-For Az PowerShell module installation instructions, see [Install Azure PowerShell](/powershell/azure/install-az-ps). For specific cmdlets, see [AzureRM.Sql](/powershell/module/AzureRM.Sql/).
+To fetch the list of all the keys (and not just the primary protector) used by each database under the server, it must be individually queried with the key filters. The following is an example of a PowerShell query to list each key under the logical server.
 
 Use the [Get-AzSqlDatabase](/powershell/module/az.sql/Get-AzSqlDatabase) cmdlet.
 
@@ -430,8 +428,6 @@ foreach ($db in $dbs)
 Get-AzSqlDatabase -DatabaseName $db.DatabaseName -ServerName $db.ServerName -ResourceGroupName $db.ResourceGroupName -ExpandKeyList
 }
 ```
-
----
 
 ## Revalidate the database level customer-managed key on an Azure SQL Database
 

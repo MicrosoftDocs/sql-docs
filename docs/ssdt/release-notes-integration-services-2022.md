@@ -68,8 +68,8 @@ Visit https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/bg-
   1. Packages using Oracle and Teradata connectors aren't supported. 
   1. Azure-enabled SSIS projects aren't supported.
   1. Logging container can't choose packages.
-  1. Right click Package and select SSIS Import and Export Wizard throws error, workaround: execute Common7\IDE\CommonExtensions\Microsoft\SSIS\160\Binn\DTSWizard.exe
-  1. Right click Package and select Upgrade All Packages throws error, workaround: execute Common7\IDE\CommonExtensions\Microsoft\SSIS\160\Binn\SSISUpgrade.exe
+  1. Right-click Package and select SSIS Import and Export Wizard throws error, workaround: execute Common7\IDE\CommonExtensions\Microsoft\SSIS\160\Binn\DTSWizard.exe
+  1. Right-click Package and select Upgrade All Packages throws error, workaround: execute Common7\IDE\CommonExtensions\Microsoft\SSIS\160\Binn\SSISUpgrade.exe
 ## Installation issues
 
 If you install successfully, but the solution shows **"incompatible"**, and "The application isn't installed":

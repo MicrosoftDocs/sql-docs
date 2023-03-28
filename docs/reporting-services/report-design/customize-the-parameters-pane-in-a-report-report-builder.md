@@ -27,11 +27,11 @@ ms.custom: updatefrequency5
 
 2.  To add a parameter to the pane, do one of the following.
 
-    -   Right click an empty cell in the parameters pane, and then click **Add Parameter**.
+    -   Right-click an empty cell in the parameters pane, and then click **Add Parameter**.
 
          ![Add new parameter from parameters pane](../../reporting-services/report-design/media/ssrs-customizeparameter-addnewparameter.png "Add new parameter from parameters pane")
 
-    -   Right click **Parameters** in the **Report Data** pane, and then click **Add Parameter**.
+    -   Right-click **Parameters** in the **Report Data** pane, and then click **Add Parameter**.
 
 3.  To move a parameter to a new location in the parameters pane, drag the parameter to a different cell in the pane.
 
@@ -39,13 +39,13 @@ ms.custom: updatefrequency5
 
 4.  To access the properties for a parameter, do one of the following.
 
-    -   Right click the parameter in the parameters pane, and then click **Parameter Properties**.
+    -   Right-click the parameter in the parameters pane, and then click **Parameter Properties**.
 
          ![Access parameter properties from the parameters pane](../../reporting-services/report-design/media/ssrs-customizeparameter-accessparameterproperties-composite.png "Access parameter properties from the parameters pane")
 
-    -   Right click the parameter in the **Report Data** pane, and then click **Parameter Properties**.
+    -   Right-click the parameter in the **Report Data** pane, and then click **Parameter Properties**.
 
-5.  To add new columns and rows to the pane, or delete existing rows and columns, right click anywhere in the parameters pane and then click a command on the menu that displays.
+5.  To add new columns and rows to the pane, or delete existing rows and columns, right-click anywhere in the parameters pane and then click a command on the menu that displays.
 
      ![Add columns and rows to the parameters pane](../../reporting-services/report-design/media/ssrs-customparameter-addcolumnsrows.png "Add columns and rows to the parameters pane")
 
@@ -54,11 +54,11 @@ ms.custom: updatefrequency5
 
 6.  To delete a parameter from the pane and from the report, do one of the following.
 
-    -   Right click the parameter in the parameters pane, and then click  **Delete**.
+    -   Right-click the parameter in the parameters pane, and then click  **Delete**.
 
          ![Delete parameters from the parameters pane](../../reporting-services/report-design/media/ssrs-customparameter-deleteparameter.png "Delete parameters from the parameters pane")
 
-    -   Right click parameter in the **Report Data** pane, and then click **Delete**.
+    -   Right-click parameter in the **Report Data** pane, and then click **Delete**.
 
 ## Hidden/Internal parameters during runtime
 If you have a hidden/internal parameter, the logic of whether it will be rendered as empty space during runtime is as follows:

@@ -94,7 +94,7 @@ helpviewer_keywords:
 ## Post Deployment Scripts  
  You can run a post deployment script.  
   
- To add a post deployment script, add a file called postdeployscript.sql in your Visual Studio project directory. For example, right click your project in **Solution Explorer** and select **Add Existing Item**. Add the file in the root of the project, rather than in the Test Scripts folder.  
+ To add a post deployment script, add a file called postdeployscript.sql in your Visual Studio project directory. For example, right-click your project in **Solution Explorer** and select **Add Existing Item**. Add the file in the root of the project, rather than in the Test Scripts folder.  
   
  When you click deploy, Visual Studio will run this script after the deployment of your project.  
   

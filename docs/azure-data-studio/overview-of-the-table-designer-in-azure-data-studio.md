@@ -93,7 +93,7 @@ You can change column properties in the main pane as shown above or in the prope
 
 #### Deleting a table
 
-To delete a table, right click on the tables folder in the object explorer. When your table is located, right-click on the table and select **Script as Drop**. This then opens the query editor window containing the script that will drop the table when ran. Select **Run** to drop the table.
+To delete a table, right-click on the tables folder in the object explorer. When your table is located, right-click on the table and select **Script as Drop**. This then opens the query editor window containing the script that will drop the table when ran. Select **Run** to drop the table.
 
 :::image type="content" source="media/table-designer-azure-data-studio/table-designer-deleting-table.png" alt-text="Screenshot of Table Designer showing how to delete a table.":::
 

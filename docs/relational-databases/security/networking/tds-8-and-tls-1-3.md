@@ -70,7 +70,7 @@ In order to prevent a man-in-the-middle attack with `strict` connection encrypti
 > [!NOTE]  
 > The `Force Strict Encryption` option in SQL Server Network Configuration forces all clients to use `strict` as the encryption type. Any clients or features without the `strict` connection encryption fail to connect to SQL Server.
 > 
-> The following is a list of features or tools that may not work with the `strict` connection encryption:
+> The following is a list of features or tools that may not work with `strict` connection encryption:
 > - Always On failover cluster instance (FCI)
 > - Always On availability group
 > - Replication

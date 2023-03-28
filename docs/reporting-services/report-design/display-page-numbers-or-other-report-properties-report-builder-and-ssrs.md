@@ -58,7 +58,7 @@ ms.custom: updatefrequency5
   
 ## To add total number of pages after the page number  
   
-1.  Right click the text box with the expression and click **Expressions**.  
+1.  Right-click the text box with the expression and click **Expressions**.  
   
 2.  Type **&" of "&** at the end of the expression.  
   

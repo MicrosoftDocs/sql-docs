@@ -26,7 +26,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
  For information about migration methodologies, see [In-Memory OLTP - Common Workload Patterns and Migration Considerations](/previous-versions/dn673538(v=msdn.10)).  
   
 ## Walkthrough Using the Memory-Optimization Advisor  
- In **Object Explorer**, right click the table you want to convert, and select **Memory-Optimization Advisor**. This will display the welcome page for the **Table Memory Optimization Advisor**.  
+ In **Object Explorer**, right-click the table you want to convert, and select **Memory-Optimization Advisor**. This will display the welcome page for the **Table Memory Optimization Advisor**.  
   
 ### Memory Optimization Checklist  
  When you click **Next** in the welcome page for the **Table Memory Optimization Advisor**, you will see the memory optimization checklist. Memory-optimized tables do not support all the features in a disk-based table. The memory optimization checklist reports if the disk-based table uses any features that are incompatible with a memory-optimized table. The **Table Memory Optimization Advisor** does not modify the disk-based table so that it can be migrated to use In-Memory OLTP. You must make those changes before continuing migration. For each incompatibility found, the **Table Memory Optimization Advisor** displays a link to information that can help you modify your disk-based tables.  

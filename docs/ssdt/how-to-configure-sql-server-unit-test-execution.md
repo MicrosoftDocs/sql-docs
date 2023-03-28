@@ -28,7 +28,7 @@ These settings control how your test connects to the database that you will test
   
 #### To specify database connection strings  
   
-1.  Right click on the unit test project in **Solution Explorer** and click **SQL Server Test Configuration**.  
+1.  Right-click on the unit test project in **Solution Explorer** and click **SQL Server Test Configuration**.  
   
     The **SQL Server Test Configuration -'\<projectname\>'** dialog box appears.  
   
@@ -56,7 +56,7 @@ These settings control how your test connects to the database that you will test
   
 2.  Select the test project that you want to configure.  
   
-3.  Right click on the unit test project in **Solution Explorer** and click **SQL Server Test Configuration**.  
+3.  Right-click on the unit test project in **Solution Explorer** and click **SQL Server Test Configuration**.  
   
     The **SQL Server Test Configuration -'\<projectname\>'** dialog box appears.  
   

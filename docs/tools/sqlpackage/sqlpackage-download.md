@@ -137,7 +137,7 @@ To uninstall SqlPackage, run the following command:
 ### Windows (.NET 6)
 
 1. Download [SqlPackage for Windows](https://aka.ms/sqlpackage-windows).
-2. To extract the file by right clicking on the file in Windows Explorer, and selecting 'Extract All...', and select the target directory.
+2. To extract the file by right-clicking on the file in Windows Explorer, and selecting 'Extract All...', and select the target directory.
 3. Open a new Terminal window and cd to the location where SqlPackage was extracted:
 
    ```cmd

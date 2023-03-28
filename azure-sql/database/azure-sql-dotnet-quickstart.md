@@ -202,7 +202,7 @@ The app is ready to be tested locally. Make sure you're signed in to Visual Stud
 The app is ready to be deployed to Azure. Visual Studio can create an Azure App Service and deploy your application in a single workflow.
 
 1. Make sure the app is stopped and builds successfully.
-1. In Visual Studio's **Solution Explorer** window, right select on the top-level project node and select **Publish**.
+1. In Visual Studio's **Solution Explorer** window, right-click on the top-level project node and select **Publish**.
 1. In the publishing dialog, select **Azure** as the deployment target, and then select **Next**.
 1. For the specific target, select **Azure App Service (Windows)**, and then select **Next**.
 1. Select the green **+** icon to create a new App Service to deploy to and enter the following values:

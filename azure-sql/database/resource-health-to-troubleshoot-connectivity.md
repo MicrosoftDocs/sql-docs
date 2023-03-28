@@ -49,7 +49,7 @@ The health status of **Unknown** indicates that Resource Health hasn't received 
 
 ## Historical information
 
-You can access up to 14 days of health history in the Health History section of Resource Health. The section will also contain the downtime reason (when available) for the downtimes reported by Resource Health. Currently, Azure shows the downtime for your database resource at a two-minute granularity. The actual downtime is likely less than a minute. The average is 8 seconds.
+You can access up to 30 days of health history in the Health History section of Resource Health. The section will also contain the downtime reason (when available) for the downtimes reported by Resource Health. Currently, Azure shows the downtime for your database resource at a two-minute granularity. The actual downtime is likely less than a minute. The average is 8 seconds.
 
 ### Downtime reasons
 

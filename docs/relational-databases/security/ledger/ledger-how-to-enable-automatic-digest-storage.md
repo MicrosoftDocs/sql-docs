@@ -94,7 +94,7 @@ In this article, we'll describe how you can configure automatic generation and s
 
 ## Enable automatic digest storage using the Azure portal
 
-# [PowerShell](#tab/PowerShell)
+# [PowerShell](#tab/PowerShell2)
 
 ## Enable database digest uploads using PowerShell
 
@@ -113,7 +113,7 @@ $ledgerDigestUploadConfig = Enable-AzSqlDatabaseLedgerDigestUpload `
 $ledgerDigestUploadConfig
 ```
 
-# [Azure CLI](#tab/AzureCLI)
+# [Azure CLI](#tab/AzureCLI2)
 
 ## Enable database digest uploads using the Azure CLI
 

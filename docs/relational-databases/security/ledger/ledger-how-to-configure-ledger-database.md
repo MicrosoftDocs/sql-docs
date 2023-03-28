@@ -133,7 +133,7 @@ This article provides information on configuring a [ledger database](ledger-over
 
 For more information, see [CREATE DATABASE (Transact-SQL)](../../../t-sql/statements/create-database-transact-sql.md).
 
-# [PowerShell](#tab/PowerShell)
+# [PowerShell](#tab/PowerShell2)
 
 ## Enable ledger database using PowerShell
 
@@ -150,7 +150,7 @@ $database = New-AzSqlInstanceDatabase -ResourceGroupName "ResourceGroup01" `
 $database
 ```
 
-# [Azure CLI](#tab/AzureCLI)
+# [Azure CLI](#tab/AzureCLI2)
 
 ## Enable ledger database using the Azure CLI
 

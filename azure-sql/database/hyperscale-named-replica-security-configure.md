@@ -18,14 +18,15 @@ This article describes the procedure to grant access to an Azure SQL Hyperscale 
 
 In the `master` database on the logical server hosting the *primary* database, execute the following to create a new login.
 
-# [SQL Authetication](#tab/SQL-Authentication)
+# [SQL authentication](#tab/SQL-Authentication)
+
 Use your own strong and unique password.
 
 ```sql
 create login [third-party-login] with password = 'Just4STRONG_PAZzW0rd!';
 ```
 
-# [Azure AD Authetication](#tab/AAD-Authentication)
+# [Azure AD authentication](#tab/AAD-Authentication)
 
 ```sql
 create login [bob@contoso.com] from external provider;
@@ -35,31 +36,28 @@ create login [bob@contoso.com] from external provider;
 
 Retrieve the SID hexadecimal value for the created login from the `sys.sql_logins` system view:
 
-# [SQL Authetication](#tab/SQL-Authentication)
+# [SQL authentication](#tab/SQL-Authentication)
 
 ```sql
 select sid from sys.sql_logins where name = 'third-party-login';
 ```
 
-# [Azure AD Authetication](#tab/AAD-Authentication)
+# [Azure AD authentication](#tab/AAD-Authentication)
 
-Not required for Azure AD Authetication
+Not required for Azure AD authentication.
 
 ---
 
 Disable the login. This will prevent this login from accessing any database on the server hosting the primary replica.
 
-# [SQL Authetication](#tab/SQL-Authentication)
+# [SQL authentication](#tab/SQL-Authentication)
 
 ```sql
 alter login [third-party-login] disable;
 ```
 
 # [Azure AD Authetication](#tab/AAD-Authentication)
-
-```sql
-alter login [bob@contoso.com] disable;
-```
+Not required for Azure AD Authetication
 
 ---
 
@@ -68,13 +66,13 @@ alter login [bob@contoso.com] disable;
 
 Once the login has been created, connect to the primary read-write replica of your database, for example WideWorldImporters (you can find a sample script to restore it here: [Restore Database in Azure SQL](https://github.com/yorek/azure-sql-db-samples/tree/master/samples/01-restore-database)) and create a database user for that login:
 
-# [SQL Authetication](#tab/SQL-Authentication)
+# [SQL authentication](#tab/SQL-Authentication)
 
 ```sql
 create user [third-party-user] from login [third-party-login];
 ```
 
-# [Azure AD Authetication](#tab/AAD-Authentication)
+# [Azure AD authentication](#tab/AAD-Authentication)
 
 ```sql
 create user [bob@contoso.com] from login [bob@contoso.com];
@@ -84,13 +82,13 @@ create user [bob@contoso.com] from login [bob@contoso.com];
 
 As an optional step, once the database user has been created, you can drop the server login created in the previous step if there are concerns about the login getting re-enabled in any way. Connect to the `master` database on the logical server hosting the primary database, and execute the following:
 
-# [SQL Authetication](#tab/SQL-Authentication)
+# [SQL authentication](#tab/SQL-Authentication)
 
 ```sql
 drop login [third-party-login];
 ```
 
-# [Azure AD Authetication](#tab/AAD-Authentication)
+# [Azure AD authentication](#tab/AAD-Authentication)
 
 ```sql
 drop login [bob@contoso.com];
@@ -116,7 +114,7 @@ az sql db replica create -g MyResourceGroup -n WideWorldImporters -s MyPrimarySe
 
 ## Create a login in the master database on the named replica server
 
-# [SQL Authetication](#tab/SQL-Authentication)
+# [SQL authentication](#tab/SQL-Authentication)
 
 Connect to the `master` database on the logical server hosting the named replica, created in the previous step. Add the login using the SID retrieved from the primary replica:
 
@@ -125,8 +123,6 @@ create login [third-party-login] with password = 'Just4STRONG_PAZzW0rd!', sid = 
 ```
 
 # [Azure AD Authetication](#tab/AAD-Authentication)
-
-Connect to the `master` database on the logical server hosting the named replica, created in the previous step and create the login.
 
 ```sql
 create login [bob@contoso.com] from external provider;
@@ -142,16 +138,16 @@ Once you have set up login authentication as described, you can use regular `GRA
 
 Remember that by default a newly created user has a minimal set of permissions granted (for example, it cannot access any user tables). If you want to allow `third-party-user` or `bob@contoso.com` to read data in a table, you need to explicitly grant the `SELECT` permission:
 
-# [SQL Authetication](#tab/SQL-Authentication)
+# [SQL authentication](#tab/SQL-Authentication)
 
 ```sql
 GRANT SELECT ON [Application].[Cities] to [third-party-user];
 ```
 
-# [Azure AD Authetication](#tab/AAD-Authentication)
+# [Azure AD authentication](#tab/AAD-Authentication)
 
 ```sql
-GRANT SELECT ON [Application].[Cities] to [bob@contoso.com];
+GRANT SELECT ON [Application].[Cities] to [third-party-login@contoso.com]
 ```
 
 ---

@@ -70,6 +70,9 @@ Ledger functionality is introduced to tables in two forms:
 
 Both updatable ledger tables and append-only ledger tables provide tamper-evidence and digital forensics capabilities. 
 
+> [!NOTE]
+> Ledger in Azure Managed Instance is currently in public preview.
+
 ### Updatable ledger tables
 
 [Updatable ledger tables](ledger-updatable-ledger-tables.md) are ideal for application patterns that expect to issue updates and deletions to tables in your database, such as system of record (SOR) applications. Existing data patterns for your application don't need to change to enable ledger functionality.  

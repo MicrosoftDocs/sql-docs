@@ -80,9 +80,12 @@ az sql db ledger-digest-uploads enable \
 ---
 ::: zone-end
 
-::: zone pivot="as1-azure-sql-managedinstance"
+::: zone pivot="as1-azure-sql-managed-instance"
 
 In this article, we'll describe how you can configure automatic generation and storage of database digests through the PowerShell, or the Azure CLI.
+
+> [!NOTE]
+> Ledger in Azure Managed Instance is currently in public preview.
 
 ## Prerequisites
 

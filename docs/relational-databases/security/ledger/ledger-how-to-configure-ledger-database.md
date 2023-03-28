@@ -105,9 +105,12 @@ az sql db create \
 
 ::: zone-end
 
-::: zone pivot="as1-azure-managed-instance"
+::: zone pivot="as1-azure-sql-managed-instance"
 
 This article provides information on configuring a [ledger database](ledger-overview.md) using the T-SQL, PowerShell, or the Azure CLI for **Azure Managed Instance Database**. For information on creating a ledger database in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] or Azure SQL Database, use the switch at the top of this page.
+
+> [!NOTE]
+> Ledger in Azure Managed Instance is currently in public preview.
 
 ## Prerequisites
 

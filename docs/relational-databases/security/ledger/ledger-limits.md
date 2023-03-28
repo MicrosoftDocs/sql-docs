@@ -17,6 +17,9 @@ monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ve
 
 There are some considerations and limitations to be aware of when working with ledger tables due to the nature of system-versioning and immutable data.
 
+> [!NOTE]
+> Ledger in Azure Managed Instance is currently in public preview.
+
 ## General considerations and limitations
 
 Consider the following when working with ledger.

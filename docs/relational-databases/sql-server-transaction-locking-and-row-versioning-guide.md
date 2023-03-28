@@ -24,7 +24,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 In any database, mismanagement of transactions often leads to contention and performance problems in systems that have many users. As the number of users that access the data increases, it becomes important to have applications that use transactions efficiently. This guide describes locking and row versioning mechanisms the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] uses to ensure the physical integrity of each transaction and provides information on how applications can control transactions efficiently.  
 
 > [!NOTE]
-> **Optimized locking** is a Database Engine feature introduced in 2023 that drastically reduces lock memory and the number of locks concurrently required for writes. Optimized locking reduces lock memory and the number of locks required for concurrent writes. This article has been updated to describe [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] with and without optimized locking. **Currently, optimized locking is available in Azure SQL Database only.**
+> **Optimized locking** is a Database Engine feature introduced in 2023 that drastically reduces lock memory, and the number of locks required for concurrent writes. This article has been updated to describe [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] with and without optimized locking. **Currently, optimized locking is available in Azure SQL Database only.**
 > 
 > - For more information and to learn where optimized locking is available, see [Optimized locking](performance/optimized-locking.md). 
 > - To determine if optimized locking is enabled on your database, see [Is optimized locking enabled?](performance/optimized-locking.md#is-optimized-locking-enabled)

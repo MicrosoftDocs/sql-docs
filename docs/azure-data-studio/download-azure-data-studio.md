@@ -293,7 +293,7 @@ We recommend that you [download the general availability (GA) release of Azure D
 
 ## Download the insiders build of Azure Data Studio
 
-As an alternative, if you want to try out the beta features and send feedback, you can [download the insiders build of Azure Data Studio](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-main).
+As an alternative, if you want to try out the beta features and send feedback, you can [download the insiders build of Azure Data Studio](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-main-branch).
 
 ## Supported operating systems
 

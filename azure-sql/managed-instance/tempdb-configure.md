@@ -1,7 +1,7 @@
 ---
 title: Configure tempdb settings
 titleSuffix: Azure SQL Managed Instance
-description: Learn how to enroll new and existing instances in the November 2022 feature wave.
+description: Learn how to configure tempdb settings for Azure SQL Managed Instance, such as the number of tempdb files, the growth increment, and the maximum size of tempdb. 
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 04/15/2023

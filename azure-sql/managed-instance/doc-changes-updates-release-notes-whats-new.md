@@ -87,6 +87,13 @@ Eligible existing instances created prior to November 2022 can enroll into the f
 
 Learn about significant changes to the Azure SQL Managed Instance documentation. For previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md).
 
+### April 2023
+
+| Changes | Details |
+| --- | --- |
+| **Configure tempdb**| Configure your `tempdb` settings for Azure SQL Managed Instance. Review [tempdb](tempdb-configure.md) to learn more. | 
+
+
 ### March 2023
 
 | Changes | Details |

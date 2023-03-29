@@ -8,7 +8,7 @@ ms.date: 11/10/2021
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: how-to
-ms.custom: devx-track-azurepowershell
+ms.custom: devx-track-azurepowershell, devx-track-arm-template
 editor: monicar
 ---
 # Configure one or more Always On availability group listeners

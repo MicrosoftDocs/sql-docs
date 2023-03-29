@@ -7,6 +7,7 @@ ms.date: 03/17/2017
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: reference
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "developer's guide [Reporting Services]"
   - "Reporting Services, programming"

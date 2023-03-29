@@ -7,6 +7,7 @@ ms.date: 05/30/2017
 ms.service: reporting-services
 ms.subservice: security
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "connections [Reporting Services], configuring"
   - "connections [Reporting Services], accounts"

@@ -7,6 +7,7 @@ ms.date: 09/02/2021
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Add a filter to a paginated report (Report Builder)
 

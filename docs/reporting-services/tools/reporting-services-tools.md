@@ -7,6 +7,7 @@ ms.date: 06/06/2019
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "SSRS, tools"
   - "Reporting Services, tools"

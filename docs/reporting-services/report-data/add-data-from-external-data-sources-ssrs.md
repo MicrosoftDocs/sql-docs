@@ -7,6 +7,7 @@ ms.date: 03/17/2017
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Add Data from External Data Sources (SSRS)

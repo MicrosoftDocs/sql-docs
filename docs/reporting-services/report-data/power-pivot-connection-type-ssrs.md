@@ -7,6 +7,7 @@ ms.date: 03/01/2017
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Power Pivot Connection Type (SSRS)
   You can use SQL Server Analysis Services data processing extension to retrieve data from a [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] workbook that is published in a SharePoint [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] Gallery.  

@@ -55,7 +55,7 @@
         displayName: regulatory, compliance, standards, domains
         href: ./database/security-controls-policy.md
       - name: Security baseline
-        href: /security/benchmark/azure/baselines/sql-database-security-baseline?toc=/azure/azure-sql/toc.json
+        href: /security/benchmark/azure/baselines/sql-database-security-baseline?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
       - name: Always Encrypted
         href: database/always-encrypted-landing.yml
       - name: Microsoft Defender for SQL
@@ -259,8 +259,8 @@
         href: /azure/connectors/connectors-create-api-sqlazure?toc=/azure/azure-sql/toc.json
       - name: Index with Azure Cognitive Search
         href: /azure/search/search-howto-connecting-azure-sql-database-to-azure-search-using-indexers?toc=/azure/azure-sql/toc.json
-      - name: Server-side CLR/.NET integration
-        href: /sql/relational-databases/clr-integration/common-language-runtime-integration-overview?toc=/azure/azure-sql/toc.json
+      - name: Server-side CLR/.NET integration 
+        href: /sql/relational-databases/clr-integration/common-language-runtime-integration-overview
       - name: Java
         items:
         - name: Use Java and JDBC
@@ -319,6 +319,8 @@
         href: database/azure-sql-dotnet-quickstart.md
       - name: .NET with EF Core
         href: database/azure-sql-dotnet-entity-framework-core-quickstart.md
+      - name: Use the Azure portal query editor 
+        href: database/connect-query-portal.md
     - name: GitHub Actions
       href: database/connect-github-actions-sql-db.md
 
@@ -581,14 +583,14 @@
       href: database/cost-management.md      
     - name: Connect and query
       items:
-      - name: Connect and run ad-hoc queries
+      - name: Connect and run ad hoc queries
         items:
         - name: Azure Data Studio
-          href: /sql/azure-data-studio/quickstart-sql-database?toc=/azure/azure-sql/toc.json
+          href: /sql/azure-data-studio/quickstart-sql-database
         - name: SSMS
           href: database/connect-query-ssms.md
-        - name: Azure portal
-          href: database/connect-query-portal.md
+        - name: Azure portal query editor
+          href: database/query-editor.md
         - name: VS Code
           href: database/connect-query-vscode.md
       - name: Connect and query from apps
@@ -875,7 +877,7 @@
             href: database/saas-multitenantdb-provision-and-catalog.md
           - name: Monitor database performance
             href: database/saas-multitenantdb-performance-monitoring.md
-          - name: Run ad-hoc queries
+          - name: Run ad hoc queries
             href: database/saas-multitenantdb-adhoc-reporting.md
           - name: Manage tenant schema
             href: database/saas-multitenantdb-schema-management.md
@@ -1275,11 +1277,11 @@
       - name: Transactional replication
         href: managed-instance/replication-transactional-overview.md
       - name: Linked servers
-        href: /sql/relational-databases/linked-servers/linked-servers-database-engine?toc=/azure/azure-sql/toc.json
+        href: /sql/relational-databases/linked-servers/linked-servers-database-engine
       - name: Service Broker
-        href: /sql/database-engine/configure-windows/sql-server-service-broker?toc=/azure/azure-sql/toc.json
+        href: /sql/database-engine/configure-windows/sql-server-service-broker
       - name: Database mail
-        href: /sql/relational-databases/database-mail/database-mail?toc=/azure/azure-sql/toc.json
+        href: /sql/relational-databases/database-mail/database-mail
     - name: Security
       items:
       - name: Always Encrypted
@@ -1799,7 +1801,7 @@
   - name: SQLCMD
     href: /sql/tools/sqlcmd-utility
   - name: SqlPackage
-    href: /sql/tools/sqlpackage/sqlpackage?toc=/azure/azure-sql/toc.json
+    href: /sql/tools/sqlpackage/sqlpackage
   - name: SQL Database Management Library package
     href: https://www.nuget.org/packages/Microsoft.Azure.Management.Sql
   - name: SQL connection  drivers

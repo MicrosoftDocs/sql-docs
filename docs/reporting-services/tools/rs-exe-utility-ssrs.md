@@ -7,6 +7,7 @@ ms.date: 03/16/2017
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "automatic report server tasks"
   - "rs utility"

@@ -374,7 +374,7 @@ Separation of Duties is not limited to the data in a database, but includes appl
 
 - Make sure the person conducting the review is an individual other than the originating code author and knowledgeable in code-reviews and secure coding.
 
-- Be sure to know all sources of code-changes. Code can be in T-SQL Scripts. It can be ad-hoc commands to be executed or be deployed in forms of Views, Functions, Triggers, and Stored Procedures. It can be part of SQL Agent Job definitions (Steps). It can also be executed from within SSIS packages, Azure Data Factory, and other services.
+- Be sure to know all sources of code-changes. Code can be in T-SQL Scripts. It can be ad hoc commands to be executed or be deployed in forms of Views, Functions, Triggers, and Stored Procedures. It can be part of SQL Agent Job definitions (Steps). It can also be executed from within SSIS packages, Azure Data Factory, and other services.
 
 ## Data protection
 
@@ -487,7 +487,7 @@ Another technique for preventing unauthorized users from viewing data is to obfu
 > [!NOTE]  
 > Dynamic Data Masking cannot be used to protect data from high-privilege users. Masking policies do not apply to users with administrative access like db_owner.
 
-- Don't permit app users to run ad-hoc queries (as they may be able to work around Dynamic Data Masking).  
+- Don't permit app users to run ad hoc queries (as they may be able to work around Dynamic Data Masking).  
   - See the article, [Bypassing masking using inference or brute-force techniques](/sql/relational-databases/security/dynamic-data-masking#security-note-bypassing-masking-using-inference-or-brute-force-techniques) for details.
 
 - Use a proper access control policy (via SQL permissions, roles, RLS) to limit user permissions to make updates in the masked columns. Creating a mask on a column doesn't prevent updates to that column. Users that receive masked data when querying the masked column, can update the data if they have write-permissions.

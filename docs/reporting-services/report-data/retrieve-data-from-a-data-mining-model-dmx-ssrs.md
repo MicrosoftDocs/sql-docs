@@ -7,6 +7,7 @@ ms.date: 03/14/2017
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "retrieving report data"
   - "datasets [Reporting Services], with DMX queries"

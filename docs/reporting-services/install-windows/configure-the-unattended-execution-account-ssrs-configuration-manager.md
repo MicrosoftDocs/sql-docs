@@ -6,6 +6,7 @@ ms.author: maggies
 ms.date: 12/04/2019
 ms.service: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "no credentials option [Reporting Services]"
   - "security [Reporting Services], unattended report processing"

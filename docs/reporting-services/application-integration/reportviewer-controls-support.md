@@ -8,6 +8,7 @@ ms.date: 12/01/2020
 ms.service: reporting-services
 ms.subservice: application-integration
 ms.topic: reference
+ms.custom: updatefrequency5
 ---
 # Support for Report Viewer current branch versions
 

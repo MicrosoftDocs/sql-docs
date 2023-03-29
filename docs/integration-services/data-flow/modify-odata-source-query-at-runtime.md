@@ -22,7 +22,7 @@ ms.topic: conceptual
 ## Provide the query as a parameter  
  The following procedure shows how to expose the query used by an OData Source component as a parameter of the package.  
   
-1.  Right click on the **Data Flow task** and select the **Parameterize...** option.  
+1.  Right-click on the **Data Flow task** and select the **Parameterize...** option.  
   
 2.  In the **Parameterize** dialog, select **[\<Name of the OData Source Component>].[Query]** for **Property**.  
   

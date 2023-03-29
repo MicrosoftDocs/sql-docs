@@ -6,6 +6,7 @@ ms.author: maggies
 ms.date: 08/17/2022
 ms.service: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Configure the Report Server Service Account (Report Server Configuration Manager)

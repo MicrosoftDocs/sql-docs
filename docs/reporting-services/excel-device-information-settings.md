@@ -7,6 +7,7 @@ ms.date: 01/23/2020
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "device information settings [Reporting Services], Excel rendering"
   - "Excel [Reporting Services], rendering"

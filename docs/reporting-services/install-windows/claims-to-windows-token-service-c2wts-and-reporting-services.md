@@ -6,6 +6,7 @@ ms.author: maggies
 ms.date: 09/09/2021
 ms.service: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Claims to Windows Token Service (C2WTS) and Reporting Services

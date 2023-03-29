@@ -34,7 +34,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 -   Why is an agent not running?  
   
-     An agent is not running at a particular time either because it is not scheduled to run or because an error has occurred. If an error has occurred, an error icon is displayed on the appropriate nodes in the left pane. For example, if the Snapshot Agent for a publication stopped because of an error, an error icon is displayed on the Publisher group, Publisher, and publication nodes. Summary information for the Snapshot Agent is displayed on the **Agents** tab for the publication; double click the Snapshot Agent on this tab for detailed error information.  
+     An agent is not running at a particular time either because it is not scheduled to run or because an error has occurred. If an error has occurred, an error icon is displayed on the appropriate nodes in the left pane. For example, if the Snapshot Agent for a publication stopped because of an error, an error icon is displayed on the Publisher group, Publisher, and publication nodes. Summary information for the Snapshot Agent is displayed on the **Agents** tab for the publication; double-click the Snapshot Agent on this tab for detailed error information.  
   
 ## Viewing Information and Performing Tasks Related to Distributors  
  Replication Monitor displays information about Distributors on three tabs:  

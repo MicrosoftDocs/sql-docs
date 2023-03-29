@@ -43,7 +43,7 @@ The following procedure compares the schema of a database project with a connect
   
 2.  In the **Select Source** drop-down, choose **Select Source** and the **Select Source Schema** dialog opens.  
   
-    Notice that if you opened the **Schema Compare** window by right clicking the project name, the source schema is already populated and you can proceed to step 4.  
+    Notice that if you opened the **Schema Compare** window by right-clicking the project name, the source schema is already populated and you can proceed to step 4.  
   
 3.  Select the **Project** radio button, and then select the **TradeDev** database project you have created in the previous procedure.  
   

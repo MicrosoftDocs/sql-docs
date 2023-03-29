@@ -443,7 +443,7 @@ Let us illustrate this with an example. Consider a user, Domain\user1. The user 
   
 -   Help information displayed when trying to run ssms.exe with the /? switch will be incorrect.  
   
--   For every file that is opened by double clicking on it in Windows Explorer, a new instance of SSMS will be launched to open the file.  
+-   For every file that is opened by double-clicking on it in Windows Explorer, a new instance of SSMS will be launched to open the file.  
   
 -   Queries cannot be debugged in the normal user mode.  
   

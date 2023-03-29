@@ -7,7 +7,9 @@ ms.date: 09/16/2022
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
-ms.custom: intro-overview
+ms.custom:
+  - intro-overview
+  - updatefrequency5
 helpviewer_keywords:
   - "reports [Reporting Services]"
   - "SSRS"

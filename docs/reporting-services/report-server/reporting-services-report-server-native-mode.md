@@ -7,6 +7,7 @@ ms.date: 04/21/2020
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "administering Reporting Services"
   - "administering [Reporting Services]"

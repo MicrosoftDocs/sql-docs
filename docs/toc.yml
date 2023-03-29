@@ -4265,6 +4265,8 @@ items:
     href: relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md
   - name: Optimized locking
     href: relational-databases/performance/optimized-locking.md
+  - name: Deadlocks guide
+    href: relational-databases/sql-server-deadlocks-guide.md
   - name: Memory Management Architecture
     href: relational-databases/memory-management-architecture-guide.md
   - name: Diagnosing latch contention
@@ -8831,8 +8833,8 @@ items:
             href: ssms/scripting/search-documents-interactively.md
           - name: Search Documents Using Results Lists
             href: ssms/scripting/search-documents-using-results-lists.md
-          - name: Search Text with Wildcards
-            href: ssms/scripting/search-text-with-wildcards.md
+          - name: Search Text with Regular Expressions
+            href: ssms/scripting/search-text-with-regular-expressions.md
           - name: Find & Replace
             href: ssms/scripting/find-and-replace.md
           - name: Find in Files
@@ -10429,10 +10431,12 @@ items:
             href: sql-server/azure-arc/connect-already-enabled.md
         - name: Connect at scale
           items:
-          - name: Connect at scale | Azure policy
+          - name: Azure policy
             href: sql-server/azure-arc/connect-at-scale-policy.md
-          - name: Connect at scale | Script
+          - name: Script
             href: sql-server/azure-arc/connect-at-scale-script.md
+          - name: Autodeploy
+            href: sql-server/azure-arc/connect-at-scale-autodeploy.md
           - name: Connect machines using Configuration Manager custom task sequence
             href: sql-server/azure-arc/onboard-configuration-manager-custom-task.md
     - name: Manage

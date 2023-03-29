@@ -7,6 +7,7 @@ ms.date: 05/30/2017
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Turn on Reporting Services events for the SharePoint trace log (ULS)

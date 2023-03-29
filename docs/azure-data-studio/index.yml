@@ -19,6 +19,8 @@ landingContent:
         links:
           - text: What is Azure Data Studio?
             url: what-is-azure-data-studio.md
+          - text: Azure connectivity
+            url: azure-connectivity.md
       - linkListType: download
         links:
           - text: Download Azure Data Studio

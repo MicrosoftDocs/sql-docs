@@ -7,6 +7,7 @@ ms.date: 07/22/2020
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Troubleshoot reports: map reports in a paginated report (Report Builder)
 

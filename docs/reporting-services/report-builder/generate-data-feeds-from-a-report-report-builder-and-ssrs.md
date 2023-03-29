@@ -7,6 +7,7 @@ ms.date: 11/21/2022
 ms.service: reporting-services
 ms.subservice: report-builder
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Generate Data Feeds from a Report (Report Builder and SSRS)

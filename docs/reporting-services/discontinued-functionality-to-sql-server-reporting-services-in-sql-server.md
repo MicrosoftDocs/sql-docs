@@ -7,6 +7,7 @@ ms.date: 11/2/2022
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Discontinued functionality in SQL Server Reporting Services (SSRS)

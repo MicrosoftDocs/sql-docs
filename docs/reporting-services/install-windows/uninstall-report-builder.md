@@ -6,6 +6,7 @@ ms.author: maggies
 ms.date: 05/30/2017
 ms.service: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Uninstall Report Builder

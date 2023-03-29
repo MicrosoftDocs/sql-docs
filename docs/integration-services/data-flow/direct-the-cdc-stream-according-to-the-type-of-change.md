@@ -43,7 +43,7 @@ ms.topic: conceptual
   
      To open the **Advanced Editor** dialog box:  
   
-    -   In the **Data Flow** screen of your [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] project, right click the CDC splitter and select **Show Advanced Editor**.  
+    -   In the **Data Flow** screen of your [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] project, right-click the CDC splitter and select **Show Advanced Editor**.  
   
      For more information about using the CDC splitter see CDC Components for Microsoft SQL Server Integration Services.  
   

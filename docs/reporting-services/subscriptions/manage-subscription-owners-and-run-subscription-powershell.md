@@ -7,6 +7,7 @@ ms.date: 01/16/2020
 ms.service: reporting-services
 ms.subservice: subscriptions
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Manage Subscription Owners and Run Subscription - PowerShell

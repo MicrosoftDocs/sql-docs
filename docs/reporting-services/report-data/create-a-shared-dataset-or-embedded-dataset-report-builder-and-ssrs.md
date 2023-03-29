@@ -7,6 +7,7 @@ ms.date: 05/10/2021
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Create a Shared Dataset or Embedded Dataset (Report Builder and SSRS)
 

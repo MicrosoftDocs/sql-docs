@@ -7,6 +7,7 @@ ms.date: 03/14/2017
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "parameters [Reporting Services], DMX"
   - "Data Mining Prediction [Reporting Services]"

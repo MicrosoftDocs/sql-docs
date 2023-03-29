@@ -29,7 +29,7 @@ The in-place **Set-SqlColumnEncryption** cmdlet doesn't support online encryptio
 
 With the offline approach, the target tables (and any tables related to the target tables, for example, any tables a target table have foreign key relationships with) are unavailable to write transactions throughout the duration of the operation. The semantics of foreign key constraints (**CHECK** or **NOCHECK**) are always preserved when using the offline approach.
 
-If you cannot afford downtime during the encryption process, we suggest to use [Configure column encryption in-place with Transact-SQL](always-encrypted-enclaves-configure-encryption-tsql) which supports online encryption.
+If you cannot afford downtime during the encryption process, we suggest to use [Configure column encryption in-place with Transact-SQL](always-encrypted-enclaves-configure-encryption-tsql.md) which supports online encryption.
 
 ## Security Considerations
 
@@ -188,6 +188,6 @@ Set-SqlColumnEncryption -ColumnEncryptionSettings $ces -InputObject $database -L
 
 ## See Also  
  - [Always Encrypted with secure enclaves](../../../relational-databases/security/encryption/always-encrypted-enclaves.md)
- - [Manage keys for Always Encrypted with secure enclaves](always-encrypted-enclaves-manage-keys.md) 
+ - [Manage keys for Always Encrypted with secure enclaves](always-encrypted-enclaves-manage-keys.md)
  - [Configure column encryption in-place with Transact-SQL](always-encrypted-enclaves-configure-encryption-tsql.md)
-  - [Configure column encryption in-place with a DAC package](always-encrypted-enclaves-configure-encryption-dacpac.md)
+ - [Configure column encryption in-place with a DAC package](always-encrypted-enclaves-configure-encryption-dacpac.md)

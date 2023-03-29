@@ -110,7 +110,7 @@ New-SqlColumnEncryptionKey -Name $cekName  -InputObject $database -ColumnMasterK
 The below end-to-end example shows how to provision enclave-enabled keys, storing the column master key in a key vault in Azure Key Vault. The script is based on the example in [Azure Key Vault without Role Separation (Example)](configure-always-encrypted-keys-using-powershell.md#azure-key-vault-without-role-separation-example). It's important to note two differences between the workflow for enclave-enabled keys compared to the keys that aren't enclave-enabled.
 
 - In the below script, the [**New-SqlCertificateStoreColumnMasterKeySettings**](/powershell/module/sqlserver/New-SqlAzureKeyVaultColumnMasterKeySettings) uses the `-AllowEnclaveComputations` parameter to make the new column master key enclave-enabled.
-- The below script uses the [**Get-AzAccessToken**](/powershell/module/sqlserver/Get-AzAccessToken) cmdlet to obtain an access token for key vaults. This is necessary, because the  **New-SqlAzureKeyVaultColumnMasterKeySettings** needs to have access to the Azure Key Vault to sign the properties of the column master key.
+- The below script uses the [**Get-AzAccessToken**](/powershell/module/az.accounts/get-azaccesstoken) cmdlet to obtain an access token for key vaults. This is necessary, because the  **New-SqlAzureKeyVaultColumnMasterKeySettings** needs to have access to the Azure Key Vault to sign the properties of the column master key.
 
 ```powershell
 # Create a column master key in Azure Key Vault.

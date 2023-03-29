@@ -27,7 +27,8 @@ For more information about Always Encrypted support in the SqlServer PowerShell 
 
 To set the target encryption configuration, you need to make sure:
 - a column encryption key is configured in the database (if you're encrypting or re-encrypting a column). For details, see [Configure Always Encrypted keys using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md).
-- you can access the column master key for each column you want to encrypt, re-encrypt, or decrypt, from the computer running the PowerShell cmdlets. 
+- you can access the column master key for each column you want to encrypt, re-encrypt, or decrypt, from the computer running the PowerShell cmdlets.
+- you use SqlServer PowerShell module version 22.0.50 or later.
 
 ## Performance and Availability Considerations
 
@@ -69,7 +70,7 @@ The below example demonstrates setting the target encryption configuration for a
 
 ```PowerShell
 # Import the SqlServer module.
-Import-Module "SqlServer"
+Import-Module "SqlServer" -MinimumVersion 22.0.50
 Import-Module Az.Accounts -MinimumVersion 2.2.0
 
 #Connect to Azure
@@ -98,7 +99,7 @@ The below example demonstrates setting the target encryption configuration for a
 
 ```PowerShell
 # Import the SqlServer module.
-Import-Module "SqlServer"
+Import-Module "SqlServer" -MinimumVersion 22.0.50
 Import-Module Az.Accounts -MinimumVersion 2.2.0
 
 #Connect to Azure
@@ -127,7 +128,7 @@ The following example shows how to decrypt all columns that are currently encryp
 
 ```PowerShell
 # Import the SqlServer module.
-Import-Module "SqlServer"
+Import-Module "SqlServer" -MinimumVersion 22.0.50
 Import-Module Az.Accounts -MinimumVersion 2.2.0
 
 #Connect to Azure

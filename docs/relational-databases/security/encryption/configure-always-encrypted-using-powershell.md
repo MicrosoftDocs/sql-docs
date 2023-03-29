@@ -25,7 +25,7 @@ You can use PowerShell to manage Always Encrypted keys both with and without rol
 
 ## Prerequisites
 
-Install the [SqlServer module](/powershell/sqlserver/sqlserver/vlatest/sqlserver) on a secure computer that is NOT a computer hosting your SQL Server instance. The module can be installed directly from the PowerShell gallery.  See the [download](../../../powershell/download-sql-server-ps-module.md) instructions for more details.
+Install the [SqlServer PowerShell module version 22.0.50 or later](/powershell/sqlserver/sqlserver/vlatest/sqlserver) on a secure computer that is NOT a computer hosting your SQL Server instance. The module can be installed directly from the PowerShell gallery.  See the [download](../../../powershell/download-sql-server-ps-module.md) instructions for more details.
 
 
 ## <a name="importsqlservermodule"></a> Importing the SqlServer module 
@@ -39,7 +39,7 @@ This example loads the SqlServer module.
 
 ```PowerShell
 # Import the SQL Server Module.  
-Import-Module "SqlServer" 
+Import-Module "SqlServer" -MinimumVersion 22.0.50
 ```
 
 ## <a name="connectingtodatabase"></a> Connecting to a database
@@ -55,7 +55,7 @@ The **Get-SqlDatabase** cmdlet allows you to connect to a database in SQL Server
 
 ```PowerShell
 # Import the SqlServer module
-Import-Module "SqlServer"  
+Import-Module "SqlServer" -MinimumVersion 22.0.50
 
 # Connect to your database
 # Set the valid server name, database name and authentication keywords in the connection string
@@ -83,7 +83,7 @@ The [SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-p
 
 ```PowerShell
 # Import the SqlServer module.
-Import-Module "SqlServer"
+Import-Module "SqlServer" -MinimumVersion 22.0.50
 # Navigate to the database in the remote instance.
 cd SQLSERVER:\SQL\servercomputer\DEFAULT\Databases\yourdatabase
 # List column master keys in the above database.
@@ -96,7 +96,7 @@ Alternatively, you can specify a database path using the generic **Path** parame
 
 ```PowerShell
 # Import the SqlServer module.
-Import-Module "SqlServer" 
+Import-Module "SqlServer" -MinimumVersion 22.0.50
 # List column master keys for the specified database.
 Get-SqlColumnMasterKey -Path SQLSERVER:\SQL\servercomputer\DEFAULT\Databases\yourdatabase
 ```

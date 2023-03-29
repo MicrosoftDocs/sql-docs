@@ -13,7 +13,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 # Configure column encryption in-place with PowerShell
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-This article provides the steps for setting the target Always Encrypted configuration for database columns using the [Set-SqlColumnEncryption](/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption) cmdlet (in the *SqlServer* PowerShell module). The **Set-SqlColumnEncryption** cmdlet modifies both the schema of the target database as well as the data stored in the selected columns. The data stored in a column can be encrypted, re-encrypted, or decrypted, depending on the specified target encryption settings for the columns and the current encryption configuration. To trigger in-place cryptographic operations using an enclave, **Set-SqlColumnEncryption** must use a database connection created using a connection string with the Attestation Protocol and the Attestation URL keywords, which are required for enclave attestation.
+This article provides the steps for setting the target Always Encrypted configuration for database columns using the [Set-SqlColumnEncryption](/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption) cmdlet (in the *SqlServer* PowerShell module). The **Set-SqlColumnEncryption** cmdlet modifies both the schema of the target database as well as the data stored in the selected columns. The data stored in a column can be encrypted, re-encrypted, or decrypted, depending on the specified target encryption settings for the columns and the current encryption configuration. To trigger in-place cryptographic operations using an enclave, **Set-SqlColumnEncryption** must use a database connection created using a connection string with the Attestation Protocol and optionally the Attestation URL keywords.
 
 ## Prerequisites
 
@@ -21,25 +21,15 @@ To set the target encryption configuration, you need to make sure:
 - an enclave-enabled column encryption key is configured in the database (if you're encrypting or re-encrypting a column). For details, see [Manage keys for Always Encrypted with secure enclaves](../../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md).
 - you are connected to the database with Always Encrypted enabled and the attestation properties specified in the connection string.
 - you can access the column master key for each column you want to encrypt, re-encrypt, or decrypt, from the computer running the PowerShell cmdlets.
-- you use SqlServer PowerShell module version 22.x or later.
+- you use SqlServer PowerShell module version 22.0.50 or later.
 
-## Performance and Availability Considerations
+## Availability Considerations
 
-The **Set-SqlColumnEncryption** cmdlet supports two approaches for setting up the target encryption configuration: online and offline.
+The in-place **Set-SqlColumnEncryption** cmdlet doesn't support online encryption.
 
 With the offline approach, the target tables (and any tables related to the target tables, for example, any tables a target table have foreign key relationships with) are unavailable to write transactions throughout the duration of the operation. The semantics of foreign key constraints (**CHECK** or **NOCHECK**) are always preserved when using the offline approach.
 
-With the online approach, the operation of encrypting, decrypting, or re-encrypting the data is performed incrementally. Applications can read and write data from and to the target tables throughout the data movement operation, except the last iteration, the duration of which is limited by the **MaxDownTimeInSeconds** parameter (which you can define). To detect and process the changes applications can make while the data is being copied, the cmdlet enables [Change Tracking](../../track-changes/enable-and-disable-change-tracking-sql-server.md) in the target database. Because of that, the online approach is likely to consume more resources on the server side than the offline approach. The operation may also take much more time with the online approach, especially if a write-heavy workload is running against the database. The online approach can be used to encrypt one table at a time and the table must have a primary key. By default, foreign key constraints are recreated with the **NOCHECK** option to minimize the impact on applications. You can enforce preserving the semantics of foreign key constraints by specifying the **KeepCheckForeignKeyConstraints** option. 
-
-Here are the guidelines for choosing between the offline and online approaches:
-
-Use the offline approach:
-- To minimize the duration of the operation. 
-- To encrypt/decrypt/re-encrypt columns in multiple tables at the same time.
-- If the target table doesn't have a primary key.
-
-Use the online approach:
-- To minimize the downtime/unavailability of the database to your applications.
+If you cannot afford downtime during the encryption process, we suggest to use [Configure column encryption in-place with Transact-SQL](always-encrypted-enclaves-configure-encryption-tsql) which supports online encryption.
 
 ## Security Considerations
 
@@ -55,14 +45,13 @@ Step 5. Construct an array of SqlColumnEncryptionSettings objects - one for each
 Step 5. Set the desired encryption configuration, specified in the array of SqlColumnMasterKeySettings objects, you created in the previous step. A column will be encrypted, re-encrypted, or decrypted, depending on the specified target settings and the current encryption configuration of the column.| [Set-SqlColumnEncryption](/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**Note:** This step may take a long time. Your applications won't be able to access the tables through the entire operation or a portion of it, depending on the approach (online vs. offline), you select. | Yes | Yes
 
 ## Encrypt Columns using VBS enclaves
-### Offline Approach - Example
 
 The below example demonstrates setting the target encryption configuration for a couple of columns. If either column isn't already encrypted, it will be encrypted. If any column is already encrypted using a different key and/or a different encryption type, it will be decrypted and then re-encrypted with the specified target key/type. VBS enclaves currently don't support attestation. The EnclaveAttestationProtocol parameter should be set to *None* and the EnclaveAttestationUrl is not required.
 
 
 ```PowerShell
 # Import modules
-Import-Module "SqlServer"
+Import-Module "SqlServer" -MinimumVersion 22.0.50
 Import-Module Az.Accounts -MinimumVersion 2.2.0
 
 #Connect to Azure
@@ -85,35 +74,6 @@ $ces += New-SqlColumnEncryptionSettings -ColumnName "dbo.Employees.Salary" -Encr
 Set-SqlColumnEncryption -InputObject $database -ColumnEncryptionSettings $ces -LogFileDirectory . -EnclaveAttestationProtocol "None" -KeyVaultAccessToken $keyVaultAccessToken
 ```
 
-### Online Approach - Example
-
-The below example demonstrates setting the target encryption configuration for a couple of columns using the online approach. If either column isn't already encrypted, it will be encrypted. If any column is already encrypted using a different key and/or a different encryption type, it will be decrypted and then re-encrypted with the specified target key/type. VBS enclaves currently don't support attestation. The EnclaveAttestationProtocol parameter should be set to *None* and the EnclaveAttestationUrl is not required.
-
-```PowerShell
-# Import modules
-Import-Module "SqlServer"
-Import-Module Az.Accounts -MinimumVersion 2.2.0
-
-#Connect to Azure
-Connect-AzAccount
-
-# Obtain an access token for key vaults.
-$keyVaultAccessToken = (Get-AzAccessToken -ResourceUrl https://vault.azure.net).Token  
-
-# Connect to your database.
-$serverName = "<servername>.database.windows.net"
-$databaseName = "<DatabaseName>"
-# Change the authentication method in the connection string, if needed.
-$connStr = "Server = " + $serverName + "; Database = " + $databaseName + ";  Integrated Security = True"
-$database = Get-SqlDatabase -ConnectionString $connStr
-
-# Encrypt the selected columns (or re-encrypt, if they are already encrypted using keys/encrypt types, different than the specified keys/types.
-$ces = @() 
-$ces += New-SqlColumnEncryptionSettings -ColumnName "dbo.Employees.SSN" -EncryptionType "Randomized" -EncryptionKey "CEK" 
-$ces += New-SqlColumnEncryptionSettings -ColumnName "dbo.Employees.Salary" -EncryptionType "Randomized" -EncryptionKey "CEK" 
-Set-SqlColumnEncryption -InputObject $database -ColumnEncryptionSettings $ces -LogFileDirectory . -EnclaveAttestationProtocol "None" -KeyVaultAccessToken $keyVaultAccessToken -UseOnlineApproach -MaxDowntimeInSeconds 180
-```
-
 ### Decrypt Columns - Example
 
 The following example shows how to decrypt all columns that are currently encrypted in a database.
@@ -121,7 +81,7 @@ The following example shows how to decrypt all columns that are currently encryp
 
 ```PowerShell
 # Import modules
-Import-Module "SqlServer"
+Import-Module "SqlServer" -MinimumVersion 22.0.50
 Import-Module Az.Accounts -MinimumVersion 2.2.0
 
 #Connect to Azure
@@ -155,13 +115,12 @@ Set-SqlColumnEncryption -ColumnEncryptionSettings $ces -InputObject $database -L
 ```
 
 ## Encrypt Columns using SGX enclaves
-### Offline Approach - Example
 
 The below example demonstrates setting the target encryption configuration for a couple of columns. If either column isn't already encrypted, it will be encrypted. If any column is already encrypted using a different key and/or a different encryption type, it will be decrypted and then re-encrypted with the specified target key/type. To trigger in-place cryptographic operations using an enclave, the EnclaveAttestationProtocol and the EnclaveAttestationUrl parameters are required.
 
 ```PowerShell
 # Import modules
-Import-Module "SqlServer"
+Import-Module "SqlServer" -MinimumVersion 22.0.50
 Import-Module Az.Accounts -MinimumVersion 2.2.0
 
 #Connect to Azure
@@ -184,36 +143,6 @@ $ces += New-SqlColumnEncryptionSettings -ColumnName "dbo.Employees.Salary" -Encr
 Set-SqlColumnEncryption -InputObject $database -ColumnEncryptionSettings $ces -LogFileDirectory . -EnclaveAttestationProtocol "AAS" -EnclaveAttestationURL "https://<attestationURL>"   -KeyVaultAccessToken $keyVaultAccessToken
 ```
 
-### Online Approach - Example
-
-The below example demonstrates setting the target encryption configuration for a couple of columns using the online approach. If either column isn't already encrypted, it will be encrypted. If any column is already encrypted using a different key and/or a different encryption type, it will be decrypted and then re-encrypted with the specified target key/type. VBS enclaves currently don't support attestation. To trigger in-place cryptographic operations using an enclave, the EnclaveAttestationProtocol and the EnclaveAttestationUrl parameters are required.
-
-```PowerShell
-# Import modules
-Import-Module "SqlServer"
-Import-Module Az.Accounts -MinimumVersion 2.2.0
-
-#Connect to Azure
-Connect-AzAccount
-
-# Obtain an access token for key vaults.
-$keyVaultAccessToken = (Get-AzAccessToken -ResourceUrl https://vault.azure.net).Token  
-
-# Connect to your database.
-$serverName = "<servername>.database.windows.net"
-$databaseName = "<DatabaseName>"
-# Change the authentication method in the connection string, if needed.
-$connStr = "Server = " + $serverName + "; Database = " + $databaseName + ";  Integrated Security = True"
-$database = Get-SqlDatabase -ConnectionString $connStr
-
-# Encrypt the selected columns (or re-encrypt, if they are already encrypted using keys/encrypt types, different than the specified keys/types.
-$ces = @() 
-$ces += New-SqlColumnEncryptionSettings -ColumnName "dbo.Employees.SSN" -EncryptionType "Randomized" -EncryptionKey "CEK" 
-$ces += New-SqlColumnEncryptionSettings -ColumnName "dbo.Employees.Salary" -EncryptionType "Randomized" -EncryptionKey "CEK" 
-Set-SqlColumnEncryption -InputObject $database -ColumnEncryptionSettings $ces -LogFileDirectory . -EnclaveAttestationProtocol "AAS" -EnclaveAttestationURL "https://<attestationURL>" -KeyVaultAccessToken $keyVaultAccessToken -UseOnlineApproach -MaxDowntimeInSeconds 180
-```
-
-
 ### Decrypt Columns - Example
 
 The following example shows how to decrypt all columns that are currently encrypted in a database.
@@ -221,7 +150,7 @@ The following example shows how to decrypt all columns that are currently encryp
 
 ```PowerShell
 # Import modules
-Import-Module "SqlServer"
+Import-Module "SqlServer" -MinimumVersion 22.0.50
 Import-Module Az.Accounts -MinimumVersion 2.2.0
 
 #Connect to Azure

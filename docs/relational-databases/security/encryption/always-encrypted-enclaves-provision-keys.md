@@ -83,7 +83,7 @@ The below end-to-end example shows how to provision enclave-enabled keys, storin
 $cert = New-SelfSignedCertificate -Subject "AlwaysEncryptedCert" -CertStoreLocation Cert:CurrentUser\My -KeyExportPolicy Exportable -Type DocumentEncryptionCert -KeyUsage DataEncipherment -KeySpec KeyExchange
 
 # Import the SqlServer module.
-Import-Module "SqlServer"
+Import-Module "SqlServer" -MinimumVersion 22.0.50
 
 # Connect to your database.
 $serverName = "<server name>"
@@ -109,12 +109,13 @@ New-SqlColumnEncryptionKey -Name $cekName  -InputObject $database -ColumnMasterK
 
 The below end-to-end example shows how to provision enclave-enabled keys, storing the column master key in a key vault in Azure Key Vault. The script is based on the example in [Azure Key Vault without Role Separation (Example)](configure-always-encrypted-keys-using-powershell.md#azure-key-vault-without-role-separation-example). It's important to note two differences between the workflow for enclave-enabled keys compared to the keys that aren't enclave-enabled.
 
-- In the below script, the [**New-SqlCertificateStoreColumnMasterKeySettings**](/powershell/module/sqlserver/new-sqlcertificatestorecolumnmasterkeysettings) uses the `-AllowEnclaveComputations` parameter to make the new column master key enclave-enabled.
-- The below script calls the [**Add-SqlAzureAuthenticationContext**](/powershell/module/sqlserver/add-sqlazureauthenticationcontext) cmdlet to sign in to Azure before calling the [**New-SqlAzureKeyVaultColumnMasterKeySettings**](/powershell/module/sqlserver/new-sqlazurekeyvaultcolumnmasterkeysettings) cmdlet. Singing in to Azure first is necessary, because the `-AllowEnclaveComputations` parameter causes the **New-SqlAzureKeyVaultColumnMasterKeySettings** to call Azure Key Vault to sign the properties of the column master key.
+- In the below script, the [**New-SqlCertificateStoreColumnMasterKeySettings**](/powershell/module/sqlserver/New-SqlAzureKeyVaultColumnMasterKeySettings) uses the `-AllowEnclaveComputations` parameter to make the new column master key enclave-enabled.
+- The below script uses the [**Get-AzAccessToken**](/powershell/module/sqlserver/Get-AzAccessToken) cmdlet to obtain an access token for key vaults. This is necessary, because the  **New-SqlAzureKeyVaultColumnMasterKeySettings** needs to have access to the Azure Key Vault to sign the properties of the column master key.
 
 ```powershell
 # Create a column master key in Azure Key Vault.
-Import-Module Az
+Import-Module "SqlServer" -MinimumVersion 22.0.50
+Import-Module Az.Accounts -MinimumVersion 2.2.0
 Connect-AzAccount
 $SubscriptionId = "<Azure SubscriptionId>"
 $resourceGroup = "<resource group name>"
@@ -125,7 +126,7 @@ $azureCtx = Set-AzConteXt -SubscriptionId $SubscriptionId # Sets the context for
 New-AzResourceGroup -Name $resourceGroup -Location $azureLocation # Creates a new resource group - skip, if your desired group already exists.
 New-AzKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation # Creates a new key vault - skip if your vault already exists.
 Set-AzKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, delete, list, wrapKey,unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
-$akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination "Software"
+$akvKey = Add-AzKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination "Software"
 
 # Connect to your database.
 $serverName = "<server name>"
@@ -138,7 +139,7 @@ $database = Get-SqlDatabase -ConnectionString $connStr
 $keyVaultAccessToken = (Get-AzAccessToken -ResourceUrl https://vault.azure.net).Token 
 
 # Create a SqlColumnMasterKeySettings object for your column master key. 
-$cmkSettings = New-SqlAzureKeyVaultColumnMasterKeySettings -KeyURL $akvKey.ID -AllowEnclaveComputations
+$cmkSettings = New-SqlAzureKeyVaultColumnMasterKeySettings -KeyURL $akvKey.ID -AllowEnclaveComputations -KeyVaultAccessToken $keyVaultAccessToken
 
 # Create column master key metadata in the database.
 $cmkName = "CMK1"

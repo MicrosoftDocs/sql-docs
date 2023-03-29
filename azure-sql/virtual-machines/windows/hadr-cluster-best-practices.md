@@ -330,7 +330,7 @@ Review the resolutions for some commonly known issues and errors.
 
 ## Resource contention (IO in particular) causes failover
 
-Exhausting IP or CPU capacity for the VM can cause your availability group to failover. Identifying the contention that happens right before failover is the most reliable way to identify what is causing automatic failover. [Monitor Azure Virtual Machines](/azure/virtual-machines/monitor-vm) to look at the [Storage IO Utilization metrics](/azure/virtual-machines/disks-metrics#storage-io-utilization-metrics) to understand VM or disk level latency. 
+Exhausting I/O or CPU capacity for the VM can cause your availability group to fail over. Identifying the contention that happens right before the failover is the most reliable way to identify what is causing automatic failover. [Monitor Azure Virtual Machines](/azure/virtual-machines/monitor-vm) to look at the [Storage IO Utilization metrics](/azure/virtual-machines/disks-metrics#storage-io-utilization-metrics) to understand VM or disk level latency. 
 
 
 Follow these steps to review the **Azure VM Overall IO Exhaustion event**: 
@@ -345,7 +345,7 @@ Follow these steps to review the **Azure VM Overall IO Exhaustion event**:
 
 ### Azure VM HostEvents causes failover
 
-It's possible that an Azure VM HostEvent causes your availability group to failover. If you believe an Azure VM HostEvent caused a failover, you can check the Azure Monitor Activity log, and the Azure VM Resource Health overview. 
+It's possible that an Azure VM HostEvent causes your availability group to fail over. If you believe an Azure VM HostEvent caused a failover, you can check the Azure Monitor Activity log, and the Azure VM Resource Health overview. 
 
 The [Azure Monitor activity log](/azure/azure-monitor/essentials/activity-log) is a platform log in Azure that provides insight into subscription-level events. The activity log includes information like when a resource is modified or a virtual machine is started. You can view the activity log in the Azure portal or retrieve entries with PowerShell and the Azure CLI.
 

@@ -252,7 +252,7 @@ In Windows Server 2008 to 2012 R2, the default value for `-StorageSubsystemFrien
 
 Storage Configuration blade can be grayed out if your SQL IaaS Agent extension is in a failed state. [Repair the SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md#repair-extension). 
 
-The Configure option on the Storage configuration blade can be grayed out if you've customized your storage pool. 
+The Configure option on the Storage configuration blade can be grayed out if you've customized your storage pool, or if you are using a non-Marketplace image. 
 
 ### I have a disk with 1TB of unallocated space that I cannot remove from storage pool
 

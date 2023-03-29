@@ -15734,6 +15734,8 @@ items:
         href: relational-databases/system-tables/msqreader-agents-transact-sql.md
       - name: MSqreader_history
         href: relational-databases/system-tables/msqreader-history-transact-sql.md
+      - name: MSrepl_agent_jobs
+        href: relational-databases/system-tables/msrepl-agent-jobs-transact-sql.md
       - name: MSrepl_backup_lsns
         href: relational-databases/system-tables/msrepl-backup-lsns-transact-sql.md
       - name: MSrepl_commands
@@ -15746,6 +15748,8 @@ items:
         href: relational-databases/system-tables/msrepl-originators-transact-sql.md
       - name: MSrepl_queuedtraninfo
         href: relational-databases/system-tables/msrepl-queuedtraninfo-transact-sql.md
+      - name: MSreplservers
+        href: relational-databases/system-tables/msreplservers.md
       - name: MSrepl_transactions
         href: relational-databases/system-tables/msrepl-transactions-transact-sql.md
       - name: MSrepl_version

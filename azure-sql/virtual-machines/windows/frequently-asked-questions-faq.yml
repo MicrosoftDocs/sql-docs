@@ -302,7 +302,7 @@ sections:
       - question: |
           Will registering with the SQL IaaS Agent extension install an agent on my VM?
         answer: |
-             Not initially. When you first register with the SQL IaaS Agent extension, binaries are copied to the SQL Server VM providing you limited functionality. Once you enable a feature that relies on it, the SQL IaaS agent is installed to the VM. Check the [table of benefits](sql-server-iaas-agent-extension-automate-management.md#feature-benefits) for information about limited functionality. 
+             Not initially. When you first register with the SQL IaaS Agent extension, binaries are copied to the SQL Server VM providing you limited functionality. Once you enable a feature that relies on it, the SQL IaaS Agent is installed to the VM. Check the [table of benefits](sql-server-iaas-agent-extension-automate-management.md#feature-benefits) for information about limited functionality. 
                 
       - question: | 
            What permissions does the SQL Server IaaS agent extension use? 
@@ -393,7 +393,7 @@ sections:
 
       - question: |
           What happened to management modes of the SQL IaaS Agent extension? 
-        answer: Management modes were removed from the SQL IaaS Agent extension architecture. Starting in March 2023, registering with the SQL IaaS Agent extension initially just copies the binaries to the SQL Server VM and offers [limited functionality](sql-server-iaas-agent-extension-automate-management.md#feature-benefits). Once you enable a feature that relies on it, the SQL IaaS agent is installed to the SQL Server VM. 
+        answer: Management modes were removed from the SQL IaaS Agent extension architecture. Starting in March 2023, registering with the SQL IaaS Agent extension initially just copies the binaries to the SQL Server VM and offers [limited functionality](sql-server-iaas-agent-extension-automate-management.md#feature-benefits). Once you enable a feature that relies on it, the SQL IaaS Agent is installed to the SQL Server VM. 
 
              
 

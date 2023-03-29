@@ -14,7 +14,7 @@ monikerRange: "=azuresqldb-current"
 
 # sys.sp_verify_database_ledger_from_digest_storage (Transact-SQL)
 
-[!INCLUDE [Azure SQL Database](../../includes/applies-to-version/asdb.md)]
+[!INCLUDE [SQL Server 2022 Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
 Verifies the database ledger and the table ledgers using digests at the specified external digest storage locations.
 

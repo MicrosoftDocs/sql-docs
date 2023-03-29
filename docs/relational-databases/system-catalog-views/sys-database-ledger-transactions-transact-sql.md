@@ -13,7 +13,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-ver16||>=sql-server-linux-ver16
 ---
 # sys.database_ledger_transactions (Transact-SQL)
 
-[!INCLUDE [SQL Server 2022 Azure SQL Database](../../includes/applies-to-version/sqlserver2022-asdb.md)]
+[!INCLUDE [SQL Server 2022 Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
 Captures the cryptographically protected history of database transactions against ledger tables in the database. A row in this view represents a database transaction.
 

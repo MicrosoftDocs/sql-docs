@@ -48,7 +48,7 @@ The SQL Server IaaS Agent extension allows for integration with the Azure portal
 
    ### [Azure portal](#tab/azure-portal)
 
-   You can use the [SQL virtual machine resource](manage-sql-vm-portal.md) in the Azure portal to quickly identify SQL Server VMs that are using the Azure Hybrid Benefit. 
+   You can use the [SQL virtual machines resource](manage-sql-vm-portal.md) in the Azure portal to quickly identify SQL Server VMs that are using the Azure Hybrid Benefit. 
 
    ### [PowerShell](#tab/azure-powershell)
 

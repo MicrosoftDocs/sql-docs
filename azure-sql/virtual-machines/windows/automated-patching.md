@@ -4,7 +4,7 @@ description: This article explains the Automated Patching feature for SQL Server
 author: bluefooted
 ms.author: pamela
 ms.reviewer: mathoma
-ms.date: 03/27/2023
+ms.date: 03/29/2023
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: article

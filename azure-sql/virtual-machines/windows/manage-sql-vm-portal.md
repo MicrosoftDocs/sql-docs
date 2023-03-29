@@ -1,10 +1,10 @@
 ---
 title: Manage SQL Server virtual machines in Azure by using the Azure portal
-description: Learn how to access the SQL virtual machine resource in the Azure portal for a SQL Server VM hosted on Azure to modify SQL Server settings.
+description: Learn how to access the SQL virtual machines resource in the Azure portal for a SQL Server VM hosted on Azure to modify SQL Server settings.
 author: bluefooted
 ms.author: pamela
 ms.reviewer: mathoma
-ms.date: 12/21/2021
+ms.date: 03/27/2023
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to
@@ -53,9 +53,7 @@ To access the **SQL virtual machines** resource, do the following:
 
 ## License and edition 
 
-Use the **Configure** page of the SQL virtual machine resource to change your SQL Server licensing metadata to **Pay as you go**, **Azure Hybrid Benefit**, or **HA/DR** for your [free Azure replica for disaster recovery](business-continuity-high-availability-disaster-recovery-hadr-overview.md#free-dr-replica-in-azure).
-
-
+Use the **Configure** page of the SQL virtual machines resource to change your SQL Server licensing metadata to **Pay as you go**, **Azure Hybrid Benefit**, or **HA/DR** for your [free Azure replica for disaster recovery](business-continuity-high-availability-disaster-recovery-hadr-overview.md#free-dr-replica-in-azure).
 
 :::image type="content" source="./media/manage-sql-vm-portal/sql-vm-license-edition.png" alt-text="Screenshot of the Azure portal, SQL virtual machines resource, showing where to change the version and edition of SQL Server VM metadata. ":::
 

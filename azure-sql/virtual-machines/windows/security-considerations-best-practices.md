@@ -4,7 +4,7 @@ description: This article provides general guidance for securing SQL Server runn
 author: bluefooted
 ms.author: pamela
 ms.reviewer: mathoma, randolphwest
-ms.date: 03/15/2023
+ms.date: 03/29/2023
 ms.service: virtual-machines-sql
 ms.subservice: security
 ms.topic: conceptual

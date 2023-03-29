@@ -4,7 +4,7 @@ description: Provides VM size guidelines and best practices to optimize the perf
 author: bluefooted
 ms.author: pamela
 ms.reviewer: pamela, randolphwest
-ms.date: 03/15/2023
+ms.date: 03/29/2023
 ms.service: virtual-machines-sql
 ms.subservice: performance
 ms.topic: conceptual

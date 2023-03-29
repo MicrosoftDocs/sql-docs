@@ -4,7 +4,7 @@ description: Learn about the known issues and how to troubleshoot errors with th
 author: adbadram
 ms.author: adbadram
 ms.reviewer: mathoma, randolphwest
-ms.date: 03/15/2023
+ms.date: 03/29/2023
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to
@@ -27,7 +27,7 @@ If you repair, or reinstall the SQL IaaS Agent extension, your setting won't be 
 
 [Repair the extension](sql-agent-extension-manually-register-single-vm.md#repair-extension) if you see the following error message:
 
-`The SQL virtual machine resource is not in a valid state for management`
+`The SQL virtual machines resource is not in a valid state for management`
 
 ## Underlying virtual machine is invalid
 

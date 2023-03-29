@@ -4,7 +4,7 @@ description: "Learn about the supported cluster configurations when you configur
 author: tarynpratt
 ms.author: tarynpratt
 ms.reviewer: mathoma
-ms.date: 03/27/2023
+ms.date: 03/29/2023
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: conceptual
@@ -279,16 +279,17 @@ It is important to configure the port exclusion when the port is not in use, oth
 
 To confirm that the exclusions have been configured correctly, use the following command: `netsh int ipv4 show excludedportrange tcp`. 
 
-Setting this exclusion for the AG role IP probe port should prevent events such as **Event ID: 1069** with status 10048. This event can be seen in the Windows Failover cluster events with the following message:
+Setting this exclusion for the availability group role IP probe port should prevent events such as **Event ID: 1069** with status 10048. This event can be seen in the Windows Failover cluster events with the following message:
+
 ```
 Cluster resource '<IP name in AG role>' of type 'IP Address' in cluster role '<AG Name>' failed.
-```
 An Event ID: 1069 with status 10048 can be identified from cluster logs with events like: 
-```
 Resource IP Address 10.0.1.0 called SetResourceStatusEx: checkpoint 5. Old state OnlinePending, new state OnlinePending, AppSpErrorCode 0, Flags 0, nores=false
 IP Address <IP Address 10.0.1.0>: IpaOnlineThread: **Listening on probe port 59999** failed with status **10048**
-```
 Status [**10048**](/windows/win32/winsock/windows-sockets-error-codes-2) refers to: **This error occurs** if an application attempts to bind a socket to an **IP address/port that has already been used** for an existing socket.
+```
+
+
 This can be caused by an internal process taking the same port defined as probe port. Remember that probe port is used to check the status of a backend pool instance from the Azure Load Balancer. 
 If the **health probe fails** to get a response from a backend instance, then **no new connections will be sent to that backend instance** until the health probe succeeds again.
 
@@ -297,7 +298,7 @@ If the **health probe fails** to get a response from a backend instance, then **
 Review the resolutions for some commonly known issues and errors. 
 
 
-## Resource contention (IO in particular) causes failover
+### Resource contention (IO in particular) causes failover
 
 Exhausting I/O or CPU capacity for the VM can cause your availability group to fail over. Identifying the contention that happens right before the failover is the most reliable way to identify what is causing automatic failover. [Monitor Azure Virtual Machines](/azure/virtual-machines/monitor-vm) to look at the [Storage IO Utilization metrics](/azure/virtual-machines/disks-metrics#storage-io-utilization-metrics) to understand VM or disk level latency. 
 
@@ -324,7 +325,7 @@ To check the Azure Monitor activity log, follow these steps:
 1. Select **Activity Log** on the Virtual Machine blade
 1. Select **Timespan** and then choose the time frame when your availability group failed over. Select **Apply**. 
 
-:::image type="content" source="./media/hadr-cluster-best-practices/activity-log.png" alt-text="Screenshot of the Azure portal, showing the Activity log. ":::
+   :::image type="content" source="./media/hadr-cluster-best-practices/activity-log.png" alt-text="Screenshot of the Azure portal, showing the Activity log. ":::
  
 If Azure has further information about the root cause of a platform-initiated unavailability, that information may be posted on the [Azure VM - Resource Health overview](/azure/service-health/resource-health-overview#root-cause-information) page up to 72 hours after the initial unavailability. This information is only available for virtual machines at this time.
 

@@ -4,7 +4,7 @@ description: Learn how to change the version of your SQL Server virtual machine 
 author: ramakoni1
 ms.author: RamaKoni
 ms.reviewer: sqlblt, daleche, mathoma
-ms.date: 03/27/2023
+ms.date: 03/29/2023
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to

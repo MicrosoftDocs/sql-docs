@@ -4,7 +4,7 @@ description: This article introduces SQL Server Always On availability groups on
 author: tarynpratt
 ms.author: tarynpratt
 ms.reviewer: mathoma
-ms.date: 11/10/2021
+ms.date: 03/29/2023
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: overview

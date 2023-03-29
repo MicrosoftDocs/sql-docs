@@ -4,7 +4,7 @@ description: Provides a quick checklist to review your best practices and guidel
 author: bluefooted
 ms.author: pamela
 ms.reviewer: mathoma, randolphwest
-ms.date: 03/14/2023
+ms.date: 03/29/2023
 ms.service: virtual-machines-sql
 ms.subservice: performance
 ms.topic: conceptual
@@ -42,15 +42,22 @@ There's typically a trade-off between optimizing for costs and optimizing for pe
 
 ## VM size
 
-The checklist in this section covers the [VM size best practices](../virtual-machines/windows/performance-guidelines-best-practices-vm-size.md) for SQL Server on Azure VMs.
+The checklist in this section covers the [VM size best practices](performance-guidelines-best-practices-vm-size.md) for SQL Server on Azure VMs.
 
 [!INCLUDE[vm size best practices](../../includes/virtual-machines-best-practices-vm-size.md)]
 
 ## Storage
 
-The checklist in this section covers the [storage best practices](../virtual-machines/windows/performance-guidelines-best-practices-storage.md) for SQL Server on Azure VMs.
+The checklist in this section covers the [storage best practices](performance-guidelines-best-practices-storage.md) for SQL Server on Azure VMs.
 
 [!INCLUDE[storage best practices](../../includes/virtual-machines-best-practices-storage.md)]
+
+## Security
+
+The checklist in this section covers the [security best practices](security-considerations-best-practices.md) for SQL Server on Azure VMs.
+
+[!INCLUDE[security best practices](../../includes/virtual-machines-best-practices-security.md)]
+
 
 ## SQL Server features
 
@@ -94,6 +101,8 @@ The following is a quick checklist of best practices for Azure-specific guidance
 - Implement a high availability and disaster recovery (HADR) solution that meets  your business continuity SLAs, see the [HADR options](business-continuity-high-availability-disaster-recovery-hadr-overview.md#deployment-architectures) options available for SQL Server on Azure VMs.
 - Use the Azure portal (support + troubleshooting) to evaluate [resource health](/azure/service-health/resource-health-overview) and history; submit new support requests when needed.
 
+
+
 ## HADR configuration
 
 The checklist in this section covers the [HADR best practices](hadr-cluster-best-practices.md) for SQL Server on Azure VMs.
@@ -101,11 +110,7 @@ The checklist in this section covers the [HADR best practices](hadr-cluster-best
 [!INCLUDE[HADR best practices](../../includes/virtual-machines-best-practices-hadr.md)]
 
 
-## Security
 
-The checklist in this section covers the [security best practices](../virtual-machines/windows/security-considerations-best-practices.md) for SQL Server on Azure VMs.
-
-[!INCLUDE[security best practices](../../includes/virtual-machines-best-practices-security.md)]
 
 
 ## Next steps

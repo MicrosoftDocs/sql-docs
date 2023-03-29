@@ -8,7 +8,7 @@ ms.topic: include
 - Monitor the application and [determine storage bandwidth and latency requirements](/azure/virtual-machines/premium-storage-performance#counters-to-measure-application-performance-requirements) for SQL Server data, log, and `tempdb` files before choosing the disk type.
 - To optimize storage performance, plan for highest uncached IOPS available and use data caching as a performance feature for data reads while avoiding [virtual machine and disks capping](/azure/virtual-machines/premium-storage-performance#throttling).
 - Place data, log, and `tempdb` files on separate drives.
-  - For the data drive, only use [premium P30 and P40 or smaller disks](/azure/virtual-machines/disks-types#premium-ssds) to ensure the availability of cache support
+  - For the data drive, use [premium P30 and P40 or smaller disks](/azure/virtual-machines/disks-types#premium-ssds) to ensure the availability of cache support
   - For the log drive plan for capacity and test performance versus cost while evaluating the [premium P30 - P80 disks](/azure/virtual-machines/disks-types#premium-ssds)
     - If submillisecond storage latency is required, use [Azure ultra disks](/azure/virtual-machines/disks-types#ultra-disks) for the transaction log.
     - For M-series virtual machine deployments consider [write accelerator](/azure/virtual-machines/how-to-enable-write-accelerator) over using Azure ultra disks.
@@ -21,7 +21,7 @@ ms.topic: include
 - Set [host caching](/azure/virtual-machines/disks-performance#virtual-machine-uncached-vs-cached-limits) to none for log file disks.
   - Don't enable read/write caching on disks that contain SQL Server data or log files.
   - Always stop the SQL Server service before changing the cache settings of your disk.
-- For development and test workloads, and long-term backup archival consider using standard storage. It isn't recommended to use Standard HDD/SDD for production workloads.
+- For development and test workloads, and long-term backup archival consider using standard storage. It isn't recommended to use Standard HDD/SSD for production workloads.
 - [Credit-based Disk Bursting](/azure/virtual-machines/disk-bursting#credit-based-bursting) (P1-P20) should only be considered for smaller dev/test workloads and departmental systems.
 - To optimize storage performance, plan for highest uncached IOPS available, and use data caching as a performance feature for data reads while avoiding [virtual machine and disks capping/throttling](/azure/virtual-machines/premium-storage-performance#throttling).
 - Format your data disk to use 64-KB allocation unit size for all data files placed on a drive other than the temporary `D:\` drive (which has a default of 4 KB). SQL Server VMs deployed through Azure Marketplace come with data disks formatted with allocation unit size and interleave for the storage pool set to 64 KB.

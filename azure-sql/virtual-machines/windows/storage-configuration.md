@@ -4,7 +4,7 @@ description: This topic describes how Azure configures storage for SQL Server VM
 author: bluefooted
 ms.author: pamela
 ms.reviewer: mathoma
-ms.date: 12/21/2021
+ms.date: 03/29/2023
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to
@@ -248,11 +248,11 @@ In Windows Server 2008 to 2012 R2, the default value for `-StorageSubsystemFrien
 
 ## Known issues
 
-### Configure Disk option or Storage configuration blade on SQL Virtual Machine Resource is Grayed Out
+### Configure Disk option or Storage Configuration blade on SQL virtual machine resource is grayed out
 
-Storage Configuration blade can be grayed out if your SQL IaaS Agent extension is in a failed state. [Repair the SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md#repair-extension). 
+The **Storage Configuration** blade can be grayed out in the Azure portal if your SQL IaaS Agent extension is in a failed state. [Repair the SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md#repair-extension). 
 
-The Configure option on the Storage configuration blade can be grayed out if you've customized your storage pool, or if you are using a non-Marketplace image. 
+**Configure** on the Storage Configuration blade can be grayed out if you've customized your storage pool, or if you are using a non-Marketplace image. 
 
 ### I have a disk with 1TB of unallocated space that I cannot remove from storage pool
 

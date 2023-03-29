@@ -4,7 +4,7 @@ description: Learn how to change the edition of your SQL Server virtual machine 
 author: bluefooted
 ms.author: pamela
 ms.reviewer: mathoma
-ms.date: 01/14/2020
+ms.date: 03/29/2023
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to
@@ -46,7 +46,7 @@ After you change the edition of SQL Server, register your SQL Server VM with the
 
 ## Downgrade an edition
 
-To downgrade the edition of SQL Server, you need to completely uninstall SQL Server, and reinstall it again with the desired edition setup media. You can get the setup media by deploying a SQL Server VM from the marketplace image with your desired edition, and then copying the setup media to the target SQL S
+To downgrade the edition of SQL Server, you need to completely uninstall SQL Server, and reinstall it again with the desired edition setup media. You can get the setup media by deploying a SQL Server VM from the marketplace image with your desired edition, and then copying the setup media to the target SQL Server VM, or using the [Volume Licensing Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx) if you have software assurance. 
 
 > [!WARNING]
 > Uninstalling SQL Server might incur additional downtime. 

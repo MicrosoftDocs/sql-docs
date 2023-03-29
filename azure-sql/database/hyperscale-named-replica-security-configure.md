@@ -56,7 +56,7 @@ Disable the login. This will prevent this login from accessing any database on t
 alter login [third-party-login] disable;
 ```
 
-# [Azure AD Authetication](#tab/AAD-Authentication)
+# [Azure AD authentication](#tab/AAD-Authentication)
 
 ```sql
 alter login [bob@contoso.com] disable;
@@ -125,7 +125,7 @@ Connect to the `master` database on the logical server hosting the named replica
 create login [third-party-login] with password = 'Just4STRONG_PAZzW0rd!', sid = 0x0...1234;
 ```
 
-# [Azure AD Authetication](#tab/AAD-Authentication)
+# [Azure AD authentication](#tab/AAD-Authentication)
 
 Connect to the `master` database on the logical server hosting the named replica, created in the previous step and add the login.
 

@@ -36,6 +36,8 @@ In this guide, we go through the steps to create, update, and retrieve an Azure 
 - For comprehensive instructions on setting up cross-tenant CMK and the RBAC permissions necessary for configuring Azure AD applications and Azure Key Vault, refer to one of the following guides:
   - [Configure cross-tenant customer-managed keys for a new storage account](/azure/storage/common/customer-managed-keys-configure-cross-tenant-new-account)
   - [Configure cross-tenant customer-managed keys for an existing storage account](/azure/storage/common/customer-managed-keys-configure-cross-tenant-existing-account)
+- The Azure CLI version 2.46.0 or higher
+- Az PowerShell version 9.5.0 or higher
 
 ### Required resources on the first tenant
 

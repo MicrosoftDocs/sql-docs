@@ -9,6 +9,7 @@ ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to
 tags: azure-resource-manager
+ms.custom: devx-track-arm-template
 ---
 # Configure storage for SQL Server VMs
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]

@@ -178,7 +178,7 @@ If tuning your cluster heartbeat and threshold settings as recommended is insuff
 > [!WARNING]
 > Changing these settings may mask an underlying problem, and should be used as a temporary solution to reduce, rather than eliminate, the likelihood of failure. Underlying issues should still be investigated and addressed. 
 
-Start by increase the following parameters from their default values for relaxed monitoring, and adjust as necessary: 
+Start by increasing the following parameters from their default values for relaxed monitoring, and adjust as necessary: 
 
 
 |Parameter |Default value  |Relaxed Value  |Description  |
@@ -311,7 +311,7 @@ Follow these steps to review the **Azure VM Overall IO Exhaustion event**:
    - **VM Cached Bandwidth Consumed Percentage**
    - **VM Uncached Bandwidth Consumed Percentage**
 
-:::image type="content" source="./media/hadr-cluster-best-practices/hadr-metrics-cached-uncached.png" alt-text="Identify IO Latency-ss":::
+:::image type="content" source="./media/hadr-cluster-best-practices/hadr-metrics-cached-uncached.png" alt-text="Screenshot of the Metrics page in the Azure portal.":::
 
 ### Azure VM HostEvents causes failover
 
@@ -321,7 +321,7 @@ The [Azure Monitor activity log](/azure/azure-monitor/essentials/activity-log) i
 
 To check the Azure Monitor activity log, follow these steps: 
 
-1. Navigate to your Virtual Machine in Azure Portal
+1. Navigate to your Virtual Machine in Azure portal
 1. Select **Activity Log** on the Virtual Machine blade
 1. Select **Timespan** and then choose the time frame when your availability group failed over. Select **Apply**. 
 
@@ -331,7 +331,7 @@ If Azure has further information about the root cause of a platform-initiated un
 
 
 
-1. Navigate to your Virtual Machine in Azure Portal
+1. Navigate to your Virtual Machine in Azure portal
 1. Select **Resource Health** under the **Health** blade.
 
 :::image type="content" source="./media/hadr-cluster-best-practices/resource-health.png" alt-text="Screenshot of the Resource Health page in the Azure portal.":::

@@ -16,7 +16,7 @@ tags: azure-resource-manager
 
 In the [Azure portal](https://portal.azure.com), the [**SQL virtual machines**](https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.SqlVirtualMachine%2FSqlVirtualMachines) resource is an independent management service to manage SQL Server on Azure Virtual Machines (VMs) that have been registered with the SQL Server IaaS Agent extension. You can use the resource to view all of your SQL Server VMs simultaneously and modify settings dedicated to SQL Server: 
 
-:::image type="content" source="./media/manage-sql-vm-portal/sql-vm-manage.png" alt-text="SQL virtual machines resource":::
+:::image type="content" source="./media/manage-sql-vm-portal/sql-vm-manage.png" alt-text="Screenshot of accessing the SQL virtual machines resource in the Azure portal.":::
 
 The **SQL virtual machines** resource management point is different to the **Virtual machine** resource used to manage the VM such as start it, stop it, or restart it. 
 
@@ -36,16 +36,16 @@ To access the **SQL virtual machines** resource, do the following:
 1. (Optional): Select the star next to **SQL virtual machines** to add this option to your **Favorites** menu. 
 1. Select **SQL virtual machines**. 
 
-   :::image type="content" source="./media/manage-sql-vm-portal/sql-vm-search.png" alt-text="Find SQL Server virtual machines in all services":::
+   :::image type="content" source="./media/manage-sql-vm-portal/sql-vm-search.png" alt-text="Screenshot of the Azure portal, All services selected, and the search box highlighted.":::
 
 1. The portal lists all SQL Server VMs available within the subscription. Select the one that you want to manage to open the **SQL virtual machines** resource. Use the search box if your SQL Server VM isn't appearing. 
 
-   :::image type="content" source="./media/manage-sql-vm-portal/all-sql-vms.png" alt-text="All available SQL Server VMs":::
+   :::image type="content" source="./media/manage-sql-vm-portal/all-sql-vms.png" alt-text="Screenshot of the Azure portal, the SQL virtual machines resource page, with a VM selected.":::
 
    Selecting your SQL Server VM opens the **SQL virtual machines** resource: 
 
 
-   :::image type="content" source="./media/manage-sql-vm-portal/sql-vm-resource.png" alt-text="View the SQL virtual machines resource":::
+   :::image type="content" source="./media/manage-sql-vm-portal/sql-vm-resource.png" alt-text="Screenshot of the Azure portal, the overview pane of the SQL virtual machines resource.":::
 
 > [!TIP]
 > The **SQL virtual machines** resource is for dedicated SQL Server settings. Select the name of the VM in the **Virtual machine** box to open settings that are specific to the VM, but not exclusive to SQL Server. 

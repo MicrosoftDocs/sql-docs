@@ -55,7 +55,7 @@ To access the **SQL virtual machines** resource, do the following:
 
 Use the **Configure** page of the SQL virtual machines resource to change your SQL Server licensing metadata to **Pay as you go**, **Azure Hybrid Benefit**, or **HA/DR** for your [free Azure replica for disaster recovery](business-continuity-high-availability-disaster-recovery-hadr-overview.md#free-dr-replica-in-azure).
 
-:::image type="content" source="./media/manage-sql-vm-portal/sql-vm-license-edition.png" alt-text="Screenshot of the Azure portal, SQL virtual machines resource, showing where to change the version and edition of SQL Server VM metadata. ":::
+:::image type="content" source="./media/manage-sql-vm-portal/sql-vm-license-edition.png" alt-text="Screenshot of the Azure portal, SQL virtual machines resource, showing where to change the version and edition of SQL Server VM metadata.":::
 
 You can also modify the edition of SQL Server from the **Configure** page as well, such as **Enterprise**, **Standard**, or **Developer**. 
 

@@ -41,5 +41,3 @@ ms.topic: conceptual
  - [Tutorials for SQL Server 2008 R2](/previous-versions/sql/sql-server-2008-r2/ms167593(v=sql.105))   
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-
-[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

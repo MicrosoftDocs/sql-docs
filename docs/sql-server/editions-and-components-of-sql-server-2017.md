@@ -401,5 +401,3 @@ For information about the Business Intelligence Client features supported by the
 - [Installation for SQL Server](../database-engine/install-windows/install-sql-server.md)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-
-[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

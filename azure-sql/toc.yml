@@ -1712,7 +1712,7 @@
 
     - name: Concepts
       items: 
-      - name: SQL IaaS agent extension 
+      - name: SQL IaaS Agent extension 
         href: virtual-machines/linux/sql-server-iaas-agent-extension-linux.md
     - name: "How-to guides"
       items: 

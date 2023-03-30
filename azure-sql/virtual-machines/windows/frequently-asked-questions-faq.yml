@@ -13,7 +13,7 @@ metadata:
   ms.topic: faq
   ms.tgt_pltfrm: vm-windows-sql-server
   ms.workload: iaas-sql-server
-  ms.date: 10/28/2022
+  ms.date: 03/29/2023
   ms.author: pamela
   ms.reviewer: randolphwest
 title: Frequently asked questions for SQL Server on Azure VMs
@@ -79,7 +79,18 @@ sections:
           Is it possible to set up configurations not shown in the virtual machine gallery (for example Windows 2008 R2 + SQL Server 2012)?
         answer: |
              No. For virtual machine gallery images that include SQL Server, you must select one of the provided images either through the Azure portal or via [PowerShell](create-sql-vm-powershell.md). However, you have the ability to deploy a Windows VM and self-install SQL Server to it. You must then [register your SQL Server VM with the SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md) to manage your SQL Server VM in the Azure portal, as well as utilize features such as automated patching and automatic backups. 
-          
+
+      - question: |
+          I can't find the version and edition of SQL Server that I want from the images available on Azure Marketplace. 
+        answer: |
+             If the version and edition of SQL Server you're looking for isn't available in the **Images** drop-down on Azure Marketplace, deploy a Windows-only Azure virtual machine, and then manually install the version and edition of SQL Server you want. Register your SQL Server VM with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md) if you want to manage your SQL Server VM from the Azure portal. 
+ 
+      - question: |
+          Is there a free edition of SQL Server available on Azure Marketplace? 
+        answer: |
+             Developer and Express editions of SQL Server are available on Azure Marketplace, which do not charge you for the SQL Server license. If the Express or Developer edition isn't available for the version of SQL Server you're looking for, deploy a Windows-only Azure virtual machine, and then manually install the version and edition of SQL Server you want. Register your SQL Server VM with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md) if you want to manage your SQL Server VM from the Azure portal.
+ 
+
           
   - name: Creation
     questions:
@@ -213,9 +224,9 @@ sections:
              Customers can change their version/edition of SQL Server by using setup media that contains their desired version or edition of SQL Server. Once the edition has been changed, use the Azure portal to modify the edition property of the VM to accurately reflect billing for the VM. For more information, see [change edition of a SQL Server VM](change-sql-server-edition.md). There is no billing difference for different versions of SQL Server, so once the version of SQL Server has been changed, no further action is needed.
           
       - question: |
-          Where can I get the setup media to change the edition or version of SQL Server?
-        answer: |
-             Customers who have [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) can obtain their installation media from the [Volume Licensing Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx). Customers that do not have Software Assurance can use the setup media from an Azure Marketplace SQL Server VM image (typically located in C:\SQLServerFull) that has their desired edition.
+          How do I get the SQL Server installation media? 
+        answer: |             
+             For SQL Server VMs deployed through Azure Marketplace, the installation media is at `C:\SQLServerFull`. Run Setup.exe from that location to add new SQL Server instances or to change other installed features of SQL Server on the machine. You can also copy this setup media to other virtual machines to install, or upgrade, that same version and edition of SQL Server.  Customers who have [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default?rtc=1&activetab=software-assurance-default-pivot%3aprimaryr3) can obtain their installation media from the [Volume Licensing Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx). 
              
       - question: |
           How are updates and service packs applied on a SQL Server VM?
@@ -230,7 +241,7 @@ sections:
       - question: |
           How can I get free extended security updates for my end of support instances?
         answer: |
-             You can get [free extended security updates](sql-server-extend-end-of-support.md) by moving your SQL Server as-is to an Azure virtual machine. For more information, see [end of support options](/sql/sql-server/end-of-support/sql-server-end-of-support-overview). 
+             You can get [free extended security updates](sql-server-extend-end-of-support.md) by moving your SQL Server as-is to an Azure virtual machine. Updates are available through the Windows Update channel. For more information, see [end of support options](/sql/sql-server/end-of-support/sql-server-end-of-support-overview). 
             
              
           
@@ -291,12 +302,16 @@ sections:
       - question: |
           Will registering with the SQL IaaS Agent extension install an agent on my VM?
         answer: |
-             Not initially. When you first register with the SQL IaaS Agent extension, binaries are copied to the SQL Server VM providing you limited functionality. Once you enable a feature that relies on it, the SQL IaaS agent is installed to the VM. Check the [table of benefits](sql-server-iaas-agent-extension-automate-management.md#feature-benefits) for information about limited functionality. 
+             Not initially. When you first register with the SQL IaaS Agent extension, binaries are copied to the SQL Server VM providing you limited functionality. Once you enable a feature that relies on it, the SQL IaaS Agent is installed to the VM. Check the [table of benefits](sql-server-iaas-agent-extension-automate-management.md#feature-benefits) for information about limited functionality. 
                 
       - question: | 
            What permissions does the SQL Server IaaS agent extension use? 
         answer: October 2022 introduced the least privilege permissions model for the extension, granting minimal permissions necessary for each feature used by the extension. SQL Server VMs deployed after October 2022 via Azure Marketplace have the least privilege permissions model enabled by default. The extension uses sysadmin rights for SQL Server VMs that were deployed prior to October 2022, or self-installed SQL Server VMs, that have not manually enabled the least privilege model in the Azure portal. Review [SQL IaaS Agent extension permissions](sql-server-iaas-agent-extension-automate-management.md#permissions-models) to learn more. 
-      
+
+      - question: | 
+           Why do I see SQL virtual machines resource in the Azure portal? Who created it? Do I get billed for this?
+        answer: The [SQL virtual machines resource](manage-sql-vm-portal.md) is a free resource that allows you to manage your SQL Server VM from the Azure portal. The SQL virtual machines resource is created when you deploy a SQL Server VM image from Azure Marketplace, or manually register a SQL Server VM with the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md). Azure can also create this resource automatically for existing VMs if a SQL Server instance is detected. There is no cost associated with SQL virtual machines resource.
+
       - question: |
           Will registering with the SQL IaaS Agent extension restart SQL Server on my VM?
         answer:   No, starting September 2021, restarting the SQL Server service is no longer required when registering with the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md).   
@@ -378,7 +393,7 @@ sections:
 
       - question: |
           What happened to management modes of the SQL IaaS Agent extension? 
-        answer: Management modes were removed from the SQL IaaS Agent extension architecture. Starting in March 2023, registering with the SQL IaaS Agent extension initially just copies the binaries to the SQL Server VM and offers [limited functionality](sql-server-iaas-agent-extension-automate-management.md#feature-benefits). Once you enable a feature that relies on it, the SQL IaaS agent is installed to the SQL Server VM. 
+        answer: Management modes were removed from the SQL IaaS Agent extension architecture. Starting in March 2023, registering with the SQL IaaS Agent extension initially just copies the binaries to the SQL Server VM and offers [limited functionality](sql-server-iaas-agent-extension-automate-management.md#feature-benefits). Once you enable a feature that relies on it, the SQL IaaS Agent is installed to the SQL Server VM. 
 
              
 

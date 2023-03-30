@@ -5,7 +5,7 @@ description: Bring Your Own Key (BYOK) support for transparent data encryption (
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 11/21/2022
+ms.date: 03/31/2023
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
@@ -23,6 +23,8 @@ In this scenario, the key used for encryption of the Database Encryption Key (DE
 For Azure SQL Database and Azure Synapse Analytics, the TDE protector is set at the server level and is inherited by all encrypted databases associated with that server. For Azure SQL Managed Instance, the TDE protector is set at the instance level and is inherited by all encrypted databases on that instance. The term *server* refers both to a server in SQL Database and Azure Synapse and to a managed instance in SQL Managed Instance throughout this document, unless stated differently.
 
 > [!NOTE]
+> Managing the TDE protector at the database level in Azure SQL Database is available in public preview. For more information, see [Transparent data encryption (TDE) with customer-managed keys at the database level](transparent-data-encryption-byok-database-level-overview.md).
+>
 > This article applies to Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics (dedicated SQL pools (formerly SQL DW)). For documentation on transparent data encryption for dedicated SQL pools inside Synapse workspaces, see [Azure Synapse Analytics encryption](/azure/synapse-analytics/security/workspaces-encryption).
 
 > [!IMPORTANT]

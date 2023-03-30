@@ -7,6 +7,7 @@ ms.reviewer: kendralittle, mathoma
 ms.date: "10/20/2022"
 ms.service: sql-database
 ms.subservice: security
+ms.custom: devx-track-azurecli
 ms.topic: how-to
 zone_pivot_groups: as1-azuresql-sql
 monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"

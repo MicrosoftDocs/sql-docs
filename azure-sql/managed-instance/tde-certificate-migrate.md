@@ -8,7 +8,7 @@ ms.date: 06/01/2021
 ms.service: sql-managed-instance
 ms.subservice: security
 ms.topic: how-to
-ms.custom: sqldbrb=1
+ms.custom: sqldbrb=1, devx-track-azurepowershell
 ---
 
 # Migrate a certificate of a TDE-protected database to Azure SQL Managed Instance

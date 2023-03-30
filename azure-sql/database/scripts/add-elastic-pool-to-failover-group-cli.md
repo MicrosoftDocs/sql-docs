@@ -9,6 +9,7 @@ ms.service: sql-database
 ms.subservice: high-availability
 ms.topic: sample
 ms.devlang: azurecli
+ms.custom: devx-track-azurecli
 ---
 
 # Add an Azure SQL Database elastic pool to a failover group using the Azure CLI

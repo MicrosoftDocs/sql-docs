@@ -48,9 +48,9 @@ Visit https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/bg-
   3. Can't design DQS related component.
   4. Project name in Solution Explorer UI doesn’t show target server version as suffix.
   5. Localization and globalization aren't supported.
-  6. **Execute SQL Task side-by-side issue**. 
-      - Install both SQLServer 2022 and SSIS 0.3 in the same machien, it shows error: "'Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTaskExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version-16.0.0.0, Culture-neutral, PublicKeyToken=89845dcd8080cc91' is not registered for use on this computer." 
-      - Workaround: In some cases, execute with non-admin user will solve this issue. In some case you have to keep SQLServer2022 & SSIS in different machine untill we solve it in the next version. 
+  6. **Execute SQL Task not registered issue**. 
+      - Edit execute sql task shows error: "'Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTaskExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version-16.0.0.0, Culture-neutral, PublicKeyToken=89845dcd8080cc91' is not registered for use on this computer." 
+      - Workaround: Executing with non-admin user might solve the issue. If not, SQL Server 2022 & VS extension for SSIS have to be installed on separate machines for now. We are working on the fix.
   
 **Version 0.2**
   1. Target sever versions supported: SQL server 2019 and SQL server 2022

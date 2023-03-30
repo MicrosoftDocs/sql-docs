@@ -4,7 +4,7 @@ description: Learn about the known issues and how to troubleshoot errors with th
 author: adbadram
 ms.author: adbadram
 ms.reviewer: mathoma, randolphwest
-ms.date: 03/15/2023
+ms.date: 03/29/2023
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to
@@ -27,7 +27,7 @@ If you repair, or reinstall the SQL IaaS Agent extension, your setting won't be 
 
 [Repair the extension](sql-agent-extension-manually-register-single-vm.md#repair-extension) if you see the following error message:
 
-`The SQL virtual machine resource is not in a valid state for management`
+`The SQL virtual machines resource is not in a valid state for management`
 
 ## Underlying virtual machine is invalid
 
@@ -103,7 +103,7 @@ Your SQL IaaS Agent extension may get stuck in a transitioning state in the foll
 
 ## Fails to install on domain controller
 
-Registering your SQL Server instance installed to your domain controller with the SQL IaaS Agent extension isn't supported. Registering with the extension creates the user `NT Service\SQLIaaSExtension` and since this user can't be created on the domain controller, registering this VM with the SQL IaaS agent isn't supported.
+Registering your SQL Server instance installed to your domain controller with the SQL IaaS Agent extension isn't supported. Registering with the extension creates the user `NT Service\SQLIaaSExtension` and since this user can't be created on the domain controller, registering this VM with the SQL IaaS Agent isn't supported.
 
 ## Next steps
 

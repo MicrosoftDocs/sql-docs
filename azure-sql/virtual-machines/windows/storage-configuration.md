@@ -4,7 +4,7 @@ description: This topic describes how Azure configures storage for SQL Server VM
 author: bluefooted
 ms.author: pamela
 ms.reviewer: mathoma
-ms.date: 12/21/2021
+ms.date: 03/29/2023
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to
@@ -86,6 +86,10 @@ You can use the following quickstart template to deploy a SQL Server VM using st
 
 * [Create VM with storage optimization](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.sqlvirtualmachine/sql-vm-new-storage/)
 * [Create VM using UltraSSD](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.sqlvirtualmachine/sql-vm-new-storage-ultrassd)
+
+
+> [!NOTE]
+> Some VM sizes may not have [temporary or local storage](/azure/virtual-machines/azure-vms-no-temp-disk). If you deploy a SQL Server on Azure VM without temporary storage, tempdb data and log files are placed in the data folder. 
 
 ## Existing VMs
 
@@ -243,6 +247,17 @@ In Windows Server 2008 to 2012 R2, the default value for `-StorageSubsystemFrien
 
   * Determine the number of disks associated with your storage pool based on your load expectations. Keep in mind that different VM sizes allow different numbers of attached data disks. For more information, see [Sizes for virtual machines](/azure/virtual-machines/sizes?toc=/azure/virtual-machines/windows/toc.json).
 
+## Known issues
+
+### Configure Disk option or Storage Configuration blade on SQL virtual machine resource is grayed out
+
+The **Storage Configuration** blade can be grayed out in the Azure portal if your SQL IaaS Agent extension is in a failed state. [Repair the SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md#repair-extension). 
+
+**Configure** on the Storage Configuration blade can be grayed out if you've customized your storage pool, or if you are using a non-Marketplace image. 
+
+### I have a disk with 1TB of unallocated space that I cannot remove from storage pool
+
+There is no option to remove the unallocated space from a disk that belongs to a storage pool.
 
 ## Next steps
 

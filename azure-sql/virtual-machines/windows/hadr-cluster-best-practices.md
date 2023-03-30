@@ -4,7 +4,7 @@ description: "Learn about the supported cluster configurations when you configur
 author: tarynpratt
 ms.author: tarynpratt
 ms.reviewer: mathoma
-ms.date: 11/10/2021
+ms.date: 03/29/2023
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: conceptual
@@ -25,40 +25,9 @@ To learn more, see the other articles in this series: [Checklist](performance-gu
 
 Review the following checklist for a brief overview of the HADR best practices that the rest of the article covers in greater detail. 
 
-For your Windows cluster, consider these best practices: 
+[!INCLUDE[HADR best practices](../../includes/virtual-machines-best-practices-hadr.md)]
 
-* Deploy your SQL Server VMs to multiple subnets whenever possible to avoid the dependency on an Azure Load Balancer or a distributed network name (DNN) to route traffic to your HADR solution. 
-* Change the cluster to less aggressive parameters to avoid unexpected outages from transient network failures or Azure platform maintenance. To learn more, see [heartbeat and threshold settings](#heartbeat-and-threshold). For Windows Server 2012 and later, use the following recommended values: 
-   - **SameSubnetDelay**:  1 second
-   - **SameSubnetThreshold**: 40 heartbeats
-   - **CrossSubnetDelay**: 1 second
-   - **CrossSubnetThreshold**:  40 heartbeats
-* Place your VMs in an availability set or different availability zones.  To learn more, see [VM availability settings](#vm-availability-settings). 
-* Use a single NIC per cluster node. 
-* Configure cluster [quorum voting](#quorum-voting) to use 3 or more odd number of votes. Do not assign votes to DR regions. 
-* Carefully monitor [resource limits](#resource-limits) to avoid unexpected restarts or failovers due to resource constraints.
-   - Ensure your OS, drivers, and SQL Server are at the latest builds. 
-   - Optimize performance for SQL Server on Azure VMs. Review the other sections in this article to learn more. 
-   - Reduce or spread out workload to avoid resource limits. 
-   - Move to a VM or disk that his higher limits to avoid constraints. 
-
-For your SQL Server availability group or failover cluster instance, consider these best practices: 
-
-* If you're experiencing frequent unexpected failures, follow the performance best practices outlined in the rest of this article. 
-* If optimizing SQL Server VM performance does not resolve your unexpected failovers, consider [relaxing the monitoring](#relaxed-monitoring) for the availability group or failover cluster instance. However, doing so may not address the underlying source of the issue and could mask symptoms by reducing the likelihood of failure. You may still need to investigate and address the underlying root cause. For Windows Server 2012 or higher, use the following recommended values: 
-   - **Lease timeout**: Use this equation to calculate the maximum lease time out value:   
-   `Lease timeout < (2 * SameSubnetThreshold * SameSubnetDelay)`.   
-   Start with 40 seconds. If you're using the relaxed `SameSubnetThreshold` and `SameSubnetDelay` values recommended previously, do not exceed 80 seconds for the lease timeout value.   
-   - **Max failures in a specified period**: Set this value to 6. 
-* When using the virtual network name (VNN) and an Azure Load Balancer to connect to your HADR solution, specify `MultiSubnetFailover = true` in the connection string, even if your cluster only spans one subnet. 
-   - If the client does not support `MultiSubnetFailover = True` you may need to set `RegisterAllProvidersIP = 0` and `HostRecordTTL = 300` to cache client credentials for shorter durations. However, doing so may cause additional queries to the DNS server. 
-- To connect to your HADR solution using the distributed network name (DNN), consider the following:
-   - You must use a client driver that supports `MultiSubnetFailover = True`, and this parameter must be in the connection string. 
-   - Use a unique DNN port in the connection string when connecting to the DNN listener for an availability group. 
-- Use a database mirroring connection string for a basic availability group to bypass the need for a load balancer or DNN. 
-- Validate the sector size of your VHDs before deploying your high availability solution to avoid having misaligned I/Os. See [KB3009974](https://support.microsoft.com/topic/kb3009974-fix-slow-synchronization-when-disks-have-different-sector-sizes-for-primary-and-secondary-replica-log-files-in-sql-server-ag-and-logshipping-environments-ed181bf3-ce80-b6d0-f268-34135711043c) to learn more. 
-- If the SQL Server database engine, Always On availability group listener, or failover cluster instance health probe are configured to use a port between 49,152 and 65,536 (the [default dynamic port range for TCP/IP](/windows/client-management/troubleshoot-tcpip-port-exhaust#default-dynamic-port-range-for-tcpip)), add an exclusion for each port. Doing so will prevent other systems from being dynamically assigned the same port. The following example creates an exclusion for port 59999:   
-`netsh int ipv4 add excludedportrange tcp startport=59999 numberofports=1 store=persistent`
+To compare the HADR checklist with the other best practices, see the comprehensive [Performance best practices checklist](performance-guidelines-best-practices-checklist.md).
 
 ## VM availability settings
 
@@ -209,7 +178,7 @@ If tuning your cluster heartbeat and threshold settings as recommended is insuff
 > [!WARNING]
 > Changing these settings may mask an underlying problem, and should be used as a temporary solution to reduce, rather than eliminate, the likelihood of failure. Underlying issues should still be investigated and addressed. 
 
-Start by increase the following parameters from their default values for relaxed monitoring, and adjust as necessary: 
+Start by increasing the following parameters from their default values for relaxed monitoring, and adjust as necessary: 
 
 
 |Parameter |Default value  |Relaxed Value  |Description  |
@@ -310,24 +279,66 @@ It is important to configure the port exclusion when the port is not in use, oth
 
 To confirm that the exclusions have been configured correctly, use the following command: `netsh int ipv4 show excludedportrange tcp`. 
 
-Setting this exclusion for the AG role IP probe port should prevent events such as **Event ID: 1069** with status 10048. This event can be seen in the Windows Failover cluster events with the following message:
+Setting this exclusion for the availability group role IP probe port should prevent events such as **Event ID: 1069** with status 10048. This event can be seen in the Windows Failover cluster events with the following message:
+
 ```
 Cluster resource '<IP name in AG role>' of type 'IP Address' in cluster role '<AG Name>' failed.
-```
 An Event ID: 1069 with status 10048 can be identified from cluster logs with events like: 
-```
 Resource IP Address 10.0.1.0 called SetResourceStatusEx: checkpoint 5. Old state OnlinePending, new state OnlinePending, AppSpErrorCode 0, Flags 0, nores=false
 IP Address <IP Address 10.0.1.0>: IpaOnlineThread: **Listening on probe port 59999** failed with status **10048**
-```
 Status [**10048**](/windows/win32/winsock/windows-sockets-error-codes-2) refers to: **This error occurs** if an application attempts to bind a socket to an **IP address/port that has already been used** for an existing socket.
+```
+
+
 This can be caused by an internal process taking the same port defined as probe port. Remember that probe port is used to check the status of a backend pool instance from the Azure Load Balancer. 
 If the **health probe fails** to get a response from a backend instance, then **no new connections will be sent to that backend instance** until the health probe succeeds again.
 
 ## Known issues
 
-Review the resolutions for some commonly known issues and errors: 
+Review the resolutions for some commonly known issues and errors. 
 
-**Cluster node removed from membership**
+
+### Resource contention (IO in particular) causes failover
+
+Exhausting I/O or CPU capacity for the VM can cause your availability group to fail over. Identifying the contention that happens right before the failover is the most reliable way to identify what is causing automatic failover. [Monitor Azure Virtual Machines](/azure/virtual-machines/monitor-vm) to look at the [Storage IO Utilization metrics](/azure/virtual-machines/disks-metrics#storage-io-utilization-metrics) to understand VM or disk level latency. 
+
+
+Follow these steps to review the **Azure VM Overall IO Exhaustion event**: 
+
+1. Navigate to your Virtual Machine in the [Azure Portal](https://portal.azure.com). 
+1. Select **Metrics** under **Monitoring** to open the **Metrics** page.
+1. Select **Add metric** to add the following two metrics to see the graph: 
+   - **VM Cached Bandwidth Consumed Percentage**
+   - **VM Uncached Bandwidth Consumed Percentage**
+
+:::image type="content" source="./media/hadr-cluster-best-practices/hadr-metrics-cached-uncached.png" alt-text="Screenshot of the Metrics page in the Azure portal.":::
+
+### Azure VM HostEvents causes failover
+
+It's possible that an Azure VM HostEvent causes your availability group to fail over. If you believe an Azure VM HostEvent caused a failover, you can check the Azure Monitor Activity log, and the Azure VM Resource Health overview. 
+
+The [Azure Monitor activity log](/azure/azure-monitor/essentials/activity-log) is a platform log in Azure that provides insight into subscription-level events. The activity log includes information like when a resource is modified or a virtual machine is started. You can view the activity log in the Azure portal or retrieve entries with PowerShell and the Azure CLI.
+
+To check the Azure Monitor activity log, follow these steps: 
+
+1. Navigate to your Virtual Machine in Azure portal
+1. Select **Activity Log** on the Virtual Machine blade
+1. Select **Timespan** and then choose the time frame when your availability group failed over. Select **Apply**. 
+
+   :::image type="content" source="./media/hadr-cluster-best-practices/activity-log.png" alt-text="Screenshot of the Azure portal, showing the Activity log. ":::
+ 
+If Azure has further information about the root cause of a platform-initiated unavailability, that information may be posted on the [Azure VM - Resource Health overview](/azure/service-health/resource-health-overview#root-cause-information) page up to 72 hours after the initial unavailability. This information is only available for virtual machines at this time.
+
+
+
+1. Navigate to your Virtual Machine in Azure portal
+1. Select **Resource Health** under the **Health** blade.
+
+:::image type="content" source="./media/hadr-cluster-best-practices/resource-health.png" alt-text="Screenshot of the Resource Health page in the Azure portal.":::
+
+You can also configure alerts based on health events from this page. 
+
+### Cluster node removed from membership
 
 
 If the [Windows Cluster heartbeat and threshold settings](#heartbeat-and-threshold) are too aggressive for your environment, you may see following message in the system event log frequently. 
@@ -342,14 +353,13 @@ for hardware or software errors related to the network adapters on this node. Al
 failures in any other network components to which the node is connected such as hubs, switches, or bridges.
 ```
 
-
-For more information, review [Troubleshooting cluster issue with Event ID 1135.](/windows-server/troubleshoot/troubleshooting-cluster-event-id-1135)
-
-
-**Lease has expired** / **Lease is no longer valid**
+For more information, review [Troubleshooting cluster issue with Event ID 1135](/windows-server/troubleshoot/troubleshooting-cluster-event-id-1135).
 
 
-If [monitoring](#relaxed-monitoring) is too aggressive for your environment, you may see frequent AG or FCI restarts, failures, or failovers. Additionally for availability groups, you may see the following messages in the SQL Server error log: 
+### Lease has expired / Lease is no longer valid
+
+
+If [monitoring](#relaxed-monitoring) is too aggressive for your environment, you may see frequent availability group or FCI restarts, failures, or failovers. Additionally for availability groups, you may see the following messages in the SQL Server error log: 
 
 ```
 Error 19407: The lease between availability group 'PRODAG' and the Windows Server Failover Cluster has expired. 
@@ -363,7 +373,7 @@ Error 19419: The renewal of the lease between availability group '%.*ls' and the
 failed because the existing lease is no longer valid. 
 ``` 
 
-**Connection timeout**
+### Connection timeout
 
 If the **session timeout** is too aggressive for your availability group environment, you may see following messages frequently:
 
@@ -380,15 +390,36 @@ replica 'replicaname' with ID [availability_group_id]. Either a networking or a 
 exists, or the availability replica has transitioned to the resolving role. 
 ```
 
-**Not failing over group**
-
-
+### Group not failing over
 
 If the **Maximum Failures in the Specified Period** value is too low and you're experiencing intermittent failures due to transient issues, your availability group could end in a failed state. Increase this value to tolerate more transient failures. 
 
 ```
 Not failing over group <Resource name>, failoverCount 3, failoverThresholdSetting <Number>, computedFailoverThreshold 2. 
 ```
+
+### Event 1196 - Network name resource failed registration of associated DNS name
+
+* Check the NIC settings for each of your cluster nodes to make sure there are no external DNS records present
+* Ensure the A record for your cluster exists on your internal DNS servers. If not, create a new A Record manual in DNS Server for the Cluster Access Control object and check the Allow any authenticated users to update DNS Records with the same owner name.
+* Take the Resource "Cluster Name" with IP Resource offline and fix it.
+
+### Event 157 - Disk has been surprised removed.
+
+
+This can happen if the Storage Spaces property `AutomaticClusteringEnabled` is set to `True` for an AG environment. Change it to `False`. Also, running a Validation Report with Storage option can trigger the disk reset or surprise removed event. The storage system [Throttling](/azure/virtual-machines/windows/disk-performance-windows#storage-io-utilization-metrics) can also trigger the disk surprise remove event.
+
+### Event 1206 - Cluster network name resource cannot be brought online.
+
+The computer object associated with the resource could not be updated in the domain. Make sure you have [appropriate permissions on domain](https://techcommunity.microsoft.com/t5/sql-server-support/error-during-installation-of-an-sql-server-failover-cluster/ba-p/317873)
+
+### Windows Clustering errors
+
+You may encounter issues while setting up a Windows failover cluster or its connectivity if you don't have [Cluster Service Ports open for communication](/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements#cluster-service). 
+
+If you are on Windows Server 2019 and you do not see a Windows Cluster IP, you have configured [Distributed Network Name](failover-cluster-instance-distributed-network-name-dnn-configure.md), which is only supported on SQL Server 2019. If you have previous versions of SQL Server, you can remove and [Recreate the Cluster using Network Name](availability-group-manually-configure-tutorial.md#create-the-cluster).
+
+Review other Windows Failover [Clustering Events Errors and their Solutions here](/windows-server/failover-clustering/system-events) 
 
 
 ## Next steps

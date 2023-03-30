@@ -90,5 +90,3 @@ We wish all drivers supported every feature and spend effort to ensure feature p
 <a id="note2"></a><sup>2</sup> Only on Windows.
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-
-[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

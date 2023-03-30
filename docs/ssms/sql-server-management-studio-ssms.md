@@ -101,4 +101,3 @@ For more information about SSMS, common tasks, and related tools, see the follow
 - [Writing Transact-SQL Statements](../t-sql/tutorial-writing-transact-sql-statements.md)
 - [Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md)
 
-[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

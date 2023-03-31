@@ -9,3 +9,5 @@
 - [Support options for business users](https://support.microsoft.com/gp/support-options-for-business)
 - [Contact Microsoft](https://support.microsoft.com/gp/contactus81?Audience=Commercial)
 - [Additional SQL Server help and feedback](../../sql-server/sql-server-get-help.md)
+
+[!INCLUDE [contribute-to-content](contribute-to-content.md)]

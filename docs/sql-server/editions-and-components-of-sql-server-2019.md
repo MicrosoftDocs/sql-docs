@@ -413,5 +413,3 @@ For information about the Business Intelligence Client features supported by the
 - [SQL Server installation guide](../database-engine/install-windows/install-sql-server.md)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-
-[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

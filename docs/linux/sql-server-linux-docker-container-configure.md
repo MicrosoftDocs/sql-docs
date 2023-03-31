@@ -488,3 +488,5 @@ For information on how to build and run Docker containers using Dockerfiles, see
 - [Troubleshooting SQL Server Docker containers](sql-server-linux-docker-container-troubleshooting.md)
 
 - [Secure SQL Server Docker containers](sql-server-linux-docker-container-security.md)
+
+[!INCLUDE [contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

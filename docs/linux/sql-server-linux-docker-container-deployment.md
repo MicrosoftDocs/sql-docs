@@ -539,11 +539,9 @@ This updates the SQL Server image for any new containers you create, but it does
 ::: moniker-end
 
 - [Reference additional configuration and customization to Docker containers](sql-server-linux-docker-container-configure.md)
-
 - See the [mssql-docker GitHub repository](https://github.com/Microsoft/mssql-docker) for resources, feedback, and known issues
-
 - [Troubleshooting SQL Server Docker containers](sql-server-linux-docker-container-troubleshooting.md)
-
 - [Explore high availability for SQL Server containers](sql-server-linux-container-ha-overview.md)
-
 - [Secure SQL Server Docker containers](sql-server-linux-docker-container-security.md)
+
+[!INCLUDE [contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

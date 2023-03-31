@@ -145,5 +145,3 @@ The following components are considered obsolete:
 * **Remote Data Objects (RDO):** RDO was designed specifically to access remote ODBC relational data sources, and made it easier to use ODBC without complex application code. It was included with Microsoft Visual Basic versions 4, 5, and 6. RDO version 2.0 was the final version of this technology.
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-
-[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

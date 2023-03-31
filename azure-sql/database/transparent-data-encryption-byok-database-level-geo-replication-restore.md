@@ -1,7 +1,7 @@
 ---
 title: Configure geo replication and backup restore for transparent data encryption (TDE) with database level customer-managed keys
 titleSuffix: Azure SQL Database
-description: How-to guide for configuring geo replication for transparent data encryption (TDE) with database level customer-managed keys for Azure SQL Database
+description: A how-to guide for configuring geo replication for transparent data encryption (TDE) with database level customer-managed keys for Azure SQL Database.
 author: strehan1993
 ms.author: strehan
 ms.reviewer: vanto

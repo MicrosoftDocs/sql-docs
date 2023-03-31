@@ -1,7 +1,7 @@
 ---
 title: Transparent data encryption (TDE) with database level customer-managed keys
 titleSuffix: Azure SQL Database
-description: Customer Managed Keys (CMK) support for transparent data encryption (TDE) with Azure Key Vault for Azure SQL Database at a database level granularity
+description: Overview of customer managed keys (CMK) support for transparent data encryption (TDE) with Azure Key Vault for Azure SQL Database at a database level granularity.
 author: strehan1993
 ms.author: strehan
 ms.reviewer: vanto
@@ -227,7 +227,7 @@ The database level customer-managed keys feature doesn't support key rotations w
 
 To further understand this scenario, let's consider the following timeline:
 
-![An example timeline of key rotations on a database configured with database level customer-managed keys](./media/transparent-data-encryption-byok-database-level-overview/timeline.PNG)
+![An example timeline of key rotations on a database configured with database level customer-managed keys.](./media/transparent-data-encryption-byok-database-level-overview/timeline.png)
 
 - Time t0 = A database is created without encryption
 - Time t1 = This database is protected by `Thumbprint A`, which is a database level customer-managed key.

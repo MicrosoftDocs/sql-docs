@@ -43,7 +43,7 @@ This setting lets you affinitize a resource pool to one or more schedulers or NU
 
 ### MIN_IOPS_PER_VOLUME and MAX_IOPS_PER_VOLUME  
 
-These settings are the minimum and maximum physical IO operations per second (IOPS) per disk volume for a resource pool. You can use these settings to control the physical IOs issued for user threads for a given resource pool. For example, the Sales department generates several end-of-month reports in large batches. The queries in these batches can generate IOs that can saturate the disk volume and affect the performance of other higher priority workloads in the database. To isolate this workload, the MIN_IOPS_PER_VOLUME is set to 20 and the MAX_IOPS_PER_VOLUME is set to 100 for the Sales department resource pool, which controls the level of IOs that can be issued for the workload.  
+These settings are the minimum and maximum physical IO operations per second (IOPS) per disk volume for a resource pool. You can use these settings to control the physical IOs issued for user threads for a given resource pool. For example, the Sales department generates several end-of-month reports in large batches. The queries in these batches can generate IOs that can saturate the disk volume and affect the performance of other higher priority workloads in the database. To isolate this workload, the MIN_IOPS_PER_VOLUME is set to 20 and the MAX_IOPS_PER_VOLUME is set to 100 for the Sales department resource pool. These settings control the level of IOs that can be issued for the workload.  
 
 ### System and user-defined resource pools
 
@@ -65,11 +65,11 @@ The default pool is the first predefined user pool. Prior to any configuration t
 
 ### External Pool  
 
-Users can create an external pool to define resources for the external processes. For R Services, this pool specifically governs `rterm.exe`, `BxlServer.exe`, and other processes spawned by them.  
+Users can create an external pool to define resources for the external processes. For R Services, this pool specifically governs `rterm.exe`, `BxlServer.exe`, `python.exe` and other processes spawned by them. For more information, see [CREATE EXTERNAL RESOURCE POOL](../../t-sql/statements/create-external-resource-pool-transact-sql.md)
 
 ### User-Defined Resource Pools  
 
-User-defined resource pools are those that you create for specific workloads in your environment. Resource Governor provides DDL statements for creating, changing, and dropping resource pools.  
+User-defined resource pools are those that you create for specific workloads in your environment. Resource Governor provides DDL statements for creating, changing, and dropping resource pools. For more information, see [Create a Resource Pool](create-a-resource-pool.md), [Delete a Resource Pool](delete-a-resource-pool.md), and [Change Resource Pool Settings](change-resource-pool-settings.md).
   
 
 ## Resource allocation between pools

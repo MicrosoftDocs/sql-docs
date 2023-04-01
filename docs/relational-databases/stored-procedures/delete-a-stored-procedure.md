@@ -22,7 +22,7 @@ This article describes how to delete a stored procedure in [!INCLUDE [ssnoversio
 
 ## <a id="Restrictions"></a> Limitations and restrictions
 
- Deleting a procedure can cause dependent objects and scripts to fail when the objects and scripts are not updated to reflect the removal of the procedure. However, if a new procedure of the same name and the same parameters is created to replace the one that was deleted, other objects that reference it will still process successfully. For more information, see [View the Dependencies of a Stored Procedure](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md).
+ Deleting a procedure can cause dependent objects and scripts to fail when the objects and scripts are not updated to reflect the removal of the procedure. However, if a new procedure of the same name and the same parameters is created to replace the one that was deleted, other objects that reference it will still process successfully. In addition, its worth stating that you can’t drop procedures owned by “sys” schema even with accounts granted SYSADMIN role. For more information, see [View the Dependencies of a Stored Procedure](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md).
 
 ## <a id="Permissions"></a> Permissions
 

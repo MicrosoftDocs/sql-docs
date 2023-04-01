@@ -5,7 +5,7 @@ description: This article describes the link feature of Azure SQL Managed Instan
 author: danimir
 ms.author: danil
 ms.reviewer: mathoma, randolphwest
-ms.date: 02/03/2023
+ms.date: 04/01/2023
 ms.service: sql-managed-instance
 ms.subservice: data-movement
 ms.topic: conceptual
@@ -109,7 +109,7 @@ Because the link feature enables minimal downtime migration, you can migrate to 
 
 ### Automated backups
 
-After your databases are replicated to your managed instance, they're automatically backed up to your Azure Blob Storage account with Azure Backup. You can reduce your on-premises management and operation costs while enjoying the reliability of Azure Backup for your replicated databases. You can then perform a [point-in-time restore](point-in-time-restore.md) of your replicated database to any SQL Managed Instance deployment in the same region, as with any other [automated backup](automated-backups-overview.md). 
+After your databases are replicated to your Azure SQL Managed Instance, they're automatically backed up with Azure Backup. You can reduce your on-premises management and operation costs while enjoying the reliability of Azure Backup for your replicated databases. You can then perform a [point-in-time restore](point-in-time-restore.md) of your replicated database to any SQL Managed Instance deployment in the same region, as with any other [automated backup](automated-backups-overview.md). 
 
 ### Disaster recovery
 

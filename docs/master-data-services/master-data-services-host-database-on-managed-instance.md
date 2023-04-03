@@ -11,7 +11,7 @@ monikerRange: ">=sql-server-ver15"
 ---
 # Host an MDS database on a managed instance
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   This article covers how to configure a Master Data Services (MDS) database on a managed instance.
   

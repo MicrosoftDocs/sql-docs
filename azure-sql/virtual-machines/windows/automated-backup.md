@@ -1,6 +1,6 @@
 ---
-title: Automated Backup v2 for SQL Server 2016/2017 Azure VMs
-description: This article explains the Automated Backup feature for SQL Server 2016/2017 VMs running on Azure. This article is specific to VMs using the Resource Manager.
+title: Automated Backup v2 for SQL Server 2016 + Azure VMs
+description: This article explains the Automated Backup feature for SQL Server 2016 and later VMs running on Azure. This article is specific to VMs using the Resource Manager.
 author: bluefooted
 ms.author: pamela
 ms.reviewer: mathoma
@@ -26,11 +26,11 @@ To use Automated Backup v2, review the following prerequisites:
 
 **Operating system**:
 
-- Windows Server 2012 R2 or higher
+- Windows Server 2012 R2 or later
 
 **SQL Server version/edition**:
 
-- SQL Server 2016 or higher: Developer, Standard, or Enterprise
+- SQL Server 2016 or later: Developer, Standard, or Enterprise
 
 > [!NOTE]
 > For SQL Server 2014, see [Automated Backup for SQL Server 2014](automated-backup-sql-2014.md).
@@ -48,7 +48,7 @@ The following table describes the options that can be configured for Automated B
 
 | Setting | Range (Default) | Description |
 | --- | --- | --- |
-| **Automated Backup** | Enable/Disable (Disabled) | Enables or disables Automated Backup for an Azure VM running SQL Server 2016/2017 Developer, Standard, or Enterprise. |
+| **Automated Backup** | Enable/Disable (Disabled) | Enables or disables Automated Backup for an Azure VM running SQL Server 2016 or later Developer, Standard, or Enterprise. |
 | **Retention Period** | 1-90 days (90 days) | The number of days to retain backups. |
 | **Storage Account** | Azure storage account | An Azure storage account to use for storing Automated Backup files in blob storage. A container is created at this location to store all backup files. The backup file naming convention includes the date, time, and database GUID. |
 | **Encryption** |Enable/Disable (Disabled) | Enables or disables backup encryption. When backup encryption is enabled, the certificates used to restore the backup are located in the specified storage account in the same `automaticbackup` container using the same naming convention. If the password changes, a new certificate is generated with that password, but the old certificate remains to restore prior backups. |
@@ -320,7 +320,7 @@ Set-AzVMSqlServerExtension -AutoBackupSettings $autobackupconfig `
 
 ## Monitoring
 
-To monitor Automated Backup on SQL Server 2016/2017, you have two main options. Because Automated Backup uses the SQL Server Managed Backup feature, the same monitoring techniques apply to both.
+To monitor Automated Backup on SQL Server 2016 and later, you have two main options. Because Automated Backup uses the SQL Server Managed Backup feature, the same monitoring techniques apply to both.
 
 First, you can poll the status by calling [msdb.managed_backup.sp_get_backup_diagnostics](/sql/relational-databases/system-stored-procedures/managed-backup-sp-get-backup-diagnostics-transact-sql). Or query the [msdb.managed_backup.fn_get_health_status](/sql/relational-databases/system-functions/managed-backup-fn-get-health-status-transact-sql) table-valued function.
 
@@ -349,7 +349,7 @@ The following table lists the possible solutions if you're having issues enablin
 | **Enabling Automated Backups for FCI** | Back ups using private endpoints are unsupported. Use the full storage account URI for your backup.  |
 | **Backup Multiple SQL instances using Automated Backup**   | Automated Backup currently only supports one SQL Server instance. If you have multiple named instances, and the default instance, Automated Backup works with the default instance. If you have multiple named instances and no default instance, turning on Automated Backup will fail. |
 | **Automated Backup cannot be enabled due to account and permissions** | Check the following:  <br /> - The SQL Server Agent is running. <br /> - The  **NT Service\SqlIaaSExtensionQuery**  account has proper [permissions](sql-server-iaas-agent-extension-automate-management.md#permissions-models) for the Automated Backup feature both within SQL Server, and also for the [SQL virtual machines](manage-sql-vm-portal.md) resource in the Azure portal. <br /> - The **SA** account hasn't been renamed, though disabling it is acceptable.   | 
-| **Automated Backup fails for SQL 2016/2017**| **Allow Blob Public Access** is enabled on the storage Account. This provides a temporary workaround to a known issue. |
+| **Automated Backup fails for SQL 2016 +**| **Allow Blob Public Access** is enabled on the storage Account. This provides a temporary workaround to a known issue. |
 
 
 

@@ -6,7 +6,7 @@ ms.author: mathoma
 ms.date: 04/03/2023
 ms.topic: include
 ---
-You can use [Azure Resource Graph Explorer](/governance/resource-graph/overview) to identify all Azure SQL Database resources that currently use Gen4 hardware, or you can check the hardware used by resources for a specific [logical server](../database/logical-servers.md) in the Azure portal. 
+You can use [Azure Resource Graph Explorer](/azure/governance/resource-graph/overview) to identify all Azure SQL Database resources that currently use Gen4 hardware, or you can check the hardware used by resources for a specific [logical server](../database/logical-servers.md) in the Azure portal. 
 
 You must have at least `read` permissions to the Azure object or object group to see results in Azure Resource Graph Explorer. 
 

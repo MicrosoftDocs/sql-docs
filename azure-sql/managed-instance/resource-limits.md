@@ -220,7 +220,7 @@ This section includes details on previously available hardware. Consider [moving
 
 [!INCLUDE[azure-sql-gen4-hardware-retirement-sql-managed-instance](../includes/azure-sql-gen4-hardware-retirement-sql-managed-instance.md)]
 
-You can use **Resource Graph Explorer** in the Azure portal to identify all SQL managed instances that currently use Gen4 hardware, or you can check the hardware used by resources for a specific [SQL Managed Instance](../database/logical-servers.md) in the Azure portal. 
+You can use [Azure Resource Graph Explorer](/azure/governance/resource-graph/overview) in the portal to identify all SQL managed instances that currently use Gen4 hardware, or you can check the hardware used by resources for a specific [SQL Managed Instance](../database/logical-servers.md) in the Azure portal. 
 
 You must have at least `read` permissions to the Azure object or object group to see results in Azure Resource Graph Explorer. 
 

@@ -11,7 +11,7 @@ ms.custom: microsoft-excel-add-in
 ---
 # Delete a Row (MDS Add-in for Excel)
 
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], delete a row of data (a member) from the MDS repository when you no longer want it to be available to users.  
   

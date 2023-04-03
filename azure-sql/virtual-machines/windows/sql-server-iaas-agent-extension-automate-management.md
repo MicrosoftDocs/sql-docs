@@ -63,7 +63,7 @@ The SQL Server IaaS Agent extension allows for integration with the Azure portal
    ```
    ---
 
-Enable [auto update](manage-sql-vm-portal.md#sql-iaas-agent-extension-settings) to ensure you're getting the latest updates to the extension each month. 
+Enable [auto upgrade](manage-sql-vm-portal.md#sql-iaas-agent-extension-settings) to ensure you're getting the latest updates to the extension each month. 
 
 ## Management modes
 

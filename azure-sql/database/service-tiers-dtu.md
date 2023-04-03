@@ -91,7 +91,7 @@ Choosing a service tier depends primarily on business continuity, storage, and p
 | :-- | --: |--:| --:|
 |**Target workload**|Development and production|Development and production|Development and production|
 |**Uptime SLA**|99.99%|99.99%|99.99%|
-| **Backups** | A choice of geo-redundant, zone-redundant, or locally redundant backup storage, 1-7 day retention (default 7 days) <br/> Long term retention available up to 10 years | A choice of geo-redundant, zone-redundant, or locally redundant backup storage, 1-35 day retention (default 7 days) <br/> Long term retention available up to 10 years  | A choice of locally-redundant (LRS), zone-redundant (ZRS), or geo-redundant (GRS) storage <br/> 1-35 days (7 days by default) retention, with up to 10 years of long-term retention available |
+| **Backup** | A choice of geo-redundant, zone-redundant, or locally redundant backup storage, 1-7 day retention (default 7 days) <br/> Long term retention available up to 10 years | A choice of geo-redundant, zone-redundant, or locally redundant backup storage, 1-35 day retention (default 7 days) <br/> Long term retention available up to 10 years  | A choice of locally-redundant (LRS), zone-redundant (ZRS), or geo-redundant (GRS) storage <br/> 1-35 days (7 days by default) retention, with up to 10 years of long-term retention available |
 |**CPU**|Low|Low, Medium, High|Medium, High|
 |**IOPS (approximate)**\* |1-4 IOPS per DTU| 1-4 IOPS per DTU | >25 IOPS per DTU|
 |**IO latency (approximate)**|5 ms (read), 10 ms (write)|5 ms (read), 10 ms (write)|2 ms (read/write)|

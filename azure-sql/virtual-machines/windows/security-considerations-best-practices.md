@@ -139,7 +139,22 @@ If you are using an Azure confidential VM, consider the following recommendation
 
 ## Trusted Launch
 
-When you deploy a [generation 2]
+When you deploy a [generation 2](/azure/virtual-machines/generation-2) virtual machine, you have the option to enable [trusted launch](/azure/virtual-machines/trusted-launch), which protects against advanced and persistent attack techniques. 
+
+With trusted launch, you can:
+
+- Securely deploy virtual machines with verified boot loaders, OS kernels, and drivers.
+- Securely protect keys, certificates, and secrets in the virtual machines.
+- Gain insights and confidence of the entire boot chain's integrity.
+- Ensure workloads are trusted and verifiable.
+
+
+The following features are currently unsupported when you enable trusted launch for your SQL Server on Azure VMs: 
+
+- Azure Site REcovery
+- Ultra disks
+- Managed images
+- Nested virtualization 
 
 ## Manage accounts
 

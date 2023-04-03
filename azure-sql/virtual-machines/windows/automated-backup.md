@@ -367,7 +367,7 @@ The following table lists possible errors and solutions when working with Automa
 | **Automated Backup job failed after VM Restart**| Check that the SQL Agent service is up and running. | 
 | **Managed backup fails intermittently/Error:Execution timeout Expired** | This is a known issue fixed in [CU18 for SQL Server 2019](https://support.microsoft.com/topic/kb5017593-cumulative-update-18-for-sql-server-2019-5fa00c36-edeb-446c-94e3-c4882b7526bc#bkmk_14913295).|
 | **Error: The remote server returned an error: (403) Forbidden**  | Repair the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md#repair-extension). | 
-| **Error 3202: Write on Storage account failed 13 (The data is invalid)** | Remove the immutable blob policy on the storage container and make sure the storage account is using TLS 1.0.  | 
+| **Error 3202: Write on Storage account failed 13 (The data is invalid)** | Remove the immutable blob policy on the storage container and make sure the storage account is using, at minimum, TLS 1.0.  | 
 
 
 

@@ -324,7 +324,7 @@ ALTER COLUMN LastName DROP MASKED;
 
    ```sql
    EXECUTE AS USER='ServiceAttendant';  
-   SELECT MemberID,FirstName,LastName,Phone,Email,BirthDay FROM Data.   Membership;  
+   SELECT MemberID,FirstName,LastName,Phone,Email,BirthDay FROM Data.Membership;  
    SELECT MemberID,Feedback,Rating FROM Service.Feedback;  
    REVERT; 
    ```
@@ -333,7 +333,7 @@ ALTER COLUMN LastName DROP MASKED;
 
    ```sql
    EXECUTE AS USER='ServiceLead';  
-   SELECT MemberID,FirstName,LastName,Phone,Email,BirthDay FROM Data.   Membership;  
+   SELECT MemberID,FirstName,LastName,Phone,Email,BirthDay FROM Data.Membership;  
    SELECT MemberID,Feedback,Rating FROM Service.Feedback;  
    REVERT; 
    ```

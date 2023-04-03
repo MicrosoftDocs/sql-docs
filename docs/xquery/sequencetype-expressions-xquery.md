@@ -16,7 +16,7 @@ dev_langs:
   - "XML"
 ---
 # SequenceType Expressions (XQuery)
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   In XQuery, a value is always a sequence. The type of the value is referred to as a sequence type. The sequence type can be used in an **instance of** XQuery expression. The SequenceType syntax described in the XQuery specification is used when you need to refer to a type in an XQuery expression.  
   

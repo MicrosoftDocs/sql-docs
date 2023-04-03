@@ -14,7 +14,7 @@ dev_langs:
   - "XML"
 ---
 # Functions on Nodes - number
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   Returns the numeric value of the node that is indicated by *$arg*.  
   

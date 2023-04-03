@@ -14,7 +14,7 @@ dev_langs:
   - "XML"
 ---
 # Aggregate Functions - sum
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   Returns the sum of a sequence of numbers.  
   

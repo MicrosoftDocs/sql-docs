@@ -42,7 +42,6 @@ To choose an image, follow these steps:
 
 1. Select **Create**.
 
-
 ## Basic settings
 
 The **Basics** tab allows you to select the subscription, resource group, and instance details. 

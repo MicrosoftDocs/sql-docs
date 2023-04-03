@@ -98,7 +98,7 @@ To learn more, see, [Automated patching](automated-backup.md).
 
 ## Additional features
 
-Manage additional features of SQL Server on the **Additional features** tab, such as enabling [R Services (Advanced analytics)](/sql/machine-learning/r/sql-server-r-services) or [least privilege mode](sql-server-iaas-agent-extension-automate-management.md). Enabling R Services would restart your SQL Server service.
+Manage additional features of SQL Server on the **Additional features** tab, such as enabling [least privilege mode](sql-server-iaas-agent-extension-automate-management.md). 
 
 ## High availability (Preview)
 
@@ -108,12 +108,14 @@ Once you've configured your [availability group by using the Azure portal](avail
 
 ## Security Configuration 
 
-Use the **Security Configuration** page of the SQL virtual machines resource to configure SQL Server security settings such as which port to use, or to enable Azure Key Vault integration, or enable authentication methods to connect to your SQL Server instance - such as SQL authentication, or if you're on SQL Server 2022, [Azure Active Directory (Azure AD) authentication (currently in preview)](security-considerations-best-practices.md#azure-ad-authentication-preview). 
+Use the **Security Configuration** page of the SQL virtual machines resource to configure SQL Server security settings such as Azure Key Vault integration, or if you're on SQL Server 2022, [Azure Active Directory (Azure AD) authentication (currently in preview)](security-considerations-best-practices.md#azure-ad-authentication-preview). 
 
 :::image type="content" source="./media/manage-sql-vm-portal/sql-vm-security-configuration.png" alt-text="Screenshot of the Azure portal, the SQL Server security page, where you can enable authentication.":::
 
 To learn more, see the [Security best practices](security-considerations-best-practices.md).
 
+> [!NOTE]
+> The ability to configure the port and SQL credentials was removed from the Azure portal in April 2023. 
 
 <a name="security-center"></a>
 

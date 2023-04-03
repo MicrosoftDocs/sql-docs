@@ -249,6 +249,10 @@ To learn more, review `tempdb` size limits for:
 - vCore purchasing model: [single databases](resource-limits-vcore-single-databases.md), [pooled databases](resource-limits-vcore-elastic-pools.md)
 - DTU purchasing model: [single databases](resource-limits-dtu-single-databases.md#tempdb-sizes),  [pooled databases](resource-limits-dtu-elastic-pools.md#tempdb-sizes).
 
+## Identify Gen4 hardware
+
+[!INCLUDE[identify-gen4-hardware](../includes/identify-gen4-hardware.md)]
+
 ## Next steps
 
 - For information about general Azure limits, see [Azure subscription and service limits, quotas, and constraints](/azure/azure-resource-manager/management/azure-subscription-service-limits).

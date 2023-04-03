@@ -35,7 +35,7 @@ This release is published February 17, 2023
 ### Azure extension for SQL Server
 
 - [Best practices assessment](assess.md) (BPA) on Arc-enabled SQL Server requires Software Assurance or [Azure pay-as-you-go license](manage-license-type.md#manage-sql-server-license-and-billing-options).
-- [View SQL Server databases - Azure Arc](view-databases.md) on Arc-enabled SQL Server Software Assurance or [Azure pay-as-you-go license](manage-license-type.md#manage-sql-server-license-and-billing-options).
+- [Viewing SQL Server databases - Azure Arc](view-databases.md) on Arc-enabled SQL Server requires Software Assurance or [Azure pay-as-you-go license](manage-license-type.md#manage-sql-server-license-and-billing-options).
 
 ## January 2023
 

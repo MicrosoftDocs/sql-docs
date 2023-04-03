@@ -12,7 +12,7 @@ ms.topic: conceptual
 
 # Run Windows PowerShell from SQL Server Management Studio
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 You can start Windows PowerShell sessions from **Object Explorer** in SQL Server Management Studio (SSMS). SSMS launches Windows PowerShell, loads the **SqlServer** module, and sets the path context to the associated node in the **Object Explorer** tree.
 

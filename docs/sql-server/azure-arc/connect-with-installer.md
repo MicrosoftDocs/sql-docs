@@ -51,5 +51,5 @@ Go to **Azure Arc > SQL Server** and open the newly registered Arc-enabled SQL S
 ## Next steps
 
 - [Configure advanced data security for your SQL Server instance](configure-advanced-data-security.md)
-- [Configure your SQL Server instance for periodic best practices ](assess.md)assessment
+- [Configure your SQL Server instance for periodic best practices](assess.md)assessment
    

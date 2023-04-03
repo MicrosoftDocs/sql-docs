@@ -72,7 +72,7 @@ In order to prevent a man-in-the-middle attack with `strict` connection encrypti
 > 
 > The following is a list of features or tools that still use previous version of drivers that don't support TDS 8.0, and as such, may not work with the `strict` connection encryption:
 > - Always On failover cluster instance (FCI)
-> - Always On availability group
+> - Always On availability groups
 > - Replication
 > - SQL Server Management Studio (SSMS)
 > - sqlcmd utility

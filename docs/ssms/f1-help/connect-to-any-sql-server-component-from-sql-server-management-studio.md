@@ -18,7 +18,7 @@ helpviewer_keywords:
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-SQL Server Management Studio provides functionality for managing every component of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use Management Studioto connect to:
+SQL Server Management Studio provides functionality for managing every component of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use Management Studio to connect to:
 
 - An instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].
 
@@ -28,7 +28,7 @@ SQL Server Management Studio provides functionality for managing every component
 
 - [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].
 
-Although Management Studio allows you to work with queries without first establishing a connection to a data source, most other tasks require a connection. Management Studioprovides the **Connect to Server** dialog box to configure connection properties to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components. When Management Studiostarts, it opens the **Connect to Server** dialog box and prompts you to connect to a server. The **Connect to Server** dialog box retains the connection settings from the last time it was used.
+Although Management Studio allows you to work with queries without first establishing a connection to a data source, most other tasks require a connection. Management Studio provides the **Connect to Server** dialog box to configure connection properties to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components. When Management Studio starts, it opens the **Connect to Server** dialog box and prompts you to connect to a server. The **Connect to Server** dialog box retains the connection settings from the last time it was used.
 
 > [!NOTE]  
 > This feature can be turned off so no connection is automatically initiated. For more information, see [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md).

@@ -96,9 +96,6 @@ Use the **Backups** page of the SQL virtual machines resource to configure your 
 
 To learn more, see, [Automated patching](automated-backup.md). 
 
-## Additional features
-
-Manage additional features of SQL Server on the **Additional features** tab, such as enabling [least privilege mode](sql-server-iaas-agent-extension-automate-management.md). 
 
 ## High availability (Preview)
 
@@ -106,9 +103,15 @@ Once you've configured your [availability group by using the Azure portal](avail
 
 :::image type="content" source="media/availability-group-az-portal-configure/healthy-availability-group.png" alt-text="Screenshot of the Azure portal, SQL virtual machines resource, showing where to check the status of your availability group from the high availability page.":::
 
+## SQL best practices assessment
+
+Use the **SQL best practices assessment** page of the SQL virtual machines resource to assess the health of your SQL Server VM. Once the feature is enabled, your SQL Server instances and databases are scanned and recommendations are surfaced to improve performance (indexes, statistics, trace flags, and so on) and identify missing best practices configurations.  
+
+To learn more, see [SQL best practices assessment for SQL Server on Azure VMs](sql-assessment-for-sql-vm.md).
+
 ## Security Configuration 
 
-Use the **Security Configuration** page of the SQL virtual machines resource to configure SQL Server security settings such as Azure Key Vault integration, or if you're on SQL Server 2022, [Azure Active Directory (Azure AD) authentication (currently in preview)](security-considerations-best-practices.md#azure-ad-authentication-preview). 
+Use the **Security Configuration** page of the SQL virtual machines resource to configure SQL Server security settings such as Azure Key Vault integration, enabling [least privilege mode](sql-server-iaas-agent-extension-automate-management.md) or if you're on SQL Server 2022, enable [Azure Active Directory (Azure AD) authentication (currently in preview)](security-considerations-best-practices.md#azure-ad-authentication-preview). 
 
 :::image type="content" source="./media/manage-sql-vm-portal/sql-vm-security-configuration.png" alt-text="Screenshot of the Azure portal, the SQL Server security page, where you can enable authentication.":::
 
@@ -125,11 +128,7 @@ Use the **Defender for SQL** page of the SQL virtual machine's resource to view 
 
 :::image type="content" source="./media/manage-sql-vm-portal/sql-vm-security-center.png" alt-text="Screenshot of the Azure portal, SQL virtual machines resource, showing where to configure SQL Server Defender for Cloud settings.":::
 
-## SQL best practices assessment
 
-Use the **SQL best practices assessment** page of the SQL virtual machines resource to assess the health of your SQL Server VM. Once the feature is enabled, your SQL Server instances and databases are scanned and recommendations are surfaced to improve performance (indexes, statistics, trace flags, and so on) and identify missing best practices configurations.  
-
-To learn more, see [SQL best practices assessment for SQL Server on Azure VMs](sql-assessment-for-sql-vm.md).
 
 ## Next steps
 

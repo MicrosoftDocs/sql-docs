@@ -131,7 +131,7 @@ Use the **Defender for SQL** page of the SQL virtual machine's resource to view 
 
 ## SQL IaaS Agent Extension Settings 
 
-From the **SQL IaaS Agent Extension Settings** page, you can [repair the extension](sql-agent-extension-troubleshoot-known-issues.md#repair-extension) and you can enable auto upgrade to ensure you're automatically receiving updates to the extension each month. 
+From the **SQL IaaS Agent Extension Settings** page, you can [repair the extension](sql-agent-extension-troubleshoot-known-issues.md#repair-extension) and you can enable auto upgrade to ensure you're automatically receiving updates for the extension each month. 
 
 :::image type="content" source="media/manage-sql-vm-portal/sql-iaas-agent-settings.png" alt-text="Screenshot of the SQL IaaS Agent Extension Settings page for your SQL virtual machines resource in the Azure portal.":::
 

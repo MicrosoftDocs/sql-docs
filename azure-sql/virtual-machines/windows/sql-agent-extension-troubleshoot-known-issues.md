@@ -40,7 +40,7 @@ To repair the extension with the Azure portal:
 
 ## Not valid state for management
 
-[Repair the extension](sql-agent-extension-troubleshoot-known-issues.md#repair-extension) if you see the following error message:
+[Repair the extension](#repair-extension) if you see the following error message:
 
 `The SQL virtual machines resource is not in a valid state for management`
 
@@ -53,7 +53,7 @@ If you see the following error message:
 Consider the following:
 
 - The SQL VM may be stopped, deallocated, in a failed state, or not found. Validate the underlying virtual machine is running.
-- Your SQL IaaS Agent extension may be in a failed state. [Repair the extension](sql-agent-extension-troubleshoot-known-issues.md#repair-extension).
+- Your SQL IaaS Agent extension may be in a failed state. [Repair the extension](#repair-extension).
 
 [Unregister your SQL VM from the extension](sql-agent-extension-manually-register-single-vm.md#unregister-from-extension) and then register the SQL VM with the extension again if you did any of the following:
 
@@ -64,11 +64,11 @@ Consider the following:
 
 ## Provisioning failed 
 
-[Repair the extension](sql-agent-extension-troubleshoot-known-issues.md#repair-extension) if the SQL IaaS Agent extension status shows as **Provisioning failed** in the Azure portal.
+[Repair the extension](#repair-extension) if the SQL IaaS Agent extension status shows as **Provisioning failed** in the Azure portal.
 
 ## SQL VM resource unavailable in portal
 
-If the SQL IaaS Agent extension is installed, and the VM is online, but the SQL VM resource is unavailable in the Azure portal, verify that your SQL Server and SQL Browser service are started within the VM. If this doesn't resolve the issue, [repair the extension](sql-agent-extension-troubleshoot-known-issues.md#repair-extension).
+If the SQL IaaS Agent extension is installed, and the VM is online, but the SQL VM resource is unavailable in the Azure portal, verify that your SQL Server and SQL Browser service are started within the VM. If this doesn't resolve the issue, [repair the extension](#repair-extension).
 
 ## Features are grayed out
 

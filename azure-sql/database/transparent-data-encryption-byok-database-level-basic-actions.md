@@ -440,7 +440,7 @@ In case of an inaccessible TDE protector as described in [Transparent Data Encry
 For information on installing the current release of Azure CLI, see [Install the Azure CLI](/cli/azure/install-azure-cli) article.
 
 ```azurecli
-az sql db tde key revalidate --resource-group $resourceGroupName --server $serverName --name mySampleDatabase
+az sql db tde key revalidate --resource-group $resourceGroupName --server $serverName --database mySampleDatabase
 ```
 
 # [PowerShell](#tab/azure-powershell2)

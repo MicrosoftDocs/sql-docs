@@ -83,7 +83,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016"
   
 #### To delete a push subscription to a snapshot or transactional publication  
   
-1.  Create a connection to the Subscriber by using the <xref:Microsoft.SqlServer.Management.Common.ServerConnection> class.  
+1.  Create a connection to the Publisher by using the <xref:Microsoft.SqlServer.Management.Common.ServerConnection> class.  
   
 2.  Create an instance of the <xref:Microsoft.SqlServer.Replication.TransSubscription> class.  
   
@@ -97,7 +97,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016"
   
 #### To delete a push subscription to a merge publication  
   
-1.  Create a connection to the Subscriber by using the <xref:Microsoft.SqlServer.Management.Common.ServerConnection> class.  
+1.  Create a connection to the Publisher by using the <xref:Microsoft.SqlServer.Management.Common.ServerConnection> class.  
   
 2.  Create an instance of the <xref:Microsoft.SqlServer.Replication.MergeSubscription> class.  
   

@@ -12,7 +12,7 @@ helpviewer_keywords:
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Enhanced Date and Time Type Behavior with Previous SQL Server Versions (ODBC)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   This topic describes the expected behavior when a client application that uses enhanced date and time features communicates with a version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] earlier than [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], and when a client application using Microsoft Data Access Components, Windows Data Access Components, or a version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client earlier than [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] sends commands to a server that supports enhanced date and time features.  
   

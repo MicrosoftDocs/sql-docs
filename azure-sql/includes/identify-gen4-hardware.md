@@ -1,6 +1,6 @@
 ---
-title: Inform customers how to find gen4 resources
-description: Inform customers how to find gen4 resources.
+title: Inform customers how to find Gen4 resources
+description: Inform customers how to find Gen4 resources.
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 04/03/2023
@@ -24,7 +24,7 @@ To use **Resource Graph Explorer** to identify Azure SQL resources that are stil
 
 1. The **Results** pane displays all the currently deployed resources in Azure that are using Gen4 hardware.
 
-   :::image type="content" source="media/identify-gen4-hardware/identify-gen4-resource-graph-explorer.png" alt-text="Screenshot of Azure Resources Graph Explorer in the Azure portal showing query results to identify gen4 hardware.,":::
+   :::image type="content" source="media/identify-gen4-hardware/identify-gen4-resource-graph-explorer.png" alt-text="Screenshot of Azure Resources Graph Explorer in the Azure portal showing query results to identify gen4 hardware.":::
 
 
 

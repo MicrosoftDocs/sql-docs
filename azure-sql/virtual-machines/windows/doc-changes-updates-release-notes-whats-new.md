@@ -20,6 +20,12 @@ When you deploy an Azure virtual machine (VM) with SQL Server installed on it, e
 For updates made in previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md). 
 
 
+## April 2023
+
+| Changes | Details |
+| --- | --- |
+| **Azure AD authentication GA** | Azure Active Directory (Azure AD) authentication is now generally available. Review [Configure Azure AD](configure-azure-ad-authentication-for-sql-vm.md) to learn more. |  
+
 ## March 2023
 
 | Changes | Details |

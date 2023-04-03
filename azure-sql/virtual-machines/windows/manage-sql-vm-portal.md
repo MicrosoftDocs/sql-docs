@@ -4,7 +4,7 @@ description: Learn how to access the SQL virtual machines resource in the Azure 
 author: bluefooted
 ms.author: pamela
 ms.reviewer: mathoma
-ms.date: 03/27/2023
+ms.date: 04/05/2023
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to

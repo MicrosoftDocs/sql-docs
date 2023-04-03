@@ -63,6 +63,8 @@ The SQL Server IaaS Agent extension allows for integration with the Azure portal
    ```
    ---
 
+Enable [auto update](manage-sql-vm-portal.md#sql-iaas-agent-extension-settings) to ensure you're getting the latest updates to the extension each month. 
+
 ## Management modes
 
 Prior to March 2023, the SQL IaaS Agent extension relied on management modes to define the security model, and unlock feature benefits. In March 2023, the extension architecture was updated to remove management modes entirely, instead relying on the principle of least privilege to give customers control over how they want to use the extension on a feature-by-feature basis. 

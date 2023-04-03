@@ -343,7 +343,7 @@ The following table lists the possible solutions if you're having issues enablin
 
 | Symptom | Solution |
 |--|--|
-| **Enabling Automated Backups will fail if your IaaS extension is in a failed state** | Repair the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md#repair-extension) if it's in a failed state. | 
+| **Enabling Automated Backups will fail if your IaaS extension is in a failed state** | Repair the [SQL IaaS Agent extension](sql-agent-extension-troubleshoot-known-issues.md#repair-extension) if it's in a failed state. | 
 | **Enabling Automated Backup fails if you have hundreds of databases** | This is a known limitation with the SQL IaaS Agent extension. To work around this issue, you can enable [Managed Backup](/sql/relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure#enable-managed-backup-to-azure) directly instead of using the SQL IaaS Agent extension to configure Automated Backup.  | 
 | **Enabling Automated Backup fails due to metadata issues** | Stop the SQL IaaS Agent service.  Run the T-SQL command: `use msdb exec autoadmin_metadata_delete`. Start the SQL IaaS Agent service and try to re-enable Automated Backup from Azure portal.  |
 | **Enabling Automated Backups for FCI** | Back ups using private endpoints are unsupported. Use the full storage account URI for your backup.  |
@@ -366,7 +366,7 @@ The following table lists possible errors and solutions when working with Automa
 | **Error: SQL Server Managed Backup to Microsoft Azure cannot configure the default backup settings for the SQLServer instance because the container URL was invalid. It is also possible that your SAS credential is invalid** | You may see this error if you have a large number of databases. Use [Managed backup](/sql/relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure) instead of Automated Backup. | 
 | **Automated Backup job failed after VM Restart**| Check that the SQL Agent service is up and running. | 
 | **Managed backup fails intermittently/Error:Execution timeout Expired** | This is a known issue fixed in [CU18 for SQL Server 2019](https://support.microsoft.com/topic/kb5017593-cumulative-update-18-for-sql-server-2019-5fa00c36-edeb-446c-94e3-c4882b7526bc#bkmk_14913295).|
-| **Error: The remote server returned an error: (403) Forbidden**  | Repair the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md#repair-extension). | 
+| **Error: The remote server returned an error: (403) Forbidden**  | Repair the [SQL IaaS Agent extension](sql-agent-extension-troubleshoot-known-issues.md#repair-extension). | 
 | **Error 3202: Write on Storage account failed 13 (The data is invalid)** | Remove the immutable blob policy on the storage container and make sure the storage account is using TLS 1.0.  | 
 
 
@@ -378,7 +378,7 @@ The following table lists the possible solutions if you're having issues disabli
 
 | Symptom | Solution |
 |--|--|
-| **Disabling Auto backups will fail if your IaaS extension is in a failed state** | Repair the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md#repair-extension) if it's in a failed state. | 
+| **Disabling Auto backups will fail if your IaaS extension is in a failed state** | Repair the [SQL IaaS Agent extension](sql-agent-extension-troubleshoot-known-issues.md#repair-extension) if it's in a failed state. | 
 | **Disabling Automated Backup fails due to metadata issues** | Stop the SQL IaaS Agent service. Run the T-SQL command: `use msdb exec autoadmin_metadata_delete`. Start SQL Iaas Agent service and try to disable Automated Backup from Azure portal.  |
 | **Automated Backup cannot be disabled due to account and permissions** | Check the following: <br /> - The SQL Server Agent is running. <br /> - The  **NT Service\SqlIaaSExtensionQuery**  account has proper [permissions](sql-server-iaas-agent-extension-automate-management.md#permissions-models) for the Automated Backup feature both within SQL Server, and also for the [SQL virtual machines](manage-sql-vm-portal.md) resource in the Azure portal. <br /> - The **SA** account hasn't been renamed, though disabling it is acceptable.  | 
 

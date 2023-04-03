@@ -15,7 +15,7 @@ dev_langs:
   - "XML"
 ---
 # Handling Namespaces in XQuery
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   This topic provides samples for handling namespaces in queries.  
   

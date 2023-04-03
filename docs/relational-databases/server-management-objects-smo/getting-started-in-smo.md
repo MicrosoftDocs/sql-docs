@@ -13,7 +13,7 @@ helpviewer_keywords:
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Getting Started in SMO
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 This page provides links to topics designed to help you get started using SQL Server Management Objects (SMO). The topics listed cover the SMO object hierarchy, writing programs in SMO, SMO and different programming languages, and specific programming tasks.  
  

@@ -10,7 +10,7 @@ ms.topic: conceptual
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Dynamic Data Masking
-[!INCLUDE [SQL Server 2016 ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server 2016 ASDB, ASDBMI, ASDW](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 ![Dynamic data masking](../../relational-databases/security/media/dynamic-data-masking.png)
 
@@ -324,7 +324,7 @@ ALTER COLUMN LastName DROP MASKED;
 
    ```sql
    EXECUTE AS USER='ServiceAttendant';  
-   SELECT MemberID,FirstName,LastName,Phone,Email,BirthDay FROM Data.   Membership;  
+   SELECT MemberID,FirstName,LastName,Phone,Email,BirthDay FROM Data.Membership;  
    SELECT MemberID,Feedback,Rating FROM Service.Feedback;  
    REVERT; 
    ```
@@ -333,7 +333,7 @@ ALTER COLUMN LastName DROP MASKED;
 
    ```sql
    EXECUTE AS USER='ServiceLead';  
-   SELECT MemberID,FirstName,LastName,Phone,Email,BirthDay FROM Data.   Membership;  
+   SELECT MemberID,FirstName,LastName,Phone,Email,BirthDay FROM Data.Membership;  
    SELECT MemberID,Feedback,Rating FROM Service.Feedback;  
    REVERT; 
    ```

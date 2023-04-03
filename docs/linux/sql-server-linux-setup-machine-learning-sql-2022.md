@@ -146,6 +146,7 @@ Available installation packages for [!INCLUDE [sssql22-md](../includes/sssql22-m
 1. Download and install `revoscalepy` for the root user.
 
     ```bash  
+    sudo pip install dill numpy==1.22.0 pandas patsy python-dateutil
     sudo pip install https://aka.ms/sqlml/python3.10/linux/revoscalepy-10.0.1-py3-none-any.whl --target=/usr/lib/python3.10/dist-packages
     ```
 

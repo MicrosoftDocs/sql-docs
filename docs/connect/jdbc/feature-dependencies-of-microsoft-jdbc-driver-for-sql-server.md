@@ -147,7 +147,7 @@ If you're using Maven to build or test your project, Maven automatically downloa
 
 ### Work with Azure Active Directory authentication
 
-- JDBC driver version 12.2.0—Dependency versions: Azure-identity(version 1.7.0), and their dependencies.
+- JDBC driver version 12.2.0—Dependency versions: Azure-identity(version 1.7.0), Msal4j(version 1.13.3), and their dependencies.
 - JDBC driver version 11.2.0—Dependency versions: Azure-identity(version 1.5.0), and their dependencies.
 - JDBC driver version 10.2.0—Dependency versions: Azure-identity(version 1.4.3), and their dependencies.
 - JDBC driver version 9.4.1—Dependency versions: Azure-identity(version 1.3.3), and their dependencies.

@@ -96,7 +96,7 @@ landingContent:
           - text: Azure AD authentication for SQL Server overview
             url: /sql/relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview
           - text: Security considerations for SQL Server on Azure Virtual Machines
-            url: ../virtual-machines/windows/security-considerations-best-practices.md#azure-ad-authentication-preview
+            url: ../virtual-machines/windows/configure-azure-ad-authentication-for-sql-vm.md
 
 
   # Card

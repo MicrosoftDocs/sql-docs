@@ -47,4 +47,4 @@ The SQL Database Projects extension interacts with the [Schema Compare extension
 
 ## Next steps
 
-- [Build and Publish a project with SQL Database Projects extension ](sql-database-project-extension-build.md)
+- [Build and Publish a project with SQL Database Projects extension](sql-database-project-extension-build.md)

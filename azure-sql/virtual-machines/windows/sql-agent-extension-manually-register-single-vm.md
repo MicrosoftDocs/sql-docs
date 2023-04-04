@@ -4,7 +4,7 @@ description: Learn how to register your SQL Server on Azure Windows VM with the 
 author: adbadram
 ms.author: adbadram
 ms.reviewer: mathoma
-ms.date: 10/26/2021
+ms.date: 03/26/2023
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to

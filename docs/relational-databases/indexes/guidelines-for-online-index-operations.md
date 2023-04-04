@@ -106,6 +106,14 @@ When you update a resumable index while an index operation is paused:
 
 Generally, there is no difference in defragmentation quality between resumable and non-resumable online index create or rebuild.
 
+> [!NOTE]  
+> While an online index operation is paused, any operation that requires a table level exclusive lock on the table containing the paused index will fail. This is most often encountered with "insert ... with (tablock) operations". In that case you will encounter the following error message:
+> 
+>"Msg 10637, Level 16, State 1, Line 32
+>
+>Cannot perform this operation on 'object' with ID (objectid) as one or more indexes are currently in resumable index rebuild state. Please refer to sys.index_resumable_operations for more details."
+>To make sure this error doesn't appear, remove the tablock hint from your transaction.
+
 ## Online default options
 
 > [!IMPORTANT]

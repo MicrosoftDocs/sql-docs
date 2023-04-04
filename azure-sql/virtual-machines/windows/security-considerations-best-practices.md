@@ -60,7 +60,7 @@ For detailed deployment steps, see the [Quickstart: Deploy SQL Server to a confi
 
 Recommendations for disk encryption are different for confidential VMs than for the other VM sizes. See [disk encryption](security-considerations-best-practices.md#azure-confidential-vms) to learn more.
 
-## Azure AD authentication (Preview)
+## Azure AD authentication
 
 Starting with SQL Server 2022, you can connect to SQL Server using one of the following Azure Active Directory (Azure AD) identity authentication methods:
 
@@ -69,7 +69,7 @@ Starting with SQL Server 2022, you can connect to SQL Server using one of the fo
 - Azure AD Universal with Multi-Factor Authentication
 - Azure Active Directory access token
 
-To get started, review [Configure Azure AD authentication for your SQL Server VM](configure-azure-ad-authentication-for-sql-vm.md). Using Azure AD authentication with SQL Server on Azure VMs is currently in preview.
+To get started, review [Configure Azure AD authentication for your SQL Server VM](configure-azure-ad-authentication-for-sql-vm.md). 
 
 ## Azure Advisor
 

@@ -15,7 +15,7 @@ helpviewer_keywords:
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating Rowsets with ICommand::Execute in SQL Server Native Client
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   For rowsets created by using the **ICommand::Execute** method, the properties that you want in the resulting rowset can constrain the text of the command. This is especially critical for consumers that support dynamic command text.  
   

@@ -28,7 +28,7 @@ helpviewer_keywords:
 
 ## Explanation
 
-Generic operating system error occurred. The error message wraps a more specific operating system (OS) error, which can be used to help diagnose that failure. Examples would include reads or writes to data or log files that fail, registry read/write operations, or other unexpected [Win32 API ](/windows/win32/api/) call failures.  
+Generic operating system error occurred. The error message wraps a more specific operating system (OS) error, which can be used to help diagnose that failure. Examples would include reads or writes to data or log files that fail, registry read/write operations, or other unexpected [Win32 API](/windows/win32/api/) call failures.  
 You'll frequently see this error together with other error messages in the SQL Server error log. The operating system errors are shown with their numeric value, followed by the text message of the error.
 
 ## User Action

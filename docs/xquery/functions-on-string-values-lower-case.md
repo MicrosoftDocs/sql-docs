@@ -14,7 +14,7 @@ dev_langs:
   - "XML"
 ---
 # Functions on String Values - lower-case
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   The lower-case function converts each character in *$arg* to its lower case equivalent. The Microsoft Windows binary case conversion for Unicode code points specifies how characters are converted to lower case. This standard is not identical to the mapping for Unicode code point standard.  
   

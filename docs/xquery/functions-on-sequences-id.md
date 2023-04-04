@@ -14,7 +14,7 @@ dev_langs:
   - "XML"
 ---
 # Functions on Sequences - id
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   Returns the sequence of element nodes with xs:ID values that match the values of one or more of the xs:IDREF values supplied in *$arg*.  
   

@@ -21,7 +21,7 @@ helpviewer_keywords:
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server and Azure SQL index architecture and design guide
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Poorly designed indexes and a lack of indexes are primary sources of database application bottlenecks. Designing efficient indexes is paramount to achieving good database and application performance. This index design guide contains information on index architecture, and best practices to help you design effective indexes to meet the needs of your application.
 
@@ -903,7 +903,7 @@ For more information, see [Columnstore indexes - Design Guidance](../relational-
 
 All memory-optimized tables must have at least one index, because it is the indexes that connect the rows together. On a memory-optimized table, every index is also memory-optimized. Hash indexes are one of the possible index types in a memory-optimized table. For more information, see [Indexes for Memory-Optimized Tables](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).
 
-[!INCLUDE[SQL Server Azure SQL Database Azure SQL Managed Instances ](../includes/applies-to-version/sql-asdb-asdbmi.md)]
+[!INCLUDE[SQL Server Azure SQL Database Azure SQL Managed Instances](../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 ### Hash index architecture
 A hash index consists of an array of pointers, and each element of the array is called a hash bucket.
@@ -996,7 +996,7 @@ Later when the older versions are no longer needed, a garbage collection (GC) th
 
 Nonclustered indexes are one of the possible index types in a memory-optimized table. For more information, see [Indexes for Memory-Optimized Tables](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).
 
-[!INCLUDE[SQL Server Azure SQL Database Azure SQL Managed Instances ](../includes/applies-to-version/sql-asdb-asdbmi.md)]
+[!INCLUDE[SQL Server Azure SQL Database Azure SQL Managed Instances](../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 ### In-memory nonclustered index architecture
 

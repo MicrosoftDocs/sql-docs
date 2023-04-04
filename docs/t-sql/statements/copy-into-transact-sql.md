@@ -291,7 +291,7 @@ If parquet files are to be loaded into hash distributed tables using COPY INTO, 
 The user executing the COPY command must have the following permissions: 
 
 - [ADMINISTER DATABASE BULK OPERATIONS](grant-database-permissions-transact-sql.md#remarks)
-- [INSERT ](grant-database-permissions-transact-sql.md#remarks)
+- [INSERT](grant-database-permissions-transact-sql.md#remarks)
 
 Requires INSERT and ADMINISTER BULK OPERATIONS permissions. In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], INSERT, and ADMINISTER DATABASE BULK OPERATIONS permissions are required.
 

@@ -13,7 +13,7 @@ dev_langs:
   - "XML"
 ---
 # Constructor Functions (XQuery)
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   From a specified input, the constructor functions create instances of any of the XSD built-in or user-defined atomic types.  
   

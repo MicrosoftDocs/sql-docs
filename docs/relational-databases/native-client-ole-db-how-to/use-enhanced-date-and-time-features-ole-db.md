@@ -10,7 +10,7 @@ ms.topic: "reference"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use Enhanced Date and Time Features in SQL Server Native Client (OLE DB)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   This sample shows how to use the date/time features that were introduced in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]. The sample uses the four new date and time types (**date**, **time**, **datetime2**, and **datetimeoffset**) to execute commands with parameters and retrieve rowset results.  
   

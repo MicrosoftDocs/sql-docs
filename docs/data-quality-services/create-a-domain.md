@@ -12,7 +12,7 @@ f1_keywords:
 ---
 # Create a Domain
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to create a domain in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). The values in the domain are a semantic representation of the data in a field. For more information on domains, see [Managing a Domain](../data-quality-services/managing-a-domain.md).  
   

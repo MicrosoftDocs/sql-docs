@@ -24,7 +24,7 @@ dev_langs:
 monikerRange: ">=sql-server-ver15||=azuresqldb-current||=azure-sqldw-latest"
 ---
 # sys.sensitivity_classifications (Transact-SQL)
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 Returns a row for each classified item in the database.
 

@@ -35,6 +35,7 @@ This release is published February 17, 2023
 ### Azure extension for SQL Server
 
 - [Best practices assessment](assess.md) (BPA) on Arc-enabled SQL Server requires Software Assurance or [Azure pay-as-you-go license](manage-license-type.md#manage-sql-server-license-and-billing-options).
+- [Viewing SQL Server databases - Azure Arc](view-databases.md) on Arc-enabled SQL Server requires Software Assurance or [Azure pay-as-you-go license](manage-license-type.md#manage-sql-server-license-and-billing-options).
 
 ## January 2023
 
@@ -54,7 +55,6 @@ This release is published January 17, 2023
   - Evaluates that your Azure Arc-enabled SQL Server is configured to follow best practices
   - Provides comprehensive mitigation guidance
   - To experience best practices assessment, upgrade to the latest extension version.
-
 - Azure Arc-enabled Database resource populates the earliest restore time and last backup time for database resources as a resource
 - Pay-as-you-go (PAYG) licensing option is now extended to SQL Server 2012 and above
 - Ability to set the licensing type during onboarding Arc-enabled SQL Server.
@@ -112,7 +112,6 @@ The *LicenseType* property of `SQL Server - Azure Arc` has been extended to prov
   - SQL Server in Azure VMs. If a custom VM image is migrated to Azure VM, Azure extension for SQL Server will stop working. The customers need to [Delete your Arc-enabled SQL Server resource](delete-from-azure-arc.md#delete-your-arc-enabled-sql-server-resource) and [enable automatic registration with SQL IaaS Agent extension](/azure/azure-sql/virtual-machines/windows/sql-agent-extension-automatic-registration-all-vms).
   - SQL Server in Linux containers
   - SQL Server Azure VMware Solution
-
 > [!NOTE]
 > Azure extension for SQL Server fully supports VMware clusters outside of Azure.
 
@@ -243,7 +242,6 @@ If you have existing SQL Server - Azure Arc resources, use these steps to migrat
 The October update includes the following improvements:
 
 - The register Azure Arc-enabled SQL Server pane now includes the **Tags** tab. The tags are included in the registration script and are reflected in the **SQL Server - Azure Arc** resource(s). For details, see [Connect your SQL Server to Azure Arc](connect.md).
-
 - The **Environment Health** entry now supports activation of **SQL Assessment** from the Portal by deploying a *CustomScriptExtension*. For details, see [Configure SQL Assessment](assess.md#enable-best-practices-assessment).
 
 ### Known issues
@@ -263,11 +261,12 @@ For details, see [Azure Arc-enabled SQL Server Overview](overview.md)
 The following issues apply to the September release:
 
 - The **Register Azure Arc-enabled SQL Server** pane doesn't support configuring custom tags. To add custom tags, open the **SQL Server - Azure Arc** resource after registration and change Tags in the **Overview** page.
-
 - Connecting SQL Server instances to Azure Arc requires an account with a broad set of permissions. For details, see [prerequisites](prerequisites.md).
 
 ## Next steps
 
 **Just want to try things out?**  Get started quickly with [Azure Arc-enabled SQL Server Jumpstart](https://aka.ms/AzureArcSqlServerJumpstart).
+
+
 
 

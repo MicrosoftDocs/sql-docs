@@ -17,7 +17,7 @@ dev_langs:
   - "XML"
 ---
 # Logical Expressions (XQuery)
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   XQuery supports the logical **and** and **or** operators.  
   

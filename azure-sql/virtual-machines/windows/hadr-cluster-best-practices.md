@@ -305,7 +305,7 @@ Exhausting I/O or CPU capacity for the VM can cause your availability group to f
 
 Follow these steps to review the **Azure VM Overall IO Exhaustion event**: 
 
-1. Navigate to your *Virtual Machine* in the [Azure Portal](https://portal.azure.com) - not the [SQL virtual machines](manage-sql-vm-portal.md). 
+1. Navigate to your *Virtual Machine* in the [Azure portal](https://portal.azure.com) - not the [SQL virtual machines](manage-sql-vm-portal.md). 
 1. Select **Metrics** under **Monitoring** to open the **Metrics** page.
 1. Select **Local time** to specify the time range you're interested in, and the time zone, either local to the VM, or UTC/GMT. 
 

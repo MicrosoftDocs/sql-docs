@@ -151,7 +151,7 @@ With trusted launch, you can:
 
 The following features are currently unsupported when you enable trusted launch for your SQL Server on Azure VMs: 
 
-- Azure Site REcovery
+- Azure Site Recovery
 - Ultra disks
 - Managed images
 - Nested virtualization 

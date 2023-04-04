@@ -10,7 +10,7 @@ ms.topic: conceptual
 ---
 # Deprecated Master Data Services Features
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   This topic describes the deprecated [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] features. These features are scheduled to be removed in a future release. Deprecated features should not be used in new applications.  
   

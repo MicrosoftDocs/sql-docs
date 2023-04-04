@@ -14,7 +14,7 @@ keywords: what is master data
 ---
 # Master Data Services Overview (MDS)
 
-[!INCLUDE [SQL Server - Windows only  ](../includes/applies-to-version/sql-windows-only.md)]
+[!INCLUDE [SQL Server - Windows only](../includes/applies-to-version/sql-windows-only.md)]
 
 This topic describes the key data organization and management features of [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. 
   

@@ -11,7 +11,7 @@ monikerRange: "=sql-server-2016||=sql-server-2017||=sql-server-ver15"
 ---
 # Configure PolyBase to access external data in Hadoop
 
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 The article explains how to use PolyBase on a SQL Server instance to query external data in Hadoop.
 

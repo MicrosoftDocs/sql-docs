@@ -96,9 +96,6 @@ Use the **Backups** page of the SQL virtual machines resource to configure your 
 
 To learn more, see, [Automated patching](automated-backup.md). 
 
-## Additional features
-
-Manage additional features of SQL Server on the **Additional features** tab, such as enabling [R Services (Advanced analytics)](/sql/machine-learning/r/sql-server-r-services) or [least privilege mode](sql-server-iaas-agent-extension-automate-management.md). Enabling R Services would restart your SQL Server service.
 
 ## High availability (Preview)
 
@@ -114,12 +111,14 @@ To learn more, see [SQL best practices assessment for SQL Server on Azure VMs](s
 
 ## Security Configuration 
 
-Use the **Security Configuration** page of the SQL virtual machines resource to configure SQL Server security settings such as which port to use, or to enable Azure Key Vault integration, or enable authentication methods to connect to your SQL Server instance - such as SQL authentication, or if you're on SQL Server 2022, [Azure Active Directory (Azure AD) authentication (currently in preview)](security-considerations-best-practices.md#azure-ad-authentication-preview). 
+Use the **Security Configuration** page of the SQL virtual machines resource to configure SQL Server security settings such as Azure Key Vault integration, [least privilege mode](sql-server-iaas-agent-extension-automate-management.md) or if you're on SQL Server 2022, [Azure Active Directory (Azure AD) authentication](configure-azure-ad-authentication-for-sql-vm.md). 
 
 :::image type="content" source="./media/manage-sql-vm-portal/sql-vm-security-configuration.png" alt-text="Screenshot of the Azure portal, the SQL Server security page, where you can enable authentication.":::
 
 To learn more, see the [Security best practices](security-considerations-best-practices.md).
 
+> [!NOTE]
+> The ability to configure the port and SQL credentials was removed from the Azure portal in April 2023. 
 
 <a name="security-center"></a>
 

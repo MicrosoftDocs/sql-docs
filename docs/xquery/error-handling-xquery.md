@@ -16,7 +16,7 @@ dev_langs:
   - "XML"
 ---
 # Error Handling (XQuery)
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   The W3C specification allows type errors to be raised statically or dynamically, and defines static, dynamic, and type errors.  
   

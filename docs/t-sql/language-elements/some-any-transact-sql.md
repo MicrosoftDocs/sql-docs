@@ -30,7 +30,7 @@ Compares a scalar value with a single-column set of values. SOME and ANY are equ
 ## Syntax
   
 ```syntaxsql
-scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }   
+scalar_expression { = | <> | != | > | >= | !> | < | <= | !< }   
      { SOME | ANY } ( subquery )   
 ```
 

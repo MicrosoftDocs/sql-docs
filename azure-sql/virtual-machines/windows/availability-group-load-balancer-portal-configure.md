@@ -349,6 +349,8 @@ After you've added an IP address for the listener, configure the additional avai
 6. [Set the cluster parameters in PowerShell](#setparam).
 
 
+If you're on the secondary replica VM, and you're unable to connect to the listener, it's possible the probe port was not configured correctly. 
+
 You can use the following script to validate the probe port is correctly configured for the availability group: 
 
 ```powershell

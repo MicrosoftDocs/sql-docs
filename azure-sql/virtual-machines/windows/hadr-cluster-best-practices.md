@@ -305,8 +305,12 @@ Exhausting I/O or CPU capacity for the VM can cause your availability group to f
 
 Follow these steps to review the **Azure VM Overall IO Exhaustion event**: 
 
-1. Navigate to your Virtual Machine in the [Azure Portal](https://portal.azure.com). 
+1. Navigate to your *Virtual Machine* in the [Azure Portal](https://portal.azure.com) - not the [SQL virtual machines](manage-sql-vm-portal.md). 
 1. Select **Metrics** under **Monitoring** to open the **Metrics** page.
+1. Select **Local time** to specify the time range you're interested in, and the time zone, either local to the VM, or UTC/GMT. 
+
+   :::image type="content" source="media/hadr-cluster-best-practices/specify-time-for-metrics.png" alt-text="Screenshot of the Metrics page in the Azure portal, selecting changing the time frame of the graph."::: 
+
 1. Select **Add metric** to add the following two metrics to see the graph: 
    - **VM Cached Bandwidth Consumed Percentage**
    - **VM Uncached Bandwidth Consumed Percentage**

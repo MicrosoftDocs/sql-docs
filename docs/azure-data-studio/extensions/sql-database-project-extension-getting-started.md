@@ -4,13 +4,13 @@ description: Getting started using the SQL Database Projects extension for Azure
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
-ms.date: 10/27/2021
+ms.date: 4/12/2023
 ms.service: azure-data-studio
 ms.topic: conceptual
 ms.custom: intro-get-started
 ---
 
-# Getting started with the SQL Database Projects extension (Preview)
+# Getting started with the SQL Database Projects extension
 
 This article describes three ways to get started with the SQL Database Projects extension:
 

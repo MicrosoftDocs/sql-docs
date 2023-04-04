@@ -4,7 +4,7 @@ description: Getting started using SDK-style SQL projects with the SQL Database 
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
-ms.date: 2/14/2023
+ms.date: 4/12/2023
 ms.service: azure-data-studio
 ms.topic: conceptual
 ms.custom: intro-get-started

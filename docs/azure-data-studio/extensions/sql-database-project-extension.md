@@ -4,14 +4,14 @@ description: Install and use the SQL Database Projects extension for Azure Data 
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
-ms.date: 05/24/2022
+ms.date: 4/12/2023
 ms.service: azure-data-studio
 ms.topic: conceptual
 ---
 
-# SQL Database Projects extension (Preview)
+# SQL Database Projects extension
 
-The SQL Database Projects extension (preview) is an Azure Data Studio and Visual Studio Code extension for developing SQL databases including for SQL Server, Azure SQL Database, and Azure SQL Managed Instance in a project-based development environment.  A SQL project is a local representation of SQL objects that comprise the schema for a single database, such as tables, stored procedures, or functions.
+The SQL Database Projects extension is an Azure Data Studio and Visual Studio Code extension for developing SQL databases including for SQL Server, Azure SQL Database, and Azure SQL Managed Instance in a project-based development environment.  A SQL project is a local representation of SQL objects that comprise the schema for a single database, such as tables, stored procedures, or functions.
 
 
 ## Extension features
@@ -19,7 +19,7 @@ The SQL Database Projects extension (preview) is an Azure Data Studio and Visual
 The SQL Database Projects extension provides the following features: 
 
 - Create a new blank project.
-- Create a new project from a connected database or from an [OpenAPI](https://github.com/OAI/OpenAPI-Specification) specification file.
+- Create a new project from a connected database.
 - Open a project previously created in [Azure Data Studio, Visual Studio Code](sql-database-project-extension-getting-started.md) or in [SQL Server Data Tools](../../ssdt/sql-server-data-tools.md).
 - Edit a project by adding or removing objects (tables, views, stored procedures) or custom scripts in the project.
 - Organize files/scripts in folders.
@@ -27,6 +27,11 @@ The SQL Database Projects extension provides the following features:
 - Build a single project.
 - Deploy a single project.
 - Load connection details (SQL Windows authentication) and SQLCMD variables from deployment profile.
+
+The following features in the SQL Database Projects extension are currently in preview:
+
+- Create a new projects from an [OpenAPI](https://github.com/OAI/OpenAPI-Specification) specification file.
+- SDK-style SQL projects ([Microsoft.Build.Sql](https://www.nuget.org/packages/Microsoft.Build.Sql/)).
 
 Watch this short 10-minute video for an introduction to the SQL Database Projects extension in Azure Data Studio:
 
@@ -61,7 +66,7 @@ The SQL Database Projects extension is installed with the [mssql](../../tools/vi
 
 ## Dependencies
 
-The SQL Database Projects extension has a dependency on the .NET Core SDK and AutoRest.Sql
+The SQL Database Projects extension has a dependency on the .NET Core SDK (required) and AutoRest.Sql (optional).
 
 ### .NET Core SDK
 
@@ -89,11 +94,11 @@ The SQL extension for [AutoRest](https://github.com/Azure/autorest) is automatic
 
 Currently, the SQL Database Project extension has the following limitations: 
 
-- Loading files as a link isn't supported in Azure Data Studio today, however the files are loaded at the top level in the tree and the build incorporates these files as expected.
-- SQLCLR objects in projects aren't supported in the.NET Core version of DacFx.
+- Loading files as a link isn't supported, however the files are loaded at the top level in the tree and the build incorporates these files as expected.
+- SQLCLR objects in projects aren't supported.
+- Code analysis rules on projects aren't supported at this time.
 - Tasks (build/publish) aren't user-defined.
 - Publish targets defined by DacFx.
-- WSL environment support is limited.
 
 ## Workspace
 

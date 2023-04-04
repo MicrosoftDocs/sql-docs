@@ -4,14 +4,14 @@ description: Build and Publish with SQL Server Database Projects extension
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
-ms.date: 10/27/2021
+ms.date: 4/12/2023
 ms.service: azure-data-studio
 ms.topic: conceptual
 ---
 
 # Build and Publish a project
 
-The build process in the SQL Database Projects extension (preview) for Azure Data Studio and VS Code allows for *dacpac* creation in Windows, macOS, and Linux environments. The project can be deployed to a local or cloud environment with the publish process.
+The build process in the SQL Database Projects extension for Azure Data Studio and VS Code allows for *dacpac* creation in Windows, macOS, and Linux environments. The project can be deployed to a local or cloud environment with the publish process.
 
 ## Prerequisites
 
@@ -37,22 +37,31 @@ In the **Publish Database** dialog that appears, specify a server connection and
 
 ### Publish the SQL project and deploy to a local Container
 
-*This functionality is currently only available in VS Code.*
-
 After a project is successfully compiled through the [build process](#build-a-database-project), the database can be published to a new development instance of SQL Server in a local container. To publish a database project to a local container, in the **Projects** viewlet right-click the *.sqlproj* root node and select **Publish**. 
 
-In VS Code, the options for publish appear as:
+In projects targeting SQL Server, the options for publish appear as:
 
-* Publish to existing server
-* Publish to new server in a container
+* Publish to existing SQL server
+* Publish to new SQL server local development container
 
-To create a new container with a development SQL instance and publish the SQL project contents to it, select the option "Publish to new server in a container".
+In projects targeting Azure SQL Database, the options for publish appear as:
+
+* Publish to an existing Azure SQL logical server
+* Publish to new Azure SQL Database emulator
+
+To create a new container with a development SQL instance and publish the SQL project contents to it, select the option "Publish to new server in a container" or "Publish to new Azure SQL Database emulator".
+
+![Publish to container](media/sql-database-projects-extension/publish-to-container.png)
 
 Creating a new container exposes the following options:
 
 * SQL Server port number: the port on which the SQL server's 1433 port will be forwarded to your workstation
 * SQL Server admin password: the *sa* password for the new instance
 * SQL Server docker image: the version base of the container
+
+For more information on the Azure SQL Database emulator, see [Azure SQL Database Emulator](azure/azure-sql/database/local-dev-experience-sql-database-emulator).
+
+For more information on SQL Server in containers, see [Configure and customize SQL Server Docker containers](../../linux/sql-server-linux-docker-container-configure).
 
 ## Next steps
 

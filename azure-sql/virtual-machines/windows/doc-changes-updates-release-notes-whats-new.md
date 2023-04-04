@@ -24,13 +24,6 @@ For updates made in previous years, see the [What's new archive](doc-changes-upd
 | Changes | Details |
 | --- | --- |
 | **Auto upgrade SQL IaaS Agent extension** | It's now possible to enable auto upgrade for your SQL IaaS Agent extension to ensure you're automatically receiving the latest updates to the extension every month. Review [SQL IaaS Agent Settings](manage-sql-vm-portal.md#sql-iaas-agent-extension-settings) to learn more. 
-
-
-
-## April 2023
-
-| Changes | Details |
-| --- | --- |
 | **Azure AD authentication GA** | Azure Active Directory (Azure AD) authentication is now generally available. Review [Configure Azure AD](configure-azure-ad-authentication-for-sql-vm.md) to learn more. |  
 
 ## March 2023

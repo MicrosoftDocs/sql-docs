@@ -872,7 +872,7 @@ Starting with [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)], the tuple-
 
 Each column has some of its values in each rowgroup. These values are called **column segments**. Each rowgroup contains one column segment for every column in the table. Each column has one column segment in each rowgroup.
 
-:::image type="content" source="media/sql-server-index-design-guide/column-segment.png" alt-text="Diageam of a clustered columnstore column segement.":::
+:::image type="content" source="media/sql-server-index-design-guide/column-segment.png" alt-text="Diagram of a clustered columnstore column segment.":::
 
 When the columnstore index compresses a rowgroup, it compresses each column segment separately. To uncompress an entire column, the columnstore index only needs to uncompress one column segment from each rowgroup.
 
@@ -1062,7 +1062,7 @@ There are no in-place updates of index pages. New delta pages are introduced for
 
 The key value in each nonleaf level page depicted is the highest value that the child that it points to contains and each row also contains that page logical page ID. On the leaf-level pages, along with the key value, it contains the physical address of the data row.
 
-Point lookups are similar to B-trees except that because pages are linked in only one direction, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] follows right page pointers, where each nonleaf pages has the highest value of its child, rather than lowest value as in a B-tree.
+Point lookups are similar to B-trees except that because pages are linked in only one direction, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] follows right page pointers, where each nonleaf page has the highest value of its child, rather than lowest value as in a B-tree.
 
 If a leaf-level page has to change, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] doesn't modify the page itself. Rather, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] creates a delta record that describes the change, and appends it to the previous page. Then it also updates the page map table address for that previous page, to the address of the delta record that now becomes the physical address for this page.
 

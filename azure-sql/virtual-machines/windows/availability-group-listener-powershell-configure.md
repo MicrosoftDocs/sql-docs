@@ -220,6 +220,18 @@ The SQLCMD connection automatically connects to whichever instance of SQL Server
 > Make sure that the port you specify is open on the firewall of both SQL Servers. Both servers require an inbound rule for the TCP port that you use. For more information, see [Add or Edit Firewall Rule](/previous-versions/orphan-topics/ws.11/cc753558(v=ws.11)). 
 > 
 
+If you're on the secondary replica VM, and you're unable to connect to the listener, it's possible the probe port was not configured correctly. 
+
+You can use the following script to validate the probe port is correctly configured for the availability group: 
+
+```powershell
+Clear-Host
+Get-ClusterResource `
+| Where-Object {$_.ResourceType.Name -like "IP Address"} `
+| Get-ClusterParameter `
+| Where-Object {($_.Name -like "Network") -or ($_.Name -like "Address") -or ($_.Name -like "ProbePort") -or ($_.Name -like "SubnetMask")}
+```
+
 ## Guidelines and limitations
 
 Note the following guidelines on availability group listener in Azure using internal load balancer:

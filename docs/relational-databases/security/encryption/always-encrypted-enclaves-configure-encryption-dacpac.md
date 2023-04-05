@@ -4,7 +4,7 @@ description: "Configure column encryption using Always Encrypted with secure enc
 author: PieterVanhove
 ms.author: pivanho
 ms.reviewer: vanto
-ms.date: 3/20/2023
+ms.date: 04/05/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual

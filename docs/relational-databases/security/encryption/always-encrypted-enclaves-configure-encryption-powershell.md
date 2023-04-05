@@ -4,7 +4,7 @@ description: "Configure column encryption using Always Encrypted with secure enc
 author: Pietervanhove
 ms.author: pivanho
 ms.reviewer: vanto
-ms.date: "3/20/2023"
+ms.date: "04/05/2023"
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
@@ -13,13 +13,13 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 # Configure column encryption in-place with PowerShell
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-This article provides the steps for setting the target Always Encrypted configuration for database columns using the [Set-SqlColumnEncryption](/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption) cmdlet (in the *SqlServer* PowerShell module). The **Set-SqlColumnEncryption** cmdlet modifies both the schema of the target database as well as the data stored in the selected columns. The data stored in a column can be encrypted, re-encrypted, or decrypted, depending on the specified target encryption settings for the columns and the current encryption configuration. To trigger in-place cryptographic operations using an enclave, **Set-SqlColumnEncryption** must use a database connection created using a connection string with the Attestation Protocol and optionally the Attestation URL keywords.
+This article provides the steps for setting the target Always Encrypted configuration for database columns using the [Set-SqlColumnEncryption](/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption) cmdlet (in the *SqlServer* PowerShell module). The **Set-SqlColumnEncryption** cmdlet modifies both the schema of the target database and the data stored in the selected columns. The data stored in a column can be encrypted, re-encrypted, or decrypted, depending on the specified target encryption settings for the columns and the current encryption configuration. To trigger in-place cryptographic operations using an enclave, **Set-SqlColumnEncryption** must use a database connection created using a connection string with the Attestation Protocol and optionally the Attestation URL keywords.
 
 ## Prerequisites
 
 To set the target encryption configuration, you need to make sure:
 - an enclave-enabled column encryption key is configured in the database (if you're encrypting or re-encrypting a column). For details, see [Manage keys for Always Encrypted with secure enclaves](../../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md).
-- you are connected to the database with Always Encrypted enabled and the attestation properties specified in the connection string.
+- you're connected to the database with Always Encrypted enabled and the attestation properties specified in the connection string.
 - you can access the column master key for each column you want to encrypt, re-encrypt, or decrypt, from the computer running the PowerShell cmdlets.
 - you use SqlServer PowerShell module version 22.0.50 or later.
 
@@ -29,7 +29,7 @@ The in-place **Set-SqlColumnEncryption** cmdlet doesn't support online encryptio
 
 With the offline approach, the target tables (and any tables related to the target tables, for example, any tables a target table have foreign key relationships with) are unavailable to write transactions throughout the duration of the operation. The semantics of foreign key constraints (**CHECK** or **NOCHECK**) are always preserved when using the offline approach.
 
-If you cannot afford downtime during the encryption process, we suggest to use [Configure column encryption in-place with Transact-SQL](always-encrypted-enclaves-configure-encryption-tsql.md) which supports online encryption.
+If you can't afford downtime during the encryption process, we suggest using [Configure column encryption in-place with Transact-SQL](always-encrypted-enclaves-configure-encryption-tsql.md), which supports online encryption.
 
 ## Security Considerations
 
@@ -46,7 +46,7 @@ Step 5. Set the desired encryption configuration, specified in the array of SqlC
 
 ## Encrypt Columns using VBS enclaves
 
-The below example demonstrates setting the target encryption configuration for a couple of columns. If either column isn't already encrypted, it will be encrypted. If any column is already encrypted using a different key and/or a different encryption type, it will be decrypted and then re-encrypted with the specified target key/type. VBS enclaves currently don't support attestation. The EnclaveAttestationProtocol parameter should be set to *None* and the EnclaveAttestationUrl is not required.
+The below example demonstrates setting the target encryption configuration for a couple of columns. If either column isn't already encrypted, it will be encrypted. If any column is already encrypted using a different key and/or a different encryption type, it will be decrypted and then re-encrypted with the specified target key/type. VBS enclaves currently don't support attestation. The EnclaveAttestationProtocol parameter should be set to *None* and the EnclaveAttestationUrl isn't required.
 
 
 ```PowerShell

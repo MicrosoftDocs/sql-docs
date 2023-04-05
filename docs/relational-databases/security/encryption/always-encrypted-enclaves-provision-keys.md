@@ -4,7 +4,7 @@ description: "Provision enclave-enabled keys"
 author: PieterVanhove
 ms.author: pivanho
 ms.reviewer: vanto
-ms.date: 3/22/2023
+ms.date: 04/05/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual

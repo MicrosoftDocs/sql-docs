@@ -4,7 +4,7 @@ description: Learn how to provision keys for Always Encrypted using the SqlServe
 author: Pietervanhove
 ms.author: pivanho
 ms.reviewer: vanto
-ms.date: 3/12/2023
+ms.date: 04/05/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual

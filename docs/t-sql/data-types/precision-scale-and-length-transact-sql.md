@@ -56,7 +56,7 @@ The operand expressions are denoted as expression e1, with precision p1 and scal
 In addition and subtraction operations, we need `max(p1 - s1, p2 - s2)` places to store integral part of the decimal number. If there isn't enough space to store them that is, `max(p1 - s1, p2 - s2) < min(38, precision) - scale`, the scale is reduced to provide enough space for integral part. Resulting scale is `MIN(precision, 38) - max(p1 - s1, p2 - s2)`, so the fractional part might be rounded to fit into the resulting scale.
 
 In multiplication and division operations, we need `precision - scale` places to store the integral part of the result. The scale might be reduced using the following rules:
-1.  The resulting scale is reduced to `min(scale, 38 - (precision-scale))` if the integral part is less than 32, because it can't be greater than `38 - (precision-scale)`. Result might be rounded in this case.
+1.  The resulting scale is reduced to `38 - (precision-scale)` if the integral part is less than 32, because it can't be greater than `38 - (precision-scale)`. Result might be rounded in this case.
 1. The scale won't be changed if it's less than 6 and if the integral part is greater than 32. In this case, overflow error might be raised if it can't fit into decimal(38, scale) 
 1. The scale will be set to 6 if it's greater than 6 and if the integral part is greater than 32. In this case, both integral part and scale would be reduced and resulting type is decimal(38,6). Result might be rounded to 6 decimal places or the overflow error will be thrown if the integral part can't fit into 32 digits.
 

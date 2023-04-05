@@ -25,7 +25,7 @@ This article describes how to use the [Azure portal](https://portal.azure.com) t
 - New virtual machines with SQL Server.
 - A Windows failover cluster.
 - An availability group.
-- A listener. 
+- A listener.
 
 > [!NOTE]
 > This deployment method is currently in preview. It supports SQL Server 2016 and later on Windows Server 2016 and later. 
@@ -45,7 +45,7 @@ To configure an Always On availability group by using the Azure portal, you must
 
 - A resource group
 
-- A virtual network
+- A virtual network with [custom DNS server IP](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md?#configure-virtual-network-dns)
 
 - A domain controller VM in the same virtual network
 

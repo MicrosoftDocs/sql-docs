@@ -4,7 +4,7 @@ description: Learn about the new features for and improvements to SQL Server on 
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 03/26/2023
+ms.date: 04/05/2023
 ms.service: virtual-machines-sql
 ms.subservice: service-overview
 ms.topic: reference
@@ -19,11 +19,11 @@ When you deploy an Azure virtual machine (VM) with SQL Server installed on it, e
 
 For updates made in previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md). 
 
-
 ## April 2023
 
 | Changes | Details |
 | --- | --- |
+| **Auto upgrade SQL IaaS Agent extension** | It's now possible to enable auto upgrade for your SQL IaaS Agent extension to ensure you're automatically receiving the latest updates to the extension every month. Review [SQL IaaS Agent Settings](manage-sql-vm-portal.md#sql-iaas-agent-extension-settings) to learn more. 
 | **Azure AD authentication GA** | Azure Active Directory (Azure AD) authentication is now generally available. Review [Configure Azure AD](configure-azure-ad-authentication-for-sql-vm.md) to learn more. |  
 
 ## March 2023

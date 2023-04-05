@@ -147,11 +147,11 @@ If you're using Maven to build or test your project, Maven automatically downloa
 
 ### Work with Azure Active Directory authentication
 
-- JDBC driver version 12.2.0—Dependency versions: Azure-identity(version 1.7.0), and their dependencies.
-- JDBC driver version 11.2.0—Dependency versions: Azure-identity(version 1.5.0), and their dependencies.
-- JDBC driver version 10.2.0—Dependency versions: Azure-identity(version 1.4.3), and their dependencies.
-- JDBC driver version 9.4.1—Dependency versions: Azure-identity(version 1.3.3), and their dependencies.
-- JDBC driver version 9.2.1—Dependency versions: Azure-identity(version 1.1.3), and their dependencies.
+- JDBC driver version 12.2.0—Dependency versions: Azure-identity (version 1.7.0), Msal4j (version 1.13.3), and their dependencies.
+- JDBC driver version 11.2.0—Dependency versions: Azure-identity (version 1.5.0), and their dependencies.
+- JDBC driver version 10.2.0—Dependency versions: Azure-identity (version 1.4.3), and their dependencies.
+- JDBC driver version 9.4.1—Dependency versions: Azure-identity (version 1.3.3), and their dependencies.
+- JDBC driver version 9.2.1—Dependency versions: Azure-identity (version 1.1.3), and their dependencies.
 - JDBC Driver version 8.4.1—Dependency versions: Adal4j (version 1.6.5), Client-Runtime-for-AutoRest (1.7.4), and their dependencies.
 - JDBC Driver version 8.2.2—Dependency versions: Adal4j (version 1.6.4), Client-Runtime-for-AutoRest (1.7.0), and their dependencies. In this version of the driver, 'sqljdbc_auth.dll' has been renamed to 'mssql-jdbc_auth-\<version>-\<arch>.dll'.
 - JDBC Driver version 7.4.1—Dependency versions: Adal4j (version 1.6.4), Client-Runtime-for-AutoRest (1.6.10), and their dependencies

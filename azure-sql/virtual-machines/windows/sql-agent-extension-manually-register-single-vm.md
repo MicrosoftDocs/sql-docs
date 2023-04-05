@@ -4,7 +4,7 @@ description: Learn how to register your SQL Server on Azure Windows VM with the 
 author: adbadram
 ms.author: adbadram
 ms.reviewer: mathoma
-ms.date: 03/26/2023
+ms.date: 04/05/2023
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to
@@ -157,24 +157,6 @@ az sql vm show -n <vm_name> -g <resource_group>
 ---
 
 An error indicates that the SQL Server VM hasn't been registered with the extension.
-
-## Repair extension
-
-It's possible for your SQL IaaS Agent extension to be in a failed state. Use the Azure portal to repair the SQL IaaS Agent extension. 
-
-To repair the extension with the Azure portal:  
-
-1. Sign in to the [Azure portal](https://portal.azure.com).
-1. Go to your [SQL Server VMs](manage-sql-vm-portal.md).
-1. Select your SQL Server VM from the list. If your SQL Server VM isn't listed here, it likely hasn't been registered with the SQL IaaS Agent extension.
-1. Select **Repair** under **Support + Troubleshooting** in the **SQL virtual machine** resource page. 
-
-   :::image type="content" source="media/sql-agent-extension-manually-register-single-vm/repair-extension.png" alt-text="Select **Repair** under **Support + Troubleshooting** in the **SQL virtual machine** resource page":::   
-
-1. If your provisioning state shows as **Failed**, choose **Repair** to repair the extension. If your state is **Succeeded** you can check the box next to **Force repair** to repair the extension regardless of state. 
-
-   ![If your provisioning state shows as **Failed**, choose **Repair** to repair the extension. If your state is **Succeeded** you can check the box next to **Force repair** to repair the extension regardless of state.](./media/sql-agent-extension-manually-register-single-vm/force-repair-extension.png)
-
 
 ## Unregister from extension
 

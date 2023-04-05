@@ -31,7 +31,7 @@ To understand capture job behavior, you must understand how the configurable par
   
 #### maxtrans Parameter
 
-The `maxtrans` parameter specifies the maximum number of transactions that can be processed in a single scan cycle of the log. If, during the scan, the number of transactions to be processed reaches this limit, no additional transactions are included in the current scan. After a scan cycle is complete, the number of transactions that were processed will always be less than or equal to `maxtrans`.
+The `maxtrans` parameter specifies the maximum number of transactions that can be processed in a single scan cycle of the log. If during the scan the number of transactions to be processed reaches this limit, no additional transactions are included in the current scan. After a scan cycle is complete, the number of transactions that were processed will always be less than or equal to `maxtrans`.
 
 #### maxscans Parameter
 
@@ -53,11 +53,11 @@ In one-shot mode, the capture job requests `sp_cdc_scan` to perform up to `maxtr
   
  Even if the time that is required to scan the log and populate the change tables were not significantly different from 0, the average throughput of the job could not exceed the value obtained by dividing the maximum allowed transactions for a single scan multiplied by the maximum allowed scans by the number of seconds separating log processing.  
   
- If one-shot mode were to be used to regulate log scanning, the number of seconds between log processing would have to be governed by the job schedule. When this kind of behavior is desired, running the capture job in continuous mode is a better way to manage rescheduling the log scan.  
+ If one-shot mode were to be used to regulate log scanning, the number of seconds between log processing would have to be governed by the job schedule. When this kind of behavior is desired, running the capture job in continuous mode is a better way to reschedule the log scan.  
   
 ##### Continuous mode and polling interval
 
-In continuous mode, the capture job requests that `sp_cdc_scan` run continuously. This lets the stored procedure manage its own wait loop by providing not only for maxtrans and maxscans but also a value for the number of seconds between log processing (the polling interval). Running in this mode, the capture job remains active, executing a `WAITFOR` between log scanning.  
+In continuous mode, the capture job requests that `sp_cdc_scan` run continuously. This lets the stored procedure manage its own wait loop by providing not only for `maxtrans` and `maxscans` but also a value for the number of seconds between log processing (the polling interval). In continuous mode, the capture job remains active, executing a `WAITFOR` between log scanning.  
   
 > [!NOTE]  
 > When the value of the polling interval is greater than 0, the same upper limit on throughput for the recurring one-shot job also applies to the job operation in continuous mode. That is, (`maxtrans` \* `maxscans`) divided by a nonzero polling interval will put an upper bound on the average number of transactions that can be processed by the capture job.  

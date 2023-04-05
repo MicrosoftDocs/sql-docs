@@ -111,7 +111,7 @@ Generally, there is no difference in defragmentation quality between resumable a
 >  
 > `Msg 10637, Level 16, State 1, Line 32: Cannot perform this operation on 'object' with ID (objectid) as one or more indexes are currently in resumable index rebuild state. Please refer to sys.index_resumable_operations for more details.`
 > 
-> To resolve error 10637, remove the `TABLOCK` hint from your transaction.
+> To resolve error 10637, remove the `TABLOCK` hint from your transaction, or unpause the index operation and wait for it to complete before attempting your transaction again. 
 
 ## Online default options
 

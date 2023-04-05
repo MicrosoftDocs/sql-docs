@@ -7,6 +7,7 @@ ms.date: 08/26/2016
 ms.service: reporting-services
 ms.subservice: security
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "security [Reporting Services]"
   - "Reporting Services, security"

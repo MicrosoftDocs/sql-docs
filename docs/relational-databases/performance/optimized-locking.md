@@ -19,7 +19,7 @@ monikerRange: "=azuresqldb-current"
 
 [!INCLUDE [asdb](../../includes/applies-to-version/asdb.md)]
 
-This article introduces the optimized locking feature, a new [!INCLUDE[SQL Server Database Engine](../../includes/ssdenoversion-md.md)] capability that offers an improved transaction locking mechanism that reduces lock memory consumption and blocking amongst concurrent transactions.
+This article introduces the optimized locking feature, a new [!INCLUDE[SQL Server Database Engine](../../includes/ssdenoversion-md.md)] capability that offers an improved transaction locking mechanism that reduces lock memory consumption and blocking for concurrent transactions.
 
 ## What is optimized locking?
 

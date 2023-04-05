@@ -7,6 +7,7 @@ ms.date: 09/14/2015
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "Reporting Services Configuration tool"
   - "WMI provider [Reporting Services], remote configuration"

@@ -44,7 +44,7 @@ Completing this quickstart requires the following items:
   > [!IMPORTANT]
   > The scripts in this article are written to use the Adventure Works database. With a managed instance, you must either import the Adventure Works database into an instance database or modify the scripts in this article to use the Wide World Importers database.
 
-If you simply want to run some ad-hoc queries without installing SSMS, see [Quickstart: Use the Azure portal's query editor to query a database in Azure SQL Database](connect-query-portal.md).
+If you simply want to run some ad hoc queries without installing SSMS, use [the Azure portal's query editor to query a database in Azure SQL Database](query-editor.md).
 
 ## Get server connection information
 
@@ -184,7 +184,7 @@ Run this [DELETE](/sql/t-sql/statements/delete-transact-sql/) Transact-SQL code 
 ## Next steps
 
 - For information about SSMS, see [SQL Server Management Studio](/sql/ssms/sql-server-management-studio-ssms/).
-- To connect and query using the Azure portal, see [Connect and query with the Azure portal SQL Query editor](connect-query-portal.md).
+- To connect and query using the Azure portal, see [Connect and query with the Azure portal SQL Query editor](query-editor.md).
 - To connect and query using Visual Studio Code, see [Connect and query with Visual Studio Code](connect-query-vscode.md).
 - To connect and query using .NET, see [Connect and query with .NET](connect-query-dotnet-visual-studio.md).
 - To connect and query using PHP, see [Connect and query with PHP](connect-query-php.md).

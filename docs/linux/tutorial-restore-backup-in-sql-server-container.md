@@ -501,4 +501,6 @@ In this tutorial, you learned how to back up a database on Windows and move it t
 Next, review other container configuration and troubleshooting scenarios:
 
 > [!div class="nextstepaction"]
-> [Configuration guide for SQL Server 2017 on Linux containers](./sql-server-linux-docker-container-deployment.md)
+> [Deploy and connect to SQL Server Linux containers](./sql-server-linux-docker-container-deployment.md)
+
+[!INCLUDE [contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

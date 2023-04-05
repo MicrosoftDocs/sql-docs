@@ -7,6 +7,7 @@ ms.date: 06/10/2017
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "report servers [Reporting Services], how-to topics"
 ---

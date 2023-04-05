@@ -7,6 +7,7 @@ ms.date: 12/12/2018
 ms.service: reporting-services
 ms.subservice: developer
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Develop with the REST APIs for Reporting Services

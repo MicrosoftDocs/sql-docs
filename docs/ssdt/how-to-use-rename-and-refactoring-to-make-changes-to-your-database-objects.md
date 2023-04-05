@@ -26,7 +26,7 @@ The Refactor contextual menu in the Transact\-SQL Editor allows you to rename or
   
 1.  Right-click the **Products** table (Products.sql) in **Solution Explorer** and select **View Code** to open the script in Transact\-SQL editor.  
   
-2.  Right click `[Products]` in the script, select **Refactor**, and **Rename**.  
+2.  Right-click `[Products]` in the script, select **Refactor**, and **Rename**.  
   
 3.  In the **New Name** field, change it to **Product**. Leave the **Preview Changes** option checked and click **OK**.  
   

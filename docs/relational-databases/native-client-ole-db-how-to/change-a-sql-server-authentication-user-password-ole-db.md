@@ -10,7 +10,7 @@ ms.topic: "reference"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Change a SQL Server Native Client Authentication User Password (OLE DB)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   This sample shows how to use OLE DB to change the password of a user account under [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.  
   
@@ -24,7 +24,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  Compile with ole32.lib oleaut32.lib.  
   
- To build this sample, you will need a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication user account for which you know the password. To allow logins under [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, open [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio, right click on the Server node in Object Explorer, and select Properties. Select Security and enable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows Authentication mode. To add a user account under [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, right click the Security node in Object Explorer and select Add.  
+ To build this sample, you will need a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication user account for which you know the password. To allow logins under [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, open [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio, right-click on the Server node in Object Explorer, and select Properties. Select Security and enable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows Authentication mode. To add a user account under [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, right-click the Security node in Object Explorer and select Add.  
   
  The server on which you will run this sample must have at least one login enabled for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. The server must also be enabled to allow [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication logins.  
   

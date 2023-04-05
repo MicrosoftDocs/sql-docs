@@ -128,7 +128,7 @@ To run an on-demand assessment by using the Azure portal, select **Run assessmen
 To run an on-demand assessment by using the Azure CLI, using the following command:
 
 ```azure-cli
-# This will start an on-demand assessment run. You can track progress of the run or view results on the SQL virtual machine resource via Azure Portal
+# This will start an on-demand assessment run. You can track progress of the run or view results on the SQL virtual machines resource via Azure Portal
 az sql vm start-assessment -g "myRg" -n "myVM"
 ```
 

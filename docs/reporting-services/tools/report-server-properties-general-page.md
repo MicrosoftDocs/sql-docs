@@ -7,6 +7,7 @@ ms.date: 06/08/2016
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
+ms.custom: updatefrequency5
 f1_keywords:
   - "sql13.swb.reportserver.serverproperties.general.f1"
 ---

@@ -4265,6 +4265,8 @@ items:
     href: relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md
   - name: Optimized locking
     href: relational-databases/performance/optimized-locking.md
+  - name: Deadlocks guide
+    href: relational-databases/sql-server-deadlocks-guide.md
   - name: Memory Management Architecture
     href: relational-databases/memory-management-architecture-guide.md
   - name: Diagnosing latch contention
@@ -10429,10 +10431,12 @@ items:
             href: sql-server/azure-arc/connect-already-enabled.md
         - name: Connect at scale
           items:
-          - name: Connect at scale | Azure policy
+          - name: Azure policy
             href: sql-server/azure-arc/connect-at-scale-policy.md
-          - name: Connect at scale | Script
+          - name: Script
             href: sql-server/azure-arc/connect-at-scale-script.md
+          - name: Autodeploy
+            href: sql-server/azure-arc/connect-at-scale-autodeploy.md
           - name: Connect machines using Configuration Manager custom task sequence
             href: sql-server/azure-arc/onboard-configuration-manager-custom-task.md
     - name: Manage
@@ -15730,6 +15734,8 @@ items:
         href: relational-databases/system-tables/msqreader-agents-transact-sql.md
       - name: MSqreader_history
         href: relational-databases/system-tables/msqreader-history-transact-sql.md
+      - name: MSrepl_agent_jobs
+        href: relational-databases/system-tables/msrepl-agent-jobs-transact-sql.md
       - name: MSrepl_backup_lsns
         href: relational-databases/system-tables/msrepl-backup-lsns-transact-sql.md
       - name: MSrepl_commands
@@ -15742,6 +15748,8 @@ items:
         href: relational-databases/system-tables/msrepl-originators-transact-sql.md
       - name: MSrepl_queuedtraninfo
         href: relational-databases/system-tables/msrepl-queuedtraninfo-transact-sql.md
+      - name: MSreplservers
+        href: relational-databases/system-tables/msreplservers.md
       - name: MSrepl_transactions
         href: relational-databases/system-tables/msrepl-transactions-transact-sql.md
       - name: MSrepl_version

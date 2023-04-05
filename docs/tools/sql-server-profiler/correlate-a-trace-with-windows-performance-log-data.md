@@ -34,7 +34,7 @@ Using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], you can ope
   
 ### To create performance logs that can be shared among different versions of Windows  
   
-1.  In Control Panel, open **Administrative Tools**, and then double click **Performance**.  
+1.  In Control Panel, open **Administrative Tools**, and then double-click **Performance**.  
   
 2.  In the **Performance** dialog box, expand **Performance Logs and Alerts**, right-click **Counter Logs**, and then click **New Log Settings**.  
   

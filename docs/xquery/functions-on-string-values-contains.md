@@ -14,7 +14,7 @@ dev_langs:
   - "XML"
 ---
 # Functions on String Values - contains
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   Returns a value of type xs:boolean indicating whether the value of *$arg1* contains a string value specified by *$arg2*.  
   

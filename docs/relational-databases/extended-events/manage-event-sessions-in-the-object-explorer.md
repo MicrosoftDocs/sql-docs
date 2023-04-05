@@ -57,7 +57,7 @@ STATE = STOP
 ```  
   
 ### Start or Stop an Extended Events Session in Object Explorer  
- To start or stop an Extended Events session in **Object Explorer**, expand the **Management**, **Extended Events**, and then **Sessions** nodes and right click on a session and then click **Start Session** or **Stop Session**.  
+ To start or stop an Extended Events session in **Object Explorer**, expand the **Management**, **Extended Events**, and then **Sessions** nodes and right-click on a session and then click **Start Session** or **Stop Session**.  
   
 ## Export an Extended Events Session Template  
  You can export an Extended Events session using **Object Explorer**, and save it as an .xml template file. For example, you may want to export a session and then apply the template to a new event session using the **New Session Wizard** or the **New Session** wizard.  
@@ -111,7 +111,7 @@ STATE = STOP
 ## Script an Event Session Definition Using [!INCLUDE[tsql](../../includes/tsql-md.md)]  
  Both the New Session Wizard and the New Session dialog have a Script option that generates the [!INCLUDE[tsql](../../includes/tsql-md.md)] that defines the Extended Events session.  
   
- You can access the [!INCLUDE[tsql](../../includes/tsql-md.md)] for an existing Extended Events session by right clicking the session name, selecting **Script Session as**, and then selecting **Create to**.  
+ You can access the [!INCLUDE[tsql](../../includes/tsql-md.md)] for an existing Extended Events session by right-clicking the session name, selecting **Script Session as**, and then selecting **Create to**.  
   
 ## Delete an Extended Events Session  
  You can delete an Extended Events session:  

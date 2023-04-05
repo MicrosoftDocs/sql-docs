@@ -7,6 +7,7 @@ ms.date: 09/11/2015
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "render"
   - "powerpoint"

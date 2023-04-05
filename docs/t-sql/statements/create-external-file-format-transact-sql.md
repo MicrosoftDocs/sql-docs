@@ -1,10 +1,10 @@
 ---
 title: "CREATE EXTERNAL FILE FORMAT (Transact-SQL)"
 description: "CREATE EXTERNAL FILE FORMAT (Transact-SQL) Creates an external file format object defining external data stored in Hadoop, Azure Blob Storage, Azure Data Lake Store or for the input and output streams associated with external streams."
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 10/05/2022
+ms.date: 03/28/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -31,12 +31,11 @@ The following file formats are supported:
 
 - **Hive RCFile**
 
-  Does not apply to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] or [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] .
+  Doesn't apply to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], or [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] .
   
-
 - **Hive ORC**
 
-  Does not apply to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] or [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] .
+  Doesn't apply to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], or [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] .
 
 - **Parquet**
 
@@ -69,10 +68,12 @@ WITH (
 {
     FIELD_TERMINATOR = field_terminator
     | STRING_DELIMITER = string_delimiter
-    | First_Row = integer -- ONLY AVAILABLE FOR AZURE SYNAPSE ANALYTICS
+    | FIRST_ROW = integer -- ONLY AVAILABLE FOR AZURE SYNAPSE ANALYTICS
     | DATE_FORMAT = datetime_format
     | USE_TYPE_DEFAULT = { TRUE | FALSE }
-    | Encoding = {'UTF8' | 'UTF16'}
+    | ENCODING = {'UTF8' | 'UTF16'}
+    | PARSER_VERSION = {'parser_version'}
+
 }
 ```
 <!---'org.apache.hadoop.io.compress.DefaultCodec' removed from delimited text -->
@@ -154,39 +155,45 @@ WITH (
 
 Specifies a name for the external file format.
 
-### FORMAT_TYPE = [ PARQUET | ORC | RCFILE | DELIMITEDTEXT | DELTA ]
+### FORMAT_TYPE 
 
 Specifies the format of the external data.
 
-- PARQUET
+- FORMAT_TYPE = PARQUET
 
   Specifies a Parquet format.
 
-- ORC
+- FORMAT_TYPE = ORC
 
   Specifies an Optimized Row Columnar (ORC) format. This option requires Hive version 0.11 or higher on the external Hadoop cluster. In Hadoop, the ORC file format offers better compression and performance than the RCFILE file format.
 
-- RCFILE (in combination with SERDE_METHOD = *SERDE_method*)
+- FORMAT_TYPE = RCFILE, SERDE_METHOD = *SERDE_method*
 
   Specifies a Record Columnar file format (RcFile). This option requires you to specify a Hive Serializer and Deserializer (SerDe) method. This requirement is the same if you use Hive/HiveQL in Hadoop to query RC files. Note, the SerDe method is case-sensitive.
 
   Examples of specifying RCFile with the two SerDe methods that PolyBase supports.
+  - `FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'`
+  - `FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe'`
 
-  - FORMAT_TYPE = RCFILE, SERDE_METHOD = `org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe`
-
-  - FORMAT_TYPE = RCFILE, SERDE_METHOD = `org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe`
-
-- DELIMITEDTEXT
+- FORMAT_TYPE = DELIMITEDTEXT
 
   Specifies a text format with column delimiters, also called field terminators.
 
-- JSON
+- FORMAT_TYPE = JSON
 
   Specifies a JSON format. Applies to Azure SQL Edge only.
 
-- DELTA
+- FORMAT_TYPE = DELTA
 
-  Specifies a Delta Lake format. Applies to serverless SQL pools in Azure Synapse Analytics and [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]
+  Specifies a Delta Lake format. Applies to serverless SQL pools in Azure Synapse Analytics and [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
+
+### FORMAT_OPTIONS
+
+Optional. Only for delimited text data types.
+
+Only serverless SQL pools in Azure Synapse Analytics support `PARSER_VERSION`.
+
+Serverless SQL pools do not support the `DATE_FORMAT` option. 
 
 ### DATA_COMPRESSION = *data_compression_method*
 
@@ -361,11 +368,13 @@ Details:
 
   When retrieving data from the text file, store each missing value by using the default value for the data type of the corresponding column in the external table definition. For example, replace a missing value with:
 
-  - 0 if the column is defined as a numeric column. Decimal columns aren't supported and will error.
+  - `0` if the column is defined as a numeric column. Decimal columns aren't supported and will error.
 
   - Empty string "" if the column is a string column.
 
   - 1900-01-01 if the column is a date column.
+
+  - In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], `USE_TYPE_DEFAULT=true` is not supported for `FORMAT_TYPE = DELIMITEDTEXT, PARSER_VERSION = '2.0'`.
 
 - FALSE
 
@@ -373,7 +382,9 @@ Details:
 
 #### ENCODING = {'UTF8' | 'UTF16'}
 
-In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] (APS CU7.4), PolyBase can read UTF8 and UTF16-LE encoded delimited text files. In SQL Server, PolyBase doesn't support reading UTF16 encoded files.
+In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] (APS CU7.4), PolyBase can read UTF8 and UTF16-LE encoded delimited text files. 
+
+In SQL Server, PolyBase doesn't support reading UTF16 encoded files.
 
 ## Permissions
 
@@ -479,7 +490,7 @@ WITH (FORMAT_TYPE = DELIMITEDTEXT,
           STRING_DELIMITER = '"',
           FIRST_ROW = 2,
           USE_TYPE_DEFAULT = True)
-)
+);
 ```
 
 ### F. Create a JSON external file format
@@ -502,9 +513,9 @@ This example creates an external file format for Delta table type file format. T
 
 ```sql
 CREATE EXTERNAL FILE FORMAT DeltaFileFormat
-WITH(
+WITH (
     FORMAT_TYPE = DELTA
-    );
+);
 ```
 
 ## Next steps

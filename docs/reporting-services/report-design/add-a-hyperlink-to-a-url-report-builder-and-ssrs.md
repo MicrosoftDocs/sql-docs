@@ -7,6 +7,7 @@ ms.date: 09/07/2016
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Add a hyperlink to a URL in a paginated report (Report Builder)
 

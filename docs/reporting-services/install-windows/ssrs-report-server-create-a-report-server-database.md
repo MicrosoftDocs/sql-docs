@@ -6,6 +6,7 @@ ms.author: maggies
 ms.date: 02/13/2023
 ms.service: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Create a report server database, Report Server Configuration Manager  

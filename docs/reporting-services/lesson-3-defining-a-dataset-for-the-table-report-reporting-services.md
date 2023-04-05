@@ -7,6 +7,7 @@ ms.date: 05/01/2019
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Lesson 3: Define a Dataset for the Table Report - SQL Server Reporting Services
 

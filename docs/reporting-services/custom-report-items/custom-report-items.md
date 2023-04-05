@@ -7,6 +7,7 @@ ms.date: 03/03/2017
 ms.service: reporting-services
 ms.subservice: custom-report-items
 ms.topic: reference
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "extending Reporting Services"
   - "Reporting Services, extending"

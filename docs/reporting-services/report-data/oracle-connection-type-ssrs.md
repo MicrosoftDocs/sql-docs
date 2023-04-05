@@ -7,6 +7,7 @@ ms.date: 08/09/2022
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Oracle Connection Type (SSRS & Power BI Report Server)
 

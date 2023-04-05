@@ -6,6 +6,7 @@ ms.author: maggies
 ms.date: 01/17/2018
 ms.service: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Troubleshoot a Reporting Services installation

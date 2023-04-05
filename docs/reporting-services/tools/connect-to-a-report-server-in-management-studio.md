@@ -7,6 +7,7 @@ ms.date: 05/07/2019
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
+ms.custom: updatefrequency5
 f1_keywords:
   - "sql13.swb.connecttors.connectionproperties.f1"
   - "sql13.swb.connecttors.login.f1"

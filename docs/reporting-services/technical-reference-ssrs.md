@@ -7,6 +7,7 @@ ms.date: 05/30/2017
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "Reporting Services, technical reference"
   - "technical reference [Reporting Services]"

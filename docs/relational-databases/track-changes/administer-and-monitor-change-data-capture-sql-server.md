@@ -1,6 +1,6 @@
 ---
 title: "Administer and monitor change data capture"
-description: "Learn how to administer and monitor change data capture on SQL Server, Azure SQL Managed Instance, and Azure SQL Database. "
+description: "Learn how to administer and monitor change data capture on SQL Server, Azure SQL Managed Instance, and Azure SQL Database."
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 03/16/2023
@@ -17,7 +17,7 @@ helpviewer_keywords:
 This topic describes how to administer and monitor change data capture.  
   
 > [!NOTE]  
-> In Azure SQL Database, the capture and cleanup SQL Server Agent jobs are replaced by a change data capture scheduler that invokes stored procedures to start periodic capture and cleanup of the change tables. For more information, see the section on [CDC in Azure SQL Database](#cdc-in-azure-sql-database) later in this doc.
+> In Azure SQL Database, the capture and cleanup SQL Server Agent jobs are replaced by a change data capture scheduler that invokes stored procedures to start periodic capture and cleanup of the change tables. For more information, see the section on [CDC in Azure SQL Database](#cdc-in-azure-sql-database) later in this article.
 
 ## <a name="Capture"></a> Capture job
 

@@ -236,6 +236,7 @@ Depending on the update being applied, additional steps may be required for AG r
 
    > [!NOTE]  
    > This command may take several minutes to run.
+   > This step is not needed if you are on SQL 2019 CU1 and above. Check this [KB](https://support.microsoft.com/en-au/topic/kb4530283-improvement-execute-database-upgrade-scripts-when-database-state-changes-in-sql-server-2019-c824dd2a-2527-8d5d-82ef-b6c9f108ec9a) 
 
 1. Upgrade the instance that was originally the primary replica.
 

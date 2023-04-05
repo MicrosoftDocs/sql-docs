@@ -175,7 +175,7 @@ When TDE is configured to use a customer-managed key, continuous access to the T
 After access to the key is restored, taking database back online requires extra time and steps, which may vary based on the time elapsed without access to the key and the size of the data in the database:
 
 > [!NOTE]
-> - If key access is restored within 30 minutes, the database will autoheal within next hour.
+> - If key access is restored within 30 minutes, the database will autoheal within the next hour.
 > - If key access is restored after more than 30 minutes, autoheal of the database isn't possible. Bringing back the database requires extra steps on the Azure portal and can take a significant amount of time depending on the size of the database.
 > - Once the database is back online, previously configured server-level settings that may include [failover group](auto-failover-group-sql-db.md) configuration, tags, and database-level settings such as elastic pools configuration, read scale, auto pause, point-in-time-restore history, long term retention policy, and others will be lost. Therefore, it's recommended that customers implement a notification system that identifies loss of encryption key access within 30 minutes. Once the 30 minutes window has expired, we recommend validating all server and database level settings on the recovered database.
 

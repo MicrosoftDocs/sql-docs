@@ -238,12 +238,16 @@ To use **Resource Graph Explorer** to identify SQL managed instances that are st
 
 1. The **Results** pane displays all the deployed instances in Azure that are using Gen4 hardware.
 
+:::image type="content" source="media/resource-limits/gen4-resource-graph-explorer.png" alt-text="Screenshot of the query results in Azure Resource Graph Explorer in the Azure portal.":::
+
 To check the hardware used by resources for a specific SQL managed instance in Azure, follow these steps: 
 
 1. Go to the [Azure portal](https://portal.azure.com). 
 1. Search for `SQL managed instances` in the search box and choose **SQL managed instances** from the search results to open the **SQL managed instances** page and view all instances for the chosen subscription(s). 
 1. Select the SQL managed instance of interest to open the **Overview** page for the SQL managed instance. 
 1. Check the **Pricing tier** under **Essentials** to verify what hardware your managed instance is using. 
+
+:::image type="content" source="media/resource-limits/sqlmi-pricing-tier.png" alt-text="Screenshot of the overview page for SQL MI resource with pricing tier highlighted. ":::
 
 ### Hardware characteristics
 

@@ -32,10 +32,10 @@ To repair the extension with the Azure portal:
 1. Sign in to the [Azure portal](https://portal.azure.com).
 1. Go to your [SQL virtual machines](manage-sql-vm-portal.md) resource.
 1. Select your SQL Server VM from the list. If your SQL Server VM isn't listed here, it likely hasn't been registered with the SQL IaaS Agent extension.
-1. Select **SQL IaaS Agent Extension Settings**. 
+1. Select **SQL IaaS Agent Extension Settings** under **Help**. 
 1. If your provisioning state shows as **Failed**, choose **Repair** to repair the extension. If your state is **Succeeded** you can check the box next to **Force repair** to repair the extension regardless of state. 
 
-   :::image type="content" source="media/sql-agent-extension-troubleshoot-known-issues/repair-extension.png" alt-text="Select **Repair** under **Support + Troubleshooting** in the **SQL virtual machine** resource page":::   
+   :::image type="content" source="media/sql-agent-extension-troubleshoot-known-issues/repair-extension.png" alt-text="Screenshot of the SQL IaaS Agent extension settings page of the SQL virtual machines extension in the Azure portal showing where to repair the extension.":::   
 
 
 ## Not valid state for management

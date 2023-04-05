@@ -45,7 +45,7 @@ To configure an Always On availability group by using the Azure portal, you must
 
 - A resource group
 
-- A virtual network with [custom DNS server IP](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md?#configure-virtual-network-dns)
+- A virtual network with [custom DNS server IP address configured](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md?#configure-virtual-network-dns)
 
 - A domain controller VM in the same virtual network
 

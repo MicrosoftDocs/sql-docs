@@ -4,7 +4,7 @@ description: Learn how Row-Level Security uses group membership or execution con
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: wiassaf
-ms.date: 09/16/2022
+ms.date: 04/05/2023
 ms.service: sql
 ms.subservice: "security"
 ms.topic: conceptual
@@ -630,9 +630,9 @@ WITH (STATE = ON) ;
 
 Allow SELECT permissions to the fn_securitypredicate function
 ```sql
-GRANT SELECT ON security.fn_securitypredicate TO Manager;
-GRANT SELECT ON security.fn_securitypredicate TO Sales1;
-GRANT SELECT ON security.fn_securitypredicate TO Sales2;
+GRANT SELECT ON Security.fn_securitypredicate TO Manager;
+GRANT SELECT ON Security.fn_securitypredicate TO Sales1;
+GRANT SELECT ON Security.fn_securitypredicate TO Sales2;
 ```
 
 Now test the filtering predicate, by selected from the `Sales` table as each user.

@@ -187,7 +187,7 @@ However, some limited customizations are supported.
 
 - The frequency of the CDC capture and cleanup jobs cannot be customized.
 - The `pollinginterval` and `continuous` values are not used in Azure SQL DB for capture and cleanup jobs.
-- Dropping the capture job entry from the `cdc.cdc_jobs` table will not stop the capture job running in the background.
+- Dropping the capture job entry from the `cdc.cdc_jobs` table doesn't stop the capture job running in the background.
 - Dropping the cleanup job causes the cleanup job to not run.
 - The `cdc.cdc_jobs` table exists in the `cdc` schema, not `msdb`.
 

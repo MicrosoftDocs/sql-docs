@@ -1,6 +1,6 @@
 ---
 title: Shrink the tempdb database
-description: Learn how to shrink the tempdb database by using using Transact-SQL.
+description: Learn how to shrink the tempdb database by using Transact-SQL.
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 04/04/2023

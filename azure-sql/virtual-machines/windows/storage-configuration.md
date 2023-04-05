@@ -251,7 +251,7 @@ In Windows Server 2008 to 2012 R2, the default value for `-StorageSubsystemFrien
 
 ### Configure Disk option or Storage Configuration blade on SQL virtual machine resource is grayed out
 
-The **Storage Configuration** blade can be grayed out in the Azure portal if your SQL IaaS Agent extension is in a failed state. [Repair the SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md#repair-extension). 
+The **Storage Configuration** blade can be grayed out in the Azure portal if your SQL IaaS Agent extension is in a failed state. [Repair the SQL IaaS Agent extension](sql-agent-extension-troubleshoot-known-issues.md#repair-extension). 
 
 **Configure** on the Storage Configuration blade can be grayed out if you've customized your storage pool, or if you are using a non-Marketplace image. 
 

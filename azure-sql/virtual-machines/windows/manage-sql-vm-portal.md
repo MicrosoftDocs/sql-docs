@@ -128,7 +128,11 @@ Use the **Defender for SQL** page of the SQL virtual machine's resource to view 
 
 :::image type="content" source="./media/manage-sql-vm-portal/sql-vm-security-center.png" alt-text="Screenshot of the Azure portal, SQL virtual machines resource, showing where to configure SQL Server Defender for Cloud settings.":::
 
+## SQL IaaS Agent Extension Settings 
 
+From the **SQL IaaS Agent Extension Settings** page, you can [repair the extension](sql-agent-extension-troubleshoot-known-issues.md#repair-extension) and you can enable auto upgrade to ensure you're automatically receiving updates for the extension each month. 
+
+:::image type="content" source="media/manage-sql-vm-portal/sql-iaas-agent-settings.png" alt-text="Screenshot of the SQL IaaS Agent Extension Settings page for your SQL virtual machines resource in the Azure portal.":::
 
 ## Next steps
 

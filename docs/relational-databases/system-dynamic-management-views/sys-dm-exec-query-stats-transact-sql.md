@@ -129,7 +129,7 @@ Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 ## Examples  
   
 ### A. Finding the TOP N queries  
- The following example returns information about the top five queries ranked by average CPU time. This example aggregates the queries according to their query hash so that logically equivalent queries are grouped by their cumulative resource consumption. The Sample_Statement_Text column shows an example of the query structure that matches the query hash, but it should be read without regard to specific values in the statement. For example, if the statement contains `WHERE Id = 5`, read it in its generic form `WHERE Id = @some_value`
+ The following example returns information about the top five queries ranked by average CPU time. This example aggregates the queries according to their query hash so that logically equivalent queries are grouped by their cumulative resource consumption. The Sample_Statement_Text column shows an example of the query structure that matches the query hash, but it should be read without regard to specific values in the statement. For example, if a statement contains `WHERE Id = 5`, you may read it in its more generic form: `WHERE Id = @some_value`
   
 ```sql  
 SELECT TOP 5 query_stats.query_hash AS Query_Hash,   

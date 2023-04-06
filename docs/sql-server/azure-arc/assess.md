@@ -43,8 +43,8 @@ Resource group or Subscription of Arc Machine.
 
 - The minimum permissions required to access or read the assessmnet report are following:
 - Reader role on the resource group or subscription of the Arc-enabled SQL Server resource.
-- [Log analytics reader](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fazure%2Fazure-monitor%2Flogs%2Fmanage-access%3Ftabs%3Dportal%23log-analytics-reader&data=05%7C01%7Crajpo%40microsoft.com%7C561cac54b5364088099908db36c2e746%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638163982964328525%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=YrhPUZBbkHxpl%2BwVboR05ktpuxqjWirWmmtKBSuiZh8%3D&reserved=0) role on Log analytics workspace.
-- [Monitoring reader](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fazure%2Frole-based-access-control%2Fbuilt-in-roles%23monitoring-reader&data=05%7C01%7Crajpo%40microsoft.com%7C561cac54b5364088099908db36c2e746%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638163982964328525%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=cSSeeaI8iK3ClqsTg6jl3CVCwgS%2BiHv2UAh%2F7bz0Or0%3D&reserved=0) on resource group/subscription of Log analytics workspace.
+- [Log analytics reader](/azure/azure-monitor/logs/manage-access?tabs=portal#log-analytics-reader).
+- [Monitoring reader](/azure/role-based-access-control/built-in-roles#monitoring-reader) on resource group/subscription of Log analytics workspace.
 - The SQL Server built-in login **NT AUTHORITY\SYSTEM** must be the member of SQL Server **sysadmin** server role for all the SQL Server instances running on the machine. 
 - If outbound connectivity is restricted by your firewall or proxy server, make sure the URLs from target SQL Server machine, make sure the URLs listed below allowed access to Azure Arc over TCP port 443.
 

@@ -7880,6 +7880,10 @@ items:
             items:
               - name: Configure column encryption
                 href: relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption.md
+              - name: Configure columns encryption in-place with DACPAC
+                href: relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption-dacpac.md
+              - name: Configure column encryption in-place with PowerShell
+                href: relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption-powershell.md 
               - name: Configure column encryption in-place with Transact-SQL 
                 href: relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption-tsql.md
               - name: Enable Always Encrypted with secure enclaves for existing encrypted columns
@@ -7891,7 +7895,7 @@ items:
           - name: Create and use indexes on enclave-enabled columns
             href: relational-databases/security/encryption/always-encrypted-enclaves-create-use-indexes.md
           - name: Develop applications using Always Encrypted with secure enclaves
-            href: relational-databases/security/encryption/always-encrypted-enclaves-client-development.md          
+            href: relational-databases/security/encryption/always-encrypted-enclaves-client-development.md        
       - name: Troubleshoot TDE
         href: relational-databases/security/encryption/troubleshoot-tde.md
       - name: Move a TDE protected database
@@ -16276,13 +16280,13 @@ items:
         href: t-sql/data-types/constants-transact-sql.md
       - name: Conversion
         href: t-sql/data-types/data-type-conversion-database-engine.md
-      - name: Nondeterministic Conversion
+      - name: Nondeterministic conversion
         href: t-sql/data-types/nondeterministic-convert-date-literals.md
       - name: Precedence
         href: t-sql/data-types/data-type-precedence-transact-sql.md
       - name: Synonyms
         href: t-sql/data-types/data-type-synonyms-transact-sql.md
-      - name: Precision, Scale, & Length
+      - name: Precision, scale, & length
         href: t-sql/data-types/precision-scale-and-length-transact-sql.md
       - name: Cursor
         href: t-sql/data-types/cursor-transact-sql.md
@@ -16290,7 +16294,7 @@ items:
         href: t-sql/data-types/rowversion-transact-sql.md
       - name: sql_variant
         href: t-sql/data-types/sql-variant-transact-sql.md
-      - name: Table
+      - name: table
         href: t-sql/data-types/table-transact-sql.md
       - name: uniqueidentifier
         href: t-sql/data-types/uniqueidentifier-transact-sql.md

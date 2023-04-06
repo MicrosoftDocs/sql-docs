@@ -7880,6 +7880,10 @@ items:
             items:
               - name: Configure column encryption
                 href: relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption.md
+              - name: Configure columns encryption in-place with DACPAC
+                href: relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption-dacpac.md
+              - name: Configure column encryption in-place with PowerShell
+                href: relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption-powershell.md 
               - name: Configure column encryption in-place with Transact-SQL 
                 href: relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption-tsql.md
               - name: Enable Always Encrypted with secure enclaves for existing encrypted columns
@@ -7891,7 +7895,7 @@ items:
           - name: Create and use indexes on enclave-enabled columns
             href: relational-databases/security/encryption/always-encrypted-enclaves-create-use-indexes.md
           - name: Develop applications using Always Encrypted with secure enclaves
-            href: relational-databases/security/encryption/always-encrypted-enclaves-client-development.md          
+            href: relational-databases/security/encryption/always-encrypted-enclaves-client-development.md        
       - name: Troubleshoot TDE
         href: relational-databases/security/encryption/troubleshoot-tde.md
       - name: Move a TDE protected database

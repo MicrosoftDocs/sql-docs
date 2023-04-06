@@ -103,10 +103,10 @@ At this point, your server or managed instance is only configured for access usi
   > [!NOTE]
   > `dbmanager` and `loginmanager` roles do **not** pertain to SQL Managed Instance deployments.
 
-  Members of these [special master database roles](/sql/relational-databases/security/authentication-access/database-level-roles#special-roles-for--and-) for Azure SQL Database have authority to create and manage databases or to create and manage logins. In databases created by a user that is a member of the `dbmanager` role, the member is mapped to the `db_owner` fixed database role and can log into and manage that database using the `dbo` user account. These roles have no explicit permissions outside of the `master` database.
+  Members of these [special master database roles](/sql/relational-databases/security/authentication-access/database-level-roles#special-roles-for--and-azure-synapse) for Azure SQL Database have authority to create and manage databases or to create and manage logins. In databases created by a user that is a member of the `dbmanager` role, the member is mapped to the `db_owner` fixed database role and can log into and manage that database using the `dbo` user account. These roles have no explicit permissions outside of the `master` database.
 
   > [!IMPORTANT]
-  > You can't create an additional SQL login with full administrative permissions in SQL Database.
+  > You can't create an additional SQL login with full administrative permissions in Azure SQL Database. Only the server admin account or the Azure Active Directory admin Account (which can be an Azure Active Directory Group) can add or remove other Logins to or from server roles. This is specific to Azure SQL Database.
 
 ## Create accounts for non-administrator users
 

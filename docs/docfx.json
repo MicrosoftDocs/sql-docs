@@ -430,7 +430,7 @@
       "sensitive-language-wl": {
         "exclude": [
           "big-data-cluster/reference-config-spark-hadoop.md",
-          "docs/relational-databases/errors-events/**/*.md"
+          "relational-databases/errors-events/**/*.md"
         ]
       },
       "sensitive-language-bl": {

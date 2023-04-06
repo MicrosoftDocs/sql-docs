@@ -224,7 +224,7 @@ Requirements for hot add CPU:
 
 - Requires hardware that supports hot add CPU.
 - Requires a supported version of Windows Server Datacenter or Enterprise edition.
-- Requires [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise.
+- Requires [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise edition.
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] can't be configured to use soft NUMA. For more information about soft NUMA, see [Soft-NUMA (SQL Server)](../database-engine/configure-windows/soft-numa-sql-server.md).
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] doesn't automatically use CPUs after they are added. This prevents [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] from using CPUs that might be added for some other purpose. After adding CPUs, execute the [RECONFIGURE](../t-sql/language-elements/reconfigure-transact-sql.md) statement, so that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] will recognize the new CPUs as available resources.

@@ -53,8 +53,8 @@ sp_enum_login_for_proxy
 |**proxy_name**|**sysname**|The name of the proxy.|  
 |**name**|**sysname**|Name of the security principal for the association.|  
 |**flags**|**int**|Type of the security principal.<br /><br /> **0** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login<br /><br /> **1** = Fixed system role<br /><br /> **2** = Database role in **msdb**|  
-|**sid**|**varbinary(85)**|Sid of the security principal for the association.|  
-|**principal_id**|**int**|Principal id of the security principal for the association.|  
+|**sid**|**varbinary(85)**|SID of the security principal for the association.|  
+|**principal_id**|**int**|Principal ID of the security principal for the association.|  
 
 ## Remarks  
  When no parameters are provided, **sp_enum_login_for_proxy** lists information about all logins in the instance for every proxy.  

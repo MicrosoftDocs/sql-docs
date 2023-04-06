@@ -33,15 +33,18 @@ The Environment Health assessment is replaced with a much richer best practices 
 
 - If SQL Server is hosting a single SQL Server instance make sure that the version of Azure Extension for SQL Server (`WindowsAgent.SqlServer`) is "**1.1.2202.47**" or above.  In the case of SQL Server hosting multiple SQL Server instances, make sure that the version of Azure Extension for SQL Server (`WindowsAgent.SqlServer`) is greater than "**1.1.2231.59".** Learn how to [check the](/azure/azure-arc/servers/manage-vm-extensions-portal#upgrade-extensions)**[Azure Extension for SQL Server](/azure/azure-arc/servers/manage-vm-extensions-portal#upgrade-extensions)**[ version and update to the latest.](/azure/azure-arc/servers/manage-vm-extensions-portal#upgrade-extensions)
 - [A Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace?tabs=azure-portal) in the same subscription as your Arc-enabled SQL Server resource to upload assessment results to.
-- The user configuring SQL BPA must have following permissions.
-
+- The user configuring SQL BPA must have the following permissions.
   - Log Analytics Contributor role on Resource Group or Subscription of the Log Analytics workspace.
   - Azure Connected Machine Resource Administrator role on the Resource Group or Subscription of the Arc-enabled SQL Server.
   - Monitoring Contributor role on the Resource group or Subscription of Log Analytics Workspace &
 Resource group or Subscription of Arc Machine.
 
-    Users can be assigned to built-in roles such as Contributor or Owner. These roles have sufficient permissions. For more information, review [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal) for more information.
+  - Users can be assigned to built-in roles such as Contributor or Owner. These roles have sufficient permissions. For more information, review [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal) for more information.
 
+- The minimum permissions required to access or read the assessmnet report are following:
+- Reader role on the resource group or subscription of the Arc-enabled SQL Server resource.
+- [Log analytics reader](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fazure%2Fazure-monitor%2Flogs%2Fmanage-access%3Ftabs%3Dportal%23log-analytics-reader&data=05%7C01%7Crajpo%40microsoft.com%7C561cac54b5364088099908db36c2e746%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638163982964328525%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=YrhPUZBbkHxpl%2BwVboR05ktpuxqjWirWmmtKBSuiZh8%3D&reserved=0) role on Log analytics workspace.
+- [Monitoring reader](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fazure%2Frole-based-access-control%2Fbuilt-in-roles%23monitoring-reader&data=05%7C01%7Crajpo%40microsoft.com%7C561cac54b5364088099908db36c2e746%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638163982964328525%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=cSSeeaI8iK3ClqsTg6jl3CVCwgS%2BiHv2UAh%2F7bz0Or0%3D&reserved=0) on resource group/subscription of Log analytics workspace.
 - The SQL Server built-in login **NT AUTHORITY\SYSTEM** must be the member of SQL Server **sysadmin** server role for all the SQL Server instances running on the machine. 
 - If outbound connectivity is restricted by your firewall or proxy server, make sure the URLs from target SQL Server machine, make sure the URLs listed below allowed access to Azure Arc over TCP port 443.
 
@@ -142,3 +145,4 @@ If there are multiple runs in a single day, only the latest run is included in t
 - To obtain comprehensive support of the best practices assessment feature, a Premier or Unified support subscription is required. For details, see [Azure Premier Support](https://azure.microsoft.com/support/plans/premier).
 
 - [View SQL Server databases - Azure Arc](view-databases.md)
+

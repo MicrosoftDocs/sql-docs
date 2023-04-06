@@ -16280,13 +16280,13 @@ items:
         href: t-sql/data-types/constants-transact-sql.md
       - name: Conversion
         href: t-sql/data-types/data-type-conversion-database-engine.md
-      - name: Nondeterministic Conversion
+      - name: Nondeterministic conversion
         href: t-sql/data-types/nondeterministic-convert-date-literals.md
       - name: Precedence
         href: t-sql/data-types/data-type-precedence-transact-sql.md
       - name: Synonyms
         href: t-sql/data-types/data-type-synonyms-transact-sql.md
-      - name: Precision, Scale, & Length
+      - name: Precision, scale, & length
         href: t-sql/data-types/precision-scale-and-length-transact-sql.md
       - name: Cursor
         href: t-sql/data-types/cursor-transact-sql.md
@@ -16294,7 +16294,7 @@ items:
         href: t-sql/data-types/rowversion-transact-sql.md
       - name: sql_variant
         href: t-sql/data-types/sql-variant-transact-sql.md
-      - name: Table
+      - name: table
         href: t-sql/data-types/table-transact-sql.md
       - name: uniqueidentifier
         href: t-sql/data-types/uniqueidentifier-transact-sql.md

@@ -66,7 +66,9 @@ Each fixed server-level role has certain permissions assigned to it. The followi
 |**##MS_SecurityDefinitionReader##**| VIEW ANY SECURITY DEFINITION | VIEW SECURITY DEFINITION | 
 |**##MS_ServerStateReader##**|VIEW SERVER STATE, VIEW SERVER PERFORMANCE STATE, VIEW SERVER SECURITY STATE|VIEW DATABASE STATE, VIEW DATABASE PERFORMANCE STATE, VIEW DATABASE SECURITY STATE|  
 |**##MS_ServerStateManager##**|ALTER SERVER STATE, VIEW SERVER STATE, VIEW SERVER PERFORMANCE STATE, VIEW SERVER SECURITY STATE|VIEW DATABASE STATE, VIEW DATABASE PERFORMANCE STATE, VIEW DATABASE SECURITY STATE|   
-  
+ 
+## Permissions  
+ Only the server admin account or the Azure Active Directory admin Account (which can be an Azure Active Directory Group) can add or remove other accounts to or from server roles. This is specific to Azure SQL Database.  
   
 ## Working with server-level roles
 

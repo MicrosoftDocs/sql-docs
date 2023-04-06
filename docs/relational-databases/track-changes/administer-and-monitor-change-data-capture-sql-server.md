@@ -3,7 +3,7 @@ title: "Administer and monitor change data capture"
 description: "Learn how to administer and monitor change data capture on SQL Server, Azure SQL Managed Instance, and Azure SQL Database. "
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: "06/07/2021"
+ms.date: 03/16/2023
 ms.service: sql
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,11 +17,13 @@ helpviewer_keywords:
 This topic describes how to administer and monitor change data capture.  
   
 > [!NOTE]  
-> In Azure SQL Database, the capture and cleanup SQL Server Agent jobs are replaced by a change data capture scheduler that invokes stored procedures to start periodic capture and cleanup of the change tables. 
+> In Azure SQL Database, the capture and cleanup SQL Server Agent jobs are replaced by a change data capture scheduler that invokes stored procedures to start periodic capture and cleanup of the change tables. For more information, see the section on [CDC in Azure SQL Database](#cdc-in-azure-sql-database) later in this doc.
 
 ## <a name="Capture"></a> Capture job
 
-The capture job is initiated by running the parameterless stored procedure `sp_MScdc_capture_job`. This stored procedure starts by extracting the configured values for `maxtrans`, `maxscans`, `continuous`, and `pollinginterval` for the capture job from msdb.dbo.cdc_jobs. These configured values are then passed as parameters to the stored procedure `sp_cdc_scan`. This is used to invoke `sp_replcmds` to perform the log scan.  
+The capture job is initiated by running the parameterless stored procedure `sp_MScdc_capture_job`. This stored procedure starts by extracting the configured values for `maxtrans`, `maxscans`, `continuous`, and `pollinginterval` for the capture job from `msdb.dbo.cdc_jobs`. These configured values are then passed as parameters to the stored procedure `sp_cdc_scan`. This is used to invoke `sp_replcmds` to perform the log scan. 
+
+In Azure SQL Database, `continuous` and `pollinginterval` parameters do not apply. For more information, see [CDC in Azure SQL Database](#cdc-in-azure-sql-database).
   
 ### Capture Job Parameters  
 
@@ -29,7 +31,7 @@ To understand capture job behavior, you must understand how the configurable par
   
 #### maxtrans Parameter
 
-The `maxtrans` parameter specifies the maximum number of transactions that can be processed in a single scan cycle of the log. If, during the scan, the number of transactions to be processed reaches this limit, no additional transactions are included in the current scan. After a scan cycle is complete, the number of transactions that were processed will always be less than or equal to `maxtrans`.
+The `maxtrans` parameter specifies the maximum number of transactions that can be processed in a single scan cycle of the log. If during the scan the number of transactions to be processed reaches this limit, no additional transactions are included in the current scan. After a scan cycle is complete, the number of transactions that were processed will always be less than or equal to `maxtrans`.
 
 #### maxscans Parameter
 
@@ -51,11 +53,11 @@ In one-shot mode, the capture job requests `sp_cdc_scan` to perform up to `maxtr
   
  Even if the time that is required to scan the log and populate the change tables were not significantly different from 0, the average throughput of the job could not exceed the value obtained by dividing the maximum allowed transactions for a single scan multiplied by the maximum allowed scans by the number of seconds separating log processing.  
   
- If one-shot mode were to be used to regulate log scanning, the number of seconds between log processing would have to be governed by the job schedule. When this kind of behavior is desired, running the capture job in continuous mode is a better way to manage rescheduling the log scan.  
+ If one-shot mode were to be used to regulate log scanning, the number of seconds between log processing would have to be governed by the job schedule. When this kind of behavior is desired, running the capture job in continuous mode is a better way to reschedule the log scan.  
   
 ##### Continuous mode and polling interval
 
-In continuous mode, the capture job requests that `sp_cdc_scan` run continuously. This lets the stored procedure manage its own wait loop by providing not only for maxtrans and maxscans but also a value for the number of seconds between log processing (the polling interval). Running in this mode, the capture job remains active, executing a `WAITFOR` between log scanning.  
+In continuous mode, the capture job requests that `sp_cdc_scan` run continuously. This lets the stored procedure manage its own wait loop by providing not only for `maxtrans` and `maxscans` but also a value for the number of seconds between log processing (the polling interval). In continuous mode, the capture job remains active, executing a `WAITFOR` between log scanning.  
   
 > [!NOTE]  
 > When the value of the polling interval is greater than 0, the same upper limit on throughput for the recurring one-shot job also applies to the job operation in continuous mode. That is, (`maxtrans` \* `maxscans`) divided by a nonzero polling interval will put an upper bound on the average number of transactions that can be processed by the capture job.  
@@ -84,7 +86,7 @@ When a cleanup is performed, the low watermark for all capture instances is init
  For the cleanup job, the possibility for customization is in the strategy used to determine which change table entries are to be discarded. The only supported strategy in the delivered cleanup job is a time-based one. In that situation, the new low watermark is computed by subtracting the allowed retention period from the commit time of the last transaction processed. Because the underlying cleanup procedures are based on `lsn` instead of time, any number of strategies can be used to determine the smallest `lsn` to keep in the change tables. Only some of these are strictly time-based. Knowledge about the clients, for example, could be used to provide a failsafe if downstream processes that require access to the change tables cannot run. Also, although the default strategy applies the same `lsn` to clean up all the databases' change tables, the underlying cleanup procedure, can also be called to clean up at the capture instance level.  
  
 > [!NOTE]  
-> In Azure SQL Databases, the change data capture scheduler periodically invokes a stored procedure to capture and cleanup change tables.  As such, the customization of the capture and cleanup process in Azure SQL Database is not currently possible. Though the scheduler runs the stored procedures automatically, it's also possible to start them manually by the user. 
+> In Azure SQL Database, the change data capture scheduler periodically invokes a stored procedure to capture and cleanup change tables.  As such, the customization of the capture and cleanup process in Azure SQL Database is not currently possible. Though the scheduler runs the stored procedures automatically, it's also possible to start them manually by the user. For more information, see the section on [CDC in Azure SQL Database](#cdc-in-azure-sql-database) later in this doc.
 
 
 ## <a name="Monitor"></a> Monitor the process
@@ -177,6 +179,23 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data collector let
 
 When you apply cumulatives updates or service packs to an instance, at restart, the instance can enter in Script Upgrade mode. In this mode, SQL Server may run a step to analyze and upgrade internal CDC tables, which could result in recreating objects like indexes on capture tables. Depending on the amount of data involved, this step might take some time or cause high transaction log usage for enabled CDC databases.
 
+## CDC in Azure SQL Database
+
+In Azure SQL Database, the same configuration options and objects are not available because the capture and cleanup SQL Server Agent jobs are replaced by a change data capture scheduler. The scheduler invokes stored procedures to start periodic capture and cleanup of the change tables. 
+
+However, some limited customizations are supported.
+
+- The frequency of the CDC capture and cleanup jobs cannot be customized.
+- The `pollinginterval` and `continuous` values are not used in Azure SQL DB for capture and cleanup jobs.
+- Dropping the capture job entry from the `cdc.cdc_jobs` table doesn't stop the capture job running in the background.
+- Dropping the cleanup job causes the cleanup job to not run.
+- The `cdc.cdc_jobs` table exists in the `cdc` schema, not `msdb`.
+
+Given those limitations, it is possible to:
+
+- Query the `cdc.cdc_jobs` table for current configuration information.
+- Configure the `maxtrans` and `maxscans` options using the `sp_cdc_change_job` stored procedure.
+- Drop and add jobs using `sp_cdc_drop_job` and `sp_cdc_add_job`.
 
 ## See Also
 

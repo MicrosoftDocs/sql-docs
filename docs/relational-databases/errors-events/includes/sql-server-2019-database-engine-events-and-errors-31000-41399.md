@@ -2,9 +2,12 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 03/22/2023
+ms.date: 04/06/2023
 ms.topic: include
 ---
+> [!NOTE]
+> This article contains the term *whitelist*, a term Microsoft considers insensitive in this context. The term appears in this article because it currently appears in the software. When the term is removed from the software, we will remove it from the article.
+
 | Error| Severity | Event logged | Description|
 | :--- | :--- | :--- | :--- |
 | 31001 | 16 | No | The session '%s' already exists. Use a different session name. |

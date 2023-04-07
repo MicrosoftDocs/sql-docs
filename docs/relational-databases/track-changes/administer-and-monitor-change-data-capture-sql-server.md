@@ -1,6 +1,6 @@
 ---
 title: "Administer and monitor change data capture"
-description: "Learn how to administer and monitor change data capture on SQL Server, Azure SQL Managed Instance, and Azure SQL Database. "
+description: "Learn how to administer and monitor change data capture on SQL Server, Azure SQL Managed Instance, and Azure SQL Database."
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 03/16/2023
@@ -17,7 +17,7 @@ helpviewer_keywords:
 This topic describes how to administer and monitor change data capture.  
   
 > [!NOTE]  
-> In Azure SQL Database, the capture and cleanup SQL Server Agent jobs are replaced by a change data capture scheduler that invokes stored procedures to start periodic capture and cleanup of the change tables. For more information, see the section on [CDC in Azure SQL Database](#cdc-in-azure-sql-database) later in this doc.
+> In Azure SQL Database, the capture and cleanup SQL Server Agent jobs are replaced by a change data capture scheduler that invokes stored procedures to start periodic capture and cleanup of the change tables. For more information, see the section on [CDC in Azure SQL Database](#cdc-in-azure-sql-database) later in this article.
 
 ## <a name="Capture"></a> Capture job
 
@@ -25,23 +25,23 @@ The capture job is initiated by running the parameterless stored procedure `sp_M
 
 In Azure SQL Database, `continuous` and `pollinginterval` parameters do not apply. For more information, see [CDC in Azure SQL Database](#cdc-in-azure-sql-database).
   
-### Capture Job Parameters  
+### Capture job parameters  
 
 To understand capture job behavior, you must understand how the configurable parameters are used by `sp_cdc_scan`.
   
-#### maxtrans Parameter
+#### `maxtrans` parameter
 
 The `maxtrans` parameter specifies the maximum number of transactions that can be processed in a single scan cycle of the log. If during the scan the number of transactions to be processed reaches this limit, no additional transactions are included in the current scan. After a scan cycle is complete, the number of transactions that were processed will always be less than or equal to `maxtrans`.
 
-#### maxscans Parameter
+#### `maxscans` parameter
 
 The `maxscans` parameter specifies the maximum number of scan cycles that are attempted to drain the log before either returning (continuous = 0) or executing a waitfor (continuous = 1).
 
-#### continuous Parameter
+#### `continuous` parameter
 
 The `continuous` parameter controls whether `sp_cdc_scan` relinquishes control in after either draining the log or executing the maximum number of scan cycles (one-shot mode). It also controls whether `sp_cdc_scan` continues to run until explicitly stopped (continuous mode).  
   
-##### One-shot Mode
+##### One-shot mode
 
 In one-shot mode, the capture job requests `sp_cdc_scan` to perform up to `maxtrans` scans to try to drain the log and return. Any transactions in addition to `maxtrans` that are present in the log will be processed in later scans.  
   
@@ -62,15 +62,15 @@ In continuous mode, the capture job requests that `sp_cdc_scan` run continuously
 > [!NOTE]  
 > When the value of the polling interval is greater than 0, the same upper limit on throughput for the recurring one-shot job also applies to the job operation in continuous mode. That is, (`maxtrans` \* `maxscans`) divided by a nonzero polling interval will put an upper bound on the average number of transactions that can be processed by the capture job.  
   
-### Capture Job Customization
+### Capture job customization
 
-For the capture job, you can apply additional logic to determine whether a new scan begins immediately or whether a sleep is imposed before it starts a new scan instead of rely on a fixed polling interval. The choice could be based merely on time of the day, perhaps enforcing very long sleeps during peak activity times, and even moving to a polling interval of 0 at close of day when it is important to complete the days processing and prepare for nightly runs. Capture process progress could also be monitored to determine when all transactions committed by mid-night had been scanned and deposited in change tables. This lets the capture job end, to be restarted by a scheduled daily restart. By replacing the delivered job step calling `sp_cdc_scan` with a call to a user written wrapper for `sp_cdc_scan`, highly customized behavior can be obtained with little additional effort.  
+For the capture job, you can apply additional logic to determine whether a new scan begins immediately or whether a sleep is imposed before it starts a new scan instead of rely on a fixed polling interval. The choice could be based merely on time of the day, perhaps enforcing very long sleeps during peak activity times, and even moving to a polling interval of 0 at close of day when it is important to complete the days processing and prepare for nightly runs. Capture process progress could also be monitored to determine when all transactions committed by mid-night had been scanned and deposited in change tables. This lets the capture job end, to be restarted by a scheduled daily restart. To customize behavior, you can replace the job step that calls `sp_cdc_scan` with a call to a user written wrapper for `sp_cdc_scan`.
 
 ## <a name="Cleanup"></a> Cleanup job
 
 This section provides information about how the change data capture cleanup job works.  
   
-### Structure of the Cleanup Job
+### Structure of the cleanup job
 
 Change data capture uses a retention-based cleanup strategy to manage change table size. In SQL Server and Azure SQL Managed Instance, the cleanup mechanism consists of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent [!INCLUDE[tsql](../../includes/tsql-md.md)] job that is created when the first database table is enabled. A single cleanup job handles cleanup for all database change tables and applies the same retention value to all defined capture instances.
   
@@ -93,15 +93,15 @@ When a cleanup is performed, the low watermark for all capture instances is init
 
 Monitoring the change data capture process lets you determine if changes are being written correctly and with a reasonable latency to the change tables. Monitoring can also help you to identify any errors that might occur. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes two dynamic management views to help you monitor change data capture: [sys.dm_cdc_log_scan_sessions](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md) and [sys.dm_cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md).  
   
-### Identify Sessions with Empty Result Sets
+### Identify sessions with empty result sets
 
-Every row in sys.dm_cdc_log_scan_sessions represents a log scan session (except the row with an ID of 0). A log scan session is equivalent to one execution of [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md). During a session, the scan can either return changes or return an empty result. If the result set is empty, the empty_scan_count column in sys.dm_cdc_log_scan_sessions is set to 1. If there are consecutive empty result sets, such as if the capture job is running continuously, the empty_scan_count in the last existing row is incremented. For example, if sys.dm_cdc_log_scan_sessions already contains 10 rows for scans that returned changes and there are five empty results in a row, the view contains 11 rows. The last row has a value of 5 in the empty_scan_count column. To determine sessions that had an empty scan, run the following query:  
+Every row in `sys.dm_cdc_log_scan_sessions` represents a log scan session (except the row with an ID of 0). A log scan session is equivalent to one execution of [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md). During a session, the scan can either return changes or return an empty result. If the result set is empty, the empty_scan_count column in `sys.dm_cdc_log_scan_sessions` is set to 1. If there are consecutive empty result sets, such as if the capture job is running continuously, the empty_scan_count in the last existing row is incremented. For example, if `sys.dm_cdc_log_scan_sessions` already contains 10 rows for scans that returned changes and there are five empty results in a row, the view contains 11 rows. The last row has a value of 5 in the empty_scan_count column. To determine sessions that had an empty scan, run the following query:  
 
 ```sql
 SELECT * from sys.dm_cdc_log_scan_sessions where empty_scan_count <> 0
 ```
 
-### Determine Latency
+### Determine latency
 
 The `sys.dm_cdc_log_scan_sessions` management view includes a column that records the latency for each capture session. Latency is defined as the elapsed time between a transaction being committed on a source table and the last captured transaction being committed on the change table. The latency column is populated only for active sessions. For sessions with a value greater than 0 in the empty_scan_count column, the latency column is set to 0. The following query returns the average latency for the most recent sessions:  
 
@@ -117,11 +117,11 @@ You can use latency data to determine how fast or slow the capture process is pr
 SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions WHERE session_id = 0
 ```
 
-### Use Data Collector to Collect Sampling Data
+### Use data collector to collect sampling data
 
-The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data collector lets you collect snapshots of data from any table or dynamic management view and build a performance data warehouse. When change data capture is enabled on a database, it is useful to take snapshots of the sys.dm_cdc_log_scan_sessions view and the sys.dm_cdc_errors view at regular intervals for later analysis. The following procedure sets up a data collector for collecting sample data from the sys.dm_cdc_log_scan_sessions management view.
+The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data collector lets you collect snapshots of data from any table or dynamic management view and build a performance data warehouse. When change data capture is enabled on a database, it is useful to take snapshots of the `sys.dm_cdc_log_scan_sessions` view and the sys.dm_cdc_errors view at regular intervals for later analysis. The following procedure sets up a data collector for collecting sample data from the `sys.dm_cdc_log_scan_sessions` management view.
 
-#### Configuring Data Collection
+#### Configuring data collection
 
 1. Enable data collector and configure a management data warehouse. For more information, see [Manage Data Collection](../../relational-databases/data-collection/manage-data-collection.md).  
   
@@ -197,7 +197,7 @@ Given those limitations, it is possible to:
 - Configure the `maxtrans` and `maxscans` options using the `sp_cdc_change_job` stored procedure.
 - Drop and add jobs using `sp_cdc_drop_job` and `sp_cdc_add_job`.
 
-## See Also
+## See also
 
 - [Track Data Changes &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)
 - [About change data capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)

@@ -2,9 +2,12 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 02/17/2023
+ms.date: 04/06/2023
 ms.topic: include
 ---
+> [!NOTE]
+> This article contains the term *whitelist*, a term Microsoft considers insensitive in this context. The term appears in this article because it currently appears in the software. When the term is removed from the software, we will remove it from the article.
+
 | Error| Severity | Event logged | Description|
 | :--- | :--- | :--- | :--- |
 | 31001 | 16 | No | The session '%s' already exists. Use a different session name. |
@@ -393,7 +396,7 @@ ms.topic: include
 | 33311 | 10 | No | The wait for connect request completion failed. |
 | 33312 | 10 | No | The wait for querying proxy routes failed or was aborted. |
 | 33313 | 16 | No | An out of memory condition has occurred in the Service Broker transport layer. A service broker connection is closed due to this condition. |
-| 33314 | 16 | No | The supplied allowlist is invalid. |
+| 33314 | 16 | No | The supplied whitelist is invalid. |
 | 33315 | 16 | No | The redirected endpointurl is Invalid |
 | 33316 | 16 | No | Failed to reset encryption while performing redirection. |
 | 33317 | 16 | No | The redirect response contains invalid redirect string |

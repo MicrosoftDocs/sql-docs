@@ -2,8 +2,8 @@
 title: Use Java and JDBC with Azure SQL Database
 description: Learn how to use Java and JDBC with an Azure SQL Database.
 author: jdubois
-ms.author: judubois
-ms.date: 06/26/2020
+ms.author: bbenz
+ms.date: 04/07/2023
 ms.service: sql-database
 ms.subservice: development
 ms.topic: quickstart
@@ -25,23 +25,43 @@ JDBC is the standard Java API to connect to traditional relational databases.
 
 - An Azure account. If you don't have one, [get a free trial](https://azure.microsoft.com/free/).
 - [Azure Cloud Shell](/azure/cloud-shell/quickstart) or [Azure CLI](/cli/azure/install-azure-cli). We recommend Azure Cloud Shell so you'll be logged in automatically and have access to all the tools you'll need.
-- A supported [Java Development Kit](/azure/developer/java/fundamentals/java-support-on-azure), version 8 (included in Azure Cloud Shell).
-- The [Apache Maven](https://maven.apache.org/) build tool.
+- A supported [Java Development Kit](/azure/developer/java/fundamentals/java-support-on-azure), version 11 (included in Azure Cloud Shell).
+- The [Apache Maven](https://maven.apache.org/) build tool (included in Azure Cloud Shell).
 
 ## Prepare the working environment
 
-We are going to use environment variables to limit typing mistakes, and to make it easier for you to customize the following configuration for your specific needs.
+We are using environment variables to limit typing mistakes, avoid exposing sensitive information to the public if this sample code is pushed to a repo, and make it easier for you to customize the following configuration for your specific needs.
 
 Set up those environment variables by using the following commands:
 
+### [Passwordless (Recommended)](#tab/passwordless)
+
 ```bash
-AZ_RESOURCE_GROUP=database-workshop
+AZ_RESOURCE_GROUP=<YOUR_RESOURCE_GROUP_NAME>
+AZ_DATABASE_SERVER_NAME=<YOUR_DATABASE_SERVER_NAME>
+AZ_DATABASE_NAME=<YOUR_DATABASE_NAME>
+AZ_LOCATION=<YOUR_AZURE_REGION>
+AZ_SQL_SERVER_USERNAME=demo
+AZ_SQL_SERVER_PASSWORD=<YOUR_AZURE_SQL_PASSWORD>
+AZ_LOCAL_IP_ADDRESS=<YOUR_LOCAL_IP_ADDRESS>
+CURRENT_USERNAME=$(az ad signed-in-user show --query userPrincipalName --output tsv)
+CURRENT_USER_OBJECTID=$(az ad signed-in-user show --query id --output tsv)
+
+```
+
+### [Connection String](#tab/connection-string)
+
+```bash
+AZ_RESOURCE_GROUP=<YOUR_RESOURCE_GROUP_NAME>
+AZ_DATABASE_SERVER_NAME=<YOUR_DATABASE_SERVER_NAME>
 AZ_DATABASE_NAME=<YOUR_DATABASE_NAME>
 AZ_LOCATION=<YOUR_AZURE_REGION>
 AZ_SQL_SERVER_USERNAME=demo
 AZ_SQL_SERVER_PASSWORD=<YOUR_AZURE_SQL_PASSWORD>
 AZ_LOCAL_IP_ADDRESS=<YOUR_LOCAL_IP_ADDRESS>
 ```
+
+---
 
 Replace the placeholders with the following values, which are used throughout this article:
 
@@ -69,6 +89,29 @@ The first thing we'll create is a managed Azure SQL Database server.
 > [!NOTE]
 > You can read more detailed information about creating Azure SQL Database servers in [Quickstart: Create an Azure SQL Database single database](./single-database-create-quickstart.md).
 
+### [Passwordless (Recommended)](#tab/passwordless)
+
+In [Azure Cloud Shell](https://shell.azure.com/), run the following command:
+
+```azurecli
+az sql server create \
+    --resource-group $AZ_RESOURCE_GROUP \
+    --name $AZ_DATABASE_NAME \
+    --location $AZ_LOCATION \
+    --enable-ad-only-auth \
+    --external-admin-principal-type User \
+    --external-admin-name $CURRENT_USERNAME \
+    --external-admin-sid $CURRENT_USER_OBJECTID \
+    | jq
+```
+
+This command reates an Azure SQL Database server and sets the Azure AD admin to the current signed-in user.
+
+> [!NOTE]
+> You can only create one Azure AD admin per Azure SQL Database server. Selection of another one will overwrite the existing Azure AD admin configured for the server.
+
+### [Connection String](#tab/connection-string)
+
 In [Azure Cloud Shell](https://shell.azure.com/), run the following command:
 
 ```azurecli
@@ -81,7 +124,9 @@ az sql server create \
     | jq
 ```
 
-This command creates an Azure SQL Database server.
+---
+
+This command creates an Azure SQL Database server with a dependency on a connection string containing a pre-defined admin user and password.
 
 ### Configure a firewall rule for your Azure SQL Database server
 
@@ -115,6 +160,14 @@ az sql db create \
 
 Using your favorite IDE, create a new Java project, and add a `pom.xml` file in its root directory:
 
+### [Passwordless (Recommended)](#tab/passwordless)
+
+This file is an [Apache Maven](https://maven.apache.org/) that configures our project to use:
+
+- Java 11
+- A recent SQL Server driver for Java
+- The azure-identity dependency for passwordless connection enablement
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -126,27 +179,73 @@ Using your favorite IDE, create a new Java project, and add a `pom.xml` file in 
     <name>demo</name>
 
     <properties>
-        <java.version>1.8</java.version>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <java.version>11</java.version>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>com.microsoft.sqlserver</groupId>
             <artifactId>mssql-jdbc</artifactId>
-            <version>7.4.1.jre8</version>
+            <version>12.2.0.jre11</version>
+        </dependency>
+       <dependency>
+            <groupId>com.azure</groupId>
+            <artifactId>azure-identity</artifactId>
+            <version>1.8.1</version>
+       </dependency>
+    </dependencies>
+</project>
+```
+
+### [Connection String](#tab/connection-string)
+
+- Java 11
+- A recent SQL Server driver for Java
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.example</groupId>
+    <artifactId>demo</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>demo</name>
+
+    <properties>
+        <java.version>11</java.version>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.microsoft.sqlserver</groupId>
+            <artifactId>mssql-jdbc</artifactId>
+            <version>12.2.0.jre11</version>
         </dependency>
     </dependencies>
 </project>
 ```
 
-This file is an [Apache Maven](https://maven.apache.org/) that configures our project to use:
-
-- Java 8
-- A recent SQL Server driver for Java
+---
 
 ### Prepare a configuration file to connect to Azure SQL database
+
+### [Passwordless (Recommended)](#tab/passwordless)
+
+Create a *src/main/resources/application.properties* file, and add:
+
+```properties
+String url = "jdbc:sqlserver://$AZ_DATABASE_SERVER_NAME.database.windows.net:1433;databaseName=$AZ_DATABASE_NAME;authentication=ActiveDirectoryMSI;"   
+Connection con = DriverManager.getConnection(url);
+```
+
+- Replace `AZ_DATABASE_SERVER_NAME` and `$AZ_DATABASE_NAME` with the values that you configured at the beginning of this article.
+
+### [Connection String](#tab/connection-string)
 
 Create a *src/main/resources/application.properties* file, and add:
 
@@ -156,8 +255,10 @@ user=demo@$AZ_DATABASE_NAME
 password=$AZ_SQL_SERVER_PASSWORD
 ```
 
-- Replace the two `$AZ_DATABASE_NAME` variables with the value that you configured at the beginning of this article.
+- Replace `AZ_DATABASE_SERVER_NAME` and `$AZ_DATABASE_NAME` with the values that you configured at the beginning of this article.
 - Replace the `$AZ_SQL_SERVER_PASSWORD` variable with the value that you configured at the beginning of this article.
+
+---
 
 ### Create an SQL file to generate the database schema
 
@@ -226,9 +327,6 @@ public class DemoApplication {
 This Java code will use the *application.properties* and the *schema.sql* files that we created earlier, in order to connect to the SQL Server database and create a schema that will store our data.
 
 In this file, you can see that we commented methods to insert, read, update and delete data: we will code those methods in the rest of this article, and you will be able to uncomment them one after each other.
-
-> [!NOTE]
-> The database credentials are stored in the *user* and *password* properties of the *application.properties* file. Those credentials are used when executing `DriverManager.getConnection(properties.getProperty("url"), properties);`, as the properties file is passed as an argument.
 
 You can now execute this main class with your favorite tool:
 

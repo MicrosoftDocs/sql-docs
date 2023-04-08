@@ -204,7 +204,7 @@ DELETE Sales.ShoppingCartItem
 -   In the \<dml_table_source> clause, the SELECT and WHERE clauses cannot include subqueries, aggregate functions, ranking functions, full-text predicates, user-defined functions that perform data access, or the TEXTPTR function.  
 
 ## Parallelism
- An OUTPUT clause that returns results to the client will always use a serial plan.
+ An OUTPUT clause that returns results to the client or table variable will always use a serial plan.
 
 In the context of a database set to compatibility level 130 or higher, if an INSERT...SELECT operation uses a WITH (TABLOCK) hint for the SELECT statement and also uses OUTPUT...INTO to insert into a temporary or user table, then the target table for the INSERT...SELECT will be eligible for parallelism depending on the subtree cost.  The target table referenced in the OUTPUT INTO clause will not be eligible for parallelism. 
  

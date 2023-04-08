@@ -105,7 +105,7 @@ az sql server create \
     | jq
 ```
 
-This command reates an Azure SQL Database server and sets the Azure AD admin to the current signed-in user.
+This command creates an Azure SQL Database server and sets the Azure AD admin to the current signed-in user.
 
 > [!NOTE]
 > You can only create one Azure AD admin per Azure SQL Database server. Selection of another one will overwrite the existing Azure AD admin configured for the server.

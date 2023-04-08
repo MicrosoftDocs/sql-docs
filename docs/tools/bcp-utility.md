@@ -45,16 +45,16 @@ The **b**ulk **c**opy **p**rogram utility (**bcp**) bulk copies data between an 
 
 ## Download the latest version of bcp Utility
 
-:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download Microsoft Command Line Utilities 15 for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2142258)**  
-:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download Microsoft Command Line Utilities 15 for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2142257)**
+:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download Microsoft Command Line Utilities 15 for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2230791)**  
+:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download Microsoft Command Line Utilities 15 for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2231320)**
 
 The command-line tools are General Availability (GA), however they're being released with the installer package for [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)].
 
 ### Version Information
 
-Release number: 15.0.2 <br>
-Build number: 15.0.2000.5<br>
-Release date: September 11, 2020
+Release number: 15.0.4298.1<br>
+Build number: 15.0.4298.1<br>
+Release date: April 7, 2023
 
 The new version of SQLCMD supports Azure AD authentication, including Multi-Factor Authentication (MFA) support for SQL Database, Azure Synapse Analytics, and Always Encrypted features.
 The new BCP supports Azure AD authentication, including Multi-Factor Authentication (MFA) support for SQL Database and Azure Synapse Analytics.
@@ -65,7 +65,7 @@ Windows 11, Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, 
 
 This component requires both [Windows Installer 4.5](https://windows-installer.soft32.com/) and [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md).
 
-To check the BCP version execute `bcp /v` command and confirm that 15.0.2000.5 or higher is in use.
+To check the BCP version execute `bcp /v` command and confirm that 15.0.4298.1 or higher is in use.
 
 <table><th>Syntax</th><tr><td><pre>
 bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a href="#tbl_name">table_name</a> | <a href="#vw_name">view_name</a> | <a href="#query">"query"</a>}

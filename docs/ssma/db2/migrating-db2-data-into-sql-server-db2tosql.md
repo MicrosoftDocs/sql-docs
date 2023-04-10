@@ -19,7 +19,7 @@ After you have successfully synchronized the converted objects with [!INCLUDE[ss
 Before migrating data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], review the project migration options in the **Project Settings** dialog box.  
   
 -   By using this dialog box you can set options such as migration batch size, table locking, constraint checking, null value handling, and identity value handling. For more information about the Project Migration Settings, see [Project Settings (Migration)](./project-settings-migration-db2tosql.md).  
-  - 
+  
   
 **Client Side Data Migration:**  
   

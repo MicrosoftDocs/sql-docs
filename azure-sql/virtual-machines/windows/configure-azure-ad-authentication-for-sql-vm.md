@@ -86,7 +86,7 @@ To enable Azure AD authentication to your SQL Server VM, follow these steps:
 1. Choose **Enable** under **Azure AD authentication**. 
 1. Choose the managed identity type from the drop-down, either **System-assigned** or **User-assigned**. If you choose user-assigned, then select the identity you want to use to authenticate to SQL Server on your Azure VM from the **User-assigned managed identity** drop-down that appears. 
 
-   :::image type="content" source="media/configure-azure-ad-authentication-for-sql-vm/enable-azure-ad-in-portal.png" alt-text="Screenshot of the security configuration page for SQL VM in the Azure portal, with Azure AD authentication selected. ":::
+   :::image type="content" source="media/configure-azure-ad-authentication-for-sql-vm/enable-azure-ad-in-portal.png" alt-text="Screenshot of the security configuration page for SQL VM in the Azure portal, with Azure AD authentication selected.":::
 
 > [!NOTE]
 > The error `The selected managed identity does not have enough permissions for Azure AD Authentication` indicates that permissions have not been properly assigned to the identity you've selected. Check the [Grant permissions](#grant-permission-to-the-identity) section to assign proper permissions. 

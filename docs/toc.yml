@@ -10332,6 +10332,8 @@ items:
           href: linux/quickstart-sql-server-containers-kubernetes.md
         - name: Deploy availability group with DH2i on AKS
           href: linux/tutorial-sql-server-containers-kubernetes-dh2i.md
+        - name: Deploy availability group in a DH2i sidecar
+          href: linux/tutorial-sql-server-dh2i-sidecar.md
     - name: Security
       href: linux/sql-server-linux-security-overview.md
       items:

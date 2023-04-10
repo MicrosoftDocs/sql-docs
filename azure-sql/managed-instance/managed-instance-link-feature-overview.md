@@ -44,7 +44,7 @@ The Managed Instance link is supported on both the General Purpose and Business 
 
 The following table lists the functionality of the link feature and the supported SQL Server versions:
 
-[!INCLUDE[sql mi link supportability table](includes/managed-instance-link-supportability-table.md.md)]
+[!INCLUDE[sql mi link supportability table](../includes/managed-instance-link-supportability-table.md)]
 
 SQL Server versions prior to SQL Server 2016 (SQL Server 2008 - 2014) aren't supported because the link feature relies on distributed availability group technology, which was introduced in SQL Server 2016. 
 

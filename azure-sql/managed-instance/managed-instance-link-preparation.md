@@ -113,7 +113,7 @@ SELECT @@VERSION as 'SQL Server version'
 
 Ensure that your SQL Server version has the appropriate servicing update installed, as listed below. If you need to install any updates, you must restart your SQL Server instance during the update. 
 
-[!INCLUDE[sql mi link supportability table](includes/managed-instance-link-supportability-table.md.md)]
+[!INCLUDE[sql mi link supportability table](../includes/managed-instance-link-supportability-table.md)]
 
 
 ### Create a database master key in the master database

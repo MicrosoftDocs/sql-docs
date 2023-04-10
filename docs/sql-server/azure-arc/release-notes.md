@@ -4,12 +4,30 @@ description: Latest release notes
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 03/09/2023
+ms.date: 04/10/2023
 ms.service: sql
 ms.topic: conceptual
 ---
 
 # Release notes - Azure Arc-enabled SQL Server
+
+## April 2023
+
+This release is published April 10, 2023.
+
+> [!NOTE]
+> This release is currently only available for SQL Server on Windows.
+
+### Extension version
+
+`1.1.2284.7`
+
+### Azure extension for SQL Server
+
+- Backups | Configure Automatic Backups for Arc SQL Server with a default schedule.
+- Automatic built-in backups with default schedule of weekly full, daily diff, and transaction logs every 5 min for every database.
+- Configure backup file retention with the `--retention-days` parameter. Values from 0 to 35 days. Default is 0 days.
+- Azure Policy to enable best practices assessment at scale. For details, see [Automatically connect Azure Arc-enabled SQL Servers](connect-at-scale-autodeploy.md).
 
 ## March 2023
 

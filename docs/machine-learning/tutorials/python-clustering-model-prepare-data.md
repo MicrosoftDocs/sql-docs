@@ -118,7 +118,7 @@ column_info = {
 Results from the query are returned to Python using the Pandas **read_sql** function. As part of the process, you'll use the column information you defined in the previous script.
 
 ```python
-customer_data = pandas.read_sql(input_query, conn_str)
+customer_data = pd.read_sql(input_query, conn_str)
 ```
 
 Now display the beginning of the data frame to verify it looks correct.

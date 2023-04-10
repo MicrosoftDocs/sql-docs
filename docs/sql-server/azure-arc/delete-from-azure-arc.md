@@ -28,7 +28,7 @@ To uninstall Azure extension for SQL Server:
 
 1. Go to **Azure Arc** portal
 1. Under **Servers** select the specific machine hosting SQL Server instance(s) you wish to disconnect from Azure Arc
-1. Under **Extensions**, select the exension you want to uninstall (*WindowsAgent.SqlServer* if it's a Windows machine, or *LinuxAgent.SqlServer* if it's a Linux  machine)
+1. Under **Extensions**, select the extension you want to uninstall (*`WindowsAgent.SqlServer`* if it's a Windows machine, or *`LinuxAgent.SqlServer`* if it's a Linux  machine)
 1. Click on the **Uninstall** tab
 1. Confirm that you want to install the extension when prompted
 

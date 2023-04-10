@@ -13,12 +13,12 @@ ms.custom: template-how-to-pattern
 
 This article describes how you can disconnect the Arc-enabled SQL Server instances from Azure Arc using Azure Portal or in the command shell. 
 
-> [!IMPORTANT]
-   > You don't need access to the hosting machine to disconnect from Azure Arc.
-
 ## Prerequisists
 
 * You're in a [Contributor role](/azure/role-based-access-control/built-in-roles#contributor) for the subscriptions and resource groups in which the Arc-enabled SQL Server instances have been created. 
+
+> [!IMPORTANT]
+   > You don't need access to the hosting machine to disconnect from Azure Arc.
 
 ## Disconnect and unregister individual SQL Server instances from Azure Arc
 
@@ -56,6 +56,9 @@ remove-azresource -ResourceGroup "{your resource group name}" -ResourceType Micr
 ```
 If your instance have dependent Azure resources, such as databases, this command may take a long time to complete. You can add `-AsJob` parameter to return immediately and execute the command as a background job. 
 
+> [!TIP]  
+> Run the script from Azure Cloud shell as it has the required Azure PowerShell modules pre-installed and you will be automatically authenticated. For details, see [Running the script using Cloud Shell](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/azure-arc-enabled-sql-server/uninstall-azure-extension-for-sql-server#running-the-script-using-cloud-shell).
+
 ### [Azure CLI](#tab/az)
 
 To uninstall Azure extension for SQL Server, run:
@@ -70,11 +73,8 @@ To remnove the SQL Server - Azure Arc resource(s), run:
 az resource delete --resource-group "{your resource group name}" --resource-type Microsoft.AzureArcData/SqlServerInstances --name "{full SQL instance name}"
 ```
 
- If your instance have dependent Azure resources, such as databases, this command may take a long time to complete. You can add `--No-Wait` parameter to return immediately and execute the command as a background job. 
+ If your instance (SQL Server - Azure Arc resource) have dependent Azure resources, such as databases (SQL Server database - Azure Arc resource) , this command may take a long time to complete. You can add `--No-Wait` parameter to return immediately and execute the command as a background job. 
 
 ---
 
 To disconnect all the Arc-enabled SQL Server instances in a larger scope, such as a resource group, subscription, or multiple subscriptions, with a single command, use the [Uninstall Azure Extension for SQL Server](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/azure-arc-enabled-sql-server/uninstall-azure-extension-for-sql-server) script. It is published as an open source SQL Server sample and includes the step-by-step instructions.
-
-> [!TIP]  
-> Run the script from Azure Cloud shell as it has the required Azure PowerShell modules pre-installed and you will be automatically authenticated. For details, see [Running the script using Cloud Shell](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/azure-arc-enabled-sql-server/uninstall-azure-extension-for-sql-server#running-the-script-using-cloud-shell).

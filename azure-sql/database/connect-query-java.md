@@ -11,6 +11,7 @@ ms.custom:
   - devx-track-java
   - devx-track-azurecli
   - mode-api
+  - passwordless-java
 ms.devlang: java
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
@@ -41,8 +42,6 @@ AZ_RESOURCE_GROUP=<YOUR_RESOURCE_GROUP_NAME>
 AZ_DATABASE_SERVER_NAME=<YOUR_DATABASE_SERVER_NAME>
 AZ_DATABASE_NAME=<YOUR_DATABASE_NAME>
 AZ_LOCATION=<YOUR_AZURE_REGION>
-AZ_SQL_SERVER_USERNAME=demo
-AZ_SQL_SERVER_PASSWORD=<YOUR_AZURE_SQL_PASSWORD>
 AZ_LOCAL_IP_ADDRESS=<YOUR_LOCAL_IP_ADDRESS>
 CURRENT_USERNAME=$(az ad signed-in-user show --query userPrincipalName --output tsv)
 CURRENT_USER_OBJECTID=$(az ad signed-in-user show --query id --output tsv)
@@ -138,7 +137,7 @@ Because you configured our local IP address at the beginning of this article, yo
 az sql server firewall-rule create \
     --resource-group $AZ_RESOURCE_GROUP \
     --name $AZ_DATABASE_NAME-database-allow-local-ip \
-    --server $AZ_DATABASE_NAME \
+    --server $AZ_DATABASE_SERVER_NAME \
     --start-ip-address $AZ_LOCAL_IP_ADDRESS \
     --end-ip-address $AZ_LOCAL_IP_ADDRESS \
     | jq
@@ -151,8 +150,8 @@ The Azure SQL Database server that you created earlier is empty. It doesn't have
 ```azurecli
 az sql db create \
     --resource-group $AZ_RESOURCE_GROUP \
-    --name demo \
-    --server $AZ_DATABASE_NAME \
+    --name $AZ_DATABASE_NAME \
+    --server $AZ_DATABASE_SERVER_NAME \
     | jq
 ```
 
@@ -275,7 +274,7 @@ CREATE TABLE todo (id INT PRIMARY KEY, description VARCHAR(255), details VARCHAR
 
 Next, add the Java code that will use JDBC to store and retrieve data from your Azure SQL database.
 
-Create a *src/main/java/DemoApplication.java* file, that contains:
+Create a *src/main/java/com/example/demo/DemoApplication.java* file, that contains:
 
 ```java
 package com.example.demo;

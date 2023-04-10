@@ -20,6 +20,9 @@ This article provides an overview of the Managed Instance link feature, which en
 
 If you have product improvement suggestions or comments, or you want to report issues, contact our team through [Managed Instance link user feedback](https://aka.ms/mi-link-feedback).
 
+> [!NOTE]
+> It's possible to automate preparing your environment for the Managed Instance link by using a downloadable script. Review the [Automating link setup blog](https://techcommunity.microsoft.com/t5/modernization-best-practices-and/automating-the-setup-of-azure-sql-managed-instance-link/ba-p/3696961) to learn more. 
+
 ## Overview
 
 The Managed Instance link feature uses distributed availability groups to extend your SQL Server on-premises Always On availability group hosted anywhere to Azure SQL Managed Instance in a safe and secure manner, replicating data in near real-time.
@@ -41,12 +44,7 @@ The Managed Instance link is supported on both the General Purpose and Business 
 
 The following table lists the functionality of the link feature and the supported SQL Server versions:
 
-| SQL Server version  | Operating system (OS)  | One-way replication |  Disaster recovery | Servicing update requirement |
-| --- | --- | --- | --- | --- |
-| SQL Server 2022 (16.x) | Windows Server and Linux |  Generally available | [Must sign up for limited public preview](https://aka.ms/mi-link-dr-preview-signup)  | SQL Server 2022 RTM | 
-| SQL Server 2019 (15.x) | Windows Server | Generally available |Not supported | [SQL Server 2019 CU20 (KB)](need new link) or later for Enterprise and Developer editions, and [CU17 (KB5016394)](https://support.microsoft.com/help/5016394) or later for Standard editions |
-| SQL Server 2017 (14.x) | N/A | Not supported | Not supported | N/A | 
-| SQL Server 2016 (13.x) | Windows Server | Generally available | Not supported|   [SQL Server 2016 SP3 (KB 5003279)](https://support.microsoft.com/help/5003279) and [SQL Server 2016 Azure Connect pack (KB 5014242)](https://support.microsoft.com/help/5014242) |
+[!INCLUDE[sql mi link supportability table](includes/managed-instance-link-supportability-table.md.md)]
 
 SQL Server versions prior to SQL Server 2016 (SQL Server 2008 - 2014) aren't supported because the link feature relies on distributed availability group technology, which was introduced in SQL Server 2016. 
 
@@ -146,14 +144,11 @@ Data replication limitations include:
 Configuration limitations include: 
 
   - If there are multiple SQL Server instances on a server, it's possible to configure a link with each instance, but each instance must be configured to use a separate database mirroring endpoint, with a dedicated port per instance. Only the default instance should use port 5022 for the database mirroring endpoint. 
-
   - Only one database can be placed into a single availability group for one Managed Instance link.
-
   - A Managed Instance link can replicate a database of any size if it fits into the chosen storage size of the target SQL Managed Instance deployment.
-
   - Managed Instance link authentication between SQL Server and SQL Managed Instance is certificate-based and available only through an exchange of certificates. Using Windows authentication to establish the link between the SQL Server instance and the managed instance isn't supported.
-
-  - Only [VNet-local endpoint](connectivity-architecture-overview.md#vnet-local-endpoint) is supported to establish a link with SQL Managed Instance. You can't use public endpoint or private endpoints to establish the link with the managed instance.
+  - Only [VNet-local endpoint](connectivity-architecture-overview.md#vnet-local-endpoint) is supported to establish a link with SQL Managed Instance. - You can't use public endpoint or private endpoints to establish the link with the managed instance.
+  - Databases with multiple log files can't be replicated, because SQL Managed Instance doesn't support multiple log files.
 
 Feature limitations include:
 
@@ -165,11 +160,17 @@ Feature limitations include:
 
 - If you're using distributed transactions with a database that's replicated from the SQL Server instance and, in a migration scenario, on the cutover to the cloud, Distributed Transaction Coordinator capabilities won't be transferred. It's not possible for the migrated database to get involved in distributed transactions with the SQL Server instance, because the SQL Managed Instance deployment doesn't support distributed transactions with SQL Server at this time. For reference, SQL Managed Instance today supports distributed transactions only between other managed instances. For more information, see [Distributed transactions across cloud databases](../database/elastic-transactions-overview.md#transactions-for-sql-managed-instance).
 
+- If you're using Transparent Data Encryption (TDE) to encrypt SQL Server databases, the database encryption key from SQL Server needs to be exported and uploaded to Azure Key Vault, and you need to also configure the BYOK TDE option on SQL Managed Instance before creating the link.
+
 - You can't establish a link between SQL Server and SQL Managed Instance if the functionality that's used on the SQL Server instance isn't supported on the managed instance. For example: 
 
     - Databases with file tables and file streams can't be replicated, because SQL Managed Instance doesn't support file tables or file streams.
 
-    - Databases that use In-Memory OLTP (Hekaton) can be replicated only to the *Business Critical* service tier for SQL Managed Instance, because the *General Purpose* service tier doesn't support In-Memory OLTP.
+    - Databases that use In-Memory OLTP (Hekaton) can be replicated only to the *Business Critical* service tier for SQL Managed Instance, because the *General Purpose* service tier doesn't support In-Memory OLTP. Databases with multiple Hekaton files can’t be replicated to the Business Critical service tier for SQL Managed Instance, as multiple Hekaton files aren't supported.
+
+Trying to add an unsupported functionality to a replicated database in: 
+    - SQL Server 2019 and 2022 fails with an error. 
+    - SQL Server 2016 results in breaking the link, which will then need to be deleted and recreated. 
 
 For the full list of differences between SQL Server and SQL Managed Instance, see [T-SQL differences between SQL Server and Azure SQL Managed Instance](./transact-sql-tsql-differences-sql-server.md).
 

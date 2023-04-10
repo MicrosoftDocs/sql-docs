@@ -17,7 +17,7 @@ ms.topic: how-to
 This article teaches you how to prepare your environment for a [SQL Managed Instance link](managed-instance-link-feature-overview.md) so that you can replicate databases from SQL Server to Azure SQL Managed Instance.
 
 > [!NOTE]
-> Some functionality of the link is generally available, while some is currently in preview. Review the [prerequisites](managed-instance-link-feature-overview.md#prerequisites) to learn more. 
+> It's possible to automate preparing your environment for the Managed Instance link by using a downloadable script. Review the [Automating link setup blog](https://techcommunity.microsoft.com/t5/modernization-best-practices-and/automating-the-setup-of-azure-sql-managed-instance-link/ba-p/3696961) to learn more. 
 
 ## Prerequisites 
 
@@ -34,27 +34,61 @@ For SQL Server, you should have **sysadmin** permissions.
 
 For Azure SQL Managed Instance, you should be a member of the [SQL Managed Instance Contributor](/azure/role-based-access-control/built-in-roles#sql-managed-instance-contributor), or have the following permissions for a custom role: 
 
-- Microsoft.Sql/managedInstances/hybridCertificate/action
-- Microsoft.Sql/managedInstances/read
-- Microsoft.Sql/managedInstances/write
-- Microsoft.Sql/managedInstances/databases/read
-- Microsoft.Sql/managedInstances/databases/delete
-- Microsoft.Sql/managedInstances/databases/write
-- Microsoft.Sql/managedInstances/databases/completeRestore/action
-- Microsoft.Sql/managedInstances/databases/readBackups/action
-- Microsoft.Sql/managedInstances/databases/restoreDetails/read
-- Microsoft.Sql/managedInstances/distributedAvailabilityGroups/read
-- Microsoft.Sql/managedInstances/distributedAvailabilityGroups/write
-- Microsoft.Sql/managedInstances/distributedAvailabilityGroups/delete
-- Microsoft.Sql/managedInstances/distributedAvailabilityGroups/setRole/action
-- Microsoft.Sql/managedInstances/endpointCertificates/read
-- Microsoft.Sql/managedInstances/hybridLink/read
-- Microsoft.Sql/managedInstances/hybridLink/write
-- Microsoft.Sql/managedInstances/hybridLink/delete
-- Microsoft.Sql/managedInstances/serverTrustCertificates/write
-- Microsoft.Sql/managedInstances/serverTrustCertificates/delete
-- Microsoft.Sql/managedInstances/serverTrustCertificates/read
+:::row:::
+    :::column:::
+     - Microsoft.Sql/managedInstances/hybridCertificate/action
+     - Microsoft.Sql/managedInstances/read
+     - Microsoft.Sql/managedInstances/write
+     - Microsoft.Sql/managedInstances/databases/read
+     - Microsoft.Sql/managedInstances/databases/delete
+     - Microsoft.Sql/managedInstances/databases/write
+     - Microsoft.Sql/managedInstances/databases/completeRestore/action
+     - Microsoft.Sql/managedInstances/databases/readBackups/action
+     - Microsoft.Sql/managedInstances/databases/restoreDetails/read
+     - Microsoft.Sql/managedInstances/distributedAvailabilityGroups/read
+    :::column-end:::
+    :::column:::
+     - Microsoft.Sql/managedInstances/distributedAvailabilityGroups/write
+     - Microsoft.Sql/managedInstances/distributedAvailabilityGroups/delete
+     - Microsoft.Sql/managedInstances/distributedAvailabilityGroups/setRole/action
+     - Microsoft.Sql/managedInstances/endpointCertificates/read
+     - Microsoft.Sql/managedInstances/hybridLink/read
+     - Microsoft.Sql/managedInstances/hybridLink/write
+     - Microsoft.Sql/managedInstances/hybridLink/delete
+     - Microsoft.Sql/managedInstances/serverTrustCertificates/write
+     - Microsoft.Sql/managedInstances/serverTrustCertificates/delete
+     - Microsoft.Sql/managedInstances/serverTrustCertificates/read
+    :::column-end:::
+:::row-end:::
 
+:::row:::
+    :::column:::
+     - Microsoft.Sql/managedInstances/hybridCertificate/action
+     - Microsoft.Sql/managedInstances/read
+     - Microsoft.Sql/managedInstances/write
+     - Microsoft.Sql/managedInstances/databases/read
+     - Microsoft.Sql/managedInstances/databases/delete
+     - Microsoft.Sql/managedInstances/databases/write
+     - Microsoft.Sql/managedInstances/databases/completeRestore/action
+    :::column-end:::
+    :::column:::
+     - Microsoft.Sql/managedInstances/databases/readBackups/action
+     - Microsoft.Sql/managedInstances/databases/restoreDetails/read
+     - Microsoft.Sql/managedInstances/distributedAvailabilityGroups/read
+     - Microsoft.Sql/managedInstances/distributedAvailabilityGroups/write
+     - Microsoft.Sql/managedInstances/distributedAvailabilityGroups/delete
+     - Microsoft.Sql/managedInstances/distributedAvailabilityGroups/setRole/action
+     - Microsoft.Sql/managedInstances/endpointCertificates/read
+    :::column-end:::
+    :::column:::
+     - Microsoft.Sql/managedInstances/hybridLink/read
+     - Microsoft.Sql/managedInstances/hybridLink/write
+     - Microsoft.Sql/managedInstances/hybridLink/delete
+     - Microsoft.Sql/managedInstances/serverTrustCertificates/write
+     - Microsoft.Sql/managedInstances/serverTrustCertificates/delete
+     - Microsoft.Sql/managedInstances/serverTrustCertificates/read
+    :::column-end:::
+:::row-end:::
 
 ## Prepare your SQL Server instance
 
@@ -77,14 +111,10 @@ To check your SQL Server version, run the following Transact-SQL (T-SQL) script 
 SELECT @@VERSION as 'SQL Server version'
 ```
 
-Ensure that your SQL Server version has the appropriate servicing update installed, as listed below. You must restart your SQL Server instance during the update. 
+Ensure that your SQL Server version has the appropriate servicing update installed, as listed below. If you need to install any updates, you must restart your SQL Server instance during the update. 
 
-| SQL Server Version  |  Operating system (OS) | Servicing update requirement |
-|---------|---------|---------|
-|[!INCLUDE [sssql22-md](../../docs/includes/sssql22-md.md)] | Windows Server & Linux | SQL Server 2022 RTM | 
-|[!INCLUDE [sssql19-md](../../docs/includes/sssql19-md.md)] | Windows Server |  [SQL Server 2019 CU15 (KB5008996)](https://support.microsoft.com/en-us/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6), or above for Enterprise and Developer editions, and [CU17 (KB5016394)](https://support.microsoft.com/topic/kb5016394-cumulative-update-17-for-sql-server-2019-3033f654-b09d-41aa-8e49-e9d0c353c5f7), or above, for Standard editions. |
-|[!INCLUDE [sssql17-md](../../docs/includes/sssql17-md.md)] | N/A | Not supported | 
-|[!INCLUDE [sssql16-md](../../docs/includes/sssql16-md.md)] | Windows Server |[SQL Server 2016 SP3 (KB 5003279)](https://support.microsoft.com/help/5003279) and [SQL Server 2016 Azure Connect pack (KB 5014242)](https://support.microsoft.com/help/5014242) |
+[!INCLUDE[sql mi link supportability table](includes/managed-instance-link-supportability-table.md.md)]
+
 
 ### Create a database master key in the master database
 
@@ -227,17 +257,28 @@ If your SQL Server instance is hosted outside Azure, establish a VPN connection 
 
 ### Network ports between the environments
 
-Regardless of the connectivity mechanism, there are requirements that must be met for the network traffic to flow between the  environments:
+Regardless of the connectivity mechanism, there are requirements that must be met for the network traffic to flow between the environments:
 
 The Network Security Group (NSG) rules on the subnet hosting managed instance needs to allow:
-- Inbound traffic on port 5022 and port range 11000-11999 from the network hosting SQL Server
+- Inbound port 5022 and port range 11000-11999 to receive traffic from the source SQL Server IP 
+- Outbound port 5022 to send traffic to the destination SQL Server IP
 
-Firewall on the network hosting SQL Server, and the host OS needs to allow:
-- Inbound traffic on port 5022 from the entire subnet range hosting SQL Managed Instance
+All firewalls on the network hosting SQL Server, and the host OS needs to allow:
+- Inbound port 5022 opened to receive traffic from the source IP range of the MI subnet /24 (for example 10.0.0.0/24)
+- Outbound ports 5022, and the port range 11000-11999 opened to send traffic to the destination IP range of MI subnet (example 10.0.0.0/24)
 
 :::image type="content" source="./media/managed-instance-link-preparation/link-networking-requirements.png" alt-text="Diagram showing network requirements to set up the link between SQL Server and managed instance.":::
 
-Port numbers can't be changed or customized. IP address ranges of subnets hosting managed instance, and SQL Server must not overlap.
+> [!IMPORTANT]
+> - Ports need to be open in every firewall in the networking environment, including the host server, as well as any corporate firewalls or gateways on the network. In corporate environments, you may need to show your network administrator the information in this section to help open additional ports in the corporate networking layer. 
+> - While you can choose to customize the endpoint on the SQL Server side, port numbers for SQL Managed Instance can't be changed or customized. 
+> - IP address ranges of subnets hosting managed instances, and SQL Server must not overlap.
+
+The following diagram shows an example of an on-premises network environment, indicating that _all firewalls in the environment need to have open ports_, including the OS firewall hosting the SQL Server, as well as any corporate firewalls and/or gateways: 
+
+:::image type="content" source="./media/managed-instance-link-preparation/link-networking-infrastructure.png" alt-text="Diagram showing network infrastructure to set up the link between SQL Server and managed instance.":::
+
+
 
 The following table describes port actions for each environment: 
 
@@ -246,6 +287,10 @@ The following table describes port actions for each environment:
 |SQL Server (in Azure) | Open both inbound and outbound traffic on port 5022 for the network firewall to the entire subnet IP range of SQL Managed Instance. If necessary, do the same on the SQL Server host OS (Windows/Linux) firewall. Create a network security group (NSG) rule in the virtual network that hosts the VM to allow communication on port 5022. |
 |SQL Server (outside Azure) | Open both inbound and outbound traffic on port 5022 for the network firewall to the entire subnet IP range of SQL Managed Instance. If necessary, do the same on the SQL Server host OS (Windows/Linux) firewall. |
 |SQL Managed Instance |[Create an NSG rule](/azure/virtual-network/manage-network-security-group#create-a-security-rule) in Azure portal to allow inbound and outbound traffic from the IP address and the networking hosting SQL Server on port 5022 and port range 11000-11999. |
+
+
+
+
 
 Use the following PowerShell script on the Windows host OS of the SQL Server instance to open ports in the Windows firewall: 
 

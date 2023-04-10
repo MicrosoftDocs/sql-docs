@@ -27,7 +27,7 @@ This release is published April 10, 2023.
 - Backups | Configure Automatic Backups for Arc SQL Server with a default schedule.
 - Automatic built-in backups with default schedule of weekly full, daily diff, and transaction logs every 5 min for every database.
 - Configure backup file retention with the `--retention-days` parameter. Values from 0 to 35 days. Default is 0 days.
-- Azure Policy to enable best practices assessment at scale. For details, see [Automatically connect Azure Arc-enabled SQL Servers](connect-at-scale-autodeploy.md).
+- Azure Policy to enable best practices assessment at scale. For details, see [Configure SQL best practices assessment](assess.md).
 
 ## March 2023
 

@@ -34,61 +34,27 @@ For SQL Server, you should have **sysadmin** permissions.
 
 For Azure SQL Managed Instance, you should be a member of the [SQL Managed Instance Contributor](/azure/role-based-access-control/built-in-roles#sql-managed-instance-contributor), or have the following permissions for a custom role: 
 
-:::row:::
-    :::column:::
-     - Microsoft.Sql/managedInstances/hybridCertificate/action
-     - Microsoft.Sql/managedInstances/read
-     - Microsoft.Sql/managedInstances/write
-     - Microsoft.Sql/managedInstances/databases/read
-     - Microsoft.Sql/managedInstances/databases/delete
-     - Microsoft.Sql/managedInstances/databases/write
-     - Microsoft.Sql/managedInstances/databases/completeRestore/action
-     - Microsoft.Sql/managedInstances/databases/readBackups/action
-     - Microsoft.Sql/managedInstances/databases/restoreDetails/read
-     - Microsoft.Sql/managedInstances/distributedAvailabilityGroups/read
-    :::column-end:::
-    :::column:::
-     - Microsoft.Sql/managedInstances/distributedAvailabilityGroups/write
-     - Microsoft.Sql/managedInstances/distributedAvailabilityGroups/delete
-     - Microsoft.Sql/managedInstances/distributedAvailabilityGroups/setRole/action
-     - Microsoft.Sql/managedInstances/endpointCertificates/read
-     - Microsoft.Sql/managedInstances/hybridLink/read
-     - Microsoft.Sql/managedInstances/hybridLink/write
-     - Microsoft.Sql/managedInstances/hybridLink/delete
-     - Microsoft.Sql/managedInstances/serverTrustCertificates/write
-     - Microsoft.Sql/managedInstances/serverTrustCertificates/delete
-     - Microsoft.Sql/managedInstances/serverTrustCertificates/read
-    :::column-end:::
-:::row-end:::
+- Microsoft.Sql/managedInstances/hybridCertificate/action
+- Microsoft.Sql/managedInstances/read
+- Microsoft.Sql/managedInstances/write
+- Microsoft.Sql/managedInstances/databases/read
+- Microsoft.Sql/managedInstances/databases/delete
+- Microsoft.Sql/managedInstances/databases/write
+- Microsoft.Sql/managedInstances/databases/completeRestore/action
+- Microsoft.Sql/managedInstances/databases/readBackups/action
+- Microsoft.Sql/managedInstances/databases/restoreDetails/read
+- Microsoft.Sql/managedInstances/distributedAvailabilityGroups/read
+- Microsoft.Sql/managedInstances/distributedAvailabilityGroups/write
+- Microsoft.Sql/managedInstances/distributedAvailabilityGroups/delete
+- Microsoft.Sql/managedInstances/distributedAvailabilityGroups/setRole/action
+- Microsoft.Sql/managedInstances/endpointCertificates/read
+- Microsoft.Sql/managedInstances/hybridLink/read
+- Microsoft.Sql/managedInstances/hybridLink/write
+- Microsoft.Sql/managedInstances/hybridLink/delete
+- Microsoft.Sql/managedInstances/serverTrustCertificates/write
+- Microsoft.Sql/managedInstances/serverTrustCertificates/delete
+- Microsoft.Sql/managedInstances/serverTrustCertificates/read
 
-:::row:::
-    :::column:::
-     - Microsoft.Sql/managedInstances/hybridCertificate/action
-     - Microsoft.Sql/managedInstances/read
-     - Microsoft.Sql/managedInstances/write
-     - Microsoft.Sql/managedInstances/databases/read
-     - Microsoft.Sql/managedInstances/databases/delete
-     - Microsoft.Sql/managedInstances/databases/write
-     - Microsoft.Sql/managedInstances/databases/completeRestore/action
-    :::column-end:::
-    :::column:::
-     - Microsoft.Sql/managedInstances/databases/readBackups/action
-     - Microsoft.Sql/managedInstances/databases/restoreDetails/read
-     - Microsoft.Sql/managedInstances/distributedAvailabilityGroups/read
-     - Microsoft.Sql/managedInstances/distributedAvailabilityGroups/write
-     - Microsoft.Sql/managedInstances/distributedAvailabilityGroups/delete
-     - Microsoft.Sql/managedInstances/distributedAvailabilityGroups/setRole/action
-     - Microsoft.Sql/managedInstances/endpointCertificates/read
-    :::column-end:::
-    :::column:::
-     - Microsoft.Sql/managedInstances/hybridLink/read
-     - Microsoft.Sql/managedInstances/hybridLink/write
-     - Microsoft.Sql/managedInstances/hybridLink/delete
-     - Microsoft.Sql/managedInstances/serverTrustCertificates/write
-     - Microsoft.Sql/managedInstances/serverTrustCertificates/delete
-     - Microsoft.Sql/managedInstances/serverTrustCertificates/read
-    :::column-end:::
-:::row-end:::
 
 ## Prepare your SQL Server instance
 
@@ -113,8 +79,12 @@ SELECT @@VERSION as 'SQL Server version'
 
 Ensure that your SQL Server version has the appropriate servicing update installed, as listed below. If you need to install any updates, you must restart your SQL Server instance during the update. 
 
-[!INCLUDE[sql mi link supportability table](../includes/managed-instance-link-supportability-table.md)]
-
+| SQL Server Version  |  Operating system (OS) | Servicing update requirement |
+|---------|---------|---------|
+|[!INCLUDE [sssql22-md](../../docs/includes/sssql22-md.md)] | Windows Server & Linux | SQL Server 2022 RTM | 
+|[!INCLUDE [sssql19-md](../../docs/includes/sssql19-md.md)] | Windows Server |  [SQL Server 2019 CU20 ()](need link), or above for Enterprise and Developer editions, and [CU17 (KB5016394)](https://support.microsoft.com/topic/kb5016394-cumulative-update-17-for-sql-server-2019-3033f654-b09d-41aa-8e49-e9d0c353c5f7), or above, for Standard editions. |
+|[!INCLUDE [sssql17-md](../../docs/includes/sssql17-md.md)] | N/A | Not supported | 
+|[!INCLUDE [sssql16-md](../../docs/includes/sssql16-md.md)] | Windows Server |[SQL Server 2016 SP3 (KB 5003279)](https://support.microsoft.com/help/5003279) and [SQL Server 2016 Azure Connect pack (KB 5014242)](https://support.microsoft.com/help/5014242) |
 
 ### Create a database master key in the master database
 

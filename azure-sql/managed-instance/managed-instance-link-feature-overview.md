@@ -44,7 +44,12 @@ The Managed Instance link is supported on both the General Purpose and Business 
 
 The following table lists the functionality of the link feature and the supported SQL Server versions:
 
-[!INCLUDE[sql mi link supportability table](../includes/managed-instance-link-supportability-table.md)]
+| SQL Server version  | Operating system (OS)  | One-way replication |  Disaster recovery | Servicing update requirement |
+| --- | --- | --- | --- | --- |
+| SQL Server 2022 (16.x) | Windows Server and Linux |  Generally available | [Must sign up for limited public preview](https://aka.ms/mi-link-dr-preview-signup)  | SQL Server 2022 RTM | 
+| SQL Server 2019 (15.x) | Windows Server only | Generally available |Not supported | [SQL Server 2019 CU20 (KB)](need new link) or later for Enterprise and Developer editions, and [CU17 (KB5016394)](https://support.microsoft.com/help/5016394) or later for Standard editions |
+| SQL Server 2017 (14.x) | N/A | Not supported | Not supported | N/A | 
+| SQL Server 2016 (13.x) | Windows Server only | Generally available | Not supported|   [SQL Server 2016 SP3 (KB 5003279)](https://support.microsoft.com/help/5003279) and [SQL Server 2016 Azure Connect pack (KB 5014242)](https://support.microsoft.com/help/5014242) |
 
 SQL Server versions prior to SQL Server 2016 (SQL Server 2008 - 2014) aren't supported because the link feature relies on distributed availability group technology, which was introduced in SQL Server 2016. 
 
@@ -153,24 +158,17 @@ Configuration limitations include:
 Feature limitations include:
 
 - [Auto-failover groups](auto-failover-group-sql-mi.md) aren't supported with instances that use the link feature. You can't establish a link on a managed instance that's part of an auto-failover group, and conversely, you can't configure an auto-failover group on an instance that has a link established.
-
 - If you're using Change Data Capture (CDC), log shipping, or a service broker with databases that are replicated on the SQL Server instance, when the database is migrated to a SQL Managed Instance deployment, during a failover to Azure, clients need to connect by using the instance name of the current global primary replica. These settings should be manually reconfigured. 
-
 - If you're using transactional replication with a database on a SQL Server instance in a migration scenario, during failover to Azure, the transactional replication on the SQL Managed Instance deployment will fail and should be manually reconfigured. 
-
 - If you're using distributed transactions with a database that's replicated from the SQL Server instance and, in a migration scenario, on the cutover to the cloud, Distributed Transaction Coordinator capabilities won't be transferred. It's not possible for the migrated database to get involved in distributed transactions with the SQL Server instance, because the SQL Managed Instance deployment doesn't support distributed transactions with SQL Server at this time. For reference, SQL Managed Instance today supports distributed transactions only between other managed instances. For more information, see [Distributed transactions across cloud databases](../database/elastic-transactions-overview.md#transactions-for-sql-managed-instance).
-
 - If you're using Transparent Data Encryption (TDE) to encrypt SQL Server databases, the database encryption key from SQL Server needs to be exported and uploaded to Azure Key Vault, and you need to also configure the BYOK TDE option on SQL Managed Instance before creating the link.
-
 - You can't establish a link between SQL Server and SQL Managed Instance if the functionality that's used on the SQL Server instance isn't supported on the managed instance. For example: 
-
     - Databases with file tables and file streams can't be replicated, because SQL Managed Instance doesn't support file tables or file streams.
-
     - Databases that use In-Memory OLTP (Hekaton) can be replicated only to the *Business Critical* service tier for SQL Managed Instance, because the *General Purpose* service tier doesn't support In-Memory OLTP. Databases with multiple Hekaton files can’t be replicated to the Business Critical service tier for SQL Managed Instance, as multiple Hekaton files aren't supported.
 
 Trying to add an unsupported functionality to a replicated database in: 
-    - SQL Server 2019 and 2022 fails with an error. 
-    - SQL Server 2016 results in breaking the link, which will then need to be deleted and recreated. 
+   - SQL Server 2019 and 2022 fails with an error. 
+   - SQL Server 2016 results in breaking the link, which will then need to be deleted and recreated. 
 
 For the full list of differences between SQL Server and SQL Managed Instance, see [T-SQL differences between SQL Server and Azure SQL Managed Instance](./transact-sql-tsql-differences-sql-server.md).
 

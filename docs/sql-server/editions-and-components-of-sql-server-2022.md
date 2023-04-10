@@ -419,5 +419,3 @@ For information about the Business Intelligence Client features supported by the
 - [What's new in SQL Server 2022](what-s-new-in-sql-server-2022.md)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-
-[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

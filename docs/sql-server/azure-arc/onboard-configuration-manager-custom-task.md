@@ -60,7 +60,7 @@ After you complete the Create Task Sequence Wizard, Configuration Manager adds t
 1. In the **Task Sequence** list, select the task sequence that you want to edit.
 1. Define **Install Application** as the first task in the task sequence.
    1. On the **Home** tab of the ribbon, in the**Task Sequence** group, select **Edit**. Then, select **Add**, select **Software**, and select **Install Application**.
-   1. Set the name to `Install Connected Machine Agent and Azure extenstion for SQL Server `.
+   1. Set the name to `Install Connected Machine Agent and Azure extension for SQL Server`.
    1. Select the Azure Extension for SQL Server.
       :::image type="content" source="media/onboard-configuration-manager-custom-task/configuration-manager-edit-task-sequence.png" alt-text="Screenshot showing a task sequence being edited in Configuration Manager.":::
 1. Define **Run PowerShell Script** as the second task in the task sequence.

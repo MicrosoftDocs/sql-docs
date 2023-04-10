@@ -4,12 +4,30 @@ description: Latest release notes
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 03/09/2023
+ms.date: 04/10/2023
 ms.service: sql
 ms.topic: conceptual
 ---
 
 # Release notes - Azure Arc-enabled SQL Server
+
+## April 2023
+
+This release is published April 10, 2023.
+
+> [!NOTE]
+> This release is only available for SQL Server on Windows. This release is not available for SQL Server on Linux.
+
+### Extension version
+
+`1.1.2284.7`
+
+### Azure extension for SQL Server
+
+- Backups | Configure Automatic Backups for Arc SQL Server with a default schedule.
+- Automatic built-in backups with default schedule of weekly full, daily diff, and transaction logs every 5 min for every database.
+- Configure backup file retention with the `--retention-days` parameter. Values from 0 to 35 days. Default is 0 days.
+- Azure Policy to enable best practices assessment at scale. For details, see [Automatically connect Azure Arc-enabled SQL Servers](connect-at-scale-autodeploy.md).
 
 ## March 2023
 
@@ -35,6 +53,7 @@ This release is published February 17, 2023
 ### Azure extension for SQL Server
 
 - [Best practices assessment](assess.md) (BPA) on Arc-enabled SQL Server requires Software Assurance or [Azure pay-as-you-go license](manage-license-type.md#manage-sql-server-license-and-billing-options).
+- [Viewing SQL Server databases - Azure Arc](view-databases.md) on Arc-enabled SQL Server requires Software Assurance or [Azure pay-as-you-go license](manage-license-type.md#manage-sql-server-license-and-billing-options).
 
 ## January 2023
 
@@ -54,7 +73,6 @@ This release is published January 17, 2023
   - Evaluates that your Azure Arc-enabled SQL Server is configured to follow best practices
   - Provides comprehensive mitigation guidance
   - To experience best practices assessment, upgrade to the latest extension version.
-
 - Azure Arc-enabled Database resource populates the earliest restore time and last backup time for database resources as a resource
 - Pay-as-you-go (PAYG) licensing option is now extended to SQL Server 2012 and above
 - Ability to set the licensing type during onboarding Arc-enabled SQL Server.
@@ -112,7 +130,6 @@ The *LicenseType* property of `SQL Server - Azure Arc` has been extended to prov
   - SQL Server in Azure VMs. If a custom VM image is migrated to Azure VM, Azure extension for SQL Server will stop working. The customers need to [Delete your Arc-enabled SQL Server resource](delete-from-azure-arc.md#delete-your-arc-enabled-sql-server-resource) and [enable automatic registration with SQL IaaS Agent extension](/azure/azure-sql/virtual-machines/windows/sql-agent-extension-automatic-registration-all-vms).
   - SQL Server in Linux containers
   - SQL Server Azure VMware Solution
-
 > [!NOTE]
 > Azure extension for SQL Server fully supports VMware clusters outside of Azure.
 
@@ -171,7 +188,7 @@ Azure Arc-enabled SQL Server releases for general availability support
 This release introduces a SQL Server extension that continuously monitors for changes of the SQL Server configuration and automatically updates the corresponding Arc-enabled SQL Server resources. The extension is installed as part of the SQL Server instance registration process. To upgrade your existing Arc-enabled SQL Server resources to an agent-based configuration, use any of the methods described in [Connect your SQL Server to Azure Arc](connect.md).
 
 > [!IMPORTANT]
-> If you installed a version of SQL Server extension during the preview, make sure it is updated to version 1.1.1668.43 or later. An extension can be updated using the *Extention* pane of the specific connected server resource.
+> If you installed a version of SQL Server extension during the preview, make sure it is updated to version 1.1.1668.43 or later. An extension can be updated using the *Extension* pane of the specific connected server resource.
 
 The introduction of SQL Server extension requires that the user accounts have more privileges in order to connect a  SQL Server instance to Azure Arc. For details, see [prerequisites](prerequisites.md).
 
@@ -243,7 +260,6 @@ If you have existing SQL Server - Azure Arc resources, use these steps to migrat
 The October update includes the following improvements:
 
 - The register Azure Arc-enabled SQL Server pane now includes the **Tags** tab. The tags are included in the registration script and are reflected in the **SQL Server - Azure Arc** resource(s). For details, see [Connect your SQL Server to Azure Arc](connect.md).
-
 - The **Environment Health** entry now supports activation of **SQL Assessment** from the Portal by deploying a *CustomScriptExtension*. For details, see [Configure SQL Assessment](assess.md#enable-best-practices-assessment).
 
 ### Known issues
@@ -263,11 +279,12 @@ For details, see [Azure Arc-enabled SQL Server Overview](overview.md)
 The following issues apply to the September release:
 
 - The **Register Azure Arc-enabled SQL Server** pane doesn't support configuring custom tags. To add custom tags, open the **SQL Server - Azure Arc** resource after registration and change Tags in the **Overview** page.
-
 - Connecting SQL Server instances to Azure Arc requires an account with a broad set of permissions. For details, see [prerequisites](prerequisites.md).
 
 ## Next steps
 
 **Just want to try things out?**  Get started quickly with [Azure Arc-enabled SQL Server Jumpstart](https://aka.ms/AzureArcSqlServerJumpstart).
+
+
 
 

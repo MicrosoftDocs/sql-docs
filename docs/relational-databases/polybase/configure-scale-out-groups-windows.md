@@ -11,7 +11,7 @@ monikerRange: ">= sql-server-2016"
 ---
 # Configure PolyBase scale-out groups on Windows
 
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 This article describes how to set up a [PolyBase scale-out group](polybase-scale-out-groups.md) on Windows. This creates a cluster of SQL Server instances to process large data sets from external data sources, such as Hadoop or Azure Blob Storage, in a scale-out fashion for better query performance.
 

@@ -205,7 +205,7 @@ Register a SQL Server VM with PowerShell (-LicenseType can be `PAYG` or `AHUB`):
 # Get the existing compute VM
 $vm = Get-AzVM -Name <vm_name> -ResourceGroupName <resource_group_name>
          
-# Register SQL VM with 'Lightweight' SQL IaaS agent
+# Register SQL VM with SQL IaaS Agent extension
 New-AzSqlVM -Name $vm.Name -ResourceGroupName $vm.ResourceGroupName -Location $vm.Location `
    -LicenseType <license_type>
 ```

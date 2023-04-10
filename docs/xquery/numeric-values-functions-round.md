@@ -14,7 +14,7 @@ dev_langs:
   - "XML"
 ---
 # Numeric Values Functions - round
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   Returns the number not having a fractional part that is closest to the argument. If there is more than one number like that, the one that is closest to positive infinity is returned. For example:  
   

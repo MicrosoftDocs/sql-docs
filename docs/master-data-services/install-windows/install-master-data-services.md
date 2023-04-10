@@ -11,7 +11,7 @@ ms.custom: intro-installation
 ---
 # Installation Tasks for Master Data Services
 
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   This article provides an overview of the installation tasks, with links to instructions. For a walkthrough of installing and configuring Master Data Services, see [Master Data Services Installation and Configuration](../../master-data-services/master-data-services-installation-and-configuration.md) 
   

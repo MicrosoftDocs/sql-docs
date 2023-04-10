@@ -7,6 +7,7 @@ ms.reviewer: mathoma
 ms.date: 2/17/2022
 ms.service: sql-database
 ms.subservice: deployment-configuration
+ms.custom: devx-track-azurecli
 ms.topic: quickstart
 ---
 # Quickstart: Create a Hyperscale database in Azure SQL Database

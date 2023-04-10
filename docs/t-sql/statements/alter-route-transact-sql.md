@@ -122,7 +122,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
 >  This option is not available in a contained database.  
   
 ## Remarks  
- The routing table that stores the routes is a meta-data table that can be read through the **sys.routes** catalog view. The routing table can only be updated through the CREATE ROUTE, ALTER ROUTE, and DROP ROUTE statements.  
+ The routing table that stores the routes is a metadata table that can be read through the **sys.routes** catalog view. The routing table can only be updated through the CREATE ROUTE, ALTER ROUTE, and DROP ROUTE statements.  
   
  Clauses that are not specified in the ALTER ROUTE command remain unchanged. Therefore, you cannot ALTER a route to specify that the route does not time out, that the route matches any service name, or that the route matches any broker instance. To change these characteristics of a route, you must drop the existing route and create a new route with the new information.  
   

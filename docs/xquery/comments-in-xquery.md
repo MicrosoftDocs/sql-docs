@@ -14,7 +14,7 @@ dev_langs:
   - "XML"
 ---
 # Comments in XQuery
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   You can add comments to XQuery. The comment strings are added by using the "`(:`" and "`:)`" delimiters. For example:  
   

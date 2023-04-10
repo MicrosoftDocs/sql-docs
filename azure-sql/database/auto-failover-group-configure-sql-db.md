@@ -50,7 +50,9 @@ Create your failover group and add your single database to it using the Azure po
 
    ![Add new failover group](./media/auto-failover-group-configure-sql-db/sqldb-add-new-failover-group.png)
 
-1. On the **Failover Group** page, enter or select the required values, and then select **Create**.
+1. On the **Failover Group** page, enter or select the required values, and then select **Create**. The failover group must be created in a different region.
+
+
 
    - **Databases within the group**: Choose the database you want to add to your failover group. Adding the database to the failover group will automatically start the geo-replication process.
 

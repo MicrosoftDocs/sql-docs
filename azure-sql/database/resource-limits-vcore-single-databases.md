@@ -15,6 +15,11 @@ ms.custom:
 # Resource limits for single databases using the vCore purchasing model
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
+> [!div class="op_single_selector"]
+> * [Azure SQL Database logical server](resource-limits-logical-server.md)
+> * [Azure SQL Database single database](resource-limits-vcore-single-databases.md)
+> * [Azure SQL Managed Instance](../managed-instance/resource-limits.md)
+
 This article provides the detailed resource limits for single databases in Azure SQL Database using the vCore purchasing model.
 
 
@@ -953,6 +958,8 @@ For important information about M-series hardware availability, see [Azure offer
 This section includes details on previously available hardware.
 
 [!INCLUDE[azure-sql-gen4-hardware-retirement](../includes/azure-sql-gen4-hardware-retirement.md)]
+
+[!INCLUDE[identify-gen4-hardware](../includes/identify-gen4-hardware.md)]
 
 ### Hyperscale - provisioned compute - Gen4
 

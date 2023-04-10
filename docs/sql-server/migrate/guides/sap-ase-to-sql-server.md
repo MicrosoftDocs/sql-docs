@@ -53,7 +53,7 @@ Before you perform a schema conversion, validate the default datatype mappings o
 
 To convert the schema:
 
-1. (Optional) To convert dynamic or ad-hoc queries, right-click the node, and select **Add Statement**.
+1. (Optional) To convert dynamic or ad hoc queries, right-click the node, and select **Add Statement**.
 1. Select the **Connect to SQL Server** tab, and enter SQL Server details. You can choose to connect to an existing database or enter a new name, in which case a database will be created on the target server.
 1. Right-click the database or object you want to migrate in **SAP ASE Metadata Explorer**, and select **Migrate Data**. Alternatively, you can select the **Migrate Data** tab. To migrate data for an entire database, select the check box next to the database name. To migrate data from individual tables, expand the database, expand **Tables**, and then select the check boxes next to the tables. To omit data from individual tables, clear the check boxes.
 1. Compare and review the structure of the schema to identify potential problems.

@@ -24,6 +24,11 @@ Microsoft OLE DB Driver 19.3.0 for SQL Server is the latest general availability
 :::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft OLE DB Driver 19 for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2220016)**  
 :::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft OLE DB Driver 19 for SQL Server (Arm64)](https://go.microsoft.com/fwlink/?linkid=2224283)**  
 
+> [!NOTE]
+> Installation of the [Microsoft Visual C++ Redistributable](/cpp/windows/latest-supported-vc-redist) is a prerequisite,
+> and while the x64 installer for Microsoft OLE DB Driver installs both the 64-bit and 32-bit driver, the x64 installer for the Microsoft Visual C++ Redistributable
+> doesn't install 32-bit binaries. You must install both the x86 and x64 versions of the C++ redistributable package to use the OLE DB  driver with 32-bit programs.
+
 ### Version information
 
 - Release number: 19.3.0

@@ -235,7 +235,7 @@ The full list of tenants and the corresponding database for each is available in
 
 2. In the SSMS Object Explorer, browse to the views in the *tenantcatalog* database.
 
-3. Right click on the view *TenantsExtended* and choose **Select Top 1000 Rows**. Note the mapping between tenant name and database for the different tenants.
+3. Right-click on the view *TenantsExtended* and choose **Select Top 1000 Rows**. Note the mapping between tenant name and database for the different tenants.
 
     ![ExtendedTenants view in SSMS](./media/saas-multitenantdb-provision-and-catalog/extendedtenantsview.png)
 

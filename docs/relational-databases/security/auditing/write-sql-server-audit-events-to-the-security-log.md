@@ -57,6 +57,8 @@ There are three key requirements for writing [!INCLUDE[ssNoVersion](../../../inc
 
   1. Reduce the number of events being audited.
 
+  1. Output the audit records to a file instead of the Event Logs. 
+
 ## Permissions
 
 You must be a Windows administrator to configure these settings.

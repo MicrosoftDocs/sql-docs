@@ -10,7 +10,7 @@ ms.topic: conceptual
 ---
 # Data Quality Services Features and Tasks
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sqlserver.md)]
 
   Find information that anyone-data steward, Data Quality Services administrator, or SQL Server administrator-requires to prepare and execute a data quality project.  
   

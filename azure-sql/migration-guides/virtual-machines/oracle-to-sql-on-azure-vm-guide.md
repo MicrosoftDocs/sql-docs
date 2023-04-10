@@ -135,7 +135,7 @@ Validate the default data type mappings and change them based on requirements, i
 
 To convert the schema, follow these steps:
 
-1. (Optional) To convert dynamic or ad-hoc queries, right-click the node and select **Add statement**.
+1. (Optional) To convert dynamic or ad hoc queries, right-click the node and select **Add statement**.
 
 1. Select **Connect to SQL Server** in the top menu.
      1. Enter connection details for your SQL Server on Azure VM.

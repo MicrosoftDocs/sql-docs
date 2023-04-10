@@ -564,6 +564,8 @@ This section includes details on previously available hardware.
 
 [!INCLUDE[azure-sql-gen4-hardware-retirement](../includes/azure-sql-gen4-hardware-retirement.md)]
 
+[!INCLUDE[identify-gen4-hardware](../includes/identify-gen4-hardware.md)]
+
 <!---
 vCore resource limits are listed in the following articles, please be sure to update all of them: 
 /database/resource-limits-vcore-single-databases.md

@@ -1011,7 +1011,7 @@ items:
       items:
       - name: Manage
         items:
-        - name: Create a Database
+        - name: Create a database
           href: relational-databases/databases/create-a-database.md
         - name: View databases
           href: relational-databases/databases/view-a-list-of-databases-on-an-instance-of-sql-server.md
@@ -1021,23 +1021,25 @@ items:
           href: relational-databases/databases/view-or-change-the-properties-of-a-database.md
         - name: Change configuration settings
           href: relational-databases/databases/change-the-configuration-settings-for-a-database.md
-        - name: Delete a Database
+        - name: Delete a database
           href: relational-databases/databases/delete-a-database.md
-        - name: Delete Data or Log Files from a Database
+        - name: Delete data or log files from a database
           href: relational-databases/databases/delete-data-or-log-files-from-a-database.md
-        - name: Display Data & Log Space Information for a Database
+        - name: Display data & log space information for a database
           href: relational-databases/databases/display-data-and-log-space-information-for-a-database.md
-        - name: Increase the Size of a Database
+        - name: Increase the size of a database
           href: relational-databases/databases/increase-the-size-of-a-database.md
-        - name: Manage Metadata
+        - name: Manage metadata
           href: relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md
-        - name: Rename
+        - name: Rename a database
           href: relational-databases/databases/rename-a-database.md
-        - name: Set Single-user Mode
+        - name: Set single-user mode
           href: relational-databases/databases/set-a-database-to-single-user-mode.md
-        - name: Shrink a Database
+        - name: Shrink a database
           href: relational-databases/databases/shrink-a-database.md
-        - name: Shrink a File
+        - name: Shrink the tempdb database
+          href: relational-databases/databases/shrink-tempdb-database.md
+        - name: Shrink a file
           href: relational-databases/databases/shrink-a-file.md
         - name: Compatibility level
           href: relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md
@@ -7878,6 +7880,10 @@ items:
             items:
               - name: Configure column encryption
                 href: relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption.md
+              - name: Configure columns encryption in-place with DACPAC
+                href: relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption-dacpac.md
+              - name: Configure column encryption in-place with PowerShell
+                href: relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption-powershell.md 
               - name: Configure column encryption in-place with Transact-SQL 
                 href: relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption-tsql.md
               - name: Enable Always Encrypted with secure enclaves for existing encrypted columns
@@ -7889,7 +7895,7 @@ items:
           - name: Create and use indexes on enclave-enabled columns
             href: relational-databases/security/encryption/always-encrypted-enclaves-create-use-indexes.md
           - name: Develop applications using Always Encrypted with secure enclaves
-            href: relational-databases/security/encryption/always-encrypted-enclaves-client-development.md          
+            href: relational-databases/security/encryption/always-encrypted-enclaves-client-development.md        
       - name: Troubleshoot TDE
         href: relational-databases/security/encryption/troubleshoot-tde.md
       - name: Move a TDE protected database
@@ -10326,6 +10332,8 @@ items:
           href: linux/quickstart-sql-server-containers-kubernetes.md
         - name: Deploy availability group with DH2i on AKS
           href: linux/tutorial-sql-server-containers-kubernetes-dh2i.md
+        - name: Deploy availability group in a DH2i sidecar
+          href: linux/tutorial-sql-server-dh2i-sidecar.md
     - name: Security
       href: linux/sql-server-linux-security-overview.md
       items:
@@ -10431,10 +10439,12 @@ items:
             href: sql-server/azure-arc/connect-already-enabled.md
         - name: Connect at scale
           items:
-          - name: Connect at scale | Azure policy
+          - name: Azure policy
             href: sql-server/azure-arc/connect-at-scale-policy.md
-          - name: Connect at scale | Script
+          - name: Script
             href: sql-server/azure-arc/connect-at-scale-script.md
+          - name: Autodeploy
+            href: sql-server/azure-arc/connect-at-scale-autodeploy.md
           - name: Connect machines using Configuration Manager custom task sequence
             href: sql-server/azure-arc/onboard-configuration-manager-custom-task.md
     - name: Manage
@@ -15732,6 +15742,8 @@ items:
         href: relational-databases/system-tables/msqreader-agents-transact-sql.md
       - name: MSqreader_history
         href: relational-databases/system-tables/msqreader-history-transact-sql.md
+      - name: MSrepl_agent_jobs
+        href: relational-databases/system-tables/msrepl-agent-jobs-transact-sql.md
       - name: MSrepl_backup_lsns
         href: relational-databases/system-tables/msrepl-backup-lsns-transact-sql.md
       - name: MSrepl_commands
@@ -15744,6 +15756,8 @@ items:
         href: relational-databases/system-tables/msrepl-originators-transact-sql.md
       - name: MSrepl_queuedtraninfo
         href: relational-databases/system-tables/msrepl-queuedtraninfo-transact-sql.md
+      - name: MSreplservers
+        href: relational-databases/system-tables/msreplservers.md
       - name: MSrepl_transactions
         href: relational-databases/system-tables/msrepl-transactions-transact-sql.md
       - name: MSrepl_version
@@ -16268,13 +16282,13 @@ items:
         href: t-sql/data-types/constants-transact-sql.md
       - name: Conversion
         href: t-sql/data-types/data-type-conversion-database-engine.md
-      - name: Nondeterministic Conversion
+      - name: Nondeterministic conversion
         href: t-sql/data-types/nondeterministic-convert-date-literals.md
       - name: Precedence
         href: t-sql/data-types/data-type-precedence-transact-sql.md
       - name: Synonyms
         href: t-sql/data-types/data-type-synonyms-transact-sql.md
-      - name: Precision, Scale, & Length
+      - name: Precision, scale, & length
         href: t-sql/data-types/precision-scale-and-length-transact-sql.md
       - name: Cursor
         href: t-sql/data-types/cursor-transact-sql.md
@@ -16282,7 +16296,7 @@ items:
         href: t-sql/data-types/rowversion-transact-sql.md
       - name: sql_variant
         href: t-sql/data-types/sql-variant-transact-sql.md
-      - name: Table
+      - name: table
         href: t-sql/data-types/table-transact-sql.md
       - name: uniqueidentifier
         href: t-sql/data-types/uniqueidentifier-transact-sql.md

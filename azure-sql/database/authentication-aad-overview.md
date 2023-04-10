@@ -1,10 +1,11 @@
 ---
 title: Azure Active Directory authentication
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance & Azure Synapse Analytics
 description: Learn about how to use Azure Active Directory for authentication with Azure SQL Database, Azure SQL Managed Instance, and Synapse SQL in Azure Synapse Analytics
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 11/16/2022
+ms.date: 03/23/2023
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
@@ -19,7 +20,7 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 
 This article provides an overview of using Azure Active Directory to authenticate to [Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), [SQL Server on Windows Azure VMs](../virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview.md), [Synapse SQL in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) and [SQL Server for Windows and Linux](/sql/relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview) by using identities in Azure AD.
 
-To learn how to create and populate Azure AD, and then configure Azure AD with Azure SQL Database, Azure SQL Managed Instance, and Synapse SQL in Azure Synapse Analytics, review [Configure Azure AD](authentication-aad-configure.md) and [Azure AD with SQL Server on Azure VMs](../virtual-machines/windows/security-considerations-best-practices.md#azure-ad-authentication-preview).
+To learn how to create and populate Azure AD, and then configure Azure AD with Azure SQL Database, Azure SQL Managed Instance, and Synapse SQL in Azure Synapse Analytics, review [Configure Azure AD](authentication-aad-configure.md) and [Azure AD with SQL Server on Azure VMs](../virtual-machines/windows/configure-azure-ad-authentication-for-sql-vm.md).
 
 ## Overview
 
@@ -83,6 +84,9 @@ The following diagram indicates the federation, trust, and hosting relationships
 When using Azure AD authentication, there are two Administrator accounts: the original Azure SQL Database administrator and the Azure AD administrator. The same concepts apply to Azure Synapse. Only the administrator based on an Azure AD account can create the first Azure AD contained database user in a user database. The Azure AD administrator login can be an Azure AD user or an Azure AD group. When the administrator is a group account, it can be used by any group member, enabling multiple Azure AD administrators for the server. Using group account as an administrator enhances manageability by allowing you to centrally add and remove group members in Azure AD without changing the users or permissions in SQL Database or Azure Synapse. Only one Azure AD administrator (a user or group) can be configured at any time.
 
 ![admin structure][3]
+
+> [!NOTE]
+> Azure AD authentication with Azure SQL supports only a single Azure AD tenant where the Azure SQL resource currently resides. All Azure AD objects from this tenant can be set up as users allowing access to Azure SQL in this tenant. Only an Azure AD admin from this tenant can be configured to enable access to Azure SQL in this tenant . Azure AD multi-tenant authentication accessing Azure SQL from different tenants are not supported. Multi-tenant Azure AD admins cannot be set up for an Azure SQL resource. 
 
 ## Permissions
 

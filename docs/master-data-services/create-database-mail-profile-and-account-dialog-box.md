@@ -12,7 +12,7 @@ f1_keywords:
 ---
 # Create Database Mail Profile and Account Dialog Box
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Use the **Create Database Mail Profile and Account** dialog box to create a Database Mail profile and a Database Mail account for the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database. This profile will be used to notify users and groups by email when business rule validation fails.  
   

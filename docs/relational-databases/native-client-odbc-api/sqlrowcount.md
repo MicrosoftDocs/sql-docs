@@ -13,7 +13,7 @@ apitype: "DLLExport"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLRowCount
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   When arrays of parameter values are bound for statement execution, **SQLRowCount** returns SQL_ERROR if any row of parameter values generates an error condition in statement execution. No value is returned through the *RowCountPtr* argument of the function.  
   

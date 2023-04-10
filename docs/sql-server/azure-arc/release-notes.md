@@ -16,7 +16,7 @@ ms.topic: conceptual
 This release is published April 10, 2023.
 
 > [!NOTE]
-> This release is currently only available for SQL Server on Windows.
+> This release is only available for SQL Server on Windows. This release is not available for SQL Server on Linux.
 
 ### Extension version
 

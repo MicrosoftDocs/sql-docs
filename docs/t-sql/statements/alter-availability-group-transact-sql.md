@@ -224,6 +224,13 @@ Specifies whether distributed transactions are enabled for this Availability Gro
  
 > [!NOTE]
 > Support for changing the DTC_SUPPORT setting of an Availability Group was introduced in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Service Pack 2. This option cannot be used with earlier versions. To change this setting in earlier versions of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], you must DROP and CREATE the availability group again.
+
+>[!IMPORTANT]
+>DTC has a limit of 32 enlistments per distributed transaction. Because each database within an availability group enlists with the DTC separately, if your transaction involves more than 32 databases, you may get the following error when [!INCLUDE[SQLServer](../../includes/ssnoversion-md.md)] attempts to enlist the 33rd database:
+>
+>`Enlist operation failed: 0x8004d101(XACT_E_TOOMANY_ENLISTMENTS). SQL Server could not register with Microsoft Distributed Transaction Coordinator (MS DTC) as a resource manager for this transaction. The transaction may have been stopped by the client or the resource manager.`
+
+For more detail on distributed transactions in [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)], see [Distributed transactions](#distTran)
  
 REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT
 

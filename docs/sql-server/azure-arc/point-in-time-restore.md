@@ -20,12 +20,12 @@ The Azure extension for Arc enabled SQL Server ships with a built-in capability 
 
 The backups are performed at the following schedule:
 
-- Full backup every 7 days
-- Differential backup every 24 hours
-- Transactional log backup every 15 minutes
+- Full: every 7 days
+- Differential: every 24 hours
+- Transaction log: every 15 minutes
 
 > [!NOTE]
-> At this point, this schedule cannot be changed
+> Currently, you can't change the schedule.
 
 ## Configure automated backups
 
@@ -36,7 +36,7 @@ The current backup service within the Azure extension for Arc enabled Server use
 > [!NOTE]
 > This requirement will be removed in a future release
 
-- `[NT AUTHORITY\SYSTEM]` user account needs to be added to the `dbcreator` server role at the server level. This can be done via the following T-SQL:
+- `[NT AUTHORITY\SYSTEM]` user account needs to be added to the `dbcreator` server role at the server level. Run the following Transact SQL to add this account:
 
 ```sql
 USE master
@@ -47,7 +47,7 @@ GO
 
 - For each database (system databases such as master, model and msdb, as well as each user database), the `[NT AUTHORITY\SYSTEM]` user account needs to be added into the Logins, and granted ` [db_backupoperator]` role. 
 
-This can be done via the T-SQL:
+This can be done via the Transact SQL:
 
 ```sql
 USE [master]
@@ -58,11 +58,11 @@ ALTER ROLE [db_backupoperator] ADD MEMBER [NT AUTHORITY\SYSTEM]
 GO
 ```
 
-- Above T-SQL code needs to be run for each user and system database (except Tempdb)
+- Above Transact SQL code needs to be run for each user and system database (except Tempdb).
 
 ### Configure backups using Azure (az) CLI
 
-Automated backups is turned OFF by default when a SQL Server is Arc enabled. To turn on automated backups, run the following command:
+Automated backups are off by default when a SQL Server is Arc enabled. To turn on automated backups, run the following command:
 
 ```azurecli
 --Install the arcdata extension if not already done
@@ -89,7 +89,7 @@ The default backup location for SQL Server (SQL 2019 and above) can be verified 
 SELECT SERVRPROPERTY('InstanceDefaultBackupPath')
 ```
 
-- If there are multiple SQL Servers on the same host where the Azure extension for SQL Server is installed, automated backups needs to be turned ON for each instance separately. 
+- If there are multiple SQL Servers on the same host where the Azure extension for SQL Server is installed, you need to turn on automated backups separately for each instance separately.
 
 ## View current backup policy
 

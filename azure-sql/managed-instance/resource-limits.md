@@ -220,11 +220,11 @@ This section includes details on previously available hardware. Consider [moving
 
 [!INCLUDE[azure-sql-gen4-hardware-retirement-sql-managed-instance](../includes/azure-sql-gen4-hardware-retirement-sql-managed-instance.md)]
 
-You can use [Azure Resource Graph Explorer](/azure/governance/resource-graph/overview) in the portal to identify all SQL managed instances that currently use Gen4 hardware, or you can check the hardware used by resources for a specific [SQL Managed Instance](../database/logical-servers.md) in the Azure portal. 
+You can use [Azure Resource Graph Explorer](/azure/governance/resource-graph/overview) in the portal to identify all SQL managed instances that currently use Gen4 hardware, or you can check the hardware used by a specific SQL Managed Instance in the Azure portal. 
 
 You must have at least `read` permissions to the Azure object or object group to see results in Azure Resource Graph Explorer. 
 
-To use **Resource Graph Explorer** to identify SQL managed instances that are still using Gen4 hardware, follow these steps: 
+To use **Azure Resource Graph Explorer** to identify SQL managed instances that are still using Gen4 hardware, follow these steps: 
 
 1. Go to the [Azure portal](https://portal.azure.com). 
 1. Search for `Resource graph` in the search box, and choose the **Resource Graph Explorer** service from the search results. 
@@ -238,12 +238,16 @@ To use **Resource Graph Explorer** to identify SQL managed instances that are st
 
 1. The **Results** pane displays all the deployed instances in Azure that are using Gen4 hardware.
 
+:::image type="content" source="media/resource-limits/gen4-resource-graph-explorer.png" alt-text="Screenshot of the query results in Azure Resource Graph Explorer in the Azure portal.":::
+
 To check the hardware used by resources for a specific SQL managed instance in Azure, follow these steps: 
 
 1. Go to the [Azure portal](https://portal.azure.com). 
 1. Search for `SQL managed instances` in the search box and choose **SQL managed instances** from the search results to open the **SQL managed instances** page and view all instances for the chosen subscription(s). 
 1. Select the SQL managed instance of interest to open the **Overview** page for the SQL managed instance. 
 1. Check the **Pricing tier** under **Essentials** to verify what hardware your managed instance is using. 
+
+:::image type="content" source="media/resource-limits/sqlmi-pricing-tier.png" alt-text="Screenshot of the overview page for SQL MI resource with pricing tier highlighted. ":::
 
 ### Hardware characteristics
 

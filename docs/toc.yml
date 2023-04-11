@@ -4676,18 +4676,18 @@ items:
           href: database-engine/configure-windows/scm-services-change-the-password-of-the-accounts-used.md
         - name: Configure SQL Server Error Logs
           href: database-engine/configure-windows/scm-services-configure-sql-server-error-logs.md
-    - name: Server Network Configuration
+    - name: Server network configuration
       href: database-engine/configure-windows/server-network-configuration.md
       items:
-      - name: Connect to SQL Server When System Administrators Are Locked Out
+      - name: Connect to SQL Server when system administrators are locked out
         href: database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md
-      - name: Default SQL Server Network Protocol Configuration
+      - name: Default SQL Server network protocol configuration
         href: database-engine/configure-windows/default-sql-server-network-protocol-configuration.md
-      - name: Enable or Disable a Server Network Protocol
+      - name: Enable or disable a server network protocol
         href: database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md
-      - name: Configure a Server to Listen on a Specific TCP Port
+      - name: Configure a server to listen on a specific TCP port
         href: database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md
-      - name: Configure a Server to Listen on an Alternate Pipe
+      - name: Configure a server to listen on an alternate pipe
         href: database-engine/configure-windows/configure-a-server-to-listen-on-an-alternate-pipe.md
       - name: Encrypt connections to SQL Server
         items:
@@ -4703,23 +4703,23 @@ items:
           href: database-engine/configure-windows/certificate-procedures.md
         - name: SQL Server and client encryption summary
           href: database-engine/configure-windows/sql-server-and-client-encryption-summary.md
-      - name: Connect to SQL Server Through a Proxy Server
+      - name: Connect to SQL Server through a proxy server
         href: database-engine/configure-windows/connect-to-sql-server-through-a-proxy-server-sql-server-configuration-manager.md
-      - name: Configure a Windows Firewall for Database Engine Access
+      - name: Configure a Windows Firewall for Database Engine access
         href: database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md
-      - name: Hide an Instance of SQL Server Database Engine
+      - name: Hide an instance of SQL Server Database Engine
         href: database-engine/configure-windows/hide-an-instance-of-sql-server-database-engine.md
-      - name: Configure the Database Engine to Listen on Multiple TCP Ports
+      - name: Configure the Database Engine to listen on multiple TCP ports
         href: database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md
       - name: How to enable the TCP protocol with SQLPS
         href: powershell/how-to-enable-tcp-sqlps.md
-      - name: Determine Whether the Database Engine Is Installed & Started
+      - name: Determine if the Database Engine is installed and started
         href: database-engine/configure-windows/determine-whether-the-database-engine-is-installed-and-started.md
-      - name: Connect to the Database Engine Using Extended Protection
+      - name: Connect to the Database Engine using Extended Protection
         href: database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md
-      - name: Certificate Management
+      - name: Certificate management
         href: database-engine/configure-windows/manage-certificates.md
-      - name: Register a Service Principal Name for Kerberos Connections
+      - name: Register a Service Principal Name for Kerberos connections
         href: database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md
     - name: Client Network Configuration
       href: database-engine/configure-windows/client-network-configuration.md
@@ -10332,6 +10332,8 @@ items:
           href: linux/quickstart-sql-server-containers-kubernetes.md
         - name: Deploy availability group with DH2i on AKS
           href: linux/tutorial-sql-server-containers-kubernetes-dh2i.md
+        - name: Deploy availability group in a DH2i sidecar
+          href: linux/tutorial-sql-server-dh2i-sidecar.md
     - name: Security
       href: linux/sql-server-linux-security-overview.md
       items:
@@ -17371,17 +17373,17 @@ items:
           href: t-sql/queries/aliasing-azure-sql-data-warehouse-parallel-data-warehouse.md
         - name: EXPLAIN
           href: t-sql/queries/explain-transact-sql.md
-        - name: OPTION Clause
+        - name: OPTION clause
           href: t-sql/queries/option-clause-transact-sql.md
-        - name: OUTPUT Clause
+        - name: OUTPUT clause
           href: t-sql/queries/output-clause-transact-sql.md
         - name: READTEXT
           href: t-sql/queries/readtext-transact-sql.md
-        - name: Search Condition
+        - name: Search condition
           href: t-sql/queries/search-condition-transact-sql.md
         - name: Subqueries (Azure Synapse Analytics, Parallel Data Warehouse)
           href: t-sql/queries/subqueries-azure-sql-data-warehouse-parallel-data-warehouse.md
-        - name: Table Value Constructor
+        - name: Table value constructor
           href: t-sql/queries/table-value-constructor-transact-sql.md
         - name: TOP
           href: t-sql/queries/top-transact-sql.md

@@ -19,7 +19,7 @@ The build process in the SQL Database Projects extension for Azure Data Studio a
 
 ## Build a Database Project
 
- In the **Projects** viewlet right-click the *.sqlproj* root node and select **Build**.
+ In the **Database Projects** viewlet right-click the *.sqlproj* root node and select **Build**.
 
  The output pane will automatically appear with the output from the build process.  A successful build will conclude with the message: 
 
@@ -31,13 +31,13 @@ The build process in the SQL Database Projects extension for Azure Data Studio a
 
 *This functionality is available in Azure Data Studio and VS Code, however the interfaces will appear slightly different between the 2 applications.*
 
-After a project is successfully compiled through the [build process](#build-a-database-project), the database can be published to a SQL Server instance. To publish a database project, in the **Projects** viewlet right-click the *.sqlproj* root node and select **Publish**.
+After a project is successfully compiled through the [build process](#build-a-database-project), the database can be published to a SQL Server instance. To publish a database project, in the **Database Projects** viewlet right-click the *.sqlproj* root node and select **Publish**.
 
 In the **Publish Database** dialog that appears, specify a server connection and the database name to be created.
 
 ### Publish the SQL project and deploy to a local Container
 
-After a project is successfully compiled through the [build process](#build-a-database-project), the database can be published to a new development instance of SQL Server in a local container. To publish a database project to a local container, in the **Projects** viewlet right-click the *.sqlproj* root node and select **Publish**. 
+After a project is successfully compiled through the [build process](#build-a-database-project), the database can be published to a new development instance of SQL Server in a local container. To publish a database project to a local container, in the **Database Projects** viewlet right-click the *.sqlproj* root node and select **Publish**. 
 
 In projects targeting SQL Server, the options for publish appear as:
 

@@ -14,25 +14,28 @@ ms.custom: intro-get-started
 
 This article describes three ways to get started with the SQL Database Projects extension:
 
-1. Create a new database project by going to the **Projects** view or by searching for **New Database Project** in the command palette.
-2. Existing database projects can be opened via **Open Database Project** in the command palette.
-3. Start from an existing database by using **Import New Database Project** from the command palette.
+1. Create a new database project by going to the **Database Projects** view or by searching for **Database Projects: New** in the command palette.
+2. Existing database projects can be opened via **Database Projects: Open existing** in the command palette.
+3. Start from an existing database by using **Database Projects: Create Project from Database** from the command palette or .
 
     ![New viewlet](media/sql-database-projects-extension/projects-viewlet.png)
 
 ## Create an empty database project
 
-In the **Projects** view select the **New Project** button and enter a project name in the text input that appears.  In the "Select a Folder" dialog that appears, select a directory for the project's folder, .sqlproj file, and other contents to reside in.
-The empty project is opened and visible in the **Projects** view for editing.
+In the **Database Projects** view select the **New Project** button and enter a project name in the text input that appears.  In the "Select a Folder" dialog that appears, select a directory for the project's folder, .sqlproj file, and other contents to reside in.
+The empty project is opened and visible in the **Database Projects** view for editing.
 
 ## Open an existing project
 
-In the **Projects** view, select the **Open Project** button and open an existing *.sqlproj* file from the file picker that appears. Existing projects can originate from Azure Data Studio, VS Code or [Visual Studio SQL Server Data Tools](../../ssdt/sql-server-data-tools.md).
+In the **Database Projects** view, select the **Open Project** button and open an existing *.sqlproj* file from the file picker that appears. Existing projects can originate from Azure Data Studio, VS Code or [Visual Studio SQL Server Data Tools](../../ssdt/sql-server-data-tools.md).
 
-The existing project is opened and its contents are visible in the **Projects** view for editing.
+The existing project is opened and its contents are visible in the **Database Projects** view for editing.
 
 ## Create a database project from an existing database
 
+### In object explorer
+
+### In Database Projects view
 In the **Project** view select the **Import Project from Database** button and connect to a SQL Server.  Once the connection is established, select a database from the list available databases and set the name of the project.
 
 Finally, select a target structure of the extraction.  The new project is opened and contains SQL scripts for the contents of the selected database.

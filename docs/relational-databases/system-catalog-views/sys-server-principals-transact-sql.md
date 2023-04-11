@@ -3,7 +3,7 @@ title: "sys.server_principals (Transact-SQL)"
 description: sys.server_principals (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
-ms.date: "03/15/2017"
+ms.date: "04/11/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -16,10 +16,10 @@ helpviewer_keywords:
   - "sys.server_principals catalog view"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current"
 ---
 # sys.server_principals (Transact-SQL)
-[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-pdw.md)]
 
   Contains a row for every server-level principal.  
   
@@ -42,7 +42,7 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azur
 ## Permissions  
  Any login can see their own login name, the system logins, and the fixed server roles. To see other logins, requires ALTER ANY LOGIN, or a permission on the login. To see user-defined server roles, requires ALTER ANY SERVER ROLE, or membership in the role. 
  
-Azure SQL Database: only members of the server role **##MS_LoginManager##** or the special database role loginmanager in master or the AAD Admin and Server Admin can see all logins.
+Azure SQL Database: only members of the server role **##MS_LoginManager##** or the special database role loginmanager in `master` or the Azure AD admin and server sdmin can see all logins.
  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

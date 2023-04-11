@@ -155,8 +155,7 @@ SELECT * FROM OPENROWSET(
    SINGLE_CLOB) AS DATA;
 ```
 
-**Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1.
-Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1, the data_file can be in Azure Blob Storage. For examples, see [Examples of Bulk Access to Data in Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
+Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], the data_file can be in Azure Blob Storage. For examples, see [Examples of Bulk Access to Data in Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
 
 > [!IMPORTANT]
 > Azure SQL Database only supports reading from Azure Blob Storage.
@@ -164,17 +163,19 @@ Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1, th
 #### BULK Error handling options
 
 ##### ERRORFILE
+
 `ERRORFILE` ='*file_name*' specifies the file used to collect rows that have formatting errors and cannot be converted to an OLE DB rowset. These rows are copied into this error file from the data file "as is."
 
 The error file is created at the start of the command execution. An error will be raised if the file already exists. Additionally, a control file that has the extension .ERROR.txt is created. This file references each row in the error file and provides error diagnostics. After the errors have been corrected, the data can be loaded.
-**Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1.
+
 Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], the `error_file_path` can be in Azure Blob Storage.
 
 ##### ERRORFILE_DATA_SOURCE_NAME
-**Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1.
-Is a named external data source pointing to the Azure Blob storage location of the error file that will contain errors found during the import. The external data source must be created using the `TYPE = BLOB_STORAGE` option added in [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1. For more information, see [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
+
+Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], is a named external data source pointing to the Azure Blob storage location of the error file that will contain errors found during the import. The external data source must be created using the `TYPE = BLOB_STORAGE`. For more information, see [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
 ##### MAXERRORS
+
 `MAXERRORS` =*maximum_errors* specifies the maximum number of syntax errors or nonconforming rows, as defined in the format file, that can occur before OPENROWSET throws an exception. Until MAXERRORS is reached, OPENROWSET ignores each bad row, not loading it, and counts the bad row as one error.
 
 The default for *maximum_errors* is 10.
@@ -185,15 +186,21 @@ The default for *maximum_errors* is 10.
 #### BULK Data processing options
 
 ##### FIRSTROW
+
 `FIRSTROW` =*first_row*
+
 Specifies the number of the first row to load. The default is 1. This indicates the first row in the specified data file. The row numbers are determined by counting the row terminators. FIRSTROW is 1-based.
 
 ##### LASTROW
+
 `LASTROW` =*last_row*
+
 Specifies the number of the last row to load. The default is 0. This indicates the last row in the specified data file.
 
 ##### ROWS_PER_BATCH
+
 `ROWS_PER_BATCH` =*rows_per_batch*
+
 Specifies the approximate number of rows of data in the data file. This value should be of the same order as the actual number of rows.
 
 `OPENROWSET` always imports a data file as a single batch. However, if you specify *rows_per_batch* with a value > 0, the query processor uses the value of *rows_per_batch* as a hint for allocating resources in the query plan.
@@ -201,6 +208,7 @@ Specifies the approximate number of rows of data in the data file. This value sh
 By default, ROWS_PER_BATCH is unknown. Specifying ROWS_PER_BATCH = 0 is the same as omitting ROWS_PER_BATCH.
 
 ##### ORDER
+
 `ORDER` ( { *column* [ ASC | DESC ] } [ ,... *n* ] [ UNIQUE ] )
 An optional hint that specifies how the data in the data file is sorted. By default, the bulk operation assumes the data file is unordered. Performance might improve if the order specified can be exploited by the query optimizer to generate a more efficient query plan. Examples for when specifying a sort can be beneficial include the following:
 
@@ -210,6 +218,7 @@ An optional hint that specifies how the data in the data file is sorted. By defa
 - Using the rowset as a source table in the FROM clause of a query, where the sort and join columns match.
 
 ##### UNIQUE
+
 `UNIQUE` specifies that the data file does not have duplicate entries.
 
 If the actual rows in the data file are not sorted according to the order that is specified, or if the UNIQUE hint is specified and duplicates keys are present, an error is returned.
@@ -217,15 +226,18 @@ If the actual rows in the data file are not sorted according to the order that i
 Column aliases are required when ORDER is used. The column alias list must reference the derived table that is being accessed by the BULK clause. The column names that are specified in the ORDER clause refer to this column alias list. Large value types (**varchar(max)**, **nvarchar(max)**, **varbinary(max)**, and **xml**) and large object (LOB) types (**text**, **ntext**, and **image**) columns cannot be specified.
 
 ##### SINGLE_BLOB
+
 Returns the contents of *data_file* as a single-row, single-column rowset of type **varbinary(max)**.
 
 > [!IMPORTANT]
 > We recommend that you import XML data only using the SINGLE_BLOB option, rather than SINGLE_CLOB and SINGLE_NCLOB, because only SINGLE_BLOB supports all Windows encoding conversions.
 
 ##### SINGLE_CLOB
+
 By reading *data_file* as ASCII, returns the contents as a single-row, single-column rowset of type **varchar(max)**, using the collation of the current database.
 
 ##### SINGLE_NCLOB
+
 By reading *data_file* as UNICODE, returns the contents as a single-row, single-column rowset of type **nvarchar(max)**, using the collation of the current database.
 
 ```sql
@@ -253,9 +265,10 @@ Specifies the code page of the data in the data file. CODEPAGE is relevant only 
 |*code_page*|Indicates the source code page on which the character data in the data file is encoded; for example, 850.<br /><br /> **Important** Versions prior to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] do not support code page 65001 (UTF-8 encoding).|
 
 ##### FORMAT
+
 `FORMAT` **=** 'CSV'
-**Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1.
-Specifies a comma separated values file compliant to the [RFC 4180](https://tools.ietf.org/html/rfc4180) standard.
+
+Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], specifies a comma separated values file compliant to the [RFC 4180](https://tools.ietf.org/html/rfc4180) standard.
 
 ```sql
 SELECT *
@@ -266,6 +279,7 @@ FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
 ```
 
 ##### FORMATFILE
+
 `FORMATFILE` ='*format_file_path*'
 Specifies the full path of a format file. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports two types of format files: XML and non-XML.
 
@@ -273,13 +287,13 @@ A format file is required to define column types in the result set. The only exc
 
 For information about format files, see [Use a Format File to Bulk Import Data &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md).
 
-**Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1.
-Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1, the format_file_path can be in Azure Blob Storage. For examples, see [Examples of Bulk Access to Data in Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
+Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], the format_file_path can be in Azure Blob Storage. For examples, see [Examples of Bulk Access to Data in Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
 
 ##### FIELDQUOTE
+
 `FIELDQUOTE` **=** 'field_quote'
-**Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1.
-Specifies a character that will be used as the quote character in the CSV file. If not specified, the quote character (") will be used as the quote character as defined in the [RFC 4180](https://tools.ietf.org/html/rfc4180) standard.
+
+Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], specifies a character that will be used as the quote character in the CSV file. If not specified, the quote character (") will be used as the quote character as defined in the [RFC 4180](https://tools.ietf.org/html/rfc4180) standard.
 
 ## Remarks
 
@@ -453,7 +467,7 @@ OPENROWSET (BULK N'D:\data.csv', FORMATFILE =
 
 ### G. Accessing data from a CSV file with a format file
 
-**Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1.
+Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)].
 
 ```sql
 SELECT *
@@ -490,8 +504,7 @@ FROM OPENROWSET
 
 ### I. Accessing data from a file stored on Azure Blob storage
 
-**Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1.
-The following example uses an external data source that points to a container in an Azure storage account and a database scoped credential created for a shared access signature.
+Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], the following example uses an external data source that points to a container in an Azure storage account and a database scoped credential created for a shared access signature.
 
 ```sql
 SELECT * FROM OPENROWSET(
@@ -569,7 +582,7 @@ SINGLE_CLOB
 
 ### L. Use OPENROWSET to access several parquet files using S3-compatible object storage
 
-**Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] 
+**Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later.
 
 The following example uses access several parquet files from different location, all stored on S3-compatible object storage:
 

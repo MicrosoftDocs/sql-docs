@@ -49,16 +49,16 @@ The utility uses ODBC to execute Transact-SQL batches.
 
 ### Windows
 
-:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft Command Line Utilities 15 for SQL Server (x64) (2.6 MB)](https://go.microsoft.com/fwlink/?linkid=2142258)**  
-:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft Command Line Utilities 15 for SQL Server (x86) (2.3 MB)](https://go.microsoft.com/fwlink/?linkid=2142257)**
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft Command Line Utilities 15 for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2230791)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft Command Line Utilities 15 for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2231320)**
 
 The command line tools are General Availability (GA), however they're being released with the installer package for [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)].
 
 **Version Information**
 
-- Release number: 15.0.2
-- Build number: 15.0.2000.5
-- Release date: September 11, 2020
+- Release number: 15.0.4298.1
+- Build number: 15.0.4298.1
+- Release date: April 7, 2023
 
 The new version of SQLCMD supports Azure AD authentication, including Multi-Factor Authentication (MFA) support for SQL Database, Azure Synapse Analytics, and Always Encrypted features.
 The new BCP supports Azure AD authentication, including Multi-Factor Authentication (MFA) support for SQL Database and Azure Synapse Analytics.
@@ -74,7 +74,7 @@ See [Install sqlcmd and bcp on Linux](../../linux/sql-server-linux-setup-tools.m
 
 ## Check version
 
-To check the SQLCMD version execute `sqlcmd -?` command and confirm that 15.0.2000.5 version or higher is in use.
+To check the SQLCMD version execute `sqlcmd -?` command and confirm that 15.0.4298.1 version or higher is in use.
 
 > [!NOTE]  
 > You need version 13.1 or higher to support Always Encrypted (`-g`) and Azure Active Directory authentication (`-G`). You may have several versions of sqlcmd.exe installed on your computer. Be sure you are using the correct version. To determine the version, execute `sqlcmd -?`.

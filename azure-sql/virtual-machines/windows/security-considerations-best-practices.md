@@ -60,7 +60,7 @@ For detailed deployment steps, see the [Quickstart: Deploy SQL Server to a confi
 
 Recommendations for disk encryption are different for confidential VMs than for the other VM sizes. See [disk encryption](security-considerations-best-practices.md#azure-confidential-vms) to learn more.
 
-## Azure AD authentication (Preview)
+## Azure AD authentication
 
 Starting with SQL Server 2022, you can connect to SQL Server using one of the following Azure Active Directory (Azure AD) identity authentication methods:
 
@@ -69,7 +69,7 @@ Starting with SQL Server 2022, you can connect to SQL Server using one of the fo
 - Azure AD Universal with Multi-Factor Authentication
 - Azure Active Directory access token
 
-To get started, review [Configure Azure AD authentication for your SQL Server VM](configure-azure-ad-authentication-for-sql-vm.md). Using Azure AD authentication with SQL Server on Azure VMs is currently in preview.
+To get started, review [Configure Azure AD authentication for your SQL Server VM](configure-azure-ad-authentication-for-sql-vm.md). 
 
 ## Azure Advisor
 
@@ -137,6 +137,25 @@ If you are using an Azure confidential VM, consider the following recommendation
 - Configure [confidential OS disk encryption](/azure/confidential-computing/confidential-vm-overview#confidential-os-disk-encryption), which binds the OS disk encryption keys to the Trusted Platform Module (TPM) chip of the virtual machine, and makes the protected disk content accessible only to the VM.
 - Encrypt your data disks (any disks containing database files, log files, or backup files) with [BitLocker](/windows/security/information-protection/bitlocker/bitlocker-overview), and enable automatic unlocking - review [manage-bde autounlock](/windows-server/administration/windows-commands/manage-bde-autounlock) or [EnableBitLockerAutoUnlock](/powershell/module/bitlocker/enable-bitlockerautounlock) for more information. Automatic unlocking ensures the encryption keys are stored on the OS disk. In conjunction with confidential OS disk encryption, this protects the data-at-rest stored to the VM disks from unauthorized host access.
 
+## Trusted Launch
+
+When you deploy a [generation 2](/azure/virtual-machines/generation-2) virtual machine, you have the option to enable [trusted launch](/azure/virtual-machines/trusted-launch), which protects against advanced and persistent attack techniques. 
+
+With trusted launch, you can:
+
+- Securely deploy virtual machines with verified boot loaders, OS kernels, and drivers.
+- Securely protect keys, certificates, and secrets in the virtual machines.
+- Gain insights and confidence of the entire boot chain's integrity.
+- Ensure workloads are trusted and verifiable.
+
+
+The following features are currently unsupported when you enable trusted launch for your SQL Server on Azure VMs: 
+
+- Azure Site Recovery
+- Ultra disks
+- Managed images
+- Nested virtualization 
+
 ## Manage accounts
 
 You don't want attackers to easily guess account names or passwords. Use the following tips to help:
@@ -179,6 +198,8 @@ Azure Virtual Machine extensions are trusted Microsoft or 3rd party extensions t
     - Microsoft Defender for Cloud uses the Microsoft Dependency agent to collect network traffic data from your Azure virtual machines.
     - This agent enables advanced network protection features such as traffic visualization on the network map, network hardening recommendations, and specific network threats.
 - [Evaluate extensions](/azure/virtual-machines/extensions/overview) from Microsoft and 3rd parties to address anti-malware, desired state, threat detection, prevention, and remediation to address threats at the operating system, machine, and network levels.
+
+
 
 ## Next steps
 

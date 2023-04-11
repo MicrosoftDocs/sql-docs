@@ -10,7 +10,7 @@ ms.topic: conceptual
 ---
 # Data Quality Services Concepts
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sqlserver.md)]
 
   This topic provides a brief summary of [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) concepts in knowledge management, data quality projects, and data quality administration.  
   

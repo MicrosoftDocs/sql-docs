@@ -1,51 +1,80 @@
 ---
-title: "Delete instance from or restore instances to Azure Arc"
-description: Delete Azure Arc-enabled SQL Server instance from Azure Arc, or restore or re-enable an instance for Azure Arc.
+title: "Disconnect your SQL Server from Azure Arc"
+description: Steps to disconnect and unregister your SQL Server instances from Azure Arc.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: 02/01/2022
+ms.date: 04/09/2023
 ms.service: sql
 ms.topic: how-to
 ms.custom: template-how-to-pattern
 ---
 
-# Delete your Arc-enabled SQL Server resource
+# Disconnect your SQL Server instances from Azure Arc
 
-This article describes how you can do one of the following tasks:
+This article describes how you can disconnect the Arc-enabled SQL Server instances from Azure Arc using Azure portal or in the command shell.
 
-* Delete an Azure Arc-enabled SQL Server instance from Azure.
-* Restore (or re-enable) an Azure Arc-enabled SQL Server instance after it has been deleted.
+## Prerequisites
 
-## Delete resources from the portal
+* You're in a [Contributor role](/azure/role-based-access-control/built-in-roles#contributor) for the subscriptions and resource groups in which the Arc-enabled SQL Server instances have been created. 
 
-To delete your Arc-enabled SQL Server resource, go to **Azure Arc** > **SQL Server**, open the Arc-enabled SQL Server resource for that instance, and select the **Delete** button.
+> [!IMPORTANT]
+   > You don't need access to the hosting machine to disconnect from Azure Arc.
 
-> [!IMPORTANT]  
-> Because multiple SQL Server instances could be installed on the same machine, the *Delete* button doesn't uninstall the Azure extension for SQL Server on that machine. To uninstall it, follow the [uninstall extension](/azure/azure-arc/servers/manage-vm-extensions-portal#uninstall-extension) steps.
+## Disconnect and unregister individual SQL Server instances from Azure Arc
 
-## Restore a deleted Arc-enabled SQL Server resource
+### [Azure portal](#tab/azure)
 
-If you accidentally deleted your Arc-enabled SQL Server resource, you can restore it with the following steps.
+To uninstall Azure extension for SQL Server:
 
-1. If you also uninstalled the SQL Server extension by mistake, reinstall it. Select the correct version for your OS.
+1. Go to **Azure Arc** portal
+1. Under **Servers** select the specific machine hosting SQL Server instance(s) you wish to disconnect from Azure Arc
+1. Under **Extensions**, select the extension you want to uninstall (*`WindowsAgent.SqlServer`* if it's a Windows machine, or *`LinuxAgent.SqlServer`* if it's a Linux  machine)
+1. Click on the **Uninstall** tab
+1. Confirm that you want to install the extension when prompted
 
-   ```azurecli
-   az connectedmachine extension create --machine-name "{your machine name}" --location "{azure region}" --name "WindowsAgent.SqlServer" --resource-group "{your resource group name}" --type "{OS}Agent.SqlServer" --publisher "Microsoft.AzureData" --settings '{"SqlManagement":{"IsEnabled":true},  "excludedSqlInstances":[],"LicenseType":"LicenseOnly"}'
-   ```
+To remove the SQL Server - Azure Arc resource(s):
 
-   > [!IMPORTANT]  
-   > The location property must match the location of the Arc-enabled SQL Server resource for the server specified by the `--machine-name` parameter.
+1. Go to **Azure Arc** portal
+1. Under **SQL Servers** select the specific SQL Server instance(s) you wish to remove
+1. Click on the **Delete** tab
+1. Confirm that you want to detele the resource(s) when prompted
 
-1. Check to make sure your instance is in the exclusion list (see the value of the *excludedSqlInstances* property).
+### [PowerShell](#tab/powershell)
 
-   ```azurecli
-   az connectedmachine extension show --machine-name "{your machine name}" --resource-group "{your resource group name}" -n WindowsAgent.SqlServer
-   ```
+To uninstall Azure extension for SQL Server, run:
 
-1. Make sure to remove your instance from the exclusion list and update the extension settings.
+```powershell
+Remove-AzConnectedMachineExtension -MachineName "{your machine name}" -ResourceGroup "{your resource group name}" -Name "{extension name}" -NoWait 
+```
 
-   ```azurecli
-   az connectedmachine extension create --machine-name "{your machine name}" --location "{azure region}" --name "WindowsAgent.SqlServer" --resource-group "{your resource group name}" --type "WindowsAgent.SqlServer" --publisher "Microsoft.AzureData" --settings '{"SqlManagement":{"IsEnabled":true},  "excludedSqlInstances":["{named instance 1}","{named instance 3}}"],"LicenseType":"LicenseOnly"}'
-   ```
+For Windows machines, the extension name is `WindowsAgent.SqlServer`. For Linux machines, the extension name is `LinuxAgent.SqlServer`.
 
-The instance is restored after the next sync with the agent. For information on managing vm extensions using Portal or PowerShell, see [virtual machine extension management](/azure/azure-arc/servers/manage-vm-extensions).
+To remove the SQL Server - Azure Arc resource(s), run:
+
+```powershell
+remove-azresource -ResourceGroup "{your resource group name}" -ResourceType Microsoft.AzureArcData/SqlServerInstances -Name "{full SQL instance name}" -Force 
+```
+If your instance has dependent Azure resources, such as databases, this command may take a long time to complete. You can add `-AsJob` parameter to return immediately and execute the command as a background job. 
+
+> [!TIP]  
+> Run the script from Azure Cloud shell as it has the required Azure PowerShell modules pre-installed and you will be automatically authenticated. For details, see [Running the script using Cloud Shell](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/azure-arc-enabled-sql-server/uninstall-azure-extension-for-sql-server#running-the-script-using-cloud-shell).
+
+### [Azure CLI](#tab/az)
+
+To uninstall Azure extension for SQL Server, run:
+
+```azurecli
+az connectedmachine extension delete --machine-name "{your machine name}" --resource-group "{your resource group name}" --name "{OS}Agent.SqlServer" --publisher "Microsoft.AzureData" 
+```
+
+To remove the SQL Server - Azure Arc resource(s), run:
+
+```azurecli
+az resource delete --resource-group "{your resource group name}" --resource-type Microsoft.AzureArcData/SqlServerInstances --name "{full SQL instance name}"
+```
+
+ If your instance (SQL Server - Azure Arc resource) has dependent Azure resources, such as databases (SQL Server database - Azure Arc resource), this command may take a long time to complete. You can add `--No-Wait` parameter to return immediately and execute the command as a background job.
+
+---
+
+To disconnect all the Arc-enabled SQL Server instances in a larger scope, such as a resource group, subscription, or multiple subscriptions, with a single command, use the [Uninstall Azure Extension for SQL Server](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/azure-arc-enabled-sql-server/uninstall-azure-extension-for-sql-server) script. It's published as an open source SQL Server sample and includes the step-by-step instructions.

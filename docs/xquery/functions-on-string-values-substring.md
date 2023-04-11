@@ -14,7 +14,7 @@ dev_langs:
   - "XML"
 ---
 # Functions on String Values - substring
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   Returns part of the value of *$sourceString*, starting at the position indicated by the value of *$startingLoc,* and continues for the number of characters indicated by the value of *$length*.  
   

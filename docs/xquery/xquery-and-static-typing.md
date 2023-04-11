@@ -16,7 +16,7 @@ dev_langs:
   - "XML"
 ---
 # XQuery and Static Typing
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   XQuery in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is a statically typed language. That is, it raises type errors during query compilation when an expression returns a value that has a type or cardinality that is not accepted by a particular function or operator. Additionally, static type checking can also detect if a path expression on a typed XML document has been mistyped. The XQuery compiler first applies the normalization phase that adds the implicit operations, such as atomization, and then performs static type inference and static type checking.  
   

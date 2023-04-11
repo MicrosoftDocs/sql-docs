@@ -10,7 +10,7 @@ ms.topic: conceptual
 ---
 # Subscription View Formats (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Based on the entity or derived hierarchy you select, the following formats are available for your subscription view.  
   

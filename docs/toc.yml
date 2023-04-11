@@ -10460,7 +10460,7 @@ items:
       - name: Configure automated patching
         href: sql-server/azure-arc/patch.md
       - name: Restore to a point in time
-        href: sql-server/point-in-time-restore.md
+        href: sql-server/azure-arc/point-in-time-restore.md
     - name: Secure
       items:
       - name: Configure advanced data Security

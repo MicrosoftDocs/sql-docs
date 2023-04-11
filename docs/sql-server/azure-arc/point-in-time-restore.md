@@ -1,9 +1,7 @@
 ---
-title: Point in time Restore 
+title: Point in time restore 
 description: Describes how to configure automated backups and restore to point in time
-services: azure-arc
-ms.service: azure-arc
-ms.subservice: azure-arc-data-sqlserver
+ms.service: sql
 author: dnethi
 ms.author: dinethi
 ms.reviewer: mikeray
@@ -15,6 +13,11 @@ ms.topic: conceptual
 
 The Azure extension for Arc enabled SQL Server ships with a built-in capability to perform backups automatically and allows for point in time restore.  
 
+> [!NOTE]
+> As a preview feature, the technology presented in this article is subject to [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/).
+>
+> The latest updates are available in the [release notes](release-notes.md).
+
 The backups are performed at the following schedule:
 
 - Full backup every 7 days
@@ -23,9 +26,6 @@ The backups are performed at the following schedule:
 
 > [!NOTE]
 > At this point, this schedule cannot be changed
-
-
-[!INCLUDE [azure-arc-data-preview](../../../includes/azure-arc-data-preview.md)]
 
 ## Configure automated backups
 

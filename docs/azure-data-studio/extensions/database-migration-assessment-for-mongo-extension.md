@@ -19,7 +19,7 @@ The Azure Cosmos DB migration for MongoDB extension in Azure Data Studio helps y
 
 ## Prerequisites
 
-- [Download and Install latest Azure Data Studio](https://learn.microsoft.com/sql/azure-data-studio/download-azure-data-studio).
+- [Download and Install latest Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md).
 - A MongoDB database running version 3.2 or higher.
 
 
@@ -138,5 +138,5 @@ For more information about Frequently Asked Questions, visit [Migration Assessme
 If you need further assistance from Microsoft, contact Microsoft Support. For faster turnaround, you may attach the logs from [default log directory](#logs).
 
 ## Next steps
-[Pre-migration steps for data migrations from MongoDB to Azure Cosmos DB for MongoDB](https://learn.microsoft.com/azure/cosmos-db/mongodb/pre-migration-steps)
+[Pre-migration steps for data migrations from MongoDB to Azure Cosmos DB for MongoDB](../../../../azure-docs-pr/azure-docs-pr/articles/cosmos-db/mongodb/pre-migration-steps.md)
 

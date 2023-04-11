@@ -40,8 +40,8 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azur
 |**is_fixed_role**|**bit**|Returns 1 if the principal is one of the built-in server roles with fixed permissions. For more information, see [Server-Level Roles](../../relational-databases/security/authentication-access/server-level-roles.md).|  
   
 ## Permissions  
- Any login can see their own login name, the system logins, and the fixed server roles. Only members of the server role **##MS_LoginManager##** or the special database role loginmanager in `master` or the Azure AD admin and server Admin can see all logins.
- 
+Any login can see their own login name, the system logins, and the fixed server roles. Only members of the server role **##MS_LoginManager##** or the special database role loginmanager in `master` or the Azure AD admin and server Admin can see all logins.
+
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
     

@@ -42,7 +42,7 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azur
 ## Permissions  
  Any login can see their own login name, the system logins, and the fixed server roles. To see other logins, requires ALTER ANY LOGIN, or a permission on the login. To see user-defined server roles, requires ALTER ANY SERVER ROLE, or membership in the role. 
  
-Azure SQL Database: only members of the server role **##MS_LoginManager##** or the special database role loginmanager in `master` or the Azure AD admin and server sdmin can see all logins.
+Azure SQL Database: only members of the server role **##MS_LoginManager##** or the special database role loginmanager in `master` or the Azure AD admin and server Admin can see all logins.
  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

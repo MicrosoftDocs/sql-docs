@@ -62,7 +62,7 @@ After you select **Backup**, the **Backup database** dialog box disappears and t
 
 1. Select **Backup file** in the **Restore from** box.
 
-1. Select the ellipses (...) in the **Backup file path** box, and select the latest backup file for *TutorialDB*.
+1. Select the ellipses (...) in the **Backup file path** box, and select the latest backup file for *TutorialDB*. Ensure the SQL Server service has READ permissions on the backup file.
 
 1. Enter **TutorialDB_Restored** in the **Target database** box in the **Destination** section to restore the backup file to a new database. Then select **Restore**.
 

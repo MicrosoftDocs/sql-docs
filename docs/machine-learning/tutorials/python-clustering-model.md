@@ -45,7 +45,10 @@ In [part four](python-clustering-model-deploy.md), learn how to create a stored 
 
 ## Prerequisites
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
+::: moniker range=">=sql-server-ver16||>=sql-server-linux-ver16"
+- [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) with the Python language option - Follow the installation instructions in the [Windows installation guide](../install/sql-machine-learning-services-windows-install-sql-2022.md) or the [Linux installation guide](../../linux/sql-server-linux-setup-machine-learning-sql-2022.md?toc=%252fsql%252fmachine-learning%252ftoc.json&view=sql-server-linux-ver16&preserve-view=true).
+::: moniker-end
+::: moniker range="=sql-server-ver15||=sql-server-linux-ver15"
 - [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) with the Python language option - Follow the installation instructions in the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md) or the [Linux installation guide](../../linux/sql-server-linux-setup-machine-learning.md?toc=%252fsql%252fmachine-learning%252ftoc.json&view=sql-server-linux-ver15&preserve-view=true). You can also [enable Machine Learning Services on SQL Server Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
 ::: moniker-end
 ::: moniker range="=sql-server-2017"
@@ -61,7 +64,7 @@ In [part four](python-clustering-model-deploy.md), learn how to create a stored 
 
 - Additional Python packages - The examples in this tutorial series use Python packages that you may or may not have installed.
 
-  Open a **Command Prompt** and change to the installation path for the version of Python you use in Azure Data Studio. For example, `cd %LocalAppData%\Programs\Python\Python37-32`. Then run the following commands to install any of these packages that aren't already installed.
+  Open an **Admin Command Prompt** and change to the installation path for the version of Python you use in Azure Data Studio. For example, `cd %LocalAppData%\Programs\Python\Python37-32`. Then run the following commands to install any of these packages that aren't already installed. Ensure these packages are installed in the correct python install location, you can use the option `-t` to specify the destination directory.
 
   ```console
   pip install matplotlib
@@ -70,6 +73,15 @@ In [part four](python-clustering-model-deploy.md), learn how to create a stored 
   pip install scipy
   pip install scikit-learn
   ```
+
+::: moniker range=">=sql-server-ver15"
+  Run the following **icacls** commands to grant **READ & EXECUTE** access to the installed libraries to **SQL Server Launchpad Service** and SID **S-1-15-2-1 (ALL_APPLICATION_PACKAGES)**.
+
+  ```cmd
+    icacls "C:\Program Files\Python310\Lib\site-packages" /grant "NT Service\MSSQLLAUNCHPAD":(OI)(CI)RX /T
+    icacls "C:\Program Files\Python310\Lib\site-packages" /grant *S-1-15-2-1:(OI)(CI)RX /T
+  ```
+::: moniker-end
 
 ## Restore the sample database
 

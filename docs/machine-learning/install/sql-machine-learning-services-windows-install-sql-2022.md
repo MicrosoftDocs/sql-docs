@@ -149,8 +149,15 @@ Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes f
 
     ```cmd
     cd "C:\Program Files\Python310\"
-    python -m pip install dill numpy==1.22.0 pandas patsy python-dateutil
-    python -m pip install https://aka.ms/sqlml/python3.10/windows/revoscalepy-10.0.1-py3-none-any.whl
+    python -m pip install -t "C:\Program Files\Python310\Lib\site-packages" dill numpy==1.22.0 pandas patsy python-dateutil
+    python -m pip install -t "C:\Program Files\Python310\Lib\site-packages" https://aka.ms/sqlml/python3.10/windows/revoscalepy-10.0.1-py3-none-any.whl
+    ```
+
+    Run the following **icacls** commands from a new elevated command prompt to grant **READ & EXECUTE** access to the installed libraries to **SQL Server Launchpad Service** and SID **S-1-15-2-1 (ALL_APPLICATION_PACKAGES)**.
+
+    ```cmd
+    icacls "C:\Program Files\Python310\Lib\site-packages" /grant "NT Service\MSSQLLAUNCHPAD":(OI)(CI)RX /T
+    icacls "C:\Program Files\Python310\Lib\site-packages" /grant *S-1-15-2-1:(OI)(CI)RX /T
     ```
 
 #### Configure Python runtime with SQL Server

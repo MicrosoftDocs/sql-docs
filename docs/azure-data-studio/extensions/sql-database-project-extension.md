@@ -68,11 +68,11 @@ The SQL Database Projects extension is installed with the [mssql](../../tools/vi
 
 ## Dependencies
 
-The SQL Database Projects extension has a dependency on the .NET Core SDK (required) and AutoRest.Sql (optional).
+The SQL Database Projects extension has a dependency on the .NET SDK (required) and AutoRest.Sql (optional).
 
-### .NET Core SDK
+### .NET SDK
 
-The .NET Core SDK is required for project build functionality and you are prompted to install the .NET Core SDK if a supported version can't be detected by the extension.  The .NET Core SDK can be downloaded and installed for [Windows, macOS, and Linux](https://aka.ms/sqlprojects-dotnet). 
+The .NET SDK is required for project build functionality and you are prompted to install the .NET SDK if a supported version can't be detected by the extension.  The .NET SDK can be downloaded and installed for [Windows, macOS, and Linux](https://aka.ms/sqlprojects-dotnet). 
 
 If you would like to [check currently installed versions](/dotnet/core/install/how-to-detect-installed-versions) of the dotnet SDK, open a terminal and run the following command:
 
@@ -80,11 +80,21 @@ If you would like to [check currently installed versions](/dotnet/core/install/h
 dotnet --list-sdks
 ```
 
-To force the SQL Database Projects extension to use the v6.x version of the .NET Core SDK when multiple versions are installed, add a [package.json](/dotnet/core/tools/global-json) file to the folder that contains the SQL project. 
+After installing the .NET SDK, your environment is ready to use the SQL Database Projects extension.
 
-Unsupported .NET Core SDK versions may result in error messages such as:
+#### Common issues
+
+**Nuget.org missing from the list of sources may result in error messages such as:**
+- `error MSB4236: The SDK 'Microsoft.Build.Sql/0.1.9-preview' specified could not be found.`
+- `Unable to find package Microsoft.Build.Sql. No packages exist with this id in source(s): Microsoft Visual Studio Offline Packages`
+
+To check if nuget.org is registered as a source, run `dotnet nuget list source` from the command line and review the results for an `[Enabled]` item referencing nuget.org. If nuget.org is not registered as a source, run `dotnet nuget add source https://api.nuget.org/v3/index.json -n nuget.org`.
+
+**Unsupported .NET SDK versions may result in error messages such as:**
 - `error MSB4018: The "SqlBuildTask" task failed unexpectedly.`
 - `error MSB4018: System.TypeInitializationException: The type initializer for 'SqlSchemaModelStaticState' threw an exception. ---> System.IO.FileNotFoundException: Could not load file or assembly 'System.Runtime, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'. The system cannot find the file specified. [c:\Users\ .sqlproj]_` (where the linked non-existing file has an unmatched closing square bracket). 
+
+To force the SQL Database Projects extension to use the v6.x version of the .NET SDK when multiple versions are installed, add a [package.json](/dotnet/core/tools/global-json) file to the folder that contains the SQL project. 
 
 
 ### AutoRest.Sql

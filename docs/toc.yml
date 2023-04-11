@@ -17373,17 +17373,17 @@ items:
           href: t-sql/queries/aliasing-azure-sql-data-warehouse-parallel-data-warehouse.md
         - name: EXPLAIN
           href: t-sql/queries/explain-transact-sql.md
-        - name: OPTION Clause
+        - name: OPTION clause
           href: t-sql/queries/option-clause-transact-sql.md
-        - name: OUTPUT Clause
+        - name: OUTPUT clause
           href: t-sql/queries/output-clause-transact-sql.md
         - name: READTEXT
           href: t-sql/queries/readtext-transact-sql.md
-        - name: Search Condition
+        - name: Search condition
           href: t-sql/queries/search-condition-transact-sql.md
         - name: Subqueries (Azure Synapse Analytics, Parallel Data Warehouse)
           href: t-sql/queries/subqueries-azure-sql-data-warehouse-parallel-data-warehouse.md
-        - name: Table Value Constructor
+        - name: Table value constructor
           href: t-sql/queries/table-value-constructor-transact-sql.md
         - name: TOP
           href: t-sql/queries/top-transact-sql.md

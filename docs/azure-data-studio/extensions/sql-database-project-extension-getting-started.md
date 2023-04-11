@@ -22,7 +22,7 @@ This article describes three ways to get started with the SQL Database Projects 
 
 Once you've created or opened a SQL project, you're ready to start developing with SQL projects.  Some actions you might take are:
 
-- editing a table in table designer
+- [editing a table in table designer](../build-and-publish-changes-to-table-using-sql-projects.md)
 - building and publishing the project
 - using schema compare to visualize changes
 - updating the project from changes made to a database
@@ -46,7 +46,7 @@ Instead of starting from an empty project, you can quickly populate a SQL Databa
 
 In the **Connections** view, connect to the SQL Server instance that contains the database to be extracted.  Right-click on the database and select **Create Project from Database** from the context menu.
 
-    :::image type="content" source="media/sql-database-projects-extension/create-project-from-database.png" alt-text="Screenshot of create Project from Database dialog.":::
+:::image type="content" source="media/sql-database-projects-extension/create-project-from-database.png" alt-text="Screenshot of create Project from Database dialog.":::
 
 The folder structure setting is set to *Schema/Object Type* by default and offers different ways to automatically organize the existing objects when they are scripted out.  The options for the folder structure setting are:
 
@@ -71,13 +71,13 @@ Deploying the database project is achieved in the SQL Database Projects extensio
 
 The SQL Database Projects extension interacts with the [Schema Compare extension](schema-compare-extension.md), if installed, to compare the contents of a project to a dacpac, existing database, or another project.  The resulting schema comparison can be used to view and apply the differences from source to target.
 
-    :::image type="content" source="media/sql-database-projects-extension/sql-project-schema-compare.png" alt-text="Screenshot of schema compare dialog comparing a SQL project to a database.":::
+:::image type="content" source="media/sql-database-projects-extension/sql-project-schema-compare.png" alt-text="Screenshot of schema compare dialog comparing a SQL project to a database.":::
 
 ### Update project from database
 
 If changes have been made to a database that are not yet made to the SQL project, the SQL project can be updated from the state of a database.  This is done by selecting **Update Project from Database** from the context menu of a database in the **Connections** view or from the context menu of a SQL project in the **Database Projects** view.
 
-    :::image type="content" source="media/sql-database-projects-extension/update-project-from-database.png" alt-text="Screenshot of update Project from Database dialog.":::
+:::image type="content" source="media/sql-database-projects-extension/update-project-from-database.png" alt-text="Screenshot of update Project from Database dialog.":::
 
 
 ## Next steps

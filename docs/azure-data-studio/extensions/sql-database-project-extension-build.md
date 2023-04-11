@@ -59,9 +59,9 @@ Creating a new container exposes the following options:
 * SQL Server admin password: the *sa* password for the new instance
 * SQL Server docker image: the version base of the container
 
-For more information on the Azure SQL Database emulator, see [Azure SQL Database Emulator](azure/azure-sql/database/local-dev-experience-sql-database-emulator).
+For more information on the Azure SQL Database emulator, see [Azure SQL Database Emulator](/azure/azure-sql/database/local-dev-experience-sql-database-emulator).
 
-For more information on SQL Server in containers, see [Configure and customize SQL Server Docker containers](../../linux/sql-server-linux-docker-container-configure).
+For more information on SQL Server in containers, see [Configure and customize SQL Server Docker containers](../../linux/sql-server-linux-docker-container-configure.md).
 
 ## Next steps
 

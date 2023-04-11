@@ -19,9 +19,9 @@ The build process in the SQL Database Projects extension for Azure Data Studio a
 
 ## Build a Database Project
 
- In the **Database Projects** viewlet right-click the *.sqlproj* root node and select **Build**.
+ In the **Database Projects** viewlet, right-click the database project's root node and select **Build**.
 
- The output pane will automatically appear with the output from the build process.  A successful build will conclude with the message: 
+ The output pane automatically appears with the output from the build process.  A successful build concludes with the message: 
 
  ``` ... exited with code: 0 ```
 
@@ -29,15 +29,15 @@ The build process in the SQL Database Projects extension for Azure Data Studio a
 
 ### Publish to an existing SQL instance 
 
-*This functionality is available in Azure Data Studio and VS Code, however the interfaces will appear slightly different between the 2 applications.*
+*This functionality is available in Azure Data Studio and VS Code, however the interfaces appear slightly different between the two applications.*
 
-After a project is successfully compiled through the [build process](#build-a-database-project), the database can be published to a SQL Server instance. To publish a database project, in the **Database Projects** viewlet right-click the *.sqlproj* root node and select **Publish**.
+After a project is successfully compiled through the [build process](#build-a-database-project), the database can be published to a SQL Server instance. To publish a database project, in the **Database Projects** viewlet right-click the database project's root node and select **Publish**.
 
 In the **Publish Database** dialog that appears, specify a server connection and the database name to be created.
 
 ### Publish the SQL project and deploy to a local Container
 
-After a project is successfully compiled through the [build process](#build-a-database-project), the database can be published to a new development instance of SQL Server in a local container. To publish a database project to a local container, in the **Database Projects** viewlet right-click the *.sqlproj* root node and select **Publish**. 
+After a project is successfully compiled through the [build process](#build-a-database-project), the database can be published to a new development instance of SQL Server in a local container. To publish a database project to a local container, in the **Database Projects** viewlet right-click the database project's root node and select **Publish**. 
 
 In projects targeting SQL Server, the options for publish appear as:
 
@@ -49,13 +49,13 @@ In projects targeting Azure SQL Database, the options for publish appear as:
 * Publish to an existing Azure SQL logical server
 * Publish to new Azure SQL Database emulator
 
-To create a new container with a development SQL instance and publish the SQL project contents to it, select the option "Publish to new server in a container" or "Publish to new Azure SQL Database emulator".
+To create a new container with a development SQL instance and publish the SQL project contents to it, select the option "Publish to new server in a container", or "Publish to new Azure SQL Database emulator".
 
 :::image type="content" source="media/sql-database-projects-extension/publish-to-container.png" alt-text="Screenshot of publish to container dialog in Azure Data Studio.":::
 
 Creating a new container exposes the following options:
 
-* SQL Server port number: the port on which the SQL server's 1433 port will be forwarded to your workstation
+* SQL Server port number: the port on which the SQL server's 1433 port is forwarded to your workstation
 * SQL Server admin password: the *sa* password for the new instance
 * SQL Server docker image: the version base of the container
 

@@ -56,6 +56,9 @@ Run the following T-SQL script to create the stored procedure. The procedure rec
 USE [tpcxbb_1gb]
 GO
 
+DROP procedure IF EXISTS [dbo].[py_generate_customer_return_clusters];
+GO
+
 CREATE procedure [dbo].[py_generate_customer_return_clusters]
 AS
 

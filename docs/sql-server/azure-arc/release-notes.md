@@ -4,12 +4,30 @@ description: Latest release notes
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 03/09/2023
+ms.date: 04/10/2023
 ms.service: sql
 ms.topic: conceptual
 ---
 
 # Release notes - Azure Arc-enabled SQL Server
+
+## April 2023
+
+This release is published April 10, 2023.
+
+> [!NOTE]
+> This release is only available for SQL Server on Windows. This release is not available for SQL Server on Linux.
+
+### Extension version
+
+`1.1.2284.7`
+
+### Azure extension for SQL Server
+
+- Backups | Configure Automatic Backups for Arc SQL Server with a default schedule.
+- Automatic built-in backups with default schedule of weekly full, daily diff, and transaction logs every 5 min for every database.
+- Configure backup file retention with the `--retention-days` parameter. Values from 0 to 35 days. Default is 0 days.
+- Azure Policy to enable best practices assessment at scale. For details, see [Configure SQL best practices assessment](assess.md).
 
 ## March 2023
 
@@ -109,7 +127,7 @@ The *LicenseType* property of `SQL Server - Azure Arc` has been extended to prov
 - The pay-as-you-go billing is limited to SQL Server 2022[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]
 - SQL Server on Azure Arc-enabled servers doesn't support SQL Server Failover Cluster Instances.
 - Azure extension for SQL Server is not supported in the following environments:
-  - SQL Server in Azure VMs. If a custom VM image is migrated to Azure VM, Azure extension for SQL Server will stop working. The customers need to [Delete your Arc-enabled SQL Server resource](delete-from-azure-arc.md#delete-your-arc-enabled-sql-server-resource) and [enable automatic registration with SQL IaaS Agent extension](/azure/azure-sql/virtual-machines/windows/sql-agent-extension-automatic-registration-all-vms).
+  - SQL Server in Azure VMs. If a custom VM image is migrated to Azure VM, Azure extension for SQL Server will stop working. Delete your Arc-enabled SQL Server resource and enable automatic registration with SQL IaaS Agent extension. (This step is no longer required, beginning with April, 2023 release.)
   - SQL Server in Linux containers
   - SQL Server Azure VMware Solution
 > [!NOTE]

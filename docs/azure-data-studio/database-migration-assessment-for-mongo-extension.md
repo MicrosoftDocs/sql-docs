@@ -19,7 +19,7 @@ The Azure Cosmos DB migration for MongoDB extension in Azure Data Studio helps y
 
 ## Prerequisites
 
-- [Download and Install lastest Azure Data Studio](../download-azure-data-studio.md).
+- [Download and Install lastest Azure Data Studio](https://learn.microsoft.com/sql/azure-data-studio/download-azure-data-studio).
 - A MongoDB database running version 3.2 or higher.
 
 
@@ -79,7 +79,7 @@ Once the assessment extension installs, the next step is to connect to MongoDB e
 
 1. Now, you see the new assessment in the "Assessments" table.
 
-   :::image type="content" source="media/database-migration-assessment-for-mongodb-extension/mongodb-view-assessment-new-table.png" alt-text="Screenshot showing the option to name the assessment.":::
+   :::image type="content" source="media/database-migration-assessment-for-mongodb-extension/mongodb-view-assessment-new-table.png" alt-text="Screenshot showing the new assessment in the Assessments table":::
 
 1. Select **Refresh**, or wait until the assessment completes. By default, the assessment status page refreshes every 15 seconds. The status shows you one of four statuses: *success*, *failed*, *in-progress*, or *canceled*.
 
@@ -91,7 +91,6 @@ Once the assessment extension installs, the next step is to connect to MongoDB e
 
 1. Select the assessment link to view the assessment details page. A consolidated downloadable report is generated at the end of the assessment.
 
-    :::image type="content" source="media/database-migration-assessment-for-mongodb-extension/mongodb-view-assessment-report.png" alt-text="Screenshot of the view assessment option.":::
 
 The initial part of the report has the key details of the assessment run including a summary of the source MongoDB environment against which the assessment was run. Details include source MongoDB version, license type and instance type. It also contains a list of the databases and collections assessed, with their respective assessment summaries and migration readiness.
 

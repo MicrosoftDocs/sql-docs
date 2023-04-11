@@ -14,7 +14,7 @@ metadata:
   author: VanMSFT
   ms.author: vanto
   ms.reviewer: kendralittle, mathoma
-  ms.date: 02/15/2023
+  ms.date: 04/05/2023
   monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
@@ -100,10 +100,15 @@ landingContent:
         links:
           - text: Configure column encryption in-place using Always Encrypted with secure enclaves
             url: /sql/relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption
+          - text : Configure columns encryption in-place with DACPAC
+            url: /sql/relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption-dacpac
+          - text: Configure column encryption in-place with PowerShell
+            url: /sql/relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption-powershell
           - text: Configure column encryption in-place with Transact-SQL
             url: /sql/relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption-tsql
           - text: Enable Always Encrypted with secure enclaves for existing encrypted columns
             url: /sql/relational-databases/security/encryption/always-encrypted-enclaves-enable-for-encrypted-columns
+          
             
   # Card
   - title: Videos

@@ -42,7 +42,7 @@ Returns information about the connections established to this instance of the da
 |num_reads|**int**|Number of byte reads that have occurred over this connection. Is nullable.|  
 |num_writes|**int**|Number of byte writes that have occurred over this connection. Is nullable.|  
 |last_read|**datetime**|Timestamp when last read occurred over this connection. Is nullable.|  
-|last_write|**datetime**|Timestamp when last write occurred over this connection. Not Is nullable.|  
+|last_write|**datetime**|Timestamp when last write occurred over this connection. Is nullable.|  
 |net_packet_size|**int**|Network packet size used for information and data transfer. Is nullable.|  
 |client_net_address|**varchar(48)**|Host address of the client connecting to this server. Is nullable.|  
 |client_tcp_port|**int**|Port number on the client computer that is associated with this connection. Is nullable.<br /><br /> In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], this column always returns NULL.|  

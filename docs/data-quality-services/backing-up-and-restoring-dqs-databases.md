@@ -10,7 +10,7 @@ ms.topic: conceptual
 ---
 # Backing Up and Restoring DQS Databases
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to back up and restore the DQS databases.  
   

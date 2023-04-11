@@ -13,7 +13,7 @@ helpviewer_keywords:
 ---
 # Delete a Subscription View (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], delete a subscription view when it is no longer needed. Deleting a subscription view in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] removes the view from the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database. You can also edit a subscription view.  
   

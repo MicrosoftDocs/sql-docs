@@ -10,7 +10,7 @@ ms.topic: conceptual
 ---
 # What's New in Master Data Services (MDS)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   This topic summarizes the changes and updates in the latest release of [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. 
   
@@ -220,8 +220,6 @@ ms.topic: conceptual
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
-[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
-  
 ## See Also  
  [Master Data Services and Data Quality Services Features Supported by the Editions of SQL Server 2016](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
  [Deprecated Master Data Services Features](../master-data-services/deprecated-master-data-services-features.md)  

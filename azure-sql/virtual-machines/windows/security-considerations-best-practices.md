@@ -4,7 +4,7 @@ description: This article provides general guidance for securing SQL Server runn
 author: bluefooted
 ms.author: pamela
 ms.reviewer: mathoma, randolphwest
-ms.date: 03/15/2023
+ms.date: 03/29/2023
 ms.service: virtual-machines-sql
 ms.subservice: security
 ms.topic: conceptual
@@ -27,31 +27,7 @@ To learn more about SQL Server VM best practices, see the other articles in this
 
 Review the following checklist in this section for a brief overview of the security best practices that the rest of the article covers in greater detail.
 
-SQL Server features and capabilities provide a method of security at the data level and is how you achieve [defense-in-depth](https://azure.microsoft.com/resources/videos/defense-in-depth-security-in-azure/) at the infrastructure level for cloud-based and hybrid solutions. In addition, with Azure security measures, it is possible to encrypt your sensitive data, protect virtual machines from viruses and malware, secure network traffic, identify and detect threats, meet compliance requirements, and provides a single method for administration and reporting for any security need in the hybrid cloud.
-
-- Use [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) to evaluate and take action to improve the security posture of your data environment. Capabilities such as [Azure Advanced Threat Protection (ATP)](../../database/threat-detection-overview.md) can be leveraged across your hybrid workloads to improve security evaluation and give the ability to react to risks. Registering your SQL Server VM with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md) surfaces Microsoft Defender for Cloud assessments within the [SQL virtual machine resource](manage-sql-vm-portal.md) of the Azure portal.
-- Use [Microsoft Defender for SQL](/azure/defender-for-cloud/defender-for-sql-introduction) to discover and mitigate potential database vulnerabilities, as well as detect anomalous activities that could indicate a threat to your SQL Server instance and database layer.
-- [Vulnerability Assessment](/azure/defender-for-cloud/sql-azure-vulnerability-assessment-overview) is a part of [Microsoft Defender for SQL](/azure/defender-for-cloud/defender-for-sql-introduction) that can discover and help remediate potential risks to your SQL Server environment. It provides visibility into your security state, and includes actionable steps to resolve security issues.
-- Use [Azure confidential VMs](#confidential-vms) to reinforce protection of your data in-use, and data-at-rest against host operator access. Azure confidential VMs allow you to confidently store your sensitive data in the cloud and meet strict compliance requirements.
-- If you're on SQL Server 2022, consider using [Azure Active Directory authentication](#azure-ad-authentication-preview) to connect to your instance of SQL Server.
-- [Azure Advisor](/azure/advisor/advisor-security-recommendations) analyzes your resource configuration and usage telemetry and then recommends solutions that can help you improve the cost effectiveness, performance, high availability, and security of your Azure resources. Leverage Azure Advisor at the virtual machine, resource group, or subscription level to help identify and apply best practices to optimize your Azure deployments.
-- Use [Azure Disk Encryption](/azure/virtual-machines/windows/disk-encryption-windows) when your compliance and security needs require you to encrypt the data end-to-end using your encryption keys, including encryption of the ephemeral (locally attached temporary) disk.
-- [Managed Disks are encrypted](/azure/virtual-machines/disk-encryption) at rest by default using Azure Storage Service Encryption, where the encryption keys are Microsoft-managed keys stored in Azure.
-- For a comparison of the managed disk encryption options review the [managed disk encryption comparison chart](/azure/virtual-machines/disk-encryption-overview#comparison)
-- Management ports should be closed on your virtual machines - Open remote management ports expose your VM to a high level of risk from internet-based attacks. These attacks attempt to brute force credentials to gain admin access to the machine.
-- Turn on [Just-in-time (JIT) access](/azure/defender-for-cloud/just-in-time-access-usage) for Azure virtual machines
-- Use [Azure Bastion](/azure/bastion/bastion-overview) over Remote Desktop Protocol (RDP).
-- Lock down ports and only allow the necessary application traffic using [Azure Firewall](/azure/firewall/features) which is a managed Firewall as a Service (FaaS) that grants/ denies server access based on the originating IP address.
-- Use [Network Security Groups (NSGs)](/azure/virtual-network/network-security-groups-overview) to filter network traffic to, and from, Azure resources on Azure Virtual Networks
-- Leverage [Application Security Groups](/azure/virtual-network/application-security-groups) to group servers together with similar port filtering requirements, with similar functions, such as web servers and database servers.
-- For web and application servers leverage [Azure Distributed Denial of Service (DDoS) protection](/azure/ddos-protection/ddos-protection-overview). DDoS attacks are designed to overwhelm and exhaust network resources, making apps slow or unresponsive. It is common for DDos attacks to target user interfaces. Azure DDoS protection sanitizes unwanted network traffic, before it impacts service availability
-- Use VM extensions to help address anti-malware, desired state, threat detection, prevention, and remediation to address threats at the operating system, machine, and network levels:
-  - [Guest Configuration extension](/azure/virtual-machines/extensions/guest-configuration) performs audit and configuration operations inside virtual machines.
-  - [Network Watcher Agent virtual machine extension for Windows and Linux](/azure/virtual-machines/extensions/network-watcher-windows) monitors network performance, diagnostic, and analytics service that allows monitoring of Azure networks.
-  - [Microsoft Antimalware Extension for Windows](/azure/virtual-machines/extensions/iaas-antimalware-windows) to help identify and remove viruses, spyware, and other malicious software, with configurable alerts.
-  - [Evaluate 3rd party extensions](/azure/virtual-machines/extensions/overview) such as Symantec Endpoint Protection for Windows VM (/azure/virtual-machines/extensions/symantec)
-- Use [Azure Policy](/azure/governance/policy/overview) to create business rules that can be applied to your environment. Azure Policies evaluate Azure resources by comparing the properties of those resources against rules defined in JSON format.
-- Azure Blueprints enables cloud architects and central information technology groups to define a repeatable set of Azure resources that implements and adheres to an organization's standards, patterns, and requirements. Azure Blueprints are [different than Azure Policies](/azure/governance/blueprints/overview#how-its-different-from-azure-policy).
+[!INCLUDE[security best practices](../../includes/virtual-machines-best-practices-security.md)]
 
 For more information about security best practices, see [SQL Server security best practices](/sql/relational-databases/security/sql-server-security-best-practices) and [Securing SQL Server](/sql/relational-databases/security/securing-sql-server).
 
@@ -84,7 +60,7 @@ For detailed deployment steps, see the [Quickstart: Deploy SQL Server to a confi
 
 Recommendations for disk encryption are different for confidential VMs than for the other VM sizes. See [disk encryption](security-considerations-best-practices.md#azure-confidential-vms) to learn more.
 
-## Azure AD authentication (Preview)
+## Azure AD authentication
 
 Starting with SQL Server 2022, you can connect to SQL Server using one of the following Azure Active Directory (Azure AD) identity authentication methods:
 
@@ -93,7 +69,7 @@ Starting with SQL Server 2022, you can connect to SQL Server using one of the fo
 - Azure AD Universal with Multi-Factor Authentication
 - Azure Active Directory access token
 
-To get started, review [Configure Azure AD authentication for your SQL Server VM](configure-azure-ad-authentication-for-sql-vm.md). Using Azure AD authentication with SQL Server on Azure VMs is currently in preview.
+To get started, review [Configure Azure AD authentication for your SQL Server VM](configure-azure-ad-authentication-for-sql-vm.md). 
 
 ## Azure Advisor
 
@@ -161,6 +137,25 @@ If you are using an Azure confidential VM, consider the following recommendation
 - Configure [confidential OS disk encryption](/azure/confidential-computing/confidential-vm-overview#confidential-os-disk-encryption), which binds the OS disk encryption keys to the Trusted Platform Module (TPM) chip of the virtual machine, and makes the protected disk content accessible only to the VM.
 - Encrypt your data disks (any disks containing database files, log files, or backup files) with [BitLocker](/windows/security/information-protection/bitlocker/bitlocker-overview), and enable automatic unlocking - review [manage-bde autounlock](/windows-server/administration/windows-commands/manage-bde-autounlock) or [EnableBitLockerAutoUnlock](/powershell/module/bitlocker/enable-bitlockerautounlock) for more information. Automatic unlocking ensures the encryption keys are stored on the OS disk. In conjunction with confidential OS disk encryption, this protects the data-at-rest stored to the VM disks from unauthorized host access.
 
+## Trusted Launch
+
+When you deploy a [generation 2](/azure/virtual-machines/generation-2) virtual machine, you have the option to enable [trusted launch](/azure/virtual-machines/trusted-launch), which protects against advanced and persistent attack techniques. 
+
+With trusted launch, you can:
+
+- Securely deploy virtual machines with verified boot loaders, OS kernels, and drivers.
+- Securely protect keys, certificates, and secrets in the virtual machines.
+- Gain insights and confidence of the entire boot chain's integrity.
+- Ensure workloads are trusted and verifiable.
+
+
+The following features are currently unsupported when you enable trusted launch for your SQL Server on Azure VMs: 
+
+- Azure Site Recovery
+- Ultra disks
+- Managed images
+- Nested virtualization 
+
 ## Manage accounts
 
 You don't want attackers to easily guess account names or passwords. Use the following tips to help:
@@ -203,6 +198,8 @@ Azure Virtual Machine extensions are trusted Microsoft or 3rd party extensions t
     - Microsoft Defender for Cloud uses the Microsoft Dependency agent to collect network traffic data from your Azure virtual machines.
     - This agent enables advanced network protection features such as traffic visualization on the network map, network hardening recommendations, and specific network threats.
 - [Evaluate extensions](/azure/virtual-machines/extensions/overview) from Microsoft and 3rd parties to address anti-malware, desired state, threat detection, prevention, and remediation to address threats at the operating system, machine, and network levels.
+
+
 
 ## Next steps
 

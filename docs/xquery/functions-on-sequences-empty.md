@@ -14,7 +14,7 @@ dev_langs:
   - "XML"
 ---
 # Functions on Sequences - empty
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   Returns True if the value of *$arg* is an empty sequence. Otherwise, the function returns False.  
   

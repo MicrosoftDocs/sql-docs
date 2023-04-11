@@ -91,5 +91,3 @@ You might want to disable hyperthreading when the performance for each virtual p
  [Quickstart installation of SQL Server 2016](../database-engine/install-windows/install-sql-server.md)  
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-
-[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

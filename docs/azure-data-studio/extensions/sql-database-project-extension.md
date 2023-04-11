@@ -11,7 +11,9 @@ ms.topic: conceptual
 
 # SQL Database Projects extension
 
-The SQL Database Projects extension is an Azure Data Studio and Visual Studio Code extension for developing SQL databases including for SQL Server, Azure SQL Database, and Azure SQL Managed Instance in a project-based development environment.  A SQL project is a local representation of SQL objects that comprise the schema for a single database, such as tables, stored procedures, or functions.
+The SQL Database Projects extension is an Azure Data Studio and Visual Studio Code extension for developing SQL databases including for SQL Server, Azure SQL Database, and Azure SQL Managed Instance in a project-based development environment.  A SQL project is a local representation of SQL objects that comprise the schema for a single database, such as tables, stored procedures, or functions. When a SQL Database project is built, the output artifact is a *.dacpac* file. New and existing databases can be updated to match the contents of the *.dacpac* by publishing the SQL Database project with the SQL Database Projects extension or by publishing the *.dacpac* with the command line interface [SqlPackage](../../tools/sqlpackage/sqlpackage-publish.md).
+
+:::image type="content" source="./media/sql-database-project-extension/sqlproj-summary.png" alt-text="Summary of SQL Database Projects containing pre-deployment and post-deployment scripts as well as database objects." border="true":::
 
 
 ## Extension features
@@ -60,7 +62,7 @@ To install the SQL Database Project extension in Azure Data Studio, follow these
 
 
 
-### Visual Studio Code
+### Visual Studio Code (preview)
 
 The SQL Database Projects extension is installed with the [mssql](../../tools/visual-studio-code/sql-server-develop-use-vscode.md) extension for Visual Studio Code.
 
@@ -94,11 +96,9 @@ The SQL extension for [AutoRest](https://github.com/Azure/autorest) is automatic
 
 Currently, the SQL Database Project extension has the following limitations: 
 
-- Loading files as a link isn't supported, however the files are loaded at the top level in the tree and the build incorporates these files as expected.
+- Tasks (build/publish) aren't user-defined.
 - SQLCLR objects in projects aren't supported.
 - Code analysis rules on projects aren't supported at this time.
-- Tasks (build/publish) aren't user-defined.
-- Publish targets defined by DacFx.
 
 ## Workspace
 

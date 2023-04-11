@@ -51,7 +51,7 @@ In projects targeting Azure SQL Database, the options for publish appear as:
 
 To create a new container with a development SQL instance and publish the SQL project contents to it, select the option "Publish to new server in a container" or "Publish to new Azure SQL Database emulator".
 
-![Publish to container](media/sql-database-projects-extension/publish-to-container.png)
+:::image type="content" source="media/sql-database-projects-extension/publish-to-container.png" alt-text="Screenshot of publish to container dialog in Azure Data Studio.":::
 
 Creating a new container exposes the following options:
 

@@ -138,4 +138,4 @@ For more information about Frequently Asked Questions, visit [Migration Assessme
 If you need further assistance from Microsoft, contact Microsoft Support. For faster turnaround, you may attach the logs from [default log directory](#logs).
 
 ## Next steps
-[Pre-migration steps for data migrations from MongoDB to Azure Cosmos DB for MongoDB](../../../../azure-docs-pr/azure-docs-pr/articles/cosmos-db/mongodb/pre-migration-steps.md)
+[Pre-migration steps for data migrations from MongoDB to Azure Cosmos DB for MongoDB](../../../../azure-docs-pr/articles/cosmos-db/mongodb/pre-migration-steps.md)

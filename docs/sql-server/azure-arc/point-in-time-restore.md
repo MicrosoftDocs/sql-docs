@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 # Point in time restore
 
-The Azure extension for Arc enabled SQL Server ships with a built-in capability to perform backups automatically and allows for point in time restore.  
+The Azure extension for SQL Server can perform backups automatically and allows for point in time restore.  
 
 > [!NOTE]
 > As a preview feature, the technology presented in this article is subject to [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/).
@@ -31,34 +31,34 @@ The backups are performed at the following schedule:
 
 ### Assign permissions
 
-The current backup service within the Azure extension for Arc enabled Server uses `[NT AUTHORITY\SYSTEM]` account to perform the backups. As such, the following permissions need to be granted to this account.
+The current backup service within the Azure extension for Arc enabled Server uses `[NT AUTHORITY\SYSTEM]` account to perform the backups. As such, you need to grant the following permissions to this account.
 
-> [!NOTE]
-> This requirement will be removed in a future release
+   > [!NOTE]
+   > This requirement applies to the preview release.
 
-- `[NT AUTHORITY\SYSTEM]` user account needs to be added to the `dbcreator` server role at the server level. Run the following Transact SQL to add this account:
+- Add `[NT AUTHORITY\SYSTEM]` user account to the `dbcreator` server role at the server level. Run the following Transact SQL to add this account:
 
-```sql
-USE master
-GO
-ALTER SERVER ROLE [dbcreator] ADD MEMBER [NT AUTHORITY\SYSTEM]
-GO
-```
+   ```sql
+   USE master
+   GO
+   ALTER SERVER ROLE [dbcreator] ADD MEMBER [NT AUTHORITY\SYSTEM]
+   GO
+   ```
 
-- For each database (system databases such as master, model and msdb, as well as each user database), the `[NT AUTHORITY\SYSTEM]` user account needs to be added into the Logins, and granted ` [db_backupoperator]` role. 
+  - For each database (system databases such as master, model and msdb, as well as each user database), the `[NT AUTHORITY\SYSTEM]` user account needs to be added into the Logins, and granted ` [db_backupoperator]` role.
 
-This can be done via the Transact SQL:
+   This can be done via the Transact SQL:
 
-```sql
-USE [master]
-GO
-CREATE USER [NT AUTHORITY\SYSTEM] FOR LOGIN [NT AUTHORITY\SYSTEM]
-GO
-ALTER ROLE [db_backupoperator] ADD MEMBER [NT AUTHORITY\SYSTEM]
-GO
-```
+   ```sql
+   USE [master]
+   GO
+   CREATE USER [NT AUTHORITY\SYSTEM] FOR LOGIN [NT AUTHORITY\SYSTEM]
+   GO
+   ALTER ROLE [db_backupoperator] ADD MEMBER [NT AUTHORITY\SYSTEM]
+   GO
+   ```
 
-- Above Transact SQL code needs to be run for each user and system database (except Tempdb).
+  - Run the preceding code for each user and system database (except `tempdb`).
 
 ### Configure backups using Azure (az) CLI
 

@@ -19,7 +19,7 @@ The Azure Cosmos DB migration for MongoDB extension in Azure Data Studio helps y
 
 ## Prerequisites
 
-- [Download and Install lastest Azure Data Studio](https://learn.microsoft.com/sql/azure-data-studio/download-azure-data-studio).
+- [Download and Install latest Azure Data Studio](https://learn.microsoft.com/sql/azure-data-studio/download-azure-data-studio).
 - A MongoDB database running version 3.2 or higher.
 
 
@@ -48,7 +48,7 @@ Once the assessment extension installs, the next step is to connect to MongoDB e
 1. In the **Connection Details**, fill out the fields.
    1. In the **Connection type** field, select **Mongo account**.
    1. Fill in the connection details based on the *Connection String*  or *Parameters* option selection.
-   1. In the **Server Group** select **Default**
+   1. In the Server Group,** select **Default**
    1. Provide an optional **Name** for this connection.
 
    :::image type="content" source="media/database-migration-assessment-for-mongodb-extension/new-connection-mongodb-details.png" alt-text="connection details":::
@@ -115,7 +115,7 @@ You can configure some extension settings after installing the extension. This s
 
    :::image type="content" source="media/database-migration-assessment-for-mongodb-extension/database-migration-assessment-for-mongodb-extension-settings.png" alt-text="Screenshot of extension.":::
 
-1. Under extension settings for this extension, provide the `Assessment path` to change the location where the assessment metadata will be stored. If left blank,  default location will be used.
+1. Under extension settings for this extension, provide the `Assessment path` to change the location where the assessment metadata is stored. If left blank,  default location will be used.
 
     :::image type="content" source="media/database-migration-assessment-for-mongodb-extension/database-migration-assessment-for-mongodb-extension-settings-property.png" alt-text="extension properties settings":::
 

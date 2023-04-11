@@ -26,7 +26,7 @@ The extension stores errors, warnings, and other diagnostic logs in the default 
 The below section lists some commonly encountered issues, and their respective remediation actions.
 ### Question 1
 
-**Question:** I am unable to run assessment as my "Run Validation" is failing. How can I fix it? .
+**Question:** I'm unable to run assessment as my "Run Validation" is failing. How can I fix it? .
 
 **Answer:** Refer to error displayed on the extension to see why the validation is failing. Typically the issue is inability to connect to the mongo endpoint or the user might not have sufficient privileges on the connected server to run the assessment.
 
@@ -46,7 +46,7 @@ Connect as user that either has above roles or use [grantRolesToUser](https://ww
  
 **Question:** How do I collect profiler logs and what are the implications of enabling profiler? 
 
-**Answer:** Profiling may have an effect on MongoDB performance, especially when configured with a profiling level of 2, or when using a low threshold value is used with a profiling level of 1. Profiling also consumes another disk space, so you would need to make sure you have enough space available. You would need to carefully consider any performance and other implications while enabling profiler. You should preferably enable it in a non-production environment or during off-peak hours. 
+**Answer:** Profiling may have an effect on MongoDB performance, especially when configured with a profiling level of 2, or when using a low threshold value is used with a profiling level of 1. Profiling also consumes another disk space, so you would need to make sure you have enough space available. You would need to carefully consider any performance and other implications while enabling profiler. You should preferably enable it in a nonproduction environment or during off-peak hours. 
 
 **Remediation actions:** To collect profile logs, follow the steps [here](https://www.mongodb.com/docs/manual/tutorial/manage-the-database-profiler/)
 

@@ -24,7 +24,7 @@ ms.custom: intro-installation
   
 #### Installing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client Tools Using the Setup User Interface  
   
-1.  Insert the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installation media. From the root installation folder, double click Setup.exe. To install from the network share, locate the root folder on the share, and then double-click Setup.exe.  
+1.  Insert the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installation media. From the root installation folder, double-click Setup.exe. To install from the network share, locate the root folder on the share, and then double-click Setup.exe.  
   
 2.  On the **Installation** page, click **New [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stand-alone installation or add Features to an existing installation**. Do not click **New [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster installation**.  
   

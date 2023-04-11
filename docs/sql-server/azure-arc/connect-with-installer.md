@@ -19,7 +19,7 @@ This article explains how to connect your SQL Server instance to Azure Arc with 
 You can also onboard your SQL Servers to Azure Arc by directly using  AzureExtensionForSQLServer.msi. This method helps you integrate onboarding SQL Servers to Arc with any existing deployment automation tools and services.
 
 1. Download AzureExtensionForSQLServer.msi from the [link](https://aka.ms/AzureExtensionForSQLServer).
-1. Double-select on AzureExtensionForSQLServer.msi.  This installs the necessary packages for onboarding SQL Servers to Azure Arc.
+1. Open AzureExtensionForSQLServer.msi. This installs the necessary packages for onboarding SQL Servers to Azure Arc.
 1. Open PowerShell console in admin mode and execute the following commands.
 
    If you use Azure Active Directory service principal to authenticate, execute the command below on the target SQL Server.
@@ -51,5 +51,5 @@ Go to **Azure Arc > SQL Server** and open the newly registered Arc-enabled SQL S
 ## Next steps
 
 - [Configure advanced data security for your SQL Server instance](configure-advanced-data-security.md)
-- [Configure your SQL Server instance for periodic best practices ](assess.md)assessment
+- [Configure your SQL Server instance for periodic best practices](assess.md)assessment
    

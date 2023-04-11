@@ -7,6 +7,7 @@ ms.date: 09/12/2016
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Planning for Reporting Services
   Use these topics to better understand [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Learn how to install and configure the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] environment to best fit your needs.  

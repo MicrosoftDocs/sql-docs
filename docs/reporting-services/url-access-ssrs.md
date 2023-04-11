@@ -7,6 +7,7 @@ ms.date: 03/03/2017
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "URL access [Reporting Services]"
   - "links [Reporting Services], URL access"

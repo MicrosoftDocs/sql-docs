@@ -38,11 +38,11 @@ There are two mechanisms for viewing the contents of a data-tier application (DA
 
 2.  Select the **SQL Server** project template, and specify a **Name**, **Location**, and **Solution name**.
 
-3.  In **Solution Explorer**, right click the project node and select **Properties...**.
+3.  In **Solution Explorer**, right-click the project node and select **Properties...**.
   
 4.  On the **Project Settings** tab, in the **Output Types** section, select the **Data-tier Application (.dacpac File)** check box, and then close the properties dialog.  
 
-5.  In **Solution Explorer**, right click the project node and select **Import Data-tier Application...**.  
+5.  In **Solution Explorer**, right-click the project node and select **Import Data-tier Application...**.  
 
 6.  Use **Solution Explorer** to open all of the files in the DAC, such as the server selection policy and the pre- and post-deployment scripts.  
 

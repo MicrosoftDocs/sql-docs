@@ -6,6 +6,7 @@ ms.author: maggies
 ms.date: 10/05/2022
 ms.service: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "URL reservations"
 ---
@@ -25,12 +26,12 @@ helpviewer_keywords:
 |--------------|------------------|-----------------|  
 |Scheme|http or https|Prefixes for non-TLS and TLS connections.|  
 |Hostname| | Identifies the server on the network.|
-| |(+) Strong wildcard, equates to **(All Assigned)** value for the IP address. | (+) Strong wildcard is the default. HTTP.SYS will accept all requests on all network adaptors for a given port and virtual directory combination. The report server will accept any request on the port.|
-| | (\*) Weak wildcard, equates to an IP address of **(All Unassigned)**. | (\*) Weak wildcard. HTTP.SYS accepts all requests not handled by other URL reservations on all network adaptors for a given port and virtual directory combination.|
+| |(+) Strong wildcard, equates to **(All Assigned)** value for the IP address. | (+) Strong wildcard is the default. HTTP.SYS will accept all requests on all network adapters for a given port and virtual directory combination. The report server will accept any request on the port.|
+| | (\*) Weak wildcard, equates to an IP address of **(All Unassigned)**. | (\*) Weak wildcard. HTTP.SYS accepts all requests not handled by other URL reservations on all network adapters for a given port and virtual directory combination.|
 | | Fully qualified domain name | Fully qualified domain name includes domain address and server name, as registered with a domain controller or public domain name server.|
 | | Machine name | Machine name is the NETBIOS name of the computer on the network.|
-| | IP address (IPV4)| IP address (IPV4) is the IP address of a network adaptor on the computer in IPV4 format: *nnn.nnn.nnn.nnn*.|
-| | IP address (IPV6) | IP address (IPV6) is the IP address of a network adaptor on the computer in IPV6 format: \<header>:\<header>:*nnn.nnn.nnn.nnn*.| 
+| | IP address (IPV4)| IP address (IPV4) is the IP address of a network adapter on the computer in IPV4 format: *nnn.nnn.nnn.nnn*.|
+| | IP address (IPV6) | IP address (IPV6) is the IP address of a network adapter on the computer in IPV6 format: \<header>:\<header>:*nnn.nnn.nnn.nnn*.| 
 |Port|80 | Port 80 is the standard port for HTTP requests to and from a server.|
 | |443 |Port 443 is the standard report for TLS connections.|
 | |\<custom>| You can use any port that is not already reserved by another application.|

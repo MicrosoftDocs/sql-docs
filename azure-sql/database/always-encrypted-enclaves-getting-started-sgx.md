@@ -7,6 +7,7 @@ ms.reviewer: vanto
 ms.date: 02/01/2023
 ms.service: sql-database
 ms.subservice: security
+ms.custom: devx-track-azurepowershell
 ms.topic: tutorial
 ---
 # Tutorial: Getting started using Always Encrypted with Intel SGX enclaves in Azure SQL Database

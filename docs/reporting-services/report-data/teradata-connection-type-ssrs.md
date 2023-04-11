@@ -7,6 +7,7 @@ ms.date: 03/17/2017
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Teradata Connection Type (SSRS)
   To include data from Teradata in your report, you must have a dataset that is based on a report data source of type Teradata. This built-in data source type is based on the .NET Managed Provider for Teradata data processing extension.  

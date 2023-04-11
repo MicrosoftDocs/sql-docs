@@ -7,6 +7,7 @@ ms.date: 03/01/2017
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Set a minimum or maximum on a gauge in a paginated report (Report Builder)
 

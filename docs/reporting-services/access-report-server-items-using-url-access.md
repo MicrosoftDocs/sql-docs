@@ -7,6 +7,7 @@ ms.date: 05/08/2019
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "referencing URL items for report server access"
   - "URL access [Reporting Services], report servers"

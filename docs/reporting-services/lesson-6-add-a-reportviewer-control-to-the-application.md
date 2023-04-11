@@ -7,6 +7,7 @@ ms.date: 05/18/2016
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Lesson 6: Add a ReportViewer Control to the Application
 After you design the child report by using the Report Wizard, your next step is to add a ReportViewer control to the website application. If you are using the ASP.NET Reports Web Site, it will have added the ReportViewer control to the default.aspx page.   

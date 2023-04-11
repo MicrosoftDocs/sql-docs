@@ -41,6 +41,6 @@ You do not need to have access to column master keys configured for the encrypte
 
 ## See Also
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Back up and restore databases using Always Encrypted ](always-encrypted-migrate-using-backup-restore.md)
+- [Back up and restore databases using Always Encrypted](always-encrypted-migrate-using-backup-restore.md)
 - [Migrate data to or from columns using Always Encrypted with SQL Server Import and Export Wizard](always-encrypted-migrate-using-import-export-wizard.md)
 - [Bulk load encrypted data to columns using Always Encrypted](migrate-sensitive-data-protected-by-always-encrypted.md)

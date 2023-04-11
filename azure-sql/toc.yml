@@ -55,7 +55,7 @@
         displayName: regulatory, compliance, standards, domains
         href: ./database/security-controls-policy.md
       - name: Security baseline
-        href: /security/benchmark/azure/baselines/sql-database-security-baseline?toc=/azure/azure-sql/toc.json
+        href: /security/benchmark/azure/baselines/azure-sql-security-baseline?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
       - name: Always Encrypted
         href: database/always-encrypted-landing.yml
       - name: Microsoft Defender for SQL
@@ -98,7 +98,7 @@
           href: database/authentication-azure-ad-only-authentication-policy.md
         - name: Managed identity
           href: database/authentication-azure-ad-user-assigned-managed-identity.md
-      - name: Transparent Data Encryption (TDE)
+      - name: Transparent data encryption (TDE)
         items:
         - name: Overview
           href: database/transparent-data-encryption-tde-overview.md
@@ -259,8 +259,8 @@
         href: /azure/connectors/connectors-create-api-sqlazure?toc=/azure/azure-sql/toc.json
       - name: Index with Azure Cognitive Search
         href: /azure/search/search-howto-connecting-azure-sql-database-to-azure-search-using-indexers?toc=/azure/azure-sql/toc.json
-      - name: Server-side CLR/.NET integration
-        href: /sql/relational-databases/clr-integration/common-language-runtime-integration-overview?toc=/azure/azure-sql/toc.json
+      - name: Server-side CLR/.NET integration 
+        href: /sql/relational-databases/clr-integration/common-language-runtime-integration-overview
       - name: Java
         items:
         - name: Use Java and JDBC
@@ -359,10 +359,6 @@
         href: database/secure-database-tutorial.md
       - name: Create users using service principals
         href: database/authentication-aad-service-principal-tutorial.md
-      - name: Rotate TDE BYOK keys
-        href: database/transparent-data-encryption-byok-key-rotation.md
-      - name: Remove TDE protector
-        href: database/transparent-data-encryption-byok-remove-tde-protector.md
     - name: Move data
       items: 
       - name: Migrate using DMS
@@ -476,6 +472,18 @@
           href: database/network-access-controls-overview.md
         - name: Outbound firewall rules
           href: database/outbound-firewall-rule-overview.md
+        - name: Transparent data encryption (TDE)
+          items:
+          - name: Overview
+            href: database/transparent-data-encryption-tde-overview.md
+          - name: Bring Your Own Key (BYOK)
+            href: database/transparent-data-encryption-byok-overview.md
+          - name: Managed identities with CMK
+            href: database/transparent-data-encryption-byok-identity.md
+          - name: Cross-tenant CMK
+            href: database/transparent-data-encryption-byok-cross-tenant.md
+          - name: Database level CMK
+            href: database/transparent-data-encryption-byok-database-level-overview.md
         - name: Private Link
           href: database/private-endpoint-overview.md
         - name: VNet endpoints
@@ -583,10 +591,10 @@
       href: database/cost-management.md      
     - name: Connect and query
       items:
-      - name: Connect and run ad-hoc queries
+      - name: Connect and run ad hoc queries
         items:
         - name: Azure Data Studio
-          href: /sql/azure-data-studio/quickstart-sql-database?toc=/azure/azure-sql/toc.json
+          href: /sql/azure-data-studio/quickstart-sql-database
         - name: SSMS
           href: database/connect-query-ssms.md
         - name: Azure portal query editor
@@ -664,7 +672,7 @@
         - name: Create and manage (T-SQL)
           href: database/elastic-jobs-tsql-create-manage.md
 
-    - name: Secure 
+    - name: Security
       items: 
       - name: Audit to storage account behind VNet or firewall
         href: database/audit-write-storage-account-behind-vnet-firewall.md
@@ -688,10 +696,6 @@
         href: database/threat-detection-configure.md
       - name: Configure dynamic data masking
         href: database/dynamic-data-masking-configure-portal.md
-      - name: Create server configured with UMI and customer-managed TDE
-        href: database/transparent-data-encryption-byok-create-server.md
-      - name: Create server configured with cross-tenant customer-managed TDE
-        href: database/transparent-data-encryption-byok-create-server-cross-tenant.md
       - name: IP-based firewall
         href: database/firewall-configure.md
       - name: Ledger
@@ -706,6 +710,20 @@
           href: /sql/relational-databases/security/ledger/ledger-how-to-configure-ledger-database
         - name: Verify ledger database for tampering
           href: /sql/relational-databases/security/ledger/ledger-verify-database
+      - name: Transparent data encryption (TDE)
+        items:
+        - name: Create server configured with UMI and customer-managed TDE
+          href: database/transparent-data-encryption-byok-create-server.md
+        - name: Create server configured with cross-tenant customer-managed TDE
+          href: database/transparent-data-encryption-byok-create-server-cross-tenant.md
+        - name: Rotate TDE BYOK keys
+          href: database/transparent-data-encryption-byok-key-rotation.md
+        - name: Remove TDE protector
+          href: database/transparent-data-encryption-byok-remove-tde-protector.md
+        - name: Identity and key management with database level CMK
+          href: database/transparent-data-encryption-byok-database-level-basic-actions.md
+        - name: Configure geo replication when using database level CMK
+          href: database/transparent-data-encryption-byok-database-level-geo-replication-restore.md
       - name: vNet endpoints - PowerShell
         href: database/scripts/vnet-service-endpoint-rule-powershell-create.md
 
@@ -877,7 +895,7 @@
             href: database/saas-multitenantdb-provision-and-catalog.md
           - name: Monitor database performance
             href: database/saas-multitenantdb-performance-monitoring.md
-          - name: Run ad-hoc queries
+          - name: Run ad hoc queries
             href: database/saas-multitenantdb-adhoc-reporting.md
           - name: Manage tenant schema
             href: database/saas-multitenantdb-schema-management.md
@@ -1277,11 +1295,11 @@
       - name: Transactional replication
         href: managed-instance/replication-transactional-overview.md
       - name: Linked servers
-        href: /sql/relational-databases/linked-servers/linked-servers-database-engine?toc=/azure/azure-sql/toc.json
+        href: /sql/relational-databases/linked-servers/linked-servers-database-engine
       - name: Service Broker
-        href: /sql/database-engine/configure-windows/sql-server-service-broker?toc=/azure/azure-sql/toc.json
+        href: /sql/database-engine/configure-windows/sql-server-service-broker
       - name: Database mail
-        href: /sql/relational-databases/database-mail/database-mail?toc=/azure/azure-sql/toc.json
+        href: /sql/relational-databases/database-mail/database-mail
     - name: Security
       items:
       - name: Always Encrypted
@@ -1712,7 +1730,7 @@
 
     - name: Concepts
       items: 
-      - name: SQL IaaS agent extension 
+      - name: SQL IaaS Agent extension 
         href: virtual-machines/linux/sql-server-iaas-agent-extension-linux.md
     - name: "How-to guides"
       items: 
@@ -1801,7 +1819,7 @@
   - name: SQLCMD
     href: /sql/tools/sqlcmd-utility
   - name: SqlPackage
-    href: /sql/tools/sqlpackage/sqlpackage?toc=/azure/azure-sql/toc.json
+    href: /sql/tools/sqlpackage/sqlpackage
   - name: SQL Database Management Library package
     href: https://www.nuget.org/packages/Microsoft.Azure.Management.Sql
   - name: SQL connection  drivers

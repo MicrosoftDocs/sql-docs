@@ -18,7 +18,7 @@ ms.topic: conceptual
   
 1.  From the **Start** menu, select **CDC Service Configuration for Oracle**.  
   
-2.  From the left pane, right click Local CDC Services and select New Service  
+2.  From the left pane, right-click Local CDC Services and select New Service  
   
      You can also click **New Service** from the **Actions** pane.  
   

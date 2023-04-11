@@ -7,6 +7,7 @@ ms.date: 09/27/2020
 ms.service: reporting-services
 ms.subservice: security
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "Secure Sockets Layer (SSL)"
 ---

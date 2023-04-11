@@ -7,6 +7,7 @@ ms.date: 10/21/2021
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "SQL Server data processing extension [Reporting Services]"
   - "XML data processing extension [Reporting Services]"

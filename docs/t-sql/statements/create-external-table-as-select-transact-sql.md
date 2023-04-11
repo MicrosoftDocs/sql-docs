@@ -3,8 +3,8 @@ title: "CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)"
 description: "CREATE EXTERNAL TABLE AS SELECT creates an external table and then exports, in parallel, the results of a T-SQL SELECT statement."
 author: markingmyname
 ms.author: maghan
-ms.reviewer: randolphwest
-ms.date: 2/1/2023
+ms.reviewer: randolphwest, wiassaf
+ms.date: 03/28/2023
 ms.service: sql
 ms.topic: reference
 f1_keywords:
@@ -61,7 +61,7 @@ CREATE EXTERNAL TABLE { [ [ database_name . [ schema_name ] . ] | schema_name . 
 
 #### [ [ *database_name* . [ *schema_name* ] . ] | *schema_name* . ] *table_name*
 
-The one- to three-part name of the table to create in the database. For an external table, only the table metadata is stored in the relational database.
+The one- to three-part name of the table to create in the database. For an external table, relational database stores only the table metadata.
 
 #### [ ( column_name [ ,...n ] ) ]
 
@@ -72,15 +72,17 @@ The name of a table column.
 **Applies to:** [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssaps-md](../../includes/ssaps-md.md)]
 
 '*hdfs_folder*'**  
-Specifies where to write the results of the SELECT statement on the external data source. The location is a folder name and can optionally include a path that's relative to the root folder of the Hadoop cluster or Blob storage. PolyBase will create the path and folder if it doesn't already exist.
+Specifies where to write the results of the SELECT statement on the external data source. The location is a folder name and can optionally include a path that's relative to the root folder of the Hadoop cluster or Blob storage. PolyBase creates the path and folder if it doesn't already exist.
 
 The external files are written to `hdfs_folder` and named `QueryID_date_time_ID.format`, where `ID` is an incremental identifier and `format` is the exported data format. An example is `QID776_20160130_182739_0.orc`.
+
+LOCATION must point to a folder and have a trailing `/`, for example: `aggregated_data/`.
 
 **Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later
 
 `prefix://path[:port]` provides the connectivity protocol (prefix), path and optionally the port, to the external data source, where the result of the SELECT statement will write.
 
-If the destination is S3-compatible object storage, a bucket must first exist, but PolyBase can create subfolders if necessary. [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] supports Azure Data Lake Storage Gen2, Azure Storage Account V2, and S3-compatible object storage. ORC files are not currently supported.
+If the destination is S3-compatible object storage, a bucket must first exist, but PolyBase can create subfolders if necessary. [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] supports Azure Data Lake Storage Gen2, Azure Storage Account V2, and S3-compatible object storage. ORC files aren't currently supported.
 
 #### DATA_SOURCE = *external_data_source_name*
 
@@ -92,7 +94,7 @@ Specifies the name of the external file format object that contains the format f
 
 #### REJECT options
 
-REJECTS options don't apply at the time this CREATE EXTERNAL TABLE AS SELECT statement is run. Instead, they're specified here so that the database can use them at a later time when it imports data from the external table. Later, when the CREATE TABLE AS SELECT statement selects data from the external table, the database will use the reject options to determine the number or percentage of rows that can fail to import before it stops the import.
+REJECT options don't apply at the time this CREATE EXTERNAL TABLE AS SELECT statement is run. Instead, they're specified here so that the database can use them at a later time when it imports data from the external table. Later, when the CREATE TABLE AS SELECT statement selects data from the external table, the database will use the reject options to determine the number or percentage of rows that can fail to import before it stops the import.
 
 - **REJECT_VALUE = *reject_value***
 
@@ -100,30 +102,30 @@ REJECTS options don't apply at the time this CREATE EXTERNAL TABLE AS SELECT sta
 
 - **REJECT_TYPE = value | percentage**
 
-  Clarifies whether the REJECT_VALUE option is specified as a literal value or a percentage.
+  Clarifies whether the REJECT_VALUE option is a literal value or a percentage.
 
   - **value**
 
-    Used if REJECT_VALUE is a literal value, not a percentage. The database will stop importing rows from the external data file when the number of failed rows exceeds *reject_value*.
+    Used if REJECT_VALUE is a literal value, not a percentage. The database stops importing rows from the external data file when the number of failed rows exceeds *reject_value*.
 
-    For example, if REJECT_VALUE = 5 and REJECT_TYPE = value, the database will stop importing rows after five rows have failed to import.
+    For example, if `REJECT_VALUE = 5` and `REJECT_TYPE = value`, the database stops importing rows after five rows have failed to import.
 
   - **percentage**
 
-    Used if REJECT_VALUE is a percentage, not a literal value. The database will stop importing rows from the external data file when the *percentage* of failed rows exceeds *reject_value*. The percentage of failed rows is calculated at intervals.
+    Used if REJECT_VALUE is a percentage, not a literal value. The database stops importing rows from the external data file when the *percentage* of failed rows exceeds *reject_value*. The percentage of failed rows is calculated at intervals. Only valid in dedicated SQL pools when `TYPE=HADOOP`.
 
 - **REJECT_SAMPLE_VALUE = *reject_sample_value***
 
-  Required when REJECT_TYPE = percentage, this specifies the number of rows to attempt to import before the database recalculates the percentage of failed rows.
+  Required when `REJECT_TYPE = percentage`. Specifies the number of rows to attempt to import before the database recalculates the percentage of failed rows. 
 
-  For example, if REJECT_SAMPLE_VALUE = 1000, the database will calculate the percentage of failed rows after it has attempted to import 1000 rows from the external data file. If the percentage of failed rows is less than *reject_value*, the database will attempt to load another 1000 rows. The database continues to recalculate the percentage of failed rows after it attempts to import each additional 1000 rows.
+  For example, if REJECT_SAMPLE_VALUE = 1000, the database will calculate the percentage of failed rows after it has attempted to import 1000 rows from the external data file. If the percentage of failed rows is less than *reject_value*, the database attempts to load another 1000 rows. The database continues to recalculate the percentage of failed rows after it attempts to import each additional 1000 rows.
 
   > [!NOTE]  
-  >  Because the database computes the percentage of failed rows at intervals, the actual percentage of failed rows can exceed *reject_value*.
+  > Because the database computes the percentage of failed rows at intervals, the actual percentage of failed rows can exceed *reject_value*.
 
   **Example:**
 
-  This example shows how the three REJECT options interact with each other. For example, if REJECT_TYPE = percentage, REJECT_VALUE = 30, and REJECT_SAMPLE_VALUE = 100, the following scenario could occur:
+  This example shows how the three REJECT options interact with each other. For example, if `REJECT_TYPE = percentage, REJECT_VALUE = 30, REJECT_SAMPLE_VALUE = 100`, the following scenario could occur:
 
   - The database attempts to load the first 100 rows, of which 25 fail and 75 succeed.
   - The percent of failed rows is calculated as 25%, which is less than the reject value of 30%. So, there's no need to halt the load.
@@ -135,15 +137,18 @@ REJECTS options don't apply at the time this CREATE EXTERNAL TABLE AS SELECT sta
 
 Specifies a temporary named result set, known as a common table expression (CTE). For more information, see [WITH common_table_expression (Transact-SQL)](../../t-sql/queries/with-common-table-expression-transact-sql.md)
 
-#### SELECT \<select_criteria>
+#### SELECT <select_criteria>
 
 Populates the new table with the results from a SELECT statement. *select_criteria* is the body of the SELECT statement that determines which data to copy to the new table. For information about SELECT statements, see [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md).
+
+> [!NOTE]
+> ORDER BY clause in SELECT has no effect on CETAS.
 
 **Column options**
 
 - **column_name [ ,...n ]**
 
-  Column names do not allow the column options mentioned in CREATE TABLE. Instead, you can provide an optional list of one or more column names for the new table. The columns in the new table will use the names you specify. When you specify column names, the number of columns in the column list must match the number of columns in the select results. If you don't specify any column names, the new target table will use the column names in the select statement results.
+  Column names do not allow the column options mentioned in CREATE TABLE. Instead, you can provide an optional list of one or more column names for the new table. The columns in the new table uses the names you specify. When you specify column names, the number of columns in the column list must match the number of columns in the select results. If you don't specify any column names, the new target table uses the column names in the select statement results.
 
   You can't specify any other column options such as data types, collation, or nullability. Each of these attributes is derived from the results of the SELECT statement. However, you can use the SELECT statement to change the attributes. For an example, see [Use CETAS to change column attributes](#c-use-cetas-to-change-column-attributes).
 
@@ -160,8 +165,9 @@ Populates the new table with the results from a SELECT statement. *select_criter
 - **ADMINISTER BULK OPERATIONS**
 - **ALTER ANY EXTERNAL DATA SOURCE**
 - **ALTER ANY EXTERNAL FILE FORMAT**
-- In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssaps-md](../../includes/ssaps-md.md)], **Write** permission to read and write to the external folder on the Hadoop cluster or in Blob storage.
-- In [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], it is also required to set proper permissions on the external location.**Write** permission to output the data to the location and **Read** permission to access it.
+- In general, you need to have permissions to **List** folder content and **Write** to the LOCATION folder for CETAS.
+- In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssaps-md](../../includes/ssaps-md.md)], **Write** permission to read and write to the external folder on the Hadoop cluster or in Azure Blob storage.
+- In [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], it is also required to set proper permissions on the external location. **Write** permission to output the data to the location and **Read** permission to access it.
 - For Azure Blob Storage and Azure Data Lake Gen2 the `SHARED ACCESS SIGNATURE` token must be granted the following privileges on the container: **Read**, **Write**, **List**, **Create**.
 - For Azure Blog Storage `Allowed Services`: `Blob` checkbox must be selected to generate the SAS token.
 - For Azure Data Lake Gen2 `Allowed Services`: `Container` and `Object` checkbox must be selected to generate the SAS token.
@@ -173,15 +179,15 @@ Populates the new table with the results from a SELECT statement. *select_criter
 
 When CREATE EXTERNAL TABLE AS SELECT exports data to a text-delimited file, there's no rejection file for rows that fail to export.
 
-When you create the external table, the database attempts to connect to the external location. If the connection fails, the command will fail, and the external table won't be created. It can take a minute or more for the command to fail because the database retries the connection at least three times.
+When you create the external table, the database attempts to connect to the external location. If the connection fails, the command fails, and the external table won't be created. It can take a minute or more for the command to fail because the database retries the connection at least three times.
 
-If CREATE EXTERNAL TABLE AS SELECT is canceled or fails, the database will make a one-time attempt to remove any new files and folders already created on the external data source.
+If CREATE EXTERNAL TABLE AS SELECT is canceled or fails, the database makes a one-time attempt to remove any new files and folders already created on the external data source.
 
-In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssaps-md](../../includes/ssaps-md.md)], the database will report any Java errors that occur on the external data source during the data export.
+In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssaps-md](../../includes/ssaps-md.md)], the database reports any Java errors that occur on the external data source during the data export.
 
 ## <a id="GeneralRemarks"></a> Remarks
 
-After the CREATE EXTERNAL TABLE AS SELECT statement finishes, you can run [!INCLUDE[tsql](../../includes/tsql-md.md)] queries on the external table. These operations will import data into the database for the duration of the query unless you import by using the CREATE TABLE AS SELECT statement.
+After the CREATE EXTERNAL TABLE AS SELECT statement finishes, you can run [!INCLUDE[tsql](../../includes/tsql-md.md)] queries on the external table. These operations import data into the database for the duration of the query unless you import by using the CREATE TABLE AS SELECT statement.
 
 The external table name and definition are stored in the database metadata. The data is stored in the external data source.
 
@@ -197,7 +203,7 @@ In [!INCLUDE[ssaps-md](../../includes/ssaps-md.md)], as a prerequisite for creat
 
 Because external table data resides outside of the database, backup and restore operations will only operate on data stored in the database. As a result, only the metadata will be backed up and restored.
 
-The database doesn't verify the connection to the external data source when restoring a database backup that contains an external table. If the original source isn't accessible, the metadata restore of the external table will still succeed, but SELECT operations on the external table will fail.
+The database doesn't verify the connection to the external data source when restoring a database backup that contains an external table. If the original source isn't accessible, the metadata restore of the external table still succeed, but SELECT operations on the external table fail.
 
 The database doesn't guarantee data consistency between the database and the external data. You, the customer, are solely responsible to maintain consistency between the external data and the database.
 
@@ -205,13 +211,15 @@ Data manipulation language (DML) operations aren't supported on external tables.
 
 CREATE TABLE, DROP TABLE, CREATE STATISTICS, DROP STATISTICS, CREATE VIEW, and DROP VIEW are the only data definition language (DDL) operations allowed on external tables.
 
-External tables for [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] serverless SQL pool can't be created in a location where you currently have data. To reuse a location that has been used to store data, the location must be manually deleted on ADLS.
+### Limitations and restrictions for Azure Synapse Analytics
 
-In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssaps-md](../../includes/ssaps-md.md)], PolyBase can consume a maximum of 33,000 files per folder when running 32 concurrent PolyBase queries. This maximum number includes both files and subfolders in each HDFS folder. If the degree of concurrency is less than 32, a user can run PolyBase queries against folders in HDFS that contain more than 33,000 files. We recommend that users of Hadoop and PolyBase keep file paths short and use no more than 30,000 files per HDFS folder. When too many files are referenced, a JVM out-of-memory exception occurs.
+- In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] dedicated SQL pools, and [!INCLUDE[ssaps-md](../../includes/ssaps-md.md)], PolyBase can consume a maximum of 33,000 files per folder when running 32 concurrent PolyBase queries. This maximum number includes both files and subfolders in each HDFS folder. If the degree of concurrency is less than 32, a user can run PolyBase queries against folders in HDFS that contain more than 33,000 files. We recommend that users of Hadoop and PolyBase keep file paths short and use no more than 30,000 files per HDFS folder. When too many files are referenced, a JVM out-of-memory exception occurs.
 
-In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssaps-md](../../includes/ssaps-md.md)], when CREATE EXTERNAL TABLE AS SELECT selects from an RCFile, the column values in the RCFile must not contain the pipe "|" character.
+- In serverless SQL pools, external tables can't be created in a location where you currently have data. To reuse a location that has been used to store data, the location must be manually deleted on ADLS. For more limitations and best practices, see [Filter optimization best practices](/azure/synapse-analytics/sql/best-practices-serverless-sql-pool#filter-optimization).
 
-[SET ROWCOUNT (Transact-SQL)](../../t-sql/statements/set-rowcount-transact-sql.md) has no effect on this CREATE EXTERNAL TABLE AS SELECT. To achieve a similar behavior, use [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md).
+In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] dedicated SQL pools, and [!INCLUDE[ssaps-md](../../includes/ssaps-md.md)], when CREATE EXTERNAL TABLE AS SELECT selects from an RCFile, the column values in the RCFile must not contain the pipe (`|`) character.
+
+[SET ROWCOUNT (Transact-SQL)](../../t-sql/statements/set-rowcount-transact-sql.md) has no effect on CREATE EXTERNAL TABLE AS SELECT. To achieve a similar behavior, use [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md).
 
 ### Character errors
 
@@ -239,11 +247,11 @@ Takes a shared lock on the SCHEMARESOLUTION object.
 
 The following example creates a new external table named `hdfsCustomer` that uses the column definitions and data from the source table `dimCustomer`.
 
-The table definition is stored in the database, and the results of the SELECT statement are exported to the '/pdwdata/customer.tbl' file on the Hadoop external data source *customer_ds*. The file is formatted according to the external file format *customer_ff*.
+The table definition is stored in the database, and the results of the SELECT statement are exported to the `/pdwdata/customer.tbl` file on the Hadoop external data source *customer_ds*. The file is formatted according to the external file format *customer_ff*.
 
 The file name is generated by the database and contains the query ID for ease of aligning the file with the query that generated it.
 
-The path `hdfs://xxx.xxx.xxx.xxx:5000/files/` preceding the Customer directory must already exist. If the Customer directory doesn't exist, the database will create the directory.
+The path `hdfs://xxx.xxx.xxx.xxx:5000/files/` preceding the Customer directory must already exist. If the Customer directory doesn't exist, the database creates the directory.
 
 > [!NOTE]  
 > This example specifies for 5000. If the port isn't specified, the database uses 8020 as the default port.
@@ -364,7 +372,7 @@ GO
 
 **Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]
 
-The following example creates a new external table named `Delta_to_Parquet`, that uses Delta Table type of data located at an S3-compatible object storage named `s3_delta`, and writes the result in another data source named `s3_parquet` as a parquet file. For that the example makes uses of OPENROWSET command. Note that the [allow polybase export configuration option](../../database-engine/configure-windows/allow-polybase-export.md) must be enabled.
+The following example creates a new external table named `Delta_to_Parquet`, that uses Delta Table type of data located at an S3-compatible object storage named `s3_delta`, and writes the result in another data source named `s3_parquet` as a parquet file. For that the example makes uses of OPENROWSET command. The [allow polybase export configuration option](../../database-engine/configure-windows/allow-polybase-export.md) must be enabled.
 
 ```sql
 -- External File Format for PARQUET
@@ -381,6 +389,84 @@ CREATE EXTERNAL TABLE Delta_to_Parquet
 
 SELECT *
 FROM OPENROWSET(BULK '/delta/sales_fy22/', FORMAT = 'DELTA', DATA_SOURCE = 's3_delta') AS [r];
+GO
+```
+
+### F. Use CREATE EXTERNAL TABLE AS SELECT with a view as the source
+
+**Applies to:** [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] serverless SQL pools and dedicated SQL pools.
+
+In this example, we can see example of a template code for writing CETAS with a user-defined view as source, using Managed Identity as an authentication, and `wasbs:`.
+
+```sql
+CREATE DATABASE [<mydatabase>];
+GO
+
+USE [<mydatabase>];
+GO
+
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<strong password>';
+
+CREATE DATABASE SCOPED CREDENTIAL [WorkspaceIdentity] WITH IDENTITY = 'Managed Identity';
+GO
+
+CREATE EXTERNAL FILE FORMAT [ParquetFF] WITH (
+    FORMAT_TYPE = PARQUET,
+    DATA_COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
+);
+GO
+
+CREATE EXTERNAL DATA SOURCE [SynapseSQLwriteable] WITH (
+    LOCATION = 'wasbs://<mystoageaccount>.dfs.core.windows.net/<mycontainer>/<mybaseoutputfolderpath>',
+    CREDENTIAL = [WorkspaceIdentity]
+);
+GO
+
+CREATE EXTERNAL TABLE [dbo].[<myexternaltable>] WITH (
+        LOCATION = '<myoutputsubfolder>/',
+        DATA_SOURCE = [SynapseSQLwriteable],
+        FILE_FORMAT = [ParquetFF]
+) AS
+SELECT * FROM [<myview>];
+GO
+```
+
+### G. Use CREATE EXTERNAL TABLE AS SELECT with a view as the source 
+
+**Applies to:** [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] serverless SQL pools and dedicated SQL pools.
+
+In this example, we can see example of a template code for writing CETAS with a user-defined view as source, using Managed Identity as an authentication, and `https:`.
+
+```sql
+CREATE DATABASE [<mydatabase>];
+GO
+
+USE [<mydatabase>];
+GO
+
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<strong password>';
+
+CREATE DATABASE SCOPED CREDENTIAL [WorkspaceIdentity] WITH IDENTITY = 'Managed Identity';
+GO
+
+CREATE EXTERNAL FILE FORMAT [ParquetFF] WITH (
+    FORMAT_TYPE = PARQUET,
+    DATA_COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
+);
+GO
+
+CREATE EXTERNAL DATA SOURCE [SynapseSQLwriteable] WITH (
+    LOCATION = 'https://<mystoageaccount>.dfs.core.windows.net/<mycontainer>/<mybaseoutputfolderpath>',
+    CREDENTIAL = [WorkspaceIdentity]
+);
+GO
+
+CREATE EXTERNAL TABLE [dbo].[<myexternaltable>] WITH (
+        LOCATION = '<myoutputsubfolder>/',
+        DATA_SOURCE = [SynapseSQLwriteable],
+        FILE_FORMAT = [ParquetFF]
+) AS
+SELECT * FROM [<myview>];
 GO
 ```
 

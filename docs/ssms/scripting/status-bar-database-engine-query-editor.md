@@ -50,7 +50,7 @@ Setting a custom status bar color for a server node in Object Explorer must be d
 ##  <a name="SetRegServerColor"></a> Set the Status Color For a Registered Server  
  **To set a server color For a Registered Server**  
   
-1.  In **Registered Servers**, right click the server node and then select **Properties...**.  
+1.  In **Registered Servers**, right-click the server node and then select **Properties...**.  
   
 2.  On the **Edit Server Registration Properties** dialog, select the **Connection Properties** tab.  
   

@@ -7,6 +7,7 @@ ms.date: 03/07/2017
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Expression scope for totals, aggregates, and built-in collections in a paginated report (Report Builder)
 

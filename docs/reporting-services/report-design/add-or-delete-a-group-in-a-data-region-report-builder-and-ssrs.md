@@ -7,6 +7,7 @@ ms.date: 03/01/2017
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Add or delete a group in a data region in a paginated report (Report Builder)
 

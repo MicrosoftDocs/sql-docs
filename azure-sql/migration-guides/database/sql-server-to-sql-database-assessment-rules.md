@@ -34,12 +34,12 @@ This article provides a list of the rules used to assess the feasibility of migr
  | FastFirstRowHint | Database | Warning | [FASTFIRSTROW query hint is no longer supported and has been removed.](#FastFirstRowHint) | 
  | FileStream | Database | Issue | [Filestream isn't supported in Azure SQL Database.](#FileStream) | 
  | LinkedServer | Database | Issue | [Linked server functionality isn't supported in Azure SQL Database.](#LinkedServer) | 
- | MSDTCTransactSQL | Database | Issue | [BEGIN DISTRIBUTED TRANSACTION isn't supported in Azure SQL Database. ](#MSDTCTransactSQL) | 
+ | MSDTCTransactSQL | Database | Issue | [BEGIN DISTRIBUTED TRANSACTION isn't supported in Azure SQL Database.](#MSDTCTransactSQL) | 
  | NextColumn | Database | Issue | [Tables and Columns named NEXT will lead to an error In Azure SQL Database.](#NextColumn) | 
  | NonANSILeftOuterJoinSyntax | Database | Warning | [Non-ANSI style left outer join is no longer supported and has been removed.](#NonANSILeftOuterJoinSyntax) | 
  | NonANSIRightOuterJoinSyntax | Database | Warning | [Non-ANSI style right outer join is no longer supported and has been removed.](#NonANSIRightOuterJoinSyntax) | 
  | OpenRowsetWithNonBlobDataSourceBulk | Database | Issue | [OpenRowSet used in bulk operation with non-Azure blob storage data source isn't supported in Azure SQL Database.](#OpenRowsetWithNonBlobDataSourceBulk) | 
- | OpenRowsetWithSQLAndNonSQLProvider | Database | Issue | [OpenRowSet with SQL or non-SQL provider isn't supported in Azure SQL Database. ](#OpenRowsetWithSQLAndNonSQLProvider) | 
+ | OpenRowsetWithSQLAndNonSQLProvider | Database | Issue | [OpenRowSet with SQL or non-SQL provider isn't supported in Azure SQL Database.](#OpenRowsetWithSQLAndNonSQLProvider) | 
  | RAISERROR | Database | Warning | [Legacy style RAISERROR calls should be replaced with modern equivalents.](#RAISERROR) | 
  | ServerAudits | Instance | Warning | [Server Audits isn't supported in Azure SQL Database.](#ServerAudits) | 
  | ServerCredentials | Instance | Warning | [Server scoped credential isn't supported in Azure SQL Database.](#ServerCredentials) | 
@@ -49,7 +49,7 @@ This article provides a list of the rules used to assess the feasibility of migr
  | SqlMail | Database | Warning | [SQL Mail has been discontinued.](#SqlMail) | 
  | SystemProcedures110 | Database | Warning | [Detected statements that reference removed system stored procedures that aren't available in Azure SQL Database.](#SystemProcedures110) | 
  | TraceFlags | Instance | Warning | [Azure SQL Database does not support trace flags.](#TraceFlags) | 
- | WindowsAuthentication | Instance | Warning | [Database users mapped with Windows authentication (integrated security) aren't supported in Azure SQL Database. ](#WindowsAuthentication) | 
+ | WindowsAuthentication | Instance | Warning | [Database users mapped with Windows authentication (integrated security) aren't supported in Azure SQL Database.](#WindowsAuthentication) | 
  | XpCmdshell | Database | Issue | [xp_cmdshell isn't supported in Azure SQL Database.](#XpCmdshell) | 
 
 ## Bulk insert<a id="BulkInsert"></a>
@@ -90,7 +90,7 @@ FROM Sales.SalesOrderDetail
 GROUP BY SalesOrderID, UnitPrice, UnitPriceDiscount WITH ROLLUP; 
 ```
 
-More information: [Discontinued Database Engine functionality in SQL Server ](/previous-versions/sql/2014/database-engine/discontinued-database-engine-functionality-in-sql-server-2016#Denali)
+More information: [Discontinued Database Engine functionality in SQL Server](/previous-versions/sql/2014/database-engine/discontinued-database-engine-functionality-in-sql-server-2016#Denali)
 
 ## CLR assemblies<a id="ClrAssemblies"></a>
 
@@ -242,7 +242,7 @@ Distributed transaction started by Transact SQL BEGIN DISTRIBUTED TRANSACTION an
 
 
 **Recommendation**   
-Review impacted objects section in Azure Migrate to see all objects using BEGIN DISTRUBUTED TRANSACTION. Consider migrating the participant databases to Azure SQL Managed Instance where distributed transactions across multiple instances are supported. For more information, see [Transactions across multiple servers for Azure SQL Managed Instance ](../../database/elastic-transactions-overview.md#transactions-for-sql-managed-instance). 
+Review impacted objects section in Azure Migrate to see all objects using BEGIN DISTRUBUTED TRANSACTION. Consider migrating the participant databases to Azure SQL Managed Instance where distributed transactions across multiple instances are supported. For more information, see [Transactions across multiple servers for Azure SQL Managed Instance](../../database/elastic-transactions-overview.md#transactions-for-sql-managed-instance). 
 
 Alternatively, migrate to SQL Server on Azure Virtual Machine.
 
@@ -343,7 +343,7 @@ Server Audits isn't supported in Azure SQL Database.
 **Recommendation**   
 Consider Azure SQL Database audit features to replace Server Audits.  Azure SQL supports audit and the features are richer than SQL Server. Azure SQL Database can audit various database actions and events, including: Access to data, Schema changes (DDL), Data changes (DML), Accounts, roles, and permissions (DCL, Security exceptions. Azure SQL Database Auditing increases an organization's ability to gain deep insight into events and changes that occur within their database, including updates and queries against the data. Alternatively migrate to Azure SQL Managed Instance or SQL Server on Azure Virtual Machine.
 
-More information: [Auditing for Azure SQL Database ](../../database/auditing-overview.md)
+More information: [Auditing for Azure SQL Database](../../database/auditing-overview.md)
 
 ## Server credentials<a id="ServerCredentials"></a>
 
@@ -398,7 +398,7 @@ SQL Server Agent is a Microsoft Windows service that executes scheduled administ
 **Recommendation** 
 Use elastic jobs (preview), which are the replacement for SQL Server Agent jobs in Azure SQL Database. Elastic Database jobs for Azure SQL Database allow you to reliably execute T-SQL scripts that span multiple databases while automatically retrying and providing eventual completion guarantees. Alternatively consider migrating to  Azure SQL Managed Instance or SQL Server on Azure Virtual Machines.
 
-More information: [Getting started with Elastic Database jobs (Preview) ](../../database/elastic-jobs-overview.md)
+More information: [Getting started with Elastic Database jobs (Preview)](../../database/elastic-jobs-overview.md)
 
 ## SQL Database size<a id="SQLDBDatabaseSize"></a>
 

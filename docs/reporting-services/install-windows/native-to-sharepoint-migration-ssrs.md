@@ -6,6 +6,7 @@ ms.author: maggies
 ms.date: 08/17/2017
 ms.service: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 monikerRange: "= sql-server-2016"
 ---
 # Native to SharePoint Migration (SSRS)

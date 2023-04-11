@@ -33,7 +33,7 @@ The goal is to use the elastic database client library [data-dependent routing](
 
 - Use Visual Studio (2012 or higher)
 - Create three databases in Azure SQL Database
-- Download sample project: [Elastic DB Tools for Azure SQL - Multi-Tenant Shards](https://go.microsoft.com/?linkid=9888163)
+- Download sample project: [Elastic DB Tools for Azure SQL - Multi-Tenant Shards](https://github.com/microsoft/WingtipTicketsSaaS-MultiTenantDB)
   - Fill in the information for your databases at the beginning of **Program.cs**
 
 This project extends the one described in [Elastic DB Tools for Azure SQL - Entity Framework Integration](elastic-scale-use-entity-framework-applications-visual-studio.md) by adding support for multi-tenant shard databases. The project builds a simple console application for creating blogs and posts. The project includes four tenants, plus two multi-tenant shard databases. This configuration is illustrated in the preceding diagram.

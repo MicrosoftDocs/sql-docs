@@ -7,6 +7,7 @@ ms.date: 03/17/2017
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Hyperion Essbase Connection Type (SSRS)
   To include data from a [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] external data source in your report, you must have a dataset that is based on a report data source of type [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]. This built-in data source type is based on the data extension for [!INCLUDE[extEssbase](../../includes/extessbase-md.md)], which enables you to retrieve multidimensional data from a [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] external data source.  

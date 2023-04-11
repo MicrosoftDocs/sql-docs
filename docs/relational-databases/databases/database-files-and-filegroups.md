@@ -88,7 +88,7 @@ The form of file that is used by a database snapshot to store its copy-on-write 
 * Database snapshots are used internally by certain DBCC commands. These commands include DBCC CHECKDB, DBCC CHECKTABLE, DBCC CHECKALLOC, and DBCC CHECKFILEGROUP. An internal database snapshot uses sparse alternate data streams of the original database files. Like sparse files, alternate data streams are a feature of the NTFS file system. The use of sparse alternate data streams allows for multiple data allocations to be associated with a single file or folder without affecting the file size or volume statistics. 
   
 ## Filegroups  
-* The filegroup contains the primary data file and any secondary files that aren't put into other filegroups. 
+* The primary filegroup contains the primary data file and any secondary files that aren't put into other filegroups. 
 * User-defined filegroups can be created to group data files together for administrative, data allocation, and placement purposes.  
   
  For example: `Data1.ndf`, `Data2.ndf`, and `Data3.ndf`, can be created on three disk drives, respectively, and assigned to the filegroup `fgroup1`. A table can then be created specifically on the filegroup `fgroup1`. Queries for data from the table will be spread across the three disks; it will improve performance. The same performance improvement can be accomplished by using a single file created on a RAID (redundant array of independent disks) stripe set. However, files and filegroups let you easily add new files to new disks.  

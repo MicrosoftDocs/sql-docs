@@ -7,6 +7,7 @@ ms.date: 12/7/2020
 ms.service: reporting-services
 ms.subservice: extensions
 ms.topic: reference
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "formats [Reporting Services], rendering extensions"
   - "rendering extensions [Reporting Services], about extensions"

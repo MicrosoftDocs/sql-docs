@@ -28,7 +28,7 @@ For an overview of Always Encrypted key management, including best practice reco
 The **New Column Master Key** dialog allows you to generate a column master key or pick an existing key in a key store, and create column master key metadata for the created or selected key in the database.
 
 1.	Using **Object Explorer**, navigate to the **Security>Always Encrypted Keys** folder under your database.
-2.	Right click on the **Column Master Keys** folder and select **New Column Master Key...**. 
+2.	Right-click on the **Column Master Keys** folder and select **New Column Master Key...**. 
 3.	In the **New Column Master Key** dialog, enter the name of the column master key metadata object.
 4.	Select a key store:
     - **Certificate Store - Current User** - indicates the Current User certificate store location in the Windows Certificate Store, which is your personal store. 
@@ -74,7 +74,7 @@ You need the *ALTER ANY COLUMN MASTER KEY* database permission in the database f
 The **New Column Encryption Key** dialog allows you to generate a column encryption key, encrypt it with a column master key, and create the column encryption key metadata in the database.
 
 1.	Using **Object Explorer**, navigate to the **Security/Always Encrypted Keys** folder under your database.
-2.	Right click on the **Column Encryption Keys** folder and select **New Column Encryption Key...**. 
+2.	Right-click on the **Column Encryption Keys** folder and select **New Column Encryption Key...**. 
 3.	In the **New Column Encryption Key** dialog, enter the name of the column encryption key metadata object.
 4.	Select a metadata object that represents your column master key in the database.
 5.	Click **OK**. 

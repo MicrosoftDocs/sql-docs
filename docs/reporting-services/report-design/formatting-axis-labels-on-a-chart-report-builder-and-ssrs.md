@@ -7,6 +7,7 @@ ms.date: 03/03/2017
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
+ms.custom: updatefrequency5
 f1_keywords:
   - "sql13.rtp.rptdesigner.axisproperties.majortickmarks.f1"
   - "sql13.rtp.rptdesigner.calculatedseriesproperties.axeschartareas.f1"

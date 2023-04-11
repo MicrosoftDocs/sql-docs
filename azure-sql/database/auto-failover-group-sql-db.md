@@ -173,6 +173,7 @@ This sequence is recommended specifically to avoid the problem where the geo-sec
 
 > [!NOTE]
 > If you created a geo-secondary as part of the failover group configuration it is not recommended to scale down the geo-secondary. This is to ensure your data tier has sufficient capacity to process your regular workload after a geo-failover.
+You may not be able to scale a geo-secondary after a forced failover when the former geo-primary is unavailable due to outage. We are aware of this limitation and will be fixing it soon. 
 
 ## <a name="preventing-the-loss-of-critical-data"></a> Prevent loss of critical data
 

@@ -121,7 +121,7 @@ Follow these steps to restart the SQL Server Launchpad service.
 
 1. Open [SQL Server Configuration Manager](../../../relational-databases/sql-server-configuration-manager.md).
 
-1. Under **SQL Server Services**, right click on **SQL Server Launchpad (MSSQLSERVER)** and select **Restart**. If you using a named instance, the instance name will be shown instead of **(MSSQLSERVER)**.
+1. Under **SQL Server Services**, right-click on **SQL Server Launchpad (MSSQLSERVER)** and select **Restart**. If you using a named instance, the instance name will be shown instead of **(MSSQLSERVER)**.
 
 ## Register language extension
 

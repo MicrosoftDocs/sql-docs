@@ -7,6 +7,7 @@ ms.date: 09/06/2016
 ms.service: reporting-services
 ms.subservice: application-integration
 ms.topic: reference
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "ReportViewer controls"
 ---

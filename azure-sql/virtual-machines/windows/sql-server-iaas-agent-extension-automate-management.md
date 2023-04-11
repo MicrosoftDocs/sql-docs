@@ -48,7 +48,7 @@ The SQL Server IaaS Agent extension allows for integration with the Azure portal
 
    ### [Azure portal](#tab/azure-portal)
 
-   You can use the [SQL virtual machine resource](manage-sql-vm-portal.md) in the Azure portal to quickly identify SQL Server VMs that are using the Azure Hybrid Benefit. 
+   You can use the [SQL virtual machines resource](manage-sql-vm-portal.md) in the Azure portal to quickly identify SQL Server VMs that are using the Azure Hybrid Benefit. 
 
    ### [PowerShell](#tab/azure-powershell)
 
@@ -63,11 +63,13 @@ The SQL Server IaaS Agent extension allows for integration with the Azure portal
    ```
    ---
 
+Enable [auto upgrade](manage-sql-vm-portal.md#sql-iaas-agent-extension-settings) to ensure you're getting the latest updates to the extension each month. 
+
 ## Management modes
 
-Prior to March 2023, the SQL Iaas Agent extension relied on management modes to define the security model, and unlock feature benefits. In March 2023, the extension architecture was updated to remove management modes entirely, instead relying on the principle of least privilege to give customers control over how they want to use the extension on a feature-by-feature basis. 
+Prior to March 2023, the SQL IaaS Agent extension relied on management modes to define the security model, and unlock feature benefits. In March 2023, the extension architecture was updated to remove management modes entirely, instead relying on the principle of least privilege to give customers control over how they want to use the extension on a feature-by-feature basis. 
 
-Starting in March 2023, when you first register with the extension, binaries are saved to your virtual machine to provide you with basic functionality such as license management. Once you enable any feature that relies on the agent, the binaries are used to install the SQL IaaS agent to your virtual machine, and [permissions](#permissions-models) are assigned to the SQL IaaS Agent service as needed by each feature that you enable. 
+Starting in March 2023, when you first register with the extension, binaries are saved to your virtual machine to provide you with basic functionality such as license management. Once you enable any feature that relies on the agent, the binaries are used to install the SQL IaaS Agent to your virtual machine, and [permissions](#permissions-models) are assigned to the SQL IaaS Agent service as needed by each feature that you enable. 
 
 ## Feature benefits 
 
@@ -83,7 +85,7 @@ There are two permission models for the SQL Server IaaS Agent extension - either
 
 The principle of least privilege model is enabled by default for SQL Server VMs deployed via Azure Marketplace after October 2022. Existing SQL Server VMs deployed prior to this date, or VMs with self-installed SQL Server instances, use the sysadmin model by default and can enable the least privileged permissions model in the Azure portal. 
 
-To enable the least privilege permissions model, go to your [SQL virtual machines resource](manage-sql-vm-portal.md), choose **Additional features** under **Settings** and then check the box next to **SQL IaaS extension least privilege mode**: 
+To enable the least privilege permissions model, go to your [SQL virtual machines resource](manage-sql-vm-portal.md), choose **Additional features** under **Settings** and then check the box next to **SQL IaaS Agent extension least privilege mode**: 
 
 :::image type="content" source="media/sql-server-iaas-agent-extension-automate-management/least-privilege.png" alt-text="Screenshot of the Azure portal SQL virtual machines resource, Additional features page, enable least privilege highlighted.":::
 

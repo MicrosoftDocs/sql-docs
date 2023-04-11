@@ -8,9 +8,7 @@ ms.date: "03/23/2022"
 ms.service: sql-database
 ms.subservice: security
 ms.topic: how-to
-ms.custom:
-  - azure-synapse
-  - subject-rbac-steps
+ms.custom: azure-synapse, subject-rbac-steps, devx-track-arm-template, devx-track-azurepowershell
 ---
 # Write audit to a storage account behind VNet and firewall
 [!INCLUDE[appliesto-sqldb-asa](../includes/appliesto-sqldb-asa.md)]

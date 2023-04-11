@@ -7,6 +7,7 @@ ms.date: 09/03/2021
 ms.service: reporting-services
 ms.subservice: report-builder
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Export a paginated report to a CSV file (Report Builder)
 

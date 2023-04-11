@@ -377,7 +377,13 @@ To resolve this error, use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
 
 For more information about this and other security considerations for using BULK INSERT, see [Import Bulk Data by Using BULK INSERT or OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).
 
-When importing from Azure Blob Storage and the data isn't public (anonymous access), create a [DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md) based on a SAS key encrypted with a [MASTER KEY](create-master-key-transact-sql.md), and then create an [external database source](../../t-sql/statements/create-external-data-source-transact-sql.md) for use in your BULK INSERT command. For an example, see [Import data from a file in Azure Blob Storage](#f-import-data-from-a-file-in-azure-blob-storage).
+When importing from Azure Blob Storage and the data isn't public (anonymous access), create a [DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md) based on a SAS key encrypted with a [MASTER KEY](create-master-key-transact-sql.md), and then create an [external database source](../../t-sql/statements/create-external-data-source-transact-sql.md) for use in your BULK INSERT command. 
+
+Alternatively, create a [DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md) based on `MANAGED IDENTITY` to authorize requests for data access in non-public storage accounts. When using `MANAGED IDENTITY`, Azure storage must grant permissions to the managed identity of the instance by adding the **Storage Blob Data Contributor** built-in Azure role-based access control (RBAC) role that provides read/write access to the managed identity for the necessary Azure Blob Storage containers. Azure SQL Managed Instance have a system assigned managed identity, and can also have one or more user-assigned managed identities. You can use either system-assigned managed identities or user-assigned managed identities to authorize the requests. For authorization, the `default` identity of the managed instance would be used (that is primary user-assigned managed identity, or system-assigned managed identity if user-assigned managed identity is not specified). For an example, see [Import data from a file in Azure Blob Storage](#f-import-data-from-a-file-in-azure-blob-storage).
+
+
+> [!IMPORTANT]
+> Managed Identity is applicable only to Azure SQL. SQL Server does not support Managed Identity.
 
 ### Permissions
 
@@ -525,6 +531,29 @@ BULK INSERT Sales.Invoices
 FROM 'inv-2017-12-08.csv'
 WITH (DATA_SOURCE = 'MyAzureBlobStorage');
 ```
+
+The following example shows how to use the BULK INSERT command to load data from a csv file in an Azure Blob storage location using Managed Identity. The Azure Blob storage location is configured as an external data source. 
+
+```sql
+--> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
+GO
+--> Optional - a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
+CREATE DATABASE SCOPED CREDENTIAL MyAzureBlobStorageCredential 
+WITH IDENTITY = 'Managed Identity';
+-- NOTE: Make sure you have granted Storage Bob Data Contributor RBAC on storage to provides read/write access to the managed identity for the necessary Azure Blob Storage containers.
+CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
+WITH ( TYPE = BLOB_STORAGE,
+          LOCATION = 'https://****************.blob.core.windows.net/invoices'
+          , CREDENTIAL= MyAzureBlobStorageCredential --> CREDENTIAL is not required if a blob is configured for public (anonymous) access!
+);
+BULK INSERT Sales.Invoices
+FROM 'inv-2017-12-08.csv'
+WITH (DATA_SOURCE = 'MyAzureBlobStorage');
+```
+
+> [!IMPORTANT]
+> Managed Identity is applicable only to Azure SQL. SQL Server does not support Managed Identity.
 
 > [!IMPORTANT]
 > Azure SQL only supports reading from Azure Blob Storage.

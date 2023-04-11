@@ -82,7 +82,7 @@ The procedures in this topic describe how to debug particular database objects, 
   
 1.  Visual Studio 2010, open the (Test -> Windows) **Test View** window. In Visual Studio 2012, open the **Test Explorer** window.  
   
-2.  Right click the test whose Transact\-SQL script exercises the database object in which you set breakpoints and select **Debug Selection**.  
+2.  Right-click the test whose Transact\-SQL script exercises the database object in which you set breakpoints and select **Debug Selection**.  
   
     The test runs in debug mode until a breakpoint in the database object is encountered.  
   

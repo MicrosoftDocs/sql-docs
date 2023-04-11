@@ -7,6 +7,7 @@ ms.date: 07/02/2017
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Working with snapshots (web portal)

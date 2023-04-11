@@ -7,6 +7,7 @@ ms.date: 05/22/2019
 ms.service: reporting-services
 ms.subservice: troubleshooting
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "rsAccessDenied error"
 ---

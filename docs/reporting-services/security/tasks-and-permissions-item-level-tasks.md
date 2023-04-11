@@ -7,6 +7,7 @@ ms.date: 02/04/2021
 ms.service: reporting-services
 ms.subservice: security
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "item-level tasks [Reporting Services]"
 ---

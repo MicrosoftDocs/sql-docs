@@ -7,7 +7,9 @@ ms.date: 03/15/2017
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
-ms.custom: intro-deployment
+ms.custom:
+  - intro-deployment
+  - updatefrequency5
 ---
 # Deployment and Version Support in SQL Server Data Tools (SSDT)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] supports the following scenarios:  

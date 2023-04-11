@@ -8,6 +8,7 @@ ms.date: 12/29/2022
 ms.service: reporting-services
 ms.subservice: extensions
 ms.topic: reference
+ms.custom: updatefrequency5
 ---
 # How to install custom security extensions
 

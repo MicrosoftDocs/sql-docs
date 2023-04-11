@@ -7,6 +7,7 @@ ms.date: 08/30/2022
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Add a drillthrough action on a paginated report (Report Builder)
 

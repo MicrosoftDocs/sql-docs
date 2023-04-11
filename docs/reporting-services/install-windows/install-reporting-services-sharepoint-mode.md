@@ -6,7 +6,9 @@ ms.author: maggies
 ms.date: 12/20/2017
 ms.service: reporting-services
 ms.topic: conceptual
-ms.custom: intro-installation
+ms.custom:
+  - intro-installation
+  - updatefrequency5
 helpviewer_keywords:
   - "default configuration [Reporting Services]"
   - "installing Reporting Services, SharePoint integrated mode"

@@ -99,5 +99,3 @@ See [Reporting Services (SSRS)](../reporting-services/what-s-new-in-sql-server-r
 - [New SQL PowerShell module](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update/)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-
-[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

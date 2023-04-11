@@ -7,6 +7,7 @@ ms.date: 03/16/2017
 ms.service: reporting-services
 ms.subservice: report-builder
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Work Around the Excel 2003 Row Limitation
   This topic explains how to work around the Excel 2003 row limitation when you export paginated reports to Excel. The workaround is for a report that contains only a table.  
@@ -20,7 +21,7 @@ ms.topic: conceptual
   
 1.  Open the report in [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] or the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web portal.  
   
-2.  Right click the Data row in the table, and then click **Add Group** > **Parent Group** to add an outer table group.  
+2.  Right-click the Data row in the table, and then click **Add Group** > **Parent Group** to add an outer table group.  
   
      ![Select the Parent Group](../../reporting-services/report-builder/media/datarow-selectparentgroup.png "Select the Parent Group")  
   
@@ -36,7 +37,7 @@ ms.topic: conceptual
   
      ![Delete a group column](../../reporting-services/report-builder/media/groupcolumn-delete-updated.png "Delete a group column")  
   
-5.  Right click **Group 1** in the **Row Groups** section, and then click **Group Properties**.  
+5.  Right-click **Group 1** in the **Row Groups** section, and then click **Group Properties**.  
   
      ![View group properties](../../reporting-services/report-builder/media/groupproperties-updated.png "View group properties")  
   

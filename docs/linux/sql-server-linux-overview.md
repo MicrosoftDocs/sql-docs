@@ -82,5 +82,3 @@ Then look at what's new:
 > For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.yml).
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]
-
-[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

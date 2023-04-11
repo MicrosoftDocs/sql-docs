@@ -128,7 +128,7 @@ get_service(name, **opts)
 
 
 
-Retrieve service meta-data from the name source and return a new
+Retrieve service metadata from the name source and return a new
 service instance.
 
 Sub-class should override and implement.

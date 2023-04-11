@@ -7,7 +7,9 @@ ms.date: 03/20/2017
 ms.service: reporting-services
 ms.subservice: extensions
 ms.topic: reference
-ms.custom: intro-deployment
+ms.custom:
+  - intro-deployment
+  - updatefrequency5
 helpviewer_keywords:
   - "deploying [Reporting Services], extensions"
   - "rendering extensions [Reporting Services], deploying"

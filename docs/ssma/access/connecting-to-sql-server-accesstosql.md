@@ -79,7 +79,7 @@ To connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:
 
 If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schemas change after you connect, you can synchronize the metadata with the server.
 
-To synchronize SQL Server metadata, **SQL Server Metadata Explorer**, right click **Databases**, and then select **Synchronize with Database**.
+To synchronize SQL Server metadata, **SQL Server Metadata Explorer**, right-click **Databases**, and then select **Synchronize with Database**.
 
 ## Reconnecting to SQL Server
 

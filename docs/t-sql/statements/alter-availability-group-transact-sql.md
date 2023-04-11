@@ -230,7 +230,7 @@ Specifies whether distributed transactions are enabled for this Availability Gro
 >
 >`Enlist operation failed: 0x8004d101(XACT_E_TOOMANY_ENLISTMENTS). SQL Server could not register with Microsoft Distributed Transaction Coordinator (MS DTC) as a resource manager for this transaction. The transaction may have been stopped by the client or the resource manager.`
 
-For more detail on distributed transactions in [!INCLUDE[SQLServer](../../includes/ssnoversion-md.md)], see [Distributed transactions](../../database-engine/availability-groups/windows/configure-availability-group-for-distributed-transactions#distTran)
+For more detail on distributed transactions in [!INCLUDE[SQLServer](../../includes/ssnoversion-md.md)], see [Distributed transactions](../../database-engine/availability-groups/windows/configure-availability-group-for-distributed-transactions.md#distTran)
  
 REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT
 

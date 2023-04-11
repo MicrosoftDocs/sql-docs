@@ -139,4 +139,3 @@ If you need further assistance from Microsoft, contact Microsoft Support. For fa
 
 ## Next steps
 [Pre-migration steps for data migrations from MongoDB to Azure Cosmos DB for MongoDB](../../../../azure-docs-pr/azure-docs-pr/articles/cosmos-db/mongodb/pre-migration-steps.md)
-

@@ -117,3 +117,7 @@ Output:
 }
 ```
 
+## See also
+
+- [View SQL Server databases - Azure Arc](view-databases.md)
+- [Disconnect your SQL Server instances from Azure Arc](delete-from-azure-arc.md)

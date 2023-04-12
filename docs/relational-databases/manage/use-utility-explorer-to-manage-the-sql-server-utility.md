@@ -13,9 +13,6 @@ ms.topic: conceptual
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-> [!IMPORTANT]
-> [!INCLUDE [ssms-old-versions-16](../../includes/ssms-old-versions-16.md)]
-
 Utility Explorer, a component of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connects to [!INCLUDE[ssDE](../../includes/ssde-md.md)] instances to provide a tree view of all the objects in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility. The Utility Explorer content pane provides several ways to view summary and detailed data about the health state of managed instances of SQL Server. Utility Explorer also provides a user interface to view and manage policy definitions. The capabilities of Utility Explorer vary slightly depending on the objects in the
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility, but generally include objects, data, and policies managed by the

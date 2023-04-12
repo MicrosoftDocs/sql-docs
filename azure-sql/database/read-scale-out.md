@@ -5,7 +5,7 @@ description: Azure SQL provides the ability to use the capacity of read-only rep
 author: rajeshsetlem
 ms.author: rsetlem
 ms.reviewer: wiassaf, mathoma
-ms.date: 7/22/2022
+ms.date: 4/12/2023
 ms.service: sql-database
 ms.subservice: scale-out
 ms.topic: conceptual
@@ -46,6 +46,8 @@ Data changes made on the primary replica are persisted on read-only replicas syn
 Typical data propagation latency between the primary replica and read-only replicas varies in the range from tens of milliseconds to single-digit seconds. However, there is no fixed upper bound on data propagation latency. Conditions such as high resource utilization on the replica can increase latency substantially. Applications that require guaranteed data consistency across sessions, or require committed data to be readable immediately should use the primary replica.
 
 > [!NOTE]
+> Data propagation latency includes the time required to send and persist (if applicable) log records to a secondary replica. It also includes the time required to redo (apply) these log records to data pages. To ensure data consistency, changes are not visible until the transaction commit log record is applied. When the workload uses larger transactions, effective data propagation latency is increased.
+> 
 > To monitor data propagation latency, see [Monitoring and troubleshooting read-only replica](#monitoring-and-troubleshooting-read-only-replicas).
 
 ## Connect to a read-only replica

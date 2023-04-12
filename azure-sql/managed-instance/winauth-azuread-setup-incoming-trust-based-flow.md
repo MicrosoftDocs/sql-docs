@@ -42,7 +42,7 @@ To implement the incoming trust-based authentication flow, first ensure that the
 
 To create and configure the Azure AD Kerberos Trusted Domain Object, you will install the Azure AD Hybrid Authentication Management PowerShell module.
 
-You will then use the Azure AD Hybrid Authentication Management PowerShell module to set up a Trusted Domain Object in the on-premises AD domain and register trust information with Azure AD. This creates an in-bound trust relationship into the on-premises AD, which enables on-premises AD to trust Azure AD.
+You will then use the Azure AD Hybrid Authentication Management PowerShell module to set up a Trusted Domain Object in the on-premises AD domain and register trust information with Azure AD. This creates an in-bound trust relationship into the on-premises AD, which enables Azure AD to trust on-premises AD . 
 
 ### Set up the Trusted Domain Object
 

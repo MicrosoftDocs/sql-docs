@@ -94,7 +94,7 @@ To check if nuget.org is registered as a source, run `dotnet nuget list source` 
 - `error MSB4018: The "SqlBuildTask" task failed unexpectedly.`
 - `error MSB4018: System.TypeInitializationException: The type initializer for 'SqlSchemaModelStaticState' threw an exception. ---> System.IO.FileNotFoundException: Could not load file or assembly 'System.Runtime, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'. The system cannot find the file specified. [c:\Users\ .sqlproj]_` (where the linked non-existing file has an unmatched closing square bracket). 
 
-To force the SQL Database Projects extension to use the v6.x version of the .NET SDK when multiple versions are installed, add a [package.json](/dotnet/core/tools/global-json) file to the folder that contains the SQL project. 
+To force the SQL Database Projects extension to use the v6.x version of the .NET SDK when multiple versions are installed, add a [global.json](/dotnet/core/tools/global-json) file to the folder that contains the SQL project. 
 
 
 ### AutoRest.Sql

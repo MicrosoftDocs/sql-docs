@@ -29,7 +29,7 @@ dotnet build /p:NetCoreBuild=true
 
 ## Non-SDK-style SQL projects
 
-The following section describes a work around for working with non-SDK style SQL projects from the command line on Windows, macOS, and Linux.
+The following section describes a work-around for working with non-SDK-style SQL projects from the command line on Windows, macOS, and Linux.
 
 ### Prerequisites
 

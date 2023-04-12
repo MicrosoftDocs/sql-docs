@@ -42,7 +42,7 @@ The existing project is opened and its contents are visible in the **Database Pr
 
 Instead of starting from an empty project, you can quickly populate a SQL Database Project with the existing objects from a database.
 
-### In object explorer
+### In Object Explorer
 
 In the **Connections** view, connect to the SQL Server instance that contains the database to be extracted.  Right-click on the database and select **Create Project from Database** from the context menu.
 
@@ -50,11 +50,11 @@ In the **Connections** view, connect to the SQL Server instance that contains th
 
 The folder structure setting is set to *Schema/Object Type* by default and offers different ways to automatically organize the existing objects when they are scripted out.  The options for the folder structure setting are:
 
-- File
-- Flat
-- Object Type
-- Schema
-- Schema/Object Type
+- File: a single file is created for all the objects
+- Flat: a single folder is created for all the objects in individual files
+- Object Type: a folder is created per object type and each object is scripted out to a file
+- Schema: a folder is created per schema and each object is scripted out to a file
+- Schema/Object Type: a folder is created per schema and within the folder a folder is created per object type and each object is scripted out to a file
 
 ### In Database Projects view
 In the **Project** view select the **Import Project from Database** button and connect to a SQL Server.  Once the connection is established, select a database from the list available databases and set the name of the project.

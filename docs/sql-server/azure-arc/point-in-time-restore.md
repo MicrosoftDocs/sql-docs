@@ -71,7 +71,7 @@ az extension add --name arcdata
 az sql server-arc backups-policy set --name <arc-server-name> --resource-group <resourcegroup> --retention-days <retentiondays>
 ```
 
-Exmaple:
+Example:
 ```azurecli
 az sql server-arc backups-policy set --name MyArcServer-SQLServerPROD --resource-group my-rg --retention-days 24
 ```
@@ -99,7 +99,7 @@ To view the current backup policy for a given Arc enabled SQL Server, run the fo
 az sql server-arc backups-policy show --name <arc-server-name> --resource-group <resourcegroup> 
 ```
 
-Exmaple:
+Example:
 
 ```azurecli
 az sql server-arc backups-policy show --name MyArcServer-SQLServerPROD --resource-group my-rg

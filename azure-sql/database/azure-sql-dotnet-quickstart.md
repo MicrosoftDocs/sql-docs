@@ -4,7 +4,7 @@ description: Learn how to connect to a database in Azure SQL Database and query 
 author: alexwolfmsft
 ms.author: alexwolf
 ms.custom: passwordless-dotnet
-ms.date: 02/10/2023
+ms.date: 04/12/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: quickstart
@@ -13,12 +13,12 @@ monikerRange: "= azuresql || = azuresql-db"
 
 # Connect to and query Azure SQL Database using .NET and the Microsoft.Data.SqlClient library
 
-This quickstart describes how to connect an application to a database in Azure SQL Database and perform queries using .NET and the `Microsoft.Data.SqlClient` library. This quickstart follows the recommended passwordless approach to connect to the database. You can learn more about passwordless connections on the [passwordless hub](/azure/developer/intro/passwordless-overview).
+This quickstart describes how to connect an application to a database in Azure SQL Database and perform queries using .NET and the [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient) library. This quickstart follows the recommended passwordless approach to connect to the database. You can learn more about passwordless connections on the [passwordless hub](/azure/developer/intro/passwordless-overview).
 
 ## Prerequisites
 
 * An [Azure subscription](https://azure.microsoft.com/free/dotnet/).
-* A SQL database configured with Azure Active Directory (Azure AD) authentication. You can create one using the [Create database quickstart](./single-database-create-quickstart.md).
+* An Azure SQL database configured with Azure Active Directory (Azure AD) authentication. You can create one using the [Create database quickstart](./single-database-create-quickstart.md).
 * The latest version of the [Azure CLI](/cli/azure/get-started-with-azure-cli).
 * [Visual Studio](https://visualstudio.microsoft.com/vs/) or later with the **ASP.NET and web development** workload.
 * [.NET 7.0](https://dotnet.microsoft.com/download) or later.
@@ -104,8 +104,8 @@ Complete the following steps to connect to Azure SQL Database by using the SqlCl
 
     * Retrieves the passwordless connection string from the environment variables
     * Creates a `Persons` table in the database during startup (for testing scenarios only)
-    * Creates an endpoint to retrieve the Person records stored in the database
-    * Creates an endpoint to add new Person records to the database
+    * Creates an HTTP GET endpoint to retrieve all records stored in the `Persons` table
+    * Creates an HTTP POST endpoint to add new records to the `Persons` table
 
     ```csharp
     string connectionString = Environment.GetEnvironmentVariable("AZURE_SQL_CONNECTIONSTRING");
@@ -113,15 +113,13 @@ Complete the following steps to connect to Azure SQL Database by using the SqlCl
     try
     {
         // Table would be created ahead of time in production
-        var conn = new SqlConnection(connectionString);
+        using var conn = new SqlConnection(connectionString);
         conn.Open();
     
         var command = new SqlCommand(
             "CREATE TABLE Persons (ID int NOT NULL PRIMARY KEY IDENTITY, FirstName varchar(255), LastName varchar(255));",
             conn);
-        SqlDataReader reader = command.ExecuteReader();
-    
-        reader.Close();
+        using SqlDataReader reader = command.ExecuteReader();
     } catch(Exception e)
     {
         // Table may already exist

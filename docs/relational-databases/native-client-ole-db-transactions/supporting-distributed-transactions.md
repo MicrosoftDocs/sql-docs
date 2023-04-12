@@ -133,6 +133,7 @@ if (FAILED(pITransactionJoin->JoinTransaction(
 ```  
   
 ## See Also  
- [Transactions](../../relational-databases/native-client-ole-db-transactions/transactions.md)  
+ [Transactions](../../relational-databases/native-client-ole-db-transactions/transactions.md)
+ [MS DTC for Azure SQL Managed Instance](https://learn.microsoft.com/azure/azure-sql/managed-instance/distributed-transaction-coordinator-dtc)
   
   

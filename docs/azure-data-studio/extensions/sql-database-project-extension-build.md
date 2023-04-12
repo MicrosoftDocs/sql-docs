@@ -29,9 +29,11 @@ The build process in the SQL Database Projects extension for Azure Data Studio a
 
 ### Publish to an existing SQL instance 
 
-*This functionality is available in Azure Data Studio and VS Code, however the interfaces appear slightly different between the two applications.*
+*This functionality is available in Azure Data Studio and VS Code, however the interfaces are slightly different between the two applications.*
 
-After a project is successfully compiled through the [build process](#build-a-database-project), the database can be published to a SQL Server instance. To publish a database project, in the **Database Projects** view right-click the database project's root node and select **Publish**.
+After a project is successfully compiled through the [build process](#build-a-database-project), the database can be published to a SQL instance. Platform compatibility is determined by the [target platform](sql-database-project-extension-sdk-style-projects.md#target-platform) of a SQL project, and includes SQL Server and Azure SQL options.
+
+To publish a database project, in the **Database Projects** view right-click the database project's root node and select **Publish**.
 
 In the **Publish Database** dialog that appears, specify a server connection and the database name to be created.
 

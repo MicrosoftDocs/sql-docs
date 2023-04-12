@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "syscollector_config_store view"
 dev_langs:
   - "TSQL"
-ms.assetid: f15f6b05-6808-4b76-b6a8-48dec844cf63
 ---
 # syscollector_config_store (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

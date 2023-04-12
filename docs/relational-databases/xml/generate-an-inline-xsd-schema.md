@@ -1,10 +1,11 @@
 ---
 title: "Generate an Inline XSD Schema"
 description: Learn how to generate an inline XSD schema by using the XMLSCHEMA option in the FOR XML clause of an SQL query.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
 ms.date: 05/05/2022
 ms.service: sql
-ms.reviewer: randolphwest
 ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,8 +16,6 @@ helpviewer_keywords:
   - "FOR XML clause, inline XSD schema generation"
   - "inline XSD schema generation [SQL Server]"
   - "XMLDATA option"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Generate an inline XSD schema
 

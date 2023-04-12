@@ -1,22 +1,20 @@
 ---
+title: "Web Synchronization for Merge Replication"
 description: "Web Synchronization for Merge Replication"
-title: "Web Synchronization for Merge Replication | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "merge replication synchronization [SQL Server replication]"
   - "Internet [SQL Server replication], synchronization"
   - "synchronization [SQL Server replication], Web Synchronization"
   - "Web publishing [SQL Server replication], synchronization"
   - "Web synchronization, about"
   - "Web synchronization"
-ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Web Synchronization for Merge Replication
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

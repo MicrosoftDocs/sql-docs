@@ -1,24 +1,19 @@
 ---
+title: "SQLProcedures Function"
 description: "SQLProcedures Function"
-title: "SQLProcedures Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLProcedures"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLProcedures"
-helpviewer_keywords: 
-  - "SQLProcedures function [ODBC]"
-ms.assetid: d0d9ef10-2fd4-44a5-9334-649f186f4ba0
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLProcedures"
+helpviewer_keywords:
+  - "SQLProcedures function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLProcedures"
+apitype: "dllExport"
 ---
 # SQLProcedures Function
 **Conformance**  

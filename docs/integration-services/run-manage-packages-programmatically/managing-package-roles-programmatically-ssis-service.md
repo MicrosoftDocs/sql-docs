@@ -1,19 +1,16 @@
 ---
+title: "Managing Package Roles Programmatically (SSIS Service)"
 description: "Managing Package Roles Programmatically (SSIS Service)"
-title: "Managing Package Roles Programmatically (SSIS Service) | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Integration Services packages, roles"
   - "roles [Integration Services]"
   - "packages [Integration Services], roles"
-ms.assetid: 2e0ca0d5-d4f5-421d-b17d-a48b37b923e5
-author: chugugrace
-ms.author: chugu
 ---
 # Managing Package Roles Programmatically (SSIS Service)
 

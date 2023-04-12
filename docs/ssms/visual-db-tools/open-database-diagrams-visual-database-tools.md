@@ -1,20 +1,16 @@
 ---
-description: "Open Database Diagrams (Visual Database Tools)"
 title: Open Database Diagrams
-ms.custom: seo-lt-2019
+description: "Open Database Diagrams (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "database diagrams [SQL Server], opening"
   - "opening database diagrams"
   - "diagrams [SQL Server], opening"
-ms.assetid: 06d9a7d5-ef04-400c-a340-7a3e5d54f685
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Open Database Diagrams (Visual Database Tools)
 

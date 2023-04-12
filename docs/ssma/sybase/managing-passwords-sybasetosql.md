@@ -1,19 +1,16 @@
 ---
+title: "Managing Passwords (SybaseToSQL)"
 description: "Managing Passwords (SybaseToSQL)"
-title: "Managing Passwords (SybaseToSQL) | Microsoft Docs"
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: 07/07/2020
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: ssma
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Sybase Console,Exporting or Importing Encrypted Passwords"
   - "Sybase Console,Managing Passwords"
   - "Sybase Console,Securing Password"
-ms.assetid: 9b6a70f9-6840-4140-a059-bb7bd7ccc67c
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Managing Passwords (SybaseToSQL)
 This section is about securing database passwords and the procedure to import or export them across servers.

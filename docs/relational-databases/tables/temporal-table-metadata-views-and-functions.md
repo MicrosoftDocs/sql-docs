@@ -1,15 +1,12 @@
 ---
+title: "Temporal Table Metadata Views and Functions"
 description: "Temporal Table Metadata Views and Functions"
-title: "Temporal Table Metadata Views and Functions | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/28/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: table-view-index
-ms.topic: conceptual
-ms.assetid: e5d23ec9-7d18-40f6-add4-bea13132d0b9
 author: markingmyname
 ms.author: maghan
+ms.date: "03/28/2016"
+ms.service: sql
+ms.subservice: table-view-index
+ms.topic: conceptual
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Temporal Table Metadata Views and Functions

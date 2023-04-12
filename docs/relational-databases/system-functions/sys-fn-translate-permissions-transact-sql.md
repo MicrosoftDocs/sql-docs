@@ -1,33 +1,30 @@
 ---
+title: "sys.fn_translate_permissions (Transact-SQL)"
 description: "sys.fn_translate_permissions (Transact-SQL)"
-title: "sys.fn_translate_permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.fn_translate_permissions"
   - "sys.fn_translate_permissions_TSQL"
   - "fn_translate_permissions"
   - "fn_translate_permissions_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "permissions bitmask [SQL Server]"
   - "sys.fn_translate_permissions function"
   - "fn_translate_permissions function"
-ms.assetid: ac97121f-2bd0-4f71-8e45-42c8584edbc5
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.fn_translate_permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Translates the permissions bitmask returned by SQL Trace into a table of permissions names.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

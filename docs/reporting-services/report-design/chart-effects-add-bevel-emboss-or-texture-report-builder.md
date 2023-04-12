@@ -1,15 +1,12 @@
 ---
-title: "Add bevel, emboss, and texture styles to a paginated report chart | Microsoft Docs"
-description: Learn how to specify a drawing effect, such as bevels, embossing, or textures, to increase the visual impact of your paginated report chart in Report Builder. 
+title: "Add bevel, emboss, and texture styles to a paginated report chart"
+description: Learn how to specify a drawing effect, such as bevels, embossing, or textures, to increase the visual impact of your paginated report chart in Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/01/2017
 ms.service: reporting-services
 ms.subservice: report-design
-
-
 ms.topic: conceptual
-ms.assetid: 737cfc80-b39e-497c-817b-b46693deb58f
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Chart effects - add bevel, emboss, or texture to a paginated report chart (Report Builder)
 

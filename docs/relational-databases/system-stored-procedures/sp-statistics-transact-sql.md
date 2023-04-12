@@ -1,21 +1,19 @@
 ---
-description: "The sp_statistics system stored procedure returns a list of all indexes and statistics on a specified table or indexed view."
 title: "sp_statistics (Transact-SQL)"
-ms.custom: ""
-ms.date: "03/11/2022"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_statistics_TSQL"
-  - "sp_statistics"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_statistics"
+description: "The sp_statistics system stored procedure returns a list of all indexes and statistics on a specified table or indexed view."
 author: markingmyname
 ms.author: maghan
+ms.date: "03/11/2022"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_statistics_TSQL"
+  - "sp_statistics"
+helpviewer_keywords:
+  - "sp_statistics"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_statistics (Transact-SQL)
@@ -23,7 +21,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
   Returns a list of all indexes and statistics on a specified table or indexed view.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -100,7 +98,7 @@ sp_statistics [ @table_name = ] 'table_name'
 ## Permissions  
  Requires SELECT permission on the schema.  
   
-## Example: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Example: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example returns information about the `DimEmployee` table from the `AdventureWorks` sample database.  
   
 ```sql  

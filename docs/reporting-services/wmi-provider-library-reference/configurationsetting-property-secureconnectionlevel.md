@@ -1,22 +1,17 @@
 ---
+title: "SecureConnectionLevel Property (WMI MSReportServer_ConfigurationSetting)"
 description: "SecureConnectionLevel Property (WMI MSReportServer_ConfigurationSetting)"
-title: "SecureConnectionLevel Property (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/01/2017
 ms.service: reporting-services
 ms.subservice: wmi-provider-library-reference
-
-
 ms.topic: conceptual
-apiname: 
-  - "SecureConnectionLevel"
-apilocation: 
-  - "reportingservices.mof"
-apitype: MOFDef
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SecureConnectionLevel property"
-ms.assetid: fd5549e7-b874-41e2-866e-2f58caf6f733
-author: maggiesMSFT
-ms.author: maggies
+apilocation: "reportingservices.mof"
+apiname: "SecureConnectionLevel"
+apitype: MOFDef
 ---
 # ConfigurationSetting Property - SecureConnectionLevel
   Returns the secure connection level specified in the RSReportServer.config file. Read-only.  

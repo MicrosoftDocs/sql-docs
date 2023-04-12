@@ -1,18 +1,15 @@
 ---
 title: "Columnstore index recommendations-Database Engine Tuning Advisor (DTA)"
 description: Learn how the Database Engine Tuning Advisor can analyze your workload and recommend rowstore and columnstore indexes to build on the database in SQL Server.
-ms.custom: seo-dt-2019
-ms.date: "01/09/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Database Engine Tuning Advisor, columnstore index"
-  - "Database Engine Tuning Advisor, columnstore and rowstore indexes"
-ms.assetid: 9fba1139-82cb-4244-a41f-4337a7d0c132
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "01/09/2017"
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Database Engine Tuning Advisor, columnstore index"
+  - "Database Engine Tuning Advisor, columnstore and rowstore indexes"
 ---
 # Columnstore index recommendations in Database Engine Tuning Advisor (DTA)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

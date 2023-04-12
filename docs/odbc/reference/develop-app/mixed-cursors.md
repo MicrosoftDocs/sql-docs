@@ -1,22 +1,19 @@
 ---
+title: "Mixed Cursors"
 description: "Mixed Cursors"
-title: "Mixed Cursors | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/20/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "mixed cursors [ODBC]"
   - "cursors [ODBC], dynamic"
   - "keyset-driven cursors [ODBC]"
   - "dynamic cursors [ODBC]"
   - "cursors [ODBC], key-set driven"
   - "cursors [ODBC], mixed"
-ms.assetid: 9beb2db9-0b6d-491d-9529-d64e64e59014
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Mixed Cursors
 

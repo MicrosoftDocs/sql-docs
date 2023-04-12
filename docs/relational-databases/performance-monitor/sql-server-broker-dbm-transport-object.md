@@ -1,17 +1,15 @@
 ---
 title: "SQL Server, Broker/DBM Transport object"
 description: Learn about Broker / DBM Transport performance object, which contains performance counters for networking information for Service Broker and database mirroring.
-ms.custom: ""
-ms.date: "07/12/2021"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Broker / DBM Transport object"
-  - "SQLServer:Broker/DBM Transport"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "07/12/2021"
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Broker / DBM Transport object"
+  - "SQLServer:Broker/DBM Transport"
 ---
 # SQL Server, Broker/DBM Transport object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

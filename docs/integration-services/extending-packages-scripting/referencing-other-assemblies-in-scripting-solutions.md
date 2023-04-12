@@ -1,15 +1,13 @@
 ---
+title: "Referencing Other Assemblies in Scripting Solutions"
 description: "Referencing Other Assemblies in Scripting Solutions"
-title: "Referencing Other Assemblies in Scripting Solutions | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SSIS Script task, .NET Framework"
   - "Script task [Integration Services], adding references"
   - "referencing custom assemblies"
@@ -21,9 +19,8 @@ helpviewer_keywords:
   - "Script task [Integration Services], .NET Framework"
   - ".NET Framework [Integration Services]"
   - "referencing Web services"
-ms.assetid: 9b655bcd-19f6-43d8-9f89-1b4d299c6380
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
 ---
 # Referencing Other Assemblies in Scripting Solutions
 

@@ -1,19 +1,16 @@
 ---
 title: "Configure general properties of Policy-Based Management"
 description: Learn how to configure the properties for Policy-Based Management using SQL Server Management Studio (SSMS) or Transact-SQL (T-SQL).
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.dmf.PolicyManagement.f1"
-helpviewer_keywords: 
-  - "Policy-Based Management, configure properties"
-ms.assetid: 6d1e0e37-29ea-408a-a055-384984d884be
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.dmf.PolicyManagement.f1"
+helpviewer_keywords:
+  - "Policy-Based Management, configure properties"
 ---
 # Configure the General Properties of Policy-Based Management
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

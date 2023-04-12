@@ -1,17 +1,14 @@
 ---
+title: "Exchange Spill Event Class"
 description: "Exchange Spill Event Class"
-title: "Exchange Spill Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "Exchange Spill event class"
-ms.assetid: fb876cec-f88d-4975-b3fd-0fb85dc0a7ff
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "Exchange Spill event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Exchange Spill Event Class

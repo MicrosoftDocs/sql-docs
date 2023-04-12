@@ -1,13 +1,13 @@
 ---
 title: "Recover related databases with marked transaction"
 description: SQL Server supports named marks in the transaction log to allow recovery to a specific mark. Marks can be tied to specific work.
-ms.custom: seo-lt-2019
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "12/17/2019"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "transaction logs [SQL Server], marks"
   - "STOPBEFOREMARK option [RESTORE statement]"
   - "STOPATMARK option [RESTORE statement]"
@@ -19,9 +19,6 @@ helpviewer_keywords:
   - "database recovery [SQL Server]"
   - "marked transactions [SQL Server], restoring"
   - "database restores [SQL Server], point in time"
-ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Recovery of Related  Databases That Contain Marked Transaction
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

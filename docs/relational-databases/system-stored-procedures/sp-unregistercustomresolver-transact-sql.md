@@ -1,29 +1,26 @@
 ---
+title: "sp_unregistercustomresolver (Transact-SQL)"
 description: "sp_unregistercustomresolver (Transact-SQL)"
-title: "sp_unregistercustomresolver (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_unregistercustomresolver_TSQL"
-  - "sp_unregistercustomresolver"
-helpviewer_keywords: 
-  - "sp_unregistercustomresolver"
-ms.assetid: 08bd20c8-c6be-4be2-be9f-2b5e1d7bee43
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_unregistercustomresolver_TSQL"
+  - "sp_unregistercustomresolver"
+helpviewer_keywords:
+  - "sp_unregistercustomresolver"
+dev_langs:
+  - "TSQL"
 ---
 # sp_unregistercustomresolver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Unregisters a previously registered business logic module. Business logic can be in the form of either a COM component or a [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework assembly. This stored procedure is executed on the Distributor where the custom business logic was registered.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

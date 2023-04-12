@@ -1,19 +1,15 @@
 ---
-description: "Indexes - Keys Dialog Box (Visual Database Tools)"
 title: Indexes - Keys Dialog Box
-ms.custom: seo-lt-2019
+description: "Indexes - Keys Dialog Box (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "vdtsql.chm:65539"
   - "vdt.ppg.indexeskeys"
-ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Indexes - Keys Dialog Box (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

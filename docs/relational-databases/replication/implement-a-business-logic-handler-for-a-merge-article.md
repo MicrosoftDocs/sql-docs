@@ -1,23 +1,21 @@
 ---
 title: "Set up a business logic handler for Merge article"
-description: Use replication programming or Replication Management Objects to configure a business logic handler for merge replication synchronization. 
-ms.custom: seo-lt-2019
+description: Use replication programming or Replication Management Objects to configure a business logic handler for merge replication synchronization.
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "merge replication conflict resolution [SQL Server replication], business logic handlers"
   - "merge replication business logic handlers [SQL Server replication]"
   - "conflict resolution [SQL Server replication], merge replication"
   - "business logic handlers [SQL Server replication]"
   - "BusinessLogicModule class"
-ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
-author: "MashaMSFT"
-ms.author: "mathoma"
+dev_langs:
+  - "TSQL"
 ---
 # Implement a Business Logic Handler for a Merge Article
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,7 +1,7 @@
 ---
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 07/29/2022
+ms.date: 03/01/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: include
@@ -31,6 +31,10 @@ The following sections describe known issues with [!INCLUDE[sssql22](../../inclu
 - OLEDB provider logs the following warning: `Failed to verify the Authenticode signature of 'C:\binn\msoledbsql.dll'. Signature verification of SQL Server DLLs will be skipped. Genuine copies of SQL Server are signed. Failure to verify the Authenticode signature might indicate that this is not an authentic release of SQL Server. Install a genuine copy of SQL Server or contact customer support.`
 
   - **Resolution**: No action is required. The OLEDB provider is signed using SHA256. SQL Server Database engine doesn't validate the signed .dll correctly.
+
+- The Reset password command using **mssql-conf** throws the following error: `'Unable to set the system administrator password. Please consult the ERRORLOG in /path for more information.'`
+
+  - **Resolution**: The error message is a false negative. The password reset was *successful*, and you can continue using the new password. This issue only applies to [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] container images, and doesn't occur in previous versions of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)].
 
 ### Databases
 

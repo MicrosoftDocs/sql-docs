@@ -1,16 +1,13 @@
 ---
-title: "Migrating Oracle Databases to SQL Server (OracleToSQL) | Microsoft Docs"
+title: "Migrating Oracle Databases to SQL Server (OracleToSQL)"
 description: Use this recommended process to migrate Oracle databases to SQL Server or Azure SQL Database using SQL Server Migration Assistant (SSMA).
-ms.service: sql
-ms.custom:
-  - intro-migration
+author: cpichuka
+ms.author: cpichuka
 ms.date: "04/22/2018"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 1d196dd6-4322-4c98-bb72-602c57d96134
-author: cpichuka 
-ms.author: cpichuka 
+ms.custom: intro-migration
 ---
 # Migrating Oracle Databases to SQL Server (OracleToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for Oracle is a comprehensive environment that helps you quickly migrate Oracle databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Azure SQL Database, or Azure Synapse Analytics. By using SSMA for Oracle, you can review database objects and data, assess databases for migration, migrate database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Azure SQL Database, or Azure Synapse Analytics, and then migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Azure SQL Database, or Azure Synapse Analytics. Note that you cannot migrate SYS and SYSTEM Oracle schemas.

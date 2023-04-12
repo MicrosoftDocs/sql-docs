@@ -1,29 +1,26 @@
 ---
+title: "sp_removedistpublisherdbreplication (Transact-SQL)"
 description: "sp_removedistpublisherdbreplication (Transact-SQL)"
-title: "sp_removedistpublisherdbreplication (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_removedistpublisherdbreplication_TSQL"
-  - "sp_removedistpublisherdbreplication"
-helpviewer_keywords: 
-  - "sp_removedistpublisherdbreplication"
-ms.assetid: 9bfe002a-25b5-4226-bcfb-feb2060d6b4a
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_removedistpublisherdbreplication_TSQL"
+  - "sp_removedistpublisherdbreplication"
+helpviewer_keywords:
+  - "sp_removedistpublisherdbreplication"
+dev_langs:
+  - "TSQL"
 ---
 # sp_removedistpublisherdbreplication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Removes publishing metadata belonging to a specific publication at the Distributor. This stored procedure is executed at the Distributor on the distribution database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

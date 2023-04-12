@@ -1,29 +1,26 @@
 ---
+title: "sp_help_log_shipping_primary_secondary (Transact-SQL)"
 description: "sp_help_log_shipping_primary_secondary (Transact-SQL)"
-title: "sp_help_log_shipping_primary_secondary (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_help_log_shipping_primary_secondary"
-  - "sp_help_log_shipping_primary_secondary_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_help_log_shipping_primary_secondary"
-ms.assetid: bc0044b4-7831-4ff9-8856-825c76aa9893
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_help_log_shipping_primary_secondary"
+  - "sp_help_log_shipping_primary_secondary_TSQL"
+helpviewer_keywords:
+  - "sp_help_log_shipping_primary_secondary"
+dev_langs:
+  - "TSQL"
 ---
 # sp_help_log_shipping_primary_secondary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This stored procedure returns information regarding all the secondary databases for a given primary database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

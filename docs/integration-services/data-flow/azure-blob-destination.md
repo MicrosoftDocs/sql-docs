@@ -1,18 +1,15 @@
 ---
+title: "Azure Blob Destination"
 description: "Azure Blob Destination"
-title: "Azure Blob Destination | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/25/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.designer.afpblobdest.f1"
-  - "sql14.dts.designer.afpblobdest.f1"
-ms.assetid: 820a1e7a-7182-4c7b-ab56-5b4097a7e042
 author: chugugrace
 ms.author: chugu
+ms.date: "07/25/2016"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.designer.afpblobdest.f1"
+  - "sql14.dts.designer.afpblobdest.f1"
 ---
 # Azure Blob Destination
 

@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_2515"
 description: "MSSQLSERVER_2515"
-title: "MSSQLSERVER_2515 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "2515 (Database Engine error)"
-ms.assetid: af93aa29-70c9-4923-90af-aafadb20c1c6
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "2515 (Database Engine error)"
 ---
 # MSSQLSERVER_2515
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

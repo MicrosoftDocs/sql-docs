@@ -1,21 +1,19 @@
 ---
 title: Edit Rows in the Results Pane
 description: "Edit Rows in the Results Pane (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
+ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "vdt.pane.results"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "View Designer, Results pane"
   - "modifying rows"
   - "Query Designer [SQL Server], Results pane"
   - "Results pane"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 ---
 
 # Edit Rows in the Results Pane (Visual Database Tools)

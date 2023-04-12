@@ -1,17 +1,14 @@
 ---
+title: "Disable Lightweight Pooling"
 description: "Disable Lightweight Pooling"
-title: "Disable Lightweight Pooling | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Best Practices [Database Engine]"
-ms.assetid: 481bb43d-6fe5-497c-9096-971fb6bf733b
 author: VanMSFT
 ms.author: vanto
+ms.date: "08/09/2016"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Best Practices [Database Engine]"
 ---
 # Disable Lightweight Pooling
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

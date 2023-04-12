@@ -1,29 +1,26 @@
 ---
+title: "sp_droppullsubscription (Transact-SQL)"
 description: "sp_droppullsubscription (Transact-SQL)"
-title: "sp_droppullsubscription (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_droppullsubscription"
-  - "sp_droppullsubscription_TSQL"
-helpviewer_keywords: 
-  - "sp_droppullsubscription"
-ms.assetid: 7352d94a-f8f2-42ea-aaf1-d08c3b5a0e76
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_droppullsubscription"
+  - "sp_droppullsubscription_TSQL"
+helpviewer_keywords:
+  - "sp_droppullsubscription"
+dev_langs:
+  - "TSQL"
 ---
 # sp_droppullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Drops a subscription at the current database of the Subscriber. This stored procedure is executed at the Subscriber on the pull subscription database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

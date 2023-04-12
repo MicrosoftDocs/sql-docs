@@ -1,22 +1,17 @@
 ---
-description: "PropertyStrValue Property (SqlServiceAdvancedProperty Class)"
 title: "PropertyStrValue Property (SqlServiceAdvancedProperty)"
-ms.custom: seo-lt-2019
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "PropertyStrValue Property (SqlServiceAdvancedProperty Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "PropertyStrValue property"
-ms.assetid: 637dd734-c294-4bfd-892d-882bac4708f5
+description: "PropertyStrValue Property (SqlServiceAdvancedProperty Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "PropertyStrValue property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "PropertyStrValue Property (SqlServiceAdvancedProperty Class)"
+apitype: "MOFDef"
 ---
 # PropertyStrValue Property (SqlServiceAdvancedProperty Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

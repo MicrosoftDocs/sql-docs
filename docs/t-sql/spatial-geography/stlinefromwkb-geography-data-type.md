@@ -1,22 +1,19 @@
 ---
+title: "STLineFromWKB (geography Data Type)"
 description: "STLineFromWKB (geography Data Type)"
-title: "STLineFromWKB (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "07/30/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STLineFromWKB (geography Data Type)"
   - "STLineFromWKB_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STLineFromWKB method"
-ms.assetid: 8ac2b772-6673-4ba1-a7ab-3b4b5841560b
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STLineFromWKB (geography Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

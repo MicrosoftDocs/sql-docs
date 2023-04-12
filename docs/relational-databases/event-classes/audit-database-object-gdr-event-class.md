@@ -1,17 +1,14 @@
 ---
+title: "Audit Database Object GDR Event Class"
 description: "Audit Database Object GDR Event Class"
-title: "Audit Database Object GDR Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "Audit Database Object GDR event class"
-ms.assetid: 2289aab5-e048-4288-bcae-aaf768ca014a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "Audit Database Object GDR event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Database Object GDR Event Class

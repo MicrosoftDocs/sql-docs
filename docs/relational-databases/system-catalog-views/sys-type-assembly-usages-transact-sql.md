@@ -16,10 +16,9 @@ helpviewer_keywords:
   - "sys.type_assembly_usages catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 79b8bf25-6e4e-4a07-ae93-7a4e44f65171
 ---
 # sys.type_assembly_usages (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Contains one row per type to assembly reference.  
   

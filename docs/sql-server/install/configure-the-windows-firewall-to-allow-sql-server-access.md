@@ -7,7 +7,6 @@ ms.date: 10/17/2022
 ms.service: sql
 ms.subservice: install
 ms.topic: conceptual
-ms.custom: contperf-fy21q3
 helpviewer_keywords:
   - "Windows Firewall ports"
   - "WMI firewall ports"

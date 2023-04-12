@@ -1,22 +1,17 @@
 ---
-description: "SetBoolValue Method (SqlServiceAdvancedProperty Class)"
 title: "SetBoolValue Method (SqlServiceAdvancedProperty)"
-ms.custom: seo-lt-2019
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "SetBoolValue Method (SqlServiceAdvancedProperty Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "SetBoolValue method"
-ms.assetid: 5252b439-fce5-446a-8e57-99e3054bee69
+description: "SetBoolValue Method (SqlServiceAdvancedProperty Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "SetBoolValue method"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "SetBoolValue Method (SqlServiceAdvancedProperty Class)"
+apitype: "MOFDef"
 ---
 # SetBoolValue Method (SqlServiceAdvancedProperty Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

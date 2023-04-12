@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "base tables"
 dev_langs:
   - "TSQL"
-ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
 ---
 # System Base Tables
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]

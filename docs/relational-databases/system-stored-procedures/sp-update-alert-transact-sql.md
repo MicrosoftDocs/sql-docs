@@ -1,29 +1,26 @@
 ---
+title: "sp_update_alert (Transact-SQL)"
 description: "sp_update_alert (Transact-SQL)"
-title: "sp_update_alert (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_update_alert_TSQL"
-  - "sp_update_alert"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_update_alert"
-ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_update_alert_TSQL"
+  - "sp_update_alert"
+helpviewer_keywords:
+  - "sp_update_alert"
+dev_langs:
+  - "TSQL"
 ---
 # sp_update_alert (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Updates the settings of an existing alert.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -1,19 +1,15 @@
 ---
-description: "Open Queries (Visual Database Tools)"
 title: Open Queries
-ms.custom: seo-lt-2019
+description: "Open Queries (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "opening queries"
   - "queries [SQL Server], opening"
-ms.assetid: 6d7ce59b-2ce6-42af-9330-84ce3dc1197e
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Open Queries (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

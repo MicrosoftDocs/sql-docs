@@ -1,15 +1,12 @@
 ---
-description: "SQL Server Native Client Display Column and Catalog Metadata for Sparse Columns (OLE DB)"
 title: "Metadata for Sparse Columns (OLE DB)"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-ms.assetid: 3b8ccad5-411d-4b79-b95e-ee524714f7d6
+description: "SQL Server Native Client Display Column and Catalog Metadata for Sparse Columns (OLE DB)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/16/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Native Client Display Column and Catalog Metadata for Sparse Columns (OLE DB)

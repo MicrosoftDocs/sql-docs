@@ -8,7 +8,6 @@ ms.date: 05/25/2022
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: language-reference
-ms.custom: seo-dt-2019
 dev_langs:
   - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
@@ -17,10 +16,10 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
- This topic lists the [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] catalog views.  
+ This topic lists the [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] catalog views.  
   
-## [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] catalog views  
- The following catalog views apply to both [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:  
+## [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] catalog views  
+ The following catalog views apply to both [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:  
   
  [sys.pdw_column_distribution_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-column-distribution-properties-transact-sql.md)  
   
@@ -54,9 +53,9 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
   
  [sys.pdw_table_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md) 
 
-## [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] catalog views
+## [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] catalog views
 
- The following catalog views apply to [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] only:
+ The following catalog views apply to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] only:
 
  [sys.pdw_materialized_view_column_distribution_properties &#40;Transact-SQL&#41;](./sys-pdw-materialized-view-column-distribution-properties-transact-sql.md?view=azure-sqldw-latest&preserve-view=true) 
 

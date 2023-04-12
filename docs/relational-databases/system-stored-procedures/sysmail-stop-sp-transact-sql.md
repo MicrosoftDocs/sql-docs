@@ -1,29 +1,26 @@
 ---
+title: "sysmail_stop_sp (Transact-SQL)"
 description: "sysmail_stop_sp (Transact-SQL)"
-title: "sysmail_stop_sp (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sysmail_stop_sp_TSQL"
-  - "sysmail_stop_sp"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sysmail_stop_sp"
-ms.assetid: 045ee36f-5bf0-4626-b5ee-e84db06ce16f
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "06/10/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sysmail_stop_sp_TSQL"
+  - "sysmail_stop_sp"
+helpviewer_keywords:
+  - "sysmail_stop_sp"
+dev_langs:
+  - "TSQL"
 ---
 # sysmail_stop_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Stops Database Mail by stopping the [!INCLUDE[ssSB](../../includes/sssb-md.md)] objects that the external program uses.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

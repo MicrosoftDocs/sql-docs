@@ -1,29 +1,26 @@
 ---
+title: "sp_update_agent_profile (Transact-SQL)"
 description: "sp_update_agent_profile (Transact-SQL)"
-title: "sp_update_agent_profile (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_update_agent_profile_TSQL"
-  - "sp_update_agent_profile"
-helpviewer_keywords: 
-  - "sp_update_agent_profile"
-ms.assetid: cc81f227-0df3-4151-bb4d-4f45ea997b71
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_update_agent_profile_TSQL"
+  - "sp_update_agent_profile"
+helpviewer_keywords:
+  - "sp_update_agent_profile"
+dev_langs:
+  - "TSQL"
 ---
 # sp_update_agent_profile (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Updates the profile used by a replication agent. This stored procedure is executed at the Distributor on the distribution database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

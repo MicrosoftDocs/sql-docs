@@ -1,22 +1,20 @@
 ---
-description: "An index of catalog stored procedures in SQL Server Transact-SQL."
 title: "Catalog Stored Procedures (Transact-SQL)"
-ms.custom: ""
+description: "An index of catalog stored procedures in SQL Server Transact-SQL."
+author: markingmyname
+ms.author: maghan
 ms.date: "04/13/2022"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ODBC applications, catalog stored procedures"
   - "isolating ODBC applications from changes"
   - "ODBC data dictionary functions"
   - "system stored procedures [SQL Server], catalog"
   - "catalog system stored procedures [SQL Server]"
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 
 # Catalog Stored Procedures (Transact-SQL)

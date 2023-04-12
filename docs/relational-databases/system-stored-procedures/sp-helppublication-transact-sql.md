@@ -1,29 +1,26 @@
 ---
+title: "sp_helppublication (Transact-SQL)"
 description: "sp_helppublication (Transact-SQL)"
-title: "sp_helppublication (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: 10/05/2021
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_helppublication_TSQL"
-  - "sp_helppublication"
-helpviewer_keywords: 
-  - "sp_helppublication"
-ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 author: markingmyname
 ms.author: maghan
+ms.date: 10/05/2021
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helppublication_TSQL"
+  - "sp_helppublication"
+helpviewer_keywords:
+  - "sp_helppublication"
+dev_langs:
+  - "TSQL"
 ---
 # sp_helppublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns information about a publication. For a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publication, this stored procedure is executed at the Publisher on the publication database. For an Oracle publication, this stored procedure is executed at the Distributor on any database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

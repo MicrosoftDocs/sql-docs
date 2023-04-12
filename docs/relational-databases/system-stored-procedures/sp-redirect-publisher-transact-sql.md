@@ -1,29 +1,26 @@
 ---
+title: "sp_redirect_publisher (Transact-SQL)"
 description: "sp_redirect_publisher (Transact-SQL)"
-title: "sp_redirect_publisher (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_redirect_publisher_TSQL"
-  - "sp_redirect_publisher"
-helpviewer_keywords: 
-  - "sp_redirect_publisher"
-ms.assetid: af45e2b2-57fb-4bcd-a58b-e61401fb3b26
 author: markingmyname
 ms.author: maghan
+ms.date: "03/15/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_redirect_publisher_TSQL"
+  - "sp_redirect_publisher"
+helpviewer_keywords:
+  - "sp_redirect_publisher"
+dev_langs:
+  - "TSQL"
 ---
 # sp_redirect_publisher (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Specifies a redirected publisher for an existing publisher/database pair. If the publisher database belongs to an Always On Availability Group, the redirected publisher is the availability group listener name associated with the availability group.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

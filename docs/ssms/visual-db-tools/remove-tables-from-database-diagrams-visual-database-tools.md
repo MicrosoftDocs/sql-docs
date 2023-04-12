@@ -1,20 +1,16 @@
 ---
-description: "Remove Tables from Database Diagrams (Visual Database Tools)"
 title: Remove Tables from Database Diagrams
-ms.custom: seo-lt-2019
+description: "Remove Tables from Database Diagrams (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "deleting tables"
   - "removing tables"
   - "dropping tables"
-ms.assetid: 11afcfa1-816b-419c-9bc7-3abf366f4c3c
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Remove Tables from Database Diagrams (Visual Database Tools)
 

@@ -1,29 +1,26 @@
 ---
+title: "sp_help_log_shipping_alert_job (Transact-SQL)"
 description: "sp_help_log_shipping_alert_job (Transact-SQL)"
-title: "sp_help_log_shipping_alert_job (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_help_log_shipping_alert_job_TSQL"
-  - "sp_help_log_shipping_alert_job"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_help_log_shipping_alert_job"
-ms.assetid: 4d4b4577-c393-4961-b2d3-b56e980b787b
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_help_log_shipping_alert_job_TSQL"
+  - "sp_help_log_shipping_alert_job"
+helpviewer_keywords:
+  - "sp_help_log_shipping_alert_job"
+dev_langs:
+  - "TSQL"
 ---
 # sp_help_log_shipping_alert_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This stored procedure returns the job ID of the alert job from the log shipping monitor.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

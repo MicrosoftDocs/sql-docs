@@ -1,16 +1,12 @@
 ---
 title: "Modify R/Python code to run in SQL Server"
 description: Learn how to modify your R or Python code to run as a SQL Server stored procedure to improve performance when accessing SQL data.
-ms.service: sql
-ms.subservice: machine-learning-services
-ms.date: 05/24/2022
-ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.custom:
-- seo-lt-2019
-- contperf-fy21q3
-- event-tier1-build-2022
+ms.date: 05/24/2022
+ms.service: sql
+ms.subservice: machine-learning-services
+ms.topic: how-to
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # Modify R/Python code to run in SQL Server (In-Database) instances

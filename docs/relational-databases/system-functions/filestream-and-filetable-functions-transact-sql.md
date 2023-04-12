@@ -1,19 +1,16 @@
 ---
+title: "Filestream and FileTable Functions (Transact-SQL)"
 description: "Filestream and FileTable Functions (Transact-SQL)"
-title: "Filestream and FileTable Functions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "FileTables [SQL Server], system functions"
-ms.assetid: 71f729df-d340-4cf9-9a6d-305fcb39b009
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+helpviewer_keywords:
+  - "FileTables [SQL Server], system functions"
+dev_langs:
+  - "TSQL"
 ---
 # Filestream and FileTable Functions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

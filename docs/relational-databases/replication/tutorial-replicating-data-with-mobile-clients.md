@@ -1,19 +1,17 @@
 ---
 title: "Tutorial: Configure Merge Replication"
 description: This tutorial teaches you how to configure Merge Replication between a SQL Server and a mobile client.
-ms.custom:
-  - seo-lt-2019
-  - intro-quickstart
-ms.date: "04/03/2018"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: quickstart
-helpviewer_keywords:
-  - "replication [SQL Server], tutorials"
-ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "04/03/2018"
+ms.service: sql
+ms.subservice: replication
+ms.topic: quickstart
+ms.custom:
+  - intro-quickstart
+  - updatefrequency5
+helpviewer_keywords:
+  - "replication [SQL Server], tutorials"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Tutorial: Configure replication between a server and mobile clients (merge)

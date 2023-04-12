@@ -9,7 +9,6 @@ ms.subservice: supportability
 ms.topic: conceptual
 f1_keywords:
   - "sql13.swb.jobactivitymon.refresh.f1"
-ms.assetid: 413a368e-fd2b-4e1f-b370-002cdbc85bab
 ---
 # Job Activity Monitor Refresh
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

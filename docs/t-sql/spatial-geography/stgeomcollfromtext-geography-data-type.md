@@ -1,22 +1,19 @@
 ---
+title: "STGeomCollFromText (geography Data Type)"
 description: "STGeomCollFromText (geography Data Type)"
-title: "STGeomCollFromText (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "07/30/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STGeomCollFromText_TSQL"
   - "STGeomCollFromText (geography Data Type)"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STGeomCollFromText method"
-ms.assetid: a5b3c344-1045-43a4-82fa-47f6206a288e
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STGeomCollFromText (geography Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

@@ -1,13 +1,14 @@
 ---
+title: "Filter Published Data"
 description: "Filter Published Data"
-title: "Filter Published Data | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "filters [SQL Server replication]"
   - "filters [SQL Server replication], about filtering"
   - "filtering [SQL Server replication]"
@@ -17,9 +18,6 @@ helpviewer_keywords:
   - "filtering published data [SQL Server replication]"
   - "snapshot replication [SQL Server], filtering published data"
   - "column filters [SQL Server replication]"
-ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Filter Published Data

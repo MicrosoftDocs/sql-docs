@@ -12,7 +12,7 @@ ms.topic: quickstart
 
 # Quickstart: Deploy a SQL Server Linux container to Kubernetes using Helm charts
 
-[!INCLUDE [sql-linux](../includes/applies-to-version/sql-linux.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This quickstart takes you through the steps to deploy SQL Server on Linux containers to [Azure Kubernetes Service](/azure/aks/) (AKS) with [Helm charts](/azure/aks/quickstart-helm), from a Windows client machine.
 

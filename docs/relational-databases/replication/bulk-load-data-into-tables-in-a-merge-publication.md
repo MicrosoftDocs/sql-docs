@@ -1,21 +1,19 @@
 ---
+title: "Bulk-Load Data into Tables in a Merge Publication"
 description: "Bulk-Load Data into Tables in a Merge Publication"
-title: "Bulk-Load Data into Tables in a Merge Publication | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/07/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "bulk load [SQL Server replication]"
   - "merge replication bulk loading [SQL Server replication]"
   - "sp_addtabletocontents"
-ms.assetid: 16e6498a-b449-4051-aec4-ea814a2ad993
-author: "MashaMSFT"
-ms.author: "mathoma"
+dev_langs:
+  - "TSQL"
 ---
 # Bulk-Load Data into Tables in a Merge Publication
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

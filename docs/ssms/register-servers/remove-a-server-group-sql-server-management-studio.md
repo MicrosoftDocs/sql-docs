@@ -1,21 +1,18 @@
 ---
-description: "Remove a Server Group (SQL Server Management Studio)"
 title: Remove a Server Group
+description: "Remove a Server Group (SQL Server Management Studio)"
+author: markingmyname
+ms.author: maghan
+ms.date: 03/07/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "removing server groups"
   - "Registered Servers [SQL Server], server groups"
   - "server groups [SQL Server]"
   - "deleting server groups"
   - "groups [SQL Server], server"
-ms.assetid: 1f3ea9ee-67c0-46ed-bf02-ceca92d3b8fe
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 03/07/2017
 ---
 
 # Remove a Server Group (SQL Server Management Studio)

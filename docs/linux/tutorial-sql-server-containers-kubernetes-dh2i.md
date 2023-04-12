@@ -5,14 +5,15 @@ author: amitkh-msft
 ms.author: amitkh
 ms.reviewer: amitkh, vanto
 ms.date: 04/01/2022
-ms.topic: tutorial
 ms.service: sql
 ms.subservice: linux
-ms.custom:
-  - intro-deployment
+ms.topic: tutorial
+ms.custom: intro-deployment
 ---
 
 # Deploy availability group with DH2i for SQL Server containers on AKS
+
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This tutorial explains how to configure SQL Server Always On availability group for SQL Server Linux based containers deployed in a Kubernetes cluster. In this tutorial, Azure Kubernetes Service (AKS) is used as the kubernetes cluster and the tutorial consists of the following tasks:
 
@@ -50,7 +51,7 @@ aks-nodepool1-75119571-vmss000001   Ready    agent   61d   v1.19.9
 
 Create the custom container image that will be used in our deployment manifests. The custom container image will deploy SQL Server, .NET, and DxEnterprise in a container. The deployment sample dockerfile is provided below. You can modify it to meet your needs, such as changing the SQL Server version.
 
-For more information on Docker and using dockerfiles, see the [docker documentation](https://docs.docker.com/get-started/).
+For more information on Docker and using dockerfiles, see the [Docker documentation](https://docs.docker.com/get-started/).
 
 ```bash
 FROM mcr.microsoft.com/mssql/server:2019-latest

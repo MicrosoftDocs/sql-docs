@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.remote_service_bindings catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 4e1a885d-eed1-4993-9c87-e6fd781f437d
 ---
 # sys.remote_service_bindings (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -32,8 +32,8 @@ To simulate the outage, you can rename the source database. This name change cau
 
 ### Recovery
 
-* Perform the geo-restore of the database into a different server as described [here](disaster-recovery-guidance.md).
-* Change the application configuration to connect to the recovered database and follow the [Configure a database after recovery](disaster-recovery-guidance.md) guide to complete the recovery.
+* Perform the geo-restore of the database into a different server as described in [Azure SQL Database disaster recovery guidance](disaster-recovery-guidance.md).
+* Change the application configuration to connect to the recovered database and follow the [Configure a database after recovery](disaster-recovery-guidance.md#configure-your-database-after-recovery) guide to complete the recovery.
 
 ### Validation
 
@@ -63,3 +63,4 @@ Complete the drill by verifying the application integrity post recovery (includi
 * To learn about Azure SQL Database automated backups, see [SQL Database automated backups](automated-backups-overview.md)
 * To learn about using automated backups for recovery, see [restore a database from the service-initiated backups](recovery-using-backups.md).
 * To learn about faster recovery options, see [Active geo-replication](active-geo-replication-overview.md) and [Auto-failover groups](auto-failover-group-sql-db.md).
+* Review [Azure SQL Database disaster recovery guidance](disaster-recovery-guidance.md) and the [Azure SQL Database high availability and disaster recovery checklist](high-availability-disaster-recovery-checklist.md). 

@@ -1,29 +1,26 @@
 ---
+title: "sp_help_jobcount (Transact-SQL)"
 description: "sp_help_jobcount (Transact-SQL)"
-title: "sp_help_jobcount (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_help_jobcount"
-  - "sp_help_jobcount_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_help_jobcount"
-ms.assetid: ae8ef851-646c-4889-bc11-c8ec78762572
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_help_jobcount"
+  - "sp_help_jobcount_TSQL"
+helpviewer_keywords:
+  - "sp_help_jobcount"
+dev_langs:
+  - "TSQL"
 ---
 # sp_help_jobcount (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Provides the number of jobs that a schedule is attached to.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

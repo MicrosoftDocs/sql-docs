@@ -7,7 +7,6 @@ ms.date: 11/22/2022
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 f1_keywords:
   - "vs.regularexpressionbuilder"
 helpviewer_keywords:

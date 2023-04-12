@@ -8,6 +8,7 @@ ms.date: 12/23/2022
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "transactional replication, backward compatibility"
   - "backward compatibility [SQL Server replication]"

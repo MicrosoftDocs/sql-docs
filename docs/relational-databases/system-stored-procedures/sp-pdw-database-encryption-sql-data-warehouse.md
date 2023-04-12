@@ -1,22 +1,19 @@
 ---
+title: "sp_pdw_database_encryption (Azure Synapse Analytics)"
 description: "sp_pdw_database_encryption (Azure Synapse Analytics)"
-title: "sp_pdw_database_encryption (Azure Synapse Analytics) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-ms.assetid: f5ccb424-7a95-4557-b774-c69de33c1545
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/03/2017"
+ms.service: sql
+ms.topic: "reference"
+dev_langs:
+  - "TSQL"
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 # sp_pdw_database_encryption (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Use **sp_pdw_database_encryption** to enable transparent data encryption on for a [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] appliance. When **sp_pdw_database_encryption** set to 1, use the **ALTER DATABASE** statement to encrypt a database by using TDE.  
+  Use **sp_pdw_database_encryption** to enable transparent data encryption on for a [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] appliance. When **sp_pdw_database_encryption** set to 1, use the **ALTER DATABASE** statement to encrypt a database by using TDE.  
   
 ## Syntax  
   

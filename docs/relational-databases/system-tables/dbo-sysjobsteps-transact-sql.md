@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sysjobsteps system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 978b8205-535b-461c-91f3-af9b08eca467
 ---
 # dbo.sysjobsteps (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

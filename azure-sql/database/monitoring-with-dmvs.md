@@ -10,8 +10,8 @@ ms.service: sql-database
 ms.subservice: performance
 ms.topic: how-to
 ms.custom:
-  - "azure-sql-split"
-  - "sqldbrb=2"
+  - azure-sql-split
+  - sqldbrb=2
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Monitoring Microsoft Azure SQL Database performance using dynamic management views

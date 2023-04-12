@@ -1,18 +1,16 @@
 ---
-title: "Snapshot Replication | Microsoft Docs"
+title: "Snapshot Replication"
 description: Snapshot replication distributes data as it appears at a moment in time. It does not monitor for updates. A snapshot is generated and sent to Subscribers.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "snapshot replication [SQL Server], about snapshot replication"
-  - "snapshot replication [SQL Server]"
-ms.assetid: 5d745f22-9c6b-4e11-8c62-bc50e9a8bf38
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "snapshot replication [SQL Server], about snapshot replication"
+  - "snapshot replication [SQL Server]"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Snapshot Replication

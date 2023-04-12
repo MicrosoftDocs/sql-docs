@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-2016"
 
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
-  This article summarizes the steps required to upgrade a deployment of [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] to [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]. The specific steps depend on the version of SharePoint your environment is currently running and include the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint Add-in (**spPowerPivot.msi**).
+  This article summarizes the steps required to upgrade a deployment of [!INCLUDE[power-pivot-sharepoint-md](../../includes/power-pivot-sharepoint-md.md)] to [!INCLUDE[power-pivot-2016-sharepoint-md](../../includes/power-pivot-2016-sharepoint-md.md)]. The specific steps depend on the version of SharePoint your environment is currently running and include the [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] for SharePoint Add-in (**spPowerPivot.msi**).
 
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010 | SharePoint 2013
 
@@ -42,39 +42,39 @@ monikerRange: ">=sql-server-2016"
 
 ## Background
 
-- If you're upgrading a multi-server SharePoint 2010 farm that has two or more [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] instances, you must fully upgrade each server **before** continuing to the next server. A full upgrade includes running SQL Server Setup to upgrade [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] program files, followed by SharePoint upgrade actions that configure the upgraded services. Server availability will be limited until you run upgrade actions in the appropriate [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Configuration Tool or Windows PowerShell.
+- If you're upgrading a multi-server SharePoint 2010 farm that has two or more [!INCLUDE[power-pivot-sharepoint-md](../../includes/power-pivot-sharepoint-md.md)] instances, you must fully upgrade each server **before** continuing to the next server. A full upgrade includes running SQL Server Setup to upgrade [!INCLUDE[power-pivot-sharepoint-md](../../includes/power-pivot-sharepoint-md.md)] program files, followed by SharePoint upgrade actions that configure the upgraded services. Server availability will be limited until you run upgrade actions in the appropriate [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] Configuration Tool or Windows PowerShell.
 
-- All instances of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Service and Analysis Services in a SharePoint 2010 farm must be the same version. For information on how to verify the version, see the section [Verify the Versions of Power Pivot Components and Services](#bkmk_verify_versions) in this article.
+- All instances of [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] System Service and Analysis Services in a SharePoint 2010 farm must be the same version. For information on how to verify the version, see the section [Verify the Versions of Power Pivot Components and Services](#bkmk_verify_versions) in this article.
 
-- The [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] configuration tools are one of the SQL Server shared features and all shared features upgrade at the same time. If during an upgrade process you select other SQL Server instances or features that require a shared feature upgrade, then the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] configuration tool will also be upgraded. You may have issues if the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] configuration tool is upgraded but your [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] instance isn't. For more information about SQL Server shared features, see [Upgrade to SQL Server 2016 Using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md).
+- The [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] configuration tools are one of the SQL Server shared features and all shared features upgrade at the same time. If during an upgrade process you select other SQL Server instances or features that require a shared feature upgrade, then the [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] configuration tool will also be upgraded. You may have issues if the [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] configuration tool is upgraded but your [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] instance isn't. For more information about SQL Server shared features, see [Upgrade to SQL Server 2016 Using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md).
 
-- The [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint Add-in (**spPowerPivot.msi**) installs side by side with previous versions. For example, the add-in installs to the folder `c:\Program Files\Microsoft SQL Server\nnn\Tools\PowerPivotTools`. See [File locations](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md#shared-files-for-all-instances-of-) for information about SQL Server installation files.
+- The [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] for SharePoint Add-in (**spPowerPivot.msi**) installs side by side with previous versions. For example, the add-in installs to the folder `c:\Program Files\Microsoft SQL Server\nnn\Tools\PowerPivotTools`. See [File locations](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md#shared-files-for-all-instances-of-) for information about SQL Server installation files.
 
 ## <a id="bkmk_prereq"></a> Prerequisites
 
  **Permissions**
 
-- You must be a farm administrator to upgrade a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint installation. You must be a local administrator to run SQL Server Setup.
+- You must be a farm administrator to upgrade a [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] for SharePoint installation. You must be a local administrator to run SQL Server Setup.
 
 - You must have **db_owner** permissions on the farm configuration database.
 
  **SQL Server:**
 
-- If the existing [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] installation is [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)], the [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] Service Pack 2 (SP2) is required for an upgrade to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].
+- If the existing [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] installation is [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)], the [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] Service Pack 2 (SP2) is required for an upgrade to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[power-pivot-sharepoint-md](../../includes/power-pivot-sharepoint-md.md)].
 
-- If the existing [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] installation is [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], the [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 (SP1) is required for an upgrade to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].
+- If the existing [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] installation is [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], the [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 (SP1) is required for an upgrade to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[power-pivot-sharepoint-md](../../includes/power-pivot-sharepoint-md.md)].
 
  **SharePoint 2010:**
 
-- If the existing installation is running SharePoint 2010, install the SharePoint 2010 Service Pack 2 before upgrading to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. For more information, see [Service Pack 2 for Microsoft SharePoint 2010](https://www.microsoft.com/download/details.aspx?id=39672). Use the PowerShell command `(Get-SPfarm).BuildVersion.ToString()` to verify the version. To reference the build version to release date, see [SharePoint 2010 Build Numbers](/officeupdates/sharepoint-updates#sharepoint-2010-update-history).
+- If the existing installation is running SharePoint 2010, install the SharePoint 2010 Service Pack 2 before upgrading to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[power-pivot-sharepoint-md](../../includes/power-pivot-sharepoint-md.md)]. For more information, see [Service Pack 2 for Microsoft SharePoint 2010](https://www.microsoft.com/download/details.aspx?id=39672). Use the PowerShell command `(Get-SPfarm).BuildVersion.ToString()` to verify the version. To reference the build version to release date, see [SharePoint 2010 Build Numbers](/officeupdates/sharepoint-updates#sharepoint-2010-update-history).
 
 ## <a id="bkmk_uprgade_sharepoint2013"></a> Upgrade an Existing SharePoint 2013 Farm
 
- To upgrade [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] deployed in SharePoint 2013, do the following:
+ To upgrade [!INCLUDE[power-pivot-sharepoint-md](../../includes/power-pivot-sharepoint-md.md)] deployed in SharePoint 2013, do the following:
 
  :::image type="content" source="media/upgrade-power-pivot-for-sharepoint/as-power-pivot-upgrade-flow-sharepoint-2013.png" alt-text="Powerpivot for sharepoint 2013 upgrade.":::
 
-1. Run [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Setup on backend server(s) that run [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in SharePoint mode. If the server hosts multiple instances of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], upgrade at least the **POWERPIVOT** instance. The following list is a summary of setup wizard steps related to a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] upgrade:
+1. Run [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Setup on backend server(s) that run [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in SharePoint mode. If the server hosts multiple instances of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], upgrade at least the **POWERPIVOT** instance. The following list is a summary of setup wizard steps related to a [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] upgrade:
 
     1. In the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Wizard, select **Installation**.
 
@@ -86,19 +86,19 @@ monikerRange: ">=sql-server-2016"
 
 1. Restart the server.
 
-1. Run the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint add-in (**spPowerPivot.msi**) on each server in the SharePoint 2013 farm to install the data providers. The exception is servers where you ran the SQL Server setup wizard, which also upgrades data providers. For more information, see [Download Microsoft SQL Server 2014 Power Pivot for Microsoft SharePoint 2013](https://www.microsoft.com/download/details.aspx?id=42300) and  [Install or Uninstall the Power Pivot for SharePoint Add-in &#40;SharePoint 2013&#41;](/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013).
+1. Run the [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] for SharePoint add-in (**spPowerPivot.msi**) on each server in the SharePoint 2013 farm to install the data providers. The exception is servers where you ran the SQL Server setup wizard, which also upgrades data providers. For more information, see [Download Microsoft SQL Server 2014 Power Pivot for Microsoft SharePoint 2013](https://www.microsoft.com/download/details.aspx?id=42300) and  [Install or Uninstall the Power Pivot for SharePoint Add-in &#40;SharePoint 2013&#41;](/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013).
 
-1. **Run the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 Configuration** tool on one of the SharePoint application servers to configure the SharePoint farm with the updated solution files that the add-in installed. You can't use Central SharePoint Administration for this step. For more information, see the following:
+1. **Run the [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] for SharePoint 2013 Configuration** tool on one of the SharePoint application servers to configure the SharePoint farm with the updated solution files that the add-in installed. You can't use Central SharePoint Administration for this step. For more information, see the following:
 
-    1. From the Windows Start page, type **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** and in the search results, select **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 Configuration**. Note the search may return both versions of the configuration tool.
+    1. From the Windows Start page, type **[!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)]** and in the search results, select **[!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] for SharePoint 2013 Configuration**. Note the search may return both versions of the configuration tool.
 
          :::image type="content" source="/analysis-services/analysis-services/instances/install-windows/media/as-powerpivot-configtools-bothicons.gif" alt-text="Two powerpivot configuration tools.":::
 
          Or
 
-         On the **Start** menu, point to **All Programs**, select [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], select **Configuration Tools**, and then select **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 Configuration Too**. This tool is listed only when [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] is installed on the local server.
+         On the **Start** menu, point to **All Programs**, select [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], select **Configuration Tools**, and then select **[!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] for SharePoint 2013 Configuration Too**. This tool is listed only when [!INCLUDE[power-pivot-sharepoint-md](../../includes/power-pivot-sharepoint-md.md)] is installed on the local server.
 
-    1. At startup, the configuration tool checks the upgrade status of the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] farm solution and [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] web application solutions. If older versions of these solutions are detected, you'll see the message "**Newer versions of the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] solution files have been detected. Please select the upgrade option to upgrade your farm**." Select **OK** to close the system validation message.
+    1. At startup, the configuration tool checks the upgrade status of the [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] farm solution and [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] web application solutions. If older versions of these solutions are detected, you'll see the message "**Newer versions of the [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] solution files have been detected. Please select the upgrade option to upgrade your farm**." Select **OK** to close the system validation message.
 
     1. Select **Upgrade Features, Services, Applications and Solutions**, and then select **OK**.
 
@@ -119,7 +119,7 @@ monikerRange: ">=sql-server-2016"
 
     1. Select **Yes** to continue.
 
-    1. Upgrading solutions and features in the farm can take several minutes to complete. During this time, connection requests for [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data **will fail** with errors similar to "**Unable to refresh data**" or "**An error has occurred trying to perform the requested action. Please try again**." After upgrade is finished, the server will become available, and these errors will no longer occur.
+    1. Upgrading solutions and features in the farm can take several minutes to complete. During this time, connection requests for [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] data **will fail** with errors similar to "**Unable to refresh data**" or "**An error has occurred trying to perform the requested action. Please try again**." After upgrade is finished, the server will become available, and these errors will no longer occur.
 
      For more information, see the following:
 
@@ -131,11 +131,11 @@ monikerRange: ">=sql-server-2016"
 
     -   [PowerShell Reference for Power Pivot for SharePoint](/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)
 
-1. Verify that upgrade succeeded by performing the post-upgrade steps and by checking the version of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] servers in the farm. For more information, see [Post-upgrade verification tasks](#verify) in this article and the following section.
+1. Verify that upgrade succeeded by performing the post-upgrade steps and by checking the version of [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] servers in the farm. For more information, see [Post-upgrade verification tasks](#verify) in this article and the following section.
 
 ## <a id="bkmk_uprgade_sharepoint2010"></a> Upgrade an Existing SharePoint 2010 Farm
 
- To upgrade [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] deployed in SharePoint 2010, do the following:
+ To upgrade [!INCLUDE[power-pivot-sharepoint-md](../../includes/power-pivot-sharepoint-md.md)] deployed in SharePoint 2010, do the following:
 
  :::image type="content" source="media/upgrade-power-pivot-for-sharepoint/as-power-pivot-upgrade-flow-sharepoint-2010.png" alt-text="Powerpivot for Sharepoint 2010 upgrade.":::
 
@@ -147,33 +147,33 @@ monikerRange: ">=sql-server-2016"
     Get-Service | where {$_.displayname -like "*SharePoint*"}
     ```
 
-1. Verify the **SharePoint** services **SQL Server Analysis Services** and **SQL Server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Service** are started in SharePoint Central Administration or use the following PowerShell command:
+1. Verify the **SharePoint** services **SQL Server Analysis Services** and **SQL Server [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] System Service** are started in SharePoint Central Administration or use the following PowerShell command:
 
     ```
     get-SPserviceinstance | where {$_.typename -like "*sql*"}
     ```
 
-1. Verify the **Windows** service **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** is running.
+1. Verify the **Windows** service **SQL Server Analysis Services ([!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)])** is running.
 
     ```
     Get-Service | where {$_.displayname -like "*powerpivot*"}
     ```
 
-1. **Run [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Setup** on the first SharePoint application server that runs the **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** Windows service to upgrade the POWERPIVOT instance. On the Installation page of the SQL Server Setup Wizard, choose the upgrade option. For more information, see [Upgrade to SQL Server 2016 Using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md).
+1. **Run [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Setup** on the first SharePoint application server that runs the **SQL Server Analysis Services ([!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)])** Windows service to upgrade the POWERPIVOT instance. On the Installation page of the SQL Server Setup Wizard, choose the upgrade option. For more information, see [Upgrade to SQL Server 2016 Using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md).
 
 1. **Restart the server** before running the configuration tool. This step ensures that any updates or prerequisites installed by SQL Server Setup are fully configured on the system.
 
-1. **Run the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Configuration Tool** on the first SharePoint application server that runs SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) service to upgrade the solutions and Web services in SharePoint. You can't use Central Administration for this step.
+1. **Run the [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] Configuration Tool** on the first SharePoint application server that runs SQL Server Analysis Services ([!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)]) service to upgrade the solutions and Web services in SharePoint. You can't use Central Administration for this step.
 
-    1. On the **Start** menu, point to **All Programs**, select [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], select **Configuration Tools**, and then select **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Configuration Tool**. This tool is listed only when [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] is installed on the local server.
+    1. On the **Start** menu, point to **All Programs**, select [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], select **Configuration Tools**, and then select **[!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] Configuration Tool**. This tool is listed only when [!INCLUDE[power-pivot-sharepoint-md](../../includes/power-pivot-sharepoint-md.md)] is installed on the local server.
 
-    1. At startup, the configuration tool checks the upgrade status of the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] farm solution and [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] web application solutions. If older versions of these solutions are detected, you'll see the message "Newer versions of the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] solution files have been detected. elect the upgrade option to upgrade your farm." Select **OK** to close the message.
+    1. At startup, the configuration tool checks the upgrade status of the [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] farm solution and [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] web application solutions. If older versions of these solutions are detected, you'll see the message "Newer versions of the [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] solution files have been detected. elect the upgrade option to upgrade your farm." Select **OK** to close the message.
 
     1. Select **Upgrade Features, Services, Applications and Solutions**, and then select **OK** to continue.
 
-    1. The following warning appears: "Workbooks in the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Management Dashboard are about to be upgraded to the latest version. Any customizations you made to the existing workbooks will be lost. Do you want to continue?"
+    1. The following warning appears: "Workbooks in the [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] Management Dashboard are about to be upgraded to the latest version. Any customizations you made to the existing workbooks will be lost. Do you want to continue?"
 
-         This warning refers to workbooks in the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Management Dashboard that report on data refresh activity. If you customized these workbooks, any changes you made to those workbooks will be lost when existing files are replaced with newer versions.
+         This warning refers to workbooks in the [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] Management Dashboard that report on data refresh activity. If you customized these workbooks, any changes you made to those workbooks will be lost when existing files are replaced with newer versions.
 
          Select **Yes** to overwrite the workbooks with newer versions. Otherwise,select **No** to return to the home page. Save the workbooks to a different location so that you have a copy, and then return to this step when you're ready to continue.
 
@@ -196,11 +196,11 @@ monikerRange: ">=sql-server-2016"
 
     1. Select **Yes** to continue.
 
-    1. Upgrading solutions and features in the farm can take several minutes to complete. During this time, connection requests for [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data will fail with errors like "Unable to refresh data" or "An error has occurred trying to perform the requested action. Try again." After upgrade is finished, the server will become available, and these errors will no longer occur.
+    1. Upgrading solutions and features in the farm can take several minutes to complete. During this time, connection requests for [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] data will fail with errors like "Unable to refresh data" or "An error has occurred trying to perform the requested action. Try again." After upgrade is finished, the server will become available, and these errors will no longer occur.
 
-1. **Repeat the process** for each SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) service in the farm: 1) Run SQL Server setup 2) Run the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Configuration tool.
+1. **Repeat the process** for each SQL Server Analysis Services ([!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)]) service in the farm: 1) Run SQL Server setup 2) Run the [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] Configuration tool.
 
-1. Verify that upgrade succeeded by performing the post-upgrade steps and by checking the version of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] servers in the farm. For more information, see [Post-upgrade verification tasks](#verify) in this article and the following section.
+1. Verify that upgrade succeeded by performing the post-upgrade steps and by checking the version of [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] servers in the farm. For more information, see [Post-upgrade verification tasks](#verify) in this article and the following section.
 
 1. **Troubleshooting errors**
 
@@ -216,7 +216,7 @@ monikerRange: ">=sql-server-2016"
 
     1. Review existing deployments for the following information: **Type** is Retraction or Deployment, **File** is powerpivotwebapp.wsp or powerpivotfarm.wsp.
 
-    1. For deployments or retractions related to [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] solutions, copy the GUID value for **JobId** and then paste it into the following command (use the Mark, Copy, and Paste commands on the Shell's Edit menu to copy the GUID):
+    1. For deployments or retractions related to [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] solutions, copy the GUID value for **JobId** and then paste it into the following command (use the Mark, Copy, and Paste commands on the Shell's Edit menu to copy the GUID):
 
         ```
         Stsadm -o canceldeployment -id "<GUID>"
@@ -228,15 +228,15 @@ monikerRange: ">=sql-server-2016"
 
 ## <a id="bkmk_workbooks"></a> Workbooks
 
- Upgrading a server doesn't necessarily upgrade the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks that run on it, but older workbooks created in the previous version of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel will continue to work as before, using the features available in that release. Workbooks remain functional because an upgraded server has the version of the Analysis Services OLE DB provider that was part of the previous installation.
+ Upgrading a server doesn't necessarily upgrade the [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] workbooks that run on it, but older workbooks created in the previous version of [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] for Excel will continue to work as before, using the features available in that release. Workbooks remain functional because an upgraded server has the version of the Analysis Services OLE DB provider that was part of the previous installation.
 
 ## <a id="bkmk_datarefresh"></a> Data Refresh
 
- Upgrade will impact data refresh operations. Scheduled data refresh on the server is available only for workbooks that match the server version. If you're hosting workbooks from the previous version, data refresh might no longer work for those workbooks. To re-enable data refresh, you must upgrade the workbooks. You can upgrade each workbook manually in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel, or enable the auto-upgrade for data refresh feature in SharePoint 2010. Auto-upgrade will upgrade a workbook to the current version prior to running data refresh, allowing data refresh operations to remain on schedule.
+ Upgrade will impact data refresh operations. Scheduled data refresh on the server is available only for workbooks that match the server version. If you're hosting workbooks from the previous version, data refresh might no longer work for those workbooks. To re-enable data refresh, you must upgrade the workbooks. You can upgrade each workbook manually in [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] for Excel, or enable the auto-upgrade for data refresh feature in SharePoint 2010. Auto-upgrade will upgrade a workbook to the current version prior to running data refresh, allowing data refresh operations to remain on schedule.
 
 ## <a id="bkmk_verify_versions"></a> Verify the Versions of Power Pivot Components and Services
 
- All instances of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Service and Analysis Services must be the same version. To verify that all server components are at the same version, check version information for the following:
+ All instances of [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] System Service and Analysis Services must be the same version. To verify that all server components are at the same version, check version information for the following:
 
 ### Verify the version of Power Pivot Solutions and the Power Pivot System Service
 
@@ -250,11 +250,11 @@ Get-PowerPivotSystemService
 
 ### Verify the version of the Analysis Services Windows Service
 
- If you upgraded only some of your [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] servers in a SharePoint 2010 farm, the instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] on unupgraded servers will be older than the version expected in the farm. You'll need to upgrade all of your servers to the same version in order for them to be usable. Use one of the following methods to verify the version of the SQL Server Analysis Services ( [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) Windows service on each computer.
+ If you upgraded only some of your [!INCLUDE[power-pivot-sharepoint-md](../../includes/power-pivot-sharepoint-md.md)] servers in a SharePoint 2010 farm, the instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] on unupgraded servers will be older than the version expected in the farm. You'll need to upgrade all of your servers to the same version in order for them to be usable. Use one of the following methods to verify the version of the SQL Server Analysis Services ( [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)]) Windows service on each computer.
 
  **Windows File Explorer**:
 
-1. Navigate to the **Bin** folder for the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] instance. For example `C:\Program Files\Microsoft SQL Server\MSAS13.POWERPIVOT\OLAP\bin`.
+1. Navigate to the **Bin** folder for the [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] instance. For example `C:\Program Files\Microsoft SQL Server\MSAS13.POWERPIVOT\OLAP\bin`.
 
 1. Right-click `msmdsrv.exe`, and select **Properties**.
 
@@ -262,11 +262,11 @@ Get-PowerPivotSystemService
 
 1. [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] file version should be 13.00.\<major build>.\<minor build>.
 
-1. Verify that this number is identical to the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] solution and system service version.
+1. Verify that this number is identical to the [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] solution and system service version.
 
  **Service start information:**
 
- When the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] service starts, it writes version information into the Windows event log.
+ When the [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] service starts, it writes version information into the Windows event log.
 
 1. Run Windows `eventvwr`
 
@@ -298,11 +298,11 @@ Get-PowerPivotSystemService
 
 1. Select the name of the Excel Services service application, for example **ExcelServiceApp1**.
 
-1. Select **Trusted Data Providers**. You should see MSOLAP.5 (Microsoft OLE DB Provider for OLAP Services 11.0). If you upgraded your [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installation, you'll also see MSOLAP.4 from the previous version.
+1. Select **Trusted Data Providers**. You should see MSOLAP.5 (Microsoft OLE DB Provider for OLAP Services 11.0). If you upgraded your [!INCLUDE[power-pivot-sharepoint-md](../../includes/power-pivot-sharepoint-md.md)] installation, you'll also see MSOLAP.4 from the previous version.
 
 1. For more information, see [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](/analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services).
 
- MSOLAP.4 is described as the Microsoft OLE DB Provider for OLAP Services 10.0. This version might be the default version from [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] that is installed with Excel Services, or it might be the [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] version. The default version that SharePoint installs doesn't support [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data access. You must have the [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] version or later to connect to [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks on SharePoint. To verify you have the [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] version, use the instructions in the previous section that explain how to verify the version by viewing file properties.
+ MSOLAP.4 is described as the Microsoft OLE DB Provider for OLAP Services 10.0. This version might be the default version from [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] that is installed with Excel Services, or it might be the [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] version. The default version that SharePoint installs doesn't support [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] data access. You must have the [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] version or later to connect to [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] workbooks on SharePoint. To verify you have the [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] version, use the instructions in the previous section that explain how to verify the version by viewing file properties.
 
 ### Verify the ADOMD.NET Data Provider Version
 
@@ -316,23 +316,23 @@ Get-PowerPivotSystemService
 
 ## <a id="geminifarm"></a> Upgrade Multiple Power Pivot for SharePoint Servers in a SharePoint Farm
 
- In a multi-server topology that includes more than one [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] server, all server instances and components must be the same version. The server that runs the highest version of the software sets the level for all servers in the farm. If you upgrade just some of the servers, the ones that are running older versions of the software will become unavailable until they're also upgraded.
+ In a multi-server topology that includes more than one [!INCLUDE[power-pivot-sharepoint-md](../../includes/power-pivot-sharepoint-md.md)] server, all server instances and components must be the same version. The server that runs the highest version of the software sets the level for all servers in the farm. If you upgrade just some of the servers, the ones that are running older versions of the software will become unavailable until they're also upgraded.
 
  After you upgrade the first server, additional servers that aren't yet upgraded **will become unavailable**. Availability is restored after all servers run at the same level.
 
- SQL Server Setup upgrades the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] solution files in place on the physical computer, but to upgrade the solutions in use by the farm, you must use the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Configuration Tool described in a previous section of this article.
+ SQL Server Setup upgrades the [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] solution files in place on the physical computer, but to upgrade the solutions in use by the farm, you must use the [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] Configuration Tool described in a previous section of this article.
 
 ## <a id="qfe"></a> Apply a QFE to a Power Pivot instance in the farm
 
- Patching a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint server updates existing program files with a newer version that includes a fix for a specific problem. When applying a QFE to a multi-server topology, there's no primary server that you must begin with. You can start with any server as long as you apply the same QFE to the other [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] servers in the farm.
+ Patching a [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] for SharePoint server updates existing program files with a newer version that includes a fix for a specific problem. When applying a QFE to a multi-server topology, there's no primary server that you must begin with. You can start with any server as long as you apply the same QFE to the other [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] servers in the farm.
 
- When you apply the QFE, you must also perform a configuration step that updates the server version information in the farm configuration database. The version of the patched server becomes the new expected version for the farm. Until the QFE is applied and configured across all machines, the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint instances that don't have the QFE will be unavailable to handle requests for [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data.
+ When you apply the QFE, you must also perform a configuration step that updates the server version information in the farm configuration database. The version of the patched server becomes the new expected version for the farm. Until the QFE is applied and configured across all machines, the [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] for SharePoint instances that don't have the QFE will be unavailable to handle requests for [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] data.
 
  To ensure the QFE is applied and configured correctly, follow these instructions:
 
 1. Install the patch using the instructions that are provided with the QFE.
 
-1. Start the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Configuration Tool.
+1. Start the [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] Configuration Tool.
 
 1. Select **Upgrade Features, Services, Applications and Solutions**, and then select **OK**.
 
@@ -340,10 +340,10 @@ Get-PowerPivotSystemService
 
 1. Select **Run** to apply the actions.
 
-1. Repeat for additional [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint instances in the farm.
+1. Repeat for additional [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] for SharePoint instances in the farm.
 
     > [!IMPORTANT]  
-    >  In a multi-server deployment, be sure to both patch and configure each instance before continuing to the next machine. The [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Configuration Tool must complete the upgrade task for the current instance before you move on to the next instance.
+    >  In a multi-server deployment, be sure to both patch and configure each instance before continuing to the next machine. The [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] Configuration Tool must complete the upgrade task for the current instance before you move on to the next instance.
 
  To check version information for services in the farm, use the **Check product and patch installation status** page in the Upgrade and Patch Management section in Central Administration.
 
@@ -353,13 +353,13 @@ Get-PowerPivotSystemService
 
 |Task|Link|
 |----------|----------|
-|Verify the service is running on all computers that run [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint.|[Start or Stop a Power Pivot for SharePoint Server](/analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server)|
+|Verify the service is running on all computers that run [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] for SharePoint.|[Start or Stop a Power Pivot for SharePoint Server](/analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server)|
 |Verify feature activation at the site collection level.|[Activate Power Pivot Feature Integration for Site Collections in Central Administration](/analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca)|
-|Verify individual [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks are loading properly by opening a workbook and selecting on filters and slicers to initiate a query.|Check for the presence of cached files on the hard drive. A cached file confirms that the data file was loaded on that physical server. Look for cached files in the c:\Program Files\Microsoft SQL Server\MSAS13.POWERPIVOT\OLAP\Backup folder.|
+|Verify individual [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] workbooks are loading properly by opening a workbook and selecting on filters and slicers to initiate a query.|Check for the presence of cached files on the hard drive. A cached file confirms that the data file was loaded on that physical server. Look for cached files in the c:\Program Files\Microsoft SQL Server\MSAS13.POWERPIVOT\OLAP\Backup folder.|
 |Test data refresh on selected workbooks that are configured for data refresh.|The easiest way to test data refresh is to modify a data refresh schedule, choosing the **Also refresh as soon as possible** checkbox so that data refresh runs immediately. This step will determine whether data refresh is successful for the current workbook. Repeat these steps for other frequently used workbooks to ensure that data refresh is functional. For more information about scheduling data refresh, see [Schedule a Data Refresh (Power Pivot for SharePoint)](/sharepoint/administration/data-refresh-using-the-unattended-data-refresh-account).|
-|Over time, monitor the data refresh reports in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Management Dashboard to confirm there are no data refresh errors.|[Power Pivot Management Dashboard and Usage Data](/analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data)|
+|Over time, monitor the data refresh reports in [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] Management Dashboard to confirm there are no data refresh errors.|[Power Pivot Management Dashboard and Usage Data](/analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data)|
 
- For more information about how to configure [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] settings and features, see [Power Pivot Server Administration and Configuration in Central Administration](/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration).
+ For more information about how to configure [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] settings and features, see [Power Pivot Server Administration and Configuration in Central Administration](/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration).
 
  For step-by-step instructions that guide you through all of the post-installation configuration tasks, see [Initial Configuration (Power Pivot for SharePoint)](/sharepoint/administration/configure-power-pivot-for-sharepoint-2013).
 

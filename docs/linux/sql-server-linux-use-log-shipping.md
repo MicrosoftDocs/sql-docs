@@ -4,11 +4,10 @@ description: This tutorial shows a basic example of how to replicate a SQL Serve
 author: VanMSFT
 ms.author: vanto
 ms.date: 07/01/2020
-ms.topic: conceptual
 ms.service: sql
 ms.subservice: linux
-ms.custom:
-  - intro-get-started
+ms.topic: conceptual
+ms.custom: intro-get-started
 ---
 # Get started with Log Shipping on Linux
 

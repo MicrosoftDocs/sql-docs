@@ -1,18 +1,15 @@
 ---
+title: "MSSQLSERVER_18452"
 description: "MSSQLSERVER_18452"
-title: "MSSQLSERVER_18452 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "18456 (Database Engine error)"
-  - "18452 (Database Engine error)"
-ms.assetid: 21da332c-e81d-4dee-a9d2-95598911b3be
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "18456 (Database Engine error)"
+  - "18452 (Database Engine error)"
 ---
 # MSSQLSERVER_18452
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

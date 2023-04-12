@@ -20,7 +20,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
 
-  Modifies an external data source used to create an external table. The external data source can be Hadoop or Azure Blob Storage (WASBS) for SQL SERVER and Azure Blob Storage (WASBS) or Azure Data Lake storage (ABFSS/ADL) for [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].
+  Modifies an external data source used to create an external table. The external data source can be Hadoop or Azure Blob Storage (WASBS) for SQL SERVER and Azure Blob Storage (WASBS) or Azure Data Lake storage (ABFSS/ADL) for [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
  
  Starting in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], Hadoop external data sources are no longer supported. Also, Azure Blob Storage and Azure Data Lake Gen 2 prefixes changed, refer to the following table:
 
@@ -78,7 +78,7 @@ ALTER EXTERNAL DATA SOURCE data_source_name
  LOCATION = '\<prefix\>://\<path\>[:\<port\>]'
  Provides the connectivity protocol, path, and port to the external data source. See [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](create-external-data-source-transact-sql.md#location--prefixpathport) for valid location options.
 
- RESOURCE_MANAGER_LOCATION = '\<IP address;Port>' (Doesn't apply to [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)])
+ RESOURCE_MANAGER_LOCATION = '\<IP address;Port>' (Doesn't apply to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)])
  Specifies the Hadoop Resource Manager location. When specified, the query optimizer might choose to pre-process data for a PolyBase query by using Hadoop's computation capabilities. This is a cost-based decision. Called predicate pushdown, this can significantly reduce the volume of data transferred between Hadoop and SQL, and therefore improve query performance.
 
   CREDENTIAL = Credential_Name
@@ -118,7 +118,7 @@ ALTER EXTERNAL DATA SOURCE hadoop_eds SET
    CREDENTIAL = new_hadoop_user
     ;
 ```
- The following example alters the credential to a new LOCATION. This example is an external data source created for [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]. 
+ The following example alters the credential to a new LOCATION. This example is an external data source created for [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]. 
 
 ```sql  
 ALTER EXTERNAL DATA SOURCE AzureStorage_west SET

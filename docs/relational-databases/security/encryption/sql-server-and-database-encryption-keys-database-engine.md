@@ -1,17 +1,15 @@
 ---
 title: "SQL Server & database encryption keys"
-description: Learn about the service master key and database master key used by the SQL Server database engine to encrypt and secure data. 
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: vanto
-ms.subservice: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "keys [SQL Server], database encryption"
-ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
+description: Learn about the service master key and database master key used by the SQL Server database engine to encrypt and secure data.
 author: jaszymas
 ms.author: jaszymas
+ms.reviewer: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "keys [SQL Server], database encryption"
 ---
 # SQL Server and Database Encryption Keys (Database Engine)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -1,18 +1,16 @@
 ---
 title: "Administrative considerations for Oracle Publishers"
-description: Considerations for the administration of Oracle Publishers publishing changes to SQL Server subscribers. 
-ms.custom: seo-lt-2019
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Oracle publishing [SQL Server replication], administrative considerations"
-  - "administering replication, Oracle publishing"
-ms.assetid: cfd81fb5-419b-4a1b-97c4-be7c9d4ee289
+description: Considerations for the administration of Oracle Publishers publishing changes to SQL Server subscribers.
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "Oracle publishing [SQL Server replication], administrative considerations"
+  - "administering replication, Oracle publishing"
 ---
 # Administrative Considerations for Oracle Publishers
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -1,23 +1,20 @@
 ---
+title: "sys.fn_trace_gettable (Transact-SQL)"
 description: "sys.fn_trace_gettable (Transact-SQL)"
-title: "sys.fn_trace_gettable (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "fn_trace_gettable"
-  - "fn_trace_gettable_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "fn_trace_gettable function"
-  - "sys.fn_trace_gettable function"
-ms.assetid: c2590159-6ec5-4510-81ab-e935cc4216cd
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "06/10/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "fn_trace_gettable"
+  - "fn_trace_gettable_TSQL"
+helpviewer_keywords:
+  - "fn_trace_gettable function"
+  - "sys.fn_trace_gettable function"
+dev_langs:
+  - "TSQL"
 ---
 # sys.fn_trace_gettable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +24,7 @@ ms.author: randolphwest
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use Extended Events instead.  
    
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

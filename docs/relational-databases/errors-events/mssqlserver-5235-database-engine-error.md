@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_5235"
 description: "MSSQLSERVER_5235"
-title: "MSSQLSERVER_5235 | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/05/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "5235 (Database Engine error)"
-ms.assetid: 1aa7e6a5-7ccb-43c8-a1fd-d50e92e0a798
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "09/05/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "5235 (Database Engine error)"
 ---
 # MSSQLSERVER_5235
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

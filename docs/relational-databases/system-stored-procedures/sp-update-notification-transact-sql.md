@@ -1,22 +1,19 @@
 ---
+title: "sp_update_notification (Transact-SQL)"
 description: "sp_update_notification (Transact-SQL)"
-title: "sp_update_notification (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_update_notification_TSQL"
-  - "sp_update_notification"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_updatenotification"
-ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
 author: markingmyname
 ms.author: maghan
+ms.date: "08/09/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_update_notification_TSQL"
+  - "sp_update_notification"
+helpviewer_keywords:
+  - "sp_updatenotification"
+dev_langs:
+  - "TSQL"
 ---
 # sp_update_notification (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -24,7 +21,7 @@ ms.author: maghan
   Updates the notification method of an alert notification.  
 
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

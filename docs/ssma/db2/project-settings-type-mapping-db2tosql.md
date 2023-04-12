@@ -1,19 +1,15 @@
 ---
+title: "Project Settings (Type Mapping) (DB2ToSQL)"
 description: "Project Settings (Type Mapping) (DB2ToSQL)"
-title: "Project Settings (Type Mapping) (DB2ToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: cf426c69-6a8e-4d19-951d-6661d5ae2562
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
-    - "ssma.db2.typemappinggridview.f1"
-    - "ssma.db2.projectsettingtypemapping.f1"
-
+f1_keywords:
+  - "ssma.db2.typemappinggridview.f1"
+  - "ssma.db2.projectsettingtypemapping.f1"
 ---
 # Project Settings (Type Mapping) (DB2ToSQL)
 The Type Mapping page of the **Project Settings** dialog box contains settings that customize how SSMA converts DB2 data types into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types.  

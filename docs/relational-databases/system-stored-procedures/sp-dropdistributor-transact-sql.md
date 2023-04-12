@@ -1,29 +1,26 @@
 ---
+title: "sp_dropdistributor (Transact-SQL)"
 description: "sp_dropdistributor (Transact-SQL)"
-title: "sp_dropdistributor (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_dropdistributor"
-  - "sp_dropdistributor_TSQL"
-helpviewer_keywords: 
-  - "sp_dropdistributor"
-ms.assetid: 0644032f-5ff0-4718-8dde-321bc9967a03
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_dropdistributor"
+  - "sp_dropdistributor_TSQL"
+helpviewer_keywords:
+  - "sp_dropdistributor"
+dev_langs:
+  - "TSQL"
 ---
 # sp_dropdistributor (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Uninstalls the Distributor. This stored procedure is executed at the Distributor on any database except the distribution database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

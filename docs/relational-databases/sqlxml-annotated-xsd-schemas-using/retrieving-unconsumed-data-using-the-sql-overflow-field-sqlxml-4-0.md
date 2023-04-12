@@ -7,14 +7,12 @@ ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "unconsumed data"
   - "storing unconsumed data"
   - "retrieving unconsumed data"
   - "annotated XSD schemas, unconsumed data"
   - "overflow data [SQLXML]"
-ms.assetid: 8526998d-b47d-4a32-8dc2-7f50a8d11097
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Retrieving Unconsumed Data Using the sql:overflow-field (SQLXML 4.0)

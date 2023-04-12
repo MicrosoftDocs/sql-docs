@@ -1,19 +1,16 @@
 ---
+title: "Analysis Services Connection Manager"
 description: "Analysis Services Connection Manager"
-title: "Analysis Services Connection Manager | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: 01/25/2019
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "connections [Integration Services], Analysis Services"
   - "connection managers [Integration Services], Analysis Services"
   - "Analysis Services connection manager"
-ms.assetid: 9f9cadad-a1d0-4db5-98f5-df5dbbec1be4
-author: chugugrace
-ms.author: chugu
 ---
 # Analysis Services Connection Manager
 

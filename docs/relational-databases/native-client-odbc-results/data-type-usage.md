@@ -1,13 +1,13 @@
 ---
+title: "Data Type Usage"
 description: "Data Type Usage"
-title: "Data Type Usage | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/16/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ODBC data types"
   - "ODBC data types, about ODBC data types"
   - "SQL Server Native Client ODBC driver, result sets"
@@ -15,9 +15,6 @@ helpviewer_keywords:
   - "data types [ODBC]"
   - "SQL Server Native Client ODBC driver, data types"
   - "data types [ODBC], about data types"
-ms.assetid: 4f19b0d6-94ac-4a98-a121-57d38787864c
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Data Type Usage

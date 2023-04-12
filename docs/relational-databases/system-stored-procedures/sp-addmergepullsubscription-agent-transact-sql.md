@@ -1,22 +1,19 @@
 ---
+title: "sp_addmergepullsubscription_agent (Transact-SQL)"
 description: "sp_addmergepullsubscription_agent (Transact-SQL)"
-title: "sp_addmergepullsubscription_agent (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_addmergepullsubscription_agent"
-  - "sp_addmergepullsubscription_agent_TSQL"
-helpviewer_keywords: 
-  - "sp_addmergepullsubscription_agent"
-ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
 author: markingmyname
 ms.author: maghan
+ms.date: "03/16/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_addmergepullsubscription_agent"
+  - "sp_addmergepullsubscription_agent_TSQL"
+helpviewer_keywords:
+  - "sp_addmergepullsubscription_agent"
+dev_langs:
+  - "TSQL"
 ---
 # sp_addmergepullsubscription_agent (Transact-SQL)
 
@@ -24,7 +21,7 @@ ms.author: maghan
 
   Adds a new agent job used to schedule synchronization of a pull subscription to a merge publication. This stored procedure is executed at the Subscriber on the subscription database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

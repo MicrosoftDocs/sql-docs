@@ -1,16 +1,12 @@
 ---
-description: "Create Master Data Manager Web Service Proxy Classes"
 title: Create Master Data Manager Web Service Proxy Classes
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-
-ms.topic: "reference"
-ms.assetid: 8bdab026-a0c0-41f3-9d36-f3919c23247f
+description: "Create Master Data Manager Web Service Proxy Classes"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/17/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: "reference"
 ---
 # Create Master Data Manager Web Service Proxy Classes
 

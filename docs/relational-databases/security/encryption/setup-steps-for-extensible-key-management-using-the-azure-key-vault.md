@@ -4,11 +4,10 @@ description: Install and configure the SQL Server Connector for Azure Key Vault.
 author: Rupp29
 ms.author: arupp
 ms.reviewer: vanto, randolphwest
-ms.date: 10/05/2022
+ms.date: 01/26/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "Extensible Key Management"
   - "EKM, with key vault setup"
@@ -22,7 +21,7 @@ helpviewer_keywords:
 
 In this article, you install and configure the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector for Azure Key Vault.
 
-> [!NOTE]
+> [!NOTE]  
 > Extensible Key Management is [not supported](../../../linux/sql-server-linux-editions-and-components-2019.md#Unsupported) for SQL Server on Linux.
 
 ## Prerequisites
@@ -296,6 +295,8 @@ You can generate four types of keys in an Azure key vault that will work with SQ
   > [!IMPORTANT]  
   > For the SQL Server Connector, use only the characters a-z, A-Z, 0-9, and hyphens (-), with a 26-character limit.
   > Different key versions under the same key name in an Azure key vault don't work with the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector. To rotate an Azure key vault key that's being used by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], see the Key Rollover steps in the "A. Maintenance Instructions for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector" section of [SQL Server Connector Maintenance & Troubleshooting](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md).
+  >
+  > When rotating versions of the key, do not disable the version originally used to encrypt the database. SQL Server will be unable to recover the database (it will be in a 'recovery pending' state) and may generate a 'Crypto Exception' memory dump until the old version is enabled.
 
 ### Import an existing key
 
@@ -349,7 +350,7 @@ Id         : https://contosoekmkeyvault.vault.azure.net:443/
 Download the SQL Server Connector from the [Microsoft Download Center](https://go.microsoft.com/fwlink/p/?LinkId=521700). The download should be done by the administrator of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] computer.
 
 > [!NOTE]  
->
+>  
 > - SQL Server Connector versions 1.0.0.440 and older have been replaced and are no longer supported in production environments and using the instructions on the [SQL Server Connector Maintenance & Troubleshooting](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) page under [Upgrade of SQL Server Connector](sql-server-connector-maintenance-troubleshooting.md#upgrade-of--connector).
 > - Starting with version 1.0.3.0, the SQL Server Connector reports relevant error messages to the Windows event logs for troubleshooting.
 > - Starting with version 1.0.4.0, there is support for private Azure clouds, including Azure China, Azure Germany, and Azure Government.
@@ -367,12 +368,14 @@ The SQL Server Connector installation also allows you to optionally download sam
 
 To view error code explanations, configuration settings, or maintenance tasks for the SQL Server Connector, see:
 
-- [A. Maintenance Instructions for the SQL Server Connector](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixA)  
+- [A. Maintenance Instructions for the SQL Server Connector](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixA)
 - [C. Error Code Explanations for the SQL Server Connector](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixC)
 
 ## Step 4: Configure SQL Server
 
 For a note about the minimum permission levels needed for each action in this section, see [B. Frequently Asked Questions](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB).
+
+### Configure the `master` database
 
 1. Run **sqlcmd** or open [!INCLUDE [ssmanstudiofull-md](../../../includes/ssmanstudiofull-md.md)].
 
@@ -452,7 +455,10 @@ For a note about the minimum permission levels needed for each action in this se
 
    Whether you created a new key or imported an asymmetric key, as described in [Step 2: Create a key vault](#step-2-create-a-key-vault), you will need to open the key. Open it by providing your key name in the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] script.
 
-   - Replace `EKMSampleASYKey` with the name you'd like the key to have in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+     > [!IMPORTANT]  
+     > Be sure to first complete the Registry prerequisites for this step.
+
+   - Replace `EKMSampleASYKey` with the name you'd like the key to have in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
    - Replace `ContosoRSAKey0` with the name of your key in your Azure key vault.
 
    ```sql
@@ -471,10 +477,12 @@ For a note about the minimum permission levels needed for each action in this se
    CREATION_DISPOSITION = OPEN_EXISTING;
    ```
 
-   In the preceding example script, `1a4d3b9b393c4678831ccc60def75379` represents the specific version of the key that will be used. If you use this script, it doesn't matter if you update the key with a new version. The key version (for example) `1a4d3b9b393c4678831ccc60def75379` will always be used for database operations. For this scenario, you must complete two prerequisites:
+   In the preceding example script, `1a4d3b9b393c4678831ccc60def75379` represents the specific version of the key that will be used. If you use this script, it doesn't matter if you update the key with a new version. The key version (for example) `1a4d3b9b393c4678831ccc60def75379` will always be used for database operations.
 
-   1. Create a `SQL Server Cryptographic Provider` key on `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft`.
-   1. Delegate `Full Control` permissions on the `SQL Server Cryptographic Provider` key to the user account running the [!INCLUDE [ssdenoversion-md](../../../includes/ssdenoversion-md.md)] service.
+   For this scenario, you must complete two Registry prerequisites:
+
+   1. Create a `SQL Server Cryptographic Provider` registry key on `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft`.
+   1. Delegate `Full Control` permissions on the `SQL Server Cryptographic Provider` registry key to the user account running the [!INCLUDE [ssdenoversion-md](../../../includes/ssdenoversion-md.md)] service.
 
       > [!NOTE]  
       > If you use TDE with EKM or Azure Key Vault on a failover cluster instance, you must complete an additional step to add `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQL Server Cryptographic Provider` to the Cluster Registry Checkpoint routine, so the registry can sync across the nodes. Syncing facilitates database recovery after failover and key rotation.
@@ -507,11 +515,13 @@ For a note about the minimum permission levels needed for each action in this se
    ADD CREDENTIAL sysadmin_ekm_cred;
    ```
 
+### Configure the user database to be encrypted
+
 1. Create a test database that will be encrypted with the Azure key vault key.
 
    ```sql
    --Create a test database that will be encrypted with the Azure key vault key
-   CREATE DATABASE TestTDE
+   CREATE DATABASE TestTDE;
    ```
 
 1. Create a database encryption key by using the `ASYMMETRIC KEY` (`EKMSampleASYKey`).
@@ -536,37 +546,46 @@ For a note about the minimum permission levels needed for each action in this se
 
    ```sql
    -- CLEAN UP
-   USE master
-   ALTER DATABASE [TestTDE] SET SINGLE_USER WITH ROLLBACK IMMEDIATE
-   DROP DATABASE [TestTDE]
+   USE master;
+   GO
+   ALTER DATABASE [TestTDE] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+   DROP DATABASE [TestTDE];
+   GO
 
-   ALTER LOGIN [TDE_Login] DROP CREDENTIAL [sysadmin_ekm_cred]
-   DROP LOGIN [TDE_Login]
+   ALTER LOGIN [TDE_Login] DROP CREDENTIAL [sysadmin_ekm_cred];
+   DROP LOGIN [TDE_Login];
+   GO
 
-   DROP CREDENTIAL [sysadmin_ekm_cred]
+   DROP CREDENTIAL [sysadmin_ekm_cred];
+   GO
 
-   USE master
-   DROP ASYMMETRIC KEY [EKMSampleASYKey]
-   DROP CRYPTOGRAPHIC PROVIDER [AzureKeyVault_EKM]
+   USE master;
+   GO
+   DROP ASYMMETRIC KEY [EKMSampleASYKey];
+   DROP CRYPTOGRAPHIC PROVIDER [AzureKeyVault_EKM];
+   GO
    ```
 
-   If the credential has a client secret that is about to expire, a new secret can be assigned to the credential.
-
-   - Update the secret originally created in [Step 1: Set up an Azure AD service principal](#step-1-set-up-an-azure-ad-service-principal).
-
-      Alter the credential using the same identity and new secret using the following code:
-
-      ```sql
-      ALTER CREDENTIAL CREDName
-      WITH IDENTITY = 'Original Identity',
-      SECRET = 'New Secret';
-      ```
-
-   - Restart the SQL Server service.
-
-   - Steps 2 and 3 need to be done on all nodes of an availability group.
-
 For sample scripts, see the blog at [SQL Server Transparent Data Encryption and Extensible Key Management with Azure Key Vault](https://techcommunity.microsoft.com/t5/sql-server/intro-sql-server-transparent-data-encryption-and-extensible-key/ba-p/1427549).
+
+## Client secrets that are about to expire
+
+If the credential has a client secret that is about to expire, a new secret can be assigned to the credential.
+
+1. Update the secret originally created in [Step 1: Set up an Azure AD service principal](#step-1-set-up-an-azure-ad-service-principal).
+
+1. Alter the credential using the same identity and new secret using the following code. Replace `<New Secret>` with your new secret:
+
+   ```sql
+   ALTER CREDENTIAL sysadmin_ekm_cred
+   WITH IDENTITY = 'ContosoEKMKeyVault',
+   SECRET = '<New Secret>';
+   ```
+
+1. Restart the SQL Server service.
+
+> [!NOTE]  
+> If you are using EKM in an availability group (AG), you will need to alter the credential and restart the SQL Server service on all nodes of the AG.
 
 ## Next steps
 

@@ -1,21 +1,18 @@
 ---
+title: "Adding Tasks Programmatically"
 description: "Adding Tasks Programmatically"
-title: "Adding Tasks Programmatically | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services 
-ms.topic: "reference"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "tasks [Integration Services], packages"
-  - "adding package tasks"
-ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
 author: chugugrace
 ms.author: chugu
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "reference"
+helpviewer_keywords:
+  - "tasks [Integration Services], packages"
+  - "adding package tasks"
+dev_langs:
+  - "VB"
+  - "CSharp"
 ---
 # Adding Tasks Programmatically
 

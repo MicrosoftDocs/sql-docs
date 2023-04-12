@@ -1,15 +1,12 @@
 ---
+title: "Edit Type Mapping (AccessToSQL)"
 description: "Edit Type Mapping (AccessToSQL)"
-title: "Edit Type Mapping (AccessToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 7f9d9530-6c04-41d9-bbe7-d91820a30066
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Edit Type Mapping (AccessToSQL)
 The **Edit Type Mapping** dialog box lets you specify how types are mapped between the source and destination database objects.  

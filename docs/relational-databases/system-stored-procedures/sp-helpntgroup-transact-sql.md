@@ -1,29 +1,26 @@
 ---
+title: "sp_helpntgroup (Transact-SQL)"
 description: "sp_helpntgroup (Transact-SQL)"
-title: "sp_helpntgroup (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_helpntgroup"
-  - "sp_helpntgroup_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_helpntgroup"
-ms.assetid: 02b4f7c1-480a-436c-8bae-7a2488be45d2
 author: markingmyname
 ms.author: maghan
+ms.date: "06/10/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helpntgroup"
+  - "sp_helpntgroup_TSQL"
+helpviewer_keywords:
+  - "sp_helpntgroup"
+dev_langs:
+  - "TSQL"
 ---
 # sp_helpntgroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Reports information about Windows groups with accounts in the current database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

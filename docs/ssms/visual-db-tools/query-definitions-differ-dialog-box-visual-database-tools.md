@@ -1,20 +1,16 @@
 ---
-description: "Query Definitions Differ Dialog Box (Visual Database Tools)"
 title: Query Definitions Differ Dialog Box
-ms.custom: seo-lt-2019
+description: "Query Definitions Differ Dialog Box (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "vdtsql.chm:69639"
   - "vdtsql.chm:69640"
   - "vdt.dlgbox.querydefinitionsdiffer"
-ms.assetid: 90383473-2922-40e5-9682-3850849aa856
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Query Definitions Differ Dialog Box (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

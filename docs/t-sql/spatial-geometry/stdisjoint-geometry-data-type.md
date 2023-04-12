@@ -1,22 +1,19 @@
 ---
+title: "STDisjoint (geometry Data Type)"
 description: "STDisjoint (geometry Data Type)"
-title: "STDisjoint (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STDisjoint_TSQL"
   - "STDisjoint (geometry Data Type)"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STDisjoint (geometry Data Type)"
-ms.assetid: 90acdb21-e826-4d81-afe8-45a71f33282a
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STDisjoint (geometry Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

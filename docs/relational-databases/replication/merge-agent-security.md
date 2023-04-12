@@ -1,19 +1,17 @@
 ---
+title: "Merge Agent Security"
 description: "Merge Agent Security"
-title: "Merge Agent Security | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.security.MA.f1"
-helpviewer_keywords: 
-  - "Merge Agent Security dialog box"
-ms.assetid: 9b86171a-4381-4b39-869a-cdc161e7cd15
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.security.MA.f1"
+helpviewer_keywords:
+  - "Merge Agent Security dialog box"
 ---
 # Merge Agent Security
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

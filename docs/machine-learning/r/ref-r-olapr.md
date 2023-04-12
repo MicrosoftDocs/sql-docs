@@ -1,12 +1,12 @@
 ---
 title: olapR R package
 description: olapR is an R package from Microsoft used for MDX queries against a SQL Server Analysis Services OLAP cube. Functions do not support all MDX operations, but you can build queries that slice, dice, drilldown, rollup, and pivot on dimensions. The package is included in SQL Server Machine Learning Services and SQL Server 2016 R Services.
-ms.service: sql
-ms.subservice: machine-learning-services
-ms.date: 09/30/2021
-ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: 09/30/2021
+ms.service: sql
+ms.subservice: machine-learning-services
+ms.topic: how-to
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # olapR (R package in SQL Server Machine Learning Services)

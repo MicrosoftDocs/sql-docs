@@ -1,23 +1,20 @@
 ---
+title: "sp_addumpdevice (Transact-SQL)"
 description: "sp_addumpdevice (Transact-SQL)"
-title: "sp_addumpdevice (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_addumpdevice_TSQL"
-  - "sp_addumpdevice"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "backup devices [SQL Server], defining"
-  - "sp_addumpdevice"
-ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_addumpdevice_TSQL"
+  - "sp_addumpdevice"
+helpviewer_keywords:
+  - "backup devices [SQL Server], defining"
+  - "sp_addumpdevice"
+dev_langs:
+  - "TSQL"
 ---
 # sp_addumpdevice (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +23,7 @@ ms.author: maghan
 
 Adds a backup device to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

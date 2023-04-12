@@ -7,7 +7,6 @@ ms.date: 08/10/2022
 ms.service: sql
 ms.subservice: configuration
 ms.topic: reference
-ms.custom: contperf-fy20q4
 ---
 
 # Configure Windows service accounts and permissions
@@ -121,8 +120,21 @@ The following table lists the default service accounts used by setup when instal
 
 > [!IMPORTANT]  
 >
-> - Always use SQL Server tools such as SQL Server Configuration Manager to change the account used by the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] or SQL Server Agent services, or to change the password for the account. In addition to changing the account name, SQL Server Configuration Manager performs additional configuration such as updating the Windows local security store which protects the service master key for the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Other tools such as the Windows Services Control Manager can change the account name but Don't change all the required settings.
-> - For [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instances that you deploy in a SharePoint farm, always use SharePoint Central Administration to change the server accounts for [!INCLUDE[ssGeminiMTS](../../includes/ssgeminimts-md.md)] applications and the [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]. Associated settings and permissions are updated to use the new account information when you use Central Administration.
+> - Always use SQL Server tools such as SQL Server Configuration Manager to change the account used by the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] or SQL Server Agent services, or to change the password for the account. In addition to changing the account name, SQL Server Configuration Manager performs additional configuration such as updating the Windows local security store which protects the service master key for the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Other tools such as the Windows Services Control Manager can change the account name but doesn't change all the required settings. 
+> 
+>   If you change service accounts for any SQL service by using other means, it can lead to unexpected behavior or errors. For example, if you change SQL Agent service account to a domain account using Windows services applet, you may notice that SQL agent jobs that use Operating System (Cmdexec), Replication or SSIS job steps may fail with an error like the following:
+> 
+>   ```
+>   Executed as user : Domain\Account.
+>   The process could not be created for step Step Number of job Unique Job ID (reason: A required privilege is not held by the client). The step failed.
+>   ```
+>   To resolve this error, you should do the following using SQL Server Configuration Manager:
+> 
+>   1. Temporarily change the SQL Agent service account back to default virtual account (Default instance: NT Service\SQLSERVERAGENT. Named instance: NT Service\SQLAGENT$<instance_name>.)
+>   1. Restart  SQL Server Agent Service 
+>   1. Change the service account back to the desired domain account
+>   1. Restart SQL Server Agent service
+> - For [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instances that you deploy in a SharePoint farm, always use SharePoint Central Administration to change the server accounts for [!INCLUDE[power-pivot-service-md](../../includes/power-pivot-service-md.md)] applications and the [!INCLUDE[analysis-services-service-md](../../includes/analysis-services-service-md.md)]. Associated settings and permissions are updated to use the new account information when you use Central Administration.
 > - To change [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] options, use the Reporting Services Configuration Tool.
 
 ### <a id="New_Accounts"></a> Managed service accounts, group-managed service accounts, and virtual accounts
@@ -243,7 +255,7 @@ The following table shows permissions that SQL Server Setup requests for the per
 |---------------------------------------|------------------------------------------------------------|
 |**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> (All rights are granted to the per-service SID. Default instance: `NT SERVICE\MSSQLSERVER`. Named instance: `NT Service\MSSQL$<instance_name>`.)|**Log on as a service** (SeServiceLogonRight)<br /><br /> **Replace a process-level token** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Bypass traverse checking** (SeChangeNotifyPrivilege)<br /><br /> **Adjust memory quotas for a process** (SeIncreaseQuotaPrivilege)<br /><br /> Permission to start SQL Writer<br /><br /> Permission to read the Event Log service<br /><br /> Permission to read the Remote Procedure Call service|
 |**SQL Server Agent:** <sup>1</sup><br /><br /> (All rights are granted to the per-service SID. Default instance: `NT Service\SQLSERVERAGENT`. Named instance: `NT Service\SQLAGENT$<instance_name>`.)|**Log on as a service** (SeServiceLogonRight)<br /><br /> **Replace a process-level token** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Bypass traverse checking** (SeChangeNotifyPrivilege)<br /><br /> **Adjust memory quotas for a process** (SeIncreaseQuotaPrivilege)|
-|**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (All rights are granted to a local Windows group. Default instance: `SQLServerMSASUser$<computer_name>$MSSQLSERVER`. Named instance: `SQLServerMSASUser$<computer_name>$<instance_name>`. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] instance: `SQLServerMSASUser$<computer_name>$PowerPivot`.)|**Log on as a service** (SeServiceLogonRight)<br /><br /> For tabular only:<br /><br /> **Increase a process working set** (SeIncreaseWorkingSetPrivilege)<br /><br /> **Adjust memory quotas for a process** (SeIncreaseQuotaPrivilege)<br /><br /> **Lock pages in memory** (SeLockMemoryPrivilege) - this is needed only when paging is turned off entirely.<br /><br /> For failover cluster installations only:<br /><br /> **Increase scheduling priority** (SeIncreaseBasePriorityPrivilege)|
+|**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (All rights are granted to a local Windows group. Default instance: `SQLServerMSASUser$<computer_name>$MSSQLSERVER`. Named instance: `SQLServerMSASUser$<computer_name>$<instance_name>`. [!INCLUDE[power-pivot-sharepoint-md](../../includes/power-pivot-sharepoint-md.md)] instance: `SQLServerMSASUser$<computer_name>$PowerPivot`.)|**Log on as a service** (SeServiceLogonRight)<br /><br /> For tabular only:<br /><br /> **Increase a process working set** (SeIncreaseWorkingSetPrivilege)<br /><br /> **Adjust memory quotas for a process** (SeIncreaseQuotaPrivilege)<br /><br /> **Lock pages in memory** (SeLockMemoryPrivilege) - this is needed only when paging is turned off entirely.<br /><br /> For failover cluster installations only:<br /><br /> **Increase scheduling priority** (SeIncreaseBasePriorityPrivilege)|
 |**[!INCLUDE[ssRS](../../includes/ssrs.md)]:**<br /><br /> (All rights are granted to the per-service SID. Default instance: `NT SERVICE\ReportServer`. Named instance: `NT SERVICE\ReportServer$<instance_name>`.)|**Log on as a service** (SeServiceLogonRight)|
 |**[!INCLUDE[ssIS](../../includes/ssis-md.md)]:**<br /><br /> (All rights are granted to the per-service SID. Default instance and named instance: `NT SERVICE\MsDtsServer150`. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] doesn't have a separate process for a named instance.)|**Log on as a service** (SeServiceLogonRight)<br /><br /> Permission to write to application event log.<br /><br /> **Bypass traverse checking** (SeChangeNotifyPrivilege)<br /><br /> **Impersonate a client after authentication** (SeImpersonatePrivilege)|
 |**Full-text search:**<br /><br /> (All rights are granted to the per-service SID. Default instance: `NT Service\MSSQLFDLauncher`. Named instance: `NT Service\ MSSQLFDLauncher$<instance_name>`.)|**Log on as a service** (SeServiceLogonRight)<br /><br /> **Adjust memory quotas for a process** (SeIncreaseQuotaPrivilege)<br /><br /> **Bypass traverse checking** (SeChangeNotifyPrivilege)|
@@ -484,7 +496,7 @@ The account specified during setup is provisioned as a member of the **RSExecRol
 
 ### <a id="SSAS"></a> SSAS provisioning
 
-[!INCLUDE[ssAS](../../includes/ssas-md.md)] service account requirements vary depending on how you deploy the server. If you're installing [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], SQL Server Setup requires that you configure the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] service to run under a domain account. Domain accounts are required to support the managed account facility that is built into SharePoint. For this reason, SQL Server Setup doesn't provide a default service account, such as a virtual account, for a [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installation. For more information about provisioning [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint, see [Configure Power Pivot Service Accounts](/analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts).
+[!INCLUDE[ssAS](../../includes/ssas-md.md)] service account requirements vary depending on how you deploy the server. If you're installing [!INCLUDE[power-pivot-sharepoint-md](../../includes/power-pivot-sharepoint-md.md)], SQL Server Setup requires that you configure the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] service to run under a domain account. Domain accounts are required to support the managed account facility that is built into SharePoint. For this reason, SQL Server Setup doesn't provide a default service account, such as a virtual account, for a [!INCLUDE[power-pivot-sharepoint-md](../../includes/power-pivot-sharepoint-md.md)] installation. For more information about provisioning [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] for SharePoint, see [Configure Power Pivot Service Accounts](/analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts).
 
 For all other standalone [!INCLUDE[ssAS](../../includes/ssas-md.md)] installations, you can provision the service to run under a domain account, built-in system account, managed account, or virtual account. For more information about account provisioning, see [Configure Service Accounts &#40;Analysis Services&#41;](/analysis-services/instances/configure-service-accounts-analysis-services).
 
@@ -567,7 +579,7 @@ Instance-aware services in SQL Server include the following:
 
 - [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]
 
-   Analysis Services in SharePoint integrated mode runs as '[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]' as a single, named instance. The instance name is fixed. You can't specify a different name. You can install only one instance of Analysis Services running as '[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]' on each physical server.
+   Analysis Services in SharePoint integrated mode runs as '[!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)]' as a single, named instance. The instance name is fixed. You can't specify a different name. You can install only one instance of Analysis Services running as '[!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)]' on each physical server.
 
 - [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
 - Full-text search

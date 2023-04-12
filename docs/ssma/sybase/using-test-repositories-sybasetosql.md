@@ -1,17 +1,14 @@
 ---
+title: "Using Test Repositories (SybaseToSQL)"
 description: "Using Test Repositories (SybaseToSQL)"
-title: "Using Test Repositories (SybaseToSQL) | Microsoft Docs"
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "04/29/2021"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: ssma
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Tester Component,Test Repositories"
-ms.assetid: c359c25c-db2a-4a20-afa9-62d87a62df72
-author: cpichuka 
-ms.author: cpichuka 
 ---
 
 # Using Test Repositories (SybaseToSQL)

@@ -1,13 +1,13 @@
 ---
 title: "Work with multiple versions and instances"
 description: You can install multiple instances of SQL Server or install SQL Server on a computer where earlier SQL Server versions are already installed.
-ms.custom: "seo-lt-2019"
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "12/13/2019"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: install
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "concurrent installations [SQL Server]"
   - "versions [SQL Server], multiple"
   - "side-by-side installations [SQL Server]"
@@ -17,9 +17,6 @@ helpviewer_keywords:
   - "64-bit edition [SQL Server]"
   - "32-bit edition [SQL Server]"
   - "editions [SQL Server], side-by-side installations"
-ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # Work with multiple versions and instances of SQL Server
 

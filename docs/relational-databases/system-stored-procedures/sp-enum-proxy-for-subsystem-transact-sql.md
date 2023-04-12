@@ -1,22 +1,19 @@
 ---
+title: "sp_enum_proxy_for_subsystem (Transact-SQL)"
 description: "sp_enum_proxy_for_subsystem (Transact-SQL)"
-title: "sp_enum_proxy_for_subsystem (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_enum_proxy_for_subsystem_TSQL"
   - "sp_enum_proxy_for_subsystem"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_enum_proxy_for_subsystems"
-ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
-ms.author: vanto
-author: VanMSFT
+dev_langs:
+  - "TSQL"
 ---
 # sp_enum_proxy_for_subsystem (Transact-SQL)
 
@@ -24,7 +21,7 @@ author: VanMSFT
 
   Lists permissions for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxies to access subsystems.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

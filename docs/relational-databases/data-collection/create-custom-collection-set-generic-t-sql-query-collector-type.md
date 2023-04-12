@@ -1,18 +1,15 @@
 ---
-description: "Create Custom Collection Set - Generic T-SQL Query Collector Type"
 title: "Create Custom Collection Set - Generic T-SQL Query Collector Type"
-ms.date: 06/03/2020
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "T-SQL Query collector type"
-  - "collection sets [SQL Server], creating custom"
-ms.assetid: 6b06db5b-cfdc-4ce0-addd-ec643460605b
+description: "Create Custom Collection Set - Generic T-SQL Query Collector Type"
 author: MashaMSFT
 ms.author: mathoma
-ms.custom: "seo-lt-2019"
+ms.date: 06/03/2020
+ms.service: sql
+ms.subservice: supportability
+ms.topic: conceptual
+helpviewer_keywords:
+  - "T-SQL Query collector type"
+  - "collection sets [SQL Server], creating custom"
 ---
 # Create Custom Collection Set - Generic T-SQL Query Collector Type
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

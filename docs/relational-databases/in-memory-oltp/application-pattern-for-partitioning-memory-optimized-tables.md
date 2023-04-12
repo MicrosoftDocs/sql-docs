@@ -7,10 +7,6 @@ ms.date: 05/03/2020
 ms.service: sql
 ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.custom:
-  - "seo-dt-2019"
-  - "issue-PR=4700-14820"
-ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Application Pattern for Partitioning Memory-Optimized Tables

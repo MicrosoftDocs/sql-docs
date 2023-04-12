@@ -7,10 +7,8 @@ ms.date: 01/11/2019
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "element does not map [SQLXML]"
-ms.assetid: 940eea1b-54f5-445f-b844-c894d9f3941b
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating Constant Elements Using sql:is-constant (SQLXML 4.0)

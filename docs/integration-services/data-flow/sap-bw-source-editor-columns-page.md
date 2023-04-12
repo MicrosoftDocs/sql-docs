@@ -1,17 +1,14 @@
 ---
+title: "SAP BW Source Editor (Columns Page)"
 description: "SAP BW Source Editor (Columns Page)"
-title: "SAP BW Source Editor (Columns Page) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.designer.sapbwsource.columns.f1"
-ms.assetid: c2ec8bb7-be9b-4783-ad88-32512de784b0
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.designer.sapbwsource.columns.f1"
 ---
 # SAP BW Source Editor (Columns Page)
 

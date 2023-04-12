@@ -1,19 +1,17 @@
 ---
 title: "Create subscription for non-SQL Subscriber"
-description: Describes how to create a subscription for a non-SQL Server Subscriber in SQL Server using SQL Server Management Studio (SSMS) or Transact-SQL (T-SQL). 
-ms.custom: seo-lt-2019
+description: Describes how to create a subscription for a non-SQL Server Subscriber in SQL Server using SQL Server Management Studio (SSMS) or Transact-SQL (T-SQL).
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/17/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "subscriptions [SQL Server replication], non-SQL Server Subscribers"
   - "Subscribers [SQL Server replication], non-SQL Server Subscribers"
   - "non-SQL Server Subscribers, subscriptions"
-ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Create a Subscription for a Non-SQL Server Subscriber
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -175,7 +173,7 @@ ms.author: "mathoma"
     -   A schedule for the Distribution Agent job for this subscription. For more information, see [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
     > [!IMPORTANT]  
-    >  When creating a push subscription at a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  When creating a push subscription at a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/configure-sql-server-encryption.md).  
   
 ## See Also  
  [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)   
@@ -183,5 +181,3 @@ ms.author: "mathoma"
  [Other Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/other-non-sql-server-subscribers.md)   
  [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
-  
-  

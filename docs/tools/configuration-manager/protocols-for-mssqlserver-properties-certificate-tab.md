@@ -1,19 +1,16 @@
 ---
 title: "Protocols for MSSQLSERVER Properties (Certificate Tab)"
 description: Select a certificate for SQL Server, or view certificate properties by using the Certificate tab on the Protocols for MSSQLSERVER Properties dialog box.
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: tools-other
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.computermgr.cert.general.f1"
-helpviewer_keywords: 
-  - "MSSQLSERVER property protocols"
-ms.assetid: 776addd6-25f3-4875-9a71-064035787090
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: tools-other
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.computermgr.cert.general.f1"
+helpviewer_keywords:
+  - "MSSQLSERVER property protocols"
 monikerRange: ">=sql-server-2016"
 ---
 # Protocols for MSSQLSERVER Properties (Certificate Tab)

@@ -1,29 +1,19 @@
 ---
+title: "SQLDescribeParam Function"
 description: "SQLDescribeParam Function"
-title: "SQLDescribeParam Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/18/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLDescribeParam"
-apilocation: 
-  - "sqlsrv32.dll"
-  - "odbc32.dll"
-  - "Msodbcsql11.dll"
-  - "Sqlncli10.dll"
-  - "Sqlncli11.dll"
-  - "Sqlncli11e.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLDescribeParam"
-helpviewer_keywords: 
-  - "SQLDescribeParam function [ODBC]"
-ms.assetid: 1f5b63c4-2f3e-44da-b155-876405302281
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "07/18/2019"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLDescribeParam"
+helpviewer_keywords:
+  - "SQLDescribeParam function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLDescribeParam"
+apitype: "dllExport"
 ---
 # SQLDescribeParam Function
 **Conformance**  

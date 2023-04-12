@@ -1,18 +1,16 @@
 ---
+title: "Article Options for Transactional Replication"
 description: "Article Options for Transactional Replication"
-title: "Article Options for Transactional Replication | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "articles [SQL Server replication], transactional replication options"
-  - "transactional replication, article options"
-ms.assetid: 3469b185-0ea5-4690-a71c-717230d886b6
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "articles [SQL Server replication], transactional replication options"
+  - "transactional replication, article options"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Article Options for Transactional Replication

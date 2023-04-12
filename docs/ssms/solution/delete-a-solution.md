@@ -1,19 +1,16 @@
 ---
-description: "Delete a Solution"
 title: "Delete a Solution"
-ms.custom: seo-lt-2019
+description: "Delete a Solution"
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "removing solutions"
   - "solutions [SQL Server Management Studio], deleting"
   - "deleting solutions"
-ms.assetid: 750bb2ac-4f69-4c8d-9db5-3f33837b6dff
-author: "markingmyname"
-ms.author: "maghan"
 ---
 # Delete a Solution
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.assemblies catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: e321753f-293f-42ab-b225-d118713df40b
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.assemblies (Transact-SQL)

@@ -1,29 +1,26 @@
 ---
+title: "sp_revoke_login_from_proxy (Transact-SQL)"
 description: "sp_revoke_login_from_proxy (Transact-SQL)"
-title: "sp_revoke_login_from_proxy (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_revoke_login_from_proxy_TSQL"
-  - "sp_revoke_login_from_proxy"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_revoke_login_from_proxy"
-ms.assetid: e4546c13-9fba-4bab-8b42-d6f18b33ec25
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_revoke_login_from_proxy_TSQL"
+  - "sp_revoke_login_from_proxy"
+helpviewer_keywords:
+  - "sp_revoke_login_from_proxy"
+dev_langs:
+  - "TSQL"
 ---
 # sp_revoke_login_from_proxy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Removes access to a proxy for a security principal.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

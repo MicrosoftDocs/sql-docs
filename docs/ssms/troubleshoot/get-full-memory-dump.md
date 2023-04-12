@@ -1,16 +1,13 @@
 ---
-description: "Get Full Memory Dump"
 title: Get Full Memory Dump to troubleshoot SSMS
-Description: Capture diagnostic information from SQL Server Management Studio (SSMS) so you can troubleshoot a crash or an unresponsive system.
-ms.service: sql
-ms.subservice: ssms
-ms.topic: conceptual
-ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
+description: "Get Full Memory Dump"
 author: markingmyname
 ms.author: maghan
 ms.reviewer: drskwier
-ms.custom: seo-lt-2019
 ms.date: 05/17/2019
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
 ---
 
 # Get Full Memory Dump

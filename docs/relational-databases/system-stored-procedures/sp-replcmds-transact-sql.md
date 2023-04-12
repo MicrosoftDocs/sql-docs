@@ -1,22 +1,19 @@
 ---
+title: "sp_replcmds (Transact-SQL)"
 description: "sp_replcmds (Transact-SQL)"
-title: "sp_replcmds (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_replcmds_TSQL"
-  - "sp_replcmds"
-helpviewer_keywords: 
-  - "sp_replcmds"
-ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_replcmds_TSQL"
+  - "sp_replcmds"
+helpviewer_keywords:
+  - "sp_replcmds"
+dev_langs:
+  - "TSQL"
 ---
 # sp_replcmds (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -26,7 +23,7 @@ ms.author: maghan
 > [!IMPORTANT]  
 >  The **sp_replcmds** procedure should be run only to troubleshoot problems with replication.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

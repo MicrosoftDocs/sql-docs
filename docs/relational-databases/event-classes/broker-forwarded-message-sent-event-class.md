@@ -1,17 +1,14 @@
 ---
+title: "Broker:Forwarded Message Sent Event Class"
 description: "Broker:Forwarded Message Sent Event Class"
-title: "Broker:Forwarded Message Sent Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/24/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "Broker:Forwarded Message Sent event class"
-ms.assetid: d0ef74d9-a4ef-4918-aa21-6b267e85569f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "05/24/2019"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "Broker:Forwarded Message Sent event class"
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Broker:Forwarded Message Sent Event Class

@@ -1,17 +1,14 @@
 ---
+title: "SAP BW Source Editor (Advanced Page)"
 description: "SAP BW Source Editor (Advanced Page)"
-title: "SAP BW Source Editor (Advanced Page) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.designer.sapbwsource.advanced.f1"
-ms.assetid: 44f3c991-9e8f-4126-a9a2-2d9da779fb11
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.designer.sapbwsource.advanced.f1"
 ---
 # SAP BW Source Editor (Advanced Page)
 

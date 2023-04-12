@@ -1,22 +1,19 @@
 ---
+title: "sp_help_log_shipping_secondary_database (Transact-SQL)"
 description: "sp_help_log_shipping_secondary_database (Transact-SQL)"
-title: "sp_help_log_shipping_secondary_database (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/02/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_help_log_shipping_secondary_database"
-  - "sp_help_log_shipping_secondary_database_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_help_log_shipping_secondary_database"
-ms.assetid: 11ce42ca-d3f1-44c8-9cac-214ca8896b9a
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "08/02/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_help_log_shipping_secondary_database"
+  - "sp_help_log_shipping_secondary_database_TSQL"
+helpviewer_keywords:
+  - "sp_help_log_shipping_secondary_database"
+dev_langs:
+  - "TSQL"
 ---
 # sp_help_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -25,7 +22,7 @@ ms.author: mathoma
   
 
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

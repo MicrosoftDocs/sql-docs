@@ -7,7 +7,6 @@ ms.date: 11/02/2022
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: tutorial
-ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 # Tutorial: Create partition-based models in R on SQL Server

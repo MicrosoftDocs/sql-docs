@@ -1,13 +1,14 @@
 ---
-title: "Publish Data and Database Objects | Microsoft Docs"
+title: "Publish Data and Database Objects"
 description: This article summarizes the tables and other database objects you can publish for replication in SQL Server.
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "user-defined types [SQL Server replication]"
   - "articles [SQL Server replication], dropping"
   - "objects [SQL Server replication]"
@@ -38,9 +39,6 @@ helpviewer_keywords:
   - "articles [SQL Server replication], adding"
   - "publications [SQL Server replication], modifying"
   - "user-defined functions [SQL Server replication]"
-ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Publish Data and Database Objects

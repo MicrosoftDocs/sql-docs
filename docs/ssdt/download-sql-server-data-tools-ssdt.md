@@ -1,15 +1,17 @@
 ---
 title: Download SQL Server Data Tools (SSDT)
 description: "Learn about SQL Server Data Tools (SSDT). See how to install this database development tool set with Visual Studio 2019 and Visual Studio 2017."
-ms.service: sql
-ms.subservice: ssdt
-ms.topic: conceptual
-keywords: "install ssdt, download ssdt, latest ssdt"
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
-ms.custom: seo-lt-2019
 ms.date: 12/14/2022
+ms.service: sql
+ms.subservice: ssdt
+ms.topic: conceptual
+keywords:
+  - install ssdt
+  - download ssdt
+  - latest ssdt
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=azuresqldb-mi-current"
 ---
 
@@ -54,7 +56,7 @@ For Analysis Services, Integration Services, or Reporting Services projects, you
 
 |Project Templates|SQL Platforms Supported|
 |-------------------|--------------------|
-|Relational databases| [!INCLUDE [sssql16-md](../includes/sssql16-md.md)] - [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]<br /><br />Azure SQL Database, Managed Instance<br /><br />Azure Synapse Analytics (dedicated pools only)|
+|Relational databases| [!INCLUDE [sssql16-md](../includes/sssql16-md.md)] - [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]<br /><br />Azure SQL Database, Azure SQL Managed Instance<br /><br />Azure Synapse Analytics (dedicated pools only)|
 |Analysis Services models<br /><br />Reporting Services reports | SQL Server 2016 - SQL Server 2022|
 |Integration Services packages| SQL Server 2019 - SQL Server 2022 |
 
@@ -104,7 +106,7 @@ For more details you can follow the [Step-by-Step Guidelines for Offline Install
 
 |Project Templates|SQL Platforms Supported|
 |-------------------|--------------------|
-|Relational databases| SQL Server 2012 - SQL Server 2019<br /><br />Azure SQL Database, Managed Instance<br /><br />Azure Synapse Analytics (dedicated pools only)|
+|Relational databases| SQL Server 2012 - SQL Server 2019<br /><br />Azure SQL Database, Azure SQL Managed Instance<br /><br />Azure Synapse Analytics (dedicated pools only)|
 |Analysis Services models<br /><br />Reporting Services reports | SQL Server 2008 - SQL Server 2019|
 |Integration Services packages| SQL Server 2012 - SQL Server 2019 |
 

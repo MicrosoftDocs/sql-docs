@@ -1,17 +1,15 @@
 ---
+title: "Publication Properties, Subscription Options"
 description: "Publication Properties, Subscription Options"
-title: "Publication Properties, Subscription Options | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.newpubwizard.pubproperties.subscriptionoptions.f1"
-ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.newpubwizard.pubproperties.subscriptionoptions.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Publication Properties, Subscription Options

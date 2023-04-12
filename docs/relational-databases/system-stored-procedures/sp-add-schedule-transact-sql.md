@@ -1,29 +1,26 @@
 ---
+title: "sp_add_schedule (Transact-SQL)"
 description: "sp_add_schedule (Transact-SQL)"
-title: "sp_add_schedule (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_add_schedule_TSQL"
-  - "sp_add_schedule"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_add_schedule"
-ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_add_schedule_TSQL"
+  - "sp_add_schedule"
+helpviewer_keywords:
+  - "sp_add_schedule"
+dev_langs:
+  - "TSQL"
 ---
 # sp_add_schedule (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Creates a schedule that can be used by any number of jobs.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

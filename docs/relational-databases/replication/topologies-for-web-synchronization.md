@@ -1,18 +1,16 @@
 ---
+title: "Topologies for Web Synchronization"
 description: "Topologies for Web Synchronization"
-title: "Topologies for Web Synchronization | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Web synchronization, topologies"
-  - "IIS server configuration [SQL Server replication]"
-ms.assetid: 59444faf-bcb6-4421-a3df-8715753e453b
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "Web synchronization, topologies"
+  - "IIS server configuration [SQL Server replication]"
 ---
 # Topologies for Web Synchronization
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

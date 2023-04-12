@@ -1,20 +1,18 @@
 ---
 title: "Dummy merge article update (Replication SP)"
 description: Use Transact-SQL replication stored procedures to perform a dummy update of a merge article used in merge replication.
-ms.custom: seo-lt-2019
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_mergedummyupdate"
-  - "dummy updates [SQL Server replication]"
-ms.assetid: 2f339210-4d85-4843-bd94-e86f7100d3ef
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "sp_mergedummyupdate"
+  - "dummy updates [SQL Server replication]"
+dev_langs:
+  - "TSQL"
 ---
 # Perform a Dummy Update for a Merge Article (Replication Transact-SQL Programming)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

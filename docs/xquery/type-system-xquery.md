@@ -1,15 +1,13 @@
 ---
-title: "Type System (XQuery) | Microsoft Docs"
+title: "Type System (XQuery)"
 description: Learn about the XQuery type system that includes built-in types of XML schema and types defined in the xpath-datatypes namespace.
-ms.custom: ""
+author: "rothja"
+ms.author: "jroth"
 ms.date: "08/10/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: xml
 ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sequence [XQuery]"
   - "type system [XQuery]"
   - "typed values [XQuery]"
@@ -20,9 +18,8 @@ helpviewer_keywords:
   - "XQuery, type system"
   - "built-in XML schema types [SQL Server]"
   - "xs prefix [XML in SQL Server]"
-ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
-author: "rothja"
-ms.author: "jroth"
+dev_langs:
+  - "XML"
 ---
 # Type System (XQuery)
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]

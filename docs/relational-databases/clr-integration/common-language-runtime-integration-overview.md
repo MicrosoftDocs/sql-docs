@@ -7,7 +7,6 @@ ms.date: "09/21/2021"
 ms.service: sql
 ms.subservice: clr
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "managed code [SQL Server]"
   - "common language runtime [SQL Server], about CLR integration"
@@ -16,7 +15,6 @@ helpviewer_keywords:
   - ".NET Framework [SQL Server], common language runtime"
   - "code access security [CLR integration]"
   - "managed code [SQL Server], CLR integration"
-ms.assetid: 7be9e644-36a2-48fc-9206-faf59fdff4d7
 ---
 # Common Language Runtime Integration
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -1,29 +1,26 @@
 ---
+title: "sp_changeqreader_agent (Transact-SQL)"
 description: "sp_changeqreader_agent (Transact-SQL)"
-title: "sp_changeqreader_agent (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_changeqreader_agent_TSQL"
-  - "sp_changeqreader_agent"
-helpviewer_keywords: 
-  - "sp_changeqreader_agent"
-ms.assetid: d3fe79c5-31ef-4565-bf38-b476b5fb16f7
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_changeqreader_agent_TSQL"
+  - "sp_changeqreader_agent"
+helpviewer_keywords:
+  - "sp_changeqreader_agent"
+dev_langs:
+  - "TSQL"
 ---
 # sp_changeqreader_agent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Changes security properties of a Queue Reader agent. This stored procedure is executed at the Distributor on the distribution database or at the Publisher on the publication database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

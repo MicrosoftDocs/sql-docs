@@ -1,17 +1,15 @@
 ---
 title: "Warnings (Transactional Publication Information)"
-description: Describes the 'Warnings' tab of the Transactional Publication Information dialog box. 
-ms.custom: seo-lt-2019
-ms.date: "03/07/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.monitor.publicationinfo.warningsandagents.tran.f1"
-ms.assetid: 4d4baf1d-d0a1-4d09-bec7-137811f43f09
+description: Describes the 'Warnings' tab of the Transactional Publication Information dialog box.
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/07/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.monitor.publicationinfo.warningsandagents.tran.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Publication Information, Warnings (Transactional Publication)

@@ -1,13 +1,13 @@
 ---
+title: "Integration Services Transformations"
 description: "Integration Services Transformations"
-title: "Integration Services Transformations | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "transformations [Integration Services], listed"
   - "transformations [Integration Services], types"
   - "transformations [Integration Services]"
@@ -18,9 +18,6 @@ helpviewer_keywords:
   - "custom transformations [Integration Services]"
   - "row transformations [Integration Services]"
   - "rowset transformations [Integration Services]"
-ms.assetid: c70c4f6e-82dd-4948-b923-fd5193f67f7e
-author: chugugrace
-ms.author: chugu
 ---
 # Integration Services Transformations
 

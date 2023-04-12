@@ -1,19 +1,16 @@
 ---
+title: "DBMS-Based Drivers"
 description: "DBMS-Based Drivers"
-title: "DBMS-Based Drivers | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "drivers [ODBC], DBMS-based drivers"
   - "DBMS-based drivers [ODBC]"
   - "ODBC architecture [ODBC], drivers"
-ms.assetid: e2208ee0-4cd6-4f0d-bb71-a0b54f7d9330
-author: David-Engel
-ms.author: v-davidengel
 ---
 # DBMS-Based Drivers
 DBMS-based drivers are used with data sources such as Oracle or SQL Server that provide a stand-alone database engine for the driver to use. These drivers access the physical data through the stand-alone engine; that is, they submit SQL statements to and retrieve results from the engine.  

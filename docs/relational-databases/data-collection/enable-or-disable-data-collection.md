@@ -1,18 +1,15 @@
 ---
+title: "Enable or Disable Data Collection"
 description: "Enable or Disable Data Collection"
-title: "Enable or Disable Data Collection | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "data collector [SQL Server], disabling"
-  - "data collector [SQL Server], enabling"
-ms.assetid: 0137971b-fb48-4a3e-822a-3df2b9bb09d7
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: conceptual
+helpviewer_keywords:
+  - "data collector [SQL Server], disabling"
+  - "data collector [SQL Server], enabling"
 ---
 # Enable or Disable Data Collection
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

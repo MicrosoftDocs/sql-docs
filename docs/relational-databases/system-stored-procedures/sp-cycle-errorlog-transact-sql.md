@@ -1,29 +1,26 @@
 ---
+title: "sp_cycle_errorlog (Transact-SQL)"
 description: "sp_cycle_errorlog (Transact-SQL)"
-title: "sp_cycle_errorlog (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_cycle_errorlog_TSQL"
-  - "sp_cycle_errorlog"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_cycle_errorlog"
-ms.assetid: 61a12cbf-78a3-4052-8604-3b29d07573fd
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_cycle_errorlog_TSQL"
+  - "sp_cycle_errorlog"
+helpviewer_keywords:
+  - "sp_cycle_errorlog"
+dev_langs:
+  - "TSQL"
 ---
 # sp_cycle_errorlog (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Closes the current error log file and cycles the error log extension numbers just like a server restart. The new error log contains version and copyright information and a line indicating that the new log has been created.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

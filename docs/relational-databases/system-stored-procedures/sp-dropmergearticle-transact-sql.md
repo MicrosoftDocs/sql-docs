@@ -1,29 +1,26 @@
 ---
+title: "sp_dropmergearticle (Transact-SQL)"
 description: "sp_dropmergearticle (Transact-SQL)"
-title: "sp_dropmergearticle (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/02/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_dropmergearticle"
-  - "sp_dropmergearticle_TSQL"
-helpviewer_keywords: 
-  - "sp_dropmergearticle"
-ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
 author: markingmyname
 ms.author: maghan
+ms.date: "05/02/2016"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_dropmergearticle"
+  - "sp_dropmergearticle_TSQL"
+helpviewer_keywords:
+  - "sp_dropmergearticle"
+dev_langs:
+  - "TSQL"
 ---
 # sp_dropmergearticle (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Removes an article from a merge publication. This stored procedure is executed at the Publisher on the publication database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

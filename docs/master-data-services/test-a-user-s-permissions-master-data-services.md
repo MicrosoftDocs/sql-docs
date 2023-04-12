@@ -1,15 +1,12 @@
 ---
-description: "Test a User's Permissions (Master Data Services)"
 title: Test a User's Permissions
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-ms.assetid: 83a03b85-ea7f-4b4a-b19b-f7eca534ffae
+description: "Test a User's Permissions (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
 ---
 # Test a User's Permissions (Master Data Services)
 

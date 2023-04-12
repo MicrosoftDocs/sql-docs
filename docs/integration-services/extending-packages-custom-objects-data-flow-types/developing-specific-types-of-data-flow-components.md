@@ -1,22 +1,19 @@
 ---
+title: "Developing Specific Types of Data Flow Components"
 description: "Developing Specific Types of Data Flow Components"
-title: "Developing Specific Types of Data Flow Components | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/06/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data flow task [Integration Services], components"
   - "components [Integration Services], data flow"
   - "data flow [Integration Services], components"
-ms.assetid: 348e219a-b8ff-425e-b9c6-811880101c54
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
+  - "CSharp"
 ---
 # Developing Specific Types of Data Flow Components
 

@@ -1,19 +1,16 @@
 ---
-description: "Set Encryption Options on Target Servers"
 title: "Set Encryption Options on Target Servers"
-ms.custom: seo-lt-2019
+description: "Set Encryption Options on Target Servers"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Agent, encryption"
   - "target servers [SQL Server], encryption"
   - "multiserver environments [SQL Server], setting encryption options on target servers"
-ms.assetid: 1a9fd539-e166-4ea8-9f21-ac400ca74dee
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Set Encryption Options on Target Servers
@@ -38,4 +35,4 @@ If **1** or **2** is specified, you must have TLS enabled on both the master and
 > [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
 ## See Also  
-[How to: Enable Encrypted Connections to the Database Engine (SQL Server Configuration Manager)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)  
+[How to: Enable Encrypted Connections to the Database Engine (SQL Server Configuration Manager)](../../database-engine/configure-windows/configure-sql-server-encryption.md)

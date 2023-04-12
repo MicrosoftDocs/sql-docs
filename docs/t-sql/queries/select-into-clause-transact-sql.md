@@ -1,22 +1,20 @@
 ---
+title: "INTO Clause (Transact-SQL)"
 description: "SELECT - INTO Clause (Transact-SQL)"
-title: "INTO Clause (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "05/23/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "INTO_TSQL"
   - "INSERT_INTO_TSQL"
   - "INSERT INTO"
   - "INTO"
   - "INTO clause"
   - "INTO_clause_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "copying data [SQL Server], into a new table"
   - "INTO clause"
   - "moving data, to a new table"
@@ -25,9 +23,8 @@ helpviewer_keywords:
   - "inserting rows"
   - "clauses [SQL Server], INTO"
   - "row additions [SQL Server], INTO clause"
-ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SELECT - INTO Clause (Transact-SQL)
@@ -35,7 +32,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 SELECT...INTO creates a new table in the default filegroup and inserts the resulting rows from the query into it. To view the complete SELECT syntax, see [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

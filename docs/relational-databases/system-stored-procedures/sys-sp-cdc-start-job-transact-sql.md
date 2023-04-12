@@ -1,31 +1,28 @@
 ---
+title: "sys.sp_cdc_start_job (Transact-SQL)"
 description: "sys.sp_cdc_start_job (Transact-SQL)"
-title: "sys.sp_cdc_start_job (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_cdc_start_job"
   - "sp_cdc_start_job_TSQL"
   - "sys.sp_cdc_start_job_TSQL"
   - "sys.sp_cdc_start_job"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_cdc_start_job"
-ms.assetid: cf443a67-7705-4799-9f39-0e3a6a8a0708
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # sys.sp_cdc_start_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Starts a change data capture cleanup or capture job for the current database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

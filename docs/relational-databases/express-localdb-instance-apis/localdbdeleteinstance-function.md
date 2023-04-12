@@ -1,20 +1,14 @@
 ---
+title: "LocalDBDeleteInstance Function"
 description: "LocalDBDeleteInstance Function"
-title: "LocalDBDeleteInstance Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-ms.topic: "reference"
-apiname: 
-  - "LocalDBDeleteInstance"
-apilocation: 
-  - "sqluserinstance.dll"
-apitype: "DLLExport"
-ms.assetid: 37cb2a7e-672a-4223-b6f3-a94d7b8d58cd
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.topic: "reference"
+apilocation: "sqluserinstance.dll"
+apiname: "LocalDBDeleteInstance"
+apitype: "DLLExport"
 ---
 # LocalDBDeleteInstance Function
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

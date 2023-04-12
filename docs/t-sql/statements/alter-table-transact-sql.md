@@ -8,7 +8,6 @@ ms.date: 07/25/2022
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "WAIT_AT_LOW_PRIORITY"
   - "ABORT_AFTER_WAIT"
@@ -78,7 +77,7 @@ Modifies a table definition by altering, adding, or dropping columns and constra
 >   - [Syntax](#syntax-for-memory-optimized-tables)
 >   - [Examples](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)
 
-For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+For more information about the syntax conventions, see [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ## Syntax for disk-based tables
 
@@ -1872,7 +1871,7 @@ DROP PERIOD FOR SYSTEM_TIME ;
 DROP TABLE DepartmentHistory ;
 ```
 
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 The following examples A through C use the `FactResellerSales` table in the [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] database.
 

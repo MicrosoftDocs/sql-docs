@@ -1,17 +1,15 @@
 ---
+title: "Performance Tuning for Oracle Publishers"
 description: "Performance Tuning for Oracle Publishers"
-title: "Performance Tuning for Oracle Publishers | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Oracle publishing [SQL Server replication], performance tuning"
-ms.assetid: 32c0b4ec-c166-45a3-b41e-38a30fd56813
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "Oracle publishing [SQL Server replication], performance tuning"
 ---
 # Performance Tuning for Oracle Publishers
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

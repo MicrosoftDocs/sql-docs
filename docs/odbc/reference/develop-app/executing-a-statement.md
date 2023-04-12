@@ -1,17 +1,14 @@
 ---
+title: "Executing a Statement"
 description: "Executing a Statement"
-title: "Executing a Statement | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQL statements [ODBC], executing"
-ms.assetid: e5f0d2ee-0453-4faf-b007-12978dd300a1
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQL statements [ODBC], executing"
 ---
 # Executing a Statement
 There are four ways to execute a statement, depending on when they are compiled (prepared) by the database engine and who defines them:  

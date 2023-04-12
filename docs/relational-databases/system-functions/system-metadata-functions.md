@@ -1,17 +1,14 @@
 ---
+title: "System Metadata Functions"
 description: "System Metadata Functions"
-title: "System Metadata Functions | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-ms.assetid: a6fb85b2-b010-4ca9-b65f-4402917076ea
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+dev_langs:
+  - "TSQL"
 ---
 # System Metadata Functions
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

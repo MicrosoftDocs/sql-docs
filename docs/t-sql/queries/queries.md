@@ -1,24 +1,21 @@
 ---
+title: "Queries"
 description: "Queries"
-title: "Queries | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: t-sql
-ms.topic: reference
-dev_langs: 
-  - "TSQL"
-ms.assetid: 5ff02a32-e8d3-479c-ae8b-07581e41f5f8
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/16/2017"
+ms.service: sql
+ms.subservice: t-sql
+ms.topic: reference
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Queries
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Data Manipulation Language (DML) is a vocabulary used to retrieve and work with data in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] and SQL Database. Most also work in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] (review each individual statement for details). Use these statements to add, modify, query, or remove data from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
+  Data Manipulation Language (DML) is a vocabulary used to retrieve and work with data in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] and SQL Database. Most also work in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] (review each individual statement for details). Use these statements to add, modify, query, or remove data from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
   
 ## In This Section  
  The following table lists the DML statements that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses.  

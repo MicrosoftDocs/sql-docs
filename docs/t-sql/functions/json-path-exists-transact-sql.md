@@ -8,7 +8,6 @@ ms.date: 08/09/2022
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: event-tier1-build-2022
 dev_langs:
   - "TSQL"
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-ver16 || >= sql-server-linux-ver16"
@@ -19,7 +18,7 @@ monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-ver
 
 Tests whether a specified SQL/JSON path exists in the input JSON string.
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 

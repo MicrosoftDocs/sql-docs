@@ -1,13 +1,13 @@
 ---
-title: "Identify Bottlenecks | Microsoft Docs"
+title: "Identify Bottlenecks"
 description: Learn about the causes of bottlenecks, such as insufficient resources and malfunctioning/incorrectly configured resources in SQL Server.
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: performance
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "resource bottlenecks [SQL Server]"
   - "database monitoring [SQL Server], bottlenecks"
   - "performance [SQL Server], bottlenecks"
@@ -18,9 +18,6 @@ helpviewer_keywords:
   - "server performance [SQL Server], bottlenecks"
   - "bottlenecks [SQL Server]"
   - "identifying bottlenecks [SQL Server]"
-ms.assetid: db079e65-ee80-4105-aec9-f8230d0d6635
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Identify Bottlenecks

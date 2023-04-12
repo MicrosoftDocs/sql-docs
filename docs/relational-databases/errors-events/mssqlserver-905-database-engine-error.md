@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_905"
 description: "MSSQLSERVER_905"
-title: "MSSQLSERVER_905 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "905 (Database Engine error)"
-ms.assetid: c828bb2e-e554-4f81-b76c-2b3740d2b944
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "905 (Database Engine error)"
 ---
 # MSSQLSERVER_905
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,21 +1,18 @@
 ---
+title: "Bulk Load Data by Using the SQL Server Destination"
 description: "Bulk Load Data by Using the SQL Server Destination"
-title: "Bulk Load Data by Using the SQL Server Destination | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server destination"
   - "loading data"
   - "destinations [Integration Services], SQL Server"
   - "inserting data"
   - "bulk load [Integration Services]"
-ms.assetid: 8f982f85-a82e-4e2d-9cd8-cd2f85402d8e
-author: chugugrace
-ms.author: chugu
 ---
 # Bulk Load Data by Using the SQL Server Destination
 

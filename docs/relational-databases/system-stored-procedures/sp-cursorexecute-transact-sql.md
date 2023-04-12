@@ -1,29 +1,26 @@
 ---
+title: "sp_cursorexecute (Transact-SQL)"
 description: "sp_cursorexecute (Transact-SQL)"
-title: "sp_cursorexecute (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_cursorexecute"
-  - "sp_cursorexecute_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_cursor_execute"
-ms.assetid: 6a204229-0a53-4617-a57e-93d4afbb71ac
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_cursorexecute"
+  - "sp_cursorexecute_TSQL"
+helpviewer_keywords:
+  - "sp_cursor_execute"
+dev_langs:
+  - "TSQL"
 ---
 # sp_cursorexecute (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Creates and populates a cursor based upon the execution plan created by sp_cursorprepare. This procedure, coupled with sp_cursorprepare, has the same function as sp_cursoropen, but is split into two phases. sp_cursorexecute is invoked by specifying ID =4 in a tabular data stream (TDS) packet.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -1,27 +1,24 @@
 ---
+title: "sp_get_redirected_publisher (Transact-SQL)"
 description: "sp_get_redirected_publisher (Transact-SQL)"
-title: "sp_get_redirected_publisher (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_get_redirected_publisher_TSQL"
-  - "sp_get_redirected_publisher"
-ms.assetid: d47a9ab5-f2cc-42a8-8be9-a33895ce44f0
 author: markingmyname
 ms.author: maghan
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_get_redirected_publisher_TSQL"
+  - "sp_get_redirected_publisher"
+dev_langs:
+  - "TSQL"
 ---
 # sp_get_redirected_publisher (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Used by replication agents to query a distributor to determine whether the original publisher has been redirected.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

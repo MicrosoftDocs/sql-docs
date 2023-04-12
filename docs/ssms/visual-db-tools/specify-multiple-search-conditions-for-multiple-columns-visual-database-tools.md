@@ -1,22 +1,18 @@
 ---
-description: "Specify Multiple Search Conditions for Multiple Columns (Visual Database Tools)"
 title: Specify Multiple Search Conditions for Multiple Columns
-ms.custom: seo-lt-2019
+description: "Specify Multiple Search Conditions for Multiple Columns (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "search criteria [SQL Server], multiple conditions"
   - "multiple search conditions"
   - "search conditions [SQL Server], multiple"
   - "OR operator"
   - "AND, Criteria pane"
-ms.assetid: 06617729-0d0b-4da2-9890-b7e2f5cdbc7b
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Specify Multiple Search Conditions for Multiple Columns (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

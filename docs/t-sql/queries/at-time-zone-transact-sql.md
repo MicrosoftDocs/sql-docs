@@ -1,22 +1,19 @@
 ---
-description: "AT TIME ZONE (Transact-SQL)"
 title: AT TIME ZONE (Transact-SQL)
-ms.date: "06/11/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.custom: ""
-ms.subservice: t-sql
-ms.topic: reference
-f1_keywords: 
-  - "AT TIME ZONE"
-  - "AT_TIME_ZONE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "AT TIME ZONE function"
-ms.assetid: 311f682f-7f1b-43b6-9ea0-24e36b64f73a
+description: "AT TIME ZONE (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
+ms.date: "06/11/2019"
+ms.service: sql
+ms.subservice: t-sql
+ms.topic: reference
+f1_keywords:
+  - "AT TIME ZONE"
+  - "AT_TIME_ZONE_TSQL"
+helpviewer_keywords:
+  - "AT TIME ZONE function"
+dev_langs:
+  - "TSQL"
 monikerRange: "= azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017"
 ---
 
@@ -28,7 +25,7 @@ Converts an *inputdate* to the corresponding *datetimeoffset* value in the targe
 
 **AT TIME ZONE** implementation relies on a Windows mechanism to convert **datetime** values across time zones.  
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) 
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) 
 
 ## Syntax
 

@@ -1,16 +1,14 @@
 ---
+title: "MSSQLSERVER_3056"
 description: "MSSQLSERVER_3056"
-title: "MSSQLSERVER_3056 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/24/2022"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "3056 (Database Engine error)"
 author: Pijocoder
 ms.author: mathoma
+ms.date: "08/24/2022"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "3056 (Database Engine error)"
 ---
 # MSSQLSERVER_3056
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,17 +1,15 @@
 ---
 title: "Distribution Agent Security (Peer-to-Peer)"
 description: Describes the 'Distribution Agent Security' page for a Peer-to-Peer Replication topology in SQL Server Management Studio.
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.p2pwizard.DA.f1"
-ms.assetid: def6bf26-c640-4caf-ad30-05d1e649541d
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.p2pwizard.DA.f1"
 ---
 # Distribution Agent Security (Peer-to-Peer Replication)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

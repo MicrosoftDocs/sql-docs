@@ -1,19 +1,17 @@
 ---
-description: "A data-tier application (DAC) is a logical database entity that defines all of the SQL Server objects - such as tables, views, and instance objects, including logins - associated with a database."
 title: "Data-tier applications (DAC)"
-ms.custom: ""
-ms.date: 7/12/2022
-ms.service: sql
-ms.reviewer: dzsquared
-ms.subservice: 
-ms.topic: conceptual
-helpviewer_keywords: 
-    - "designing DACs"
-    - "How to [DAC]"
-    - "data-tier application [SQL Server], designing"
-    - "wizard [DAC]"
+description: "A data-tier application (DAC) is a logical database entity that defines all of the SQL Server objects - such as tables, views, and instance objects, including logins - associated with a database."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.reviewer: dzsquared
+ms.date: 7/12/2022
+ms.service: sql
+ms.topic: conceptual
+helpviewer_keywords:
+  - "designing DACs"
+  - "How to [DAC]"
+  - "data-tier application [SQL Server], designing"
+  - "wizard [DAC]"
 ---
 # Data-tier applications (DAC)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

@@ -1,12 +1,12 @@
 ---
-description: "Transaction locking and row versioning guide"
 title: "Transaction locking and row versioning guide"
-ms.custom: seo-dt-2019
+description: "Transaction locking and row versioning guide"
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: 01/26/2023
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "guide, transaction locking and row versioning"
   - "transaction locking and row versioning guide"
   - "lock compatibility matrix, [SQL Server]"
@@ -14,16 +14,15 @@ helpviewer_keywords:
   - "deadlocks, [SQL Server]"
   - "lock escalation, [SQL Server]"
   - "lock partitioning, [SQL Server]"
-ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
-author: rwestMSFT
-ms.author: randolphwest
-ms.date: "03/2/2022"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Transaction locking and row versioning guide
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 In any database, mismanagement of transactions often leads to contention and performance problems in systems that have many users. As the number of users that access the data increases, it becomes important to have applications that use transactions efficiently. This guide describes the locking and row versioning mechanisms the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] uses to ensure the physical integrity of each transaction and provides information on how applications can control transactions efficiently.  
+
+> [!NOTE]
+> **Optimized locking** is a new Database Engine feature drastically reduces lock memory and the number of locks concurrently required for writes. This article currently applies to the behavior of the Database Engine without optimized locking. For more information and to learn where optimized locking is available, see [Optimized locking](performance/optimized-locking.md).
 
 ##  <a name="Basics"></a> Transaction basics  
 
@@ -140,7 +139,7 @@ You can end transactions with either a COMMIT or ROLLBACK statement, or through 
   
 #### Errors during transaction processing  
 
-If an error prevents the successful completion of a transaction, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] automatically rolls back the transaction and frees all resources held by the transaction. If the client's network connection to an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] is broken, any outstanding transactions for the connection are rolled back when the network notifies the instance of the break. If the client application fails or if the client computer goes down or is restarted, this also breaks the connection, and the instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] rolls back any outstanding connections when the network notifies it of the break. If the client logs off the application, any outstanding transactions are rolled back.  
+If an error prevents the successful completion of a transaction, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] automatically rolls back the transaction and frees all resources held by the transaction. If the client's network connection to an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] is broken, any outstanding transactions for the connection are rolled back when the network notifies the instance of the break. If the client application fails or if the client computer goes down or is restarted, this also breaks the connection, and the instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] rolls back any outstanding connections when the network notifies it of the break. If the client signs out of the application, any outstanding transactions are rolled back.  
   
 If a run-time statement error (such as a constraint violation) occurs in a batch, the default behavior in the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] is to roll back only the statement that generated the error. You can change this behavior using the `SET XACT_ABORT` statement. After `SET XACT_ABORT` ON is executed, any run-time statement error causes an automatic rollback of the current transaction. Compile errors, such as syntax errors, are not affected by `SET XACT_ABORT`. For more information, see [SET XACT_ABORT &#40;Transact-SQL&#41;](../t-sql/statements/set-xact-abort-transact-sql.md).  
   
@@ -328,7 +327,7 @@ For more information about the specific types of locking or row versioning contr
   
 Transaction isolation levels can be set using [!INCLUDE[tsql](../includes/tsql-md.md)] or through a database API.  
   
-**[!INCLUDE[tsql](../includes/tsql-md.md)]**									   
+**[!INCLUDE[tsql](../includes/tsql-md.md)]**                                       
 [!INCLUDE[tsql](../includes/tsql-md.md)] scripts use the `SET TRANSACTION ISOLATION LEVEL` statement.  
   
 **ADO**  
@@ -357,6 +356,14 @@ When a transaction modifies a piece of data, it holds the lock protecting the mo
   
 Applications do not typically request locks directly. Locks are managed internally by a part of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] called the lock manager. When an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] processes a [!INCLUDE[tsql](../includes/tsql-md.md)] statement, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] query processor determines which resources are to be accessed. The query processor determines what types of locks are required to protect each resource based on the type of access and the transaction isolation level setting. The query processor then requests the appropriate locks from the lock manager. The lock manager grants the locks if there are no conflicting locks held by other transactions.  
   
+## Optimized locking
+
+Optimized locking is a new Database Engine feature drastically reduces lock memory and the number of locks concurrently required for writes. Optimized locking uses two primary components: **Transaction ID (TID)** locking (also used in other row versioning features) and **lock after qualification (LAQ)**. 
+
+This article currently applies to the behavior of the Database Engine without optimized locking.
+
+For more information and to learn where optimized locking is available, see [Optimized locking](performance/optimized-locking.md).
+
 ## Lock granularity and hierarchies
 
 The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] has multigranular locking that allows different types of resources to be locked by a transaction. To minimize the cost of locking, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] locks resources automatically at a level appropriate to the task. Locking at a smaller granularity, such as rows, increases concurrency but has a higher overhead because more locks must be held if many rows are locked. Locking at a larger granularity, such as tables, are expensive in terms of concurrency because locking an entire table restricts access to any part of the table by other transactions. However, it has a lower overhead because fewer locks are being maintained.  
@@ -735,11 +742,7 @@ In most cases, the [!INCLUDE[ssDE-md](../includes/ssde-md.md)] delivers the best
    
     This query acquires and holds an IX lock on mytable for one hour, which prevents lock escalation on the table during that time. This batch does not modify any data or block other queries (unless the other query forces a table lock with the TABLOCK hint or if an administrator has disabled page or row locks by using an sp_indexoption stored procedure).
 
-You can also use trace flags 1211 and 1224 to disable all or some lock escalations. However, these [trace flags](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) disable all lock escalation globally for the entire [!INCLUDE[ssDE-md](../includes/ssde-md.md)]. Lock escalation serves a very useful purpose in the [!INCLUDE[ssDE-md](../includes/ssde-md.md)] by maximizing the efficiency of queries that are otherwise slowed down by the overhead of acquiring and releasing several thousands of locks. Lock escalation also helps to minimize the required memory to keep track of locks. The memory that the [!INCLUDE[ssDE-md](../includes/ssde-md.md)] can dynamically allocate for lock structures is finite, so if you disable lock escalation and the lock memory grows large enough, attempts to allocate additional locks for any query may fail and the following error occurs:
-
-```Error: 1204, Severity: 19, State: 1
-The SQL Server cannot obtain a LOCK resource at this time. Rerun your statement when there are fewer active users or ask the system administrator to check the SQL Server lock and memory configuration.
-```
+You can also use trace flags 1211 and 1224 to disable all or some lock escalations. However, these [trace flags](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) disable all lock escalation globally for the entire [!INCLUDE[ssDE-md](../includes/ssde-md.md)]. Lock escalation serves a very useful purpose in the [!INCLUDE[ssDE-md](../includes/ssde-md.md)] by maximizing the efficiency of queries that are otherwise slowed down by the overhead of acquiring and releasing several thousands of locks. Lock escalation also helps to minimize the required memory to keep track of locks. The memory that the [!INCLUDE[ssDE-md](../includes/ssde-md.md)] can dynamically allocate for lock structures is finite, so if you disable lock escalation and the lock memory grows large enough, attempts to allocate additional locks for any query may fail and the following error occurs: `Error: 1204, Severity: 19, State: 1 The SQL Server cannot obtain a LOCK resource at this time. Rerun your statement when there are fewer active users or ask the system administrator to check the SQL Server lock and memory configuration.`
 
 > [!NOTE]
 > When [error 1204](../relational-databases/errors-events/mssqlserver-1204-database-engine-error.md) occurs, it stops the processing of the current statement and causes a rollback of the active transaction. The rollback itself may block users or lead to a long database recovery time if you restart the database service.
@@ -759,7 +762,8 @@ GO
 ```
 
 > [!IMPORTANT]
-> The `lock_escalation` Extended Event (xEvent) should be used instead of the Lock:Escalation event class in SQL Trace or SQL Profiler
+> The `lock_escalation` Extended Event (xEvent) should be used instead of the Lock:Escalation event class in SQL Trace or SQL Profiler.
+
 
 ## <a name="dynamic_locks"></a> Dynamic locking
 
@@ -887,13 +891,13 @@ The following query can view all deadlock events captured by the *system\_health
 
 ```sql
 SELECT xdr.value('@timestamp', 'datetime') AS [Date],
-	xdr.query('.') AS [Event_Data]
+    xdr.query('.') AS [Event_Data]
 FROM (SELECT CAST([target_data] AS XML) AS Target_Data
-			FROM sys.dm_xe_session_targets AS xt
-			INNER JOIN sys.dm_xe_sessions AS xs ON xs.address = xt.event_session_address
-			WHERE xs.name = N'system_health'
-			  AND xt.target_name = N'ring_buffer'
-	) AS XML_Data
+            FROM sys.dm_xe_session_targets AS xt
+            INNER JOIN sys.dm_xe_sessions AS xs ON xs.address = xt.event_session_address
+            WHERE xs.name = N'system_health'
+              AND xt.target_name = N'ring_buffer'
+    ) AS XML_Data
 CROSS APPLY Target_Data.nodes('RingBufferTarget/event[@name="xml_deadlock_report"]') AS XEventData(xdr)
 ORDER BY [Date] DESC;
 ```
@@ -1231,8 +1235,8 @@ A `SELECT` statement is executed under a transaction. Because of the `HOLDLOCK` 
 BEGIN TRANSACTION  
     -- This SELECT statement will acquire an IS lock on the table.  
     SELECT col1  
-	FROM TestTable  
-	WITH (HOLDLOCK);  
+    FROM TestTable  
+    WITH (HOLDLOCK);  
 ```  
   
 Session 2:  
@@ -1242,8 +1246,8 @@ A transaction is started, and the `SELECT` statement running under this transact
 ```sql  
 BEGIN TRANSACTION  
     SELECT col1  
-	FROM TestTable  
-	WITH (TABLOCK, HOLDLOCK);  
+    FROM TestTable  
+    WITH (TABLOCK, HOLDLOCK);  
 ```  
   
 Session 1:  
@@ -1267,8 +1271,8 @@ A `SELECT` statement is executed under a transaction. Because of the `HOLDLOCK` 
 BEGIN TRANSACTION  
     -- This SELECT statement will acquire an IS lock on the table.  
     SELECT col1  
-	FROM TestTable  
-	WITH (HOLDLOCK);  
+    FROM TestTable  
+    WITH (HOLDLOCK);  
 ```  
   
 Session 2:  
@@ -1280,8 +1284,8 @@ On partition IDs 7-15 that the X lock has not yet reached, other transactions ca
 ```sql  
 BEGIN TRANSACTION  
     SELECT col1  
-	FROM TestTable  
-	WITH (TABLOCKX, HOLDLOCK);  
+    FROM TestTable  
+    WITH (TABLOCKX, HOLDLOCK);  
 ```   
   
 ##  <a name="Row_versioning"></a> Row versioning-based isolation levels in the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]
@@ -1499,7 +1503,7 @@ The following DMVs provide information about the current system state of tempdb 
   
 - **Version Store unit truncation**. Monitors the total number of version store units truncated since the instance was started. A version store unit is truncated when [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] determines that none of the version rows stored in the version store unit are needed to run active transactions.  
   
-- **Update conflict ratio**. Monitors the ratio of update snapshot transaction that have update conflicts to the total number of update snapshot transactions.  
+- **Update conflict ratio**. Monitors the ratio of update snapshot transactions that have update conflicts to the total number of update snapshot transactions.  
   
 - **Longest Transaction Running Time**. Monitors the longest running time in seconds of any transaction using row versioning. This can be used to determine if any transaction is running for an unreasonable amount of time.  
   
@@ -2058,7 +2062,7 @@ Bound sessions can be used to develop three-tier applications in which business 
   
 ### Coding efficient transactions
 
-It is important to keep transactions as short as possible. When a transaction is started, a database management system (DBMS) must hold many resources until the end of the transaction to protect the atomicity, consistency, isolation, and durability (ACID) properties of the transaction. If data is modified, the modified rows must be protected with exclusive locks that prevent any other transaction from reading the rows, and exclusive locks must be held until the transaction is committed or rolled back. Depending on transaction isolation level settings, `SELECT` statements may acquire locks that must be held until the transaction is committed or rolled back. Especially in systems with many users, transactions must be kept as short as possible to reduce locking contention for resources between concurrent connections. Long-running, inefficient transactions may not be a problem with small numbers of users, but they are intolerable in a system with thousands of users. Beginning with [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports delayed durable transactions. Delayed durable transactions do not guarantee durability. See the article [Transaction Durability](../relational-databases/logs/control-transaction-durability.md) for more information.  
+It is important to keep transactions as short as possible. When a transaction is started, a database management system (DBMS) must hold many resources until the end of the transaction to protect the atomicity, consistency, isolation, and durability (ACID) properties of the transaction. If data is modified, the modified rows must be protected with exclusive locks that prevent any other transaction from reading the rows, and exclusive locks must be held until the transaction is committed or rolled back. Depending on transaction isolation level settings, `SELECT` statements may acquire locks that must be held until the transaction is committed or rolled back. Especially in systems with many users, transactions must be kept as short as possible to reduce locking contention for resources between concurrent connections. Long-running, inefficient transactions may not be a problem with small numbers of users, but they are intolerable in a system with thousands of users. Beginning with [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports delayed durable transactions. Delayed durable transactions do not guarantee durability. For more information, see [Transaction Durability](../relational-databases/logs/control-transaction-durability.md).  
   
 #### <a name="guidelines"></a> Coding guidelines  
 

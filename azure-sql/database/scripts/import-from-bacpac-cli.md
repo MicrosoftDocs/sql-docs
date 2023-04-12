@@ -9,8 +9,8 @@ ms.service: sql-database
 ms.subservice: backup-restore
 ms.topic: sample
 ms.custom:
-  - "load & move data"
-  - "devx-track-azurecli"
+  - load & move data
+  - devx-track-azurecli
 ms.devlang: azurecli
 ---
 
@@ -22,7 +22,7 @@ This Azure CLI script example imports a database from a *.bacpac* file into a da
 
 [!INCLUDE [quickstarts-free-trial-note](../../includes/quickstarts-free-trial-note.md)]
 
-[!INCLUDE [azure-cli-prepare-your-environment.md](../../includes/azure-cli-prepare-your-environment.md)]
+[!INCLUDE [azure-cli-prepare-your-environment.md](~/../azure-sql/reusable-content/azure-cli/azure-cli-prepare-your-environment.md)]
 
 ## Sample script
 

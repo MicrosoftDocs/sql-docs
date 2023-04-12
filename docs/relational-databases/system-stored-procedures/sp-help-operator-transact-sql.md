@@ -1,22 +1,19 @@
 ---
+title: "sp_help_operator (Transact-SQL)"
 description: "sp_help_operator (Transact-SQL)"
-title: "sp_help_operator (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_help_operator"
-  - "sp_help_operator_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_help_operator"
-ms.assetid: caedc43d-44b8-415a-897e-92923f6de3b8
 author: markingmyname
 ms.author: maghan
+ms.date: "08/01/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_help_operator"
+  - "sp_help_operator_TSQL"
+helpviewer_keywords:
+  - "sp_help_operator"
+dev_langs:
+  - "TSQL"
 ---
 # sp_help_operator (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -24,7 +21,7 @@ ms.author: maghan
   Reports information about the operators defined for the server.  
   
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

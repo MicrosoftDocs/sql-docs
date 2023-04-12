@@ -14,7 +14,6 @@ dev_langs:
 apilocation: opends60.dll
 apiname: srv_getbindtoken
 apitype: "DLLExport"
-ms.assetid: c947d011-08ac-4fb8-b925-3da6e0999277
 ---
 # srv_getbindtoken (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

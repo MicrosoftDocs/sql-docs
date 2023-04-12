@@ -8,7 +8,6 @@ ms.date: "05/24/2022"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "CREATE_MASTER_KEY_TSQL"
   - "CREATE MASTER KEY"
@@ -33,7 +32,7 @@ Creates a database master key in the database.
 > - You should back up the master key by using [BACKUP MASTER KEY](../../t-sql/statements/backup-master-key-transact-sql.md), and store the backup in a secure, off-site location. 
 > - In SQL Server, you should also back up the service master key using [BACKUP SERVICE MASTER KEY](../../relational-databases/security/encryption/back-up-the-service-master-key.md), and store the backup in a secure, off-site location.
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
@@ -47,7 +46,7 @@ CREATE MASTER KEY [ ENCRYPTION BY PASSWORD ='password' ]
 ## Arguments
 
 #### PASSWORD ='*password*'
-The password that is used to encrypt the master key in the database. *password* must meet the Windows password policy requirements of the computer that is running the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *password* is optional in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].
+The password that is used to encrypt the master key in the database. *password* must meet the Windows password policy requirements of the computer that is running the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *password* is optional in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
 
 ## Remarks
 
@@ -59,7 +58,7 @@ Information about the database master key is visible in the `sys.symmetric_keys`
 
 For SQL Server and Parallel Data Warehouse, the master key is typically protected by the service master key and at least one password. In case of the database being physically moved to a different server (log shipping, restoring backup, etc.), the database will contain a copy of the master key encrypted by the original server service master key (unless this encryption was explicitly removed using `ALTER MASTER KEY DDL`), and a copy of it encrypted by each password specified during either `CREATE MASTER KEY` or subsequent `ALTER MASTER KEY DDL` operations. In order to recover the master key, and all the data encrypted using the master key as the root in the [key hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md) after the database has been moved, the user will have either use `OPEN MASTER KEY` statement using one of the passwords used to protect the master key, restore a backup of the master key, or restore a backup of the original service master key on the new server.
 
-For [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)], the password protection is not considered to be a safety mechanism to prevent a data loss scenario in situations where the database may be moved from one server to another, as the service master key protection on the master key is managed by Microsoft Azure platform. Therefore, the master key password is optional in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].
+For [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], the password protection is not considered to be a safety mechanism to prevent a data loss scenario in situations where the database may be moved from one server to another, as the service master key protection on the master key is managed by Microsoft Azure platform. Therefore, the master key password is optional in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
 
 The service master key and database master keys are protected by using the AES-256 algorithm.
 

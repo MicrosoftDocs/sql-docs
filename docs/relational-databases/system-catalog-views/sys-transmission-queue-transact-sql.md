@@ -16,10 +16,9 @@ helpviewer_keywords:
   - "sys.transmission_queue catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: f3515d1a-be8f-4a27-8058-8865f0919838
 ---
 # sys.transmission_queue (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   This catalog view contains a row for each message in the transmission queue, as shown in the following table:  
   

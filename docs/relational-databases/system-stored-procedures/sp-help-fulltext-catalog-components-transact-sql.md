@@ -1,22 +1,19 @@
 ---
+title: "sp_help_fulltext_catalog_components (Transact-SQL)"
 description: "sp_help_fulltext_catalog_components (Transact-SQL)"
-title: "sp_help_fulltext_catalog_components (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_help_fulltext_catalog_components_TSQL"
-  - "sp_help_fulltext_catalog_components"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_help_fulltext_catalog_components"
-ms.assetid: fbd6a3d4-6a4c-42a2-bff8-2a5eb0745e47
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_help_fulltext_catalog_components_TSQL"
+  - "sp_help_fulltext_catalog_components"
+helpviewer_keywords:
+  - "sp_help_fulltext_catalog_components"
+dev_langs:
+  - "TSQL"
 ---
 # sp_help_fulltext_catalog_components (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +23,7 @@ ms.author: maghan
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

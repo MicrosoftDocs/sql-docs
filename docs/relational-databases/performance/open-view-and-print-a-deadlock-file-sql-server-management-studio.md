@@ -1,20 +1,17 @@
 ---
 title: "Open, view, print deadlock file (SSMS)"
 description: Learn how to capture deadlock information that SQL Server Profiler generates and view it in SQL Server Management Studio.
-ms.custom: seo-dt-2019
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: performance
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "deadlocks [SQL Server], printing files"
   - "deadlocks [SQL Server], opening files"
   - "opening deadlock files"
   - "printing deadlock files"
-ms.assetid: 5061b13f-2cb7-457a-b8d0-fbd437b510ab
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Open, view, and print a deadlock file in SQL Server Management Studio (SSMS)

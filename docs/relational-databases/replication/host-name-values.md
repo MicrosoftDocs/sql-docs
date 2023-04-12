@@ -1,17 +1,15 @@
 ---
+title: "HOST_NAME Values"
 description: "HOST_NAME Values"
-title: "HOST_NAME Values | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.newsubwizard.hostnamevalue.f1"
-ms.assetid: 21548f08-2910-4a55-baac-b911ba9afaf1
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.newsubwizard.hostnamevalue.f1"
 ---
 # HOST_NAME Values
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

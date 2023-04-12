@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "log_shipping_secondary system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 69723419-4544-49c6-a517-adb30ffa5741
 ---
 # log_shipping_secondary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

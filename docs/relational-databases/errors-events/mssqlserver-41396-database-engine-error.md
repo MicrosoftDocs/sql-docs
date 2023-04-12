@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_41396"
 description: "MSSQLSERVER_41396"
-title: "MSSQLSERVER_41396 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "41396 (Database Engine error)"
-ms.assetid: 4ff04042-8367-46f3-8a16-c94682d6eedb
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "41396 (Database Engine error)"
 ---
 # MSSQLSERVER_41396
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,20 +1,14 @@
 ---
+title: "LocalDBFormatMessage Function"
 description: "LocalDBFormatMessage Function"
-title: "LocalDBFormatMessage Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-ms.topic: "reference"
-apiname: 
-  - "LocalDBFormatMessage"
-apilocation: 
-  - "sqluserinstance.dll"
-apitype: "DLLExport"
-ms.assetid: 31b3152a-94cf-4f75-a31b-296d7dd16dbe
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.topic: "reference"
+apilocation: "sqluserinstance.dll"
+apiname: "LocalDBFormatMessage"
+apitype: "DLLExport"
 ---
 # LocalDBFormatMessage Function
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

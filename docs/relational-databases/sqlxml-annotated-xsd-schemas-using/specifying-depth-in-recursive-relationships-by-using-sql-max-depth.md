@@ -7,7 +7,6 @@ ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "max-depth annotation"
   - "XPath queries [SQLXML], recursive relationships"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "self joins"
   - "recursive relationships [SQLXML]"
   - "recursion [SQLXML]"
-ms.assetid: 0ffdd57d-dc30-44d9-a8a0-f21cadedb327
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specifying Depth in Recursive Relationships by Using sql:max-depth

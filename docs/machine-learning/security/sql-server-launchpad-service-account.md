@@ -1,14 +1,12 @@
 ---
 title: Launchpad account configuration
 description: How to modify the SQL Server Launchpad service account used for external script execution on SQL Server.
-ms.service: sql
-ms.subservice: machine-learning-services
-
-ms.date: 09/16/2021
-ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.custom: seo-lt-2019
+ms.date: 09/16/2021
+ms.service: sql
+ms.subservice: machine-learning-services
+ms.topic: how-to
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # SQL Server Launchpad service configuration

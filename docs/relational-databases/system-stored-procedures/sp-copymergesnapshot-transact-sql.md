@@ -1,29 +1,26 @@
 ---
+title: "sp_copymergesnapshot (Transact-SQL)"
 description: "sp_copymergesnapshot (Transact-SQL)"
-title: "sp_copymergesnapshot (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_copymergesnapshot"
-  - "sp_copymergesnapshot_TSQL"
-helpviewer_keywords: 
-  - "sp_copymergesnapshot"
-ms.assetid: eaecd6e0-8486-4e5d-ace7-8ae75768c0a8
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_copymergesnapshot"
+  - "sp_copymergesnapshot_TSQL"
+helpviewer_keywords:
+  - "sp_copymergesnapshot"
+dev_langs:
+  - "TSQL"
 ---
 # sp_copymergesnapshot (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Copies the snapshot folder of the specified publication to the folder listed in the **\@destination_folder**. This stored procedure is executed at the Publisher on the publication database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

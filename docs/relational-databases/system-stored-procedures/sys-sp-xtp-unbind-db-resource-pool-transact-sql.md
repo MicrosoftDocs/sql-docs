@@ -1,32 +1,29 @@
 ---
+title: "sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)"
 description: "sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)"
-title: "sys.sp_xtp_unbind_db_resource_pool (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_xtp_unbind_db_resource_pool_TSQL"
   - "sp_xtp_unbind_db_resource_pool"
   - "sys.sp_xtp_unbind_db_resource_pool_TSQL"
   - "sys.sp_xtp_unbind_db_resource_pool"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_xtp_unbind_db_resource_pool"
   - "sys.sp_xtp_unbind_db_resource_pool"
-ms.assetid: 695a796d-087e-4bc8-99d0-ddc342604c75
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   This system procedure removes an existing binding between a database and a resource pool for purposes of tracking [!INCLUDE[inmemory](../../includes/inmemory-md.md)] memory usage.  If there is no pool currently bound to the specified database, success is returned. When the database is unbound, the previously allocated memory for memory-optimized objects stays allocated to the previous resource pool. You need to restart the database to free up the allocated memory. Once a database is unbound from the resource pool, the binding resorts to the DEFAULT resource pool.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

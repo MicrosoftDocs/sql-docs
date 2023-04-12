@@ -1,21 +1,18 @@
 ---
+title: "Integration Services User Interface"
 description: "Integration Services User Interface"
-title: "Integration Services User Interface | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Integration Services, SSIS Designer"
   - "tools [Integration Services], SSIS Designer"
   - "SSIS Designer"
   - "SSIS, SSIS Designer"
   - "Integration Services, SSIS Designer"
-ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
-author: chugugrace
-ms.author: chugu
 ---
 # Integration Services User Interface
 

@@ -1,17 +1,14 @@
 ---
+title: "Audit Server Object Management Event Class"
 description: "Audit Server Object Management Event Class"
-title: "Audit Server Object Management Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "Audit Server Object Management event class"
-ms.assetid: 106ffe8d-da60-4b1f-8866-6cef6a5931ad
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "Audit Server Object Management event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Server Object Management Event Class

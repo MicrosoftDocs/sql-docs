@@ -1,23 +1,20 @@
 ---
+title: "Excel Source"
 description: "Excel Source"
-title: "Excel Source | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "05/15/2018"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.excelsource.f1"
   - "sql13.dts.designer.excelsourceadapter.connection.f1"
   - "sql13.dts.designer.excelsourceadapter.columns.f1"
   - "sql13.dts.designer.excelsourceadapter.erroroutput.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Excel [Integration Services]"
   - "sources [Integration Services], Excel"
-ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
-author: chugugrace
-ms.author: chugu
 ---
 # Excel Source
 

@@ -1,13 +1,14 @@
 ---
+title: "Subscription Expiration and Deactivation"
 description: "Subscription Expiration and Deactivation"
-title: "Subscription Expiration and Deactivation | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/07/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "Distributors [SQL Server replication], distribution retention period"
   - "subscriptions [SQL Server replication], expiration"
   - "publications [SQL Server replication], publication retention periods"
@@ -17,9 +18,6 @@ helpviewer_keywords:
   - "distribution retention period"
   - "subscriptions [SQL Server replication], deactivation"
   - "deactivating subscriptions"
-ms.assetid: 4d03f5ab-e721-4f56-aebc-60f6a56c1e07
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Subscription Expiration and Deactivation

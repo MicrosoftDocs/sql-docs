@@ -1,24 +1,19 @@
 ---
+title: "SQLManageDataSources"
 description: "SQLManageDataSources"
-title: "SQLManageDataSources | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLManageDataSources"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLManageDataSources"
-helpviewer_keywords: 
-  - "SQLManageDataSources [ODBC]"
-ms.assetid: ac6d186f-b394-406c-94c4-c6331d1ca468
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLManageDataSources"
+helpviewer_keywords:
+  - "SQLManageDataSources [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLManageDataSources"
+apitype: "dllExport"
 ---
 # SQLManageDataSources
 **Conformance**  

@@ -1,29 +1,26 @@
 ---
+title: "sp_replmonitorhelppublisher (Transact-SQL)"
 description: "sp_replmonitorhelppublisher (Transact-SQL)"
-title: "sp_replmonitorhelppublisher (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_replmonitorhelppublisher_TSQL"
-  - "sp_replmonitorhelppublisher"
-helpviewer_keywords: 
-  - "sp_replmonitorhelppublisher"
-ms.assetid: 171501fe-4b74-4647-96c3-7691c777e01b
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_replmonitorhelppublisher_TSQL"
+  - "sp_replmonitorhelppublisher"
+helpviewer_keywords:
+  - "sp_replmonitorhelppublisher"
+dev_langs:
+  - "TSQL"
 ---
 # sp_replmonitorhelppublisher (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns current status information for one or more Publishers associated with a Distributor. This stored procedure, which is used to monitor replication, is executed at the Distributor on the distribution database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

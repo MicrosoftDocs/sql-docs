@@ -1,29 +1,26 @@
 ---
+title: "sp_helptracertokenhistory (Transact-SQL)"
 description: "sp_helptracertokenhistory (Transact-SQL)"
-title: "sp_helptracertokenhistory (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_helptracertokenhistory_TSQL"
-  - "sp_helptracertokenhistory"
-helpviewer_keywords: 
-  - "sp_helptracertokenhistory"
-ms.assetid: 96910d1c-be76-43eb-9c93-4477e6761749
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helptracertokenhistory_TSQL"
+  - "sp_helptracertokenhistory"
+helpviewer_keywords:
+  - "sp_helptracertokenhistory"
+dev_langs:
+  - "TSQL"
 ---
 # sp_helptracertokenhistory (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns detailed latency information for specified tracer tokens, with one row being returned for each Subscriber. This stored procedure is executed at the Publisher on the publication database or at the Distributor on the distribution database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

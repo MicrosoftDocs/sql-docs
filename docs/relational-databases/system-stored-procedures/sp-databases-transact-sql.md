@@ -1,29 +1,26 @@
 ---
+title: "sp_databases (Transact-SQL)"
 description: "sp_databases (Transact-SQL)"
-title: "sp_databases (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_databases_TSQL"
-  - "sp_databases"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_databases"
-ms.assetid: 2a83b92a-9ecc-43c4-8ff4-e91e3a940b5a
 author: markingmyname
 ms.author: maghan
+ms.date: "06/10/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_databases_TSQL"
+  - "sp_databases"
+helpviewer_keywords:
+  - "sp_databases"
+dev_langs:
+  - "TSQL"
 ---
 # sp_databases (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Lists databases that either reside in an instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or are accessible through a database gateway.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

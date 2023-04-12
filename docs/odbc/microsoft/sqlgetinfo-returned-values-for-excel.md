@@ -1,21 +1,18 @@
 ---
+title: "SQLGetInfo Returned Values for Excel"
 description: "SQLGetInfo Returned Values for Excel"
-title: "SQLGetInfo Returned Values for Excel | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Excel driver [ODBC], SQLGetInfo"
   - "SQLGetInfo function [ODBC], returned values for dBase"
   - "Jet-based ODBC drivers [ODBC], Excel driver"
   - "desktop database drivers [ODBC], Excel driver"
   - "ODBC desktop database drivers [ODBC], Excel driver"
-ms.assetid: a0f4c3e4-5906-4ab3-ad34-c606f173169a
-author: David-Engel
-ms.author: v-davidengel
 ---
 # SQLGetInfo Returned Values for Excel
 The following table lists the C-language #defines for the *fInfoType* argument and the corresponding values returned by **SQLGetInfo**. This information can be retrieved by passing the listed C-language #defines to **SQLGetInfo** in the *fInfoType* argument. For more information about the values returned by **SQLGetInfo**, see the *ODBC Programmer's Reference*.  

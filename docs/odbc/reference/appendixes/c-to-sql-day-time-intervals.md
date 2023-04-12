@@ -1,20 +1,17 @@
 ---
+title: "C to SQL: Day-Time Intervals"
 description: "C to SQL: Day-Time Intervals"
-title: "C to SQL: Day-Time Intervals | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "day-time intervals [ODBC]"
   - "data conversions from C to SQL types [ODBC], day-time intervals"
   - "converting data from c to SQL types [ODBC], day-time intervals"
   - "intervals [ODBC], converting"
-ms.assetid: f9ee1ddb-dec7-4f78-b6e2-5ba34e7d6f59
-author: David-Engel
-ms.author: v-davidengel
 ---
 # C to SQL: Day-Time Intervals
 The identifiers for the day-time interval ODBC C data types are:  

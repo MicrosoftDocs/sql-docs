@@ -1,19 +1,16 @@
 ---
-description: "Start, Stop, or Pause the SQL Server Agent Service"
 title: Start, Stop, or Pause the Service
+description: "Start, Stop, or Pause the SQL Server Agent Service"
+author: markingmyname
+ms.author: maghan
+ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Agent, starting"
   - "SQL Server Agent, pausing"
   - "SQL Server Agent, stopping"
-ms.assetid: c95a9759-dd30-4ab6-9ab0-087bb3bfb97c
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 

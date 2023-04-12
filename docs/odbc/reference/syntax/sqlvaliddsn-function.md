@@ -1,24 +1,19 @@
 ---
+title: "SQLValidDSN Function"
 description: "SQLValidDSN Function"
-title: "SQLValidDSN Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLValidDSN"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLValidDSN"
-helpviewer_keywords: 
-  - "SQLValidDSN [ODBC]"
-ms.assetid: 930d1d89-337a-4429-85a2-84ee10555ac9
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLValidDSN"
+helpviewer_keywords:
+  - "SQLValidDSN [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLValidDSN"
+apitype: "dllExport"
 ---
 # SQLValidDSN Function
 **Conformance**  

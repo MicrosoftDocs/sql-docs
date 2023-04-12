@@ -1,22 +1,19 @@
 ---
+title: "sp_repldropcolumn (Transact-SQL)"
 description: "sp_repldropcolumn (Transact-SQL)"
-title: "sp_repldropcolumn (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_repldropcolumn_TSQL"
-  - "sp_repldropcolumn"
-helpviewer_keywords: 
-  - "sp_repldropcolumn"
-ms.assetid: fdc1ec5f-f108-42b4-a2d8-f06a71913ab8
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_repldropcolumn_TSQL"
+  - "sp_repldropcolumn"
+helpviewer_keywords:
+  - "sp_repldropcolumn"
+dev_langs:
+  - "TSQL"
 ---
 # sp_repldropcolumn (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -26,7 +23,7 @@ ms.author: maghan
 > [!IMPORTANT]
 >  This stored procedure has been deprecated and is being supported mainly for backward-compatibility. It should only be used with [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Publishers and [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] republishing Subscribers. This procedure should not be used on columns with data types that were introduced in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or higher.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

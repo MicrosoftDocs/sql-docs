@@ -1,20 +1,17 @@
 ---
+title: "Examples of Advanced Integration Services Expressions"
 description: "Examples of Advanced Integration Services Expressions"
-title: "Examples of Advanced Integration Services Expressions | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "functions [Integration Services]"
   - "operators [Integration Services]"
   - "expressions [Integration Services], examples"
   - "examples [Integration Services]"
-ms.assetid: c7794ba3-0de5-466b-ae8a-9ddd27360049
-author: chugugrace
-ms.author: chugu
 ---
 # Examples of Advanced Integration Services Expressions
 

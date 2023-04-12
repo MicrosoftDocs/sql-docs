@@ -1,17 +1,14 @@
 ---
+title: "CursorImplicitConversion Event Class"
 description: "CursorImplicitConversion Event Class"
-title: "CursorImplicitConversion Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "CursorImplicitConversion event class"
-ms.assetid: 44d12e23-146a-42e6-bb38-1f2f6a035bad
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "CursorImplicitConversion event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CursorImplicitConversion Event Class

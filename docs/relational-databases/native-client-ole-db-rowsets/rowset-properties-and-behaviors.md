@@ -1,20 +1,17 @@
 ---
-description: "Rowset Properties and Behaviors (Native Client OLE DB provider)"
 title: Rowset properties and behaviors (Native Client OLE DB provider)
-ms.custom: ""
+description: "Rowset Properties and Behaviors (Native Client OLE DB provider)"
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "rowsets [OLE DB], properties"
   - "SQL Server Native Client OLE DB provider, rowsets"
   - "properties [OLE DB]"
   - "OLE DB rowsets, properties"
-ms.assetid: 9baabcb6-0114-42f2-89f8-d8d66b3c8c14
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Rowset Properties and Behaviors (Native Client OLE DB provider)

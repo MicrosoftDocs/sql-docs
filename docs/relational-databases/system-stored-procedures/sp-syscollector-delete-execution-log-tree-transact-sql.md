@@ -1,30 +1,27 @@
 ---
+title: "sp_syscollector_delete_execution_log_tree (Transact-SQL)"
 description: "sp_syscollector_delete_execution_log_tree (Transact-SQL)"
-title: "sp_syscollector_delete_execution_log_tree (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_syscollector_delete_execution_log_tree_TSQL"
-  - "sp_syscollector_delete_execution_log_tree"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_syscollector_delete_execution_log_tree"
-  - "data collector [SQL Server], stored procedures"
-ms.assetid: 0a9a7c5b-c3cc-40ca-b524-e948a8cce4e4
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_syscollector_delete_execution_log_tree_TSQL"
+  - "sp_syscollector_delete_execution_log_tree"
+helpviewer_keywords:
+  - "sp_syscollector_delete_execution_log_tree"
+  - "data collector [SQL Server], stored procedures"
+dev_langs:
+  - "TSQL"
 ---
 # sp_syscollector_delete_execution_log_tree (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Deletes all the log entries for the run of a single collection set. It also deletes the log entries from the [!INCLUDE[ssIS](../../includes/ssis-md.md)] tables for that run.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

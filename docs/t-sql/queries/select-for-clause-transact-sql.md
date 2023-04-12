@@ -1,26 +1,23 @@
 ---
+title: "FOR Clause (Transact-SQL)"
 description: "SELECT - FOR Clause (Transact-SQL)"
-title: "FOR Clause (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "01/08/2019"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "FOR"
   - "FOR CLAUSE"
   - "FOR_TSQL"
   - "FOR_CLAUSE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "XML option [SQL Server]"
   - "BROWSE option"
   - "FOR clause [Transact-SQL]"
-ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # SELECT - FOR Clause (Transact-SQL)
 
@@ -34,7 +31,7 @@ Use the FOR clause to specify one of the following options for query results.
   
 -   Format query results as JSON by specifying **FOR JSON**.  
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

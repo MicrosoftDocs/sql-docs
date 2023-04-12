@@ -1,18 +1,15 @@
 ---
-description: "Assign Model Object Permissions (Master Data Services)"
 title: Assign Model Object Permissions
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "models [Master Data Services], assigning object permissions"
-  - "permissions [Master Data Services], assigning model object permissions"
-ms.assetid: 4b80148d-2318-415c-9479-28c240e48bcd
+description: "Assign Model Object Permissions (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "models [Master Data Services], assigning object permissions"
+  - "permissions [Master Data Services], assigning model object permissions"
 ---
 # Assign Model Object Permissions (Master Data Services)
 

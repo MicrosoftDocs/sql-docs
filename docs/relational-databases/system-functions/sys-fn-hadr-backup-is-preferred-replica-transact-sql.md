@@ -1,33 +1,30 @@
 ---
+title: "sys.fn_hadr_backup_is_preferred_replica  (Transact-SQL)"
 description: "sys.fn_hadr_backup_is_preferred_replica  (Transact-SQL)"
-title: "sys.fn_hadr_backup_is_preferred_replica  (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/16/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.fn_hadr_backup_is_preferred_replica_TSQL"
   - "sys.fn_hadr_backup_is_preferred_replica"
   - "fn_hadr_backup_is_preferred_replica_TSQL"
   - "fn_hadr_backup_is_preferred_replica"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "backup on secondary replicas"
   - "active secondary replicas [SQL Server], backup on secondary replicas"
   - "sys.fn_hadr_backup_is_preferred_replica function"
-ms.assetid: 61b9be77-e2f6-4da1-b2ae-a62cbe226145
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 ---
 # sys.fn_hadr_backup_is_preferred_replica  (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Used to determine if the current replica is the preferred backup replica.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

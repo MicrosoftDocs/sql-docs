@@ -7,7 +7,6 @@ ms.date: "05/24/2022"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "RESTORE_MASTER_KEY_TSQL"
   - "RESTORE MASTER KEY"
@@ -33,7 +32,7 @@ dev_langs:
 > [!IMPORTANT]
 > [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduces backup and restore support for the database master key to and from an Azure Blob storage. The `URL` syntax is only available for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later.
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

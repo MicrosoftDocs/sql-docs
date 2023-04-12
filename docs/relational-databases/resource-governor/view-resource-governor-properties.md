@@ -1,19 +1,16 @@
 ---
-title: "View Resource Governor Properties | Microsoft Docs"
+title: "View Resource Governor Properties"
 description: Learn how to create or configure Resource Governor entities by using the Resource Governor Properties page in SQL Server Management Studio.
-ms.custom: ""
-ms.date: "07/18/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.rg.properties.f1"
-helpviewer_keywords: 
-  - "Resource Governor, properties"
-ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "07/18/2016"
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.rg.properties.f1"
+helpviewer_keywords:
+  - "Resource Governor, properties"
 ---
 # View Resource Governor Properties
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

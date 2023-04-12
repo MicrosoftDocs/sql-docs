@@ -1,24 +1,21 @@
 ---
+title: "Flat File Destination"
 description: "Flat File Destination"
-title: "Flat File Destination | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.flatfiledest.f1"
   - "sql13.dts.designer.flatfiledestadapter.connection.f1"
   - "sql13.dts.designer.flatfiledestadapter.mappings.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "flat files"
   - "Flat File destination"
   - "text file writing [Integration Services]"
   - "destinations [Integration Services], Flat File"
-ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
-author: chugugrace
-ms.author: chugu
 ---
 # Flat File Destination
 

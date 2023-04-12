@@ -1,29 +1,26 @@
 ---
+title: "sysmail_delete_mailitems_sp (Transact-SQL)"
 description: "sysmail_delete_mailitems_sp (Transact-SQL)"
-title: "sysmail_delete_mailitems_sp (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sysmail_delete_mailitems_sp_TSQL"
-  - "sysmail_delete_mailitems_sp"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sysmail_delete_mailitems_sp"
-ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sysmail_delete_mailitems_sp_TSQL"
+  - "sysmail_delete_mailitems_sp"
+helpviewer_keywords:
+  - "sysmail_delete_mailitems_sp"
+dev_langs:
+  - "TSQL"
 ---
 # sysmail_delete_mailitems_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Permanently deletes e-mail messages from the Database Mail internal tables.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

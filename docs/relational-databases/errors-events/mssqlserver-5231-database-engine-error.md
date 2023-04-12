@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_5231"
 description: "MSSQLSERVER_5231"
-title: "MSSQLSERVER_5231 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "5231 (Database Engine error)"
-ms.assetid: 6954ae84-ed0b-4f4c-9d0a-e73f3d71476c
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "5231 (Database Engine error)"
 ---
 # MSSQLSERVER_5231
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

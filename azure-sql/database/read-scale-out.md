@@ -10,8 +10,8 @@ ms.service: sql-database
 ms.subservice: scale-out
 ms.topic: conceptual
 ms.custom:
-  - "sqldbrb=1"
-  - "devx-track-azurepowershell"
+  - sqldbrb=1
+  - devx-track-azurepowershell
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Use read-only replicas to offload read-only query workloads

@@ -299,6 +299,6 @@ After you install the operating system and configure your cluster, you must conf
 
 ## Next steps
 
-- [Use Cluster Shared Volumes in a failover cluster](/windows-server/failover-clustering/failover-cluster-csvs.md)
-- [Configure volume mount points on a server cluster in Windows Server](/troubleshoot/windows-server/high-availability/configure-volume-mount-points-server-cluser.md)
-- [Microsoft Windows Failover cluster resource dependencies in SQL Server](/troubleshoot/sql/failover-clusters/windows-failover-cluster-resource-depend.md)
+- [Use Cluster Shared Volumes in a failover cluster](/windows-server/failover-clustering/failover-cluster-csvs)
+- [Configure volume mount points on a server cluster in Windows Server](/troubleshoot/windows-server/high-availability/configure-volume-mount-points-server-cluser)
+- [Microsoft Windows Failover cluster resource dependencies in SQL Server](/troubleshoot/sql/failover-clusters/windows-failover-cluster-resource-depend)

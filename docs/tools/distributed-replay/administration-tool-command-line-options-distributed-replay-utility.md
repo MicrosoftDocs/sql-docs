@@ -1,15 +1,14 @@
 ---
 title: Administration tool command-line options
-description: The SQL Server Distributed Replay administration tool, DReplay.exe, is a command-line tool to communicate with the distributed replay controller.
 titleSuffix: SQL Server Distributed Replay
-ms.service: sql
-ms.subservice: distributed-replay
-ms.topic: conceptual
+description: The SQL Server Distributed Replay administration tool, DReplay.exe, is a command-line tool to communicate with the distributed replay controller.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: mikeray
-ms.custom: seo-lt-2019
 ms.date: 06/20/2022
+ms.service: sql
+ms.subservice: distributed-replay
+ms.topic: conceptual
 monikerRange: ">= sql-server-2016 || >= sql-server-linux-2017"
 ---
 
@@ -21,7 +20,7 @@ monikerRange: ">= sql-server-2016 || >= sql-server-linux-2017"
 
 The Microsoft SQL Server Distributed Replay administration tool, **DReplay.exe**, is a command-line tool to communicate with the distributed replay controller. Use the administration tool to initiate, monitor, and cancel operations on the controller.
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") For more information about the syntax conventions that are used with the administration tool syntax, see [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: For more information about the syntax conventions that are used with the administration tool syntax, see [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ## Syntax
 

@@ -1,20 +1,16 @@
 ---
+title: "Find Databases Wizard (Select Locations) (AccessToSQL)"
 description: "Find Databases Wizard (Select Locations) (AccessToSQL)"
-title: "Find Databases Wizard (Select Locations) (AccessToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-helpviewer_keywords: 
-  - "Find Databases Wizard"
-ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
+f1_keywords:
   - "ssma.access.finddatabase.f1"
-
+helpviewer_keywords:
+  - "Find Databases Wizard"
 ---
 # Find Databases Wizard (Select Locations) (AccessToSQL)
 On the Select Locations page of the Find Databases Wizard, you enter the search parameters for finding Access databases.  

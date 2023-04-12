@@ -1,22 +1,19 @@
 ---
 title: "Rename a Database"
 description: "Rename a Database"
-ms.service: sql
-ms.subservice: 
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "databases [SQL Server], renaming"
-  - "renaming databases"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: ""
-ms.custom: FY22Q2Fresh
 ms.date: "04/06/2022"
+ms.service: sql
+ms.topic: conceptual
+helpviewer_keywords:
+  - "databases [SQL Server], renaming"
+  - "renaming databases"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Rename a Database
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   This article describes how to rename a user-defined database in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] or Azure SQL Database by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The name of the database can include any characters that follow the rules for identifiers.  
 
 > [!NOTE]

@@ -1,25 +1,22 @@
 ---
+title: "sys.fn_MSxe_read_event_stream (Transact-SQL)"
 description: "sys.fn_MSxe_read_event_stream (Transact-SQL)"
-title: "sys.fn_MSxe_read_event_stream (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "fn_MSxe_read_event_stream_TSQL"
   - "sys.fn_MSxe_read_event_stream_TSQL"
   - "sys.fn_MSxe_read_event_stream"
   - "fn_MSxe_read_event_stream"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.fn_MSxe_read_event_stream"
   - "fn_MSxe_read_event_stream"
-ms.assetid: 5edb1162-625a-41e0-8ec9-1edc8ab9a74a
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.fn_MSxe_read_event_stream (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +30,7 @@ ms.author: randolphwest
 -   fn_xe_file_target_read_file TVF. For more information, see [sys.fn_xe_file_target_read_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md).  
   
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -1,25 +1,22 @@
 ---
+title: "managed_backup.fn_backup_instance_config (Transact-SQL)"
 description: "managed_backup.fn_backup_instance_config (Transact-SQL)"
-title: "managed_backup.fn_backup_instance_config (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "06/10/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "fn_backup_instance_config"
   - "smart_admin.fn_backup_instance_config_TSQL"
   - "fn_backup_instance_config_TSQL"
   - "smart_admin.fn_backup_instance_config"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "smart_admin.fn_backup_instance_config"
   - "fn_backup_instance_config"
-ms.assetid: 2382a547-c0c9-4e1d-87c9-d8526192eb5a
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 ---
 # managed_backup.fn_backup_instance_config (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -29,7 +26,7 @@ ms.author: mikeray
  Use this stored procedure to review or determine the current [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] default configuration settings for the instance of SQL Server.  
   
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

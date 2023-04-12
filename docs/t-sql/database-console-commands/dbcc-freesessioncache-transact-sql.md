@@ -26,7 +26,7 @@ dev_langs:
 
 Flushes the distributed query connection cache used by distributed queries against an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 

@@ -1,17 +1,15 @@
 ---
 title: "Tool Windows in SQL Server Management Studio"
 description: "Tool Windows in SQL Server Management Studio"
+author: "markingmyname"
+ms.author: "maghan"
+ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: ssms
 ms.topic: ui-reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Management Studio [SQL Server], tool windows"
   - "tool windows [SQL Server Management Studio]"
-author: "markingmyname"
-ms.author: "maghan"
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
 ---
 # Tool windows in SQL Server Management Studio
 

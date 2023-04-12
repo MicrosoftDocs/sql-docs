@@ -1,15 +1,12 @@
 ---
+title: "Step 2: Enable and configure package configurations"
 description: "Lesson 5-2: Enable and configure package configurations"
-title: "Step 2: Enable and configure package configurations | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/08/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: tutorial
-ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: chugugrace
 ms.author: chugu
+ms.date: "01/08/2019"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: tutorial
 ---
 # Lesson 5-2: Enable and configure package configurations
 

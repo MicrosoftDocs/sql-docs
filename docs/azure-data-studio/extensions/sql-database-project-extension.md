@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 # SQL Database Projects extension
 
-The SQL Database Projects extension is an Azure Data Studio and Visual Studio Code extension for developing SQL databases including for SQL Server, Azure SQL Database, and Azure SQL Managed Instance in a project-based development environment.  A SQL project is a local representation of SQL objects that comprise the schema for a single database, such as tables, stored procedures, or functions. When a SQL Database project is built, the output artifact is a *.dacpac* file. New and existing databases can be updated to match the contents of the *.dacpac* by publishing the SQL Database project with the SQL Database Projects extension or by publishing the *.dacpac* with the command line interface [SqlPackage](../../tools/sqlpackage/sqlpackage-publish.md).
+The SQL Database Projects extension is an Azure Data Studio and Visual Studio Code extension for developing SQL databases in a project-based development environment. Compatible databases include SQL Server, Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse SQL.  A SQL project is a local representation of SQL objects that comprise the schema for a single database, such as tables, stored procedures, or functions. When a SQL Database project is built, the output artifact is a *.dacpac* file. New and existing databases can be updated to match the contents of the *.dacpac* by publishing the SQL Database project with the SQL Database Projects extension or by publishing the *.dacpac* with the command line interface [SqlPackage](../../tools/sqlpackage/sqlpackage-publish.md).
 
 :::image type="content" source="media/sql-database-projects-extension/sqlproj-summary.png" alt-text="Summary of SQL Database Projects containing pre-deployment and post-deployment scripts as well as database objects." border="true":::
 
@@ -32,7 +32,7 @@ The SQL Database Projects extension provides the following features:
 
 The following features in the SQL Database Projects extension are currently in preview:
 
-- Create a new projects from an [OpenAPI](https://github.com/OAI/OpenAPI-Specification) specification file.
+- Create new projects from an [OpenAPI](https://github.com/OAI/OpenAPI-Specification) specification file.
 - SDK-style SQL projects ([Microsoft.Build.Sql](https://www.nuget.org/packages/Microsoft.Build.Sql/)).
 
 Watch this short 10-minute video for an introduction to the SQL Database Projects extension in Azure Data Studio:

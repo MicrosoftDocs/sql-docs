@@ -44,7 +44,7 @@ Instead of starting from an empty project, you can quickly populate a SQL Databa
 
 ### In Object Explorer
 
-In the **Connections** view, connect to the SQL Server instance that contains the database to be extracted.  Right-click on the database and select **Create Project from Database** from the context menu.
+In the **Connections** view, connect to the SQL instance that contains the database to be extracted.  Right-click on the database and select **Create Project from Database** from the context menu.
 
 :::image type="content" source="media/sql-database-projects-extension/create-project-from-database.png" alt-text="Screenshot of create Project from Database dialog.":::
 
@@ -57,7 +57,7 @@ The folder structure setting is set to *Schema/Object Type* by default and offer
 - Schema/Object Type: a folder is created per schema and within the folder a folder is created per object type and each object is scripted out to a file
 
 ### In Database Projects view
-In the **Project** view select the **Import Project from Database** button and connect to a SQL Server.  Once the connection is established, select a database from the list available databases and set the name of the project.
+In the **Project** view select the **Import Project from Database** button and connect to a SQL instance.  Once the connection is established, select a database from the list available databases and set the name of the project.
 
 Finally, select a folder structure of the extraction.  The new project is opened and contains SQL scripts for the contents of the selected database.
 
@@ -65,7 +65,7 @@ Finally, select a folder structure of the extraction.  The new project is opened
 
 ### Build and publish
 
-Deploying the database project is achieved in the SQL Database Projects extension by building the project into a [data-tier application file](../../relational-databases/data-tier-applications/data-tier-applications.md) (DACPAC) and publishing to a supported platform. For more on this process, see [Build and Publish a Project](sql-database-project-extension-build.md).
+Deploying the database project is achieved in the SQL Database Projects extension by building the project into a [data-tier application file](../../relational-databases/data-tier-applications/data-tier-applications.md) (dacpac) and publishing to a supported platform. For more on this process, see [Build and Publish a Project](sql-database-project-extension-build.md).
 
 ### Schema compare
 

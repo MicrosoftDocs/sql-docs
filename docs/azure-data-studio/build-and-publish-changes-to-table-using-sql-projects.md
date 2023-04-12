@@ -13,7 +13,7 @@ ms.topic: tutorial
 
 [!INCLUDE [sql-asdb-asdbmi](../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-With the help of the SQL Database Projects extension, projects (tables, views, stored procedures) can be edited without the need to be connected to a server instance in Azure Data Studio. The tutorial below will show how to:
+With the help of the SQL Database Projects extension, SQL projects (including tables, views, stored procedures) can be edited without the need to be connected to a server instance in Azure Data Studio. The tutorial below will show how to:
 
 1. Create a SQL Database Project of the ***AdventureWorks2019*** database.
 

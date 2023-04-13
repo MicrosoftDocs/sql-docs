@@ -216,7 +216,7 @@ After both transactions commit, table `t1` will contain the following rows:
 | 1 | 2 |
 
 > [!IMPORTANT]
-> Even without LAQ, applications should not assume that SQL Server (under versioning isolation levels) will guarantee strict ordering, without using locking hints. Our general recommendation for customers on concurrent systems under RCSI with workloads that rely on strict execution order of transactions (as shown in the previous exercise), is to use stricter isolation levels.
+> Even without LAQ, applications should not assume that SQL Server (under versioning isolation levels) will guarantee strict ordering, without using locking hints. Our general recommendation for customers on concurrent systems under RCSI with workloads that rely on strict execution order of transactions (as shown in the previous exercise), is to [use stricter isolation levels](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).
 
 ## Best practices with optimized locking
 

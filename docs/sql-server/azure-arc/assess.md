@@ -56,6 +56,9 @@ Resource group or Subscription of Arc Machine.
 
 - The [SQL Server browser service](../../tools/configuration-manager/sql-server-browser-service.md) must be running if you're operating a named instance of SQL Server.
 
+- If you use Azure policy, *Configure Arc-enabled Servers with SQL Server extension installed to enable or disable SQL best practices assessment.* , to enable assessmnet at [scale](#enable-best-practices-assessment-at-scale-using-azure-policy), you need below.
+
+   To create an Azure Policy assignment, your subscription requires the Resource Policy Contributor role assignment for the scope that you're targeting. The scope may be either subscription or resource group. Further, if you are going to create a new user assigned managed identity, you need the User Access Administrator role assignment in the subscription.
 ## Enable best practices assessment
 
 1. Sign into the [Azure portal](https://portal.azure.com/) and go to your [Arc-enabled SQL Server resource](https://portal.azure.com/#view/Microsoft_Azure_HybridCompute/AzureArcCenterBlade/~/sqlServers)
@@ -80,6 +83,33 @@ Resource group or Subscription of Arc Machine.
 1. Upon successful best practices assessment deployment, the assessment is scheduled to run every Sunday 12:00 AM local time by default.
 
    :::image type="content" source="media/assess/sql-best-practices-assessment-enabled.png" alt-text="Screenshot showing the successful enablement of best practices assessment of an Arc-enabled SQL Server resource.":::
+
+## Enable best practices assessment at scale using Azure policy
+
+You can automatically enable practices assessment on multiple Arc-enabled SQL Server instances at scale using an Azure policy definition called *Configure Arc-enabled Servers with SQL Server extension installed to enable or disable SQL best practices assessment.*  This policy definition is not assigned to a scope by default. If you assign this policy definition to a scope of your choice, it enables the SQL best practice assessment on all the Arc-enabled SQL Servers within the defined scope, and auto schedule to every Sunday 12:00 AM local time by default.
+
+
+>[!IMPORTANT]
+>The policy enables best practices assessment only for SQL Servers purchased through either [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) or [pay-as-you-go (PAYG)](https://www.microsoft.com/sql-server/sql-server-2022-pricing) licensing options.
+>
+>For instructions to configure the appropriate license type, review [Manage SQL Server license and billing options](manage-license-type.md).
+
+1. Navigate to **Azure Policy** in the Azure portal and choose **Definitions**. 
+1. Search for *Configure Arc-enabled Servers with SQL Server extension installed to enable or disable SQL best practices assessment.* and click on the policy.
+1. Select **Assign**. 
+1. Choose a Scope.
+1. Select **Next**.
+1. On the "Parameters" tab, select **Only show parameters that need input for review**, if the checkbox not already selected.
+   1. Select **Log Analytics Workspace**, **Log Analytics Workspace location**, from drop-down menus respectively.
+   1. Provide **Enablement** value to *true* for enabling the best practice assessmnet. Provide *false* to disable the assessment.
+   1. Select **Next**
+1. On the **Remediation** tab, click **Create a remediation task**.
+1. Choose **System assigned managed identity** (recommended) or **User assigned managed identity** .
+1. Click **Review + Create**.
+1. Click **Create**.
+
+See [Azure Policy documentation](/azure/governance/policy) for general instructions about how to assign an Azure policy using Azure portal or an API of your choice.
+
 
 ### Modify license type
 
@@ -133,6 +163,8 @@ If there are multiple runs in a single day, only the latest run is included in t
 - Best practices assessment is currently limited to SQL Server running on Windows machines. This will not work for SQL on Linux machines.
 - It may take a few seconds to populate the history of the previous execution of the assessments on the best practices home page.
 - A failure on one or more SQL Server instances, mark the assessment failure for all SQL Server instances running on the same machine.  You can view the assessment results for successful SQL Server instances by directly querying the log analytical workspaces.  You can find a few sample queries [here](https://techcommunity.microsoft.com/t5/sql-server-blog/best-practices-assessment-arc-enabled-sql-server/ba-p/3715776).
+- If Log analytics workspace is selected from a different resource group than the Arc-enabled SQL Server resource, the scope of the Azure policy must be the whole subscription.
+- Do not make any other extension configuration changes while the Azure policy is remediating the non-complaint Arc-enabled SQL Server resources. [Track Azure policy remediation task progress.](https://learn.microsoft.com/en-us/azure/governance/policy/how-to/remediate-resources?tabs=azure-portal#step-3-track-remediation-task-progress)
    
 ## Next steps
 

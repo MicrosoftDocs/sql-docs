@@ -116,7 +116,7 @@ SQL database projects are contained within a logical workspace in Azure Data Stu
 
 You can manually add and remove projects from a workspace through the interface in the **Projects** pane. The settings for a workspace can be manually edited in the `.code-workspace` file,  if necessary.
 
-In the following example `.code-workspace` file, the `folders` array lists all folders included in the Explorer pane and the `dataworkspace.excludedProjects` array within `settings` lists all the SQL projects included in the **Projects** pane.
+In the following example `.code-workspace` file, the `folders` array lists all folders included in the Explorer pane and the `dataworkspace.excludedProjects` array within `settings` lists all the SQL projects excluded from the **Projects** pane.
 
 ```json
 {

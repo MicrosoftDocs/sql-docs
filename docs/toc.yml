@@ -10453,12 +10453,14 @@ items:
         href: sql-server/azure-arc/assess.md
       - name: View databases
         href: sql-server/azure-arc/view-databases.md
-      - name: Delete from or restore to Azure Arc
-        href: sql-server/azure-arc/delete-from-azure-arc.md
       - name: Manage SQL Server license and billing options
         href: sql-server/azure-arc/manage-license-type.md
       - name: Configure automated patching
         href: sql-server/azure-arc/patch.md
+      - name: Restore to a point in time
+        href: sql-server/azure-arc/point-in-time-restore.md
+      - name: Delete from or restore to Azure Arc
+        href: sql-server/azure-arc/delete-from-azure-arc.md
     - name: Secure
       items:
       - name: Configure advanced data Security

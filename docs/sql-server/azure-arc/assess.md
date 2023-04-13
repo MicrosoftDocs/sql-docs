@@ -56,7 +56,7 @@ Resource group or Subscription of Arc Machine.
 
 - The [SQL Server browser service](../../tools/configuration-manager/sql-server-browser-service.md) must be running if you're operating a named instance of SQL Server.
 
-- If you use Azure policy, *Configure Arc-enabled Servers with SQL Server extension installed to enable or disable SQL best practices assessment.* , to enable assessmnet at [scale](), you need below.
+- If you use Azure policy, *Configure Arc-enabled Servers with SQL Server extension installed to enable or disable SQL best practices assessment.* , to enable assessmnet at [scale](#enable-best-practices-assessment-at-scale-using-azure-policy), you need below.
 
    To create an Azure Policy assignment, your subscription requires the Resource Policy Contributor role assignment for the scope that you're targeting. The scope may be either subscription or resource group. Further, if you are going to create a new user assigned managed identity, you need the User Access Administrator role assignment in the subscription.
 ## Enable best practices assessment
@@ -84,7 +84,7 @@ Resource group or Subscription of Arc Machine.
 
    :::image type="content" source="media/assess/sql-best-practices-assessment-enabled.png" alt-text="Screenshot showing the successful enablement of best practices assessment of an Arc-enabled SQL Server resource.":::
 
-## Enable best practices assessment at scale
+## Enable best practices assessment at scale using Azure policy
 
 You can automatically enable practices assessment on multiple Arc-enabled SQL Server instances at scale using an Azure policy definition called *Configure Arc-enabled Servers with SQL Server extension installed to enable or disable SQL best practices assessment.*  This policy definition is not assigned to a scope by default. If you assign this policy definition to a scope of your choice, it enables the SQL best practice assessment on all the Arc-enabled SQL Servers within the defined scope, and auto schedule to every Sunday 12:00 AM local time by default.
 

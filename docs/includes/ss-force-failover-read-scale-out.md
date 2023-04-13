@@ -14,6 +14,9 @@ There are two ways to fail over the primary replica in an availability group wit
 - Manual failover without data loss
 - Forced manual failover with data loss
 
+>[!NOTE]
+>Cluster Type NONE accept only Forced Failover. If you tried to make a failover without "FORCE_FAILOVER_ALLOW_DATA_LOSS" you will take an following error: "Msg 47122, Level 16, State 1, Line 1
+Cannot failover an availability replica for availability group 'ag1' since it has CLUSTER_TYPE = NONE. Only force failover is supported in this version of SQL Server."
 
 ### Manual failover without data loss
 
@@ -57,6 +60,7 @@ To manually fail over without data loss:
    This setting ensures that every active transaction is committed to the primary replica and at least one synchronous secondary replica.
    >[!NOTE]
    >This setting is not specific to failover and should be set based on the requirements of the environment.
+   >This setting is available only in Enterprise Edition.
 
 1. Set the primary replica and the secondary replica(s) not participating in the failover offline to prepare for the role change: 
 

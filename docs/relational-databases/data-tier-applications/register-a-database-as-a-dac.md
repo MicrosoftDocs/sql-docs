@@ -17,19 +17,24 @@ helpviewer_keywords:
   - "register DAC"
   - "data-tier application [SQL Server], register"
 ---
+
 # Register a Database As a DAC
+
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
-  Use either the **Register Data-tier Application Wizard** or a Windows PowerShell script to build a data-tier application (DAC) definition that describes the objects in an existing database, and register the DAC definition in the **msdb** system database (**master** in [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]).  
+
+Use either the **Register Data-tier Application Wizard** or a Windows PowerShell script to build a data-tier application (DAC) definition that describes the objects in an existing database, and register the DAC definition in the **msdb** system database (**master** in [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]).  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+- **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **To upgrade a DAC, using:**  [The Register Data-tier Application Wizard](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
+- **To upgrade a DAC, using:**  [The Register Data-tier Application Wizard](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
   
-## Before You Begin  
- The registration process creates a DAC definition that defines the objects in the database. The combination of the DAC definition and the database form a DAC instance. If you register a database as a DAC on an instance of the Database Engine, the registered DAC will be incorporated into the SQL Server Utility the next time the utility collection set is sent from the instance to the Utility Control Point. The DAC will then be present in the **Deployed Data-tier Applications** node of the [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Deployed Data-tier Applications** details page.  
+## Before You Begin
+
+The registration process creates a DAC definition that defines the objects in the database. The combination of the DAC definition and the database form a DAC instance. If you register a database as a DAC on an instance of the Database Engine, the registered DAC will be incorporated into the SQL Server Utility the next time the utility collection set is sent from the instance to the Utility Control Point. The DAC will then be present in the **Deployed Data-tier Applications** node of the [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Deployed Data-tier Applications** details page.  
   
-###  <a name="LimitationsRestrictions"></a> Limitations and Restrictions  
- DAC registration can only be performed on a database in [!INCLUDE[ssSDS](../../includes/sssds-md.md)], or [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) or later. DAC registration cannot be performed if a DAC is already registered for the database. For example, if the database was created by deploying a DAC, you cannot run the **Register Data-tier Application Wizard**.  
+### <a name="LimitationsRestrictions"></a> Limitations and Restrictions  
+
+DAC registration can only be performed on a database in [!INCLUDE[ssSDS](../../includes/sssds-md.md)], or [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) or later. DAC registration cannot be performed if a DAC is already registered for the database. For example, if the database was created by deploying a DAC, you cannot run the **Register Data-tier Application Wizard**.  
   
  You cannot register a DAC if the database has objects that are not supported in a DAC, or contained users. For more information about the types of objects supported in a DAC, see [DAC Support For SQL Server Objects and Versions](/previous-versions/sql/sql-server-2012/ee210549(v=sql.110)).  
   

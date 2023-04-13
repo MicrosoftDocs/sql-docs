@@ -59683,7 +59683,109 @@
       "source_path": "docs/relational-databases/system-tables/msrepl-agent-jobs.md",
       "redirect_url": "/sql/relational-databases/system-tables/msrepl-agent-jobs-transact-sql",
       "redirect_document_id": false
-    }
+    },
+    {
+      "source_path": "docs/ssms/object/filter-settings-object-explorer-and-utility-explorer.md",
+      "redirect_url": "/sql/ssms/release-notes-ssms.md#whats-new-in-1791",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md",
+      "redirect_url": "/sql/ssms/release-notes-ssms.md#whats-new-in-1791",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/manage/utility-explorer-f1-help.md",
+      "redirect_url": "/sql/ssms/release-notes-ssms.md#whats-new-in-1791",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/data-tier-applications/monitor-data-tier-applications.md",
+      "redirect_url": "/sql/ssms/release-notes-ssms.md#whats-new-in-1791",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/manage/change-proxy-account-for-utility-collection-on-managed-sql-server.md",
+      "redirect_url": "/sql/ssms/release-notes-ssms.md#whats-new-in-1791",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md",
+      "redirect_url": "/sql/ssms/release-notes-ssms.md#whats-new-in-1791",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md",
+      "redirect_url": "/sql/ssms/release-notes-ssms.md#whats-new-in-1791",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/manage/connect-to-a-sql-server-utility.md",
+      "redirect_url": "/sql/ssms/release-notes-ssms.md#whats-new-in-1791",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md",
+      "redirect_url": "/sql/ssms/release-notes-ssms.md#whats-new-in-1791",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md",
+      "redirect_url": "/sql/ssms/release-notes-ssms.md#whats-new-in-1791",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/manage/view-resource-health-policy-results-sql-server-utility.md",
+      "redirect_url": "/sql/ssms/release-notes-ssms.md#whats-new-in-1791",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md",
+      "redirect_url": "/sql/ssms/release-notes-ssms.md#whats-new-in-1791",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/manage/modify-a-resource-health-policy-definition-sql-server-utility.md",
+      "redirect_url": "/sql/ssms/release-notes-ssms.md#whats-new-in-1791",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/manage/remove-a-utility-control-point-sql-server-utility.md",
+      "redirect_url": "/sql/ssms/release-notes-ssms.md#whats-new-in-1791",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/manage/configure-your-utility-control-point-data-warehouse-sql-server-utility.md",
+      "redirect_url": "/sql/ssms/release-notes-ssms.md#whats-new-in-1791",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/manage/configure-health-policies-sql-server-utility.md",
+      "redirect_url": "/sql/ssms/release-notes-ssms.md#whats-new-in-1791",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md",
+      "redirect_url": "/sql/ssms/release-notes-ssms.md#whats-new-in-1791",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/manage/remove-an-instance-of-sql-server-from-the-sql-server-utility.md",
+      "redirect_url": "/sql/ssms/release-notes-ssms.md#whats-new-in-1791",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/manage/move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility.md",
+      "redirect_url": "/sql/ssms/release-notes-ssms.md#whats-new-in-1791",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/manage/sql-server-utility-features-and-tasks.md",
+      "redirect_url": "/sql/ssms/release-notes-ssms.md#whats-new-in-1791",
+      "redirect_document_id": false
+    },
   ]
 }
+
+
 

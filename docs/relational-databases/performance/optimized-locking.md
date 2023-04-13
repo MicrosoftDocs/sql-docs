@@ -208,7 +208,7 @@ After both transactions commit, table `t1` will contain the following rows:
 
 **With LAQ**
 
-With LAQ, transaction T2 will use the latest committed version of the row b (b=1 in the version store) to evaluate its predicate (b=2). This row does not qualify; hence it is skipped and T2 moves to the next row without having been blocked by transaction T1. In this example, LAQ removes blocking but leads to different results. 
+With LAQ, transaction T2 will use the latest committed version of the row b (`b`=1 in the version store) to evaluate its predicate (`b`=2). This row does not qualify; hence it is skipped and T2 moves to the next row without having been blocked by transaction T1. In this example, LAQ removes blocking but leads to different results. 
 
 After both transactions commit, table `t1` will contain the following rows:
 

@@ -230,7 +230,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 #### What's new in 17.9.1
 
-SQL Server utility is no longer available in versions 17.X and newer.
+SQL Server utility is no longer available in versions 17.x and newer.
 
 #### Bug fixes in 17.9.1
 

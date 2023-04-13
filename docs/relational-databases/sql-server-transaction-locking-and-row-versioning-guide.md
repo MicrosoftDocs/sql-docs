@@ -4,7 +4,7 @@ description: "Transaction locking and row versioning guide"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 03/21/2023
+ms.date: 04/12/2023
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual

@@ -193,7 +193,7 @@ GO
 |COMMIT TRAN    ||
 | | COMMIT TRAN |
 
-Let's evaluate the outcome of the above behavior with and without lock after qualification (LAQ), an integral part of optimized locking.
+Let's evaluate the outcome of the above scenario with and without lock after qualification (LAQ), an integral part of optimized locking.
 
 **Without LAQ**
 
@@ -201,19 +201,21 @@ Without LAQ, transaction T2 will be blocked and wait for the transaction T1 to c
 
 After both transactions commit, table `t1` will contain the following rows:
 
-| a | b |
-| :-- | :-- |
-| 1 | 3 |
+```
+ a | b 
+ 1 | 3 
+```
 
-** With LAQ**
+**With LAQ**
 
 With LAQ, transaction T2 will use the latest committed version of the row b (b=1 in the version store) to evaluate its predicate (b=2). This row does not qualify; hence it is skipped and T2 moves to the next row without having been blocked by transaction T1. In this example, LAQ removes blocking but leads to different results. 
 
 After both transactions commit, table `t1` will contain the following rows:
 
-| a | b |
-| :-- | :-- |
-| 1 | 2 |
+```
+ a | b 
+ 1 | 2 
+```
 
 > [!IMPORTANT]
 > Even without LAQ, applications should not assume that SQL Server (under versioning isolation levels) will guarantee strict ordering, without using locking hints. Our general recommendation for customers on concurrent systems under RCSI with workloads that rely on strict execution order of transactions (as shown in the previous exercise), is to [use stricter isolation levels](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).

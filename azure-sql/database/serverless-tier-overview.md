@@ -4,7 +4,7 @@ description: This article describes the new serverless compute tier and compares
 author: oslake
 ms.author: moslake
 ms.reviewer: wiassaf, mathoma
-ms.date: 02/14/2023
+ms.date: 04/13/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -553,6 +553,9 @@ Suppose the compute unit price for an HA replica is $0.000105/vCore/second. Then
 **Named replica** 
 
 Similarly for the named replica, suppose the total vCore seconds billed over 24 hours is 150000 vCore seconds and that the compute unit price for a named replica is $0.000105/vCore/second. Then the compute billed for the named replica over this time period is $0.000105/vCore/second * 150000 vCore seconds ~ $15.75.
+
+**Total compute cost**
+
 Therefore, the total compute bill for all three replicas of the database is around $29.34 + ~ $14.36 + $15.75 = $59.45.
 
 ---

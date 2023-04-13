@@ -1050,6 +1050,9 @@ If update conflicts are detected with RCSI and in the default READ COMMITTED iso
 
 With optimized locking enabled, using the SNAPSHOT isolation level, the behavior of update conflicts is the same. Update conflicts must be handled and retried manually by the application.
 
+> [!NOTE]
+> For more information on behavior changes with the lock after qualifiation (LAQ) feature of optimized locking, see [Query behavior changes with optimized locking and RCSI](performance/optimized-locking.md#behavior).
+
 ### Behavior in summary
 
  The following table summarizes the differences between snapshot isolation and READ COMMITTED isolation using row versioning.  

@@ -148,12 +148,12 @@ ms.topic: include
 | 33053 | 16 | No | Extensible Key Management is disabled or not supported on this edition of SQL Server.  Use sp_configure 'EKM provider enabled' to enable it. |
 | 33054 | 16 | No | Extensible key management is not supported in this edition of SQL Server. |
 | 33055 | 16 | No | Exception happened when calling cryptographic provider '%.\*ls' in the API '%.\*ls'. SQL Server is terminating process %d. Exception type: %ls; Exception code: 0x%lx. |
-| 33056 | 16 | No | Cannnot impersonate login '%.\*ls' to access %S_MSG '%.\*ls'. |
+| 33056 | 16 | No | Cannot impersonate login '%.\*ls' to access %S_MSG '%.\*ls'. |
 | 33057 | 10 | No | Cryptographic provider is now disabled. However users who have an open cryptographic session with the provider can still use it. Restart the server to disable the provider for all users. |
 | 33058 | 10 | No | Cryptographic provider is now dropped. However users who have an open cryptographic session with the provider can still use it. Restart the server to drop the provider for all users. |
 | 33059 | 16 | No | An error occurred while trying to flush all running audit sessions.  Some events may be lost. |
 | 33060 | 16 | No | The format of supplied parameter sid is invalid. The sid might be incorrect or the sid might describe the wrong type of user. |
-| 33061 | 16 | No | The specified RETENTION_DAYS value is greater than the maximum value allowed. The retenton days value must be less than %d days. |
+| 33061 | 16 | No | The specified RETENTION_DAYS value is greater than the maximum value allowed. The retention days value must be less than %d days. |
 | 33062 | 16 | No | Password validation failed. The password does not meet SQL Server password policy requirements because it is too short. The password must be at least %d characters. |
 | 33063 | 16 | No | Password validation failed. The password does not meet SQL Server password policy requirements because it is too long. The password must be at most %d characters. |
 | 33064 | 16 | No | Password validation failed. The password does not meet SQL Server password policy requirements because it is not complex enough. The password must be at least %d characters long and contain characters from three of the following four sets: Uppercase letters, Lowercase letters, Base 10 digits, and Symbols. |
@@ -437,7 +437,7 @@ ms.topic: include
 | 33417 | 16 | No | An invalid path locator caused a FileTable check constraint error.  The path locator has a level of %d, which is deeper than the limit of %d supported by FileTable. Reduce the depth of the directory hierarchy. |
 | 33418 | 16 | No | FILETABLE_DIRECTORY '%.\*s' attempting to be set on table '%.\*s' is not unique in the database '%.\*s'. Provide a unique value for the option FILETABLE_DIRECTORY to this operation. |
 | 33419 | 16 | No | Function %ls is only valid on the varbinary(max) FILESTREAM column in a FileTable. |
-| 33420 | 16 | No | Unable to process object '%.\*s' because it is a three-part or four-part name. Specifying the server or database is not supported in the object identifer. |
+| 33420 | 16 | No | Unable to process object '%.\*s' because it is a three-part or four-part name. Specifying the server or database is not supported in the object identifier. |
 | 33421 | 16 | No | The object name '%.\*s' is not a valid FileTable object. |
 | 33422 | 16 | No | The column '%.\*s' cannot be added to table '%.\*s' as it is a FileTable. Adding columns to the fixed schema of a FileTable object is not permitted. |
 | 33423 | 16 | No | Invalid FileTable path name or format. |
@@ -493,7 +493,7 @@ ms.topic: include
 | 33524 | 10 | No | The fn_get_audit_file function is skipping records from '%.\*ls'. You must be connected to database '%.\*ls' to access its audit logs. |
 | 33525 | 10 | No | The fn_get_audit_file function is skipping records from '%.\*ls'. You must be connected to server '%.\*ls' to access its audit logs. |
 | 33526 | 10 | No | The fn_get_audit_file function is skipping records from '%.\*ls', as it does not conform to the auditing blob naming convention. |
-| 33527 | 16 | No | Error occured while initializing the security functions lookup table. This might be because the installation of SQL Server is corrupted and a required file is missing. |
+| 33527 | 16 | No | Error occurred while initializing the security functions lookup table. This might be because the installation of SQL Server is corrupted and a required file is missing. |
 | 33528 | 16 | No | Valid values of the database compatibility level are %d, %d, %d, or %d. |
 | 33529 | 16 | No | The audit filter predicate exceeds the maximum allowed length of %d characters. |
 | 33530 | 16 | No | The combined length of audit name and blob storage container name exceeds the maximum allowed length (by %d character(s)). Please use shorter audit or container name. |
@@ -653,8 +653,8 @@ ms.topic: include
 | 35268 | 16 | Yes | Synchronization of a secondary database, '%.\*ls', was interrupted, leaving the database in an inconsistent state. The database will enter the RESTORING state. To complete recovery and bring the database online, use current log backups from the primary database to restore the log records past LSN %S_LSN. Alternatively, drop this secondary database, and prepare a new one by restoring a full database backup of the primary database followed by all subsequent log backups. |
 | 35269 | 21 | Yes | Synchronization of a secondary database, '%.\*ls', was interrupted, leaving the database in an inconsistent state. The database will be marked SUSPECT. To return the database to a consistent state, restore it from a clean database backup followed by all subsequent log backups. |
 | 35270 | 10 | No | Received a corrupt FileStream transport message. The '%ls' message section is invalid. |
-| 35271 | 16 | No | The availability database %ls in availailability group %ls failed to complete a reconfiguration. Refer to the error code for more details. If this condition persists, contact the system administrator. |
-| 35272 | 16 | No | Either nvalid parameters were supplied for sys.sp_availability_group_command_internal or user does not have permissions to execute this procedure. |
+| 35271 | 16 | No | The availability database %ls in availability group %ls failed to complete a reconfiguration. Refer to the error code for more details. If this condition persists, contact the system administrator. |
+| 35272 | 16 | No | Either invalid parameters were supplied for sys.sp_availability_group_command_internal or user does not have permissions to execute this procedure. |
 | 35273 | 10 | Yes | Bypassing recovery for database '%ls' because it is marked as an inaccessible availability database. The session with the primary replica was interrupted while reverting the database to the common recovery point. Either the WSFC node lacks quorum or the communications links are broken because of problems with links, endpoint configuration, or permissions (for the server account or security certificate). To gain access to the database, you need to determine what has changed in the session configuration and undo the change. |
 | 35274 | 10 | Yes | Recovery for availability database '%ls' is pending until the secondary replica receives additional transaction log from the primary before it complete and come online. Ensure that the server instance that hosts the primary replica is running. |
 | 35275 | 16 | Yes | A previous RESTORE WITH CONTINUE_AFTER_ERROR operation or being removed while in the SUSPECT state from an availability group left the '%.\*ls' database in a potentially damaged state. The database cannot be joined while in this state. Restore the database, and retry the join operation. |
@@ -704,7 +704,7 @@ ms.topic: include
 | 35320 | 15 | No | Column store indexes are not allowed on tables for which the durability option SCHEMA_ONLY is specified. |
 | 35321 | 16 | No | Table '%.\*ls' uses a clustered columnstore index. Columnstore indexes are not supported in this service tier of the database. See Books Online for more details on feature support in different service tiers of Windows Azure SQL Database. |
 | 35322 | 16 | No | The statement failed because a nonclustered index and the underlying clustered columnstore index must be partition-aligned. Consider creating the nonclustered index using the same partition function and same (or equivalent) partition scheme as the clustered columnstore index. |
-| 35323 | 16 | No | The statement failed because adding multiple generated value type columns (such as identity and uniqueidentifier types) at once is not supported for columnstore index. Consider adding the generated columns seperately. |
+| 35323 | 16 | No | The statement failed because adding multiple generated value type columns (such as identity and uniqueidentifier types) at once is not supported for columnstore index. Consider adding the generated columns separately. |
 | 35324 | 15 | No | The statement failed because specifying SORT_IN_TEMPDB is not allowed when creating a columnstore index without ORDER. Consider creating a columnstore index without specifying SORT_IN_TEMPDB, or use it with ORDER clause. |
 | 35325 | 15 | No | The statement failed because the definition of a column belonging to clustered columnstore index cannot be changed. Consider dropping the columnstore index, altering the column, then creating a new columnstore index. |
 | 35326 | 15 | No | The statement failed because a nonclustered columnstore index cannot be reorganized. Reorganization of a nonclustered columnstore index is not necessary. |
@@ -1085,7 +1085,7 @@ ms.topic: include
 | 40035 | 16 | No | CSN being added must be equal or greater than the last CSN. The new CSN is (%d,%I64d), the current CSN is (%d,%I64d). |
 | 40036 | 16 | No | Can not perform replica operation because this node is not the secondary for this partition. |
 | 40037 | 16 | No | The epoch being started must not have been used. The new CSN is (%d,%I64d), the current CSN is (%d,%I64d). |
-| 40038 | 16 | No | Can not get ack to rollback replication message. |
+| 40038 | 16 | No | Can not get ack to roll back replication message. |
 | 40039 | 16 | No | Can not get ack to commit replication message. |
 | 40040 | 16 | No | Failed to initiate VDI Client for physical seeding. |
 | 40041 | 16 | No | Corrupted column status. |
@@ -1803,7 +1803,7 @@ ms.topic: include
 | 41156 | 16 | No | Cannot drop availability group '%.\*ls' from this instance of SQL Server.  The availability group is either being dropped, or the local availability replica is being removed from the availability group.  Verify that the specified availability group name is correct.  Wait for the current operation to complete, then retry the command if necessary. |
 | 41157 | 16 | No | Cannot remove the local availability replica from availability group '%.\*ls' from this instance of SQL Server.  The availability group is either being dropped, or the local availability replica is being disjoined.  Verify that the specified availability group name is correct.  Wait for the current operation to complete, then retry the command if necessary. |
 | 41158 | 16 | No | Failed to join local availability replica to availability group '%.\*ls'.  The operation encountered SQL Server error %d and has been rolled back.  Check the SQL Server error log for more details.  When the cause of the error has been resolved, retry the ALTER AVAILABILITY GROUP JOIN command. |
-| 41159 | 16 | No | Failed to join local availability replica to availability group '%.\*ls'.  The operation encountered SQL Server error %d.  An attempt to rollback the operation failed.  Check SQL Server error log for more details.  Run DROP AVAILABILITY GROUP command to clean up any metadata that might remain from the availability group. |
+| 41159 | 16 | No | Failed to join local availability replica to availability group '%.\*ls'.  The operation encountered SQL Server error %d.  An attempt to roll back the operation failed.  Check SQL Server error log for more details.  Run DROP AVAILABILITY GROUP command to clean up any metadata that might remain from the availability group. |
 | 41160 | 16 | No | Failed to designate the local availability replica of availability group '%.\*ls' as the primary replica.  The operation encountered SQL Server error %d and has been terminated.  Check the preceding error and the SQL Server error log for more details about the error and corrective actions. |
 | 41161 | 16 | No | Failed to validate the Cyclic Redundancy Check (CRC) of the configuration of availability group '%.\*ls'.  The operation encountered SQL Server error %d, and the availability group has been taken offline to protect its configuration and the consistency of its joined databases.  Check the SQL Server error log for more details.  If configuration data corruption occurred, the availability group might need to be dropped and recreated. |
 | 41162 | 16 | No | Failed to validate sequence number of the configuration of availability group '%.\*ls'.  The in-memory sequence number does not match the persisted sequence number.  The availability group and/or the local availability replica will be restarted automatically.  No user action is required at this time. |
@@ -1840,7 +1840,7 @@ ms.topic: include
 | 41193 | 10 | No | Cannot join database '%.\*ls' to availability group '%.\*ls'.  The database is in the process of being removed from the availability group.  When the remove-database operation completes, the database will no longer be joined to the availability group.  Then retry the join-database command. |
 | 41194 | 16 | No | An error occurred while waiting for the local availability replica for availability group '%.\*ls' to complete post-online work.  The operation encountered SQL OS error %d and has been terminated.  Verify that the availability group is in the correct state for the command.  If this is a Windows Server Failover Clustering (WSFC) availability group, also verify that the WSFC cluster is in the correct states for the command.  Then retry the command. |
 | 41195 | 16 | No | Availability group '%.\*ls' failed to process the WSFC lease-renewal command. The local availability replica lease is no longer valid to process the lease renewal command. Availability replica lease expired. This is an informational message only. No user action is required. |
-| 41196 | 16 | No | Failed to create availability group '%.\*ls', because a Windows Server Failover Cluster (WSFC) group with the specified name already exists.  An attempt to rollback the operation failed.  Check the SQL Server error log for more details.  To manually clean up the partially created availability group, run the DROP AVAILABILITY GROUP command.  Reenter your CREATE AVAILABILITY GROUP command specifying a unique availability group name. |
+| 41196 | 16 | No | Failed to create availability group '%.\*ls', because a Windows Server Failover Cluster (WSFC) group with the specified name already exists.  An attempt to roll back the operation failed.  Check the SQL Server error log for more details.  To manually clean up the partially created availability group, run the DROP AVAILABILITY GROUP command.  Reenter your CREATE AVAILABILITY GROUP command specifying a unique availability group name. |
 | 41197 | 15 | No | The FAILOVER_MODE option has not been specified for the replica '%.\*ls'. Reenter the command, specifying a failover mode for the replica. |
 | 41198 | 15 | No | The AVAILABILITY_MODE option has not been specified for the replica '%.\*ls'. Reenter the command, specifying an availability mode for the replica. |
 | 41199 | 16 | No | The specified command is invalid because the Always On Availability Groups %ls feature is not supported by this edition of SQL Server. For information about features supported by the editions of SQL Server, see SQL Server Books Online. |

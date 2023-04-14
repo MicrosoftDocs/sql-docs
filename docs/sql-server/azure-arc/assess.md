@@ -34,31 +34,30 @@ The Environment Health assessment is replaced with a much richer best practices 
 - If SQL Server is hosting a single SQL Server instance make sure that the version of Azure Extension for SQL Server (`WindowsAgent.SqlServer`) is "**1.1.2202.47**" or above.  In the case of SQL Server hosting multiple SQL Server instances, make sure that the version of Azure Extension for SQL Server (`WindowsAgent.SqlServer`) is greater than "**1.1.2231.59".** Learn how to [check the](/azure/azure-arc/servers/manage-vm-extensions-portal#upgrade-extensions)**[Azure Extension for SQL Server](/azure/azure-arc/servers/manage-vm-extensions-portal#upgrade-extensions)**[ version and update to the latest.](/azure/azure-arc/servers/manage-vm-extensions-portal#upgrade-extensions)
 - [A Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace?tabs=azure-portal) in the same subscription as your Arc-enabled SQL Server resource to upload assessment results to.
 - The user configuring SQL BPA must have the following permissions.
-  - Log Analytics Contributor role on Resource Group or Subscription of the Log Analytics workspace.
-  - Azure Connected Machine Resource Administrator role on the Resource Group or Subscription of the Arc-enabled SQL Server.
-  - Monitoring Contributor role on the Resource group or Subscription of Log Analytics Workspace &
-Resource group or Subscription of Arc Machine.
-
+  - Log Analytics Contributor role on resource group or subscription of the Log Analytics workspace.
+  - Azure Connected Machine Resource Administrator role on the resource group or subscription of the Arc-enabled SQL Server.
+  - Monitoring Contributor role on the Resource group or subscription of Log Analytics Workspace & Resource group or subscription of Arc Machine.
   - Users can be assigned to built-in roles such as Contributor or Owner. These roles have sufficient permissions. For more information, review [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal) for more information.
 
-- The minimum permissions required to access or read the assessmnet report are following:
-- Reader role on the resource group or subscription of the Arc-enabled SQL Server resource.
-- [Log analytics reader](/azure/azure-monitor/logs/manage-access?tabs=portal#log-analytics-reader).
-- [Monitoring reader](/azure/role-based-access-control/built-in-roles#monitoring-reader) on resource group/subscription of Log analytics workspace.
-- The SQL Server built-in login **NT AUTHORITY\SYSTEM** must be the member of SQL Server **sysadmin** server role for all the SQL Server instances running on the machine. 
-- If outbound connectivity is restricted by your firewall or proxy server, make sure the URLs from target SQL Server machine, make sure the URLs listed below allowed access to Azure Arc over TCP port 443.
+- The minimum permissions required to access or read the assessment report are following:
+  - Reader role on the resource group or subscription of the Arc-enabled SQL Server resource.
+  - [Log analytics reader](/azure/azure-monitor/logs/manage-access?tabs=portal#log-analytics-reader).
+  - [Monitoring reader](/azure/role-based-access-control/built-in-roles#monitoring-reader) on resource group/subscription of Log analytics workspace.
+  - The SQL Server built-in login **NT AUTHORITY\SYSTEM** must be the member of SQL Server **sysadmin** server role for all the SQL Server instances running on the machine. 
+  - If outbound connectivity is restricted by your firewall or proxy server, make sure the URLs from target SQL Server machine, make sure the URLs listed below allowed access to Azure Arc over TCP port 443.
 
-  - `global.handler.control.monitor.azure.com`
-  - `<virtual-machine-region-name>.handler.control.monitor.azure.com`
-  - `<log-analytics-workspace-id>.ods.opinsights.azure.com`
+    - `global.handler.control.monitor.azure.com`
+    - `<virtual-machine-region-name>.handler.control.monitor.azure.com`
+    - `<log-analytics-workspace-id>.ods.opinsights.azure.com`
 
 - Your SQL Server instance must have the [TCP/IP protocol enabled](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
 
 - The [SQL Server browser service](../../tools/configuration-manager/sql-server-browser-service.md) must be running if you're operating a named instance of SQL Server.
 
-- If you use Azure policy, *Configure Arc-enabled Servers with SQL Server extension installed to enable or disable SQL best practices assessment.* , to enable assessmnet at [scale](#enable-best-practices-assessment-at-scale-using-azure-policy), you need below.
+- If you use Azure policy, *Configure Arc-enabled Servers with SQL Server extension installed to enable or disable SQL best practices assessment.* , to enable assessment at [scale](#enable-best-practices-assessment-at-scale-using-azure-policy), you need below.
 
    To create an Azure Policy assignment, your subscription requires the Resource Policy Contributor role assignment for the scope that you're targeting. The scope may be either subscription or resource group. Further, if you are going to create a new user assigned managed identity, you need the User Access Administrator role assignment in the subscription.
+
 ## Enable best practices assessment
 
 1. Sign into the [Azure portal](https://portal.azure.com/) and go to your [Arc-enabled SQL Server resource](https://portal.azure.com/#view/Microsoft_Azure_HybridCompute/AzureArcCenterBlade/~/sqlServers)
@@ -67,7 +66,7 @@ Resource group or Subscription of Arc Machine.
 
    :::image type="content" source="media/assess/sql-best-practices-assessment-launch.png" alt-text="Screenshot showing how to enable the best practices assessment screen of an Arc-enabled SQL Server resource.":::
 
-1. If the Log Analytics Workspace is not created or the current user does not have Log Analytics Contributor role assigned for the Resource Group or Subscription, you can't initiate the on-demand SQL Assessment.  Review the Prerequisites section above.
+1. If the Log Analytics Workspace is not created or the current user does not have Log Analytics Contributor role assigned for the resource group or subscription, you can't initiate the on-demand SQL Assessment.  Review the Prerequisites section above.
 
    :::image type="content" source="media/assess/enable-log-analytics-workspace.png" alt-text="Screenshot showing how to specify the log analytics workspace for SQL Server best practices assessment.":::
 
@@ -164,8 +163,8 @@ If there are multiple runs in a single day, only the latest run is included in t
 - It may take a few seconds to populate the history of the previous execution of the assessments on the best practices home page.
 - A failure on one or more SQL Server instances, mark the assessment failure for all SQL Server instances running on the same machine.  You can view the assessment results for successful SQL Server instances by directly querying the log analytical workspaces.  You can find a few sample queries [here](https://techcommunity.microsoft.com/t5/sql-server-blog/best-practices-assessment-arc-enabled-sql-server/ba-p/3715776).
 - If Log analytics workspace is selected from a different resource group than the Arc-enabled SQL Server resource, the scope of the Azure policy must be the whole subscription.
-- Do not make any other extension configuration changes while the Azure policy is remediating the non-complaint Arc-enabled SQL Server resources. [Track Azure policy remediation task progress.](https://learn.microsoft.com/en-us/azure/governance/policy/how-to/remediate-resources?tabs=azure-portal#step-3-track-remediation-task-progress)
-   
+- Do not make any other extension configuration changes while the Azure policy is remediating the non-complaint Arc-enabled SQL Server resources. [Track Azure policy remediation task progress.](/azure/governance/policy/how-to/remediate-resources?tabs=azure-portal#step-3-track-remediation-task-progress)
+
 ## Next steps
 
 - [Connect your SQL Server to Azure Arc](connect.md).

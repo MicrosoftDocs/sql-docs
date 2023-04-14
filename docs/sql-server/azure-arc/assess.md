@@ -36,7 +36,7 @@ The Environment Health assessment is replaced with a best practices assessment (
 - Your Windows-based SQL Server instance is connected to Azure. Follow the instructions to [onboard your SQL Server instance to Arc-enabled SQL Server](connect.md).
 
   > [!NOTE]
-  > Best practices assessment is currently limited to SQL Server running on Windows machines. This will not work for SQL on Linux machines.
+  > Best practices assessment is currently limited to SQL Server running on Windows machines. THe assessment doesn't work for SQL on Linux machines.
 
 - If SQL Server is hosting a single SQL Server instance, make sure that the version of Azure Extension for SQL Server (`WindowsAgent.SqlServer`) is "**1.1.2202.47**" or later.  In the case of SQL Server hosting multiple SQL Server instances, make sure that the version of Azure Extension for SQL Server (`WindowsAgent.SqlServer`) is greater than "**1.1.2231.59".** Learn how to [check the](/azure/azure-arc/servers/manage-vm-extensions-portal#upgrade-extensions)**[Azure Extension for SQL Server](/azure/azure-arc/servers/manage-vm-extensions-portal#upgrade-extensions)**[ version and update to the latest.](/azure/azure-arc/servers/manage-vm-extensions-portal#upgrade-extensions)
 - [A Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace?tabs=azure-portal) in the same subscription as your Arc-enabled SQL Server resource to upload assessment results to.
@@ -61,9 +61,7 @@ The Environment Health assessment is replaced with a best practices assessment (
 
 - The [SQL Server browser service](../../tools/configuration-manager/sql-server-browser-service.md) must be running if you're operating a named instance of SQL Server.
 
-- If you use Azure policy, *Configure Arc-enabled Servers with SQL Server extension installed to enable or disable SQL best practices assessment.* , to enable assessment at [scale](#enable-best-practices-assessment-at-scale-using-azure-policy), you need below.
-
-   To create an Azure Policy assignment, your subscription requires the Resource Policy Contributor role assignment for the scope that you're targeting. The scope may be either subscription or resource group. Further, if you are going to create a new user assigned managed identity, you need the User Access Administrator role assignment in the subscription.
+- If you use Azure policy, *Configure Arc-enabled Servers with SQL Server extension installed to enable or disable SQL best practices assessment* , to enable assessment at [scale](#enable-best-practices-assessment-at-scale-using-azure-policy), you need to create an Azure Policy assignment. Your subscription requires the Resource Policy Contributor role assignment for the scope that you're targeting. The scope may be either subscription or resource group. Further, if you are going to create a new user assigned managed identity, you need the User Access Administrator role assignment in the subscription.
 
 ## Enable best practices assessment
 
@@ -119,7 +117,7 @@ See [Azure Policy documentation](/azure/governance/policy) for general instructi
 
 ### Modify license type
 
-If an instance of SQL Server is configured with a license only type of license, you will need to change the license type to configure best practices assessment. For more information, see [Manage SQL Server license and billing options](manage-license-type.md).
+If an instance of SQL Server is configured with a license only type of license, you need to change the license type to configure best practices assessment. For more information, see [Manage SQL Server license and billing options](manage-license-type.md).
 
 :::image type="content" source="media/assess/change-license-type.png" alt-text="Screenshot of Azure portal change license type.":::
 
@@ -132,7 +130,7 @@ After you have enabled the best practices assessment, you can run, or configure 
    :::image type="content" source="media/assess/run-assessment.png" alt-text="Screenshot showing run assessment.":::
 
    > [!NOTE]
-   > Performing any of the tasks below on a specific SQL Server instance will be applied to all SQL Server instances running on the machine.
+   > When you perform any of the following tasks on a specific SQL Server instance, the task is applied to all SQL Server instances running on the machine.
 
    The **View assessment results** is inactive until the results are ready in Log Analytics. This process might take up to two hours after the data files are processed on the target machine.
 
@@ -178,11 +176,11 @@ If there are multiple runs in a single day, only the latest run is included in t
 
 ## Known issues
 
-- Best practices assessment is currently limited to SQL Server running on Windows machines. This will not work for SQL on Linux machines.
+- Best practices assessment is currently limited to SQL Server running on Windows machines. The assessment doesn't work for SQL on Linux machines.
 - It may take a few seconds to populate the history of the previous execution of the assessments on the best practices home page.
 - A failure on one or more SQL Server instances, mark the assessment failure for all SQL Server instances running on the same machine.  You can view the assessment results for successful SQL Server instances by directly querying the log analytical workspaces.  You can find a few sample queries [here](https://techcommunity.microsoft.com/t5/sql-server-blog/best-practices-assessment-arc-enabled-sql-server/ba-p/3715776).
 - If Log analytics workspace is selected from a different resource group than the Arc-enabled SQL Server resource, the scope of the Azure policy must be the whole subscription.
-- Do not make any other extension configuration changes while the Azure policy is remediating the noncomplaint Arc-enabled SQL Server resources. [Track Azure policy remediation task progress.](/azure/governance/policy/how-to/remediate-resources?tabs=azure-portal#step-3-track-remediation-task-progress)
+- Do not make any other extension configuration changes while the Azure policy is remediating the noncompliant Arc-enabled SQL Server resources. [Track Azure policy remediation task progress.](/azure/governance/policy/how-to/remediate-resources?tabs=azure-portal#step-3-track-remediation-task-progress)
 
 ## Next steps
 

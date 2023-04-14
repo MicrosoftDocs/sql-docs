@@ -40,7 +40,7 @@ sp_addlogreader_agent [ @job_login = ] 'job_login'
   
 ## Arguments  
 `[ @job_login = ] 'job_login'`
- Is the login for the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows account under which the agent runs. *job_login* is **nvarchar(257)**, with a default value of NULL. This Windows account is always used for agent connections to the Distributor.  
+ Is the login for the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows account under which the agent runs. *job_login* is **nvarchar(257)**, with a default value of NULL. This Windows account is always used for agent connections to the Distributor. On Azure SQL Managed Instance, use a SQL Server account. 
   
 > [!NOTE]
 >  For non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers, this must be the same login specified in [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  

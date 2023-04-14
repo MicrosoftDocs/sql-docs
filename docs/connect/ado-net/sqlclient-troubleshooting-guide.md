@@ -39,7 +39,7 @@ SNI is the native C++ library that SqlClient depends on for various network oper
 
 The included ".targets" file is auto-referenced when a direct dependency is made to the "Microsoft.Data.SqlClient" library. In scenarios where a transitive (indirect) reference is made, this ".targets" file should be manually referenced to ensure "Copy" operations can execute when necessary.
 
-**Recommended Solution:** Make sure the ".targets" file is referenced in the application's ".csproj" file to ensure "Copy" operations are executed.
+**Recommended Solution:** Make sure the ".targets" file is referenced in the application's project file to ensure "Copy" operations are executed. An example of edits to a project file can be found in this [related GitHub issue](https://github.com/dotnet/SqlClient/issues/612#issuecomment-1401341941).
 
 These targets cover Microsoft's well-known and commonly used targets only. If an external tool or application defines custom targets to copy binaries, new targets must be defined by tool maintainers to ensure native SNI DLLs are copied along-side the Microsoft.Data.SqlClient.dll binaries and are available when executing client applications.
 

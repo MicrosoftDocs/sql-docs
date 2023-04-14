@@ -13815,15 +13815,17 @@ items:
     - name: VIEWS
       href: relational-databases/system-information-schema-views/views-transact-sql.md
   - name: System stored procedures
-    href: relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md
     items:
+    - name: Overview
+      href: relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md
     - name: Active Geo-Replication
       items:
       - name: sp_wait_for_database_copy_sync
-        href: relational-databases/system-stored-procedures/active-geo-replication-sp-wait-for-database-copy-sync.md
-    - name: Spatial Indexes
-      href: relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md
+        href: relational-databases/system-stored-procedures/sp-wait-for-database-copy-sync-transact-sql.md
+    - name: Spatial indexes
       items:
+      - name: Overview
+        href: relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md
       - name: sp_help_spatial_geometry_index
         href: relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md
       - name: sp_help_spatial_geometry_index_xml
@@ -13837,8 +13839,9 @@ items:
       - name: sp_help_spatial_geography_histogram
         href: relational-databases/system-stored-procedures/sp-help-spatial-geography-histogram-transact-sql.md
     - name: Catalog
-      href: relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md
       items:
+      - name: Overview
+        href: relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md
       - name: sp_column_privileges
         href: relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md
       - name: sp_columns
@@ -13868,8 +13871,9 @@ items:
       - name: sp_tables
         href: relational-databases/system-stored-procedures/sp-tables-transact-sql.md
     - name: Change Data Capture
-      href: relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md
       items:
+      - name: Overview
+        href: relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md
       - name: sys.sp_cdc_add_job
         href: relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md
       - name: sys.sp_cdc_change_job
@@ -13905,8 +13909,9 @@ items:
       - name: sys.sp_cdc_set_scheduler_job
         href: relational-databases/system-stored-procedures/sys-cdc-set-scheduler-job-transact-sql.md
     - name: Change Tracking
-      href: relational-databases/system-stored-procedures/change-tracking-stored-procedures-transact-sql.md
       items:
+      - name: Overview
+        href: relational-databases/system-stored-procedures/change-tracking-stored-procedures-transact-sql.md
       - name: sys.sp_flush_commit_table
         href: relational-databases/system-stored-procedures/sys-sp-flush-commit-table-transact-sql.md       
       - name: sys.sp_flush_commit_table_on_demand
@@ -13914,8 +13919,9 @@ items:
       - name: sys.sp_flush_CT_internal_table_on_demand
         href: relational-databases/system-stored-procedures/sys-sp-flush-ct-internal-table-on-demand-transact-sql.md
     - name: Cursor
-      href: relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql.md
       items:
+      - name: Overview
+        href: relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql.md
       - name: sp_cursor_list
         href: relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md
       - name: sp_cursor
@@ -13953,8 +13959,9 @@ items:
       - name: sp_unprepare
         href: relational-databases/system-stored-procedures/sp-unprepare-transact-sql.md
     - name: Data Collector
-      href: relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md
       items:
+      - name: Overview
+        href: relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md
       - name: sp_syscollector_create_collection_item
         href: relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md
       - name: sp_syscollector_create_collection_set
@@ -13996,8 +14003,9 @@ items:
       - name: sp_syscollector_upload_collection_set
         href: relational-databases/system-stored-procedures/sp-syscollector-upload-collection-set-transact-sql.md
     - name: Database Engine
-      href: relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md
       items:
+      - name: Overview
+        href: relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md
       - name: sp_add_data_file_recover_suspect_db
         href: relational-databases/system-stored-procedures/sp-add-data-file-recover-suspect-db-transact-sql.md
       - name: sp_addextendedproc
@@ -14215,8 +14223,9 @@ items:
       - name: sys.sp_xtp_unbind_db_resource_pool
         href: relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md
     - name: Database Mail
-      href: relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md
       items:
+      - name: Overview
+        href: relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md
       - name: sp_send_dbmail
         href: relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md
       - name: sysmail_add_account_sp
@@ -14266,8 +14275,9 @@ items:
       - name: sysmail_update_profileaccount_sp
         href: relational-databases/system-stored-procedures/sysmail-update-profileaccount-sp-transact-sql.md
     - name: Database Maintenance Plan
-      href: relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md
       items:
+      - name: Overview
+        href: relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md
       - name: sp_add_maintenance_plan
         href: relational-databases/system-stored-procedures/sp-add-maintenance-plan-transact-sql.md
       - name: sp_add_maintenance_plan_db
@@ -14283,8 +14293,9 @@ items:
       - name: sp_help_maintenance_plan
         href: relational-databases/system-stored-procedures/sp-help-maintenance-plan-transact-sql.md
     - name: Distributed Queries
-      href: relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md
       items:
+      - name: Overview
+        href: relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md
       - name: sp_addlinkedserver
         href: relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md
       - name: sp_addlinkedsrvlogin
@@ -14313,16 +14324,18 @@ items:
         href: relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md
       - name: sp_testlinkedserver
         href: relational-databases/system-stored-procedures/sp-testlinkedserver-transact-sql.md
-    - name: Filestream & Filetable
-      href: relational-databases/system-stored-procedures/filestream-and-filetable-system-stored-procedures.md
+    - name: FILESTREAM and FileTable
       items:
+      - name: Overview
+        href: relational-databases/system-stored-procedures/filestream-and-filetable-system-stored-procedures.md
       - name: sp_filestream_force_garbage_collection
         href: relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md
       - name: sp_kill_filestream_non_transacted_handles
         href: relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md
-    - name: Firewall Rules (Azure SQL Database)
-      href: relational-databases/system-stored-procedures/firewall-rules-stored-procedures-azure-sql-database.md
+    - name: Firewall rules (Azure SQL Database)
       items:
+      - name: Overview
+        href: relational-databases/system-stored-procedures/firewall-rules-stored-procedures-azure-sql-database.md
       - name: sp_set_firewall_rule (Azure SQL Database)
         href: relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md
       - name: sp_set_database_firewall_rule (Azure SQL Database)
@@ -14332,8 +14345,9 @@ items:
       - name: sp_delete_database_firewall_rule (Azure SQL Database)
         href: relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md
     - name: Full-Text Search & Semantic Search
-      href: relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md
       items:
+      - name: Overview
+        href: relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md
       - name: sp_fulltext_catalog
         href: relational-databases/system-stored-procedures/sp-fulltext-catalog-transact-sql.md
       - name: sp_fulltext_column
@@ -14370,9 +14384,10 @@ items:
         href: relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md
       - name: sp_help_fulltext_tables_cursor
         href: relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md
-    - name: General Extended
-      href: relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md
+    - name: General extended
       items:
+      - name: Overview
+        href: relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md
       - name: xp_cmdshell
         href: relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md
       - name: xp_enumgroups
@@ -14395,9 +14410,10 @@ items:
         href: relational-databases/system-stored-procedures/xp-sqlmaint-transact-sql.md
       - name: xp_sscanf
         href: relational-databases/system-stored-procedures/xp-sscanf-transact-sql.md
-    - name: Log Shipping
-      href: relational-databases/system-stored-procedures/log-shipping-stored-procedures-transact-sql.md
+    - name: Log shipping
       items:
+      - name: Overview
+        href: relational-databases/system-stored-procedures/log-shipping-stored-procedures-transact-sql.md
       - name: sp_add_log_shipping_primary_database
         href: relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md
       - name: sp_add_log_shipping_primary_secondary
@@ -14448,9 +14464,10 @@ items:
         href: relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md
       - name: sp_upgrade_log_shipping
         href: relational-databases/system-stored-procedures/sp-upgrade-log-shipping-transact-sql.md
-    - name: Managed Backup
-      href: relational-databases/system-stored-procedures/managed-backup-stored-procedures-transact-sql.md
+    - name: Managed backup
       items:
+      - name: Overview
+        href: relational-databases/system-stored-procedures/managed-backup-stored-procedures-transact-sql.md
       - name: managed_backup.sp_backup_config_basic
         href: relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md
       - name: managed_backup.sp_backup_config_advanced
@@ -14466,8 +14483,9 @@ items:
       - name: managed_backup.sp_backup_on_demand
         href: relational-databases/system-stored-procedures/managed-backup-sp-backup-on-demand-transact-sql.md
     - name: Management Data Warehouse
-      href: relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md
       items:
+      - name: Overview
+        href: relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md
       - name: core.sp_create_snapshot
         href: relational-databases/system-stored-procedures/core-sp-create-snapshot-transact-sql.md
       - name: core.sp_update_data_source
@@ -14478,9 +14496,17 @@ items:
         href: relational-databases/system-stored-procedures/core-sp-remove-collector-type-transact-sql.md
       - name: core.sp_purge_data
         href: relational-databases/system-stored-procedures/core-sp-purge-data-transact-sql.md
-    - name: OLE Automation
-      href: relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md
+    - name: MSDTC
+      href: relational-databases/system-stored-procedures/msdtc-stored-procedures-transact-sql.md
       items:
+      - name: sp_manage_distributed_transaction
+        href: relational-databases/system-stored-procedures/sys-sp-manage-distributed-transaction.md
+      - name: sp_reset_dtc_log
+        href: relational-databases/system-stored-procedures/sp-reset-dtc-log.md
+    - name: OLE automation
+      items:
+      - name: Overview
+        href: relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md
       - name: Object Hierarchy Syntax
         href: relational-databases/system-stored-procedures/object-hierarchy-syntax-transact-sql.md
       - name: sp_OACreate
@@ -14508,8 +14534,9 @@ items:
       - name: sp_data_source_objects
         href: relational-databases/system-stored-procedures/sp-data-source-objects.md
     - name: Policy-Based Management
-      href: relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md
       items:
+      - name: Overview
+        href: relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md
       - name: sp_syspolicy_add_policy_category
         href: relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-transact-sql.md
       - name: sp_syspolicy_add_policy_category_subscription
@@ -14549,8 +14576,9 @@ items:
       - name: sp_syspolicy_update_policy_category_subscription
         href: relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md
     - name: Query Store
-      href: relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md
       items:
+      - name: Overview
+        href: relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md
       - name: sp_query_store_clear_hints
         href: relational-databases/system-stored-procedures/sys-sp-query-store-clear-hints-transact-sql.md
       - name: sp_query_store_flush_db
@@ -14569,18 +14597,10 @@ items:
         href: relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md
       - name: sp_query_store_clear_message_queues
         href: relational-databases/system-stored-procedures/sp-query-store-clear-message-queues-transact-sql.md   
-
-    - name: MSDTC
-      href: relational-databases/system-stored-procedures/msdtc-stored-procedures-transact-sql.md
-      items:
-      - name: sp_manage_distributed_transaction
-        href: relational-databases/system-stored-procedures/sys-sp-manage-distributed-transaction.md
-      - name: sp_reset_dtc_log
-        href: relational-databases/system-stored-procedures/sp-reset-dtc-log.md
-
     - name: Replication
-      href: relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md
       items:
+      - name: Overview
+        href: relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md
       - name: sp_add_agent_parameter
         href: relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md
       - name: sp_add_agent_profile
@@ -15038,8 +15058,9 @@ items:
       - name: sp_vupgrade_replication
         href: relational-databases/system-stored-procedures/sp-vupgrade-replication-transact-sql.md
     - name: Security
-      href: relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md
       items:
+      - name: Overview
+        href: relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md
       - name: sp_add_trusted_assembly
         href: relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md
       - name: sp_addapprole
@@ -15160,15 +15181,16 @@ items:
         href: relational-databases/system-stored-procedures/sys-sp-verify-database-ledger-from-digest-storage-transact-sql.md
       - name: sp_xp_cmdshell_proxy_account
         href: relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md
-    - name: Snapshot Backup
+    - name: Snapshot backup
       items:
       - name: sp_delete_backup_file_snapshot
         href: relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md
       - name: sp_delete_backup
         href: relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md
     - name: Azure Synapse Analytics
-      href: relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md
       items:
+      - name: Overview
+        href: relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md
       - name: sp_datatype_info_90
         href: relational-databases/system-stored-procedures/sp-datatype-info-90-sql-data-warehouse.md
       - name: sp_pdw_add_network_credentials
@@ -15204,8 +15226,9 @@ items:
       - name: sp_change_feed_enable_table
         href: relational-databases/system-stored-procedures/sp-change-feed-enable-table.md
     - name: SQL Server Agent
-      href: relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md
       items:
+      - name: Overview
+        href: relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md
       - name: sp_add_alert
         href: relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md
       - name: sp_add_category
@@ -15363,8 +15386,9 @@ items:
       - name: sp_update_targetservergroup
         href: relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md
     - name: SQL Server Profiler
-      href: relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md
       items:
+      - name: Overview
+        href: relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md
       - name: sp_trace_create
         href: relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md
       - name: sp_trace_generateevent
@@ -15375,9 +15399,10 @@ items:
         href: relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md
       - name: sp_trace_setstatus
         href: relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md
-    - name: Stretch Database Extended
-      href: relational-databases/system-stored-procedures/stretch-database-extended-stored-procedures-transact-sql.md
+    - name: Stretch Database extended
       items:
+      - name: Overview
+        href: relational-databases/system-stored-procedures/stretch-database-extended-stored-procedures-transact-sql.md
       - name: sys.sp_rda_deauthorize_db
         href: relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md
       - name: sys.sp_rda_get_rpo_duration
@@ -15403,8 +15428,9 @@ items:
       - name: sp_xtp_flush_temporal_history
         href: relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md
     - name: XML
-      href: relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md
       items:
+      - name: Overview
+        href: relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md
       - name: sp_xml_preparedocument
         href: relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md
       - name: sp_xml_removedocument

@@ -86,7 +86,7 @@ Resource group or Subscription of Arc Machine.
 
 ## Enable best practices assessment at scale using Azure policy
 
-You can automatically enable practices assessment on multiple Arc-enabled SQL Server instances at scale using an Azure policy definition called *Configure Arc-enabled Servers with SQL Server extension installed to enable or disable SQL best practices assessment.*  This policy definition is not assigned to a scope by default. If you assign this policy definition to a scope of your choice, it enables the SQL best practice assessment on all the Arc-enabled SQL Servers within the defined scope, and auto schedule to every Sunday 12:00 AM local time by default.
+You can automatically enable best practices assessment on multiple Arc-enabled SQL Server instances at scale using an Azure policy definition called *Configure Arc-enabled Servers with SQL Server extension installed to enable or disable SQL best practices assessment.*  This policy definition is not assigned to a scope by default. If you assign this policy definition to a scope of your choice, it enables the SQL best practices assessment on all the Arc-enabled SQL Servers within the defined scope, and auto schedule to every Sunday 12:00 AM local time by default.
 
 
 >[!IMPORTANT]
@@ -101,7 +101,7 @@ You can automatically enable practices assessment on multiple Arc-enabled SQL Se
 1. Select **Next**.
 1. On the "Parameters" tab, select **Only show parameters that need input for review**, if the checkbox not already selected.
    1. Select **Log Analytics Workspace**, **Log Analytics Workspace location**, from drop-down menus respectively.
-   1. Provide **Enablement** value to *true* for enabling the best practice assessmnet. Provide *false* to disable the assessment.
+   1. Provide **Enablement** value to *true* for enabling the best practices assessment. Provide *false* to disable the assessment.
    1. Select **Next**
 1. On the **Remediation** tab, click **Create a remediation task**.
 1. Choose **System assigned managed identity** (recommended) or **User assigned managed identity** .

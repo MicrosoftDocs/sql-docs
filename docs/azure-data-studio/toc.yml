@@ -81,9 +81,9 @@
     - name: Azure Cosmos DB migration for MongoDB extension
       items:
       - name: Overview
-        href: extensions/database-migration-assessment-for-mongo-extension.md
+        href: extensions/database-migration-for-mongo-extension.md
       - name: FAQ
-        href: extensions/database-migration-assessment-for-MongoDB-extension-faq.md
+        href: extensions/database-migration-for-mongodb-extension-faq.md
     - name: Database Schema Conversion Toolkit
       href: extensions/dsct/toc.yml
     - name: Data Virtualization extension

@@ -33,6 +33,8 @@ Following are the steps to install the Azure Cosmos DB migration for MongoDB ext
 
 1. Select the **Azure Cosmos DB Migration for MongoDB** extension and view its details.
 
+    :::image type="content" source="media/database-migration-assessment-for-mongodb-extension/install-database-migration-assessment-for-mngodb-extension.png" alt-text="Screenshot showing Azure Cosmos DB Migration for MongoDB extension install button.":::
+
 1. Select **Install**.
 
 
@@ -43,7 +45,7 @@ Once the assessment extension installs, the next step is to connect to MongoDB e
 
 1. Go to the connections icon in the menu bar, select **New Connection**.
 
-   :::image type="content" source="media/database-migration-assessment-for-mongodb-extension/new-connection-mongodb-Menu.png" alt-text="connections menu bar":::
+   :::image type="content" source="media/database-migration-assessment-for-mongodb-extension/new-connection-mongodb-Menu.png" alt-text="Screenshot showing connections menu bar.":::
 
 1. In the **Connection Details**, fill out the fields.
    1. In the **Connection type** field, select **Mongo account**.
@@ -51,7 +53,7 @@ Once the assessment extension installs, the next step is to connect to MongoDB e
    1. In the Server Group,** select **Default**
    1. Provide an optional **Name** for this connection.
 
-   :::image type="content" source="media/database-migration-assessment-for-mongodb-extension/new-connection-mongodb-details.png" alt-text="connection details":::
+       :::image type="content" source="media/database-migration-assessment-for-mongodb-extension/new-connection-mongodb-details.png" alt-text="Screenshot showing the connection details":::
 
     1. Select **Connect**.
 
@@ -79,7 +81,7 @@ Once the assessment extension installs, the next step is to connect to MongoDB e
 
 1. Now, you see the new assessment in the "Assessments" table.
 
-   :::image type="content" source="media/database-migration-assessment-for-mongodb-extension/mongodb-view-assessment-new-table.png" alt-text="Screenshot showing the new assessment in the Assessments table":::
+   :::image type="content" source="media/database-migration-assessment-for-mongodb-extension/mongodb-view-assessment-new-table.png" alt-text="Screenshot showing the new assessment in the Assessments table.":::
 
 1. Select **Refresh**, or wait until the assessment completes. By default, the assessment status page refreshes every 15 seconds. The status shows you one of four statuses: *success*, *failed*, *in-progress*, or *canceled*.
 
@@ -107,17 +109,16 @@ The details include:
 1. `Indexes`: Findings related to the unsupported MongoDB index types or properties.
 
 1. `Shard Keys`: Findings related to shard key configurations.
+
 ## Configure extension settings
 
 You can configure some extension settings after installing the extension. This step is optional. If no settings are explicitly configured, the extension uses default settings.
 
 1. Go to extensions and select **Azure Cosmos DB Migration for MongoDB**, select the **manage settings icon**, and then select extension settings.
 
-   :::image type="content" source="media/database-migration-assessment-for-mongodb-extension/database-migration-assessment-for-mongodb-extension-settings.png" alt-text="Screenshot of extension.":::
+   :::image type="content" source="media/database-migration-assessment-for-mongodb-extension/database-migration-assessment-for-mongodb-extension-settings.png" alt-text="Screenshot showing extension settings selection.":::
 
 1. Under extension settings for this extension, provide the `Assessment path` to change the location where the assessment metadata is stored. If left blank,  default location will be used.
-
-    :::image type="content" source="media/database-migration-assessment-for-mongodb-extension/database-migration-assessment-for-mongodb-extension-settings-property.png" alt-text="extension properties settings":::
 
 ## Logs
 
@@ -130,7 +131,7 @@ The extension stores errors, warnings, and other diagnostic logs in the default 
 > [!NOTE] 
 > By default, the extension stores the last seven log files.
 
-For more information about Frequently Asked Questions, visit [Migration Assessment for MongoDB extension FAQ](database-migration-assessment-for-MongoDB-extension-faq.md).
+For more information about Frequently Asked Questions, visit [Migration for MongoDB extension FAQ](database-migration-for-mongodb-extension-faq.md).
 
 
 ## Contact Microsoft for help

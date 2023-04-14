@@ -13,7 +13,7 @@ ms.topic: conceptual
 
 This article lists some frequently asked questions when using Azure Cosmos DB Migration for MongoDB extension.
 
-### Logs
+## Logs
 
 The extension stores errors, warnings, and other diagnostic logs in the default log directory:
 

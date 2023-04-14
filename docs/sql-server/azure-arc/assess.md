@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 # Configure SQL best practices assessment
 
-Best practices assessment provides a mechanism to evaluate the configuration of your SQL Server. After you enable best practices assessment feature enabled, the assessment scans your SQL Server instance and databases to provide recommendations for things like:
+Best practices assessment provides a mechanism to evaluate the configuration of your SQL Server. After you enable best practices assessment, an assessment scans your SQL Server instance and databases to provide recommendations for things like:
 
 - SQL Server and database configurations
 - Index management

@@ -98,19 +98,19 @@ You can automatically enable best practices assessment on multiple Arc-enabled S
 >
 >For instructions to configure the appropriate license type, review [Manage SQL Server license and billing options](manage-license-type.md).
 
-1. Navigate to **Azure Policy** in the Azure portal and choose **Definitions**. 
-1. Search for *Configure Arc-enabled Servers with SQL Server extension installed to enable or disable SQL best practices assessment.* and click on the policy.
-1. Select **Assign**. 
-1. Choose a Scope.
+1. Navigate to **Azure Policy** in the Azure portal and choose **Definitions**.
+1. Search for *Configure Arc-enabled Servers with SQL Server extension installed to enable or disable SQL best practices assessment.* and select the policy.
+1. Select **Assign**.
+1. Choose a scope.
 1. Select **Next**.
-1. On the "Parameters" tab, select **Only show parameters that need input for review**, if the checkbox not already selected.
+1. On the **Parameters** tab, select **Only show parameters that need input for review**, if the checkbox not already selected.
    1. Select **Log Analytics Workspace**, **Log Analytics Workspace location**, from drop-down menus respectively.
-   1. Provide **Enablement** value to *true* for enabling the best practices assessment. Provide *false* to disable the assessment.
+   1. Set **Enablement** value to *true* to enabling the best practices assessment. Set to *false* to disable the assessment.
    1. Select **Next**
-1. On the **Remediation** tab, click **Create a remediation task**.
-1. Choose **System assigned managed identity** (recommended) or **User assigned managed identity** .
-1. Click **Review + Create**.
-1. Click **Create**.
+1. On the **Remediation** tab, select **Create a remediation task**.
+1. Choose **System assigned managed identity** (recommended) or **User assigned managed identity**.
+1. Select **Review + Create**.
+1. Select **Create**.
 
 See [Azure Policy documentation](/azure/governance/policy) for general instructions about how to assign an Azure policy using Azure portal or an API of your choice.
 
@@ -159,7 +159,7 @@ To filter results, use the drop-down menu above the grid. Namely:
 - **Name**
 - **Severity**
 - **Tags**
-- **Check Id**. 
+- **Check Id**.
 
 To download results, use **Export to Excel**.
 

@@ -35,10 +35,21 @@ FLOOR ( numeric_expression )
 
 ## Arguments
  *numeric_expression*  
- Is an expression of the exact numeric or approximate numeric data type category, except for the **bit** data type.  
+ Is an expression of the exact numeric or approximate numeric data type category.  
   
 ## Return Types  
- Returns the same type as *numeric_expression*.  
+The return type depends on the input type of *numeric_expression*:
+ 
+|Input type|Return type|  
+|----------|-----------|  
+|**float**, **real**|**float**|
+|**decimal(*p*, *s*)**|**decimal(38, *s*)**|
+|**int**, **smallint**, **tinyint**|**int**|
+|**bigint**|**bigint**|
+|**money**, **smallmoney**|**money**|
+|**bit**|**float**|
+
+If the result does not fit in the return type, an arithmetic overflow error occurs.  
   
 ## Examples  
  The following example shows positive numeric, negative numeric, and currency values with the `FLOOR` function.  

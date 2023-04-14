@@ -61,7 +61,7 @@ The Environment Health assessment is replaced with a best practices assessment (
 
 - The [SQL Server browser service](../../tools/configuration-manager/sql-server-browser-service.md) must be running if you're operating a named instance of SQL Server.
 
-- If you use Azure policy, *Configure Arc-enabled Servers with SQL Server extension installed to enable or disable SQL best practices assessment* , to enable assessment at [scale](#enable-best-practices-assessment-at-scale-using-azure-policy), you need to create an Azure Policy assignment. Your subscription requires the Resource Policy Contributor role assignment for the scope that you're targeting. The scope may be either subscription or resource group. Further, if you are going to create a new user assigned managed identity, you need the User Access Administrator role assignment in the subscription.
+- If you use *Configure Arc-enabled Servers with SQL Server extension installed to enable or disable SQL best practices assessment* Azure policy to enable assessment at [scale](#enable-best-practices-assessment-at-scale-using-azure-policy), you need to create an Azure Policy assignment. Your subscription requires the Resource Policy Contributor role assignment for the scope that you're targeting. The scope may be either subscription or resource group. Further, if you are going to create a new user assigned managed identity, you need the User Access Administrator role assignment in the subscription.
 
 ## Enable best practices assessment
 

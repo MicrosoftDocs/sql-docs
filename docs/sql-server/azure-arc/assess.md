@@ -43,8 +43,8 @@ The Environment Health assessment is replaced with a best practices assessment (
   - Reader role on the resource group or subscription of the Arc-enabled SQL Server resource.
   - [Log analytics reader](/azure/azure-monitor/logs/manage-access?tabs=portal#log-analytics-reader).
   - [Monitoring reader](/azure/role-based-access-control/built-in-roles#monitoring-reader) on resource group/subscription of Log analytics workspace.
-  - The SQL Server built-in login **NT AUTHORITY\SYSTEM** must be the member of SQL Server **sysadmin** server role for all the SQL Server instances running on the machine. 
-  - If outbound connectivity is restricted by your firewall or proxy server, make sure the URLs listed below allowed access to Azure Arc over TCP port 443.
+  - The SQL Server built-in login **NT AUTHORITY\SYSTEM** must be the member of SQL Server **sysadmin** server role for all the SQL Server instances running on the machine.
+  - If outbound connectivity is restricted by your firewall or proxy server, make sure the URLs listed below allow outbound access to Azure Arc over TCP port 443.
 
     - `global.handler.control.monitor.azure.com`
     - `<virtual-machine-region-name>.handler.control.monitor.azure.com`

@@ -17,7 +17,7 @@ Assessment run time depends on your environment (number of databases, objects, a
 
 This article provides instructions for using best practices assessment on an instance of Azure Arc-enabled SQL Server.
 
-The Environment Health assessment is replaced with a much richer best practices assessment (SQL BPA). You will have to re-configure the SQL BPA to continue to get SQL server assessments. You can still access the previous health assessments by querying the table SQLAssessmentRecommendation from Log Analytics workspace used by Environment Health assessments. You can also query and export the data from previous assessments into Excel. See the steps at [Integrate Log Analytics and Excel](/azure/azure-monitor/logs/log-excel).
+The Environment Health assessment is replaced with a best practices assessment (SQL BPA). You need to re-configure the SQL BPA to continue to get SQL server assessments. You can still access the previous health assessments by querying the table SQLAssessmentRecommendation from Log Analytics workspace used by Environment Health assessments. You can also query and export the data from previous assessments into Excel. See the steps at [Integrate Log Analytics and Excel](/azure/azure-monitor/logs/log-excel).
 
 >[!IMPORTANT]
 >Best practices assessment is available only for SQL Servers purchased through either [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) or [pay-as-you-go (PAYG)](https://www.microsoft.com/sql-server/sql-server-2022-pricing) licensing options.
@@ -31,7 +31,7 @@ The Environment Health assessment is replaced with a much richer best practices 
   > [!NOTE]
   > Best practices assessment is currently limited to SQL Server running on Windows machines. This will not work for SQL on Linux machines.
 
-- If SQL Server is hosting a single SQL Server instance make sure that the version of Azure Extension for SQL Server (`WindowsAgent.SqlServer`) is "**1.1.2202.47**" or above.  In the case of SQL Server hosting multiple SQL Server instances, make sure that the version of Azure Extension for SQL Server (`WindowsAgent.SqlServer`) is greater than "**1.1.2231.59".** Learn how to [check the](/azure/azure-arc/servers/manage-vm-extensions-portal#upgrade-extensions)**[Azure Extension for SQL Server](/azure/azure-arc/servers/manage-vm-extensions-portal#upgrade-extensions)**[ version and update to the latest.](/azure/azure-arc/servers/manage-vm-extensions-portal#upgrade-extensions)
+- If SQL Server is hosting a single SQL Server instance, make sure that the version of Azure Extension for SQL Server (`WindowsAgent.SqlServer`) is "**1.1.2202.47**" or above.  In the case of SQL Server hosting multiple SQL Server instances, make sure that the version of Azure Extension for SQL Server (`WindowsAgent.SqlServer`) is greater than "**1.1.2231.59".** Learn how to [check the](/azure/azure-arc/servers/manage-vm-extensions-portal#upgrade-extensions)**[Azure Extension for SQL Server](/azure/azure-arc/servers/manage-vm-extensions-portal#upgrade-extensions)**[ version and update to the latest.](/azure/azure-arc/servers/manage-vm-extensions-portal#upgrade-extensions)
 - [A Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace?tabs=azure-portal) in the same subscription as your Arc-enabled SQL Server resource to upload assessment results to.
 - The user configuring SQL BPA must have the following permissions.
   - Log Analytics Contributor role on resource group or subscription of the Log Analytics workspace.
@@ -39,12 +39,12 @@ The Environment Health assessment is replaced with a much richer best practices 
   - Monitoring Contributor role on the Resource group or subscription of Log Analytics Workspace & Resource group or subscription of Arc Machine.
   - Users can be assigned to built-in roles such as Contributor or Owner. These roles have sufficient permissions. For more information, review [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal) for more information.
 
-- The minimum permissions required to access or read the assessment report are following:
+- The minimum permissions required to access or read the assessment report are:
   - Reader role on the resource group or subscription of the Arc-enabled SQL Server resource.
   - [Log analytics reader](/azure/azure-monitor/logs/manage-access?tabs=portal#log-analytics-reader).
   - [Monitoring reader](/azure/role-based-access-control/built-in-roles#monitoring-reader) on resource group/subscription of Log analytics workspace.
   - The SQL Server built-in login **NT AUTHORITY\SYSTEM** must be the member of SQL Server **sysadmin** server role for all the SQL Server instances running on the machine. 
-  - If outbound connectivity is restricted by your firewall or proxy server, make sure the URLs from target SQL Server machine, make sure the URLs listed below allowed access to Azure Arc over TCP port 443.
+  - If outbound connectivity is restricted by your firewall or proxy server, make sure the URLs listed below allowed access to Azure Arc over TCP port 443.
 
     - `global.handler.control.monitor.azure.com`
     - `<virtual-machine-region-name>.handler.control.monitor.azure.com`

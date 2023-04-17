@@ -34,7 +34,7 @@ The current backup service within the Azure extension for Arc enabled Server use
    > [!NOTE]
    > This requirement applies to the preview release.
 
-- Add `[NT AUTHORITY\SYSTEM]` user account to the `dbcreator` server role at the server level. Run the following Transact SQL to add this account:
+- Add `[NT AUTHORITY\SYSTEM]` user account to the `dbcreator` server role at the server level. Run the following Transact-SQL to add this account:
 
    ```sql
    USE master
@@ -45,11 +45,9 @@ The current backup service within the Azure extension for Arc enabled Server use
 
   - For each database (system databases such as master, model and msdb, as well as each user database), the `[NT AUTHORITY\SYSTEM]` user account needs to be added into the Logins, and granted ` [db_backupoperator]` role.
 
-   This can be done via the Transact SQL:
+   To meet this requirement, run the following Transact-SQL in each system and user database:
 
    ```sql
-   USE [master]
-   GO
    CREATE USER [NT AUTHORITY\SYSTEM] FOR LOGIN [NT AUTHORITY\SYSTEM]
    GO
    ALTER ROLE [db_backupoperator] ADD MEMBER [NT AUTHORITY\SYSTEM]
@@ -91,14 +89,14 @@ The default backup location for SQL Server (SQL 2019 and above) can be verified 
 SELECT SERVRPROPERTY('InstanceDefaultBackupPath')
 ```
 
-- The setting is configured at the instance level and applies to all the databases on the instance
-- The value for `--name` should be the name of the Arc enabled SQL Server, which is usually in the [Servername_SQLservername] format
-- The value for `--retention-days` can be from 0-35
-- A value of 0 for `--retention-days` indicates no backups will be performed for the instance
+- The setting is configured at the instance level and applies to all the databases on the instance.
+- The value for `--name` should be the name of the Arc enabled SQL Server, which is usually in the [Servername_SQLservername] format.
+- The value for `--retention-days` can be from 0-35.
+- A value of 0 for `--retention-days` indicates to not perform automated backups for the instance.
 - The backup files are written to the default backup location as configured at the instance level.
 - If there are multiple SQL Servers on the same host where the Azure extension for SQL Server is installed, you need to turn on automated backups separately for each instance separately.
-- The user databases need to be in full recovery model for the backups to be performed. Databases that are not in full recovery model will not be backed up.
-- If you change the `--retention-days` after the `--backups-policy` is already configured, any change will take effect going forward and is not retroactively applied.
+- The user databases need to be in full recovery model for the backups to be performed. Databases that aren't in full recovery model won't be backed up.
+- If you change the `--retention-days` after the `--backups-policy` is already configured, any change will take effect going forward and isn't retroactively applied.
 - Automated backups capability is only available for licenses with Software Assurance, SQL subscription, or pay-as-you-go. For details, see [Feature availability depending on license type](overview.md#feature-availability-depending-on-license-type).
 
 ## View current backup policy

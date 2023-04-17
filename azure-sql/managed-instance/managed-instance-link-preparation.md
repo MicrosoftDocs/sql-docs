@@ -55,6 +55,25 @@ For Azure SQL Managed Instance, you should be a member of the [SQL Managed Insta
 - Microsoft.Sql/managedInstances/serverTrustCertificates/delete
 - Microsoft.Sql/managedInstances/serverTrustCertificates/read
 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+some options for presenting this info in a different way
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+The following table defines the permissions necessary for the `Microsoft.Sql/managedInstances` resource. For example, the Microsoft.Sql/managedInstances/hybridLink/ resource needs the read, write, and delete permissions: 
+
+|Microsoft.Sql/managedInstances/ resource|Microsoft.Sql/managedInstances/|/hybridCertificate|/databases/|/distributedAvailabilityGroups/|/endpointCertificates| /hybridLink/|/serverTrustCertificates/|
+|permission| read, write | action | read, delete, write, completeRestore/action, /readBackups/action, /restoreDetails/read  | read | read, write, delete, setRole/action | write, delete, read | 
+
+
+|resource|necessary permissions| 
+|Microsoft.Sql/managedInstances/| read, write|
+|Microsoft.Sql/managedInstances/databases/| read, delete, write, completeRestore/action, readBackups/action, restoreDetails/read| 
+|Microsoft.Sql/managedInstances/distributedAvailabilityGroups| read, write, delete, setRole/action| 
+|Microsoft.Sql/managedInstances/endpointCertificates| read|
+|Microsoft.Sql/managedInstances/hybridLink/| read, write, delete|
+|Microsoft.Sql/managedInstances/serverTrustCertificates | write, delete, read" 
+
+
 
 ## Prepare your SQL Server instance
 
@@ -82,7 +101,7 @@ Ensure that your SQL Server version has the appropriate servicing update install
 | SQL Server Version  |  Operating system (OS) | Servicing update requirement |
 |---------|---------|---------|
 |[!INCLUDE [sssql22-md](../../docs/includes/sssql22-md.md)] | Windows Server & Linux | SQL Server 2022 RTM | 
-|[!INCLUDE [sssql19-md](../../docs/includes/sssql19-md.md)] | Windows Server |  [SQL Server 2019 CU20 ()](need link), or above for Enterprise and Developer editions, and [CU17 (KB5016394)](https://support.microsoft.com/topic/kb5016394-cumulative-update-17-for-sql-server-2019-3033f654-b09d-41aa-8e49-e9d0c353c5f7), or above, for Standard editions. |
+|[!INCLUDE [sssql19-md](../../docs/includes/sssql19-md.md)] | Windows Server |  [SQL Server 2019 CU20 (KB5024276)](https://support.microsoft.com/topic/kb5024276-cumulative-update-20-for-sql-server-2019-4b282be9-b559-46ac-9b6a-badbd44785d2), or above for Enterprise and Developer editions, and [CU17 (KB5016394)](https://support.microsoft.com/topic/kb5016394-cumulative-update-17-for-sql-server-2019-3033f654-b09d-41aa-8e49-e9d0c353c5f7), or above, for Standard editions. |
 |[!INCLUDE [sssql17-md](../../docs/includes/sssql17-md.md)] | N/A | Not supported | 
 |[!INCLUDE [sssql16-md](../../docs/includes/sssql16-md.md)] | Windows Server |[SQL Server 2016 SP3 (KB 5003279)](https://support.microsoft.com/help/5003279) and [SQL Server 2016 Azure Connect pack (KB 5014242)](https://support.microsoft.com/help/5014242) |
 

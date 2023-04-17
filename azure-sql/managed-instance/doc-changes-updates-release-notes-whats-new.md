@@ -5,7 +5,7 @@ description: Learn about the new features and documentation improvements for Azu
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: wiassaf
-ms.date: 03/27/2023
+ms.date: 04/26/2023
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: conceptual

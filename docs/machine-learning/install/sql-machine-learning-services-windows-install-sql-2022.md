@@ -4,7 +4,7 @@ description: Learn how to install SQL Server 2022 Machine Learning Services on W
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: arunguru-msft
-ms.date: 04/03/2023
+ms.date: 04/17/2023
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: how-to
@@ -153,7 +153,7 @@ Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes f
     python -m pip install -t "C:\Program Files\Python310\Lib\site-packages" https://aka.ms/sqlml/python3.10/windows/revoscalepy-10.0.1-py3-none-any.whl
     ```
 
-    Run the following **icacls** commands to grant **READ & EXECUTE** access to the installed libraries to **SQL Server Launchpad Service** and SID **S-1-15-2-1 (ALL_APPLICATION_PACKAGES)**.
+    Run the following **icacls** commands to grant **READ** and **EXECUTE** access to the installed libraries to **SQL Server Launchpad Service** and SID **S-1-15-2-1 (ALL_APPLICATION_PACKAGES)**.
 
     ```cmd
     icacls "C:\Program Files\Python310\Lib\site-packages" /grant "NT Service\MSSQLLAUNCHPAD":(OI)(CI)RX /T

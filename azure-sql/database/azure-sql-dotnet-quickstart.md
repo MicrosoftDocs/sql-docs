@@ -108,14 +108,13 @@ Connect to Azure SQL Database with SQL Authentication using the following connec
 ```
 
 > [!WARNING]
-> Use caution when managing connection strings that contain secrets such as usernames, passwords, or access keys. These secrets should not be committed to source control or placed in unsecure locations where they might be accessed by unintended users. During local development you will often connect to a local database that doesn't require storing secrets.
-
+> Use caution when managing connection strings that contain secrets such as usernames, passwords, or access keys. These secrets should not be committed to source control or placed in unsecure locations where they might be accessed by unintended users. During local development on a real app you will generally connect to a local database that doesn't require storing secrets or connecting directly to Azure.
 
 ---
 
 ## Add the code to connect to Azure SQL Database
 
-Add the following sample code to the bottom of the `Program.cs` file above `app.Run()`. This code performs the following important steps:
+Replace the contents of the `Program.cs` file with the following code, which performs the following important steps:
 
 * Retrieves the passwordless connection string from the environment variables
 * Creates a `Persons` table in the database during startup (for testing scenarios only)
@@ -123,7 +122,24 @@ Add the following sample code to the bottom of the `Program.cs` file above `app.
 * Creates an HTTP POST endpoint to add new records to the `Persons` table
 
 ```csharp
-string connectionString = Environment.GetEnvironmentVariable("AZURE_SQL_CONNECTIONSTRING");
+using System.Data.SqlClient;
+
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+var app = builder.Build();
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseHttpsRedirection();
+
+string connectionString = app.Configuration.GetConnectionString("AZURE_SQL_CONNECTIONSTRING_ALT");
 
 try
 {
@@ -135,7 +151,8 @@ try
         "CREATE TABLE Persons (ID int NOT NULL PRIMARY KEY IDENTITY, FirstName varchar(255), LastName varchar(255));",
         conn);
     using SqlDataReader reader = command.ExecuteReader();
-} catch(Exception e)
+}
+catch (Exception e)
 {
     // Table may already exist
     Console.WriteLine(e.Message);
@@ -175,6 +192,8 @@ app.MapPost("/Person", (Person person) => {
 })
 .WithName("CreatePerson")
 .WithOpenApi();
+
+app.Run();
 ```
 
 Finally, add the `Person` class to the bottom of the `Program.cs` file. This class represents a single record in the database's `Persons` table.

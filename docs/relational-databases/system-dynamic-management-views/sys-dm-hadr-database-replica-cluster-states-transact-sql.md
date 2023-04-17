@@ -22,7 +22,7 @@ dev_langs:
 # sys.dm_hadr_database_replica_cluster_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Returns a row containing information intended to provide you with insight into the health of the availability databases in the Always On availability groups in each Always On availability group on the Windows Server Failover Clustering (WSFC) cluster. Query **sys.dm_hadr_database_replica_states** to answer the following questions:  
+  Returns a row containing information intended to provide you with insight into the health of the availability databases in the Always On availability groups in each Always On availability group on the Windows Server Failover Clustering (WSFC) cluster. Query **sys.dm_hadr_database_replica_cluster_states** to answer the following questions:  
   
 -   Are all databases in an availability group ready for a failover?  
   

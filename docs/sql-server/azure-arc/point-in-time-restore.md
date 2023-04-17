@@ -34,7 +34,7 @@ The current backup service within the Azure extension for Arc enabled Server use
    > [!NOTE]
    > This requirement applies to the preview release.
 
-- Add `[NT AUTHORITY\SYSTEM]` user account to the `dbcreator` server role at the server level. Run the following Transact-SQL to add this account:
+1. Add `[NT AUTHORITY\SYSTEM]` user account to the `dbcreator` server role at the server level. Run the following Transact-SQL to add this account:
 
    ```sql
    USE master
@@ -43,9 +43,9 @@ The current backup service within the Azure extension for Arc enabled Server use
    GO
    ```
 
-  - For each database (system databases such as master, model and msdb, as well as each user database), the `[NT AUTHORITY\SYSTEM]` user account needs to be added into the Logins, and granted ` [db_backupoperator]` role.
+1. Add `[NT AUTHORITY\SYSTEM]` user account to Logins, and make it a member of `[db_backupoperator]` role in `master`, `model`, `msdb`, and each user database.
 
-   To meet this requirement, run the following Transact-SQL in each system and user database:
+   For example:
 
    ```sql
    CREATE USER [NT AUTHORITY\SYSTEM] FOR LOGIN [NT AUTHORITY\SYSTEM]
@@ -54,7 +54,7 @@ The current backup service within the Azure extension for Arc enabled Server use
    GO
    ```
 
-  - Run the preceding code for each user and system database (except `tempdb`).
+1. Run the preceding code for each user and system database (except `tempdb`).
 
 ## Configure backups using Azure (az) CLI
 

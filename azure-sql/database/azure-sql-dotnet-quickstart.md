@@ -98,19 +98,25 @@ The `Microsoft.Data.SqlClient` library uses a class called `DefaultAzureCredenti
 
 Complete the following steps to connect to Azure SQL Database by using the SqlClient library and `DefaultAzureCredential`:
 
-1) Update the `environmentVariables` section of the `launchSettings.json` file to match the following code. Remember to update the `<your database-server-name>` and `<your-database-name>` placeholders.
+1) Update the `environmentVariables` section of the `launchSettings.json` file with the Azure SQL connection string:
 
-    The passwordless connection string includes a configuration value of `Authentication=Active Directory Default`, which instructs the app to use `DefaultAzureCredential` to connect to Azure services. This functionality is implemented internally by the `Microsoft.Data.SqlClient` library. When the app runs locally, it authenticates with the user you're signed into Visual Studio with. Once the app deploys to Azure, the same code discovers and applies the managed identity that is associated with the hosted app, which you'll configure later.
-    
-    > [!NOTE]
-    > Passwordless connection strings are safe to commit to source control, since they do not contain any secrets such as usernames, passwords, or access keys.
-    
-    ```json
-    "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development",
-        "AZURE_SQL_CONNECTIONSTRING": "Server=tcp:<your-database-servername>.database.windows.net;Database=<your-database-name>;Authentication=Active Directory Default;"
-    }
-    ```
+## [Passwordless] (#tab/passwordless)
+
+The passwordless connection string includes a configuration value of `Authentication=Active Directory Default`, which instructs the app to use `DefaultAzureCredential` to connect to Azure services. This functionality is implemented internally by the `Microsoft.Data.SqlClient` library. When the app runs locally, it authenticates with the user you're signed into Visual Studio with. Once the app deploys to Azure, the same code discovers and applies the managed identity that is associated with the hosted app, which you'll configure later.
+
+> [!NOTE]
+> Passwordless connection strings are safe to commit to source control, since they do not contain any secrets such as usernames, passwords, or access keys.
+
+```json
+"environmentVariables": {
+    "ASPNETCORE_ENVIRONMENT": "Development",
+    "AZURE_SQL_CONNECTIONSTRING": "Server=tcp:<your-database-servername>.database.windows.net;Database=<your-database-name>;Authentication=Active Directory Default;"
+}
+```
+
+## [SQL Authentication] (#tab/sql-auth)
+
+---
 
 1) Add the following sample code to the bottom of the `Program.cs` file above `app.Run()`. This code performs the following important steps:
 

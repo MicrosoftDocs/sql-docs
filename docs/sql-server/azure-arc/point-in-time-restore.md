@@ -1,6 +1,6 @@
 ---
-title: Point in time restore 
-description: Describes how to configure automated backups and restore to point in time
+title: Configure automated back up
+description: Describes how to configure automated backups 
 ms.service: sql
 author: dnethi
 ms.author: dinethi
@@ -9,9 +9,9 @@ ms.date: 04/10/2023
 ms.topic: conceptual
 ---
 
-# Point in time restore
+# Configure automatic backups
 
-The Azure extension for SQL Server can perform backups automatically and allows for point in time restore.  
+The Azure extension for SQL Server can perform backups automatically. This article explains how you can configure these automatic backups.  
 
 > [!NOTE]
 > As a preview feature, the technology presented in this article is subject to [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/).
@@ -27,9 +27,7 @@ The backups are performed at the following schedule:
 > [!NOTE]
 > Currently, you can't change the schedule.
 
-## Configure automated backups
-
-### Assign permissions
+## Assign permissions
 
 The current backup service within the Azure extension for Arc enabled Server uses `[NT AUTHORITY\SYSTEM]` account to perform the backups. As such, you need to grant the following permissions to this account.
 
@@ -60,7 +58,7 @@ The current backup service within the Azure extension for Arc enabled Server use
 
   - Run the preceding code for each user and system database (except `tempdb`).
 
-### Configure backups using Azure (az) CLI
+## Configure backups using Azure (az) CLI
 
 Automated backups are off by default when a SQL Server is Arc enabled. To turn on automated backups, run the following command:
 

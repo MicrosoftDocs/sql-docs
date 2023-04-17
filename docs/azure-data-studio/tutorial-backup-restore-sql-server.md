@@ -4,7 +4,7 @@ description: Follow this tutorial to learn how to back up and restore databases 
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan
-ms.date: 03/15/2023
+ms.date: 04/17/2023
 ms.service: azure-data-studio
 ms.topic: tutorial
 ms.custom: updatefrequency5

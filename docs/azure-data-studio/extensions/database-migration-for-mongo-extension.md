@@ -108,7 +108,7 @@ The details include:
    
 1. `Indexes`: Findings related to the unsupported MongoDB index types or properties.
 
-1. `Shard Keys`: Findings related to shard key configurations.
+1. `Shard Keys`: Findings related to unsupported shard key configurations.
 
 ## Configure extension settings
 
@@ -124,12 +124,12 @@ You can configure some extension settings after installing the extension. This s
 
 The extension stores errors, warnings, and other diagnostic logs in the default log directory:
 
-- Windows - `C:\Users\<username>.dmamongo\logs\`
+- Windows - `C:\Users\<username>\.dmamongo\logs\`
 - Linux - `~/.dmamongo/logs`
 - macOS - `/Users/<username>/.dmamongo/logs`
 
 > [!NOTE] 
-> By default, the extension stores the last seven log files.
+> A separate log file is created for each day. By default, the extension stores the last seven log files.
 
 For more information about Frequently Asked Questions, visit [Migration for MongoDB extension FAQ](database-migration-for-mongodb-extension-faq.md).
 

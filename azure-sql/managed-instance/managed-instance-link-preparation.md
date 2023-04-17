@@ -29,51 +29,19 @@ To use the link with Azure SQL Managed Instance, you need the following prerequi
 
 ## Permissions
 
-
 For SQL Server, you should have **sysadmin** permissions. 
 
 For Azure SQL Managed Instance, you should be a member of the [SQL Managed Instance Contributor](/azure/role-based-access-control/built-in-roles#sql-managed-instance-contributor), or have the following permissions for a custom role: 
 
-- Microsoft.Sql/managedInstances/hybridCertificate/action
-- Microsoft.Sql/managedInstances/read
-- Microsoft.Sql/managedInstances/write
-- Microsoft.Sql/managedInstances/databases/read
-- Microsoft.Sql/managedInstances/databases/delete
-- Microsoft.Sql/managedInstances/databases/write
-- Microsoft.Sql/managedInstances/databases/completeRestore/action
-- Microsoft.Sql/managedInstances/databases/readBackups/action
-- Microsoft.Sql/managedInstances/databases/restoreDetails/read
-- Microsoft.Sql/managedInstances/distributedAvailabilityGroups/read
-- Microsoft.Sql/managedInstances/distributedAvailabilityGroups/write
-- Microsoft.Sql/managedInstances/distributedAvailabilityGroups/delete
-- Microsoft.Sql/managedInstances/distributedAvailabilityGroups/setRole/action
-- Microsoft.Sql/managedInstances/endpointCertificates/read
-- Microsoft.Sql/managedInstances/hybridLink/read
-- Microsoft.Sql/managedInstances/hybridLink/write
-- Microsoft.Sql/managedInstances/hybridLink/delete
-- Microsoft.Sql/managedInstances/serverTrustCertificates/write
-- Microsoft.Sql/managedInstances/serverTrustCertificates/delete
-- Microsoft.Sql/managedInstances/serverTrustCertificates/read
-
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-some options for presenting this info in a different way
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-The following table defines the permissions necessary for the `Microsoft.Sql/managedInstances` resource. For example, the Microsoft.Sql/managedInstances/hybridLink/ resource needs the read, write, and delete permissions: 
-
-|Microsoft.Sql/managedInstances/ resource|Microsoft.Sql/managedInstances/|/hybridCertificate|/databases/|/distributedAvailabilityGroups/|/endpointCertificates| /hybridLink/|/serverTrustCertificates/|
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | 
-|permission| read, write | action | read, delete, write, completeRestore/action, /readBackups/action, /restoreDetails/read  | read | read, write, delete, setRole/action | write, delete, read | 
-
-
-|resource|necessary permissions| 
+|Microsoft.Sql/ resource|Necessary permissions| 
 |---- | ---- | 
-|Microsoft.Sql/managedInstances/| read, write|
-|Microsoft.Sql/managedInstances/databases/| read, delete, write, completeRestore/action, readBackups/action, restoreDetails/read| 
-|Microsoft.Sql/managedInstances/distributedAvailabilityGroups| read, write, delete, setRole/action| 
-|Microsoft.Sql/managedInstances/endpointCertificates| read|
-|Microsoft.Sql/managedInstances/hybridLink/| read, write, delete|
-|Microsoft.Sql/managedInstances/serverTrustCertificates | write, delete, read | 
+|Microsoft.Sql/managedInstances| /read, /write|
+|Microsoft.Sql/managedInstances/hybridCertificate | /action |
+|Microsoft.Sql/managedInstances/databases| /read, /delete, /write, /completeRestore/action, /readBackups/action, /restoreDetails/read| 
+|Microsoft.Sql/managedInstances/distributedAvailabilityGroups| /read, /write, /delete, /setRole/action| 
+|Microsoft.Sql/managedInstances/endpointCertificates| /read|
+|Microsoft.Sql/managedInstances/hybridLink| /read, /write, /delete|
+|Microsoft.Sql/managedInstances/serverTrustCertificates | /write, /delete, /read | 
 
 
 

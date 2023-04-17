@@ -17,5 +17,6 @@ The following table identifies features enabled depending on license type:
 |[Azure Active Directory authentication](../../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md) |No |Yes |Yes |
 |[Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-sql-usage)|Yes |Yes |Yes |
 |[Microsoft Purview](/azure/purview/tutorial-register-scan-on-premises-sql-server)|Yes |Yes |Yes |
+|[Automatic backups](../point-in-time-restore.md)|No |Yes |Yes |
 
 <sup>*</sup>License only includes SQL Server instances that are Developer, Express, Web or Evaluation Edition and instances using a Server/CAL license.

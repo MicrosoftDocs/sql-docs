@@ -1,3 +1,5 @@
+The following steps are required to connect the App Service instance to Azure SQL Database:
+
 1) Create a managed identity for the App Service. The `Microsoft.Data.SqlClient` library included in your app will automatically discover the managed identity, just like it discovered your local Visual Studio user.
 2) Create a SQL database user and associate it with the App Service managed identity.
 3) Assign SQL roles to the database user that allow for read, write, and potentially other permissions.

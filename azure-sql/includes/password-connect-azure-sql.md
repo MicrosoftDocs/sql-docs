@@ -2,7 +2,7 @@ There are multiple tools available to connect your App Service to the Azure SQL 
 
 ## [Service Connector (Recommended)](#tab/service-connector)
 
-Service Connector is a tool that streamlines authenticated connections between different services in Azure. Service Connector currently supports connecting an App Service to a SQL database via the Azure CLI using the `az webapp connection create sql` command. This single command completes the three steps mentioned above for you.
+Service Connector is a tool that streamlines authenticated connections between different services in Azure. Service Connector currently supports connecting an App Service to a SQL database via the Azure CLI using the `az webapp connection create sql` command.
 
 ```azurecli
 az webapp connection create sql
@@ -16,41 +16,11 @@ az webapp connection create sql
 
 You can verify the changes made by Service Connector on the App Service settings.
 
-1) Navigate to the **Configuration** page for your App Service. 
+1) Navigate to the **Configuration** page for your App Service.
 
-1) Under the **Connection strings** tab, you should see a connection string called **AZURE_SQL_CONNECTIONSTRING**. Select the **Click to show value** text to view the generated  connection string. The name of this connection string matches with the one you configured in your app locally, so it will be discovered automatically when running in Azure.
+1) Under the **Connection strings** tab, you should see a connection string called **AZURE_SQL_CONNECTIONSTRING**. Select the **Click to show value** text to view the generated connection string. The name of this connection string matches with the one you configured in your app locally, so it will be discovered automatically when running in Azure.
 
 ## [Azure portal](#tab/azure-portal)
-
-The Azure portal allows you to work with managed identities and run queries against Azure SQL Database. Complete the following steps to create a passwordless connection from your App Service instance to Azure SQL Database:
-
-### Create the managed identity
-
-1) In the Azure portal, navigate to your App Service and select **Identity** on the left navigation.
-
-2) On the identity page, make sure the **Enable system-assigned managed identity** option is enabled. When this setting is enabled, a system-assigned managed identity is created with the same name as your App Service. System-assigned identities are tied to the service instance and are destroyed with the app when it's deleted.
-
-### Create the database user and assign roles
-
-1) In the Azure portal, browse to your SQL database and select **Query editor (preview)**.
-
-2) Select **Continue as `<your-username>`** on the right side of the screen to sign into the database using your account.
-
-3) On the query editor view, run the following T-SQL commands:
-
-    ```sql
-    CREATE USER <your-app-service-name> FROM EXTERNAL PROVIDER;
-    ALTER ROLE db_datareader ADD MEMBER <your-app-service-name>;
-    ALTER ROLE db_datawriter ADD MEMBER <your-app-service-name>;
-    ALTER ROLE db_ddladmin ADD MEMBER <your-app-service-name>;
-    GO
-    ```
-
-    :::image type="content" source="media/passwordless-connections/query-editor-small.png" lightbox="media/passwordless-connections/query-editor.png" alt-text="A screenshot showing how to use the Azure Query editor.":::
-
-    This SQL script creates a SQL database user that maps back to the managed identity of your App Service instance. It also assigns the necessary SQL roles to the user to allow your app to read, write, and modify the data and schema of your database. After this step is completed, your services are connected.
-
-### Add the connection string to the App Service configurations
 
 1) In the Azure portal, navigate to your App Service and select **Configuration** on the left navigation.
 
@@ -67,12 +37,3 @@ The Azure portal allows you to work with managed identities and run queries agai
 1) Select **Save** at the top of the page.
 
 ---
-
-> [!IMPORTANT]
-> Although this solution provides a simple approach for getting started, it is not a best practice for enterprise production environments. In those scenarios the app should not perform all operations using a single, elevated identity. You should try to implement the principle of least privilege by configuring multiple identities with specific permissions for specific tasks.
->
-> You can read more about configuring database roles and security on the following resources:
->
-> [Tutorial: Secure a database in Azure SQL Database](./secure-database-tutorial.md)
->
-> [Authorize database access to SQL Database](./logins-create-manage.md)

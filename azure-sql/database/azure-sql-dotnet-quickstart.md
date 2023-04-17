@@ -102,7 +102,7 @@ The passwordless connection string includes a configuration value of `Authentica
 
 ## [SQL Authentication] (#tab/sql-auth)
 
-You can connect to Azure SQL Database using a traditional SQL Authentication connection string using the format below:
+Connect to Azure SQL Database using a SQL Authentication connection string:
 
 ```json
 "environmentVariables": {
@@ -112,7 +112,7 @@ You can connect to Azure SQL Database using a traditional SQL Authentication con
 ```
 
 > [!WARNING]
-> Use caution when managing connection strings that contain secrets such as usernames, passwords, or access keys. These secrets should not be committed to source control or placed in unsecure locations where they might be accessed by unintended users. 
+> Use caution when managing connection strings that contain secrets such as usernames, passwords, or access keys. These secrets should not be committed to source control or placed in unsecure locations where they might be accessed by unintended users.
 
 ---
 
@@ -227,9 +227,7 @@ The app is ready to be deployed to Azure. Visual Studio can create an Azure App 
 
 When the deployment finishes, Visual Studio launches the browser to display the hosted app, but at this point the app doesn't work correctly on Azure. You still need to configure the secure connection between the App Service and the SQL database to retrieve your data.
 
-## Connect App Service to Azure SQL Database
-
-The following steps are required to connect the App Service instance to Azure SQL Database:
+## Connect the App Service to Azure SQL Database
 
 ## [Passwordless](#tab/paswordless)
 

@@ -47,7 +47,12 @@ The following extra guidelines apply to tightly coupled transactions:
 
 ## Configuration instructions
 
-The following steps are required if you want to use XA data sources together with Microsoft Distributed Transaction Coordinator (MS DTC) for handling distributed transactions.
+The following steps are required if you want to use XA data sources together with Microsoft Distributed Transaction Coordinator (MS DTC) for handling distributed transactions. The high-level steps are:
+
+1. Ensure the MS DTC service is running and starts automatically.
+1. Configure server-side components.
+1. Configure server-side timeout (optional).
+1. Grant access to users.
 
 ### Running the MS DTC service
 

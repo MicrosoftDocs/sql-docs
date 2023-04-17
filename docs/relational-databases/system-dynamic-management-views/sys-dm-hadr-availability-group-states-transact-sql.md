@@ -24,7 +24,7 @@ dev_langs:
   Returns a row for each Always On availability group that possesses an availability replica on the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Each row displays the states that define the health of a given availability group.  
   
 > [!NOTE]  
->  To obtain the complete list of, query the [sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) catalog view.  
+>  To obtain the complete list of Always On availability groups, query the [sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) catalog view.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

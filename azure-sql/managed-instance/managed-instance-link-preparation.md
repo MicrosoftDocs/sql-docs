@@ -5,7 +5,7 @@ description: Learn how to prepare your environment for using a Managed Instance 
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil
-ms.date: 11/16/2022
+ms.date: 04/26/2023
 ms.service: sql-managed-instance
 ms.subservice: data-movement
 ms.topic: how-to

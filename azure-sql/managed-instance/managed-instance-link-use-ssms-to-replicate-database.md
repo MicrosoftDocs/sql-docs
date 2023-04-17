@@ -5,7 +5,7 @@ description: Learn how to use a link feature in SQL Server Management Studio (SS
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil
-ms.date: 08/30/2022
+ms.date: 04/26/2023
 ms.service: sql-managed-instance
 ms.subservice: data-movement
 ms.topic: conceptual
@@ -80,9 +80,13 @@ In the following steps, you use the **Managed Instance link** wizard in SSMS to 
 
     :::image type="content" source="./media/managed-instance-link-use-ssms-to-replicate-database/link-replicate-distributed-ag-options.png" alt-text="Screenshot that shows the Specify Distributed A G Options page.":::
 
-1. Review the actions on the **Summary** page. Optionally, select **Script** to create a script that you can run at a later time. When you're ready, select **Finish**.  
+1. Review the actions on the **Summary** page. When you're ready to create the link, select **Finish**.  
+
+    > [!TIP]
+    > Optionally, select **Script** to create a script with the correct parameters that you can run again in the future to create your link. 
 
     :::image type="content" source="./media/managed-instance-link-use-ssms-to-replicate-database/link-replicate-summary.png" alt-text="Screenshot that shows the Summary page.":::
+
 
 1. The **Executing actions** page displays the progress of each action.  
 

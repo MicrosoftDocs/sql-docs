@@ -17,7 +17,7 @@ This article lists some frequently asked questions when using Azure Cosmos DB Mi
 
 The extension stores errors, warnings, and other diagnostic logs in the default log directory:
 
-- Windows - `C:\Users\<username>.dmamongo\logs\`
+- Windows - `C:\Users\<username>\.dmamongo\logs\`
 - Linux - `~/.dmamongo/logs`
 - macOS - `/Users/<username>/.dmamongo/logs`
 

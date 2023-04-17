@@ -84,14 +84,13 @@ For local development, update the `environmentVariables` section of the `appsett
 
 ## [Passwordless (Recommended)](#tab/passwordless)
 
-The passwordless connection string includes a configuration value of `Authentication=Active Directory Default`, which instructs the app and the `Microsoft.Data.SqlClient` library to use a class called [`DefaultAzureCredential`](/dotnet/azure/sdk/authentication#defaultazurecredential) to connect to Azure SQL Database. `DefaultAzureCredential` is provided by the Azure Identity library on which the SQL client library depends.
+The passwordless connection string includes a configuration value of `Authentication=Active Directory Default`, which instructs the `Microsoft.Data.SqlClient` library to use a class called [`DefaultAzureCredential`](/dotnet/azure/sdk/authentication#defaultazurecredential) to connect to Azure SQL Database. `DefaultAzureCredential` is provided by the Azure Identity library on which the SQL client library depends.
 
  When the app runs locally, it authenticates via the user you're signed into Visual Studio with, or other local tools like the Azure CLI. Once the app deploys to Azure, the same code discovers and applies the managed identity that is associated with the hosted app, which you'll configure later. The [Azure Identity library overview](/dotnet/api/overview/azure/Identity-readme#defaultazurecredential) explains the order and locations in which `DefaultAzureCredential` looks for credentials.
 
 ```json
-"environmentVariables": {
-    "ASPNETCORE_ENVIRONMENT": "Development",
-    "AZURE_SQL_CONNECTIONSTRING": "Server=tcp:<database-server-name>.database.windows.net;Database=<database-name>;Authentication=Active Directory Default;"
+"ConnectionStrings": {
+    "AZURE_SQL_CONNECTIONSTRING": "Server=tcp:<database-server-name>.database.windows.net;Database=<database-name>;Authentication=Active Directory Default;Encrypt=True;TrustServerCertificate=False;"
 }
 ```
 
@@ -103,9 +102,8 @@ The passwordless connection string includes a configuration value of `Authentica
 Connect to Azure SQL Database with SQL Authentication using the following connection string:
 
 ```json
-"environmentVariables": {
-    "ASPNETCORE_ENVIRONMENT": "Development",
-    "AZURE_SQL_CONNECTIONSTRING": "Server=tcp:<database-server-name>.database.windows.net,1433;Initial Catalog=<database-name>;Persist Security Info=False;User ID=<user-id>;Password=<password>;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+"ConnectionStrings": {
+    "AZURE_SQL_CONNECTIONSTRING": "Server=tcp:<database-server-name>.database.windows.net,1433;Initial Catalog=<database-name>;Persist Security Info=False;User ID=<user-id>;Password=<password>;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;"
 }
 ```
 
@@ -230,7 +228,7 @@ When the deployment finishes, Visual Studio launches the browser to display the 
 
 ## Connect the App Service to Azure SQL Database
 
-## [Passwordless](#tab/paswordless)
+## [Passwordless (Recommended)](#tab/paswordless)
 
 [!INCLUDE [passwordless-connect-azure-sql](../includes/passwordless-connect-azure-sql.md)]
 

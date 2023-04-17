@@ -66,7 +66,7 @@ The Azure portal allows you to work with managed identities and run queries agai
 
     * **Name**: Enter a value of *AZURE_SQL_CONNECTIONSTRING*.
     * **Value**: Paste the same connection string value you configured locally.
-    * **Type**: Select **SQLServer**.
+    * **Type**: Select **SQLAzure**.
 
 1) Select **OK** at the bottom of the panel.
 

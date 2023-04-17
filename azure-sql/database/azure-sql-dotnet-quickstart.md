@@ -78,17 +78,15 @@ dotnet add package Microsoft.Data.SqlClient
 
 ---
 
-## Add code to connect to Azure SQL Database
+## Configure the connection string
 
-Complete the following steps to connect to Azure SQL Database by using the SqlClient library:
-
-1) Update the `environmentVariables` section of the `launchSettings.json` file with the Azure SQL connection string:
+For local development, update the `environmentVariables` section of the `appsettings.Development.json` file with the correct Azure SQL connection string. Different connection string formats are required depending on which approach you choose. After you deploy the app to Azure App Service, you will create an environment variable in App Service with the same name to securely store the connection string.
 
 ## [Passwordless (Recommended)](#tab/passwordless)
 
-The `Microsoft.Data.SqlClient` library uses a class called `DefaultAzureCredential` to implement passwordless connections to Azure SQL Database, which you can learn more about on the [DefaultAzureCredential overview](/dotnet/azure/sdk/authentication#defaultazurecredential). **DefaultAzureCredential** is provided by the Azure Identity library on which the SQL client library depends.
+The passwordless connection string includes a configuration value of `Authentication=Active Directory Default`, which instructs the app and the `Microsoft.Data.SqlClient` library to use a class called [`DefaultAzureCredential`](/dotnet/azure/sdk/authentication#defaultazurecredential) to connect to Azure SQL Database. `DefaultAzureCredential` is provided by the Azure Identity library on which the SQL client library depends.
 
-The passwordless connection string includes a configuration value of `Authentication=Active Directory Default`, which instructs the app to use `DefaultAzureCredential` to connect to Azure services. When the app runs locally, it authenticates via the user you're signed into Visual Studio with, or other local tools like the Azure CLI. Once the app deploys to Azure, the same code discovers and applies the managed identity that is associated with the hosted app, which you'll configure later. The [Azure Identity library overview](/dotnet/api/overview/azure/Identity-readme#defaultazurecredential) explains the order and locations in which `DefaultAzureCredential` looks for credentials.
+ When the app runs locally, it authenticates via the user you're signed into Visual Studio with, or other local tools like the Azure CLI. Once the app deploys to Azure, the same code discovers and applies the managed identity that is associated with the hosted app, which you'll configure later. The [Azure Identity library overview](/dotnet/api/overview/azure/Identity-readme#defaultazurecredential) explains the order and locations in which `DefaultAzureCredential` looks for credentials.
 
 ```json
 "environmentVariables": {
@@ -102,7 +100,7 @@ The passwordless connection string includes a configuration value of `Authentica
 
 ## [SQL Authentication](#tab/sql-auth)
 
-Connect to Azure SQL Database using a SQL Authentication connection string:
+Connect to Azure SQL Database with SQL Authentication using the following connection string:
 
 ```json
 "environmentVariables": {
@@ -112,81 +110,84 @@ Connect to Azure SQL Database using a SQL Authentication connection string:
 ```
 
 > [!WARNING]
-> Use caution when managing connection strings that contain secrets such as usernames, passwords, or access keys. These secrets should not be committed to source control or placed in unsecure locations where they might be accessed by unintended users.
+> Use caution when managing connection strings that contain secrets such as usernames, passwords, or access keys. These secrets should not be committed to source control or placed in unsecure locations where they might be accessed by unintended users. During local development you will often connect to a local database that doesn't require storing secrets.
+
 
 ---
 
-1) Add the following sample code to the bottom of the `Program.cs` file above `app.Run()`. This code performs the following important steps:
+## Add code to connect to Azure SQL Database
 
-    * Retrieves the passwordless connection string from the environment variables
-    * Creates a `Persons` table in the database during startup (for testing scenarios only)
-    * Creates an HTTP GET endpoint to retrieve all records stored in the `Persons` table
-    * Creates an HTTP POST endpoint to add new records to the `Persons` table
+Add the following sample code to the bottom of the `Program.cs` file above `app.Run()`. This code performs the following important steps:
 
-    ```csharp
-    string connectionString = Environment.GetEnvironmentVariable("AZURE_SQL_CONNECTIONSTRING");
-    
-    try
+* Retrieves the passwordless connection string from the environment variables
+* Creates a `Persons` table in the database during startup (for testing scenarios only)
+* Creates an HTTP GET endpoint to retrieve all records stored in the `Persons` table
+* Creates an HTTP POST endpoint to add new records to the `Persons` table
+
+```csharp
+string connectionString = Environment.GetEnvironmentVariable("AZURE_SQL_CONNECTIONSTRING");
+
+try
+{
+    // Table would be created ahead of time in production
+    using var conn = new SqlConnection(connectionString);
+    conn.Open();
+
+    var command = new SqlCommand(
+        "CREATE TABLE Persons (ID int NOT NULL PRIMARY KEY IDENTITY, FirstName varchar(255), LastName varchar(255));",
+        conn);
+    using SqlDataReader reader = command.ExecuteReader();
+} catch(Exception e)
+{
+    // Table may already exist
+    Console.WriteLine(e.Message);
+}
+
+app.MapGet("/Person", () => {
+    var rows = new List<string>();
+
+    using var conn = new SqlConnection(connectionString);
+    conn.Open();
+
+    var command = new SqlCommand("SELECT * FROM Persons", conn);
+    using SqlDataReader reader = command.ExecuteReader();
+
+    if (reader.HasRows)
     {
-        // Table would be created ahead of time in production
-        using var conn = new SqlConnection(connectionString);
-        conn.Open();
-    
-        var command = new SqlCommand(
-            "CREATE TABLE Persons (ID int NOT NULL PRIMARY KEY IDENTITY, FirstName varchar(255), LastName varchar(255));",
-            conn);
-        using SqlDataReader reader = command.ExecuteReader();
-    } catch(Exception e)
-    {
-        // Table may already exist
-        Console.WriteLine(e.Message);
-    }
-    
-    app.MapGet("/Person", () => {
-        var rows = new List<string>();
-
-        using var conn = new SqlConnection(connectionString);
-        conn.Open();
-    
-        var command = new SqlCommand("SELECT * FROM Persons", conn);
-        using SqlDataReader reader = command.ExecuteReader();
-    
-        if (reader.HasRows)
+        while (reader.Read())
         {
-            while (reader.Read())
-            {
-                rows.Add($"{reader.GetInt32(0)}, {reader.GetString(1)}, {reader.GetString(2)}");
-            }
+            rows.Add($"{reader.GetInt32(0)}, {reader.GetString(1)}, {reader.GetString(2)}");
         }
-    
-        return rows;
-    })
-    .WithName("GetPersons")
-    .WithOpenApi();
-    
-    app.MapPost("/Person", (Person person) => {
-        using var conn = new SqlConnection(connectionString);
-        conn.Open();
-    
-        var command = new SqlCommand(
-            $"INSERT INTO Persons (firstName, lastName) VALUES ('{person.FirstName}', '{person.LastName}')",
-            conn);
-    
-        using SqlDataReader reader = command.ExecuteReader();
-    })
-    .WithName("CreatePerson")
-    .WithOpenApi();
-    ```
-
-    Finally, add the `Person` class to the bottom of the `Program.cs` file. This class represents a single record in the database's `Persons` table.
-
-    ```csharp
-    public class Person
-    {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
     }
-    ```
+
+    return rows;
+})
+.WithName("GetPersons")
+.WithOpenApi();
+
+app.MapPost("/Person", (Person person) => {
+    using var conn = new SqlConnection(connectionString);
+    conn.Open();
+
+    var command = new SqlCommand(
+        $"INSERT INTO Persons (firstName, lastName) VALUES ('{person.FirstName}', '{person.LastName}')",
+        conn);
+
+    using SqlDataReader reader = command.ExecuteReader();
+})
+.WithName("CreatePerson")
+.WithOpenApi();
+```
+
+Finally, add the `Person` class to the bottom of the `Program.cs` file. This class represents a single record in the database's `Persons` table.
+
+```csharp
+public class Person
+{
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+}
+```
 
 ## Run and test the app locally
 

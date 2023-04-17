@@ -44,8 +44,19 @@ An expression of the exact numeric or approximate numeric data type category.
 ## Return types
 
 
-Returns the same type as *numeric_expression*.
-  
+The return type depends on the input type of *numeric_expression*:
+ 
+|Input type|Return type|  
+|----------|-----------|  
+|**float**, **real**|**float**|
+|**decimal(*p*, *s*)**|**decimal(38, *s*)**|
+|**int**, **smallint**, **tinyint**|**int**|
+|**bigint**|**bigint**|
+|**money**, **smallmoney**|**money**|
+|**bit**|**float**|
+
+If the result does not fit in the return type, an arithmetic overflow error occurs.
+
 ## Examples
 
 This example shows the results of using the `ABS` function on three different numbers.

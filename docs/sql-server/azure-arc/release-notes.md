@@ -27,7 +27,7 @@ This release is published April 10, 2023.
 - Backups | Configure Automatic Backups for Arc SQL Server with a default schedule.
 - Automatic built-in backups with default schedule of weekly full, daily diff, and transaction logs every 5 min for every database.
 - Configure backup file retention with the `--retention-days` parameter. Values from 0 to 35 days. Default is 0 days.
-- Azure Policy to enable best practices assessment at scale. For details, see [Automatically connect Azure Arc-enabled SQL Servers](connect-at-scale-autodeploy.md).
+- Azure Policy to enable best practices assessment at scale. For details, see [Configure SQL best practices assessment](assess.md).
 
 ## March 2023
 
@@ -127,7 +127,7 @@ The *LicenseType* property of `SQL Server - Azure Arc` has been extended to prov
 - The pay-as-you-go billing is limited to SQL Server 2022[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]
 - SQL Server on Azure Arc-enabled servers doesn't support SQL Server Failover Cluster Instances.
 - Azure extension for SQL Server is not supported in the following environments:
-  - SQL Server in Azure VMs. If a custom VM image is migrated to Azure VM, Azure extension for SQL Server will stop working. The customers need to [Delete your Arc-enabled SQL Server resource](delete-from-azure-arc.md#delete-your-arc-enabled-sql-server-resource) and [enable automatic registration with SQL IaaS Agent extension](/azure/azure-sql/virtual-machines/windows/sql-agent-extension-automatic-registration-all-vms).
+  - SQL Server in Azure VMs. If a custom VM image is migrated to Azure VM, Azure extension for SQL Server will stop working. Delete your Arc-enabled SQL Server resource and enable automatic registration with SQL IaaS Agent extension. (This step is no longer required, beginning with April, 2023 release.)
   - SQL Server in Linux containers
   - SQL Server Azure VMware Solution
 > [!NOTE]

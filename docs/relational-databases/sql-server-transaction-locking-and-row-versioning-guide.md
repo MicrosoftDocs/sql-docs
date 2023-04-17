@@ -4,7 +4,7 @@ description: "Transaction locking and row versioning guide"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 03/21/2023
+ms.date: 04/12/2023
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
@@ -1049,6 +1049,9 @@ With RCSI enabled, and when using the default READ COMMITTED isolation level, wr
 If update conflicts are detected with RCSI and in the default READ COMMITTED isolation level, they are handled and retried automatically without any impact to customer workloads.
 
 With optimized locking enabled, using the SNAPSHOT isolation level, the behavior of update conflicts is the same. Update conflicts must be handled and retried manually by the application.
+
+> [!NOTE]
+> For more information on behavior changes with the lock after qualifiation (LAQ) feature of optimized locking, see [Query behavior changes with optimized locking and RCSI](performance/optimized-locking.md#behavior).
 
 ### Behavior in summary
 

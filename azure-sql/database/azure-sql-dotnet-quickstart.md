@@ -80,7 +80,7 @@ dotnet add package Microsoft.Data.SqlClient
 
 ## Configure the connection string
 
-For local development, update the `environmentVariables` section of the `appsettings.Development.json` file with the correct Azure SQL connection string. Different connection string formats are required depending on which approach you choose. After you deploy the app to Azure App Service, you will create an environment variable in App Service with the same name to securely store the connection string.
+For local development, update the `environmentVariables` section of the `appsettings.Development.json` file with the correct Azure SQL connection string. Different connection string formats are required depending on which approach you choose.
 
 ## [Passwordless (Recommended)](#tab/passwordless)
 

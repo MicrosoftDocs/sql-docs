@@ -68,7 +68,7 @@ Use Azure CLI to enable automated backups.
 To enable automated backups:
 
 1. Disable any existing backup routines.
-1. After you disable existingbackup routines, run the following command:
+1. After you disable existing backup routines, run the following command:
 
    ```azurecli
    --Install the arcdata extension if not already done

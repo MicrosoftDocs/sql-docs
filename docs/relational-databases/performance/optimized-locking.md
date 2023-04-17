@@ -39,14 +39,7 @@ This article covers these two core concepts of optimized locking in detail.
 
 ### Availability
 
-Currently, optimized locking is available in [!INCLUDE[Azure SQL Database](../../includes/ssazure_md.md)] only in the following Azure regions:
-- West Europe
-- UK South
-- Canada Central
-- Brazil South
-- West Central US
-
-Only in these regions, optimized locking is on by default in both new and existing databases.
+Currently, optimized locking is available in [!INCLUDE[Azure SQL Database](../../includes/ssazure_md.md)] only.
 
 #### Is optimized locking enabled?
 

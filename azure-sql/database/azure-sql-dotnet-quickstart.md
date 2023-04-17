@@ -247,7 +247,7 @@ When the deployment finishes, Visual Studio launches the browser to display the 
 
 ## Connect the App Service to Azure SQL Database
 
-## [Passwordless (Recommended)](#tab/paswordless)
+## [Passwordless (Recommended)](#tab/passwordless)
 
 [!INCLUDE [passwordless-connect-azure-sql](../includes/passwordless-connect-azure-sql.md)]
 

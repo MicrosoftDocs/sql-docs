@@ -51,9 +51,8 @@ To create a single database in the Azure portal, this quickstart starts at the A
 
 1. Leave **Want to use SQL elastic pool** set to **No**.
 1. Under **Compute + storage**, select **Configure database**.
-1. This quickstart uses a serverless database, so leave **Service tier** set to **General Purpose (Scalable compute and storage options)** and set **Compute tier** to **Serverless**. Select **Apply**.
+1. This quickstart uses a serverless database, so leave **Service tier** set to **General purpose (Most budget-friendly, serverless compute)** and set **Compute tier** to **Serverless**. Select **Apply**.
 
-      :::image type="content" source="./media/single-database-create-quickstart/configure-database.png" alt-text="configure serverless database" lightbox="media/single-database-create-quickstart/configure-database.png":::
 
 1. Under **Backup storage redundancy**, choose a redundancy option for the storage account where your backups will be saved. To learn more, see [backup storage redundancy](automated-backups-overview.md#backup-storage-redundancy). 
 1. Select **Next: Networking** at the bottom of the page.

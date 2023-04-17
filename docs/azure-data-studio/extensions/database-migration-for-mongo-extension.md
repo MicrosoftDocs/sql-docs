@@ -1,6 +1,6 @@
 ---
-title: Azure Cosmos DB migration for MongoDB extension
-description: Learn how to install and use the Azure Data Studio Azure Cosmos DB migration for MongoDB extension.
+title: Azure Cosmos DB Migration for MongoDB extension
+description: Learn how to install and use the Azure Data Studio Azure Cosmos DB Migration for MongoDB extension.
 author: sandnair
 ms.author: sandnair
 ms.reviewer: 
@@ -9,9 +9,9 @@ ms.service: azure-data-studio
 ms.topic: conceptual
 ---
 
-# Azure Cosmos DB migration for MongoDB extension (Preview)
+# Azure Cosmos DB Migration for MongoDB extension (Preview)
 
-The Azure Cosmos DB migration for MongoDB extension in Azure Data Studio helps you assess a MongoDB workload for migrating to Azure Cosmos DB for MongoDB. You can use this extension to run an end-to-end assessment on your workload and find out the actions that you may need to take to seamlessly migrate your workloads on Azure Cosmos DB.
+The Azure Cosmos DB Migration for MongoDB extension in Azure Data Studio helps you assess a MongoDB workload for migrating to Azure Cosmos DB for MongoDB. You can use this extension to run an end-to-end assessment on your workload and find out the actions that you may need to take to seamlessly migrate your workloads on Azure Cosmos DB.
 
 > [!NOTE]  
 > The extension currently supports only running migration readiness assessment, not actual migration.
@@ -23,9 +23,9 @@ The Azure Cosmos DB migration for MongoDB extension in Azure Data Studio helps y
 - A MongoDB database running version 3.2 or higher.
 
 
-## Install Azure Cosmos DB migration for MongoDB extension
+## Install Azure Cosmos DB Migration for MongoDB extension
 
-Following are the steps to install the Azure Cosmos DB migration for MongoDB extension in Azure Data Studio.
+Following are the steps to install the Azure Cosmos DB Migration for MongoDB extension in Azure Data Studio.
 
 1. Open the extensions manager in Azure Data Studio. You can select the extensions icon or select **Extensions** in the View menu.
 

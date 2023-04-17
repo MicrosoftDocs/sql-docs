@@ -62,16 +62,18 @@ some options for presenting this info in a different way
 The following table defines the permissions necessary for the `Microsoft.Sql/managedInstances` resource. For example, the Microsoft.Sql/managedInstances/hybridLink/ resource needs the read, write, and delete permissions: 
 
 |Microsoft.Sql/managedInstances/ resource|Microsoft.Sql/managedInstances/|/hybridCertificate|/databases/|/distributedAvailabilityGroups/|/endpointCertificates| /hybridLink/|/serverTrustCertificates/|
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | 
 |permission| read, write | action | read, delete, write, completeRestore/action, /readBackups/action, /restoreDetails/read  | read | read, write, delete, setRole/action | write, delete, read | 
 
 
 |resource|necessary permissions| 
+|---- | ---- | 
 |Microsoft.Sql/managedInstances/| read, write|
 |Microsoft.Sql/managedInstances/databases/| read, delete, write, completeRestore/action, readBackups/action, restoreDetails/read| 
 |Microsoft.Sql/managedInstances/distributedAvailabilityGroups| read, write, delete, setRole/action| 
 |Microsoft.Sql/managedInstances/endpointCertificates| read|
 |Microsoft.Sql/managedInstances/hybridLink/| read, write, delete|
-|Microsoft.Sql/managedInstances/serverTrustCertificates | write, delete, read" 
+|Microsoft.Sql/managedInstances/serverTrustCertificates | write, delete, read | 
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: Configure automated back up
+title: Configure automated backup
 description: Describes how to configure automated backups 
 ms.service: sql
 author: dnethi
@@ -68,7 +68,7 @@ Use Azure CLI to enable automated backups.
 To enable automated backups:
 
 1. Disable any existing backup routines.
-1. After you disable exisiting backup routines, run the following command:
+1. After you disable existingbackup routines, run the following command:
 
    ```azurecli
    --Install the arcdata extension if not already done

@@ -14,7 +14,7 @@ dev_langs:
   - "XML"
 ---
 # Boolean Constructor Functions - false (XQuery)
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   Returns the xs:boolean value False. This is equivalent to `xs:boolean("0")`.  
   

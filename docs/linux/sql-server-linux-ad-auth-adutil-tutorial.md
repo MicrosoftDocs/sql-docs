@@ -255,7 +255,7 @@ SELECT name FROM sys.server_principals;
 
 To connect using [SSMS](../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md), log into the SQL Server with your Windows credentials.
 
-You can also use a tool like [**sqlcmd**](../tools/sqlcmd-utility.md) to connect to the SQL Server using Windows Authentication.
+You can also use a tool like [**sqlcmd**](../tools/sqlcmd/sqlcmd-utility.md) to connect to the SQL Server using Windows Authentication.
 
 ```bash
 sqlcmd -E -S 'sql1.contoso.com'

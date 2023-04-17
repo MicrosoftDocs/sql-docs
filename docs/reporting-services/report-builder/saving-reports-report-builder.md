@@ -7,6 +7,7 @@ ms.date: 03/01/2017
 ms.service: reporting-services
 ms.subservice: report-builder
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Saving Reports (Report Builder)
   In Report Builder you can save a paginated report to a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] report server, SharePoint library, file share where you have write permission, or your computer. 

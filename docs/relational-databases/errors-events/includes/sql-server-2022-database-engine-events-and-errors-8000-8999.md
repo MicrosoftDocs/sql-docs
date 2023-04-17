@@ -2,7 +2,7 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 03/02/2023
+ms.date: 03/07/2023
 ms.topic: include
 ---
 | Error| Severity | Event logged | Description|
@@ -353,6 +353,16 @@ ms.topic: include
 | 8569 | 10 | Yes | SQL Server is unable to connect with Microsoft Distributed Transaction Coordinator (MS DTC).  Check MSDTC security settings and, if running Always On, ensure that SQL Server has a firewall rule allowing incoming RPC Dynamic connections. |
 | 8570 | 10 | Yes | Initializing Microsoft Distributed Transaction Coordinator (MS DTC) resource manager \[%ls\] for database '%ls'. This is an informational message only. No user action is required. |
 | 8571 | 10 | Yes | SQL Server is unable to get outcome from Microsoft Distributed Transaction Coordinator (MS DTC) for the transaction with UOW '%ls' because another resource manager with same RMID already exists. |
+| 8572 | 16 | Yes | DNS lookup for hostname '%ls' failed. |
+| 8573 | 10 | Yes | %ls '%ls' resolves to '%ls' IP address. |
+| 8574 | 16 | Yes | The provided host FQDN '%ls' is invalid. |
+| 8575 | 16 | Yes | NetBIOS hostname extracted from the provided FQDN is invalid. |
+| 8576 | 16 | Yes | RPC Endpoint Mappper on host '%ls' ('%ls') was unreachable. |
+| 8577 | 16 | Yes | DTC for Azure SQL Managed Instance %ls is disabled. To learn how to enable DTC, see: [https://learn.microsoft.com/azure/azure-sql/managed-instance/distributed-transaction-coordinator-dtc](/azure/azure-sql/managed-instance/distributed-transaction-coordinator-dtc). |
+| 8578 | 10 | Yes | %ls test %ls. |
+| 8579 | 10 | Yes | Testing connection to '%ls' ('%ls') succeeded. |
+| 8580 | 16 | Yes | The provided remote transaction manager whereabouts are invalid. |
+| 8581 | 16 | Yes | The provided OleTx Endpoint CID '%ls' is invalid. |
 | [8601](../mssqlserver-8601-database-engine-error.md) | 17 | No | Internal Query Processor Error: The query processor could not obtain access to a required interface. |
 | 8602 | 16 | No | Indexes used in hints must be explicitly included by the index tuning wizard. |
 | 8603 | 16 | No | Invalid syntax for internal DBCC REPAIR statement. |

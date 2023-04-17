@@ -4,7 +4,7 @@ description: Learn about the new features for and improvements to SQL Server on 
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 02/10/2023
+ms.date: 04/05/2023
 ms.service: virtual-machines-sql
 ms.subservice: service-overview
 ms.topic: reference
@@ -19,13 +19,24 @@ When you deploy an Azure virtual machine (VM) with SQL Server installed on it, e
 
 For updates made in previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md). 
 
+## April 2023
+
+| Changes | Details |
+| --- | --- |
+| **Auto upgrade SQL IaaS Agent extension** | It's now possible to enable auto upgrade for your SQL IaaS Agent extension to ensure you're automatically receiving the latest updates to the extension every month. Review [SQL IaaS Agent Settings](manage-sql-vm-portal.md#sql-iaas-agent-extension-settings) to learn more. 
+| **Azure AD authentication GA** | Azure Active Directory (Azure AD) authentication is now generally available. Review [Configure Azure AD](configure-azure-ad-authentication-for-sql-vm.md) to learn more. |  
+
+## March 2023
+
+| Changes | Details |
+| --- | --- |
+| **Removed extension management modes** | The architecture for the SQL IaaS Agent extension has been updated to remove management modes. All newly deployed SQL Server VMs are registered with the extension by using the same default configuration and least privileged security model. To learn more, review [Management modes](sql-server-iaas-agent-extension-automate-management.md#management-modes). |
 
 ## February 2023 
 
 | Changes | Details |
 | --- | --- |
 | **Enable Azure AD for SQL Server** | We've published a guide to help you enable Azure AD authentication for your SQL Server VM. Review [Configure Azure AD](configure-azure-ad-authentication-for-sql-vm.md) to learn more. | 
-
 
 ## January 2023
 
@@ -38,10 +49,10 @@ For updates made in previous years, see the [What's new archive](doc-changes-upd
 
 | Changes | Details |
 | --- | --- |
-| **Troubleshoot SQL IaaS agent extension** | We've added an article to help you troubleshoot and address some known issues with the SQL Server IaaS agent extension. To learn more, read [Troubleshoot known issues](sql-agent-extension-troubleshoot-known-issues.md). |
+| **Troubleshoot SQL IaaS Agent extension** | We've added an article to help you troubleshoot and address some known issues with the SQL Server IaaS agent extension. To learn more, read [Troubleshoot known issues](sql-agent-extension-troubleshoot-known-issues.md). |
 | **Configure AG from Azure portal** | There is a new experience to deploy an Always On availability group to multiple subnets by using the Azure portal. The new availability group deployment method replaces the previous deployment through the SQL virtual machines resource. This feature is currently in preview. To learn more, review [Configure availability group through the Azure portal](availability-group-azure-portal-configure.md). | 
-| **Azure AD authentication** | It's now possible to configure Azure Active Directory (Azure AD) authentication to your SQL Server 2022 on Azure VM by using the Azure portal. This feature is currently in preview. To get started, review [Azure AD with SQL Server VMs](security-considerations-best-practices.md#azure-ad-authentication-preview). | 
-| **Least privilege permission model for SQL IaaS Agent extension** | There is a new permissions model available for the SQL Server IaaS Agent extension that grants the least privileged permission for each feature used by the extension. To learn more, review [SQL IaaS agent extension permissions](sql-server-iaas-agent-extension-automate-management.md#permissions-models). | 
+| **Azure AD authentication** | It's now possible to configure Azure Active Directory (Azure AD) authentication to your SQL Server 2022 on Azure VM by using the Azure portal. This feature is currently in preview. To get started, review [Azure AD with SQL Server VMs](security-considerations-best-practices.md#azure-ad-authentication). | 
+| **Least privilege permission model for SQL IaaS Agent extension** | There is a new permissions model available for the SQL Server IaaS Agent extension that grants the least privileged permission for each feature used by the extension. To learn more, review [SQL IaaS Agent extension permissions](sql-server-iaas-agent-extension-automate-management.md#permissions-models). | 
 | **Confidential VMs** | SQL Server on Azure VMs has added support to deploy to [SQL Server on Azure confidential VMs](sql-vm-create-confidential-vm-how-to.md). To get started, review the [Quickstart: Deploy SQL Server to an Azure confidential VM](sql-vm-create-portal-quickstart.md?tabs=confidential-vm). 
 | **Azure CLI for SQL best practices assessment**| It's now possible to configure the [SQL best practices assessment](sql-assessment-for-sql-vm.md) feature using the Azure CLI. |
 | **Configure tempdb from Azure portal** | It's now possible to configure your `tempdb` settings, such as the number of files, initial size, and autogrowth ratio for an existing SQL Server instance by using the Azure portal. See [manage SQL Server VM from portal](manage-sql-vm-portal.md#storage) to learn more. |

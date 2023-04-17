@@ -41,7 +41,7 @@ Only one object can be selected at a time in Object Explorer. To select multiple
 When connected to a server, you can easily register the server for future use. In Object Explorer, right-click the server name, and then click **Register**. In the **Register Server** dialog box, specify where in the server group tree you want to place the server. In the **Server name** box, you can replace the server name with a more meaningful server name. For example, you could register server **APSQL02** with a more meaningful name such as "**Accounts Payable**".  
   
 ## Performing Actions on Object Explorer Nodes  
-You perform actions on objects by right clicking the Object Explorer node representing the object. Each type of object supports a unique set of right-click actions. Some of the types of actions you can perform by using the right-click menus include:  
+You perform actions on objects by right-clicking the Object Explorer node representing the object. Each type of object supports a unique set of right-click actions. Some of the types of actions you can perform by using the right-click menus include:  
   
 ### Open a Connected Query Editor  
 When Object Explorer is connected to a server, you can open a new Code Editor window using the connection settings of Object Explorer. To open a new Code Editor window, right-click the server name in Object Explorer, and then click **New Query**. To open a Code Editor window using a particular database, right-click the database name, and then click **New Query**. When opening a new query for an Analysis Services server, you can select DMX, MDX, or XMLA queries.  

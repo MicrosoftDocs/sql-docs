@@ -7,6 +7,7 @@ ms.date: 03/04/2017
 ms.service: reporting-services
 ms.subservice: report-server-web-service
 ms.topic: reference
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "Web service [Reporting Services], omitted values"
   - "XML Web service [Reporting Services], omitted values"

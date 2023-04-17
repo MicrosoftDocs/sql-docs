@@ -7,6 +7,7 @@ ms.date: 03/20/2017
 ms.service: reporting-services
 ms.subservice: subscriptions
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "Report Manager [Reporting Services], default delivery extension"
 ---

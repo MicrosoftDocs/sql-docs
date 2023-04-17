@@ -318,3 +318,5 @@ For an example of how to use **sqlcmd** to connect to SQL Server and create a da
 - [Run on Docker](quickstart-install-connect-docker.md)
 
 For an example of how to use **bcp** to bulk import and export data, see [Bulk copy data to SQL Server on Linux](sql-server-linux-migrate-bcp.md).
+
+[!INCLUDE [contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

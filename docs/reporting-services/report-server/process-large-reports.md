@@ -7,6 +7,7 @@ ms.date: 06/10/2019
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "report processing [Reporting Services], large reports"
   - "page breaks [Reporting Services]"

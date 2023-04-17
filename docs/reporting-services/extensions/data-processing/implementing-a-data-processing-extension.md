@@ -7,6 +7,7 @@ ms.date: 03/14/2017
 ms.service: reporting-services
 ms.subservice: extensions
 ms.topic: reference
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "custom data processing extensions [Reporting Services]"
   - "data sources [Reporting Services], data processing extensions"

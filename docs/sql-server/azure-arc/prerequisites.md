@@ -9,6 +9,7 @@ ms.service: sql
 ms.topic: conceptual
 ms.custom: references_regions
 ---
+
 # Prerequisites
 
 An Azure Arc-enabled instance of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is an instance on-premises or in a cloud provider that is connected to Azure Arc. This article explains those prerequisites.
@@ -18,7 +19,7 @@ An Azure Arc-enabled instance of [!INCLUDE [ssnoversion-md](../../includes/ssnov
 Before you can Arc-enable an instance of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], you need to:
 
 - Have an Azure account with an active subscription. If needed, [create a free Azure Account](https://azure.microsoft.com/free/)
-- Verify [Arc connected machine agent prerequisites](/azure/azure-arc/servers/prerequisites)
+- Verify [Arc connected machine agent prerequisites](/azure/azure-arc/servers/prerequisites).  The Arc agent must be running in the typical 'full' mode.
 - Verify [Arc connected machine agent network requirements](/azure/azure-arc/servers/network-requirements)
 - Register resource providers. Specifically:
   - `Microsoft.AzureArcData`

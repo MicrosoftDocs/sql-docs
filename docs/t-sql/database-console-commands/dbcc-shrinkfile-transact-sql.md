@@ -4,7 +4,7 @@ description: "DBCC SHRINKFILE shrinks the size of a database file."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: umajay, dpless, randolphwest
-ms.date: "01/06/2023"
+ms.date: 03/14/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: "language-reference"
@@ -116,7 +116,7 @@ Suppresses all informational messages.
 
 ### WAIT_AT_LOW_PRIORITY with shrink operations
 
-**Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later versions
+**Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later versions, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]
 
 The wait at low priority feature reduces lock contention. For more information, see [Understanding concurrency issues with DBCC SHRINKDATABASE](#understand-concurrency-issues-with-dbcc-shrinkfile).
 

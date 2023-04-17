@@ -7,6 +7,7 @@ ms.date: 10/14/2022
 ms.service: reporting-services
 ms.subservice: mobile-reports
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Create mobile reports with SQL Server Mobile Report Publisher
 

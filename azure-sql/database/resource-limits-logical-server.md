@@ -15,7 +15,8 @@ ms.topic: reference
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](resource-limits-logical-server.md)
+> * [Azure SQL Database logical server](resource-limits-logical-server.md)
+> * [Azure SQL Database single database](resource-limits-vcore-single-databases.md)
 > * [Azure SQL Managed Instance](../managed-instance/resource-limits.md)
 
 This article provides an overview of resource management in Azure SQL Database. It provides information on what happens when resource limits are reached, and describes  resource governance mechanisms that are used to enforce these limits.
@@ -248,6 +249,10 @@ To learn more, review `tempdb` size limits for:
 
 - vCore purchasing model: [single databases](resource-limits-vcore-single-databases.md), [pooled databases](resource-limits-vcore-elastic-pools.md)
 - DTU purchasing model: [single databases](resource-limits-dtu-single-databases.md#tempdb-sizes),  [pooled databases](resource-limits-dtu-elastic-pools.md#tempdb-sizes).
+
+## Identify Gen4 hardware
+
+[!INCLUDE[identify-gen4-hardware](../includes/identify-gen4-hardware.md)]
 
 ## Next steps
 

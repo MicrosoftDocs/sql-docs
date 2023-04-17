@@ -6,7 +6,9 @@ ms.author: maggies
 ms.date: 05/01/2020
 ms.service: reporting-services
 ms.topic: conceptual
-ms.custom: intro-migration
+ms.custom:
+  - intro-migration
+  - updatefrequency5
 ---
 
 # Migrate a Reporting Services Installation (Native Mode)
@@ -143,7 +145,7 @@ For more information about changes in SQL Server Reporting Services, see the Upg
   
  Click one of the following links to view instructions on how to install a new instance of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]:  
   
-* [Install SQL Server Reporting Services 2016 and older from the Installation Wizard &#40;Setup&#41; ](install-reporting-services-native-mode-report-server.md) 
+* [Install SQL Server Reporting Services 2016 and older from the Installation Wizard &#40;Setup&#41;](install-reporting-services-native-mode-report-server.md) 
   
 * [Install SQL Server Reporting Services 2016 and older from the Command Prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
 

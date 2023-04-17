@@ -60,7 +60,7 @@ Here are detailed instructions on how to do the tasks:
   
         ![Screenshot showing the Profiles option.](./media/configure-scom-to-monitor-analytics-platform-system/AdministrationRunAsConfigurationProfiles.png "AdministrationRunAsConfigurationProfiles")  
   
-    2.  Right click on **Microsoft APS Watcher Account** from the list and select **Properties**.  
+    2.  Right-click on **Microsoft APS Watcher Account** from the list and select **Properties**.  
   
         ![Screenshot showing the Properties option.](./media/configure-scom-to-monitor-analytics-platform-system/MicrosoftApsWatcherAccountProperties.png "MicrosoftApsWatcherAccountProperties")  
   

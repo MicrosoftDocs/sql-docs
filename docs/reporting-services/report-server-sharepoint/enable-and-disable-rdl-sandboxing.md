@@ -7,6 +7,7 @@ ms.date: 09/25/2017
 ms.service: reporting-services
 ms.subservice: report-server-sharepoint
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Enable and disable RDL sandboxing for Reporting Services in SharePoint integrated mode
 

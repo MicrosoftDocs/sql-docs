@@ -23,10 +23,6 @@ This wizard was created to improve the current import experience leveraging an i
 
 PROSE analyzes data patterns in your input file to infer column names, types, delimiters, and more. This framework learns the structure of the file and does all of the hard work so users don't have to.
 
-To further understand the user experience improvement of the Import Flat File Wizard, check out this video:
-
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player?WT.mc_id=dataexposed-c9-niner]
-
 ## Prerequisites
 This feature is available on SQL Server Management Studio (SSMS) v17.3 or later. Make sure you are using the latest version. You can find the latest version [here.](../../ssms/download-sql-server-management-studio-ssms.md)
  

@@ -3,7 +3,7 @@ title: "Optimized locking"
 description: "Learn about the optimized locking enhancement to the Database Engine."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 01/31/2023
+ms.date: 04/12/2023
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
@@ -19,7 +19,7 @@ monikerRange: "=azuresqldb-current"
 
 [!INCLUDE [asdb](../../includes/applies-to-version/asdb.md)]
 
-This article introduces the optimized locking feature, a new [!INCLUDE[SQL Server Database Engine](../../includes/ssdenoversion-md.md)] capability that offers an improved transaction locking mechanism that reduces lock memory consumption and blocking amongst concurrent transactions.
+This article introduces the optimized locking feature, a new [!INCLUDE[SQL Server Database Engine](../../includes/ssdenoversion-md.md)] capability that offers an improved transaction locking mechanism that reduces lock memory consumption and blocking for concurrent transactions.
 
 ## What is optimized locking?
 
@@ -172,6 +172,53 @@ GO
 | | `BEGIN TRAN`<br />`UPDATE t2`<br />`SET b=b+10`<br />`WHERE a=1;` |
 | `COMMIT TRAN` | |
 | | `COMMIT TRAN` |
+
+### <a id="behavior"></a> Query behavior changes with optimized locking and RCSI
+
+Concurrent systems under read committed snapshot isolation level (RCSI) with workloads that rely on strict execution order of transactions, might experience different query behavior when optimized locking is enabled. 
+
+Consider the following example where transaction T2 is updating table `t1` based on column `b` that was updated during transaction T1.
+
+```sql
+CREATE TABLE t1 (a int not null, b int null);
+
+INSERT INTO t1 VALUES (1,1);
+GO
+```
+
+| **Session 1**  |  **Session 2** |
+| :-- | :-- |
+| BEGIN TRAN T1<br />UPDATE t1<br />SET b=2<br />WHERE a=1; | |
+| | BEGIN TRAN T2<br />UPDATE t1<br />SET b=3<br />WHERE b=2;|
+|COMMIT TRAN    ||
+| | COMMIT TRAN |
+
+Let's evaluate the outcome of the above scenario with and without lock after qualification (LAQ), an integral part of optimized locking.
+
+**Without LAQ**
+
+Without LAQ, transaction T2 will be blocked and wait for the transaction T1 to complete. 
+
+After both transactions commit, table `t1` will contain the following rows:
+
+```
+ a | b 
+ 1 | 3 
+```
+
+**With LAQ**
+
+With LAQ, transaction T2 will use the latest committed version of the row b (`b`=1 in the version store) to evaluate its predicate (`b`=2). This row does not qualify; hence it is skipped and T2 moves to the next row without having been blocked by transaction T1. In this example, LAQ removes blocking but leads to different results. 
+
+After both transactions commit, table `t1` will contain the following rows:
+
+```
+ a | b 
+ 1 | 2 
+```
+
+> [!IMPORTANT]
+> Even without LAQ, applications should not assume that SQL Server (under versioning isolation levels) will guarantee strict ordering, without using locking hints. Our general recommendation for customers on concurrent systems under RCSI with workloads that rely on strict execution order of transactions (as shown in the previous exercise), is to [use stricter isolation levels](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).
 
 ## Best practices with optimized locking
 

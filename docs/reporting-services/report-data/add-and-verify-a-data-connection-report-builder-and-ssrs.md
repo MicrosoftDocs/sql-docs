@@ -7,6 +7,7 @@ ms.date: 12/13/2020
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Add and Verify a Data Connection (Report Builder and SSRS)

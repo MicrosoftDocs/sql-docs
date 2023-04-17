@@ -58,6 +58,5 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## See Also  
  [Search and Replace](./search-and-replace.md)   
  [Search Documents Interactively](./search-documents-interactively.md)   
- [Search Text with Wildcards](./search-text-with-wildcards.md)   
  [Search Text with Regular Expressions](./search-text-with-regular-expressions.md)  
   

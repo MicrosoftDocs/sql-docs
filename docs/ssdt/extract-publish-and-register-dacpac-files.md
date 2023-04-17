@@ -16,7 +16,7 @@ f1_keywords:
 
 # Extract, Publish, and Register .dacpac Files
 
-This topic describes four procedures that you can perform by right clicking a connected database in SQL Server Object Explorer:  
+This topic describes four procedures that you can perform by right-clicking a connected database in SQL Server Object Explorer:  
   
 -   Publish Data-tier Application  
   

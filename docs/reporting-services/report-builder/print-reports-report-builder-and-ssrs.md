@@ -7,6 +7,7 @@ ms.date: 05/24/2018
 ms.service: reporting-services
 ms.subservice: report-builder
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Print Reports - Reporting Services (SSRS)
   After you save a report to a report server, you can view and print the report from the web portal or any application that you use to view an exported report. Before saving a report, you can print it when you preview it.  

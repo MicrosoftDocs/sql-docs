@@ -7,6 +7,7 @@ ms.date: 05/10/2017
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # SharePoint List Connection Type (SSRS)
 

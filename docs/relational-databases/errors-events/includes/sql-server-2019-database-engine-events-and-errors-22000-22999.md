@@ -2,7 +2,7 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 02/17/2023
+ms.date: 03/22/2023
 ms.topic: include
 ---
 | Error| Severity | Event logged | Description|
@@ -17,6 +17,7 @@ ms.topic: include
 | 22008 | 16 | No | Aborted versions belonging to this filegroup could not be cleaned up. |
 | 22010 | 16 | No | Cannot change the READONLY property of the filegroup containing Persistent Version Store which is required for Accelerated Database Recovery. |
 | 22012 | 16 | No | Persistent version store is enabled on the database '%.\*ls' but the version store manager could not be initialized. |
+| 22020 | 17 | No | Internal Error: Tried to access an expired large object. |
 | 22101 | 16 | No | The value supplied for the change_columns argument of CHANGE_TRACKING_IS_COLUMN_IN_MASK function is not valid. The value must be a bitmask returned by the CHANGETABLE(CHANGES ...) function. |
 | 22102 | 16 | No | The arguments supplied are not valid for the CHANGES option of the CHANGETABLE function. |
 | 22103 | 16 | No | The arguments supplied are not valid for the VERSION option of the CHANGETABLE function. |
@@ -41,6 +42,7 @@ ms.topic: include
 | 22122 | 16 | No | Change Tracking autocleanup failed on side table of "%s".  If the failure persists, use sp_flush_CT_internal_table_on_demand to clean up expired records from its side table. |
 | 22123 | 16 | No | Change Tracking autocleanup is blocked on side table of "%s". If the failure persists, check if the table "%s" is blocked by any process . |
 | 22124 | 16 | No | Change Tracking manual cleanup is blocked on side table of "%s". If the failure persists, check if the table "%s" is blocked by any process . |
+| 22125 | 16 | No | Change tracking autocleanup is currently not able to maintain retention for database ID %d. Number of expired records: %d. If this warning persists, check the following resource: [https://learn.microsoft.com/sql/relational-databases/track-changes/cleanup-and-troubleshoot-change-tracking-sql-server](/sql/relational-databases/track-changes/cleanup-and-troubleshoot-change-tracking-sql-server) |
 | 22201 | 16 | No | Internal error. Unable to acquire the latch holding buffers for DW Tiered Storage ColumnStore Scan. |
 | 22202 | 16 | No | Internal error. Unable to run the remote cs garbage collector. Error Code 22202. |
 | 22203 | 16 | No | Internal error. Unable to update the blobs table in the catalogDB. Error Code 22203. |
@@ -65,8 +67,8 @@ ms.topic: include
 | 22222 | 10 | No | Database migration scan for database '%.\*ls' was aborted. Internal error. Migration scan was aborted. |
 | 22223 | 16 | No | Internal error. Unable to refresh migration type from fabric property. |
 | 22224 | 16 | No | Internal error. ADW Optimized for Compute storage detected. Unable to retrieve blob. |
-| 22225 | 16 | No | An internal error (%d, %d) occured. Please retry the operation again. If the problem persists contact Microsoft Azure Customer Support. |
-| 22226 | 16 | No | An internal error (%d, %d) occured. Please retry the operation again. If the problem persists contact Microsoft Azure Customer Support. |
+| 22225 | 16 | No | An internal error (%d, %d) occurred. Please retry the operation. If the problem persists contact Microsoft Azure Customer Support. |
+| 22226 | 16 | No | An internal error (%d, %d) occurred. Please retry the operation. If the problem persists contact Microsoft Azure Customer Support. |
 | 22227 | 10 | No | TIERED Storage Scanner encountered an error message "%ls" in "%ls". |
 | 22228 | 22 | No | The columnstore remote lob header is invalid. |
 | 22229 | 22 | No | Remote storage columnstore data checksum mismatch. Expected checksum from blob is %lu, actual check sum from read buffers is %lu. |
@@ -74,7 +76,7 @@ ms.topic: include
 | 22302 | 16 | No | DW FIDO transaction context not found. |
 | 22303 | 16 | No | Updates are not allowed from a FIDO Scan transaction. |
 | 22304 | 16 | No | Reading or Writing to database files is not supported in FIDO DBs. |
-| 22305 | 16 | No | A NULL or unexpected value was retured by a FIDO ODBC call. |
+| 22305 | 16 | No | A NULL or unexpected value was returned by an ODBC call. |
 | 22306 | 16 | No | Only CCI tables are allowed in Fido mode. |
 | 22307 | 16 | No | Alter statements are only allowed from a FIDO Alter transaction. |
 | 22308 | 16 | No | Fido thread failed to acquire a lock. |
@@ -227,7 +229,7 @@ ms.topic: include
 | 22836 | 16 | No | Could not update the metadata for database %s to indicate that a Change Data Capture job has been added. The failure occurred when executing the command '%s'. The error returned was %d: '%s'. Use the action and error to determine the cause of the failure and resubmit the request. |
 | 22837 | 16 | No | Could not delete table entries or drop objects associated with capture instance '%s'. The failure occurred when executing the command '%s'. The error returned was %d: '%s'. Use the action and error to determine the cause of the failure and resubmit the request. |
 | 22838 | 16 | No | All columns of a CDC unique index must be defined as NOT NULL. Index '%s' selected as the CDC unique index for source table '%s.%s' does not meet this requirement. Define all columns of the selected index as NOT NULL or select another unique index as the CDC index and resubmit the request. |
-| 22840 | 16 | No | The application lock request '%s' needed to modify Change Data Capture metadata was not granted. The value returned from the request was %d: -1 = timeout; -2 = canceled; -3 = deadlock victim; -999 validation or other call error. Examine the error cause and resbmit the request. |
+| 22840 | 16 | No | The application lock request '%s' needed to modify Change Data Capture metadata was not granted. The value returned from the request was %d: -1 = timeout; -2 = canceled; -3 = deadlock victim; -999 validation or other call error. Examine the error cause and resubmit the request. |
 | 22841 | 16 | No | Could not upgrade the metadata for database '%s' that is enabled for Change Data Capture. The failure occurred when executing the action '%s'. The error returned was %d: '%s'. Use the action and error to determine the cause of the failure and resubmit the request. |
 | 22842 | 16 | No | ALTER TABLE SWITCH statement failed because the partitioned destination table is enabled for Change Data Capture and does not have @allow_partition_switch set to 1. |
 | 22843 | 16 | No | ALTER TABLE SWITCH statement failed because the partitioned source table is enabled for Change Data Capture and does not have @allow_partition_switch set to 1. |

@@ -7,6 +7,7 @@ ms.date: 08/17/2017
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "managing, alerts"
   - "managing, data alerts"

@@ -7,6 +7,7 @@ ms.date: 01/18/2022
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Sample Reporting Services rs.exe Script to Copy Content between Report Servers
 

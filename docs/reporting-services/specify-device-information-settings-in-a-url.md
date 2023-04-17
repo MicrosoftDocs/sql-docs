@@ -7,6 +7,7 @@ ms.date: 03/16/2017
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "device information settings [Reporting Services], URLs"
   - "URL access [Reporting Services], device information settings"

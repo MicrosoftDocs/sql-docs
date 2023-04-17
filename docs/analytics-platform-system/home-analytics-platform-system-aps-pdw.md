@@ -28,7 +28,7 @@ Analytics Platform System is not only fast and scalable, it is designed with hig
 Use PDW as the core relational data warehousing component of your end-to-end business intelligence solutions. With PDW's massively parallel processing (MPP) design, queries commonly complete 50 times faster than traditional data warehouses built on symmetric multi-processing (SMP) database management systems.
 
 > [!NOTE]
-> 50 times faster means that queries complete in minutes instead of hours, or seconds instead of minutes. With this breakthrough performance, your business analysts can generate more extensive results faster, and can easily perform ad-hoc queries or drill down into the details. As a result, your business can make better decisions, faster.
+> 50 times faster means that queries complete in minutes instead of hours, or seconds instead of minutes. With this breakthrough performance, your business analysts can generate more extensive results faster, and can easily perform ad hoc queries or drill down into the details. As a result, your business can make better decisions, faster.
 
 In addition to achieving breakthrough query performance, PDW makes it easy to:
 

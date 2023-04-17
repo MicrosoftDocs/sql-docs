@@ -7,6 +7,7 @@ ms.date: 05/07/2019
 ms.service: reporting-services
 ms.subservice: security
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "roles [Reporting Services], creating"
   - "deleting roles"

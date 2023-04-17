@@ -3,8 +3,8 @@ title: "SQL Server to Azure SQL Database: Migration overview"
 description: Learn about the tools and options available to migrate your SQL Server databases to Azure SQL Database.
 author: croblesm
 ms.author: roblescarlos
-ms.reviewer: mathoma, kendralittle
-ms.date: 01/06/2023
+ms.reviewer: mathoma
+ms.date: 03/20/2023
 ms.service: sql-database
 ms.subservice: migration-guide
 ms.topic: how-to
@@ -114,7 +114,7 @@ The following table compares the migration options that we recommend:
 |Migration option  |When to use  |Considerations  |
 |---------|---------|---------|
 | [Azure Migrate](/azure/migrate/how-to-create-azure-sql-assessment) | - Discovery and assess single databases or at scale from different environments. | - All pre-migration steps such as discovery, assessments, and right-sizing of on-premises resources are included for infrastructure, data, and applications. |
-| [Azure SQL Migration extension for Azure Data Studio](/azure/dms/migration-using-azure-data-studio) | - Migrate single databases or at scale. </br> - Can run in both online and offline modes. </br> </br> Supported sources: </br> - SQL Server (2008 onwards) on-premises, or on Azure Virtual Machines </br> - SQL Server on Amazon EC2 </br> - Amazon RDS for SQL Server </br> - SQL Server on Google Compute Engine | - Migrations at scale can be automated via [PowerShell or Azure CLI](/azure/dms/migration-dms-powershell-cli). </br> </br> - Time to complete migration depends on database size and the number of objects in the database. </br> </br> - Azure Data Studio is required when you are not using PowerShell or Azure CLI. |
+| [Azure SQL Migration extension for Azure Data Studio](/azure/dms/migration-using-azure-data-studio) | - Migrate single databases or at scale. </br> - Offline mode only. </br> </br> Supported sources: </br> - SQL Server (2008 onwards) on-premises, or on Azure Virtual Machines </br> - SQL Server on Amazon EC2 </br> - Amazon RDS for SQL Server </br> - SQL Server on Google Compute Engine | - Migrations at scale can be automated via [PowerShell or Azure CLI](/azure/dms/migration-dms-powershell-cli). </br> </br> - Time to complete migration depends on database size and the number of objects in the database. </br> </br> - Azure Data Studio is required when you are not using PowerShell or Azure CLI. |
 
 The following table compares the alternative migration options: 
 

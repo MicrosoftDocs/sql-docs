@@ -39,7 +39,5 @@ helpviewer_keywords:
     ```  
   
 ## See Also  
- [sqlcmd Utility](../../tools/sqlcmd-utility.md)   
+ [sqlcmd Utility](../../tools/sqlcmd/sqlcmd-utility.md)   
  [osql Utility](../../tools/osql-utility.md)  
-  
-  

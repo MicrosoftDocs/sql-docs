@@ -327,6 +327,4 @@ In SQL Server Management Studio and Visual Studio, the Help Viewer application m
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
-[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
-
 ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png "MS_Logo_X-Small")

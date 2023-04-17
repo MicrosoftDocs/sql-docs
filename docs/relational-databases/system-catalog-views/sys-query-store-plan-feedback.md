@@ -48,6 +48,7 @@ Requires the `VIEW DATABASE STATE` permission.
 ## Next steps
 
 - [Intelligent query processing in SQL databases](../performance/intelligent-query-processing.md)
+- [Intelligent query processing Feedback features](../performance/intelligent-query-processing-feedback.md)
 - [sys.database_query_store_internal_state (Transact-SQL)](sys-database-query-store-internal-state-transact-sql.md)
 - [sys.query_store_plan (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)
 - [sys.query_store_query (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)

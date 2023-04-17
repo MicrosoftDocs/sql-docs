@@ -7,6 +7,7 @@ ms.date: 05/24/2018
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Store Credentials in a Reporting Services Data Source

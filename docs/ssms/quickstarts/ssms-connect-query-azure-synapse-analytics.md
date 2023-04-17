@@ -71,7 +71,7 @@ You can experience connection problems with dedicated SQL pool (formerly SQL DW)
 
 In this section, you create a table in your dedicated SQL pool (formerly SQL DW).
 
-1. In Object Explorer, right click on your dedicated SQL pool (formerly SQL DW), select **New query**. 
+1. In Object Explorer, right-click on your dedicated SQL pool (formerly SQL DW), select **New query**. 
 
 2. Paste the following T-SQL code snippet into the query window:
 

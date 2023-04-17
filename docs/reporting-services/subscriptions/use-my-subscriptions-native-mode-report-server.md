@@ -7,6 +7,7 @@ ms.date: 07/01/2016
 ms.service: reporting-services
 ms.subservice: subscriptions
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "subscriptions [Reporting Services], My Subscriptions page"
   - "My Subscriptions page [Reporting Services]"

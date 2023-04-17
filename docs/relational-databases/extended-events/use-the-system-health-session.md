@@ -54,7 +54,7 @@ The session collects information that includes the following:
 -   Security errors using *security_error_ring_buffer_recorded*.  
 
 > [!NOTE]
-> For more information on deadlocks, see [deadlocking in the Transaction Locking and Row Versioning Guide](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#deadlocks).   
+> For more information on deadlocks, see the [Deadlocks guide](../../relational-databases/sql-server-deadlocks-guide.md).   
 > For more information on SQL error messages, see [Database Engine Errors](../../relational-databases/errors-events/database-engine-events-and-errors.md).
 
 ## View the session data  

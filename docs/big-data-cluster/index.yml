@@ -1,7 +1,7 @@
 ### YamlMime:Landing
 
 title: Big Data Clusters
-summary: SQL Server 2019 Big Data Clusters is the multi-cloud, open data platform for analytics at any scale. Big Data Clusters unites SQL Server with Apache Spark to deliver the best compute engines available for analytics in a single, easy to use deployment. With these engines, Big Data Clusters is the ideal data platform for AI, ML, M/R, Streaming, BI, T-SQL, and Spark. Delivered as part of the SQL Server 2019 release, Big Data Clusters is a cloud-native solution orchestrated by Kubernetes. Our mission is to accelerate, delight, and empower our users as they quench their thirst for data driven insights. The Microsoft SQL Server 2019 Big Data Clusters add-on will be retired. Support for SQL Server 2019 Big Data Clusters will end on January 14, 2025.
+summary: SQL Server 2019 Big Data Clusters is the multicloud, open data platform for analytics at any scale. Big Data Clusters unites SQL Server with Apache Spark to deliver the best compute engines available for analytics in a single, easy to use deployment. With these engines, Big Data Clusters is the ideal data platform for AI, ML, M/R, Streaming, BI, T-SQL, and Spark. Delivered as part of the SQL Server 2019 release, Big Data Clusters is a cloud-native solution orchestrated by Kubernetes. Our mission is to accelerate, delight, and empower our users as they quench their thirst for data driven insights. The Microsoft SQL Server 2019 Big Data Clusters add-on will be retired. Support for SQL Server 2019 Big Data Clusters will end on February 28, 2025.
 
 metadata:
   title: Big Data Clusters - Learn how to manage, deploy, and use
@@ -11,7 +11,7 @@ metadata:
   ms.subservice: big-data-cluster
   author: WilliamDAssafMSFT
   ms.author: wiassaf
-  ms.date: 02/22/2022
+  ms.date: 03/16/2023
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
 

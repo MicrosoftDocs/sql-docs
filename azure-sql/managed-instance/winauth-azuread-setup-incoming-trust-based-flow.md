@@ -42,7 +42,7 @@ To implement the incoming trust-based authentication flow, first ensure that the
 
 To create and configure the Azure AD Kerberos Trusted Domain Object, you will install the Azure AD Hybrid Authentication Management PowerShell module.
 
-You will then use the Azure AD Hybrid Authentication Management PowerShell module to set up a Trusted Domain Object in the on-premises AD domain and register trust information with Azure AD. This creates an in-bound trust relationship into the on-premises AD, which enables on-premises AD to trust Azure AD.
+You will then use the Azure AD Hybrid Authentication Management PowerShell module to set up a Trusted Domain Object in the on-premises AD domain and register trust information with Azure AD. This creates an in-bound trust relationship into the on-premises AD, which enables Azure AD to trust on-premises AD . 
 
 ### Set up the Trusted Domain Object
 
@@ -155,8 +155,13 @@ Install-Module -Name AzureADHybridAuthenticationManagement -AllowClobber
     Run the [Set-AzureAdKerberosServer PowerShell cmdlet](/azure/active-directory/authentication/howto-authentication-passwordless-security-key-on-premises#create-a-kerberos-server-object) to add the Trusted Domain Object. Be sure to include `-SetupCloudTrust` parameter. If there is no Azure AD service account, this command will create a new Azure AD service account. If there is an Azure AD service account already, this command will only create the requested Trusted Domain object.
 
     ```powershell
-         Set-AzureADKerberosServer -Domain $domain -CloudCredential $cloudCred -DomainCredential $domainCred -RotateServerKey
+    Set-AzureADKerberosServer -Domain $domain -CloudCredential $cloudCred -DomainCredential $domainCred -SetupCloudTrust
     ```
+
+    > [!NOTE] 
+    > On a multiple domain forest, to avoid the error *LsaCreateTrustedDomainEx 0x549* when running the command on a child domain:
+    > 1. Run the command on root domain (include `-SetupCloudTrust` parameter).
+    > 1. On child domain, run same command without the `-SetupCloudTrust` parameter.
 
     After creating the Trusted Domain Object, you can check the updated Kerberos Settings using the `Get-AzureAdKerberosServer` PowerShell cmdlet, as shown in the previous step. If the `Set-AzureAdKerberosServer` cmdlet has been run successfully with the `-SetupCloudTrust` parameter, the `CloudTrustDisplay` field should now return `Microsoft.AzureAD.Kdc.Service.TrustDisplay`, as in the following sample output:
 

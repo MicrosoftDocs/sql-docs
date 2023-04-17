@@ -90,7 +90,7 @@ Whenever a Platform-as-a-Service (PaaS) solution doesn't fit your workload, Azur
 
 #### Scenario 5: Meeting regulatory compliance: How does Azure SQL help meet regulatory compliance requirements?
 
-[Azure Policy](/azure/governance/policy/overview) has built-in policies that help organizations meet regulatory compliance. Ad-hoc and customized policies can also be created. For more information, see [Azure Policy Regulatory Compliance controls for Azure SQL Database and SQL Managed Instance](../database/security-controls-policy.md). For an overview of compliance offerings, you can consult [Azure compliance documentation](/azure/compliance/).
+[Azure Policy](/azure/governance/policy/overview) has built-in policies that help organizations meet regulatory compliance. Ad hoc and customized policies can also be created. For more information, see [Azure Policy Regulatory Compliance controls for Azure SQL Database and SQL Managed Instance](../database/security-controls-policy.md). For an overview of compliance offerings, you can consult [Azure compliance documentation](/azure/compliance/).
 
 ### Getting started, the holistic approach
 

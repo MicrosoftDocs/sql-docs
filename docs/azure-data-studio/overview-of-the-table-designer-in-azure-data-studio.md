@@ -64,7 +64,7 @@ The SQL server connection in which your database resides needs to be active in o
     Ensure that the query editor is connected to the database on which the script is to be ran. This is done by selecting the **Connect** button in the query editor window. This will pull up the connection dialog box where you can enter in the credentials for the server you are running your database script on.
 
     >[!NOTE]
-    > Please note that changes to the table design can be made manually in the query editor by editing the T-SQL script. **SQLCMD** mode must be enabled to successfully execute Transact-SQL scripts. This is done by toggling this button as shown in the image above (already enabled, which is why it shows **Disable SQLCMD**). To learn more about this, please refer to the [SQLCMD utility documentation](../tools/sqlcmd-utility.md).
+    > Please note that changes to the table design can be made manually in the query editor by editing the T-SQL script. **SQLCMD** mode must be enabled to successfully execute Transact-SQL scripts. This is done by toggling this button as shown in the image above (already enabled, which is why it shows **Disable SQLCMD**). To learn more about this, please refer to the [SQLCMD utility documentation](../tools/sqlcmd/sqlcmd-utility.md).
 
 6. Remember to save changes made on the table designer. Unsaved changes are indicated by the black shaded dot as shown below:
 
@@ -93,7 +93,7 @@ You can change column properties in the main pane as shown above or in the prope
 
 #### Deleting a table
 
-To delete a table, right click on the tables folder in the object explorer. When your table is located, right-click on the table and select **Script as Drop**. This then opens the query editor window containing the script that will drop the table when ran. Select **Run** to drop the table.
+To delete a table, right-click on the tables folder in the object explorer. When your table is located, right-click on the table and select **Script as Drop**. This then opens the query editor window containing the script that will drop the table when ran. Select **Run** to drop the table.
 
 :::image type="content" source="media/table-designer-azure-data-studio/table-designer-deleting-table.png" alt-text="Screenshot of Table Designer showing how to delete a table.":::
 

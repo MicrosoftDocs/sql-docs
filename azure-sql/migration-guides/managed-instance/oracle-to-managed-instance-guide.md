@@ -75,7 +75,7 @@ Validate the default data type mappings and change them based on requirements if
 
 To convert the schema:
 
-1. (Optional) Add dynamic or ad-hoc queries to statements. Right-click the node, and then select **Add statements**.
+1. (Optional) Add dynamic or ad hoc queries to statements. Right-click the node, and then select **Add statements**.
 1. Select the **Connect to Azure SQL Managed Instance** tab.
     1. Enter connection details to connect your database in **SQL Database Managed Instance**.
     1. Select your target database from the drop-down list, or enter a new name, in which case a database will be created on the target server.

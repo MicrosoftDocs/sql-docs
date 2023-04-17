@@ -3,10 +3,11 @@ title: "Export a paginated report to Microsoft Excel (Report Builder)"
 description: In Report Builder, the Excel rendering extension renders a paginated report to the Office Open XML format to use with Microsoft Excel.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/02/2021
+ms.date: 03/24/2023
 ms.service: reporting-services
 ms.subservice: report-builder
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Export a paginated report to Microsoft Excel (Report Builder)
 
@@ -36,7 +37,7 @@ The Excel rendering extension renders a paginated report to the [!INCLUDE[ofprex
 
 -  Because the maximum row height is 409 points, if the defined height of the cell in the report is something larger than 409 points, Excel splits the cell contents into multiple rows.
   
--   The maximum number of worksheets is not defined in Excel, but external factors, such as memory and disk space, might causes limitations to be applied.  
+-   The maximum number of worksheets is not defined in Excel, but external factors, such as memory and disk space, might cause limitations to be applied.  
   
 -   In outlines, Excel permits up to seven nested levels only.  
   
@@ -76,7 +77,7 @@ The Excel rendering extension renders a paginated report to the [!INCLUDE[ofprex
 -   The Excel rendering extension only supports the background image of the report body. If a report body background image is displayed in the report, the image is rendered as a worksheet background image.  
   
 ### Rectangles  
- The following limitation apply to rectangles.  
+ The following limitation applies to rectangles.  
   
 -   Rectangles in report footers are not exported to Excel. However, rectangles in the report body, tablix cells, and so forth are rendered as a range of Excel cells.  
   
@@ -111,7 +112,7 @@ The Excel rendering extension renders a paginated report to the [!INCLUDE[ofprex
   
  ![Report exported to Excel, with lines](../../reporting-services/report-builder/media/ssrb-exportedexcellines.png "Report exported to Excel, with lines")  
   
- This means that reports with row groups or column groups require modification after exporting to Excel and before you can display the exported data in pivot table. You must add the group value to cells in which they are missing to make the worksheet a flat table with values in all cells. The following picture shows the updated worksheet.  
+Reports with row groups or column groups require modification after exporting to Excel and before you can display the exported data in a PivotTable. You must add the group value to cells in which they are missing. Thus, the worksheet becomes a flat table with values in all cells. The following picture shows the updated worksheet.  
   
  ![Report exported to Excel, flattened](../../reporting-services/report-builder/media/ssrb-excelexportnomatrix.png "Report exported to Excel, flattened")  
   
@@ -259,8 +260,14 @@ The Excel rendering extension renders a paginated report to the [!INCLUDE[ofprex
  Bookmark links in text boxes are rendered as Excel hyperlinks in the cell in which the text is rendered. Bookmark links for images and charts are rendered as Excel hyperlinks on the image when rendered. When clicked, the bookmark goes to the Excel cell in which the bookmarked report item is rendered.  
   
 ##  <a name="ConditionalFormat"></a> Changing Reports at Run-Time  
- If a report must render to multiple formats and it is not possible to create a report layout that renders the way you want in all required formats, then you might consider using the value in the RenderFormat built-in global to conditionally change the report appearance at run time. This way you can hide or show report items depending the renderer used to get the best results in each format. For more information, see [Built-in Globals and Users References &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
-  
+ If a report must render to multiple formats and it is not possible to create a report layout that renders the way you want in all required formats, then you might consider using the value in the RenderFormat built-in global to conditionally change the report appearance at run time. This way you can hide or show report items depending on the renderer used to get the best results in each format. For more information, see [Built-in Globals and Users References &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
+
+## Troubleshoot export to Excel
+
+### Export to Excel or Word fails when using Virtual Service Account and Execution Account
+
+The workaround for this issue is to give Read permission to the Execution account for the described registry entry under the Virtual User Account branch, and restart the computer. For example, one possible registry entry is `HKEY_USERS\S-1-5-80-4050220999-2730734961-1537482082-519850261-379003301\Software\Microsoft\Avalon.Graphics`.
+
 ## See Also  
  [Pagination in Reporting Services &#40;Report Builder  and SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Rendering Behaviors &#40;Report Builder  and SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   

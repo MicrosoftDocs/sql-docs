@@ -6,6 +6,7 @@ ms.author: maggies
 ms.date: 12/04/2019
 ms.service: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 f1_keywords:
   - "SQL13.rsconfigtool.emailsettings.F1"
 helpviewer_keywords:

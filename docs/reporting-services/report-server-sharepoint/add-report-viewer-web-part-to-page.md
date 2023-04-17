@@ -7,6 +7,7 @@ ms.date: 11/26/2018
 ms.service: reporting-services
 ms.subservice: report-server-sharepoint
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Add SQL Server Reporting Services Report Viewer web part to a SharePoint page

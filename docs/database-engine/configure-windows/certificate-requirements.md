@@ -3,13 +3,12 @@ title: Certificate requirements for SQL Server
 description: This article describes the requirements for SQL Server encryption and how to check if a certificate meets the requirements.
 author: sevend2
 ms.author: v-sidong
-ms.reviewer: ramakoni1, randolphwest
-ms.date: 12/08/2022
+ms.reviewer: randolphwest
+ms.date: 03/20/2023
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
 ---
-
 # Certificate requirements for SQL Server
 
 This article describes certificate requirements for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and how to check if a certificate meets these requirements.
@@ -27,7 +26,7 @@ For using TLS for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] 
   > [!NOTE]  
   > The certificate must be meant for server authentication. This requires the **Enhanced Key Usage** property of the certificate to specify **Server Authentication (1.3.6.1.5.5.7.3.1)**.
 
-- The certificate must be created using the `KeySpec` option of `AT_KEYEXCHANGE`. This requires a legacy certificate. Usually, the certificate's key usage property (**KEY_USAGE**) will also include key encipherment (`CERT_KEY_ENCIPHERMENT_KEY_USAGE`) and a digital signature (`CERT_DIGITAL_SIGNATURE_KEY_USAGE`).
+- The certificate must be created using the `KeySpec` option of `AT_KEYEXCHANGE`. This requires a certificate that uses a [legacy Cryptographic Storage Provider](/windows/win32/seccertenroll/cryptoapi-cryptographic-service-providers) to store the private key. Usually, the certificate's key usage property (**KEY_USAGE**) also includes key encipherment (`CERT_KEY_ENCIPHERMENT_KEY_USAGE`) and a digital signature (`CERT_DIGITAL_SIGNATURE_KEY_USAGE`).
 
 - The **Subject** property of the certificate must indicate that the common name (CN) is the same as the host name or fully qualified domain name (FQDN) of the server computer. When using the host name, the DNS suffix must be specified in the certificate. If [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is running on a failover cluster, the common name must match the host name or FQDN of the virtual server, and the certificates must be provisioned on all nodes in the failover cluster. For example, if you have a two-node cluster, with nodes named `test1.*<your company>*.com` and `test2.*<your company>*.com`, and you have a virtual server named *virtsql*, you need to install a certificate for `virtsql.*<your company>*.com` on both nodes. For more information on SQL clusters, see [Before Installing Failover Clustering](../../sql-server/failover-clusters/install/before-installing-failover-clustering.md).
 

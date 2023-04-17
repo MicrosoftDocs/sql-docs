@@ -7,6 +7,7 @@ ms.date: 03/07/2017
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Tablix data region in a paginated report (Report Builder)
 

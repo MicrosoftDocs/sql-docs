@@ -7,6 +7,7 @@ ms.date: 09/02/2016
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Specify an axis interval in a paginated report (Report Builder)
 

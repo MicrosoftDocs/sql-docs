@@ -222,4 +222,4 @@ After installation, you can also install or enable optional [!INCLUDE [ssnoversi
 
 ## Next steps
 
-- For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.yml).
+- [SQL Server on Linux Frequently Asked Questions (FAQ)](sql-server-linux-faq.yml)

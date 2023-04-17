@@ -410,7 +410,7 @@ If the issue persists, [contact Microsoft for help](https://aka.ms/contactDMAO)
 
 **Possible causes:** An unknown internal error has occurred.
 
-**Remediation actions:** Try to create a new assessment. To investigate further, go through the [log](/sql/azure-data-studio/extensions/database-migration-assessment-for-oracle-extension?#logs) to understand the reason for the error if the issue persists, [contact Microsoft for help](https://aka.ms/contactDMAO).
+**Remediation actions:** Try to create a new assessment. To investigate further, go through the [log](./database-migration-assessment-for-oracle-extension.md#logs) to understand the reason for the error if the issue persists, [contact Microsoft for help](https://aka.ms/contactDMAO).
 
 ### Error Code: SQLA-1000
 
@@ -418,7 +418,7 @@ If the issue persists, [contact Microsoft for help](https://aka.ms/contactDMAO)
 
 **Possible causes:** An unknown internal error has occurred.
 
-**Remediation actions:** Try to create a new assessment. To investigate further, go through the [log](/sql/azure-data-studio/extensions/database-migration-assessment-for-oracle-extension?#logs) to understand the reason for the error if the issue persists, [contact Microsoft for help](https://aka.ms/contactDMAO).
+**Remediation actions:** Try to create a new assessment. To investigate further, go through the [log](./database-migration-assessment-for-oracle-extension.md#logs) to understand the reason for the error if the issue persists, [contact Microsoft for help](https://aka.ms/contactDMAO).
 
 ### Error Code: SQLA-2001
 
@@ -426,7 +426,7 @@ If the issue persists, [contact Microsoft for help](https://aka.ms/contactDMAO)
 
 **Possible causes:** An unknown internal error has occurred.
 
-**Remediation actions:** Try to create a new assessment. To investigate further, go through the [log](/sql/azure-data-studio/extensions/database-migration-assessment-for-oracle-extension?#logs) to understand the reason for the error if the issue persists, [contact Microsoft for help](https://aka.ms/contactDMAO).
+**Remediation actions:** Try to create a new assessment. To investigate further, go through the [log](./database-migration-assessment-for-oracle-extension.md#logs) to understand the reason for the error if the issue persists, [contact Microsoft for help](https://aka.ms/contactDMAO).
 
 ### Error Code: GE-0001
 
@@ -434,7 +434,7 @@ If the issue persists, [contact Microsoft for help](https://aka.ms/contactDMAO)
 
 **Possible causes:** An unknown internal error has occurred.
 
-**Remediation actions:** Try to create a new assessment. To investigate further, go through the [log](/sql/azure-data-studio/extensions/database-migration-assessment-for-oracle-extension?#logs) to understand the reason for the error if the issue persists, [contact Microsoft for help](https://aka.ms/contactDMAO).
+**Remediation actions:** Try to create a new assessment. To investigate further, go through the [log](./database-migration-assessment-for-oracle-extension.md#logs) to understand the reason for the error if the issue persists, [contact Microsoft for help](https://aka.ms/contactDMAO).
 
 ### Error Code: Ora2Pg-2001
 
@@ -541,7 +541,7 @@ Azure Data Studio extension install folder (for example, on Windows %USERPROFILE
 3. Oracle Home path needs to be correctly set in the extension settings.
 4. The Oracle Home path in the environment variable differs from the one mentioned in the extension settings.
 
-**Remediation actions:** Check that Ora2Pg is installed correctly by running the command ***ora2pg -v*** on the command prompt. You can install Ora2Pg using the [script](https://github.com/microsoft/OrcasNinjaTeam/tree/master/ora2pg-install). Check the value of the environment variable from the command prompt using ***echo %ORACLE_HOME%***. Also, Check the Oracle Home path setting in the extension settings. Refer to [configure extension settings](/sql/azure-data-studio/extensions/database-migration-assessment-for-oracle-extension?#configure-extension-settings).
+**Remediation actions:** Check that Ora2Pg is installed correctly by running the command ***ora2pg -v*** on the command prompt. You can install Ora2Pg using the [script](https://github.com/microsoft/OrcasNinjaTeam/tree/master/ora2pg-install). Check the value of the environment variable from the command prompt using ***echo %ORACLE_HOME%***. Also, Check the Oracle Home path setting in the extension settings. Refer to [configure extension settings](./database-migration-assessment-for-oracle-extension.md#configure-extension-settings).
 
 ### Error Code: Ora2Pg-0009
 
@@ -567,7 +567,7 @@ Azure Data Studio extension install folder (for example, on Windows %USERPROFILE
 3. Oracle Home path needs to be correctly set in the extension settings.
 4. The Oracle Home path in the environment variable differs from the one mentioned in the extension settings.
 
-**Remediation actions:** Check that Ora2Pg is installed correctly by running the command ***ora2pg -v*** on the command prompt. You can install Ora2Pg using the [script](https://github.com/microsoft/OrcasNinjaTeam/tree/master/ora2pg-install). Check the value of the environment variable from the command prompt using ***echo %ORACLE_HOME%***. Also, Check the Oracle Home path setting in the extension settings. Refer to the [configure extension settings](/sql/azure-data-studio/extensions/database-migration-assessment-for-oracle-extension?#configure-extension-settings).
+**Remediation actions:** Check that Ora2Pg is installed correctly by running the command ***ora2pg -v*** on the command prompt. You can install Ora2Pg using the [script](https://github.com/microsoft/OrcasNinjaTeam/tree/master/ora2pg-install). Check the value of the environment variable from the command prompt using ***echo %ORACLE_HOME%***. Also, Check the Oracle Home path setting in the extension settings. Refer to the [configure extension settings](./database-migration-assessment-for-oracle-extension.md#configure-extension-settings).
 
 ### Error Code: Ora2Pg-0012
 
@@ -575,4 +575,4 @@ Azure Data Studio extension install folder (for example, on Windows %USERPROFILE
 
 **Possible causes:** Ora2Pg isn't installed or visible to you.
 
-**Remediation actions:** Check that Ora2Pg is installed correctly by running the command ***ora2pg -v*** on the command prompt. You can install Ora2Pg using the [script](https://github.com/microsoft/OrcasNinjaTeam/tree/master/ora2pg-install). Check the value of the environment variable from the command prompt using ***echo %ORACLE_HOME%***. Also, Check the Oracle Home path setting in the extension settings. Refer to the [configure extension settings](/sql/azure-data-studio/extensions/database-migration-assessment-for-oracle-extension?#configure-extension-settings).
+**Remediation actions:** Check that Ora2Pg is installed correctly by running the command ***ora2pg -v*** on the command prompt. You can install Ora2Pg using the [script](https://github.com/microsoft/OrcasNinjaTeam/tree/master/ora2pg-install). Check the value of the environment variable from the command prompt using ***echo %ORACLE_HOME%***. Also, Check the Oracle Home path setting in the extension settings. Refer to the [configure extension settings](./database-migration-assessment-for-oracle-extension.md#configure-extension-settings).

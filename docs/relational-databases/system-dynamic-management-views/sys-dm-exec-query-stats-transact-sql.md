@@ -3,7 +3,7 @@ title: "sys.dm_exec_query_stats (Transact-SQL)"
 description: sys.dm_exec_query_stats (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "02/24/2023"
+ms.date: "04/06/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -129,12 +129,12 @@ Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 ## Examples  
   
 ### A. Finding the TOP N queries  
- The following example returns information about the top five queries ranked by average CPU time. This example aggregates the queries according to their query hash so that logically equivalent queries are grouped by their cumulative resource consumption.  
+ The following example returns information about the top five queries ranked by average CPU time. This example aggregates the queries according to their query hash so that logically equivalent queries are grouped by their cumulative resource consumption. The Sample_Statement_Text column shows an example of the query structure that matches the query hash, but it should be read without regard to specific values in the statement. For example, if a statement contains `WHERE Id = 5`, you may read it in its more generic form: `WHERE Id = @some_value`
   
 ```sql  
-SELECT TOP 5 query_stats.query_hash AS "Query Hash",   
-    SUM(query_stats.total_worker_time) / SUM(query_stats.execution_count) AS "Avg CPU Time",  
-    MIN(query_stats.statement_text) AS "Statement Text"  
+SELECT TOP 5 query_stats.query_hash AS Query_Hash,   
+    SUM(query_stats.total_worker_time) / SUM(query_stats.execution_count) AS Avg_CPU_Time,  
+    MIN(query_stats.statement_text) AS Sample_Statement_Text
 FROM   
     (SELECT QS.*,   
     SUBSTRING(ST.text, (QS.statement_start_offset/2) + 1,  

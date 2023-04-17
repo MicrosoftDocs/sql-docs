@@ -4,7 +4,7 @@ description: Learn how to connect to a database in Azure SQL Database and query 
 author: alexwolfmsft
 ms.author: alexwolf
 ms.custom: passwordless-dotnet
-ms.date: 02/10/2023
+ms.date: 04/12/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: quickstart
@@ -13,31 +13,19 @@ monikerRange: "= azuresql || = azuresql-db"
 
 # Connect to and query Azure SQL Database using .NET and the Microsoft.Data.SqlClient library
 
-This quickstart describes how to connect an application to a database in Azure SQL Database and perform queries using .NET and the `Microsoft.Data.SqlClient` library. 
-
-This quickstart follows the recommended passwordless approach to connect to the database without the use of connection strings. You can learn more about passwordless connections on the [passwordless hub](/azure/developer/intro/passwordless-overview).
+This quickstart describes how to connect an application to a database in Azure SQL Database and perform queries using .NET and the [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient) library. This quickstart follows the recommended passwordless approach to connect to the database. You can learn more about passwordless connections on the [passwordless hub](/azure/developer/intro/passwordless-overview).
 
 ## Prerequisites
 
 * An [Azure subscription](https://azure.microsoft.com/free/dotnet/).
-* A SQL database configured with Azure Active Directory (Azure AD) authentication. You can create one using the [Create database quickstart](/azure/azure-sql/database/single-database-create-quickstart).
+* An Azure SQL database configured with Azure Active Directory (Azure AD) authentication. You can create one using the [Create database quickstart](./single-database-create-quickstart.md).
 * The latest version of the [Azure CLI](/cli/azure/get-started-with-azure-cli).
 * [Visual Studio](https://visualstudio.microsoft.com/vs/) or later with the **ASP.NET and web development** workload.
 * [.NET 7.0](https://dotnet.microsoft.com/download) or later.
 
 ## Configure the database
 
-Secure, passwordless connections to Azure SQL Database with .NET require certain database configurations. Verify the following settings on your [logical server in Azure](logical-servers.md) to properly connect to Azure SQL Database in both local and hosted environments:
-
-1) For local development connections, make sure your logical server has a firewall rule enabled to allow your client IP address to connect. You can configure firewall rules on the **Networking** page of your server by selecting **Add your client IPv4 address(xx.xx.xx.xx)**.
-
-    :::image type="content" source="media/passwordless-connections/configure-firewall-small.png" lightbox="media/passwordless-connections/configure-firewall.png" alt-text="A screenshot showing how to configure firewall rules.":::
-
-1) The logical server must also have Azure AD authentication enabled with an assigned admin account. For local development connections, the admin account should be an account you can also log into Visual Studio or the Azure CLI with locally. You can verify your server has Azure AD authentication enabled on the **Azure Active Directory** page.
-
-    :::image type="content" source="media/passwordless-connections/enable-active-directory-small.png" lightbox="media/passwordless-connections/enable-active-directory.png" alt-text="A screenshot showing how to enable Active Directory authentication.":::
-
-1) If you're using a personal Azure account, make sure you have [Azure Active Directory setup and configured for Azure SQL](/azure/azure-sql/database/authentication-aad-configure) in order to assign your account as a server admin. If you're using a corporate account, Azure Active Directory will most likely already be configured for you.
+[!INCLUDE [passwordless-configure-server-networking](../includes/passwordless-configure-server-networking.md)]
 
 ## Create the project
 
@@ -92,38 +80,46 @@ dotnet add package Microsoft.Data.SqlClient
 
 ## Add code to connect to Azure SQL Database
 
-The `Microsoft.Data.SqlClient` library uses a class called `DefaultAzureCredential` to implement passwordless connections to Azure SQL Database, which you can learn more about on the [DefaultAzureCredential overview](/dotnet/azure/sdk/authentication#defaultazurecredential). **DefaultAzureCredential** is provided by the Azure Identity library on which the SQL client library depends.
-
-`DefaultAzureCredential` supports multiple authentication methods and determines which to use at runtime. This approach enables your app to use different authentication methods in different environments (local vs. production) without implementing environment-specific code. The [Azure Identity library overview](/dotnet/api/overview/azure/Identity-readme#defaultazurecredential) explains the order and locations in which `DefaultAzureCredential` looks for credentials.
-
-Complete the following steps to connect to Azure SQL Database by using the SqlClient library and `DefaultAzureCredential`:
+Complete the following steps to connect to Azure SQL Database by using the SqlClient library:
 
 1) Update the `environmentVariables` section of the `launchSettings.json` file with the Azure SQL connection string:
 
 ## [Passwordless] (#tab/passwordless)
 
-The passwordless connection string includes a configuration value of `Authentication=Active Directory Default`, which instructs the app to use `DefaultAzureCredential` to connect to Azure services. This functionality is implemented internally by the `Microsoft.Data.SqlClient` library. When the app runs locally, it authenticates with the user you're signed into Visual Studio with. Once the app deploys to Azure, the same code discovers and applies the managed identity that is associated with the hosted app, which you'll configure later.
+The `Microsoft.Data.SqlClient` library uses a class called `DefaultAzureCredential` to implement passwordless connections to Azure SQL Database, which you can learn more about on the [DefaultAzureCredential overview](/dotnet/azure/sdk/authentication#defaultazurecredential). **DefaultAzureCredential** is provided by the Azure Identity library on which the SQL client library depends.
 
-> [!NOTE]
-> Passwordless connection strings are safe to commit to source control, since they do not contain any secrets such as usernames, passwords, or access keys.
+The passwordless connection string includes a configuration value of `Authentication=Active Directory Default`, which instructs the app to use `DefaultAzureCredential` to connect to Azure services. When the app runs locally, it authenticates via the user you're signed into Visual Studio with, or other local tools like the Azure CLI. Once the app deploys to Azure, the same code discovers and applies the managed identity that is associated with the hosted app, which you'll configure later. The [Azure Identity library overview](/dotnet/api/overview/azure/Identity-readme#defaultazurecredential) explains the order and locations in which `DefaultAzureCredential` looks for credentials.
 
 ```json
 "environmentVariables": {
     "ASPNETCORE_ENVIRONMENT": "Development",
-    "AZURE_SQL_CONNECTIONSTRING": "Server=tcp:<your-database-servername>.database.windows.net;Database=<your-database-name>;Authentication=Active Directory Default;"
+    "AZURE_SQL_CONNECTIONSTRING": "Server=tcp:<database-server-name>.database.windows.net;Database=<database-name>;Authentication=Active Directory Default;"
 }
 ```
 
+> [!NOTE]
+> Passwordless connection strings are safe to commit to source control, since they do not contain any secrets such as usernames, passwords, or access keys.
+
 ## [SQL Authentication] (#tab/sql-auth)
+
+> [!WARNING]
+> Never commit connection strings that contain secrets such as usernames, passwords, or access keys to source control.
+
+```json
+"environmentVariables": {
+    "ASPNETCORE_ENVIRONMENT": "Development",
+    "AZURE_SQL_CONNECTIONSTRING": "Server=tcp:<database-server-name>.database.windows.net,1433;Initial Catalog=<database-name>;Persist Security Info=False;User ID=<user-id>;Password=<password>;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+}
+```
 
 ---
 
 1) Add the following sample code to the bottom of the `Program.cs` file above `app.Run()`. This code performs the following important steps:
 
     * Retrieves the passwordless connection string from the environment variables
-    * Creates a `Person` table in the database during startup (for testing scenarios only)
-    * Creates an endpoint to retrieve the Person records stored in the database
-    * Creates an endpoint to add new Person records to the database
+    * Creates a `Persons` table in the database during startup (for testing scenarios only)
+    * Creates an HTTP GET endpoint to retrieve all records stored in the `Persons` table
+    * Creates an HTTP POST endpoint to add new records to the `Persons` table
 
     ```csharp
     string connectionString = Environment.GetEnvironmentVariable("AZURE_SQL_CONNECTIONSTRING");
@@ -131,61 +127,50 @@ The passwordless connection string includes a configuration value of `Authentica
     try
     {
         // Table would be created ahead of time in production
-        var conn = new SqlConnection(connectionString);
+        using var conn = new SqlConnection(connectionString);
         conn.Open();
     
         var command = new SqlCommand(
             "CREATE TABLE Persons (ID int NOT NULL PRIMARY KEY IDENTITY, FirstName varchar(255), LastName varchar(255));",
             conn);
-        SqlDataReader reader = command.ExecuteReader();
-    
-        reader.Close();
+        using SqlDataReader reader = command.ExecuteReader();
     } catch(Exception e)
     {
         // Table may already exist
         Console.WriteLine(e.Message);
     }
     
-    app.MapGet("/Person", () =>
-    {
+    app.MapGet("/Person", () => {
         var rows = new List<string>();
 
-        using (var conn = new SqlConnection(connectionString))
+        using var conn = new SqlConnection(connectionString);
+        conn.Open();
+    
+        var command = new SqlCommand("SELECT * FROM Persons", conn);
+        using SqlDataReader reader = command.ExecuteReader();
+    
+        if (reader.HasRows)
         {
-            conn.Open();
-
-            var command = new SqlCommand("SELECT * FROM Persons", conn);
-            SqlDataReader reader = command.ExecuteReader();
-
-            if (reader.HasRows)
+            while (reader.Read())
             {
-                while (reader.Read())
-                {
-                    rows.Add($"{reader.GetInt32(0)}, {reader.GetString(1)}, {reader.GetString(2)}");
-                }
+                rows.Add($"{reader.GetInt32(0)}, {reader.GetString(1)}, {reader.GetString(2)}");
             }
-
-            reader.Close();
-        };
-
+        }
+    
         return rows;
     })
     .WithName("GetPersons")
     .WithOpenApi();
     
-    app.MapPost("/Person", (Person person) =>
-    {
-        using(var conn = new SqlConnection(connectionString)) 
-        {
-            conn.Open();
-        
-            var command = new SqlCommand(
-                  $"INSERT INTO Persons (firstName, lastName) VALUES ('{person.FirstName}', '{person.LastName}')",
-                  conn);
-        
-            SqlDataReader reader = command.ExecuteReader();
-            reader.Close();
-        };
+    app.MapPost("/Person", (Person person) => {
+        using var conn = new SqlConnection(connectionString);
+        conn.Open();
+    
+        var command = new SqlCommand(
+            $"INSERT INTO Persons (firstName, lastName) VALUES ('{person.FirstName}', '{person.LastName}')",
+            conn);
+    
+        using SqlDataReader reader = command.ExecuteReader();
     })
     .WithName("CreatePerson")
     .WithOpenApi();
@@ -220,7 +205,7 @@ The app is ready to be tested locally. Make sure you're signed in to Visual Stud
 The app is ready to be deployed to Azure. Visual Studio can create an Azure App Service and deploy your application in a single workflow.
 
 1. Make sure the app is stopped and builds successfully.
-1. In Visual Studio's **Solution Explorer** window, right select on the top-level project node and select **Publish**.
+1. In Visual Studio's **Solution Explorer** window, right-click on the top-level project node and select **Publish**.
 1. In the publishing dialog, select **Azure** as the deployment target, and then select **Next**.
 1. For the specific target, select **Azure App Service (Windows)**, and then select **Next**.
 1. Select the green **+** icon to create a new App Service to deploy to and enter the following values:
@@ -307,9 +292,9 @@ The Azure portal allows you to work with managed identities and run queries agai
 >
 > You can read more about configuring database roles and security on the following resources:
 >
-> [Tutorial: Secure a database in Azure SQL Database](/azure/azure-sql/database/secure-database-tutorial)
+> [Tutorial: Secure a database in Azure SQL Database](./secure-database-tutorial.md)
 >
-> [Authorize database access to SQL Database](/azure/azure-sql/database/logins-create-manage)
+> [Authorize database access to SQL Database](./logins-create-manage.md)
 
 ## Test the deployed application
 

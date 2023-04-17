@@ -63,7 +63,7 @@ On the computer that is running the instance of the [!INCLUDE[ssDE](../../includ
 
    6. In the **Name** dialog, type a name and description for this rule and click **Finish**.
 
-   7. In the **Inbound Rules** list, right click the rule you created, and then select **Properties** in the action pane.
+   7. In the **Inbound Rules** list, right-click the rule you created, and then select **Properties** in the action pane.
 
    8. Select the **Protocols and Ports** tab.
 
@@ -83,7 +83,7 @@ On the computer that is running the instance of the [!INCLUDE[ssDE](../../includ
 
    6. In the **Name** dialog, type a name and description for this rule and click **Finish**.
 
-   7. In the **Inbound Rules** list, right click the rule you created, and then select **Properties** in the action pane.
+   7. In the **Inbound Rules** list, right-click the rule you created, and then select **Properties** in the action pane.
 
    8. Select the **Protocols and Ports** tab.
 
@@ -111,7 +111,7 @@ If you get errors attempting to open a remote debugging session, you can manuall
 
    6. In the **Name** dialog, type a name and description for this rule and click **Finish**.
 
-   7. In the **Inbound Rules** list, right click the rule you created, and then select **Properties** in the action pane.
+   7. In the **Inbound Rules** list, right-click the rule you created, and then select **Properties** in the action pane.
 
    8. Select the **Protocols and Ports** tab.
 
@@ -133,7 +133,7 @@ If you get errors attempting to open a remote debugging session, you can manuall
 
             2. By default, the devenv.exe for Visual Studio 2012 is in C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE
 
-            3. You can find the path to ssms.exe from the shortcut you use to launch SQL Server Management Studio. You can find the path to devenv.exe from the shortcut you use to launch [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Right click the shortcut and select **Properties**. The executable and path are listed in the **Target** box.
+            3. You can find the path to ssms.exe from the shortcut you use to launch SQL Server Management Studio. You can find the path to devenv.exe from the shortcut you use to launch [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Right-click the shortcut and select **Properties**. The executable and path are listed in the **Target** box.
 
    4. In the **Action** dialog, select **Allow the connection**, and click **Next**.
 
@@ -141,7 +141,7 @@ If you get errors attempting to open a remote debugging session, you can manuall
 
    6. In the **Name** dialog, type a name and description for this rule and click **Finish**.
 
-   7. In the **Inbound Rules** list, right click the rule you created, and then select **Properties** in the action pane.
+   7. In the **Inbound Rules** list, right-click the rule you created, and then select **Properties** in the action pane.
 
    8. Select the **Protocols and Ports** tab.
 

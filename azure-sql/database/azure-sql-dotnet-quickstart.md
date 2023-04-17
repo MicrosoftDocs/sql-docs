@@ -115,7 +115,7 @@ Connect to Azure SQL Database with SQL Authentication using the following connec
 
 ---
 
-## Add code to connect to Azure SQL Database
+## Add the code to connect to Azure SQL Database
 
 Add the following sample code to the bottom of the `Program.cs` file above `app.Run()`. This code performs the following important steps:
 

@@ -26,6 +26,8 @@ You can verify the changes made by Service Connector on the App Service settings
 
 1) On the **Application settings** tab, select **New connection string**.
 
+    :::image type="content" source="../database/media/passwordless-connections/add-connection-string.png" lightbox="../database/media/passwordless-connections/add-connection-string.png" alt-text="A screenshot showing how to use the Azure Query editor.":::
+
 1) In the **Add/Edit connection string** flyout menu, enter the following values:
 
     * **Name**: Enter a value of *AZURE_SQL_CONNECTIONSTRING*.

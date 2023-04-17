@@ -95,7 +95,7 @@ SELECT SERVRPROPERTY('InstanceDefaultBackupPath')
 - A value of 0 for `--retention-days` indicates to not perform automated backups for the instance.
 - The backup files are written to the default backup location as configured at the instance level.
 - If there are multiple SQL Servers on the same host where the Azure extension for SQL Server is installed, you need to turn on automated backups separately for each instance separately.
-- The user databases need to be in full recovery model for the backups to be performed. Databases that aren't in full recovery model won't be backed up.
+- The user databases need to be in full recovery model for the backups to be performed. Databases that aren't in full recovery model aren't automatically backed up.
 - If you change the `--retention-days` after the `--backups-policy` is already configured, any change will take effect going forward and isn't retroactively applied.
 - Automated backups capability is only available for licenses with Software Assurance, SQL subscription, or pay-as-you-go. For details, see [Feature availability depending on license type](overview.md#feature-availability-depending-on-license-type).
 

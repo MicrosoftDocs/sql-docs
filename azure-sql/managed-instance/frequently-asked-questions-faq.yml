@@ -9,10 +9,10 @@ metadata:
   ms.custom: sqldbrb=1
   ms.devlang: 
   ms.topic: faq
-  author: MashaMSFT
-  ms.author: mathoma
-  ms.reviewer: urmilano, danil, nnikolic, wiassaf
-  ms.date: 04/14/2022
+  author: WilliamDAssafMSFT
+  ms.author: wiassaf
+  ms.reviewer: urmilano, danil, nnikolic, mathoma
+  ms.date: 04/12/2023
 title: Azure SQL Managed Instance frequently asked questions (FAQ)
 summary: |
   [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
@@ -176,7 +176,7 @@ sections:
           ### How can I migrate from other platforms to SQL Managed Instance?
           
           For migration information about migrating from other platforms, see [Azure Database Migration Guide](/data-migration/).
-          
+
       - question: |
           Switch hardware configuration
         answer: |
@@ -187,7 +187,7 @@ sections:
           This is a long-running operation as a new managed instance will be provisioned in the background and databases automatically transferred between the old and new instance with a quick failover at the end of the process.
           
           Note: Gen4 hardware is being retired and is no longer available for new deployments. All new databases must be deployed on later hardware configurations. Switching from standard-series (Gen5) to Gen4 is also not available.
-          
+
       - question: |
           Performance 
         answer: |

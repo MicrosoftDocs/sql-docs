@@ -5,13 +5,12 @@ description: This article provides an overview of the resource limits for Azure 
 author: vladai78
 ms.author: vladiv
 ms.reviewer: mathoma, vladiv, sachinp, wiassaf
-ms.date: 06/02/2022
+ms.date: 04/10/2023
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: reference
 ms.custom:
   - references_regions
-  - ignite-fall-2021
 ---
 # Overview of Azure SQL Managed Instance resource limits
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
@@ -216,11 +215,10 @@ If you need more instances in your current regions, send a support request to ex
 
 ## Previously available hardware
 
-This section includes details on previously available hardware. Consider [moving your instance of SQL Managed Instance to the standard-series (Gen5)](../database/service-tiers-vcore.md) hardware to experience a wider range of vCore and storage scalability, accelerated networking, best IO performance, and minimal latency.
+> [!IMPORTANT]
+> Gen4 hardware has been retired and is not available for provisioning. Migrate your instance of SQL Managed Instance to a supported hardware generation, such as standard-series hardware, for a wider range of vCore and storage scalability, accelerated networking, best IO performance, and minimal latency.
 
-[!INCLUDE[azure-sql-gen4-hardware-retirement-sql-managed-instance](../includes/azure-sql-gen4-hardware-retirement-sql-managed-instance.md)]
-
-You can use [Azure Resource Graph Explorer](/azure/governance/resource-graph/overview) in the portal to identify all SQL managed instances that currently use Gen4 hardware, or you can check the hardware used by a specific SQL Managed Instance in the Azure portal. 
+You can use [Azure Resource Graph Explorer](/azure/governance/resource-graph/overview) in the Azure portal to identify all SQL managed instances that currently use Gen4 hardware, or you can check the hardware used by a specific SQL Managed Instance in the Azure portal. 
 
 You must have at least `read` permissions to the Azure object or object group to see results in Azure Resource Graph Explorer. 
 
@@ -230,7 +228,7 @@ To use **Azure Resource Graph Explorer** to identify SQL managed instances that 
 1. Search for `Resource graph` in the search box, and choose the **Resource Graph Explorer** service from the search results. 
 1. In the query window, type the following query and then select **Run query**: 
 
-   ```
+   ```kusto
    resources
    | where type contains ('microsoft.sql/managedinstances')
    | where sku['family'] == "Gen4"
@@ -247,7 +245,7 @@ To check the hardware used by resources for a specific SQL managed instance in A
 1. Select the SQL managed instance of interest to open the **Overview** page for the SQL managed instance. 
 1. Check the **Pricing tier** under **Essentials** to verify what hardware your managed instance is using. 
 
-:::image type="content" source="media/resource-limits/sqlmi-pricing-tier.png" alt-text="Screenshot of the overview page for SQL MI resource with pricing tier highlighted. ":::
+:::image type="content" source="media/resource-limits/sqlmi-pricing-tier.png" alt-text="Screenshot of the overview page for an Azure SQL Managed Instance resource with pricing tier highlighted. ":::
 
 ### Hardware characteristics
 
@@ -261,8 +259,7 @@ To check the hardware used by resources for a specific SQL managed instance in A
 
 ### In-memory OLTP available space
 
-[!INCLUDE[azure-sql-gen4-hardware-retirement-sql-managed-instance](../includes/azure-sql-gen4-hardware-retirement-sql-managed-instance.md)]
-  
+
 The amount of In-memory OLTP space in [Business Critical](../database/service-tier-business-critical.md) service tier depends on the number of vCores and hardware configuration. The following table lists limits of memory that can be used for In-memory OLTP objects.
 
 | In-memory OLTP space    |  **Gen4** |
@@ -274,8 +271,6 @@ The amount of In-memory OLTP space in [Business Critical](../database/service-ti
 
 ### Service tier characteristics
 
-[!INCLUDE[azure-sql-gen4-hardware-retirement-sql-managed-instance](../includes/azure-sql-gen4-hardware-retirement-sql-managed-instance.md)]
-  
 | **Feature** | **General Purpose** | **Business Critical** |
 | --- | --- | --- |
 | Number of vCores\* |  8, 16, 24 |  8, 16, 24 <BR>\*Same number of vCores is dedicated for read-only queries. |
@@ -296,7 +291,6 @@ The amount of In-memory OLTP space in [Business Critical](../database/service-ti
 | Max concurrent workers |  210 * number of vCores + 800 |  210 * vCore count + 800 |
 | [Read-only replicas](../database/read-scale-out.md) |  0 |  1 (included in price) |
 | Compute isolation |  not supported |  not supported |
-
 
 ## Next steps
 

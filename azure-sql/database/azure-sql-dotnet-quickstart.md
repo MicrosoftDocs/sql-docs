@@ -84,7 +84,7 @@ Complete the following steps to connect to Azure SQL Database by using the SqlCl
 
 1) Update the `environmentVariables` section of the `launchSettings.json` file with the Azure SQL connection string:
 
-## [Passwordless (Recommended)] (#tab/passwordless)
+## [Passwordless (Recommended)](#tab/passwordless)
 
 The `Microsoft.Data.SqlClient` library uses a class called `DefaultAzureCredential` to implement passwordless connections to Azure SQL Database, which you can learn more about on the [DefaultAzureCredential overview](/dotnet/azure/sdk/authentication#defaultazurecredential). **DefaultAzureCredential** is provided by the Azure Identity library on which the SQL client library depends.
 
@@ -100,7 +100,7 @@ The passwordless connection string includes a configuration value of `Authentica
 > [!NOTE]
 > Passwordless connection strings are safe to commit to source control, since they do not contain any secrets such as usernames, passwords, or access keys.
 
-## [SQL Authentication] (#tab/sql-auth)
+## [SQL Authentication](#tab/sql-auth)
 
 Connect to Azure SQL Database using a SQL Authentication connection string:
 

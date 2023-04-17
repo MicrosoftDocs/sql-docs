@@ -11,7 +11,7 @@ az webapp connection create sql
 --tg <your-database-server-resource-group>
 --server <your-database-server-name>
 --database <your-database-name>
---config-constr
+--config-connstr
 ```
 
 You can verify the changes made by Service Connector on the App Service settings.

@@ -52,7 +52,7 @@ The Azure portal allows you to work with managed identities and run queries agai
     GO
     ```
 
-    :::image type="content" source="media/passwordless-connections/query-editor-small.png" lightbox="media/passwordless-connections/query-editor.png" alt-text="A screenshot showing how to use the Azure Query editor.":::
+    :::image type="content" source="../database/media/passwordless-connections/query-editor-small.png" lightbox="../database/media/passwordless-connections/query-editor.png" alt-text="A screenshot showing how to use the Azure Query editor.":::
 
     This SQL script creates a SQL database user that maps back to the managed identity of your App Service instance. It also assigns the necessary SQL roles to the user to allow your app to read, write, and modify the data and schema of your database. After this step is completed, your services are connected.
 
@@ -79,6 +79,6 @@ The Azure portal allows you to work with managed identities and run queries agai
 >
 > You can read more about configuring database roles and security on the following resources:
 >
-> [Tutorial: Secure a database in Azure SQL Database](./secure-database-tutorial.md)
+> [Tutorial: Secure a database in Azure SQL Database](../database/secure-database-tutorial.md)
 >
-> [Authorize database access to SQL Database](./logins-create-manage.md)
+> [Authorize database access to SQL Database](../database/logins-create-manage.md)

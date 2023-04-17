@@ -25,7 +25,7 @@ The backups are performed at the following schedule:
 - Transaction log: every 15 minutes
 
 > [!NOTE]
-> Currently, you can't change the schedule.
+> Currently, the schedule can't be changed.
 
 ## Assign permissions
 

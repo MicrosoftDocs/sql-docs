@@ -86,7 +86,7 @@ To enable automated backups:
 The default backup location for SQL Server (SQL 2019 and above) can be verified via:
 
 ```sql
-SELECT SERVRPROPERTY('InstanceDefaultBackupPath')
+SELECT SERVERPROPERTY('InstanceDefaultBackupPath')
 ```
 
 - The setting is configured at the instance level and applies to all the databases on the instance.

@@ -4,8 +4,8 @@ titleSuffix: SQL machine learning
 description: In this four-part tutorial series, the goal is to cluster customers, using K-Means, in a database using Python with SQL machine learning.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
-ms.date: 03/16/2023
+ms.reviewer: randolphwest, anmunde
+ms.date: 04/17/2023
 ms.service: sql
 ms.subservice: machine-learning
 ms.topic: tutorial

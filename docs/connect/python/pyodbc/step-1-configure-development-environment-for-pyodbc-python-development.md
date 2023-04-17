@@ -39,7 +39,7 @@ Installing on Linux is similar. If the following instructions don't work, see th
 
 1. **Open terminal**.
 
-2. [**Install Microsoft ODBC Driver for SQL Server on Linux**.](../../odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+2. [**Install the Microsoft ODBC driver for SQL Server (Linux)**.](../../odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
 
 3. **Install pyodbc**.  
 
@@ -49,7 +49,7 @@ Installing on Linux is similar. If the following instructions don't work, see th
 
 ## macOS
 
-1. [**Install Microsoft ODBC Driver for SQL Server on Linux**.](../../odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+1. [**Install the Microsoft ODBC driver for SQL Server (macOS)**.](../../odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)
 
 2. **Install pyodbc** from a terminal using the [pyODBC install instructions](https://github.com/mkleehammer/pyodbc/wiki/Install#installing-on-macosx).
 

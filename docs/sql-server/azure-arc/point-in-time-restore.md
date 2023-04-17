@@ -1,6 +1,6 @@
 ---
-title: Point in time restore 
-description: Describes how to configure automated backups and restore to point in time
+title: Configure automated backup
+description: Describes how to configure automated backups 
 ms.service: sql
 author: dnethi
 ms.author: dinethi
@@ -9,9 +9,9 @@ ms.date: 04/10/2023
 ms.topic: conceptual
 ---
 
-# Point in time restore
+# Configure automatic backups
 
-The Azure extension for SQL Server can perform backups automatically and allows for point in time restore.  
+The Azure extension for SQL Server can perform backups automatically. This article explains how you can configure these automatic backups.  
 
 > [!NOTE]
 > As a preview feature, the technology presented in this article is subject to [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/).
@@ -25,18 +25,16 @@ The backups are performed at the following schedule:
 - Transaction log: every 15 minutes
 
 > [!NOTE]
-> Currently, you can't change the schedule.
+> Currently, the schedule can't be changed.
 
-## Configure automated backups
-
-### Assign permissions
+## Assign permissions
 
 The current backup service within the Azure extension for Arc enabled Server uses `[NT AUTHORITY\SYSTEM]` account to perform the backups. As such, you need to grant the following permissions to this account.
 
    > [!NOTE]
    > This requirement applies to the preview release.
 
-- Add `[NT AUTHORITY\SYSTEM]` user account to the `dbcreator` server role at the server level. Run the following Transact SQL to add this account:
+1. Add `[NT AUTHORITY\SYSTEM]` user account to the `dbcreator` server role at the server level. Run the following Transact-SQL to add this account:
 
    ```sql
    USE master
@@ -45,51 +43,61 @@ The current backup service within the Azure extension for Arc enabled Server use
    GO
    ```
 
-  - For each database (system databases such as master, model and msdb, as well as each user database), the `[NT AUTHORITY\SYSTEM]` user account needs to be added into the Logins, and granted ` [db_backupoperator]` role.
+1. Add `[NT AUTHORITY\SYSTEM]` user account to Logins, and make it a member of `[db_backupoperator]` role in `master`, `model`, `msdb`, and each user database.
 
-   This can be done via the Transact SQL:
+   For example:
 
    ```sql
-   USE [master]
-   GO
    CREATE USER [NT AUTHORITY\SYSTEM] FOR LOGIN [NT AUTHORITY\SYSTEM]
    GO
    ALTER ROLE [db_backupoperator] ADD MEMBER [NT AUTHORITY\SYSTEM]
    GO
    ```
 
-  - Run the preceding code for each user and system database (except `tempdb`).
+1. Run the preceding code for each user and system database (except `tempdb`).
 
-### Configure backups using Azure (az) CLI
+## Configure backups using Azure (az) CLI
 
-Automated backups are off by default when a SQL Server is Arc enabled. To turn on automated backups, run the following command:
+Use Azure CLI to enable automated backups.
 
-```azurecli
---Install the arcdata extension if not already done
-az extension add --name arcdata
+> [!IMPORTANT]
+> Automated backups are disabled by default when a SQL Server is Arc enabled. The default setting prevents automated backups from breaking the backup sequence of any existing backup processes.
 
-az sql server-arc backups-policy set --name <arc-server-name> --resource-group <resourcegroup> --retention-days <retentiondays>
-```
+To enable automated backups:
 
-Example:
-```azurecli
-az sql server-arc backups-policy set --name MyArcServer-SQLServerPROD --resource-group my-rg --retention-days 24
-```
+1. Disable any existing backup routines.
+1. After you disable existing backup routines, run the following command:
 
-Things to note:
-- The setting is configured at the instance level and applies to all the databases on the instance
-- The value for `--name` should be the name of the Arc enabled SQL Server, which is usually in the [Servername_SQLservername] format
-- The value for `--retention-days` can be from 0-35
-- A value of 0 for `--retention-days` indicates no backups will be performed for the instance
-- The backup files are written to the default backup location as configured at the instance level. 
+   ```azurecli
+   --Install the arcdata extension if not already done
+   az extension add --name arcdata
+
+   az sql server-arc backups-policy set --name <arc-server-name> --resource-group <resourcegroup> --retention-days <retentiondays>
+   ```
+
+   Example:
+
+   ```azurecli
+   az sql server-arc backups-policy set --name MyArcServer-SQLServerPROD --resource-group my-rg --retention-days 24
+   ```
+
+### Considerations
 
 The default backup location for SQL Server (SQL 2019 and above) can be verified via:
 
 ```sql
-SELECT SERVRPROPERTY('InstanceDefaultBackupPath')
+SELECT SERVERPROPERTY('InstanceDefaultBackupPath')
 ```
 
+- The setting is configured at the instance level and applies to all the databases on the instance.
+- The value for `--name` should be the name of the Arc enabled SQL Server, which is usually in the [Servername_SQLservername] format.
+- The value for `--retention-days` can be from 0-35.
+- A value of 0 for `--retention-days` indicates to not perform automated backups for the instance.
+- The backup files are written to the default backup location as configured at the instance level.
 - If there are multiple SQL Servers on the same host where the Azure extension for SQL Server is installed, you need to turn on automated backups separately for each instance separately.
+- The user databases need to be in full recovery model for the backups to be performed. Databases that aren't in full recovery model aren't automatically backed up.
+- If you change the `--retention-days` after the `--backups-policy` is already configured, any change will take effect going forward and isn't retroactively applied.
+- Automated backups capability is only available for licenses with Software Assurance, SQL subscription, or pay-as-you-go. For details, see [Feature availability depending on license type](overview.md#feature-availability-depending-on-license-type).
 
 ## View current backup policy
 
@@ -121,3 +129,4 @@ Output:
 
 - [View SQL Server databases - Azure Arc](view-databases.md)
 - [Disconnect your SQL Server instances from Azure Arc](delete-from-azure-arc.md)
+- [Recovery Models (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)

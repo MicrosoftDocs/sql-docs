@@ -195,7 +195,7 @@ resources
     properties.ExcludedSqlInstances,
     "Purview enabled" = iff(notnull(properties.settings.ExternalPolicyBasedAuthorization),"Purview enabled",""),
     "Azure AD enabled" = iff(notnull(properties.settings.AzureAD),"Azure AD enabled",""),
-    "BPA enabled " = iff(notnull(properties.settings.AssessmentSettings),"BPA enabled","")
+    "BPA enabled" = iff(notnull(properties.settings.AssessmentSettings),"BPA enabled","")
 
 ```
 

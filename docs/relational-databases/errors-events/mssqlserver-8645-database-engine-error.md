@@ -41,9 +41,9 @@ If you aren't using Resource Governor to limit the pool of memory for certain wo
 
 A detailed explanation and troubleshooting steps is covered in [Troubleshoot slow performance or low memory issues caused by memory grants in SQL Server](/troubleshoot/sql/database-engine/performance/troubleshoot-memory-grant-issues)
 
-The following list summarizes the steps detailed in the forementioned article. These steps can help in reducing or eliminating QE memory errors:
+The following list summarizes the steps detailed in the aforementioned article. These steps can help in reducing or eliminating QE memory errors:
 
-1. Identify which requests in SQL Server are the large memory grant or QE memory consumers. For more information see [How to identify waits for query execution memory](/troubleshoot/sql/database-engine/performance/troubleshoot-memory-grant-issues#how-to-identify-waits-for-query-execution-memory)
+1. Identify which requests in SQL Server are the large memory grant or QE memory consumers. For more information, see [How to identify waits for query execution memory](/troubleshoot/sql/database-engine/performance/troubleshoot-memory-grant-issues#how-to-identify-waits-for-query-execution-memory)
 1. Rewrite queries to minimize or avoid sort and hash operations
 1. Update statistics and keep them updated regularly to ensure SQL Server estimates memory grant correctly
 1. Create appropriate indexes for the query or queries identified. Indexes may reduce the large number of rows processed, thus changing the JOIN algorithms and reducing the size of grants or completely eliminating them.

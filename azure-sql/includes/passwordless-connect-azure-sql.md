@@ -62,7 +62,7 @@ The Azure portal allows you to work with managed identities and run queries agai
 
 1) On the **Application settings** tab, select **New connection string**.
 
-    :::image type="content" source="../database/media/passwordless-connections/add-connection-string.png" lightbox="../database/media/passwordless-connections/add-connection-string.png" alt-text="A screenshot showing how to use the Azure Query editor.":::
+    :::image type="content" source="../database/media/passwordless-connections/add-connection-string.png" lightbox="../database/media/passwordless-connections/add-connection-string.png" alt-text="A screenshot showing how to add a connection string for passwordless connections.":::
 
 1) In the **Add/Edit connection string** flyout menu, enter the following values:
 

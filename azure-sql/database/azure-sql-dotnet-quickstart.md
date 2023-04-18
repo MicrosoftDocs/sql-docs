@@ -82,7 +82,7 @@ dotnet add package Microsoft.Data.SqlClient
 
 ## [Passwordless (Recommended)](#tab/passwordless)
 
-For local development with passwordless connections to Azure SQL Database, update the `ConnectionStrings` section of the `appsettings.Development.json` file with following connection string. Replace the `database-server-name` and `database-name` placeholders with your own values.
+For local development with passwordless connections to Azure SQL Database, update the `ConnectionStrings` section of the `appsettings.Development.json` file with following connection string. Replace the `<database-server-name>` and `<database-name>` placeholders with your own values.
 
 ```json
 "ConnectionStrings": {

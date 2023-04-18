@@ -77,7 +77,7 @@ The Azure portal allows you to work with managed identities and run queries agai
 ---
 
 > [!IMPORTANT]
-> Although this solution provides a simple approach for getting started, it is not a best practice for enterprise production environments. In those scenarios the app should not perform all operations using a single, elevated identity. You should try to implement the principle of least privilege by configuring multiple identities with specific permissions for specific tasks.
+> Although this solution provides a simple approach for getting started, it's not a best practice for production-grade environments. In those scenarios, the app shouldn't perform all operations using a single, elevated identity. You should try to implement the principle of least privilege by configuring multiple identities with specific permissions for specific tasks.
 >
 > You can read more about configuring database roles and security on the following resources:
 >

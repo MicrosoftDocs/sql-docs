@@ -1,8 +1,8 @@
 ---
 title: Deploy a Pacemaker cluster for SQL Server on Linux
 description: Learn to deploy a Linux Pacemaker cluster for a SQL Server Always On availability group (AG) or failover cluster instance (FCI).
-author: VanMSFT
-ms.author: vanto
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: vanto
 ms.date: 12/11/2017
 ms.service: sql

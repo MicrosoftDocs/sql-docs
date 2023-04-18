@@ -5,7 +5,7 @@ description: Learn about how to use Azure Active Directory for authentication wi
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 03/23/2023
+ms.date: 04/13/2023
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
@@ -73,7 +73,7 @@ For more information on Azure AD hybrid identities, the setup, and synchronizati
 
 For a sample federated authentication with ADFS infrastructure (or user/password for Windows credentials), see the diagram below. The arrows indicate communication pathways.
 
-![aad auth diagram][1]
+:::image type="content" source="media/authentication-aad-overview/azure-ad-authentication-diagram.png" alt-text="Diagram of Azure AD authentication for Azure SQL.":::
 
 The following diagram indicates the federation, trust, and hosting relationships that allow a client to connect to a database by submitting a token. The token is authenticated by an Azure AD, and is trusted by the database. Customer 1 can represent an Azure Active Directory with native users or an Azure AD with federated users. Customer 2 represents a possible solution including imported users, in this example coming from a federated Azure Active Directory with ADFS being synchronized with Azure Active Directory. It's important to understand that access to a database using Azure AD authentication requires that the hosting subscription is associated to the Azure AD. The same subscription must be used to create the Azure SQL Database, SQL Managed Instance, or Azure Synapse resources.
 
@@ -175,6 +175,5 @@ The following authentication methods are supported for Azure AD server principal
 - For more information about firewall rules in SQL Database, see [SQL Database firewall rules](firewall-configure.md).
 
 <!--Image references-->
-[1]: ./media/authentication-aad-overview/1aad-auth-diagram.png
 [2]: ./media/authentication-aad-overview/2subscription-relationship.png
 [3]: ./media/authentication-aad-overview/3admin-structure.png

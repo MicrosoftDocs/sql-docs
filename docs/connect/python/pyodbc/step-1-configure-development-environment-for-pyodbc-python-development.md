@@ -3,7 +3,7 @@ title: "Step 1: Configure pyodbc Python environment"
 description: "Step 1 of this getting started guide involves installing Python, the Microsoft ODBC Driver for SQL Server, and pyODBC into your development environment."
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 08/29/2022
+ms.date: 04/17/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -35,17 +35,23 @@ This article explains how to configure your development environment for pyodbc P
 
 ## Linux
 
-Installing on Linux is similar. If the instructions below don't work, see the [pyODBC Install instructions](https://github.com/mkleehammer/pyodbc/wiki/Install), which have more details for different Linux distributions.
+Installing on Linux is similar. If the following instructions don't work, see the [pyODBC install instructions](https://github.com/mkleehammer/pyodbc/wiki/Install#installing-on-linux), which have more details for different Linux distributions.
 
 1. **Open terminal**.
 
-2. [**Install Microsoft ODBC Driver for SQL Server on Linux**.](../../odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+2. [**Install the Microsoft ODBC driver for SQL Server (Linux)**.](../../odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
 
 3. **Install pyodbc**.  
 
    ```bash  
    sudo -H pip install pyodbc
    ```
+
+## macOS
+
+1. [**Install the Microsoft ODBC driver for SQL Server (macOS)**.](../../odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)
+
+2. **Install pyodbc** from a terminal using the [pyODBC install instructions](https://github.com/mkleehammer/pyodbc/wiki/Install#installing-on-macosx).
 
 ## Next steps
 

@@ -5,7 +5,7 @@ description: Learn how to configure user-assigned managed identity and transpare
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: vanto
-ms.date: 02/15/2023
+ms.date: 05/01/2023
 ms.service: sql-database
 ms.subservice: security
 ms.custom: devx-track-azurecli
@@ -15,9 +15,6 @@ ms.topic: how-to
 # Create server configured with user-assigned managed identity and cross-tenant CMK for TDE
 
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
-
-> [!NOTE]
-> Cross-tenant CMK is in public preview.
 
 In this guide, we'll go through the steps to create an Azure SQL logical [server](logical-servers.md) with transparent data encryption (TDE) and customer-managed keys (CMK), utilizing a [user-assigned managed identity](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) to access [Azure Key Vault](/azure/key-vault/general/quick-create-portal) that is in an Azure Active Directory (Azure AD) that is distinct from the Azure SQL logical server tenant. For more information, see [Cross-tenant customer-managed keys with transparent data encryption](transparent-data-encryption-byok-cross-tenant.md).
 
@@ -39,7 +36,7 @@ Before we can configure TDE for Azure SQL Database with a cross-tenant CMK, we n
 1. On the first tenant where you want to create the Azure SQL Database, [create and configure a multi-tenant Azure AD application](/azure/storage/common/customer-managed-keys-configure-cross-tenant-new-account#the-service-provider-creates-a-new-multi-tenant-app-registration)
 
 1. [Create a user-assigned managed identity](/azure/storage/common/customer-managed-keys-configure-cross-tenant-new-account#the-service-provider-creates-a-user-assigned-managed-identity)
-1. [Configure the user-assigned managed identity](/azure/storage/common/customer-managed-keys-configure-cross-tenant-new-account#the-service-provider-configures-the-user-assigned-managed-identity-as-a-federated-credential-on-the-application) as a [federated identity credential](/graph/api/resources/federatedidentitycredentials-overview) for the application
+1. [Configure the user-assigned managed identity](/azure/storage/common/customer-managed-keys-configure-cross-tenant-new-account#the-service-provider-configures-the-user-assigned-managed-identity-as-a-federated-credential-on-the-application) as a [federated identity credential](/graph/api/resources/federatedidentitycredentials-overview) for the multi-tenant application
 1. Record the application name and application ID. This can be found in the [Azure portal](https://portal.azure.com) > **Azure Active Directory** > **Enterprise applications** and search for the created application
 
 ### Required resources on the second tenant
@@ -60,7 +57,8 @@ Before we can configure TDE for Azure SQL Database with a cross-tenant CMK, we n
       ```
 
 1. Go to the [Azure portal](https://portal.azure.com) > **Azure Active Directory** > **Enterprise applications** and search for the application that was just created.
-1. Create an [Azure Key Vault](/azure/key-vault/general/quick-create-portal) if you don't have one, [create or set the access policy](/azure/key-vault/general/assign-access-policy), and [create a key](/azure/key-vault/keys/quick-create-portal)
+1. Create an [Azure Key Vault](/azure/key-vault/general/quick-create-portal) if you don't have one, and [create a key](/azure/key-vault/keys/quick-create-portal)
+1. [Create or set the access policy](/azure/key-vault/general/assign-access-policy).
    1. Select the *Get, Wrap Key, Unwrap Key* permissions under **Key permissions** when creating the access policy
    1. Select the multi-tenant application created in the first step in the **Principal** option when creating the access policy
 
@@ -119,6 +117,9 @@ This guide will walk you through the process of creating a logical server and da
 15. For **Federated client identity**, select the **Change identity** option, and search for the multi-tenant application that you created in the [Prerequisites](#prerequisites).
 
     :::image type="content" source="media/transparent-data-encryption-byok-create-server-cross-tenant/selecting-user-assigned-managed-identity.png" alt-text="Screenshot of user assigned managed identity when configuring server identity.":::
+
+    > [!NOTE]
+    > If the multi-tenant application hasn't been added to the key vault access policy with the required permissions (*Get, Wrap Key, Unwrap Key*), using this application for identity federation in the Azure portal will show an error. Make sure that the permissions are configured correctly before configuring the federated client identity.
 
 16. Select **Apply**
 
@@ -318,3 +319,9 @@ To get your user-assigned managed identity **Resource ID**, search for **Managed
 
 - Get started with Azure Key Vault integration and Bring Your Own Key support for TDE: [Turn on TDE using your own key from Key Vault](transparent-data-encryption-byok-configure.md)
 - [Cross-tenant customer-managed keys with transparent data encryption](transparent-data-encryption-byok-cross-tenant.md)
+
+## See also
+
+- [Transparent data encryption (TDE) with customer-managed keys at the database level](transparent-data-encryption-byok-database-level-overview.md)
+- [Configure geo replication and backup restore for transparent data encryption with database level customer-managed keys](transparent-data-encryption-byok-database-level-geo-replication-restore.md)
+- [Identity and key management for TDE with database level customer-managed keys](transparent-data-encryption-byok-database-level-basic-actions.md)

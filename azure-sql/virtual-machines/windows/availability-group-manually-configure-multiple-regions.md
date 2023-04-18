@@ -4,7 +4,7 @@ description: "This tutorial explains how to configure an Always On availability 
 author: tarynpratt
 ms.author: tarynpratt
 ms.reviewer: mathoma, randolphwest
-ms.date: 11/02/2022
+ms.date: 04/18/2023
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: tutorial
@@ -16,12 +16,11 @@ tags: azure-service-management
 
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
-This tutorial explains how to configure an Always On availability group replica for SQL Server on Azure virtual machines (VMs) in an Azure region that is remote to the primary replica. You can use this configuration for the purpose of disaster recovery (DR). 
+This tutorial explains how to configure an Always On availability group replica for SQL Server on Azure virtual machines (VMs) in an Azure region that is remote to the primary replica. You can use this configuration for the purpose of disaster recovery (DR).
 
 You can also use the steps in this article to extend an existing on-premises availability group to Azure.
 
 This tutorial builds on the [tutorial to manually deploy an availability group in a single subnet in a single region](availability-group-manually-configure-prerequisites-tutorial-single-subnet.md). Mentions of the local region in this article refer to the virtual machines and availability group already configured in the first region. The remote region is the new infrastructure that's being added in this tutorial. 
-
 
 ## Overview
 
@@ -51,7 +50,7 @@ When availability group replicas are on Azure virtual machines in different Azur
 
 ## Create the network and subnet
 
-Before you create a [virtual network and subnet in a new region](/azure/virtual-network/manage-virtual-network#create-a-virtual-network), decide on the address space, subnet network, cluster IP, and availability group listener IP addresses that you'll use for the remote region. 
+Before you create a [virtual network and subnet in a new region](/azure/virtual-network/manage-virtual-network#create-a-virtual-network), decide on the address space, subnet network, cluster IP, and availability group listener IP addresses that you'll use for the remote region.
 
 The following table lists details for the local (current) region and what will be set up in the new remote region.
 
@@ -65,7 +64,7 @@ The following table lists details for the local (current) region and what will b
 To create a virtual network and subnet in the new region in the Azure portal:
 
 1. Go to your resource group in the [Azure portal](https://portal.azure.com) and select **+ Create**.
-1. Search for **virtual network** in the **Marketplace** search box, and then select the **virtual network** tile from Microsoft. 
+1. Search for **virtual network** in the **Marketplace** search box, and then select the **virtual network** tile from Microsoft.
 1. On the **Create virtual network** page, select **Create**. Then enter the following information on the **Basics** tab:
     1. Under **Project details**, for **Subscription**, select the appropriate Azure subscription. For **Resource group**, select the resource group that you created previously, such as **SQL-HA-RG**.
     1. Under **Instance details**, provide a name for your virtual network, such as **remote_HAVNET**. Then choose a new remote region.
@@ -191,9 +190,9 @@ Next, join the **corp.contoso.com** domain. To do so, follow these steps:
 1. When you see the "Welcome to the corp.contoso.com domain" message, select **OK**.
 1. Select **Close**, and then select **Restart Now** in the popup dialog.
 
-#### Configure domain controller 
+#### Configure domain controller
 
-Once your server has joined the domain, you can configure it as the second domain controller. To do so, follow these steps: 
+Once your server has joined the domain, you can configure it as the second domain controller. To do so, follow these steps:
 
 1. If you're not already connected, open an RDP session to your secondary domain controller, and open **Server Manager Dashboard** (which may be open by default).
 1. Select the **Add roles and features** link on the dashboard.
@@ -228,7 +227,7 @@ Before you proceed, consider the following design decisions:
 
 * **Storage: Azure managed disks**
 
-   For the virtual machine storage, use Azure managed disks. We recommend managed disks for SQL Server virtual machines. Managed disks handle storage behind the scenes. In addition, when virtual machines with managed disks are in the same availability set, Azure distributes the storage resources to provide appropriate redundancy. 
+   For the virtual machine storage, use Azure managed disks. We recommend managed disks for SQL Server virtual machines. Managed disks handle storage behind the scenes. In addition, when virtual machines with managed disks are in the same availability set, Azure distributes the storage resources to provide appropriate redundancy.
    
    For more information, see [Introduction to Azure managed disks](/azure/virtual-machines/managed-disks-overview). For specifics about managed disks in an availability set, see [Use managed disks for VMs in an availability set](/azure/virtual-machines/availability).
 
@@ -251,7 +250,6 @@ To create the SQL Server VM, go back to the **SQL-HA-RG** resource group, and th
 | **Virtual machine configuration**: **Size** |**Size** = **DS2\_V2** (2 vCPUs, 7 GB)</br><br/>The size must support SSD storage (premium disk support). |
 | **Virtual machine configuration**: **Settings** |**Storage**: **Use managed disks**<br/><br/>**Virtual network** = **remote-HAVNET**<br/><br/>**Subnet** = **admin (10.36.1.0/24)**<br/><br/>**Public IP address** = Automatically generated<br/><br/>**Network security group** = **None**<br/><br/>**Monitoring Diagnostics** = Enabled<br/><br/>**Diagnostics storage account** = **Use an automatically generated storage account**<br/><br/> |
 | **Virtual machine configuration**: **SQL Server settings** |**SQL connectivity** = **Private (within Virtual Network)**<br/><br/>**Port** = **1433**<br/><br/>**SQL Authentication** = Disabled<br/><br/>**Storage configuration** = **General**<br/><br/>**Automated patching** = **Sunday at 2:00**<br/><br/>**Automated backup** = Disabled</br><br/>**Azure Key Vault integration** = Disabled |
-
 
 > [!NOTE]
 > The machine size suggested here is meant for testing availability groups in Azure virtual machines. For the best performance on production workloads, see the recommendations for SQL Server machine sizes and configuration in [Checklist: Best practices for SQL Server on Azure VMs](./performance-guidelines-best-practices-checklist.md?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
@@ -629,7 +627,7 @@ After SQL Server has restarted on the newly created virtual machine, you can add
 1. On the **Select Initial Data Synchronization** page, select **Full** and specify a shared network location. For the location, use the [backup share that you created](availability-group-manually-configure-tutorial-single-subnet.md#backupshare). In the example, it was **\\\\<First SQL Server\>\Backup\\**. Then select **Next**.
 
    >[!NOTE]
-   >Full synchronization takes a full backup of the database on the first instance of SQL Server and restores it to the second instance. For large databases, we don't recommend full synchronization because it might take a long time. 
+   >Full synchronization takes a full backup of the database on the first instance of SQL Server and restores it to the second instance. For large databases, we don't recommend full synchronization because it might take a long time.
    >
    > You can reduce this time by manually backing up the database and restoring it with `NO RECOVERY`. If the database is already restored with `NO RECOVERY` on the second SQL Server instance before you configure the availability group, select **Join only**. If you want to take the backup after you configure the availability group, select **Skip initial data synchronization**.
    >

@@ -3,7 +3,7 @@ title: DBCC CLEANTABLE (Transact-SQL)
 description: DBCC CLEANTABLE reclaims space from dropped variable-length columns in tables or indexed views.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 12/05/2022
+ms.date: 04/18/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: "language-reference"
@@ -59,7 +59,7 @@ The table or indexed view to be cleaned.
 
 #### *batch_size*
 
-The number of rows processed per transaction. If not specified, or if 0 is specified, the statement processes the whole table in one transaction.
+The number of rows processed per transaction. If not specified, the default value is `1000`. To avoid a long recovery period, `0` is not allowed.
 
 #### WITH NO_INFOMSGS
 
@@ -71,7 +71,7 @@ Suppresses all informational messages.
 
 If the dropped columns were stored in-row, `DBCC CLEANTABLE` reclaims space from the IN_ROW_DATA allocation unit of the table. If the columns were stored off-row, space is reclaimed from either the ROW_OVERFLOW_DATA or the LOB_DATA allocation unit depending on the data type of the dropped column. If reclaiming space from a ROW_OVERFLOW_DATA or LOB_DATA page results in an empty page, `DBCC CLEANTABLE` removes the page.
 
-`DBCC CLEANTABLE` runs as one or more transactions. If a batch size isn't specified, the command processes the whole table in one transaction, and the table is exclusively locked during the operation. For some large tables, the length of the single transaction and the log space required may be too much. If a batch size is specified, the command runs in a series of transactions, each including the specified number of rows. `DBCC CLEANTABLE` can't be run as a transaction inside another transaction.
+`DBCC CLEANTABLE` runs as one or more transactions. If a batch size isn't specified, the default size is `1000`. For some large tables, the length of the single transaction and the log space required may be too much. If a batch size is specified, the command runs in a series of transactions, each including the specified number of rows. `DBCC CLEANTABLE` can't be run as a transaction inside another transaction.
 
 This operation is fully logged.
 
@@ -100,7 +100,7 @@ Caller must own the table or indexed view, or be a member of the **sysadmin** fi
 The following example executes `DBCC CLEANTABLE` for the `Production.Document` table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database.
 
 ```sql
-DBCC CLEANTABLE (AdventureWorks2019, 'Production.Document', 0)
+DBCC CLEANTABLE (AdventureWorks2019, 'Production.Document', 1000)
 WITH NO_INFOMSGS;
 GO
 ```

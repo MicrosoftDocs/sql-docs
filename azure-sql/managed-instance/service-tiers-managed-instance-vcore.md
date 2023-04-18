@@ -59,7 +59,7 @@ To monitor total consumed instance storage size for SQL Managed Instance, use th
 
 ## Backup storage
 
-Storage for database backups is allocated to support the  and capabilities of SQL Managed Instance. This storage is separate from data and log file storage, and is billed separately.
+Storage for database backups is allocated to support the capabilities of SQL Managed Instance. This storage is separate from data and log file storage, and is billed separately.
 
 
 - [Point-in-time restore (PITR)](recovery-using-backups.md): The storage consumption depends on the rate of change of the database and the retention period configured for backups. You can configure a separate retention period for each database between 0 to 35 days for SQL Managed Instance. A backup storage amount equal to the configured maximum data size is provided at no extra charge.

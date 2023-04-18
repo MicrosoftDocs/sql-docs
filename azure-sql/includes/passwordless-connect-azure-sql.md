@@ -11,13 +11,13 @@ There are multiple tools available to implement these steps:
 Service Connector is a tool that streamlines authenticated connections between different services in Azure. Service Connector currently supports connecting an App Service to a SQL database via the Azure CLI using the `az webapp connection create sql` command. This single command completes the three steps mentioned above for you.
 
 ```azurecli
-az webapp connection create sql
--g <app-service-resource-group>
--n <app-service-name>
---tg <database-server-resource-group>
---server <database-server-name>
---database <database-name>
---system-identity
+az webapp connection create sql \
+    -g <app-service-resource-group> \
+    -n <app-service-name> \
+    --tg <database-server-resource-group> \
+    --server <database-server-name> \
+    --database <database-name> \
+    --system-identity
 ```
 
 You can verify the changes made by Service Connector on the App Service settings.

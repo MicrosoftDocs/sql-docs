@@ -20,6 +20,7 @@ The following table identifies features available by operating system:
 |[Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-sql-usage)| Yes | No |
 |[Microsoft Purview](/azure/purview/tutorial-register-scan-on-premises-sql-server)| Yes | Yes |
 |[Automated backups](../point-in-time-restore.md)| Yes | No |
+|[Automated patching](../patch.md)| Yes | No |
 |[SQL Server 2012 extended security updates](../../end-of-support/sql-server-extended-security-updates.md) | Yes | Not applicable |
 
 <sup>*</sup> [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] only.

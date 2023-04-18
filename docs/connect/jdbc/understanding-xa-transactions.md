@@ -76,7 +76,7 @@ On Windows Vista and later:
 
 ### Configuring the JDBC distributed transaction components
 
-The steps for configuring server-side components differ depending on your target server version. To check your server version, simply execute the query `SELECT @@VERSION` against the server and view the output. For SQL Server 2017 Cumulative Update 16 and higher, follow the [SQL Server 2017 CU16 and higher](#sql-server-2017-cu16-and-higher) instructions. For older SQL Server versions, follow the [SQL Server 2017 CU15 and lower](#sql-server-2017-cu15-and-lower) instructions.
+The steps for configuring server-side components differ depending on your target server version. To check your server version, execute the query `SELECT @@VERSION` against the server and view the output. For SQL Server 2017 Cumulative Update (CU) 16 and higher, follow the [SQL Server 2017 CU16 and higher](#sql-server-2017-cu16-and-higher) instructions. For older SQL Server versions, follow the [SQL Server 2017 CU15 and lower](#sql-server-2017-cu15-and-lower) instructions.
 
 #### SQL Server 2017 CU16 and higher
 

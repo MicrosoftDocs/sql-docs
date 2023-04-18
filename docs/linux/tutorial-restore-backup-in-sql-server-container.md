@@ -1,8 +1,8 @@
 ---
 title: Restore a SQL Server database in a Linux container
 description: This tutorial shows how to restore a SQL Server database backup in a new Linux container.
-author: VanMSFT
-ms.author: vanto
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: randolphwest
 ms.date: 01/16/2023
 ms.service: sql

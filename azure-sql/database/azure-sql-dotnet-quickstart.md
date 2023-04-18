@@ -82,7 +82,7 @@ dotnet add package Microsoft.Data.SqlClient
 
 ## [Passwordless (Recommended)](#tab/passwordless)
 
-For local development, update the `ConnectionStrings` section of the `appsettings.Development.json` file with following connection string to connect to Azure SQL Database with passwordless connections. Replace the `database-server-name` and `database-name` placeholders with your own values.
+For local development with passwordless connections to Azure SQL Database, update the `ConnectionStrings` section of the `appsettings.Development.json` file with following connection string. Replace the `database-server-name` and `database-name` placeholders with your own values.
 
 ```json
 "ConnectionStrings": {
@@ -90,16 +90,16 @@ For local development, update the `ConnectionStrings` section of the `appsetting
 }
 ```
 
-The passwordless connection string includes a configuration value of `Authentication=Active Directory Default`, which instructs the `Microsoft.Data.SqlClient` library to connect to Azure SQL Database using a class called [`DefaultAzureCredential`](/dotnet/azure/sdk/authentication#defaultazurecredential). `DefaultAzureCredential` enables passwordless connections to Azure Services and is provided by the Azure Identity library on which the SQL client library depends.
+The passwordless connection string sets a configuration value of `Authentication=Active Directory Default`, which instructs the `Microsoft.Data.SqlClient` library to connect to Azure SQL Database using a class called [`DefaultAzureCredential`](/dotnet/azure/sdk/authentication#defaultazurecredential). `DefaultAzureCredential` enables passwordless connections to Azure services and is provided by the Azure Identity library on which the SQL client library depends. `DefaultAzureCredential` supports multiple authentication methods and determines which to use at runtime. This approach enables your app to use different authentication methods in different environments (local vs. production) without implementing environment-specific code.
 
-When the app runs locally, it authenticates via the user you're signed into Visual Studio with, or other local tools like the Azure CLI. Once the app deploys to Azure, the same code discovers and applies the managed identity that is associated with the hosted app, which you'll configure later. The [Azure Identity library overview](/dotnet/api/overview/azure/Identity-readme#defaultazurecredential) explains the order and locations in which `DefaultAzureCredential` looks for credentials.
+For example, when the app runs locally, `DefaultAzureCredential` authenticates via the user you're signed into Visual Studio with, or other local tools like the Azure CLI. Once the app deploys to Azure, the same code discovers and applies the managed identity that is associated with the hosted app, which you'll configure later. The [Azure Identity library overview](/dotnet/api/overview/azure/Identity-readme#defaultazurecredential) explains the order and locations in which `DefaultAzureCredential` looks for credentials.
 
 > [!NOTE]
 > Passwordless connection strings are safe to commit to source control, since they do not contain any secrets such as usernames, passwords, or access keys.
 
 ## [SQL Authentication](#tab/sql-auth)
 
-For local development, update the `ConnectionStrings` section of the `appsettings.Development.json` file with the following connection string to connect to Azure SQL Database with SQL Authentication. Replace the `database-server-name`, `database-name`, `user-id` and `password` placeholders with your own values.
+For local development with SQL Authentication to Azure SQL Database, update the `ConnectionStrings` section of the `appsettings.Development.json` file with the following connection string. Replace the `database-server-name`, `database-name`, `user-id` and `password` placeholders with your own values.
 
 ```json
 "ConnectionStrings": {

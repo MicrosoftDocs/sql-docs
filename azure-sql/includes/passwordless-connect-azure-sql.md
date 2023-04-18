@@ -12,11 +12,11 @@ Service Connector is a tool that streamlines authenticated connections between d
 
 ```azurecli
 az webapp connection create sql
--g <your-resource-group>
--n <your-app-service-name>
---tg <your-database-server-resource-group>
---server <your-database-server-name>
---database <your-database-name>
+-g <app-service-resource-group>
+-n <app-service-name>
+--tg <database-server-resource-group>
+--server <database-server-name>
+--database <database-name>
 --system-identity
 ```
 

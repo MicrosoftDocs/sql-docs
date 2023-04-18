@@ -132,7 +132,7 @@ SqlCmd variables can be defined in the `.sqlproj` file and are used to replace t
 
 ```sql
 IF '$(EnvironmentName)' = 'testing'
-BEING
+BEGIN
     -- do something
 END
 ```

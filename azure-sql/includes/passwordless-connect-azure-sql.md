@@ -1,4 +1,4 @@
-The following steps are required to connect the App Service instance to Azure SQL Database:
+The following steps are required to create a passwordless connection between the App Service instance and Azure SQL Database:
 
 1) Create a managed identity for the App Service. The `Microsoft.Data.SqlClient` library included in your app will automatically discover the managed identity, just like it discovered your local Visual Studio user.
 2) Create a SQL database user and associate it with the App Service managed identity.
@@ -24,7 +24,7 @@ You can verify the changes made by Service Connector on the App Service settings
 
 1) Navigate to the **Identity** page for your App Service. Under the **System assigned** tab, the **Status** should be set to **On**. This value means that a system-assigned managed identity was enabled for your app.
 
-2) Navigate to the **Configuration** page for your App Service. Under the **Connection strings** tab, you should see a connection string called **AZURE_SQL_CONNECTIONSTRING**. Select the **Click to show value** text to view the generated passwordless connection string. The name of this connection string aligns with the one you configured in your app, so it will be discovered automatically when running in Azure.
+2) Navigate to the **Configuration** page for your App Service. Under the **Connection strings** tab, you should see a connection string called **AZURE_SQL_CONNECTIONSTRING**. Select the **Click to show value** text to view the generated passwordless connection string. The name of this connection string matches the one you configured in your app, so it will be discovered automatically when running in Azure.
 
 ## [Azure portal](#tab/azure-portal)
 

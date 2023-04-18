@@ -1,4 +1,4 @@
-There are multiple tools available to connect your App Service to the Azure SQL Database:
+There are multiple tools available to connect your App Service to Azure SQL Database:
 
 ## [Service Connector (Recommended)](#tab/service-connector)
 
@@ -32,7 +32,7 @@ You can verify the changes made by Service Connector on the App Service settings
 
     * **Name**: Enter a value of *AZURE_SQL_CONNECTIONSTRING*.
     * **Value**: Paste the same connection string value you configured locally.
-    * **Type**: Select **SQLServer**.
+    * **Type**: Select **SQLAzure**.
 
 1) Select **OK** at the bottom of the panel.
 

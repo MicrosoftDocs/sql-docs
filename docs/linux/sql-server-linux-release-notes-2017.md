@@ -36,6 +36,9 @@ This section lists the latest versions of each package per distribution, for [!I
 | --- | --- | --- | --- | --- |
 | [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] | CU 31 GDR | 2023-02-14 | 14.0.3460.9 | [KB 5021126](https://support.microsoft.com/help/5021126) |
 
+> [!IMPORTANT]  
+> This is the final cumulative update for [!INCLUDE[ssSQL17](../includes/sssql17-md.md)].
+
 
 - As of CU 4, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent is no longer installed as a separate package. It is installed with the Database Engine package and must be enabled to use.
 - The **mssql-server-is** package isn't supported on SUSE in this release. For more information, see [SQL Server Integration Services (SSIS)](#ssis).
@@ -72,8 +75,8 @@ If you are updating existing [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.m
 
 The following table lists the release history for [!INCLUDE[ssSQL17](../includes/sssql17-md.md)].
 
-| Release               | Version       | Release date |
-| --------------------- | ------------- | ------------ |
+| Release                | Version       | Release date |
+| ---------------------- | ------------- | ------------ |
 | [CU 31 GDR](/troubleshoot/sql/linux/release-history-2017#CU31-GDR) | 14.0.3460.9   | 2023-02-14   |
 | [CU 31](/troubleshoot/sql/linux/release-history-2017#CU31) | 14.0.3456.2   | 2022-09-20   |
 | [CU 30](/troubleshoot/sql/linux/release-history-2017#CU30) | 14.0.3451.2   | 2022-07-13   |

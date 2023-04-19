@@ -67,7 +67,7 @@ sp_add_category
  **sp_add_category** must be run from the **msdb** database.  
   
 ## Permissions  
- Only members of the **sysadmin** fixed server role can execute **sp_add_category**.  
+Requires membership in the **sysadmin** fixed server role, but permissions can be granted to other users.
   
 ## Examples  
  The following example creates a local job category named `AdminJobs`.  

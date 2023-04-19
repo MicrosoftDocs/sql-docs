@@ -67,4 +67,4 @@ The next article teaches you how to create database objects.
 
 Go to the next article to learn more:
 > [!div class="nextstepaction"]
-> [Lesson 1: Create & query database objects](../t-sql/lesson-1-creating-database-objects.md)
+> [Lesson 1: Create and query database objects](../t-sql/lesson-1-creating-database-objects.md)

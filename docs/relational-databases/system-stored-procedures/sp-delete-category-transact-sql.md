@@ -55,7 +55,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
  Deleting a category recategorizes any jobs, alerts, or operators in that category to the default category for the class.  
   
 ## Permissions  
- Only members of the **sysadmin** fixed server role can run this procedure.  
+ Requires membership in the **sysadmin** fixed server role, but permissions can be granted to other users.  
   
 ## Examples  
  The following example deletes the job category named `AdminJobs`.  

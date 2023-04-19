@@ -52,7 +52,7 @@ For Analysis Services, Integration Services, or Reporting Services projects, you
 * [Integration Services](https://marketplace.visualstudio.com/items?itemName=SSIS.MicrosoftDataToolsIntegrationServices)
 * [Reporting Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio2022)
 
-### Supported SQL versions
+### Supported SQL versions in Visual Studio 2022
 
 |Project Templates|SQL Platforms Supported|
 |-------------------|--------------------|
@@ -94,15 +94,8 @@ For Analysis Services, Integration Services, or Reporting Services projects, you
 * [Integration Services](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects)
 * [Reporting Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio)
 
-### Offline Installation
-For scenarios where offline installation is required, such as low bandwidth or isolated networks, SSDT is available for offline installation.  Two approaches are available:
-- For a single machine, [Download All, then install](/visualstudio/install/create-an-offline-installation-of-visual-studio#use-the-download-all-then-install-feature)
-- For installation on one or more machines, [use the Visual Studio bootstrapper from the command line](/visualstudio/install/create-an-offline-installation-of-visual-studio#use-the-command-line-to-create-a-local-layout)
 
-For more details you can follow the [Step-by-Step Guidelines for Offline Installation](/visualstudio/install/create-an-offline-installation-of-visual-studio)
-
-
-### Supported SQL versions
+### Supported SQL versions in Visual Studio 2019
 
 |Project Templates|SQL Platforms Supported|
 |-------------------|--------------------|
@@ -110,6 +103,13 @@ For more details you can follow the [Step-by-Step Guidelines for Offline Install
 |Analysis Services models<br /><br />Reporting Services reports | SQL Server 2008 - SQL Server 2019|
 |Integration Services packages| SQL Server 2012 - SQL Server 2022 |
 
+
+## Offline nstallation
+For scenarios where offline installation is required, such as low bandwidth or isolated networks, SSDT is available for offline installation.  Two approaches are available:
+- For a single machine, [Download All, then install](/visualstudio/install/create-an-offline-installation-of-visual-studio#use-the-download-all-then-install-feature)
+- For installation on one or more machines, [use the Visual Studio bootstrapper from the command line](/visualstudio/install/create-an-offline-installation-of-visual-studio#use-the-command-line-to-create-a-local-layout)
+
+For more details you can follow the [Step-by-Step Guidelines for Offline Installation](/visualstudio/install/create-an-offline-installation-of-visual-studio)
 
 ## Previous versions
 

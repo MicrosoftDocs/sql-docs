@@ -73,7 +73,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  Is the table name that can be given (instead of *SchemaDeclaration*) if a table with the desired schema already exists and no column patterns are required.  
   
 ## Remarks  
- The WITH clause provides a rowset format (and additional mapping information as required) by using either *SchemaDeclaration* or specifying an existing *TableName*. If the optional WITH clause isn't specified, the results are returned in an **edge** table format. Edge tables represent the fine-grained XML document structure (such as element/attribute names, the document hierarchy, the namespaces, PIs, and son on) in a single table.  
+ The WITH clause provides a rowset format (and additional mapping information as required) by using either *SchemaDeclaration* or specifying an existing *TableName*. If the optional WITH clause isn't specified, the results are returned in an **edge** table format. Edge tables represent the fine-grained XML document structure (such as element/attribute names, the document hierarchy, the namespaces, PIs, and so on) in a single table.  
   
  The following table describes the structure of the **edge** table.  
   

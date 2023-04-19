@@ -4,7 +4,7 @@ description: "This tutorial shows how to configure the prerequisites for creatin
 author: tarynpratt
 ms.author: tarynpratt
 ms.reviewer: mathoma
-ms.date: 11/10/2021
+ms.date: 04/18/2023
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: tutorial
@@ -288,17 +288,16 @@ After your second domain controller is configured, follow the same steps as befo
 
 ## Configure domain accounts
 
-After your domain controller(s) have been configured, and you've set your DNS server(s) in the Azure portal, create domain accounts for the user who is installing SQL Server, and for the SQL Server service account. 
+After your domain controller(s) have been configured, and you've set your DNS server(s) in the Azure portal, create domain accounts for the user who is installing SQL Server, and for the SQL Server service account.
 
-Configure three accounts in total, one installation account for both SQL Server VMs, and then a service account for each SQL Server VM. For example, use the values in the following table for the accounts:
+Configure two accounts in total, one installation account and then a service account for both SQL Server VMs. For example, use the values in the following table for the accounts:
 
 |Account  | VM  |Full domain name  |Description   |
 |---------|---------|---------|---------|
 |Install    |Both| Corp\Install        |Log into either VM with this account to configure the cluster and availability group. |
-|SQLSvc1     |SQL-VM-1 |Corp\SQLSvc1 | Use this account for the SQL Server service on the first SQL Server VM. |
-|SQLSvc2     |SQL-VM2 |Corp\SQLSvc2| Use this account for the SQL Server service on the second SQL Server VM.|
+|SQLSvc     |Both |Corp\SQLSvc | Use this account for the SQL Server service on the both SQL Server VMs. |
 
-Follow these steps to create each account: 
+Follow these steps to create each account:
 
 1. Connect to your primary domain controller machine, such as **DC-VM-1**. .
 1. In **Server Manager**, select **Tools**, and then select **Active Directory Administrative Center**.
@@ -519,16 +518,16 @@ To add the [NT AUTHORITY\SYSTEM] and grant appropriate permissions, follow these
 
 ### Set the SQL Server service accounts
 
-The SQL Server service on each VM needs to use a dedicated domain account.  Use the domain accounts you created earlier: **Corp\SQLSvc1** for **SQL-VM-1** and **Corp\SQLSvc2** for **SQL-VM-2**. 
+The SQL Server service on each VM needs to use a dedicated domain account.  Use the domain accounts you created earlier: **Corp\SQLSvc** for both **SQL-VM-1** and **SQL-VM-2**.
 
 To set the service account, follow these steps: 
 
 1. Connect to the first SQL Server VM through the Remote Desktop Protocol (RDP) by using the *\<MachineName\>\DomainAdmin* account, such as `SQL-VM-1\DomainAdmin`.
 1. Open **SQL Server Configuration Manager**.
 1. Right-click the SQL Server service, and then select **Properties**.
-1. Provide the account (**Corp\SQLSvc1**) and password.
+1. Provide the account (**Corp\SQLSvc**) and password.
 1. Select **Apply** to commit your change and restart the SQL Server service. 
-1. Repeat these steps on the other SQL Server VM (SQL-VM-1), signing in with the machine domain account, such as `SQL-VM-2\DomainAdmin`, and providing the second service account (**Corp\SQLSvc2**). 
+1. Repeat these steps on the other SQL Server VM (SQL-VM-1), signing in with the machine domain account, such as `SQL-VM-2\DomainAdmin`, and providing the service account (**Corp\SQLSvc**). 
 
 
 ## Create Azure Storage Account

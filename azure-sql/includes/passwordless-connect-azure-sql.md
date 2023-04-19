@@ -56,24 +56,6 @@ The Azure portal allows you to work with managed identities and run queries agai
 
     This SQL script creates a SQL database user that maps back to the managed identity of your App Service instance. It also assigns the necessary SQL roles to the user to allow your app to read, write, and modify the data and schema of your database. After this step is completed, your services are connected.
 
-### Add the connection string to the App Service configurations
-
-1) In the Azure portal, navigate to your App Service and select **Configuration** on the left navigation.
-
-1) On the **Application settings** tab, select **New connection string**.
-
-    :::image type="content" source="../database/media/passwordless-connections/add-connection-string.png" lightbox="../database/media/passwordless-connections/add-connection-string.png" alt-text="A screenshot showing how to add a connection string for passwordless connections.":::
-
-1) In the **Add/Edit connection string** flyout menu, enter the following values:
-
-    * **Name**: Enter a value of *AZURE_SQL_CONNECTIONSTRING*.
-    * **Value**: Paste the same connection string value you configured locally.
-    * **Type**: Select **SQLAzure**.
-
-1) Select **OK** at the bottom of the panel.
-
-1) Select **Save** at the top of the page.
-
 ---
 
 > [!IMPORTANT]

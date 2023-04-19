@@ -59,7 +59,7 @@ For the steps ahead, create a .NET Minimal Web API using either the .NET CLI or 
 
 To connect to Azure SQL Database by using .NET, install `Microsoft.Data.SqlClient`. This package acts as a data provider for connecting to databases, executing commands, and retrieving results.
 
-> [!WARNING]
+> [!CAUTION]
 > Make sure to install `Microsoft.Data.SqlClient` and not `System.Data.SqlClient`. `Microsoft.Data.SqlClient` is a newer version of the SQL client library that provides additional capabilities.
 
 ## [Visual Studio](#tab/visual-studio)

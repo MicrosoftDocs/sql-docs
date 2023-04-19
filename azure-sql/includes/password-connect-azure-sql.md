@@ -1,41 +1,4 @@
-There are multiple tools available to connect your App Service to Azure SQL Database:
+No additional steps are required for SQL Authentication to connect the App Service to Azure SQL Database. The connection string you configured in the `appsettings.json` file includes the necessary credentials to authenticate.
 
-## [Service Connector (Recommended)](#tab/service-connector)
-
-Service Connector is a tool that streamlines authenticated connections between different services in Azure. Service Connector currently supports connecting an App Service to a SQL database via the Azure CLI using the `az webapp connection create sql` command.
-
-```azurecli
-az webapp connection create sql \
-    -g <app-service-resource-group> \
-    -n <app-service-name> \
-    --tg <database-server-resource-group> \
-    --server <database-server-name> \
-    --database <database-name> \
-    --config-connstr
-```
-
-You can verify the changes made by Service Connector on the App Service settings.
-
-1) Navigate to the **Configuration** page for your App Service.
-
-1) Under the **Connection strings** tab, you should see a connection string called **AZURE_SQL_CONNECTIONSTRING**. Select the **Click to show value** text to view the generated connection string. The name of this connection string matches with the one you configured in your app locally, so it will be discovered automatically when running in Azure.
-
-## [Azure portal](#tab/azure-portal)
-
-1) In the Azure portal, navigate to your App Service and select **Configuration** on the left navigation.
-
-1) On the **Application settings** tab, select **New connection string**.
-
-    :::image type="content" source="../database/media/passwordless-connections/add-connection-string.png" lightbox="../database/media/passwordless-connections/add-connection-string.png" alt-text="A screenshot showing how to add a connection string.":::
-
-1) In the **Add/Edit connection string** flyout menu, enter the following values:
-
-    * **Name**: Enter a value of *AZURE_SQL_CONNECTIONSTRING*.
-    * **Value**: Paste the same connection string value you configured locally.
-    * **Type**: Select **SQLAzure**.
-
-1) Select **OK** at the bottom of the panel.
-
-1) Select **Save** at the top of the page.
-
----
+> [!WARNING]
+> Use caution when managing connection strings that contain secrets such as usernames, passwords, or access keys. These secrets shouldn't be committed to source control or placed in unsecure locations where they might be accessed by unintended users. For a real application in a production-grade Azure environment, you can store connection strings in a secure location such as App Service configuration settings or Azure Key Vault. During local development, you'll generally connect to a local database that doesn't require storing secrets or connecting directly to Azure.

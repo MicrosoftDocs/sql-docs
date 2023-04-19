@@ -10,7 +10,7 @@ ms.subservice: security
 ms.custom: devx-track-azurecli
 ms.topic: how-to
 zone_pivot_groups: as1-azuresql-sql
-monikerRange: "= azuresqldb-current"
+monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
 ---
 
 # Enable automatic digest storage

@@ -28,7 +28,7 @@ Requests for remote service bindings use the message type `https://schemas.micro
 For example, the following message is a request for a remote service binding to the service **https://Adventure-Works.com/Elsewhere**:
 
 ```xml
-    <MissingRemoteServiceBinding xmlns="http://schemas.microsoft.com/SQL/ServiceBroker/BrokerConfigurationNotice/MissingRemoteServiceBinding">
+    <MissingRemoteServiceBinding xmlns="https://schemas.microsoft.com/SQL/ServiceBroker/BrokerConfigurationNotice/MissingRemoteServiceBinding">
       <SERVICE_NAME>https://Adventure-Works.com/Elsewhere</SERVICE_NAME>
     </MissingRemoteServiceBinding>
 ```

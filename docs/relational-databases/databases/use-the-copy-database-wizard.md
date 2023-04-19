@@ -3,7 +3,7 @@ title: "Use the Copy Database Wizard"
 description: "Use the Copy Database Wizard"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "10/21/2021"
+ms.date: "04/14/2023"
 ms.service: sql
 ms.topic: conceptual
 f1_keywords:
@@ -76,7 +76,8 @@ The Copy Database Wizard moves or copies databases and certain server objects ea
 
 > [!WARNING]
 > The **detach and attach** method will cause the source and destination database ownership to become set to the login executing the **Copy Database Wizard**. See [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md) to change the ownership of a database.
-  
+
+- Copy database fails if the `model` database in the destination server contains a user account which also exists in the source database. This creates an expected error, as when the new database is created, the user is automatically added to the new database from the `model`. Then, the copy database steps fail to create the user of the same name on the target database. To prevent, make sure that the `model` database on the target server and the source database of the copy database wizard do not have any users of the same name.
   
 ##  <a name="Prerequisites"></a> Prerequisites  
 -   Ensure that SQL Server Agent is started on the destination server.  

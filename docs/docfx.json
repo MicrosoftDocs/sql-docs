@@ -417,7 +417,8 @@
           "database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md",
           "sql-server/failover-clusters/install/rename-a-sql-server-failover-cluster-instance.md",
           "ssms/agent/**/*.md",
-          "database-engine/install-windows/**/*.md"        ]
+          "database-engine/install-windows/**/*.md"
+        ]
       },
       "sensitive-language-sl": {
         "exclude": [
@@ -428,7 +429,8 @@
       },
       "sensitive-language-wl": {
         "exclude": [
-          "big-data-cluster/reference-config-spark-hadoop.md"
+          "big-data-cluster/reference-config-spark-hadoop.md",
+          "relational-databases/errors-events/**/*.md"
         ]
       },
       "sensitive-language-bl": {

@@ -2,7 +2,7 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 02/17/2023
+ms.date: 03/22/2023
 ms.topic: include
 ---
 | Error| Severity | Event logged | Description|
@@ -225,7 +225,7 @@ ms.topic: include
 | 19489 | 16 | No | The attempt to create FILESTREAM RsFx endpoint failed with HRESULT 0x%x. |
 | 19490 | 16 | No | The attempt to delete FILESTREAM RsFx endpoint failed with HRESULT 0x%x. |
 | 19491 | 10 | No | Always On: The Windows Server Failover Clustering (WSFC) service was started using /forcequorum. This is an informational message only. No user action is required. |
-| 19492 | 16 | No | The availability database %ls in availailability group %ls is in an invalid state to perform an internal operation. Refer to the error code for more details. If this condition persists, contact the system administrator. |
+| 19492 | 16 | No | The availability database %ls in availability group %ls is in an invalid state to perform an internal operation. Refer to the error code for more details. If this condition persists, contact the system administrator. |
 | 19493 | 16 | No | Corrupt secondary replica %ls causing start scan to fail for database with ID %d. Refer to the SQL Server error log for information about the errors that were encountered.  If this condition persists, contact the system administrator. |
 | 19494 | 10 | No | Automatic seeding of availability database '%ls' in availability group '%.\*ls' failed with a transient error. The operation will be retried. |
 | 19495 | 10 | No | Automatic seeding of availability database '%ls' in availability group '%.\*ls' failed with an unrecoverable error. Correct the problem, then issue an ALTER AVAILABILITY GROUP command to set SEEDING_MODE = AUTOMATIC on the replica to restart seeding. |

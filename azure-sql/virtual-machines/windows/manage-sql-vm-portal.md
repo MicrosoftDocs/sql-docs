@@ -4,7 +4,7 @@ description: Learn how to access the SQL virtual machines resource in the Azure 
 author: bluefooted
 ms.author: pamela
 ms.reviewer: mathoma
-ms.date: 03/27/2023
+ms.date: 04/05/2023
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to
@@ -96,9 +96,6 @@ Use the **Backups** page of the SQL virtual machines resource to configure your 
 
 To learn more, see, [Automated patching](automated-backup.md). 
 
-## Additional features
-
-Manage additional features of SQL Server on the **Additional features** tab, such as enabling [R Services (Advanced analytics)](/sql/machine-learning/r/sql-server-r-services) or [least privilege mode](sql-server-iaas-agent-extension-automate-management.md). Enabling R Services would restart your SQL Server service.
 
 ## High availability (Preview)
 
@@ -106,14 +103,19 @@ Once you've configured your [availability group by using the Azure portal](avail
 
 :::image type="content" source="media/availability-group-az-portal-configure/healthy-availability-group.png" alt-text="Screenshot of the Azure portal, SQL virtual machines resource, showing where to check the status of your availability group from the high availability page.":::
 
+## SQL best practices assessment
+
+Use the **SQL best practices assessment** page of the SQL virtual machines resource to assess the health of your SQL Server VM. Once the feature is enabled, your SQL Server instances and databases are scanned and recommendations are surfaced to improve performance (indexes, statistics, trace flags, and so on) and identify missing best practices configurations.  
+
+To learn more, see [SQL best practices assessment for SQL Server on Azure VMs](sql-assessment-for-sql-vm.md).
+
 ## Security Configuration 
 
-Use the **Security Configuration** page of the SQL virtual machines resource to configure SQL Server security settings such as which port to use, or to enable Azure Key Vault integration, or enable authentication methods to connect to your SQL Server instance - such as SQL authentication, or if you're on SQL Server 2022, [Azure Active Directory (Azure AD) authentication (currently in preview)](security-considerations-best-practices.md#azure-ad-authentication-preview). 
+Use the **Security Configuration** page of the SQL virtual machines resource to configure SQL Server security settings such as Azure Key Vault integration, [least privilege mode](sql-server-iaas-agent-extension-automate-management.md) or if you're on SQL Server 2022, [Azure Active Directory (Azure AD) authentication](configure-azure-ad-authentication-for-sql-vm.md). 
 
 :::image type="content" source="./media/manage-sql-vm-portal/sql-vm-security-configuration.png" alt-text="Screenshot of the Azure portal, the SQL Server security page, where you can enable authentication.":::
 
 To learn more, see the [Security best practices](security-considerations-best-practices.md).
-
 
 <a name="security-center"></a>
 
@@ -123,11 +125,11 @@ Use the **Defender for SQL** page of the SQL virtual machine's resource to view 
 
 :::image type="content" source="./media/manage-sql-vm-portal/sql-vm-security-center.png" alt-text="Screenshot of the Azure portal, SQL virtual machines resource, showing where to configure SQL Server Defender for Cloud settings.":::
 
-## SQL best practices assessment
+## SQL IaaS Agent Extension Settings 
 
-Use the **SQL best practices assessment** page of the SQL virtual machines resource to assess the health of your SQL Server VM. Once the feature is enabled, your SQL Server instances and databases are scanned and recommendations are surfaced to improve performance (indexes, statistics, trace flags, and so on) and identify missing best practices configurations.  
+From the **SQL IaaS Agent Extension Settings** page, you can [repair the extension](sql-agent-extension-troubleshoot-known-issues.md#repair-extension) and you can enable auto upgrade to ensure you're automatically receiving updates for the extension each month. 
 
-To learn more, see [SQL best practices assessment for SQL Server on Azure VMs](sql-assessment-for-sql-vm.md).
+:::image type="content" source="media/manage-sql-vm-portal/sql-iaas-agent-settings.png" alt-text="Screenshot of the SQL IaaS Agent Extension Settings page for your SQL virtual machines resource in the Azure portal.":::
 
 ## Next steps
 

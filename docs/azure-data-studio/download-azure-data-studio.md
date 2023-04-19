@@ -4,7 +4,7 @@ description: Download and install Azure Data Studio for Windows, macOS, or Linux
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan, randolphwest
-ms.date: 03/22/2023
+ms.date: 04/12/2023
 ms.service: azure-data-studio
 ms.topic: overview
 ms.custom: intro-overview
@@ -21,20 +21,20 @@ For more information about Azure Data Studio, visit [What is Azure Data Studio?]
 
 ## Download Azure Data Studio
 
-Azure Data Studio 1.42.0 is the latest general availability (GA) version.
+Azure Data Studio 1.43.0 is the latest general availability (GA) version.
 
-- Release number: 1.42.0
-- Release date: March 22, 2023
+- Release number: 1.43.0
+- Release date: April 12, 2023
 
 | Platform | Type | Download |
 | --- | --- | --- |
-| Windows | User Installer | [64-bit](https://go.microsoft.com/fwlink/?linkid=2228644)&emsp;[ARM64](https://go.microsoft.com/fwlink/?linkid=2229004) |
-| | System Installer | [64-bit](https://go.microsoft.com/fwlink/?linkid=2228645)&emsp;[ARM64](https://go.microsoft.com/fwlink/?linkid=2228647) |
-| | .zip | [64 bit](https://go.microsoft.com/fwlink/?linkid=2228646)&emsp;[ARM64](https://go.microsoft.com/fwlink/?linkid=2229005) |
-| Linux | .tar.gz | [64-bit](https://go.microsoft.com/fwlink/?linkid=2229006) |
-| | .deb | [64-bit](https://go.microsoft.com/fwlink/?linkid=2228180) |
-| | .rpm | [64-bit](https://go.microsoft.com/fwlink/?linkid=2228650) |
-| macOS | .zip | [Universal](https://go.microsoft.com/fwlink/?linkid=2228649)&emsp;[Intel Chip](https://go.microsoft.com/fwlink/?linkid=2228179)&emsp;[Apple Silicon](https://go.microsoft.com/fwlink/?linkid=2228648) |
+| Windows | User Installer | [64-bit](https://go.microsoft.com/fwlink/?linkid=2231303)&emsp;[ARM64](https://go.microsoft.com/fwlink/?linkid=2231304) |
+| | System Installer | [64-bit](https://go.microsoft.com/fwlink/?linkid=2230943)&emsp;[ARM64](https://go.microsoft.com/fwlink/?linkid=2231305) |
+| | .zip | [64 bit](https://go.microsoft.com/fwlink/?linkid=2230772)&emsp;[ARM64](https://go.microsoft.com/fwlink/?linkid=2230944) |
+| Linux | .tar.gz | [64-bit](https://go.microsoft.com/fwlink/?linkid=2230775) |
+| | .deb | [64-bit](https://go.microsoft.com/fwlink/?linkid=2231306) |
+| | .rpm | [64-bit](https://go.microsoft.com/fwlink/?linkid=2230946) |
+| macOS | .zip | [Universal](https://go.microsoft.com/fwlink/?linkid=2230945)&emsp;[Intel Chip](https://go.microsoft.com/fwlink/?linkid=2230774)&emsp;[Apple Silicon](https://go.microsoft.com/fwlink/?linkid=2230773) |
 
 If you have comments or suggestions or want to report a problem with downloading Azure Data Studio, submit an issue to our team on the [Azure Data Studio feedback page](https://github.com/microsoft/azuredatastudio/issues/).
 
@@ -50,19 +50,19 @@ We recommend the *user installer*, which simplifies installations and updates an
 
 **User installer** (recommended)
 
-1. Download and run the [Azure Data Studio user installer for Windows](https://go.microsoft.com/fwlink/?linkid=2215273).
+1. Download and run the [Azure Data Studio user installer for Windows](https://azuredatastudio-update.azurewebsites.net/latest/win32-x64-user/stable).
 
 1. Start the Azure Data Studio app.
 
 **System installer**
 
-1. Download and run the [Azure Data Studio system installer for Windows](https://go.microsoft.com/fwlink/?linkid=2215525).
+1. Download and run the [Azure Data Studio system installer for Windows](https://azuredatastudio-update.azurewebsites.net/latest/win32-x64/stable).
 
 1. Start the Azure Data Studio app.
 
 **.zip file**
 
-1. Download the [Azure Data Studio .zip file for Windows](https://go.microsoft.com/fwlink/?linkid=2215526).
+1. Download the [Azure Data Studio .zip file for Windows](https://azuredatastudio-update.azurewebsites.net/latest/win32-x64-archive/stable).
 
 1. Go to the downloaded file and extract it.
 
@@ -101,7 +101,7 @@ For Windows, install Azure Data Studio in the background without prompts using t
 
 ### macOS installation
 
-1. Download [Azure Data Studio for macOS](https://go.microsoft.com/fwlink/?linkid=2215527).
+1. Download [Azure Data Studio for macOS](https://azuredatastudio-update.azurewebsites.net/latest/darwin-universal/stable).
 
 1. To expand the contents of the .zip file, double-click it.
 
@@ -122,7 +122,7 @@ You can install Azure Data Studio on Red Hat Enterprise Linux (RHEL), SUSE Linux
 
 #### Install using .rpm file
 
-1. Download Azure Data Studio for Red Hat Enterprise Linux by using the [.rpm](https://go.microsoft.com/fwlink/?linkid=2215347) file.
+1. Download Azure Data Studio for Red Hat Enterprise Linux by using the [.rpm](https://azuredatastudio-update.azurewebsites.net/latest/linux-rpm-x64/stable) file.
 
 1. To extract the file, open a new terminal window, and then run the following commands:
 
@@ -145,7 +145,7 @@ yum install libXScrnSaver
 
 #### Install using .tar.gz file
 
-1. Download Azure Data Studio for Red Hat Enterprise Linux by using the [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2215421) file.
+1. Download Azure Data Studio for Red Hat Enterprise Linux by using the [.tar.gz](https://azuredatastudio-update.azurewebsites.net/latest/linux-x64/stable) file.
 
 1. To extract the file, open a new terminal window, and then run the following commands:
 
@@ -173,7 +173,7 @@ yum install libxss1 libgconf-2-4 libunwind8
 
 #### Install using .rpm file
 
-1. Download Azure Data Studio for SUSE Linux Enterprise Server by using the [.rpm](https://go.microsoft.com/fwlink/?linkid=2215347) file.
+1. Download Azure Data Studio for SUSE Linux Enterprise Server by using the [.rpm](https://azuredatastudio-update.azurewebsites.net/latest/linux-rpm-x64/stable) file.
 
 1. To extract the file, open a new terminal window, and then run the following commands:
 
@@ -196,7 +196,7 @@ sudo zypper install libXScrnSaver
 
 #### Install using .tar.gz file
 
-1. Download Azure Data Studio for SUSE Linux Enterprise Server by using the [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2215421) file.
+1. Download Azure Data Studio for SUSE Linux Enterprise Server by using the [.tar.gz](https://azuredatastudio-update.azurewebsites.net/latest/linux-x64/stable) file.
 
 1. To extract the file, open a new terminal window, and then run the following commands:
 
@@ -224,7 +224,7 @@ sudo zypper install libxss1 libgconf-2-4 libunwind8
 
 #### Install using .deb file
 
-1. Download Azure Data Studio for Ubuntu or Debian by using the [.deb](https://go.microsoft.com/fwlink/?linkid=2222875) file.
+1. Download Azure Data Studio for Ubuntu or Debian by using the [.deb](https://azuredatastudio-update.azurewebsites.net/latest/linux-deb-x64/stable) file.
 
 1. To extract the .deb file, open a new terminal window, and then run the following commands:
 
@@ -247,7 +247,7 @@ sudo apt-get install libunwind8
 
 #### Install using .tar.gz file
 
-1. Download Azure Data Studio for Ubuntu or Debian by using the [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2215421) file.
+1. Download Azure Data Studio for Ubuntu or Debian by using the [.tar.gz](https://azuredatastudio-update.azurewebsites.net/latest/linux-x64/stable) file.
 
 1. To extract the file, open a new terminal window, and then run the following commands:
 

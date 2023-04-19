@@ -3,7 +3,7 @@ title: "Log Shipping and Replication (SQL Server)"
 description: Learn how log shipping applies the transaction log from every insertion, update, or deletion made on the primary database to the secondary database.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: "03/14/2017"
+ms.date: "04/11/2023"
 ms.service: sql
 ms.subservice: log-shipping
 ms.topic: conceptual
@@ -24,7 +24,7 @@ helpviewer_keywords:
  For information about recovering databases involved in replication without any need to reconfigure replication, see [Back Up and Restore Replicated Databases](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).  
   
 > [!NOTE]  
->  We recommend using database mirroring, rather than log shipping, to provide availability for the publication database. For more information, see [Database Mirroring and Replication &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
+>  Use Always On availability groups, rather than log shipping, to provide availability for the publication database. For more information, see [Configure replication with Always On availability groups](../availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md).
   
 ## Requirements and Procedures for Replicating from the Secondary If the Primary Is Lost  
  Be aware of the following requirements and considerations:  
@@ -107,7 +107,5 @@ helpviewer_keywords:
   
 ## See Also  
  [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md)   
- [About Log Shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [Database Mirroring and Replication &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)  
-  
-  
+ [About Log Shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)
+ [Configure replication with Always On availability groups](../availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)

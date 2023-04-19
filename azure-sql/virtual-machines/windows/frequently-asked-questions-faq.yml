@@ -331,7 +331,7 @@ sections:
       - question: |
           Is it possible to repair the SQL IaaS Agent extension? 
         answer: |
-              Yes. Navigate to the **SQL virtual machines** resource for your SQL Server VM, and choose **Repair** under **Support & troubleshooting** to open the [repair](sql-agent-extension-manually-register-single-vm.md#repair-extension) page and repair the extension. 
+              Yes. Navigate to the **SQL virtual machines** resource for your SQL Server VM, and choose **Repair** under **Support & troubleshooting** to open the [repair](sql-agent-extension-troubleshoot-known-issues.md#repair-extension) page and repair the extension. 
 
       - question: |
           Can I register with the SQL IaaS Agent extension from the Azure portal?

@@ -4,7 +4,7 @@ description: Learn how to connect to a database in Azure SQL Database and query 
 author: alexwolfmsft
 ms.author: alexwolf
 ms.custom: passwordless-dotnet
-ms.date: 02/10/2023
+ms.date: 04/12/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: quickstart
@@ -13,12 +13,12 @@ monikerRange: "= azuresql || = azuresql-db"
 
 # Connect to and query Azure SQL Database using .NET and the Microsoft.Data.SqlClient library
 
-This quickstart describes how to connect an application to a database in Azure SQL Database and perform queries using .NET and the `Microsoft.Data.SqlClient` library. This quickstart follows the recommended passwordless approach to connect to the database. You can learn more about passwordless connections on the [passwordless hub](/azure/developer/intro/passwordless-overview).
+This quickstart describes how to connect an application to a database in Azure SQL Database and perform queries using .NET and the [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient) library. This quickstart follows the recommended passwordless approach to connect to the database. You can learn more about passwordless connections on the [passwordless hub](/azure/developer/intro/passwordless-overview).
 
 ## Prerequisites
 
 * An [Azure subscription](https://azure.microsoft.com/free/dotnet/).
-* A SQL database configured with Azure Active Directory (Azure AD) authentication. You can create one using the [Create database quickstart](./single-database-create-quickstart.md).
+* An Azure SQL database configured with Azure Active Directory (Azure AD) authentication. You can create one using the [Create database quickstart](./single-database-create-quickstart.md).
 * The latest version of the [Azure CLI](/cli/azure/get-started-with-azure-cli).
 * [Visual Studio](https://visualstudio.microsoft.com/vs/) or later with the **ASP.NET and web development** workload.
 * [.NET 7.0](https://dotnet.microsoft.com/download) or later.
@@ -86,26 +86,26 @@ The `Microsoft.Data.SqlClient` library uses a class called `DefaultAzureCredenti
 
 Complete the following steps to connect to Azure SQL Database by using the SqlClient library and `DefaultAzureCredential`:
 
-1) Update the `environmentVariables` section of the `launchSettings.json` file to match the following code. Remember to update the `<your database-server-name>` and `<your-database-name>` placeholders.
+1) Update the `environmentVariables` section of the `launchSettings.json` file to match the following code. Remember to update the `<database-server-name>` and `<database-name>` placeholders.
 
     The passwordless connection string includes a configuration value of `Authentication=Active Directory Default`, which instructs the app to use `DefaultAzureCredential` to connect to Azure services. This functionality is implemented internally by the `Microsoft.Data.SqlClient` library. When the app runs locally, it authenticates with the user you're signed into Visual Studio with. Once the app deploys to Azure, the same code discovers and applies the managed identity that is associated with the hosted app, which you'll configure later.
-    
+
     > [!NOTE]
     > Passwordless connection strings are safe to commit to source control, since they do not contain any secrets such as usernames, passwords, or access keys.
-    
+
     ```json
     "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "AZURE_SQL_CONNECTIONSTRING": "Server=tcp:<your-database-servername>.database.windows.net;Database=<your-database-name>;Authentication=Active Directory Default;"
+        "AZURE_SQL_CONNECTIONSTRING": "Server=tcp:<database-server-name>.database.windows.net;Database=<database-name>;Authentication=Active Directory Default;"
     }
     ```
 
 1) Add the following sample code to the bottom of the `Program.cs` file above `app.Run()`. This code performs the following important steps:
 
     * Retrieves the passwordless connection string from the environment variables
-    * Creates a `Person` table in the database during startup (for testing scenarios only)
-    * Creates an endpoint to retrieve the Person records stored in the database
-    * Creates an endpoint to add new Person records to the database
+    * Creates a `Persons` table in the database during startup (for testing scenarios only)
+    * Creates an HTTP GET endpoint to retrieve all records stored in the `Persons` table
+    * Creates an HTTP POST endpoint to add new records to the `Persons` table
 
     ```csharp
     string connectionString = Environment.GetEnvironmentVariable("AZURE_SQL_CONNECTIONSTRING");
@@ -113,61 +113,50 @@ Complete the following steps to connect to Azure SQL Database by using the SqlCl
     try
     {
         // Table would be created ahead of time in production
-        var conn = new SqlConnection(connectionString);
+        using var conn = new SqlConnection(connectionString);
         conn.Open();
     
         var command = new SqlCommand(
             "CREATE TABLE Persons (ID int NOT NULL PRIMARY KEY IDENTITY, FirstName varchar(255), LastName varchar(255));",
             conn);
-        SqlDataReader reader = command.ExecuteReader();
-    
-        reader.Close();
+        using SqlDataReader reader = command.ExecuteReader();
     } catch(Exception e)
     {
         // Table may already exist
         Console.WriteLine(e.Message);
     }
     
-    app.MapGet("/Person", () =>
-    {
+    app.MapGet("/Person", () => {
         var rows = new List<string>();
 
-        using (var conn = new SqlConnection(connectionString))
+        using var conn = new SqlConnection(connectionString);
+        conn.Open();
+    
+        var command = new SqlCommand("SELECT * FROM Persons", conn);
+        using SqlDataReader reader = command.ExecuteReader();
+    
+        if (reader.HasRows)
         {
-            conn.Open();
-
-            var command = new SqlCommand("SELECT * FROM Persons", conn);
-            SqlDataReader reader = command.ExecuteReader();
-
-            if (reader.HasRows)
+            while (reader.Read())
             {
-                while (reader.Read())
-                {
-                    rows.Add($"{reader.GetInt32(0)}, {reader.GetString(1)}, {reader.GetString(2)}");
-                }
+                rows.Add($"{reader.GetInt32(0)}, {reader.GetString(1)}, {reader.GetString(2)}");
             }
-
-            reader.Close();
-        };
-
+        }
+    
         return rows;
     })
     .WithName("GetPersons")
     .WithOpenApi();
     
-    app.MapPost("/Person", (Person person) =>
-    {
-        using(var conn = new SqlConnection(connectionString)) 
-        {
-            conn.Open();
-        
-            var command = new SqlCommand(
-                  $"INSERT INTO Persons (firstName, lastName) VALUES ('{person.FirstName}', '{person.LastName}')",
-                  conn);
-        
-            SqlDataReader reader = command.ExecuteReader();
-            reader.Close();
-        };
+    app.MapPost("/Person", (Person person) => {
+        using var conn = new SqlConnection(connectionString);
+        conn.Open();
+    
+        var command = new SqlCommand(
+            $"INSERT INTO Persons (firstName, lastName) VALUES ('{person.FirstName}', '{person.LastName}')",
+            conn);
+    
+        using SqlDataReader reader = command.ExecuteReader();
     })
     .WithName("CreatePerson")
     .WithOpenApi();

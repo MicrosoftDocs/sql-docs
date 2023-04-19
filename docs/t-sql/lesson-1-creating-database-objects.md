@@ -4,16 +4,18 @@ description: This lesson shows you how to create a database, create a table in t
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.date: 12/02/2022
+ms.date: 04/19/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: tutorial
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-
 # Lesson 1: Create and query database objects
 
 [!INCLUDE[sql-asdb-asdbmi-pdw-md](../includes/applies-to-version/sql-asdb-asdbmi-pdw.md)]
+
+> [!NOTE]  
+> The [Get Started Querying with Transact-SQL](/training/paths/get-started-querying-with-transact-sql/) learning path provides more in-depth content, along with practical examples.
 
 This lesson shows you how to create a database, create a table in the database, and then access and change the data in the table. Because this lesson is an introduction to using [!INCLUDE[tsql](../includes/tsql-md.md)], it doesn't use or describe the many options that are available for these statements.
 
@@ -37,8 +39,8 @@ To complete this tutorial, you need SQL Server Management Studio and access to a
 
 If you don't have a SQL Server instance, create one. To create one, select your platform from the following links. If you choose SQL Authentication, use your SQL Server login credentials.
 
-- **Windows**: [Download SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- **Linux**: [Download SQL Server 2017 in a container](../linux/quickstart-install-connect-docker.md).
+- **Windows**: [Download SQL Server 2022 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+- **Linux**: [Download SQL Server 2022 in a container](../linux/quickstart-install-connect-docker.md).
 
 ## Create a database
 
@@ -51,7 +53,7 @@ Like many [!INCLUDE[tsql](../includes/tsql-md.md)] statements, the [CREATE DATAB
     GO
     ```
 
-1. Use the pointer to select the words `CREATE DATABASE`, and then press **F1**. The `CREATE DATABASE` article in SQL Server Books Online should open. You can use this technique to find the complete syntax for `CREATE DATABASE` and for the other statements that are used in this tutorial.
+1. Use the pointer to select the words `CREATE DATABASE`, and then press **F1**. The `CREATE DATABASE` article should open. You can use this technique to find the complete syntax for `CREATE DATABASE` and for the other statements that are used in this tutorial.
 
 1. In Query Editor, press **F5** to execute the statement and create a database named `TestData`.
 
@@ -60,13 +62,13 @@ When you create a database, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md
 > [!NOTE]  
 > The keyword GO separates statements when more than one statement is submitted in a single batch. GO is optional when the batch contains only one statement.
 
-## Create a Table
+## Create a table
 
 [!INCLUDE[sql-asdb-asa-pdw](../includes/applies-to-version/sql-asdb-asa-pdw.md)]
 
 To create a table, you must provide a name for the table, and the names and data types of each column in the table. It is also a good practice to indicate whether null values are allowed in each column. To create a table, you must have the `CREATE TABLE` permission, and the `ALTER SCHEMA` permission on the schema that will contain the table. The [db_ddladmin](../relational-databases/security/authentication-access/database-level-roles.md) fixed database role has these permissions.
 
-Most tables have a primary key, made up of one or more columns of the table. A primary key is always unique. The [!INCLUDE[ssDE](../includes/ssde-md.md)] will enforce the restriction that any primary key value can't be repeated in the table.
+Most tables have a primary key, made up of one or more columns of the table. A primary key is always unique. The [!INCLUDE[ssDE](../includes/ssde-md.md)] enforces the restriction that any primary key value can't be repeated in the table.
 
 For a list of data types and links for a description of each, see [Data Types (Transact-SQL)](../t-sql/data-types/data-types-transact-sql.md).
 
@@ -97,7 +99,7 @@ GO
 
 ## Insert and update data in a table
 
-Now that you have created the `Products` table, you are ready to insert data into the table by using the INSERT statement. After the data is inserted, you will change the content of a row by using an UPDATE statement. You will use the WHERE clause of the UPDATE statement to restrict the update to a single row. The four statements will enter the following data.
+Now that you have created the `Products` table, you are ready to insert data into the table by using the INSERT statement. After the data is inserted, you will change the content of a row by using an UPDATE statement. You use the WHERE clause of the UPDATE statement to restrict the update to a single row. The four statements enter the following data.
 
 | ProductID | ProductName | Price | ProductDescription |
 | --- | --- | --- | --- |
@@ -106,7 +108,7 @@ Now that you have created the `Products` table, you are ready to insert data int
 | 75 | Tire Bar | | Tool for changing tires. |
 | 3000 | 3 mm Bracket | 0.52 | |
 
-The basic syntax is: INSERT, table name, column list, VALUES, and then a list of the values to be inserted. The two hyphens in front of a line indicate that the line is a comment and the text will be ignored by the compiler. In this case, the comment describes a permissible variation of the syntax.
+The basic syntax is: INSERT, table name, column list, VALUES, and then a list of the values to be inserted. The two hyphens in front of a line indicate that the line is a comment and the text is ignored by the compiler. In this case, the comment describes a permissible variation of the syntax.
 
 ### Insert data into a table
 
@@ -172,7 +174,7 @@ Type and execute the following `UPDATE` statement to change the `ProductName` of
 
 ## Read data from a table
 
-Use the SELECT statement to read the data in a table. The SELECT statement is one of the most important [!INCLUDE[tsql](../includes/tsql-md.md)] statements, and there are many variations in the syntax. For this tutorial, you will work with five simple versions.
+Use the SELECT statement to read the data in a table. The SELECT statement is one of the most important [!INCLUDE[tsql](../includes/tsql-md.md)] statements, and there are many variations in the syntax. For this tutorial, you will work with five basic versions.
 
 ### Read the data in a table
 
@@ -194,7 +196,7 @@ Use the SELECT statement to read the data in a table. The SELECT statement is on
    GO
    ```
 
-1. You can omit columns that you don't want to return. The columns will be returned in the order that they are listed.
+1. You can omit columns that you don't want to return. The columns are returned in the order that they are listed.
 
    ```sql
    -- Returns only two of the columns from the table
@@ -213,7 +215,7 @@ Use the SELECT statement to read the data in a table. The SELECT statement is on
    GO
    ```
 
-1. You can work with the values in the columns as they are returned. The following example performs a mathematical operation on the `Price` column. Columns that have been changed in this way won't have a name unless you provide one by using the `AS` keyword.
+1. You can work with the values in the columns as they are returned. The following example performs a mathematical operation on the `Price` column. Columns that have been changed in this way don't have a name unless you provide one by using the `AS` keyword.
 
    ```sql
    -- Returns ProductName and the Price including a 7% tax
@@ -250,7 +252,7 @@ A view is a stored SELECT statement, and a stored procedure is one or more [!INC
 
 Views are queried like tables and don't accept parameters. Stored procedures are more complex than views. Stored procedures can have both input and output parameters and can contain statements to control the flow of the code, such as IF and WHILE statements. It is good programming practice to use stored procedures for all repetitive actions in the database.
 
-For this example, you will use CREATE VIEW to create a view that selects only two of the columns in the `Products` table. Then, you will use CREATE PROCEDURE to create a stored procedure that accepts a price parameter and returns only those products that cost less than the specified parameter value.
+For this example, you use CREATE VIEW to create a view that selects only two of the columns in the `Products` table. Then, you use CREATE PROCEDURE to create a stored procedure that accepts a price parameter and returns only those products that cost less than the specified parameter value.
 
 ### Create a view
 
@@ -304,4 +306,4 @@ The next article teaches you how to configure permissions on database objects. T
 
 Go to the next article to learn more:
 > [!div class="nextstepaction"]
-> [Next steps](../t-sql/lesson-2-configuring-permissions-on-database-objects.md)
+> [Lesson 2: Configure permissions on database objects](lesson-2-configuring-permissions-on-database-objects.md)

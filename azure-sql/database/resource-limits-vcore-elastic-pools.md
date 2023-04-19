@@ -144,7 +144,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 | vCores | 24 | 32 | 40 | 80 | 128<sup>6</sup> |
 | Memory (GB) | 124.6 | 166.1 | 207.6 | 415.2 | 625 |
 | Max number DBs per pool <sup>1</sup> | 500 | 500 | 500 | 500 | 500 |
-| Columnstore support | Yes | Yes | Yes | Yes | Yes |  |
+| Columnstore support | Yes | Yes | Yes | Yes | Yes |
 | In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A |
 | Max data size (GB) | 3072 | 4096 | 4096 | 4096 | 4096 |
 | Max log size (GB) <sup>2</sup> | 922 | 1229 | 1229 | 1229 | 1229 |
@@ -347,7 +347,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 | Max log size (GB) <sup>2</sup> | 922 | 922 | 922 | 922 | 1229 |
 | TempDB max data size (GB) | 448 | 512 | 576 | 640 | 768 |
 | [Max local storage size](resource-limits-logical-server.md#storage-space-governance) (GB) | 4829 | 4829 | 4829 | 4829 | 4829 |
-| Storage type | Local SSD | Local SSD | Local SSD | Local SSD | Local SSD |  |
+| Storage type | Local SSD | Local SSD | Local SSD | Local SSD | Local SSD |
 | Read IO latency (approximate) | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms |
 | Write IO latency (approximate) | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms |
 | Max data IOPS per pool <sup>3</sup> | 63,000 | 72,000 | 81,000 | 90,000 | 108,000 |

@@ -102,7 +102,7 @@ During the prerequisites, you should have [assigned secondary IP addresses](avai
 Assign these IP addresses as the cluster IP addresses for each relevant subnet.
 
 > [!NOTE]
-> On Windows Server 2019, the cluster creates a **Distributed Server Name** instead of the **Cluster Network Name**, and the cluster name object (CNO) is automatically registered with the IP addresses for all of the nodes in the cluster, eliminating the need for a dedicated windows cluster IP address. If you're on Windows Server 2019, either skip this section, and any other steps that refer to the **Cluster Core Resources** or create a virtual network name (VNN)-based cluster using using [PowerShell](failover-cluster-instance-storage-spaces-direct-manually-configure.md#create-windows-failover-cluster). See the blog [Failover Cluster: Cluster Network Object](https://blogs.windows.com/windowsexperience/2018/08/14/announcing-windows-server-2019-insider-preview-build-17733/#W0YAxO8BfwBRbkzG.97) for more information.
+> On Windows Server 2019, the cluster creates a **Distributed Server Name** instead of the **Cluster Network Name**, and the cluster name object (CNO) is automatically registered with the IP addresses for all of the nodes in the cluster, eliminating the need for a dedicated windows cluster IP address. If you're on Windows Server 2019, either skip this section, and any other steps that refer to the **Cluster Core Resources** or create a virtual network name (VNN)-based cluster using [PowerShell](failover-cluster-instance-storage-spaces-direct-manually-configure.md#create-windows-failover-cluster). See the blog [Failover Cluster: Cluster Network Object](https://blogs.windows.com/windowsexperience/2018/08/14/announcing-windows-server-2019-insider-preview-build-17733/#W0YAxO8BfwBRbkzG.97) for more information.
 
 To change the cluster IP address, follow these steps:
 
@@ -119,7 +119,7 @@ To change the cluster IP address, follow these steps:
 
     :::image type="content" source="./media/availability-group-manually-configure-tutorial-multi-subnet/04-second-static-ip-address.png" alt-text="Repeat the steps for the second failed **IP Address** resource, using the dedicated windows cluster IP address for the subnet of the other SQL Server VM.":::
 
-1. In the **Cluster Core Resources** section, right-click cluster name and select **Bring Online**. Wait until the name and one of the IP address resource are online.
+1. In the **Cluster Core Resources** section, right-click cluster name and select **Bring Online**. Wait until the name and one of the IP address resources are online.
 
 Since the SQL Server VMs are in different subnets the cluster will have an OR dependency on the two dedicated windows cluster IP addresses. When the cluster name resource comes online, it updates the domain controller (DC) server with a new Active Directory (AD) computer account. If the cluster core resources move nodes, one IP address goes offline, while the other comes online, updating the DC server with the new IP address association.  
 
@@ -290,7 +290,7 @@ To create your availability group, follow these steps.
 
 1. Repeat this step again, but choose the other subnet from the drop-down (such as 10.38.2.0/24), and provide the secondary dedicated listener **IPv4 address** from the other SQL Server VM, such as `10.38.2.11`. Select **OK**.
 
-    :::image type="content" source="./media/availability-group-manually-configure-tutorial-multi-subnet/19-add-listener-ip-subnet-2.png" alt-text="Add Listener IP":::
+    :::image type="content" source="./media/availability-group-manually-configure-tutorial-multi-subnet/19-add-listener-ip-subnet-2.png" alt-text="Screenshot of Add IP Address for Listener.":::
 
 1. After reviewing the values on the **Listener** page, select **Next**:
 
@@ -298,18 +298,18 @@ To create your availability group, follow these steps.
 
 1. On the **Select Initial Data Synchronization** page, choose **Full database and log backup** and provide the [network share location you created previously](#create-file-share), such as `\\SQL-VM-1\Backup`.
 
-   :::image type="content" source="./media/availability-group-manually-configure-tutorial-multi-subnet/21-full-data-sync.png" alt-text="Choose full data synchronization":::
+   :::image type="content" source="./media/availability-group-manually-configure-tutorial-multi-subnet/21-full-data-sync.png" alt-text="Choose full data synchronization.":::
 
    > [!NOTE]
    > Full synchronization takes a full backup of the database on the first instance of SQL Server and restores it to the second instance. For large databases, full synchronization is not recommended because it may take a long time. You can reduce this time by manually taking a backup of the database and restoring it with `NO RECOVERY`. If the database is already restored with `NO RECOVERY` on the second SQL Server before configuring the availability group, choose **Join only**. If you want to take the backup after configuring the availability group, choose **Skip initial data synchronization**.
 
 1. On the **Validation** page, confirm that all validation checks have passed, and then choose **Next**:
 
-    :::image type="content" source="./media/availability-group-manually-configure-tutorial-multi-subnet/22-validation.png" alt-text="New availability group Wizard, Validation":::
+    :::image type="content" source="./media/availability-group-manually-configure-tutorial-multi-subnet/22-validation.png" alt-text="New availability group Wizard, Validation.":::
 
 1. On the **Summary** page, select **Finish** and wait for the wizard to configure your new availability group. Choose **More details** on the **Progress** page to view the detailed progress. When you see that the **wizard completed successfully** on the **Results** page, inspect the summary to verify the availability group and listener were created successfully.
 
-     :::image type="content" source="./media/availability-group-manually-configure-tutorial-multi-subnet/23-results.png" alt-text="New availability group Wizard, Results":::
+     :::image type="content" source="./media/availability-group-manually-configure-tutorial-multi-subnet/23-results.png" alt-text="New availability group Wizard, Results.":::
 
 1. Select **Close** to exit the wizard.
 

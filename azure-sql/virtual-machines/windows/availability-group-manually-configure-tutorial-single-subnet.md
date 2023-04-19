@@ -20,7 +20,7 @@ tags: azure-service-management
 
 This tutorial shows how to create an Always On availability group for SQL Server on Azure VMs within a single subnet. The complete tutorial creates an availability group with a database replica on two SQL Server instances.
 
-This article manually configures the availability group environment. It's also possible to automate the steps by using the [Azure portal](availability-group-azure-portal-configure.md), [PowerShell or the Azure CLI](availability-group-az-commandline-configure.md), or [Azure quickstart templates](availability-group-quickstart-template-configure.md).
+This article manually configures the availability group environment. It's also possible to automate the steps by using the [Azure portal](availability-group-azure-portal-configure.md), [PowerShell or the Azure CLI](availability-group-az-commandline-configure.md), or [Azure Quickstart templates](availability-group-quickstart-template-configure.md).
 
 **Time estimate**: This tutorial takes about 30 minutes to complete after you meet the [prerequisites](availability-group-manually-configure-prerequisites-tutorial-single-subnet.md).
 

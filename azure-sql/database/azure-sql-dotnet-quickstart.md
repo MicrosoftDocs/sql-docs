@@ -82,7 +82,7 @@ dotnet add package Microsoft.Data.SqlClient
 
 ## [Passwordless (Recommended)](#tab/passwordless)
 
-For local development with passwordless connections to Azure SQL Database, update the `ConnectionStrings` section of the `appsettings.Development.json` file with following connection string. Replace the `<database-server-name>` and `<database-name>` placeholders with your own values.
+For local development with passwordless connections to Azure SQL Database, add the following `ConnectionStrings` section to the `appsettings.json` file. Replace the `<database-server-name>` and `<database-name>` placeholders with your own values.
 
 ```json
 "ConnectionStrings": {
@@ -95,11 +95,11 @@ The passwordless connection string sets a configuration value of `Authentication
 For example, when the app runs locally, `DefaultAzureCredential` authenticates via the user you're signed into Visual Studio with, or other local tools like the Azure CLI. Once the app deploys to Azure, the same code discovers and applies the managed identity that is associated with the hosted app, which you'll configure later. The [Azure Identity library overview](/dotnet/api/overview/azure/Identity-readme#defaultazurecredential) explains the order and locations in which `DefaultAzureCredential` looks for credentials.
 
 > [!NOTE]
-> Passwordless connection strings are safe to commit to source control, since they do not contain any secrets such as usernames, passwords, or access keys.
+> Passwordless connection strings are safe to commit to source control, since they don't contain secrets such as usernames, passwords, or access keys.
 
 ## [SQL Authentication](#tab/sql-auth)
 
-For local development with SQL Authentication to Azure SQL Database, update the `ConnectionStrings` section of the `appsettings.Development.json` file with the following connection string. Replace the `database-server-name`, `database-name`, `user-id` and `password` placeholders with your own values.
+For local development with SQL Authentication to Azure SQL Database, add the following `ConnectionStrings` section to the `appsettings.json` file. Replace the `<database-server-name>`, `<database-name>`, `<user-id>`, and `<password>` placeholders with your own values.
 
 ```json
 "ConnectionStrings": {
@@ -108,7 +108,7 @@ For local development with SQL Authentication to Azure SQL Database, update the 
 ```
 
 > [!WARNING]
-> Use caution when managing connection strings that contain secrets such as usernames, passwords, or access keys. These secrets should not be committed to source control or placed in unsecure locations where they might be accessed by unintended users. During local development on a real app you will generally connect to a local database that doesn't require storing secrets or connecting directly to Azure.
+> Use caution when managing connection strings that contain secrets such as usernames, passwords, or access keys. These secrets shouldn't be committed to source control or placed in unsecure locations where they might be accessed by unintended users. During local development, on a real app, you'll generally connect to a local database that doesn't require storing secrets or connecting directly to Azure.
 
 ---
 

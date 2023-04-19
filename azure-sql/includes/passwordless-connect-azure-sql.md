@@ -34,7 +34,7 @@ The Azure portal allows you to work with managed identities and run queries agai
 
 1) In the Azure portal, navigate to your App Service and select **Identity** on the left navigation.
 
-2) On the identity page, make sure the **Enable system-assigned managed identity** option is enabled. When this setting is enabled, a system-assigned managed identity is created with the same name as your App Service. System-assigned identities are tied to the service instance and are destroyed with the app when it's deleted.
+2) On the **Identity** page, make sure the **Enable system-assigned managed identity** option is enabled. When this setting is enabled, a system-assigned managed identity is created with the same name as your App Service. System-assigned identities are tied to the service instance and are destroyed with the app when it's deleted.
 
 ### Create the database user and assign roles
 

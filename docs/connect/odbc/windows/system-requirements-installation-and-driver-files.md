@@ -3,7 +3,7 @@ title: System Requirements, Installation, and Driver Files
 description: This article describes the system requirements for the Microsoft ODBC Driver for SQL Server.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 01/31/2023
+ms.date: 04/19/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -18,25 +18,25 @@ This article discusses the ODBC drivers that connect to SQL Server.
 
 Compatibility indicates that a driver was tested for compatibility against existing releases of SQL at the time of the driver's release. SQL Server releases generally try to maintain backwards compatibility with existing client drivers. But new features in SQL Server releases may not be available with older client drivers.
 
-|Database version&nbsp;&#8594;<br />&#8595; Driver Version|Azure SQL Database|Azure Synapse Analytics|Azure SQL Managed Instance|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|SQL Server 2008 R2|SQL Server 2008|SQL Server 2005|
-|----|---|---|---|---|---|---|---|---|---|---|---|
-|18.2|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |   |
-|18.1|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |   |
-|18.0|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |
-|17.10|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |
-|17.9|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |
-|17.8|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |
-|17.7|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |
-|17.6|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |
-|17.5|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |
-|17.4|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |
-|17.3|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |
-|17.2|Yes|Yes|Yes|   |Yes|Yes|Yes|Yes|Yes|Yes|   |
-|17.1|Yes|Yes|Yes|   |Yes|Yes|Yes|Yes|Yes|Yes|   |
-|17.0|Yes|Yes|Yes|   |Yes|Yes|Yes|Yes|Yes|Yes|   |
-|13.1|   |   |   |   |Yes|Yes|Yes|Yes|Yes|Yes|   |
-|13  |   |   |   |   |   |Yes|Yes|Yes|Yes|Yes|   |
-|11  |   |   |   |   |   |   |Yes|Yes|Yes|Yes|Yes|
+|Database version&nbsp;&#8594;<br />&#8595; Driver Version|Azure SQL Database|Azure Synapse Analytics|Azure SQL Managed Instance|SQL Server 2022|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|SQL Server 2008 R2|SQL Server 2008|SQL Server 2005|
+|-----|---|---|---|---|---|---|---|---|---|---|---|---|
+|18.2 |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |   |
+|18.1 |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |   |
+|18.0 |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |
+|17.10|Yes|Yes|Yes|   |Yes|Yes|Yes|Yes|Yes|   |   |   |
+|17.9 |Yes|Yes|Yes|   |Yes|Yes|Yes|Yes|Yes|   |   |   |
+|17.8 |Yes|Yes|Yes|   |Yes|Yes|Yes|Yes|Yes|   |   |   |
+|17.7 |Yes|Yes|Yes|   |Yes|Yes|Yes|Yes|Yes|   |   |   |
+|17.6 |Yes|Yes|Yes|   |Yes|Yes|Yes|Yes|Yes|   |   |   |
+|17.5 |Yes|Yes|Yes|   |Yes|Yes|Yes|Yes|Yes|   |   |   |
+|17.4 |Yes|Yes|Yes|   |Yes|Yes|Yes|Yes|Yes|   |   |   |
+|17.3 |Yes|Yes|Yes|   |Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |
+|17.2 |Yes|Yes|Yes|   |   |Yes|Yes|Yes|Yes|Yes|Yes|   |
+|17.1 |Yes|Yes|Yes|   |   |Yes|Yes|Yes|Yes|Yes|Yes|   |
+|17.0 |Yes|Yes|Yes|   |   |Yes|Yes|Yes|Yes|Yes|Yes|   |
+|13.1 |   |   |   |   |   |Yes|Yes|Yes|Yes|Yes|Yes|   |
+|13   |   |   |   |   |   |   |Yes|Yes|Yes|Yes|Yes|   |
+|11   |   |   |   |   |   |   |   |Yes|Yes|Yes|Yes|Yes|
 
 ### Connection string details
 

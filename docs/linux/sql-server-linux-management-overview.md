@@ -1,8 +1,8 @@
 ---
 title: Manage SQL Server on Linux
 description: This article provides links to common management tasks and tools for SQL Server running on Linux.
-author: VanMSFT
-ms.author: vanto
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 03/17/2017
 ms.service: sql
 ms.subservice: linux

@@ -1,6 +1,6 @@
 ---
-author: VanMSFT
-ms.author: vanto
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: randolphwest
 ms.date: 10/12/2022
 ms.service: sql

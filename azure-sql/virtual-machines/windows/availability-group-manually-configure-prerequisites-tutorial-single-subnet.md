@@ -4,7 +4,7 @@ description: "This tutorial shows how to configure the prerequisites for creatin
 author: tarynpratt
 ms.author: tarynpratt
 ms.reviewer: mathoma
-ms.date: 11/18/2022
+ms.date: 04/18/2023
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: how-to
@@ -311,12 +311,12 @@ In the Azure portal, under **Virtual network**, change the DNS server to include
 
 ### <a name="DomainAccounts"></a> Configure the domain accounts
 
-Next, configure the following Active Directory accounts:
+Next, configure two accounts in total in Active Directory, one installation account and then a service account for both SQL Server VMs. For example, use the values in the following table for the accounts:
 
-| |Installation account |sqlserver-0: <br/>SQL Server and SQL Agent Service account |sqlserver-1:<br/>SQL Server and SQL Agent Service account
-| --- | --- | --- | ---
-|**First Name** |Install |SQLSvc1 | SQLSvc2
-|**User SamAccountName** |Install |SQLSvc1 | SQLSvc2
+|Account  | VM  |Full domain name  |Description   |
+|---------|---------|---------|---------|
+|Install    |Both| Corp\Install        |Log into either VM with this account to configure the cluster and availability group. |
+|SQLSvc     |Both (sqlserver-0 and sqlserver-1) |Corp\SQLSvc | Use this account for the SQL Server service and SQL Agent Service account on the both SQL Server VMs. |
 
 Use the following steps to create each account:
 

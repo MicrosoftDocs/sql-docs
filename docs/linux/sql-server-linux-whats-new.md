@@ -1,8 +1,8 @@
 ---
 title: What's New for SQL Server 2017 on Linux
 description: In this article, learn about the major features and services available for SQL Server 2017 running on Linux.
-author: VanMSFT
-ms.author: vanto
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 04/10/2020
 ms.service: sql
 ms.subservice: linux

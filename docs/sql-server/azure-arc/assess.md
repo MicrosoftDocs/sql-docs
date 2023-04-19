@@ -24,8 +24,6 @@ Assessment run time depends on your environment (number of databases, objects, a
 
 This article provides instructions for using best practices assessment on an instance of Azure Arc-enabled SQL Server.
 
-The Environment Health assessment is replaced with a best practices assessment (SQL BPA). You need to reconfigure the SQL BPA to continue to get SQL server assessments. You can still access the previous health assessments by querying the table SQLAssessmentRecommendation from Log Analytics workspace used by Environment Health assessments. You can also query and export the data from previous assessments into Excel. See the steps at [Integrate Log Analytics and Excel](/azure/azure-monitor/logs/log-excel).
-
 >[!IMPORTANT]
 >Best practices assessment is available only for SQL Servers purchased through either [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) or [pay-as-you-go (PAYG)](https://www.microsoft.com/sql-server/sql-server-2022-pricing) licensing options.
 >

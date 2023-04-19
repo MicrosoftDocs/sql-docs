@@ -55,7 +55,7 @@ sp_update_category
  **sp_update_category** must be run from the **msdb** database.  
   
 ## Permissions  
- To run this stored procedure, users must be granted the **sysadmin** fixed server role.  
+ Requires membership in the **sysadmin** fixed server role, but permissions can be granted to other users.
   
 ## Examples  
  The following example renames a job category from `AdminJobs` to `Administrative Jobs`.  

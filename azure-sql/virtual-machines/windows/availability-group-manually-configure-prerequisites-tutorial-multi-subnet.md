@@ -207,7 +207,7 @@ To configure your virtual network for DNS, follow these steps:
 
 ### Configure second domain controller
 
-After the primary domain controller reboots, you can optionally configure the second domain controller for the purpose of high availability. If you do not want to configure a second domain controller, skip this step. However, note that a second domain controller is recommended in production environments.
+After the primary domain controller reboots, you can optionally configure the second domain controller for the purpose of high availability. If you do not want to configure a second domain controller, skip this step. However, a second domain controller is recommended in production environments.
 
 Set the preferred DNS server address, join the domain, and then configure the secondary domain controller.
 
@@ -306,7 +306,7 @@ Follow these steps to create each account:
 
 Once the accounts are created, grant required domain permissions to the installation account so the account is able to create objects in AD.
 
-To grant the permissions to the installation account, follow these step:
+To grant the permissions to the installation account, follow these steps:
 
 1. Open the **Active Directory Administrative Center** from **Server Manager**, if it's not open already.
 1. Select **corp (local)** in the left pane.
@@ -345,7 +345,7 @@ For the virtual machines, this tutorial uses public IP addresses. A public IP ad
 
 **Network - Single NIC per server**
 
-Use a single NIC per server (cluster node). Azure networking has physical redundancy, which makes additional NICs unnecessary on a failover cluster deployed to an Azure virtual machine. The cluster validation report will warn you that the nodes are reachable only on a single network. You can ignore this warning when your failover cluster is on Azure virtual machines.
+Use a single NIC per server (cluster node). Azure networking has physical redundancy, which makes additional NICs unnecessary on a failover cluster deployed to an Azure virtual machine. The cluster validation report warns you that the nodes are reachable only on a single network. You can ignore this warning when your failover cluster is on Azure virtual machines.
 
 To create your VMs, follow these steps:
 

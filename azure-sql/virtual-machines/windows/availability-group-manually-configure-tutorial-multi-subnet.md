@@ -59,7 +59,7 @@ Add the failover cluster feature to both SQL Server VMs. To do so, follow these 
 
 ### Create cluster
 
-After the cluster feature has been added to each SQL Server VM, you are ready to create the Windows Server Failover Cluster.
+After the cluster feature has been added to each SQL Server VM, you're ready to create the Windows Server Failover Cluster.
 
 To create the cluster, follow these steps:
 

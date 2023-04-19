@@ -356,7 +356,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 | Max concurrent logins per pool <sup>4</sup> | 1470 | 1680 | 1890 | 2100 | 2520 |
 | Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
 | Max concurrent external connections per pool <sup>5</sup> | 147 | 150 | 150 | 150 | 150 |
-| Min/max elastic pool vCore choices per database | 0, 0.25, 0.5,  1, 2, 4, 6, 8, 10, 12, 14 | 0, 0.25, 0.5,  1, 2, 4, 6, 8, 10, 12, 14, 16 | 0, 0.25, 0.5,  1, 2, 4, 6, 8, 10, 12, 14, 16, 18 | 0, 0.25, 0.5,  1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24 |
+| Min/max elastic pool vCore choices per database | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24 |
 | Number of replicas | 4 | 4 | 4 | 4 | 4 |
 | Multi-AZ | Yes | Yes | Yes | Yes | Yes |
 | Read Scale-out | Yes | Yes | Yes | Yes | Yes |
@@ -516,7 +516,7 @@ For important information about M-series hardware availability, see [Azure offer
 | Max concurrent logins per pool <sup>4</sup> | 168 | 336 | 504 | 672 |
 | Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 |
 | Max concurrent external connections per pool <sup>5</sup> | 16 | 33 | 50 | 67 |
-| Min/max elastic pool vCore choices per database | 2 | 2...4 | 2...6 | 2...8 |
+| Min/max elastic pool vCore choices per database | 0, 0.25, 0.5, 2 | 0, 0.25, 0.5, 2, 4 | 0, 0.25, 0.5, 2, 4, 6 | 0, 0.25, 0.5, 2, 4, 6, 8 |
 | Number of replicas | 4 | 4 | 4 | 4 |
 | Multi-AZ | No | No | No | No |
 | Read Scale-out | Yes | Yes | Yes | Yes |
@@ -600,7 +600,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 | Max concurrent logins per pool <sup>4</sup> | 210 | 420 | 630 | 840 | 1050 | 1260 |
 | Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
 | Max concurrent external connections per pool <sup>5</sup> | 21 | 42 | 63 | 84 | 105 | 126 |
-| Min/max elastic pool vCore choices per database | 0, 0.25, 0.5, 1 | 0, 0.25, 0.5, 1, 2 | 0, 0.25, 0.5, 1...3 | 0, 0.25, 0.5, 1...4 | 0, 0.25, 0.5, 1...5 | 0, 0.25, 0.5, 1...6 |
+| Min/max elastic pool vCore choices per database | 0, 0.25, 0.5, 1 | 0, 0.25, 0.5, 1, 2 | 0, 0.25, 0.5, 1, 2, 3 | 0, 0.25, 0.5, 1, 2, 3, 4 | 0, 0.25, 0.5, 1, 2, 3, 4, 5 | 0, 0.25, 0.5, 1, 2, 3, 4, 5, 6 |
 | Number of replicas | 1 | 1 | 1 | 1 | 1 | 1 |
 | Multi-AZ | N/A | N/A | N/A | N/A | N/A | N/A |
 | Read Scale-out | N/A | N/A | N/A | N/A | N/A | N/A |
@@ -638,7 +638,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 | Max concurrent logins pool <sup>4</sup> | 1470 | 1680 | 1890 | 2100 | 3360 | 5040 |
 | Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
 | Max concurrent external connections per pool <sup>5</sup> | 147 | 150 | 150 | 150 | 150 | 150 |
-| Min/max elastic pool vCore choices per database | 0, 0.25, 0.5, 1...7 | 0, 0.25, 0.5, 1...8 | 0, 0.25, 0.5, 1...9 | 0, 0.25, 0.5, 1...10 | 0, 0.25, 0.5, 1...10, 16 | 0, 0.25, 0.5, 1...10, 16, 24 |
+| Min/max elastic pool vCore choices per database | 0, 0.25, 0.5, 1, 2, 3, 4, 5, 6, 7 | 0, 0.25, 0.5, 1, 2, 3, 4, 5, 6, 7, 8 | 0, 0.25, 0.5, 1, 2, 3, 4, 5, 6, 7, 8, 9 | 0, 0.25, 0.5, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 | 0, 0.25, 0.5, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 16 | 0, 0.25, 0.5, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 16, 24 |
 | Number of replicas | 1 | 1 | 1 | 1 | 1 | 1 |
 | Multi-AZ | N/A | N/A | N/A | N/A | N/A | N/A |
 | Read Scale-out | N/A | N/A | N/A | N/A | N/A | N/A |
@@ -682,7 +682,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 | Max concurrent logins per pool <sup>4</sup> | 420 | 630 | 840 | 1050 | 1260 |
 | Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
 | Max concurrent external connections per pool <sup>5</sup> | 42 | 63 | 84 | 105 | 126 |
-| Min/max elastic pool vCore choices per database | 0, 0.25, 0.5, 1, 2 | 0, 0.25, 0.5, 1...3 | 0, 0.25, 0.5, 1...4 | 0, 0.25, 0.5, 1...5 | 0, 0.25, 0.5, 1...6 |
+| Min/max elastic pool vCore choices per database | 0, 0.25, 0.5, 1, 2 | 0, 0.25, 0.5, 1, 2, 3 | 0, 0.25, 0.5, 1, 2, 3, 4 | 0, 0.25, 0.5, 1, 2, 3, 4, 5 | 0, 0.25, 0.5, 1, 2, 3, 4, 5, 6 |
 | Number of replicas | 4 | 4 | 4 | 4 | 4 |
 | Multi-AZ | Yes | Yes | Yes | Yes | Yes |
 | Read Scale-out | Yes | Yes | Yes | Yes | Yes |
@@ -721,7 +721,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 | Max concurrent logins per pool <sup>4</sup> | 1470 | 1680 | 1890 | 2100 | 3360 | 5040 |
 | Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
 | Max concurrent external connections per pool <sup>5</sup> | 147 | 150 | 150 | 150 | 150 | 150 |
-| Min/max elastic pool vCore choices per database | 0, 0.25, 0.5, 1...7 | 0, 0.25, 0.5, 1...8 | 0, 0.25, 0.5, 1...9 | 0, 0.25, 0.5, 1...10 | 0, 0.25, 0.5, 1...10, 16 | 0, 0.25, 0.5, 1...10, 16, 24 |
+| Min/max elastic pool vCore choices per database | 0, 0.25, 0.5, 1, 2, 3, 4, 5, 6, 7 | 0, 0.25, 0.5, 1, 2, 3, 4, 5, 6, 7, 8 | 0, 0.25, 0.5, 1, 2, 3, 4, 5, 6, 7, 8, 9 | 0, 0.25, 0.5, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 | 0, 0.25, 0.5, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 16 | 0, 0.25, 0.5, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 16, 24 |
 | Number of replicas | 4 | 4 | 4 | 4 | 4 | 4 |
 | Multi-AZ | Yes | Yes | Yes | Yes | Yes | Yes |
 | Read Scale-out | Yes | Yes | Yes | Yes | Yes | Yes |

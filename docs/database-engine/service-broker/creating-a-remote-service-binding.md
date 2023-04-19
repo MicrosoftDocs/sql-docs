@@ -25,11 +25,11 @@ When a conversation is initiated, Service Broker checks to see whether a remote 
 
 Requests for remote service bindings use the message type `https://schemas.microsoft.com/SQL/ServiceBroker/BrokerConfigurationNotice/MissingRemoteServiceBinding`. The message is in XML format, and contains the name of the service for which remote service binding information should be available.
 
-For example, the following message is a request for a remote service binding to the service **http://Adventure-Works.com/Elsewhere**:
+For example, the following message is a request for a remote service binding to the service **https://Adventure-Works.com/Elsewhere**:
 
 ```xml
-    <MissingRemoteServiceBinding xmlns="http://schemas.microsoft.com/SQL/ServiceBroker/BrokerConfigurationNotice/MissingRemoteServiceBinding">
-      <SERVICE_NAME>http://Adventure-Works.com/Elsewhere</SERVICE_NAME>
+    <MissingRemoteServiceBinding xmlns="https://schemas.microsoft.com/SQL/ServiceBroker/BrokerConfigurationNotice/MissingRemoteServiceBinding">
+      <SERVICE_NAME>https://Adventure-Works.com/Elsewhere</SERVICE_NAME>
     </MissingRemoteServiceBinding>
 ```
 

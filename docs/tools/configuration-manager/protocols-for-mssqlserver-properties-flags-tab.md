@@ -25,15 +25,19 @@ monikerRange: ">=sql-server-2016"
  The login process is always encrypted. When **ForceEncryption** is set to **Yes**, all client/server communication is encrypted, and clients connecting to the [!INCLUDE[ssDE](../../includes/ssde-md.md)] must be configured to trust the root authority of the server certificate. For more information, see "How to: Enable Encrypted Connections to the [!INCLUDE[ssDE](../../includes/ssde-md.md)] ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager)" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 ## Cluster Servers  
- If you want to use encryption with a failover cluster, you must install the server certificate with the fully qualified DNS name of the virtual server on all nodes in the failover cluster. For example, if you have a two-node cluster, with nodes named "test1.*\<your company>*.com" and "test2.*\<your company>*.com" and a virtual server named "virtsql", you need to install a certificate for "virtsql.*\<your company>*.com" on both nodes. You can then check the **ForceEncryption** check box on the **SQL Server Configuration Manager** to configure your failover cluster for encryption.  
+ If you want to use encryption with a failover cluster, you must install the server certificate with the fully qualified DNS name of the virtual server on all nodes in the failover cluster. For example, if you have a two-node cluster, with nodes named "test1.*\<your company>*.com" and "test2.*\<your company>*.com" and a virtual server named "virtsql", you need to install a certificate for "virtsql.*\<your company>*.com" on both nodes. You can then check the **Force Encryption** check box on the **SQL Server Configuration Manager** to configure your failover cluster for encryption.  
   
 ## Options  
- **ForceEncryption**  
+ **Force Encryption**  
  Force protocol encryption. Encryption is a method for keeping sensitive information confidential by changing data into an unreadable form. Encryption ensures that data remains secure, even if the transmission packets are viewed during the transmission process. To use channel binding, set **Force Encryption** to **On** and configure **Extended Protection** on the **Advanced** tab.  
+
+For more information, see "[Configure SQL Server Database Engine for encrypting connections](../../database-engine/configure-windows/configure-sql-server-encryption.md)" in Books Online.  
   
- **HideInstance**  
+ **Force Strict Encryption** (Starting with [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)])
+ Force Strict Encryption. The option was added with TDS 8.0 in SQL Server Network Configuration forces all clients to use strict as the encryption type. Any clients or features without the strict connection encryption fail to connect to SQL Server.
+ To enable Strict Encryption, you must [add a certificate](../../database-engine/configure-windows/configure-sql-server-encryption.md), where self generated certificate by SQL Server does not work, and your application must use a driver that support TDS 8.0.
+ 
+ For more information, see "[TDS 8.0 and TLS 1.3 support](../../relational-databases/security/networking/tds-8-and-tls-1-3.md)" in Books Online.
+
+ **Hide Instance**  
  Prevent the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser Service from exposing this instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to client computers that try to locate the instance by using the **Browse** button. In the case of named instances on the server, to connect, client applications must specify the protocol endpoint information. For example, the port number or the named pipe name, such as **tcp:server,5000**. For more information, see [Logging In to SQL Server](../../database-engine/configure-windows/logging-in-to-sql-server.md).  
-  
- For more information, see "How to: Enable Encryption Connections to the Database Engine (SQL Server Configuration Manager)" in Books Online.  
-  
-  

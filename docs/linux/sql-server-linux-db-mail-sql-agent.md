@@ -1,8 +1,8 @@
 ---
 title: DB Mail and Email Alerts with SQL Agent on Linux
 description: Learn how to use DB Mail and how to set up Email Alerts with SQL Server Agent (mssql-server-agent) on Linux.
-author: VanMSFT
-ms.author: vanto
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 02/20/2018
 ms.service: sql
 ms.subservice: linux

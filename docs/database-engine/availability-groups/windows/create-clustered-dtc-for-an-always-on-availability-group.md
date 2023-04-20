@@ -3,7 +3,7 @@ title: "Create Clustered DTC resource for an availability group"
 description: "This topic walks you through a complete configuration of a clustered DTC resource for a SQL Server Always On Availability Group."
 author: MashaMSFT
 ms.author: mathoma
-ms.date: "09/24/2021"
+ms.date: 04/20/2023
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: how-to
@@ -322,7 +322,7 @@ GO
 ```
 
 > [!IMPORTANT]
-> You cannot Enable DTC on an existing [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] will accept the following syntax for an existing Availability Group:  
+> Starting with [!INCLUDE [sssql16-md](../../../includes/sssql16-md.md)] Service Pack 2 you can alter an availability group for distributed transactions. For [!INCLUDE [sssql16-md](../../../includes/sssql16-md.md)] versions before Service Pack 2, you cannot enable DTC on an existing [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] will accept the following syntax for an existing Availability Group:  
 >
 > USE master;
 > ALTER AVAILABILITY GROUP \<availability_group\>  
@@ -332,7 +332,7 @@ GO
 >
 > SELECT name, dtc_support FROM sys.availability_groups  
 >
-> The only way to enable DTC support on an Availability Group is by creating an Availability Group using Transact-SQL.
+> The only way to enable DTC support on an Availability Group for versions before [!INCLUDE [sssql16-md](../../../includes/sssql16-md.md)] versions before Service Pack 2, is by creating an Availability Group using Transact-SQL.
 
 ## <a name="ClusterDTC"></a>8.    Prepare cluster resources
 

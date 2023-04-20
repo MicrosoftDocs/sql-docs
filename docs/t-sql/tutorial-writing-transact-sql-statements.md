@@ -1,10 +1,10 @@
 ---
 title: "T-SQL Tutorial: Write Transact-SQL statements"
-description: This tutorial is intended for users who are new to writing SQL statements. It will help new users get started by reviewing some basic statements for creating tables and inserting data.
+description: This tutorial is intended for users who are new to writing SQL statements. It helps new users get started by reviewing some basic statements for creating tables and inserting data.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.date: 12/02/2022
+ms.date: 04/19/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: quickstart
@@ -19,7 +19,10 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE[sql-asdb-asa-pdw](../includes/applies-to-version/sql-asdb-asa-pdw.md)]
 
-Welcome to the Writing [!INCLUDE[tsql](../includes/tsql-md.md)] Statements tutorial. This tutorial is intended for users who are new to writing SQL statements. It will help new users get started by reviewing some basic statements for creating tables and inserting data. This tutorial uses [!INCLUDE[tsql](../includes/tsql-md.md)], the [!INCLUDE[msCoName](../includes/msconame-md.md)] implementation of the SQL standard.
+> [!NOTE]  
+> The [Get Started Querying with Transact-SQL](/training/paths/get-started-querying-with-transact-sql/) learning path provides more in-depth content, along with practical examples.
+
+Welcome to the Writing [!INCLUDE[tsql](../includes/tsql-md.md)] Statements tutorial. This tutorial is intended for users who are new to writing SQL statements. It helps new users get started by reviewing some basic statements for creating tables and inserting data. This tutorial uses [!INCLUDE[tsql](../includes/tsql-md.md)], the [!INCLUDE[msCoName](../includes/msconame-md.md)] implementation of the SQL standard.
 
 This tutorial is intended as a brief introduction to the [!INCLUDE[tsql](../includes/tsql-md.md)] language and not as a replacement for a [!INCLUDE[tsql](../includes/tsql-md.md)] class. The statements in this tutorial are intentionally simple, and aren't meant to represent the complexity found in a typical production database.
 
@@ -28,7 +31,7 @@ This tutorial is intended as a brief introduction to the [!INCLUDE[tsql](../incl
 
 ## Find more information
 
-To find more information about any specific statement, either search for the statement by name in SQL Server Books Online, or use the Contents to browse the 1,800 language elements listed alphabetically under [Transact-SQL Reference (Database Engine)](./language-reference.md). Another good strategy for finding information is to search for key words that are related to the subject matter you are interested in. For example, if you want to know how to return a part of a date (such as the month), search the index for **dates [SQL Server]**, and then select **dateparts**. This takes you to the article [DATEPART (Transact-SQL)](../t-sql/functions/datepart-transact-sql.md). As another example, to find out how to work with strings, search for **string functions**. This takes you to the article [String Functions (Transact-SQL)](../t-sql/functions/string-functions-transact-sql.md).
+To find more information about any specific statement, either search for the statement by name, or use the contents to browse the language elements listed alphabetically under [Transact-SQL Reference (Database Engine)](./language-reference.md). Another good strategy for finding information is to search for key words that are related to the subject matter you are interested in. For example, if you want to know how to return a part of a date (such as the month), search the index for **dates [SQL Server]**, and then select **dateparts**. This takes you to the article [DATEPART (Transact-SQL)](../t-sql/functions/datepart-transact-sql.md). As another example, to find out how to work with strings, search for **string functions**. This takes you to the article [String Functions (Transact-SQL)](../t-sql/functions/string-functions-transact-sql.md).
 
 ## What you will learn
 
@@ -64,4 +67,4 @@ The next article teaches you how to create database objects.
 
 Go to the next article to learn more:
 > [!div class="nextstepaction"]
-> [Lesson 1: Creating Database Objects](../t-sql/lesson-1-creating-database-objects.md)
+> [Lesson 1: Create and query database objects](../t-sql/lesson-1-creating-database-objects.md)

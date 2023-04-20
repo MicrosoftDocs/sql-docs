@@ -2,8 +2,8 @@
 title: Unattended install for SQL Server on SUSE Linux Enterprise Server
 titleSuffix: SQL Server
 description: Use a sample bash script to install SQL Server on SUSE Linux Enterprise Server (SLES) without interactive input.
-author: VanMSFT
-ms.author: vanto
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: randolphwest
 ms.date: 05/20/2022
 ms.service: sql

@@ -193,9 +193,9 @@ resources
     properties.instanceView.status.message,
     properties.instanceView.typeHandlerVersion,
     properties.ExcludedSqlInstances,
-    "Purview enabled" = iff(notnull(properties.settings.ExternalPolicyBasedAuthorization),"Purview enabled",""),
-    "Azure AD enabled" = iff(notnull(properties.settings.AzureAD),"Azure AD enabled",""),
-    "BPA enabled" = iff(notnull(properties.settings.AssessmentSettings),"BPA enabled","")
+    iff(notnull(properties.settings.ExternalPolicyBasedAuthorization),"Purview enabled",""),
+    iff(notnull(properties.settings.AzureAD),"Azure AD enabled",""),
+    iff(notnull(properties.settings.AssessmentSettings),"BPA enabled","")
 
 ```
 

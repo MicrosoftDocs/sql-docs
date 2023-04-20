@@ -181,7 +181,7 @@ resources
 
 ### List details for each instance including license type
 
-This query identifies many details about each instance, including the license type, and enabled extended features.
+This query identifies many details about each instance, including the license type, and enabled features.
 
 ```kusto
 resources

@@ -3,7 +3,7 @@ title: "Create Clustered DTC resource for an availability group"
 description: "This topic walks you through a complete configuration of a clustered DTC resource for a SQL Server Always On Availability Group."
 author: MashaMSFT
 ms.author: mathoma
-ms.date: "04/20/2023"
+ms.date: 04/20/2023
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: how-to

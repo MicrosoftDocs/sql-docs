@@ -4,7 +4,7 @@ description: This page describes some common vCore resource limits for elastic p
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 11/04/2022
+ms.date: 4/20/2023
 ms.service: sql-database
 ms.subservice: elastic-pools
 ms.topic: reference
@@ -40,6 +40,7 @@ You can set the service tier, compute size (service objective), and storage amou
 
 If all vCores of an elastic pool are busy, then each database in the pool receives an equal amount of compute resources to process queries. Azure SQL Database provides resource sharing fairness between databases by ensuring equal slices of compute time. Elastic pool resource sharing fairness is in addition to any amount of resource otherwise guaranteed to each database when the vCore min per database is set to a non-zero value.
 
+For the same number of vCores, resources provided to an elastic pool may exceed the resources provided to a single database outside of an elastic pool. This means it is possible for the CPU, Data IO, and Log write utilization of an elastic pool to be less than the summation of CPU, Data IO, and Log write utilization across databases within the pool, depending on workload patterns. For example, in an extreme case with only one database in an elastic pool where database Data IO utilization is 100%, it is possible for pool Data IO utilization to be 50% for certain workload patterns. This can happen even if max vCores per database remains at the maximum supported value for the given pool size.
 
 > [!NOTE]
 > The Gen5 hardware in the vCore purchasing model has been renamed to **standard-series (Gen5)**.

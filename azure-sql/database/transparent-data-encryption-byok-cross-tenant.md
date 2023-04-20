@@ -18,7 +18,7 @@ monikerRange: "= azuresql || = azuresql-db"
 
 Azure SQL now offers support for cross-tenant customer-managed keys (CMK) with [transparent data encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption). Cross-tenant CMK expands on the [Bring Your Own Key (BYOK)](transparent-data-encryption-byok-overview.md) scenario for utilizing TDE without the need to have the Azure SQL logical server in the same Azure Active Directory (Azure AD) tenant as the Azure Key Vault that stores the customer-managed key used to protect the server.
 
-You can configure TDE with CMK for Azure SQL Database for keys stored in key vaults that are connected to different Azure AD tenants. Azure AD introduces a feature called workload identity federation, and it allows Azure resources from one Azure AD tenant the capability to access resources in another Azure AD tenant.
+You can configure TDE with CMK for Azure SQL Database for keys stored in key vaults that are configured in different Azure AD tenants. Azure AD introduces a feature called workload identity federation, and it allows Azure resources from one Azure AD tenant the capability to access resources in another Azure AD tenant.
 
 > [!NOTE]
 > For documentation on transparent data encryption for dedicated SQL pools inside Synapse workspaces, see [Azure Synapse Analytics encryption](/azure/synapse-analytics/security/workspaces-encryption).
@@ -75,6 +75,7 @@ The following diagram represents the steps for a scenario that utilizes an Azure
 ## Remarks
 
 - The cross-tenant CMK with TDE feature is only supported for user-assigned managed identities. You cannot use a system-assigned managed identity for cross-tenant CMK with TDE.
+- Setting up cross-tenant CMK with TDE is supported at the server level and the database level for Azure SQL Database. For more information, see [Transparent data encryption (TDE) with customer-managed keys at the database level](transparent-data-encryption-byok-database-level-overview.md).
 
 ## Next steps
 

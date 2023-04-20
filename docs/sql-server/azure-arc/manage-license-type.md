@@ -151,6 +151,56 @@ az connectedmachine extension update --machine-name "simple-vm" -g "<resource-gr
 ## Deployment options
 
 To select the appropriate deployment option, see [Deployment options for Azure Arc-enabled SQL Server](deployment-options.md)
+
+## Query resources
+
+You can use [Azure Resource Graph](/azure/governance/resource-graph/overview) to query resources to describe license type of your enabled instances. See the following examples.
+
+### Count by license type
+
+This example returns the count by license type.
+
+```kusto
+resources
+| where type == "microsoft.hybridcompute/machines/extensions"
+| where properties.type in ("WindowsAgent.SqlServer","LinuxAgent.SqlServer")
+| summarize count() by tostring(properties.settings.LicenseType)
+```
+
+### Identify instances where license type is null
+
+This query returns a list of instances where the license type is null.
+
+```kusto
+resources
+| where type == "microsoft.hybridcompute/machines/extensions"
+| where properties.type in ("WindowsAgent.SqlServer","LinuxAgent.SqlServer")
+| where isnull(properties.settings.LicenseType)
+| project ['id'], resourceGroup, subscriptionId
+```
+
+### List details for each instance including license type
+
+This query identifies many details about each instance, including the license type, and enabled features.
+
+```kusto
+resources
+| where type == "microsoft.hybridcompute/machines/extensions"
+| where properties.type in ("WindowsAgent.SqlServer","LinuxAgent.SqlServer")
+| project name, resourceGroup, subscriptionId,
+    properties.provisioningState,
+    properties.settings.LicenseType,
+    properties.instanceView.status.message,
+    properties.instanceView.typeHandlerVersion,
+    properties.ExcludedSqlInstances,
+    iff(notnull(properties.settings.ExternalPolicyBasedAuthorization),"Purview enabled",""),
+    iff(notnull(properties.settings.AzureAD),"Azure AD enabled",""),
+    iff(notnull(properties.settings.AssessmentSettings),"BPA enabled","")
+
+```
+
+For more examples of Azure Resource Graph Queries, see [Starter Resource Graph queries](/azure/governance/resource-graph/samples/starter).
+
 ## Next steps
 
 - [Review SQL Server 2022 Pricing](https://www.microsoft.com/sql-server/sql-server-2022-pricing)

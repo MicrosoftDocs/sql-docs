@@ -225,6 +225,7 @@ Run these commands in the following order to create your secondary SQL Managed I
 | 15. [Set-AzRouteTable](/powershell/module/az.network/set-azroutetable) | Updates a route table.  |
 | 16. [New-AzSqlInstance](/powershell/module/az.sql/new-azsqlinstance) | Creates a managed instance. Be sure to provide the `-DnsZonePartner` to link the secondary instance to your primary instance.  |
 
+---
 
 ## Create a global virtual network peering 
 

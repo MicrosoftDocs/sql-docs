@@ -5,7 +5,7 @@ description: This article provides common security requirements and best practic
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 01/20/2023
+ms.date: 04/20/2023
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: article
@@ -53,7 +53,7 @@ Unless otherwise stated, we recommend you follow all best practices listed in ea
 - [SOC](https://www.aicpa.org/interestareas/frc/assuranceadvisoryservices/sorhome.html): CM-3, SDL-3
 - [ISO/IEC 27001](https://www.iso27001security.com/html/27001.html): Access Control, Cryptography
 - [Microsoft Operational Security Assurance (OSA) practices](https://www.microsoft.com/securityengineering/osa/practices): Practice #1-6 and #9
-- [NIST Special Publication 800-53 Security Controls](https://nvd.nist.gov/800-53): AC-5, AC-6
+- [NIST Special Publication 800-53 Security Controls](https://csrc.nist.gov/Projects/risk-management/sp800-53-controls/release-search#/): AC-5, AC-6
 - [PCI DSS](https://www.pcisecuritystandards.org/document_library): 6.3.2, 6.4.2
 
 We plan on continuing to update the recommendations and best practices listed here. Provide input or any corrections for this document using the **Feedback** link at the bottom of this article.

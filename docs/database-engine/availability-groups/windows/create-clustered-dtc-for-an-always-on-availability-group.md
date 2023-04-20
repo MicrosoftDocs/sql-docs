@@ -322,7 +322,7 @@ GO
 ```
 
 > [!IMPORTANT]
-> Starting with SQL Server 2016 (13.x) Service Pack 2 you can alter an availability group for distributed transactions. For SQL Server 2016 (13.x) versions before Service Pack 2, you cannot Enable DTC on an existing [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] will accept the following syntax for an existing Availability Group:  
+> Starting with [!INCLUDE [sssql16-md](../../../includes/sssql16-md.md)] Service Pack 2 you can alter an availability group for distributed transactions. For [!INCLUDE [sssql16-md](../../../includes/sssql16-md.md)] versions before Service Pack 2, you cannot enable DTC on an existing [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] will accept the following syntax for an existing Availability Group:  
 >
 > USE master;
 > ALTER AVAILABILITY GROUP \<availability_group\>  

@@ -235,7 +235,7 @@ For pricing, see the [Azure SQL Database pricing](https://azure.microsoft.com/pr
 In the DTU model, for databases and elastic pools there's no additional charge for PITR backup storage for default retention of 7 days and beyond. The price of PITR backup storage is a part of the database or pool price.
 
 > [!IMPORTANT]
-> In the DTU model, databases and elastic pools are charged for the LTR backup storage based on the actual storage consumed by LTR backups. 
+> In the DTU model, databases and elastic pools are charged for the [LTR backup](long-term-retention-overview.md) storage based on the actual storage consumed by LTR backups. 
 
 ### vCore model
 

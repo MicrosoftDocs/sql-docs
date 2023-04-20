@@ -589,8 +589,6 @@ WHERE D.name = 'MyDatabase';
 
 Again, these queries return a point-in-time count. If you collect multiple samples over time, you'll have the best understanding of your session use.
 
-You can get historical statistics on sessions by querying the [sys.resource_stats](/sql/relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database) view and reviewing the `active_session_count` column.
-
 ## Monitoring query performance
 
 Slow or long running queries can consume significant system resources. This section demonstrates how to use dynamic management views to detect a few common query performance problems.

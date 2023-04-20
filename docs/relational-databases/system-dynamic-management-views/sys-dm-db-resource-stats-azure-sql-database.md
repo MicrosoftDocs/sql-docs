@@ -22,7 +22,7 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current"
 # sys.dm_db_resource_stats (Azure SQL Database and Azure SQL Managed Instance)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-  Returns CPU, I/O, and memory consumption for an [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] database or an [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]. One row exists for every 15 seconds, even if there is no activity. Historical data is maintained for approximately one hour.  
+  Returns CPU, I/O, and memory consumption for a database in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] or an [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]. One row exists for every 15 seconds, even if there is no activity. Historical data is maintained for approximately one hour.  
   
 |Columns|Data Type|Description|  
 |-------------|---------------|-----------------|  
@@ -59,7 +59,7 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current"
   
 ## Example  
   
-The following example returns resource utilization data ordered by the most recent time for the currently connected [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] database or [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)].
+The following example returns resource utilization data ordered by the most recent time for the currently connected database in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] or [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)].
   
 ```sql  
 SELECT * FROM sys.dm_db_resource_stats ORDER BY end_time DESC;  

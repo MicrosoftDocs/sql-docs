@@ -1,5 +1,5 @@
 ---
-title: "T-SQL Tutorial: Create & query database objects"
+title: "T-SQL Tutorial: Create and query database objects"
 description: This lesson shows you how to create a database, create a table in the database, and then access and change the data in the table.
 author: MikeRayMSFT
 ms.author: mikeray

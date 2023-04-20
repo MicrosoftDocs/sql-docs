@@ -3,7 +3,7 @@ title: Introduction to Microsoft.Data.SqlClient namespace
 description: Learn about the Microsoft.Data.SqlClient namespace and how it's the preferred way to connect to SQL for .NET applications.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 01/11/2022
+ms.date: 04/19/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -79,6 +79,8 @@ The affected classes and enums are:
 To use TDS 8, specify Encrypt=Strict in the connection string. Strict mode disables TrustServerCertificate (always treated as False in Strict mode). HostNameInCertificate has been added to help some Strict mode scenarios. TDS 8 begins and continues all server communication inside a secure, encrypted TLS connection.
 
 New Encrypt values have been added to clarify connection encryption behavior. `Encrypt=Mandatory` is equivalent to `Encrypt=True` and encrypts connections during the TDS connection negotiation. `Encrypt=Optional` is equivalent to `Encrypt=False` and only encrypts the connection if the server tells the client that encryption is required during the TDS connection negotiation.
+
+For more information on encrypting connections to the server, see [Encryption and certificate validation](encryption-and-certificate-validation.md).
 
 `HostNameInCertificate` can be specified in the connection string when using aliases to connect with encryption to a server that has a server certificate with a different name or alternate subject name than the name used by the client to identify the server (DNS aliases, for example). Example usage: `HostNameInCertificate=MyDnsAliasName`
 

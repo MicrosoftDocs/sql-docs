@@ -156,7 +156,7 @@ at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception
   **Recommended Solution:** There are two available options to fix this issue:
 
     1. Install the target SQL Server's TLS/SSL certificate in the client environment. It will be validated if encryption is needed.
-    2. Set the "TrustServerCertificate=true" property in the connection string.
+    2. (Less secure) Set the "TrustServerCertificate=true" property in the connection string.
 
   **Insecure solution:** Disable the "Force Encryption" setting on SQL Server.
 
@@ -170,6 +170,22 @@ at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception
   
   Read more on [Default TLS cipher suites for .NET on Linux
 ](/dotnet/core/compatibility/cryptography/5.0/default-cipher-suites-for-tls-on-linux) for recommended action.
+
+```log
+Microsoft.Data.SqlClient.SqlException (0x80131904): A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - The certificate chain was issued by an authority that is not trusted.)
+ ---> System.ComponentModel.Win32Exception (0x80090325): The certificate chain was issued by an authority that is not trusted.
+```
+
+- SQL Server enforced encryption
+
+  If the target Server is an on-premises SQL Server with the "Force Encryption" property turned on and a self-signed certificate, an encrypted connection will be made, for which the client must establish trust with the server.
+
+  **Recommended Solution:** There are two available options to fix this issue:
+
+    1. Install the target SQL Server's TLS/SSL certificate in the client environment. It will be validated if encryption is needed.
+    2. (Less secure) Set the "TrustServerCertificate=true" property in the connection string.
+
+  **Insecure solution:** Disable the "Force Encryption" setting on SQL Server.
 
 ### Connection Pool exhaustion errors
 

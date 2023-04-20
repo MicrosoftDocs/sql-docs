@@ -10421,6 +10421,8 @@ items:
       href: sql-server/azure-arc/overview.md
     - name: Release notes
       href: sql-server/azure-arc/release-notes.md
+    - name: Test Arc-enabled SQL Server using an Azure VM
+      href: sql-server/azure-arc/plan-evaluate-on-azure-virtual-machine.md
     - name: How-to guides
       items:
       - name: Deploy

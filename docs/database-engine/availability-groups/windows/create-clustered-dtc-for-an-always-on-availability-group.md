@@ -332,7 +332,7 @@ GO
 >
 > SELECT name, dtc_support FROM sys.availability_groups  
 >
-> The only way to enable DTC support on an Availability Group for versions before SQL Server 2016 (13.x) versions before Service Pack 2 is by creating an Availability Group using Transact-SQL.
+> The only way to enable DTC support on an Availability Group for versions before [!INCLUDE [sssql16-md](../../../includes/sssql16-md.md)] versions before Service Pack 2, is by creating an Availability Group using Transact-SQL.
 
 ## <a name="ClusterDTC"></a>8.    Prepare cluster resources
 

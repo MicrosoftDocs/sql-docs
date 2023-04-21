@@ -301,6 +301,8 @@
       - name: ARM template
         displayName: Resource Manager
         href: database/single-database-create-arm-template-quickstart.md
+      - name: Terraform
+        href: database/single-database-create-bicep-terraform.md
       - name: With ledger and digest storage
         displayName: Create Azure SQL Database with ledger
         href: database/ledger-create-a-single-database-with-ledger-enabled.md

@@ -28,7 +28,7 @@ Options for examining the content of a dacpac include:
 
 ## Import the .dacpac to a SQL project in Visual Studio
 
-Importing a .dacpac to a SQL project in Visual Studio results in the contents of the .dacpac being transformed into *.sql* files and organized into folders. Following the import, post-deployment scripts and pre-deployment scripts from the .dacpac are visible in the solution explorer.
+Importing a .dacpac to a SQL project in Visual Studio results in the contents of the .dacpac being transformed into *.sql* files and organized into folders. Following the import, post-deployment scripts and predeployment scripts from the .dacpac are visible in the solution explorer.
 
 1. Install [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md) as a part of Visual Studio and create a new SQL project.
 
@@ -81,7 +81,7 @@ Beyond Azure Data Studio and SqlPackage, many other tools can be used to deploy 
 
 ## Invoke the `Unpack()` method
 
-The the Microsoft.SqlServer.DacFx .NET API provides a [method to unpack](/dotnet/api/microsoft.sqlserver.dac.dacpackage.unpack) a .dacpac to a folder, which can be used to programmatically unpack a .dacpac to a folder as seen. The example .NET application below takes two arguments, the path to the .dacpac file and the path to the output folder, and the result is the contents of the .dacpac being unpacked to 3 XML files and a single .sql file containing all the database objects.
+The Microsoft.SqlServer.DacFx .NET API provides a [method to unpack](/dotnet/api/microsoft.sqlserver.dac.dacpackage.unpack) a .dacpac to a folder, which can be used to programmatically unpack a .dacpac to a folder as seen. The example .NET application below takes two arguments, the path to the .dacpac file and the path to the output folder, and the result is the contents of the .dacpac being unpacked to 3 XML files and a single .sql file containing all the database objects.
 
 ```csharp
 using Microsoft.SqlServer.Dac;

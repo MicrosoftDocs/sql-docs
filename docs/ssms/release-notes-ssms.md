@@ -45,11 +45,11 @@ SSMS 19.0.2 is the latest general availability (GA) release of SSMS. If you need
 | Connection | Resolved SSMS crash behavior when logging into Azure and changing the user. |
 | Fulltext | Fixed an issue that caused a table's fulltext index to be rebuilt when moving the table to a different filegroup. |
 | General SSMS | Added digital signature to dll files. |
-| Link feature for Azure Managed Instance | Fixed error "Exception has been thrown by the target of an invocation" which occurred when a subscription with no resource groups was selected attempting to create a link using Managed Instance link wizard. | 
-| Managed Instance | Restored ability to view File and FileGroups pages on Database Properties window. See [bugs in 19.0.1](https://feedback.azure.com/d365community/idea/b3d026e6-b8b2-ed11-a81b-000d3ae6a6aa).|
+| Link feature for Azure Azure SQL Managed Instance | Fixed error "Exception has been thrown by the target of an invocation", which occurred when a subscription with no resource groups was selected attempting to create a link using Managed Instance link wizard. | 
+| Azure SQL Managed Instance | Restored ability to view File and FileGroups pages on Database Properties window. See [bugs in 19.0.1](https://feedback.azure.com/d365community/idea/b3d026e6-b8b2-ed11-a81b-000d3ae6a6aa).|
 | Profiler | Fixed issue that generated "Errors in the OLE DB provider. Unable to obtain authentication token using the credentials provided" error trying to run SQL Profiler with a Power BI workspace. |
-| Replication | Addressed error "Property Password cannot be changed or read after a connection string has been set" which occurred when trying to configure a replication subscriber. See [SSMS 19 - Issue while connecting to subsciber during replication configuration](https://feedback.azure.com/d365community/idea/4e9073b7-1dad-ed11-a81b-6045bd79fc6e).|
-| Replication | Fixed error "SQL Server encountered one or more errors while retrieving information about publication" which occurred when trying to view the properties for a publication. See [SSMS 19.0.1 cannot open Properties dialog for local publications](https://feedback.azure.com/d365community/idea/3dba641e-a9a3-ed11-a81b-6045bd79fc6e).|
+| Replication | Addressed error "Property Password can't be changed or read after a connection string has been set" which occurred when trying to configure a replication subscriber. See [SSMS 19 - Issue while connecting to subscriber during replication configuration](https://feedback.azure.com/d365community/idea/4e9073b7-1dad-ed11-a81b-6045bd79fc6e).|
+| Replication | Fixed error "SQL Server encountered one or more errors while retrieving information about publication", which occurred when trying to view the properties for a publication. See [SSMS 19.0.1 can't open Properties dialog for local publications](https://feedback.azure.com/d365community/idea/3dba641e-a9a3-ed11-a81b-6045bd79fc6e).|
 | Reports | Corrected server startup time on Server Dashboard report. |
 | SQL Agent | Addressed inability to start the SQL Agent from SSMS. |
 
@@ -59,8 +59,8 @@ SSMS 19.0.2 is the latest general availability (GA) release of SSMS. If you need
 | -------- | ------- | ---------- |
 | Database Designer | Selecting the Design option for a view that references a table using spatial data causes SSMS to crash. | Use T-SQL to make changes to the view. |
 | General SSMS | Import setting from SSMS 17 option not available. | Settings can be imported from SSMS 18. |
-| Profiler | The Profiler menu is not localized. | No current alternative. |
-| Query Editor | When SSMS opens after double-clicking on a .sql file, the Object Explorer window is displayed as a separate window. |
+| Profiler | The Profiler menu isn't localized. | No current alternative. |
+| Query Editor | When SSMS opens after double-clicking on a `.sql` file, the Object Explorer window is displayed as a separate window. |
 | SQL Managed Instance | Viewing database properties for a SQL MI database may return the error "Subquery returned more than one value. This isn't permitted when the subquery follows =, !=, <, <=, >, >= or when the subquery is used as an expression. (.NET SqlClient Data Provider)". | There's a known problem due to incorrect data in `msdb`. To resolve, remove back up history. For example, `EXEC`msdb`..sp_delete_backuphistory @oldest_date = '<current date>'`. |
 | Storage Account | Trying to delete a container from a storage account fails with a (400) Bad Request error. | Use the Azure portal for container deletion. |
 | Server Audit | Error "Item has already been added. Key in dictionary: 'MNDO'  Key being added: 'MNDO'" when viewing Logs for an Audit. | No current workaround. |
@@ -99,7 +99,7 @@ Download previous SSMS versions by selecting the download link in the related se
 | New Item | Details |
 | -------- | ------- |
 | Maintenance Plan | Fixed issue that generated "Failed to retrieve data for this request" error when using backup to NUL in the Back Up Database Task. |
-| Object Explorer | Fixed a regression which caused Object Explorer to not show database objects for Azure SQL DB Basic SLO. |
+| Object Explorer | Fixed a regression, which caused Object Explorer to not show database objects for Azure SQL DB Basic SLO. |
 
 ### 19.0
 
@@ -155,7 +155,7 @@ Download previous SSMS versions by selecting the download link in the related se
 | Backup | Added ability to create a NUL backup device against SQL Server 2017. |
 | Central Management Servers | Provided ability to view SQL ERRORLOGs from Central Management Servers before SQL 2022. |
 | Column Master Key | Increased width of Column Master Key name in the rotation dialog, so the full name is visible. |
-| Connection | Fixed an issue with authentication that doesn't use Azure Resource Manager and Microsoft Information Protection. |
+| Connection | Fixed an issue with authentication that doesn't use Azure Resource Manager and Microsoft Purview Information Protection. |
 | Connection | Addressed issue with logging into Azure with a non-SQL authenticated on a machine not joined to a domain. |
 | Copy Database Wizard | Fixed the log provider type error, which occurred when copying a database using The SQL Management Object method. |
 | Database Restore | Resolved error generated when restoring a backup to an existing database. See [Unexpected behavior by SSMS](https://feedback.azure.com/d365community/idea/95b549d0-6f70-ed11-a81b-000d3adb7ffd). |
@@ -164,9 +164,9 @@ Download previous SSMS versions by selecting the download link in the related se
 | Database Tuning Advisor | Implemented security fixes, including replacing ZeroMemory with SecureZeroMemory. |
 | Import/Export Data-Tier Application | Restored ability to deploy an extracted dacpac to a database via the Deploy Data-Tier Application option. |
 | Link feature for Azure SQL Managed Instance | Fixed problem with leaking connections in MI Link. |
-| Link feature for Azure SQL Managed Instance | Updated size of subscription dropdown in the login to Azure pane to properly display subscription names. |
+| Link feature for Azure SQL Managed Instance | Updated size of subscription dropdown in the sign in to Azure pane to properly display subscription names. |
 | Link feature for Azure SQL Managed Instance | Updated display to show Azure sign-in options correctly. |
-| Microsoft Information Protection | Improved icon display when viewing Microsoft Information Protection in older versions of SQL Server. |
+| Microsoft Purview Information Protection | Improved icon display when viewing Microsoft Purview Information Protection in older versions of SQL Server. |
 | Object Explorer | SSMS no longer crashes using the Create View UX to create a view with invalid syntax. |
 | Object Explorer | No longer display Ledger objects if not supported by the platform. |
 | Partitioning | Added support for Azure SQL Managed Instance partitioned tables in the Manage Partition Window UX. |
@@ -179,7 +179,7 @@ Download previous SSMS versions by selecting the download link in the related se
 | SQL Agent | The Queued status is now shown for queued jobs in SQL Agent. |
 | SMO/Scripting | Addressed CREATE TABLE scripting failure after adding datetime masking for a column. |
 | SqlParser | Fixed incorrect syntax for DATE_BUCKET function. |
-| SqlParser | Added missing options for CREATE USER and CREATE LOGIN. |
+| SqlParser | Added missing options for CREATE USER and CREATE sign in. |
 | SSIS | The "Schedule..." menu item is now visible in the Azure SSIS Catalog. |
 | Synapse | Created consistent naming for Synapse offerings in SSMS. |
 | XEvents | Fixed an issue where reading target data for event sessions whose name overlaps with another session name caused data from the incorrect event session to appear in the viewer. |
@@ -189,7 +189,7 @@ Download previous SSMS versions by selecting the download link in the related se
 | New Item | Details | Workaround |
 | -------- | ------- | ---------- |
 | Database Designer | Selecting the Design option for a view that references a table using spatial data causes SSMS to crash. | Use T-SQL to make changes to the view. |
-| Profiler | The Profiler menu is not localized. | No current alternative. |
+| Profiler | The Profiler menu isn't localized. | No current alternative. |
 | Query Editor | When SSMS opens after double-clicking on a .sql file, the Object Explorer window is displayed as a separate window. |
 | SQL Managed Instance | Viewing database properties for a SQL MI database may return the error "Subquery returned more than one value. This isn't permitted when the subquery follows =, !=, <, <=, >, >= or when the subquery is used as an expression. (.NET SqlClient Data Provider)". | There's a known problem due to incorrect data in `msdb`. To resolve, remove back up history. For example, `EXEC`msdb`..sp_delete_backuphistory @oldest_date = '<current date>'`. |
 | Storage Account | Trying to delete a container from a storage account fails with a (400) Bad Request error. | Use the Azure portal for container deletion. |

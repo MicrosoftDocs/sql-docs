@@ -26,11 +26,7 @@ In this article, you learn how to:
 > * Create an Azure SQL Server using [azurerm_mssql_server](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/mssql_server).
 > * Create an Azure SQL Database using [azurerm_mssql_database](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/mssql_database).
 
-[!INCLUDE [AI attribution](~/azure/includes/ai-generated-attribution.md)]
 [!INCLUDE [AI attribution](~/../azure/includes/ai-generated-attribution.md)]
-[!INCLUDE [AI attribution](~/../../azure/includes/ai-generated-attribution.md)]
-[!INCLUDE [AI attribution](~/../../../azure/includes/ai-generated-attribution.md)]
-[!INCLUDE [AI attribution](~/../../../../azure/includes/ai-generated-attribution.md)]
 
 ## Prerequisites
 

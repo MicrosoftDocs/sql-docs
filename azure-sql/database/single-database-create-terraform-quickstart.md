@@ -14,7 +14,7 @@ ms.date: 4/21/2023
 
 Creating a [single database](single-database-overview.md) is the quickest and simplest option for creating a database in Azure SQL Database. This quickstart shows you how to create a single database using Bicep.
 
-[!INCLUDE [Terraform abstract](~/azure-dev-docs-pr/articles/terraform/includes/abstract.md)]
+[!INCLUDE [Terraform abstract](~/../azure-dev-docs-pr/articles/terraform/includes/abstract.md)]
 
 In this article, you learn how to:
 
@@ -26,7 +26,7 @@ In this article, you learn how to:
 > * Create an Azure SQL Server using [azurerm_mssql_server](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/mssql_server).
 > * Create an Azure SQL Database using [azurerm_mssql_database](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/mssql_database).
 
-[!INCLUDE [AI attribution](~/azure-docs-pr/includes/ai-generated-attribution.md)]
+[!INCLUDE [AI attribution](~/../azure-docs-pr/includes/ai-generated-attribution.md)]
 
 ## Prerequisites
 
@@ -43,35 +43,35 @@ In this article, you learn how to:
 
 1. Create a file named `providers.tf` and insert the following code:
 
-    [!code-terraform[master](~/terraform_samples/quickstart/101-sql-database//providers.tf)]
+    [!code-terraform[master](~/../terraform_samples/quickstart/101-sql-database//providers.tf)]
 
 1. Create a file named `main.tf` and insert the following code:
 
-    [!code-terraform[master](~/terraform_samples/quickstart/101-sql-database//main.tf)]
+    [!code-terraform[master](~/../terraform_samples/quickstart/101-sql-database//main.tf)]
 
 1. Create a file named `variables.tf` and insert the following code:
 
-    [!code-terraform[master](~/terraform_samples/quickstart/101-sql-database//variables.tf)]
+    [!code-terraform[master](~/../terraform_samples/quickstart/101-sql-database//variables.tf)]
 
 1. Create a file named `outputs.tf` and insert the following code:
 
-    [!code-terraform[master](~/terraform_samples/quickstart/101-sql-database//outputs.tf)]
+    [!code-terraform[master](~/../terraform_samples/quickstart/101-sql-database//outputs.tf)]
 
 ## Initialize Terraform
 
-[!INCLUDE [terraform-init.md](~/azure-dev-docs-pr/articles/terraform/includes/terraform-init.md)]
+[!INCLUDE [terraform-init.md](~/../azure-dev-docs-pr/articles/terraform/includes/terraform-init.md)]
 
 ## Create a Terraform execution plan
 
-[!INCLUDE [terraform-plan.md](~/azure-dev-docs-pr/articles/terraform/includes/terraform-plan.md)]
+[!INCLUDE [terraform-plan.md](~/../azure-dev-docs-pr/articles/terraform/includes/terraform-plan.md)]
 
 ## Apply a Terraform execution plan
 
-[!INCLUDE [terraform-apply-plan.md](~/azure-dev-docs-pr/articles/terraform/includes/terraform-apply-plan.md)]
+[!INCLUDE [terraform-apply-plan.md](~/../azure-dev-docs-pr/articles/terraform/includes/terraform-apply-plan.md)]
 
 ## Verify the results
 
-"#### [Azure CLI](#tab/azure-cli)
+#### [Azure CLI](#tab/azure-cli)
 
 1. Get the Azure resource group name.
 
@@ -120,7 +120,7 @@ In this article, you learn how to:
 
 ## Clean up resources
 
-[!INCLUDE [terraform-plan-destroy.md](~/azure-dev-docs-pr/articles/terraform/includes/terraform-plan-destroy.md)]
+[!INCLUDE [terraform-plan-destroy.md](~/../azure-dev-docs-pr/articles/terraform/includes/terraform-plan-destroy.md)]
 
 ## Troubleshoot Terraform on Azure
 

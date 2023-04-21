@@ -1,8 +1,8 @@
 ---
 title: Availability groups for SQL Server on Linux
 description: Learn about the characteristics of availability groups for SQL Server on Linux.
-author: VanMSFT
-ms.author: vanto
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: vanto, randolphwest
 ms.date: 10/12/2022
 ms.service: sql

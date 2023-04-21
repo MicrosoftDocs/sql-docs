@@ -23,7 +23,7 @@ monikerRange: "= azuresql || = azuresql-db "
 
 Microsoft Azure SQL Database enables a subset of dynamic management views to diagnose performance problems, which might be caused by blocked or long-running queries, resource bottlenecks, poor query plans, and so on.  This article provides information on how to detect common performance problems by using dynamic management views.
 
-This article is about Azure SQL Database, for Azure SQL Managed Instance review [Monitoring performance using dynamic management views](../managed-instance/monitoring-with-dmvs.md).
+This article is about Azure SQL Database. For Azure SQL Managed Instance, review [Monitoring performance using dynamic management views](../managed-instance/monitoring-with-dmvs.md).
 
 ## Permissions
 

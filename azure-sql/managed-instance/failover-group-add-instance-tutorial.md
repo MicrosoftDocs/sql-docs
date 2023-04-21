@@ -265,7 +265,7 @@ Run these commands in the following order to create your secondary SQL Managed I
 
 ### [Azure PowerShell](#tab/azure-powershell)
 
-Create a global virtual network peering with Azure PowerShell by using the commands in this section, or check the [Full script](#full-script) for an example. 
+Create a global virtual network peering with Azure PowerShell by using the commands in this section, or check the [full script](#full-script) for an example. 
 
 Run these commands in the following order to peer the virtual networks for your two instances: 
 
@@ -337,7 +337,7 @@ Test failover using the Azure portal.
 
 ### [Azure PowerShell](#tab/azure-powershell)
 
-Test failover by using the following Azure PowerShell commands, or check the [Full script](#full-script) for an example. 
+Test failover by using the following Azure PowerShell commands, or check the [full script](#full-script) for an example. 
 
 | Command | Notes |
 |---|---|

@@ -1,6 +1,6 @@
 ---
 title: 'Quickstart: Create an Azure SQL Database server and database using Terraform'
-description: 'In this article, you create an Azure SQL Database server and database using Terraform'
+description: In this article, you create an Azure SQL Database server and database using Terraform.
 ms.topic: quickstart
 ms.service: sql-database
 ms.subservice: deployment-configuration
@@ -12,7 +12,7 @@ ms.date: 4/21/2023
 
 # Quickstart: Create an Azure SQL Database server and database using Terraform
 
-Creating a [single database](single-database-overview.md) is the quickest and simplest option for creating a database in Azure SQL Database. This quickstart shows you how to create a single database using Bicep.
+Creating a [single database](single-database-overview.md) is the quickest and simplest option to create a database in Azure SQL Database. This quickstart shows you how to create a single database using Terraform.
 
 [!INCLUDE [Terraform abstract](~/../azure-dev-docs-pr/articles/terraform/includes/abstract.md)]
 

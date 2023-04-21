@@ -65,6 +65,22 @@ Jump to [Simple Examples](#Simple) to skip the details of the syntax and get to 
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
+## The characteristics of SQL Server Stored Procedures are as follows:
+
+Performance: Stored Procedures can execute frequently used SQL queries faster because they are compiled and stored once, and do not require recompilation for each call.
+
+Security: Stored Procedures can provide protection against SQL injection attacks. User inputs are not directly included in the query, but processed as parameters.
+
+Convenience: Stored Procedures prevent redundant writing of commonly used queries, reducing writing time and improving code readability.
+
+Modularity: Stored Procedures can be used to create a module by combining related queries together, which can be included in other queries later on.
+
+Reusability: Stored Procedures can be reused in other applications or within different queries.
+
+Traceability: Stored Procedures can be tracked through a logging mechanism. This can be used to monitor which user executed which query.
+
+Manageability: Stored Procedures can be managed within the database. They can be used for tasks such as performing maintenance on the database, backing up or restoring data.
+
 ## Syntax
 
 Transact-SQL syntax for stored procedures in SQL Server and Azure SQL Database:

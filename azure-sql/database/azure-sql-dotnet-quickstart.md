@@ -131,11 +131,12 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
+// For production scenarios, consider keeping Swagger configurations behind the environment check
+// if (app.Environment.IsDevelopment())
+// {
     app.UseSwagger();
     app.UseSwaggerUI();
-}
+// }
 
 app.UseHttpsRedirection();
 
@@ -259,6 +260,10 @@ When the deployment finishes, Visual Studio launches the browser to display the 
 
 ## Test the deployed application
 
-Browse to the URL of the app to test that the connection to Azure SQL Database is working. You can locate the URL of your app on the App Service overview page. Append the `/person` path to the end of the URL to browse to the same endpoint you tested locally.
+1) Browse to the URL of the app to test that the connection to Azure SQL Database is working. You can locate the URL of your app on the App Service overview page. 
 
-The person you created locally should display in the browser. Congratulations! Your application is now connected to Azure SQL Database in both local and hosted environments.
+2) Append the `/swagger/index.html` path to the end of the URL to load the same SwaggerUI page you tested with locally.
+
+3) Execute test GET and POST requests to verify that the endpoints work as expected.
+
+Congratulations! Your application is now connected to Azure SQL Database in both local and hosted environments.

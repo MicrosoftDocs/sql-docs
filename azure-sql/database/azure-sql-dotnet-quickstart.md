@@ -86,7 +86,7 @@ For local development with passwordless connections to Azure SQL Database, add t
 
 ```json
 "ConnectionStrings": {
-    "AZURE_SQL_CONNECTIONSTRING": "Server=tcp:<database-server-name>.database.windows.net;Database=<database-name>;Authentication=Active Directory Default;Encrypt=True;TrustServerCertificate=False;"
+    "AZURE_SQL_CONNECTIONSTRING": "Server=tcp:<database-server-name>.database.windows.net,1433;Initial Catalog=<database-name>;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;Authentication=\"Active Directory Default\";"
 }
 ```
 
@@ -116,13 +116,13 @@ For local development with SQL Authentication to Azure SQL Database, add the fol
 
 Replace the contents of the `Program.cs` file with the following code, which performs the following important steps:
 
-* Retrieves the passwordless connection string from the environment variables
+* Retrieves the passwordless connection string from `appsettings.json`
 * Creates a `Persons` table in the database during startup (for testing scenarios only)
 * Creates an HTTP GET endpoint to retrieve all records stored in the `Persons` table
 * Creates an HTTP POST endpoint to add new records to the `Persons` table
 
 ```csharp
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -139,7 +139,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-string connectionString = app.Configuration.GetConnectionString("AZURE_SQL_CONNECTIONSTRING");
+string connectionString = app.Configuration.GetConnectionString("AZURE_SQL_CONNECTIONSTRING")!;
 
 try
 {
@@ -201,8 +201,8 @@ Finally, add the `Person` class to the bottom of the `Program.cs` file. This cla
 ```csharp
 public class Person
 {
-    public string FirstName { get; set; }
-    public string LastName { get; set; }
+    public required string FirstName { get; set; }
+    public required string LastName { get; set; }
 }
 ```
 

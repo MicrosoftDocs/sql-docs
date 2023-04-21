@@ -19,7 +19,7 @@ Application requests to Azure SQL Database must be authenticated using either a 
 
 ### Create the managed identity
 
-You can create a user-assigned managed identity using the Azure portal or the Azure CLI. Your application uses the identity to authenticate to other services.
+Create a user-assigned managed identity using the Azure portal or the Azure CLI. Your application uses the identity to authenticate to other services.
 
 # [Azure portal](#tab/azure-portal-create)
 
@@ -58,10 +58,10 @@ Create a SQL database user that maps back to the managed identity of your App Se
 3) On the query editor view, run the following T-SQL commands:
 
     ```sql
-    CREATE USER <your-app-service-name> FROM EXTERNAL PROVIDER;
-    ALTER ROLE db_datareader ADD MEMBER <your-app-service-name>;
-    ALTER ROLE db_datawriter ADD MEMBER <your-app-service-name>;
-    ALTER ROLE db_ddladmin ADD MEMBER <your-app-service-name>;
+    CREATE USER <app-service-name> FROM EXTERNAL PROVIDER;
+    ALTER ROLE db_datareader ADD MEMBER <app-service-name>;
+    ALTER ROLE db_datawriter ADD MEMBER <app-service-name>;
+    ALTER ROLE db_ddladmin ADD MEMBER <app-service-name>;
     GO
     ```
 
@@ -101,8 +101,9 @@ Update your application configuration to use the passwordless connection string 
 Update the connection string of your application to use the passwordless connection string format.
 
 1. Locate your connection string. For local development with .NET applications this is usually stored in one of the following locations:
-    * Environment variables, or `launchsettings.json` in local development scenarios.
-    * Configuration files, such as `appsettings.json`.
+    * The `appsettings.json` configuration file for your project.  
+    * The `launchsettings.json` configuration file for VIsual Studio projects.
+    * Local system or container environment variables.
 
 2. Update the connection string value using the following passwordless format:
 
@@ -112,8 +113,23 @@ Update the connection string of your application to use the passwordless connect
 
 #### Create a database user for the local user
 
+For local development, create a user in the SQL database that corresponds to the Azure account you use to sign-in to your local IDE, such as Visual Studio or IntelliJ.
 
+1) In the Azure portal, browse to your SQL database and select **Query editor (preview)**.
 
+2) Select **Continue as `<your-username>`** on the right side of the screen to sign into the database using your account.
+
+3) On the query editor view, run the following T-SQL commands:
+
+    ```sql
+    CREATE USER <user@domain> FROM EXTERNAL PROVIDER;
+    ALTER ROLE db_datareader ADD MEMBER <your-app-service-name>;
+    ALTER ROLE db_datawriter ADD MEMBER <your-app-service-name>;
+    ALTER ROLE db_ddladmin ADD MEMBER <your-app-service-name>;
+    GO
+    ```
+
+    :::image type="content" source="media/passwordless-connections/query-editor-small.png" lightbox="media/passwordless-connections/query-editor.png" alt-text="A screenshot showing how to use the Azure Query editor.":::
 
 ## Next steps
 

@@ -67,6 +67,12 @@
       "branch_mapping": {}
     },
     {
+      "path_to_root": "terraform_samples",
+      "url": "https://github.com/Azure/terraform",
+      "branch": "master",
+      "branch_mapping": {}
+    },
+    {
       "path_to_root": "azure",
       "url": "https://github.com/MicrosoftDocs/azure-docs-pr",
       "branch": "main",

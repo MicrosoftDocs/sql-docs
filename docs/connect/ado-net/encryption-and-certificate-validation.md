@@ -10,11 +10,11 @@ ms.topic: conceptual
 dev_langs:
   - "csharp"
 ---
-# Encryption and certificate validation
+# Encryption and certificate validation in Microsoft.Data.SqlClient
 
 [!INCLUDE [Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] always encrypts network packets associated with logging in. If no certificate has been provisioned on the server when it starts up, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] generates a self-signed certificate, which is used to encrypt login packets.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] always encrypts network packets associated with logging in. If no certificate has been provisioned on the server when it starts up, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generates a self-signed certificate, which is used to encrypt login packets.
 
 At a high level, encryption between a client and server ensures data is only readable by the client and server. An important part of the encryption process is server certificate validation. Server certificate validation allows the client to ensure the server is who it says it is. The certificate is validated for things like expiry, trust chain, and that the name in the certificate matches the name of the server the client is connecting to. For more information, see [Transport Layer Security and digital certificates](../../database-engine/configure-windows/certificate-overview.md).
 

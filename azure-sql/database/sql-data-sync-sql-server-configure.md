@@ -24,7 +24,7 @@ For PowerShell examples on how to configure SQL Data Sync, see [How to sync betw
 
 > [!IMPORTANT]
 > SQL Data Sync does **not** support Azure SQL Managed Instance or Azure Synapse Analytics at this time.
-> Azure SQL Database Hyperscale is not supported as a Hub DB (Hyperscale is only supported as a Member DB)
+> Azure SQL Database Hyperscale is only supported as a member database. You can't use Hyperscale as a hub database.
 
 ## Create sync group
 

@@ -4,11 +4,10 @@ description: The vCore purchasing model lets you independently scale compute and
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: sashan, moslake
-ms.date: 01/31/2023
+ms.date: 04/13/2023
 ms.service: sql-managed-instance
 ms.subservice: performance
 ms.topic: conceptual
-ms.custom: ignite-fall-2021
 ---
 # vCore purchasing model - Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
@@ -60,7 +59,7 @@ To monitor total consumed instance storage size for SQL Managed Instance, use th
 
 ## Backup storage
 
-Storage for database backups is allocated to support the  and capabilities of SQL Managed Instance. This storage is separate from data and log file storage, and is billed separately.
+Storage for database backups is allocated to support the capabilities of SQL Managed Instance. This storage is separate from data and log file storage, and is billed separately.
 
 
 - [Point-in-time restore (PITR)](recovery-using-backups.md): The storage consumption depends on the rate of change of the database and the retention period configured for backups. You can configure a separate retention period for each database between 0 to 35 days for SQL Managed Instance. A backup storage amount equal to the configured maximum data size is provided at no extra charge.
@@ -199,15 +198,15 @@ When specifying hardware parameter in templates or scripts, hardware is provided
 
 ### Hardware availability
 
-#### <a id="gen4gen5-1"></a> Gen4
-
-[!INCLUDE[azure-sql-gen4-hardware-retirement-sql-managed-instance](../includes/azure-sql-gen4-hardware-retirement-sql-managed-instance.md)]
-
 #### Standard-series (Gen5) and premium-series
 
 Standard-series (Gen5) and premium-series hardware is available in all public regions worldwide.
   
 Memory optimized premium-series hardware is in preview, and has limited regional availability. For more information, see [Azure SQL Managed Instance resource limits](../managed-instance/resource-limits.md#hardware-configuration-characteristics).
+
+#### Previously available hardware
+
+Gen4 hardware has been retired and is not available for provisioning. Migrate your instance of SQL Managed Instance to a [supported hardware generation](resource-limits.md).
 
 ## Next steps
 

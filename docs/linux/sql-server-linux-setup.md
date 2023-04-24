@@ -1,8 +1,8 @@
 ---
 title: Installation guidance for SQL Server on Linux
 description: Install, update, and uninstall SQL Server on Linux. This article covers online, offline, and unattended scenarios.
-author: VanMSFT
-ms.author: vanto
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: randolphwest
 ms.date: 12/20/2022
 ms.service: sql

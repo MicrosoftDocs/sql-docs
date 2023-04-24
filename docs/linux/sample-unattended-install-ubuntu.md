@@ -2,8 +2,8 @@
 title: Unattended install for SQL Server on Ubuntu
 titleSuffix: SQL Server
 description: Learn to use a sample bash script to install SQL Server on Ubuntu Server without interactive input.
-author: VanMSFT
-ms.author: vanto
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: randolphwest
 ms.date: 05/20/2022
 ms.service: sql

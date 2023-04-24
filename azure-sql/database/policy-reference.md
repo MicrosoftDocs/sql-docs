@@ -25,7 +25,7 @@ the link in the **Version** column to view the source on the
 [!INCLUDE [azure-policy-reference-service-sqldatabase](../includes/policy/reference/byrp/microsoft.sql.md)]
 
 ## Limitations
-- Azure Policy applicable to a Azure SQL Database creation is not enforced when using T-SQL or SSMS. 
+- Azure Policy applicable to Azure SQL Database and SQL Managed Instance Database creation is not enforced when using T-SQL or SSMS. 
 
 ## Next steps
 

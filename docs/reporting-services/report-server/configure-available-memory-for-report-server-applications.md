@@ -3,7 +3,7 @@ title: "Configure Available Memory for Report Server Applications"
 description: Learn about the configuration settings for memory usage in Reporting Services and how a server responds when memory pressure is a factor in processing requests.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/30/2019
+ms.date: 04/24/2023
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
@@ -13,6 +13,14 @@ helpviewer_keywords:
   - "memory thresholds [Reporting Services]"
 ---
 # Configure Available Memory for Report Server Applications
+
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+
+[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
+
+> [!NOTE]  
+>  The information in this article applies only to features related to paginated reports (RDLs) within Power BI Report Server. Power BI (PBIX) reports and their scheduled refresh activities within Power BI Report Server are not affected by these settings. For help with scheduled refresh memory, see [Troubleshoot scheduled refresh in Power BI Report Server](/powerbi/report-server/scheduled-refresh-troubleshoot.md).
+
  Although [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] can use all available memory, you can override default behavior by configuring an upper limit on the total amount of memory resources that are allocated to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server applications. You can also set thresholds that cause the report server to change how it prioritizes and processes requests depending on whether it is under low, medium, or heavy memory pressure. At low levels of memory pressure, the report server responds by giving a slightly higher priority to interactive or on-demand report processing. At high levels of memory pressure, the report server uses multiple techniques to remain operational using the limited resources available to it.  
   
  This article describes the configuration settings that you can specify and how the server responds when memory pressure becomes a factor in processing requests.  

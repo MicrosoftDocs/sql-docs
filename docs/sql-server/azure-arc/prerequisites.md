@@ -56,7 +56,9 @@ To get the region segment of a regional endpoint, remove all spaces from the Azu
 
 For example: `san-af-<region>-prod.azurewebsites.net` should be `san-af-eastus2-prod.azurewebsites.net` in the East US 2 region.
 
-To see a list of all regions, run this command:
+For a list of supported regions, review [Supported Azure regions](overview.md#supported-azure-regions).
+
+For a list of all regions, run this command:
 
 ```azcli
 az account list-locations -o table

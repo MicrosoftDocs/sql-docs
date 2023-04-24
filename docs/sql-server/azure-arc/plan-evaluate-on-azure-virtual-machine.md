@@ -26,7 +26,7 @@ To evaluate Azure Arc-enabled SQL Server from an Azure Virtual Machine:
 1. Create a virtual machine. Complete the prerequisites and steps in [Evaluate Azure Arc-enabled servers on an Azure virtual machine](/azure/azure-arc/servers/plan-evaluate-on-azure-virtual-machine).
 1. Install a SQL Server instance.
 1. Complete the prerequisites. [Prerequisites](prerequisites.md).
-1. Connect the instance of SQL Server to Azure Arc. Follow the steps in [Connect with Azure Data Studio](../../azure-data-studio/connect.md).
+1. Connect the instance of SQL Server to Azure Arc. Follow the steps in [Connect your SQL Server to Azure Arc](connect.md).
 
 ## Next steps
 

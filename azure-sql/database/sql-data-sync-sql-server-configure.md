@@ -4,7 +4,7 @@ description: This tutorial shows you how to set up SQL Data Sync for Azure
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 03/08/2023
+ms.date: 04/24/2023
 ms.service: sql-database
 ms.subservice: sql-data-sync
 ms.topic: tutorial
@@ -23,7 +23,8 @@ For an overview of SQL Data Sync, see [Sync data across cloud and on-premises da
 For PowerShell examples on how to configure SQL Data Sync, see [How to sync between databases in SQL Database](scripts/sql-data-sync-sync-data-between-sql-databases.md) or [between databases in Azure SQL Database and SQL Server](scripts/sql-data-sync-sync-data-between-azure-onprem.md)
 
 > [!IMPORTANT]
-> SQL Data Sync does **not** support Azure SQL Managed Instance or Azure Synapse Analytics at this time.
+> Currently, SQL Data Sync is only supported on Azure SQL Database. 
+> Azure SQL Database Hyperscale is only supported as a member database, not as a hub database.
 
 ## Create sync group
 

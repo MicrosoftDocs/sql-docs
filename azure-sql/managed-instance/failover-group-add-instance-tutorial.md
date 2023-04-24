@@ -237,7 +237,7 @@ Run these commands in the following order to create your secondary SQL Managed I
 1. In the [Azure portal](https://portal.azure.com), go to the **Virtual network** resource for your primary managed instance. 
 1. Select **Peerings** under *Settings* and then select + Add.
 
-![Screenshot of peerings page for VNetA](./media/failover-group-add-instance-tutorial/vneta-peerings.png)
+   ![Screenshot of peerings page for VNetA in Azure portal](./media/failover-group-add-instance-tutorial/vneta-peerings.png)
 
 1. Enter or select values for the following settings:
 

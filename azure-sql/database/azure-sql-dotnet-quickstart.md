@@ -268,6 +268,6 @@ When the deployment finishes, Visual Studio launches the browser to display the 
 3) Execute test GET and POST requests to verify that the endpoints work as expected.
 
 > [!TIP]
-> If you receive a 500 Internal Server error while testing, it may be due to your database networking configurations. Verify that your logical server is configured with the settings outlined in the [Configure the database](/azure/azure-sql/database/azure-sql-dotnet-quickstart?view=azuresql-db#configure-the-database) section.
+> If you receive a 500 Internal Server error while testing, it may be due to your database networking configurations. Verify that your logical server is configured with the settings outlined in the [Configure the database](/azure/azure-sql/database/azure-sql-dotnet-quickstart#configure-the-database) section.
 
 Congratulations! Your application is now connected to Azure SQL Database in both local and hosted environments.

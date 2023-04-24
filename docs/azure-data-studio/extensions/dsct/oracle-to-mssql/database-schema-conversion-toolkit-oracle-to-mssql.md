@@ -20,7 +20,7 @@ This section introduces you to Database Schema Conversion Toolkit and provides s
 Oracle databases version 11.2.0.4 and above are supported as the source.
 
 > [!NOTE]
-> Database Schema Conversion Toolkit extension is dependent on the [Extension for Oracle](../../extension-for-oracle.md) to establish connection to the Oracle database and [SQL Database Projects extension](../../sql-database-project-extension.md) to display the converted script output and its deployment on target.
+> Database Schema Conversion Toolkit extension is dependent on the [Extension for Oracle](../../extension-for-oracle.md) to establish connection to the Oracle database and [SQL Database Projects extension](../../sql-database-project-extension.md) to display the converted schema output and its deployment on target.
 
 ## Supported targets
 
@@ -34,7 +34,6 @@ The Database Schema Conversion Toolkit extension currently supports the followin
 
 The Database Schema Conversion Toolkit supports automated conversion of the following database objects from Oracle to Microsoft SQL platform:
 
-- Users (schemas)
 - Basic table definitions (columns, indexes, primary key, foreign key, unique and check constraints)
 - Procedures
 - Views

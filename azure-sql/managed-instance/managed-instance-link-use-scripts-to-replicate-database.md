@@ -274,6 +274,9 @@ az sql mi partner-cert create --certificate-name $CertificateName --instance-nam
 
 ```
 
+In cause you need to see all SQL Server certificates uploaded to a managed instance, use the [az sql mi partner-cert list](/cli/azure/sql/mi/partner-cert?view=azure-cli-latest#az-sql-mi-partner-cert-list) Azure CLI command in Azure Cloud Shell. To remove SQL Server certificate uploaded to a managed instance, use the [az sql mi partner-cert delete](/cli/azure/sql/mi/partner-cert?view=azure-cli-latest#az-sql-mi-partner-cert-delete) Azure CLI command in Azure Cloud Shell.
+
+
 ---
 
 The result of this operation is a summary of the uploaded SQL Server certificate to Azure.
@@ -328,7 +331,7 @@ az sql mi endpoint-cert show --instance-name $ManagedInstanceName --resource-gro
 ```
 
 > [!CAUTION]
-> When using the Azure CLI, you'll need to manually add `0x` to the front of the PublicKey output when you use it in subsequent steps. 
+> When using the Azure CLI, you'll need to manually add `0x` to the front of the PublicKey output when you use it in subsequent steps. For example, the PublicKey will look like "**0x**3082033E30...". 
 
 ---
 
@@ -355,7 +358,7 @@ FROM BINARY = <PublicKey>
 Importing public root certificate keys of Microsoft and DigiCert certificate authorities (CA) to SQL Server is required for your SQL Server to trust certificates issued by Azure for database.windows.net domains.
 
 > [!CAUTION]
-> Ensure the PublicKey starts with an `0x`. You may need to add it manually. 
+> Ensure the PublicKey starts with an `0x`. You may need to add it manually to the beginning of the PublicKey if it's not already there. 
 
 First, import Microsoft PKI root-authority certificate on SQL Server:
 
@@ -672,7 +675,7 @@ New-AzSqlInstanceLink -ResourceGroupName $ResourceGroup -InstanceName $ManagedIn
 -TargetDatabase $DatabaseName -SourceEndpoint $SourceIP
 ```
 
-If you need to see all links on a managed instance, use [Get-AzSqlInstanceLink](/powershell/module/az.sql/get-azsqlinstancelink) PowerShell command in Azure Cloud Shell. To remove an existing link, use [Remove-AzSqlInstanceLink](/powershell/module/az.sql/remove-azsqlinstancelink) PowerShell command in Azure Cloud Shell.
+If you need to see all links on a managed instance, use the [Get-AzSqlInstanceLink](/powershell/module/az.sql/get-azsqlinstancelink) PowerShell command in Azure Cloud Shell. To remove an existing link, use the [Remove-AzSqlInstanceLink](/powershell/module/az.sql/remove-azsqlinstancelink) PowerShell command in Azure Cloud Shell.
 
 #### [Azure CLI](#tab/azure-cli)
 
@@ -707,10 +710,12 @@ ResourceGroup="<ResourceGroup>"
 SourceIP="TCP://"$SQLServerIP":5022" 
 
 # Create link on managed instance. Join distributed availability group on SQL Server. 
-az sql mi link create  --resource-group $ResourceGroup --instance-name $ManagedInstanceName `
---distributed-availability-group-name $DAGName --primary-ag $AGName --secondary-ag $ManagedInstanceName `
+az sql mi link create  --resource-group $ResourceGroup --instance-name $ManagedInstanceName
+--distributed-availability-group-name $DAGName --primary-ag $AGName --secondary-ag $ManagedInstanceName
 --target-database $DatabaseName --source-endpoint $SourceIP 
 ```
+
+If you need to see all links on a managed instance, use the [az sql mi link show](/cli/azure/sql/mi/link?view=azure-cli-latest#az-sql-mi-link-show) Azure CLI command in Azure Cloud Shell. To remove an existing link, use the [az sql mi link delete](/cli/azure/sql/mi/link?view=azure-cli-latest#az-sql-mi-link-delete) Azure CLI command in Azure Cloud Shell.
 
 ---
 

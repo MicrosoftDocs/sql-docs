@@ -228,16 +228,6 @@ All firewalls on the network hosting SQL Server, and the host OS needs to allow:
 
 :::image type="content" source="./media/managed-instance-link-preparation/link-networking-requirements.png" alt-text="Diagram showing network requirements to set up the link between SQL Server and managed instance.":::
 
-> [!IMPORTANT]
-> - Ports need to be open in every firewall in the networking environment, including the host server, as well as any corporate firewalls or gateways on the network. In corporate environments, you may need to show your network administrator the information in this section to help open additional ports in the corporate networking layer. 
-> - While you can choose to customize the endpoint on the SQL Server side, port numbers for SQL Managed Instance can't be changed or customized. 
-> - IP address ranges of subnets hosting managed instances, and SQL Server must not overlap.
-
-The following diagram shows an example of an on-premises network environment, indicating that _all firewalls in the environment need to have open ports_, including the OS firewall hosting the SQL Server, as well as any corporate firewalls and/or gateways: 
-
-:::image type="content" source="./media/managed-instance-link-preparation/link-networking-infrastructure.png" alt-text="Diagram showing network infrastructure to set up the link between SQL Server and managed instance.":::
-
-
 
 The following table describes port actions for each environment: 
 
@@ -249,14 +239,22 @@ The following table describes port actions for each environment:
 
 
 
-
-
 Use the following PowerShell script on the Windows host OS of the SQL Server instance to open ports in the Windows firewall: 
 
 ```powershell
 New-NetFirewallRule -DisplayName "Allow TCP port 5022 inbound" -Direction inbound -Profile Any -Action Allow -LocalPort 5022 -Protocol TCP
 New-NetFirewallRule -DisplayName "Allow TCP port 5022 outbound" -Direction outbound -Profile Any -Action Allow -LocalPort 5022 -Protocol TCP
 ```
+
+The following diagram shows an example of an on-premises network environment, indicating that _all firewalls in the environment need to have open ports_, including the OS firewall hosting the SQL Server, as well as any corporate firewalls and/or gateways: 
+
+:::image type="content" source="./media/managed-instance-link-preparation/link-networking-infrastructure.png" alt-text="Diagram showing network infrastructure to set up the link between SQL Server and managed instance.":::
+
+
+> [!IMPORTANT]
+> - Ports need to be open in every firewall in the networking environment, including the host server, as well as any corporate firewalls or gateways on the network. In corporate environments, you may need to show your network administrator the information in this section to help open additional ports in the corporate networking layer. 
+> - While you can choose to customize the endpoint on the SQL Server side, port numbers for SQL Managed Instance can't be changed or customized. 
+> - IP address ranges of subnets hosting managed instances, and SQL Server must not overlap.
 
 ## Test bidirectional network connectivity
 
@@ -536,7 +534,7 @@ After installation finishes, open SSMS and connect to your supported SQL Server 
 
 :::image type="content" source="./media/managed-instance-link-preparation/ssms-database-context-menu-managed-instance-link.png" alt-text="Screenshot that shows the Azure SQL Managed Instance link option on the context menu.":::
 
-## Configure SSMS for government cloud 
+## Configure SSMS for government clouds
 
 If you want to deploy your SQL Managed Instance to a government cloud, you'll need to modify your SQL Server Management Studio (SSMS) settings to use the correct cloud. If you're not deploying your SQL Managed Instance to a government cloud, skip this step. 
 
@@ -545,10 +543,11 @@ To update your SSMS settings, follow these steps:
 1. Open SSMS. 
 1. From the menu, select **Tools** and then choose **Options**. 
 1. Expand **Azure Services** and select **Azure Cloud**. 
-1. Under **Select an Azure Cloud**, use the drop-down to choose **AzureUSGovernment**, or another government cloud: 
+1. Under **Select an Azure Cloud**, use the drop-down to choose **AzureUSGovernment**, or another government cloud, such as **AzureChinaCloud**: 
 
   :::image type="content" source="media/managed-instance-link-preparation/ssms-for-government-cloud.png" alt-text="Screenshot of SSMS UI, options page, Azure services, with Azure cloud highlighted. ":::
 
+If you want to go back to to the public cloud, choose **AzureCloud** from the drop-down menu. 
 
 
 ## Next steps

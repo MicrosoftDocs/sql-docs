@@ -186,8 +186,8 @@ ResourceGroup="<ResourceGroup>"
 # ==== Do not customize the following cmdlet ==== 
 # Update replication mode of the specified link 
 
-az sql mi link update --resource-group $ResourceGroup --instance-name $ManagedInstanceName `
---distributed-availability-group-name $LinkName --primary-ag $AGName `
+az sql mi link update --resource-group $ResourceGroup --instance-name $ManagedInstanceName
+--distributed-availability-group-name $LinkName --primary-ag $AGName
 --secondary-ag=$ManagedInstanceName --replication-mode "Sync" 
 ```
 
@@ -293,7 +293,7 @@ WHERE
     -- AND drs.is_primary_replica = 1
 ```
 
-Alternatively, you could also use Azure PowerShell command [Get-AzSqlInstanceLink](/powershell/module/az.sql/get-azsqlinstancelink) to fetch the `LastHardenedLsn` property for your link on SQL Managed Instance which will provide the same information as the above T-SQL query.
+Alternatively, you could also use Azure PowerShell command [Get-AzSqlInstanceLink](/powershell/module/az.sql/get-azsqlinstancelink), or the Azure CLI command [az sql mi link show](/cli/azure/sql/mi/link?view=azure-cli-latest#az-sql-mi-link-show), to fetch the `LastHardenedLsn` property for your link on SQL Managed Instance which provides the same information as the above T-SQL query.
 
 
 > [!IMPORTANT]
@@ -347,7 +347,7 @@ ResourceGroup="<ResourceGroup>"
 # ==== Do not customize the following cmdlet ====  
 
 # Failover the specified link 
-az sql mi link delete --resource-group $ResourceGroup --instance-name $ManagedInstanceName `
+az sql mi link delete --resource-group $ResourceGroup --instance-name $ManagedInstanceName
 --distributed-availability-group-name $LinkName --yes 
 ```
 

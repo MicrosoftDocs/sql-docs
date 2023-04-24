@@ -274,7 +274,7 @@ az sql mi partner-cert create --certificate-name $CertificateName --instance-nam
 
 ```
 
-In cause you need to see all SQL Server certificates uploaded to a managed instance, use the [az sql mi partner-cert list](/cli/azure/sql/mi/partner-cert?view=azure-cli-latest#az-sql-mi-partner-cert-list) Azure CLI command in Azure Cloud Shell. To remove SQL Server certificate uploaded to a managed instance, use the [az sql mi partner-cert delete](/cli/azure/sql/mi/partner-cert?view=azure-cli-latest#az-sql-mi-partner-cert-delete) Azure CLI command in Azure Cloud Shell.
+In cause you need to see all SQL Server certificates uploaded to a managed instance, use the [az sql mi partner-cert list](/cli/azure/sql/mi/partner-cert#az-sql-mi-partner-cert-list) Azure CLI command in Azure Cloud Shell. To remove SQL Server certificate uploaded to a managed instance, use the [az sql mi partner-cert delete](/cli/azure/sql/mi/partner-cert#az-sql-mi-partner-cert-delete) Azure CLI command in Azure Cloud Shell.
 
 
 ---
@@ -715,7 +715,7 @@ az sql mi link create  --resource-group $ResourceGroup --instance-name $ManagedI
 --target-database $DatabaseName --source-endpoint $SourceIP 
 ```
 
-If you need to see all links on a managed instance, use the [az sql mi link show](/cli/azure/sql/mi/link?view=azure-cli-latest#az-sql-mi-link-show) Azure CLI command in Azure Cloud Shell. To remove an existing link, use the [az sql mi link delete](/cli/azure/sql/mi/link?view=azure-cli-latest#az-sql-mi-link-delete) Azure CLI command in Azure Cloud Shell.
+If you need to see all links on a managed instance, use the [az sql mi link show](/cli/azure/sql/mi/link#az-sql-mi-link-show) Azure CLI command in Azure Cloud Shell. To remove an existing link, use the [az sql mi link delete](/cli/azure/sql/mi/link#az-sql-mi-link-delete) Azure CLI command in Azure Cloud Shell.
 
 ---
 

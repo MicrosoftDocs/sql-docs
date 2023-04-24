@@ -41,11 +41,11 @@ SSMS 19.0.2 is the latest general availability (GA) release of SSMS. If you need
 
 | New Item | Details |
 | -------- | ------- |
-| Connection | Addressed error "Your app has been throttled by AAD due to too many requests" when using Azure Active Directory authentication.  See [SSMS 19 AAD Integrated: Your app has been throttled by AAD due to too many requests](https://feedback.azure.com/d365community/idea/b4b0d281-c2a0-ed11-a81b-6045bd8615b0). | 
+| Connection | Addressed error "Your app has been throttled by Azure AD due to too many requests" when using Azure Active Directory authentication.  See [SSMS 19 AAD Integrated: Your app has been throttled by AAD due to too many requests](https://feedback.azure.com/d365community/idea/b4b0d281-c2a0-ed11-a81b-6045bd8615b0). | 
 | Connection | Resolved SSMS crash behavior when logging into Azure and changing the user. |
 | Fulltext | Fixed an issue that caused a table's fulltext index to be rebuilt when moving the table to a different filegroup. |
 | General SSMS | Added digital signature to dll files. |
-| Link feature for Azure Azure SQL Managed Instance | Fixed error "Exception has been thrown by the target of an invocation", which occurred when a subscription with no resource groups was selected attempting to create a link using Managed Instance link wizard. | 
+| Link feature for Azure SQL Managed Instance | Fixed error "Exception has been thrown by the target of an invocation", which occurred when a subscription with no resource groups was selected attempting to create a link using Managed Instance link wizard. |
 | Azure SQL Managed Instance | Restored ability to view File and FileGroups pages on Database Properties window. See [bugs in 19.0.1](https://feedback.azure.com/d365community/idea/b3d026e6-b8b2-ed11-a81b-000d3ae6a6aa).|
 | Profiler | Fixed issue that generated "Errors in the OLE DB provider. Unable to obtain authentication token using the credentials provided" error trying to run SQL Profiler with a Power BI workspace. |
 | Replication | Addressed error "Property Password can't be changed or read after a connection string has been set" which occurred when trying to configure a replication subscriber. See [SSMS 19 - Issue while connecting to subscriber during replication configuration](https://feedback.azure.com/d365community/idea/4e9073b7-1dad-ed11-a81b-6045bd79fc6e).|

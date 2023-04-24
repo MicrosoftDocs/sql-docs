@@ -24,6 +24,7 @@ helpviewer_keywords:
   - "DAC"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # Import a BACPAC File to Create a New User Database
 
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -42,19 +43,19 @@ The import process builds a new DAC in two stages.
 
 By default, the database created during the import will have all of the default settings from the CREATE DATABASE statement, except that the database collation and compatibility level are set to the values defined in the DAC export file. A DAC export file uses the values from the original database.
 
-Some database options, such as TRUSTWORTHY, DB_CHAINING, and HONOR_BROKER_PRIORITY, cannot be adjusted as part of the import process. Physical properties, such as the number of filegroups, or the numbers and sizes of files cannot be altered as part of the import process. After the import completes, you can use the ALTER DATABASE statement, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell to tailor the database. For more information, see [Databases](../../relational-databases/databases/databases.md).
+Some database options, such as TRUSTWORTHY, DB_CHAINING, and HONOR_BROKER_PRIORITY, can't be adjusted as part of the import process. Physical properties, such as the number of filegroups, or the numbers and sizes of files can't be altered as part of the import process. After the import completes, you can use the ALTER DATABASE statement, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell to tailor the database. For more information, see [Databases](../../relational-databases/databases/databases.md).
 
 ## Limitations and restrictions
 
-A DAC can be imported to [!INCLUDE[ssSDS](../../includes/sssds-md.md)], or an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] running [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) or later. If you export a DAC from a higher version, the DAC may contain objects not supported by [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. You cannot deploy those DACs to instances of [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].
+A DAC can be imported to [!INCLUDE[ssSDS](../../includes/sssds-md.md)], or an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] running [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) or later. If you export a DAC from a higher version, the DAC may contain objects not supported by [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. You can't deploy those DACs to instances of [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].
 
 ## Prerequisites
 
- We recommend that you do not import a DAC export file from unknown or untrusted sources. Such files could contain malicious code that might execute unintended Transact-SQL code or cause errors by modifying the schema. Before you use an export file from an unknown or untrusted source, unpack the DAC and examine the code, like stored procedures and other user-defined code. For more information about how to perform these checks, see [Validate a DAC Package](validate-a-dac-package.md).
+ We recommend that you don't import a DAC export file from unknown or untrusted sources. Such files could contain malicious code that might execute unintended Transact-SQL code or cause errors by modifying the schema. Before you use an export file from an unknown or untrusted source, unpack the DAC and examine the code, like stored procedures and other user-defined code. For more information about how to perform these checks, see [Validate a DAC Package](validate-a-dac-package.md).
 
 ## Security
 
- To improve security, SQL Server Authentication logins are stored in a DAC export file without a password. When the file is imported, the login is created as a disabled login with a generated password. To enable the logins, sign in using a login that has ALTER ANY LOGIN permission and use ALTER LOGIN to enable the login and assign a new password that can be communicated to the user. This is not needed for Windows Authentication logins because their passwords are not managed by SQL Server.
+ To improve security, SQL Server Authentication logins are stored in a DAC export file without a password. When the file is imported, the login is created as a disabled login with a generated password. To enable the logins, sign in using a login that has ALTER ANY LOGIN permission and use ALTER LOGIN to enable the login and assign a new password that can be communicated to the user. This isn't needed for Windows Authentication logins because their passwords aren't managed by SQL Server.
 
 ## Permissions
 
@@ -102,7 +103,7 @@ Use this page to specify the location of the .bacpac file to import.
 
 - **Import from Azure** - Imports a BACPAC file from a Microsoft Azure container. You must connect to a Microsoft Azure container to validate this option. Note that the Import from Azure option also requires that you specify a local directory for the temporary file. The temporary file will be created at the specified location and will remain there after the operation completes.
 
-    When browsing Azure, you will be able to switch between containers within a single account. You must specify a single .bacpac file to continue the import operation. You can sort columns by **Name**, **Size**, or **Date Modified**.
+    When browsing Azure, you'll be able to switch between containers within a single account. You must specify a single .bacpac file to continue the import operation. You can sort columns by **Name**, **Size**, or **Date Modified**.
 
     To continue, specify the .bacpac file to import, and then select **Open**.
 
@@ -143,7 +144,7 @@ To continue, select **Next**.
 
 ### <a id="Results"></a> Results Page
 
-This page reports the success or failure of the import and create database operations, showing the success or failure of each action. Any action that encountered an error will have a link in the **Result** column. Select the link to view a report of the error for that action.
+This page reports the success or failure of the import and creates database operations, showing the success or failure of each action. Any action that encountered an error will have a link in the **Result** column. Select the link to view a report of the error for that action.
 
 Select **Close** to close the wizard.
 

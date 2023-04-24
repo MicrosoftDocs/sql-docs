@@ -229,7 +229,7 @@ The app is ready to be deployed to Azure. Visual Studio can create an Azure App 
 1. In Visual Studio's **Solution Explorer** window, right-click on the top-level project node and select **Publish**.
 1. In the publishing dialog, select **Azure** as the deployment target, and then select **Next**.
 1. For the specific target, select **Azure App Service (Windows)**, and then select **Next**.
-1. Select the green **+** icon to create a new App Service to deploy to and enter the following values:
+1. Select the **+** icon to create a new App Service to deploy to and enter the following values:
 
     * **Name**: Leave the default value.
     * **Subscription name**: Select the subscription to deploy to.
@@ -241,6 +241,7 @@ The app is ready to be deployed to Azure. Visual Studio can create an Azure App 
 
 1. Once the resource is created, make sure it's selected in the list of app services, and then select **Next**.
 1. On the **API Management** step, select the **Skip this step** checkbox at the bottom and then choose **Finish**.
+1. On the Finish step, select **Close** if the dialog does not close automatically.
 
 1. Select **Publish** in the upper right of the publishing profile summary to deploy the app to Azure.
 
@@ -260,10 +261,13 @@ When the deployment finishes, Visual Studio launches the browser to display the 
 
 ## Test the deployed application
 
-1) Browse to the URL of the app to test that the connection to Azure SQL Database is working. You can locate the URL of your app on the App Service overview page. 
+1) Select the **Browse** button at the top of App Service overview page to launch the root url of your app.
 
 2) Append the `/swagger/index.html` path to the end of the URL to load the same SwaggerUI page you tested with locally.
 
 3) Execute test GET and POST requests to verify that the endpoints work as expected.
+
+> [!TIP]
+> If you receive a 500 Internal Server error while testing, it may be due to your database networking configurations. Verify that your logical server is configured with the settings outlined in the [Configure the database](/azure/azure-sql/database/azure-sql-dotnet-quickstart?view=azuresql-db#configure-the-database) section.
 
 Congratulations! Your application is now connected to Azure SQL Database in both local and hosted environments.

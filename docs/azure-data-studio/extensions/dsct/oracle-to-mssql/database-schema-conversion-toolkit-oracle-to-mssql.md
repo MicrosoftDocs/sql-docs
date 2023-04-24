@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 # Database Schema Conversion Toolkit (Preview)
 
-The Database Schema Conversion Toolkit is an [Azure Data Studio](../../../what-is-azure-data-studio.md) extension for converting Oracle database schemas to Microsoft SQL platform. IT helps in converting majority of the database storage object and code objects to a format compatible with the target database. The Database Schema Conversion Toolkit in Azure Data Studio enables the previously unsupported migration and modernization of Oracle workloads in exclusively Linux environments compared to [SQL Server Migration Assistant](../../../../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md).
+The Database Schema Conversion Toolkit is an [Azure Data Studio](../../../what-is-azure-data-studio.md) extension for converting Oracle database schemas to Microsoft SQL platform. It helps in converting majority of the database storage objects and code objects to a format compatible with the target database. The Database Schema Conversion Toolkit in Azure Data Studio enables the previously unsupported migration and modernization of Oracle workloads in exclusively Linux environments compared to [SQL Server Migration Assistant](../../../../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md).
 
 This section introduces you to Database Schema Conversion Toolkit and provides step-by-step instructions for converting Oracle databases schema.
 
@@ -20,7 +20,7 @@ This section introduces you to Database Schema Conversion Toolkit and provides s
 Oracle databases version 11.2.0.4 and above are supported as the source.
 
 > [!NOTE]
-> Database Schema Conversion Toolkit extension relies on the [Extension for Oracle](../../extension-for-oracle.md) to establish connection to the Oracle database.
+> Database Schema Conversion Toolkit extension is dependent on the [Extension for Oracle](../../extension-for-oracle.md) to establish connection to the Oracle database and [SQL Database Projects extension](../../sql-database-project-extension.md) to display the converted script output and its deployment on target.
 
 ## Supported targets
 

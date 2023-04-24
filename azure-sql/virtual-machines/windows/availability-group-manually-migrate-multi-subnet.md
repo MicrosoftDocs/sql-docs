@@ -1,10 +1,10 @@
 ---
 title: "Migrate SQL Server availability group from a single subnet to a multi-subnet"
-description: "Learn how to migrate a SQL Server Always On Availability Group from a single subnet to a multi-subnet."
+description: "Learn how to migrate a SQL Server Always On availability group from a single subnet to a multiple subnet (multi-subnet) environment)."
 author: tarynpratt
 ms.author: tarynpratt
 ms.reviewer: mathoma, randolphwest
-ms.date: 04/20/2023
+ms.date: 04/27/2023
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: how-to
@@ -12,40 +12,53 @@ editor: monicar
 tags: azure-service-management
 ---
 
-# Migrate SQL Server availability group from a single subnet to a multi-subnet
+# Migrate SQL Server availability group to multi-subnets - SQL Server on Azure VMs
 
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
-> [!TIP]
-> There are many [methods to deploy an availability group](availability-group-overview.md#deployment-options). Simplify your deployment and eliminate the need for an Azure load balancer or distributed network name (DNN) for your Always On availability group by creating your SQL Server virtual machines (VMs) in [multiple subnets](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md) within the same Azure virtual network.
+This article teaches you to migrate your Always On availability group (AG) from a single subnet to multiple subnets to simplify connecting to your listener in Azure with your SQL Server on Azure virtual machines (VMs).  
 
-Customers who are running SQL Server on Azure virtual machines can implement an Always On availability group in either a single or multi-subnet. The multi-subnet configuration simplifies the experience by removing the need for an Azure Load Balancer or a DNN for the listener. While using a multi-subnet approach is recommended, it requires the connection strings for an application to use `MultiSubnetFailover = true`, which might not be immediately possible due to application level changes.
+[!INCLUDE[tip-for-multi-subnet-ag](../../includes/virtual-machines-ag-listener-multi-subnet.md)]
 
-If you originally created an availability group in a single-subnet and are using an Azure Load Balancer or DNN for the listener and now want to reduce complexity by moving to a multi-subnet configuration, you can do so with some manual steps.
+## Overview 
 
-Prior to starting a migration of an existing environment, the risks of changing an environment in use should be weighed. There are two ways to move forward with a migration of this type.
+Customers who are running SQL Server on Azure virtual machines can implement an Always On availability group (AG) in either a single subnet or multiple subnets (multi-subnet). A multi-subnet configuration simplifies the availability group envrionment by removing the need for an Azure Load Balancer or a Distributed Network Name (DNN) to route traffic to the listener on the Azure network. While using a multi-subnet approach is recommended, it requires the connection strings for an application to use `MultiSubnetFailover = true`, which might not be possible immediately due to application-level changes.
+
+If you originally created an availability group in a single subnet and are using an Azure Load Balancer or DNN for the listener and now want to reduce complexity by moving to a multi-subnet configuration, you can do so with some manual steps.
+
+Prior to starting a migration of an existing environment, weigh the risks of changing an in-use environment. 
+
+Consider the following two ways to migrate your availability group to multiple subnets: 
 
 1. Create a new environment to perform side-by-side testing
 1. Manually move an existing availability group
 
+> [!CAUTION]
+> Performing any migration involves some risk, so as always test thoroughly in a non-production environment before moving to a production environment.
+
+
 ## New environment with side-by-side testing
 
-The first method to move to a multi-subnet availability group is to set up a new environment. If this route is chosen, then new virtual machines are created. Additionally, a new availability group in a multi-subnet configuration is set up, and finally a backup of your current database is restored to this environment.
+The first method to move to a multi-subnet availability group is to set up a new environment. If this is the chosen route, then you need to: 
 
-Initially in this environment, the listener would have a different name from the existing environment. A new availability group allows for side-by-side testing of the application (testing with both the multi-subnet and the current load balanced AG in place).
+1. Create new virtual machines
+1. Create a new availability group in a multi-subnet configuration
+1. Backup your current database and restore them to the new environment
 
-Once the multi-subnet environment is thoroughly validated, then a cut over to the new infrastructure could take place. Depending on the environment (production, test) a maintenance window is taken to complete the change. During the maintenance window, restore the database to the new primary replica, drop the listener on both AGs (multi-subnet and load balancer), and lastly recreate the listener with the name for the connection string in the multi-subnet AG.
+Initially in the new multi-subnet environment, create the listener with a different name than the existing single subnet environment. A newly-named listener in a new availability group allows for side-by-side testing of the application (testing with both the multi-subnet and the current load balancer or DNN in place).
 
-Setting up a new environment in a [multi-subnet configuration is now easier with the deployment experience](availability-group-azure-portal-configure.md) from the Azure portal.
+Once the multi-subnet environment is thoroughly validated, then you could cut over to the new infrastructure. Depending on the environment (production, test), use a maintenance window to complete the change. During the maintenance window, restore the database to the new primary replica, drop the availability group listener in both environments, and then recreate the listener in the multi-subnet environment using the same name as the previous listener, the one used in the application connection string. 
+
+Setting up a new environment in a [multi-subnet configuration is now easier with the Azure portal deployment experience](availability-group-azure-portal-configure.md).
 
 ## Manually move an existing availability group
 
-The other option is to manually move from the load balancer to a multi-subnet. In order to go this route, there are a few prerequisites needed to migrate:
+The other option is to manually move from the single subnet environment to a multi-subnet environment. In order migrate using this method, you need the following prerequisites: 
 
 - An IP address for each machine in a new subnet
-- Connection strings using `MultiSubnetFailover = true` in place
+- Connection strings already using `MultiSubnetFailover = true`
 
-The steps to perform this process are outlined below:
+To migrate your availability group to a multi-subnet configuration, follow these steps: 
 
 1. Create a new subnet for each secondary, as all virtual machines are currently in the same subnet.
 
@@ -56,23 +69,21 @@ The steps to perform this process are outlined below:
     | VM1 (primary) | 10.1.1.0/24 (existing subnet) | 10.1.1.15 | 10.1.1.16 |
     | VM2 (secondary) | 10.1.2.0/24 (new subnet) | 10.1.2.15 | 10.1.2.16 |
 
-1. Add the Cluster IP and the Listener IP to the [primary server](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md?#add-secondary-ips-to-sql-server-vms). Adding these IP addresses is an online operation.
+1. Add the Cluster IP and Listener IP to the [primary replica server](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md?#add-secondary-ips-to-sql-server-vms). Adding these IP addresses is an online operation.
 
-1. In the portal, move the secondary server to the new subnet, by going to the virtual machine > **Networking > Network Interface > IP Configurations**. Moving the server to a new subnet results in a reboot of the secondary.
+1. In the Azure portal, move the secondary server to the new subnet by going to the virtual machine > **Networking > Network Interface > IP Configurations**. Moving the server to a new subnet reboots the secondary replica server.
 
-1. Add the Cluster IP and the Listener IP to the [secondary server](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md?#add-secondary-ips-to-sql-server-vms). Adding these IP addresses is an online operation.
+1. Add the Cluster IP and the Listener IP to the [secondary replica server](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md?#add-secondary-ips-to-sql-server-vms). Adding these IP addresses is an online operation.
 
-1. At this point, you have the IPs and the subnets in place, so you can delete the load balancer.
+1. At this point, since the IP addresses and subnets are in place, so you can delete the load balancer.
 
-1. Drop the listener
+1. Drop the listener. 
 
 1. If you're using Windows Server 2019 and later versions, skip this step. If you're using Windows Server 2016, manually add the [cluster IPs to the FCI](availability-group-manually-configure-tutorial-multi-subnet.md?#set-the-failover-cluster-ip-address).
 
 1. Recreate the listener with the new listener IPs.
 
 1. Flush DNS on all servers using ipconfig `/flushdns`.
-
-Performing any migration involves some risk, so as always test thoroughly in a non-production environment before moving to a production environment.
 
 ## Next steps
 

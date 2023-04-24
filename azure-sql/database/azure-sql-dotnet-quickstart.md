@@ -90,7 +90,7 @@ For local development with passwordless connections to Azure SQL Database, add t
 }
 ```
 
-The passwordless connection string sets a configuration value of `Authentication=Active Directory Default`, which instructs the `Microsoft.Data.SqlClient` library to connect to Azure SQL Database using a class called [`DefaultAzureCredential`](/dotnet/azure/sdk/authentication#defaultazurecredential). `DefaultAzureCredential` enables passwordless connections to Azure services and is provided by the Azure Identity library on which the SQL client library depends. `DefaultAzureCredential` supports multiple authentication methods and determines which to use at runtime for different environments.
+The passwordless connection string sets a configuration value of `Authentication="Active Directory Default"`, which instructs the `Microsoft.Data.SqlClient` library to connect to Azure SQL Database using a class called [`DefaultAzureCredential`](/dotnet/azure/sdk/authentication#defaultazurecredential). `DefaultAzureCredential` enables passwordless connections to Azure services and is provided by the Azure Identity library on which the SQL client library depends. `DefaultAzureCredential` supports multiple authentication methods and determines which to use at runtime for different environments.
 
 For example, when the app runs locally, `DefaultAzureCredential` authenticates via the user you're signed into Visual Studio with, or other local tools like the Azure CLI. Once the app deploys to Azure, the same code discovers and applies the managed identity that is associated with the hosted app, which you'll configure later. The [Azure Identity library overview](/dotnet/api/overview/azure/Identity-readme#defaultazurecredential) explains the order and locations in which `DefaultAzureCredential` looks for credentials.
 
@@ -263,7 +263,7 @@ When the deployment finishes, Visual Studio launches the browser to display the 
 
 1) Select the **Browse** button at the top of App Service overview page to launch the root url of your app.
 
-2) Append the `/swagger/index.html` path to the end of the URL to load the same SwaggerUI page you tested with locally.
+2) Append the `/swagger/index.html` path to the URL to load the same Swagger test page you used locally.
 
 3) Execute test GET and POST requests to verify that the endpoints work as expected.
 

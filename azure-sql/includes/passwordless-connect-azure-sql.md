@@ -63,6 +63,5 @@ The Azure portal allows you to work with managed identities and run queries agai
 >
 > You can read more about configuring database roles and security on the following resources:
 >
-> [Tutorial: Secure a database in Azure SQL Database](../database/secure-database-tutorial.md)
->
-> [Authorize database access to SQL Database](../database/logins-create-manage.md)
+> - [Tutorial: Secure a database in Azure SQL Database](../database/secure-database-tutorial.md)
+> - [Authorize database access to SQL Database](../database/logins-create-manage.md)

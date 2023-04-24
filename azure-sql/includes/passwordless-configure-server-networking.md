@@ -12,9 +12,8 @@ Secure, passwordless connections to Azure SQL Database with .NET require certain
         > [!WARNING]
         > Enabling the **Allow Azure services and resources to access this server** setting is not a recommended security practice for production scenarios. Real applications should implement more secure approaches, such as stronger firewall restrictions or virtual network configurations.
         >
-        > [Configure a virtual network with private endpoints](/azure/private-link/tutorial-private-endpoint-sql-portal).
-        >
-        > [Configure Azure SQL Database firewall rules](/azure/azure-sql/database/firewall-configure).
+        > - [Configure a virtual network with private endpoints](/azure/private-link/tutorial-private-endpoint-sql-portal).
+        > - [Configure Azure SQL Database firewall rules](/azure/azure-sql/database/firewall-configure).
 
 1) The server must also have Azure AD authentication enabled with an Azure Active Directory admin account assigned. For local development connections, the Azure Active Directory admin account should be an account you can also log into Visual Studio or the Azure CLI with locally. You can verify whether your server has Azure AD authentication enabled on the **Azure Active Directory** page.
 

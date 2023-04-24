@@ -1011,7 +1011,7 @@ items:
       items:
       - name: Manage
         items:
-        - name: Create a Database
+        - name: Create a database
           href: relational-databases/databases/create-a-database.md
         - name: View databases
           href: relational-databases/databases/view-a-list-of-databases-on-an-instance-of-sql-server.md
@@ -1021,23 +1021,25 @@ items:
           href: relational-databases/databases/view-or-change-the-properties-of-a-database.md
         - name: Change configuration settings
           href: relational-databases/databases/change-the-configuration-settings-for-a-database.md
-        - name: Delete a Database
+        - name: Delete a database
           href: relational-databases/databases/delete-a-database.md
-        - name: Delete Data or Log Files from a Database
+        - name: Delete data or log files from a database
           href: relational-databases/databases/delete-data-or-log-files-from-a-database.md
-        - name: Display Data & Log Space Information for a Database
+        - name: Display data & log space information for a database
           href: relational-databases/databases/display-data-and-log-space-information-for-a-database.md
-        - name: Increase the Size of a Database
+        - name: Increase the size of a database
           href: relational-databases/databases/increase-the-size-of-a-database.md
-        - name: Manage Metadata
+        - name: Manage metadata
           href: relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md
-        - name: Rename
+        - name: Rename a database
           href: relational-databases/databases/rename-a-database.md
-        - name: Set Single-user Mode
+        - name: Set single-user mode
           href: relational-databases/databases/set-a-database-to-single-user-mode.md
-        - name: Shrink a Database
+        - name: Shrink a database
           href: relational-databases/databases/shrink-a-database.md
-        - name: Shrink a File
+        - name: Shrink the tempdb database
+          href: relational-databases/databases/shrink-tempdb-database.md
+        - name: Shrink a file
           href: relational-databases/databases/shrink-a-file.md
         - name: Compatibility level
           href: relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md
@@ -1995,7 +1997,7 @@ items:
         href: relational-databases/xml/create-views-over-xml-columns.md
       - name: Computed Columns
         href: relational-databases/xml/use-xml-in-computed-columns.md
-      - name: Retrieve & Query
+      - name: Query options and data
         href: relational-databases/xml/retrieve-and-query-xml-data.md
       - name: Add namespaces to queries
         href: relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md
@@ -4265,6 +4267,8 @@ items:
     href: relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md
   - name: Optimized locking
     href: relational-databases/performance/optimized-locking.md
+  - name: Deadlocks guide
+    href: relational-databases/sql-server-deadlocks-guide.md
   - name: Memory Management Architecture
     href: relational-databases/memory-management-architecture-guide.md
   - name: Diagnosing latch contention
@@ -4672,18 +4676,18 @@ items:
           href: database-engine/configure-windows/scm-services-change-the-password-of-the-accounts-used.md
         - name: Configure SQL Server Error Logs
           href: database-engine/configure-windows/scm-services-configure-sql-server-error-logs.md
-    - name: Server Network Configuration
+    - name: Server network configuration
       href: database-engine/configure-windows/server-network-configuration.md
       items:
-      - name: Connect to SQL Server When System Administrators Are Locked Out
+      - name: Connect to SQL Server when system administrators are locked out
         href: database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md
-      - name: Default SQL Server Network Protocol Configuration
+      - name: Default SQL Server network protocol configuration
         href: database-engine/configure-windows/default-sql-server-network-protocol-configuration.md
-      - name: Enable or Disable a Server Network Protocol
+      - name: Enable or disable a server network protocol
         href: database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md
-      - name: Configure a Server to Listen on a Specific TCP Port
+      - name: Configure a server to listen on a specific TCP port
         href: database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md
-      - name: Configure a Server to Listen on an Alternate Pipe
+      - name: Configure a server to listen on an alternate pipe
         href: database-engine/configure-windows/configure-a-server-to-listen-on-an-alternate-pipe.md
       - name: Encrypt connections to SQL Server
         items:
@@ -4699,23 +4703,23 @@ items:
           href: database-engine/configure-windows/certificate-procedures.md
         - name: SQL Server and client encryption summary
           href: database-engine/configure-windows/sql-server-and-client-encryption-summary.md
-      - name: Connect to SQL Server Through a Proxy Server
+      - name: Connect to SQL Server through a proxy server
         href: database-engine/configure-windows/connect-to-sql-server-through-a-proxy-server-sql-server-configuration-manager.md
-      - name: Configure a Windows Firewall for Database Engine Access
+      - name: Configure a Windows Firewall for Database Engine access
         href: database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md
-      - name: Hide an Instance of SQL Server Database Engine
+      - name: Hide an instance of SQL Server Database Engine
         href: database-engine/configure-windows/hide-an-instance-of-sql-server-database-engine.md
-      - name: Configure the Database Engine to Listen on Multiple TCP Ports
+      - name: Configure the Database Engine to listen on multiple TCP ports
         href: database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md
       - name: How to enable the TCP protocol with SQLPS
         href: powershell/how-to-enable-tcp-sqlps.md
-      - name: Determine Whether the Database Engine Is Installed & Started
+      - name: Determine if the Database Engine is installed and started
         href: database-engine/configure-windows/determine-whether-the-database-engine-is-installed-and-started.md
-      - name: Connect to the Database Engine Using Extended Protection
+      - name: Connect to the Database Engine using Extended Protection
         href: database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md
-      - name: Certificate Management
+      - name: Certificate management
         href: database-engine/configure-windows/manage-certificates.md
-      - name: Register a Service Principal Name for Kerberos Connections
+      - name: Register a Service Principal Name for Kerberos connections
         href: database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md
     - name: Client Network Configuration
       href: database-engine/configure-windows/client-network-configuration.md
@@ -7876,6 +7880,10 @@ items:
             items:
               - name: Configure column encryption
                 href: relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption.md
+              - name: Configure columns encryption in-place with DACPAC
+                href: relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption-dacpac.md
+              - name: Configure column encryption in-place with PowerShell
+                href: relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption-powershell.md 
               - name: Configure column encryption in-place with Transact-SQL 
                 href: relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption-tsql.md
               - name: Enable Always Encrypted with secure enclaves for existing encrypted columns
@@ -7887,7 +7895,7 @@ items:
           - name: Create and use indexes on enclave-enabled columns
             href: relational-databases/security/encryption/always-encrypted-enclaves-create-use-indexes.md
           - name: Develop applications using Always Encrypted with secure enclaves
-            href: relational-databases/security/encryption/always-encrypted-enclaves-client-development.md          
+            href: relational-databases/security/encryption/always-encrypted-enclaves-client-development.md        
       - name: Troubleshoot TDE
         href: relational-databases/security/encryption/troubleshoot-tde.md
       - name: Move a TDE protected database
@@ -8831,8 +8839,6 @@ items:
             href: ssms/scripting/search-documents-interactively.md
           - name: Search Documents Using Results Lists
             href: ssms/scripting/search-documents-using-results-lists.md
-          - name: Search Text with Wildcards
-            href: ssms/scripting/search-text-with-wildcards.md
           - name: Search Text with Regular Expressions
             href: ssms/scripting/search-text-with-regular-expressions.md
           - name: Find & Replace
@@ -10194,8 +10200,12 @@ items:
         href: linux/sql-server-linux-configure-msdtc.md
       - name: Configure persistent memory PMEM
         href: linux/sql-server-linux-configure-pmem.md
-      - name: Configure the time zone
+      - name: Configure time zone on SQL Server 2022
         href: linux/sql-server-linux-configure-time-zone.md
+      - name: Configure time zone on SQL Server 2019
+        href: linux/sql-server-linux-configure-time-zone-2019.md
+      - name: Configure time zone on SQL Server 2017
+        href: linux/sql-server-linux-configure-time-zone-2017.md
       - name: Configure to send usage and diagnostic data to Microsoft
         href: linux/usage-and-diagnostic-data-configuration-for-sql-server-linux.md
     - name: Containers
@@ -10322,6 +10332,8 @@ items:
           href: linux/quickstart-sql-server-containers-kubernetes.md
         - name: Deploy availability group with DH2i on AKS
           href: linux/tutorial-sql-server-containers-kubernetes-dh2i.md
+        - name: Deploy availability group in a DH2i sidecar
+          href: linux/tutorial-sql-server-dh2i-sidecar.md
     - name: Security
       href: linux/sql-server-linux-security-overview.md
       items:
@@ -10331,13 +10343,13 @@ items:
         href: linux/sql-server-linux-active-directory-auth-overview.md
       - name: Join an AD domain
         href: linux/sql-server-linux-active-directory-join-domain.md
-      - name: Encrypting connections
+      - name: Encrypt connections
         href: linux/sql-server-linux-encrypted-connections.md
       - name: Introduction to adutil
         href: linux/sql-server-linux-ad-auth-adutil-introduction.md
-      - name: Understanding AD Authentication
+      - name: Understand AD Authentication
         href: linux/sql-server-linux-ad-auth-understanding.md
-      - name: Troubleshooting AD Authentication
+      - name: Troubleshoot AD Authentication
         href: linux/sql-server-linux-ad-auth-troubleshooting.md
       - name: Rotate SQL Server on Linux keytabs
         href: linux/sql-server-linux-ad-auth-rotate-keytabs.md
@@ -10427,10 +10439,12 @@ items:
             href: sql-server/azure-arc/connect-already-enabled.md
         - name: Connect at scale
           items:
-          - name: Connect at scale | Azure policy
+          - name: Azure policy
             href: sql-server/azure-arc/connect-at-scale-policy.md
-          - name: Connect at scale | Script
+          - name: Script
             href: sql-server/azure-arc/connect-at-scale-script.md
+          - name: Autodeploy
+            href: sql-server/azure-arc/connect-at-scale-autodeploy.md
           - name: Connect machines using Configuration Manager custom task sequence
             href: sql-server/azure-arc/onboard-configuration-manager-custom-task.md
     - name: Manage
@@ -10439,10 +10453,14 @@ items:
         href: sql-server/azure-arc/assess.md
       - name: View databases
         href: sql-server/azure-arc/view-databases.md
-      - name: Delete from or restore to Azure Arc
-        href: sql-server/azure-arc/delete-from-azure-arc.md
       - name: Manage SQL Server license and billing options
         href: sql-server/azure-arc/manage-license-type.md
+      - name: Automated patching
+        href: sql-server/azure-arc/patch.md
+      - name: Automated backups
+        href: sql-server/azure-arc/point-in-time-restore.md
+      - name: Delete from or restore to Azure Arc
+        href: sql-server/azure-arc/delete-from-azure-arc.md
     - name: Secure
       items:
       - name: Configure advanced data Security
@@ -10469,6 +10487,8 @@ items:
       items:
         - name: Platform release notes
           href: big-data-cluster/release-notes-big-data-cluster.md
+        - name: Cumulative Update 19
+          href: big-data-cluster/release-notes-cumulative-update-19.md
         - name: Cumulative Update 18
           href: big-data-cluster/release-notes-cumulative-update-18.md
         - name: Cumulative Update 17
@@ -15724,6 +15744,8 @@ items:
         href: relational-databases/system-tables/msqreader-agents-transact-sql.md
       - name: MSqreader_history
         href: relational-databases/system-tables/msqreader-history-transact-sql.md
+      - name: MSrepl_agent_jobs
+        href: relational-databases/system-tables/msrepl-agent-jobs-transact-sql.md
       - name: MSrepl_backup_lsns
         href: relational-databases/system-tables/msrepl-backup-lsns-transact-sql.md
       - name: MSrepl_commands
@@ -15736,6 +15758,8 @@ items:
         href: relational-databases/system-tables/msrepl-originators-transact-sql.md
       - name: MSrepl_queuedtraninfo
         href: relational-databases/system-tables/msrepl-queuedtraninfo-transact-sql.md
+      - name: MSreplservers
+        href: relational-databases/system-tables/msreplservers.md
       - name: MSrepl_transactions
         href: relational-databases/system-tables/msrepl-transactions-transact-sql.md
       - name: MSrepl_version
@@ -16260,13 +16284,13 @@ items:
         href: t-sql/data-types/constants-transact-sql.md
       - name: Conversion
         href: t-sql/data-types/data-type-conversion-database-engine.md
-      - name: Nondeterministic Conversion
+      - name: Nondeterministic conversion
         href: t-sql/data-types/nondeterministic-convert-date-literals.md
       - name: Precedence
         href: t-sql/data-types/data-type-precedence-transact-sql.md
       - name: Synonyms
         href: t-sql/data-types/data-type-synonyms-transact-sql.md
-      - name: Precision, Scale, & Length
+      - name: Precision, scale, & length
         href: t-sql/data-types/precision-scale-and-length-transact-sql.md
       - name: Cursor
         href: t-sql/data-types/cursor-transact-sql.md
@@ -16274,7 +16298,7 @@ items:
         href: t-sql/data-types/rowversion-transact-sql.md
       - name: sql_variant
         href: t-sql/data-types/sql-variant-transact-sql.md
-      - name: Table
+      - name: table
         href: t-sql/data-types/table-transact-sql.md
       - name: uniqueidentifier
         href: t-sql/data-types/uniqueidentifier-transact-sql.md
@@ -17351,17 +17375,17 @@ items:
           href: t-sql/queries/aliasing-azure-sql-data-warehouse-parallel-data-warehouse.md
         - name: EXPLAIN
           href: t-sql/queries/explain-transact-sql.md
-        - name: OPTION Clause
+        - name: OPTION clause
           href: t-sql/queries/option-clause-transact-sql.md
-        - name: OUTPUT Clause
+        - name: OUTPUT clause
           href: t-sql/queries/output-clause-transact-sql.md
         - name: READTEXT
           href: t-sql/queries/readtext-transact-sql.md
-        - name: Search Condition
+        - name: Search condition
           href: t-sql/queries/search-condition-transact-sql.md
         - name: Subqueries (Azure Synapse Analytics, Parallel Data Warehouse)
           href: t-sql/queries/subqueries-azure-sql-data-warehouse-parallel-data-warehouse.md
-        - name: Table Value Constructor
+        - name: Table value constructor
           href: t-sql/queries/table-value-constructor-transact-sql.md
         - name: TOP
           href: t-sql/queries/top-transact-sql.md

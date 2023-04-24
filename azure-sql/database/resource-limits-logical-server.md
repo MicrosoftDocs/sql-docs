@@ -4,7 +4,7 @@ description: This article provides an overview of resource management in Azure S
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 03/08/2023
+ms.date: 04/13/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: reference
@@ -15,7 +15,8 @@ ms.topic: reference
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](resource-limits-logical-server.md)
+> * [Azure SQL Database logical server](resource-limits-logical-server.md)
+> * [Azure SQL Database single database](resource-limits-vcore-single-databases.md)
 > * [Azure SQL Managed Instance](../managed-instance/resource-limits.md)
 
 This article provides an overview of resource management in Azure SQL Database. It provides information on what happens when resource limits are reached, and describes  resource governance mechanisms that are used to enforce these limits.
@@ -248,6 +249,14 @@ To learn more, review `tempdb` size limits for:
 
 - vCore purchasing model: [single databases](resource-limits-vcore-single-databases.md), [pooled databases](resource-limits-vcore-elastic-pools.md)
 - DTU purchasing model: [single databases](resource-limits-dtu-single-databases.md#tempdb-sizes),  [pooled databases](resource-limits-dtu-elastic-pools.md#tempdb-sizes).
+
+## Previously available hardware
+
+This section includes details on previously available hardware.
+
+- Gen4 hardware has been retired and is not available for provisioning, upscaling, or downscaling. Migrate your database to a supported hardware generation for a wider range of vCore and storage scalability, accelerated networking, best IO performance, and minimal latency. For more information, see [Support has ended for Gen 4 hardware on Azure SQL Database](https://azure.microsoft.com/updates/support-has-ended-for-gen-4-hardware-on-azure-sql-database/).
+
+[!INCLUDE[identify-gen4-hardware](../includes/identify-gen4-hardware.md)]
 
 ## Next steps
 

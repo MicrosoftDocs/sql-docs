@@ -4,7 +4,7 @@ description: This article contains the release notes and supported features for 
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
-ms.date: 02/24/2023
+ms.date: 03/15/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -36,6 +36,9 @@ This section lists the latest versions of each package per distribution, for [!I
 | --- | --- | --- | --- | --- |
 | [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] | CU 31 GDR | 2023-02-14 | 14.0.3460.9 | [KB 5021126](https://support.microsoft.com/help/5021126) |
 
+> [!IMPORTANT]  
+> This is the final cumulative update for [!INCLUDE[ssSQL17](../includes/sssql17-md.md)].
+
 
 - As of CU 4, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent is no longer installed as a separate package. It is installed with the Database Engine package and must be enabled to use.
 - The **mssql-server-is** package isn't supported on SUSE in this release. For more information, see [SQL Server Integration Services (SSIS)](#ssis).
@@ -43,14 +46,14 @@ This section lists the latest versions of each package per distribution, for [!I
 | Distribution | Package name | Package version | Download |
 | --- | --- | --- | --- |
 | **Red Hat Enterprise Linux** | | | |
-| RHEL 8 | Database Engine | 14.0.3460.9-3 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-14.0.3460.9-3.x86_64.rpm) |
-| RHEL 8 | Full-Text Search | 14.0.3460.9-3 | [Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-fts-14.0.3460.9-3.x86_64.rpm) |
-| RHEL 8 | High Availability | 14.0.3460.9-3 | [High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-ha-14.0.3460.9-3.x86_64.rpm) |
-| RHEL 7 | SSIS | 14.0.3015.40-1 | [SSIS RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.3015.40-1.x86_64.rpm) |
+| RHEL 8 | Database Engine | 14.0.3460.9-3 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-14.0.3460.9-3.x86_64.rpm) |
+| RHEL 8 | Full-Text Search | 14.0.3460.9-3 | [Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3460.9-3.x86_64.rpm) |
+| RHEL 8 | High Availability | 14.0.3460.9-3 | [High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3460.9-3.x86_64.rpm) |
+| RHEL 7 | SSIS | 14.0.3015.40-1 | [SSIS RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017/Packages/m/mssql-server-is-14.0.3015.40-1.x86_64.rpm) |
 | **SUSE Enterprise Linux Server** | | | |
-| SLES 12 | Database Engine | 14.0.3460.9-3 | [Database Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3460.9-3.x86_64.rpm) |
-| SLES 12 | Full-Text Search | 14.0.3460.9-3 | [Full-Text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3460.9-3.x86_64.rpm) |
-| SLES 12 | High Availability | 14.0.3460.9-3 | [High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3460.9-3.x86_64.rpm) |
+| SLES 12 | Database Engine | 14.0.3460.9-3 | [Database Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-14.0.3460.9-3.x86_64.rpm) |
+| SLES 12 | Full-Text Search | 14.0.3460.9-3 | [Full-Text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3460.9-3.x86_64.rpm) |
+| SLES 12 | High Availability | 14.0.3460.9-3 | [High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3460.9-3.x86_64.rpm) |
 | **Ubuntu** | | | |
 | Ubuntu 18.04 | Database Engine | 14.0.3460.9-3 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3460.9-3_amd64.deb) |
 | Ubuntu 18.04 | Full-Text Search | 14.0.3460.9-3 | [Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3460.9-3_amd64.deb) |
@@ -72,8 +75,8 @@ If you are updating existing [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.m
 
 The following table lists the release history for [!INCLUDE[ssSQL17](../includes/sssql17-md.md)].
 
-| Release               | Version       | Release date |
-| --------------------- | ------------- | ------------ |
+| Release                | Version       | Release date |
+| ---------------------- | ------------- | ------------ |
 | [CU 31 GDR](/troubleshoot/sql/linux/release-history-2017#CU31-GDR) | 14.0.3460.9   | 2023-02-14   |
 | [CU 31](/troubleshoot/sql/linux/release-history-2017#CU31) | 14.0.3456.2   | 2022-09-20   |
 | [CU 30](/troubleshoot/sql/linux/release-history-2017#CU30) | 14.0.3451.2   | 2022-07-13   |

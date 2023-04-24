@@ -45,6 +45,5 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  [Search an Active Document Incrementally](./search-an-active-document-incrementally.md)   
  [Search Documents Interactively](./search-documents-interactively.md)   
  [Search Documents Using Results Lists](./search-documents-using-results-lists.md)   
- [Search Text with Wildcards](./search-text-with-wildcards.md)   
  [Search Text with Regular Expressions](./search-text-with-regular-expressions.md)  
   

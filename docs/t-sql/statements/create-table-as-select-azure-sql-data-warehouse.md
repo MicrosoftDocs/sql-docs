@@ -3,8 +3,8 @@ title: "CREATE TABLE AS SELECT (Azure Synapse Analytics)"
 description: "CREATE TABLE AS SELECT in Azure Synapse Analytics creates a new table based on the output of a SELECT statement. CTAS is the simplest and fastest way to create a copy of a table."
 author: markingmyname
 ms.author: maghan
-ms.reviewer: vanto, xiaoyul
-ms.date: 01/25/2023
+ms.reviewer: vanto, xiaoyul, mariyaali
+ms.date: 03/30/2023
 ms.service: sql
 ms.topic: reference
 dev_langs:
@@ -92,21 +92,23 @@ For details, see the [Arguments section](./create-table-azure-sql-data-warehouse
 ### Table distribution options
 For details and to understand how to choose the best distribution column, see the [Table distribution options](./create-table-azure-sql-data-warehouse.md#TableDistributionOptions) section in CREATE TABLE. For recommendations on which distribution to choose for a table based on actual usage or sample queries, see [Distribution Advisor in Azure Synapse SQL](/azure/synapse-analytics/sql/distribution-advisor).
 
-`DISTRIBUTION` = `HASH` ( *distribution_column_name* ) | ROUND_ROBIN | REPLICATE      
-The CTAS statement requires a distribution option and does not have default values. This is different from CREATE TABLE, which has defaults. 
+`DISTRIBUTION` = `HASH` ( *distribution_column_name* ) | ROUND_ROBIN | REPLICATE
+The CTAS statement requires a distribution option and does not have default values. This is different from CREATE TABLE which has defaults.
 
-`DISTRIBUTION = HASH ( [distribution_column_name [, ...n]] )` (*Preview*) 
-Distributes the rows based on the hash values of up to eight columns, allowing for more even distribution of the base table data, reducing the data skew over time and improving query performance. 
+`DISTRIBUTION = HASH ( [distribution_column_name [, ...n]] )`
+Distributes the rows based on the hash values of up to eight columns, allowing for more even distribution of the base table data, reducing the data skew over time and improving query performance.
 
 > [!NOTE]
-> - To enable this preview feature, join the preview by changing the database's compatibility level to 9000 with this command. For more information on setting the database compatibility level, see [ALTER DATABSE SCOPED CONFIGURATION](./alter-database-scoped-configuration-transact-sql.md). For example: `DATABASE SCOPED CONFIGURATION SET DW_COMPATIBILITY_LEVEL = 9000;`
-> - To opt-out the preview, run this command to change the database's compatibility level to AUTO. For example: `ALTER DATABASE SCOPED CONFIGURATION SET DW_COMPATIBILITY_LEVEL = AUTO;` This will disable the multi-column distribution (MCD) feature (preview). Existing MCD tables will stay but become unreadable. Queries over MCD tables will return this error: `Related table/view is not readable because it distributes data on multiple columns and multi-column distribution is not supported by this product version or this feature is disabled.`
->     - To regain access to MCD tables, opt-in the preview again. 
->     - To load data into a MCD table, use CTAS statement and the data source needs be Synapse SQL tables.  
-> - Using SSMS for [generating a script](../../ssms/scripting/generate-scripts-sql-server-management-studio.md) to create MCD tables is not currently supported.
-> - Preview features are meant for testing only and should not be used on production instances or production data. Please keep a copy of your test data if the data is important.
+>
+> - To enable feature, change the database's compatibility level to 50 with this command. For more information on setting the database compatibility level, see [ALTER DATABASE SCOPED CONFIGURATION](./alter-database-scoped-configuration-transact-sql.md). For example: `ALTER DATABASE SCOPED CONFIGURATION SET DW_COMPATIBILITY_LEVEL = 50;`
+> - To disable the multi-column distribution (MCD) feature, run this command to change the database's compatibility level to AUTO. For example: `ALTER DATABASE SCOPED CONFIGURATION SET DW_COMPATIBILITY_LEVEL = AUTO;` Existing MCD tables will stay but become unreadable. Queries over MCD tables will return this error: `Related table/view is not readable because it distributes data on multiple columns and multi-column distribution is not supported by this product version or this feature is disabled.`
+>   - To regain access to MCD tables, enable the feature again.
+>   - To load data into a MCD table, use CTAS statement and the data source needs be Synapse SQL tables.  
+>   - CTAS on MCD HEAP target tables is not supported. Instead, use [INSERT SELECT](insert-transact-sql.md?view=azure-sqldw-latest&preserve-view=true) as a workaround to load data into MCD HEAP tables.
+> - Using SSMS for [generating a script](../../ssms/scripting/generate-scripts-sql-server-management-studio.md) to create MCD tables is currently supported beyond SSMS version 19.
 
 For details and to understand how to choose the best distribution column, see the [Table distribution options](./create-table-azure-sql-data-warehouse.md#TableDistributionOptions) section in CREATE TABLE. 
+
 
 <a name="table-partition-options-bk"></a>
 
@@ -543,7 +545,7 @@ Applies to: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] a
 
 Merge statements can be replaced, at least in part, by using `CTAS`. You can consolidate the `INSERT` and the `UPDATE` into a single statement. Any deleted records would need to be closed off in a second statement.
 
-An example of an `UPSERT` is available below:
+An example of an `UPSERT` follows:
 
 ```sql
 CREATE TABLE dbo.[DimProduct_upsert]
@@ -632,11 +634,11 @@ The value stored for result is different. As the persisted value in the result c
 
 This is particularly important for data migrations. Even though the second query is arguably more accurate there is a problem. The data would be different compared to the source system and that leads to questions of integrity in the migration. This is one of those rare cases where the "wrong" answer is actually the right one!
 
-The reason we see this disparity between the two results is down to implicit type casting. In the first example, the table defines the column definition. When the row is inserted an implicit type conversion occurs. In the second example there is no implicit type conversion as the expression defines data type of the column. Notice also that the column in the second example has been defined as a NULLable column whereas in the first example it has not. When the table was created in the first example column nullability was explicitly defined. In the second example it was just left to the expression and by default this would result in a `NULL` definition.  
+The reason we see this disparity between the two results is down to implicit type casting. In the first example, the table defines the column definition. When the row is inserted an implicit type conversion occurs. In the second example there is no implicit type conversion as the expression defines data type of the column. Notice also that the column in the second example has been defined as a NULLable column whereas in the first example it has not. When the table was created in the first example column nullability was explicitly defined. In the second example, it was just left to the expression and by default this would result in a `NULL` definition.  
 
 To resolve these issues, you must explicitly set the type conversion and nullability in the `SELECT` portion of the `CTAS` statement. You cannot set these properties in the create table part.
 
-The example below demonstrates how to fix the code:
+This example demonstrates how to fix the code:
 
 ```sql
 DECLARE @d DECIMAL(7,2) = 85.455
@@ -648,11 +650,12 @@ AS
 SELECT ISNULL(CAST(@d*@f AS DECIMAL(7,2)),0) as result
 ```
 
-Note the following:
-- CAST or CONVERT could have been used
-- ISNULL is used to force NULLability not COALESCE
-- ISNULL is the outermost function
-- The second part of the ISNULL is a constant, `0`
+Note the following in the example:
+
+- CAST or CONVERT could have been used.
+- ISNULL is used to force NULLability not COALESCE.
+- ISNULL is the outermost function.
+- The second part of the ISNULL is a constant, `0`.
 
 > [!NOTE]
 > For the nullability to be correctly set it is vital to use `ISNULL` and not `COALESCE`. `COALESCE` is not a deterministic function and so the result of the expression will always be NULLable. `ISNULL` is different. It is deterministic. Therefore when the second part of the `ISNULL` function is a constant or a literal then the resulting value will be NOT NULL.

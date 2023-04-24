@@ -7,6 +7,7 @@ ms.date: 04/23/2019
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Report Server Service Trace Log

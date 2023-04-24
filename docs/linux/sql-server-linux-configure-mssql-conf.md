@@ -1,8 +1,8 @@
 ---
 title: Configure SQL Server settings on Linux
 description: This article describes how to use the mssql-conf tool to configure SQL Server settings on Linux.
-author: VanMSFT
-ms.author: vanto
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: randolphwest
 ms.date: 11/24/2022
 ms.service: sql
@@ -978,3 +978,5 @@ traceflag = 3456
 
 - [Configure SQL Server settings with environment variables](sql-server-linux-configure-environment-variables.md)
 - [Manage SQL Server on Linux](sql-server-linux-management-overview.md)
+
+[!INCLUDE [contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

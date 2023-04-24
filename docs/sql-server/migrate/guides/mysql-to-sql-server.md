@@ -82,7 +82,7 @@ During the conversion, SSMA for MySQL prints output messages to the output pane 
 
 To convert the schema:
 
-1. (Optional) To convert dynamic or ad-hoc queries, right-click the node and select **Add Statement**.
+1. (Optional) To convert dynamic or ad hoc queries, right-click the node and select **Add Statement**.
 1. Select the **Connect to SQL Server** tab.
    1. Enter connection details for your SQL Server instance.
    1. Select your target database from the drop-down list, or enter a new name, in which case a database will be created on the target server.

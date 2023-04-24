@@ -8,7 +8,7 @@ ms.date: 11/10/2021
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: how-to
-ms.custom: devx-track-azurepowershell
+ms.custom: devx-track-azurepowershell, devx-track-arm-template
 editor: monicar
 ---
 # Configure one or more Always On availability group listeners
@@ -16,7 +16,7 @@ editor: monicar
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
 > [!TIP]
-> Eliminate the need for an Azure Load Balancer for your Always On availability (AG) group by creating your SQL Server VMs in [multiple subnets](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md) within the same Azure virtual network.
+> There are many [methods to deploy an availability group](availability-group-overview.md#deployment-options). Simplify your deployment and eliminate the need for an Azure load balancer or distributed network name (DNN) for your Always On availability group by creating your SQL Server virtual machines (VMs) in [multiple subnets](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md) within the same Azure virtual network.
 
 This document shows you how to use PowerShell to do one of the following tasks:
 - create a load balancer
@@ -219,6 +219,18 @@ The SQLCMD connection automatically connects to whichever instance of SQL Server
 > [!NOTE]
 > Make sure that the port you specify is open on the firewall of both SQL Servers. Both servers require an inbound rule for the TCP port that you use. For more information, see [Add or Edit Firewall Rule](/previous-versions/orphan-topics/ws.11/cc753558(v=ws.11)). 
 > 
+
+If you're on the secondary replica VM, and you're unable to connect to the listener, it's possible the probe port was not configured correctly. 
+
+You can use the following script to validate the probe port is correctly configured for the availability group: 
+
+```powershell
+Clear-Host
+Get-ClusterResource `
+| Where-Object {$_.ResourceType.Name -like "IP Address"} `
+| Get-ClusterParameter `
+| Where-Object {($_.Name -like "Network") -or ($_.Name -like "Address") -or ($_.Name -like "ProbePort") -or ($_.Name -like "SubnetMask")}
+```
 
 ## Guidelines and limitations
 

@@ -4,7 +4,7 @@ description: This tutorial shows you how to set up SQL Data Sync for Azure
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 03/08/2023
+ms.date: 04/24/2023
 ms.service: sql-database
 ms.subservice: sql-data-sync
 ms.topic: tutorial
@@ -23,7 +23,8 @@ For an overview of SQL Data Sync, see [Sync data across cloud and on-premises da
 For PowerShell examples on how to configure SQL Data Sync, see [How to sync between databases in SQL Database](scripts/sql-data-sync-sync-data-between-sql-databases.md) or [between databases in Azure SQL Database and SQL Server](scripts/sql-data-sync-sync-data-between-azure-onprem.md)
 
 > [!IMPORTANT]
-> SQL Data Sync does **not** support Azure SQL Managed Instance or Azure Synapse Analytics at this time.
+> Currently, SQL Data Sync is only supported on Azure SQL Database. 
+> Azure SQL Database Hyperscale is only supported as a member database, not as a hub database.
 
 ## Create sync group
 
@@ -238,7 +239,7 @@ Yes. You must manually approve the service managed private endpoint, in the Priv
 
 This may happen because Azure resources are not allowed to access your server. There are two solutions:
 
-   1. Ensure that the firewall on the Azure database has set **Allow Azure services and resources to access this server** to **Yes**. For more information, see [Azure SQL Database and network access controls](/azure/azure-sql/database/network-access-controls-overview?view=azuresql&preserve-view=true).
+   1. Ensure that the firewall on the Azure database has set **Allow Azure services and resources to access this server** to **Yes**. For more information, see [Azure SQL Database and network access controls](./network-access-controls-overview.md?preserve-view=true&view=azuresql).
    1. Configure a [private link for Data Sync](sql-data-sync-data-sql-server-sql-database.md?view=azuresql&preserve-view=true#private-link-for-data-sync), which is different from an Azure Private Link. Private Link is the way to create Sync groups using secure connection with databases sitting behind a firewall. SQL Data Sync Private Link is Microsoft-managed endpoint and internally creates a subnet within the existing VNet, so there is no need to create another VNet or subnet.
 
 ## Next steps

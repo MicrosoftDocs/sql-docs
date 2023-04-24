@@ -3,7 +3,8 @@ title: Install SQL Server 2022 Machine Learning Services on Windows
 description: Learn how to install SQL Server 2022 Machine Learning Services on Windows to run Python, R, or Java scripts in-database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 09/26/2022
+ms.reviewer: arunguru-msft
+ms.date: 04/17/2023
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: how-to
@@ -144,18 +145,26 @@ Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes f
     
        We recommend using a Python installation path that all users can access (such as `C:\Program Files\Python310`), and not one that's specific to a single user.
 
-1. Download and install the latest version of the `revoscalepy` package and its dependencies:
+1. Download and install the latest version of the `revoscalepy` package and its dependencies from a new elevated command prompt:
 
     ```cmd
     cd "C:\Program Files\Python310\"
-    python -m pip install https://aka.ms/sqlml/python3.10/windows/revoscalepy-10.0.1-py3-none-any.whl
+    python -m pip install -t "C:\Program Files\Python310\Lib\site-packages" dill numpy==1.22.0 pandas patsy python-dateutil
+    python -m pip install -t "C:\Program Files\Python310\Lib\site-packages" https://aka.ms/sqlml/python3.10/windows/revoscalepy-10.0.1-py3-none-any.whl
+    ```
+
+    Run the following **icacls** commands to grant **READ** and **EXECUTE** access to the installed libraries to **SQL Server Launchpad Service** and SID **S-1-15-2-1 (ALL_APPLICATION_PACKAGES)**.
+
+    ```cmd
+    icacls "C:\Program Files\Python310\Lib\site-packages" /grant "NT Service\MSSQLLAUNCHPAD":(OI)(CI)RX /T
+    icacls "C:\Program Files\Python310\Lib\site-packages" /grant *S-1-15-2-1:(OI)(CI)RX /T
     ```
 
 #### Configure Python runtime with SQL Server
 
 1. Configure the installed Python runtime with SQL Server. You can change the default version by using the `RegisterRext.exe` command-line utility. The utility is in the custom installation location (for example, `C:\Program Files\Python310\Lib\site-packages\revoscalepy\rxLibs`).
 
-    You can use the following script to configure the installed Python runtime from the installation folder location of `RegisterRext.exe`. The instance name is `MSSQLSERVER` for a default instance of SQL Server, or the instance name for a named instance of SQL Server.
+    From an elevated command prompt, you can use the following script to configure the installed Python runtime from the installation folder location of `RegisterRext.exe`. The instance name is `MSSQLSERVER` for a default instance of SQL Server, or the instance name for a named instance of SQL Server.
     
     ```cmd
     cd "C:\Program Files\Python310\Lib\site-packages\revoscalepy\rxLibs"

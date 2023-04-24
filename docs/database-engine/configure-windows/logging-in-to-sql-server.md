@@ -87,6 +87,6 @@ WHERE session_id = @@SPID;
 
 - [Choose an Authentication Mode](../../relational-databases/security/choose-an-authentication-mode.md)
   
-- [Use the sqlcmd Utility](../../ssms/scripting/sqlcmd-use-the-utility.md)
+- [Use the sqlcmd Utility](../../tools/sqlcmd/sqlcmd-use-utility.md)
   
 - [Creating a Login](../../t-sql/lesson-2-configuring-permissions-on-database-objects.md)

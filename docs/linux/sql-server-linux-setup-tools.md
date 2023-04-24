@@ -2,8 +2,8 @@
 title: Install SQL Server command-line tools on Linux
 titleSuffix: SQL Server
 description: Learn how to install the SQL Server command-line tools, Microsoft ODBC drivers, and their dependencies on Linux.
-author: VanMSFT
-ms.author: vanto
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: randolphwest
 ms.date: 01/19/2023
 ms.service: sql
@@ -318,3 +318,5 @@ For an example of how to use **sqlcmd** to connect to SQL Server and create a da
 - [Run on Docker](quickstart-install-connect-docker.md)
 
 For an example of how to use **bcp** to bulk import and export data, see [Bulk copy data to SQL Server on Linux](sql-server-linux-migrate-bcp.md).
+
+[!INCLUDE [contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

@@ -7,6 +7,7 @@ ms.date: 06/09/2016
 ms.service: reporting-services
 ms.subservice: wmi-provider-library-reference
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "MSReportServer_Instance class"
 apilocation: "reportingservices.mof"

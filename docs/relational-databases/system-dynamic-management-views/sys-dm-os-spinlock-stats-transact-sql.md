@@ -186,7 +186,7 @@ The following table contains brief descriptions of some of the most common spinl
 | LANG_RES_LOAD | Internal use only. |
 | LIVE_TARGET_TVF | Internal use only. |
 | LOCK_FREE_LIST | Internal use only. |
-| LOCK_HASH | Protects access to the lock manager hash table that stores information about the locks being held in a database. For more information, see [KB2926217](https://support.microsoft.com/help/2926217) and the [Transaction Locking and Row Versioning Guide](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#Lock_Engine). |
+| LOCK_HASH | Protects access to the lock manager hash table that stores information about the locks being held in a database. For more information, see [KB2926217](https://support.microsoft.com/help/2926217) and the [Transaction Locking and Row Versioning Guide](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#lock_engine). |
 | LOCK_NOTIFICATION | Internal use only. |
 | LOCK_RESOURCE_ID | Internal use only. |
 | LOCK_RW_ABTX_HASH_SET | Internal use only. |

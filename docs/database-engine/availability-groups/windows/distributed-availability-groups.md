@@ -118,7 +118,7 @@ Post-migration, where the second availability group is now the new primary avail
 
 During a migration scenario, while it's possible to configure a distributed AG to migrate your databases to a SQL Server target that is a higher version than the source, there are a few limitations.
 
-When you configure the distributed AG with a SQL Server migration target that is a higher version than the source, autoseeding isn't supported so the seeding mode must be set to `MANUAL`. You must then manually perform a full and transaction log back up of the source database from the primary AG and then manually restore it, along with the transaction log, to the secondary AG. To learn more, review the [manual seeding](configure-distributed-availability-groups.md?tabs=manual#create-distributed-availability-group-on-first-cluster) steps to configure your distributed AG, and scripts to back up and restore your database from the primary AG to the secondary AG.
+When you configure the distributed AG with a SQL Server migration target that is a higher version than the source, autoseeding isn't supported so the seeding mode must be set to `MANUAL`. If you don’t disable AUTO-SEEDING, your migration will fail and you'll see error 946 "Cannot open database 'DistributionAG' version xxx. Upgrade the database to the latest version" in the error log. You must set seeding mode to MANUAL and manually perform a full and transaction log backup of the source database from the primary AG. Then manually restore it, along with the transaction log, to the secondary AG. To learn more, review the [manual seeding](configure-distributed-availability-groups.md?tabs=manual#create-distributed-availability-group-on-first-cluster) steps to configure your distributed AG, and scripts to back up and restore your database from the primary AG to the secondary AG.
 
 Assuming the secondary AG (AG2) is the migration target and is a higher version than the primary AG (AG1), consider the following limitations:
 
@@ -342,7 +342,7 @@ GO
 
 ### DMVs to view metadata of distributed AG
 
-The below queries will display information about endpoint URLs used by the availability groups, including the distributed availability group. *(Reproduced with permission from [David Barbarin](https://blog.dbi-services.com/sql-server-2016-alwayson-distributed-availability-groups/).)*
+The below queries will display information about endpoint URLs used by the availability groups, including the distributed availability group. *(Reproduced with permission from [David Barbarin](https://www.dbi-services.com/blog/sql-server-2016-alwayson-distributed-availability-groups/).)*
 
 ```sql
 -- shows endpoint url and sync state for ag, and dag
@@ -366,7 +366,7 @@ GO
 
 ### DMV to show current state of seeding
 
-The below query displays information about the current state of seeding. This is useful for troubleshooting synchronization errors between replicas. *(Reproduced with permission from [David Barbarin](https://blog.dbi-services.com/sql-server-2016-alwayson-distributed-availability-groups/).)*
+The below query displays information about the current state of seeding. This is useful for troubleshooting synchronization errors between replicas. *(Reproduced with permission from [David Barbarin](https://www.dbi-services.com/blog/sql-server-2016-alwayson-distributed-availability-groups/).)*
 
 ```sql
 -- shows current_state of seeding

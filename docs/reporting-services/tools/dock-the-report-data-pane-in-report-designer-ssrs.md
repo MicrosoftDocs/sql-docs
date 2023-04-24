@@ -7,6 +7,7 @@ ms.date: 05/31/2016
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "Report Data pane, docking"
 ---

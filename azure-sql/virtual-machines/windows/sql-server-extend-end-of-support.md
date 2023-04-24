@@ -4,7 +4,7 @@ description: Extend support for SQL Server 2008, 2008 R2, and 2012 by migrating 
 author: bluefooted
 ms.author: pamela
 ms.reviewer: mathoma, randolphwest
-ms.date: 05/24/2022
+ms.date: 03/27/2023
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: conceptual
@@ -31,7 +31,7 @@ There is a pay-as-you-go **SQL Server 2012 on Windows Server 2012 R2** image ava
 
 Customers who are on an earlier version of SQL Server will need to either self-install or upgrade to SQL Server 2012. Likewise, customers on an earlier version of Windows Server will need to either deploy their VM from a custom VHD or upgrade to Windows Server 2012 R2.
 
-Images deployed through Azure Marketplace come with the SQL IaaS extension pre-installed. The SQL IaaS extension is a requirement for flexible licensing and automated patching. Customers who deploy self-installed VMs will need to manually install the SQL IaaS extension.
+Images deployed through Azure Marketplace come with the SQL IaaS Agent extension pre-installed. The SQL IaaS Agent extension is a requirement for flexible licensing and automated patching. Customers who deploy self-installed VMs will need to manually install the SQL IaaS Agent extension.
 
 > [!NOTE]
 >  
@@ -71,13 +71,15 @@ Disaster recovery solutions for EOS SQL Server on an Azure VM are as follows:
 
 ## Security patching
 
-Extended security updates for SQL Server VMs are delivered through the Microsoft Update channels after the SQL Server VM has been registered with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md). Patches can be downloaded manually or automatically.
+Extended security updates for SQL Server VMs are delivered through the Microsoft Windows Update channels after the SQL Server VM has been registered with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md). Patches can be downloaded manually or automatically.
 
 > [!NOTE]
 >
 > Registration with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md) is not required for manual installation of extended security updates on Azure virtual machines. Microsoft Update will automatically detect that the VM is running in Azure and present the relevant updates for download even if the extension is not present.
 
 *Automated patching* is enabled by default. Automated patching allows Azure to automatically patch SQL Server and the operating system. You can specify a day of the week, time, and duration for a maintenance window if the SQL Server IaaS extension is installed. Azure performs patching in this maintenance window. The maintenance window schedule uses the VM locale for time. For more information, see [Automated patching for SQL Server on Azure Virtual Machines](automated-patching.md).
+
+[Azure Update management](/azure/automation/update-management/overview) as of today does not detect patches for SQL Server Marketplace images. You should look under Windows Updates to apply SQL Server updates in this case.
 
 ## Next steps
 

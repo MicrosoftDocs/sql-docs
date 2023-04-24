@@ -1,6 +1,6 @@
 ---
-author: VanMSFT
-ms.author: vanto
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: randolphwest
 ms.date: 05/20/2022
 ms.service: sql
@@ -150,3 +150,5 @@ For answers to frequently asked questions, see the [SQL Server on Linux FAQ](../
 ## Next steps
 
 - [Explore the tutorials for SQL Server on Linux](../sql-server-linux-migrate-restore-database.md).
+
+[!INCLUDE [contribute-to-content](../../includes/paragraph-content/contribute-to-content.md)]

@@ -7,6 +7,7 @@ ms.date: 06/12/2019
 ms.service: reporting-services
 ms.subservice: troubleshooting
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Errors and Events Reference (Reporting Services)

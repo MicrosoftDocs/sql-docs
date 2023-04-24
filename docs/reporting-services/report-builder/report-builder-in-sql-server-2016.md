@@ -7,6 +7,7 @@ ms.date: 05/10/2019
 ms.service: reporting-services
 ms.subservice: report-builder
 ms.topic: conceptual
+ms.custom: updatefrequency5
 f1_keywords:
   - "10428"
 helpviewer_keywords:

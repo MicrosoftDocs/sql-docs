@@ -3,7 +3,7 @@ title: "What's new in SQL Server 2019"
 description: Learn about new features for SQL Server 2019 (15.x), which gives you choices of development languages, data types, environments, and operating systems.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: 07/22/2022
+ms.date: 03/15/2023
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: "article"
@@ -37,7 +37,7 @@ Businesses today often preside over vast data estates consisting of a wide array
 | New feature or update | Details |
 |:---|:---|
 | Scalable big data solution | [Deploy scalable clusters](../big-data-cluster/deploy-get-started.md) of SQL Server, Spark, and HDFS containers running on Kubernetes. <br/><br/> Read, write, and process big data from Transact-SQL or Spark.<br/><br/> Easily combine and analyze high-value relational data with high-volume big data.<br/><br/>Query external data sources.<br/><br/>Store big data in HDFS managed by SQL Server.<br/><br/>Query data from multiple external data sources through the cluster.<br/><br/> Use the data for AI, machine learning, and other analysis tasks.<br/><br/> [Deploy and run applications](../big-data-cluster/concept-application-deployment.md) in [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]. <br/><br/> The SQL Server master instance provides high availability and disaster recovery for all databases by using Always On availability group technology.<br/>|
-|Data virtualization with PolyBase | Query data from external SQL Server, Oracle, Teradata, MongoDB, and ODBC data sources with external tables, now with [UTF-8 encoding support](../relational-databases/collations/collation-and-unicode-support.md). For more information, see [What is PolyBase?](../relational-databases/polybase/polybase-guide.md).|
+|Data virtualization with PolyBase | Query data from external SQL Server, Oracle, Teradata, MongoDB, and ODBC data sources with external tables, now with [UTF-8 encoding support](../relational-databases/collations/collation-and-unicode-support.md). For more information, see [What is PolyBase?](../relational-databases/polybase/polybase-guide.md). <br/><br/> [!INCLUDE[sssql19](../includes/sssql19-md.md)] Cumulative update 19 now introduces support for Oracle TNS files. Please refer to [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-connection-options.md) for more information and samples.|
 
 For more information, see [What are SQL Server [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]?](../big-data-cluster/big-data-cluster-overview.md).
 

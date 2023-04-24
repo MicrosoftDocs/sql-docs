@@ -4,7 +4,7 @@ description: Getting started using SDK-style SQL projects with the SQL Database 
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
-ms.date: 2/14/2023
+ms.date: 4/12/2023
 ms.service: azure-data-studio
 ms.topic: conceptual
 ms.custom: intro-get-started
@@ -23,9 +23,9 @@ You can create an SDK-style database project from a blank project, or from an ex
 
 ### Blank project
 
-In the **Projects** view, select the **New Project** button and enter a project name in the text input that appears.  In the **Select a Folder** dialog box that appears, choose a directory for the project's folder, `.sqlproj` file, and other contents to reside in.  
+In the **Database Projects** view, select the **New Project** button and enter a project name in the text input that appears.  In the **Select a Folder** dialog box that appears, choose a directory for the project's folder, `.sqlproj` file, and other contents to reside in.  
 
-By default the selection for **SDK-style project (Preview)** is checked. When the dialog is completed, the empty project is opened and visible in the **Projects** view for editing.
+By default the selection for **SDK-style project (Preview)** is checked. When the dialog is completed, the empty project is opened and visible in the **Database Projects** view for editing.
 
 ### From an existing database
 
@@ -132,7 +132,7 @@ SqlCmd variables can be defined in the `.sqlproj` file and are used to replace t
 
 ```sql
 IF '$(EnvironmentName)' = 'testing'
-BEING
+BEGIN
     -- do something
 END
 ```

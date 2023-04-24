@@ -23,7 +23,6 @@ Outbound firewall rules limit network traffic from the Azure SQL [logical server
 - [Import/Export service](database-import-export-azure-services-off.md)
 - [OPENROWSET](/sql/t-sql/functions/openrowset-transact-sql)
 - [Bulk Insert](/sql/t-sql/statements/bulk-insert-transact-sql)
-- [Elastic query](elastic-query-overview.md)
 - [sp_invoke_external_rest_endpoint](/sql/relational-databases/system-stored-procedures/sp-invoke-external-rest-endpoint-transact-sql)
 
 > [!IMPORTANT]

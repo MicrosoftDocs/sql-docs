@@ -50001,6 +50001,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/ssms/scripting/search-text-with-wildcards.md",
+      "redirect_url": "/sql/ssms/scripting/search-text-with-regular-expressions",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/2014/analysis-services/scripting/datasourceviewid-element-assl.md",
       "redirect_url": "/bi-reference/assl/properties/datasourceviewid-element-assl",
       "redirect_document_id": false
@@ -52322,8 +52327,8 @@
     },
     {
       "source_path": "docs/relational-databases/scripting/search-text-with-wildcards.md",
-      "redirect_url": "/sql/ssms/scripting/search-text-with-wildcards",
-      "redirect_document_id": true
+      "redirect_url": "/sql/ssms/scripting/search-text-with-regular-expressions",
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/relational-databases/scripting/spatial-results-window.md",
@@ -59667,6 +59672,16 @@
     {
       "source_path": "docs/relational-databases/system-stored-procedures/sp-change-feed-table.md",
       "redirect_url": "/sql/relational-databases/system-stored-procedures/sp-help-change-feed-table",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/azure-resource-explorer.md",
+      "redirect_url": "/sql/azure-data-studio/azure-view",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/system-tables/msrepl-agent-jobs.md",
+      "redirect_url": "/sql/relational-databases/system-tables/msrepl-agent-jobs-transact-sql",
       "redirect_document_id": false
     }
   ]

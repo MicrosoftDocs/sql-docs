@@ -37,7 +37,7 @@ You must have administrator rights on the computer and SQL Server to add pre-tra
 
 External scripts must be enabled and SQL Server LaunchPad service must be running. Installation instructions provide the steps for enabling and verifying these capabilities. 
 
-Download and install the latest cumulative update for your version of SQL Server. See the [Latest updates for Microsoft SQL Server](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md).
+Download and install the latest cumulative update for your version of SQL Server. See the [Latest updates for Microsoft SQL Server](/troubleshoot/sql/releases/download-and-install-latest-updates?bc=%2fsql%2fbreadcrumb%2ftoc.json&toc=%2fsql%2ftoc.json).
 
 ::: moniker range=">=sql-server-2017"
 [MicrosoftML R package](../r/ref-r-microsoftml.md) or [microsoftml Python package](../python/ref-py-microsoftml.md) contain the pre-trained models.

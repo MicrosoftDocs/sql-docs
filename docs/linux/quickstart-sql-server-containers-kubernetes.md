@@ -328,3 +328,5 @@ az group delete --name <MyResourceGroup> --yes --no-wait
 - [Introduction to Kubernetes](/azure/aks/intro-kubernetes)
 - [Quickstart: Run SQL Server container images with Docker](quickstart-install-connect-docker.md)
 - [Deploy availability group with DH2i for SQL Server containers on AKS](tutorial-sql-server-containers-kubernetes-dh2i.md)
+
+[!INCLUDE [contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

@@ -6,6 +6,7 @@ ms.author: maggies
 ms.date: 06/03/2016
 ms.service: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "checking report server installations"
   - "verifying report server installations"

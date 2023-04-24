@@ -11,9 +11,9 @@ ms.topic: conceptual
 
 # Build a database project from command line
 
-While the SQL Database Project extension (preview) provides a graphical user interface to [build a database project](sql-database-project-extension-build.md), a command line build experience is also available for Windows, macOS, and Linux environments. The steps to build a project from the command line are different between [SDK-style SQL projects](sql-database-project-extension-sdk-style-projects.md) and the previous non-SDK-style SQL project format.  This article outlines the prerequisites and syntax needed to build a SQL project to dacpac from the command line for both SQL project types.
+While the SQL Database Project extension provides a graphical user interface to [build a database project](sql-database-project-extension-build.md), a command line build experience is also available for Windows, macOS, and Linux environments. The steps to build a project from the command line are different between [SDK-style SQL projects](sql-database-project-extension-sdk-style-projects.md) and the previous non-SDK-style SQL project format.  This article outlines the prerequisites and syntax needed to build a dacpac from a SQL project at the command line for both SQL project types.
 
-## SDK-style SQL projects
+## SDK-style SQL projects (preview)
 
 Using [Microsoft.Build.Sql](https://www.nuget.org/packages/Microsoft.Build.Sql) with [SDK-style SQL projects](sql-database-project-extension-sdk-style-projects.md) is the preferred method for working with SQL projects from the command line.
 
@@ -28,6 +28,8 @@ dotnet build /p:NetCoreBuild=true
 
 
 ## Non-SDK-style SQL projects
+
+The following section describes a work-around for working with non-SDK-style SQL projects from the command line on Windows, macOS, and Linux.
 
 ### Prerequisites
 

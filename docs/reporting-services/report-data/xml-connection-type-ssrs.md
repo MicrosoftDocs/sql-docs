@@ -7,6 +7,7 @@ ms.date: 03/17/2017
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # XML Connection Type (SSRS)
   To include data from an XML data source in your report, you must have a dataset that is based on a report data source of type XML. This built-in data source type is based on the XML data extension. Use this data source type to connect to and retrieve data from XML documents, Web services, or XML that is embedded in the query.  

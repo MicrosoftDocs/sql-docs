@@ -7,6 +7,7 @@ ms.date: 03/07/2017
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "multivalued parameters [Reporting Services]"
   - "single-valued parameters [Reporting Services]"

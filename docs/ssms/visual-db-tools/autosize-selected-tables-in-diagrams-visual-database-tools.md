@@ -24,7 +24,7 @@ You can quickly fit tables in your diagram to the smallest size that shows all f
   
 1. Select the table(s) you want to resize.  
   
-2. Right click a selected table and from the shortcut menu choose **Autosize Selected Tables**.  
+2. Right-click a selected table and from the shortcut menu choose **Autosize Selected Tables**.  
   
 ## See Also
 

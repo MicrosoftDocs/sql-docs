@@ -7,6 +7,7 @@ ms.date: 03/06/2017
 ms.service: reporting-services
 ms.subservice: report-server-web-service
 ms.topic: reference
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "exceptions [Reporting Services], try/catch blocks"
   - "try/catch blocks [Reporting Services]"

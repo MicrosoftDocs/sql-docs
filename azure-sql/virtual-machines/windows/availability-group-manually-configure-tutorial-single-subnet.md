@@ -4,7 +4,7 @@ description: "This tutorial shows how to create a SQL Server Always On availabil
 author: tarynpratt
 ms.author: tarynpratt
 ms.reviewer: mathoma
-ms.date: 11/18/2022
+ms.date: 04/18/2023
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: tutorial
@@ -16,11 +16,11 @@ tags: azure-service-management
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
 > [!TIP]
-> Eliminate the need for an Azure load balancer for your Always On availability group by creating your SQL Server virtual machines (VMs) in [multiple subnets](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md) within the same Azure virtual network.
+> There are many [methods to deploy an availability group](availability-group-overview.md#deployment-options). Simplify your deployment and eliminate the need for an Azure load balancer or distributed network name (DNN) for your Always On availability group by creating your SQL Server virtual machines (VMs) in [multiple subnets](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md) within the same Azure virtual network.
 
 This tutorial shows how to create an Always On availability group for SQL Server on Azure VMs within a single subnet. The complete tutorial creates an availability group with a database replica on two SQL Server instances.
 
-This article manually configures the availability group environment. It's also possible to automate the steps by using the [Azure portal](availability-group-azure-portal-configure.md), [PowerShell or the Azure CLI](availability-group-az-commandline-configure.md), or [Azure quickstart templates](availability-group-quickstart-template-configure.md).
+This article manually configures the availability group environment. It's also possible to automate the steps by using the [Azure portal](availability-group-azure-portal-configure.md), [PowerShell or the Azure CLI](availability-group-az-commandline-configure.md), or [Azure Quickstart Templates](availability-group-quickstart-template-configure.md).
 
 **Time estimate**: This tutorial takes about 30 minutes to complete after you meet the [prerequisites](availability-group-manually-configure-prerequisites-tutorial-single-subnet.md).
 
@@ -82,7 +82,7 @@ The first task is to create a Windows Server failover cluster with both SQL Serv
 
 1. Select **Static IP Address**. Specify an available address from the same subnet as your virtual machines.
 
-1. In the **Cluster Core Resources** section, right-click the cluster name and select **Bring Online**. Wait until both resources are online. 
+1. In the **Cluster Core Resources** section, right-click the cluster name and select **Bring Online**. Wait until both resources are online.
 
    When the cluster name resource comes online, it updates the domain controller server with a new Active Directory computer account. Use this Active Directory account to run the availability group's clustered service later.
 
@@ -92,7 +92,7 @@ The first task is to create a Windows Server failover cluster with both SQL Serv
 
    :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/44-add-node.png" alt-text="Screenshot of Failover Cluster Manager that shows selections for adding a node to a cluster.":::
 
-1. In the **Add Node Wizard**, select **Next**. 
+1. In the **Add Node Wizard**, select **Next**.
 
 1. On the **Select Servers** page, add the second SQL Server VM. Enter the VM name in **Enter server name**, and then select **Add** > **Next**.
 
@@ -297,7 +297,7 @@ You're now ready to create and configure an availability group by doing the foll
 1. On the **Select Initial Data Synchronization** page, select **Full** and specify a shared network location. For the location, use the [backup share that you created](#backupshare). In the example, it was **\\\\<First SQL Server Instance\>\Backup\\**. Select **Next**.
 
    > [!NOTE]
-   > Full synchronization takes a full backup of the database on the first instance of SQL Server and restores it to the second instance. For large databases, we don't recommend full synchronization because it might take a long time. 
+   > Full synchronization takes a full backup of the database on the first instance of SQL Server and restores it to the second instance. For large databases, we don't recommend full synchronization because it might take a long time.
    >
    > You can reduce this time by manually taking a backup of the database and restoring it with `NO RECOVERY`. If the database is already restored with `NO RECOVERY` on the second SQL Server instance before you configure the availability group, select **Join only**. If you want to take the backup after configuring the availability group, select **Skip initial data synchronization**.
 
@@ -310,7 +310,7 @@ You're now ready to create and configure an availability group by doing the foll
     >[!NOTE]
     >There's a warning for the listener configuration because you haven't configured an availability group listener. You can ignore this warning because on Azure virtual machines, you create the listener after you create the Azure load balancer.
 
-1. On the **Summary** page, select **Finish**, and then wait while the wizard configures the new availability group. On the **Progress** page, you can select **More details** to view the detailed progress. 
+1. On the **Summary** page, select **Finish**, and then wait while the wizard configures the new availability group. On the **Progress** page, you can select **More details** to view the detailed progress.
 
    After the wizard finishes the configuration, inspect the **Results** page to verify that the availability group is successfully created.
 
@@ -330,7 +330,7 @@ You're now ready to create and configure an availability group by doing the foll
 
    The dashboard shows the replicas, the failover mode of each replica, and the synchronization state.
 
-1. In **Failover Cluster Manager**, select your cluster. Select **Roles**. 
+1. In **Failover Cluster Manager**, select your cluster. Select **Roles**.
 
    The availability group name that you used is a role on the cluster. That availability group doesn't have an IP address for client connections because you didn't configure a listener. You'll configure the listener after you create an Azure load balancer.
 
@@ -340,7 +340,7 @@ You're now ready to create and configure an availability group by doing the foll
    > Don't try to fail over the availability group from Failover Cluster Manager. All failover operations should be performed on the availability group dashboard in SSMS. [Learn more about restrictions on using Failover Cluster Manager with availability groups](/sql/database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server).
     >
 
-At this point, you have an availability group with two SQL Server replicas. You can move the availability group between instances. You can't connect to the availability group yet because you don't have a listener. 
+At this point, you have an availability group with two SQL Server replicas. You can move the availability group between instances. You can't connect to the availability group yet because you don't have a listener.
 
 In Azure virtual machines, the listener requires a load balancer. The next step is to create the load balancer in Azure.
 
@@ -399,7 +399,7 @@ A load balancer in Azure can be either *standard* or *basic*. A standard load ba
 
 1. Choose **Review + Create** to validate the configuration. Then select  **Create** to create the load balancer and the frontend IP address.
 
-To configure the load balancer, you need to create a backend pool, create a probe, and set the load-balancing rules. 
+To configure the load balancer, you need to create a backend pool, create a probe, and set the load-balancing rules.
 
 ### Add a backend pool for the availability group listener
 
@@ -546,7 +546,7 @@ To test the connection:
    sqlcmd -S <listenerName>,1435 -E
    ```
 
-The **sqlcmd** utility automatically connects to whichever SQL Server instance is the current primary replica of the availability group. 
+The **sqlcmd** utility automatically connects to whichever SQL Server instance is the current primary replica of the availability group.
 
 > [!TIP]
 > Make sure that the port you specify is open on the firewall of both SQL Server VMs. Both servers require an inbound rule for the TCP port that you use. For more information, see [Add or edit firewall rules](/previous-versions/orphan-topics/ws.11/cc753558(v=ws.11)).

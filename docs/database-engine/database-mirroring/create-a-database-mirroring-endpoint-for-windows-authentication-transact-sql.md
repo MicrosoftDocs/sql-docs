@@ -3,7 +3,7 @@ title: "Create a database mirroring endpoint (Transact-SQL)"
 description: Use Transact-SQL to create a database mirroring endpoint using Windows Authentication in SQL Server.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: "05/17/2016"
+ms.date: "04/12/2023"
 ms.service: sql
 ms.subservice: database-mirroring
 ms.topic: conceptual
@@ -115,7 +115,9 @@ helpviewer_keywords:
   
          If an endpoint requires encryption, the other endpoint must have ENCRYPTION set to either SUPPORTED or REQUIRED.  
   
-    -   *\<algorithm>* provides the option of specifying the encryption standards for the endpoint. The value of *\<algorithm>* can be one following algorithms or combinations of algorithms: RC4, AES, AES RC4, or RC4 AES.  
+    -   *\<algorithm>* provides the option of specifying the encryption standards for the endpoint. The value of *\<algorithm>* can be one following algorithms or combinations of algorithms: RC4, AES, AES RC4, or RC4 AES.
+    
+        The AES algorithm for the database mirroring endpoint uses a 128 bit key length.
   
          AES RC4 specifies that this endpoint will negotiate for the encryption algorithm, giving preference to the AES algorithm. RC4 AES specifies that this endpoint will negotiate for the encryption algorithm, giving preference to the RC4 algorithm. If both endpoints specify both algorithms but in different orders, the endpoint accepting the connection wins. Provide the same algorithm explicitly to avoid connection errors between different servers.
   

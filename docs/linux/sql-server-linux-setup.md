@@ -1,8 +1,8 @@
 ---
 title: Installation guidance for SQL Server on Linux
 description: Install, update, and uninstall SQL Server on Linux. This article covers online, offline, and unattended scenarios.
-author: VanMSFT
-ms.author: vanto
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: randolphwest
 ms.date: 12/20/2022
 ms.service: sql
@@ -222,4 +222,4 @@ After installation, you can also install or enable optional [!INCLUDE [ssnoversi
 
 ## Next steps
 
-- For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.yml).
+- [SQL Server on Linux Frequently Asked Questions (FAQ)](sql-server-linux-faq.yml)

@@ -20,10 +20,7 @@ helpviewer_keywords:
   
  The value of these counters are also available by executing the following statement:  
   
-```sql  
-SELECT * FROM sys.dm_os_performance_counters   
-WHERE object_name LIKE '%SQL%Deprecated Features%';  
-```  
+[!INCLUDE [deprecated-os-performance-counters](../../includes/deprecated-os-performance-counters.md)]
 
 This following table describes the SQL Server **Deprecated Features** performance object.
 

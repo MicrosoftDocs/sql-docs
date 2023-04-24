@@ -42,6 +42,8 @@ sections:
           
           Currently, support for Hadoop external data sources has been removed in [!INCLUDE[sssql22](../../includes/sssql22-md.md)].
 
+          [!INCLUDE[sssql22](../../includes/sssql22-md.md)] Cumulative update 2 now introduces support for Oracle TNS files. Please refer to [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-connection-options.md) for more information and samples.
+
           Read more on [Data Virtualization with PolyBase for SQL Server 2022](https://cloudblogs.microsoft.com/sqlserver/2022/10/05/data-virtualization-with-polybase-for-sql-server-2022/) and review [SQL Server 2022 PolyBase enhancements](polybase-guide.md#sql-server-2022-polybase-enhancements).
 
       - question: What's new in PolyBase in SQL Server 2019? 
@@ -56,6 +58,8 @@ sections:
           - MongoDB
           - Compatible ODBC generic types
             
+          [!INCLUDE[sssql19](../../includes/sssql19-md.md)] Cumulative update 19 now introduces support for Oracle TNS files. Please refer to [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-connection-options.md) for more information and samples.
+
           > [!NOTE]
           > PolyBase can allow connection to external data sources using third-party ODBC drivers. These drivers are not provided along with PolyBase and may not work as intended. For more information, see [Configure PolyBase to access external data with ODBC generic types](../../relational-databases/polybase/polybase-configure-odbc-generic.md).  
 

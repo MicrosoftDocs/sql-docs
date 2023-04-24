@@ -14,7 +14,7 @@ helpviewer_keywords:
 ---
 # Overview: Exporting Data (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   This article introduces the types of subscription view formats and how to determine when views need to be edited due to changes to model objects.  
   

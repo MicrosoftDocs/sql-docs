@@ -24,6 +24,5 @@ Arc-enabled SQL Server is available in the following regions:
 - North Europe
 - Japan East
 - Korea Central
-- East Asia
 - Southeast Asia
 - Australia East

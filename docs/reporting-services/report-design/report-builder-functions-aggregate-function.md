@@ -7,6 +7,7 @@ ms.date: 03/15/2017
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Report Builder functions - Aggregate function in a paginated report (Report Builder)
 

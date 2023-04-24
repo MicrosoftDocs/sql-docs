@@ -7,6 +7,7 @@ ms.date: 06/22/2020
 ms.service: reporting-services
 ms.subservice: security
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "Windows authentication [Reporting Services]"
   - "Reporting Services, configuration"

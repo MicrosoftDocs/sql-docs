@@ -42,7 +42,7 @@ After you install the connector, you must restart the SQL Server Integration Ser
 
 ## Design and execute SSIS packages
 
-Microsoft Connector for Teradata provides a similar user experience to Attunity Teradata Connector. Users can design new packages based on previous experience, using SSDT for VS 2017 or VS 2019, with *targeting SQL server 2019*.
+Microsoft Connector for Teradata provides a similar user experience to Attunity Teradata Connector. Users can design new packages based on previous experience, using SSDT for VS 2017 or VS 2019, with *targeting SQL Server 2019*.
 
 Teradata source and destination are under Common category.
 

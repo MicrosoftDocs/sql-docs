@@ -19,7 +19,7 @@ ms.topic: conceptual
   
 This C# code example should be considered a proof of concept only. The sample code is simplified for clarity, and does not necessarily represent best practices recommended by Microsoft.  
   
-## Step 1: Connect
+## 1: Connect
   
 The method **SqlConnection.Open** is used to connect to your SQL database.  
 
@@ -57,7 +57,7 @@ Press any key to finish...
 ```  
 
 
-## Step 2: Execute a query  
+## 2: Execute a query  
   
 The method SqlCommand.ExecuteReader:  
   
@@ -143,7 +143,7 @@ Press any key to finish...
   
   
   
-## Step 3: Insert a row  
+## 3: Insert a row  
   
   
 This example demonstrates how to:  

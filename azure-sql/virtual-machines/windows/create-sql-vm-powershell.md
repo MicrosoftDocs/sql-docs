@@ -354,7 +354,7 @@ The virtual machine is created.
 > [!NOTE]
 > If you get an error about boot diagnostics, you can ignore it. A standard storage account is created for boot diagnostics because the specified storage account for the virtual machine's disk is a premium storage account.
 
-## Install the SQL Iaas Agent
+## Install the SQL IaaS Agent extension
 
 SQL Server virtual machines support automated management features with the [SQL Server IaaS Agent Extension](sql-server-iaas-agent-extension-automate-management.md). To register your SQL Server with the extension run the [New-AzSqlVM](/powershell/module/az.sqlvirtualmachine/new-azsqlvm) command after the virtual machine is created. Specify the license type for your SQL Server VM, choosing between either pay-as-you-go or bring-your-own-license via the [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/). For more information about licensing, see [licensing model](licensing-model-azure-hybrid-benefit-ahb-change.md). 
 
@@ -445,7 +445,7 @@ $VirtualMachine = Set-AzVMSourceImage -VM $VirtualMachine -PublisherName $Publis
 # Create the VM in Azure
 New-AzVM -ResourceGroupName $ResourceGroupName -Location $Location -VM $VirtualMachine
 
-# Add the SQL IaaS Extension, and choose the license type
+# Add the SQL IaaS Agent Extension, and choose the license type
 New-AzSqlVM -ResourceGroupName $ResourceGroupName -Name $VMName -Location $Location -LicenseType <PAYG/AHUB> 
 ```
 

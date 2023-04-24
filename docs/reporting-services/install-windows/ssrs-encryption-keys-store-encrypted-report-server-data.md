@@ -6,6 +6,7 @@ ms.author: maggies
 ms.date: 10/24/2019
 ms.service: reporting-services
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "report servers [Reporting Services], encryption"
   - "credentials [Reporting Services]"

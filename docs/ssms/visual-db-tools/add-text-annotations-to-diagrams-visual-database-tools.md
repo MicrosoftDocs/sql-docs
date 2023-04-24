@@ -29,7 +29,7 @@ To make notes or comments on a diagram you can add text annotations.
 4.  Type your note into the text field that appears.  
   
 > [!NOTE]  
-> To change the font, right click the text field and click **Set Text Annotation Font**.  
+> To change the font, right-click the text field and click **Set Text Annotation Font**.  
   
 ## See Also  
 [Work with Database Diagrams &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  

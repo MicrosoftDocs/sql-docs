@@ -9,10 +9,10 @@ metadata:
   ms.custom: sqldbrb=1
   ms.devlang: 
   ms.topic: faq
-  author: MashaMSFT
-  ms.author: mathoma
-  ms.reviewer: urmilano, danil, nnikolic, wiassaf
-  ms.date: 04/14/2022
+  author: WilliamDAssafMSFT
+  ms.author: wiassaf
+  ms.reviewer: urmilano, danil, nnikolic, mathoma
+  ms.date: 04/12/2023
 title: Azure SQL Managed Instance frequently asked questions (FAQ)
 summary: |
   [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
@@ -176,7 +176,7 @@ sections:
           ### How can I migrate from other platforms to SQL Managed Instance?
           
           For migration information about migrating from other platforms, see [Azure Database Migration Guide](/data-migration/).
-          
+
       - question: |
           Switch hardware configuration
         answer: |
@@ -187,7 +187,7 @@ sections:
           This is a long-running operation as a new managed instance will be provisioned in the background and databases automatically transferred between the old and new instance with a quick failover at the end of the process.
           
           Note: Gen4 hardware is being retired and is no longer available for new deployments. All new databases must be deployed on later hardware configurations. Switching from standard-series (Gen5) to Gen4 is also not available.
-          
+
       - question: |
           Performance 
         answer: |
@@ -363,20 +363,18 @@ sections:
       - question: |
           Connectivity 
         answer: |
-          ### Can I connect to my managed instance using IP address?
+          ### Can I connect to my managed instance using its IP address?
           
           No, this is not supported. A managed instance's host name maps to the load balancer in front of the managed instance's virtual cluster. As one virtual cluster can host multiple managed instances, a connection cannot be routed to the proper managed instance without specifying its name.
           For more information on SQL Managed Instance virtual cluster architecture, see [Virtual cluster connectivity architecture](connectivity-architecture-overview.md#virtual-cluster-connectivity-architecture).
           
           ### Can my managed instance have a static IP address?
           
-          This is currently not supported.
+          This is currently only supported for [private endpoints](connectivity-architecture-overview.md#private-endpoint-preview).
           
           In rare but necessary situations, we might need to do an online migration of a managed instance to a new virtual cluster. If needed, this migration is because of changes in our technology stack aimed to improve security and reliability of the service. Migrating to a new virtual cluster results in changing the IP address that is mapped to the managed instance host name. The managed instance service doesn't claim static IP address support and reserves the right to change it without notice as a part of regular maintenance cycles.
           
-          The above holds for both VNet-local and public endpoints. Both should only be accessed via their associated domain names.
-          
-          For this reason, we strongly discourage relying on immutability of the IP address as it could cause unnecessary downtime.
+          For the above reason, VNet-local and public endpoints should only be accessed via their associated domain names. We strongly discourage relying on immutability of their IP address as doing so may lead to prolonged unavailability while the service is healthy.
           
           ### Does SQL Managed Instance have a public endpoint?
           
@@ -552,7 +550,7 @@ sections:
           | --- | --- |
           | Maximum password age | 42 days |
           | Minimum password age | One day |
-          | Minimum password length | 16 characters |
+          | Minimum password length | 10 characters |
           | Password must meet complexity requirements | Enabled |
           
           ### Is it possible to disable password complexity and expiration in SQL Managed Instance at the login level?

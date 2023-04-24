@@ -35,7 +35,7 @@ Assessment run time depends on your environment (number of databases, objects, a
 
 To use the SQL best practices assessment feature, you must have the following prerequisites: 
 
-- Your SQL Server VM must be registered with the [SQL Server IaaS extension in full mode](sql-agent-extension-manually-register-single-vm.md#full-mode). 
+- Your SQL Server VM must be registered with the [SQL Server IaaS extension](sql-agent-extension-manually-register-single-vm.md#register-with-extension). 
 - A [Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace) in the same subscription as your SQL Server VM to upload assessment results to. 
 - SQL Server needs to be 2012 or higher version.
 
@@ -128,7 +128,7 @@ To run an on-demand assessment by using the Azure portal, select **Run assessmen
 To run an on-demand assessment by using the Azure CLI, using the following command:
 
 ```azure-cli
-# This will start an on-demand assessment run. You can track progress of the run or view results on the SQL virtual machine resource via Azure Portal
+# This will start an on-demand assessment run. You can track progress of the run or view results on the SQL virtual machines resource via Azure Portal
 az sql vm start-assessment -g "myRg" -n "myVM"
 ```
 

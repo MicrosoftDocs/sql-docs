@@ -1379,7 +1379,7 @@ ALTER TABLE Customers ADD
     ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') ;
 ```
 
-#### K. Adding a primary key with resumerable operation
+#### K. Adding a primary key with resumable operation
 
 Resumable `ALTER TABLE` operation for adding a primary key clustered on column (a) with `MAX_DURATION` of 240 minutes.
 

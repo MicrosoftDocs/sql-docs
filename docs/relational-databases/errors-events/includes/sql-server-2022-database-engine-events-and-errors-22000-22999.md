@@ -2,7 +2,7 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 03/02/2023
+ms.date: 04/21/2023
 ms.topic: include
 ---
 | Error| Severity | Event logged | Description|
@@ -50,7 +50,7 @@ ms.topic: include
 | 22122 | 16 | No | Change Tracking autocleanup failed on side table of "%s".  If the failure persists, use sp_flush_CT_internal_table_on_demand to clean up expired records from its side table. |
 | 22123 | 16 | No | Change Tracking autocleanup is blocked on side table of "%s". If the failure persists, check if the table "%s" is blocked by any process . |
 | 22124 | 16 | No | Change Tracking manual cleanup is blocked on side table of "%s". If the failure persists, check if the table "%s" is blocked by any process . |
-| 22125 | 16 | No | Change tracking autocleanup is currently not able to maintain retention for database ID %d. Number of expired records: %d. If this warning persists, check the following resource: [https://learn.microsoft.com/sql/relational-databases/track-changes/cleanup-and-troubleshoot-change-tracking-sql-server](/sql/relational-databases/track-changes/cleanup-and-troubleshoot-change-tracking-sql-server) |
+| 22125 | 16 | No | Change tracking autocleanup is currently not able to maintain retention for database ID %d. Number of expired records: %d. If this warning persists, check the following resource: [https://learn.microsoft.com/sql/relational-databases/track-changes/cleanup-and-troubleshoot-change-tracking-sql-server](../../track-changes/cleanup-and-troubleshoot-change-tracking-sql-server.md) |
 | 22201 | 16 | No | Internal error. Unable to acquire the latch holding buffers for DW Tiered Storage ColumnStore Scan. |
 | 22202 | 16 | No | Internal error. Unable to run the remote cs garbage collector. Error Code 22202. |
 | 22203 | 16 | No | Internal error. Unable to update the blobs table in the catalogDB. Error Code 22203. |
@@ -540,6 +540,9 @@ ms.topic: include
 | 22886 | 10 | No | An update-delete conflict was detected. The row could not be updated since the row does not exist. The incoming update was skipped. |
 | 22887 | 16 | No | Could not enable Change Data Capture for database '%s'. Change Data Capture cannot be enabled on a DB with Change Feed enabled. |
 | 22888 | 16 | No | Could not alter captured column of a CDC tracked table with character/binary/unicode as target data type with ansi warnings turned off. |
+| 22889 | 10 | No | Warning: Unable to get database version for the subscription database '%s'. The sp_replmonitorsubscriptionpendingcmds may report incorrect number of pending commands for P2P replication. |
+| 22891 | 16 | No | Could not enable '%S_MSG' for database '%s'. '%S_MSG' cannot be enabled on a DB with delayed durability set. |
+| 22892 | 16 | No | Could not enable delayed durability on DB. Delayed durability cannot be enabled on a DB while '%S_MSG' is enabled. |
 | 22901 | 16 | No | The database '%s' is not enabled for Change Data Capture. Ensure that the correct database context is set and retry the operation. To report on the databases enabled for Change Data Capture, query the is_cdc_enabled column in the sys.databases catalog view. |
 | 22902 | 16 | No | Caller is not authorized to initiate the requested action. %s privileges are required. |
 | 22903 | 16 | No | Another connection with session ID %I64d is already running 'sp_replcmds' for Change Data Capture in the current database. |

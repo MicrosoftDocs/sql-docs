@@ -5,7 +5,7 @@ description: This article provides common security requirements and best practic
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 01/20/2023
+ms.date: 04/20/2023
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: article
@@ -53,7 +53,7 @@ Unless otherwise stated, we recommend you follow all best practices listed in ea
 - [SOC](https://www.aicpa.org/interestareas/frc/assuranceadvisoryservices/sorhome.html): CM-3, SDL-3
 - [ISO/IEC 27001](https://www.iso27001security.com/html/27001.html): Access Control, Cryptography
 - [Microsoft Operational Security Assurance (OSA) practices](https://www.microsoft.com/securityengineering/osa/practices): Practice #1-6 and #9
-- [NIST Special Publication 800-53 Security Controls](https://nvd.nist.gov/800-53): AC-5, AC-6
+- [NIST Special Publication 800-53 Security Controls](https://csrc.nist.gov/Projects/risk-management/sp800-53-controls/release-search#/): AC-5, AC-6
 - [PCI DSS](https://www.pcisecuritystandards.org/document_library): 6.3.2, 6.4.2
 
 We plan on continuing to update the recommendations and best practices listed here. Provide input or any corrections for this document using the **Feedback** link at the bottom of this article.
@@ -267,8 +267,8 @@ The following best practices are optional but will result in better manageabilit
   - Server (special roles in the `master` database) in Azure
   - Database
   - Schema
-    - It is a best practice to use schemas to grant permissions inside a database. (also see: [Schema-design: Recommendations for Schema design with security in mind](http://andreas-wolter.com/en/schema-design-for-sql-server-recommendations-for-schema-design-with-security-in-mind/))
-  - Object (table, view, procedure, etc.)
+    - It is a best practice to use schemas to grant permissions inside a database.
+  - Object (table, view, procedure, and so on)
 
   > [!NOTE]  
   > It is not recommended to apply permissions on the object level because this level adds unnecessary complexity to the overall implementation. If you decide to use object-level permissions, those should be clearly documented. The same applies to column-level-permissions, which are even less recommendable for the same reasons. Also be aware that by default a table-level [DENY](/sql/t-sql/statements/deny-object-permissions-transact-sql) does not override a column-level GRANT. This would require the [common criteria compliance Server Configuration](/sql/database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option) to be activated.
@@ -374,7 +374,7 @@ Separation of Duties is not limited to the data in a database, but includes appl
 
 - Make sure the person conducting the review is an individual other than the originating code author and knowledgeable in code-reviews and secure coding.
 
-- Be sure to know all sources of code-changes. Code can be in T-SQL Scripts. It can be ad-hoc commands to be executed or be deployed in forms of Views, Functions, Triggers, and Stored Procedures. It can be part of SQL Agent Job definitions (Steps). It can also be executed from within SSIS packages, Azure Data Factory, and other services.
+- Be sure to know all sources of code-changes. Code can be in T-SQL Scripts. It can be ad hoc commands to be executed or be deployed in forms of Views, Functions, Triggers, and Stored Procedures. It can be part of SQL Agent Job definitions (Steps). It can also be executed from within SSIS packages, Azure Data Factory, and other services.
 
 ## Data protection
 
@@ -487,7 +487,7 @@ Another technique for preventing unauthorized users from viewing data is to obfu
 > [!NOTE]  
 > Dynamic Data Masking cannot be used to protect data from high-privilege users. Masking policies do not apply to users with administrative access like db_owner.
 
-- Don't permit app users to run ad-hoc queries (as they may be able to work around Dynamic Data Masking).  
+- Don't permit app users to run ad hoc queries (as they may be able to work around Dynamic Data Masking).  
   - See the article, [Bypassing masking using inference or brute-force techniques](/sql/relational-databases/security/dynamic-data-masking#security-note-bypassing-masking-using-inference-or-brute-force-techniques) for details.
 
 - Use a proper access control policy (via SQL permissions, roles, RLS) to limit user permissions to make updates in the masked columns. Creating a mask on a column doesn't prevent updates to that column. Users that receive masked data when querying the masked column, can update the data if they have write-permissions.

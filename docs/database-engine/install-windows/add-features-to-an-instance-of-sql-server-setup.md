@@ -156,4 +156,4 @@ Configure your SQL Server installation
 - [Repair a Failed SQL Server 2016 Installation](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)
 - [Upgrade SQL Server Using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
 - [Install SQL Server from the Command Prompt](./install-sql-server-from-the-command-prompt.md)
-- [Latest Updates for SQL Server](latest-updates-for-microsoft-sql-server.md)
+- [Latest Updates for SQL Server](/troubleshoot/sql/releases/download-and-install-latest-updates?bc=%2fsql%2fbreadcrumb%2ftoc.json&toc=%2fsql%2ftoc.json)

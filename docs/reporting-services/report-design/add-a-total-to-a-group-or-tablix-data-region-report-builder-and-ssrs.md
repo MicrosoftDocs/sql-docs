@@ -7,6 +7,7 @@ ms.date: 12/16/2019
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Add a total to a group or tablix in a paginated report (Report Builder)
 

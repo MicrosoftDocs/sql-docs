@@ -7,6 +7,7 @@ ms.date: 12/09/2019
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "no credentials option [Reporting Services]"
   - "impersonation [Reporting Services]"

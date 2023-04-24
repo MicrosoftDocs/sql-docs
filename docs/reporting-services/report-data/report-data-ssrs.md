@@ -7,6 +7,7 @@ ms.date: 11/18/2019
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Intro to Report Data in SQL Server Reporting Services (SSRS)

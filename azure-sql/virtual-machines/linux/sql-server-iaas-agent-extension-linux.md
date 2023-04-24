@@ -97,7 +97,7 @@ The Linux SQL IaaS Agent extension has the following limitations:
 
 ## <a id="in-region-data-residency"></a> Privacy statement
 
-When using SQL Server on Azure VMs and the SQL IaaS extension, consider the following privacy statements: 
+When using SQL Server on Azure VMs and the SQL IaaS Agent extension, consider the following privacy statements: 
 
 - **Data collection**:  The SQL IaaS Agent extension collects data for the express purpose of giving customers optional benefits when using SQL Server on Azure Virtual Machines. Microsoft **will not use this data for licensing audits** without the customer's advance consent. See the [SQL Server privacy supplement](/sql/sql-server/sql-server-privacy#non-personal-data) for more information.
 

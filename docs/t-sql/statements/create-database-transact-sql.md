@@ -1307,9 +1307,14 @@ For more information about the syntax conventions, see [Transact-SQL syntax conv
 
 ```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
+[ WITH <with_options> [,..n]]
 [;]
-```
 
+<with_options> ::=
+{
+  LEDGER = { ON | OFF }
+}
+```
 > [!IMPORTANT]
 > To add files or set containment for a database in a managed instance, use the [ALTER DATABASE](alter-database-transact-sql.md?tabs=sqldbmi) statement.
 
@@ -1325,6 +1330,10 @@ Specifies the default collation for the database. Collation name can be either a
 
 For more information about the Windows and SQL collation names, [COLLATE (Transact-SQL)](../../t-sql/statements/collations.md).
 
+#### *LEDGER = {ON | OFF }*
+
+When set to `ON`, it creates a ledger database, in which the integrity of all user data is protected. Only ledger tables can be created in a ledger database. The default is `OFF`. The value of the `LEDGER` option cannot be changed once the database is created. For more information, see [Configure a ledger database](../../relational-databases/security/ledger/ledger-how-to-configure-ledger-database.md).
+
 ## Remarks
 
 Databases in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] have several default settings that are set when the database is created. For more information about these default settings, see the list of values in [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
@@ -1335,7 +1344,7 @@ Databases in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] have several 
 The following are `CREATE DATABASE` limitations:
 
 - Files and filegroups cannot be defined.
-- `WITH`options are not supported.
+- `WITH`options are not supported, except for `WITH LEDGER`.
 
   > [!TIP]
   > As workaround, use [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true). after `CREATE DATABASE` to set database options and to add files.
@@ -1356,6 +1365,12 @@ A simple example for creating a database.
 
 ```sql
 CREATE DATABASE TestDB1;
+```
+
+### Create a ledger database
+
+```sql
+CREATE DATABASE MyLedgerDB WITH LEDGER = ON;
 ```
 
 ## Next steps

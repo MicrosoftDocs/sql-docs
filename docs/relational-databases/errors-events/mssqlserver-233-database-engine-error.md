@@ -26,15 +26,25 @@ helpviewer_keywords:
 |Symbolic Name||  
 |Message Text|A connection was successfully established with the server, but then an error occurred during the login process. (provider: Shared Memory Provider, error: 0 - No process is on the other end of the pipe.) (Microsoft SQL Server, Error: 233)|  
   
-## Explanation  
-The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client cannot connect to the server. This error could occur because the server is not configured to accept remote connections.  
+## Explanations  
+The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client cannot connect to an instance residing on the same host as the client. 
+ 
+### Potential causes:
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+- Unable to connect through the Shared Memory protocol.
+- The instance has reached its maximum concurrent user connections limit
   
-## User Action  
-Use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager tool to allow [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to accept remote connections.  
+## User Action 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+Depending on the cause:
+- Try to disable the Shared Memory protocol in Configuration Manager and use TCP/IP instead.
+- Restart the instance in single user mode and make sure that the maximum number of concurrent user connections has not been changed from its default value of 0 (0 = unlimited)
   
 ## See Also  
-[Network Protocols and Network Libraries](~/sql-server/install/network-protocols-and-network-libraries.md)  
+[Network Protocols and Network Libraries](~/sql-server/install/network-protocols-and-network-libraries.md)
+[Shared Memory Properties](~/tools/configuration-manager/shared-memory-properties.md)
 [Client Network Configuration](~/database-engine/configure-windows/client-network-configuration.md)  
 [Configure Client Protocols](~/database-engine/configure-windows/configure-client-protocols.md)  
-[Enable or Disable a Server Network Protocol](~/database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)  
+[Enable or Disable a Server Network Protocol](~/database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
+[Configure the user connections Server Configuration Option](~/database-engine/configure-windows/configure-the-user-connections-server-configuration-option.md)
   

@@ -5,7 +5,7 @@ description: Overview of customer managed keys (CMK) support for transparent dat
 author: strehan1993
 ms.author: strehan
 ms.reviewer: vanto
-ms.date: 03/31/2023
+ms.date: 04/25/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual

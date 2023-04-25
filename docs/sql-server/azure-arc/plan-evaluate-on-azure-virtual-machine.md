@@ -11,9 +11,9 @@ ms.topic: conceptual
 
 # Evaluate Azure Arc-enabled SQL Server instance on an Azure virtual machine
 
-Azure Arc-enabled SQL Server is designed to help you connect servers running on-premises or in other clouds to Azure. Normally, you would not use Azure Arc-enabled SQL Server on an Azure virtual machine because all the same capabilities are natively available for these VMs, including a representation of the VM in Azure Resource Manager, VM extensions, managed identities, and Azure Policy.
+Azure Arc-enabled SQL Server is designed to help you connect servers running on-premises or in other clouds to Azure. Normally, you wouldn't use Azure Arc-enabled SQL Server on an Azure virtual machine. All the Azure capabilities are natively available for these VMs, including a representation of the VM in Azure Resource Manager, VM extensions, managed identities, and Azure Policy.
 
-While you cannot install Azure Arc-enabled SQL Server on an Azure VM for production scenarios, it is possible to configure Azure Arc-enabled servers to run on an Azure VM for *evaluation and testing purposes only*. This article will help you set up an Azure VM before you can enable Azure Arc-enabled servers on it.
+While you can't install Azure Arc-enabled SQL Server on an Azure VM for production scenarios, it's possible to configure Azure Arc-enabled servers to run on an Azure VM for *evaluation and testing purposes only*. This article explains how to set up an Azure SQL VM before you can enable Azure Arc-enabled SQL Server on it.
 
 > [!NOTE]
 > The steps in this article are intended for virtual machines hosted in the Azure cloud. Azure Arc-enabled SQL Server is not supported on virtual machines running on Azure Stack Hub or Azure Stack Edge.
@@ -32,9 +32,9 @@ Create an Azure SQL Virtual Machine. Use an [available Azure SQL VM image](/azur
 ## Remove any VM extensions on the Azure VM
 
 1. In the Azure portal, navigate to your Azure VM resource and from the left-hand pane, select **Extensions + applications**.
-1. Notice any extensions. Because this is an Azure SQL VM, it will have *SQLIaasExtension*. 
+1. Notice any extensions. Because this VM is an Azure SQL VM, it will have *SQLIaasExtension*.
 1. Select **SQLIaasExtension**, and select **Uninstall**.
-1. If there are any other extensions installed on the VM, select each extension individually and then select **Uninstall**.
+1. If there are any other extensions installed on the VM, select each extension individually, and then select **Uninstall**.
 
 ## Disable the Azure VM Guest agent
 

@@ -5,7 +5,7 @@ description: A how-to guide on creating, updating, and utilizing database level 
 author: strehan1993
 ms.author: strehan
 ms.reviewer: vanto
-ms.date: 03/31/2023
+ms.date: 04/25/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: how-to
@@ -48,7 +48,7 @@ Before we can configure TDE for Azure SQL Database with a cross-tenant CMK, we n
 1. On the first tenant where you want to create the Azure SQL Database, [create and configure a multi-tenant Azure AD application](/azure/storage/common/customer-managed-keys-configure-cross-tenant-new-account#the-service-provider-creates-a-new-multi-tenant-app-registration)
 
 1. [Create a user-assigned managed identity](/azure/storage/common/customer-managed-keys-configure-cross-tenant-new-account#the-service-provider-creates-a-user-assigned-managed-identity)
-1. [Configure the user-assigned managed identity](/azure/storage/common/customer-managed-keys-configure-cross-tenant-new-account#the-service-provider-configures-the-user-assigned-managed-identity-as-a-federated-credential-on-the-application) as a [federated identity credential](/graph/api/resources/federatedidentitycredentials-overview) for the application
+1. [Configure the user-assigned managed identity](/azure/storage/common/customer-managed-keys-configure-cross-tenant-new-account#the-service-provider-configures-the-user-assigned-managed-identity-as-a-federated-credential-on-the-application) as a [federated identity credential](/graph/api/resources/federatedidentitycredentials-overview) for the multi-tenant application
 1. Record the application name and application ID. This can be found in the [Azure portal](https://portal.azure.com) > **Azure Active Directory** > **Enterprise applications** and search for the created application
 
 ### Required resources on the second tenant
@@ -69,7 +69,8 @@ Before we can configure TDE for Azure SQL Database with a cross-tenant CMK, we n
       ```
 
 1. Go to the [Azure portal](https://portal.azure.com) > **Azure Active Directory** > **Enterprise applications** and search for the application that was created.
-1. Create an [Azure Key Vault](/azure/key-vault/general/quick-create-portal) if you don't have one, [create or set the access policy](/azure/key-vault/general/assign-access-policy), and [create a key](/azure/key-vault/keys/quick-create-portal)
+1. Create an [Azure Key Vault](/azure/key-vault/general/quick-create-portal) if you don't have one, and [create a key](/azure/key-vault/keys/quick-create-portal)
+1. [Create or set the access policy](/azure/key-vault/general/assign-access-policy).
    1. Select the *Get, Wrap Key, Unwrap Key* permissions under **Key permissions** when creating the access policy
    1. Select the multi-tenant application created in the first step in the **Principal** option when creating the access policy
 

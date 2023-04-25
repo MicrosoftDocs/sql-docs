@@ -1008,7 +1008,6 @@ Adds a database or group of databases to a target group.
         [ , [ @server_name = ] 'server_name' ]
         [ , [ @database_name = ] 'database_name' ]
         [ , [ @elastic_pool_name = ] 'elastic_pool_name' ]
-        [ , [ @shard_map_name = ] 'shard_map_name' ]
         [ , [ @target_id = ] 'target_id' OUTPUT ]
 ```
 
@@ -1021,7 +1020,7 @@ The name of the target group to which the member will be added. target_group_nam
 Specifies if the target group member will be included or excluded. target_group_name is nvarchar(128), with default of 'Include'. Valid values for membership_type are 'Include' or 'Exclude'.
 
 [ **\@target_type =** ] 'target_type'  
-The type of target database or collection of databases including all databases in a server, all databases in an Elastic pool, all databases in a shard map, or an individual database. target_type is nvarchar(128), with no default. Valid values for target_type are 'SqlServer', 'SqlElasticPool', 'SqlDatabase', or 'SqlShardMap'.
+The type of target database or collection of databases including all databases in a server, all databases in an Elastic pool, or an individual database. target_type is nvarchar(128), with no default. Valid values for target_type are 'SqlServer', 'SqlElasticPool', 'SqlDatabase'.
 
 [ **\@refresh_credential_name =** ] 'refresh_credential_name'  
 The name of the database scoped credential. refresh_credential_name is nvarchar(128), with no default.
@@ -1034,9 +1033,6 @@ The name of the database that should be added to the specified target group. dat
 
 [ **\@elastic_pool_name =** ] 'elastic_pool_name'  
 The name of the Elastic pool that should be added to the specified target group. elastic_pool_name should be specified when target_type is 'SqlElasticPool'. elastic_pool_name is nvarchar(128), with no default.
-
-[ **\@shard_map_name =** ] 'shard_map_name'  
-The name of the shard map pool that should be added to the specified target group. elastic_pool_name should be specified when target_type is 'SqlShardMap'. shard_map_name is nvarchar(128), with no default.
 
 [ **\@target_id =** ] target_group_id OUTPUT  
 The target identification number assigned to the target group member if created added to the target group. target_id is an output variable of type uniqueidentifier, with a default of NULL.
@@ -1230,6 +1226,7 @@ Shows job execution history.
 |**end_time** | datetime2(7) | Date and time the job finished execution. NULL if the job has not yet been executed or has not yet completed execution.
 |**current_attempts** | int | Number of times the step was retried. Parent job will be 0, child job executions will be 1 or greater based on the execution policy.
 |**current_attempt_start_time** | datetime2(7) | Date and time the job started execution. NULL indicates this is the parent job execution.
+|**next_attempt_start_time** | datetime2(7) | Date and time the job will start next execution. NULL indicates this is the parent job execution.
 |**last_message** | nvarchar(max) | Job or step history message.
 |**target_type** | nvarchar(128) | Type of target database or collection of databases including all databases in a server, all databases in an Elastic pool or a database. Valid values for target_type are 'SqlServer', 'SqlElasticPool' or 'SqlDatabase'. NULL indicates this is the parent job execution.
 |**target_id** | uniqueidentifier | Unique ID of the target group member.  NULL indicates this is the parent job execution.
@@ -1328,7 +1325,7 @@ Shows all members of all target groups.
 |**target_group_name**|nvarchar(128|The name of the target group, a collection of databases. |
 |**target_group_id**|uniqueidentifier|Unique ID of the target group.|
 |**membership_type**|int|Specifies if the target group member is included or excluded in the target group. Valid values for target_group_name are 'Include' or 'Exclude'.|
-|**target_type**|nvarchar(128)|Type of target database or collection of databases including all databases in a server, all databases in an Elastic pool or a database. Valid values for target_type are 'SqlServer', 'SqlElasticPool', 'SqlDatabase', or 'SqlShardMap'.|
+|**target_type**|nvarchar(128)|Type of target database or collection of databases including all databases in a server, all databases in an Elastic pool or a database. Valid values for target_type are 'SqlServer', 'SqlElasticPool', 'SqlDatabase'|
 |**target_id**|uniqueidentifier|Unique ID of the target group member.|
 |**refresh_credential_name**|nvarchar(128)|Name of the database scoped credential used to connect to the target group member.|
 |**subscription_id**|uniqueidentifier|Unique ID of the subscription.|
@@ -1336,7 +1333,6 @@ Shows all members of all target groups.
 |**server_name**|nvarchar(128)|Name of the server contained in the target group. Specified only if target_type is 'SqlServer'. |
 |**database_name**|nvarchar(128)|Name of the database contained in the target group. Specified only when target_type is 'SqlDatabase'.|
 |**elastic_pool_name**|nvarchar(128)|Name of the Elastic pool contained in the target group. Specified only when target_type is 'SqlElasticPool'.|
-|**shard_map_name**|nvarchar(128)|Name of the shard maps contained in the target group. Specified only when target_type is 'SqlShardMap'.|
 
 ## Next steps
 

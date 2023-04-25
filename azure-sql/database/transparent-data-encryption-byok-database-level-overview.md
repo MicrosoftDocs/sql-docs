@@ -109,6 +109,9 @@ In order for the database to use TDE protector stored in AKV for encryption of t
 
 [Cross-tenant customer managed keys with transparent data encryption](transparent-data-encryption-byok-cross-tenant.md) describes how to setup a federated client ID for server level CMK. Similar setup needs to be done for database level CMK and the federated client ID must be added as part of the [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) or [New-AzSqlDatabase](/powershell/module/az.sql/new-azsqldatabase) API requests.
 
+> [!NOTE]
+> If the multi-tenant application hasn't been added to the key vault access policy with the required permissions (*Get, Wrap Key, Unwrap Key*), using an application for identity federation in the Azure portal will show an error. Make sure that the permissions are configured correctly before configuring the federated client identity.
+
 A database configured with database level CMK can be reverted to server level encryption if the logical server is configured with a service-managed key using
 [Invoke-AzSqlDatabaseTransparentDataEncryptionProtectorRevert](/powershell/module/az.sql/invoke-azsqldatabasetransparentdataencryptionprotectorrevert).
 

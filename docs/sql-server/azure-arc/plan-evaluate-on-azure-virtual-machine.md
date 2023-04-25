@@ -16,17 +16,47 @@ Azure Arc-enabled SQL Server is designed to help you connect servers running on-
 While you cannot install Azure Arc-enabled SQL Server on an Azure VM for production scenarios, it is possible to configure Azure Arc-enabled servers to run on an Azure VM for *evaluation and testing purposes only*. This article will help you set up an Azure VM before you can enable Azure Arc-enabled servers on it.
 
 > [!NOTE]
-> The steps in this article are intended for virtual machines hosted in the Azure cloud. Azure Arc-enabled 
-servers is not supported on virtual machines running on Azure Stack Hub or Azure Stack Edge.
+> The steps in this article are intended for virtual machines hosted in the Azure cloud. Azure Arc-enabled SQL Server is not supported on virtual machines running on Azure Stack Hub or Azure Stack Edge.
 
-## Start with a server
+When you follow this article, you will:
 
-To evaluate Azure Arc-enabled SQL Server from an Azure Virtual Machine:
+1. Create an Azure SQL VM.
+1. Remove the Azure extensions.
+1. Disable the Azure VM Guest Agent.
+1. Connect the SQL Server to Azure Arc (Arc-enabled the SQL Server instance).
 
-1. Create an Azure SQL VM using an [available Azure SQL VM images](/azure/azure-sql/virtual-machines/windows/sql-vm-create-portal-quickstart).
-1. Complete the prerequisites and steps in [Evaluate Azure Arc-enabled servers on an Azure virtual machine](/azure/azure-arc/servers/plan-evaluate-on-azure-virtual-machine).
-1. Complete the prerequisites to connect an instance of SQL Server to Azure Arc. Follow the steps in [Prerequisites](prerequisites.md).
-1. Connect the instance of SQL Server to Azure Arc. Follow the steps in [Connect your SQL Server to Azure Arc](connect.md).
+## Create evaluation server
+
+Create an Azure SQL Virtual Machine. Use an [available Azure SQL VM image](/azure/azure-sql/virtual-machines/windows/sql-vm-create-portal-quickstart).
+
+## Remove any VM extensions on the Azure VM
+
+1. In the Azure portal, navigate to your Azure VM resource and from the left-hand pane, select **Extensions + applications**.
+1. Notice any extensions. Because this is an Azure SQL VM, it will have *SQLIaasExtension*. 
+1. Select **SQLIaasExtension**, and select **Uninstall**.
+1. If there are any other extensions installed on the VM, select each extension individually and then select **Uninstall**.
+
+## Disable the Azure VM Guest agent
+
+To disable the Azure VM Guest agent:
+
+1. Connect to the virtual machine.
+1. Run the following PowerShell.
+
+   ```powershell
+   Set-Service WindowsAzureGuestAgent -StartupType Disabled -Verbose
+   Stop-Service WindowsAzureGuestAgent -Force -Verbose
+   ```
+
+1. Wait for all extensions to finish uninstalling before you proceed.
+
+## Connect the SQL Server to Azure Arc
+
+Connect the instance of SQL Server to Azure Arc. Follow the steps in [Connect your SQL Server to Azure Arc](connect.md).
+
+## Clean up your evaluation environment
+
+After you have evaluated Arc-enabled SQL Server on an Azure Virtual Machine, to avoid charges, delete your resource groups.
 
 ## Next steps
 

@@ -46,7 +46,7 @@ Create an Azure SQL Virtual Machine. Use an [available Azure SQL VM image](/azur
 To disable the Azure VM Guest agent:
 
 1. Connect to the virtual machine.
-1. Run the following PowerShell.
+1. On the virtual machine, run the following PowerShell.
 
    ```powershell
    Set-Service WindowsAzureGuestAgent -StartupType Disabled -Verbose

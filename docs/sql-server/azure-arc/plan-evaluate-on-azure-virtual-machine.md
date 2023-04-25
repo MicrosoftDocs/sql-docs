@@ -37,7 +37,7 @@ Create an Azure SQL Virtual Machine. Use an [available Azure SQL VM image](/azur
 ## Remove any VM extensions on the Azure VM
 
 1. In the Azure portal, navigate to your Azure VM resource and from the left-hand pane, select **Extensions + applications**.
-1. Notice any extensions. Because this VM is an Azure SQL VM, it will have *SQLIaasExtension*.
+1. Notice any extensions. Because this VM is an Azure SQL VM, it has *SQLIaasExtension*.
 1. Select **SQLIaasExtension**, and select **Uninstall**.
 1. If there are any other extensions installed on the VM, select each extension individually, and then select **Uninstall**.
 

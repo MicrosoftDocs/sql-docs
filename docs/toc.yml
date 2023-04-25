@@ -6422,43 +6422,6 @@ items:
         items:
         - name: Change the Target Recovery Time of a Database
           href: relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md
-    - name: SQL Server utility
-      href: relational-databases/manage/sql-server-utility-features-and-tasks.md
-      items:
-      - name: Considerations for Running Utility & non-Utility Collection Sets on the Same Instance of SQL Server
-        href: relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md
-      - name: Create a SQL Server Utility Control Point
-        href: relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md
-      - name: Connect to a SQL Server Utility
-        href: relational-databases/manage/connect-to-a-sql-server-utility.md
-      - name: Enroll an Instance of SQL Server
-        href: relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md
-      - name: Use Utility Explorer to Manage the SQL Server Utility
-        href: relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md
-      - name: Monitor Instances of SQL Server in the SQL Server Utility
-        href: relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md
-      - name: View Resource Health Policy Results
-        href: relational-databases/manage/view-resource-health-policy-results-sql-server-utility.md
-      - name: Modify a Resource Health Policy Definition
-        href: relational-databases/manage/modify-a-resource-health-policy-definition-sql-server-utility.md
-      - name: Configure Your Utility Control Point Data Warehouse
-        href: relational-databases/manage/configure-your-utility-control-point-data-warehouse-sql-server-utility.md
-      - name: Configure Health Policies
-        href: relational-databases/manage/configure-health-policies-sql-server-utility.md
-      - name: Reduce Noise in CPU Utilization Policies
-        href: relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md
-      - name: Remove an Instance of SQL Server from the SQL Server Utility
-        href: relational-databases/manage/remove-an-instance-of-sql-server-from-the-sql-server-utility.md
-      - name: Change the Proxy Account for the Utility Collection Set on a Managed Instance of SQL Server
-        href: relational-databases/manage/change-proxy-account-for-utility-collection-on-managed-sql-server.md
-      - name: Move a UCP from One Instance of SQL Server to Another
-        href: relational-databases/manage/move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility.md
-      - name: Remove a Utility Control Point
-        href: relational-databases/manage/remove-a-utility-control-point-sql-server-utility.md
-      - name: Troubleshoot SQL Server Resource Health
-        href: relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md
-      - name: Utility Explorer F1 Help
-        href: relational-databases/manage/utility-explorer-f1-help.md
     - name: SQL Assessment API
       href: tools/sql-assessment-api/sql-assessment-api-overview.md
   - name: Monitor
@@ -9429,8 +9392,6 @@ items:
           href: ssms/object/select-objects-object-explorer.md
         - name: Options (SQL Server Object Explorer - Scripting Page)
           href: ssms/object/options-sql-server-object-explorer-scripting-page.md
-        - name: Filter Settings (Object Explorer & Utility Explorer)
-          href: ssms/object/filter-settings-object-explorer-and-utility-explorer.md
         - name: Delete Objects
           href: ssms/object/delete-objects.md
         - name: Add a Custom Report to Management Studio

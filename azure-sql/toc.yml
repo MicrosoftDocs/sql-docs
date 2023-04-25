@@ -1614,6 +1614,8 @@
             - name: Azure portal
               displayName: Always On, alwayson, availability group
               href: virtual-machines/windows/availability-group-azure-portal-configure.md
+            - name: Migrate single subnet to multi-subnet
+              href: virtual-machines/windows/availability-group-manually-migrate-multi-subnet.md
             - name: Manually
               items: 
               - name: Prerequisites

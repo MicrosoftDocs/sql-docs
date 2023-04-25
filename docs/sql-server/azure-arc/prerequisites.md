@@ -122,8 +122,7 @@ az provider register --namespace 'Microsoft.AzureArcData'
 ---
 ## Azure subscription and service limits
 
-The maximum number of resources in a resource group is 800, per resource type. This limitation applies to Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances and databases. Before configuring your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances and machines with Azure Arc, review the Azure Resource Manager [subscription limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#subscription-limits) and [resource group limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#resource-group-limits) to plan for the number of machines to be connected.
-
+The maximum number of resources in a resource group is 800, per resource type. This limitation applies to Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances. Before configuring your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances and machines with Azure Arc, review the Azure Resource Manager [subscription limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#subscription-limits) and [resource group limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#resource-group-limits) to plan for the number of machines to be connected.
 ## Supported regions
 
 [!INCLUDE [azure-arc-data-regions](includes/azure-arc-data-regions.md)]
@@ -131,3 +130,5 @@ The maximum number of resources in a resource group is 800, per resource type. T
 ## Next steps
 
 - [Connect your SQL Server to Azure Arc](deployment-options.md)
+
+

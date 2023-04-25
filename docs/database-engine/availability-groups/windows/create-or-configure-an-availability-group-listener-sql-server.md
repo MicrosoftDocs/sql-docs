@@ -156,7 +156,7 @@ helpviewer_keywords:
   
      For example, the following **New-SqlAvailabilityGroupListener** command creates an availability group listener named `MyListener` for the availability group `MyAg`. This listener will use the IPv4 address passed to the **-StaticIp** parameter as its virtual IP address.  
   
-    ```sql  
+    ```powershell  
     New-SqlAvailabilityGroupListener -Name MyListener `   
     -StaticIp '192.168.3.1/255.255.252.0' `   
     -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg  
@@ -168,7 +168,7 @@ helpviewer_keywords:
   
      For example, the following **Set-SqlAvailabilityGroupListener** command sets the port number for the availability group listener named `MyListener` to `1535`. This port is used to listen for connections to the listener.  
   
-    ```sql  
+    ```powershell  
     Set-SqlAvailabilityGroupListener -Port 1535 `   
     -Path SQLSERVER:\Sql\PrimaryServer\InstanceName\AvailabilityGroups\MyAg\AGListeners\MyListener  
   
@@ -179,7 +179,7 @@ helpviewer_keywords:
   
      For example, the following **Add-SqlAGListenerstaticIp** command adds a static IPv4 address to the availability group listener `MyListener` on the availability group `MyAg`. This IPv6 address serves as the virtual IP address of the listener on the subnet `255.255.252.0`. If the availability group spans multiple subnets, you should add a static IP address for each subnet to the listener.  
   
-    ```sql  
+    ```powershell
     $path = "SQLSERVER:\SQL\PrimaryServer\InstanceName\AvailabilityGroups\MyAg\AGListeners\ MyListener" `   
     Add-SqlAGListenerstaticIp -Path $path `   
     -StaticIp "2001:0db8:85a3:0000:0000:8a2e:0370:7334"  

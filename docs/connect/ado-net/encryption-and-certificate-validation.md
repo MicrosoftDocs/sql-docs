@@ -3,7 +3,7 @@ title: Encryption and certificate validation
 description: Learn about encryption and certificate validation for SQL Server connections. Encrypt and trust server certificate settings affect the security of your connections.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 04/19/2023
+ms.date: 04/25/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -24,70 +24,56 @@ Applications may request encryption of all network traffic by using the `Encrypt
 
 To enable encryption to be used when a certificate hasn't been provisioned on the server, the `Encrypt` and `Trust Server Certificate` client settings can be used. In this case, encryption uses a self-signed server certificate without validation by the client. This configuration encrypts the connection but doesn't prevent devices in between the client and server from intercepting the connection and proxying the encryption.
 
-## Encryption and certificate validation behavior
+## Changes in encryption and certificate validation behavior
 
 Version 4.0 of Microsoft.Data.SqlClient introduces breaking changes in the encryption settings. `Encrypt` now defaults to `True`.
 
 Version 2.0 of Microsoft.Data.SqlClient introduces breaking changes in the behavior of the `Trust Server Certificate` setting. Previously, if `Encrypt` was set to `False`, the server certificate wouldn't be validated, regardless of the `Trust Server Certificate` setting. Now, the server certificate is validated based on the `Trust Server Certificate` setting if the server forces encryption, even if `Encrypt` is set to `False`.
 
-### Major version 5 and higher
+### Version 4.0
 
-The following table describes encryption behavior:
+The following table describes the encryption and validation outcome for encryption and certificate settings:
 
-| Client **Encrypt** connection string/property | Server **Force encryption** setting | **Resulting encryption** |
-|--|--|--|
-| False/Optional | No | None |
-| False/Optional | Yes | Encrypted |
-| True/Mandatory (default) | No | Encrypted |
-| True/Mandatory (default) | Yes | Encrypted |
-| Strict | N/A | Encrypted |
-
-The following table describes the resulting encryption and validation:
-
-| Encryption | Trust Server Certificate connection string/property | Result |
-|--|--|--|
-| None | N/A | Encryption only occurs for LOGIN packets. Certificate isn't validated. All other data is sent unencrypted. |
-| Encrypted | False (default) | Encryption occurs only if there's a validated server certificate, otherwise the connection attempt fails. |
-| Encrypted | True | Encryption of all network traffic occurs, but the certificate isn't validated. |
-| Strict | N/A | Encryption occurs only if there's a validated server certificate, otherwise the connection attempt fails. |
+| `Encrypt` client setting | `Trust Server Certificate` client setting | `Force encryption` server setting | Result |
+|--|--|--|--|
+| False | False (default) | No | Encryption only occurs for LOGIN packets. Certificate isn't validated. |
+| False | False (default) | Yes | **(Behavior change from version 1.0 to 2.0)** Encryption of all network traffic occurs only if there's a verifiable server certificate, otherwise the connection attempt fails. |
+| False | True | Yes | Encryption of all network traffic occurs, and the certificate isn't validated. |
+| True **(new default)** | False (default) | N/A | Encryption of all network traffic occurs only if there's a verifiable server certificate, otherwise the connection attempt fails. |
+| True **(new default)** | True | N/A | Encryption of all network traffic occurs, but the certificate isn't validated. |
+| Strict (added in version 5.0) | N/A | N/A | Encryption of all network traffic occurs using TDS 8 only if there's a verifiable server certificate, otherwise the connection attempt fails. |
 
 > [!CAUTION]
 > The preceding table only provides a guide on the system behavior under different configurations. For secure connectivity, ensure that the client and server both require encryption. Also ensure that the server has a verifiable certificate, and that the `TrustServerCertificate` setting on the client is set to `False`.
 
 Starting in version 5.0 of Microsoft.Data.SqlClient, `HostNameInCertificate` is a new connection option. Server certificate validation ensures that the Common Name (CN) or Subject Alternate Name (SAN) in the certificate matches the server name being connected to. In some cases, like DNS aliases, the server name might not match the CN or SAN. The `HostNameInCertificate` value can be used to specify a different, expected CN or SAN in the server certificate.
 
-### Major version 2 and higher
+### Version 2.0
 
 Starting in version 2.0, when the server forces encryption, the client validates the server certificate based on the `Trust Server Certificate` setting, regardless of the `Encrypt` setting.
-
-The following table describes the resulting encryption:
-
-| Client **Encrypt** connection string/property | Server **Force encryption** setting | **Resulting encryption** |
-|--|--|--|
-| False (default) | No | None |
-| False (default) | Yes | Encrypted |
-| True | No | Encrypted |
-| True | Yes | Encrypted |
-
-The following table describes the resulting encryption and validation:
-
-| Encryption | Trust Server Certificate connection string/property | Result |
-|--|--|--|
-| None | N/A | Encryption only occurs for LOGIN packets. Certificate isn't validated. All other data is sent unencrypted. |
-| Encrypted | False (default) | Encryption occurs only if there's a validated server certificate, otherwise the connection attempt fails. |
-| Encrypted | True | Encryption of all network traffic occurs, but the certificate isn't validated. |
-
-> [!CAUTION]
-> The preceding table only provides a guide on the system behavior under different configurations. For secure connectivity, ensure that the client and server both require encryption. Also ensure that the server has a verifiable certificate, and that the `TrustServerCertificate` setting on the client is set to `False`.
-
-### Major version 1
 
 The following table describes the encryption and validation outcome for encryption and certificate settings:
 
 | `Encrypt` client setting | `Trust Server Certificate` client setting | `Force encryption` server setting | Result |
 |--|--|--|--|
-| False (default) | N/A | No | Encryption only occurs for LOGIN packets. Certificate isn't validated. |
-| False (default) | N/A | Yes | Encryption of all network traffic occurs, but the certificate isn't validated. |
+| False (default) | False (default) | No | Encryption only occurs for LOGIN packets. Certificate isn't validated. |
+| False (default) | False (default) | Yes | **(Behavior change)** Encryption of all network traffic occurs only if there's a verifiable server certificate, otherwise the connection attempt fails. |
+| False (default) | True | Yes | Encryption of all network traffic occurs, and the certificate isn't validated. |
+| True | False (default) | N/A | Encryption of all network traffic occurs only if there's a verifiable server certificate, otherwise the connection attempt fails. |
+| True | True | N/A | Encryption of all network traffic occurs, but the certificate isn't validated. |
+
+> [!CAUTION]
+> The preceding table only provides a guide on the system behavior under different configurations. For secure connectivity, ensure that the client and server both require encryption. Also ensure that the server has a verifiable certificate, and that the `TrustServerCertificate` setting on the client is set to `False`.
+
+### Version 1.0
+
+The following table describes the encryption and validation outcome for encryption and certificate settings:
+
+| `Encrypt` client setting | `Trust Server Certificate` client setting | `Force encryption` server setting | Result |
+|--|--|--|--|
+| False (default) | False (default) | No | Encryption only occurs for LOGIN packets. Certificate isn't validated. |
+| False (default) | False (default) | Yes | Encryption of all network traffic occurs, but the certificate isn't validated. |
+| False (default) | True | Yes | Encryption of all network traffic occurs, and the certificate isn't validated. |
 | True | False (default) | N/A | Encryption of all network traffic occurs only if there's a verifiable server certificate, otherwise the connection attempt fails. |
 | True | True | N/A | Encryption of all network traffic occurs, but the certificate isn't validated. |
 

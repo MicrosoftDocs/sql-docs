@@ -22,7 +22,7 @@ This article teaches you to migrate your Always On availability group (AG) from 
 
 ## Overview 
 
-Customers who are running SQL Server on Azure virtual machines can implement an Always On availability group (AG) in either a single subnet or multiple subnets (multi-subnet). A multi-subnet configuration simplifies the availability group envrionment by removing the need for an Azure Load Balancer or a Distributed Network Name (DNN) to route traffic to the listener on the Azure network. While using a multi-subnet approach is recommended, it requires the connection strings for an application to use `MultiSubnetFailover = true`, which might not be possible immediately due to application-level changes.
+Customers who are running SQL Server on Azure virtual machines can implement an Always On availability group (AG) in either a single subnet or multiple subnets (multi-subnet). A multi-subnet configuration simplifies the availability group environment by removing the need for an Azure Load Balancer or a Distributed Network Name (DNN) to route traffic to the listener on the Azure network. While using a multi-subnet approach is recommended, it requires the connection strings for an application to use `MultiSubnetFailover = true`, which might not be possible immediately due to application-level changes.
 
 If you originally created an availability group in a single subnet and are using an Azure Load Balancer or DNN for the listener and now want to reduce complexity by moving to a multi-subnet configuration, you can do so with some manual steps.
 
@@ -30,8 +30,8 @@ Prior to starting a migration of an existing environment, weigh the risks of cha
 
 Consider the following two ways to migrate your availability group to multiple subnets: 
 
-1. Create a new environment to perform side-by-side testing
-1. Manually move an existing availability group
+- Create a new environment to perform side-by-side testing
+- Manually move an existing availability group
 
 > [!CAUTION]
 > Performing any migration involves some risk, so as always test thoroughly in a non-production environment before moving to a production environment.
@@ -45,7 +45,7 @@ The first method to move to a multi-subnet availability group is to set up a new
 1. Create a new availability group in a multi-subnet configuration
 1. Backup your current database and restore them to the new environment
 
-Initially in the new multi-subnet environment, create the listener with a different name than the existing single subnet environment. A newly-named listener in a new availability group allows for side-by-side testing of the application (testing with both the multi-subnet and the current load balancer or DNN in place).
+Initially in the new multi-subnet environment, create the listener with a different name than the existing single subnet environment. A newly named listener in a new availability group allows for side-by-side testing of the application (testing with both the multi-subnet and the current load balancer or DNN in place).
 
 Once the multi-subnet environment is thoroughly validated, then you could cut over to the new infrastructure. Depending on the environment (production, test), use a maintenance window to complete the change. During the maintenance window, restore the database to the new primary replica, drop the availability group listener in both environments, and then recreate the listener in the multi-subnet environment using the same name as the previous listener, the one used in the application connection string. 
 
@@ -53,7 +53,7 @@ Setting up a new environment in a [multi-subnet configuration is now easier with
 
 ## Manually move an existing availability group
 
-The other option is to manually move from the single subnet environment to a multi-subnet environment. In order migrate using this method, you need the following prerequisites: 
+The other option is to manually move from the single subnet environment to a multi-subnet environment. In order to migrate using this method, you need the following prerequisites: 
 
 - An IP address for each machine in a new subnet
 - Connection strings already using `MultiSubnetFailover = true`

@@ -106,6 +106,7 @@ SELECT SERVERPROPERTY('InstanceDefaultBackupPath')
 - If there are multiple SQL Servers on the same host where the Azure extension for SQL Server is installed, you need to turn on automated backups separately for each instance separately.
 - The user databases need to be in full recovery model for the backups to be performed. Databases that aren't in full recovery model aren't automatically backed up.
 - If you change the `--retention-days` after the `--backups-policy` is already configured, any change will take effect going forward and isn't retroactively applied.
+- Currently, automated backups are only supported on the primary replica of an Always On Availability Group Configuration. 
 - Automated backups capability is only available for licenses with Software Assurance, SQL subscription, or pay-as-you-go. For details, see [Feature availability depending on license type](overview.md#feature-availability-depending-on-license-type).
 
 ## View current backup policy

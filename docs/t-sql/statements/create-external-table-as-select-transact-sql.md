@@ -684,7 +684,7 @@ A custom role can be created for this as well, requiring the **Read** and **Writ
 
 #### [PowerShell](#tab/powershell)
 
-In order to invoke the PowerShell commands on a computer, [Az package version 9.7.0](https://www.powershellgallery.com/packages/Az/9.7.0) must be installed locally. Or, consider using the [Azure Cloud Shell](/azure/cloud-shell/overview) to run Azure PowerShell at [shell.azure.com](https://shell.azure.com/).
+In order to invoke the PowerShell commands on a computer, [Az package version 9.7.0](https://www.powershellgallery.com/packages/Az/9.7.0) or newer must be installed locally. Or, consider using the [Azure Cloud Shell](/azure/cloud-shell/overview) to run Azure PowerShell at [shell.azure.com](https://shell.azure.com/).
 
 First, log in to Azure and set the proper context for your subscription:
 
@@ -694,7 +694,7 @@ $SubscriptionID = "<YourSubscriptionIDHERE>"
 Select-AzSubscription -SubscriptionName $SubscriptionID
 ```
 
-To manage the server configuration option "allowPolybaseExport", adjust the following PowerShell scripts to your subscription and SQL managed instance name, then run the commands. For more information, see [Set-AzSqlServerConfigurationOption](/powershell/module/az.sql/set-azsqlserverconfigurationoption?view=azps-9.7.0) and [Get-AzSqlServerConfigurationOption](/powershell/module/az.sql/get-azsqlserverconfigurationoption?view=azps-9.7.0).
+To manage the server configuration option "allowPolybaseExport", adjust the following PowerShell scripts to your subscription and SQL managed instance name, then run the commands. For more information, see [Set-AzSqlServerConfigurationOption](/powershell/module/az.sql/set-azsqlserverconfigurationoption) and [Get-AzSqlServerConfigurationOption](/powershell/module/az.sql/get-azsqlserverconfigurationoption).
 
 ```powershell
 # Enable ServerConfigurationOption with name "allowPolybaseExport"

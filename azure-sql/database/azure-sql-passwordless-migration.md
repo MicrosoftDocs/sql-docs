@@ -19,24 +19,28 @@ Application requests to Azure SQL Database must be authenticated using either a 
 
 ## Configure the Azure SQL Database
 
-Passwordless connections require the Azure SQL Database logical server to have Azure Active Directory authentication enabled and an admin account assigned.
+Passwordless connections use Azure Active Directory (Azure AD) authentication to connect to Azure SQL Database. Azure AD authentication is a mechanism for connecting to Azure services using identities defined in Azure AD. With Azure AD authentication, you can manage database user identities and other Microsoft services in a central location to simplify permission management.
+
+Read more about configuring Azure AD authentication for your Azure environment:
+
+- [Azure AD authentication overview](/azure/azure-sql/database/authentication-aad-overview?view=azuresql) and
+- [Configure Azure AD auth](/azure/azure-sql/database/authentication-aad-configure?view=azuresql) pages.
+
+For the purposes of this migration guide, ensure you have an Azure Active Directory admin assigned to your Azure SQL Database.
 
 1) Navigate to the the Azure Active Directory page of your logical server.
 
-1) Verify that an admin is set under the **Azure Active Directory admin** section. 
-    
+1) Select **Set admin**.
+
+1) In the **Azure Active Directory** flyout menu, search for the user you want to assign as admin.
+
+1) Select the user and choose **Select**.
+
     :::image type="content" source="media/passwordless-connections/migration-enable-active-directory-small.png" lightbox="media/passwordless-connections/migration-enable-active-directory.png" alt-text="A screenshot showing how to enable active directory admin.":::
-
-1) If an admin is not set:
-    * Select **Set admin**.
-    * In the **Azure Active Directory** flyout menu, search for the user you want to assign as admin.
-    * Select the user and choose **Select**.
-
-1) Optionally, if you want to disable SQL authentication and only support Azure Active Directory authentication, select the **Support only Azure Active Directory authentication for this server** option.
 
 ## Configure your local development environment
 
-Passwordless connections can be configured to work for both local and Azure hosted environments. In this section, you'll apply the necessary configurations for local development.
+Passwordless connections can be configured to work for both local and Azure hosted environments. In this section, you'll apply configurations to allow individual users to authenticate to Azure SQL Database for local development.
 
 ### Sign-in to Azure
 

@@ -4,7 +4,7 @@ description: This article teaches you to configure Azure AD authentication for y
 author: adbadram
 ms.author: adbadram
 ms.reviewer: mathoma
-ms.date: 02/10/2023
+ms.date: 04/30/2023
 ms.service: virtual-machines-sql
 ms.subservice: security
 ms.topic: how-to
@@ -12,34 +12,38 @@ ms.topic: how-to
 # Enable Azure AD authentication for SQL Server on Azure VMs
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
-This article teaches you to enable Azure Active Directory (Azure AD) authentication for your SQL Server on Azure Virtual Machine. 
+This article teaches you to enable Azure Active Directory (Azure AD) authentication for your SQL Server on Azure virtual machines (VMs). 
 
 ## Overview
 
-Starting with SQL Server 2022, you can connect to SQL Server on Azure VM using one of the following Azure AD identity authentication methods: 
+Starting with SQL Server 2022, you can connect to SQL Server on Azure VMs using one of the following Azure AD identity authentication methods: 
 
 - Azure AD Password
 - Azure AD Integrated
 - Azure AD Universal with Multi-Factor Authentication
 - Azure Active Directory access token 
 
+When you create an Azure AD login for SQL Server and when a user logs into SQL Server using the Azure AD login, SQL Server uses a managed identity to query Microsoft Graph. When you enable Azure AD authentication for your SQL Server on Azure VM, you need to provide a managed identity that SQL Server can use to communicate with Azure AD. This managed identity needs to have permission to query Microsoft Graph. 
 
-When enabling a [managed identity](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) for SQL Server on Azure Virtual Machines, the security boundary of the identity is the resource to which it's attached. For example, the security boundary for a virtual machine with managed identities for Azure resources enabled is the virtual machine. Any code running on that VM is able to call the managed identities endpoint and request tokens. The experience is similar experience when working with other resources that support managed identities. For more information, read the [Managed Identities FAQ](/azure/active-directory/managed-identities-azure-resources/managed-identities-faq).
+When enabling a [managed identity](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) for a resource in Azure, the security boundary of the identity is the resource to which it's attached. For example, the security boundary for a virtual machine with managed identities for Azure resources enabled is the virtual machine. Any code running on that VM is able to call the managed identities endpoint and request tokens. When enabling a managed identity for SQL Server on Azure VMs, the identity is attached to the virtual machine, so the security boundary is the virtual machine. The experience is similar when working with other resources that support managed identities. For more information, read the [Managed Identities FAQ](/azure/active-directory/managed-identities-azure-resources/managed-identities-faq).
+
 
 ## Prerequisites
 
-To enable Azure AD authentication to  your SQL Server, you need the following prerequisites: 
+To enable Azure AD authentication on your SQL Server, you need the following prerequisites: 
 
 - Use SQL Server 2022. 
 - Register SQL Server VM with the [SQL Server Iaas Agent extension](sql-agent-extension-manually-register-single-vm.md). 
 - Have an existing **system-assigned** or **user-assigned** managed identity in the same Azure AD tenant as your SQL Server VM. 
+- [Azure CLI 2.48.0 or later](/cli/azure/install-azure-cli) if you intend to use the Azure CLI to configure Azure AD authentication for your SQL Server VM. 
 
-## Grant permission to the identity
+## Grant permissions
 
-The identity you choose to authenticate to SQL Server has to have either the **Azure AD Directory Readers role** permission or the following three Microsoft Graph application permissions (app roles): `User.ReadALL`, `GroupMember.Read.All`, and `Application.Read.All`. 
+The managed identity you choose to facilitate authentication between SQL Server and Azure AD has to have either the **Azure AD Directory Readers role** permission or the following three Microsoft Graph application permissions (app roles): `User.ReadALL`, `GroupMember.Read.All`, and `Application.Read.All`. 
 
-The steps in this section teach you how to add your managed identity to the **Azure AD Directory Readers role**. You need to have Azure AD Global administrator privileges to make changes to the Directory Readers role assignments. If you do not have sufficient permission, work with your Azure AD administrator to follow the steps in the section and grant **Azure AD Directory Readers** role permissions to the managed identity you want to use to authenticate to your SQL Server on your Azure VM. 
+### Add managed identity to the role
 
+The steps in this section demonstrate how to add your managed identity to the **Azure AD Directory Readers role**. You need to have Azure AD Global administrator privileges to make changes to the Directory Readers role assignments. If you do not have sufficient permission, work with your Azure AD administrator to follow the steps in the section and grant **Azure AD Directory Readers** role permissions to the managed identity you want to use to help authenticate to your SQL Server on your Azure VM. 
 
 To grant your managed identity the **Azure AD Directory** role permission, follow these steps: 
 
@@ -76,8 +80,76 @@ To grant your managed identity the **Azure AD Directory** role permission, follo
 
    :::image type="content" source="media/configure-azure-ad-authentication-for-sql-vm/azure-ad-verify-directory-reader.png" alt-text="Screenshot of the Directory Readers page of the Azure portal showing your VM assignment added to the role.":::
 
+### Add app role permissions
 
-## Enable Azure AD authentication to your SQL VM
+You can use PowerShell to grant app roles to a managed identity. To do so, follow these steps: 
+
+1. Search for Microsoft Graph 
+
+   ```powershell
+   $AAD_SP = Get-AzureADServicePrincipal -Filter "DisplayName eq 'Microsoft Graph'"
+   ```
+
+1. Retrieve the managed identity: 
+
+   ```powershell
+   $MI = Get-AzureADServicePrincipal -Filter "DisplayName eq '<your managed identity display name>'"
+   ```
+
+1. Assign the `User.Read.All` role to the identity: 
+
+   ```powershell
+   $AAD_AppRole = $AAD_SP.AppRoles | Where-Object {$_.Value -eq "User.Read.All"}
+   New-AzureADServiceAppRoleAssignment -ObjectId $MSI.ObjectId  -PrincipalId $MSI.ObjectId  
+   -ResourceId $AAD_SP.ObjectId  -Id $AAD_AppRole.Id
+   ```
+
+1. Assign `GroupMember.Read.All` role to the identity: 
+
+    ```powershell
+    $AAD_AppRole = $AAD_SP.AppRoles | Where-Object {$_.Value -eq "GroupMember.Read.All"}  
+    New-AzureADServiceAppRoleAssignment -ObjectId $MSI.ObjectId  -PrincipalId $MSI.ObjectId  
+    -ResourceId $AAD_SP.ObjectId  -Id $AAD_AppRole.Id 
+    ```
+
+1. Assign `Application.Read.All` role to the identity: 
+
+   ```powershell
+    $AAD_AppRole = $AAD_SP.AppRoles | Where-Object {$_.Value -eq "Application.Read.All"}  
+   New-AzureADServiceAppRoleAssignment -ObjectId $MSI.ObjectId  -PrincipalId $MSI.ObjectId  
+   -ResourceId $AAD_SP.ObjectId  -Id $AAD_AppRole.Id 
+   ```
+
+You can validate permissions were assigned to the managed identity by doing the following:
+
+1. Go to **Azure Active Directory** in the [Azure portal](https://portal.azure.com). 
+1. Choose **Enterprise applications** and then select **All applications** under **Manage**. 
+1. Select the managed identity and then choose **Permissions** under **Security**. You should see the following permissions: `User.Read.All`, `GroupMember.Read.All`, `Application.Read.All`. 
+
+## Enable outbound communication
+
+For Azure AD authentication to work, you need the following:
+
+- Outbound communication from SQL Server to Azure AD and the Microsoft Graph endpoint. 
+- Outbound communication from the SQL client to Azure AD. 
+
+
+Default Azure VM configurations allow outbound communication to the Microsoft Graph endpoint, as well as Azure AD, but some customers choose to restrict outbound communication either by using an OS level firewall, or the Azure VNet network security group (NSG). 
+
+Firewalls on the SQL Server VM and any SQL client need to allow outbound traffic on ports 80 and 443. 
+
+The Azure VNet NSG rule for the VNet that hosts your SQL Server VM should have the following: 
+
+- A Service Tag of `AzureActiveDirectory`.
+- **Destination port ranges** of: 80, 443.
+- Action set to **Allow**. 
+- A high priority (which is a low number). 
+
+## Enable Azure AD authentication
+
+You can enable Azure AD authentication to your SQL Server VM by using the Azure portal, or the Azure CLI. 
+
+### [Portal](#tab/azure-portal)
 
 To enable Azure AD authentication to your SQL Server VM, follow these steps: 
 
@@ -88,20 +160,88 @@ To enable Azure AD authentication to your SQL Server VM, follow these steps:
 
    :::image type="content" source="media/configure-azure-ad-authentication-for-sql-vm/enable-azure-ad-in-portal.png" alt-text="Screenshot of the security configuration page for SQL VM in the Azure portal, with Azure AD authentication selected.":::
 
-> [!NOTE]
-> The error `The selected managed identity does not have enough permissions for Azure AD Authentication` indicates that permissions have not been properly assigned to the identity you've selected. Check the [Grant permissions](#grant-permission-to-the-identity) section to assign proper permissions. 
+After Azure AD has been enabled, you can follow the same steps to change which managed identity can authenticate to your SQL Server VM. 
 
+
+> [!NOTE]
+> The error `The selected managed identity does not have enough permissions for Azure AD Authentication` indicates that permissions have not been properly assigned to the identity you've selected. Check the [Grant permissions](#grant-permissions) section to assign proper permissions. 
+
+### [Azure CLI](#tab/azure-cli)
+
+
+Use the Azure CLI [az sql vm enable-azure-ad-auth](/cli/azure/sql/vm#az-sql-vm-enable-azure-ad-auth) command to enable Azure AD authentication to your SQL Server VM, and then use the [az sql vm validate-azure-ad-auth](/cli/azure/sql/vm#az-sql-vm-validate-azure-ad-auth) command to validate Azure AD authentication. You can also use the [az sql vm show --expand *](/cli/azure/sql/vm#az-sql-vm-show) command to show the status of Azure AD authentication. 
+
+Assuming your SQL Server VM name is `sqlvm` and your resource group is `myResourceGroup`, the following examples enable Azure AD authentication: 
+
+- Enable Azure AD authentication with a system-assigned managed identity using client-side validation: 
+
+   ```azurecli
+   az sql vm enable-azure-ad-auth -n sqlvm -g myresourcegroup
+   ```
+
+- Enable Azure AD authenintcation with a system assigned managed identity, but skip client side validation and rely on the server-side validation that always happens: 
+
+   ```azurecli
+   az sql vm enable-azure-ad-auth -n sqlvm -g myresourcegroup 
+   --skip-client-validation
+   ```
+
+- Enable Azure AD authentication with a user-assigned managed identity and client-side validation: 
+
+   ```azurecli
+   az sql vm enable-azure-ad-auth -n sqlvm -g myresourcegroup 
+   --msi-client-id 11111111-2222-3333-4444-555555555555
+   ```
+
+- Enable Azure AD authentication with a user-assigned managed identity but skip client-side validation and rely on the server-side validation that always happen
+
+   ```azurecli
+   az sql vm enable-azure-ad-auth -n sqlvm -g myresourcegroup 
+   --msi-client-id 11111111-2222-3333-4444-555555555555 --skip-client-validation 
+   ````
+
+You can validate permissions have been correctly assigned to the specified managed identity by running the following at the client:  
+
+- Validate Azure AD authentication with a system-assigned managed identity at the client: 
+
+   ```azurecli
+   az sql vm validate-azure-ad-auth -n sqlvm -g myresourcegroup
+   ```
+
+- Validate Azure AD authentication with a user-assigned managed identity at the client: 
+
+   ```azurecli
+   az sql vm validate-azure-ad-auth -n sqlvm -g myresourcegroup 
+   --msi-client-id 11111111-2222-3333-4444-555555555555
+   ```
+
+You can check if Azure AD authentication has been enabled by using the [az sql vm show --expand *](/cli/azure/sql/vm#az-sql-vm-show) command.
+
+Azure AD has not been enabled if `az sql vm show --expand *` shows `NULL`. 
+
+For example, when you run: 
+
+```azurecli
+az sql vm show -n sqlvm -g myresourcegroup --expand * 
+```
+
+The following output indicates Azure AD authentication has been enabled with a user-assigned managed identity: 
+
+```
+    "azureAdAuthenticationSettings": { 
+      "clientId": "11111111-2222-3333-4444-555555555555" },
+```
+
+---
 
 ## Limitations
 
 Consider the following limitations: 
 
+- Azure AD authentication is only supported with Windows SQL Server 2022 VMs registered with the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md) and deployed to the public cloud. 
 - The identity you choose to authenticate to SQL Server has to have either the **Azure AD Directory Readers** role permissions or the following three Microsoft Graph application permissions (app roles): `User.ReadALL`, `GroupMember.Read.All`, and `Application.Read.All`. 
-- Once Azure AD authentication is enabled, there is no way to disable it by using the Azure portal. 
-- Currently, enabling Azure AD authentication is only possible through the Azure portal. 
-- Currently, Azure AD authentication is only available to SQL Server VMs deployed to the public cloud. 
-- Azure AD authentication is only supported for Azure Windows VMs. 
-- Currently, authenticating to SQL VM through Azure AD authentication using [FIDO2 method](/azure/active-directory/authentication/howto-authentication-passwordless-faqs) is not supported. 
+- Once Azure AD authentication is enabled, there is no way to disable it. 
+- Currently, authenticating to SQL VM through Azure AD authentication using the [FIDO2 method](/azure/active-directory/authentication/howto-authentication-passwordless-faqs) is not supported. 
 
 ## Next steps
 

@@ -6,6 +6,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "/docs/relational-databases/errors-events/mssqlserver-233-database-engine-error.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/2014/2014-toc/case-study-building-an-enterprise-ecosystem.md",
       "redirect_url": "/previous-versions/sql/2014/2014-toc/case-study-building-an-enterprise-ecosystem",
       "redirect_document_id": false
@@ -35,6 +40,7 @@
       "redirect_url": "/previous-versions/sql/2014/2014-toc/sql-server-transaction-locking-and-row-versioning-guide",
       "redirect_document_id": false
     },
+    
     {
       "source_path": "docs/2014/2014-toc/sql-server-transaction-log-architecture-and-management.md",
       "redirect_url": "/previous-versions/sql/2014/2014-toc/sql-server-transaction-log-architecture-and-management",

@@ -43,8 +43,7 @@ WHERE status = N'VISIBLE ONLINE';
 GO
 ```
 
-> [!NOTE]
-> For databases using Gen4 hardware, the number of visible online schedulers in `sys.dm_os_schedulers` may be double the number of vCores specified at database creation and shown in Azure portal.
+- For databases using retired Gen4 hardware, the number of visible online schedulers in `sys.dm_os_schedulers` may be double the number of vCores specified at database creation and shown in Azure portal.
 
 ## Identify the causes of high CPU
 You can measure and analyze CPU utilization using the Azure portal, Query Store interactive tools in SSMS, and Transact-SQL queries in SSMS and Azure Data Studio.

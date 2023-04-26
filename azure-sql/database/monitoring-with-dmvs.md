@@ -12,10 +12,10 @@ ms.topic: how-to
 ms.custom:
   - azure-sql-split
   - sqldbrb=2
-monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
+monikerRange: "= azuresql || = azuresql-db "
 ---
 # Monitoring Microsoft Azure SQL Database performance using dynamic management views
-[!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
+[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 > [!div class="op_single_selector"]
 > * [Azure SQL Database](monitoring-with-dmvs.md)
@@ -23,7 +23,7 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 
 Microsoft Azure SQL Database enables a subset of dynamic management views to diagnose performance problems, which might be caused by blocked or long-running queries, resource bottlenecks, poor query plans, and so on.  This article provides information on how to detect common performance problems by using dynamic management views.
 
-This article is about Azure SQL Database, see also [Monitoring Microsoft Azure SQL Managed Instance performance using dynamic management views](../managed-instance/monitoring-with-dmvs.md).
+This article is about Azure SQL Database. For Azure SQL Managed Instance, review [Monitoring performance using dynamic management views](../managed-instance/monitoring-with-dmvs.md).
 
 ## Permissions
 

@@ -1,8 +1,8 @@
 ---
 title: Security limitations for SQL Server on Linux
 description: Learn about SQL Server on Linux restrictions, including how using keys stored in Azure Key Vault and extensible Key Management are not supported.
-author: VanMSFT
-ms.author: vanto
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 09/12/2019
 ms.service: sql
 ms.subservice: linux

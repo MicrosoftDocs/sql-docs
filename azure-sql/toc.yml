@@ -441,9 +441,25 @@
           - name: Configure Azure Attestation
             href: database/always-encrypted-enclaves-configure-attestation.md
         - name: Azure SQL Auditing
-          href: database/auditing-overview.md
-        - name: Audit log format
-          href: database/audit-log-format.md
+          items:
+            - name: Auditing overview
+              href: database/auditing-overview.md
+            - name: Auditing setup
+              href: database/auditing-setup.md
+            - name: Analyze audit logs and reports
+              href: database/auditing-analyze-audit-logs.md
+            - name: Auditing best practices
+              href: database/auditing-best-practices.md
+            - name: Auditing managed identity
+              href: database/auditing-managed-identity.md
+            - name: Auditing Microsoft support operations
+              href: database/auditing-microsoft-support-operations.md
+            - name: Auditing policy at the server and database level
+              href: database/auditing-server-level-database-level.md
+            - name: Audit log format
+              href: database/audit-log-format.md
+            - name: Manage Auditing using APIs
+              href: database/auditing-manage-using-api.md
         - name: DNS aliases
           href: database/dns-alias-overview.md
         - name: Ledger
@@ -1614,6 +1630,8 @@
             - name: Azure portal
               displayName: Always On, alwayson, availability group
               href: virtual-machines/windows/availability-group-azure-portal-configure.md
+            - name: Migrate single subnet to multi-subnet
+              href: virtual-machines/windows/availability-group-manually-migrate-multi-subnet.md
             - name: Manually
               items: 
               - name: Prerequisites

@@ -5,7 +5,7 @@ description: Learn about data virtualization capabilities of Azure SQL Managed I
 author: MladjoA
 ms.author: mlandzic
 ms.reviewer: mathoma, wiassaf
-ms.date: 02/22/2023
+ms.date: 03/31/2023
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -24,7 +24,9 @@ Data virtualization provides two ways of querying files intended for different s
 - [OPENROWSET syntax](#query-data-sources-using-openrowset) – optimized for ad hoc querying of files. Typically used to quickly explore the content and the structure of a new set of files.
 - [CREATE EXTERNAL TABLE syntax](#external-tables) – optimized for repetitive querying of files using identical syntax as if data were stored locally in the database. External tables require several preparation steps compared to the OPENROWSET syntax, but allow for more control over data access. External tables are typically used for analytical workloads and reporting.
 
-In either case, an [external data source](#external-data-source) must be created using the [CREATE EXTERNAL DATA SOURCE](/sql/t-sql/statements/create-external-data-source-transact-sql?view=azuresqldb-mi-current&preserve-view=true) T-SQL syntax, as demonstrated below.
+In either case, an [external data source](#external-data-source) must be created using the [CREATE EXTERNAL DATA SOURCE](/sql/t-sql/statements/create-external-data-source-transact-sql?view=azuresqldb-mi-current&preserve-view=true) T-SQL syntax, as demonstrated in this article.
+
+Also available is [CREATE EXTERNAL TABLE AS SELECT syntax](/sql/t-sql/statements/create-external-table-as-select-transact-sql?view=azuresqldb-mi-current&preserve-view=true) for Azure SQL Managed Instance, for creating an external table on top of Parquet or CSV files in Azure Blob storage or Azure Data Lake Storage (ADLS) Gen2, or, exporting the results of a T-SQL SELECT statement into the created external table.
 
 ### File formats
 
@@ -68,17 +70,17 @@ FROM OPENROWSET(
 
 You can continue data set exploration by appending WHERE, GROUP BY and other clauses based on the result set of the first query.
 
-If the first query fails on your managed instance, that instance likely has restricted access to Azure storage accounts and you should talk to your networking expert to enable access before you can proceed with querying.
+If the first query fails on your managed instance, that instance likely has restricted access to Azure storage accounts, and you should talk to your networking expert to enable access before you can proceed with querying.
 
-Once you get familiar with querying public data sets, consider switching to non-public data sets that require providing credentials, granting access rights and configuring firewall rules. In many real-world scenarios you will operate primarily with private data sets.
+Once you get familiar with querying public data sets, consider switching to nonpublic data sets that require providing credentials, granting access rights and configuring firewall rules. In many real-world scenarios you will operate primarily with private data sets.
 
-## Access to non-public storage accounts
+## Access to nonpublic storage accounts
 
-A user that is logged into a managed instance must be authorized to access and query files stored in a non-public storage account. Authorization steps depend on how the managed instance authenticates to the storage. The type of authentication and any related parameters are not provided directly with each query. They are encapsulated in the database scoped credential object stored in the user database. The credential is used by the database to access the storage account anytime the query executes.  Azure SQL Managed Instance supports the following authentication types:
+A user that is logged into a managed instance must be authorized to access and query files stored in a nonpublic storage account. Authorization steps depend on how the managed instance authenticates to the storage. The type of authentication and any related parameters are not provided directly with each query. They are encapsulated in the database scoped credential object stored in the user database. The credential is used by the database to access the storage account anytime the query executes.  Azure SQL Managed Instance supports the following authentication types:
 
 ### [Managed identity](#tab/managed-identity)
 
-A **managed identity** is a feature of Azure Active Directory (Azure AD) that provides instances of Azure services - like Azure SQL Managed Instance - with an automatically managed identity in Azure AD, the system assigned managed identity. This identity can be used to authorize requests for data access in non-public storage accounts. Services like Azure SQL Managed Instance have a system assigned managed identity, and can also have one or more user assigned managed identities. You can use either system assigned managed identities or user assigned managed identities for data virtualization with Azure SQL Managed Instance.
+A **managed identity** is a feature of Azure Active Directory (Azure AD) that provides instances of Azure services - like Azure SQL Managed Instance - with an automatically managed identity in Azure AD, the system assigned managed identity. This identity can be used to authorize requests for data access in nonpublic storage accounts. Services like Azure SQL Managed Instance have a system assigned managed identity, and can also have one or more user assigned managed identities. You can use either system assigned managed identities or user assigned managed identities for data virtualization with Azure SQL Managed Instance.
 
 Before accessing the data, the Azure storage administrator must grant permissions to managed identity to access the data. Granting permissions to the system assigned managed identity of the managed instance is done the same way as granting permission to any other Azure AD user. For example:
 
@@ -98,7 +100,7 @@ WITH IDENTITY = 'Managed Identity'
 
 ### [Shared access signature](#tab/shared-access-signature)
 
-**Shared access signature (SAS)** provides delegated access to files in a storage account. SAS gives you granular control over the type of access you grant, including validity interval, granted permissions, and acceptable IP address range. Be aware that once the SAS token is created, it cannot be revoked or deleted and it allows access until its validity period expires.
+**Shared access signature (SAS)** provides delegated access to files in a storage account. SAS gives you granular control over the type of access you grant, including validity interval, granted permissions, and acceptable IP address range. Once the SAS token is created, it cannot be revoked or deleted and it allows access until its validity period expires.
 
 You can get an SAS token multiple ways:  
     - Navigate to the **Azure portal -> <Your_Storage_Account> -> Shared access signature -> Configure permissions -> Generate SAS and connection string**. For more information, see [Generate a shared access signature](/azure/storage/blobs/blob-containers-portal#generate-a-shared-access-signature).
@@ -131,7 +133,7 @@ WITH (
 )
 ```
 
-When accessing non-public storage accounts, along with the location, you also need to reference a database scoped credential with encapsulated authentication parameters:
+When accessing nonpublic storage accounts, along with the location, you also need to reference a database scoped credential with encapsulated authentication parameters:
 
 ```sql
 --Create external data source pointing to the file path, and referencing database-scoped credential:
@@ -190,7 +192,7 @@ Automatic schema inference helps you quickly write queries and explore data when
 
 While convenient, the cost is that inferred data types may be larger than the actual data types. This can lead to poor query performance since there may not be enough information in the source files to ensure the appropriate data type is used. For example, parquet files don't contain metadata about maximum character column length, so the instance infers it as varchar(8000).
 
-Use the [sp_describe_first_results_set](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql) stored procedure to check the resulting data types of your query, such as the following example:
+Use the [sp_describe_first_results_set](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql?view=azuresqldb-mi-current&preserve-view=true) stored procedure to check the resulting data types of your query, such as the following example:
 
 ```sql
 EXEC sp_describe_first_result_set N'
@@ -456,7 +458,7 @@ The `WITH` options are mandatory, and for the sample size, the allowed options a
 
 ## Troubleshoot
 
-Issues with query execution are typically caused by managed instance not being able to access file location. The related error messages may report insufficient access rights, non-existing location or file path, file being used by another process, or that directory cannot be listed. In most cases this indicates that access to files is blocked by network traffic control policies or due to lack of access rights. This is what should be checked:
+Issues with query execution are typically caused by managed instance not being able to access file location. The related error messages may report insufficient access rights, nonexisting location or file path, file being used by another process, or that directory cannot be listed. In most cases this indicates that access to files is blocked by network traffic control policies or due to lack of access rights. This is what should be checked:
 
 - Wrong or mistyped location path.
 - SAS key validity: it could be expired, containing a typo, starting with a question mark.
@@ -466,18 +468,23 @@ Issues with query execution are typically caused by managed instance not being a
 - Managed Identity access rights: make sure the Azure AD service principal representing managed identity of the instance has access rights granted on the storage account.
 - Compatibility level of the database must be 130 or higher for data virtualization queries to work.
 
+## CREATE EXTERNAL TABLE AS SELECT (CETAS)
+
+CREATE EXTERNAL TABLE AS SELECT (CETAS) allows you to export data from your SQL managed instance into an external storage account. You can use CETAS to create an external table on top of Parquet or CSV files Azure Blob storage or Azure Data Lake Storage (ADLS) Gen2. CETAS can also export, in parallel, the results of a T-SQL SELECT statement into the created external table. There is potential for data exfiltration risk with these capabilities, so CETAS is disabled by default for Azure SQL Managed Instance. To enable, see [CREATE EXTERNAL TABLE AS SELECT (CETAS)](/sql/t-sql/statements/create-external-table-as-select-transact-sql?view=azuresqldb-mi-current&preserve-view=true#enable-cetas-via-azure-powershell).
+
 ## Limitations
 
-- [Row level security](/sql/relational-databases/security/row-level-security) feature is not supported with external tables.
-- [Dynamic data masking](/sql/relational-databases/security/dynamic-data-masking) rule can't be defined for a column in an external table.
+- [Row level security](/sql/relational-databases/security/row-level-security?view=azuresqldb-mi-current&preserve-view=true) feature is not supported with external tables.
+- [Dynamic data masking](/sql/relational-databases/security/dynamic-data-masking?view=azuresqldb-mi-current&preserve-view=true) rule can't be defined for a column in an external table.
 
 ## Known issues
 
-- When [parameterization for Always Encrypted](/sql/relational-databases/security/encryption/always-encrypted-query-columns-ssms#param) is enabled in SQL Server Management Studio (SSMS), data virtualization queries fail with `Incorrect syntax near 'PUSHDOWN'` error message.
+- When [parameterization for Always Encrypted](/sql/relational-databases/security/encryption/always-encrypted-query-columns-ssms?view=azuresqldb-mi-current&preserve-view=true#param) is enabled in SQL Server Management Studio (SSMS), data virtualization queries fail with `Incorrect syntax near 'PUSHDOWN'` error message.
 
 ## Next steps
 
-- To learn more about syntax options available with OPENROWSET, see [OPENROWSET T-SQL](/sql/t-sql/functions/openrowset-transact-sql).
+- To learn more about syntax options available with OPENROWSET, see [OPENROWSET T-SQL](/sql/t-sql/functions/openrowset-transact-sql?view=azuresqldb-mi-current&preserve-view=true).
 - For more information about creating external table in SQL Managed Instance, see [CREATE EXTERNAL TABLE](/sql/t-sql/statements/create-external-table-transact-sql?view=azuresqldb-mi-current&preserve-view=true).
 - To learn more about creating external file format, see [CREATE EXTERNAL FILE FORMAT](/sql/t-sql/statements/create-external-file-format-transact-sql?view=azuresqldb-mi-current&preserve-view=true).
-- For more information about external data sources and options, see [CREATE EXTERNAL DATA SOURCE](/sql/t-sql/statements/create-external-data-source-transact-sql?view=azuresqldb-mi-current&preserve-view=true)
+- For more information about external data sources and options, see [CREATE EXTERNAL DATA SOURCE](/sql/t-sql/statements/create-external-data-source-transact-sql?view=azuresqldb-mi-current&preserve-view=true).
+- For more about CETAS support for SQL manages instances, see [CREATE EXTERNAL TABLE AS SELECT](/sql/t-sql/statements/create-external-table-as-select-transact-sql?view=azuresqldb-mi-current&preserve-view=true).

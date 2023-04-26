@@ -52,6 +52,9 @@ SYSTEM_USER
  SYSTEM_USER returns the name of the currently executing context. If the EXECUTE AS statement has been used to switch context, SYSTEM_USER returns the name of the impersonated context.  
 
  You cannot EXECUTE AS a SYSTEM_USER.
+ 
+ Azure SQL Database: 
+ The SSYSTEM_USER statement doesn't support execution using an impersonated security context through EXECUTE AS.
 
 ## Examples  
   

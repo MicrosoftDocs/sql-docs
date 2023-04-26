@@ -3,7 +3,7 @@ title: "What are Extended Security Updates?"
 description: Learn how to use Azure Arc to get extended security updates for your end-of-support and end-of-life SQL Server products, such as SQL Server 2008, SQL Server 2008 R2, and SQL Server 2012.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 04/05/2023
+ms.date: 04/26/2023
 ms.service: sql
 ms.subservice: install
 ms.topic: conceptual
@@ -100,11 +100,14 @@ If you migrate your workloads to an Azure service (see the [Overview](#overview)
 
 Azure services running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will receive ESUs automatically through existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] update channels or Windows Update. You don't need to install the SQL Server IaaS Agent extension to download ESU patches on an Azure SQL Virtual Machine.
 
+> [!NOTE]  
+> For workloads such as Azure VMware Solutions, which operate on Azure bare-metal infrastructure, or for Azure Stack, you must follow the same process as on-premises or hosted environments to [register eligible instances](#register-instances-for-esus).
+
 ### On-premises or hosted environments
 
 If you have Software Assurance, you can purchase an Extended Security Update (ESU) subscription for up to three years after the End of Support date, under an Enterprise Agreement (EA), Enterprise Subscription Agreement (EAS), a Server & Cloud Enrollment (SCE), or an Enrollment for Education Solutions (EES). You can purchase ESUs only for the servers you need to cover. ESUs can be purchased directly from [!INCLUDE[msCoName](../../includes/msconame-md.md)] or a [!INCLUDE[msCoName](../../includes/msconame-md.md)] licensing partner.
 
-Customers covered by ESU agreements must follow these steps to download and deploy an ESU patch. The process is the same for Azure Stack and Azure Virtual Machines that aren't configured to receive automatic updates:
+Customers covered by ESU agreements must follow these steps to download and deploy an ESU patch:
 
 - [Register eligible instances](#register-instances-for-esus).
 - Once registered, whenever ESU patches are released, a download link will be available in the Azure portal to download the package.
@@ -267,7 +270,7 @@ name,version,edition,cores,hostType
 Server1-SQL2012,SQL Server 2012,Enterprise,12,Other Physical Server
 Server2-SQL2012,SQL Server 2012,Enterprise,24,Other Physical Server
 Server3-SQL2012,SQL Server 2012,Enterprise,12,Azure Virtual Machine
-Server4-SQL2012,SQL Server 2012,Standard,8,Azure VMWare Solutions
+Server4-SQL2012,SQL Server 2012,Standard,8,Azure VMware Solution
 ```
 
 ## Download ESUs

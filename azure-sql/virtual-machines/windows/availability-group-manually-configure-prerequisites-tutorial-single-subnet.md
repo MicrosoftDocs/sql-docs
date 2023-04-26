@@ -4,7 +4,7 @@ description: "This tutorial shows how to configure the prerequisites for creatin
 author: tarynpratt
 ms.author: tarynpratt
 ms.reviewer: mathoma
-ms.date: 11/18/2022
+ms.date: 04/18/2023
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: how-to
@@ -16,8 +16,7 @@ tags: azure-service-management
 
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
-> [!TIP]
-> There are many [methods to deploy an availability group](availability-group-overview.md#deployment-options). Simplify your deployment and eliminate the need for an Azure load balancer or distributed network name (DNN) for your Always On availability group by creating your SQL Server virtual machines (VMs) in [multiple subnets](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md) within the same Azure virtual network.
+[!INCLUDE[tip-for-multi-subnet-ag](../../includes/virtual-machines-ag-listener-multi-subnet.md)]
 
 This tutorial shows how to complete the prerequisites for creating a [SQL Server Always On availability group on Azure virtual machines](availability-group-manually-configure-tutorial-single-subnet.md) within a single subnet. When you've completed the prerequisites, you'll have a domain controller, two SQL Server VMs, and a witness server in a single resource group.
 
@@ -265,9 +264,9 @@ The preferred DNS server address [should not be updated](/azure/virtual-network/
 
 ### Join the domain
 
-Next, join the **corp.contoso.com** domain. To do so, follow these steps: 
+Next, join the **corp.contoso.com** domain. To do so, follow these steps:
 
-1. Remotely connect to the virtual machine using the **BUILTIN\DomainAdmin** account.
+1. Remotely connect to the virtual machine using the **BUILTIN\DomainAdmin** account. This account is the same one used when [creating the domain controller virtual machines](availability-group-manually-configure-prerequisites-tutorial-single-subnet.md?#create-virtual-machines-for-the-domain-controllers).
 1. Open **Server Manager**, and select **Local Server**.
 1. Select **WORKGROUP**.
 1. In the **Computer Name** section, select **Change**.
@@ -311,12 +310,12 @@ In the Azure portal, under **Virtual network**, change the DNS server to include
 
 ### <a name="DomainAccounts"></a> Configure the domain accounts
 
-Next, configure the following Active Directory accounts:
+Next, configure two accounts in total in Active Directory, one installation account and then a service account for both SQL Server VMs. For example, use the values in the following table for the accounts:
 
-| |Installation account |sqlserver-0: <br/>SQL Server and SQL Agent Service account |sqlserver-1:<br/>SQL Server and SQL Agent Service account
-| --- | --- | --- | ---
-|**First Name** |Install |SQLSvc1 | SQLSvc2
-|**User SamAccountName** |Install |SQLSvc1 | SQLSvc2
+|Account  | VM  |Full domain name  |Description   |
+|---------|---------|---------|---------|
+|Install    |Both| Corp\Install        |Log into either VM with this account to configure the cluster and availability group. |
+|SQLSvc     |Both (sqlserver-0 and sqlserver-1) |Corp\SQLSvc | Use this account for the SQL Server service and SQL Agent Service account on the both SQL Server VMs. |
 
 Use the following steps to create each account:
 

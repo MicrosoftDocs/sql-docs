@@ -1,8 +1,8 @@
 ---
 title: "Editions and supported features of SQL Server 2019 - Linux"
 description: "Editions and supported features of SQL Server 2019 on Linux"
-author: VanMSFT
-ms.author: vanto
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: vanto, randolphwest
 ms.date: 12/01/2022
 ms.service: sql

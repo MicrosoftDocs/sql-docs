@@ -69,7 +69,6 @@ Offers restricted to dev/test usage only are not eligible (like Pay-As-You-Go De
 
 Choosing a maintenance window other than the default is available on all SLOs **except for**:
 * Instance pools
-* Legacy Gen4 vCore
 * Basic, S0 and S1 
 * DC, Fsv2, M-series
 * Hyperscale service tier premium-series hardware (preview) 

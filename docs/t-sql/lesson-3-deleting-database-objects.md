@@ -4,7 +4,7 @@ description: "This short lesson removes the objects that you created in Lesson 1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.date: 12/02/2022
+ms.date: 04/19/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -12,10 +12,12 @@ helpviewer_keywords:
   - "deleting database objects"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-
 # Lesson 3: Delete database objects
 
 [!INCLUDE[sql-asdb-asdbmi-pdw-md](../includes/applies-to-version/sql-asdb-asdbmi-pdw.md)]
+
+> [!NOTE]  
+> The [Get Started Querying with Transact-SQL](/training/paths/get-started-querying-with-transact-sql/) learning path provides more in-depth content, along with practical examples.
 
 This short lesson removes the objects that you created in Lesson 1 and Lesson 2, and then drops the database.
 

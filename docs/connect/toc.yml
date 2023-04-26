@@ -73,6 +73,8 @@
         href: ../connect/ado-net/connection-strings-and-configuration-files.md
       - name: Connection String Syntax
         href: ../connect/ado-net/connection-string-syntax.md
+      - name: Encryption and certificate validation
+        href: ../connect/ado-net/encryption-and-certificate-validation.md
       - name: Protecting Connection Information
         href: ../connect/ado-net/protecting-connection-information.md
     - name: Connection Pooling

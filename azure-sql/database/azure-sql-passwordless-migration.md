@@ -17,7 +17,26 @@ ms.devlang: csharp
 
 Application requests to Azure SQL Database must be authenticated using either a username and password or passwordless connections. However, you should prioritize passwordless connections in your applications when possible. Traditional authentication methods that use passwords or secret keys create security risks and complications. Visit the [passwordless connections for Azure services](/azure/developer/intro/passwordless-overview) hub to learn more about the advantages of moving to passwordless connections. The following tutorial explains how to migrate an existing application to connect to Azure SQL Database to use passwordless connections instead of a username and password solution.
 
+## Configure the Azure SQL Database
+
+Passwordless connections require the Azure SQL Database logical server to have Azure Active Directory authentication enabled and an admin account assigned.
+
+1) Navigate to the the Azure Active Directory page of your logical server.
+
+1) Verify that an admin is set under the **Azure Active Directory admin** section. 
+    
+    :::image type="content" source="media/passwordless-connections/migration-enable-active-directory-small.png" lightbox="media/passwordless-connections/migration-enable-active-directory.png" alt-text="A screenshot showing how to enable active directory admin.":::
+
+1) If an admin is not set:
+    * Select **Set admin**.
+    * In the **Azure Active Directory** flyout menu, search for the user you want to assign as admin.
+    * Select the user and choose **Select**.
+
+1) Optionally, if you want to disable SQL authentication and only support Azure Active Directory authentication, select the **Support only Azure Active Directory authentication for this server** option.
+
 ## Configure your local development environment
+
+Passwordless connections can be configured to work for both local and Azure hosted environments. In this section, you'll apply the necessary configurations for local development.
 
 ### Sign-in to Azure
 
@@ -45,7 +64,7 @@ Create a user in Azure SQL Database that corresponds to the Azure account you us
 
 ### Update the local connection configuration
 
-Existing application code that connects to Azure SQL Database using the `Microsoft.Data.SqlClient` library or Entity Framework Core using a connection string will continue to work with passwordless connections. However, you must update referenced the connection string to use the passwordless connection string format. For example, the following code works with both SQL authentication as well as passwordless connections:
+Existing application code that connects to Azure SQL Database using the `Microsoft.Data.SqlClient` library or Entity Framework Core using a connection string will continue to work with passwordless connections. For example, the following code works with both SQL authentication as well as passwordless connections:
 
 ```csharp
 string connectionString = app.Configuration.GetConnectionString("AZURE_SQL_CONNECTIONSTRING")!;
@@ -57,7 +76,7 @@ var command = new SqlCommand("SELECT * FROM Persons", conn);
 using SqlDataReader reader = command.ExecuteReader();
 ```
 
-To update your referenced connection string to support passwordless connections:
+ However, you must update the referenced connection string to use the passwordless connection string format:
 
 1. Locate your connection string. For local development with .NET applications this is usually stored in one of the following locations:
     * The `appsettings.json` configuration file for your project.  
@@ -72,11 +91,11 @@ To update your referenced connection string to support passwordless connections:
 
 ### Test the app
 
-Launch your application locally and verify that your app and the passwordless connection to Azure SQL Database is working as expected. Keep in mind that it may take several minutes for Azure RBAC changes to propagate through your Azure environment. Your application is now configured to run locally without developers having to manage secrets in the application itself.
+Run your app locally and verify that the connections to Azure SQL Database are working as expected. Keep in mind that it may take several minutes for changes to Azure users and roles to propagate through your Azure environment. Your application is now configured to run locally without developers having to manage secrets in the application itself.
 
 ## Configure the Azure hosting environment
 
-Once your application is configured to use passwordless connections and runs locally, the same code can authenticate to Azure services after it's deployed to Azure. The sections that follow explain how to configure a deployed application to connect to Azure Blob Storage using a [managed identity](/azure/active-directory/managed-identities-azure-resources/overview). Learn more about managed identities on the [passwordless overview](/azure/developer/intro/passwordless-overview?view=azuresql) and the [managed identity best practices](/azure/active-directory/managed-identities-azure-resources/managed-identity-best-practice-recommendations) pages.
+Once your app is configured to use passwordless connections locally, the same code can authenticate to Azure services after it's deployed to Azure. The sections that follow explain how to configure a deployed application to connect to Azure SQL Database using a [managed identity](/azure/active-directory/managed-identities-azure-resources/overview). Managed identities provide an automatically managed identity in Azure Active Directory (Azure AD) for applications to use when connecting to resources that support Azure AD authentication. Learn more about managed identities on the [passwordless overview](/azure/developer/intro/passwordless-overview?view=azuresql) and the [managed identity best practices](/azure/active-directory/managed-identities-azure-resources/managed-identity-best-practice-recommendations) pages.
 
 ### Create the managed identity
 
@@ -134,7 +153,7 @@ Complete the following steps in the Azure portal to associate an identity with y
 
 1) Select **Add** to associate the identity with your app.
 
-:::image type="content" source="media/passwordless-connections/create-managed-identity-portal-small.png" lightbox="media/passwordless-connections/create-managed-identity-portal-small.png" alt-text="A screenshot showing how to assign a managed identity.":::
+    :::image type="content" source="media/passwordless-connections/assign-managed-identity-small.png" lightbox="media/passwordless-connections/assign-managed-identity.png" alt-text="A screenshot showing how to assign a managed identity.":::
 
 # [Azure CLI](#tab/azure-cli-assign)
 
@@ -157,10 +176,10 @@ Create a SQL database user that maps back to the user-assigned managed identity.
 3) On the query editor view, run the following T-SQL commands:
 
     ```sql
-    CREATE USER <app-service-name> FROM EXTERNAL PROVIDER;
-    ALTER ROLE db_datareader ADD MEMBER <app-service-name>;
-    ALTER ROLE db_datawriter ADD MEMBER <app-service-name>;
-    ALTER ROLE db_ddladmin ADD MEMBER <app-service-name>;
+    CREATE USER <user-assigned-identity-name> FROM EXTERNAL PROVIDER;
+    ALTER ROLE db_datareader ADD MEMBER <user-assigned-identity-name>;
+    ALTER ROLE db_datawriter ADD MEMBER <user-assigned-identity-name>;
+    ALTER ROLE db_ddladmin ADD MEMBER <user-assigned-identity-name>;
     GO
     ```
 
@@ -169,7 +188,7 @@ Create a SQL database user that maps back to the user-assigned managed identity.
 ---
 
 > [!IMPORTANT]
-> Although this solution provides a simple approach for getting started, it is not a best practice for enterprise production environments. In those scenarios the app should not perform all operations using a single, elevated identity. You should try to implement the principle of least privilege by configuring multiple identities with specific permissions for specific tasks.
+> Use caution when assigning database user roles in enterprise production environments. In those scenarios the app should not perform all operations using a single, elevated identity. Try to implement the principle of least privilege by configuring multiple identities with specific permissions for specific tasks.
 >
 > You can read more about configuring database roles and security on the following resources:
 >
@@ -179,19 +198,21 @@ Create a SQL database user that maps back to the user-assigned managed identity.
 
 ### Update the connection string
 
-Update your application configuration to use the passwordless connection string format. Connection strings are generally stored as environment variables in your app hosting environment. The instructions below focus on App Service, but other Azure hosting services offer similar configurations.
+Update your Azure app configuration to use the passwordless connection string format. Connection strings are generally stored as environment variables in your app hosting environment. The following instructions focus on App Service, but other Azure hosting services provide similar configurations.
 
 1. Navigate to the configuration page of your App Service instance and locate the Azure SQL Database connection string.
 
-1. Select the edit icon and update the connection string value to match following format. Change the database server and database placeholder values with the values of your own service.
+1. Select the edit icon and update the connection string value to match following format. Change the `<database-server-name>` and `<database-name>` placeholders with the values of your own service.
 
-```json
-"Server=tcp:<database-server-name>.database.windows.net,1433;Initial Catalog=<database-name>;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;Authentication=\"Active Directory Default\";"
-```
+    ```json
+    "Server=tcp:<database-server-name>.database.windows.net,1433;Initial Catalog=<database-name>;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;Authentication=\"Active Directory Default\";"
+    ```
 
 1. Save your changes and restart the application if it does not do so automatically.
 
-1. Test the application to make sure everything is still working.
+### Test the application
+
+Test your app to make sure everything is still working. It may take a few minutes for all of the changes to propagate through your Azure environment.
 
 ## Next steps
 

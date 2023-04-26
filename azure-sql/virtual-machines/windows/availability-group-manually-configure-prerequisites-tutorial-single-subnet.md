@@ -264,7 +264,7 @@ The preferred DNS server address [should not be updated](/azure/virtual-network/
 
 ### Join the domain
 
-Next, join the **corp.contoso.com** domain. To do so, follow these steps: 
+Next, join the **corp.contoso.com** domain. To do so, follow these steps:
 
 1. Remotely connect to the virtual machine using the **BUILTIN\DomainAdmin** account. This account is the same one used when [creating the domain controller virtual machines](availability-group-manually-configure-prerequisites-tutorial-single-subnet.md?#create-virtual-machines-for-the-domain-controllers).
 1. Open **Server Manager**, and select **Local Server**.

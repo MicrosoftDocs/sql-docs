@@ -1,6 +1,6 @@
 ---
-title: Connect to and query Azure SQL Database using .NET and the Microsoft.Data.SqlClient library
-description: Learn how to connect to a database in Azure SQL Database and query data using .NET
+title: Migrate an application to use passwordless connections with Azure SQL Database
+description: Learn how to connect to migrate an application to use passwordless connections with Azure SQL Database
 author: alexwolfmsft
 ms.author: alexwolf
 ms.custom: passwordless-dotnet
@@ -192,10 +192,6 @@ Update your application configuration to use the passwordless connection string 
 1. Save your changes and restart the application if it does not do so automatically.
 
 1. Test the application to make sure everything is still working.
-
-### Local development configurations
-
-
 
 ## Next steps
 

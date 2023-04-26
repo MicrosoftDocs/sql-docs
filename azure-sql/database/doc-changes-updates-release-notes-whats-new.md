@@ -34,7 +34,6 @@ The following table lists the features of Azure SQL Database that are currently 
 | ---| --- |
 | [128 vCore](resource-limits-vcore-single-databases.md#general-purpose---provisioned-compute---gen5) | Provision your Azure SQL Database with up to 128 virtual cores (vCores). | 
 | [Always Encrypted with VBS enclaves](always-encrypted-enclaves-getting-started-vbs.md) | Take advantage of rich confidential queries and in-place cryptographic operations for Azure SQL Database with Always Encrypted with virtualization-based security (VBS) enclaves. | 
-| [Cross-tenant CMK with TDE](transparent-data-encryption-byok-cross-tenant.md) | Cross-tenant CMK with TDE allows SQL databases to be in a separate tenant than the tenant holding the Azure Key Vault resource used to encrypt the databases. |
 | [Database level CMK with TDE](transparent-data-encryption-byok-database-level-overview.md) | Database level CMK allows setting the TDE protector as a customer-managed key individually for each database within the server. |
 | [Elastic jobs](elastic-jobs-overview.md) | The elastic jobs feature is the SQL Server Agent replacement for Azure SQL Database as a PaaS offering.  |
 | [Elastic queries](elastic-query-overview.md) | The elastic queries feature allows for cross-database queries in Azure SQL Database. |
@@ -60,6 +59,7 @@ The following table lists the new generally available (GA) features of Azure SQL
 
 | Feature | GA Month | Details |
 | ---| --- |--- |
+| [Cross-tenant CMK with TDE](transparent-data-encryption-byok-cross-tenant.md) | May 2023 | Cross-tenant CMK with TDE allows SQL databases to be in a separate tenant than the tenant holding the Azure Key Vault resource used to encrypt the databases. |
 | [UMI for auditing](auditing-overview.md) | April 2023 | Configure the storage account for your SQL auditing logs by using User-assigned Managed Identity (UMI). | 
 | [Shrink Database](/sql/t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql?view=azuresqldb-current&preserve-view=true) and [Shrink File with Low Priority](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql?view=azuresqldb-current&preserve-view=true) | March 2023 | This feature solves the concurrency issues that can arise from shrink database and shrink file commands, especially during active maintenance or on busy OLTP environments. In WAIT_AT_LOW_PRIORITY mode, necessary tasks to shrink database files can be completed without negatively affecting application query performance. |
 | [Approximate percentile](/sql/t-sql/functions/approx-percentile-cont-transact-sql) | March 2023 | Quickly compute percentiles for a large dataset with acceptable rank-based error bounds to help make rapid decisions by using approximate percentile aggregate functions. |
@@ -84,6 +84,14 @@ The following table lists the new generally available (GA) features of Azure SQL
 ## Documentation changes
 
 Learn about significant changes to the Azure SQL Database documentation. For previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md). 
+
+
+### May 2023
+
+| Changes | Details |
+| --- | --- |
+| **Cross-tenant CMK with TDE GA** |  Cross-tenant CMK with TDE allows SQL databases to be in a separate tenant than the tenant holding the Azure Key Vault resource used to encrypt the databases. This feature is now generally available. To learn more, review [Cross-tenant CMK with TDE](transparent-data-encryption-byok-cross-tenant.md). |
+
 
 ### March 2023
 

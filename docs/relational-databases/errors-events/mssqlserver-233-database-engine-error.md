@@ -30,14 +30,12 @@ helpviewer_keywords:
 The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client cannot connect to an instance residing on the same host as the client. 
  
 ### Potential causes:
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 - Unable to connect through the Shared Memory protocol.
 - The instance has reached its maximum concurrent user connections limit
   
 ## User Action 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 Depending on the cause:
-- Try to disable the Shared Memory protocol in Configuration Manager and use TCP/IP instead.
+- Try to disable the Shared Memory protocol in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager and use TCP/IP instead.
 - Restart the instance in single user mode and make sure that the maximum number of concurrent user connections has not been changed from its default value of 0 (0 = unlimited)
   
 ## See Also  

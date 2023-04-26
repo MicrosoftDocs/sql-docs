@@ -6,7 +6,7 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "/docs/relational-databases/errors-events/mssqlserver-233-database-engine-error.md",
+      "source_path": "docs/relational-databases/errors-events/mssqlserver-233-database-engine-error.md",
       "redirect_url": "/troubleshoot/sql/database-engine/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection",
       "redirect_document_id": false
     },

@@ -137,7 +137,7 @@ ms.topic: include
 | 230 | 14 | No | The %ls permission was denied on the column '%.\*ls' of the object '%.\*ls', database '%.\*ls', schema '%.\*ls'. |
 | 231 | 11 | No | No such default. ID = %ld, database ID = %d. |
 | 232 | 16 | No | Arithmetic overflow error for type %ls, value = %f. |
-| [233](../mssqlserver-233-database-engine-error.md) | 16 | No | The column '%.\*ls' in table '%.\*ls' cannot be null. |
+| 233 | 16 | No | The column '%.\*ls' in table '%.\*ls' cannot be null. |
 | 234 | 16 | No | There is insufficient result space to convert a money value to %ls. |
 | 235 | 16 | No | Cannot convert a char value to money. The char value has incorrect syntax. |
 | 236 | 16 | No | The conversion from char data type to money resulted in a money overflow error. |

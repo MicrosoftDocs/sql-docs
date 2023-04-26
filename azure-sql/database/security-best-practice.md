@@ -5,7 +5,7 @@ description: This article provides common security requirements and best practic
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 04/20/2023
+ms.date: 04/26/2023
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: article
@@ -102,7 +102,7 @@ Central identity management offers the following benefits:
   - See the article, [Provision an Azure Active Directory administrator for your managed instance](authentication-aad-configure.md#provision-azure-ad-admin-sql-managed-instance).
 
 > [!NOTE]  
->
+>  
 > - Azure AD authentication is recorded in Azure SQL audit logs, but not in Azure AD sign-in logs.
 > - Azure RBAC permissions granted in Azure do not apply to Azure SQL Database or SQL Managed Instance  permissions. Such permissions must be created/mapped manually using existing SQL permissions.
 > - On the client-side, Azure AD authentication needs access to the internet or via User Defined Route (UDR) to a virtual network.
@@ -135,7 +135,7 @@ Azure AD Multi-Factor Authentication helps provides additional security by requi
   - Use Universal Authentication in SSMS. See the article, [Using Multi-factor Azure AD authentication with Azure SQL Database, SQL Managed Instance, Azure Synapse (SSMS support for Multi-Factor Authentication)](authentication-mfa-ssms-overview.md).
   - Use Interactive Authentication supported in SQL Server Data Tools (SSDT). See the article, [Azure Active Directory support in SQL Server Data Tools (SSDT)](/sql/ssdt/azure-active-directory?view=azuresqldb-current&preserve-view=true).
   - Use other SQL tools supporting Multi-Factor Authentication.
-    - SSMS Wizard support for export/extract/deploy database  
+    - SSMS Wizard support for export/extract/deploy database
     - [SqlPackage](/sql/tools/sqlpackage): option '/ua'
     - [sqlcmd Utility](/sql/tools/sqlcmd-utility): option -G (interactive)
     - [bcp Utility](/sql/tools/bcp-utility): option -G (interactive)
@@ -335,7 +335,7 @@ Separation of Duties, also called Segregation of Duties describes the requiremen
 
 For the readers that want to dive deeper into SoD, we recommend the following resources:
 
-- For Azure SQL Database and SQL Managed Instance:  
+- For Azure SQL Database and SQL Managed Instance:
   - [Controlling and granting database access](logins-create-manage.md)
   - [Engine Separation of Duties for the Application Developer](/previous-versions/sql/sql-server-2008/cc974525(v=sql.100))
   - [Separation of Duties](https://download.microsoft.com/download/d/2/d/d2d931e9-b6b5-4e3b-b0af-22c749f9bb7e/sql_server_separation_of_duties_white_paper_jul2011.docx)
@@ -487,7 +487,7 @@ Another technique for preventing unauthorized users from viewing data is to obfu
 > [!NOTE]  
 > Dynamic Data Masking cannot be used to protect data from high-privilege users. Masking policies do not apply to users with administrative access like db_owner.
 
-- Don't permit app users to run ad hoc queries (as they may be able to work around Dynamic Data Masking).  
+- Don't permit app users to run ad hoc queries (as they may be able to work around Dynamic Data Masking).
   - See the article, [Bypassing masking using inference or brute-force techniques](/sql/relational-databases/security/dynamic-data-masking#security-note-bypassing-masking-using-inference-or-brute-force-techniques) for details.
 
 - Use a proper access control policy (via SQL permissions, roles, RLS) to limit user permissions to make updates in the masked columns. Creating a mask on a column doesn't prevent updates to that column. Users that receive masked data when querying the masked column, can update the data if they have write-permissions.
@@ -663,7 +663,7 @@ Tracking of database events helps you understand database activity. You can gain
 **Best practices**
 
 - By configuring [SQL Database Auditing](./auditing-overview.md) on your server or [Managed Instance Auditing](../managed-instance/auditing-configure.md) to audit events, all existing and newly created databases on that server will be audited.
-- By default auditing policy includes all actions (queries, stored procedures and successful and failed logins) against the databases, which may result in high volume of audit logs. It's recommended for customers to [configure auditing for different types of actions and action groups using PowerShell](./auditing-overview.md#manage-auditing). Configuring this will help control the number of audited actions, and minimize the risk of event loss. Custom audit configurations allow customers to capture only the audit data that is needed.
+- By default auditing policy includes all actions (queries, stored procedures and successful and failed logins) against the databases, which may result in high volume of audit logs. It's recommended for customers to [configure auditing for different types of actions and action groups using PowerShell](./auditing-manage-using-api.md). Configuring this will help control the number of audited actions, and minimize the risk of event loss. Custom audit configurations allow customers to capture only the audit data that is needed.
 - Audit logs can be consumed directly in the [Azure portal](https://portal.azure.com/), or from the storage location that was configured.
 
 > [!NOTE]  
@@ -790,11 +790,11 @@ Most security standards address data availability in terms of operational contin
 
 - Azure offers built-in high-availability: [High-availability with SQL Database and SQL Managed Instance](high-availability-sla.md)
 
-- The Business Critical tier includes failover groups, full and differential log backups, and point-in-time-restore backups enabled by default:  
+- The Business Critical tier includes failover groups, full and differential log backups, and point-in-time-restore backups enabled by default:
   - [Automated backups](automated-backups-overview.md)
   - [Recover a database using automated database backups - Point-in-time restore](recovery-using-backups.md#point-in-time-restore)
 
-- Additional business continuity features such as the zone redundant configuration and auto-failover groups across different Azure geos can be configured:  
+- Additional business continuity features such as the zone redundant configuration and auto-failover groups across different Azure geos can be configured:
   - [High-availability - Zone redundant configuration for Premium & Business Critical service tiers](high-availability-sla.md#premium-and-business-critical-service-tier-zone-redundant-availability)
   - [High-availability - Zone redundant configuration for General Purpose service tier](high-availability-sla.md#general-purpose-service-tier-zone-redundant-availability)
   - [Overview of business continuity](business-continuity-high-availability-disaster-recover-hadr-overview.md)

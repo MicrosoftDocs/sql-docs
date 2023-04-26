@@ -36,6 +36,7 @@ The following table lists the features of Azure SQL Managed Instance that are cu
 |[Endpoint policies](./service-endpoint-policies-configure.md) | Configure which Azure Storage accounts can be accessed from a SQL Managed Instance subnet. Grants an extra layer of protection against inadvertent or malicious data exfiltration.|
 |[Instance pools](instance-pools-overview.md) | A convenient and cost-efficient way to migrate smaller SQL Server instances to the cloud. |
 |[Instance stop and start](instance-stop-start-how-to.md) | Stop and start your managed instance to save on licensing and compute costs. | 
+|[Ledger](/sql/relational-databases/security/ledger/ledger-overview) | The ledger feature in Azure SQL Managed Instance allows you to cryptographically attest to other parties, such as auditors or other business parties, that your data hasn't been tampered with. |
 |[License-free standby replica](auto-failover-group-standby-replica-how-to-configure.md) | Save on licensing costs when you designate your secondary replica as **Standby**. | 
 |[Maintenance window advance notifications](../database/advance-notifications.md)| Advance notifications (preview) for databases configured to use a non-default [maintenance window](../database/maintenance-window.md). Advance notifications are in preview for Azure SQL Managed Instance. |
 |[Private endpoint](private-endpoint-overview.md) | Establish secure and isolated connectivity between Azure SQL Managed Instance and multiple virtual networks without exposing the entire network infrastructure of your service by using a private endpoint. | 
@@ -88,6 +89,13 @@ Eligible existing instances created prior to November 2022 can enroll into the f
 ## Documentation changes
 
 Learn about significant changes to the Azure SQL Managed Instance documentation. For previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md).
+
+### May 2023
+
+| Changes | Details |
+| --- | --- |
+| Ledger| The ledger feature allows you to cryptographically attest to other parties, such as auditors or other business parties, that your data hasn't been tampered with. This feature is now in preview for Azure SQL Managed Instance. To learn more, review [Ledger](/sql/relational-databases/security/ledger/ledger-overview). |
+
 
 ### April 2023
 

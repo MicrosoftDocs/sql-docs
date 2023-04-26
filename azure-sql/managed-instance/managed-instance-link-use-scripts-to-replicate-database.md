@@ -244,7 +244,7 @@ $ResourceGroup = (Get-AzSqlInstance -InstanceName $ManagedInstanceName).Resource
 New-AzSqlInstanceServerTrustCertificate -ResourceGroupName $ResourceGroup -InstanceName $ManagedInstanceName -Name $CertificateName -PublicKey $PublicKeyEncoded 
 ```
 
-In cause you need to see all SQL Server certificates uploaded to a managed instance, use the [Get-AzSqlInstanceServerTrustCertificate](/powershell/module/az.sql/get-azsqlinstanceservertrustcertificate) PowerShell command in Azure Cloud Shell. To remove SQL Server certificate uploaded to a managed instance, use the [Remove-AzSqlInstanceServerTrustCertificate](/powershell/module/az.sql/remove-azsqlinstanceservertrustcertificate) PowerShell command in Azure Cloud Shell.
+In case you need to see all SQL Server certificates uploaded to a managed instance, use the [Get-AzSqlInstanceServerTrustCertificate](/powershell/module/az.sql/get-azsqlinstanceservertrustcertificate) PowerShell command in Azure Cloud Shell. To remove SQL Server certificate uploaded to a managed instance, use the [Remove-AzSqlInstanceServerTrustCertificate](/powershell/module/az.sql/remove-azsqlinstanceservertrustcertificate) PowerShell command in Azure Cloud Shell.
 
 #### [Azure CLI](#tab/azure-cli)
 

@@ -547,7 +547,7 @@ To update your SSMS settings, follow these steps:
 
   :::image type="content" source="media/managed-instance-link-preparation/ssms-for-government-cloud.png" alt-text="Screenshot of SSMS UI, options page, Azure services, with Azure cloud highlighted. ":::
 
-If you want to go back to to the public cloud, choose **AzureCloud** from the drop-down menu. 
+If you want to go back to the public cloud, choose **AzureCloud** from the drop-down menu. 
 
 
 ## Next steps

@@ -18,7 +18,7 @@ helpviewer_keywords:
   This topic contains information about configuring Service Broker to work with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)].  
   
   
-##  <a name="ReceiveRemoteMessages"></a> Requirements for a Service in an Availability Group to Receive Remote Messages  
+##  <a name="ReceiveRemoteMessages"></a> Receive remote messages from other Service Broker instances  
   
 1.  **Ensure that the availability group possesses a listener.**  
   

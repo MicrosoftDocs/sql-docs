@@ -10,7 +10,7 @@ ms.author: alexwolf
 ms.custom: include file
 ---
 
-For local development, make sure you're authenticated with the same Azure AD account you want to use to access Azure SQL Database. You can authenticate via popular development tools, such as the Azure CLI or Azure PowerShell. The development tools with which you can authenticate vary across languages.
+For local development, make sure you're signed-in with the same Azure AD account you want to use to access Azure SQL Database. You can authenticate via popular development tools, such as the Azure CLI or Azure PowerShell. The development tools with which you can authenticate vary across languages.
 
 ### [Azure CLI](#tab/sign-in-azure-cli)
 

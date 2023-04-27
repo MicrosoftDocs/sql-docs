@@ -19,14 +19,14 @@ Application requests to Azure SQL Database must be authenticated using either a 
 
 ## Configure the Azure SQL Database
 
-Passwordless connections use Azure Active Directory (Azure AD) authentication to connect to Azure services, including Azure SQL Database. With Azure AD authentication, you can manage user identities in a central location to simplify permission management. Learn more about configuring Azure AD authentication for your Azure SQL Database:
+Passwordless connections use Azure Active Directory (Azure AD) authentication to connect to Azure services, including Azure SQL Database. With Azure AD authentication, you can manage identities in a central location to simplify permission management. Learn more about configuring Azure AD authentication for your Azure SQL Database:
 
 - [Azure AD authentication overview](/azure/azure-sql/database/authentication-aad-overview?view=azuresql)
 - [Configure Azure AD auth](/azure/azure-sql/database/authentication-aad-configure?view=azuresql)
 
 For the purposes of this migration guide, ensure you have an Azure Active Directory admin assigned to your Azure SQL Database.
 
-1) Navigate to the the Azure Active Directory page of your logical server.
+1) Navigate to the the **Azure Active Directory** page of your logical server.
 
 1) Select **Set admin**.
 
@@ -46,7 +46,7 @@ Passwordless connections can be configured to work for both local and Azure host
 
 ### Create a database user and assign roles
 
-Create a user in Azure SQL Database that corresponds to the Azure account you used to sign-in to your local IDE, such as Visual Studio or IntelliJ.
+Create a user in Azure SQL Database that corresponds to the Azure account you used to sign-in locally, such as Visual Studio or IntelliJ.
 
 1) In the Azure portal, browse to your SQL database and select **Query editor (preview)**.
 
@@ -87,9 +87,10 @@ To update the referenced connection string (`AZURE_SQL_CONNECTIONSTRING`) to use
 
 2. Replace the connection string value with the following passwordless format and update the `<database-server-name>` and `<database-name`> placeholders with your own values:
 
-```json
-"Server=tcp:<database-server-name>.database.windows.net,1433;Initial Catalog=<database-name>;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;Authentication=\"Active Directory Default\";"
-```
+    ```json
+    "Server=tcp:<database-server-name>.database.windows.net,1433;Initial Catalog=<database-name>;
+    Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;Authentication=\"Active Directory Default\";"
+    ```
 
 ### Test the app
 
@@ -210,7 +211,8 @@ Update your Azure app configuration to use the passwordless connection string fo
 1. Select the edit icon and update the connection string value to match following format. Change the `<database-server-name>` and `<database-name>` placeholders with the values of your own service.
 
     ```json
-    "Server=tcp:<database-server-name>.database.windows.net,1433;Initial Catalog=<database-name>;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;Authentication=\"Active Directory Default\";"
+    "Server=tcp:<database-server-name>.database.windows.net,1433;Initial Catalog=<database-name>;
+    Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;Authentication=\"Active Directory Default\";"
     ```
 
 1. Save your changes and restart the application if it does not do so automatically.

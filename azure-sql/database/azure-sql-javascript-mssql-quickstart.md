@@ -1,30 +1,27 @@
 ---
-title: Connect to and query Azure SQL Database using .NET and Entity Framework Core
-description: Learn how to connect to a database in Azure SQL Database and query data using .NET and Entity Framework Core
-author: alexwolfmsft
-ms.author: alexwolf
-ms.custom: passwordless-dotnet
-ms.date: 02/10/2023
+title: Connect to and query Azure SQL Database using JavaScript and mssql npm package
+description: Learn how to connect to a database in Azure SQL Database and query data using JavaScript and mssql npm package.
+author: diberry
+ms.author: diberry
+ms.custom: passwordless-js
+ms.date: 04/27/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: quickstart
 monikerRange: "= azuresql || = azuresql-db"
 ---
 
-# Connect to and query Azure SQL Database using .NET and Entity Framework Core
+# Connect to and query Azure SQL Database using JavaScript and mssql npm package
 
-This quickstart describes how to connect an application to a database in Azure SQL Database and perform queries using .NET and Entity Framework Core. This quickstart follows the recommended passwordless approach to connect to the database. You can learn more about passwordless connections on the [passwordless hub](/azure/developer/intro/passwordless-overview).
+This quickstart describes how to connect an application to a database in Azure SQL Database and perform queries using JavaScript and mssql. This quickstart follows the recommended passwordless approach to connect to the database. You can learn more about passwordless connections on the [passwordless hub](/azure/developer/intro/passwordless-overview).
 
 ## Prerequisites
 
 * An [Azure subscription](https://azure.microsoft.com/free/dotnet/).
 * A SQL database configured with Azure Active Directory (Azure AD) authentication. You can create one using the [Create database quickstart](./single-database-create-quickstart.md).
-* [.NET 7.0](https://dotnet.microsoft.com/download) or later.
-* [Visual Studio](https://visualstudio.microsoft.com/vs/) or later with the **ASP.NET and web development** workload.
+* [Node.js LTS]()
+* [Visual Studio Code]().
 * The latest version of the [Azure CLI](/cli/azure/get-started-with-azure-cli).
-* The latest version of the Entity Framework Core tools:
-  * Visual Studio users should install the [Package Manager Console tools for Entity Framework Core](/ef/core/cli/powershell).
-  * .NET CLI users should install the [.NET CLI tools for Entity Framework Core](/ef/core/cli/dotnet).
 
 ## Configure the database server
 
@@ -34,207 +31,421 @@ This quickstart describes how to connect an application to a database in Azure S
 
 The steps in this section create a .NET Minimal Web API by using either the .NET CLI or Visual Studio 2022.
 
-## [Visual Studio](#tab/visual-studio)
+1. Create a new directory for the project and navigate into it. 
+1. Initialize the project by running the following command in the terminal:
 
-1. In the Visual Studio menu bar, navigate to **File** > **New** > **Project..**.
+    ```bash
+    npm init -y
+    ```
 
-1. In the dialog window, enter *ASP.NET* into the project template search box and select the ASP.NET Core Web API result. Choose **Next** at the bottom of the dialog.
 
-1. For the **Project Name**, enter *DotNetSQL*. Leave the default values for the rest of the fields and select **Next**.
+1. Install the packages used in the sample code in this article:
 
-1. For the **Framework**, select .NET 7.0 and uncheck **Use controllers (uncheck to use minimal APIs)**. This quickstart uses a Minimal API template to streamline endpoint creation and configuration. 
+    ```bash
+    npm install mssql dotenv swagger-jsdoc swagger-ui-express
+    ```
+    
+1. Open the project in Visual Studio Code.
 
-1. Choose **Create**. The new project opens inside the Visual Studio environment.
+    ```base
+    code .
+    ```
 
-## [.NET CLI](#tab/dotnet-cli)
+## Create Express.js application code
 
-1. In a console window (such as cmd, PowerShell, or Bash), use the `dotnet new` command to create a new Web API app with the name *DotNetSQL*. This command creates a simple "Hello World" C# project with a single source file: *Program.cs*.
+1. Create an **app.js** file and add the following code:
 
-   ```dotnetcli
-   dotnet new web -o DotNetSQL
-   ```
+    ```javascript
+    import express from 'express';
+    import { swaggerUi, swaggerSpec } from './swagger';
+    
+    // App route to database
+    import person from './person';
+    
+    const port = process.env.PORT || 3000;
+    
+    const app = express();
+    
+    // Swagger explorer route
+    app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+    
+    // Person route
+    app.use('/users', person)
+    
+    // Start the server
+    app.listen(port, () => {
+      console.log(`Server started on port ${port}`);
+    });
+    ```
 
-1. Navigate into the newly created *DotNetSQL* directory and open the project in Visual Studio.
+1. Create a **swagger.js** file and add the following code:
 
----
+    ```javascript
+    import path from 'path';
+    import swaggerUi from 'swagger-ui-express';
+    import swaggerJsdoc from 'swagger-jsdoc';
+    
+    // Swagger definition
+    const swaggerDefinition = {
+        swagger: '2.0',
+        info: {
+            title: 'Users API',
+            version: '1.0.0',
+            description: 'API for managing users',
+        },
+        basePath: '/',
+    };
+    
+    const pathToSwagger = path.join(__dirname, './swagger.yml');
+    console.log(pathToSwagger);
+    
+    // Options for the swagger-jsdoc middleware
+    const options = {
+        swaggerDefinition,
+        apis: [pathToSwagger], // Replace this with the path to your Swagger specification file
+    };
+    
+    // Initialize swagger-jsdoc middleware
+    const swaggerSpec = swaggerJsdoc(options);
+    
+    export { swaggerUi, swaggerSpec };
+    ```
 
-## Add Entity Framework Core to the project
+1. Create a **swagger.yml** schema file to be used by the `swagger.js` file. Add the following YML code:
 
-To connect to Azure SQL Database by using .NET and Entity Framework Core you need to add three NuGet packages to your project using one of the following methods:
+    ```yml
+    swagger: '2.0'
+    info:
+      version: 1.0.0
+      title: Users API
+    paths:
+      /users:
+        get:
+          summary: Get all users
+          responses:
+            200:
+              description: OK
+              schema:
+                type: array
+                items:
+                  $ref: '#/definitions/User'
+        post:
+          summary: Create a new user
+          parameters:
+            - name: body
+              in: body
+              required: true
+              schema:
+                $ref: '#/definitions/User'
+          responses:
+            201:
+              description: Created
+              schema:
+                $ref: '#/definitions/User'
+      /users/{id}:
+        parameters:
+          - name: id
+            in: path
+            required: true
+            type: integer
+        get:
+          summary: Get a user by ID
+          responses:
+            200:
+              description: OK
+              schema:
+                $ref: '#/definitions/User'
+          404:
+            description: User not found
+        put:
+          summary: Update a user by ID
+          parameters:
+            - name: body
+              in: body
+              required: true
+              schema:
+                $ref: '#/definitions/User'
+          responses:
+            200:
+              description: OK
+              schema:
+                $ref: '#/definitions/User'
+          404:
+            description: User not found
+        delete:
+          summary: Delete a user by ID
+          responses:
+            204:
+              description: No Content
+          404:
+            description: User not found
+    definitions:
+      User:
+        type: object
+        properties:
+          id:
+            type: integer
+          name:
+            type: string
+          email:
+            type: string
+          password:
+            type: string
+    ```
 
-## [Visual Studio](#tab/visual-studio)
+1. Create a **person.js** file and add the following code to provide the API route for users.
 
-1. In the **Solution Explorer** window, right-click the project's **Dependencies** node and select **Manage NuGet Packages**.
+    ```javascript
+    import express, { Router } from "express";
+    import Database from "../database";
+    import { noPasswordConfig } from "../config";
+    
+    const router: Router = express.Router();
+    router.use(express.json());
+    
+    const config = noPasswordConfig;
 
-1. In the resulting window, search for *EntityFrameworkCore*. Locate and install the following packages:
-
-* **Microsoft.EntityFrameworkCore**: Provides essential Entity Framework Core functionality
-* **Microsoft.EntityFrameworkCore.SqlServer**: Provides additional components to connect to the logical server
-* **Microsoft.EntityFrameworkCore.Design**: Provides support for running Entity Framework migrations
-
-Alternatively, you can also run the `Install-Package` cmdlet in the **Package Manager Console** window:
-
-```powershell
-Install-Package Microsoft.EntityFrameworkCore
-Install-Package Microsoft.EntityFrameworkCore.SqlServer
-Install-Package Microsoft.EntityFrameworkCore.Design
-```
-
-## [.NET CLI](#tab/dotnet-cli)
-
-Use the `dotnet add package` command to install the following packages:
-
-```dotnetcli
-dotnet add package Microsoft.EntityFrameworkCore
-dotnet add package Microsoft.EntityFrameworkCore.SqlServer
-dotnet add package Microsoft.EntityFrameworkCore.Design
-```
-
----
+    const database = new Database(config);
+    
+    router.get('/', async (_, res) => {
+        try {
+            // Return a list of users
+            const users = await database.readAll('Users');
+            console.log(`users: ${JSON.stringify(users)}`);
+            res.status(200).json(users);
+        } catch (err) {
+            res.status(500).json({ error: err?.message })
+        }
+    
+    });
+    
+    router.post('/', async (req, res) => {
+        try {
+            const user = req.body;
+            delete user.id;
+            console.log(`user: ${JSON.stringify(user)}`);
+    
+            const rowsAffected = await database.create('Users', user)
+            res.status(201).json({ rowsAffected })
+    
+        } catch (err) {
+            res.status(500).json({ error: err?.message })
+        }
+    
+    });
+    
+    router.get('/:id', async (req, res) => {
+        try {
+            // Update the user with the specified ID
+            const userId = req.params.id;
+            console.log(`userId: ${userId}`);
+    
+            if (userId) {
+                const result = await database.read('Users', userId);
+                console.log(`users: ${JSON.stringify(result)}`);
+                res.status(200).json(result);
+            } else {
+                res.status(404);
+            }
+        } catch (err) {
+            res.status(500).json({ error: err?.message })
+        }
+    
+    });
+    
+    router.put('/:id', async (req, res) => {
+        try {
+            // Update the user with the specified ID
+            const userId = req.params.id;
+            console.log(`userId: ${userId}`);
+    
+            const user = req.body;
+    
+            if (userId && user) {
+    
+                delete user.id;
+                console.log(`user: ${JSON.stringify(user)}`);
+    
+                const rowsAffected = await database.update('Users', userId, user);
+                res.status(200).json({ rowsAffected })
+            } else {
+                res.status(404);
+            }
+        } catch (err) {
+            res.status(500).json({ error: err?.message })
+        }
+    });
+    
+    router.delete('/:id', async (req, res) => {
+        try {
+            // Delete the user with the specified ID
+            const userId = req.params.id;
+            console.log(`userId: ${userId}`);
+    
+            if (!userId) {
+                res.status(404)
+            } else {
+                const rowsAffected = await database.delete('Users', userId);
+                res.status(204).json({ rowsAffected })
+            }
+        } catch (err) {
+            res.status(500).json({ error: err?.message })
+        }
+    });
+    
+    export default router;
+    ```
 
 ## Add the code to connect to Azure SQL Database
 
-The Entity Framework Core libraries rely on the `Microsoft.Data.SqlClient` and `Azure.Identity` libraries to implement passwordless connections to Azure SQL Database. The `Azure.Identity` library provides a class called [DefaultAzureCredential](/dotnet/azure/sdk/authentication#defaultazurecredential) that handles passwordless authentication to Azure.
+The **mssql** package implements passwordless connections to Azure SQL Database by providing a configuration setting for an authentication type. 
 
-`DefaultAzureCredential` supports multiple authentication methods and determines which to use at runtime. This approach enables your app to use different authentication methods in different environments (local vs. production) without implementing environment-specific code. The [Azure Identity library overview](/dotnet/api/overview/azure/Identity-readme#defaultazurecredential) explains the order and locations in which `DefaultAzureCredential` looks for credentials.
+1. Create a **config.js** file and add the following mssql configuration code to authenticate to Azure SQL.
 
-Complete the following steps to connect to Azure SQL Database using Entity Framework Core and the underlying `DefaultAzureCredential` class:
-
-1. Add a `ConnectionStrings` section to the `appsettings.Development.json` file so that it matches the following code. Remember to update the `<your database-server-name>` and `<your-database-name>` placeholders.
-
-    The passwordless connection string includes a configuration value of `Authentication=Active Directory Default`, which enables Entity Framework Core to use `DefaultAzureCredential` to connect to Azure services. When the app runs locally, it authenticates with the user you're signed into Visual Studio with. Once the app deploys to Azure, the same code discovers and applies the managed identity that is associated with the hosted app, which you'll configure later.
+    ```javascript
+    const server = process.env.AZURE_SQL_SERVER;
+    const database = process.env.AZURE_SQL_DATABASE;
+    
+    export const noPasswordConfig = {
+        server,              // SERVER.database.windows.net
+        port: 1433,
+        database,
+        authentication: {
+            // Azure AD Passwordless Authentication
+            type: "azure-active-directory-default"
+        },
+        options: {
+            encrypt: true
+        }
+    }
+    ```
 
     > [!NOTE]
-    > Passwordless connection strings are safe to commit to source control, since they do not contain any secrets such as usernames, passwords, or access keys.
+    > Passwordless configuration objects are safe to commit to source control, since they do not contain any secrets such as usernames, passwords, or access keys.
 
-    ```json
-    {
-        "Logging": {
-            "LogLevel": {
-                "Default": "Information",
-                "Microsoft.AspNetCore": "Warning"
-            }
-        },
-        "ConnectionStrings": {
-            "AZURE_SQL_CONNECTIONSTRING": "Data Source=passwordlessdbserver.database.windows.net;
-                Initial Catalog=passwordlessdb; Authentication=Active Directory Default; Encrypt=True;"
+1. Create a **database.js** file and add the following code:
+
+    ```javascript
+    import sql from "mssql";
+
+    class Database {
+      private config: any;
+      private poolconnection: sql.ConnectionPool;
+      private connected: boolean = false;
+    
+      constructor(config) {
+        this.config = config;
+        console.log(`Database: config: ${JSON.stringify}`)
+      }
+    
+      async connect() {
+        try {
+          console.log(`Database connecting...${this.connected}`)
+          if (this.connected===false) {
+            this.poolconnection = await sql.connect(this.config);
+            this.connected = true;
+            console.log("Database connection successful");
+          } else {
+            console.log("Database already connected");
+          }
+        } catch (error) {
+          console.error(`Error connecting to database: ${JSON.stringify(error)}`);
         }
+      }
+    
+      async disconnect() {
+        try {
+          this.poolconnection.close();
+          console.log("Database connection closed");
+        } catch (error) {
+          console.error(`Error closing database connection: ${error}`);
+        }
+      }
+    
+      async create(table, data) {
+    
+        await this.connect();
+        const request = this.poolconnection.request();
+    
+        request.input("name", sql.NVarChar(255), data.name);
+        request.input("email", sql.NVarChar(255), data.email);
+        request.input("password", sql.NVarChar(255), data.password);
+    
+        const result = await request.query(
+          `INSERT INTO ${table} (name, email, password) VALUES (@name, @email, @password)`
+        );
+    
+        return result.rowsAffected[0];
+      }
+    
+      async readAll(table) {
+    
+        await this.connect();
+        const request = this.poolconnection.request();
+        const result = await request.query(`SELECT * FROM ${table}`);
+    
+        return result.recordsets[0];
+      }
+    
+      async read(table, id) {
+    
+        await this.connect();
+    
+        const request = this.poolconnection.request();
+        const result = await request
+          .input("id", sql.Int, +id)
+          .query(`SELECT * FROM ${table} WHERE id = @id`);
+    
+        return result.recordset[0];
+    
+      }
+    
+      async update(table, id, data) {
+    
+        await this.connect();
+    
+        const request = this.poolconnection.request();
+    
+        request.input("id", sql.Int, +id);
+        request.input("name", sql.NVarChar(255), data.name);
+        request.input("email", sql.NVarChar(255), data.email);
+        request.input("password", sql.NVarChar(255), data.password);
+    
+        const result = await request.query(
+          `UPDATE ${table} SET name=@name, email=@email, password=@password WHERE id = @id`
+        );
+    
+        return result.rowsAffected[0];
+      }
+    
+      async delete(table, id) {
+    
+        await this.connect();
+    
+        console.log(`id: ${JSON.stringify(+id)}`);
+        const idAsNumber = Number(id)
+    
+        const request = this.poolconnection.request();
+        const result = await request
+          .input("id", sql.Int, idAsNumber)
+          .query(`DELETE FROM ${table} WHERE id = @id`);
+    
+        return result.rowsAffected[0];
+      }
     }
-    ```
-
-1. Add the following code to the `Program.cs` file above the line of code that reads `var app = builder.Build();`. This code performs the following configurations:
-
-    * Retrieves the passwordless database connection string from the `appsettings.Development.json` file for local development, or from the environment variables for hosted production scenarios.
-    * Registers the Entity Framework Core `DbContext` class with the .NET dependency injection container.
     
-        ```csharp
-        var connection = String.Empty;
-        if (builder.Environment.IsDevelopment())
-        {
-            builder.Configuration.AddEnvironmentVariables().AddJsonFile("appsettings.Development.json");
-            connection = builder.Configuration.GetConnectionString("AZURE_SQL_CONNECTIONSTRING");
-        }
-        else
-        {
-            connection = Environment.GetEnvironmentVariable("AZURE_SQL_CONNECTIONSTRING");
-        }
-        
-        builder.Services.AddDbContext<PersonDbContext>(options =>
-            options.UseSqlServer(connection));
-        ```
-
-1. Add the following endpoints to the bottom of the `Program.cs` file above `app.Run()` to retrieve and add entities in the database using the `PersonDbContext` class.
-
-    ```csharp
-    app.MapGet("/Person", (PersonDbContext context) =>
-    {
-        return context.Person.ToList();
-    })
-    .WithName("GetPersons")
-    .WithOpenApi();
-    
-    app.MapPost("/Person", (Person person, PersonDbContext context) =>
-    {
-        context.Add(person);
-        context.SaveChanges();
-    })
-    .WithName("CreatePerson")
-    .WithOpenApi();
+    export default Database;
     ```
-
-    Finally, add the `Person` and `PersonDbContext` classes to the bottom of the `Program.cs` file. The Person class represents a single record in the database's `Persons` table. The `PersonDbContext` class represents the Person database and allows you to perform operations on it through code. You can read more about `DbContext` in the [Getting Started](/ef/core/get-started/overview/first-app) documentation for Entity Framework Core.
-
-    ```csharp
-    public class Person
-    {
-        public int Id { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-    }
-
-    public class PersonDbContext : DbContext
-    {
-        public PersonDbContext(DbContextOptions<PersonDbContext> options)
-            : base(options)
-        {
-        }
-    
-        public DbSet<Person> Person { get; set; }
-    }
-    ```
-
-## Run the migrations to create the database
-
-To update the database schema to match your data model using Entity Framework Core you must use a migration. Migrations can create and incrementally update a database schema to keep it in sync with your application's data model. You can learn more about this pattern in the [migrations overview](/ef/core/managing-schemas/migrations).
-
-1. Open a terminal window to the root of your project.
-1. Run the following command to generate an initial migration that can create the database:
-    
-    ## [Visual Studio](#tab/visual-studio)
-
-    ```powershell
-    Add-Migration InitialCreate
-    ```
-
-    ## [.NET CLI](#tab/dotnet-cli)
-
-    ```dotnetcli
-    dotnet ef migrations add InitialCreate
-    ```
-
-    ---
-
-1. A `Migrations` folder should appear in your project directory, along with a file called `InitialCreate` with unique numbers prepended. Run the migration to create the database using the following command:
-
-    ## [Visual Studio](#tab/visual-studio)
-
-    ```powershell
-    Update-Database
-    ```
-
-    ## [.NET CLI](#tab/dotnet-cli)
-
-    ```dotnetcli
-    dotnet ef database update
-    ```
-
-    ---
-
-    The Entity Framework Core tooling will create the database schema in Azure defined by the `PersonDbContext` class.
 
 ## Test the app locally
 
-The app is ready to be tested locally. Make sure you're signed in to Visual Studio or the Azure CLI with the same account you set as the admin for your database.
+The app is ready to be tested locally. Make sure you're signed in to the Azure Clode in Visual Studio Code with the same account you set as the admin for your database.
 
-1) Press the run button at the top of Visual Studio to launch the API project.
-
-1) On the Swagger UI page, expand the POST method and select **Try it**.
-
-1) Modify the sample JSON to include values for the first and last name. Select **Execute** to add a new record to the database. The API returns a successful response.
-
-    :::image type="content" source="media/passwordless-connections/api-testing-small.png" lightbox="media/passwordless-connections/api-testing.png" alt-text="A screenshot showing how to test the API.":::
-
-1) Expand the **GET** method on the Swagger UI page and select **Try it**. Select **Execute**, and the person you just created is returned.
+1. Run the application with `node app.js`. The app starts on port 3000.
+1. In a browser, navigate to the OpenAPI explorer at **http://localhost:3000/api-docs**.
+1. On the Swagger UI page, expand the POST method and select **Try it**.
+1. Modify the sample JSON to include values for the properties. The Id property is ignored. 1. Select **Execute** to add a new record to the database. The API returns a successful response.
+1. Expand the **GET** method on the Swagger UI page and select **Try it**. Select **Execute**, and the person you just created is returned.
 
 ## Deploy to Azure App Service
 

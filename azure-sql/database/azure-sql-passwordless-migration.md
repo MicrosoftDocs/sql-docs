@@ -3,7 +3,6 @@ title: Migrate an application to use passwordless connections with Azure SQL Dat
 description: Learn how to connect to migrate an application to use passwordless connections with Azure SQL Database
 author: alexwolfmsft
 ms.author: alexwolf
-ms.custom: passwordless-dotnet
 ms.date: 02/10/2023
 ms.service: sql-database
 ms.subservice: security
@@ -21,8 +20,8 @@ Application requests to Azure SQL Database must be authenticated using either a 
 
 Passwordless connections use Azure Active Directory (Azure AD) authentication to connect to Azure services, including Azure SQL Database. With Azure AD authentication, you can manage identities in a central location to simplify permission management. Learn more about configuring Azure AD authentication for your Azure SQL Database:
 
-- [Azure AD authentication overview](/azure/azure-sql/database/authentication-aad-overview?view=azuresql)
-- [Configure Azure AD auth](/azure/azure-sql/database/authentication-aad-configure?view=azuresql)
+- [Azure AD authentication overview](/azure/azure-sql/database/authentication-aad-overview)
+- [Configure Azure AD auth](/azure/azure-sql/database/authentication-aad-configure)
 
 For the purposes of this migration guide, ensure you have an Azure Active Directory admin assigned to your Azure SQL Database.
 
@@ -100,7 +99,7 @@ Run your app locally and verify that the connections to Azure SQL Database are w
 
 Once your app is configured to use passwordless connections locally, the same code can authenticate to Azure SQL Database after it's deployed to Azure. The sections that follow explain how to configure a deployed application to connect to Azure SQL Database using a [managed identity](/azure/active-directory/managed-identities-azure-resources/overview). Managed identities provide an automatically managed identity in Azure Active Directory (Azure AD) for applications to use when connecting to resources that support Azure AD authentication. Learn more about managed identities:
 
-- [Passwordless overview](/azure/developer/intro/passwordless-overview?view=azuresql) 
+- [Passwordless overview](/azure/developer/intro/passwordless-overview)
 - [Managed identity best practices](/azure/active-directory/managed-identities-azure-resources/managed-identity-best-practice-recommendations)
 
 ### Create the managed identity
@@ -227,5 +226,7 @@ In this tutorial, you learned how to migrate an application to passwordless conn
 
 You can read the following resources to explore the concepts discussed in this article in more depth:
 
-* [Authorize access to blobs using Azure Active Directory](../blobs/authorize-access-azure-active-directory.md)
-* To learn more about .NET Core, see [Get started with .NET in 10 minutes](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro).
+- [Passwordless overview](/azure/developer/intro/passwordless-overview)
+- [Managed identity best practices](/azure/active-directory/managed-identities-azure-resources/managed-identity-best-practice-recommendations)
+- [Tutorial: Secure a database in Azure SQL Database](/azure/azure-sql/database/secure-database-tutorial)
+- [Authorize database access to SQL Database](/azure/azure-sql/database/logins-create-manage)

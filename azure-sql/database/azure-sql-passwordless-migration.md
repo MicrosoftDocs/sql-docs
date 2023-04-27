@@ -19,9 +19,7 @@ Application requests to Azure SQL Database must be authenticated using either a 
 
 ## Configure the Azure SQL Database
 
-Passwordless connections use Azure Active Directory (Azure AD) authentication to connect to Azure SQL Database. Azure AD authentication is a mechanism for connecting to Azure services using identities defined in Azure AD. With Azure AD authentication, you can manage database user identities and other Microsoft services in a central location to simplify permission management.
-
-Read more about configuring Azure AD authentication for your Azure environment:
+Passwordless connections use Azure Active Directory (Azure AD) authentication to connect to Azure services, including Azure SQL Database. With Azure AD authentication, you can manage user identities in a central location to simplify permission management. Learn more about configuring Azure AD authentication for your Azure SQL Database:
 
 - [Azure AD authentication overview](/azure/azure-sql/database/authentication-aad-overview?view=azuresql) and
 - [Configure Azure AD auth](/azure/azure-sql/database/authentication-aad-configure?view=azuresql) pages.
@@ -58,9 +56,9 @@ Create a user in Azure SQL Database that corresponds to the Azure account you us
 
     ```sql
     CREATE USER <user@domain> FROM EXTERNAL PROVIDER;
-    ALTER ROLE db_datareader ADD MEMBER <your-app-service-name>;
-    ALTER ROLE db_datawriter ADD MEMBER <your-app-service-name>;
-    ALTER ROLE db_ddladmin ADD MEMBER <your-app-service-name>;
+    ALTER ROLE db_datareader ADD MEMBER <user@domain>;
+    ALTER ROLE db_datawriter ADD MEMBER <user@domain>;
+    ALTER ROLE db_ddladmin ADD MEMBER <user@domain>;
     GO
     ```
 
@@ -68,7 +66,7 @@ Create a user in Azure SQL Database that corresponds to the Azure account you us
 
 ### Update the local connection configuration
 
-Existing application code that connects to Azure SQL Database using the `Microsoft.Data.SqlClient` library or Entity Framework Core using a connection string will continue to work with passwordless connections. For example, the following code works with both SQL authentication as well as passwordless connections:
+Existing application code that connects to Azure SQL Database using the `Microsoft.Data.SqlClient` library or Entity Framework Core will continue to work with passwordless connections. However, you must update your database connection string to use the passwordless format. For example, the following code works with both SQL authentication as well as passwordless connections:
 
 ```csharp
 string connectionString = app.Configuration.GetConnectionString("AZURE_SQL_CONNECTIONSTRING")!;
@@ -80,7 +78,7 @@ var command = new SqlCommand("SELECT * FROM Persons", conn);
 using SqlDataReader reader = command.ExecuteReader();
 ```
 
- However, you must update the referenced connection string to use the passwordless connection string format:
+To update the referenced connection string (`AZURE_SQL_CONNECTIONSTRING`) to use the passwordless connection string format:
 
 1. Locate your connection string. For local development with .NET applications this is usually stored in one of the following locations:
     * The `appsettings.json` configuration file for your project.  
@@ -99,7 +97,10 @@ Run your app locally and verify that the connections to Azure SQL Database are w
 
 ## Configure the Azure hosting environment
 
-Once your app is configured to use passwordless connections locally, the same code can authenticate to Azure services after it's deployed to Azure. The sections that follow explain how to configure a deployed application to connect to Azure SQL Database using a [managed identity](/azure/active-directory/managed-identities-azure-resources/overview). Managed identities provide an automatically managed identity in Azure Active Directory (Azure AD) for applications to use when connecting to resources that support Azure AD authentication. Learn more about managed identities on the [passwordless overview](/azure/developer/intro/passwordless-overview?view=azuresql) and the [managed identity best practices](/azure/active-directory/managed-identities-azure-resources/managed-identity-best-practice-recommendations) pages.
+Once your app is configured to use passwordless connections locally, the same code can authenticate to Azure SQL Database after it's deployed to Azure. The sections that follow explain how to configure a deployed application to connect to Azure SQL Database using a [managed identity](/azure/active-directory/managed-identities-azure-resources/overview). Managed identities provide an automatically managed identity in Azure Active Directory (Azure AD) for applications to use when connecting to resources that support Azure AD authentication. Learn more about managed identities:
+
+- [Passwordless overview](/azure/developer/intro/passwordless-overview?view=azuresql) 
+- [Managed identity best practices](/azure/active-directory/managed-identities-azure-resources/managed-identity-best-practice-recommendations)
 
 ### Create the managed identity
 
@@ -133,11 +134,11 @@ az identity create --name MigrationIdentity --resource-group <your-resource-grou
 
 ## Associate the managed identity with your web app
 
-You need to configure your web app to use the managed identity you created. Assign the identity to your app using either the Azure portal or the Azure CLI.
+Configure your web app to use the user-assigned managed identity you created.
 
 # [Azure portal](#tab/azure-portal-assign)
 
-Complete the following steps in the Azure portal to associate an identity with your app. These same steps apply to the following Azure services:
+Complete the following steps in the Azure portal to associate the user-assigned identity with your app. These same steps apply to the following Azure services:
 
 * Azure Spring Apps
 * Azure Container Apps

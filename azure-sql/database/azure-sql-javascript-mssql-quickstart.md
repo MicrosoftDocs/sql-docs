@@ -19,8 +19,9 @@ This quickstart describes how to connect an application to a database in Azure S
 
 * An [Azure subscription](https://azure.microsoft.com/free/dotnet/).
 * A SQL database configured with Azure Active Directory (Azure AD) authentication. You can create one using the [Create database quickstart](./single-database-create-quickstart.md).
-* [Node.js LTS]()
-* [Visual Studio Code]().
+* [Node.js LTS](https://nodejs.org/)
+* [Visual Studio Code](https://code.visualstudio.com/).
+* [Visual Studio Code App Service extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice)
 * The latest version of the [Azure CLI](/cli/azure/get-started-with-azure-cli).
 
 ## Configure the database server
@@ -198,12 +199,10 @@ The steps in this section create a .NET Minimal Web API by using either the .NET
     ```javascript
     import express, { Router } from "express";
     import Database from "../database";
-    import { noPasswordConfig } from "../config";
+    import { config } from "../config";
     
     const router: Router = express.Router();
     router.use(express.json());
-    
-    const config = noPasswordConfig;
 
     const database = new Database(config);
     
@@ -302,11 +301,14 @@ The **mssql** package implements passwordless connections to Azure SQL Database 
 
 1. Create a **config.js** file and add the following mssql configuration code to authenticate to Azure SQL.
 
+    #### [Passwordless (Recommended)](#tab/passwordless)
+
     ```javascript
+    require('dotenv').config()
     const server = process.env.AZURE_SQL_SERVER;
     const database = process.env.AZURE_SQL_DATABASE;
     
-    export const noPasswordConfig = {
+    export const config = {
         server,              // SERVER.database.windows.net
         port: 1433,
         database,
@@ -323,6 +325,31 @@ The **mssql** package implements passwordless connections to Azure SQL Database 
     > [!NOTE]
     > Passwordless configuration objects are safe to commit to source control, since they do not contain any secrets such as usernames, passwords, or access keys.
 
+    #### [SQL authentication](#tab/password)
+
+
+    ```javascript
+    require('dotenv').config()
+
+    const server = process.env.AZURE_SQL_SERVER;
+    const database = process.env.AZURE_SQL_DATABASE;
+    const user = process.env.AZURE_SQL_USER;
+    const password = process.env.AZURE_SQL_PASSWORD;
+
+    export const config = {
+        server,              // SERVER.database.windows.net
+        port: 1433,
+        database,
+        user,
+        password,
+        options: {
+            encrypt: true
+        }
+    }
+    ```
+
+---
+
 1. Create a **database.js** file and add the following code:
 
     ```javascript
@@ -335,7 +362,6 @@ The **mssql** package implements passwordless connections to Azure SQL Database 
     
       constructor(config) {
         this.config = config;
-        console.log(`Database: config: ${JSON.stringify}`)
       }
     
       async connect() {
@@ -444,7 +470,11 @@ The app is ready to be tested locally. Make sure you're signed in to the Azure C
 1. Run the application with `node app.js`. The app starts on port 3000.
 1. In a browser, navigate to the OpenAPI explorer at **http://localhost:3000/api-docs**.
 1. On the Swagger UI page, expand the POST method and select **Try it**.
-1. Modify the sample JSON to include values for the properties. The Id property is ignored. 1. Select **Execute** to add a new record to the database. The API returns a successful response.
+1. Modify the sample JSON to include values for the properties. The Id property is ignored. 
+
+    :::image type="content" source="media/passwordless-connections/api-testing-javascript.png" lightbox="media/passwordless-connections/api-testing-javascript.png" alt-text="A screenshot showing how to test the API.":::
+
+1. Select **Execute** to add a new record to the database. The API returns a successful response.
 1. Expand the **GET** method on the Swagger UI page and select **Try it**. Select **Execute**, and the person you just created is returned.
 
 ## Deploy to Azure App Service
@@ -452,7 +482,7 @@ The app is ready to be tested locally. Make sure you're signed in to the Azure C
 The app is ready to be deployed to Azure. Visual Studio can create an Azure App Service and deploy your application in a single workflow.
 
 1. Make sure the app is stopped and builds successfully.
-1. In Visual Studio's **Solution Explorer** window, right-click on the top-level project node and select **Publish**.
+1. In Visual Studio Code's **Solution Explorer** window, right-click on the top-level project node and select **Publish**.
 1. In the publishing dialog, select **Azure** as the deployment target, and then select **Next**.
 1. For the specific target, select **Azure App Service (Windows)**, and then select **Next**.
 1. Select the green **+** icon to create a new App Service to deploy to and enter the following values:

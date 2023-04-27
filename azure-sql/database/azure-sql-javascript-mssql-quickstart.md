@@ -482,33 +482,38 @@ The app is ready to be tested locally. Make sure you're signed in to the Azure C
 The app is ready to be deployed to Azure. Visual Studio can create an Azure App Service and deploy your application in a single workflow.
 
 1. Make sure the app is stopped and builds successfully.
-1. In Visual Studio Code's **Solution Explorer** window, right-click on the top-level project node and select **Publish**.
-1. In the publishing dialog, select **Azure** as the deployment target, and then select **Next**.
-1. For the specific target, select **Azure App Service (Windows)**, and then select **Next**.
-1. Select the green **+** icon to create a new App Service to deploy to and enter the following values:
+1. In Visual Studio Code's **Azure Explorer** window, right-click on the **App Services** node and select **Create New Web App (Advanced)**.
+1. Use the following table to create the App Service:
 
-    * **Name**: Leave the default value.
-    * **Subscription name**: Select the subscription to deploy to.
-    * **Resource group**: Select **New** and create a new resource group called *msdocs-dotnet-sql*.
-    * **Hosting Plan**: Select **New** to open the hosting plan dialog. Leave the default values and select **OK**.
-    * Select **Create** to close the original dialog. Visual Studio creates the App Service resource in Azure.
+    |Prompt|Value|
+    |--|--|
+    |Enter a globally unique name for the new web app.|Enter a prompt such as `azure-sql-passwordless`. Post-pend a unique string such as `123`.|
+    |Select a resource group for new resources.| Select **+Create a new resource group** then select the default name.|
+    |Select a runtime stack.|Select an LTS version of the stack.|
+    |Select an OS.|Select **Linux**.|
+    |Select a location for new resources.|Select a location close to you.|
+    |Select a Linux App Service plan.|Select **Create new App Service plan.** then select the default name.|
+    |Select a pricing tier.|Select **Free (F1)**.|
+    |Select an Application Insights resource for your app.|Select **Skip for now**.|
 
-        :::image type="content" source="media/passwordless-connections/create-app-service-small.png" lightbox="media/passwordless-connections/create-app-service.png" alt-text="A screenshot showing how to deploy with Visual Studio.":::
+1. Wait until the **Azure: Activity Log** reports the resource creation completed successfully.
+1. In the **Azure Explorer**, expand the **App Services** node and right-click your new app. 
+1. Select **Deploy to Web App**.
 
-1. Once the resource is created, make sure it's selected in the list of app services, and then select **Next**.
-1. On the **API Management** step, select the **Skip this step** checkbox at the bottom and then select **Finish**.
+    :::image type="content" source="media/passwordless-connections/visual-studio-code-web-app-deploy.png" alt-text="Screenshot of Visual Studio Code in the Azure explorer with the Deploy to Web App highlighted.":::
 
-1. Select **Publish** in the upper right of the publishing profile summary to deploy the app to Azure.
+1. Select the root folder of the JavaScript project.
+1. When the Visual Studio Code pop-up appears, select **Deploy**.
 
-When the deployment finishes, Visual Studio launches the browser to display the hosted app, but at this point the app doesn't work correctly on Azure. You still need to configure the secure connection between the App Service and the SQL database to retrieve your data.
+When the deployment finishes, the app doesn't work correctly on Azure. You still need to configure the secure connection between the App Service and the SQL database to retrieve your data.
 
 ## Connect the App Service to Azure SQL Database
 
 The following steps are required to connect the App Service instance to Azure SQL Database:
 
-1) Create a managed identity for the App Service. The `Microsoft.Data.SqlClient` library included in your app will automatically discover the managed identity, just like it discovered your local Visual Studio user.
-2) Create a SQL database user and associate it with the App Service managed identity.
-3) Assign SQL roles to the database user that allow for read, write, and potentially other permissions.
+1. Create a managed identity for the App Service.
+1. Create a SQL database user and associate it with the App Service managed identity.
+1. Assign SQL roles to the database user that allow for read, write, and potentially other permissions.
 
 There are multiple tools available to implement these steps:
 
@@ -526,11 +531,14 @@ az webapp connection create sql
 --system-identity
 ```
 
+> [!TIP]
+> Use the cloud shell, available in the Azure portal, to run the Azure CLI command. The cloud shell has the latest versio of the Azure CLI.
+
 You can verify the changes made by Service Connector on the App Service settings.
 
-1) Navigate to the **Identity** page for your App Service. Under the **System assigned** tab, the **Status** should be set to **On**. This value means that a system-assigned managed identity was enabled for your app.
-
-2) Navigate to the **Configuration** page for your App Service. Under the **Connection strings** tab, you should see a connection string called **AZURE_SQL_CONNECTIONSTRING**. Select the **Click to show value** text to view the generated passwordless connection string. The name of this connection string aligns with the one you configured in your app, so it will be discovered automatically when running in Azure.
+1. In Visual Studio Code, in the Azure explorer, right-click your App Service and select **Open in portal**.
+1. Navigate to the **Identity** page for your App Service. Under the **System assigned** tab, the **Status** should be set to **On**. This value means that a system-assigned managed identity was enabled for your app.
+1. Navigate to the **Configuration** page for your App Service. Under the **Application Settings** tab, you should see a connection string called **AZURE_SQL_CONNECTIONSTRING**. Select the **Click to show value** text to view the generated passwordless connection string. The name of this connection string aligns with the one you configured in your app, so it will be discovered automatically when running in Azure.
 
 ## [Azure portal](#tab/azure-portal)
 

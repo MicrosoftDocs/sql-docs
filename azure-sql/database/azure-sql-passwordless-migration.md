@@ -188,7 +188,7 @@ Create a SQL database user that maps back to the user-assigned managed identity.
     GO
     ```
 
-    :::image type="content" source="media/passwordless-connections/query-editor-identity-small.png" lightbox="media/passwordless-connections/query-editor-identity.png" alt-text="A screenshot showing how to use the Azure Query editor.":::
+    :::image type="content" source="media/passwordless-connections/query-editor-identity-small.png" lightbox="media/passwordless-connections/query-editor-identity.png" alt-text="A screenshot showing how to use the Azure Query editor to create a SQL user for a managed identity.":::
 
 ---
 

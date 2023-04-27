@@ -61,7 +61,7 @@ Create a user in Azure SQL Database that corresponds to the Azure account you us
     GO
     ```
 
-    :::image type="content" source="media/passwordless-connections/query-editor-small.png" lightbox="media/passwordless-connections/query-editor.png" alt-text="A screenshot showing how to use the Azure Query editor.":::
+    :::image type="content" source="media/passwordless-connections/query-editor-user-small.png" lightbox="media/passwordless-connections/query-editor-user.png" alt-text="A screenshot showing how to use the Azure Query editor.":::
 
 ### Update the local connection configuration
 
@@ -188,7 +188,7 @@ Create a SQL database user that maps back to the user-assigned managed identity.
     GO
     ```
 
-    :::image type="content" source="media/passwordless-connections/query-editor-small.png" lightbox="media/passwordless-connections/query-editor.png" alt-text="A screenshot showing how to use the Azure Query editor.":::
+    :::image type="content" source="media/passwordless-connections/query-editor-identity-small.png" lightbox="media/passwordless-connections/query-editor-identity.png" alt-text="A screenshot showing how to use the Azure Query editor.":::
 
 ---
 

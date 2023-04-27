@@ -333,8 +333,8 @@ The **mssql** package implements passwordless connections to Azure SQL Database 
 
     const server = process.env.AZURE_SQL_SERVER;
     const database = process.env.AZURE_SQL_DATABASE;
-    const user = process.env.AZURE_SQL_USER;
-    const password = process.env.AZURE_SQL_PASSWORD;
+    const port = +process.env.AZURE_SQL_PORT;
+    const type = process.env.AZURE_SQL_AUTHENTICATIONTYPE;
 
     export const config = {
         server,              // SERVER.database.windows.net
@@ -538,7 +538,18 @@ You can verify the changes made by Service Connector on the App Service settings
 
 1. In Visual Studio Code, in the Azure explorer, right-click your App Service and select **Open in portal**.
 1. Navigate to the **Identity** page for your App Service. Under the **System assigned** tab, the **Status** should be set to **On**. This value means that a system-assigned managed identity was enabled for your app.
-1. Navigate to the **Configuration** page for your App Service. Under the **Application Settings** tab, you should see a connection string called **AZURE_SQL_CONNECTIONSTRING**. Select the **Click to show value** text to view the generated passwordless connection string. The name of this connection string aligns with the one you configured in your app, so it will be discovered automatically when running in Azure.
+1. Navigate to the **Configuration** page for your App Service. Under the **Application Settings** tab, you should see several environment variables, which were already in the **mssql** configuration object. 
+
+    |Property|
+    |--|
+    |AZURE_SQL_SERVER|
+    |AZURE_SQL_DATABASE|
+    |AZURE_SQL_PORT|
+    |AZURE_SQL_AUTHENTICATIONTYPE|
+
+    Don't delete or change the property names or values.
+
+
 
 ## [Azure portal](#tab/azure-portal)
 
@@ -546,17 +557,20 @@ The Azure portal allows you to work with managed identities and run queries agai
 
 ### Create the managed identity
 
-1) In the Azure portal, navigate to your App Service and select **Identity** on the left navigation.
+1. In the Azure portal, navigate to your App Service and select **Identity** on the left navigation.
 
-2) On the identity page, make sure the **Enable system-assigned managed identity** option is enabled. When this setting is enabled, a system-assigned managed identity is created with the same name as your App Service. System-assigned identities are tied to the service instance and are destroyed with the app when it's deleted.
+1. On the identity page, change the **System-assigned** status to **on** and select **Save**. 
+1. When asked to enable the identity, select **Yes**.
+
+    When this setting is enabled, a system-assigned managed identity is created with the same name as your App Service. System-assigned identities are tied to the service instance and are destroyed with the app when it's deleted.
 
 ### Create the database user and assign roles
 
-1) In the Azure portal, browse to your SQL database and select **Query editor (preview)**.
+1. In the Azure portal, browse to your SQL database and select **Query editor (preview)**.
 
-2) Select **Continue as `<your-username>`** on the right side of the screen to sign into the database using your account.
+1. Select **Continue as `<your-username>`** on the right side of the screen to sign into the database using your account.
 
-3) On the query editor view, run the following T-SQL commands:
+1. On the query editor view, run the following T-SQL commands:
 
     ```sql
     CREATE USER <your-app-service-name> FROM EXTERNAL PROVIDER;

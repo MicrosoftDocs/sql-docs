@@ -77,19 +77,23 @@ Create a new Python project using Visual Studio Code.
 
 ## Install the `pyodbc` library
 
-To connect to Azure SQL Database using Python, install the `pyodbc` library. This package acts as a data provider for connecting to databases, executing commands, and retrieving results.
+To connect to Azure SQL Database using Python, install the `pyodbc` driver. This package acts as a data provider for connecting to databases, executing commands, and retrieving results.
 
-In the terminal, run the following command to install the `pyodbc` package:
+In the terminal, run the following command to install the `pyodbc` driver:
 
 ```bash
 pip install pyodbc
 ```
 
+For details and specific instructions for all operating systems, see [Configure development environment for pyodbc Python development](/sql/connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development).
+
 ## Add code to connect to Azure SQL Database
 
-The `pyodbc` library uses a class called `DefaultAzureCredential` to implement passwordless connections to Azure SQL Database, which you can learn more about on the `DefaultAzureCredential` overview. `DefaultAzureCredential` is provided by the Azure Identity library on which the SQL client library depends.
+The `pyodbc` driveer uses the class `DefaultAzureCredential` class to implement passwordless connections to Azure SQL Database, which you can learn more about on the [DefaultAzureCredential overview](/python/api/overview/azure/identity-readme). **DefaultAzureCredential** is provided by the Azure Identity library on which the SQL client library depends.
 
-Complete the following steps to connect to Azure SQL Database using the `pyodbc` library and `DefaultAzureCredential`:
+`DefaultAzureCredential` supports multiple authentication methods and determines which to use at runtime. This approach enables your app to use different authentication methods in different environments (local vs. production) without implementing environment-specific code. The [Azure Identity library overview](/python/api/overview/azure/Identity-readme#defaultazurecredential) explains the order and locations in which `DefaultAzureCredential` looks for credentials.
+
+Complete the following steps to connect to Azure SQL Database using the `pyodbc` driver and `DefaultAzureCredential`:
 
 1. Update the environment variables in your local system to include the passwordless connection string. Remember to update the `<your database-server-name>` and `<your-database-name>` placeholders.
 

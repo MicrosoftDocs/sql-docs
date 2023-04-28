@@ -78,11 +78,11 @@ The Azure portal allows you to work with managed identities and run queries agai
 
     |Property|Value|
     |--|--|
-    |AZURE_SQL_SERVER|Use your SERVER name as part of the value: `SERVER.database.windows.net`|
+    |AZURE_SQL_SERVER|Use your SERVER name as part of the value: `SERVER.database.windows.net`.|
     |AZURE_SQL_DATABASE|Use your database name.|
-    |AZURE_SQL_PORT|Use the default port: `1433`|
-    |AZURE_SQL_USER|Use the name of the user you're created when you created the Azure SQL database.|
-    |AZURE_SQL_PASSWORD|Use the password you created when you created the Azure SQL database.|
+    |AZURE_SQL_PORT|Use the default port: `1433`.|
+    |AZURE_SQL_AUTHENTICATIONTYPE|Use `azure-active-directory-default`.|
+
 
 1. When you're done adding settings, select **Save**.
 

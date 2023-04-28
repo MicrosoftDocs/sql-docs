@@ -82,7 +82,7 @@ The steps in this section create a .NET Minimal Web API by using either the .NET
     });
     ```
 
-1. Create a **person.js** file and add the following code:
+1. Create a **person.js** route file and add the following code:
 
     ```javascript
     const express = require("express");
@@ -177,7 +177,7 @@ The steps in this section create a .NET Minimal Web API by using either the .NET
     module.exports = router;
     ```
 
-1. Create a **opanapi.js** file and add the following code:
+1. Create a **opanapi.js** route file and add the following code for the OpenApi UI explorer:
 
     ```javascript
     const express = require("express");
@@ -350,11 +350,10 @@ module.exports = {
 ```
 
 > [!WARNING]
-> Use caution when managing connection objects that contain secrets such as usernames, passwords, or access keys. These secrets shouldn't be committed to source control or placed in unsecure locations where they might be accessed by unintended users. During local development, on a real app, you'll generally connect to a local database that doesn't require storing secrets or connecting directly to Azure.
+> Use caution when managing connection objects that contain secrets such as usernames, passwords, or access keys. These secrets shouldn't be committed to source control or placed in unsecure locations where they might be accessed by unintended users.
 
 ---
 
----
 
 ## Add the code to connect to Azure SQL Database
 
@@ -475,7 +474,7 @@ module.exports = {
 The app is ready to be tested locally. Make sure you're signed in to the Azure Clode in Visual Studio Code with the same account you set as the admin for your database.
 
 1. Run the application with `node app.js`. The app starts on port 3000.
-1. In a browser, navigate to the OpenAPI explorer at **http://localhost:3000/api-docs**.
+1. In a browser, navigate to the OpenAPI explorer at **http://localhost:3000**.
 1. On the Swagger UI page, expand the POST method and select **Try it**.
 1. Modify the sample JSON to include values for the properties. The Id property is ignored. 
 
@@ -528,7 +527,7 @@ When the deployment finishes, the app doesn't work correctly on Azure. You still
 
 ## Test the deployed application
 
-Browse to the URL of the app to test that the connection to Azure SQL Database is working. You can locate the URL of your app on the App Service overview page. Append the `/api-docs` path to the end of the URL to browse to the same endpoint you tested locally.
+Browse to the URL of the app to test that the connection to Azure SQL Database is working. You can locate the URL of your app on the App Service overview page. 
 
 The person you created locally should display in the browser. Congratulations! Your application is now connected to Azure SQL Database in both local and hosted environments.
 

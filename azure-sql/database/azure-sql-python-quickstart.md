@@ -77,7 +77,7 @@ Create a new Python project using Visual Studio Code.
     
 1. Create a new Python file called `app.py`.
 
-## Install the `pyodbc` library
+## Install the pyodbc driver
 
 To connect to Azure SQL Database using Python, install the `pyodbc` driver. This package acts as a data provider for connecting to databases, executing commands, and retrieving results.
 

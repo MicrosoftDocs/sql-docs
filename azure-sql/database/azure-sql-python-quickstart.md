@@ -97,62 +97,64 @@ The `pyodbc` driveer uses the class `DefaultAzureCredential` class to implement 
 
 Complete the following steps to connect to Azure SQL Database using the `pyodbc` driver and `DefaultAzureCredential`:
 
-1. Update the environment variables in your local system to include the passwordless connection string. Remember to update the `<your database-server-name>` and `<your-database-name>` placeholders.
+1. Create an  environment variable in your environment to define the passwordless connection string `AZURE_SQL_CONNECTIONSTRING`.
 
-The passwordless connection string includes a configuration value of `Authentication=Active Directory Default`, which instructs the app to use `DefaultAzureCredential` to connect to Azure services. The `pyodbc` library implements this functionality internally. When the app runs locally, it authenticates with the user you're signed into Visual Studio Code with. Once the app deploys to Azure, the same code discovers and applies the managed identity that is associated with the hosted app, which you configure later.
+    The passwordless connection string includes a configuration value of `Authentication=ActiveDirectoryInteractive`, which instructs the app to use `DefaultAzureCredential` to connect to Azure services. The `pyodbc` library implements this functionality internally. When the app runs locally, it authenticates with the user you're signed into Visual Studio Code with. Once the app deploys to Azure, the same code discovers and applies the managed identity that is associated with the hosted app, which you configure later.
 
-1. Add the following sample code to the `app.py` file. This code performs the following important steps:
+    The general form of the connection string is `server=Server;database=Database;UID=UserName;Authentication=ActiveDirectoryInteractive;Encrypt=yes;`. For more information, see [Example connection string for Azure Active Directory interactive authentication](/sql/connect/python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc#example-connection-string-for-azure-active-directory-interactive-authentication).
 
-    * Retrieves the passwordless connection string from the environment variables
+1. Add the sample code to the `app.py` file. This code:
 
-    * Creates a `Person` table in the database during startup (for testing scenarios only)
+    * Retrieves the passwordless connection string from the environment variable.
 
-    * Creates a function to retrieve the `Person` records stored in the database
+    * Creates a `Person` table in the database during startup (for testing scenarios only).
 
-    * Creates a function to add new `Person` records to the database
+    * Creates a function to retrieve the `Person` records stored in the database.
 
-```python
-import os
-import pyodbc
+    * Creates a function to add new `Person` records to the database.
 
-connection_string = os.environ["AZURE_SQL_CONNECTIONSTRING"]
-
-try:
-    # Table would be created ahead of time in production
-    conn = pyodbc.connect(connection_string)
-    cursor = conn.cursor()
-
-    cursor.execute("""
-        CREATE TABLE Persons (
-            ID int NOT NULL PRIMARY KEY IDENTITY,
-            FirstName varchar(255),
-            LastName varchar(255)
-        );
-    """)
-
-    conn.commit()
-except Exception as e:
-    # Table may already exist
-    print(e)
-
-def get_persons():
-    rows = []
-
-    with pyodbc.connect(connection_string) as conn:
+    ```python
+    import os
+    import pyodbc
+    
+    connection_string = os.environ["AZURE_SQL_CONNECTIONSTRING"]
+    
+    try:
+        # Table would be created ahead of time in production
+        conn = pyodbc.connect(connection_string)
         cursor = conn.cursor()
-        cursor.execute("SELECT * FROM Persons")
-
-        for row in cursor.fetchall():
-            rows.append(f"{row.ID}, {row.FirstName}, {row.LastName}")
-
-    return rows
-
-def create_person(first_name, last_name):
-    with pyodbc.connect(connection_string) as conn:
-        cursor = conn.cursor()
-        cursor.execute(f"INSERT INTO Persons (FirstName, LastName) VALUES (?, ?)", first_name, last_name)
+    
+        cursor.execute("""
+            CREATE TABLE Persons (
+                ID int NOT NULL PRIMARY KEY IDENTITY,
+                FirstName varchar(255),
+                LastName varchar(255)
+            );
+        """)
+    
         conn.commit()
-```
+    except Exception as e:
+        # Table may already exist
+        print(e)
+    
+    def get_persons():
+        rows = []
+    
+        with pyodbc.connect(connection_string) as conn:
+            cursor = conn.cursor()
+            cursor.execute("SELECT * FROM Persons")
+    
+            for row in cursor.fetchall():
+                rows.append(f"{row.ID}, {row.FirstName}, {row.LastName}")
+    
+        return rows
+    
+    def create_person(first_name, last_name):
+        with pyodbc.connect(connection_string) as conn:
+            cursor = conn.cursor()
+            cursor.execute(f"INSERT INTO Persons (FirstName, LastName) VALUES (?, ?)", first_name, last_name)
+            conn.commit()
+    ```
 
 ## Run and test the app locally
 
@@ -160,7 +162,7 @@ The app is ready to be tested locally. Make sure you're signed into Visual Studi
 
 1. Run the `app.py` file in Visual Studio Code.
 
-1. Use a tool like Postman or curl to test the API endpoints for creating and retrieving `Person` records.
+1. Use a tool like Postman or curl to test the API endpoints for creating and retrieving `Person` records. Or, go the Azure portal and view the database.
 
 ## Deploy to Azure App Service
 

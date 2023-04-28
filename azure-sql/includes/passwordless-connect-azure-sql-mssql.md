@@ -1,14 +1,14 @@
 The following steps are required to connect the App Service instance to Azure SQL Database:
 
 1. Create a managed identity for the App Service.
-1. Create a SQL database user and associate it with the App Service managed identity.
+1. Create an SQL database user and associate it with the App Service managed identity.
 1. Assign SQL roles to the database user that allow for read, write, and potentially other permissions.
 
 There are multiple tools available to implement these steps:
 
 ## [Service Connector (Recommended)](#tab/service-connector)
 
-Service Connector is a tool that streamlines authenticated connections between different services in Azure. Service Connector currently supports connecting an App Service to a SQL database via the Azure CLI using the `az webapp connection create sql` command. This single command completes the three steps mentioned above for you.
+Service Connector is a tool that streamlines authenticated connections between different services in Azure. Service Connector currently supports connecting an App Service to an SQL database via the Azure CLI using the `az webapp connection create sql` command. This single command completes the three steps mentioned above for you.
 
 ```azurecli
 az webapp connection create sql \
@@ -71,20 +71,20 @@ The Azure portal allows you to work with managed identities and run queries agai
 
     :::image type="content" source="../database/media/passwordless-connections/query-editor-small.png" lightbox="../database/media/passwordless-connections/query-editor.png" alt-text="A screenshot showing how to use the Azure Query editor.":::
 
-    This SQL script creates a SQL database user that maps back to the managed identity of your App Service instance. It also assigns the necessary SQL roles to the user to allow your app to read, write, and modify the data and schema of your database. After this step is completed, your services are connected.
+    This SQL script creates an SQL database user that maps back to the managed identity of your App Service instance. It also assigns the necessary SQL roles to the user to allow your app to read, write, and modify the data and schema of your database. After this step is completed, your services are connected.
 
-1. Create the required environment variables for your App Service instance. In the Azure portal, navigate to your App Service and select **Configuration** on the left navigation.
-1. Select **+ New application setting** for each environment variable below. Add your own appropriate value.
+1. In the Azure portal, navigate to your App Service and select **Configuration** on the left navigation.
+1. Select **+ New application setting** for each environment variable below. Add your own appropriate value to create the required environment variables for your App Service instance to connect to your database.
 
-    |Property|
-    |--|
-    |AZURE_SQL_SERVER|
-    |AZURE_SQL_DATABASE|
-    |AZURE_SQL_PORT|
-    |AZURE_SQL_USER|
-    |AZURE_SQL_PASSWORD|
+    |Property|Value|
+    |--|--|
+    |AZURE_SQL_SERVER|Use your SERVER name as part of the value: `SERVER.database.windows.net`|
+    |AZURE_SQL_DATABASE|Use your database name.|
+    |AZURE_SQL_PORT|Use the default port: `1433`|
+    |AZURE_SQL_USER|Use the name of the user you're created when you created the Azure SQL database.|
+    |AZURE_SQL_PASSWORD|Use the password you created when you created the Azure SQL database.|
 
-1. When you are done adding settings, select **Save**.
+1. When you're done adding settings, select **Save**.
 
 > [!IMPORTANT]
 > Although this solution provides a simple approach for getting started, it's not a best practice for production-grade environments. In those scenarios, the app shouldn't perform all operations using a single, elevated identity. You should try to implement the principle of least privilege by configuring multiple identities with specific permissions for specific tasks.

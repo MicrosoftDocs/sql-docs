@@ -18,7 +18,7 @@ This quickstart describes how to connect an application to a database in Azure S
 ## Prerequisites
 
 * An [Azure subscription](https://azure.microsoft.com/free/dotnet/).
-* A SQL database configured with Azure Active Directory (Azure AD) authentication. You can create one using the [Create database quickstart](./single-database-create-quickstart.md).
+* An SQL database configured with Azure Active Directory (Azure AD) authentication. You can create one using the [Create database quickstart](./single-database-create-quickstart.md).
 * [Node.js LTS](https://nodejs.org/)
 * [Visual Studio Code](https://code.visualstudio.com/).
 * [Visual Studio Code App Service extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice)
@@ -177,7 +177,7 @@ The steps in this section create a .NET Minimal Web API by using either the .NET
     module.exports = router;
     ```
 
-1. Create a **opanapi.js** route file and add the following code for the OpenApi UI explorer:
+1. Create a **opanapi.js** route file and add the following code for the OpenAPI UI explorer:
 
     ```javascript
     const express = require("express");
@@ -471,12 +471,12 @@ module.exports = {
 
 ## Test the app locally
 
-The app is ready to be tested locally. Make sure you're signed in to the Azure Clode in Visual Studio Code with the same account you set as the admin for your database.
+The app is ready to be tested locally. Make sure you're signed in to the Azure Cloud in Visual Studio Code with the same account you set as the admin for your database.
 
 1. Run the application with `node app.js`. The app starts on port 3000.
 1. In a browser, navigate to the OpenAPI explorer at **http://localhost:3000**.
 1. On the Swagger UI page, expand the POST method and select **Try it**.
-1. Modify the sample JSON to include values for the properties. The Id property is ignored. 
+1. Modify the sample JSON to include values for the properties. The ID property is ignored. 
 
     :::image type="content" source="media/passwordless-connections/api-testing-javascript.png" lightbox="media/passwordless-connections/api-testing-javascript.png" alt-text="A screenshot showing how to test the API.":::
 

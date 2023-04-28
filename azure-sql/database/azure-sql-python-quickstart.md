@@ -56,23 +56,23 @@ Create a new Python project using Visual Studio Code.
     mkdir python-sql-azure
     cd python-sql-azure
     ```
-    
+
 1. Create a virtual environment for the app.
 
     #### [Windows](#tab/windows)
-    
+
     ```Cmd
     py -m venv .venv
     .venv\scripts\activate
     ```
-    
+
     #### [macOS/Linux](#tab/mac-linux)
-    
+
     ```Bash
     python3 -m venv .venv
     source .venv/bin/activate
     ```
-    
+
     ---
     
 1. Create a new Python file called `app.py`.

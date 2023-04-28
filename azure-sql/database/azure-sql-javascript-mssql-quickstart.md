@@ -43,7 +43,7 @@ The steps in this section create a .NET Minimal Web API by using either the .NET
 1. Install the packages used in the sample code in this article:
 
     ```bash
-    npm install mssql dotenv swagger-jsdoc swagger-ui-express
+    npm install mssql cross-env dotenv swagger-ui-express yamljs
     ```
 
     The **dotenv** package is used for local development only. 

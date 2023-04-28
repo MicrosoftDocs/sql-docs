@@ -59,7 +59,7 @@ License type is a configuration setting of Azure Extension for SQL Server that d
 
 The following license types are supported:
 
-| License type | Description  | Long form   |  
+| License type | Description  | Short form   |  
 |---|---|---|
 | PAYG | Standard or Enterprise edition with pay-as-you-go billing through Microsoft Azure | Pay-as-you-go |
 | Paid | Standard or Enterprise edition license with Software Assurance or SQL Subscription  | License with software assurance |
@@ -68,7 +68,9 @@ The following license types are supported:
 * **PAYG**: Pay for your SQL Server software usage through Microsoft Azure. See [SQL Server prices and licensing](https://www.microsoft.com/sql-server/sql-server-2022-pricing).
 
   > [!IMPORTANT]
-  > Servers that use **PAYG** license type should stay continuously connected to Azure.
+  > For correct billing, servers that use **PAYG** license type should stay continuously connected to Azure. 
+  >
+  > Intermittent connectivity disruptions are tolerated with built-in resilience.
 
 * **Paid** and **LicenseOnly**: Use an existing license agreement. Usage implies that you already have the necessary licenses. In these cases, your software usage will be reported to you using $0 meters. You can analyze your usage in the [Cost Management + Billing portal](/azure/cost-management-billing/) to make sure you have enough licenses for all your installed SQL Server instances.
 

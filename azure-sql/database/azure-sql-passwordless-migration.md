@@ -23,7 +23,7 @@ Passwordless connections use Azure Active Directory (Azure AD) authentication to
 - [Azure AD authentication overview](/azure/azure-sql/database/authentication-aad-overview)
 - [Configure Azure AD auth](/azure/azure-sql/database/authentication-aad-configure)
 
-For the purposes of this migration guide, ensure you have an Azure Active Directory admin assigned to your Azure SQL Database.
+For this migration guide, ensure you have an Azure AD admin assigned to your Azure SQL Database.
 
 1) Navigate to the the **Azure Active Directory** page of your logical server.
 
@@ -79,12 +79,12 @@ using SqlDataReader reader = command.ExecuteReader();
 
 To update the referenced connection string (`AZURE_SQL_CONNECTIONSTRING`) to use the passwordless connection string format:
 
-1. Locate your connection string. For local development with .NET applications this is usually stored in one of the following locations:
+1. Locate your connection string. For local development with .NET applications, this is usually stored in one of the following locations:
     * The `appsettings.json` configuration file for your project.  
     * The `launchsettings.json` configuration file for Visual Studio projects.
     * Local system or container environment variables.
 
-2. Replace the connection string value with the following passwordless format and update the `<database-server-name>` and `<database-name`> placeholders with your own values:
+2. Replace the connection string value with the following passwordless format. Update the `<database-server-name>` and `<database-name`> placeholders with your own values:
 
     ```json
     "Server=tcp:<database-server-name>.database.windows.net,1433;Initial Catalog=<database-name>;
@@ -138,7 +138,7 @@ Configure your web app to use the user-assigned managed identity you created.
 
 # [Azure portal](#tab/azure-portal-assign)
 
-Complete the following steps in the Azure portal to associate the user-assigned identity with your app. These same steps apply to the following Azure services:
+Complete the following steps in the Azure portal to associate the user-assigned managed identity with your app. These same steps apply to the following Azure services:
 
 * Azure Spring Apps
 * Azure Container Apps
@@ -193,13 +193,12 @@ Create a SQL database user that maps back to the user-assigned managed identity.
 ---
 
 > [!IMPORTANT]
-> Use caution when assigning database user roles in enterprise production environments. In those scenarios the app should not perform all operations using a single, elevated identity. Try to implement the principle of least privilege by configuring multiple identities with specific permissions for specific tasks.
+> Use caution when assigning database user roles in enterprise production environments. In those scenarios, the app shouldn't perform all operations using a single, elevated identity. Try to implement the principle of least privilege by configuring multiple identities with specific permissions for specific tasks.
 >
 > You can read more about configuring database roles and security on the following resources:
 >
-> [Tutorial: Secure a database in Azure SQL Database](/azure/azure-sql/database/secure-database-tutorial)
->
-> [Authorize database access to SQL Database](/azure/azure-sql/database/logins-create-manage)
+> * [Tutorial: Secure a database in Azure SQL Database](/azure/azure-sql/database/secure-database-tutorial)
+> * [Authorize database access to SQL Database](/azure/azure-sql/database/logins-create-manage)
 
 ### Update the connection string
 

@@ -193,7 +193,7 @@ Assuming your SQL Server VM name is `sqlvm` and your resource group is `myResour
    --msi-client-id 11111111-2222-3333-4444-555555555555
    ```
 
-- Enable Azure AD authentication with a user-assigned managed identity but skip client-side validation and rely on the server-side validation that always happen
+- Enable Azure AD authentication with a user-assigned managed identity but skip client-side validation and rely on the server-side validation that always happens
 
    ```azurecli
    az sql vm enable-azure-ad-auth -n sqlvm -g myresourcegroup 

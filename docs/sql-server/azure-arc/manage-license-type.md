@@ -16,7 +16,7 @@ This article explains how to manage SQL Server licenses and set billing options.
 
 You can use Azure Arc-enabled SQL Server to accurately track your usage of the SQL Server software and manage your license compliance. You may also elect to pay for the SQL software usage directly through Microsoft Azure using a pay-as-you-go billing option. You can control how you pay for SQL Server software through Azure portal or API. [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] allows you to select a pay-as-you-go billing option during setup.
 
-License type is a property of Azure extension for SQL Server resource. It applies to all instances installed on the server where the extension is running. For your convenience it is also included in Azure Portal overview for an Arc-enabled SQL Server instance as **Host License Type**.
+License type is a property of Azure extension for SQL Server resource. It applies to all instances installed on the server where the extension is running. For your convenience it is also included in Azure portal overview for an Arc-enabled SQL Server instance as **Host License Type**.
 
 [!INCLUDE [license-types](includes/license-types.md)]
 
@@ -70,7 +70,7 @@ The following license types are supported:
   > [!IMPORTANT]
   > Instances of SQL Server that use **PAYG** license type should stay continuously connected to Azure. 
 
-* **Paid** and **LicenseOnly** use an existing license agreement. Usage implies that you already have the necessary licenses. In these cases, your software usage will be reported to you using $0 meters. You can analyze your usage in the [Cost Management + Billing portal](/azure/cost-management-billing/) to make sure you have enough licenses for all your installed SQL Server instances.
+* **Paid** and **LicenseOnly**: Use an existing license agreement. Usage implies that you already have the necessary licenses. In these cases, your software usage will be reported to you using $0 meters. You can analyze your usage in the [Cost Management + Billing portal](/azure/cost-management-billing/) to make sure you have enough licenses for all your installed SQL Server instances.
 
 The billing granularity is one hour. Pay-as-you-go charges are calculated based on the SQL Server edition and the size of the hosting server at any time during that hour. The size is measured in cores if the SQL Server instance is installed on a physical server, and logical cores (vCores) if the SQL Server instance is installed on a virtual machine. When multiple instances of SQL Server are installed on the same OS, only one instance must be licensed for the full size of the host, subject to minimum core size. See [SQL Server licensing guide](https://www.microsoft.com/licensing/docs/view/SQL-Server) for details. The following rules apply:
 
@@ -95,7 +95,7 @@ The following table shows the meters that track usage and billing for different 
 | Standard | Standard | PAYG | No | Std edition - PAYG |
 |  Standard | Standard | Paid | No | Std edition - AHB |
 | Enterprise Core | Enterprise | LicenseOnly | Yes or No | Ent edition - License only |
-| Enterprise (Server/CAL) | Enterprise | LicenseOnly | Yes or No | n/a¹ |
+| Enterprise (Server/CAL) | Enterprise | LicenseOnly | Yes or No | n/a <sup>1</sup>|
 |  Standard | Standard | LicenseOnly | No | Std edition - License only |
 | Enterprise Core | Enterprise | PAYG or Paid | Yes | Ent edition - DR replica |
 | Standard | Standard | PAYG or Paid | Yes | Std edition - DR replica |
@@ -104,13 +104,13 @@ The following table shows the meters that track usage and billing for different 
 | Web | Web | LicenseOnly | n/a | Web edition |
 | Express | Express | LicenseOnly | n/a | Express edition |
 
-¹ Enterprise Server/CAL is allowed to connect but usage meters are not emitted because it is not a core-based license.
+<sup>1</sup> Enterprise Server/CAL is allowed to connect but usage meters are not emitted because it is not a core-based license.
 
 ## Selecting license type
 
 License type is a property of Azure extension for SQL Server. Only one instance of the extension can be installed on each machine. It manages all SQL Server instances installed on that machine. To select license type, use one of the following methods:
    
-The license type value is shared by all SQL Server instances and for your convenience, it is visible in the overview blade of Arc-enabled SQL Server as shown.
+All instances share the license type value, it is visible in the overview blade of Arc-enabled SQL Server as shown.
 
 ![Screenshot of Azure Arc-enabled SQL Server instance configured for pay-as-you-go licensing.](media/billing/overview-of-sql-server-azure-arc.png)
 
@@ -134,7 +134,7 @@ $Settings = @{ SqlManagement = @{ IsEnabled = $true }; ExcludedSqlInstances = @(
 New-AzConnectedMachineExtension -Name "WindowsAgent.SqlServer" -ResourceGroupName {your resource group name} -MachineName {your machine name} -Location {azure region} -Publisher "Microsoft.AzureData" -Settings $Settings -ExtensionType "WindowsAgent.SqlServer"
 ```
 
-To modify the license type for a larger scope, such as a resource group, subscription, or multiple subscriptions with a single command, use the [Modify license type](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/azure-arc-enabled-sql-server/modify-license-type) script. It is published as an open source SQL Server sample and includes the step-by-step instructions.
+To modify the license type for a larger scope, such as a resource group, subscription, or multiple subscriptions with a single command, use the [Modify license type](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/azure-arc-enabled-sql-server/modify-license-type) PowerShell script. It is published as an open source SQL Server sample and includes the step-by-step instructions.
 
 > [!TIP]  
 > Run the script from Azure Cloud shell as it has the required Azure PowerShell modules pre-installed and you will be automatically authenticated. For details, see [Running the script using Cloud Shell](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/azure-arc-enabled-sql-server/modify-license-type#running-the-script-using-cloud-shell).

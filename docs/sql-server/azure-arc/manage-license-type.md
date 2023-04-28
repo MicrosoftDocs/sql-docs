@@ -68,7 +68,7 @@ The following license types are supported:
 * **PAYG**: Pay for your SQL Server software usage through Microsoft Azure. See [SQL Server prices and licensing](https://www.microsoft.com/sql-server/sql-server-2022-pricing).
 
   > [!IMPORTANT]
-  > Instances of SQL Server that use **PAYG** license type should stay continuously connected to Azure. 
+  > Servers that use **PAYG** license type should stay continuously connected to Azure.
 
 * **Paid** and **LicenseOnly**: Use an existing license agreement. Usage implies that you already have the necessary licenses. In these cases, your software usage will be reported to you using $0 meters. You can analyze your usage in the [Cost Management + Billing portal](/azure/cost-management-billing/) to make sure you have enough licenses for all your installed SQL Server instances.
 

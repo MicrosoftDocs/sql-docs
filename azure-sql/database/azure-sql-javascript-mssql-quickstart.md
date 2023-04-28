@@ -45,6 +45,8 @@ The steps in this section create a .NET Minimal Web API by using either the .NET
     ```bash
     npm install mssql dotenv swagger-jsdoc swagger-ui-express
     ```
+
+    The **dotenv** package is used for local development only. 
     
 1. Open the project in Visual Studio Code.
 
@@ -57,21 +59,22 @@ The steps in this section create a .NET Minimal Web API by using either the .NET
 1. Create an **app.js** file and add the following code:
 
     ```javascript
-    import express from 'express';
-    import { swaggerUi, swaggerSpec } from './swagger';
+    const express = require('express');
     
-    // App route to database
-    import person from './person';
+    // Import App routes
+    const person = require('./person');
+    const openapi = require('./openapi');
     
     const port = process.env.PORT || 3000;
     
     const app = express();
     
-    // Swagger explorer route
-    app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
-    
-    // Person route
-    app.use('/users', person)
+    // Connect App routes
+    app.use('/api-docs', openapi);
+    app.use('/persons', person)
+    app.use('*', (_, res) => {
+      res.redirect('/api-docs');
+    })
     
     // Start the server
     app.listen(port, () => {
@@ -79,152 +82,36 @@ The steps in this section create a .NET Minimal Web API by using either the .NET
     });
     ```
 
-1. Create a **swagger.js** file and add the following code:
+1. Create a **person.js** file and add the following code:
 
     ```javascript
-    import path from 'path';
-    import swaggerUi from 'swagger-ui-express';
-    import swaggerJsdoc from 'swagger-jsdoc';
+    const express = require("express");
+    const Database = require("./dbazuresql");
+    const { config } = require("./config");
     
-    // Swagger definition
-    const swaggerDefinition = {
-        swagger: '2.0',
-        info: {
-            title: 'Users API',
-            version: '1.0.0',
-            description: 'API for managing users',
-        },
-        basePath: '/',
-    };
-    
-    const pathToSwagger = path.join(__dirname, './swagger.yml');
-    console.log(pathToSwagger);
-    
-    // Options for the swagger-jsdoc middleware
-    const options = {
-        swaggerDefinition,
-        apis: [pathToSwagger], // Replace this with the path to your Swagger specification file
-    };
-    
-    // Initialize swagger-jsdoc middleware
-    const swaggerSpec = swaggerJsdoc(options);
-    
-    export { swaggerUi, swaggerSpec };
-    ```
-
-1. Create a **swagger.yml** schema file to be used by the `swagger.js` file. Add the following YML code:
-
-    ```yml
-    swagger: '2.0'
-    info:
-      version: 1.0.0
-      title: Users API
-    paths:
-      /users:
-        get:
-          summary: Get all users
-          responses:
-            200:
-              description: OK
-              schema:
-                type: array
-                items:
-                  $ref: '#/definitions/User'
-        post:
-          summary: Create a new user
-          parameters:
-            - name: body
-              in: body
-              required: true
-              schema:
-                $ref: '#/definitions/User'
-          responses:
-            201:
-              description: Created
-              schema:
-                $ref: '#/definitions/User'
-      /users/{id}:
-        parameters:
-          - name: id
-            in: path
-            required: true
-            type: integer
-        get:
-          summary: Get a user by ID
-          responses:
-            200:
-              description: OK
-              schema:
-                $ref: '#/definitions/User'
-          404:
-            description: User not found
-        put:
-          summary: Update a user by ID
-          parameters:
-            - name: body
-              in: body
-              required: true
-              schema:
-                $ref: '#/definitions/User'
-          responses:
-            200:
-              description: OK
-              schema:
-                $ref: '#/definitions/User'
-          404:
-            description: User not found
-        delete:
-          summary: Delete a user by ID
-          responses:
-            204:
-              description: No Content
-          404:
-            description: User not found
-    definitions:
-      User:
-        type: object
-        properties:
-          id:
-            type: integer
-          name:
-            type: string
-          email:
-            type: string
-          password:
-            type: string
-    ```
-
-1. Create a **person.js** file and add the following code to provide the API route for users.
-
-    ```javascript
-    import express, { Router } from "express";
-    import Database from "../database";
-    import { config } from "../config";
-    
-    const router: Router = express.Router();
+    const router= express.Router();
     router.use(express.json());
-
+    
+    console.log(`DB Config: ${JSON.stringify(config)}`)
     const database = new Database(config);
     
     router.get('/', async (_, res) => {
         try {
-            // Return a list of users
-            const users = await database.readAll('Users');
-            console.log(`users: ${JSON.stringify(users)}`);
-            res.status(200).json(users);
+            // Return a list of persons
+            const persons = await database.readAll('Person');
+            console.log(`persons: ${JSON.stringify(persons)}`);
+            res.status(200).json(persons);
         } catch (err) {
             res.status(500).json({ error: err?.message })
         }
-    
     });
     
     router.post('/', async (req, res) => {
         try {
-            const user = req.body;
-            delete user.id;
-            console.log(`user: ${JSON.stringify(user)}`);
-    
-            const rowsAffected = await database.create('Users', user)
+            const person = req.body;
+            delete person.id;
+            console.log(`person: ${JSON.stringify(person)}`);
+            const rowsAffected = await database.create('Person', person)
             res.status(201).json({ rowsAffected })
     
         } catch (err) {
@@ -235,13 +122,12 @@ The steps in this section create a .NET Minimal Web API by using either the .NET
     
     router.get('/:id', async (req, res) => {
         try {
-            // Update the user with the specified ID
-            const userId = req.params.id;
-            console.log(`userId: ${userId}`);
-    
-            if (userId) {
-                const result = await database.read('Users', userId);
-                console.log(`users: ${JSON.stringify(result)}`);
+            // Update the person with the specified ID
+            const personId = req.params.id;
+            console.log(`personId: ${personId}`);
+            if (personId) {
+                const result = await database.read('Person', personId);
+                console.log(`persons: ${JSON.stringify(result)}`);
                 res.status(200).json(result);
             } else {
                 res.status(404);
@@ -249,23 +135,19 @@ The steps in this section create a .NET Minimal Web API by using either the .NET
         } catch (err) {
             res.status(500).json({ error: err?.message })
         }
-    
     });
     
     router.put('/:id', async (req, res) => {
         try {
-            // Update the user with the specified ID
-            const userId = req.params.id;
-            console.log(`userId: ${userId}`);
+            // Update the person with the specified ID
+            const personId = req.params.id;
+            console.log(`personId: ${personId}`);
+            const person = req.body;
     
-            const user = req.body;
-    
-            if (userId && user) {
-    
-                delete user.id;
-                console.log(`user: ${JSON.stringify(user)}`);
-    
-                const rowsAffected = await database.update('Users', userId, user);
+            if (personId && person) {
+                delete person.id;
+                console.log(`person: ${JSON.stringify(person)}`);
+                const rowsAffected = await database.update('Person', personId, person);
                 res.status(200).json({ rowsAffected })
             } else {
                 res.status(404);
@@ -277,14 +159,14 @@ The steps in this section create a .NET Minimal Web API by using either the .NET
     
     router.delete('/:id', async (req, res) => {
         try {
-            // Delete the user with the specified ID
-            const userId = req.params.id;
-            console.log(`userId: ${userId}`);
+            // Delete the person with the specified ID
+            const personId = req.params.id;
+            console.log(`personId: ${personId}`);
     
-            if (!userId) {
+            if (!personId) {
                 res.status(404)
             } else {
-                const rowsAffected = await database.delete('Users', userId);
+                const rowsAffected = await database.delete('Person', personId);
                 res.status(204).json({ rowsAffected })
             }
         } catch (err) {
@@ -292,79 +174,203 @@ The steps in this section create a .NET Minimal Web API by using either the .NET
         }
     });
     
-    export default router;
+    module.exports = router;
     ```
 
-## Add the code to connect to Azure SQL Database
+1. Create a **opanapi.js** file and add the following code:
+
+    ```javascript
+    const express = require("express");
+    const path = require('path');
+    const swaggerUi = require('swagger-ui-express');
+    const yaml = require('yamljs');
+    
+    const router = express.Router();
+    router.use(express.json());
+    
+    const pathToSpec = path.join(__dirname, './openApiSchema.yml');
+    const openApiSpec = yaml.load(pathToSpec);
+    
+    router.use('/', swaggerUi.serve, swaggerUi.setup(openApiSpec));
+    
+    module.exports = router;
+    ```
+
+1. Create a **openApiSchema.yml** schema file and add the following YML code:
+
+    ```yml
+    openapi: 3.0.0
+    info:
+      version: 1.0.0
+      title: Persons API
+    paths:
+      /persons:
+        get:
+          summary: Get all persons
+          responses:
+            '200':
+              description: OK
+              content:
+                application/json:
+                  schema:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Person'
+        post:
+          summary: Create a new person
+          requestBody:
+            required: true
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/Person'
+          responses:
+            '201':
+              description: Created
+              content:
+                application/json:
+                  schema:
+                    $ref: '#/components/schemas/Person'
+      /persons/{id}:
+        parameters:
+          - name: id
+            in: path
+            required: true
+            schema:
+              type: integer
+        get:
+          summary: Get a person by ID
+          responses:
+            '200':
+              description: OK
+              content:
+                application/json:
+                  schema:
+                    $ref: '#/components/schemas/Person'
+            '404':
+              description: Person not found
+        put:
+          summary: Update a person by ID
+          requestBody:
+            required: true
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/Person'
+          responses:
+            '200':
+              description: OK
+              content:
+                application/json:
+                  schema:
+                    $ref: '#/components/schemas/Person'
+            '404':
+              description: Person not found
+        delete:
+          summary: Delete a person by ID
+          responses:
+            '204':
+              description: No Content
+            '404':
+              description: Person not found
+    components:
+      schemas:
+        Person:
+          type: object
+          properties:
+            id:
+              type: integer
+              readOnly: true
+            firstName:
+              type: string
+            lastName:
+              type: string
+    ```
+
+## Configure the mssql connection object
 
 The **mssql** package implements passwordless connections to Azure SQL Database by providing a configuration setting for an authentication type. 
 
-1. Create a **config.js** file and add the following mssql configuration code to authenticate to Azure SQL.
+Create a **config.js** file and add the following mssql configuration code to authenticate to Azure SQL.
 
-    #### [Passwordless (Recommended)](#tab/passwordless)
+## [Passwordless (Recommended)](#tab/passwordless)
 
-    ```javascript
-    require('dotenv').config()
-    const server = process.env.AZURE_SQL_SERVER;
-    const database = process.env.AZURE_SQL_DATABASE;
-    const port = process.env.AZURE_SQL_PORT;
-    const type = process.env.AZURE_SQL_AUTHENTICATIONTYPE;
+```javascript
+require('dotenv').config({ debug: true })
+const server = process.env.AZURE_SQL_SERVER;
+const database = process.env.AZURE_SQL_DATABASE;
+const port = process.env.AZURE_SQL_PORT;
+const type = process.env.AZURE_SQL_AUTHENTICATIONTYPE;
 
-    export const config = {
-        server,              // SERVER.database.windows.net
-        port,
-        database,
-        authentication: {
-            // Azure AD Passwordless Authentication
-            type
-        },
-        options: {
-            encrypt: true
-        }
+const config = {
+    server,
+    port,
+    database,
+    authentication: {
+        type
+    },
+    options: {
+        encrypt: true
     }
-    ```
+}
+module.exports = {
+    config
+}
+```
 
-    > [!NOTE]
-    > Passwordless configuration objects are safe to commit to source control, since they do not contain any secrets such as usernames, passwords, or access keys.
+> [!NOTE]
+> Passwordless configuration objects are safe to commit to source control, since they do not contain any secrets such as usernames, passwords, or access keys.
 
-    #### [SQL authentication](#tab/password)
+## [SQL authentication](#tab/sql-auth)
 
 
-    ```javascript
-    require('dotenv').config()
+```javascript
+require('dotenv').config({ debug: true })
 
-    const server = process.env.AZURE_SQL_SERVER;
-    const database = process.env.AZURE_SQL_DATABASE;
-    const port = +process.env.AZURE_SQL_PORT;
-    const user = process.env.AZURE_SQL_USER;
-    const password = process.env.AZURE_SQL_PASSWORD;
+const server = process.env.AZURE_SQL_SERVER;
+const database = process.env.AZURE_SQL_DATABASE;
+const port = +process.env.AZURE_SQL_PORT;
+const user = process.env.AZURE_SQL_USER;
+const password = process.env.AZURE_SQL_PASSWORD;
 
-    export const config = {
-        server,              // SERVER.database.windows.net
-        port,
-        database,
-        user,
-        password,
-        options: {
-            encrypt: true
-        }
+const config = {
+    server,
+    port,
+    database,
+    user,
+    password,
+    options: {
+        encrypt: true
     }
-    ```
+}
+
+module.exports = {
+    config
+}
+```
+
+> [!WARNING]
+> Use caution when managing connection objects that contain secrets such as usernames, passwords, or access keys. These secrets shouldn't be committed to source control or placed in unsecure locations where they might be accessed by unintended users. During local development, on a real app, you'll generally connect to a local database that doesn't require storing secrets or connecting directly to Azure.
 
 ---
+
+---
+
+## Add the code to connect to Azure SQL Database
 
 1. Create a **database.js** file and add the following code:
 
     ```javascript
-    import sql from "mssql";
-
+    const sql = require("mssql");
+    
     class Database {
-      private config: any;
-      private poolconnection: sql.ConnectionPool;
-      private connected: boolean = false;
+      config={};
+      poolconnection=null;
+      connected=false;
     
       constructor(config) {
         this.config = config;
+        console.log(`Database: config: ${JSON.stringify}`)
       }
     
       async connect() {
@@ -396,12 +402,11 @@ The **mssql** package implements passwordless connections to Azure SQL Database 
         await this.connect();
         const request = this.poolconnection.request();
     
-        request.input("name", sql.NVarChar(255), data.name);
-        request.input("email", sql.NVarChar(255), data.email);
-        request.input("password", sql.NVarChar(255), data.password);
+        request.input("firstName", sql.NVarChar(255), data.firstName);
+        request.input("lastName", sql.NVarChar(255), data.lastName);
     
         const result = await request.query(
-          `INSERT INTO ${table} (name, email, password) VALUES (@name, @email, @password)`
+          `INSERT INTO ${table} (firstName, lastName) VALUES (@firstName, @lastName)`
         );
     
         return result.rowsAffected[0];
@@ -436,12 +441,11 @@ The **mssql** package implements passwordless connections to Azure SQL Database 
         const request = this.poolconnection.request();
     
         request.input("id", sql.Int, +id);
-        request.input("name", sql.NVarChar(255), data.name);
-        request.input("email", sql.NVarChar(255), data.email);
-        request.input("password", sql.NVarChar(255), data.password);
+        request.input("firstName", sql.NVarChar(255), data.firstName);
+        request.input("lastName", sql.NVarChar(255), data.lastName);
     
         const result = await request.query(
-          `UPDATE ${table} SET name=@name, email=@email, password=@password WHERE id = @id`
+          `UPDATE ${table} SET firstName=@firstName, lastName=@lastName WHERE id = @id`
         );
     
         return result.rowsAffected[0];
@@ -463,7 +467,7 @@ The **mssql** package implements passwordless connections to Azure SQL Database 
       }
     }
     
-    export default Database;
+    module.exports = Database;
     ```
 
 ## Test the app locally
@@ -522,23 +526,14 @@ When the deployment finishes, the app doesn't work correctly on Azure. You still
 
 ---
 
-
-
-
-> [!IMPORTANT]
-> Although this solution provides a simple approach for getting started, it is not a best practice for enterprise production environments. In those scenarios the app should not perform all operations using a single, elevated identity. You should try to implement the principle of least privilege by configuring multiple identities with specific permissions for specific tasks.
->
-> You can read more about configuring database roles and security on the following resources:
->
-> [Tutorial: Secure a database in Azure SQL Database](./secure-database-tutorial.md)
->
-> [Authorize database access to SQL Database](./logins-create-manage.md)
-
 ## Test the deployed application
 
-Browse to the URL of the app to test that the connection to Azure SQL Database is working. You can locate the URL of your app on the App Service overview page. Append the `/person` path to the end of the URL to browse to the same endpoint you tested locally.
+Browse to the URL of the app to test that the connection to Azure SQL Database is working. You can locate the URL of your app on the App Service overview page. Append the `/api-docs` path to the end of the URL to browse to the same endpoint you tested locally.
 
 The person you created locally should display in the browser. Congratulations! Your application is now connected to Azure SQL Database in both local and hosted environments.
+
+> [!TIP]
+> If you receive a 500 Internal Server error while testing, it may be due to your database networking configurations. Verify that your logical server is configured with the settings outlined in the [Configure the database](/azure/azure-sql/database/azure-sql-dotnet-quickstart#configure-the-database) section.
 
 ## Next steps
 

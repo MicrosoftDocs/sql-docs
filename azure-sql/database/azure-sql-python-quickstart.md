@@ -62,7 +62,7 @@ pip install pyodbc
 
 ## Add code to connect to Azure SQL Database
 
-The `pyodbc` library uses a class called `DefaultAzureCredential` to implement passwordless connections to Azure SQL Database, which you can learn more about on the DefaultAzureCredential overview. DefaultAzureCredential is provided by the Azure Identity library on which the SQL client library depends.
+The `pyodbc` library uses a class called `DefaultAzureCredential` to implement passwordless connections to Azure SQL Database, which you can learn more about on the `DefaultAzureCredential` overview. `DefaultAzureCredential` is provided by the Azure Identity library on which the SQL client library depends.
 
 Complete the following steps to connect to Azure SQL Database using the `pyodbc` library and `DefaultAzureCredential`:
 

@@ -319,6 +319,8 @@
         href: database/azure-sql-dotnet-quickstart.md
       - name: .NET with EF Core
         href: database/azure-sql-dotnet-entity-framework-core-quickstart.md
+      - name: Python with Pyodbc
+        href: database/azure-sql-python-quickstart.md
       - name: Use the Azure portal query editor 
         href: database/connect-query-portal.md
     - name: GitHub Actions

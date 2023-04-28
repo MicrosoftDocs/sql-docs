@@ -28,7 +28,7 @@ This quickstart describes how to connect an application to a database in Azure S
 
 ## Configure the database
 
-1) Secure, passwordless connections to Azure SQL Database with Python require certain database configurations. Verify the following settings on your [logical server in Azure](../database/logical-servers.md) to properly connect to Azure SQL Database in both local and hosted environments:
+1. Secure, passwordless connections to Azure SQL Database with Python require certain database configurations. Verify the following settings on your [logical server in Azure](../database/logical-servers.md) to properly connect to Azure SQL Database in both local and hosted environments:
 
     For local development connections, make sure your logical server has a firewall rule enabled to allow your client IP address to connect:
 
@@ -40,11 +40,11 @@ This quickstart describes how to connect an application to a database in Azure S
 
         :::image type="content" source="../database/media/passwordless-connections/configure-firewall-small.png" lightbox="../database/media/passwordless-connections/configure-firewall.png" alt-text="A screenshot showing how to configure firewall rules.":::
 
-1) The server must also have Azure AD authentication enabled with an Azure Active Directory admin account assigned. For local development connections, the Azure Active Directory admin account should be an account you can also log into Visual Studio or the Azure CLI with locally. You can verify whether your server has Azure AD authentication enabled on the **Azure Active Directory** page.
+1. The server must also have Azure AD authentication enabled with an Azure Active Directory admin account assigned. For local development connections, the Azure Active Directory admin account should be an account you can also log into Visual Studio or the Azure CLI with locally. You can verify whether your server has Azure AD authentication enabled on the **Azure Active Directory** page.
 
     :::image type="content" source="../database/media/passwordless-connections/enable-active-directory-small.png" lightbox="../database/media/passwordless-connections/enable-active-directory.png" alt-text="A screenshot showing how to enable Active Directory authentication.":::
 
-1) If you're using a personal Azure account, make sure you have [Azure Active Directory setup and configured for Azure SQL Database](../database/authentication-aad-configure.md) in order to assign your account as a server admin. If you're using a corporate account, Azure Active Directory is most likely already be configured for you.
+1. If you're using a personal Azure account, make sure you have [Azure Active Directory setup and configured for Azure SQL Database](../database/authentication-aad-configure.md) in order to assign your account as a server admin. If you're using a corporate account, Azure Active Directory is most likely already be configured for you.
 
 ## Create the project
 
@@ -74,7 +74,7 @@ Create a new Python project using Visual Studio Code.
     ```
 
     ---
-    
+
 1. Create a new Python file called `app.py`.
 
 ## Install the pyodbc driver
@@ -103,10 +103,13 @@ The passwordless connection string includes a configuration value of `Authentica
 
 1. Add the following sample code to the `app.py` file. This code performs the following important steps:
 
-* Retrieves the passwordless connection string from the environment variables
-* Creates a `Person` table in the database during startup (for testing scenarios only)
-* Creates a function to retrieve the `Person` records stored in the database
-* Creates a function to add new `Person` records to the database
+    * Retrieves the passwordless connection string from the environment variables
+
+    * Creates a `Person` table in the database during startup (for testing scenarios only)
+
+    * Creates a function to retrieve the `Person` records stored in the database
+
+    * Creates a function to add new `Person` records to the database
 
 ```python
 import os

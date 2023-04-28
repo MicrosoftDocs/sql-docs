@@ -42,14 +42,37 @@ For local development connections, make sure your logical server has a firewall 
 
     :::image type="content" source="../database/media/passwordless-connections/enable-active-directory-small.png" lightbox="../database/media/passwordless-connections/enable-active-directory.png" alt-text="A screenshot showing how to enable Active Directory authentication.":::
 
-1) If you're using a personal Azure account, make sure you have [Azure Active Directory setup and configured for Azure SQL Database](../database/authentication-aad-configure.md) in order to assign your account as a server admin. If you're using a corporate account, Azure Active Directory will most likely already be configured for you.
+1) If you're using a personal Azure account, make sure you have [Azure Active Directory setup and configured for Azure SQL Database](../database/authentication-aad-configure.md) in order to assign your account as a server admin. If you're using a corporate account, Azure Active Directory is most likely already be configured for you.
 
 ## Create the project
 
 Create a new Python project using Visual Studio Code.
 
-1. Open Visual Studio Code and create a new folder for your project.
+1. Open Visual Studio Code and create a new folder for your project and change directory into it.
 
+    ```Cmd
+    mkdir python-sql-azure
+    cd python-sql-azure
+    ```
+    
+1. Create a virtual environment for the app.
+
+    #### [Windows](#tab/windows)
+    
+    ```Cmd
+    py -m venv .venv
+    .venv\scripts\activate
+    ```
+    
+    #### [macOS/Linux](#tab/mac-linux)
+    
+    ```Bash
+    python3 -m venv .venv
+    source .venv/bin/activate
+    ```
+    
+    ---
+    
 1. Create a new Python file called `app.py`.
 
 ## Install the `pyodbc` library
@@ -70,7 +93,7 @@ Complete the following steps to connect to Azure SQL Database using the `pyodbc`
 
 1. Update the environment variables in your local system to include the passwordless connection string. Remember to update the `<your database-server-name>` and `<your-database-name>` placeholders.
 
-The passwordless connection string includes a configuration value of `Authentication=Active Directory Default`, which instructs the app to use `DefaultAzureCredential` to connect to Azure services. This functionality is implemented internally by the `pyodbc` library. When the app runs locally, it authenticates with the user you're signed into Visual Studio Code with. Once the app deploys to Azure, the same code discovers and applies the managed identity that is associated with the hosted app, which you'll configure later.
+The passwordless connection string includes a configuration value of `Authentication=Active Directory Default`, which instructs the app to use `DefaultAzureCredential` to connect to Azure services. The `pyodbc` library implements this functionality internally. When the app runs locally, it authenticates with the user you're signed into Visual Studio Code with. Once the app deploys to Azure, the same code discovers and applies the managed identity that is associated with the hosted app, which you configure later.
 
 1. Add the following sample code to the `app.py` file. This code performs the following important steps:
 

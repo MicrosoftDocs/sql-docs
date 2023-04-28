@@ -45,7 +45,7 @@ Passwordless connections can be configured to work for both local and Azure host
 
 ### Create a database user and assign roles
 
-Create a user in Azure SQL Database that corresponds to the Azure account you used to sign-in locally, such as Visual Studio or IntelliJ.
+Create a user in Azure SQL Database. The user should correspond to the Azure account you used to sign-in locally via development tools like Visual Studio or IntelliJ.
 
 1) In the Azure portal, browse to your SQL database and select **Query editor (preview)**.
 
@@ -65,7 +65,7 @@ Create a user in Azure SQL Database that corresponds to the Azure account you us
 
 ### Update the local connection configuration
 
-Existing application code that connects to Azure SQL Database using the `Microsoft.Data.SqlClient` library or Entity Framework Core will continue to work with passwordless connections. However, you must update your database connection string to use the passwordless format. For example, the following code works with both SQL authentication as well as passwordless connections:
+Existing application code that connects to Azure SQL Database using the `Microsoft.Data.SqlClient` library or Entity Framework Core will continue to work with passwordless connections. However, you must update your database connection string to use the passwordless format. For example, the following code works with both SQL authentication and passwordless connections:
 
 ```csharp
 string connectionString = app.Configuration.GetConnectionString("AZURE_SQL_CONNECTIONSTRING")!;
@@ -127,7 +127,7 @@ After the resource is created, select **Go to resource** to view the details of 
 Use the [az identity create](/cli/azure/identity) command to create a user-assigned managed identity:
 
 ```azurecli
-az identity create --name MigrationIdentity --resource-group <your-resource-group>
+az identity create --name MigrationIdentity --resource-group <resource-group>
 ```
 
 ---
@@ -176,7 +176,7 @@ Create a SQL database user that maps back to the user-assigned managed identity.
 
 1) In the Azure portal, browse to your SQL database and select **Query editor (preview)**.
 
-2) Select **Continue as `<your-username>`** on the right side of the screen to sign into the database using your account.
+2) Select **Continue as `<username>`** on the right side of the screen to sign into the database using your account.
 
 3) On the query editor view, run the following T-SQL commands:
 

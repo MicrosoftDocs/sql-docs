@@ -230,7 +230,7 @@ Persistence also applies to [DOP feedback](#degree-of-parallelism-dop-feedback) 
 
 #### Enable memory grant feedback: persistence and percentile
 
-To enable memory grant feedback persistence and percentile, use database compatibility level 140 or higher for the database you're connected to when executing the query. Peristence and percentile feedback are [enabled by default](#percentile-and-persistence-mode-memory-grant-feedback).
+To enable memory grant feedback persistence and percentile, use database compatibility level 140 or higher for the database you're connected to when executing the query. Persistence and percentile feedback are [enabled by default](#percentile-and-persistence-mode-memory-grant-feedback).
 
 `ALTER DATABASE <DATABASE NAME> SET COMPATIBILITY LEVEL = 140; -- OR HIGHER`
 

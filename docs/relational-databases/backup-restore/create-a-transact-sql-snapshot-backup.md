@@ -280,6 +280,10 @@ sys.dm_server_suspend_status (db_id, db_name, suspend_session_id, suspend_time_m
 sys.dm_tran_locks (resource_type, resource_database_id, resource_lock_partition, request_mode, request_type, request_status, request_owner_type, request_session_id)
 ```
 
+### To List Databases where T-SQL Snapshot backups were taken and its releated information:
+
+select database_name,type,backup_size,backup_start_date,backup_finish_date,is_snapshot from msdb.dbo.backupset where is_snapshot='1';
+
 ### Server and database level properties for checking if a database was suspended for snapshot backup
 
 ```sql

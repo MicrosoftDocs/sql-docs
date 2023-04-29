@@ -25,7 +25,7 @@ A database snapshot is a read-only, static view of a [!INCLUDE[ssNoVersion](../.
  Multiple snapshots can exist on a given source database. Each database snapshot persists until it is explicitly dropped by the database owner.  
   
 > [!NOTE]  
->  Database snapshots are unrelated to snapshot backups, snapshot isolation of transactions, or snapshot replication.  
+>  Database snapshots are unrelated to Transact-SQL snapshot backup, snapshot isolation of transactions, or snapshot replication.  
   
  **In this Topic:**  
   

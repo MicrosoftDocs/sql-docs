@@ -59,7 +59,7 @@ When restoring a database to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)
 
 ## Permissions
 
-To run `sp_updatestats`, the user must be the owner of the database (the `dbo`, not just member of the role `db_owner`) or to be member of the sysadmin fixed server role.
+To run sp_updatestats, the user must be the owner of the database (the dbo) or a member of the db_owner fixed database role. For Azure SQL Database, a user with the db_owner role can execute sp_updatestats. Users with the sysadmin fixed server role can also execute the stored procedure.
 
 ## Examples
 

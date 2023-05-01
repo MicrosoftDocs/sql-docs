@@ -25,7 +25,7 @@ Passwordless connections use Azure Active Directory (Azure AD) authentication to
 
 For this migration guide, ensure you have an Azure AD admin assigned to your Azure SQL Database.
 
-1) Navigate to the the **Azure Active Directory** page of your logical server.
+1) Navigate to the **Azure Active Directory** page of your logical server.
 
 1) Select **Set admin**.
 

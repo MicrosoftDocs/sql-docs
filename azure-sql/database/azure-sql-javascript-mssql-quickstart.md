@@ -197,7 +197,7 @@ The steps in this section create a Node.js Minimal Web API with npm.
             console.log(`personId: ${personId}`);
     
             if (!personId) {
-                res.status(404)
+                res.status(404);
             } else {
                 const rowsAffected = await database.delete('Person', personId);
                 res.status(204).json({ rowsAffected })

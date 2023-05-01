@@ -132,7 +132,7 @@ The steps in this section create a .NET Minimal Web API by using either the .NET
                 res.status(404);
             }
         } catch (err) {
-            res.status(500).json({ error: err?.message })
+            res.status(500).json({ error: err?.message });
         }
     });
     

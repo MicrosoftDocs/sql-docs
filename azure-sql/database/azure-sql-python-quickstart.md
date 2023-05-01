@@ -11,7 +11,7 @@ ms.topic: quickstart
 monikerRange: "= azuresql || = azuresql-db"
 ---
 
-# Connect to and query Azure SQL Database using Python and the pyodbc library
+# Connect to and query Azure SQL Database using Python and the pyodbc driver
 
 This quickstart describes how to connect an application to a database in Azure SQL Database and perform queries using Python and the [Python SQL Driver - pyodbc](/sql/connect/python/pyodbc/python-sql-driver-pyodbc). This quickstart follows the recommended passwordless approach to connect to the database. You can learn more about passwordless connections on the [passwordless hub](/azure/developer/intro/passwordless-overview).
 

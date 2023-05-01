@@ -46,15 +46,15 @@ The steps in this section create a Node.js REST API.
     npm install mssql swagger-ui-express yamljs
     ```
 
-1. Install the development packages used in the sample code in this article:
+1. Install the development package used in the sample code in this article:
 
     ```bash
-    npm install dotenv 
+    npm install --save-dev dotenv 
     ```
     
 1. Open the project in Visual Studio Code.
 
-    ```base
+    ```bash
     code .
     ```
 

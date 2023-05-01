@@ -162,6 +162,10 @@ The app is ready to be tested locally. Make sure you're signed into Visual Studi
 
 1. Run the `app.py` file in Visual Studio Code.
 
+    ```python
+    python app.py
+    ```
+
 1. Use a tool like Postman or curl to test the API endpoints for creating and retrieving `Person` records. Or, go the Azure portal and view the database.
 
 ## Deploy to Azure App Service

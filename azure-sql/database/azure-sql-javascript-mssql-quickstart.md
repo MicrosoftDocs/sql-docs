@@ -102,7 +102,7 @@ The steps in this section create a .NET Minimal Web API by using either the .NET
             console.log(`persons: ${JSON.stringify(persons)}`);
             res.status(200).json(persons);
         } catch (err) {
-            res.status(500).json({ error: err?.message })
+            res.status(500).json({ error: err?.message });
         }
     });
     

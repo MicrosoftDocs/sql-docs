@@ -93,12 +93,6 @@ For details and specific instructions for all operating systems, see [Configure 
 
 ## Configure the connection string
 
-You can get the details to create your connection string from the Azure portal:
-
-1. Go to the Azure SQL Server, select the **SQL databases** page to find your database name, and select the database.
-
-2. On the database, go to the **Connection strings** page to get connection string information. Look under the **ODBC** tab.
-
 You can use the `pyodbc` driver in a several ways. The recommended approach is passwordless. In the passwordless mode, `pyodbc` driver uses the class `DefaultAzureCredential` class to implement passwordless connections to Azure SQL Database. The `DefaultAzureCredential` is part of the Azure Identity library on which the SQL client library depends. For more information, see [DefaultAzureCredential overview](/python/api/overview/azure/identity-readme).
 
 For local development with passwordless connections to Azure SQL Database, add the following `AZURE_SQL_CONNECTIONSTRING` environment variable. Replace the `<database-server-name>` and `<database-name>` placeholders with your own values. Example environment variables are shown for the Bash shell.
@@ -138,6 +132,13 @@ export AZURE_SQL_CONNECTIONSTRING='Driver={ODBC Driver 18 for SQL Server};Server
 > Use caution when managing connection strings that contain secrets such as usernames, passwords, or access keys. These secrets shouldn't be committed to source control or placed in unsecure locations where they might be accessed by unintended users. During local development, on a real app, you'll generally connect to a local database that doesn't require storing secrets or connecting directly to Azure.
 
 ---
+
+You can get the details to create your connection string from the Azure portal:
+
+1. Go to the Azure SQL Server, select the **SQL databases** page to find your database name, and select the database.
+
+2. On the database, go to the **Connection strings** page to get connection string information. Look under the **ODBC** tab.
+
 
 ## Add code to connect to Azure SQL Database
 

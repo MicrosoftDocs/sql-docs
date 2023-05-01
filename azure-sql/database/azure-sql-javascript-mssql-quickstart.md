@@ -1,6 +1,6 @@
 ---
-title: Connect to and query Azure SQL Database using JavaScript and mssql npm package
-description: Learn how to connect to a database in Azure SQL Database and query data using JavaScript and mssql npm package.
+title: Connect to and query Azure SQL Database using Node.js and mssql npm package
+description: Learn how to connect to a database in Azure SQL Database and query data using Node.js and mssql npm package.
 author: diberry
 ms.author: diberry
 ms.custom: passwordless-js
@@ -11,9 +11,9 @@ ms.topic: quickstart
 monikerRange: "= azuresql || = azuresql-db"
 ---
 
-# Connect to and query Azure SQL Database using JavaScript and mssql npm package
+# Connect to and query Azure SQL Database using Node.js and mssql npm package
 
-This quickstart describes how to connect an application to a database in Azure SQL Database and perform queries using JavaScript and mssql. This quickstart follows the recommended passwordless approach to connect to the database. You can learn more about passwordless connections on the [passwordless hub](/azure/developer/intro/passwordless-overview).
+This quickstart describes how to connect an application to a database in Azure SQL Database and perform queries using Node.js and mssql. This quickstart follows the recommended passwordless approach to connect to the database. You can learn more about passwordless connections on the [passwordless hub](/azure/developer/intro/passwordless-overview).
 
 ## Prerequisites
 
@@ -219,7 +219,7 @@ The steps in this section create a Node.js Minimal Web API with npm.
     module.exports = router;
     ```
 
-1. Create a **openApiSchema.yml** schema file and add the following YML code:
+1. Create a **openApiSchema.yml** schema file and add the following YAML:
 
     ```yml
     openapi: 3.0.0

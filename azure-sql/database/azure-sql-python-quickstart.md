@@ -38,6 +38,8 @@ This quickstart describes how to connect an application to a database in Azure S
 
     * Select **Add your client IPv4 address(xx.xx.xx.xx)** to add a firewall rule that will enable connections from your local machine IPv4 address. Alternatively, you can also select **+ Add a firewall rule** to enter a specific IP address of your choice.
 
+    * Select **Allow Azure services and resources to access this server**.
+
         :::image type="content" source="../database/media/passwordless-connections/configure-firewall-small.png" lightbox="../database/media/passwordless-connections/configure-firewall.png" alt-text="A screenshot showing how to configure firewall rules.":::
 
 1. The server must also have Azure AD authentication enabled with an Azure Active Directory admin account assigned. For local development connections, the Azure Active Directory admin account should be an account you can also log into Visual Studio or the Azure CLI with locally. You can verify whether your server has Azure AD authentication enabled on the **Azure Active Directory** page.
@@ -91,17 +93,23 @@ For details and specific instructions for all operating systems, see [Configure 
 
 ## Add code to connect to Azure SQL Database
 
-The `pyodbc` driveer uses the class `DefaultAzureCredential` class to implement passwordless connections to Azure SQL Database, which you can learn more about on the [DefaultAzureCredential overview](/python/api/overview/azure/identity-readme). **DefaultAzureCredential** is provided by the Azure Identity library on which the SQL client library depends.
+The `pyodbc` driver uses the class `DefaultAzureCredential` class to implement passwordless connections to Azure SQL Database. The `DefaultAzureCredentail` is part of the Azure Identity library on which the SQL client library depends. For more information, see [DefaultAzureCredential overview](/python/api/overview/azure/identity-readme).
 
 `DefaultAzureCredential` supports multiple authentication methods and determines which to use at runtime. This approach enables your app to use different authentication methods in different environments (local vs. production) without implementing environment-specific code. The [Azure Identity library overview](/python/api/overview/azure/Identity-readme#defaultazurecredential) explains the order and locations in which `DefaultAzureCredential` looks for credentials.
 
 Complete the following steps to connect to Azure SQL Database using the `pyodbc` driver and `DefaultAzureCredential`:
 
-1. Create an  environment variable in your environment to define the passwordless connection string `AZURE_SQL_CONNECTIONSTRING`.
+1. Create an environment variable in your environment to define the passwordless connection string `AZURE_SQL_CONNECTIONSTRING`.
+
+    The general form of the connection string is `server=Server;database=Database;UID=UserName;Authentication=ActiveDirectoryInteractive;Encrypt=yes;`. For more information, see [Example connection string for Azure Active Directory interactive authentication](/sql/connect/python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc#example-connection-string-for-azure-active-directory-interactive-authentication).
 
     The passwordless connection string includes a configuration value of `Authentication=ActiveDirectoryInteractive`, which instructs the app to use `DefaultAzureCredential` to connect to Azure services. The `pyodbc` library implements this functionality internally. When the app runs locally, it authenticates with the user you're signed into Visual Studio Code with. Once the app deploys to Azure, the same code discovers and applies the managed identity that is associated with the hosted app, which you configure later.
 
-    The general form of the connection string is `server=Server;database=Database;UID=UserName;Authentication=ActiveDirectoryInteractive;Encrypt=yes;`. For more information, see [Example connection string for Azure Active Directory interactive authentication](/sql/connect/python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc#example-connection-string-for-azure-active-directory-interactive-authentication).
+    You can get the details of this connection string from the Azure portal:
+
+    * Go to the Azure SQL Server, select the **SQL databases** page to find your database name, and select the database.
+
+    * On the database, go to the **Connection strings** page to get connection string information. Look under the **ODBC** tab.
 
 1. Add the sample code to the `app.py` file. This code:
 

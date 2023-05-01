@@ -76,7 +76,7 @@ The steps in this section create a Node.js REST API.
     // Development only - don't do in production
     // Run this to create the table in the database
     if (process.env.NODE_ENV === 'development') {
-      const Database = require('./dbazuresql');
+      const Database = require('./database');
       const { noPasswordConfig } = require('./config');
       const database = new Database(noPasswordConfig);
       database
@@ -109,7 +109,7 @@ The steps in this section create a Node.js REST API.
 
     ```javascript
     const express = require('express');
-    const Database = require('./dbazuresql');
+    const Database = require('./database');
     const { config } = require('./config');
     
     const router = express.Router();
@@ -314,32 +314,43 @@ The steps in this section create a Node.js REST API.
 
 The **mssql** package implements the connection to Azure SQL Database by providing a configuration setting for an authentication type. 
 
-Create a **config.js** file and add the following mssql configuration code to authenticate to Azure SQL.
-
 ## [Passwordless (Recommended)](#tab/passwordless)
 
-```javascript
-require('dotenv').config({ debug: true });
-const server = process.env.AZURE_SQL_SERVER;
-const database = process.env.AZURE_SQL_DATABASE;
-const port = process.env.AZURE_SQL_PORT;
-const type = process.env.AZURE_SQL_AUTHENTICATIONTYPE;
+1. In Visual Studio Code, create a **config.js** file and add the following mssql configuration code to authenticate to Azure SQL.
 
-const config = {
-    server,
-    port,
-    database,
-    authentication: {
-        type
-    },
-    options: {
-        encrypt: true
-    }
-};
-module.exports = {
-    config
-};
-```
+    ```javascript
+    require('dotenv').config({ debug: true });
+    const server = process.env.AZURE_SQL_SERVER;
+    const database = process.env.AZURE_SQL_DATABASE;
+    const port = process.env.AZURE_SQL_PORT;
+    const type = process.env.AZURE_SQL_AUTHENTICATIONTYPE;
+    
+    const config = {
+        server,
+        port,
+        database,
+        authentication: {
+            type
+        },
+        options: {
+            encrypt: true
+        }
+    };
+    module.exports = {
+        config
+    };
+    ```
+
+1. Create a **.env** file for your local environment variables.
+1. Add the following text and update with your values for `<YOURSERVERNAME>` and `<YOURDATABASENAME>`.
+
+    ```text
+    AZURE_SQL_SERVER=<YOURSERVERNAME>.database.windows.net
+    AZURE_SQL_DATABASE=<YOURDATABASENAME>
+    AZURE_SQL_PORT=1433
+    AZURE_SQL_AUTHENTICATIONTYPE=azure-active-directory-default
+    NODE_ENV=development
+    ```
 
 > [!NOTE]
 > Passwordless configuration objects are safe to commit to source control, since they do not contain any secrets such as usernames, passwords, or access keys.
@@ -347,30 +358,44 @@ module.exports = {
 ## [SQL authentication](#tab/sql-auth)
 
 
-```javascript
-require('dotenv').config({ debug: true });
+1. In Visual Studio Code, create a **config.js** file and add the following mssql configuration code to authenticate to Azure SQL.
+    
+    ```javascript
+    require('dotenv').config({ debug: true });
+    
+    const server = process.env.AZURE_SQL_SERVER;
+    const database = process.env.AZURE_SQL_DATABASE;
+    const port = +process.env.AZURE_SQL_PORT;
+    const user = process.env.AZURE_SQL_USER;
+    const password = process.env.AZURE_SQL_PASSWORD;
+    
+    const config = {
+        server,
+        port,
+        database,
+        user,
+        password,
+        options: {
+            encrypt: true
+        }
+    };
+    
+    module.exports = {
+        config
+    };
+    ```
 
-const server = process.env.AZURE_SQL_SERVER;
-const database = process.env.AZURE_SQL_DATABASE;
-const port = +process.env.AZURE_SQL_PORT;
-const user = process.env.AZURE_SQL_USER;
-const password = process.env.AZURE_SQL_PASSWORD;
+1. Create a **.env** file for your local environment variables.
+1. Add the following text and update with your values for `<YOURSERVERNAME>`, `<YOURDATABASENAME>`, `<YOURUSERNAME>`, and `<YOURPASSWORD>`.
 
-const config = {
-    server,
-    port,
-    database,
-    user,
-    password,
-    options: {
-        encrypt: true
-    }
-};
-
-module.exports = {
-    config
-};
-```
+    ```text
+    AZURE_SQL_SERVER=<YOURSERVERNAME>.database.windows.net
+    AZURE_SQL_DATABASE=<YOURDATABASENAME>
+    AZURE_SQL_PORT=1433
+    AZURE_SQL_USER=<YOURUSERNAME>
+    AZURE_SQL_PASSWORD=<YOURPASSWORD>
+    NODE_ENV=development
+    ```
 
 > [!WARNING]
 > Use caution when managing connection objects that contain secrets such as usernames, passwords, or access keys. These secrets shouldn't be committed to source control or placed in unsecure locations where they might be accessed by unintended users.

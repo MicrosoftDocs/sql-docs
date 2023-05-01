@@ -111,11 +111,10 @@ The steps in this section create a .NET Minimal Web API by using either the .NET
             const person = req.body;
             delete person.id;
             console.log(`person: ${JSON.stringify(person)}`);
-            const rowsAffected = await database.create('Person', person)
-            res.status(201).json({ rowsAffected })
-    
+            const rowsAffected = await database.create('Person', person);
+            res.status(201).json({ rowsAffected });
         } catch (err) {
-            res.status(500).json({ error: err?.message })
+            res.status(500).json({ error: err?.message });
         }
     
     });

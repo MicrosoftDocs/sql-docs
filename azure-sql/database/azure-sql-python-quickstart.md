@@ -87,9 +87,14 @@ In the terminal, run the following command to install the `pyodbc` driver:
 
 ```bash
 pip install pyodbc
+pip install fastapi
+pip install uvicorn[standard]
+pip install pydantic
 ```
 
-For details and specific instructions for all operating systems, see [Configure development environment for pyodbc Python development](/sql/connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development).
+For details and specific instructions for installing the `pyodbc` driver on all operating systems, see [Configure development environment for pyodbc Python development](/sql/connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development).
+
+The `fastapi`, `uvicorn`, and `pydantic` packages are used to create a simple API for demonstration purposes.
 
 ## Configure the connection string
 
@@ -139,7 +144,6 @@ You can get the details to create your connection string from the Azure portal:
 
 2. On the database, go to the **Connection strings** page to get connection string information. Look under the **ODBC** tab.
 
-
 ## Add code to connect to Azure SQL Database
 
 Add the sample code to the `app.py` file. This code:
@@ -156,43 +160,60 @@ Add the sample code to the `app.py` file. This code:
 import os
 import pyodbc
 
+from typing import Union
+from fastapi import FastAPI
+from pydantic import BaseModel
+
+class Person(BaseModel):
+    first_name: str
+    last_name: Union[str, None] = None
+ 
 connection_string = os.environ["AZURE_SQL_CONNECTIONSTRING"]
+print(connection_string)
 
-try:
-    # Table would be created ahead of time in production
-    conn = pyodbc.connect(connection_string)
-    cursor = conn.cursor()
+app = FastAPI()
 
-    cursor.execute("""
-        CREATE TABLE Persons (
-            ID int NOT NULL PRIMARY KEY IDENTITY,
-            FirstName varchar(255),
-            LastName varchar(255)
-        );
-    """)
+@app.get("/")
+def root():
+    print("Root of Person API")
+    try:
+        # Table would be created ahead of time in production
+        conn = pyodbc.connect(connection_string)
+        cursor = conn.cursor()
 
-    conn.commit()
-except Exception as e:
-    # Table may already exist
-    print(e)
+        cursor.execute("""
+            CREATE TABLE Persons (
+                ID int NOT NULL PRIMARY KEY IDENTITY,
+                FirstName varchar(255),
+                LastName varchar(255)
+            );
+        """)
 
+        conn.commit()
+    except Exception as e:
+        # Table may already exist
+        print(e)
+    return "Person API"
+
+@app.get("/all")
 def get_persons():
     rows = []
-
     with pyodbc.connect(connection_string) as conn:
         cursor = conn.cursor()
         cursor.execute("SELECT * FROM Persons")
 
         for row in cursor.fetchall():
+            print(row.FirstName, row.LastName)
             rows.append(f"{row.ID}, {row.FirstName}, {row.LastName}")
-
     return rows
 
-def create_person(first_name, last_name):
+@app.post("/person")
+def create_person(item: Person):
     with pyodbc.connect(connection_string) as conn:
         cursor = conn.cursor()
-        cursor.execute(f"INSERT INTO Persons (FirstName, LastName) VALUES (?, ?)", first_name, last_name)
+        cursor.execute(f"INSERT INTO Persons (FirstName, LastName) VALUES (?, ?)", item.first_name, item.last_name)
         conn.commit()
+    return item
 ```
 
 ## Run and test the app locally
@@ -202,10 +223,14 @@ The app is ready to be tested locally. Make sure you're signed into Visual Studi
 1. Run the `app.py` file in Visual Studio Code.
 
     ```python
-    python app.py
+    uvicorn app:app --reload
     ```
 
-1. Use a tool like Postman or curl to test the API endpoints for creating and retrieving `Person` records. Or, go the Azure portal and view the database.
+1. On the Swagger UI page for the app [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs), expand the POST method and select **Try it out**.
+
+1. Modify the sample JSON to include values for the first and last name. Select **Execute** to add a new record to the database. The API returns a successful response.
+
+1. Expand the **GET** method on the Swagger UI page and select **Try it**. Choose **Execute**, and the person you just created is returned.
 
 ## Deploy to Azure App Service
 

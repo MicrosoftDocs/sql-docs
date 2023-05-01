@@ -186,7 +186,7 @@ The steps in this section create a Node.js Minimal Web API with npm.
                 res.status(404);
             }
         } catch (err) {
-            res.status(500).json({ error: err?.message })
+            res.status(500).json({ error: err?.message });
         }
     });
     

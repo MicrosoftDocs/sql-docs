@@ -84,7 +84,7 @@ To update the referenced connection string (`AZURE_SQL_CONNECTIONSTRING`) to use
     * The `launchsettings.json` configuration file for Visual Studio projects.
     * Local system or container environment variables.
 
-2. Replace the connection string value with the following passwordless format. Update the `<database-server-name>` and `<database-name`> placeholders with your own values:
+2. Replace the connection string value with the following passwordless format. Update the `<database-server-name>` and `<database-name>` placeholders with your own values:
 
     ```json
     "Server=tcp:<database-server-name>.database.windows.net,1433;Initial Catalog=<database-name>;

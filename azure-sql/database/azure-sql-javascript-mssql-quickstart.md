@@ -179,7 +179,7 @@ The steps in this section create a .NET Minimal Web API by using either the .NET
 1. Create a **opanapi.js** route file and add the following code for the OpenAPI UI explorer:
 
     ```javascript
-    const express = require("express");
+    const express = require('express');
     const path = require('path');
     const swaggerUi = require('swagger-ui-express');
     const yaml = require('yamljs');

@@ -329,7 +329,7 @@ Create a **config.js** file and add the following mssql configuration code to au
 ## [Passwordless (Recommended)](#tab/passwordless)
 
 ```javascript
-require('dotenv').config({ debug: true })
+require('dotenv').config({ debug: true });
 const server = process.env.AZURE_SQL_SERVER;
 const database = process.env.AZURE_SQL_DATABASE;
 const port = process.env.AZURE_SQL_PORT;

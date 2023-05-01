@@ -36,7 +36,7 @@ This quickstart describes how to connect an application to a database in Azure S
 
     * Toggle the **Selected networks** radio button to show other configuration options.
 
-    * Select **Add your client IPv4 address(xx.xx.xx.xx)** to add a firewall rule that will enable connections from your local machine IPv4 address. Alternatively, you can also select **+ Add a firewall rule** to enter a specific IP address of your choice.
+    * Select **Add your client IPv4 address(xx.xx.xx.xx)** to add a firewall rule that enables connections from your local machine IPv4 address. Alternatively, you can also select **+ Add a firewall rule** to enter a specific IP address of your choice.
 
     * Select **Allow Azure services and resources to access this server**.
 
@@ -93,7 +93,7 @@ For details and specific instructions for all operating systems, see [Configure 
 
 ## Configure the connection string
 
-You can use the `pyodbc` driver in a several ways. The recommended approach is passwordless. In the passwordless mode, `pyodbc` driver uses the class `DefaultAzureCredential` class to implement passwordless connections to Azure SQL Database. The `DefaultAzureCredential` is part of the Azure Identity library on which the SQL client library depends. For more information, see [DefaultAzureCredential overview](/python/api/overview/azure/identity-readme).
+For local development, you can use the `pyodbc` driver in several ways. The recommended approach is passwordless. In the passwordless mode, `pyodbc` driver uses the class `DefaultAzureCredential` class to implement passwordless connections to Azure SQL Database. The `DefaultAzureCredential` is part of the Azure Identity library on which the SQL client library depends. For more information, see [DefaultAzureCredential overview](/python/api/overview/azure/identity-readme).
 
 For local development with passwordless connections to Azure SQL Database, add the following `AZURE_SQL_CONNECTIONSTRING` environment variable. Replace the `<database-server-name>` and `<database-name>` placeholders with your own values. Example environment variables are shown for the Bash shell.
 

@@ -69,7 +69,7 @@ The steps in this section create a Node.js REST API.
     const person = require('./person');
     const openapi = require('./openapi');
     
-    const port = process.env.PORT || 3000;
+    const port = parseInt(process.env.PORT) || 3000;
     
     const app = express();
     
@@ -77,8 +77,8 @@ The steps in this section create a Node.js REST API.
     // Run this to create the table in the database
     if (process.env.NODE_ENV === 'development') {
       const Database = require('./database');
-      const { noPasswordConfig } = require('./config');
-      const database = new Database(noPasswordConfig);
+      const { config } = require('./config');
+      const database = new Database(config);
       database
         .executeQuery(
           `CREATE TABLE Person (id int NOT NULL IDENTITY, firstName varchar(255), lastName varchar(255));`
@@ -322,7 +322,7 @@ The **mssql** package implements the connection to Azure SQL Database by providi
     require('dotenv').config({ debug: true });
     const server = process.env.AZURE_SQL_SERVER;
     const database = process.env.AZURE_SQL_DATABASE;
-    const port = process.env.AZURE_SQL_PORT;
+    const port = parseInt(process.env.AZURE_SQL_PORT);
     const type = process.env.AZURE_SQL_AUTHENTICATIONTYPE;
     
     const config = {
@@ -365,7 +365,7 @@ The **mssql** package implements the connection to Azure SQL Database by providi
     
     const server = process.env.AZURE_SQL_SERVER;
     const database = process.env.AZURE_SQL_DATABASE;
-    const port = +process.env.AZURE_SQL_PORT;
+    const port = parseInt(process.env.AZURE_SQL_PORT);
     const user = process.env.AZURE_SQL_USER;
     const password = process.env.AZURE_SQL_PASSWORD;
     

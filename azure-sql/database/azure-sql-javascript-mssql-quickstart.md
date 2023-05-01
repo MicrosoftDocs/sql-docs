@@ -30,7 +30,7 @@ This quickstart describes how to connect an application to a database in Azure S
 
 ## Create the project
 
-The steps in this section create a Node.js Minimal Web API with npm.
+The steps in this section create a Node.js REST API.
 
 1. Create a new directory for the project and navigate into it. 
 1. Initialize the project by running the following command in the terminal:

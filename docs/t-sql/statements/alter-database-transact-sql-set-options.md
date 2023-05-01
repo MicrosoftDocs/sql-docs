@@ -3210,8 +3210,9 @@ If the Query Store has breached the `MAX_STORAGE_SIZE_MB` limit between storage 
 Once enough space has been cleared, the Query Store mode will automatically switch back to read-write.
 
 > [!IMPORTANT]  
-> If you think that your workload capture will need more than 10 GB of disk space, you should probably rethink and optimize your workload to reuse query plans (for example using [forced parameterization](../../relational-databases/query-processing-architecture-guide.md#forced-parameterization), or adjust the Query Store configurations.
-> Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], you can set `QUERY_CAPTURE_MODE` to CUSTOM for additional control over the query capture policy.
+> - If you think that your workload capture will need more than 10 GB of disk space, you should probably rethink and optimize your workload to reuse query plans (for example using [forced parameterization](../../relational-databases/query-processing-architecture-guide.md#forced-parameterization), or adjust the Query Store configurations.
+> - Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], you can set `QUERY_CAPTURE_MODE` to CUSTOM for additional control over the query capture policy.
+> - `MAX_STORAGE_SIZE_MB` setting limit is 10,240 MB on [!INCLUDE[sssdsmifull](../../includes/sssdsmifull-md.md)]. 
 
 #### INTERVAL_LENGTH_MINUTES
 

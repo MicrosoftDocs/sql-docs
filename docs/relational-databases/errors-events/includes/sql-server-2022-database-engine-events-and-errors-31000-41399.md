@@ -2,7 +2,7 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 04/06/2023
+ms.date: 04/21/2023
 ms.topic: include
 ---
 > [!NOTE]
@@ -1255,7 +1255,7 @@ ms.topic: include
 | 39018 | 16 | No | Parameter '%.\*ls' uses a data type that is not supported by the runtime for '%.\*s' script. Unsupported types are timestamp, datetime2, datetimeoffset, time, text, ntext, image, hierarchyid, xml, sql_variant and user-defined type. External script request id is %ls. |
 | 39019 | 10 | No | An external script error occurred: %.\*ls%.\*ls |
 | 39020 | 16 | No | Feature 'Advanced Analytics Extensions' is not installed. Please consult Books Online for more information on this feature. |
-| 39021 | 16 | No | Unable to launch runtime for '%.\*s' script for request id: %ls. Please check the configuration of the '%.\*s' runtime. See '[https://learn.microsoft.com/sql/machine-learning/install/sql-machine-learning-services-windows-install-sql-2022](/sql/machine-learning/install/sql-machine-learning-services-windows-install-sql-2022)' for setup instructions. |
+| 39021 | 16 | No | Unable to launch runtime for '%.\*s' script for request id: %ls. Please check the configuration of the '%.\*s' runtime. See '[https://learn.microsoft.com/sql/machine-learning/install/sql-machine-learning-services-windows-install-sql-2022](../../../machine-learning/install/sql-machine-learning-services-windows-install-sql-2022.md)' for setup instructions. |
 | 39022 | 10 | No | STDERR message(s) from external script: %.\*ls%.\*ls |
 | 39023 | 16 | No | 'sp_execute_external_script' is disabled on this instance of SQL Server. Use sp_configure 'external scripts enabled' to enable it. |
 | 39024 | 16 | No | Parallel execution of 'sp_execute_external_script' failed. Specify WITH RESULT SETS clause with output schema. |

@@ -44,7 +44,7 @@ helpviewer_keywords:
   
 -   This option is an advanced option and should be changed only by an experienced database administrator or certified [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] professional.  
   
--   The **default full-text language** option requires an LCID value. For a list of supported LCIDs and their related languages, see [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md). Other languages may also be available from independent software vendors, for example. If no specific language dialect is found, the Full-Text Engine will automatically switch to the primary language.  
+-   The **default full-text language** option requires an LCID value. For a list of supported LCIDs and their related languages, see [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md). Other languages may also be available from independent software vendors, for example. If no specific language is found, the Full-Text Engine will automatically switch to the primary language.  
   
 ###  <a name="Security"></a> Security  
   

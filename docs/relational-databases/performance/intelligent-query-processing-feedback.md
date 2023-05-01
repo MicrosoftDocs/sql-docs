@@ -230,7 +230,7 @@ Persistence also applies to [DOP feedback](#degree-of-parallelism-dop-feedback) 
 
 #### Enable memory grant feedback: persistence and percentile
 
-To enable memory grant feedback persistence and percentile, use database compatibility level 140 or higher for the database you're connected to when executing the query. Peristence and percentile feedback are [enabled by default](#percentile-and-persistence-mode-memory-grant-feedback).
+To enable memory grant feedback persistence and percentile, use database compatibility level 140 or higher for the database you're connected to when executing the query. Persistence and percentile feedback are [enabled by default](#percentile-and-persistence-mode-memory-grant-feedback).
 
 `ALTER DATABASE <DATABASE NAME> SET COMPATIBILITY LEVEL = 140; -- OR HIGHER`
 
@@ -271,9 +271,12 @@ Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], when Query 
 
 ## Degree of parallelism (DOP) feedback
 
-**Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later
+**Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (Preview)
 
 [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] introduced a new feature called degree of parallelism (DOP) feedback to improve query performance by identifying parallelism inefficiencies for repeating queries, based on elapsed time and waits. DOP feedback is part of the [intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) family of features, and addresses suboptimal usage of parallelism for repeating queries. This scenario helps with optimizing resource usage and improving scalability of workloads, when excessive parallelism can cause performance issues. Instead of incurring in the pains of an all-encompassing default or manual adjustments to each query, DOP feedback self-adjusts DOP to avoid the issues described above.
+
+> [!NOTE]
+> This feature is currently available in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] as a limited preview. For more information and how to apply for the preview, see [Announcing Degree of Parallelism Feedback Limited Preview](https://techcommunity.microsoft.com/t5/azure-sql-blog/announcing-degree-of-parallelism-feedback-limited-preview/ba-p/3806924).
 
 Instead of incurring in the pains of an all-encompassing default or manual adjustments to each query, DOP feedback self-adjusts DOP to avoid excess parallelism. If parallelism usage is deemed inefficient, DOP feedback lowers the DOP for the next execution of the query, from whatever is the configured DOP, and verify if it helps.
 

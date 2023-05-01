@@ -1,8 +1,8 @@
 ---
 title: Get started with SQL Server security on Linux
 description: Walk through the security features of SQL Server on Linux to get an idea of areas to investigate further.
-author: VanMSFT
-ms.author: vanto
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 10/02/2017
 ms.service: sql
 ms.subservice: linux

@@ -1,8 +1,8 @@
 ---
 title: How to use distributed transactions with SQL Server Linux containers
 description: Learn to use the Microsoft Distributed Transaction Coordinator (MSDTC) for distributed transactions in a SQL Server container on Linux.
-author: VanMSFT
-ms.author: vanto
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: randolphwest
 ms.date: 09/21/2022
 ms.service: sql

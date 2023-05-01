@@ -1,8 +1,8 @@
 ---
 title: High availability for SQL Server containers
 description: Learn about high availability for SQL Server containers. Also learn about deploying a container with SQL server on Kubernetes.
-author: VanMSFT
-ms.author: vanto
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: vanto, randolphwest
 ms.date: 05/26/2022
 ms.service: sql

@@ -18,9 +18,10 @@ An Azure Arc-enabled instance of [!INCLUDE [ssnoversion-md](../../includes/ssnov
 
 Before you can Arc-enable an instance of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], you need to:
 
-- Have an Azure account with an active subscription. If needed, [create a free Azure Account](https://azure.microsoft.com/free/)
+- Have an Azure account with an active subscription. If needed, [create a free Azure Account](https://azure.microsoft.com/free/).
 - Verify [Arc connected machine agent prerequisites](/azure/azure-arc/servers/prerequisites).  The Arc agent must be running in the typical 'full' mode.
-- Verify [Arc connected machine agent network requirements](/azure/azure-arc/servers/network-requirements)
+- Verify [Arc connected machine agent network requirements](/azure/azure-arc/servers/network-requirements).
+- Open firewall to [Azure Arc data processing service](#connect-to-azure-arc-data-processing-service).
 - Register resource providers. Specifically:
   - `Microsoft.AzureArcData`
   - `Microsoft.HybridCompute`
@@ -42,6 +43,26 @@ Users can be assigned to built-in roles that have these permissions, for example
 - Have local administrator permission on the operating system to install and configure the agent.
   - For Linux, use the root account.
   - For Windows, use an account that is a member of the Local Administrators group.
+
+### Connect to Azure Arc data processing service
+
+Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] requires outbound connection to Azure Arc data processing service. Each virtual or physical server requires connectivity to:
+
+- URL: `san-af-<region>-prod.azurewebsites.net`
+- Port: 443
+- Direction: Outbound
+
+To get the region segment of a regional endpoint, remove all spaces from the Azure region name. For example, *East US 2* region, the region name is `eastus2`.
+
+For example: `san-af-<region>-prod.azurewebsites.net` should be `san-af-eastus2-prod.azurewebsites.net` in the East US 2 region.
+
+For a list of supported regions, review [Supported Azure regions](overview.md#supported-azure-regions).
+
+For a list of all regions, run this command:
+
+```azcli
+az account list-locations -o table
+```
 
 ## Supported SQL Server versions and operating systems
 

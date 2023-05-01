@@ -209,6 +209,7 @@ If Change Data Capture needs to be disabled on a database that is part of an Alw
 |**Peer-to-peer**<sup>2</sup>|Yes|Yes<sup>3</sup>|Yes|  
 |**Merge**|Yes|No|No|  
 |**Snapshot**|Yes|No|Yes|
+|**Updatable Subscriptions - For Transactional Replication**|No|No|No|
   
 <sup>1</sup> The Distributor database is not supported for use with database mirroring.
 

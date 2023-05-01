@@ -109,7 +109,7 @@ $importRequest = New-AzSqlDatabaseImport -ResourceGroupName "<resourceGroupName>
     -StorageKey $(Get-AzStorageAccountKey `
         -ResourceGroupName "<resourceGroupName>" -StorageAccountName "<storageAccountName>").Value[0] `
         -StorageUri "https://myStorageAccount.blob.core.windows.net/importsample/sample.bacpac" `
-        -Edition "Standard" -ServiceObjectiveName "P6" `
+        -Edition "Premium" -ServiceObjectiveName "P6" `
         -AdministratorLogin "<userId>" `
         -AdministratorLoginPassword $(ConvertTo-SecureString -String "<password>" -AsPlainText -Force)
 ```

@@ -350,6 +350,7 @@ monikerRange: "=azuresqldb-current"
 |TRAN_MARKLATCH_SH|Occurs when waiting for a shared mode latch on a marked transaction. Transaction mark latches are used for synchronization of commits with marked transactions.|  
 |TRAN_MARKLATCH_UP|Occurs when waiting for an update mode latch on a marked transaction. Transaction mark latches are used for synchronization of commits with marked transactions.|  
 |TRANSACTION_MUTEX|Occurs during synchronization of access to a transaction by multiple batches.|  
+|THROTTLE_LOG_RATE_LOG_STORAGE|Occurs when writing to the DB log is throttled due to performance capabilities of the underlying storage.|  
 |UTIL_PAGE_ALLOC|Occurs when transaction log scans wait for memory to be available during memory pressure.|  
 |VIA_ACCEPT|Occurs when a Virtual Interface Adapter (VIA) provider connection is completed during startup.|  
 |VIEW_DEFINITION_MUTEX|Occurs during synchronization on access to cached view definitions.|  

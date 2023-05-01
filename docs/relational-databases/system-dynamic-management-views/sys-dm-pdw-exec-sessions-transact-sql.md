@@ -29,7 +29,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 |login_time|**datetime**|Date and time at which the user logged in and this session was created.|Valid **datetime** before current time.|  
 |query_count|**int**|Captures the number of queries/requeststhis session has run since creation.|Greater than or equal to 0.|  
 |is_transactional|**bit**|Captures whether a session is currently within a transaction or not.|0 for auto-commit, 1 for transactional.|  
-|client_id|**nvarchar(255)**|Captures client information for the session.|Any valid string.|  
+|client_id|**nvarchar(255)**|Captures client information for the session. IPv6 address indicates private endpoint is used.|Any valid string.|  
 |app_name|**nvarchar(255)**|Captures application name information optionally set as part of the connection process.|Any valid string.|  
 |sql_spid|**int**|The IDs column contains closed SPIDs.||  
   

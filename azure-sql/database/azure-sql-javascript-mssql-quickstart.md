@@ -30,7 +30,7 @@ This quickstart describes how to connect an application to a database in Azure S
 
 ## Create the project
 
-The steps in this section create a .NET Minimal Web API by using either the .NET CLI or Visual Studio 2022.
+The steps in this section create a Node.js Minimal Web API with npm.
 
 1. Create a new directory for the project and navigate into it. 
 1. Initialize the project by running the following command in the terminal:
@@ -40,13 +40,25 @@ The steps in this section create a .NET Minimal Web API by using either the .NET
     ```
 
 
-1. Install the packages used in the sample code in this article:
+1. Install the required packages used in the sample code in this article:
 
     ```bash
-    npm install mssql cross-env dotenv swagger-ui-express yamljs
+    npm install mssql swagger-ui-express yamljs
     ```
 
-    The **dotenv** package is used for local development only. 
+    | Package|Purpose|
+    |**mssql**| Used to integrate with Azure SQL. |
+    |**swagger-ui-express**|Used to generate the Swagger UI.|
+    |**yamljs**|Used to convert YAML to JSON. The Swagger UI expects a JSON formatted schema.|
+
+1. Install the development packages used in the sample code in this article:
+
+    ```bash
+    npm install cross-env dotenv 
+    ```
+    | Package|Purpose|
+    |**cross-env**| Used to turn on operating system-agnostic Express debugging. |
+    |**dotenv**|Used to read `.env` files.|
     
 1. Open the project in Visual Studio Code.
 
@@ -68,6 +80,25 @@ The steps in this section create a .NET Minimal Web API by using either the .NET
     const port = process.env.PORT || 3000;
     
     const app = express();
+    
+    // Development only - don't do in production
+    // Run this to create the table in the database
+    if (process.env.NODE_ENV === 'development') {
+      const Database = require('./dbazuresql');
+      const { noPasswordConfig } = require('./config');
+      const database = new Database(noPasswordConfig);
+      database
+        .executeQuery(
+          `CREATE TABLE Person (id int NOT NULL IDENTITY, firstName varchar(255), lastName varchar(255));`
+        )
+        .then(() => {
+          console.log('Table created');
+        })
+        .catch((err) => {
+          // Table may already exist
+          console.error(`Error creating table: ${err}`);
+        });
+    }
     
     // Connect App routes
     app.use('/api-docs', openapi);
@@ -288,7 +319,7 @@ The steps in this section create a .NET Minimal Web API by using either the .NET
 
 ## Configure the mssql connection object
 
-The **mssql** package implements passwordless connections to Azure SQL Database by providing a configuration setting for an authentication type. 
+The **mssql** package implements the connection to Azure SQL Database by providing a configuration setting for an authentication type. 
 
 Create a **config.js** file and add the following mssql configuration code to authenticate to Azure SQL.
 
@@ -393,6 +424,14 @@ module.exports = {
         } catch (error) {
           console.error(`Error closing database connection: ${error}`);
         }
+      }
+
+      async executeQuery(query) {
+        await this.connect();
+        const request = this.poolconnection.request();
+        const result = await request.query(query);
+    
+        return result.rowsAffected[0];
       }
     
       async create(table, data) {

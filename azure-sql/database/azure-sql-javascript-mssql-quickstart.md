@@ -200,10 +200,10 @@ The steps in this section create a Node.js Minimal Web API with npm.
                 res.status(404);
             } else {
                 const rowsAffected = await database.delete('Person', personId);
-                res.status(204).json({ rowsAffected })
+                res.status(204).json({ rowsAffected });
             }
         } catch (err) {
-            res.status(500).json({ error: err?.message })
+            res.status(500).json({ error: err?.message });
         }
     });
     

@@ -146,9 +146,9 @@ You can get the details to create your connection string from the Azure portal:
 
 ## Add code to connect to Azure SQL Database
 
-Add the sample code to the `app.py` file. This code:
+Add the sample code to the `app.py` file. This code creates an API that:
 
-* Retrieves the passwordless connection string from the environment variable.
+* Retrieves a Azure SQL Database connection string from an environment variable.
 
 * Creates a `Person` table in the database during startup (for testing scenarios only).
 

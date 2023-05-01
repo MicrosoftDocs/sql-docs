@@ -60,7 +60,7 @@ The script can be used to copy content between report servers of the same mode o
 |Subscriptions|Yes|Yes||  
 |History Settings|Yes|Yes|The history settings are migrated however the history details are NOT migrated.|  
 |Processing options|Yes|Yes||  
-|Cache refresh options|Yes|Yes|Dependent settings are migrated as part of a catalog item. The following is the sample out of the script as it migrates a report (.rdl) and related settings such as cache refresh options:<br /><br /> -   Migrating parameters for report TitleOnly.rdl 0 items found.<br />-   Migrating subscriptions for report TitleOnly.rdl: 1 items found.<br />-   Migrating subscription Save in \\\server\public\savedreports as TitleOnly ... SUCCESS<br />-   Migrating history settings for report TitleOnly.rdl ... SUCCESS<br />-   Migrating processing options for report TitleOnly.rdl ... 0 items found.<br />-   Migrating cache refresh options for report TitleOnly.rdl ... SUCCESS<br />-   Migrating cache refresh plans for report TitleOnly.rdl: 1 items found.<br />-   Migrating cache refresh plan titleonly_refresh735amM2F ... SUCCESS|  
+|Cache refresh options|Yes|Yes|Dependent settings are migrated as part of a catalog item. The following output is the sample out of the script as it migrates a report (.rdl) and related settings such as cache refresh options:<br /><br /> -   Migrating parameters for report TitleOnly.rdl 0 items found.<br />-   Migrating subscriptions for report TitleOnly.rdl: 1 items found.<br />-   Migrating subscription Save in \\\server\public\savedreports as TitleOnly ... SUCCESS<br />-   Migrating history settings for report TitleOnly.rdl ... SUCCESS<br />-   Migrating processing options for report TitleOnly.rdl ... 0 items found.<br />-   Migrating cache refresh options for report TitleOnly.rdl ... SUCCESS<br />-   Migrating cache refresh plans for report TitleOnly.rdl: 1 items found.<br />-   Migrating cache refresh plan titleonly_refresh735amM2F ... SUCCESS|  
 |Cache refresh plans|Yes|Yes||  
 |Images|Yes|Yes||  
 |Report parts|Yes|Yes||  
@@ -69,10 +69,11 @@ The script can be used to copy content between report servers of the same mode o
 |Excel Workbooks|No|No|**Only available with Power BI Report Server**<br /><br />Using [Reporting Services PowerShell commands](https://github.com/microsoft/ReportingServicesTools), such as Out-RsRestFolderContent and Write-RsRestFolderContent, may be used as an alternative.|  
 
 [!INCLUDE [ssrs-report-parts-deprecated](../../includes/ssrs-report-parts-deprecated.md)]
+
 [!INCLUDE [ssrs-mobile-report-deprecated](../../includes/ssrs-mobile-report-deprecated.md)]
   
 ##  <a name="bkmk_required_permissions"></a> Required permissions  
- The permissions required to read or write items and resources isn't the same for all of the methods used in the script. The following table summarizes the methods used for each item or resource and links to related content. Navigate to the individual article to see the required permissions. For example the ListChildren method topic notes the required permissions of:  
+ The permissions required to read or write items and resources isn't the same for all of the methods used in the script. The following table summarizes the methods used for each item or resource and links to related content. Navigate to the individual article to see the required permissions. For example, the ListChildren method topic notes the required permissions of:  
   
 -   **Native Mode Required Permissions:** ReadProperties on Item  
   
@@ -193,7 +194,7 @@ The script can be used to copy content between report servers of the same mode o
   
     -   `https://servername/reportserver`  
   
-     In SharePoint mode the URL looks like this URL:  
+     In SharePoint mode, the URL looks like this URL:  
   
     -   `https://servername/_vti_bin/reportserver`  
   

@@ -229,7 +229,7 @@ The steps in this section create a Node.js Minimal Web API with npm.
     module.exports = router;
     ```
 
-1. Create a **openApiSchema.yml** schema file and add the following YML code:
+1. Create a **openApiSchema.yml** schema file and add the following YAML:
 
     ```yml
     openapi: 3.0.0

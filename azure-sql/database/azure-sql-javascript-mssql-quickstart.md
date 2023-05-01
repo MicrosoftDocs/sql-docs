@@ -565,6 +565,10 @@ The person you created locally should display in the browser. Congratulations! Y
 > [!TIP]
 > If you receive a 500 Internal Server error while testing, it may be due to your database networking configurations. Verify that your logical server is configured with the settings outlined in the [Configure the database](/azure/azure-sql/database/azure-sql-dotnet-quickstart#configure-the-database) section.
 
+## Sample code
+
+The sample code for this application is available on [GitHub](https://github.com/Azure-Samples/azure-typescript-e2e-apps/tree/main/api-expressjs-openapi-azuresql-js).
+
 ## Next steps
 
 - [Tutorial: Secure a database in Azure SQL Database](./secure-database-tutorial.md)

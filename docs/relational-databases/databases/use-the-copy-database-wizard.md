@@ -345,7 +345,7 @@ The following example will move the `Sales` database, a Windows login named `con
 16.    **Post Move Steps**
 Consider executing the following T-SQL statements on the new host, `Server2`:
   
-        ```tsql 
+        ```sql 
         ALTER AUTHORIZATION ON DATABASE::Sales TO sa;
         GO
         ALTER DATABASE Sales 

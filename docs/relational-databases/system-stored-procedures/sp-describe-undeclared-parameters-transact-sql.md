@@ -25,7 +25,7 @@ Returns a result set that contains metadata about undeclared parameters in a [!I
 
 ## Syntax
 
-```tsql
+```sql
 sp_describe_undeclared_parameters   
     [ @tsql = ] 'Transact-SQL_batch'   
     [ , [ @params = ] N'parameters' data type ] [, ...n]  
@@ -125,7 +125,7 @@ The first step in data type deduction for a query with undeclared parameters is 
   
  After this step, if any expression (other than a call to a UDF) has two arguments without data types, type deduction fails with an error. For example, the following all produce errors:  
   
-```tsql
+```sql
 SELECT * FROM t1 WHERE @p1 = @p2  
 SELECT * FROM t1 WHERE c1 = @p1 + @p2  
 SELECT * FROM t1 WHERE @p1 = SUBSTRING(@p2, 2, 3)  
@@ -260,7 +260,7 @@ Of the candidate data types, any data type that would invalidate the query is re
 
  The following example returns information such as the expected data type for the undeclared `@id` and `@name` parameters.  
   
-```tsql
+```sql
 sp_describe_undeclared_parameters @tsql =   
 N'SELECT object_id, name, type_desc   
 FROM sys.indexes  
@@ -269,7 +269,7 @@ WHERE object_id = @id OR name = @name'
   
  When the `@id` parameter is provided as a `@params` reference, the `@id` parameter is omitted from the result set and only the `@name` parameter is described.  
   
-```tsql
+```sql
 sp_describe_undeclared_parameters @tsql =   
 N'SELECT object_id, name, type_desc   
 FROM sys.indexes  

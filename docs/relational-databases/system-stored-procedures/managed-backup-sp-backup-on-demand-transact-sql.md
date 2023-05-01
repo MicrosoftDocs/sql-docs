@@ -31,9 +31,9 @@ dev_langs:
    
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## Syntax  
+## Syntax
   
-```sql  
+```syntaxsql
 EXEC managed_backup.sp_backup_on_demand   
 [@database_name  =]  'database name',[@type = ] { 'Database' | 'Log' }  
   

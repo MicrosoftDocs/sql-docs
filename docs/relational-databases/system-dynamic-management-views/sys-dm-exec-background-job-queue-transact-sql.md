@@ -64,7 +64,7 @@ Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 ## Examples  
  The following example returns the number of active asynchronous jobs in the background queue for each database in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-```tsql  
+```sql  
 SELECT DB_NAME(database_id) AS [Database], COUNT(*) AS [Active Async Jobs]  
 FROM sys.dm_exec_background_job_queue  
 WHERE in_progress = 1  

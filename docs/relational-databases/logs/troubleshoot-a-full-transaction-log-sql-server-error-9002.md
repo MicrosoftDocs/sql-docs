@@ -302,7 +302,7 @@ A complete history of all SQL Server backup and restore operations on a server i
 
 Example of how to back up the log:
 
-```tsql
+```sql
 BACKUP LOG [dbname] TO DISK = 'some_volume:\some_folder\dbname_LOG.trn'
 ```
 
@@ -344,7 +344,7 @@ No checkpoint has occurred since the last log truncation, or the head of the log
 
 This is a routine reason for delaying log truncation. If delayed, consider executing the `CHECKPOINT` command on the database or examining the log [VLFs](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). 
 
-```TSQL
+```sql
 USE dbname; CHECKPOINT
 select * from sys.dm_db_log_info(db_id('dbname'))
 ```

@@ -55,7 +55,7 @@ The steps in this section create a Node.js Minimal Web API with npm.
 1. Install the development packages used in the sample code in this article:
 
     ```bash
-    npm install cross-env dotenv 
+    npm install dotenv 
     ```
 
     | Package|Purpose|

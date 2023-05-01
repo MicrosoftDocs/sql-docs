@@ -92,7 +92,7 @@ The steps in this section create a .NET Minimal Web API by using either the .NET
     const router= express.Router();
     router.use(express.json());
     
-    console.log(`DB Config: ${JSON.stringify(config)}`)
+    console.log(`DB Config: ${JSON.stringify(config)}`);
     const database = new Database(config);
     
     router.get('/', async (_, res) => {

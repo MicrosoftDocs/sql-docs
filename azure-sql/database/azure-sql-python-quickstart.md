@@ -34,7 +34,7 @@ This quickstart describes how to connect an application to a database in Azure S
 
     * Navigate to the **Networking** page of your server.
 
-    * Toggle the **Selected networks** radio button to show additional configuration options.
+    * Toggle the **Selected networks** radio button to show other configuration options.
 
     * Select **Add your client IPv4 address(xx.xx.xx.xx)** to add a firewall rule that will enable connections from your local machine IPv4 address. Alternatively, you can also select **+ Add a firewall rule** to enter a specific IP address of your choice.
 
@@ -91,78 +91,108 @@ pip install pyodbc
 
 For details and specific instructions for all operating systems, see [Configure development environment for pyodbc Python development](/sql/connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development).
 
+## Configure the connection string
+
+You can get the details to create your connection string from the Azure portal:
+
+1. Go to the Azure SQL Server, select the **SQL databases** page to find your database name, and select the database.
+
+2. On the database, go to the **Connection strings** page to get connection string information. Look under the **ODBC** tab.
+
+You can use the `pyodbc` driver in a several ways. The recommended approach is passwordless. In the passwordless mode, `pyodbc` driver uses the class `DefaultAzureCredential` class to implement passwordless connections to Azure SQL Database. The `DefaultAzureCredential` is part of the Azure Identity library on which the SQL client library depends. For more information, see [DefaultAzureCredential overview](/python/api/overview/azure/identity-readme).
+
+For local development with passwordless connections to Azure SQL Database, add the following `AZURE_SQL_CONNECTIONSTRING` environment variable. Replace the `<database-server-name>` and `<database-name>` placeholders with your own values. Example environment variables are shown for the Bash shell.
+
+## [Passwordless (Recommended)](#tab/passwordless)
+
+The passwordless connection string sets a configuration value of `Authentication="ActiveDirectoryDefault"`, which instructs the `pyodbc` driver to connect to Azure SQL Database using a class called [`DefaultAzureCredential`](/python/azure/sdk/authentication#defaultazurecredential). `DefaultAzureCredential` enables passwordless connections to Azure services and is provided by the Azure Identity library on which the SQL client library depends. `DefaultAzureCredential` supports multiple authentication methods and determines which to use at runtime for different environments.
+
+```Bash
+export AZURE_SQL_CONNECTIONSTRING='Driver={ODBC Driver 18 for SQL Server};Server=tcp:<database-server-name>.database.windows.net,1433;Initial Catalog=<database-name>;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;Authentication=ActiveDirectoryDefault;'
+```
+
+When the app runs locally, `DefaultAzureCredential` authenticates via the user you're signed into Visual Studio with, or other local tools like the Azure CLI. Once the app deploys to Azure, the same code discovers and applies the managed identity that is associated with the hosted app, which you configure later. The [Azure Identity library overview](/python/api/overview/azure/Identity-readme#defaultazurecredential) explains the order and locations in which `DefaultAzureCredential` looks for credentials.
+
+> [!NOTE]
+> Passwordless connection strings are safe to commit to source control, since they don't contain secrets such as usernames, passwords, or access keys.
+
+## [Interactive Authentication](#tab/sql-inter)
+
+In Windows, Azure AD Interactive Authentication can use Azure Active Directory Multi-Factor Authentication technology to set up connection. In this mode, by providing the login ID, an Azure Authentication dialog is triggered and allows the user to input the password to complete the connection.
+
+```bash
+export AZURE_SQL_CONNECTIONSTRING='Driver={ODBC Driver 18 for SQL Server};Server=tcp:<database-server-name>.database.windows.net,1433;Database=<database-name>;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;Authentication=ActiveDirectoryInteractive'
+```
+
+For more information, see [Using Azure Active Directory with the ODBC Driver](/sql/connect/odbc/using-azure-active-directory).
+
+## [SQL Authentication](#tab/sql-auth)
+
+You can directly authenticate to a SQL Server instance using a username and password.
+
+```Bash
+export AZURE_SQL_CONNECTIONSTRING='Driver={ODBC Driver 18 for SQL Server};Server=tcp:<database-server-name>.database.windows.net,1433;Database=<database-name>;UID=<user-name>;PWD=<user-password>;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;Authentication=SqlPassword'
+```
+
+> [!WARNING]
+> Use caution when managing connection strings that contain secrets such as usernames, passwords, or access keys. These secrets shouldn't be committed to source control or placed in unsecure locations where they might be accessed by unintended users. During local development, on a real app, you'll generally connect to a local database that doesn't require storing secrets or connecting directly to Azure.
+
+---
+
 ## Add code to connect to Azure SQL Database
 
-The `pyodbc` driver uses the class `DefaultAzureCredential` class to implement passwordless connections to Azure SQL Database. The `DefaultAzureCredentail` is part of the Azure Identity library on which the SQL client library depends. For more information, see [DefaultAzureCredential overview](/python/api/overview/azure/identity-readme).
+Add the sample code to the `app.py` file. This code:
 
-`DefaultAzureCredential` supports multiple authentication methods and determines which to use at runtime. This approach enables your app to use different authentication methods in different environments (local vs. production) without implementing environment-specific code. The [Azure Identity library overview](/python/api/overview/azure/Identity-readme#defaultazurecredential) explains the order and locations in which `DefaultAzureCredential` looks for credentials.
+* Retrieves the passwordless connection string from the environment variable.
 
-Complete the following steps to connect to Azure SQL Database using the `pyodbc` driver and `DefaultAzureCredential`:
+* Creates a `Person` table in the database during startup (for testing scenarios only).
 
-1. Create an environment variable in your environment to define the passwordless connection string `AZURE_SQL_CONNECTIONSTRING`.
+* Creates a function to retrieve the `Person` records stored in the database.
 
-    The general form of the connection string is `server=Server;database=Database;UID=UserName;Authentication=ActiveDirectoryInteractive;Encrypt=yes;`. For more information, see [Example connection string for Azure Active Directory interactive authentication](/sql/connect/python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc#example-connection-string-for-azure-active-directory-interactive-authentication).
+* Creates a function to add new `Person` records to the database.
 
-    The passwordless connection string includes a configuration value of `Authentication=ActiveDirectoryInteractive`, which instructs the app to use `DefaultAzureCredential` to connect to Azure services. The `pyodbc` library implements this functionality internally. When the app runs locally, it authenticates with the user you're signed into Visual Studio Code with. Once the app deploys to Azure, the same code discovers and applies the managed identity that is associated with the hosted app, which you configure later.
+```python
+import os
+import pyodbc
 
-    You can get the details of this connection string from the Azure portal:
+connection_string = os.environ["AZURE_SQL_CONNECTIONSTRING"]
 
-    * Go to the Azure SQL Server, select the **SQL databases** page to find your database name, and select the database.
+try:
+    # Table would be created ahead of time in production
+    conn = pyodbc.connect(connection_string)
+    cursor = conn.cursor()
 
-    * On the database, go to the **Connection strings** page to get connection string information. Look under the **ODBC** tab.
+    cursor.execute("""
+        CREATE TABLE Persons (
+            ID int NOT NULL PRIMARY KEY IDENTITY,
+            FirstName varchar(255),
+            LastName varchar(255)
+        );
+    """)
 
-1. Add the sample code to the `app.py` file. This code:
+    conn.commit()
+except Exception as e:
+    # Table may already exist
+    print(e)
 
-    * Retrieves the passwordless connection string from the environment variable.
+def get_persons():
+    rows = []
 
-    * Creates a `Person` table in the database during startup (for testing scenarios only).
-
-    * Creates a function to retrieve the `Person` records stored in the database.
-
-    * Creates a function to add new `Person` records to the database.
-
-    ```python
-    import os
-    import pyodbc
-    
-    connection_string = os.environ["AZURE_SQL_CONNECTIONSTRING"]
-    
-    try:
-        # Table would be created ahead of time in production
-        conn = pyodbc.connect(connection_string)
+    with pyodbc.connect(connection_string) as conn:
         cursor = conn.cursor()
-    
-        cursor.execute("""
-            CREATE TABLE Persons (
-                ID int NOT NULL PRIMARY KEY IDENTITY,
-                FirstName varchar(255),
-                LastName varchar(255)
-            );
-        """)
-    
+        cursor.execute("SELECT * FROM Persons")
+
+        for row in cursor.fetchall():
+            rows.append(f"{row.ID}, {row.FirstName}, {row.LastName}")
+
+    return rows
+
+def create_person(first_name, last_name):
+    with pyodbc.connect(connection_string) as conn:
+        cursor = conn.cursor()
+        cursor.execute(f"INSERT INTO Persons (FirstName, LastName) VALUES (?, ?)", first_name, last_name)
         conn.commit()
-    except Exception as e:
-        # Table may already exist
-        print(e)
-    
-    def get_persons():
-        rows = []
-    
-        with pyodbc.connect(connection_string) as conn:
-            cursor = conn.cursor()
-            cursor.execute("SELECT * FROM Persons")
-    
-            for row in cursor.fetchall():
-                rows.append(f"{row.ID}, {row.FirstName}, {row.LastName}")
-    
-        return rows
-    
-    def create_person(first_name, last_name):
-        with pyodbc.connect(connection_string) as conn:
-            cursor = conn.cursor()
-            cursor.execute(f"INSERT INTO Persons (FirstName, LastName) VALUES (?, ?)", first_name, last_name)
-            conn.commit()
-    ```
+```
 
 ## Run and test the app locally
 

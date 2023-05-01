@@ -29,12 +29,10 @@ You can verify the changes made by Service Connector on the App Service settings
 1. Navigate to the **Identity** page for your App Service. Under the **System assigned** tab, the **Status** should be set to **On**. This value means that a system-assigned managed identity was enabled for your app.
 1. Navigate to the **Configuration** page for your App Service. Under the **Application Settings** tab, you should see several environment variables, which were already in the **mssql** configuration object. 
 
-    |Property|
-    |--|
-    |AZURE_SQL_SERVER|
-    |AZURE_SQL_DATABASE|
-    |AZURE_SQL_PORT|
-    |AZURE_SQL_AUTHENTICATIONTYPE|
+    * `AZURE_SQL_SERVER`
+    * `AZURE_SQL_DATABASE`
+    * `AZURE_SQL_PORT`
+    * `AZURE_SQL_AUTHENTICATIONTYPE`
 
     Don't delete or change the property names or values.
 

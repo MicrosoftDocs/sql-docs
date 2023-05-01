@@ -46,22 +46,11 @@ The steps in this section create a Node.js Minimal Web API with npm.
     npm install mssql swagger-ui-express yamljs
     ```
 
-    | Package|Purpose|
-    |--|--|
-    |**mssql**| Used to integrate with Azure SQL. |
-    |**swagger-ui-express**|Used to generate the Swagger UI.|
-    |**yamljs**|Used to convert YAML to JSON. The Swagger UI expects a JSON formatted schema.|
-
 1. Install the development packages used in the sample code in this article:
 
     ```bash
     npm install dotenv 
     ```
-
-    | Package|Purpose|
-    |--|--|
-    |**cross-env**| Used to turn on operating system-agnostic Express debugging. |
-    |**dotenv**|Used to read `.env` files.|
     
 1. Open the project in Visual Studio Code.
 
@@ -119,11 +108,11 @@ The steps in this section create a Node.js Minimal Web API with npm.
 1. Create a **person.js** route file and add the following code:
 
     ```javascript
-    const express = require("express");
-    const Database = require("./dbazuresql");
-    const { config } = require("./config");
+    const express = require('express');
+    const Database = require('./dbazuresql');
+    const { config } = require('./config');
     
-    const router= express.Router();
+    const router = express.Router();
     router.use(express.json());
     
     console.log(`DB Config: ${JSON.stringify(config)}`);
@@ -142,6 +131,7 @@ The steps in this section create a Node.js Minimal Web API with npm.
     
     router.post('/', async (req, res) => {
         try {
+            // Create a new person
             const person = req.body;
             delete person.id;
             console.log(`person: ${JSON.stringify(person)}`);
@@ -155,7 +145,7 @@ The steps in this section create a Node.js Minimal Web API with npm.
     
     router.get('/:id', async (req, res) => {
         try {
-            // Update the person with the specified ID
+            // Get the person with the specified ID
             const personId = req.params.id;
             console.log(`personId: ${personId}`);
             if (personId) {
@@ -186,7 +176,7 @@ The steps in this section create a Node.js Minimal Web API with npm.
                 res.status(404);
             }
         } catch (err) {
-            res.status(500).json({ error: err?.message })
+            res.status(500).json({ error: err?.message });
         }
     });
     
@@ -197,13 +187,13 @@ The steps in this section create a Node.js Minimal Web API with npm.
             console.log(`personId: ${personId}`);
     
             if (!personId) {
-                res.status(404)
+                res.status(404);
             } else {
                 const rowsAffected = await database.delete('Person', personId);
-                res.status(204).json({ rowsAffected })
+                res.status(204).json({ rowsAffected });
             }
         } catch (err) {
-            res.status(500).json({ error: err?.message })
+            res.status(500).json({ error: err?.message });
         }
     });
     
@@ -329,7 +319,7 @@ Create a **config.js** file and add the following mssql configuration code to au
 ## [Passwordless (Recommended)](#tab/passwordless)
 
 ```javascript
-require('dotenv').config({ debug: true })
+require('dotenv').config({ debug: true });
 const server = process.env.AZURE_SQL_SERVER;
 const database = process.env.AZURE_SQL_DATABASE;
 const port = process.env.AZURE_SQL_PORT;
@@ -345,10 +335,10 @@ const config = {
     options: {
         encrypt: true
     }
-}
+};
 module.exports = {
     config
-}
+};
 ```
 
 > [!NOTE]
@@ -358,7 +348,7 @@ module.exports = {
 
 
 ```javascript
-require('dotenv').config({ debug: true })
+require('dotenv').config({ debug: true });
 
 const server = process.env.AZURE_SQL_SERVER;
 const database = process.env.AZURE_SQL_DATABASE;
@@ -375,11 +365,11 @@ const config = {
     options: {
         encrypt: true
     }
-}
+};
 
 module.exports = {
     config
-}
+};
 ```
 
 > [!WARNING]
@@ -393,7 +383,7 @@ module.exports = {
 1. Create a **database.js** file and add the following code:
 
     ```javascript
-    const sql = require("mssql");
+    const sql = require('mssql');
     
     class Database {
       config={};
@@ -402,18 +392,18 @@ module.exports = {
     
       constructor(config) {
         this.config = config;
-        console.log(`Database: config: ${JSON.stringify}`)
+        console.log(`Database: config: ${JSON.stringify}`);
       }
     
       async connect() {
         try {
-          console.log(`Database connecting...${this.connected}`)
+          console.log(`Database connecting...${this.connected}`);
           if (this.connected===false) {
             this.poolconnection = await sql.connect(this.config);
             this.connected = true;
-            console.log("Database connection successful");
+            console.log('Database connection successful');
           } else {
-            console.log("Database already connected");
+            console.log('Database already connected');
           }
         } catch (error) {
           console.error(`Error connecting to database: ${JSON.stringify(error)}`);
@@ -423,7 +413,7 @@ module.exports = {
       async disconnect() {
         try {
           this.poolconnection.close();
-          console.log("Database connection closed");
+          console.log('Database connection closed');
         } catch (error) {
           console.error(`Error closing database connection: ${error}`);
         }
@@ -442,8 +432,8 @@ module.exports = {
         await this.connect();
         const request = this.poolconnection.request();
     
-        request.input("firstName", sql.NVarChar(255), data.firstName);
-        request.input("lastName", sql.NVarChar(255), data.lastName);
+        request.input('firstName', sql.NVarChar(255), data.firstName);
+        request.input('lastName', sql.NVarChar(255), data.lastName);
     
         const result = await request.query(
           `INSERT INTO ${table} (firstName, lastName) VALUES (@firstName, @lastName)`
@@ -480,9 +470,9 @@ module.exports = {
     
         const request = this.poolconnection.request();
     
-        request.input("id", sql.Int, +id);
-        request.input("firstName", sql.NVarChar(255), data.firstName);
-        request.input("lastName", sql.NVarChar(255), data.lastName);
+        request.input('id', sql.Int, +id);
+        request.input('firstName', sql.NVarChar(255), data.firstName);
+        request.input('lastName', sql.NVarChar(255), data.lastName);
     
         const result = await request.query(
           `UPDATE ${table} SET firstName=@firstName, lastName=@lastName WHERE id = @id`
@@ -496,7 +486,7 @@ module.exports = {
         await this.connect();
     
         console.log(`id: ${JSON.stringify(+id)}`);
-        const idAsNumber = Number(id)
+        const idAsNumber = Number(id);
     
         const request = this.poolconnection.request();
         const result = await request

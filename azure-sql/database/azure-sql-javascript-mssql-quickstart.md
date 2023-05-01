@@ -47,6 +47,7 @@ The steps in this section create a Node.js Minimal Web API with npm.
     ```
 
     | Package|Purpose|
+    |--|--|
     |**mssql**| Used to integrate with Azure SQL. |
     |**swagger-ui-express**|Used to generate the Swagger UI.|
     |**yamljs**|Used to convert YAML to JSON. The Swagger UI expects a JSON formatted schema.|
@@ -56,7 +57,9 @@ The steps in this section create a Node.js Minimal Web API with npm.
     ```bash
     npm install cross-env dotenv 
     ```
+
     | Package|Purpose|
+    |--|--|
     |**cross-env**| Used to turn on operating system-agnostic Express debugging. |
     |**dotenv**|Used to read `.env` files.|
     

@@ -54,7 +54,7 @@ The steps in this section create a Node.js REST API.
     
 1. Open the project in Visual Studio Code.
 
-    ```base
+    ```bash
     code .
     ```
 

@@ -484,7 +484,7 @@ The app is ready to be tested locally. Make sure you're signed in to the Azure C
 
 ## Deploy to Azure App Service
 
-The app is ready to be deployed to Azure. Visual Studio can create an Azure App Service and deploy your application in a single workflow.
+The app is ready to be deployed to Azure. Visual Studio Code can create an Azure App Service and deploy your application in a single workflow.
 
 1. Make sure the app is stopped and builds successfully.
 1. In Visual Studio Code's **Azure Explorer** window, right-click on the **App Services** node and select **Create New Web App (Advanced)**.

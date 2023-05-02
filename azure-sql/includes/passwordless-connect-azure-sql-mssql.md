@@ -87,12 +87,12 @@ The Azure portal allows you to work with managed identities and run queries agai
 1. In the Azure portal, navigate to your App Service and select **Configuration** on the left navigation.
 1. Select **+ New application setting** for each environment variable below. Add your own appropriate value to create the required environment variables for your App Service instance to connect to your database.
 
-    |Property|Value|
-    |--|--|
-    |AZURE_SQL_SERVER|Use your SERVER name as part of the value: `SERVER.database.windows.net`.|
-    |AZURE_SQL_DATABASE|Use your database name.|
-    |AZURE_SQL_PORT|Use the default port: `1433`.|
-    |AZURE_SQL_AUTHENTICATIONTYPE|Use `azure-active-directory-default`.|
+    ```text
+    AZURE_SQL_SERVER=<YOURSERVERNAME>.database.windows.net
+    AZURE_SQL_DATABASE=<YOURDATABASENAME>
+    AZURE_SQL_PORT=1433
+    AZURE_SQL_AUTHENTICATIONTYPE=azure-active-directory-default
+    ```
 
 1. When you're done adding settings, select **Save**.
 ---

@@ -189,7 +189,7 @@ If you have memory-optimized tables or memory-optimized table types in your on-p
 - Choose the Business Critical tier for your target SQL managed instance that supports In-Memory OLTP.
 - If you want to migrate to the General Purpose tier in Azure SQL Managed Instance, remove memory-optimized tables, memory-optimized table types, and natively compiled SQL modules that interact with memory-optimized objects before migrating your databases. You can use the following T-SQL query to identify all objects that need to be removed before migration to the General Purpose tier:
 
-   ```tsql
+   ```sql
    SELECT * FROM sys.tables WHERE is_memory_optimized=1
    SELECT * FROM sys.table_types WHERE is_memory_optimized=1
    SELECT * FROM sys.sql_modules WHERE uses_native_compilation=1

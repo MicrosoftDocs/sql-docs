@@ -29,7 +29,7 @@ Once you've filled your audit log with tables and stored procedures used for rep
 
 Second, you will want to create a SSRS Reports Usage metrics list by querying Report Server DB. Use the T-SQL below to derive the usage counts. If your report server is configured to store one year of report execution history, you can use a specific date to filter the usage metrics.
 
-```tsql
+```sql
 
 ; with UnusedReportsCte 
 AS 

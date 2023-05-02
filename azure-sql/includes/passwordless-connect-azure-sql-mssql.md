@@ -60,7 +60,7 @@ The Azure portal allows you to work with managed identities and run queries agai
 
 1. Select **Continue as `<your-username>`** on the right side of the screen to sign into the database using your account.
 
-1. On the query editor view, run the following T-SQL commands. Replace `<your-app-service-name>` with your SQL service name.
+1. On the query editor view, run the following T-SQL commands. Replace `<your-app-service-name>` with your App Service resource's name.
 
     ```sql
     CREATE USER "<your-app-service-name>" FROM EXTERNAL PROVIDER;

@@ -112,10 +112,7 @@
     - name: Business continuity
       displayName: Backup, back up, restore, recovery
       items:
-        - name: Overview
-          href: database/business-continuity-high-availability-disaster-recover-hadr-overview.md
-        - name: High availability
-          href: database/high-availability-sla.md
+
         - name: Backup and recovery 
           items:
           - name: Accelerated database recovery
@@ -407,7 +404,12 @@
         href: database/service-tiers-sql-database-vcore.md
       - name: DTU model 
         href: database/service-tiers-dtu.md
-
+    - name: Business continuity
+      items: 
+        - name: Overview
+          href: database/business-continuity-high-availability-disaster-recover-hadr-overview.md
+        - name: High availability
+          href: database/high-availability-sla.md
     - name: Connectivity
       items: 
       - name: Connectivity architecture
@@ -646,7 +648,16 @@
         - name: Azure Monitor for SQL Database
           href: database/monitoring-sql-database-azure-monitor.md 
         - name: Azure Monitor for SQL Database reference 
-          href: database/monitoring-sql-database-azure-monitor-reference.md              
+          href: database/monitoring-sql-database-azure-monitor-reference.md
+    - name: Hyperscale databases
+      items: 
+      - name: Manage Hyperscale databases
+        href: database/manage-hyperscale-database.md
+      - name: Create zone-redundant database
+        href: database/hyperscale-create-zone-redundant-database.md
+      - name: Hyperscale performance diagnostics
+        href: database/hyperscale-performance-diagnostics.md
+        
     - name: Manage
       items:
       - name: Management API reference
@@ -667,26 +678,24 @@
         href: database/elastic-pool-manage.md
       - name: Resource management in dense elastic pools
         href: database/elastic-pool-resource-management.md
-      - name: Manage Hyperscale databases
-        href: database/manage-hyperscale-database.md
-      - name: Hyperscale performance diagnostics
-        href: database/hyperscale-performance-diagnostics.md
+
+
       - name: Block T-SQL CRUD
         href: database/block-crud-tsql.md
       - name: Azure Automation
         href: database/automation-manage.md
       - name: Block geo-replication of Azure SQL Database backups
         href: database/block-geo-redundant-backup-storage.md
-      - name: Elastic jobs (preview)
-        items:
-        - name: Job automation with elastic jobs
-          href: database/job-automation-overview.md
-        - name: Configure jobs
-          href: database/elastic-jobs-overview.md
-        - name: Create and manage (PowerShell)
-          href: database/elastic-jobs-powershell-create.md
-        - name: Create and manage (T-SQL)
-          href: database/elastic-jobs-tsql-create-manage.md
+    - name: Elastic jobs (preview)
+      items:
+      - name: Job automation with elastic jobs
+        href: database/job-automation-overview.md
+      - name: Configure jobs
+        href: database/elastic-jobs-overview.md
+      - name: Create and manage (PowerShell)
+        href: database/elastic-jobs-powershell-create.md
+      - name: Create and manage (T-SQL)
+        href: database/elastic-jobs-tsql-create-manage.md
 
     - name: Security
       items: 
@@ -1123,6 +1132,10 @@
       href: managed-instance/data-virtualization-overview.md
     - name: Business continuity
       items: 
+      - name: Overview
+        href: managed-instance/business-continuity-high-availability-disaster-recover-hadr-overview.md
+      - name: High availability
+        href: managed-instance/high-availability-sla.md
       - name: Automated backups
         href: managed-instance/automated-backups-overview.md 
       - name: Backup transparency

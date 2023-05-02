@@ -82,8 +82,8 @@ To enable automated backups:
    ```
 
 ### Considerations
-
-The default backup location for SQL Server (SQL 2019 and above) can be verified via:
+- Currently automated backups is only supported for SQL Server versions 2019 and above.
+- The backup files are stored in the default backup location. The default backup location for SQL Server (SQL 2019 and above) can be verified via:
 
 ```sql
 SELECT SERVERPROPERTY('InstanceDefaultBackupPath')

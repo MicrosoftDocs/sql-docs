@@ -24,7 +24,7 @@ Install SQL Server Full-Text Search for your platform:
 - [Ubuntu](#ubuntu)
 - [SUSE Linux Enterprise Server](#SLES)
 
-## <a name="RHEL">Install on RHEL</a>
+## <a id="RHEL"></a> Install on RHEL
 
 Use the following commands to install the **mssql-server-fts** on Red Hat Enterprise Linux. 
 
@@ -41,7 +41,7 @@ sudo yum update mssql-server-fts
 
 If you need an offline installation, locate the Full-text Search package download in the [Release notes](sql-server-linux-release-notes-2017.md). Then use the same offline installation steps described in the article [Install SQL Server](sql-server-linux-setup.md#offline).
 
-## <a name="ubuntu">Install on Ubuntu</a>
+## <a id="ubuntu"></a> Install on Ubuntu
 
 Use the following commands to install the **mssql-server-fts** on Ubuntu. 
 
@@ -59,7 +59,7 @@ sudo apt-get install -y mssql-server-fts
 
 If you need an offline installation, locate the Full-text Search package download in the [Release notes](sql-server-linux-release-notes-2017.md). Then use the same offline installation steps described in the article [Install SQL Server](sql-server-linux-setup.md#offline).
 
-## <a name="SLES">Install on SLES</a>
+## <a id="SLES"></a> Install on SLES
 
 Use the following commands to install the **mssql-server-fts** on SUSE Linux Enterprise Server. 
 

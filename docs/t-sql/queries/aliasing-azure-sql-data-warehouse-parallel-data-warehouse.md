@@ -21,7 +21,7 @@ Aliases must be single words conforming to object naming rules. For more informa
 
 ## Syntax
 
-```tsql
+```syntaxsql
 object_source [ AS ] alias
 ```
 
@@ -44,7 +44,7 @@ The following example shows a query with multiple joins. Both table and column a
 
 - Table Aliasing: `dbo.DimSalesTerritory AS st` shows creation of the `st` alias for the `dbo.DimSalesTerritory` table.  
 
-```tsql
+```sql
 -- Uses AdventureWorks
 
 SELECT LastName, SUM(SalesAmountQuota) AS TotalSales, SalesTerritoryRegion AS SalesTR,  
@@ -58,7 +58,7 @@ GROUP BY LastName, SalesTerritoryRegion;
 
 The AS keyword can be excluded, as shown below, but is often included for readability.  
 
-```tsql
+```sql
 -- Uses AdventureWorks
 
 SELECT LastName, SUM(SalesAmountQuota) TotalSales, SalesTerritoryRegion SalesTR,  

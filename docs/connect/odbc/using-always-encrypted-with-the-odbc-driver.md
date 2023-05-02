@@ -114,7 +114,7 @@ The table below summarizes the behavior of queries, depending on whether Always 
 
 The following examples illustrate retrieving and modifying data in encrypted columns. The examples assume a table with the following schema. The SSN and BirthDate columns are encrypted.
 
-```tsql
+```sql
 CREATE TABLE [dbo].[Patients](
  [PatientId] [int] IDENTITY(1,1),
  [SSN] [char](11) COLLATE Latin1_General_BIN2

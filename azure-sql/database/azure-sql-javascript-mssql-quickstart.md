@@ -331,7 +331,10 @@ The **mssql** package implements the connection to Azure SQL Database by providi
 1. In Visual Studio Code, create a **config.js** file and add the following mssql configuration code to authenticate to Azure SQL.
 
     ```javascript
-    require('dotenv').config({ debug: true });
+    if (process.env.NODE_ENV === 'development') {
+      require('dotenv').config({ path: '.env.local', debug: true });
+      console.log(process.env);
+    }
     const server = process.env.AZURE_SQL_SERVER;
     const database = process.env.AZURE_SQL_DATABASE;
     const port = parseInt(process.env.AZURE_SQL_PORT);
@@ -372,7 +375,10 @@ The **mssql** package implements the connection to Azure SQL Database by providi
 1. In Visual Studio Code, create a **config.js** file and add the following mssql configuration code to authenticate to Azure SQL.
     
     ```javascript
-    require('dotenv').config({ debug: true, path: '.env.local' })
+    if (process.env.NODE_ENV === 'development') {
+      require('dotenv').config({ path: '.env.local', debug: true });
+      console.log(process.env);
+    }
     
     const server = process.env.AZURE_SQL_SERVER;
     const database = process.env.AZURE_SQL_DATABASE;
@@ -539,7 +545,11 @@ The **mssql** package implements the connection to Azure SQL Database by providi
 
 The app is ready to be tested locally. Make sure you're signed in to the Azure Cloud in Visual Studio Code with the same account you set as the admin for your database.
 
-1. Run the application with `node index.js`. The app starts on port 3000. 
+1. Run the application with the following command, The app starts on port 3000. 
+
+    ```bash
+    `NODE_ENV=development node index.js`. 
+    ```
 
    The **Person** table is created in the database when you run this application.
 

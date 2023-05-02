@@ -26,7 +26,7 @@ Compiles the cursor statement or batch into an execution plan, but does not crea
   
 ## Syntax  
   
-```tsql
+```sql
   
 sp_cursorprepare prepared_handle OUTPUT, params , stmt , options  
     [ , scrollopt[ , ccopt]]  

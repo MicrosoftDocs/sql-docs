@@ -76,7 +76,7 @@ The account that does backup operations on an encrypted database requires specif
 
    The following example grants the appropriate permissions for the certificate. 
    
-   ```tsql
+   ```sql
    USE [master]
    GO
    GRANT VIEW DEFINITION ON CERTIFICATE::[<SERVER_CERT>] TO [<db_account>]

@@ -206,7 +206,7 @@ Several system views, performance counters, error messages, XEvents, and error l
 
 **Workaround**: Use `sys.databases` view to resolve the actual database name from the physical database name, specified in the form of GUID database identifiers:
 
-```tsql
+```sql
 SELECT name as ActualDatabaseName, physical_database_name as GUIDDatabaseIdentifier 
 FROM sys.databases
 WHERE database_id > 4;

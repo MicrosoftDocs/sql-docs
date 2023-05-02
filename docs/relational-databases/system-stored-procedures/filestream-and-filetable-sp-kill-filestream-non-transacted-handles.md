@@ -20,9 +20,9 @@ dev_langs:
 
   Closes non-transactional file handles to FileTable data.  
   
-## Syntax  
+## Syntax
   
-```sql  
+```syntaxsql
 sp_kill_filestream_non_transacted_handles [[ @table_name = ] 'table_name', [[ @handle_id = ] @handle_id]]  
 ```  
   

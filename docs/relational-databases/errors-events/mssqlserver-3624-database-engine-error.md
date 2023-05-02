@@ -82,7 +82,7 @@ Faulty hardware can cause corruption of data structures in memory and therefore 
 1. Run [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) on your databases. If DBCC CHECKDB reports database corruption errors, focus on resolving that issue before anything else. Restore a clean database backup and investigate root cause for the database inconsistencies. For more information, see [Troubleshoot database consistency errors reported by DBCC CHECKDB](/troubleshoot/sql/database-engine/database-file-operations/troubleshoot-dbcc-checkdb-errors).
 1. Check if there are external modules loaded in SQL Server memory space and also check for filter drivers
 
-   ```tsql
+   ```sql
    SELECT * FROM sys.dm_os_loaded_modules
    WHERE company != 'Microsoft Corporation'
    ```

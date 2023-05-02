@@ -27,9 +27,9 @@ dev_langs:
   
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## Syntax  
+## Syntax
   
-```tsql  
+```syntaxsql
 sys.fn_validate_plan_guide ( plan_guide_id )  
 ```  
   

@@ -49,7 +49,7 @@ Or, in Azure Data Studio:
 
 Starting in [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], you can enable a new trace flag 6408 globally using [DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md). For example:
 
-```tsql
+```sql
 DBCC TRACEON (6408, -1);  
 ```
 
@@ -66,7 +66,7 @@ Each of the below examples will include the output from SSMS and Azure Data Stud
 
 Consider the following query, which uses a filter predicate in the WHERE clause:
 
-```tsql
+```sql
 SELECT *
 FROM [Person].[BusinessEntity] AS be
 WHERE be.BusinessEntityID = 17907;
@@ -102,7 +102,7 @@ The estimated execution plan from Azure Data Studio:
 
 Consider the following query that utilizes the JOIN operator:
 
-```tsql
+```sql
 SELECT be.BusinessEntityID, bea.AddressID
 FROM [Person].[BusinessEntity] AS be
 INNER JOIN [Person].[BusinessEntityAddress] AS bea
@@ -137,7 +137,7 @@ The estimated execution plan from Azure Data Studio:
 
 Consider the following query, which uses an aggregate function:
 
-```tsql
+```sql
 SELECT SUM([Quantity]) as Quant
 FROM [AdventureWorks2017].[Production].[ProductInventory];
 ```
@@ -175,7 +175,7 @@ Starting with [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], the `read_co
 
 You can execute the following query and use the `start_time`/`end_time` and `read_command` to identify the query being investigated:
 
-```tsql
+```sql
 SELECT execution_id, start_time, end_time, read_command
 FROM sys.dm_exec_external_work
 ORDER BY execution_id desc;
@@ -188,7 +188,7 @@ ORDER BY execution_id desc;
 
 Consider the query used in the previous filter predicate example:
 
-```tsql
+```sql
 SELECT *
 FROM [Person].[BusinessEntity] be
 WHERE be.BusinessEntityID = 17907;
@@ -198,7 +198,7 @@ WHERE be.BusinessEntityID = 17907;
 
 If pushdown of the filter predicate is occurring, you will be able to tell by checking the `read_command` in the DMV. You will see something like this sample:
 
-```tsql
+```sql
 SELECT [T1_1].[BusinessEntityID] AS [BusinessEntityID], [T1_1].[rowguid] AS [rowguid], 
   [T1_1].[ModifiedDate] AS [ModifiedDate] FROM 
   (SELECT [T2_1].[BusinessEntityID] AS [BusinessEntityID], [T2_1].[rowguid] AS [rowguid], 
@@ -213,7 +213,7 @@ The WHERE clause is in the command sent to the external data source, which means
 
 If pushdown is not occurring, you'll see something like:
 
-```tsql
+```sql
 SELECT "BusinessEntityID","rowguid","ModifiedDate" FROM "AdventureWorks2017"."Person"."BusinessEntity"
 ```
 
@@ -223,7 +223,7 @@ There is no WHERE clause in the command sent to the external data source, so the
 
 Consider the query used in the previous JOIN example:
 
-```tsql
+```sql
 SELECT be.BusinessEntityID, bea.AddressID
 FROM [Person].[BusinessEntity] be
 INNER JOIN [Person].[BusinessEntityAddress] bea ON be.BusinessEntityID = bea.BusinessEntityID;
@@ -233,7 +233,7 @@ INNER JOIN [Person].[BusinessEntityAddress] bea ON be.BusinessEntityID = bea.Bus
 
 If the JOIN is pushed down to the external data source, you will see something like:
 
-```tsql
+```sql
 SELECT [T1_1].[BusinessEntityID] AS [BusinessEntityID], [T1_1].[AddressID] AS [AddressID] 
 FROM (SELECT [T2_2].[BusinessEntityID] AS [BusinessEntityID], [T2_1].[AddressID] AS [AddressID] 
 FROM [AdventureWorks2017].[Person].[BusinessEntityAddress] AS T2_1 
@@ -247,7 +247,7 @@ The JOIN clause is in the command sent to the external data source, so the JOIN 
 
 If the pushdown of the join is not occurring, you'll see there are two different queries executed against the external data source:
 
-```tsql
+```sql
 SELECT [T1_1].[BusinessEntityID] AS [BusinessEntityID], [T1_1].[AddressID] AS [AddressID] 
 FROM [AdventureWorks2017].[Person].[BusinessEntityAddress] AS T1_1;
 
@@ -260,7 +260,7 @@ The joining the two datasets occurred on the SQL Server side, after both dataset
 
 Consider the following query, which uses an aggregate function:
 
-```tsql
+```sql
 SELECT SUM([Quantity]) as Quant
 FROM [AdventureWorks2017].[Production].[ProductInventory];
 ```
@@ -269,7 +269,7 @@ FROM [AdventureWorks2017].[Production].[ProductInventory];
 
 If pushdown of the aggregation is occurring, you'll see the aggregation function in the `read_command`. For example:
 
-```tsql
+```sql
 SELECT [T1_1].[col] AS [col] FROM (SELECT SUM([T2_1].[Quantity]) AS [col] 
 FROM [AdventureWorks2017].[Production].[ProductInventory] AS T2_1) AS T1_1
 ```
@@ -280,7 +280,7 @@ The aggregation function is in the command sent to the external data source, so 
 
 If the pushdown of the aggregation isn't occurring, you won't see the aggregation function in the `read_command`. For example:
 
-```tsql
+```sql
 SELECT "Quantity" FROM "AdventureWorks2017"."Production"."ProductInventory"
 ```
 

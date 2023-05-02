@@ -25,7 +25,7 @@ Allows you to read the contents of the SQL Server or SQL Server Agent error log 
   
 ## Syntax  
   
-```tsql
+```sql
 sp_readerrorlog  
 	@p1		int = 0,
 	@p2		int = NULL,
@@ -73,19 +73,19 @@ The following example cycles the [!INCLUDE[ssNoVersion](../../includes/ssnoversi
 
 ### A. Read the current SQL Server error log
 
-```tsql  
+```sql  
 EXEC sp_readerrorlog;  
 ```  
   
 ### B. Show the previous SQL Agent error log
 
-```tsql
+```sql
 exec sp_readerrorlog 1, 2;
 ```
 
 ### C. Find log messages that indicate a database is starting up
 
-```tsql
+```sql
 exec sp_readerrorlog 0, 1, 'database', 'start'
 ```
 

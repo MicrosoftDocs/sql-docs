@@ -83,12 +83,12 @@ To enable automated backups:
 
 ### Considerations
 
-The default backup location for SQL Server (SQL 2019 and above) can be verified via:
+- Currently automated backups is only supported for SQL Server versions 2019 and above.
+- The backup files are stored in the default backup location. The default backup location for SQL Server (SQL 2019 and above) can be verified via:
 
 ```sql
 SELECT SERVERPROPERTY('InstanceDefaultBackupPath')
 ```
-
 - The setting is configured at the instance level and applies to all the databases on the instance.
 - The value for `--name` should be the name of the Arc enabled SQL Server, which is usually in the [Servername_SQLservername] format.
 - The value for `--retention-days` can be from 0-35.

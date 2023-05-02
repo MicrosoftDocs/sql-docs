@@ -238,7 +238,7 @@ The app is ready to be tested locally. Make sure you're signed into Visual Studi
 
 The app is ready to be deployed to Azure. Follow the official documentation on how to deploy a Python app to Azure App Service using Visual Studio Code.
 
-*When deployed, set `AZURE_SQL_CONNECTIONSTRING` to use "Authentication=ActiveDirectoryMsi" - requires users to set up managed identity". 
+*When deployed, set AZURE_SQL_CONNECTIONSTRING to use "Authentication=ActiveDirectoryMsi" - requires users to set up managed identity".*
 
 ## Connect App Service to Azure SQL Database
 

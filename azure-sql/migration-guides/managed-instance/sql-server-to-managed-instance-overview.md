@@ -141,7 +141,7 @@ Alternatively, you can consider migrating your on-premises Analysis Services tab
 
 ### High availability
 
-The SQL Server high-availability features Always On failover cluster instances and Always On availability groups become obsolete on the target SQL managed instance. High-availability architecture is already built into both [General Purpose (standard availability model)](../../database/high-availability-sla.md#basic-standard-and-general-purpose-service-tier-locally-redundant-availability) and [Business Critical (premium availability model)](../../database/high-availability-sla.md#premium-and-business-critical-service-tier-locally-redundant-availability) service tiers for SQL Managed Instance. The premium availability model also provides read scale-out that allows connecting into one of the secondary nodes for read-only purposes.     
+The SQL Server high-availability features Always On failover cluster instances and Always On availability groups become obsolete on the target SQL managed instance. High-availability architecture is already built into both [General Purpose (standard availability model)](../../database/high-availability-sla.md#locally-redundant-availability) and [Business Critical (premium availability model)](../../database/high-availability-sla.md#locally-redundant-availability) service tiers for SQL Managed Instance. The premium availability model also provides read scale-out that allows connecting into one of the secondary nodes for read-only purposes.     
 
 Beyond the high-availability architecture that's included in SQL Managed Instance, the [auto-failover groups](../../managed-instance/auto-failover-group-sql-mi.md) feature allows you to manage the replication and failover of databases in a managed instance to another region. 
 
@@ -189,7 +189,7 @@ If you have memory-optimized tables or memory-optimized table types in your on-p
 - Choose the Business Critical tier for your target SQL managed instance that supports In-Memory OLTP.
 - If you want to migrate to the General Purpose tier in Azure SQL Managed Instance, remove memory-optimized tables, memory-optimized table types, and natively compiled SQL modules that interact with memory-optimized objects before migrating your databases. You can use the following T-SQL query to identify all objects that need to be removed before migration to the General Purpose tier:
 
-   ```tsql
+   ```sql
    SELECT * FROM sys.tables WHERE is_memory_optimized=1
    SELECT * FROM sys.table_types WHERE is_memory_optimized=1
    SELECT * FROM sys.sql_modules WHERE uses_native_compilation=1

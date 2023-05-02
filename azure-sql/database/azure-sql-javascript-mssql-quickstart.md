@@ -65,7 +65,7 @@ To create the Express.js OpenAPI application, you'll create several files:
 
 |File|Description|
 |--|--|
-|.env.local|Local development-only environment file.|
+|.env.development|Local development-only environment file.|
 |index.js|Main application file, which starts the Express.js app on port 3000.|
 |person.js|Express.js **/person** route API file to handle CRUD operations.|
 |openapi.js|Express.js **/api-docs** route for OpenAPI explorer UI. Root redirects to this route.|
@@ -332,10 +332,9 @@ The **mssql** package implements the connection to Azure SQL Database by providi
 1. In Visual Studio Code, create a **config.js** file and add the following mssql configuration code to authenticate to Azure SQL.
 
     ```javascript
-    if (process.env.NODE_ENV === 'development') {
-      require('dotenv').config({ path: '.env.local', debug: true });
-      console.log(process.env);
-    }
+    require('dotenv').config({ path: `.env.${process.env.NODE_ENV}`, debug: true });
+    console.log(process.env)
+
     const server = process.env.AZURE_SQL_SERVER;
     const database = process.env.AZURE_SQL_DATABASE;
     const port = parseInt(process.env.AZURE_SQL_PORT);
@@ -357,7 +356,7 @@ The **mssql** package implements the connection to Azure SQL Database by providi
     };
     ```
 
-1. Create a **.env.local** file for your local environment variables and add the following text and update with your values for `<YOURSERVERNAME>` and `<YOURDATABASENAME>`.
+1. Create a **.env.development** file for your local environment variables and add the following text and update with your values for `<YOURSERVERNAME>` and `<YOURDATABASENAME>`.
 
     ```text
     AZURE_SQL_SERVER=<YOURSERVERNAME>.database.windows.net
@@ -376,10 +375,8 @@ The **mssql** package implements the connection to Azure SQL Database by providi
 1. In Visual Studio Code, create a **config.js** file and add the following mssql configuration code to authenticate to Azure SQL.
     
     ```javascript
-    if (process.env.NODE_ENV === 'development') {
-      require('dotenv').config({ path: '.env.local', debug: true });
-      console.log(process.env);
-    }
+    require('dotenv').config({ path: `.env.${process.env.NODE_ENV}`, debug: true });
+    console.log(process.env)
     
     const server = process.env.AZURE_SQL_SERVER;
     const database = process.env.AZURE_SQL_DATABASE;
@@ -403,7 +400,7 @@ The **mssql** package implements the connection to Azure SQL Database by providi
     };
     ```
 
-1. Create a **.env.local** file for your local environment variables and add the following text and update with your values for `<YOURSERVERNAME>`, `<YOURDATABASENAME>`, `<YOURUSERNAME>`, and `<YOURPASSWORD>`.
+1. Create a **.env.development** file for your local environment variables and add the following text and update with your values for `<YOURSERVERNAME>`, `<YOURDATABASENAME>`, `<YOURUSERNAME>`, and `<YOURPASSWORD>`.
 
     ```text
     AZURE_SQL_SERVER=<YOURSERVERNAME>.database.windows.net

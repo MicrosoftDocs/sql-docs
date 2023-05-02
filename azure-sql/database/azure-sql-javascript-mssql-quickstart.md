@@ -64,15 +64,15 @@ To create the Express.js OpenAPI application, you'll create several files:
 
 |File|Description|
 |--|--|
-|.env|Local development-only environment file.|
-|app.js|Main application file, which starts the Express.js app on port 3000.|
+|.env.local|Local development-only environment file.|
+|index.js|Main application file, which starts the Express.js app on port 3000.|
 |person.js|Express.js **/person** route API file to handle CRUD operations.|
 |openapi.js|Express.js **/api-docs** route for OpenAPI explorer UI. Root redirects to this route.|
 |openApiSchema.yml|OpenAPI 3.0 schema file defining Person API.|
 |config.js|Configuration file to read environment variables and construct appropriate mssql connection object.|
 |database.js|Database class to handle Azure SQL CRUD operations using the **mssql** npm package.|
 
-1. Create an **app.js** file and add the following code:
+1. Create an **index.js** file and add the following code:
 
     ```javascript
     const express = require('express');
@@ -353,7 +353,7 @@ The **mssql** package implements the connection to Azure SQL Database by providi
     };
     ```
 
-1. Create a **.env** file for your local environment variables and add the following text and update with your values for `<YOURSERVERNAME>` and `<YOURDATABASENAME>`.
+1. Create a **.env.local** file for your local environment variables and add the following text and update with your values for `<YOURSERVERNAME>` and `<YOURDATABASENAME>`.
 
     ```text
     AZURE_SQL_SERVER=<YOURSERVERNAME>.database.windows.net
@@ -372,7 +372,7 @@ The **mssql** package implements the connection to Azure SQL Database by providi
 1. In Visual Studio Code, create a **config.js** file and add the following mssql configuration code to authenticate to Azure SQL.
     
     ```javascript
-    require('dotenv').config({ debug: true });
+    require('dotenv').config({ debug: true, path: '.env.local' })
     
     const server = process.env.AZURE_SQL_SERVER;
     const database = process.env.AZURE_SQL_DATABASE;
@@ -396,7 +396,7 @@ The **mssql** package implements the connection to Azure SQL Database by providi
     };
     ```
 
-1. Create a **.env** file for your local environment variables and add the following text and update with your values for `<YOURSERVERNAME>`, `<YOURDATABASENAME>`, `<YOURUSERNAME>`, and `<YOURPASSWORD>`.
+1. Create a **.env.local** file for your local environment variables and add the following text and update with your values for `<YOURSERVERNAME>`, `<YOURDATABASENAME>`, `<YOURUSERNAME>`, and `<YOURPASSWORD>`.
 
     ```text
     AZURE_SQL_SERVER=<YOURSERVERNAME>.database.windows.net
@@ -539,7 +539,7 @@ The **mssql** package implements the connection to Azure SQL Database by providi
 
 The app is ready to be tested locally. Make sure you're signed in to the Azure Cloud in Visual Studio Code with the same account you set as the admin for your database.
 
-1. Run the application with `node app.js`. The app starts on port 3000. 
+1. Run the application with `node index.js`. The app starts on port 3000. 
 
    The **Person** table is created in the database when you run this application.
 

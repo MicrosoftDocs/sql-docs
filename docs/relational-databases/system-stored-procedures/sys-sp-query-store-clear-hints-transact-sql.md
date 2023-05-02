@@ -33,6 +33,12 @@ sp_query_store_clear_hints
     @query_id bigint;
 ```  
 
+## Arguments
+
+#### @query_id
+
+Required. This is the Query Store `query_id` from [sys.query_store_query](../system-catalog-views/sys-query-store-query-transact-sql.md).
+
 ## Return Values  
  0 (success) or 1 (failure)  
   
@@ -46,7 +52,7 @@ sp_query_store_clear_hints
 
 ### Clear query hint text
 
- The following example removes the query store hint text:
+ The following example removes the query store hint text for query id 39:
   
 ```sql
 EXEC sys.sp_query_store_clear_hints @query_id = 39;
@@ -54,7 +60,7 @@ EXEC sys.sp_query_store_clear_hints @query_id = 39;
 
 ### View Query Store hints
 
-The following example returns existing Query Store hints:
+The following example returns existing Query Store hints for query id 39:
 
 ```sql
 SELECT query_hint_id, query_id, query_hint_text, last_query_hint_failure_reason, last_query_hint_failure_reason_desc, query_hint_failure_count, source, source_desc 

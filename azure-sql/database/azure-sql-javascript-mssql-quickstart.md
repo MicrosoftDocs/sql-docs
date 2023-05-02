@@ -548,7 +548,7 @@ The app is ready to be tested locally. Make sure you're signed in to the Azure C
 1. Run the application with the following command, The app starts on port 3000. 
 
     ```bash
-    `NODE_ENV=development node index.js`. 
+    NODE_ENV=development node index.js
     ```
 
    The **Person** table is created in the database when you run this application.

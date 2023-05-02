@@ -37,7 +37,7 @@ sp_query_store_clear_hints
 
 #### @query_id
 
-Required. This is the Query Store `query_id` from [sys.query_store_query](../system-catalog-views/sys-query-store-query-transact-sql.md).
+Bigint. Required. This is the Query Store `query_id` from [sys.query_store_query](../system-catalog-views/sys-query-store-query-transact-sql.md).
 
 ## Return Values  
  0 (success) or 1 (failure)  

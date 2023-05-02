@@ -96,7 +96,9 @@ For details and specific instructions for installing the `pyodbc` driver on all 
 
 The `fastapi`, `uvicorn`, and `pydantic` packages are used to create a simple API for demonstration purposes.
 
-## Configure the connection string
+## Configure the connection string for local development
+
+*pyodbc doesn't work passwordless with "ActiveDirectoryDefault" like .NET does. Todo: remove the tab for passwordless here since it's not possible.. Interactive works locally and is an option.*
 
 For local development, you can use the `pyodbc` driver in several ways. The recommended approach is passwordless. In the passwordless mode, `pyodbc` driver uses the class `DefaultAzureCredential` class to implement passwordless connections to Azure SQL Database. The `DefaultAzureCredential` is part of the Azure Identity library on which the SQL client library depends. For more information, see [DefaultAzureCredential overview](/python/api/overview/azure/Identity-readme#defaultazurecredential).
 
@@ -236,12 +238,18 @@ The app is ready to be tested locally. Make sure you're signed into Visual Studi
 
 The app is ready to be deployed to Azure. Follow the official documentation on how to deploy a Python app to Azure App Service using Visual Studio Code.
 
+*When deployed, set `AZURE_SQL_CONNECTIONSTRING` to use "Authentication=ActiveDirectoryMsi" - requires users to set up managed identity". 
+
 ## Connect App Service to Azure SQL Database
 
 Follow the instructions in the original article to connect the App Service instance to Azure SQL Database using Service Connector or Azure portal.
+
+*Not finished.*
 
 ## Test the deployed application
 
 Browse to the URL of the app to test that the connection to Azure SQL Database is working. You can locate the URL of your app on the App Service overview page. Append the `/person` path to the end of the URL to browse to the same endpoint you tested locally.
 
 The person you created locally should display in the browser. Congratulations! Your application is now connected to Azure SQL Database in both local and hosted environments.
+
+*Not finished.*

@@ -4,13 +4,11 @@ description: "Use Elastic Jobs for Job Automation to run Transact-SQL (T-SQL) sc
 author: williamdassafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
-ms.date: 2/1/2021
+ms.date: 05/03/2023
 ms.service: sql-database
 ms.subservice: elastic-pools
 ms.topic: conceptual
-ms.custom:
-  - sqldbrb=1
-  - contperf-fy21q3
+ms.custom: sqldbrb=1
 dev_langs:
   - "TSQL"
 ---
@@ -29,15 +27,15 @@ Every job logs the status of execution and also automatically retries the operat
 
 There are several scenarios when you could use elastic job automation:
 
-- Automate management tasks and schedule them to run every weekday, after hours, etc.
+- **Automate management tasks and schedule them to run every weekday, after hours, etc.**
   - Deploy schema changes, credentials management, performance data collection or tenant (customer) telemetry collection.
   - Update reference data (information common across all databases), load data from Azure Blob storage.
-- Configure jobs to execute across a collection of databases on a recurring basis, such as during off-peak hours.
+- **Configure jobs to execute across a collection of databases on a recurring basis, such as during off-peak hours.**
   - Collect query results from a set of databases into a central table on an on-going basis. Performance queries can be continually executed and configured to trigger additional tasks to be executed.
-- Collect data for reporting
+- **Collect data for reporting**
   - Aggregate data from a collection of databases into a single destination table.
   - Execute longer running data processing queries across a large set of databases, for example the collection of customer telemetry. Results are collected into a single destination table for further analysis.
-- Data movements 
+- **Data movement**
 
 ### Automation on other platforms
 
@@ -67,7 +65,7 @@ You can run scheduled jobs against any combination of databases: one or more ind
 
 The following image shows a job agent executing jobs across the different types of target groups:
 
-![Elastic Job agent conceptual model](./media/job-automation-overview/conceptual-diagram.png)
+:::image type="content" source="./media/job-automation-overview/conceptual-diagram.png" alt-text="Conceptual diagram of Elastic Job agent.":::
 
 ### Elastic job components
 
@@ -124,7 +122,7 @@ A target group can include databases in multiple subscriptions, and across multi
 
 The following examples show how different target group definitions are dynamically enumerated at the moment of job execution to determine which databases the job will run:
 
-![Target group examples](./media/job-automation-overview/targetgroup-examples1.png)
+:::image type="content" source="./media/job-automation-overview/targetgroup-examples1.png" alt-text="Diagram of target group examples.":::
 
 **Example 1** shows a target group that consists of a list of individual databases. When a job step is executed using this target group, the job step's action will be executed in each of those databases.<br>
 **Example 2** shows a target group that contains a server as a target. When a job step is executed using this target group, the server is dynamically enumerated to determine the list of databases that are currently in the server. The job step's action will be executed in each of those databases.<br>
@@ -132,9 +130,9 @@ The following examples show how different target group definitions are dynamical
 **Example 4** shows a target group that contains an elastic pool as a target. Similar to *Example 2*, the pool will be dynamically enumerated at job run time to determine the list of databases in the pool.
 <br><br>
 
-![Additional target group examples](./media/job-automation-overview/targetgroup-examples2.png)
+:::image type="content" source="./media/job-automation-overview/targetgroup-examples2.png" alt-text="Diagram of additional target group examples.":::
 
-**Example 5** and **Example 6** show advanced scenarios where servers, elastic pools, and databases can be combined using include and exclude rules.<br>
+**Example 5** and **Example 6** show advanced scenarios where servers, elastic pools, and databases can be combined using include and exclude rules.
 
 > [!NOTE]
 > The Job database itself can be the target of a job. In this scenario, the Job database is treated just like any other target database. The job user must be created and granted sufficient permissions in the Job database, and the database scoped credential for the job user must also exist in the Job database, just like it does for any other target database.

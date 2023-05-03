@@ -7,7 +7,7 @@ ms.subservice: deployment-configuration
 ms.custom: devx-track-terraform, ai-gen-docs
 author: TomArcherMsft
 ms.author: tarcher
-ms.date: 4/21/2023
+ms.date: 5/03/2023
 ---
 
 # Quickstart: Create an Azure SQL Database server and database using Terraform
@@ -21,10 +21,10 @@ In this article, you learn how to:
 > [!div class="checklist"]
 > * Create a random value for the Azure resource group name using [random_pet](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/pet).
 > * Create an Azure resource group using [azurerm_resource_group](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group).
-> * Create a random value for the Azure SQL Server name using [random_pet](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/pet).
-> * Create a random password for the Azure SQL Server using [random_password](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/password).
-> * Create an Azure SQL Server using [azurerm_mssql_server](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/mssql_server).
-> * Create an Azure SQL Database using [azurerm_mssql_database](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/mssql_database).
+> * Create a random value for the [logical server in Azure](logical-servers.md) using [random_pet](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/pet).
+> * Create a random password for the [logical server in Azure](logical-servers.md) using [random_password](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/password).
+> * Create a [logical server in Azure](logical-servers.md) using [azurerm_mssql_server](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/mssql_server).
+> * Create a database in Azure SQL Database using [azurerm_mssql_database](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/mssql_database).
 
 [!INCLUDE [AI attribution](~/../azure/includes/ai-generated-attribution.md)]
 
@@ -79,7 +79,7 @@ In this article, you learn how to:
     resource_group_name=$(terraform output -raw resource_group_name)
     ```
 
-1. Get the new SQL Server name.
+1. Get the new logical server name.
 
     ```console
    sql_server_name=$(terraform output -raw sql_server_name)
@@ -102,7 +102,7 @@ In this article, you learn how to:
     $resource_group_name=$(terraform output -raw resource_group_name)
     ```
 
-1. Get the new SQL Server name.
+1. Get the new logical server name.
 
     ```console
     $sql_server_name=$(terraform output -raw sql_server_name)

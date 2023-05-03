@@ -298,6 +298,8 @@
       - name: ARM template
         displayName: Resource Manager
         href: database/single-database-create-arm-template-quickstart.md
+      - name: Terraform
+        href: database/single-database-create-terraform-quickstart.md
       - name: With ledger and digest storage
         displayName: Create Azure SQL Database with ledger
         href: database/ledger-create-a-single-database-with-ledger-enabled.md
@@ -404,12 +406,7 @@
         href: database/service-tiers-sql-database-vcore.md
       - name: DTU model 
         href: database/service-tiers-dtu.md
-    - name: Business continuity
-      items: 
-        - name: Overview
-          href: database/business-continuity-high-availability-disaster-recover-hadr-overview.md
-        - name: High availability
-          href: database/high-availability-sla.md
+
     - name: Connectivity
       items: 
       - name: Connectivity architecture
@@ -512,6 +509,10 @@
 
     - name: Business continuity
       items: 
+      - name: Overview
+        href: database/business-continuity-high-availability-disaster-recover-hadr-overview.md
+      - name: High availability
+        href: database/high-availability-sla.md
       - name: Automated backups
         href: database/automated-backups-overview.md
       - name: Active geo-replication

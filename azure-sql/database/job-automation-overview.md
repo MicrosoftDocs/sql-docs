@@ -4,13 +4,11 @@ description: "Use Elastic Jobs for Job Automation to run Transact-SQL (T-SQL) sc
 author: williamdassafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
-ms.date: 2/1/2021
+ms.date: 05/03/2023
 ms.service: sql-database
 ms.subservice: elastic-pools
 ms.topic: conceptual
-ms.custom:
-  - sqldbrb=1
-  - contperf-fy21q3
+ms.custom: sqldbrb=1
 dev_langs:
   - "TSQL"
 ---
@@ -29,15 +27,15 @@ Every job logs the status of execution and also automatically retries the operat
 
 There are several scenarios when you could use elastic job automation:
 
-- Automate management tasks and schedule them to run every weekday, after hours, etc.
+- **Automate management tasks and schedule them to run every weekday, after hours, etc.**
   - Deploy schema changes, credentials management, performance data collection or tenant (customer) telemetry collection.
   - Update reference data (information common across all databases), load data from Azure Blob storage.
-- Configure jobs to execute across a collection of databases on a recurring basis, such as during off-peak hours.
+- **Configure jobs to execute across a collection of databases on a recurring basis, such as during off-peak hours.**
   - Collect query results from a set of databases into a central table on an on-going basis. Performance queries can be continually executed and configured to trigger additional tasks to be executed.
-- Collect data for reporting
+- **Collect data for reporting**
   - Aggregate data from a collection of databases into a single destination table.
   - Execute longer running data processing queries across a large set of databases, for example the collection of customer telemetry. Results are collected into a single destination table for further analysis.
-- Data movements 
+- **Data movement**
 
 ### Automation on other platforms
 
@@ -63,11 +61,11 @@ It is worth noting differences between SQL Agent (available in SQL Server and as
 
 **Elastic Jobs** provide the ability to run one or more T-SQL scripts in parallel, across a large number of databases, on a schedule or on-demand.
 
-You can run scheduled jobs against any combination of databases: one or more individual databases, all databases on a server, all databases in an elastic pool, or shard map, with the added flexibility to include or exclude any specific database. Jobs can run across multiple servers, multiple pools, and can even run against databases in different subscriptions. Servers and pools are dynamically enumerated at runtime, so jobs run against all databases that exist in the target group at the time of execution.
+You can run scheduled jobs against any combination of databases: one or more individual databases, all databases on a server, all databases in an elastic pool, with the added flexibility to include or exclude any specific database. Jobs can run across multiple servers, multiple pools, and can even run against databases in different subscriptions. Servers and pools are dynamically enumerated at runtime, so jobs run against all databases that exist in the target group at the time of execution.
 
 The following image shows a job agent executing jobs across the different types of target groups:
 
-![Elastic Job agent conceptual model](./media/job-automation-overview/conceptual-diagram.png)
+:::image type="content" source="./media/job-automation-overview/conceptual-diagram.png" alt-text="Conceptual diagram of Elastic Job agent.":::
 
 ### Elastic job components
 
@@ -75,7 +73,7 @@ The following image shows a job agent executing jobs across the different types 
 |---------|---------|
 |[**Elastic Job agent**](#elastic-job-agent) | The Azure resource you create to run and manage Jobs. |
 |[**Job database**](#elastic-job-database) | A database in Azure SQL Database that the job agent uses to store job related data, job definitions, etc. |
-|[**Target group**](#target-group) | The set of servers, pools, databases, and shard maps to run a job against. |
+|[**Target group**](#target-group) | The set of servers, pools, and databases to run a job against. |
 |[**Job**](#elastic-jobs-and-job-steps) | A job is a unit of work that is composed of one or more job steps. Job steps specify the T-SQL script to run, as well as other details required to execute the script. |
 
 #### Elastic job agent
@@ -114,7 +112,6 @@ A *target group* defines the set of databases a job step will execute on. A targ
 - **Logical SQL server** - if a server is specified, all databases that exist in the server at the time of the job execution are part of the group. The `master` database credential must be provided so that the group can be enumerated and updated prior to job execution. For more information on logical servers, see [What is a server in Azure SQL Database and Azure Synapse Analytics?](logical-servers.md).
 - **Elastic pool** - if an elastic pool is specified, all databases that are in the elastic pool at the time of the job execution are part of the group. As for a server, the `master` database credential must be provided so that the group can be updated prior to the job execution.
 - **Single database** - specify one or more individual databases to be part of the group.
-- **Shard map** - databases of a shard map.
 
 > [!TIP]
 > At the moment of job execution, *dynamic enumeration* re-evaluates the set of databases in target groups that include servers or pools. Dynamic enumeration ensures that **jobs run across all databases that exist in the server or pool at the time of job execution**. Re-evaluating the list of databases at runtime is specifically useful for scenarios where pool or server membership changes frequently.
@@ -125,7 +122,7 @@ A target group can include databases in multiple subscriptions, and across multi
 
 The following examples show how different target group definitions are dynamically enumerated at the moment of job execution to determine which databases the job will run:
 
-![Target group examples](./media/job-automation-overview/targetgroup-examples1.png)
+:::image type="content" source="./media/job-automation-overview/targetgroup-examples1.png" alt-text="Diagram of target group examples.":::
 
 **Example 1** shows a target group that consists of a list of individual databases. When a job step is executed using this target group, the job step's action will be executed in each of those databases.<br>
 **Example 2** shows a target group that contains a server as a target. When a job step is executed using this target group, the server is dynamically enumerated to determine the list of databases that are currently in the server. The job step's action will be executed in each of those databases.<br>
@@ -133,10 +130,9 @@ The following examples show how different target group definitions are dynamical
 **Example 4** shows a target group that contains an elastic pool as a target. Similar to *Example 2*, the pool will be dynamically enumerated at job run time to determine the list of databases in the pool.
 <br><br>
 
-![Additional target group examples](./media/job-automation-overview/targetgroup-examples2.png)
+:::image type="content" source="./media/job-automation-overview/targetgroup-examples2.png" alt-text="Diagram of additional target group examples.":::
 
-**Example 5** and **Example 6** show advanced scenarios where servers, elastic pools, and databases can be combined using include and exclude rules.<br>
-**Example 7** shows that the shards in a shard map can also be evaluated at job run time.
+**Example 5** and **Example 6** show advanced scenarios where servers, elastic pools, and databases can be combined using include and exclude rules.
 
 > [!NOTE]
 > The Job database itself can be the target of a job. In this scenario, the Job database is treated just like any other target database. The job user must be created and granted sufficient permissions in the Job database, and the database scoped credential for the job user must also exist in the Job database, just like it does for any other target database.

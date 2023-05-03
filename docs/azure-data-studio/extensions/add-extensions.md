@@ -4,7 +4,7 @@ description: Learn how to add functionality to Azure Data Studio by selecting an
 author: markingmyname
 ms.author: maghan
 ms.reviewer: erinstellato, randolphwest
-ms.date: 12/16/2022
+ms.date: 05/02/2023
 ms.service: azure-data-studio
 ms.topic: conceptual
 ---
@@ -100,6 +100,10 @@ You can sort extensions with the `@sort` filter, which can take the following va
 - `installs` - Sort by extension gallery installation count, in descending order.
 - `rating` - Sort by extension gallery rating (1-5 stars), in descending order.
 - `name` - Sort alphabetically by extension name.
+
+## Troubleshooting and Support for extensions
+
+To obtain troubleshooting help and support for extensions that you add to Azure Data Studio, please refer to the extension `Details` or `Documentation` page inside Azure Data Studio. The extension author(s) will publish instructions on how to get support if the extension encounters a problem. Authors of a given extension may be from the third-party community.
 
 ## Common questions
 

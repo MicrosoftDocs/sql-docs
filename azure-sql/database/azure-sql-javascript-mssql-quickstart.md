@@ -153,7 +153,6 @@ To create the Express.js OpenAPI application, you'll create several files:
         } catch (err) {
             res.status(500).json({ error: err?.message });
         }
-    
     });
     
     router.get('/:id', async (req, res) => {

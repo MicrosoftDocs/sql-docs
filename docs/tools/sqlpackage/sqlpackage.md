@@ -192,7 +192,7 @@ For details, see the [Microsoft Privacy Statement](https://privacy.microsoft.com
 
 ### Disable telemetry reporting
 
-To disable telemetry collection and reporting, update the environment variable `TelemetryOptout` to `true` or `1`.
+To disable telemetry collection and reporting, update the environment variable `DACFX_TELEMETRY_OPTOUT` to `true` or `1`.
 
 ## Support
 

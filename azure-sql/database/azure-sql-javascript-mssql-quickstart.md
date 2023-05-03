@@ -480,7 +480,6 @@ The **mssql** package implements the connection to Azure SQL Database by providi
       }
     
       async readAll(table) {
-    
         await this.connect();
         const request = this.poolconnection.request();
         const result = await request.query(`SELECT * FROM ${table}`);

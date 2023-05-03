@@ -180,6 +180,20 @@ For Linux and macOS, if the path is not specified in the TMPDIR environment vari
 [Contained database users](../../relational-databases/security/contained-database-users-making-your-database-portable.md) are included in SqlPackage operations.  However, the password portion of the definition is set to a randomly generated string by SqlPackage, the existing value is not transferred. It is recommended that the new user's password is reset to a secure value following the import of a `.bacpac` or the deployment of a `.dacpac`.  In an automated environment the password values can be retrieved from a secure keystore, such as Azure Key Vault, in a step following SqlPackage.
 
 
+## Usage data collection
+
+SqlPackage contains Internet-enabled features that can collect and send anonymous feature usage and diagnostic data to Microsoft.
+
+SqlPackage may collect standard computer, use, and performance information that may be transmitted to Microsoft and analyzed to improve the quality, security, and reliability of SqlPackage.
+
+SqlPackage doesn't collect user specific or personal information, but SqlPackage gathers data that helps approximate a single user for diagnostic purposes (based on a hash of the network adapter NIC).
+
+For details, see the [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement), and [SQL Server Privacy supplement](../../sql-server/sql-server-privacy.md).
+
+### Disable telemetry reporting
+
+To disable telemetry collection and reporting, update the environment variable `TelemetryOptout` to `true` or `1`.
+
 ## Support
 
  The DacFx library and the SqlPackage CLI tool have adopted the [Microsoft Modern Lifecycle Policy](https://support.microsoft.com/help/30881/modern-lifecycle-policy). All security updates, fixes, and new features will be released only in the latest point version of the major version. Maintaining your DacFx or SqlPackage installations to the current version helps ensure that you will receive all applicable bug fixes in a timely manner.

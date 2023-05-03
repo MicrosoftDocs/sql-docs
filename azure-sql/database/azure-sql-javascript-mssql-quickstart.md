@@ -394,9 +394,7 @@ The **mssql** package implements the connection to Azure SQL Database by providi
         }
     };
     
-    module.exports = {
-        config
-    };
+    module.exports = config;
     ```
 
 1. Create a **.env.development** file for your local environment variables and add the following text and update with your values for `<YOURSERVERNAME>`, `<YOURDATABASENAME>`, `<YOURUSERNAME>`, and `<YOURPASSWORD>`.

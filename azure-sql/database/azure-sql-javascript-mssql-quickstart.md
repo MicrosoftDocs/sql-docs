@@ -90,7 +90,7 @@ To create the Express.js OpenAPI application, you'll create several files:
     // Run this to create the table in the database
     if (process.env.NODE_ENV === 'development') {
       const Database = require('./database');
-      const { config } = require('./config');
+      const config = require('./config');
       const database = new Database(config);
       database
         .executeQuery(

@@ -63,7 +63,7 @@ It is worth noting differences between SQL Agent (available in SQL Server and as
 
 **Elastic Jobs** provide the ability to run one or more T-SQL scripts in parallel, across a large number of databases, on a schedule or on-demand.
 
-You can run scheduled jobs against any combination of databases: one or more individual databases, all databases on a server, all databases in an elastic pool, or shard map, with the added flexibility to include or exclude any specific database. Jobs can run across multiple servers, multiple pools, and can even run against databases in different subscriptions. Servers and pools are dynamically enumerated at runtime, so jobs run against all databases that exist in the target group at the time of execution.
+You can run scheduled jobs against any combination of databases: one or more individual databases, all databases on a server, all databases in an elastic pool, with the added flexibility to include or exclude any specific database. Jobs can run across multiple servers, multiple pools, and can even run against databases in different subscriptions. Servers and pools are dynamically enumerated at runtime, so jobs run against all databases that exist in the target group at the time of execution.
 
 The following image shows a job agent executing jobs across the different types of target groups:
 
@@ -75,7 +75,7 @@ The following image shows a job agent executing jobs across the different types 
 |---------|---------|
 |[**Elastic Job agent**](#elastic-job-agent) | The Azure resource you create to run and manage Jobs. |
 |[**Job database**](#elastic-job-database) | A database in Azure SQL Database that the job agent uses to store job related data, job definitions, etc. |
-|[**Target group**](#target-group) | The set of servers, pools, databases, and shard maps to run a job against. |
+|[**Target group**](#target-group) | The set of servers, pools, and databases to run a job against. |
 |[**Job**](#elastic-jobs-and-job-steps) | A job is a unit of work that is composed of one or more job steps. Job steps specify the T-SQL script to run, as well as other details required to execute the script. |
 
 #### Elastic job agent
@@ -114,7 +114,6 @@ A *target group* defines the set of databases a job step will execute on. A targ
 - **Logical SQL server** - if a server is specified, all databases that exist in the server at the time of the job execution are part of the group. The `master` database credential must be provided so that the group can be enumerated and updated prior to job execution. For more information on logical servers, see [What is a server in Azure SQL Database and Azure Synapse Analytics?](logical-servers.md).
 - **Elastic pool** - if an elastic pool is specified, all databases that are in the elastic pool at the time of the job execution are part of the group. As for a server, the `master` database credential must be provided so that the group can be updated prior to the job execution.
 - **Single database** - specify one or more individual databases to be part of the group.
-- **Shard map** - databases of a shard map.
 
 > [!TIP]
 > At the moment of job execution, *dynamic enumeration* re-evaluates the set of databases in target groups that include servers or pools. Dynamic enumeration ensures that **jobs run across all databases that exist in the server or pool at the time of job execution**. Re-evaluating the list of databases at runtime is specifically useful for scenarios where pool or server membership changes frequently.
@@ -136,7 +135,6 @@ The following examples show how different target group definitions are dynamical
 ![Additional target group examples](./media/job-automation-overview/targetgroup-examples2.png)
 
 **Example 5** and **Example 6** show advanced scenarios where servers, elastic pools, and databases can be combined using include and exclude rules.<br>
-**Example 7** shows that the shards in a shard map can also be evaluated at job run time.
 
 > [!NOTE]
 > The Job database itself can be the target of a job. In this scenario, the Job database is treated just like any other target database. The job user must be created and granted sufficient permissions in the Job database, and the database scoped credential for the job user must also exist in the Job database, just like it does for any other target database.

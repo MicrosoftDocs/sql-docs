@@ -123,7 +123,7 @@ To create the Express.js OpenAPI application, you'll create several files:
     ```javascript
     const express = require('express');
     const Database = require('./database');
-    const { config } = require('./config');
+    const config = require('./config');
     
     const router = express.Router();
     router.use(express.json());

@@ -27,7 +27,9 @@ For more information on database ledger, see [Ledger](/azure/azure-sql/database/
 ## Syntax
 
 ```syntaxsql
-sp_verify_database_ledger_from_digest_storage [ @locations = ] 'JSON_document_with_digest_storage_locations' [ , [ @table_name = ] 'table_name' ]
+sp_verify_database_ledger_from_digest_storage
+    [ @locations = ] 'JSON_document_with_digest_storage_locations'
+    [ , [ @table_name = ] 'table_name' ]
 ```
 
 ## Arguments

@@ -34,7 +34,9 @@ For more information on database ledger, see [Ledger](/azure/azure-sql/database/
 ## Syntax
 
 ```syntaxsql
-sp_verify_database_ledger [ @digests = ] 'digests' [ , [ @table_name = ] 'table_name' ]
+sp_verify_database_ledger
+    [ @digests = ] 'digests'
+    [ , [ @table_name = ] 'table_name' ]
 ```
 
 ## Arguments

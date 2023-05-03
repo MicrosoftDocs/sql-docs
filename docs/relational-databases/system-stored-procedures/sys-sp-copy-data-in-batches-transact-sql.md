@@ -25,7 +25,9 @@ For more information on database ledger, see [Ledger](/azure/azure-sql/database/
 ## Syntax
 
 ```syntaxsql
-sp_copy_data_in_batches [ @source_table_name = ] N'source_table_name' , [ @target_table_name = ] N'target_table_name'
+sp_copy_data_in_batches
+     [ @source_table_name = ] N'source_table_name'
+     , [ @target_table_name = ] N'target_table_name'
 ```
 
 ## Arguments

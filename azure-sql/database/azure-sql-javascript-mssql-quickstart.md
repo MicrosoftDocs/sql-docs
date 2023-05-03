@@ -496,7 +496,6 @@ The **mssql** package implements the connection to Azure SQL Database by providi
           .query(`SELECT * FROM ${table} WHERE id = @id`);
     
         return result.recordset[0];
-    
       }
     
       async update(table, id, data) {

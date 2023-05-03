@@ -515,7 +515,6 @@ The **mssql** package implements the connection to Azure SQL Database by providi
       }
     
       async delete(table, id) {
-    
         await this.connect();
     
         console.log(`id: ${JSON.stringify(+id)}`);

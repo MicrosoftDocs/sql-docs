@@ -22,6 +22,9 @@ While these instructions contain commands to install both SQLSRV and PDO_SQLSRV 
 
 Please refer to [Support Matrix](microsoft-php-drivers-for-sql-server-support-matrix.md) for the latest supported operating systems version.
 
+> [!NOTE]
+> Make sure you have installed the latest ODBC driver version to ensure optimal performance and security. For installation instructions, see [Install the Microsoft ODBC driver for SQL Server (Linux)](../odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) or [Install the Microsoft ODBC driver for SQL Server (macOS)](../odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md).
+
 ## Installing on Ubuntu
 
 

@@ -3,7 +3,7 @@ title: "Optimized locking"
 description: "Learn about the optimized locking enhancement to the Database Engine."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 04/17/2023
+ms.date: 05/03/2023
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
@@ -39,7 +39,7 @@ This article covers these two core concepts of optimized locking in detail.
 
 ### Availability
 
-Currently, optimized locking is available in [!INCLUDE[Azure SQL Database](../../includes/ssazure_md.md)] only.
+Currently, optimized locking is available in [!INCLUDE[Azure SQL Database](../../includes/ssazure_md.md)] only. For more information, see [Where is optimized locking currently available?](#where-is-optimized-locking-currently-available)
 
 #### Is optimized locking enabled?
 
@@ -267,16 +267,15 @@ In the previous query example, only table `t3` will use the repeatable read isol
 
 ### Where is optimized locking currently available?
 
-Currently, optimized locking is available in [!INCLUDE[Azure SQL Database](../../includes/ssazure_md.md)] only in [limited Azure regions](#availability).
+Currently, optimized locking is available in [!INCLUDE[Azure SQL Database](../../includes/ssazure_md.md)].
 
 Optimized locking is available in the following service tiers:
 - all DTU service tiers
 - all vCore service tiers, including provisioned and serverless
 
 Optimized locking is not currently available in:
-- [!INCLUDE[Azure SQL Managed Instance](../../includes/ssazuremi_md.md)]
-- [!INCLUDE[Azure SQL Database](../../includes/ssazure_md.md)] hyperscale
-- [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]
+- [!INCLUDE [Azure SQL Managed Instance](../../includes/ssazuremi_md.md)]
+- [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]
 
 ### Is optimized locking on by default in both new and existing databases?
 

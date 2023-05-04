@@ -4,7 +4,7 @@ description: This article shows you how to create a Transact-SQL backup in SQL S
 author: perrysk-msft
 ms.author: peskount
 ms.reviewer: mikeray, randolphwest
-ms.date: 03/10/2023
+ms.date: 05/04/2023
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: conceptual
@@ -55,7 +55,7 @@ Similarly, a restore script might work as follows:
 
 ## Limitations
 
- The maximum number of databases you can back up with this feature is 64. If there are more than 64 databases on the server, you will see the following error:
+The maximum number of databases you can back up with this feature is 64. If there are more than 64 databases on the server, you will see the following error:
 
 ```output
 Error message:
@@ -65,7 +65,7 @@ Maximum number of databases used for each query has been exceeded. The maximum a
 
 ## Examples
 
-The following sections show different T-SQL commands used to perform snapshot backup to disk.  When a snapshot backup is written to disk, only the metadata connected to the snapshot backup is written to the file. The output doesn't contain any of the database contents except for the header and the file contents. The shell file created as part of performing snapshot backup should be used with the actual snapshot URI to make a complete backup. RESTORE of a database from this file requires the user to copy the database files from the snapshot URIto the mount point prior to issuing the RESTORE command. Users are able to run all the traditional T-SQL commands like RESTORE HEADERONLY, RESTORE FILELISTONLY on this snapshot backup metadata file along with RESTORE DATABASE. The syntax supports writing snapshot backup metadata to DISK or URL. The snapshot backup sets can also be appended just like streaming backup sets into a single file.
+The following sections show different T-SQL commands used to perform snapshot backup to disk. When a snapshot backup is written to disk, only the metadata connected to the snapshot backup is written to the file. The output doesn't contain any of the database contents except for the header and the file contents. The shell file created as part of performing snapshot backup should be used with the actual snapshot URI to make a complete backup. RESTORE of a database from this file requires the user to copy the database files from the snapshot URIto the mount point prior to issuing the RESTORE command. Users are able to run all the traditional T-SQL commands like RESTORE HEADERONLY, RESTORE FILELISTONLY on this snapshot backup metadata file along with RESTORE DATABASE. The syntax supports writing snapshot backup metadata to DISK or URL. The snapshot backup sets can also be appended just like streaming backup sets into a single file.
 
 > [!NOTE]  
 > For backup to URL, block blobs are preferred although page blobs are supported for SQL Server on Windows. For SQL Server on Linux and containers, only block blobs are supported.
@@ -128,7 +128,7 @@ WITH METADATA_ONLY, FORMAT;
 > [!NOTE]  
 > By default suspend for snapshot backup commands will clear the differential bitmap. If you prefer to perform a copy only backup use the COPY_ONLY keyword as shown in the following examples.
 
-### Perform Copy-Only Snapshot Backups
+### Perform copy-only snapshot backups
 
 Since the differential bitmap is cleared prior to freeze, SUSPEND_FOR_SNAPSHOT_BACKUP provides an option (COPY_ONLY) to not clear the differential bitmap prior to freeze.
 
@@ -142,7 +142,7 @@ TO DISK = 'd:\temp\db.bkm'
 WITH METADATA_ONLY, FORMAT;
 
 ALTER SERVER CONFIGURATION
-SET SUSPEND_FOR_SNAPSHOT_BACKUP = ON 
+SET SUSPEND_FOR_SNAPSHOT_BACKUP = ON
 (GROUP = (testdb1, testdb2), MODE = COPY_ONLY);
 
 BACKUP GROUP testdb1, testdb2
@@ -280,9 +280,18 @@ sys.dm_server_suspend_status (db_id, db_name, suspend_session_id, suspend_time_m
 sys.dm_tran_locks (resource_type, resource_database_id, resource_lock_partition, request_mode, request_type, request_status, request_owner_type, request_session_id)
 ```
 
-### To List Databases where T-SQL Snapshot backups were taken and its releated information:
+### List backupset details for T-SQL snapshot backups
 
-select database_name,type,backup_size,backup_start_date,backup_finish_date,is_snapshot from msdb.dbo.backupset where is_snapshot='1';
+```sql
+SELECT database_name,
+    type,
+    backup_size,
+    backup_start_date,
+    backup_finish_date,
+    is_snapshot
+FROM msdb.dbo.backupset
+WHERE is_snapshot = 1;
+```
 
 ### Server and database level properties for checking if a database was suspended for snapshot backup
 

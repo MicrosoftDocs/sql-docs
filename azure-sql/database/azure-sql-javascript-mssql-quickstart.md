@@ -4,7 +4,7 @@ description: Learn how to connect to a database in Azure SQL Database and query 
 author: diberry
 ms.author: diberry
 ms.custom: passwordless-js
-ms.date: 04/27/2023
+ms.date: 05/04/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: quickstart
@@ -40,7 +40,6 @@ The steps in this section create a Node.js REST API.
     npm init -y
     ```
 
-
 1. Install the required packages used in the sample code in this article:
 
     ```bash
@@ -57,6 +56,12 @@ The steps in this section create a Node.js REST API.
 
     ```bash
     code .
+    ```
+
+1. Open the **package.json** file and add the following property and value after the _name_ property to configure the project for ESM modules. 
+
+    ```json
+    "type": "module",
     ```
 
 ## Create Express.js application code
@@ -76,21 +81,21 @@ To create the Express.js OpenAPI application, you'll create several files:
 1. Create an **index.js** file and add the following code:
 
     ```javascript
-    const express = require('express');
+    import express from 'express';
+    import { config } from './config.js';
+    import Database from './database.js';
     
     // Import App routes
-    const person = require('./person');
-    const openapi = require('./openapi');
+    import person from './person.js';
+    import openapi from './openapi.js';
     
-    const port = parseInt(process.env.PORT) || 3000;
+    const port = process.env.PORT || 3000;
     
     const app = express();
     
     // Development only - don't do in production
     // Run this to create the table in the database
     if (process.env.NODE_ENV === 'development') {
-      const Database = require('./database');
-      const { config } = require('./config');
       const database = new Database(config);
       database
         .executeQuery(
@@ -121,115 +126,119 @@ To create the Express.js OpenAPI application, you'll create several files:
 1. Create a **person.js** route file and add the following code:
 
     ```javascript
-    const express = require('express');
-    const Database = require('./database');
-    const { config } = require('./config');
+    import express from 'express';
+    import { config } from './config.js';
+    import Database from './database.js';
     
     const router = express.Router();
     router.use(express.json());
     
-    console.log(`DB Config: ${JSON.stringify(config)}`);
+    // Development only - don't do in production
+    console.log(config);
+    
+    // Create database object
     const database = new Database(config);
     
     router.get('/', async (_, res) => {
-        try {
-            // Return a list of persons
-            const persons = await database.readAll('Person');
-            console.log(`persons: ${JSON.stringify(persons)}`);
-            res.status(200).json(persons);
-        } catch (err) {
-            res.status(500).json({ error: err?.message });
-        }
+      try {
+        // Return a list of persons
+        const persons = await database.readAll();
+        console.log(`persons: ${JSON.stringify(persons)}`);
+        res.status(200).json(persons);
+      } catch (err) {
+        res.status(500).json({ error: err?.message });
+      }
     });
     
     router.post('/', async (req, res) => {
-        try {
-            // Create a new person
-            const person = req.body;
-            delete person.id;
-            console.log(`person: ${JSON.stringify(person)}`);
-            const rowsAffected = await database.create('Person', person);
-            res.status(201).json({ rowsAffected });
-        } catch (err) {
-            res.status(500).json({ error: err?.message });
-        }
-    
+      try {
+        // Create a person
+        const person = req.body;
+        console.log(`person: ${JSON.stringify(person)}`);
+        const rowsAffected = await database.create(person);
+        res.status(201).json({ rowsAffected });
+      } catch (err) {
+        res.status(500).json({ error: err?.message });
+      }
     });
     
     router.get('/:id', async (req, res) => {
-        try {
-            // Get the person with the specified ID
-            const personId = req.params.id;
-            console.log(`personId: ${personId}`);
-            if (personId) {
-                const result = await database.read('Person', personId);
-                console.log(`persons: ${JSON.stringify(result)}`);
-                res.status(200).json(result);
-            } else {
-                res.status(404);
-            }
-        } catch (err) {
-            res.status(500).json({ error: err?.message });
+      try {
+        // Get the person with the specified ID
+        const personId = req.params.id;
+        console.log(`personId: ${personId}`);
+        if (personId) {
+          const result = await database.read(personId);
+          console.log(`persons: ${JSON.stringify(result)}`);
+          res.status(200).json(result);
+        } else {
+          res.status(404);
         }
+      } catch (err) {
+        res.status(500).json({ error: err?.message });
+      }
     });
     
     router.put('/:id', async (req, res) => {
-        try {
-            // Update the person with the specified ID
-            const personId = req.params.id;
-            console.log(`personId: ${personId}`);
-            const person = req.body;
+      try {
+        // Update the person with the specified ID
+        const personId = req.params.id;
+        console.log(`personId: ${personId}`);
+        const person = req.body;
     
-            if (personId && person) {
-                delete person.id;
-                console.log(`person: ${JSON.stringify(person)}`);
-                const rowsAffected = await database.update('Person', personId, person);
-                res.status(200).json({ rowsAffected });
-            } else {
-                res.status(404);
-            }
-        } catch (err) {
-            res.status(500).json({ error: err?.message });
+        if (personId && person) {
+          delete person.id;
+          console.log(`person: ${JSON.stringify(person)}`);
+          const rowsAffected = await database.update(personId, person);
+          res.status(200).json({ rowsAffected });
+        } else {
+          res.status(404);
         }
+      } catch (err) {
+        res.status(500).json({ error: err?.message });
+      }
     });
     
     router.delete('/:id', async (req, res) => {
-        try {
-            // Delete the person with the specified ID
-            const personId = req.params.id;
-            console.log(`personId: ${personId}`);
+      try {
+        // Delete the person with the specified ID
+        const personId = req.params.id;
+        console.log(`personId: ${personId}`);
     
-            if (!personId) {
-                res.status(404);
-            } else {
-                const rowsAffected = await database.delete('Person', personId);
-                res.status(204).json({ rowsAffected });
-            }
-        } catch (err) {
-            res.status(500).json({ error: err?.message });
+        if (!personId) {
+          res.status(404);
+        } else {
+          const rowsAffected = await database.delete(personId);
+          res.status(204).json({ rowsAffected });
         }
+      } catch (err) {
+        res.status(500).json({ error: err?.message });
+      }
     });
     
-    module.exports = router;
+    export default router;
     ```
 
 1. Create an **opanapi.js** route file and add the following code for the OpenAPI UI explorer:
 
     ```javascript
-    const express = require('express');
-    const path = require('path');
-    const swaggerUi = require('swagger-ui-express');
-    const yaml = require('yamljs');
+    import express from 'express';
+    import { join, dirname } from 'path';
+    import swaggerUi from 'swagger-ui-express';
+    import yaml from 'yamljs';
+    import { fileURLToPath } from 'url';
+    
+    const __dirname = dirname(fileURLToPath(import.meta.url));
     
     const router = express.Router();
     router.use(express.json());
     
-    const pathToSpec = path.join(__dirname, './openApiSchema.yml');
+    const pathToSpec = join(__dirname, './openApiSchema.yml');
     const openApiSpec = yaml.load(pathToSpec);
     
     router.use('/', swaggerUi.serve, swaggerUi.setup(openApiSpec));
     
-    module.exports = router;
+    export default router;
     ```
 
 1. Create a **openApiSchema.yml** schema file and add the following YAML:
@@ -332,15 +341,15 @@ The **mssql** package implements the connection to Azure SQL Database by providi
 1. In Visual Studio Code, create a **config.js** file and add the following mssql configuration code to authenticate to Azure SQL.
 
     ```javascript
-    require('dotenv').config({ path: `.env.${process.env.NODE_ENV}`, debug: true });
-    console.log(process.env)
+    import * as dotenv from 'dotenv';
+    dotenv.config({ path: `.env.${process.env.NODE_ENV}`, debug: true });
 
     const server = process.env.AZURE_SQL_SERVER;
     const database = process.env.AZURE_SQL_DATABASE;
     const port = parseInt(process.env.AZURE_SQL_PORT);
     const type = process.env.AZURE_SQL_AUTHENTICATIONTYPE;
     
-    const config = {
+    export const config = {
         server,
         port,
         database,
@@ -351,9 +360,6 @@ The **mssql** package implements the connection to Azure SQL Database by providi
             encrypt: true
         }
     };
-    module.exports = {
-        config
-    };
     ```
 
 1. Create a **.env.development** file for your local environment variables and add the following text and update with your values for `<YOURSERVERNAME>` and `<YOURDATABASENAME>`.
@@ -363,7 +369,6 @@ The **mssql** package implements the connection to Azure SQL Database by providi
     AZURE_SQL_DATABASE=<YOURDATABASENAME>
     AZURE_SQL_PORT=1433
     AZURE_SQL_AUTHENTICATIONTYPE=azure-active-directory-default
-    NODE_ENV=development
     ```
 
 > [!NOTE]
@@ -375,8 +380,8 @@ The **mssql** package implements the connection to Azure SQL Database by providi
 1. In Visual Studio Code, create a **config.js** file and add the following mssql configuration code to authenticate to Azure SQL.
     
     ```javascript
-    require('dotenv').config({ path: `.env.${process.env.NODE_ENV}`, debug: true });
-    console.log(process.env)
+    import * as dotenv from 'dotenv';
+    dotenv.config({ path: `.env.${process.env.NODE_ENV}`, debug: true });
     
     const server = process.env.AZURE_SQL_SERVER;
     const database = process.env.AZURE_SQL_DATABASE;
@@ -384,7 +389,7 @@ The **mssql** package implements the connection to Azure SQL Database by providi
     const user = process.env.AZURE_SQL_USER;
     const password = process.env.AZURE_SQL_PASSWORD;
     
-    const config = {
+    export const config = {
         server,
         port,
         database,
@@ -393,10 +398,6 @@ The **mssql** package implements the connection to Azure SQL Database by providi
         options: {
             encrypt: true
         }
-    };
-    
-    module.exports = {
-        config
     };
     ```
 
@@ -408,7 +409,6 @@ The **mssql** package implements the connection to Azure SQL Database by providi
     AZURE_SQL_PORT=1433
     AZURE_SQL_USER=<YOURUSERNAME>
     AZURE_SQL_PASSWORD=<YOURPASSWORD>
-    NODE_ENV=development
     ```
 
 > [!WARNING]
@@ -422,22 +422,22 @@ The **mssql** package implements the connection to Azure SQL Database by providi
 1. Create a **database.js** file and add the following code:
 
     ```javascript
-    const sql = require('mssql');
+    import sql from 'mssql';
     
-    class Database {
-      config={};
-      poolconnection=null;
-      connected=false;
+    export default class Database {
+      config = {};
+      poolconnection = null;
+      connected = false;
     
       constructor(config) {
         this.config = config;
-        console.log(`Database: config: ${JSON.stringify}`);
+        console.log(`Database: config: ${JSON.stringify(config)}`);
       }
     
       async connect() {
         try {
           console.log(`Database connecting...${this.connected}`);
-          if (this.connected===false) {
+          if (this.connected === false) {
             this.poolconnection = await sql.connect(this.config);
             this.connected = true;
             console.log('Database connection successful');
@@ -457,7 +457,7 @@ The **mssql** package implements the connection to Azure SQL Database by providi
           console.error(`Error closing database connection: ${error}`);
         }
       }
-
+    
       async executeQuery(query) {
         await this.connect();
         const request = this.poolconnection.request();
@@ -466,8 +466,7 @@ The **mssql** package implements the connection to Azure SQL Database by providi
         return result.rowsAffected[0];
       }
     
-      async create(table, data) {
-    
+      async create(data) {
         await this.connect();
         const request = this.poolconnection.request();
     
@@ -475,36 +474,32 @@ The **mssql** package implements the connection to Azure SQL Database by providi
         request.input('lastName', sql.NVarChar(255), data.lastName);
     
         const result = await request.query(
-          `INSERT INTO ${table} (firstName, lastName) VALUES (@firstName, @lastName)`
+          `INSERT INTO Person (firstName, lastName) VALUES (@firstName, @lastName)`
         );
     
         return result.rowsAffected[0];
       }
     
-      async readAll(table) {
-    
+      async readAll() {
         await this.connect();
         const request = this.poolconnection.request();
-        const result = await request.query(`SELECT * FROM ${table}`);
+        const result = await request.query(`SELECT * FROM Person`);
     
         return result.recordsets[0];
       }
     
-      async read(table, id) {
-    
+      async read(id) {
         await this.connect();
     
         const request = this.poolconnection.request();
         const result = await request
-          .input("id", sql.Int, +id)
-          .query(`SELECT * FROM ${table} WHERE id = @id`);
+          .input('id', sql.Int, +id)
+          .query(`SELECT * FROM Person WHERE id = @id`);
     
         return result.recordset[0];
-    
       }
     
-      async update(table, id, data) {
-    
+      async update(id, data) {
         await this.connect();
     
         const request = this.poolconnection.request();
@@ -514,29 +509,25 @@ The **mssql** package implements the connection to Azure SQL Database by providi
         request.input('lastName', sql.NVarChar(255), data.lastName);
     
         const result = await request.query(
-          `UPDATE ${table} SET firstName=@firstName, lastName=@lastName WHERE id = @id`
+          `UPDATE Person SET firstName=@firstName, lastName=@lastName WHERE id = @id`
         );
     
         return result.rowsAffected[0];
       }
     
-      async delete(table, id) {
-    
+      async delete(id) {
         await this.connect();
     
-        console.log(`id: ${JSON.stringify(+id)}`);
         const idAsNumber = Number(id);
     
         const request = this.poolconnection.request();
         const result = await request
-          .input("id", sql.Int, idAsNumber)
-          .query(`DELETE FROM ${table} WHERE id = @id`);
+          .input('id', sql.Int, idAsNumber)
+          .query(`DELETE FROM Person WHERE id = @id`);
     
         return result.rowsAffected[0];
       }
     }
-    
-    module.exports = Database;
     ```
 
 ## Test the app locally

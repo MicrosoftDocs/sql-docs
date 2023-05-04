@@ -3,7 +3,7 @@ title: "View a Database Snapshot (SQL Server)"
 description: Learn how to view a SQL Server database snapshot using SQL Server Management Studio or Transact-SQL.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "03/14/2017"
+ms.date: "05/04/2023"
 ms.service: sql
 ms.subservice: supportability
 ms.topic: conceptual
@@ -40,10 +40,28 @@ helpviewer_keywords:
  **To view a database snapshot**  
   
 1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
-  
-2.  From the Standard bar, click **New Query**.  
-  
-3.  To list the database snapshots of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], query the **source_database_id** column of the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view for non-NULL values.  
+1.  From the Standard bar, click **New Query**.  
+1.  To list the database snapshots of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], query the **source_database_id** column of the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view for non-NULL values.  
+
+1. You can also use this query to get details about the database snapshot and its files
+
+```sql
+SELECT 
+	db_name(db.source_database_id) source_database, 
+	db.name AS snapshot_db_name, 
+	db.database_id, 
+	db.source_database_id,
+	db.create_date,
+	db.compatibility_level,
+	db.is_read_only,
+	mf.physical_name
+FROM sys.databases db
+INNER JOIN sys.master_files mf
+	ON db.database_id = mf.database_id
+WHERE db.source_database_id is not null
+	AND mf.is_sparse =1
+ORDER BY db.name
+```
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   

@@ -17,13 +17,13 @@ This quickstart describes how to connect an application to a database in Azure S
 
 ## Prerequisites
 
-* An [Azure subscription](https://azure.microsoft.com/free/nodejs/).
+* An [Azure subscription](https://azure.microsoft.com/free/nodejs/)
 * An Azure SQL database configured with Azure Active Directory (Azure AD) authentication. You can create one using the [Create database quickstart](./single-database-create-quickstart.md).
 * Bash-enabled shell
 * [Node.js LTS](https://nodejs.org/)
-* [Visual Studio Code](https://code.visualstudio.com/).
+* [Visual Studio Code](https://code.visualstudio.com/)
 * [Visual Studio Code App Service extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice)
-* The latest version of the [Azure CLI](/cli/azure/get-started-with-azure-cli).
+* The latest version of the [Azure CLI](/cli/azure/get-started-with-azure-cli)
 
 ## Configure the database server
 

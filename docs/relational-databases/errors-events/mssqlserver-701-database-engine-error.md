@@ -62,7 +62,7 @@ Configure and collect the following counters with Performance Monitor:
 
 Collect periodic outputs of this query on the impacted SQL Server
 
-  ```tsql
+  ```sql
   SELECT pages_kb, type, name, virtual_memory_committed_kb, awe_allocated_kb
   FROM sys.dm_os_memory_clerks
   ORDER BY pages_kb DESC

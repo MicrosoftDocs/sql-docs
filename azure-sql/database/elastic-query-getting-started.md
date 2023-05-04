@@ -56,7 +56,7 @@ These are used to connect to the shard map manager and the shards:
 1. Open SQL Server Management Studio or SQL Server Data Tools in Visual Studio.
 2. Connect to ElasticDBQuery database and execute the following T-SQL commands:
 
-    ```tsql
+    ```sql
     CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<master_key_password>';
 
     CREATE DATABASE SCOPED CREDENTIAL ElasticDBQueryCred
@@ -69,7 +69,7 @@ These are used to connect to the shard map manager and the shards:
 ### External data sources
 To create an external data source, execute the following command on the ElasticDBQuery database:
 
-```tsql
+```sql
 CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
     (TYPE = SHARD_MAP_MANAGER,
     LOCATION = '<server_name>.database.windows.net',
@@ -84,7 +84,7 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
 ### External tables
 Create an external table that matches the Customers table on the shards by executing the following command on ElasticDBQuery database:
 
-```tsql
+```sql
 CREATE EXTERNAL TABLE [dbo].[Customers]
 ( [CustomerId] [int] NOT NULL,
     [Name] [nvarchar](256) NOT NULL,
@@ -100,7 +100,7 @@ Once you have defined your external data source and your external tables you can
 
 Execute this query on the ElasticDBQuery database:
 
-```tsql
+```sql
 select count(CustomerId) from [dbo].[Customers]
 ```
 

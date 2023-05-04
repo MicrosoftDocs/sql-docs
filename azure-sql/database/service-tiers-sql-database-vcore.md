@@ -3,8 +3,8 @@ title: vCore purchasing model
 description: The vCore purchasing model lets you independently scale compute and storage resources, match on-premises performance, and optimize price for Azure SQL Database
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: sashan, moslake, mathoma
-ms.date: 4/21/2023
+ms.reviewer: sashan, moslake, mathoma, dfurman
+ms.date: 5/2/2023
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: conceptual
@@ -97,7 +97,7 @@ Service tier options in the vCore purchasing model include General Purpose, Busi
 | **Compute size** | 2 to 128 vCores | 2 to 128 vCores  |2 to 128 vCores<sup>1</sup> |
 | **Storage type** | Premium remote storage (per instance) |Super-fast local SSD storage (per instance)  | De-coupled storage with local SSD cache (per compute replica) |
 | **Storage size**<sup>1</sup> | 1 GB – 4 TB | 1 GB – 4 TB  | 10 GB – 100 TB |
-| **IOPS** | 500 IOPS per vCore with 12,800 maximum IOPS | 8,000 IOPS per vCore with 200,000 maximum IOPS   | 327,680 IOPS with max local SSD <br/>Hyperscale is a multi-tiered architecture with caching at multiple levels. Effective IOPS will depend on the workload. |
+| **IOPS** | 16,000 maximum IOPS | 8,000 IOPS per vCore with 200,000 maximum IOPS   | 327,680 IOPS with max local SSD <br/>Hyperscale is a multi-tiered architecture with caching at multiple levels. Effective IOPS will depend on the workload. |
 | **Memory/vCore** | 5.1 GB | 5.1 GB | 5.1 GB or 10.2 GB<sup>4</sup>| 
 | **Backups** | A choice of geo-redundant, zone-redundant, or locally redundant backup storage, 1-35 day retention (default 7 days) <br/> Long term retention available up to 10 years | A choice of geo-redundant, zone-redundant, or locally redundant backup storage, 1-35 day retention (default 7 days) <br/> Long term retention available up to 10 years  | A choice of locally-redundant (LRS), zone-redundant (ZRS), or geo-redundant (GRS) storage <br/> 1-35 days (7 days by default) retention <sup>2</sup>, with up to 10 years of long-term retention available <sup>3</sup> |
 |**Availability**|1 replica, no read-scale replicas, <br/>zone-redundant high availability (HA) |3 replicas, 1 [read-scale replica](read-scale-out.md),<br/>zone-redundant high availability (HA)|zone-redundant high availability (HA) (preview)|
@@ -128,7 +128,7 @@ In the architectural model for the General Purpose service tier, there are two l
 - A stateless compute layer that is running the `sqlservr.exe` process and contains only transient and cached data (for example – plan cache, buffer pool, column store pool). This stateless node is operated by Azure Service Fabric that initializes process, controls health of the node, and performs failover to another place if necessary.
 - A stateful data layer with database files (.mdf/.ldf) that are stored in Azure Blob storage. Azure Blob storage guarantees that there will be no data loss of any record that is placed in any database file. Azure Storage has built-in data availability/redundancy that ensures that every record in log file or page in data file will be preserved even if the process crashes.
 
-Whenever the database engine or operating system is upgraded, some part of underlying infrastructure fails, or if some critical issue is detected in the `sqlservr.exe` process, Azure Service Fabric will move the stateless process to another stateless compute node. There is a set of spare nodes that is waiting to run new compute service if a failover of the primary node happens in order to minimize failover time. Data in Azure storage layer is not affected, and data/log files are attached to newly initialized process. This process guarantees 99.99% availability by default and 99.995% availability when [zone redundancy](high-availability-sla.md#general-purpose-service-tier-zone-redundant-availability) is enabled. There may be some performance impacts to heavy workloads that are in-flight due to transition time and the fact the new node starts with cold cache.
+Whenever the database engine or operating system is upgraded, some part of underlying infrastructure fails, or if some critical issue is detected in the `sqlservr.exe` process, Azure Service Fabric will move the stateless process to another stateless compute node. There is a set of spare nodes that is waiting to run new compute service if a failover of the primary node happens in order to minimize failover time. Data in Azure storage layer is not affected, and data/log files are attached to newly initialized process. This process guarantees 99.99% availability by default and 99.995% availability when [zone redundancy](high-availability-sla.md#zone-redundant-availability) is enabled. There may be some performance impacts to heavy workloads that are in-flight due to transition time and the fact the new node starts with cold cache.
 
 ### When to choose this service tier
 

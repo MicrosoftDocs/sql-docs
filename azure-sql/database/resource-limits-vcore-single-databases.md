@@ -4,7 +4,7 @@ description: This page describes some common vCore resource limits for a single 
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 04/10/2023
+ms.date: 04/27/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: reference
@@ -240,8 +240,8 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Max local SSD IOPS <sup>1</sup>|8000 |16,000 |24,000 |32,000 |40,000 |48,000 |56,000 |
 |Max log rate (MBps)|100 |100 |100 |100 |100 |100 |100 |
 |Local read IO latency<sup>2</sup> |1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
-|Remote read IO latency<sup>2</sup>|1-5 ms|1-5 ms|1-5 ms|1-5 ms|1-5 ms|1-5 ms|1-5 ms|
-|Write IO latency<sup>2</sup>|3-5 ms|3-5 ms|3-5 ms|3-5 ms|3-5 ms|3-5 ms|3-5 ms|
+|Remote read IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
+|Write IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
 |Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
 |Max concurrent workers|200|400|600|800|1000|1200|1400|
 |Max concurrent external connections <sup>4</sup>|20|40|60|80|100|120|140|
@@ -275,8 +275,8 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Max local SSD IOPS <sup>1</sup>|64,000 |72,000 |80,000 |96,000 |128,000 |160,000 |204,800 |
 |Max log rate (MBps)|100 |100 |100 |100 |100 |100 |100 |
 |Local read IO latency<sup>2</sup> |1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
-|Remote read IO latency<sup>2</sup>|1-5 ms|1-5 ms|1-5 ms|1-5 ms|1-5 ms|1-5 ms|1-5 ms|
-|Write IO latency<sup>2</sup>|3-5 ms|3-5 ms|3-5 ms|3-5 ms|3-5 ms|3-5 ms|3-5 ms|
+|Remote read IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
+|Write IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
 |Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
 |Max concurrent workers|1600|1800|2000|2400|3200|4000|8000|
 |Max concurrent external connections <sup>4</sup>|150|150|150|150|150|150|150|
@@ -310,8 +310,8 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Max local SSD IOPS <sup>1</sup>|14,000|28,000|42,000|44,800|
 |Max log rate (MBps)|100 |100 |100 |100 |
 |Local read IO latency<sup>2</sup> |1-2 ms|1-2 ms|1-2 ms|1-2 ms|
-|Remote read IO latency<sup>2</sup>|1-5 ms|1-5 ms|1-5 ms|1-5 ms|
-|Write IO latency<sup>2</sup>|3-5 ms|3-5 ms|3-5 ms|3-5 ms|
+|Remote read IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
+|Write IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
 |Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
 |Max concurrent workers|160|320|480|640|
 |Max concurrent external connections <sup>4</sup>|16|32|48|64|
@@ -348,8 +348,8 @@ SLOs in the Hyperscale premium-series tier use the naming convention `HS_PRMS_` 
 |Max local SSD IOPS <sup>1</sup>|8,000|16,000|24,000|32,000|40,000|
 |Max log rate (MBps)|100 |100 |100 |100 |100 |
 |Local read IO latency<sup>2</sup> |1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
-|Remote read IO latency<sup>2</sup>|1-5 ms|1-5 ms|1-5 ms|1-5 ms|1-5 ms|
-|Write IO latency<sup>2</sup>|3-5 ms|3-5 ms|3-5 ms|3-5 ms|3-5 ms|
+|Remote read IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
+|Write IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
 |Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
 |Max concurrent workers|200|400|600|800|1000|
 |Max concurrent external connections <sup>4</sup>|20|40|60|80|100|
@@ -385,8 +385,8 @@ SLOs in the Hyperscale premium-series tier use the naming convention `HS_PRMS_` 
 |Max local SSD IOPS <sup>1</sup>|48,000|56,000|64,000|72,000|80,000|
 |Max log rate (MBps)|100 |100 |100 |100 |100 |
 |Local read IO latency<sup>2</sup> |1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
-|Remote read IO latency<sup>2</sup>|1-5 ms|1-5 ms|1-5 ms|1-5 ms|1-5 ms|
-|Write IO latency<sup>2</sup>|3-5 ms|3-5 ms|3-5 ms|3-5 ms|3-5 ms|
+|Remote read IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
+|Write IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
 |Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
 |Max concurrent workers|1,200|1,400|1,600|1,800|2,000|
 |Max concurrent external connections <sup>4</sup>|120|140|150|150|150|
@@ -420,8 +420,8 @@ SLOs in the Hyperscale premium-series tier use the naming convention `HS_PRMS_` 
 |Max local SSD IOPS <sup>1</sup>|96,000|128,000|160,000|320,000|327,680|
 |Max log rate (MBps)|100 |100 |100 |100 |100|
 |Local read IO latency<sup>2</sup> |1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
-|Remote read IO latency<sup>2</sup>|1-5 ms|1-5 ms|1-5 ms|1-5 ms|1-5 ms|
-|Write IO latency<sup>2</sup>|3-5 ms|3-5 ms|3-5 ms|3-5 ms|3-5 ms|
+|Remote read IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
+|Write IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
 |Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
 |Max concurrent workers|2,400|3,200|4,000|8,000|12,800|
 |Max concurrent external connections <sup>4</sup>|150|150|150|150|150|
@@ -458,8 +458,8 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 |Max local SSD IOPS <sup>1</sup>|10,240|20,480|30,720|40,960|51,200|
 |Max log rate (MBps)|100 |100 |100 |100 |100 |
 |Local read IO latency<sup>2</sup> |1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
-|Remote read IO latency<sup>2</sup>|1-5 ms|1-5 ms|1-5 ms|1-5 ms|1-5 ms|
-|Write IO latency<sup>2</sup>|3-5 ms|3-5 ms|3-5 ms|3-5 ms|3-5 ms|
+|Remote read IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
+|Write IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
 |Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
 |Max concurrent workers|200|400|600|800|1000|
 |Max concurrent external connections <sup>4</sup>|20|40|60|80|100|
@@ -495,8 +495,8 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 |Max local SSD IOPS <sup>1</sup>|61,440|71,680|81,920|92,160|102,400|
 |Max log rate (MBps)|100 |100 |100 |100 |100 |
 |Local read IO latency<sup>2</sup> |1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
-|Remote read IO latency<sup>2</sup>|1-5 ms|1-5 ms|1-5 ms|1-5 ms|1-5 ms|
-|Write IO latency<sup>2</sup>|3-5 ms|3-5 ms|3-5 ms|3-5 ms|3-5 ms|
+|Remote read IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
+|Write IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
 |Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
 |Max concurrent workers|1,200|1,400|1,600|1,800|2,000|
 |Max concurrent external connections <sup>4</sup>|120|140|150|150|150|
@@ -531,8 +531,8 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 |Max local SSD IOPS <sup>1</sup>|122,880|163,840|204,800|327,680|
 |Max log rate (MBps)|100 |100 |100 |100 |
 |Local read IO latency<sup>2</sup> |1-2 ms|1-2 ms|1-2 ms|1-2 ms|
-|Remote read IO latency<sup>2</sup>|1-5 ms|1-5 ms|1-5 ms|1-5 ms|
-|Write IO latency<sup>2</sup>|3-5 ms|3-5 ms|3-5 ms|3-5 ms|
+|Remote read IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
+|Write IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
 |Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
 |Max concurrent workers|2,400|3,200|4,000|8,000|
 |Max concurrent external connections <sup>4</sup>|150|150|150|150|

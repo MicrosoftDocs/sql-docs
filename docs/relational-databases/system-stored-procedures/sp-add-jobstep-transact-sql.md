@@ -29,7 +29,7 @@ Adds a step (operation) to a SQL Agent job.
 
 ## Syntax
 
-```sql
+```syntaxsql
 sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
      [ , [ @step_id = ] step_id ]
      { , [ @step_name = ] 'step_name' }

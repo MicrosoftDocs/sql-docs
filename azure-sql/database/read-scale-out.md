@@ -147,7 +147,7 @@ For single and pooled databases in Azure SQL Database, you can disable and re-en
 
 ### Azure portal
 
-For Azure SQL Database, you can manage the read scale-out setting on the **Compute + storage** database blade, available under *Settings*. Using the Azure portal to enable or disable read scale-out is not available for Azure SQL Managed Instance. 
+For Azure SQL Database, you can manage the read scale-out setting on the **Compute + storage** database pane, available under *Settings*. Using the Azure portal to enable or disable read scale-out is not available for Azure SQL Managed Instance. 
 
 ### PowerShell
 

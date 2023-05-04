@@ -40,8 +40,8 @@ helpviewer_keywords:
  **To view a database snapshot**  
   
 1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
-1.  From the Standard bar, click **New Query**.  
-1.  To list the database snapshots of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], query the **source_database_id** column of the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view for non-NULL values.  
+1.  From the **Standard** bar, select **New Query**.  
+1.  To list the database snapshots of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], query the `source_database_id` column of the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view for non-NULL values.  
 
 1. You can also use this query to get details about the database snapshot and its files
 

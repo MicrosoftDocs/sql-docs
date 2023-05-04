@@ -276,7 +276,7 @@ IDENTITY_INSERT specifies whether the identity value or values in the imported d
 
 *AUTO_CREATE_TABLE* specifies if the table could be automatically created by working alongside with automatic schema discovery. It is available only for parquet files.
 
-- ON: Enables automatic table creation. The COPY INTO process will create a new table automatically by discovering the structure of the file to be loaded.  Can also be used with preexisting tables to take advantage of automatic schema discovery of parquet files.
+- ON: Enables automatic table creation. The COPY INTO process will create a new table automatically by discovering the structure of the file to be loaded. Can also be used with preexisting tables to take advantage of automatic schema discovery of Parquet files.
 - OFF: Automatic table creation is not enabled. Default.
 
 >[!NOTE]  

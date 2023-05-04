@@ -26,44 +26,44 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |Parameter|Short Form|Value|Description|
 |---|---|---|---|
 |**/AccessToken:**|**/at**|{string}| Specifies the token based authentication access token to use when connect to the target database. |
-|**/Action:**|**/a**|Script|Specifies the action to be performed. |
-|**/AzureCloudConfig:**|**/acc**|{string}|Specifies the custom endpoints for connecting to Azure Active Directory in the format: AzureActiveDirectoryAuthority={value};DatabaseServicePrincipalName={value}" .|
-|**/DeployReportPath:**|**/drp**|{string}|Specifies an optional file path to output the deployment report xml file. |
-|**/DeployScriptPath:**|**/dsp**|{string}|Specifies an optional file path to output the deployment script. For Azure deployments, if there are TSQL commands to create or modify the master database, a script will be written to the same path but with "Filename_Master.sql" as the output file name. |
-|**/Diagnostics:**|**/d**|{True&#124;False}|Specifies whether diagnostic logging is output to the console. Defaults to False. |
-|**/DiagnosticsFile:**|**/df**|{string}|Specifies a file to store diagnostic logs. |
-|**/MaxParallelism:**|**/mp**|{int}| Specifies the degree of parallelism for concurrent operations running against a database. The default value is 8. |
-|**/ModelFilePath:**|**/mfp**|{string}|Specifies the file path to override the model.xml in the source file. Use of this setting may result in deployment failure and/or unintended data loss. This setting is intended only for use when troubleshooting issues with publish, import, or script generation.|
-|**/OutputPath:**|**/op**|{string}|Specifies the file path where the output files are generated. |
-|**/OverwriteFiles:**|**/of**|{True&#124;False}|Specifies if SqlPackage should overwrite existing files. Specifying false causes SqlPackage to abort action if an existing file is encountered. Default value is True. |
-|**/Profile:**|**/pr**|{string}|Specifies the file path to a DAC Publish Profile. The profile defines a collection of properties and variables to use when generating outputs.|
-|**/Properties:**|**/p**|{PropertyName}={Value}|Specifies a name value pair for an [action-specific property](#properties-specific-to-the-script-action); {PropertyName}={Value}. |
-|**/Quiet:**|**/q**|{True&#124;False}|Specifies whether detailed feedback is suppressed. Defaults to False.|
-|**/ReferencePaths:**|**/rp**|{PropertyName}={Value}|Specifies the additional directories to search for .dacpac references.|
-|**/SourceFile:**|**/sf**|{string}|Specifies a source file to be used as the source of action. If this parameter is used, no other source parameter shall be valid. |
-|**/SourceConnectionString:**|**/scs**|{string}|Specifies a valid [SQL Server/Azure connection string](/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring) to the source database. If this parameter is specified, it shall be used exclusively of all other source parameters. |
-|**/SourceDatabaseName:**|**/sdn**|{string}|Defines the name of the source database. |
-|**/SourceEncryptConnection:**|**/sec**|{Optional&#124;Mandatory&#124;Strict&#124;True&#124;False}|Specifies if SQL encryption should be used for the source database connection. Default value is True. |
-|**/SourceHostNameInCertificate:**|**/shnic**|{string}|Specifies value that is used to validate the source SQL Server TLS/SSL certificate when the communication layer is encrypted by using TLS.|
-|**/SourcePassword:**|**/sp**|{string}|For SQL Server Auth scenarios, defines the password to use to access the source database. |
-|**/SourceServerName:**|**/ssn**|{string}|Defines the name of the server hosting the source database. |
-|**/SourceTimeout:**|**/st**|{int}|Specifies the timeout for establishing a connection to the source database in seconds. |
-|**/SourceTrustServerCertificate:**|**/stsc**|{True&#124;False}|Specifies whether to use TLS to encrypt the source database connection and bypass walking the certificate chain to validate trust. Default value is False. |
-|**/SourceUser:**|**/su**|{string}|For SQL Server Auth scenarios, defines the SQL Server user to use to access the source database. |
-|**/TargetFile:**|**/tf**|{string}| Specifies a target file (that is, a .dacpac file) to be used as the target of action instead of a database. If this parameter is used, no other target parameter shall be valid. This parameter shall be invalid for actions that only support database targets.|
-|**/TargetConnectionString:**|**/tcs**|{string}|Specifies a valid [SQL Server/Azure connection string](/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring) to the target database. If this parameter is specified, it shall be used exclusively of all other target parameters. |
-|**/TargetDatabaseName:**|**/tdn**|{string}|Specifies an override for the name of the database that is the target of SqlPackage Action. |
-|**/TargetEncryptConnection:**|**/tec**|{Optional&#124;Mandatory&#124;Strict&#124;True&#124;False}|Specifies if SQL encryption should be used for the target database connection. Default value is True. |
-|**/TargetHostNameInCertificate:**|**/thnic**|{string}|Specifies value that is used to validate the target SQL Server TLS/SSL certificate when the communication layer is encrypted by using TLS.|
-|**/TargetPassword:**|**/tp**|{string}|For SQL Server Auth scenarios, defines the password to use to access the target database. |
-|**/TargetServerName:**|**/tsn**|{string}|Defines the name of the server hosting the target database. |
-|**/TargetTimeout:**|**/tt**|{int}|Specifies the timeout for establishing a connection to the target database in seconds. For Azure AD, it is recommended that this value be greater than or equal to 30 seconds.|
-|**/TargetTrustServerCertificate:**|**/ttsc**|{True&#124;False}|Specifies whether to use TLS to encrypt the target database connection and bypass walking the certificate chain to validate trust. Default value is False. |
-|**/TargetUser:**|**/tu**|{string}|For SQL Server Auth scenarios, defines the SQL Server user to use to access the target database. |
-|**/TenantId:**|**/tid**|{string}|Represents the Azure AD tenant ID or domain name. This option is required to support guest or imported Azure AD users as well as Microsoft accounts such as outlook.com, hotmail.com, or live.com. If this parameter is omitted, the default tenant ID for Azure AD will be used, assuming that the authenticated user is a native user for this AD. However, in this case any guest or imported users and/or Microsoft accounts hosted in this Azure AD are not supported and the operation will fail. <br/> For more information about Active Directory Universal Authentication, see [Universal Authentication with SQL Database and Azure Synapse Analytics (SSMS support for MFA)](/azure/sql-database/sql-database-ssms-mfa-authentication).|
-|**/ThreadMaxStackSize:**|**/tmss**|{int}|Specifies the maximum size in megabytes for the thread running the SqlPackage action. This option should only be used when encountering stack overflow exceptions that occur when parsing very large TSQL statements.|
-|**/UniversalAuthentication:**|**/ua**|{True&#124;False}|Specifies if Universal Authentication should be used. When set to True, the interactive authentication protocol is activated supporting MFA. This option can also be used for Azure AD authentication without MFA, using an interactive protocol requiring the user to enter their username and password or integrated authentication (Windows credentials). When /UniversalAuthentication is set to True, no Azure AD authentication can be specified in SourceConnectionString (/scs). When /UniversalAuthentication is set to False, Azure AD authentication must be specified in SourceConnectionString (/scs). <br/> For more information about Active Directory Universal Authentication, see [Universal Authentication with SQL Database and Azure Synapse Analytics (SSMS support for MFA)](/azure/sql-database/sql-database-ssms-mfa-authentication).|
-|**/Variables:**|**/v**|{PropertyName}={Value}|Specifies a name value pair for an action-specific variable;{VariableName}={Value}. The DACPAC file contains the list of valid SQLCMD variables. An error results if a value is not provided for every variable. |
+|**/Action:**|**/a:**|Script|Specifies the action to be performed. |
+|**/AzureCloudConfig:**|**/acc:**|{string}|Specifies the custom endpoints for connecting to Azure Active Directory in the format: AzureActiveDirectoryAuthority={value};DatabaseServicePrincipalName={value}" .|
+|**/DeployReportPath:**|**/drp:**|{string}|Specifies an optional file path to output the deployment report xml file. |
+|**/DeployScriptPath:**|**/dsp:**|{string}|Specifies an optional file path to output the deployment script. For Azure deployments, if there are TSQL commands to create or modify the master database, a script will be written to the same path but with "Filename_Master.sql" as the output file name. |
+|**/Diagnostics:**|**/d:**|{True&#124;False}|Specifies whether diagnostic logging is output to the console. Defaults to False. |
+|**/DiagnosticsFile:**|**/df:**|{string}|Specifies a file to store diagnostic logs. |
+|**/MaxParallelism:**|**/mp:**|{int}| Specifies the degree of parallelism for concurrent operations running against a database. The default value is 8. |
+|**/ModelFilePath:**|**/mfp:**|{string}|Specifies the file path to override the model.xml in the source file. Use of this setting may result in deployment failure and/or unintended data loss. This setting is intended only for use when troubleshooting issues with publish, import, or script generation.|
+|**/OutputPath:**|**/op:**|{string}|Specifies the file path where the output files are generated. |
+|**/OverwriteFiles:**|**/of:**|{True&#124;False}|Specifies if SqlPackage should overwrite existing files. Specifying false causes SqlPackage to abort action if an existing file is encountered. Default value is True. |
+|**/Profile:**|**/pr:**|{string}|Specifies the file path to a DAC Publish Profile. The profile defines a collection of properties and variables to use when generating outputs.|
+|**/Properties:**|**/p:**|{PropertyName}={Value}|Specifies a name value pair for an [action-specific property](#properties-specific-to-the-script-action); {PropertyName}={Value}. |
+|**/Quiet:**|**/q:**|{True&#124;False}|Specifies whether detailed feedback is suppressed. Defaults to False.|
+|**/ReferencePaths:**|**/rp:**|{PropertyName}={Value}|Specifies the additional directories to search for .dacpac references.|
+|**/SourceFile:**|**/sf:**|{string}|Specifies a source file to be used as the source of action. If this parameter is used, no other source parameter shall be valid. |
+|**/SourceConnectionString:**|**/scs:**|{string}|Specifies a valid [SQL Server/Azure connection string](/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring) to the source database. If this parameter is specified, it shall be used exclusively of all other source parameters. |
+|**/SourceDatabaseName:**|**/sdn:**|{string}|Defines the name of the source database. |
+|**/SourceEncryptConnection:**|**/sec:**|{Optional&#124;Mandatory&#124;Strict&#124;True&#124;False}|Specifies if SQL encryption should be used for the source database connection. Default value is True. |
+|**/SourceHostNameInCertificate:**|**/shnic:**|{string}|Specifies value that is used to validate the source SQL Server TLS/SSL certificate when the communication layer is encrypted by using TLS.|
+|**/SourcePassword:**|**/sp:**|{string}|For SQL Server Auth scenarios, defines the password to use to access the source database. |
+|**/SourceServerName:**|**/ssn:**|{string}|Defines the name of the server hosting the source database. |
+|**/SourceTimeout:**|**/st:**|{int}|Specifies the timeout for establishing a connection to the source database in seconds. |
+|**/SourceTrustServerCertificate:**|**/stsc:**|{True&#124;False}|Specifies whether to use TLS to encrypt the source database connection and bypass walking the certificate chain to validate trust. Default value is False. |
+|**/SourceUser:**|**/su:**|{string}|For SQL Server Auth scenarios, defines the SQL Server user to use to access the source database. |
+|**/TargetFile:**|**/tf:**|{string}| Specifies a target file (that is, a .dacpac file) to be used as the target of action instead of a database. If this parameter is used, no other target parameter shall be valid. This parameter shall be invalid for actions that only support database targets.|
+|**/TargetConnectionString:**|**/tcs:**|{string}|Specifies a valid [SQL Server/Azure connection string](/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring) to the target database. If this parameter is specified, it shall be used exclusively of all other target parameters. |
+|**/TargetDatabaseName:**|**/tdn:**|{string}|Specifies an override for the name of the database that is the target of SqlPackage Action. |
+|**/TargetEncryptConnection:**|**/tec:**|{Optional&#124;Mandatory&#124;Strict&#124;True&#124;False}|Specifies if SQL encryption should be used for the target database connection. Default value is True. |
+|**/TargetHostNameInCertificate:**|**/thnic:**|{string}|Specifies value that is used to validate the target SQL Server TLS/SSL certificate when the communication layer is encrypted by using TLS.|
+|**/TargetPassword:**|**/tp:**|{string}|For SQL Server Auth scenarios, defines the password to use to access the target database. |
+|**/TargetServerName:**|**/tsn:**|{string}|Defines the name of the server hosting the target database. |
+|**/TargetTimeout:**|**/tt:**|{int}|Specifies the timeout for establishing a connection to the target database in seconds. For Azure AD, it is recommended that this value be greater than or equal to 30 seconds.|
+|**/TargetTrustServerCertificate:**|**/ttsc:**|{True&#124;False}|Specifies whether to use TLS to encrypt the target database connection and bypass walking the certificate chain to validate trust. Default value is False. |
+|**/TargetUser:**|**/tu:**|{string}|For SQL Server Auth scenarios, defines the SQL Server user to use to access the target database. |
+|**/TenantId:**|**/tid:**|{string}|Represents the Azure AD tenant ID or domain name. This option is required to support guest or imported Azure AD users as well as Microsoft accounts such as outlook.com, hotmail.com, or live.com. If this parameter is omitted, the default tenant ID for Azure AD will be used, assuming that the authenticated user is a native user for this AD. However, in this case any guest or imported users and/or Microsoft accounts hosted in this Azure AD are not supported and the operation will fail. <br/> For more information about Active Directory Universal Authentication, see [Universal Authentication with SQL Database and Azure Synapse Analytics (SSMS support for MFA)](/azure/sql-database/sql-database-ssms-mfa-authentication).|
+|**/ThreadMaxStackSize:**|**/tmss:**|{int}|Specifies the maximum size in megabytes for the thread running the SqlPackage action. This option should only be used when encountering stack overflow exceptions that occur when parsing very large TSQL statements.|
+|**/UniversalAuthentication:**|**/ua:**|{True&#124;False}|Specifies if Universal Authentication should be used. When set to True, the interactive authentication protocol is activated supporting MFA. This option can also be used for Azure AD authentication without MFA, using an interactive protocol requiring the user to enter their username and password or integrated authentication (Windows credentials). When /UniversalAuthentication is set to True, no Azure AD authentication can be specified in SourceConnectionString (/scs). When /UniversalAuthentication is set to False, Azure AD authentication must be specified in SourceConnectionString (/scs). <br/> For more information about Active Directory Universal Authentication, see [Universal Authentication with SQL Database and Azure Synapse Analytics (SSMS support for MFA)](/azure/sql-database/sql-database-ssms-mfa-authentication).|
+|**/Variables:**|**/v:**|{PropertyName}={Value}|Specifies a name value pair for an action-specific variable;{VariableName}={Value}. The DACPAC file contains the list of valid SQLCMD variables. An error results if a value is not provided for every variable. |
 
 ## Properties specific to the Script action
 

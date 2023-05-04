@@ -14,19 +14,11 @@ helpviewer_keywords:
 ---
 # View a Database Snapshot (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  This topic explains how to view a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database snapshot using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  This article explains how to view a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database snapshot using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 > [!NOTE]  
 >  To create, revert to, or delete a database snapshot, you must use [!INCLUDE[tsql](../../includes/tsql-md.md)].  
-  
- **In This Topic**  
-  
--   **To view a database snapshot, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
+    
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  **To view a database snapshot**  
   
@@ -42,11 +34,10 @@ helpviewer_keywords:
 1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
 1.  From the **Standard** bar, select **New Query**.  
 1.  To list the database snapshots of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], query the `source_database_id` column of the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view for non-NULL values.  
-
 1. You can also use this query to get details about the database snapshot and its files
 
-```sql
-SELECT 
+   ```sql
+   SELECT 
 	db_name(db.source_database_id) source_database, 
 	db.name AS snapshot_db_name, 
 	db.database_id, 
@@ -55,13 +46,13 @@ SELECT
 	db.compatibility_level,
 	db.is_read_only,
 	mf.physical_name
-FROM sys.databases db
-INNER JOIN sys.master_files mf
+   FROM sys.databases db
+   INNER JOIN sys.master_files mf
 	ON db.database_id = mf.database_id
-WHERE db.source_database_id is not null
+   WHERE db.source_database_id is not null
 	AND mf.is_sparse =1
-ORDER BY db.name
-```
+   ORDER BY db.name;
+   ```
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
@@ -71,7 +62,8 @@ ORDER BY db.name
   
 -   [Drop a Database Snapshot &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
-## See Also  
- [Database Snapshots &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)  
+## Next steps
+
+- [Database Snapshots &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)  
   
   

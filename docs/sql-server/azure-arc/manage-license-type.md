@@ -59,7 +59,7 @@ License type is a configuration setting of Azure Extension for SQL Server that d
 
 The following license types are supported:
 
-| License type | Description  | Short form   |  
+| License type | Long description | Short description |  
 |---|---|---|
 | PAYG | Standard or Enterprise edition with pay-as-you-go billing through Microsoft Azure | Pay-as-you-go |
 | Paid | Standard or Enterprise edition license with Software Assurance or SQL Subscription  | License with software assurance |

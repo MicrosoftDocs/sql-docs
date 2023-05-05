@@ -72,10 +72,37 @@ The following diagram illustrates the architecture of Azure Arc-enabled SQL Serv
 ## Feature availability by operating system
 
 [!INCLUDE [features-operating-systems](includes/features-operating-system.md)]
+
 ## Supported Azure regions
 
 [!INCLUDE [azure-arc-data-regions](includes/azure-arc-data-regions.md)]
 
+## Feature availability by version
+
+| Feature | Enterprise | Standard | Web | Express | Developer | Evaluation |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| [SQL Server inventory](overview.md#manage-your-sql-servers-at-scale-from-a-single-point-of-control) | Yes | Yes | Yes |
+| [Best practices assessment](assess.md) | No | Yes | Yes |
+| [Detailed database inventory](view-databases.md#inventory-databases) | No | Yes | Yes |
+|  [Azure Active Directory authentication for SQL Server](../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md)  | No | Yes | Yes |
+| [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-sql-usage) | Yes | Yes | Yes |
+| [Microsoft Purview](/azure/purview/tutorial-register-scan-on-premises-sql-server) | Yes | Yes | Yes |
+| [Automated backups](point-in-time-restore.md) | No | Yes | Yes |
+| [Automated patching](patch.md) | No | Yes | Yes |
+
+## Feature availability by edition
+
+|Feature | Enterprise | Standard | Web | Express | Developer | Evaluation |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| [Azure pay-as-you-go billing](manage-license-type.md) | Yes | Yes | Yes | Yes | Yes | Yes |
+| [Best practices assessment](assess.md) | Yes | Yes | Yes | Yes | Yes | Yes |
+| [Detailed database inventory](view-databases.md#inventory-databases) | Yes | Yes | Yes | Yes | Yes | Yes |
+| [Azure Active Directory authentication](https://learn.microsoft.com/en-us/sql/relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md) | Yes | Yes | Yes | Yes | Yes | Yes |
+| [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-sql-usage) | Yes | Yes | Yes | Yes
+[Express _LocalDB_ is not supported.](/azure/purview/register-scan-on-premises-sql-server#supported-capabilities) | Yes | Yes |
+| [Microsoft Purview](/azure/purview/tutorial-register-scan-on-premises-sql-server) | Yes | Yes | Yes | Yes | Yes | Yes |
+| [Automated backups](point-in-time-restore.md) | Yes | Yes | Yes | Yes | Yes | Yes |
+| [Automated patching](patch.md) | Yes | Yes | Yes | Yes | Yes | Yes |
 
 ## Next steps
 

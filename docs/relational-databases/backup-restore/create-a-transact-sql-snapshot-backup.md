@@ -126,7 +126,7 @@ WITH METADATA_ONLY, FORMAT;
 ```
 
 > [!NOTE]  
-> By default suspend for snapshot backup commands will clear the differential bitmap. If you prefer to perform a copy only backup use the COPY_ONLY keyword as shown in the following examples.In case backup suspension was a failure for whatever reason your custom script should catch this [refert to Sample T-SQL troubleshooting script] and issue a traditional FULL backup OR differential backup (differential backup will scan the whole DB as differential bitmap will be invalidated) to ensure backup chain is in-place.
+> By default, suspend for snapshot backup commands will clear the differential bitmap, even if the suspend process fails. If you prefer to perform a copy only backup, use the COPY_ONLY keyword as shown in the following examples.
 
 ### Perform Copy-Only Snapshot Backups
 

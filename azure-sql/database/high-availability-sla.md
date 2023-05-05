@@ -103,7 +103,7 @@ For more information on high availability in Hyperscale, see [Database High Avai
 
 ## Zone-redundant availability 
 
-Zone-redundant availability is based on storing your database to [zone-redundant storage (ZRS)](/azure/storage/common/storage-redundancy#zone-redundant-storage), which copies your data across three Azure availability zones in the primary region. Each availability zone is a separate physical location with independent power, cooling, and networking. Each availability zone is a separate physical location with independent power, cooling, and networking.
+Zone-redundant availability is based on storing your database to [zone-redundant storage (ZRS)](/azure/storage/common/storage-redundancy#zone-redundant-storage), which copies your data across three Azure availability zones in the primary region. Each availability zone is a separate physical location with independent power, cooling, and networking.
 
 Zone-redundant availability is available to databases in the General Purpose, Premium, Business Critical and Hyperscale service tiers of the vCore purchasing model, and not the Basic and Standard service tiers of the DTU-based purchasing model. 
 

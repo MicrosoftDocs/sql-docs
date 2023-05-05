@@ -63,7 +63,7 @@ You can create nonclustered indexes in [!INCLUDE[ssnoversion](../../includes/ssn
   
 8.  Click **Close**.  
   
-9. On the **File** menu, click **Save**_table_name_.  
+9. On the **File** menu, click **Save** _table_name_.  
 
 #### To create a nonclustered index by using Object Explorer  
   
@@ -79,7 +79,7 @@ You can create nonclustered indexes in [!INCLUDE[ssnoversion](../../includes/ssn
   
 6.  Under **Index key columns**, click **Add...**.  
   
-7.  In the **Select Columns from**_table_name_ dialog box, select the check box or check boxes of the table column or columns to be added to the nonclustered index.  
+7.  In the **Select Columns from** _table_name_ dialog box, select the check box or check boxes of the table column or columns to be added to the nonclustered index.  
   
 8.  Click **OK**.  
   

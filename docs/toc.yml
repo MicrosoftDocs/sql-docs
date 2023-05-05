@@ -10084,8 +10084,8 @@ items:
       href: linux/quickstart-install-connect-ubuntu.md
     - name: Run and connect (containers)
       href: linux/quickstart-install-connect-docker.md
-    - name: Deploy SQL Server containers to Kubernetes
-      href: linux/quickstart-sql-server-containers-kubernetes.md
+    - name: Deploy SQL Server container cluster
+      href: linux/quickstart-sql-server-containers-azure.md
     - name: Deploy to Azure VMs with Ansible playbook
       href: linux/sql-server-linux-deploy-ansible.md
     - name: Provision a SQL Server VM in Azure >
@@ -10291,14 +10291,13 @@ items:
         - name: Configure cross-platform (Windows and Linux)
           href: linux/sql-server-linux-availability-group-cross-platform.md
       - name: High availability for containers
-        href: linux/sql-server-linux-container-ha-overview.md
         items:
-        - name: Configure a container in Kubernetes
-          href: linux/quickstart-sql-server-containers-kubernetes.md
-        - name: Deploy availability group with DH2i on AKS
+        - name: Overview
+          href: linux/sql-server-linux-container-ha-overview.md
+        - name: Configure a container cluster in Azure
+          href: linux/quickstart-sql-server-containers-azure.md
+        - name: Deploy AGs with DH2i DxEnterprise
           href: linux/tutorial-sql-server-containers-kubernetes-dh2i.md
-        - name: Deploy availability group in a DH2i sidecar
-          href: linux/tutorial-sql-server-dh2i-sidecar.md
     - name: Security
       items:
       - name: Overview

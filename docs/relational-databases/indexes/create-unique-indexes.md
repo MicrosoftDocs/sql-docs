@@ -118,7 +118,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 13. Click **Close**.  
   
-14. On the **File** menu, click **Save**_table\_name_.  
+14. On the **File** menu, click **Save** _table\_name_.  
   
 #### Create a unique index by using Object Explorer  
   
@@ -136,7 +136,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 7.  Under **Index key columns**, click **Add...**.  
   
-8.  In the **Select Columns from**_table\_name_ dialog box, select the check box or check boxes of the table column or columns to be added to the unique index.  
+8.  In the **Select Columns from** _table\_name_ dialog box, select the check box or check boxes of the table column or columns to be added to the unique index.  
   
 9. Click **OK**.  
   

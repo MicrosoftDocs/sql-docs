@@ -38,6 +38,7 @@ If the server that runs your SQL Server instance isn't yet connected to Azure, y
     - **Operating system**
 
     If necessary, specify the proxy your network uses to connect to the Internet.
+    To use a specific name for Azure Arc enabled Server instead of default host name, users can add the name for Azure Arc enabled Server in **Server Name**.
 
    :::image type="content" source="media/join/server-details-sql-server-azure-arc.png" alt-text="Screenshot of server details for Azure Arc.":::
 

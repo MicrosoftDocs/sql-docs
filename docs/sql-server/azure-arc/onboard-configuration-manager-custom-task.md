@@ -32,7 +32,7 @@ Next, [create an application in Configuration Manager](/mem/configmgr/apps/get-s
 
 1. In the **Configuration Manager** console, select **Software Library > Application Management > Applications**.
 1. On the **Home** tab, in the **Create** group, select **Create Application**.
-/1. On the **General** page of the Create Application Wizard, select **Automatically detect information about this application from installation files**. This action pre-populates some of the information in the wizard with information that is extracted from the installation .msi file. Then, specify the following information:
+1. On the **General** page of the Create Application Wizard, select **Automatically detect information about this application from installation files**. This action pre-populates some of the information in the wizard with information that is extracted from the installation .msi file. Then, specify the following information:
    1. **Type**: Select **Windows Installer (*.msi file)**
    1. **Location**: Select **Browse** to choose the location where you saved the installation file **AzureExtensionForSQLServer.msi**.
       :::image type="content" source="media/onboard-configuration-manager-custom-task/configuration-manager-create-application.png" alt-text="Screenshot of the Create Application Wizard in Configuration Manager.":::

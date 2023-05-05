@@ -118,7 +118,7 @@ To create a contained database user in Azure SQL Database, Azure SQL Managed Ins
   - `SUSER_ID(<name>)`
   - `SUSER_SID(<name>)`
 
-- Azure SQL Database doesn't create implicit users for users logged in as part of an Azure Active Directory (Azure AD) group membership. Because of this, various operations that require assigning ownership will fail, even if the Azure AD group is added as a member to a role with those permissions.
+- Azure SQL Database doesn't create implicit users for users logged in as part of an Azure AD group membership. Because of this, various operations that require assigning ownership will fail, even if the Azure AD group is added as a member to a role with those permissions.
 
 For example, a user signed into a database via an Azure AD group with the **db_ddladmin** role, will not be able to execute CREATE SCHEMA, ALTER SCHEMA, and other object creation statements without a schema explicitly defined (such as table, view, or type, for example). To resolve this, an Azure AD user must be created for that user, or the Azure AD group must be altered to assign a DEFAULT_SCHEMA.
 

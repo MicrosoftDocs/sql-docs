@@ -4,7 +4,7 @@ description: Auto-failover groups let you manage geo-replication and automatic /
 author: AbdullahMSFT
 ms.author: amamun
 ms.reviewer: wiassaf, mathoma
-ms.date: 03/01/2022
+ms.date: 05/06/2023
 ms.service: sql-database
 ms.subservice: high-availability
 ms.topic: conceptual
@@ -18,17 +18,19 @@ ms.custom: azure-sql-split
 > * [Azure SQL Database](auto-failover-group-sql-db.md)
 > * [Azure SQL Managed Instance](../managed-instance/auto-failover-group-sql-mi.md)
 
-The auto-failover groups feature allows you to manage the replication and failover of some or all databases on a [logical server](logical-servers.md) to another region. This article focuses on using the Auto-failover group feature with Azure SQL Database and some best practices.  
+The auto-failover groups feature allows you to manage the replication and failover of some or all databases on a [logical server](logical-servers.md) to a logical server another region. This article focuses on using the Auto-failover group feature with Azure SQL Database and some best practices.  
 
 To get started, review [Configure auto-failover group](auto-failover-group-configure-sql-db.md). For an end-to-end experience, see the [Auto-failover group tutorial](failover-group-add-single-database-tutorial.md).
 
 
 > [!NOTE]
 > - This article covers auto-failover groups for Azure SQL Database. For Azure SQL Managed Instance, see [Auto-failover groups in Azure SQL Managed Instance](../managed-instance/auto-failover-group-sql-mi.md). 
-> - Auto-failover groups support geo-replication of all databases in the group to only one secondary server in a different region. If you need to create multiple Azure SQL Database geo-secondary replicas (in the same or different regions) for the same primary replica, use [active geo-replication](active-geo-replication-overview.md).
+> - Auto-failover groups support geo-replication of all databases in the group to only one secondary logical server in a different region. If you need to create multiple Azure SQL Database geo-secondary replicas (in the same or different regions) for the same primary replica, use [active geo-replication](active-geo-replication-overview.md).
 > 
 
 ## Overview
+
+The auto-failover groups feature allows you to manage the replication and failover of a group of databases or all user databases in a logical server to another Azure region. It is a declarative abstraction on top of the [active geo-replication](../database/active-geo-replication-overview.md) feature, designed to simplify deployment and management of geo-replicated databases at scale.
 
 [!INCLUDE [auto-failover-groups-overview](../includes/auto-failover-group-overview.md)]
 
@@ -44,7 +46,7 @@ There is some overlap of content in the following articles, be sure to make chan
 
 - **Failover group (FOG)**
 
-  A failover group is a named group of databases managed by a single server that can fail over as a unit to another Azure region in case all or some primary databases become unavailable due to an outage in the primary region. 
+  A failover group is a named group of databases managed by a single logical server that can fail over as a unit to another Azure region in case all or some primary databases become unavailable due to an outage in the primary region. 
   
   > [!IMPORTANT]
   > The name of the failover group must be globally unique within the `.database.windows.net` domain.
@@ -55,18 +57,18 @@ There is some overlap of content in the following articles, be sure to make chan
 
 - **Primary**
 
-  The server that hosts the primary databases in the failover group.
+  The logical server that hosts the primary databases in the failover group.
 
 - **Secondary**
 
-  The server that hosts the secondary databases in the failover group. The secondary cannot be in the same Azure region as the primary.
+  The logical server that hosts the secondary databases in the failover group. The secondary cannot be in the same Azure region as the primary.
 
 - **Adding single databases to failover group**
 
-  You can put several single databases on the same server into the same failover group. If you add a single database to the failover group, it automatically creates a secondary database using the same edition and compute size on secondary server. You specified that server when the failover group was created. If you add a database that already has a secondary database in the secondary server, that geo-replication link is inherited by the group. When you add a database that already has a secondary database in a server that is not part of the failover group, a new secondary is created in the secondary server.
+  You can put several single databases on the same logical server into the same failover group. If you add a single database to the failover group, it automatically creates a secondary database using the same edition and compute size on secondary server. You specified that server when the failover group was created. If you add a database that already has a secondary database in the secondary server, that geo-replication link is inherited by the group. When you add a database that already has a secondary database in a server that is not part of the failover group, a new secondary is created in the secondary server.
 
   > [!IMPORTANT]
-  > Make sure that the secondary server doesn't have a database with the same name unless it is an existing secondary database. 
+  > Make sure that the secondary logical server doesn't have a database with the same name unless it is an existing secondary database. 
 
 - **Adding databases in elastic pool to failover group**
 

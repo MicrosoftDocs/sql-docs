@@ -40,7 +40,7 @@ Filtered indexes can provide the following advantages over full-table indexes:
 
 When a column only has a few relevant values for queries, you can create a filtered index on the subset of values.  The resulting index will be smaller and cost less to maintain than a full-table nonclustered index defined on the same key columns.
 
-For example, consider a filtered index in the following data scenarios. In each case, the `WHERE` clause of the filtered index should be a subset of the `WHERE` clause of a query to benefit from the filtered index.
+For example, consider a filtered index in the following data scenarios. In each case, for a query to benefit from the filtered index, the `WHERE` clause of it should be a subset of the `WHERE` clause of the filtered index.
 
 - When the values in a column are mostly NULL and the query selects only from the non-NULL values. You can create a filtered index for the non-NULL data rows.
 - When rows in a table are marked as processed by a recurring workflow or queue process. Over time, most rows in the table will be marked as processed. A filtered index on rows that aren't yet processed would benefit the recurring query that looks for rows that aren't yet processed.

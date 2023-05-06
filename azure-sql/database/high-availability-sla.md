@@ -132,7 +132,9 @@ Consider the following when configuring your General Purpose databases with zone
   - (Middle East) Qatar Central
   - (North America) East US
   - (North America) East US 2
-  - (North America) West US 2   
+  - (North America) South Central US
+  - (North America) West US 2  
+  - (South America) Brazil South
 - It is in preview in the following region: Japan East.
 - For zone redundant availability, choosing a [maintenance window](maintenance-window.md) other than the default is currently available in [select regions](maintenance-window.md#azure-region-support).  
 - Zone-redundant configuration is only available in SQL Database when standard-series (Gen5) hardware is selected. 

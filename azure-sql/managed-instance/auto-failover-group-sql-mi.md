@@ -96,6 +96,10 @@ For more information about creating the secondary SQL Managed Instance in the sa
 
 Deploy both managed instances to [paired regions](/azure/availability-zones/cross-region-replication-azure) for performance reasons. SQL Managed Instance failover groups in paired regions have better performance compared to unpaired regions.
 
+Azure SQL Managed Instance follows a safe deployment practice where Azure paired regions are guaranteed to be not deployed to at the same time. However, it is not possible to predict which region will be upgraded first, so the order of deployment is not guaranteed. Sometimes, your primary instance will be upgraded first, and sometimes it would be secondary.
+
+In situations where your Azure SQL managed instance has [auto-failover groups](../managed-instance/auto-failover-group-sql-mi.md), and the groups are not aligned with the [Azure region pairing](/azure/reliability/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies), you should different maintenance window schedules for your primary and secondary database. For example, you can select **Weekday** maintenance window for your geo-secondary database and **Weekend** maintenance window for your geo-primary database.
+
 ## <a id="enabling-replication-traffic-between-two-instances"></a> Enable and optimize geo-replication traffic flow between the instances
 
 Connectivity between the virtual network subnets hosting primary and secondary instance must be established and maintained for uninterrupted geo-replication traffic flow. There are multiple ways to provide connectivity between the instances that you can choose among based on your network topology and policies:

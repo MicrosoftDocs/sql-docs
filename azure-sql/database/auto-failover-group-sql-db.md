@@ -30,10 +30,11 @@ To get started, review [Configure auto-failover group](auto-failover-group-confi
 
 ## Overview
 
-The auto-failover groups feature allows you to manage the replication and failover of a group of databases or all user databases in a logical server to another Azure region. It is a declarative abstraction on top of the [active geo-replication](../database/active-geo-replication-overview.md) feature, designed to simplify deployment and management of geo-replicated databases at scale.
+The auto-failover groups feature allows you to manage the replication and failover of databases to another Azure region. You can include of a group of databases or all user databases in a logical server to be replicated to another logical server. It is a declarative abstraction on top of the [active geo-replication](../database/active-geo-replication-overview.md) feature, designed to simplify deployment and management of geo-replicated databases at scale.
 
 [!INCLUDE [auto-failover-groups-overview](../includes/auto-failover-group-overview.md)]
 
+For more information, see [Azure SQL Database high availability](high-availability-sla.md).
 
 ## <a name="terminology-and-capabilities"></a> Terminology and capabilities
 
@@ -113,7 +114,7 @@ In situations where your database is enabled for [geo-replication](active-geo-re
 When adding databases or elastic pools to a failover group, there is an initial seeding phase before data replication starts. The initial seeding phase is the longest and most expensive operation. Once initial seeding completes, data is synchronized, and then only subsequent data changes are replicated. The time it takes for the initial seeding to complete depends on the size of your data, number of replicated databases, the load on primary databases, and the speed of the link between the primary and secondary. Under normal circumstances, possible seeding speed is up to 500 GB an hour for SQL Database. Seeding is performed for all databases in parallel.
 
 
-## <a name="using-one-or-several-failover-groups-to-manage-failover-of-multiple-databases"></a> Use multiple failover groups to failover multiple databases
+## <a name="using-one-or-several-failover-groups-to-manage-failover-of-multiple-databases"></a> Use multiple failover groups to fail over multiple databases
 
 One or many failover groups can be created between two servers in different regions (primary and secondary servers). Each group can include one or several databases that are recovered as a unit in case all or some primary databases become unavailable due to an outage in the primary region. Creating a failover group creates geo-secondary databases with the same service objective as the primary. If you add an existing geo-replication relationship to a failover group, make sure the geo-secondary is configured with the same service tier and compute size as the primary.
   
@@ -142,7 +143,7 @@ If an outage occurs in the primary region, recent transactions may not be able t
 
 ## Failover groups and network security
 
-For some applications the security rules require that the network access to the data tier is restricted to a specific component or components such as a VM, web service, etc. This requirement presents some challenges for business continuity design and the use of failover groups. Consider the following options when implementing such restricted access.
+For some applications, the security rules require that the network access to the data tier is restricted to a specific component or components such as a VM, web service, etc. This requirement presents some challenges for business continuity design and the use of failover groups. Consider the following options when implementing such restricted access.
 
 ### <a name="using-failover-groups-and-virtual-network-rules"></a> Use failover groups and virtual network service endpoints
 
@@ -169,7 +170,7 @@ If your business continuity plan requires failover using groups with automatic f
 
 For more information on how to configure outbound access and what IP to use in the firewall rules, see [Load balancer outbound connections](/azure/load-balancer/load-balancer-outbound-connections).
 
-The above configuration will ensure that an automatic geo-failover will not block connections from the front-end components and assumes that the application can tolerate the longer latency between the front end and the data tier.
+The above configuration ensures that an automatic geo-failover will not block connections from the front-end components and assumes that the application can tolerate the longer latency between the front end and the data tier.
 
 > [!IMPORTANT]
 > To guarantee business continuity during regional outages you must ensure geographic redundancy for both front-end components and databases.
@@ -199,7 +200,7 @@ Due to the high latency of wide area networks, geo-replication uses an asynchron
 
 ## <a name="failback"></a> Failback
 
-When Auto-Failover groups is configured with automatic failover policy, then failover to geo secondary server will be initiated during a disaster scenario as per the defined grace period. Failback to the old primary will need to be initiated manually. 
+When Auto-Failover groups are configured with automatic failover policy, then failover to geo secondary server will be initiated during a disaster scenario as per the defined grace period. Failback to the old primary will need to be initiated manually. 
 
 ## Permissions
 

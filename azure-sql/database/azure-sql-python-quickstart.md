@@ -242,7 +242,41 @@ The app is ready to be tested locally. Make sure you're signed into Visual Studi
 
 The app is ready to be deployed to Azure. Follow the official documentation on how to deploy a Python app to Azure App Service using Visual Studio Code.
 
-*When deployed, set AZURE_SQL_CONNECTIONSTRING to use "Authentication=ActiveDirectoryMsi" - requires users to set up managed identity".*
+1. Make sure the app is stopped and builds successfully locally.
+
+1. Create a *start.sh* file so that gunicorn in Azure App Service can run uvicorn.
+
+    ```bash
+    gunicorn -w 4 -k uvicorn.workers.UvicornWorker app:app
+    ```
+
+1. Use the [az webapp up](/cli/azure/webapp#az-webapp-up) (Add the option `-dryrun` first to see what will be done.)
+
+    ```azurecli
+    az webapp up \
+    --resource-group <resource-group-name> \
+    --name <web-app-name>         
+    ```
+
+1. use the [az webapp config set](/cli/azure/webapp/config#az-webapp-config-set) command to configure App Service to use the *start.sh* file.
+
+    ```azurecli
+    az webapp config set \
+    --resource-group <resource-group-name> \
+    --name <web-app-name> \
+    --startup-file start.sh
+    ```
+
+1. Use the [az webapp config appsettings set](/cli/azure/webapp/config/appsettings#az-webapp-config-appsettings-set) command to add an app setting for the connection string.
+
+    ```azurecli
+    az webapp config appsettings set \
+    --resource-group <resource-group-name> \
+    --name <web-app-name> \
+    --settings AZURE_SQL_CONNECTIONSTRING="<connection-string>"
+    ```
+
+Go to the web site `https://<web-app-name>.azurewebsites.net/docs` to see the Swagger interface.
 
 ## Connect App Service to Azure SQL Database
 

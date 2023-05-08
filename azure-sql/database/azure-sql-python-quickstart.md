@@ -102,7 +102,7 @@ For details and specific instructions for installing the `pyodbc` driver on all 
 
 ## Configure the connection string
 
-*Todo: rewrite this to distinguish between local and deployed. For local, use user/pass or interactive. For deployed, use managed identity. Mention that you still set one AZURE_SQL_CONNECTIONSTRING as environment variable. In local environment, it has one form and deployed another form.**
+*Todo: rewrite this to distinguish between local and deployed. For local, use user/pass or interactive sign in. For deployed, use managed identity. Mention that you still set one AZURE_SQL_CONNECTIONSTRING as environment variable in all cases. In local environment, it has one form and deployed another form wth managed identity. Managed identity can be used locally if using Azure Arc, which is not shown here.**
 
 For local development, you can use the `pyodbc` driver in several ways. The recommended approach is passwordless. In the passwordless mode, `pyodbc` driver uses the class `DefaultAzureCredential` class to implement passwordless connections to Azure SQL Database. The `DefaultAzureCredential` is part of the Azure Identity library on which the SQL client library depends. For more information, see [DefaultAzureCredential overview](/python/api/overview/azure/Identity-readme#defaultazurecredential).
 

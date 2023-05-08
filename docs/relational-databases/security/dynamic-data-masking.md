@@ -58,7 +58,7 @@ The **CONTROL** permission on the database includes both the **ALTER ANY MASK** 
 
 - Creating a mask on a column doesn't prevent updates to that column. So although users receive masked data when querying the masked column, the same users can update the data if they have write permissions. A proper access control policy should still be used to limit update permissions.
 
-- Using `SELECT INTO` or `INSERT INTO` to copy data from a masked column into another table results in masked data in the target table.
+- Using `SELECT INTO` or `INSERT INTO` to copy data from a masked column into another table results in masked data in the target table (assuming it's exported by a user without **UNMASK** privileges).
 
 - Dynamic Data Masking is applied when running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export. A database containing masked columns results in an exported data file with masked data (assuming it's exported by a user without **UNMASK** privileges), and the imported database will contain statically masked data.
 
@@ -75,6 +75,8 @@ WHERE is_masked = 1;
 ```
 
 ## Limitations and restrictions
+
+Users with CONTROL SERVER or CONTROL at the database level could view masked data in its original form. This includes admin users or roles such as sysadmin, serveradmin, db_owner etc.
 
 A masking rule can't be defined for the following column types:
 
@@ -120,7 +122,7 @@ It's important to properly manage the permissions on the database, and to always
 
 ## <a id="granular"></a> Granular permissions introduced in SQL Server 2022
 
-Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], you can prevent unauthorized access to sensitive data and gain control by masking it to an unauthorized user at different levels of the database. You can grant or revoke **UNMASK** permission at the database-level, schema-level, table-level or at the column-level to a user or database role. This enhancement provides a more granular way to control and limit unauthorized access to data stored in the database and improve data security management.
+Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], you can prevent unauthorized access to sensitive data and gain control by masking it to an unauthorized user at different levels of the database. You can grant or revoke **UNMASK** permission at the database-level, schema-level, table-level or at the column-level to a user, database role, Azure AD identity or Azure AD group. This enhancement provides a more granular way to control and limit unauthorized access to data stored in the database and improve data security management.
 
 ## Examples
 

@@ -232,6 +232,23 @@ az sql server firewall-rule create --resource-group myResourceGroup --server $se
 >
 > For a CLI example in the context of a quickstart, see [Create DB - Azure CLI](az-cli-script-samples-content-guide.md) and [Create a single database and configure a server-level IP firewall rule using the Azure CLI](scripts/create-and-configure-database-cli.md).
 
+For Azure Synapse Analytics, pleaes refer to following example: 
+
+| Cmdlet | Level | Description |
+| --- | --- | --- |
+|[az synapse workspace firewall-rule create](/cli/azure/synapse/workspace/firewall-rule#az-synapse-workspace-firewall-rule-create)|Server|Create a firewall rule|
+|[az synapse workspace firewall-rule delete](/cli/azure/synapse/workspace/firewall-rule#az-synapse-workspace-firewall-rule-delete)|Server|Delete a firewall rule|
+|[az synapse workspace firewall-rule list](/cli/azure/synapse/workspace/firewall-rule#az-synapse-workspace-firewall-rule-list)|Server|List all firewall rules|
+|[az synapse workspace firewall-rule show](/cli/azure/synapse/workspace/firewall-rule#az-synapse-workspace-firewall-rule-show)|Server|Get a firewall rule|
+|[az synapse workspace firewall-rule update](/cli/azure/synapse/workspace/firewall-rule#az-synapse-workspace-firewall-rule-update)|Server|Update a firewall rule|
+|[az synapse workspace firewall-rule wait](/cli/azure/synapse/workspace/firewall-rule##az-synapse-workspace-firewall-rule-wait)|Server|Place the CLI in a waiting state until a condition of a firewall rule is met|
+
+The following example uses CLI to set a server-level IP firewall rule:
+
+```azurecli-interactive
+az synapse workspace firewall-rule create --name AllowAllWindowsAzureIps --workspace-name $workspacename --resource-group $resourcegroupname --start-ip-address 0.0.0.0 --end-ip-address 0.0.0.0
+```
+
 ### Use a REST API to manage server-level IP firewall rules
 
 | API | Level | Description |

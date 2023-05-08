@@ -96,30 +96,15 @@ For details and specific instructions for installing the `pyodbc` driver on all 
 
 2. Install the requirments.
 
-    ```python
+    ```console
     pip install -r requirements.txt`
     ```
 
 ## Configure the connection string
 
-*Todo: rewrite this to distinguish between local and deployed. For local, use user/pass or interactive sign in. For deployed, use managed identity. Mention that you still set one AZURE_SQL_CONNECTIONSTRING as environment variable in all cases. In local environment, it has one form and deployed another form wth managed identity. Managed identity can be used locally if using Azure Arc, which is not shown here.**
-
-For local development, you can use the `pyodbc` driver in several ways. The recommended approach is passwordless. In the passwordless mode, `pyodbc` driver uses the class `DefaultAzureCredential` class to implement passwordless connections to Azure SQL Database. The `DefaultAzureCredential` is part of the Azure Identity library on which the SQL client library depends. For more information, see [DefaultAzureCredential overview](/python/api/overview/azure/Identity-readme#defaultazurecredential).
+*Todo: Mention Azure Arc as local option. In that case, use managed identity approach and modify code.*
 
 For local development with passwordless connections to Azure SQL Database, add the following `AZURE_SQL_CONNECTIONSTRING` environment variable. Replace the `<database-server-name>` and `<database-name>` placeholders with your own values. Example environment variables are shown for the Bash shell.
-
-## [Passwordless (Recommended)](#tab/passwordless)
-
-The passwordless connection string sets a configuration value of `Authentication="ActiveDirectoryDefault"`, which instructs the `pyodbc` driver to connect to Azure SQL Database using a class called [`DefaultAzureCredential`](/python/azure/sdk/authentication#defaultazurecredential). `DefaultAzureCredential` enables passwordless connections to Azure services and is provided by the Azure Identity library on which the SQL client library depends. `DefaultAzureCredential` supports multiple authentication methods and determines which to use at runtime for different environments.
-
-```Bash
-export AZURE_SQL_CONNECTIONSTRING='Driver={ODBC Driver 18 for SQL Server};Server=tcp:<database-server-name>.database.windows.net,1433;Initial Catalog=<database-name>;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;Authentication=ActiveDirectoryDefault;'
-```
-
-When the app runs locally, `DefaultAzureCredential` authenticates via the user you're signed into Visual Studio with, or other local tools like the Azure CLI. Once the app deploys to Azure, the same code discovers and applies the managed identity that is associated with the hosted app, which you configure later. The [Azure Identity library overview](/python/api/overview/azure/Identity-readme#defaultazurecredential) explains the order and locations in which `DefaultAzureCredential` looks for credentials.
-
-> [!NOTE]
-> Passwordless connection strings are safe to commit to source control, since they don't contain secrets such as usernames, passwords, or access keys.
 
 ## [Interactive Authentication](#tab/sql-inter)
 
@@ -240,7 +225,7 @@ The app is ready to be tested locally. Make sure you're signed into Visual Studi
 
 1. Run the `app.py` file in Visual Studio Code.
 
-    ```python
+    ```console
     uvicorn app:app --reload
     ```
 
@@ -258,7 +243,7 @@ The app is ready to be deployed to Azure.
 
 1. Create a *start.sh* file so that gunicorn in Azure App Service can run uvicorn. The *start.sh* should have one line:
 
-    ```bash
+    ```console
     gunicorn -w 4 -k uvicorn.workers.UvicornWorker app:app
     ```
 
@@ -279,6 +264,10 @@ The app is ready to be deployed to Azure.
     --startup-file start.sh
     ```
 
+## Connect the App Service to Azure SQL Database
+
+One of the prerequisites to this quickstart is that you already have an Azure SQL Database. To allow the App Service instance to access the Azure SQL Database resource, you need to enable Azure AD authentication and create a user and role that can be used for passwordless access.
+
 1. Use the [az webapp config appsettings set](/cli/azure/webapp/config/appsettings#az-webapp-config-appsettings-set) command to add an app setting for the connection string.
 
     ```azurecli
@@ -294,13 +283,26 @@ The app is ready to be deployed to Azure.
     Driver={ODBC Driver 18 for SQL Server};SERVER=<web-app-name>.database.windows.net;DATABASE=<database-name>
     ```
 
-## Connect App Service to Azure SQL Database
+    The passwordless connection string does not contain a user name or password. Instead, when the app runs in Azure, the code uses `DefaultAzureCredential` from the [Azure Identity library]((/python/api/overview/azure/Identity-readme#defaultazurecredential)) to get a token to use with `pyodbc`.
 
-To allow the App Service instance to access the Azure SQL Database resource, you need to configure managed identity for the SQL Database and create a container users
+1. Set system-assigned managed identity for the App Service.
 
-1. Ensure that Azure AD authentication is enabled on the database server.
+    ```azurecli
+    TBD
+    ```
 
-1. Add a contained user.
+1. Confirm that Azure AD authentication is enabled on the database server. For information see, [Configure and manage Azure AD authentication with Azure SQL](/azure/azure-sql/database/authentication-aad-configure?view=azuresql).
+
+1. Add a contained user to the Azure SQL Database.You run two commands to create a user and role.
+
+    ```sql
+    CREATE USER [<web-app-name>] FROM EXTERNAL PROVIDER
+    ALTER ROLE db_datareader ADD MEMBER [<web-app-name>]
+    ```
+
+    For more information, see [Contained Database Users - Making Your Database Portable](/sql/relational-databases/security/contained-database-users-making-your-database-portable). For an example that shows the same principle but applied to Azure VM, see [Tutorial: Use a Windows VM system-assigned managed identity to access Azure SQL](/azure/active-directory/managed-identities-azure-resources/tutorial-windows-vm-access-sql).
+
+    If you disable and then renable the App Service, system-assigned managed identity, drop the user and role and recreate them. Run `DROP USER <web-app-name>` and rerun the `CREATE` and `ALTER` commands.
 
 ## Test the deployed application
 
@@ -310,6 +312,6 @@ Browse to the URL of the app to test that the connection to Azure SQL Database i
 https://<web-app-name>.azurewebsites.net`
 ```
 
-Append */docs* to see the Swagger interface. Append the */all* path to the end of the URL to see a list of entries in the Person table.
+Append */all* path to the end of the URL to see a list of entries in the Person table. Append */person* to the URL to add a Person.  
 
 Congratulations! Your application is now connected to Azure SQL Database in both local and hosted environments.

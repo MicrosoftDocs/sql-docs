@@ -378,7 +378,7 @@ The **mssql** package implements the connection to Azure SQL Database by providi
 ## [SQL authentication](#tab/sql-auth)
 
 
-1. In Visual Studio Code, create a **config.js** file and add the following mssql configuration code to authenticate to Azure SQL.
+1. In Visual Studio Code, create a **config.js** file and add the following mssql configuration code to authenticate to Azure SQL Database.
     
     ```javascript
     import * as dotenv from 'dotenv';

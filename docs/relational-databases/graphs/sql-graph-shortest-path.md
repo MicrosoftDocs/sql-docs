@@ -223,7 +223,7 @@ AND Restaurant.name = 'Ginger and Spice'
 ```
 
 ### G.  Find the shortest path from a given node to all other nodes in the graph, excluding "loops".
-The following  example finds all the people that Jacob is connected to in the graph and the shortest path starting from Alice to all those people. The example explicitly checks for "loops" where the start and the end node of the path happen to be the same.
+The following  example finds all the people that Alice is connected to in the graph and the shortest path starting from Alice to all those people. The example explicitly checks for "loops" where the start and the end node of the path happen to be the same.
 
 ```sql
 SELECT PersonName, Friends

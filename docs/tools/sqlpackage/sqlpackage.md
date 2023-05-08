@@ -186,9 +186,9 @@ SqlPackage contains Internet-enabled features that can collect and send anonymou
 
 SqlPackage may collect standard computer, use, and performance information that may be transmitted to Microsoft and analyzed to improve the quality, security, and reliability of SqlPackage.
 
-SqlPackage doesn't collect user specific or personal information, but SqlPackage gathers data that helps approximate a single user for diagnostic purposes (based on a hash of the network adapter NIC).
+SqlPackage doesn't collect user specific or personal information. To help approximate a single user for diagnostic purposes, SqlPackage will generate a random GUID for each computer it runs on and use that value for all events it sends.
 
-For details, see the [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement), and [SQL Server Privacy supplement](../../sql-server/sql-server-privacy.md).
+For details, see the [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkID=824704), and [SQL Server Privacy supplement](../../sql-server/sql-server-privacy.md).
 
 ### Disable telemetry reporting
 

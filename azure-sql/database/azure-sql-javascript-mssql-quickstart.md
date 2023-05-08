@@ -555,7 +555,7 @@ The app is ready to be tested locally. Make sure you're signed in to the Azure C
 
 The app is ready to be deployed to Azure. Visual Studio Code can create an Azure App Service and deploy your application in a single workflow.
 
-1. Make sure the app is stopped and builds successfully.
+1. Make sure the app is stopped.
 1. Sign in to Azure, if you haven't already, by selecting the **Azure: Sign In to Azure Cloud** command in the Command Palette (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>)
 1. In Visual Studio Code's **Azure Explorer** window, right-click on the **App Services** node and select **Create New Web App (Advanced)**.
 1. Use the following table to create the App Service:
@@ -602,6 +602,8 @@ The person you created locally should display in the browser. Congratulations! Y
 
 > [!TIP]
 > If you receive a 500 Internal Server error while testing, it may be due to your database networking configurations. Verify that your logical server is configured with the settings outlined in the [Configure the database](/azure/azure-sql/database/azure-sql-dotnet-quickstart#configure-the-database) section.
+
+[!INCLUDE [passwordless-resource-cleanup](../includes/passwordless-resource-cleanup.md)]
 
 ## Sample code
 

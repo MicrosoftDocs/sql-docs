@@ -8,6 +8,8 @@ ms.date: 10/25/2022
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.alwaysencryptedwizard.encryption.f1"
 helpviewer_keywords:
   - "encryption [SQL Server], Always Encrypted"
   - "Always Encrypted"
@@ -16,6 +18,7 @@ helpviewer_keywords:
   - "SQL13.SWB.COLUMNMASTERKEY.CLEANUP.F1"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # Always Encrypted
 
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sql-asdb-asdbmi.md)]

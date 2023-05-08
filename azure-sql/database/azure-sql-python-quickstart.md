@@ -289,7 +289,7 @@ The app is ready to be deployed to Azure.
 
 One of the prerequisites to this quickstart is that you already have an Azure SQL Database. To allow the App Service instance to access the Azure SQL Database resource, you need to enable Azure AD authentication and create a user and role that can be used for passwordless access.
 
-1. Confirm that Azure AD authentication is enabled on the database server. For information see, [Configure and manage Azure AD authentication with Azure SQL](/azure/azure-sql/database/authentication-aad-configure).
+1. Confirm that Azure AD authentication is enabled on the database server. For more information, see [Configure and manage Azure AD authentication with Azure SQL](/azure/azure-sql/database/authentication-aad-configure).
 
 1. Use the [az webapp config appsettings set](/cli/azure/webapp/config/appsettings#az-webapp-config-appsettings-set) command to add an app setting for the connection string.
 
@@ -300,15 +300,17 @@ One of the prerequisites to this quickstart is that you already have an Azure SQ
     --settings AZURE_SQL_CONNECTIONSTRING="<connection-string>"
     ```
 
-    For the deployed app, the connection string should resemble the connection string. Fill in the `<web-app-name>` and `<database-name>`.
+    For the deployed app, the connection string should resemble:
 
     ```console
     Driver={ODBC Driver 18 for SQL Server};SERVER=<web-app-name>.database.windows.net;DATABASE=<database-name>
     ```
 
+    Fill in the `<web-app-name>` and `<database-name>` with your values.
+
     The passwordless connection string doesn't contain a user name or password. Instead, when the app runs in Azure, the code uses `DefaultAzureCredential` from the [Azure Identity library](/python/api/overview/azure/Identity-readme) to get a token to use with `pyodbc`.
 
-1. Add a contained user to the Azure SQL Database. You run two commands to create a user and role.
+1. Add a contained user to the Azure SQL Database with two sQL commands to create a user and role.
 
     ```sql
     CREATE USER [<web-app-name>] FROM EXTERNAL PROVIDER

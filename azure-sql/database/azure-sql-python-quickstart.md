@@ -104,7 +104,9 @@ For details and specific instructions for installing the `pyodbc` driver on all 
 
 *Todo: Mention Azure Arc as local option. In that case, use managed identity approach and modify code.*
 
-For local development with passwordless connections to Azure SQL Database, add the following `AZURE_SQL_CONNECTIONSTRING` environment variable. Replace the `<database-server-name>` and `<database-name>` placeholders with your own values. Example environment variables are shown for the Bash shell.
+For local development and connecting to Azure SQL Database, add the following `AZURE_SQL_CONNECTIONSTRING` environment variable. Replace the `<database-server-name>` and `<database-name>` placeholders with your own values. Example environment variables are shown for the Bash shell.
+
+Interactive authentication provides a passwordless option when you are running locally.
 
 ## [Interactive Authentication](#tab/sql-inter)
 
@@ -134,6 +136,10 @@ You can get the details to create your connection string from the Azure portal:
 1. Go to the Azure SQL Server, select the **SQL databases** page to find your database name, and select the database.
 
 2. On the database, go to the **Connection strings** page to get connection string information. Look under the **ODBC** tab.
+
+> [!NOTE]
+> If you've installed [Azure Arc](/azure/azure-arc/overview) and associated it with your Azure subscription, you can also use the managed identity approach shown for the app deployed to App Service.
+
 
 ## Add code to connect to Azure SQL Database
 

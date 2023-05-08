@@ -6,7 +6,7 @@ When you are finished working with the Azure SQL Database, delete the resource t
 
 1) In the Azure portal search bar, search for *Azure SQL* and select the matching result.
 
-1) Locate and select your database on the list of Azure SQL Databases.
+1) Locate and select your database in the list of databases.
 
 1) On the **Overview** page of your Azure SQL Database, select **Delete**.
 

@@ -168,19 +168,7 @@ app = FastAPI()
 def root():
     print("Root of Person API")
     try:
-        if not 'WEBSITE_HOSTNAME' in os.environ:
-            # Local development
-            print("Local development connection string.")
-            conn = pyodbc.connect(connection_string)
-        else:
-            # Deployed to Azure App Service
-            print("Azure App Service connection string.")
-            credential = identity.DefaultAzureCredential()
-            token_bytes = credential.get_token("https://database.windows.net/.default").token.encode("UTF-16-LE")
-            token_struct = struct.pack(f'<I{len(token_bytes)}s', len(token_bytes), token_bytes)
-            SQL_COPT_SS_ACCESS_TOKEN = 1256  # This connection option is defined by microsoft in msodbcsql.h
-            conn = pyodbc.connect(connection_string, attrs_before={SQL_COPT_SS_ACCESS_TOKEN: token_struct})
-
+        conn = get_connection_string()
         cursor = conn.cursor()
 
         # Table should be created ahead of time in production app.
@@ -201,7 +189,7 @@ def root():
 @app.get("/all")
 def get_persons():
     rows = []
-    with pyodbc.connect(connection_string) as conn:
+    with get_conn() as conn:
         cursor = conn.cursor()
         cursor.execute("SELECT * FROM Persons")
 
@@ -210,13 +198,36 @@ def get_persons():
             rows.append(f"{row.ID}, {row.FirstName}, {row.LastName}")
     return rows
 
+@app.get("/person/{person_id}")
+def get_person(person_id: int):
+    with get_conn() as conn:
+        cursor = conn.cursor()
+        cursor.execute("SELECT * FROM Persons WHERE ID = ?", person_id)
+
+        row = cursor.fetchone()
+        return f"{row.ID}, {row.FirstName}, {row.LastName}"
+
 @app.post("/person")
 def create_person(item: Person):
-    with pyodbc.connect(connection_string) as conn:
+    with get_conn() as conn:
         cursor = conn.cursor()
         cursor.execute(f"INSERT INTO Persons (FirstName, LastName) VALUES (?, ?)", item.first_name, item.last_name)
         conn.commit()
+
     return item
+
+def get_conn():
+    if not 'WEBSITE_HOSTNAME' in os.environ:
+        # Local development
+        conn = pyodbc.connect(connection_string)
+    else:
+        # Deployed to Azure App Service
+        credential = identity.DefaultAzureCredential()
+        token_bytes = credential.get_token("https://database.windows.net/.default").token.encode("UTF-16-LE")
+        token_struct = struct.pack(f'<I{len(token_bytes)}s', len(token_bytes), token_bytes)
+        SQL_COPT_SS_ACCESS_TOKEN = 1256  # This connection option is defined by microsoft in msodbcsql.h
+        conn = pyodbc.connect(connection_string, attrs_before={SQL_COPT_SS_ACCESS_TOKEN: token_struct})
+    return conn
 ```
 
 ## Run and test the app locally

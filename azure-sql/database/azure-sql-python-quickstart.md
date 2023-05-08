@@ -102,8 +102,6 @@ For details and specific instructions for installing the `pyodbc` driver on all 
 
 ## Configure the local connection string
 
-*Todo: Mention Azure Arc as local option. In that case, use managed identity approach and modify code.*
-
 For local development and connecting to Azure SQL Database, add the following `AZURE_SQL_CONNECTIONSTRING` environment variable. Replace the `<database-server-name>` and `<database-name>` placeholders with your own values. Example environment variables are shown for the Bash shell.
 
 Interactive authentication provides a passwordless option when you're running locally.

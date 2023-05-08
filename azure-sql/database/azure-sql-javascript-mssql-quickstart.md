@@ -418,7 +418,8 @@ The **mssql** package implements the connection to Azure SQL Database by providi
 
 ---
 
-1. Create a **settings.json** file in the `.vscode` folder and add the following to ignore environment variables and dependencies during the zip deployment.
+1. Create a `.vscode` folder and create a **settings.json** file in the folder.
+1. Add the following to ignore environment variables and dependencies during the zip deployment.
 
     ```json
     {
@@ -573,14 +574,14 @@ The app is ready to be deployed to Azure. Visual Studio Code can create an Azure
     |--|--|
     |Enter a globally unique name for the new web app.|Enter a prompt such as `azure-sql-passwordless`. Post-pend a unique string such as `123`.|
     |Select a resource group for new resources.| Select **+Create a new resource group** then select the default name.|
-    |Select a runtime stack.|Select an LTS version of the stack.|
+    |Select a runtime stack.|Select an LTS version of the Node.js stack.|
     |Select an OS.|Select **Linux**.|
     |Select a location for new resources.|Select a location close to you.|
     |Select a Linux App Service plan.|Select **Create new App Service plan.** then select the default name.|
     |Select a pricing tier.|Select **Free (F1)**.|
     |Select an Application Insights resource for your app.|Select **Skip for now**.|
 
-1. Wait until the **Azure: Activity Log** reports the resource creation completed successfully.
+1. Wait until the notification that your app was created before continuing.
 1. In the **Azure Explorer**, expand the **App Services** node and right-click your new app. 
 1. Select **Deploy to Web App**.
 

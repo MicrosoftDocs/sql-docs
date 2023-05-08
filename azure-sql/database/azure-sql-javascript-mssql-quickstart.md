@@ -4,7 +4,7 @@ description: Learn how to connect to a database in Azure SQL Database and query 
 author: diberry
 ms.author: diberry
 ms.custom: passwordless-js
-ms.date: 05/04/2023
+ms.date: 05/08/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: quickstart
@@ -77,6 +77,7 @@ To create the Express.js OpenAPI application, you'll create several files:
 |openApiSchema.yml|OpenAPI 3.0 schema file defining Person API.|
 |config.js|Configuration file to read environment variables and construct appropriate mssql connection object.|
 |database.js|Database class to handle Azure SQL CRUD operations using the **mssql** npm package.|
+|./vscode/settings.json|Ignore files by glob pattern during deployment.|
 
 1. Create an **index.js** file and add the following code:
 
@@ -416,6 +417,13 @@ The **mssql** package implements the connection to Azure SQL Database by providi
 
 ---
 
+1. Create a **settings.json** file in the `.vscode` folder and add the following to ignore environment variables and dependencies during the zip deployment.
+
+    ```json
+    {
+        "appService.zipIgnorePattern": ["./.env*","node_modules{,/**}"]
+    }
+    ```
 
 ## Add the code to connect to Azure SQL Database
 

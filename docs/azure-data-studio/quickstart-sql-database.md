@@ -36,7 +36,7 @@ Use Azure Data Studio to establish a connection to your Azure SQL Database serve
    
    ![Screenshot showing the Welcome Azure Delta Studio dialog box with the Next connection option called out.](media/quickstart-sql-database/new-connection-icon.png)
 
-2. This article uses SQL sign-in, but also supports Windows authentication. Fill in the following fields using the server name, user name, and password for your Azure SQL server:
+2. This article uses SQL sign-in, but for Azure SQL Database AAD Universal MFA authentication is also supported. Fill in the following fields using the server name, user name, and password for your Azure SQL server:
 
    | Setting       | Suggested value | Description |
    | ------------ | ------------------ | ------------------------------------------------- | 

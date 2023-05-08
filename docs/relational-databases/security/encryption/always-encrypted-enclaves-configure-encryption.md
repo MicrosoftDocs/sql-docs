@@ -8,7 +8,13 @@ ms.date: 02/15/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.alwaysencryptedwizard.f1"
+helpviewer_keywords:
+  - "Wizard, Always Encrypted"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # Configure column encryption in-place using Always Encrypted with secure enclaves
 
 [!INCLUDE [sqlserver2019-windows-only-asdb](../../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]

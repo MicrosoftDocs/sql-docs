@@ -100,7 +100,7 @@ For details and specific instructions for installing the `pyodbc` driver on all 
     pip install -r requirements.txt`
     ```
 
-## Configure the connection string
+## Configure the local connection string
 
 *Todo: Mention Azure Arc as local option. In that case, use managed identity approach and modify code.*
 

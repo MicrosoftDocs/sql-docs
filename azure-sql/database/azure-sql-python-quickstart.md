@@ -129,7 +129,7 @@ In Windows, Azure AD Interactive Authentication can use Azure Active Directory M
 export AZURE_SQL_CONNECTIONSTRING='Driver={ODBC Driver 18 for SQL Server};Server=tcp:<database-server-name>.database.windows.net,1433;Database=<database-name>;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;Authentication=ActiveDirectoryInteractive'
 ```
 
-For more information, see [Using Azure Active Directory with the ODBC Driver](/sql/connect/odbc/using-azure-active-directory).
+For more information, see [Using Azure Active Directory with the ODBC Driver](/sql/connect/odbc/using-azure-active-directory). If you use this option, look for the window that prompts you for credentials.
 
 ## [SQL Authentication](#tab/sql-auth)
 
@@ -164,7 +164,8 @@ Add the sample code to the `app.py` file. This code creates an API that:
 
 ```python
 import os
-import pyodbc
+import pyodbc, struct
+from azure import identity
 
 from typing import Union
 from fastapi import FastAPI
@@ -175,7 +176,6 @@ class Person(BaseModel):
     last_name: Union[str, None] = None
  
 connection_string = os.environ["AZURE_SQL_CONNECTIONSTRING"]
-print(connection_string)
 
 app = FastAPI()
 
@@ -183,10 +183,22 @@ app = FastAPI()
 def root():
     print("Root of Person API")
     try:
-        # Table would be created ahead of time in production
-        conn = pyodbc.connect(connection_string)
+        if not 'WEBSITE_HOSTNAME' in os.environ:
+            # Local development
+            print("Local development connection string.")
+            conn = pyodbc.connect(connection_string)
+        else:
+            # Deployed to Azure App Service
+            print("Azure App Service connection string.")
+            credential = identity.DefaultAzureCredential()
+            token_bytes = credential.get_token("https://database.windows.net/.default").token.encode("UTF-16-LE")
+            token_struct = struct.pack(f'<I{len(token_bytes)}s', len(token_bytes), token_bytes)
+            SQL_COPT_SS_ACCESS_TOKEN = 1256  # This connection option is defined by microsoft in msodbcsql.h
+            conn = pyodbc.connect(connection_string, attrs_before={SQL_COPT_SS_ACCESS_TOKEN: token_struct})
+
         cursor = conn.cursor()
 
+        # Table should be created ahead of time in production app.
         cursor.execute("""
             CREATE TABLE Persons (
                 ID int NOT NULL PRIMARY KEY IDENTITY,
@@ -240,17 +252,17 @@ The app is ready to be tested locally. Make sure you're signed into Visual Studi
 
 ## Deploy to Azure App Service
 
-The app is ready to be deployed to Azure. Follow the official documentation on how to deploy a Python app to Azure App Service using Visual Studio Code.
+The app is ready to be deployed to Azure.
 
 1. Make sure the app is stopped and builds successfully locally.
 
-1. Create a *start.sh* file so that gunicorn in Azure App Service can run uvicorn.
+1. Create a *start.sh* file so that gunicorn in Azure App Service can run uvicorn. The *start.sh* should have one line:
 
     ```bash
     gunicorn -w 4 -k uvicorn.workers.UvicornWorker app:app
     ```
 
-1. Use the [az webapp up](/cli/azure/webapp#az-webapp-up) (Add the option `-dryrun` first to see what will be done.)
+1. Use the [az webapp up](/cli/azure/webapp#az-webapp-up) (You can the  option `-dryrun` to see what will be done without creating the resource.)
 
     ```azurecli
     az webapp up \
@@ -276,18 +288,29 @@ The app is ready to be deployed to Azure. Follow the official documentation on h
     --settings AZURE_SQL_CONNECTIONSTRING="<connection-string>"
     ```
 
-Go to the web site `https://<web-app-name>.azurewebsites.net/docs` to see the Swagger interface.
+    For the deployed app, the connection string should ressemble the connection string. Fill in the `<web-app-name>` and `<database-name>`.
+
+    ```console
+    Driver={ODBC Driver 18 for SQL Server};SERVER=<web-app-name>.database.windows.net;DATABASE=<database-name>
+    ```
 
 ## Connect App Service to Azure SQL Database
 
-Follow the instructions in the original article to connect the App Service instance to Azure SQL Database using Service Connector or Azure portal.
+To allow the App Service instance to access the Azure SQL Database resource, you need to configure managed identity for the SQL Database and create a container users
 
-*Not finished.*
+1. Ensure that Azure AD authentication is enabled on the database server.
+
+1. Add a contained user.
 
 ## Test the deployed application
 
-Browse to the URL of the app to test that the connection to Azure SQL Database is working. You can locate the URL of your app on the App Service overview page. Append the `/person` path to the end of the URL to browse to the same endpoint you tested locally.
+Browse to the URL of the app to test that the connection to Azure SQL Database is working. You can locate the URL of your app on the App Service overview page.
 
-The person you created locally should display in the browser. Congratulations! Your application is now connected to Azure SQL Database in both local and hosted environments.
+```http
+https://<web-app-name>.azurewebsites.net`
+```
 
-*Not finished.*
+Append the */person* path to the end of the URL to browse to the same endpoint you tested locally. Append */docs* to see the Swagger interface.
+
+Congratulations! Your application is now connected to Azure SQL Database in both local and hosted environments.
+

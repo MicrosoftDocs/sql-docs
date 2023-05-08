@@ -81,7 +81,7 @@ Create a new Python project using Visual Studio Code.
 
 ## Install the pyodbc driver
 
-To connect to Azure SQL Database using Python, install the `pyodbc` driver. This package acts as a data provider for connecting to databases, executing commands, and retrieving results. In this quickstart, you also install `flask`, `uvicorn`, and `pydantic` packages to create and run a simple API.
+To connect to Azure SQL Database using Python, install the `pyodbc` driver. This package acts as a data provider for connecting to databases, executing commands, and retrieving results. In this quickstart, you also install `flask`, `uvicorn`, and `pydantic` packages to create and run an API.
 
 For details and specific instructions for installing the `pyodbc` driver on all operating systems, see [Configure development environment for pyodbc Python development](/sql/connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development).
 
@@ -94,7 +94,7 @@ For details and specific instructions for installing the `pyodbc` driver on all 
     install pydantic
     ```
 
-2. Install the requirments.
+2. Install the requirements.
 
     ```console
     pip install -r requirements.txt`
@@ -106,7 +106,7 @@ For details and specific instructions for installing the `pyodbc` driver on all 
 
 For local development and connecting to Azure SQL Database, add the following `AZURE_SQL_CONNECTIONSTRING` environment variable. Replace the `<database-server-name>` and `<database-name>` placeholders with your own values. Example environment variables are shown for the Bash shell.
 
-Interactive authentication provides a passwordless option when you are running locally.
+Interactive authentication provides a passwordless option when you're running locally.
 
 ## [Interactive Authentication](#tab/sql-inter)
 
@@ -144,7 +144,7 @@ You can get the details to create your connection string from the Azure portal:
 
 Add the sample code to the `app.py` file. This code creates an API that:
 
-* Retrieves a Azure SQL Database connection string from an environment variable.
+* Retrieves an Azure SQL Database connection string from an environment variable.
 
 * Creates a `Person` table in the database during startup (for testing scenarios only).
 
@@ -261,7 +261,7 @@ The app is ready to be deployed to Azure.
     gunicorn -w 4 -k uvicorn.workers.UvicornWorker app:app
     ```
 
-1. Use the [az webapp up](/cli/azure/webapp#az-webapp-up) to deploy the code to App Service. (You can the  option `-dryrun` to see what will be done without creating the resource.)
+1. Use the [az webapp up](/cli/azure/webapp#az-webapp-up) to deploy the code to App Service. (You can use the option `-dryrun` to see what the command does without creating the resource.)
 
     ```azurecli
     az webapp up \
@@ -278,7 +278,7 @@ The app is ready to be deployed to Azure.
     --startup-file start.sh
     ```
 
-1. Use the the [az webapp identity assign](/cli/azure/webapp/identity#az-webapp-identity-assign) command to enable system-assigned managed identity for the App Service.
+1. Use the [az webapp identity assign](/cli/azure/webapp/identity#az-webapp-identity-assign) command to enable system-assigned managed identity for the App Service.
 
     ```azurecli
     az webapp identity assign \
@@ -301,15 +301,15 @@ One of the prerequisites to this quickstart is that you already have an Azure SQ
     --settings AZURE_SQL_CONNECTIONSTRING="<connection-string>"
     ```
 
-    For the deployed app, the connection string should ressemble the connection string. Fill in the `<web-app-name>` and `<database-name>`.
+    For the deployed app, the connection string should resemble the connection string. Fill in the `<web-app-name>` and `<database-name>`.
 
     ```console
     Driver={ODBC Driver 18 for SQL Server};SERVER=<web-app-name>.database.windows.net;DATABASE=<database-name>
     ```
 
-    The passwordless connection string does not contain a user name or password. Instead, when the app runs in Azure, the code uses `DefaultAzureCredential` from the [Azure Identity library](/python/api/overview/azure/Identity-readme) to get a token to use with `pyodbc`.
+    The passwordless connection string doesn't contain a user name or password. Instead, when the app runs in Azure, the code uses `DefaultAzureCredential` from the [Azure Identity library](/python/api/overview/azure/Identity-readme) to get a token to use with `pyodbc`.
 
-1. Add a contained user to the Azure SQL Database.You run two commands to create a user and role.
+1. Add a contained user to the Azure SQL Database. You run two commands to create a user and role.
 
     ```sql
     CREATE USER [<web-app-name>] FROM EXTERNAL PROVIDER
@@ -318,7 +318,7 @@ One of the prerequisites to this quickstart is that you already have an Azure SQ
 
     For more information, see [Contained Database Users - Making Your Database Portable](/sql/relational-databases/security/contained-database-users-making-your-database-portable). For an example that shows the same principle but applied to Azure VM, see [Tutorial: Use a Windows VM system-assigned managed identity to access Azure SQL](/azure/active-directory/managed-identities-azure-resources/tutorial-windows-vm-access-sql).
 
-    If you disable and then renable the App Service, system-assigned managed identity, drop the user and role and recreate them. Run `DROP USER <web-app-name>` and rerun the `CREATE` and `ALTER` commands.
+    If you disable and then enable the App Service system-assigned managed identity, drop the user and role and recreate them. Run `DROP USER <web-app-name>` and rerun the `CREATE` and `ALTER` commands.
 
     To run these commands you can use and tool or IDE that can connect to Azure SQL Database, including [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms), [Azure Data Studio](/sql/azure-data-studio/what-is-azure-data-studio), and Visual Studio Code with the [SQL server mssql](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) extension.
 

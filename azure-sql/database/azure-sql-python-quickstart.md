@@ -288,7 +288,7 @@ The app is ready to be deployed to Azure.
 
 One of the prerequisites to this quickstart is that you already have an Azure SQL Database. To allow the App Service instance to access the Azure SQL Database resource, you need to enable Azure AD authentication and create a user and role that can be used for passwordless access.
 
-1. Confirm that Azure AD authentication is enabled on the database server. For information see, [Configure and manage Azure AD authentication with Azure SQL](/azure/azure-sql/database/authentication-aad-configure?view=azuresql).
+1. Confirm that Azure AD authentication is enabled on the database server. For information see, [Configure and manage Azure AD authentication with Azure SQL](/azure/azure-sql/database/authentication-aad-configure).
 
 1. Use the [az webapp config appsettings set](/cli/azure/webapp/config/appsettings#az-webapp-config-appsettings-set) command to add an app setting for the connection string.
 

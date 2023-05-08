@@ -81,24 +81,28 @@ Create a new Python project using Visual Studio Code.
 
 ## Install the pyodbc driver
 
-To connect to Azure SQL Database using Python, install the `pyodbc` driver. This package acts as a data provider for connecting to databases, executing commands, and retrieving results.
-
-In the terminal, run the following command to install the `pyodbc` driver:
-
-```bash
-pip install pyodbc
-pip install fastapi
-pip install uvicorn[standard]
-pip install pydantic
-```
+To connect to Azure SQL Database using Python, install the `pyodbc` driver. This package acts as a data provider for connecting to databases, executing commands, and retrieving results. In this quickstart, you also install `flask`, `uvicorn`, and `pydantic` packages to create and run a simple API.
 
 For details and specific instructions for installing the `pyodbc` driver on all operating systems, see [Configure development environment for pyodbc Python development](/sql/connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development).
 
-The `fastapi`, `uvicorn`, and `pydantic` packages are used to create a simple API for demonstration purposes.
+1. Create a *requirements.txt* file with the following lines:
 
-## Configure the connection string for local development
+    ```requirements.txt
+    pyodbc
+    fastapi
+    uvicorn[standard]
+    install pydantic
+    ```
 
-*pyodbc doesn't work passwordless with "ActiveDirectoryDefault" like .NET does. Todo: remove the tab for passwordless here since it's not possible.. Interactive works locally and is an option.*
+2. Install the requirments.
+
+    ```python
+    pip install -r requirements.txt`
+    ```
+
+## Configure the connection string
+
+*Todo: rewrite this to distinguish between local and deployed. For local, use user/pass or interactive. For deployed, use managed identity. Mention that you still set one AZURE_SQL_CONNECTIONSTRING as environment variable. In local environment, it has one form and deployed another form.**
 
 For local development, you can use the `pyodbc` driver in several ways. The recommended approach is passwordless. In the passwordless mode, `pyodbc` driver uses the class `DefaultAzureCredential` class to implement passwordless connections to Azure SQL Database. The `DefaultAzureCredential` is part of the Azure Identity library on which the SQL client library depends. For more information, see [DefaultAzureCredential overview](/python/api/overview/azure/Identity-readme#defaultazurecredential).
 

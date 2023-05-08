@@ -18,7 +18,7 @@ This quickstart describes how to connect an application to a database in Azure S
 ## Prerequisites
 
 * An [Azure subscription](https://azure.microsoft.com/free/nodejs/)
-* An Azure SQL database configured with Azure Active Directory (Azure AD) authentication. You can create one using the [Create database quickstart](./single-database-create-quickstart.md).
+* A database in Azure SQL Database configured with Azure Active Directory (Azure AD) authentication. You can create one using the [Create database quickstart](./single-database-create-quickstart.md).
 * Bash-enabled shell
 * [Node.js LTS](https://nodejs.org/)
 * [Visual Studio Code](https://code.visualstudio.com/)
@@ -218,6 +218,7 @@ To create the Express.js OpenAPI application, you'll create several files:
     });
     
     export default router;
+    
     ```
 
 1. Create an **opanapi.js** route file and add the following code for the OpenAPI UI explorer:
@@ -339,7 +340,7 @@ The **mssql** package implements the connection to Azure SQL Database by providi
 
 ## [Passwordless (Recommended)](#tab/passwordless)
 
-1. In Visual Studio Code, create a **config.js** file and add the following mssql configuration code to authenticate to Azure SQL.
+1. In Visual Studio Code, create a **config.js** file and add the following mssql configuration code to authenticate to Azure SQL Database.
 
     ```javascript
     import * as dotenv from 'dotenv';
@@ -378,7 +379,7 @@ The **mssql** package implements the connection to Azure SQL Database by providi
 ## [SQL authentication](#tab/sql-auth)
 
 
-1. In Visual Studio Code, create a **config.js** file and add the following mssql configuration code to authenticate to Azure SQL.
+1. In Visual Studio Code, create a **config.js** file and add the following mssql configuration code to authenticate to Azure SQL Database.
     
     ```javascript
     import * as dotenv from 'dotenv';

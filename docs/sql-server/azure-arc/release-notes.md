@@ -24,6 +24,12 @@ This release is published May 09, 2023.
 - Support for automated backups for all supported versions of SQL Server. For information, review [Configure automatic backups](point-in-time-restore.md).
 - Provide a name for the server that host an Azure Arc-enabled SQL Server instance when you enable SQL Server for Azure Arc. Use parameter `--machineName <"ArcServerName">`. For information, see [Connect your SQL Server to Azure Arc with installer (.msi)](connect-with-installer.md), or [Connect SQL Server machines at scale with a Configuration Manager custom task sequence](onboard-configuration-manager-custom-task.md).
 
+### Additional improvements
+
+- Arc virtual machines on-boarded from AWS use AWS resource name rather than host computer name. Fix allows customers to provide a name when onboarding using script.
+- Fixed a bug where the exclude instance setting in portal throws an incorrect error about excluding SQL instance named separated by space.
+- Fixed a bug where the Purview governance status does not report correctly upon on-demand refresh intermittently.
+
 ## April 2023
 
 This release is published April 10, 2023.

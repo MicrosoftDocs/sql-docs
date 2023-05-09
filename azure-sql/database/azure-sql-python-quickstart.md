@@ -108,7 +108,7 @@ Interactive authentication provides a passwordless option when you're running lo
 
 ## [Interactive Authentication](#tab/sql-inter)
 
-In Windows, Azure AD Interactive Authentication can use Azure Active Directory Multi-Factor Authentication technology to set up connection. In this mode, by providing the login ID, an Azure Authentication dialog is triggered and allows the user to input the password to complete the connection.
+In Windows, Azure AD Interactive Authentication can use Azure Active Directory Multi-Factor Authentication technology to set up connection. In this mode, by providing the sign in ID, an Azure Authentication dialog is triggered and allows the user to input the password to complete the connection.
 
 ```bash
 export AZURE_SQL_CONNECTIONSTRING='Driver={ODBC Driver 18 for SQL Server};Server=tcp:<database-server-name>.database.windows.net,1433;Database=<database-name>;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;Authentication=ActiveDirectoryInteractive'
@@ -306,7 +306,7 @@ One of the prerequisites to this quickstart is that you already have an Azure SQ
 
     The passwordless connection string doesn't contain a user name or password. Instead, when the app runs in Azure, the code uses `DefaultAzureCredential` from the [Azure Identity library](/python/api/overview/azure/Identity-readme) to get a token to use with `pyodbc`.
 
-1. Add a contained user to the Azure SQL Database with two sQL commands to create a user and role.
+1. Add a contained user to the Azure SQL Database with SQL commands to create a user and role.
 
     ```sql
     CREATE USER [<web-app-name>] FROM EXTERNAL PROVIDER
@@ -315,9 +315,9 @@ One of the prerequisites to this quickstart is that you already have an Azure SQ
 
     For more information, see [Contained Database Users - Making Your Database Portable](/sql/relational-databases/security/contained-database-users-making-your-database-portable). For an example that shows the same principle but applied to Azure VM, see [Tutorial: Use a Windows VM system-assigned managed identity to access Azure SQL](/azure/active-directory/managed-identities-azure-resources/tutorial-windows-vm-access-sql).
 
-    If you disable and then enable the App Service system-assigned managed identity, drop the user and role and recreate them. Run `DROP USER <web-app-name>` and rerun the `CREATE` and `ALTER` commands.
+    If you disable and then enable the App Service's system-assigned managed identity, drop the user and recreate it.Run `DROP USER <web-app-name>` and rerun the `CREATE` and `ALTER` commands.
 
-    To run these commands you can use and tool or IDE that can connect to Azure SQL Database, including [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms), [Azure Data Studio](/sql/azure-data-studio/what-is-azure-data-studio), and Visual Studio Code with the [SQL server mssql](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) extension.
+    To run these commands you can use any tool or IDE that can connect to Azure SQL Database, including [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms), [Azure Data Studio](/sql/azure-data-studio/what-is-azure-data-studio), and Visual Studio Code with the [SQL server mssql](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) extension.
 
 ## Test the deployed application
 

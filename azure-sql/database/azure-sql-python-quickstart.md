@@ -313,7 +313,7 @@ One of the prerequisites to this quickstart is that you already have an Azure SQ
 
     ```sql
     CREATE USER [<web-app-name>] FROM EXTERNAL PROVIDER
-    ALTER ROLE db_datareader ADD MEMBER [<web-app-name>]
+    ALTER ROLE db_datawriter ADD MEMBER [<web-app-name>]
     ```
 
     For more information, see [Contained Database Users - Making Your Database Portable](/sql/relational-databases/security/contained-database-users-making-your-database-portable). For an example that shows the same principle but applied to Azure VM, see [Tutorial: Use a Windows VM system-assigned managed identity to access Azure SQL](/azure/active-directory/managed-identities-azure-resources/tutorial-windows-vm-access-sql).

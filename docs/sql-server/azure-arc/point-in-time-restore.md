@@ -93,10 +93,10 @@ To enable automated backups:
 SELECT SERVERPROPERTY('InstanceDefaultBackupPath')
 ```
 
-- For SQL Server versions below 2019, the default backup path is stored in a registry setting. Configure this setting with the extended stored procedure `xp_instance_regwrite` or from SQL Server Managent Studio (SSMS). To use SSMS:
+- For SQL Server versions below 2019, the default backup path is stored in a registry setting. Configure this setting with the extended stored procedure `xp_instance_regwrite` or from SQL Server Management Studio (SSMS). To use SSMS:
 
     1. Connect to the Arc enabled SQL Server from SSMS.
-    1. Go to **Server poperties** > **Database Settings** > **Database default locations**. 
+    1. Go to **Server properties** > **Database Settings** > **Database default locations**. 
 
 - The setting is configured at the instance level and applies to all the databases on the instance.
 - The value for `--name` should be the name of the Arc enabled SQL Server, which is usually in the [Servername_SQLservername] format.

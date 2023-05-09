@@ -22,10 +22,10 @@ This article lists the features and fixes delivered by the released versions of 
 
 |Platform|Download|Version|
 |:---|:---|:---|
-|Windows .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2224909)|162.0.52.1|
-|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2224908)|162.0.52.1|
-|macOS .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2225106)|162.0.52.1|
-|Linux .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2225105)|162.0.52.1|
+|Windows .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2236505)|162.0.52.1|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2236347)|162.0.52.1|
+|macOS .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2236426)|162.0.52.1|
+|Linux .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2236425)|162.0.52.1|
 
 
 ### Features
@@ -46,13 +46,14 @@ This article lists the features and fixes delivered by the released versions of 
 |Azure SQL Database|Fixes an issue where temporal history retention was not correctly recognized as not configured (null).|
 |Deployment|Fixes an issue where the deployment plan fails to detect a dependency on a table/view in subqueries within FROM VALUES clause. [GitHub issue](https://github.com/microsoft/DacFx/issues/156)|
 |Deployment|Fixes an issue where deployment would fail when the target database contains a rule bound to a column.|
-|Deployment|Fixes an issue where deployment would fail when the target database contains a rule bound to a column with a user-defined type.|
-|Deployment|Fixes an issue where the retention period on a temporal table would be reset to the default value when another change is made to the table.|
+|Deployment|Fixes an issue where deployment would fail when the target database contains a rule bound to a column with a user-defined type. [GitHub issue](https://github.com/microsoft/DacFx/issues/245)|
+|Deployment|Fixes an issue where the retention period on a temporal table would be reset to the default value when another change is made to the table. [GitHub issue](https://github.com/microsoft/DacFx/issues/258)|
 |Deployment|Fixes an issue where updates to a primary key is not included in the deployment when the table has compression options specified.|
 |Deployment|Fixes an issue where a non-clustered index on a partitioned table is rebuilt even when no changes are made to the table. [GitHub issue](https://github.com/microsoft/DacFx/issues/202)|
 |Deployment|Fixes an issue where ignorecolumnorder property is not honored by a history table when no changes are made to a system-versioned table except the columns are reordered.|
+|Deployment|Fixes an issue where external tables would be dropped and redeployed despite no changes when the table definition contained SQLCMD variables. [GitHub issue](https://github.com/microsoft/DacFx/issues/249)|
 |Export|Fixes an issue where the diagnostic information provided during an export operation incorrectly reports the size of a table in KB instead of Bytes. [GitHub issue](https://github.com/microsoft/DacFx/issues/209)|
-|Import|Fixes an issue where an Azure Active Directory user cannot be created during import to Azure SQL Database, causing the import to fail.|
+|Import|Fixes an issue where an Azure Active Directory user cannot be created during import to Azure SQL Database, causing the import to fail. [GitHub issue](https://github.com/microsoft/DacFx/issues/260)|
 |Ledger|Fixes an issue where SqlPackage was not correctly identifying the error when the Ledger history table or view have an invalid two-part name.|
 |Permissions|Fixes an issue where permissions assigned to a user in the database model are not recognized, causing the project build or SqlPackage operation to fail.|
 |Query Store|Fixes an issue where the `flush_interval_seconds` [Query Store option](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) was not correctly validated with a minimum value of 60 seconds.|

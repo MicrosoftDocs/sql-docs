@@ -123,7 +123,7 @@ SqlPackage /at:$($AccessToken_Object.Token) /Action:Extract /TargetFile:"C:\Adve
 |**/p:**|Storage=({File&#124;Memory})|Specifies the type of backing storage for the schema model used during extraction. 'Memory' is default for .NET Core version of SqlPackage. 'File' is only available and default for .NET Framework version of SqlPackage.|
 |**/p:**|TableData=(STRING)|Indicates the table from which data will be extracted. Specify the table name with or without the brackets surrounding the name parts in the following format: schema_name.table_identifier.  This property may be specified multiple times to indicate multiple options.|
 |**/p:**|TempDirectoryForTableData=(STRING)|Specifies the temporary directory used to buffer table data before being written to the package file.|
-|**/p:**|VerifyExtraction=(BOOLEAN 'True')|Specifies whether the extracted schema model should be verified.|
+|**/p:**|VerifyExtraction=(BOOLEAN 'False')|Specifies whether the extracted schema model should be verified.|
 
 
 

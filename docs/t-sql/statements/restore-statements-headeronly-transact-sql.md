@@ -87,7 +87,6 @@ FROM <backup_device>
 |-----------------|---------------|--------------------------------------------|  
 |**BackupName**|**nvarchar(128)**|Backup set name.|  
 |**BackupDescription**|**nvarchar(255)** NULL|Backup set description.|  
-
 |**BackupType**|**smallint**|Backup type:<br /><br /> **1** = Database<br /><br /> **2** = Transaction log<br /><br /> **4** = File<br /><br /> **5** = Differential database<br /><br /> **6** = Differential file<br /><br /> **7** = Partial<br /><br /> **8** = Differential partial|  
 |**ExpirationDate**|**datetime**|Expiration date for the backup set.|  
 |**Compressed**|**BIT(1)**|Whether the backup set is compressed using software-based compression:<br /><br /> **0** = No<br /><br /> **1** = Yes|  

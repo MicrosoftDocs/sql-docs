@@ -328,6 +328,6 @@ Browse to the URL of the app to test that the connection to Azure SQL Database i
 https://<web-app-name>.azurewebsites.net`
 ```
 
-Append */all* path to the end of the URL to see a list of entries in the Person table. Append */person/\<id>* to the URL to get one Person.  
+Append */docs* to access the Swagger UI and use the API methods.  
 
 Congratulations! Your application is now connected to Azure SQL Database in both local and hosted environments.

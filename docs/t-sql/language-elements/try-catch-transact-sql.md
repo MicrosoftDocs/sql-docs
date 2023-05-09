@@ -321,26 +321,7 @@ BEGIN CATCH
 END CATCH;  
 GO  
 ```  
-   
-### D. Using TRY...CATCH  
- The following example shows a `SELECT` statement that will generate a divide-by-zero error. The error causes execution to jump to the associated `CATCH` block.  
-  
-```sql  
-BEGIN TRY  
-    -- Generate a divide-by-zero error.  
-    SELECT 1/0;  
-END TRY  
-BEGIN CATCH  
-    SELECT  
-        ERROR_NUMBER() AS ErrorNumber  
-        ,ERROR_SEVERITY() AS ErrorSeverity  
-        ,ERROR_STATE() AS ErrorState  
-        ,ERROR_PROCEDURE() AS ErrorProcedure  
-        ,ERROR_MESSAGE() AS ErrorMessage;  
-END CATCH;  
-GO  
-```  
-  
+
 ## See Also  
  [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)   
  [Database Engine Error Severities](../../relational-databases/errors-events/database-engine-error-severities.md)   

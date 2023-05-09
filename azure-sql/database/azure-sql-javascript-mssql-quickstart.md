@@ -338,7 +338,7 @@ To create the Express.js OpenAPI application, you'll create several files:
 
 The **mssql** package implements the connection to Azure SQL Database by providing a configuration setting for an authentication type. 
 
-## [Passwordless (Recommended)](#tab/passwordless)
+## [Passwordless (recommended)](#tab/passwordless)
 
 1. In Visual Studio Code, create a **config.js** file and add the following mssql configuration code to authenticate to Azure SQL Database.
 
@@ -594,7 +594,7 @@ When the deployment finishes, the app doesn't work correctly on Azure. You still
 
 ## Connect the App Service to Azure SQL Database
 
-## [Passwordless (Recommended)](#tab/passwordless)
+## [Passwordless (recommended)](#tab/passwordless)
 
 [!INCLUDE [passwordless-connect-azure-sql](../includes/passwordless-connect-azure-sql-mssql.md)]
 

@@ -1,4 +1,4 @@
-Secure, passwordless connections to Azure SQL Database with .NET require certain database configurations. Verify the following settings on your [logical server in Azure](../database/logical-servers.md) to properly connect to Azure SQL Database in both local and hosted environments:
+Secure, passwordless connections to Azure SQL Database require certain database configurations. Verify the following settings on your [logical server in Azure](../database/logical-servers.md) to properly connect to Azure SQL Database in both local and hosted environments:
 
 1) For local development connections, make sure your logical server is configured to allow your local machine IP address and other Azure services to connect:
 

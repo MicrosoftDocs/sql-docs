@@ -98,7 +98,7 @@ Requires ALTER permission on the table or view. The user must be a member of the
 
 1. Under **Index key columns**, select **Add...**.
 
-1. In the **Select Columns from**_table\_name_ dialog box, select the check box or check boxes of the table column or columns to be added to the index.
+1. In the **Select Columns from** _table\_name_ dialog box, select the check box or check boxes of the table column or columns to be added to the index.
 
 1. Select **OK**.
 

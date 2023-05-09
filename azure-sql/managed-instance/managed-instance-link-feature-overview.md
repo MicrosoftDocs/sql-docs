@@ -25,9 +25,11 @@ If you have product improvement suggestions or comments, or you want to report i
 
 ## Overview
 
-The Managed Instance link feature uses distributed availability groups to extend your SQL Server on-premises Always On availability group hosted anywhere to Azure SQL Managed Instance in a safe and secure manner, replicating data in near real-time.
+The Managed Instance link feature uses distributed availability groups to extend your SQL Server on-premises Always On availability group hosted anywhere to Azure SQL Managed Instance in a safe and secure manner, replicating data in near real-time. 
 
-The link supports single node SQL Server instances without existing availability groups, and also multiple-node SQL Server instances with existing availability groups. Through the link, you can use the latest benefits of Azure without migrating your entire SQL Server data estate to the cloud.
+The link supports single node SQL Server instances without existing availability groups, and also multiple-node SQL Server instances with existing availability groups. Through the link, you can use the latest benefits of Azure without migrating your entire SQL Server data estate to the cloud. 
+
+Though the link supports replicating one database per link, it's possible to replicate multiple databases from a single instance of SQL Server to a single SQL managed instance by configuring multiple links - one link for each database you want to replicate. 
 
 The link feature currently offers the following functionality:
 
@@ -44,7 +46,7 @@ The Managed Instance link is supported on both the General Purpose and Business 
 
 The following table lists the functionality of the link feature and the supported SQL Server versions:
 
-| SQL Server version  | Operating system (OS)  | One-way replication |  Disaster recovery | Servicing update requirement |
+| SQL Server version  | Operating system (OS)  | One-way replication  (for migration & DR) |  Disaster recovery with fail back | Servicing update requirement |
 | --- | --- | --- | --- | --- |
 | SQL Server 2022 (16.x) | Windows Server and Linux |  Generally available | [Must sign up for limited public preview](https://aka.ms/mi-link-dr-preview-signup)  | SQL Server 2022 RTM | 
 | SQL Server 2019 (15.x) | Windows Server only | Generally available |N/A | [SQL Server 2019 CU20 (KB5024276)](https://support.microsoft.com/topic/kb5024276-cumulative-update-20-for-sql-server-2019-4b282be9-b559-46ac-9b6a-badbd44785d2) |
@@ -149,7 +151,8 @@ Data replication limitations include:
 Configuration limitations include: 
 
   - If there are multiple SQL Server instances on a server, it's possible to configure a link with each instance, but each instance must be configured to use a separate database mirroring endpoint, with a dedicated port per instance. Only the default instance should use port 5022 for the database mirroring endpoint. 
-  - Only one database can be placed into a single availability group for one Managed Instance link.
+  - Only one database can be placed into a single availability group for one Managed Instance link. However, it's possible to replicate multiple databases in a single SQL Server instance by establishing multiple links. 
+  - A single managed instance supports up to 100 links from multiple SQL Server instances. 
   - A Managed Instance link can replicate a database of any size if it fits into the chosen storage size of the target SQL Managed Instance deployment.
   - Managed Instance link authentication between SQL Server and SQL Managed Instance is certificate-based and available only through an exchange of certificates. Using Windows authentication to establish the link between the SQL Server instance and the managed instance isn't supported.
   - Only [VNet-local endpoint](connectivity-architecture-overview.md#vnet-local-endpoint) is supported to establish a link with SQL Managed Instance. 

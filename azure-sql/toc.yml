@@ -318,6 +318,8 @@
         href: database/azure-sql-dotnet-quickstart.md
       - name: .NET with EF Core
         href: database/azure-sql-dotnet-entity-framework-core-quickstart.md
+      - name: Node.js with mssql
+        href: database/azure-sql-javascript-mssql-quickstart.md
       - name: Use the Azure portal query editor 
         href: database/connect-query-portal.md
     - name: GitHub Actions

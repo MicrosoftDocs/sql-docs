@@ -300,10 +300,10 @@ One of the prerequisites to this quickstart is that you already have an Azure SQ
     For the deployed app, the connection string should resemble:
 
     ```console
-    Driver={ODBC Driver 18 for SQL Server};SERVER=<web-app-name>.database.windows.net;DATABASE=<database-name>
+    Driver={ODBC Driver 18 for SQL Server};SERVER=<database-server-name>.database.windows.net;DATABASE=<database-name>
     ```
 
-    Fill in the `<web-app-name>` and `<database-name>` with your values.
+    Fill in the `<dabaser-server-name>` and `<database-name>` with your values.
 
     The passwordless connection string doesn't contain a user name or password. Instead, when the app runs in Azure, the code uses `DefaultAzureCredential` from the [Azure Identity library](/python/api/overview/azure/Identity-readme) to get a token to use with `pyodbc`.
 

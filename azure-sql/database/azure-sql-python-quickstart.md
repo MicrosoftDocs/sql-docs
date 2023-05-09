@@ -142,10 +142,11 @@ You can get the details to create your connection string from the Azure portal:
 
 In the project folder, create an *app.py* file and add the sample code. This code creates an API that:
 
-* Retrieves an Azure SQL Database connection string from an environment variable.
+* Retrieves an Azure SQL Database connection string from an environment variable. The form of the connections string will depend on what environment you are running the code in.
 * Creates a `Person` table in the database during startup (for testing scenarios only).
-* Creates a function to retrieve the `Person` records stored in the database.
-* Creates a function to add new `Person` records to the database.
+* Defines a function to retrieve all `Person` records from the database.
+* Defines a function to retrieve one `Person` record from the database.
+* Defines a function to add new `Person` records to the database.
 
 ```python
 import os

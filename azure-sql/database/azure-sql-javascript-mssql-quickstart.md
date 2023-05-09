@@ -364,7 +364,7 @@ The **mssql** package implements the connection to Azure SQL Database by providi
     };
     ```
 
-1. Create a **.env.development** file for your local environment variables and add the following text and update with your values for `<YOURSERVERNAME>` and `<YOURDATABASENAME>`.
+2. Create a **.env.development** file for your local environment variables and add the following text and update with your values for `<YOURSERVERNAME>` and `<YOURDATABASENAME>`.
 
     ```text
     AZURE_SQL_SERVER=<YOURSERVERNAME>.database.windows.net
@@ -403,7 +403,7 @@ The **mssql** package implements the connection to Azure SQL Database by providi
     };
     ```
 
-1. Create a **.env.development** file for your local environment variables and add the following text and update with your values for `<YOURSERVERNAME>`, `<YOURDATABASENAME>`, `<YOURUSERNAME>`, and `<YOURPASSWORD>`.
+2. Create a **.env.development** file for your local environment variables and add the following text and update with your values for `<YOURSERVERNAME>`, `<YOURDATABASENAME>`, `<YOURUSERNAME>`, and `<YOURPASSWORD>`.
 
     ```text
     AZURE_SQL_SERVER=<YOURSERVERNAME>.database.windows.net
@@ -418,8 +418,8 @@ The **mssql** package implements the connection to Azure SQL Database by providi
 
 ---
 
-1. Create a `.vscode` folder and create a **settings.json** file in the folder.
-1. Add the following to ignore environment variables and dependencies during the zip deployment.
+3. Create a `.vscode` folder and create a **settings.json** file in the folder.
+4. Add the following to ignore environment variables and dependencies during the zip deployment.
 
     ```json
     {

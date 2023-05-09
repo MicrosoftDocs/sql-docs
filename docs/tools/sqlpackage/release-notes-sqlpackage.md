@@ -52,7 +52,9 @@ This article lists the features and fixes delivered by the released versions of 
 |Deployment|Fixes an issue where a non-clustered index on a partitioned table is rebuilt even when no changes are made to the table. [GitHub issue](https://github.com/microsoft/DacFx/issues/202)|
 |Deployment|Fixes an issue where ignorecolumnorder property is not honored by a history table when no changes are made to a system-versioned table except the columns are reordered.|
 |Export|Fixes an issue where the diagnostic information provided during an export operation incorrectly reports the size of a table in KB instead of Bytes. [GitHub issue](https://github.com/microsoft/DacFx/issues/209)|
+|Import|Fixes an issue where an Azure Active Directory user cannot be created during import to Azure SQL Database, causing the import to fail.|
 |Ledger|Fixes an issue where SqlPackage was not correctly identifying the error when the Ledger history table or view have an invalid two-part name.|
+|Permissions|Fixes an issue where permissions assigned to a user in the database model are not recognized, causing the project build or SqlPackage operation to fail.|
 |Query Store|Fixes an issue where the `flush_interval_seconds` [Query Store option](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) was not correctly validated with a minimum value of 60 seconds.|
 |SQL Server 2022|Fixes an issue where the function `DATETRUNC` was not recognized as a built-in function. [Developer Community report](https://developercommunity.visualstudio.com/t/Visual-Studio-build-solution-not-recogni/10333180)|
 |SQL Server 2022|Fixes an issue where the function `DATE_BUCKET` was not recognized as a built-in function.|

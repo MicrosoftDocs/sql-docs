@@ -17,14 +17,14 @@ ms.custom:
 
 SqlPackage runs on Windows, macOS, and Linux, and is available to install through `dotnet tool` or as a standalone zip download.
 
-- **Version number:** 162.0.xxxx.0
-- **Build number:** 162.0.xxxx.0
+- **Version number:** 162.0.52.1
+- **Build number:** 162.0.52.1
 - **Release date:** May 10, 2023
 
 For details about the latest release, see the [release notes](release-notes-sqlpackage.md).
 
 > [!NOTE]
-> SqlPackage version numbering has been adjusted to better reflect the DacFx build number it is associated with. Previously, SqlPackage had a distinct version number (19) and build number (160.x). Beginning with version 161, the version number of SqlPackage will match the DacFx version number it is associated with (eg 162.0.xxxx.0).
+> SqlPackage version numbering has been adjusted to better reflect the DacFx build number it is associated with. Previously, SqlPackage had a distinct version number (19) and build number (160.x). Beginning with version 161, the version number of SqlPackage will match the DacFx version number it is associated with (eg 162.0.52.1).
 
 ## Installation, cross-platform
 
@@ -168,7 +168,7 @@ Evergreen links are available for downloading the latest Sqlpackage versions:
 
 ## DacFx
 
-SqlPackage is a command-line interface for the DacFx framework, exposing some of the public DacFx APIs. DacServices ([Microsoft.SqlServer.Dac](/dotnet/api/microsoft.sqlserver.dac.dacservices)) is a related mechanism for integrating database deployment into your application pipeline.  The DacServices API is available in a package through NuGet, [Microsoft.SqlServer.DacFx](https://www.NuGet.org/packages/Microsoft.SqlServer.DacFx).  The current DacFx version is 162.xxxx.0.
+SqlPackage is a command-line interface for the DacFx framework, exposing some of the public DacFx APIs. DacServices ([Microsoft.SqlServer.Dac](/dotnet/api/microsoft.sqlserver.dac.dacservices)) is a related mechanism for integrating database deployment into your application pipeline.  The DacServices API is available in a package through NuGet, [Microsoft.SqlServer.DacFx](https://www.NuGet.org/packages/Microsoft.SqlServer.DacFx).  The current DacFx version is 162.52.1.
 
 Adding the NuGet package to a .NET project is accomplished via the .NET CLI with this command:
 

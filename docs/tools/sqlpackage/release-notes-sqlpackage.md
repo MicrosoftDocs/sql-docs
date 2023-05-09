@@ -35,7 +35,7 @@ This article lists the features and fixes delivered by the released versions of 
 |Platform|References [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient/5.1.0) v5.1.0|
 |Azure Synapse Analytics|Adds support for [DW_COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#dw_compatibility_level---auto--10--20--30--40--50--9000-).|
 |ScriptDOM|ScriptDOM is now available as a standalone package on [NuGet](https://www.nuget.org/packages/Microsoft.SqlServer.TransactSql.ScriptDom) and is open source on [GitHub](https://github.com/microsoft/SqlScriptDOM).|
-|System dacpacs|The `master` and `msdb` system dacpacs are now available on [NuGet](https://www.nuget.org/packages/Microsoft.SqlServer.Dacpacs). More information on the system dacpacs and consuming dacpacs as a package reference is available in the [DacFx GitHub repository](https://github.com/microsoft/DacFx).|
+|System dacpacs|The `master` and `msdb` system dacpacs are now available on NuGet as [Microsoft.SqlServer.Dacpacs.Master](https://www.nuget.org/packages/Microsoft.SqlServer.Dacpacs.Master) and [Microsoft.SqlServer.Dacpacs.Msdb](https://www.nuget.org/packages/Microsoft.SqlServer.Dacpacs.Msdb). More information on the system dacpacs and consuming dacpacs as a package reference is available in the [DacFx GitHub repository](https://github.com/microsoft/DacFx).|
 
 ### Fixes
 | Feature | Details |

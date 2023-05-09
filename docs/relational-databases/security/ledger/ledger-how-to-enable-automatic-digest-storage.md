@@ -80,7 +80,7 @@ az sql db ledger-digest-uploads enable \
 
 ::: zone pivot="as1-azure-sql-managed-instance"
 
-In this article, we'll describe how you can configure automatic generation and storage of database digests through PowerShell or the Azure CLI.
+In this article, we'll describe how you can configure automatic generation and storage of database digests through the Azure portal, PowerShell, or the Azure CLI.
 
 > [!NOTE]
 > Ledger in Azure SQL Managed Instance is currently in public preview.
@@ -110,6 +110,9 @@ In this article, we'll describe how you can configure automatic generation and s
 
 ## Enable database digest uploads using PowerShell
 
+> [!NOTE]
+> The PowerShell cmdlet is currently not available in public preview. You can use the Azure Portal or Azure CLI instead.
+
 Update the database to start uploading ledger digests to the Azure Blob Storage account or Azure Confidential Ledger, by using the [Enable-AzSqlInstanceDatabaseLedgerDigestUpload](/powershell/module/az.sql/enable-azsqlinstancedatabaseledgerdigestupload) cmdlet. When the endpoint parameter is an Azure Blob Storage endpoint, the database server will create a new container, named **sqldbledgerdigests**, within the storage account and it will start writing ledger digests to the container.
   
 > [!NOTE]
@@ -117,7 +120,7 @@ Update the database to start uploading ledger digests to the Azure Blob Storage 
 
 ```azurepowershell-interactive
 Write-host "Enabling ledger digest upload..." 
-$ledgerDigestUploadConfig = Enable-AzSqlDatabaseLedgerDigestUpload `
+$ledgerDigestUploadConfig = Enable-AzSqlInstanceDatabaseLedgerDigestUpload `
      -ResourceGroupName "ResourceGroup01" `
      -InstanceName "ManagedInstance01" `
      -DatabaseName "Database01" `

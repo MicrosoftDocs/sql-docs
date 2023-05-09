@@ -4,7 +4,7 @@ description: Learn how to automate database development tasks with SqlPackage. V
 author: "dzsquared"
 ms.author: "drskwier"
 ms.reviewer: "maghan"
-ms.date: 6/1/2022
+ms.date: 5/10/2023
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: conceptual

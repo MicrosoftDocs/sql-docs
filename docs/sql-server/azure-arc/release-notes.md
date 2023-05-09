@@ -19,6 +19,10 @@ This release is published May 09, 2023.
 
 `1.1.2313.14`
 
+### Azure extension for SQL Server
+
+Provide a name for the server that host an Azure Arc-enabled SQL Server instance when you enable SQL Server for Azure Arc. Use parameter `--machineName <"ArcServerName">`. For information, see [Connect your SQL Server to Azure Arc with installer (.msi)](connect-with-installer.md), or [Connect SQL Server machines at scale with a Configuration Manager custom task sequence](onboard-configuration-manager-custom-task.md).
+
 ## April 2023
 
 This release is published April 10, 2023.

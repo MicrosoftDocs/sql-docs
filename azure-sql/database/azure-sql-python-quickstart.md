@@ -243,6 +243,8 @@ The app is ready to be tested locally.
 
 1. On the Swagger UI page for the app [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs), expand the POST method and select **Try it out**.
 
+    You can also use try */redoc* to see another form of generated documentation for the API.
+
 1. Modify the sample JSON to include values for the first and last name. Select **Execute** to add a new record to the database. The API returns a successful response.
 
 1. Expand the **GET** method on the Swagger UI page and select **Try it**. Choose **Execute**, and the person you just created is returned.
@@ -316,7 +318,7 @@ One of the prerequisites to this quickstart is that you already have an Azure SQ
 
     For more information, see [Contained Database Users - Making Your Database Portable](/sql/relational-databases/security/contained-database-users-making-your-database-portable). For an example that shows the same principle but applied to Azure VM, see [Tutorial: Use a Windows VM system-assigned managed identity to access Azure SQL](/azure/active-directory/managed-identities-azure-resources/tutorial-windows-vm-access-sql).
 
-    If you disable and then enable the App Service's system-assigned managed identity, drop the user and recreate it.Run `DROP USER <web-app-name>` and rerun the `CREATE` and `ALTER` commands.
+    If you disable and then enable the App Service's system-assigned managed identity, drop the user and recreate it.Run `DROP USER <web-app-name>` and rerun the `CREATE` and `ALTER` commands. To see users, use `SELECT * FROM sys.database_principals`.
 
     To run these commands you can use any tool or IDE that can connect to Azure SQL Database, including [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms), [Azure Data Studio](/sql/azure-data-studio/what-is-azure-data-studio), and Visual Studio Code with the [SQL server mssql](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) extension.
 
@@ -328,6 +330,6 @@ Browse to the URL of the app to test that the connection to Azure SQL Database i
 https://<web-app-name>.azurewebsites.net`
 ```
 
-Append */all* path to the end of the URL to see a list of entries in the Person table. Append */person* to the URL to add a Person.  
+Append */all* path to the end of the URL to see a list of entries in the Person table. Append */person/\<id>* to the URL to get one Person.  
 
 Congratulations! Your application is now connected to Azure SQL Database in both local and hosted environments.

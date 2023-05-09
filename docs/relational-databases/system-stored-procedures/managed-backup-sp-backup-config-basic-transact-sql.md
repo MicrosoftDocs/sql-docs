@@ -4,7 +4,7 @@ description: Configures the SQL Server Managed Backup to Azure basic settings fo
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 03/15/2023
+ms.date: 05/09/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -26,7 +26,7 @@ dev_langs:
 Configures the [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] basic settings for a specific database or for an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 > [!NOTE]  
-> This procedure can be called on its own to create a basic managed backup configuration. However, if you plan to add advanced features or a custom schedule, first configure those settings using [managed_backup.sp_backup_config_advanced (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md) and [managed_backup.sp_backup_config_schedule (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md) before enabling managed backup with this procedure.
+> This procedure can be called on its own to create a basic managed backup configuration. However, if you plan to add advanced features or a custom schedule, configure those settings using [managed_backup.sp_backup_config_advanced](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md) and [managed_backup.sp_backup_config_schedule](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md), before enabling managed backup with this procedure.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -45,7 +45,11 @@ EXEC managed_backup.sp_backup_config_basic
 
 #### @enable_backup
 
-Enable or disable [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the specified database. The `@enable_backup` is **bit**. Required parameter when configuring [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the first instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If you're changing an existing [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] configuration, this parameter is optional. In that case, any configuration values not specified retain their existing values.
+Enable or disable [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the specified database. The `@enable_backup` is **bit**.
+
+Required parameter when configuring [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the first instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If you're changing an existing [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] configuration, this parameter is optional. In that case, any configuration values not specified retain their existing values.
+
+For more information, see [Enable SQL Server Managed Backups to Azure](../backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md).
 
 #### @database_name
 
@@ -58,6 +62,15 @@ The database name for enabling managed backup on a specific database.
 
 A URL that indicates the location of the backup. When `@credential_name` is NULL, this URL is a shared access signature (SAS) URL to a blob container in Azure Storage, and the backups use the new backup to block blob functionality. For more information, please review [Understanding SAS](/azure/storage/common/storage-sas-overview). When `@credential_name` is specified, then this is a storage account URL, and the backups use the deprecated backup to page blob functionality.
 
+If the SAS URL has the SAS token included, you must separate it from the SAS token at the question mark, and don't include the question mark.
+
+For example, `https://managedbackupstorage.blob.core.windows.net/backupcontainer?sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl` results in the following two values:
+
+| Type | Output |
+| --- | --- |
+| **Container URL** | `https://managedbackupstorage.blob.core.windows.net/backupcontainer` |
+| **SAS token** | `sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl` |
+
 > [!NOTE]  
 > Only a SAS URL is supported for this parameter at this time.
 
@@ -67,7 +80,7 @@ The retention period for the backup files in days. `@retention_days` is **int**.
 
 #### @credential_name
 
-The name of the SQL credential used to authenticate to the Azure storage account. `@credential_name` is **sysname**. When specified, the backup is stored to a page blob. If this parameter is NULL, the backup is stored as a block blob. Backup to page blob is deprecated, so it's preferred to use the new block blob backup functionality. When used to change the [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] configuration, this parameter is optional. If not specified, then the existing configuration values are retained.
+The name of the SQL credential used to authenticate to the Azure storage account. `@credential_name` is **sysname**. When specified, the backup is stored to a page blob. If this parameter is NULL, the backup is stored as a block blob. Backing up to page blob is deprecated, so it's preferred to use the new block blob backup functionality. When used to change the [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] configuration, this parameter is optional. If not specified, then the existing configuration values are retained.
 
 > [!WARNING]  
 > The `@credential_name` parameter is not supported at this time. Only backup to block blob is supported, which requires this parameter to be NULL.

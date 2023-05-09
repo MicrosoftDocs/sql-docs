@@ -169,7 +169,7 @@ app = FastAPI()
 def root():
     print("Root of Person API")
     try:
-        conn = get_connection_string()
+        conn = get_conn()
         cursor = conn.cursor()
 
         # Table should be created ahead of time in production app.

@@ -142,6 +142,9 @@ In this configuration, a database in Azure SQL Database or Azure SQL Managed Ins
 
 ## With failover groups
 
+Using transactional replication with instances that are in a failover group is supported. However, if you configure replication before adding your managed instance into a failover group, replication pauses when you start to create your failover group, and replication monitor shows a status of `Replicated transactions are waiting for the next log backup or for mirroring partner to catch up`. Replication resumes once the failover group is created successfully. 
+
+
 If a **publisher** or **distributor** SQL Managed Instance is in a [failover group](auto-failover-group-sql-mi.md), the SQL Managed Instance administrator must clean up all publications on the old primary and reconfigure them on the new primary after a failover occurs. The following activities are needed in this scenario:
 
 1. Stop all replication jobs running on the database, if there are any.

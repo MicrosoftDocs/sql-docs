@@ -28,7 +28,7 @@ Zone-redundant configuration is currently in preview for SQL Managed Instance, a
 
 ## Overview
 
-The goal of the high availability architecture in Azure SQL Managed Instance is to minimize impact to customer workloads from service maintenance operations and outages. For more information regarding specific SLAs for different service tiers, review [Azure SQL Managed Instance](https://azure.microsoft.com/support/legal/sla/azure-sql-sql-managed-instance/).
+The goal of the high availability architecture in Azure SQL Managed Instance is to minimize impact on customer workloads from service maintenance operations and outages. For more information regarding specific SLAs for different service tiers, review [Azure SQL Managed Instance](https://azure.microsoft.com/support/legal/sla/azure-sql-sql-managed-instance/).
 
 SQL Managed Instance runs on the latest stable version of the SQL Server Database Engine on the Windows operating system with all applicable patches. SQL Managed Instance automatically handles critical servicing tasks, such as patching, backups, Windows and SQL engine upgrades, and unplanned events such as underlying hardware, software, or network failures. When an instance is patched or fails over, the downtime isn't impactful if you [employ retry logic](../database/develop-overview.md#resiliency) in your app. SQL Managed Instance can quickly recover even in the most critical circumstances, ensuring that your data is always available. Most users do not notice that upgrades are performed continuously.
 
@@ -37,7 +37,7 @@ The high availability solution is designed to ensure that committed data is neve
 There are two high availability architectural models:
 
 - **Remote storage model** that is based on a separation of compute and storage.  It relies on high availability and reliability of the remote storage tier. This architecture targets budget-oriented business applications that can tolerate some performance degradation during maintenance activities.
-- **Local storage model** that is based on a cluster of database engine processes. It relies on the fact that there is always a quorum of available database engine nodes. This architecture targets mission-critical applications with high IO performance, high transaction rate and guarantees minimal performance impact to your workload during maintenance activities.
+- **Local storage model** that is based on a cluster of database engine processes. It relies on the fact that there is always a quorum of available database engine nodes. This architecture targets mission-critical applications with high IO performance, high transaction rate and guarantees minimal performance impact on your workload during maintenance activities.
 
 
 ## Locally-redundant availability 

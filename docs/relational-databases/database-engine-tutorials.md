@@ -11,7 +11,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 ---
 # Database Engine Tutorials
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../includes/applies-to-version/sql-asdb-asdbmi.md)]
-This section contains tutorials for [!INCLUDE[ssDECurrent](../includes/ssdecurrent-md.md)].  
+This section contains tutorials for [!INCLUDE [ssdenoversion-md](../includes/ssdenoversion-md.md)].  
   
 [Tutorial: Getting Started with the Database Engine](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
 This tutorial teaches how to connect to an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)].  

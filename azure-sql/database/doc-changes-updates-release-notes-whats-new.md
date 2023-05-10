@@ -97,7 +97,7 @@ Learn about significant changes to the Azure SQL Database documentation. For pre
 
 | Changes | Details |
 | --- | --- |
-| [Degrees of Parallelism (DOP) Feedback](/sql/relational-databases/performance/intelligent-query-processing-feedback#dop-feedback) | DOP Feedback is currently available as a limited preview. For more information and how to apply for the preview, see [Announcing Degree of Parallelism Feedback Limited Preview](https://techcommunity.microsoft.com/t5/azure-sql-blog/announcing-degree-of-parallelism-feedback-limited-preview/ba-p/3806924). |
+| DOP Feedback preview | [Degrees of Parallelism (DOP) Feedback](/sql/relational-databases/performance/intelligent-query-processing-feedback#dop-feedback) is currently available as a limited preview. For more information and how to apply for the preview, see [Announcing Degree of Parallelism Feedback Limited Preview](https://techcommunity.microsoft.com/t5/azure-sql-blog/announcing-degree-of-parallelism-feedback-limited-preview/ba-p/3806924). |
 
 ### March 2023
 

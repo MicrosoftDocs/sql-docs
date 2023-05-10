@@ -1,9 +1,9 @@
 ---
-title: "Connection string syntax"
+title: Connection string syntax
 description: Learn about syntax of connection strings in the Microsoft SqlClient Data Provider for SQL Server. The syntax for each provider is documented in its ConnectionString property.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: "11/13/2020"
+ms.date: 04/19/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -87,28 +87,37 @@ For more information on working with user instances, see [SQL Server Express Use
 
 ## Use TrustServerCertificate
 
-The `TrustServerCertificate` keyword is valid only when connecting to a SQL Server instance with a valid certificate. When `TrustServerCertificate` is set to `true`, the transport layer will use TLS/SSL to encrypt the channel and bypass walking the certificate chain to validate trust.
+The `TrustServerCertificate` keyword is used when connecting to a SQL Server instance. When `TrustServerCertificate` is set to `true`, the transport layer uses TLS/SSL to encrypt the channel and bypass walking the certificate chain to validate trust.
 
-This setting is ignored when `Encrypt` is set to `Strict`. The server certificate is always validated in `Strict` mode.
+- In versions prior to Microsoft.Data.SqlClient 2.0, this setting is ignored when `Encrypt` is set to `False` and the server certificate isn't validated.
+- Starting in version 2.0 of Microsoft.Data.SqlClient, even if `Encrypt` is set `False`, setting controls whether certificate validation is performed when the server forces encryption.
+- Starting in version 5.0 of Microsoft.Data.SqlClient, this setting is ignored when `Encrypt` is set to `Strict`. The server certificate is always validated in `Strict` mode.
+
+For more information, see [Encryption and certificate validation](encryption-and-certificate-validation.md).
 
 ```csharp  
 "TrustServerCertificate=true;"
 ```  
 
-> [!NOTE]
-> If `TrustServerCertificate` is set to `true` and encryption is turned on, the encryption level specified on the server will be used even if `Encrypt` is set to `false` in the connection string. The connection will fail otherwise.
-
 ## HostNameInCertificate
 
-Starting in version 5.0 of Microsoft.Data.SqlClient, HostNameInCertificate is a new connection option. When the driver validates server certificates, it ensures that the Common Name (CN) or Subject Alternate Name (SAN) in the certificate matches the server name being connected to. In some cases, like DNS aliases, the server name might not match the CN or SAN. The HostNameInCertificate value can be used to specify a different, expected CN or SAN in the server certificate.
+Starting in version 5.0 of Microsoft.Data.SqlClient, HostNameInCertificate is a new connection option. Server certificate validation ensures that the Common Name (CN) or Subject Alternate Name (SAN) in the certificate matches the server name being connected to. In some cases, like DNS aliases, the server name might not match the CN or SAN. The HostNameInCertificate value can be used to specify a different, expected CN or SAN in the server certificate.
 
 ```csharp
 "HostNameInCertificate=myserver.example.com"
 ```
 
-### Enable encryption
+## ServerCertificate
 
-To enable encryption when a certificate hasn't been provisioned on the server, the **Trust Server Certificate** connection property must be set. In this case, encryption will use a self-signed server certificate without validation since no verifiable certificate has been provisioned on the server.
+Starting in version 5.1 of Microsoft.Data.SqlClient, `ServerCertificate` is a new connection option. The default value of the `ServerCertificate` connection setting is an empty string. When `Encrypt` is set to `Mandatory` or `Strict`, `ServerCertificate` can be used to specify a path on the file system to a certificate file to match against the server's TLS certificate. For the certificate to be valid, the certificate specified must be an exact match. The accepted certificate formats are PEM, DER, and CER. Here's an example:
+
+```csharp
+"Data Source=...;Encrypt=Strict;ServerCertificate=C:\certificates\server.cer"
+```
+
+## Enable encryption
+
+To enable encryption when a certificate hasn't been provisioned on the server, the **Trust Server Certificate** connection property must be set to `True`. In this case, encryption uses a self-signed server certificate without validation since no verifiable certificate has been provisioned on the server.
 
 Application settings can't reduce the level of security configured in SQL Server, but can optionally strengthen it. An application can request encryption by setting the `TrustServerCertificate` and `Encrypt` keywords to `true`, guaranteeing that encryption takes place even when a server certificate hasn't been provisioned. However, if `TrustServerCertificate` isn't enabled in the client configuration, a provisioned server certificate is still required.
 
@@ -119,13 +128,15 @@ The following table describes all cases.
 | No/Optional | Ignored | No encryption occurs. |
 | Yes/Mandatory | No | Encryption occurs only if there's a verifiable server certificate, otherwise the connection attempt fails. |
 | Yes/Mandatory | Yes | Encryption always occurs, but may use a self-signed server certificate. |
-| Yes/Mandatory | Yes | Encryption always occurs, but may use a self-signed server certificate. |
 | Strict<sup>1</sup> | Ignored | Encryption always occurs and must use a verifiable server certificate, otherwise the connection attempt fails. |
 
 <sup>1</sup> Strict encryption is only available starting with Microsoft.Data.SqlClient version 5.0.
 
+For more information, including behavior in previous versions, see [Encryption and certificate validation](encryption-and-certificate-validation.md).
+
 ## See also
 
-- [Connection strings](connection-strings.md)
-- [Connecting to a data source](connecting-to-data-source.md)
-- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)
+[Connection strings](connection-strings.md)  
+[Encryption and certificate validation](encryption-and-certificate-validation.md)  
+[Connecting to a data source](connecting-to-data-source.md)  
+[Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)  

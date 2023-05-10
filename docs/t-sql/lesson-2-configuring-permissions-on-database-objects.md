@@ -4,7 +4,7 @@ description: This lesson shows you how to configure permissions and create a vie
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.date: 12/02/2022
+ms.date: 04/19/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -12,10 +12,12 @@ helpviewer_keywords:
   - "database permissions"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-
 # Lesson 2: Configure permissions on database objects
 
 [!INCLUDE[sql-asdb-asdbmi-pdw-md](../includes/applies-to-version/sql-asdb-asdbmi-pdw.md)]
+
+> [!NOTE]  
+> The [Get Started Querying with Transact-SQL](/training/paths/get-started-querying-with-transact-sql/) learning path provides more in-depth content, along with practical examples.
 
 Granting a user access to a database involves three steps. First, you create a login. The login lets the user connect to the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. Then you configure the login as a user in the specified database. And finally, you grant that user permission to database objects. This lesson shows you these three steps, and shows you how to create a view and a stored procedure as the object.
 
@@ -30,8 +32,8 @@ To complete this tutorial, you need SQL Server Management Studio and access to a
 
 If you don't have access to a SQL Server instance, select your platform from the following links. If you choose SQL Authentication, use your SQL Server login credentials.
 
-- **Windows**: [Download SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- **Linux**: [Download SQL Server 2017 in a container](../linux/quickstart-install-connect-docker.md).
+- **Windows**: [Download SQL Server 2022 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+- **Linux**: [Download SQL Server 2022 in a container](../linux/quickstart-install-connect-docker.md).
 
 [!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
@@ -39,7 +41,7 @@ If you don't have access to a SQL Server instance, select your platform from the
 
 To access the [!INCLUDE[ssDE](../includes/ssde-md.md)], users require a login. The login can represent the user's identity as a Windows account or as a member of a Windows group, or the login can be a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] login that exists only in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Whenever possible you should use Windows Authentication.
 
-By default, administrators on your computer have full access to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For this lesson, we want to have a less privileged user; therefore, you will create a new local Windows Authentication account on your computer. To do this, you must be an administrator on your computer. Then you will grant that new user access to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+By default, administrators on your computer have full access to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For this lesson, we want to have a less privileged user; therefore, you will create a new local Windows Authentication account on your computer. To do this, you must be an administrator on your computer. Then you grant that new user access to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 ### Create a new Windows account
 
@@ -50,7 +52,7 @@ By default, administrators on your computer have full access to [!INCLUDE[ssNoVe
 
 ### Create a SQL login
 
-In a Query Editor window of [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], type and execute the following code replacing `computer_name` with the name of your computer. `FROM WINDOWS` indicates that Windows will authenticate the user. The optional `DEFAULT_DATABASE` argument connects `Mary` to the `TestData` database, unless her connection string indicates another database. This statement introduces the semicolon as an optional termination for a [!INCLUDE[tsql](../includes/tsql-md.md)] statement.
+In a Query Editor window of [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], type and execute the following code replacing `computer_name` with the name of your computer. `FROM WINDOWS` indicates that Windows authenticates the user. The optional `DEFAULT_DATABASE` argument connects `Mary` to the `TestData` database, unless the connection string indicates another database. This statement introduces the semicolon as an optional termination for a [!INCLUDE[tsql](../includes/tsql-md.md)] statement.
 
 ```sql
 CREATE LOGIN [computer_name\Mary]
@@ -59,16 +61,16 @@ CREATE LOGIN [computer_name\Mary]
 GO
 ```
 
-This authorizes a user name `Mary`, authenticated by your computer, to access this instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. If there is more than one instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on the computer, you must create the login on each instance that `Mary` must access.  
+This authorizes a user name `Mary`, authenticated by your computer, to access this instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. If there is more than one instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on the computer, you must create the login on each instance that `Mary` must access.
 
 > [!NOTE]  
 > Because `Mary` is not a domain account, this user name can only be authenticated on this computer.
 
 ## Grant access to a database
 
-Mary now has access to this instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], but doesn't have permission to access the databases. She doesn't even have access to her default database `TestData` until you authorize her as a database user.
+The `Mary` account now has access to this instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], but doesn't have permission to access the databases. The account doesn't even have access to the default database `TestData` until you authorize the account as a database user.
 
-To grant Mary access, switch to the `TestData` database, and then use the CREATE USER statement to map her login to a user named Mary.
+To grant `Mary` access, switch to the `TestData` database, and then use the CREATE USER statement to map the login to a user named `Mary`.
 
 ### Create a user in a database
 
@@ -112,4 +114,4 @@ The next article teaches you how to remove database objects you created in the o
 
 Go to the next article to learn more:
 > [!div class="nextstepaction"]
-> [Next steps](lesson-3-deleting-database-objects.md)
+> [Lesson 3: Delete database objects](lesson-3-deleting-database-objects.md)

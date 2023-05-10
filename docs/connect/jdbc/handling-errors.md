@@ -3,7 +3,7 @@ title: Handling errors
 description: Learn about error handling and what information the SQLServerException class provides in the Microsoft JDBC Driver for SQL Server.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 08/12/2019
+ms.date: 05/01/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -19,8 +19,6 @@ When using the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], al
 - `getErrorCode()` returns the specific database error number.
 
 - `getMessage()` returns the full text of the exception. The error message text describes the problem, and frequently includes placeholders for information, such as object names, that are inserted in the error message when it's displayed.
-
-- `getNextException()` returns the next `SQLServerException` object or null if there are no more exception objects to return.
 
 - `getSQLServerError()` returns the `SQLServerError` object containing detailed info about the exception as received from SQL Server. This method returns null if no server error has occurred.
 

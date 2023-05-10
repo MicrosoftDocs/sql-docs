@@ -29,7 +29,7 @@ To start with, create two databases, **Customers** and **Orders**, either in the
 
 Execute the following queries on the **Orders** database to create the **OrderInformation** table and input the sample data.
 
-```tsql
+```sql
 CREATE TABLE [dbo].[OrderInformation](
     [OrderID] [int] NOT NULL,
     [CustomerID] [int] NOT NULL
@@ -43,7 +43,7 @@ INSERT INTO [dbo].[OrderInformation] ([OrderID], [CustomerID]) VALUES (564, 8)
 
 Now, execute following query on the **Customers** database to create the **CustomerInformation** table and input the sample data.
 
-```tsql
+```sql
 CREATE TABLE [dbo].[CustomerInformation](
     [CustomerID] [int] NOT NULL,
     [CustomerName] [varchar](50) NULL,
@@ -62,7 +62,7 @@ INSERT INTO [dbo].[CustomerInformation] ([CustomerID], [CustomerName], [Company]
 1. Open SQL Server Management Studio or SQL Server Data Tools in Visual Studio.
 2. Connect to the Orders database and execute the following T-SQL commands:
 
-    ```tsql
+    ```sql
     CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<master_key_password>';
     CREATE DATABASE SCOPED CREDENTIAL ElasticDBQueryCred
     WITH IDENTITY = '<username>',
@@ -77,7 +77,7 @@ INSERT INTO [dbo].[CustomerInformation] ([CustomerID], [CustomerName], [Company]
 
 To create an external data source, execute the following command on the Orders database:
 
-```tsql
+```sql
 CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
     (TYPE = RDBMS,
     LOCATION = '<server_name>.database.windows.net',
@@ -90,7 +90,7 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
 
 Create an external table on the Orders database, which matches the definition of the CustomerInformation table:
 
-```tsql
+```sql
 CREATE EXTERNAL TABLE [dbo].[CustomerInformation]
 ( [CustomerID] [int] NOT NULL,
     [CustomerName] [varchar](50) NOT NULL,
@@ -103,7 +103,7 @@ WITH
 
 Once you have defined your external data source and your external tables, you can now use T-SQL to query your external tables. Execute this query on the Orders database:
 
-```tsql
+```sql
 SELECT OrderInformation.CustomerID, OrderInformation.OrderId, CustomerInformation.CustomerName, CustomerInformation.Company
 FROM OrderInformation
 INNER JOIN CustomerInformation

@@ -4,7 +4,7 @@ description: Learn about query processing feedback features, part of the Intelli
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: katsmith
-ms.date: 09/29/2022
+ms.date: 05/02/2023
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
@@ -230,7 +230,7 @@ Persistence also applies to [DOP feedback](#degree-of-parallelism-dop-feedback) 
 
 #### Enable memory grant feedback: persistence and percentile
 
-To enable memory grant feedback persistence and percentile, use database compatibility level 140 or higher for the database you're connected to when executing the query. Peristence and percentile feedback are [enabled by default](#percentile-and-persistence-mode-memory-grant-feedback).
+To enable memory grant feedback persistence and percentile, use database compatibility level 140 or higher for the database you're connected to when executing the query. Persistence and percentile feedback are [enabled by default](#percentile-and-persistence-mode-memory-grant-feedback).
 
 `ALTER DATABASE <DATABASE NAME> SET COMPATIBILITY LEVEL = 140; -- OR HIGHER`
 
@@ -271,9 +271,12 @@ Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], when Query 
 
 ## Degree of parallelism (DOP) feedback
 
-**Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later
+**Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (Preview)
 
 [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] introduced a new feature called degree of parallelism (DOP) feedback to improve query performance by identifying parallelism inefficiencies for repeating queries, based on elapsed time and waits. DOP feedback is part of the [intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) family of features, and addresses suboptimal usage of parallelism for repeating queries. This scenario helps with optimizing resource usage and improving scalability of workloads, when excessive parallelism can cause performance issues. Instead of incurring in the pains of an all-encompassing default or manual adjustments to each query, DOP feedback self-adjusts DOP to avoid the issues described above.
+
+> [!NOTE]
+> This feature is currently available in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] as a limited preview. For more information and how to apply for the preview, see [Announcing Degree of Parallelism Feedback Limited Preview](https://techcommunity.microsoft.com/t5/azure-sql-blog/announcing-degree-of-parallelism-feedback-limited-preview/ba-p/3806924).
 
 Instead of incurring in the pains of an all-encompassing default or manual adjustments to each query, DOP feedback self-adjusts DOP to avoid excess parallelism. If parallelism usage is deemed inefficient, DOP feedback lowers the DOP for the next execution of the query, from whatever is the configured DOP, and verify if it helps.
 
@@ -336,7 +339,7 @@ Currently in preview for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] a
 
 Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]), the Cardinality Estimation (CE) feedback is part of the [intelligent query processing family of features](intelligent-query-processing.md) and addresses suboptimal query execution plans for repeating queries when these issues result from incorrect CE model assumptions. This scenario helps with reducing regression risks related to the default CE when upgrading from older versions of the Database Engine.
 
-Because no single set of CE models and assumptions can accommodate the vast array of customer workloads and data distributions, CE feedback provides an adaptable solution based on query runtime characteristics. CE feedback will identify and use a model assumption that better fits a given query and data distribution to improve query execution plan quality. Feedback is applied when significant model estimation errors resulting in performance drops are found.
+Because no single set of CE models and assumptions can accommodate the vast array of customer workloads and data distributions, CE feedback provides an adaptable solution based on query runtime characteristics. CE feedback will identify and use a model assumption that better fits a given query and data distribution to improve query execution plan quality. Currently, CE Feedback can identify plan operators where the estimated number of rows and the actual number of rows are very different. Feedback is applied when significant model estimation errors occur, and there is a viable alternate model to try.
 
 - Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], when Query Store for secondary replicas is enabled, CE feedback is not replica-aware for secondary replicas in availability groups. CE feedback currently only benefits primary replicas. For more information, see [Query Store for secondary replicas](query-store-for-secondary-replicas.md).
 
@@ -352,7 +355,7 @@ CE feedback learns which CE model assumptions are optimal over time and then app
 
 1. CE feedback **identifies** model-related assumptions and evaluates whether they're accurate for repeating queries.
 
-1. If an assumption looks incorrect, a subsequent execution of the same query is tested with a query plan that adjusts the impactful CE model assumption and **verifies** if it helps.
+1. If an assumption looks incorrect, a subsequent execution of the same query is tested with a query plan that adjusts the impactful CE model assumption and **verifies** if it helps.  We identify incorrectness by looking at actual vs. estimated rows from plan operators.  Not all errors can be corrected by model variants available in CE feedback.
 
 1. If it improves plan quality, the old query plan is **replaced** with a query plan that uses the appropriate [USE HINT query hint](../../t-sql/queries/hints-transact-sql-query.md#l-using-use-hint) that adjusts the estimation model, implemented through the [Query Store hint](query-store-hints.md) mechanism.
 

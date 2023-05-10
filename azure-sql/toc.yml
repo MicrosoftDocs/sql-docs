@@ -112,10 +112,7 @@
     - name: Business continuity
       displayName: Backup, back up, restore, recovery
       items:
-        - name: Overview
-          href: database/business-continuity-high-availability-disaster-recover-hadr-overview.md
-        - name: High availability
-          href: database/high-availability-sla.md
+
         - name: Backup and recovery 
           items:
           - name: Accelerated database recovery
@@ -301,6 +298,8 @@
       - name: ARM template
         displayName: Resource Manager
         href: database/single-database-create-arm-template-quickstart.md
+      - name: Terraform
+        href: database/single-database-create-terraform-quickstart.md
       - name: With ledger and digest storage
         displayName: Create Azure SQL Database with ledger
         href: database/ledger-create-a-single-database-with-ledger-enabled.md
@@ -321,6 +320,8 @@
         href: database/azure-sql-dotnet-entity-framework-core-quickstart.md
       - name: Python with Pyodbc
         href: database/azure-sql-python-quickstart.md
+      - name: Node.js with mssql
+        href: database/azure-sql-javascript-mssql-quickstart.md
       - name: Use the Azure portal query editor 
         href: database/connect-query-portal.md
     - name: GitHub Actions
@@ -443,9 +444,25 @@
           - name: Configure Azure Attestation
             href: database/always-encrypted-enclaves-configure-attestation.md
         - name: Azure SQL Auditing
-          href: database/auditing-overview.md
-        - name: Audit log format
-          href: database/audit-log-format.md
+          items:
+            - name: Auditing overview
+              href: database/auditing-overview.md
+            - name: Auditing setup
+              href: database/auditing-setup.md
+            - name: Analyze audit logs and reports
+              href: database/auditing-analyze-audit-logs.md
+            - name: Auditing best practices
+              href: database/auditing-best-practices.md
+            - name: Auditing managed identity
+              href: database/auditing-managed-identity.md
+            - name: Auditing Microsoft support operations
+              href: database/auditing-microsoft-support-operations.md
+            - name: Auditing policy at the server and database level
+              href: database/auditing-server-level-database-level.md
+            - name: Audit log format
+              href: database/audit-log-format.md
+            - name: Manage Auditing using APIs
+              href: database/auditing-manage-using-api.md
         - name: DNS aliases
           href: database/dns-alias-overview.md
         - name: Ledger
@@ -496,6 +513,10 @@
 
     - name: Business continuity
       items: 
+      - name: Overview
+        href: database/business-continuity-high-availability-disaster-recover-hadr-overview.md
+      - name: High availability
+        href: database/high-availability-sla.md
       - name: Automated backups
         href: database/automated-backups-overview.md
       - name: Active geo-replication
@@ -632,7 +653,16 @@
         - name: Azure Monitor for SQL Database
           href: database/monitoring-sql-database-azure-monitor.md 
         - name: Azure Monitor for SQL Database reference 
-          href: database/monitoring-sql-database-azure-monitor-reference.md              
+          href: database/monitoring-sql-database-azure-monitor-reference.md
+    - name: Hyperscale databases
+      items: 
+      - name: Manage Hyperscale databases
+        href: database/manage-hyperscale-database.md
+      - name: Create zone-redundant database
+        href: database/hyperscale-create-zone-redundant-database.md
+      - name: Hyperscale performance diagnostics
+        href: database/hyperscale-performance-diagnostics.md
+        
     - name: Manage
       items:
       - name: Management API reference
@@ -653,26 +683,24 @@
         href: database/elastic-pool-manage.md
       - name: Resource management in dense elastic pools
         href: database/elastic-pool-resource-management.md
-      - name: Manage Hyperscale databases
-        href: database/manage-hyperscale-database.md
-      - name: Hyperscale performance diagnostics
-        href: database/hyperscale-performance-diagnostics.md
+
+
       - name: Block T-SQL CRUD
         href: database/block-crud-tsql.md
       - name: Azure Automation
         href: database/automation-manage.md
       - name: Block geo-replication of Azure SQL Database backups
         href: database/block-geo-redundant-backup-storage.md
-      - name: Elastic jobs (preview)
-        items:
-        - name: Job automation with elastic jobs
-          href: database/job-automation-overview.md
-        - name: Configure jobs
-          href: database/elastic-jobs-overview.md
-        - name: Create and manage (PowerShell)
-          href: database/elastic-jobs-powershell-create.md
-        - name: Create and manage (T-SQL)
-          href: database/elastic-jobs-tsql-create-manage.md
+    - name: Elastic jobs (preview)
+      items:
+      - name: Job automation with elastic jobs
+        href: database/job-automation-overview.md
+      - name: Configure jobs
+        href: database/elastic-jobs-overview.md
+      - name: Create and manage (PowerShell)
+        href: database/elastic-jobs-powershell-create.md
+      - name: Create and manage (T-SQL)
+        href: database/elastic-jobs-tsql-create-manage.md
 
     - name: Security
       items: 
@@ -1109,6 +1137,10 @@
       href: managed-instance/data-virtualization-overview.md
     - name: Business continuity
       items: 
+      - name: Overview
+        href: managed-instance/business-continuity-high-availability-disaster-recover-hadr-overview.md
+      - name: High availability
+        href: managed-instance/high-availability-sla.md
       - name: Automated backups
         href: managed-instance/automated-backups-overview.md 
       - name: Backup transparency
@@ -1616,6 +1648,8 @@
             - name: Azure portal
               displayName: Always On, alwayson, availability group
               href: virtual-machines/windows/availability-group-azure-portal-configure.md
+            - name: Migrate single subnet to multi-subnet
+              href: virtual-machines/windows/availability-group-manually-migrate-multi-subnet.md
             - name: Manually
               items: 
               - name: Prerequisites

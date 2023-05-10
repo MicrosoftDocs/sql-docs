@@ -42,6 +42,12 @@ Visit https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/bg-
 - If Oracle, Teradata, or other OOB component is not found after upgrading SSDT, please make sure that the connector for latest SQL Server version is installed.
 
 ## Known issues
+**Version 0.4**
+  1. Target sever versions supported: SQL server 2017, SQL server 2019 and SQL server 2022
+  2. Can't design Dimension Processing and Partition Processing.
+  3. Can't design DQS related component.
+  4. Project name in Solution Explorer UI doesn’t show target server version as suffix.
+  
 **Version 0.3**
   1. Target sever versions supported: SQL server 2017, SQL server 2019 and SQL server 2022
   2. Can't design Dimension Processing and Partition Processing.

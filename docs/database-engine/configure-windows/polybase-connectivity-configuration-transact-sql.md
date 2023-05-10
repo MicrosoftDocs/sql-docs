@@ -119,7 +119,7 @@ Starting in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], Hadoop is no l
 ### A. List all available configuration settings  
  The following example shows how to list all configuration options.  
   
-```tsql  
+```sql  
 EXEC sp_configure;  
 ```  
   
@@ -127,14 +127,14 @@ EXEC sp_configure;
   
 ### B. List the configuration settings for one configuration name  
   
-```tsql  
+```sql  
 EXEC sp_configure @configname='hadoop connectivity';  
 ```  
   
 ### C. Set Hadoop connectivity  
  This example sets PolyBase to option 7. This option allows PolyBase to create and use external tables on Hortonworks HDP 2.1, 2.2, and 2.3 on Linux and Windows Server, and Azure Blob Storage. For example, SQL could have 30 external tables with 7 of them referencing data on Hortonworks HDP 2.1 on Linux, 4 on Hortonworks HDP 2.2 on Linux, 7 on Hortonworks HDP 2.3 on Linux, and the other 12 referencing Azure Blob Storage.  
   
-```tsql
+```sql
 --Configure external tables to reference data on Hortonworks HDP 2.1, 2.2, and 2.3 on Linux, and Azure Blob Storage  
   
 sp_configure @configname = 'hadoop connectivity', @configvalue = 7;  

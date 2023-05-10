@@ -83,7 +83,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 6.  Under the **Index key columns** tab, click **Add...**.  
   
-7.  In the **Select Columns from**_table\_name_ dialog box, select the check box or check boxes of the table column or columns to be added to the index.  
+7.  In the **Select Columns from** _table\_name_ dialog box, select the check box or check boxes of the table column or columns to be added to the index.  
   
 8.  Click **OK**.  
   

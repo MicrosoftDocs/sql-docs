@@ -85,6 +85,8 @@ For security reasons, broadcasting on any public cloud (Azure, Google, AWS) isn'
 
 Availability groups configured in a single subnet must either use a load balancer or distributed network name (DNN) to route traffic to the appropriate replica. To avoid these dependencies, configure your availability group in multiple subnets so the availability group listener is configured with an IP address for a replica in each subnet, and can route traffic appropriately. 
 
+If you've already created your availability group in a single subnet, you can [migrate it to a multi-subnet environment](availability-group-manually-migrate-multi-subnet.md). 
+
 ## Lease mechanism 
 
 For SQL Server, the AG resource DLL determines the health of the AG based on the AG lease mechanism and Always On health detection. The AG resource DLL exposes resource health through the *IsAlive* operation. The resource monitor polls IsAlive at the cluster heartbeat interval, which is set by the **CrossSubnetDelay** and **SameSubnetDelay** cluster-wide values. On a primary node, the cluster service initiates failover whenever the IsAlive call to the resource DLL returns that the AG isn't healthy.

@@ -13,7 +13,7 @@ monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ve
 
 # Create and use updatable ledger tables
 
-[!INCLUDE [SQL Server 2022 Azure SQL Database](../../../includes/applies-to-version/sqlserver2022-asdb.md)]
+[!INCLUDE [SQL Server 2022 Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
 This article shows you how to create an [updatable ledger table](ledger-updatable-ledger-tables.md). Next, you'll insert values in your updatable ledger table and then make updates to the data. Finally, you'll view the results by using the ledger view. We'll use an example of a banking application that tracks banking customers' balances in their accounts. Our example will give you a practical look at the relationship between the updatable ledger table and its corresponding history table and ledger view.
 

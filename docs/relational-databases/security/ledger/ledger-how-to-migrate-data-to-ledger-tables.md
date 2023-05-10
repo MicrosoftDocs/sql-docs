@@ -13,7 +13,7 @@ monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ve
 
 # Migrate data from regular tables to ledger tables
 
-[!INCLUDE [SQL Server 2022 Azure SQL Database](../../../includes/applies-to-version/sqlserver2022-asdb.md)]
+[!INCLUDE [SQL Server 2022 Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
 Converting regular tables to ledger tables isn't possible, but you can migrate the data from an existing regular table to a ledger table, and then replace the original table with the ledger table.
 

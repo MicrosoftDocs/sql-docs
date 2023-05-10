@@ -87,6 +87,8 @@ landingContent:
             url: https://customers.microsoft.com/story/1497685499820529889-lenovo-manufacturing-azure-SQL-database-ledger
           - text: Microsoft Customer Story - RTGS.global automates financial transfers, unlocks trillions in capital with Azure
             url: https://customers.microsoft.com/en-us/story/1379614319255768839-rtgs-partner-professional-services-azure-sql
+          - text: Microsoft Customer Story - Qode Health Solutions secures COVID-19 vaccination records with the ledger feature in Azure SQL Database
+            url: https://customers.microsoft.com/en-us/story/1595119379301789552-qode-professional-services-azure-sql-database
 
 
   # Card

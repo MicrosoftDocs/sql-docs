@@ -13,7 +13,7 @@ monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ve
 
 # Create and use append-only ledger tables
 
-[!INCLUDE [SQL Server 2022 Azure SQL Database](../../../includes/applies-to-version/sqlserver2022-asdb.md)]
+[!INCLUDE [SQL Server 2022 Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
 This article shows you how to create an [append-only ledger table](ledger-append-only-ledger-tables.md). Next, you'll insert values in your append-only ledger table and then attempt to make updates to the data. Finally, you'll view the results by using the ledger view. We'll use an example of a card key access system for a facility, which is an append-only system pattern. Our example will give you a practical look at the relationship between the append-only ledger table and its corresponding ledger view.
 

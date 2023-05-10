@@ -144,8 +144,8 @@ For more information, see [CREATE DATABASE (Transact-SQL)](../../../t-sql/statem
 > The PowerShell cmdlet is currently not available in public preview. You can use the T-SQL or Azure CLI instead.
 
 Create a single ledger database with the [New-AzSqlInstanceDatabase](/powershell/module/az.sql/New-AzSqlInstanceDatabase) cmdlet.
-The below example creates a ledger database on a specified instance. The parameter -EnableLedger will create the ledger database.
-*Note: Make sure you modify the parameters ResourceGroupName, InstanceName and Name*
+The following example creates a ledger database on a specified instance. The parameter `-EnableLedger` creates the ledger database.
+*Make sure you modify the parameters ResourceGroupName, InstanceName and Name.*
 
 ```azurepowershell-interactive
 Write-host "Creating a ledger database..."
@@ -160,7 +160,7 @@ $database
 
 ## Enable ledger database using the Azure CLI
 
-Create a ledger database with the [az sql midb create](/cli/azure/sql/midb) command. The below example creates a ledger database on a specified instance. *Note: Make sure you modify the parameters resource-group, managed-instance and name*
+Create a ledger database with the [az sql midb create](/cli/azure/sql/midb) command. The below example creates a ledger database on a specified instance. *Make sure you modify the parameters resource-group, managed-instance and name.*
 
 ```azurecli-interactive
 az sql midb create \
@@ -176,7 +176,7 @@ az sql midb create \
 
 ::: zone pivot="as1-sql-server"
 
-This article provides information on creating a [ledger database](ledger-overview.md) using T-SQL in **[!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)]**. For information on creating a ledger database in Azure SQL Database or Azure SQL Managed Instance, use the switch at the top of this page.
+This article provides information on creating a [ledger database](ledger-overview.md) by using T-SQL in **[!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)]**. For information on creating a ledger database in Azure SQL Database or Azure SQL Managed Instance, use the switch at the top of this page.
 
 ## Prerequisites
 

@@ -75,7 +75,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 3.  Copy and paste the following example into the query window and click **Execute**. The example first creates a view and then modifies the view by using ALTER VIEW. A WHERE clause is added to the view definition.  
   
-    ```  
+    ```sql
     USE AdventureWorks2012 ;  
     GO  
     -- Create a view.  

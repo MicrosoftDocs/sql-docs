@@ -92,7 +92,7 @@ In this article, we'll describe how you can configure automatic generation and s
 
 ## Enable automatic digest storage using the Azure portal
 
-# [Portal](#tab/Portal)
+# [Portal](#tab/Portal2)
 
 1. Open the [Azure portal](https://portal.azure.com/) and locate the managed database for which you want to enable automatic digest storage.
 > [!NOTE]
@@ -113,7 +113,7 @@ In this article, we'll describe how you can configure automatic generation and s
 > [!NOTE]
 > The PowerShell cmdlet is currently not available in public preview. You can use the Azure Portal or Azure CLI instead.
 
-Update the database to start uploading ledger digests to the Azure Blob Storage account or Azure Confidential Ledger, by using the [Enable-AzSqlInstanceDatabaseLedgerDigestUpload](/powershell/module/az.sql/enable-azsqlinstancedatabaseledgerdigestupload) cmdlet. When the endpoint parameter is an Azure Blob Storage endpoint, the database server will create a new container, named **sqldbledgerdigests**, within the storage account and it will start writing ledger digests to the container.
+Update the database to start uploading ledger digests to the Azure Blob Storage account or Azure Confidential Ledger. When the endpoint parameter is an Azure Blob Storage endpoint, the database server will create a new container, named **sqldbledgerdigests**, within the storage account and it will start writing ledger digests to the container.
   
 > [!NOTE]
 > Make sure you modify the parameters *ResourceGroupName, InstanceName, DatabaseName and Endpoint (ACL endpoint or Azure Storage endpoint)*.

@@ -4,7 +4,7 @@ description: You can use a custom task sequence that can deploy the Connected Ma
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mikeray, randolphwest
-ms.date: 01/20/2022
+ms.date: 05/10/2023
 ms.service: sql
 ms.topic: how-to
 ---

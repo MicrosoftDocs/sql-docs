@@ -2,8 +2,8 @@
 title: High availability
 titleSuffix: Azure SQL Managed Instance
 description: Learn about the Azure SQL Managed Instance service high availability capabilities and features.
-author: MilanMSFT
-ms.author: mlazic
+author: strahinjas
+ms.author: sstefanovic
 ms.reviewer: mathoma, randolphwest
 ms.date: 05/01/2023
 ms.service: sql-managed-instance

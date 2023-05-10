@@ -2,8 +2,8 @@
 title: Cloud business continuity - disaster recovery
 titleSuffix: Azure SQL  Managed Instance
 description: Learn how Azure SQL Managed Instance supports cloud business continuity and disaster recovery to help keep mission-critical cloud applications running.
-author: MilanMSFT
-ms.author: mlazic
+author: strahinjas
+ms.author: sstefanovic
 ms.reviewer:  mathoma
 ms.date: 05/01/2023
 ms.service: sql-managed-instance

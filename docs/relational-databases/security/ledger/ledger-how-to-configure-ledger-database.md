@@ -122,6 +122,9 @@ This article provides information on configuring a [ledger database](ledger-over
 > [!NOTE]
 > Enabling the ledger functionality at the database level will make all tables in this database updatable ledger tables. This option cannot be changed after the database is created. Creating a table with the option `LEDGER = OFF` will throw an error message.
 
+
+# [T-SQL](#tab/t-sql2)
+
 ## Enable ledger database using T-SQL
 
 1. Sign into your managed instance using SQL Server Management Studio (SSMS) or Azure Data Studio.

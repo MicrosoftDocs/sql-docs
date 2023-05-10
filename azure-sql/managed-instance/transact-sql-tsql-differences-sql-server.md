@@ -119,7 +119,7 @@ WITH PRIVATE KEY (<private_key_options>)
 
 ### Credential
 
-Only Azure Key Vault and `SHARED ACCESS SIGNATURE` identities are supported. Windows users aren't supported.
+Managed identity, Azure Key Vault and `SHARED ACCESS SIGNATURE` identities are supported. Windows users aren't supported.
 
 See [CREATE CREDENTIAL](/sql/t-sql/statements/create-credential-transact-sql) and [ALTER CREDENTIAL](/sql/t-sql/statements/alter-credential-transact-sql).
 

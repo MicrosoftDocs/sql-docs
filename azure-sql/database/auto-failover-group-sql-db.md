@@ -4,7 +4,7 @@ description: Auto-failover groups let you manage geo-replication and automatic /
 author: AbdullahMSFT
 ms.author: amamun
 ms.reviewer: wiassaf, mathoma
-ms.date: 05/06/2023
+ms.date: 05/09/2023
 ms.service: sql-database
 ms.subservice: high-availability
 ms.topic: conceptual
@@ -105,9 +105,9 @@ For information about using point-in-time restore with failover groups, see [Poi
 
 Deploy both managed instances to [paired regions](/azure/availability-zones/cross-region-replication-azure) for performance reasons. Azure SQL Database failover groups in paired regions have better performance compared to unpaired regions.
 
-Azure SQL Database follows a safe deployment practice where Azure paired regions are guaranteed to be not deployed to at the same time. However, it is not possible to predict which region will be upgraded first, so the order of deployment is not guaranteed. Sometimes, your primary instance will be upgraded first, and sometimes it would be secondary.
+Azure SQL Database follows a safe deployment practice where Azure paired regions are generally not deployed to at the same time. However, it is not possible to predict which region will be upgraded first, so the order of deployment is not guaranteed. Sometimes, your primary instance will be upgraded first, and sometimes it would be secondary.
 
-In situations where your database is enabled for [geo-replication](active-geo-replication-overview.md) or [auto-failover groups](auto-failover-group-sql-db.md), and the geo-replication does not align with the [Azure region pairing](/azure/reliability/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies), you should different maintenance window schedules for your primary and secondary database. For example, you can select **Weekday** maintenance window for your geo-secondary database and **Weekend** maintenance window for your geo-primary database.
+In situations where your database has [geo-replication](active-geo-replication-overview.md) or [auto-failover groups](auto-failover-group-sql-db.md) configured, and the geo-replication does not align with the [Azure region pairing](/azure/reliability/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies), you should select different maintenance window schedules for your primary and secondary database. For example, you can select **Weekday** maintenance window for your geo-secondary database and **Weekend** maintenance window for your geo-primary database.
 
 ## Initial seeding 
 

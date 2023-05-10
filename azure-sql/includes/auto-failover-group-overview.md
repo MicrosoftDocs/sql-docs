@@ -3,7 +3,7 @@ title: Auto-failover group overview
 description: Deduplicating content between SQL Database and SQL Managed Instance, in this case using an include file for an overview of the auto-failover group feature.
 author: MashaMSFT
 ms.author: mathoma
-ms.reviewer: emlisa, mlandzic
+ms.reviewer: emlisa, mlandzic, wiassaf
 ms.date: 05/06/2023
 ms.topic: include
 ---

@@ -77,7 +77,7 @@ In order to prevent a man-in-the-middle attack with `strict` connection encrypti
 > - SQL Server Management Studio (SSMS)
 > - sqlcmd utility
 > - bcp utility
-
+> - SQL CEIP service
 ## Additional changes to connection string encryption properties
 
 The following additions are added to connection strings for encryption:

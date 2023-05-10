@@ -4,7 +4,7 @@ description: CREATE TABLE (Transact-SQL)
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/23/2024
+ms.date: 05/23/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference

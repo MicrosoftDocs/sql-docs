@@ -30,7 +30,7 @@ monikerRange: ">=sql-server-2016"
 For local installations, you must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read permissions on the remote share.
 
 > [!IMPORTANT]  
-> For the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edition change to be activated, you must restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services. This will result in application down time while services are offline.
+> For the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edition change to be activated, Setup must restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services. This will result in application down time while services are offline.
 
 ## Procedure
 

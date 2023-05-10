@@ -125,7 +125,7 @@ This tutorial shows an example of an AG with three replicas. You need:
 
 ## Create the StatefulSet
 
-1. Create a StatefulSet YAML file with following sample content, and name it `dxemmsql.yml`.
+1. Create a StatefulSet YAML file with following sample content, and name it `dxemssql.yml`.
 
    This StatefulSet configuration creates three DxEMSSQL replicas that utilize persistent volume claims to store their data. Each pod in this StatefulSet comprises two containers: a [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] container and a DxEnterprise container. These containers are started separately from one another in a "sidecar" configuration, but DxEnterprise manages the AG replica in the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] container.
 

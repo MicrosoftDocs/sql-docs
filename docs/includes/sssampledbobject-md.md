@@ -1,8 +1,8 @@
 ---
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 09/20/2022
+ms.date: 05/10/2023
 ms.service: sql
 ms.topic: include
 ---
- `AdventureWorks2019` 
+ `AdventureWorks2022` 

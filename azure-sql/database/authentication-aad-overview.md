@@ -4,8 +4,8 @@ titleSuffix: Azure SQL Database & Azure SQL Managed Instance & Azure Synapse Ana
 description: Learn about how to use Azure Active Directory for authentication with Azure SQL Database, Azure SQL Managed Instance, and Synapse SQL in Azure Synapse Analytics
 author: GithubMirek
 ms.author: mireks
-ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 04/13/2023
+ms.reviewer: wiassaf, vanto, mathoma, randolphwest
+ms.date: 05/08/2023
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
@@ -14,8 +14,8 @@ ms.custom:
   - sqldbrb=1
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
-
 # Use Azure Active Directory authentication
+
 [!INCLUDE[appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa.md)]
 
 This article provides an overview of using Azure Active Directory to authenticate to [Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), [SQL Server on Windows Azure VMs](../virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview.md), [Synapse SQL in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) and [SQL Server for Windows and Linux](/sql/relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview) by using identities in Azure AD.
@@ -50,13 +50,13 @@ With Azure AD authentication, you can centrally manage the identities of databas
 The configuration steps include the following procedures to configure and use Azure Active Directory authentication.
 
 1. Create and populate Azure AD.
-2. Optional: Associate or change the active directory that is currently associated with your Azure Subscription.
-3. Create an Azure Active Directory administrator.
-4. Configure your client computers.
-5. Create contained database users in your database mapped to Azure AD identities.
-6. Connect to your database by using Azure AD identities.
+1. Optional: Associate or change the active directory that is currently associated with your Azure Subscription.
+1. Create an Azure Active Directory administrator.
+1. Configure your client computers.
+1. Create contained database users in your database mapped to Azure AD identities.
+1. Connect to your database by using Azure AD identities.
 
-> [!NOTE]
+> [!NOTE]  
 > For Azure SQL, Azure VMs and SQL Server 2022, Azure AD authentication only supports access tokens which originate from Azure AD and doesn't support third-party access tokens. Azure AD also doesn't support redirecting Azure AD queries to third-party endpoints. This applies to all SQL platforms and all operating systems that support Azure AD authentication.
 
 ## Trust architecture
@@ -85,8 +85,8 @@ When using Azure AD authentication, there are two Administrator accounts: the or
 
 ![admin structure][3]
 
-> [!NOTE]
-> Azure AD authentication with Azure SQL supports only a single Azure AD tenant where the Azure SQL resource currently resides. All Azure AD objects from this tenant can be set up as users allowing access to Azure SQL in this tenant. Only an Azure AD admin from this tenant can be configured to enable access to Azure SQL in this tenant . Azure AD multi-tenant authentication accessing Azure SQL from different tenants are not supported. Multi-tenant Azure AD admins cannot be set up for an Azure SQL resource. 
+> [!NOTE]  
+> Azure AD authentication with Azure SQL supports only a single Azure AD tenant where the Azure SQL resource currently resides. All Azure AD objects from this tenant can be set up as users allowing access to Azure SQL in this tenant. Only an Azure AD admin from this tenant can be configured to enable access to Azure SQL in this tenant . Azure AD multi-tenant authentication accessing Azure SQL from different tenants are not supported. Multi-tenant Azure AD admins cannot be set up for an Azure SQL resource.
 
 ## Permissions
 
@@ -103,7 +103,6 @@ To create a contained database user in Azure SQL Database, Azure SQL Managed Ins
   - Imported members from other Azure ADs who are native or federated domain members.
   - Active Directory groups created as security groups.
 
-
 - Azure AD users that are part of a group that is member of the `db_owner` database role cannot use the **[CREATE DATABASE SCOPED CREDENTIAL](/sql/t-sql/statements/create-database-scoped-credential-transact-sql)** syntax against Azure SQL Database and Azure Synapse. You'll see the following error:
 
     `SQL Error [2760] [S0001]: The specified schema name 'user@mydomain.com' either doesn't exist or you do not have permission to use it.`
@@ -117,6 +116,10 @@ To create a contained database user in Azure SQL Database, Azure SQL Managed Ins
   - `SUSER_SNAME(<SID>)`
   - `SUSER_ID(<name>)`
   - `SUSER_SID(<name>)`
+
+- Azure SQL Database doesn't create implicit users for users logged in as part of an Azure AD group membership. Because of this, various operations that require assigning ownership will fail, even if the Azure AD group is added as a member to a role with those permissions.
+
+   For example, a user signed into a database via an Azure AD group with the **db_ddladmin** role, will not be able to execute CREATE SCHEMA, ALTER SCHEMA, and other object creation statements without a schema explicitly defined (such as table, view, or type, for example). To resolve this, an Azure AD user must be created for that user, or the Azure AD group must be altered to assign the DEFAULT_SCHEMA to **dbo**.
 
 ### SQL Managed Instance
 

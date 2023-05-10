@@ -4,7 +4,7 @@ description: "Use the Azure portal to create SQL Server VMs in multiple subnets,
 author: tarynpratt
 ms.author: tarynpratt
 ms.reviewer: mathoma, randolphwest
-ms.date: 11/16/2022
+ms.date: 05/10/2023
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: how-to
@@ -27,7 +27,7 @@ This article describes how to use the [Azure portal](https://portal.azure.com) t
 - A listener.
 
 > [!NOTE]
-> This deployment method is currently in preview. It supports SQL Server 2016 and later on Windows Server 2016 and later. 
+> This deployment method is currently in preview. It supports SQL Server 2016 and later on Windows Server 2016 and later.
 
 Deploying a multiple-subnet availability group through the portal provides an easy end-to-end experience for users. It configures the virtual machines by following the [best practices for high availability and disaster recovery (HADR)](hadr-cluster-best-practices.md).
 
@@ -48,9 +48,9 @@ To configure an Always On availability group by using the Azure portal, you must
 
 - A domain controller VM in the same virtual network
 
-- The following account permissions:
+- The following [account permissions](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md?#configure-domain-accounts):
 
-  - A domain user account that has **Create Computer Object** permissions in the domain. This user will create the cluster and availability group, and will install SQL Server.
+  - A domain user [account that has **Create Computer Object** permissions](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md?#grant-installation-account-permissions) in the domain. This user will create the cluster and availability group, and will install SQL Server.
   
     For example, a domain user account (`account@domain.com`) typically has sufficient permission. This account should also be part of the local administrator group on each VM to create the cluster.
 

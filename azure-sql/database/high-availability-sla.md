@@ -26,7 +26,7 @@ This article describes the high availability architecture in Azure SQL Database.
 
 ## Overview
 
-The goal of the high availability architecture in Azure SQL Database is to minimize impact to customer workloads from service maintenance operations and outages. For information regarding specific SLAs for different service tiers, see [SLA for Azure SQL Database](https://azure.microsoft.com/support/legal/sla/azure-sql-database).
+The goal of the high availability architecture in Azure SQL Database is to minimize impact on customer workloads from service maintenance operations and outages. For information regarding specific SLAs for different service tiers, see [SLA for Azure SQL Database](https://azure.microsoft.com/support/legal/sla/azure-sql-database).
 
 SQL Database runs on the latest stable version of the SQL Server Database Engine on the Windows operating system with all applicable patches. SQL Database automatically handles critical servicing tasks, such as patching, backups, Windows and SQL engine upgrades, and unplanned events such as underlying hardware, software, or network failures. When a database or elastic pool in SQL Database is patched or fails over, the downtime isn't impactful if you [employ retry logic](develop-overview.md#resiliency) in your app. SQL Database can quickly recover even in the most critical circumstances, ensuring that your data is always available. Most users do not notice that upgrades are performed continuously.
 
@@ -35,7 +35,7 @@ The high availability solution is designed to ensure that committed data is neve
 There are three high availability architectural models:
 
 - **Remote storage model** that is based on a separation of compute and storage.  It relies on the high availability and reliability of the remote storage tier. This architecture targets budget-oriented business applications that can tolerate some performance degradation during maintenance activities.
-- **Local storage model** that is based on a cluster of database engine processes. It relies on the fact that there is always a quorum of available database engine nodes. This architecture targets mission-critical applications with high IO performance, high transaction rate and guarantees minimal performance impact to your workload during maintenance activities.
+- **Local storage model** that is based on a cluster of database engine processes. It relies on the fact that there is always a quorum of available database engine nodes. This architecture targets mission-critical applications with high IO performance, high transaction rate and guarantees minimal performance impact on your workload during maintenance activities.
 - **Hyperscale model** which uses a distributed system of highly available components such as compute nodes, page servers, log service, and persistent storage. Each component supporting a Hyperscale database provides its own redundancy and resiliency to failures. Compute nodes, page servers, and log service run on Azure Service Fabric, which controls health of each component and performs failovers to available healthy nodes as necessary. Persistent storage uses Azure Storage with its native high availability and redundancy capabilities. To learn more, see [Hyperscale architecture](hyperscale-architecture.md).
 
 

@@ -63,7 +63,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
     3.  Right-click the title bar of the table you wish to remove and select **Remove**.  
   
-4.  On the **File** menu, click **Save**_view name_.  
+4.  On the **File** menu, click **Save** _view name_.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

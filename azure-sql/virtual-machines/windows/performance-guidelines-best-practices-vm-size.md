@@ -41,7 +41,7 @@ Use the SQL Server VM marketplace images with the storage configuration in the p
 Currently, the [Ebdsv5-series](/azure/virtual-machines/ebdsv5-ebsv5-series#ebdsv5-series) provides the highest I/O throughput-to-vCore ratio available in Azure. If you don't know the I/O requirements for your SQL Server workload, this series is the one most likely to meet your needs. See the [storage](performance-guidelines-best-practices-storage.md) article to learn more.
 
 > [!NOTE]  
-> If you are interested in participating in the [Ebdsv5-series](/azure/virtual-machines/ebdsv5-ebsv5-series#ebdsv5-series) public preview for the new large NVMe sizes, please sign up at [https://aka.ms/Ebsv5NVMePublicPreview](https://aka.ms/Ebsv5NVMePublicPreview).
+> The larger [Ebdsv5-series](/azure/virtual-machines/ebdsv5-ebsv5-series#ebdsv5-series) sizes (48 vCPUs and larger) offer support for NVMe enabled storage access. In order to take advantage of this high I/O performance, you must deploy your virtual machine [using NVMe](/azure/virtual-machines/enable-nvme-interface). NVMe support for SQL Server marketplace images will be coming soon, but for now you must self-install SQL Server in order to take advantage of NVMe.
 
 SQL Server data warehouse and mission critical environments will often need to scale beyond the 8 memory-to-vCore ratio. For medium environments, you may want to choose a 16 memory-to-vCore ratio, and a 32 memory-to-vCore ratio for larger data warehouse environments.
 

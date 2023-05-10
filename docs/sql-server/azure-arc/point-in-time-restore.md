@@ -5,7 +5,7 @@ ms.service: sql
 author: dnethi
 ms.author: dinethi
 ms.reviewer: mikeray
-ms.date: 04/10/2023
+ms.date: 05/05/2023
 ms.topic: conceptual
 ---
 
@@ -17,6 +17,9 @@ The Azure extension for SQL Server can perform backups automatically. This artic
 > As a preview feature, the technology presented in this article is subject to [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/).
 >
 > The latest updates are available in the [release notes](release-notes.md).
+
+> [!NOTE]
+> Automated backups is only supported for license types of PAID or PAYG.
 
 The backups are performed at the following schedule:
 
@@ -82,12 +85,18 @@ To enable automated backups:
    ```
 
 ### Considerations
-- Currently automated backups is only supported for SQL Server versions 2019 and above.
-- The backup files are stored in the default backup location. The default backup location for SQL Server (SQL 2019 and above) can be verified via:
+
+- The backup files are stored in the default backup location. 
+- The default backup location for SQL Server (SQL 2019 and above) can be verified via:
 
 ```sql
 SELECT SERVERPROPERTY('InstanceDefaultBackupPath')
 ```
+
+- For SQL Server versions below 2019, the default backup path is stored in a registry setting. Configure this setting with the extended stored procedure `xp_instance_regwrite` or from SQL Server Management Studio (SSMS). To use SSMS:
+
+    1. Connect to the Arc enabled SQL Server from SSMS.
+    1. Go to **Server properties** > **Database Settings** > **Database default locations**. 
 
 - The setting is configured at the instance level and applies to all the databases on the instance.
 - The value for `--name` should be the name of the Arc enabled SQL Server, which is usually in the [Servername_SQLservername] format.

@@ -232,7 +232,7 @@ def get_conn():
 ```
 
 > [!WARNING]
-> The sample code show raw SQL statements, which should not be used in production code. Instead, use an Object Relational Mapper (ORM) package like [SqlAlchemy](https://docs.sqlalchemy.org/) which generates an object layer to communicate with databases.
+> The sample code show raws SQL statements, which should not be used in production code. Instead, use an Object Relational Mapper (ORM) package like [SqlAlchemy](https://docs.sqlalchemy.org/) which generates an object layer to communicate with databases.
 
 ## Run and test the app locally
 

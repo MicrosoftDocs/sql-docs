@@ -3,8 +3,8 @@ title: "Recover ledger database after tampering"
 description: This article discusses how to recover a database after discovering that it's been tampered with using the ledger feature.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: kendralittle, mathoma
-ms.date: "05/24/2022"
+ms.reviewer: mathoma
+ms.date: 05/24/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual

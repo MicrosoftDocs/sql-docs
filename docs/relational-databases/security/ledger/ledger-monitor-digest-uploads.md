@@ -3,7 +3,7 @@ title: "Monitor digest uploads"
 description: This article provides information on monitoring the digest uploads for ledger.
 author: VanMSFT
 ms.author: vanto
-ms.date: 07/25/2022
+ms.date: 05/23/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual

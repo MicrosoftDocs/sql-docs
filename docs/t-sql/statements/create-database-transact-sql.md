@@ -4,7 +4,7 @@ description: Create database syntax for SQL Server, Azure SQL Database, Azure Sy
 author: markingmyname
 ms.author: maghan
 ms.reviewer: wiassaf
-ms.date: 02/02/2023
+ms.date: 05/23/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference

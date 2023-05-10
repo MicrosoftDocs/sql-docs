@@ -3,7 +3,7 @@ title: "sys.database_ledger_transactions (Transact-SQL)"
 description: sys.database_ledger_transactions (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
-ms.date: "05/24/2022"
+ms.date: 05/23/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"

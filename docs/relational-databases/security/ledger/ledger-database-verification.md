@@ -3,8 +3,8 @@ title: "Database verification"
 description: This article provides information on database verification for a ledger database.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: kendralittle, mathoma
-ms.date: "05/24/2022"
+ms.reviewer: mathoma
+ms.date: 05/24/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual

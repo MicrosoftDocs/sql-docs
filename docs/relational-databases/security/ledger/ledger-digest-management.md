@@ -3,8 +3,8 @@ title: "Digest management"
 description: This article provides information on digest management for a ledger database.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: kendralittle, mathoma
-ms.date: 02/23/2023
+ms.reviewer: mathoma
+ms.date: 05/23/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual
@@ -101,11 +101,11 @@ Restoring the database back to an earlier point in time, also known as [Point in
 > [!NOTE]
 > Ledger in Azure SQL Managed Instance is currently in public preview. If you perform a native restore of a database backup, you need to change the digest path manually using the Azure Portal, PowerShell or the Azure CLI.
 
-### Active geo-replication and Always On Availability Groups
+### Active geo-replication and Always On availability groups
 
 Active geo-replication or auto-failover groups can be configured for Azure SQL Database or Azure SQL Managed Instance. Replication across geographic regions is asynchronous for performance reasons and, thus, allows the secondary database to be slightly behind compared to the primary. In the event of a geographic failover, any latest data that hasn't yet been replicated is lost. Ledger will only issue database digests for data that has been replicated to geographic secondaries to guarantee that digests will never reference data that might be lost in case of a geographic failover. This only applies for automatic generation and storage of database digests.
 
-When your database is part of an Always On Availability Group in SQL Server, the same principle as active geo-replication is used. The upload of the digests is only done if all transactions have been replicated to the secondary replicas.
+When your database is part of an Always On availability group in SQL Server, the same principle as active geo-replication is used. The upload of the digests is only done if all transactions have been replicated to the secondary replicas.
 
 > [!NOTE]
 > Ledger in Azure SQL Managed Instance is currently in public preview. The Managed Instance link feature is not supported.

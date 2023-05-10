@@ -4,7 +4,7 @@ description: "Generates the ledger digest, which is the hash of the last block i
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 05/03/2023
+ms.date: 05/23/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"

@@ -3,8 +3,8 @@ title: "Updatable ledger tables"
 description: This article provides information on updatable ledger tables, ledger schema, and ledger views.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: kendralittle, mathoma
-ms.date: "05/24/2022"
+ms.reviewer: mathoma
+ms.date: 05/23/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual

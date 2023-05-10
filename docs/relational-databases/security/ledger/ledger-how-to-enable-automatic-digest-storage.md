@@ -3,8 +3,8 @@ title: Enable automatic digest storage
 description: This article discusses how to enable automatic digest storage in Azure SQL Database using the Azure portal, PowerShell, and the Azure CLI.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: kendralittle, mathoma
-ms.date: 07/25/2022
+ms.reviewer: mathoma
+ms.date: 05/23/2023
 ms.service: sql-database
 ms.subservice: security
 ms.custom: devx-track-azurecli
@@ -31,8 +31,9 @@ In this article, we'll describe how you can configure automatic generation and s
 # [Portal](#tab/Portal)
 
 1. Open the [Azure portal](https://portal.azure.com/) and locate the database for which you want to enable automatic digest storage. Select that database in SQL Database.
-> [!NOTE]
-> Enable automatic digest storage can also be configured when creating a new database.
+
+   > [!NOTE]
+   > Enable automatic digest storage can also be configured when creating a new database.
 
 1. In **Security**, select the **Ledger** option. 
 
@@ -103,7 +104,7 @@ In this article, we'll describe how you can configure automatic generation and s
 
 1. In the **Ledger** pane, select **Enable automatic digest storage**. Select the storage type. You can choose between Azure Storage or Azure Confidential Ledger (ACL). Depending on the storage type you picked, you have to select an existing storage account or ACL, or create a new one. The storage container name is fixed and can't be modified.
 
-   :::image type="content" source="media/ledger/automatic-digest-management-mi.png" alt-text="Screenshot that shows the selections for enabling digest storage.":::
+   :::image type="content" source="media/ledger/automatic-digest-management-sql-managed-instance.png" alt-text="Screenshot that shows the selections for enabling digest storage.":::
 
 1. Select **Save** to save your automatic digest storage configuration.
 

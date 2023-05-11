@@ -47,11 +47,11 @@ Passwordless connections can be configured to work for both local and Azure host
 
 Create a user in Azure SQL Database. The user should correspond to the Azure account you used to sign-in locally via development tools like Visual Studio or Visual Studio Code. 
 
-1. In the [Azure portal](https://portal.azure.com), browse to your SQL database and select **Query editor (preview)**.
+1) In the [Azure portal](https://portal.azure.com), browse to your SQL database and select **Query editor (preview)**.
 
-2. Select **Continue as `<your-username>`** on the right side of the screen to sign into the database using your account.
+2) Select **Continue as `<your-username>`** on the right side of the screen to sign into the database using your account.
 
-3. On the query editor view, run the following T-SQL commands:
+3) On the query editor view, run the following T-SQL commands:
 
     ```sql
     CREATE USER <user@domain> FROM EXTERNAL PROVIDER;

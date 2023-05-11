@@ -4,7 +4,7 @@ description: Learn how to connect to a database in Azure SQL Database and query 
 author: bobtabor-msft
 ms.author: rotabor
 ms.custom: passwordless-python, ai-gen-docs
-ms.date: 05/10/2023
+ms.date: 05/11/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: quickstart
@@ -87,7 +87,7 @@ For details and specific instructions for installing the `pyodbc` driver on all 
 
 1. Create a *requirements.txt* file with the following lines:
 
-    ```requirements.txt
+    ```
     pyodbc
     fastapi
     uvicorn[standard]
@@ -274,9 +274,9 @@ The app is ready to be deployed to Azure.
 
     ```azurecli
     az webapp config set \
-    --resource-group <resource-group-name> \
-    --name <web-app-name> \
-    --startup-file start.sh
+      --resource-group <resource-group-name> \
+      --name <web-app-name> \
+      --startup-file start.sh
     ```
 
 1. Use the [az webapp identity assign](/cli/azure/webapp/identity#az-webapp-identity-assign) command to enable system-assigned managed identity for the App Service.

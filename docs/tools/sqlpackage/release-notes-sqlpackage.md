@@ -16,9 +16,9 @@ ms.custom: tools|sos
 This article lists the features and fixes delivered by the released versions of SqlPackage.
 
 
-## 162.52.1 SqlPackage
+## 162.0.52.1 SqlPackage
 
-**Release date:** February 13, 2023
+**Release date:** May 11, 2023
 
 |Platform|Download|Version|
 |:---|:---|:---|

@@ -269,6 +269,8 @@ The app is ready to be deployed to Azure.
     --name <web-app-name>
     ```
 
+    In this quickstart, system-assigned managed identity is use for demonstration. User-assigned managed identity are more efficient in a broader range of scenarios. For more information, see [Managed identity best practice recommendations](/azure/active-directory/managed-identities-azure-resources/managed-identity-best-practice-recommendations).
+
 ## Connect the App Service to Azure SQL Database
 
 In the [Configure the database](#configure-the-database) section, you configured networking and Azure AD authentication for the Azure SQL database server. In this section, you complete the database configuration and configure the App Service with a connection string to access the database server.

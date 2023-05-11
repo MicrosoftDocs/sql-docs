@@ -10,7 +10,7 @@ ms.service: sql-database
 
 When you are finished working with the Azure SQL Database, delete the resource to avoid unintended costs.
 
-## [Azure Portal](#tab/portal)
+## [Azure portal](#tab/portal)
 
 1) In the Azure portal search bar, search for *Azure SQL* and select the matching result.
 

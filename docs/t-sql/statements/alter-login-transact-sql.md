@@ -99,6 +99,7 @@ Specifies the name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.m
 
 ENABLE | DISABLE
 Enables or disables this login. Disabling a login does not affect the behavior of logins that are already connected. (Use the `KILL` statement to terminate an existing connections.) Disabled logins retain their permissions and can still be impersonated.
+Disabling a login does take a SERVER_PRINCIPAL metadata lock, and this lock will stop statements being run by the login on other connections. An example of this from a blocked process report: waitresource="METADATA: database_id = 1 SERVER_PRINCIPAL(principal_id = 1828), lockPartitionId = 16" waittime="23861"
 
 PASSWORD **='**_password_**'**
 Applies only to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins. Specifies the password for the login that is being changed. Passwords are case-sensitive.

@@ -3,7 +3,7 @@ title: "Resource Governor Resource Pool"
 description: SQL Server Resource Governor specifies limits on the amount of CPU, physical IO, and memory that incoming application requests can use within the resource pool.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: pijocoder
+ms.reviewer: jopilov
 ms.date: 03/31/2023
 ms.service: sql
 ms.subservice: performance

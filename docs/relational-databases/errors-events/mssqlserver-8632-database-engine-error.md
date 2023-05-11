@@ -3,7 +3,7 @@ title: MSSQLSERVER_8632
 description: "MSSQLSERVER_8632"
 author: suresh-kandoth
 ms.author: sureshka
-ms.reviewer: sureshka,  vencher, tejasaks, docast
+ms.reviewer: vencher, tejasaks, docast
 ms.date: 10/27/2020
 ms.service: sql
 ms.subservice: supportability

@@ -3,7 +3,7 @@ title: "View a Database Snapshot (SQL Server)"
 description: Learn how to view a SQL Server database snapshot using SQL Server Management Studio or Transact-SQL.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: pijocoder
+ms.reviewer: jopilov
 ms.date: 05/04/2023
 ms.service: sql
 ms.subservice: supportability

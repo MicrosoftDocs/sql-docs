@@ -1,9 +1,9 @@
 ---
 title: MSSQLSERVER_5180
 description: "MSSQLSERVER_5180"
-author: rgward
+author: suresh-kandoth
 ms.author: sureshka
-ms.reviewer:  pijocoder, sureshka, Masha
+ms.reviewer: jopilov, mathoma
 ms.date: 08/20/2020
 ms.service: sql
 ms.subservice: supportability

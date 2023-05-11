@@ -2,7 +2,7 @@
 title: MSSQLSERVER_7105
 description: "MSSQLSERVER_7105"
 author: rgward
-ms.author: suresh-kandoth
+ms.author: sureshka
 ms.reviewer: Masha
 ms.date: 08/20/2020
 ms.service: sql

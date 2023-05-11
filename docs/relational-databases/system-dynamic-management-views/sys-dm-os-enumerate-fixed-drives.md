@@ -19,7 +19,7 @@ dev_langs:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Introduced in SQL Server 2019.
+Introduced in SQL Server 2017.
 
 Enumerates volumes mounted to drive letters like `C:\`.
 

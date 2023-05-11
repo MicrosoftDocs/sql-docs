@@ -37,7 +37,7 @@ For this migration guide, ensure you have an Azure AD admin assigned to your Azu
 
 ## Configure your local development environment
 
-Passwordless connections can be configured to work for both local and Azure hosted environments. In this section, you'll apply configurations to allow individual users to authenticate to Azure SQL Database for local development.
+Passwordless connections can be configured to work for both local and Azure hosted environments. In this section, you apply configurations to allow individual users to authenticate to Azure SQL Database for local development.
 
 ### Sign-in to Azure
 
@@ -66,7 +66,7 @@ Create a user in Azure SQL Database. The user should correspond to the Azure acc
 
 ### Update the local connection configuration
 
-Existing application code that connects to Azure SQL Database using the [Python SQL Driver - pyodbc](/sql/connect/python/pyodbc/python-sql-driver-pyodbc) will continue to work with passwordless connections with minor changes. For example, the following code works with both SQL authentication and passwordless connections for a code running locally. The same code will work when deployed to Azure App Service as well.
+Existing application code that connects to Azure SQL Database using the [Python SQL Driver - pyodbc](/sql/connect/python/pyodbc/python-sql-driver-pyodbc) continues to work with passwordless connections with minor changes. For example, the following code works with both SQL authentication and passwordless connections for a code running locally. The same code works when deployed to Azure App Service as well.
 
 ```python
 connection_string = os.environ["AZURE_SQL_CONNECTIONSTRING"]
@@ -209,7 +209,7 @@ Create a SQL database user that maps back to the user-assigned managed identity.
 
 ### Update the connection string
 
-Update your Azure app configuration to use the passwordless connection string format. Connection strings are generally stored as environment variables in your app hosting environment. The following instructions focus on App Service, but other Azure hosting services provide similar configurations.
+Update your Azure app configuration to use the passwordless connection string format. Connection strings can be stored as environment variables in your app hosting environment. The following instructions focus on App Service, but other Azure hosting services provide similar configurations.
 
 ```
 Driver={ODBC Driver 18 for SQL Server};SERVER=<database-server-name>.database.windows.net;DATABASE=<database-name>
@@ -217,7 +217,7 @@ Driver={ODBC Driver 18 for SQL Server};SERVER=<database-server-name>.database.wi
 
 `<database-server-name>` is the name of your Azure SQL Database server and `<database-name>` is the name of your Azure SQL Database.
 
-Save your changes and restart the application if it does not do so automatically.
+Save your changes and restart the application if it doesn't do so automatically.
 
 ### Test the application
 

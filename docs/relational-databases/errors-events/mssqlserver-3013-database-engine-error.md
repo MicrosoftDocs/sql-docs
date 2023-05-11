@@ -2,7 +2,7 @@
 title: MSSQLSERVER_3013
 description: "MSSQLSERVER_3013"
 author: pijocoder
-ms.author: ramakoni
+ms.author: suresh-kandoth
 ms.reviewer: suresh-kandoth, MashaMSFT
 ms.date: 03/23/2023
 ms.service: sql

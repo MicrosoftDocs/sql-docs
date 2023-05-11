@@ -2,7 +2,7 @@
 title: "MSSQLSERVER_18210"
 description: "MSSQLSERVER_18210"
 author: JamesFerebee
-ms.author: ramakoni
+ms.author: suresh-kandoth
 ms.date: "02/06/2023"
 ms.service: sql
 ms.subservice: supportability

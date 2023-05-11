@@ -19,7 +19,7 @@ SqlPackage runs on Windows, macOS, and Linux, and is available to install throug
 
 - **Version number:** 162.0.52.1
 - **Build number:** 162.0.52.1
-- **Release date:** May 10, 2023
+- **Release date:** May 11, 2023
 
 For details about the latest release, see the [release notes](release-notes-sqlpackage.md).
 

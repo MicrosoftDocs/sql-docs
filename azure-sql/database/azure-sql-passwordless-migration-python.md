@@ -66,7 +66,7 @@ Create a user in Azure SQL Database. The user should correspond to the Azure acc
 
 ### Update the local connection configuration
 
-Existing application code that connects to Azure SQL Database using the [Python SQL Driver - pyodbc](/sql/connect/python/pyodbc/python-sql-driver-pyodbc) will continue to work with passwordless connections with minor changes. For example, the following code works with both SQL authentication and passwordless connections for a code running locally and then deployed to Azure App Service:
+Existing application code that connects to Azure SQL Database using the [Python SQL Driver - pyodbc](/sql/connect/python/pyodbc/python-sql-driver-pyodbc) will continue to work with passwordless connections with minor changes. For example, the following code works with both SQL authentication and passwordless connections for a code running locally. The same code will work when deployed to Azure App Service as well.
 
 ```python
 connection_string = os.environ["AZURE_SQL_CONNECTIONSTRING"]
@@ -92,19 +92,11 @@ def get_conn():
     return conn
 ```
 
-To update the referenced connection string (`AZURE_SQL_CONNECTIONSTRING`) to use the passwordless connection string format:
+To update the referenced connection string (`AZURE_SQL_CONNECTIONSTRING`) for local development, use the passwordless connection string format:
 
-* For local or development environments
-
-    ```
-    Driver={ODBC Driver 18 for SQL Server};Server=tcp:<database-server-name>.database.windows.net,1433;Database=<database-name>;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;Authentication=ActiveDirectoryInteractive
-    ```
-
-* For Azure App Service
-
-    ```
-    Driver={ODBC Driver 18 for SQL Server};SERVER=<database-server-name>.database.windows.net;DATABASE=<database-name>
-    ```
+```
+Driver={ODBC Driver 18 for SQL Server};Server=tcp:<database-server-name>.database.windows.net,1433;Database=<database-name>;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;Authentication=ActiveDirectoryInteractive
+```
 
 ### Test the app
 
@@ -219,16 +211,13 @@ Create a SQL database user that maps back to the user-assigned managed identity.
 
 Update your Azure app configuration to use the passwordless connection string format. Connection strings are generally stored as environment variables in your app hosting environment. The following instructions focus on App Service, but other Azure hosting services provide similar configurations.
 
-1. Navigate to the configuration page of your App Service instance and locate the Azure SQL Database connection string.
+```
+Driver={ODBC Driver 18 for SQL Server};SERVER=<database-server-name>.database.windows.net;DATABASE=<database-name>
+```
 
-1. Select the edit icon and update the connection string value to match following format. Change the `<database-server-name>` and `<database-name>` placeholders with the values of your own service.
+`<database-server-name>` is the name of your Azure SQL Database server and `<database-name>` is the name of your Azure SQL Database.
 
-    ```json
-    "Server=tcp:<database-server-name>.database.windows.net,1433;Initial Catalog=<database-name>;
-    Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;Authentication=\"Active Directory Default\";"
-    ```
-
-1. Save your changes and restart the application if it does not do so automatically.
+Save your changes and restart the application if it does not do so automatically.
 
 ### Test the application
 

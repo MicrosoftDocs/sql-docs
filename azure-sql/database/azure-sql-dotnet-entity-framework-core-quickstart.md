@@ -338,6 +338,8 @@ Browse to the URL of the app to test that the connection to Azure SQL Database i
 
 The person you created locally should display in the browser. Congratulations! Your application is now connected to Azure SQL Database in both local and hosted environments.
 
+[!INCLUDE [passwordless-resource-cleanup](../includes/passwordless-resource-cleanup.md)]
+
 ## Next steps
 
 - [Tutorial: Secure a database in Azure SQL Database](./secure-database-tutorial.md)

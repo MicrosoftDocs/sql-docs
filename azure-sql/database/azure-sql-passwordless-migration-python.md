@@ -12,7 +12,7 @@ ms.custom: devx-track-csharp, passwordless-java, passwordless-js, passwordless-p
 ms.devlang: python
 ---
 
-# Migrate an application to use passwordless connections with Azure SQL Database
+# Migrate a Python application to use passwordless connections with Azure SQL Database
 
 Application requests to Azure SQL Database must be authenticated. Although there are multiple options for authenticating to Azure SQL Database, you should prioritize passwordless connections in your applications when possible. Traditional authentication methods that use passwords or secret keys create security risks and complications. Visit the [passwordless connections for Azure services](/azure/developer/intro/passwordless-overview) hub to learn more about the advantages of moving to passwordless connections. The following tutorial explains how to migrate an existing application to connect to Azure SQL Database to use passwordless connections instead of a username and password solution.
 

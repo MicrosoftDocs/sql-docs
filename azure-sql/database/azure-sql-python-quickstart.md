@@ -79,7 +79,7 @@ For details and specific instructions for installing the `pyodbc` driver on all 
 2. Install the requirements.
 
     ```console
-    pip install -r requirements.txt`
+    pip install -r requirements.txt
     ```
 
 ## Configure the local connection string

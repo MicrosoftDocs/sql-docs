@@ -45,11 +45,9 @@ Passwordless connections can be configured to work for both local and Azure host
 
 ### Create a database user and assign roles
 
-*TBD: put tool options more appealing for Python developers and what are the reasons for 3 roles?*
+Create a user in Azure SQL Database. The user should correspond to the Azure account you used to sign-in locally via development tools like Visual Studio or Visual Studio Code. 
 
-Create a user in Azure SQL Database. The user should correspond to the Azure account you used to sign-in locally via development tools like Visual Studio or IntelliJ.
-
-1. In the Azure portal, browse to your SQL database and select **Query editor (preview)**.
+1. In the [Azure portal](https://portal.azure.com), browse to your SQL database and select **Query editor (preview)**.
 
 2. Select **Continue as `<your-username>`** on the right side of the screen to sign into the database using your account.
 
@@ -59,40 +57,53 @@ Create a user in Azure SQL Database. The user should correspond to the Azure acc
     CREATE USER <user@domain> FROM EXTERNAL PROVIDER;
     ALTER ROLE db_datareader ADD MEMBER <user@domain>;
     ALTER ROLE db_datawriter ADD MEMBER <user@domain>;
-    ALTER ROLE db_ddladmin ADD MEMBER <user@domain>;
     GO
     ```
 
     :::image type="content" source="media/passwordless-connections/query-editor-user-small.png" lightbox="media/passwordless-connections/query-editor-user.png" alt-text="A screenshot showing how to use the Azure Query editor.":::
 
+    For more information about the roles assigned, see [Fixed-database roles](/sql/relational-databases/security/authentication-access/database-level-roles#fixed-database-roles).
+
 ### Update the local connection configuration
 
-*TBD: rework this section*
+Existing application code that connects to Azure SQL Database using the [Python SQL Driver - pyodbc](/sql/connect/python/pyodbc/python-sql-driver-pyodbc) will continue to work with passwordless connections with minor changes. For example, the following code works with both SQL authentication and passwordless connections for a code running locally and then deployed to Azure App Service:
 
-Existing application code that connects to Azure SQL Database using the `pyodbc` library will continue to work with passwordless connections. However, you must update your database connection string to use the passwordless format. For example, the following code works with both SQL authentication and passwordless connections:
+```python
+connection_string = os.environ["AZURE_SQL_CONNECTIONSTRING"]
 
-```csharp
-string connectionString = app.Configuration.GetConnectionString("AZURE_SQL_CONNECTIONSTRING")!;
+def get_all():
+    with get_conn() as conn:
+        cursor = conn.cursor()
+        cursor.execute("SELECT * FROM Persons")
+        # Do something with the data
+    return
 
-using var conn = new SqlConnection(connectionString);
-conn.Open();
-
-var command = new SqlCommand("SELECT * FROM Persons", conn);
-using SqlDataReader reader = command.ExecuteReader();
+def get_conn():
+    if not 'WEBSITE_HOSTNAME' in os.environ:
+        # Local development
+        conn = pyodbc.connect(connection_string)
+    else:
+        # Deployed to Azure App Service
+        credential = identity.DefaultAzureCredential()
+        token_bytes = credential.get_token("https://database.windows.net/.default").token.encode("UTF-16-LE")
+        token_struct = struct.pack(f'<I{len(token_bytes)}s', len(token_bytes), token_bytes)
+        SQL_COPT_SS_ACCESS_TOKEN = 1256  # This connection option is defined by microsoft in msodbcsql.h
+        conn = pyodbc.connect(connection_string, attrs_before={SQL_COPT_SS_ACCESS_TOKEN: token_struct})
+    return conn
 ```
 
 To update the referenced connection string (`AZURE_SQL_CONNECTIONSTRING`) to use the passwordless connection string format:
 
-1. Locate your connection string. For local development with .NET applications, this is usually stored in one of the following locations:
-    * The `appsettings.json` configuration file for your project.  
-    * The `launchsettings.json` configuration file for Visual Studio projects.
-    * Local system or container environment variables.
+* For local or development environments
 
-2. Replace the connection string value with the following passwordless format. Update the `<database-server-name>` and `<database-name>` placeholders with your own values:
+    ```
+    Driver={ODBC Driver 18 for SQL Server};Server=tcp:<database-server-name>.database.windows.net,1433;Database=<database-name>;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;Authentication=ActiveDirectoryInteractive
+    ```
 
-    ```json
-    "Server=tcp:<database-server-name>.database.windows.net,1433;Initial Catalog=<database-name>;
-    Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;Authentication=\"Active Directory Default\";"
+* For Azure App Service
+
+    ```
+    Driver={ODBC Driver 18 for SQL Server};SERVER=<database-server-name>.database.windows.net;DATABASE=<database-name>
     ```
 
 ### Test the app

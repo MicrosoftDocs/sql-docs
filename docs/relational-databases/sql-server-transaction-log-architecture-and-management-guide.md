@@ -83,12 +83,12 @@ Virtual log file (VLF) creation follows this method:
 
 If the log files grow to a large size in many small increments, they end up with many virtual log files. **This can slow down database startup, and log backup and restore operations.** Conversely, if the log files are set to a large size with few or just one increment, they contain few very large virtual log files. For more information on properly estimating the **required size** and **autogrow** setting of a transaction log, see the *Recommendations* section of [Manage the size of the transaction log file](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations).
 
-We recommend that you assign log files a *size* value close to the final size required, using the increments needed to achieve optimal VLF distribution, and have a relatively large *growth_increment* value.
+We recommend that you assign to log files a *size* close to the final size required, using the increments needed to achieve optimal VLF distribution, and have a relatively large *growth_increment* value.
 
 See the following tips to determine the optimal VLF distribution for the current transaction log size:
 
 - The *size* value, set by the `SIZE` argument of `ALTER DATABASE` is the initial size for the log file.
-- The *growth_increment* value (also known as the autogrow value), which is set by the `FILEGROWTH` argument of `ALTER DATABASE`, is the amount of space added to the file every time new space is required.
+- The *growth_increment* value (also known as the autogrow value), which the `FILEGROWTH` argument of `ALTER DATABASE` sets, is the amount of space added to the file every time new space is required.
 
 For more information on `FILEGROWTH` and `SIZE` arguments of `ALTER DATABASE`, see [ALTER DATABASE (Transact-SQL) File and Filegroup Options](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
@@ -164,14 +164,14 @@ This cycle repeats endlessly, as long as the end of the logical log never reache
 
 - If the `FILEGROWTH` setting isn't enabled, or the disk that is holding the log file has less free space than the amount specified in *growth_increment*, a 9002 error is generated. Refer to [Troubleshoot a Full Transaction Log](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md) for more information.
 
-If the log contains multiple physical log files, the logical log will move through all the physical log files before it wraps back to the start of the first physical log file.
+If the log contains multiple physical log files, the logical log moves through all the physical log files before it wraps back to the start of the first physical log file.
 
 > [!IMPORTANT]  
 > For more information about transaction log size management, see [Manage the Size of the Transaction Log File](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md).
 
 ### Log truncation
 
-Log truncation is essential to keep the log from filling. Log truncation deletes inactive virtual log files from the logical transaction log of a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database, freeing space in the logical log for reuse by the physical transaction log. If a transaction log is never truncated, it will eventually fill all the disk space that is allocated to its physical log files. However, before the log can be truncated, a checkpoint operation must occur. A checkpoint writes the current in-memory modified pages (known as *dirty pages*) and transaction log information from memory to disk. When the checkpoint is performed, the inactive portion of the transaction log is marked as reusable. Thereafter, the inactive portion can be freed by log truncation. For more information about checkpoints, see [Database Checkpoints (SQL Server)](../relational-databases/logs/database-checkpoints-sql-server.md).
+Log truncation is essential to keep the log from filling. Log truncation deletes inactive virtual log files from the logical transaction log of a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database, freeing space in the logical log for reuse by the physical transaction log. If a transaction log is never truncated, it will eventually fill all the disk space that is allocated to its physical log files. However, before the log can be truncated, a checkpoint operation must occur. A checkpoint writes the current in-memory modified pages (known as *dirty pages*) and transaction log information from memory to disk. When the checkpoint is performed, the inactive portion of the transaction log is marked as reusable. Thereafter, a log truncation can free the inactive portion. For more information about checkpoints, see [Database Checkpoints (SQL Server)](../relational-databases/logs/database-checkpoints-sql-server.md).
 
 The following illustrations show a transaction log before and after truncation. The first illustration shows a transaction log that has never been truncated. Currently, four virtual log files are in use by the logical log. The logical log starts at the front of the first virtual log file and ends at virtual log 4. The MinLSN record is in virtual log 3. Virtual log 1 and virtual log 2 contain only inactive log records. These records can be truncated. Virtual log 5 is still unused and isn't part of the current logical log.
 
@@ -261,7 +261,7 @@ Checkpoints occur in the following situations:
 - An instance of SQL Server is stopped by a SHUTDOWN statement or by stopping the SQL Server (MSSQLSERVER) service. Either action causes a checkpoint in each database in the instance of SQL Server.
 - An instance of SQL Server periodically generates automatic checkpoints in each database to reduce the time that the instance would take to recover the database.
 - A database backup is taken.
-- An activity requiring a database shutdown is performed. For example, AUTO_CLOSE is ON and the last user connection to the database is closed, or a database option change is made that requires a restart of the database.
+- An activity requiring a database shutdown is performed. For example, if AUTO_CLOSE option is ON and the last user connection to the database is closed. Another example: a database option change is made that requires a restart of the database.
 
 ### Automatic checkpoints
 
@@ -296,14 +296,14 @@ The following illustration shows a simplified version of the end-of-a-transactio
 
 LSN 148 is the last record in the transaction log. At the time that the recorded checkpoint at LSN 147 was processed, Tran 1 had been committed and Tran 2 was the only active transaction. That makes the first log record for Tran 2 the oldest log record for a transaction active at the time of the last checkpoint. This makes LSN 142, the Begin transaction record for Tran 2, the MinLSN.
 
-### Long-runn transactions
+### Long-running transactions
 
-The active log must include every part of all uncommitted transactions. An application that starts a transaction and doesn't commit it or roll it back prevents the [!INCLUDE[ssDE-md](../includes/ssde-md.md)] from advancing the MinLSN. This can cause two types of problems:
+The active log must include every part of all uncommitted transactions. An application that starts a transaction and doesn't commit it or roll it back prevents the [!INCLUDE[ssDE-md](../includes/ssde-md.md)] from advancing the MinLSN. This situation can cause two types of problems:
 
 - If the system is shut down after the transaction has performed many uncommitted modifications, the recovery phase of the subsequent restart can take much longer than the time specified in the **recovery interval** option.
-- The log might grow very large, because the log can't be truncated past the MinLSN. This occurs even if the database is using the simple recovery model, in which the transaction log is generally truncated on each automatic checkpoint.
+- The log might grow very large, because the log can't be truncated past the MinLSN. This occurs even if the database is using the simple recovery model, in which the transaction log is truncated on each automatic checkpoint.
 
-Starting with [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] and in [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)], recovery of long-running transactions and the problems described above can be avoided by using [Accelerated database recovery](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr).
+Recovery of long-running transactions and the problems described above can be avoided by using [Accelerated database recovery](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr), a feature available starting with [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] and in [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)].
 
 ### Replication transactions
 

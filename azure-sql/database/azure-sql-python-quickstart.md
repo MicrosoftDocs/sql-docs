@@ -308,9 +308,9 @@ In the [Configure the database](#configure-the-database) section, you configured
 
     ```azurecli
     az webapp config appsettings set \
-    --resource-group <resource-group-name> \
-    --name <web-app-name> \
-    --settings AZURE_SQL_CONNECTIONSTRING="<connection-string>"
+        --resource-group <resource-group-name> \
+        --name <web-app-name> \
+        --settings AZURE_SQL_CONNECTIONSTRING="<connection-string>"
     ```
 
     For the deployed app, the connection string should resemble:

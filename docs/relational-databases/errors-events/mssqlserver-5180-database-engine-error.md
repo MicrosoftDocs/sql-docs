@@ -3,7 +3,7 @@ title: MSSQLSERVER_5180
 description: "MSSQLSERVER_5180"
 author: rgward
 ms.author: sureshka
-ms.reviewer: Masha
+ms.reviewer:  pijocoder, sureshka, Masha
 ms.date: 08/20/2020
 ms.service: sql
 ms.subservice: supportability

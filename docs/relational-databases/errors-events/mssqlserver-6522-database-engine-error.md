@@ -3,7 +3,7 @@ title: MSSQLSERVER_6522
 description: "MSSQLSERVER_6522"
 author: suresh-kandoth
 ms.author: sureshka
-ms.reviewer: suresh-kandoth,  vencher, tejasaks, docast
+ms.reviewer: sureshka,  vencher, tejasaks, docast
 ms.date: 12/25/2020
 ms.service: sql
 ms.subservice: supportability

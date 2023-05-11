@@ -4,7 +4,7 @@ description: Learn about the AppContext switches available in SqlClient and how 
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-davidengel
-ms.date: 06/01/2022
+ms.date: 05/10/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -95,7 +95,7 @@ AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.UseOneSecFloorInTimeoutCal
 
 [!INCLUDE [appliesto-netfx-netcore-netst-md](../../includes/appliesto-netfx-netcore-netst-md.md)]
 
-By default, ReadAsync runs synchronously and blocks the calling thread on .NET Framework. To disable this blocking behavior, you can set the AppContext switch **Switch.Microsoft.Data.SqlClient.MakeReadAsyncBlocking** to `false` at application startup:
+Starting in version 3.0, ReadAsync runs asynchronously. Previous versions run ReadAsync synchronously and block the calling thread on .NET Framework. To control this blocking behavior, you can set the AppContext switch **Switch.Microsoft.Data.SqlClient.MakeReadAsyncBlocking** to `true` or `false` at application startup:
 
 ```csharp
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.MakeReadAsyncBlocking", false);

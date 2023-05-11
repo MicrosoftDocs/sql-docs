@@ -265,8 +265,8 @@ The app is ready to be deployed to Azure.
 
     ```azurecli
     az webapp identity assign \
-    --resource-group <resource-group-name> \
-    --name <web-app-name>
+        --resource-group <resource-group-name> \
+        --name <web-app-name>
     ```
 
     In this quickstart, system-assigned managed identity is use for demonstration. User-assigned managed identity are more efficient in a broader range of scenarios. For more information, see [Managed identity best practice recommendations](/azure/active-directory/managed-identities-azure-resources/managed-identity-best-practice-recommendations).

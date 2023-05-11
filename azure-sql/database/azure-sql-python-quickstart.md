@@ -248,8 +248,8 @@ The app is ready to be deployed to Azure.
 
     ```azurecli
     az webapp up \
-    --resource-group <resource-group-name> \
-    --name <web-app-name>         
+        --resource-group <resource-group-name> \
+        --name <web-app-name>         
     ```
 
 1. Use the [az webapp config set](/cli/azure/webapp/config#az-webapp-config-set) command to configure App Service to use the *start.sh* file.

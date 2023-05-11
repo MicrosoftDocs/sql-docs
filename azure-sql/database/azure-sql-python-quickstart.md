@@ -1,6 +1,6 @@
 ---
-title: Connect to and query Azure SQL Database using Python and the `pyodbc` library
-description: Learn how to connect to a database in Azure SQL Database and query data using Python
+title: Connect to and query Azure SQL Database using Python and the pyodbc library
+description: Learn how to connect to a database in Azure SQL Database and query data using Python and the pyodbc library.
 author: bobtabor-msft
 ms.author: rotabor
 ms.custom: passwordless-python, ai-gen-docs
@@ -142,7 +142,7 @@ You can get the details to create your connection string from the Azure portal:
 
 In the project folder, create an *app.py* file and add the sample code. This code creates an API that:
 
-* Retrieves an Azure SQL Database connection string from an environment variable. The form of the connections string will depend on what environment you are running the code in.
+* Retrieves an Azure SQL Database connection string from an environment variable. The form of the connection string depends on what environment you're running the code in.
 * Creates a `Person` table in the database during startup (for testing scenarios only).
 * Defines a function to retrieve all `Person` records from the database.
 * Defines a function to retrieve one `Person` record from the database.
@@ -300,7 +300,7 @@ In the [Configure the database](#configure-the-database) section, you configured
 
     For more information, see [Contained Database Users - Making Your Database Portable](/sql/relational-databases/security/contained-database-users-making-your-database-portable). For an example that shows the same principle but applied to Azure VM, see [Tutorial: Use a Windows VM system-assigned managed identity to access Azure SQL](/azure/active-directory/managed-identities-azure-resources/tutorial-windows-vm-access-sql).
 
-    If you disable and then enable the App Service's system-assigned managed identity, drop the user and recreate it.Run `DROP USER <web-app-name>` and rerun the `CREATE` and `ALTER` commands. To see users, use `SELECT * FROM sys.database_principals`.
+    If you disable the App Service managed identity and then enable it again, drop the user and recreate it. Run `DROP USER <web-app-name>` and rerun the `CREATE` and `ALTER` commands. To see users, use `SELECT * FROM sys.database_principals`.
 
     To run these commands you can use any tool or IDE that can connect to Azure SQL Database, including [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms), [Azure Data Studio](/sql/azure-data-studio/what-is-azure-data-studio), and Visual Studio Code with the [SQL server mssql](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) extension.
 

@@ -92,7 +92,7 @@ Interactive authentication provides a passwordless option when you're running lo
 
 In Windows, Azure AD Interactive Authentication can use Azure Active Directory Multi-Factor Authentication technology to set up connection. In this mode, by providing the sign in ID, an Azure Authentication dialog is triggered and allows the user to input the password to complete the connection.
 
-```bash
+```Bash
 export AZURE_SQL_CONNECTIONSTRING='Driver={ODBC Driver 18 for SQL Server};Server=tcp:<database-server-name>.database.windows.net,1433;Database=<database-name>;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;Authentication=ActiveDirectoryInteractive'
 ```
 
@@ -298,7 +298,7 @@ To run these commands you can use any tool or IDE that can connect to Azure SQL 
 
     For the deployed app, the connection string should resemble:
 
-    ```console
+    ```
     Driver={ODBC Driver 18 for SQL Server};SERVER=<database-server-name>.database.windows.net;DATABASE=<database-name>
     ```
 

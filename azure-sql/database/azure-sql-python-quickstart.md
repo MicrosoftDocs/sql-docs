@@ -261,7 +261,7 @@ The app is ready to be deployed to Azure.
         --startup-file start.sh
     ```
 
-1. Use the [az webapp identity assign](/cli/azure/webapp/identity#az-webapp-identity-assign) command to enable system-assigned managed identity for the App Service.
+1. Use the [az webapp identity assign](/cli/azure/webapp/identity#az-webapp-identity-assign) command to enable a system-assigned managed identity for the App Service.
 
     ```azurecli
     az webapp identity assign \

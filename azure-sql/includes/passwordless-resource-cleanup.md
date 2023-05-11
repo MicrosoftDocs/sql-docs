@@ -1,8 +1,16 @@
+---
+author: alexwolfmsft
+ms.author: alexwolf
+ms.date: 05/11/2023
+ms.topic: include
+ms.service: sql-database
+---
+
 ## Clean up the resources
 
 When you are finished working with the Azure SQL Database, delete the resource to avoid unintended costs.
 
-## [Azure Portal)](#tab/portal)
+## [Azure Portal](#tab/portal)
 
 1) In the Azure portal search bar, search for *Azure SQL* and select the matching result.
 

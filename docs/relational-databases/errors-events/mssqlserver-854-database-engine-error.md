@@ -2,8 +2,8 @@
 title: MSSQLSERVER_854
 description: "MSSQLSERVER_854"
 author: suresh-kandoth
-ms.author: ramakoni
-ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, Masha
+ms.author: sureshka
+ms.reviewer:  pijocoder, suresh-kandoth, Masha
 ms.date: 08/20/2020
 ms.service: sql
 ms.subservice: supportability

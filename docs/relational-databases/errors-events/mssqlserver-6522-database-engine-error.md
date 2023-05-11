@@ -2,8 +2,8 @@
 title: MSSQLSERVER_6522
 description: "MSSQLSERVER_6522"
 author: suresh-kandoth
-ms.author: ramakoni
-ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, vencher, tejasaks, docast
+ms.author: sureshka
+ms.reviewer: sureshka,  vencher, tejasaks, docast
 ms.date: 12/25/2020
 ms.service: sql
 ms.subservice: supportability

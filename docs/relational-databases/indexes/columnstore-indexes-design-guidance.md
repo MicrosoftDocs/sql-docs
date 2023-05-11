@@ -57,7 +57,7 @@ Consider using a clustered columnstore index when:
 
 Don't use a clustered columnstore index when:
 
-* The table requires varchar(max), nvarchar(max), or varbinary(max) data types. Or, design the columnstore index so that it doesn't include these columns.
+* The table requires varchar(max), nvarchar(max), or varbinary(max) data types. Or, design the columnstore index so that it doesn't include these columns (Only for SQL 2016 or older).
 * The table data is not permanent. Consider using a heap or temporary table when you need to store and delete the data quickly.
 * The table has less than one million rows per partition. 
 * More than 10% of the operations on the table are updates and deletes. Large numbers of updates and deletes cause fragmentation. The fragmentation affects compression rates and query performance until you run an operation called reorganize that forces all data into the columnstore and removes fragmentation. For more information, see [Minimizing index fragmentation in columnstore index](/archive/blogs/sqlserverstorageengine/columnstore-index-defragmentation-using-reorganize-command).

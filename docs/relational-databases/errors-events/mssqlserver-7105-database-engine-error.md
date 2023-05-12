@@ -1,9 +1,9 @@
 ---
 title: MSSQLSERVER_7105
 description: "MSSQLSERVER_7105"
-author: rgward
-ms.author: ramakoni
-ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, Masha
+author: suresh-kandoth
+ms.author: sureshka
+ms.reviewer: jopilov, mathoma
 ms.date: 08/20/2020
 ms.service: sql
 ms.subservice: supportability

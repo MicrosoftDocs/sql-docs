@@ -3,7 +3,7 @@ title: "MSSQLSERVER_17053"
 description: "MSSQLSERVER_17053"
 author: MashaMSFT
 ms.author: mathoma
-ms.reviewer: pijocoder
+ms.reviewer: jopilov
 ms.date: 01/17/2023
 ms.service: sql
 ms.subservice: supportability

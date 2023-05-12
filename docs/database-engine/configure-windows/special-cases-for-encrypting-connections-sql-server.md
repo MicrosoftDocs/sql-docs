@@ -3,7 +3,7 @@ title: Configure client computer and application for encryption
 description: Learn how to configure the client computer and application for encryption using self-signed certificates and a certificate automatically by SQL Server.
 author: padmajayaraman
 ms.author: v-jayaramanp
-ms.reviewer: ramakoni1, randolphwest
+ms.reviewer: sureshka, randolphwest
 ms.date: 12/08/2022
 ms.service: sql
 ms.subservice: configuration

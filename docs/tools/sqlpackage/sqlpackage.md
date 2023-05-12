@@ -4,7 +4,7 @@ description: Learn how to automate database development tasks with SqlPackage. V
 author: "dzsquared"
 ms.author: "drskwier"
 ms.reviewer: "maghan"
-ms.date: 6/1/2022
+ms.date: 5/10/2023
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: conceptual
@@ -179,6 +179,20 @@ For Linux and macOS, if the path is not specified in the TMPDIR environment vari
 
 [Contained database users](../../relational-databases/security/contained-database-users-making-your-database-portable.md) are included in SqlPackage operations.  However, the password portion of the definition is set to a randomly generated string by SqlPackage, the existing value is not transferred. It is recommended that the new user's password is reset to a secure value following the import of a `.bacpac` or the deployment of a `.dacpac`.  In an automated environment the password values can be retrieved from a secure keystore, such as Azure Key Vault, in a step following SqlPackage.
 
+
+## Usage data collection
+
+SqlPackage contains Internet-enabled features that can collect and send anonymous feature usage and diagnostic data to Microsoft.
+
+SqlPackage may collect standard computer, use, and performance information that may be transmitted to Microsoft and analyzed to improve the quality, security, and reliability of SqlPackage.
+
+SqlPackage doesn't collect user specific or personal information. To help approximate a single user for diagnostic purposes, SqlPackage will generate a random GUID for each computer it runs on and use that value for all events it sends.
+
+For details, see the [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkID=824704), and [SQL Server Privacy supplement](../../sql-server/sql-server-privacy.md).
+
+### Disable telemetry reporting
+
+To disable telemetry collection and reporting, update the environment variable `DACFX_TELEMETRY_OPTOUT` to `true` or `1`.
 
 ## Support
 

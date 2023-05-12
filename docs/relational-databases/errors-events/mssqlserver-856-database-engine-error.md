@@ -3,7 +3,7 @@ title: MSSQLSERVER_856
 description: "MSSQLSERVER_856"
 author: suresh-kandoth
 ms.author: sureshka
-ms.reviewer:  pijocoder, suresh-kandoth, Masha
+ms.reviewer: jopilov, mathoma
 ms.date: 08/20/2020
 ms.service: sql
 ms.subservice: supportability

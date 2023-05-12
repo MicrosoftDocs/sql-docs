@@ -2,8 +2,8 @@
 title: "MSSQLSERVER_35267"
 description: "MSSQLSERVER_35267"
 author: pijocoder
-ms.author: mathoma
-ms.reviewer: pijocoder, randolphwest
+ms.author: jopilov
+ms.reviewer: mathoma, randolphwest
 ms.date: 02/17/2023
 ms.service: sql
 ms.subservice: supportability

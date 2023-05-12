@@ -3,7 +3,7 @@ title: "MSSQLSERVER_8645"
 description: "MSSQLSERVER_8645"
 author: MashaMSFT
 ms.author: mathoma
-ms.reviewer: pijocoder
+ms.reviewer: jopilov
 ms.date: 04/18/2023
 ms.service: sql
 ms.subservice: supportability

@@ -1,7 +1,7 @@
 ---
 title: "MSSQLSERVER_18210"
 description: "MSSQLSERVER_18210"
-author: JamesFerebee
+author: suresh-kandoth
 ms.author: sureshka
 ms.date: "02/06/2023"
 ms.service: sql

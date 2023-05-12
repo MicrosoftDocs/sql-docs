@@ -16,16 +16,16 @@ ms.custom: tools|sos
 This article lists the features and fixes delivered by the released versions of SqlPackage.
 
 
-## 162.0.52.1 SqlPackage
+## 162.0.52 SqlPackage
 
 **Release date:** May 11, 2023
 
 |Platform|Download|Version|
 |:---|:---|:---|
-|Windows .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2236505)|162.0.52.1|
-|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2236347)|162.0.52.1|
-|macOS .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2236426)|162.0.52.1|
-|Linux .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2236425)|162.0.52.1|
+|Windows .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2236505)|162.0.52|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2236347)|162.0.52|
+|macOS .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2236426)|162.0.52|
+|Linux .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2236425)|162.0.52|
 
 
 ### Features

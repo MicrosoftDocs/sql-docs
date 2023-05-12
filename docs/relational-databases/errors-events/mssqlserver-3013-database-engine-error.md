@@ -2,8 +2,8 @@
 title: MSSQLSERVER_3013
 description: "MSSQLSERVER_3013"
 author: pijocoder
-ms.author: sureshka
-ms.reviewer: sureshka, MashaMSFT
+ms.author: jopilov
+ms.reviewer: sureshka, mathoma
 ms.date: 03/23/2023
 ms.service: sql
 ms.subservice: supportability

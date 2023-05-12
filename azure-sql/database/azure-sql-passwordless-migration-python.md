@@ -45,7 +45,7 @@ Passwordless connections can be configured to work for both local and Azure host
 
 ### Create a database user and assign roles
 
-Create a user in Azure SQL Database. The user should correspond to the Azure account you used to sign-in locally via development tools like Visual Studio or Visual Studio Code. 
+Create a user in Azure SQL Database. The user should correspond to the Azure account you used to sign-in locally in the [Sign-in to Azure](#sign-in-to-azure) section.
 
 1) In the [Azure portal](https://portal.azure.com), browse to your SQL database and select **Query editor (preview)**.
 
@@ -57,6 +57,7 @@ Create a user in Azure SQL Database. The user should correspond to the Azure acc
     CREATE USER <user@domain> FROM EXTERNAL PROVIDER;
     ALTER ROLE db_datareader ADD MEMBER <user@domain>;
     ALTER ROLE db_datawriter ADD MEMBER <user@domain>;
+    ALTER ROLE db_ddladmin ADD MEMBER <user@domain>;
     GO
     ```
 
@@ -66,7 +67,7 @@ Create a user in Azure SQL Database. The user should correspond to the Azure acc
 
 ### Update the local connection configuration
 
-Existing application code that connects to Azure SQL Database using the [Python SQL Driver - pyodbc](/sql/connect/python/pyodbc/python-sql-driver-pyodbc) continues to work with passwordless connections with minor changes. For example, the following code works with both SQL authentication and passwordless connections for a code running locally. The same code works when deployed to Azure App Service as well.
+Existing application code that connects to Azure SQL Database using the [Python SQL Driver - pyodbc](/sql/connect/python/pyodbc/python-sql-driver-pyodbc) continues to work with passwordless connections with minor changes. For example, the following code works with both SQL authentication and passwordless connections for code running locally, and when deployed to Azure App Service.
 
 ```python
 connection_string = os.environ["AZURE_SQL_CONNECTIONSTRING"]
@@ -216,6 +217,10 @@ Driver={ODBC Driver 18 for SQL Server};SERVER=<database-server-name>.database.wi
 ```
 
 `<database-server-name>` is the name of your Azure SQL Database server and `<database-name>` is the name of your Azure SQL Database.
+
+### Create an app settings for the managed identity client ID
+
+To use the user-assigned managed identity, create an AZURE_CLIENT_ID environment variable and set it equal to the client ID of the managed identity. You can set this variable in the **Configuration** section of your app in the Azure portal. You can find the client ID in the **Overview** section of the managed identity resource in the Azure portal.
 
 Save your changes and restart the application if it doesn't do so automatically.
 

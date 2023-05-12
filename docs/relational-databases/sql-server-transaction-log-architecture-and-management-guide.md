@@ -143,7 +143,7 @@ To determine the optimal VLF distribution for the current transaction log size o
 
 ### Log blocks
 
-Each VLF contains one or more log blocks. Each Log block consists of the log records (aligned at a 4-byte boundary). A log block is variable in size and is always an integer multiple of 512 bytes (the minimum sector size SQL Server supports), with a maximum size of 60 KB. A log block is the basic unit of I/O for transaction logging.
+Each VLF contains one or more *log blocks*. Each log block consists of the log records (aligned at a 4-byte boundary). A log block is variable in size and is always an integer multiple of 512 bytes (the minimum sector size SQL Server supports), with a maximum size of 60 KB. A log block is the basic unit of I/O for transaction logging.
 
 In summary, a log block is a container of log records that's used as the basic unit of transaction logging when writing log records to disk.
 

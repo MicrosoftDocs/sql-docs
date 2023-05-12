@@ -145,7 +145,7 @@ Each VLF contains one or more log blocks. Each Log block consists of the log rec
 
 In summary, a log block is a container of log records that's used as the basic unit of transaction logging when writing log records to disk.
 
-Each log block within a VLF is uniquely addressed by its Block Offset. The first block always has a Block Offset that points past the first 8 KB in the VLF.
+Each log block within a VLF is uniquely addressed by its *block offset*. The first block always has a block offset that points past the first 8 KB in the VLF.
 
 In general, a VLF is always filled up with log blocks. It's possible that the last log block in a VLF is empty (for example, doesn't contain any log records). This happens when a log record to be written doesn't fit into the current log block and also when the space left on the VLF is insufficient to hold this log record. In this case, an empty log block is created that fills up the VLF. The log record is inserted into the first block on the next VLF.
 

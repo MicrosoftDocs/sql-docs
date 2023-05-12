@@ -3,7 +3,7 @@ title: "MSSQLSERVER_3313"
 description: "MSSQLSERVER_3313"
 author: MashaMSFT
 ms.author: mathoma
-ms.reviewer: pijocoder
+ms.reviewer: jopilov
 ms.date: 02/16/2023
 ms.service: sql
 ms.subservice: supportability

@@ -3,7 +3,6 @@ title: "MSSQLSERVER_19419"
 description: "MSSQLSERVER_19419"
 author: pijocoder
 ms.author: jopilov
-ms.reviewer: pijocoder
 ms.date: 01/13/2023
 ms.service: sql
 ms.subservice: supportability

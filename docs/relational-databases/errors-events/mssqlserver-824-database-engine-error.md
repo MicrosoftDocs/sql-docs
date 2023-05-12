@@ -3,7 +3,7 @@ title: "MSSQLSERVER_824"
 description: "MSSQLSERVER_824: SQL Server detected a logical consistency-based I/O error."
 author: MashaMSFT
 ms.author: mathoma
-ms.reviewer: pijocoder, randolphwest
+ms.reviewer: jopilov, randolphwest
 ms.date: 12/13/2022
 ms.service: sql
 ms.subservice: supportability

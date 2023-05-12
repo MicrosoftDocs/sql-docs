@@ -2,8 +2,8 @@
 title: "MSSQLSERVER_3624"
 description: "MSSQLSERVER_3624"
 author: pijocoder
-ms.author: mathoma
-ms.reviewer: pijocoder
+ms.author: jopilov
+ms.reviewer: mathoma
 ms.date: 02/01/2023
 ms.service: sql
 ms.subservice: supportability

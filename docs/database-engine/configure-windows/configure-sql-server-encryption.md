@@ -3,7 +3,7 @@ title: Configure SQL Server Database Engine for encryption
 description: This article describes how to configure a SQL Server instance to enable encrypted connections.
 author: sevend2
 ms.author: v-sidong
-ms.reviewer: ramakoni1, randolphwest
+ms.reviewer: sureshka, randolphwest
 ms.date: 03/13/2023
 ms.service: sql
 ms.subservice: configuration

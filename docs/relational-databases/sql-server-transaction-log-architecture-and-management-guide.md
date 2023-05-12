@@ -85,7 +85,7 @@ Virtual log file (VLF) creation follows this method:
 
 If the log files grow to a large size in many small increments, they end up with many virtual log files. **This can slow down database startup, and log backup and restore operations.** Conversely, if the log files are set to a large size with few or just one increment, they contain few very large virtual log files. For more information on properly estimating the **required size** and **autogrow** setting of a transaction log, see the *Recommendations* section of [Manage the size of the transaction log file](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations).
 
-We recommend that you assign to log files a *size* close to the final size required, using the increments needed to achieve optimal VLF distribution, and have a relatively large *growth_increment* value.
+We recommend that you create your log files close to the final size required, using the increments needed to achieve optimal VLF distribution, and have a relatively large *growth_increment* value.
 
 See the following tips to determine the optimal VLF distribution for the current transaction log size:
 

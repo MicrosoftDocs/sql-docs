@@ -264,7 +264,7 @@ Checkpoints occur in the following situations:
 - An instance of SQL Server is stopped by a SHUTDOWN statement or by stopping the SQL Server (MSSQLSERVER) service. Either action causes a checkpoint in each database in the instance of SQL Server.
 - An instance of SQL Server periodically generates automatic checkpoints in each database to reduce the time that the instance would take to recover the database.
 - A database backup is taken.
-- An activity requiring a database shutdown is performed. For example, if AUTO_CLOSE option is ON and the last user connection to the database is closed. Another example: a database option change is made that requires a restart of the database.
+- An activity requiring a database shutdown is performed. This can happen when the AUTO_CLOSE option is ON and the last user connection to the database is closed. Another example is when a database option change is made that requires a restart of the database.
 
 ### Automatic checkpoints
 

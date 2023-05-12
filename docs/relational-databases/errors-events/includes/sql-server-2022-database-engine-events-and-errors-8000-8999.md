@@ -2,10 +2,10 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 03/07/2023
+ms.date: 05/08/2023
 ms.topic: include
 ---
-| Error| Severity | Event logged | Description|
+| Error | Severity | Event logged | Description |
 | :--- | :--- | :--- | :--- |
 | 8001 | 16 | No | The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Meta-information is invalid for the Sql Variant parameter. |
 | 8002 | 16 | No | The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Parameter %d ("%.\*ls"): Data type 0x%02X (XML) has an invalid database or schema specified. |
@@ -363,6 +363,7 @@ ms.topic: include
 | 8579 | 10 | Yes | Testing connection to '%ls' ('%ls') succeeded. |
 | 8580 | 16 | Yes | The provided remote transaction manager whereabouts are invalid. |
 | 8581 | 16 | Yes | The provided OleTx Endpoint CID '%ls' is invalid. |
+| 8582 | 16 | Yes | Failed to update DTC network settings. %ls |
 | [8601](../mssqlserver-8601-database-engine-error.md) | 17 | No | Internal Query Processor Error: The query processor could not obtain access to a required interface. |
 | 8602 | 16 | No | Indexes used in hints must be explicitly included by the index tuning wizard. |
 | 8603 | 16 | No | Invalid syntax for internal DBCC REPAIR statement. |

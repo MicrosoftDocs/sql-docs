@@ -306,7 +306,7 @@ The active log must include every part of all uncommitted transactions. An appli
 - If the system is shut down after the transaction has performed many uncommitted modifications, the recovery phase of the subsequent restart can take much longer than the time specified in the **recovery interval** option.
 - The log might grow very large, because the log can't be truncated past the MinLSN. This occurs even if the database is using the simple recovery model, in which the transaction log is truncated on each automatic checkpoint.
 
-Recovery of long-running transactions and the problems described above can be avoided by using [Accelerated database recovery](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr), a feature available starting with [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] and in [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)].
+Recovery of long-running transactions, and the problems described in this article, can be avoided by using [Accelerated database recovery](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr), a feature available starting with [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] and in [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)].
 
 ### Replication transactions
 

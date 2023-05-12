@@ -112,9 +112,6 @@ In this article, we'll describe how you can configure automatic generation and s
 
 ## Enable database digest uploads using PowerShell
 
-> [!NOTE]
-> The PowerShell cmdlet is currently not available in public preview. You can use the Azure Portal or the Azure CLI instead.
-
 Update the database to start uploading ledger digests to the Azure Blob Storage account or Azure Confidential Ledger. When the endpoint parameter is an Azure Blob Storage endpoint, the database server will create a new container, named **sqldbledgerdigests**, within the storage account and it will start writing ledger digests to the container.
   
 > [!NOTE]

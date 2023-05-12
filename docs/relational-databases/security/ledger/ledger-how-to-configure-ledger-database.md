@@ -141,9 +141,6 @@ For more information, see [CREATE DATABASE (Transact-SQL)](../../../t-sql/statem
 
 ## Enable ledger database using PowerShell
 
-> [!NOTE]
-> The PowerShell cmdlet is currently not available in public preview. You can use the T-SQL or Azure CLI instead.
-
 Create a single ledger database with the [New-AzSqlInstanceDatabase](/powershell/module/az.sql/New-AzSqlInstanceDatabase) cmdlet.
 The following example creates a ledger database on a specified instance. The parameter `-EnableLedger` creates the ledger database.
 *Make sure you modify the parameters ResourceGroupName, InstanceName and Name.*

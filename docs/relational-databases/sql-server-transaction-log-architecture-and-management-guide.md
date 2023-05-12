@@ -99,7 +99,7 @@ For more information on `FILEGROWTH` and `SIZE` arguments of `ALTER DATABASE`, s
 
 #### What happens when you have too many VLFs?
 
-During the initial stages of a database recovery process, SQL Server discovers of all VLFs in all transaction log files, and builds a list of these VLFs. This process can take a long time depending on the number of VLFs present in the specific database. The more VLFs, the longer the process. A database can end up with large number of VLFs if frequent transaction log autogrowth or manual growth is encountered in small increments. When the number of VLFs reaches the range of several hundred thousand, you may encounter some or most of the following symptoms:
+During the initial stages of a database recovery process, SQL Server discovers all VLFs in all transaction log files, and builds a list of these VLFs. This process can take a long time depending on the number of VLFs present in the specific database. The more VLFs, the longer the process. A database can end up with large number of VLFs if frequent transaction log autogrowth or manual growth is encountered in small increments. When the number of VLFs reaches the range of several hundred thousand, you may encounter some or most of the following symptoms:
 
 - One or more databases take a very long time to finish recovery during SQL Server startup.
 - Restoring a database takes a very long time to complete.

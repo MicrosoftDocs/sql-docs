@@ -272,6 +272,20 @@ For CDC enabled SQL databases, when you use SqlPackage, SSDT, or other SQL tools
 
 Even if CDC isn't enabled and you've defined a custom schema or user named `cdc` in your database that will also be excluded in Import/Export and Extract/Deploy operations to import/setup a new database.
 
+## Known issues and troubleshooting
+
+The following table lists of possible solution if you're facing issues with Change data capture (CDC).
+
+|Error_Number|Error_Message|Mitigation|  
+|-----------------|---------------|-----------------|  
+|913|Couldn't find database ID. Database may not be activated yet or may be in transition.|Disable CDC on database.<br/>Refer this article to avoid this error in future.<br/>[cdc.fn_cdc_get_all_changes_<capture_instance>](../../database-engine/)|
+|1105|Couldn't allocate space for object in database because the filegroup is full. Create space by deleting unneeded files, dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup.|Upgrade SLO of database or disable CDC on database.|
+|1132|The elastic pool has reached its storage limit.|Upgrade storage limit for the elastic pool or disable CDC on database.|  
+|1202|Database principal doesn't exist or user isn't a member.|Execute the following SQL to create CDC user if it doesn't already exist and assign proper role for that user. <br/><br/>`if(not exists (select * from sys.database_principals where name = 'cdc'))`<br/><br/>`begin`<br/>`create user [cdc] without login with default_schema = [cdc];`<br/>`end`<br/><br/>`exec sp_addrolemember 'db_owner' , 'cdc'`|
+|15517|Can't execute as the database principal because the principal doesn't exist. This type of principal can't be impersonated, or you don't have permission.|Disable CDC on database.|  
+|18807|Can't find an object ID for the replication system table. Verify that the system table exists and is accessible by querying the table directly.|Disable CDC on database.|
+|21050|Only members of the sysadmin fixed server role or db_owner fixed server role can perform this operation.|Run the following query to verify if cdc user has sysadmin or db_owner role.<br/>`execute as user = 'cdc' select is_srvrolemember('sysadmin')`<br/>`select is_member('db_owner')`<br/><br/>If cdc user doesn't have either role run the following to add db_owner permission to cdc user.<br/>`exec sp_addrolemember 'db_owner' , 'cdc'`|
+
 ## See also  
  [Track Data Changes &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Enable and Disable change data capture &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)   

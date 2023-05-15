@@ -36,7 +36,7 @@ The following actions may make space available in the filegroup:
   
 -   Free disk space by dropping index or tables that are no longer needed.  
   
--   For more information, see "Troubleshooting Insufficient Data Disk Space" in SQL Server Books Online.  
+-   For more information, see [Troubleshooting Insufficient Data Disk Space](https://learn.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms366198(v=sql.105)) in SQL Server documentation.  
   
 > [!NOTE]  
 > When an index is located on several files, **ALTER INDEX REORGANIZE** can return error 1105 when one of the files is full. The reorganization process is blocked when the process tries to move rows to the full file. To work around this limitation perform an **ALTER INDEX REBUILD** instead of **ALTER INDEX REORGANIZE** or increase the file growth limit of any files that are full.  

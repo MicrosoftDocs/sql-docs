@@ -2,10 +2,10 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 04/21/2023
+ms.date: 05/11/2023
 ms.topic: include
 ---
-| Error| Severity | Event logged | Description|
+| Error | Severity | Event logged | Description |
 | :--- | :--- | :--- | :--- |
 | 22001 | 16 | No | FreeStaleVersionSpace failed for page %S_PGID for database id '%d'. It will be retired in the next iteration of the version cleaner. |
 | 22002 | 17 | No | Internal Error: A expected large object wasn't found. |
@@ -266,6 +266,8 @@ ms.topic: include
 | 22885 | 16 | No | An insert-insert conflict between peer %d (incoming) with commit datetime value of '%s' and peer %d (on disk) with commit datetime value of '%s' was detected and resolved. The incoming insert was skipped by peer %d. |
 | 22886 | 10 | No | An update-delete conflict was detected. The row could not be updated since the row does not exist. The incoming update was skipped. |
 | 22889 | 10 | No | Warning: Unable to get database version for the subscription database '%s'. The sp_replmonitorsubscriptionpendingcmds may report incorrect number of pending commands for P2P replication. |
+| 22891 | 16 | No | Could not enable '%S_MSG' for database '%s'. '%S_MSG' cannot be enabled on a DB with delayed durability set. |
+| 22892 | 16 | No | Could not enable delayed durability on DB. Delayed durability cannot be enabled on a DB while '%S_MSG' is enabled. |
 | 22901 | 16 | No | The database '%s' is not enabled for Change Data Capture. Ensure that the correct database context is set and retry the operation. To report on the databases enabled for Change Data Capture, query the is_cdc_enabled column in the sys.databases catalog view. |
 | 22902 | 16 | No | Caller is not authorized to initiate the requested action. Sysadmin privileges are required. |
 | 22903 | 16 | No | Another connection with session ID %I64d is already running 'sp_replcmds' for Change Data Capture in the current database. |

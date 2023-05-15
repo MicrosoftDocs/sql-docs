@@ -8,7 +8,7 @@ az identity show --name MigrationIdentity -g <your-identity-resource-group-name>
 
 # [Azure App Service](#tab/app-service-identity)
 
-You can assign a managed identity to an Azure App Service instance with the [az webapp identity assign](/cli/azure/webapp/identity) command. The `--identities` requires the fully qualified resource ID of the managed identity you retrieved in the previous step.A fully qualified resource Id starts with '/subscriptions/{subscriptionId}' or '/providers/{resourceProviderNamespace}/'.
+You can assign a managed identity to an Azure App Service instance with the [az webapp identity assign](/cli/azure/webapp/identity) command. The `--identities` parameter requires the fully qualified resource ID of the managed identity you retrieved in the previous step. A fully qualified resource Id starts with '/subscriptions/{subscriptionId}' or '/providers/{resourceProviderNamespace}/'.
 
 ```azurecli
 az webapp identity assign \
@@ -16,6 +16,8 @@ az webapp identity assign \
     --name <webapp-name> \
     --identities <managed-identity-id>
 ```
+
+If you are working with Git Bash, be careful of path conversions when using fully qualified resource IDs. To disable path conversion, add `MSYS_NO_PATHCONV=1` to the beginning of your command. For more information, see [Auto translation of resource IDs](https://github.com/Azure/azure-cli/blob/dev/doc/use_cli_with_git_bash.md#auto-translation-of-resource-ids).
 
 # [Azure Spring Apps](#tab/spring-apps-identity)
 

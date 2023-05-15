@@ -18,6 +18,8 @@ Application requests to Azure SQL Database must be authenticated. Although there
 
 ## Configure the Azure SQL Database
 
+[!INCLUDE [configure-the-azure-sql-database](../includes/passwordless/configure-the-azure-sql-database.md)]
+
 Passwordless connections use Azure Active Directory (Azure AD) authentication to connect to Azure services, including Azure SQL Database. With Azure AD authentication, you can manage identities in a central location to simplify permission management. Learn more about configuring Azure AD authentication for your Azure SQL Database:
 
 - [Azure AD authentication overview](/azure/azure-sql/database/authentication-aad-overview)

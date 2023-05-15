@@ -4,7 +4,7 @@ description: This article contains the release notes and supported features for 
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
-ms.date: 05/11/2023
+ms.date: 05/15/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -35,6 +35,9 @@ This section lists the latest versions of each package per distribution, for [!I
 | Version | Release | Date | Build | KB article |
 | --- | --- | --- | --- | --- |
 | [!INCLUDE[ssSQL22](../includes/sssql22-md.md)] | CU 4 | 2023-05-11 | 16.0.4035.4 | [Support article](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate4)|
+
+> [!NOTE]  
+> **SLES v15 SP4** is now supported on [!INCLUDE[ssSQL22](../includes/sssql22-md.md)] starting with CU 4.
 
 
 - The **mssql-server-is** package isn't supported on SUSE in this release. For more information, see [SQL Server Integration Services (SSIS)](#ssis).

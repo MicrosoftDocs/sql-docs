@@ -1131,7 +1131,8 @@ Specifies the URL to use for the backup operation. The URL format is used for cr
 *n*    
 Is a placeholder that indicates that up to 64 backup devices may be specified in a comma-separated list.
 
-### WITH Options
+### WITH options
+
 Specifies options to be used with a backup operation
 
 #### ENCRYPTION    

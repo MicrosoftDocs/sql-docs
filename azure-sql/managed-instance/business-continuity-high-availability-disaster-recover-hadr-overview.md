@@ -44,11 +44,11 @@ From an instance perspective, there are four major potential disruption scenario
 
 To mitigate the local hardware and software failures, SQL Managed Instance includes a [high availability architecture](high-availability-sla.md), which guarantees automatic recovery from these failures with up to 99.995% availability SLA.  
 
-To protect your business from data loss, SQL Managed Instance automatically creates full database backups weekly, differential database backups every 12 hours, and transaction log backups every 10 minutes. By default, the backups are stored in [redundant storage](automated-backups-overview.md#backup-storage-redundancy) for seven days for both service tiers, with a configurable backup retention period for point-in-time restore of 0 to 35 days.
+To protect your business from data loss, SQL Managed Instance automatically creates full database backups weekly, differential database backups every 12 hours, and transaction log backups every 10 minutes. By default, the backups are stored in [redundant storage](automated-backups-overview.md#backup-storage-redundancy) for seven days for both service tiers, with a configurable backup retention period for point-in-time restore of 1 to 35 days.
 
 SQL Managed Instance also provides several business continuity features that you can use to mitigate various unplanned scenarios: 
 
-- [Built-in automated backups](automated-backups-overview.md) and [Point in Time Restore](recovery-using-backups.md#point-in-time-restore) enables you to restore complete database to some point in time within the configured retention period of 0 to 35 days.
+- [Built-in automated backups](automated-backups-overview.md) and [Point in Time Restore](recovery-using-backups.md#point-in-time-restore) enables you to restore complete database to some point in time within the configured retention period of 1 to 35 days.
 - You can [restore a deleted database](recovery-using-backups.md#deleted-database-restore) to the point at which it was deleted.
 - [Long-term backup retention](../database/long-term-retention-overview.md) enables you to keep backups up to 10 years.  
 - [Auto-failover group](auto-failover-group-sql-mi.md#terminology-and-capabilities) allows the application to automatically recover in the event of a regional outage.

@@ -221,13 +221,13 @@ To start your managed instance by using PowerShell, run the following script:
 
 ```powershell
 ######## START SECTION ########
-SQL Managed Instance URI
+# SQL Managed Instance URI
 Write-Host "Generating URI for starting SQL Managed instance $SqlMIName in resource group $RgName"
 $instanceStartUri = $UriPrefix + $SqlMIName + "/start " + $UriSuffix
 # Invoke API call to start the operation
 $startInstanceResp = Invoke-WebRequest -Method Post -Headers $authHeader -Uri $instanceStartUri
 Write-Host "Instance Start API Response:`n" $startInstanceResp
-#Get the operation ID
+# Get the operation ID
 $startInstanceOperationId = ($startInstanceResp.Headers | ConvertTo-Json | ConvertFrom-Json)."x-ms-request-id"
 Write-Host "Stop operation ID:`n" $startInstanceOperationId
 # Get the header from the API response, if status returned is Accepted, all is good

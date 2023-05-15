@@ -3,7 +3,7 @@ title: "SQLdiag Utility"
 description: Use the SQLdiag utility to collect logs and data files from SQL Server and other types of servers, and monitor servers over time or troubleshoot problems.
 author: markingmyname
 ms.author: maghan
-ms.reviewer: pijocoder
+ms.reviewer: jopilov
 ms.date: 02/01/2022
 ms.service: sql
 ms.subservice: tools-other

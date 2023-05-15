@@ -3,7 +3,7 @@ title: SQL Server and client encryption summary
 description: Learn about the steps required to encrypt all connections to the SQL Server, enable encryption connections from specific clients and check if the encryption works.
 author: padmajayaraman
 ms.author: v-jayaramanp
-ms.reviewer: ramakoni1, randolphwest
+ms.reviewer: sureshka, randolphwest
 ms.date: 12/08/2022
 ms.service: sql
 ms.subservice: configuration

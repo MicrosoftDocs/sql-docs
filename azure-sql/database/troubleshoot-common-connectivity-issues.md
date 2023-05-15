@@ -1,8 +1,8 @@
 ---
 title: Working with transient errors
 description: Learn how to troubleshoot, diagnose, and prevent a SQL connection error or transient error when connecting to Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics.
-author: ramakoni1
-ms.author: ramakoni
+author: suresh-kandoth
+ms.author: sureshka
 ms.reviewer: wiassaf, mathoma, vanto
 ms.date: 07/10/2022
 ms.service: sql-database

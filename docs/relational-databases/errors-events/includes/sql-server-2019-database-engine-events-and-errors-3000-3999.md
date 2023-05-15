@@ -2,10 +2,10 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 02/17/2023
+ms.date: 05/11/2023
 ms.topic: include
 ---
-| Error| Severity | Event logged | Description|
+| Error | Severity | Event logged | Description |
 | :--- | :--- | :--- | :--- |
 | 3001 | 16 | No | obsolete |
 | 3002 | 16 | No | Cannot BACKUP or RESTORE a database snapshot. |
@@ -323,6 +323,7 @@ ms.topic: include
 | 3465 | 16 | Yes | An error occurred while resolving the deferred transaction. Transaction not found. |
 | 3466 | 10 | No | Restore was successful but deferred transactions remain. These transactions cannot be resolved because there are data or keys in the enclave that is unavailable. Either use sp_enclave_send_keys to send keys to the enclave, or use RESTORE to make that data available or drop the filegroups if you never need this data again. Dropping the filegroup results in a defunct filegroup. |
 | 3467 | 10 | No | Restore was successful but deferred transactions remain. These transactions cannot be resolved because there are data or keys in the enclave that is unavailable. For keys, since there is no enclave configured, SQL may resolve deferred transactions by invalidating indexes on encrypted columns; please check the error log.For the data, either use RESTORE to make that data available or drop the filegroups if you never need this data again. Dropping the filegroup results in a defunct filegroup. |
+| 3468 | 21 | No | Restore failed due to items not being found in the expected restore pipeline queues. |
 | 3505 | 14 | No | Only the owner of database "%.\*ls" or someone with relevant permissions can run the CHECKPOINT statement. |
 | 3604 | 10 | No | Duplicate key was ignored. |
 | 3605 | 16 | No | Schema verification failed for database '%.\*ls'. |

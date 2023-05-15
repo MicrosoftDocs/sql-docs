@@ -4,7 +4,7 @@ description: Release notes for Microsoft SqlPackage.
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: "llali"
-ms.date: 2/13/2023
+ms.date: 5/10/2023
 ms.service: sql
 ms.topic: conceptual
 ms.custom: tools|sos
@@ -14,6 +14,58 @@ ms.custom: tools|sos
 **[Download the latest version](sqlpackage-download.md)**
 
 This article lists the features and fixes delivered by the released versions of SqlPackage.
+
+
+## 162.0.52 SqlPackage
+
+**Release date:** May 11, 2023
+
+|Platform|Download|Version|
+|:---|:---|:---|
+|Windows .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2236505)|162.0.52|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2236347)|162.0.52|
+|macOS .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2236426)|162.0.52|
+|Linux .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2236425)|162.0.52|
+
+
+### Features
+| Feature | Details |
+| :------ | :------ |
+|Platform|SqlPackage now collects usage data, including anonymous feature usage and diagnostic data. For more information, see [Usage data collection](sqlpackage.md#usage-data-collection).|
+|Platform|References [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient/5.1.0) v5.1.0|
+|Azure Synapse Analytics|Adds support for [DW_COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#dw_compatibility_level---auto--10--20--30--40--50--9000-).|
+|ScriptDOM|ScriptDOM is now available as a standalone package on [NuGet](https://www.nuget.org/packages/Microsoft.SqlServer.TransactSql.ScriptDom) and is open source on [GitHub](https://github.com/microsoft/SqlScriptDOM).|
+|System dacpacs|The `master` and `msdb` system dacpacs are now available on NuGet as [Microsoft.SqlServer.Dacpacs.Master](https://www.nuget.org/packages/Microsoft.SqlServer.Dacpacs.Master) and [Microsoft.SqlServer.Dacpacs.Msdb](https://www.nuget.org/packages/Microsoft.SqlServer.Dacpacs.Msdb). More information on the system dacpacs and consuming dacpacs as a package reference is available in the [DacFx GitHub repository](https://github.com/microsoft/DacFx).|
+
+### Fixes
+| Feature | Details |
+| :------ | :------ |
+|Azure Synapse Analytics|Fixes an issue where the default command timeout was not set properly when connecting to Azure Synapse Analytics serverless SQL pools.|
+|Azure Synapse Analytics|Fixes an issue where Azure Synapse Analytics serverless SQL pools would incorrectly determine the default data and log paths.|
+|Azure Synapse Analytics|Fixes an issue where Azure Synapse Analytics serverless SQL pools would incorrectly determine the default login, user and schema.|
+|Azure SQL Database|Fixes an issue where temporal history retention was not correctly recognized as not configured (null).|
+|Deployment|Fixes an issue where the deployment plan fails to detect a dependency on a table/view in subqueries within FROM VALUES clause. [GitHub issue](https://github.com/microsoft/DacFx/issues/156)|
+|Deployment|Fixes an issue where deployment would fail when the target database contains a rule bound to a column.|
+|Deployment|Fixes an issue where deployment would fail when the target database contains a rule bound to a column with a user-defined type. [GitHub issue](https://github.com/microsoft/DacFx/issues/245)|
+|Deployment|Fixes an issue where the retention period on a temporal table would be reset to the default value when another change is made to the table. [GitHub issue](https://github.com/microsoft/DacFx/issues/258)|
+|Deployment|Fixes an issue where updates to a primary key is not included in the deployment when the table has compression options specified.|
+|Deployment|Fixes an issue where a non-clustered index on a partitioned table is rebuilt even when no changes are made to the table. [GitHub issue](https://github.com/microsoft/DacFx/issues/202)|
+|Deployment|Fixes an issue where ignorecolumnorder property is not honored by a history table when no changes are made to a system-versioned table except the columns are reordered.|
+|Deployment|Fixes an issue where external tables would be dropped and redeployed despite no changes when the table definition contained SQLCMD variables. [GitHub issue](https://github.com/microsoft/DacFx/issues/249)|
+|Export|Fixes an issue where the diagnostic information provided during an export operation incorrectly reports the size of a table in KB instead of Bytes. [GitHub issue](https://github.com/microsoft/DacFx/issues/209)|
+|Import|Fixes an issue where an Azure Active Directory user cannot be created during import to Azure SQL Database, causing the import to fail. [GitHub issue](https://github.com/microsoft/DacFx/issues/260)|
+|Ledger|Fixes an issue where SqlPackage was not correctly identifying the error when the Ledger history table or view have an invalid two-part name.|
+|Permissions|Fixes an issue where permissions assigned to a user in the database model are not recognized, causing the project build or SqlPackage operation to fail.|
+|Query Store|Fixes an issue where the `flush_interval_seconds` [Query Store option](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) was not correctly validated with a minimum value of 60 seconds.|
+|SQL Server 2022|Fixes an issue where the function `DATETRUNC` was not recognized as a built-in function. [Developer Community report](https://developercommunity.visualstudio.com/t/Visual-Studio-build-solution-not-recogni/10333180)|
+|SQL Server 2022|Fixes an issue where the function `DATE_BUCKET` was not recognized as a built-in function.|
+
+
+### Known Issues
+| Feature | Details | Workaround |
+| :------ | :------ |:------ |
+| Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) isn't yet supported. | N/A |
+| ScriptDOM | Parsing a very large file can result in a stack overflow. | None |
 
 ## 161.8089.0 SqlPackage
 

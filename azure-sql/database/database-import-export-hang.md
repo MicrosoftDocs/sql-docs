@@ -1,8 +1,8 @@
 ---
 title: Import and export of a database takes a long time
 description: Azure SQL Database and Azure SQL Managed Instance Import/Export service takes a long time to import or export a database
-author: v-miegge
-ms.author: ramakoni
+author: suresh-kandoth
+ms.author: sureshka
 ms.reviewer: wiassaf, mathoma
 ms.date: 09/27/2019
 ms.service: sql-db-mi

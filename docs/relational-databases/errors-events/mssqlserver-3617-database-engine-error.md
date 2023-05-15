@@ -1,7 +1,7 @@
 ---
 title: "MSSQLSERVER_3617"
 description: "MSSQLSERVER_3617"
-author: PijoCoder
+author: pijocoder
 ms.author: jopilov
 ms.date: "07/13/2021"
 ms.service: sql

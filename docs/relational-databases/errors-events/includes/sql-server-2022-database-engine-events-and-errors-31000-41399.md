@@ -2,13 +2,13 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 04/21/2023
+ms.date: 05/08/2023
 ms.topic: include
 ---
 > [!NOTE]
 > This article contains the term *whitelist*, a term Microsoft considers insensitive in this context. The term appears in this article because it currently appears in the software. When the term is removed from the software, we will remove it from the article.
 
-| Error| Severity | Event logged | Description|
+| Error | Severity | Event logged | Description |
 | :--- | :--- | :--- | :--- |
 | 31001 | 16 | No | The session '%s' already exists. Use a different session name. |
 | 31002 | 16 | No | This operation can be performed only by the owner of the session. |
@@ -963,6 +963,7 @@ ms.topic: include
 | 35527 | 10 | No | rbio_connection |
 | 35528 | 10 | No | unable to read page due to invalid FCB |
 | 35529 | 10 | No | certificate id |
+| 35532 | 10 | No | certificate name |
 | 36001 | 16 | No | %s '%s' already exists in the database. |
 | 36002 | 16 | No | instance_id already exists in the database. |
 | 36003 | 16 | No | %s '%s' already exists for the given DAC instance. |
@@ -1233,6 +1234,11 @@ ms.topic: include
 | 37536 | 16 | Yes | Internal error occurred while obtaining version information from IMDS endpoint. Substate: '%ls', status: 0x%08x. |
 | 37537 | 16 | Yes | Internal error occurred while obtaining version information from IMDS endpoint. Error code: '%ls'. Error message: '%ls'. Return code: '0x%08x'. |
 | 37538 | 16 | Yes | Internal error occurred while obtaining version information from IMDS endpoint. Return code: '0x%08x'. |
+| 37539 | 16 | No | Uploading ledger digest failed for database with id %d due to outbound firewall rules. |
+| 37540 | 16 | No | The provided ledger digest storage location is not in the list of Outbound Firewall Rules on the server. Please add this to the list of Outbound Firewall Rules on your server and retry the operation. |
+| 37541 | 16 | No | Provider '%ls' is no longer supported. Please use MSOLEDBSQL provider instead. (https://go.microsoft.com/fwlink/?linkid=2206241&clcid=0x409) |
+| 37542 | 16 | Yes | The operation could not be completed because attempts to connect to Azure Key Vault (AKV) were denied by the configured Network Security Perimeter. Key vault uri: '%ls'. |
+| 37543 | 10 | No | The trust of the certificate imported could not be verified with the Certificate Authority (CA) or verified through the Internet. Most likely the host operating system where SQL Server is hosted is missing the latest root certificate updates, or access to the Internet. In case this certificate is used for authentication when partner server rotates the certificate, the authentication will fail unless the issue has been resolved on the host OS. Please ensure that the host OS has the latest root certificate updates, or access to the Internet to reach out to remote CA. Error code: 0x%lx. |
 | 38001 | 16 | No | Cannot find the file id %d in the database '%s'. |
 | 38002 | 16 | No | Only users having %s permission can execute this stored procedure. |
 | 39001 | 16 | No | Only SELECT statement is supported for input data query to 'sp_execute_external_script' stored procedure. |

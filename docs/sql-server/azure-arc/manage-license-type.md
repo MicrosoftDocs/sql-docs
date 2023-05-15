@@ -5,7 +5,7 @@ description: Explains how to manage SQL Server instance licenses. Also demonstra
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 03/22/2023
+ms.date: 05/15/2023
 ms.service: sql
 ms.topic: conceptual
 ---

@@ -12,6 +12,6 @@
     GO
     ```
 
-    :::image type="content" source="../../database/media/passwordless-connections/query-editor-user-small.png" lightbox="media/passwordless-connections/query-editor-user.png" alt-text="A screenshot showing how to use the Azure Query editor.":::
+    :::image type="content" source="../../database/media/passwordless-connections/query-editor-user-small.png" lightbox="../../database/media/passwordless-connections/query-editor-user.png" alt-text="A screenshot showing how to use the Azure Query editor.":::
 
     For more information about the roles assigned, see [Fixed-database roles](/sql/relational-databases/security/authentication-access/database-level-roles#fixed-database-roles).

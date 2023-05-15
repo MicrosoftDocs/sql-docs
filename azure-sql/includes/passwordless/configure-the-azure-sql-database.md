@@ -13,4 +13,4 @@ For this migration guide, ensure you have an Azure AD admin assigned to your Azu
 
 1) Select the user and choose **Select**.
 
-    :::image type="content" source="../../database/media/passwordless-connections/migration-enable-active-directory-small.png" lightbox="media/passwordless-connections/migration-enable-active-directory.png" alt-text="A screenshot showing how to enable active directory admin.":::
+    :::image type="content" source="../../database/media/passwordless-connections/migration-enable-active-directory-small.png" lightbox="../../database/media/passwordless-connections/migration-enable-active-directory.png" alt-text="A screenshot showing how to enable active directory admin.":::

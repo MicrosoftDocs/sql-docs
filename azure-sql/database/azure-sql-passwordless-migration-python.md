@@ -14,7 +14,7 @@ ms.devlang: python
 
 # Migrate a Python application to use passwordless connections with Azure SQL Database
 
-Application requests to Azure SQL Database must be authenticated. Although there are multiple options for authenticating to Azure SQL Database, you should prioritize passwordless connections in your applications when possible. Traditional authentication methods that use passwords or secret keys create security risks and complications. Visit the [passwordless connections for Azure services](/azure/developer/intro/passwordless-overview) hub to learn more about the advantages of moving to passwordless connections. The following tutorial explains how to migrate an existing application to connect to Azure SQL Database to use passwordless connections instead of a username and password solution.
+Application requests to Azure SQL Database must be authenticated. Although there are multiple options for authenticating to Azure SQL Database, you should prioritize passwordless connections in your applications when possible. Traditional authentication methods that use passwords or secret keys create security risks and complications. Visit the [passwordless connections for Azure services](/azure/developer/intro/passwordless-overview) hub to learn more about the advantages of moving to passwordless connections. The following tutorial explains how to migrate an existing Python application to connect to Azure SQL Database to use passwordless connections instead of a username and password solution.
 
 ## Configure the Azure SQL Database
 
@@ -67,7 +67,7 @@ Create a user in Azure SQL Database. The user should correspond to the Azure acc
 
 ### Update the local connection configuration
 
-Existing application code that connects to Azure SQL Database using the [Python SQL Driver - pyodbc](/sql/connect/python/pyodbc/python-sql-driver-pyodbc) continues to work with passwordless connections with minor changes. For example, the following code works with both SQL authentication and passwordless connections for code running locally, and when deployed to Azure App Service.
+Existing application code that connects to Azure SQL Database using the [Python SQL Driver - pyodbc](/sql/connect/python/pyodbc/python-sql-driver-pyodbc) continues to work with passwordless connections with minor changes. For example, the following code works with both SQL authentication and passwordless connections when running locally and when deployed to Azure App Service.
 
 ```python
 connection_string = os.environ["AZURE_SQL_CONNECTIONSTRING"]
@@ -92,6 +92,9 @@ def get_conn():
         conn = pyodbc.connect(connection_string, attrs_before={SQL_COPT_SS_ACCESS_TOKEN: token_struct})
     return conn
 ```
+
+> [!TIP]
+> In this example code, the App Service environment variable `WEBSITE_HOSTNAME` is used to determine what environment the code is running in. For other deployment scenarios, you can use other environment variables to determine the environment. 
 
 To update the referenced connection string (`AZURE_SQL_CONNECTIONSTRING`) for local development, use the passwordless connection string format:
 

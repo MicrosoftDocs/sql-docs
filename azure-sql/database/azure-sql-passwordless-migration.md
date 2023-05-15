@@ -18,22 +18,7 @@ Application requests to Azure SQL Database must be authenticated. Although there
 
 ## Configure the Azure SQL Database
 
-Passwordless connections use Azure Active Directory (Azure AD) authentication to connect to Azure services, including Azure SQL Database. With Azure AD authentication, you can manage identities in a central location to simplify permission management. Learn more about configuring Azure AD authentication for your Azure SQL Database:
-
-- [Azure AD authentication overview](/azure/azure-sql/database/authentication-aad-overview)
-- [Configure Azure AD auth](/azure/azure-sql/database/authentication-aad-configure)
-
-For this migration guide, ensure you have an Azure AD admin assigned to your Azure SQL Database.
-
-1) Navigate to the **Azure Active Directory** page of your logical server.
-
-1) Select **Set admin**.
-
-1) In the **Azure Active Directory** flyout menu, search for the user you want to assign as admin.
-
-1) Select the user and choose **Select**.
-
-    :::image type="content" source="media/passwordless-connections/migration-enable-active-directory-small.png" lightbox="media/passwordless-connections/migration-enable-active-directory.png" alt-text="A screenshot showing how to enable active directory admin.":::
+[!INCLUDE [configure-the-azure-sql-database](../includes/passwordless/configure-the-azure-sql-database.md)]
 
 ## Configure your local development environment
 
@@ -47,21 +32,7 @@ Passwordless connections can be configured to work for both local and Azure host
 
 Create a user in Azure SQL Database. The user should correspond to the Azure account you used to sign-in locally via development tools like Visual Studio or IntelliJ.
 
-1) In the Azure portal, browse to your SQL database and select **Query editor (preview)**.
-
-2) Select **Continue as `<your-username>`** on the right side of the screen to sign into the database using your account.
-
-3) On the query editor view, run the following T-SQL commands:
-
-    ```sql
-    CREATE USER <user@domain> FROM EXTERNAL PROVIDER;
-    ALTER ROLE db_datareader ADD MEMBER <user@domain>;
-    ALTER ROLE db_datawriter ADD MEMBER <user@domain>;
-    ALTER ROLE db_ddladmin ADD MEMBER <user@domain>;
-    GO
-    ```
-
-    :::image type="content" source="media/passwordless-connections/query-editor-user-small.png" lightbox="media/passwordless-connections/query-editor-user.png" alt-text="A screenshot showing how to use the Azure Query editor.":::
+[!INCLUDE [local-create-user-roles](../includes/passwordless/local-create-user-roles.md)]
 
 ### Update the local connection configuration
 

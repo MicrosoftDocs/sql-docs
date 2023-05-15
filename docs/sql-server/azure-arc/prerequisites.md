@@ -30,10 +30,11 @@ Before you can Arc-enable an instance of [!INCLUDE [ssnoversion-md](../../includ
 
 ### Permissions
 
-To [Connect SQL Servers on Azure Arc-enabled servers at scale using Azure policy](connect-at-scale-policy.md) for you to create an Azure Policy assignment, your subscription requires the `Resource Policy Contributor` role assignment for the scope that you're targeting. The scope may be either subscription or resource group. Further, if you are going to create a *new* system assigned managed identity, you need the `User Access Administrator` role assignment in the subscription.
+To [Connect SQL Servers on Azure Arc-enabled servers at scale using Azure policy](connect-at-scale-policy.md), your subscription requires the [`Resource Policy Contributor`](/azure/role-based-access-control/built-in-roles#resource-policy-contributor) role assignment for the scope that you're targeting. The scope may be either subscription or resource group. Further, if you are going to create a *new* system assigned managed identity, you need the [`User Access Administrator`](/azure/role-based-access-control/built-in-roles#user-access-administrator) role assignment in the subscription.
 
 For all the other onboarding methods, user or service principal must have permissions in the Azure resource group to complete the task. Specifically:
-- `Azure Connected Machine Onboarding` role
+
+- [`Azure Connected Machine Onboarding`](/azure/role-based-access-control/built-in-roles#azure-connected-machine-onboarding) role
 - `Microsoft.AzureArcData/register/action`
 - `Microsoft.HybridCompute/machines/extensions/read`
 - `Microsoft.HybridCompute/machines/extensions/write`

@@ -118,10 +118,6 @@ Complete the following steps in the Azure portal to associate the user-assigned 
 
 [!INCLUDE [associate-managed-identity-cli](../includes/passwordless/associate-managed-identity-cli.md)]
 
-# [Service Connector](#tab/service-connector-assign)
-
-[!INCLUDE [service-connector-commands](../includes/passwordless/service-connector-commands.md)]
-
 ---
 
 ### Create a database user for the identity and assign roles

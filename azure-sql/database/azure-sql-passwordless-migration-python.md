@@ -226,7 +226,7 @@ Driver={ODBC Driver 18 for SQL Server};SERVER=<database-server-name>.database.wi
 To use the user-assigned managed identity, create an AZURE_CLIENT_ID environment variable and set it equal to the client ID of the managed identity.  You can set this variable in the **Configuration** section of your app in the Azure portal. You can find the client ID in the **Overview** section of the managed identity resource in the Azure portal.
 
 > [!NOTE]
-> The example connection code shown in this migration guide uses the [DefaultAzureCredential](/python/api/azure-identity/azure.identity.defaultazurecredential) class, which will use the managed identity if the AZURE_CLIENT_ID environment variable is set. If not specified, a system-assigned identity will be used if configured.
+> The example connection code shown in this migration guide uses the [DefaultAzureCredential](/python/api/azure-identity/azure.identity.defaultazurecredential) class when deployed. The DefaultAzureCredential uses a user-assigned managed identity if the AZURE_CLIENT_ID environment variable is set. If not specified, a system-assigned managed identity will be used if configured.
 
 Save your changes and restart the application if it doesn't do so automatically.
 

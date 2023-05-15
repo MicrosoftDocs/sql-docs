@@ -4,7 +4,7 @@ description: CREATE TABLE (Transact-SQL)
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/23/2023
+ms.date: 05/12/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -208,6 +208,7 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
     | INDEX index_name CLUSTERED COLUMNSTORE
     | INDEX index_name [ NONCLUSTERED ] COLUMNSTORE ( column_name [ ,... n ] )
     }
+    [ INCLUDE ( column_name [ ,... n ] ) ]
     [ WHERE <filter_predicate> ]
     [ WITH ( <index_option> [ ,... n ] ) ]
     [ ON { partition_scheme_name ( column_name )
@@ -445,7 +446,7 @@ Indicates that the **text**, **ntext**, **image**, **xml**, **varchar(max)**, **
 > [!NOTE]  
 > **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml** and large UDT values are stored directly in the data row, up to a limit of 8,000 bytes, and as long as the value can fit the record. If the value does not fit in the record, a pointer is stored in-row and the rest is stored out of row in the LOB storage space. 0 is the default value, which indicates that all values are stored directly in the data row.
 >
-> `TEXTIMAGE_ON` only changes the location of the "LOB storage space", it does not affect when data is stored in-row. Use large value types out of row option of sp_tableoption to store the entire LOB value out of the row.
+> `TEXTIMAGE_ON` only changes the location of the "LOB storage space", it does not affect when data is stored in-row. Use large value types out of row option of `sp_tableoption` to store the entire LOB value out of the row.
 >
 > In this context, *default* is not a keyword. It is an identifier for the default filegroup and must be delimited, as in `TEXTIMAGE_ON "default"` or `TEXTIMAGE_ON [default]`. If `"default"` is specified, the `QUOTED_IDENTIFIER` option must be ON for the current session. This is the default setting. For more information, see [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
 
@@ -538,14 +539,14 @@ Indicates that the new column is an identity column. When a new row is added to 
 
 In the `CREATE TABLE` statement, the `NOT FOR REPLICATION` clause can be specified for the IDENTITY property, FOREIGN KEY constraints, and CHECK constraints. If this clause is specified for the `IDENTITY` property, values aren't incremented in identity columns when replication agents perform inserts. If this clause is specified for a constraint, the constraint isn't enforced when replication agents perform insert, update, or delete operations.
 
-#### GENERATED ALWAYS AS { ROW | TRANSACTION_ID | SEQUENCE_NUMBER  } { START | END } [ HIDDEN ] [ NOT NULL ]
+#### GENERATED ALWAYS AS { ROW | TRANSACTION_ID | SEQUENCE_NUMBER } { START | END } [ HIDDEN ] [ NOT NULL ]
 
 **Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)].
 
 Specifies a column used by the system to automatically record information about row versions in the table and its history table (if the table is system versioned and has a history table). Use this argument with the `WITH SYSTEM_VERSIONING = ON` parameter to create system-versioned tables: temporal or ledger tables. For more information, see [updateable ledger tables](/azure/azure-sql/database/ledger-updatable-ledger-tables#updateable-ledger-tables-vs-temporal-tables) and [temporal tables](../../relational-databases/tables/temporal-tables.md).
 
 | Parameter | Required data type | Required nullability | Description |
-|--|--|--|--|
+| -- | -- | -- | -- |
 | ROW | datetime2 | START: `NOT NULL`<br />END: `NOT NULL` | Either the start time for which a row version is valid (START) or the end time for which a row version is valid (END). Use this argument with the `PERIOD FOR SYSTEM_TIME` argument to create a temporal table. |
 | TRANSACTION_ID | bigint | START: `NOT NULL`<br />END: `NULL` | **Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later, and Azure SQL Database.<br /><br />The ID of the transaction that creates (START) or invalidates (END) a row version. If the table is a ledger table, the ID references a row in the [sys.database_ledger_transactions](../../relational-databases/system-stored-procedures/sys-sp-verify-database-ledger-transact-sql.md) view |
 | SEQUENCE_NUMBER | bigint | START: `NOT NULL`<br />END: `NULL` | **Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later, and Azure SQL Database.<br /><br />The sequence number of an operation that creates (START) or deletes (END) a row version. This value is unique within the transaction. |
@@ -744,9 +745,9 @@ An optional keyword that indicates the start of the definition of a PRIMARY KEY,
 
 - SET DEFAULT
 
-  All the values that make up the foreign key are set to their default values if the corresponding row in the parent table is deleted. For this constraint to execute, all foreign key columns must have default definitions. If a column is nullable, and there is no explicit default value set, NULL becomes the implicit default value of the column.
+  All the values that make up the foreign key are set to their default values when the corresponding row in the parent table is deleted. For this constraint to execute, all foreign key columns must have default definitions. If a column is nullable, and there is no explicit default value set, NULL becomes the implicit default value of the column.
 
-  Don't specify CASCADE if the table will be included in a merge publication that uses logical records. For more information about logical records, see [Group Changes to Related Rows with Logical Records](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).
+  Don't specify `CASCADE` if the table will be included in a merge publication that uses logical records. For more information about logical records, see [Group Changes to Related Rows with Logical Records](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).
 
   `ON DELETE CASCADE` can't be defined if an `INSTEAD OF` trigger `ON DELETE` already exists on the table.
 
@@ -1178,7 +1179,7 @@ Specifies a ledger option.
 
 #### [ LEDGER_VIEW = *schema_name*.*ledger_view_name* [ ( *<ledger_view_option>* [ ,... *n* ] ) ]
 
-Specifies the name of the ledger view and the names of additional columns the system adds to the ledger view. 
+Specifies the name of the ledger view and the names of additional columns the system adds to the ledger view.
 
 #### [ APPEND_ONLY = ON | OFF ]
 
@@ -1366,13 +1367,13 @@ Before creating a partitioned table by using CREATE TABLE, you must first create
 - A column can have only one DEFAULT definition.
 - A DEFAULT definition can contain constant values, functions, SQL standard niladic functions, or NULL. The following table shows the niladic functions and the values they return for the default during an INSERT statement.
 
-    |SQL-92 niladic function|Value returned|
-    |------------------------------|--------------------|
-    |CURRENT_TIMESTAMP|Current date and time.|
-    |CURRENT_USER|Name of user performing an insert.|
-    |SESSION_USER|Name of user performing an insert.|
-    |SYSTEM_USER|Name of user performing an insert.|
-    |USER|Name of user performing an insert.|
+    | SQL-92 niladic function | Value returned |
+    | --- | --- |
+    | CURRENT_TIMESTAMP | Current date and time. |
+    | CURRENT_USER | Name of user performing an insert. |
+    | SESSION_USER | Name of user performing an insert. |
+    | SYSTEM_USER | Name of user performing an insert. |
+    | USER | Name of user performing an insert. |
 - *constant_expression* in a DEFAULT definition can't refer to another column in the table, or to other tables, views, or stored procedures.
 - DEFAULT definitions can't be created on columns with a **timestamp** data type or columns with an IDENTITY property.
 - DEFAULT definitions can't be created for columns with alias data types if the alias data type is bound to a default object.
@@ -1409,11 +1410,11 @@ When you use `CREATE TABLE` or `ALTER TABLE` to create or alter a table, databas
 
 When column nullability isn't explicitly specified, column nullability follows the rules shown in the following table.
 
-|Column data type|Rule|
-|----------------------|----------|
-|Alias data type|The [!INCLUDE[ssDE](../../includes/ssde-md.md)] uses the nullability that is specified when the data type was created. To determine the default nullability of the data type, use `sp_help`.|
-|CLR user-defined type|Nullability is determined according to the column definition.|
-|System-supplied data type|If the system-supplied data type has only one option, it takes precedence. **timestamp** data types must be NOT NULL. When any session settings are set ON by using `SET`:<br />`ANSI_NULL_DFLT_ON = ON`, NULL is assigned.<br />`ANSI_NULL_DFLT_OFF = ON`, NOT NULL is assigned.<br /><br />When any database settings are configured by using `ALTER DATABASE`:<br />`ANSI_NULL_DEFAULT_ON = ON`, NULL is assigned.<br />`ANSI_NULL_DEFAULT_OFF = ON`, NOT NULL is assigned.<br /><br />To view the database setting for `ANSI_NULL_DEFAULT`, use the `sys.databases` catalog view|
+| Column data type | Rule |
+| --- | --- |
+| Alias data type | The [!INCLUDE[ssDE](../../includes/ssde-md.md)] uses the nullability that is specified when the data type was created. To determine the default nullability of the data type, use `sp_help`. |
+| CLR user-defined type | Nullability is determined according to the column definition. |
+| System-supplied data type | If the system-supplied data type has only one option, it takes precedence. **timestamp** data types must be NOT NULL. When any session settings are set ON by using `SET`:<br />`ANSI_NULL_DFLT_ON = ON`, NULL is assigned.<br />`ANSI_NULL_DFLT_OFF = ON`, NOT NULL is assigned.<br /><br />When any database settings are configured by using `ALTER DATABASE`:<br />`ANSI_NULL_DEFAULT_ON = ON`, NULL is assigned.<br />`ANSI_NULL_DEFAULT_OFF = ON`, NOT NULL is assigned.<br /><br />To view the database setting for `ANSI_NULL_DEFAULT`, use the `sys.databases` catalog view |
 
 When neither of the ANSI_NULL_DFLT options is set for the session and the database is set to the default (ANSI_NULL_DEFAULT is OFF), the default of NOT NULL is assigned.
 
@@ -1595,10 +1596,10 @@ GO
 
 Based on the values of column `col1` of `PartitionTable`, the partitions are assigned in the following ways.
 
-|Filegroup|test1fg|test2fg|test3fg|test4fg|
-|---------------|-------------|-------------|-------------|-------------|
-|**Partition**|1|2|3|4|
-|**Values**|col 1 \<= 1|col1 > 1 AND col1 \<= 100|col1 > 100 AND col1 \<= 1,000|col1 > 1000|
+| Filegroup | test1fg | test2fg | test3fg | test4fg |
+| --- | --- | --- | --- | --- |
+| **Partition** | 1 | 2 | 3 | 4 |
+| **Values** | `col 1 <= 1` | `col1 > 1 AND col1 <= 100` | `col1 > 100 AND col1 <= 1,000` | `col1 > 1000` |
 
 ### I. Use the UNIQUEIDENTIFIER data type in a column
 
@@ -1630,7 +1631,7 @@ CREATE TABLE dbo.mytable
 
 ### K. Create a computed column based on a user-defined type column
 
-The following example creates a table with one column defined as user-defined type `utf8string`, assuming that the type's assembly, and the type itself, have already been created in the current database. A second column is defined based on `utf8string`, and uses method `ToString()` of **type(class)**`utf8string` to compute a value for the column.
+The following example creates a table with one column defined as user-defined type `utf8string`, assuming that the type's assembly, and the type itself, have already been created in the current database. A second column is defined based on `utf8string`, and uses method `ToString()` of **type(class)** `utf8string` to compute a value for the column.
 
 ```sql
 CREATE TABLE UDTypeTable

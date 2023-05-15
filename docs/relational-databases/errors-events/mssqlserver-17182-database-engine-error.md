@@ -1,9 +1,9 @@
 ---
 title: "MSSQLSERVER_17182"
 description: "MSSQLSERVER_17182"
-author: PijoCoder
-ms.author: mathoma
-ms.reviewer: pijocoder
+author: pijocoder
+ms.author: jopilov
+ms.reviewer: mathoma
 ms.date: 02/02/2023
 ms.service: sql
 ms.subservice: supportability

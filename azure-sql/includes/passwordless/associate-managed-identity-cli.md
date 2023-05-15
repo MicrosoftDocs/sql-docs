@@ -1,14 +1,14 @@
 Use the following Azure CLI commands to associate an identity with your app:
 
-Retrieve the ID of the managed identity you created using the [az identity show](/cli/azure/identity) command. Copy the output value to use in the next step.
+Retrieve the fully qualified resource ID of the managed identity you created using the [az identity show](/cli/azure/identity) command. Copy the output value to use in the next step.
 
 ```azurecli
-az identity show --name MigrationIdentity -g <your-identity-resource-group-name> --query clientId
+az identity show --name MigrationIdentity -g <your-identity-resource-group-name> --query id
 ```
 
 # [Azure App Service](#tab/app-service-identity)
 
-You can assign a managed identity to an Azure App Service instance with the [az webapp identity assign](/cli/azure/webapp/identity) command.
+You can assign a managed identity to an Azure App Service instance with the [az webapp identity assign](/cli/azure/webapp/identity) command. The `--identities` requires the fully qualified resource ID of the managed identity you retrieved in the previous step.A fully qualified resource Id starts with '/subscriptions/{subscriptionId}' or '/providers/{resourceProviderNamespace}/'.
 
 ```azurecli
 az webapp identity assign \

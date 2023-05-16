@@ -22,7 +22,7 @@ In this video, you learn why a relational database system and the Transact-SQL l
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/qDS3TNzYKaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-## Introduction to Transact-SQL
+> [!VIDEO https://www.youtube.com/embed/qDS3TNzYKaI]
 
 In this video, you get an introduction to relational databases, the SQL language, and Transact-SQL. You learn what kinds of statements make up the SQL language and look at the `SELECT` statement in detail.
 

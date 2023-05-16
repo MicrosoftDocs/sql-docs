@@ -48,7 +48,7 @@ sys.dm_db_index_physical_stats (
   
 ## Arguments  
  *database_id* \| NULL \| 0 \| DEFAULT  
- Is the ID of the database. *database_id* is **smallint**. Valid inputs are the ID number of a database, NULL, 0, or DEFAULT. The default is 0. NULL, 0, and DEFAULT are equivalent values in this context.  
+ Is the ID of the database. *database_id* is **smallint**. Valid inputs are the ID of a database, NULL, 0, or DEFAULT. The default is 0. NULL, 0, and DEFAULT are equivalent values in this context.  
   
  Specify NULL to return information for all databases in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If you specify NULL for *database_id*, you must also specify NULL for *object_id*, *index_id*, and *partition_number*.  
   
@@ -57,12 +57,12 @@ sys.dm_db_index_physical_stats (
  *object_id* \| NULL \| 0 \| DEFAULT  
  Is the object ID of the table or view the index is on. *object_id* is **int**.  
   
- Valid inputs are the ID number of a table and view, NULL, 0, or DEFAULT. The default is 0. NULL, 0, and DEFAULT are equivalent values in this context. As of [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], valid inputs also include the service broker queue name or the queue internal table name. When default parameters are applied (i.e. all objects, all indexes, etc), fragmentation information for all queues are included in the result set.  
+ Valid inputs are the ID of a table and view, NULL, 0, or DEFAULT. The default is 0. NULL, 0, and DEFAULT are equivalent values in this context. As of [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], valid inputs also include the service broker queue name or the queue internal table name. When default parameters are applied (i.e. all objects, all indexes, etc), fragmentation information for all queues are included in the result set.  
   
  Specify NULL to return information for all tables and views in the specified database. If you specify NULL for *object_id*, you must also specify NULL for *index_id* and *partition_number*.  
   
  *index_id* \| 0 \| NULL \| -1 \| DEFAULT  
- Is the ID of the index. *index_id* is **int**. Valid inputs are the ID number of an index, 0 if *object_id* is a heap, NULL, -1, or DEFAULT. The default is -1. NULL, -1, and DEFAULT are equivalent values in this context.  
+ Is the ID of the index. *index_id* is **int**. Valid inputs are the ID of an index, 0 if *object_id* is a heap, NULL, -1, or DEFAULT. The default is -1. NULL, -1, and DEFAULT are equivalent values in this context.  
   
  Specify NULL to return information for all indexes for a base table or view. If you specify NULL for *index_id*, you must also specify NULL for *partition_number*.  
   

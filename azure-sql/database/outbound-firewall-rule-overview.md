@@ -5,7 +5,7 @@ description: Overview of the outbound firewall rules feature for Azure SQL Datab
 author: rohitnayakmsft
 ms.author: rohitna
 ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 4/6/2022
+ms.date: 05/16/2023
 ms.service: sql-database
 ms.subservice: security
 ms.custom: devx-track-azurecli, devx-track-azurepowershell
@@ -91,10 +91,10 @@ The following CLI script shows how to change the outbound networking setting (us
 
 ```azurecli-interactive
 # Get current setting for Outbound Networking 
-az sql server show -n sql-server-name -g sql-server-group --query "RestrictOutboundNetworkAccess"
+az sql server show -n sql-server-name -g sql-server-group --query "restrictOutboundNetworkAccess"
 
 # Update setting for Outbound Networking
-az sql server update -n sql-server-name -g sql-server-group --set RestrictOutboundNetworkAccess="Enabled"
+az sql server update -n sql-server-name -g sql-server-group --set restrictOutboundNetworkAccess="Enabled"
 ```
 
 Use these CLI commands to configure outbound firewall rules

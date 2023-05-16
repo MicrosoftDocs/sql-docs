@@ -4,7 +4,7 @@ description: "FIRST_VALUE (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
 ms.reviewer: kendalv, randolphwest
-ms.date: 05/09/2022
+ms.date: 05/16/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -50,7 +50,7 @@ IGNORE NULLS - Ignore null values in the dataset when computing the first value 
 
 RESPECT NULLS - Respect null values in the dataset when computing first value over a partition.
 
-For more information, see [Imputing missing values](/azure/azure-sql-edge/imputing-missing-values/).
+For more information on this argument in [!INCLUDE[ssazurede-md](../../includes/ssazurede-md.md)], see [Imputing missing values](/azure/azure-sql-edge/imputing-missing-values/).
 
 #### OVER ( [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] )
 
@@ -136,7 +136,7 @@ Accounts Receivable Specialist      Spoon                     61            Poe
 Accounts Receivable Specialist      Walton                    62            Poe
 ```
 
-## See also
+## Next steps
 
-- [LAST_VALUE &#40;Transact-SQL&#41;](last-value-transact-sql.md)
-- [SELECT - OVER Clause &#40;Transact-SQL&#41;](../queries/select-over-clause-transact-sql.md)
+- [LAST_VALUE (Transact-SQL)](last-value-transact-sql.md)
+- [SELECT - OVER Clause (Transact-SQL)](../queries/select-over-clause-transact-sql.md)

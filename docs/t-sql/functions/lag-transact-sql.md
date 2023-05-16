@@ -3,7 +3,7 @@ title: "LAG (Transact-SQL)"
 description: "LAG (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
-ms.date: "11/09/2017"
+ms.date: 05/16/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -27,14 +27,16 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 ## Syntax  
   
 ```syntaxsql  
-LAG (scalar_expression [,offset] [,default])  
+LAG (scalar_expression [,offset] [,default])   [ IGNORE NULLS | RESPECT NULLS ]
     OVER ( [ partition_by_clause ] order_by_clause )  
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
- *scalar_expression*  
+
+#### *scalar_expression*  
+
  The value to be returned based on the specified offset. It is an expression of any type that returns a single (scalar) value. *scalar_expression* cannot be an analytic function.  
   
  *offset*  
@@ -43,7 +45,19 @@ LAG (scalar_expression [,offset] [,default])
  *default*  
  The value to return when *offset* is beyond the scope of the partition. If a default value is not specified, NULL is returned. *default* can be a column, subquery, or other expression, but it cannot be an analytic function. *default* must be type-compatible with *scalar_expression*.  
   
- OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_**)**  
+#### [ IGNORE NULLS | RESPECT NULLS ]
+
+**Applies to**: SQL Server (starting with [!INCLUDE[sssql22](../../includes/sssql22-md.md)]), Azure SQL Database, Azure SQL Managed Instance, [!INCLUDE[ssazurede-md](../../includes/ssazurede-md.md)]
+
+IGNORE NULLS - Ignore null values in the dataset when computing the first value over a partition.
+
+RESPECT NULLS - Respect null values in the dataset when computing first value over a partition.
+
+There was a [bug fix in SQL Server 2022 CU4](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate4#2278800) related to IGNORE NULLS in `LAG` and `LEAD`. 
+
+For more information on this argument in [!INCLUDE[ssazurede-md](../../includes/ssazurede-md.md)], see [Imputing missing values](/azure/azure-sql-edge/imputing-missing-values/).
+
+#### OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_**)**  
  *partition_by_clause* divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group. *order_by_clause* determines the order of the data before the function is applied. If *partition_by_clause* is specified, it determines the order of the data in the partition. The *order_by_clause* is required. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## Return Types  
@@ -161,9 +175,9 @@ Year Quarter  SalesQuota  PrevQuota  Diff
 2002 4       154000.0000   7000.0000   84000.0000
 ```  
   
-## See Also  
- [LEAD &#40;Transact-SQL&#41;](../../t-sql/functions/lead-transact-sql.md)  
-  
-  
+## Next steps  
 
-
+- [LEAD (Transact-SQL)](../../t-sql/functions/lead-transact-sql.md)  
+- [FIRST_VALUE (Transact-SQL)](first-value-transact-sql.md)
+- [LAST_VALUE (Transact-SQL)](last-value-transact-sql.md)
+- [SELECT - OVER Clause (Transact-SQL)](../queries/select-over-clause-transact-sql.md)

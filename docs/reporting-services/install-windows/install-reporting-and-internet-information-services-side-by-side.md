@@ -51,7 +51,7 @@ You can install and run SQL Server Reporting Services (SSRS) and Internet Inform
   
 |Application|URL reservation|Description|Request receipt|  
 |-----------------|---------------------|-----------------|---------------------|  
-|Report Server|`https://+:80/ReportServer`|Strong wildcard on port 80, with report server virtual directory.|Receives all requests on port 80 that specify the report server virtual directory. The Report Server Web service receives all requests to https://\<computername>/reportserver.|  
+|Report Server|`https://+:80/ReportServer`|Strong wildcard on port 80, with report server virtual directory.|Receives all requests on port 80 that specify the report server virtual directory. The Report Server Web service receives all requests to https://<computername>/reportserver.|  
 |Web portal|`https://+:80/Reports`|Strong wildcard on port 80, with Reports virtual directory.|Receives all requests on port 80 that specify the reports virtual directory. The [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] receives all requests to https://\<computername>/reports.|  
 |IIS|`https://*:80/`|Weak wildcard on port 80.|Receives any remaining requests on port 80 that are not received by another application.|  
 

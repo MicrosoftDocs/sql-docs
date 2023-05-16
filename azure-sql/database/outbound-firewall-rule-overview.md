@@ -87,7 +87,7 @@ Remove-AzSqlServerOutboundFirewallRule -ServerName <SqlServerName> -ResourceGrou
 
 ### Azure CLI in a bash shell
 
-The following CLI script shows how to change the outbound networking setting (using the **RestrictOutboundNetworkAccess** property) in a bash shell:
+The following CLI script shows how to change the outbound networking setting (using the **restrictOutboundNetworkAccess** property) in a bash shell:
 
 ```azurecli-interactive
 # Get current setting for Outbound Networking 

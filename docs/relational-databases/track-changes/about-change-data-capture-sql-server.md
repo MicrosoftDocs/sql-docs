@@ -274,17 +274,23 @@ Even if CDC isn't enabled and you've defined a custom schema or user named `cdc`
 
 ## Known issues and troubleshooting
 
-The following table lists of possible solution if you're facing issues with Change data capture (CDC).
+The following table lists of possible solutions if you're facing issues with Change data capture (CDC).
 
-|Error_Number|Error_Message|Mitigation|  
+These errors associated with CDC can block the CDC capture process from running properly and cause the database transaction log to grow. These errors can be reviewed by querying the dynamic management view [sys.dm_cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md). In case any errors are present in [sys.dm_cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md) please refer to the table below for mitigation steps.
+
+For more information on a particular error code, please refer to [Database Engine events and errors](../../relational-databases/errors-events/database-engine-events-and-errors.md).  
+
+|Error_Number|Error_Message|Solution|  
 |-----------------|---------------|-----------------|  
-|913|Couldn't find database ID. Database may not be activated yet or may be in transition.|Disable CDC on database.<br/>Refer this article to avoid this error in future.<br/>[cdc.fn_cdc_get_all_changes_<capture_instance>](../../database-engine/)|
+|913|Couldn't find database ID. Database may not be activated yet or may be in transition.|Disable CDC on database.<br/>Refer this article to avoid this error in future.<br/>[CDC capture job fails when processing changes](https://learn.microsoft.com/en-us/troubleshoot/sql/database-engine/replication/cdc-capture-job-fails-processing-changes-table)|
 |1105|Couldn't allocate space for object in database because the filegroup is full. Create space by deleting unneeded files, dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup.|Upgrade SLO of database or disable CDC on database.|
 |1132|The elastic pool has reached its storage limit.|Upgrade storage limit for the elastic pool or disable CDC on database.|  
-|1202|Database principal doesn't exist or user isn't a member.|Execute the following SQL to create CDC user if it doesn't already exist and assign proper role for that user. <br/><br/>`if(not exists (select * from sys.database_principals where name = 'cdc'))`<br/><br/>`begin`<br/>`create user [cdc] without login with default_schema = [cdc];`<br/>`end`<br/><br/>`exec sp_addrolemember 'db_owner' , 'cdc'`|
+|1202|Database principal doesn't exist, or user isn't a member.|Execute the following SQL to create `cdc` user if it doesn't already exist and assign required role for that user. <br/><br/>`if(not exists (select * from sys.database_principals where name = 'cdc'))`<br/><br/>`begin`<br/>`create user [cdc] without login with default_schema = [cdc];`<br/>`end`<br/><br/>`exec sp_addrolemember 'db_owner' , 'cdc'`|
 |15517|Can't execute as the database principal because the principal doesn't exist. This type of principal can't be impersonated, or you don't have permission.|Disable CDC on database.|  
 |18807|Can't find an object ID for the replication system table. Verify that the system table exists and is accessible by querying the table directly.|Disable CDC on database.|
-|21050|Only members of the sysadmin fixed server role or db_owner fixed server role can perform this operation.|Run the following query to verify if cdc user has sysadmin or db_owner role.<br/>`execute as user = 'cdc' select is_srvrolemember('sysadmin')`<br/>`select is_member('db_owner')`<br/><br/>If cdc user doesn't have either role run the following to add db_owner permission to cdc user.<br/>`exec sp_addrolemember 'db_owner' , 'cdc'`|
+|21050|Only members of the `sysadmin` fixed server role or `db_owner` fixed server role can perform this operation.|Run the following query to verify if `cdc` user has `sysadmin` or `db_owner` role.<br/>`execute as user = 'cdc' select is_srvrolemember('sysadmin')`<br/>`select is_member('db_owner')`<br/><br/>If `cdc` user doesn't have either role run the following to add `db_owner` permission to `cdc` user.<br/>`exec sp_addrolemember 'db_owner' , 'cdc'`|
+
+**Note** - If the mitigation step is to disable CDC on the database, please execute the [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) stored procedure to disable CDC. Be aware that doing so will remove all CDC artifacts, and change data will be lost.
 
 ## See also  
  [Track Data Changes &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   

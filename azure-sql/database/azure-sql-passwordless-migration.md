@@ -75,7 +75,7 @@ Once your app is configured to use passwordless connections locally, the same co
 
 ### Create the managed identity
 
-[!INCLUDE [local-create-user-roles](../includes/passwordless/local-create-user-roles.md)]
+[!INCLUDE [create-the-managed-identity](../includes/passwordless/create-the-managed-identity.md)]
 
 ## Associate the managed identity with your web app
 

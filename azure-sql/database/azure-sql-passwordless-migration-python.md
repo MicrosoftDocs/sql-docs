@@ -129,7 +129,7 @@ Complete the following steps in the Azure portal to associate the user-assigned 
 Update your Azure app configuration to use the passwordless connection string format. Connection strings can be stored as environment variables in your app hosting environment. The following instructions focus on App Service, but other Azure hosting services provide similar configurations.
 
 ```
-Driver={ODBC Driver 18 for SQL Server};SERVER=<database-server-name>.database.windows.net;DATABASE=<database-name>
+Driver={ODBC Driver 18 for SQL Server};SERVER=<database-server-name>.database.windows.net;DATABASE=<database-name>;Encrypt=yes;TrustServerCertificate=no
 ```
 
 `<database-server-name>` is the name of your Azure SQL Database server and `<database-name>` is the name of your Azure SQL Database.

@@ -4,7 +4,7 @@ description: In this article, you learn different ways of connecting SQL Server 
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 01/12/2023
+ms.date: 05/17/2023
 ms.service: sql
 ms.topic: conceptual
 ---

@@ -58,8 +58,8 @@ To update the referenced connection string (`AZURE_SQL_CONNECTIONSTRING`) to use
 2. Replace the connection string value with the following passwordless format. Update the `<database-server-name>` and `<database-name>` placeholders with your own values:
 
     ```json
-    "Server=tcp:<database-server-name>.database.windows.net,1433;Initial Catalog=<database-name>;
-    Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;Authentication=\"Active Directory Default\";"
+    Server=tcp:<database-server-name>.database.windows.net,1433;Initial Catalog=<database-name>;
+    Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;Authentication="Active Directory Default";
     ```
 
 ### Test the app
@@ -128,8 +128,8 @@ Update your Azure app configuration to use the passwordless connection string fo
 1. Select the edit icon and update the connection string value to match following format. Change the `<database-server-name>` and `<database-name>` placeholders with the values of your own service.
 
     ```json
-    "Server=tcp:<database-server-name>.database.windows.net,1433;Initial Catalog=<database-name>;
-    Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;Authentication=\"Active Directory Default\";"
+    Server=tcp:<database-server-name>.database.windows.net,1433;Initial Catalog=<database-name>;
+    Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;Authentication="Active Directory Default";
     ```
 
 1. Save your changes and restart the application if it does not do so automatically.

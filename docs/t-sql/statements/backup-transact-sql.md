@@ -432,7 +432,7 @@ Specifies the name of the backup set. Names can have a maximum of 128 characters
 #### { EXPIREDATE **='**_date_**'** | RETAINDAYS **=** _days_ }    
 Specifies when the backup set for this backup can be overwritten. If these options are both used, RETAINDAYS takes precedence over EXPIREDATE.
 
-If neither option is specified, the expiration date is determined by the **mediaretention** configuration setting. For more information, see [Server Configuration Options](../../database-engine/configure-windows/server-configuration-options-sql-server.md).
+If neither option is specified, the expiration date is determined by the `media retention` configuration setting. For more information, see [Server Configuration Options](../../database-engine/configure-windows/server-configuration-options-sql-server.md).
 
 > [!IMPORTANT]
 > These options only prevent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from overwriting a file. Tapes can be erased using other methods, and disk files can be deleted through the operating system. For more information about expiration verification, see SKIP and FORMAT in this topic.
@@ -545,7 +545,7 @@ Specifies the largest unit of transfer in bytes to be used between [!INCLUDE[ssN
 
 When creating backups by using the SQL Writer Service, if the database has configured [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md), or includes [memory optimized filegroups](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md), then the `MAXTRANSFERSIZE` at the time of a restore should be greater than or equal to the `MAXTRANSFERSIZE` that was used when the backup was created.
 
-For [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) enabled databases with a single data file, the default `MAXTRANSFERSIZE` is 65536 (64 KB). For non-TDE encrypted databases the default `MAXTRANSFERSIZE` is 1048576 (1 MB) when using backup to DISK, and 65536 (64 KB) when using VDI or TAPE. For more information about using backup compression with TDE encrypted databases, see the [Remarks](#general-remarks) section.
+For [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) enabled databases with a single data file, the default `MAXTRANSFERSIZE` is 65536 (64 KB). For non-TDE encrypted databases, the default `MAXTRANSFERSIZE` is 1048576 (1 MB) when using backup to DISK, and 65536 (64 KB) when using VDI or TAPE. For more information about using backup compression with TDE encrypted databases, see the [Remarks](#general-remarks) section.
 
 ### Error management options
 
@@ -818,7 +818,7 @@ Operations that cannot run during a database or transaction log backup include:
 
 - File management operations such as the `ALTER DATABASE` statement with either the `ADD FILE` or `REMOVE FILE` options.
 
-- Shrink database or shrink file operations. This includes auto-shrink operations.
+- Shrink database or shrink file operations. This includes autoshrink operations.
 
 If a backup operation overlaps with a file management or shrink operation, a conflict arises. Regardless of which of the conflicting operation began first, the second operation waits for the lock set by the first operation to time out (the time-out period is controlled by a session timeout setting). If the lock is released during the time-out period, the second operation continues. If the lock times out, the second operation fails.
 

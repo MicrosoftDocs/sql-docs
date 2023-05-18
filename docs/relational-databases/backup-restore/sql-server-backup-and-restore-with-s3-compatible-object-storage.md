@@ -35,7 +35,7 @@ The `BACKUP TO URL` and `RESTORE FROM URL` syntax has been extended to support t
 
 There are many providers of S3-compatible object storage in the market today. Object storage is either provided as software-defined, as hardware appliances, or as a combination for hybrid cloud scenarios.
 
-The following table provides a non-exhaustive summary of object storage providers offering an S3 endpoint as part of their solution. Not all solutions have been validated against the current version of [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
+The following table provides a nonexhaustive summary of object storage providers offering an S3 endpoint as part of their solution. Not all solutions have been validated against the current version of [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
 
 | **Vendor (alphabetical)**       | **Offering**                             | 
 |---------------------------------|------------------------------------------|
@@ -45,7 +45,7 @@ The following table provides a non-exhaustive summary of object storage provider
 | [Dell Technologies][dell_webs]  | ECS Enterprise Object Storage            |
 | [Hitachi Vantara][hitachi_webs] | Hitachi Content Platform for Cloud Scale |
 | [HPE][hpe_webs]                 | HPE Ezmeral Data Fabric                  |
-| [MinIO][minio_webs]             | Multi-Cloud Object Storage               |
+| [MinIO][minio_webs]             | Multicloud Object Storage               |
 | [NetApp][netapp_webs]           | StorageGRID<br />ONTAP                     |
 | [Nutanix][nutanix_webs]         | Nutanix Object Storage                   |
 | [Pure Storage][pure_webs]       | Pure FlashBlade                          |

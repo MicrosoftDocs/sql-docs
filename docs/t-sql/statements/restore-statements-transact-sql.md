@@ -643,7 +643,7 @@ RESTORE DATABASE AdventureWorks2012
 
 The following example restores a database named `MyDatabase` that has two files, one secondary filegroup, and one transaction log. The database uses the full recovery model.
 
-The database backup is the ninth backup set in the media set on a logical backup device named `MyDatabaseBackups`. Next, three log backups, which are in the next three backup sets (`10`, `11`, and `12`) on the `MyDatabaseBackups` device, are restored by using `WITH NORECOVERY`. After restoring the last log backup, the database is recovered.
+The database backup is the ninth backup set in the media set on a logical backup device named `MyDatabaseBackups`. Next, three log backups, which are in the next three backup sets (`10`, `11`, and `12`) on the `MyDatabaseBackups` device, are restored by using `WITH NORECOVERY`. After the last log backup is restored with `NORECOVERY`, the database is recovered.
 
 > [!NOTE]  
 > Recovery is performed as a separate step to reduce the possibility of you recovering too early, before all of the log backups have been restored. For more information about the recovery process, see [Restore and Recovery Overview (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
@@ -868,9 +868,9 @@ These limitations apply:
 - .BAK files containing multiple log files cannot be restored.
 - Restore will fail if .bak contains FILESTREAM data.
 - Backups containing databases that have active In-memory objects cannot be restored to a General Purpose performance tier.
-- Backups containing databases in read-only mode cannot currently be restored. This limitation will be removed soon.
+- Backups containing databases in read-only mode cannot currently be restored. 
 
-For more information, see [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance)
+For more information, see [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview)
 
 ## Restore an encrypted database
 

@@ -74,6 +74,7 @@ For details and specific instructions for installing the `pyodbc` driver on all 
     fastapi
     uvicorn[standard]
     install pydantic
+    azure-identity
     ```
 
 2. Install the requirements.
@@ -93,7 +94,7 @@ Interactive authentication provides a passwordless option when you're running lo
 In Windows, Azure AD Interactive Authentication can use Azure Active Directory Multi-Factor Authentication technology to set up connection. In this mode, by providing the sign in ID, an Azure Authentication dialog is triggered and allows the user to input the password to complete the connection.
 
 ```Bash
-export AZURE_SQL_CONNECTIONSTRING='Driver={ODBC Driver 18 for SQL Server};Server=tcp:<database-server-name>.database.windows.net,1433;Database=<database-name>;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;Authentication=ActiveDirectoryInteractive'
+export AZURE_SQL_CONNECTIONSTRING='Driver={ODBC Driver 18 for SQL Server};Server=tcp:<database-server-name>.database.windows.net,1433;Database=<database-name>;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30'
 ```
 
 For more information, see [Using Azure Active Directory with the ODBC Driver](/sql/connect/odbc/using-azure-active-directory). If you use this option, look for the window that prompts you for credentials.
@@ -103,7 +104,7 @@ For more information, see [Using Azure Active Directory with the ODBC Driver](/s
 You can directly authenticate to a SQL Server instance using a username and password.
 
 ```Bash
-export AZURE_SQL_CONNECTIONSTRING='Driver={ODBC Driver 18 for SQL Server};Server=tcp:<database-server-name>.database.windows.net,1433;Database=<database-name>;UID=<user-name>;PWD=<user-password>;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;Authentication=SqlPassword'
+export AZURE_SQL_CONNECTIONSTRING='Driver={ODBC Driver 18 for SQL Server};Server=tcp:<database-server-name>.database.windows.net,1433;Database=<database-name>;UID=<user-name>;PWD=<user-password>;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30'
 ```
 
 > [!WARNING]
@@ -124,7 +125,7 @@ You can get the details to create your connection string from the Azure portal:
 
 In the project folder, create an *app.py* file and add the sample code. This code creates an API that:
 
-* Retrieves an Azure SQL Database connection string from an environment variable. The form of the connection string depends on what environment you're running the code in.
+* Retrieves an Azure SQL Database connection string from an environment variable.
 * Creates a `Persons` table in the database during startup (for testing scenarios only).
 * Defines a function to retrieve all `Person` records from the database.
 * Defines a function to retrieve one `Person` record from the database.
@@ -200,16 +201,11 @@ def create_person(item: Person):
     return item
 
 def get_conn():
-    if not 'WEBSITE_HOSTNAME' in os.environ:
-        # Local development
-        conn = pyodbc.connect(connection_string)
-    else:
-        # Deployed to Azure App Service
-        credential = identity.DefaultAzureCredential()
-        token_bytes = credential.get_token("https://database.windows.net/.default").token.encode("UTF-16-LE")
-        token_struct = struct.pack(f'<I{len(token_bytes)}s', len(token_bytes), token_bytes)
-        SQL_COPT_SS_ACCESS_TOKEN = 1256  # This connection option is defined by microsoft in msodbcsql.h
-        conn = pyodbc.connect(connection_string, attrs_before={SQL_COPT_SS_ACCESS_TOKEN: token_struct})
+    credential = identity.DefaultAzureCredential(exclude_interactive_browser_credential=False)
+    token_bytes = credential.get_token("https://database.windows.net/.default").token.encode("UTF-16-LE")
+    token_struct = struct.pack(f'<I{len(token_bytes)}s', len(token_bytes), token_bytes)
+    SQL_COPT_SS_ACCESS_TOKEN = 1256  # This connection option is defined by microsoft in msodbcsql.h
+    conn = pyodbc.connect(connection_string, attrs_before={SQL_COPT_SS_ACCESS_TOKEN: token_struct})
     return conn
 ```
 
@@ -301,7 +297,7 @@ To run these commands you can use any tool or IDE that can connect to Azure SQL 
     For the deployed app, the connection string should resemble:
 
     ```
-    Driver={ODBC Driver 18 for SQL Server};SERVER=<database-server-name>.database.windows.net;DATABASE=<database-name>
+    Driver={ODBC Driver 18 for SQL Server};Server=tcp:<database-server-name>.database.windows.net,1433;Database=<database-name>;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30
     ```
 
     Fill in the `<dabaser-server-name>` and `<database-name>` with your values.

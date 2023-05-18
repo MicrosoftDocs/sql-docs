@@ -1,23 +1,20 @@
 ---
 title: "Backup & restore with S3-compatible object storage"
-description: "SQL Server backup and restore with S3-compatible object storage preview"
+description: "SQL Server backup and restore with S3-compatible object storage"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 02/28/2023
+ms.date: 05/18/2023
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: conceptual
 storage: Learn about SQL Server backup to and restore from S3-compatible object storage, including the benefits of using S3-compatible object storage to store SQL Server backups.
 monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
 ---
-# SQL Server backup and restore with S3-compatible object storage preview
+# SQL Server backup and restore with S3-compatible object storage
 
 [!INCLUDE [SQL Server 2022](../../includes/applies-to-version/sqlserver2022.md)]
 
 This article introduces the concepts, requirements and components necessary to use S3-compatible object storage as a backup destination. 
-
-> [!NOTE]
-> SQL Server backup and restore with S3-compatible object storage is in preview as a feature of [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
 
 ## Overview
 

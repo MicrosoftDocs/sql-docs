@@ -14,13 +14,10 @@ monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
 [!INCLUDE [SQL Server 2022](../../includes/applies-to-version/sqlserver2022.md)]
 
   This article includes best practices and troubleshooting tips for SQL Server backup and restores to S3-compatible object storage.
-  
-> [!NOTE]
-> SQL Server backup and restore with S3-compatible object storage is in preview as a feature of [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
 
  For more information about using Azure Blob Storage for SQL Server backup or restore operations, see:  
   
-- [SQL Server backup and restore with S3-compatible object storage preview](sql-server-backup-and-restore-with-s3-compatible-object-storage.md)  
+- [SQL Server backup and restore with S3-compatible object storage](sql-server-backup-and-restore-with-s3-compatible-object-storage.md)  
 - [SQL Server backup to URL for S3-compatible object storage](sql-server-backup-to-url-s3-compatible-object-storage.md)
 
 ## Troubleshooting and common error causes
@@ -191,7 +188,7 @@ Up to 50 files can be stored in this location, if the folder is not created, whe
 
 ## Next steps
 
- - [SQL Server backup and restore with S3-compatible object storage preview](sql-server-backup-and-restore-with-s3-compatible-object-storage.md)  
+ - [SQL Server backup and restore with S3-compatible object storage](sql-server-backup-and-restore-with-s3-compatible-object-storage.md)  
  - [SQL Server backup to URL for S3-compatible object storage](sql-server-backup-to-url-s3-compatible-object-storage.md)
  - [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)  
  - [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)

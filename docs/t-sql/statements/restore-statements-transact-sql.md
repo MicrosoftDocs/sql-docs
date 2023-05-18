@@ -3,7 +3,7 @@ title: "RESTORE (Transact-SQL)"
 description: RESTORE Statements restore SQL database backups taken using the BACKUP command.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: 10/12/2022
+ms.date: 05/18/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -78,7 +78,7 @@ This command enables you to perform the following restore scenarios:
  - For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restore scenarios, see [Restore and Recovery Overview](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md). 
  - When restoring a database from another instance, consider the information from [Manage Metadata When Making a Database Available on Another Server Instance (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).
  - For more information about restoring from the Microsoft Azure Blob Storage, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).
- - For more information about restoring from S3-compatible object storage, see [SQL Server backup and restore with S3-compatible object storage preview](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-s3-compatible-object-storage.md). For more information, see [SQL Server backup to URL for S3-compatible object storage](../../relational-databases/backup-restore/sql-server-backup-to-url-s3-compatible-object-storage.md). Backup and restore to S3-compatible object storage was introduced in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
+ - Backup and restore to S3-compatible object storage was introduced in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. For more information about restoring from S3-compatible object storage, see [SQL Server backup and restore with S3-compatible object storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-s3-compatible-object-storage.md). Also review the option for [SQL Server backup to URL for S3-compatible object storage](../../relational-databases/backup-restore/sql-server-backup-to-url-s3-compatible-object-storage.md). 
 
 ## Syntax
 
@@ -363,7 +363,7 @@ URL is the format used to specify the location and the file name for Microsoft A
 
 - For more information about restoring from the Microsoft Azure Blob Storage, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).
 
-- For more information about restoring from S3-compatible object storage, see [SQL Server backup and restore with S3-compatible object storage preview](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-s3-compatible-object-storage.md). For more information, see [SQL Server backup to URL for S3-compatible object storage](../../relational-databases/backup-restore/sql-server-backup-to-url-s3-compatible-object-storage.md). Backup and restore to S3-compatible storage was introduced in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
+ - Backup and restore to S3-compatible object storage was introduced in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. For more information about restoring from S3-compatible object storage, see [SQL Server backup and restore with S3-compatible object storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-s3-compatible-object-storage.md). Also review the option for [SQL Server backup to URL for S3-compatible object storage](../../relational-databases/backup-restore/sql-server-backup-to-url-s3-compatible-object-storage.md). 
 
 ## Interoperability
 
@@ -453,7 +453,7 @@ A backup operation may optionally specify passwords for a media set, a backup se
 
 - For information specific to SQL Server backup and restore with the Microsoft Azure Blob Storage, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).
 
-- Backup and restore to S3-compatible object storage was introduced in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. [SQL Server backup and restore with S3-compatible object storage preview](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-s3-compatible-object-storage.md). For more information, see [SQL Server backup to URL for S3-compatible object storage](../../relational-databases/backup-restore/sql-server-backup-to-url-s3-compatible-object-storage.md).
+ - Backup and restore to S3-compatible object storage was introduced in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. For more information about restoring from S3-compatible object storage, see [SQL Server backup and restore with S3-compatible object storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-s3-compatible-object-storage.md). Also review the option for [SQL Server backup to URL for S3-compatible object storage](../../relational-databases/backup-restore/sql-server-backup-to-url-s3-compatible-object-storage.md). 
 
 ### Permissions
 

@@ -300,7 +300,7 @@ Specifies a disk file or tape device, or a URL.
 The URL format is used for creating backups to Microsoft Azure Blob Storage or S3-compatible object storage. For more information and examples, see:
 
 - [SQL Server Backup and Restore with Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). For a tutorial, see [Tutorial: SQL Server Backup and Restore to Microsoft Azure Blob Storage](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md).
-- Backup and restore to S3-compatible storage was introduced in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. [SQL Server backup and restore with S3-compatible object storage preview](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-s3-compatible-object-storage.md). For more information, see [SQL Server backup to URL for S3-compatible object storage](../../relational-databases/backup-restore/sql-server-backup-to-url-s3-compatible-object-storage.md).
+- Backup and restore to S3-compatible storage was introduced in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], see [SQL Server backup and restore with S3-compatible object storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-s3-compatible-object-storage.md). Also review the option for [SQL Server backup to URL for S3-compatible object storage](../../relational-databases/backup-restore/sql-server-backup-to-url-s3-compatible-object-storage.md).
 
 > [!NOTE]
 > The NUL disk device will discard all information sent to it and should only be used for testing. This is not for production use.
@@ -1008,7 +1008,7 @@ WITH STATS = 5;
 
 **Applies to: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]**
 
-This example performs a full backup database of the `Sales` database to S3-compatible object storage platform. The name of the credential is not required in the statement or to match the exact URL path, but will perform a lookup for the proper credential on the URL provided. For more information, see [SQL Server backup and restore with S3-compatible object storage preview](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-s3-compatible-object-storage.md).
+This example performs a full backup database of the `Sales` database to S3-compatible object storage platform. The name of the credential is not required in the statement or to match the exact URL path, but will perform a lookup for the proper credential on the URL provided. For more information, see [SQL Server backup and restore with S3-compatible object storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-s3-compatible-object-storage.md).
 
 ```sql
 BACKUP DATABASE Sales

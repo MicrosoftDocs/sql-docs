@@ -49,16 +49,11 @@ def get_all():
     return
 
 def get_conn():
-    if not 'WEBSITE_HOSTNAME' in os.environ:
-        # Local development
-        conn = pyodbc.connect(connection_string)
-    else:
-        # Deployed to Azure App Service
-        credential = identity.DefaultAzureCredential()
-        token_bytes = credential.get_token("https://database.windows.net/.default").token.encode("UTF-16-LE")
-        token_struct = struct.pack(f'<I{len(token_bytes)}s', len(token_bytes), token_bytes)
-        SQL_COPT_SS_ACCESS_TOKEN = 1256  # This connection option is defined by microsoft in msodbcsql.h
-        conn = pyodbc.connect(connection_string, attrs_before={SQL_COPT_SS_ACCESS_TOKEN: token_struct})
+    credential = identity.DefaultAzureCredential(exclude_interactive_browser_credential=False)
+    token_bytes = credential.get_token("https://database.windows.net/.default").token.encode("UTF-16-LE")
+    token_struct = struct.pack(f'<I{len(token_bytes)}s', len(token_bytes), token_bytes)
+    SQL_COPT_SS_ACCESS_TOKEN = 1256  # This connection option is defined by microsoft in msodbcsql.h
+    conn = pyodbc.connect(connection_string, attrs_before={SQL_COPT_SS_ACCESS_TOKEN: token_struct})
     return conn
 ```
 
@@ -68,7 +63,7 @@ def get_conn():
 To update the referenced connection string (`AZURE_SQL_CONNECTIONSTRING`) for local development, use the passwordless connection string format:
 
 ```
-Driver={ODBC Driver 18 for SQL Server};Server=tcp:<database-server-name>.database.windows.net,1433;Database=<database-name>;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;Authentication=ActiveDirectoryInteractive
+Driver={ODBC Driver 18 for SQL Server};Server=tcp:<database-server-name>.database.windows.net,1433;Database=<database-name>;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30
 ```
 
 ### Test the app
@@ -126,10 +121,12 @@ Complete the following steps in the Azure portal to associate the user-assigned 
 
 ### Update the connection string
 
-Update your Azure app configuration to use the passwordless connection string format. Connection strings can be stored as environment variables in your app hosting environment. The following instructions focus on App Service, but other Azure hosting services provide similar configurations.
+Update your Azure app configuration to use the passwordless connection string format. The format should be the same used in your local environment. 
+
+Connection strings can be stored as environment variables in your app hosting environment. The following instructions focus on App Service, but other Azure hosting services provide similar configurations.
 
 ```
-Driver={ODBC Driver 18 for SQL Server};SERVER=<database-server-name>.database.windows.net;DATABASE=<database-name>;Encrypt=yes;TrustServerCertificate=no
+Driver={ODBC Driver 18 for SQL Server};Server=tcp:<database-server-name>.database.windows.net,1433;Database=<database-name>;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30
 ```
 
 `<database-server-name>` is the name of your Azure SQL Database server and `<database-name>` is the name of your Azure SQL Database.

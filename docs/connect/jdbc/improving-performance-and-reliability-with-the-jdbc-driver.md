@@ -30,6 +30,7 @@ The articles in this section describe various techniques for improving applicati
 |[Prepared statement metadata caching for the JDBC driver](prepared-statement-metadata-caching-for-the-jdbc-driver.md)|Discusses the techniques for improving performance with prepared statement queries.|
 |[Using bulk copy API for batch insert operation](use-bulk-copy-api-batch-insert-operation.md)|Describes how to enable Bulk Copy API for batch insert operations and its benefits.|
 |[Not sending String parameters as Unicode](setting-the-connection-properties.md)|When working with **CHAR**, **VARCHAR**, and **LONGVARCHAR** data, users can set the connection property **sendStringParametersAsUnicode** to `false` for optimal performance gain.|
+
 ## See also
 
 [Overview of the JDBC driver](overview-of-the-jdbc-driver.md)

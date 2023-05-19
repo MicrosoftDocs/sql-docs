@@ -20,13 +20,13 @@ In paginated reports, you can format any part of the text in a text box independ
   
 ## Combine multiple formats in a text box  
   
-1.  On the **Insert** tab, select **Text Box**. Select the design surface, and then drag to create a box that is the size you want.  
+1. On the **Insert** tab, select **Text Box**. Select the design surface, and then drag to create a box that is the size you want.  
   
-2.  Inside the text box, select the text you want to format.  
+1. Inside the text box, select the text you want to format.  
   
-3.  Right-click the selected text, and select **Text Properties**.  
+1. Right-click the selected text, and select **Text Properties**.  
   
-4.  Set formatting options. For example, on the **General** tab:  
+1. Set formatting options. For example, on the **General** tab:  
   
     -   **Tooltip** Type text or an expression that evaluates to a ToolTip. The ToolTip appears when the user pauses the pointer over the item in a report  
   
@@ -35,10 +35,9 @@ In paginated reports, you can format any part of the text in a text box independ
          **Plain Text** Display the selected text as simple text. HTML will be treated as literal text.  
   
          **HTML**  Display the selected text as HTML. If the expression value of the placeholder contains valid HTML tags, these tags will be rendered as HTML. For more information, see [Importing HTML into a Report &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs.md).  
+1. Select **OK**.  
   
-5.  Select **OK**.  
-  
-6.  Repeat steps 2 through 5 for the remaining text you want to format.  
+1. Repeat steps 2 through 5 for the remaining text you want to format.  
   
 ## Format text and placeholders differently in the same text box  
   
@@ -46,7 +45,7 @@ In paginated reports, you can format any part of the text in a text box independ
   
 1. On the **Insert** tab, select **Text Box**. Select in the list, and then drag to create a box that is the size you want.  
   
-1. Type a label in the text box - for example, **My Field**:.  
+1. Type a label in the text box - for example, **My Field**.  
   
 1. Drag a field from your dataset into the text box. A placeholder is created for your field.  
   
@@ -70,14 +69,13 @@ In paginated reports, you can format any part of the text in a text box independ
  
 1. Set heading elements. For example, on the **Accessibility** tab:
 
-    - **Accessibility options** Overwrite the structural type to give the Texbox a different semantic meaning output formats like HTML and Accessible PDF
-    
-    - **Overwrite structure type** allows you to choose HTML heading elements H1-H6.  
-1. Make a selection 
+    - **Accessibility options** Overwrite the structural type to give the Texbox a different semantic meaning output format, like HTML and Accessible PDF.
+    - **Overwrite structure type** allows you to choose HTML heading elements H1-H6.
 
-1. Select **OK**
-  
- 
+1. Make a selection. 
+
+1. Select **OK**.
+
 ## See also
 
  [Text Boxes &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   

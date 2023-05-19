@@ -4,7 +4,7 @@ description: Sets Transact-SQL and query processing behaviors to be compatible w
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 11/21/2022
+ms.date: 5/19/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference

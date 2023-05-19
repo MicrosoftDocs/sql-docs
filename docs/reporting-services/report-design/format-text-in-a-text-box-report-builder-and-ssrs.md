@@ -16,15 +16,15 @@ ms.custom: updatefrequency5
 In paginated reports, you can format any part of the text in a text box independently, and mix placeholder text and static text in one text box. This ability to mix formats and add placeholder text enables you to create mail merges or templates for text in your paginated report. Any expression can be defined and formatted separately using a placeholder.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+> [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### To combine multiple formats in a text box  
+## Combine multiple formats in a text box  
   
-1.  On the **Insert** tab, click **Text Box**. Click the design surface, and then drag to create a box that is the size you want.  
+1.  On the **Insert** tab, select **Text Box**. Select the design surface, and then drag to create a box that is the size you want.  
   
 2.  Inside the text box, select the text you want to format.  
   
-3.  Right-click the selected text, and click **Text Properties**.  
+3.  Right-click the selected text, and select **Text Properties**.  
   
 4.  Set formatting options. For example, on the **General** tab:  
   
@@ -36,49 +36,50 @@ In paginated reports, you can format any part of the text in a text box independ
   
          **HTML**  Display the selected text as HTML. If the expression value of the placeholder contains valid HTML tags, these tags will be rendered as HTML. For more information, see [Importing HTML into a Report &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs.md).  
   
-5.  Click **OK**.  
+5.  Select **OK**.  
   
 6.  Repeat steps 2 through 5 for the remaining text you want to format.  
   
-### To format text and placeholders differently in the same text box  
+## Format text and placeholders differently in the same text box  
   
-1.  On the **Insert** tab, click **List**. Click the design surface, and then drag to create a box that is the size you want. The **Dataset Properties** dialog box opens. You can use a shared dataset or a dataset embedded in your report. For more information, click [Dataset Properties Dialog Box, Query &#40;Report Builder&#41;](../../reporting-services/report-data/dataset-properties-dialog-box-query-report-builder.md) or [Dataset Properties Dialog Box, Query](/previous-versions/sql/).  
+1. On the **Insert** tab, select **List**. Select the design surface, and then drag to create a box that is the size you want. The **Dataset Properties** dialog box opens. You can use a shared dataset or a dataset embedded in your report. For more information, select [Dataset Properties Dialog Box, Query &#40;Report Builder&#41;](../../reporting-services/report-data/dataset-properties-dialog-box-query-report-builder.md) or [Dataset Properties Dialog Box, Query](/previous-versions/sql/).  
   
-2.  On the **Insert** tab, click **Text Box**. Click in the list, and then drag to create a box that is the size you want.  
+1. On the **Insert** tab, select **Text Box**. Select in the list, and then drag to create a box that is the size you want.  
   
-3.  Type a label in the text box - for example, **My Field**:.  
+1. Type a label in the text box - for example, **My Field**:.  
   
-4.  Drag a field from your dataset into the text box. A placeholder is created for your field.  
+1. Drag a field from your dataset into the text box. A placeholder is created for your field.  
   
-5.  For basic formatting, select the placeholder text and then click one of the formatting options in the **Font** group on the **Home** tab. For example, click the **Bold** button.  
+1. For basic formatting, select the placeholder text and then select one of the formatting options in the **Font** group on the **Home** tab. For example, select the **Bold** button.  
   
-     For more formatting options, right-click the placeholder text, and then click **Placeholder Properties**.  
+     For more formatting options, right-click the placeholder text, and then select **Placeholder Properties**.  
   
-6.  Click **OK**. In report design view, the text box should contain "**My Field**: [*FieldName*]", where *FieldName* is the name of your field.  
+1. Select **OK**. In report design view, the text box should contain "**My Field**: [*FieldName*]", where *FieldName* is the name of your field.  
   
-7.  Click **Run**.  
+1. Select **Run**.  
   
  The list repeats one time for every value in the field, and the *FieldName* placeholder is replaced each time by the value of that field in the dataset.  
  
- ### To add Heading elements to a text box 
+## Add Heading elements to a text box 
   
-1.  On the **Insert** tab, click **Text Box**. Click the design surface, and then drag to create a box that is the size you want.  
+1. On the **Insert** tab, select **Text Box**. Select the design surface, and then drag to create a box that is the size you want.  
   
-2.  Inside the text box, select the text you want to format.  
+1. Inside the text box, select the text you want to format.  
   
-3.  Right-click the selected text, and click **Text Properties**. 
+1. Right-click the selected text, and select **Text Properties**. 
  
-4.  Set heading elements. For example, on the **Accessibility** tab:
+1. Set heading elements. For example, on the **Accessibility** tab:
 
-    -   **Accessibility options** Overwrite the structural type to give the Texbox a different semantic meaning output formats like HTML and Accessible PDF
+    - **Accessibility options** Overwrite the structural type to give the Texbox a different semantic meaning output formats like HTML and Accessible PDF
     
-    -   **Overwrite structure type** allows you to choose HTML heading elements H1-H6.  
-5. Make a selection 
+    - **Overwrite structure type** allows you to choose HTML heading elements H1-H6.  
+1. Make a selection 
 
-6. Click **OK**
+1. Select **OK**
   
  
-## See Also  
+## See also
+
  [Text Boxes &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
  [Formatting Text and Placeholders &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [Expression Uses in Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   

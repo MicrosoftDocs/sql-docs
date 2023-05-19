@@ -4,7 +4,7 @@ description: This page describes some common vCore resource limits for elastic p
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 4/20/2023
+ms.date: 05/19/2023
 ms.service: sql-database
 ms.subservice: elastic-pools
 ms.topic: reference
@@ -77,7 +77,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 | Max data IOPS per pool <sup>3</sup> | 1,400 | 2,800 | 4,200 | 5,600 | 7,000 |
 | Max log rate per pool (MBps) | 12 | 24 | 36 | 48 | 60 |
 | Max concurrent workers per pool <sup>4</sup> | 210 | 420 | 630 | 840 | 1050 |
-| Max concurrent logins per pool <sup>4</sup> | 210 | 420 | 630 | 840 | 1050 |
+| Max concurrent logins per pool | 210 | 420 | 630 | 840 | 1050 |
 | Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
 | Max concurrent external connections per pool <sup>5</sup> | 21 | 42 | 63 | 84 | 105 |
 | Min/max elastic pool vCore choices per database | 0, 0.25, 0.5, 1, 2 | 0, 0.25, 0.5, 1, 2, 4 | 0, 0.25, 0.5, 1, 2, 4, 6 | 0, 0.25, 0.5, 1, 2, 4, 6, 8 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10 |
@@ -115,7 +115,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 | Max data IOPS per pool <sup>3</sup> | 8,400 | 9,800 | 11,200 | 12,600 | 14,000 |
 | Max log rate per pool (MBps) | 62.5 | 62.5 | 62.5 | 62.5 | 62.5 |
 | Max concurrent workers per pool <sup>4</sup> | 1260 | 1470 | 1680 | 1890 | 2100 |
-| Max concurrent logins per pool <sup>4</sup> | 1260 | 1470 | 1680 | 1890 | 2100 |
+| Max concurrent logins per pool | 1260 | 1470 | 1680 | 1890 | 2100 |
 | Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
 | Max concurrent external connections per pool <sup>5</sup> | 126 | 147 | 150 | 150 | 150 |
 | Min/max elastic pool vCore choices per database | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 |
@@ -153,7 +153,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 | Max data IOPS per pool <sup>3</sup> | 16,800 | 22,400 | 28,000 | 32,000 | 40,000 |
 | Max log rate per pool (MBps) | 62.5 | 62.5 | 62.5 | 62.5 | 62.5 |
 | Max concurrent workers per pool <sup>4</sup> | 2520 | 3360 | 4200 | 8400 | 13,440 |
-| Max concurrent logins per pool <sup>4</sup> | 2520 | 3360 | 4200 | 8400 | 8400 |
+| Max concurrent logins per pool | 2520 | 3360 | 4200 | 8400 | 13,440 |
 | Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
 | Max concurrent external connections per pool <sup>5</sup> | 150 | 150 | 150 | 150 | 150 |
 | Min/max elastic pool vCore choices per database | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 32 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 32, 40 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 32, 40, 48, 80 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 32, 40, 48, 80, 128 |
@@ -195,7 +195,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 | Max data IOPS per pool <sup>3</sup> | 5,600 | 7,000 | 8,400 | 9,800 | 11,200 |
 | Max log rate per pool (MBps) | 48 | 60 | 62.5 | 62.5 | 62.5 |
 | Max concurrent workers per pool <sup>4</sup> | 400 | 500 | 600 | 700 | 800 |
-| Max concurrent logins per pool <sup>4</sup> | 800 | 1000 | 1200 | 1400 | 1600 |
+| Max concurrent logins per pool | 400 | 500 | 600 | 700 | 800 |
 | Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
 | Max concurrent external connections per pool <sup>5</sup> | 40 | 50 | 60 | 70 | 80 |
 | Min/max elastic pool vCore choices per database | 0, 8 | 0, 8, 10 | 0, 8, 10, 12 | 0, 8, 10, 12, 14 | 0, 8, 10, 12, 14, 16 |
@@ -233,7 +233,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 | Max data IOPS per pool <sup>3</sup> | 12,600 | 14,000 | 16,800 | 22,400 | 25,200 | 31,200 |
 | Max log rate per pool (MBps) | 62.5 | 62.5 | 62.5 | 62.5 | 62.5 | 62.5 |
 | Max concurrent workers per pool <sup>4</sup> | 900 | 1000 | 1200 | 1600 | 1800 | 3600 |
-| Max concurrent logins per pool <sup>4</sup> | 1800 | 2000 | 2400 | 3200 | 3600 | 7200 |
+| Max concurrent logins per pool | 900 | 1000 | 1200 | 1600 | 1800 | 3600 |
 | Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
 | Max concurrent external connections per pool <sup>5</sup> | 90 | 100 | 120 | 150 | 150 | 150 |
 | Min/max elastic pool vCore choices per database | 0, 8, 10, 12, 14, 16, 18 | 0, 8, 10, 12, 14, 16, 18, 20 | 0, 8, 10, 12, 14, 16, 18, 20, 24 | 0, 8, 10, 12, 14, 16, 18, 20, 24, 32 | 0, 8, 10, 12, 14, 16, 18, 20, 24, 32, 36 | 0, 8, 10, 12, 14, 16, 18, 20, 24, 32, 36, 40, 72 |
@@ -271,7 +271,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 | Max data IOPS per pool <sup>3</sup> | 1,400 | 2,800 | 4,200 | 5,600 |
 | Max log rate per pool (MBps) | 12 | 24 | 36 | 48 |
 | Max concurrent workers per pool <sup>4</sup> | 168 | 336 | 504 | 672 |
-| Max concurrent logins per pool <sup>4</sup> | 168 | 336 | 504 | 672 |
+| Max concurrent logins per pool | 168 | 336 | 504 | 672 |
 | Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 |
 | Max concurrent external connections per pool <sup>5</sup> | 16 | 33 | 50 | 67 |
 | Min/max elastic pool vCore choices per database | 0, 0.25, 0.5, 2 | 0, 0.25, 0.5, 2, 4 | 0, 0.25, 0.5, 2, 4, 6 | 0, 0.25, 0.5, 2, 4, 6, 8 |
@@ -312,7 +312,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 | Max data IOPS per pool <sup>3</sup> | 18,000 | 27,000 | 36,000 | 45,000 | 54,000 |
 | Max log rate per pool (MBps) | 60 | 90 | 120 | 120 | 120 |
 | Max concurrent workers per pool <sup>4</sup> | 420 | 630 | 840 | 1050 | 1260 |
-| Max concurrent logins per pool <sup>4</sup> | 420 | 630 | 840 | 1050 | 1260 |
+| Max concurrent logins per pool | 420 | 630 | 840 | 1050 | 1260 |
 | Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
 | Max concurrent external connections per pool <sup>5</sup> | 42 | 63 | 84 | 105 | 126 |
 | Min/max elastic pool vCore choices per database | 0, 0.25, 0.5, 1, 2, 4 | 0, 0.25, 0.5, 1, 2, 4, 6 | 0, 0.25, 0.5, 1, 2, 4, 6, 8 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12 |
@@ -351,7 +351,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 | Max data IOPS per pool <sup>3</sup> | 63,000 | 72,000 | 81,000 | 90,000 | 108,000 |
 | Max log rate per pool (MBps) | 120 | 120 | 120 | 120 | 120 |
 | Max concurrent workers per pool <sup>4</sup> | 1470 | 1680 | 1890 | 2100 | 2520 |
-| Max concurrent logins per pool <sup>4</sup> | 1470 | 1680 | 1890 | 2100 | 2520 |
+| Max concurrent logins per pool | 1470 | 1680 | 1890 | 2100 | 2520 |
 | Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
 | Max concurrent external connections per pool <sup>5</sup> | 147 | 150 | 150 | 150 | 150 |
 | Min/max elastic pool vCore choices per database | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24 |
@@ -387,8 +387,8 @@ vCore resource limits are listed in the following articles, please be sure to up
 | Write IO latency (approximate) | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms |
 | Max data IOPS per pool <sup>3</sup> | 144,000 | 180,000 | 256,000 | 409,600 |
 | Max log rate per pool (MBps) | 120 | 120 | 120 | 120 |
-| Max concurrent workers per pool <sup>4</sup> | 3360 | 4200 | 8400 | 13440 |
-| Max concurrent logins per pool <sup>4</sup> | 3360 | 4200 | 8400 | 8400 |
+| Max concurrent workers per pool <sup>4</sup> | 3360 | 4200 | 8400 | 13,440 |
+| Max concurrent logins per pool | 3360 | 4200 | 8400 | 13,440 |
 | Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 |
 | Max concurrent external connections per pool <sup>5</sup> | 150 | 150 | 150 | 150 |
 | Min/max elastic pool vCore choices per database | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 32 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 32, 40 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 32, 40, 48, 80 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 32, 40, 48, 80, 128 |
@@ -433,7 +433,7 @@ For important information about M-series hardware availability, see [Azure offer
 | Max data IOPS per pool <sup>3</sup> | 12,499 | 15,624 | 18,748 | 21,873 | 24,998 | 28,123 |
 | Max log rate per pool (MBps) | 48 | 60 | 72 | 84 | 96 | 108 |
 | Max concurrent workers per pool <sup>4</sup> | 800 | 1,000 | 1,200 | 1,400 | 1,600 | 1,800 |
-| Max concurrent logins per pool <sup>4</sup> | 800 | 1,000 | 1,200 | 1,400 | 1,600 | 1,800 |
+| Max concurrent logins per pool | 800 | 1,000 | 1,200 | 1,400 | 1,600 | 1,800 |
 | Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
 | Max concurrent external connections per pool <sup>5</sup> | 80 | 100 | 120 | 140 | 150 | 150 |
 | Min/max elastic pool vCore choices per database | 0, 8 | 0, 8, 10 | 0, 8, 10, 12 | 0, 8, 10, 12, 14 | 0, 8, 10, 12, 14, 16 | 0, 8, 10, 12, 14, 16, 18 |
@@ -472,7 +472,7 @@ For important information about M-series hardware availability, see [Azure offer
 | Max data IOPS per pool <sup>3</sup> | 31,248 | 37,497 | 49,996 | 99,993 | 160,000 |
 | Max log rate per pool (MBps) | 120 | 144 | 192 | 264 | 264 |
 | Max concurrent workers per pool <sup>4</sup> | 2,000 | 2,400 | 3,200 | 6,400 | 12,800 |
-| Max concurrent logins per pool <sup>4</sup> | 2,000 | 2,400 | 3,200 | 6,400 | 12,800 |
+| Max concurrent logins per pool | 2,000 | 2,400 | 3,200 | 6,400 | 12,800 |
 | Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
 | Max concurrent external connections per pool <sup>5</sup> | 150 | 150 | 150 | 150 | 150 |
 | Min/max elastic pool vCore choices per database | 0, 8, 10, 12, 14, 16, 18, 20 | 0, 8, 10, 12, 14, 16, 18, 20, 24 | 0, 8, 10, 12, 14, 16, 18, 20, 24, 32 | 0, 8, 10, 12, 14, 16, 18, 20, 24, 32, 40, 64 | 0, 8, 10, 12, 14, 16, 18, 20, 24, 32, 40, 64, 80, 128 |
@@ -511,7 +511,7 @@ For important information about M-series hardware availability, see [Azure offer
 | Max data IOPS per pool <sup>3</sup> | 15,750 | 31,500 | 47,250 | 56,000 |
 | Max log rate per pool (MBps) | 20 | 60 | 90 | 120 |
 | Max concurrent workers per pool <sup>4</sup> | 168 | 336 | 504 | 672 |
-| Max concurrent logins per pool <sup>4</sup> | 168 | 336 | 504 | 672 |
+| Max concurrent logins per pool | 168 | 336 | 504 | 672 |
 | Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 |
 | Max concurrent external connections per pool <sup>5</sup> | 16 | 33 | 50 | 67 |
 | Min/max elastic pool vCore choices per database | 0, 0.25, 0.5, 2 | 0, 0.25, 0.5, 2, 4 | 0, 0.25, 0.5, 2, 4, 6 | 0, 0.25, 0.5, 2, 4, 6, 8 |

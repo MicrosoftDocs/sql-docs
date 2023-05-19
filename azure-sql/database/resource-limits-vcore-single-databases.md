@@ -4,7 +4,7 @@ description: This page describes some common vCore resource limits for a single 
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 04/27/2023
+ms.date: 05/19/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: reference
@@ -79,6 +79,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Max data IOPS <sup>3</sup>|320|640|1280|1920|2560|
 |Max log rate (MBps)|4.5|9|18|27|36|
 |Max concurrent workers|75|150|300|450|600|
+|Max concurrent logins|75|150|300|450|600|
 |Max concurrent external connections <sup>4</sup>|7|15|30|45|60|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|
 |Number of replicas|1|1|1|1|1|
@@ -113,6 +114,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Max data IOPS <sup>2</sup>|3200|3840|4480|5120|5760|
 |Max log rate (MBps)|45|50|50|50|50|
 |Max concurrent workers|750|900|1050|1200|1350|
+|Max concurrent logins|750|900|1050|1200|1350|
 |Max concurrent external connections <sup>3</sup>|75|90|105|120|135|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|
 |Number of replicas|1|1|1|1|1|
@@ -145,6 +147,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Max data IOPS <sup>2</sup>|6,400|7,680|10,240|12,800|12,800|
 |Max log rate (MBps)|50|50|50|50|50|
 |Max concurrent workers|1500|1800|2400|3000|6000|
+|Max concurrent logins|1500|1800|2400|3000|6000|
 |Max concurrent external connections <sup>4</sup>|150|150|150|150|150|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|
 |Number of replicas|1|1|1|1|1|
@@ -182,6 +185,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 | Max log rate (MBps) | 100 | 100 | 100 | 100 | 100 | 100 | 100 |
 | IO latency (approximate) | Variable <sup>3</sup> | Variable <sup>3</sup> | Variable <sup>3</sup> | Variable <sup>3</sup>| Variable <sup>3</sup> | Variable <sup>3</sup> | Variable <sup>3</sup> |
 | Max concurrent workers | 150 | 300 | 450 | 600 | 750 | 900 | 1050 |
+| Max concurrent logins | 150 | 300 | 450 | 600 | 750 | 900 | 1050 |
 | Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
 | Secondary replicas | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 |
 | Multi-AZ | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) |
@@ -212,6 +216,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 | Max log rate (MBps) | 100 | 100 | 100 | 100 | 100 | 100 | 100 |
 | IO latency (approximate) | Variable <sup>3</sup> | Variable <sup>3</sup> | Variable <sup>3</sup> | Variable <sup>3</sup> | Variable <sup>3</sup> | Variable <sup>3</sup> | Variable <sup>3</sup> |
 | Max concurrent workers | 1200 | 1350 | 1500 | 1800 | 2400 | 3000 | 6000 |
+| Max concurrent logins | 1200 | 1350 | 1500 | 1800 | 2400 | 3000 | 6000 |
 | Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
 | Secondary replicas | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 |
 | Multi-AZ | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) |
@@ -244,6 +249,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Write IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
 |Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
 |Max concurrent workers|200|400|600|800|1000|1200|1400|
+|Max concurrent logins|200|400|600|800|1000|1200|1400|
 |Max concurrent external connections <sup>4</sup>|20|40|60|80|100|120|140|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|30,000|
 |Secondary replicas|0-4|0-4|0-4|0-4|0-4|0-4|0-4|
@@ -279,6 +285,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Write IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
 |Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
 |Max concurrent workers|1600|1800|2000|2400|3200|4000|8000|
+|Max concurrent logins|1600|1800|2000|2400|3200|4000|8000|
 |Max concurrent external connections <sup>4</sup>|150|150|150|150|150|150|150|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|30,000|
 |Secondary replicas|0-4|0-4|0-4|0-4|0-4|0-4|0-4|
@@ -314,6 +321,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Write IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
 |Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
 |Max concurrent workers|160|320|480|640|
+|Max concurrent logins|160|320|480|640|
 |Max concurrent external connections <sup>4</sup>|16|32|48|64|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|
 |Secondary replicas|0-4|0-4|0-4|0-4|
@@ -352,6 +360,7 @@ SLOs in the Hyperscale premium-series tier use the naming convention `HS_PRMS_` 
 |Write IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
 |Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
 |Max concurrent workers|200|400|600|800|1000|
+|Max concurrent logins|200|400|600|800|1000|
 |Max concurrent external connections <sup>4</sup>|20|40|60|80|100|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|
 |Secondary replicas|0-4|0-4|0-4|0-4|0-4|
@@ -389,6 +398,7 @@ SLOs in the Hyperscale premium-series tier use the naming convention `HS_PRMS_` 
 |Write IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
 |Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
 |Max concurrent workers|1,200|1,400|1,600|1,800|2,000|
+|Max concurrent logins|1,200|1,400|1,600|1,800|2,000|
 |Max concurrent external connections <sup>4</sup>|120|140|150|150|150|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|
 |Secondary replicas|0-4|0-4|0-4|0-4|0-4|
@@ -424,6 +434,7 @@ SLOs in the Hyperscale premium-series tier use the naming convention `HS_PRMS_` 
 |Write IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
 |Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
 |Max concurrent workers|2,400|3,200|4,000|8,000|12,800|
+|Max concurrent logins|2,400|3,200|4,000|8,000|12,800|
 |Max concurrent external connections <sup>4</sup>|150|150|150|150|150|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|
 |Secondary replicas|0-4|0-4|0-4|0-4|0-4|
@@ -462,6 +473,7 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 |Write IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
 |Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
 |Max concurrent workers|200|400|600|800|1000|
+|Max concurrent logins|200|400|600|800|1000|
 |Max concurrent external connections <sup>4</sup>|20|40|60|80|100|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|
 |Secondary replicas|0-4|0-4|0-4|0-4|0-4|
@@ -499,6 +511,7 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 |Write IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
 |Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
 |Max concurrent workers|1,200|1,400|1,600|1,800|2,000|
+|Max concurrent logins|1,200|1,400|1,600|1,800|2,000|
 |Max concurrent external connections <sup>4</sup>|120|140|150|150|150|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|
 |Secondary replicas|0-4|0-4|0-4|0-4|0-4|
@@ -535,6 +548,7 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 |Write IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
 |Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
 |Max concurrent workers|2,400|3,200|4,000|8,000|
+|Max concurrent logins|2,400|3,200|4,000|8,000|
 |Max concurrent external connections <sup>4</sup>|150|150|150|150|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|
 |Secondary replicas|0-4|0-4|0-4|0-4|
@@ -570,6 +584,7 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 |Max data IOPS <sup>2</sup>|640|1280|1920|2560|3200|
 |Max log rate (MBps)|9|18|27|36|45|
 |Max concurrent workers|200|400|600|800|1000|
+|Max concurrent logins|200|400|600|800|1000|
 |Max concurrent external connections <sup>3</sup>|20|40|60|80|100|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|
 |Number of replicas|1|1|1|1|1|
@@ -602,6 +617,7 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 |Max data IOPS <sup>2</sup>|3,840|4,480|5,120|5,760|6,400|
 |Max log rate (MBps)|50|50|50|50|50|
 |Max concurrent workers|1,200|1,400|1,600|1,800|2,000|
+|Max concurrent logins|1,200|1,400|1,600|1,800|2,000|
 |Max concurrent external connections <sup>3</sup>|120|140|150|150|150|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|
 |Number of replicas|1|1|1|1|1|
@@ -634,6 +650,7 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 |Max data IOPS <sup>2</sup>|7,680|10,240|12,800|12,800|16,000|
 |Max log rate (MBps)|50|50|50|50|50|
 |Max concurrent workers|2,400|3,200|4,000|8,000|12,800|
+|Max concurrent logins|2,400|3,200|4,000|8,000|12,800|
 |Max concurrent external connections <sup>3</sup>|150|150|150|150|150|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|
 |Number of replicas|1|1|1|1|1|
@@ -669,7 +686,7 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 |Max data IOPS <sup>2</sup>|2560|3200|3840|4480|5120|
 |Max log rate (MBps)|36|45|50|50|50|
 |Max concurrent workers|400|500|600|700|800|
-|Max concurrent logins|800|1000|1200|1400|1600|
+|Max concurrent logins|400|500|600|700|800|
 |Max concurrent external connections <sup>3</sup>|40|50|60|70|80|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|
 |Number of replicas|1|1|1|1|1|
@@ -701,7 +718,7 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 |Max data IOPS <sup>2</sup>|5760|6400|7680|10,240|11,520|12,800|
 |Max log rate (MBps)|50|50|50|50|50|50|
 |Max concurrent workers|900|1000|1200|1600|1800|3600|
-|Max concurrent logins|1800|2000|2400|3200|3600|7200|
+|Max concurrent logins|900|1000|1200|1600|1800|3600|
 |Max concurrent external connections <sup>3</sup>|90|100|120|150|150|150|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|
 |Number of replicas|1|1|1|1|1|1|
@@ -733,6 +750,7 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 |Max data IOPS <sup>2</sup>|640|1280|1920|2560|
 |Max log rate (MBps)|9|18|27|36|
 |Max concurrent workers|160|320|480|640|
+|Max concurrent logins|160|320|480|640|
 |Max concurrent external connections <sup>3</sup>|16|32|48|64|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|
 |Number of replicas|1|1|1|1|
@@ -834,7 +852,7 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 |Max data IOPS <sup>2</sup>|96,000|128,000|160,000|204,800|327,680|
 |Max log rate (MBps)|96|96|96|96|96|
 |Max concurrent workers|2400|3200|4000|8000|12,800|
-|Max concurrent logins|2400|3200|4000|8000|8000|
+|Max concurrent logins|2400|3200|4000|8000|12,800|
 |Max concurrent external connections <sup>3</sup>|150|150|150|150|150|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|
 |Number of replicas|4|4|4|4|4|

@@ -3,7 +3,7 @@ title: Understanding timeouts
 description: Learn about the timeouts used by JDBC. LoginTimeout, queryTimeout, cancelQueryTimeout, and socketTimeout can be used to ensure application responsiveness.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 05/18/2023
+ms.date: 05/19/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -32,13 +32,13 @@ For a responsive application, `loginTimeout` and `queryTimeout` should be set to
 
 This same information can be found summarized in the following table:
 
-| Property             | Description                                                                           | Default                     | Connection Result  |
-|----------------------|---------------------------------------------------------------------------------------|-----------------------------| ------------------ |
-| `loginTimeout`       | The number of seconds the driver should wait before timing out a failed connection.   | 30 seconds [11.2 and above]<br/>15 seconds [10.2 and below] | Closed connection  |
-| `queryTimeout`       | The number of seconds to wait before canceling a query.                               | -1 [Infinite timeout]       | Open connection    |
-| `cancelQueryTimeout` | The number of seconds to wait for an acknowledgment of the QueryTimeout cancellation. | -1 [Infinite timeout]       | Closed connection  |
-| `lockTimeout`        | The number of milliseconds to wait before the database returns a lock time-out error. | -1 [Infinite timeout]       | Open connection    |
-| `socketTimeout`      | The number of milliseconds to wait on a socket read or write.                         | Zero [Infinite timeout]     | Closed connection  |
+| Property             | Description                                                                           | Default                                     | Connection Result  |
+|----------------------|---------------------------------------------------------------------------------------|---------------------------------------------| ------------------ |
+| `loginTimeout`       | The number of seconds the driver should wait before timing out a failed connection.   | 30 seconds [11.2+]<br/>otherwise 15 seconds | Closed connection  |
+| `queryTimeout`       | The number of seconds to wait before canceling a query.                               | -1 [Infinite timeout]                       | Open connection    |
+| `cancelQueryTimeout` | The number of seconds to wait for an acknowledgment of the QueryTimeout cancellation. | -1 [Infinite timeout]                       | Closed connection  |
+| `lockTimeout`        | The number of milliseconds to wait before the database returns a lock time-out error. | -1 [Infinite timeout]                       | Open connection    |
+| `socketTimeout`      | The number of milliseconds to wait on a socket read or write.                         | Zero [Infinite timeout]                     | Closed connection  |
 
 ## See also
 

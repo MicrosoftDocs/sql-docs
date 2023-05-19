@@ -2698,6 +2698,8 @@
   - name: Improving performance and reliability
     href: ../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md
     items:
+    - name: Understanding timeout properties
+      href: ../connect/jdbc/understanding-timeouts.md
     - name: Closing objects when not in use
       href: ../connect/jdbc/closing-objects-when-not-in-use.md
     - name: Managing transaction size

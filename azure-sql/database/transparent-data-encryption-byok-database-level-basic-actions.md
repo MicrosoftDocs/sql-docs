@@ -100,15 +100,11 @@ The following are examples for creating a database on Azure SQL Database with a 
 
    :::image type="content" source="media/transparent-data-encryption-byok-database-level-basic-actions/transparent-data-encryption-configuration-menu.png" alt-text="Screenshot of the Azure portal transparent data encryption menu.":::
 
-1. On the Security tab, under **Identity (preview)**, select **Configure Identities**.
-
-   :::image type="content" source="media/transparent-data-encryption-byok-create-server/configure-identity.png" alt-text="screenshot of security settings and configuring identities in the Azure portal":::
-
 1. Select **Configure Identities** to enable a **Database identity** and **Add** a user assigned managed identity to the resource if a desired identity isn't list in the **Identity** menu. Then select **Apply**.
 
    :::image type="content" source="media/transparent-data-encryption-byok-database-level-basic-actions/configure-identity-transparent-data-encryption.png" alt-text="Screenshot of the Azure portal Identity menu.":::
 
-   > [!OPTIONAL]
+   > [!NOTE]
    > You can configure the **Federated client identity** here if you are configure cross-tenant CMK for TDE.
 
 1. On the **Transparent data encryption (preview)** menu, select **Change key**. Select the desired **Subscription**, **Key vault**, **Key**, and **Version** for the customer-managed key to be used for TDE. Select the **Select** button. After you have selected a key, you can also add additional database keys as needed using the [Azure Key vault URI (object identifier)](/azure/key-vault/general/about-keys-secrets-certificates) in the **Transparent data encryption (preview)** menu.

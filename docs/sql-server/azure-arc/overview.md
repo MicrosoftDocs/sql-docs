@@ -83,7 +83,7 @@ The following diagram illustrates the architecture of Azure Arc-enabled SQL Serv
 | [Azure Active Directory authentication for SQL Server](../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md) | No | No | No | No | No | Yes |
 | [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-sql-usage) | Yes | Yes | Yes | Yes | Yes | Yes |
 | [Microsoft Purview: DevOps policies](/azure/purview/how-to-policies-devops-authoring-generic) | No | No | No | No | No | Yes |
-| [Microsoft Purview: data owner policies (preview)](/purview/how-to-policies-data-owner-authoring-generic) | No | No | No | No | No | Yes |
+| [Microsoft Purview: data owner policies (preview)](/azure/purview/how-to-policies-data-owner-authoring-generic) | No | No | No | No | No | Yes |
 | [Automated backups](point-in-time-restore.md) | Yes | Yes | Yes | Yes | Yes | Yes |
 | [Automated patching](patch.md) | No | Yes | Yes | Yes | Yes | Yes | 
 

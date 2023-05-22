@@ -37,7 +37,7 @@ In this guide, we go through the steps to create, update, and retrieve an Azure 
   - [Configure cross-tenant customer-managed keys for a new storage account](/azure/storage/common/customer-managed-keys-configure-cross-tenant-new-account)
   - [Configure cross-tenant customer-managed keys for an existing storage account](/azure/storage/common/customer-managed-keys-configure-cross-tenant-existing-account)
 - The Azure CLI version 2.46.0 or higher.
-- Az PowerShell version 9.5.0 or higher.
+- Az PowerShell module version 9.5.0 or higher.
 
 ### Required resources on the first tenant
 
@@ -81,6 +81,46 @@ Before we can configure TDE for Azure SQL Database with a cross-tenant CMK, we n
 ## Create a new Azure SQL Database with database level customer-managed keys
 
 The following are examples for creating a database on Azure SQL Database with a user-assigned managed identity, and how to set a cross-tenant customer managed key at the database level. The user-assigned managed identity is required for setting up a customer-managed key for transparent data encryption during the database creation phase.
+
+# [Portal](#tab/azure-portal)
+
+1. Browse to the [Select SQL deployment](https://portal.azure.com/#create/Microsoft.AzureSQL) option page in the Azure portal.
+
+1. If you aren't already signed in to Azure portal, sign in when prompted.
+
+1. Under **SQL databases**, leave **Resource type** set to **Single database**, and select **Create**.
+
+1. On the **Basics** tab of the **Create SQL Database** form, under **Project details**, select the desired Azure **Subscription**, **Resource group**, and **Server** for your database. Then, use a unique name for your **Database name**. If you haven't created a logical server for Azure SQL Database, see [Create server configured with TDE with cross-tenant customer-managed key (CMK)](transparent-data-encryption-byok-create-server-cross-tenant.md#create-server-configured-with-tde-with-cross-tenant-customer-managed-key-cmk) for reference.
+
+1. When you get to the **Security** tab, select **Configure transparent data encryption**.
+
+   :::image type="content" source="media/transparent-data-encryption-byok-database-level-basic-actions/configure-transparent-data-encryption.png" alt-text="Screenshot of the Azure portal and the Security menu when creating an Azure SQL Database.":::
+
+1. On the **Transparent data encryption (preview)** menu, select **Database level customer managed key**.
+
+   :::image type="content" source="media/transparent-data-encryption-byok-database-level-basic-actions/transparent-data-encryption-configuration-menu.png" alt-text="Screenshot of the Azure portal transparent data encryption menu.":::
+
+1. On the Security tab, under **Identity (preview)**, select **Configure Identities**.
+
+   :::image type="content" source="media/transparent-data-encryption-byok-create-server/configure-identity.png" alt-text="screenshot of security settings and configuring identities in the Azure portal":::
+
+1. Select **Configure Identities** to enable a **Database identity** and **Add** a user assigned managed identity to the resource if a desired identity isn't list in the **Identity** menu. Then select **Apply**.
+
+   :::image type="content" source="media/transparent-data-encryption-byok-database-level-basic-actions/configure-identity-transparent-data-encryption.png" alt-text="Screenshot of the Azure portal Identity menu.":::
+
+   > [!OPTIONAL]
+   > You can configure the **Federated client identity** here if you are configure cross-tenant CMK for TDE.
+
+1. On the **Transparent data encryption (preview)** menu, select **Change key**. Select the desired **Subscription**, **Key vault**, **Key**, and **Version** for the customer-managed key to be used for TDE. Select the **Select** button. After you have selected a key, you can also add additional database keys as needed using the [Azure Key vault URI (object identifier)](/azure/key-vault/general/about-keys-secrets-certificates) in the **Transparent data encryption (preview)** menu.
+
+1. Select **Apply** to continue creating the database.
+
+1. Select **Review + create** at the bottom of the page
+
+1. On the **Review + create** page, after reviewing, select **Create**.
+
+> [!NOTE]
+> The database creation will fail if the user-assigned managed identity doesn't have the right permissions enabled on the key vault. The user-assigned managed identity will need the *Get, wrapKey, and unwrapKey* permissions on the key vault. For more information, see [Managed identities for transparent data encryption with customer-managed key](transparent-data-encryption-byok-identity.md).
 
 # [Azure CLI](#tab/azure-cli)
 
@@ -194,6 +234,20 @@ To get your user-assigned managed identity **Resource ID**, search for **Managed
 
 This following are examples of updating an existing database on Azure SQL Database with a user-assigned managed identity, and how to set a cross-tenant customer managed key at the database level. The user-assigned managed identity is required for setting up a customer-managed key for transparent data encryption during the database creation phase.
 
+# [Portal](#tab/azure-portal)
+
+1. In the [Azure portal](https://portal.azure.com), navigate to the **SQL database** resource that you want to update with a database level customer-managed key.
+
+1. Under **Security**, select **Identity (preview)**. Add a **User assigned managed identity** for this database, and then select **Save**
+
+1. Now go to the **Transparent data encryption (preview)** menu under **Security** for your database. Select **Database level customer managed key**. The **Database identity** for the database should already be **Enabled** as you have configured the identity in the last step.
+
+1. Select **Change key**. Select the desired **Subscription**, **Key vault**, **Key**, and **Version** for the customer-managed key to be used for TDE. Select the **Select** button. After you have selected a key, you can also add additional database keys as needed using the [Azure Key vault URI (object identifier)](/azure/key-vault/general/about-keys-secrets-certificates) in the **Transparent data encryption (preview)** menu.
+
+   :::image type="content" source="media/transparent-data-encryption-byok-database-level-basic-actions/configure-transparent-data-encryption-existing-database.png" alt-text="Screenshot of the Azure portal transparent data encryption menu.":::
+
+1. Select **Save**.
+
 # [Azure CLI](#tab/azure-cli)
 
 For information on installing the current release of Azure CLI, see [Install the Azure CLI](/cli/azure/install-azure-cli) article.
@@ -206,7 +260,7 @@ To get your user-assigned managed identity **Resource ID**, search for **Managed
 az sql db update --resource-group $resourceGroupName --server $serverName --name mySampleDatabase --sample-name AdventureWorksLT --edition GeneralPurpose --compute-model Serverless --family Gen5 --capacity 2 --assign-identity --user-assigned-identity-id $identityid --encryption-protector $keyid --federated-client-id $federatedclientid --keys $keys --keys-to-remove $keysToRemove
 ```
 
-The list `$keys` are a space separated list of keys which are to be added on the database and `$keysToRemove` is a space separated list of keys that have to be removed from the database
+The list `$keys` are a space separated list of keys that are to be added on the database and `$keysToRemove` is a space separated list of keys that have to be removed from the database
 
 ```azurecli
 $keys = '"https://yourvault.vault.azure.net/keys/yourkey1/6638b3667e384aefa31364f94d230000" "https://yourvault.vault.azure.net/keys/yourkey2/ fd021f84a0d94d43b8ef33154bca0000"'

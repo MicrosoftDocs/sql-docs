@@ -135,10 +135,12 @@ Driver={ODBC Driver 18 for SQL Server};Server=tcp:<database-server-name>.databas
 
 To use the user-assigned managed identity, create an AZURE_CLIENT_ID environment variable and set it equal to the client ID of the managed identity.  You can set this variable in the **Configuration** section of your app in the Azure portal. You can find the client ID in the **Overview** section of the managed identity resource in the Azure portal.
 
-> [!NOTE]
-> The example connection code shown in this migration guide uses the [DefaultAzureCredential](/python/api/azure-identity/azure.identity.defaultazurecredential) class when deployed. The DefaultAzureCredential uses a user-assigned managed identity if the AZURE_CLIENT_ID environment variable is set. If not specified, a system-assigned managed identity will be used if configured.
-
 Save your changes and restart the application if it doesn't do so automatically.
+
+> [!NOTE]
+> The example connection code shown in this migration guide uses the [DefaultAzureCredential](/python/api/azure-identity/azure.identity.defaultazurecredential) class when deployed. Specifically, it uses the DefaultAzureCredential without passing the user-assigned managed identity client ID to the constructor. In this scenario, the fallback is to check for an AZURE_CLIENT_ID environment variable. If the AZURE_CLIENT_ID environment variable doesn't exist, a system-assigned managed identity will be used if configured.
+
+If you pass the managed identity client ID, the connection code can still be used locally because the authentication process fall back to interactive authentication. For more information, see the [Azure Identity client library for Python](/python/api/overview/azure/identity-readme#defaultazurecredential).
 
 ### Test the application
 

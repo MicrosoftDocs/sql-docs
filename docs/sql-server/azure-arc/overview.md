@@ -82,7 +82,8 @@ The following diagram illustrates the architecture of Azure Arc-enabled SQL Serv
 | [Detailed database inventory](view-databases.md#inventory-databases) | Yes | Yes | Yes | Yes | Yes | Yes |
 | [Azure Active Directory authentication for SQL Server](../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md) | No | No | No | No | No | Yes |
 | [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-sql-usage) | Yes | Yes | Yes | Yes | Yes | Yes |
-| [Microsoft Purview](/azure/purview/tutorial-register-scan-on-premises-sql-server) | Yes | Yes | Yes | Yes | Yes | Yes |
+| [Microsoft Purview: DevOps policies](/azure/purview/how-to-policies-devops-authoring-generic) | No | No | No | No | No | Yes |
+| [Microsoft Purview: data owner policies (preview)](/purview/how-to-policies-data-owner-authoring-generic) | No | No | No | No | No | Yes |
 | [Automated backups](point-in-time-restore.md) | Yes | Yes | Yes | Yes | Yes | Yes |
 | [Automated patching](patch.md) | No | Yes | Yes | Yes | Yes | Yes | 
 
@@ -95,7 +96,7 @@ The following diagram illustrates the architecture of Azure Arc-enabled SQL Serv
 | [Detailed database inventory](view-databases.md#inventory-databases) | Yes | Yes | Yes | Yes | Yes | Yes |
 | [Azure Active Directory authentication](../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md) | Yes | Yes | Yes | Yes | Yes | Yes |
 | [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-sql-usage) | Yes | Yes | Yes | Yes </br>  [Express LocalDB is not supported.](/azure/purview/register-scan-on-premises-sql-server#supported-capabilities) | Yes | Yes |
-| [Microsoft Purview](/azure/purview/tutorial-register-scan-on-premises-sql-server) | Yes | Yes | Yes | Yes | Yes | Yes |
+| [Microsoft Purview: Govern using DevOps and data owner policies](/azure/purview/tutorial-register-scan-on-premises-sql-server) | Yes | Yes | Yes | Yes | Yes | Yes |
 | [Automated backups](point-in-time-restore.md) | Yes | Yes | Yes | Yes | Yes | Yes |
 | [Automated patching](patch.md) | Yes | Yes | Yes | Yes | Yes | Yes |
 

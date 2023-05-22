@@ -283,7 +283,7 @@ To run these commands you can use any tool or IDE that can connect to Azure SQL 
 
     For more information, see [Contained Database Users - Making Your Database Portable](/sql/relational-databases/security/contained-database-users-making-your-database-portable). For an example that shows the same principle but applied to Azure VM, see [Tutorial: Use a Windows VM system-assigned managed identity to access Azure SQL](/azure/active-directory/managed-identities-azure-resources/tutorial-windows-vm-access-sql). For more information about the roles assigned, see [Fixed-database Roles](/sql/relational-databases/security/authentication-access/database-level-roles#fixed-database-roles).
 
-    If you disable the App Service system-assigned managed identity and then enable it again, drop the user and recreate it. Run `DROP USER <web-app-name>` and rerun the `CREATE` and `ALTER` commands. To see users, use `SELECT * FROM sys.database_principals`.
+    If you disable the App Service system-assigned managed identity and then enable it again, drop the user and recreate it. Run `DROP USER [<web-app-name>]` and rerun the `CREATE` and `ALTER` commands. To see users, use `SELECT * FROM sys.database_principals`.
 
 1. Use the [az webapp config appsettings set](/cli/azure/webapp/config/appsettings#az-webapp-config-appsettings-set) command to add an app setting for the connection string.
 

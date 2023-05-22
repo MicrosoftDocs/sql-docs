@@ -4,7 +4,7 @@ description: "Explains the SQL Server instance configuration setting for ADR cle
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.date: 05/12/2023
+ms.date: 05/16/2023
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
@@ -23,8 +23,9 @@ Occasionally the cleaner runs into issues while acquiring object level locks due
 
 The cleaner is single threaded in [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)], and so one [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance can work on one database at a time. If the instance has more than one user database with ADR enabled, then don't increase the timeout to a large value. Doing so could delay cleanup on one database while the retry is happening on another database.
 
-> [!NOTE]
-> For [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] CU 12 and previous versions, this value is set to `0` by default.
+## Known issue
+
+For [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] CU 12 and previous versions, this value is set to `0` by default. If you upgrade [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] to CU 13 or a newer build, you may need to manually reset the value to `120`, using the example in this article.
 
 ## Examples
 

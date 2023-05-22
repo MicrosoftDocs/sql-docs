@@ -32,19 +32,23 @@ Before you can Arc-enable an instance of [!INCLUDE [ssnoversion-md](../../includ
 
 To [Connect SQL Servers on Azure Arc-enabled servers at scale using Azure policy](connect-at-scale-policy.md):
 
+- The service principal requires read permission on the subscription.
+
 - The installation account requires:
 
   - [`User Access Administrator`](/azure/role-based-access-control/built-in-roles#user-access-administrator) role assignment is required in the subscription if you are creating a *new* system assigned managed identity.
   - [`Resource Policy Contributor`](/azure/role-based-access-control/built-in-roles#resource-policy-contributor) role assignment for the scope that you're targeting. The scope may be either subscription or resource group.
 
+For all the other onboarding methods:
+
 - The service principal requires read permission on the subscription.
 
-For all the other onboarding methods, user or service principal must have permissions in the Azure resource group to complete the task. Specifically:
+- User or service principal must have permissions in the Azure resource group to complete the task. Specifically:
 
-- [`Azure Connected Machine Onboarding`](/azure/role-based-access-control/built-in-roles#azure-connected-machine-onboarding) role
-- `Microsoft.AzureArcData/register/action`
-- `Microsoft.HybridCompute/machines/extensions/read`
-- `Microsoft.HybridCompute/machines/extensions/write`
+  - [`Azure Connected Machine Onboarding`](/azure/role-based-access-control/built-in-roles#azure-connected-machine-onboarding) role
+  - `Microsoft.AzureArcData/register/action`
+  - `Microsoft.HybridCompute/machines/extensions/read`
+  - `Microsoft.HybridCompute/machines/extensions/write`
 
 Users can be assigned to built-in roles that have these permissions, for example [Contributor](/azure/role-based-access-control/built-in-roles#contributor) or [Owner](/azure/role-based-access-control/built-in-roles#owner). For more information, see [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal).
 

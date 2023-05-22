@@ -309,7 +309,7 @@ To run these commands you can use any tool or IDE that can connect to Azure SQL 
 Browse to the URL of the app to test that the connection to Azure SQL Database is working. You can locate the URL of your app on the App Service overview page.
 
 ```http
-https://<web-app-name>.azurewebsites.net`
+https://<web-app-name>.azurewebsites.net
 ```
 
 Append */docs* to access the Swagger UI and use the API methods.  

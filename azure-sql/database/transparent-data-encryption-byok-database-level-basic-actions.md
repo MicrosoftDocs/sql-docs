@@ -5,7 +5,7 @@ description: A how-to guide on creating, updating, and utilizing database level 
 author: strehan1993
 ms.author: strehan
 ms.reviewer: vanto
-ms.date: 04/25/2023
+ms.date: 05/23/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: how-to

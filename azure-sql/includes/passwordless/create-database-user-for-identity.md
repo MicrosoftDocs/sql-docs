@@ -16,7 +16,7 @@ Create a SQL database user that maps back to the user-assigned managed identity.
 
     :::image type="content" source="../../database/media/passwordless-connections/query-editor-identity-small.png" lightbox="../../database/media/passwordless-connections/query-editor-identity.png" alt-text="A screenshot showing how to use the Azure Query editor to create a SQL user for a managed identity.":::
 
-    Running these commands creates a [SQL DB Contributor](/azure/role-based-access-control/built-in-roles#sql-db-contributor) role for the user-assigned managed identity. This role allows the identity to read, write, and modify the data and schema of your database.
+    Running these commands assigns the [SQL DB Contributor](/azure/role-based-access-control/built-in-roles#sql-db-contributor) role to the user-assigned managed identity. This role allows the identity to read, write, and modify the data and schema of your database.
 ---
 
 > [!IMPORTANT]

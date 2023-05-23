@@ -14,4 +14,4 @@
 
     :::image type="content" source="../../database/media/passwordless-connections/query-editor-user-small.png" lightbox="../../database/media/passwordless-connections/query-editor-user.png" alt-text="A screenshot showing how to use the Azure Query editor.":::
 
-    Running these commands creates a [SQL DB Contributor](/azure/role-based-access-control/built-in-roles#sql-db-contributor) role for the account specified. This role allows the identity to read, write, and modify the data and schema of your database. For more information about the roles assigned, see [Fixed-database roles](/sql/relational-databases/security/authentication-access/database-level-roles#fixed-database-roles).
+    Running these commands assigns the [SQL DB Contributor](/azure/role-based-access-control/built-in-roles#sql-db-contributor) role to the account specified. This role allows the identity to read, write, and modify the data and schema of your database. For more information about the roles assigned, see [Fixed-database roles](/sql/relational-databases/security/authentication-access/database-level-roles#fixed-database-roles).

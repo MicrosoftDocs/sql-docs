@@ -24,8 +24,6 @@ In this video, you learn why a relational database system and the Transact-SQL l
 
 > [!VIDEO https://learn-video.azurefd.net/vod/player?show=programming-databases-with-t-sql-for-beginners&ep=rdbms-and-setup-1-of-7-programming-databases-with-t-sql-for-beginners]
 
-Microsoft Learn is a great way to continue learning at your own pace. For more information, visit - [QuickStart: Create a single database - Azure SQL Database](../../azure-sql/database/single-database-create-quickstart.md).
-
 ## Introduction to Transact-SQL
 
 In this video, you get an introduction to relational databases, the SQL language, and Transact-SQL. You learn what kinds of statements make up the SQL language and look at the `SELECT` statement in detail.
@@ -33,8 +31,6 @@ In this video, you get an introduction to relational databases, the SQL language
 &nbsp;
 
 > [!VIDEO https://learn-video.azurefd.net/vod/player?show=programming-databases-with-t-sql-for-beginners&ep=introduction-to-transact-sql-2-of-7-programming-databases-with-t-sql-for-beginners]
-
-Microsoft Learn is a great way to continue learning at your own pace. For more information, visit - [QuickStart: Create a single database - Azure SQL Database](../../azure-sql/database/single-database-create-quickstart.md).
 
 ## Sort and filter results in Transact-SQL
 

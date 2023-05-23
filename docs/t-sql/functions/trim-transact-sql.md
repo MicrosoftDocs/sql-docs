@@ -4,7 +4,7 @@ description: "Removes the space character or other specified characters from the
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 09/14/2022
+ms.date: 05/08/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -15,15 +15,15 @@ helpviewer_keywords:
   - "TRIM function"
 dev_langs:
   - "TSQL"
-monikerRange: "= azure-sqldw-latest || = azuresqldb-current || >= sql-server-2017 || >= sql-server-linux-2017 || >= sql-server-ver15 || >= sql-server-ver16 || >= sql-server-linux-ver15 || >= sql-server-linux-ver16 || = azuresqldb-mi-current"
+monikerRange: "= azure-sqldw-latest || = azuresqldb-current || >= sql-server-2017 || >= sql-server-linux-2017 || >= sql-server-ver15 || >= sql-server-ver16 || >= sql-server-linux-ver15 || >= sql-server-linux-ver16 || = azuresqldb-mi-current ||=fabric"  
 ---
 # TRIM (Transact-SQL)
 
-[!INCLUDE [sqlserver2017-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asa.md)]
+[!INCLUDE [sqlserver2017-asdb-asdbmi-asa-fabricse-fabricdw](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asa-fabricse-fabricdw.md)]
 
 Removes the space character `char(32)` or other specified characters from the start and end of a string.
 
-::: moniker range=">=sql-server-ver16 || >=sql-server-linux-ver16"
+::: moniker range=">=sql-server-ver16 || >=sql-server-linux-ver16 || = azuresqldb-mi-current"
 Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], optionally remove the space character `char(32)` or other specified characters from the start, end, or both sides of a string.
 ::: moniker-end
 
@@ -31,16 +31,13 @@ Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], optionally 
 
 ## Syntax
 
-::: moniker range="<=sql-server-ver15 || <=sql-server-linux-ver15 || = azure-sqldw-latest || = azuresqldb-current || = azuresqldb-mi-current"
-Syntax for SQL Server and Azure SQL Database:
+Syntax for SQL Server prior to [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], [!INCLUDE [ssazure_md](../../includes/ssazure_md.md)], [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse-md.md)], and [!INCLUDE [fabric](../../includes/fabric.md)]::
 
 ```syntaxsql
 TRIM ( [ characters FROM ] string )
 ```
-::: moniker-end
 
-::: moniker range=">=sql-server-ver16 || >=sql-server-linux-ver16"
-Syntax for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later:
+Syntax for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later, and [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]:
 
 > [!IMPORTANT]
 > You will need your database compatibility level set to 160 to use the `LEADING`, `TRAILING`, or `BOTH` keywords.
@@ -49,27 +46,14 @@ Syntax for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later:
 TRIM ( [ LEADING | TRAILING | BOTH ] [characters FROM ] string )
 ```
 
-Syntax for [!INCLUDE [ssazure_md](../../includes/ssazure_md.md)]:
-
-```syntaxsql
-TRIM ( [ characters FROM ] string )
-```
-::: moniker-end
-
-Syntax for Azure Synapse Analytics:
-
-```syntaxsql
-TRIM ( string )
-```
-
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 
-::: moniker range=">=sql-server-ver16 || >=sql-server-linux-ver16"
+::: moniker range=">=sql-server-ver16 || >=sql-server-linux-ver16 || = azuresqldb-mi-current"
 #### [ LEADING | TRAILING | BOTH ]
 
-**Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later.
+**Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, and [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]:
 
 The optional first argument specifies which side of the string to trim:
 
@@ -96,7 +80,7 @@ Returns a character expression with a type of string argument where the space ch
 
 By default, the `TRIM` function removes the space character from both the start and the end of the string. This behavior is equivalent to `LTRIM(RTRIM(@string))`.
 
-::: moniker range=">=sql-server-ver16 || >=sql-server-linux-ver16"
+::: moniker range=">=sql-server-ver16 || >=sql-server-linux-ver16 || = azuresqldb-mi-current"
 To enable the optional `LEADING`, `TRAILING`, or `BOTH` positional arguments in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], you must enable database compatibility level `160` on the database(s) that you are connecting to when executing queries.
 
 - With optional `LEADING` positional argument, the behavior is equivalent to `LTRIM(@string, characters)`.
@@ -135,7 +119,7 @@ SELECT TRIM( '.,! ' FROM '     #     test    .') AS Result;
 
 In this example, only the trailing period and spaces from before `#` and after the word `test` were removed. The other characters were ignored because they didn't exist in the string.
 
-::: moniker range=">=sql-server-ver16 || >=sql-server-linux-ver16"
+::: moniker range=">=sql-server-ver16 || >=sql-server-linux-ver16 || = azuresqldb-mi-current"
 
 ### C. Remove specified characters from the start of a string
 

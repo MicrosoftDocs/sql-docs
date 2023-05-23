@@ -23,16 +23,23 @@ helpviewer_keywords:
   - "NORECOMPUTE clause"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 
 # CREATE STATISTICS (Transact-SQL)
 
-[!INCLUDE [sqlserver2022-asdb-asmi](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [sqlserver2022-asdb-asmi-asa-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw.md)]
 
 Creates query optimization statistics on one or more columns of a table, an indexed view, or an external table. For most queries, the query optimizer already generates the necessary statistics for a high-quality query plan; in a few cases, you need to create additional statistics with CREATE STATISTICS or modify the query design to improve query performance.
 
 To learn more, see [Statistics](../../relational-databases/statistics/statistics.md).
+
+::: moniker range="=fabric"
+
+> [!NOTE]
+> For more information on statistics in [!INCLUDE [fabric](../../includes/fabric.md)], see [Statistics in [!INCLUDE [fabric](../../includes/fabric.md)]](/fabric/data-warehouse/statistics).
+
+::: moniker-end
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -84,7 +91,7 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
 ```
 
 ```syntaxsql
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse 
   
 CREATE STATISTICS statistics_name
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name }
@@ -113,6 +120,19 @@ CREATE STATISTICS statistics_name
     IS | IS NOT | = | <> | != | > | >= | !> | < | <= | !<
 ```
 
+```syntaxsql
+-- Syntax for Microsoft Fabric
+CREATE STATISTICS statistics_name
+    ON { database_name.schema_name.table_name | schema_name.table_name | table_name }
+    ( column_name )
+    [ WITH {
+           FULLSCAN
+           | SAMPLE number PERCENT
+      }
+    ]
+[;]
+```
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
@@ -120,7 +140,7 @@ CREATE STATISTICS statistics_name
 #### statistics_name
 Is the name of the statistics to create.
 
-#### table_or_indexed_view_name
+#### table_or_indexed_view_name 
 Is the name of the table, indexed view, or external table on which to create the statistics. To create statistics on another database, specify a qualified table name.
 
 #### column [ ,...n]
@@ -151,7 +171,9 @@ For more information about filter predicates, see [Create Filtered Indexes](../.
 
 Compute statistics by scanning all rows. FULLSCAN and SAMPLE 100 PERCENT have the same results. FULLSCAN cannot be used with the SAMPLE option.
 
-When omitted, SQL Server uses sampling to create the statistics, and determines the sample size that is required to create a high quality query plan
+When omitted, SQL Server uses sampling to create the statistics, and determines the sample size that is required to create a high quality query plan.
+
+In [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)], only single-column FULLSCAN and single-column SAMPLE-based statistics are supported. When no option is included, FULLSCAN statistics are created.
 
 #### SAMPLE number { PERCENT | ROWS }  
 Specifies the approximate percentage or number of rows in the table or indexed view for the query optimizer to use when it creates statistics. For PERCENT, *number* can be from 0 through 100 and for ROWS, *number* can be from 0 to the total number of rows. The actual percentage or number of rows the query optimizer samples might not match the percentage or number specified. For example, the query optimizer scans all rows on a data page.
@@ -161,6 +183,8 @@ SAMPLE is useful for special cases in which the query plan, based on default sam
 SAMPLE cannot be used with the FULLSCAN option. When neither SAMPLE nor FULLSCAN is specified, the query optimizer uses sampled data and computes the sample size by default.
 
 We recommend against specifying `0 PERCENT` or `0 ROWS`. When `0 PERCENT` or `0 ROWS` is specified, the statistics object is created, but does not contain statistics data.
+
+In [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)], only single-column FULLSCAN and single-column SAMPLE-based statistics are supported. When no option is included, FULLSCAN statistics are created.
 
 #### PERSIST_SAMPLE_PERCENT = { ON | OFF }  
 When **ON**, the statistics will retain the creation sampling percentage for subsequent updates that do not explicitly specify a sampling percentage. When **OFF**, statistics sampling percentage will get reset to default sampling in subsequent updates that do not explicitly specify a sampling percentage. The default is **OFF**.
@@ -375,6 +399,7 @@ FROM sys.stats;
 ## Next steps
 
 - [Statistics](../../relational-databases/statistics/statistics.md)
+- [Statistics in Microsoft Fabric](/fabric/data-warehouse/statistics)
 - [UPDATE STATISTICS (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md)
 - [sp_updatestats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)
 - [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)

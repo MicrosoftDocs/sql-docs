@@ -34,10 +34,10 @@ helpviewer_keywords:
   - "WHERE clause, UPDATE statement"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # UPDATE (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricdw.md)]
 
   Changes existing data in a table or view in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. For examples, see [Examples](#UpdateExamples).  
   
@@ -95,7 +95,7 @@ UPDATE
 ```  
   
 ```syntaxsql 
--- Syntax for Azure Synapse Analytics
+-- Syntax for Azure Synapse Analytics and Microsoft Fabric
 
 [ WITH <common_table_expression> [ ,...n ] ]
 UPDATE [ database_name . [ schema_name ] . | schema_name . ] table_name
@@ -408,7 +408,9 @@ To achieve the same functionality of **\.WRITE** with other character or binary 
  UPDATE statements are allowed in the body of user-defined functions only if the table being modified is a table variable.  
   
  When an `INSTEAD OF` trigger is defined on UPDATE actions against a table, the trigger is running instead of the UPDATE statement. Earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] only support AFTER triggers defined on UPDATE and other data modification statements. The FROM clause cannot be specified in an UPDATE statement that references, either directly or indirectly, a view with an `INSTEAD OF` trigger defined on it. For more information about INSTEAD OF triggers, see [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
-  
+
+ Currently, the FROM clause cannot be specified in an UPDATE statement on [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)]. Single-table UPDATE statements are supported.
+
 ## Limitations and restrictions  
  The FROM clause cannot be specified in an UPDATE statement that references, either directly or indirectly, a view that has an `INSTEAD OF` trigger defined on it. For more information about `INSTEAD OF` triggers, see [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
@@ -489,16 +491,16 @@ ID     Value
 |Category|Featured syntax elements|  
 |--------------|------------------------------|  
 |[Basic Syntax](#BasicSyntax)|UPDATE|  
-|[Limiting the Rows that Are Updated](#LimitingValues)|WHERE • TOP • WITH common table expression • WHERE CURRENT OF|  
-|[Setting Column Values](#ColumnValues)|computed values • compound operators • default values • subqueries|  
-|[Specifying Target Objects Other than Standard Tables](#TargetObjects)|views • table variables • table aliases|  
+|[Limiting the Rows that Are Updated](#LimitingValues)|WHERE * TOP * WITH common table expression * WHERE CURRENT OF|  
+|[Setting Column Values](#ColumnValues)|computed values * compound operators * default values * subqueries|  
+|[Specifying Target Objects Other than Standard Tables](#TargetObjects)|views * table variables * table aliases|  
 |[Updating Data Based on Data From Other Tables](#OtherTables)|FROM|  
-|[Updating Rows in a Remote Table](#RemoteTables)|linked server • OPENQUERY • OPENDATASOURCE|  
-|[Updating Large Object Data Types](#LOBValues)|.WRITE • OPENROWSET|  
+|[Updating Rows in a Remote Table](#RemoteTables)|linked server * OPENQUERY * OPENDATASOURCE|  
+|[Updating Large Object Data Types](#LOBValues)|.WRITE * OPENROWSET|  
 |[Updating User-defined Types](#UDTs)|user-defined types|  
-|[Overriding the Default Behavior of the Query Optimizer by Using Hints](#TableHints)|table hints • query hints|  
+|[Overriding the Default Behavior of the Query Optimizer by Using Hints](#TableHints)|table hints * query hints|  
 |[Capturing the Results of the UPDATE Statement](#CaptureResults)|OUTPUT clause|  
-|[Using UPDATE in Other Statements](#Other)|Stored Procedures • TRY...CATCH|  
+|[Using UPDATE in Other Statements](#Other)|Stored Procedures * TRY...CATCH|  
   
 ###  <a name="BasicSyntax"></a> Basic syntax  
  Examples in this section demonstrate the basic functionality of the UPDATE statement using the minimum required syntax.  
@@ -1020,7 +1022,7 @@ OUTPUT inserted.BusinessEntityID,
       inserted.VacationHours,  
       inserted.ModifiedDate  
 INTO @MyTableVar
-	WHERE VacationHours < 10  
+    WHERE VacationHours < 10  
 --Display the result set of the table variable.  
 SELECT EmpID, OldVacationHours
 , NewVacationHours, ModifiedDate  
@@ -1030,7 +1032,7 @@ GO
 --Display the result set of the table.  
 SELECT BusinessEntityID, VacationHours, ModifiedDate, HireDate  
 FROM HumanResources.Employee
-	WHERE VacationHours < 10  
+    WHERE VacationHours < 10  
 GO  
 ```  
   

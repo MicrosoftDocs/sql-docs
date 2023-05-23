@@ -21,12 +21,12 @@ helpviewer_keywords:
   - "permissions [SQL Server], granting"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 
 # GRANT (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
   Grants permissions on a securable to a principal.  The general concept is to GRANT \<some permission> ON \<some object> TO \<some user, login, or group>. For a general discussion of permissions, see [Permissions &#40;Database Engine&#41;](../../relational-databases/security/permissions-database-engine.md).  
   
@@ -45,7 +45,7 @@ GRANT { ALL [ PRIVILEGES ] }
 ```  
   
 ```syntaxsql
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse and Microsoft Fabric
   
 GRANT
     <permission> [ ,...n ]  
@@ -129,6 +129,8 @@ Database-level permissions are granted within the scope of the specified databas
 > A table-level DENY does not take precedence over a column-level GRANT. This inconsistency in the permissions hierarchy has been preserved for the sake of backward compatibility. It will be removed in a future release.  
 
 The sp_helprotect system stored procedure reports permissions on a database-level securable.  
+
+In [!INCLUDE [fabric](../../includes/fabric.md)], CREATE USER cannot be explicitly executed currently. When GRANT or DENY is executed, the user will be created automatically.
 
 ## WITH GRANT OPTION
 

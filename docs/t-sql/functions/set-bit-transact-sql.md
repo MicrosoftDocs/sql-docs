@@ -17,10 +17,10 @@ helpviewer_keywords:
   - "bit shifting [SQL Server], set bit"
 dev_langs:
   - "TSQL"
-monikerRange: ">= sql-server-ver16 || >= sql-server-linux-ver16"
+monikerRange: ">= sql-server-ver16 || >= sql-server-linux-ver16 || = azuresqldb-mi-current ||= azuresqldb-current || =fabric"
 ---
 # SET_BIT (Transact SQL)
-[!INCLUDE [SQL Server 2022, SQL Database, SQL Managed Instance](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
+[!INCLUDE [SQL Server 2022, SQL Database, SQL Managed Instance FabricSE FabricDW](../../includes/applies-to-version/sqlserver2022-asdb-asmi-fabricse-fabricdw.md)]
 
 SET_BIT returns *expression_value* offset by the bit defined by *bit_offset*. The bit value defaults to 1, or is set by *bit_value*.
 

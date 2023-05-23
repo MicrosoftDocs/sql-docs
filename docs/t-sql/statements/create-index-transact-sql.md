@@ -655,6 +655,8 @@ A clustered index can be built on a table variable when a Primary Key is created
 
 Indexes support extended properties.
 
+`CREATE INDEX` is not supported in [!INCLUDE [fabric](../../includes/fabric.md)].
+
 ## Clustered indexes
 
 Creating a clustered index on a table (heap) or dropping and re-creating an existing clustered index requires additional workspace to be available in the database to accommodate data sorting and a temporary copy of the original table or existing clustered index data. For more information about clustered indexes, see [Create Clustered Indexes](../../relational-databases/indexes/create-clustered-indexes.md) and the [SQL Server Index Architecture and Design Guide](../../relational-databases/sql-server-index-design-guide.md).

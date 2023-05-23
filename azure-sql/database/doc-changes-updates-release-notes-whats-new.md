@@ -5,7 +5,7 @@ description: Learn about the new features and documentation improvements for Azu
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 05/03/2023
+ms.date: 05/21/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -39,6 +39,7 @@ The following table lists the features of Azure SQL Database that are currently 
 | [Elastic jobs](elastic-jobs-overview.md) | The elastic jobs feature is the SQL Server Agent replacement for Azure SQL Database as a PaaS offering.  |
 | [Elastic queries](elastic-query-overview.md) | The elastic queries feature allows for cross-database queries in Azure SQL Database. |
 | [Elastic transactions](elastic-transactions-overview.md) | Elastic transactions allow you to execute transactions distributed among cloud databases in Azure SQL Database. |
+| [Hyperscale elastic pools](hyperscale-elastic-pool-overview.md) | Manage and scale multiple Hyperscale databases in Azure SQL Database by using Hyperscale elastic pools. | 
 | [Hyperscale long-term retention](long-term-retention-overview.md) | Save your Hyperscale database backups for up to 10 years with long-term retention (LTR).  | 
 | [Hyperscale RA-GZRS](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy) | Store your Hyperscale database backups on read access geo-zone-redundancy (RA-GZRS) storage. |
 | [Hyperscale premium-series and premium-series memory optimized hardware](service-tier-hyperscale.md#compute-resources) | Premium-series and premium-series memory optimized hardware is now available for Hyperscale databases.|
@@ -86,12 +87,15 @@ The following table lists the new generally available (GA) features of Azure SQL
 
 Learn about significant changes to the Azure SQL Database documentation. For previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md). 
 
+
 ### May 2023
 
 | Changes | Details |
 | --- | --- |
 | **Cross-tenant CMK with TDE GA** |  Cross-tenant CMK with TDE allows SQL databases to be in a separate tenant than the tenant holding the Azure Key Vault resource used to encrypt the databases. This feature is now generally available. To learn more, review [Cross-tenant CMK with TDE](transparent-data-encryption-byok-cross-tenant.md). |
+| **Hyperscale elastic pools preview**| Manage and scale multiple Hyperscale databases in Azure SQL Database by using Hyperscale elastic pools.  This feature is now in preview. See [Hyperscale elastic pools](hyperscale-elastic-pool-overview.md) to learn more. | 
 | **Optimized locking available in Hyperscale** | Optimized locking is a new Database Engine capability that offers an improved locking mechanism that reduces lock memory consumption and blocking amongst concurrent transactions. This fundamentally improves concurrency and lowers lock memory. Optimized locking is now available in all DTU and vCore service tiers, including provisioned and serverless. For more information, see [Optimized locking](/sql/relational-databases/performance/optimized-locking). |
+
 
 ### April 2023
 
@@ -105,7 +109,7 @@ Learn about significant changes to the Azure SQL Database documentation. For pre
 | --- | --- |
 | **Approximate Percentile GA** | Quickly compute percentiles for a large dataset with acceptable rank-based error bounds to help make rapid decisions by using approximate percentile aggregate. This feature is generally available now. Review  [Approximate percentile](/sql/t-sql/functions/approx-percentile-cont-transact-sql) to learn more.  | 
 | **Shrink Database / Shrink File with Low Priority GA** | This feature solves the concurrency issues that can arise from shrink database and shrink file commands, especially during active maintenance or on busy OLTP environments. In WAIT_AT_LOW_PRIORITY mode, necessary tasks to shrink database files can be completed without negatively affecting application query performance. Review [Shrink Database](/sql/t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql?view=azuresqldb-current&preserve-view=true) and [Shrink File with Low Priority](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql?view=azuresqldb-current&preserve-view=true). |
-| **Database level CMK with TDE preview** | Previously, TDE with CMK is set at the server level, and is inherited by all encrypted databases associated with that server. Database level CMK allows setting the TDE protector as a customer-managed key individually for each database within the server. This feature is currently in preview. Review [Transparent data encryption (TDE) with customer-managed keys at the database level](transparent-data-encryption-byok-database-level-overview.md) to learn more. |
+| **Database level CMK with TDE preview** | Previously, TDE with CMK was set at the server level, and was inherited by all encrypted databases associated with that server. Database level CMK allows setting the TDE protector as a customer-managed key individually for each database within the server. This feature is currently in preview. Review [Transparent data encryption (TDE) with customer-managed keys at the database level](transparent-data-encryption-byok-database-level-overview.md) to learn more. |
 
 ### February 2023
 

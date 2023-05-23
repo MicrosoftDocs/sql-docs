@@ -8,7 +8,7 @@ ms.date: 04/06/2022
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: overview
-ms.custom: sqldbrb=1
+ms.custom: sqldbrb=1, build-2023, build-2023-dataai
 ---
 
 # What is Azure SQL Managed Instance?

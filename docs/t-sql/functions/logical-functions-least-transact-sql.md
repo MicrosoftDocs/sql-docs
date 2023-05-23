@@ -15,11 +15,11 @@ helpviewer_keywords:
   - "LEAST function"
 dev_langs:
   - "TSQL"
-monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest"
+monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest||=fabric"
 ---
 # Logical functions - LEAST (Transact-SQL)
 
-[!INCLUDE [sqlserver-2022-asdb-asmi-asa](../../includes/applies-to-version/sqlserver2022-asdb-asmi-asa.md)]
+[!INCLUDE [sqlserver-2022-asdb-asmi-asa-fabricse-fabricdw](../../includes/applies-to-version/sqlserver2022-asdb-asmi-asa-fabricse-fabricdw.md)]
 
 This function returns the minimum value from a list of one or more expressions.
 

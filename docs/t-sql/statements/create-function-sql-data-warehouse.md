@@ -1,6 +1,6 @@
 ---
-title: "CREATE FUNCTION (Azure Synapse Analytics)"
-description: CREATE FUNCTION (Azure Synapse Analytics)
+title: "CREATE FUNCTION (Azure Synapse Analytics and Microsoft Fabric)"
+description: CREATE FUNCTION (Azure Synapse Analytics and Microsoft Fabric)
 author: VanMSFT
 ms.author: vanto
 ms.date: "09/17/2020"
@@ -9,12 +9,18 @@ ms.subservice: t-sql
 ms.topic: reference
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||=fabric"
 ---
-# CREATE FUNCTION (Azure Synapse Analytics)
-[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
+# CREATE FUNCTION (Azure Synapse Analytics and Microsoft Fabric)
+[!INCLUDE[applies-to-version/asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/asa-pdw-fabricse-fabricdw.md)]
 
-  Creates a user-defined function in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. A user-defined function is a [!INCLUDE[tsql](../../includes/tsql-md.md)] routine that accepts parameters, performs an action, such as a complex calculation, and returns the result of that action as a value. In [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], the return value must be a scalar (single) value. In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], CREATE FUNCTION can return a table by using the syntax for inline table-valued functions (preview) or it can return a single value by using the syntax for scalar functions. Use this statement to create a reusable routine that can be used in these ways:  
+  Creates a user-defined function in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], or [!INCLUDE [fabric](../../includes/fabric.md)]. A user-defined function is a [!INCLUDE[tsql](../../includes/tsql-md.md)] routine that accepts parameters, performs an action, such as a complex calculation, and returns the result of that action as a value. 
+
+- In [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], the return value must be a scalar (single) value. 
+- In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], CREATE FUNCTION can return a table by using the syntax for inline table-valued functions (preview) or it can return a single value by using the syntax for scalar functions. 
+- In [!INCLUDE [fabric](../../includes/fabric.md)] and serverless SQL pools in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], CREATE FUNCTION can create inline table-value functions but not scalar functions. User-defined table-valued functions (TVFs) return a table data type.
+
+  Use this statement to create a reusable routine that can be used in these ways:  
   
 -   In [!INCLUDE[tsql](../../includes/tsql-md.md)] statements such as SELECT  
   
@@ -34,7 +40,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
   
 ```syntaxsql
 -- Transact-SQL Scalar Function Syntax  (in dedicated pools in Azure Synapse Analytics and Parallel Data Warehouse)
--- Not available in the serverless SQL pools in Azure Synapse Analytics
+-- Not available in the serverless SQL pools in Azure Synapse Analytics or Microsoft Fabric
 CREATE FUNCTION [ schema_name. ] function_name   
 ( [ { @parameter_name [ AS ] parameter_data_type   
     [ = default ] }   
@@ -60,7 +66,7 @@ RETURNS return_data_type
 ```syntaxsql
 -- Transact-SQL Inline Table-Valued Function Syntax
 -- Preview in dedicated SQL pools in Azure Synapse Analytics
--- Available in the serverless SQL pools in Azure Synapse Analytics
+-- Available in the serverless SQL pools in Azure Synapse Analytics and Microsoft Fabric
 CREATE FUNCTION [ schema_name. ] function_name
 ( [ { @parameter_name [ AS ] parameter_data_type
     [ = default ] }
@@ -114,10 +120,10 @@ RETURNS TABLE
  *scalar_expression*  
  Specifies the scalar value that the scalar function returns.  
 
- *select_stmt* **Applies to:** Azure Synapse Analytics  
- Is the single SELECT statement that defines the return value of an inline table-valued function (preview).
+ *select_stmt* 
+ Is the single SELECT statement that defines the return value of an inline table-valued function. For an inline table-valued function, there is no function body; the table is the result set of a single SELECT statement. 
 
- TABLE **Applies to:** Azure Synapse Analytics  
+ TABLE 
  Specifies that the return value of the table-valued function (TVF) is a table. Only constants and @*local_variables* can be passed to TVFs.
 
  In inline TVFs (preview), the TABLE return value is defined through a single SELECT statement. Inline functions do not have associated return variables.
@@ -145,7 +151,7 @@ RETURNS TABLE
   
 -   The user who executed the CREATE FUNCTION statement has REFERENCES permission on the database objects that the function references.  
   
- To remove SCHEMABINDING use ALTER  
+ To remove SCHEMABINDING, use ALTER.
   
  RETURNS NULL ON NULL INPUT | **CALLED ON NULL INPUT**  
  Specifies the **OnNULLCall** attribute of a scalar-valued function. If not specified, CALLED ON NULL INPUT is implied by default. This means that the function body executes even if NULL is passed as an argument.  
@@ -170,6 +176,8 @@ In an inline table-valued function (preview), only a single select statement is 
  User-defined functions cannot be used to perform actions that modify the database state.  
   
  User-defined functions can be nested; that is, one user-defined function can call another. The nesting level is incremented when the called function starts execution, and decremented when the called function finishes execution. User-defined functions can be nested up to 32 levels. Exceeding the maximum levels of nesting causes the whole calling function chain to fail.   
+
+ Objects, including functions, cannot be created in the `master` database of your serverless SQL pool in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
   
 ## Metadata  
  This section lists the system catalog views that you can use to return metadata about user-defined functions.  
@@ -213,7 +221,7 @@ SELECT dbo.ConvertInput(15) AS 'ConvertedValue';
 ```  
 
 > [!NOTE]  
->  Scalar functions are not available in the serverless SQL pools.
+>  Scalar functions are not available in the serverless SQL pools or [!INCLUDE [fabric](../../includes/fabric.md)].
 
 ## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]  
 
@@ -226,16 +234,16 @@ RETURNS TABLE
 AS
 RETURN
 (
-	SELECT 
-		sm.object_id AS 'Object Id',
-		o.create_date AS 'Date Created',
-		OBJECT_NAME(sm.object_id) AS 'Name',
-		o.type AS 'Type',
-		o.type_desc AS 'Type Description', 
-		sm.definition AS 'Module Description'
-	FROM sys.sql_modules AS sm  
-	JOIN sys.objects AS o ON sm.object_id = o.object_id
-	WHERE o.type like '%' + @objectType + '%'
+    SELECT 
+        sm.object_id AS 'Object Id',
+        o.create_date AS 'Date Created',
+        OBJECT_NAME(sm.object_id) AS 'Name',
+        o.type AS 'Type',
+        o.type_desc AS 'Type Description', 
+        sm.definition AS 'Module Description'
+    FROM sys.sql_modules AS sm  
+    JOIN sys.objects AS o ON sm.object_id = o.object_id
+    WHERE o.type like '%' + @objectType + '%'
 );
 GO
 ```
@@ -260,9 +268,6 @@ GO
 > [!NOTE]  
 >  Inline table-value functions are available in the serverless SQL pools, but in preview in the dedicated SQL pools.
 
-## See also  
- [ALTER FUNCTION (SQL Server PDW)](/previous-versions/sql/)   
- [DROP FUNCTION (SQL Server PDW)](/previous-versions/sql/)  
-  
-  
+## Next steps
 
+- [Create user-defined functions (database engine)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)

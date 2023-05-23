@@ -28,11 +28,10 @@ helpviewer_keywords:
   - "inserting data"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # INSERT (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricdw.md)]
 
 Adds one or more rows to a table or a view in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For examples, see [Examples](#InsertExamples).  
   
@@ -111,7 +110,7 @@ INSERT
 ```  
   
 ```syntaxsql
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse and Microsoft Fabric
 
 INSERT [INTO] { database_name.schema_name.table_name | schema_name.table_name | table_name }
     [ ( column_name [ ,...n ] ) ]  
@@ -296,6 +295,7 @@ OUTPUT Clause
 For information specific to inserting data into SQL graph tables, see [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md). 
 
 ## Best Practices  
+
  Use the @@ROWCOUNT function to return the number of inserted rows to the client application. For more information, see [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md).  
   
 ### Best Practices for Bulk Importing Data  
@@ -322,6 +322,12 @@ Parallelism for the statement above has the following requirements, which are si
 -   The `TABLOCK` hint is specified for the target table.
 
 For scenarios where requirements for minimal logging and parallel insert are met, both improvements will work together to ensure maximum throughput of your data load operations.
+
+::: moniker range="=fabric"
+
+For more information on using INSERT on your [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)], see [Ingest data into your [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] using TSQL](/fabric/data-warehouse/ingest-data-tsql).
+
+::: moniker-end
 
 > [!NOTE]
 > Inserts into local temporary tables (identified by the # prefix) and global temporary tables (identified by ## prefixes) are also enabled for parallelism using the TABLOCK hint.
@@ -418,12 +424,12 @@ In Parallel Data Warehouse, the ORDER BY clause is invalid in VIEWS, CREATE TABL
   
 |Category|Featured syntax elements|  
 |--------------|------------------------------|  
-|[Basic syntax](#BasicSyntax)|INSERT • table value constructor|  
-|[Handling column values](#ColumnValues)|IDENTITY • NEWID • default values • user-defined types|  
-|[Inserting data from other tables](#OtherTables)|INSERT...SELECT • INSERT...EXECUTE • WITH common table expression • TOP • OFFSET FETCH|  
-|[Specifying target objects other than standard tables](#TargetObjects)|Views • table variables|  
-|[Inserting rows into a remote table](#RemoteTables)|Linked server • OPENQUERY rowset function • OPENDATASOURCE rowset function|  
-|[Bulk loading data from tables or data files](#BulkLoad)|INSERT...SELECT • OPENROWSET function|  
+|[Basic syntax](#BasicSyntax)|INSERT * table value constructor|  
+|[Handling column values](#ColumnValues)|IDENTITY * NEWID * default values * user-defined types|  
+|[Inserting data from other tables](#OtherTables)|INSERT...SELECT * INSERT...EXECUTE * WITH common table expression * TOP * OFFSET FETCH|  
+|[Specifying target objects other than standard tables](#TargetObjects)|Views * table variables|  
+|[Inserting rows into a remote table](#RemoteTables)|Linked server * OPENQUERY rowset function * OPENDATASOURCE rowset function|  
+|[Bulk loading data from tables or data files](#BulkLoad)|INSERT...SELECT * OPENROWSET function|  
 |[Overriding the default behavior of the query optimizer by using hints](#TableHints)|Table hints|  
 |[Capturing the results of the INSERT statement](#CaptureResults)|OUTPUT clause|  
   

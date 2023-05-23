@@ -15,11 +15,12 @@ helpviewer_keywords:
   - "AT TIME ZONE function"
 dev_langs:
   - "TSQL"
-monikerRange: "= azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017"
+monikerRange: "= azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017 ||=fabric"
 ---
 # AT TIME ZONE (Transact-SQL)
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-fabricse-fabricdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-fabricse-fabricdw.md)]
+
 
 Converts an *inputdate* to the corresponding *datetimeoffset* value in the target time zone. When *inputdate* is provided without offset information, the function applies the offset of the time zone assuming that *inputdate* is in the target time zone. If *inputdate* is provided as a *datetimeoffset* value, then `AT TIME ZONE` clause converts it into the target time zone using the time zone conversion rules.
 
@@ -117,6 +118,8 @@ The **datetimeoffset** value in the target time zone.
     ```
 
 Since some information (such as timezone rules) is maintained outside of [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] and are subject to occasional change, the `AT TIME ZONE` function is classed as nondeterministic.
+
+While **datetimeoffset** is not supported in data warehousing in [!INCLUDE [fabric](../../includes/fabric.md)], `AT TIME ZONE` can still be used with **datetime2**, as in the following example.
 
 ## Examples
 

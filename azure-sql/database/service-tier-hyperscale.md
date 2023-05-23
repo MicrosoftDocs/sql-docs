@@ -49,8 +49,8 @@ For more information about the compute sizes for the Hyperscale service tier, se
 
 The Hyperscale service tier is intended for all customers who require higher performance and availability, fast backup and restore, and/or fast storage and compute scalability. This includes customers who are moving to the cloud to modernize their applications as well as customers who are already using other service tiers in Azure SQL Database. The Hyperscale service tier supports a broad range of database workloads, from pure OLTP to pure analytics. It is optimized for OLTP and hybrid transaction and analytical processing (HTAP) workloads.
 
-> [!IMPORTANT]
-> Elastic pools do not support the Hyperscale service tier.
+> [!NOTE]
+> [Elastic pools for Hyperscale](./hyperscale-elastic-pool-overview.md) is currently in preview.
 
 ## Hyperscale pricing model
 

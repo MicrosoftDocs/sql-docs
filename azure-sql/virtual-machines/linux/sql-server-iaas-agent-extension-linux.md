@@ -1,10 +1,10 @@
 ---
 title: SQL Server IaaS Agent extension for Linux
 description: This article describes how the SQL Server IaaS Agent extension helps automate management specific administration tasks of SQL Server on Linux Azure VMs.
-author: adbadram
-ms.author: adbadram
+author: bluefooted
+ms.author: pamela
 ms.reviewer: mathoma
-ms.date: 10/26/2021
+ms.date: 05/22/2023
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: conceptual
@@ -51,7 +51,7 @@ The SQL Server IaaS Agent extension enables integration with the Azure portal an
 
 [Register](sql-iaas-agent-extension-register-vm-linux.md) your SQL Server VM with the SQL Server IaaS Agent extension to create the **SQL virtual machine** _resource_ within your subscription, which is a _separate_ resource from the virtual machine resource. Unregistering your SQL Server VM from the extension will remove the **SQL virtual machine** _resource_ from your subscription but will not drop the actual virtual machine.
 
-The SQL Server IaaS Agent extension for Linux is currently only available in lightweight mode. 
+The SQL Server IaaS Agent extension for Linux is currently only available with limited functionality. 
 
 
 ## Verify extension status

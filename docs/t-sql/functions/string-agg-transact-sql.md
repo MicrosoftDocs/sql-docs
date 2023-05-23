@@ -14,13 +14,11 @@ helpviewer_keywords:
   - "STRING_AGG function"
 dev_langs:
   - "TSQL"
-monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2017 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2017 || >= sql-server-linux-2017 || = azuresqldb-mi-current||=fabric"
 ---
 # STRING_AGG (Transact-SQL)
 
-<!--[!INCLUDE [sqlserver2017-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asa.md)]-->
-
-[!INCLUDE [sqlserver2017-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asa.md)]
+[!INCLUDE [sqlserver2017-asdb-asdbmi-asa-fabricse-fabricdw](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asa-fabricse-fabricdw.md)]
 
 Concatenates the values of string expressions and places separator values between them. The separator isn't added at the end of string. 
  

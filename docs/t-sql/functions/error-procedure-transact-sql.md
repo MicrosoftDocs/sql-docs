@@ -20,14 +20,14 @@ helpviewer_keywords:
   - "errors [SQL Server], trigger where occurred"
 dev_langs:
   - "TSQL"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current||=fabric"
 ---
 # ERROR_PROCEDURE (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]  
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]  
 
 This function returns the name of the stored procedure or trigger where an error occurs, if that error caused the CATCH block of a TRY...CATCH construct to execute. 
-- SQL Server 2017 thru [current version](../../sql-server/what-s-new-in-sql-server-2019.md) returns schema_name.stored_procedure_name
-- SQL Server 2016 returns stored_procedure_name
+- SQL Server 2017 thru [current version](../../sql-server/what-s-new-in-sql-server-2019.md) returns `schema_name.stored_procedure_name`
+- SQL Server 2016 returns `stored_procedure_name`
 
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

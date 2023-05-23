@@ -20,9 +20,11 @@ helpviewer_keywords:
   - "user IDs [SQL Server]"
 dev_langs:
   - "TSQL"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric" 
 ---
 # System Compatibility Views (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+[!INCLUDE[sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
   Many of the system tables from earlier releases of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are now implemented as a set of views. These views are known as compatibility views, and they are meant for backward compatibility only. The compatibility views expose the same metadata that was available in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. However, the compatibility views do not expose any of the metadata related to features that are introduced in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later. Therefore, when you use new features, such as [!INCLUDE[ssSB](../../includes/sssb-md.md)] or partitioning, you must switch to using the catalog views.  
   

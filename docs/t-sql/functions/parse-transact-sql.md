@@ -14,11 +14,12 @@ helpviewer_keywords:
   - "PARSE function"
 dev_langs:
   - "TSQL"
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current ||=fabric"
 ---
 
 # PARSE (Transact-SQL)
 
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw.md)]
 
 Returns the result of an expression, translated to the requested data type in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -146,7 +147,7 @@ Result
 ### B. PARSE with currency symbol  
   
 ```sql  
-SELECT PARSE('€345,98' AS money USING 'de-DE') AS Result;  
+SELECT PARSE('&euro;345,98' AS money USING 'de-DE') AS Result;  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

@@ -35,11 +35,11 @@ helpviewer_keywords:
   - "FETCH clause"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # SELECT - ORDER BY Clause (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
   Sorts data returned by a query in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use this clause to:  
   
@@ -195,11 +195,11 @@ ORDER BY SchemaName + ''; -- wrong
 |Category|Featured syntax elements|  
 |--------------|------------------------------|  
 |[Basic syntax](#BasicSyntax)|ORDER BY|  
-|[Specifying ascending and descending order](#SortOrder)|DESC • ASC|  
+|[Specifying ascending and descending order](#SortOrder)|DESC * ASC|  
 |[Specifying a collation](#Collation)|COLLATE|  
 |[Specifying a conditional order](#Case)|CASE expression|  
 |[Using ORDER BY in a ranking function](#Rank)|Ranking functions|  
-|[Limiting the number of rows returned](#Offset)|OFFSET • FETCH|  
+|[Limiting the number of rows returned](#Offset)|OFFSET * FETCH|  
 |[Using ORDER BY with UNION, EXCEPT, and INTERSECT](#Union)|UNION|  
   
 ###  <a name="BasicSyntax"></a> Basic syntax  

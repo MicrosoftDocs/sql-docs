@@ -16,7 +16,7 @@ This page provides video content for learning about Transact-SQL (T-SQL).
 
 In this video series, you learn the basics of Transact-SQL. You see how to add, edit, delete, and query data in a relational database. You follow along with Marisa Mathews and Buck Woody as they create a database together for a real-world application from start to finish using SQL Server. After completing the video series and the accompanying Microsoft Learn modules, you have the foundational knowledge to work with Transact-SQL in your applications.
 
-## RDBMS and Setup
+## RDBMS and setup
 
 In this video, you learn why a relational database system and the Transact-SQL language can help you solve real-world business problems and how to set one up.
 
@@ -36,9 +36,9 @@ In this video, you get an introduction to relational databases, the SQL language
 
 Microsoft Learn is a great way to continue learning at your own pace. For more information, visit - [QuickStart: Create a single database - Azure SQL Database](../../azure-sql/database/single-database-create-quickstart.md).
 
-## Sort and Filter Results in Transact-SQL
+## Sort and filter results in Transact-SQL
 
-This video teaches you how to use Transact-SQL to sort and filter results.
+in this video, you learn how to use Transact-SQL to sort and filter results.
 
 &nbsp;
 
@@ -52,7 +52,7 @@ In this video, you learn how to use Transact-SQL to join together multiple table
 
 > [!VIDEO https://learn-video.azurefd.net/vod/player?show=programming-databases-with-t-sql-for-beginners&ep=combining-multiple-tables-with-joins-in-transact-sql-4-of-7-programming-databases-with-t-sql-for-beginners]
 
-## Write Subqueries in Transact-SQL
+## Write subqueries in Transact-SQL
 
 In this video, you learn how to use Transact-SQL to use subqueries to combine multiple `SELECT` statements and compose nested queries.
 
@@ -61,7 +61,7 @@ In this video, you learn how to use Transact-SQL to use subqueries to combine mu
 > [!VIDEO https://learn-video.azurefd.net/vod/player?show=programming-databases-with-t-sql-for-beginners&ep=write-subqueries-in-transact-sql-5-of-7-programming-databases-with-t-sql-for-beginners]
 [What are the SQL database functions?](functions/functions.md)
 
-## Use Functions and GROUP BY in Transact-SQL
+## Use functions and GROUP BY in Transact-SQL
 
 In this video, you learn how to use Transact-SQL to use functions in Transact-SQL and how to group aggregated results.
 
@@ -69,7 +69,7 @@ In this video, you learn how to use Transact-SQL to use functions in Transact-SQ
 
 > [!VIDEO https://learn-video.azurefd.net/vod/player?show=programming-databases-with-t-sql-for-beginners&ep=use-functions-and-group-by-in-transact-sql-6-of-7-programming-databases-with-t-sql-for-beginners]
 
-## Modify Data with Transact-SQL
+## Modify data with Transact-SQL
 
 In this video, you learn how to use Transact-SQL to insert, update, and delete data in a database.
 

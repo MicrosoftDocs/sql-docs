@@ -179,7 +179,12 @@ sections:
           What is the maximum number of instances on a VM?
         answer: |
              SQL Server 2012 to SQL Server 2019 can support [50 instances](/sql/sql-server/editions-and-components-of-sql-server-version-15#RDBMSSP) on a stand-alone server. This is the same limit regardless of in Azure on-premises. See [best practices](./performance-guidelines-best-practices-checklist.md) to learn how to better prepare your environment. 
-          
+      
+      - question: |
+          Microsoft Visual C++ Redistributable installed with SQL Server is flagged as end of life or obsolete
+        answer: |
+             When you provision SQL Server on Azure VM, the SQL Server setup program installs a Microsoft Visual C++ Redistributable which is required for SQL Server components to run properly. Your security software may send alerts about end of life (EOL) or obsolete software components due to the version of the Microsoft Visual C++ Redistributable components that was installed by SQL Server, particularly for older versions of SQL Server (SQL Server 2016 and earlier). According to the support lifecycle policy, Microsoft Visual C++ Redistributable components are supported [as long as the product that installed them is supported](/troubleshoot/sql/database-engine/install/windows/visual-c-redistributable-installed-sql-server-flagged-end-of-life-obsolete). As long as your installed version of SQL Server is still supported, you can safely ignore this warning. We recommend not removing VC++ as it may break some SQL Server functionality.
+
       - question: |
           Can I uninstall the default instance of SQL Server?
         answer: |

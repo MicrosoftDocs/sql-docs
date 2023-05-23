@@ -4,7 +4,7 @@ description: "CREATE EXTERNAL TABLE AS SELECT (CETAS) creates an external table 
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest, wiassaf, mlandzic, nzagorac
-ms.date: 04/25/2023
+ms.date: 05/18/2023
 ms.service: sql
 ms.topic: reference
 f1_keywords:
@@ -502,8 +502,7 @@ You can use CREATE EXTERNAL TABLE AS SELECT (CETAS) to complete the following ta
 
 - Create an external table on top of Parquet or CSV files in Azure Blob storage or Azure Data Lake Storage (ADLS) Gen2.
 - Export, in parallel, the results of a T-SQL SELECT statement into the created external table.
-
-CREATE EXTERNAL TABLE AS SELECT (CETAS) is currently a preview feature for Azure SQL Managed Instance. For more data virtualization capabilities of [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)], see [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview).
+- For more data virtualization capabilities of [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)], see [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview).
 
 > [!NOTE]
 > This content applies to [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)] only. For other platforms, choose the appropriate version of [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md?view=azure-sqldw-latest&preserve-view=true) from the dropdrown selector.

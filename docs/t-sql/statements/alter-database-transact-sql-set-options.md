@@ -4,7 +4,7 @@ description: Learn how to set database options such as Automatic tuning, encrypt
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 11/04/2022
+ms.date: 05/21/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -2226,10 +2226,10 @@ Determines the frequency at which data written to the Query Store is persisted t
 
 #### MAX_STORAGE_SIZE_MB
 
-Determines the space allocated to the Query Store. MAX_STORAGE_SIZE_MB is type **bigint**. For [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium edition, default is **1000 MB** and for [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic edition, default is **10 MB**.
+Determines the space allocated to the Query Store. MAX_STORAGE_SIZE_MB is type **bigint**.
 
 > [!NOTE]  
-> `MAX_STORAGE_SIZE_MB` setting limit is 10,240 MB on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+> In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the default `MAX_STORAGE_SIZE_MB` value differs by service tier, as follows: Premium, Business Critical, and Hyperscale: **1,024 MB**; Standard and General Purpose: **100 MB**; Basic: **10 MB** The maximum allowed `MAX_STORAGE_SIZE_MB` value is **10,240 MB**.
 
 > [!NOTE]  
 > `MAX_STORAGE_SIZE_MB` limit isn't strictly enforced. Storage size is checked only when Query Store writes data to disk. This interval is set by the `DATA_FLUSH_INTERVAL_SECONDS` option or the [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] Query Store dialog option **Data Flush Interval**. The interval default value is 900 seconds (or 15 minutes).

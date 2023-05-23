@@ -3,8 +3,8 @@ title: "Ledger considerations and limitations"
 description: Limitations and considerations for the ledger feature
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: kendralittle, mathoma
-ms.date: "05/24/2022"
+ms.reviewer: mathoma
+ms.date: 05/23/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual
@@ -13,9 +13,12 @@ monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ve
 
 # Ledger considerations and limitations
 
-[!INCLUDE [SQL Server 2022 Azure SQL Database](../../../includes/applies-to-version/sqlserver2022-asdb.md)]
+[!INCLUDE [SQL Server 2022 Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
 There are some considerations and limitations to be aware of when working with ledger tables due to the nature of system-versioning and immutable data.
+
+> [!NOTE]
+> Ledger in Azure SQL Managed Instance is currently in public preview.
 
 ## General considerations and limitations
 
@@ -46,6 +49,8 @@ Consider the following when working with ledger.
 - Change data capture isn't supported for ledger tables.
 - Transactional replication isn't supported for ledger tables.
 - Azure Synapse Link is supported but only for the ledger table, not the history table.
+- The Managed Instance link feature is not supported.
+- Change the digest path manually after a native restore of a database backup to an Azure Managed Instance.
 
 ### Unsupported data types
 

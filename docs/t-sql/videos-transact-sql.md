@@ -1,5 +1,5 @@
 ---
-title: Programming Databases with T-SQL for Beginners videos
+title: Programming databases with T-SQL for beginners videos
 description: This page lists video content relevant for learning Transact-SQL (T-SQL).
 author: markingmyname
 ms.author: maghan
@@ -10,7 +10,7 @@ ms.topic: reference
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
-# Programming Databases with T-SQL for Beginners
+# Programming databases with T-SQL for beginners
 
 This page provides video content for learning about Transact-SQL (T-SQL).
 
@@ -34,12 +34,7 @@ In this video, you get an introduction to relational databases, the SQL language
 
 ## Sort and filter results in Transact-SQL
 
-<<<<<<< HEAD
-=======
-## Sort and filter results in Transact-SQL
-
->>>>>>> e8022b54266 (line 27 and 37)
-in this video, you learn how to use Transact-SQL to sort and filter results.
+In this video, you learn how to use Transact-SQL to sort and filter results.
 
 &nbsp;
 

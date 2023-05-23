@@ -4,7 +4,7 @@ description: "Generates the ledger digest, which is the hash of the last block i
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 05/03/2023
+ms.date: 05/23/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -14,7 +14,7 @@ monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ve
 ---
 # sys.sp_generate_database_ledger_digest (Transact-SQL)
 
-[!INCLUDE [SQL Server 2022 Azure SQL Database](../../includes/applies-to-version/sqlserver2022-asdb.md)]
+[!INCLUDE [SQL Server 2022 Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
 Generates the ledger digest, which is the hash of the last block in `sys.database_ledger_blocks`. If the last block is open (transactions have been grouped to the block but no final block hash has been generated), this stored procedure closes the block and generates the hash. Future transactions will then be assigned to the next block.
 

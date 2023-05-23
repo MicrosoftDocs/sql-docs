@@ -72,10 +72,37 @@ The following diagram illustrates the architecture of Azure Arc-enabled SQL Serv
 ## Feature availability by operating system
 
 [!INCLUDE [features-operating-systems](includes/features-operating-system.md)]
+
+## Feature availability by version
+
+| Feature | 2012 | 2014 | 2016 | 2017 | 2019 | 2022 |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| [Azure pay-as-you-go billing](manage-license-type.md) | No | Yes | Yes | Yes | Yes | Yes |
+| [Best practices assessment](assess.md) | Yes | Yes | Yes | Yes | Yes | Yes |
+| [Detailed database inventory](view-databases.md#inventory-databases) | Yes | Yes | Yes | Yes | Yes | Yes |
+| [Azure Active Directory authentication for SQL Server](../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md) | No | No | No | No | No | Yes |
+| [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-sql-usage) | Yes | Yes | Yes | Yes | Yes | Yes |
+| [Microsoft Purview: DevOps policies](/azure/purview/how-to-policies-devops-authoring-generic) | No | No | No | No | No | Yes |
+| [Microsoft Purview: data owner policies (preview)](/azure/purview/how-to-policies-data-owner-authoring-generic) | No | No | No | No | No | Yes |
+| [Automated backups](point-in-time-restore.md) | Yes | Yes | Yes | Yes | Yes | Yes |
+| [Automated patching](patch.md) | No | Yes | Yes | Yes | Yes | Yes | 
+
+## Feature availability by edition
+
+|Feature | Enterprise | Standard | Web | Express | Developer | Evaluation |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| [Azure pay-as-you-go billing](manage-license-type.md) | Yes | Yes | Yes | Yes | Yes | Yes |
+| [Best practices assessment](assess.md) | Yes | Yes | Yes | Yes | Yes | Yes |
+| [Detailed database inventory](view-databases.md#inventory-databases) | Yes | Yes | Yes | Yes | Yes | Yes |
+| [Azure Active Directory authentication](../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md) | Yes | Yes | Yes | Yes | Yes | Yes |
+| [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-sql-usage) | Yes | Yes | Yes | Yes </br>  [Express LocalDB is not supported.](/azure/purview/register-scan-on-premises-sql-server#supported-capabilities) | Yes | Yes |
+| [Microsoft Purview: Govern using DevOps and data owner policies](/azure/purview/tutorial-register-scan-on-premises-sql-server) | Yes | Yes | Yes | Yes | Yes | Yes |
+| [Automated backups](point-in-time-restore.md) | Yes | Yes | Yes | Yes | Yes | Yes |
+| [Automated patching](patch.md) | Yes | Yes | Yes | Yes | Yes | Yes |
+
 ## Supported Azure regions
 
 [!INCLUDE [azure-arc-data-regions](includes/azure-arc-data-regions.md)]
-
 
 ## Next steps
 

@@ -8,7 +8,7 @@ ms.date: 02/14/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: overview
-ms.custom: sqldbrb=3
+ms.custom: sqldbrb=3, build-2023, build-2023-dataai
 keywords:
   - "introduction to sql"
   - "intro to sql"

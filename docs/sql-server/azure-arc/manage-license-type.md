@@ -5,7 +5,7 @@ description: Explains how to manage SQL Server instance licenses. Also demonstra
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 03/22/2023
+ms.date: 05/15/2023
 ms.service: sql
 ms.topic: conceptual
 ---
@@ -59,7 +59,7 @@ License type is a configuration setting of Azure Extension for SQL Server that d
 
 The following license types are supported:
 
-| License type | Description  | Short form   |  
+| License type | Long description | Short description |  
 |---|---|---|
 | PAYG | Standard or Enterprise edition with pay-as-you-go billing through Microsoft Azure | Pay-as-you-go |
 | Paid | Standard or Enterprise edition license with Software Assurance or SQL Subscription  | License with software assurance |

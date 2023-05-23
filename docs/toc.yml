@@ -16896,6 +16896,10 @@ items:
         items:
         - name: ASCII
           href: t-sql/functions/ascii-transact-sql.md
+        - name: BASE64_DECODE
+          href: t-sql/functions/base64-decode-transact-sql.md
+        - name: BASE64_ENCODE
+          href: t-sql/functions/base64-encode-transact-sql.md
         - name: CHAR
           href: t-sql/functions/char-transact-sql.md
         - name: CHARINDEX
@@ -17781,8 +17785,8 @@ items:
         - name: FUNCTION
           displayName: CREATE FUNCTION
           href: t-sql/statements/create-function-transact-sql.md
-        - name: FUNCTION (Azure Synapse Analytics)
-          displayName: CREATE FUNCTION (Azure Synapse Analytics)
+        - name: FUNCTION (Synapse Analytics and Fabric)
+          displayName: CREATE FUNCTION (Synapse Analytics and Fabric)
           href: t-sql/statements/create-function-sql-data-warehouse.md
         - name: INDEX
           displayName: CREATE INDEX
@@ -17871,14 +17875,14 @@ items:
         - name: TABLE
           displayName: CREATE TABLE
           href: t-sql/statements/create-table-transact-sql.md
-        - name: TABLE (Azure Synapse Analytics)
-          displayName: CREATE TABLE (Azure Synapse Analytics)
+        - name: TABLE (Synapse Analytics and Fabric)
+          displayName: CREATE TABLE
           href: t-sql/statements/create-table-azure-sql-data-warehouse.md
         - name: TABLE (SQL Graph)
           displayName: CREATE TABLE (SQL Graph)
           href: t-sql/statements/create-table-sql-graph.md
-        - name: TABLE AS SELECT (Azure Synapse Analytics)
-          displayName: CREATE TABLE AS SELECT (Azure Synapse Analytics)
+        - name: TABLE AS SELECT (Synapse Analytics and Fabric)
+          displayName: CREATE TABLE AS SELECT
           href: t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md
         - name: TABLE IDENTITY (Property)
           displayName: CREATE TABLE IDENTITY (Property)
@@ -18148,7 +18152,7 @@ items:
           href: t-sql/statements/open-master-key-transact-sql.md
         - name: OPEN SYMMETRIC KEY
           href: t-sql/statements/open-symmetric-key-transact-sql.md
-        - name: "Permissions: GRANT, DENY, REVOKE (Azure Synapse Analytics, Parallel Data Warehouse)"
+        - name: "Permissions: GRANT, DENY, REVOKE"
           href: t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md
         - name: REVERT
           href: t-sql/statements/revert-transact-sql.md

@@ -9,7 +9,7 @@ ms.date: 03/15/2023
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: conceptual
-ms.custom: fasttrack-edit
+ms.custom: fasttrack-edit, build-2023, build-2023-dataai
 ---
 
 # Connectivity architecture for Azure SQL Managed Instance

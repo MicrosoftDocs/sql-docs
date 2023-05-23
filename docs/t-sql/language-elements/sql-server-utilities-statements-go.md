@@ -18,7 +18,7 @@ dev_langs:
   - "TSQL"
 ---
 # SQL Server Utilities Statements - GO
-[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides commands that are not [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, but are recognized by the **sqlcmd** and **osql** utilities and [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Code Editor. These commands can be used to facilitate the readability and execution of batches and scripts.  
   
@@ -76,6 +76,8 @@ GO
 SELECT @@VERSION;  
 GO;  
 ```
+
+ In the [!INCLUDE [fabric](../../includes/fabric.md)] portal SQL query editor, each SQL statement runs as an independent session. Session context does not persist across SQL statements. For more information, see [SQL query editor](/fabric/data-warehouse/sql-query-editor#limitations).
   
 ## Permissions  
  GO is a utility command that requires no permissions. It can be executed by any user.    

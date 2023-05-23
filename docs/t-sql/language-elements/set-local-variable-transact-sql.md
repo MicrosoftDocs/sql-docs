@@ -14,10 +14,10 @@ helpviewer_keywords:
   - "local variables [SQL Server]"
 dev_langs:
   - "TSQL"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current||=fabric"
 ---
 # SET @local_variable (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
 Sets the specified local variable, previously created by using the DECLARE @*local_variable* statement, to the specified value.  
   
@@ -51,7 +51,9 @@ SET
     }  
 }   
 ```  
-Syntax for Azure Synapse Analytics and Parallel Data Warehouse:  
+
+Syntax for Azure Synapse Analytics and Parallel Data Warehouse and [!INCLUDE [fabric](../../includes/fabric.md)]:  
+
 ```syntaxsql
 SET @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expression  
 ```  

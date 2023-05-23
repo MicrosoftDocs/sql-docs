@@ -25,7 +25,7 @@ keywords:
 
 # Download SQL Server Management Studio (SSMS)
 
-[!INCLUDE [sql-asdb-asdbmi-asa](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw](../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw.md)]
 
 SQL Server Management Studio (SSMS) is an integrated environment for managing any SQL infrastructure, from SQL Server to Azure SQL Database. SSMS provides tools to configure, monitor, and administer instances of SQL Server and databases. Use SSMS to deploy, monitor, and upgrade the data-tier components used by your applications and build queries and scripts.
 
@@ -132,7 +132,7 @@ These components aren't uninstalled because they can be shared with other produc
 
 ## Supported SQL offerings
 
-- This version of SSMS works with SQL Server 2014 and higher and provides the most significant level of support for working with the latest cloud features in Azure SQL Database and Azure Synapse Analytics.
+- This version of SSMS works with SQL Server 2014 and higher and provides the most significant level of support for working with the latest cloud features in Azure SQL Database, Azure Synapse Analytics, and Microsoft Fabric.
 - Additionally, SSMS 19.x can be installed alongside with SSMS 18.x, SSMS 17.x, SSMS 16.x.
 - SQL Server Integration Services (SSIS) - SSMS version 17.x or later doesn't support connecting to the legacy SQL Server Integration Services service. To connect to an earlier version of the legacy Integration Services, use the version of SSMS aligned with the version of SQL Server. For example, use SSMS 16.x to connect to the legacy SQL Server 2016 Integration Services service. SSMS 17.x and SSMS 16.x can be installed on the same computer. Since the release of SQL Server 2012, the SSIS Catalog database, SSISDB, is the recommended way to store, manage, run, and monitor Integration Services packages. For details, see [SSIS Catalog](../integration-services/catalog/ssis-catalog.md).
 

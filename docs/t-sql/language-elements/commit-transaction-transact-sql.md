@@ -25,10 +25,10 @@ helpviewer_keywords:
   - "rolling back transactions, COMMIT TRANSACTION"
 dev_langs:
   - "TSQL"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current || =fabric"
 ---
 # COMMIT TRANSACTION (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricdw.md)]
 
   Marks the end of a successful implicit or explicit transaction. If @@TRANCOUNT is 1, COMMIT TRANSACTION makes all data modifications since the start of the transaction a permanent part of the database, frees the transaction's resources, and decrements @@TRANCOUNT to 0. When @@TRANCOUNT is greater than 1, COMMIT TRANSACTION decrements @@TRANCOUNT only by 1 and the transaction stays active.  
   
@@ -44,7 +44,7 @@ COMMIT [ { TRAN | TRANSACTION }  [ transaction_name | @tran_name_variable ] ] [ 
 ```  
  
 ```syntaxsql
--- Applies to Azure Synapse Analytics and Parallel Data Warehouse Database
+-- Applies to Synpase Data Warehouse in Microsoft Fabric, Azure Synapse Analytics and Parallel Data Warehouse Database
   
 COMMIT [ TRAN | TRANSACTION ] 
 [ ; ]  

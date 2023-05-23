@@ -4,7 +4,7 @@ description: ALTER TABLE modifies a table definition by altering, adding, or dro
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 07/25/2022
+ms.date: 03/31/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -57,11 +57,11 @@ helpviewer_keywords:
   - "table changes [SQL Server]"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # ALTER TABLE (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricdw.md)]
 
 Modifies a table definition by altering, adding, or dropping columns and constraints. ALTER TABLE also reassigns and rebuilds partitions, or disables and enables constraints and triggers.
 
@@ -417,6 +417,31 @@ ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_t
 
 [!INCLUDE[synapse-analytics-od-supported-tables](../../includes/synapse-analytics-od-supported-tables.md)]
 
+## Syntax for [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)]
+
+```syntaxsql
+-- Syntax for Warehouse in Microsoft Fabric
+
+ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_table_name | source_table_name }
+{
+    ALTER COLUMN column_name
+    | ADD { <column_constraint> FOR column_name} [ ,...n ]
+    | DROP { [CONSTRAINT] constraint_name } [ ,...n ]
+    
+}
+[;]
+
+<column_constraint>::=
+    [ CONSTRAINT constraint_name ] 
+    {
+       PRIMARY KEY NONCLUSTERED (column_name [ ,... n ]) NOT ENFORCED
+        | UNIQUE NONCLUSTERED (column_name [ ,... n ]) NOT ENFORCED
+    | FOREIGN KEY
+        ( column [ ,...n ] )
+        REFERENCES referenced_table_name [ ( ref_column [ ,...n ] ) ] NOT ENFORCED
+    }
+```
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
@@ -531,7 +556,7 @@ ALTER COLUMN can't have a collation change if one or more of the following condi
 For more information, see [COLLATE](~/t-sql/statements/collations.md).
 
 #### NULL | NOT NULL  
-Specifies whether the column can accept null values. Columns that don't allow null values are added with ALTER TABLE only if they have a default specified or if the table is empty. You can specify NOT NULL for computed columns only if you've also specified PERSISTED. If the new column allows null values and you don't specify a default, the new column contains a null value for each row in the table. If the new column allows null values and you add a default definition with the new column, you can use WITH VALUES to store the default value in the new column for each existing row in the table.
+Specifies whether the column can accept null values. Columns that don't allow null values are added with ALTER TABLE only if they have a default specified or if the table is empty. You can specify NOT NULL for computed columns only if you have also specified PERSISTED. If the new column allows null values and you don't specify a default, the new column contains a null value for each row in the table. If the new column allows null values and you add a default definition with the new column, you can use WITH VALUES to store the default value in the new column for each existing row in the table.
 
 If the new column doesn't allow null values and the table isn't empty, you have to add a DEFAULT definition with the new column. And, the new column automatically loads with the default value in the new columns in each existing row.
 
@@ -559,7 +584,7 @@ ROWGUIDCOL doesn't enforce uniqueness of the values stored in the column and doe
 #### [ {ADD | DROP} PERSISTED ]  
 Specifies that the PERSISTED property is added to or dropped from the specified column. The column must be a computed column that's defined with a deterministic expression. For columns specified as PERSISTED, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] physically stores the computed values in the table and updates the values when any other columns on which the computed column depends are updated. By marking a computed column as PERSISTED, you can create indexes on computed columns defined on expressions that are deterministic, but not precise. For more information, see [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md).
 
-`SET QUOTED_IDENTIFIER` must be ON when you are creating or changing indexes on computed columns or indexed views. For more information, see [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
+`SET QUOTED_IDENTIFIER` must be ON when you're creating or changing indexes on computed columns or indexed views. For more information, see [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
 
 Any computed column that's used as a partitioning column of a partitioned table must be explicitly marked PERSISTED.
 
@@ -569,7 +594,7 @@ Any computed column that's used as a partitioning column of a partitioned table 
 Specifies that values are incremented in identity columns when replication agents carry out insert operations. You can specify this clause only if *column_name* is an identity column.
 
 #### SPARSE  
-Indicates that the column is a sparse column. The storage of sparse columns is optimized for null values. You can't set sparse columns as NOT NULL. Converting a column from sparse to nonsparse, or from nonsparse to sparse, locks the table for the duration of the command execution. You may need to use the REBUILD clause to reclaim any space savings. For additional restrictions and more information about sparse columns, see [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).
+Indicates that the column is a sparse column. The storage of sparse columns is optimized for null values. You can't set sparse columns as NOT NULL. When you convert a column from sparse to nonsparse, or from nonsparse to sparse, locks the table for the duration of the command execution. You may need to use the REBUILD clause to reclaim any space savings. For additional restrictions and more information about sparse columns, see [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).
 
 #### ADD MASKED WITH ( FUNCTION = ' *mask_function* ')  
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].

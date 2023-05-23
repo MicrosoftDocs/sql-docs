@@ -21,11 +21,11 @@ helpviewer_keywords:
   - "local variables [SQL Server]"
 dev_langs:
   - "TSQL"
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = azure-sqldw-latest || >= sql-server-linux-2017"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = azure-sqldw-latest || >= sql-server-linux-2017||=fabric"
 ---
 # SELECT @local_variable (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw.md)]
 
 Sets a local variable to the value of an expression.
 

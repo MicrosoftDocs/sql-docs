@@ -17,10 +17,11 @@ helpviewer_keywords:
   - "column definitions [SQL Server]"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # ALTER TABLE column_definition (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+
+[!INCLUDE [sql-asdb-asdbmi-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-fabricdw.md)]
 
   Specifies the properties of a column that are added to a table by using [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   

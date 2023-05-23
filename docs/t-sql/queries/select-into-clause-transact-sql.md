@@ -25,10 +25,10 @@ helpviewer_keywords:
   - "row additions [SQL Server], INTO clause"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # SELECT - INTO Clause (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricdw.md)]
 
 SELECT...INTO creates a new table in the default filegroup and inserts the resulting rows from the query into it. To view the complete SELECT syntax, see [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
@@ -77,6 +77,8 @@ If any one of these conditions is true, the column is created NOT NULL instead o
 
 ## Remarks  
 The `SELECT...INTO` statement operates in two parts - the new table is created, and then rows are inserted.  This means that if the inserts fail, they will all be rolled back, but the new (empty) table will remain.  If you need the entire operation to succeed or fail as a whole, use an [explicit transaction](../language-elements/begin-transaction-transact-sql.md).
+
+[!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)] doesn't support filegroups. References and examples in this article to filegroups don't apply to [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)].
   
 ## Limitations and Restrictions  
  You cannot specify a table variable or table-valued parameter as the new table.  

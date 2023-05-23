@@ -8,15 +8,17 @@ ms.service: sql
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-monikerRange: "= azure-sqldw-latest"
+monikerRange: "= azure-sqldw-latest||=fabric"
 ---
 # Azure Synapse Analytics Stored Procedures
-[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
+[!INCLUDE [asa-fabricse-fabricdw](../../includes/applies-to-version/asa-fabricse-fabricdw.md)]
 
-  [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] provides built-in procedures that you can use to perform operations related to database roles. [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] includes the following system procedures:  
+  [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [fabric](../../includes/fabric.md)] provide built-in procedures that you can use to perform operations related to database roles. 
   
 <a name="AggregateFunctions"></a> [sp_datatype_info_90 &#40;Azure Synapse Analytics&#41;](../../relational-databases/system-stored-procedures/sp-datatype-info-90-sql-data-warehouse.md)  
   
+ [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] includes the following system procedures:  
+
  [sp_pdw_add_network_credentials &#40;Azure Synapse Analytics&#41;](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)  
   
  [sp_pdw_database_encryption &#40;Azure Synapse Analytics&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)  

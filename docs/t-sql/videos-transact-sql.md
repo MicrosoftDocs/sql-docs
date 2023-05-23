@@ -3,7 +3,7 @@ title: Programming databases with T-SQL for beginners videos
 description: This page lists video content relevant for learning Transact-SQL (T-SQL).
 author: markingmyname
 ms.author: maghan
-ms.date: 05/31/2023
+ms.date: 05/24/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference

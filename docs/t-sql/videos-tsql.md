@@ -34,6 +34,11 @@ In this video, you get an introduction to relational databases, the SQL language
 
 ## Sort and filter results in Transact-SQL
 
+<<<<<<< HEAD
+=======
+## Sort and filter results in Transact-SQL
+
+>>>>>>> e8022b54266 (line 27 and 37)
 in this video, you learn how to use Transact-SQL to sort and filter results.
 
 &nbsp;

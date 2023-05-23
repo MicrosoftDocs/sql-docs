@@ -109,6 +109,8 @@ The following are examples for creating a database on Azure SQL Database with a 
 
 1. On the **Transparent data encryption (preview)** menu, select **Change key**. Select the desired **Subscription**, **Key vault**, **Key**, and **Version** for the customer-managed key to be used for TDE. Select the **Select** button. After you have selected a key, you can also add additional database keys as needed using the [Azure Key vault URI (object identifier)](/azure/key-vault/general/about-keys-secrets-certificates) in the **Transparent data encryption (preview)** menu.
 
+   :::image type="content" source="media/transparent-data-encryption-byok-database-level-basic-actions/additional-keys.png" alt-text="Screenshot of the transparent data encryption menu in the Azure portal referencing adding additional keys.":::
+
 1. Select **Apply** to continue creating the database.
 
 1. Select **Review + create** at the bottom of the page

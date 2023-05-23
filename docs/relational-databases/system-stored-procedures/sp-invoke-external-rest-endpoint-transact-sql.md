@@ -314,16 +314,6 @@ If the same headers are also specified via the *@headers* parameter, the system-
 > [!NOTE]  
 > If you are testing invocation of the REST endpoint with other tools, like [cURL](https://curl.se/) or any modern REST client like [Postman](https://www.postman.com/) or [Insomnia](https://insomnia.rest/), make sure to include the same headers that are automatically injected by `sp_invoke_external_rest_endpoint` to have the same behavior and results.
 
-## Known issues
-
-### Incorrect response headers
-
-The presence of the tilde (`~`) character in either a response header's key or value, will prevent that header key and value to be returned correctly.
-
-### DNS resolution fails with Windows Socket Error 11003 or 11004
-
-On some Azure SQL databases, calling an external REST endpoint may fail due to a Windows Socket Error 11003 or 11004. If you encounter this error, use API Management to call the REST endpoint.
-
 ## Best practices
 
 ### Use a batching technique

@@ -37,8 +37,7 @@ In SQL Server Management Studio you can provision:
 - An enclave-enabled column master key using the **New Column Master Key** dialog.
 - An enclave-enabled column encryption key using the **New Column Encryption Key** dialog.
 
-> [!NOTE]
-> The [Always Encrypted wizard](always-encrypted-wizard.md) does not currently support generating enclave-enabled keys. You can, however, create enclave-enabled keys using the above dialogs first, and then when you run the wizard, select an already existing enclave-enabled column encryption for columns that you want to encrypt.
+The [Always Encrypted Wizard](always-encrypted-wizard.md) also allows you to create an enclave-enabled column master key and an enclave-enabled column encryption key. 
 
 Make sure you have installed [the latest general availability (GA) version of SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md).
 

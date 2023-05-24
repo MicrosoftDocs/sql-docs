@@ -202,7 +202,8 @@ SSMS provides a wizard that helps you easily configure Always Encrypted by setti
 
      1. Select **Next**.
 
-1. On the **Run settings** page, you're asked if you want to proceed with encryption or generate a PowerShell script to be executed later. Leave the default settings and select **Next**.
+1. On the **In-Place Encryption Settings** page, no additional configuration is required because the database does not have an enclave enabled. Select **Next**.
+1. On the **Run Settings** page, you're asked if you want to proceed with encryption or generate a PowerShell script to be executed later. Leave the default settings and select **Next**.
 1. On the **Summary** page, the wizard informs you about the actions it will execute. Check all the information is correct and select **Finish**.
 1. On the **Results** page, you can monitor the progress of the wizard's operations. Wait until all operations complete successfully and select **Close**.
 

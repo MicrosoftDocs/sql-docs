@@ -9314,38 +9314,44 @@ items:
           href: ssms/menu-help/sql-server-management-studio-menu-help.md
         - name: Properties Window F1 Help (Management Studio)
           href: ssms/menu-help/properties-window-f1-help-management-studio.md
-        - name: Options (Output window)
-          href: ssms/menu-help/options-output-window-page.md
-        - name: Options (Environment - Fonts & Colors Page)
-          href: ssms/menu-help/options-environment-fonts-and-colors-page.md
+        - name: Options Dialog Boxes F1 Help
+          href: ssms/menu-help/options-dialog-boxes-f1-help.md
         - name: Options (Environment - Help - General Page)
           href: ssms/menu-help/options-environment-help-general-page.md
+        - name: Options (Environment - General Page)
+          href: ssms/menu-help/options-environment-general-page.md
+        - name: Options (Environment - Fonts & Colors Page)
+          href: ssms/menu-help/options-environment-fonts-and-colors-page.md
+        - name: Options (Environment - Keyboard Page)
+          href: ssms/menu-help/options-environment-keyboard-page.md
+        - name: Options (Environment - Startup Page)
+          href: ssms/menu-help/options-environment-startup-page.md
         - name: Options (Query Execution options - Help - General Page)
           href: ssms/menu-help/options-query-execution.md
+        - name: Options (Designers - Table & Database Designers Page)
+          href: ssms/menu-help/options-designers-table-and-database-designers-page.md
+        - name: Options (Designers - Analysis Services Designers - General)
+          href: ssms/menu-help/options-designers-analysis-services-designers-general.md
         - name: Options (Azure Service - Help - General Page)
           href: ssms/menu-help/options-azure-services.md
+        - name: Options (SQL Server Object Explorer Commands window)
+          href: ssms/menu-help/options-sql-server-object-explorer-commands.md
+        - name: Options (Output window)
+          href: ssms/menu-help/options-output-window-page.md
+        - name: Options (SQL Server Object Explorer - Scripting)
+          href: ssms/menu-help/options-sql-server-object-explorer-scripting.md
         - name: External Tools
           href: ssms/menu-help/external-tools.md
         - name: Customize (Commands Page)
           href: ssms/menu-help/customize-commands-page.md
-        - name: Options (Environment - General Page)
-          href: ssms/menu-help/options-environment-general-page.md
-        - name: Options (Environment - Startup Page)
-          href: ssms/menu-help/options-environment-startup-page.md
-        - name: Options Dialog Boxes F1 Help
-          href: ssms/menu-help/options-dialog-boxes-f1-help.md
         - name: Choose Toolbox Items (Maintenance Tasks Page)
           href: ssms/menu-help/choose-toolbox-items-maintenance-tasks-page.md
-        - name: Options (Designers - Table & Database Designers Page)
-          href: ssms/menu-help/options-designers-table-and-database-designers-page.md
         - name: About SQL Server Management Studio
           href: ssms/menu-help/about-sql-server-management-studio.md
         - name: Save Changes
           href: ssms/menu-help/save-changes.md
         - name: Open With (New File)
           href: ssms/menu-help/open-with-new-file.md
-        - name: Options (Designers - Analysis Services Designers - General)
-          href: ssms/menu-help/options-designers-analysis-services-designers-general.md
         - name: Windows Dialog Box (Microsoft Document Explorer Help)
           href: ssms/menu-help/windows-dialog-box-microsoft-document-explorer-help.md
         - name: Advanced Save Options
@@ -9360,8 +9366,6 @@ items:
           href: ssms/menu-help/choose-search-folders-dialog-box-visual-studio.md
         - name: Options (Environment - Help - Online Page)
           href: ssms/menu-help/options-environment-help-online-page.md
-        - name: Options (Environment - Keyboard Page)
-          href: ssms/menu-help/options-environment-keyboard-page.md
         - name: Object Explorer
           href: ssms/object/object-explorer.md
         - name: Add Steps to a SQL Server Agent Master Job
@@ -9390,8 +9394,6 @@ items:
           href: ssms/object/select-object-types-object-explorer.md
         - name: Select Objects (Object Explorer)
           href: ssms/object/select-objects-object-explorer.md
-        - name: Options (SQL Server Object Explorer - Scripting Page)
-          href: ssms/object/options-sql-server-object-explorer-scripting-page.md
         - name: Delete Objects
           href: ssms/object/delete-objects.md
         - name: Add a Custom Report to Management Studio
@@ -9400,8 +9402,6 @@ items:
           href: ssms/object/custom-reports-in-management-studio.md
         - name: Add Objects
           href: ssms/object/add-objects.md
-        - name: Options (SQL Server Object Explorer - Commands)
-          href: ssms/object/options-sql-server-object-explorer-commands.md
         - name: Unsuppress Run Custom Report Warnings
           href: ssms/object/unsuppress-run-custom-report-warnings.md
       - name: Solution explorer

@@ -46,6 +46,9 @@ To register your SQL Server VM with the extension, you'll need:
 - The latest version of [Azure CLI](/cli/azure/install-azure-cli) or [Azure PowerShell (5.0 minimum)](/powershell/azure/install-az-ps).
 - A minimum of .NET Framework 4.5.1 or later.
 
+   > [!NOTE]
+   > Creating SQL Virtual Machine Resource for PowerBI VM images is not supported.
+
 ## Register subscription with RP
 
 To register your SQL Server VM with the SQL IaaS Agent extension, you must first register your subscription with the **Microsoft.SqlVirtualMachine** resource provider (RP). This gives the SQL IaaS Agent extension the ability to create resources within your subscription. You can do so by using the Azure portal, the Azure CLI, or Azure PowerShell.

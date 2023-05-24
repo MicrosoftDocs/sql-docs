@@ -4,7 +4,7 @@ description: This article has release notes for Azure Data Studio.
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan, randolphwest
-ms.date: 04/12/2023
+ms.date: 05/24/2023
 ms.service: azure-data-studio
 ms.topic: conceptual
 ---
@@ -16,41 +16,63 @@ This article provides details about updates, improvements, and bug fixes for the
 
 :::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download and install the latest release!](./download-azure-data-studio.md)**
 
-### April 2023
+### May 2023
 
-Azure Data Studio 1.43.0 is the latest general availability (GA) release.
+Azure Data Studio 1.44.0 is the latest general availability (GA) release.
 
-- Release number: 1.43.0
-- Release date: April 12, 2023
+- Release number: 1.44.0
+- Release date: May 24, 2023
 
-#### What's new in 1.43.0
-
-| New Item | Details |
-| --- | --- |
-| Connection | Added notation for required properties (e.g. Attestation protocol and Attestation URL) when Secure Enclaves are enabled |
-| SQL Database Projects extension | General Availability |
-| SQL Database Projects extension | Move and rename files within Database Projects view |
-| SQL Database Projects extension | SQLCMD variables available for editing in Database Projects view |
-| Object Explorer | Double-clicking on a user or table in Object Explorer will open the designer for the object |
-| Query Editor | Added a Parse button to the Query Editor toolbar for parsing queries before execution |
-| Query Results | Added support to select a row in query results via double click |
-
-#### Bug fixes in 1.43.0
+#### What's new in 1.44.0
 
 | New Item | Details |
 | --- | --- |
-| Connection | Added support for linked accounts with same username but different domains |
-| Connection | Fixed issue with incorrect cache write path |
-| Connection | Added ability to include optional name and grouping when creating a new connection using a connection string |
-| Connection | Updating username in MSSQL connections to use Preferred username for the display name |
-| Connection | Fixed issue with encoding for OSX keychain on macOS |
-| Connection | Added support for Azure MFA and ‘Sql Authentication Provider’ on Linux |
-| Dataverse | Addressed error generated when expanding the database node for a Dataverse database in Object Explorer |
-| IntelliCode extension | Fixed error that occurred when launching Azure Data Studio with Visual Studio Code IntelliCode extension installed |
-| PostgreSQL extension | Implemented support for exporting query results on Apple M1 from a notebook |
-| SQL Database Projects extension | Added Accessibility Fixes related to screen reader, label names, and improved focus when navigating |
+| Connection | Enabled Sql Authentication Provider by default for Azure SQL connections and the MSAL Authentication Library.  Learn more at [Connect with Azure Data Studio](https://aka.ms/azuredatastudio-connection) |
+| Connection | Introduced support for passing in advanced connection options in command line arguments |
+| Connection | Added ability to provide an Application Name in the connection string parameter |
+| General | Added support for customizing table keyboard shortcuts |
+| General | Added warning notification on startup if Azure PII logging is enabled |
+| GitHub Copilot | GitHub Copilot extension for autocomplete-style suggestions added to extension gallery. Learn more at [GitHub Copilot extension](./extensions/github-copilot-extension.md) |
+| Notebooks | Fixed issue where deleted text listed using the Find feature |
+| Object Explorer | Introduced filtering capability for Object Explorer (preview) |
+| Query Editor | Shorted text for Change Connection and Export as Notebook button |
+| Query Results | Increased the default max column width |
+| SQL Database Projects Extension | Released version 1.1.1 |
+| SQL Database Projects Extension | Improved performance of loading one or more large projects |
+| SQL Database Projects Extension | Introduced ability to save publish settings to a new or existing  publish profile |
+| User Management | Added support for creating database and server roles (preview) |
+| User Management | Improved authentication options when creating database users (preview) |
 
-For a full list of bug fixes addressed for the April 2023 release, visit the [April 2023 Release on GitHub](https://github.com/microsoft/azuredatastudio/milestone/99?closed=1).
+#### Bug fixes in 1.44.0
+
+| New Item | Details |
+| --- | --- |
+| Accessibility | Added labels to radio groups in SQL Database Projects dialog |
+| Accessibility | Fixed issue with narrator reading character twice in network share path for Azure SQL migration extension |
+| Accessibility | Addressed problem where keyboard focus did not shift to error message when creating a new database |
+| Accessibility | Fixed issue with voiceover not announcing label names correctly when updating a database project |
+| Connection | Improved token refresh behavior |
+| Connection | Enabled support to login with blank passwords when creating MSSQL connection |
+| Connection | Added change password dialog display after password expiration occurs for a SQL login |
+| Connection | Addressed scenario where Intellisense stopped working after a connection token expired |
+| Connection | Fixed behavior where PostgreSQL username was incorrectly replaced |
+| Connection | Implemented support for connections against the same server but with different properties |
+| Connection | Resolved issue where connection status changed to red (disconnected) after moving an active connection to a server group |
+| Connection | Updated Azure node in Connection dialog to include notation when no subscriptions are found |
+| Connection | Updated firewall dialog to pre-select the account and tenant in the connection dialog |
+| Extension | Fixed an issue with over-encoded URLs in diagnostic error messages |
+| Intellisense | Resolved issue with SORT_IN_TEMPDB not recognized as valid T-SQL syntax when creating an object |
+| Notebooks | Updated Notebook connection to support MySQL and PostgreSQL when connecting to an existing Notebook |
+| Query Results | Fixed overlapping action display when multiple result sets are returned |
+| Schema Compare | Update scmp files to be backwards compatible |
+| SQL Database Projects Extension | Fixed multiple issues related to SQLCMD variables and projects |
+| SQL Database Projects Extension | Addressed a failure that was occurring when using schema compare with Azure Synapse dedicated pools |
+| SQL Database Projects Extension | Resolved problem where a database project would not build after a reference to a system database was added from SSDT |
+| SQL Database Projects Extension | Fixed issue where projects were listed twice when using multi root workspaces |
+| SQL Database Projects Extension | Fixed an issue where file structure information was not stored in the scmp file after a schema compare |
+| SQL Database Projects (VS Code) | Updated default folder location when creating a new project from database workflow |
+
+For a full list of bug fixes addressed for the May 2023 release, visit the [May 2023 Release on GitHub](https://github.com/microsoft/azuredatastudio/milestone/98?closed=1).
 
 #### Known issues
 
@@ -64,7 +86,8 @@ You can reference [Azure Data Studio feedback](https://github.com/microsoft/azur
 
 | Azure Data Studio release | Build number | Release date | Hotfix |
 | --- | --- | --- | --- |
-| [March 2022](#march-2023) | 1.42.0 | March 22, 2023 | N/A |
+| [April 2023](#april-2023) | 1.43.0 | April 12, 2023 | N/A |
+| [March 2023](#march-2023) | 1.42.0 | March 22, 2023 | N/A |
 | [January 2023](#january-2023) | 1.41.0 | January 25, 2023 | [hotfix 1](#january-2023-hotfix)<br />[hotfix 2](#january-2023-hotfix-2) |
 | [November 2022](#november-2022) | 1.40.0 | November 16, 2022 | [hotfix 1](#november-2022-hotfix)<br />[hotfix 2](#november-2022-hotfix-2) |
 | [August 2022](#august-2022) | 1.39.1 | August 30, 2022 | [hotfix](#august-2022-hotfix) |
@@ -110,6 +133,41 @@ You can reference [Azure Data Studio feedback](https://github.com/microsoft/azur
 
 > [!NOTE]  
 > All previous versions of Azure Data Studio are not supported.
+
+### April 2023
+
+- Release number: 1.43.0
+- Release date: April 12, 2023
+
+#### What's new in 1.43.0
+
+| New Item | Details |
+| --- | --- |
+| Connection | Added notation for required properties (e.g. Attestation protocol and Attestation URL) when Secure Enclaves are enabled |
+| SQL Database Projects extension | General Availability |
+| SQL Database Projects extension | Move and rename files within Database Projects view |
+| SQL Database Projects extension | SQLCMD variables available for editing in Database Projects view |
+| Object Explorer | Double-clicking on a user or table in Object Explorer will open the designer for the object |
+| Query Editor | Added a Parse button to the Query Editor toolbar for parsing queries before execution |
+| Query Results | Added support to select a row in query results via double click |
+
+#### Bug fixes in 1.43.0
+
+| New Item | Details |
+| --- | --- |
+| Connection | Added support for linked accounts with same username but different domains |
+| Connection | Fixed issue with incorrect cache write path |
+| Connection | Added ability to include optional name and grouping when creating a new connection using a connection string |
+| Connection | Updating username in MSSQL connections to use Preferred username for the display name |
+| Connection | Fixed issue with encoding for OSX keychain on macOS |
+| Connection | Added support for Azure MFA and ‘Sql Authentication Provider’ on Linux |
+| Dataverse | Addressed error generated when expanding the database node for a Dataverse database in Object Explorer |
+| IntelliCode extension | Fixed error that occurred when launching Azure Data Studio with Visual Studio Code IntelliCode extension installed |
+| PostgreSQL extension | Implemented support for exporting query results on Apple M1 from a notebook |
+| SQL Database Projects extension | Added Accessibility Fixes related to screen reader, label names, and improved focus when navigating |
+
+For a full list of bug fixes addressed for the April 2023 release, visit the [April 2023 Release on GitHub](https://github.com/microsoft/azuredatastudio/milestone/99?closed=1).
+
 
 ### March 2023
 

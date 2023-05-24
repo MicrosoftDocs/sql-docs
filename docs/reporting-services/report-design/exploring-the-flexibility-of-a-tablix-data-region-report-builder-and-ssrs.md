@@ -20,7 +20,7 @@ In a paginated report, when you add a table, matrix, or list data region from th
  After you change the structure of the tablix data region, you can set properties to help control the way the report renders the data region; for example, you can repeat column headers at the top of every page, or keep a group header with the group. For more information, see [Controlling the Tablix Data Region Display on a Report Page &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
  
  ## Adding Row properties to a Table 
- You can also change headers for row data within the row properties of a tablix. By right-clicking inside a row you will can select row properties to set row headers under the accessibility menu. Adding row properties allow you to overwrite the structure type by adding a Header cell or a Data cell. This is especially helpful to report authors who need to add enriched accessibility features for optimal support with screen-reader technologies.
+ You can also change headers for row data within the row properties of a tablix. By right-clicking inside a row you can select row properties to set row headers under the accessibility menu. Adding row properties allows you to overwrite the structure type by adding a Header cell or a Data cell. This addition is especially helpful to report authors who need to add enriched accessibility features for optimal support with screen-reader technologies.
  
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

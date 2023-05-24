@@ -1131,10 +1131,9 @@ Specifies the URL to use for the backup operation. The URL format is used for cr
 *n*    
 Is a placeholder that indicates that up to 64 backup devices may be specified in a comma-separated list.
 
-### WITH OptionsSpecifies options to be used with a backup operation
+### WITH options
 
-#### CREDENTIAL    
-Used only when creating a backup to the Microsoft Azure Blob Storage.
+Specifies options to be used with a backup operation.
 
 #### ENCRYPTION    
 Used to specify encryption for a backup. You can specify an encryption algorithm to encrypt the backup with or specify `NO_ENCRYPTION` to not have the backup encrypted. Encryption is recommended practice to help secure backup files. The list of algorithms you can specify are:

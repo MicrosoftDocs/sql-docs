@@ -1,18 +1,20 @@
 ---
-title: "Options (SQL Server Object Explorer - Scripting Page)"
-description: "Options (SQL Server Object Explorer - Scripting Page)"
-author: "markingmyname"
-ms.author: "maghan"
-ms.date: "08/01/2017"
+title: Options (SQL Server Object Explorer - Scripting)
+description: Description of options within the SQL Server Object Explorer - Scripting window.
+author: erinstellato-ms
+ms.author: erinstellato
+ms.reviewer: maghan
+ms.date: 05/25/2023
 ms.service: sql
 ms.subservice: ssms
-ms.topic: conceptual
+ms.topic: ui-reference
 f1_keywords:
   - "VS.ToolsOptionsPages.ObjectExplorerScripting"
   - "VS.ToolsOptionsPages.Sql_Server_Object_Explorer.ObjectExplorerScripting"
 ---
-# Options (SQL Server Object Explorer - Scripting Page)
+# Options (SQL Server Object Explorer - Scripting)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
 Use this page to set scripting options that apply to the following commands on object context menus in **Object Explorer**:  
   
 -   **Edit** commands for user tables and views.  
@@ -57,7 +59,7 @@ Adds the USE DATABASE statement to the script to create database objects in the 
 Check that an object with the given name exists before dropping or altering or that an object with the given name does not exist before creating. For more information, see [IF...ELSE (Transact-SQL)](../../t-sql/language-elements/if-else-transact-sql.md) and [EXISTS (Transact-SQL)](../../t-sql/language-elements/exists-transact-sql.md).
 
 **Generate script for dependent objects**  
-Generates a script for additional objects that are required when the script for the selected object is executed. Default is False.  
+Generates a script for other objects that are required when the script for the selected object is executed. Default is False.  
   
 **Schema qualify object names**  
 Qualifies object names with the object schema. Default is False. For more information, see [Create a Database Schema](../../relational-databases/security/authentication-access/create-a-database-schema.md).  
@@ -78,7 +80,7 @@ Includes permissions on database objects in the script. Default is True. For mor
 The following options apply only to scripts for tables or views.  
   
 **Convert user-defined data types to base types**  
-Converts user-defined data types to the base types from which they were created. Use True when the source database user-defined data types do not exist in the database where the script will be run. Use False to keep the user-defined data types. Default is False. For more information, see [CREATE TYPE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md).  
+Converts user-defined data types to the base types from which they were created. Use True when the source database user-defined data types do not exist in the database where the script is run. Use False to keep the user-defined data types. Default is False. For more information, see [CREATE TYPE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md).  
   
 **Generate SET ANSI PADDING commands**  
 Adds the SET ANSI_PADDING statement before and after each CREATE TABLE statement. Default is True. For more information, see [SET ANSI_PADDING (Transact-SQL)](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
@@ -137,16 +139,16 @@ Includes system generated constraint names to enforce declarative referential in
 ### Version options
 
 **Match script settings to source**
-If enabled the target version, engine edition and engine type of the scripts generated will be set to the values of the server the object being scripted. This will disable (and ignore) the other version options. 
+If enabled the target version, engine edition and engine type of the scripts generated are set to the values of the server the object being scripted. This configuration disables (and ignores) the other version options.
 
 **Script for database engine edition**
-Scripts generated will be targeted for the specified [Engine Edition](/dotnet/api/microsoft.sqlserver.management.smo.edition).
+Scripts generated are targeted for the specified [Engine Edition](/dotnet/api/microsoft.sqlserver.management.smo.edition).
 
 **Script for database engine type**
-Scripts generated will be targeted for the specified [Database Engine Type](/previous-versions/sql/sql-server-2014/ee642509(v=sql.120)).
+Scripts generated are targeted for the specified [Database Engine Type](/previous-versions/sql/sql-server-2014/ee642509(v=sql.120)).
 
 **Script for server version**  
-Scripts generated will be targeted for the specified version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Features that are new in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] cannot be scripted for earlier versions. Some scripts that are created for [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] cannot be executed on servers that are running on an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or on a database that has an earlier [database compatibility level setting](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+Scripts generated are targeted for the specified version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Features that are new in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] cannot be scripted for earlier versions. Some scripts that are created for [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] cannot be executed on servers that are running on an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or on a database that has an earlier [database compatibility level setting](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
 
 ## See also  
 [Generate Scripts (SQL Server Management Studio)](../scripting/generate-scripts-sql-server-management-studio.md)  

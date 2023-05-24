@@ -59804,5 +59804,15 @@
       "redirect_url": "/sql/ssms/release-notes-ssms",
       "redirect_document_id": false
     },
+    {
+      "source_path": "docs/ssms/object/options-sql-server-object-explorer-commands.md",
+      "redirect_url": "/sql/ssms/menu-help/options-sql-server-object-explorer-commands",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/object/options-sql-server-object-explorer-scripting-page.md",
+      "redirect_url": "/sql/ssms/menu-help/options-sql-server-object-explorer-scripting",
+      "redirect_document_id": false
+    },
   ]
 }

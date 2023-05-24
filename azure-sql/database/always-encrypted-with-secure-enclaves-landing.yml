@@ -100,7 +100,9 @@ landingContent:
         links:
           - text: Configure column encryption in-place using Always Encrypted with secure enclaves
             url: /sql/relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption
-          - text : Configure columns encryption in-place with DACPAC
+          - text: Configure column encryption in-place with the Always Encrypted wizard in SSMS
+            url: /sql/relational-databases/security/encryption/always-encrypted-wizard
+          - text : Configure column encryption in-place with DACPAC
             url: /sql/relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption-dacpac
           - text: Configure column encryption in-place with PowerShell
             url: /sql/relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption-powershell

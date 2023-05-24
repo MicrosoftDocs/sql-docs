@@ -59,7 +59,7 @@ The maximum number of minutes the purge operation should run. *duration* is **sm
 
 ## Return code values
 
-`0` (success) or `1` (failure)
+`0` (success) or `1` (failure).
 
 ## Remarks
 
@@ -112,5 +112,5 @@ GO
 
 ## See also
 
-- [System stored procedures (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
-- [Data Collector stored procedures (Transact-SQL)](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)
+- [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
+- [Data Collector stored procedures (Transact-SQL)](data-collector-stored-procedures-transact-sql.md)

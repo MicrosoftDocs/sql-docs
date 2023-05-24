@@ -64,7 +64,7 @@ The unique identifier for the source of the update. *source_id* is **int** and i
 
 ## Return code values
 
-`0` (success) or `1` (failure)
+`0` (success) or `1` (failure).
 
 ## Remarks
 
@@ -95,6 +95,6 @@ EXEC core.sp_update_data_source @collection_set_uid = '7B191952-8ECF-4E12-AEB2-E
 
 ## See also
 
-- [System stored procedures (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
-- [Data Collector stored procedures (Transact-SQL)](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)
+- [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
+- [Data Collector stored procedures (Transact-SQL)](data-collector-stored-procedures-transact-sql.md)
 - [Management Data Warehouse](../../relational-databases/data-collection/management-data-warehouse.md)

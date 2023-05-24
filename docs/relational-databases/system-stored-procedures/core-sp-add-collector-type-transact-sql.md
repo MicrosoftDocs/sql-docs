@@ -41,7 +41,7 @@ The GUID for the collector type. *collector_type_uid* is **uniqueidentifier**, w
 
 ## Return code values
 
-`0` (success) or `1` (failure)
+`0` (success) or `1` (failure).
 
 ## Permissions
 
@@ -71,6 +71,6 @@ EXECUTE @RC = core.sp_add_collector_type @collector_type_uid;
 
 ## See also
 
-- [System stored procedures (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
-- [Data Collector stored procedures (Transact-SQL)](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)
+- [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
+- [Data Collector stored procedures (Transact-SQL)](data-collector-stored-procedures-transact-sql.md)
 - [Management Data Warehouse](../../relational-databases/data-collection/management-data-warehouse.md)

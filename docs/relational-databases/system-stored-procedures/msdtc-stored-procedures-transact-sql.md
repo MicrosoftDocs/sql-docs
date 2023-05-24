@@ -1,14 +1,15 @@
 ---
-title: "MSDTC Stored Procedures (Transact-SQL)"
-description: "Microsoft Distributed Transaction Coordinator (MSDTC) Stored Procedures (Transact-SQL)"
+title: "MSDTC stored procedures (Transact-SQL)"
+description: "Microsoft Distributed Transaction Coordinator (MSDTC) stored procedures (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
-ms.date: "02/24/2023"
+ms.reviewer: randolphwest
+ms.date: 05/24/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
 ---
-# MSDTC Stored Procedures (Transact-SQL)
+# MSDTC stored procedures (Transact-SQL)
 
 [!INCLUDE [SQL Server 2022 Azure SQL Managed Instance](../../includes/applies-to-version/sqlserver2022-asmi.md)]
 

@@ -47,7 +47,7 @@ To register your SQL Server VM with the extension, you'll need:
 - A minimum of .NET Framework 4.5.1 or later.
 
    > [!NOTE]
-   > Creating SQL Virtual Machine Resource for PowerBI VM images is not supported.
+   > Creating a SQL Virtual Machine Resource for Power BI VM images is not supported.
 
 ## Register subscription with RP
 

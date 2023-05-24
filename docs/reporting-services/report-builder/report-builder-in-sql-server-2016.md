@@ -3,7 +3,7 @@ title: "Microsoft Report Builder in SQL Server"
 description: Microsoft Report Builder is a tool for authoring paginated reports for SQL Server Reporting Services and Power BI Report Server. To create a report, you specify data to retrieve, where to get it, and how to display it.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/18/2023
+ms.date: 05/24/2023
 ms.service: reporting-services
 ms.subservice: report-builder
 ms.topic: conceptual
@@ -28,7 +28,7 @@ You can also publish a paginated report to the Power BI service. If so, we recom
   
 -   **Start with a shared dataset**. Shared datasets are queries based on a shared data source and saved to a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server in native mode or  in SharePoint integrated mode.  
   
--   **Start with the Table, Matrix, or Chart wizard**. Choose a data source connection, drag and drop fields to create a dataset query, select a layout add accessibility row properties, and style, and customize your report.  
+-   **Start with the Table, Matrix, or Chart wizard**. Choose a data source connection, drag and drop fields to create a dataset query, select a layout and style, add accessibility row properties, and customize your report.  
   
 -   **Start with the Map wizard** to create reports that display aggregated data against a geographic or geometric background. Map data can be spatial data from a [!INCLUDE[tsql](../../includes/tsql-md.md)] query or an Environmental Systems Research Institute, Inc. (ESRI) shapefile. You can also add a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Bing map tile background.  
   

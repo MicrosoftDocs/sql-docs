@@ -62,7 +62,7 @@ To install the SQL Database Project extension in Azure Data Studio, follow these
 
 
 
-### Visual Studio Code (preview)
+### Visual Studio Code
 
 The SQL Database Projects extension is installed with the [mssql](../../tools/visual-studio-code/sql-server-develop-use-vscode.md) extension for Visual Studio Code.
 

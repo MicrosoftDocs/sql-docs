@@ -54,7 +54,7 @@ Azure SQL Managed Instance has automatic backups, so users can create full datab
   - `FILE`, `TAPE`, and backup devices aren't supported.
 - Most of the general `WITH` options are supported.
   - `COPY_ONLY` is mandatory.
-  - `FILE_SNAPSHOT` isn't supported.
+  - `FILE_SNAPSHOT` and `CREDENTIAL` aren't supported.
   - Tape options: `REWIND`, `NOREWIND`, `UNLOAD`, and `NOUNLOAD` aren't supported.
   - Log-specific options: `NORECOVERY`, `STANDBY`, and `NO_TRUNCATE` aren't supported.
 
@@ -75,7 +75,7 @@ Limitations:
     >
     > The `Restore` command in SQL Managed Instance supports bigger blob sizes in the backup files because a different blob type is used for storage of the uploaded backup files.
 
-For information about backups using T-SQL, see [BACKUP](/sql/t-sql/statements/backup-transact-sql).
+For information about backups using T-SQL, see [BACKUP](/sql/t-sql/statements/backup-transact-sql?view=azuresqldb-mi-current&preserve-view=true).
 
 ## Security
 

@@ -66,7 +66,7 @@ The unique identifier for a row that is inserted into the `core.snapshots` view.
 
 ## Return code values
 
-`0` (success) or `1` (failure)
+`0` (success) or `1` (failure).
 
 ## Remarks
 
@@ -102,6 +102,6 @@ EXEC core.sp_create_snapshot
 
 ## See also
 
-- [System stored procedures (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
-- [Data Collector stored procedures (Transact-SQL)](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)
+- [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
+- [Data Collector stored procedures (Transact-SQL)](data-collector-stored-procedures-transact-sql.md)
 - [Management Data Warehouse](../../relational-databases/data-collection/management-data-warehouse.md)

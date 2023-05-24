@@ -25,33 +25,32 @@ dev_langs:
 
 :::row:::
     :::column:::
-        [sp_column_privileges](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)
+        [sp_column_privileges](sp-column-privileges-transact-sql.md)
 
-        [sp_columns](../../relational-databases/system-stored-procedures/sp-columns-transact-sql.md)
+        [sp_columns](sp-columns-transact-sql.md)
 
-        [sp_databases](../../relational-databases/system-stored-procedures/sp-databases-transact-sql.md)
+        [sp_databases](sp-databases-transact-sql.md)
 
-        [sp_fkeys](../../relational-databases/system-stored-procedures/sp-fkeys-transact-sql.md)
+        [sp_fkeys](sp-fkeys-transact-sql.md)
 
-        [sp_pkeys](../../relational-databases/system-stored-procedures/sp-pkeys-transact-sql.md)
+        [sp_pkeys](sp-pkeys-transact-sql.md)
 
-        [sp_server_info](../../relational-databases/system-stored-procedures/sp-server-info-transact-sql.md)
+        [sp_server_info](sp-server-info-transact-sql.md)
     :::column-end:::
     :::column:::
-        [sp_special_columns](../../relational-databases/system-stored-procedures/sp-special-columns-transact-sql.md)
+        [sp_special_columns](sp-special-columns-transact-sql.md)
 
-        [sp_sproc_columns](../../relational-databases/system-stored-procedures/sp-sproc-columns-transact-sql.md)
+        [sp_sproc_columns](sp-sproc-columns-transact-sql.md)
 
-        [sp_statistics](../../relational-databases/system-stored-procedures/sp-statistics-transact-sql.md)
+        [sp_statistics](sp-statistics-transact-sql.md)
 
-        [sp_stored_procedures](../../relational-databases/system-stored-procedures/sp-stored-procedures-transact-sql.md)
+        [sp_stored_procedures](sp-stored-procedures-transact-sql.md)
 
-        [sp_table_privileges](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)
+        [sp_table_privileges](sp-table-privileges-transact-sql.md)
 
-        [sp_tables](../../relational-databases/system-stored-procedures/sp-tables-transact-sql.md)
+        [sp_tables](sp-tables-transact-sql.md)
     :::column-end:::
 :::row-end:::
-<BR>
 
 Stored procedures for certain platforms only as specified, including Azure Synapse Analytics:
 
@@ -66,4 +65,4 @@ Stored procedures for certain platforms only as specified, including Azure Synap
 
 ## See also
 
-- [System stored procedures (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
+- [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

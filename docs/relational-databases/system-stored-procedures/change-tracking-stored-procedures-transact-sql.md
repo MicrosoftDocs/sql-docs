@@ -22,9 +22,9 @@ Change Tracking is a lightweight solution that provides an efficient data change
 
 ## Stored procedures
 
-- [sys.sp_flush_commit_table (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-flush-commit-table-transact-sql.md)
-- [sys.sp_flush_commit_table_on_demand (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-flush-commit-table-on-demand-transact-sql.md)
-- [sys.sp_flush_CT_internal_table_on_demand (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-flush-ct-internal-table-on-demand-transact-sql.md)
+- [sys.sp_flush_commit_table (Transact-SQL)](sys-sp-flush-commit-table-transact-sql.md)
+- [sys.sp_flush_commit_table_on_demand (Transact-SQL)](sys-sp-flush-commit-table-on-demand-transact-sql.md)
+- [sys.sp_flush_CT_internal_table_on_demand (Transact-SQL)](sys-sp-flush-ct-internal-table-on-demand-transact-sql.md)
 
 ## See also
 

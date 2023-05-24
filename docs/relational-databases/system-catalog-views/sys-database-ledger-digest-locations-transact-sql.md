@@ -3,7 +3,7 @@ title: "sys.database_ledger_digest_locations (Transact-SQL)"
 description: sys.database_ledger_digest_locations (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
-ms.date: "05/24/2022"
+ms.date: 05/23/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -13,7 +13,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-ver16||>=sql-server-linux-ver16
 ---
 # sys.database_ledger_digest_locations (Transact-SQL)
 
-[!INCLUDE [SQL Server 2022 Azure SQL Database](../../includes/applies-to-version/sqlserver2022-asdb.md)]
+[!INCLUDE [SQL Server 2022 Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
 Captures the current and the historical ledger digest storage endpoints for the ledger feature.
 

@@ -3,8 +3,8 @@ title: "Ledger overview"
 description: Learn the basics of the ledger feature.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: kendralittle, mathoma
-ms.date: "07/25/2022"
+ms.reviewer: mathoma
+ms.date: 05/23/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual
@@ -13,7 +13,10 @@ monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ve
 
 # Ledger overview
 
-[!INCLUDE [SQL Server 2022 Azure SQL Database](../../../includes/applies-to-version/sqlserver2022-asdb.md)]
+[!INCLUDE [SQL Server 2022 Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
+
+> [!NOTE]
+> Ledger in Azure SQL Managed Instance is currently in public preview.
 
 Establishing trust around the integrity of data stored in database systems has been a longstanding problem for all organizations that manage financial, medical, or other sensitive data. The ledger feature provides tamper-evidence capabilities in your database. You can cryptographically attest to other parties, such as auditors or other business parties, that your data hasn't been tampered with.
 
@@ -49,6 +52,7 @@ Ledger provides a solution for these networks. Participants can verify the integ
 
 - Learn how [Lenovo is reinforcing customer trust using ledger in Azure SQL Database](https://customers.microsoft.com/story/1497685499820529889-lenovo-manufacturing-azure-SQL-database-ledger) by watching this [video](https://videos.microsoft.com/customer-stories/watch/xEenNHQerYdRyYqwdYLyXi).
 - [RTGS.global using ledger in Azure SQL Database to establish trust with banks around the world](https://customers.microsoft.com/story/1379614319255768839-rtgs-partner-professional-services-azure-sql).
+- [Qode Health Solutions secures COVID-19 vaccination records with the ledger feature in Azure SQL Database](https://customers.microsoft.com/en-us/story/1595119379301789552-qode-professional-services-azure-sql-database) 
 
 ### Trusted off-chain storage for blockchain
 
@@ -104,9 +108,6 @@ When a block is formed, its associated database digest is published and stored o
 3. Modify the digests to represent the updated hash of the transactions in the block.
 
 Ledger provides the ability to automatically generate and store the database digests in [immutable storage](/azure/storage/blobs/immutable-storage-overview) or [Azure Confidential Ledger](/azure/confidential-ledger/index), to prevent tampering. Alternatively, users can manually generate database digests and store them in the location of their choice. Database digests are used for later verifying that the data stored in ledger tables hasn't been tampered with.
-
-> [!NOTE]
-> [Automatic digest management](ledger-how-to-enable-automatic-digest-storage.md) is only supported in Azure SQL Database and [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] or higher. Managing digests manually is supported both in Azure SQL Database and SQL Server.
 
 ### Ledger verification
 

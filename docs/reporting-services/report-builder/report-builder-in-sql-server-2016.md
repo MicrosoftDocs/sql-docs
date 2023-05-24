@@ -42,7 +42,7 @@ You can also publish a paginated report to the Power BI service. If so, we recom
   
 -   **Report from a variety of data sources.** Build reports using data from any data source type that has a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-managed data provider, OLE DB provider, or ODBC data source. You can create reports that use relational and multidimensional data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], Oracle, Hyperion, and other databases. You can use an XML data processing extension to retrieve data from any XML data source. You can use table-valued functions to design custom data sources.  
   
--   **Modify existing reports.** By using [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], you can customize and update reports that were created in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]Report Designer.  
+-   **Modify existing reports.** By using [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], you can customize and update reports that were created in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] Report Designer.  
   
 -   **Modify your data** by filtering, grouping, and sorting data, or by adding formulas or expressions.  
 -   **Add charts, gauges, sparklines, and indicators** to summarize data in a visual format, and present large volumes of aggregated information at a glance.  

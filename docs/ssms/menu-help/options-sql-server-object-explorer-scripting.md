@@ -12,9 +12,7 @@ f1_keywords:
   - "VS.ToolsOptionsPages.ObjectExplorerScripting"
   - "VS.ToolsOptionsPages.Sql_Server_Object_Explorer.ObjectExplorerScripting"
 ---
-
 # Options (SQL Server Object Explorer - Scripting)
-
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Use this page to set scripting options that apply to the following commands on object context menus in **Object Explorer**:  

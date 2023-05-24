@@ -18693,7 +18693,7 @@ items:
         - name: XACT_ABORT
           href: t-sql/statements/set-xact-abort-transact-sql.md
       - name: Videos
-        href: t-sql/videos-tsql.md
+        href: t-sql/videos-transact-sql.md
   - name: xQuery
     href: xquery/xquery-language-reference-sql-server.md
     items:

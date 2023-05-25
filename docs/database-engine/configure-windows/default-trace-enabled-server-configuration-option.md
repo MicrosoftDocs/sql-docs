@@ -1,5 +1,5 @@
 ---
-title: "default trace enabled Server Configuration Option"
+title: "default trace enabled (server configuration option)"
 description: "Learn about the default trace enabled option. Find out how default tracing can help with troubleshooting."
 author: rwestMSFT
 ms.author: randolphwest
@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "traces [SQL Server], logs"
   - "default trace enabled option"
 ---
-# default trace enabled Server Configuration Option
+# default trace enabled (server configuration option)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Use the **default trace enabled** option to enable or disable the default trace log files. The default trace functionality provides a rich, persistent log of activity and changes primarily related to the configuration options.  

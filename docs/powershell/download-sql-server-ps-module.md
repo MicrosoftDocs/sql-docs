@@ -37,7 +37,7 @@ For help topics, go to:
 [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md), doesn't install either PowerShell module. To use PowerShell with SSMS, install the **SqlServer** module from the [PowerShell Gallery](https://www.powershellgallery.com/packages/Sqlserver).
 
 > [!NOTE]  
-> SQL Server Management Studio (SSMS) 16.x (and earlier) included a version the **SqlServer** module.
+> SQL Server Management Studio (SSMS) 16.x (and earlier versions) included a version the **SqlServer** module.
 
 ## Azure Data Studio
 

@@ -397,7 +397,7 @@ A deadlock typically occurs when several long-running transactions execute concu
   
 Keeping transactions in one batch minimizes network roundtrips during a transaction, reducing possible delays in completing the transaction and releasing locks.  
 
-For more about update locks, see [Transaction locking and row versioning guide](sql-server-transaction-locking-and-row-versioning-guide.md#update-locks)
+For more about update locks, see [Transaction locking and row versioning guide](sql-server-transaction-locking-and-row-versioning-guide.md#update).
   
 ### Use a lower isolation level
 

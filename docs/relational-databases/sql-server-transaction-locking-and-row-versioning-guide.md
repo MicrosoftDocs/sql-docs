@@ -758,7 +758,7 @@ In most cases, the [!INCLUDE[ssDE-md](../includes/ssde-md.md)] delivers the best
 
     - [Optimized locking](performance/optimized-locking.md) offers an improved transaction locking mechanism that reduces lock memory consumption and blocking for concurrent transactions. **Lock escalation is far less likely to ever occur when optimized locking is enabled.**
     - Avoid using [table hints with optimized locking](performance/optimized-locking.md#avoid-locking-hints). Table hints may reduce the effectiveness of optimized locking.
-    - Enable [READ_COMMITTED_SNAPSHOT](../t-sql/statements/alter-database-transact-sql-set-options.md#read_committed_snapshot--on--off-) in the database for the most benefit from optimized locking. This is the default isolation level in [!INCLUDE[Azure SQL Database](../../includes/ssazure_md.md)].
+    - Enable [READ_COMMITTED_SNAPSHOT](../t-sql/statements/alter-database-transact-sql-set-options.md#read_committed_snapshot--on--off-) in the database for the most benefit from optimized locking. This is the default isolation level in [!INCLUDE[Azure SQL Database](../includes/ssazure_md.md)].
     - Optimized locking requires [accelerated database recovery (ADR)](/azure/azure-sql/accelerated-database-recovery) to be enabled on the database.
 
 If an instance of the [!INCLUDE[ssDE-md](../includes/ssde-md.md)] generates a lot of locks and is seeing frequent lock escalations, consider reducing the amount of locking with the following strategies:

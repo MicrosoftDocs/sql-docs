@@ -270,16 +270,18 @@ In the previous query example, only table `t3` will use the repeatable read isol
 Currently, optimized locking is available in [!INCLUDE[Azure SQL Database](../../includes/ssazure_md.md)].
 
 Optimized locking is available in the following service tiers:
+
 - all DTU service tiers
 - all vCore service tiers, including provisioned and serverless
 
 Optimized locking is not currently available in:
+
 - [!INCLUDE [Azure SQL Managed Instance](../../includes/ssazuremi_md.md)]
 - [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]
 
 ### Is optimized locking on by default in both new and existing databases?
 
-Where currently supported, yes.
+In [!INCLUDE[Azure SQL Database](../../includes/ssazure_md.md)], yes.
 
 ### How can I detect if optimized locking is enabled?
 

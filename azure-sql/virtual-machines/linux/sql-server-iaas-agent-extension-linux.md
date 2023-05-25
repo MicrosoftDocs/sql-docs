@@ -67,8 +67,6 @@ Go to your **Virtual machine** resource in the Azure portal (not the *SQL virtua
 ![Check the Status of the SQL Server IaaS Agent extension SqlIaaSExtension in the Azure portal](../windows/media/sql-server-iaas-agent-extension-automate-management/azure-rm-sql-server-iaas-agent-portal.png)
 
 
-
-
 ### Azure PowerShell
 
 You can also use the **Get-AzVMSqlServerExtension** Azure PowerShell cmdlet:

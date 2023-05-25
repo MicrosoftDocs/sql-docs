@@ -13,7 +13,7 @@ ms.custom:
 # Hyperscale elastic pools overview in Azure SQL Database
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-This article provides an overview of Hyperscale elastic pools in Azure SQL Database. 
+This article provides an overview of Hyperscale elastic pools in Azure SQL Database. For examples to create, scale, or move databases into a Hyperscale elastic pool by using the Azure CLI or PowerShell, review [Working with Hyperscale elastic pools using command-line tools](./hyperscale-elastic-pool-command-line.md)
 
 > [!NOTE]
 > Elastic pools for Hyperscale databases are currently in preview. 
@@ -103,7 +103,7 @@ During preview, consider the following limitations:
 
 ## Next steps
 
-- For examples on creating, scaling, and moving databases into a Hyperscale elastic pool, see [Working with Hyperscale elastic pools using command-line tools](./hyperscale-elastic-pool-command-line.md).
+- For examples to create, scale, and move databases into a Hyperscale elastic pool by using the Azure CLI or PowerShell, review [Working with Hyperscale elastic pools using command-line tools](./hyperscale-elastic-pool-command-line.md).
 - For pricing information, see [Elastic pool pricing](https://azure.microsoft.com/pricing/details/sql-database/elastic).
 - To scale elastic pools, see [Scale elastic pools](elastic-pool-scale.md) and [Scale an elastic pool - sample code](scripts/monitor-and-scale-pool-powershell.md).
 - To learn more about design patterns for SaaS applications by using elastic pools, see [Design patterns for multitenant SaaS applications with SQL Database](saas-tenancy-app-design-patterns.md).

@@ -498,7 +498,7 @@ Suppose you wanted to run the preceding Transact-SQL sample on Microsoft SQL Ser
 
 - For simplicity, you would want to completely replace use of the Azure Storage container with a simple file such as `C:\myeventdata.xel`. The file would be written to the local hard drive of the computer that hosts SQL Server.
 - You would not need any kind of Transact-SQL statements for `CREATE MASTER KEY` and `CREATE CREDENTIAL`.
-- In the `CREATE EVENT SESSION` statement, in its `ADD TARGET` clause, you would replace the http value assigned made to `filename=` with a full path string like `C:\myfile.xel`. For more information, see [CREATE EVENT SESSION (Transact-SQL)](../../docs/t-sql/statements/create-event-session-transact-sql.md).
+- In the `CREATE EVENT SESSION` statement, in its `ADD TARGET` clause, you would replace the http value assigned made to `filename=` with a full path string like `C:\myfile.xel`. For more information, see [CREATE EVENT SESSION (Transact-SQL)](/sql/t-sql/statements/create-event-session-transact-sql).
 
   - An Azure Storage account is not needed.
 

@@ -4,7 +4,7 @@ description: Release notes for SQL Server Management Studio (SSMS).
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan
-ms.date: 05/24/2023
+ms.date: 05/25/2023
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
@@ -44,7 +44,6 @@ SSMS 19.1 is the latest general availability (GA) release of SSMS. If you need a
 | General SSMS | Changed the system browser setting, within **Tools > Options > Azure Services**, to default to True. The external browser will be used, instead of the legacy embedded browser. |
 | General SSMS | Removed Vulnerability Assessment from SSMS. |
 | Link feature for Azure SQL Managed Instance | Added Network Checker wizard, providing the capability to test the network connection and ports prior to creating [the link](/azure/azure-sql/managed-instance/managed-instance-link-feature-overview). |
-| Link feature for Azure SQL Managed Instance | Added "Test Connection" wizard, providing the capability to test the network connection and ports prior to creating [the link](/azure/azure-sql/managed-instance/managed-instance-link-feature-overview). |
 | Link feature for Azure SQL Managed Instance | Added an advanced network troubleshooting capability within the existing link creation wizard.  This provides the capability to troubleshoot network connectivity issues while [link](/azure/azure-sql/managed-instance/managed-instance-link-feature-overview) creation is in progress. |
 | Object Explorer | Removed script header text when selecting the top 1000 rows.  See [Remove the /****** Script for SelectTopNRows command from SSMS ******/ comment when "Select Top 1000 Rows](https://feedback.azure.com/d365community/idea/393fae39-3e7a-ed11-a81b-000d3ae5ae95). |
 | PowerShell | Added ability for users to choose the version of PowerShell to use when launched from SSMS. |

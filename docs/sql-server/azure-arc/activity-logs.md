@@ -32,4 +32,6 @@ If any changes are associated with the event, you'll see a list of changes that 
 
 ![Screenshot that shows the Change history list and tab for an event.](media/monitoring/view-change-history.png)
 
-For more information on Activity Logs and it's retention visit [Azure Monitor activity log](articles/azure-monitor/essentials/activity-log.md).
+## Next Steps
+
+For more information on Activity Logs and it's retention visit [Azure Monitor activity log](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/activity-log).

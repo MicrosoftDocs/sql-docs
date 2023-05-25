@@ -5,7 +5,7 @@ description: A how-to guide on creating, updating, and utilizing database level 
 author: strehan1993
 ms.author: strehan
 ms.reviewer: vanto
-ms.date: 05/23/2023
+ms.date: 05/25/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: how-to
@@ -396,6 +396,10 @@ An example of the `encryption_protector` and `keys_to_add` parameter is:
 
 The following are examples of retrieving the database level customer-managed keys for a database. The ARM resource `Microsoft.Sql/servers/databases` by default only shows the TDE protector and managed identity configured on the database. To expand the full list of keys use the parameter, `-ExpandKeyList`. Additionally, filters such as `-KeysFilter "current"` and a point in time value (for example, `2023-01-01`) can be used to retrieve the current keys used and keys used in the past at a specific point in time. These filters are only supported for individual database queries and not for server level queries.
 
+# [Portal](#tab/azure-portal2)
+
+To view the database level customer-managed keys in the [Azure portal](https://portal.azure.com), go to the **Transparent data encryption (preview)** menu of the SQL database resource.
+
 # [Azure CLI](#tab/azure-cli2)
 
 For information on installing the current release of Azure CLI, see [Install the Azure CLI](/cli/azure/install-azure-cli) article.
@@ -486,7 +490,11 @@ Get-AzSqlDatabase -DatabaseName $db.DatabaseName -ServerName $db.ServerName -Res
 
 ## Revalidate the database level customer-managed key on an Azure SQL Database
 
-In case of an inaccessible TDE protector as described in [Transparent Data Encryption (TDE) with CMK](transparent-data-encryption-byok-overview.md), once the key access has been corrected, revalidate key operation can be used to make the database accessible. See the following commands for examples.
+In case of an inaccessible TDE protector as described in [Transparent Data Encryption (TDE) with CMK](transparent-data-encryption-byok-overview.md), once the key access has been corrected, a revalidate key operation can be used to make the database accessible. See the following instructions or commands for examples.
+
+# [Portal](#tab/azure-portal2)
+
+Using the [Azure portal](https://portal.azure.com), find your SQL database resource. Once you have selected your SQL database resource, go to the **Transparent data encryption (preview)** menu under the **Security** settings. If the database has lost access to the Azure Key Vault, a **Revalidate key** button will appear, and you'll have the option to revalidate the existing key by selecting **Retry existing key**, or another key by selecting **Select backup key**.
 
 # [Azure CLI](#tab/azure-cli2)
 
@@ -519,6 +527,13 @@ POST https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/
 ## Revert the database level customer-managed key on an Azure SQL Database
 
 A database configured with database level CMK can be reverted to server level encryption if the server is configured with a service-managed key using the following commands.
+
+# [Portal](#tab/azure-portal2)
+
+To revert the database level customer-managed key setting to server level encryption key in the [Azure portal](https://portal.azure.com), go to the **Transparent data encryption (preview)** menu of the SQL database resource. Select **Server level encryption key** and select **Save** to save the settings.
+
+> [!NOTE]
+> In order to use the **Server level encryption key** setting for individual databases, the logical server for the Azure SQL Database must be configured to use **Service-managed key** for TDE.
 
 # [Azure CLI](#tab/azure-cli2)
 

@@ -90,6 +90,8 @@
       href: extensions/data-virtualization-extension.md
     - name: Extension for Oracle
       href: extensions/extension-for-oracle.md
+    - name: GitHub Copilot extension
+      href: extensions/github-copilot-extension.md
     - name: Kusto extension
       href: extensions/kusto-extension.md
     - name: Machine Learning extension

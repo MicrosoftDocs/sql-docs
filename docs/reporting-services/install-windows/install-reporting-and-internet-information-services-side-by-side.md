@@ -38,9 +38,9 @@ You can install and run SQL Server Reporting Services (SSRS) and Internet Inform
   
 |Example|Request|  
 |-------------|-------------|  
-|`https://123.234.345.456:80/reports`|Receives all requests that are sent to `https://123.234.345.456/reports` or `https://\<computername>/reports` if a domain name service can resolve the IP address to that host name.|  
+|`https://123.234.345.456:80/reports`|Receives all requests that are sent to `https://123.234.345.456/reports` or `https://<computername>/reports` if a domain name service can resolve the IP address to that host name.|  
 |`https://+:80/reports`|Receives any requests that are sent to any IP address or host name that is valid for that computer as long as the URL contains the "reports" virtual directory name.|  
-|`https://123.234.345.456:80`|Receives any request that specifies `https://123.234.345.456` or `https://\<computername>` if a domain name service can resolve the IP address to that host name.|  
+|`https://123.234.345.456:80`|Receives any request that specifies `https://123.234.345.456` or `https://<computername>` if a domain name service can resolve the IP address to that host name.|  
 |`https://+:80`|Receives requests that are not already received by other applications, for any application endpoints that are mapped to **All Assigned**.|  
 |`https://*:80`|Receives requests that are not already received by other applications, for application endpoints that are mapped to **All Unassigned**.|  
   

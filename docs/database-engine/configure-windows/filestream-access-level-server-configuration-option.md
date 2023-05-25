@@ -1,5 +1,5 @@
 ---
-title: "filestream access level Server Configuration Option"
+title: "filestream access level (server configuration option)"
 description: "Become familiar with the filestream_access_level option. See how it changes the FILESTREAM access level for an instance of SQL Server."
 author: rwestMSFT
 ms.author: randolphwest
@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "FILESTREAM [SQL Server], access level"
   - "filestream access level"
 ---
-# filestream access level Server Configuration Option
+# filestream access level (server configuration option)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Use the filestream_access_level option to change the FILESTREAM access level for this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

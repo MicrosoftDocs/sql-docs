@@ -4,7 +4,7 @@ description: This page describes some common vCore resource limits for elastic p
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 05/19/2023
+ms.date: 05/25/2023
 ms.service: sql-database
 ms.subservice: elastic-pools
 ms.topic: reference
@@ -529,6 +529,89 @@ For important information about M-series hardware availability, see [Azure offer
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using standard-series (Gen5) and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on standard-series (Gen5) there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
 
 <sup>5</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+
+## Hyperscale - provisioned compute - standard series (Gen5)
+
+> [!NOTE]
+> Elastic pools for Hyperscale databases are currently in preview.
+
+### Gen5 compute generation (part 1 of 2)
+
+| Compute size (service objective) | HS_Gen5_4 | HS_Gen5_6 | HS_Gen5_8 | HS_Gen5_10 | HS_Gen5_12 | HS_Gen5_14 |
+|-:|-:|-:|-:|-:|-:|-:|
+| Compute generation | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 |
+| vCores | 4 | 6 | 8 | 10 | 12 | 14 |
+| Memory (GB) | 20.8 | 31.1 | 41.5 | 51.9 | 62.3 | 72.7 |
+| Max number DBs per pool <sup>1</sup> | 25 | 25 | 25 | 25 | 25 | 25 |
+| [RBPEX](hyperscale-architecture.md#compute) Size | 3X Memory | 3X Memory | 3X Memory | 3X Memory | 3X Memory | 3X Memory |
+| Columnstore support | Yes | Yes | Yes | Yes | Yes | Yes |
+| In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A | N/A |
+| Max data size per pool (TB) | 100 | 100 | 100 | 100 | 100 | 100 |
+| `Tempdb` max data size (GB) | 128 | 192 | 256 | 320 | 384 | 448 |
+| Max local SSD IOPS per pool <sup>2</sup> | 18,000 | 27,000 | 36,000 | 45,000 | 54,000 | 63,000 |
+| Max log rate per pool (MBps ) | 125 | 125 | 125 | 125 | 125 | 125 |
+| Local read IO latency<sup>3</sup> | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms |
+| Remote read IO latency<sup>3</sup> | 1-5 ms | 1-5 ms | 1-5 ms | 1-5 ms | 1-5 ms | 1-5 ms |
+| Write IO latency<sup>3</sup> | 3-5 ms | 3-5 ms | 3-5 ms | 3-5 ms | 3-5 ms | 3-5 ms |
+| Storage type | Multi-tiered<sup>4</sup> | Multi-tiered<sup>4</sup> | Multi-tiered<sup>4</sup> | Multi-tiered<sup>4</sup> | Multi-tiered<sup>4</sup> | Multi-tiered<sup>4</sup> |
+| Max concurrent workers per pool <sup>5</sup> | 420 | 630 | 840 | 1050 | 1260 | 1470 |
+| Max concurrent external connections per pool <sup>6</sup> | 42 | 63 | 84 | 105 | 126 | 147 |
+| Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
+| Min/max elastic pool vCore choices per database | 0, 0.25, 0.5, 1, 2, 4 | 0, 0.25, 0.5, 1, 2, 4, 6 | 0, 0.25, 0.5, 1, 2, 4, 6, 8 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14 |
+| Secondary pool replicas | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 |
+| Multi-AZ | Not supported | Not supported | Not supported | Not supported | Not supported | Not supported |
+| Read Scale-out | Yes | Yes | Yes | Yes | Yes | Yes |
+
+<sup>1</sup> See [Resource management in dense elastic pools](elastic-pool-resource-management.md) for additional considerations.
+
+<sup>2</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. Review [Hyperscale service tier](hyperscale-elastic-pool-overview.md#architecture) and [Hyperscale service tier](service-tier-hyperscale.md#distributed-functions-architecture) for more information.
+
+<sup>3</sup> Besides local SSD IO, workloads will use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS will depend on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
+
+<sup>4</sup> Latency is 1-2 ms for data on local compute replica SSD, which caches most used data pages. Higher latency for data retrieved from page servers.
+
+<sup>5</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using standard-series (Gen5) and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on standard-series (Gen5) there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
+
+<sup>6</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+
+### Gen5 compute generation (part 2 of 2)
+
+| Compute size (service objective) | HS_Gen5_16 | HS_Gen5_18 | HS_Gen5_20 | HS_Gen5_24 | HS_Gen5_32 | HS_Gen5_40 | HS_Gen5_80 |
+|:-|-:|-:|-:|-:|-:|-:|-:|
+| Compute generation | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 |
+| vCores | 16 | 18 | 20 | 24 | 32 | 40 | 80 |
+| Max number DBs per pool <sup>1</sup> | 25 | 25 | 25 | 25 | 25 | 25 |
+| Memory (GB) | 83 | 93.4 | 103.8 | 124.6 | 166.1 | 207.6 | 415.2 |
+| [RBPEX](hyperscale-architecture.md#compute) Size | 3X Memory | 3X Memory | 3X Memory | 3X Memory | 3X Memory | 3X Memory | 3X Memory |
+| Columnstore support | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| Max data size per pool(TB) | 100 | 100 | 100 | 100 | 100 | 100 | 100 |
+| Tempdb max data size (GB) | 512 | 576 | 640 | 768 | 1024 | 1280 | 2560 |
+| Max local SSD IOPS per pool <sup>2</sup> | 72,000 | 81,000 | 90,000 | 108,000 | 144,000 | 180,000 | 256,000 |
+| Max log rate per pool (MBps) | 125 | 125 | 125 | 125 | 125 | 125 | 125 |
+| Local read IO latency<sup>3</sup> | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms |
+| Remote read IO latency<sup>3</sup> | 1-5 ms | 1-5 ms | 1-5 ms | 1-5 ms | 1-5 ms | 1-5 ms | 1-5 ms |
+| Write IO latency<sup>3</sup> | 3-5 ms | 3-5 ms | 3-5 ms | 3-5 ms | 3-5 ms | 3-5 ms | 3-5 ms |
+| Storage type | Multi-tiered<sup>4</sup> | Multi-tiered<sup>4</sup> | Multi-tiered<sup>4</sup> | Multi-tiered<sup>4</sup> | Multi-tiered<sup>4</sup> | Multi-tiered<sup>4</sup> | Multi-tiered<sup>4</sup> |
+| Max concurrent workers per pool <sup>5</sup> | 1680 | 1890 | 2100 | 2520 | 3360 | 4200 | 8400 |
+| Max concurrent external connections per pool <sup>6</sup> | 150 | 150 | 150 | 150 | 150 | 150 | 150 |
+| Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
+| Min/max elastic pool vCore choices per database | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 32 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 32, 40 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 32, 40, 80 |
+| Secondary replicas | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 |
+| Multi-AZ | Not supported | Not supported | Not supported | Not supported | Not supported | Not supported | Not supported |
+| Read Scale-out | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+
+<sup>1</sup> See [Resource management in dense elastic pools](elastic-pool-resource-management.md) for additional considerations.
+
+<sup>2</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. Review [Hyperscale service tier](hyperscale-elastic-pool-overview.md#architecture) and [Hyperscale service tier](service-tier-hyperscale.md#distributed-functions-architecture) for more information.
+
+<sup>3</sup> Besides local SSD IO, workloads will use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS will depend on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
+
+<sup>4</sup> Latency is 1-2 ms for data on local compute replica SSD, which caches most used data pages. Higher latency for data retrieved from page servers.
+
+<sup>5</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using standard-series (Gen5) and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on standard-series (Gen5) there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
+
+<sup>6</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
 ## Database properties for pooled databases
 

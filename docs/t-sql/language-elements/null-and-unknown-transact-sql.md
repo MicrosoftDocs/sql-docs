@@ -9,11 +9,11 @@ ms.subservice: t-sql
 ms.topic: reference
 dev_langs:
   - "TSQL"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current || = azure-sqldw-latest"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current || = azure-sqldw-latest||=fabric"
 ---
 # NULL and UNKNOWN (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
   NULL indicates that the value is unknown. A null value is different from an empty or zero value. No two null values are equal. Comparisons between two null values, or between a null value and any other value, return unknown because the value of each NULL is unknown.  
   

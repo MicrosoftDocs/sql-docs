@@ -17,16 +17,16 @@ helpviewer_keywords:
   - "sys.dm_exec_requests dynamic management view"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest||=fabric"
 ---
 # sys.dm_exec_requests (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
 Returns information about each request that is executing in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information about requests, see the [Thread and Task Architecture Guide](../thread-and-task-architecture-guide.md).
 
-> [!NOTE]  
-> To call this from dedicated SQL pool in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], see [sys.dm_pdw_exec_requests  (Transact-SQL)](sys-dm-pdw-exec-requests-transact-sql.md). For serverless SQL pool use `sys.dm_exec_requests`.
+> [!NOTE]
+> To call this from dedicated SQL pool in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], see [sys.dm_pdw_exec_requests (Transact-SQL)](sys-dm-pdw-exec-requests-transact-sql.md). For serverless SQL pool or [!INCLUDE[fabric](../../includes/fabric.md)] use `sys.dm_exec_requests`.
 
 | Column name | Data type | Description |
 | --- | --- | --- |

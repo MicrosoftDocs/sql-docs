@@ -25,10 +25,10 @@ helpviewer_keywords:
   - "CATCH block"
 dev_langs:
   - "TSQL"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current||=fabric"
 ---
 # TRY...CATCH (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
 
   Implements error handling for [!INCLUDE[tsql](../../includes/tsql-md.md)] that is similar to the exception handling in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# and [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++ languages. A group of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements can be enclosed in a TRY block. If an error occurs in the TRY block, control is usually passed to another group of statements that is enclosed in a CATCH block.  

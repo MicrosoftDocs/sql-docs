@@ -8,12 +8,12 @@ ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: conceptual
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest ||=fabric"
 ---
 
 # Aliasing (Azure Synapse Analytics, Parallel Data Warehouse)
 
-[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
+[!INCLUDE[applies-to-version/asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/asa-pdw-fabricse-fabricdw.md)]
 
 Aliasing allows the temporary substitution of a short and easy-to-remember string in place of a table or column name in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] queries. Table aliases are often used in JOIN queries because the JOIN syntax requires fully qualified object names when referencing columns.  
 

@@ -18,11 +18,11 @@ helpviewer_keywords:
   - "datetime2 data type [SQL Server]"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # datetime2 (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
 Defines a date that is combined with a time of day that is based on 24-hour clock. **datetime2** can be considered as an extension of the existing **datetime** type that has a larger date range, a larger default fractional precision, and optional user-specified precision.
   
@@ -38,7 +38,7 @@ Defines a date that is combined with a time of day that is based on 24-hour cloc
 |Time zone offset range|None|  
 |Element ranges|YYYY is a four-digit number, ranging from 0001 through 9999, that represents a year.<br /><br /> MM is a two-digit number, ranging from 01 to 12, that represents a month in the specified year.<br /><br /> DD is a two-digit number, ranging from 01 to 31 depending on the month, that represents a day of the specified month.<br /><br /> hh is a two-digit number, ranging from 00 to 23, that represents the hour.<br /><br /> mm is a two-digit number, ranging from 00 to 59, that represents the minute.<br /><br /> ss is a two-digit number, ranging from 00 to 59, that represents the second.<br /><br /> n* is a zero- to seven-digit number from 0 to 9999999 that represents the fractional seconds. In Informatica, the fractional seconds will be truncated when n > 3.|  
 |Character length|19 positions minimum (YYYY-MM-DD hh:mm:ss ) to 27 maximum (YYYY-MM-DD hh:mm:ss.0000000)|  
-|Precision, scale|0 to 7 digits, with an accuracy of 100ns. The default precision is 7 digits.|  
+|Precision, scale|0 to 7 digits, with an accuracy of 100ns. The default precision is 7 digits.<br /><br /> In [!INCLUDE [fabric](../../includes/fabric.md)], this can be an integer from 0 to 6, with no default. Precision must be specified in [!INCLUDE [fabric](../../includes/fabric.md)].|  
 |Storage size <sup>1</sup>|6 bytes for precision less than 3.<br/>7 bytes for precision 3 or 4.<br/>All other precision require 8 bytes.<sup>2</sup>|  
 |Accuracy|100 nanoseconds|  
 |Default value|1900-01-01 00:00:00|  

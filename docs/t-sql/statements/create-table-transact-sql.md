@@ -541,7 +541,7 @@ In the `CREATE TABLE` statement, the `NOT FOR REPLICATION` clause can be specifi
 
 #### GENERATED ALWAYS AS { ROW | TRANSACTION_ID | SEQUENCE_NUMBER } { START | END } [ HIDDEN ] [ NOT NULL ]
 
-**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)].
 
 Specifies a column used by the system to automatically record information about row versions in the table and its history table (if the table is system versioned and has a history table). Use this argument with the `WITH SYSTEM_VERSIONING = ON` parameter to create system-versioned tables: temporal or ledger tables. For more information, see [updateable ledger tables](/azure/azure-sql/database/ledger-updatable-ledger-tables#updateable-ledger-tables-vs-temporal-tables) and [temporal tables](../../relational-databases/tables/temporal-tables.md).
 
@@ -1130,7 +1130,7 @@ Column and table indexes can be specified as part of the CREATE TABLE statement.
 
 #### <a id="generate-always-columns"></a> LEDGER = ON ( <ledger_option> [ ,... *n* ] ) | OFF
 
-**Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)].
 
 > [!NOTE]  
 > If the statement creates a ledger table, the `ENABLE LEDGER` permission is required.

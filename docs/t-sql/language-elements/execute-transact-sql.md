@@ -27,11 +27,11 @@ helpviewer_keywords:
   - "EXECUTE statement"
 dev_langs:
   - "TSQL"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current||=fabric"
 ---
 
 # EXECUTE (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
 Executes a command string or character string within a [!INCLUDE[tsql](../../includes/tsql-md.md)] batch, or one of the following modules: system stored procedure, user-defined stored procedure, CLR stored procedure, scalar-valued user-defined function, or extended stored procedure. The EXECUTE statement can be used to send pass-through commands to linked servers. Additionally, the context in which a string or command is executed can be explicitly set. Metadata for the result set can be defined by using the WITH RESULT SETS options.
   
@@ -43,10 +43,10 @@ Executes a command string or character string within a [!INCLUDE[tsql](../../inc
 ## Syntax  
 
 ::: moniker range=">=sql-server-ver15"
-The following code block shows the syntax in SQL Server 2019. Alternatively, see [syntax in SQL Server 2017 and earlier](execute-transact-sql.md?view=sql-server-2017&preserve-view=true) instead. 
+The following code block shows the syntax in SQL Server 2019 and later versions. Alternatively, see [syntax in SQL Server 2017 and earlier](execute-transact-sql.md?view=sql-server-2017&preserve-view=true) instead. 
 
 ```syntaxsql
--- Syntax for SQL Server 2019
+-- Syntax for SQL Server 2019 and later versions
   
 Execute a stored procedure or function  
 [ { EXEC | EXECUTE } ]  
@@ -260,6 +260,29 @@ Execute a character string
 ```  
 
 
+```syntaxsql
+-- Syntax for Microsoft Fabric
+
+-- Execute a stored procedure  
+[ { EXEC | EXECUTE } ]  
+    procedure_name   
+        [ { value | @variable [ OUT | OUTPUT ] } ] [ ,...n ]  
+        [ WITH <execute_option> [ ,...n ] ]  }  
+[;]  
+  
+-- Execute a SQL string  
+{ EXEC | EXECUTE }  
+    ( { @string_variable | [ N ] 'tsql_string' } [ +...n ] )  
+[;]  
+
+<execute_option>::=  
+{  
+        RECOMPILE   
+    | { RESULT SETS UNDEFINED }   
+    | { RESULT SETS NONE }   
+    | { RESULT SETS ( <result_sets_definition> [,...n ] ) }  
+}   
+```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 

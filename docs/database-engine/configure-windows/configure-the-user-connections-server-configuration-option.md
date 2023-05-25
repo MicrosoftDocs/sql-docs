@@ -1,5 +1,5 @@
 ---
-title: Configure the user connections Server Configuration Option
+title: Configure the user connections (server configuration option)
 description: "Find out about the user connections option. See how it can help you avoid overloading an instance of SQL Server with too many concurrent connections."
 author: rwestMSFT
 ms.author: randolphwest
@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "connections [SQL Server], simultaneous"
 ---
 
-# Configure the user connections Server Configuration Option
+# Configure the user connections (server configuration option)
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 

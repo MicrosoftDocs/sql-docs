@@ -8,7 +8,7 @@ ms.date: 04/06/2022
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: overview
-ms.custom: sqldbrb=1
+ms.custom: sqldbrb=1, build-2023, build-2023-dataai
 ---
 
 # What is Azure SQL Managed Instance?
@@ -115,7 +115,7 @@ Find more information about the differences between service tiers in [SQL Manage
 
 ## Management operations
 
-Azure SQL Managed Instance provides management operations that you can use to automatically deploy new managed instances, update instance properties, and delete instances when no longer needed. Detailed explanation of management operations can be found on [managed instance management operations overview](management-operations-overview.md) page.
+Azure SQL Managed Instance provides management operations that you can use to automatically deploy new managed instances, update instance properties, and delete instances when no longer needed. Detailed explanation of management operations can be found on [Azure SQL Managed Instance management operations overview](management-operations-overview.md) page.
 
 ## Advanced security and compliance
 

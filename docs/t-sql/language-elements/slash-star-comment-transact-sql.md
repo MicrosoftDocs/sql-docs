@@ -18,13 +18,13 @@ helpviewer_keywords:
   - "comments [SQL Server]"
 dev_langs:
   - "TSQL"
-monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqledge-current || = azure-sqldw-latest || >= aps-pdw-2016"
+monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqledge-current || = azure-sqldw-latest || >= aps-pdw-2016 ||=fabric"
 ---
 
 # Slash Star (Block Comment) (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
-  Indicates user-provided text. The text between the /* and \*/ is not evaluated by the server.  
+  Indicates user-provided text. The text between the `/*` and `*/` is not evaluated by the server.  
   
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

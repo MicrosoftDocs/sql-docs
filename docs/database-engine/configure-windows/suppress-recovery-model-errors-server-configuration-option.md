@@ -1,6 +1,6 @@
 ---
-title: "Suppress recovery model errors - server configuration option"
-description: "Suppress recovery model errors - server configuration option"
+title: "Suppress recovery model errors (server configuration option)"
+description: "Suppress recovery model errors"
 author: MladjoA
 ms.author: mlandzic
 ms.date: "07/20/2020"
@@ -9,7 +9,7 @@ ms.subservice: configuration
 ms.topic: conceptual
 ---
 
-# Suppress recovery model errors server configuration option
+# Suppress recovery model errors (server configuration option)
 
 [!INCLUDE[_asmi](../../includes/applies-to-version/asmi.md)]
 

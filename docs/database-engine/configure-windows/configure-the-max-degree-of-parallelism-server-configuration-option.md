@@ -1,5 +1,5 @@
 ---
-title: "Configure the max degree of parallelism Server Configuration Option"
+title: "Configure the max degree of parallelism (server configuration option)"
 description: Learn about the max degree of parallelism (MAXDOP) option. See how to use it to limit the number of processors that SQL Server uses in parallel plan execution.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "MaxDop"
 ---
 
-# Configure the max degree of parallelism Server Configuration Option
+# Configure the max degree of parallelism (server configuration option)
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 

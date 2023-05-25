@@ -3,8 +3,8 @@ title: SQL Server docs navigation tips
 description: Tips and tricks for navigating the SQL Server technical documentation - explains such things as the hub page, the table of contents, the header, as well as how to use the breadcrumbs and how to use the version filter.
 author: MashaMSFT
 ms.author: mathoma
-ms.reviewer: randolphwest
-ms.date: 01/24/2023
+ms.reviewer: randolphwest, wiassaf
+ms.date: 05/10/2023
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: conceptual
@@ -87,6 +87,7 @@ The SQL Docs content covers several product lines that work on-premises and in t
 | **Azure Database for MariaDB** | Fully managed <sup>2</sup> | A relational database service based on the MariaDB open-source database engine. A fully managed database-as-a-service (DBaaS) that can handle mission-critical workloads with predictable performance, security, high availability, and dynamic scalability. |
 | **Azure Database for MySQL** | Fully managed <sup>2</sup> | A relational database service based on the MySQL open-source database engine. A fully managed database-as-a-service (DBaaS) that can handle mission-critical workloads with predictable performance, security, high availability, and dynamic scalability. |
 | **Azure Database for PostgreSQL** | Fully managed <sup>2</sup> | A relational database service based on the PostgreSQL open-source database engine. A fully managed database-as-a-service (DBaaS) that can handle mission-critical workloads with predictable performance, security, high availability, and dynamic scalability. |
+| **[!INCLUDE [fabric](../includes/fabric.md)]** | Fully managed <sup>2</sup> | [[!INCLUDE [fabric](../includes/fabric.md)]](/fabric/data-warehouse/data-warehousing) provides two distinct data warehousing experiences. Each [!INCLUDE [fabric](../includes/fabric.md)] Lakehouse automatically includes a **[!INCLUDE [fabric-se](../includes/fabric-se.md)]** to enable data engineers to access a relational layer on top of physical data in the Lakehouse, thanks to automatic schema discovery. A Synapse Data Warehouse or **[!INCLUDE [fabric-dw](../includes/fabric-dw.md)]** in [!INCLUDE [fabric](../includes/fabric.md)] provides a "traditional" data warehouse and supports the full transactional T-SQL capabilities you would expect from an enterprise data warehouse. Either data warehousing experience exposes data to analysis and reporting tools using T-SQL/TDS end-point. |
 
 <sup>1</sup> Can be Azure Arc-enabled
 

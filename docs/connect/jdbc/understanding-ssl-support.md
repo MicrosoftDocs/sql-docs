@@ -66,7 +66,7 @@ During the TLS handshake, the server sends its public key certificate to the cli
 - The Common Name (CN) in the Subject or a DNS name in the Subject Alternate Name (SAN) of the certificate exactly matches the **serverName** value specified in the connection string or, if specified, the **hostNameInCertificate** property value.
 - A DNS name can include wild-card characters. Prior version 7.2, the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] doesn't support wild-card matching. That is, abc.com won't match \*.com but \*.com will match \*.com. With version 7.2 and up, standard certificate wild-card matching is supported.
 
-For use of TDS 8.0 with `strict` encryption, the **serverCertifcate** property value provides the path to a server certificate to be used for server certificate validation. This file must use the PEM file format. The certificate received from the server must match this certificate exactly.
+For use of TDS 8.0 with `strict` encryption, the **serverCertificate** property value provides the path to a server certificate to be used for server certificate validation. This file must use the PEM file format. The certificate received from the server must match this certificate exactly.
 
 ## See also
 

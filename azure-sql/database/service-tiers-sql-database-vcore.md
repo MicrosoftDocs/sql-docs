@@ -45,10 +45,10 @@ For help with choosing between the vCore and DTU purchasing models, see the [dif
 
 The vCore-based purchasing model has a provisioned compute tier and a [serverless](serverless-tier-overview.md) compute tier. In the provisioned compute tier, the compute cost reflects the total compute capacity continuously provisioned for the application independent of workload activity. Choose the resource allocation that best suits your business needs based on vCore and memory requirements, then scale resources up and down as needed by your workload. In the serverless compute tier for Azure SQL Database, compute resources are auto-scaled based on workload capacity and billed for the amount of compute used, per second.
 
-To summarize: 
+To summarize:
 
-- While the **provisioned compute tier** provides a specific amount of compute resources that are continuously provisioned independent of workload activity, the **serverless compute tier** auto-scales compute resources based on workload activity. 
-- While the **provisioned compute tier** bills for the amount of compute provisioned at a fixed price per hour, the **serverless compute tier** bills for the amount of compute used, per second.
+ - While the **provisioned compute tier** provides a specific amount of compute resources that are continuously provisioned independent of workload activity, the **serverless compute tier** auto-scales compute resources based on workload activity.
+ - While the **provisioned compute tier** bills for the amount of compute provisioned at a fixed price per hour, the **serverless compute tier** bills for the amount of compute used, per second.
 
 Regardless of the compute tier, three additional high availability secondary replicas are automatically allocated in the Business Critical service tier to provide high resiliency to failures and fast failovers. This makes the cost approximately 2.7 times higher than it is in the General Purpose service tier. Likewise, the higher storage cost per GB in the Business Critical service tier reflects the higher IO limits and lower latency of the local SSD storage.
 

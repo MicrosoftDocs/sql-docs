@@ -59807,12 +59807,17 @@
     {
       "source_path": "docs/ssms/object/options-sql-server-object-explorer-commands.md",
       "redirect_url": "/sql/ssms/menu-help/options-sql-server-object-explorer-commands",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "docs/ssms/object/options-sql-server-object-explorer-scripting-page.md",
       "redirect_url": "/sql/ssms/menu-help/options-sql-server-object-explorer-scripting",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
+    {
+      "source_path": "docs/relational-databases/system-stored-procedures/active-geo-replication-sp-wait-for-database-copy-sync.md",
+      "redirect_url": "/sql/relational-databases/system-stored-procedures/sp-wait-for-database-copy-sync-transact-sql",
+      "redirect_document_id": false
+    }
   ]
 }

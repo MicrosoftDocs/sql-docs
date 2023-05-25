@@ -4,18 +4,16 @@ description: Learn how to save on licensing costs by using a standby Azure SQL M
 author: strahinjas 
 ms.author: sstefanovic
 ms.reviewer: mathoma
-ms.date: 11/16/2022
+ms.date: 05/25/2023
 ms.service: sql-managed-instance
 ms.subservice: high-availability
 ms.topic: how-to
 ---
 
-# Configure a license-free standby replica for Azure SQL Managed Instance (preview)
+# Configure a license-free standby replica for Azure SQL Managed Instance
 
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
-This article describes how you can save on licensing costs by designating your read-only secondary managed instance for stand-by when using Azure SQL Managed Instance. 
-
-Currently, the feature to designate a managed instance as standby is in preview.
+This article describes how you can save on licensing costs by designating your read-only secondary managed instance for stand-by when using Azure SQL Managed Instance.
 
 ## Overview
 If you use a secondary Azure SQL Managed Instance deployment as a standby for disaster recovery and the secondary instance doesn't have any read workloads or applications connected to it, you can save on licensing costs by designating the replica as a *standby instance*.

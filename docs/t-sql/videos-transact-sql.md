@@ -1,5 +1,5 @@
 ---
-title: Programming databases with T-SQL for beginners videos
+title: Programming databases with T-SQL videos
 description: This page lists video content relevant for learning Transact-SQL (T-SQL).
 author: markingmyname
 ms.author: maghan
@@ -10,7 +10,7 @@ ms.topic: reference
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
-# Programming databases with T-SQL for beginners
+# Programming databases with T-SQL videos
 
 This page provides video content for learning about Transact-SQL (T-SQL).
 

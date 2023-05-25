@@ -4,7 +4,7 @@ description: "Requests SQL Server Managed Backup to Microsoft Azure to perform a
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/24/2023
+ms.date: 05/31/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -39,6 +39,7 @@ An error is returned if [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-
 EXEC managed_backup.sp_backup_on_demand
     [ @database_name = ] 'database name'
     , [ @type = ] { 'Database' | 'Log' }
+[ ; ]
 ```
 
 ## Arguments

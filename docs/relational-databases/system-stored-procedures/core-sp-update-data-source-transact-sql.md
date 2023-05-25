@@ -4,7 +4,7 @@ description: "Updates an existing row or inserts a new row in the management dat
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/24/2023
+ms.date: 05/31/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -35,32 +35,33 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
     , [ @named_instance = ] 'named_instance'
     , [ @days_until_expiration = ] days_until_expiration
     , [ @source_id = ] source_id OUTPUT
+[ ; ]
 ```
 
 ## Arguments
 
 #### [ @collection_set_uid = ] '*collection_set_uid*'
 
-The GUID for the collection set. *collection_set_uid* is **uniqueidentifier**, with no default value. To obtain the GUID, query the dbo.syscollector_collection_sets view in the `msdb` database.
+The GUID for the collection set. *@collection_set_uid* is **uniqueidentifier**, with no default value. To obtain the GUID, query the dbo.syscollector_collection_sets view in the `msdb` database.
 
 #### [ @machine_name = ] '*machine_name*'
 
-The name of the server that the collection set resides on. *machine_name* is **sysname** with no default value.
+The name of the server that the collection set resides on. *@machine_name* is **sysname** with no default value.
 
 #### [ @named_instance = ] '*named_instance*'
 
-The name of the instance for the collection set. *named_instance* is **sysname**, with no default value.
+The name of the instance for the collection set. *@named_instance* is **sysname**, with no default value.
 
 > [!NOTE]  
-> *named_instance* must be the fully qualified instance name, which consists of the computer name and the instance name in the form *computername*\\*instancename*.
+> *named_instance* must be the fully qualified instance name, which consists of the computer name and the instance name in the form `<computername>\<instancename>`.
 
 #### [ @days_until_expiration = ] *days_until_expiration*
 
-The number of days remaining in the snapshot data retention period. *days_until_expiration* is **smallint**.
+The number of days remaining in the snapshot data retention period. *@days_until_expiration* is **smallint**.
 
 #### [ @source_id = ] *source_id*
 
-The unique identifier for the source of the update. *source_id* is **int** and is returned as OUTPUT.
+The unique identifier for the source of the update. *@source_id* is **int** and is returned as OUTPUT.
 
 ## Return code values
 

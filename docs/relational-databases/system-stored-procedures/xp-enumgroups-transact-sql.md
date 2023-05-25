@@ -4,7 +4,7 @@ description: "Provides a list of local Microsoft Windows groups or a list of glo
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/26/2023
+ms.date: 05/31/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -17,6 +17,7 @@ dev_langs:
   - "TSQL"
 ---
 # xp_enumgroups (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Provides a list of local Microsoft Windows groups or a list of global groups that are defined in a specified Windows domain.

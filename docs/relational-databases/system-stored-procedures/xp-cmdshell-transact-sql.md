@@ -4,7 +4,7 @@ description: "Spawns a Windows command shell and passes in a string for executio
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/26/2023
+ms.date: 05/31/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -17,6 +17,7 @@ dev_langs:
   - "TSQL"
 ---
 # xp_cmdshell (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Spawns a Windows command shell and passes in a string for execution. Any output is returned as rows of text.
@@ -35,7 +36,7 @@ xp_cmdshell { 'command_string' } [ , NO_OUTPUT ]
 
 The string that contains a command to be passed to the operating system. *command_string* is **varchar(8000)** or **nvarchar(4000)**, with no default. *command_string* can't contain more than one set of double quotation marks. A single pair of quotation marks is required if any spaces are present in the file paths or program names referenced in *command_string*. If you have trouble with embedded spaces, consider using FAT 8.3 file names as a workaround.
 
-#### NO_OUTPUT
+#### NO_ OUTPUT
 
 An optional parameter, specifying that no output should be returned to the client.
 

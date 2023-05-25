@@ -4,7 +4,7 @@ description: "sp_query_store_remove_query (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/29/2023
+ms.date: 05/31/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -39,7 +39,7 @@ sp_query_store_remove_query [ @query_id = ] query_id
 
 #### [ @query_id = ] *query_id*
 
-The ID of the query to be removed from the Query Store. *@query_id* is a **bigint**, with no default.
+The ID of the query to be removed from the Query Store. *@query_id* is **bigint**, with no default.
 
 ## Return code values
 

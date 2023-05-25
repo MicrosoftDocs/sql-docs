@@ -4,7 +4,7 @@ description: "Pauses or resumes the SQL Server Managed Backup to Microsoft Azure
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/24/2023
+ms.date: 05/31/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -39,6 +39,7 @@ In other words, there's no check to determine:
 
 ```syntaxsql
 EXEC managed_backup.sp_backup_master_switch [ @new_state = ] { 0 | 1 }
+[ ; ]
 ```
 
 ## Arguments

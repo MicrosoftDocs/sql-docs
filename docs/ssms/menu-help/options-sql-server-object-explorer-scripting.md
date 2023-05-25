@@ -4,7 +4,7 @@ description: Description of options within the SQL Server Object Explorer - Scri
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan
-ms.date: 05/25/2023
+ms.date: 05/24/2023
 ms.service: sql
 ms.subservice: ssms
 ms.topic: ui-reference
@@ -56,7 +56,7 @@ Adds the USE DATABASE statement to the script to create database objects in the 
 ### Object scripting options  
 
 **Check for object existence**
-Check that an object with the given name exists before dropping or altering or that an object with the given name does not exist before creating. For more information, see [IF...ELSE (Transact-SQL)](../../t-sql/language-elements/if-else-transact-sql.md) and [EXISTS (Transact-SQL)](../../t-sql/language-elements/exists-transact-sql.md).
+Check that an object with the given name exists before dropping or altering or that an object with the given name doesn't exist before creating. For more information, see [IF...ELSE (Transact-SQL)](../../t-sql/language-elements/if-else-transact-sql.md) and [EXISTS (Transact-SQL)](../../t-sql/language-elements/exists-transact-sql.md).
 
 **Generate script for dependent objects**  
 Generates a script for other objects that are required when the script for the selected object is executed. Default is False.  
@@ -80,7 +80,7 @@ Includes permissions on database objects in the script. Default is True. For mor
 The following options apply only to scripts for tables or views.  
   
 **Convert user-defined data types to base types**  
-Converts user-defined data types to the base types from which they were created. Use True when the source database user-defined data types do not exist in the database where the script is run. Use False to keep the user-defined data types. Default is False. For more information, see [CREATE TYPE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md).  
+Converts user-defined data types to the base types from which they were created. Use True when the source database user-defined data types don't exist in the database where the script is run. Use False to keep the user-defined data types. Default is False. For more information, see [CREATE TYPE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md).  
   
 **Generate SET ANSI PADDING commands**  
 Adds the SET ANSI_PADDING statement before and after each CREATE TABLE statement. Default is True. For more information, see [SET ANSI_PADDING (Transact-SQL)](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
@@ -148,7 +148,7 @@ Scripts generated are targeted for the specified [Engine Edition](/dotnet/api/mi
 Scripts generated are targeted for the specified [Database Engine Type](/previous-versions/sql/sql-server-2014/ee642509(v=sql.120)).
 
 **Script for server version**  
-Scripts generated are targeted for the specified version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Features that are new in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] cannot be scripted for earlier versions. Some scripts that are created for [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] cannot be executed on servers that are running on an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or on a database that has an earlier [database compatibility level setting](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+Scripts generated are targeted for the specified version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Features that are new in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] can't be scripted for earlier versions. Some scripts that are created for [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] can't be executed on servers that are running on an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or on a database that has an earlier [database compatibility level setting](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
 
 ## See also  
 [Generate Scripts (SQL Server Management Studio)](../scripting/generate-scripts-sql-server-management-studio.md)  

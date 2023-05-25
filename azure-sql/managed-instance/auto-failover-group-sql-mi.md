@@ -4,7 +4,7 @@ description: Auto-failover groups let you manage geo-replication and automatic /
 author: strahinjas 
 ms.author: sstefanovic
 ms.reviewer: mathoma
-ms.date: 05/09/2023
+ms.date: 05/25/2023
 ms.service: sql-managed-instance
 ms.subservice: high-availability
 ms.topic: conceptual
@@ -28,7 +28,7 @@ To get started, review [Configure auto-failover group](auto-failover-group-confi
 
 ## Overview
 
-The auto-failover groups feature allows you to manage the replication and failover of in a managed instance to a managed instance in another Azure region. You can include a group of databases or all user databases in an instance. Auto-failover groups are designed to simplify deployment and management of geo-replicated databases at scale.
+The auto-failover groups feature allows you to manage the replication and failover of user databases in a managed instance to a managed instance in another Azure region. Auto-failover groups are designed to simplify deployment and management of geo-replicated databases at scale.
 
 [!INCLUDE [auto-failover-groups-overview](../includes/auto-failover-group-overview.md)]
 
@@ -232,7 +232,7 @@ There is some overlap in the following content, be sure to update all that's nec
 /azure-sql/managed-instance/auto-failover-group-sql-mi.md
 -->
 
-Due to the high latency of wide area networks, geo-replication uses an asynchronous replication mechanism. Asynchronous replication makes the possibility of data loss unavoidable if the primary fails. To protect critical transactions from data loss, an application developer can call the [sp_wait_for_database_copy_sync](/sql/relational-databases/system-stored-procedures/active-geo-replication-sp-wait-for-database-copy-sync) stored procedure immediately after committing the transaction. Calling `sp_wait_for_database_copy_sync` blocks the calling thread until the last committed transaction has been transmitted and hardened in the transaction log of the secondary database. However, it doesn't wait for the transmitted transactions to be replayed (redone) on the secondary. `sp_wait_for_database_copy_sync` is scoped to a specific geo-replication link. Any user with the connection rights to the primary database can call this procedure.
+Due to the high latency of wide area networks, geo-replication uses an asynchronous replication mechanism. Asynchronous replication makes the possibility of data loss unavoidable if the primary fails. To protect critical transactions from data loss, an application developer can call the [sp_wait_for_database_copy_sync](/sql/relational-databases/system-stored-procedures/sp-wait-for-database-copy-sync-transact-sql) stored procedure immediately after committing the transaction. Calling `sp_wait_for_database_copy_sync` blocks the calling thread until the last committed transaction has been transmitted and hardened in the transaction log of the secondary database. However, it doesn't wait for the transmitted transactions to be replayed (redone) on the secondary. `sp_wait_for_database_copy_sync` is scoped to a specific geo-replication link. Any user with the connection rights to the primary database can call this procedure.
 
 To prevent data loss during user-initiated, planned geo-failover, replication automatically and temporarily changes to synchronous replication, then performs a failover. Replication then returns to asynchronous mode after the geo-failover is complete.
 

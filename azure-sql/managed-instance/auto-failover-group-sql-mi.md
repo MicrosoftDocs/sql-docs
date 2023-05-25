@@ -4,7 +4,7 @@ description: Auto-failover groups let you manage geo-replication and automatic /
 author: strahinjas 
 ms.author: sstefanovic
 ms.reviewer: mathoma
-ms.date: 05/09/2023
+ms.date: 05/25/2023
 ms.service: sql-managed-instance
 ms.subservice: high-availability
 ms.topic: conceptual
@@ -28,7 +28,7 @@ To get started, review [Configure auto-failover group](auto-failover-group-confi
 
 ## Overview
 
-The auto-failover groups feature allows you to manage the replication and failover of in a managed instance to a managed instance in another Azure region. You can include a group of databases or all user databases in an instance. Auto-failover groups are designed to simplify deployment and management of geo-replicated databases at scale.
+The auto-failover groups feature allows you to manage the replication and failover of user databases in a managed instance to a managed instance in another Azure region. Auto-failover groups are designed to simplify deployment and management of geo-replicated databases at scale.
 
 [!INCLUDE [auto-failover-groups-overview](../includes/auto-failover-group-overview.md)]
 

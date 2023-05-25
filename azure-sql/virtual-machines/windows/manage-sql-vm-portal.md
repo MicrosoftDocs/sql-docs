@@ -117,6 +117,9 @@ Use the **Security Configuration** page of the SQL virtual machines resource to 
 
 To learn more, see the [Security best practices](security-considerations-best-practices.md).
 
+> [!NOTE]
+> The ability to change the connectivity and SQL Server authentication settings after the SQL Server VM is deployed was removed from the Azure portal in April 2023. You can still specify these settings during SQL Server VM deployment, or use SQL Server Management Studio (SSMS) to update these settings manually from within the SQL Server VM after deployment. 
+
 <a name="security-center"></a>
 
 ## Defender for Cloud 

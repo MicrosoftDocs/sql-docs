@@ -4,7 +4,7 @@ description: Provides PowerShell and Transact-SQL for a two-phase code sample th
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
-ms.date: 03/25/2022
+ms.date: 05/25/2023
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: sample
@@ -293,7 +293,7 @@ IF NOT EXISTS
     (SELECT * FROM sys.symmetric_keys
         WHERE symmetric_key_id = 101)
 BEGIN
-    CREATE MASTER KEY ENCRYPTION BY PASSWORD = '0C34C960-6621-4682-A123-C7EA08E3FC46' -- Or any newid().
+    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'add strong password here'
 END
 GO
 

@@ -1,5 +1,5 @@
 ---
-title: "lightweight pooling Server Configuration Option"
+title: "lightweight pooling (server configuration option)"
 description: "Learn about the lightweight pooling option. See how it can provide better throughput in symmetric multiprocessing environments with excessive context switching."
 author: rwestMSFT
 ms.author: randolphwest
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "reducing overhead"
   - "overhead [SQL Server]"
 ---
-# lightweight pooling Server Configuration Option
+# lightweight pooling (server configuration option)
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 

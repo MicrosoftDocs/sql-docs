@@ -1,5 +1,5 @@
 ---
-title: "contained database authentication Server Configuration Option"
+title: "contained database authentication (server configuration option)"
 description: "Learn about the contained database authentication option. See how to turn it on so that you can attach contained databases to the SQL Server Database Engine."
 author: rwestMSFT
 ms.author: randolphwest
@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "contained database, enabling"
   - "contained database authentication option"
 ---
-# contained database authentication Server Configuration Option
+# contained database authentication (server configuration option)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Use the **contained database authentication** option to enable contained databases on the instance of [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  

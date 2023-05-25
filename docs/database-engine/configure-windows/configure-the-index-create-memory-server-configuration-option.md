@@ -1,5 +1,5 @@
 ---
-title: "Configure the index create memory Server Configuration Option"
+title: "Configure the index create memory (server configuration option)"
 description: See how to use the index create memory option to set the maximum amount of memory that SQL Server initially allocates for sort operations when creating indexes.
 author: rwestMSFT
 ms.author: randolphwest
@@ -10,7 +10,7 @@ ms.topic: conceptual
 helpviewer_keywords:
   - "index create memory option"
 ---
-# Configure the index create memory Server Configuration Option
+# Configure the index create memory (server configuration option)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to configure the **index create memory** server configuration option in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **index create memory** option controls the maximum amount of memory initially allocated for sort operations when creating indexes. The default value for this option is 0 (self-configuring). If more memory is later needed for index creation and the memory is available, the server will use it; thereby, exceeding the setting of this option. If additional memory is not available, the index creation will continue using the memory already allocated.  

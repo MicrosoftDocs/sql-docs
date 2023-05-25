@@ -1,5 +1,5 @@
 ---
-title: "PH timeout Server Configuration Option"
+title: "PH timeout (server configuration option)"
 description: "Learn about the PH timeout option. See how it limits the time that the full-text protocol handler allots for connecting to a SQL Server database."
 author: rwestMSFT
 ms.author: randolphwest
@@ -15,7 +15,7 @@ helpviewer_keywords:
 dev_langs:
   - "TSQL"
 ---
-# PH timeout server configuration option
+# PH timeout (server configuration option)
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 

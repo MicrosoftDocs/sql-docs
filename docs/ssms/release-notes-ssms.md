@@ -77,8 +77,8 @@ SSMS 19.1 is the latest general availability (GA) release of SSMS. If you need a
 | SMO/Scripting | Fixed inability to generate scripts for tables from selected wizards. |
 | SSIS | Resolved inability to connect using Azure SSIS Integration runtime. |
 | Storage Account | Fixed issue that prevented deleting a container from an Azure storage account. |
-| Table Editor | Fixed issue with application hanging when editing a VARCHAR(255) column in a table.  See [SSMS v18.12.1 (also) crashes in edit mode when update a field (varchar(255)) of specific record](https://learn.microsoft.com/answers/questions/1032195/ssms-v18-12-1-(also)-crashes-in-edit-mode-when-upd). |
-| Table Editor | Addressed incorrect information displayed when editing data in a table that contains a period (.) in an Azure SQL Database.  See [SSMS Table in Azure - Design shows < Unknown >](https://learn.microsoft.com/answers/questions/1187830/ssms-table-in-azure-design-shows-%28unknown%29). |
+| Table Editor | Fixed issue with application hanging when editing a VARCHAR(255) column in a table.  See [SSMS v18.12.1 (also) crashes in edit mode when update a field (varchar(255)) of specific record](/answers/questions/1032195/). |
+| Table Editor | Addressed incorrect information displayed when editing data in a table that contains a period (.) in an Azure SQL Database.  See [SSMS Table in Azure - Design shows < Unknown >](/answers/questions/1187830/). |
 
 #### Known issues (19.1)
 

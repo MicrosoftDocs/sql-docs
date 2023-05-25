@@ -1,5 +1,5 @@
 ---
-title: "Configure the enclave type for Always Encrypted Server Configuration Option"
+title: "Configure the enclave type for Always Encrypted (server configuration option)"
 description: Find out how to enable or disable a secure enclave for Always Encrypted. Learn how to confirm whether an enclave has been correctly initialized.
 author: jaszymas
 ms.author: jaszymas
@@ -9,7 +9,7 @@ ms.subservice: configuration
 ms.topic: conceptual
 monikerRange: ">= sql-server-ver15"
 ---
-# Configure the enclave type for Always Encrypted Server Configuration Option
+# Configure the enclave type for Always Encrypted (server configuration option)
 
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 

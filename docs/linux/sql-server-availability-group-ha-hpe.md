@@ -90,6 +90,9 @@ Follow theses instructions to configure and create the HPE Serviceguard cluster.
 1. [Configure the Serviceguard quorum server on the third node](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Configure_QS). Refer to the **Configure_QS** section.
 1. [Configure and create Serviceguard cluster on the other two nodes](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Configure_and_create_cluster). Refer to the **Configure_and_create_Cluster** section.
 
+> [!NOTE]  
+> You can bypass manual installation of your HPE Serviceguard cluster and quorum, by adding the [HPE Serviceguard for Linux (SGLX) extension](https://techcommunity.microsoft.com/t5/sql-server-blog/hpe-sglx-the-new-azure-vm-extension-for-sql-server-on-linux/ba-p/3723764) from the Azure VM marketplace, when you create your VM.
+
 ### Create the load balancer in the Azure portal
 
 For Deployments in Azure Cloud, HPE Serviceguard for Linux requires a load balancer to enable client connections with the primary replica, to substitute traditional IP addresses.

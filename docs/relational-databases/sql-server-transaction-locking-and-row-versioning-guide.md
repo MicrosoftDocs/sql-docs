@@ -4,7 +4,7 @@ description: "Transaction locking and row versioning guide"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 04/12/2023
+ms.date: 05/25/2023
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
@@ -425,18 +425,22 @@ Shared (S) locks allow concurrent transactions to read (SELECT) a resource under
   
 ### <a id="update"></a> Update locks
 
-Update (U) locks prevent a common form of deadlock. In a repeatable read or serializable transaction, the transaction reads data, acquiring a shared (S) lock on the resource (page or row), and then modifies the data, which requires lock conversion to an exclusive (X) lock. If two transactions acquire shared-mode locks on a resource and then attempt to update data concurrently, one transaction attempts the lock conversion to an exclusive (X) lock. The shared-mode-to-exclusive lock conversion must wait because the exclusive lock for one transaction is not compatible with the shared-mode lock of the other transaction; a lock wait occurs. The second transaction attempts to acquire an exclusive (X) lock for its update. Because both transactions are converting to exclusive (X) locks, and they are each waiting for the other transaction to release its shared-mode lock, a deadlock occurs.  
-  
-To avoid this potential deadlock problem, update (U) locks are used. Only one transaction can obtain an update (U) lock to a resource at a time. If a transaction modifies a resource, the update (U) lock is converted to an exclusive (X) lock.  
+The Database Engine places update (U) locks as it prepares to execute an update. U locks are compatible with S locks, but only one transaction can hold a U lock at a time on a given resource. This is key - many concurrent transactions can hold S locks, but only one transaction can hold a U lock on a resource. Update (U) locks are eventually upgraded to exclusive (X) locks to update a row.
 
-For more about deadlocks, see the [Deadlocks guide](sql-server-deadlocks-guide.md).
-  
+Update (U) locks can also be taken by queries that do not perform an UPDATE, when the [UPDLOCK table hint](../t-sql/queries/hints-transact-sql-table.md) is specified in the query. It is common for applications to use a "select a row, then update the row" pattern, where the read and write are explicitly separated within the transaction. In this case, if the isolation level is repeatable read or serializable, concurrent updates may likely deadlock. Instead, applications could follow a "select a row with UPDLOCK hint, then update the row" pattern.
+
+- In a repeatable read or serializable transaction, the transaction reads data, acquiring a shared (S) lock on the resource, and then modifies the data, which requires lock conversion to an exclusive (X) lock. If two transactions acquire shared (S) locks on a resource and then attempt to update data concurrently, one transaction attempts the lock conversion to an exclusive (X) lock. The shared-to-exclusive lock conversion must wait because the exclusive lock for one transaction is not compatible with the shared (S) lock of the other transaction; a lock wait occurs. The second transaction attempts to acquire an exclusive (X) lock for its update. Because both transactions are converting to exclusive (X) locks, and they are each waiting for the other transaction to release its shared (S) lock, a deadlock occurs.
+
+- In the default read committed isolation level, S locks are short duration, released as soon as they are used. The short duration locks are unlikely to lead to deadlocks.
+
 ### <a id="exclusive"></a> Exclusive locks
+
 Exclusive (X) locks prevent access to a resource by concurrent transactions. With an exclusive (X) lock, no other transactions can modify data; read operations can take place only with the use of the NOLOCK hint or read uncommitted isolation level.  
   
 Data modification statements, such as INSERT, UPDATE, and DELETE combine both modification and read operations. The statement first performs read operations to acquire data before performing the required modification operations. Data modification statements, therefore, typically request both shared locks and exclusive locks. For example, an UPDATE statement might modify rows in one table based on a join with another table. In this case, the UPDATE statement requests shared locks on the rows read in the join table in addition to requesting exclusive locks on the updated rows.  
  
 ### <a id="intent"></a> Intent locks
+
 The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] uses intent locks to protect placing a shared (S) lock or exclusive (x) lock on a resource lower in the lock hierarchy. Intent locks are named "intent locks" because they're acquired before a lock at the lower level and, therefore, signal intent to place locks at a lower level.  
 
 Intent locks serve two purposes:  
@@ -750,15 +754,17 @@ If the SELECT statement acquires enough locks to trigger lock escalation and the
 
 In most cases, the [!INCLUDE[ssDE-md](../includes/ssde-md.md)] delivers the best performance when operating with its default settings for locking and lock escalation.
 
-- Take advantage of [optimized locking where available](performance/optimized-locking.md#availability). 
+- Take advantage of [optimized locking](performance/optimized-locking.md).
+
     - [Optimized locking](performance/optimized-locking.md) offers an improved transaction locking mechanism that reduces lock memory consumption and blocking for concurrent transactions. **Lock escalation is far less likely to ever occur when optimized locking is enabled.**
     - Avoid using [table hints with optimized locking](performance/optimized-locking.md#avoid-locking-hints). Table hints may reduce the effectiveness of optimized locking.
-    - Enable [READ_COMMITTED_SNAPSHOT](../t-sql/statements/alter-database-transact-sql-set-options.md#read_committed_snapshot--on--off-) in the database for the most benefit from optimized locking. This is the default isolation level in Azure SQL Database.
+    - Enable [READ_COMMITTED_SNAPSHOT](../t-sql/statements/alter-database-transact-sql-set-options.md#read_committed_snapshot--on--off-) in the database for the most benefit from optimized locking. This is the default isolation level in [!INCLUDE[Azure SQL Database](../includes/ssazure_md.md)].
     - Optimized locking requires [accelerated database recovery (ADR)](/azure/azure-sql/accelerated-database-recovery) to be enabled on the database.
 
 If an instance of the [!INCLUDE[ssDE-md](../includes/ssde-md.md)] generates a lot of locks and is seeing frequent lock escalations, consider reducing the amount of locking with the following strategies:
 
 - Use an isolation level that does not generate shared locks for read operations:
+
     -  READ COMMITTED isolation level when the READ_COMMITTED_SNAPSHOT database option is ON.
     -  SNAPSHOT isolation level.
     -  READ UNCOMMITTED isolation level. This can only be used for systems that can operate with dirty reads.

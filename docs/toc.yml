@@ -10783,6 +10783,8 @@ items:
       href: sql-server/educational-sql-resources.yml
     - name: Microsoft Learn training >>
       href: /training/
+    - name: T-SQL videos
+      href: t-sql/videos-transact-sql.md
   - name: Help
     items:
     - name: Get help
@@ -18718,8 +18720,6 @@ items:
           href: t-sql/statements/set-transaction-isolation-level-transact-sql.md
         - name: XACT_ABORT
           href: t-sql/statements/set-xact-abort-transact-sql.md
-      - name: Videos
-        href: t-sql/videos-transact-sql.md
   - name: xQuery
     href: xquery/xquery-language-reference-sql-server.md
     items:

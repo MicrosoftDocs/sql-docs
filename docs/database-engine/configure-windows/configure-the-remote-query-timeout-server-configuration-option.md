@@ -1,5 +1,5 @@
 ---
-title: "Configure the remote query timeout Server Configuration Option"
+title: "Configure the remote query timeout (server configuration option)"
 description: "Learn about the remote query timeout option. See how it determines the number of seconds that a remote operation can take before SQL Server times out."
 author: rwestMSFT
 ms.author: randolphwest
@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "time limit for remote queries [SQL Server]"
   - "remote query timeout option"
 ---
-# Configure the remote query timeout Server Configuration Option
+# Configure the remote query timeout (server configuration option)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to configure the **remote query timeout** server configuration option in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **remote query timeout** option specifies how long, in seconds, a remote operation can take before [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] times out. The default value for this option is 600, which is a 10-minute wait. Setting this value to 0 disables the time-out. This value applies to an outgoing connection initiated by the [!INCLUDE[ssDE](../../includes/ssde-md.md)] as a remote query. This value has no effect on queries received by the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. A query will wait until it completes.  

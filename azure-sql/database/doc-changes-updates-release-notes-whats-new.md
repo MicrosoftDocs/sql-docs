@@ -5,7 +5,7 @@ description: Learn about the new features and documentation improvements for Azu
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 05/21/2023
+ms.date: 05/25/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -61,6 +61,7 @@ The following table lists the new generally available (GA) features of Azure SQL
 
 | Feature | GA Month | Details |
 | ---| --- |--- |
+| [Azure SQL bindings for Azure Functions](/azure/azure-functions/functions-bindings-azure-sql) | May 2023 | Azure Functions supports input bindings, output bindings, and a function trigger for the Azure SQL and SQL Server products. | 
 | [Cross-tenant CMK with TDE](transparent-data-encryption-byok-cross-tenant.md) | May 2023 | Cross-tenant CMK with TDE allows SQL databases to be in a separate tenant than the tenant holding the Azure Key Vault resource used to encrypt the databases. |
 | [UMI for auditing](auditing-overview.md) | April 2023 | Configure the storage account for your SQL auditing logs by using User-assigned Managed Identity (UMI). | 
 | [Shrink Database](/sql/t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql?view=azuresqldb-current&preserve-view=true) and [Shrink File with Low Priority](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql?view=azuresqldb-current&preserve-view=true) | March 2023 | This feature solves the concurrency issues that can arise from shrink database and shrink file commands, especially during active maintenance or on busy OLTP environments. In WAIT_AT_LOW_PRIORITY mode, necessary tasks to shrink database files can be completed without negatively affecting application query performance. |
@@ -92,9 +93,11 @@ Learn about significant changes to the Azure SQL Database documentation. For pre
 
 | Changes | Details |
 | --- | --- |
+| **Azure SQL bindings for Azure Functions GA** | Azure Functions supports input bindings, output bindings, and a function trigger for the Azure SQL and SQL Server products. This feature is now generally available. Review [Azure SQL bindings for Azure Functions](/azure/azure-functions/functions-bindings-azure-sql) to learn more.  |
 | **Cross-tenant CMK with TDE GA** |  Cross-tenant CMK with TDE allows SQL databases to be in a separate tenant than the tenant holding the Azure Key Vault resource used to encrypt the databases. This feature is now generally available. To learn more, review [Cross-tenant CMK with TDE](transparent-data-encryption-byok-cross-tenant.md). |
 | **Hyperscale elastic pools preview**| Manage and scale multiple Hyperscale databases in Azure SQL Database by using Hyperscale elastic pools.  This feature is now in preview. See [Hyperscale elastic pools](hyperscale-elastic-pool-overview.md) to learn more. | 
-| **Optimized locking available in Hyperscale** | Optimized locking is a new Database Engine capability that offers an improved locking mechanism that reduces lock memory consumption and blocking amongst concurrent transactions. This fundamentally improves concurrency and lowers lock memory. Optimized locking is now available in all DTU and vCore service tiers, including provisioned and serverless. For more information, see [Optimized locking](/sql/relational-databases/performance/optimized-locking). |
+| **Optimized locking available in Hyperscale GA** | Optimized locking is a new Database Engine capability that offers an improved locking mechanism that reduces lock memory consumption and blocking amongst concurrent transactions. This fundamentally improves concurrency and lowers lock memory. Optimized locking is now available in all DTU and vCore service tiers, including provisioned and serverless. This feature is generally available. For more information, see [Optimized locking](/sql/relational-databases/performance/optimized-locking). |
+
 
 
 ### April 2023

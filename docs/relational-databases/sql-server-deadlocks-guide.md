@@ -393,9 +393,11 @@ Avoid writing transactions that include user interaction, because the speed of b
   
 ### Keep transactions short and in one batch
 
-A deadlock typically occurs when several long-running transactions execute concurrently in the same database. The longer the transaction, the longer the exclusive or update locks are held, blocking other activity and leading to possible deadlock situations.  
+A deadlock typically occurs when several long-running transactions execute concurrently in the same database. The longer the transaction, the longer the exclusive or update locks are held, blocking other activity and leading to possible deadlock situations. 
   
 Keeping transactions in one batch minimizes network roundtrips during a transaction, reducing possible delays in completing the transaction and releasing locks.  
+
+For more about update locks, see [Transaction locking and row versioning guide](sql-server-transaction-locking-and-row-versioning-guide.md#update-locks)
   
 ### Use a lower isolation level
 

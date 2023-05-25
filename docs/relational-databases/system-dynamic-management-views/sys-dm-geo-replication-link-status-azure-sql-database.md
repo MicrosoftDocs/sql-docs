@@ -67,6 +67,6 @@ Learn more about related concepts in the following articles:
 - [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
 - [sys.geo_replication_links &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
 - [sys.dm_operation_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)   
-- [sp_wait_for_database_copy_sync](../system-stored-procedures/active-geo-replication-sp-wait-for-database-copy-sync.md)
+- [sp_wait_for_database_copy_sync](../system-stored-procedures/sp-wait-for-database-copy-sync-transact-sql.md)
 - [Active geo-replication](/azure/azure-sql/database/active-geo-replication-overview)
 - [Auto-failover groups overview & best practices (Azure SQL Database)](/azure/azure-sql/database/auto-failover-group-sql-db)

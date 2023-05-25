@@ -182,3 +182,4 @@ In this example output, the fault_type shows that a critical event happened on t
 * [Enhance Always On Failover Policy to Test SQL Server Database Data and Log Drives](/archive/blogs/alwaysonpro/enhance-alwayson-failover-policy-to-test-sql-server-database-data-and-log-drives)
 
 * [Extended Events](../../../relational-databases/extended-events/extended-events.md)
+* [How to configure an Always On availability group to perform a failover when the database data file is unavailable](/troubleshoot/sql/database-engine/availability-groups/configure-always-on-availability-group-perform-failover)

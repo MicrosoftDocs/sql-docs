@@ -37,7 +37,7 @@ This tutorial shows an example of an AG with three replicas. You need:
 
 1. In a Kubernetes cluster, headless services allow your pods to connect to one another using hostnames.
 
-   To create the headless service, Create a YAML file called `headless_services.yml`, with the following sample content:
+   To create the headless service, Create a YAML file called `headless_services.yaml`, with the following sample content:
 
    ```yaml
    #Headless services for local connections/resolution
@@ -120,12 +120,12 @@ This tutorial shows an example of an AG with three replicas. You need:
 1. Run the following command to apply the configuration:
 
    ```bash
-   kubectl apply -f headless_services.yml
+   kubectl apply -f headless_services.yaml
    ```
 
 ## Create the StatefulSet
 
-1. Create a StatefulSet YAML file with following sample content, and name it `dxemssql.yml`.
+1. Create a StatefulSet YAML file with following sample content, and name it `dxemssql.yaml`.
 
    This StatefulSet configuration creates three DxEMSSQL replicas that utilize persistent volume claims to store their data. Each pod in this StatefulSet comprises two containers: a [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] container and a DxEnterprise container. These containers are started separately from one another in a "sidecar" configuration, but DxEnterprise manages the AG replica in the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] container.
 
@@ -536,12 +536,12 @@ This process deploys SQL Server containers as StatefulSet deployments; a sample 
         targetPort: 7979
     ```
 
-    Copy the preceding code into a new file called `sqldeployment.yml`.
+    Copy the preceding code into a new file called `sqldeployment.yaml`.
 
     Create the deployment using the following command:
 
     ```bash
-    kubectl apply -f <Path to sqldeployment.yml file>
+    kubectl apply -f <Path to sqldeployment.yaml file>
     ```
 
     Once the deployment completes, run the `kubectl get all` command. You should see the following results:

@@ -23,7 +23,7 @@ For hardware and software requirements, see [SQL Server 2022: Hardware and softw
 
 ## Feature notes
 
-This section identifies known issues you may experience with this product.
+This section identifies known issues you may experience with this product. You may also review the Known Issues section of the [Cumulative Update](/troubleshoot/sql/releases/sqlserver-2022/build-versions) articles.
 
 ### SQL Setup
 
@@ -88,9 +88,15 @@ An issue in the TDS 8.0 protocol implementation may cause RPC calls to fail if t
 
 **Applies to**: [!INCLUDE[sssql22-md](../includes/sssql22-md.md)] RTM
 
-The fix for this issue will be released in Cumulative Update 1 for [!INCLUDE [sssql22-md](../includes/sssql22-md.md)].
+The fix for this issue is released in [Cumulative Update 1](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate1#1993393) for [!INCLUDE [sssql22-md](../includes/sssql22-md.md)].
 
 To work around this issue, you can use Trace Flag 12324 as either as startup trace flag, or at the session level (using `DBCC TRACEON`).
+
+### SQL Server Agent errors when using contained Availability Group
+
+You might encounter error messages in SQL Server Agent or Database Mail when using contained Availability Group feature of [!INCLUDE [sssql22-md](../includes/sssql22-md.md)].
+
+Review the article [Errors occur after you apply a cumulative update to an instance of SQL Server that has a contained availability group](/troubleshoot/sql/releases/sqlserver-2022/errors-apply-cu-contained-availability-group) for details on addressing the issue.
 
 ### SQL Server services are set to Automatic (Delayed Start) start mode
 

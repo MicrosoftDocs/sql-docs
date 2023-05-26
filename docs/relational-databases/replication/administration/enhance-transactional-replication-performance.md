@@ -100,6 +100,9 @@ The **–MaxCmdsInTran** parameter specifies the maximum number of statements gr
   
    > [!WARNING]  
    >  **MaxCmdsInTran** was not designed to be always turned on. It exists to work around cases where someone accidentally performed a large number of DML operations in a single transaction (causing delay in distribution of commands until the entire transaction is in distribution database, locks being held, etc.). If you routinely fall into this situation,review your applications and find ways to reduce the transaction size.  
+
+   > [!WARNING]  
+   >  **MaxCmdsInTran** is not supported if the given publication database is enabled for both Change Data Capture and replication.
   
 ### Distribution Agent
 

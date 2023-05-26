@@ -14588,7 +14588,7 @@ items:
       - name: sp_query_store_force_plan
         href: relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md
       - name: sp_query_store_remove_plan
-        href: relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md
+        href: relational-databases/system-stored-procedures/sp-query-store-remove-plan-transact-sql.md
       - name: sp_query_store_remove_query
         href: relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md
       - name: sp_query_store_reset_exec_stats

@@ -9,9 +9,9 @@ ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
 helpviewer_keywords:
-  - "system stored procedures [SQL Server], query store"
-  - "stored procedures [SQL Server], query store"
-  - "query store [SQL Server], stored procedures"
+  - "system stored procedures [SQL Server], Query Store"
+  - "stored procedures [SQL Server], Query Store"
+  - "Query Store [SQL Server], stored procedures"
 dev_langs:
   - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -26,7 +26,7 @@ This section contains the following stored procedures used to configure the Quer
 
 - [sp_query_store_flush_db (Transact-SQL)](sp-query-store-flush-db-transact-sql.md)
 - [sp_query_store_force_plan (Transact-SQL)](sp-query-store-force-plan-transact-sql.md)
-- [sp_query_store_remove_plan (Transact-SQL)](sp-query-store-remove-plan-transct-sql.md)
+- [sp_query_store_remove_plan (Transact-SQL)](sp-query-store-remove-plan-transact-sql.md)
 - [sp_query_store_remove_query (Transact-SQL)](sp-query-store-remove-query-transact-sql.md)
 - [sp_query_store_reset_exec_stats (Transact-SQL)](sp-query-store-reset-exec-stats-transact-sql.md)
 - [sp_query_store_unforce_plan (Transact-SQL)](sp-query-store-unforce-plan-transact-sql.md)

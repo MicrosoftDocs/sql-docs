@@ -1,6 +1,6 @@
 ---
-title: "sp_query_store_remove_query (Transact-SQL)"
-description: "sp_query_store_remove_query (Transact-SQL)"
+title: "sp_query_store_remove_plan (Transact-SQL)"
+description: "Removes a single plan from the Query Store."
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
@@ -9,37 +9,37 @@ ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
-  - "SP_QUERY_STORE_REMOVE_QUERY"
-  - "SP_QUERY_STORE_REMOVE_QUERY_TSQL"
-  - "SYS.SP_QUERY_STORE_REMOVE_QUERY"
-  - "SYS.SP_QUERY_STORE_REMOVE_QUERY_TSQL"
+  - "SYS.SP_QUERY_STORE_REMOVE_PLAN_TSQL"
+  - "SP_QUERY_STORE_REMOVE_PLAN_TSQL"
+  - "SP_QUERY_STORE_REMOVE_PLAN"
+  - "SYS.SP_QUERY_STORE_REMOVE_PLAN"
 helpviewer_keywords:
-  - "sys.sp_query_store_remove_query"
-  - "sp_query_store_remove_query"
+  - "sys.sp_query_store_remove_plan"
+  - "sp_query_store_remove_plan"
 dev_langs:
   - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# sp_query_store_remove_query (Transact-SQL)
+# sp_query_store_remove_plan (Transact-SQL)
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
-  Removes the query and all associated plans and runtime stats from the Query Store.
+Removes a single plan from the Query Store.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
 ```syntaxsql
-sp_query_store_remove_query [ @query_id = ] query_id
+sp_query_store_remove_plan [ @plan_id = ] plan_id
 [ ; ]
 ```
 
 ## Arguments
 
-#### [ @query_id = ] *query_id*
+#### [ @plan_id = ] *plan_id*
 
-The ID of the query to be removed from the Query Store. *@query_id* is a **bigint**, with no default.
+The ID of the query plan to be removed. *@plan_id* is a **bigint**, with no default.
 
 ## Return code values
 
@@ -65,16 +65,16 @@ INNER JOIN sys.query_store_query_text AS txt
     ON qry.query_text_id = txt.query_text_id;
 ```
 
-After you identify the *query_id* that you want to delete, use the following example to delete the query.
+After you identify the *plan_id* that you want to delete, use the following example to delete a query plan.
 
 ```sql
-EXEC sp_query_store_remove_query 3;
+EXEC sp_query_store_remove_plan 3;
 ```
 
 ## Next steps
 
 - [sp_query_store_force_plan (Transact-SQL)](sp-query-store-force-plan-transact-sql.md)
-- [sp_query_store_remove_plan (Transact-SQL)](sp-query-store-remove-plan-transact-sql.md)
+- [sp_query_store_remove_query (Transact-SQL)](sp-query-store-remove-query-transact-sql.md)
 - [sp_query_store_unforce_plan (Transact-SQL)](sp-query-store-unforce-plan-transact-sql.md)
 - [sp_query_store_reset_exec_stats (Transact-SQL)](sp-query-store-reset-exec-stats-transact-sql.md)
 - [sp_query_store_flush_db (Transact-SQL)](sp-query-store-flush-db-transact-sql.md)

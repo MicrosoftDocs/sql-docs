@@ -82,7 +82,9 @@ This section walks you through the steps of installing the SqlServer PowerShell 
 1. Copy the `$env:TEMP\SQLServer\<SomeVersion>` folder you found in step 2 to the destination offline computer in `%ProgramFiles%\WindowsPowerShell\Modules\SqlServer` folder (this folder would work for both PS5 and PS7). Be sure to replace `<SomeVersion>` with the value you found in the previous step.
 
    ```powershell
-   Copy-Item -Path $env:TEMP\SQLServer\<SomeVersion> -Destination $env:ProgramFiles\WindowsPowerShell\Modules\SQLServer
+   Copy-Item -Path $env:TEMP\SQLServer\<SomeVersion> `
+             -Recurse ` 
+             -Destination $env:ProgramFiles\WindowsPowerShell\Modules\SQLServer
    ```
 
 1. Confirm that the SqlServer PowerShell module is available on the offline computer by running the following PowerShell cmdlet:

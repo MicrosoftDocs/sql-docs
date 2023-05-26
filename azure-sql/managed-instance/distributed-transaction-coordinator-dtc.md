@@ -38,7 +38,7 @@ To run distributed transactions, complete these tasks:
 
 ## Requirements
 
-To change DTC settings, you must have write permissions for `Microsoft.Sql/managedInstances/dtc resource`. To view DTC settings, you must have read permissions for `Microsoft.Sql/managedInstances/dtc resource`.
+To change DTC settings, you must have write permissions for `Microsoft.Sql/managedInstances/dtc` resource. To view DTC settings, you must have read permissions for `Microsoft.Sql/managedInstances/dtc` resource.
 
 ## Configure DTC
 

@@ -37,7 +37,7 @@ For help topics, go to:
 [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md), doesn't install either PowerShell module. To use PowerShell with SSMS, install the **SqlServer** module from the [PowerShell Gallery](https://www.powershellgallery.com/packages/Sqlserver).
 
 > [!NOTE]  
-> SQL Server Management Studio (SSMS) 16.x (and earlier versions) included a the **SQLPS** module.
+> SQL Server Management Studio (SSMS) 16.x (and earlier versions) included the **SQLPS** module.
 
 ## Azure Data Studio
 
@@ -81,11 +81,6 @@ This section walks you through the steps of installing the SqlServer PowerShell 
 
 1. Copy the `$env:TEMP\SQLServer\<SomeVersion>` folder you found in step 2 to the destination offline computer in `%ProgramFiles%\WindowsPowerShell\Modules\SqlServer` folder (this folder would work for both PS5 and PS7). Be sure to replace `<SomeVersion>` with the value you found in the previous step.
 
-   ```powershell
-   Copy-Item -Path $env:TEMP\SQLServer\<SomeVersion> `
-             -Recurse ` 
-             -Destination $env:ProgramFiles\WindowsPowerShell\Modules\SQLServer
-   ```
 
 1. Confirm that the SqlServer PowerShell module is available on the offline computer by running the following PowerShell cmdlet:
 

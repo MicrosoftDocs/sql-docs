@@ -38,4 +38,4 @@ If any changes are associated with the event, you'll see a list of changes that 
 
 ## Next steps
 
-- [Azure Monitor activity log](https://learn.microsoft.com/azure/azure-monitor/essentials/activity-log)
+- [Azure Monitor activity log](/azure/azure-monitor/essentials/activity-log)

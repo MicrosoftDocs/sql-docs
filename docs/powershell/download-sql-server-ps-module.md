@@ -93,7 +93,7 @@ This section walks you through the steps of installing the SqlServer PowerShell 
    Get-Module SqlServer -ListAvailable
    ```
 
-   The output may look like this (actual version may be different and must match <SomeVersion> listed previously):
+   The output may look like this (actual version may be different and must match `<SomeVersion>` listed previously):
 
    ```console
       PS C:\Users\user1> Get-Module SqlServer -ListAvailable

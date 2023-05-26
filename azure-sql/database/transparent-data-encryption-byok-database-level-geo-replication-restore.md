@@ -8,6 +8,7 @@ ms.reviewer: vanto
 ms.date: 03/31/2023
 ms.service: sql-database
 ms.subservice: security
+ms.custom: devx-track-azurecli, devx-track-azurepowershell
 ms.topic: how-to
 monikerRange: "= azuresql || = azuresql-db"
 ---

@@ -9,8 +9,6 @@ ms.service: sql-managed-instance
 ms.subservice: migration
 ms.topic: conceptual
 ms.custom:
-  - devx-track-azurecli
-  - devx-track-azurepowershell
 ---
 
 # Overview of Log Replay Service with Azure SQL Managed Instance

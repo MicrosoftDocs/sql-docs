@@ -8,9 +8,7 @@ ms.date: 11/16/2022
 ms.service: sql-managed-instance
 ms.subservice: migration
 ms.topic: how-to
-ms.custom:
-  - devx-track-azurecli
-  - devx-track-azurepowershell
+ms.custom: devx-track-azurepowershell
 ---
 
 # Migrate databases from SQL Server by using Log Replay Service - Azure SQL Managed Instance 

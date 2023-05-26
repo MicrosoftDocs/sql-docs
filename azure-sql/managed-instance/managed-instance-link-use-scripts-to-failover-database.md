@@ -8,7 +8,7 @@ ms.reviewer: mathoma, danil
 ms.date: 04/26/2023
 ms.service: sql-managed-instance
 ms.subservice: data-movement
-ms.custom: devx-track-azurepowershell
+ms.custom: devx-track-azurepowershell, devx-track-azurecli
 ms.topic: how-to
 ---
 

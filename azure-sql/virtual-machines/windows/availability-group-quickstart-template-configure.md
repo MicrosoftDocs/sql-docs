@@ -8,7 +8,7 @@ ms.date: 11/10/2021
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: how-to
-ms.custom: devx-track-azurepowershell
+ms.custom:
 tags: azure-resource-manager
 ---
 # Use Azure quickstart templates to configure an availability group for SQL Server on Azure VM

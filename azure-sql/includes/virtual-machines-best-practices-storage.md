@@ -9,8 +9,8 @@ ms.topic: include
 - To optimize storage performance, plan for highest uncached IOPS available and use data caching as a performance feature for data reads while avoiding [virtual machine and disks capping](/azure/virtual-machines/premium-storage-performance#throttling).
 - Place data, log, and `tempdb` files on separate drives.
   - For the data drive, use [premium P30 and P40 or smaller disks](/azure/virtual-machines/disks-types#premium-ssds) to ensure the availability of cache support
-  - For the log drive plan for capacity and test performance versus cost while evaluating the [premium P30 - P80 disks](/azure/virtual-machines/disks-types#premium-ssds)
-    - If submillisecond storage latency is required, use [Azure ultra disks](/azure/virtual-machines/disks-types#ultra-disks) for the transaction log.
+  - For the log drive plan for capacity and test performance versus cost while evaluating either [Premium SSD v2](/azure/virtual-machines/disks-types#premium-ssd-v2) or Premium SSD [P30 - P80 disks](/azure/virtual-machines/disks-types#premium-ssds)
+    - If submillisecond storage latency is required, use either [Premium SSD v2](/azure/virtual-machines/disks-types#premium-ssd-v2) or [Azure ultra disks](/azure/virtual-machines/disks-types#ultra-disks) for the transaction log.
     - For M-series virtual machine deployments consider [write accelerator](/azure/virtual-machines/how-to-enable-write-accelerator) over using Azure ultra disks.
   - Place [tempdb](/sql/relational-databases/databases/tempdb-database) on the local ephemeral SSD (default `D:\`) drive for most SQL Server workloads that aren't part of Failover Cluster Instance (FCI) after choosing the optimal VM size.
     - If the capacity of the local drive isn't enough for `tempdb`, consider sizing up the VM. See [Data file caching policies](../virtual-machines/windows/performance-guidelines-best-practices-storage.md#data-file-caching-policies) for more information.

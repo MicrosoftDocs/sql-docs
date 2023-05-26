@@ -16,7 +16,7 @@ tags: azure-service-management
 
 This article provides storage best practices and guidelines to optimize performance for your SQL Server on Azure Virtual Machines (VMs).
 
-There's typically a trade-off between optimizing for costs and optimizing for performance. This performance best practices series is focused on getting the *best* performance for SQL Server on Azure Virtual Machines. If your workload is less demanding, you might not require every recommended optimization. Consider your performance needs, costs, and workload patterns as you evaluate these recommendations.
+There's typically a trade-off between optimizing for costs and optimizing for performance. This performance best practices series is focused on getting the *best* performance for SQL Server on Azure VMs. If your workload is less demanding, you might not require every recommended optimization. Consider your performance needs, costs, and workload patterns as you evaluate these recommendations.
 
 To learn more, see the other articles in this series: [Checklist](performance-guidelines-best-practices-checklist.md), [VM size](performance-guidelines-best-practices-vm-size.md), [Security](security-considerations-best-practices.md), [HADR configuration](hadr-cluster-best-practices.md), and [Collect baseline](performance-guidelines-best-practices-collect-baseline.md).
 
@@ -57,7 +57,7 @@ For production SQL Server environments, don't use the operating system disk for 
 
 ### Temporary disk
 
-Many Azure virtual machines contain another disk type called the temporary disk (labeled as the `D:\` drive). Depending on the virtual machine series and size the capacity of this disk will vary. The temporary disk is ephemeral, which means the disk storage is recreated (as in, it is deallocated and allocated again), when the virtual machine is restarted, or moved to a different host (for [service healing](/troubleshoot/azure/virtual-machines/understand-vm-reboot), for example).
+Many Azure VMs contain another disk type called the temporary disk (labeled as the `D:\` drive). Depending on the virtual machine series and size the capacity of this disk will vary. The temporary disk is ephemeral, which means the disk storage is recreated (as in, it is deallocated and allocated again), when the virtual machine is restarted, or moved to a different host (for [service healing](/troubleshoot/azure/virtual-machines/understand-vm-reboot), for example).
 
 The temporary storage drive isn't persisted to remote storage and therefore shouldn't store user database files, transaction log files, or anything that must be preserved.
 
@@ -75,6 +75,10 @@ Format your data disk to use 64-KB allocation unit size for all data files place
 
 > [!NOTE]  
 > It is also possible to host your SQL Server database files directly on [Azure Blob storage](/sql/relational-databases/databases/sql-server-data-files-in-microsoft-azure) or on [SMB storage](/sql/database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option) such as [Azure premium file share](/azure/storage/files/storage-how-to-create-file-share), but we recommend using [Azure managed disks](/azure/virtual-machines/managed-disks-overview) for the best performance, reliability, and feature availability.
+
+## Premium SSD v2
+
+You should use Premium SSD v2 disks when running SQL Server workloads in [supported regions](/azure/virtual-machines/disks-types#regional-availability), if the [current limitations](/azure/virtual-machines/disks-types#premium-ssd-v2-limitations) are suitable for your environment. Depending on your configuration, Premium SSD v2 can be significantly cheaper than Premium SSDs, while also providing performance improvements. With Premium SSD v2, you can individually tweak your throughput or IOPS independently from the size of your disk. Being able to individually tweak performance options allows for this larger cost savings and allows you to script changes to meet performance requirements during anticipated or known periods of need.
 
 ## Premium SSD
 
@@ -102,10 +106,6 @@ This cost-effective and temporary expansion of performance is a strong use case 
 
 For more information, see [Performance tiers for managed disks](/azure/virtual-machines/disks-change-performance).
 
-## Premium SSD v2
-
-Premium SSD v2 disks are a good middle option between Premium SSDs and Ultra Disks. They offer higher performance than Premium SSDs and also allow you to [configure performance](/azure/virtual-machines/disks-types#premium-ssd-v2-performance) independent of the disk size while being less expensive than Ultra Disks. If the [current limitations](/azure/virtual-machines/disks-types#premium-ssd-v2-limitations) of Premium SSD v2 are suitable for your environment, and they're [available in your region](/azure/virtual-machines/disks-types#regional-availability), generally, you should use a Premium SSD v2 rather than a Premium SSD.
-
 ## Azure ultra disk
 
 If there is a need for submillisecond response times with reduced latency consider using [Azure ultra disk](/azure/virtual-machines/disks-types#ultra-disks) for the SQL Server log drive, or even the data drive for applications that are extremely sensitive to I/O latency.
@@ -116,11 +116,11 @@ Ultra disk isn't supported on all VM series and has other limitations such as re
 
 ## Standard HDDs and SSDs
 
-[Standard HDDs](/azure/virtual-machines/disks-types#standard-hdds) and SSDs have varying latencies and bandwidth and are only recommended for dev/test workloads. Production workloads should use premium SSDs. If you are using Standard SSD (dev/test scenarios), the recommendation is to add the maximum number of data disks supported by your [VM size](/azure/virtual-machines/sizes?toc=/azure/virtual-machines/windows/toc.json) and use disk striping with Storage Spaces for the best performance.
+[Standard HDDs](/azure/virtual-machines/disks-types#standard-hdds) and SSDs have varying latencies and bandwidth and are only recommended for dev/test workloads. Production workloads should use Premium SSD v2 or Premium SSDs. If you are using Standard SSD (dev/test scenarios), the recommendation is to add the maximum number of data disks supported by your [VM size](/azure/virtual-machines/sizes?toc=/azure/virtual-machines/windows/toc.json) and use disk striping with Storage Spaces for the best performance.
 
 ## Caching
 
-Virtual machines that support premium storage caching can take advantage of an additional feature called the Azure BlobCache or host caching to extend the IOPS and throughput capabilities of a virtual machine. Virtual machines enabled for both premium storage and premium storage caching have these two different storage bandwidth limits that can be used together to improve storage performance.
+VMs that support premium storage caching can take advantage of an additional feature called the Azure BlobCache or host caching to extend the IOPS and throughput capabilities of a virtual machine. VMs enabled for both premium storage and premium storage caching have these two different storage bandwidth limits that can be used together to improve storage performance.
 
 The IOPS and MBps throughput without caching counts against a virtual machine's uncached disk throughput limits. The maximum cached limits provide an additional buffer for reads that helps address growth and unexpected peaks.
 
@@ -151,9 +151,9 @@ The max cached and temp storage throughput limit is a separate limit from the un
 
 The max cached and temp storage throughput limit governs the I/O against the local temp drive (`D:\` drive) and the Azure BlobCache **only if** host caching is enabled.
 
-When caching is enabled on premium storage, virtual machines can scale beyond the limitations of the remote storage uncached VM IOPS and throughput limits.
+When caching is enabled on premium storage, VMs can scale beyond the limitations of the remote storage uncached VM IOPS and throughput limits.
 
-Only certain virtual machines support both premium storage and premium storage caching (which needs to be verified in the virtual machine documentation). For example, the [M-series](/azure/virtual-machines/m-series) documentation indicates that both premium storage, and premium storage caching is supported:
+Only certain VMs support both premium storage and premium storage caching (which needs to be verified in the virtual machine documentation). For example, the [M-series](/azure/virtual-machines/m-series) documentation indicates that both premium storage, and premium storage caching is supported:
 
 :::image type="content" source="./media/performance-guidelines-best-practices/m-series-table-premium-support.png" alt-text="Screenshot showing M-Series Premium Storage support.":::
 
@@ -201,7 +201,7 @@ For example, an application that needs 12,000 IOPS and 180 MB/s can:
 - Stripe three P30 disks to deliver 15,000 IOPS and 600-MB/s throughput.
 - Use a [Standard_M16ms](/azure/virtual-machines/m-series) virtual machine and use host caching to utilize local cache over consuming throughput.
 
-Virtual machines configured to scale up during times of high utilization should provision storage with enough IOPS and throughput to support the maximum VM size while keeping the overall number of disks less than or equal to the maximum number supported by the smallest VM SKU targeted to be used.
+VMs configured to scale up during times of high utilization should provision storage with enough IOPS and throughput to support the maximum VM size while keeping the overall number of disks less than or equal to the maximum number supported by the smallest VM SKU targeted to be used.
 
 For more information on disk capping limitations and using caching to avoid capping, see [Disk IO capping](/azure/virtual-machines/disks-performance).
 
@@ -210,7 +210,7 @@ For more information on disk capping limitations and using caching to avoid capp
 
 ## Write Acceleration
 
-Write Acceleration is a disk feature that is only available for the [M-Series](/azure/virtual-machines/m-series) Virtual Machines (VMs). The purpose of Write Acceleration is to improve the I/O latency of writes against Azure Premium Storage when you need single digit I/O latency due to high volume mission critical OLTP workloads or data warehouse environments.
+Write Acceleration is a disk feature that is only available for the [M-Series](/azure/virtual-machines/m-series) VMs. The purpose of Write Acceleration is to improve the I/O latency of writes against Azure Premium Storage when you need single digit I/O latency due to high volume mission critical OLTP workloads or data warehouse environments.
 
 Use Write Acceleration to improve write latency to the drive hosting the log files. Don't use Write Acceleration for SQL Server data files.
 
@@ -232,9 +232,9 @@ There are several restrictions to using Write Acceleration. To learn more, see [
 
 ### Compare to Azure ultra disk
 
-The biggest difference between Write Acceleration and Azure ultra disks is that Write Acceleration is a virtual machine feature only available for the M-Series and Azure ultra disks is a storage option. Write Acceleration is a write-optimized cache with its own limitations based on the virtual machine size. Azure ultra disks are a low latency disk storage option for Azure Virtual Machines.
+The biggest difference between Write Acceleration and Azure ultra disks is that Write Acceleration is a virtual machine feature only available for the M-Series and Azure ultra disks is a storage option. Write Acceleration is a write-optimized cache with its own limitations based on the virtual machine size. Azure ultra disks are a low latency disk storage option for Azure VMs.
 
-If possible, use Write Acceleration over ultra disks for the transaction log disk. For virtual machines that don't support Write Acceleration but require low latency to the transaction log, use Azure ultra disks.
+If possible, use Write Acceleration over ultra disks for the transaction log disk. For VMs that don't support Write Acceleration but require low latency to the transaction log, use Azure ultra disks.
 
 ## Monitor storage performance
 

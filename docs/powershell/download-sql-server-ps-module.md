@@ -37,7 +37,7 @@ For help topics, go to:
 [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md), doesn't install either PowerShell module. To use PowerShell with SSMS, install the **SqlServer** module from the [PowerShell Gallery](https://www.powershellgallery.com/packages/Sqlserver).
 
 > [!NOTE]  
-> SQL Server Management Studio (SSMS) 16.x (and earlier versions) included a version the **SqlServer** module.
+> SQL Server Management Studio (SSMS) 16.x (and earlier versions) included a the **SQLPS** module.
 
 ## Azure Data Studio
 
@@ -73,13 +73,34 @@ This section walks you through the steps of installing the SqlServer PowerShell 
    Save-Module -Name SqlServer -Path $env:TEMP
    ```
   
-1. Browse to the folder location in File Explorer to verify that a `$env:TEMP\SQLServer\<SomeVersion>` subfolder exists.
-1. Copy the `$env:TEMP\SQLServer\<SomeVersion>` folder you found in step 2 to the destination offline computer in `C:\Program Files\WindowsPowerShell\Modules` folder (this folder would work for both PS5 and PS7).
-1. On the offline computer, open a PowerShell window.
-1. Run the following command to install the SqlServer PowerShell module on the offline computer. This command essentially registers the module on the offline computer as the files have already been copied.
+1. Browse to the folder location in File Explorer to verify that a `$env:TEMP\SQLServer\<SomeVersion>` folder exists or run this command:
 
    ```powershell
-   Import-Module -Name SqlServer 
+   Get-ChildItem -Path $env:TEMP\SQLServer\
+   ```
+
+1. Copy the `$env:TEMP\SQLServer\<SomeVersion>` folder you found in step 2 to the destination offline computer in `%ProgramFiles%\WindowsPowerShell\Modules\SqlServer` folder (this folder would work for both PS5 and PS7). Be sure to replace `<SomeVersion>` with the value you found in the previous step.
+
+   ```powershell
+   Copy-Item -Path $env:TEMP\SQLServer\<SomeVersion> -Destination $env:ProgramFiles\WindowsPowerShell\Modules\SQLServer
+   ```
+
+1. Confirm that the SqlServer PowerShell module is available on the offline computer by running the following PowerShell cmdlet:
+
+   ```powershell
+   Get-Module SqlServer -ListAvailable
+   ```
+
+   The output may look like this (actual version may be different and must match <SomeVersion> listed previously):
+
+   ```console
+      PS C:\Users\user1> Get-Module SqlServer -ListAvailable
+
+          Directory: C:\Program Files\WindowsPowerShell\Modules
+
+      ModuleType Version    Name                     ExportedCommands
+      ---------- -------    ----                     ----------------
+      Script     22.1.1     SqlServer                {Add-RoleMember, Add-SqlAvail...
    ```
 
 ### View the versions of the SqlServer module installed

@@ -4,7 +4,7 @@ description: Provides storage best practices and guidelines to optimize the perf
 author: bluefooted
 ms.author: pamela
 ms.reviewer: mathoma, randolphwest
-ms.date: 03/29/2023
+ms.date: 05/25/2023
 ms.service: virtual-machines-sql
 ms.subservice: performance
 ms.topic: conceptual
@@ -41,11 +41,13 @@ The type of disk depends on both the file type that's hosted on the disk and you
 
 ## VM disk types
 
-You have a choice in the performance level for your disks. The types of managed disks available as underlying storage (listed by increasing performance capabilities) are standard hard disk drives (HDD), standard SSDs, premium solid-state drives (SSD), and ultra disks.
+You have a choice in the performance level for your disks. The types of managed disks available as underlying storage (listed by increasing performance capabilities) are Standard hard disk drives (HDD), Standard solid-state drives (SSD), Premium SSDs, Premium SSD v2, and Ultra Disks.
 
-The performance of the disk increases with the capacity, grouped by [premium disk labels](/azure/virtual-machines/disks-types#premium-ssds) such as the P1 with 4 GiB of space and 120 IOPS to the P80 with 32 TiB of storage and 20,000 IOPS. Premium storage supports a storage cache that helps improve read and write performance for some workloads. For more information, see [Managed disks overview](/azure/virtual-machines/managed-disks-overview).
+For Standard HDDs, Standard SSDs, and Premium SSDs, the performance of the disk increases with the size of the disk, grouped by [premium disk labels](/azure/virtual-machines/disks-types#premium-ssds) such as the P1 with 4 GiB of space and 120 IOPS to the P80 with 32 TiB of storage and 20,000 IOPS. Premium storage supports a storage cache that helps improve read and write performance for some workloads. For more information, see [Managed disks overview](/azure/virtual-machines/managed-disks-overview).
 
-There are also three main [disk types](/azure/virtual-machines/managed-disks-overview#disk-roles) to consider for your SQL Server on Azure VM -  an OS disk, a temporary disk, and your data disks. Carefully choose what is stored on the operating system drive `(C:\)` and the ephemeral temporary drive `(D:\)`.
+The performance of Premium SSD v2 and Ultra Disks can be changed independently of the size of the disk, for details see [Ultra disk performance](/azure/virtual-machines/disks-types#ultra-disk-performance) and [Premium SSD v2 performance](/azure/virtual-machines/disks-types#premium-ssd-v2-performance).
+
+There are also three main [disk roles](/azure/virtual-machines/managed-disks-overview#disk-roles) to consider for your SQL Server on Azure VM -  an OS disk, a temporary disk, and your data disks. Carefully choose what is stored on the operating system drive `(C:\)` and the ephemeral temporary drive `(D:\)`.
 
 ### Operating system disk
 
@@ -74,9 +76,9 @@ Format your data disk to use 64-KB allocation unit size for all data files place
 > [!NOTE]  
 > It is also possible to host your SQL Server database files directly on [Azure Blob storage](/sql/relational-databases/databases/sql-server-data-files-in-microsoft-azure) or on [SMB storage](/sql/database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option) such as [Azure premium file share](/azure/storage/files/storage-how-to-create-file-share), but we recommend using [Azure managed disks](/azure/virtual-machines/managed-disks-overview) for the best performance, reliability, and feature availability.
 
-## Premium disks
+## Premium SSD
 
-Use premium SSD disks for data and log files for production SQL Server workloads. Premium SSD IOPS and bandwidth varies based on the [disk size and type](/azure/virtual-machines/disks-types).
+Use Premium SSDs for data and log files for production SQL Server workloads. Premium SSD IOPS and bandwidth varies based on the [disk size and type](/azure/virtual-machines/disks-types).
 
 For production workloads, use the P30 and/or P40 disks for SQL Server data files to ensure caching support and use the P30 up to P80 for SQL Server transaction log files.  For the best total cost of ownership, start with P30s (5000 IOPS/200 MBPS) for data and log files and only choose higher capacities when you need to control the virtual machine disk count.
 
@@ -90,7 +92,7 @@ The best practice is to use the least number of disks possible while meeting the
 
 ### Scale premium disks
 
-When an Azure Managed Disk is first deployed, the performance tier for that disk is based on the provisioned disk size. Designate the performance tier at deployment or change it afterwards, without changing the size of the disk. If demand increases, you can increase the performance level to meet your business needs.
+The size of your Premium SSD determines the initial performance tier of your disk. Designate the performance tier at deployment or change it afterwards, without changing the size of the disk. If demand increases, you can increase the performance level to meet your business needs.
 
 Changing the performance tier allows administrators to prepare for and meet higher demand without relying on [disk bursting](/azure/virtual-machines/disk-bursting#credit-based-bursting).
 
@@ -99,6 +101,10 @@ Use the higher performance for as long as needed where billing is designed to me
 This cost-effective and temporary expansion of performance is a strong use case for targeted events such as shopping, performance testing, training events and other brief windows where greater performance is needed only for a short term.
 
 For more information, see [Performance tiers for managed disks](/azure/virtual-machines/disks-change-performance).
+
+## Premium SSD v2
+
+Premium SSD v2 disks are a good middle option between Premium SSDs and Ultra Disks. They offer higher performance than Premium SSDs and also allow you to [configure performance](/azure/virtual-machines/disks-types#premium-ssd-v2-performance) independent of the disk size while being less expensive than Ultra Disks. If the [current limitations](/azure/virtual-machines/disks-types#premium-ssd-v2-limitations) of Premium SSD v2 are suitable for your environment, and they're [available in your region](/azure/virtual-machines/disks-types#regional-availability), generally, you should use a Premium SSD v2 rather than a Premium SSD.
 
 ## Azure ultra disk
 
@@ -243,7 +249,7 @@ I/O unit sizes influence IOPS and throughput capabilities as smaller I/O sizes y
 There are specific Azure Monitor metrics that are invaluable for discovering capping at the virtual machine and disk level as well as the consumption and the health of the AzureBlob cache. To identify key counters to add to your monitoring solution and Azure portal dashboard, see [Storage utilization metrics](/azure/virtual-machines/disks-metrics#storage-io-utilization-metrics).
 
 > [!NOTE]  
-> Azure Monitor does not currently offer disk-level metrics for the ephemeral temp drive `(D:\)`. VM Cached IOPS Consumed Percentage and VM Cached Bandwidth Consumed Percentage will reflect IOPS and throughput from both the ephemeral temp drive `(D:\)` and host caching together.
+> Azure Monitor doesn't currently offer disk-level metrics for the ephemeral temp drive `(D:\)`. VM Cached IOPS Consumed Percentage and VM Cached Bandwidth Consumed Percentage will reflect IOPS and throughput from both the ephemeral temp drive `(D:\)` and host caching together.
 
 ## Next steps
 

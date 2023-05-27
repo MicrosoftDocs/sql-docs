@@ -123,10 +123,10 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 `[ @owner_login_name = ] 'owner_login_name'`
  The name of the server principal that owns the schedule. *owner_login_name* is **sysname**, with a default of NULL, which indicates that the schedule is owned by the creator.  
   
-`[ @schedule_uid = ] _schedule_uidOUTPUT`
+`[ @schedule_uid = ] _schedule_uid OUTPUT`
  A unique identifier for the schedule. *schedule_uid* is a variable of type **uniqueidentifier**.  
   
-`[ @schedule_id = ] _schedule_idOUTPUT`
+`[ @schedule_id = ] _schedule_id OUTPUT`
  An identifier for the schedule. *schedule_id* is a variable of type **int**.  
   
 `[ @originating_server = ] server_name`

@@ -132,10 +132,10 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 `[ @active_end_time = active_end_time_`
  Time on any day between *active_start_date* and *active_end_date* to end job execution. *active_end_time* is **int**, with no default. The time is formatted as HHMMSS on a 24-hour clock.  
   
-`[ @schedule_id = schedule_idOUTPUT`
+`[ @schedule_id = schedule_id OUTPUT`
  Schedule identification number assigned to the schedule if it is created successfully. *schedule_id* is an output variable of type **int**, with no default.  
   
-`[ @schedule_uid = ] _schedule_uidOUTPUT`
+`[ @schedule_uid = ] _schedule_uid OUTPUT`
  A unique identifier for the schedule. *schedule_uid* is a variable of type **uniqueidentifier**.  
   
 ## Return Code Values  

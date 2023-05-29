@@ -138,15 +138,15 @@ And, within the ShowPlan XML of a query variant (inside of the Dispatcher elemen
 
 ## Remarks
 
-Dispatcher plans are automatically rebuilt if there are significant data distribution changes. Query variant plans will recompile independently as needed, as with any other query plan type, subject to default recompilation events. For more information about recompilation, see [Recompiling Execution Plans](../query-processing-architecture-guide.md#recompiling-execution-plans).
+- The PSP optimization feature currently only works with equality predicates.
 
-The [sys.query_store_plan (Transact-SQL)](../system-catalog-views/sys-query-store-plan-transact-sql.md#sysquery_store_plan-transact-sql) Query Store system catalog view has been changed to differentiate between a normal compiled plan, a dispatcher plan, and a query variant plan. The new Query Store system catalog view, [sys.query_store_query_variant (Transact-SQL)](../system-catalog-views/sys-query-store-query-variant.md#sysquery_store_query_variant-transact-sql), contains information about the parent-child relationships between the original parameterized queries (also known as parent queries), dispatcher plans, and their child query variants.
+- Dispatcher plans are automatically rebuilt if there are significant data distribution changes. Query variant plans will recompile independently as needed, as with any other query plan type, subject to default recompilation events. For more information about recompilation, see [Recompiling Execution Plans](../query-processing-architecture-guide.md#recompiling-execution-plans).
 
-The PSP optimization feature currently only works with equality predicates.
+- The [sys.query_store_plan (Transact-SQL)](../system-catalog-views/sys-query-store-plan-transact-sql.md#sysquery_store_plan-transact-sql) Query Store system catalog view has been changed to differentiate between a normal compiled plan, a dispatcher plan, and a query variant plan. The new Query Store system catalog view, [sys.query_store_query_variant (Transact-SQL)](../system-catalog-views/sys-query-store-query-variant.md#sysquery_store_query_variant-transact-sql), contains information about the parent-child relationships between the original parameterized queries (also known as parent queries), dispatcher plans, and their child query variants.
 
-When there are multiple predicates that are part of the same table, PSP optimization will select the predicate that has the most data skew based on the underlying statistics histogram. For example, with `SELECT * FROM table WHERE column1 = @predicate1 AND column2 = @predicate2`, because both `column1 = @predicate1` and `column2 = @predicate2` are from the same table, this will be `table1`. However, if the example query involves an operator such as a UNION, PSP will evaluate more than one predicate. As an example, if a query has characteristics similar to `SELECT * FROM table WHERE column1 = @predicate UNION SELECT * FROM table WHERE column1 = @predicate`, PSP will pick at most two predicates in this case, because the system treats this scenario as if they're two different tables. The same behavior can be observed from queries that self join via table aliases.
+- When there are multiple predicates that are part of the same table, PSP optimization will select the predicate that has the most data skew based on the underlying statistics histogram. For example, with `SELECT * FROM table WHERE column1 = @predicate1 AND column2 = @predicate2`, because both `column1 = @predicate1` and `column2 = @predicate2` are from the same table, this will be `table1`. However, if the example query involves an operator such as a UNION, PSP will evaluate more than one predicate. As an example, if a query has characteristics similar to `SELECT * FROM table WHERE column1 = @predicate UNION SELECT * FROM table WHERE column1 = @predicate`, PSP will pick at most two predicates in this case, because the system treats this scenario as if they're two different tables. The same behavior can be observed from queries that self join via table aliases.
 
-The ShowPlan XML for a query variant would look similar to the following example, where both predicates that were selected have their respective information added to the PLAN PER VALUE PSP-related hint.
+- The ShowPlan XML for a query variant would look similar to the following example, where both predicates that were selected have their respective information added to the PLAN PER VALUE PSP-related hint.
 
 ```xml
     <Batch>
@@ -196,6 +196,12 @@ The ShowPlan XML for a query variant would look similar to the following example
           <QueryPlan CachedPlanSize="160" CompileTime="17" CompileCPU="17" CompileMemory="1856" QueryVariantID="9">
 ```
 
+- You can influence the current skewness thresholds used by the PSP optimization feature, with one or more of the following methods:
+  - Cardinality estimator (CE) trace flags, such as [Trace Flag 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#tf9481) (global, session, or query level)
+  - [Database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#legacy_cardinality_estimation---on--off--primary-) options that attempt to lower the CE model in use, or influence the assumptions that the CE model makes in regards to the independence of multiple predicates. This is especially useful in cases where multi-column statistics don't exist, which affects PSP optimization's ability to evaluate the candidacy of those predicates.
+
+  - For more information, see the *Increased Correlation Assumption for Multiple Predicates* section of the [Optimizing your query plans with the SQL Server 2014 Cardinality Estimator](/previous-versions/dn673537(v=msdn.10)?redirectedfrom=MSDN) whitepaper. The newer CE model attempts to assume some correlation and less independence for the conjunction and disjunction of predicates. Using the legacy CE model can affect how selectivity of the predicates in a multi-column join scenario can be calculated. This action should only be considered for specific scenarios and it is not generally recommended to use the legacy CE model for most workloads.
+
 ## Considerations
 
 - To enable PSP optimization, enable database compatibility level 160 for the database you're connected to when executing the query.
@@ -211,55 +217,21 @@ ALTER DATABASE MyNewDatabase SET QUERY_STORE = ON (OPERATION_MODE = READ_WRITE, 
 
 - To disable PSP optimization at the database level, use the `ALTER DATABASE SCOPED CONFIGURATION SET PARAMETER_SENSITIVE_PLAN_OPTIMIZATION = OFF` database scoped configuration.
 
-- `Dispatcher` element shows details of the predicate boundaries as derived from a statistics histogram.
-
-```xml
-<Dispatcher>
-  <ParameterSensitivePredicate LowBoundary="100" HighBoundary="1000000">
-    <StatisticsInfo Database="[PropertyMLS]" Schema="[dbo]" Table="[Property]" Statistics="[NCI_Property_AgentId]" ModificationCount="0" SamplingPercent="100" LastUpdate="2019-09-07T15:32:16.89"/>
-    <Predicate>
-      <ScalarOperator ScalarString="[PropertyMLS].[dbo].[Property].[AgentId]=[@AgentId]">
-        <Compare CompareOp="EQ">
-          <ScalarOperator>
-            <Identifier>
-              <ColumnReference Database="[PropertyMLS]" Schema="[dbo]" Table="[Property]" Column="AgentId"/>
-            </Identifier>
-          </ScalarOperator>
-          <ScalarOperator>
-            <Identifier>
-              <ColumnReference Column="@AgentId"/>
-            </Identifier>
-          </ScalarOperator>
-        </Compare>
-      </ScalarOperator>
-    </Predicate>
-  </ParameterSensitivePredicate>
-</Dispatcher>
-```
-
-- `QueryVariantID` attribute on QueryPlan element for query variant identification.
-
- ```xml
- <QueryPlan DegreeOfParallelism="1" MemoryGrant="1024" CachedPlanSize="40" CompileTime="2" CompileCPU="2" CompileMemory="224" QueryVariantID="1">
- ```
-
 - To disable PSP optimization at the query level, use the `DISABLE_PARAMETER_SENSITIVE_PLAN_OPTIMIZATION` query hint.
 
 - If parameter sniffing is disabled by trace flag 4136, `PARAMETER_SNIFFING` database scoped configuration, or the `USE HINT('DISABLE_PARAMETER_SNIFFING')` query hint, PSP optimization will be disabled for the associated workloads and execution contexts. For more information, see [Hints (Transact-SQL) - Query](../../t-sql/queries/hints-transact-sql-query.md) and [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
 - The number of unique plan variants per dispatcher stored in the plan cache is limited to avoid cache bloating. The internal threshold isn't documented. Since each SQL batch has the potential of creating multiple plans and each query variant plan has an independent entry in the plan cache, it is possible that the default maximum number of plan entries allow can be reached. If the plan cache eviction rate is observably high, or the sizes of the CACHESTORE_OBJCP and CACHESTORE_SQLCP [cache stores](/previous-versions/tn-archive/cc293624(v=technet.10)) are excessive, you should consider applying Trace Flag [174](https://support.microsoft.com/help/3026083).
 
-- The number of unique plan variants stored for a query in the Query Store store is limited by the `max_plans_per_query` configuration option. As query variants can have more than one plan, a total of 200 plans can be present per query within the Query Store, and this number will include all query variant plans for all the dispatchers that belong to a parent query. Consider increasing the `max_plans_per_query` Query Store configuration option.
+- The number of unique plan variants stored for a query in the Query Store store is limited by the `max_plans_per_query` configuration option. As query variants can have more than one plan, a total of 200 plans can be present per query within the Query Store, and this number will include all query variant plans for all the dispatchers that belong to a parent query. Consider increasing the `max_plans_per_query` Query Store configuration option. 
+  - An example of how the number of unique plans can exceed the default Query Store `max_plans_per_query` limit would be a scenario in which you have the following behavior. Let's assume that you have query with a Query ID of 10, which has two dispatcher plans and each dispatcher plan has 20 query variants each (40 query variants in total). The total number of plans for Query ID 10 will be 40 plans for the query variants and the two dispatcher plans. It is also possible that the parent query itself (Query ID 10) can have 5 regular (non-dispatcher) plans. This will make 47 plans (40 from query variants, 2 dispatcher, and 5 non-PSP related plans). Further, if each query variant also has an average of five plans, it is possible in this scenario to have more than 200 plans in the Query Store for a parent query. This would also depend upon heavy data skew in the dataset(s) that this example parent query may be referencing.
 
-Let's assume that a particular Query Store exhibits the following behavior: you have Query ID 10, which has two dispatcher plans, and the dispatcher plans have 20 query variants each (40 query variants in total). The total number of plans for Query ID 10 will be 40 plans for the query variants and the two dispatcher plans. It is also possible that the parent Query ID 10 has 5 regular (non-dispatcher) plans. This will make 47 plans (40 from query variants, 2 dispatcher, and 5 non-PSP related plan). Further, if each query variant also has an average of five plans, it is possible in this scenario to have more than 200 plans in the Query Store for a parent query. This would also depend upon heavy data skew in the dataset(s) that this example parent query may be referencing.
-
-For each query variant mapping to a given dispatcher:
-
-- The `query_plan_hash` is unique. This column is available in `sys.dm_exec_query_stats`, and other dynamic management views and catalog tables.
-- The `plan_handle` is unique. This column is available in `sys.dm_exec_query_stats`, `sys.dm_exec_sql_text`, `sys.dm_exec_cached_plans`, and in other Dynamic Management Views and Functions, and catalog tables.
-- The `query_hash` is common to other variants mapping to the same dispatcher, so it's possible to determine aggregate resource usage for queries that differ only by input parameter values. This column is available in `sys.dm_exec_query_stats`, `sys.query_store_query`, and other Dynamic Management Views and catalog tables.
-- The `sql_handle` is unique due to special PSP optimization identifiers being added to the query text during compilation. This column is available in `sys.dm_exec_query_stats`, `sys.dm_exec_sql_text`, `sys.dm_exec_cached_plans`, and in other Dynamic Management Views and Functions, and catalog tables. The same handle information is available in the Query Store as the `last_compile_batch_sql_handle` column in the `sys.query_store_query` catalog table.
-- The `query_id` is unique in the Query Store. This column is available in `sys.query_store_query`, and other Query Store catalog tables.
+- For each query variant mapping to a given dispatcher:
+  - The `query_plan_hash` is unique. This column is available in `sys.dm_exec_query_stats`, and other dynamic management views and catalog tables.
+  - The `plan_handle` is unique. This column is available in `sys.dm_exec_query_stats`, `sys.dm_exec_sql_text`, `sys.dm_exec_cached_plans`, and in other Dynamic Management Views and Functions, and catalog tables.
+  - The `query_hash` is common to other variants mapping to the same dispatcher, so it's possible to determine aggregate resource usage for queries that differ only by input parameter values. This column is available in `sys.dm_exec_query_stats`, `sys.query_store_query`, and other Dynamic Management Views and catalog tables.
+  - The `sql_handle` is unique due to special PSP optimization identifiers being added to the query text during compilation. This column is available in `sys.dm_exec_query_stats`, `sys.dm_exec_sql_text`, `sys.dm_exec_cached_plans`, and in other Dynamic Management Views and Functions, and catalog tables. The same handle information is available in the Query Store as the `last_compile_batch_sql_handle` column in the `sys.query_store_query` catalog table.
+  - The `query_id` is unique in the Query Store. This column is available in `sys.query_store_query`, and other Query Store catalog tables.
 
 ### Plan forcing in Query Store
 
@@ -283,7 +255,7 @@ If a dispatcher is forced, only variants from that dispatcher are considered eli
 
 PSP with query hints and plan forcing behavior can be summarized in the table below:
 
-| Query variant hint or plan | Parent has user-applied hint | Parent has feedback-applied hint | Parent has manual forced plan | Parent has APRC <sup>1</sup> forced plan |
+| Query variant hint or plan | Parent has user-applied hint | Parent has feedback-applied hint | Parent has manual forced plan | Parent has APC <sup>1</sup> forced plan |
 | --- | :---: | :---: | :---: | :---: |
 | **Hint via user** | Query variant hint | Query variant hint | Query variant hint | N/A |
 | **Hint via feedback** | Query variant hint | Query variant hint | Query variant hint | N/A |
@@ -291,7 +263,7 @@ PSP with query hints and plan forcing behavior can be summarized in the table be
 | **Plan&nbsp;forced&nbsp;by&nbsp;APRC** | Query&nbsp;variant<br />forced&nbsp;plan | Query&nbsp;variant<br />forced&nbsp;plan | Query&nbsp;variant<br />forced&nbsp;plan | Query&nbsp;variant<br />forced&nbsp;plan |
 | **No&nbsp;hint&nbsp;or&nbsp;forced&nbsp;plan** | Parent&nbsp;user's&nbsp;hint | No hint | No action | No action |
 
-<sup>1</sup> Automatic plan correction
+<sup>1</sup> Automatic Plan Correction component of the automatic tuning feature
 
 ### Extended Events
 
@@ -324,16 +296,71 @@ PSP optimization will provide audit data for the dispatcher plan statement, and 
 
 ## Known issues
 
-Since PSP query variants are executed as a new prepared statement, the `objectid` isn't automatically exposed in the various plan cache related `sys.dm_exec_*` DMVs without shredding the ShowPlan XML and applying text pattern matching techniques (that is, additional XQuery processing). Only PSP optimization dispatcher plans currently emit the appropriate parent object ID. The `objectid` is exposed within the Query Store as Query Store allows for a more relational model than the plan cache hierarchy provides, see the Query Store system catalog view, [sys.query_store_query_variant (Transact-SQL)](../system-catalog-views/sys-query-store-query-variant.md#sysquery_store_query_variant-transact-sql) for more information. From a plan cache store perspective, PSP optimization will use the Object Plan CACHESTORE_OBJCP and the CACHESTORE_SQLCP cache stores.
+|Issue  |Date discovered  |Status  |Date resolved  |
+|---------|---------|---------|---------|
+|Access Violation exception occurs in Query Store in SQL Server 2022 under certain conditions. You may encounter Access Violation exceptions when PSP optimization Query Store integration is enabled.|March 2023|Has workaround||
 
-PSP optimization currently compiles and executes each query variant as a new prepared statement, which is one of the reasons that the query variants *lose* their association with any parent modules' `object_id` if the dispatcher plan was based on a module (that is, stored procedure, trigger, function, view, and so on). As a prepared statement, the `object_id` won't be anything that can be mapped to an object in `sys.objects` directly but is essentially a calculated value based on an internal hash of the batch text (see the [Table Returned](../system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md#table-returned) section of the sys.dm_exec_plan_attributes DMV documentation for more information). Query variant plans will be placed in the plan cache object store (CACHESTORE_OBJCP) while dispatcher plans are placed in the SQL Plans cache store (CACHESTORE_SQLCP). The PSP feature will, however, store the `object_id` of a query variant's parent within the ObjectID attribute that is part of the PLAN PER VALUE hint that PSP adds to the ShowPlan XML if the parent query is part of a module and not dynamic or ad hoc sql. Aggregate performance statistics for cached procedures, functions, and triggers can continue to be used for their respective purposes. More granular execution related statistics such as those found in views similar to the `sys.dm_exec_query_stats` DMV will still contain data for query variants, however, the association between the `object_id` for query variants and objects within the `sys.objects` table won't currently align without additional processing of the ShowPlan XML for each of the query variants in which more granular runtime statistics are required. The runtime and wait statistics information for query variants can be obtained from the Query Store without additional ShowPlan XML parsing techniques if the Query Store is enabled.
+## Has workaround
 
-You can influence the current skewness thresholds used by the PSP optimization feature, with one or more of the following methods:
+### Access Violation exception occurs in Query Store in SQL Server 2022 under certain conditions.
 
-- Cardinality estimator (CE) trace flags, such as [Trace Flag 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#tf9481) (global, session, or query level)
-- [Database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#legacy_cardinality_estimation---on--off--primary-) options that attempt to lower the CE model in use, or influence the assumptions that the CE model makes in regards to the independence of multiple predicates. This is especially useful in cases where multi-column statistics don't exist, which affects PSP optimization's ability to evaluate the candidacy of those predicates.
+> [!NOTE]  
+> Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Cumulative Update 4, several fixes for a race condition which can lead to an access violation have been released. If access violations related to PSP optimization with Query Store integration occur after applying Cumulative Update 4 for SQL Server 2022, please consider the workaround section below.
 
-For more information, see the *Increased Correlation Assumption for Multiple Predicates* section of the [Optimizing your query plans with the SQL Server 2014 Cardinality Estimator](/previous-versions/dn673537(v=msdn.10)?redirectedfrom=MSDN) whitepaper. The newer CE model attempts to assume some correlation and less independence for the conjunction and disjunction of predicates. Using the legacy CE model can affect how selectivity of the predicates in a multi-column join scenario can be calculated. This action should only be considered for specific scenarios and it is not generally recommended to use the legacy CE model for most workloads.
+This issue occurs because of a race condition that can be caused when the runtime statistics for an executed query are being persisted from the in memory representation of the Query Store (found in the MEMORYCLERK_QUERYDISKSTORE_HASHMAP memory clerk) to the on disk version of the Query Store. The runtime statistics, shown as Runtime Stats, are kept in memory for a period of time defined with the DATA_FLUSH_INTERVAL_SECONDS option of the SET QUERY_STORE statement. You can use the Management Studio Query Store dialog box to enter a value for Data Flush Interval (Minutes), which is internally converted to seconds. If the system is under memory pressure, runtime statistics can be flushed to disk earlier than defined with the DATA_FLUSH_INTERVAL_SECONDS option. When additional Query Store background threads related to Query Store query plan clean up (i.e. STALE_QUERY_THRESHOLD_DAYS and/or MAX_STORAGE_SIZE_MB Query Store options), queries from the Query Store, there is a scenario in which a query variant can become stranded. The term stranded in this context simply means that a query variant ends up in a state in which PSP can no longer locate the associated dispatcher query in the Query Store because it has been removed from memory or from disk due to separate threads (flush to disk and background cleanup) performing operations out of order.
+
+Please refer to the [Remarks](how-query-store-collects-data.md#remarks) section of the How Query Store Collects Data article for more information around Query Store operations.
+
+**Workaround**: The query variants that are in the Query Store can be removed, or the PSP feature can be temporarily disabled at the query or database level until additional fixes become available if your system is still experiencing access violations in Query Store with PSP integration enabled after the application of Cumulative Update 4 for SQL Server 2022.
+ 
+- To disable PSP optimization at the database level, use the `ALTER DATABASE SCOPED CONFIGURATION SET PARAMETER_SENSITIVE_PLAN_OPTIMIZATION = OFF` database scoped configuration.
+- To disable PSP optimization at the query level, use the `DISABLE_PARAMETER_SENSITIVE_PLAN_OPTIMIZATION` query hint.
+ 
+To remove all of the query variants from the Query Store, a query similar to the one below can be used. Please replace the [Your Database Name Goes Here] with the appropriate database that was experiencing issues:
+
+```sql
+USE MASTER;
+GO
+
+--Temporarily turn Query Store off in order to remove query variant plans as well as to
+--clear the Query Store in-memory representation of Query Store (HashMap) for a particular database
+ALTER DATABASE [Your Database Name Goes Here] SET QUERY_STORE = OFF;
+USE [Your Database Name Goes Here];
+DECLARE @QueryIDsCursor CURSOR; 
+DECLARE @QueryID BIGINT; 
+BEGIN 
+ -- Getting the cursor for query IDs for query variant plans
+    SET @QueryIDsCursor = CURSOR FAST_FORWARD FOR 
+    SELECT query_id
+        FROM sys.query_store_plan
+    WHERE plan_type = 2 --query variant plans
+    ORDER BY query_id;
+ 
+ -- Using a non-set based method for this example query
+    OPEN @QueryIDsCursor  
+        FETCH NEXT FROM @QueryIDsCursor  
+        INTO @QueryID 
+        WHILE @@FETCH_STATUS = 0 
+    BEGIN 
+ -- Deleting query variant(s) from the query store 
+        EXEC sp_query_store_remove_query @query_id = @QueryID; 
+        FETCH NEXT FROM @QueryIDsCursor  
+        INTO @QueryID  
+    END;  
+    CLOSE @QueryIDsCursor ; 
+    DEALLOCATE @QueryIDsCursor; 
+END; 
+
+--Turn Query Store back on
+ALTER DATABASE [Your Database Name Goes Here] SET QUERY_STORE = ON;
+GO
+```
+
+If your Query Store is large, or if your system has a substantial workload and/or high amount of ad-hoc un-parameterized queries ([Find non-parameterized queries in Query Store](best-practice-with-the-query-store.md#find-non-parameterized-queries-in-query-store)) which qualify to be captured by Query Store, turning off the Query Store may take some time. To forcibly turn off the Query Store in these scenarios, the `ALTER DATABASE [Your Database Name Goes Here] SET QUERY_STORE = OFF (FORCED)` command be used instead in the sample T-SQL above.
+
+- PSP optimization currently compiles and executes each query variant as a new prepared statement, which is one of the reasons that the query variants *lose* their association with any parent modules' `object_id` if the dispatcher plan was based on a module (that is, stored procedure, trigger, function, view, and so on). As a prepared statement, the `object_id` won't be anything that can be mapped to an object in `sys.objects` directly but is essentially a calculated value based on an internal hash of the batch text (see the [Table Returned](../system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md#table-returned) section of the sys.dm_exec_plan_attributes DMV documentation for more information). Query variant plans will be placed in the plan cache object store (CACHESTORE_OBJCP) while dispatcher plans are placed in the SQL Plans cache store (CACHESTORE_SQLCP). The PSP feature will, however, store the `object_id` of a query variant's parent within the ObjectID attribute that is part of the PLAN PER VALUE hint that PSP adds to the ShowPlan XML if the parent query is part of a module and not dynamic or ad hoc sql. Aggregate performance statistics for cached procedures, functions, and triggers can continue to be used for their respective purposes. More granular execution related statistics such as those found in views similar to the `sys.dm_exec_query_stats` DMV will still contain data for query variants, however, the association between the `object_id` for query variants and objects within the `sys.objects` table won't currently align without additional processing of the ShowPlan XML for each of the query variants in which more granular runtime statistics are required. The runtime and wait statistics information for query variants can be obtained from the Query Store without additional ShowPlan XML parsing techniques if the Query Store is enabled.
+
+- Since PSP query variants are executed as a new prepared statement, the `objectid` isn't automatically exposed in the various plan cache related `sys.dm_exec_*` DMVs without shredding the ShowPlan XML and applying text pattern matching techniques (that is, additional XQuery processing). Only PSP optimization dispatcher plans currently emit the appropriate parent object ID. The `objectid` is exposed within the Query Store as Query Store allows for a more relational model than the plan cache hierarchy provides, see the Query Store system catalog view, [sys.query_store_query_variant (Transact-SQL)](../system-catalog-views/sys-query-store-query-variant.md#sysquery_store_query_variant-transact-sql) for more information.
 
 ## See also
 

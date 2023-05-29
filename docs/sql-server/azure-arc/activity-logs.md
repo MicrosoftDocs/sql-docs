@@ -17,6 +17,7 @@ One can access these activity logs by going to the **SQL Server - Azure Arc reso
 This helps in auditing different operations performed on the resource, along with other crucial information such as the time at which the operation was initiated, its status, and the party responsible for event creation.
 
 ## View the activity log
+
 One can access the activity log from most menus in the Azure portal. The menu from where the logs are opened determines its initial filter. The filter can be changed to view all other entries. Select **Add Filter** to add more properties to the filter.
 
 :::image type="content" source="media/monitoring/activity-logs-filter.png" alt-text="Screenshot of the Arc-enabled SQL Server Activity Logs with Add Filter.":::
@@ -25,7 +26,7 @@ One can access the activity log from most menus in the Azure portal. The menu fr
 
 Select **Download as CSV** to download the events in the current view.
 
-:::image type="content" source="media/monitoring/download-as-csv.png" alt-text="Screenshot of the the Arc-enabled SQL Server Activity Logs Download as CSV feature.":::
+:::image type="content" source="media/monitoring/download-as-csv.png" alt-text="Screenshot of the Arc-enabled SQL Server Activity Logs Download as CSV feature.":::
 
 ## View change history
 

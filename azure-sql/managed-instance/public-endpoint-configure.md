@@ -37,7 +37,7 @@ Due to the sensitivity of data that is in a managed instance, the configuration 
 
 1. Launch the Azure portal at <https://portal.azure.com/.>
 1. Open the resource group with the managed instance, and select the **SQL managed instance** that you want to configure public endpoint on.
-1. On the **Security** settings, select the **Virtual network** tab.
+1. On the **Security** settings, select the **Networking** tab.
 1. In the Virtual network configuration page, select **Enable** and then the **Save** icon to update the configuration.
 
 ![Screenshot shows a Virtual network page of SQL managed instance with the Public endpoint enabled.](./media/public-endpoint-configure/mi-vnet-config.png)

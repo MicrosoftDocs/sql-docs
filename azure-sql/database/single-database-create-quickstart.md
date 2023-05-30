@@ -282,7 +282,7 @@ Once your database is created, you can use the **Query editor (preview)** in the
 
 1. In the portal, search for and select **SQL databases**, and then select your database from the list.
 1. On the page for your database, select **Query editor (preview)** in the left menu.
-1. Enter your server admin login information, and select **OK**.
+1. Enter your **SQL server authentication** server admin login information or use **Azure Active Directory authentication**.
 
    :::image type="content" source="./media/single-database-create-quickstart/query-editor-login.png" alt-text="A screenshot of the Query editor login page in the Azure portal.":::
 

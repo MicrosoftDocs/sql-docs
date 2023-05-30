@@ -222,7 +222,7 @@ The script will be pre-populated with the values provided in the previous steps.
 
 Once the script has been executed and the prerequisites have been validated, then select the confirmation checkbox. 
 
-    :::image type="content" source="./media/create-sql-vm-portal/prerequisites-validation.png" alt-text="Screenshot of the Azure portal that shows the prerequisites validation tab.":::
+:::image type="content" source="./media/create-sql-vm-portal/prerequisites-validation.png" alt-text="Screenshot of the Azure portal that shows the prerequisites validation tab.":::
 
 1. Select **Review + Create**.
 

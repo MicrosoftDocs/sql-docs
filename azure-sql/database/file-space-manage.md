@@ -8,9 +8,7 @@ ms.date: 1/4/2022
 ms.service: sql-database
 ms.subservice: deployment-configuration
 ms.topic: conceptual
-ms.custom:
-  - sqldbrb=1
-  - devx-track-azurepowershell
+ms.custom: sqldbrb=1
 ---
 # Manage file space for databases in Azure SQL Database
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

@@ -8,9 +8,7 @@ ms.date: 05/10/2023
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: how-to
-ms.custom:
-  - devx-track-azurecli
-  - devx-track-azurepowershell
+ms.custom: devx-track-azurepowershell
 tags: azure-resource-manager
 ---
 # Use the Azure portal to configure a multiple-subnet availability group (preview) for SQL Server on Azure VMs

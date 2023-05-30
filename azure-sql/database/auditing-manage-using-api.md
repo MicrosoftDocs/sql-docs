@@ -6,6 +6,7 @@ ms.author: srsaluru
 ms.date: 04/26/2023
 ms.service: sql-database
 ms.subservice: security
+ms.custom: devx-track-azurepowershell
 ms.topic: conceptual
 ---
 # Manage Azure SQL Database Auditing using APIs

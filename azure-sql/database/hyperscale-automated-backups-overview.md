@@ -9,11 +9,7 @@ ms.date: 09/08/2022
 ms.service: sql-db-mi
 ms.subservice: backup-restore
 ms.topic: conceptual
-ms.custom:
-  - references_regions
-  - devx-track-azurepowershell
-  - devx-track-azurecli
-  - azure-sql-split
+ms.custom: references_regions, azure-sql-split
 monikerRange: "= azuresql || = azuresql-db"
 ---
 # Automated backups for Hyperscale databases
@@ -160,4 +156,3 @@ If you prefer, you can copy the database to a different region. Use this method 
 - For information about how to configure, manage, and restore from long-term retention of automated backups in Azure Blob Storage by using PowerShell, see [Manage long-term backup retention by using PowerShell](long-term-backup-retention-configure.md). 
 - Get more information about how to [restore a database to a point in time by using the Azure portal](recovery-using-backups.md).
 - Get more information about how to [restore a database to a point in time by using PowerShell](scripts/restore-database-powershell.md).
-

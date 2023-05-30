@@ -143,7 +143,7 @@ When attempting to access the assembly specified in \<client_assembly_specifier>
 ## Permissions  
  Requires CREATE ASSEMBLY permission.  
   
- If PERMISSION_SET = EXTERNAL_ACCESS is specified, requires**EXTERNAL ACCESS ASSEMBLY** permission on the server. If PERMISSION_SET = UNSAFE is specified, requires **UNSAFE ASSEMBLY** permission on the server.  
+ If PERMISSION_SET = EXTERNAL_ACCESS is specified, requires **EXTERNAL ACCESS ASSEMBLY** permission on the server. If PERMISSION_SET = UNSAFE is specified, requires **UNSAFE ASSEMBLY** permission on the server.  
   
  User must be the owner of any assemblies that are referenced by the assembly that are to be uploaded if the assemblies already exist in the database. To upload an assembly by using a file path, the current user must be a Windows authenticated login or a member of the **sysadmin** fixed server role. The Windows login of the user that executes CREATE ASSEMBLY must have read permission on the share and the files being loaded in the statement.  
 

@@ -635,7 +635,7 @@ Within this directory, there's a folder created based on the time of load submis
 If ERRORFILE has the full path of the storage account defined, then the ERRORFILE_CREDENTIAL is used to connect to that storage. Otherwise, the value mentioned for CREDENTIAL is used.
 
 #### *ERRORFILE_CREDENTIAL = (IDENTITY= '', SECRET = '')*
-*ERRORFILE_CREDENTIAL* only applies to CSV files.  On [!INCLUDEfabric-data-warehouse] in [!INCLUDEmicrosoft-fabric] Warehouse, the only supported authentication mechanism is Shared Access Signature (SAS).
+*ERRORFILE_CREDENTIAL* only applies to CSV files.  On [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)], the only supported authentication mechanism is Shared Access Signature (SAS).
   
 - Authenticating with Shared Access Signatures (SAS)
   - *IDENTITY: A constant with a value of 'Shared Access Signature'*

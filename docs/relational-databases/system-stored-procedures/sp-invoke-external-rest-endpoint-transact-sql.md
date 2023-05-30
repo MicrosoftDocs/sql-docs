@@ -146,6 +146,7 @@ Azure Logic Apps | *.logic.azure.com
 Azure Event Hubs | *.servicebus.windows.net
 Azure Event Grid | *.eventgrid.azure.net
 Azure Cognitive Services | *.cognitiveservices.azure.com
+Azure OpenAI | *.openai.azure.com
 PowerApps / Dataverse | *.api.crm.dynamics.com
 Microsoft Dynamics | *.dynamics.com
 Azure Container Instances | *.azurecontainer.io

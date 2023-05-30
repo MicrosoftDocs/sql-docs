@@ -130,7 +130,7 @@ To track usage, follow these steps:
 
 1. Locate the meters related to **Azure SQL Database** to track usage.
 
-    :::image type="content" source="media/free-sql-db-free-account-how-to-deploy/free-services-tracking.png" alt-text="Screenshot that shows the View and track usage information blade on Azure portal for all free services.":::
+    :::image type="content" source="media/free-sql-db-free-account-how-to-deploy/free-services-tracking.png" alt-text="Screenshot that shows the View and track usage information page on Azure portal for all free services.":::
 
 The following table describes the values on the track usage page: 
 

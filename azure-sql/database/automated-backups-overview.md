@@ -9,11 +9,7 @@ ms.date: 09/14/2022
 ms.service: sql-database
 ms.subservice: backup-restore
 ms.topic: conceptual
-ms.custom:
-  - references_regions
-  - devx-track-azurepowershell
-  - devx-track-azurecli
-  - azure-sql-split
+ms.custom: references_regions, azure-sql-split
 monikerRange: "= azuresql || = azuresql-db"
 ---
 # Automated backups in Azure SQL Database

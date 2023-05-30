@@ -10,6 +10,8 @@ items:
     - name: Machine Learning
       tocHref: /sql/machine-learning/
       topicHref: /azure/azure-sql/managed-instance/machine-learning-services-overview
+    - name: Reliability
+      tocHref: /azure/reliability
 - name: Azure
   tocHref: /azure/
   topicHref: /azure/index
@@ -22,4 +24,3 @@ items:
       tocHref: /azure/azure-sql-edge/
       topicHref: /azure/azure-sql/managed-instance/machine-learning-services-overview
   - name: SQL Managed Instance
-    tocHref: /azure/reliability

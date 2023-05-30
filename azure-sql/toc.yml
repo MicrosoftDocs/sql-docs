@@ -1445,7 +1445,8 @@
         href: managed-instance/log-replay-service-migrate.md
       - name: TDE certificate
         href: managed-instance/tde-certificate-migrate.md
-
+      - name: Migrate to availability zone support
+        href: /azure/reliability/migrate-sql-managed-instance.md?toc=/azure/azure-sql/toc.json&bc=/azure/azure-sql/bread/toc.json
     - name: Managed Instance link 
       items:
       - name: Prepare environment for link 

@@ -1,8 +1,8 @@
 ---
 title: Configure license-free standby replica
 description: Learn how to save on licensing costs by using a standby Azure SQL Managed Instance replica.
-author: strahinjas 
-ms.author: sstefanovic
+author: Stralle
+ms.author: strrodic
 ms.reviewer: mathoma
 ms.date: 05/25/2023
 ms.service: sql-managed-instance

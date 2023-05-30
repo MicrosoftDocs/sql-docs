@@ -214,9 +214,9 @@ On the **SQL Server settings** tab, configure specific settings and optimization
 
     :::image type="content" source="./media/create-sql-vm-portal/sql-instance-settings.png" alt-text="Screenshot of the Azure portal that shows SQL Server instance settings and the button for changing them.":::
 
-## Choose Prequisties Validation
+## Choose Prerequisites Validation
 
-In order for the deployment to be successful, there are [several prerequisites](availability-group-azure-portal-configure.md#prerequisites) that are required to be in place. To make it easier to validate that all permissions and requirements are correct, use the PowerShell prerequisite script that is available for download on this tab. 
+In order for the deployment to be successful, there are [several prerequisite](availability-group-azure-portal-configure.md#prerequisites) that are required to be in place. To make it easier to validate that all permissions and requirements are correct, use the PowerShell prerequisite script that is available for download on this tab. 
 
 The script will be pre-populated with the values provided in the previous steps. Run the PowerShell script as a domain user on the Domain Controller virtual machine or on a domain joined Windows Server VM. 
 

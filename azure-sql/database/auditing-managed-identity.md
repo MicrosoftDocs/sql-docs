@@ -110,16 +110,16 @@ If storage account is **not behind VNET / firewall** -- Auditing will automatica
 To force the use of Managed-Identity based authentication, irrespective of whether the Storage Account is behind firewall or not, please use **REST API** or **Powershell**, like this -
 
 If using REST API,
-[Database Blob Auditing Policies - Create Or Update - REST API (Azure SQL Database](https://learn.microsoft.com/en-us/rest/api/sql/2021-02-01-preview/database-blob-auditing-policies/create-or-update?tabs=HTTP), or
-[Server Blob Auditing Policies - Create Or Update - REST API (Azure SQL Database)](https://learn.microsoft.com/en-us/rest/api/sql/2021-02-01-preview/server-blob-auditing-policies/create-or-update?tabs=HTTP),
+[Database Blob Auditing Policies - Create Or Update - REST API (Azure SQL Database](/rest/api/sql/2021-02-01-preview/database-blob-auditing-policies/create-or-update?tabs=HTTP), or
+[Server Blob Auditing Policies - Create Or Update - REST API (Azure SQL Database)](/rest/api/sql/2021-02-01-preview/server-blob-auditing-policies/create-or-update?tabs=HTTP),
 please omit the **StorageAccountAccessKey** field explicitly in the request body.
 
 If using Powershell APIs,
-[Set-AzSqlServerAudit (Az.Sql)](https://learn.microsoft.com/en-us/powershell/module/az.sql/set-azsqlserveraudit?view=azps-10.0.0) or
-[Set-AzSqlDatabaseAudit (Az.Sql)](https://learn.microsoft.com/en-us/powershell/module/az.sql/set-azsqldatabaseaudit?view=azps-10.0.0)
+[Set-AzSqlServerAudit (Az.Sql)](/powershell/module/az.sql/set-azsqlserveraudit) or
+[Set-AzSqlDatabaseAudit (Az.Sql)](/powershell/module/az.sql/set-azsqldatabaseaudit)
 please pass the **UseIdentity** parameter as **true**
 
-Note that for Managed Identity based authentication to work, the Managed Identity must have the "Storage Blob Data Contributor" role assigned to it, in the Storage Account's Access Control Settings. (This role is automatically added if Azure Portal is used to configure auditing)
+For Managed Identity based authentication to work, the Managed Identity must have the "Storage Blob Data Contributor" role assigned to it, in the Storage Account's Access Control Settings. (This role is automatically added if Azure Portal is used to configure auditing).
 
 
 

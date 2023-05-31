@@ -4,7 +4,7 @@ description: Configures advanced settings for SQL Server Managed Backup to Azure
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/24/2023
+ms.date: 05/31/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -36,6 +36,7 @@ EXEC managed_backup.sp_backup_config_advanced
     , [ @encryptor_type = ] { 'CERTIFICATE' | 'ASYMMETRIC_KEY' }
     , [ @encryptor_name = ] 'name of the certificate or asymmetric key'
     , [ @local_cache_path = ] 'NOT AVAILABLE'
+[ ; ]
 ```
 
 ## Arguments

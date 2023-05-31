@@ -4,7 +4,7 @@ description: "Returns the Extended Events logged by Smart Admin."
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/24/2023
+ms.date: 05/31/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -36,6 +36,7 @@ managed_backup.sp_get_backup_diagnostics
     [ [ @xevent_channel = ] 'event_type'
     [ , [ @begin_time = ] 'time1' ]
     [ , [ @end_time = ] 'time2' ] ]
+[ ; ]
 ```
 
 ## Arguments

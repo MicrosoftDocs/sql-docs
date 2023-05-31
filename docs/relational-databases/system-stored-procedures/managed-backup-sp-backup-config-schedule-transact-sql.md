@@ -4,7 +4,7 @@ description: Configures automated or custom scheduling options for SQL Server Ma
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 05/24/2023
+ms.date: 05/31/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -38,6 +38,7 @@ EXEC managed_backup.sp_backup_config_schedule
     , [ @backup_begin_time = ] 'begin time of the backup window'
     , [ @backup_duration = ] 'backup window length'
     , [ @log_backup_freq = ] 'frequency of log backup'
+[ ; ]
 ```
 
 ## Arguments

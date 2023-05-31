@@ -4,7 +4,7 @@ description: "Sets the value of the specified Smart Admin system parameter."
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/24/2023
+ms.date: 05/31/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -34,18 +34,19 @@ The available parameters are related to [!INCLUDE[ss_smartbackup](../../includes
 ```syntaxsql
 EXEC managed_backup.sp_set_parameter
     [ @parameter_name = ] {
-        'SSMBackup2WANotificationEmailIds'
-        | 'SSMBackup2WAEnableUserDefinedPolicy'
-        | 'SSMBackup2WADebugXevent'
-        | 'FileRetentionDebugXevent'
-        | 'StorageOperationDebugXevent'
+        N'SSMBackup2WANotificationEmailIds'
+        | N'SSMBackup2WAEnableUserDefinedPolicy'
+        | N'SSMBackup2WADebugXevent'
+        | N'FileRetentionDebugXevent'
+        | N'StorageOperationDebugXevent'
     }
-    , [ @parameter_value = ] 'parameter_value'
+    , [ @parameter_value = ] N'parameter_value'
+[ ; ]
 ```
 
 ## Arguments
 
-#### [ @parameter_name = ] '*parameter_name*'
+#### [ @parameter_name = ] N'*parameter_name*'
 
 The name of the parameter you want to set the value for. *@parameter_name* is **nvarchar(128)**. The available parameter names are:
 
@@ -55,7 +56,7 @@ The name of the parameter you want to set the value for. *@parameter_name* is **
 - `FileRetentionDebugXevent`
 - `StorageOperationDebugXevent`.
 
-#### [ @parameter_value = ] '*parameter_value*'
+#### [ @parameter_value = ] N'*parameter_value*'
 
 The value for the parameter you want to set. *@parameter_value* is **nvarchar(128)**. The following table shows allowed parameter name and value pairs:
 
@@ -73,7 +74,7 @@ The value for the parameter you want to set. *@parameter_value* is **nvarchar(12
 
 ## Permissions
 
-Requires **EXECUTE** permissions on the `managed_backup.sp_set_parameter` stored procedure.
+Requires EXECUTE permissions on the `managed_backup.sp_set_parameter` stored procedure.
 
 ## Examples
 
@@ -83,12 +84,12 @@ The following examples enable operational and debug extended events.
 -- Enable operational events
 USE msdb;
 GO
-EXEC managed_backup.sp_set_parameter 'FileRetentionOperationalXevent', 'True';
+EXEC managed_backup.sp_set_parameter N'FileRetentionOperationalXevent', N'True';
 
 -- Enable debug events
 USE msdb;
 GO
-EXEC managed_backup.sp_set_parameter 'FileRetentionDebugXevent', 'True';
+EXEC managed_backup.sp_set_parameter N'FileRetentionDebugXevent', N'True';
 ```
 
 The following example enables email notifications of errors and warnings, and sets the email address for sending notifications:

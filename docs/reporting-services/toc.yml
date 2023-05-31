@@ -1480,8 +1480,6 @@
     href: ../relational-databases/system-catalog-views/sys-edge-constraint-clauses-transact-sql.md
   - name: sysmail_delete_principalprofile_sp
     href: ../relational-databases/system-catalog-views/sys-edge-constraints-transact-sql.md
-  - name: Tuning Recommendations
-    href: ../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md
   - name: Enum SQL Agent Subsystems
     href: ../relational-databases/system-stored-procedures/sp-enum-sqlagent-subsystems-transact-sql.md
   - name: Delete Principal Profile

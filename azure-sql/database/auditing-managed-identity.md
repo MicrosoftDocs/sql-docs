@@ -3,7 +3,8 @@ title: Auditing using managed identity
 description: How to use managed identity with storage accounts for Auditing
 author: sravanisaluru
 ms.author: srsaluru
-ms.date: 04/26/2023
+ms.reviewer: randolphwest
+ms.date: 05/31/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual
@@ -12,14 +13,14 @@ ms.topic: conceptual
 
 [!INCLUDE[appliesto-sqldb-asa](../includes/appliesto-sqldb-asa.md)]
 
-Auditing for **Azure SQL Database** can be configured to use a **Storage account** with two authentication methods:
+Auditing for Azure SQL Database can be configured to use a **Storage account** with two authentication methods:
 
 - Managed Identity
 - Storage Access Keys
 
 **Managed Identity** can be a system-assigned managed identity (SMI) or user-assigned managed identity (UMI).
 
-To configure writing audit logs to a storage account, Go to the [Azure portal](https://portal.azure.com), and select your logical server resource for **Azure SQL Database**. Select **Storage** in the **Auditing** menu. Select the Azure storage account where logs will be saved.
+To configure writing audit logs to a storage account, go to the [Azure portal](https://portal.azure.com), and select your logical server resource for Azure SQL Database. Select **Storage** in the **Auditing** menu. Select the Azure storage account where logs will be saved.
 
 By default, the identity used is the primary user identity assigned to the server. If there's no user identity, the server creates a system-assigned managed identity and uses it for authentication.
 
@@ -33,7 +34,7 @@ UMI gives users flexibility to create and maintain their own UMI for a given ten
 
 For more information about UMI, see [Managed identities in Azure AD for Azure SQL](authentication-azure-ad-user-assigned-managed-identity.md)
 
-## Configure user-assigned managed identity for Azure SQL DB Auditing
+## Configure user-assigned managed identity for Azure SQL Database auditing
 
 Before auditing can be set up to send logs to your storage account, the managed identity assigned to the server needs to have the [Storage Blob Data Contributor](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor) role assignment. This assignment is required if you're configuring auditing using PowerShell, the Azure CLI, REST API, or ARM templates. Role assignment is done automatically when using the Azure portal to configure Auditing, so the below steps are unnecessary if you're configuring Auditing through the Azure portal.
 
@@ -95,37 +96,32 @@ PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{
   }
 }
 ```
-For more information, see [Server Auditing Settings - Create Or Update](/rest/api/sql/2017-03-01-preview/server-auditing-settings/create-or-update)
 
+For more information, see [Server Auditing Settings - Create Or Update](/rest/api/sql/2017-03-01-preview/server-auditing-settings/create-or-update).
 
-## For Synapse Workspaces, currently:
+---
 
-It is not possible to use **User-Assigned Managed Identity** based Authentication to Storage Account (only **System-Assigned Managed Identity** can be used on Synapse)
+## Configure user-assigned managed identity for Azure Synapse Analytics auditing
 
-In the Azure Portal, there is no option to explicitly choose SAS key / Managed Identity based authentication (like we have for Azure SQL Server)
+You can't use UMI based authentication to a storage account. Only SMI can be used on Azure Synapse.
 
-If storage account is **behind a VNET / firewall** - Auditing will automatically be configured using Managed Identity based authentication
-If storage account is **not behind VNET / firewall** -- Auditing will automatically be configured using SAS key based authentication
+In the Azure portal for an Azure Synapse workspace, there is no option to explicitly choose SAS key or managed identity-based authentication, as is the case for Azure SQL Database.
 
-To force the use of Managed-Identity based authentication, irrespective of whether the Storage Account is behind firewall or not, please use **REST API** or **Powershell**, like this -
+- If the storage account is behind a VNet or firewall, auditing is automatically configured using managed identity-based authentication.
 
-If using REST API,
-[Database Blob Auditing Policies - Create Or Update - REST API (Azure SQL Database](/rest/api/sql/2021-02-01-preview/database-blob-auditing-policies/create-or-update?tabs=HTTP), or
-[Server Blob Auditing Policies - Create Or Update - REST API (Azure SQL Database)](/rest/api/sql/2021-02-01-preview/server-blob-auditing-policies/create-or-update?tabs=HTTP),
-please omit the **StorageAccountAccessKey** field explicitly in the request body.
+- If the storage account isn't behind a VNet or firewall, then auditing is automatically configured using SAS key based authentication.
 
-If using Powershell APIs,
-[Set-AzSqlServerAudit (Az.Sql)](/powershell/module/az.sql/set-azsqlserveraudit) or
-[Set-AzSqlDatabaseAudit (Az.Sql)](/powershell/module/az.sql/set-azsqldatabaseaudit)
-please pass the **UseIdentity** parameter as **true**
+To force the use of managed identity-based authentication, regardless of whether the storage account is behind a firewall, use the REST API or PowerShell, as follows:
 
-For Managed Identity based authentication to work, the Managed Identity must have the "Storage Blob Data Contributor" role assigned to it, in the Storage Account's Access Control Settings. (This role is automatically added if Azure Portal is used to configure auditing).
+- If using the REST API, reference [Database Blob Auditing Policies - Create Or Update - REST API (Azure SQL Database](/rest/api/sql/2021-02-01-preview/database-blob-auditing-policies/create-or-update?tabs=HTTP), or [Server Blob Auditing Policies - Create Or Update - REST API (Azure SQL Database)](/rest/api/sql/2022-08-01-preview/server-blob-auditing-policies/create-or-update?tabs=HTTP). You must omit the `StorageAccountAccessKey` field explicitly in the request body.
 
+- If using PowerShell APIs, reference [Set-AzSqlServerAudit (Az.Sql)](/powershell/module/az.sql/set-azsqlserveraudit) or [Set-AzSqlDatabaseAudit (Az.Sql)](/powershell/module/az.sql/set-azsqldatabaseaudit), and pass the `UseIdentity` parameter as `true`.
 
+For managed identity-based authentication to work, the managed identity must have the **Storage Blob Data Contributor** role assigned to it, in the storage account's **Access Control Settings**. This role is automatically added if Azure portal is used to configure auditing.
 
-## See also
+## Next steps
 
 - [Auditing overview](auditing-overview.md)
-- Data Exposed episode [What's New in Azure SQL Auditing](/Shows/Data-Exposed/Whats-New-in-Azure-SQL-Auditing)
+- Data Exposed episode: [What's New in Azure SQL Auditing](/Shows/Data-Exposed/Whats-New-in-Azure-SQL-Auditing)
 - [Auditing for SQL Managed Instance](../managed-instance/auditing-configure.md)
 - [Auditing for SQL Server](/sql/relational-databases/security/auditing/sql-server-audit-database-engine)

@@ -42,6 +42,7 @@ You can use SQL Database auditing to:
 ## Auditing limitations
 
 - Enabling auditing on a paused **Azure Synapse** isn't supported. To enable auditing, resume Azure Synapse.
+- Enabling auditing by using User Assigned Managed Identity (UAMI) isn't supported on **Azure Synapse SQL pools**.
 - Auditing for **Azure Synapse SQL pools** supports default audit action groups **only**.
 - When you configure the auditing for your [logical server in Azure](logical-servers.md) or Azure SQL Database with log destination as the storage account, the target storage account must be enabled with access to storage account keys. If the storage account is configured to use Azure AD-only authentication and not configured for access key usage, auditing can't be configured.
 

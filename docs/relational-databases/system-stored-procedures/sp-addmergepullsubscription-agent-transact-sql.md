@@ -99,8 +99,8 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  Is the security mode to use when connecting to a Publisher when synchronizing. *publisher_security_mode* is **int**, with a default of 1. The following values define the security mode: 
 - **0** specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication. 
 - **1** specifies Windows authentication.  
-- **2** specifies Azure Active Directory (Azure AD) password authentication starting with SQL Server 2022 CU1. 
-- **3** specifies Azure AD integrated authentication starting with SQL Server 2022 CU1. 
+- **2** specifies Azure Active Directory (Azure AD) password authentication starting with SQL Server 2022 CU7. 
+- **3** specifies Azure AD integrated authentication starting with SQL Server 2022 CU7. 
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
@@ -148,9 +148,9 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  Is the security mode to use when connecting to a Distributor when synchronizing. *distributor_security_mode* is **int**, with a default of 0. The following values define the security mode: 
 - **0** specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. 
 - **1** specifies Windows Authentication.  
-- **2** specifies Azure Active Directory (Azure AD) Password Authentication starting with SQL Server 2022 CU1. 
-- **3** specifies Azure AD Integrated Authentication starting with SQL Server 2022 CU1. 
-- **4** specifies Azure AD Token Authentication starting with SQL Server 2022 CU1. 
+- **2** specifies Azure Active Directory (Azure AD) Password Authentication starting with SQL Server 2022 CU7. 
+- **3** specifies Azure AD Integrated Authentication starting with SQL Server 2022 CU7. 
+- **4** specifies Azure AD Token Authentication starting with SQL Server 2022 CU7. 
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   

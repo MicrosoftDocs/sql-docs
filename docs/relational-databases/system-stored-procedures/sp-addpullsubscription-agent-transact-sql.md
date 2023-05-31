@@ -132,9 +132,9 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
  Is the security mode to use when connecting to a Distributor when synchronizing. *distributor_security_mode* is **int**, with a default of **1**. The following values define the security mode: 
 - **0** specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. 
 - **1** specifies Windows Authentication.  
-- **2** specifies Azure Active Directory (Azure AD) Password Authentication starting with SQL Server 2022 CU1. 
-- **3** specifies Azure AD Integrated Authentication starting with SQL Server 2022 CU1. 
-- **4** specifies Azure AD Token Authentication starting with SQL Server 2022 CU1. 
+- **2** specifies Azure Active Directory (Azure AD) Password Authentication starting with SQL Server 2022 CU7. 
+- **3** specifies Azure AD Integrated Authentication starting with SQL Server 2022 CU7. 
+- **4** specifies Azure AD Token Authentication starting with SQL Server 2022 CU7. 
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  

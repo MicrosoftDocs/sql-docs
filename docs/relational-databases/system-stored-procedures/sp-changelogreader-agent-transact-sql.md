@@ -49,9 +49,9 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
  Is the security mode used by the agent when connecting to the Publisher. *publisher_security_mode* is **smallint**, with a default of NULL. The following values define the security mode: 
 - **0** specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. 
 - **1** specifies Windows Authentication.  
-- **2** specifies Azure Active Directory (Azure AD) Password Authentication starting with SQL Server 2022 CU1. 
-- **3** specifies Azure AD Integrated Authentication starting with SQL Server 2022 CU1. 
-- **4** specifies Azure AD Token Authentication starting with SQL Server 2022 CU1. 
+- **2** specifies Azure Active Directory (Azure AD) Password Authentication starting with SQL Server 2022 CU7. 
+- **3** specifies Azure AD Integrated Authentication starting with SQL Server 2022 CU7. 
+- **4** specifies Azure AD Token Authentication starting with SQL Server 2022 CU7. 
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  

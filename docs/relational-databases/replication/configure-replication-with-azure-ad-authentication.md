@@ -13,11 +13,11 @@ ms.author: "mathoma"
 # Configure replication with Azure AD authentication
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver2022.md)]
 
-This article provides steps to configure Transactional and Snapshot replication by using Azure Active Directory (Azure AD) authentication starting with SQL Server 2022 CU1. 
+This article provides steps to configure Transactional and Snapshot replication by using Azure Active Directory (Azure AD) authentication starting with SQL Server 2022 CU7. 
 
 ## Overview
 
-Support for Azure AD authentication with SQL Server replication was added in SQL Server 2022 CU1. When configuring SQL Server replication with Azure AD authentication, the only step that's different is the first step, when you create an Azure AD login, and grant sysadmin permissions. Then use that Azure AD login in the replication stored procedures to configure replication. 
+Support for Azure AD authentication with SQL Server replication was added in SQL Server 2022 CU7. When configuring SQL Server replication with Azure AD authentication, the only step that's different is the first step, when you create an Azure AD login, and grant sysadmin permissions. Then use that Azure AD login in the replication stored procedures to configure replication. 
 
 The session trace flag 11543 is required to configure replication with Azure AD authentication, so before executing any step, be sure to enable the trace flag in the session by using the following Transact-SQL command: 
 
@@ -29,8 +29,8 @@ DBCC TRACEON(11543, -1)
 
 To configure replication with Azure AD authentication, you must meet the following prerequisites: 
 
-- Azure AD authentication configured for every SQL Server instance in the replication topology. Review [Tutorial: Set up Azure AD authentication for SQL Server](../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial.md) to learn more. 
-- [SQL Server Management Studio v18 or higher](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](/azure/azure-data-studio/download-azure-data-studio). 
+- Have SQL Server 2022 Cumulative Update 7 configured with Azure AD authentication for every server in the replication topology. Review [Tutorial: Set up Azure AD authentication for SQL Server](../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial.md) to learn more. 
+- [SQL Server Management Studio v18 or higher](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio). 
 - The user connecting to the publisher and subscriber is a member of the **sysadmin** fixed server role. 
 
 
@@ -39,7 +39,7 @@ To configure replication with Azure AD authentication, you must meet the followi
 Configuring your replication with Azure AD authentication currently has the following limitations: 
 
 - It's currently only possible to configure replication by using Transact-SQL (T-SQL), and the replication stored procedures. It's not currently possible to configure replication by using the Replication Wizard in SQL Server Management Studio (SSMS), the RMO replication objects, or other command line languages. 
-- Ever server in the replication topology must be on SQL Server 2022 CU1. 
+- Every server in the replication topology must be on SQL Server 2022 CU7. 
 - When configuring replication, session trace flag 11543 must be enabled within every query session used to configure replication. Once replication has been established, this trace flag is no longer necessary and can be disabled. 
 
 ## Create SQL login from Azure AD
@@ -240,7 +240,7 @@ EXEC sp_addpushsubscription_agent @publication = N'testpub', @subscriber = N'<su
 
 ## Replication stored procedures
 
-The following parameters in these replication stored procedures were modified in CU1 for SQL Server 2022 to support Azure AD authentication for replication: 
+The following parameters in these replication stored procedures were modified in CU7 for SQL Server 2022 to support Azure AD authentication for replication: 
 
 - [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md): `@distributor_security_mode`
 - [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md): `@subscriber_security_mode`
@@ -254,9 +254,9 @@ The following parameters in these replication stored procedures were modified in
 The following values define the security modes for these stored procedures: 
 - **0** specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. 
 - **1** specifies Windows Authentication.  
-- **2** specifies Azure Active Directory (Azure AD) Password Authentication starting with SQL Server 2022 CU1. 
-- **3** specifies Azure AD Integrated Authentication starting with SQL Server 2022 CU1. 
-- **4** specifies Azure AD Token Authentication starting with SQL Server 2022 CU1. 
+- **2** specifies Azure Active Directory (Azure AD) Password Authentication starting with SQL Server 2022 CU7. 
+- **3** specifies Azure AD Integrated Authentication starting with SQL Server 2022 CU7. 
+- **4** specifies Azure AD Token Authentication starting with SQL Server 2022 CU7. 
 
 
 ## Next steps

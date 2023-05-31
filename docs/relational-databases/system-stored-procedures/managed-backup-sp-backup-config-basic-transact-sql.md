@@ -4,7 +4,7 @@ description: Configures the SQL Server Managed Backup to Azure basic settings fo
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/24/2023
+ms.date: 05/31/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -39,6 +39,7 @@ EXEC managed_backup.sp_backup_config_basic
     , [ @container_url = ] 'Azure_Storage_blob_container'
     , [ @retention_days = ] retention_period_in_days
     , [ @credential_name = ] 'sql_credential_name'
+[ ; ]
 ```
 
 ## Arguments

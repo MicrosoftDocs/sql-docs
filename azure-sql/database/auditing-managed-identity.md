@@ -12,14 +12,14 @@ ms.topic: conceptual
 
 [!INCLUDE[appliesto-sqldb-asa](../includes/appliesto-sqldb-asa.md)]
 
-Auditing can be configured to use a **Storage account** with two authentication methods:
+Auditing for **Azure SQL Database** can be configured to use a **Storage account** with two authentication methods:
 
 - Managed Identity
 - Storage Access Keys
 
 **Managed Identity** can be a system-assigned managed identity (SMI) or user-assigned managed identity (UMI).
 
-To configure writing audit logs to a storage account, Go to the [Azure portal](https://portal.azure.com), and select your logical server resource for Azure SQL Database. Select **Storage** in the **Auditing** menu. Select the Azure storage account where logs will be saved.
+To configure writing audit logs to a storage account, Go to the [Azure portal](https://portal.azure.com), and select your logical server resource for **Azure SQL Database**. Select **Storage** in the **Auditing** menu. Select the Azure storage account where logs will be saved.
 
 By default, the identity used is the primary user identity assigned to the server. If there's no user identity, the server creates a system-assigned managed identity and uses it for authentication.
 
@@ -33,7 +33,7 @@ UMI gives users flexibility to create and maintain their own UMI for a given ten
 
 For more information about UMI, see [Managed identities in Azure AD for Azure SQL](authentication-azure-ad-user-assigned-managed-identity.md)
 
-## Configure user-assigned managed identity for Auditing
+## Configure user-assigned managed identity for Azure SQL DB Auditing
 
 Before auditing can be set up to send logs to your storage account, the managed identity assigned to the server needs to have the [Storage Blob Data Contributor](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor) role assignment. This assignment is required if you're configuring auditing using PowerShell, the Azure CLI, REST API, or ARM templates. Role assignment is done automatically when using the Azure portal to configure Auditing, so the below steps are unnecessary if you're configuring Auditing through the Azure portal.
 
@@ -95,10 +95,33 @@ PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{
   }
 }
 ```
-
 For more information, see [Server Auditing Settings - Create Or Update](/rest/api/sql/2017-03-01-preview/server-auditing-settings/create-or-update)
 
----
+
+## For Synapse Workspaces, currently:
+
+It is not possible to use **User-Assigned Managed Identity** based Authentication to Storage Account (only **System-Assigned Managed Identity** can be used on Synapse)
+
+In the Azure Portal, there is no option to explicitly choose SAS key / Managed Identity based authentication (like we have for Azure SQL Server)
+
+If storage account is **behind a VNET / firewall** - Auditing will automatically be configured using Managed Identity based authentication
+If storage account is **not behind VNET / firewall** -- Auditing will automatically be configured using SAS key based authentication
+
+To force the use of Managed-Identity based authentication, irrespective of whether the Storage Account is behind firewall or not, please use **REST API** or **Powershell**, like this -
+
+If using REST API,
+[Database Blob Auditing Policies - Create Or Update - REST API (Azure SQL Database](/rest/api/sql/2021-02-01-preview/database-blob-auditing-policies/create-or-update?tabs=HTTP), or
+[Server Blob Auditing Policies - Create Or Update - REST API (Azure SQL Database)](/rest/api/sql/2021-02-01-preview/server-blob-auditing-policies/create-or-update?tabs=HTTP),
+please omit the **StorageAccountAccessKey** field explicitly in the request body.
+
+If using Powershell APIs,
+[Set-AzSqlServerAudit (Az.Sql)](/powershell/module/az.sql/set-azsqlserveraudit) or
+[Set-AzSqlDatabaseAudit (Az.Sql)](/powershell/module/az.sql/set-azsqldatabaseaudit)
+please pass the **UseIdentity** parameter as **true**
+
+For Managed Identity based authentication to work, the Managed Identity must have the "Storage Blob Data Contributor" role assigned to it, in the Storage Account's Access Control Settings. (This role is automatically added if Azure Portal is used to configure auditing).
+
+
 
 ## See also
 

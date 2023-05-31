@@ -18,7 +18,7 @@ dev_langs:
 # sp_adddistributor (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  Creates an entry in the [sys.sysservers](../../relational-databases/system-compatibility-views/sys-sysservers-transact-sql.md) table (if there is not one), marks the server entry as a Distributor, and stores property information. This stored procedure is executed at the Distributor on the master database to register and mark the server as a distributor. In the case of a remote distributor, it is also executed at the Publisher from the master database to register the remote distributor.  
+  Creates an entry in the [sys.servers](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md) table (if there is not one), marks the server entry as a Distributor, and stores property information. This stored procedure is executed at the Distributor on the master database to register and mark the server as a distributor. In the case of a remote distributor, it is also executed at the Publisher from the master database to register the remote distributor.  
   
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

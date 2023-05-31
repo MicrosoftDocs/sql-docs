@@ -4,7 +4,7 @@ description: "Grants a Windows group or user access to SQL Server."
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 05/26/2023
+ms.date: 05/31/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -17,6 +17,7 @@ dev_langs:
   - "TSQL"
 ---
 # xp_grantlogin (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Grants a Windows group or user access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].

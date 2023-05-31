@@ -4,7 +4,7 @@ description: "Enables unforcing a previously forced plan for a particular query 
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/29/2023
+ms.date: 05/31/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -42,11 +42,11 @@ sp_query_store_unforce_plan
 
 #### [ @query_id = ] *query_id*
 
-The ID of the query. *@query_id* is a **bigint**, with no default.
+The ID of the query. *@query_id* is **bigint**, with no default.
 
 #### [ @plan_id = ] *plan_id*
 
-The ID of the query plan that will no longer be enforced. *@plan_id* is a **bigint**, with no default.
+The ID of the query plan that will no longer be enforced. *@plan_id* is **bigint**, with no default.
 
 #### [ @force_plan_scope = ] '*replica_group_id*'
 

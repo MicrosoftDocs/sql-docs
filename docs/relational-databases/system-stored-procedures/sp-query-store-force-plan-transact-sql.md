@@ -4,7 +4,7 @@ description: "Enables forcing a particular plan for a particular query in the Qu
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/29/2023
+ms.date: 05/31/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -45,15 +45,15 @@ sp_query_store_force_plan
 
 #### [ @query_id = ] *query_id*
 
-The ID of the query. *@query_id* is a **bigint**, with no default.
+The ID of the query. *@query_id* is **bigint**, with no default.
 
 #### [ @plan_id = ] *plan_id*
 
-The ID of the query plan to be forced. *@plan_id* is a **bigint**, with no default.
+The ID of the query plan to be forced. *@plan_id* is **bigint**, with no default.
 
 #### [ @disable_optimized_plan_forcing = ] *disable_optimized_plan_forcing*
 
-Indicates whether optimized plan forcing should be disabled. *@disable_optimized_plan_forcing* is a **bit** with a default of 0.
+Indicates whether optimized plan forcing should be disabled. *@disable_optimized_plan_forcing* is **bit** with a default of `0`.
 
 #### [ @force_plan_scope = ] '*replica_group_id*'
 

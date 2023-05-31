@@ -33,6 +33,7 @@ A FILESTREAM container can't be removed until all the deleted files within it ar
 sp_filestream_force_garbage_collection
     [ @dbname = ] 'database_name'
     [ , [ @filename = ] 'logical_file_name' ]
+[ ; ]
 ```
 
 ## Arguments
@@ -51,18 +52,18 @@ Specifies the logical name of the FILESTREAM container to run the GC on. *@filen
 
 | Value | Description |
 | --- | --- |
-| 0 | Operation success |
-| 1 | Operation failure |
+| `0` | Operation success |
+| `1` | Operation failure |
 
 ## Result sets
 
 | Value | Description |
 | --- | --- |
-| *file_name* | Indicates the FILESTREAM container name |
-| *num_collected_items* | Indicates the number of FILESTREAM items (files or directories) that have been garbage collected (deleted) in this container. |
-| *num_marked_for_collection_items* | Indicates the number of FILESTREAM items (files or directories) that have been marked for GC in this container. These items haven't been deleted yet, but may be eligible for deletion following the GC phase. |
-| *num_unprocessed_items* | Indicates the number of eligible FILESTREAM items (files or directories) that weren't processed for GC in this FILESTREAM container. Items may be unprocessed for various reasons, including:<br /><br />- Files that need to be pinned down because a log backup or checkpoint hasn't been taken.<br /><br />- Files in the FULL or BULK_LOGGED recovery model.<br /><br />- There is a long-running active transaction.<br /><br />- The replication log reader job has not run. See the white paper [FILESTREAM Storage in SQL Server 2008](/previous-versions/sql/sql-server-2008/hh461480(v=msdn.10)) for more information. |
-| *last_collected_xact_seqno* | Returns the last corresponding log sequence number (LSN) up to which the files have been garbage collected for the specified FILESTREAM container. |
+| `file_name` | Indicates the FILESTREAM container name |
+| `num_collected_items` | Indicates the number of FILESTREAM items (files or directories) that have been garbage collected (deleted) in this container. |
+| `num_marked_for_collection_items` | Indicates the number of FILESTREAM items (files or directories) that have been marked for GC in this container. These items haven't been deleted yet, but may be eligible for deletion following the GC phase. |
+| `num_unprocessed_items` | Indicates the number of eligible FILESTREAM items (files or directories) that weren't processed for GC in this FILESTREAM container. Items may be unprocessed for various reasons, including:<br /><br />- Files that need to be pinned down because a log backup or checkpoint hasn't been taken.<br /><br />- Files in the FULL or BULK_LOGGED recovery model.<br /><br />- There is a long-running active transaction.<br /><br />- The replication log reader job has not run. See the white paper [FILESTREAM Storage in SQL Server 2008](/previous-versions/sql/sql-server-2008/hh461480(v=msdn.10)) for more information. |
+| `last_collected_xact_seqno` | Returns the last corresponding log sequence number (LSN) up to which the files have been garbage collected for the specified FILESTREAM container. |
 
 ## Remarks
 

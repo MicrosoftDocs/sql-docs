@@ -4,7 +4,7 @@ description: "Clears the runtime stats for a specific query plan from the Query 
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/29/2023
+ms.date: 05/31/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -39,7 +39,7 @@ sp_query_store_reset_exec_stats [ @plan_id = ] plan_id
 
 #### [ @plan_id = ] *plan_id*
 
-The ID of the query plan to be cleared. *@plan_id* is a **bigint**, with no default.
+The ID of the query plan to be cleared. *@plan_id* is **bigint**, with no default.
 
 ## Return code values
 

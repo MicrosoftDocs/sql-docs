@@ -55,8 +55,13 @@ sp_addlogreader_agent [ @job_login = ] 'job_login'
  Is the name of an existing agent job. *job_name* is **sysname**, with a default value of NULL. This parameter is only specified when the agent is started using an existing job instead of a newly created job (the default).  
   
 `[ @publisher_security_mode = ] publisher_security_mode`
- Is the security mode used by the agent when connecting to the Publisher. *publisher_security_mode* is **smallint**, with a default of **1**. **0** specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, and **1** specifies Windows Authentication. A value of **0** must be specified for non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers.  
-  
+ Is the security mode used by the agent when connecting to the Publisher. *publisher_security_mode* is **smallint**, with a default of **1**. A value of **0** must be specified for non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers. The following values define the security mode: 
+- **0** specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. 
+- **1** specifies Windows Authentication.  
+- **2** specifies Azure Active Directory (Azure AD) Password Authentication starting with SQL Server 2022 CU1. 
+- **3** specifies Azure AD Integrated Authentication starting with SQL Server 2022 CU1. 
+- **4** specifies Azure AD Token Authentication starting with SQL Server 2022 CU1. 
+
 `[ @publisher_login = ] 'publisher_login'`
  Is the login used when connecting to the Publisher. *publisher_login* is **sysname**, with a default of NULL. *publisher_login* must be specified when *publisher_security_mode* is **0**. If *publisher_login* is NULL and *publisher_security_mode* is **1**, then the Windows account specified in *job_login* will be used when connecting to the Publisher.  
   

@@ -3,7 +3,7 @@ title: "sp_addmergepullsubscription_agent (Transact-SQL)"
 description: "sp_addmergepullsubscription_agent (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
-ms.date: "03/16/2017"
+ms.date: 04/14/2023
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -96,7 +96,11 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
 `[ @publisher_security_mode = ] publisher_security_mode`
- Is the security mode to use when connecting to a Publisher when synchronizing. *publisher_security_mode* is **int**, with a default of 1. If **0**, specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. If **1**, specifies Windows Authentication.  
+ Is the security mode to use when connecting to a Publisher when synchronizing. *publisher_security_mode* is **int**, with a default of 1. The following values define the security mode: 
+- **0** specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication. 
+- **1** specifies Windows authentication.  
+- **2** specifies Azure Active Directory (Azure AD) password authentication starting with SQL Server 2022 CU1. 
+- **3** specifies Azure AD integrated authentication starting with SQL Server 2022 CU1. 
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
@@ -141,8 +145,12 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  Is the name of the Distributor. *distributor* is **sysname**, with a default of *publisher*; that is, the Publisher is also the Distributor.  
   
 `[ @distributor_security_mode = ] distributor_security_mode`
- Is the security mode to use when connecting to a Distributor when synchronizing. *distributor_security_mode* is **int**, with a default of 0. **0** specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. **1** specifies Windows Authentication.  
-  
+ Is the security mode to use when connecting to a Distributor when synchronizing. *distributor_security_mode* is **int**, with a default of 0. The following values define the security mode: 
+- **0** specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. 
+- **1** specifies Windows Authentication.  
+- **2** specifies Azure Active Directory (Azure AD) Password Authentication starting with SQL Server 2022 CU1. 
+- **3** specifies Azure AD Integrated Authentication starting with SQL Server 2022 CU1. 
+- **4** specifies Azure AD Token Authentication starting with SQL Server 2022 CU1. 
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
@@ -351,5 +359,3 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
  [sp_helpmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
  [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
-  
-  

@@ -49,7 +49,7 @@ sp_add_alert [ @name = ] 'name'
 
 #### [ @name = ] '*name*'
 
-The name of the alert. The name appears in the e-mail or pager message sent in response to the alert. It must be unique and can contain the percent (**%**) character. *@name* is **sysname**, with no default.
+The name of the alert. The name appears in the e-mail or pager message sent in response to the alert. It must be unique and can contain the percent (`%`) character. *@name* is **sysname**, with no default.
 
 #### [ @message_id = ] *message_id*
 
@@ -59,7 +59,7 @@ Only `sysmessages` errors written to the Microsoft Windows application log can c
 
 #### [ @severity = ] *severity*
 
-The severity level (from `1` through **25**) that defines the alert. Any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] message stored in the `sysmessages` table sent to the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows application log with the indicated severity causes the alert to be sent. *@severity* is **int**, with a default of `0`. If *@message_id* is used to define the alert, *@severity* must be `0`.
+The severity level (from `1` through `25`) that defines the alert. Any [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] message stored in the `sysmessages` table sent to the [!INCLUDE [msCoName](../../includes/msconame-md.md)] Windows application log with the indicated severity causes the alert to be sent. *@severity* is **int**, with a default of `0`. If *@message_id* is used to define the alert, *@severity* must be `0`.
 
 #### [ @enabled = ] *enabled*
 
@@ -67,11 +67,10 @@ Indicates the current status of the alert. *@enabled* is **tinyint**, with a def
 
 #### [ @delay_between_responses = ] *delay_between_responses*
 
-The wait period, in seconds, between responses to the alert. *@delay_between_responses*is **int**, with a default of `0`, which means there is no waiting between responses (each occurrence of the alert generates a response). The response can be in either or both of these forms:
+The wait period, in seconds, between responses to the alert. *@delay_between_responses* is **int**, with a default of `0`, which means there is no waiting between responses (each occurrence of the alert generates a response). The response can be in either or both of these forms:
 
-- One or more notifications sent through e-mail or pager.
-
-- A job to execute.
+- One or more notifications sent through e-mail or pager
+- A job to execute
 
 By setting this value, it is possible to prevent, for example, unwanted e-mail messages from being sent when an alert repeatedly occurs in a short period of time.
 
@@ -81,10 +80,10 @@ An optional additional message sent to the operator as part of the e-mail, `net 
 
 #### [ @include_event_description_in = ] *include_event_description_in*
 
-Whether the description of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error should be included as part of the notification message. *include_event_description_in*is **tinyint**, with a default of `5` (e-mail and `net send`), and can have one or more of these values combined with an **OR** logical operator.
+Whether the description of the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] error should be included as part of the notification message. *include_event_description_in* is **tinyint**, with a default of `5` (e-mail and `net send`), and can have one or more of these values combined with an **OR** logical operator.
 
 > [!IMPORTANT]  
-> The Pager and `net send` options will be removed from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using these features in new development work, and plan to modify applications that currently use these features.
+> The Pager and `net send` options will be removed from [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent in a future version of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using these features in new development work, and plan to modify applications that currently use these features.
 
 | Value | Description |
 | --- | --- |
@@ -95,11 +94,11 @@ Whether the description of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion
 
 #### [ @database_name = ] '*database*'
 
-The database in which the error must occur for the alert to fire. If *@database_name* is not supplied, the alert fires regardless of where the error occurred. *database* is **sysname**. Names that are enclosed in brackets ([ ]) aren't allowed. The default value is NULL.
+The database in which the error must occur for the alert to fire. If *@database_name* is not supplied, the alert fires regardless of where the error occurred. *database* is **sysname**. Names that are enclosed in brackets (`[ ]`) aren't allowed. The default value is NULL.
 
 #### [ @event_description_keyword = ] N'*event_description_keyword_pattern*'
 
-The sequence of characters that the description of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error must be like. [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE expression pattern-matching characters can be used. *@event_description_keyword* is **nvarchar(100)**, with a default of NULL. This parameter is useful for filtering object names (for example, `%customer_table%`).
+The sequence of characters that the description of the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] error must be like. [!INCLUDE [tsql](../../includes/tsql-md.md)] LIKE expression pattern-matching characters can be used. *@event_description_keyword* is **nvarchar(100)**, with a default of NULL. This parameter is useful for filtering object names (for example, `%customer_table%`).
 
 #### [ @job_id = ] *job_id*
 
@@ -109,13 +108,13 @@ Either *@job_id* or *@job_name* must be specified, but both can't be specified.
 
 #### [ @job_name = ] '*job_name*'
 
-The name of the job to be executed in response to this alert. *@job_name*is **sysname**, with a default of NULL.
+The name of the job to be executed in response to this alert. *@job_name* is **sysname**, with a default of NULL.
 
 Either *@job_id* or *@job_name* must be specified, but both can't be specified.
 
 #### [ @raise_snmp_trap = ] *raise_snmp_trap*
 
-Not implemented in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version 7.0. *@raise_snmp_trap* is **tinyint**, with a default of `0`.
+Not implemented in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] version 7.0. *@raise_snmp_trap* is **tinyint**, with a default of `0`.
 
 #### [ @performance_condition = ] N'*performance_condition*'
 
@@ -145,24 +144,24 @@ The query that specifies the WMI event for the alert. *@wmi_query* is **nvarchar
 
 ## Result sets
 
-None
+None.
 
 ## Remarks
 
 `sp_add_alert` must be run from the `msdb` database.
 
-These are the circumstances under which errors/messages generated by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applications are sent to the Windows application log and can therefore raise alerts:
+These are the circumstances under which errors/messages generated by [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] applications are sent to the Windows application log and can therefore raise alerts:
 
 - Severity 19 or higher `sys.messages` errors
 - Any `RAISERROR` statement invoked with `WITH LOG` syntax
 - Any `sys.messages` error modified or created using `sp_altermessage`
 - Any event logged using `xp_logevent`
 
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] provides an easy, graphical way to manage the entire alerting system and is the recommended way to configure an alert infrastructure.
+[!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] provides an easy, graphical way to manage the entire alerting system and is the recommended way to configure an alert infrastructure.
 
 If an alert isn't functioning properly, check whether:
 
-- The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service is running.
+- The [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent service is running.
 
 - The event appeared in the Windows application log.
 

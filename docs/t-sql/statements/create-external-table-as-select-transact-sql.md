@@ -18,6 +18,7 @@ helpviewer_keywords:
   - "PolyBase, create table as select"
 dev_langs:
   - "TSQL"
+ms.custom: devx-track-azurepowershell
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-ver16||>=sql-server-linux-ver16||=azuresqldb-mi-current"
 ---
 # CREATE EXTERNAL TABLE AS SELECT (CETAS) (Transact-SQL)

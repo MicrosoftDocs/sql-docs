@@ -3,8 +3,8 @@ title: What is the Hyperscale service tier?
 description: This article describes the Hyperscale service tier in the vCore-based purchasing model in Azure SQL Database and explains how it's different from the General Purpose and Business Critical service tiers.
 author: dimitri-furman
 ms.author: dfurman
-ms.reviewer: wiassaf, mathoma
-ms.date: 05/03/2023
+ms.reviewer: wiassaf, mathoma, oslake 
+ms.date: 06/01/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -171,8 +171,7 @@ These are the current limitations of the Hyperscale service tier.  We're activel
 | Database integrity check | DBCC CHECKDB isn't currently supported for Hyperscale databases. DBCC CHECKTABLE ('TableName') WITH TABLOCK  and DBCC CHECKFILEGROUP WITH TABLOCK may be used as a workaround. See [Data Integrity in Azure SQL Database](https://azure.microsoft.com/blog/data-integrity-in-azure-sql-database/) for details on data integrity management in Azure SQL Database. |
 | Elastic Jobs | Using a Hyperscale database as the Job database isn't supported. However, elastic jobs can target Hyperscale databases in the same way as any other database in Azure SQL Database. |
 |Data Sync| Using a Hyperscale database as a Hub or Sync Metadata database isn't supported. However, a Hyperscale database can be a member database in a Data Sync topology. |
-| Hyperscale service tier premium-series hardware (preview) | Zone redundancy is currently not supported for premium-series and memory optimized premium-series hardware.|
-| Hyperscale service tier premium-series hardware (preview) | Azure SQL Database maintenance window is currently not supported for premium-series and memory optimized premium-series. | 
+| Hyperscale service tier premium-series hardware (preview) | Premium-series and memory optimized premium-series hardware does not currently support:<br/><br/>- Zone redundancy<BR/><BR/>- Azure SQL Database maintenance window<BR/><BR/>- Serverless compute tier.| 
 
 ## Next steps
 

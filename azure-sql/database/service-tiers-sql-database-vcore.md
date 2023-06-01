@@ -4,7 +4,7 @@ description: The vCore purchasing model lets you independently scale compute and
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: sashan, moslake, mathoma, dfurman
-ms.date: 05/31/2023
+ms.date: 06/01/2023
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: conceptual
@@ -190,7 +190,7 @@ Common hardware configurations in the vCore model include standard-series (Gen5)
 
 Certain hardware configurations such as standard-series (Gen5) may use more than one type of processor (CPU), as described in [Compute resources (CPU and memory)](#compute-resources-cpu-and-memory). While a given database or elastic pool tends to stay on the hardware with the same CPU type for a long time (commonly for multiple months), there are certain events that can cause a database or pool to be moved to hardware that uses a different CPU type. For example, a database or pool can be moved if it is scaled up or down to a different service objective, or if the current infrastructure in a datacenter is approaching its capacity limits, or if the currently used hardware is being decommissioned due to its end of life.
 
-For some workloads, a move to a different CPU type can change performance. SQL Database configures hardware with the goal to provide predictable workload performance even if CPU type changes, keeping performance changes within a narrow band. However, across the wide spectrum of customer workloads running in SQL Database, and as new types of CPUs become available, it is possible to occasionally see more noticeable changes in performance of a database or pool moves to a different CPU type.
+For some workloads, a move to a different CPU type can change performance. SQL Database configures hardware with the goal to provide predictable workload performance even if CPU type changes, keeping performance changes within a narrow band. However, across the wide spectrum of customer workloads running in SQL Database, and as new types of CPUs become available, it is possible to occasionally see more noticeable changes in performance if a database or pool moves to a different CPU type.
 
 Regardless of CPU type used, resource limits for a database or elastic pool, such as the number of cores, memory, max data IOPS, max log rate, and max concurrent workers, remain the same as long as the database stays on the same service objective.
 
@@ -202,18 +202,17 @@ Standard-series (Gen5) hardware is available in all public regions worldwide.
 
 ### Hyperscale premium-series
 
-- Premium-series hardware options use the latest CPUs and memory technologies from Intel and AMD. Premium-series provides a boost to compute performance relative to standard-series hardware.
+- Premium-series hardware options use the latest CPU and memory technology from Intel and AMD. Premium-series provides a boost to compute performance relative to standard-series hardware.
 - Premium-series option offers faster CPU performance compared to Standard-series and a higher number of maximum vCores.
 - Premium-series memory optimized option offers double the amount of memory relative to premium-series.
 
-Premium-series and premium-series memory optimized hardware is only available for Hyperscale databases.
 - For more information, see the [Hyperscale premium series blog announcement](https://aka.ms/AAiq28n).
  
 For regions available, see [Hyperscale premium-series availability](#hyperscale-premium-series-availability).
 
 ### Fsv2-series
 
-- Fsv2-series is a compute optimized hardware configuration delivering low CPU latency and high clock speed for the most CPU demanding workloads.
+- Fsv2-series is a compute optimized hardware configuration delivering low CPU latency and high clock speed for the most CPU demanding workloads. Similar to [Hyperscale premium-series](#hyperscale-premium-series) hardware configurations, Fsv2-series is powered by the latest CPU and memory technology from Intel and AMD. This lets customers take advantage of the latest hardware while using databases and elastic pools in the General Purpose service tier.
 - Depending on the workload, Fsv2-series can deliver more CPU performance per vCore than other types of hardware. For example, the 72 vCore Fsv2 compute size can provide more CPU performance than 80 vCores on Standard-series (Gen5), at lower cost.
 - Fsv2 provides less memory and `tempdb` per vCore than other hardware, so workloads sensitive to those limits may perform better on standard-series (Gen5).
 

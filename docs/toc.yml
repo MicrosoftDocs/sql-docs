@@ -6767,8 +6767,9 @@ items:
         - name: Tuning Database using workload from Query Store
           href: relational-databases/performance/tuning-database-using-workload-from-query-store.md
     - name: Execution plans
-      href: relational-databases/performance/execution-plans.md
       items:
+      - name: Overview
+        href: relational-databases/performance/execution-plans.md
       - name: Concepts
         items:
         - name: Query Profiling Infrastructure

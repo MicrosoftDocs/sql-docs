@@ -1,3 +1,12 @@
+---
+author: bobtabor-msft
+ms.author: rotabor
+ms.date: 06/01/2023
+ms.service: sql-database
+ms.topic: include
+ms.custom: generated
+---
+
 1) In the [Azure portal](https://portal.azure.com), browse to your SQL database and select **Query editor (preview)**.
 
 2) Select **Continue as `<your-username>`** on the right side of the screen to sign into the database using your account.

@@ -1,3 +1,11 @@
+---
+author: bobtabor-msft
+ms.author: rotabor
+ms.date: 06/01/2023
+ms.service: sql-database
+ms.topic: include
+ms.custom: generated
+---
 
 Create a user-assigned managed identity using the Azure portal or the Azure CLI. Your application uses the identity to authenticate to other services.
 

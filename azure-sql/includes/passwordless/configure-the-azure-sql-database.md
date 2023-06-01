@@ -1,3 +1,12 @@
+---
+author: bobtabor-msft
+ms.author: rotabor
+ms.date: 06/01/2023
+ms.service: sql-database
+ms.topic: include
+ms.custom: generated
+---
+
 Passwordless connections use Azure Active Directory (Azure AD) authentication to connect to Azure services, including Azure SQL Database. With Azure AD authentication, you can manage identities in a central location to simplify permission management. Learn more about configuring Azure AD authentication for your Azure SQL Database:
 
 - [Azure AD authentication overview](/azure/azure-sql/database/authentication-aad-overview)

@@ -1,3 +1,12 @@
+---
+author: bobtabor-msft
+ms.author: rotabor
+ms.date: 06/01/2023
+ms.service: sql-database
+ms.topic: include
+ms.custom: generated
+---
+
 Create a SQL database user that maps back to the user-assigned managed identity. Assign the necessary SQL roles to the user to allow your app to read, write, and modify the data and schema of your database.
 
 1) In the Azure portal, browse to your SQL database and select **Query editor (preview)**.

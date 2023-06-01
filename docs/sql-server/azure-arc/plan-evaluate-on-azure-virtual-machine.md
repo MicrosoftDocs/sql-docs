@@ -40,6 +40,7 @@ Create an Azure SQL Virtual Machine. Use an [available Azure SQL VM image](/azur
 1. Notice any extensions. Because this VM is an Azure SQL VM, it has *SQLIaasExtension*.
 1. Select **SQLIaasExtension**, and select **Uninstall**.
 1. If there are any other extensions installed on the VM, select each extension individually, and then select **Uninstall**.
+1. Wait for all extensions to finish uninstalling before you proceed.
 
 ## Disable the Azure VM Guest agent
 
@@ -48,12 +49,19 @@ To disable the Azure VM Guest agent:
 1. Connect to the virtual machine.
 1. On the virtual machine, run the following PowerShell.
 
-   ```powershell
-   Set-Service WindowsAzureGuestAgent -StartupType Disabled -Verbose
-   Stop-Service WindowsAzureGuestAgent -Force -Verbose
-   ```
+y=>y.attrs.isDirty&&!to(y)&&y.attrs.depth!==void 0?(l.delim=l.repeat(" ",3*y.attrs.depth),l.delim):""
+```powershell
+y=>y.attrs.isDirty&&!to(y)&&y.attrs.depth!==void 0?(l.delim=l.repeat(" ",3*y.attrs.depth),l.delim):""   Set-Service WindowsAzureGuestAgent -StartupType Disabled -Verbose
+y=>y.attrs.isDirty&&!to(y)&&y.attrs.depth!==void 0?(l.delim=l.repeat(" ",3*y.attrs.depth),l.delim):""   Stop-Service WindowsAzureGuestAgent -Force -Verbose
+y=>y.attrs.isDirty&&!to(y)&&y.attrs.depth!==void 0?(l.delim=l.repeat(" ",3*y.attrs.depth),l.delim):""```
 
-1. Wait for all extensions to finish uninstalling before you proceed.
+
+1. Block access to the Azure IMDS endpoint
+While still connected to the server, run the following commands to block access to the Azure IMDS endpoint. For Windows, run the following PowerShell command:
+
+```powershell
+New-NetFirewallRule -Name BlockAzureIMDS -DisplayName "Block access to Azure IMDS" -Enabled True -Profile Any -Direction Outbound -Action Block -RemoteAddress 169.254.169.254
+```
 
 ## Connect the SQL Server to Azure Arc
 

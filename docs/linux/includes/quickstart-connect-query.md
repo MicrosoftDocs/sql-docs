@@ -66,8 +66,10 @@ Next create a new table, `dbo.Inventory`, and insert two new rows.
 
    ```sql
    CREATE TABLE dbo.Inventory (
-      id INT, name NVARCHAR(50),
-      quantity INT
+       id INT,
+       name NVARCHAR(50),
+       quantity INT,
+       PRIMARY KEY (id)
    );
    ```
 

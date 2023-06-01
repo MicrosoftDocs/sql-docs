@@ -28,6 +28,19 @@ You can also use the [Global Customer Service phone numbers](https://support.mic
 
 You can find all the latest troubleshooting guidance and resolution to common issues in the [SQL Server Troubleshooting documentation](/troubleshoot/sql/).
 
+## Review known issues published
+
+You can check the following resources to understand if you are encountering any published known issues. 
+
+We publish our bug **fix list** in the [SQL Server builds spreadsheet](https://aka.ms/sqlserverbuilds). This spreadsheet contains tabs with detailed fix list for our mainstream supported versions 2022, 2019 and 2017. You can sort this list by component and feature and understand when a specific issue was fixed. Each fix item is also linked to its own article reference which provides more details about the problem and any applicable workaround.
+
+When we publish a Cumulative Update, we publish a Knowledge Base article that corresponds to that update. Example: [SQL Server 2022 Cumulative Update 2](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate2). You can see the table in that article that shows the "**Improvements and fixes included in this update**".
+
+If we detect that an update introduced a problem or regression, then we immediately add it as a "**Known issues in this update**" section of the same article above. For example in [Cumulative Update 19 for SQL Server 2019](https://support.microsoft.com/kb/5023049) you will notice two issues highlighted that were introduced in that update. 
+
+Every major release of the product is accompanied by the **Release Notes** for that version. The release notes of that version document Known Issues associated with the release. 
+For example: [SQL Server 2022 release notes](/sql/sql-server/sql-server-2022-release-notes) and [SQL Server 2019 release notes](/sql/sql-server/sql-server-2019-release-notes)
+
 ## Ask the community for help
 
 If you're interested in engaging the vibrant SQL Server community for assistance, there are multiple options available.

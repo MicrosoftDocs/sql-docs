@@ -4,7 +4,7 @@ description: The vCore purchasing model lets you independently scale compute and
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: sashan, moslake, mathoma, dfurman
-ms.date: 5/2/2023
+ms.date: 05/31/2023
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: conceptual
@@ -275,6 +275,7 @@ Hyperscale service tier (currently in preview) premium-series and premium-series
 - Central India
 - Central US
 - East US
+- East US 2
 - Japan East
 - North Europe
 - North Central US

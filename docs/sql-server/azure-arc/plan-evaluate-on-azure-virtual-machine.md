@@ -49,11 +49,10 @@ To disable the Azure VM Guest agent:
 1. Connect to the virtual machine.
 1. On the virtual machine, run the following PowerShell.
 
-```powershell
+   ```powershell
    Set-Service WindowsAzureGuestAgent -StartupType Disabled -Verbose
    Stop-Service WindowsAzureGuestAgent -Force -Verbose
-```
-
+   ```
 
 1. Block access to the Azure IMDS endpoint
 

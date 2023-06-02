@@ -4,7 +4,7 @@ description: ALTER DATABASE (Transact-SQL) syntax for SQL Server, Azure SQL Data
 author: markingmyname
 ms.author: maghan
 ms.reviewer: wiassaf
-ms.date: 02/02/2023
+ms.date: 05/31/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -353,6 +353,7 @@ ALTER DATABASE { database_name | CURRENT }
 <add-secondary-option> ::=
    {
       ALLOW_CONNECTIONS = { ALL | NO }
+     | BACKUP_STORAGE_REDUNDANCY = { 'LOCAL' | 'ZONE' | 'GEO' }
      | SERVICE_OBJECTIVE =
        { <service-objective>
        | { ELASTIC_POOL ( name = <elastic_pool_name>) }
@@ -433,7 +434,7 @@ ALTER DATABASE current
 
 #### MODIFY (BACKUP_STORAGE_REDUNDANCY = ['LOCAL' \| 'ZONE' \| 'GEO'])
 
-Changes the storage redundancy of point-in-time restore backups and long-term retention backups (if configured) of the database. The changes are applied to all the future backups taken. Existing backups continue to use the previous setting. 
+Changes the storage redundancy of point-in-time restore backups and long-term retention backups (if configured) of the database. The changes are applied to all the future backups taken. Existing backups continue to use the previous setting.
 
 > [!IMPORTANT]
 > BACKUP_STORAGE_REDUNDANCY option for Azure SQL Database is available in public preview in Brazil South and generally available in Southeast Asia Azure region only.  

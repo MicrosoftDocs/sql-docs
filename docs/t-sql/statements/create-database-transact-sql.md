@@ -4,7 +4,7 @@ description: Create database syntax for SQL Server, Azure SQL Database, Azure Sy
 author: markingmyname
 ms.author: maghan
 ms.reviewer: wiassaf
-ms.date: 05/23/2023
+ms.date: 05/31/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -1008,6 +1008,7 @@ CREATE DATABASE database_name
       | 'HS_MOPRMS_n'
       | { ELASTIC_POOL(name = <elastic_pool_name>) } })
    ]
+   [ WITH BACKUP_STORAGE_REDUNDANCY = { 'LOCAL' | 'ZONE' | 'GEO' } ]
 [;]
 ```
 

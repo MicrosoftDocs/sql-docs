@@ -265,7 +265,7 @@ The app is ready to be deployed to Azure.
         --name <web-app-name>
     ```
 
-    In this quickstart, a system-assigned managed identity is used for demonstration. A user-assigned managed identity is more efficient in a broader range of scenarios. For more information, see [Managed identity best practice recommendations](/azure/active-directory/managed-identities-azure-resources/managed-identity-best-practice-recommendations).
+    In this quickstart, a system-assigned managed identity is used for demonstration. A user-assigned managed identity is more efficient in a broader range of scenarios. For more information, see [Managed identity best practice recommendations](/azure/active-directory/managed-identities-azure-resources/managed-identity-best-practice-recommendations). For an example of using a user-assigned managed identity with pyodbc, see [Migrate a Python application to use passwordless connections with Azure SQL Database](./azure-sql-passwordless-migration-python.md).
 
 ## Connect the App Service to Azure SQL Database
 
@@ -315,3 +315,9 @@ https://<web-app-name>.azurewebsites.net
 Append */docs* to the URL to see the Swagger UI and test the API methods.  
 
 Congratulations! Your application is now connected to Azure SQL Database in both local and hosted environments.
+
+## Next steps
+
+- [Migrate a Python application to use passwordless connections with Azure SQL Database](./azure-sql-passwordless-migration-python.md) - Shows user-assigned managed identity.
+- [Passwordless connections for Azure services](/azure/developer/intro/passwordless-overview)
+- [Managed identity best practice recommendations](/azure/active-directory/managed-identities-azure-resources/managed-identity-best-practice-recommendations)

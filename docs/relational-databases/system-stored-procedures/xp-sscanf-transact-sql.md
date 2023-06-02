@@ -82,7 +82,7 @@ EXEC xp_sscanf 'sync -b -fproducts10.tmp -rrandom',
 SELECT @filename, @message;
 ```
 
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+[!INCLUDE [ssResult](../../includes/ssresult-md.md)]
 
 ```output
 (No column name) (No column name)

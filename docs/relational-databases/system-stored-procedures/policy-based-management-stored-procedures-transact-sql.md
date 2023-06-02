@@ -18,10 +18,10 @@ dev_langs:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports the following system stored procedures that are used for Policy-Based Management.
+[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] supports the following system stored procedures that are used for Policy-Based Management.
 
 > [!IMPORTANT]  
-> Only the Policy-Based Management stored procedures that are documented in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online are supported. Undocumented stored procedures are used by internal Policy-Based Management components and should not be used to administer Policy-Based Management.
+> Only the Policy-Based Management stored procedures that are documented in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Books Online are supported. Undocumented stored procedures are used by internal Policy-Based Management components and should not be used to administer Policy-Based Management.
 
 :::row:::
     :::column:::

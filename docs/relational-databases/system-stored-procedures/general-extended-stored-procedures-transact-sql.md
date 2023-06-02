@@ -22,7 +22,7 @@ dev_langs:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports the following system stored procedures that provide an interface from an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to external programs, for various maintenance activities.
+[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] supports the following system stored procedures that provide an interface from an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] to external programs, for various maintenance activities.
 
 - [xp_cmdshell](xp-cmdshell-transact-sql.md)
 - [xp_enumgroups](xp-enumgroups-transact-sql.md)

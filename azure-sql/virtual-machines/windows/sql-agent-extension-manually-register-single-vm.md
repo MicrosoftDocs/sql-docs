@@ -45,6 +45,7 @@ To register your SQL Server VM with the extension, you'll need:
 - The client credentials used to register the virtual machine exists in any of the following Azure roles: **Virtual Machine contributor**, **Contributor**, or **Owner**. 
 - The latest version of [Azure CLI](/cli/azure/install-azure-cli) or [Azure PowerShell (5.0 minimum)](/powershell/azure/install-az-ps).
 - A minimum of .NET Framework 4.5.1 or later.
+- To verify that none of the [limitations](sql-server-iaas-agent-extension-automate-management.md#limitations) apply to you. 
 
 ## Register subscription with RP
 

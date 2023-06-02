@@ -59,4 +59,4 @@ Change data capture makes available in a convenient relational format the histor
 
 ## See also
 
-- [Change Data Capture Tables (Transact-SQL)](../../relational-databases/system-tables/change-data-capture-tables-transact-sql.md)
+- [Change Data Capture Tables (Transact-SQL)](../system-tables/change-data-capture-tables-transact-sql.md)

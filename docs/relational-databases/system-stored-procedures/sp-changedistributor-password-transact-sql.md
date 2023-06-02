@@ -18,7 +18,7 @@ dev_langs:
 # sp_changedistributor_password (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  Changes the password for a Distributor. This stored procedure is executed at the Distributor on any database.  
+  Changes the password for a Distributor. This stored procedure is executed at the Distributor on any database. If this is a remote distributor, then it needs to be run on all the Publisher Servers that is using this Distributor. If Distribution or publisher database is in AG, then it needs to be run on all the Distributor and Publisher nodes. It does not matter if the node is primary or secondary.  
   
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

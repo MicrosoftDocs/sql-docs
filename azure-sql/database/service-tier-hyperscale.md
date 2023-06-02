@@ -33,8 +33,8 @@ The Hyperscale service tier in Azure SQL Database provides the following additio
 
 - Rapid Scale up - you can, in constant time, scale up your compute resources to accommodate heavy workloads when needed, and then scale the compute resources back down when not needed.
 - Rapid scale out - you can provision one or more [read-only replicas](service-tier-hyperscale-replicas.md) for offloading your read workload and for use as hot-standbys.
-- Automatic scale-up, scale-down, and billing for compute based on usage with [serverless compute](serverless-tier-overview.md) which is in preview.
-- Optimized price/performance for a group of Hyperscale databases with varying resource demands with [elastic pools](elastic-pool-overview.md) which is in preview.
+- Automatic scale-up, scale-down, and billing for compute based on usage with [serverless compute](serverless-tier-overview.md) (in preview).
+- Optimized price/performance for a group of Hyperscale databases with varying resource demands with [elastic pools](elastic-pool-overview.md) (in preview).
 - Auto scaling storage with support upto 100TB of database or elastic pool size.
 - Higher overall performance due to higher transaction log throughput and faster transaction commit times regardless of data volumes.
 - Fast database backups (based on file snapshots) regardless of size with no IO impact on compute resources.

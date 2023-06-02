@@ -50,6 +50,8 @@ TRY_CAST ( expression AS data_type [ ( length ) ] )
  **TRY_CAST** takes the value passed to it and tries to convert it to the specified *data_type*. If the cast succeeds, **TRY_CAST** returns the value as the specified *data_type*; if an error occurs, null is returned. However if you request a conversion that is explicitly not permitted, then **TRY_CAST** fails with an error.  
   
  **TRY_CAST** is not a new reserved keyword and is available in all compatibility levels. **TRY_CAST** has the same semantics as **TRY_CONVERT** when connecting to remote servers.  
+ 
+ **TRY_CAST** does not work for varchar(max) if the length is over 8000.
   
 ## Examples  
   

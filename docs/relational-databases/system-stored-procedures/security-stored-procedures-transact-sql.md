@@ -20,7 +20,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports the following system stored procedures that are used to manage security. Some of these stored procedures are deprecated, but continue to be available to support backward compatibility. The topics for deprecated procedures will list their replacement.
+[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] supports the following system stored procedures that are used to manage security. Some of these stored procedures are deprecated, but continue to be available to support backward compatibility. The topics for deprecated procedures will list their replacement.
 
 :::row:::
     :::column:::

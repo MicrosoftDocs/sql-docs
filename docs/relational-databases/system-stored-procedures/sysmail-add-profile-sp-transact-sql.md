@@ -39,7 +39,7 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 
 The name for the new profile. *@profile_name* is **sysname**, with no default.
 
-To send e-mail using SQL Server Agent jobs in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], SQL Server Agent can use only one Database Mail profile, and it must be called `AzureManagedInstance_dbmail_profile`. For more information and a sample script, see [Azure SQL Managed Instance SQL Agent job notifications](/azure/azure-sql/managed-instance/job-automation-managed-instance#sql-agent-job-notifications).
+To send e-mail using SQL Server Agent jobs in [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)], SQL Server Agent can use only one Database Mail profile, and it must be called `AzureManagedInstance_dbmail_profile`. For more information and a sample script, see [Azure SQL Managed Instance SQL Agent job notifications](/azure/azure-sql/managed-instance/job-automation-managed-instance#sql-agent-job-notifications).
 
 #### `[ @description = ] N'*description*'
 
@@ -59,7 +59,7 @@ A Database Mail profile holds any number of Database Mail accounts. Database Mai
 
 The profile name and description can be changed with the stored procedure `sysmail_update_profile_sp`, while the profile ID remains constant for the life of the profile.
 
-The profile name must be unique in the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] instance or the stored procedure returns an error.
+The profile name must be unique in the [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)] instance or the stored procedure returns an error.
 
 The stored procedure `sysmail_add_profile_sp` is in the `msdb` database and is owned by the `dbo` schema. The procedure must be executed with a three-part name if the current database isn't `msdb`.
 

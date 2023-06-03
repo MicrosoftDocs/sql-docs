@@ -68,7 +68,7 @@ Returns a result set that contains the columns listed in the following table.
 
 ## Remarks
 
-If `sysmail_help_principalprofile_sp` is invoked without parameters, the result set returned lists all of the associations in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Otherwise, the result set contains information for associations that match the provided parameters. For example, the procedure lists all of the associations for a profile when the profile name is provided.
+If `sysmail_help_principalprofile_sp` is invoked without parameters, the result set returned lists all of the associations in the instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. Otherwise, the result set contains information for associations that match the provided parameters. For example, the procedure lists all of the associations for a profile when the profile name is provided.
 
 `sysmail_help_principalprofile_sp` is in the `msdb` database and is owned by the **dbo** schema. The procedure must be executed with a three-part name if the current database isn't `msdb`.
 

@@ -26,7 +26,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 Enables forcing a particular plan for a particular query in the Query Store.
 
-When a plan is forced for a particular query, every time [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encounters the query, it tries to force the plan in the Query Optimizer. If plan forcing fails, an Extended Event is fired and the Query Optimizer is instructed to optimize in the normal way.
+When a plan is forced for a particular query, every time [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] encounters the query, it tries to force the plan in the Query Optimizer. If plan forcing fails, an Extended Event is fired and the Query Optimizer is instructed to optimize in the normal way.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 

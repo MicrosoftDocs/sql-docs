@@ -61,7 +61,7 @@ The type of replication agent. *@agent_type* is **int**, with no default, and ca
 
 The type of profile.*profile_type* is **int**, with a default of `1`.
 
-`0` indicates a system profile. `1` indicates a custom profile. Only custom profiles can be created using this stored procedure; therefore the only valid value is `1`. Only [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creates system profiles.
+`0` indicates a system profile. `1` indicates a custom profile. Only custom profiles can be created using this stored procedure; therefore the only valid value is `1`. Only [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] creates system profiles.
 
 #### [ @description = ] N'*description*'
 

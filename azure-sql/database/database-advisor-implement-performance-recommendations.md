@@ -19,7 +19,7 @@ Azure SQL Database learns and adapts with your application. Azure SQL Database h
 
 ## Performance overview
 
-The **Performance overview** provides a summary of your database performance, and helps you with performance tuning and troubleshooting.
+The **Performance overview** in the Azure portal provides a summary of your database performance, and helps you with performance tuning and troubleshooting.
 
 - If present, the **Recommendations** tile provides a breakdown of tuning recommendations for your database. Selecting this tile takes you to **[Performance recommendation options](database-advisor-find-recommendations-portal.md#viewing-recommendations)**.
 - The **Tuning activity** tile provides a summary of the ongoing and completed tuning actions for your database, giving you a quick view into the history of tuning activity. Selecting this tile takes you to the recommendations and tuning history for your database. For more information, see **[automatic tuning](automatic-tuning-overview.md)**.

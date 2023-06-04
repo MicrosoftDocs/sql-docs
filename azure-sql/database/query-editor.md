@@ -59,8 +59,8 @@ There are three main sections of the query editor:
 
 There are four tasks you can perform in the navigation bar.
 
-- You can use **Login** to change your login context. 
-- You can use **New Query** to open a blank query window. 
+- You can use **Login** to change your login context.
+- You can use **New Query** to open a blank query window.
 - You can use **Open Query** to select up to 10 `.sql` or `.txt` files from your local computer and open them in the query window.
 - You can provide **Feedback** on the Azure SQL Database query editor.
 
@@ -74,7 +74,7 @@ The object explorer allows you to view and perform tasks against your database's
 
 #### Data editor
 
-The data editor allows you to modify data in an existing row, add a new row of data to the table, or delete a row of data. To access data editor, in the object explorer expand **Tables**, then select the ellipses to the right of the table name and select **Edit Data (Preview)**. 
+The data editor allows you to modify data in an existing row, add a new row of data to the table, or delete a row of data. To access data editor, in the object explorer expand **Tables**, then select the ellipses to the right of the table name and select **Edit Data (Preview)**.
 
 **To modify data** in an existing row, select the value you want to change, make your change, and then select **Save** at the top.
 
@@ -132,7 +132,7 @@ The following considerations and limitations apply when connecting to and queryi
 
 - If you see the error message "Login failed for user `<token-identified principal>`. The server is not currently configured to accept this token." when you attempt to use AD authentication, your user does not have access to the database.
 
-    - For more information on creating a user from an Azure AD principal, see [Configure and manage Azure AD authentication with Azure SQL](authentication-aad-configure.md) and use `CREATE USER [group or user] FROM EXTERNAL PROVIDER` in the user database.
+  - For more information on creating a user from an Azure AD principal, see [Configure and manage Azure AD authentication with Azure SQL](authentication-aad-configure.md) and use `CREATE USER [group or user] FROM EXTERNAL PROVIDER` in the user database.
 
 - You might get one of the following errors in the query editor:
 
@@ -151,7 +151,7 @@ The following considerations and limitations apply when connecting to and queryi
 
      1. Select **port** as the type of rule you want to create, and then select **Next**.
      1. Select **TCP**.
-     1. Select **Specific remote ports**, enter *443, 1443*, and then select **Next**.
+     1. Select **Specific remote ports**, enter `443, 1443`, and then select **Next**.
      1. Select **Allow the connection if it is secure**, select **Next**, and then select **Next** again.
      1. Keep **Domain**, **Private**, and **Public** selected.
      1. Give the rule a name, for example *Access Azure SQL query editor*, and optionally provide a description. Then select **Finish**.

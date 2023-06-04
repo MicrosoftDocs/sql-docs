@@ -190,10 +190,21 @@ Use the [sys.dm_exec_requests](/sql/relational-databases/system-dynamic-manageme
 Use the following query to identify data and log I/O usage. If the data or log I/O is above 80%, it means users have used the available I/O for the Azure SQL Database service tier.
 
 ```sql
-SELECT end_time, avg_data_io_percent, avg_log_write_percent
-FROM sys.dm_db_resource_stats
-ORDER BY end_time DESC;
+SELECT
+    database_name = DB_NAME()
+,   UTC_time = end_time
+,   'CPU Utilization In % of Limit'           = rs.avg_cpu_percent
+,   'Data IO In % of Limit'                   = rs.avg_data_io_percent
+,   'Log Write Utilization In % of Limit'     = rs.avg_log_write_percent
+,   'Memory Usage In % of Limit'              = rs.avg_memory_usage_percent 
+,   'In-Memory OLTP Storage in % of Limit'    = rs.xtp_storage_percent
+,   'Concurrent Worker Threads in % of Limit' = rs.max_worker_percent
+,   'Concurrent Sessions in % of Limit'       = rs.max_session_percent
+FROM sys.dm_db_resource_stats AS rs  --past hour only
+ORDER BY  rs.end_time DESC;
 ```
+
+For more examples using `sys.dm_db_resource_stats`, see the [Monitor resource use](#monitor-resource-use) section later in this article.
 
 If the I/O limit has been reached, you have two options:
 
@@ -552,6 +563,8 @@ Because this view provides a more granular look at resource use, use `sys.dm_db_
 
 ```sql
 SELECT
+    Database_Name = DB_NAME(),
+    tier_limit = COALESCE(rs.dtu_limit, cpu_limit), --DTU or vCore limit
     AVG(avg_cpu_percent) AS 'Average CPU use in percent',
     MAX(avg_cpu_percent) AS 'Maximum CPU use in percent',
     AVG(avg_data_io_percent) AS 'Average data IO in percent',
@@ -560,7 +573,8 @@ SELECT
     MAX(avg_log_write_percent) AS 'Maximum log write use in percent',
     AVG(avg_memory_usage_percent) AS 'Average memory use in percent',
     MAX(avg_memory_usage_percent) AS 'Maximum memory use in percent'
-FROM sys.dm_db_resource_stats;  
+FROM sys.dm_db_resource_stats AS rs --past hour only
+GROUP BY rs.dtu_limit, rs.cpu_limit;  
 ```
 
 For other queries, see the examples in [sys.dm_db_resource_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database?view=azuresqldb-current&preserve-view=true).
@@ -603,23 +617,26 @@ The next example shows you different ways that you can use the `sys.resource_sta
     ORDER BY start_time DESC;
     ```
 
-1. To evaluate how well your workload fits the compute size, you need to drill down into each aspect of the resource metrics: CPU, reads, writes, number of workers, and number of sessions. Here's a revised query using `sys.resource_stats` to report the average and maximum values of these resource metrics:
+1. To evaluate how well your workload fits the compute size, you need to drill down into each aspect of the resource metrics: CPU, reads, writes, number of workers, and number of sessions. Here's a revised query using `sys.resource_stats` to report the average and maximum values of these resource metrics, for each service tier the database has been provisioned for:
 
     ```sql
-    SELECT database_name,
-        avg(avg_cpu_percent) AS 'Average CPU use in percent',
-        max(avg_cpu_percent) AS 'Maximum CPU use in percent',
-        avg(avg_data_io_percent) AS 'Average physical data IO use in percent',
-        max(avg_data_io_percent) AS 'Maximum physical data IO use in percent',
-        avg(avg_log_write_percent) AS 'Average log write use in percent',
-        max(avg_log_write_percent) AS 'Maximum log write use in percent',
-        avg(max_session_percent) AS 'Average % of sessions',
-        max(max_session_percent) AS 'Maximum % of sessions',
-        avg(max_worker_percent) AS 'Average % of workers',
-        max(max_worker_percent) AS 'Maximum % of workers'
-    FROM sys.resource_stats
-    WHERE database_name = 'userdb1' AND start_time > DATEADD(day, -7, GETDATE())
-    GROUP BY database_name;
+    SELECT rs.database_name
+    ,    rs.sku
+    ,    storage_mb                           = MAX(rs.Storage_in_megabytes)
+    ,    'Average CPU Utilization In %'       = AVG(rs.avg_cpu_percent)            
+    ,    'Maximum CPU Utilization In %'       = MAX(rs.avg_cpu_percent)            
+    ,    'Average Data IO In %'               = AVG(rs.avg_data_io_percent)        
+    ,    'Maximum Data IO In %'               = MAX(rs.avg_data_io_percent)        
+    ,    'Average Log Write Utilization In %' = AVG(rs.avg_log_write_percent)           
+    ,    'Maximum Log Write Utilization In %' = MAX(rs.avg_log_write_percent)           
+    ,    'Average Requests In %'              = AVG(rs.max_worker_percent)    
+    ,    'Maximum Requests In %'              = MAX(rs.max_worker_percent)    
+    ,    'Average Sessions In %'              = AVG(rs.max_session_percent)    
+    ,    'Maximum Sessions In %'              = MAX(rs.max_session_percent)    
+    FROM sys.resource_stats AS rs
+    WHERE rs.database_name = 'userdb1' 
+    AND rs.start_time > DATEADD(day, -7, GETDATE())
+    GROUP BY rs.database_name, rs.sku;
     ```
 
 1. With this information about the average and maximum values of each resource metric, you can assess how well your workload fits into the compute size you chose. Usually, average values from `sys.resource_stats` give you a good baseline to use against the target size. It should be your primary measurement stick.

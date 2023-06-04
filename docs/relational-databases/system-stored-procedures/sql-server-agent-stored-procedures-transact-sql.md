@@ -18,7 +18,7 @@ dev_langs:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports the following system stored procedures that are used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to manage scheduled and event-driven activities.
+[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] supports the following system stored procedures that are used by [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent to manage scheduled and event-driven activities.
 
 :::row:::
     :::column:::

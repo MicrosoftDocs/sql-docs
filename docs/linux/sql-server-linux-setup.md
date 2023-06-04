@@ -3,8 +3,7 @@ title: Installation guidance for SQL Server on Linux
 description: Install, update, and uninstall SQL Server on Linux. This article covers online, offline, and unattended scenarios.
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: randolphwest
-ms.date: 12/20/2022
+ms.date: 05/30/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -78,7 +77,6 @@ If you use **Network File System (NFS)** remote shares in production, note the f
 
 - Use NFS version **4.2 or higher**. Older versions of NFS don't support required features, such as `fallocate` and sparse file creation, common to modern file systems.
 - Locate only the `/var/opt/mssql` directories on the NFS mount. Other files, such as the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] system binaries, aren't supported.
-- Ensure that NFS clients use the 'nolock' option when mounting the remote share.
 
 ## <a id="repositories"></a> Configure source repositories
 
@@ -196,7 +194,7 @@ If your Linux machine doesn't have access to the online repositories used in the
    | SLES | `rpm -qpR mssql-server_versionnumber.x86_64.rpm` |
    | Ubuntu | `dpkg -I mssql-server_versionnumber_amd64.deb` |
 
-   After resolving the missing dependencies, attempt to install the `mssql-server` package again.
+   After you resolve the missing dependencies, you can try installing the `mssql-server` package again.
 
 1. **Complete the SQL Server setup**. Use **mssql-conf** to complete the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] setup:
 

@@ -4,7 +4,7 @@ description: "Adds a new entry to the core.supported_collector_types view in the
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/24/2023
+ms.date: 05/31/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -31,13 +31,14 @@ Adds a new entry to the `core.supported_collector_types` view in the management 
 
 ```syntaxsql
 core.sp_add_collector_type [ @collector_type_uid = ] 'collector_type_uid'
+[ ; ]
 ```
 
 ## Arguments
 
 #### [ @collector_type_uid = ] '*collector_type_uid*'
 
-The GUID for the collector type. *collector_type_uid* is **uniqueidentifier**, with no default value.
+The GUID for the collector type. *@collector_type_uid* is **uniqueidentifier**, with no default value.
 
 ## Return code values
 

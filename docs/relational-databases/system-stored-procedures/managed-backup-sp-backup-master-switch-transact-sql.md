@@ -4,7 +4,7 @@ description: "Pauses or resumes the SQL Server Managed Backup to Microsoft Azure
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/24/2023
+ms.date: 05/31/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -23,9 +23,9 @@ dev_langs:
 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-Pauses or resumes the [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].
+Pauses or resumes the [!INCLUDE [ss_smartbackup](../../includes/ss-smartbackup-md.md)].
 
-Use `managed_backup.sp_backup_master_switch` to temporarily pause and then resume [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. This procedure makes sure that all the configurations settings remain, and are retained when the operations resume. When [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] is paused the retention period isn't enforced.
+Use `managed_backup.sp_backup_master_switch` to temporarily pause and then resume [!INCLUDE [ss_smartbackup](../../includes/ss-smartbackup-md.md)]. This procedure makes sure that all the configurations settings remain, and are retained when the operations resume. When [!INCLUDE [ss_smartbackup](../../includes/ss-smartbackup-md.md)] is paused the retention period isn't enforced.
 
 In other words, there's no check to determine:
 
@@ -39,13 +39,14 @@ In other words, there's no check to determine:
 
 ```syntaxsql
 EXEC managed_backup.sp_backup_master_switch [ @new_state = ] { 0 | 1 }
+[ ; ]
 ```
 
 ## Arguments
 
 #### [ @new_state = ] { 0 | 1 }
 
-Set the state of [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. *@new_state* is **bit**. When set to a value of `0`, the operations are paused, and when set to a value of `1`, the operation resume.
+Set the state of [!INCLUDE [ss_smartbackup](../../includes/ss-smartbackup-md.md)]. *@new_state* is **bit**. When set to a value of `0`, the operations are paused, and when set to a value of `1`, the operation resume.
 
 ## Return code value
 
@@ -57,7 +58,7 @@ Requires membership in **db_backupoperator** database role, with ALTER ANY CREDE
 
 ## Examples
 
-The following example can be used to pause [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] on the instance it is executed on:
+The following example can be used to pause [!INCLUDE [ss_smartbackup](../../includes/ss-smartbackup-md.md)] on the instance it is executed on:
 
 ```sql
 USE msdb;
@@ -66,7 +67,7 @@ EXEC managed_backup.sp_backup_master_switch @new_state = 0;
 Go
 ```
 
-The following example can be used to resume [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].
+The following example can be used to resume [!INCLUDE [ss_smartbackup](../../includes/ss-smartbackup-md.md)].
 
 ```sql
 USE msdb;

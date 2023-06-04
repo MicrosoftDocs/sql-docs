@@ -13,4 +13,4 @@
       tocHref: /azure/azure-sql/database/
       topicHref: /azure/azure-sql/database/index
     - name: SQL Server on Azure Virtual Machines
-      tocHref: /azure/azure-sql/virtual-machines/
+      tocHref: /azure/azure-sql/virtual-machines/ 

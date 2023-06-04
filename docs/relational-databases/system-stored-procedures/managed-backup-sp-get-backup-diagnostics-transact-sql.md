@@ -4,7 +4,7 @@ description: "Returns the Extended Events logged by Smart Admin."
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/24/2023
+ms.date: 05/31/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -25,7 +25,7 @@ dev_langs:
 
 Returns the Extended Events logged by Smart Admin.
 
-Use this stored procedure to monitor Extended Events logged by Smart Admin. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] events are logged in this system, and can be reviewed and monitored using this stored procedure.
+Use this stored procedure to monitor Extended Events logged by Smart Admin. [!INCLUDE [ss_smartbackup](../../includes/ss-smartbackup-md.md)] events are logged in this system, and can be reviewed and monitored using this stored procedure.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -36,6 +36,7 @@ managed_backup.sp_get_backup_diagnostics
     [ [ @xevent_channel = ] 'event_type'
     [ , [ @begin_time = ] 'time1' ]
     [ , [ @end_time = ] 'time2' ] ]
+[ ; ]
 ```
 
 ## Arguments

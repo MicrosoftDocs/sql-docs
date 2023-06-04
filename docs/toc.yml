@@ -13054,6 +13054,8 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md
       - name: sys.dm_db_task_space_usage
         href: relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md
+      - name: sys.dm_db_tuning_recommendations
+        href: relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md
       - name: sys.dm_db_uncontained_entities
         href: relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md
       - name: sys.dm_database_copies (Azure SQL Database)

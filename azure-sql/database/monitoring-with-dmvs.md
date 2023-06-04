@@ -49,7 +49,7 @@ In an instance of SQL Server and in Azure SQL Managed Instance, dynamic manageme
 
 ## Identify CPU performance issues
 
-If CPU consumption is above 80% for extended periods of time, consider the following troubleshooting steps whether [the CPU issue is occuring now](#the-cpu-issue-is-occurring-now) or has [occurred in the past](#the-cpu-issue-occurred-in-the-past).
+If CPU consumption is above 80% for extended periods of time, consider the following troubleshooting steps whether [the CPU issue is occurring now](#the-cpu-issue-is-occurring-now) or has [occurred in the past](#the-cpu-issue-occurred-in-the-past).
 
 ### The CPU issue is occurring now
 
@@ -119,10 +119,10 @@ If the issue occurred in the past and you want to do root cause analysis, use [Q
             ,SUM(count_executions) AS total_executions
             ,MIN(qt.query_sql_text) AS sampled_query_text
         FROM sys.query_store_query_text AS qt
-        JOIN sys.query_store_query AS q ON qt.query_text_id = q.query_text_id
-        JOIN sys.query_store_plan AS p ON q.query_id = p.query_id
-        JOIN sys.query_store_runtime_stats AS rs ON rs.plan_id = p.plan_id
-        JOIN sys.query_store_runtime_stats_interval AS rsi ON rsi.runtime_stats_interval_id = rs.runtime_stats_interval_id
+            INNER JOIN sys.query_store_query AS q ON qt.query_text_id = q.query_text_id
+            INNER JOIN sys.query_store_plan AS p ON q.query_id = p.query_id
+            INNER JOIN sys.query_store_runtime_stats AS rs ON rs.plan_id = p.plan_id
+            INNER JOIN sys.query_store_runtime_stats_interval AS rsi ON rsi.runtime_stats_interval_id = rs.runtime_stats_interval_id
         WHERE rs.execution_type_desc IN ('Regular','Aborted','Exception')
             AND rsi.start_time >= DATEADD(HOUR, - 2, GETUTCDATE())
         GROUP BY q.query_hash
@@ -209,10 +209,10 @@ For option 2, you can use the following query against Query Store for buffer-rel
 -- Note these are finished queries
 WITH Aggregated AS (SELECT q.query_hash, SUM(total_query_wait_time_ms) total_wait_time_ms, SUM(total_query_wait_time_ms / avg_query_wait_time_ms) AS total_executions, MIN(qt.query_sql_text) AS sampled_query_text, MIN(wait_category_desc) AS wait_category_desc
                     FROM sys.query_store_query_text AS qt
-                         JOIN sys.query_store_query AS q ON qt.query_text_id=q.query_text_id
-                         JOIN sys.query_store_plan AS p ON q.query_id=p.query_id
-                         JOIN sys.query_store_wait_stats AS waits ON waits.plan_id=p.plan_id
-                         JOIN sys.query_store_runtime_stats_interval AS rsi ON rsi.runtime_stats_interval_id=waits.runtime_stats_interval_id
+                         INNER JOIN sys.query_store_query AS q ON qt.query_text_id=q.query_text_id
+                         INNER JOIN sys.query_store_plan AS p ON q.query_id=p.query_id
+                         INNER JOIN sys.query_store_wait_stats AS waits ON waits.plan_id=p.plan_id
+                         INNER JOIN sys.query_store_runtime_stats_interval AS rsi ON rsi.runtime_stats_interval_id=waits.runtime_stats_interval_id
                     WHERE wait_category_desc='Buffer IO' AND rsi.start_time>=DATEADD(HOUR, -2, GETUTCDATE())
                     GROUP BY q.query_hash), Ordered AS (SELECT query_hash, total_executions, total_wait_time_ms, sampled_query_text, wait_category_desc, ROW_NUMBER() OVER (ORDER BY total_wait_time_ms DESC, query_hash ASC) AS query_hash_row_number
                                                         FROM Aggregated)
@@ -261,14 +261,10 @@ AS (SELECT q.query_hash,
            SUM(count_executions) AS total_executions,
            MIN(qt.query_sql_text) AS sampled_query_text
     FROM sys.query_store_query_text AS qt
-        JOIN sys.query_store_query AS q
-            ON qt.query_text_id = q.query_text_id
-        JOIN sys.query_store_plan AS p
-            ON q.query_id = p.query_id
-        JOIN sys.query_store_runtime_stats AS rs
-            ON rs.plan_id = p.plan_id
-        JOIN sys.query_store_runtime_stats_interval AS rsi
-            ON rsi.runtime_stats_interval_id = rs.runtime_stats_interval_id
+        INNER JOIN sys.query_store_query AS q ON qt.query_text_id = q.query_text_id
+        INNER JOIN sys.query_store_plan AS p ON q.query_id = p.query_id
+        INNER JOIN sys.query_store_runtime_stats AS rs ON rs.plan_id = p.plan_id
+        INNER JOIN sys.query_store_runtime_stats_interval AS rsi ON rsi.runtime_stats_interval_id = rs.runtime_stats_interval_id
     WHERE rs.execution_type_desc IN ( 'Regular', 'Aborted', 'Exception' )
           AND rsi.start_time >= DATEADD(HOUR, -2, GETUTCDATE())
     GROUP BY q.query_hash),
@@ -325,17 +321,23 @@ FROM sys.dm_exec_query_stats
 GO
 
 WITH XMLNAMESPACES('http://schemas.microsoft.com/sqlserver/2004/07/showplan' AS sp)
-SELECT plan_handle, stmt.stmt_details.value('@Database', 'varchar(max)') 'Database', stmt.stmt_details.value('@Schema', 'varchar(max)') 'Schema', stmt.stmt_details.value('@Table', 'varchar(max)') 'table'
+SELECT plan_handle, stmt.stmt_details.value('@Database', 'varchar(max)') 'Database', stmt.stmt_details.value('@Schema', 'varchar(max)') 'Schema', stmt.stmt_details.VALUE('@Table', 'varchar(max)') 'table'
 INTO #tmp2
-FROM(SELECT CAST(query_plan AS XML) sqlplan, plan_handle FROM #tmpPlan) AS p
-    CROSS APPLY sqlplan.nodes('//sp:Object') AS stmt(stmt_details);
+FROM
+    (SELECT CAST(query_plan AS XML) sqlplan, plan_handle FROM #tmpPlan) AS p
+        CROSS APPLY sqlplan.nodes('//sp:Object') AS stmt(stmt_details);
 GO
 
 SELECT t.plan_handle, [Database], [Schema], [table], execution_count
-FROM(SELECT DISTINCT plan_handle, [Database], [Schema], [table]
+FROM
+    (SELECT DISTINCT plan_handle, [Database], [Schema], [table]
      FROM #tmp2
      WHERE [table] LIKE '%@%' OR [table] LIKE '%#%') AS t
-    JOIN #tmpPlan AS t2 ON t.plan_handle=t2.plan_handle;
+        INNER JOIN #tmpPlan AS t2 ON t.plan_handle=t2.plan_handle;
+GO
+DROP TABLE #tmpPlan
+DROP TABLE #tmp2
+
 ```
 
 ##### Identify long running transactions
@@ -427,9 +429,9 @@ SELECT IDENTITY(INT, 1, 1) rowId,
     p.query_id
 INTO #tmp
 FROM sys.query_store_plan AS p
-    JOIN sys.query_store_runtime_stats AS r
+    INNER JOIN sys.query_store_runtime_stats AS r
         ON p.plan_id = r.plan_id
-    JOIN sys.query_store_runtime_stats_interval AS i
+    INNER JOIN sys.query_store_runtime_stats_interval AS i
         ON r.runtime_stats_interval_id = i.runtime_stats_interval_id
 WHERE start_time > '2018-10-11 14:00:00.0000000'
       AND end_time < '2018-10-17 20:00:00.0000000';
@@ -446,9 +448,9 @@ SELECT TOP 50
     cte.query_plan,
     CAST(SerialDesiredMemory / 1024. AS DECIMAL(10, 2)) SerialDesiredMemory_MB
 FROM cte
-    JOIN sys.query_store_query AS q
+    INNER JOIN sys.query_store_query AS q
         ON cte.query_id = q.query_id
-    JOIN sys.query_store_query_text AS t
+    INNER JOIN sys.query_store_query_text AS t
         ON q.query_text_id = t.query_text_id
 ORDER BY SerialDesiredMemory DESC;
 ```
@@ -502,7 +504,7 @@ SELECT TOP 10
        END AS 'Next Candidate for Memory Grant',
        qp.query_plan
 FROM sys.dm_exec_requests AS r
-    JOIN sys.dm_exec_query_memory_grants AS mg
+    INNER JOIN sys.dm_exec_query_memory_grants AS mg
         ON r.session_id = mg.session_id
            AND r.request_id = mg.request_id
     CROSS APPLY sys.dm_exec_sql_text(mg.sql_handle) AS txt
@@ -528,8 +530,8 @@ SELECT
     s.nt_user_name, s.original_login_name, c.connect_time,
     s.login_time
 FROM sys.dm_exec_connections AS c
-INNER JOIN sys.dm_exec_sessions AS s
-    ON c.session_id = s.session_id
+    INNER JOIN sys.dm_exec_sessions AS s
+        ON c.session_id = s.session_id
 WHERE c.session_id = @@SPID; --Remove to view all sessions, if permissions allow
 ```
 
@@ -585,19 +587,19 @@ This example shows you how the data in this view is exposed:
 ```sql
 SELECT TOP 10 *
 FROM sys.resource_stats
-WHERE database_name = 'resource1'
+WHERE database_name = 'userdb1'
 ORDER BY start_time DESC;
 ```
 
 The next example shows you different ways that you can use the `sys.resource_stats` catalog view to get information about how your database uses resources:
 
-1. To look at the past week's resource use for the database `userdb1`, you can run this query:
+1. To look at the past week's resource use for the user database `userdb1`, you can run this query, substituting your own database name:
 
     ```sql
     SELECT *
     FROM sys.resource_stats
-    WHERE database_name = 'userdb1' AND
-        start_time > DATEADD(day, -7, GETDATE())
+    WHERE database_name = 'userdb1' 
+        AND start_time > DATEADD(day, -7, GETDATE())
     ORDER BY start_time DESC;
     ```
 
@@ -666,7 +668,7 @@ The next example shows you different ways that you can use the `sys.resource_sta
      GROUP BY database_name;
     ```
 
-    These percentages are the amount of samples your workload fit *under* the current compute size. If this query returns a value less than 99.9 percent for any of the three resource dimensions, your sampled average workload exceeded the limits. Consider either moving to the next higher compute size or use application-tuning techniques to reduce the load on the database.
+    These percentages are the number of samples your workload fit *under* the current compute size. If this query returns a value less than 99.9 percent for any of the three resource dimensions, your sampled average workload exceeded the limits. Consider either moving to the next higher compute size or use application-tuning techniques to reduce the load on the database.
 
 > [!NOTE]
 > For elastic pools, you can monitor individual databases in the pool with the techniques described in this section. You can also monitor the pool as a whole. For information, see [Monitor and manage an elastic pool](elastic-pool-overview.md).
@@ -685,15 +687,16 @@ To analyze the workload of a database, modify this query to filter on the specif
 ```sql
 SELECT COUNT(*) AS [Concurrent_Requests]
 FROM sys.dm_exec_requests AS R
-INNER JOIN sys.databases AS D ON D.database_id = R.database_id
+    INNER JOIN sys.databases AS D 
+        ON D.database_id = R.database_id
 AND D.name = 'MyDatabase';
 ```
 
 This is just a snapshot at a single point in time. To get a better understanding of your workload and concurrent request requirements, you'll need to collect many samples over time.
 
-##### Maximum concurrent logins
+##### Maximum concurrent login events
 
-You can analyze your user and application patterns to get an idea of the frequency of logins. You also can run real-world loads in a test environment to make sure that you're not hitting this or other limits we discuss in this article. There isn't a single query or dynamic management view (DMV) that can show you concurrent login counts or history.
+You can analyze your user and application patterns to get an idea of the frequency of login events. You also can run real-world loads in a test environment to make sure that you're not hitting this or other limits we discuss in this article. There isn't a single query or dynamic management view (DMV) that can show you concurrent login counts or history.
 
 If multiple clients use the same connection string, the service authenticates each login. If 10 users simultaneously connect to a database by using the same username and password, there would be 10 concurrent logins. This limit applies only to the duration of the login and authentication. If the same 10 users connect to the database sequentially, the number of concurrent logins would never be greater than 1.
 
@@ -709,13 +712,15 @@ SELECT COUNT(*) AS [Sessions]
 FROM sys.dm_exec_connections;
 ```
 
-If you're analyzing a SQL Server workload, modify the query to focus on a specific database. This query helps you determine possible session needs for the database if you are considering moving it to Azure. First, update the name of the database from `MyDatabase` to your desired database, then run the following query:
+If you're analyzing a SQL Server workload, modify the query to focus on a specific database. This query helps you determine possible session needs for the database if you're considering moving it to Azure. First, update the name of the database from `MyDatabase` to your desired database, then run the following query:
 
 ```sql
 SELECT COUNT(*) AS [Sessions]
-FROM sys.dm_exec_connections C
-INNER JOIN sys.dm_exec_sessions S ON (S.session_id = C.session_id)
-INNER JOIN sys.databases D ON (D.database_id = S.database_id)
+FROM sys.dm_exec_connections AS C
+    INNER JOIN sys.dm_exec_sessions AS S 
+        ON (S.session_id = C.session_id)
+    INNER JOIN sys.databases AS D 
+        ON (D.database_id = S.database_id)
 WHERE D.name = 'MyDatabase';
 ```
 
@@ -739,8 +744,9 @@ The following query returns the size of individual objects (in megabytes) in you
 ```sql
 -- Calculates the size of individual database objects.
 SELECT o.name, SUM(ps.reserved_page_count) * 8.0 / 1024 AS size_mb
-FROM sys.dm_db_partition_stats AS ps INNER JOIN sys.objects AS o
-ON ps.object_id = o.object_id
+FROM sys.dm_db_partition_stats AS ps 
+    INNER JOIN sys.objects AS o 
+        ON ps.object_id = o.object_id
 GROUP BY o.name
 ORDER BY size_mb DESC;
 ```
@@ -765,7 +771,8 @@ FROM
                 ELSE QS.statement_end_offset END
             - QS.statement_start_offset)/2) + 1) AS statement_text
 FROM sys.dm_exec_query_stats AS QS
-CROSS APPLY sys.dm_exec_sql_text(QS.sql_handle) as ST) as query_stats
+    CROSS APPLY sys.dm_exec_sql_text(QS.sql_handle) AS ST
+    ) AS query_stats
 GROUP BY query_stats.query_hash
 ORDER BY 2 DESC;
 ```
@@ -785,11 +792,12 @@ SELECT
     q.[text]
 FROM
     (SELECT TOP 15
-        qs.plan_handle,
-        qs.total_worker_time
-    FROM
-        sys.dm_exec_query_stats qs
-ORDER BY qs.total_worker_time desc) AS highest_cpu_queries
+            qs.plan_handle,
+            qs.total_worker_time
+        FROM
+            sys.dm_exec_query_stats AS qs
+        ORDER BY qs.total_worker_time desc
+    ) AS highest_cpu_queries
 CROSS APPLY sys.dm_exec_sql_text(plan_handle) AS q
 ORDER BY highest_cpu_queries.total_worker_time DESC;
 ```
@@ -805,7 +813,6 @@ You can use the `sys.dm_tran_locks` view to get information about the current lo
 In some cases, two or more queries may mutually block one another, resulting in a deadlock.
 
 You can create an Extended Events trace a database in Azure SQL Database to capture deadlock events, then find related queries and their execution plans in Query Store. Learn more in [Analyze and prevent deadlocks in Azure SQL Database](analyze-prevent-deadlocks.md), including a lab to [Cause a deadlock in AdventureWorksLT](analyze-prevent-deadlocks.md#cause-a-deadlock-in-adventureworkslt). Learn more about the types of [resources that can deadlock](/sql/relational-databases/sql-server-deadlocks-guide#deadlock_resources).
-
 
 <!--
 ## Other monitoring options

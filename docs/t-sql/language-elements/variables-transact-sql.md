@@ -32,22 +32,20 @@ The following script creates a small test table and populates it with 26 rows. T
 * Function as part of the expression that generates letters to be inserted into the character column.  
 
 ```sql
--- Create the table.
-CREATE TABLE TestTable (cola INT, colb CHAR(3));
-GO
+-- Declare table variable.
+DECLARE @TestTable TABLE(cola INT, colb CHAR(3));
 SET NOCOUNT ON;
-GO
--- Declare the variable to be used.
+-- Declare counter variable.
 DECLARE @MyCounter INT;
 
--- Initialize the variable.
+-- Initialize the counter.
 SET @MyCounter = 0;
 
 -- Test the variable to see if the loop is finished.
 WHILE (@MyCounter < 26)
 BEGIN;
    -- Insert a row into the table.
-   INSERT INTO TestTable VALUES
+   INSERT INTO @TestTable VALUES
        -- Use the variable to provide the integer value
        -- for cola. Also use it to generate a unique letter
        -- for each row. Use the ASCII function to get the
@@ -61,14 +59,10 @@ BEGIN;
    -- of the loop.
    SET @MyCounter = @MyCounter + 1;
 END;
-GO
 SET NOCOUNT OFF;
-GO
 -- View the data.
 SELECT cola, colb
-FROM TestTable;
-GO
-DROP TABLE TestTable;
+FROM @TestTable;
 GO
 ```
 

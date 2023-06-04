@@ -78,41 +78,35 @@ The following example of `SELECT...FOR JSON AUTO` includes a display of what the
 The absence of the null value from the returned JSON is also illustrated. However, you can override this default behavior by use of the `INCLUDE_NULL_VALUES` keyword on the `FOR` clause.
 
 ```sql
-DROP TABLE IF EXISTS #tabStudent;
-DROP TABLE IF EXISTS #tabClass;
-GO
-
-CREATE TABLE #tabClass (
+DECLARE @tabClass TABLE(
     ClassGuid UNIQUEIDENTIFIER NOT NULL DEFAULT newid(),
     ClassName NVARCHAR(32) NOT NULL
 );
 
-CREATE TABLE #tabStudent (
+DECLARE @tabStudent TABLE(
     StudentGuid UNIQUEIDENTIFIER NOT NULL DEFAULT newid(),
     StudentName NVARCHAR(32) NOT NULL,
     ClassGuid UNIQUEIDENTIFIER NULL -- Foreign key.
 );
-GO
 
-INSERT INTO #tabClass (ClassGuid, ClassName)
+INSERT INTO @tabClass (ClassGuid, ClassName)
 VALUES
     ('DE807673-ECFC-4850-930D-A86F921DE438', 'Algebra Math'),
     ('C55C6819-E744-4797-AC56-FF8A729A7F5C', 'Calculus Math'),
     ('98509D36-A2C8-4A65-A310-E744F5621C83', 'Art Painting');
 
-INSERT INTO #tabStudent (StudentName, ClassGuid)
+INSERT INTO @tabStudent (StudentName, ClassGuid)
 VALUES
     ('Alice Apple', 'DE807673-ECFC-4850-930D-A86F921DE438'),
     ('Alice Apple', 'C55C6819-E744-4797-AC56-FF8A729A7F5C'),
     ('Betty Boot', 'C55C6819-E744-4797-AC56-FF8A729A7F5C'),
     ('Betty Boot', '98509D36-A2C8-4A65-A310-E744F5621C83'),
     ('Carla Cap', null);
-GO
 
 SELECT c.ClassName,
     s.StudentName
-FROM #tabClass AS c
-RIGHT JOIN #tabStudent AS s ON s.ClassGuid = c.ClassGuid
+FROM @tabClass AS c
+RIGHT JOIN @tabStudent AS s ON s.ClassGuid = c.ClassGuid
 ORDER BY c.ClassName,
     s.StudentName
 FOR JSON AUTO
@@ -121,9 +115,6 @@ FOR JSON AUTO
     ;
 GO
 
-DROP TABLE IF EXISTS #tabStudent;
-DROP TABLE IF EXISTS #tabClass;
-GO
 ```
 
 And next is the JSON that is output by the preceding SELECT.

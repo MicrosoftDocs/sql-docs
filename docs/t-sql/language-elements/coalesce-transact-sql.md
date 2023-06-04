@@ -123,20 +123,14 @@ In the following example, the `wages` table includes three columns that contain 
 ```sql  
 SET NOCOUNT ON;  
 GO  
-USE tempdb;  
-IF OBJECT_ID('dbo.wages') IS NOT NULL  
-    DROP TABLE wages;  
-GO  
-CREATE TABLE dbo.wages  
-(  
+DECLARE @wages TABLE(
     emp_id        TINYINT   IDENTITY,  
     hourly_wage   DECIMAL   NULL,  
     salary        DECIMAL   NULL,  
     commission    DECIMAL   NULL,  
     num_sales     TINYINT   NULL  
 );  
-GO  
-INSERT dbo.wages (hourly_wage, salary, commission, num_sales)  
+INSERT @wages (hourly_wage, salary, commission, num_sales)  
 VALUES  
     (10.00, NULL, NULL, NULL),  
     (20.00, NULL, NULL, NULL),  
@@ -150,13 +144,11 @@ VALUES
     (NULL, NULL, 25000, 2),  
     (NULL, NULL, 20000, 6),  
     (NULL, NULL, 14000, 4);  
-GO  
-SET NOCOUNT OFF;  
-GO  
+SET NOCOUNT OFF;
 SELECT CAST(COALESCE(hourly_wage * 40 * 52,   
    salary,   
    commission * num_sales) AS money) AS 'Total Salary'   
-FROM dbo.wages  
+FROM @wages  
 ORDER BY 'Total Salary';  
 GO  
 ```  

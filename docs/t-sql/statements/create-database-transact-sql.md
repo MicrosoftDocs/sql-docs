@@ -1030,7 +1030,7 @@ Specifies the default collation for the metadata catalog. *DATABASE_DEFAULT* spe
 
 *SQL_Latin1_General_CP1_CI_AS* specifies that the metadata catalog used for system views and tables be collated to a fixed SQL_Latin1_General_CP1_CI_AS collation. This is the default setting on Azure SQL Database if unspecified.
 
-#### (BACKUP_STORAGE_REDUNDANCY = ['LOCAL' | 'ZONE' | 'GEO'])
+#### BACKUP_STORAGE_REDUNDANCY = ['LOCAL' | 'ZONE' | 'GEO']
 
 Specifies how the point-in-time restore and long-term retention backups for a database are replicated. Geo restore or ability to recover from regional outage is only available when database is created with `GEO` backup storage redundancy. Unless explicitly specified, databases created with T-SQL use geo-redundant backup storage.
 

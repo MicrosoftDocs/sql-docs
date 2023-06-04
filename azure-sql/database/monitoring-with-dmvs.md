@@ -641,54 +641,54 @@ The next example shows you different ways that you can use the `sys.resource_sta
 
 1. With this information about the average and maximum values of each resource metric, you can assess how well your workload fits into the compute size you chose. Usually, average values from `sys.resource_stats` give you a good baseline to use against the target size. It should be your primary measurement stick.
 
-    For **DTU purchasing model** databases:
+    - For **DTU purchasing model** databases:
 
-    For an example, you might be using the Standard service tier with S2 compute size. The average use percentages for CPU and I/O reads and writes are below 40 percent, the average number of workers is below 50, and the average number of sessions is below 200. Your workload might fit into the S1 compute size. It's easy to see whether your database fits in the worker and session limits. To see whether a database fits into a lower compute size, divide the DTU number of the lower compute size by the DTU number of your current compute size, and then multiply the result by 100:
+        For an example, you might be using the Standard service tier with S2 compute size. The average use percentages for CPU and I/O reads and writes are below 40 percent, the average number of workers is below 50, and the average number of sessions is below 200. Your workload might fit into the S1 compute size. It's easy to see whether your database fits in the worker and session limits. To see whether a database fits into a lower compute size, divide the DTU number of the lower compute size by the DTU number of your current compute size, and then multiply the result by 100:
+    
+        `S1 DTU / S2 DTU * 100 = 20 / 50 * 100 = 40`
+    
+        The result is the relative performance difference between the two compute sizes in percentage. If your resource use doesn't exceed this amount, your workload might fit into the lower compute size. However, you need to look at all ranges of resource use values, and determine, by percentage, how often your database workload would fit into the lower compute size. The following query outputs the fit percentage per resource dimension, based on the threshold of 40 percent that we calculated in this example:
+    
+       ```sql
+        SELECT database_name,
+            100*((COUNT(database_name) - SUM(CASE WHEN avg_cpu_percent >= 40 THEN 1 ELSE 0 END) * 1.0) / COUNT(database_name)) AS 'CPU Fit Percent',
+            100*((COUNT(database_name) - SUM(CASE WHEN avg_log_write_percent >= 40 THEN 1 ELSE 0 END) * 1.0) / COUNT(database_name)) AS 'Log Write Fit Percent',
+            100*((COUNT(database_name) - SUM(CASE WHEN avg_data_io_percent >= 40 THEN 1 ELSE 0 END) * 1.0) / COUNT(database_name)) AS 'Physical Data IO Fit Percent'
+        FROM sys.resource_stats
+        WHERE start_time > DATEADD(day, -7, GETDATE())
+        AND database_name = 'sample' --remove to see all databases
+        GROUP BY database_name;
+        ```
+    
+        Based on your database service tier, you can decide whether your workload fits into the lower compute size. If your database workload objective is 99.9 percent and the preceding query returns values greater than 99.9 percent for all three resource dimensions, your workload likely fits into the lower compute size.
+    
+        Looking at the fit percentage also gives you insight into whether you should move to the next higher compute size to meet your objective. For example, the CPU usage for a sample database over the past week:
+    
+       | Average CPU percent | Maximum CPU percent |
+       | --- | --- |
+       | 24.5 |100.00 |
+    
+        The average CPU is about a quarter of the limit of the compute size, which would fit well into the compute size of the database. 
 
-    `S1 DTU / S2 DTU * 100 = 20 / 50 * 100 = 40`
+    - For **DTU purchasing model** and **vCore purchasing model** databases:
+    
+        The maximum value shows that the database reaches the limit of the compute size. Do you need to move to the next higher compute size? Look at how many times your workload reaches 100 percent, and then compare it to your database workload objective.
+    
+        ```sql
+         SELECT database_name,
+             100*((COUNT(database_name) - SUM(CASE WHEN avg_cpu_percent >= 100 THEN 1 ELSE 0 END) * 1.0) / COUNT(database_name)) AS 'CPU Fit Percent',
+             100*((COUNT(database_name) - SUM(CASE WHEN avg_log_write_percent >= 100 THEN 1 ELSE 0 END) * 1.0) / COUNT(database_name)) AS 'Log Write Fit Percent',
+             100*((COUNT(database_name) - SUM(CASE WHEN avg_data_io_percent >= 100 THEN 1 ELSE 0 END) * 1.0) / COUNT(database_name)) AS 'Physical Data IO Fit Percent'
+         FROM sys.resource_stats
+         WHERE start_time > DATEADD(day, -7, GETDATE())
+         AND database_name = 'sample'  --remove to see all databases
+         GROUP BY database_name;
+        ```
+    
+        These percentages are the number of samples your workload fit *under* the current compute size. If this query returns a value less than 99.9 percent for any of the three resource dimensions, your sampled average workload exceeded the limits. Consider either moving to the next higher compute size or use application-tuning techniques to reduce the load on the database.
 
-    The result is the relative performance difference between the two compute sizes in percentage. If your resource use doesn't exceed this amount, your workload might fit into the lower compute size. However, you need to look at all ranges of resource use values, and determine, by percentage, how often your database workload would fit into the lower compute size. The following query outputs the fit percentage per resource dimension, based on the threshold of 40 percent that we calculated in this example:
-
-   ```sql
-    SELECT database_name,
-        100*((COUNT(database_name) - SUM(CASE WHEN avg_cpu_percent >= 40 THEN 1 ELSE 0 END) * 1.0) / COUNT(database_name)) AS 'CPU Fit Percent',
-        100*((COUNT(database_name) - SUM(CASE WHEN avg_log_write_percent >= 40 THEN 1 ELSE 0 END) * 1.0) / COUNT(database_name)) AS 'Log Write Fit Percent',
-        100*((COUNT(database_name) - SUM(CASE WHEN avg_data_io_percent >= 40 THEN 1 ELSE 0 END) * 1.0) / COUNT(database_name)) AS 'Physical Data IO Fit Percent'
-    FROM sys.resource_stats
-    WHERE start_time > DATEADD(day, -7, GETDATE())
-    AND database_name = 'sample' --remove to see all databases
-    GROUP BY database_name;
-    ```
-
-    Based on your database service tier, you can decide whether your workload fits into the lower compute size. If your database workload objective is 99.9 percent and the preceding query returns values greater than 99.9 percent for all three resource dimensions, your workload likely fits into the lower compute size.
-
-    Looking at the fit percentage also gives you insight into whether you should move to the next higher compute size to meet your objective. For example, the CPU usage for a sample database over the past week:
-
-   | Average CPU percent | Maximum CPU percent |
-   | --- | --- |
-   | 24.5 |100.00 |
-
-    The average CPU is about a quarter of the limit of the compute size, which would fit well into the compute size of the database. 
-
-    For **DTU purchasing model** and **vCore purchasing model** databases:
-
-    The maximum value shows that the database reaches the limit of the compute size. Do you need to move to the next higher compute size? Look at how many times your workload reaches 100 percent, and then compare it to your database workload objective.
-
-    ```sql
-     SELECT database_name,
-         100*((COUNT(database_name) - SUM(CASE WHEN avg_cpu_percent >= 100 THEN 1 ELSE 0 END) * 1.0) / COUNT(database_name)) AS 'CPU Fit Percent',
-         100*((COUNT(database_name) - SUM(CASE WHEN avg_log_write_percent >= 100 THEN 1 ELSE 0 END) * 1.0) / COUNT(database_name)) AS 'Log Write Fit Percent',
-         100*((COUNT(database_name) - SUM(CASE WHEN avg_data_io_percent >= 100 THEN 1 ELSE 0 END) * 1.0) / COUNT(database_name)) AS 'Physical Data IO Fit Percent'
-     FROM sys.resource_stats
-     WHERE start_time > DATEADD(day, -7, GETDATE())
-     AND database_name = 'sample'  --remove to see all databases
-     GROUP BY database_name;
-    ```
-
-    These percentages are the number of samples your workload fit *under* the current compute size. If this query returns a value less than 99.9 percent for any of the three resource dimensions, your sampled average workload exceeded the limits. Consider either moving to the next higher compute size or use application-tuning techniques to reduce the load on the database.
-
-> [!NOTE]
-> For elastic pools, you can monitor individual databases in the pool with the techniques described in this section. You can also monitor the pool as a whole. For information, see [Monitor and manage an elastic pool](elastic-pool-overview.md).
+   > [!NOTE]
+   > For elastic pools, you can monitor individual databases in the pool with the techniques described in this section. You can also monitor the pool as a whole. For information, see [Monitor and manage an elastic pool](elastic-pool-overview.md).
 
 ##### Maximum concurrent requests
 

@@ -4,7 +4,7 @@ description: "Inserts a row in the management data warehouse core.snapshots view
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/24/2023
+ms.date: 05/31/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -36,33 +36,34 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
     , [ @named_instance = ] 'named_instance'
     , [ @log_id = ] log_id
     , [ @snapshot_id = ] snapshot_id OUTPUT
+[ ; ]
 ```
 
 ## Arguments
 
 #### [ @collection_set_uid = ] '*collection_set_uid*'
 
-The GUID for the collection set. *collection_set_uid* is **uniqueidentifier** with no default value. To obtain the GUID, query the dbo.syscollector_collection_sets view in the `msdb` database.
+The GUID for the collection set. *@collection_set_uid* is **uniqueidentifier** with no default value. To obtain the GUID, query the dbo.syscollector_collection_sets view in the `msdb` database.
 
 #### [ @collector_type_uid = ] '*collector_type_uid*'
 
-The GUID for a collector type. *collector_type_uid* is **uniqueidentifier** with no default value. To obtain the GUID, query the dbo.syscollector_collector_types view in the `msdb` database.
+The GUID for a collector type. *@collector_type_uid* is **uniqueidentifier** with no default value. To obtain the GUID, query the dbo.syscollector_collector_types view in the `msdb` database.
 
 #### [ @machine_name = ] '*machine_name*'
 
-The name of the server that the collection set resides on. *machine_name* is **sysname**, with no default value.
+The name of the server that the collection set resides on. *@machine_name* is **sysname**, with no default value.
 
 #### [ @named_instance = ] '*named_instance*'
 
-The name of the instance for the collection set. *named_instance* is **sysname**, with no default value.
+The name of the instance for the collection set. *@named_instance* is **sysname**, with no default value.
 
 #### [ @log_id = ] *log_id*
 
-The unique identifier that maps to the collection set event log on the server that collected the data. *log_id* is **bigint** with no default value. To obtain the value for *log_id*, query the dbo.syscollector_execution_log view in the `msdb` database.
+The unique identifier that maps to the collection set event log on the server that collected the data. *@log_id* is **bigint** with no default value. To obtain the value for *log_id*, query the dbo.syscollector_execution_log view in the `msdb` database.
 
 #### [ @snapshot_id = ] *snapshot_id*
 
-The unique identifier for a row that is inserted into the `core.snapshots` view. *snapshot_id* is **int** and is returned as OUTPUT.
+The unique identifier for a row that is inserted into the `core.snapshots` view. *@snapshot_id* is **int** and is returned as OUTPUT.
 
 ## Return code values
 

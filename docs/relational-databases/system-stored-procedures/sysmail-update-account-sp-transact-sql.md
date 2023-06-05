@@ -71,7 +71,7 @@ The new description for the account. *@description* is **nvarchar(256)**, with a
 
 #### [ @mailserver_name = ] '*server_name*'
 
-The new name of the SMTP mail server to use for this account. The computer that runs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be able to resolve the *@mailserver_name* to an IP address. *@mailserver_name* is **sysname**, with no default.
+The new name of the SMTP mail server to use for this account. The computer that runs [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] must be able to resolve the *@mailserver_name* to an IP address. *@mailserver_name* is **sysname**, with no default.
 
 #### [ @mailserver_type = ] '*server_type*'
 
@@ -95,7 +95,7 @@ The new password to use to log on to the mail server. *@password* is **sysname**
 
 #### [ @use_default_credentials = ] *use_default_credentials*
 
-Specifies whether to send the mail to the SMTP server using the credentials of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service. *@use_default_credentials* is **bit**, with no default. When this parameter is 1, Database Mail uses the credentials of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. When this parameter is 0, Database Mail uses the *@username* and *@password* for authentication on the SMTP server. If *@username* and *@password* are NULL, then it uses anonymous authentication. Consult with your SMTP administrator before specifying this parameter
+Specifies whether to send the mail to the SMTP server using the credentials of the [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)] service. *@use_default_credentials* is **bit**, with no default. When this parameter is 1, Database Mail uses the credentials of the [!INCLUDE [ssDE](../../includes/ssde-md.md)]. When this parameter is 0, Database Mail uses the *@username* and *@password* for authentication on the SMTP server. If *@username* and *@password* are NULL, then it uses anonymous authentication. Consult with your SMTP administrator before specifying this parameter
 
 #### [ @enable_ssl = ] *enable_ssl*
 

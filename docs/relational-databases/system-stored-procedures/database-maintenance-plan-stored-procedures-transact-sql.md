@@ -19,9 +19,9 @@ dev_langs:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports the following system stored procedures that are used to set up maintenance tasks. These stored procedures are used with database maintenance plans. This feature has been replaced with maintenance plans which do not use these stored procedures. Use these procedures to maintain database maintenance plans on installations that were upgraded from a previous version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] supports the following system stored procedures that are used to set up maintenance tasks. These stored procedures are used with database maintenance plans. This feature has been replaced with maintenance plans which do not use these stored procedures. Use these procedures to maintain database maintenance plans on installations that were upgraded from a previous version of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].
 
-[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]
+[!INCLUDE [ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]
 
 - [sp_add_maintenance_plan](sp-add-maintenance-plan-transact-sql.md)  
 - [sp_add_maintenance_plan_db](sp-add-maintenance-plan-db-transact-sql.md)  

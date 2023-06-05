@@ -20,7 +20,7 @@ dev_langs:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Starts Database Mail by starting the [!INCLUDE[ssSB](../../includes/sssb-md.md)] objects that the external program uses.
+Starts Database Mail by starting the [!INCLUDE [ssSB](../../includes/sssb-md.md)] objects that the external program uses.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -45,14 +45,14 @@ None.
 
 ## Remarks
 
-Database Mail isn't enabled or installed upon [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation. Use the Database Mail Configuration wizard to enable and install the Database Mail objects.
+Database Mail isn't enabled or installed upon [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] installation. Use the Database Mail Configuration wizard to enable and install the Database Mail objects.
 
-This stored procedure is in the `msdb` database. This stored procedure starts the Database Mail queue that holds outgoing message requests and enables the [!INCLUDE[ssSB](../../includes/sssb-md.md)] activation for the external program.
+This stored procedure is in the `msdb` database. This stored procedure starts the Database Mail queue that holds outgoing message requests and enables the [!INCLUDE [ssSB](../../includes/sssb-md.md)] activation for the external program.
 
 When the queues are started, the Database Mail external program can process messages. This procedure allows you to restart the queues after the queues have been stopped with the `sysmail_stop_sp` stored procedure.
 
 > [!NOTE]  
-> This stored procedure only starts the queues for Database Mail. This stored procedure does not activate [!INCLUDE[ssSB](../../includes/sssb-md.md)] message delivery in the database.
+> This stored procedure only starts the queues for Database Mail. This stored procedure does not activate [!INCLUDE [ssSB](../../includes/sssb-md.md)] message delivery in the database.
 
 ## Permissions
 

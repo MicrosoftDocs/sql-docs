@@ -20,7 +20,7 @@ dev_langs:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Changes configuration settings for Database Mail. The configuration settings specified with `sysmail_configure_sp` apply to the entire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.
+Changes configuration settings for Database Mail. The configuration settings specified with `sysmail_configure_sp` apply to the entire [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 

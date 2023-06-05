@@ -4,7 +4,7 @@ description: "Spawns a Windows command shell and passes in a string for executio
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/26/2023
+ms.date: 05/31/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -17,6 +17,7 @@ dev_langs:
   - "TSQL"
 ---
 # xp_cmdshell (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Spawns a Windows command shell and passes in a string for execution. Any output is returned as rows of text.
@@ -35,7 +36,7 @@ xp_cmdshell { 'command_string' } [ , NO_OUTPUT ]
 
 The string that contains a command to be passed to the operating system. *command_string* is **varchar(8000)** or **nvarchar(4000)**, with no default. *command_string* can't contain more than one set of double quotation marks. A single pair of quotation marks is required if any spaces are present in the file paths or program names referenced in *command_string*. If you have trouble with embedded spaces, consider using FAT 8.3 file names as a workaround.
 
-#### NO_OUTPUT
+#### NO_ OUTPUT
 
 An optional parameter, specifying that no output should be returned to the client.
 
@@ -60,7 +61,7 @@ The command(s) completed successfully.
 
 ## Remarks
 
-The Windows process spawned by `xp_cmdshell` has the same security rights as the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account.
+The Windows process spawned by `xp_cmdshell` has the same security rights as the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] service account.
 
 > [!CAUTION]  
 > `xp_cmdshell` is a powerful feature and disabled by default. `xp_cmdshell` can be enabled and disabled by using Policy-Based Management or by executing `sp_configure`. For more information, see [Surface area configuration](../../relational-databases/security/surface-area-configuration.md) and [xp_cmdshell (server configuration option)](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md). Using `xp_cmdshell` can trigger security audit tools.
@@ -83,24 +84,24 @@ For more information, see [sp_xp_cmdshell_proxy_account (Transact-SQL)](sp-xp-cm
 
 Because malicious users sometimes attempt to elevate their privileges by using `xp_cmdshell`, `xp_cmdshell` is disabled by default. Use `sp_configure` or **Policy Based Management** to enable it. For more information, see [xp_cmdshell Server Configuration Option](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).
 
-When first enabled, `xp_cmdshell` requires CONTROL SERVER permission to execute and the Windows process created by `xp_cmdshell` has the same security context as the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account often has more permissions than are necessary for the work performed by the process created by `xp_cmdshell`. To enhance security, access to `xp_cmdshell` should be restricted to highly privileged users.
+When first enabled, `xp_cmdshell` requires CONTROL SERVER permission to execute and the Windows process created by `xp_cmdshell` has the same security context as the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] service account. The [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] service account often has more permissions than are necessary for the work performed by the process created by `xp_cmdshell`. To enhance security, access to `xp_cmdshell` should be restricted to highly privileged users.
 
-To allow non-administrators to use `xp_cmdshell`, and allow [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to create child processes with the security token of a less-privileged account, follow these steps:
+To allow non-administrators to use `xp_cmdshell`, and allow [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] to create child processes with the security token of a less-privileged account, follow these steps:
 
 1. Create and customize a Windows local user account or a domain account with the least privileges that your processes require.
 
 1. Use the `sp_xp_cmdshell_proxy_account` system procedure to configure `xp_cmdshell` to use that least-privileged account.
 
    > [!NOTE]  
-   > You can also configure this proxy account using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] by right-clicking **Properties** on your server name in Object Explorer, and looking on the **Security** tab for the **Server proxy account** section.
+   > You can also configure this proxy account using [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] by right-clicking **Properties** on your server name in Object Explorer, and looking on the **Security** tab for the **Server proxy account** section.
 
-1. In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], using the `master` database, execute the following Transact-SQL statement to give specific non-**sysadmin** users the ability to execute `xp_cmdshell`. The specified user must exist in the `master` database.
+1. In [!INCLUDE [ssManStudio](../../includes/ssmanstudio-md.md)], using the `master` database, execute the following Transact-SQL statement to give specific non-**sysadmin** users the ability to execute `xp_cmdshell`. The specified user must exist in the `master` database.
 
    ```sql
     GRANT exec ON xp_cmdshell TO N'<some_user>';
    ```
 
-Now non-administrators can launch operating system processes with `xp_cmdshell` and those processes run with the permissions of the proxy account that you have configured. Users with CONTROL SERVER permission (members of the **sysadmin** fixed server role) continue to receive the permissions of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account for child processes that are launched by `xp_cmdshell`.
+Now non-administrators can launch operating system processes with `xp_cmdshell` and those processes run with the permissions of the proxy account that you have configured. Users with CONTROL SERVER permission (members of the **sysadmin** fixed server role) continue to receive the permissions of the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] service account for child processes that are launched by `xp_cmdshell`.
 
 To determine the Windows account being used by `xp_cmdshell` when launching operating system processes, execute the following statement:
 

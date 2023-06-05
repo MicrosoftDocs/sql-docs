@@ -3,7 +3,7 @@ title: Understanding timeouts
 description: Learn about the timeouts used by JDBC. LoginTimeout, queryTimeout, cancelQueryTimeout, and socketTimeout can be used to ensure application responsiveness.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 05/19/2023
+ms.date: 06/05/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -30,9 +30,9 @@ Reasonable timeout values for your application depend on the application's prior
 
 For a responsive application, `loginTimeout` and `queryTimeout` should be set to relatively low values. Similarly, `cancelQueryTimeout` should also be set to a low value to ensure the driver doesn't wait too long for the server to acknowledge the query cancellation, when a `queryTimeout` is exceeded. Finally, `socketTimeout` should be set to guard against the driver waiting too long during any scenario where connectivity to the server is broken (network interruption, server crash, etc.).
 
-This same information can be found summarized in the following table:
+## Property summary
 
-| Property             | Description                                                                           | Default                                       | Connection Result  |
+| Property             | Description                                                                           | Default                                       | Connection result  |
 |----------------------|---------------------------------------------------------------------------------------|-----------------------------------------------| ------------------ |
 | `loginTimeout`       | The number of seconds the driver should wait before timing out a failed connection.   | 30 seconds [11.2+], <br/>otherwise 15 seconds | Closed connection  |
 | `queryTimeout`       | The number of seconds to wait before canceling a query.                               | -1 [Infinite timeout]                         | Open connection    |

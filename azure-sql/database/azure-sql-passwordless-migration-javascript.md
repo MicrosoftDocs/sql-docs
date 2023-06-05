@@ -1,6 +1,6 @@
 ---
-title: Migrate a JavaScript application to use passwordless connections with Azure SQL Database
-description: Learn how to connect to migrate a JavaScript application to use passwordless connections with Azure SQL Database
+title: Migrate a Node.js application to use passwordless connections with Azure SQL Database
+description: Learn how to connect to migrate a Node.js application to use passwordless connections with Azure SQL Database
 author: diberry
 ms.author: rotabor
 ms.date: 06/02/2023
@@ -9,12 +9,12 @@ ms.subservice: security
 monikerRange: "= azuresql || = azuresql-db"
 ms.topic: how-to
 ms.custom: passwordless-js, devx-track-azurecli, devx-track-azurepowershell
-ms.devlang: JavaScript
+ms.devlang: Node.js
 ---
 
-# Migrate a JavaScript application to use passwordless connections with Azure SQL Database
+# Migrate a Node.js application to use passwordless connections with Azure SQL Database
 
-Application requests to Azure SQL Database must be authenticated. Although there are multiple options for authenticating to Azure SQL Database, you should prioritize passwordless connections in your applications when possible. Traditional authentication methods that use passwords or secret keys create security risks and complications. Visit the [passwordless connections for Azure services](/azure/developer/intro/passwordless-overview) hub to learn more about the advantages of moving to passwordless connections. The following tutorial explains how to migrate an existing JavaScript application to connect to Azure SQL Database to use passwordless connections instead of a username and password solution.
+Application requests to Azure SQL Database must be authenticated. Although there are multiple options for authenticating to Azure SQL Database, you should prioritize passwordless connections in your applications when possible. Traditional authentication methods that use passwords or secret keys create security risks and complications. Visit the [passwordless connections for Azure services](/azure/developer/intro/passwordless-overview) hub to learn more about the advantages of moving to passwordless connections. The following tutorial explains how to migrate an existing Node.js application to connect to Azure SQL Database to use passwordless connections instead of a username and password solution.
 
 ## Configure the Azure SQL Database
 

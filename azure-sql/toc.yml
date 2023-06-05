@@ -661,6 +661,8 @@
           href: database/azure-sql-passwordless-migration.md
         - name: Migrate a Python application 
           href: database/azure-sql-passwordless-migration-python.md
+        - name: Migrate a Node.js application
+          href: database/azure-sql-passwordless-migration-nodejs.md
 
 
     - name: Monitor & Tune

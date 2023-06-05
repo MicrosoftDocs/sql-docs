@@ -22,7 +22,7 @@ Application requests to Azure SQL Database must be authenticated. Although there
 
 ## Configure your local development environment
 
-Passwordless connections can be configured to work for both local and Azure hosted environments. In this section, you apply configurations to allow individual users to authenticate to Azure SQL Database for local development.
+Passwordless connections can be configured to work for both local and Azure-hosted environments. In this section, you apply configurations to allow individual users to authenticate to Azure SQL Database for local development.
 
 ### Sign-in to Azure
 

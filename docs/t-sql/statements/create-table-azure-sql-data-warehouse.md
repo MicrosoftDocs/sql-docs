@@ -785,7 +785,7 @@ Permissions in [!INCLUDE[fabric](../../includes/fabric.md)] are different from p
 
 ## <a id="LimitationsRestrictions"></a> Limitations and restrictions
 
-- Table name cannot be greater than 100 characters.
+- Table name cannot be greater than 128 characters.
 - Table names in [!INCLUDE[fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE[fabric](../../includes/fabric.md)] cannot include the characters `/` or `\`.
 - The default and only collation supported  in [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] is Latin1_General_100_BIN2_UTF8.
 

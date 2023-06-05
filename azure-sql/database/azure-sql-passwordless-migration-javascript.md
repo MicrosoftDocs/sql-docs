@@ -60,7 +60,7 @@ Create a user in Azure SQL Database. The user should correspond to the Azure acc
         port,
         database,
         authentication: {
-            type           // passwordless config setting:azure-active-directory-default
+            type
         },
         options: {
             encrypt: true

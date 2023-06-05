@@ -125,6 +125,7 @@ Once your app is configured to use passwordless connections locally, the same co
 
 - [Passwordless overview](/azure/developer/intro/passwordless-overview)
 - [Managed identity best practices](/azure/active-directory/managed-identities-azure-resources/managed-identity-best-practice-recommendations)
+- [Managed identities in Azure AD for Azure SQL](authentication-azure-ad-user-assigned-managed-identity.md)
 
 ### Create the managed identity
 

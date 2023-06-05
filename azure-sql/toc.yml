@@ -659,7 +659,7 @@
         items: 
         - name: Migrate an application
           href: database/azure-sql-passwordless-migration.md
-        - name: Migrate a python application 
+        - name: Migrate a Python application 
           href: database/azure-sql-passwordless-migration-python.md
 
 
@@ -754,9 +754,9 @@
           href: /azure/defender-for-cloud/sql-azure-vulnerability-assessment-find?toc=/azure/azure-sql/toc.json
         - name: Review sensitive data
           href: /azure/defender-for-cloud/sql-information-protection-policy?toc=/azure/azure-sql/toc.json
-        - name: Vulnerability Assessment rules
+        - name: Vulnerability assessment rules
           href: /azure/defender-for-cloud/sql-azure-vulnerability-assessment-rules?toc=/azure/azure-sql/toc.json
-        - name: Vulnerability Assessment rules changelog
+        - name: Vulnerability assessment rules changelog
           href: /azure/defender-for-cloud/sql-azure-vulnerability-assessment-rules-changelog?toc=/azure/azure-sql/toc.json
         - name: Store vulnerability scans in storage
           href: database/sql-database-vulnerability-assessment-storage.md

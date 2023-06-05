@@ -823,6 +823,13 @@
         href: database/replication-to-sql-database.md
       - name: Replicate schema changes (Data sync)
         href: database/sql-data-sync-update-sync-schema.md
+      - name: Migrate to passwordless
+        items: 
+        - name: Migrate an application
+          href: database/azure-sql-passwordless-migration.md
+        - name: Migrate a python application 
+          href: database/azure-sql-passwordless-migration-python.md
+
 
     - name: Database sharding
       items:

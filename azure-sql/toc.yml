@@ -653,6 +653,8 @@
       items: 
       - name: Migrate DTU to vCore
         href: database/migrate-dtu-to-vcore.md
+      - name: Manage SQL Database after migration
+        href: database/manage-data-after-migrating-to-database.md
       - name: Migrate to passwordless
         items: 
         - name: Migrate an application
@@ -819,8 +821,6 @@
 
     - name: Load and move data 
       items: 
-      - name: Manage SQL Database after migration
-        href: database/manage-data-after-migrating-to-database.md
       - name: Import/export (allow Azure services disabled)
         href: database/database-import-export-azure-services-off.md
       - name: Import/export using Private endpoints

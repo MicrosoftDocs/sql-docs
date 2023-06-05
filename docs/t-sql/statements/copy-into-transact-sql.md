@@ -296,12 +296,24 @@ If Parquet files are to be loaded into hash distributed tables using COPY INTO, 
 
 ### Permissions  
 
-The user executing the COPY command must have the following permissions: 
+The user executing the COPY command must have the following permissions:
 
 - [ADMINISTER DATABASE BULK OPERATIONS](grant-database-permissions-transact-sql.md#remarks)
 - [INSERT](grant-database-permissions-transact-sql.md#remarks)
 
 Requires INSERT and ADMINISTER BULK OPERATIONS permissions. In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], INSERT, and ADMINISTER DATABASE BULK OPERATIONS permissions are required.
+
+Additionally, if the user executing the COPY command also intends to generate a new table and load data into it, they require CREATE TABLE and ALTER ON SCHEMA permissions.
+
+For example, to allow `mike@contoso.com` to use COPY to create a new table in the `HR` schema, and insert the data from a Parquet file, use the following Transact-SQL sample:
+
+```sql
+GRANT ADMINISTER DATABASE BULK OPERATIONS to [mike@contoso.com];
+GRANT INSERT to [mike@contoso.com];
+
+GRANT CREATE TABLE to [mike@contoso.com];
+GRANT ALTER on SCHEMA::HR to [mike@contoso.com];
+```
 
 ## Examples  
 

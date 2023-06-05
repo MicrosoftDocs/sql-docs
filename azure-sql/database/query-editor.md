@@ -5,7 +5,7 @@ description: Learn about Query editor in the Azure portal.
 author: grrlgeek
 ms.author: jeschult
 ms.reviewer: wiassaf, mbarickman
-ms.date: 03/20/2023
+ms.date: 06/04/2023
 ms.service: sql-database
 ms.subservice: development
 ms.topic: conceptual
@@ -23,26 +23,27 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Query editor
 
-Query editor (preview) is a tool to run SQL queries against Azure SQL Database in the Azure portal. It's designed for lightweight querying and object exploration in your database. 
+The Query editor (preview) is a tool to run SQL queries against Azure SQL Database in the Azure portal. It's designed for lightweight querying and object exploration in your database. You can run T-SQL queries against your database, as well as edit data in the build-in tabular [data editor](#data-editor).
 
-- For a quickstart on the query editor, see [Quickstart: Use the Azure portal query editor (preview) to query Azure SQL Database](connect-query-portal.md).
+- For a quickstart on the query editor, see [Quickstart: Use the Azure portal query editor (preview)](connect-query-portal.md).
 - For more advanced object explorer capabilities and management functions, use [Azure Data Studio](/sql/azure-data-studio/quickstart-sql-database) or [SQL Server Management Studio (SSMS)](connect-query-ssms.md).
 
 ## Connect via the query editor
 
-There are two authentication options for query editor - SQL Authentication and Azure Active Directory Authentication.
+There are two authentication options for query editor: SQL Authentication or Azure Active Directory (Azure AD) Authentication.
+
+### Authentication
+
+For examples, see [Quickstart: Use the Azure portal query editor (preview) to query Azure SQL Database](connect-query-portal.md).
+
+- To use SQL Authentication to connect to an Azure SQL database via the query editor, you must have a login in the logical server's `master` database or a contained SQL user in the desired user database. For more information, see [Logins](logins-create-manage.md).
+    - Enter your username and password, then select **OK**.
+- To use Active Directory authentication to connect to an Azure SQL database via the query editor, your organization must have AD set up, and you must have an [Azure AD user created in the database](authentication-azure-ad-logins-tutorial.md). The Azure portal shows your current AD account.
+    - Select `Continue as <user@domain>`.
 
 ### Permissions required to access the query editor
 
 Users need at least the Azure role-based access control (RBAC) permission **Read access to the server and database** to use the query editor.
-
-### SQL Authentication
-
-To use SQL Authentication to connect to an Azure SQL database via the query editor, you must have a login in the logical server's `master` database or a contained SQL user in the desired user database. For more information, see [Logins](logins-create-manage.md). Enter your username and password, then select **OK**.
-
-### Active Directory authentication
-
-To use Active Directory authentication to connect to an Azure SQL database via the query editor, your organization must have AD set up, and you must have an [Azure AD user created in the database](authentication-azure-ad-logins-tutorial.md). The Azure portal shows your current AD account. Select `Continue as <user@domain>`.
 
 ## Navigate query editor
 
@@ -52,14 +53,14 @@ There are three main sections of the query editor:
 - Object explorer
 - Query window
 
-   :::image type="content" source="media/query-editor/query-editor.png" alt-text="Screenshot that shows the query editor window with three red rectangles highlighting the sections.":::
+   :::image type="content" source="media/query-editor/query-editor.png" alt-text="Screenshot from the Azure portal showing red rectangles highlighting the Query editor in the main menu and the Navigation bar, Object Explorer, and Query window.":::
 
 ### Navigation bar
 
 There are four tasks you can perform in the navigation bar.
 
-- You can use **Login** to change your login context. 
-- You can use **New Query** to open a blank query window. 
+- You can use **Login** to change your login context.
+- You can use **New Query** to open a blank query window.
 - You can use **Open Query** to select up to 10 `.sql` or `.txt` files from your local computer and open them in the query window.
 - You can provide **Feedback** on the Azure SQL Database query editor.
 
@@ -73,25 +74,27 @@ The object explorer allows you to view and perform tasks against your database's
 
 #### Data editor
 
-The data editor allows you to modify data in an existing row, add a new row of data to the table, or delete a row of data. To access data editor, in the object explorer expand **Tables**, then select the ellipses to the right of the table name and select **Edit Data (Preview)**. 
+The data editor allows you to modify data in an existing row, add a new row of data to the table, or delete a row of data. To access data editor, in the object explorer expand **Tables**, then select the ellipses to the right of the table name and select **Edit Data (Preview)**.
 
-To modify data in an existing row, select the value you want to change, make your change, and then select **Save** at the top. 
+**To modify data** in an existing row, select the value you want to change, make your change, and then select **Save** at the top.
 
-To add a new row, select **Create New Row** and enter the values you want to add. There are certain data types you cannot add or work with in this context.
+- If the column is an identity column, you can't edit that value. You'll see the error: "Save failed: Failed to execute query. Error: Cannot update identity column *column_name*".
 
-- If the column is an identity column, you cannot add a value in that field. You will see the error "Save failed: Can not set value in identity columns *column_name*" at the bottom. 
-- Columns with default constraints are not honored. The data editor will not generate the default value, it expects you to enter a value. It is not recommended to use the data editor for tables that have default column constraints. 
-- Computed columns are not calculated. You will see the error "Save failed: Failed to execute query. Error: The column *column_name* cannot be modified because it is either a computed column or is the result of a UNION operator." It is not recommended to use the data editor for tables that have computed columns.
+**To add a new row**, select **Create New Row** and enter the values you want to add. There are certain data types you can't add or work with in this context.
 
-To delete a row of data, select the row and select **Delete Row**.
+- If the column is an identity column, you can't add a value in that field. You'll see the error: "Save failed: Can not set value in identity columns *column_name*" at the bottom. 
+- Columns with default constraints aren't honored. The data editor won't generate the default value, it expects you to enter a value. It isn't recommended to use the data editor for tables that have default column constraints. 
+- Computed columns aren't calculated. You'll see the error "Save failed: Failed to execute query. Error: The column *column_name* cannot be modified because it is either a computed column or is the result of a UNION operator." It is not recommended to use the data editor for tables that have computed columns.
 
-- If the row has a primary key, and that primary key has a foreign key relationship to another table, when the row is deleted, the related rows in the other table(s) will also be deleted. 
+**To delete a row** of data, select the row and select **Delete Row**.
+
+- If the row has a primary key, and that primary key has a foreign key relationship to another table, when the row is deleted, the related rows in the other table(s) will also be deleted.
 
 ### Query window
 
 This window allows you to type or paste a query, then run it. The results of the query are shown in the **Results** pane. 
 
-You can cancel your query. As noted under [Considerations and limitations](#considerations-and-limitations), there is a five-minute timeout period. 
+You can cancel your query. As noted under [Considerations and limitations](#considerations-and-limitations), there's a five-minute timeout period. 
 
 The **Save query** button allows you to save the query text to your computer as a *.sql* file.
 
@@ -116,8 +119,7 @@ The following considerations and limitations apply when connecting to and queryi
 ### Connection considerations
 
 - For public connections to the query editor, you need to [add your outbound IP address to the server's allowed firewall rules](firewall-create-server-level-portal-quickstart.md) to access your databases.
-
-  You don't need to add your IP address to the SQL server firewall rules if you have a Private Link connection set up on the server, and you connect to the server from within the private virtual network.
+    - You don't need to add your IP address to the SQL server firewall rules if you have a Private Link connection set up on the server, and you connect to the server from within the private virtual network.
 
 ### Connection error troubleshooting
 
@@ -130,7 +132,7 @@ The following considerations and limitations apply when connecting to and queryi
 
 - If you see the error message "Login failed for user `<token-identified principal>`. The server is not currently configured to accept this token." when you attempt to use AD authentication, your user does not have access to the database.
 
-    - For more information on creating a user from an Azure AD principal, see [Configure and manage Azure AD authentication with Azure SQL](authentication-aad-configure.md) and use `CREATE USER [group or user] FROM EXTERNAL PROVIDER` in the user database.
+  - For more information on creating a user from an Azure AD principal, see [Configure and manage Azure AD authentication with Azure SQL](authentication-aad-configure.md) and use `CREATE USER [group or user] FROM EXTERNAL PROVIDER` in the user database.
 
 - You might get one of the following errors in the query editor:
 
@@ -149,7 +151,7 @@ The following considerations and limitations apply when connecting to and queryi
 
      1. Select **port** as the type of rule you want to create, and then select **Next**.
      1. Select **TCP**.
-     1. Select **Specific remote ports**, enter *443, 1443*, and then select **Next**.
+     1. Select **Specific remote ports**, enter `443, 1443`, and then select **Next**.
      1. Select **Allow the connection if it is secure**, select **Next**, and then select **Next** again.
      1. Keep **Domain**, **Private**, and **Public** selected.
      1. Give the rule a name, for example *Access Azure SQL query editor*, and optionally provide a description. Then select **Finish**.

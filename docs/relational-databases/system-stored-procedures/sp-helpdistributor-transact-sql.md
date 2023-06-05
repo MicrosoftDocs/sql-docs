@@ -20,7 +20,7 @@ dev_langs:
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-Lists information about the Distributor, distribution database, working directory, and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent user account. This stored procedure is executed at the Publisher on the publication database or any database.
+Lists information about the Distributor, distribution database, working directory, and [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent user account. This stored procedure is executed at the Publisher on the publication database or any database.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -59,7 +59,7 @@ The working directory. *@directory* is **nvarchar(255)**, with a default of `%`,
 
 #### [ @account = ] '*account*' OUTPUT
 
-The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows user account. *@account* is **nvarchar(255)**, with a default of `%`, which is the only value that returns a result set.
+The [!INCLUDE [msCoName](../../includes/msconame-md.md)] Windows user account. *@account* is **nvarchar(255)**, with a default of `%`, which is the only value that returns a result set.
 
 #### [ @min_distretention = ] *min_distretention* OUTPUT
 
@@ -87,7 +87,7 @@ The name of the Publisher. *@publisher* is **sysname**, with a default of NULL.
 
 #### [ @local = ] '*local*'
 
-Whether [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should get local server values. *@local* is **nvarchar(5)**, with a default of NULL.
+Whether [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] should get local server values. *@local* is **nvarchar(5)**, with a default of NULL.
 
 #### [ @rpcsrvname = ] '*rpcsrvname*' OUTPUT
 

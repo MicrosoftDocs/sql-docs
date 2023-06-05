@@ -20,10 +20,10 @@ dev_langs:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Grants a Windows group or user access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Grants a Windows group or user access to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].
 
 > [!IMPORTANT]  
-> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) instead.
+> [!INCLUDE [ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) instead.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -41,7 +41,7 @@ The name of the Windows user or group to be added. The Windows user or group mus
 
 #### [ @logintype = ] '*logintype*'
 
-The security level of the login being granted access. *@logintype* is **varchar(5)**, with a default of NULL. Only `admin` can be specified. If `admin` is specified, *@loginame* is granted access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and added as a member of the **sysadmin** fixed server role.
+The security level of the login being granted access. *@logintype* is **varchar(5)**, with a default of NULL. Only `admin` can be specified. If `admin` is specified, *@loginame* is granted access to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], and added as a member of the **sysadmin** fixed server role.
 
 ## Return code values
 

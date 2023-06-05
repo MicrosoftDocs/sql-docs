@@ -646,6 +646,20 @@
         href: database/local-dev-experience-create-database-project.md
       - name: Publish a database project to the local emulator
         href: database/local-dev-experience-publish-emulator.md
+    - name: Migrate
+      items: 
+      - name: Migrate DTU to vCore
+        href: database/migrate-dtu-to-vcore.md
+      - name: Manage SQL Database after migration
+        href: database/manage-data-after-migrating-to-database.md
+      - name: Migrate to passwordless
+        items: 
+        - name: Migrate an application
+          href: database/azure-sql-passwordless-migration.md
+        - name: Migrate a Python application 
+          href: database/azure-sql-passwordless-migration-python.md
+        - name: Migrate a Node.js application
+          href: database/azure-sql-javascript-mssql-quickstart-nodejs.md
     - name: Monitor & Tune
       items:
         - name: Identify query performance bottlenecks

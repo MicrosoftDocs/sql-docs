@@ -4,7 +4,7 @@ description: "CREATE TABLE creates a new table in Azure Synapse Analytics, Analy
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: vanto, xiaoyul, wiassaf, mariyaali, maghan
-ms.date: 04/14/2023
+ms.date: 06/05/2023
 ms.service: sql
 ms.topic: reference
 dev_langs:

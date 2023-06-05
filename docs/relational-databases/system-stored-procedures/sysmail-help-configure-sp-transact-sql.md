@@ -65,7 +65,7 @@ The stored procedure `sysmail_help_configure_sp` is in the `msdb` database and i
 
 ## Examples
 
-The following example shows listing the Database Mail configuration settings for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.
+The following example shows listing the Database Mail configuration settings for the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance.
 
 ```sql
 EXEC msdb.dbo.sysmail_help_configure_sp;

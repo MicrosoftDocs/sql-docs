@@ -18,7 +18,7 @@ dev_langs:
 ---
 # sp_table_validation (Transact-SQL)
 
-[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
 Either returns rowcount or checksum information on a table or indexed view, or compares the provided rowcount or checksum information with the specified table or indexed view. This stored procedure is executed at the Publisher on the publication database and at the Subscriber on the subscription database.
 
@@ -60,7 +60,7 @@ Specifies whether to return the expected checksum for the table. *@expected_chec
 
 Specifies what type of checksum or rowcount to perform. *@rowcount_only* is **smallint**, with a default of `1`.
 
-If `0`, perform a rowcount and a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0-compatible checksum.
+If `0`, perform a rowcount and a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] 7.0-compatible checksum.
 
 If `1`, perform a rowcount check only.
 
@@ -106,7 +106,7 @@ Checksum computes a 32-bit cyclic redundancy check (CRC) on the entire row image
 
 When doing a checksum, the structure of the table must be identical between the two servers; that is, the tables must have the same columns existing in the same order, same data types and lengths, and same NULL/NOT NULL conditions. For example, if the Publisher did a CREATE TABLE, then an ALTER TABLE to add columns, but the script applied at the Subscriber is a simple CREATE table, the structure is NOT the same. If you are not certain that the structure of the two tables is identical, look at [syscolumns](../../relational-databases/system-compatibility-views/sys-syscolumns-transact-sql.md) and confirm that the offset in each table is the same.
 
-Floating point values are likely to generate checksum differences if character-mode **bcp** was used, which is the case if the publication has non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] subscribers. These are due to minor and unavoidable differences in precision when doing conversion to and from character mode.
+Floating point values are likely to generate checksum differences if character-mode **bcp** was used, which is the case if the publication has non- [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] subscribers. These are due to minor and unavoidable differences in precision when doing conversion to and from character mode.
 
 ## Permissions
 

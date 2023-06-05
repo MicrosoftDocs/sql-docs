@@ -49,7 +49,7 @@ The name of the Windows domain for which to enumerate a list of global groups. *
 
 ## Remarks
 
-If *domain_name* is the name of the Windows-based computer that an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running on, or no domain name is specified, `xp_enumgroups` enumerates the local groups from the computer that is running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+If *domain_name* is the name of the Windows-based computer that an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is running on, or no domain name is specified, `xp_enumgroups` enumerates the local groups from the computer that is running [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].
 
 ## Permissions
 

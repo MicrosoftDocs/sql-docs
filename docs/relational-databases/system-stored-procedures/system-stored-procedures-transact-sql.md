@@ -25,7 +25,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-fabricse-fabricdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-fabricse-fabricdw.md)]
 
-In [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], many administrative and informational activities can be performed by using system stored procedures. The system stored procedures are grouped into the categories shown in the following table.
+In [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)], many administrative and informational activities can be performed by using system stored procedures. The system stored procedures are grouped into the categories shown in the following table.
 
 ## In this section
 
@@ -36,18 +36,18 @@ In [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], many administrativ
 | [Change Data Capture stored procedures](change-data-capture-stored-procedures-transact-sql.md) | Used to enable, disable, or report on change data capture objects. |
 | [Cursor stored procedures](cursor-stored-procedures-transact-sql.md) | Used to implements cursor variable functionality. |
 | [Data Collector stored procedures](data-collector-stored-procedures-transact-sql.md) | Used to work with the data collector and the following components: collection sets, collection items, and collection types. |
-| [Database Engine stored procedures](database-engine-stored-procedures-transact-sql.md) | Used for general maintenance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. |
-| [Database Mail stored procedures](database-mail-stored-procedures-transact-sql.md) | Used to perform e-mail operations from within an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. |
+| [Database Engine stored procedures](database-engine-stored-procedures-transact-sql.md) | Used for general maintenance of the [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)]. |
+| [Database Mail stored procedures](database-mail-stored-procedures-transact-sql.md) | Used to perform e-mail operations from within an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. |
 | [Database Maintenance Plan stored procedures](database-maintenance-plan-stored-procedures-transact-sql.md) | Used to set up core maintenance tasks that are required to manage database performance. |
 | [Distributed Queries stored procedures](distributed-queries-stored-procedures-transact-sql.md) | Used to implement and manage distributed queries. |
 | [FILESTREAM and FileTable stored procedures](./filestream-and-filetable-sp-filestream-force-garbage-collection.md) | Used to configure and manage the FILESTREAM and FileTable features. |
 | [Firewall Rules stored procedures (Azure SQL Database)](firewall-rules-stored-procedures-azure-sql-database.md) | Used to configure the Azure SQL Database firewall. |
 | [Full-Text Search stored procedures](full-text-search-and-semantic-search-stored-procedures-transact-sql.md) | Used to implement and query full-text indexes. |
-| [General extended stored procedures](general-extended-stored-procedures-transact-sql.md) | Used to provide an interface from an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to external programs for various maintenance activities. |
+| [General extended stored procedures](general-extended-stored-procedures-transact-sql.md) | Used to provide an interface from an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] to external programs for various maintenance activities. |
 | [Log Shipping stored procedures](log-shipping-stored-procedures-transact-sql.md) | Used to configure, modify, and monitor log shipping configurations. |
 | [Management Data Warehouse stored procedures](management-data-warehouse-stored-procedures-transact-sql.md) | Used to configure the management data warehouse. |
 | [MSDTC stored procedure](msdtc-stored-procedures-transact-sql.md)| Use for resetting the Microsoft Distributed Transaction Coordinator (MSDTC) log or looking at MSDTC statistics.
-| [OLE Automation stored procedures](ole-automation-stored-procedures-transact-sql.md) | Used to enable standard Automation objects for use within a standard [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. |
+| [OLE Automation stored procedures](ole-automation-stored-procedures-transact-sql.md) | Used to enable standard Automation objects for use within a standard [!INCLUDE [tsql](../../includes/tsql-md.md)] batch. |
 | [Policy-Based Management stored procedures](policy-based-management-stored-procedures-transact-sql.md) | Used for Policy-Based Management. |
 | [PolyBase stored procedures](./polybase-stored-procedures-sp-polybase-join-group.md) | Add or remove a computer from a PolyBase scale-out group. |
 | [Query Store stored procedures](query-store-stored-procedures-transact-sql.md) | Used to tune performance. |
@@ -55,8 +55,8 @@ In [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], many administrativ
 | [Security stored procedures](security-stored-procedures-transact-sql.md) | Used to manage security. |
 | [Snapshot Backup stored procedures](./snapshot-backup-sp-delete-backup.md) | Used to delete the FILE_SNAPSHOT backup along with all of its snapshots or to delete an individual backup file snapshot. |
 | [Spatial Index stored procedures](./spatial-index-stored-procedures-arguments-and-properties.md) | Used to analyze and improve the indexing performance of spatial indexes. |
-| [SQL Server Agent stored procedures](sql-server-agent-stored-procedures-transact-sql.md) | Used by [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to monitor performance and activity. |
-| [SQL Server Profiler stored procedures](sql-server-profiler-stored-procedures-transact-sql.md) | Used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to manage scheduled and event-driven activities. |
+| [SQL Server Agent stored procedures](sql-server-agent-stored-procedures-transact-sql.md) | Used by [!INCLUDE [ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to monitor performance and activity. |
+| [SQL Server Profiler stored procedures](sql-server-profiler-stored-procedures-transact-sql.md) | Used by [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent to manage scheduled and event-driven activities. |
 | [Stretch Database stored procedures](stretch-database-extended-stored-procedures-transact-sql.md) | Used to manage stretch databases. |
 | [Temporal Tables stored procedures](./spatial-index-stored-procedures-arguments-and-properties.md) | Use for temporal tables |
 | [XML stored procedures](xml-stored-procedures-transact-sql.md) | Used for XML text management. |
@@ -69,13 +69,13 @@ In [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], many administrativ
 
 ## API system stored procedures
 
-Users that run [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] against ADO, OLE DB, and ODBC applications may notice these applications using system stored procedures that aren't covered in the [!INCLUDE[tsql](../../includes/tsql-md.md)] Reference. These stored procedures are used by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver to implement the functionality of a database API. These stored procedures are just the mechanism the provider or driver uses to communicate user requests to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. They are intended only for the internal use of the provider or the driver. Calling them explicitly from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-based application isn't supported.
+Users that run [!INCLUDE [ssSqlProfiler](../../includes/sssqlprofiler-md.md)] against ADO, OLE DB, and ODBC applications may notice these applications using system stored procedures that aren't covered in the [!INCLUDE [tsql](../../includes/tsql-md.md)] Reference. These stored procedures are used by the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider and the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver to implement the functionality of a database API. These stored procedures are just the mechanism the provider or driver uses to communicate user requests to an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. They are intended only for the internal use of the provider or the driver. Calling them explicitly from a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]-based application isn't supported.
 
 The `sp_createorphan` and `sp_droporphans` stored procedures are used for ODBC **ntext**, **text**, and **image** processing.
 
-The `sp_reset_connection` stored procedure is used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to support remote stored procedure calls in a transaction. This stored procedure also causes Audit Login and Audit Logout events to fire when a connection is reused from a connection pool.
+The `sp_reset_connection` stored procedure is used by [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] to support remote stored procedure calls in a transaction. This stored procedure also causes Audit Login and Audit Logout events to fire when a connection is reused from a connection pool.
 
-The system stored procedures in the following tables are used only within an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or through client APIs and aren't intended for general customer use. They are subject to change and compatibility isn't guaranteed.
+The system stored procedures in the following tables are used only within an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] or through client APIs and aren't intended for general customer use. They are subject to change and compatibility isn't guaranteed.
 
 The following stored procedures are documented:
 

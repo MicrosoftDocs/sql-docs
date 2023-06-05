@@ -23,7 +23,7 @@ dev_langs:
 Calls the **sqlmaint** utility with a string that contains **sqlmaint** options (also known as *switches*). The **sqlmaint** utility performs a set of maintenance operations on one or more databases.
 
 > [!NOTE]  
-> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]
+> [!INCLUDE [ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -62,7 +62,7 @@ EXEC xp_sqlmaint '-D AdventureWorks2022 -PlanID 02A52657-D546-11D1-9D8A-00A0C905
    -Rpt "C:\Program Files\Microsoft SQL Server\MSSQL\LOG\DBMaintPlan2.txt" -WriteHistory -CkDB -CkAl';
 ```
 
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+[!INCLUDE [ssResult](../../includes/ssresult-md.md)]
 
 ```output
 The command(s) executed successfully.

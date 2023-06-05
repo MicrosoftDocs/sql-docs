@@ -23,7 +23,7 @@ dev_langs:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Removes data from the management data warehouse based on a retention policy. This procedure is executed daily by the mdw_purge_data [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job against the management data warehouse associated with the specified instance. You can use this stored procedure to perform an on-demand removal of data from the management data warehouse.
+Removes data from the management data warehouse based on a retention policy. This procedure is executed daily by the mdw_purge_data [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent job against the management data warehouse associated with the specified instance. You can use this stored procedure to perform an on-demand removal of data from the management data warehouse.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -98,7 +98,7 @@ GO
 
 ### C. Specify an instance name and collection set
 
-The following example removes data from the management data warehouse for a given collection set on the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Because @retention_days is not specified, the value in the valid_through column in the `core.snapshots` view is used to determine the rows for the collection set that are eligible for removal.
+The following example removes data from the management data warehouse for a given collection set on the specified instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. Because @retention_days is not specified, the value in the valid_through column in the `core.snapshots` view is used to determine the rows for the collection set that are eligible for removal.
 
 ```sql
 USE <management_data_warehouse>;

@@ -50,7 +50,7 @@ Pools are well suited for a large number of databases with specific utilization 
 
 The more databases you can add to a pool, the greater your savings become. Depending on your application utilization pattern, it's possible to see savings with as few as two S3 databases.
 
-The following sections help you understand how to assess if your specific collection of databases can benefit from being in a pool. The examples use Standard pools, but the same principles also apply to Basic and Premium pools.
+The following sections help you understand how to assess if your specific collection of databases can benefit from being in a pool. The examples use Standard pools, but the same principles also apply to other service tiers for elastic pools.
 
 ### Assess database utilization patterns
 
@@ -88,6 +88,9 @@ The best size for a pool depends on the aggregate resources needed for all datab
 - Maximum storage bytes utilized by all databases in the pool.
 
 For service tiers and resource limits in each purchasing model, see the [DTU-based purchasing model](service-tiers-dtu.md) or the [vCore-based purchasing model](service-tiers-vcore.md).
+
+> [!NOTE]
+> [Elastic pools for Hyperscale](./hyperscale-elastic-pool-overview.md) is currently in preview.
 
 The following steps can help you estimate whether a pool is more cost-effective than single databases:
 
@@ -175,3 +178,4 @@ You can use the built-in [performance monitoring](./performance-guidance.md) and
 - To learn more about design patterns for SaaS applications by using elastic pools, see [Design patterns for multitenant SaaS applications with SQL Database](saas-tenancy-app-design-patterns.md).
 - For a SaaS tutorial by using elastic pools, see [Introduction to the Wingtip SaaS application](saas-dbpertenant-wingtip-app-overview.md).
 - To learn about resource management in elastic pools with many databases, see [Resource management in dense elastic pools](elastic-pool-resource-management.md).
+- Learn more about [Hyperscale elastic pools](./hyperscale-elastic-pool-overview.md).

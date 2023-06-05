@@ -21,7 +21,7 @@ Migrating a database from the DTU-based purchasing model to the vCore-based purc
 
 ## Choose the vCore service tier and service objective
 
-For most DTU to vCore migration scenarios, databases and elastic pools in the Basic and Standard service tiers will map to the [General Purpose](service-tier-general-purpose.md) service tier. Databases and elastic pools in the Premium service tier will map to the [Business Critical](service-tier-business-critical.md) service tier. Depending on application scenario and requirements, the [Hyperscale](service-tier-hyperscale.md) service tier can often be used as the migration target for single databases in all DTU service tiers.
+For most DTU to vCore migration scenarios, databases and elastic pools in the Basic and Standard service tiers will map to the [General Purpose](service-tier-general-purpose.md) service tier. Databases and elastic pools in the Premium service tier will map to the [Business Critical](service-tier-business-critical.md) service tier. Depending on application scenario and requirements, the [Hyperscale](service-tier-hyperscale.md) service tier can often be used as the migration target for databases and elastic pools in all DTU service tiers.
 
 To choose the service objective, or compute size, for the migrated database in the vCore model, you can use a simple but approximate rule of thumb: every 100 DTUs in the Basic or Standard tiers require *at least* 1 vCore, and every 125 DTUs in the Premium tier require *at least* 1 vCore. 
 

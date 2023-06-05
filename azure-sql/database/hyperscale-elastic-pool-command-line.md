@@ -17,9 +17,7 @@ In this article, learn to create, scale, and move databases into a [Hyperscale e
 
 
 > [!NOTE]
-> Hyperscale elastic pools are in public preview. This preview feature is available for Azure SQL Database (Hyperscale service tier). It is not available for Azure SQL Managed Instance, SQL Server on-premises, SQL Server on Azure VMs, or Azure Synapse Analytics (dedicated SQL pools (formerly SQL DW)).
-
-
+> [Elastic pools for Hyperscale](./hyperscale-elastic-pool-overview.md) is currently in preview.
 
 ## Prerequisites
 
@@ -174,3 +172,4 @@ PATCH https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups
 - [Azure SQL Database CLI commands](/cli/azure/sql).
 - [Azure SQL Database PowerShell cmdlets](/powershell/module/az.sql/).
 - [Azure SQL Database elastic pools REST API](/rest/api/sql/2021-11-01-preview/elastic-pools/).
+- [Hyperscale elastic pools overview](./hyperscale-elastic-pool-overview.md).

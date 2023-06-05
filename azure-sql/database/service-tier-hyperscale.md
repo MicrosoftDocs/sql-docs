@@ -34,7 +34,7 @@ The Hyperscale service tier in Azure SQL Database provides the following additio
 - Rapid Scale up - you can, in constant time, scale up your compute resources to accommodate heavy workloads when needed, and then scale the compute resources back down when not needed.
 - Rapid scale out - you can provision one or more [read-only replicas](service-tier-hyperscale-replicas.md) for offloading your read workload and for use as hot-standbys.
 - Automatic scale-up, scale-down, and billing for compute based on usage with [serverless compute](serverless-tier-overview.md) (in preview).
-- Optimized price/performance for a group of Hyperscale databases with varying resource demands with [elastic pools](elastic-pool-overview.md) (in preview).
+- Optimized price/performance for a group of Hyperscale databases with varying resource demands with [elastic pools](./hyperscale-elastic-pool-overview.md) (in preview).
 - Auto scaling storage with support upto 100TB of database or elastic pool size.
 - Higher overall performance due to higher transaction log throughput and faster transaction commit times regardless of data volumes.
 - Fast database backups (based on file snapshots) regardless of size with no IO impact on compute resources.
@@ -101,7 +101,7 @@ The vCore-based service tiers are differentiated based on database availability 
 |**Discount models**| [Reserved instances](reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions|[Reserved instances](reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions  | [Reserved instances](reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions|
 
 
-<sup>1</sup> Elastic pools aren't supported in the Hyperscale service tier.   
+<sup>1</sup> [Elastic pools for Hyperscale](./hyperscale-elastic-pool-overview.md) is currently in preview.
 <sup>2</sup> Short-term backup retention for 1-35 days for Hyperscale databases is now in preview.   
 <sup>3</sup> Long-term retention for Hyperscale databases is now in preview.   
 <sup>4</sup> 10.2 GB/vCore is available with premium-series memory optimized hardware (preview).

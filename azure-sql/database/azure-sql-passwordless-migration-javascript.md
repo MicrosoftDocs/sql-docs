@@ -68,7 +68,6 @@ Create a user in Azure SQL Database. The user should correspond to the Azure acc
     };
 
     export default class Database {
-
         config = {};
         poolconnection = null;
         connected = false;

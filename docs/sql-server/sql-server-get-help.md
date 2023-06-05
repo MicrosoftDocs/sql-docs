@@ -73,11 +73,11 @@ You can submit suggestions for improvement and other feedback, including bugs.
 
 The best way to reach the SQL Server content team is through Git Issues. You'll find an option to submit a Git Issue at the bottom of most of our pages:
 
-:::image type="content" source="media/sql-server-get-help/git-issues.png" alt-text="Git Issue content feedback.":::
+:::image type="content" source="media/sql-server-get-help/git-issues.png" alt-text="Screenshot of Git Issue content feedback.":::
 
 If you have something else to share - an idea, a suggestion, feedback, anything! -  you can open a general Git Issue by going to [https://aka.ms/SQLDocsFeedback](https://aka.ms/SQLDocsFeedback) and selecting **New Issues**.
 
-:::image type="content" source="media/sql-server-get-help/new-git-issue.png" alt-text="New Git Issue.":::
+:::image type="content" source="media/sql-server-get-help/new-git-issue.png" alt-text="Screenshot of New Git Issue in SQL Documentation.":::
 
 ## Social media updates
 

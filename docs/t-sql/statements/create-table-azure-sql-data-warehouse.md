@@ -4,7 +4,7 @@ description: "CREATE TABLE creates a new table in Azure Synapse Analytics, Analy
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: vanto, xiaoyul, wiassaf, mariyaali, maghan
-ms.date: 06/05/2023
+ms.date: 06/06/2023
 ms.service: sql
 ms.topic: reference
 dev_langs:
@@ -786,9 +786,9 @@ Permissions in [!INCLUDE[fabric](../../includes/fabric.md)] are different from p
 ## <a id="LimitationsRestrictions"></a> Limitations and restrictions
 
 - Table names cannot be greater than 128 characters.
-- Table names in [!INCLUDE[fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE[fabric](../../includes/fabric.md)] cannot include the characters `/` or `\`.
+- Table names in [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)] cannot include the characters `/` or `\`.
 - Column names cannot be greater than 128 characters.
-- The default and only collation supported  in [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] is Latin1_General_100_BIN2_UTF8.
+- The default and only collation supported in [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] is Latin1_General_100_BIN2_UTF8.
 
 ## Remarks
 

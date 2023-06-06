@@ -122,7 +122,7 @@ If the load level increases on a database to the point that it maxes out the dat
 
 **Short term**, consider scaling up the database to provide additional resources, or removing tenants from the multi-tenant database (moving them out of the multi-tenant database to a stand-alone database).
 
-**Longer term**, consider optimizing queries or index usage to improve database performance. Depending on the application's sensitivity to performance issues its best practice to scale a database up before it reaches 100% DTU usage. Use an alert to warn you in advance.
+**Longer term**, consider optimizing queries or index usage to improve database performance. Depending on the application's sensitivity to performance issues it's best practice to scale a database up before it reaches 100% DTU usage. Use an alert to warn you in advance.
 
 You can simulate a busy database by increasing the load produced by the generator. Causing the tenants to burst more frequently, and for longer, increasing the  load on the multi-tenant database without changing the requirements of the individual tenants. Scaling up the database is easily done in the portal or from PowerShell. This exercise uses the portal.
 
@@ -132,7 +132,7 @@ You can simulate a busy database by increasing the load produced by the generato
 
 Monitor the increased database DTU usage on the upper chart. It takes a few minutes for the new higher load to kick in, but you should quickly see the database start to hit max utilization, and as the load steadies into the new pattern, it rapidly overloads the database.
 
-1. To scale up the database, select **Pricing tier (scale DTUs)** in the settings blade.
+1. To scale up the database, select **Pricing tier (scale DTUs)** in the settings page.
 1. Adjust the **DTU** setting to **100**. 
 1. Select **Apply** to submit the request to scale the database.
 
@@ -192,4 +192,4 @@ In this tutorial you learn how to:
 ## Additional resources
 
 <!--* [Additional tutorials that build upon the Wingtip Tickets SaaS Multi-tenant Database application deployment](saas-multitenantdb-wingtip-app-overview.md#sql-database-wingtip-saas-tutorials)-->
-- [Azure automation](/azure/automation/automation-intro)
+- [Azure Automation](/azure/automation/automation-intro)

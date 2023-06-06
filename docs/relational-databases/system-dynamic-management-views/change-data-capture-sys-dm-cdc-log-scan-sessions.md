@@ -25,7 +25,7 @@ dev_langs:
   
   The records in `sys.dm_cdc_log_scan_sessions` are reset whenever the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is restarted or after a failover occurs. Additionally, if the queried database is in the secondary role of an Always On availability group, then no records are returned.
   
-  For more information, see [What is change data capture (CDC)?](../track-changes/about-change-data-capture-sql-server.md)
+  For more information, review [What is change data capture (CDC)?](../track-changes/about-change-data-capture-sql-server.md)
    
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

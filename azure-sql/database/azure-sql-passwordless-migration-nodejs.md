@@ -180,7 +180,21 @@ Save your changes and restart the application if it doesn't do so automatically.
 > [!NOTE]
 > The example connection code shown in this migration guide uses the [DefaultAzureCredential](/javascript/api/@azure/identity/defaultazurecredential) class when deployed. Specifically, it uses the `DefaultAzureCredential` without passing the user-assigned managed identity client ID to the constructor. In this scenario, the fallback is to check for the `AZURE_CLIENT_ID` environment variable. If the `AZURE_CLIENT_ID` environment variable doesn't exist, a system-assigned managed identity will be used if configured.
 >
-> If you pass the managed identity client ID in the `DefaultAzureCredential` constructor, the connection code can still be used locally and deployed because the authentication process falls back to interactive authentication in the local scenario. For more information, see the [Azure Identity client library for JavaScript](/javascript/api/@azure/identity/).
+> If you [pass the managed identity client ID in the `DefaultAzureCredential` constructor](https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/identity/identity/samples/AzureIdentityExamples.md#authenticating-a-user-account-interactively-in-the-browser), the connection code can still be used locally and deployed because the authentication process falls back to interactive authentication in the local scenario. For more information, see the [Azure Identity client library for JavaScript](/javascript/api/@azure/identity/).
+> 
+> ```nodejs
+> /**
+>  * The default credential will use the user-assigned managed identity with the specified client ID.
+>  */
+> function withDefaultAzureCredential() {
+>   // Alternatively, you may set the environment variable AZURE_CLIENT_ID="<MANAGED_IDENTITY_CLIENT_ID>" and omit the `managedIdentityClientId`
+>   // option when using `DefaultAzureCredential` - the two approaches are equivalent.
+>   const credential = new DefaultAzureCredential({
+>     managedIdentityClientId: "<MANAGED_IDENTITY_CLIENT_ID>"
+>   });
+>  const client = new SecretClient("https://key-vault-name.vault.azure.net", credential);
+> }
+> ```
 
 ### Test the application
 

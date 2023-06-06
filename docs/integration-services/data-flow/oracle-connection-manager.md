@@ -16,7 +16,7 @@ An Oracle Connection Manager is used to enable a package to extract data from Or
 
 The **ConnectionManagerType** property for the Oracle Connection Manager is set to **ORACLE**.
 
-In SSIS execution logs this connector will be refered to as "Oracle Connection Manager".
+In SSIS execution logs, this connector is referred to as "Oracle Connection Manager."
 
 ## Configuring the Oracle Connection Manager
 

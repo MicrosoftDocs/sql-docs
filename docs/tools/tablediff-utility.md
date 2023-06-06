@@ -31,6 +31,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   Log results to an output file or into a table in the destination database.  
   
+> [!IMPORTANT]  
+>  The tablediff Utility is part of the the SQL Server Replication tools. The tablediff.exe file can be found at its default location of “C:\Program Files\Microsoft SQL Server\160\COM” once the replication feature has been installed.
+
 ## Syntax  
   
 ```  

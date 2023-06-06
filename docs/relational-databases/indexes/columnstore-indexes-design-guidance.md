@@ -57,7 +57,7 @@ Consider using a clustered columnstore index when:
 
 Don't use a clustered columnstore index when:
 
-* The table requires `varchar(max)`, `nvarchar(max)`, or `varbinary(max)` data types. Or, design the columnstore index so that it doesn't include these columns (Applies to: [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] and previous versions).
+* The table requires **varchar(max)**, **nvarchar(max)**, or **varbinary(max)** data types. Or, design the columnstore index so that it doesn't include these columns (Applies to: [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] and previous versions).
 
 * The table data is not permanent. Consider using a heap or temporary table when you need to store and delete the data quickly.
 * The table has less than one million rows per partition. 

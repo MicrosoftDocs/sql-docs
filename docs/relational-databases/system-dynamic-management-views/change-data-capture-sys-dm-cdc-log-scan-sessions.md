@@ -23,7 +23,7 @@ dev_langs:
 
   Returns one row for each log scan session in the current database. The last row returned represents the current session. You can use this view to return status information about the current log scan session, or aggregated information about all sessions since the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] was last started. 
   
-  The records in sys.dm_cdc_log_scan_sessions are reset whenever the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is restarted or a failover (local & GeoDR) occurs. Additionally, if the database queried is in the secondary role of an Availability Group, then no records will return.
+  The records in `sys.dm_cdc_log_scan_sessions` are reset whenever the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is restarted or after a failover occurs. Additionally, if the queried database is in the secondary role of an Always On availability group, then no records are returned.
   
   For more information, see [What is change data capture (CDC)?](../track-changes/about-change-data-capture-sql-server.md)
    

@@ -8,7 +8,7 @@ ms.service: sql-database
 ms.subservice: security
 monikerRange: "= azuresql || = azuresql-db"
 ms.topic: how-to
-ms.custom: passwordless-js, devx-track-azurecli, devx-track-azurepowershell
+ms.custom: passwordless-js, devx-track-azurecli, devx-track-azurepowershell, devx-track-javascript
 ms.devlang: nodejs
 ---
 
@@ -170,31 +170,6 @@ Complete the following steps in the Azure portal to associate the user-assigned 
 ### Create a database user for the identity and assign roles
 
 [!INCLUDE [create-database-user-for-identity](../includes/passwordless/create-database-user-for-identity.md)]
-
-### Create an app setting for the managed identity client ID
-
-To use the user-assigned managed identity, create an `AZURE_CLIENT_ID` environment variable and set it equal to the client ID of the managed identity. You can set this variable in the **Configuration** section of your app in the Azure portal. You can find the client ID in the **Overview** section of the managed identity resource in the Azure portal.
-
-Save your changes and restart the application if it doesn't do so automatically.
-
-> [!NOTE]
-> The example connection code shown in this migration guide uses the [DefaultAzureCredential](/javascript/api/@azure/identity/defaultazurecredential) class when deployed. Specifically, it uses the `DefaultAzureCredential` without passing the user-assigned managed identity client ID to the constructor. In this scenario, the fallback is to check for the `AZURE_CLIENT_ID` environment variable. If the `AZURE_CLIENT_ID` environment variable doesn't exist, a system-assigned managed identity will be used if configured.
->
-> If you [pass the managed identity client ID in the `DefaultAzureCredential` constructor](https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/identity/identity/samples/AzureIdentityExamples.md#authenticating-a-user-account-interactively-in-the-browser), the connection code can still be used locally and deployed because the authentication process falls back to interactive authentication in the local scenario. For more information, see the [Azure Identity client library for JavaScript](/javascript/api/@azure/identity/).
-> 
-> ```nodejs
-> /**
->  * The default credential will use the user-assigned managed identity with the specified client ID.
->  */
-> function withDefaultAzureCredential() {
->   // Alternatively, you may set the environment variable AZURE_CLIENT_ID="<MANAGED_IDENTITY_CLIENT_ID>" and omit the `managedIdentityClientId`
->   // option when using `DefaultAzureCredential` - the two approaches are equivalent.
->   const credential = new DefaultAzureCredential({
->     managedIdentityClientId: "<MANAGED_IDENTITY_CLIENT_ID>"
->   });
->  const client = new SecretClient("https://key-vault-name.vault.azure.net", credential);
-> }
-> ```
 
 ### Test the application
 

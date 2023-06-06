@@ -32,7 +32,7 @@ Returns part of a character, binary, text, or image expression in [!INCLUDE[ssNo
 ## Syntax  
   
 ```syntaxsql
-SUBSTRING ( expression ,start , length )  
+SUBSTRING ( expression, start, length )  
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]

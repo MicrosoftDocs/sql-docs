@@ -45,7 +45,7 @@ Create a user in Azure SQL Database. The user should correspond to the Azure acc
     AZURE_SQL_AUTHENTICATIONTYPE=azure-active-directory-default
     ```
 
-2. Existing application code that connects to Azure SQL Database using the [JavaScript SQL Driver - tedious](/sql/connect/node-js/node-js-driver-for-sql-server) continues to work with passwordless connections with minor changes. 
+2. Existing application code that connects to Azure SQL Database using the [Node.js SQL Driver - tedious](/sql/connect/node-js/node-js-driver-for-sql-server) continues to work with passwordless connections with minor changes. 
 
     ```Node.js
     import sql from 'mssql';
@@ -173,7 +173,7 @@ Complete the following steps in the Azure portal to associate the user-assigned 
 
 ### Create an app setting for the managed identity client ID
 
-To use the user-assigned managed identity, create an AZURE_CLIENT_ID environment variable and set it equal to the client ID of the managed identity.  You can set this variable in the **Configuration** section of your app in the Azure portal. You can find the client ID in the **Overview** section of the managed identity resource in the Azure portal.
+To use the user-assigned managed identity, create an `AZURE_CLIENT_ID` environment variable and set it equal to the client ID of the managed identity. You can set this variable in the **Configuration** section of your app in the Azure portal. You can find the client ID in the **Overview** section of the managed identity resource in the Azure portal.
 
 Save your changes and restart the application if it doesn't do so automatically.
 

@@ -233,10 +233,10 @@ If a workload has a set of repeating queries, often it makes sense to capture an
 
 ### Very large database architectures
 
-Before the release of [Hyperscale](service-tier-hyperscale.md) service tier for single databases in Azure SQL Database, customers used to hit capacity limits for individual databases. While [Hyperscale elastic pools (preview)](./hyperscale-elastic-pool-overview.md) offer significantly higher storage limits, elastic pools and pooled databases in other service tiers, and instance databases in Azure SQL Managed Instances, might still be constrained by those storage capacity limits in the non-Hyperscale service tiers. The following two sections discuss two options for solving problems with very large databases in Azure SQL Database and Azure SQL Managed Instance when you cannot use the Hyperscale service tier.
+Before the release of [Hyperscale](service-tier-hyperscale.md) service tier for single databases in Azure SQL Database, customers could run into capacity limits for individual databases. While [Hyperscale elastic pools (preview)](./hyperscale-elastic-pool-overview.md) offer significantly higher storage limits, elastic pools and pooled databases in other service tiers, and instance databases in Azure SQL Managed Instances, might still be constrained by those storage capacity limits in the non-Hyperscale service tiers. The following two sections discuss two options for solving problems with very large databases in Azure SQL Database and Azure SQL Managed Instance when you cannot use the Hyperscale service tier.
 
 > [!NOTE]
-> Hyperscale elastic pools are in preview for Azure SQL Database. It is not available for Azure SQL Managed Instance, SQL Server on-premises, SQL Server on Azure VMs, or Azure Synapse Analytics (dedicated SQL pools (formerly SQL DW)).
+> Hyperscale elastic pools are in preview for Azure SQL Database. Elastic pools are not available for Azure SQL Managed Instance, SQL Server instances on-premises, SQL Server on Azure VMs, or Azure Synapse Analytics.
 
 ### Cross-database sharding
 

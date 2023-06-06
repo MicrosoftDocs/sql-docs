@@ -35,7 +35,7 @@ Azure SQL Database supports only [database-scoped sessions](/azure/azure-sql/dat
 |dropped_event_count|**int**|The number of events that were dropped when the buffers were full. This value is **0** if `buffer_policy_desc` is "Drop full buffer" or "Do not drop events". Is not nullable.|  
 |dropped_buffer_count|**int**|The number of buffers that were dropped when the buffers were full. This value is **0** if `buffer_policy_desc` is set to "Drop event" or "Do not drop events". Is not nullable.|  
 |blocked_event_fire_time|**int**|The length of time that event firings were blocked when buffers were full. This value is **0** if `buffer_policy_desc` is "Drop full buffer" or "Drop event". Is not nullable.|  
-|create_time|**datetime**|The time that the session was created. Is not nullable.|  
+|create_time|**datetime**|The time that the session was started. Is not nullable.|  
 |largest_event_dropped_size|**int**|The size of the largest event that did not fit into the session buffer. Is not nullable.|  
 |session_source|**nvarchar(256)**| The *database_name* that is the scope of the session. |  
 |buffer_processed_count|**bigint**|The total number of buffers processed by the session and accumulates from start of session. Is not nullable.|

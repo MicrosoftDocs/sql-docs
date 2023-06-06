@@ -45,7 +45,7 @@ Create a user in Azure SQL Database. The user should correspond to the Azure acc
     AZURE_SQL_AUTHENTICATIONTYPE=azure-active-directory-default
     ```
 
-2. Existing application code that connects to Azure SQL Database using the [JavaScript SQL Driver - tedious](/sql/connect/node-js/node-js-driver-for-sql-server) continues to work with passwordless connections with minor changes. 
+2. Existing application code that connects to Azure SQL Database using the [Node.js SQL Driver - tedious](/sql/connect/node-js/node-js-driver-for-sql-server) continues to work with passwordless connections with minor changes. 
 
     ```JavaScript
     import sql from 'mssql';

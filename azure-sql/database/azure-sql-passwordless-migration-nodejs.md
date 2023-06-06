@@ -9,7 +9,7 @@ ms.subservice: security
 monikerRange: "= azuresql || = azuresql-db"
 ms.topic: how-to
 ms.custom: passwordless-js, devx-track-azurecli, devx-track-azurepowershell
-ms.devlang: Node.js
+ms.devlang: nodejs
 ---
 
 # Migrate a Node.js application to use passwordless connections with Azure SQL Database
@@ -47,14 +47,16 @@ Create a user in Azure SQL Database. The user should correspond to the Azure acc
 
 2. Existing application code that connects to Azure SQL Database using the [JavaScript SQL Driver - tedious](/sql/connect/node-js/node-js-driver-for-sql-server) continues to work with passwordless connections with minor changes. 
 
-    ```JavaScript
+    ```Node.js
     import sql from 'mssql';
 
+    // Environment settings - no user or password
     const server = process.env.AZURE_SQL_SERVER;
     const database = process.env.AZURE_SQL_DATABASE;
     const port = parseInt(process.env.AZURE_SQL_PORT);
     const type = process.env.AZURE_SQL_AUTHENTICATIONTYPE;
 
+    // Passwordless configuration
     const config = {
         server,
         port,
@@ -67,6 +69,7 @@ Create a user in Azure SQL Database. The user should correspond to the Azure acc
         }
     };
 
+    // Existing applicaton code
     export default class Database {
         config = {};
         poolconnection = null;

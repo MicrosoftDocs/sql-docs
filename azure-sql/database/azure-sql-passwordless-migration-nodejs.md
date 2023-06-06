@@ -177,29 +177,22 @@ To use the user-assigned managed identity, create an `AZURE_CLIENT_ID` environme
 
 Save your changes and restart the application if it doesn't do so automatically.
 
-> [!NOTE]
-> The example connection code shown in this migration guide uses the [DefaultAzureCredential](/javascript/api/@azure/identity/defaultazurecredential) class when deployed. Specifically, it uses the `DefaultAzureCredential` without passing the user-assigned managed identity client ID to the constructor. In this scenario, the fallback is to check for the `AZURE_CLIENT_ID` environment variable. If the `AZURE_CLIENT_ID` environment variable doesn't exist, a system-assigned managed identity will be used if configured.
->
-> If you [pass the managed identity client ID in the `DefaultAzureCredential` constructor](https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/identity/identity/samples/AzureIdentityExamples.md#authenticating-a-user-account-interactively-in-the-browser), the connection code can still be used locally and deployed because the authentication process falls back to interactive authentication in the local scenario. For more information, see the [Azure Identity client library for JavaScript](/javascript/api/@azure/identity/).
-> 
-> ```nodejs
-> /**
->   * The default credential will use the user-assigned managed identity with the specified client ID.
-> */
-> // Passwordless configuration
-> const config = {
->     server,
->     port,
->     database,
->     authentication: {
->         type                                   // <-----
->     },
->     options: {
->         encrypt: true, 
->         clientId: process.env.AZURE_CLIENT_ID  // <-----
->     }
-> };
-> ```
+The `azure-active-directory-default` authentication type uses a system-assigned managed identity. When setting the `options.clientId` property, a user-assigned managed identity is used instead. In either case, the Azure Identity library's **DefaultAzureCredential** type is used to acquire a token.
+ 
+```nodejs
+const config = {
+  server,
+  port,
+  database,
+  authentication: {
+    type
+  },
+  options: {
+    encrypt: true, 
+    clientId: process.env.AZURE_CLIENT_ID
+  }
+};
+```
 
 ### Test the application
 

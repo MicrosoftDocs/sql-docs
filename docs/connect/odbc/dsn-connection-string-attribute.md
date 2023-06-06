@@ -4,7 +4,7 @@ description: How to connect using the ODBC driver. Find keywords for connection 
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-chojas
-ms.date: 08/08/2022
+ms.date: 06/15/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual

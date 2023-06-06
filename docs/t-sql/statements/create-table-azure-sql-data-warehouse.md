@@ -353,7 +353,8 @@ For more information, see these articles:
 ## <a id="LimitationsRestrictions"></a> Limitations and Restrictions
 
 - You can't define a DEFAULT constraint on a distribution column.  
-- Table Name cannot be greater than 100 characters.
+- Table Name cannot be greater than 128 characters.
+- Column Name cannot be greater than 128 characters.
   
 ### Partitions
 

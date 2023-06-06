@@ -76,6 +76,10 @@ Windows Server 2022 was released with VCRuntime version 14.28.29914.
 
 [Query Store for secondary replicas](../relational-databases/performance/query-store-for-secondary-replicas.md) is available for preview. It isn't available for use in production environments.
 
+### Known issues with Parameter Sensitive Plan optimization
+
+If you are using the [Parameter Sensitive Plan optimization](../relational-databases/performance/parameter-sensitive-plan-optimization.md) feature, please review the guidance and mitigation for known issues that  can results in exceptions during query store cleanup process. More information and details is available at [Access violation exception occurs in Query Store in SQL Server 2022 under certain conditions](../relational-databases/performance/parameter-sensitive-plan-optimization.md#access-violation-exception-occurs-in-query-store-in-sql-server-2022-under-certain-conditions).
+
 ### RPC calls fail with `Encrypt=Strict`
 
 An issue in the TDS 8.0 protocol implementation may cause RPC calls to fail if the `Encrypt` option is set to `Strict` in your connection string, for example when running the `sp_who` system stored procedure.

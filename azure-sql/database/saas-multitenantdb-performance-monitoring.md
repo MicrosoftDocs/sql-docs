@@ -93,7 +93,7 @@ To monitor the resource usage that results from the load being applied, open the
 1. Open the [Azure portal](https://portal.azure.com) and browse to the server `tenants1-mt-<USER>`.
 1. Scroll down and locate databases and select **tenants1**. This sharded multi-tenant database contains all the tenants created so far.
 
-:::image type="content" source="./media/saas-multitenantdb-performance-monitoring/multitenantdb.png" alt-text="Database chart.":::
+:::image type="content" source="./media/saas-multitenantdb-performance-monitoring/multitenantdb.png" alt-text="A screenshot of the Azure portal showing the database monitoring chart.":::
 
 Observe the **DTU** chart.
 

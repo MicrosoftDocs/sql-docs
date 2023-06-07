@@ -44,7 +44,7 @@ Create a user in Azure SQL Database. The user should correspond to the Azure acc
     AZURE_SQL_PORT=1433
     ```
 
-2. Existing application code that connects to Azure SQL Database using the [Node.js SQL Driver - tedious](/sql/connect/node-js/node-js-driver-for-sql-server) continues to work with passwordless connections with minor changes. To use a **user-assigned** identity, pass the `authentication.type` and `authentication.clientId` properties. 
+2. Existing application code that connects to Azure SQL Database using the [Node.js SQL Driver - tedious](/sql/connect/node-js/node-js-driver-for-sql-server) continues to work with passwordless connections with minor changes. To use a **user-assigned** managed identity, pass the `authentication.type` and `options.clientId` properties. 
 
     ```nodejs
     import sql from 'mssql';
@@ -114,7 +114,7 @@ Create a user in Azure SQL Database. The user should correspond to the Azure acc
     }
     
     const database = new Database(config);
-    const result = await database.executeQuery(`select * from mytable where id = 10`)
+    const result = await database.executeQuery(`select * from mytable where id = 10`);
     ```
 
     The `AZURE_CLIENT_ID` environment variable is created later in this tutorial.
@@ -179,7 +179,7 @@ To use the **user-assigned** managed identity, create an `AZURE_CLIENT_ID` envir
 
 Save your changes and restart the application if it doesn't do so automatically.
 
-If you need to use a **system-assigned** identity, pass the `authentication.type` property only (remove the `authentication.clientId` property). 
+If you need to use a **system-assigned** identity, pass the `authentication.type` property only (remove the `options.clientId` property). 
  
 ```nodejs
 const config = {

@@ -42,7 +42,6 @@ Create a user in Azure SQL Database. The user should correspond to the Azure acc
     AZURE_SQL_SERVER=<YOURSERVERNAME>.database.windows.net
     AZURE_SQL_DATABASE=<YOURDATABASENAME>
     AZURE_SQL_PORT=1433
-    AZURE_CLIENT_ID=<YOURCLIENTID>
     ```
 
 2. Existing application code that connects to Azure SQL Database using the [Node.js SQL Driver - tedious](/sql/connect/node-js/node-js-driver-for-sql-server) continues to work with passwordless connections with minor changes. To use a **user-assigned** identity, pass the `authentication.type` and `authentication.clientId` properties. 
@@ -117,6 +116,8 @@ Create a user in Azure SQL Database. The user should correspond to the Azure acc
     const result = await database.executeQuery(`select * from mytable where id = 10`)
     ```
 
+    The `AZURE_CLIENT_ID` environment variable is created later in this tutorial.
+
 ### Test the app
 
 Run your app locally and verify that the connections to Azure SQL Database are working as expected. Keep in mind that it may take several minutes for changes to Azure users and roles to propagate through your Azure environment. Your application is now configured to run locally without developers having to manage secrets in the application itself.
@@ -173,7 +174,7 @@ Complete the following steps in the Azure portal to associate the user-assigned 
 
 ### Create an app setting for the managed identity client ID
 
-To use the **user-assigned** managed identity, create an `AZURE_CLIENT_ID` environment variable and set it equal to the client ID of the managed identity. You can set this variable in the **Configuration** section of your app in the Azure portal. You can find the client ID in the **Overview** section of the managed identity resource in the Azure portal.
+To use the **user-assigned** managed identity, create an `AZURE_CLIENT_ID` environment variable and set it equal to the client ID of the managed identity. You can set this variable in the **Configuration** section of your app in the Azure portal. You can find the client ID in the **Overview** section of the managed identity resource in the Azure portal. 
 
 Save your changes and restart the application if it doesn't do so automatically.
 

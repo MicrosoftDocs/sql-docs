@@ -63,11 +63,10 @@ Create a user in Azure SQL Database. The user should correspond to the Azure acc
         database,
         authentication: {
             type: 'azure-active-directory-default',
-            clientId: process.env.AZURE_CLIENT_ID  // <----- user-assigned managed identity
         },
         options: {
-            encrypt: true
-        }
+            encrypt: true,
+            clientId: process.env.AZURE_CLIENT_ID  // <----- user-assigned managed identity        }
     };
 
     // Existing applicaton code

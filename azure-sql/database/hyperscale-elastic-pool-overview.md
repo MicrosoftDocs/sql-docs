@@ -13,9 +13,11 @@ ms.custom:
 # Hyperscale elastic pools overview in Azure SQL Database
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-An Azure SQL Database [elastic pool](./elastic-pool-overview.md) enables software as a service (SaaS) developers to optimize the price performance ratio for a group of databases, within a prescribed budget, while delivering performance elasticity for each database. Azure SQL Database Hyperscale elastic pools ("Hyperscale elastic pools") introduces a shared resource model for Hyperscale databases. 
+This article provides an overview of Hyperscale elastic pools in Azure SQL Database. 
 
-This article provides an overview of Hyperscale elastic pools in Azure SQL Database. For examples to create, scale, or move databases into a Hyperscale elastic pool by using the Azure CLI or PowerShell, review [Working with Hyperscale elastic pools using command-line tools](./hyperscale-elastic-pool-command-line.md)
+An Azure SQL Database [elastic pool](./elastic-pool-overview.md) enables software as a service (SaaS) developers to optimize the price performance ratio for a group of databases within a prescribed budget, while delivering performance elasticity for each database. Azure SQL Database Hyperscale elastic pools introduces a shared resource model for Hyperscale databases. 
+
+For examples to create, scale, or move databases into a Hyperscale elastic pool by using the Azure CLI or PowerShell, review [Working with Hyperscale elastic pools using command-line tools](./hyperscale-elastic-pool-command-line.md)
 
 > [!NOTE]
 > [Elastic pools for Hyperscale](./hyperscale-elastic-pool-overview.md) are currently in preview.

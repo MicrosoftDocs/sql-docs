@@ -88,7 +88,7 @@ Azure SQL Database offers the following deployment options:
   - An [*elastic pool*](database/elastic-pool-overview.md), which is a collection of databases with a shared set of resources managed via a [logical server](database/logical-servers.md). Single databases can be moved into and out of an elastic pool. This option is optimized for modern application development of new cloud-born applications using the multi-tenant SaaS application pattern. Elastic pools provide a cost-effective solution for managing the performance of multiple databases that have variable usage patterns.
 
 > [!NOTE]
-> [Elastic pools for Hyperscale](database/hyperscale-elastic-pool-overview.md) is currently in preview.
+> [Elastic pools for Hyperscale](database/hyperscale-elastic-pool-overview.md) are currently in preview.
 
 ### Azure SQL Managed Instance
 

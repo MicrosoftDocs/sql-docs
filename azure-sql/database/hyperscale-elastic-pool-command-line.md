@@ -17,7 +17,7 @@ In this article, learn to create, scale, and move databases into a [Hyperscale e
 
 
 > [!NOTE]
-> [Elastic pools for Hyperscale](./hyperscale-elastic-pool-overview.md) is currently in preview.
+> [Elastic pools for Hyperscale](./hyperscale-elastic-pool-overview.md) are currently in preview.
 
 ## Prerequisites
 

@@ -21,7 +21,7 @@ Azure SQL Database lets you easily purchase a fully managed platform as a servic
 - [Virtual core (vCore)-based purchasing model](service-tiers-sql-database-vcore.md) (recommended). This purchasing model provides a choice between a provisioned compute tier and a serverless compute tier. With the provisioned compute tier, you choose the exact amount of compute resources that are always provisioned for your workload. With the serverless compute tier, you specify the autoscaling of the compute resources over a configurable compute range. The serverless compute tier automatically pauses databases during inactive periods when only storage is billed and automatically resumes databases when activity returns. The vCore unit price per unit of time is lower in the provisioned compute tier than it is in the serverless compute tier. The [Hyperscale service tier](service-tier-hyperscale.md) is available for single databases and elastic pools that are using the [vCore-based purchasing model](service-tiers-vcore.md).
 
 > [!NOTE]
-> [Elastic pools for Hyperscale](./hyperscale-elastic-pool-overview.md) is currently in preview. 
+> [Elastic pools for Hyperscale](./hyperscale-elastic-pool-overview.md) are currently in preview.
  
 - [Database transaction unit (DTU)-based purchasing model](service-tiers-dtu.md). This purchasing model provides bundled compute and storage packages balanced for common workloads.
 
@@ -32,7 +32,7 @@ There are two purchasing models:
 - [vCore-based purchasing model](service-tiers-vcore.md) is available for both [Azure SQL Database](sql-database-paas-overview.md) and [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md). The [Hyperscale service tier](service-tier-hyperscale.md) is available for single databases and elastic pools that are using the [vCore-based purchasing model](service-tiers-vcore.md).
 
 > [!NOTE]
-> [Elastic pools for Hyperscale](./hyperscale-elastic-pool-overview.md) is currently in preview. 
+> [Elastic pools for Hyperscale](./hyperscale-elastic-pool-overview.md) are currently in preview.
  
 - [DTU-based purchasing model](service-tiers-dtu.md) is available for [Azure SQL Database](single-database-manage.md).
 
@@ -54,7 +54,7 @@ A virtual core (vCore) represents a logical CPU and offers you the option to cho
 In the vCore-based purchasing model for SQL Database, you can choose between the General Purpose, Business Critical, and Hyperscale service tiers. Review [service tiers](service-tiers-sql-database-vcore.md#service-tiers) to learn more.
 
 > [!NOTE]
-> [Elastic pools for Hyperscale](./hyperscale-elastic-pool-overview.md) is currently in preview.
+> [Elastic pools for Hyperscale](./hyperscale-elastic-pool-overview.md) are currently in preview.
 
 In the vCore-based purchasing model, your costs depend on the choice and usage of:
 

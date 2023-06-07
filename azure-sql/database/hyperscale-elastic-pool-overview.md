@@ -18,7 +18,7 @@ An Azure SQL Database [elastic pool](./elastic-pool-overview.md) enables softwar
 This article provides an overview of Hyperscale elastic pools in Azure SQL Database. For examples to create, scale, or move databases into a Hyperscale elastic pool by using the Azure CLI or PowerShell, review [Working with Hyperscale elastic pools using command-line tools](./hyperscale-elastic-pool-command-line.md)
 
 > [!NOTE]
-> [Elastic pools for Hyperscale](./hyperscale-elastic-pool-overview.md) is currently in preview.
+> [Elastic pools for Hyperscale](./hyperscale-elastic-pool-overview.md) are currently in preview.
 
 ## Overview
 

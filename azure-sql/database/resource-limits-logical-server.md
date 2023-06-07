@@ -207,7 +207,7 @@ When encountering a log rate limit that is hampering desired scalability, consid
 - Scale up to a higher service level in order to get the maximum log rate of a service tier, or switch to a different service tier. The [Hyperscale](service-tier-hyperscale.md) service tier provides 100 MB/s log rate per database and 125 MB/s per elastic pool, regardless of chosen service level.
 
     > [!NOTE]
-    > [Elastic pools for Hyperscale](./hyperscale-elastic-pool-overview.md) is currently in preview.
+    > [Elastic pools for Hyperscale](./hyperscale-elastic-pool-overview.md) are currently in preview.
 
 - If data being loaded is transient, such as staging data in an ETL process, it can be loaded into `tempdb` (which is minimally logged).
 - For analytic scenarios, load into a clustered [columnstore](/sql/relational-databases/indexes/columnstore-indexes-overview) table, or a table with indexes that use [data compression](/sql/relational-databases/data-compression/data-compression). This reduces the required log rate. This technique does increase CPU utilization and is only applicable to data sets that benefit from clustered columnstore indexes or data compression.

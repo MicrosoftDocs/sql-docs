@@ -75,7 +75,7 @@ You can define the amount of resources assigned.
 - With elastic pools, you can assign resources that are shared by all databases in the pool. You can create a new database, or move the existing single databases into a resource pool to maximize the use of resources and save money. This option also gives you the ability to dynamically [scale elastic pool resources](elastic-pool-scale.md) up and down.
 
 > [!NOTE]
-> [Elastic pools for Hyperscale](./hyperscale-elastic-pool-overview.md) is currently in preview. 
+> [Elastic pools for Hyperscale](./hyperscale-elastic-pool-overview.md) are currently in preview.
 
 You can build your first app on a small, single database at a low cost per month in the [General Purpose](service-tier-general-purpose.md) service tier. You can then change its service tier manually or programmatically at any time to the [Business Critical](service-tier-business-critical.md) or [Hyperscale](service-tier-hyperscale.md) service tier, to meet the needs of your solution. You can adjust performance without downtime to your app or to your customers. Dynamic scaling enables your database to transparently respond to rapidly changing resource requirements. You pay for only the resources that you need when you need them.
 

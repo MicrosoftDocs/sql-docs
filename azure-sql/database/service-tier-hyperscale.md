@@ -52,7 +52,7 @@ For more information about the compute sizes for the Hyperscale service tier, se
 The Hyperscale service tier is intended for all customers who require higher performance and availability, fast backup and restore, and/or fast storage and compute scalability. This includes customers who are moving to the cloud to modernize their applications as well as customers who are already using other service tiers in Azure SQL Database. The Hyperscale service tier supports a broad range of database workloads, from pure OLTP to pure analytics. It is optimized for OLTP and hybrid transaction and analytical processing (HTAP) workloads.
 
 > [!NOTE]
-> [Elastic pools for Hyperscale](./hyperscale-elastic-pool-overview.md) is currently in preview.
+> [Elastic pools for Hyperscale](./hyperscale-elastic-pool-overview.md) are currently in preview.
 
 ## Hyperscale pricing model
 
@@ -101,7 +101,7 @@ The vCore-based service tiers are differentiated based on database availability 
 |**Discount models**| [Reserved instances](reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions|[Reserved instances](reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions  | [Reserved instances](reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions|
 
 
-<sup>1</sup> [Elastic pools for Hyperscale](./hyperscale-elastic-pool-overview.md) is currently in preview.
+<sup>1</sup> [Elastic pools for Hyperscale](./hyperscale-elastic-pool-overview.md) are currently in preview.
 <sup>2</sup> Short-term backup retention for 1-35 days for Hyperscale databases is now in preview.   
 <sup>3</sup> Long-term retention for Hyperscale databases is now in preview.   
 <sup>4</sup> 10.2 GB/vCore is available with premium-series memory optimized hardware (preview).

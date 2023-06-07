@@ -44,7 +44,7 @@ Create a user in Azure SQL Database. The user should correspond to the Azure acc
     AZURE_SQL_PORT=1433
     ```
 
-2. Existing application code that connects to Azure SQL Database using the [Node.js SQL Driver - tedious](/sql/connect/node-js/node-js-driver-for-sql-server) continues to work with passwordless connections with minor changes. To use a **user-assigned** identity, pass the `authentication.type` and `authentication.clientId` properties. 
+2. Existing application code that connects to Azure SQL Database using the [Node.js SQL Driver - tedious](/sql/connect/node-js/node-js-driver-for-sql-server) continues to work with passwordless connections with minor changes. To use a **user-assigned** managed identity, pass the `authentication.type` and `options.clientId` properties. 
 
     ```nodejs
     import sql from 'mssql';

@@ -185,7 +185,7 @@ const config = {
   port,
   database,
   authentication: {
-    type
+    type: 'azure-active-directory-default'
   },
   options: {
     encrypt: true, 

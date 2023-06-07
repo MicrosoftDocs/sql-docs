@@ -62,7 +62,7 @@ Create a user in Azure SQL Database. The user should correspond to the Azure acc
         port,
         database,
         authentication: {
-            type                 // <-----
+            type                 // <----- user-assigned managed identity
         },
         options: {
             encrypt: true
@@ -173,11 +173,11 @@ Complete the following steps in the Azure portal to associate the user-assigned 
 
 ### Create an app setting for the managed identity client ID
 
-To use the user-assigned managed identity, create an `AZURE_CLIENT_ID` environment variable and set it equal to the client ID of the managed identity. You can set this variable in the **Configuration** section of your app in the Azure portal. You can find the client ID in the **Overview** section of the managed identity resource in the Azure portal.
+To use the **user-assigned** managed identity, create an `AZURE_CLIENT_ID` environment variable and set it equal to the client ID of the managed identity. You can set this variable in the **Configuration** section of your app in the Azure portal. You can find the client ID in the **Overview** section of the managed identity resource in the Azure portal.
 
 Save your changes and restart the application if it doesn't do so automatically.
 
-The `azure-active-directory-default` authentication type uses a system-assigned managed identity. When setting the `options.clientId` property, a user-assigned managed identity is used instead. In either case, the Azure Identity library's **DefaultAzureCredential** type is used to acquire a token.
+The `azure-active-directory-default` authentication type uses a user-assigned managed identity. When setting the `options.clientId` property, a **system-assigned** managed identity is used instead. In either case, the Azure Identity library's **DefaultAzureCredential** type is used to acquire a token.
  
 ```nodejs
 const config = {
@@ -189,7 +189,7 @@ const config = {
   },
   options: {
     encrypt: true, 
-    clientId: process.env.AZURE_CLIENT_ID
+    clientId: process.env.AZURE_CLIENT_ID  // <----- system-assigned managed identity
   }
 };
 ```

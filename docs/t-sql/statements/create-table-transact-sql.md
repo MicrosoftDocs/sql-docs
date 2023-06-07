@@ -4,7 +4,7 @@ description: CREATE TABLE (Transact-SQL)
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/12/2023
+ms.date: 06/06/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -879,7 +879,7 @@ For more information, see [Data Compression](../../relational-databases/data-com
 
 #### XML_COMPRESSION
 
-**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Preview.
+**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Specifies the XML compression option for any **xml** data type columns in the table. The options are as follows:
 
@@ -1684,7 +1684,7 @@ For additional data compression examples, see [Data Compression](../../relationa
 
 ### O. Create a table that uses XML compression
 
-**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Preview.
+**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 The following example creates a table that uses row compression.
 

@@ -178,7 +178,7 @@ To use the **user-assigned** managed identity, create an `AZURE_CLIENT_ID` envir
 
 Save your changes and restart the application if it doesn't do so automatically.
 
-If you need to use a **system-assigned** identity, pass the `authentication.type` property only (remove the `authentication.clientId` property). 
+If you need to use a **system-assigned** identity, pass the `authentication.type` property only (remove the `options.clientId` property). 
  
 ```nodejs
 const config = {

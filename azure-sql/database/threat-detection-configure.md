@@ -45,7 +45,7 @@ You can receive notifications about the detected threats via [email notification
     
 ## Set up Advanced Threat Protection using PowerShell
 
-For a script example, see [Configure auditing and Advanced Threat Protection using PowerShell](https://learn.microsoft.com/en-us/powershell/module/az.sql/get-azsqldatabaseadvancedthreatprotectionsetting?view=azps-10.0.0).
+For a script example, see [Configure auditing and Advanced Threat Protection using PowerShell](/powershell/module/az.sql/get-azsqldatabaseadvancedthreatprotectionsetting?view=azps-10.0.0&preserve-view=true).
 
 ## Next steps
 

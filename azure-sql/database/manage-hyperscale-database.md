@@ -23,7 +23,7 @@ Learn how to create a new Hyperscale database in [Quickstart: Create a Hyperscal
 
 You can migrate existing databases in Azure SQL Database to Hyperscale using the Azure portal, the Azure CLI, PowerShell, or Transact-SQL.
 
-The time required to move an existing database to Hyperscale consists of the time to copy data and the time to replay the changes made in the source database while copying data. The data copy time is proportional to data size. We recommend migrating to Hyperscale during a lower write activity period so that the time to replay accumulated changes to replay are shorter.
+The time required to move an existing database to Hyperscale consists of the time to copy data and the time to replay the changes made in the source database while copying data. The data copy time is proportional to data size. We recommend migrating to Hyperscale during a lower write activity period so that the time to replay accumulated changes is shorter.
 
 You'll only experience a short period of downtime, generally a few minutes, during the final cutover to the Hyperscale service tier.
 

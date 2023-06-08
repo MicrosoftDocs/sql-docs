@@ -46,7 +46,7 @@ Due to the sensitivity of data that is in a managed instance, the configuration 
 
 ### Enable public endpoint
 
-Run the following PowerShell commands. Replace **subscription-id** with your subscription ID. Also replace **rg-name** with the resource group for your managed instance, and replace **mi-name** with the name of your managed instance.
+Run the following PowerShell commands, replacing **subscription-id** with your subscription ID, **rg-name** with the resource group of your managed instance, and **mi-name** with the name of your managed instance.
 
 ```powershell
 Install-Module -Name Az
@@ -69,13 +69,33 @@ $mi = $mi | Set-AzSqlInstance -PublicDataEndpointEnabled $true -force
 
 ### Disable public endpoint
 
-To disable the public endpoint using PowerShell, you would execute the following command (and also don't forget to close the NSG for the inbound port 3342 if you've configured it):
+To disable the public endpoint using PowerShell, you would execute the following command.
+Rememeber to also close the inbound security rule for port 3342 in your network security group (NSG) if you've [configured it](#allow-public-endpoint-traffic-in-the-network-security-group).
 
 ```powershell
 Set-AzSqlInstance -PublicDataEndpointEnabled $false -force
 ```
 
-## Allow public endpoint traffic on the network security group
+## Enabling public endpoint for a managed instance using Azure CLI
+
+### Enable public endpoint
+
+Run the following command, replacing **subscription** with your subscription ID, **rg-name** with the resource group of your managed instance, and **mi-name** with the name of your managed instance.
+
+```azurecli
+az sql mi update --subscription {subscription-id} --resource-group {rg-name} --name {mi-name} --public-data-endpoint-enabled true
+```
+
+### Disable public endpoint
+
+To disable the public endpoint using Azure CLI, run the following command, replacing **subscription** with your subscription ID, **rg-name** with the resource group of your managed instance, and **mi-name** with the name of your managed instance.
+Remember to also close the inbound security rule for port 3342 in your network security group (NSG) if you've [configured it](#allow-public-endpoint-traffic-in-the-network-security-group).
+
+```azurecli
+az sql mi update --subscription {subscription-id} --resource-group {rg-name} --name {mi-name} --public-data-endpoint-enabled false
+```
+
+## Allow public endpoint traffic in the network security group
 
 1. If you have the configuration page of the managed instance still open, navigate to the **Overview** tab. Otherwise, go back to your **SQL managed instance** resource. Select the **Virtual network/subnet** link, which will take you to the Virtual network configuration page.
 

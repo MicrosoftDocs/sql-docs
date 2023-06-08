@@ -85,7 +85,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 /managed-instance/resource-limits.md
 --->
 
-The vCore-based service tiers are differentiated based on database availability and storage type, performance, and maximum storage size, as described in the following table:
+The vCore-based service tiers are differentiated based on database availability, storage type, performance, and maximum storage size. These differences are described in the following table:
 
 |ㅤ| **General Purpose** | **Business Critical** | **Hyperscale** |
 |:---:|:---:|:---:|:---:|
@@ -173,7 +173,7 @@ These are the current limitations of the Hyperscale service tier.  We're activel
 | Database integrity check | DBCC CHECKDB isn't currently supported for Hyperscale databases. DBCC CHECKTABLE ('TableName') WITH TABLOCK  and DBCC CHECKFILEGROUP WITH TABLOCK may be used as a workaround. See [Data Integrity in Azure SQL Database](https://azure.microsoft.com/blog/data-integrity-in-azure-sql-database/) for details on data integrity management in Azure SQL Database. |
 | Elastic Jobs | Using a Hyperscale database as the Job database isn't supported. However, elastic jobs can target Hyperscale databases in the same way as any other database in Azure SQL Database. |
 |Data Sync| Using a Hyperscale database as a Hub or Sync Metadata database isn't supported. However, a Hyperscale database can be a member database in a Data Sync topology. |
-| Hyperscale service tier premium-series hardware (preview) | Premium-series and memory optimized premium-series hardware does'nt currently support:<br/><br/>- Zone redundancy<BR/><BR/>- Serverless compute tier.| 
+| Hyperscale service tier premium-series hardware (preview) | Premium-series and memory optimized premium-series hardware doesn't currently support:<br/><br/>- Zone redundancy<BR/><BR/>- Serverless compute tier.| 
 
 ## Next steps
 

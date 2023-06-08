@@ -20,7 +20,7 @@ Once you have identified a performance issue that you're facing with Azure SQL D
 - Tune your application and apply some best practices that can improve performance.
 - Tune the database by changing indexes and queries to more efficiently work with data.
 
-This article assumes that you have already worked through the Azure SQL Database [database advisor recommendations](database-advisor-implement-performance-recommendations.md) and the Azure SQL Database [auto-tuning recommendations](automatic-tuning-overview.md), if applicable. It also assumes that you have reviewed the [overview of monitoring and tuning](monitor-tune-overview.md) and its related articles related to troubleshooting performance issues. Additionally, this article assumes that you do not have a performance issue related to CPU resource utilization, that can be resolved by increasing the compute size or service tier to provide more resources to your database.
+This article assumes that you have already worked through the Azure SQL Database [database advisor recommendations](database-advisor-implement-performance-recommendations.md) and the Azure SQL Database [auto-tuning recommendations](automatic-tuning-overview.md), if applicable. It also assumes that you have reviewed the [overview of monitoring and tuning](monitor-tune-overview.md) and its related articles related to troubleshooting performance issues. Additionally, this article assumes that you do not have a performance issue related to CPU resource utilization that can be resolved by increasing the compute size or service tier to provide more resources to your database.
 
 ## Tune your application
 
@@ -229,7 +229,7 @@ ORDER BY start_time DESC
 
 You can examine **sys.resource_stats** to determine whether the resource for a test uses more or fewer resources than another test. When you compare data, separate the timing of tests so that they are not in the same 5-minute window in the **sys.resource_stats** view. The goal of the exercise is to minimize the total amount of resources used, and not to minimize the peak resources. Generally, optimizing a piece of code for latency also reduces resource consumption. Make sure that the changes you make to an application are necessary, and that the changes don't negatively affect the customer experience for someone who might be using query hints in the application.
 
-If a workload has a set of repeating queries, often it makes sense to capture and validate the optimality of your plan choices because it drives the minimum resource size unit required to host the database. After you validate it, occasionally reexamine the plans to help you make sure that they have'nt degraded. You can learn more about [query hints (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-query).
+If a workload has a set of repeating queries, often it makes sense to capture and validate the optimality of your plan choices because it drives the minimum resource size unit required to host the database. After you validate it, occasionally reexamine the plans to help you make sure that they haven't degraded. You can learn more about [query hints (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-query).
 
 ### Very large database architectures
 

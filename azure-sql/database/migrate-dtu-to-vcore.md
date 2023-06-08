@@ -36,7 +36,7 @@ The following approach uses this information to determine a vCore service object
 
 ### DTU to vCore mapping
 
-A T-SQL query below, when executed in the context of a DTU database to be migrated, returns a matching (possibly fractional) number of vCores in each hardware configuration in the vCore model. By rounding this number to the closest number of vCores available for [databases](resource-limits-vcore-single-databases.md) and [elastic pools](resource-limits-vcore-elastic-pools.md) in each hardware configuration in the vCore model, customers can choose the vCore service objective that is the closest match for their DTU database or elastic pool. 
+A T-SQL query below, when executed in the context of a DTU database to be migrated, returns a matching (possibly fractional) number of vCores in each hardware configuration in the vCore model. You can round off this number to the closest number of vCores available for [databases](resource-limits-vcore-single-databases.md) and [elastic pools](resource-limits-vcore-elastic-pools.md) in each hardware configuration in the vCore model, customers can choose the vCore service objective that is the closest match for their DTU database or elastic pool.
 
 Sample migration scenarios using this approach are described in the [Examples](#dtu-to-vcore-migration-examples) section.
 
@@ -144,7 +144,7 @@ The mapping query returns the following result (some columns not shown for brevi
 |----------------|----------------|----------------------|-----------|-----------------------|-----------|-----------------------|
 |42.00|4.86|42.000|5.05|
 
-We see that the DTU database has 42 logical CPUs (vCores), with 4.86 GB of memory per vCore. While there is not a vCore service objective with 42 cores, the **BC_Gen5_40** service objective is very close both in terms of CPU and memory capacity, and is a good match.
+We see that the DTU database has 42 logical CPUs (vCores), with 4.86 GB of memory per vCore. While there is not a vCore service objective with 42 cores, the **BC_Gen5_40** service objective is nearly equivalent in terms of CPU and memory capacity, and is a good match.
 
 **Migrating a Basic 200 eDTU elastic pool**
 

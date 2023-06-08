@@ -90,7 +90,7 @@ During preview, consider the following limitations:
 
 - Changing an existing non-Hyperscale elastic pool to the Hyperscale edition isn't supported. Individual databases need to be moved out of their respective existing pool before they can be added to the Hyperscale elastic pool.
 - Changing the edition of a Hyperscale elastic pool to a non-Hyperscale edition isn't supported.
-- In order to ["reverse migrate"](./manage-hyperscale-database.md#reverse-migrate-from-hyperscale) an eligible database, which is in a  Hyperscale elastic pool, it must first be removed from the Hyperscale elastic pool. The standalone Hyperscale database can then be "reverse migrated" to a General Purpose standalone database.
+- In order to [reverse migrate](./manage-hyperscale-database.md#reverse-migrate-from-hyperscale) an eligible database, which is in a  Hyperscale elastic pool, it must first be removed from the Hyperscale elastic pool. The standalone Hyperscale database can then be reverse migrated to a General Purpose standalone database.
 - Maintenance of databases in a pool is performed, and maintenance windows are configured, at the pool level. It isn't currently possible to configure a maintenance window for Hyperscale elastic pools. 
 - Zone redundancy isn't currently available for Hyperscale elastic pools. Attempting to add a zone-redundant Hyperscale database to a Hyperscale elastic pool results in an error. 
 - Named replicas aren't currently supported with Hyperscale elastic pools. Attempting to add a Hyperscale database with a named replica to a Hyperscale elastic pool results in an error.

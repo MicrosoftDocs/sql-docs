@@ -20,7 +20,7 @@ keywords:
 
 Azure SQL Database is a fully managed platform as a service (PaaS) database engine that handles most of the database management functions such as upgrading, patching, backups, and monitoring without user involvement. Azure SQL Database is always running on the latest stable version of the SQL Server database engine and patched OS with [99.99% availability](https://azure.microsoft.com/support/legal/sla/azure-sql-database). PaaS capabilities built into Azure SQL Database enable you to focus on the domain-specific database administration and optimization activities that are critical for your business.
 
-With Azure SQL Database, you can create a highly available and high-performance data storage layer for the applications and solutions in Azure. SQL Database can be the right choice for a variety of modern cloud applications because it enables you to process both relational data and [non-relational structures](../multi-model-features.md), such as graphs, JSON, spatial, and XML.
+With Azure SQL Database, you can create a highly available and high-performance data storage layer for the applications and solutions in Azure. SQL Database can be the right choice for a variety of modern cloud applications because it enables you to process both relational data and [nonrelational structures](../multi-model-features.md), such as graphs, JSON, spatial, and XML.
 
 Azure SQL Database is based on the latest stable version of the [Microsoft SQL Server database engine](/sql/sql-server/sql-server-technical-documentation?toc=/azure/sql-database/toc.json). You can use advanced query processing features, such as [high-performance in-memory technologies](../in-memory-oltp-overview.md) and [intelligent query processing](/sql/relational-databases/performance/intelligent-query-processing?toc=/azure/sql-database/toc.json). In fact, the newest capabilities of SQL Server are released first to Azure SQL Database, and then to SQL Server itself. You get the newest SQL Server capabilities with no overhead for patching or upgrading, tested across millions of databases. 
 
@@ -53,7 +53,7 @@ The [DTU-based purchasing model](service-tiers-dtu.md) offers two service tiers:
 The [vCore-based purchasing model](service-tiers-vcore.md) provides two different compute tiers for Azure SQL Database - the provisioned compute tier, and the serverless compute tier. The [DTU-based purchasing model](service-tiers-dtu.md) provides just the provisioned compute tier. 
 
 - **Provisioned compute tier**: provides a specific amount of compute resource that is continuously provisioned independent of workload activity, and bills for the amount of compute provisioned at a fixed price per hour. 
-- **[Serverless compute tier](serverless-tier-overview.md)**: auto-scales compute resources based on workload activity and bills for the amount of compute used, per second. The serverless compute tier is generally available in the General Purpose service tier, and is currently in preview in the Hyperscale service tier. 
+- **[Serverless compute tier](serverless-tier-overview.md)**: automatically scales compute resources based on workload activity and bills for the amount of compute used, per second. The serverless compute tier is generally available in the General Purpose service tier, and is currently in preview in the Hyperscale service tier. 
 
 
 ## Deployment models
@@ -109,7 +109,7 @@ Azure SQL Database provides advanced monitoring and troubleshooting features tha
 
 [Query Store](/sql/relational-databases/performance/best-practice-with-the-query-store), a built-in SQL Server monitoring feature, records the performance of your queries in real time, and enables you to identify the potential performance issues and the top resource consumers. [Automatic tuning and recommendations](automatic-tuning-overview.md) provide advice regarding the queries with the regressed performance and missing or duplicated indexes. Automatic tuning in SQL Database enables you to either manually apply the scripts that can fix the issues, or let SQL Database apply the fix. SQL Database can also test and verify that the fix provides some benefit, and retain or revert the change depending on the outcome. In addition to Query Store and automatic tuning capabilities, you can use standard [DMVs and XEvents](monitoring-with-dmvs.md) to monitor the workload performance.
 
-Azure provides [built-in performance monitoring](performance-guidance.md) and [alerting](alerts-insights-configure-portal.md) tools, combined with performance ratings, that enable you to monitor the status of thousands of databases. Using these tools, you can quickly assess the impact of scaling up or down, based on your current or projected performance needs. Additionally, SQL Database can [emit metrics and resource logs](metrics-diagnostic-telemetry-logging-streaming-export-configure.md) for easier monitoring. You can configure SQL Database to store resource usage, workers and sessions, and connectivity into one of these Azure resources:
+You can efficiently monitor the status of thousands of databases by using the [built-in performance monitoring](performance-guidance.md) and [alerting](alerts-insights-configure-portal.md) features of SQL Database. Using these tools, you can quickly assess the impact of scaling up or down, based on your current or projected performance needs. Additionally, SQL Database can [emit metrics and resource logs](metrics-diagnostic-telemetry-logging-streaming-export-configure.md) for easier monitoring. You can configure SQL Database to store resource usage, workers and sessions, and connectivity into one of these Azure resources:
 
 - **Azure Storage**: For archiving vast amounts of telemetry for a small price.
 - **Azure Event Hubs**: For integrating SQL Database telemetry with your custom monitoring solution or hot pipelines.
@@ -140,17 +140,17 @@ In addition, SQL Database provides built-in [business continuity and global scal
   All SQL Database deployment options support recovery to any point in time within the automatic backup retention period for any database.
 - [Active geo-replication](active-geo-replication-overview.md):
 
-  The single database and pooled databases options allow you to configure up to four readable secondary databases in either the same or globally distributed Azure datacenters. For example, if you have a SaaS application with a catalog database that has a high volume of concurrent read-only transactions, use active geo-replication to enable global read scale. This removes bottlenecks on the primary that are due to read workloads. For managed instances, use auto-failover groups.
+  The single database and pooled databases options allow you to configure up to four readable secondary databases in either the same or globally distributed Azure datacenters. For example, if you have a SaaS application with a catalog database that has a high volume of concurrent read-only transactions, use active geo-replication to enable global read scale and remove bottlenecks on the primary that are due to read workloads. For managed instances, use auto-failover groups.
 - [Auto-failover groups](auto-failover-group-sql-db.md):
 
-  All SQL Database deployment options allow you to use failover groups to enable high availability and load balancing at global scale. This includes transparent geo-replication and failover of large sets of databases, elastic pools, and managed instances. Failover groups enable the creation of globally distributed SaaS applications, with minimal administration overhead. This leaves all the complex monitoring, routing, and failover orchestration to SQL Database.
+  All SQL Database deployment options allow you to use failover groups to enable high availability and load balancing at global scale. Failover groups allow for transparent geo-replication and failover of large sets of databases, elastic pools, and managed instances. Failover groups enable the creation of globally distributed SaaS applications, with minimal administration overhead. This leaves all the complex monitoring, routing, and failover orchestration to SQL Database.
 - [Zone-redundant databases](high-availability-sla.md):
 
   SQL Database allows you to provision Premium or Business Critical databases or elastic pools across multiple availability zones. Because these databases and elastic pools have multiple redundant replicas for high availability, placing these replicas into multiple availability zones provides higher resilience. This includes the ability to recover automatically from the datacenter scale failures, without data loss.
 
 ## Built-in intelligence
 
-With SQL Database, you get built-in intelligence that helps you dramatically reduce the costs of running and managing databases, and that maximizes both performance and security of your application. Running millions of customer workloads around the clock, SQL Database collects and processes a massive amount of telemetry data, while also fully respecting customer privacy. Various algorithms continuously evaluate the telemetry data so that the service can learn and adapt with your application.
+With SQL Database, you get built-in intelligence that helps you dramatically reduce the costs of running and managing databases, and that maximizes both performance and security of your application. The SQL Database platform collects and processes a massive amount of telemetry data while fully respecting customer privacy. Various algorithms continuously evaluate the telemetry data so that the service can learn and adapt with your application.
 
 ### Automatic performance monitoring and tuning
 
@@ -214,7 +214,7 @@ SQL Database makes building and maintaining applications easier and more product
 |[The Azure portal](https://portal.azure.com/)|A web-based application for managing all Azure services.|
 |[Azure Data Studio](/sql/azure-data-studio/)|A cross-platform database tool that runs on Windows, macOS, and Linux.|
 |[SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms)|A free, downloadable client application for managing any SQL infrastructure, from SQL Server to SQL Database.|
-|[SQL Server Data Tools in Visual Studio](/sql/ssdt/download-sql-server-data-tools-ssdt)|A free, downloadable client application for developing SQL Server relational databases, databases in Azure SQL Database, Integration Services packages, Analysis Services data models, and Reporting Services reports.|
+|[SQL Server Data Tools in Visual Studio](/sql/ssdt/download-sql-server-data-tools-ssdt)|A development tool for SQL databases, Integration Services packages, Analysis Services data models, and Reporting Services reports.|
 |[Visual Studio Code](https://code.visualstudio.com/docs)|A free, downloadable, open-source code editor for Windows, macOS, and Linux. It supports extensions, including the [mssql extension](https://aka.ms/mssql-marketplace) for querying Microsoft SQL Server, Azure SQL Database, and Azure Synapse Analytics.|
 
 SQL Database supports building applications with Python, Java, Node.js, PHP, Ruby, and .NET on macOS, Linux, and Windows. SQL Database supports the same [connection libraries](connect-query-content-reference-guide.md#libraries) as SQL Server.

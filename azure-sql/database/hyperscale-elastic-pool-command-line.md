@@ -140,7 +140,7 @@ az sql db update --resource-group "my-example-rg" --server "my-example-sql-svr" 
 
 ### [PowerShell](#tab/azure-powershell)
 
-Use the the [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) cmdlet to move an existing database into an existing Hyperscale elastic pool. 
+Use the [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) cmdlet to move an existing database into an existing Hyperscale elastic pool.
 
 
 The following example moves database `my_existing_db` into existing Hyperscale elastic pool `my_hs_pool`: 
@@ -155,7 +155,7 @@ Set-AzSqlDatabase -ResourceGroupName "my-example-rg" -ServerName "my-example-sql
 
 Use the [2021-11-01-preview](/rest/api/sql/2021-11-01-preview/elastic-pools/update?tabs=HTTP#update-high-availability-replica-count-of-a-hyperscale-elastic-pool) REST API (or later) to work with secondary replicas for Hyperscale elastic pools. 
 
-The following example scales out  an existing Hyperscale elastic pool to use 4 secondary replicas:
+The following example scales out  an existing Hyperscale elastic pool to use four secondary replicas:
 
 ```rest
 PATCH https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/elasticPools/{elasticPoolName}?api-version=2021-11-01-preview

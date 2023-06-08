@@ -58,11 +58,11 @@ The following figure shows an example of a database that spends much of its time
 
    ![Chart that shows a single database suitable for a pool.](./media/elastic-pool-overview/one-database.png)
 
-The chart illustrates DTU usage over one hour from 12:00 to 1:00 where each data point has one-minute granularity. At 12:10, DB1 peaks up to 90 DTUs, but its overall average usage is less than five DTUs. An S3 compute size is required to run this workload in a single database, but this size leaves most of the resources unused during periods of low activity.
+The chart illustrates DTU usage over one hour from 12:00 to 1:00 where each data point has one-minute granularity. At 12:10, DB1 peaks up to 90 DTUs, but its overall average usage is fewer than five DTUs. An S3 compute size is required to run this workload in a single database, but this size leaves most of the resources unused during periods of low activity.
 
 A pool allows these unused DTUs to be shared across multiple databases. A pool reduces the DTUs needed and the overall cost.
 
-Building on the previous example, suppose there are other databases with similar utilization patterns as DB1. In the next two figures, the utilization of four databases and 20 databases are layered onto the same graph to illustrate the nonoverlapping nature of their utilization over time by using the DTU-based purchasing model:
+Building on the previous example, suppose there are other databases with similar utilization patterns as DB1. In the next two figures, the utilization of 4 databases and 20 databases are layered onto the same graph to illustrate the nonoverlapping nature of their utilization over time by using the DTU-based purchasing model:
 
    ![Chart that shows four databases with a utilization pattern suitable for a pool.](./media/elastic-pool-overview/four-databases.png)
 

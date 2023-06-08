@@ -17715,19 +17715,21 @@ items:
           items:
           - name: Overview
             href: t-sql/language-elements/string-operators-transact-sql.md
-          - name: "+ (String Concatenation)"
+          - name: "= (String comparison or assignment)"
+            href: t-sql/language-elements/string-comparison-assignment.md
+          - name: "+ (String concatenation)"
             href: t-sql/language-elements/string-concatenation-transact-sql.md
-          - name: "+= (String Concatenation Assignment)"
+          - name: "+= (String concatenation assignment)"
             href: t-sql/language-elements/string-concatenation-equal-transact-sql.md
-          - name: "% (Wildcard - Character(s) to Match)"
+          - name: "% (Wildcard - character(s) to match)"
             href: t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md
-          - name: "[ ] (Wildcard - Character(s) to Match)"
+          - name: "[ ] (Wildcard - character(s) to match)"
             href: t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md
-          - name: "[^] (Wildcard - Character(s) Not to Match)"
+          - name: "[^] (Wildcard - character(s) not to match)"
             href: t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md
-          - name: "_ (Wildcard - Match One Character)"
+          - name: "_ (Wildcard - match one character)"
             href: t-sql/language-elements/wildcard-match-one-character-transact-sql.md
-        - name: Operator Precedence
+        - name: Operator precedence
           href: t-sql/language-elements/operator-precedence-transact-sql.md
       - name: Transactions
         href: t-sql/language-elements/transactions-transact-sql.md

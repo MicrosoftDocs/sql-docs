@@ -13,10 +13,14 @@ ms.custom:
 # Hyperscale elastic pools overview in Azure SQL Database
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-This article provides an overview of Hyperscale elastic pools in Azure SQL Database. For examples to create, scale, or move databases into a Hyperscale elastic pool by using the Azure CLI or PowerShell, review [Working with Hyperscale elastic pools using command-line tools](./hyperscale-elastic-pool-command-line.md)
+This article provides an overview of Hyperscale elastic pools in Azure SQL Database. 
+
+An Azure SQL Database [elastic pool](./elastic-pool-overview.md) enables software as a service (SaaS) developers to optimize the price performance ratio for a group of databases within a prescribed budget, while delivering performance elasticity for each database. Azure SQL Database Hyperscale elastic pools introduces a shared resource model for Hyperscale databases. 
+
+For examples to create, scale, or move databases into a Hyperscale elastic pool by using the Azure CLI or PowerShell, review [Working with Hyperscale elastic pools using command-line tools](./hyperscale-elastic-pool-command-line.md)
 
 > [!NOTE]
-> Elastic pools for Hyperscale databases are currently in preview. 
+> [Elastic pools for Hyperscale](./hyperscale-elastic-pool-overview.md) are currently in preview.
 
 ## Overview
 
@@ -24,7 +28,6 @@ Deploy your Hyperscale database to an [elastic pool](elastic-pool-overview.md) t
 
 Scenarios to use an elastic pool with your Hyperscale databases: 
 
-- When the sum of allocated database storage exceeds the 4 TB limit of the other service tiers. 
 - When you need to scale the compute resources allocated to the elastic pool up or down in a predictable amount of time, independent of the amount of allocated storage. 
 - When you want to scale out the compute resources allocated to the elastic pool by adding one or more read-scale replicas. 
 - If you want to use high transaction log throughput for write-intensive workloads, even with lower compute resources. 
@@ -68,14 +71,13 @@ You can use the following client tools to manage your Hyperscale databases in an
 
 The following lists the supported limits for working with Hyperscale databases within elastic pools: 
 
-- Each Hyperscale elastic pool can have up to 25 databases. 
 - Supported hardware generation: Standard-series (Gen5) only. 
 - vCore maximum per pool: 80 vCores. 
 - Maximum supported data size per database: 100 TB.
 - Maximum supported total data size across DBs in the pool: 100 TB.
 - Maximum supported transaction log throughput per database: 100 MB.
 - Maximum supported total transaction log throughput across databases in the pool: 130 MB/second.
-
+- Each Hyperscale elastic pool can have up to 25 databases. 
 
 For greater detail, see the [Hyperscale elastic pool resource limits](resource-limits-vcore-elastic-pools.md#hyperscale---provisioned-compute---standard-series-gen5). 
 
@@ -88,18 +90,20 @@ During preview, consider the following limitations:
 
 - Changing an existing non-Hyperscale elastic pool to the Hyperscale edition isn't supported. Individual databases need to be moved out of their respective existing pool before they can be added to the Hyperscale elastic pool.
 - Changing the edition of a Hyperscale elastic pool to a non-Hyperscale edition isn't supported.
-- In order to [reverse migrate](./manage-hyperscale-database.md#reverse-migrate-from-hyperscale) an eligible database which is in a  Hyperscale elastic pool, it must first be removed from the Hyperscale pool. The standalone Hyperscale database can then be reverse migrated to a General Purpose standalone database.
+- In order to ["reverse migrate"](./manage-hyperscale-database.md#reverse-migrate-from-hyperscale) an eligible database, which is in a  Hyperscale elastic pool, it must first be removed from the Hyperscale elastic pool. The standalone Hyperscale database can then be "reverse migrated" to a General Purpose standalone database.
 - Maintenance of databases in a pool is performed, and maintenance windows are configured, at the pool level. It isn't currently possible to configure a maintenance window for Hyperscale elastic pools. 
 - Zone redundancy isn't currently available for Hyperscale elastic pools. Attempting to add a zone-redundant Hyperscale database to a Hyperscale elastic pool results in an error. 
 - Named replicas aren't currently supported with Hyperscale elastic pools. Attempting to add a Hyperscale database with a named replica to a Hyperscale elastic pool results in an error.
 
 ## Known issues
 
-- In rare cases, you may get the error `45122 - This Hyperscale database cannot be added into an elastic pool at this time. In case of any questions, please contact Microsoft support`, when trying to move, restore or copy a Hyperscale database into an elastic pool. This limitation is due to implementation-specific details. If this error is blocking you, raise a support incident and request help.
-- Using PowerShell or the Azure CLI to create a [geo-replica with Geo-Zone backup storage redundancy](./hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy) inside a Hyperscale pool will fail with the error `(UnsupportedBackupStorageRedundancyForEdition) The requested backup storage redundancy of GeoZone is not supported for edition.` To work around this issue, use the T-SQL [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current&preserve-view=true#add-secondary-on-server-partner_server_name) command to add the geo-secondary database.
-- Attempting to create a new Hyperscale elastic pool with the `-ZoneRedundant` parameter specified results in a vague `One or more errors occurred`. When you re-run the PowerShell or Azure CLI command with the respective `-Verbose` and `-Debug` parameters specified, you will see the actual error: `Provisioning of zone redundant database/pool is not supported for your current request`. At this time, creating Hyperscale elastic pools with zone redundancy specified is unsupported.
-- If you try to copy a Hyperscale database to a Hyperscale elastic pool on a server in another region, it will fail with an error `The server encountered an unexpected exception`. To work around this issue, please copy the Hyperscale database as a standalone database on the remote server, and then add the database (copy) into the elastic pool.
-- If you try to use the Azure portal to add an existing Hyperscale database which has Geo Zone specified as the backup storage redundancy level, into a Hyperscale elastic pool, you will receive an error `Changing the backup storage account type value for Hyperscale is not supported`. To work around this issue, please use the [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current&preserve-view=true#add-secondary-on-server-partner_server_name) command, or the equivalent [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase), or [az sql db update](/cli/azure/sql/db#az-sql-db-update) commands to add the database to the elastic pool.
+| Issue | Recommendation |
+|--|--|
+| In rare cases, you may get the error `45122 - This Hyperscale database cannot be added into an elastic pool at this time. In case of any questions, please contact Microsoft support`, when trying to move / restore / copy a Hyperscale database into an elastic pool. | This limitation is due to implementation-specific details. If this error is blocking you, raise a support incident and request help. |
+| If you use Azure PowerShell or the Azure CLI to create a [geo-replica with Geo-Zone backup storage redundancy](./hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy) inside a Hyperscale pool, the request fails with the error `(UnsupportedBackupStorageRedundancyForEdition) The requested backup storage redundancy of GeoZone is not supported for edition.` | To work around this issue, use the T-SQL [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current&preserve-view=true#add-secondary-on-server-partner_server_name) command to add the geo-secondary database. |
+| If you try to create a new Hyperscale elastic pool from PowerShell with the `-ZoneRedundant` parameter specified, you get a vague `One or more errors occurred`. If you run the PowerShell command with the respective `-Verbose` and `-Debug` parameters specified, you get the actual error: `Provisioning of zone redundant database/pool is not supported for your current request`. | At this time, creating Hyperscale elastic pools with zone redundancy specified is unsupported. |
+| If you try to copy a Hyperscale database to a Hyperscale elastic pool on a server in another region, the request fails with an error `The server encountered an unexpected exception`. | To work around this issue, copy the Hyperscale database as a standalone database on the remote server, and then add the database (copy) into the elastic pool. |
+| If you try to use the Azure portal to add an existing Hyperscale database, which has Geo Zone specified as the backup storage redundancy level, into a Hyperscale elastic pool, you get an error `Changing the backup storage account type value for Hyperscale is not supported`. | To work around this issue, use the [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current&preserve-view=true#add-secondary-on-server-partner_server_name) command, or the equivalent [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase), or [az sql db update](/cli/azure/sql/db#az-sql-db-update) commands to add the database to the elastic pool. |
 
 ## Next steps
 

@@ -26,7 +26,7 @@ Public Sub SetDatabaseConnection(Server as String, _
 ```  
   
 ```csharp  
-public void BackupEncryptionKey(string Server,   
+public void SetDatabaseConnection(string Server,   
     string DatabaseName, Int32 CredentialsType,   
     string UserName, string Password, out Int32 HRESULT);  
 ```  

@@ -54,7 +54,7 @@ To debug your extension:
 After writing your extension, you need to create a VSIX package that installs in Azure Data Studio. You can use [vscode-vsce](https://github.com/Microsoft/vscode-vsce) (Visual Studio Code Extensions) to create the VSIX package.
 
 ```console
-npm install -g vsce
+npm install -g @vscode/vsce
 cd myExtensionName
 vsce package
 # The myExtensionName.vsix file has now been generated

@@ -202,7 +202,7 @@ A USE HINT query hint takes precedence over a [database scoped configuration](..
 
 ### Percentile and persistence mode memory grant feedback
 
-**Applies to:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 This feature was introduced in [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)], however this performance enhancement is available for queries that operate in the database compatibility level 140 (introduced in SQL Server 2017) or higher, or the `QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n` hint of 140 and higher, and when Query Store is enabled for the database and is in a "read write" state.
 
@@ -259,7 +259,7 @@ Disabling memory grant feedback persistence will also remove existing collected 
 
 The default setting for `MEMORY_GRANT_FEEDBACK_PERSISTENCE` is `ON`.
 
-#### Considerations for memory grant feedback
+### Considerations for memory grant feedback
 
 You can view your current settings by querying [sys.database_scoped_configurations](../system-catalog-views/sys-database-scoped-configurations-transact-sql.md).
 

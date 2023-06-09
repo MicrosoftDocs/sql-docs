@@ -8393,21 +8393,21 @@ items:
         href: tools/configuration-manager/viewing-the-windows-application-log.md
   - name: SQLCMD
     items:
-    - name: sqlcmd Overview
+    - name: sqlcmd overview
       href: tools/sqlcmd/sqlcmd-utility.md
-    - name: go-sqlcmd Overview
-      href: tools/sqlcmd/go-sqlcmd-utility.md
-    - name: Start the Utility
+    - name: Authenticate sqlcmd with Azure AD
+      href: tools/sqlcmd/sqlcmd-authentication.md
+    - name: Start the utility
       href: tools/sqlcmd/sqlcmd-start-utility.md
-    - name: Use the Utility
+    - name: Use the utility
       href: tools/sqlcmd/sqlcmd-use-utility.md
     - name: Connect to the Database Engine
       href: tools/sqlcmd/sqlcmd-connect-database-engine.md
-    - name: Run T-SQL Script Files
+    - name: Run T-SQL script files
       href: tools/sqlcmd/sqlcmd-run-transact-sql-script-files.md
-    - name: Use with Scripting Variables
+    - name: Use with scripting variables
       href: tools/sqlcmd/sqlcmd-use-scripting-variables.md
-    - name: Edit SQLCMD Scripts with Query Editor
+    - name: Edit SQLCMD scripts with Query Editor
       href: tools/sqlcmd/edit-sqlcmd-scripts-query-editor.md
   - name: SSB Diagnose
     href: tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md

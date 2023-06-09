@@ -156,7 +156,7 @@ az storage directory delete --name <directory_name> --share-name <share_name> --
 
 ### Number of distribution agents running continuously
 
-Number of distribution agents configured to run continuously is limited to 30 on Azure SQL Managed Instance. To have more distribution agents they need to be running either on demand or with a defined schedule. Schedule can be defined with daily frequency and occurrence on every 10 seconds, so even though it's not continuous, you still can have distributor that's introducing latency that's only several seconds.
+Number of distribution agents configured to run continuously is limited to 30 on Azure SQL Managed Instance. To have more distribution agents they need to be running either on demand or with a defined schedule. Schedule can be defined with daily frequency and occurrence on every 10 seconds (or more), so even though it's not continuous, you still can have distributor that's introducing latency that's only several seconds. When large number of distributors is needed, it's recommended to **use scheduled** and not continuous configuration.
 
 ## With failover groups
 

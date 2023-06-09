@@ -4,7 +4,7 @@ description: PolyBase enables your SQL Server instance to process Transact-SQL q
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei
-ms.date: 08/22/2022
+ms.date: 03/30/2023
 ms.service: sql
 ms.subservice: polybase
 ms.topic: "overview"
@@ -41,10 +41,11 @@ PolyBase provides these same functionalities for the following SQL products from
 - [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later versions (Windows)
 - [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later versions (Windows and Linux)
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[pdw](../../includes/sspdw-md.md)]
-- [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
+- [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] (for dedicated SQL pools)
+    - Data virtualization in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] is available in two modes, PolyBase and native. For more information, see [Use external tables with Synapse SQL](/azure/synapse-analytics/sql/develop-tables-external-tables).
 
 > [!NOTE]
-> Data virtualization using PolyBase feature is available for **Azure SQL Managed Instance**, scoped to querying external data stored in files in Azure Data Lake Storage (ADLS) Gen2 and Azure Blob Storage. Visit [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview) to learn more.
+> Data virtualization is also available for **Azure SQL Managed Instance**, scoped to querying external data stored in files in Azure Data Lake Storage (ADLS) Gen2 and Azure Blob Storage. Visit [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview) to learn more.
 
 ### SQL Server 2022 PolyBase enhancements
 
@@ -151,6 +152,9 @@ Azure Storage connectors must be changed based on the reference table below:
 
 Before using PolyBase, you must [install PolyBase on Windows](polybase-installation.md) or [install PolyBase on Linux](polybase-linux-setup.md), and [enable PolyBase in sp_configure](polybase-installation.md#enable) if necessary. For more tutorials on creating external data sources and external tables to a variety of data sources, see [PolyBase Transact-SQL reference](polybase-t-sql-objects.md).
 
+- [Use external tables with Synapse SQL](/azure/synapse-analytics/sql/develop-tables-external-tables)
+- [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview) 
+
 Review [PolyBase Transact-SQL reference](polybase-t-sql-objects.md) with examples of external data sources and external tables for a variety of data sources. For more tutorials, review the following articles:
 
 - [Hadoop](polybase-configure-hadoop.md)
@@ -163,3 +167,4 @@ Review [PolyBase Transact-SQL reference](polybase-t-sql-objects.md) with example
 - [S3-compatible object storage](polybase-configure-s3-compatible.md)
 - [CSV](virtualize-csv.md)
 - [Delta table](virtualize-delta.md)
+

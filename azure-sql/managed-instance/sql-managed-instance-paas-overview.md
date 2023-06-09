@@ -8,7 +8,7 @@ ms.date: 04/06/2022
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: overview
-ms.custom: sqldbrb=1
+ms.custom: sqldbrb=1, build-2023, build-2023-dataai
 ---
 
 # What is Azure SQL Managed Instance?
@@ -93,7 +93,7 @@ The following list describes key characteristics of the General Purpose service 
 
 - Designed for the majority of business applications with typical performance requirements
 - High-performance Azure Blob storage (16 TB)
-- Built-in [high availability](../database/high-availability-sla.md#basic-standard-and-general-purpose-service-tier-locally-redundant-availability) based on reliable Azure Blob storage and [Azure Service Fabric](/azure/service-fabric/service-fabric-overview)
+- Built-in [high availability](../database/high-availability-sla.md#locally-redundant-availability) based on reliable Azure Blob storage and [Azure Service Fabric](/azure/service-fabric/service-fabric-overview)
 
 For more information, see [Storage layer in the General Purpose tier](https://medium.com/azure-sqldb-managed-instance/file-layout-in-general-purpose-azure-sql-managed-instance-cf21fff9c76c) and [Storage performance best practices and considerations for SQL Managed Instance (General Purpose)](/archive/blogs/sqlcat/storage-performance-best-practices-and-considerations-for-azure-sql-db-managed-instance-general-purpose).
 
@@ -107,7 +107,7 @@ The following list outlines the key characteristics of the Business Critical ser
 
 - Designed for business applications with highest performance and HA requirements
 - Comes with super-fast local SSD storage (up to 4 TB on Standard Series (Gen5), up to 5.5 TB on Premium Series and up to 16 TB on Premium Series Memory-Optimized)
-- Built-in [high availability](../database/high-availability-sla.md#premium-and-business-critical-service-tier-locally-redundant-availability) based on [Always On availability groups](/sql/database-engine/availability-groups/windows/always-on-availability-groups-sql-server) and [Azure Service Fabric](/azure/service-fabric/service-fabric-overview)
+- Built-in [high availability](../database/high-availability-sla.md#locally-redundant-availability) based on [Always On availability groups](/sql/database-engine/availability-groups/windows/always-on-availability-groups-sql-server) and [Azure Service Fabric](/azure/service-fabric/service-fabric-overview)
 - Built-in additional [read-only database replica](../database/read-scale-out.md) that can be used for reporting and other read-only workloads
 - [In-Memory OLTP](../in-memory-oltp-overview.md) that can be used for workload with high-performance requirements  
 
@@ -115,7 +115,7 @@ Find more information about the differences between service tiers in [SQL Manage
 
 ## Management operations
 
-Azure SQL Managed Instance provides management operations that you can use to automatically deploy new managed instances, update instance properties, and delete instances when no longer needed. Detailed explanation of management operations can be found on [managed instance management operations overview](management-operations-overview.md) page.
+Azure SQL Managed Instance provides management operations that you can use to automatically deploy new managed instances, update instance properties, and delete instances when no longer needed. Detailed explanation of management operations can be found on [Azure SQL Managed Instance management operations overview](management-operations-overview.md) page.
 
 ## Advanced security and compliance
 

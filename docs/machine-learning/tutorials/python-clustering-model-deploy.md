@@ -4,7 +4,7 @@ titleSuffix: SQL machine learning
 description: In part four of this four-part tutorial series, you'll deploy a clustering model in Python with SQL machine learning.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 05/21/2020
+ms.date: 04/17/2023
 ms.service: sql
 ms.subservice: machine-learning
 ms.topic: tutorial
@@ -54,6 +54,9 @@ Run the following T-SQL script to create the stored procedure. The procedure rec
 
 ```sql
 USE [tpcxbb_1gb]
+GO
+
+DROP procedure IF EXISTS [dbo].[py_generate_customer_return_clusters];
 GO
 
 CREATE procedure [dbo].[py_generate_customer_return_clusters]

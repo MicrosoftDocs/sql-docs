@@ -10,7 +10,7 @@ ms.topic: conceptual
 ---
 # Grant DQS Roles to Users
 
-[!INCLUDE [SQL Server - Windows only ](../../includes/applies-to-version/sql-windows-only.md)]
+[!INCLUDE [SQL Server - Windows only](../../includes/applies-to-version/sql-windows-only.md)]
 
   This topic describes how to create SQL logins based on a Windows principal, and grant [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) roles on the DQS_MAIN database.  
   

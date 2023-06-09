@@ -192,11 +192,11 @@ For a graphic showing the relationships among the [!INCLUDE[ssDE](../../../inclu
 
 - The permissions granted to users and user-defined fixed database roles can be examined by using the `sys.database_permissions` view.
 
-- Database role membership can be examined by using the `sys. sys.database_role_members` view.
+- Database role membership can be examined by using the `sys.database_role_members` view.
 
 - Server role membership can be examined by using the `sys.server_role_members` view. This view isn't available in [!INCLUDE[ssSDS](../../../includes/sssds-md.md)].
 
-- For additional security related views, see [Security Catalog Views (Transact-SQL)](../../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md) .
+- For additional security related views, see [Security Catalog Views (Transact-SQL)](../../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md).
 
 ## Examples
 

@@ -21,10 +21,10 @@ helpviewer_keywords:
   - "OVER clause"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # SELECT - OVER Clause (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
   Determines the partitioning and ordering of a rowset before the associated window function is applied. That is, the OVER clause defines a window or user-specified set of rows within a query result set. A window function then computes a value for each row in the window. You can use the OVER clause with functions to compute aggregated values such as moving averages, cumulative aggregates, running totals, or a top N per group results.  
   
@@ -110,19 +110,19 @@ Window functions might have the following arguments in their `OVER` clause:
 If you don't specify any argument, the window functions will be applied on the entire result set.
 ```sql
 select 
-	  object_id
-	, [min]	= min(object_id) over()
-	, [max]	= max(object_id) over()
+      object_id
+    , [min]    = min(object_id) over()
+    , [max]    = max(object_id) over()
 from sys.objects
 ```
  
 |object_id | min | max |
 |---|---|---|
-| 3	| 3 | 2139154666 |
-| 5	| 3 | 2139154666 |
+| 3    | 3 | 2139154666 |
+| 5    | 3 | 2139154666 |
 | ... | ... | ... |
-| 2123154609 |	3 | 2139154666 |
-| 2139154666 |	3 | 2139154666 |
+| 2123154609 |    3 | 2139154666 |
+| 2139154666 |    3 | 2139154666 |
 
 ### PARTITION BY  
  Divides the query result set into partitions. The window function is applied to each partition separately and computation restarts for each partition.  
@@ -139,23 +139,23 @@ PARTITION BY *value_expression*
  
  ```sql
  select 
-	  object_id, type
-	, [min]	= min(object_id) over(partition by type)
-	, [max]	= max(object_id) over(partition by type)
+      object_id, type
+    , [min]    = min(object_id) over(partition by type)
+    , [max]    = max(object_id) over(partition by type)
 from sys.objects
 ```
 
 |object_id | type | min | max |
 |---|---|---|---|
-| 68195293	| PK	| 68195293	| 711673583 |
-| 631673298	| PK	| 68195293	| 711673583 |
-| 711673583	| PK	| 68195293	| 711673583 |
-| ... | ...	| ... |
-| 3	| S | 3	| 98 |
-| 5	| S |	3	| 98 |
-| ... | ...	| ... |
-| 98	| S |	3	| 98 |
-| ... | ...	| ... |
+| 68195293    | PK    | 68195293    | 711673583 |
+| 631673298    | PK    | 68195293    | 711673583 |
+| 711673583    | PK    | 68195293    | 711673583 |
+| ... | ...    | ... |
+| 3    | S | 3    | 98 |
+| 5    | S |    3    | 98 |
+| ... | ...    | ... |
+| 98    | S |    3    | 98 |
+| ... | ...    | ... |
   
 ### ORDER BY  
 
@@ -169,25 +169,25 @@ ORDER BY *order_by_expression* [COLLATE *collation_name*] [ASC|DESC]
  
 ```sql
 select 
-	  object_id, type
-	, [min]	= min(object_id) over(partition by type order by object_id)
-	, [max]	= max(object_id) over(partition by type order by object_id)
+      object_id, type
+    , [min]    = min(object_id) over(partition by type order by object_id)
+    , [max]    = max(object_id) over(partition by type order by object_id)
 from sys.objects
 ```
 
 |object_id | type | min | max |
 |---|---|---|---|
-| 68195293	| PK	| 68195293	| 68195293 |
-| 631673298	| PK	| 68195293	| 631673298 |
-| 711673583	| PK	| 68195293	| 711673583 |
-| ... | ...	| ... |
-| 3	| S | 3	| 3 |
-| 5	| S |	3 | 5 |
-| 6	| S |	3 | 6 |
-| ... | ...	| ... |
-| 97	| S |	3 | 97 |
-| 98	| S |	3 | 98 |
-| ... | ...	| ... |
+| 68195293    | PK    | 68195293    | 68195293 |
+| 631673298    | PK    | 68195293    | 631673298 |
+| 711673583    | PK    | 68195293    | 711673583 |
+| ... | ...    | ... |
+| 3    | S | 3    | 3 |
+| 5    | S |    3 | 5 |
+| 6    | S |    3 | 6 |
+| ... | ...    | ... |
+| 97    | S |    3 | 97 |
+| 98    | S |    3 | 98 |
+| ... | ...    | ... |
 
 
  *order_by_expression*  
@@ -208,26 +208,26 @@ from sys.objects
  
 ```sql
 select
-	  object_id
-	, [preceding]	= count(*) over(order by object_id ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW )
-	, [central]	= count(*) over(order by object_id ROWS BETWEEN 2 PRECEDING AND 2 FOLLOWING )
-	, [following]	= count(*) over(order by object_id ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING)
+      object_id
+    , [preceding]    = count(*) over(order by object_id ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW )
+    , [central]    = count(*) over(order by object_id ROWS BETWEEN 2 PRECEDING AND 2 FOLLOWING )
+    , [following]    = count(*) over(order by object_id ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING)
 from sys.objects
 order by object_id asc
 ```
 
 |object_id | preceding | central | following |
 |---|---|---|---|
-| 3	| 1	| 3	| 156 |
-| 5	| 2	| 4	| 155 |
-| 6	| 3	| 5	| 154 |
-| 7	| 4	| 5	| 153 |
-| 8	| 5	| 5	| 152 |
-| ...   | ...	| ...   | ... |
-| 2112726579	| 153	| 5	| 4 |
-| 2119678599	| 154	| 5	| 3 |
-| 2123154609	| 155	| 4	| 2 |
-| 2139154666	| 156	| 3	| 1 | 
+| 3    | 1    | 3    | 156 |
+| 5    | 2    | 4    | 155 |
+| 6    | 3    | 5    | 154 |
+| 7    | 4    | 5    | 153 |
+| 8    | 5    | 5    | 152 |
+| ...   | ...    | ...   | ... |
+| 2112726579    | 153    | 5    | 4 |
+| 2119678599    | 154    | 5    | 3 |
+| 2123154609    | 155    | 4    | 2 |
+| 2139154666    | 156    | 3    | 1 | 
   
 > [!NOTE]  
 >  ROWS or RANGE requires that the ORDER BY clause be specified. If ORDER BY contains multiple order expressions, CURRENT ROW FOR RANGE considers all columns in the ORDER BY list when determining the current row.  

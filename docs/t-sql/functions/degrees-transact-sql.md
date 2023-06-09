@@ -15,10 +15,10 @@ helpviewer_keywords:
   - "number of degrees"
 dev_langs:
   - "TSQL"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current||=fabric"
 ---
 # DEGREES (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
 This function returns the corresponding angle, in degrees, for an angle specified in radians.  
   
@@ -34,10 +34,21 @@ DEGREES ( numeric_expression )
 
 ## Arguments
  *numeric_expression*  
-An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of the exact numeric or approximate numeric data type category, except for the **bit** data type.  
+An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of the exact numeric or approximate numeric data type category.  
   
-## Return Code Values  
-Returns a value whose data type matches the data type of *numeric_expression*.  
+## Return Types  
+The return type depends on the input type of *numeric_expression*:
+ 
+|Input type|Return type|  
+|----------|-----------|  
+|**float**, **real**|**float**|
+|**decimal(*p*, *s*)**|**decimal(38, *s*)**|
+|**int**, **smallint**, **tinyint**|**int**|
+|**bigint**|**bigint**|
+|**money**, **smallmoney**|**money**|
+|**bit**|**float**|
+
+If the result does not fit in the return type, an arithmetic overflow error occurs.  
   
 ## Examples  
 This example returns the number of degrees in an angle of PI/2 radians.  

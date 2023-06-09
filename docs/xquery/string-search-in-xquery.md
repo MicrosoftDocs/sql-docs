@@ -16,7 +16,7 @@ dev_langs:
   - "XML"
 ---
 # String Search in XQuery
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   This topic provides sample queries that show how to search text in XML documents.  
   

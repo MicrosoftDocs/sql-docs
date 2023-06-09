@@ -16,15 +16,24 @@ helpviewer_keywords:
   - "sys.stats catalog view"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # sys.stats (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
   Contains a row for each statistics object that exists for the tables, indexes, and indexed views in the database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Every index will have a corresponding statistics row with the same name and ID (`index_id` = `stats_id`), but not every statistics row has a corresponding index.
 
- The catalog view [sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) provides statistics information for each column in the database. For more information about statistics, see [Statistics](../../relational-databases/statistics/statistics.md).
+ The catalog view [sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) provides statistics information for each column in the database. 
+
+ For more information about statistics, see [Statistics](../../relational-databases/statistics/statistics.md).
+
+::: moniker range="=fabric"
+
+> [!NOTE]
+> For more information on statistics in [!INCLUDE [fabric](../../includes/fabric.md)], see [Statistics in [!INCLUDE [fabric](../../includes/fabric.md)]](/fabric/data-warehouse/statistics).
+
+::: moniker-end
 
 |Column name|Data type|Description|
 |-----------------|---------------|-----------------|

@@ -4,7 +4,7 @@ description: This article describes the new serverless compute tier and compares
 author: oslake
 ms.author: moslake
 ms.reviewer: wiassaf, mathoma
-ms.date: 02/14/2023
+ms.date: 04/25/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -249,18 +249,27 @@ Create a new serverless General Purpose database with the following PowerShell e
 
 ```powershell
 New-AzSqlDatabase -ResourceGroupName $resourceGroupName -ServerName $serverName -DatabaseName $databaseName `
-  -ComputeModel Serverless -Edition GeneralPurpose -ComputeGeneration Gen5 `
+  -Edition GeneralPurpose -ComputeModel Serverless -ComputeGeneration Gen5 `
   -MinVcore 0.5 -MaxVcore 2 -AutoPauseDelayInMinutes 720
 ```
 
 # [Hyperscale](#tab/hyperscale)
 
-Create a new Hyperscale serverless database with the following PowerShell example: 
+Create a new serverless Hyperscale database with the following PowerShell example: 
 
 ```powershell
 New-AzSqlDatabase -ResourceGroupName $resourceGroupName -ServerName $serverName -DatabaseName $databaseName ` 
-  -ComputeModel Serverless -Edition Hyperscale -ComputeGeneration Gen5 ` 
+  -Edition Hyperscale -ComputeModel Serverless -ComputeGeneration Gen5 ` 
   -MinVcore 0.5 -MaxVcore 2
+```
+
+Create a new serverless Hyperscale database with 1 high availability replica and zone redundancy using the following PowerShell example:
+
+```powershell
+New-AzSqlDatabase -ResourceGroupName $resourceGroupName -ServerName $serverName -DatabaseName $databaseName `
+  -Edition Hyperscale -ComputeModel Serverless -ComputeGeneration Gen5 `
+  -MinVcore 0.5 -MaxVcore 2 `
+  -HighAvailabilityReplicaCount 1 -BackupStorageRedundancy Zone -ZoneRedundant
 ```
 
 ---
@@ -269,20 +278,31 @@ New-AzSqlDatabase -ResourceGroupName $resourceGroupName -ServerName $serverName 
 
 # [General Purpose](#tab/general-purpose)
 
-Create a new General Purpose serverless database with the following Azure CLI example: 
+Create a new serverless General Purpose database with the following Azure CLI example: 
 
 ```azurecli
 az sql db create -g $resourceGroupName -s $serverName -n $databaseName `
-  -e GeneralPurpose -f Gen5 --min-capacity 0.5 -c 2 --compute-model Serverless --auto-pause-delay 720
+  -e GeneralPurpose --compute-model Serverless -f Gen5 `
+  --min-capacity 0.5 -c 2 --auto-pause-delay 720
 ```
 
 # [Hyperscale](#tab/hyperscale)
 
-Create a new Hyperscale serverless database with the following Azure CLI example: 
+Create a new serverless Hyperscale database with the following Azure CLI example: 
 
 ```azurecli
 az sql db create -g $resourceGroupName -s $serverName -n $databaseName ` 
-  -e Hyperscale -f Gen5 --min-capacity 0.5 -c 2 --compute-model Serverless 
+  -e Hyperscale --compute-model Serverless -f Gen5 `
+  --min-capacity 0.5 -c 2 
+```
+
+Create a new serverless Hyperscale database with 1 high availability replica and zone redundancy using the following Azure CLI example:
+
+```azurecli
+az sql db create -g $resourceGroupName -s $serverName -n $databaseName `
+  -e Hyperscale --compute-model Serverless -f Gen5 `
+  --min-capacity 0.5 -c 2 `
+  --ha-replicas 1 --backup-storage-redundancy Zone --zone-redundant
 ```
 
 ---
@@ -360,7 +380,8 @@ Move a provisioned compute General Purpose database to the serverless compute ti
 
 ```azurecli
 az sql db update -g $resourceGroupName -s $serverName -n $databaseName `
-  --edition GeneralPurpose --min-capacity 1 --capacity 4 --family Gen5 --compute-model Serverless --auto-pause-delay 1440
+  --edition GeneralPurpose --compute-model Serverless --family Gen5 `
+  --min-capacity 1 --capacity 4 --auto-pause-delay 1440
 ```
 
 # [Hyperscale](#tab/hyperscale)
@@ -369,7 +390,8 @@ Move a provisioned compute Hyperscale database to the serverless compute tier wi
 
 ```azurecli
 az sql db update -g $resourceGroupName -s $serverName -n $databaseName ` 
-  --edition Hyperscale --min-capacity 1 --capacity 4 --family Gen5 --compute-model Serverless
+  --edition Hyperscale --compute-model Serverless --family Gen5 `
+  --min-capacity 1 --capacity 4 
 ```
 
 ---
@@ -553,6 +575,9 @@ Suppose the compute unit price for an HA replica is $0.000105/vCore/second. Then
 **Named replica** 
 
 Similarly for the named replica, suppose the total vCore seconds billed over 24 hours is 150000 vCore seconds and that the compute unit price for a named replica is $0.000105/vCore/second. Then the compute billed for the named replica over this time period is $0.000105/vCore/second * 150000 vCore seconds ~ $15.75.
+
+**Total compute cost**
+
 Therefore, the total compute bill for all three replicas of the database is around $29.34 + ~ $14.36 + $15.75 = $59.45.
 
 ---

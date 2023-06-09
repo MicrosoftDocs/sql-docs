@@ -72,7 +72,8 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 |bootstrap_recovery_lsn|**numeric(38)**|Recovery LSN for the bootstrap.|  
 |bootstrap_root_file_guid|**uniqueidentifier**|GUID of the root file for the bootstrap.|  
 |internal_error_code|**bigint**|Error seen by any of the controller, serializer, close, and merge threads.|
-|bytes_of_large_data_serialized|**bigint**|The amount of data that was serialized. |  
+|bytes_of_large_data_serialized|**bigint**|The amount of data that was serialized.|  
+|db_in_checkpoint_only_mode|**bit**|True if database is in in-memory OLTP checkpoint-only mode.|  
   
 ##  <a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  The following table describes the columns in `sys.dm_db_xtp_checkpoint_stats`, for **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**.  

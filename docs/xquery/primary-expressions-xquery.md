@@ -18,7 +18,7 @@ dev_langs:
   - "XML"
 ---
 # Primary Expressions (XQuery)
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   The XQuery primary expressions include literals, variable references, context item expressions, constructors, and function calls.  
   

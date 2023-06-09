@@ -14,7 +14,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 ---
 # Tune performance with the Query Store
 
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Query Store feature provides you with power to discover and tune queries in your workload through the [!INCLUDE[ssmanstudiofull](../../includes/ssmanstudiofull-md.md)] visual interface and through T-SQL queries. This article details how you can take actionable information to improve query performance in your database, including how to identify queries based on their usage statistics and forcing plans. You can also use the [Query Store hints](query-store-hints.md) feature to identify queries and shape their query plans without changing application code.
 

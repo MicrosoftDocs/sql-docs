@@ -10,7 +10,7 @@ ms.topic: conceptual
 ---
 # Edit and Delete an Index (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   You can edit and delete an index that you've created on attributes.  
   

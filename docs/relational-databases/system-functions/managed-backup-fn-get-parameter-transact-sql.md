@@ -68,7 +68,7 @@ FROM managed_backup.fn_get_parameter (NULL)
 USE MSDB  
 GO  
 SELECT *  
-FROM managed_backup.fn_get_parameter ('SSMBackup2WANotficationEmailIds')  
+FROM managed_backup.fn_get_parameter ('SSMBackup2WANotificationEmailIds')  
   
 ```  
   

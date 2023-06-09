@@ -4,12 +4,11 @@ description: Create a single database in Azure SQL Database using the Azure port
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 07/14/2022
+ms.date: 04/26/2023
 ms.service: sql-database
 ms.subservice: deployment-configuration
 ms.topic: quickstart
 ms.custom:
-  - contperf-fy21q1
   - devx-track-azurecli
   - devx-track-azurepowershell
   - mode-ui
@@ -34,37 +33,33 @@ To create a single database in the Azure portal, this quickstart starts at the A
 1. Browse to the [Select SQL Deployment option](https://portal.azure.com/#create/Microsoft.AzureSQL) page.
 1. Under **SQL databases**, leave **Resource type** set to **Single database**, and select **Create**.
 
-   :::image type="content" source="./media/single-database-create-quickstart/select-deployment.png" alt-text="Add to Azure SQL" lightbox="media/single-database-create-quickstart/select-deployment.png":::
+   :::image type="content" source="./media/single-database-create-quickstart/select-deployment.png" alt-text="A screenshot of the Select SQL Deployment option page in the Azure portal." lightbox="media/single-database-create-quickstart/select-deployment.png":::
 
 1. On the **Basics** tab of the **Create SQL Database** form, under **Project details**, select the desired Azure **Subscription**.
 1. For **Resource group**, select **Create new**, enter *myResourceGroup*, and select **OK**.
 1. For **Database name**, enter *mySampleDatabase*.
 1. For **Server**, select **Create new**, and fill out the **New server** form with the following values:
    - **Server name**: Enter *mysqlserver*, and add some characters for uniqueness. We can't provide an exact server name to use because server names must be globally unique for all servers in Azure, not just unique within a subscription. So enter something like `mysqlserver12345`, and the portal lets you know if it's available or not.
+
    - **Location**: Select a location from the dropdown list.
    - **Authentication method**: Select **Use SQL authentication**.
    - **Server admin login**: Enter *azureuser*.
    - **Password**: Enter a password that meets requirements, and enter it again in the **Confirm password** field.
    
-
    Select **OK**.
 
 1. Leave **Want to use SQL elastic pool** set to **No**.
 1. Under **Compute + storage**, select **Configure database**.
-1. This quickstart uses a serverless database, so leave **Service tier** set to **General Purpose (Scalable compute and storage options)** and set **Compute tier** to **Serverless**. Select **Apply**.
-
-      :::image type="content" source="./media/single-database-create-quickstart/configure-database.png" alt-text="configure serverless database" lightbox="media/single-database-create-quickstart/configure-database.png":::
-
+1. This quickstart uses a serverless database, so leave **Service tier** set to **General purpose (Most budget-friendly, serverless compute)** and set **Compute tier** to **Serverless**. Select **Apply**.
 1. Under **Backup storage redundancy**, choose a redundancy option for the storage account where your backups will be saved. To learn more, see [backup storage redundancy](automated-backups-overview.md#backup-storage-redundancy). 
 1. Select **Next: Networking** at the bottom of the page.
 
-   :::image type="content" source="./media/single-database-create-quickstart/new-sql-database-basics.png" alt-text="New SQL database - Basic tab":::
+   :::image type="content" source="./media/single-database-create-quickstart/new-sql-database-basics.png" alt-text="A screenshot of the Create SQL Database page, Basic tab from the Azure portal.":::
 
 1. On the **Networking** tab, for **Connectivity method**, select **Public endpoint**.
 1. For **Firewall rules**, set **Add current client IP address** to **Yes**. Leave **Allow Azure services and resources to access this server** set to **No**.
 
-   :::image type="content" source="./media/single-database-create-quickstart/networking.png" alt-text="Screenshot that shows the networking tab for firewall rules.":::
-
+   :::image type="content" source="./media/single-database-create-quickstart/networking.png" alt-text="Screenshot of the Azure portal showing the networking tab for firewall rules.":::
 
 1. Under **Connection policy**, choose the **Default** [connection policy](connectivity-architecture.md#connection-policy), and leave the **Minimum TLS version** at the default of TLS 1.2. 
 1. Select **Next: Security** at the bottom of the page.
@@ -76,7 +71,7 @@ To create a single database in the Azure portal, this quickstart starts at the A
 
 1. Select **Review + create** at the bottom of the page:
 
-   :::image type="content" source="./media/single-database-create-quickstart/additional-settings.png" alt-text="Additional settings tab":::
+   :::image type="content" source="./media/single-database-create-quickstart/additional-settings.png" alt-text="A screenshot of the Azure portal showing the Additional settings tab.":::
 
 1. On the **Review + create** page, after reviewing, select **Create**.
 
@@ -173,7 +168,7 @@ Use the [az sql up](/cli/azure/sql#az-sql-up) command to create and configure a 
         --admin-password $password
     ```
 
-2. A server firewall rule is automatically created. If the server declines your IP address, create a new firewall rule using the `az sql server firewall-rule create` command and specifying appropriate start and end IP addresses.
+1. A server firewall rule is automatically created. If the server declines your IP address, create a new firewall rule using the `az sql server firewall-rule create` command and specifying appropriate start and end IP addresses.
 
     ```azurecli
     startIp=0.0.0.0
@@ -187,7 +182,7 @@ Use the [az sql up](/cli/azure/sql#az-sql-up) command to create and configure a 
 
     ```
 
-3. All required resources are created, and the database is ready for queries.
+1. All required resources are created, and the database is ready for queries.
 
 # [PowerShell](#tab/azure-powershell)
 
@@ -287,9 +282,9 @@ Once your database is created, you can use the **Query editor (preview)** in the
 
 1. In the portal, search for and select **SQL databases**, and then select your database from the list.
 1. On the page for your database, select **Query editor (preview)** in the left menu.
-1. Enter your server admin login information, and select **OK**.
+1. Enter your **SQL server authentication** server admin login information or use **Azure Active Directory authentication**.
 
-   :::image type="content" source="./media/single-database-create-quickstart/query-editor-login.png" alt-text="Sign in to Query editor":::
+   :::image type="content" source="./media/single-database-create-quickstart/query-editor-login.png" alt-text="A screenshot of the Query editor login page in the Azure portal.":::
 
 1. Enter the following query in the **Query editor** pane.
 
@@ -302,7 +297,7 @@ Once your database is created, you can use the **Query editor (preview)** in the
 
 1. Select **Run**, and then review the query results in the **Results** pane.
 
-   :::image type="content" source="./media/single-database-create-quickstart/query-editor-results.png" alt-text="Query editor results" lightbox="media/single-database-create-quickstart/query-editor-results.png":::
+   :::image type="content" source="./media/single-database-create-quickstart/query-editor-results.png" alt-text="A screenshot of Query editor results." lightbox="media/single-database-create-quickstart/query-editor-results.png":::
 
 1. Close the **Query editor** page, and select **OK** when prompted to discard your unsaved edits.
 

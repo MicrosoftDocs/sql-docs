@@ -4,31 +4,28 @@ description: "Use the Azure portal to create SQL Server VMs in multiple subnets,
 author: tarynpratt
 ms.author: tarynpratt
 ms.reviewer: mathoma, randolphwest
-ms.date: 11/16/2022
+ms.date: 05/10/2023
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: how-to
-ms.custom:
-  - devx-track-azurecli
-  - devx-track-azurepowershell
+ms.custom: devx-track-azurepowershell
 tags: azure-resource-manager
 ---
 # Use the Azure portal to configure a multiple-subnet availability group (preview) for SQL Server on Azure VMs
 
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
-> [!TIP]
-> There are many [methods to deploy an availability group](availability-group-overview.md#deployment-options). Simplify your deployment and eliminate the need for an Azure load balancer or distributed network name (DNN) for your Always On availability group by creating your SQL Server virtual machines (VMs) in [multiple subnets](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md) within the same Azure virtual network.
+[!INCLUDE[tip-for-multi-subnet-ag](../../includes/virtual-machines-ag-listener-multi-subnet.md)]
 
 This article describes how to use the [Azure portal](https://portal.azure.com) to configure an availability group for SQL Server on Azure VMs in multiple subnets by creating:
 
 - New virtual machines with SQL Server.
 - A Windows failover cluster.
 - An availability group.
-- A listener. 
+- A listener.
 
 > [!NOTE]
-> This deployment method is currently in preview. It supports SQL Server 2016 and later on Windows Server 2016 and later. 
+> This deployment method is currently in preview. It supports SQL Server 2016 and later on Windows Server 2016 and later.
 
 Deploying a multiple-subnet availability group through the portal provides an easy end-to-end experience for users. It configures the virtual machines by following the [best practices for high availability and disaster recovery (HADR)](hadr-cluster-best-practices.md).
 
@@ -45,13 +42,13 @@ To configure an Always On availability group by using the Azure portal, you must
 
 - A resource group
 
-- A virtual network
+- A virtual network with [custom DNS server IP address configured](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md?#configure-virtual-network-dns)
 
 - A domain controller VM in the same virtual network
 
-- The following account permissions:
+- The following [account permissions](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md?#configure-domain-accounts):
 
-  - A domain user account that has **Create Computer Object** permissions in the domain. This user will create the cluster and availability group, and will install SQL Server.
+  - A domain user [account that has **Create Computer Object** permissions](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md?#grant-installation-account-permissions) in the domain. This user will create the cluster and availability group, and will install SQL Server.
   
     For example, a domain user account (`account@domain.com`) typically has sufficient permission. This account should also be part of the local administrator group on each VM to create the cluster.
 
@@ -91,7 +88,7 @@ On the **Basics** tab, select the subscription and resource group. Also, provide
 
 1. For **Security type**, select either **Standard** or [Trusted launch](/azure/virtual-machines/trusted-launch). 
 
-1. The **Image** area displays the chosen SQL Server VM image. Select **Configure VM generation** to choose the VM generation.
+1. The **Image** area displays the chosen SQL Server VM image. Use the dropdown to change the image to deploy. Select **Configure VM generation** to choose the VM generation.
 
 1. Select **See all sizes** for the size of the virtual machines. All created VMs will be the same size. For production workloads, see the recommended machine sizes and configuration in [Performance best practices for SQL Server on Azure VMs](./performance-guidelines-best-practices-vm-size.md).
 
@@ -215,7 +212,15 @@ On the **SQL Server settings** tab, configure specific settings and optimization
 
     :::image type="content" source="./media/create-sql-vm-portal/sql-instance-settings.png" alt-text="Screenshot of the Azure portal that shows SQL Server instance settings and the button for changing them.":::
 
-1. You have the option to enable **Machine Learning Services**, if it suits your business needs.
+## Choose Prerequisites Validation
+
+In order for the deployment to be successful, there are [several prerequisite](availability-group-azure-portal-configure.md#prerequisites) that are required to be in place. To make it easier to validate that all permissions and requirements are correct, use the PowerShell prerequisite script that is available for download on this tab. 
+
+The script will be pre-populated with the values provided in the previous steps. Run the PowerShell script as a domain user on the Domain Controller virtual machine or on a domain joined Windows Server VM. 
+
+Once the script has been executed and the prerequisites have been validated, then select the confirmation checkbox. 
+
+:::image type="content" source="./media/availability-group-az-portal-configure/prerequisites-validation.png" alt-text="Screenshot of the Azure portal that shows the prerequisites validation tab.":::
 
 1. Select **Review + Create**.
 

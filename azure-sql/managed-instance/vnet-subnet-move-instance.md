@@ -5,11 +5,10 @@ description: Learn how to move an Azure SQL Managed Instance to another subnet w
 author: urosmil
 ms.author: urmilano
 ms.reviewer: mathoma, bonova, srbozovi, wiassaf
-ms.date: 09/30/2021
+ms.date: 04/12/2023
 ms.service: sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: how-to
-ms.custom: ignite-fall-2021
 ---
 # Move Azure SQL Managed Instance across subnets
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
@@ -89,9 +88,7 @@ To learn more about configuring the network for auto-failover groups, review [En
 
 ### Migration from Gen4 hardware
 
-Instances running on Gen4 hardware must be upgraded to newer hardware since Gen4 is being retired. Upgrading hardware and moving to another subnet can be performed in one operation.
-
-[!INCLUDE[azure-sql-gen4-hardware-retirement-sql-managed-instance](../includes/azure-sql-gen4-hardware-retirement-sql-managed-instance.md)]
+Instances running on Gen4 hardware must be upgraded to newer hardware since Gen4 is being retired. Upgrading hardware and moving to another subnet can be performed in one operation. Migrate [your instance of SQL Managed Instance to a supported hardware generation](resource-limits.md) for a wider range of vCore and storage scalability, accelerated networking, best IO performance, and minimal latency.
 
 ## Operation steps
 

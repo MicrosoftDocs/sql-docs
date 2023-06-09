@@ -8,12 +8,12 @@ ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: conceptual
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest ||=fabric"
 ---
 
 # Aliasing (Azure Synapse Analytics, Parallel Data Warehouse)
 
-[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
+[!INCLUDE[applies-to-version/asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/asa-pdw-fabricse-fabricdw.md)]
 
 Aliasing allows the temporary substitution of a short and easy-to-remember string in place of a table or column name in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] queries. Table aliases are often used in JOIN queries because the JOIN syntax requires fully qualified object names when referencing columns.  
 
@@ -21,7 +21,7 @@ Aliases must be single words conforming to object naming rules. For more informa
 
 ## Syntax
 
-```tsql
+```syntaxsql
 object_source [ AS ] alias
 ```
 
@@ -44,7 +44,7 @@ The following example shows a query with multiple joins. Both table and column a
 
 - Table Aliasing: `dbo.DimSalesTerritory AS st` shows creation of the `st` alias for the `dbo.DimSalesTerritory` table.  
 
-```tsql
+```sql
 -- Uses AdventureWorks
 
 SELECT LastName, SUM(SalesAmountQuota) AS TotalSales, SalesTerritoryRegion AS SalesTR,  
@@ -58,7 +58,7 @@ GROUP BY LastName, SalesTerritoryRegion;
 
 The AS keyword can be excluded, as shown below, but is often included for readability.  
 
-```tsql
+```sql
 -- Uses AdventureWorks
 
 SELECT LastName, SUM(SalesAmountQuota) TotalSales, SalesTerritoryRegion SalesTR,  

@@ -5,7 +5,7 @@ description: This article compares the database engine features of Azure SQL Dat
 author: danimir
 ms.author: danil
 ms.reviewer: wiassaf, bonova, mathoma, danil
-ms.date: 01/31/2023
+ms.date: 05/21/2023
 ms.service: sql-db-mi
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -59,7 +59,7 @@ The following table lists the major features of SQL Server and provides informat
 | [DDL statements](/sql/t-sql/statements/statements) | Most - see individual statements | Yes - see [T-SQL differences](../managed-instance/transact-sql-tsql-differences-sql-server.md) |
 | [DDL triggers](/sql/relational-databases/triggers/ddl-triggers) | Database only |  Yes |
 | [Distributed partition views](/sql/t-sql/statements/create-view-transact-sql#partitioned-views) | No | Yes |
-| [Distributed transactions - MS DTC](/sql/relational-databases/native-client-ole-db-transactions/supporting-distributed-transactions) | No - see [Elastic transactions](elastic-transactions-overview.md) | No - see [Elastic transactions](elastic-transactions-overview.md) |
+| [Distributed transactions - MS DTC](/sql/relational-databases/native-client-ole-db-transactions/supporting-distributed-transactions) | No - see [Elastic transactions](elastic-transactions-overview.md) | Yes, [DTC for Azure SQL Managed Instance](../managed-instance/distributed-transaction-coordinator-dtc.md), <br/> and [Elastic transactions](elastic-transactions-overview.md) |
 | [DML triggers](/sql/relational-databases/triggers/create-dml-triggers) | Most - see individual statements |  Yes |
 | [DMVs](/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views) | Most - see individual DMVs |  Yes - see [T-SQL differences](../managed-instance/transact-sql-tsql-differences-sql-server.md) |
 | [Elastic query](elastic-query-overview.md) | Yes, with required RDBMS type (public preview) | No, use native cross-DB queries and Linked Server instead |
@@ -109,7 +109,7 @@ The following table lists the major features of SQL Server and provides informat
 | Time zone choice | No | [Yes](../managed-instance/timezones-overview.md), and it must be configured when the SQL Managed Instance is created. |
 | [Trace flags](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql) | No | Yes, but only limited set of global trace flags. See [DBCC differences](../managed-instance/transact-sql-tsql-differences-sql-server.md#dbcc) |
 | [Transactional Replication](../managed-instance/replication-transactional-overview.md) | Yes, [Transactional and snapshot replication subscriber only](migrate-to-database-from-sql-server.md) | Yes (public preview) - see [limitations](../managed-instance/transact-sql-tsql-differences-sql-server.md#replication). |
-| [Transparent data encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption-tde) | Yes - General Purpose, Business Critical, and Hyperscale service tiers only.| [Yes](transparent-data-encryption-tde-overview.md) |
+| [Transparent data encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption-tde) | [Yes](transparent-data-encryption-tde-overview.md) | [Yes](transparent-data-encryption-tde-overview.md) |
 | Windows authentication | No | Yes - see [Windows Authentication for Azure Active Directory principals](../managed-instance/winauth-azuread-overview.md)|
 | [Windows Server Failover Clustering](/sql/sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server) | No. Other techniques that provide [high availability](high-availability-sla.md) are included with every database. Disaster recovery is discussed in [Overview of business continuity with Azure SQL Database](business-continuity-high-availability-disaster-recover-hadr-overview.md). | No. Other techniques that provide [high availability](high-availability-sla.md) are included with every database. Disaster recovery is discussed in [Overview of business continuity with Azure SQL Database](business-continuity-high-availability-disaster-recover-hadr-overview.md). |
 
@@ -161,7 +161,7 @@ The following table compares the maximum resource limits available for Azure SQL
 | **Storage size** | 1 GB - 100 TB | 16 TB | 
 | **Tempdb size** | [32 GB per vCore](resource-limits-vcore-single-databases.md), up to 2,560 GB |Up to 4 TB - [limited by reserved storage size](../managed-instance/resource-limits.md#service-tier-characteristics) |
 | **Log write throughput** | Up to 100mb/sec | [4 MB/s per vCore (max 48 MB/s)](../managed-instance/resource-limits.md#service-tier-characteristics) |
-| **Availability** | [Default SLA](https://azure.microsoft.com/support/legal/sla/azure-sql-database/) <br> 99.995% SLA with [zone redundancy](high-availability-sla.md#premium-and-business-critical-service-tier-zone-redundant-availability) | [Default SLA](https://azure.microsoft.com/support/legal/sla/azure-sql-sql-managed-instance/)|
+| **Availability** | [Default SLA](https://azure.microsoft.com/support/legal/sla/azure-sql-database/) <br> 99.995% SLA with [zone redundancy](high-availability-sla.md#zone-redundant-availability) | [Default SLA](https://azure.microsoft.com/support/legal/sla/azure-sql-sql-managed-instance/)|
 | **Backups** | A choice of locally-redundant (LRS), zone-redundant (ZRS), or geo-redundant (GRS) storage <br/> 1-35 days (7 days by default) retention, with up to 10 years of long-term retention available |A choice of locally-redundant (LRS), zone-redundant (ZRS), geo-redundant (GRS) or geo-zone-redundant (GZRS) storage <br/> 1-35 days (7 days by default) retention, with up to 10 years of long-term retention available| 
 | [**Read-only replicas**](read-scale-out.md) |Read scale with 1-4 high availability replicas or 1-30 [named replicas](service-tier-hyperscale-replicas.md#named-replica)  <br> 0 - 4 [geo-replicas](active-geo-replication-overview.md) |1 built-in high availability replica is readable <br> 0 - 1 geo-replicas using [auto-failover groups](../managed-instance/auto-failover-group-sql-mi.md)  | 
 | **Discount models** |[Reserved instances](reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions|[Reserved instances](reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions | 

@@ -721,3 +721,5 @@ After you have tried using the [!INCLUDE [ssnoversion-md](../includes/ssnoversio
 - [Troubleshoot SQL Server Linux containers](sql-server-linux-docker-container-troubleshooting.md).
 
 Also, check out the [mssql-docker GitHub repository](https://github.com/microsoft/mssql-docker) for resources, feedback, and known issues.
+
+[!INCLUDE [contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

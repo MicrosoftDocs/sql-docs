@@ -2,7 +2,7 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 02/17/2023
+ms.date: 03/22/2023
 ms.topic: include
 ---
 | Error| Severity | Event logged | Description|
@@ -692,7 +692,7 @@ ms.topic: include
 | 21796 | 16 | No | The property "xactsetjobinterval" must be assigned a value greater than or equal to 0. |
 | 21797 | 16 | No | Cannot create the agent job. '%s' must be a valid Windows login in the form : 'MACHINE\Login' or 'DOMAIN\Login'. See the documentation for '%s'. |
 | 21798 | 16 | No | Cannot execute the replication administrative procedure. The '%s' agent job must be added through '%s' before continuing. See the documentation for '%s'. |
-| 21799 | 16 | No | The %s agent for Publisher (%s), database (%s), publication (%s) cannnot be found. Create the agent with the appropriate procedure: sp_addpublication_snapshot, sp_addlogreader_agent, or sp_addqreader_agent. |
+| 21799 | 16 | No | The %s agent for Publisher (%s), database (%s), publication (%s) cannot be found. Create the agent with the appropriate procedure: sp_addpublication_snapshot, sp_addlogreader_agent, or sp_addqreader_agent. |
 | 21800 | 16 | No | The common generation watermark is invalid at this replica since it does not exist or metadata for changes not yet propagated may have been cleaned up. |
 | 21801 | 16 | No | The stored procedure sp_createagentparameter failed to add one or more parameters to the system table msdb.dbo.MSagentparameterlist. Check for any errors returned by sp_createagentparameter and errors returned by SQL Server during execution of sp_createagentparameter. |
 | 21802 | 16 | No | The agent profile creation process cannot validate the specified agent parameter value. '%s' is not a valid value for the '%s' parameter. The value must be an integer less than or equal to '%d'. Verify that replication is installed properly. |
@@ -765,7 +765,7 @@ ms.topic: include
 | [21871](../mssqlserver-21871-database-engine-error.md) | 16 | No | Publisher %s of database %s has not been redirected. |
 | 21872 | 16 | No | The availability group associated with Virtual Network Name '%s' has no replicas. |
 | 21873 | 16 | No | You are not authorized to run the stored procedure %s. |
-| 21874 | 16 | No | The stored procedure %s must be run from a distirbution database. The current database %s is not a distribution database. |
+| 21874 | 16 | No | The stored procedure %s must be run from a distribution database. The current database %s is not a distribution database. |
 | 21875 | 16 | No | The parameters @original_publisher and @publisher_db to stored procedure '%s' may not be NULL. |
 | 21876 | 16 | No | The distributor '%s' is not the distributor for original publisher '%s' and publisher database '%s'. |
 | 21877 | 16 | No | The original publisher '%s' for database '%s' is not a remote server for the distributor. |

@@ -19,10 +19,10 @@ helpviewer_keywords:
   - "removing views"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # DROP VIEW (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
   Removes one or more views from the current database. DROP VIEW can be executed against indexed views.  
   
@@ -37,7 +37,7 @@ DROP VIEW [ IF EXISTS ] [ schema_name . ] view_name [ ...,n ] [ ; ]
 ```  
 
 ```syntaxsql
--- Syntax for Azure Synapse Analytics
+-- Syntax for Azure Synapse Analytics and Microsoft Fabric
   
 DROP VIEW [ IF EXISTS ] [ schema_name . ] view_name [ ; ]  
 ```  

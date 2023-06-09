@@ -17,9 +17,11 @@ helpviewer_keywords:
   - "sys.fn_my_permissions function"
 dev_langs:
   - "TSQL"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # sys.fn_my_permissions (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
   Returns a list of the permissions effectively granted to the principal on a securable. A related function is [HAS_PERMS_BY_NAME](../../t-sql/functions/has-perms-by-name-transact-sql.md).  
   
@@ -27,8 +29,7 @@ dev_langs:
   
 ## Syntax  
   
-```  
-  
+```syntaxsql  
 fn_my_permissions ( securable , 'securable_class' )  
 ```  
   
@@ -65,7 +66,7 @@ fn_my_permissions ( securable , 'securable_class' )
   
  The following query will return a list of built-in securable classes:  
   
-```  
+```sql
 SELECT DISTINCT class_desc FROM fn_builtin_permissions(default)  
     ORDER BY class_desc;  
 GO  
@@ -82,7 +83,7 @@ GO
 ### A. Listing effective permissions on the server  
  The following example returns a list of the effective permissions of the caller on the server.  
   
-```  
+```sql
 SELECT * FROM fn_my_permissions(NULL, 'SERVER');  
 GO  
 ```  
@@ -90,7 +91,7 @@ GO
 ### B. Listing effective permissions on the database  
  The following example returns a list of the effective permissions of the caller on the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 SELECT * FROM fn_my_permissions (NULL, 'DATABASE');  
 GO  
@@ -99,7 +100,7 @@ GO
 ### C. Listing effective permissions on a view  
  The following example returns a list of the effective permissions of the caller on the `vIndividualCustomer` view in the `Sales` schema of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 SELECT * FROM fn_my_permissions('Sales.vIndividualCustomer', 'OBJECT')   
     ORDER BY subentity_name, permission_name ;   
@@ -109,7 +110,7 @@ GO
 ### D. Listing effective permissions of another user  
  The following example returns a list of the effective permissions of database user `Wanida` on the `Employee` table in the `HumanResources` schema of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. The caller requires IMPERSONATE permission on user `Wanida`.  
   
-```  
+```sql
 EXECUTE AS USER = 'Wanida';  
 SELECT * FROM fn_my_permissions('HumanResources.Employee', 'OBJECT')   
     ORDER BY subentity_name, permission_name ;    
@@ -120,7 +121,7 @@ GO
 ### E. Listing effective permissions on a certificate  
  The following example returns a list of the effective permissions of the caller on a certificate named `Shipping47` in the current database.  
   
-```  
+```sql
 SELECT * FROM fn_my_permissions('Shipping47', 'CERTIFICATE');  
 GO  
 ```  
@@ -128,7 +129,7 @@ GO
 ### F. Listing effective permissions on an XML Schema Collection  
  The following example returns a list of the effective permissions of the caller on an XML Schema Collection named `ProductDescriptionSchemaCollection` in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 SELECT * FROM fn_my_permissions('ProductDescriptionSchemaCollection',  
     'XML SCHEMA COLLECTION');  
@@ -138,7 +139,7 @@ GO
 ### G. Listing effective permissions on a database user  
  The following example returns a list of the effective permissions of the caller on a user named `MalikAr` in the current database.  
   
-```  
+```sql
 SELECT * FROM fn_my_permissions('MalikAr', 'USER');  
 GO  
 ```  
@@ -146,7 +147,7 @@ GO
 ### H. Listing effective permissions of another login  
  The following example returns a list of the effective permissions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login `WanidaBenshoof` on the `Employee` table in the `HumanResources` schema of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. The caller requires IMPERSONATE permission on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login `WanidaBenshoof`.  
   
-```  
+```sql
 EXECUTE AS LOGIN = 'WanidaBenshoof';  
 SELECT * FROM fn_my_permissions('AdventureWorks2012.HumanResources.Employee', 'OBJECT')   
     ORDER BY subentity_name, permission_name ;    

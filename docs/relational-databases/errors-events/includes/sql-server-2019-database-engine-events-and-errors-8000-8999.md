@@ -2,7 +2,7 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 02/17/2023
+ms.date: 04/21/2023
 ms.topic: include
 ---
 | Error| Severity | Event logged | Description|
@@ -322,7 +322,7 @@ ms.topic: include
 | 8537 | 16 | No | This transaction was aborted by Kernel Transaction Manager (KTM). |
 | 8538 | 16 | No | The current isolation level is not supported by the FILESTREAM 0x%x. |
 | 8539 | 10 | Yes | The distributed transaction with UOW %ls was forced to commit. MS DTC became temporarily unavailable and forced heuristic resolution of the transaction. This is an informational message only. No user action is required. |
-| 8540 | 10 | Yes | The distributed transaction with UOW %ls was forced to rollback. |
+| 8540 | 10 | Yes | The distributed transaction with UOW %ls was forced to roll back. |
 | 8541 | 10 | Yes | System process ID %d tried to terminate the distributed transaction with Unit of Work ID %ls. This message occurs when the client executes a KILL statement on the distributed transaction. |
 | 8542 | 10 | Yes | Spid %d tried to commit the distributed transaction with UOW %ls. |
 | 8543 | 10 | Yes | Unable to commit a prepared transaction from the Microsoft Distributed Transaction Coordinator (MS DTC). Shutting down server to initiate resource manager (RM) recovery. When the RM recovers, it will query the transaction manager about the outcome of the in-doubt transaction, and commit or roll back accordingly. |

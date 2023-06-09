@@ -23,7 +23,7 @@ For hardware and software requirements, see [SQL Server 2022: Hardware and softw
 
 ## Feature notes
 
-This section identifies known issues you may experience with this product.
+This section identifies known issues you may experience with this product. You may also review the Known Issues section of the [Cumulative Update](/troubleshoot/sql/releases/sqlserver-2022/build-versions) articles.
 
 ### SQL Setup
 
@@ -76,6 +76,10 @@ Windows Server 2022 was released with VCRuntime version 14.28.29914.
 
 [Query Store for secondary replicas](../relational-databases/performance/query-store-for-secondary-replicas.md) is available for preview. It isn't available for use in production environments.
 
+### Known issues with Parameter Sensitive Plan optimization
+
+If you are using the [Parameter Sensitive Plan optimization](../relational-databases/performance/parameter-sensitive-plan-optimization.md) feature, please review the guidance and mitigation for known issues that  can results in exceptions during query store cleanup process. More information and details is available at [Access violation exception occurs in Query Store in SQL Server 2022 under certain conditions](../relational-databases/performance/parameter-sensitive-plan-optimization.md#access-violation-exception-occurs-in-query-store-in-sql-server-2022-under-certain-conditions).
+
 ### RPC calls fail with `Encrypt=Strict`
 
 An issue in the TDS 8.0 protocol implementation may cause RPC calls to fail if the `Encrypt` option is set to `Strict` in your connection string, for example when running the `sp_who` system stored procedure.
@@ -88,9 +92,15 @@ An issue in the TDS 8.0 protocol implementation may cause RPC calls to fail if t
 
 **Applies to**: [!INCLUDE[sssql22-md](../includes/sssql22-md.md)] RTM
 
-The fix for this issue will be released in Cumulative Update 1 for [!INCLUDE [sssql22-md](../includes/sssql22-md.md)].
+The fix for this issue is released in [Cumulative Update 1](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate1#1993393) for [!INCLUDE [sssql22-md](../includes/sssql22-md.md)].
 
 To work around this issue, you can use Trace Flag 12324 as either as startup trace flag, or at the session level (using `DBCC TRACEON`).
+
+### SQL Server Agent errors when using contained Availability Group
+
+You might encounter error messages in SQL Server Agent or Database Mail when using contained Availability Group feature of [!INCLUDE [sssql22-md](../includes/sssql22-md.md)].
+
+Review the article [Errors occur after you apply a cumulative update to an instance of SQL Server that has a contained availability group](/troubleshoot/sql/releases/sqlserver-2022/errors-apply-cu-contained-availability-group) for details on addressing the issue.
 
 ### SQL Server services are set to Automatic (Delayed Start) start mode
 

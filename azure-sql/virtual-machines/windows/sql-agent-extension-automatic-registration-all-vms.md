@@ -64,6 +64,9 @@ Once automatic registration is enabled, SQL Server VMs are registered if they:
 - Have [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads) installed.
 - Are deployed to the public or Azure Government cloud. Other clouds aren't currently supported. 
 
+> [!NOTE]
+> Automatic registration is supported for Ubuntu Linux VMs in Azure. 
+
 ## Enable automatic registration 
 
 To enable automatic registration of your SQL Server VMs in the Azure portal, follow these steps:

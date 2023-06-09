@@ -4,7 +4,7 @@ titleSuffix: SQL Server, Azure SQL Database, Azure SQL Managed Instance
 description: "With partitioned tabled and indexes, the data can be divided into units that may be spread across more than one filegroup in a database or stored in a single filegroup."
 author: VanMSFT
 ms.author: vanto
-ms.date: "8/17/2022"
+ms.date: "04/18/2023"
 ms.service: sql
 ms.topic: conceptual
 helpviewer_keywords:
@@ -212,7 +212,7 @@ Learn more about partitioned tables and index strategies in the following articl
 - [Scaling out with Azure SQL Database](/azure/azure-sql/database/elastic-scale-introduction)
 - [Partitioning tables in dedicated SQL pool](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-partition)
 - [SQL Server and Azure SQL index architecture and design guide](../sql-server-index-design-guide.md)
-- [Partitioned Table and Index Strategies Using SQL Server 2008](https://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)    
+- [Partitioned Table and Index Strategies Using SQL Server 2008](https://download.microsoft.com/download/D/B/D/DBDE7972-1EB9-470A-BA18-58849DB3EB3B/PartTableAndIndexStrat.docx)    
 - [How to Implement an Automatic Sliding Window](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)    
 - [Bulk Loading into a Partitioned Table](/previous-versions/sql/sql-server-2005/administrator/cc966380(v=technet.10))    
 - [Project REAL: Data Lifecycle--Partitioning](/previous-versions/sql/sql-server-2005/administrator/cc966424(v=technet.10))    

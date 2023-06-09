@@ -2,7 +2,7 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 02/17/2023
+ms.date: 03/22/2023
 ms.topic: include
 ---
 | Error| Severity | Event logged | Description|
@@ -545,7 +545,7 @@ ms.topic: include
 | 15715 | 16 | Yes | Setting Automatic Tuning option %.\*ls to DEFAULT is not allowed while in CUSTOM database tuning mode for database %.\*ls. |
 | 15716 | 15 | Yes | Only one Automatic Tuning option can be given in ALTER DATABASE statement. |
 | 15717 | 16 | Yes | Requested automatic tuning configuration is not supported or parameters are invalid. |
-| 15718 | 16 | Yes | Automatic tuning dependancy not met (%ls). |
+| 15718 | 16 | Yes | Automatic tuning dependency not met (%ls). |
 | 15719 | 14 | Yes | User does not have necessary permissions (%ls) on current database to execute the stored procedure. |
 | 15720 | 16 | No | Setting Automatic Tuning option to DEFAULT is not allowed while in CUSTOM server tuning mode for server %.\*ls. |
 | 15801 | 16 | No | Initialization of external distributed computation library failed. |

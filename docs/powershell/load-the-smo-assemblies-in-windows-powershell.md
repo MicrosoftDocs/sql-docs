@@ -12,7 +12,7 @@ ms.topic: conceptual
 
 # Load the SMO Assemblies in Windows PowerShell
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This article describes how to load the SQL Server Management Object (SMO) assemblies in Windows PowerShell scripts that don't use the SQL Server PowerShell provider.  
 

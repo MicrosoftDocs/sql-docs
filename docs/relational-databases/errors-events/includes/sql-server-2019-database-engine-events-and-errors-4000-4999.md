@@ -2,7 +2,7 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 02/17/2023
+ms.date: 03/22/2023
 ms.topic: include
 ---
 | Error| Severity | Event logged | Description|
@@ -250,7 +250,7 @@ ms.topic: include
 | 4454 | 16 | No | Cannot update the partitioned view "%.\*ls" because the partitioning columns of its member tables have mismatched types. |
 | 4456 | 16 | No | The partitioned view "%.\*ls" is not updatable because one or more of the non-partitioning columns of its member tables have mismatched types. |
 | 4457 | 16 | No | The attempted insert or update of the partitioned view failed because the value of the partitioning column does not belong to any of the partitions. |
-| 4458 | 16 | No | The partitioned view "%.\*ls" is not updatable because one or more of the partioned tables is a Hekaton table and the partitioned column is being updated. |
+| 4458 | 16 | No | The partitioned view "%.\*ls" is not updatable because one or more of the partitioned tables is a Hekaton table and the partitioned column is being updated. |
 | 4502 | 16 | No | View or function '%.\*ls' has more column names specified than columns defined. |
 | 4503 | 16 | No | Could not create schemabound %S_MSG '%.\*ls' because it references an object in another database. |
 | 4504 | 16 | No | Could not create %S_MSG '%.\*ls' because CLR type '%.\*ls' does not exist in the target database '%.\*ls'. |

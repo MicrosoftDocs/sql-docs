@@ -1,5 +1,5 @@
 ---
-title: "remote admin connections Server Configuration Option"
+title: "remote admin connections (server configuration option)"
 description: "Learn how applications on remote computers can use the DAC. See how to use the remote admin connections option with sp_configure to turn on this capability."
 author: rwestMSFT
 ms.author: randolphwest
@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "remote admin connections option"
   - "dedicated administrator connections [SQL Server]"
 ---
-# remote admin connections server configuration option
+# remote admin connections (server configuration option)
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 

@@ -8,6 +8,7 @@ ms.reviewer: vanto
 ms.date: 10/17/2022
 ms.service: sql-database
 ms.subservice: security
+ms.custom: devx-track-azurecli
 ms.topic: how-to
 ---
 # Create server configured with user-assigned managed identity and customer-managed TDE

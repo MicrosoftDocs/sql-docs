@@ -2,10 +2,9 @@
 title: Install SQL Server command-line tools on Linux
 titleSuffix: SQL Server
 description: Learn how to install the SQL Server command-line tools, Microsoft ODBC drivers, and their dependencies on Linux.
-author: VanMSFT
-ms.author: vanto
-ms.reviewer: randolphwest
-ms.date: 01/19/2023
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: 05/30/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -79,15 +78,15 @@ Use the following steps to install the **mssql-tools** on Red Hat Enterprise Lin
    > sudo yum update mssql-tools
    > ```
 
-1. **Optional**: Add `/opt/mssql-tools/bin/` to your **PATH** environment variable in a bash shell.
+1. **Optional**: Add `/opt/mssql-tools/bin/` to your `PATH` environment variable in a bash shell.
 
-   To make **sqlcmd/bcp** accessible from the bash shell for login sessions, modify your **PATH** in the **~/.bash_profile** file with the following command:
+   To make **sqlcmd/bcp** accessible from the bash shell for login sessions, modify your `PATH` in the `~/.bash_profile` file with the following command:
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
    ```
 
-   To make **sqlcmd/bcp** accessible from the bash shell for interactive/non-login sessions, modify the **PATH** in the **~/.bashrc** file with the following command:
+   To make **sqlcmd/bcp** accessible from the bash shell for interactive/non-login sessions, modify the `PATH` in the `~/.bashrc` file with the following command:
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
@@ -121,15 +120,15 @@ Use the following steps to install the **mssql-tools** on SUSE Linux Enterprise 
    > sudo zypper update mssql-tools
    > ```
 
-1. **Optional**: Add `/opt/mssql-tools/bin/` to your **PATH** environment variable in a bash shell.
+1. **Optional**: Add `/opt/mssql-tools/bin/` to your `PATH` environment variable in a bash shell.
 
-   To make **sqlcmd/bcp** accessible from the bash shell for login sessions, modify your **PATH** in the **~/.bash_profile** file with the following command:
+   To make **sqlcmd/bcp** accessible from the bash shell for login sessions, modify your `PATH` in the `~/.bash_profile` file with the following command:
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
    ```
 
-   To make **sqlcmd/bcp** accessible from the bash shell for interactive/non-login sessions, modify the **PATH** in the **~/.bashrc** file with the following command:
+   To make **sqlcmd** or **bcp** accessible from the bash shell for interactive/non-login sessions, modify the `PATH` in the `~/.bashrc` file with the following command:
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
@@ -144,8 +143,8 @@ Use the following steps to install the **mssql-tools** on Ubuntu.
 
 > [!NOTE]  
 >  
-> - Ubuntu 18.04 is supported starting with SQL Server 2019 CU3.
-> - Ubuntu 20.04 is supported starting with SQL Server 2019 CU10.
+> - Ubuntu 18.04 is supported starting with [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] CU 3.
+> - Ubuntu 20.04 is supported starting with [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] CU 10.
 > - If you are using Ubuntu 16.04 or Ubuntu 18.04, change the repository path in step 2 below from `/ubuntu/20.04` to `/ubuntu/16.04` or `/ubuntu/18.04`.
 
 1. Import the public repository GPG keys.
@@ -175,15 +174,15 @@ Use the following steps to install the **mssql-tools** on Ubuntu.
    > sudo apt-get install mssql-tools  
    > ```
 
-1. **Optional**: Add `/opt/mssql-tools/bin/` to your **PATH** environment variable in a bash shell.
+1. **Optional**: Add `/opt/mssql-tools/bin/` to your `PATH` environment variable in a bash shell.
 
-   To make **sqlcmd/bcp** accessible from the bash shell for login sessions, modify your **PATH** in the **~/.bash_profile** file with the following command:
+   To make **sqlcmd/bcp** accessible from the bash shell for login sessions, modify your `PATH` in the `~/.bash_profile` file with the following command:
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
    ```
 
-   To make **sqlcmd/bcp** accessible from the bash shell for interactive/non-login sessions, modify the **PATH** in the **~/.bashrc** file with the following command:
+   To make **sqlcmd/bcp** accessible from the bash shell for interactive/non-login sessions, modify the `PATH` in the `~/.bashrc` file with the following command:
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
@@ -215,7 +214,7 @@ brew install mssql-tools
 
 If you [run SQL Server in a Docker container](quickstart-install-connect-docker.md), the SQL Server command-line tools are already included in the SQL Server Linux container image. If you attach to a running container with an interactive bash shell, you can run the tools locally.
 
-If you are creating a container with the SQL Server command-line tools, it is recommended to add `ACCEPT_EULA=Y` to the installation command to silently accept the EULA and not interrupt image creation.  An example final command as part of installation on an Ubuntu-based image is:
+If you are creating a container with the SQL Server command-line tools, it is recommended to add `ACCEPT_EULA=Y` to the installation command to silently accept the EULA, and not interrupt image creation.  An example final command as part of installation on an Ubuntu-based image is:
 
 ```bash
 sudo ACCEPT_EULA=Y apt-get install mssql-tools unixodbc-dev
@@ -275,7 +274,7 @@ sudo ACCEPT_EULA=Y apt-get install mssql-tools unixodbc-dev
 
 ### [Ubuntu](#tab/ubuntu-offline)
 
-1. First, locate and copy the **mssql-tools** package for your Linux distribution. For Ubuntu 20.04, this is located at [https://packages.microsoft.com/ubuntu/20.04/prod/pool/main/m/mssql-tools](https://packages.microsoft.com/ubuntu/20.04/prod/pool/main/m/mssql-tools) |
+1. First, locate and copy the **mssql-tools** package for your Linux distribution. For Ubuntu 20.04, this is located at [https://packages.microsoft.com/ubuntu/20.04/prod/pool/main/m/mssql-tools](https://packages.microsoft.com/ubuntu/20.04/prod/pool/main/m/mssql-tools).
 
 1. Also locate and copy the **msodbcsql** package, which is a dependency. The **msodbcsql** package also has a dependency on **unixodbc-dev**. For Ubuntu, the **msodbcsql** packages are located at [**msodbcsql**](https://packages.microsoft.com/ubuntu/20.04/prod/pool/main/m/msodbcsql17/), and [**unixodbc-dev**](https://packages.microsoft.com/ubuntu/20.04/prod/pool/main/u/unixodbc/).
 
@@ -318,3 +317,5 @@ For an example of how to use **sqlcmd** to connect to SQL Server and create a da
 - [Run on Docker](quickstart-install-connect-docker.md)
 
 For an example of how to use **bcp** to bulk import and export data, see [Bulk copy data to SQL Server on Linux](sql-server-linux-migrate-bcp.md).
+
+[!INCLUDE [contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

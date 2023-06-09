@@ -277,7 +277,7 @@ Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. 
 | Asia/Beirut | Middle East Standard Time |
 | Asia/Bishkek | Central Asia Standard Time |
 | Asia/Brunei | Singapore Standard Time |
-| Asia/Calcutta | India Standard Time |
+| Asia/Kolkata | India Standard Time |
 | Asia/Chita | Transbaikal Standard Time |
 | Asia/Choibalsan | Ulaanbaatar Standard Time |
 | Asia/Colombo | Sri Lanka Standard Time |
@@ -307,7 +307,7 @@ Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. 
 | Asia/Kuala_Lumpur | Singapore Standard Time |
 | Asia/Kuching | Singapore Standard Time |
 | Asia/Kuwait | Arab Standard Time |
-| Asia/Macau | China Standard Time |
+| Asia/Macao | China Standard Time |
 | Asia/Magadan | Magadan Standard Time |
 | Asia/Makassar | Singapore Standard Time |
 | Asia/Manila | Singapore Standard Time |
@@ -323,9 +323,9 @@ Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. 
 | Asia/Qatar | Arab Standard Time |
 | Asia/Qostanay | Central Asia Standard Time |
 | Asia/Qyzylorda | Qyzylorda Standard Time |
-| Asia/Rangoon | Myanmar Standard Time |
+| Asia/Yangon | Myanmar Standard Time |
 | Asia/Riyadh | Arab Standard Time |
-| Asia/Saigon | SE Asia Standard Time |
+| Asia/Ho_Chi_Minh | SE Asia Standard Time |
 | Asia/Sakhalin | Sakhalin Standard Time |
 | Asia/Samarkand | West Asia Standard Time |
 | Asia/Seoul | Korea Standard Time |
@@ -422,7 +422,7 @@ Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. 
 | Europe/Istanbul | Turkey Standard Time |
 | Europe/Jersey | GMT Standard Time |
 | Europe/Kaliningrad | Kaliningrad Standard Time |
-| Europe/Kiev | FLE Standard Time |
+| Europe/Kyiv | FLE Standard Time |
 | Europe/Kirov | Russian Standard Time |
 | Europe/Lisbon | GMT Standard Time |
 | Europe/Ljubljana | Central Europe Standard Time |
@@ -760,7 +760,7 @@ Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. 
 | Asia/Famagusta | GTB Standard Time |
 | Asia/Gaza | West Bank Standard Time |
 | Asia/Hebron | West Bank Standard Time |
-| Asia/Ho Chi Minh City | SE Asia Standard Time |
+| Asia/Ho_Chi_Minh | SE Asia Standard Time |
 | Asia/Hong_Kong | China Standard Time |
 | Asia/Hovd | W. Mongolia Standard Time |
 | Asia/Irkutsk | North Asia East Standard Time |
@@ -812,7 +812,7 @@ Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. 
 | Asia/Vientiane | SE Asia Standard Time |
 | Asia/Vladivostok | Vladivostok Standard Time |
 | Asia/Yakutsk | Yakutsk Standard Time |
-| Asia/Yangon (Rangoon) | Myanmar Standard Time |
+| Asia/Yangon | Myanmar Standard Time |
 | Asia/Yekaterinburg | Ekaterinburg Standard Time |
 | Asia/Yerevan | Caucasus Standard Time |
 | Atlantic/Azores | Azores Standard Time |
@@ -885,7 +885,7 @@ Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. 
 | Europe/Guernsey | GMT Standard Time |
 | Europe/Helsinki | FLE Standard Time |
 | Europe/Isle_of_Man | GMT Standard Time |
-| Europe/Istanbul | Türkiye Standard Time |
+| Europe/Istanbul | Turkey Standard Time |
 | Europe/Jersey | GMT Standard Time |
 | Europe/Kaliningrad | Kaliningrad Standard Time |
 | Europe/Kyiv | FLE Standard Time |

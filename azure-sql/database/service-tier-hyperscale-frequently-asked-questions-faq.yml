@@ -11,7 +11,7 @@ metadata:
   author: dimitri-furman
   ms.author: dfurman
   ms.reviewer: wiassaf, mathoma
-  ms.date: 02/14/2023
+  ms.date: 05/02/2023
 title: Azure SQL Database Hyperscale FAQ
 summary: |
   [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -33,7 +33,7 @@ sections:
       - question: |
           What resource types and purchasing models support Hyperscale?
         answer: |
-          The Hyperscale service tier is only available for single databases using the vCore-based purchasing model in Azure SQL Database.  
+          The Hyperscale service tier is only available for single databases using the vCore-based purchasing model in Azure SQL Database. It is not available in the DTU-based purchasing model.
 
       - question: |
           How does the Hyperscale service tier differ from the General Purpose and Business Critical service tiers?

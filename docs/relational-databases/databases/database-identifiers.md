@@ -17,11 +17,12 @@ helpviewer_keywords:
   - "database objects [SQL Server], names"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # Database Identifiers
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW Fabric SE Fabric DW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
+
   The database object name is referred to as its identifier. Everything in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can have an identifier. Servers, databases, and database objects, such as tables, views, columns, indexes, triggers, procedures, constraints, and rules, can have identifiers. Identifiers are required for most objects, but are optional for some objects such as constraints.
 
  An object identifier is created when the object is defined. The identifier is then used to reference the object. For example, the following statement creates a table with the identifier `TableX`, and two columns with the identifiers `KeyCol` and `Description`:
@@ -70,13 +71,13 @@ USE AdventureWorks
 GO
 CREATE TABLE [SalesOrderDetail Table] --Identifier contains a space and uses a reserved keyword.
 (
-	[Order] [int] NOT NULL,
-	[SalesOrderDetailID] [int] IDENTITY(1,1) NOT NULL,
-	[OrderQty] [smallint] NOT NULL,
-	[ProductID] [int] NOT NULL,
-	[UnitPrice] [money] NOT NULL,
-	[UnitPriceDiscount] [money] NOT NULL,
-	[ModifiedDate] [datetime] NOT NULL,
+    [Order] [int] NOT NULL,
+    [SalesOrderDetailID] [int] IDENTITY(1,1) NOT NULL,
+    [OrderQty] [smallint] NOT NULL,
+    [ProductID] [int] NOT NULL,
+    [UnitPrice] [money] NOT NULL,
+    [UnitPriceDiscount] [money] NOT NULL,
+    [ModifiedDate] [datetime] NOT NULL,
   CONSTRAINT [PK_SalesOrderDetail_Order_SalesOrderDetailID] PRIMARY KEY CLUSTERED 
   ([Order] ASC, [SalesOrderDetailID] ASC)
 );

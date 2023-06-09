@@ -6,6 +6,7 @@ ms.author: "lingxl"
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: integration-services
+ms.custom: devx-track-arm-template
 ms.topic: conceptual
 f1_keywords:
   - "SQL13.DTS.DESIGNER.AFPARMCM.F1"

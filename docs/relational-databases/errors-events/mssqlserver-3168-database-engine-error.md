@@ -66,7 +66,7 @@ To resolve the issue, follow these steps:
    - SoftwareVersionBuild: 4236
 In this case, the source SQL Server version when the backup was taken is 15.0.4236.
 
-1. Use either the [SQL Server complete version list tables](/troubleshoot/sql/releases/download-and-install-latest-updates) or the [Excel builds spreadsheet](https://download.microsoft.com/download/d/6/5/d6583d78-9956-45c1-901d-eff8b5270896/SQL%20Server%20Builds%20V4.xlsx) to determine the version of SQL Server that the build corresponds to. For example, 15.0.4236 maps to SQL Server 2019 CU16+GDR (Version A).
+1. Use either the [SQL Server complete version list tables](/troubleshoot/sql/releases/download-and-install-latest-updates) or the [Excel builds spreadsheet](https://download.microsoft.com/download/d/3/e/d3e28f3d-6a4f-47ce-aaa5-9d74c5590ed6/SQLServerBuilds.xlsx) to determine the version of SQL Server that the build corresponds to. For example, 15.0.4236 maps to SQL Server 2019 CU16+GDR (Version A).
 
 1. Use one of the following options:
 

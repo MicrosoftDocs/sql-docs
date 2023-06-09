@@ -4,7 +4,7 @@ description: Learn about the known issues and how to troubleshoot errors with th
 author: adbadram
 ms.author: adbadram
 ms.reviewer: mathoma, randolphwest
-ms.date: 03/15/2023
+ms.date: 04/05/2023
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to
@@ -23,11 +23,26 @@ To avoid errors due to unsupported options or limitations, verify the [prerequis
 
 If you repair, or reinstall the SQL IaaS Agent extension, your setting won't be preserved, other than licensing changes. If you've repaired or reinstalled the extension, you'll have to reconfigure automated backup, automated patching, and any other services you had configured prior to the repair or reinstall. 
 
+## Repair extension
+
+It's possible for your SQL IaaS Agent extension to be in a failed state. Use the Azure portal to repair the SQL IaaS Agent extension. 
+
+To repair the extension with the Azure portal:  
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
+1. Go to your [SQL virtual machines](manage-sql-vm-portal.md) resource.
+1. Select your SQL Server VM from the list. If your SQL Server VM isn't listed here, it likely hasn't been registered with the SQL IaaS Agent extension.
+1. Select **SQL IaaS Agent Extension Settings** under **Help**. 
+1. If your provisioning state shows as **Failed**, choose **Repair** to repair the extension. If your state is **Succeeded** you can check the box next to **Force repair** to repair the extension regardless of state. 
+
+   :::image type="content" source="media/sql-agent-extension-troubleshoot-known-issues/repair-extension.png" alt-text="Screenshot of the SQL IaaS Agent extension settings page of the SQL virtual machines extension in the Azure portal showing where to repair the extension.":::   
+
+
 ## Not valid state for management
 
-[Repair the extension](sql-agent-extension-manually-register-single-vm.md#repair-extension) if you see the following error message:
+[Repair the extension](#repair-extension) if you see the following error message:
 
-`The SQL virtual machine resource is not in a valid state for management`
+`The SQL virtual machines resource is not in a valid state for management`
 
 ## Underlying virtual machine is invalid
 
@@ -38,7 +53,7 @@ If you see the following error message:
 Consider the following:
 
 - The SQL VM may be stopped, deallocated, in a failed state, or not found. Validate the underlying virtual machine is running.
-- Your SQL IaaS Agent extension may be in a failed state. [Repair the extension](sql-agent-extension-manually-register-single-vm.md#repair-extension).
+- Your SQL IaaS Agent extension may be in a failed state. [Repair the extension](#repair-extension).
 
 [Unregister your SQL VM from the extension](sql-agent-extension-manually-register-single-vm.md#unregister-from-extension) and then register the SQL VM with the extension again if you did any of the following:
 
@@ -49,11 +64,11 @@ Consider the following:
 
 ## Provisioning failed 
 
-[Repair the extension](sql-agent-extension-manually-register-single-vm.md#repair-extension) if the SQL IaaS Agent extension status shows as **Provisioning failed** in the Azure portal.
+[Repair the extension](#repair-extension) if the SQL IaaS Agent extension status shows as **Provisioning failed** in the Azure portal.
 
 ## SQL VM resource unavailable in portal
 
-If the SQL IaaS Agent extension is installed, and the VM is online, but the SQL VM resource is unavailable in the Azure portal, verify that your SQL Server and SQL Browser service are started within the VM. If this doesn't resolve the issue, [repair the extension](sql-agent-extension-manually-register-single-vm.md#repair-extension).
+If the SQL IaaS Agent extension is installed, and the VM is online, but the SQL VM resource is unavailable in the Azure portal, verify that your SQL Server and SQL Browser service are started within the VM. If this doesn't resolve the issue, [repair the extension](#repair-extension).
 
 ## Features are grayed out
 
@@ -103,7 +118,9 @@ Your SQL IaaS Agent extension may get stuck in a transitioning state in the foll
 
 ## Fails to install on domain controller
 
-Registering your SQL Server instance installed to your domain controller with the SQL IaaS Agent extension isn't supported. Registering with the extension creates the user `NT Service\SQLIaaSExtension` and since this user can't be created on the domain controller, registering this VM with the SQL IaaS agent isn't supported.
+Registering your SQL Server instance installed to your domain controller with the SQL IaaS Agent extension isn't supported. Registering with the extension creates the user `NT Service\SQLIaaSExtension` and since this user can't be created on the domain controller, registering this VM with the SQL IaaS Agent isn't supported.
+
+
 
 ## Next steps
 

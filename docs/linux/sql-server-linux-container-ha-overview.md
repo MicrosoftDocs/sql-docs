@@ -1,8 +1,8 @@
 ---
 title: High availability for SQL Server containers
 description: Learn about high availability for SQL Server containers. Also learn about deploying a container with SQL server on Kubernetes.
-author: VanMSFT
-ms.author: vanto
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: vanto, randolphwest
 ms.date: 05/26/2022
 ms.service: sql
@@ -32,11 +32,10 @@ In the preceding diagram, `mssql-server` is a SQL Server instance (container) in
 
 Kubernetes orchestrates the resources in the cluster. When a node hosting a SQL Server instance container fails, it bootstraps a new container with a SQL Server instance and attaches it to the same persistent storage.
 
-SQL Server 2017 and later support containers on Kubernetes.
-
-To create a container in Kubernetes, see [Deploy a SQL Server container in Kubernetes](quickstart-sql-server-containers-kubernetes.md)
+SQL Server on Linux supports containers on Kubernetes, OpenShift, and D2Hi.
 
 ## Next steps
 
 - [Deploy SQL Server in Docker container](sql-server-linux-docker-container-deployment.md)
-- [Quickstart: Deploy a SQL Server container in Kubernetes](quickstart-sql-server-containers-kubernetes.md)
+- [Quickstart: Deploy a SQL Server container cluster on Azure](quickstart-sql-server-containers-azure.md)
+- [Tutorial: Set up a three node Always On availability group with DH2i DxEnterprise](/azure/azure-sql/virtual-machines/linux/dh2i-high-availability-tutorial)

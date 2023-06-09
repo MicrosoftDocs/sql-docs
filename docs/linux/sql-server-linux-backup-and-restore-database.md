@@ -1,8 +1,8 @@
 ---
 title: Backup and restore SQL Server databases on Linux
 description: Learn how to backup and restore SQL Server databases on Linux. Also learn how to backup and restore with SQL Server Management Studio (SSMS).
-author: VanMSFT
-ms.author: vanto
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: vanto
 ms.date: 03/31/2022
 ms.service: sql
@@ -109,3 +109,5 @@ The following steps walk you through restoring a database with SSMS.
 * [Back up a Transaction Log (SQL Server)](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)
 * [BACKUP (Transact-SQL)](../t-sql/statements/backup-transact-sql.md)
 * [SQL Server Backup to URL](../relational-databases/backup-restore/sql-server-backup-to-url.md)
+
+[!INCLUDE [contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

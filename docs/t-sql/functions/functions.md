@@ -17,11 +17,11 @@ helpviewer_keywords:
   - "functions [SQL Server]"
 dev_langs:
   - "TSQL"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current ||=fabric"
 ---
 # What are the SQL database functions?
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
 Learn about the categories of built-in functions you can use with SQL databases. You can use the built-in functions or create your own user-defined functions.
 
@@ -83,6 +83,10 @@ Functions that take a character string input and return a character string outpu
 Functions that take non-character inputs and return a character string use the default collation of the current database for the output.
 
 Functions that take multiple character string inputs and return a character string use the rules of collation precedence to set the collation of the output string. For more information, see [Collation Precedence &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md).
+
+## Limitations
+
+For information on limitations of function types and platforms, see [CREATE FUNCTION](../statements/create-function-transact-sql.md).
 
 ## See also
 

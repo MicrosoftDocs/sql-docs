@@ -4,7 +4,7 @@ description: This page describes some common DTU resource limits for elastic poo
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 04/13/2022
+ms.date: 05/19/2023
 ms.service: sql-database
 ms.subservice: elastic-pools
 ms.topic: reference
@@ -57,6 +57,7 @@ For the same number of DTUs, resources provided to an elastic pool may exceed th
 | Max In-Memory OLTP storage per pool (GB) | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
 | Max number DBs per pool <sup>1</sup> | 100 | 200 | 500 | 500 | 500 | 500 | 500 | 500 |
 | Max concurrent workers per pool <sup>2</sup> | 100 | 200 | 400 | 600 | 800 | 1600 | 2400 | 3200 |
+| Max concurrent logins per pool | 100 | 200 | 400 | 600 | 800 | 1600 | 2400 | 3200 |
 | Max concurrent external connections per pool <sup>3</sup> | 10 | 20 | 40 | 60 | 80 | 150 | 150 | 150 |
 | Max concurrent sessions per pool <sup>2</sup> | 30000 | 30000 | 30000 | 30000 |30000 | 30000 | 30000 | 30000 |
 | Min DTU per database choices | 0, 5 | 0, 5 | 0, 5 | 0, 5 | 0, 5 | 0, 5 | 0, 5 | 0, 5 |
@@ -78,6 +79,7 @@ For the same number of DTUs, resources provided to an elastic pool may exceed th
 | Max In-Memory OLTP storage per pool (GB) | N/A | N/A | N/A | N/A | N/A | N/A |
 | Max number DBs per pool <sup>2</sup> | 100 | 200 | 500 | 500 | 500 | 500 |
 | Max concurrent workers per pool <sup>3</sup> | 100 | 200 | 400 | 600 | 800 | 1600 |
+| Max concurrent logins per pool | 100 | 200 | 400 | 600 | 800 | 1600 |
 | Max concurrent external connections per pool <sup>4</sup> | 10 | 20 | 40 | 60 | 80 | 150 |
 | Max concurrent sessions per pool <sup>3</sup> | 30000 | 30000 | 30000 | 30000 | 30000 | 30000 |
 | Min DTU per database choices | 0, 10, 20, 50 | 0, 10, 20, 50, 100 | 0, 10, 20, 50, 100, 200 | 0, 10, 20, 50, 100, 200, 300 | 0, 10, 20, 50, 100, 200, 300, 400 | 0, 10, 20, 50, 100, 200, 300, 400, 800 |
@@ -101,6 +103,7 @@ For the same number of DTUs, resources provided to an elastic pool may exceed th
 | Max In-Memory OLTP storage per pool (GB) | N/A | N/A | N/A | N/A | N/A |
 | Max number DBs per pool <sup>2</sup> | 500 | 500 | 500 | 500 | 500 |
 | Max concurrent workers per pool <sup>3</sup> | 2400 | 3200 | 4000 | 5000 | 6000 |
+| Max concurrent logins per pool | 2400 | 3200 | 4000 | 5000 | 6000 |
 | Max concurrent external connections per pool <sup>4</sup> | 150 | 150 | 150 | 150 | 150 |
 | Max concurrent sessions per pool <sup>3</sup> | 30000 | 30000 | 30000 | 30000 | 30000 |
 | Min DTU per database choices | 0, 10, 20, 50, 100, 200, 300, 400, 800, 1200 | 0, 10, 20, 50, 100, 200, 300, 400, 800, 1200, 1600 | 0, 10, 20, 50, 100, 200, 300, 400, 800, 1200, 1600, 2000 | 0, 10, 20, 50, 100, 200, 300, 400, 800, 1200, 1600, 2000, 2500 | 0, 10, 20, 50, 100, 200, 300, 400, 800, 1200, 1600, 2000, 2500, 3000 |
@@ -124,6 +127,7 @@ For the same number of DTUs, resources provided to an elastic pool may exceed th
 | Max In-Memory OLTP storage per pool (GB) | 1 | 2 | 4 | 10 | 12 |
 | Max number DBs per pool <sup>2</sup> | 50 | 100 | 100 | 100 | 100 |
 | Max concurrent workers per pool (requests) <sup>3</sup> | 200 | 400 | 800 | 1600 | 2400 |
+| Max concurrent logins per pool | 200 | 400 | 800 | 1600 | 2400 |
 | Max concurrent external connections per pool <sup>4</sup> | 20 | 40 | 80 | 150 | 150 |
 | Max concurrent sessions per pool <sup>3</sup> | 30000 | 30000 | 30000 | 30000 | 30000 |
 | Min eDTUs per database | 0, 25, 50, 75, 125 | 0, 25, 50, 75, 125, 250 | 0, 25, 50, 75, 125, 250, 500 | 0, 25, 50, 75, 125, 250, 500, 1000 | 0, 25, 50, 75, 125, 250, 500, 1000|
@@ -147,6 +151,7 @@ For the same number of DTUs, resources provided to an elastic pool may exceed th
 | Max In-Memory OLTP storage per pool (GB) | 16 | 20 | 24 | 28 | 32 |
 | Max number DBs per pool <sup>2</sup> | 100 | 100 | 100 | 100 | 100 |
 | Max concurrent workers per pool <sup>3</sup> | 3200 | 4000 | 4800 | 5600 | 6400 |
+| Max concurrent logins per pool | 3200 | 4000 | 4800 | 5600 | 6400 |
 | Max concurrent external connections per pool <sup>4</sup> | 150 | 150 | 150 | 150 | 150 |
 | Max concurrent sessions per pool <sup>3</sup> | 30000 | 30000 | 30000 | 30000 | 30000 |
 | Min DTU per database choices | 0, 25, 50, 75, 125, 250, 500, 1000, 1750 | 0, 25, 50, 75, 125, 250, 500, 1000, 1750 | 0, 25, 50, 75, 125, 250, 500, 1000, 1750 | 0, 25, 50, 75, 125, 250, 500, 1000, 1750 | 0, 25, 50, 75, 125, 250, 500, 1000, 1750, 4000 |

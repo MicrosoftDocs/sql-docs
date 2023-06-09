@@ -1,7 +1,7 @@
 ---
 title: MSSQLSERVER_17207
 description: "MSSQLSERVER_17207"
-author: PijoCoder
+author: pijocoder
 ms.author: jopilov
 ms.date: 07/25/2020
 ms.service: sql

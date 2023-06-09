@@ -23,9 +23,15 @@ monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||
 
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi.md)]
 
-Returns detailed information about tuning recommendations.
+Returns detailed information about automatic tuning recommendations. For more information, see [Automatic tuning](../../relational-databases/automatic-tuning/automatic-tuning.md)
+
+::: moniker range="=azuresqldb-current||=azuresqldb-mi-current"
+
+For more information, see [Monitoring and performance tuning in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/monitor-tune-overview).
 
 In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], dynamic management views can't expose information that would affect database containment or expose information about other databases the user has access to. To avoid exposing this information, every row that contains data that doesn't belong to the connected tenant is filtered out.
+
+::: moniker-end
 
 | **Column name** | **Data type** | **Description** |
 | --- | --- | --- |
@@ -187,12 +193,12 @@ Requires the `VIEW DATABASE STATE` permission for the database in [!INCLUDE[ssSD
 
 ### Permissions for SQL Server 2022 and later
 
-Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+Requires `VIEW SERVER PERFORMANCE STATE` permission on the server.
 
-## See also
+## Next steps
 
 - [Automatic tuning](../../relational-databases/automatic-tuning/automatic-tuning.md)
 - [sys.database_automatic_tuning_options (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)
 - [sys.database_query_store_options (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)
 - [JSON Support](../json/json-data-sql-server.md)
-- [sys.dm_os_sys_info  (Transact-SQL)](sys-dm-os-sys-info-transact-sql.md)
+- [sys.dm_os_sys_info (Transact-SQL)](sys-dm-os-sys-info-transact-sql.md)

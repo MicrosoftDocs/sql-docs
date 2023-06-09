@@ -16,16 +16,16 @@ helpviewer_keywords:
   - "sys.dm_exec_connections dynamic management view"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest||=fabric"
 ---
 # sys.dm_exec_connections (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw.md)]
 
 Returns information about the connections established to this instance of the database engine and the details of each connection. Returns server wide connection information for SQL Server and Azure SQL Managed Instance. Returns connection information for the current database in Azure SQL Database. Returns connection information for all databases in the same elastic pool for databases in [elastic pools](/azure/azure-sql/database/elastic-pool-overview) in Azure SQL Database.
 
 > [!NOTE]  
-> To call this from dedicated SQL pool in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], see [sys.dm_pdw_exec_connections (Transact-SQL)](sys-dm-pdw-exec-connections-transact-sql.md). For serverless SQL pool use `sys.dm_exec_connections`.
+> To call this from dedicated SQL pool in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], see [sys.dm_pdw_exec_connections (Transact-SQL)](sys-dm-pdw-exec-connections-transact-sql.md). For serverless SQL pool or [!INCLUDE[fabric](../../includes/fabric.md)] use `sys.dm_exec_connections`.
 
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -42,7 +42,7 @@ Returns information about the connections established to this instance of the da
 |num_reads|**int**|Number of byte reads that have occurred over this connection. Is nullable.|  
 |num_writes|**int**|Number of byte writes that have occurred over this connection. Is nullable.|  
 |last_read|**datetime**|Timestamp when last read occurred over this connection. Is nullable.|  
-|last_write|**datetime**|Timestamp when last write occurred over this connection. Not Is nullable.|  
+|last_write|**datetime**|Timestamp when last write occurred over this connection. Is nullable.|  
 |net_packet_size|**int**|Network packet size used for information and data transfer. Is nullable.|  
 |client_net_address|**varchar(48)**|Host address of the client connecting to this server. Is nullable.|  
 |client_tcp_port|**int**|Port number on the client computer that is associated with this connection. Is nullable.<br /><br /> In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], this column always returns NULL.|  

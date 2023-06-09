@@ -13,7 +13,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-ser
 ---
 # Create a Format File (SQL Server)
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This article describes how to use the [bcp utility](../../tools/bcp-utility.md) to create a format file for a particular table. The format file is based on the data-type option specified (**-n**, **-c**, **-w**,or **-N**) and the table or view delimiters.
 

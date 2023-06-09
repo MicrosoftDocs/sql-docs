@@ -14,7 +14,7 @@ dev_langs:
   - "XML"
 ---
 # XQuery Extension Functions - sql:variable()
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   Exposes a variable that contains a SQL relational value inside an XQuery expression.  
   

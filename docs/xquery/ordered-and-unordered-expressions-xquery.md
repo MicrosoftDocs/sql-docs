@@ -16,7 +16,7 @@ dev_langs:
   - "XML"
 ---
 # Ordered and Unordered Expressions (XQuery)
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   By default, the ordering mode for all operations in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is **ordered**. Therefore, the node sequences returned by the path expressions and the FLWOR expressions, without the **order by** clause, are in document order.  
   

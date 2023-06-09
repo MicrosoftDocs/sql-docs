@@ -140,7 +140,28 @@ In this configuration, a database in Azure SQL Database or Azure SQL Managed Ins
 > [!NOTE]
 > You may encounter error 53 when connecting to an Azure Storage File if the outbound network security group (NSG) port 445 is blocked when the distributor is an Azure SQL Managed Instance database and the subscriber is on-premises. [Update the vNet NSG](/azure/storage/files/storage-troubleshoot-windows-file-connection-problems) to resolve this issue.
 
+## Limitations
+
+Transactional Replication has some limitations that are specific to Azure SQL Managed Instance. Learn more about these limitations in this section.
+
+### Snapshot files are not deleted from Azure Storage Account
+Azure SQL Managed Instance is using user configured Azure Storage Account for snapshot files used for Transactional Replication. Unlike SQL Server in the op-prem environment, Azure SQL Managed Instance is not deleting snapshot files from Azure Storage Account. **Once files are not needed, user should delete them.** This can be done via Azure Storage interface on Azure Portal, (Microsoft Azure Storage Explorer)[https://azure.microsoft.com/products/storage/storage-explorer/], or via command line clients (Azure PowerShell or CLI) or Azure Storage Management REST API.
+
+Here is an example of how you can delete file and how you can delete an empty folder.
+
+``` CLI
+az storage file delete-batch --source <file_path> --account-key <account_key> --account-name <account_name> 
+az storage directory delete --name <directory_name> --share-name <share_name> --account-key <account_key> --account-name <account_name>
+```
+
+### Number of distribution agents running continuously
+
+Number of distribution agents configured to run continuously is limited to 30 on Azure SQL Managed Instance. To have more distribution agents they need to be running either on demand or with a defined schedule. Schedule can be defined with daily frequency and occurrence on every 10 seconds (or more), so even though it's not continuous, you still can have distributor that's introducing latency that's only several seconds. When large number of distributors is needed, it's recommended to **use scheduled** and not continuous configuration.
+
 ## With failover groups
+
+Using transactional replication with instances that are in a failover group is supported. However, if you configure replication before adding your managed instance into a failover group, replication pauses when you start to create your failover group, and replication monitor shows a status of `Replicated transactions are waiting for the next log backup or for mirroring partner to catch up`. Replication resumes once the failover group is created successfully. 
+
 
 If a **publisher** or **distributor** SQL Managed Instance is in a [failover group](auto-failover-group-sql-mi.md), the SQL Managed Instance administrator must clean up all publications on the old primary and reconfigure them on the new primary after a failover occurs. The following activities are needed in this scenario:
 

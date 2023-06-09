@@ -1,8 +1,8 @@
 ---
 title: Backup transparency for backup history
 description: Learn how to use backup transparency to view the backup history of Azure SQL Managed Instance.
-author: MilanMSFT
-ms.author: mlazic
+author: Stralle
+ms.author: strrodic
 ms.date: 11/16/2022
 ms.service: sql-managed-instance
 ms.subservice: backup-restore

@@ -38,6 +38,9 @@ For more information, guidance, and tools to plan and automate your upgrade or m
 - [SQL Server 2008 end of support](/azure/azure-sql/virtual-machines/windows/sql-server-extend-end-of-support)
 - [SQL Server 2012 end of support](/lifecycle/products/microsoft-sql-server-2012)
 
+> [!TIP]  
+> Customers on [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] and [!INCLUDE[SQL Server 2008 R2](../../includes/sql2008r2-md.md)] can migrate to Azure services if they wish to continue receiving Extended Security Updates, until [July 12, 2023](https://www.microsoft.com/windows-server/extended-security-updates). See the [Overview](sql-server-extended-security-updates.md#overview) for more information.
+
 :::image type="content" source="media/sql-server-end-of-support-overview/sql-server-upgrade-paths.png" alt-text="Diagram showing end of support options.":::
 
 This article describes the benefits and considerations for each approach, with more resources to help guide your decision-making process.

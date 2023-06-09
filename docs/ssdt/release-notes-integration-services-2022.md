@@ -42,12 +42,28 @@ Visit https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/bg-
 - If Oracle, Teradata, or other OOB component is not found after upgrading SSDT, please make sure that the connector for latest SQL Server version is installed.
 
 ## Known issues
+**Version 1.0**
+  1. SQL server 2016 is not supported as target server version. (Target server version supported are SQL server 2017, 2019 and 2022.)
+  2. In the context menu (right mouse button) on objects in the project (e.g. the solution, a package) in Visual Studio, many of the entries appear many times. This happens only when Microsoft Analysis Services Projects 2022 is installed together.
+  3. Project name in Solution Explorer UI doesn’t show target server version as suffix.
+  4. Dimension Processing and Partition Processing components are not supported.
+  5. DQO related components are not supported.
+  
+**Version 0.4**
+  1. Target sever versions supported: SQL server 2017, SQL server 2019 and SQL server 2022
+  2. Can't design Dimension Processing and Partition Processing.
+  3. Can't design DQS related component.
+  4. Project name in Solution Explorer UI doesn’t show target server version as suffix.
+  
 **Version 0.3**
   1. Target sever versions supported: SQL server 2017, SQL server 2019 and SQL server 2022
   2. Can't design Dimension Processing and Partition Processing.
   3. Can't design DQS related component.
   4. Project name in Solution Explorer UI doesn’t show target server version as suffix.
   5. Localization and globalization aren't supported.
+  6. **Can't edit Execute SQL Task** when SQL Server 2022 is installed at the same machine
+      - Edit Execute SQL Task shows error: "'Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTaskExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version-16.0.0.0, Culture-neutral, PublicKeyToken=89845dcd8080cc91' is not registered for use on this computer." 
+      - Workaround: Executing with non-admin user might solve the issue. If not, SQL Server 2022 & VS extension for SSIS have to be installed on separate machines for now. We are working on the fix.
   
 **Version 0.2**
   1. Target sever versions supported: SQL server 2019 and SQL server 2022

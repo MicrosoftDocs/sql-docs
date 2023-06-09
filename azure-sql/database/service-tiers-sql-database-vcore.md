@@ -3,14 +3,13 @@ title: vCore purchasing model
 description: The vCore purchasing model lets you independently scale compute and storage resources, match on-premises performance, and optimize price for Azure SQL Database
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: sashan, moslake, mathoma
-ms.date: 2/3/2023
+ms.reviewer: sashan, moslake, mathoma, dfurman
+ms.date: 06/04/2023
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: conceptual
 ms.custom:
   - references_regions
-  - ignite-fall-2021
   - azure-sql-split
 ---
 # vCore purchasing model - Azure SQL Database 
@@ -22,13 +21,14 @@ ms.custom:
 
 This article reviews the [vCore purchasing model](service-tiers-vcore.md) for [Azure SQL Database](sql-database-paas-overview.md). 
 
-
 ## Overview
 
 [!INCLUDE [vcore-overview](../includes/vcore-overview.md)]
 
 > [!IMPORTANT]
-> Compute resources, I/O, and data and log storage are charged per database or elastic pool. Backup storage is charged per each database.
+> Compute resources, I/O, and data and log storage are charged per database or elastic pool. Backup storage is charged per each database. For pricing details, see the [Azure SQL Database pricing page](https://azure.microsoft.com/pricing/details/sql-database/single/).
+
+## Compare vCore and DTU purchasing models
 
 The vCore purchasing model used by Azure SQL Database provides several benefits over the [DTU-based purchasing model](service-tiers-dtu.md):
 
@@ -41,19 +41,27 @@ The vCore purchasing model used by Azure SQL Database provides several benefits 
 
 For help with choosing between the vCore and DTU purchasing models, see the [differences between the vCore and DTU-based purchasing models](purchasing-models.md)
 
-
 ## Compute
 
 The vCore-based purchasing model has a provisioned compute tier and a [serverless](serverless-tier-overview.md) compute tier. In the provisioned compute tier, the compute cost reflects the total compute capacity continuously provisioned for the application independent of workload activity. Choose the resource allocation that best suits your business needs based on vCore and memory requirements, then scale resources up and down as needed by your workload. In the serverless compute tier for Azure SQL Database, compute resources are auto-scaled based on workload capacity and billed for the amount of compute used, per second.
 
-To summarize: 
+To summarize:
 
-- While the **provisioned compute tier** provides a specific amount of compute resources that are continuously provisioned independent of workload activity, the **serverless compute tier** auto-scales compute resources based on workload activity. 
-- While the **provisioned compute tier** bills for the amount of compute provisioned at a fixed price per hour, the **serverless compute tier** bills for the amount of compute used, per second.
+ - While the **provisioned compute tier** provides a specific amount of compute resources that are continuously provisioned independent of workload activity, the **serverless compute tier** auto-scales compute resources based on workload activity.
+ - While the **provisioned compute tier** bills for the amount of compute provisioned at a fixed price per hour, the **serverless compute tier** bills for the amount of compute used, per second.
 
 Regardless of the compute tier, three additional high availability secondary replicas are automatically allocated in the Business Critical service tier to provide high resiliency to failures and fast failovers. This makes the cost approximately 2.7 times higher than it is in the General Purpose service tier. Likewise, the higher storage cost per GB in the Business Critical service tier reflects the higher IO limits and lower latency of the local SSD storage.
 
 In Hyperscale, customers control the number of additional high availability replicas from 0 to 4 to get the level of resiliency required by their applications while controlling costs.
+
+For more information on compute in Azure SQL Database, see [Compute resources (CPU and memory)](#compute-resources-cpu-and-memory).
+
+## Resource limits
+
+For vCore resource limits, review the available [Hardware configurations](#hardware-configuration), then review the resource limits for:
+- [logical servers](resource-limits-logical-server.md)
+- [single databases](resource-limits-vcore-single-databases.md)
+- [databases in elastic pools](resource-limits-vcore-elastic-pools.md)
 
 ## Data and log storage
 
@@ -64,7 +72,7 @@ The following factors affect the amount of storage used for data and log files, 
 - In the General Purpose service tier, `tempdb` uses local SSD storage, and this storage cost is included in the vCore price.
 - In the Business Critical service tier, `tempdb` shares local SSD storage with data and log files, and `tempdb` storage cost is included in the vCore price.
 - In the General Purpose and Business Critical tiers, you are charged for the maximum storage size configured for a database or elastic pool.
-- For SQL Database, you can select any maximum data size between 1 GB and the supported storage size maximum, in 1 GB increments. 
+- For SQL Database, you can select any maximum data size between 1 GB and the supported storage size maximum, in 1-GB increments. 
 
 The following storage considerations apply to Hyperscale:
 
@@ -98,14 +106,14 @@ Service tier options in the vCore purchasing model include General Purpose, Busi
 | **Compute size** | 2 to 128 vCores | 2 to 128 vCores  |2 to 128 vCores<sup>1</sup> |
 | **Storage type** | Premium remote storage (per instance) |Super-fast local SSD storage (per instance)  | De-coupled storage with local SSD cache (per compute replica) |
 | **Storage size**<sup>1</sup> | 1 GB – 4 TB | 1 GB – 4 TB  | 10 GB – 100 TB |
-| **IOPS** | 500 IOPS per vCore with 7,000 maximum IOPS | 8,000 IOPS per vCore with 200,000 maximum IOPS   | 327,680 IOPS with max local SSD <br/>Hyperscale is a multi-tiered architecture with caching at multiple levels. Effective IOPS will depend on the workload. |
+| **IOPS** | 16,000 maximum IOPS | 8,000 IOPS per vCore with 200,000 maximum IOPS   | 327,680 IOPS with max local SSD <br/>Hyperscale is a multi-tiered architecture with caching at multiple levels. Effective IOPS depend on the workload. |
 | **Memory/vCore** | 5.1 GB | 5.1 GB | 5.1 GB or 10.2 GB<sup>4</sup>| 
-| **Backups** | A choice of geo-redundant, zone-redundant, or locally redundant backup storage, 1-35 day retention (default 7 days) <br/> Long term retention available up to 10 years | A choice of geo-redundant, zone-redundant, or locally redundant backup storage, 1-35 day retention (default 7 days) <br/> Long term retention available up to 10 years  | A choice of locally-redundant (LRS), zone-redundant (ZRS), or geo-redundant (GRS) storage <br/> 1-35 days (7 days by default) retention <sup>2</sup>, with up to 10 years of long-term retention available <sup>3</sup> |
+| **Backups** | A choice of geo-redundant, zone-redundant, or locally redundant backup storage, 1-35 day retention (default 7 days) <br/> Long term retention available up to 10 years | A choice of geo-redundant, zone-redundant, or locally redundant backup storage, 1-35 day retention (default 7 days) <br/> Long term retention available up to 10 years  | A choice of locally redundant (LRS), zone-redundant (ZRS), or geo-redundant (GRS) storage <br/> 1-35 days (7 days by default) retention <sup>2</sup>, with up to 10 years of long-term retention available <sup>3</sup> |
 |**Availability**|1 replica, no read-scale replicas, <br/>zone-redundant high availability (HA) |3 replicas, 1 [read-scale replica](read-scale-out.md),<br/>zone-redundant high availability (HA)|zone-redundant high availability (HA) (preview)|
-|**Pricing/billing**  | [vCore, reserved storage, and backup storage](https://azure.microsoft.com/pricing/details/sql-database/single/) are charged. <br/>IOPS is not charged. |[vCore, reserved storage, and backup storage](https://azure.microsoft.com/pricing/details/sql-database/single/) are charged. <br/>IOPS is not charged. |  [vCore for each replica and used storage](https://azure.microsoft.com/pricing/details/sql-database/single/) are charged. <br/>IOPS not yet charged. |
+|**Pricing/billing**  | [vCore, reserved storage, and backup storage](https://azure.microsoft.com/pricing/details/sql-database/single/) are charged. <br/>IOPS are not charged. |[vCore, reserved storage, and backup storage](https://azure.microsoft.com/pricing/details/sql-database/single/) are charged. <br/>IOPS are not charged. |  [vCore for each replica and used storage](https://azure.microsoft.com/pricing/details/sql-database/single/) are charged. <br/>IOPS are not yet charged. |
 |**Discount models**| [Reserved instances](reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions|[Reserved instances](reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions  | [Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions|
 
-<sup>1</sup> Elastic pools aren't supported in the Hyperscale service tier.   
+<sup>1</sup> [Elastic pools for Hyperscale](./hyperscale-elastic-pool-overview.md) are currently in preview.
 <sup>2</sup> Short-term backup retention for 1-35 days for Hyperscale databases is now in preview.   
 <sup>3</sup> Long-term retention for Hyperscale databases is now in preview. 
 <sup>4</sup> 10.2 GB/vCore is available with premium-series memory optimized hardware (preview).
@@ -129,11 +137,11 @@ In the architectural model for the General Purpose service tier, there are two l
 - A stateless compute layer that is running the `sqlservr.exe` process and contains only transient and cached data (for example – plan cache, buffer pool, column store pool). This stateless node is operated by Azure Service Fabric that initializes process, controls health of the node, and performs failover to another place if necessary.
 - A stateful data layer with database files (.mdf/.ldf) that are stored in Azure Blob storage. Azure Blob storage guarantees that there will be no data loss of any record that is placed in any database file. Azure Storage has built-in data availability/redundancy that ensures that every record in log file or page in data file will be preserved even if the process crashes.
 
-Whenever the database engine or operating system is upgraded, some part of underlying infrastructure fails, or if some critical issue is detected in the `sqlservr.exe` process, Azure Service Fabric will move the stateless process to another stateless compute node. There is a set of spare nodes that is waiting to run new compute service if a failover of the primary node happens in order to minimize failover time. Data in Azure storage layer is not affected, and data/log files are attached to newly initialized process. This process guarantees 99.99% availability by default and 99.995% availability when [zone redundancy](high-availability-sla.md#general-purpose-service-tier-zone-redundant-availability) is enabled. There may be some performance impacts to heavy workloads that are in-flight due to transition time and the fact the new node starts with cold cache.
+Whenever the database engine or operating system is upgraded, some part of underlying infrastructure fails, or if some critical issue is detected in the `sqlservr.exe` process, Azure Service Fabric will move the stateless process to another stateless compute node. There is a set of spare nodes that is waiting to run new compute service if a failover of the primary node happens in order to minimize failover time. Data in Azure storage layer is not affected, and data/log files are attached to newly initialized process. This process guarantees 99.99% availability by default and 99.995% availability when [zone redundancy](high-availability-sla.md#zone-redundant-availability) is enabled. There may be some performance impacts to heavy workloads that are in-flight due to transition time and the fact the new node starts with cold cache.
 
 ### When to choose this service tier
 
-The General Purpose service tier is the default service tier in Azure SQL Database designed for most of generic workloads. If you need a fully managed database engine with a default SLA and storage latency between 5 and 10 ms, the General Purpose tier is the option for you.
+The General Purpose service tier is the default service tier in Azure SQL Database designed for most of generic workloads. If you need a fully managed database engine with a default SLA and storage latency between 5 ms and 10 ms, the General Purpose tier is the option for you.
 
 ### Business Critical
 
@@ -180,20 +188,32 @@ Besides its advanced scaling capabilities, Hyperscale is a great option for any 
 - Enjoy **zero-impact continuous database backup** and **fast restore**.
 - Support **business continuity** requirements by using failover groups and geo-replication.
 
-## Resource limits
-
-For vCore resource limits, see [logical servers](resource-limits-logical-server.md), [single databases](resource-limits-vcore-single-databases.md), [pooled databases](resource-limits-vcore-elastic-pools.md). 
-
-
 ## Hardware configuration
 
 Common hardware configurations in the vCore model include standard-series (Gen5), Fsv2-series, and DC-series. Hyperscale also provides an option for premium-series and premium-series memory optimized hardware. Hardware configuration defines compute and memory limits and other characteristics that impact workload performance.
 
 Certain hardware configurations such as standard-series (Gen5) may use more than one type of processor (CPU), as described in [Compute resources (CPU and memory)](#compute-resources-cpu-and-memory). While a given database or elastic pool tends to stay on the hardware with the same CPU type for a long time (commonly for multiple months), there are certain events that can cause a database or pool to be moved to hardware that uses a different CPU type. For example, a database or pool can be moved if it is scaled up or down to a different service objective, or if the current infrastructure in a datacenter is approaching its capacity limits, or if the currently used hardware is being decommissioned due to its end of life.
 
-For some workloads, a move to a different CPU type can change performance. SQL Database configures hardware with the goal to provide predictable workload performance even if CPU type changes, keeping performance changes within a narrow band. However, across the wide spectrum of customer workloads running in SQL Database, and as new types of CPUs become available, it is possible to occasionally see more noticeable changes in performance of a database or pool moves to a different CPU type.
+For some workloads, a move to a different CPU type can change performance. SQL Database configures hardware with the goal to provide predictable workload performance even if CPU type changes, keeping performance changes within a narrow band. However, across the wide spectrum of customer workloads running in SQL Database, and as new types of CPUs become available, it is possible to occasionally see more noticeable changes in performance, if a database or pool moves to a different CPU type.
 
 Regardless of CPU type used, resource limits for a database or elastic pool, such as the number of cores, memory, max data IOPS, max log rate, and max concurrent workers, remain the same as long as the database stays on the same service objective.
+
+### Compute resources (CPU and memory)
+
+The following table compares compute resources in different hardware configurations and compute tiers:
+
+|Hardware configuration  |CPU  |Memory  |
+|:---------|:---------|:---------|
+|Standard-series (Gen5) |**Provisioned compute**<br>- Intel&reg; E5-2673 v4 (Broadwell) 2.3 GHz, Intel&reg; SP-8160 (Skylake)\*, Intel&reg; 8272CL (Cascade Lake) 2.5 GHz\*, Intel&reg; Xeon Platinum 8307C (Ice Lake)\*, AMD EPYC 7763v (Milan) processors<br>- Provision up to 128 vCores (hyper-threaded)<br><br>**Serverless compute**<br>- Intel&reg; E5-2673 v4 (Broadwell) 2.3 GHz, Intel&reg; SP-8160 (Skylake)\*, Intel&reg; 8272CL (Cascade Lake) 2.5 GHz\*, Intel Xeon&reg; Platinum 8307C (Ice Lake)\*, AMD EPYC 7763v (Milan) processors<br>- Auto-scale up to 80 vCores (hyper-threaded)<br>- The memory-to-vCore ratio dynamically adapts to memory and CPU usage based on workload demand and can be as high as 24 GB per vCore.  For example, at a given point in time a workload may use and be billed for 240 GB memory and only 10 vCores.|**Provisioned compute**<br>- 5.1 GB per vCore<br>- Provision up to 625 GB<br><br>**Serverless compute**<br>- Auto-scale up to 24 GB per vCore<br>- Auto-scale up to 240 GB max|
+|Fsv2-series     |- Intel&reg; 8168 (Skylake) processors<br>- Featuring a sustained all core turbo clock speed of 3.4 GHz and a maximum single core turbo clock speed of 3.7 GHz.<br>- Provision up to 72 vCores (hyper-threaded)|- 1.9 GB per vCore<br>- Provision up to 136 GB|
+|M-series     |- Intel&reg; E7-8890 v3 2.5 GHz and Intel&reg; 8280M 2.7 GHz (Cascade Lake) processors<br>- Provision up to 128 vCores (hyper-threaded)|- 29 GB per vCore<br>- Provision up to 3.7 TB|
+|DC-series     | - Intel&reg; XEON E-2288G processors<br>- Featuring Intel Software Guard Extension (Intel SGX)<br>- Provision up to 8 vCores (physical) | 4.5 GB per vCore |
+
+\* In the [sys.dm_user_db_resource_governance](/sql/relational-databases/system-dynamic-management-views/sys-dm-user-db-resource-governor-azure-sql-database) dynamic management view, hardware generation for databases using Intel&reg; SP-8160 (Skylake) processors appears as Gen6, hardware generation for databases using Intel&reg; 8272CL (Cascade Lake) appears as Gen7, and hardware generation for databases using Intel Xeon&reg; Platinum 8307C (Ice Lake) or AMD&reg; EPYC&reg; 7763v (Milan) appear as Gen8. For a given compute size and hardware configuration, resource limits are the same regardless of CPU type (Intel Broadwell, Skylake, Ice Lake, Cascade Lake, or AMD Milan).
+
+For more information, see resource limits for [single databases](resource-limits-vcore-single-databases.md) and [elastic pools](resource-limits-vcore-elastic-pools.md).
+
+For Hyperscale database compute resources and specification, see [Hyperscale compute resources](service-tier-hyperscale.md#compute-resources).
 
 ### Standard-series (Gen5)
 
@@ -203,18 +223,17 @@ Standard-series (Gen5) hardware is available in all public regions worldwide.
 
 ### Hyperscale premium-series
 
-- Premium-series hardware options use the latest CPUs and memory technologies from Intel and AMD. Premium-series provides a boost to compute performance relative to standard-series hardware.
+- Premium-series hardware options use the latest CPU and memory technology from Intel and AMD. Premium-series provides a boost to compute performance relative to standard-series hardware.
 - Premium-series option offers faster CPU performance compared to Standard-series and a higher number of maximum vCores.
 - Premium-series memory optimized option offers double the amount of memory relative to premium-series.
 
-Premium-series and premium-series memory optimized hardware is only available for Hyperscale databases.
 - For more information, see the [Hyperscale premium series blog announcement](https://aka.ms/AAiq28n).
  
 For regions available, see [Hyperscale premium-series availability](#hyperscale-premium-series-availability).
 
 ### Fsv2-series
 
-- Fsv2-series is a compute optimized hardware configuration delivering low CPU latency and high clock speed for the most CPU demanding workloads.
+- Fsv2-series is a compute optimized hardware configuration delivering low CPU latency and high clock speed for the most CPU demanding workloads. Similar to [Hyperscale premium-series](#hyperscale-premium-series) hardware configurations, Fsv2-series is powered by the latest CPU and memory technology from Intel and AMD. This lets customers take advantage of the latest hardware while using databases and elastic pools in the General Purpose service tier.
 - Depending on the workload, Fsv2-series can deliver more CPU performance per vCore than other types of hardware. For example, the 72 vCore Fsv2 compute size can provide more CPU performance than 80 vCores on Standard-series (Gen5), at lower cost.
 - Fsv2 provides less memory and `tempdb` per vCore than other hardware, so workloads sensitive to those limits may perform better on standard-series (Gen5).
 
@@ -253,7 +272,7 @@ Select the desired hardware configuration:
 
 For a database, on the Overview page, select the **Pricing tier** link:
 
-:::image type="content" source="./media/service-tiers-vcore/change-hardware.png" alt-text="A screenshot of the Azure portal on the overview page of the adventure-works SQL database. The pricing tier 'General Purpose: Gen4, 1 vCore' is highlighted." loc-scope="azure-portal":::
+:::image type="content" source="./media/service-tiers-vcore/change-hardware.png" alt-text="A screenshot of the Azure portal on the overview page of the adventure-works SQL database. The pricing tier 'General Purpose: Standard-series (Gen5), 2 vCores' is highlighted." loc-scope="azure-portal":::
 
 For a pool, on the **Overview** page, select **Configure**.
 
@@ -276,6 +295,7 @@ Hyperscale service tier (currently in preview) premium-series and premium-series
 - Central India
 - Central US
 - East US
+- East US 2
 - Japan East
 - North Europe
 - North Central US
@@ -332,36 +352,17 @@ If you need DC-series in a currently unsupported region, [submit a support reque
 
 :::image type="content" source="./media/service-tiers-vcore/request-dc-series.png" alt-text="A screenshot of the Azure portal form to request DC-series in a new region." loc-scope="azure-portal":::
 
-## Compute resources (CPU and memory)
-
-The following table compares compute resources in different hardware configurations and compute tiers:
-
-|Hardware configuration  |CPU  |Memory  |
-|:---------|:---------|:---------|
-|Gen4     |- Intel&reg; E5-2673 v3 (Haswell) 2.4-GHz processors<br>- Provision up to 24 vCores (physical)  |- 7 GB per vCore<br>- Provision up to 168 GB|
-|Standard-series (Gen5) |**Provisioned compute**<br>- Intel&reg; E5-2673 v4 (Broadwell) 2.3 GHz, Intel&reg; SP-8160 (Skylake)\*, Intel&reg; 8272CL (Cascade Lake) 2.5 GHz\*, Intel&reg; Xeon Platinum 8307C (Ice Lake)\*, AMD EPYC 7763v (Milan) processors<br>- Provision up to 128 vCores (hyper-threaded)<br><br>**Serverless compute**<br>- Intel&reg; E5-2673 v4 (Broadwell) 2.3 GHz, Intel&reg; SP-8160 (Skylake)\*, Intel&reg; 8272CL (Cascade Lake) 2.5 GHz\*, Intel Xeon&reg; Platinum 8307C (Ice Lake)\*, AMD EPYC 7763v (Milan) processors<br>- Auto-scale up to 40 vCores (hyper-threaded)|**Provisioned compute**<br>- 5.1 GB per vCore<br>- Provision up to 625 GB<br><br>**Serverless compute**<br>- Auto-scale up to 24 GB per vCore<br>- Auto-scale up to 120 GB max|
-|Fsv2-series     |- Intel&reg; 8168 (Skylake) processors<br>- Featuring a sustained all core turbo clock speed of 3.4 GHz and a maximum single core turbo clock speed of 3.7 GHz.<br>- Provision up to 72 vCores (hyper-threaded)|- 1.9 GB per vCore<br>- Provision up to 136 GB|
-|M-series     |- Intel&reg; E7-8890 v3 2.5 GHz and Intel&reg; 8280M 2.7 GHz (Cascade Lake) processors<br>- Provision up to 128 vCores (hyper-threaded)|- 29 GB per vCore<br>- Provision up to 3.7 TB|
-|DC-series     | - Intel&reg; XEON E-2288G processors<br>- Featuring Intel Software Guard Extension (Intel SGX)<br>- Provision up to 8 vCores (physical) | 4.5 GB per vCore |
-
-\* In the [sys.dm_user_db_resource_governance](/sql/relational-databases/system-dynamic-management-views/sys-dm-user-db-resource-governor-azure-sql-database) dynamic management view, hardware generation for databases using Intel&reg; SP-8160 (Skylake) processors appears as Gen6, hardware generation for databases using Intel&reg; 8272CL (Cascade Lake) appears as Gen7, and hardware generation for databases using Intel Xeon&reg; Platinum 8307C (Ice Lake) or AMD&reg; EPYC&reg; 7763v (Milan) appear as Gen8. For a given compute size and hardware configuration, resource limits are the same regardless of CPU type (Intel Broadwell, Skylake, Ice Lake, Cascade Lake, or AMD Milan).
-
-For more information, see resource limits for [single databases](resource-limits-vcore-single-databases.md) and [elastic pools](resource-limits-vcore-elastic-pools.md).
-
-For Hyperscale database compute resources and specification, see [Hyperscale compute resources](service-tier-hyperscale.md#compute-resources).
-
 ## Previous generation hardware
 
 ### Gen4
 
-[!INCLUDE[azure-sql-gen4-hardware-retirement](../includes/azure-sql-gen4-hardware-retirement.md)]
+Gen4 hardware has been retired and is not available for provisioning, upscaling, or downscaling. Migrate your database to a supported hardware generation for a wider range of vCore and storage scalability, accelerated networking, best IO performance, and minimal latency. Review [hardware options for single databases](resource-limits-vcore-single-databases.md) and [hardware options for elastic pools](resource-limits-vcore-elastic-pools.md). For more information, see [Support has ended for Gen 4 hardware on Azure SQL Database](https://azure.microsoft.com/updates/support-has-ended-for-gen-4-hardware-on-azure-sql-database/).
 
 ### <a id="azure-offer-types-supported-by-m-series"></a> M-series
 
-> [!IMPORTANT]
-> For Azure SQL Database, M-series hardware has been retired and is not available for new deployments. 
->
-> Existing customers should migrate to other hardware tiers before September 2023.
+For Azure SQL Database, M-series hardware has been retired and is not available for new deployments. 
+
+Existing customers should migrate to other hardware tiers before September 2023.
 
 M-series is only supported in the Business Critical tier and does not support zone redundancy. 
 

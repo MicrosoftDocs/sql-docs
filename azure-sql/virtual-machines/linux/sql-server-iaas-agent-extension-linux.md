@@ -1,10 +1,10 @@
 ---
 title: SQL Server IaaS Agent extension for Linux
 description: This article describes how the SQL Server IaaS Agent extension helps automate management specific administration tasks of SQL Server on Linux Azure VMs.
-author: adbadram
-ms.author: adbadram
+author: bluefooted
+ms.author: pamela
 ms.reviewer: mathoma
-ms.date: 10/26/2021
+ms.date: 05/22/2023
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: conceptual
@@ -51,7 +51,7 @@ The SQL Server IaaS Agent extension enables integration with the Azure portal an
 
 [Register](sql-iaas-agent-extension-register-vm-linux.md) your SQL Server VM with the SQL Server IaaS Agent extension to create the **SQL virtual machine** _resource_ within your subscription, which is a _separate_ resource from the virtual machine resource. Unregistering your SQL Server VM from the extension will remove the **SQL virtual machine** _resource_ from your subscription but will not drop the actual virtual machine.
 
-The SQL Server IaaS Agent extension for Linux is currently only available in lightweight mode. 
+The SQL Server IaaS Agent extension for Linux is currently only available with limited functionality. 
 
 
 ## Verify extension status
@@ -65,8 +65,6 @@ Verify the extension is installed by using the Azure portal.
 Go to your **Virtual machine** resource in the Azure portal (not the *SQL virtual machines* resource, but the resource for your VM). Select **Extensions** under **Settings**. You should see the **SqlIaasExtension** extension listed, as in the following example: 
 
 ![Check the Status of the SQL Server IaaS Agent extension SqlIaaSExtension in the Azure portal](../windows/media/sql-server-iaas-agent-extension-automate-management/azure-rm-sql-server-iaas-agent-portal.png)
-
-
 
 
 ### Azure PowerShell
@@ -97,7 +95,7 @@ The Linux SQL IaaS Agent extension has the following limitations:
 
 ## <a id="in-region-data-residency"></a> Privacy statement
 
-When using SQL Server on Azure VMs and the SQL IaaS extension, consider the following privacy statements: 
+When using SQL Server on Azure VMs and the SQL IaaS Agent extension, consider the following privacy statements: 
 
 - **Data collection**:  The SQL IaaS Agent extension collects data for the express purpose of giving customers optional benefits when using SQL Server on Azure Virtual Machines. Microsoft **will not use this data for licensing audits** without the customer's advance consent. See the [SQL Server privacy supplement](/sql/sql-server/sql-server-privacy#non-personal-data) for more information.
 

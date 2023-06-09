@@ -1,7 +1,7 @@
 ---
 title: Work with write event log script task.
 description: "This article helps you to configure the Script Task."
-author: ramakoni1
+author: suresh-kandoth
 ms.author: v-jayaramanp
 ms.date: "02/10/2023"
 ms.service: sql

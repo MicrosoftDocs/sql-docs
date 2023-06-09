@@ -4,7 +4,7 @@ description: Sets Transact-SQL and query processing behaviors to be compatible w
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 11/21/2022
+ms.date: 5/19/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -58,8 +58,8 @@ The version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with wh
 | [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] | 16 | 160 | 160, 150, 140, 130, 120, 110, 100 |
 | [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] | 15 | 150 | 150, 140, 130, 120, 110, 100 |
 | [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] | 14 | 140 | 140, 130, 120, 110, 100 |
-| [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] | 12 | 150 | 160, 150, 140, 130, 120, 110, 100 |
-| [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] | 12 | 150 | 160, 150, 140, 130, 120, 110, 100 |
+| [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] | 12 | 150 | 150, 140, 130, 120, 110, 100 |
+| [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] | 12 | 150 | 150, 140, 130, 120, 110, 100 |
 | [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] | 13 | 130 | 130, 120, 110, 100 |
 | [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)] | 12 | 120 | 120, 110, 100 |
 | [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)] | 11 | 110 | 110, 100, 90 |

@@ -4,8 +4,8 @@ titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Understand how the Azure SQL Database and Azure SQL Managed Instance maintenance window can be configured.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: wiassaf, mathoma, urosmil
-ms.date: 2/10/2023
+ms.reviewer: wiassaf, mathoma, urosmil, scottkim
+ms.date: 05/31/2023
 ms.service: sql-db-mi
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -45,7 +45,13 @@ You can further adjust the maintenance updates to a time suitable to your Azure 
 
 Maintenance window days listed indicate the starting day of each eight-hour maintenance window. For example, "10:00 PM to 6:00 AM local time, Monday – Thursday" means that the maintenance windows start at 10:00 PM local time on each day (Monday through Thursday) and complete at 6:00 AM local time the following day (Tuesday through Friday).
 
-Once the maintenance window selection is made and service configuration completed, planned maintenance will occur only during the window of your choice. While maintenance events typically complete within a single window, some of them may span two or more adjacent windows.   
+Once the maintenance window selection is made and service configuration completed, planned maintenance will occur only during the window of your choice. While maintenance events typically complete within a single window, some of them may span two or more adjacent windows.
+
+> [!NOTE]
+> Azure SQL Database and Azure SQL Managed Instance follow a safe deployment practice where Azure paired regions are guaranteed to be not deployed to at the same time. However, it is not possible to predict which region will be upgraded first, so the order of deployment is not guaranteed. Sometimes, your primary instance will be upgraded first, and sometimes it would be secondary.
+> 
+> - In situations where your database is enabled for [geo-replication](active-geo-replication-overview.md) or [auto-failover groups](auto-failover-group-sql-db.md), and the geo-replication does not align with the [Azure region pairing](/azure/reliability/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies), you should different maintenance window schedules for your primary and secondary database. For example, you can select **Weekday** maintenance window for your geo-secondary database and **Weekend** maintenance window for your geo-primary database.
+> - In situations where your Azure SQL managed instance has [auto-failover groups](../managed-instance/auto-failover-group-sql-mi.md), and the groups are not aligned with the [Azure region pairing](/azure/reliability/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies), you should different maintenance window schedules for your primary and secondary database. For example, you can select **Weekday** maintenance window for your geo-secondary database and **Weekend** maintenance window for your geo-primary database.
 
 > [!Important]
 > In very rare circumstances where any postponement of action could cause serious impact, like applying critical security patch, configured maintenance window may be temporarily overriden. 
@@ -69,10 +75,8 @@ Offers restricted to dev/test usage only are not eligible (like Pay-As-You-Go De
 
 Choosing a maintenance window other than the default is available on all SLOs **except for**:
 * Instance pools
-* Legacy Gen4 vCore
 * Basic, S0 and S1 
 * DC, Fsv2, M-series
-* Hyperscale service tier premium-series hardware (preview) 
 * Hyperscale service tier with zone redundancy
 
 <!-- Check Known limitations in azure-sql/database/service-tier-hyperscale.md as well -->

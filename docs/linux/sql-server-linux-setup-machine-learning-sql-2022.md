@@ -4,7 +4,8 @@ titleSuffix: SQL Server Machine Learning Services
 description: "Learn how to install SQL Server 2022 Machine Learning Services on Linux: Red Hat, Ubuntu, and SUSE."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 09/26/2022
+ms.reviewer: arunguru-msft
+ms.date: 04/03/2023
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: how-to
@@ -146,6 +147,7 @@ Available installation packages for [!INCLUDE [sssql22-md](../includes/sssql22-m
 1. Download and install `revoscalepy` for the root user.
 
     ```bash  
+    sudo pip install dill numpy==1.22.0 pandas patsy python-dateutil
     sudo pip install https://aka.ms/sqlml/python3.10/linux/revoscalepy-10.0.1-py3-none-any.whl --target=/usr/lib/python3.10/dist-packages
     ```
 

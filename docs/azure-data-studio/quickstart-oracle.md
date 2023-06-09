@@ -45,7 +45,7 @@ To complete this quickstart, you need Azure Data Studio and access to Oracle dat
    ![New Connection Screen](./media/quickstart-oracle/new-connection-screen.png)
 
    > [!NOTE]
-   > Make sure that the Oracle database user used to connect has permissions to enumerate and access objects you are planning to explore. At least `CONNECT` and `SELECT ANY DICTIONARY` permissions should be granted to the connecting user.
+   > Make sure that the Oracle database user used to connect has permissions to enumerate and access objects you are planning to explore. At least `CONNECT`, `SELECT ANY DICTIONARY` permissions and the `SELECT_CATALOG_ROLE` role should be granted to the connecting user.
 
 4. Click **Connect** to establish the connection.
 

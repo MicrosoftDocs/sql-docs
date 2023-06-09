@@ -10,7 +10,7 @@ ms.topic: conceptual
 ---
 # Upgrade Database Wizard (Master Data Services Configuration Manager)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Use the **Upgrade Database Wizard** to upgrade a [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.  
   

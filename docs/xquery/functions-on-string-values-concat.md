@@ -14,7 +14,7 @@ dev_langs:
   - "XML"
 ---
 # Functions on String Values - concat
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   Accepts zero or more strings as arguments and returns a string created by concatenating the values of each of these arguments.  
   

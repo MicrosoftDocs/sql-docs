@@ -4,7 +4,7 @@ description: Learn how to set database options such as Automatic tuning, encrypt
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 11/04/2022
+ms.date: 05/21/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -2226,10 +2226,10 @@ Determines the frequency at which data written to the Query Store is persisted t
 
 #### MAX_STORAGE_SIZE_MB
 
-Determines the space allocated to the Query Store. MAX_STORAGE_SIZE_MB is type **bigint**. For [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium edition, default is **1000 MB** and for [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic edition, default is **10 MB**.
+Determines the space allocated to the Query Store. MAX_STORAGE_SIZE_MB is type **bigint**.
 
 > [!NOTE]  
-> `MAX_STORAGE_SIZE_MB` setting limit is 10,240 MB on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+> In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the default `MAX_STORAGE_SIZE_MB` value differs by service tier, as follows: Premium, Business Critical, and Hyperscale: **1,024 MB**; Standard and General Purpose: **100 MB**; Basic: **10 MB** The maximum allowed `MAX_STORAGE_SIZE_MB` value is **10,240 MB**.
 
 > [!NOTE]  
 > `MAX_STORAGE_SIZE_MB` limit isn't strictly enforced. Storage size is checked only when Query Store writes data to disk. This interval is set by the `DATA_FLUSH_INTERVAL_SECONDS` option or the [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] Query Store dialog option **Data Flush Interval**. The interval default value is 900 seconds (or 15 minutes).
@@ -3210,8 +3210,9 @@ If the Query Store has breached the `MAX_STORAGE_SIZE_MB` limit between storage 
 Once enough space has been cleared, the Query Store mode will automatically switch back to read-write.
 
 > [!IMPORTANT]  
-> If you think that your workload capture will need more than 10 GB of disk space, you should probably rethink and optimize your workload to reuse query plans (for example using [forced parameterization](../../relational-databases/query-processing-architecture-guide.md#forced-parameterization), or adjust the Query Store configurations.
-> Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], you can set `QUERY_CAPTURE_MODE` to CUSTOM for additional control over the query capture policy.
+> - If you think that your workload capture will need more than 10 GB of disk space, you should probably rethink and optimize your workload to reuse query plans (for example using [forced parameterization](../../relational-databases/query-processing-architecture-guide.md#forced-parameterization), or adjust the Query Store configurations.
+> - Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], you can set `QUERY_CAPTURE_MODE` to CUSTOM for additional control over the query capture policy.
+> - `MAX_STORAGE_SIZE_MB` setting limit is 10,240 MB on [!INCLUDE[sssdsmifull](../../includes/sssdsmifull-md.md)]. 
 
 #### INTERVAL_LENGTH_MINUTES
 

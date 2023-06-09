@@ -10,7 +10,7 @@ ms.topic: conceptual
 ---
 # Show Many-to-Many Relationships in Derived Hierarchies (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Derived Hierarchies (DH) display one-to-many relationships, and can now also show many-to-many relationships.  
   

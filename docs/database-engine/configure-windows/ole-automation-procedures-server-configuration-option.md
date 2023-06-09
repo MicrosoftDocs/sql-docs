@@ -1,5 +1,5 @@
 ---
-title: "Ole Automation Procedures Server Configuration Option"
+title: "Ole Automation Procedures (server configuration option)"
 description: "Learn about the Ole Automation Procedures option. See how it specifies whether SQL Server can instantiate OLE Automation objects within Transact-SQL batches."
 author: rwestMSFT
 ms.author: randolphwest
@@ -10,7 +10,7 @@ ms.topic: conceptual
 helpviewer_keywords:
   - "Ole Automation Procedures option"
 ---
-# Ole Automation Procedures Server Configuration Option
+# Ole Automation Procedures (server configuration option)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Use the **Ole Automation Procedures** option to specify whether OLE Automation objects can be instantiated within [!INCLUDE[tsql](../../includes/tsql-md.md)] batches. This option can also be configured using the Policy-Based Management or the **sp_configure** stored procedure. For more information, see [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md).  

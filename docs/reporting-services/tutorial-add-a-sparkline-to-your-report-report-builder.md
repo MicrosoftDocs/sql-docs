@@ -205,7 +205,7 @@ The **SalesDate** values display in the default date format, and the summary val
   
 7.  Click the plus (+) sign in the Values box, then click **Sales**. 
 
-    ![Screenshot showing how to add values to the report builder sparkline. ](../reporting-services/media/report-builder-sparkline-values.png) 
+    ![Screenshot showing how to add values to the report builder sparkline.](../reporting-services/media/report-builder-sparkline-values.png) 
   
     The values in the **Sales** field are now the values for the sparkline.  
   

@@ -14,7 +14,7 @@ dev_langs:
   - "XML"
 ---
 # Aggregate Functions - min
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   Returns from a sequence of atomic values, *$arg*, the one item whose value is less than that of all the others.  
   

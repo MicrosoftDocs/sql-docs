@@ -2,8 +2,8 @@
 title: MSSQLSERVER_3013
 description: "MSSQLSERVER_3013"
 author: pijocoder
-ms.author: ramakoni
-ms.reviewer: suresh-kandoth, MashaMSFT
+ms.author: jopilov
+ms.reviewer: sureshka, mathoma
 ms.date: 03/23/2023
 ms.service: sql
 ms.subservice: supportability
@@ -58,9 +58,9 @@ Examine the SQL Error log for other messages that occur alongside this error for
 
 - For database corruption issues, you're likely to observe other errors in SQL Server. Run DBCC CHECKDB to identify any errors in the database and resolve. For more information, see [Troubleshoot database consistency errors reported by DBCC CHECKDB](/troubleshoot/sql/database-engine/database-file-operations/troubleshoot-dbcc-checkdb-errors)
 
-- If your server principal account lacks permissions to do a backup or a restore operation, ensure account that is granted those permissions. See [Backup permissions](/sql/t-sql/statements/backup-transact-sql#permissions) and [Restore permissions](/sql/t-sql/statements/restore-statements-transact-sql#permissions)
+- If your server principal account lacks permissions to do a backup or a restore operation, ensure account that is granted those permissions. See [Backup permissions](../../t-sql/statements/backup-transact-sql.md#permissions) and [Restore permissions](../../t-sql/statements/restore-statements-transact-sql.md#permissions)
 
-- For SQL Server service account permission issues, ensure that the SQL Server service account has read and write access to the backup device or the file system where the backup file is written. See [Backup permissions](/sql/t-sql/statements/backup-transact-sql#permissions). 
+- For SQL Server service account permission issues, ensure that the SQL Server service account has read and write access to the backup device or the file system where the backup file is written. See [Backup permissions](../../t-sql/statements/backup-transact-sql.md#permissions). 
 
 
 Here are examples of commonly observed errors together with 3013.

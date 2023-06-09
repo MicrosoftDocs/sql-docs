@@ -5,13 +5,12 @@ description: This article provides an overview of the resource limits for Azure 
 author: vladai78
 ms.author: vladiv
 ms.reviewer: mathoma, vladiv, sachinp, wiassaf
-ms.date: 06/02/2022
+ms.date: 04/10/2023
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: reference
 ms.custom:
   - references_regions
-  - ignite-fall-2021
 ---
 # Overview of Azure SQL Managed Instance resource limits
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
@@ -84,7 +83,7 @@ SQL Managed Instance has two service tiers: [General Purpose](../database/servic
 | **Feature** | **General Purpose** | **Business Critical** |
 | --- | --- | --- |
 | Number of vCores\* | 4, 8, 16, 24, 32, 40, 64, 80 |  **Standard-series (Gen5)**: 4, 8, 16, 24, 32, 40, 64, 80 <BR> **Premium-series**: 4, 8, 16, 24, 32, 40, 64, 80 <BR> **Memory optimized premium-series**: 4, 8, 16, 24, 32, 40, 64<br/>\*Same number of vCores is dedicated for read-only queries. |
-| Max memory | **Standard-series (Gen5)**: 20.4 GB - 625 GB (5.1 GB/vCore)<BR> **Premium-series**: 28 GB - 560 GB (7 GB/vCore)<BR> **Memory optimized premium-series**: 54.4 GB - 870.4 GB (13.6 GB/vCore) | **Standard-series (Gen5)**: 20.4 GB - 625 GB (5.1 GB/vCore) on each replica<BR> **Premium-series**: 28 GB - 560 GB (7 GB/vCore) on each replica<BR> **Memory optimized premium-series**: 54.4 GB - 870.4 GB (13.6 GB/vCore) on each replica |
+| Max memory | **Standard-series (Gen5)**: 20.4 GB - 408 GB (5.1 GB/vCore)<BR> **Premium-series**: 28 GB - 560 GB (7 GB/vCore)<BR> **Memory optimized premium-series**: 54.4 GB - 870.4 GB (13.6 GB/vCore) | **Standard-series (Gen5)**: 20.4 GB - 408 GB (5.1 GB/vCore) on each replica<BR> **Premium-series**: 28 GB - 560 GB (7 GB/vCore) on each replica<BR> **Memory optimized premium-series**: 54.4 GB - 870.4 GB (13.6 GB/vCore) on each replica |
 | Max instance storage size (reserved) | - 2 TB for 4 vCores<br/>- 8 TB for 8 vCores<br/>- 16 TB for other sizes <BR> | **Standard-series (Gen5)**: <br/>- 1 TB for 4, 8, 16 vCores<br/>- 2 TB for 24 vCores<br/>- 4 TB for 32, 40, 64, 80 vCores <BR> **Premium-series**: <BR>- 1 TB for 4, 8 vCores<br/>- 2 TB for 16, 24 vCores<br/>- 4 TB for 32 vCores<br/>- 5.5 TB for 40, 64, 80 vCores<br/> **Memory optimized premium-series**: <BR>- 1 TB for 4, 8 vCores<br/>- 2 TB for 16, 24 vCores<br/>- 4 TB for 32 vCores<br/>- 5.5 TB for 40 vCores<br/>- 16 TB for 64 vCores<br/> |
 | Max database size | Up to currently available instance size (depending on the number of vCores). | Up to currently available instance size (depending on the number of vCores). |
 | Max `tempdb` database size | Limited to 24 GB/vCore (96 - 1,920 GB) and currently available instance storage size.<br/>Add more vCores to get more `tempdb` space.<br/> Log file size is limited to 120 GB.| Up to currently available instance storage size. |
@@ -133,13 +132,13 @@ The following factors affect the amount of storage used for data and log files, 
 To monitor total consumed instance storage size for SQL Managed Instance, use the *storage_space_used_mb* [metric](/azure/azure-monitor/essentials/metrics-supported#microsoftsqlmanagedinstances). To monitor the current allocated and used storage size of individual data and log files in a database using T-SQL, use the [sys.database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) view and the [FILEPROPERTY(... , 'SpaceUsed')](/sql/t-sql/functions/fileproperty-transact-sql) function.
 
 > [!TIP]
-> Under some circumstances, you may need to shrink a database to reclaim unused space. For more information, see [Manage file space in Azure SQL Database](../database/file-space-manage.md).
+> Under some circumstances, you may need to shrink a database to reclaim unused space. For more information, see [DBCC SHRINKFILE](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql).
 
 ### Backups and storage
 
 Storage for database backups is allocated to support the [point-in-time restore (PITR)](../database/recovery-using-backups.md) and [long-term retention (LTR)](../database/long-term-retention-overview.md) capabilities of SQL Managed Instance. This storage is separate from data and log file storage, and is billed separately.
 
-- **PITR**: In General Purpose and Business Critical tiers, individual database backups are copied to [read-access geo-redundant (RA-GRS) storage](/azure/storage/common/geo-redundant-design) automatically. The storage size increases dynamically as new backups are created. The storage is used by full, differential, and transaction log backups. The storage consumption depends on the rate of change of the database and the retention period configured for backups. You can configure a separate retention period for each database between  0 to 35 days for SQL Managed Instance. A backup storage amount equal to the configured maximum data size is provided at no extra charge.
+- **PITR**: In General Purpose and Business Critical tiers, individual database backups are copied to [read-access geo-redundant (RA-GRS) storage](/azure/storage/common/geo-redundant-design) automatically. The storage size increases dynamically as new backups are created. The storage is used by full, differential, and transaction log backups. The storage consumption depends on the rate of change of the database and the retention period configured for backups. You can configure a separate retention period for each database between 1 to 35 days for SQL Managed Instance. A backup storage amount equal to the configured maximum data size is provided at no extra charge.
 - **LTR**: You also have the option to configure long-term retention of full backups for up to 10 years. If you set up an LTR policy, these backups are stored in RA-GRS storage automatically, but you can control how often the backups are copied. To meet different compliance requirements, you can select different retention periods for weekly, monthly, and/or yearly backups. The configuration you choose determines how much storage will be used for LTR backups. For more information, see [Long-term backup retention](../database/long-term-retention-overview.md).
 
 ### File IO characteristics in General Purpose tier
@@ -216,9 +215,37 @@ If you need more instances in your current regions, send a support request to ex
 
 ## Previously available hardware
 
-This section includes details on previously available hardware. Consider [moving your instance of SQL Managed Instance to the standard-series (Gen5)](../database/service-tiers-vcore.md) hardware to experience a wider range of vCore and storage scalability, accelerated networking, best IO performance, and minimal latency.
+> [!IMPORTANT]
+> Gen4 hardware has been retired and is not available for provisioning. Migrate your instance of SQL Managed Instance to a supported hardware generation, such as standard-series hardware, for a wider range of vCore and storage scalability, accelerated networking, best IO performance, and minimal latency.
 
-[!INCLUDE[azure-sql-gen4-hardware-retirement-sql-managed-instance](../includes/azure-sql-gen4-hardware-retirement-sql-managed-instance.md)]
+You can use [Azure Resource Graph Explorer](/azure/governance/resource-graph/overview) in the Azure portal to identify all SQL managed instances that currently use Gen4 hardware, or you can check the hardware used by a specific SQL Managed Instance in the Azure portal. 
+
+You must have at least `read` permissions to the Azure object or object group to see results in Azure Resource Graph Explorer. 
+
+To use **Azure Resource Graph Explorer** to identify SQL managed instances that are still using Gen4 hardware, follow these steps: 
+
+1. Go to the [Azure portal](https://portal.azure.com). 
+1. Search for `Resource graph` in the search box, and choose the **Resource Graph Explorer** service from the search results. 
+1. In the query window, type the following query and then select **Run query**: 
+
+   ```kusto
+   resources
+   | where type contains ('microsoft.sql/managedinstances')
+   | where sku['family'] == "Gen4"
+   ```
+
+1. The **Results** pane displays all the deployed instances in Azure that are using Gen4 hardware.
+
+:::image type="content" source="media/resource-limits/gen4-resource-graph-explorer.png" alt-text="Screenshot of the query results in Azure Resource Graph Explorer in the Azure portal.":::
+
+To check the hardware used by resources for a specific SQL managed instance in Azure, follow these steps: 
+
+1. Go to the [Azure portal](https://portal.azure.com). 
+1. Search for `SQL managed instances` in the search box and choose **SQL managed instances** from the search results to open the **SQL managed instances** page and view all instances for the chosen subscription(s). 
+1. Select the SQL managed instance of interest to open the **Overview** page for the SQL managed instance. 
+1. Check the **Pricing tier** under **Essentials** to verify what hardware your managed instance is using. 
+
+:::image type="content" source="media/resource-limits/sqlmi-pricing-tier.png" alt-text="Screenshot of the overview page for an Azure SQL Managed Instance resource with pricing tier highlighted. ":::
 
 ### Hardware characteristics
 
@@ -232,8 +259,7 @@ This section includes details on previously available hardware. Consider [moving
 
 ### In-memory OLTP available space
 
-[!INCLUDE[azure-sql-gen4-hardware-retirement-sql-managed-instance](../includes/azure-sql-gen4-hardware-retirement-sql-managed-instance.md)]
-  
+
 The amount of In-memory OLTP space in [Business Critical](../database/service-tier-business-critical.md) service tier depends on the number of vCores and hardware configuration. The following table lists limits of memory that can be used for In-memory OLTP objects.
 
 | In-memory OLTP space    |  **Gen4** |
@@ -245,8 +271,6 @@ The amount of In-memory OLTP space in [Business Critical](../database/service-ti
 
 ### Service tier characteristics
 
-[!INCLUDE[azure-sql-gen4-hardware-retirement-sql-managed-instance](../includes/azure-sql-gen4-hardware-retirement-sql-managed-instance.md)]
-  
 | **Feature** | **General Purpose** | **Business Critical** |
 | --- | --- | --- |
 | Number of vCores\* |  8, 16, 24 |  8, 16, 24 <BR>\*Same number of vCores is dedicated for read-only queries. |
@@ -267,7 +291,6 @@ The amount of In-memory OLTP space in [Business Critical](../database/service-ti
 | Max concurrent workers |  210 * number of vCores + 800 |  210 * vCore count + 800 |
 | [Read-only replicas](../database/read-scale-out.md) |  0 |  1 (included in price) |
 | Compute isolation |  not supported |  not supported |
-
 
 ## Next steps
 

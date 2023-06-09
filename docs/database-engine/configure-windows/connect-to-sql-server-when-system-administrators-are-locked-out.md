@@ -163,7 +163,7 @@ Perform these instructions while logged in to Windows as a member of the local a
 
    In some configurations, SSMS will attempt to make several connections. Multiple connections will fail because [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is in single-user mode. Based on your scenario, perform one of the following actions.
 
-   1. Connect with Object Explorer using Windows Authentication, which includes your Administrator credentials. Expand **Security**, expand **Logins**, and double-select your own login. On the **Server Roles** page, select **sysadmin**, and then select **OK**.
+   1. Connect with Object Explorer using Windows Authentication, which includes your Administrator credentials. Expand **Security**, expand **Logins**, and double-click your own login. On the **Server Roles** page, select **sysadmin**, and then select **OK**.
 
    1. Instead of connecting with Object Explorer, connect with a Query Window using Windows Authentication (which includes your Administrator credentials). (You can only connect this way if you didn't connect with Object Explorer.) Execute code such as the following to add a new Windows Authentication login that is a member of the **sysadmin** fixed server role. The following example adds a domain user named `CONTOSO\PatK`.
 
@@ -199,7 +199,7 @@ Perform these instructions while logged in to Windows as a member of the local a
 
 1. On the **Startup Parameters** tab, in the **Existing parameters** box, select `-m` and then select **Remove**.
 
-   For some earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] there is no **Startup Parameters** tab. In that case, on the **Advanced** tab, double-select **Startup Parameters**. The parameters open up in a small window. Remove the `;-m` that you added earlier, and then select **OK**.
+   For some earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] there is no **Startup Parameters** tab. In that case, on the **Advanced** tab, double-click **Startup Parameters**. The parameters open up in a small window. Remove the `;-m` that you added earlier, and then select **OK**.
 
 1. Right-click your server name, and then select **Restart**. Make sure to start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent again if you stopped it before starting [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode.
 

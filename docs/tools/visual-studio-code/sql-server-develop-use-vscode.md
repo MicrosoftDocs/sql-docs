@@ -12,7 +12,7 @@ ms.topic: conceptual
 
 # SQL Server extension for Visual Studio Code
 
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 This article shows how to use the **mssql** extension for Visual Studio Code (Visual Studio Code) to work with databases in SQL Server on Windows, macOS, and Linux, as well as Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics. The [mssql extension for Visual Studio Code](https://aka.ms/mssql-marketplace) lets you connect to a SQL Server, query with Transact-SQL (T-SQL), and view the results.
 

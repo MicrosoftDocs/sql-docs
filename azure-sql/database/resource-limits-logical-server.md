@@ -4,7 +4,7 @@ description: This article provides an overview of resource management in Azure S
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 03/08/2023
+ms.date: 04/13/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: reference
@@ -15,7 +15,8 @@ ms.topic: reference
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](resource-limits-logical-server.md)
+> * [Azure SQL Database logical server](resource-limits-logical-server.md)
+> * [Azure SQL Database single database](resource-limits-vcore-single-databases.md)
 > * [Azure SQL Managed Instance](../managed-instance/resource-limits.md)
 
 This article provides an overview of resource management in Azure SQL Database. It provides information on what happens when resource limits are reached, and describes  resource governance mechanisms that are used to enforce these limits.
@@ -64,7 +65,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 ### Compute CPU
 
 When database compute CPU utilization becomes high, query latency increases, and queries can even time out. Under these conditions, queries may be queued by the service and are provided resources for execution as resources become free.
-When encountering high compute utilization, mitigation options include:
+If you observe high compute utilization, mitigation options include:
 
 - Increasing the compute size of the database or elastic pool to provide the database with more compute resources. See [Scale single database resources](single-database-scale.md) and [Scale elastic pool resources](elastic-pool-scale.md).
 - Optimizing queries to reduce CPU resource utilization of each query. For more information, see [Query Tuning/Hinting](performance-guidance.md#query-tuning-and-hinting).
@@ -75,7 +76,7 @@ When data space used reaches the maximum data size limit, either at the database
 
 In Premium and Business Critical service tiers, clients also receive an error message if combined storage consumption by data, transaction log, and `tempdb` for a single database or an elastic pool exceeds maximum local storage size. For more information, see [Storage space governance](#storage-space-governance).
 
-When encountering high space utilization, mitigation options include:
+If you observe high storage space utilization, mitigation options include:
 
 - Increase maximum data size of the database or elastic pool, or scale up to a service objective with a higher maximum data size limit. See [Scale single database resources](single-database-scale.md) and [Scale elastic pool resources](elastic-pool-scale.md).
 - If the database is in an elastic pool, then alternatively the database can be moved outside of the pool, so that its storage space isn't shared with other databases.
@@ -128,14 +129,14 @@ Besides the data cache, memory is used in other components of the database engin
 
 In rare cases, a sufficiently demanding workload may cause an insufficient memory condition, leading to out-of-memory errors. This can happen at any level of memory utilization between 0% and 100%. This is more likely to occur on smaller compute sizes that have proportionally smaller memory limits, and/or with workloads using more memory for query processing, such as in [dense elastic pools](elastic-pool-resource-management.md).
 
-When encountering out-of-memory errors, mitigation options include:
+If you get out-of-memory errors, mitigation options include:
 - Review the details of the OOM condition in [sys.dm_os_out_of_memory_events](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-out-of-memory-events).
 - Increasing the service tier or compute size of the database or elastic pool. See [Scale single database resources](single-database-scale.md) and [Scale elastic pool resources](elastic-pool-scale.md).
 - Optimizing queries and configuration to reduce memory utilization. Common solutions are described in the following table.
 
 |Solution|Description|
 | :----- | :----- |
-|Reduce the size of memory grants|For more information about memory grants, see the [Understanding SQL Server memory grant](https://techcommunity.microsoft.com/t5/sql-server/understanding-sql-server-memory-grant/ba-p/383595) blog post. A common solution for avoiding excessively large memory grants is keeping [statistics](/sql/relational-databases/statistics/statistics) up to date. This results in more accurate estimates of memory consumption by the query engine, avoiding unnecessarily large memory grants.<br /><br />By default, in databases using compatibility level 140 and above, the database engine may automatically adjust memory grant size using [Batch mode memory grant feedback](/sql/relational-databases/performance/intelligent-query-processing#batch-mode-memory-grant-feedback). Similarly, in databases using compatibility level 150 and above, the database engine also uses [Row mode memory grant feedback](/sql/relational-databases/performance/intelligent-query-processing#row-mode-memory-grant-feedback), for more common row mode queries. This built-in functionality helps avoid out-of-memory errors due to unnecessarily large memory grants.|
+|Reduce the size of memory grants|For more information about memory grants, see the [Understanding SQL Server memory grants](https://techcommunity.microsoft.com/t5/sql-server/understanding-sql-server-memory-grant/ba-p/383595) blog post. A common solution for avoiding excessively large memory grants is keeping [statistics](/sql/relational-databases/statistics/statistics) up to date. This results in more accurate estimates of memory consumption by the query engine, avoiding unnecessarily large memory grants.<br /><br />By default, in databases using compatibility level 140 and above, the database engine may automatically adjust memory grant size using [Batch mode memory grant feedback](/sql/relational-databases/performance/intelligent-query-processing#batch-mode-memory-grant-feedback). Similarly, in databases using compatibility level 150 and above, the database engine also uses [Row mode memory grant feedback](/sql/relational-databases/performance/intelligent-query-processing#row-mode-memory-grant-feedback), for more common row mode queries. This built-in functionality helps avoid out-of-memory errors due to unnecessarily large memory grants.|
 |Reduce the size of query plan cache|The database engine caches query plans in memory, to avoid compiling a query plan for every query execution. To avoid query plan cache bloat caused by caching plans that are only used once, make sure to use parameterized queries, and consider enabling OPTIMIZE_FOR_AD_HOC_WORKLOADS [database-scoped configuration](/sql/t-sql/statements/alter-database-scoped-configuration-transact-sql).|
 |Reduce the size of lock memory|The database engine uses memory for [locks](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide#Lock_Engine). When possible, avoid large transactions that may acquire a large number of locks and cause high lock memory consumption.|
 
@@ -172,19 +173,19 @@ For single databases, workload group limits are applied to all storage I/O again
 
 For example, if a query generates 1000 IOPS without any I/O resource governance, but the workload group maximum IOPS limit is set to 900 IOPS, the query won't be able to generate more than 900 IOPS. However, if the resource pool maximum IOPS limit is set to 1500 IOPS, and the total I/O from all workload groups associated with the resource pool exceeds 1500 IOPS, then the I/O of the same query may be reduced below the workgroup limit of 900 IOPS.
 
-The IOPS and throughput max values returned by the [sys.dm_user_db_resource_governance](/sql/relational-databases/system-dynamic-management-views/sys-dm-user-db-resource-governor-azure-sql-database) view act as limits/caps, not as guarantees. Further, resource governance doesn't guarantee any specific storage latency. The best achievable latency, IOPS, and throughput for a given user workload depend not only on I/O resource governance limits, but also on the mix of I/O sizes used, and on the capabilities of the underlying storage. SQL Database uses I/Os that vary in size between 512 bytes and 4 MB. For the purposes of enforcing IOPS limits, every I/O is accounted regardless of its size, with the exception of databases with data files in Azure Storage. In that case, IOs larger than 256 KB are accounted as multiple 256-KB I/Os, to align with Azure Storage I/O accounting.
+The IOPS and throughput max values returned by the [sys.dm_user_db_resource_governance](/sql/relational-databases/system-dynamic-management-views/sys-dm-user-db-resource-governor-azure-sql-database) view act as limits/caps, not as guarantees. Further, resource governance doesn't guarantee any specific storage latency. The best achievable latency, IOPS, and throughput for a given user workload depend not only on I/O resource governance limits, but also on the mix of I/O sizes used, and on the capabilities of the underlying storage. SQL Database uses I/O operations that vary in size between 512 bytes and 4 MB. For the purposes of enforcing IOPS limits, every I/O is accounted regardless of its size, with the exception of databases with data files in Azure Storage. In that case, IOs larger than 256 KB are accounted as multiple 256-KB I/Os, to align with Azure Storage I/O accounting.
 
-For Basic, Standard, and General Purpose databases, which use data files in Azure Storage, the `primary_group_max_io` value may not be achievable if a database doesn't have enough data files to cumulatively provide this number of IOPS, or if data isn't distributed evenly across files, or if the performance tier of underlying blobs limits IOPS/throughput below the resource governance limits. Similarly, with small log IOs generated by frequent transaction commits, the `primary_max_log_rate` value may not be achievable by a workload due to the IOPS limit on the underlying Azure Storage blob. For databases using Azure Premium Storage, Azure SQL Database uses sufficiently large storage blobs to obtain needed IOPS/throughput, regardless of database size. For larger databases, multiple data files are created to increase total IOPS/throughput capacity.
+For Basic, Standard, and General Purpose databases, which use data files in Azure Storage, the `primary_group_max_io` value may not be achievable if a database doesn't have enough data files to cumulatively provide this number of IOPS, or if data isn't distributed evenly across files, or if the performance tier of underlying blobs limits IOPS/throughput below the resource governance limits. Similarly, with small log I/O operations generated by frequent commits of transactions, the `primary_max_log_rate` value may not be achievable by a workload due to the IOPS limit on the underlying Azure Storage blob. For databases using Azure Premium Storage, Azure SQL Database uses sufficiently large storage blobs to obtain needed IOPS/throughput, regardless of database size. For larger databases, multiple data files are created to increase total IOPS/throughput capacity.
 
 Resource utilization values such as `avg_data_io_percent` and `avg_log_write_percent`, reported in the [sys.dm_db_resource_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database),  [sys.resource_stats](/sql/relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database), [sys.dm_elastic_pool_resource_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-elastic-pool-resource-stats-azure-sql-database), and [sys.elastic_pool_resource_stats](/sql/relational-databases/system-catalog-views/sys-elastic-pool-resource-stats-azure-sql-database) views, are calculated as percentages of maximum resource governance limits. Therefore, when factors other than resource governance limit IOPS/throughput, it's possible to see IOPS/throughput flattening out and latencies increasing as the workload increases, even though reported resource utilization remains below 100%.
 
-To determine read and write IOPS, throughput, and latency per database file, use the [sys.dm_io_virtual_file_stats()](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql) function. This function surfaces all I/O against the database, including background I/O that isn't accounted towards `avg_data_io_percent`, but uses IOPS and throughput of the underlying storage, and can impact observed storage latency. The function reports additional latency that may be introduced by I/O resource governance for reads and writes, in the `io_stall_queued_read_ms` and `io_stall_queued_write_ms` columns respectively.
+To monitor the read and write IOPS, throughput, and latency per database file, use the [sys.dm_io_virtual_file_stats()](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql) function. This function surfaces all I/O against the database, including background I/O that isn't accounted towards `avg_data_io_percent`, but uses IOPS and throughput of the underlying storage, and can impact observed storage latency. The function reports additional latency that may be introduced by I/O resource governance for reads and writes, in the `io_stall_queued_read_ms` and `io_stall_queued_write_ms` columns respectively.
 
 ### Transaction log rate governance
 
 Transaction log rate governance is a process in Azure SQL Database used to limit high ingestion rates for workloads such as bulk insert, SELECT INTO, and index builds. These limits are tracked and enforced at the subsecond level to the rate of log record generation, limiting throughput regardless of how many IOs may be issued against data files. Transaction log generation rates currently scale linearly up to a point that is hardware-dependent and service tier-dependent.
 
-Log rates are set such that they can be achieved and sustained in a variety of scenarios, while the overall system can maintain its functionality with minimized impact to the user load. Log rate governance ensures that transaction log backups stay within published recoverability SLAs. This governance also prevents an excessive backlog on secondary replicas, that could otherwise lead to longer than expected downtime during failovers.
+Log rates are set such that they can be achieved and sustained in a variety of scenarios, while the overall system can maintain its functionality with minimized impact to the user load. Log rate governance ensures that transaction log backups stay within published recoverability SLAs. This governance also prevents an excessive backlog on secondary replicas that could otherwise lead to longer than expected downtime during failovers.
 
 The actual physical IOs to transaction log files are not governed or limited. As log records are generated, each operation is evaluated and assessed for whether it should be delayed in order to maintain a maximum desired log rate (MB/s per second). The delays aren't added when the log records are flushed to storage, rather log rate governance is applied during log rate generation itself.
 
@@ -203,7 +204,11 @@ Log rate governor traffic shaping is surfaced via the following wait types (expo
 
 When encountering a log rate limit that is hampering desired scalability, consider the following options:
 
-- Scale up to a higher service level in order to get the maximum log rate of a service tier, or switch to a different service tier. The [Hyperscale](service-tier-hyperscale.md) service tier provides 100 MB/s log rate regardless of chosen service level.
+- Scale up to a higher service level in order to get the maximum log rate of a service tier, or switch to a different service tier. The [Hyperscale](service-tier-hyperscale.md) service tier provides 100 MB/s log rate per database and 125 MB/s per elastic pool, regardless of chosen service level.
+
+    > [!NOTE]
+    > [Elastic pools for Hyperscale](./hyperscale-elastic-pool-overview.md) are currently in preview.
+
 - If data being loaded is transient, such as staging data in an ETL process, it can be loaded into `tempdb` (which is minimally logged).
 - For analytic scenarios, load into a clustered [columnstore](/sql/relational-databases/indexes/columnstore-indexes-overview) table, or a table with indexes that use [data compression](/sql/relational-databases/data-compression/data-compression). This reduces the required log rate. This technique does increase CPU utilization and is only applicable to data sets that benefit from clustered columnstore indexes or data compression.
 
@@ -248,6 +253,14 @@ To learn more, review `tempdb` size limits for:
 
 - vCore purchasing model: [single databases](resource-limits-vcore-single-databases.md), [pooled databases](resource-limits-vcore-elastic-pools.md)
 - DTU purchasing model: [single databases](resource-limits-dtu-single-databases.md#tempdb-sizes),  [pooled databases](resource-limits-dtu-elastic-pools.md#tempdb-sizes).
+
+## Previously available hardware
+
+This section includes details on previously available hardware.
+
+- Gen4 hardware has been retired and is not available for provisioning, upscaling, or downscaling. Migrate your database to a supported hardware generation for a wider range of vCore and storage scalability, accelerated networking, best IO performance, and minimal latency. For more information, see [Support has ended for Gen 4 hardware on Azure SQL Database](https://azure.microsoft.com/updates/support-has-ended-for-gen-4-hardware-on-azure-sql-database/).
+
+[!INCLUDE[identify-gen4-hardware](../includes/identify-gen4-hardware.md)]
 
 ## Next steps
 

@@ -39,7 +39,7 @@ ms.topic: include
 
 - **Manual failover**
 
-  You can initiate a geo-failover manually at any time regardless of the automatic failover configuration. During an outage that impacts the primary, if automatic failover policy is not configured, a manual failover is required to promote the secondary to the primary role. You can initiate a forced (unplanned) or friendly (planned) failover. A friendly failover is only possible when the old primary is accessible, and can be used to relocate the primary to the secondary region without data loss. When a failover is completed, the DNS records are automatically updated to ensure connectivity to the new primary.
+  You can initiate a geo-failover manually at any time regardless of the automatic failover configuration. You can initiate a forced (unplanned) or friendly (planned) failover. A friendly failover is only possible when the old primary is accessible, and can be used to relocate the primary to the secondary region without data loss. During an outage that impacts the primary, if automatic failover policy is not configured, a manual failover is required to promote the secondary to the primary role. When a failover is completed, the DNS records are automatically updated to ensure connectivity to the new primary.
 
 - **Grace period with data loss**
 

@@ -1,44 +1,73 @@
 ---
-title: "ADR cleaner retry timeout (min) configuration option"
+title: "ADR cleaner retry timeout (min) (server configuration option)"
 description: "Explains the SQL Server instance configuration setting for ADR cleaner retry timeout."
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: "06/01/2020"
+ms.reviewer: randolphwest
+ms.date: 05/16/2023
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "ADR cleaner retry timeout (min)"
 ---
-# ADR cleaner retry timeout (min) configuration option
+# ADR cleaner retry timeout (min) (server configuration option)
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Introduced in SQL Server 2019.
+[!INCLUDE [sssql19-starting-md](../../includes/sssql19-starting-md.md)], this configuration setting is required for [accelerated database recovery](../../relational-databases/accelerated-database-recovery-concepts.md) (ADR). The cleaner is the asynchronous process that wakes up periodically and cleans page versions that aren't needed.
 
-This configuration setting is required for [accelerated database recovery](../../relational-databases/accelerated-database-recovery-concepts.md). The cleaner is the asynchronous process that wakes up periodically and cleans page versions that are not needed.
+Occasionally the cleaner runs into issues while acquiring object level locks due to conflicts with user workload during its sweep. It tracks such pages in a separate list. **ADR cleaner retry timeout (min)** controls the amount of time the cleaner would spend exclusively retrying object lock acquisition and cleanup of page before abandoning the sweep. Completion of a sweep with 100 percent success is essential to keep the growth of aborted transactions in the aborted transactions map. If the separate list can't be cleaned up in the prescribed timeout, then the current sweep will be abandoned and the next sweep will start.
 
-Occasionally the cleaner runs into issues while acquiring object level locks due to conflicts with user workload during its sweep. It tracks such pages in a separate list. The ADR cleaner retry timeout (default value of 15) controls the amount of time the cleaner would spend exclusively retrying object lock acquisition and cleanup of page before abandoning the sweep. Completion of a sweep with 100% success is essential to keep the growth of aborted transactions in the aborted transactions map. If the separate list cannot be cleaned up in the prescribed timeout, then the current sweep will be abandoned and the next sweep will start.
+| Version | Default value |
+| --- | --- |
+| [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] | 120 |
+| [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions | 15 |
 
-## Remarks  
+## Remarks
 
-The cleaner is single threaded in SQL Server 2019 and so one SQL Server instance can work on one database at a time. If the instance has more than one user database with ADR enabled, then do not increase the timeout to a large value as that could delay cleanup on one database while the retry is happening on another database.
+The cleaner is single threaded in [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)], and so one [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance can work on one database at a time. If the instance has more than one user database with ADR enabled, then don't increase the timeout to a large value. Doing so could delay cleanup on one database while the retry is happening on another database.
+
+::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15"
+
+## Known issue
+
+For [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] CU 12 and previous versions, this value may be set to `0`. We recommend that you manually reset the value to `120`, which is the designed default, using the example in this article.
 
 ## Examples
 
-The following examples sets the cleaner retry timeout.
+The following example sets the cleaner retry timeout to the default value.
 
-```tsql
-sp_configure 'show advanced options', 1;  
+```sql
+sp_configure 'show advanced options', 1;
 RECONFIGURE;
-GO 
-sp_configure 'ADR cleaner retry timeout', 15;  
-RECONFIGURE;  
-GO  
-```  
+GO
+sp_configure 'ADR cleaner retry timeout', 120;
+RECONFIGURE;
+GO
+```
 
-## See Also  
+::: moniker-end
 
-- [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)
+::: moniker range=">= sql-server-linux-ver16 || >= sql-server-ver16"
+
+## Examples
+
+The following example sets the cleaner retry timeout to the default value.
+
+```sql
+sp_configure 'show advanced options', 1;
+RECONFIGURE;
+GO
+sp_configure 'ADR cleaner retry timeout', 15;
+RECONFIGURE;
+GO
+```
+
+::: moniker-end
+
+## See also
+
+- [Server Configuration Options (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)
 - [Accelerated database recovery](../../relational-databases/accelerated-database-recovery-concepts.md)
 - [Manage accelerated database recovery](../../relational-databases/accelerated-database-recovery-management.md)

@@ -146,8 +146,11 @@ Azure Logic Apps | *.logic.azure.com
 Azure Event Hubs | *.servicebus.windows.net
 Azure Event Grid | *.eventgrid.azure.net
 Azure Cognitive Services | *.cognitiveservices.azure.com
+Azure OpenAI | *.openai.azure.com
 PowerApps / Dataverse | *.api.crm.dynamics.com
+Microsoft Dynamics | *.dynamics.com
 Azure Container Instances | *.azurecontainer.io
+Azure Container Apps | *.azurecontainerapps.io
 Power BI | api.powerbi.com
 Microsoft Graph | graph.microsoft.com
 Analysis Services | *.asazure.windows.net
@@ -245,6 +248,12 @@ CREATE DATABASE SCOPED CREDENTIAL [https://<APP_NAME>.azurewebsites.net/api/<FUN
 WITH IDENTITY = 'Managed Identity', SECRET = '{"resourceid":"<APP_ID>"}';
 ```
 
+Both System-Assigned and User-Assigned Managed Identities are supported:
+ - If there is at least one User Managed Identity assigned, the defined Primary Identity will be used for authenticating when using a Managed Identity based Database Scoped Credential. 
+ - If there are no User Managed Identity assigned then the System Assigned Managed Identity will be used, if enabled, for authenticating when using a Managed Identity based Database Scoped Credential. 
+ - In case there are both User and System Managed Identitis defined,the User-Assigned Managed Identity will be used. 
+ - If there are more than one User Managed Identity assigned, only the Primary Identity will be used. 
+
 ---
 
 ### Credential name rules
@@ -305,16 +314,6 @@ If the same headers are also specified via the *@headers* parameter, the system-
 
 > [!NOTE]  
 > If you are testing invocation of the REST endpoint with other tools, like [cURL](https://curl.se/) or any modern REST client like [Postman](https://www.postman.com/) or [Insomnia](https://insomnia.rest/), make sure to include the same headers that are automatically injected by `sp_invoke_external_rest_endpoint` to have the same behavior and results.
-
-## Known issues
-
-### Incorrect response headers
-
-The presence of the tilde (`~`) character in either a response header's key or value, will prevent that header key and value to be returned correctly.
-
-### DNS resolution fails with Windows Socket Error 11003 or 11004
-
-On some Azure SQL databases, calling an external REST endpoint may fail due to a Windows Socket Error 11003 or 11004. If you encounter this error, use API Management to call the REST endpoint.
 
 ## Best practices
 

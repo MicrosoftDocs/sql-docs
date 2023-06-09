@@ -2,8 +2,8 @@
 title: Point-in-time restore
 titleSuffix: Azure SQL Managed Instance
 description: Learn how to restore a database to an earlier point in time for Azure SQL Managed Instance.
-author: MilanMSFT
-ms.author: mlazic
+author: Stralle
+ms.author: strrodic
 ms.reviewer: mathoma, nvraparl
 ms.date: 03/25/2023
 ms.service: sql-managed-instance

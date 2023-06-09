@@ -303,9 +303,9 @@ Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. 
 | Asia/Pyongyang | North Korea Standard Time |
 | Asia/Qatar | Arab Standard Time |
 | Asia/Qyzylorda | Central Asia Standard Time |
-| Asia/Rangoon | Myanmar Standard Time |
+| Asia/Yangon | Myanmar Standard Time |
 | Asia/Riyadh | Arab Standard Time |
-| Asia/Saigon | SE Asia Standard Time |
+| Asia/Ho_Chi_Minh | SE Asia Standard Time |
 | Asia/Sakhalin | Sakhalin Standard Time |
 | Asia/Samarkand | West Asia Standard Time |
 | Asia/Seoul | Korea Standard Time |
@@ -396,7 +396,7 @@ Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. 
 | Europe/Guernsey | GMT Standard Time |
 | Europe/Helsinki | FLE Standard Time |
 | Europe/Isle_of_Man | GMT Standard Time |
-| Europe/Istanbul | Türkiye Standard Time |
+| Europe/Istanbul | Turkey Standard Time |
 | Europe/Jersey | GMT Standard Time |
 | Europe/Kaliningrad | Kaliningrad Standard Time |
 | Europe/Kyiv | FLE Standard Time |

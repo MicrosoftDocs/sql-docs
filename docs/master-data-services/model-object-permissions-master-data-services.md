@@ -13,7 +13,7 @@ helpviewer_keywords:
 ---
 # Model Object Permissions (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Model object permissions are mandatory. They determine the attributes a user can access in the **Explorer** functional area of the UI.  
   

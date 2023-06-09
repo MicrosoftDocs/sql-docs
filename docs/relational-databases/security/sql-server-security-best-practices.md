@@ -19,7 +19,7 @@ helpviewer_keywords:
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server security best practices
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This article provides information about best practices and guidelines that help establish security for SQL Server. For a comprehensive review of SQL Server security features, see [Securing SQL Server](securing-sql-server.md). 
 

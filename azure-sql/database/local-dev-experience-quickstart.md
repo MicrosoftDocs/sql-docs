@@ -20,7 +20,11 @@ To complete this Quickstart, you must first [Set up a local development environm
 
 ## Create a blank project
 
-To get started, either create a blank Database Project, or open an existing project. The steps in this section help you create a new blank project, but you can open an existing project by going to the **Projects** view or by searching for **Database Projects: Open Existing** in the command palette. start from an existing database by selecting **Create Project from Database** from the command palette or database context menu. Finally, you can start from an OpenAPI/Swagger spec by using the **Database Projects: Generate SQL Project from OpenAPI/Swagger spec** command in the command palette.
+To get started, either create a blank Database Project, or open an existing project. The steps in this section help you create a new blank project, but you can also:
+
+1. Open an existing project by going to the **Database Projects** view or by searching for **Database Projects: Open Existing** in the command palette.
+2. Start from an existing database by selecting **Create Project from Database** from the command palette or database context menu. 
+3. Start from an OpenAPI/Swagger spec by using the **Database Projects: Generate SQL Project from OpenAPI/Swagger spec (Preview)** command in the command palette.
 
 The steps for creating a new project using Visual Studio Code, or Azure Data Studio are the same. To create a blank project, follow these steps: 
 

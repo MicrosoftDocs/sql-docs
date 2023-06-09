@@ -4,7 +4,7 @@ description: This page describes some common DTU resource limits for single data
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 01/31/2022
+ms.date: 05/19/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: reference
@@ -48,6 +48,7 @@ The following tables show the resources available for a single database at each 
 | Max storage (GB) | 2 |
 | Max in-memory OLTP storage (GB) |N/A |
 | Max concurrent workers | 30 |
+| Max concurrent logins | 30 |
 | Max concurrent external connections <sup>1</sup>|3|
 | Max concurrent sessions | 300 |
 
@@ -70,6 +71,7 @@ The following tables show the resources available for a single database at each 
 | Max storage (GB) | 250 | 250 | 250 | 1024 |
 | Max in-memory OLTP storage (GB) | N/A | N/A | N/A | N/A |
 | Max concurrent workers | 60 | 90 | 120 | 200 |
+| Max concurrent logins | 60 | 90 | 120 | 200 |
 | Max concurrent external connections <sup>2</sup>|6|9|12|20|
 | Max concurrent sessions |600 | 900 | 1200 | 2400 |
 
@@ -94,6 +96,7 @@ The following tables show the resources available for a single database at each 
 | Max storage (GB) | 1024 | 1024 | 1024 | 1024 | 1024 |
 | Max in-memory OLTP storage (GB) | N/A | N/A | N/A | N/A |N/A |
 | Max concurrent workers | 400 | 800 | 1600 | 3200 |6000 |
+| Max concurrent logins | 400 | 800 | 1600 | 3200 |6000 |
 | Max concurrent external connections <sup>2</sup>|40|80|150|150|150|
 | Max concurrent sessions |4800 | 9600 | 19200 | 30000 |30000 |
 
@@ -110,6 +113,7 @@ The following tables show the resources available for a single database at each 
 | Max storage (GB) | 1024 | 1024 | 1024 | 1024 | 4096 <sup>2</sup> | 4096 <sup>2</sup> |
 | Max in-memory OLTP storage (GB) | 1 | 2 | 4 | 8 | 14 | 32 |
 | Max concurrent workers | 200 | 400 | 800 | 1600 | 2800 | 6400 |
+| Max concurrent logins | 200 | 400 | 800 | 1600 | 2800 | 6400 |
 | Max concurrent external connections <sup>3</sup>|20|40|80|150|150|150|
 | Max concurrent sessions | 30000 | 30000 | 30000 | 30000 | 30000 | 30000 |
 

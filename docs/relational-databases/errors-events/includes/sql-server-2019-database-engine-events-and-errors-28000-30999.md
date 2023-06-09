@@ -2,7 +2,7 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 02/17/2023
+ms.date: 03/22/2023
 ms.topic: include
 ---
 | Error| Severity | Event logged | Description|
@@ -285,7 +285,7 @@ ms.topic: include
 | 29270 | 10 | Yes | Configuration manager has started accepting enlistment requests |
 | 29271 | 10 | Yes | Configuration manager has shutdown. |
 | 29272 | 16 | Yes | Configuration manager enlistment denied join of brick \<%d\>. Machine architecture mismatch. Agent machine architecture \<%X\>, manager machine architecture \<%X\>. |
-| 29273 | 16 | Yes | Error: cannot bump Configuration manager manager major version (Loc: %d). |
+| 29273 | 16 | Yes | Error: cannot bump Configuration manager major version (Loc: %d). |
 | 29274 | 16 | Yes | Component %s reported that the component %s in brick %d is in a suspicious state because of the error: %d, severity: %d, state: %d, description: '%s'. Additional description provided was: '%s'. This report will be sent to the configuration manager known to be on brick %d. |
 | 29275 | 16 | Yes | Component %s from brick %d reported that the component %s in brick %d is in a suspicious state because of the error: %d, severity: %d, state: %d, description: '%s'. Additional description provided was: '%s'. |
 | 29276 | 16 | Yes | Brick down message for brick %d enqueued due to fatal error reported for component %s by component %s in brick %d. Fatal error reported is error code: %d, severity: %d, state: %d, description: '%s'. Additional description provided was: '%s'. |

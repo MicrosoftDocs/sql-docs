@@ -393,9 +393,11 @@ Avoid writing transactions that include user interaction, because the speed of b
   
 ### Keep transactions short and in one batch
 
-A deadlock typically occurs when several long-running transactions execute concurrently in the same database. The longer the transaction, the longer the exclusive or update locks are held, blocking other activity and leading to possible deadlock situations.  
+A deadlock typically occurs when several long-running transactions execute concurrently in the same database. The longer the transaction, the longer the exclusive or update locks are held, blocking other activity and leading to possible deadlock situations. 
   
 Keeping transactions in one batch minimizes network roundtrips during a transaction, reducing possible delays in completing the transaction and releasing locks.  
+
+For more about update locks, see [Transaction locking and row versioning guide](sql-server-transaction-locking-and-row-versioning-guide.md#update).
   
 ### Use a lower isolation level
 
@@ -427,7 +429,7 @@ In a deadlock scenario, the victim transaction is automatically stopped and roll
 
 To cause a deadlock, you will need to connect two sessions to the `AdventureWorksLT2019` database. We'll refer to these sessions as **Session A** and **Session B**. You can create these two sessions simply by creating two query windows in SQL Server Management Studio (SSMS).
 
-In **Session A**, run the following Transact-SQL. This code begins an [explicit transaction](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide#starting-transactions) and runs a single statement that updates the `SalesLT.Product` table. To do this, the transaction acquires an [update (U) lock](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide#behavior-when-modifying-data) on one row on table `SalesLT.Product` which is converted to an exclusive (X) lock. We leave the transaction open.
+In **Session A**, run the following Transact-SQL. This code begins an [explicit transaction](sql-server-transaction-locking-and-row-versioning-guide.md#starting-transactions) and runs a single statement that updates the `SalesLT.Product` table. To do this, the transaction acquires an [update (U) lock](sql-server-transaction-locking-and-row-versioning-guide.md#behavior-when-modifying-data) on one row on table `SalesLT.Product` which is converted to an exclusive (X) lock. We leave the transaction open.
 
 ```sql
 BEGIN TRAN
@@ -437,7 +439,7 @@ BEGIN TRAN
 
 ```
 
-Now, in **Session B**, run the following Transact-SQL. This code doesn't explicitly begin a transaction. Instead, it operates in [autocommit transaction mode](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide#starting-transactions). This statement updates the `SalesLT.ProductDescription` table. The update will take out an update (U) lock on 72 rows on the `SalesLT.ProductDescription` table. The query joins to other tables, including the `SalesLT.Product` table.
+Now, in **Session B**, run the following Transact-SQL. This code doesn't explicitly begin a transaction. Instead, it operates in [autocommit transaction mode](sql-server-transaction-locking-and-row-versioning-guide.md#starting-transactions). This statement updates the `SalesLT.ProductDescription` table. The update will take out an update (U) lock on 72 rows on the `SalesLT.ProductDescription` table. The query joins to other tables, including the `SalesLT.Product` table.
 
 ```sql
 UPDATE SalesLT.ProductDescription SET Description = Description

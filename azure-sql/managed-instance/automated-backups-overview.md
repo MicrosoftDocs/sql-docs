@@ -2,18 +2,14 @@
 title: Automatic, geo-redundant backups
 titleSuffix: Azure SQL Managed Instance
 description: Learn how Azure SQL Managed Instance automatically backs up all databases and provides point-in-time restore capability.
-author: MilanMSFT
-ms.author: mlazic
+author: Stralle
+ms.author: strrodic
 ms.reviewer: mathoma, wiassaf, danil
 ms.date: 07/20/2022
 ms.service: sql-managed-instance
 ms.subservice: backup-restore
 ms.topic: conceptual
-ms.custom:
-  - references_regions
-  - devx-track-azurepowershell
-  - devx-track-azurecli
-  - azure-sql-split
+ms.custom: references_regions, azure-sql-split
 monikerRange: "= azuresql || = azuresql-mi"
 ---
 # Automated backups in Azure SQL Managed Instance
@@ -43,7 +39,7 @@ Databases in Azure SQL Managed Instance use SQL Server engine technology to back
 Azure SQL Managed Instance creates:
 
 - [Full backups](/sql/relational-databases/backup-restore/full-database-backups-sql-server) every week.
-- [Differential backups](/sql/relational-databases/backup-restore/differential-backups-sql-server) every 12 to 24 hours.
+- [Differential backups](/sql/relational-databases/backup-restore/differential-backups-sql-server) every 12 hours.
 - [Transaction log backups](/sql/relational-databases/backup-restore/transaction-log-backups-sql-server) every 10 minutes. 
 
 The frequency of transaction log backups is based on the compute size and the amount of database activity. When you restore a database, the service determines which full, differential, and transaction log backups need to be restored.

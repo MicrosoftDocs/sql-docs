@@ -12,7 +12,7 @@ f1_keywords:
 ---
 # Web Configuration Page (Master Data Services Configuration Manager)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Use the **Web Configuration** page to configure a website and web application. You can also enable Data Quality Services.  
   

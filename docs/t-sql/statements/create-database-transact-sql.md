@@ -4,7 +4,7 @@ description: Create database syntax for SQL Server, Azure SQL Database, Azure Sy
 author: markingmyname
 ms.author: maghan
 ms.reviewer: wiassaf
-ms.date: 02/02/2023
+ms.date: 05/31/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -1008,6 +1008,7 @@ CREATE DATABASE database_name
       | 'HS_MOPRMS_n'
       | { ELASTIC_POOL(name = <elastic_pool_name>) } })
    ]
+   [ WITH BACKUP_STORAGE_REDUNDANCY = { 'LOCAL' | 'ZONE' | 'GEO' } ]
 [;]
 ```
 
@@ -1029,12 +1030,11 @@ Specifies the default collation for the metadata catalog. *DATABASE_DEFAULT* spe
 
 *SQL_Latin1_General_CP1_CI_AS* specifies that the metadata catalog used for system views and tables be collated to a fixed SQL_Latin1_General_CP1_CI_AS collation. This is the default setting on Azure SQL Database if unspecified.
 
-#### BACKUP_STORAGE_REDUNDANCY
+#### BACKUP_STORAGE_REDUNDANCY = ['LOCAL' | 'ZONE' | 'GEO']
 
-Specifies how the point-in-time restore and long-term retention backups for a database are replicated. Geo restore or ability to recover from regional outage is only available when database is created with 'GEO' backup storage redundancy. Unless explicitly specified, databases created with T-SQL use geo-redundant backup storage. 
+Specifies how the point-in-time restore and long-term retention backups for a database are replicated. Geo restore or ability to recover from regional outage is only available when database is created with `GEO` backup storage redundancy. Unless explicitly specified, databases created with T-SQL use geo-redundant backup storage.
 
-> [!IMPORTANT]
-> BACKUP_STORAGE_REDUNDANCY option for Azure SQL Database is available in public preview in Brazil South and generally available in Southeast Asia Azure region only.  
+To enforce data residency when you're creating a database by using T-SQL, use `LOCAL` or `ZONE` as input to the BACKUP_STORAGE_REDUNDANCY parameter.
 
 #### LEDGER = {ON | OFF }
 
@@ -1307,9 +1307,14 @@ For more information about the syntax conventions, see [Transact-SQL syntax conv
 
 ```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
+[ WITH <with_options> [,..n]]
 [;]
-```
 
+<with_options> ::=
+{
+  LEDGER = { ON | OFF }
+}
+```
 > [!IMPORTANT]
 > To add files or set containment for a database in a managed instance, use the [ALTER DATABASE](alter-database-transact-sql.md?tabs=sqldbmi) statement.
 
@@ -1325,6 +1330,10 @@ Specifies the default collation for the database. Collation name can be either a
 
 For more information about the Windows and SQL collation names, [COLLATE (Transact-SQL)](../../t-sql/statements/collations.md).
 
+#### *LEDGER = {ON | OFF }*
+
+When set to `ON`, it creates a ledger database, in which the integrity of all user data is protected. Only ledger tables can be created in a ledger database. The default is `OFF`. The value of the `LEDGER` option cannot be changed once the database is created. For more information, see [Configure a ledger database](../../relational-databases/security/ledger/ledger-how-to-configure-ledger-database.md).
+
 ## Remarks
 
 Databases in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] have several default settings that are set when the database is created. For more information about these default settings, see the list of values in [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
@@ -1335,7 +1344,7 @@ Databases in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] have several 
 The following are `CREATE DATABASE` limitations:
 
 - Files and filegroups cannot be defined.
-- `WITH`options are not supported.
+- `WITH`options are not supported, except for `WITH LEDGER`.
 
   > [!TIP]
   > As workaround, use [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true). after `CREATE DATABASE` to set database options and to add files.
@@ -1356,6 +1365,12 @@ A simple example for creating a database.
 
 ```sql
 CREATE DATABASE TestDB1;
+```
+
+### Create a ledger database
+
+```sql
+CREATE DATABASE MyLedgerDB WITH LEDGER = ON;
 ```
 
 ## Next steps
@@ -1431,7 +1446,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 
 #### *database_name*
 
-The name of the new database. This name must be unique on the SQL server, which can host both [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] databases and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] databases, and comply with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rules for identifiers. For more information, see [Identifiers](../../relational-databases/databases/database-identifiers.md).
+The name of the new database. This name must be unique on the SQL server, which can host both databases in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] databases, and comply with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rules for identifiers. For more information, see [Identifiers](../../relational-databases/databases/database-identifiers.md).
 
 #### *collation_name*
 

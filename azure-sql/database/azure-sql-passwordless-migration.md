@@ -1,6 +1,6 @@
 ---
-title: Migrate an application to use passwordless connections with Azure SQL Database
-description: Learn how to connect to migrate an application to use passwordless connections with Azure SQL Database
+title: Migrate a .NET application to use passwordless connections with Azure SQL Database
+description: Learn how to migrate a .NET application to use passwordless connections with Azure SQL Database.
 author: alexwolfmsft
 ms.author: alexwolf
 ms.date: 02/10/2023
@@ -8,11 +8,11 @@ ms.service: sql-database
 ms.subservice: security
 monikerRange: "= azuresql || = azuresql-db"
 ms.topic: how-to
-ms.custom: devx-track-csharp, passwordless-java, passwordless-js, passwordless-python, passwordless-dotnet, devx-track-azurecli, devx-track-azurepowershell
+ms.custom: devx-track-csharp, passwordless-dotnet, devx-track-azurecli, devx-track-azurepowershell
 ms.devlang: csharp
 ---
 
-# Migrate an application to use passwordless connections with Azure SQL Database
+# Migrate a .NET application to use passwordless connections with Azure SQL Database
 
 Application requests to Azure SQL Database must be authenticated. Although there are multiple options for authenticating to Azure SQL Database, you should prioritize passwordless connections in your applications when possible. Traditional authentication methods that use passwords or secret keys create security risks and complications. Visit the [passwordless connections for Azure services](/azure/developer/intro/passwordless-overview) hub to learn more about the advantages of moving to passwordless connections. The following tutorial explains how to migrate an existing application to connect to Azure SQL Database to use passwordless connections instead of a username and password solution.
 

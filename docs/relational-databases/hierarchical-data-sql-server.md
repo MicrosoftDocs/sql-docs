@@ -226,12 +226,12 @@ SELECT CAST(Level AS nvarchar(100)) AS [Converted Level], *
 ```  
 Converted Level  Level     Location         LocationType  
 /1/              0x58      Europe           Continent  
-/1/1/            0x5AC0    France           Country  
+/1/1/            0x5AC0    France           Country/Region  
 /1/1/1/          0x5AD6    Paris            City  
-/1/2/            0x5B40    Spain            Country  
+/1/2/            0x5B40    Spain            Country/Region  
 /1/2/1/          0x5B56    Madrid           City  
 /2/              0x68      South America    Continent  
-/2/1/            0x6AC0    Brazil           Country  
+/2/1/            0x6AC0    Brazil           Country/Region  
 /2/1/1/          0x6AD6    Brasilia         City  
 /2/1/2/          0x6ADA    Bahia            State  
 /2/1/2/1/        0x6ADAB0  Salvador         City  

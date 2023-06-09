@@ -1,4 +1,4 @@
----
+x---
 title: Create an Azure SQL Managed Instance using a user-assigned managed identity
 titleSuffix: Azure SQL Managed Instance
 description: This article guides you through creating an Azure SQL Managed Instance using a user-assigned managed identity

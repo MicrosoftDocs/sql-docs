@@ -4,7 +4,7 @@ description: This release notes article describes the changes in each release of
 author: v-chojas
 ms.author: v-chojas
 ms.reviewer: v-davidengel
-ms.date: 01/31/2023
+ms.date: 06/15/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -32,6 +32,19 @@ By the way, in GitHub, the file name is changing today 2019/03/30:
 Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
+
+## 18.2.2
+
+
+Version number: 18.2.2.1  
+Released: June 31, 2023  
+
+<ADD STUFF HERE!, QUESTION IS DOES THIS REPLACE THE OLD ONE???>
+
+
+
+
+
 
 ## 18.2
 

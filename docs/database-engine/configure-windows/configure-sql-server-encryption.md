@@ -140,3 +140,5 @@ SELECT DISTINCT (encrypt_option)
 FROM sys.dm_exec_connections;
 GO
 ```
+
+The `encrypt_option` column is a Boolean value indicating whether encryption is enabled for this connection. If the value is `TRUE`, the connection is securely encrypted. If the value is `FALSE`, the connection isn't encrypted.

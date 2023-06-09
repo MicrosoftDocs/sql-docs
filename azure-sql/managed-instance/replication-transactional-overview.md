@@ -154,6 +154,10 @@ az storage file delete-batch --source <file_path> --account-key <account_key> --
 az storage directory delete --name <directory_name> --share-name <share_name> --account-key <account_key> --account-name <account_name>
 ```
 
+### Number of distribution agents running continuously
+
+Number of distribution agents configured to run continuously is limited to 30 on Azure SQL Managed Instance. To have more distribution agents they need to be running either on demand or with a defined schedule. Schedule can be defined with daily frequency and occurrence on every 10 seconds, so even though it's not continuous, you still can have distributor that's introducing latency that's only several seconds.
+
 ## With failover groups
 
 Using transactional replication with instances that are in a failover group is supported. However, if you configure replication before adding your managed instance into a failover group, replication pauses when you start to create your failover group, and replication monitor shows a status of `Replicated transactions are waiting for the next log backup or for mirroring partner to catch up`. Replication resumes once the failover group is created successfully. 

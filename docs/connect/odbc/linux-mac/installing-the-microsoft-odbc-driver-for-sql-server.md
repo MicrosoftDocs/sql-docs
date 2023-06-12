@@ -4,7 +4,7 @@ description: Learn how to install the Microsoft ODBC Driver for SQL Server on Li
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: randolphwest
-ms.date: 03/20/2023
+ms.date: 06/15/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -27,22 +27,22 @@ The following sections explain how to install the Microsoft ODBC driver 18 from 
 
 ```bash
 #Download the desired package(s)
-curl -O https://download.microsoft.com/download/1/f/f/1fffb537-26ab-4947-a46a-7a45c27f6f77/msodbcsql18_18.2.1.1-1_amd64.apk
-curl -O https://download.microsoft.com/download/1/f/f/1fffb537-26ab-4947-a46a-7a45c27f6f77/mssql-tools18_18.2.1.1-1_amd64.apk
+curl -O https://download.microsoft.com/download/1/f/f/1fffb537-26ab-4947-a46a-7a45c27f6f77/msodbcsql18_18.2.2.1-1_amd64.apk
+curl -O https://download.microsoft.com/download/1/f/f/1fffb537-26ab-4947-a46a-7a45c27f6f77/mssql-tools18_18.2.2.1-1_amd64.apk
 
 
 #(Optional) Verify signature, if 'gpg' is missing install it using 'apk add gnupg':
-curl -O https://download.microsoft.com/download/1/f/f/1fffb537-26ab-4947-a46a-7a45c27f6f77/msodbcsql18_18.2.1.1-1_amd64.sig
-curl -O https://download.microsoft.com/download/1/f/f/1fffb537-26ab-4947-a46a-7a45c27f6f77/mssql-tools18_18.2.1.1-1_amd64.sig
+curl -O https://download.microsoft.com/download/1/f/f/1fffb537-26ab-4947-a46a-7a45c27f6f77/msodbcsql18_18.2.2.1-1_amd64.sig
+curl -O https://download.microsoft.com/download/1/f/f/1fffb537-26ab-4947-a46a-7a45c27f6f77/mssql-tools18_18.2.2.1-1_amd64.sig
 
 curl https://packages.microsoft.com/keys/microsoft.asc  | gpg --import -
-gpg --verify msodbcsql18_18.2.1.1-1_amd64.sig msodbcsql18_18.2.1.1-1_amd64.apk
-gpg --verify mssql-tools18_18.2.1.1-1_amd64.sig mssql-tools18_18.2.1.1-1_amd64.apk
+gpg --verify msodbcsql18_18.2.2.1-1_amd64.sig msodbcsql18_18.2.1.1-1_amd64.apk
+gpg --verify mssql-tools18_18.2.2.1-1_amd64.sig mssql-tools18_18.2.1.1-1_amd64.apk
 
 
 #Install the package(s)
-sudo apk add --allow-untrusted msodbcsql18_18.2.1.1-1_amd64.apk
-sudo apk add --allow-untrusted mssql-tools18_18.2.1.1-1_amd64.apk
+sudo apk add --allow-untrusted msodbcsql18_18.2.2.1-1_amd64.apk
+sudo apk add --allow-untrusted mssql-tools18_18.2.2.1-1_amd64.apk
 ```
 
 > [!NOTE]  
@@ -81,6 +81,7 @@ sudo apt-get install -y libgssapi-krb5-2
 
 > [!NOTE]  
 > You can substitute setting the environment variable 'ACCEPT_EULA' with setting the debconf variable 'msodbcsql/ACCEPT_EULA' instead: `echo msodbcsql18 msodbcsql/ACCEPT_EULA boolean true | sudo debconf-set-selections`
+> For APT based Linux distros, apt-key add is deprecating
 
 ### [RHEL and Oracle Linux](#tab/redhat18-install)
 
@@ -141,7 +142,7 @@ sudo zypper install -y unixODBC-devel
 ### [Ubuntu](#tab/ubuntu18-install)
 
 ```bash
-if ! [[ "18.04 20.04 22.04" == *"$(lsb_release -rs)"* ]];
+if ! [[ "18.04 20.04 22.04 22.10" == *"$(lsb_release -rs)"* ]];
 then
     echo "Ubuntu $(lsb_release -rs) is not currently supported.";
     exit;
@@ -165,6 +166,7 @@ sudo apt-get install -y unixodbc-dev
 
 > [!NOTE]  
 > You can substitute setting the environment variable 'ACCEPT_EULA' with setting the debconf variable 'msodbcsql/ACCEPT_EULA' instead: `echo msodbcsql18 msodbcsql/ACCEPT_EULA boolean true | sudo debconf-set-selections`
+> For APT based Linux distros, apt-key add is deprecating
 
 ---
 
@@ -188,19 +190,19 @@ The following sections explain how to install the Microsoft ODBC driver 17 from 
 
 ```bash
 #Download the desired package(s)
-curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.10.2.1-1_amd64.apk
+curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.10.4.1-1_amd64.apk
 curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/mssql-tools_17.10.1.1-1_amd64.apk
 
 #(Optional) Verify signature, if 'gpg' is missing install it using 'apk add gnupg':
-curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.10.2.1-1_amd64.sig
+curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.10.4.1-1_amd64.sig
 curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/mssql-tools_17.10.1.1-1_amd64.sig
 
 curl https://packages.microsoft.com/keys/microsoft.asc  | gpg --import -
-gpg --verify msodbcsql17_17.10.1.1-1_amd64.sig msodbcsql17_17.10.2.1-1_amd64.apk
+gpg --verify msodbcsql17_17.10.1.1-1_amd64.sig msodbcsql17_17.10.4.1-1_amd64.apk
 gpg --verify mssql-tools_17.10.1.1-1_amd64.sig mssql-tools_17.10.1.1-1_amd64.apk
 
 #Install the package(s)
-sudo apk add --allow-untrusted msodbcsql17_17.10.2.1-1_amd64.apk
+sudo apk add --allow-untrusted msodbcsql17_17.10.4.1-1_amd64.apk
 sudo apk add --allow-untrusted mssql-tools_17.10.1.1-1_amd64.apk
 ```
 
@@ -240,6 +242,7 @@ sudo apt-get install -y libgssapi-krb5-2
 
 > [!NOTE]  
 > You can substitute setting the environment variable 'ACCEPT_EULA' with setting the debconf variable 'msodbcsql/ACCEPT_EULA' instead: `echo msodbcsql17 msodbcsql/ACCEPT_EULA boolean true | sudo debconf-set-selections`
+> For APT based Linux distros, apt-key add is deprecating
 
 ### [RHEL and Oracle Linux](#tab/redhat17-install)
 
@@ -324,6 +327,7 @@ sudo apt-get install -y unixodbc-dev
 
 > [!NOTE]  
 > You can substitute setting the environment variable 'ACCEPT_EULA' with setting the debconf variable 'msodbcsql/ACCEPT_EULA' instead: `echo msodbcsql17 msodbcsql/ACCEPT_EULA boolean true | sudo debconf-set-selections`
+> For APT based Linux distros, apt-key add is deprecating
 
 ---
 
@@ -347,6 +351,9 @@ source ~/.bashrc
 # optional: for unixODBC development headers
 sudo apt-get install unixodbc-dev
 ```
+
+> [!NOTE]  
+> For APT based Linux distros, apt-key add is deprecating
 
 ### [RHEL 7](#tab/redhat7-install)
 
@@ -396,6 +403,9 @@ source ~/.bashrc
 sudo apt-get install unixodbc-dev
 ```
 
+> [!NOTE]  
+> For APT based Linux distros, apt-key add is deprecating
+
 ---
 
 ## <a id="13"></a> ODBC 13
@@ -431,6 +441,9 @@ sudo apt-get install unixodbc-dev-utf16 #this step is optional but recommended*
 ln -sfn /opt/mssql-tools/bin/sqlcmd-13.0.1.0 /usr/bin/sqlcmd
 ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 ```
+
+> [!NOTE]  
+> For APT based Linux distros, apt-key add is deprecating
 
 ### [SLES 12 (ODBC 13)](#tab/suse12-13-install)
 

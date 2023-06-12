@@ -5,7 +5,7 @@ description: This article discusses how to connect your application to Azure SQL
 author: zoran-rilak-msft
 ms.author: zoranrilak
 ms.reviewer: mathoma, bonova, vanto
-ms.date: 06/09/2023
+ms.date: 06/12/2023
 ms.service: sql-managed-instance
 ms.subservice: connect
 ms.topic: conceptual
@@ -18,15 +18,15 @@ ms.custom: sqldbrb=1
 
 This article describes how to connect your application to Azure SQL Managed Instance in a number of different application scenarios inside or between Azure virtual networks.
 
-Today you have multiple choices when deciding how and where you host your application. You may choose to host an application in the cloud by using Azure App Service or some of Azure's virtual network integrated options, like Azure App Service Environment, Azure Virtual Machines, and Virtual Machine Scale Sets. You could also take the hybrid ("mixed") cloud approach and keep your applications on-premises. Whatever choice you make, your application can connect to Azure SQL Managed Instance in a number of different application scenarios inside or between Azure virtual networks.
+Today you have multiple choices when deciding how and where you host your application. You may choose to host an application in the cloud by using Azure App Service or some of Azure's virtual network integrated options, like Azure App Service Environment, Azure Virtual Machines, and Virtual Machine Scale Sets. You can also take the hybrid ("mixed") cloud approach and keep your applications on-premises. Whatever choice you make, your application can connect to Azure SQL Managed Instance in a number of different application scenarios inside or between Azure virtual networks.
 
-You can also enable data access to your managed instance from outside a virtual network – for example, from multi-tenant Azure services like Power BI and Azure App Service, or from an on-premises network not connected to your virtual networks via VPN. To accomplish these and similar scenarios, please refer to [Configure public endpoint in Azure SQL Managed Instance](./public-endpoint-configure.md).
+You can also enable data access to your managed instance from outside a virtual network – for example, from multi-tenant Azure services like Power BI and Azure App Service, or from an on-premises network not connected to your virtual networks via VPN. To accomplish these and similar scenarios, refer to [Configure public endpoint in Azure SQL Managed Instance](./public-endpoint-configure.md).
 
 ![High availability](./media/connect-application-instance/application-deployment-topologies.png)
 
 ## Connect from inside the same VNet
 
-Connecting an application inside the same virtual network as SQL Managed Instance is the simplest scenario. Virtual machines inside the virtual network can connect to each other directly even if they are inside different subnets. This means that to connect an application inside App Service Environment or a virtual machine deployed in the same virtual network as SQL Managed Instance is to configure the connection string to target its [VNet-local endpoint](connectivity-architecture-overview.md#vnet-local-endpoint).
+Connecting an application inside the same virtual network as SQL Managed Instance is the simplest scenario. Virtual machines inside the virtual network can connect to each other directly even if they're inside different subnets. This means that to connect an application inside App Service Environment or a virtual machine deployed in the same virtual network as SQL Managed Instance is to configure the connection string to target its [VNet-local endpoint](connectivity-architecture-overview.md#vnet-local-endpoint).
 
 ## Connect from inside a different VNet
 
@@ -39,8 +39,8 @@ There are three options to connect to a SQL Managed Instance in a different virt
 - VNet-to-VNet VPN gateway ([Azure portal](/azure/vpn-gateway/vpn-gateway-howto-vnet-vnet-resource-manager-portal), [PowerShell](/azure/vpn-gateway/vpn-gateway-vnet-vnet-rm-ps), [Azure CLI](/azure/vpn-gateway/vpn-gateway-howto-vnet-vnet-cli))
 
 Of the three, private endpoints are the most secure and resource-economical option because they: 
-- only expose the SQL Managed Instance from its virtual network
-- only allow one-way connectivity only
+- only expose the SQL Managed Instance from its virtual network.
+- only allow one-way connectivity. 
 - require just one IP address in the application's virtual network. 
 
 If private endpoints can't fully meet the requirements of your scenario, consider virtual network peering instead. Peering uses the backbone Azure network, so there's no noticeable latency penalty for communication across virtual network boundaries. Virtual network peering is supported between networks across all regions (global virtual network peering), while [instances hosted in subnets created before September 22, 2020](frequently-asked-questions-faq.yml#does-sql-managed-instance-support-global-vnet-peering) only support peering within their region.
@@ -54,7 +54,7 @@ There are two options to connect an on-premises application to an Azure virtual 
 - Site-to-site VPN connection ([Azure portal](/azure/vpn-gateway/tutorial-site-to-site-portal), [PowerShell](/azure/vpn-gateway/vpn-gateway-create-site-to-site-rm-powershell), [Azure CLI](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-cli))
 - [Azure ExpressRoute](/azure/expressroute/expressroute-introduction) connection  
 
-If you've established an on-premises connection to Azure connection and you can't establish a connection to SQL Managed Instance, check if your firewall has an open outbound connection on SQL port 1433 as well as the 11000-11999 range of ports for redirection.
+If you've established an on-premises connection to Azure and you can't establish a connection to SQL Managed Instance, check if your firewall has an open outbound connection on SQL port 1433, as well as the 11000-11999 range of ports for redirection.
 
 ## Connect a developer box
 
@@ -70,14 +70,14 @@ The following sample architecture diagram shows VNet peering:
 
 ![Diagram showing Virtual network peering.](./media/connect-application-instance/vnet-peering.png)
 
-If you are peering hub and spoke networks, ensure the VPN gateway sees the IP addresses from the hub network. To do so, make the following changes under **Peering settings**:
+If you're peering hub and spoke networks, ensure the VPN gateway sees the IP addresses from the hub network. To do so, make the following changes under **Peering settings**:
 
 1. In the virtual network that hosts the VPN gateway (spoke network), go to **Peerings**, go to the peered virtual network connection for SQL Managed Instance, and select **Allow Gateway Transit**.
 2. In the virtual network that hosts SQL Managed Instance (hub network), go to **Peerings**, go to the peered virtual network connection for the VPN gateway, and select **Use remote gateways**.
 
 ## Connect Azure App Service
 
-You can also connect an application hosted by Azure App Service when it is [integrated with your virtual network](/azure/app-service/overview-vnet-integration.md). To do so, select one of the mechanisms listed in [Connect from inside a different VNet](#connect-from-inside-a-different-vnet). For data access to your managed instance from outside a virtual network, see [Configure public endpoint in Azure SQL Managed Instance](./public-endpoint-configure.md).
+You can also connect an application hosted by Azure App Service when it's [integrated with your virtual network](/azure/app-service/overview-vnet-integration.md). To do so, select one of the mechanisms listed in [Connect from inside a different VNet](#connect-from-inside-a-different-vnet). For data access to your managed instance from outside a virtual network, see [Configure public endpoint in Azure SQL Managed Instance](./public-endpoint-configure.md).
 
 A special case for connecting Azure App Service to SQL Managed Instance is when you integrate Azure App Service to a network peered to a SQL Managed Instance virtual network. That case requires the following configuration to be set up:
 
@@ -98,9 +98,9 @@ To troubleshoot Azure App Service access via virtual network, review [Troublesho
 
 To troubleshoot connectivity issues, review the following:
 
-- If you are unable to connect to SQL Managed Instance from an Azure virtual machine within the same virtual network but a different subnet, check if you have a Network Security Group set up on VM subnet that might be blocking access. Additionally, open outbound connection on SQL port 1433 as well as ports in the range 11000-11999, since those are needed to connect via redirection inside the Azure boundary.
+- If you're unable to connect to SQL Managed Instance from an Azure virtual machine within the same virtual network but a different subnet, check if you have a Network Security Group set up on VM subnet that might be blocking access. Additionally, open outbound connection on SQL port 1433 as well as ports in the range 11000-11999, since those are needed to connect via redirection inside the Azure boundary.
 - Ensure that BGP Propagation is set to **Enabled** for the route table associated with the virtual network.
-- If using point-to-site VPN, check the configuration in the Azure portal to see if you see **Ingress/Egress** numbers. Non-zero numbers indicate that Azure is routing traffic to/from on-premises.
+- If using point-to-site VPN, check the configuration in the Azure portal to see if you see **Ingress/Egress** numbers. Nonzero numbers indicate that Azure is routing traffic to/from on-premises.
 
    ![Screenshot showing ingress/egress numbers in the Azure portal.](./media/connect-application-instance/ingress-egress-numbers.png)
 
@@ -141,7 +141,7 @@ To troubleshoot connectivity issues, review the following:
 
 ## Recommended versions of drivers and tools
 
-The following minimum versions of the tools and drivers are recommended to connect to SQL Managed Instance:
+Although older versions may work, the following table lists the recommended minimum versions of the tools and drivers to connect to SQL Managed Instance:
 
 | Driver/tool | Version |
 | --- | --- |
@@ -154,7 +154,6 @@ The following minimum versions of the tools and drivers are recommended to conne
 |SSMS| 18.0 or [higher](/sql/ssms/download-sql-server-management-studio-ssms) |
 |[SMO](/sql/relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide) | [150](https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects) or higher |
 
-Older versions may work
 
 ## Next steps
 

@@ -77,7 +77,7 @@ If you're peering hub and spoke networks, ensure the VPN gateway sees the IP add
 
 ## Connect Azure App Service
 
-You can also connect an application hosted by Azure App Service when it's [integrated with your virtual network](/azure/app-service/overview-vnet-integration.md). To do so, select one of the mechanisms listed in [Connect from inside a different VNet](#connect-from-inside-a-different-vnet). For data access to your managed instance from outside a virtual network, see [Configure public endpoint in Azure SQL Managed Instance](./public-endpoint-configure.md).
+You can also connect an application hosted by Azure App Service when it's [integrated with your virtual network](/azure/app-service/overview-vnet-integration). To do so, select one of the mechanisms listed in [Connect from inside a different VNet](#connect-from-inside-a-different-vnet). For data access to your managed instance from outside a virtual network, see [Configure public endpoint in Azure SQL Managed Instance](./public-endpoint-configure.md).
 
 A special case for connecting Azure App Service to SQL Managed Instance is when you integrate Azure App Service to a network peered to a SQL Managed Instance virtual network. That case requires the following configuration to be set up:
 

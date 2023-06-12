@@ -120,7 +120,7 @@ ms.topic: conceptual
   
 -   Analyzing the different single domains that make up a composite domain can be a more effective way of assessing data quality.  
   
--   When you use a composite domain, you can also create cross-domain rules that enable you to verify that the relationship between the data in multiple domains is appropriate. For example, you can verify that the string "London" in a city domain corresponds to the string "England" in a country/region domain. Note that cross-domain rules are taken into consideration after domain rules.  
+-   When you use a composite domain, you can also create cross-domain rules that enable you to verify that the relationship between the data in multiple domains is appropriate. For example, you can verify that the string "London" in a city domain corresponds to the string "Great Britain" in a country/region domain. Note that cross-domain rules are taken into consideration after domain rules.  
   
 -   Data in composite domains can be attached to a reference data source, in which case the composite domain will be sent to the reference data provider. This is often done with address data.  
   

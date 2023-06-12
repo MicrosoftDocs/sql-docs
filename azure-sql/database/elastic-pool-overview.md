@@ -50,7 +50,7 @@ Pools are well suited for a large number of databases with specific utilization 
 
 The more databases you can add to a pool, the greater your savings become. Depending on your application utilization pattern, it's possible to see savings with as few as two S3 databases.
 
-The following sections help you understand how to assess if your specific collection of databases can benefit from being in a pool. The examples use Standard pools, but the same principles also apply to Basic and Premium pools.
+The following sections help you understand how to assess if your specific collection of databases can benefit from being in a pool. The examples use Standard pools, but the same principles apply to elastic pools in other service tiers as well.
 
 ### Assess database utilization patterns
 
@@ -58,11 +58,11 @@ The following figure shows an example of a database that spends much of its time
 
    ![Chart that shows a single database suitable for a pool.](./media/elastic-pool-overview/one-database.png)
 
-The chart illustrates DTU usage over one hour from 12:00 to 1:00 where each data point has one-minute granularity. At 12:10, DB1 peaks up to 90 DTUs, but its overall average usage is less than five DTUs. An S3 compute size is required to run this workload in a single database, but this size leaves most of the resources unused during periods of low activity.
+The chart illustrates DTU usage over one hour from 12:00 to 1:00 where each data point has one-minute granularity. At 12:10, DB1 peaks up to 90 DTUs, but its overall average usage is fewer than five DTUs. An S3 compute size is required to run this workload in a single database, but this size leaves most of the resources unused during periods of low activity.
 
 A pool allows these unused DTUs to be shared across multiple databases. A pool reduces the DTUs needed and the overall cost.
 
-Building on the previous example, suppose there are other databases with similar utilization patterns as DB1. In the next two figures, the utilization of four databases and 20 databases are layered onto the same graph to illustrate the nonoverlapping nature of their utilization over time by using the DTU-based purchasing model:
+Building on the previous example, suppose there are other databases with similar utilization patterns as DB1. In the next two figures, the utilization of 4 databases and 20 databases are layered onto the same graph to illustrate the nonoverlapping nature of their utilization over time by using the DTU-based purchasing model:
 
    ![Chart that shows four databases with a utilization pattern suitable for a pool.](./media/elastic-pool-overview/four-databases.png)
 
@@ -88,6 +88,9 @@ The best size for a pool depends on the aggregate resources needed for all datab
 - Maximum storage bytes utilized by all databases in the pool.
 
 For service tiers and resource limits in each purchasing model, see the [DTU-based purchasing model](service-tiers-dtu.md) or the [vCore-based purchasing model](service-tiers-vcore.md).
+
+> [!NOTE]
+> [Elastic pools for Hyperscale](./hyperscale-elastic-pool-overview.md) are currently in preview.
 
 The following steps can help you estimate whether a pool is more cost-effective than single databases:
 
@@ -175,3 +178,4 @@ You can use the built-in [performance monitoring](./performance-guidance.md) and
 - To learn more about design patterns for SaaS applications by using elastic pools, see [Design patterns for multitenant SaaS applications with SQL Database](saas-tenancy-app-design-patterns.md).
 - For a SaaS tutorial by using elastic pools, see [Introduction to the Wingtip SaaS application](saas-dbpertenant-wingtip-app-overview.md).
 - To learn about resource management in elastic pools with many databases, see [Resource management in dense elastic pools](elastic-pool-resource-management.md).
+- Learn more about [Hyperscale elastic pools](./hyperscale-elastic-pool-overview.md).

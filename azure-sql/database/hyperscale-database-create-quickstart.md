@@ -282,7 +282,7 @@ This example code creates an empty database. If you would like to create a datab
 
 ```sql
 CREATE DATABASE [myHyperscaleDatabase] 
-    (EDITION = 'Hyperscale', SERVICE_OBJECTIVE = 'HS_Gen5_2', BACKUP_STORAGE_REDUNDANCY= 'GEO');
+    (EDITION = 'Hyperscale', SERVICE_OBJECTIVE = 'HS_Gen5_2') WITH BACKUP_STORAGE_REDUNDANCY= 'LOCAL';
 GO
 ```
 

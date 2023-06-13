@@ -183,7 +183,7 @@ If there are multiple runs in a single day, only the latest run is included in t
 
 ## Troubleshooting
 
-In case you are facing other issues, you can check the [troubleshooting guide here.](troubleshoot-assessment.md)
+For more information, see the [troubleshooting guide](troubleshoot-assessment.md).
 
 ## Next steps
 

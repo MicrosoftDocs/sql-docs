@@ -4,7 +4,7 @@ description: Learn how to use Data Classification with the ODBC driver and how t
 author: "v-makouz"
 ms.author: v-makouz
 ms.reviewer: v-davidengel
-ms.date: "07/26/2018"
+ms.date: "06/15/2023"
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual

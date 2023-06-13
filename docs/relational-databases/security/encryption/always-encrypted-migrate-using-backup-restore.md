@@ -23,7 +23,7 @@ If you restored the database on a different server or under a different name, yo
 
 For detailed information about how to back up and restore a database, see:
 - [Backup Overview (SQL Server)](../../backup-restore/backup-overview-sql-server.md)
-- [Restore a database to Azure SQL Managed Instance with SSMS](/azure-sql/managed-instance/restore-sample-database-quickstart.md)
+- [Restore a database to Azure SQL Managed Instance with SSMS](/azure/azure-sql/managed-instance/restore-sample-database-quickstart)
 
 ## Next steps
 - [Query columns using Always Encrypted with SQL Server Management Studio](always-encrypted-query-columns-ssms.md)

@@ -14,6 +14,10 @@ Before you start, note the logs location. The extension log is created in this f
 
 `C:\ProgramData\GuestConfig\extension_logs\Microsoft.AzureData.WindowsAgent.SqlServer\ExtensionLog_0.log`
 
+The Azure Monitor Agent logs are created in this folder:
+
+`C:\ProgramData\GuestConfig\extension_logs\Microsoft.Azure.Monitor.AzureMonitorWindowsAgent\Extension.1.log`
+
 The following issues might be encountered while enabling best practices assessment.
 
 ## No Log analytics workspace is available in the drop-down menu

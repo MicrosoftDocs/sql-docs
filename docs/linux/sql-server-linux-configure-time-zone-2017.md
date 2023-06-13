@@ -288,7 +288,7 @@ Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. 
 | Asia/Kuala_Lumpur | Singapore Standard Time |
 | Asia/Kuching | Singapore Standard Time |
 | Asia/Kuwait | Arab Standard Time |
-| Asia/Macao_SAR | China Standard Time |
+| Asia/Macao | China Standard Time |
 | Asia/Magadan | Magadan Standard Time |
 | Asia/Makassar | Singapore Standard Time |
 | Asia/Manila | Singapore Standard Time |
@@ -330,7 +330,7 @@ Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. 
 | Atlantic/Azores | Azores Standard Time |
 | Atlantic/Bermuda | Atlantic Standard Time |
 | Atlantic/Canary | GMT Standard Time |
-| Atlantic/Cabo_Verde | Cabo Verde Standard Time |
+| Atlantic/Cape_Verde | Cabo Verde Standard Time |
 | Atlantic/Faeroe | GMT Standard Time |
 | Atlantic/Madeira | GMT Standard Time |
 | Atlantic/Reykjavik | Greenwich Standard Time |

@@ -2,10 +2,10 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 02/17/2023
+ms.date: 06/12/2023
 ms.topic: include
 ---
-| Error| Severity | Event logged | Description|
+| Error | Severity | Event logged | Description |
 | :--- | :--- | :--- | :--- |
 | 21 | 20 | No | Warning: Fatal error %d occurred at %S_DATE. Note the error and time, and contact your system administrator. |
 | 101 | 15 | No | Query not allowed in Waitfor. |
@@ -475,6 +475,7 @@ ms.topic: include
 | 670 | 16 | No | Large object (LOB) data for table "%.\*ls" resides on an offline filegroup ("%.\*ls") that cannot be accessed. |
 | 671 | 16 | No | Large object (LOB) data for table "%.\*ls" resides on a read-only filegroup ("%.\*ls"), which cannot be modified. |
 | 672 | 10 | No | Failed to queue cleanup packets for orphaned rowsets in database "%.\*ls". Some disk space may be wasted. Cleanup will be attempted again on database restart. |
+| 673 | 16 | No | Failure to access row object in snapshot isolation. Error code 0x%X. |
 | 674 | 10 | Yes | Exception occurred in destructor of RowsetNewSS 0x%p. This error may indicate a problem related to releasing pre-allocated disk blocks used during bulk-insert operations. Restart the server to resolve this problem. |
 | 675 | 10 | Yes | Worktable with partition ID %I64d was dropped successfully after %d repeated attempts. |
 | 676 | 10 | Yes | Error occurred while attempting to drop worktable with partition ID %I64d. |

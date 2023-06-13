@@ -2,13 +2,13 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 04/06/2023
+ms.date: 06/12/2023
 ms.topic: include
 ---
 > [!NOTE]
 > This article contains the term *whitelist*, a term Microsoft considers insensitive in this context. The term appears in this article because it currently appears in the software. When the term is removed from the software, we will remove it from the article.
 
-| Error| Severity | Event logged | Description|
+| Error | Severity | Event logged | Description |
 | :--- | :--- | :--- | :--- |
 | 31001 | 16 | No | The session '%s' already exists. Use a different session name. |
 | 31002 | 16 | No | This operation can be performed only by the owner of the session. |
@@ -896,6 +896,7 @@ ms.topic: include
 | 35522 | 10 | No | day |
 | 35528 | 10 | No | unable to read page due to invalid FCB |
 | 35529 | 10 | No | certificate id |
+| 35532 | 10 | No | certificate name |
 | 36001 | 16 | No | %s '%s' already exists in the database. |
 | 36002 | 16 | No | instance_id already exists in the database. |
 | 36003 | 16 | No | %s '%s' already exists for the given DAC instance. |
@@ -958,6 +959,12 @@ ms.topic: include
 | 37324 | 16 | Yes | Enclave attestation failed. Attestation service returned Error code: '%ls'. Error message: '%ls'. Attestation URL: '%ls'. Return code: '0x%08x'. Verify the attestation policy. If the policy is correct, contact Customer Support Services. |
 | 37325 | 16 | Yes | Enclave attestation failed due to an error in Azure Data Center Attestation Primitives (DCAP) Client. Validate Azure DCAP Client is installed and configured properly. Return code: '0x%08x'. For more information, contact Customer Support Services. |
 | 37326 | 16 | Yes | Enclave attestation failed due an authorization failure. Verify the identity of SQL Server instance has the required permissions to access an attestation service at URL '%ls'. |
+| 37447 | 16 | No | The certificate '%.\*ls' has been already added as a trusted issuer for DNS name '%.\*ls' |
+| 37448 | 16 | No | The certificate '%.\*ls' cannot be removed from the trusted issuers for the DNS name '%.\*ls' because it hasn't been added as a trusted issuer for the DNS name '%.\*ls'. |
+| 37449 | 10 | No | Warning: The certificate chain of the certificate specified could not be validated at this time. This may cause issues with the certificate-based authentication in the future. Please check your organization's policy and settings for online and/or offline validation of a certificate chain. |
+| 37450 | 16 | No | The certificate '%.\*ls' cannot be added as a trusted issuer for a DNS name because it is not allowed to sign certificates |
+| 37451 | 16 | No | DNS name provided exceeds maximum length of %d characters. |
+| 37543 | 10 | No | The trust of the certificate imported could not be verified with the Certificate Authority (CA) or verified through the Internet. Most likely the host operating system where SQL Server is hosted is missing the latest root certificate updates, or access to the Internet. In case this certificate is used for authentication when partner server rotates the certificate, the authentication will fail unless the issue has been resolved on the host OS. Please ensure that the host OS has the latest root certificate updates, or access to the Internet to reach out to remote CA. Error code: 0x%lx. |
 | 38001 | 16 | No | Cannot find the file id %d in the database '%s'. |
 | 38002 | 16 | No | Only users having %s permission can execute this stored procedure. |
 | 39001 | 16 | No | Only SELECT statement is supported for input data query to 'sp_execute_external_script' stored procedure. |

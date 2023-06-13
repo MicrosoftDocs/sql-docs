@@ -42,7 +42,7 @@ To change DTC settings, you must have write permissions for `Microsoft.Sql/manag
 
 ## Configure DTC
 
-You can configure DTC with Azure Portal, Azure PowerShell and CLI.
+You can configure DTC with Azure portal, Azure PowerShell and CLI.
 
 ### [Portal](#tab/azure-portal)
 
@@ -71,7 +71,7 @@ Set-AzSqlInstanceDtc -InstanceName "<managed_instance_name>" -ResourceGroupName 
 
 Use [Azure SQL CLI to configure DTC](https://learn.microsoft.com/cli/azure/sql/mi/dtc).
 
-Here's an example of how you can view and modify DTC configuration (you need to modify subscription id, resource group name, and managed instance name).
+Here's an example of how you can view and modify DTC configuration (you need to modify Subscription ID, resource group name, and managed instance name).
 
 ```CLI
 az sql mi dtc show --id /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/yourResourceGroupName/providers/Microsoft.Sql/managedInstances/yourManagedInstanceName/dtc/current

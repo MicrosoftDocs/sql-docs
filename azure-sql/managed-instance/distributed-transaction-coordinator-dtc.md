@@ -40,6 +40,8 @@ To run distributed transactions, complete these tasks:
 
 To change DTC settings, you must have write permissions for `Microsoft.Sql/managedInstances/dtc` resource. To view DTC settings, you must have read permissions for `Microsoft.Sql/managedInstances/dtc` resource.
 
+---
+
 ## Configure DTC
 
 You can configure DTC with Azure portal, Azure PowerShell and CLI.
@@ -77,6 +79,8 @@ Here's an example of how you can view and modify DTC configuration (you need to 
 az sql mi dtc show --id /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/yourResourceGroupName/providers/Microsoft.Sql/managedInstances/yourManagedInstanceName/dtc/current
 az sql mi dtc update --id /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/yourResourceGroupName/providers/Microsoft.Sql/managedInstances/yourManagedInstanceName/dtc/current --dtc-enabled true
 ```
+
+---
 
 ## Network connectivity
 

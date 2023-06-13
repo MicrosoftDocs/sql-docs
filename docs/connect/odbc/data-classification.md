@@ -191,9 +191,6 @@ int main(int argc, char **argv)
     if (rc != SQL_SUCCESS && rc != SQL_SUCCESS_WITH_INFO)
     {
         checkRC_exit(rc, ird, SQL_HANDLE_DESC, 0, 0);
-        printf("Error reading SQL_CA_SS_DATA_CLASSIFICATION IRD field. Ensure that the driver and\n"
-            "server both support the Data Classification feature, and that the query returns columns\n"
-            "with classification information.\n");
     }
     else
     {

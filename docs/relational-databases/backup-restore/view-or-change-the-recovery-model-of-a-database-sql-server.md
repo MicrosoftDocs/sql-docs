@@ -94,8 +94,8 @@ GO
 USE [master] ;  
 ALTER DATABASE [model] SET RECOVERY FULL ;  
 ```  
-        > [!NOTE]  
-        > Changing the recovery model flushes out the plan cache  
+> [!NOTE]  
+> Changing the recovery model flushes out the plan cache  
   
 ##  <a name="FollowUp"></a> Recommendations: After you change the recovery model  
   

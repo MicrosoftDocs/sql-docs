@@ -22,13 +22,13 @@ monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||
 
 Automatic tuning is a database feature that provides insight into potential query performance problems, recommend solutions, and automatically fix identified problems.
 
-Automatic tuning, introduced in [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], notifies you whenever a potential performance issue is detected and lets you apply corrective actions, or lets the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] automatically fix performance problems. Automatic tuning [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enables you to identify and fix performance issues caused by **query execution plan choice regressions**. Automatic tuning in [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] also creates necessary indexes and drops unused indexes. For more information on query execution plans, see [Execution Plans](../../relational-databases/performance/execution-plans.md).
+Automatic tuning, introduced in [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], notifies you whenever a potential performance issue is detected and lets you apply corrective actions, or lets the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] automatically fix performance problems. Automatic tuning [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifies and fixes performance issues caused by **query execution plan choice regressions**. Automatic tuning in [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] also creates necessary indexes and drops unused indexes. For more information on query execution plans, see [Execution Plans](../../relational-databases/performance/execution-plans.md).
 
 The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] monitors the queries that are executed on the database and automatically improves performance of the workload. The [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] has a built-in intelligence mechanism that can automatically tune and improve performance of your queries by dynamically adapting the database to your workload. There are two automatic tuning features that are available:
 
--  **Automatic plan correction** identifies problematic query execution plans, such as a [parameter sensitivity or parameter sniffing](../../relational-databases/query-processing-architecture-guide.md#parameter-sensitivity) issues, and fixes query execution plan-related performance problems by forcing the last known good plan before the regression occurred. **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and Azure SQL Managed Instance]
+- **Automatic plan correction** identifies problematic query execution plans, such as a [parameter sensitivity or parameter sniffing](../../relational-databases/query-processing-architecture-guide.md#parameter-sensitivity) issues, and fixes query execution plan-related performance problems by forcing the last known good plan before the regression occurred. **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and Azure SQL Managed Instance]
 
--  **Automatic index management** identifies indexes that should be added in your database, and indexes that should be removed. **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+- **Automatic index management** identifies indexes that should be added in your database, and indexes that should be removed. **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ## Why automatic tuning?
 
@@ -83,6 +83,8 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 ```
 
 Once you enable this option, the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] will automatically force any recommendation where the estimated CPU gain is higher than 10 seconds, or the number of errors in the new plan is higher than the number of errors in the recommended plan, and verify that the forced plan is better than the current one.
+
+To enable [automatic tuning in [!INCLUDE [ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)]](/azure/azure-sql/database/automatic-tuning-overview), see [Enable automatic tuning in Azure SQL Database using Azure portal](/azure/sql-database/sql-database-automatic-tuning-enable).
 
 ### Alternative - manual plan choice correction
 
@@ -162,8 +164,6 @@ Finding the optimal set of indexes that improve performance of the queries that 
 
 In addition to detection, [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] can automatically apply identified recommendations. If you find that the built-in rules improve the performance of your database, you might let [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] automatically manage your indexes.
 
-To enable automatic tuning in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and allow the automatic tuning feature to fully manage your workload, see [Enable automatic tuning in Azure SQL Database using Azure portal](/azure/sql-database/sql-database-automatic-tuning-enable).
-
 When the [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] applies a CREATE INDEX or DROP INDEX recommendation, it automatically monitors the performance of the queries that are affected by the index. New index will be retained only if performances of the affected queries are improved. Dropped index will be automatically re-created if there are some queries that run slower due to the absence of the index.
 
 ### Automatic index management considerations
@@ -178,6 +178,7 @@ Without automatic index management, a user or DBA would need to manually query t
 
 ## Next steps
 
+- [Automatic tuning in [!INCLUDE [ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)]](/azure/azure-sql/database/automatic-tuning-overview)
 - [ALTER DATABASE SET AUTOMATIC_TUNING (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)
 - [sys.database_automatic_tuning_options (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)
 - [sys.dm_db_tuning_recommendations (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)

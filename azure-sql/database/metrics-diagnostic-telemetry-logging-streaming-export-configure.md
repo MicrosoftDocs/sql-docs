@@ -8,9 +8,7 @@ ms.date: 04/26/2023
 ms.service: sql-db-mi
 ms.subservice: performance
 ms.topic: how-to
-ms.custom:
-  - seoapril2019
-  - devx-track-azurepowershell
+ms.custom: seoapril2019
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Configure streaming export of Azure SQL Database and SQL Managed Instance diagnostic telemetry

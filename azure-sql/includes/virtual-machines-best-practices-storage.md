@@ -29,5 +29,5 @@ ms.topic: include
 - Disable Azure geo-redundant storage (geo-replication) and use LRS (local redundant storage) on the storage account.
 - Enable the [SQL Best Practices Assessment](../virtual-machines/windows/sql-assessment-for-sql-vm.md) to identify possible performance issues and evaluate that your SQL Server VM is configured to follow best practices.
 - Review and monitor disk and VM limits using [Storage IO utilization metrics](/azure/virtual-machines/disks-metrics#storage-io-utilization-metrics).
-- [Exclude SQL Server files](https://support.microsoft.com/topic/how-to-choose-antivirus-software-to-run-on-computers-that-are-running-sql-server-feda079b-3e24-186b-945a-3051f6f3a95b) from antivirus software scanning. This includes data files, log files, and backup files.
+- [Exclude SQL Server files](/troubleshoot/sql/database-engine/security/antivirus-and-sql-server) from antivirus software scanning. This includes data files, log files, and backup files.
 

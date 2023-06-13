@@ -504,11 +504,11 @@ The following example restores a full database backup followed by a differential
 ```sql
 RESTORE DATABASE AdventureWorks2012
     FROM DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak'
-    WITH FILE = 6
+    WITH FILE = 6,
       NORECOVERY;
 RESTORE DATABASE AdventureWorks2012
     FROM DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak'
-    WITH FILE = 9
+    WITH FILE = 9,
       RECOVERY;
 ```
 
@@ -575,15 +575,15 @@ The following example restores a database to its state as of `12:00 AM` on `Apri
 ```sql
 RESTORE DATABASE AdventureWorks2012
     FROM AdventureWorksBackups
-    WITH FILE=3, NORECOVERY;
+    WITH FILE = 3, NORECOVERY;
   
 RESTORE LOG AdventureWorks2012
     FROM AdventureWorksBackups
-    WITH FILE=4, NORECOVERY, STOPAT = 'Apr 15, 2020 12:00 AM';
+    WITH FILE = 4, NORECOVERY, STOPAT = 'Apr 15, 2020 12:00 AM';
   
 RESTORE LOG AdventureWorks2012
     FROM AdventureWorksBackups
-    WITH FILE=5, NORECOVERY, STOPAT = 'Apr 15, 2020 12:00 AM';
+    WITH FILE = 5, NORECOVERY, STOPAT = 'Apr 15, 2020 12:00 AM';
 RESTORE DATABASE AdventureWorks2012 WITH RECOVERY;
 ```
 
@@ -648,7 +648,7 @@ The database backup is the ninth backup set in the media set on a logical backup
 > [!NOTE]  
 > Recovery is performed as a separate step to reduce the possibility of you recovering too early, before all of the log backups have been restored. For more information about the recovery process, see [Restore and Recovery Overview (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
 
-In the `RESTORE DATABASE`, notice that there are two types of `FILE` options. The `FILE` options preceding the backup device name specify the logical file names of the database files that are to be restored from the backup set; for example, `FILE = 'MyDatabase_data_1'`. This backup set is not the first database backup in the media set; therefore, its position in the media set is indicated by using the `FILE` option in the `WITH` clause, `FILE=9`.
+In the `RESTORE DATABASE`, notice that there are two types of `FILE` options. The `FILE` options preceding the backup device name specify the logical file names of the database files that are to be restored from the backup set; for example, `FILE = 'MyDatabase_data_1'`. This backup set is not the first database backup in the media set; therefore, its position in the media set is indicated by using the `FILE` option in the `WITH` clause, `FILE = 9`.
 
 ```sql
 RESTORE DATABASE MyDatabase

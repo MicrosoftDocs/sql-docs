@@ -20,7 +20,7 @@ In this tutorial, you learn the steps required to run a query across multiple da
 > [!div class="checklist"]
 > * Create an Elastic Job agent
 > * Create job credentials so that jobs can execute scripts on its targets
-> * Define the targets (servers, elastic pools, databases, shard maps) you want to run the job against
+> * Define the targets (servers, elastic pools, databases) you want to run the job against
 > * Create database scoped credentials in the target databases so the agent connect and execute jobs
 > * Create a job
 > * Add job steps to a job
@@ -290,7 +290,7 @@ In this tutorial, you ran a Transact-SQL script against a set of databases. You 
 > [!div class="checklist"]
 > * Create an Elastic Job agent
 > * Create job credentials so that jobs can execute scripts on its targets
-> * Define the targets (servers, elastic pools, databases, shard maps) you want to run the job against
+> * Define the targets (servers, elastic pools, databases) you want to run the job against
 > * Create database scoped credentials in the target databases so the agent connect and execute jobs
 > * Create a job
 > * Add a job step to the job

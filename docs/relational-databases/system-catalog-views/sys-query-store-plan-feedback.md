@@ -33,7 +33,7 @@ Contains information about Query Store tuning via [memory grant, CE, and DOP fee
 | **feature_desc** | nvarchar(60) | 1 = CE feedback<br />2 = memory grant feedback<br />3 = DOP feedback |
 | **feedback_data** | nvarchar(max) | For CE feedback, displays query hints in use.<br /><br />For memory grant feedback, displays JSON string containing operator-level grant values.<br />Format: `{"node_id": value}, {"node_id": value},….`<br />Example: `{"NodeId":"0","AdditionalMemoryKB":"1152"},{"NodeId":"18","AdditionalMemoryKB":"1856"}` |
 | **state** | int | ID of the current feedback state. |
-| **state_desc** | nvarchar(60) | 0. NO_FEEDBACK<br />1. NO_RECOMMENDATION<br />2. PENDING_VALIDATONTEST<br />3. VERIFICATION_REGRESSED<br />4. VERIFICATION_PASSED<br />5. ROLLBACK_BY_APRC<br />6. FEEDBACK_VALID<br />7. FEEDBACK_INVALID |
+| **state_desc** | nvarchar(60) | 0. NO_FEEDBACK<br />1. NO_RECOMMENDATION<br />2. PENDING_VALIDATION<br />3. IN_VALIDATION<br />4. VERIFICATION_REGRESSED<br />5. VERIFICATION_PASSED<br />6. ROLLEDBACK_BY_APRC<br />7. FEEDBACK_VALID<br />8. FEEDBACK_INVALID |
 | **create_time** | datetimeoffset(7) | When this row was created. |
 | **last_updated_time** | datetimeoffset(7) | When this row was last updated. |
 

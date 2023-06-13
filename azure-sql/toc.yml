@@ -318,6 +318,8 @@
         href: database/azure-sql-dotnet-quickstart.md
       - name: .NET with EF Core
         href: database/azure-sql-dotnet-entity-framework-core-quickstart.md
+      - name: Python with pyodbc
+        href: database/azure-sql-python-quickstart.md
       - name: Node.js with mssql
         href: database/azure-sql-javascript-mssql-quickstart.md
       - name: Use the Azure portal query editor 
@@ -585,6 +587,7 @@
 
   - name: Migration guides
     items: 
+
     - name: From Access
       href: migration-guides/database/access-to-sql-database-guide.md
     - name: From Db2
@@ -603,6 +606,7 @@
         href: migration-guides/database/sql-server-to-sql-database-guide.md
       - name: Assessment rules 
         href: migration-guides/database/sql-server-to-sql-database-assessment-rules.md
+
 
   - name: How to
     href: database/how-to-content-reference-guide.md
@@ -644,6 +648,23 @@
         href: database/local-dev-experience-create-database-project.md
       - name: Publish a database project to the local emulator
         href: database/local-dev-experience-publish-emulator.md
+
+    - name: Migrate
+      items: 
+      - name: Migrate DTU to vCore
+        href: database/migrate-dtu-to-vcore.md
+      - name: Manage SQL Database after migration
+        href: database/manage-data-after-migrating-to-database.md
+      - name: Migrate to passwordless
+        items: 
+        - name: Migrate a .NET application
+          href: database/azure-sql-passwordless-migration.md
+        - name: Migrate a Node.js application
+          href: database/azure-sql-passwordless-migration-nodejs.md
+        - name: Migrate a Python application
+          href: database/azure-sql-passwordless-migration-python.md
+
+
     - name: Monitor & Tune
       items:
         - name: Identify query performance bottlenecks
@@ -675,8 +696,6 @@
         href: database/file-space-manage.md
       - name: Use Resource Health for connectivity issues
         href: database/resource-health-to-troubleshoot-connectivity.md
-      - name: Migrate DTU to vCore
-        href: database/migrate-dtu-to-vcore.md
       - name: Scale database resources
         href: database/single-database-scale.md
       - name: Scale pool resources
@@ -705,27 +724,10 @@
         href: database/elastic-jobs-powershell-create.md
       - name: Create and manage (T-SQL)
         href: database/elastic-jobs-tsql-create-manage.md
-
     - name: Security
       items: 
       - name: Audit to storage account behind VNet or firewall
         href: database/audit-write-storage-account-behind-vnet-firewall.md
-      - name: Vulnerability assessment
-        items:
-        - name: Enable vulnerability assessment
-          href: /azure/defender-for-cloud/sql-azure-vulnerability-assessment-enable?toc=/azure/azure-sql/toc.json
-        - name: Manage vulnerability assessments
-          href: /azure/defender-for-cloud/sql-azure-vulnerability-assessment-manage?toc=/azure/azure-sql/toc.json
-        - name: Find and remediate threats
-          href: /azure/defender-for-cloud/sql-azure-vulnerability-assessment-find?toc=/azure/azure-sql/toc.json
-        - name: Review sensitive data
-          href: /azure/defender-for-cloud/sql-information-protection-policy?toc=/azure/azure-sql/toc.json
-        - name: Vulnerability Assessment rules
-          href: /azure/defender-for-cloud/sql-azure-vulnerability-assessment-rules?toc=/azure/azure-sql/toc.json
-        - name: Vulnerability Assessment rules changelog
-          href: /azure/defender-for-cloud/sql-azure-vulnerability-assessment-rules-changelog?toc=/azure/azure-sql/toc.json
-        - name: Store vulnerability scans in storage
-          href: database/sql-database-vulnerability-assessment-storage.md
       - name: Configure threat detection
         href: database/threat-detection-configure.md
       - name: Configure dynamic data masking
@@ -744,6 +746,22 @@
           href: /sql/relational-databases/security/ledger/ledger-how-to-configure-ledger-database
         - name: Verify ledger database for tampering
           href: /sql/relational-databases/security/ledger/ledger-verify-database
+      - name: Vulnerability assessment
+        items:
+        - name: Enable vulnerability assessment
+          href: /azure/defender-for-cloud/sql-azure-vulnerability-assessment-enable?toc=/azure/azure-sql/toc.json
+        - name: Manage vulnerability assessments
+          href: /azure/defender-for-cloud/sql-azure-vulnerability-assessment-manage?toc=/azure/azure-sql/toc.json
+        - name: Find and remediate threats
+          href: /azure/defender-for-cloud/sql-azure-vulnerability-assessment-find?toc=/azure/azure-sql/toc.json
+        - name: Review sensitive data
+          href: /azure/defender-for-cloud/sql-information-protection-policy?toc=/azure/azure-sql/toc.json
+        - name: Vulnerability assessment rules
+          href: /azure/defender-for-cloud/sql-azure-vulnerability-assessment-rules?toc=/azure/azure-sql/toc.json
+        - name: Vulnerability assessment rules changelog
+          href: /azure/defender-for-cloud/sql-azure-vulnerability-assessment-rules-changelog?toc=/azure/azure-sql/toc.json
+        - name: Store vulnerability scans in storage
+          href: database/sql-database-vulnerability-assessment-storage.md
       - name: Transparent data encryption (TDE)
         items:
         - name: Create server configured with UMI and customer-managed TDE
@@ -805,10 +823,6 @@
 
     - name: Load and move data 
       items: 
-      - name: Migrate to SQL Database
-        href: migration-guides/database/sql-server-to-sql-database-guide.md
-      - name: Manage SQL Database after migration
-        href: database/manage-data-after-migrating-to-database.md
       - name: Import/export (allow Azure services disabled)
         href: database/database-import-export-azure-services-off.md
       - name: Import/export using Private endpoints
@@ -821,7 +835,6 @@
         href: database/replication-to-sql-database.md
       - name: Replicate schema changes (Data sync)
         href: database/sql-data-sync-update-sync-schema.md
-
     - name: Database sharding
       items:
       - name: Upgrade client library
@@ -1445,7 +1458,8 @@
         href: managed-instance/log-replay-service-migrate.md
       - name: TDE certificate
         href: managed-instance/tde-certificate-migrate.md
-
+      - name: To availability zone support
+        href: /azure/reliability/migrate-sql-managed-instance?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
     - name: Managed Instance link 
       items:
       - name: Prepare environment for link 

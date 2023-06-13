@@ -20,6 +20,8 @@ Automatic tuning is a fully managed intelligent performance service that uses bu
 
 Azure SQL Database and Azure SQL Managed Instance automatic tuning might be one of the most impactful features that you can enable to provide stable and peak performing database workloads.
 
+Azure SQL automatic tuning shares its core logic with the SQL Server automatic tuning feature in the database engine. For additional technical information on the built-in intelligence mechanism, see [SQL Server automatic tuning](/sql/relational-databases/automatic-tuning/automatic-tuning).
+
 ## What can automatic tuning do for you
 
 - Automated performance tuning of databases
@@ -38,16 +40,14 @@ Automatic tuning mechanisms are mature and have been perfected on several millio
 
 ![How does automatic tuning work](./media/automatic-tuning-overview/how-does-automatic-tuning-work.png)
 
-Azure SQL automatic tuning shares its core logic with the SQL Server automatic tuning feature in the database engine. For additional technical information on the built-in intelligence mechanism, see [SQL Server automatic tuning](/sql/relational-databases/automatic-tuning/automatic-tuning).
-
 ## Enable automatic tuning
 
-- You [enable automatic tuning for Azure SQL Database in the Azure portal](automatic-tuning-enable.md) or by using the [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azuresqldb-current&preserve-view=true) T-SQL statement.
-- You enable automatic tuning for Azure SQL Managed Instance by using the [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azuresqldb-mi-current&preserve-view=true) T-SQL statement.
+- **Azure SQL Database**: [Enable automatic tuning in the Azure portal](automatic-tuning-enable.md) or by using the [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azuresqldb-current&preserve-view=true) T-SQL statement.
+- **Azure SQL Managed Instance**: Enable automatic tuning by using the [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azuresqldb-mi-current&preserve-view=true) T-SQL statement.
 
 ## Automatic tuning options
 
-The automatic tuning options available in Azure SQL Database and Azure SQL Managed Instance  are:
+The automatic tuning options available in Azure SQL Database and Azure SQL Managed Instance are:
 
 | Automatic tuning option | Description | Single database and pooled database support | Instance database support |
 | ---| ---| --- | --- |
@@ -57,7 +57,7 @@ The automatic tuning options available in Azure SQL Database and Azure SQL Manag
 
 ### Automatic tuning for SQL Database
 
-Automatic tuning for Azure SQL Database uses the **CREATE INDEX**, **DROP INDEX**, and **FORCE LAST GOOD PLAN** database advisor recommendations to optimize your database performance. For more information, see [Database advisor recommendations in the Azure portal](database-advisor-find-recommendations-portal.md), in [PowerShell](/powershell/module/az.sql/get-azsqldatabaserecommendedaction), and in the [REST API](/rest/api/sql/serverautomatictuning).
+Automatic tuning for Azure SQL Database uses the **[CREATE INDEX](/sql/t-sql/statements/create-index-transact-sql?view=azuresqldb-current&preserve-view=true)**, **[DROP INDEX](/sql/t-sql/statements/drop-index-transact-sql?view=azuresqldb-current&preserve-view=true)**, and **FORCE_LAST_GOOD_PLAN** database advisor recommendations to optimize your database performance. For more information, see [Database advisor recommendations in the Azure portal](database-advisor-find-recommendations-portal.md), in [PowerShell](/powershell/module/az.sql/get-azsqldatabaserecommendedaction), and in the [REST API](/rest/api/sql/serverautomatictuning).
 
 You can either manually apply tuning recommendations using the Azure portal, or you can let automatic tuning autonomously apply tuning recommendations for you. The benefits of letting the system autonomously apply tuning recommendations for you is that it automatically validates there exists a positive gain to workload performance, and if there is no significant performance improvement detected or if performance regresses, the system automatically reverts the changes that were made. Depending on query execution frequency, the validation process can take from 30 minutes to 72 hours, taking longer for less frequently executing queries. If at any point during validation a regression is detected, changes are reverted immediately.
 

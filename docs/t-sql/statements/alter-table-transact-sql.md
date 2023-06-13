@@ -4,7 +4,7 @@ description: ALTER TABLE modifies a table definition by altering, adding, or dro
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 03/31/2023
+ms.date: 06/06/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -915,7 +915,7 @@ To rebuild multiple partitions at the same time, see [index_option](../../t-sql/
 
 #### XML_COMPRESSION
 
-**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Preview.
+**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Specifies the XML compression option for any **xml** data type columns in the table. The options are as follows:
 

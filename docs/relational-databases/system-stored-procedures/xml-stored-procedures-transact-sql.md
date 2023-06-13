@@ -18,7 +18,7 @@ dev_langs:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports the following system stored procedures that are used for XML text management.
+[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] supports the following system stored procedures that are used for XML text management.
 
 - [sp_xml_preparedocument](sp-xml-preparedocument-transact-sql.md)
 - [sp_xml_removedocument](sp-xml-removedocument-transact-sql.md)

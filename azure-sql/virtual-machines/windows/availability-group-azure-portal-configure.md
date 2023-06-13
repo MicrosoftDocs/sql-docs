@@ -8,9 +8,7 @@ ms.date: 05/10/2023
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: how-to
-ms.custom:
-  - devx-track-azurecli
-  - devx-track-azurepowershell
+ms.custom: devx-track-azurepowershell
 tags: azure-resource-manager
 ---
 # Use the Azure portal to configure a multiple-subnet availability group (preview) for SQL Server on Azure VMs
@@ -90,7 +88,7 @@ On the **Basics** tab, select the subscription and resource group. Also, provide
 
 1. For **Security type**, select either **Standard** or [Trusted launch](/azure/virtual-machines/trusted-launch). 
 
-1. The **Image** area displays the chosen SQL Server VM image. Select **Configure VM generation** to choose the VM generation.
+1. The **Image** area displays the chosen SQL Server VM image. Use the dropdown to change the image to deploy. Select **Configure VM generation** to choose the VM generation.
 
 1. Select **See all sizes** for the size of the virtual machines. All created VMs will be the same size. For production workloads, see the recommended machine sizes and configuration in [Performance best practices for SQL Server on Azure VMs](./performance-guidelines-best-practices-vm-size.md).
 
@@ -214,7 +212,15 @@ On the **SQL Server settings** tab, configure specific settings and optimization
 
     :::image type="content" source="./media/create-sql-vm-portal/sql-instance-settings.png" alt-text="Screenshot of the Azure portal that shows SQL Server instance settings and the button for changing them.":::
 
-1. You have the option to enable **Machine Learning Services**, if it suits your business needs.
+## Choose Prerequisites Validation
+
+In order for the deployment to be successful, there are [several prerequisite](availability-group-azure-portal-configure.md#prerequisites) that are required to be in place. To make it easier to validate that all permissions and requirements are correct, use the PowerShell prerequisite script that is available for download on this tab. 
+
+The script will be pre-populated with the values provided in the previous steps. Run the PowerShell script as a domain user on the Domain Controller virtual machine or on a domain joined Windows Server VM. 
+
+Once the script has been executed and the prerequisites have been validated, then select the confirmation checkbox. 
+
+:::image type="content" source="./media/availability-group-az-portal-configure/prerequisites-validation.png" alt-text="Screenshot of the Azure portal that shows the prerequisites validation tab.":::
 
 1. Select **Review + Create**.
 

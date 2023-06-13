@@ -4,7 +4,7 @@ description: Release notes for SQL Server Management Studio (SSMS).
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan
-ms.date: 05/25/2023
+ms.date: 06/06/2023
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
@@ -38,7 +38,7 @@ SSMS 19.1 is the latest general availability (GA) release of SSMS. If you need a
 | Azure Data Studio installation integration | The installation of SSMS installs Azure Data Studio 1.44. |
 | Always Encrypted | Added support for secure enclaves and in-place encryption in the Always Encrypted Wizard. See [Configure column encryption using Always Encrypted Wizard](/sql/relational-databases/security/encryption/always-encrypted-wizard). |
 | Azure SQL Managed Instance | Introduced visibility to the status of the Distributed Transaction Coordinator (DTC) service for Azure SQL Managed Instance. Object Explorer can be used to determine if DTC is enabled on the Azure SQL Managed Instance (within the Management node). See [Distributed Transaction Coordinator (DTC) for Azure SQL Managed Instance](/azure/azure-sql/managed-instance/distributed-transaction-coordinator-dtc). |
-| Backup/Restore | Added capability to restore backup files from Amazon S3 storage to SQL Server 2022 and Azure SQL Managed Instance. |
+| Backup/Restore | Added capability to restore backup files from S3-compatible storage to SQL Server 2022 and Azure SQL Managed Instance. |
 | General SSMS | Updated File Version for ssms.exe to align with product version. |
 | General SSMS | Removed deprecated hardware from the list of available service-level objects. |
 | General SSMS | Changed the system browser setting, within **Tools > Options > Azure Services**, to default to True. The external browser will be used, instead of the legacy embedded browser. |
@@ -77,7 +77,7 @@ SSMS 19.1 is the latest general availability (GA) release of SSMS. If you need a
 | SMO/Scripting | Fixed inability to generate scripts for tables from selected wizards. |
 | SSIS | Resolved inability to connect using Azure SSIS Integration runtime. |
 | Storage Account | Fixed issue that prevented deleting a container from an Azure storage account. |
-| Table Editor | Fixed issue with application hanging when editing a VARCHAR(255) column in a table.  See [SSMS v18.12.1 (also) crashes in edit mode when update a field (varchar(255)) of specific record](/answers/questions/1032195/). |
+| Table Editor | Fixed issue with application hanging when editing a NVARCHAR(255) column in a table.  See [SSMS v18.12.1 (also) crashes in edit mode when update a field (varchar(255)) of specific record](/answers/questions/1032195/). |
 | Table Editor | Addressed incorrect information displayed when editing data in a table that contains a period (.) in an Azure SQL Database.  See [SSMS Table in Azure - Design shows < Unknown >](/answers/questions/1187830/). |
 
 #### Known issues (19.1)
@@ -87,7 +87,8 @@ SSMS 19.1 is the latest general availability (GA) release of SSMS. If you need a
 | Azure SQL Managed Instance | Viewing database properties for a SQL MI database may return the error "Subquery returned more than one value. This isn't permitted when the subquery follows =, !=, <, <=, >, >= or when the subquery is used as an expression. (.NET SqlClient Data Provider)". | There's a known problem due to incorrect data in `msdb`. To resolve, remove back up history. For example, `EXEC`msdb`..sp_delete_backuphistory @oldest_date = '<current date>'`. |
 | Database Designer | Selecting the Design option for a view that references a table using spatial data causes SSMS to crash. | Use T-SQL to make changes to the view. |
 | General SSMS | Import setting from SSMS 17 option not available. | Settings can be imported from SSMS 18. |
-| PolyBase | PolyBase node is not visible in Object Explorer when connecting to SQL 2022. |
+| General SSMS | Upgrading from SSMS 19.0.2 to 19.1 results in some bug fixes not appearing to be resolved.  Specifically, users will still have issues editing a NVARCHAR(255) column in a table, users will see an unknown table name when editing data if the database name in Azure contains a period (.), and SSMS file versions will be incorrect. | Uninstall SSMS 19.1 and then re-install SSMS 19.1. |
+| PolyBase | PolyBase node is not visible in Object Explorer when connecting to SQL 2022. | Use SSMS 18.12.1. |
 | Profiler | The Profiler menu isn't localized. | No current alternative. |
 | Query Editor | When SSMS opens after double-clicking on a `.sql` file, the Object Explorer window is displayed as a separate window. | No current alternative. |
 | Server Audit | Error "Item has already been added. Key in dictionary: 'MNDO'  Key being added: 'MNDO'" when viewing Logs for an Audit. | No current workaround. |

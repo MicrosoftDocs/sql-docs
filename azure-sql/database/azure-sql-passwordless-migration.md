@@ -1,6 +1,6 @@
 ---
-title: Migrate an application to use passwordless connections with Azure SQL Database
-description: Learn how to connect to migrate an application to use passwordless connections with Azure SQL Database
+title: Migrate a .NET application to use passwordless connections with Azure SQL Database
+description: Learn how to migrate a .NET application to use passwordless connections with Azure SQL Database.
 author: alexwolfmsft
 ms.author: alexwolf
 ms.date: 02/10/2023
@@ -8,32 +8,17 @@ ms.service: sql-database
 ms.subservice: security
 monikerRange: "= azuresql || = azuresql-db"
 ms.topic: how-to
-ms.custom: devx-track-csharp, passwordless-java, passwordless-js, passwordless-python, passwordless-dotnet, devx-track-azurecli, devx-track-azurepowershell
+ms.custom: devx-track-csharp, passwordless-dotnet, devx-track-azurecli, devx-track-azurepowershell
 ms.devlang: csharp
 ---
 
-# Migrate an application to use passwordless connections with Azure SQL Database
+# Migrate a .NET application to use passwordless connections with Azure SQL Database
 
 Application requests to Azure SQL Database must be authenticated. Although there are multiple options for authenticating to Azure SQL Database, you should prioritize passwordless connections in your applications when possible. Traditional authentication methods that use passwords or secret keys create security risks and complications. Visit the [passwordless connections for Azure services](/azure/developer/intro/passwordless-overview) hub to learn more about the advantages of moving to passwordless connections. The following tutorial explains how to migrate an existing application to connect to Azure SQL Database to use passwordless connections instead of a username and password solution.
 
 ## Configure the Azure SQL Database
 
-Passwordless connections use Azure Active Directory (Azure AD) authentication to connect to Azure services, including Azure SQL Database. With Azure AD authentication, you can manage identities in a central location to simplify permission management. Learn more about configuring Azure AD authentication for your Azure SQL Database:
-
-- [Azure AD authentication overview](/azure/azure-sql/database/authentication-aad-overview)
-- [Configure Azure AD auth](/azure/azure-sql/database/authentication-aad-configure)
-
-For this migration guide, ensure you have an Azure AD admin assigned to your Azure SQL Database.
-
-1) Navigate to the **Azure Active Directory** page of your logical server.
-
-1) Select **Set admin**.
-
-1) In the **Azure Active Directory** flyout menu, search for the user you want to assign as admin.
-
-1) Select the user and choose **Select**.
-
-    :::image type="content" source="media/passwordless-connections/migration-enable-active-directory-small.png" lightbox="media/passwordless-connections/migration-enable-active-directory.png" alt-text="A screenshot showing how to enable active directory admin.":::
+[!INCLUDE [configure-the-azure-sql-database](../includes/passwordless/configure-the-azure-sql-database.md)]
 
 ## Configure your local development environment
 
@@ -47,21 +32,7 @@ Passwordless connections can be configured to work for both local and Azure host
 
 Create a user in Azure SQL Database. The user should correspond to the Azure account you used to sign-in locally via development tools like Visual Studio or IntelliJ.
 
-1) In the Azure portal, browse to your SQL database and select **Query editor (preview)**.
-
-2) Select **Continue as `<your-username>`** on the right side of the screen to sign into the database using your account.
-
-3) On the query editor view, run the following T-SQL commands:
-
-    ```sql
-    CREATE USER <user@domain> FROM EXTERNAL PROVIDER;
-    ALTER ROLE db_datareader ADD MEMBER <user@domain>;
-    ALTER ROLE db_datawriter ADD MEMBER <user@domain>;
-    ALTER ROLE db_ddladmin ADD MEMBER <user@domain>;
-    GO
-    ```
-
-    :::image type="content" source="media/passwordless-connections/query-editor-user-small.png" lightbox="media/passwordless-connections/query-editor-user.png" alt-text="A screenshot showing how to use the Azure Query editor.":::
+[!INCLUDE [local-create-user-roles](../includes/passwordless/local-create-user-roles.md)]
 
 ### Update the local connection configuration
 
@@ -87,8 +58,8 @@ To update the referenced connection string (`AZURE_SQL_CONNECTIONSTRING`) to use
 2. Replace the connection string value with the following passwordless format. Update the `<database-server-name>` and `<database-name>` placeholders with your own values:
 
     ```json
-    "Server=tcp:<database-server-name>.database.windows.net,1433;Initial Catalog=<database-name>;
-    Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;Authentication=\"Active Directory Default\";"
+    Server=tcp:<database-server-name>.database.windows.net,1433;Initial Catalog=<database-name>;
+    Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;Authentication="Active Directory Default";
     ```
 
 ### Test the app
@@ -104,33 +75,7 @@ Once your app is configured to use passwordless connections locally, the same co
 
 ### Create the managed identity
 
-Create a user-assigned managed identity using the Azure portal or the Azure CLI. Your application uses the identity to authenticate to other services.
-
-# [Azure portal](#tab/azure-portal-create)
-
-1. At the top of the Azure portal, search for *Managed identities*. Select the **Managed Identities** result.
-1. Select **+ Create** at the top of the **Managed Identities** overview page.
-1. On the **Basics** tab, enter the following values:
-    * **Subscription**: Select your desired subscription.
-    * **Resource Group**: Select your desired resource group.
-    * **Region**: Select a region near your location.
-    * **Name**: Enter a recognizable name for your identity, such as *MigrationIdentity*.
-1. Select **Review + create** at the bottom of the page.
-1. When the validation checks finish, select **Create**. Azure creates a new user-assigned identity.
-
-After the resource is created, select **Go to resource** to view the details of the managed identity.
-
-:::image type="content" source="media/passwordless-connections/create-managed-identity-portal-small.png" lightbox="media/passwordless-connections/create-managed-identity-portal.png" alt-text="A screenshot showing how to create a managed identity using the Azure portal.":::
-    
-# [Azure CLI](#tab/azure-cli-create)
-
-Use the [az identity create](/cli/azure/identity) command to create a user-assigned managed identity:
-
-```azurecli
-az identity create --name MigrationIdentity --resource-group <resource-group>
-```
-
----
+[!INCLUDE [create-the-managed-identity](../includes/passwordless/create-the-managed-identity.md)]
 
 ## Associate the managed identity with your web app
 
@@ -172,33 +117,7 @@ Complete the following steps in the Azure portal to associate the user-assigned 
 
 ### Create a database user for the identity and assign roles
 
-Create a SQL database user that maps back to the user-assigned managed identity. Assign the necessary SQL roles to the user to allow your app to read, write, and modify the data and schema of your database.
-
-1) In the Azure portal, browse to your SQL database and select **Query editor (preview)**.
-
-2) Select **Continue as `<username>`** on the right side of the screen to sign into the database using your account.
-
-3) On the query editor view, run the following T-SQL commands:
-
-    ```sql
-    CREATE USER <user-assigned-identity-name> FROM EXTERNAL PROVIDER;
-    ALTER ROLE db_datareader ADD MEMBER <user-assigned-identity-name>;
-    ALTER ROLE db_datawriter ADD MEMBER <user-assigned-identity-name>;
-    ALTER ROLE db_ddladmin ADD MEMBER <user-assigned-identity-name>;
-    GO
-    ```
-
-    :::image type="content" source="media/passwordless-connections/query-editor-identity-small.png" lightbox="media/passwordless-connections/query-editor-identity.png" alt-text="A screenshot showing how to use the Azure Query editor to create a SQL user for a managed identity.":::
-
----
-
-> [!IMPORTANT]
-> Use caution when assigning database user roles in enterprise production environments. In those scenarios, the app shouldn't perform all operations using a single, elevated identity. Try to implement the principle of least privilege by configuring multiple identities with specific permissions for specific tasks.
->
-> You can read more about configuring database roles and security on the following resources:
->
-> * [Tutorial: Secure a database in Azure SQL Database](/azure/azure-sql/database/secure-database-tutorial)
-> * [Authorize database access to SQL Database](/azure/azure-sql/database/logins-create-manage)
+[!INCLUDE [create-database-user-for-identity](../includes/passwordless/create-database-user-for-identity.md)]
 
 ### Update the connection string
 
@@ -209,8 +128,8 @@ Update your Azure app configuration to use the passwordless connection string fo
 1. Select the edit icon and update the connection string value to match following format. Change the `<database-server-name>` and `<database-name>` placeholders with the values of your own service.
 
     ```json
-    "Server=tcp:<database-server-name>.database.windows.net,1433;Initial Catalog=<database-name>;
-    Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;Authentication=\"Active Directory Default\";"
+    Server=tcp:<database-server-name>.database.windows.net,1433;Initial Catalog=<database-name>;
+    Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;Authentication="Active Directory Default";
     ```
 
 1. Save your changes and restart the application if it does not do so automatically.

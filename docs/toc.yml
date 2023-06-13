@@ -6767,8 +6767,9 @@ items:
         - name: Tuning Database using workload from Query Store
           href: relational-databases/performance/tuning-database-using-workload-from-query-store.md
     - name: Execution plans
-      href: relational-databases/performance/execution-plans.md
       items:
+      - name: Overview
+        href: relational-databases/performance/execution-plans.md
       - name: Concepts
         items:
         - name: Query Profiling Infrastructure
@@ -10429,6 +10430,10 @@ items:
         href: sql-server/azure-arc/point-in-time-restore.md
       - name: Delete from or restore to Azure Arc
         href: sql-server/azure-arc/delete-from-azure-arc.md
+    - name: Monitor
+      items:
+      - name: Activity Logs
+        href: sql-server/azure-arc/activity-logs.md
     - name: Secure
       items:
       - name: Configure advanced data Security
@@ -13049,6 +13054,8 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md
       - name: sys.dm_db_task_space_usage
         href: relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md
+      - name: sys.dm_db_tuning_recommendations
+        href: relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md
       - name: sys.dm_db_uncontained_entities
         href: relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md
       - name: sys.dm_database_copies (Azure SQL Database)
@@ -14588,7 +14595,7 @@ items:
       - name: sp_query_store_force_plan
         href: relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md
       - name: sp_query_store_remove_plan
-        href: relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md
+        href: relational-databases/system-stored-procedures/sp-query-store-remove-plan-transact-sql.md
       - name: sp_query_store_remove_query
         href: relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md
       - name: sp_query_store_reset_exec_stats
@@ -17708,19 +17715,21 @@ items:
           items:
           - name: Overview
             href: t-sql/language-elements/string-operators-transact-sql.md
-          - name: "+ (String Concatenation)"
+          - name: "= (String comparison or assignment)"
+            href: t-sql/language-elements/string-comparison-assignment.md
+          - name: "+ (String concatenation)"
             href: t-sql/language-elements/string-concatenation-transact-sql.md
-          - name: "+= (String Concatenation Assignment)"
+          - name: "+= (String concatenation assignment)"
             href: t-sql/language-elements/string-concatenation-equal-transact-sql.md
-          - name: "% (Wildcard - Character(s) to Match)"
+          - name: "% (Wildcard - character(s) to match)"
             href: t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md
-          - name: "[ ] (Wildcard - Character(s) to Match)"
+          - name: "[ ] (Wildcard - character(s) to match)"
             href: t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md
-          - name: "[^] (Wildcard - Character(s) Not to Match)"
+          - name: "[^] (Wildcard - character(s) not to match)"
             href: t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md
-          - name: "_ (Wildcard - Match One Character)"
+          - name: "_ (Wildcard - match one character)"
             href: t-sql/language-elements/wildcard-match-one-character-transact-sql.md
-        - name: Operator Precedence
+        - name: Operator precedence
           href: t-sql/language-elements/operator-precedence-transact-sql.md
       - name: Transactions
         href: t-sql/language-elements/transactions-transact-sql.md

@@ -17,14 +17,14 @@ dev_langs:
 ---
 # Replication stored procedures (Transact-SQL)
 
-[!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
 
 Replication system stored procedures are documented and available as a method for accomplishing one-time tasks, such as implementing replication, and for using in batch files and scripts.
 
 For more information on how to program most of the common replication tasks using replication stored procedures, see [Replication System stored procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md).
 
 > [!IMPORTANT]  
-> Only the replication stored procedures documented in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online are supported. Undocumented stored procedures are only for the use of internal replication components and should not be used to administer replication.
+> Only the replication stored procedures documented in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Books Online are supported. Undocumented stored procedures are only for the use of internal replication components and should not be used to administer replication.
 
 :::row:::
     :::column:::

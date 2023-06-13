@@ -34,7 +34,7 @@ While the background thread takes workload patterns into consideration, this fac
 
 ## Known issue
 
-For [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] CU 12 and previous versions, this value is set to `0` by default. On [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] CU 13 and later versions, a value of `0` is changed to `4` by the Database Engine. If you upgrade [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] to CU 13 or a newer build, you may need to manually reset the value to `4`, using the example in this article.
+For [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] CU 12 and previous versions, this value may be set to `0`. We recommend that you reset the value to `4`, which is the designed default, using the example in this article.
 
 ::: moniker-end
 

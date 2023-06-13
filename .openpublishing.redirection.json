@@ -59805,6 +59805,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md",
+      "redirect_url": "/sql/relational-databases/sp-query-store-remove-plan-transact-sql",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/ssms/object/options-sql-server-object-explorer-commands.md",
       "redirect_url": "/sql/ssms/menu-help/options-sql-server-object-explorer-commands",
       "redirect_document_id": true

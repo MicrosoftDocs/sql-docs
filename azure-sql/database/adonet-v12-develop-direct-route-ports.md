@@ -8,9 +8,7 @@ ms.date: 06/11/2020
 ms.service: sql-database
 ms.subservice: development
 ms.topic: reference
-ms.custom:
-  - sqldbrb=1
-  - devx-track-dotnet
+ms.custom: sqldbrb=1
 ---
 # Ports beyond 1433 for ADO.NET 4.5
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

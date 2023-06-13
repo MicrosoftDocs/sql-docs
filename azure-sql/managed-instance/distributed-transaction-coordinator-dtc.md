@@ -42,6 +42,10 @@ To change DTC settings, you must have write permissions for `Microsoft.Sql/manag
 
 ## Configure DTC
 
+You can configure DTC with Azure Portal, Azure PowerShell and CLI.
+
+### [Portal](#tab/azure-portal)
+
 To configure DTC by using the Azure portal:
 
 1. In the [Azure portal](https://portal.azure.com), go to your managed instance.
@@ -52,6 +56,27 @@ To configure DTC by using the Azure portal:
 1. On the **Basics** tab, set **Distributed Transaction Coordinator** to **Enabled**.
 1. On the **Security** tab, allow inbound or outbound transactions, and enable XA or SNA LU.
 1. On the **Networking** tab, specify DTC DNS, and get information to configure external DNS and networking.
+
+### [PowerShell](#tab/azure-powershell)
+Use Azure PowerShell commandlets (Get-AzSqlInstanceDtc)[https://learn.microsoft.com/powershell/module/az.sql/get-azsqlinstancedtc] and (Set-AzSqlInstanceDtc)[https://learn.microsoft.com/powershell/module/az.sql/set-azsqlinstancedtc] to view and modify DTC configuration.
+
+Here's an example of how you can view and modify DTC configuration.
+
+```powershell
+Get-AzSqlInstanceDtc -InstanceName "<managed_instance_name>" -ResourceGroupName "<resource_group_name>"
+Set-AzSqlInstanceDtc -InstanceName "<managed_instance_name>" -ResourceGroupName "<resource_group_name>" -DtcEnabled $true
+```
+
+### [CLI](#tab/azure-cli)
+
+Use (Azure SQL CLI to configure DTC)[https://learn.microsoft.com/cli/azure/sql/mi/dtc].
+
+Here's an example of how you can view and modify DTC configuration (you need to modify subscription id, resource group name, and managed instance name).
+
+```CLI
+az sql mi dtc show --id /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/yourResourceGroupName/providers/Microsoft.Sql/managedInstances/yourManagedInstanceName/dtc/current
+az sql mi dtc update --id /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/yourResourceGroupName/providers/Microsoft.Sql/managedInstances/yourManagedInstanceName/dtc/current --dtc-enabled true
+```
 
 ## Network connectivity
 

@@ -113,7 +113,7 @@ You can automatically enable best practices assessment on multiple Arc-enabled S
 See [Azure Policy documentation](/azure/governance/policy) for general instructions about how to assign an Azure policy using Azure portal or an API of your choice.
 
    > [!NOTE]
-   > If Log analytics workspace is selected from a different resource group than the Arc-enabled SQL Server resource, the scope of the Azure policy must be the whole subscription.
+   > If the Log analytics workspace is selected from a different resource group than the Arc-enabled SQL Server resource, the scope of the Azure policy must be the whole subscription.
 
 ### Modify license type
 

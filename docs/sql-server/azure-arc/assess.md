@@ -178,7 +178,7 @@ If there are multiple runs in a single day, only the latest run is included in t
 
 - Best practices assessment is currently limited to SQL Server running on Windows machines. The assessment doesn't work for SQL on Linux machines.
 - It may take a few seconds to populate the history of the previous execution of the assessments on the best practices home page.
-- The assessment results can also be viewed by directly querying the log analytical workspaces.  You can find a few sample queries [here](https://techcommunity.microsoft.com/t5/sql-server-blog/best-practices-assessment-arc-enabled-sql-server/ba-p/3715776).
+- The assessment results can also be viewed by directly querying the log analytical workspaces. For example queries, see [Best practices assessment - Arc-enabled SQL Server](https://techcommunity.microsoft.com/t5/sql-server-blog/best-practices-assessment-arc-enabled-sql-server/ba-p/3715776).
 - Do not make any other extension configuration changes while the Azure policy is remediating the noncompliant Arc-enabled SQL Server resources. [Track Azure policy remediation task progress.](/azure/governance/policy/how-to/remediate-resources?tabs=azure-portal#step-3-track-remediation-task-progress)
 
 ## Troubleshooting

@@ -4,7 +4,7 @@ description: Create a Hyperscale database in Azure SQL Database using the Azure 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 2/17/2022
+ms.date: 6/13/2023
 ms.service: sql-database
 ms.subservice: deployment-configuration
 ms.custom: devx-track-azurecli

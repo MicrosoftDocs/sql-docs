@@ -16,7 +16,7 @@ Before you start, note the logs location. The extension log is created in this f
 
 The following issues might be encountered while enabling best practices assessment.
 
-## No Log Analytics workspace is visible in the Log Analytics selector dropdown
+## No Log analytics workspace is available in the drop-down menu
 
    :::image type="content" source="media/assess/sql-best-practices-assessment-no-workspace.png" alt-text="Screenshot showing the error message when no value is visible in the Log Analytics workspace selector dropdown.":::
 

@@ -58,7 +58,7 @@ To configure DTC by using the Azure portal:
 1. On the **Networking** tab, specify DTC DNS, and get information to configure external DNS and networking.
 
 ### [PowerShell](#tab/azure-powershell)
-Use Azure PowerShell commandlets (Get-AzSqlInstanceDtc)[https://learn.microsoft.com/powershell/module/az.sql/get-azsqlinstancedtc] and (Set-AzSqlInstanceDtc)[https://learn.microsoft.com/powershell/module/az.sql/set-azsqlinstancedtc] to view and modify DTC configuration.
+Use Azure PowerShell commandlets [Get-AzSqlInstanceDtc](https://learn.microsoft.com/powershell/module/az.sql/get-azsqlinstancedtc) and [Set-AzSqlInstanceDtc](https://learn.microsoft.com/powershell/module/az.sql/set-azsqlinstancedtc) to view and modify DTC configuration.
 
 Here's an example of how you can view and modify DTC configuration.
 
@@ -69,7 +69,7 @@ Set-AzSqlInstanceDtc -InstanceName "<managed_instance_name>" -ResourceGroupName 
 
 ### [CLI](#tab/azure-cli)
 
-Use (Azure SQL CLI to configure DTC)[https://learn.microsoft.com/cli/azure/sql/mi/dtc].
+Use [Azure SQL CLI to configure DTC](https://learn.microsoft.com/cli/azure/sql/mi/dtc).
 
 Here's an example of how you can view and modify DTC configuration (you need to modify subscription id, resource group name, and managed instance name).
 

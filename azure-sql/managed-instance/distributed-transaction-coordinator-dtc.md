@@ -193,6 +193,12 @@ Consider the following limitations when you use DTC with SQL Managed Instance:
 - Distributed transactions to Azure SQL Database aren't supported with DTC.
 - For authentication, DTC supports only the *no authentication* option. Mutual authentication and incoming caller authentication options aren't available. Because DTC exchanges only synchronization messages and not user data, and because it communicates solely with the virtual network, this limitation isn't a security risk.
 
+## Managing transactions
+
+To view statistics of distributed transactions use [sys.dm_tran_distributed_transaction_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-distributed-transaction-stats).
+You can reset DTC log with stored procedure [sp_reset_dtc_log](/sql/relational-databases/system-stored-procedures/sp-reset-dtc-log).
+Distributed transactions can be managed with stored procedure [sys.sp_manage_distributed_transaction](/sql/relational-databases/system-stored-procedures/sys-sp-manage-distributed-transaction).
+
 ## Next steps
 
 For native managed instance distributed transaction support, see [Elastic transactions](../database/elastic-transactions-overview.md).

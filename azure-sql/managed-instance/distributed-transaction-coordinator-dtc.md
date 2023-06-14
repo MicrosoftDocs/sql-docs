@@ -193,7 +193,7 @@ Consider the following limitations when you use DTC with SQL Managed Instance:
 - Distributed transactions to Azure SQL Database aren't supported with DTC.
 - For authentication, DTC supports only the *no authentication* option. Mutual authentication and incoming caller authentication options aren't available. Because DTC exchanges only synchronization messages and not user data, and because it communicates solely with the virtual network, this limitation isn't a security risk.
 
-## Managing transactions
+## Manage transactions
 
 To view statistics of distributed transactions, see [sys.dm_tran_distributed_transaction_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-distributed-transaction-stats).
 

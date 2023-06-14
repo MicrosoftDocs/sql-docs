@@ -112,7 +112,6 @@ Learn about significant changes to the Azure SQL Managed Instance documentation.
 | **CREATE EXTERNAL TABLE AS SELECT (CETAS)** | CETAS is now generally available. You can use CETAS to create an external table on top of Parquet or CSV files Azure Blob storage or Azure Data Lake Storage (ADLS) Gen2. CETAS can also export, in parallel, the results of a T-SQL SELECT statement into the created external table. There is potential for data exfiltration risk with these capabilities, so [CREATE EXTERNAL TABLE AS SELECT (CETAS)](/sql/t-sql/statements/create-external-table-as-select-transact-sql?view=azuresqldb-mi-current&preserve-view=true) is disabled by default for Azure SQL Managed Instance. To enable, see [CREATE EXTERNAL TABLE AS SELECT (CETAS)](/sql/t-sql/statements/create-external-table-as-select-transact-sql?view=azuresqldb-mi-current&preserve-view=true#enable-cetas-via-azure-powershell).|
 |**Managed Instance link GA** | Online replication of SQL Server databases hosted anywhere to Azure SQL Managed Instance. One-way replication is now generally available for SQL Server 2016 and SQL Server 2019. Review [Managed Instance link](managed-instance-link-feature-overview.md) to learn more. |
 
-
 ### March 2023
 
 | Changes | Details |

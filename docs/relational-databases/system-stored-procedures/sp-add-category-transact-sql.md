@@ -99,6 +99,6 @@ GO
 - [sp_delete_category (Transact-SQL)](sp-delete-category-transact-sql.md)
 - [sp_help_category (Transact-SQL)](sp-help-category-transact-sql.md)
 - [sp_update_category (Transact-SQL)](sp-update-category-transact-sql.md)
-- [dbo.sysjobs (Transact-SQL)](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)
-- [dbo.sysjobservers (Transact-SQL)](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)
+- [dbo.sysjobs (Transact-SQL)](../system-tables/dbo-sysjobs-transact-sql.md)
+- [dbo.sysjobservers (Transact-SQL)](../system-tables/dbo-sysjobservers-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

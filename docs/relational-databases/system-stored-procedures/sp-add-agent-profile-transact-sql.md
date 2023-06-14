@@ -81,7 +81,7 @@ Indicates whether the profile is the default for *@agent_type*. *@default* is **
 
 Custom agent profiles are added with the default agent parameter values. Use [sp_change_agent_parameter (Transact-SQL)](sp-change-agent-parameter-transact-sql.md) to change these default values or [sp_add_agent_parameter (Transact-SQL)](sp-add-agent-parameter-transact-sql.md) to add additional parameters.
 
-When `sp_add_agent_profile` is executed, a row is added for the new custom profile in the [MSagent_profiles (Transact-SQL)](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) table and the associated default parameters for this profile are added to the [MSagent_parameters (Transact-SQL)](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) table.
+When `sp_add_agent_profile` is executed, a row is added for the new custom profile in the [MSagent_profiles (Transact-SQL)](../system-tables/msagent-profiles-transact-sql.md) table and the associated default parameters for this profile are added to the [MSagent_parameters (Transact-SQL)](../system-tables/msagent-parameters-transact-sql.md) table.
 
 ## Permissions
 

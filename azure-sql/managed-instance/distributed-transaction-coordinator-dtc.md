@@ -40,7 +40,13 @@ To run distributed transactions, complete these tasks:
 
 To change DTC settings, you must have write permissions for `Microsoft.Sql/managedInstances/dtc` resource. To view DTC settings, you must have read permissions for `Microsoft.Sql/managedInstances/dtc` resource.
 
+---
+
 ## Configure DTC
+
+You can configure DTC with Azure portal, Azure PowerShell and CLI.
+
+### [Portal](#tab/azure-portal)
 
 To configure DTC by using the Azure portal:
 
@@ -52,6 +58,30 @@ To configure DTC by using the Azure portal:
 1. On the **Basics** tab, set **Distributed Transaction Coordinator** to **Enabled**.
 1. On the **Security** tab, allow inbound or outbound transactions, and enable XA or SNA LU.
 1. On the **Networking** tab, specify DTC DNS, and get information to configure external DNS and networking.
+
+### [PowerShell](#tab/azure-powershell)
+
+Use Azure PowerShell commandlets [Get-AzSqlInstanceDtc](/powershell/module/az.sql/get-azsqlinstancedtc) and [Set-AzSqlInstanceDtc](/powershell/module/az.sql/set-azsqlinstancedtc) to view and modify DTC configuration.
+
+Here's an example of how you can view and modify DTC configuration.
+
+```powershell
+Get-AzSqlInstanceDtc -InstanceName "<managed_instance_name>" -ResourceGroupName "<resource_group_name>"
+Set-AzSqlInstanceDtc -InstanceName "<managed_instance_name>" -ResourceGroupName "<resource_group_name>" -DtcEnabled $true
+```
+
+### [CLI](#tab/azure-cli)
+
+Use [Azure SQL CLI to configure DTC](/cli/azure/sql/mi/dtc).
+
+Here's an example of how you can view and modify DTC configuration (you need to modify Subscription ID, resource group name, and managed instance name).
+
+```CLI
+az sql mi dtc show --id /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/yourResourceGroupName/providers/Microsoft.Sql/managedInstances/yourManagedInstanceName/dtc/current
+az sql mi dtc update --id /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/yourResourceGroupName/providers/Microsoft.Sql/managedInstances/yourManagedInstanceName/dtc/current --dtc-enabled true
+```
+
+---
 
 ## Network connectivity
 

@@ -252,11 +252,11 @@ Both System-Assigned and User-Assigned Managed Identities are supported:
 
 - If there is at least one User Managed Identity assigned, the defined Primary Identity will be used for authenticating when using a Managed Identity based Database Scoped Credential.
 
-- If there are no User Managed Identity assigned then the System Assigned Managed Identity will be used, if enabled, for authenticating when using a Managed Identity based Database Scoped Credential.
+- If there is no User Managed Identity assigned then the System Assigned Managed Identity will be used, if enabled, for authenticating when using a Managed Identity based Database Scoped Credential.
 
-- In case there are both User and System Managed Identitis defined,the User-Assigned Managed Identity will be used.
+- In case there are both User and System Managed Identities defined, the User-Assigned Managed Identity will be used.
 
-- If there are more than one User Managed Identity assigned, only the Primary Identity will be used.
+- If there is more than one User Managed Identity assigned, only the Primary Identity will be used.
 
 ---
 

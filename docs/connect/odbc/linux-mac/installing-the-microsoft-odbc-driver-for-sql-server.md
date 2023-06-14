@@ -37,7 +37,7 @@ curl -O https://download.microsoft.com/download/1/f/f/1fffb537-26ab-4947-a46a-7a
 
 curl https://packages.microsoft.com/keys/microsoft.asc  | gpg --import -
 gpg --verify msodbcsql18_18.2.2.1-1_amd64.sig msodbcsql18_18.2.1.1-1_amd64.apk
-gpg --verify mssql-tools18_18.2.2.1-1_amd64.sig mssql-tools18_18.2.1.1-1_amd64.apk
+gpg --verify mssql-tools18_18.2.1.1-1_amd64.sig mssql-tools18_18.2.1.1-1_amd64.apk
 
 
 #Install the package(s)
@@ -81,7 +81,6 @@ sudo apt-get install -y libgssapi-krb5-2
 
 > [!NOTE]  
 > You can substitute setting the environment variable 'ACCEPT_EULA' with setting the debconf variable 'msodbcsql/ACCEPT_EULA' instead: `echo msodbcsql18 msodbcsql/ACCEPT_EULA boolean true | sudo debconf-set-selections`
-> For APT based Linux distros, apt-key add is deprecating. Use wget instead.
 
 ### [RHEL and Oracle Linux](#tab/redhat18-install)
 
@@ -166,7 +165,6 @@ sudo apt-get install -y unixodbc-dev
 
 > [!NOTE]  
 > You can substitute setting the environment variable 'ACCEPT_EULA' with setting the debconf variable 'msodbcsql/ACCEPT_EULA' instead: `echo msodbcsql18 msodbcsql/ACCEPT_EULA boolean true | sudo debconf-set-selections`
-> For APT based Linux distros, apt-key add is deprecating. Use wget instead.
 
 ---
 
@@ -242,7 +240,6 @@ sudo apt-get install -y libgssapi-krb5-2
 
 > [!NOTE]  
 > You can substitute setting the environment variable 'ACCEPT_EULA' with setting the debconf variable 'msodbcsql/ACCEPT_EULA' instead: `echo msodbcsql17 msodbcsql/ACCEPT_EULA boolean true | sudo debconf-set-selections`
-> For APT based Linux distros, apt-key add is deprecating. Use wget instead.
 
 ### [RHEL and Oracle Linux](#tab/redhat17-install)
 
@@ -327,7 +324,6 @@ sudo apt-get install -y unixodbc-dev
 
 > [!NOTE]  
 > You can substitute setting the environment variable 'ACCEPT_EULA' with setting the debconf variable 'msodbcsql/ACCEPT_EULA' instead: `echo msodbcsql17 msodbcsql/ACCEPT_EULA boolean true | sudo debconf-set-selections`
-> For APT based Linux distros, apt-key add is deprecating. Use wget instead.
 
 ---
 
@@ -351,9 +347,6 @@ source ~/.bashrc
 # optional: for unixODBC development headers
 sudo apt-get install unixodbc-dev
 ```
-
-> [!NOTE]  
-> For APT based Linux distros, apt-key add is deprecating. Use wget instead.
 
 ### [RHEL 7](#tab/redhat7-install)
 
@@ -403,9 +396,6 @@ source ~/.bashrc
 sudo apt-get install unixodbc-dev
 ```
 
-> [!NOTE]  
-> For APT based Linux distros, apt-key add is deprecating. Use wget instead.
-
 ---
 
 ## <a id="13"></a> ODBC 13
@@ -441,9 +431,6 @@ sudo apt-get install unixodbc-dev-utf16 #this step is optional but recommended*
 ln -sfn /opt/mssql-tools/bin/sqlcmd-13.0.1.0 /usr/bin/sqlcmd
 ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 ```
-
-> [!NOTE]  
-> For APT based Linux distros, apt-key add is deprecating. Use wget instead.
 
 ### [SLES 12 (ODBC 13)](#tab/suse12-13-install)
 

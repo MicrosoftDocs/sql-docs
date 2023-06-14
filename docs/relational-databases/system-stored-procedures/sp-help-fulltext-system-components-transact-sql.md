@@ -4,7 +4,7 @@ description: "sp_help_fulltext_system_components Returns information for the reg
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 12/30/2022
+ms.date: 06/13/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -19,7 +19,7 @@ monikerRange: "=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||
 ---
 # sp_help_fulltext_system_components (Transact-SQL)
 
-[!INCLUDE[sql-asa](../../includes/applies-to-version/sql-asa.md)]
+[!INCLUDE [sql-asa](../../includes/applies-to-version/sql-asa.md)]
 
 Returns information for the registered word-breakers, filter, and protocol handlers. `sp_help_fulltext_system_components` also returns a list of identifiers of databases and full-text catalogs that have used the specified component.
 
@@ -61,7 +61,7 @@ Depending on component type, *param* is one of the following options:
 
 ## Return code values
 
- `0` (success) or `1` (failure).
+`0` (success) or `1` (failure).
 
 ## Result sets
 
@@ -76,7 +76,7 @@ The following result set is returned for the system components.
 | **version** | **nvarchar(30)** | Version of the component |
 | **manufacturer** | **sysname** | Name of the manufacturer of the component |
 
- The following result set is returned only if one or more than one full-text catalog exists that uses *component_type*.
+The following result set is returned only if one or more than one full-text catalog exists that uses *component_type*.
 
 | Column name | Data type | Description |
 | --- | --- | --- |
@@ -89,7 +89,7 @@ Requires membership in the **public** role; however, users can only see informat
 
 ## Remarks
 
-This method is of particular importance when preparing for an upgrade. Execute the stored procedure within a particular database, and use the output to determine whether a particular catalog will be impacted by the upgrade.
+This method is of particular importance when preparing for an upgrade. Execute the stored procedure within a particular database, and use the output to determine whether a particular catalog will be affected by the upgrade.
 
 ## Examples
 
@@ -148,4 +148,4 @@ GO
 - [View or Change Registered Filters and Word Breakers](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)
 - [Configure and Manage Word Breakers and Stemmers for Search](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)
 - [Configure and Manage Filters for Search](../../relational-databases/search/configure-and-manage-filters-for-search.md)
-- [Full-Text Search and Semantic Search Stored Procedures (Transact-SQL)](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)
+- [Full-Text Search and Semantic Search stored procedures (Transact-SQL)](full-text-search-and-semantic-search-stored-procedures-transact-sql.md)

@@ -4,7 +4,7 @@ description: Compiles a plan for the submitted cursor statement or batch, then c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 12/02/2022
+ms.date: 06/13/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -18,7 +18,7 @@ dev_langs:
 ---
 # sp_cursorprepexec (Transact-SQL)
 
-[!INCLUDE[sql-asdb-asa-pdw](../../includes/applies-to-version/sql-asdb-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asa-pdw](../../includes/applies-to-version/sql-asdb-asa-pdw.md)]
 
 Compiles a plan for the submitted cursor statement or batch, then creates and populates the cursor. `sp_cursorprepexec` combines the functions of `sp_cursorprepare` and `sp_cursorexecute`. This procedure is invoked by specifying `ID = 5` in a tabular data stream (TDS) packet.
 
@@ -36,11 +36,11 @@ sp_cursorprepexec prepared handle OUTPUT , cursor OUTPUT , params , statement , 
 
 #### *prepared handle*
 
-A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generated *prepared handle* identifier. *prepared handle* is required and returns **int**.
+A [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] generated *prepared handle* identifier. *prepared handle* is required and returns **int**.
 
 #### *cursor*
 
-The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generated *cursor* identifier. *cursor* is a required parameter that must be supplied on all subsequent procedures that act upon this cursor, for example, `sp_cursorfetch`.
+The [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] generated *cursor* identifier. *cursor* is a required parameter that must be supplied on all subsequent procedures that act upon this cursor, for example, `sp_cursorfetch`.
 
 #### *params*
 
@@ -85,7 +85,7 @@ Scroll option. *scrollopt* is an optional parameter that requires one of the fol
 | 0x80000 | STATIC_ACCEPTABLE |
 | 0x100000 | FAST_FORWARD_ACCEPTABLE |
 
-Because of the possibility that the requested option isn't appropriate for the cursor defined by *statement*, this parameter serves as both input and output. In such cases, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assigns an appropriate type and modifies this value.
+Because of the possibility that the requested option isn't appropriate for the cursor defined by *statement*, this parameter serves as both input and output. In such cases, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] assigns an appropriate type and modifies this value.
 
 #### *ccopt*
 
@@ -105,7 +105,7 @@ Concurrency control option. *ccopt* is an optional parameter that requires one o
 | 0x40000 | OPTIMISTIC_ACCEPTABLE |
 | 0x80000 | OPTIMISITC_ACCEPTABLE |
 
-As with *scrollopt*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can assign a different value than the one requested.
+As with *scrollopt*, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] can assign a different value than the one requested.
 
 #### *rowcount*
 
@@ -125,34 +125,35 @@ If *params* returns a NULL value, then the statement isn't parameterized.
 
 ## Examples
 
-This example demonstrates the use of `sp_cursorprepexec`. It runs a query against the `Person` table in the `AdventureWorks2019` database returning all records where first name is "Katherine".
+This example demonstrates the use of `sp_cursorprepexec`. It runs a query against the `Person` table in the `AdventureWorks2022` database returning all records where first name is "Katherine".
 
 ```sql
-USE AdventureWorks2019;
+USE AdventureWorks2022;
+GO
 
 DECLARE @prep_handle INT,
-        @cursor      INT,
-        @scrollopt   INT = 4104,
-        @ccopt       INT = 8193,
-        @rowcnt      INT
+    @cursor INT,
+    @scrollopt INT = 4104,
+    @ccopt INT = 8193,
+    @rowcnt INT;
 
 EXEC sp_cursorprepexec
-  @prep_handle output,
-  @cursor output,
-  N'@fName nvarchar(100)',
-  N'SELECT FirstName, LastName FROM Person.Person WHERE FirstName = @fName',
-  @scrollopt,
-  @ccopt,
-  @rowcnt output,
-  'Katherine';
+    @prep_handle OUTPUT,
+    @cursor OUTPUT,
+    N'@fName nvarchar(100)',
+    N'SELECT FirstName, LastName FROM Person.Person WHERE FirstName = @fName',
+    @scrollopt,
+    @ccopt,
+    @rowcnt OUTPUT,
+    'Katherine';
 
-EXEC Sp_cursorfetch  @cursor;
+EXEC sp_cursorfetch @cursor;
 ```
 
 ## See also
 
-- [sp_cursoropen (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)
-- [sp_cursorexecute (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)
-- [sp_cursorprepare (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-cursorprepare-transact-sql.md)
-- [sp_cursorfetch (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)
-- [System Stored Procedures (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
+- [sp_cursoropen (Transact-SQL)](sp-cursoropen-transact-sql.md)
+- [sp_cursorexecute (Transact-SQL)](sp-cursorexecute-transact-sql.md)
+- [sp_cursorprepare (Transact-SQL)](sp-cursorprepare-transact-sql.md)
+- [sp_cursorfetch (Transact-SQL)](sp-cursorfetch-transact-sql.md)
+- [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

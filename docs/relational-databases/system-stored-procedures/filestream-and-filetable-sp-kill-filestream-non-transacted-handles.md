@@ -49,7 +49,7 @@ The optional ID of the individual handle to be closed. You can get the *handle_i
 
 You can pass NULL for the value of *handle_id* to close all open nontransactional handles for the FileTable specified by *table_name*. NULL is the default value.
 
-## Return code value
+## Return code values
 
 `0` (success) or `1` (failure).
 

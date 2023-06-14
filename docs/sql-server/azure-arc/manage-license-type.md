@@ -5,7 +5,7 @@ description: Explains how to manage SQL Server instance licenses. Also demonstra
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 05/15/2023
+ms.date: 06/14/2023
 ms.service: sql
 ms.topic: conceptual
 ---
@@ -55,7 +55,11 @@ az provider register --namespace 'Microsoft.AzureArcData'
 
 ## Overview
 
-License type is a configuration setting of Azure Extension for SQL Server that defines how you prefer to pay for the usage of SQL Server software installed on the physical or virtual machine. It also allows you to track software usage in the Cost Management + Billing portal and ensure you are compliant with SQL Server license requirements. License type is a required parameter when you install Azure Extension for SQL Server and each supported onboarding method includes the license type options. 
+License type is a configuration setting of Azure Extension for SQL Server that defines how you prefer to pay for the usage of SQL Server software installed on the physical or virtual machine. It also allows you to track software usage in the Cost Management + Billing portal and ensure you are compliant with SQL Server license requirements. License type is a required parameter when you install Azure Extension for SQL Server and each supported onboarding method includes the license type options.
+
+## License types
+
+You can set the license type to apply to your server. See [Select license type](#select-license-type).
 
 The following license types are supported:
 
@@ -108,21 +112,52 @@ The following table shows the meters that track usage and billing for different 
 
 <sup>1</sup> Enterprise Server/CAL is allowed to connect but usage meters are not emitted because it is not a core-based license.
 
-## Selecting license type
+## Select license type
 
-License type is a property of Azure extension for SQL Server. Only one instance of the extension can be installed on each machine. It manages all SQL Server instances installed on that machine. To select license type, use one of the following methods:
-   
-All instances share the license type value, it is visible in the overview blade of Arc-enabled SQL Server as shown.
+License type is a property of Azure extension for SQL Server. Only one instance of the extension can be installed on each machine. It manages all SQL Server instances installed on that server.
 
-![Screenshot of Azure Arc-enabled SQL Server instance configured for pay-as-you-go licensing.](media/billing/overview-of-sql-server-azure-arc.png)
+All instances share the license type value. The value is in the portal overview for Arc-enabled SQL Server as shown.
 
-## Modify license type
+![Screenshot of Azure Arc-enabled SQL Server instance overview.](media/billing/overview-of-sql-server-azure-arc.png)
+
+The overview also identifies:
+
+* All instances of SQL Server on the server
+* Host license type
+* Enhanced security update (ESU) status
+
+### Modify license type
 
 You can change the license type of an installed Azure extension for SQL Server by using one of the following methods.
 
 ### [Azure portal](#tab/azure)
 
-To modify the license type, use [PowerShell](manage-license-type.md?tabs=powershell&preserve-view=true#modify-license-type) or [Azure CLI](manage-license-type.md?tabs=az&preserve-view=true#modify-license-type).
+To manage the license in the portal. On the Arc-enabled SQL Server overview, select the computer name.
+
+Azure portal opens **SQL Server Configuration** for the server.
+
+:::image type="content" source="media/billing/sql-server-instance-configuration.png" alt-text="Screenshot of Azure portal SQL Server instance configuration.":::
+
+#### Set license type
+
+Chose one of the license types. See [License types](#license-types) for descriptions.
+
+#### Subscribe to Extended Security Updates
+
+Extended security updates (ESU)  subscription only applies to servers covered with Software Assurance or pay-as-you-go license type. If the server license type is license only, the option to select ESU is disabled.
+
+If you want to change the license type to license only you need to:
+
+1. Unsubscribe from ESU.
+1. Save the change.
+1. Wait approximately 5 minutes for the saved change to complete.
+1. Set the new license type.
+
+#### Exclude instances
+
+If you do not want Arc-enable one or more instances, add those instances under **Skip Instances**.
+
+After you verify the license type, ESU setting, and any instance to exclude, select **Save** to apply changes.
 
 ### [PowerShell](#tab/powershell)
 

@@ -5,7 +5,7 @@ description: Learn about the Azure SQL Database service high availability capabi
 author: rajeshsetlem
 ms.author: rsetlem
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 05/01/2023
+ms.date: 06/14/2023
 ms.service: sql-database
 ms.subservice: high-availability
 ms.topic: conceptual

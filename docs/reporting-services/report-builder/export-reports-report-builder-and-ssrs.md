@@ -88,7 +88,7 @@ Report pagination might be affected when you export a report to a different form
 
      **Note** If the program cannot open the report in the format that you chose because you do not have a program associated with this file type, you will be prompted to save the exported report or to find a program online to open the report.
 
-## <a id="RendererTypes"></a> Rendere extension types
+## <a id="RendererTypes"></a> Render extension types
 
 There are three types of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] rendering extensions:
 

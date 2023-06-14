@@ -156,7 +156,6 @@ To filter results, use the drop-down menu above the grid. Namely:
 
 - **Name**
 - **Severity**
-- **Tags**
 - **Check Id**.
 
 To download results, use **Export to Excel**.
@@ -191,4 +190,5 @@ If there are multiple runs in a single day, only the latest run is included in t
 - To obtain comprehensive support of the best practices assessment feature, a Premier or Unified support subscription is required. For details, see [Azure Premier Support](https://azure.microsoft.com/support/plans/premier).
 
 - [View SQL Server databases - Azure Arc](view-databases.md)
+
 

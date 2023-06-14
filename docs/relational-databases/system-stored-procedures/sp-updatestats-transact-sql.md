@@ -4,7 +4,7 @@ description: "Runs UPDATE STATISTICS against all user-defined and internal table
 author: markingmyname
 ms.author: maghan
 ms.reviewer: wiassaf, randolphwest
-ms.date: 05/25/2023
+ms.date: 06/13/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -55,13 +55,13 @@ For disk-based tables, `sp_updatestats` updates statistics based on the `modific
 
 For databases with a compatibility level below 90, executing `sp_updatestats` doesn't preserve the latest NORECOMPUTE setting for specific statistics. For databases with a compatibility level of 90 or higher, `sp_updatestats` does preserve the latest NORECOMPUTE option for specific statistics. For more information about disabling and re-enabling statistics updates, see [Statistics](../../relational-databases/statistics/statistics.md).
 
-When restoring a database to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] from a previous version, you should execute `sp_updatestats` on the database. This is related to setting proper metadata for the [statistics auto drop feature](../statistics/statistics.md#auto_drop-option) introduced in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. The auto drop feature is available in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], and starting with [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)].
+When restoring a database to [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] from a previous version, you should execute `sp_updatestats` on the database. This is related to setting proper metadata for the [statistics auto drop feature](../statistics/statistics.md#auto_drop-option) introduced in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. The auto drop feature is available in [!INCLUDE [ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)], and starting with [!INCLUDE [ssSQL22](../../includes/sssql22-md.md)].
 
 ## Permissions
 
 For [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], you must be the owner of the database (**dbo**), or a member of the **sysadmin** fixed server role.
 
-For [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], you must be a member of the **db_owner** fixed database role.
+For [!INCLUDE [ssSDSfull](../../includes/sssdsfull-md.md)], you must be a member of the **db_owner** fixed database role.
 
 ## Examples
 
@@ -75,11 +75,11 @@ EXEC sp_updatestats;
 
 ## Automatic index and statistics management
 
-Use solutions such as [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) to automatically manage index defragmentation and statistics updates for one or more databases. This procedure automatically chooses whether to rebuild or reorganize an index according to its fragmentation level, amongst other parameters, and update statistics with a linear threshold.
+Use solutions such as [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) to automatically manage index defragmentation and statistics updates for one or more databases. This procedure automatically chooses whether to rebuild or reorganize an index according to its fragmentation level, among other parameters, and update statistics with a linear threshold.
 
 ## See also
 
-- [System Stored Procedures](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
+- [System stored procedures](system-stored-procedures-transact-sql.md)
 
 ## Next steps
 

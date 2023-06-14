@@ -122,7 +122,7 @@ A semicolon-delimited list of file names to attach to the e-mail message. Files 
 
 #### [ @query = ] N'*query*'
 
-A query to execute. The results of the query can be attached as a file, or included in the body of the e-mail message. The query is of type **nvarchar(max)**, and can contain any valid [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. The query is executed in a separate session, so local variables in the script calling `sp_send_dbmail` aren't available to the query.
+A query to execute. The results of the query can be attached as a file, or included in the body of the e-mail message. The query is of type **nvarchar(max)**, and can contain any valid [!INCLUDE [tsql](../../includes/tsql-md.md)] statements. The query is executed in a separate session, so local variables in the script calling `sp_send_dbmail` aren't available to the query.
 
 When you use the *@query* parameter, the user that executes `sp_send_dbmail` must be a SQL Server login, or directly mapped to principal (login) of Azure AD or Windows Active Directory. If user is member of an Azure AD group or a Windows Active Directory group, it will not be able to execute the query. This is due to Azure SQL Managed Instance impersonation and [EXECUTE AS limitations](/azure/azure-sql/managed-instance/transact-sql-tsql-differences-sql-server#logins-and-users).
 
@@ -144,7 +144,7 @@ Specifies the file name to use for the result set of the query attachment. *@que
 
 Specifies whether the query results include column headers. The query_result_header value is of type **bit**. When the value is `1`, query results contain column headers. When the value is `0`, query results don't include column headers. This parameter defaults to `1`. This parameter is only applicable if *@query* is specified.
 
-The following error may occur when setting *@query_result_header* to `0` and setting *@query_no_truncate* to `1`:  
+The following error may occur when setting *@query_result_header* to `0` and setting *@query_no_truncate* to `1`:
 
 ```output
 Msg 22050, Level 16, State 1, Line 12: Failed to initialize sqlcmd library with error number -2147024809.
@@ -179,7 +179,7 @@ The type is **bit**. The default is `0`. When you set to `1`, the query results 
 
 In this case, no error occurs.
 
-The following error may occur when setting *@query_result_no_padding* to `1` and providing a parameter for *@query_no_truncate*:  
+The following error may occur when setting *@query_result_no_padding* to `1` and providing a parameter for *@query_no_truncate*:
 
 ```output
 Msg 22050, Level 16, State 1, Line 0: Failed to execute the query because the @query_result_no_append and @query_no_truncate options are mutually exclusive.
@@ -209,7 +209,7 @@ When *@profile* isn't specified, `sp_send_dbmail` uses a default profile. If the
 
 `sp_send_dbmail` doesn't support e-mail messages with no content. To send an e-mail message, you must specify at least one of *@body*, *@query*, *@file_attachments*, or *@subject*. Otherwise, `sp_send_dbmail` returns an error.
 
-Database Mail uses the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows security context of the current user to control access to files. Therefore, users who are authenticated with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication can't attach files using *@file_attachments*. Windows doesn't allow [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to provide credentials from a remote computer to another remote computer. Therefore, Database Mail may not be able to attach files from a network share in cases where the command is run from a computer other than the computer that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] runs on.
+Database Mail uses the [!INCLUDE [msCoName](../../includes/msconame-md.md)] Windows security context of the current user to control access to files. Therefore, users who are authenticated with [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Authentication can't attach files using *@file_attachments*. Windows doesn't allow [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] to provide credentials from a remote computer to another remote computer. Therefore, Database Mail may not be able to attach files from a network share in cases where the command is run from a computer other than the computer that [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] runs on.
 
 If both *@query* and *@file_attachments* are specified and the file can't be found, the query is still executed but the e-mail isn't sent.
 

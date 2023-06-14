@@ -37,12 +37,45 @@ GeneMi (and CraigG).  2019/03/30.
 
 
 Version number: 18.2.2.1  
-Released: June 31, 2023  
+Released: June 15, 2023  
 
-<ADD STUFF HERE!, QUESTION IS DOES THIS REPLACE THE OLD ONE???>
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2239549)  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2239080)  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download ARM64(Preview) installer](https://go.microsoft.com/fwlink/?linkid=2239372)  
+
+Version number: 18.2.1.1  
+Released: January 31, 2023  
+
+If you need to download the installer in a language other than the one detected for you, you can use these direct links.  
+For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2239549&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2239549&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2239549&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2239549&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2239549&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2239549&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2239549&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2239549&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2239549&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2239549&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2239549&clcid=0x40a)  
+For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2239080&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2239080&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2239080&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2239080&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2239080&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2239080&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2239080&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2239080&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2239080&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2239080&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2239080&clcid=0x40a)  
+For the ARM64(Preview) driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2239372&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2239372&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2239372&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2239372&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2239372&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2239372&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2239372&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2239372&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2239372&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2239372&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2239372&clcid=0x40a)  
+
+| Feature added | Details |
+| :------- | :------ |
+| Bug fixes. | [Bug fixes](../bug-fixes.md). |
 
 
 
+=================== DELETE ME  ==============================
+
+
+## 17.10.4.1
+
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2239168)  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2238791)  
+
+Version number: 17.10.4.1  
+Released: June 15, 2023  
+
+If you need to download the installer in a language other than the one detected for you, you can use these direct links.  
+For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2239168&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2239168&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2239168&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2239168&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2239168&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2239168&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2239168&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2239168&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2239168&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2239168&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2239168&clcid=0x40a)  
+For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2238791&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2238791&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2238791&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2238791&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2238791&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2238791&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2238791&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2238791&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2238791&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2238791&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2238791&clcid=0x40a)  
+
+
+| Feature added | Details |
+| :------- | :------ |
+| Bug fixes. | [Bug fixes](../bug-fixes.md). |
 
 
 

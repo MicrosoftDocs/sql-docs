@@ -196,7 +196,9 @@ Consider the following limitations when you use DTC with SQL Managed Instance:
 ## Managing transactions
 
 To view statistics of distributed transactions use [sys.dm_tran_distributed_transaction_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-distributed-transaction-stats).
+
 You can reset DTC log with stored procedure [sp_reset_dtc_log](/sql/relational-databases/system-stored-procedures/sp-reset-dtc-log).
+
 Distributed transactions can be managed with stored procedure [sys.sp_manage_distributed_transaction](/sql/relational-databases/system-stored-procedures/sys-sp-manage-distributed-transaction).
 
 ## Next steps

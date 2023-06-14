@@ -243,9 +243,9 @@ The Query Store must be enabled for every database where the persistence portion
 
 To disable memory grant feedback percentile for all query executions originating from the database, execute the following within the context of the applicable database:
 
-`ALTER DATABASE SCOPED CONFIGURATION SET MEMORY_GRANT_FEEDBACK_PERCENTILE = OFF;`
+`ALTER DATABASE SCOPED CONFIGURATION SET MEMORY_GRANT_FEEDBACK_PERCENTILE_GRANT = OFF;`
 
-The default setting for `MEMORY_GRANT_FEEDBACK_PERCENTILE` is `ON`.
+The default setting for `MEMORY_GRANT_FEEDBACK_PERCENTILE_GRANT` is `ON`.
 
 #### Disable persistence
 

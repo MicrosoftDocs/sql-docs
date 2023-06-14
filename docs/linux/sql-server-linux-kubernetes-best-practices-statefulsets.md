@@ -21,6 +21,9 @@ Another reason we recommend one SQL Server per deployment script is to allow cha
 
 In the following example, the StatefulSet workload name should match the `.spec.template.metadata.labels` value, which in this case is `mssql`. For more information, see [StatefulSets](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/).
 
+> [!IMPORTANT]  
+> The `SA_PASSWORD` environment variable is deprecated. Use `MSSQL_SA_PASSWORD` instead.
+
 ```yaml
 apiVersion: apps/v1
 kind: StatefulSet

@@ -48,7 +48,7 @@ Microsoft ODBC Driver 18.2.2.1 for SQL Server (ARM64 Preview):
 
 ## Version 17
 
-Version 17.10.4 is the latest general availability (GA) version of the 17.x driver. If you have a previous version of Microsoft ODBC Driver 17 for SQL Server installed, installing 17.10.3 upgrades it to 17.10.3.
+Version 17.10.4 is the latest general availability (GA) version of the 17.x driver. If you have a previous version of Microsoft ODBC Driver 17 for SQL Server installed, installing 17.10.4 upgrades it to 17.10.4.
 
 :::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft ODBC Driver 17 for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2239168 )**  
 :::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft ODBC Driver 17 for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2238791)**  

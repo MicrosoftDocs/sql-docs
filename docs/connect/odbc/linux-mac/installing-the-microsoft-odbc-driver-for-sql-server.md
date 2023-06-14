@@ -81,7 +81,8 @@ sudo apt-get install -y libgssapi-krb5-2
 
 > [!NOTE]  
 > You can substitute setting the environment variable 'ACCEPT_EULA' with setting the debconf variable 'msodbcsql/ACCEPT_EULA' instead: `echo msodbcsql18 msodbcsql/ACCEPT_EULA boolean true | sudo debconf-set-selections`
-> For APT based Linux distros, apt-key add is deprecating. Use wget instead.
+>
+> For APT based Linux distributions, `apt-key add` is deprecated. Use `wget` instead.
 
 ### [RHEL and Oracle Linux](#tab/redhat18-install)
 
@@ -166,7 +167,8 @@ sudo apt-get install -y unixodbc-dev
 
 > [!NOTE]  
 > You can substitute setting the environment variable 'ACCEPT_EULA' with setting the debconf variable 'msodbcsql/ACCEPT_EULA' instead: `echo msodbcsql18 msodbcsql/ACCEPT_EULA boolean true | sudo debconf-set-selections`
-> For APT based Linux distros, apt-key add is deprecating. Use wget instead.
+>
+> For APT based Linux distributions, `apt-key add` is deprecated. Use `wget` instead.
 
 ---
 
@@ -242,7 +244,8 @@ sudo apt-get install -y libgssapi-krb5-2
 
 > [!NOTE]  
 > You can substitute setting the environment variable 'ACCEPT_EULA' with setting the debconf variable 'msodbcsql/ACCEPT_EULA' instead: `echo msodbcsql17 msodbcsql/ACCEPT_EULA boolean true | sudo debconf-set-selections`
-> For APT based Linux distros, apt-key add is deprecating. Use wget instead.
+>
+> For APT based Linux distributions, `apt-key add` is deprecated. Use `wget` instead.
 
 ### [RHEL and Oracle Linux](#tab/redhat17-install)
 
@@ -327,7 +330,8 @@ sudo apt-get install -y unixodbc-dev
 
 > [!NOTE]  
 > You can substitute setting the environment variable 'ACCEPT_EULA' with setting the debconf variable 'msodbcsql/ACCEPT_EULA' instead: `echo msodbcsql17 msodbcsql/ACCEPT_EULA boolean true | sudo debconf-set-selections`
-> For APT based Linux distros, apt-key add is deprecating. Use wget instead.
+>
+> For APT based Linux distributions, `apt-key add` is deprecated. Use `wget` instead.
 
 ---
 
@@ -353,7 +357,7 @@ sudo apt-get install unixodbc-dev
 ```
 
 > [!NOTE]  
-> For APT based Linux distros, apt-key add is deprecating. Use wget instead.
+> For APT based Linux distributions, `apt-key add` is deprecated. Use `wget` instead.
 
 ### [RHEL 7](#tab/redhat7-install)
 
@@ -404,7 +408,7 @@ sudo apt-get install unixodbc-dev
 ```
 
 > [!NOTE]  
-> For APT based Linux distros, apt-key add is deprecating. Use wget instead.
+> For APT based Linux distributions, `apt-key add` is deprecated. Use `wget` instead.
 
 ---
 
@@ -443,7 +447,7 @@ ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 ```
 
 > [!NOTE]  
-> For APT based Linux distros, apt-key add is deprecating. Use wget instead.
+> For APT based Linux distributions, `apt-key add` is deprecated. Use `wget` instead.
 
 ### [SLES 12 (ODBC 13)](#tab/suse12-13-install)
 

@@ -220,6 +220,11 @@ For more information on granting database permissions, see [Getting Started with
 
 ### Create an Azure AD user and create a sample table
 
+> [!NOTE]
+> There are some limitations when the Azure AD user, that is part of the Azure AD group used as the Azure AD admin on SQL Managed Instance, logs in to SQL Managed Instance.
+> For example, a call to `SUSER_SID` returns `NULL`, since the given Azure AD user is not part of the `sys.server_principals` table.
+> Therefore, access to certain stored procedures or a list of granted permissions may be limited in this case.
+
 1. Log into your managed instance using a `sysadmin` account using SQL Server Management Studio.
 1. In **Object Explorer**, right-click the server and choose **New Query**.
 1. In the query window, use the following syntax to create an Azure AD user from an Azure AD server principal (login):

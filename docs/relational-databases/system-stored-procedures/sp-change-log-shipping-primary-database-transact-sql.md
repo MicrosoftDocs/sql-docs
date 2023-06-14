@@ -152,5 +152,5 @@ EXEC master.dbo.sp_change_log_shipping_primary_database
 ## See also
 
 - [About Log Shipping (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)
-- [System Stored Procedures (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
-- [log_shipping_primary_databases (Transact-SQL)](../../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)
+- [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
+- [log_shipping_primary_databases (Transact-SQL)](../system-tables/log-shipping-primary-databases-transact-sql.md)

@@ -85,7 +85,7 @@ In this article, you learn how to:
    sql_server_name=$(terraform output -raw sql_server_name)
     ```
 
-1. Run [az sql db list](http://cli/azure/sql/db#az-sql-db-list) to display the names of all the databases in your server.
+1. Run [az sql db list](/cli/azure/sql/db#az-sql-db-list) to display the names of all the databases in your server.
 
     ```azurecli
     az sql db list \

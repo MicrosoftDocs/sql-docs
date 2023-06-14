@@ -73,7 +73,7 @@ Requires membership in the **public** role.
 
 ## See also
 
-- [System Functions (Transact-SQL)](../../relational-databases/system-functions/system-functions-category-transact-sql.md)
+- [System Functions (Transact-SQL)](../system-functions/system-functions-category-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [General extended stored procedures (Transact-SQL)](general-extended-stored-procedures-transact-sql.md)
 - [@@VERSION (Transact-SQL)](../../t-sql/functions/version-transact-sql-configuration-functions.md)

@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Managed Instance
 description: Learn how to configure `tempdb` settings for Azure SQL Managed Instance, such as the number of `tempdb` files, the growth increment, and the maximum size of `tempdb`. 
 author: MashaMSFT
 ms.author: mathoma
-ms.date: 04/15/2023
+ms.date: 06/25/2023
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: how-to

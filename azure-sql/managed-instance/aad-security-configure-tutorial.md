@@ -221,7 +221,7 @@ For more information on granting database permissions, see [Getting Started with
 ### Create an Azure AD user and create a sample table
 
 > [!NOTE]
-> There are some limitations when the Azure AD user, that is part of the Azure AD group used as the Azure AD admin on SQL Managed Instance, logs in to SQL Managed Instance.
+> There are some limitations when the Azure AD user, which is part of the Azure AD group used as the Azure AD admin on SQL Managed Instance, signs into SQL Managed Instance.
 > For example, a call to `SUSER_SID` returns `NULL`, since the given Azure AD user is not part of the `sys.server_principals` table.
 > Therefore, access to certain stored procedures or a list of granted permissions may be limited in this case.
 

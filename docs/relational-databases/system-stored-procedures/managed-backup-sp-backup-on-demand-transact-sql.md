@@ -52,7 +52,7 @@ The name of the database on which the backup is to be performed. The @database_n
 
 The type of backup to be performed:  Database or Log. The @type parameter is **nvarchar(32)**.
 
-## Return code value
+## Return code values
 
 `0` (success) or `1` (failure).
 

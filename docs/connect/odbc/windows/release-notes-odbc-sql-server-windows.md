@@ -43,8 +43,6 @@ Released: June 15, 2023
 :::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2239080)  
 :::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download ARM64(Preview) installer](https://go.microsoft.com/fwlink/?linkid=2239372)  
 
-Version number: 18.2.1.1  
-Released: January 31, 2023  
 
 If you need to download the installer in a language other than the one detected for you, you can use these direct links.  
 For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2239549&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2239549&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2239549&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2239549&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2239549&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2239549&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2239549&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2239549&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2239549&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2239549&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2239549&clcid=0x40a)  

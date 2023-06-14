@@ -161,7 +161,9 @@ krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM.
 
 1. Create a new connection profile.
 
-1. Enter for Server hostname.DOMAIN.COMPANY.COM and select **Windows Authentication** as the authentication type.
+1. Select **Windows Authentication** as the authentication type.
+
+1. For the Server, enter a fully qualified host name, in the format `hostname.DOMAIN.CONTOSO.COM`.
 
 1. Complete the connection profile, and select **Connect**.
 

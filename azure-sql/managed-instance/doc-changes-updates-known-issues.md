@@ -283,7 +283,7 @@ Azure SQL Managed Instance service is creating system login for purposes of Tran
 
 ### msdb table for manual backups does not preserve the username
 
-We have recently introduced support for auto backups in msdb. Doing so, we removed accidentaly the username from the manual backups. The fix is ready and it will be deployed with the next release.
+We recently introduced support for auto backups in `msdb`, but the table currently does not contain username information.
 
 ### Azure AD logins and users are not supported in SSDT
 

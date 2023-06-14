@@ -15,9 +15,9 @@ Once Database Schema Conversion Toolkit (Oracle to Microsoft SQL) extension is [
 
 ## Create target SQL Database project
 
-First step in the conversion process is to prepare the target SQL Database project, where generated T-SQL scripts will be stored. In order to do this:
+The first step in the conversion process is to prepare the target SQL Database project, where generated T-SQL scripts will be stored. In order to do this:
 
-1. Navigate to the **Projects** view and select **Crate new** to create new SQL Database project
+1. Navigate to the **Database Projects** view and select **Create new** to create a new SQL Database project
 
    ![Create new SQL Database project](./media/create-new-sql-project.png)
 
@@ -33,7 +33,7 @@ First step in the conversion process is to prepare the target SQL Database proje
    > [!NOTE]
    > At this point Azure Data Studio may need to restart for the project to be created and added to the workspace.
 
-4. You should be able to see an empty SQL Database project under the **Projects** view
+4. You should see an empty SQL Database project under the **Database Projects** view
 
    ![Empty SQL Database project](./media/empty-sql-project.png)
 

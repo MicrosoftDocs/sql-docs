@@ -89,8 +89,6 @@ Start copying the source database with the [CREATE DATABASE ... AS COPY OF](/sql
 >  
 > Database copy using T-SQL is not supported when connecting to the destination server over a [private endpoint](private-endpoint-overview.md). If a private endpoint is configured but public network access is allowed, database copy is supported when connected to the destination server from a public IP address. Once the copy operation completes, public access can be [denied](connectivity-settings.md#deny-public-network-access).
 
-> [!IMPORTANT]  
-> Selecting backup storage redundancy when using T-SQL CREATE DATABASE ... AS COPY OF command is not supported yet.
 
 ### Copy to the same server
 
@@ -144,7 +142,7 @@ CREATE DATABASE Database2 AS COPY OF server1.Database1 (SERVICE_OBJECTIVE = ELAS
 You can use the steps in the [Copy a SQL Database to a different server](#copy-to-a-different-server) section to copy your database to a server in a different subscription using T-SQL. Make sure you use a login that has the same name and password as the database owner of the source database. Additionally, the login must be a member of the `dbmanager` role or a server administrator, on both source and target servers.
 
 > [!TIP]  
-> When copying databases in the same Azure Active Directory tenant, authorization on the source and destination servers is simplified if you initiate the copy command using an AAD authentication login with sufficient access on both servers. The minimum necessary level of access is membership in the `dbmanager` role in the `master` database on both servers. For example, you can use an AAD login is a member of an AAD group designated as the server administrator on both servers.
+> When copying databases in the same Azure Active Directory tenant, authorization on the source and destination servers is simplified if you initiate the copy command using an AAD authentication login with sufficient access on both servers. The minimum necessary level of access is membership in the `dbmanager` role in the `master` database on both servers. For example, you can use an AAD login that is a member of an AAD group designated as the server administrator on both servers.
 
 ```sql
 --Step# 1

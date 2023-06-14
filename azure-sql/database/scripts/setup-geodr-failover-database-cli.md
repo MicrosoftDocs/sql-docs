@@ -9,6 +9,7 @@ ms.service: sql-database
 ms.subservice: high-availability
 ms.topic: sample
 ms.devlang: azurecli
+ms.custom: devx-track-azurecli
 ---
 
 # Configure active geo-replication for a single database in Azure SQL Database using the Azure CLI

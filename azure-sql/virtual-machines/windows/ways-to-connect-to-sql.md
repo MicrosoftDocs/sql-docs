@@ -135,9 +135,9 @@ The following table lists the requirements to connect to SQL Server on Azure VM.
 > [!TIP]  
 > The steps in the preceding table are done for you when you configure connectivity in the portal. Use these steps only to confirm your configuration or to set up connectivity manually for SQL Server.
 
-## Connect to a SQL Server on Azure VM using Azure Active Directory
+## Connect to a SQL Server on Azure VM using Azure AD
 
-[Enable Azure Active Directory](/azure/azure-sql/virtual-machines/windows/security-considerations-best-practices#azure-ad-authentication-preview) for your SQL Server on Azure Virtual Machines via the Azure portal. SQL Server with Azure Active Directory is supported only on [!INCLUDE [sssql22-md](../../../docs/includes/sssql22-md.md)] and later versions.
+[Enable Azure Active Directory (Azure AD)](configure-azure-ad-authentication-for-sql-vm.md) for your SQL Server on Azure Virtual Machines via the Azure portal. SQL Server with Azure Active Directory is supported only on [!INCLUDE [sssql22-md](../../../docs/includes/sssql22-md.md)] and later versions.
 
 ## Next steps
 

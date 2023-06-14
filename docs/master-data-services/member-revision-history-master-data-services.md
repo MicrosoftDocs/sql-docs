@@ -10,7 +10,7 @@ ms.topic: conceptual
 ---
 # Member Revision History (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   A member revision history is recorded each time a member is changed, if the entity transaction log type is member.  
   

@@ -179,7 +179,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
 
 - Change Tracking with Delayed Durability is supported. All transactions with Change Tracking are fully durable. A transaction has the change tracking property if it does any write operations to tables that have enabled change tracking. 
 
-Starting with SQL Server 2022 CU 2, you may see: 
+Starting with SQL Server 2022 CU 2 and SQL Server 2019 CU 20, you may see: 
 
 - `Error 22891: Could not enable '_FeatureName_' for database '_DatabaseName_'. '_FeatureName_' cannot be enabled on a DB with delayed durability set` if you try to enable Transactional Replication or Change Data Capture on a database that has enabled delayed durability.
 

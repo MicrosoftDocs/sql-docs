@@ -1,5 +1,5 @@
 ---
-title: "View or configure the backup compression algorithm Server Configuration Option"
+title: "View or configure the backup compression algorithm (server configuration option)"
 description: "Find out about the backup compression algorithm option. See how it determines the algorithm to use for backup compression, and learn how to set it."
 author: MikeRayMSFT
 ms.author: mikeray
@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "backup compression algorithm [SQL Server], backup compression algorithm Option"
 ---
 
-# View or configure the backup compression algorithm Server Configuration option
+# View or configure the backup compression algorithm (server configuration option)
 
 [!INCLUDE [SQL Server 2022](../../includes/applies-to-version/sqlserver2022.md)]
 

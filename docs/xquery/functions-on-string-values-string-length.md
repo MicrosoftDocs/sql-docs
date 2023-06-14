@@ -14,7 +14,7 @@ dev_langs:
   - "XML"
 ---
 # Functions on String Values - string-length
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   Returns the length of the string in characters.  
   

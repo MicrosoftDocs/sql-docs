@@ -44,8 +44,16 @@
     "globalMetadata": {
       "layout": "Conceptual",
       "uhfHeaderId": "MSDocsHeader-DocsSQL",
-      "contributors_to_exclude": ["hexiaokai", "openpublishingbuild","sudeepku","saldana","iRaindrop"],
-      "searchScope": ["sql"],
+      "contributors_to_exclude": [
+        "hexiaokai",
+        "openpublishingbuild",
+        "sudeepku",
+        "saldana",
+        "iRaindrop"
+      ],
+      "searchScope": [
+        "sql"
+      ],
       "_op_documentIdPathDepotMapping": {
         "linux/": {
           "depot_name": "SQL.linux",
@@ -200,10 +208,10 @@
         "ado/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016",
         "analytics-platform-system/**/*.md": ">= aps-pdw-2016",
         "azdata/**/*.md": ">= sql-server-ver15 || >= sql-server-linux-ver15",
-        "azure-data-studio/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016",
+        "azure-data-studio/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = fabric",
         "big-data-cluster/**/*.md": "= sql-server-ver15 || = sql-server-linux-ver15",
         "big-data-cluster/**/*.yml": "= sql-server-ver15 || = sql-server-linux-ver15",
-        "connect/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016",
+        "connect/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = fabric",
         "database-engine/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017",
         "data-quality-services/**/*.md": ">= sql-server-2016",
         "dea/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016",
@@ -215,21 +223,21 @@
         "machine-learning/**/*.md": ">= sql-server-2017",
         "master-data-services/**/*.md": ">= sql-server-2016",
         "mdx/**/*.md": ">= sql-server-2016",
-        "odbc/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016",
-        "powershell/**/*.md": ">= aps-pdw-2016 || = azure-sqldw-latest || = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017",
+        "odbc/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = fabric",
+        "powershell/**/*.md": ">= aps-pdw-2016 || = azure-sqldw-latest || = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = fabric",
         "relational-databases/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017",
         "relational-databases/system-dynamic-management-views/*.md": "= azuresqldb-current",
         "relational-databases/resource-governor/**/*.md": "=azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017",
-        "relational-databases/security/**/*.md": "azuresqldb-current || azuresqldb-mi-current || azure-sqldw-latest || >= aps-pdw-2016 || >= sql-server-2016 || >= sql-server-linux-2017",
+        "relational-databases/security/**/*.md": "azuresqldb-current || azuresqldb-mi-current || azure-sqldw-latest || >= aps-pdw-2016 || >= sql-server-2016 || >= sql-server-linux-2017 || = fabric",
         "relational-databases/xml/**/*.md": "azuresqldb-current || azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017",
         "reporting-services/**/*.md": ">= sql-server-2016",
         "reporting-services/mobile-reports/**/*.md": ">= sql-server-2017",
         "samples/**/*.md": "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017",
         "sql-server/**/*.md": ">= sql-server-2016",
-        "ssdt/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016",
+        "ssdt/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = fabric",
         "ssma/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016",
-        "ssms/**/*.md": ">= aps-pdw-2016 || = azure-sqldw-latest || = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016",
-        "toc/**/*.md": "=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017",
+        "ssms/**/*.md": ">= aps-pdw-2016 || = azure-sqldw-latest || = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || = fabric",
+        "toc/**/*.md": "=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017 || = fabric",
         "tools/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017",
         "tools/distributed-replay/*.md": "= sql-server-2016 || = sql-server-2017 || = sql-server-ver15 || = sql-server-linux-2017 || = sql-server-linux-ver15",
         "t-sql/**/*.md": "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqledge-current",
@@ -379,7 +387,7 @@
 
     "groups": {
       "gr-sql-2016-a": {
-        "moniker_range": "azuresqldb-current || azuresqldb-mi-current || azure-sqldw-latest || >= aps-pdw-2016 || >= sql-server-2016 || >= sql-server-linux-2017",
+        "moniker_range": "azuresqldb-current || azuresqldb-mi-current || azure-sqldw-latest || >= aps-pdw-2016 || >= sql-server-2016 || >= sql-server-linux-2017 || = fabric",
         "dest": "temp2016a"
       }
     },
@@ -417,7 +425,8 @@
           "database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md",
           "sql-server/failover-clusters/install/rename-a-sql-server-failover-cluster-instance.md",
           "ssms/agent/**/*.md",
-          "database-engine/install-windows/**/*.md"        ]
+          "database-engine/install-windows/**/*.md"
+        ]
       },
       "sensitive-language-sl": {
         "exclude": [
@@ -428,7 +437,8 @@
       },
       "sensitive-language-wl": {
         "exclude": [
-          "big-data-cluster/reference-config-spark-hadoop.md"
+          "big-data-cluster/reference-config-spark-hadoop.md",
+          "relational-databases/errors-events/**/*.md"
         ]
       },
       "sensitive-language-bl": {

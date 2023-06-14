@@ -4,7 +4,7 @@ description: Follow this tutorial to learn how to back up and restore databases 
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan
-ms.date: 03/15/2023
+ms.date: 04/17/2023
 ms.service: azure-data-studio
 ms.topic: tutorial
 ms.custom: updatefrequency5
@@ -62,7 +62,7 @@ After you select **Backup**, the **Backup database** dialog box disappears and t
 
 1. Select **Backup file** in the **Restore from** box.
 
-1. Select the ellipses (...) in the **Backup file path** box, and select the latest backup file for *TutorialDB*.
+1. Select the ellipses (...) in the **Backup file path** box, and select the latest backup file for *TutorialDB*. Ensure the SQL Server service has READ permissions on the backup file.
 
 1. Enter **TutorialDB_Restored** in the **Target database** box in the **Destination** section to restore the backup file to a new database. Then select **Restore**.
 

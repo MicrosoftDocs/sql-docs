@@ -12,7 +12,7 @@ helpviewer_keywords:
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use OPENJSON with the Default Schema 
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Use **OPENJSON** with the default schema to return a table with one row for each property of the object or for each element in the array.  
   
@@ -64,7 +64,7 @@ SET @json=N'{
        "address":{    
          "town":"Bristol",  
          "county":"Avon",  
-         "country":"England"  
+         "country":"Great Britain"  
        },  
        "tags":["Sport", "Water polo"]  
     },  
@@ -80,7 +80,7 @@ FROM OPENJSON(@json,N'lax $.info')
 |Key|Value|Type|  
 |---------|-----------|----------|  
 |type|1|0|  
-|address|{ "town":"Bristol", "county":"Avon", "country":"England" }|5|  
+|address|{ "town":"Bristol", "county":"Avon", "country":"Great Britain" }|5|  
 |tags|[ "Sport", "Water polo" ]|4|  
   
 ## Example - Combine relational data and JSON data  

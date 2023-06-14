@@ -20,10 +20,10 @@ helpviewer_keywords:
   - "SET NOCOUNT statement"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # SET NOCOUNT (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricdw.md)]
 
   Stops the message that shows the count of the number of rows affected by a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or stored procedure from being returned as part of the result set.  
   

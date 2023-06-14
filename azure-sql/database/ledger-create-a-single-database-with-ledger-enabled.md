@@ -4,11 +4,14 @@ description: Create a single database in Azure SQL Database with ledger enabled 
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: wiassaf, mathoma
-ms.date: "05/24/2022"
+ms.date: 04/26/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: quickstart
-ms.custom: mode-other, devx-track-azurepowershell, devx-track-azurecli
+ms.custom:
+  - mode-other
+  - devx-track-azurepowershell
+  - devx-track-azurecli
 ---
 
 # Quickstart: Create a database in Azure SQL Database with ledger enabled
@@ -51,13 +54,8 @@ To create a single database in the Azure portal, this quickstart starts at the A
    Select **OK**.
    
 1. Leave **Want to use SQL elastic pool** set to **No**.
-
 1. Under **Compute + storage**, select **Configure database**.
-
 1. This quickstart uses a serverless database, so select **Serverless**, and then select **Apply**. 
-
-      :::image type="content" source="./media/single-database-create-quickstart/configure-database.png" alt-text="Screenshot that shows configuring a serverless database.":::
-
 1. On the **Networking** tab, for **Connectivity method**, select **Public endpoint**.
 1. For **Firewall rules**, set **Add current client IP address** to **Yes**. Leave **Allow Azure services and resources to access this server** set to **No**.
 1. Select **Next: Security** at the bottom of the page.
@@ -177,7 +175,7 @@ az sql server firewall-rule create \
     --end-ip-address $endIP
 ```
 
-### Create a single ledger database 
+### Create a single ledger database
 
 Create a ledger database with the [az sql db create](/cli/azure/sql/db) command. The following command creates a serverless database with ledger enabled.
 
@@ -193,7 +191,7 @@ az sql db create \
     --ledger-on
 ```
 
-### Create a storage account 
+### Create a storage account
 
 Create a storage account to store ledger digests with the [az storage account create](/cli/azure/sql/db) command. 
 

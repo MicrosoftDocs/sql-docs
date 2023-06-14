@@ -1,8 +1,8 @@
 ---
 title: How to use distributed transactions with SQL Server Linux containers
 description: Learn to use the Microsoft Distributed Transaction Coordinator (MSDTC) for distributed transactions in a SQL Server container on Linux.
-author: VanMSFT
-ms.author: vanto
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: randolphwest
 ms.date: 09/21/2022
 ms.service: sql
@@ -36,7 +36,7 @@ To enable MSDTC transaction in SQL Server containers, you must set two new envir
 The following example shows how to use these environment variables to pull and run a single SQL Server 2017 container configured for MSDTC. This allows it to communicate with any application on any hosts.
 
 > [!IMPORTANT]  
-> The `SA_PASSWORD` environment variable is deprecated. Please use `MSSQL_SA_PASSWORD` instead.
+> The `SA_PASSWORD` environment variable is deprecated. Use `MSSQL_SA_PASSWORD` instead.
 
 ```bash
 docker run \
@@ -61,7 +61,7 @@ docker run `
 The following example shows how to use these environment variables to pull and run a single [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] container configured for MSDTC. This allows it to communicate with any application on any hosts.
 
 > [!IMPORTANT]  
-> The `SA_PASSWORD` environment variable is deprecated. Please use `MSSQL_SA_PASSWORD` instead.
+> The `SA_PASSWORD` environment variable is deprecated. Use `MSSQL_SA_PASSWORD` instead.
 
 ```bash
 docker run \

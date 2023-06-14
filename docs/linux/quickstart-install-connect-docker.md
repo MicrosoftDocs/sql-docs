@@ -110,7 +110,7 @@ Before starting the following steps, make sure that you've selected your preferr
 1. To run the Linux container image with Docker, you can use the following command from a bash shell or elevated PowerShell command prompt.
 
    > [!IMPORTANT]  
-   > The `SA_PASSWORD` environment variable is deprecated. Please use `MSSQL_SA_PASSWORD` instead.
+   > The `SA_PASSWORD` environment variable is deprecated. Use `MSSQL_SA_PASSWORD` instead.
 
    ::: zone pivot="cs1-bash"
    ```bash
@@ -246,7 +246,7 @@ Before starting the following steps, make sure that you've selected your preferr
 1. To run the Linux container image with Docker, you can use the following command from a bash shell or elevated PowerShell command prompt.
 
    > [!IMPORTANT]  
-   > The `SA_PASSWORD` environment variable is deprecated. Please use `MSSQL_SA_PASSWORD` instead.
+   > The `SA_PASSWORD` environment variable is deprecated. Use `MSSQL_SA_PASSWORD` instead.
 
    ::: zone pivot="cs1-bash"
    ```bash
@@ -382,7 +382,7 @@ Before starting the following steps, make sure that you've selected your preferr
 1. To run the Linux container image with Docker, you can use the following command from a bash shell or elevated PowerShell command prompt.
 
    > [!IMPORTANT]  
-   > The `SA_PASSWORD` environment variable is deprecated. Please use `MSSQL_SA_PASSWORD` instead.
+   > The `SA_PASSWORD` environment variable is deprecated. Use `MSSQL_SA_PASSWORD` instead.
 
    ::: zone pivot="cs1-bash"
    ```bash
@@ -721,3 +721,5 @@ After you have tried using the [!INCLUDE [ssnoversion-md](../includes/ssnoversio
 - [Troubleshoot SQL Server Linux containers](sql-server-linux-docker-container-troubleshooting.md).
 
 Also, check out the [mssql-docker GitHub repository](https://github.com/microsoft/mssql-docker) for resources, feedback, and known issues.
+
+[!INCLUDE [contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

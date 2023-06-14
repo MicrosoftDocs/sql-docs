@@ -2,7 +2,7 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 02/17/2023
+ms.date: 03/22/2023
 ms.topic: include
 ---
 | Error| Severity | Event logged | Description|
@@ -146,9 +146,9 @@ ms.topic: include
 | 11297 | 16 | No | A corrupted message has been received. The private variable data segment offset is incorrect. |
 | 11298 | 16 | No | A corrupted message has been received. The public variable data segment offset is incorrect. |
 | 11299 | 10 | No | A corrupted message has been received. An unsequenced message had a non-zero sequence number. This occurred in the message with Conversation ID '%.\*ls', Initiator: %d, and Message sequence number: %I64d. |
-| 11300 | 10 | Yes | Error wile committing a readonly or a TEMPDB XDES, Shutting down the server. |
+| 11300 | 10 | Yes | Error while committing a readonly or a TEMPDB XDES, shutting down the server. |
 | 11301 | 10 | Yes | Error while performing transaction notification for object %p event %d. |
-| 11302 | 10 | Yes | Error during rollback. shutting down database (location: %d). |
+| 11302 | 10 | Yes | Error during rollback. Shutting down database (location: %d). |
 | 11303 | 10 | Yes | Error releasing reserved log space: %ls space %I64d, code %d, state %d. |
 | 11304 | 10 | Yes | Failed to record outcome of a local two-phase commit transaction.  Taking database offline. |
 | 11306 | 16 | No | Forward progress on this transaction is disallowed. Transaction has been rolled back. |
@@ -288,7 +288,7 @@ ms.topic: include
 | 11614 | 15 | No | %ls is not supported. |
 | 11617 | 16 | No | An unknown error has occurred trying to load '%hs'. |
 | 11618 | 15 | No | Combining column level permissions with other permissions is not allowed in the same GRANT/DENY/REVOKE statement. |
-| 11619 | 16 | No | There is not enough stack available to compile the statment. |
+| 11619 | 16 | No | There is not enough stack available to compile the statement. |
 | 11620 | 15 | No | REVOKE statements can only be used to revoke column level permissions. |
 | 11621 | 10 | No | SQL Server started in Language Service mode. |
 | 11622 | 16 | No | CREATE ASSEMBLY can only be created FROM a constant binary expression. |
@@ -511,7 +511,7 @@ ms.topic: include
 | 12501 | 16 | No | Different number of columns in CREATE TABLE and SELECT query. |
 | 12502 | 16 | No | Data types cannot be defined using CREATE TABLE AS SELECT syntax. |
 | 12503 | 15 | No | Specifying schema elements in the CREATE SCHEMA statement is not supported. |
-| 12504 | 16 | No | Distribution column '%.\*ls' must be implictly or explictly specified in the insert select query as the target table '%.\*ls' is a hash distributed table. |
+| 12504 | 16 | No | Distribution column '%.\*ls' must be implicitly or explicitly specified in the INSERT SELECT query as the target table '%.\*ls' is a hash distributed table. |
 | 12600 | 16 | No | DBCC CLONEDATABASE is not allowed on this server. |
 | 12601 | 16 | No | DBCC CLONEDATABASE is not allowed within a transaction. |
 | 12602 | 16 | No | DBCC CLONEDATABASE cannot be executed through MARS connection. |

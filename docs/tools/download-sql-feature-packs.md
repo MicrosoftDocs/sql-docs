@@ -12,7 +12,7 @@ keywords: feature pack
 ---
 # Download SQL Server extended features and tools
 
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 This article provides a brief explanation of the various downloads and stand-alone packages Microsoft provides to add value for SQL Server.
 
@@ -55,7 +55,6 @@ This article provides a brief explanation of the various downloads and stand-alo
 | Feature | Description |
 |----|-----|
 | [Integration Services Feature Pack for Azure](../integration-services/azure-feature-pack-for-integration-services-ssis.md) | The Microsoft Integration Services Feature Pack for Azure provides tools for using IS to connect to the Azure Stack. |
-| [Integration Services Feature Pack for latest SQL Server](https://www.microsoft.com/download/details.aspx?id=100430) | These stand-alone packages provide additional value for the latest Microsoft SQL Server Integration Services. |
 
 ## Kerberos
 

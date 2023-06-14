@@ -9,11 +9,11 @@ ms.subservice: t-sql
 ms.topic: reference
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # Queries
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
   Data Manipulation Language (DML) is a vocabulary used to retrieve and work with data in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] and SQL Database. Most also work in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] (review each individual statement for details). Use these statements to add, modify, query, or remove data from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
   

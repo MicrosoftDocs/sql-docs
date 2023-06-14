@@ -142,7 +142,7 @@ New-AzResourceGroup -Name $ResourceGroupName -Location $Location
 
 ## Create a storage account
 
-The virtual machine requires storage resources for the operating system disk and for the SQL Server data and log files. For simplicity, you'll create a single disk for both. You can attach additional disks later using the [Add-Azure Disk](/powershell/module/servicemanagement/azure.service/add-azuredisk) cmdlet to place your SQL Server data and log files on dedicated disks. Use the [New-AzStorageAccount](/powershell/module/az.storage/new-azstorageaccount) cmdlet to create a standard storage account in your new resource group. Specify the variables that you previously initialized for the storage account name, storage SKU name, and location.
+The virtual machine requires storage resources for the operating system disk and for the SQL Server data and log files. For simplicity, you'll create a single disk for both. You can attach additional disks later using the [Add-Azure Disk](/powershell/module/servicemanagement/azure/add-azuredisk) cmdlet to place your SQL Server data and log files on dedicated disks. Use the [New-AzStorageAccount](/powershell/module/az.storage/new-azstorageaccount) cmdlet to create a standard storage account in your new resource group. Specify the variables that you previously initialized for the storage account name, storage SKU name, and location.
 
 Run this cmdlet to create your new storage account.
 
@@ -354,7 +354,7 @@ The virtual machine is created.
 > [!NOTE]
 > If you get an error about boot diagnostics, you can ignore it. A standard storage account is created for boot diagnostics because the specified storage account for the virtual machine's disk is a premium storage account.
 
-## Install the SQL Iaas Agent
+## Install the SQL IaaS Agent extension
 
 SQL Server virtual machines support automated management features with the [SQL Server IaaS Agent Extension](sql-server-iaas-agent-extension-automate-management.md). To register your SQL Server with the extension run the [New-AzSqlVM](/powershell/module/az.sqlvirtualmachine/new-azsqlvm) command after the virtual machine is created. Specify the license type for your SQL Server VM, choosing between either pay-as-you-go or bring-your-own-license via the [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/). For more information about licensing, see [licensing model](licensing-model-azure-hybrid-benefit-ahb-change.md). 
 

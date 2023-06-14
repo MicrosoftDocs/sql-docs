@@ -8,6 +8,8 @@ ms.date: 10/25/2022
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.alwaysencryptedwizard.encryption.f1"
 helpviewer_keywords:
   - "encryption [SQL Server], Always Encrypted"
   - "Always Encrypted"
@@ -16,13 +18,14 @@ helpviewer_keywords:
   - "SQL13.SWB.COLUMNMASTERKEY.CLEANUP.F1"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # Always Encrypted
 
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 :::image type="content" source="media/always-encrypted-database-engine/always-encrypted.png" alt-text="Diagram of Always Encrypted.":::
 
-Always Encrypted is a feature designed to protect sensitive data, such as credit card numbers or national identification numbers (for example, U.S. social security numbers), stored in [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)], Azure SQL Managed Instance, and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] databases. Always Encrypted allows clients to encrypt sensitive data inside client applications and never reveal the encryption keys to the [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. This provides a separation between those who own the data and can view it, and those who manage the data but should have no access - on-premises database administrators, cloud database operators, or other high-privileged unauthorized users. As a result, Always Encrypted enables customers to confidently store their sensitive data in the cloud, and to reduce the likelihood of data theft by malicious insiders.
+Always Encrypted is a feature designed to protect sensitive data, such as credit card numbers or national/regional identification numbers (for example, U.S. social security numbers), stored in [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)], Azure SQL Managed Instance, and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] databases. Always Encrypted allows clients to encrypt sensitive data inside client applications and never reveal the encryption keys to the [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. This provides a separation between those who own the data and can view it, and those who manage the data but should have no access - on-premises database administrators, cloud database operators, or other high-privileged unauthorized users. As a result, Always Encrypted enables customers to confidently store their sensitive data in the cloud, and to reduce the likelihood of data theft by malicious insiders.
 
 Always Encrypted can be configured to support limited confidential queries on encrypted data, the queries that involve equality comparisons. For example, point lookup-searches or equality joins. Such queries leverage [deterministic encryption](#selecting--deterministic-or-randomized-encryption).
 

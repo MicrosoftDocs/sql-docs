@@ -20,7 +20,7 @@ dev_langs:
   - "XML"
 ---
 # Path Expressions - Specifying Axis
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   An axis step in a path expression includes the following components:  
   

@@ -2,7 +2,7 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 02/17/2023
+ms.date: 03/22/2023
 ms.topic: include
 ---
 | Error| Severity | Event logged | Description|
@@ -136,7 +136,7 @@ ms.topic: include
 | 1212 | 10 | Yes | Lock not logged: %-30ls Mode: %s |
 | 1213 | 21 | Yes | Error spawning Lock Monitor thread: %ls |
 | 1214 | 17 | Yes | Internal Error.  There are too many parallel transactions. |
-| 1215 | 16 | No | A conflicting ABORT_AFTER_WAIT = BLOCKERS request is waiting for existing transactions to rollback. This request cannot be executed. Please retry when the previous request is completed. |
+| 1215 | 16 | No | A conflicting ABORT_AFTER_WAIT = BLOCKERS request is waiting for existing transactions to roll back. This request cannot be executed. Please retry when the previous request is completed. |
 | 1216 | 16 | No | The DDL statement with ABORT_AFTER_WAIT = BLOCKERS option cannot be completed due to a conflicting system task. The request can abort only user transactions. Please wait for the system task to complete and retry. |
 | 1217 | 10 | Yes | Process ID %d was killed by an ABORT_AFTER_WAIT = BLOCKERS DDL statement on database_id = %d, object_id = %d. |
 | 1218 | 10 | Yes | An ABORT_AFTER_WAIT = BLOCKERS lock request was issued on database_id = %d, object_id = %d. All blocking user sessions will be killed. |
@@ -219,7 +219,7 @@ ms.topic: include
 | 1466 | 16 | No | Database "%.\*ls" is read-only on one of the server instances which is incompatible with participating in database mirroring or in an availability group. Set the database to read-write mode, and retry the operation. |
 | 1467 | 16 | No | Database "%.\*ls" database is in emergency or suspect mode on one of the partners which is incompatible with participating in database mirroring or in an availability group. |
 | 1468 | 16 | No | The operation cannot be performed on database "%.\*ls" because it is involved in a database mirroring session or an availability group. Some operations are not allowed on a database that is participating in a database mirroring session or in an availability group. |
-| 1469 | 16 | No | Database "%.\*ls" is an auto-close database on one of the partnerswhich is incompatible with participating in database mirroring or in an availability group. |
+| 1469 | 16 | No | Database "%.\*ls" is an auto-close database on one of the partners which is incompatible with participating in database mirroring or in an availability group. |
 | 1470 | 16 | No | The alter database for this partner config values may only be initiated on the current principal server for database "%.\*ls". |
 | 1471 | 16 | No | The database mirroring connection terminated. Out of memory sending message for database "%.\*ls". |
 | 1472 | 16 | No | The database mirroring connection terminated. Communications error sending message for database "%.\*ls". |
@@ -386,7 +386,7 @@ ms.topic: include
 | 1846 | 16 | No | Cannot find SQL Volume Shadow Copy (VSS) Writer component for database '%ls' while creating auto-recovered VSS snapshot for online DBCC check. |
 | 1847 | 16 | No | The current version of the operating system doesn't support auto-recovered Volume Shadow Copy (VSS) snapshots. |
 | 1848 | 16 | No | Volume Shadow Copy Service (VSS) failed to create an auto-recovered snapshot of database '%ls' for online DBCC check. |
-| 1849 | 16 | No | CREATE DATABASE failed because FILESTREAM filegroups were declared and ALLOW_SNAPSHOT_ISOLATION or READ_COMMITTED_SNAPSHOT is set to ON in the model database.  Either set ALLOW_SNAPSHOT_ISOLATION and READ_COMMITTED_SNAPSHOT to OFF in the model database, or create the database without declaring any FILESTREAM filegroups, set ALLOW_SNAPSHOT_ISOLATION and READ_COMMITTED_SNAPSHOT to OFF in the new database, and then use ALTER DATABSE to add FILESTREAM filegroups and files. |
+| 1849 | 16 | No | CREATE DATABASE failed because FILESTREAM filegroups were declared and ALLOW_SNAPSHOT_ISOLATION or READ_COMMITTED_SNAPSHOT is set to ON in the model database.  Either set ALLOW_SNAPSHOT_ISOLATION and READ_COMMITTED_SNAPSHOT to OFF in the model database, or create the database without declaring any FILESTREAM filegroups, set ALLOW_SNAPSHOT_ISOLATION and READ_COMMITTED_SNAPSHOT to OFF in the new database, and then use ALTER DATABASE to add FILESTREAM filegroups and files. |
 | 1850 | 16 | No | Cannot attach database '%.\*ls' because the file name '%.\*ls' is valid on more than one brick. |
 | 1851 | 16 | No | File name '%.\*ls' as relative path is too long after prefixed with default path '%ls'. |
 | 1852 | 21 | No | Error occurred when shrinking the physical file. Please check ERRORLOG for more detail. |

@@ -10,7 +10,7 @@ ms.topic: conceptual
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Shared Management Objects (SMO) License Terms
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 ## MICROSOFT SOFTWARE LICENSE TERMS
 **MICROSOFT SQL SERVER 2017 SHARED MANAGEMENT OBJECTS**

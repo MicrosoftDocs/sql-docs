@@ -13,7 +13,7 @@ helpviewer_keywords:
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Parameters
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Parameters are used to exchange data between stored procedures and functions and the application or tool that called the stored procedure or function: 
 
 *  Input parameters allow the caller to pass a data value to the stored procedure or function.

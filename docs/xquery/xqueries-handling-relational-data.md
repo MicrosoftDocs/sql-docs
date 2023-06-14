@@ -14,7 +14,7 @@ dev_langs:
   - "XML"
 ---
 # XQueries Handling Relational Data
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   You specify XQuery against an **xml** type column or variable by using one of the [XML Data Type Methods](../t-sql/xml/xml-data-type-methods.md). These include **query()**, **value()**, **exist()**, or **modify()**. The XQuery is executed against the XML instance identified in the query generating the XML.  
   

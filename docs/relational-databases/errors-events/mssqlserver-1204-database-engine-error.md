@@ -3,7 +3,7 @@ title: "MSSQLSERVER_1204"
 description: "MSSQLSERVER_1204"
 author: MashaMSFT
 ms.author: mathoma
-ms.reviewer: ramakoni
+ms.reviewer: sureshka
 ms.date: "04/04/2017"
 ms.service: sql
 ms.subservice: supportability

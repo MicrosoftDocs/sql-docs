@@ -1,7 +1,7 @@
 ---
 title: MSSQLSERVER_5120
 description: "MSSQLSERVER_5120"
-author: PijoCoder
+author: pijocoder
 ms.author: jopilov
 ms.date: 07/25/2020
 ms.service: sql

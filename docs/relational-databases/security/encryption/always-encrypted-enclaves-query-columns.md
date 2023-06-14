@@ -216,7 +216,7 @@ ORDER BY [Salary] DESC;
 GO
 ```
 
-## Next Steps
+## Next steps
 
 - [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md)
 

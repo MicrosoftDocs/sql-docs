@@ -270,3 +270,5 @@ While it is not recommended, it is possible to use utilities, such as **realmd**
 - [Encrypting Connections to SQL Server on Linux](sql-server-linux-encrypted-connections.md)
 - [Understanding Active Directory authentication for SQL Server on Linux and containers](sql-server-linux-ad-auth-understanding.md)
 - [Troubleshooting Active Directory authentication for SQL Server on Linux and containers](sql-server-linux-ad-auth-troubleshooting.md)
+
+[!INCLUDE [contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

@@ -21,7 +21,7 @@ helpviewer_keywords:
 
 # SQL Server Identifiers in PowerShell
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provider for Windows PowerShell uses [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] identifiers in Windows PowerShell paths. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] identifiers can contain characters that Windows PowerShell does not support in paths. You must escape these characters or use special encoding for them when using the identifiers in Windows PowerShell paths.  
   

@@ -1,5 +1,5 @@
 ---
-title: affinity mask Server Configuration Option
+title: affinity mask (server configuration option)
 description: Learn about the affinity mask option in SQL Server. View an example that uses it to bind processors to specific threads.
 author: rwestMSFT
 ms.author: randolphwest
@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "DPC"
 ---
 
-# affinity mask Server Configuration Option
+# affinity mask (server configuration option)
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 

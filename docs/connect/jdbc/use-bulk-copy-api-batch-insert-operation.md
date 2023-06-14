@@ -1,9 +1,9 @@
 ---
-title: "Bulk copy API for batch insert in JDBC"
-description: "Microsoft JDBC Driver for SQL Server supports using Bulk Copy for batch inserts for faster loading of data into the database."
+title: Bulk copy API for batch insert in JDBC
+description: Microsoft JDBC Driver for SQL Server supports using Bulk Copy for batch inserts for faster loading of data into the database.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: "01/29/2021"
+ms.date: 04/13/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -13,7 +13,7 @@ ms.topic: conceptual
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Microsoft JDBC Driver for SQL Server version 9.2 and above supports using the Bulk Copy API for batch insert operations. This feature allows users to enable the driver to do Bulk Copy operations underneath when executing batch insert operations. The driver aims to achieve improvement in performance while inserting the same data as the driver would have with regular batch insert operation. The driver parses the user's SQL Query, using the Bulk Copy API instead of the usual batch insert operation. Below are various ways to enable the Bulk Copy API for batch insert feature and lists its limitations. This page also contains a small sample code that demonstrates a usage and the performance increase as well.
+Microsoft JDBC Driver for SQL Server version 9.2 and above supports using the Bulk Copy API for batch insert operations. This feature allows users to enable the driver to do Bulk Copy operations underneath when executing batch insert operations. The driver aims to achieve improvement in performance while inserting the same data as the driver would have with regular batch insert operation. The driver parses the user's SQL Query, using the Bulk Copy API instead of the usual batch insert operation. The following settings are various ways to enable the Bulk Copy API for batch insert feature and lists its limitations. This page also contains a small sample code that demonstrates a usage and the performance increase as well.
 
 This feature is only applicable to PreparedStatement and CallableStatement's `executeBatch()` & `executeLargeBatch()` APIs.
 
@@ -29,7 +29,7 @@ There are three ways to enable Bulk Copy API for batch insert.
 
 ### 1. Enabling with connection property
 
-Adding **useBulkCopyForBatchInsert=true;** to the connection string enables this feature.
+Adding `useBulkCopyForBatchInsert=true;` to the connection string enables this feature.
 
 ```java
 Connection connection = DriverManager.getConnection("jdbc:sqlserver://<server>:<port>;userName=<user>;password=<password>;database=<database>;encrypt=true;useBulkCopyForBatchInsert=true;");
@@ -41,11 +41,11 @@ Calling **SQLServerConnection.setUseBulkCopyForBatchInsert(true)** enables this 
 
 **SQLServerConnection.getUseBulkCopyForBatchInsert()** retrieves the current value for **useBulkCopyForBatchInsert** connection property.
 
-The value for **useBulkCopyForBatchInsert** stays constant for each PreparedStatement at the time of its initialization. Any subsequent calls to **SQLServerConnection.setUseBulkCopyForBatchInsert()** won't affect the already created PreparedStatement's value.
+The value for **useBulkCopyForBatchInsert** stays constant for each PreparedStatement at the time of its initialization. Subsequent calls to **SQLServerConnection.setUseBulkCopyForBatchInsert()** don't affect the already created PreparedStatement's value.
 
 ### 3. Enabling with setUseBulkCopyForBatchInsert() method from SQLServerDataSource object
 
-Similar to above, but using SQLServerDataSource to create a SQLServerConnection object. Both methods achieve the same result.
+Similar to the previous option, but using SQLServerDataSource to create a SQLServerConnection object. Both methods achieve the same result.
 
 ## Known limitations
 
@@ -55,13 +55,14 @@ There are currently these limitations that apply to this feature.
 * Insert queries that contain INSERT-SELECT expressions (for example, `INSERT INTO TABLE SELECT * FROM TABLE2`), isn't supported.
 * Insert queries that contain multiple VALUE expressions (for example, `INSERT INTO TABLE VALUES (1, 2) (3, 4)`), isn't supported.
 * Insert queries that are followed by the OPTION clause, joined with multiple tables, or followed by another query, isn't supported.
+* `IDENTIY_INSERT` isn't managed in the driver. Either don't include identity columns in insert statements, or manually set the `IDENTITY_INSERT` state of your tables between batch insert statements. For more information, see [SET IDENTITY_INSERT](../../t-sql/statements/set-identity-insert-transact-sql.md).
 * Because of the limitations of Bulk Copy API, `MONEY`, `SMALLMONEY`, `DATE`, `DATETIME`, `DATETIMEOFFSET`, `SMALLDATETIME`, `TIME`, `GEOMETRY`, and `GEOGRAPHY` data types, are currently not supported for this feature.
 
-If the query fails because of non "SQL server" related errors, the driver will log the error message and fallback to the original logic for batch insert.
+If the query fails because of non "SQL server" related errors, the driver logs the error message and falls back to the original logic for batch insert.
 
 ## Example
 
-This is an example that demonstrates the use case for a batch insert operation of a thousand rows, for both regular vs Bulk Copy API scenarios.
+This example demonstrates the use case for a batch insert operation of a thousand rows, for both regular vs Bulk Copy API scenarios.
 
 ```java
     public static void main(String[] args) throws Exception

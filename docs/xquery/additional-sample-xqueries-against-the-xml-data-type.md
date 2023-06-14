@@ -14,7 +14,7 @@ dev_langs:
   - "XML"
 ---
 # Additional Sample XQueries Against the xml Data Type
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   The topics in this section provide additional samples that show how to use XQuery queries against the **xml** data type:  
   

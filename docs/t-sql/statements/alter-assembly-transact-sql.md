@@ -70,7 +70,7 @@ ALTER ASSEMBLY assembly_name
  \<client_assembly_specifier> specifies the network or local location where the assembly being refreshed is located. The network location includes the computer name, the share name and a path within that share. *manifest_file_name* specifies the name of the file that contains the manifest of the assembly.  
 
 > [!IMPORTANT]
-> Azure SQL Database does not support refereencing a file.
+> Azure SQL Database does not support referencing a file.
   
  \<assembly_bits> is the binary value for the assembly.  
   
@@ -199,7 +199,7 @@ The following permissions required to alter a CLR assembly when `CLR strict secu
   ```
 
 > [!IMPORTANT]
-> Azure SQL Database does not support refereencing a file.
+> Azure SQL Database does not support referencing a file.
 
 ### B. Adding a file to associate with an assembly  
  The following example uploads the source code file `Class1.cs` to be associated with assembly `MyClass`. This example assumes assembly `MyClass` is already created in the database.  
@@ -210,7 +210,7 @@ ADD FILE FROM 'C:\MyClassProject\Class1.cs';
 ```  
 
 > [!IMPORTANT]
-> Azure SQL Database does not support refereencing a file.
+> Azure SQL Database does not support referencing a file.
 
 ### C. Changing the permissions of an assembly  
  The following example changes the permission set of assembly `ComplexNumber` from SAFE to `EXTERNAL ACCESS`.  

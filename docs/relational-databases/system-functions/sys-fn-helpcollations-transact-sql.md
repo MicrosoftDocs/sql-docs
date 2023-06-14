@@ -16,11 +16,11 @@ helpviewer_keywords:
   - "fn_helpcollations function"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016|| = azure-sqldw-latest ||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016|| = azure-sqldw-latest ||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # sys.fn_helpcollations (Transact-SQL)
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW FabricSE FabricDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
   Returns a list of all supported collations.  
   
@@ -75,5 +75,4 @@ WHERE Name like 'L%' AND Description LIKE '% binary sort';
 
 [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   
 [COLLATIONPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/collation-functions-collationproperty-transact-sql.md)      
-[Collation and Unicode support](../../relational-databases/collations/collation-and-unicode-support.md)  
-[Database collation support for Azure Synapse Analytics](https://azure.microsoft.com/blog/database-collation-support-for-azure-sql-data-warehouse-2)  
+[Collation and Unicode support](../../relational-databases/collations/collation-and-unicode-support.md)

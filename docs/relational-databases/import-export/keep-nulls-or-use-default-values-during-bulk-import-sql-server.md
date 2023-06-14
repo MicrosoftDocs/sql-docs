@@ -20,7 +20,7 @@ helpviewer_keywords:
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Keep nulls or default values during bulk import (SQL Server)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 By default, when data is imported into a table, the [bcp](../../tools/bcp-utility.md) command and [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) statement observe any defaults that are defined for the columns in the table.  For example, if there is a null field in a data file, the default value for the column is loaded instead.  The [bcp](../../tools/bcp-utility.md) command and [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) statement both allow you to specify that nulls values be retained.
 

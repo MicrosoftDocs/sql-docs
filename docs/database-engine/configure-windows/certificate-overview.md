@@ -3,7 +3,7 @@ title: Transport Layer Security and digital certificates
 description: This article describes Transport Layer Security and digital certificates.
 author: sevend2
 ms.author: v-sidong
-ms.reviewer: ramakoni1, randolphwest
+ms.reviewer: sureshka, randolphwest
 ms.date: 12/08/2022
 ms.service: sql
 ms.subservice: configuration

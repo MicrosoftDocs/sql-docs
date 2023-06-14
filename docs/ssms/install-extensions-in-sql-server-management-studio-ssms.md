@@ -18,7 +18,7 @@ keywords:
 
 # Install Extensions in SQL Server Management Studio (SSMS)
 
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 SQL Server Management Studio (SSMS) extensions are created with C# through the "Visual Studio extension development" workload in Visual Studio. SSMS 18.x is built on the Visual Studio 2017 shell and is subject to the limitations of that environment.
 

@@ -2,7 +2,7 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 02/17/2023
+ms.date: 03/22/2023
 ms.topic: include
 ---
 | Error| Severity | Event logged | Description|
@@ -253,7 +253,7 @@ ms.topic: include
 | 5277 | 10 | No | Internal %lsdatabase snapshot has split point LSN = %08x:%08x:%04x and first LSN = %08x:%08x:%04x. |
 | 5278 | 10 | No | DBCC encountered a page with an LSN greater than the current end of log LSN %S_LSN for its internal database snapshot.  Could not read page %S_PGID, database '%.\*ls' (database ID %d), LSN = %S_LSN, type = %ld, isInSparseFile = %d.   Please re-run this DBCC command." |
 | 5279 | 16 | No | Table error: object ID %d, index ID %d, partition ID %I64d, database fragment ID %d. The row on page (%d:%d), slot ID %d should be on fragment ID %d but was found in fragment ID %d. |
-| 5280 | 16 | No | An unexpected protocol element was recevied during the execution of a consistency check command. Retry the operation. |
+| 5280 | 16 | No | An unexpected protocol element was received during the execution of a consistency check command. Retry the operation. |
 | 5281 | 10 | No | Estimated TEMPDB space (in KB) needed for %s on database %.\*ls = %I64d. |
 | 5282 | 16 | No | Table error: Object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls), page %S_PGID.  The header of the page is invalid: the IS_IN_SYSXACT flag bit is set. |
 | 5283 | 10 | No | The Cross Rowset check on nonclustered columnstore index object ID %d, index ID %d, partition number %d failed. Please rebuild the partition. |

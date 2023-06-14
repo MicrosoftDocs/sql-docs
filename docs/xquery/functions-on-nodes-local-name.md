@@ -14,7 +14,7 @@ dev_langs:
   - "XML"
 ---
 # Functions on Nodes - local-name
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   Returns the local part of the name of *$arg* as an xs:string that will either be the zero-length string or will have the lexical form of an xs:NCName. If the argument is not provided, the default is the context node.  
   

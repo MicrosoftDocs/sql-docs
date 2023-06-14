@@ -138,7 +138,7 @@ GO
 ```  
 --Test to see if sales_snapshot0600 exists and if it   
 -- does, delete it.  
-IF EXISTS (SELECT dbid FROM sys.databases  
+IF EXISTS (SELECT database_id FROM sys.databases  
     WHERE NAME='sales_snapshot0600')  
     DROP DATABASE SalesSnapshot0600;  
 GO  

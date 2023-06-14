@@ -44,7 +44,7 @@ After you create, modify, or delete a database, changes are visible in Azure por
 
 ## How to Leverage Azure Resource Graph to Query Data
 
-Here are some example scenarios showing how you use [Azure Resource Graph ](/azure/governance/resource-graph/overview)to query data which is available with the public preview of viewing Databases for Azure Arc-enabled SQL Server.
+Here are some example scenarios showing how you use [Azure Resource Graph ](/azure/governance/resource-graph/overview)to query data which is available with the release of viewing Databases for Azure Arc-enabled SQL Server.
 
 ### Scenario 1: Get 10 databases
 
@@ -140,6 +140,7 @@ Resources
 You can also [create charts and pin them to dashboards](/azure/governance/resource-graph/first-query-portal).
 
 ![Diagram of a pie chart that displays the query results for the count of databases by compatibility level.](media/view-databases/database-chart.png)
+
 
 
 ## Next steps

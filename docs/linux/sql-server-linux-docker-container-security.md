@@ -25,7 +25,7 @@ The examples in this article assume that you're using Docker, but you can apply 
 Follow these steps to build a [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] container that starts up as the `mssql` (non-root) user.
 
 > [!NOTE]  
-> [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] and later version containers automatically start up as non-root, so the following steps only apply to [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] containers, which start as root by default.
+> Containers for [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] and later versions automatically start up as non-root, while [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] containers start as root by default. For more information on running SQL Server containers as non-root, see [Configure security](sql-server-linux-docker-container-security.md).
 
 1. Download the [sample Dockerfile for non-root SQL Server containers](https://raw.githubusercontent.com/microsoft/mssql-docker/master/linux/preview/examples/mssql-server-linux-non-root/Dockerfile) and save it as `dockerfile`.
 
@@ -39,7 +39,7 @@ Follow these steps to build a [!INCLUDE [sssql17-md](../includes/sssql17-md.md)]
 1. Start the container.
 
    > [!IMPORTANT]  
-   > The `SA_PASSWORD` environment variable is deprecated. Please use `MSSQL_SA_PASSWORD` instead.
+   > The `SA_PASSWORD` environment variable is deprecated. Use `MSSQL_SA_PASSWORD` instead.
 
     ```bash
     docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=MyStrongPassword@" --cap-add SYS_PTRACE --name sql1 -p 1433:1433 -d 2017-latest-non-root

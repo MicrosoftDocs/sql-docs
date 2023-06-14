@@ -10,7 +10,7 @@ ms.topic: conceptual
 ---
 # DQS Knowledge Bases and Domains
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sqlserver.md)]
 
   This topic describes what a knowledge base is in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). To cleanse data, you have to have knowledge about the data. To prepare knowledge for a data quality project, you build and maintain a knowledge base (KB) that DQS can use to identify incorrect or invalid data. DQS enables you to use both computer-assisted and interactive processes to create, build, and update your knowledge base. Knowledge in a knowledge base is maintained in domains, each of which is specific to a data field. The knowledge base is a repository of knowledge about your data that enables you to understand your data and maintain its integrity.  
   
@@ -120,7 +120,7 @@ ms.topic: conceptual
   
 -   Analyzing the different single domains that make up a composite domain can be a more effective way of assessing data quality.  
   
--   When you use a composite domain, you can also create cross-domain rules that enable you to verify that the relationship between the data in multiple domains is appropriate. For example, you can verify that the string "London" in a city domain corresponds to the string "England" in a country/region domain. Note that cross-domain rules are taken into consideration after domain rules.  
+-   When you use a composite domain, you can also create cross-domain rules that enable you to verify that the relationship between the data in multiple domains is appropriate. For example, you can verify that the string "London" in a city domain corresponds to the string "Great Britain" in a country/region domain. Note that cross-domain rules are taken into consideration after domain rules.  
   
 -   Data in composite domains can be attached to a reference data source, in which case the composite domain will be sent to the reference data provider. This is often done with address data.  
   

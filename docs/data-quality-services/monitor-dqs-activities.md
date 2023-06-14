@@ -15,7 +15,7 @@ helpviewer_keywords:
 ---
 # Monitor DQS Activities
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to centrally monitor the following activities in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS): knowledge discovery, domain management, matching policy, data cleansing, data matching, and SSIS cleansing.  
   

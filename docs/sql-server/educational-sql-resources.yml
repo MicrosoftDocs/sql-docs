@@ -182,8 +182,8 @@ landingContent:
         url: ../linux/sql-server-linux-deploy-pacemaker-cluster.md
       - text: Create & configure availability group
         url: ../linux/sql-server-linux-create-availability-group.md
-      - text: Deploy on Kubernetes
-        url: ../linux/quickstart-sql-server-containers-kubernetes.md
+      - text: Deploy container cluster on Azure
+        url: ../linux/quickstart-sql-server-containers-azure.md
       - text: Configure replication
         url: ../linux/sql-server-linux-replication-tutorial-tsql.md
 

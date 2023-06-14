@@ -43,12 +43,12 @@ helpviewer_keywords:
   - "creating stored procedures"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 
 # CREATE PROCEDURE (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
 Creates a [!INCLUDE[tsql](../../includes/tsql-md.md)] or common language runtime (CLR) stored procedure in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Stored procedures are similar to procedures in other programming languages in that they can:
 
@@ -123,7 +123,7 @@ sql_statement [;] [ ... n ]
   | [ DELAYED_DURABILITY = { OFF | ON } ]
 ```
 
-Transact-SQL syntax for stored procedures in Azure Synapse Analytics and Parallel Data Warehouse:
+Transact-SQL syntax for stored procedures in Azure Synapse Analytics and Parallel Data Warehouse and [!INCLUDE [fabric](../../includes/fabric.md)]:
 
 ```syntaxsql
 CREATE { PROC | PROCEDURE } [ schema_name.] procedure_name

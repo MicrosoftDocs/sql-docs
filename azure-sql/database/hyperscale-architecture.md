@@ -7,6 +7,7 @@ ms.reviewer: wiassaf, mathoma
 ms.date: 2/17/2022
 ms.service: sql-database
 ms.subservice: service-overview
+ms.custom: build-2023, build-2023-dataai
 ms.topic: conceptual
 ---
 

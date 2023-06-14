@@ -13,7 +13,7 @@ dev_langs:
   - "XML"
 ---
 # General XQuery Use Cases
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   This topic provides general examples of XQuery use.  
   

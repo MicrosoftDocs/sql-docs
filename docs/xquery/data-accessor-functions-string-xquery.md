@@ -14,7 +14,7 @@ dev_langs:
   - "XML"
 ---
 # Data Accessor Functions - string (XQuery)
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   Returns the value of *$arg* represented as a string.  
   

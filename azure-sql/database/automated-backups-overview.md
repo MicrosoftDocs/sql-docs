@@ -9,11 +9,7 @@ ms.date: 09/14/2022
 ms.service: sql-database
 ms.subservice: backup-restore
 ms.topic: conceptual
-ms.custom:
-  - references_regions
-  - devx-track-azurepowershell
-  - devx-track-azurecli
-  - azure-sql-split
+ms.custom: references_regions, azure-sql-split
 monikerRange: "= azuresql || = azuresql-db"
 ---
 # Automated backups in Azure SQL Database
@@ -232,7 +228,10 @@ For pricing, see the [Azure SQL Database pricing](https://azure.microsoft.com/pr
 
 ### DTU model
 
-In the DTU model, there's no additional charge for backup storage for databases and elastic pools. The price of backup storage is a part of the database or pool price.
+In the DTU model, for databases and elastic pools there's no additional charge for PITR backup storage for default retention of 7 days and beyond. The price of PITR backup storage is a part of the database or pool price.
+
+> [!IMPORTANT]
+> In the DTU model, databases and elastic pools are charged for the [LTR backup](long-term-retention-overview.md) storage based on the actual storage consumed by LTR backups. 
 
 ### vCore model
 

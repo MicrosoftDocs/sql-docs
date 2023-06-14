@@ -14,10 +14,10 @@ helpviewer_keywords:
   - "RADIANS function"
 dev_langs:
   - "TSQL"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current||=fabric"
 ---
 # RADIANS (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
   Returns radians when a numeric expression, in degrees, is entered.  
   
@@ -33,10 +33,21 @@ RADIANS ( numeric_expression )
 
 ## Arguments
  *numeric_expression*  
- Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of the exact numeric or approximate numeric data type category, except for the **bit** data type.  
+ Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of the exact numeric or approximate numeric data type category.  
   
 ## Return Types  
- Returns the same type as *numeric_expression*.  
+The return type depends on the input type of *numeric_expression*:
+ 
+|Input type|Return type|  
+|----------|-----------|  
+|**float**, **real**|**float**|
+|**decimal(*p*, *s*)**|**decimal(38, *s*)**|
+|**int**, **smallint**, **tinyint**|**int**|
+|**bigint**|**bigint**|
+|**money**, **smallmoney**|**money**|
+|**bit**|**float**|
+
+If the result does not fit in the return type, an arithmetic overflow error occurs.
   
 ## Examples  
   

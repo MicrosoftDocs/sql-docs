@@ -7,10 +7,7 @@ ms.date: 05/16/2022
 ms.service: sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: quickstart
-ms.custom:
-  - subject-armqs
-  - devx-track-azurepowershell
-  - mode-arm
+ms.custom: subject-armqs, mode-arm, devx-track-bicep
 ---
 
 # Quickstart: Create an Azure SQL Managed Instance using Bicep

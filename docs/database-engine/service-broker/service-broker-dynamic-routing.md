@@ -28,11 +28,11 @@ To create a service for dynamic routing, create a service named **SQL/ServiceBro
 
 Requests for routes use the message type `https://schemas.microsoft.com/SQL/ServiceBroker/BrokerConfigurationNotice/MissingRoute`. The message is in XML format, and contains the name of the service for which routing information should be available.
 
-For example, the following message is a request for a route to the service http://Adventure-Works.com/Elsewhere:
+For example, the following message is a request for a route to the service https://Adventure-Works.com/Elsewhere:
 
 ```xml
-    <MissingRoute xmlns="http://schemas.microsoft.com/SQL/ServiceBroker/BrokerConfigurationNotice/MissingRoute">
-      <SERVICE_NAME>http://Adventure-Works.com/Elsewhere</SERVICE_NAME>
+    <MissingRoute xmlns="https://schemas.microsoft.com/SQL/ServiceBroker/BrokerConfigurationNotice/MissingRoute">
+      <SERVICE_NAME>https://Adventure-Works.com/Elsewhere</SERVICE_NAME>
     </MissingRoute>
 ```
 

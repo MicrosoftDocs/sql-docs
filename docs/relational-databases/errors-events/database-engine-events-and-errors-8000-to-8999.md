@@ -4,7 +4,7 @@ description: "Consult this SQL Server error code list (between 8000 and 8999) to
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 02/17/2023
+ms.date: 04/06/2023
 ms.service: sql
 ms.subservice: supportability
 ms.topic: reference
@@ -26,7 +26,7 @@ SELECT message_id AS Error,
         END,
     [text] AS [Description]
 FROM sys.messages
-WHERE language_id = 1040 /* replace 1040 with the desired language ID, such as 1033 for US English*/
+WHERE language_id = 1040 /* replace 1040 with the desired language ID, such as 1033 for US English */
 ORDER BY message_id;
 ```
 

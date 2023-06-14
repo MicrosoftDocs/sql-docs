@@ -2,8 +2,8 @@
 title: Unattended install for SQL Server on SUSE Linux Enterprise Server
 titleSuffix: SQL Server
 description: Use a sample bash script to install SQL Server on SUSE Linux Enterprise Server (SLES) without interactive input.
-author: VanMSFT
-ms.author: vanto
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: randolphwest
 ms.date: 05/20/2022
 ms.service: sql
@@ -33,6 +33,9 @@ This sample bash script installs [!INCLUDE [ssnoversion-md](../includes/ssnovers
 This example installs [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] on SLES v15 SP3. If you want to install a different version of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] or SLES, change the Microsoft repository paths accordingly.
 
 Save the sample script to a file and then to customize it. You'll need to replace the variable values in the script. You can also set any of the scripting variables as environment variables, as long as you remove them from the script file.
+
+> [!IMPORTANT]  
+> The `SA_PASSWORD` environment variable is deprecated. Use `MSSQL_SA_PASSWORD` instead.
 
 ```bash
 #!/bin/bash -e

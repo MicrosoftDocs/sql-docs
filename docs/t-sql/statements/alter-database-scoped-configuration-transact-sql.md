@@ -92,7 +92,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | XTP_PROCEDURE_EXECUTION_STATISTICS = { ON | OFF }
     | XTP_QUERY_EXECUTION_STATISTICS = { ON | OFF }
     | ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF }
-    | MEMORY_GRANT_FEEDBACK_PERCENTILE = { ON | OFF }
+    | MEMORY_GRANT_FEEDBACK_PERCENTILE_GRANT = { ON | OFF }
     | MEMORY_GRANT_FEEDBACK_PERSISTENCE = { ON | OFF }
     | BATCH_MODE_ON_ROWSTORE = { ON | OFF }
     | DEFERRED_COMPILATION_TV = { ON | OFF }
@@ -329,7 +329,7 @@ Allows you to enable or disable row mode memory grant feedback at the database s
 > [!NOTE]  
 > For database compatibility level 140 or lower, this database scoped configuration has no effect.
 
-#### MEMORY_GRANT_FEEDBACK_PERCENTILE = { ON | OFF }
+#### MEMORY_GRANT_FEEDBACK_PERCENTILE_GRANT = { ON | OFF }
 
 **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
 
@@ -680,7 +680,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = WHEN_SUPPORTED ;
 
 ### K. Clear a query plan from the plan cache
 
-**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 This example clears a specific plan from the procedure cache
 

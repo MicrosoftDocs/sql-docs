@@ -17,12 +17,12 @@ helpviewer_keywords:
   - "modifying database context"
 dev_langs:
   - "TSQL"
-monikerRange: ">= aps-pdw-2016 || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
+monikerRange: ">= aps-pdw-2016 || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current ||=fabric"
 ---
 # USE (Transact-SQL)
-[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
+[!INCLUDE [sql-asdbmi-pdw-fabricdw](../../includes/applies-to-version/sql-asdbmi-pdw-fabricdw.md)]
 
-  Changes the database context to the specified database or database snapshot in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Changes the database context to the specified database or database snapshot.  
   
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

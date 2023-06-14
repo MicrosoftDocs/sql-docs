@@ -19,14 +19,14 @@ Azure SQL Database is a relational database-as-a-service (DBaaS) in the Microsof
 
 > [!div class="checklist"]
 >
-> - Create a database using the Azure portal*
+> - Create a database using the Azure portal <sup>1</sup>
 > - Configure a server-level IP firewall rule using the Azure portal
 > - Connect to the database with Azure Data Studio
 > - Create tables with Azure Data Studio
 > - Bulk load data with BCP
 > - Query data with Azure Data Studio
 
-*If you don't have an Azure subscription, [create a free account](https://azure.microsoft.com/free/) before you begin.
+<sup>1</sup> If you don't have an Azure subscription, [create a free account](https://azure.microsoft.com/free/) before you begin.
 
 > [!TIP]
 > This free Learn module shows you how to [Develop and configure an ASP.NET application that queries an Azure SQL Database](/learn/modules/develop-app-that-queries-azure-sql/), including the creation of a simple database.
@@ -147,7 +147,7 @@ The following diagram shows how these tables are related to each other. Some of 
 
 ![Screenshot of Table relationships.](./media/design-first-database-tutorial/tutorial-database-tables.png)  
 
-1. In **Object Explorer**, Select *yourDatabase* which expands the dropdown menu of all processes stored in this database, right-Select the **Tables** folder, select **New Table**. A blank Table Designer opens that is connected to your database.
+1. In **Object Explorer**, Select *yourDatabase* which expands the dropdown menu of all processes stored in this database, right-click the **Tables** folder, select **New Table**. A blank Table Designer opens that is connected to your database.
 
 2. Use the Table Designer interface to create these four tables in your database. To learn more about creating tables using the Table Designer, refer to [the Table Designer documentation](/sql/azure-data-studio/overview-of-the-table-designer-in-azure-data-studio) :
 
@@ -194,7 +194,7 @@ The following diagram shows how these tables are related to each other. Some of 
 
 1. Create a folder called *sampleData* in your Downloads folder to store sample data for your database.
 
-2. Right-Select the following links and save them into the *sampleData* folder.
+2. Right-click the following links and save them into the *sampleData* folder.
 
    - [SampleCourseData](https://sqldbtutorial.blob.core.windows.net/tutorials/SampleCourseData)
    - [SamplePersonData](https://sqldbtutorial.blob.core.windows.net/tutorials/SamplePersonData)
@@ -218,7 +218,7 @@ You have now loaded sample data into the tables you created earlier.
 
 Execute the following queries to retrieve information from the database tables. See [Write SQL queries](/previous-versions/sql/sql-server-2005/express-administrator/bb264565(v=sql.90)) to learn more about writing SQL queries. The first query joins all four tables to find the students taught by 'Dominick Pope' who have a grade higher than 75%. The second query joins all four tables and finds the courses in which 'Noe Coleman' has ever enrolled.
 
-1. In the Azure Data Studio Object Explorer, right-Select on your server connection, then select *New Query* to open up the Query Window. Then, execute the queries below:
+1. In the Azure Data Studio Object Explorer, right-click on your server connection, then select *New Query* to open up the Query Window. Then, execute the queries below:
 
    ```sql
    -- Find the students taught by Dominick Pope who have a grade higher than 75%

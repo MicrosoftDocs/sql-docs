@@ -13,7 +13,7 @@ dev_langs:
   - "XML"
 ---
 # XQuery Basics
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   This section describes the fundamentals of XQuery.  
   

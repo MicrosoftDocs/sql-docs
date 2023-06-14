@@ -9,6 +9,7 @@ ms.service: sql
 ms.topic: conceptual
 ms.custom: references_regions
 ---
+
 # Prerequisites
 
 An Azure Arc-enabled instance of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is an instance on-premises or in a cloud provider that is connected to Azure Arc. This article explains those prerequisites.
@@ -17,9 +18,10 @@ An Azure Arc-enabled instance of [!INCLUDE [ssnoversion-md](../../includes/ssnov
 
 Before you can Arc-enable an instance of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], you need to:
 
-- Have an Azure account with an active subscription. If needed, [create a free Azure Account](https://azure.microsoft.com/free/)
+- Have an Azure account with an active subscription. If needed, [create a free Azure Account](https://azure.microsoft.com/free/).
 - Verify [Arc connected machine agent prerequisites](/azure/azure-arc/servers/prerequisites).  The Arc agent must be running in the typical 'full' mode.
-- Verify [Arc connected machine agent network requirements](/azure/azure-arc/servers/network-requirements)
+- Verify [Arc connected machine agent network requirements](/azure/azure-arc/servers/network-requirements).
+- Open firewall to [Azure Arc data processing service](#connect-to-azure-arc-data-processing-service).
 - Register resource providers. Specifically:
   - `Microsoft.AzureArcData`
   - `Microsoft.HybridCompute`
@@ -28,19 +30,51 @@ Before you can Arc-enable an instance of [!INCLUDE [ssnoversion-md](../../includ
 
 ### Permissions
 
-To [Connect SQL Servers on Azure Arc-enabled servers at scale using Azure policy](connect-at-scale-policy.md) for you to create an Azure Policy assignment, your subscription requires the `Resource Policy Contributor` role assignment for the scope that you're targeting. The scope may be either subscription or resource group. Further, if you are going to create a *new* system assigned managed identity, you need the `User Access Administrator` role assignment in the subscription.
+To [Connect SQL Servers on Azure Arc-enabled servers at scale using Azure policy](connect-at-scale-policy.md):
 
-For all the other onboarding methods, user or service principal must have permissions in the Azure resource group to complete the task. Specifically:
-- `Azure Connected Machine Onboarding` role
-- `Microsoft.AzureArcData/register/action`
-- `Microsoft.HybridCompute/machines/extensions/read`
-- `Microsoft.HybridCompute/machines/extensions/write`
+- The service principal requires read permission on the subscription.
+
+- The installation account requires:
+
+  - [`User Access Administrator`](/azure/role-based-access-control/built-in-roles#user-access-administrator) role assignment is required in the subscription if you are creating a *new* system assigned managed identity.
+  - [`Resource Policy Contributor`](/azure/role-based-access-control/built-in-roles#resource-policy-contributor) role assignment for the scope that you're targeting. The scope may be either subscription or resource group.
+
+For all the other onboarding methods:
+
+- The service principal requires read permission on the subscription.
+
+- User or service principal must have permissions in the Azure resource group to complete the task. Specifically:
+
+  - [`Azure Connected Machine Onboarding`](/azure/role-based-access-control/built-in-roles#azure-connected-machine-onboarding) role
+  - `Microsoft.AzureArcData/register/action`
+  - `Microsoft.HybridCompute/machines/extensions/read`
+  - `Microsoft.HybridCompute/machines/extensions/write`
 
 Users can be assigned to built-in roles that have these permissions, for example [Contributor](/azure/role-based-access-control/built-in-roles#contributor) or [Owner](/azure/role-based-access-control/built-in-roles#owner). For more information, see [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal).
 
 - Have local administrator permission on the operating system to install and configure the agent.
   - For Linux, use the root account.
   - For Windows, use an account that is a member of the Local Administrators group.
+
+### Connect to Azure Arc data processing service
+
+Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] requires outbound connection to Azure Arc data processing service. Each virtual or physical server requires connectivity to:
+
+- URL: `san-af-<region>-prod.azurewebsites.net`
+- Port: 443
+- Direction: Outbound
+
+To get the region segment of a regional endpoint, remove all spaces from the Azure region name. For example, *East US 2* region, the region name is `eastus2`.
+
+For example: `san-af-<region>-prod.azurewebsites.net` should be `san-af-eastus2-prod.azurewebsites.net` in the East US 2 region.
+
+For a list of supported regions, review [Supported Azure regions](overview.md#supported-azure-regions).
+
+For a list of all regions, run this command:
+
+```azcli
+az account list-locations -o table
+```
 
 ## Supported SQL Server versions and operating systems
 
@@ -97,10 +131,11 @@ az provider register --namespace 'Microsoft.HybridCompute'
 az provider register --namespace 'Microsoft.AzureArcData'
 ```
 
+
 ---
 ## Azure subscription and service limits
 
-The maximum number of resources in a resource group is 800, per resource type. This limitation applies to Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances and databases. Before configuring your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances and machines with Azure Arc, review the Azure Resource Manager [subscription limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#subscription-limits) and [resource group limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#resource-group-limits) to plan for the number of machines to be connected.
+Before configuring your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances and machines with Azure Arc, review the Azure Resource Manager [subscription limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#subscription-limits) and [resource group limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#resource-group-limits) to plan for the number of machines to be connected. 
 
 ## Supported regions
 
@@ -109,3 +144,5 @@ The maximum number of resources in a resource group is 800, per resource type. T
 ## Next steps
 
 - [Connect your SQL Server to Azure Arc](deployment-options.md)
+
+

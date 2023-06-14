@@ -4,7 +4,7 @@ description: This detailed guide explains available configuration options when d
 author: bluefooted
 ms.author: pamela
 ms.reviewer: mathoma
-ms.date: 12/21/2021
+ms.date: 03/27/2023
 ms.service: virtual-machines-sql
 ms.subservice: deployment
 ms.topic: how-to
@@ -41,7 +41,6 @@ To choose an image, follow these steps:
    ![Select SQL VM image](./media/create-sql-vm-portal/select-sql-vm-image-portal.png)
 
 1. Select **Create**.
-
 
 ## Basic settings
 
@@ -240,10 +239,10 @@ For more information, see [Automated Backup for SQL Server in Azure Virtual Mach
 
 ### Machine Learning Services
 
-You have the option to enable [Machine Learning Services](/sql/advanced-analytics/). This option lets you use machine learning with Python and R in SQL Server 2017. Select **Enable** on the **SQL Server Settings** window.
+You have the option to enable [Machine Learning Services](/sql/advanced-analytics/). This option lets you use machine learning with Python and R in SQL Server 2017. Select **Enable** on the **SQL Server Settings** window. Enabling this feature from the Azure portal after the SQL Server VM is deployed will trigger a restart of the SQL Server service. 
 
 
-## 4. Review + create
+## Review + create
 
 On the **Review + create** tab:
 1. Review the summary.
@@ -277,6 +276,12 @@ The following sections show how to connect over the internet to your SQL Server 
 
   > [!NOTE]
   > This example uses the common port 1433. However, this value will need to be modified if a different port (such as 1401) was specified during the deployment of the SQL Server VM. 
+
+## Known Issues
+
+### I am unable to change the SQL Binary files installation path
+
+SQL Server images from Azure Marketplace install the SQL Server binaries to the C drive. It is not currently possible to change this during deployment. The only available workaround is to manually uninstall SQL Server from within the VM, then reinstall SQL Server and choose a different location for the binary files during the installation process. 
 
 
 ## Next steps

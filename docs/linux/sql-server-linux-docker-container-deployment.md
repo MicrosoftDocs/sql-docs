@@ -22,7 +22,7 @@ For other deployment scenarios, see:
 
 - [Windows](../database-engine/install-windows/install-sql-server.md)
 - [Linux](sql-server-linux-setup.md)
-- [Kubernetes](quickstart-sql-server-containers-kubernetes.md)
+- [Container cluster on Azure](quickstart-sql-server-containers-azure.md)
 
 > [!NOTE]  
 > This article specifically focuses on using the `mssql-server-linux` image. SQL Server deployments in Windows containers are not covered by support. For development and testing, you can create your own custom container images to work with SQL Server in Windows containers. Sample files are available on [GitHub](https://github.com/microsoft/mssql-docker/blob/master/windows/mssql-server-windows-developer/dockerfile_1). Sample files are for reference only.
@@ -247,7 +247,7 @@ There are scenarios where you might not want to use the latest SQL Server contai
 1. To run a new container with that image, specify the tag name in the `docker run` command. In the following command, replace `<image_tag>` with the version you want to run.
 
    > [!IMPORTANT]  
-   > The `SA_PASSWORD` environment variable is deprecated. Please use `MSSQL_SA_PASSWORD` instead.
+   > The `SA_PASSWORD` environment variable is deprecated. Use `MSSQL_SA_PASSWORD` instead.
 
    ::: zone pivot="cs1-bash"
 
@@ -539,11 +539,9 @@ This updates the SQL Server image for any new containers you create, but it does
 ::: moniker-end
 
 - [Reference additional configuration and customization to Docker containers](sql-server-linux-docker-container-configure.md)
-
 - See the [mssql-docker GitHub repository](https://github.com/Microsoft/mssql-docker) for resources, feedback, and known issues
-
 - [Troubleshooting SQL Server Docker containers](sql-server-linux-docker-container-troubleshooting.md)
-
 - [Explore high availability for SQL Server containers](sql-server-linux-container-ha-overview.md)
-
 - [Secure SQL Server Docker containers](sql-server-linux-docker-container-security.md)
+
+[!INCLUDE [contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

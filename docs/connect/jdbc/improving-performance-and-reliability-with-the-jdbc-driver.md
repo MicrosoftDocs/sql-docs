@@ -3,7 +3,7 @@ title: Improving performance and reliability
 description: Learn about various techniques for improving application performance and reliability when using the Microsoft JDBC driver for SQL Server.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 01/12/2022
+ms.date: 05/19/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -21,6 +21,7 @@ The articles in this section describe various techniques for improving applicati
 
 |Article|Description|
 |-----------|-----------------|
+|[Understanding timeout properties](understand-timeouts.md)| Describes the timeouts used by the JDBC driver.|
 |[Closing objects when not in use](closing-objects-when-not-in-use.md)|Describes the importance of closing JDBC driver objects when they're no longer needed.|
 |[Managing transaction size](managing-transaction-size.md)|Describes techniques for improving transaction performance.|
 |[Working with statements and result sets](working-with-statements-and-result-sets.md)|Describes techniques for improving performance when using the Statement or ResultSet objects.|

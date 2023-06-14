@@ -2,8 +2,8 @@
 title: Unattended install for SQL Server on RHEL
 titleSuffix: SQL Server
 description: Use a sample bash script to install SQL Server on Red Hat Enterprise Linux (RHEL) without interactive input.
-author: VanMSFT
-ms.author: vanto
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: randolphwest
 ms.date: 05/20/2022
 ms.service: sql
@@ -32,7 +32,7 @@ This example installs [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] on RHEL
 Save the sample script to a file and then to customize it. You'll need to replace the variable values in the script. You can also set any of the scripting variables as environment variables, as long as you remove them from the script file.
 
 > [!IMPORTANT]  
-> The `SA_PASSWORD` environment variable is deprecated. Please use `MSSQL_SA_PASSWORD` instead.
+> The `SA_PASSWORD` environment variable is deprecated. Use `MSSQL_SA_PASSWORD` instead.
 
 ```bash
 #!/bin/bash -e

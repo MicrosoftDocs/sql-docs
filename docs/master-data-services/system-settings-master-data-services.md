@@ -13,7 +13,7 @@ helpviewer_keywords:
 ---
 # System Settings (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   For all web applications and web services associated with a [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database, you can configure system settings.  
   

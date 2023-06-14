@@ -27,7 +27,7 @@ Prepares a parameterized [!INCLUDE[tsql](../../includes/tsql-md.md)] statement a
   
 ## Syntax  
   
-```tsql
+```sql
 sp_prepare handle OUTPUT, params, stmt, options  
 ```  
   

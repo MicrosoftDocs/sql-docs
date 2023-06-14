@@ -1,5 +1,5 @@
 ---
-title: "External Scripts Enabled server configuration option"
+title: "External Scripts Enabled (server configuration option)"
 description: Learn about the external scripts enabled option in SQL Server. After turning it on, you can execute external scripts in supported languages such as R or Python.
 author: MikeRayMSFT
 ms.author: mikeray
@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "external scripts enabled option"
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
-# External Scripts Enabled server configuration option
+# External Scripts Enabled (server configuration option)
 [!INCLUDE [sqlserver2016-asdbmi](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 Use the **external scripts enabled** option to enable the execution of scripts with certain remote language extensions. This property is OFF by default. When **Machine Learning Services** is installed, setup can optionally set this property to true.

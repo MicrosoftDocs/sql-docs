@@ -20,7 +20,7 @@ f1_keywords:
 ## Prerequisites  
  You must have the following software installed on your computer to perform this walkthrough.  
   
-1.  [!INCLUDE[ssNoVersion ](../../includes/ssnoversion-md.md)] with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
 2.  [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md).  
   

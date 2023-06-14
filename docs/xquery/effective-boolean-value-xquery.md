@@ -16,7 +16,7 @@ dev_langs:
   - "XML"
 ---
 # Effective Boolean Value (XQuery)
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   These are the effective Boolean values:  
   

@@ -11,7 +11,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Columnstore indexes - Design guidance
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 High-level recommendations for designing columnstore indexes. A few good design decisions help you achieve the high data compression and query performance that columnstore indexes are designed to provide.
 
@@ -57,7 +57,8 @@ Consider using a clustered columnstore index when:
 
 Don't use a clustered columnstore index when:
 
-* The table requires varchar(max), nvarchar(max), or varbinary(max) data types. Or, design the columnstore index so that it doesn't include these columns.
+* The table requires **varchar(max)**, **nvarchar(max)**, or **varbinary(max)** data types. Or, design the columnstore index so that it doesn't include these columns (Applies to: [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] and previous versions).
+
 * The table data is not permanent. Consider using a heap or temporary table when you need to store and delete the data quickly.
 * The table has less than one million rows per partition. 
 * More than 10% of the operations on the table are updates and deletes. Large numbers of updates and deletes cause fragmentation. The fragmentation affects compression rates and query performance until you run an operation called reorganize that forces all data into the columnstore and removes fragmentation. For more information, see [Minimizing index fragmentation in columnstore index](/archive/blogs/sqlserverstorageengine/columnstore-index-defragmentation-using-reorganize-command).

@@ -16,7 +16,7 @@ dev_langs:
   - "XML"
 ---
 # Sequence and QNames (XQuery)
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   This topic describes the following fundamental concepts of XQuery:  
   

@@ -15,7 +15,7 @@ dev_langs:
   - "XML"
 ---
 # XQuery Operators Against the xml Data Type
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   XQuery supports the following operators:  
   

@@ -14,7 +14,7 @@ dev_langs:
   - "XML"
 ---
 # Arithmetic Expressions (XQuery)
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   All arithmetic operators are supported, except for **idiv**. The following examples illustrate the basic use of arithmetic operators:  
   

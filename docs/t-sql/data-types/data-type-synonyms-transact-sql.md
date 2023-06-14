@@ -13,9 +13,11 @@ helpviewer_keywords:
   - "synonyms [SQL Server], data types"
 dev_langs:
   - "TSQL"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # Data type synonyms (Transact-SQL)
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricdw.md)]
 
 Data type synonyms are included in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for ISO compatibility. The following table lists the synonyms and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system data types that they map to.
   

@@ -12,7 +12,7 @@ helpviewer_keywords:
 monikerRange: "= sql-server-2016"
 ---
 # SQL Server 2012 Release Notes
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 This Release Notes document describes known issues that you should read about before you install or troubleshoot [Microsoft SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=238647)). This Release Notes document is available online only, not on the installation media, and it is updated periodically.  
   
 For information about how to get started and install SQL Server 2012, see the SQL Server 2012 Readme. The Readme document is available on the installation media and from the [Readme](https://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) download page. You can also find more information in [SQL Server Books Online](/previous-versions/sql/sql-server-2012/ms130214(v=sql.110)) and on the [SQL Server Forums](https://go.microsoft.com/fwlink/?LinkId=213599).  

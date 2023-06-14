@@ -5,7 +5,7 @@ description: Learn about how Azure SQL Database, SQL Managed Instance, and Azure
 author: AndreasWolter
 ms.author: anwolter
 ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 01/20/2022
+ms.date: 05/19/2023
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
@@ -86,27 +86,33 @@ At this point, your server or managed instance is only configured for access usi
 - **In SQL Managed Instance, create SQL logins with full administrative permissions**
 
   - Create an additional SQL login in the `master` database.
-  - Add the login to the [sysadmin fixed server role](/sql/relational-databases/security/authentication-access/server-level-roles) using the [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql) statement. This login will have full administrative permissions.
+  - Add the login to the [sysadmin fixed server role](/sql/relational-databases/security/authentication-access/server-level-roles?view=azuresqldb-mi-current&preserve-view=true) using the [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql?view=azuresqldb-mi-current&preserve-view=true) statement. This login will have full administrative permissions.
   - Alternatively, create an [Azure AD login](authentication-aad-configure.md#provision-azure-ad-admin-sql-managed-instance) using the [CREATE LOGIN](/sql/t-sql/statements/create-login-transact-sql?view=azuresqldb-mi-current&preserve-view=true) syntax.
+
+  > [!NOTE]
+  > The `dbmanager` and `loginmanager` roles do **not** pertain to Azure SQL Managed Instance deployments.
 
 - **In SQL Database, create SQL logins with limited administrative permissions**
 
   - Create an additional SQL login in the `master` database.
-  - Add the Login to the `##MS_DatabaseManager##`, `##MS_LoginManager##` and `##MS_DatabaseConnector##` [server level roles](security-server-roles.md) using the [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql) statement.
+  - Add the Login to the `##MS_DatabaseManager##`, `##MS_LoginManager##` and `##MS_DatabaseConnector##` [server level roles](security-server-roles.md?view=azuresqldb-current&preserve-view=true) using the [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql?view=azuresqldb-current&preserve-view=true) statement.
 
-- **In Azure Synapse, create SQL logins with limited administrative permissions**
+  Members of [special `master` database roles](/sql/relational-databases/security/authentication-access/database-level-roles?view=azuresqldb-current&preserve-view=true#special-roles-for--and-azure-synapse) for Azure SQL Database have authority to create and manage databases or to create and manage logins. In databases created by a user that is a member of the `dbmanager` role, the member is mapped to the `db_owner` fixed database role and can log into and manage that database using the `dbo` user account. These roles have no explicit permissions outside of the `master` database.
+
+  > [!IMPORTANT]
+  > You can't create an additional SQL login with full administrative permissions in Azure SQL Database. Only the server admin account or the Azure Active Directory admin Account (which can be an Azure Active Directory Group) can add or remove other Logins to or from server roles. This is specific to Azure SQL Database.
+
+- **In Azure Synapse dedicated SQL pool, create SQL logins with limited administrative permissions**
 
   - Create an additional SQL login in the `master` database.
   - Create a user account in the `master` database associated with this new login.
-  - Add the user account to the `dbmanager`, the `loginmanager` role, or both in the `master` database using the [sp_addrolemember](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql) statement.
+  - Add the user account to the `dbmanager`, the `loginmanager` role, or both in the `master` database using the [sp_addrolemember](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql?view=azure-sqldw-latest&preserve-view=true) statement.
 
-  > [!NOTE]
-  > `dbmanager` and `loginmanager` roles do **not** pertain to SQL Managed Instance deployments.
+- **In Azure Synapse serverless SQL pool, create SQL logins with limited administrative permissions**
 
-  Members of these [special master database roles](/sql/relational-databases/security/authentication-access/database-level-roles#special-roles-for--and-) for Azure SQL Database have authority to create and manage databases or to create and manage logins. In databases created by a user that is a member of the `dbmanager` role, the member is mapped to the `db_owner` fixed database role and can log into and manage that database using the `dbo` user account. These roles have no explicit permissions outside of the `master` database.
-
-  > [!IMPORTANT]
-  > You can't create an additional SQL login with full administrative permissions in SQL Database.
+  - Create an additional SQL login in the `master` database.
+  - Add the SQL login to the [sysadmin fixed server role](/sql/relational-databases/security/authentication-access/server-level-roles?view=azure-sqldw-latest&preserve-view=true) using the [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql?view=azure-sqldw-latest&preserve-view=true) statement.
+  - Alternatively, create an [Azure AD login](authentication-aad-configure.md#provision-azure-ad-admin-sql-managed-instance) using the [CREATE LOGIN](/sql/t-sql/statements/create-login-transact-sql?view=azure-sqldw-latest&preserve-view=true) syntax.
 
 ## Create accounts for non-administrator users
 
@@ -148,8 +154,8 @@ After creating a user account in a database, either based on a login or as a con
 
   - To add a user to a fixed database role:
 
-    - In Azure SQL Database, use the [ALTER ROLE](/sql/t-sql/statements/alter-role-transact-sql) statement. For examples, see [ALTER ROLE examples](/sql/t-sql/statements/alter-role-transact-sql#examples)
-    - Azure Synapse, use the [sp_addrolemember](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql) statement. For examples, see [sp_addrolemember examples](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql#examples).
+    - In Azure SQL Database and Azure Synapse serverless SQL pool, use the [ALTER ROLE](/sql/t-sql/statements/alter-role-transact-sql?view=azuresqldb-current&preserve-view=true) statement. For examples, see [ALTER ROLE examples](/sql/t-sql/statements/alter-role-transact-sql?view=azuresqldb-current&preserve-view=true#examples)
+    - In Azure Synapse dedicated SQL pool, use the [sp_addrolemember](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql?view=azure-sqldw-latest&preserve-view=true) statement. For examples, see [sp_addrolemember examples](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql?view=azure-sqldw-latest&preserve-view=true#examples).
 
 - **Custom database role**
 

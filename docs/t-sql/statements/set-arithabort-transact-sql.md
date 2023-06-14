@@ -23,10 +23,10 @@ helpviewer_keywords:
   - "stopping queries"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # SET ARITHABORT (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
 Ends a query when an overflow or divide-by-zero error occurs during query execution.  
   
@@ -34,7 +34,7 @@ Ends a query when an overflow or divide-by-zero error occurs during query execut
   
 ## Syntax  
 
-### Syntax for [!INCLUDE[ssnoversion-md.md](../../includes/ssnoversion-md.md)] and [!INCLUDE[sssodfull-md.md](../../includes/sssodfull-md.md)]
+### Syntax for [!INCLUDE[ssnoversion-md.md](../../includes/ssnoversion-md.md)], [!INCLUDE[sssodfull-md.md](../../includes/sssodfull-md.md)], [!INCLUDE [fabric](../../includes/fabric.md)]
 ```syntaxsql
 SET ARITHABORT { ON | OFF }
 ```

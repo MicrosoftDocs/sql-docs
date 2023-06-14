@@ -18,7 +18,7 @@ helpviewer_keywords:
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016"
 ---
 # Troubleshoot orphaned users (SQL Server)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Orphaned users in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] occur when a database user is based on  a login in the **master** database, but the login no longer exists in **master**. This can occur when the login is deleted, or when the database is moved to another server where the login does not exist. This topic describes how to find orphaned users, and remap them to logins.  
   

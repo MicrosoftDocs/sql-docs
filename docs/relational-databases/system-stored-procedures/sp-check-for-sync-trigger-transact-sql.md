@@ -25,7 +25,7 @@ Determines whether a user-defined trigger or stored procedure is being called in
   
 ## Syntax  
   
-```tsql  
+```sql  
 sp_check_for_sync_trigger [ @tabid = ] 'tabid'   
     [ , [ @trigger_op = ] 'trigger_output_parameters' OUTPUT ]  
     [ , [ @fonpublisher = ] fonpublisher ]  

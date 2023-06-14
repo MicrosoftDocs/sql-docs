@@ -14,7 +14,7 @@ dev_langs:
   - "XML"
 ---
 # Aggregate Functions - count
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   Returns the number of items that are contained in the sequence specified by *$arg*.  
   

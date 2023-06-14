@@ -11,7 +11,7 @@ ms.custom: microsoft-excel-add-in
 ---
 # Master Data Services Add-in for Microsoft Excel
 
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 With the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]&nbsp;[!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], you can load filtered lists of data from Master Data Services (MDS) into Excel and then work with it just as you would any other data. When you are done, you can publish the data back to MDS where it's centrally stored. Security level determines which data you can view and update.  
   

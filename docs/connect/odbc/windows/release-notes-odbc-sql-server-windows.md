@@ -57,9 +57,6 @@ For the ARM64(Preview) driver: [Chinese (Simplified)](https://go.microsoft.com/f
 
 
 
-=================== DELETE ME  ==============================
-
-
 ## 17.10.4.1
 
 :::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2239168)  

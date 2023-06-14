@@ -80,7 +80,6 @@ Resources
 Resources
 |extend isEncrypted =properties.databaseOptions.isEncrypted
 |where type contains("microsoft.azurearcdata/sqlserverinstances/databases")
-|project name,isEncrypted
 |summarize count() by tostring(isEncrypted)
 | order by ['isEncrypted'] asc
 ```
@@ -111,7 +110,6 @@ Resources
 Resources
 |extend SQLversion =properties.version
 |where type contains("microsoft.azurearcdata/sqlserverinstances")
-|project name,SQLversion
 |summarize count() by tostring(SQLversion)
 ```
  

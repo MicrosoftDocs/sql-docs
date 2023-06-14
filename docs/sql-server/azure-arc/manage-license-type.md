@@ -140,7 +140,7 @@ Azure portal opens **SQL Server Configuration** for the server.
 
 #### Set license type
 
-Chose one of the license types. See [License types](#license-types) for descriptions.
+Choose one of the license types. See [License types](#license-types) for descriptions.
 
 #### Subscribe to Extended Security Updates
 

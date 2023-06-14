@@ -322,8 +322,6 @@ Clicking any screenshot image takes you to the exact time location in the video.
 #### 38. Resources for more information, 1:20:35
 [![Resources for more information][image-wtip-min12042-resources-more-info]](https://www.youtube.com/watch?v=jjNmcKBVjrc&t=4835)
 
-- [Blog post, May 22, 2017][resource-blog-saas-patterns-app-dev-sql-db-768h]
-
 - *Conceptual:* [Multi-tenant SaaS database tenancy patterns][saas-concept-design-patterns-563e]
 
 - *Tutorials:* [The Wingtip Tickets SaaS application][saas-how-welcome-wingtip-app-679t]
@@ -431,15 +429,10 @@ Clicking any screenshot image takes you to the exact time location in the video.
 
 [saas-how-welcome-wingtip-app-679t]: saas-tenancy-welcome-wingtip-tickets-app.md
 
-
 [video-on-youtube-com-478y]: https://www.youtube.com/watch?v=jjNmcKBVjrc&t=1
-
-[resource-blog-saas-patterns-app-dev-sql-db-768h]: https://azure.microsoft.com/blog/saas-patterns-accelerate-saas-application-development-on-sql-database/
-
 
 [github-wingtip-standaloneapp]: https://github.com/Microsoft/WingtipTicketsSaaS-StandaloneApp/
 
 [github-wingtip-dbpertenant]: https://github.com/Microsoft/WingtipTicketsSaaS-DbPerTenant/
 
 [github-wingtip-multitenantdb]: https://github.com/Microsoft/WingtipTicketsSaaS-MultiTenantDB/
-

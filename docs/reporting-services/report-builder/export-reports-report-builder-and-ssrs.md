@@ -40,7 +40,7 @@ Report pagination might be affected when you export a report to a different form
 
 1. On the ribbon, select **Export**.
 
-     :::image type="content" source="media/export-reports-report-builder-and-ssrs/ssrb-export.png" alt-text="Report Builder Export.":::
+     :::image type="content" source="media/export-reports-report-builder-and-ssrs/ssrb-export.png" alt-text="Screenshot showing the Export button in Report Builder.":::
 
 1. Select the format that you want to use.
 
@@ -54,7 +54,7 @@ Report pagination might be affected when you export a report to a different form
 
 1. On the Report Viewer toolbar, select the **Export** dropdown arrow.
 
-     :::image type="content" source="media/export-reports-report-builder-and-ssrs/ssrsportal-export.png" alt-text="Reporting Services web portal Export.":::
+     :::image type="content" source="media/export-reports-report-builder-and-ssrs/ssrsportal-export.png" alt-text="Screenshot showing the Reporting Services web portal Export dropdown.":::
 
 1. Select the format that you want to use.
 
@@ -86,7 +86,8 @@ Report pagination might be affected when you export a report to a different form
 
      Optionally, change the file name of the exported report.
 
-     **Note** If the program cannot open the report in the format that you chose because you do not have a program associated with this file type, you will be prompted to save the exported report or to find a program online to open the report.
+     > [!NOTE]
+     >  If the program cannot open the report in the format that you chose because you do not have a program associated with this file type, you will be prompted to save the exported report or to find a program online to open the report.
 
 ## <a id="RendererTypes"></a> Render extension types
 

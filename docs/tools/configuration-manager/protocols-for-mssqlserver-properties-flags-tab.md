@@ -33,7 +33,7 @@ monikerRange: ">=sql-server-2016"
 
 For more information, see "[Configure SQL Server Database Engine for encrypting connections](../../database-engine/configure-windows/configure-sql-server-encryption.md)" in Books Online.  
   
- **Force Strict Encryption** (Starting with [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)])
+ **Force Strict Encryption** (Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)])
  Force Strict Encryption. The option was added with TDS 8.0 in SQL Server Network Configuration forces all clients to use strict as the encryption type. Any clients or features without the strict connection encryption fail to connect to SQL Server.
  To enable Strict Encryption, you must [add a certificate](../../database-engine/configure-windows/configure-sql-server-encryption.md), where self generated certificate by SQL Server does not work, and your application must use a driver that support TDS 8.0.
  

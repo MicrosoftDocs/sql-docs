@@ -3,8 +3,8 @@ title: "sp_change_feed_enable_table (Transact-SQL)"
 description: "The sp_change_feed_enable_table system stored procedure enables the creation of a new Azure Synapse Link table to an existing Azure Synapse Link table group."
 author: IdrisMotiwala
 ms.author: imotiwala
-ms.reviewer: wiassaf
-ms.date: 02/03/2023
+ms.reviewer: wiassaf, randolphwest
+ms.date: 06/13/2023
 ms.service: synapse-analytics
 ms.topic: "reference"
 f1_keywords:
@@ -17,25 +17,26 @@ dev_langs:
 monikerRange: ">=sql-server-ver16 || =azuresqldb-current"
 ---
 # sp_change_feed_enable_table (Transact-SQL)
+
 [!INCLUDE [sqlserver2022-asdb](../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
 Stored procedure to enable the creation of a new [Azure Synapse Link for SQL](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview) table to an existing Azure Synapse Link table group. For more information, see [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md).
 
-> [!NOTE]
+> [!NOTE]  
 > This stored procedure is used internally and is not recommended for direct administrative use. Use Synapse Studio instead. Using this procedure will introduce inconsistency with Synapse Workspace configuration.
 
-## Syntax  
-   
- :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-```syntaxsql  
-EXECUTE sys.sp_change_feed_enable_table
-    @table_group_id,
-    @table_id,
-    @source_schema,
-    @source_name
-GO
-```  
+## Syntax
+
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+
+```syntaxsql
+sys.sp_change_feed_enable_table
+    @table_group_id
+    , @table_id
+    , @source_schema
+    , @source_name
+[ ; ]
+```
 
 ## Arguments
 
@@ -55,11 +56,11 @@ The source table schema name.
 
 The source table name.
 
-## Permissions  
+## Permissions
 
- Currently, a user with [CONTROL database permissions](../security/permissions-database-engine.md), db_owner database role membership, or sysadmin server role membership can execute this procedure.
+A user with [CONTROL database permissions](../security/permissions-database-engine.md), **db_owner** database role membership, or **sysadmin** server role membership can execute this procedure.
 
-## See also  
+## See also
 
 - [What is Azure Synapse Link for SQL?](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview)
 - [sp_change_feed_enable_db (Transact-SQL)](sp-change-feed-enable-db.md)

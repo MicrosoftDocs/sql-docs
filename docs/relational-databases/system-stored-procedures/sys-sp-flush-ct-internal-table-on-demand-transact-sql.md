@@ -4,7 +4,7 @@ description: "Manually clean the side table (change_tracking_objectid) for a tab
 author: JetterMcTedder
 ms.author: bspendolini
 ms.reviewer: randolphwest
-ms.date: 11/28/2022
+ms.date: 06/13/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -30,19 +30,21 @@ This stored procedure allows you to manually clean the side table (`change_track
 ## Syntax
 
 ```syntaxsql
-sys.sp_flush_CT_internal_table_on_demand  [@TableToClean = ] 'TableToClean'
-[ , [@DeletedRowCount = ] DeletedRowCount OUTPUT ]
+sys.sp_flush_CT_internal_table_on_demand
+    [ @TableToClean = ] 'TableToClean'
+    [ , [ @DeletedRowCount = ] DeletedRowCount OUTPUT ]
+[ ; ]
 ```
 
 ## Arguments
 
-#### [ *@TableToClean* = ] '*TableToClean*'
+#### [ @TableToClean = ] '*TableToClean*'
 
 The change tracking-enabled table to be manually cleaned up. The backlogs are left for the automatic cleanup by change tracking. Can be null to clean up all side tables.
 
 ## Return code values
 
-`0` (success) or `1` (failure)
+`0` (success) or `1` (failure).
 
 ## Example
 
@@ -86,12 +88,12 @@ This stored procedure is available in the following products:
 
 ## Permissions
 
- Only a member of the **sysadmin** server role or **db_owner** database role can execute this procedure.
+Only a member of the **sysadmin** server role or **db_owner** database role can execute this procedure.
 
 ## See also
 
 - [About Change Tracking (Transact-SQL)](../../relational-databases/track-changes/about-change-tracking-sql-server.md)
 - [Change Tracking Cleanup and Troubleshooting (Transact-SQL)](../../relational-databases/track-changes/cleanup-and-troubleshoot-change-tracking-sql-server.md)
-- [Change Tracking Functions (Transact-SQL)](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)
-- [Change Tracking System Tables (Transact-SQL)](../../relational-databases/system-tables/change-tracking-tables-transact-sql.md)
-- [Change Tracking Stored Procedures (Transact-SQL)](../../relational-databases/system-stored-procedures/change-tracking-stored-procedures-transact-sql.md)
+- [Change Tracking Functions (Transact-SQL)](../system-functions/change-tracking-functions-transact-sql.md)
+- [Change Tracking System Tables (Transact-SQL)](../system-tables/change-tracking-tables-transact-sql.md)
+- [Change Tracking stored procedures (Transact-SQL)](change-tracking-stored-procedures-transact-sql.md)

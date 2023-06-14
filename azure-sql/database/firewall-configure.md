@@ -33,7 +33,7 @@ Connection attempts from the internet and Azure must pass through the firewall b
 
 ### Server-level IP firewall rules
 
-These rules enable clients to access your entire server, that is, all the databases managed by the server. The rules are stored in the *master* database. The default value is up to 256 server-level IP firewall rules for a server. If you have the **Allow Azure Services and resources to access this server** setting enabled, this counts as a single firewall rule for the server.
+These rules enable clients to access your entire server, that is, all the databases managed by the server. The rules are stored in the *master* database. The maximum number of server-level IP firewall rules is limited to 128 for a server. If you have the **Allow Azure Services and resources to access this server** setting enabled, this counts as a single firewall rule for the server.
   
 You can configure server-level IP firewall rules by using the Azure portal, PowerShell, or Transact-SQL statements.
 

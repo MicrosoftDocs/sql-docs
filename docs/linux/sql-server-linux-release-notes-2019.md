@@ -44,10 +44,10 @@ This section lists the latest versions of each package per distribution, for [!I
 | **Red Hat Enterprise Linux** | | | |
 | RHEL 8 | Database Engine | 15.0.4316.3-2 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/Packages/m/mssql-server-15.0.4316.3-2.x86_64.rpm) |
 | RHEL 8 | Extensibility | 15.0.4316.3-2 | [Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/Packages/m/mssql-server-extensibility-15.0.4316.3-2.x86_64.rpm) |
-| RHEL 8 | Full-Text Search | 15.0.4312.2-1 | [Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/Packages/m/mssql-server-fts-15.0.4312.2-1.x86_64.rpm) |
-| RHEL 8 | High Availability | 15.0.4312.2-1 | [High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/Packages/m/mssql-server-ha-15.0.4312.2-1.x86_64.rpm) |
+| RHEL 8 | Full-Text Search | 15.0.4316.3-2 | [Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/Packages/m/mssql-server-fts-15.0.4316.3-2.x86_64.rpm) |
+| RHEL 8 | High Availability | 15.0.4316.3-2 | [High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/Packages/m/mssql-server-ha-15.0.4316.3-2.x86_64.rpm) |
 | RHEL 8 | Java Extensibility | 15.0.4316.3-2 | [Java Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/Packages/m/mssql-server-extensibility-java-15.0.4316.3-2.x86_64.rpm) |
-| RHEL 8 | PolyBase | 15.0.4312.2-1 | [PolyBase RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/Packages/m/mssql-server-polybase-15.0.4312.2-1.x86_64.rpm) |
+| RHEL 8 | PolyBase | 15.0.4316.3-2 | [PolyBase RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/Packages/m/mssql-server-polybase-15.0.4316.3-2.x86_64.rpm) |
 | RHEL 8 | SSIS | 15.0.4063.15-88 | [SSIS RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/Packages/m/mssql-server-is-15.0.4063.15-88.x86_64.rpm) |
 | **SUSE Enterprise Linux Server** | | | |
 | SLES 15 | Database Engine | 15.0.4316.3-2 | [Database Engine RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/Packages/m/mssql-server-15.0.4316.3-2.x86_64.rpm) |

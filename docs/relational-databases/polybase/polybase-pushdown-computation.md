@@ -177,6 +177,7 @@ The following T-SQL functions or syntax will prevent pushdown computation:
 - `RAND`
 - `CHECKSUM`
 - `BINARY_CHECKSUM`
+- `HASHBYTES`
 - `ISJSON`
 - `JSON_VALUE`
 - `JSON_QUERY`

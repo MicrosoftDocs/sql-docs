@@ -54,7 +54,7 @@ This article provides instructions for using best practices assessment on an ins
     - `global.handler.control.monitor.azure.com`
     - `*.handler.control.monitor.azure.com`
     - `<log-analytics-workspace-id>.ods.opinsights.azure.com`
-    - `<*.ingest.monitor.azure.com`
+    - `*.ingest.monitor.azure.com`
 
 - Your SQL Server instance must have the [TCP/IP protocol enabled](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
 

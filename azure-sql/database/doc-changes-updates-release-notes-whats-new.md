@@ -5,7 +5,7 @@ description: Learn about the new features and documentation improvements for Azu
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 05/25/2023
+ms.date: 06/13/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -88,6 +88,12 @@ The following table lists the new generally available (GA) features of Azure SQL
 
 Learn about significant changes to the Azure SQL Database documentation. For previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md). 
 
+
+### June 2023
+
+| Changes | Details |
+| --- | --- |
+| **64 vCore option for Hyperscale premium** | A 64 vCore option is now available for [Azure SQL Database Hyperscale premium-series](resource-limits-vcore-single-databases.md#hyperscale---premium-series) and [Hyperscale premium-series memory optimized](resource-limits-vcore-single-databases.md#hyperscale---premium-series-memory-optimized).|
 
 ### May 2023
 

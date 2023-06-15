@@ -95,7 +95,7 @@ For more information, see [Tables, Matrices, and Lists (Report Builder and SSRS)
 
 ## <a id="RenderingModes"></a> Renderer Modes
 
-The CSV rendering extension can operate in two modes: one is optimized for Excel and the other is optimized for third-party applications that require strict CSV compliance to the CSV specification in RFC 4180. Depending on which mode you use, peer data regions are handled differently.
+The CSV rendering extension can operate in two modes: one is optimized for Excel and the other is optimized for third-party applications that require strict CSV compliance with the CSV specification in RFC 4180. Depending on which mode you use, peer data regions are handled differently.
 
 ### Default Mode
 

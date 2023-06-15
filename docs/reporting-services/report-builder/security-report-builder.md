@@ -95,7 +95,7 @@ For more information about data sources, see [Create data connection strings - R
 
 ## <a id="Models"></a> Understand Models and Security Filters
 
-When data is retrieved from a report model that is based on external data, you can apply security filters in the model  This is a good way to secure data so that each user who runs a report can see only the data that they have permissions to.
+When data is retrieved from a report model that is based on external data, you can apply security filters in the model. This is a good way to secure data so that each user who runs a report can see only the data that they have permissions to.
 
 Report parameters are not used for row-level security; they do not prevent users or groups of users from seeing specific rows of data. To apply security to the data displayed within a report, you must use security filters or model item security.
 

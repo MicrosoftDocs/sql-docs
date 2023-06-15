@@ -50,7 +50,7 @@ Reports that you view in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversi
 | PDF | The report server exports the current show or hide state of the report to PDF. Interactive toggling is not supported |
 | Excel | Drilldown links and items that can be toggled are rendered as collapsible outlines in Excel. You can expand and collapse sections of the report in Excel. For more information about Excel-imposed limitations, see [Exporting to Microsoft Excel (Report Builder and SSRS)](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md). |
 | Word | The report server exports the current show or hide state of the report to PDF. Interactive toggling is not supported |
-| Other | Not available in MHTML, XML, or CSV. When exporting to an Image format, the report server exports the current show or hide stated of the report to PDF. Interactive toggling is not supported. |
+| Other | Not available in MHTML, XML, or CSV. When you export to an Image format, the report server exports the current show or hide stated of the report to PDF. Interactive toggling is not supported. |
 
 ### Interactive sorting
 
@@ -79,7 +79,7 @@ Reports that you view in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversi
 | Preview/Report Viewer, HTML | Users select links to navigate to another section of the same report. |
 | PDF | Not available in PDF. |
 | Excel | Bookmarks are rendered in Excel.<br /><br />The bookmark becomes a hyperlink pointing to the name of the report item. |
-| Word | Bookmarks are rendered in Word.<br /><br />The bookmark becomes a hyperlink pointing to the bookmarked report item. Only 40 characters of a bookmark or anchor name is converted when the report is exported which can lead to duplicate bookmark or anchor names. Spaces are converted to underscores (_). |
+| Word | Bookmarks are rendered in Word.<br /><br />The bookmark becomes a hyperlink pointing to the bookmarked report item. Only 40 characters of a bookmark or anchor name are converted when the report is exported, which can lead to duplicate bookmark or anchor names. Spaces are converted to underscores (_). |
 | Other | Not available in XML, CSV, or Image. |
 
 ### Prompted parameters obtained at run time

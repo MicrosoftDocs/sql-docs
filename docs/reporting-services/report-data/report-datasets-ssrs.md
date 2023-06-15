@@ -24,7 +24,7 @@ ms.custom: updatefrequency5
   
      The following illustration shows Shared Dataset Design view in Report Builder. You can select or modify the data connection, the dataset properties, the query, filters, and optionally mark filters as parameters, and view the query results. You then save the changes back to the server or site.  
   
-     ![rs_SharedDatasetDesignMode](../../reporting-services/report-builder/media/rs-shareddatasetdesignmode.gif "rs_SharedDatasetDesignMode")  
+    :::image type="content" source="../report-builder/media/shared-dataset-design-view-report-builder/rs-shared-dataset-design-mode.gif" alt-text="Screenshot of Shared Dataset Design Mode.":::
   
  For more information, see [Embedded and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md) and [Embedded and Shared Data Connections or Data Sources &#40;Report Builder and SSRS&#41;](./data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   

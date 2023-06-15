@@ -20,12 +20,12 @@ f1_keywords:
 ## UI element list
 
 **Use this report server or SharePoint site by default**  
-Your administrator may have configured this. The value can be a well-formed URL starting with http:// or https://. This setting determines which data source connections appear by default in the Table/Matrix and Chart wizards. In addition, your reports will be processed on this server and you can reference resources from this server.
+Your administrator may have configured this setting. The value can be a well-formed URL starting with http:// or https://. This setting determines which data source connections appear by default in the Table/Matrix and Chart wizards. In addition, your reports are processed on this server and you can reference resources from this server.
 
-If you select a different report server, you may need to restart Report Builder in order for this change to take affect.
+If you select a different report server, you may need to restart Report Builder in order for this change to take effect.
 
 **Publish report parts to this folder by default**  
-Report Builder will save report parts that you publish to this folder. If the folder does not exist yet and you have permissions to create folders on the report server, Report Builder will create this folder.
+Report Builder saves report parts that you publish to this folder. If the folder does not exist yet and you have permissions to create folders on the report server, Report Builder creates this folder.
 
 You do not need to restart Report Builder for this setting to take effect.
 

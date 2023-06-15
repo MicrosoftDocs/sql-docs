@@ -9,7 +9,7 @@ ms.subservice: report-builder
 ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
-# Rendere to HTML (Report Builder and SSRS)
+# Rendering to HTML (Report Builder and SSRS)
 
   The HTML rendering extension renders a paginated report in HTML format. The rendering extension can also produce fully formed HTML pages or fragments of HTML to embed in other HTML pages. All HTML is generated with UTF-8 encoding.
 
@@ -22,7 +22,7 @@ For more information about browsers, see [Browser Support for Reporting Services
 > [!NOTE]  
 > [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
 
-## <a id="RenderingMHTML"></a> Rendere in MHTML
+## <a id="RenderingMHTML"></a> Rendering in MHTML
 
 The HTML rendering extension can also render reports in MHTML (MIME Encapsulation of Aggregate HTML Documents). MHTML extends HTML to embed encoded objects, such as images, in the HTML document. Using the MHTML rendering extension, you can embed resources such as images, documents, or other binary files as MIME structures within the report HTML, into a single file. MHTML reports are also useful for embedding within e-mail messages because all resources are included with the report. Although it's actually the HTML rendering extension that renders MHTML, this functionality may also be referred to as the MHTML rendering extension.
 

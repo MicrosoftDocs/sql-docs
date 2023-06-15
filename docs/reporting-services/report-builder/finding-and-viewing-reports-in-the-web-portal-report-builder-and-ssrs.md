@@ -33,7 +33,7 @@ Use the following techniques to navigate through a folder hierarchy:
 
 - To navigate up through the folder hierarchy, in the row of links at the top of the page, select the name of the folder whose contents you want to see. **(1)** in the above image.
 
-## Opene a Report
+## Open a Report
 
 After you find a report, select the report name to open it. The report is rendered in HTML and appears in the Contents page in Report Manager. Reports are always cached by the browser session, so if you open a report, you can usually return to it by selecting the **Back** button. This is true even if you were required to supply a user name and password to run the report. You can't fully close a rendered report until you close the browser.
 

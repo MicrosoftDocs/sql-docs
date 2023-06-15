@@ -156,7 +156,7 @@ The Grouping pane is displayed by default but you can close it by clearing the G
 
 For more information, see [Grouping Pane (Report Builder)](../../reporting-services/report-design/grouping-pane-report-builder.md) and [Understanding Groups (Report Builder and SSRS)](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).
 
-## <a id="RunMode"></a> Previewe Your Report in Run Mode
+## <a id="RunMode"></a> Preview Your Report in Run Mode
 
 In report design view, you are not working with the actual data but a representation of the data indicated by the field name or expression. When you want to see the actual data displayed in the context of the report that you designed, you can run the report to preview the data from the underlying database displayed in the report layout. Switching between designing and running your report allows you to adjust its design and see the results immediately. To preview your report, select **Run** in the **Views** group on the ribbon.
 

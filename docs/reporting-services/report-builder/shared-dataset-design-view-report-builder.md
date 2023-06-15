@@ -13,7 +13,7 @@ ms.custom: updatefrequency5
 
   In a report, a dataset represents report data that is returned from running a query on an external data source. Shared datasets are published on a report server and can be used by multiple reports. You can  create datasets to share with others. In the Shared Dataset Design window,  you select a shared data source, specify properties for the shared dataset, and create a query in the query designer.
 
-:::image type="content" source="media/shared-dataset-design-view-report-builder/rs-shareddatasetdesignmode.gif" alt-text="Rs_SharedDatasetDesignMode.":::
+:::image type="content" source="media/shared-dataset-design-view-report-builder/rs-shared-dataset-design-mode.gif" alt-text="Screenshot of Reporting Services Shared Dataset Design Mode.":::
 
 For more information about working with data in a report, see [Report Datasets (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md).
 

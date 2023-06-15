@@ -1,5 +1,5 @@
 ---
-title: "Previewing Reports in Report Builder"
+title: "Preview Reports in Report Builder"
 description: While you create a Reporting Services paginated report, you can preview the report to verify that the report displays what you want.
 author: maggiesMSFT
 ms.author: maggies
@@ -9,7 +9,7 @@ ms.subservice: report-builder
 ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
-# Previewe Reports in Report Builder
+# Preview Reports in Report Builder
 
   While you create a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated report, it is helpful to preview the report often to verify that the report displays what you want. To preview your report, select **Run**. The report renders in preview mode.
 

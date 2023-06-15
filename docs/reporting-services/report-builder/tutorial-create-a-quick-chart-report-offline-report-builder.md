@@ -53,7 +53,7 @@ The [!INCLUDE[tsql](../../includes/tsql-md.md)] query does require a few other p
 
      The **Getting Started** dialog box appears.
 
-     :::image type="content" source="C:/Users/maggies/Documents/GitHub/sql-docs-pr/docs/reporting-services/media/tutorial-create-a-quick-chart-report-offline-report-builder/rb-getstarted.png" alt-text="Report Builder Get Started.":::
+     :::image type="content" source="/media/tutorial-create-a-quick-chart-report-offline-report-builder/report-builder-get-started.png" alt-text="Report Builder Get Started dialog box.":::
 
      If the **Getting Started** dialog box does not appear, select **File** >**New**. The **New Report or Dataset** dialog box has most of the same contents as the **Getting Started** dialog box.
 

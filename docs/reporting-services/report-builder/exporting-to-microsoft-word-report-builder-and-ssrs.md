@@ -100,7 +100,7 @@ The report contents are rendered based on how they are currently sorted within t
 
 ### Bookmarks
 
-Bookmarks in the report are rendered as Word bookmarks. Bookmark links are rendered as hyperlinks that connect to the bookmark labels within the document. Bookmark labels must be less than 40 characters long. The only special character that can be used in a bookmark label is an underscore (_). Unsupported special characters are stripped from the bookmark label name and, if the name is longer than 40 characters, the name is truncated. If there are duplicate bookmark names in the report, the bookmarks are not rendered in Word.
+Bookmarks in the report are rendered as Word bookmarks. Bookmark links are rendered as hyperlinks that connect to the bookmark labels within the document. Bookmark labels must be fewer than 40 characters long. The only special character that can be used in a bookmark label is an underscore (_). Unsupported special characters are stripped from the bookmark label name and, if the name is longer than 40 characters, the name is truncated. If there are duplicate bookmark names in the report, the bookmarks are not rendered in Word.
 
 ## <a id="WordStyleRendering"></a> Word Style Rendering
 

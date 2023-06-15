@@ -10,4 +10,4 @@ ms.topic: include
 ---
 
 Version: 18.2.2.1  
-Date: June 15th 2023  
+Date: June 15, 2023  

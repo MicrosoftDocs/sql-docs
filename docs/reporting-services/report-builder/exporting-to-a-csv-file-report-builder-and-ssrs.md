@@ -107,7 +107,7 @@ The default mode is optimized for Excel. When rendered in default mode, the repo
 
 - Nested data regions are rendered diagonally into the same data block.
 
-#### Formatting
+#### Format
 
 Numeric values are rendered in their formatted state. Excel can recognize formatted numeric values, such as currency, percentage and date, and format the cells appropriately when importing the CSV file.
 
@@ -119,7 +119,7 @@ Compliant mode is optimized for third-party applications.
 
 Only the first row of the file contains the column headers and each row has the same number of columns.
 
-#### Formatting
+#### Format
 
 Values are unformatted.
 

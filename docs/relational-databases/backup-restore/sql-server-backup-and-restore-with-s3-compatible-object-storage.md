@@ -48,6 +48,7 @@ The following table provides a nonexhaustive summary of object storage providers
 | [MinIO][minio_webs]             | Multicloud Object Storage               |
 | [NetApp][netapp_webs]           | StorageGRID<br />ONTAP                     |
 | [Nutanix][nutanix_webs]         | Nutanix Object Storage                   |
+| [OVHcloud][ovh_webs]            | OVHcloud Object Storage                   |
 | [Pure Storage][pure_webs]       | Pure FlashBlade                          |
 | [Red Hat][redhat_webs]          | OpenShift Container Storage              |
 | [Scality][scality_webs]         | Scality Artesca                          |
@@ -116,6 +117,8 @@ Due to the current limitation of S3 Standard REST API, the temporary uncommitted
 [nutanix_docs]: https://portal.nutanix.com/page/documents/details?targetId=Objects-v3_3:Objects-v3_3
 [nutanix_sheet]: https://www.nutanix.com/viewer?type=pdf&path=/content/dam/nutanix/resources/datasheets/ds-objects.pdf&icid=107JORGDJNAA3
 [nutanix_webs]: https://www.nutanix.com/products/objects
+
+[ovh_webs]: https://us.ovhcloud.com/public-cloud/object-storage/
 
 [pure_docs]:  https://support.purestorage.com/FlashBlade/Purity_FB/PurityFB_REST_API/S3_Object_Store_REST_API/FlashBlade_S3_Object_Store_Documentation
 [pure_sheet]: https://www.purestorage.com/content/dam/pdf/en/technical-briefs/tb-pure-flashblade-uffo.pdf

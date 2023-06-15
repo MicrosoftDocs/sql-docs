@@ -93,7 +93,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 <sup>3</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
-<sup>4</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+<sup>4</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 ### <a id="gen5-hardware-part-2-1"></a>General Purpose Serverless Standard-series (Gen5) compute (part 2 of 3)
 
@@ -126,7 +126,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
-<sup>3</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+<sup>3</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 ### <a id="gen5-hardware-part-3-1"></a>General Purpose Standard-series Serverless (Gen5) compute (part 3 of 3)
 
@@ -161,7 +161,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 <sup>3</sup> For specific regions where 80 vCores in serverless is available, see [Available regions](serverless-tier-overview.md#available-regions).
 
-<sup>4</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+<sup>4</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 ## Hyperscale - serverless compute - Gen 5
 
@@ -193,7 +193,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 | Backup storage retention | 7 days | 7 days | 7 days | 7 days | 7 days | 7 days | 7 days |
 
 <sup>1</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. Review [Hyperscale service tier](service-tier-hyperscale.md#distributed-functions-architecture) for more information.   
-<sup>2</sup> Besides local SSD IO, workloads will use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS will depend on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).   
+<sup>2</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS depends on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).   
 <sup>3</sup> Latency is 1-2 ms for data on local compute replica SSD, which caches most used data pages. Higher latency for data retrieved from page servers. 
 
 
@@ -224,7 +224,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 | Backup storage retention | 7 days | 7 days | 7 days | 7 days | 7 days | 7 days | 7 days |
 
 <sup>1</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. Review [Hyperscale service tier](service-tier-hyperscale.md#distributed-functions-architecture) for more information.   
-<sup>2</sup> Besides local SSD IO, workloads will use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS will depend on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).   
+<sup>2</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS depends on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).   
 <sup>3</sup> Latency is 1-2 ms for data on local compute replica SSD, which caches most used data pages. Higher latency for data retrieved from page servers. 
 
 ## <a id="hyperscale---provisioned-compute---gen5"></a>Hyperscale - provisioned compute - standard-series (Gen5)
@@ -257,13 +257,13 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Read Scale-out|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |Backup storage retention|7 days|7 days|7 days|7 days|7 days|7 days|7 days|
 
-<sup>1</sup> Besides local SSD IO, workloads will use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS will depend on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
+<sup>1</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS depends on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
 
 <sup>2</sup> Latency numbers are approximate and representative for typical workloads at steady state, but are not guaranteed. 
 
 <sup>3</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. For more information, see [Hyperscale service tier architecture](hyperscale-architecture.md).
 
-<sup>4</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+<sup>4</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 ### <a id="gen5-hardware-part-2-2"></a>Hyperscale Standard-series (Gen5) compute generation (part 2 of 2)
 
@@ -293,13 +293,13 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Read Scale-out|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |Backup storage retention|7 days|7 days|7 days|7 days|7 days|7 days|7 days|
 
-<sup>1</sup> Besides local SSD IO, workloads will use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS will depend on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
+<sup>1</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS depends on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
 
 <sup>2</sup> Latency numbers are representative for typical workloads at steady state, but are not guaranteed. 
 
 <sup>3</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. For more information, see [Hyperscale service tier architecture](hyperscale-architecture.md).
 
-<sup>4</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+<sup>4</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 ## Hyperscale - provisioned compute - DC-series
 
@@ -329,13 +329,13 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Read Scale-out|Yes|Yes|Yes|Yes|
 |Backup storage retention|7 days|7 days|7 days|7 days|
 
-<sup>1</sup> Besides local SSD IO, workloads will use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS will depend on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
+<sup>1</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS depends on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
 
 <sup>2</sup> Latency numbers are representative for typical workloads at steady state, but are not guaranteed. 
 
 <sup>3</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. For more information, see [Hyperscale service tier architecture](hyperscale-architecture.md).
 
-<sup>4</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+<sup>4</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 ## Hyperscale - Premium-series
 
@@ -368,13 +368,13 @@ SLOs in the Hyperscale premium-series tier use the naming convention `HS_PRMS_` 
 |Read Scale-out|Yes|Yes|Yes|Yes|Yes|
 |Backup storage retention|7 days|7 days|7 days|7 days|7 days|
 
-<sup>1</sup> Besides local SSD IO, workloads will use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS will depend on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
+<sup>1</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS depends on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
 
 <sup>2</sup> Latency numbers are representative for typical workloads at steady state, but are not guaranteed. 
 
 <sup>3</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. For more information, see [Hyperscale service tier architecture](hyperscale-architecture.md).
 
-<sup>4</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+<sup>4</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 
 ### Hyperscale - Premium-series (part 2 of 3)
@@ -406,13 +406,13 @@ SLOs in the Hyperscale premium-series tier use the naming convention `HS_PRMS_` 
 |Read Scale-out|Yes|Yes|Yes|Yes|Yes|
 |Backup storage retention|7 days|7 days|7 days|7 days|7 days|
 
-<sup>1</sup> Besides local SSD IO, workloads will use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS will depend on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
+<sup>1</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS depends on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
 
 <sup>2</sup> Latency numbers are representative for typical workloads at steady state, but are not guaranteed. 
 
 <sup>3</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. For more information, see [Hyperscale service tier architecture](hyperscale-architecture.md).
 
-<sup>4</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+<sup>4</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 ### Hyperscale - Premium-series (part 3 of 3)
 
@@ -442,13 +442,13 @@ SLOs in the Hyperscale premium-series tier use the naming convention `HS_PRMS_` 
 |Read Scale-out|Yes|Yes|Yes|Yes|Yes|Yes|
 |Backup storage retention|7 days|7 days|7 days|7 days|7 days|7 days|
 
-<sup>1</sup> Besides local SSD IO, workloads will use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS will depend on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
+<sup>1</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS depends on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
 
 <sup>2</sup> Latency numbers are representative for typical workloads at steady state, but are not guaranteed. 
 
 <sup>3</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. For more information, see [Hyperscale service tier architecture](hyperscale-architecture.md).
 
-<sup>4</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+<sup>4</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
  
 ## Hyperscale - Premium-series memory optimized
 
@@ -481,13 +481,13 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 |Read Scale-out|Yes|Yes|Yes|Yes|Yes|
 |Backup storage retention|7 days|7 days|7 days|7 days|7 days|
 
-<sup>1</sup> Besides local SSD IO, workloads will use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS will depend on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
+<sup>1</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS depends on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
 
 <sup>2</sup> Latency numbers are representative for typical workloads at steady state, but are not guaranteed. 
 
 <sup>3</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. For more information, see [Hyperscale service tier architecture](hyperscale-architecture.md).
 
-<sup>4</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+<sup>4</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 
 ### Hyperscale - Premium-series memory optimized (part 2 of 3)
@@ -519,13 +519,13 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 |Read Scale-out|Yes|Yes|Yes|Yes|Yes|
 |Backup storage retention|7 days|7 days|7 days|7 days|7 days|
 
-<sup>1</sup> Besides local SSD IO, workloads will use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS will depend on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
+<sup>1</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS depends on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
 
 <sup>2</sup> Latency numbers are representative for typical workloads at steady state, but are not guaranteed. 
 
 <sup>3</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. For more information, see [Hyperscale service tier architecture](hyperscale-architecture.md).
 
-<sup>4</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+<sup>4</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 
 ### Hyperscale - Premium-series memory optimized (part 3 of 3)
@@ -556,13 +556,13 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 |Read Scale-out|Yes|Yes|Yes|Yes|Yes|
 |Backup storage retention|7 days|7 days|7 days|7 days|7 days|
 
-<sup>1</sup> Besides local SSD IO, workloads will use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS will depend on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
+<sup>1</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS depends on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
 
 <sup>2</sup> Latency numbers are representative for typical workloads at steady state, but are not guaranteed. 
 
 <sup>3</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. For more information, see [Hyperscale service tier architecture](hyperscale-architecture.md).
 
-<sup>4</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+<sup>4</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
  
 ## <a id="general-purpose---provisioned-compute---gen5"></a>General purpose - provisioned compute - standard-series (Gen5)
 
@@ -596,7 +596,7 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
-<sup>3</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+<sup>3</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 
 ### <a id="gen5-hardware-part-2-3"></a>General purpose Standard-series (Gen5) compute (part 2 of 3)
@@ -629,7 +629,7 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
-<sup>3</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+<sup>3</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 
 ### <a id="gen5-hardware-part-3-3"></a>General purpose Standard-series (Gen5) compute (part 3 of 3)
@@ -662,7 +662,7 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
-<sup>3</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+<sup>3</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 ## General purpose - provisioned compute - Fsv2-series
 
@@ -696,7 +696,7 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
-<sup>3</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+<sup>3</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 ### General Purpose Fsv2-series hardware (part 2 of 2)
 
@@ -728,7 +728,7 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
-<sup>3</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+<sup>3</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 ## General purpose - provisioned compute - DC-series
 
@@ -760,7 +760,7 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
-<sup>3</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+<sup>3</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 ## <a id="business-critical---provisioned-compute---gen5"></a>Business critical - provisioned compute - standard-series (Gen5)
 
@@ -795,7 +795,7 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
-<sup>3</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+<sup>3</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 
 ### <a id="gen5-hardware-part-2-4"></a>Business critical Standard-series (Gen5) compute generation (part 2 of 3)
@@ -829,7 +829,7 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
-<sup>3</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+<sup>3</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 ### <a id="gen5-hardware-part-2-4"></a>Business critical Standard-series (Gen5) compute generation (part 3 of 3)
 
@@ -862,7 +862,7 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
-<sup>3</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+<sup>3</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 ## Business Critical - provisioned compute - M-series
 
@@ -899,7 +899,7 @@ For important information about M-series hardware availability, see [Azure offer
 
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
-<sup>3</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+<sup>3</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 ### Business Critical M-series hardware (part 2 of 2)
 
@@ -932,7 +932,7 @@ For important information about M-series hardware availability, see [Azure offer
 
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
-<sup>3</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+<sup>3</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 ## Business Critical - provisioned compute - DC-series
 
@@ -965,7 +965,7 @@ For important information about M-series hardware availability, see [Azure offer
 
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
-<sup>3</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+<sup>3</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 ## Previously available hardware
 
@@ -980,6 +980,6 @@ Gen4 hardware has been retired and is not available for provisioning, upscaling,
 - For DTU resource limits for elastic pools, see [resource limits for elastic pools using the DTU purchasing model](resource-limits-dtu-elastic-pools.md)
 - For resource limits for SQL Managed Instance, see [SQL Managed Instance resource limits](../managed-instance/resource-limits.md).
 - For information about general Azure limits, see [Azure subscription and service limits, quotas, and constraints](/azure/azure-resource-manager/management/azure-subscription-service-limits).
-- For information about resource limits on a server, see [overview of resource limits on a server](resource-limits-logical-server.md) for information about limits at the server and subscription levels.
+- For information about resource limits at the server and subscription levels, see [overview of resource limits on a server](resource-limits-logical-server.md).
 - [ALTER DATABASE - Azure SQL Database](/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current&preserve-view=true)
 - [CREATE DATABASE - Azure SQL Database](/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&preserve-view=true)

@@ -286,6 +286,7 @@ As discussed previously, active geo-replication can also be managed programmatic
   - [Configure and failover a pooled database using active geo-replication](scripts/setup-geodr-and-failover-elastic-pool-powershell.md).
 - SQL Database also supports auto-failover groups. For more information, see using [auto-failover groups](auto-failover-group-sql-db.md).
 - For a business continuity overview and scenarios, see [Business continuity overview](business-continuity-high-availability-disaster-recover-hadr-overview.md).
+- To learn about Azure SQL Database Hyperscale Geo-replica see [Hyperscale Geo-replica](service-tier-hyperscale-replicas.md#geo-replica)
 - To learn about Azure SQL Database automated backups, see [SQL Database automated backups](automated-backups-overview.md).
 - To learn about using automated backups for recovery, see [Restore a database from the service-initiated backups](recovery-using-backups.md).
 - To learn about authentication requirements for a new primary server and database, see [SQL Database security after disaster recovery](active-geo-replication-security-configure.md).

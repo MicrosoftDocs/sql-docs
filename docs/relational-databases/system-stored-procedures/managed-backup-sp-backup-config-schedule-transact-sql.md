@@ -76,7 +76,7 @@ This determines the frequency of transaction log backups. These backups happen a
 > [!NOTE]  
 > If the recovery model changes from simple to full, you need to reconfigure the *@log_backup_freq* from `0:00` to a non-zero value.
 
-## Return code value
+## Return code values
 
 `0` (success) or `1` (failure).
 

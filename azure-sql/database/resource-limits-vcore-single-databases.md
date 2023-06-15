@@ -637,7 +637,7 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 |Compute size (service objective)|GP_Gen5_24|GP_Gen5_32|GP_Gen5_40|GP_Gen5_80|GP_Gen5_128|
 |:--- | --: |--: |--: |--: |---: |
 |Hardware|Gen5|Gen5|Gen5|Gen5|Gen5|
-|vCores|24|32|40|80|128<sup>4</sup>|
+|vCores|24|32|40|80|128|
 |Memory (GB)|124.6|166.1|207.6|415.2|625|
 |Columnstore support|Yes|Yes|Yes|Yes|Yes|
 |In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|
@@ -663,8 +663,6 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
 <sup>3</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
-
-<sup>4</sup> The 128 vCore offering is currently in preview.
 
 ## General purpose - provisioned compute - Fsv2-series
 
@@ -838,7 +836,7 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 |Compute size (service objective)|BC_Gen5_24|BC_Gen5_32|BC_Gen5_40|BC_Gen5_80|BC_Gen5_128|
 |:--- | --: |--: |--: |--: |--: | 
 |Hardware|Gen5|Gen5|Gen5|Gen5|Gen5|
-|vCores|24|32|40|80|128<sup>4</sup>|
+|vCores|24|32|40|80|128|
 |Memory (GB)|124.6|166.1|207.6|415.2|625|
 |Columnstore support|Yes|Yes|Yes|Yes|Yes|
 |In-memory OLTP storage (GB)|25.25|37.94|52.23|131.64|227.02|
@@ -865,8 +863,6 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
 <sup>3</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
-
-<sup>4</sup> The 128 vCore offering is currently in preview.
 
 ## Business Critical - provisioned compute - M-series
 

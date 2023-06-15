@@ -168,7 +168,7 @@ To optionally fine-tune networking settings, inspect the following:
     To change or add rules, open the **Inbound Security Rules** and **Outbound security rules** in the Network security group settings.
 
 > [!IMPORTANT]
-> If you have configured a public endpoint for SQL Managed Instance, you need to open ports to allow network traffic allowing connections to SQL Managed Instance from the public internet. For more information, see [Configure a public endpoint for SQL Managed Instance](public-endpoint-configure.md#allow-public-endpoint-traffic-on-the-network-security-group).
+> If you have configured a public endpoint for SQL Managed Instance, you need to open ports to allow network traffic allowing connections to SQL Managed Instance from the public internet. For more information, see [Configure a public endpoint for SQL Managed Instance](public-endpoint-configure.md#allow-public-endpoint-traffic-in-the-network-security-group).
 >
 
 ## Retrieve connection details to SQL Managed Instance

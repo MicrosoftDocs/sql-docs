@@ -52,9 +52,9 @@ Report pagination might be affected when you export a report to a different form
 
 1. Select the report to render and preview the report.
 
-1. On the Report Viewer toolbar, select the **Export** dropdown arrow.
+1. On the Report Viewer toolbar, select the **Export** dropdown list arrow.
 
-     :::image type="content" source="media/export-reports-report-builder-and-ssrs/ssrsportal-export.png" alt-text="Screenshot showing the Reporting Services web portal Export dropdown.":::
+     :::image type="content" source="media/export-reports-report-builder-and-ssrs/ssrsportal-export.png" alt-text="Screenshot showing the Reporting Services web portal Export dropdown list.":::
 
 1. Select the format that you want to use.
 
@@ -86,7 +86,7 @@ Report pagination might be affected when you export a report to a different form
 
      Optionally, change the file name of the exported report.
 
-     > [!NOTE]
+     > [!NOTE]  
      >  If the program cannot open the report in the format that you chose because you do not have a program associated with this file type, you will be prompted to save the exported report or to find a program online to open the report.
 
 ## <a id="RendererTypes"></a> Render extension types
@@ -146,7 +146,7 @@ If your report contains Unicode text with Arabic numbers or dates in Arabic, the
 
 If you export the report to HTML, the dates and numbers *do* render correctly.
 
-### Exporting reports with embedded or external images
+### Export reports with embedded or external images
 
 When you export a paginated report in PowerPoint format, if the report has an embedded or external image in the background, the image doesn't come up in the exported file. The same is true when you export to other formats like PDF.
 

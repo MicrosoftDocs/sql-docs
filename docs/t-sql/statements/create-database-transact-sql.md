@@ -1157,7 +1157,7 @@ The following syntax and semantic rules apply to your use of the `AS COPY OF` ar
 For more information, see [Create a copy of an Azure SQL database using Transact-SQL](/azure/azure-sql/database/database-copy).
 
 > [!IMPORTANT]
-> By default, the database copy is created with the same backup storage redundancy as that of the source database. Changing the backup storage redundancy while creating a database copy is not supported via T-SQL. 
+> By default, the database copy is created with the same backup storage redundancy as that of the source database. 
 
 ## Permissions
 

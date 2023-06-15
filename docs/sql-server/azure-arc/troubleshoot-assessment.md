@@ -43,20 +43,30 @@ In case the assessment run fails, select the "Failed" hyperlink that should open
 1. SQL Connection test failed
     :::image type="content" source="media/assess/sql-best-practices-assessment-connection-failed.png" alt-text="Screenshot showing the error message that SQL Server is offline.":::
 
-    - Start the process and make sure the SQL Server is accessible via the network.
-2. AMA upload failed
+    - [Troubleshoot SQL Server connectivity failures](https://learn.microsoft.com/en-us/troubleshoot/sql/database-engine/connect/resolve-connectivity-errors-overview)
+2. Azure Monitor Agent (AMA) upload failed
 
     - Verify that the Azure Monitor Agent is provisioned correctly and verify that the rest of the setup[label](https://microsoft-ce-csi.acrolinx.cloud/htmldata/en/rules/4842fecd80f7ca65b1a967ad39bb2a19f99dd2ae.html) hasn't been deleted. The following components must be configured correctly to ensure that the agent can upload logs to the workspace:
 
         1. The linked Log Analytics workspace must have a table named **SqlAssessment_CL**.
-        2. Azure Monitor Agent (version >= 1.10.0) must be successfully provisioned.
-        3. The Data Collection Rule and Data Collection Endpoint must be in the same location as the LA workspace. If the resources were deployed using the automated deployment, then the resources would have the prefix **sql-bpa-**
-        4. The log collection path: **C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft SQL Server Extension Agent\Assessment\*.cs** must be correctly configured in the Data Collection Rule.
-        5. The **Resources** tab under the Data Collection Rule must have the Arc Machine present.
-        6. **SqlAssessment_CL** with the selected LA Workspace must be present in the **Data Sources** tab for Data Collection Rule.
+            1. Navigate to the **Tables** tab under the linked Log Analytics workspace.
+            2. The **SqlAssessment_CL** table should be present.
+        1. Azure Monitor Agent (version >= 1.10.0) should be successfully provisioned.
+            1. Navigate to the **Extensions** tab under the Arc Resource.
+            2. AMA with required version should be successfully provisioned.
+        1. The Data Collection Rule (DCR) and Data Collection Endpoint (DCE) must be in the same location as the LA workspace.
+            1. Navigate to the Overview tab of the resource group to which the Log Analytics workspace belongs.
+            2. The **DCR** and the **DCE** can be identified by their prefixes, **sql-bpa-**.
+            3. Verify that the **DCR** and **DCE** are in the same location as the LA workspace.
+        1. The Data collection Rule (DCR) should be configured correctly.
+            1. Navigate to The **Resources** tab under the relevant DCR. The Arc machine name should be present on the list.
+            1. Navigate to The **Data Sources** tab under the relevant DCR. Select the entry **Custom Text Logs**
+                1. Under the `Data Sources` tab, the table name should be **SqlAssessment_CL**.
+                2. Under the `Data Sources` tab, the configured log collection path should be **C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft SQL Server Extension Agent\Assessment\*.csv**.
+                3. Under the `Destination` tab, the LA workspace name should be present.
 
 ## Assessment deployment failed
 
 1. Navigate to the deployment and troubleshoot the error.
-2. If there are any issues with the deployment of the Azure Monitor Agent, verify that the Arc Machine is connected.
+2. If there are any issues with the deployment of the Azure Monitor Agent, verify that the Arc machine is connected.
 3. The deployment can always be retriggered with the same LA Workspace by clicking on the **Enable assessment** button.

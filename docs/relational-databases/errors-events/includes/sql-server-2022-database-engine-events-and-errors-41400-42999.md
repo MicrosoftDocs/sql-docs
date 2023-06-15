@@ -2,10 +2,10 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 04/06/2023
+ms.date: 06/12/2023
 ms.topic: include
 ---
-| Error| Severity | Event logged | Description|
+| Error | Severity | Event logged | Description |
 | :--- | :--- | :--- | :--- |
 | 41401 | 16 | No | WSFC cluster service is offline. |
 | 41402 | 16 | No | The WSFC cluster is offline, and this availability group is not available. This issue can be caused by a cluster service issue or by the loss of quorum in the cluster. |
@@ -271,6 +271,8 @@ ms.topic: include
 | 41973 | 16 | No | The link cannot be established because the endpoint certificate from SQL Server has not been imported to Azure SQL Managed Instance. Please import the endpoint certificate from SQL Server to Managed Instance, and retry the link creation again. Please see online documentation for Managed Instance link for more information. |
 | 41974 | 16 | No | The link cannot be established because the endpoint certificate from SQL Azure SQL Managed Instance has not been imported to SQL Server. Please download the endpoint certificate from Managed Instance and import it to SQL Server, and retry the link creation again. Please see online documentation for Managed Instance link for more information. |
 | 41975 | 16 | No | Unsupported storage type. Azure SQL Managed Instance does not support database backup to the provided storage type. |
+| 41976 | 16 | No | Connection with availability group '%.\*ls' on the server with endpoint '%.\*ls' cannot be established as it is not responding. Possible causes could be nonexistence of availability group or distributed availability group on the partner server, incorrectly specified names or configuration parameters. Please check the log file on the partner server for the exact error cause. |
+| 41977 | 16 | No | Connection with availability group '%.\*ls' on the server with endpoint '%.\*ls' is established, but there is no response from the target database. Possible causes could be errors with creating a database on the partner server, incorrectly specified names or configuration parameters. Please check the log file on the partner server for the exact error cause. |
 | 42001 | 16 | No | Failed to parse XML configuration. The operating system returned error %ls. |
 | 42002 | 16 | No | Failed to parse XML configuration. The parser returned error %.\*ls |
 | 42003 | 16 | No | Failed to parse XML configuration. A required attribute '%ls' is missing. |

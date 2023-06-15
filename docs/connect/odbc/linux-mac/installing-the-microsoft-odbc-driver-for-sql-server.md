@@ -4,7 +4,7 @@ description: Learn how to install the Microsoft ODBC Driver for SQL Server on Li
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: randolphwest
-ms.date: 03/20/2023
+ms.date: 06/15/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -27,21 +27,21 @@ The following sections explain how to install the Microsoft ODBC driver 18 from 
 
 ```bash
 #Download the desired package(s)
-curl -O https://download.microsoft.com/download/1/f/f/1fffb537-26ab-4947-a46a-7a45c27f6f77/msodbcsql18_18.2.1.1-1_amd64.apk
+curl -O https://download.microsoft.com/download/1/f/f/1fffb537-26ab-4947-a46a-7a45c27f6f77/msodbcsql18_18.2.2.1-1_amd64.apk
 curl -O https://download.microsoft.com/download/1/f/f/1fffb537-26ab-4947-a46a-7a45c27f6f77/mssql-tools18_18.2.1.1-1_amd64.apk
 
 
 #(Optional) Verify signature, if 'gpg' is missing install it using 'apk add gnupg':
-curl -O https://download.microsoft.com/download/1/f/f/1fffb537-26ab-4947-a46a-7a45c27f6f77/msodbcsql18_18.2.1.1-1_amd64.sig
+curl -O https://download.microsoft.com/download/1/f/f/1fffb537-26ab-4947-a46a-7a45c27f6f77/msodbcsql18_18.2.2.1-1_amd64.sig
 curl -O https://download.microsoft.com/download/1/f/f/1fffb537-26ab-4947-a46a-7a45c27f6f77/mssql-tools18_18.2.1.1-1_amd64.sig
 
 curl https://packages.microsoft.com/keys/microsoft.asc  | gpg --import -
-gpg --verify msodbcsql18_18.2.1.1-1_amd64.sig msodbcsql18_18.2.1.1-1_amd64.apk
+gpg --verify msodbcsql18_18.2.2.1-1_amd64.sig msodbcsql18_18.2.1.1-1_amd64.apk
 gpg --verify mssql-tools18_18.2.1.1-1_amd64.sig mssql-tools18_18.2.1.1-1_amd64.apk
 
 
 #Install the package(s)
-sudo apk add --allow-untrusted msodbcsql18_18.2.1.1-1_amd64.apk
+sudo apk add --allow-untrusted msodbcsql18_18.2.2.1-1_amd64.apk
 sudo apk add --allow-untrusted mssql-tools18_18.2.1.1-1_amd64.apk
 ```
 
@@ -141,7 +141,7 @@ sudo zypper install -y unixODBC-devel
 ### [Ubuntu](#tab/ubuntu18-install)
 
 ```bash
-if ! [[ "18.04 20.04 22.04" == *"$(lsb_release -rs)"* ]];
+if ! [[ "18.04 20.04 22.04 22.10" == *"$(lsb_release -rs)"* ]];
 then
     echo "Ubuntu $(lsb_release -rs) is not currently supported.";
     exit;
@@ -188,19 +188,19 @@ The following sections explain how to install the Microsoft ODBC driver 17 from 
 
 ```bash
 #Download the desired package(s)
-curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.10.2.1-1_amd64.apk
+curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.10.4.1-1_amd64.apk
 curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/mssql-tools_17.10.1.1-1_amd64.apk
 
 #(Optional) Verify signature, if 'gpg' is missing install it using 'apk add gnupg':
-curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.10.2.1-1_amd64.sig
+curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.10.4.1-1_amd64.sig
 curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/mssql-tools_17.10.1.1-1_amd64.sig
 
 curl https://packages.microsoft.com/keys/microsoft.asc  | gpg --import -
-gpg --verify msodbcsql17_17.10.1.1-1_amd64.sig msodbcsql17_17.10.2.1-1_amd64.apk
+gpg --verify msodbcsql17_17.10.1.1-1_amd64.sig msodbcsql17_17.10.4.1-1_amd64.apk
 gpg --verify mssql-tools_17.10.1.1-1_amd64.sig mssql-tools_17.10.1.1-1_amd64.apk
 
 #Install the package(s)
-sudo apk add --allow-untrusted msodbcsql17_17.10.2.1-1_amd64.apk
+sudo apk add --allow-untrusted msodbcsql17_17.10.4.1-1_amd64.apk
 sudo apk add --allow-untrusted mssql-tools_17.10.1.1-1_amd64.apk
 ```
 

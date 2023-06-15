@@ -193,7 +193,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 | Backup storage retention | 7 days | 7 days | 7 days | 7 days | 7 days | 7 days | 7 days |
 
 <sup>1</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. Review [Hyperscale service tier](service-tier-hyperscale.md#distributed-functions-architecture) for more information.   
-<sup>2</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS depends on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).   
+<sup>2</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).   
 <sup>3</sup> Latency is 1-2 ms for data on local compute replica SSD, which caches most used data pages. Higher latency for data retrieved from page servers. 
 
 
@@ -224,7 +224,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 | Backup storage retention | 7 days | 7 days | 7 days | 7 days | 7 days | 7 days | 7 days |
 
 <sup>1</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. Review [Hyperscale service tier](service-tier-hyperscale.md#distributed-functions-architecture) for more information.   
-<sup>2</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS depends on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).   
+<sup>2</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).   
 <sup>3</sup> Latency is 1-2 ms for data on local compute replica SSD, which caches most used data pages. Higher latency for data retrieved from page servers. 
 
 ## <a id="hyperscale---provisioned-compute---gen5"></a>Hyperscale - provisioned compute - standard-series (Gen5)
@@ -257,7 +257,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Read Scale-out|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |Backup storage retention|7 days|7 days|7 days|7 days|7 days|7 days|7 days|
 
-<sup>1</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS depends on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
+<sup>1</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
 
 <sup>2</sup> Latency numbers are approximate and representative for typical workloads at steady state, but are not guaranteed. 
 
@@ -293,7 +293,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Read Scale-out|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |Backup storage retention|7 days|7 days|7 days|7 days|7 days|7 days|7 days|
 
-<sup>1</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS depends on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
+<sup>1</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
 
 <sup>2</sup> Latency numbers are representative for typical workloads at steady state, but are not guaranteed. 
 
@@ -329,7 +329,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Read Scale-out|Yes|Yes|Yes|Yes|
 |Backup storage retention|7 days|7 days|7 days|7 days|
 
-<sup>1</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS depends on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
+<sup>1</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
 
 <sup>2</sup> Latency numbers are representative for typical workloads at steady state, but are not guaranteed. 
 
@@ -368,7 +368,7 @@ SLOs in the Hyperscale premium-series tier use the naming convention `HS_PRMS_` 
 |Read Scale-out|Yes|Yes|Yes|Yes|Yes|
 |Backup storage retention|7 days|7 days|7 days|7 days|7 days|
 
-<sup>1</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS depends on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
+<sup>1</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
 
 <sup>2</sup> Latency numbers are representative for typical workloads at steady state, but are not guaranteed. 
 
@@ -406,7 +406,7 @@ SLOs in the Hyperscale premium-series tier use the naming convention `HS_PRMS_` 
 |Read Scale-out|Yes|Yes|Yes|Yes|Yes|
 |Backup storage retention|7 days|7 days|7 days|7 days|7 days|
 
-<sup>1</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS depends on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
+<sup>1</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
 
 <sup>2</sup> Latency numbers are representative for typical workloads at steady state, but are not guaranteed. 
 
@@ -442,7 +442,7 @@ SLOs in the Hyperscale premium-series tier use the naming convention `HS_PRMS_` 
 |Read Scale-out|Yes|Yes|Yes|Yes|Yes|Yes|
 |Backup storage retention|7 days|7 days|7 days|7 days|7 days|7 days|
 
-<sup>1</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS depends on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
+<sup>1</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
 
 <sup>2</sup> Latency numbers are representative for typical workloads at steady state, but are not guaranteed. 
 
@@ -481,7 +481,7 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 |Read Scale-out|Yes|Yes|Yes|Yes|Yes|
 |Backup storage retention|7 days|7 days|7 days|7 days|7 days|
 
-<sup>1</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS depends on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
+<sup>1</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
 
 <sup>2</sup> Latency numbers are representative for typical workloads at steady state, but are not guaranteed. 
 
@@ -519,7 +519,7 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 |Read Scale-out|Yes|Yes|Yes|Yes|Yes|
 |Backup storage retention|7 days|7 days|7 days|7 days|7 days|
 
-<sup>1</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS depends on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
+<sup>1</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
 
 <sup>2</sup> Latency numbers are representative for typical workloads at steady state, but are not guaranteed. 
 
@@ -556,7 +556,7 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 |Read Scale-out|Yes|Yes|Yes|Yes|Yes|
 |Backup storage retention|7 days|7 days|7 days|7 days|7 days|
 
-<sup>1</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS depends on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
+<sup>1</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
 
 <sup>2</sup> Latency numbers are representative for typical workloads at steady state, but are not guaranteed. 
 

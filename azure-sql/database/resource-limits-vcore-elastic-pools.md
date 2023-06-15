@@ -94,7 +94,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using Gen5 and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on Gen5 there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
 
-<sup>5</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+<sup>5</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 ### General purpose service tier: standard-series (Gen5) (part 2 of 3)
 
@@ -132,7 +132,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using standard-series (Gen5) and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on standard-series (Gen5) there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
 
-<sup>5</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+<sup>5</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 ### General purpose service tier: standard-series (Gen5) (part 3 of 3)
 
@@ -170,7 +170,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using standard-series (Gen5) and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on standard-series (Gen5) there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
 
-<sup>5</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+<sup>5</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 ## General purpose - provisioned compute - Fsv2-series
 
@@ -210,7 +210,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using standard-series (Gen5) and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on standard-series (Gen5) there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
 
-<sup>5</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+<sup>5</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 ### Fsv2-series Hardware (part 2 of 2)
 
@@ -248,7 +248,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using standard-series (Gen5) and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on standard-series (Gen5) there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
 
-<sup>5</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+<sup>5</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 ## General purpose - provisioned compute - DC-series
 
@@ -286,7 +286,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using standard-series (Gen5) and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on standard-series (Gen5) there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
 
-<sup>5</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+<sup>5</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 ## Business Critical - provisioned compute - standard-series (Gen5)
 
@@ -327,7 +327,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using standard-series (Gen5) and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on standard-series (Gen5) there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
 
-<sup>5</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+<sup>5</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 ### Business Critical service tier: standard-series (Gen5) (part 2 of 3)
 
@@ -403,7 +403,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using standard-series (Gen5) and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on standard-series (Gen5) there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
 
-<sup>5</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+<sup>5</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 ## Business Critical - provisioned compute - M-series
 
@@ -446,7 +446,7 @@ For important information about M-series hardware availability, see [Azure offer
 
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using standard-series (Gen5) and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on standard-series (Gen5) there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
 
-<sup>5</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+<sup>5</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 ### M-series hardware (part 2 of 2)
 
@@ -485,7 +485,7 @@ For important information about M-series hardware availability, see [Azure offer
 
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using standard-series (Gen5) and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on standard-series (Gen5) there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
 
-<sup>5</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+<sup>5</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 ## Business Critical - provisioned compute - DC-series
 
@@ -524,7 +524,7 @@ For important information about M-series hardware availability, see [Azure offer
 
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using standard-series (Gen5) and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on standard-series (Gen5) there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
 
-<sup>5</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+<sup>5</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 ## Hyperscale - provisioned compute - standard series (Gen5)
 
@@ -562,13 +562,13 @@ For important information about M-series hardware availability, see [Azure offer
 
 <sup>2</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. Review [Hyperscale service tier](hyperscale-elastic-pool-overview.md#architecture) and [Hyperscale service tier](service-tier-hyperscale.md#distributed-functions-architecture) for more information.
 
-<sup>3</sup> Besides local SSD IO, workloads will use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS will depend on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
+<sup>3</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
 
 <sup>4</sup> Latency is 1-2 ms for data on local compute replica SSD, which caches most used data pages. Higher latency for data retrieved from page servers.
 
 <sup>5</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using standard-series (Gen5) and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on standard-series (Gen5) there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
 
-<sup>6</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+<sup>6</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 ### Gen5 compute generation (part 2 of 2)
 
@@ -601,13 +601,13 @@ For important information about M-series hardware availability, see [Azure offer
 
 <sup>2</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. Review [Hyperscale service tier](hyperscale-elastic-pool-overview.md#architecture) and [Hyperscale service tier](service-tier-hyperscale.md#distributed-functions-architecture) for more information.
 
-<sup>3</sup> Besides local SSD IO, workloads will use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS will depend on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
+<sup>3</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
 
 <sup>4</sup> Latency is 1-2 ms for data on local compute replica SSD, which caches most used data pages. Higher latency for data retrieved from page servers.
 
 <sup>5</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using standard-series (Gen5) and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on standard-series (Gen5) there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
 
-<sup>6</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+<sup>6</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 ## Database properties for pooled databases
 

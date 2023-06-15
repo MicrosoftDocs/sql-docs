@@ -1,6 +1,6 @@
 ---
 title: "Generate Data Feeds from a Report (Report Builder)"
-description: You can generate Atom-compliant data feeds from paginated reports. Use the feeds in applications, such as Power Pivot or Power BI, that can consume data feeds.
+description: You can generate Atom-compliant data feeds from paginated reports. Use the feeds in applications such as Power Pivot or Power BI that can consume data feeds.
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 11/21/2022
@@ -11,7 +11,7 @@ ms.custom: updatefrequency5
 ---
 # Generate Data Feeds from a Report (Report Builder and SSRS)
 
-You can generate Atom-compliant data feeds from paginated reports, and then use the data feeds in applications, such as Power Pivot or Power BI, that can consume data feeds.
+You can generate Atom-compliant data feeds from paginated reports, and then use the data feeds in applications such as Power Pivot or Power BI that can consume data feeds.
 
 The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Atom rendering extension generates an Atom service document that lists the data feeds available from a report. The document lists at least one data feed for each data region in the report. Depending on the type of data region and the data that the data region displays, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] might generate multiple data feeds from a data region.
 

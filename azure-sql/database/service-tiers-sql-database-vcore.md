@@ -288,7 +288,7 @@ Standard-series (Gen5) hardware is available in all public regions worldwide.
 
 #### <a id="hyperscale-premium-series-availability"></a> Hyperscale premium-series
  
-Hyperscale service tier (currently in preview) premium-series and premium-series memory optimized hardware is available in the following regions:
+Hyperscale service tier premium-series and premium-series memory optimized hardware (currently in preview) is available in the following regions:
 
 - Australia East
 - Canada Central

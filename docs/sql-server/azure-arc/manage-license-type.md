@@ -14,6 +14,9 @@ ms.topic: conceptual
 
 This article explains how to manage SQL Server licenses and set billing options.
 
+> [!TIP]
+> To modify the license type for a larger scope, such as a resource group, subscription, or multiple subscriptions with a single command, use the [Modify license type](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/azure-arc-enabled-sql-server/modify-license-type) PowerShell script. It is published as an open source SQL Server sample and includes the step-by-step instructions.
+
 You can use Azure Arc-enabled SQL Server to accurately track your usage of the SQL Server software and manage your license compliance. You may also elect to pay for the SQL software usage directly through Microsoft Azure using a pay-as-you-go billing option. You can control how you pay for SQL Server software through Azure portal or API. [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] allows you to select a pay-as-you-go billing option during setup.
 
 License type is a property of Azure extension for SQL Server resource. It applies to all instances installed on the server where the extension is running. For your convenience it is also included in Azure portal overview for an Arc-enabled SQL Server instance as **Host License Type**.
@@ -50,6 +53,7 @@ Run:
 ```azurecli
 az provider register --namespace 'Microsoft.AzureArcData'
 ```
+
 
 ---
 
@@ -184,12 +188,6 @@ The following command will set the license type to "PAYG":
 az connectedmachine extension update --machine-name "simple-vm" -g "<resource-group>" --name "WindowsAgent.SqlServer" --type "WindowsAgent.SqlServer" --publisher "Microsoft.AzureData" --settings '{"LicenseType":"PAYG", "SqlManagement": {"IsEnabled":true}}'    
 ```
 
----
-> [!IMPORTANT]  
->
-> - The update command overwrites all settings. If your extension settings have a list of excluded SQL Server instances, make sure to specify the full exclusion list with the update command.
-> - If you already have an older version of the Azure extension installed, make sure to upgrade it first, and then use one the modify methods to set the correct license type. For details, see [How to upgrade a machine extension](/azure/azure-arc/servers/manage-automatic-vm-extension-upgrade) for details. 
-
 ## Deployment options
 
 To select the appropriate deployment option, see [Deployment options for Azure Arc-enabled SQL Server](deployment-options.md)
@@ -248,4 +246,5 @@ For more examples of Azure Resource Graph Queries, see [Starter Resource Graph q
 - [Review SQL Server 2022 Pricing](https://www.microsoft.com/sql-server/sql-server-2022-pricing)
 - [Install SQL Server 2022 using the pay-as-you-go activation option](../../database-engine/install-windows/install-sql-server.md)
 - [Frequently asked questions](faq.yml#billing)
+
 

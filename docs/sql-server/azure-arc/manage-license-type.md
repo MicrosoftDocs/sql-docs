@@ -54,7 +54,6 @@ Run:
 az provider register --namespace 'Microsoft.AzureArcData'
 ```
 
-
 ---
 
 ## Overview
@@ -188,6 +187,12 @@ The following command will set the license type to "PAYG":
 az connectedmachine extension update --machine-name "simple-vm" -g "<resource-group>" --name "WindowsAgent.SqlServer" --type "WindowsAgent.SqlServer" --publisher "Microsoft.AzureData" --settings '{"LicenseType":"PAYG", "SqlManagement": {"IsEnabled":true}}'    
 ```
 
+---
+> [!IMPORTANT]  
+>
+> - The update command overwrites all settings. If your extension settings have a list of excluded SQL Server instances, make sure to specify the full exclusion list with the update command.
+> - If you already have an older version of the Azure extension installed, make sure to upgrade it first, and then use one the modify methods to set the correct license type. For details, see [How to upgrade a machine extension](/azure/azure-arc/servers/manage-automatic-vm-extension-upgrade) for details. 
+
 ## Deployment options
 
 To select the appropriate deployment option, see [Deployment options for Azure Arc-enabled SQL Server](deployment-options.md)
@@ -246,5 +251,4 @@ For more examples of Azure Resource Graph Queries, see [Starter Resource Graph q
 - [Review SQL Server 2022 Pricing](https://www.microsoft.com/sql-server/sql-server-2022-pricing)
 - [Install SQL Server 2022 using the pay-as-you-go activation option](../../database-engine/install-windows/install-sql-server.md)
 - [Frequently asked questions](faq.yml#billing)
-
 

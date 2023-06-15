@@ -322,7 +322,7 @@ This issue occurs because of a race condition that can be caused when the runtim
 
 Refer to the [Remarks](how-query-store-collects-data.md#remarks) section of the How Query Store Collects Data article for more information around Query Store operations.
 
-**Workaround**: The query variants that are in the Query Store can be removed, or the PSP feature can be temporarily disabled at the query or database level until additional fixes become available if your system is still experiencing access violations in Query Store with PSP integration enabled after applying Cumulative Update 4 for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
+**Workaround**: The query variants that are in the Query Store can be removed, or the PSP feature can be temporarily disabled at the query or database level until additional fixes become available if your system is still experiencing access violations in Query Store with PSP integration enabled after applying Cumulative Update 5 for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
 
 - To disable PSP optimization at the database level, use the `ALTER DATABASE SCOPED CONFIGURATION SET PARAMETER_SENSITIVE_PLAN_OPTIMIZATION = OFF` database scoped configuration.
 - To disable PSP optimization at the query level, use the `DISABLE_PARAMETER_SENSITIVE_PLAN_OPTIMIZATION` query hint.

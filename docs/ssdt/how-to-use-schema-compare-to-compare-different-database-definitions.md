@@ -107,3 +107,5 @@ To update the schema of the target, you have two choices. You can update the tar
   
 5.  Click the **Execute** button in the editing pane toolbar to run the script.  
   
+## See Also  
+ [SqlSchemaCompareTask Class](https://learn.microsoft.com/en-us/dotnet/api/microsoft.data.tools.schema.tasks.sql.sqlschemacomparetask)  

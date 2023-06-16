@@ -133,7 +133,7 @@ The following example restores an earlier disk backup of `Sales` and overwrites 
 1.  In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and then expand that instance.  
 2.  Right-click **Databases** and select **Restore Database...**  
 3.  On the **General** page, select **Device** under the **Source** section.
-4.  Select the browse (**...**) button to open the **Select backup devices** dialog box. Select **Add** and navigate to your backup. Select **OK** after you,ve selected your disk backup file(s).
+4.  Select the browse (**...**) button to open the **Select backup devices** dialog box. Select **Add** and navigate to your backup. Select **OK** after you've selected your disk backup file(s).
 5.  Select **OK** to return to the **General** page.
 6.  Select **Options** in the **Select a page** pane.
 7.  Under the **Restore options** section, check **Overwrite the existing database (WITH REPLACE)**.

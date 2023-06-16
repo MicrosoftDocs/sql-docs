@@ -106,3 +106,12 @@ To update the schema of the target, you have two choices. You can update the tar
   
 5.  Click the **Execute** button in the editing pane toolbar to run the script.  
   
+### Compare schemas by using the Visual Studio automation model
+
+1. Open the **View** menu, point to **Other Windows**, and select **Command Window**.
+
+1. In the Command Window, type the following command:
+
+    ```console
+    Tools.SSDTNewSchemaComparison
+    ```

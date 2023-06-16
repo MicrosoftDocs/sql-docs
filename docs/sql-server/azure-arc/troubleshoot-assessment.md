@@ -1,8 +1,8 @@
 ---
 title: "Troubleshoot best practices assessment on Azure Arc-enabled SQL Server."
 description: "Describes how to troubleshoot best practices assessment on Azure Arc-enabled SQL Server."
-author: nhebbar
-ms.author: nhebbar2011
+author: nhebbar2011
+ms.author: nhebbar
 ms.reviewer: mikeray
 ms.date: 06/16/2023
 ms.service: sql
@@ -47,7 +47,7 @@ In case the assessment run fails, select the "Failed" hyperlink that should open
 
     :::image type="content" source="media/assess/sql-best-practices-assessment-connection-failed.png" alt-text="Screenshot showing the error message that SQL Server is offline.":::
 
-    - [Troubleshoot SQL Server connectivity failures](troubleshoot/sql/database-engine/connect/resolve-connectivity-errors-overview)
+    - [Troubleshoot SQL Server connectivity failures](/troubleshoot/sql/database-engine/connect/resolve-connectivity-errors-overview)
 
 2. Azure Monitor Agent (AMA) upload failed
 
@@ -76,4 +76,4 @@ In case the assessment run fails, select the "Failed" hyperlink that should open
 2. If there are any issues with the deployment of the Azure Monitor Agent, verify that the Arc machine is connected.
 3. The deployment can always be retriggered with the same LA Workspace by clicking on the **Enable assessment** button.
 
-For any additional assistance, please create a support ticket with Microsoft and attach the log files.  Please visit,  [Create an Azure support request](azure/azure-portal/supportability/how-to-create-azure-support-request)
+For any additional assistance, please create a support ticket with Microsoft and attach the log files.  Please visit,  [Create an Azure support request](/azure/azure-portal/supportability/how-to-create-azure-support-request)

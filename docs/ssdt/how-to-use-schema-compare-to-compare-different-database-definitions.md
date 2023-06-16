@@ -72,7 +72,10 @@ The following procedure compares the schema of a database project with a connect
     > If the row being excluded has any dependent objects (for example, a **Table** row that is referenced by a **View** row), the excluded row is disabled but its checkbox is not cleared. Once all rows that depend on it are unchecked, the disabled row will be unchecked. In addition, if a row is refactored (renamed or moved to another schema), then the checkbox is disabled for that row and any of its dependent child rows.  
     >   
     > Notice that if you refresh the comparison, those differences that you have chosen to skip will be ignored.  
-  
+
+    > [!NOTE]  
+    > If you are using SQLCMD variables, the Schema Compare tool uses the Local values in your project properties.  The Default values are ignored.  See [Database Project Settings](./database-project-settings#bkmk_sqlcmd_variables)
+ 
 To update the schema of the target, you have two choices. You can update the target directly from the **Schema Compare** window if the target is a database or project, or you can generate an update script if the target is a database or a database file.  A generated script appears in the Transact\-SQL Editor, from which you can inspect the script execute it against a database. The following procedures describe these options further.  
   
 > [!WARNING]  

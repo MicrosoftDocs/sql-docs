@@ -3,7 +3,7 @@ title: "Monitor performance by using the Query Store"
 description: Query Store provides insight on query plan choice and performance for SQL Server, Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics. Query Store captures history of queries, plans, and runtime statistics.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 10/12/2022
+ms.date: 6/16/2023
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual

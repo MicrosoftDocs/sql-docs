@@ -180,5 +180,5 @@ WITH    REPLACE /* overwrite existing database */
 ## See also 
 Following is some recommended reading to understand the concepts and best practices when using S3-compatible object storage for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] backups.  
   
-- [SQL Server backup to URL for S3-compatible object storage](..relational-databases/backup-restore/sql-server-backup-to-url-s3-compatible-object-storage.md)
+- [SQL Server backup to URL for S3-compatible object storage](backup-restore/sql-server-backup-to-url-s3-compatible-object-storage.md)
 - [SQL Server back up to URL for S3-compatible object storage best practices and troubleshooting](../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)

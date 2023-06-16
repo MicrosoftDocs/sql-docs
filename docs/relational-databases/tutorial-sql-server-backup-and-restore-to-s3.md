@@ -167,7 +167,8 @@ In this step, restore the database using either the GUI in SQL Server Management
 To restore your on-premises database from Azure Blob storage, modify the following Transact-SQL command to use your own storage account and then run it within a new query window.
 
 ```sql
-USE [master]
+USE [master];
+GO
 RESTORE DATABASE SQLTestDB
 FROM    URL = 's3://<endpoint>:<port>/<bucket>/ SQLTestDB.bak'
 WITH    REPLACE /* overwrite existing database */

@@ -75,7 +75,7 @@ Since the Query Store retains multiple execution plans per query, it can enforce
 > [!NOTE]  
 > Query Store collects plans for DML Statements such as SELECT, INSERT, UPDATE, DELETE, MERGE, and BULK INSERT.
 >
-> By design, Query Store does not collect plans for DDL Statements such as CREATE INDEX, etc. Still, it captures cumulative resource consumption by collecting plans for the underlying DML Statements. For example, DML Statements executed internally to populate a created index.
+> By design, Query Store does not collect plans for DDL statements such as CREATE INDEX, etc. Query Store captures cumulative resource consumption by collecting plans for the underlying DML statements. For example, Query Store may display the SELECT and INSERT statements executed internally to populate a new index.
 >
 > Query Store does not collect data for natively compiled stored procedures by default. Use [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) to enable data collection for natively compiled stored procedures.
 

@@ -75,6 +75,8 @@ Since the Query Store retains multiple execution plans per query, it can enforce
 > [!NOTE]  
 > Query Store collects plans for DML Statements such as SELECT, INSERT, UPDATE, DELETE, MERGE, and BULK INSERT.
 >
+> By design, Query Store does not collect plans for DDL Statements such as CREATE INDEX, etc. Still, it captures cumulative resource consumption by collecting plans for the underlying DML Statements. For example, DML Statements executed internally to populate a created index.
+>
 > Query Store does not collect data for natively compiled stored procedures by default. Use [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) to enable data collection for natively compiled stored procedures.
 
 **Wait stats** are another source of information that helps to troubleshoot performance in the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)]. For a long time, wait statistics were available only on instance level, which made it hard to backtrack waits to a specific query. Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Query Store includes a dimension that tracks wait stats. The following example enables the Query Store to collect wait stats.

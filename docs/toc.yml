@@ -63,6 +63,8 @@ items:
         href: relational-databases/backup-restore/quickstart-backup-restore-database.md
       - name: To Azure Blob Storage 
         href: relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md
+      - name: To S3-Compatible Object Storage
+        href: relational-databases/tutorial-sql-server-backup-and-restore-to-s3.md
     - name: How-to
       items:
       - name: Backup to Azure

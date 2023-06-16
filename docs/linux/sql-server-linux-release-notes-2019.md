@@ -34,7 +34,7 @@ This section lists the latest versions of each package per distribution, for [!I
 
 | Version | Release | Date | Build | KB article |
 | --- | --- | --- | --- | --- |
-| [!INCLUDE [ssSQL19](../includes/sssql19-md.md)] | CU 21 | 2023-05-16 | 15.0.4316.3 | [Support article](/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate21)|
+| [!INCLUDE [ssSQL19](../includes/sssql19-md.md)] | CU 21 | 2023-06-15 | 15.0.4316.3 | [Support article](/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate21)|
 
 
 - The **mssql-server-is** package isn't supported on SUSE in this release. For more information, see [SQL Server Integration Services (SSIS)](#ssis).
@@ -84,7 +84,7 @@ The following table lists the release history for [!INCLUDE [ssSQL19](../include
 
 | Release                | Version       | Release date |
 | ---------------------- | ------------- | ------------ |
-| [CU 21](/troubleshoot/sql/linux/release-history-2019#CU21) | 15.0.4316.3   | 2023-05-16   |
+| [CU 21](/troubleshoot/sql/linux/release-history-2019#CU21) | 15.0.4316.3   | 2023-06-15   |
 | [CU 20](/troubleshoot/sql/linux/release-history-2019#CU20) | 15.0.4312.2   | 2023-04-13   |
 | [CU 19](/troubleshoot/sql/linux/release-history-2019#CU19) | 15.0.4298.1   | 2023-02-16   |
 | [CU 18 GDR](/troubleshoot/sql/linux/release-history-2019#CU18-GDR) | 15.0.4280.7   | 2023-02-14   |

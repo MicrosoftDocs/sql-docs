@@ -34,8 +34,7 @@ This section lists the latest versions of each package per distribution, for [!I
 
 | Version | Release | Date | Build | KB article |
 | --- | --- | --- | --- | --- |
-| [!INCLUDE [ssSQL22](../includes/sssql22-md.md)] | CU 5 | 2023-05-15 | 16.0.4045.3 | [Support article](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate5)|
-
+| [!INCLUDE [ssSQL22](../includes/sssql22-md.md)] | CU 5 | 2023-06-15 | 16.0.4045.3 | [Support article](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate5)|
 
 - The **mssql-server-is** package isn't supported on SUSE in this release. For more information, see [SQL Server Integration Services (SSIS)](#ssis).
 
@@ -81,7 +80,7 @@ The following table lists the release history for [!INCLUDE [ssSQL22](../include
 
 | Release                | Version       | Release date |
 | ---------------------- | ------------- | ------------ |
-| [CU 5](/troubleshoot/sql/linux/release-history-2022#CU5) | 16.0.4045.3   | 2023-05-15   |
+| [CU 5](/troubleshoot/sql/linux/release-history-2022#CU5) | 16.0.4045.3   | 2023-06-15   |
 | [CU 4](/troubleshoot/sql/linux/release-history-2022#CU4) | 16.0.4035.4   | 2023-05-11   |
 | [CU 3](/troubleshoot/sql/linux/release-history-2022#CU3) | 16.0.4025.1   | 2023-04-13   |
 | [CU 2](/troubleshoot/sql/linux/release-history-2022#CU2) | 16.0.4015.1   | 2023-03-15   |

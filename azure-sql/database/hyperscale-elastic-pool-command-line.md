@@ -37,7 +37,7 @@ You can use the Azure CLI or Azure PowerShell to create a Hyperscale elastic poo
 
 Use the [az sql elastic-pool create](/cli/azure/sql/elastic-pool#az_sql_elastic_pool_create) command to create a Hyperscale elastic pool. 
 
-The following example creates a Hyperscale elastic pool with 4 vCores, and two secondary pool replicas:
+The following example creates a Hyperscale elastic pool with four vCores, and two secondary pool replicas:
 
 ```azurecli
 az sql elastic-pool create --resource-group "my-example-rg" --server "my-example-sql-svr" --name "my_hs_pool" --edition "Hyperscale" --capacity 4 --family Gen5 --ha-replicas 2
@@ -47,7 +47,7 @@ az sql elastic-pool create --resource-group "my-example-rg" --server "my-example
 
 Use the [New-AzSqlElasticPool](/powershell/module/az.sql/new-azsqlelasticpool) cmdlet to create a Hyperscale elastic pool. 
 
-The following example creates a Hyperscale elastic pool configured with 4 vCores, and two secondary pool replicas: 
+The following example creates a Hyperscale elastic pool configured with four vCores, and two secondary pool replicas:
 
 ```powershell
 New-AzSqlElasticPool -ResourceGroupName "my-example-rg" -ServerName "my-example-sql-svr" -ElasticPoolName "my_hs_pool" -Edition "Hyperscale" -VCore 4 -ComputeGeneration Gen5 -HighAvailabilityReplicaCount 2

@@ -4,7 +4,7 @@ description: Configure best practices assessment on an Azure Arc-enabled SQL Ser
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mikeray, randolphwest
-ms.date: 03/03/2023
+ms.date: 06/14/2023
 ms.service: sql
 ms.topic: conceptual
 ---
@@ -52,8 +52,9 @@ This article provides instructions for using best practices assessment on an ins
   - If your firewall or proxy server restricts outbound connectivity, make sure they allow to Azure Arc over TCP port 443 for these URLs.
 
     - `global.handler.control.monitor.azure.com`
-    - `<virtual-machine-region-name>.handler.control.monitor.azure.com`
+    - `*.handler.control.monitor.azure.com`
     - `<log-analytics-workspace-id>.ods.opinsights.azure.com`
+    - `*.ingest.monitor.azure.com`
 
 - Your SQL Server instance must have the [TCP/IP protocol enabled](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
 
@@ -158,7 +159,6 @@ To filter results, use the drop-down menu above the grid. Namely:
 
 - **Name**
 - **Severity**
-- **Tags**
 - **Check Id**.
 
 To download results, use **Export to Excel**.
@@ -196,3 +196,5 @@ For more information, see the [troubleshooting guide](troubleshoot-assessment.md
 - To obtain comprehensive support of the best practices assessment feature, a Premier or Unified support subscription is required. For details, see [Azure Premier Support](https://azure.microsoft.com/support/plans/premier).
 
 - [View SQL Server databases - Azure Arc](view-databases.md)
+
+

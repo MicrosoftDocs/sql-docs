@@ -30,5 +30,5 @@ Change Tracking is a lightweight solution that provides an efficient data change
 
 - [About Change Tracking (Transact-SQL)](../../relational-databases/track-changes/about-change-tracking-sql-server.md)
 - [Change Tracking Cleanup and Troubleshooting (Transact-SQL)](../../relational-databases/track-changes/cleanup-and-troubleshoot-change-tracking-sql-server.md)
-- [Change Tracking Functions (Transact-SQL)](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)
-- [Change Tracking System Tables (Transact-SQL)](../../relational-databases/system-tables/change-tracking-tables-transact-sql.md)
+- [Change Tracking Functions (Transact-SQL)](../system-functions/change-tracking-functions-transact-sql.md)
+- [Change Tracking System Tables (Transact-SQL)](../system-tables/change-tracking-tables-transact-sql.md)

@@ -25,7 +25,7 @@ For the best experience, we recommend that customers install the most recent ver
 
 ### Full Support servicing phase
 
-When you're running the latest current branch version of Microsoft Report Builder, you receive all updates: 
+When you're running the latest current branch version of Microsoft Report Builder, you receive all updates:
 
 - Security updates.
 - Critical updates.

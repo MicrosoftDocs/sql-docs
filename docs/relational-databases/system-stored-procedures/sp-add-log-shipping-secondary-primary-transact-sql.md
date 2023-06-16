@@ -86,7 +86,7 @@ The security mode used to connect to the monitor server.
 - `1`: Windows Authentication
 - `0`: [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] authentication
 
-*@monitor_server_security_mode* is **bit** and can't be NULL.
+*@monitor_server_security_mode* is **bit**, with a default of `1`, and can't be NULL.
 
 #### [ @monitor_server_login = ] '*monitor_server_login*'
 

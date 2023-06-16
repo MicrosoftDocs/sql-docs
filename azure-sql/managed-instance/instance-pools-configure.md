@@ -257,7 +257,7 @@ This parameter can be set during instance creation as well.
 
 This step can be done through the Azure portal or using PowerShell commands, and can be done anytime after the subnet is prepared for the managed instance.
 
-For details, see [Allow public endpoint traffic on the network security group](public-endpoint-configure.md#allow-public-endpoint-traffic-on-the-network-security-group).
+For details, see [Allow public endpoint traffic on the network security group](public-endpoint-configure.md#allow-public-endpoint-traffic-in-the-network-security-group).
 
 
 ## Move an existing single instance to a pool

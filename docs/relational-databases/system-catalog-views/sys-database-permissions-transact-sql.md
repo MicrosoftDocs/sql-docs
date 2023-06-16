@@ -1,6 +1,6 @@
 ---
 title: "sys.database_permissions (Transact-SQL)"
-description: sys.database_permissions (Transact-SQL)
+description: sys.database_permissions returns a row for every permission or column-exception permission in the database. 
 author: VanMSFT
 ms.author: vanto
 ms.date: 06/16/2023

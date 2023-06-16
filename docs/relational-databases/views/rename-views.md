@@ -1,6 +1,6 @@
 ---
 title: "Rename Views"
-description: "Rename Views"
+description: "Tutorial on how to rename a view."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 06/16/2023
@@ -24,7 +24,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-ser
 
  1. Obtain a list of all dependencies on the view. Any objects, scripts, or applications that reference the view must be modified to reflect the new name of the view. For more information, see [Get Information About a View](../../relational-databases/views/get-information-about-a-view.md). 
  1. We recommend that you drop the view and recreate it with a new name instead of renaming the view. By recreating the view, you update the dependency information for the objects that are referenced in the view.
-     1. Dropping and re-creating a view will remove any granular SQL permissions that had been assigned to the view. If any permissions had been assigned specifically, you will need to GRANT the permissions to the view again. To retrieve the granular permissions granted on an object before it is dropped, see the examples in [sys.database_permissions (Transact-SQL)](../system-catalog-views/sys-database-permissions-transact-sql.md). To grant permissions, see [Grant a Permission to a Principal](../security/authentication-access/grant-a-permission-to-a-principal.md).
+     1. Dropping and re-creating a view will remove any granular SQL permissions assigned to the view. If any granular SQL permissions are assigned to the view, you will need to GRANT the permissions to the view again after it's re-created. To retrieve the granular permissions granted on an object before it's dropped, see the examples in [sys.database_permissions (Transact-SQL)](../system-catalog-views/sys-database-permissions-transact-sql.md). To grant permissions, see [Grant a Permission to a Principal](../security/authentication-access/grant-a-permission-to-a-principal.md).
   
 
 ## <a id="Permissions"></a> Permissions
@@ -43,9 +43,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-ser
 
 ## <a id="TsqlProcedure"></a> Use Transact-SQL
   
- While you can use `sp_rename` to change the name of the view, we recommend that you delete the existing view and then re-create it with the new name.
+ While you can use `sp_rename` to change the name of the view, we recommend that you delete the existing view, and then re-create it with the new name.
 
-This is because renaming a stored procedure, function, view, or trigger doesn't change the name of the corresponding object in the definition column of the [sys.sql_modules](../system-catalog-views/sys-sql-modules-transact-sql.md) catalog view, leading to future confusion. Therefore, we recommend that `sp_rename` not be used to rename these object types. Instead, drop and re-create the object with its new name.
+ When you rename a stored procedure, function, view, or trigger with `sp_rename`, the name of the corresponding object doesn't change in the definition column of the [sys.sql_modules](../system-catalog-views/sys-sql-modules-transact-sql.md) catalog view. This can lead to future confusion. Therefore, we don't recommend using `sp_rename` to rename objects. Instead, drop and re-create the object with its new name.
   
  For example:
 
@@ -64,4 +64,4 @@ This is because renaming a stored procedure, function, view, or trigger doesn't 
 ## <a id="FollowUp"></a> Follow up: after renaming a view
 
  1. Ensure that all objects, scripts, and applications that reference the view's old name now use the new name.
- 1. Dropping and re-creating a view will remove any granular SQL permissions that had been assigned to the view. If any permissions had been assigned specifically, you will need to GRANT the permissions to the view again. To retrieve the granular permissions granted on an object before it is dropped, see the examples in [sys.database_permissions (Transact-SQL)](../system-catalog-views/sys-database-permissions-transact-sql.md). To grant permissions, see [Grant a Permission to a Principal](../security/authentication-access/grant-a-permission-to-a-principal.md).
+ 1. Dropping and re-creating a view will remove any granular SQL permissions assigned to the view. If any granular SQL permissions are assigned to the view, you'll need to GRANT the permissions to the view again when it's re-created. To retrieve the granular permissions granted on an object before it's dropped, see the examples in [sys.database_permissions (Transact-SQL)](../system-catalog-views/sys-database-permissions-transact-sql.md). To grant permissions, see [Grant a Permission to a Principal](../security/authentication-access/grant-a-permission-to-a-principal.md).

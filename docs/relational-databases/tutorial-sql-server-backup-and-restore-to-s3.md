@@ -12,7 +12,7 @@ ms.custom: intro-quickstart
 
 # Quickstart: SQL backup and restore to S3-Compatible Object Storage
 
-[!INCLUDE [SQL Server 2022](../../includes/applies-to-version/sqlserver2022.md)]
+[!INCLUDE [sqlserver2022](../includes/applies-to-version/sqlserver2022.md)]
 
 This quickstart helps you understand how to write backups to and restore from S3-compatible object storage. The article explains how to write a backup to S3-compatible object storage, and then perform a restore.
 

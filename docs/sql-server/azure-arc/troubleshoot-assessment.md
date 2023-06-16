@@ -1,16 +1,17 @@
 ---
 title: "Troubleshoot best practices assessment on Azure Arc-enabled SQL Server."
 description: "Describes how to troubleshoot best practices assessment on Azure Arc-enabled SQL Server."
-author: MikeRayMSFT
+author: nhebbar
 ms.author: nhebbar2011
+ms.reviewer: mikeray
 ms.date: 06/16/2023
 ms.service: sql
-ms.topic: troubleshooting-assessment
+ms.topic: troubleshooting
 ---
 
 # Troubleshoot best practices assessment on SQL Server
 
-Before you start, ensure that you have met all the necessary [prerequisites](https://learn.microsoft.com/en-us/sql/sql-server/azure-arc/assess?view=sql-server-ver16#prerequisites) for a successful assessment.
+Before you start, ensure that you have met all the necessary [prerequisites](assess.md#prerequisites) for a successful assessment.
 
 Note the logs location. The extension log is created in this folder:
 
@@ -34,18 +35,20 @@ Verify that the user has the following roles for at least one Log Analytics work
 
 ## Error notifications requiring users to wait five minutes
 
-    :::image type="content" source="media/assess/sql-best-practices-assessment-error-notification.png" alt-text="Screenshot showing the error notifications notifying the users to wait for five minutes.":::
+:::image type="content" source="media/assess/sql-best-practices-assessment-error-notification.png" alt-text="Screenshot showing the error notifications notifying the users to wait for five minutes.":::
 
-If such a notification appears and the user keeps the page open, the operation is automatically retriggered after five minutes. If the page is refreshed, the user is advised to wait for five minutes before retrying the operation. In case the same error persists after a long time, verify the state of the **WindowsAgent.SqlServer** extension and ensure that the extension isn't stuck in an **Updating** state. In case the extension is still stuck, verify the connectivity of the Arc machine.
+If such a notification appears and you keep the page open, the portal automatically retries the operation after five minutes. If the page is refreshed, the portal advises you to wait for five minutes before retrying the operation. In case the same error persists after a long time, verify the state of the **WindowsAgent.SqlServer** extension and ensure that the extension isn't stuck in an **Updating** state. In case the extension is still stuck, verify the connectivity of the Arc machine.
 
 ## Assessment run failed
 
 In case the assessment run fails, select the "Failed" hyperlink that should open a page that displays the error message.
 
 1. SQL Connection test failed
+
     :::image type="content" source="media/assess/sql-best-practices-assessment-connection-failed.png" alt-text="Screenshot showing the error message that SQL Server is offline.":::
 
-    - [Troubleshoot SQL Server connectivity failures](https://learn.microsoft.com/en-us/troubleshoot/sql/database-engine/connect/resolve-connectivity-errors-overview)
+    - [Troubleshoot SQL Server connectivity failures](troubleshoot/sql/database-engine/connect/resolve-connectivity-errors-overview)
+
 2. Azure Monitor Agent (AMA) upload failed
 
     - Verify that the Azure Monitor Agent is provisioned correctly and the rest of the setup hasn't been deleted. The following components must be configured correctly to ensure that the agent can upload logs to the workspace:
@@ -73,4 +76,4 @@ In case the assessment run fails, select the "Failed" hyperlink that should open
 2. If there are any issues with the deployment of the Azure Monitor Agent, verify that the Arc machine is connected.
 3. The deployment can always be retriggered with the same LA Workspace by clicking on the **Enable assessment** button.
 
-For any additional assistance, please create a support ticket with Microsoft and attach the log files.  Please visit,  [Create an Azure support request](https://learn.microsoft.com/en-us/azure/azure-portal/supportability/how-to-create-azure-support-request)
+For any additional assistance, please create a support ticket with Microsoft and attach the log files.  Please visit,  [Create an Azure support request](azure/azure-portal/supportability/how-to-create-azure-support-request)

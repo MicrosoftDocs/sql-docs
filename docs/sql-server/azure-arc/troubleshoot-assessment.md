@@ -74,6 +74,6 @@ In case the assessment run fails, select the "Failed" hyperlink that should open
 
 1. Navigate to the deployment and troubleshoot the error.
 2. If there are any issues with the deployment of the Azure Monitor Agent, verify that the Arc machine is connected.
-3. The deployment can always be re-triggered with the same LA Workspace by clicking on the **Enable assessment** button.
+3. The deployment can always be retriggered with the same LA Workspace by clicking on the **Enable assessment** button.
 
-For any additional assistance, please create a support ticket with Microsoft and attach the log files.  Please visit,  [Create an Azure support request](/azure/azure-portal/supportability/how-to-create-azure-support-request)
+For more assistance, create a support ticket with Microsoft and attach the log files. Visit,  [Create an Azure support request](/azure/azure-portal/supportability/how-to-create-azure-support-request)

@@ -1,10 +1,10 @@
 ---
 title: "Restore a Database Backup Using SSMS"
 description: This article explains how to restore a full SQL Server database backup using SQL Server Management Studio.
-author: MashaMSFT
-ms.author: mathoma
+author: erinstellato-ms
+ms.author: erinstellato
 ms.reviewer: randolphwest
-ms.date: 08/17/2022
+ms.date: 06/16/2023
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: conceptual
@@ -73,6 +73,7 @@ For information on SQL Server restore from Azure Blob Storage, see [SQL Server B
             |**Device**|**Select Backup Device**|In this dialog box, you can select from a list of the logical backup devices defined on the server instance.|    
             |**Tape**|**Select Backup Tape**|In this dialog box, you can select from a list of the tape drives that are physically connected to the computer running the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|    
             |**URL**|**Select a Backup File Location**|In this dialog box, you can select an existing SQL Server credential/Azure storage container, add a new Azure storage container with a shared access signature, or generate a shared access signature and SQL Server credential for an existing storage container.  See also, [Connect to a Microsoft Azure Subscription](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)|  
+            |**S3 URL**|**Select S3 backup file location**|In this dialog box, enter the virtual host URL, and the Secret Key ID and Access Key ID for the S3-compatible object storage. For more information, see [SQL Server backup and restore with S3-compatible object storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-s3-compatible-object-storage.md).|  
          
              **Remove**    
              Removes one or more selected files, tapes, or logical backup devices.    
@@ -132,7 +133,7 @@ The following example restores an earlier disk backup of `Sales` and overwrites 
 1.  In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and then expand that instance.  
 2.  Right-click **Databases** and select **Restore Database...**  
 3.  On the **General** page, select **Device** under the **Source** section.
-4.  Select the browse (**...**) button to open the **Select backup devices** dialog box. Select **Add** and navigate to your backup. Select **OK** after you,ve selected your disk backup file(s).
+4.  Select the browse (**...**) button to open the **Select backup devices** dialog box. Select **Add** and navigate to your backup. Select **OK** after you've selected your disk backup file(s).
 5.  Select **OK** to return to the **General** page.
 6.  Select **Options** in the **Select a page** pane.
 7.  Under the **Restore options** section, check **Overwrite the existing database (WITH REPLACE)**.
@@ -228,28 +229,42 @@ In this example, the `Sales` database doesn't currently exist on the server.
 1. Select **OK** to return to the **General** page.
 1. Select **OK**.
 
-#### F.	Restore local backup to Microsoft Azure storage (URL)
+### F.	Restore local backup to Microsoft Azure storage (URL)
 The `Sales` database will be restored to the Microsoft Azure storage container `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` from a backup located at `E:\MSSQL\BAK`.  The SQL Server credential for the Azure container has already been created.  A SQL Server credential for the destination container must already exist as it can't be created through the **Restore** task.  The `Sales` database doesn't currently exist on the server.
-1.	In **Object Explorer**, connect to an instance of the SQL Server Database Engine and then expand that instance.
-2.	Right-click **Databases** and select **Restore Database...**.
-3.	On the **General** page, select **Device** under the **Source** section.
-4.	Select the browse (...) button to open the **Select backup devices** dialog box.  
-5.	Select **File** from the **Backup media type:** drop-down list.
-6.	Select **Add** and the **Locate Backup File** dialog box opens.
-7.	Navigate to `E:\MSSQL\BAK`, select the backup file and then select **OK**.
-8.	Select **OK** to return to the **General** page.
-9.	Select **Files** in the **Select a page** pane.
-10.	Check the box **Relocate all files to folder**.
-11.	Enter the container, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, in the text boxes for **Data file folder:** and **Log file folder:**.
-12.	Select **OK**.
+1. In **Object Explorer**, connect to an instance of the SQL Server Database Engine and then expand that instance.
+1. Right-click **Databases** and select **Restore Database...**.
+1. On the **General** page, select **Device** under the **Source** section.
+1. Select the browse (**...**) button to open the **Select backup devices** dialog box.  
+1. Select **File** from the **Backup media type:** dropdown list.
+1. Select **Add** and the **Locate Backup File** dialog box opens.
+1. Navigate to `E:\MSSQL\BAK`, select the backup file and then select **OK**.
+1. Select **OK** to return to the **General** page.
+1. Select **Files** in the **Select a page** pane.
+1. Check the box **Relocate all files to folder**.
+1. Enter the container, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, in the text boxes for **Data file folder:** and **Log file folder:**.
+1. Select **OK**.
 
-## See Also    
- [Back Up a Transaction Log &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)     
- [Create a Full Database Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)     
- [Restore a Database to a New Location &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)     
- [Restore a Transaction Log Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)     
- [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)     
- [Restore Database &#40;Options Page&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)     
- [Restore Database &#40;General Page&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)    
-    
-  
+### G. Restore local backup from S3-compatible object storage (S3 URL)
+The example below performs a restore of `Sales` from a backup located in S3-compatible object storage.  
+The S3 URL has the format `s3://<endpoint>:<port>/<bucket>/` and the backup file is named `Sales.bak`.  The Secret Key ID and Access Key ID have been obtained from the S3 provider. The `Sales` database doesn't currently exist on the server.
+
+1. In **Object Explorer**, connect to an instance of the SQL Server Database Engine and then expand that instance.
+1. Right-click **Databases** and select **Restore Database...**.
+1. On the **General** page, select **Device** under the **Source** section.
+1. Select the browse (**...**) button to open the **Select backup devices** dialog box. 
+1. Select **S3 URL** from the **Backup media type:** dropdown list.
+1. Select **Add** to open the **Select S3 backup file location** dialog box.
+1. Enter the S3 URL backup file location, and the Secret Key and Access Key.
+1. Select **OK**.
+1. Select **OK** to return to the **General** page.
+1. Select **OK**.
+
+## See also
+
+- [Back Up a Transaction Log &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)
+- [Create a Full Database Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)
+- [Restore a Database to a New Location &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)
+- [Restore a Transaction Log Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)
+- [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)
+- [Restore Database &#40;Options Page&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)
+- [Restore Database &#40;General Page&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)

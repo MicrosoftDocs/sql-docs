@@ -24,7 +24,6 @@ This release is published June 13, 2023.
 - Support for being able to view your SQL Server configuration is now available. See [Manage SQL Server license and billing options](manage-license-type.md).
   - View SQL Server instances
   - Modify host level properties like license type
-  - Subscribe to Extended Security Update (ESU)
   - Skip instances
 
 ## May 2023

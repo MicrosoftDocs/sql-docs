@@ -11,6 +11,21 @@ ms.topic: conceptual
 
 # Release notes - Azure Arc-enabled SQL Server
 
+## June 2023
+
+This release is published June 13, 2023.
+
+### Extension version
+
+`1.1.2353.19`
+
+### Azure extension for SQL Server
+
+- Support for being able to view your SQL Server configuration is now available. See [Manage SQL Server license and billing options](manage-license-type.md).
+  - View SQL Server instances
+  - Modify host level properties like license type
+  - Skip instances
+
 ## May 2023
 
 This release is published May 09, 2023.
@@ -303,7 +318,3 @@ The following issues apply to the September release:
 ## Next steps
 
 **Just want to try things out?**  Get started quickly with [Azure Arc-enabled SQL Server Jumpstart](https://aka.ms/AzureArcSqlServerJumpstart).
-
-
-
-

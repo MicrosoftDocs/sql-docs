@@ -223,7 +223,7 @@ Hot add CPU is the ability to dynamically add CPUs to a running system. Adding C
 Requirements for hot add CPU:
 
 - Requires hardware that supports hot add CPU.
-- Requires a supported version of Windows Server Datacenter or Enterprise edition.
+- Requires a supported version of Windows Server Datacenter or Enterprise edition (Starting on Windows 2012 also supported on Standard edition).
 - Requires [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise edition.
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] can't be configured to use soft NUMA. For more information about soft NUMA, see [Soft-NUMA (SQL Server)](../database-engine/configure-windows/soft-numa-sql-server.md).
 

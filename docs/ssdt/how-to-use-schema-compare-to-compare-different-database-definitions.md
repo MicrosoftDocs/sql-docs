@@ -106,6 +106,8 @@ To update the schema of the target, you have two choices. You can update the tar
 4.  Inspect the script and, if necessary, make any changes to the command variables that define the target database name and associated prefix and the file paths.  
   
 5.  Click the **Execute** button in the editing pane toolbar to run the script.  
-  
-## See Also  
- [SqlSchemaCompareTask Class](https://learn.microsoft.com/en-us/dotnet/api/microsoft.data.tools.schema.tasks.sql.sqlschemacomparetask)  
+
+## See Also
+ [SqlPackage Drift Report](../tools/sqlpackage/sqlpackage-deploy-drift-report)
+ [Azure Data Studio Schema Compare extension](../azure-data-studio/extensions/schema-compare-extension)
+ [SqlSchemaCompareTask Class](https://learn.microsoft.com/en-us/dotnet/api/microsoft.data.tools.schema.tasks.sql.sqlschemacomparetask)

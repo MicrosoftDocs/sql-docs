@@ -47,28 +47,28 @@ In case the assessment run fails, select the "Failed" hyperlink that should open
 
     :::image type="content" source="media/assess/sql-best-practices-assessment-connection-failed.png" alt-text="Screenshot showing the error message that SQL Server is offline.":::
 
-    - [Troubleshoot SQL Server connectivity failures](/troubleshoot/sql/database-engine/connect/resolve-connectivity-errors-overview)
+    [Troubleshoot SQL Server connectivity failures](/troubleshoot/sql/database-engine/connect/resolve-connectivity-errors-overview)
 
 2. Azure Monitor Agent (AMA) upload failed
 
-  Verify that the Azure Monitor Agent is provisioned correctly and the rest of the setup hasn't been deleted. The following components must be configured correctly to ensure that the agent can upload logs to the workspace:
+    Verify that the Azure Monitor Agent is provisioned correctly and the rest of the setup hasn't been deleted. The following components must be configured correctly to ensure that the agent can upload logs to the workspace:
 
-  1. The linked Log Analytics workspace must have a table named `SqlAssessment_CL`.
-     1. Navigate to the **Tables** tab under the linked Log Analytics workspace.
-     2. The `SqlAssessment_CL` table should be present.
-  1. Azure Monitor Agent (version >= 1.10.0) should be successfully provisioned.
-     1. Navigate to the **Extensions** tab under the Arc resource.
-     2. AMA with required version should be successfully provisioned.
-  1. The data collection rule (DCR) and data collection endpoint (DCE) must be in the same location as the LA workspace.
-     1. Navigate to the Overview tab of the resource group to which the Log Analytics workspace belongs.
-     2. Under the list of resources, the **DCR** and the **DCE** can be identified by their prefixes, **sql-bpa-**.
-     3. Verify that the **DCR** and **DCE** are in the same location as the LA workspace.
-  1. The data collection Rule (DCR) should be configured correctly.
-     1. Navigate to The **Resources** tab under the relevant DCR. The Arc machine name should be present on the list.
-     1. Navigate to The **Data Sources** tab under the relevant DCR. Select the entry **Custom Text Logs**.
-        1. Under the **Data Sources** tab, the table name should be `SqlAssessment_CL`.
-        2. Under the **Data Sources** tab, the configured log collection path should be `C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft SQL Server Extension Agent\Assessment\*.csv`.
-        3. Under the **Destination** tab, the LA workspace name should be present.
+   1. The linked Log Analytics workspace must have a table named `SqlAssessment_CL`.
+      1. Navigate to the **Tables** tab under the linked Log Analytics workspace.
+      2. The `SqlAssessment_CL` table should be present.
+   1. Azure Monitor Agent (version >= 1.10.0) should be successfully provisioned.
+      1. Navigate to the **Extensions** tab under the Arc resource.
+      2. AMA with required version should be successfully provisioned.
+   1. The data collection rule (DCR) and data collection endpoint (DCE) must be in the same location as the LA workspace.
+      1. Navigate to the Overview tab of the resource group to which the Log Analytics workspace belongs.
+      2. Under the list of resources, the **DCR** and the **DCE** can be identified by their prefixes, **sql-bpa-**.
+      3. Verify that the **DCR** and **DCE** are in the same location as the LA workspace.
+   1. The data collection Rule (DCR) should be configured correctly.
+      1. Navigate to The **Resources** tab under the relevant DCR. The Arc machine name should be present on the list.
+      1. Navigate to The **Data Sources** tab under the relevant DCR. Select the entry **Custom Text Logs**.
+         1. Under the **Data Sources** tab, the table name should be `SqlAssessment_CL`.
+         2. Under the **Data Sources** tab, the configured log collection path should be `C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft SQL Server Extension Agent\Assessment\*.csv`.
+         3. Under the **Destination** tab, the LA workspace name should be present.
 
 ## Assessment deployment failed
 

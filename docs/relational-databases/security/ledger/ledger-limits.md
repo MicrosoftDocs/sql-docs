@@ -50,7 +50,7 @@ Consider the following when working with ledger.
 - Transactional replication isn't supported for ledger tables.
 - Azure Synapse Link is supported but only for the ledger table, not the history table.
 - The Managed Instance link feature is not supported.
-- Change the digest path manually after a native restore of a database backup to an Azure Managed Instance.
+- Change the digest path manually after a native restore of a database backup to an Azure SQL managed instance.
 
 ### Unsupported data types
 

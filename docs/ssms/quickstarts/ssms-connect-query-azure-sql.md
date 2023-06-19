@@ -4,7 +4,7 @@ description: Connect to an Azure SQL Database or an Azure SQL Managed Instance i
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: mikeray
-ms.date: 06/16/2023
+ms.date: 06/19/2023
 ms.service: sql
 ms.subservice: ssms
 ms.topic: quickstart

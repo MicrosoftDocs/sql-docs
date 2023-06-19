@@ -164,7 +164,7 @@ Azure SQL Database includes two dynamic management views to help you monitor cha
 
 It's important to be aware of a situation where you have different collations between the database and the columns of a table configured for change data capture. CDC uses interim storage to populate side tables. If a table has CHAR or VARCHAR columns with collations that are different from the database collation and if those columns store non-ASCII characters (such as double byte DBCS characters), CDC might not be able to persist the changed data consistent with the data in the base tables. This is because the interim storage variables can't have collations associated with them.
 
-Please consider one of the following approaches to ensure change captured data is consistent with base tables:
+Consider one of the following approaches to ensure change captured data is consistent with base tables:
 
 - Use NCHAR or NVARCHAR data type for columns containing non-ASCII data.
 
@@ -241,7 +241,7 @@ If you create a database in Azure SQL Database as a Microsoft Azure Active Direc
 Similarly, if you create an Azure SQL Database as a SQL user, enabling/disabling change data capture as an Azure AD user won't work.
 
 **Aggressive log truncation**  
-While enabling change data capture (CDC) on Azure SQL Database or SQL Server, please be aware that the aggressive log truncation feature of Accelerated Database Recovery (ADR) is disabled. This is because the CDC scan accesses the database transaction log. Active transactions will continue to hold the transaction log truncation until the transaction commits and CDC scan catches up, or transaction aborts. This might result in the transaction log filling up more than usual and should be monitored so that the transaction log doesn't fill.
+When you enable change data capture (CDC) on Azure SQL Database or SQL Server, the aggressive log truncation feature of Accelerated Database Recovery (ADR) is disabled. This is because the CDC scan accesses the database transaction log. Active transactions will continue to hold the transaction log truncation until the transaction commits and CDC scan catches up, or transaction aborts. This might result in the transaction log filling up more than usual and should be monitored so that the transaction log doesn't fill.
 
 **CDC fails after ALTER COLUMN to VARCHAR and VARBINARY**  
 When the datatype of a column on a CDC-enabled table is changed from `TEXT` to `VARCHAR` or `IMAGE` to `VARBINARY` and an existing row is updated to an off-row value. After the update, the CDC scan will result in errors.
@@ -274,6 +274,28 @@ To resolve this issue:
 For CDC enabled SQL databases, when you use SqlPackage, SSDT, or other SQL tools to Import/Export or Extract/Publish, the `cdc` schema and user get excluded in the new database. Additional CDC objects not included in Import/Export and Extract/Deploy operations include the tables marked as `is_ms_shipped=1` in sys.objects.
 
 Even if CDC isn't enabled and you've defined a custom schema or user named `cdc` in your database that will also be excluded in Import/Export and Extract/Deploy operations to import/setup a new database.
+
+## Troubleshooting
+
+The following table lists the possible solutions if you're having issues with CDC.
+
+These errors associated with CDC can block the capture process from running properly and cause the database transaction log to grow. To review these errors, query the dynamic management view [sys.dm_cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md). In case any errors are present in [sys.dm_cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md) refer to the table below for mitigation steps.
+
+For more information on a particular error code, refer to [Database Engine events and errors](../../relational-databases/errors-events/database-engine-events-and-errors.md).  
+
+|Issue Category|Issue Details|Mitigation|  
+|-----------------|---------------|-----------------|  
+|Metadata modified|200/208 - Invalid object name. Generally occurs when CDC metadata has been dropped.|Disable CDC and review the [guidelines](../track-changes/about-change-data-capture-sql-server.md?#general-guidelines) before re-enabling.<br/>[sys.sp_cdc_disable_db](../system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)|
+|Metadata modified|1202 - Database principal doesn't exist, or user isn't a member.|If the `cdc` user doesn't already exist, execute the following query to create `cdc` user and assign `db_owner` role. <br/><br/>`if(not exists (select * from sys.database_principals where name = 'cdc'))`<br/><br/>`begin`<br/>`create user [cdc] without login with default_schema = [cdc];`<br/>`end`<br/><br/>`exec sp_addrolemember 'db_owner' , 'cdc'`|
+|Metadata modified|15517 - Can't execute as the database principal because the principal doesn't exist. This type of principal can't be impersonated, or you don't have permission.|Disable CDC and review the [guidelines](../track-changes/about-change-data-capture-sql-server.md#general-guidelines) before re-enabling.<br/>[sys.sp_cdc_disable_db](../system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)|
+|Metadata modified|18807 - Can't find an object ID for the replication system table. Verify that the system table exists and is accessible by querying the table directly.|Disable CDC and review the [guidelines](../track-changes/about-change-data-capture-sql-server.md#general-guidelines) before re-enabling.<br/>[sys.sp_cdc_disable_db](../system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)|
+|Metadata modified|21050 - Only members of the `sysadmin` or `db_owner` fixed server role can perform this operation.|Run the following query to verify if `cdc` user has `sysadmin` or `db_owner` role.<br/><br/>`execute as user = 'cdc'`<br/> `select is_srvrolemember('sysadmin'), is_member('db_owner')`<br/><br/>If `cdc` user doesn't have either role, execute the following query to add `db_owner` permission to `cdc` user.<br/><br/>`exec sp_addrolemember 'db_owner' , 'cdc'`|
+|Data size insufficient|1105 - Couldn't allocate space for object in database because the filegroup is full. Create space by deleting unneeded files, dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup.|Review the [guidelines and take the action as mentioned](/azure/azure-sql/database/file-space-manage).|
+|Data size insufficient|1132 - The elastic pool has reached its storage limit.|Review the [guidelines and take the action as mentioned](/azure/azure-sql/database/elastic-pool-scale?#change-elastic-pool-storage-size).|  
+|CDC limitation and errors|913 - CDC capture job fails when processing changes for a table with system CLR datatype.|Refer this article for mitigation and to avoid this error in future.<br/>[CDC capture job fails when processing changes](/troubleshoot/sql/database-engine/replication/cdc-capture-job-fails-processing-changes-table).|
+
+>[NOTE!] 
+> If you disable CDC on the database as a mitigation measure by executing the stored procedure [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md), this action removes all the CDC artifacts, and captured change data is lost.
 
 ## See also  
  [Track Data Changes &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   

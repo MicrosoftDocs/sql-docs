@@ -44,7 +44,7 @@ The article demonstrates the following steps:
    | Setting | Suggested value | Details |
    | --- | --- | --- |
    | **Server type** | Database Engine | Select **Database Engine** (usually the default option). |
-   | **Server name** | The fully qualified server name | Enter the name of your *Azure SQL Database* or *Azure Azure SQL Managed Instance* name. |
+   | **Server name** | The fully qualified server name | Enter the name of your *Azure SQL Database* or *Azure SQL Managed Instance* name. |
    | **Authentication** | | |
    | | Azure Active Directory <sup>1</sup> | |
    | | - Universal with MFA | See [Using multi-factor Azure Active Directory authentication](/azure/azure-sql/database/authentication-mfa-ssms-overview). |
@@ -69,7 +69,7 @@ The article demonstrates the following steps:
 
    :::image type="content" source="media/ssms-connect-query-azure-sql/azure-sql-firewall-sign-in-3.png" alt-text="Screenshot of Azure SQL New Firewall Rule":::
 
-1. To verify that your Azure SQL Database or Azure Azure SQL Managed Instance connection succeeded, expand and explore the objects within **Object Explorer** where the server name, the SQL Server version, and the username are displayed. These objects are different depending on the server type.
+1. To verify that your Azure SQL Database or Azure SQL Managed Instance connection succeeded, expand and explore the objects within **Object Explorer** where the server name, the SQL Server version, and the username are displayed. These objects are different depending on the server type.
 
    :::image type="content" source="media/ssms-connect-query-azure-sql/connect-azure-sql.png" alt-text="Screenshot of connecting to a SQL Azure DB":::
 

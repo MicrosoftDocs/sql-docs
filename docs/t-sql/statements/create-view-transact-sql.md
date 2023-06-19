@@ -70,7 +70,7 @@ AS select_statement
 ```  
   
 ```syntaxsql
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse and Microsoft Fabric
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse
   
 CREATE VIEW [ schema_name . ] view_name [  ( column_name [ ,...n ] ) ]   
 AS <select_statement>   
@@ -80,6 +80,18 @@ AS <select_statement>
     [ WITH <common_table_expression> [ ,...n ] ]  
     SELECT <select_criteria>  
 ```  
+
+```syntaxsql
+-- Syntax for [!INCLUDE [fabric](../../includes/fabric.md)]
+  
+CREATE [ OR ALTER ] VIEW [ schema_name . ] view_name [  ( column_name [ ,...n ] ) ]   
+AS <select_statement>   
+[;]  
+  
+<select_statement> ::=  
+    [ WITH <common_table_expression> [ ,...n ] ]  
+    SELECT <select_criteria>  
+``` 
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 

@@ -99,8 +99,7 @@ The following sections identify features that are improved our introduced in [!I
 | Improved virtual log file (VLF) algorithms | Virtual File Log (VLF) is an abstraction of the physical transaction log. Having a large number of small VLFs based on log growth can affect performance of operations like recovery. We changed the algorithm for how many VLF files we create during certain log grow scenarios. To read more about how we have changed this algorithm in [!INCLUDE[sssql22-md](../includes/sssql22-md.md)], see [Virtual Log Files (VLFs)](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#virtual-log-files-vlfs). This change was introduced in SQL Server 2022 (all editions) and included in [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]. |
 | Instant file initialization for transaction log file growth events | In general, transaction log files cannot benefit from instant file initialization (IFI). Starting with [!INCLUDE[sssql22-md](../includes/sssql22-md.md)] (all editions) and in [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)], instant file initialization can benefit transaction log *growth events* up to 64 MB. The default auto growth size increment for new databases is 64 MB. Transaction log file autogrowth events larger than 64 MB cannot benefit from instant file initialization. |
 
-##   
-Query Store and intelligent query processing
+## Query Store and intelligent query processing
 
 The [intelligent query processing (IQP)](../relational-databases/performance/intelligent-query-processing.md) feature family includes features that improve the performance of existing workloads with minimal implementation effort.
 
@@ -148,7 +147,7 @@ The [intelligent query processing (IQP)](../relational-databases/performance/int
 | Transactional replication | Peer-to-peer replication enables conflict detection and resolution to allow last writer to win. Originally introduced in [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] CU 13. See [Automatically handle conflicts with last write wins](../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md#automatically-handle-conflicts-with-last-write-wins) for more information. |
 | CREATE STATISTICS | Adds [AUTO_DROP option](../relational-databases/statistics/statistics.md#auto_drop-option)<br /><br />Automatic statistics with low priority. |
 | SELECT ... WINDOW clause | Determines the partitioning and ordering of a rowset before the window function, which uses the window in OVER clause is applied. See [SELECT - WINDOW](../t-sql/queries/select-window-transact-sql.md). |
-| IS [NOT] DISTINCT FROM | Determines whether two expressions when compared with each other evaluate to NULL, and guarantees a true or false value as the result. For more information, see [IS [NOT] DISTINCT FROM (Transact-SQL)](../t-sql/queries/is-distinct-from-transact-sql.md). |
+| IS \[NOT\] DISTINCT FROM | Determines whether two expressions when compared with each other evaluate to NULL, and guarantees a true or false value as the result. For more information, see [IS [NOT] DISTINCT FROM (Transact-SQL)](../t-sql/queries/is-distinct-from-transact-sql.md). |
 | Time series functions | You can store and analyze data that changes over time, using time-windowing, aggregation, and filtering capabilities.<br />- [DATE_BUCKET ()](../t-sql/functions/date-bucket-transact-sql.md)<br />- [GENERATE_SERIES ()](../t-sql/functions/generate-series-transact-sql.md)<br /><br />The following adds support to IGNORE NULLS and RESPECT NULLS:<br />- [FIRST_VALUE ()](../t-sql/functions/first-value-transact-sql.md)<br />- [LAST_VALUE ()](../t-sql/functions/last-value-transact-sql.md) |
 | JSON functions | - [ISJSON ()](../t-sql/functions/isjson-transact-sql.md)<br />- [JSON_PATH_EXISTS ()](../t-sql/functions/json-path-exists-transact-sql.md)<br />- [JSON_OBJECT ()](../t-sql/functions/json-object-transact-sql.md)<br />- [JSON_ARRAY ()](../t-sql/functions/json-array-transact-sql.md) |
 | Aggregate functions | - [APPROX_PERCENTILE_CONT ()](../t-sql/functions/approx-percentile-cont-transact-sql.md)<br/>- [APPROX_PERCENTILE_DISC ()](../t-sql/functions/approx-percentile-disc-transact-sql.md)
@@ -215,4 +214,3 @@ This release introduces new features and improvements for accessibility, securit
 - [SQL Server 2022 release notes](sql-server-2022-release-notes.md)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-

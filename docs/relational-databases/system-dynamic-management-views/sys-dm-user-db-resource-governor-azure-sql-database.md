@@ -26,7 +26,7 @@ Returns actual configuration and capacity settings used by resource governance m
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**database_id**|int|ID of the database, unique within a database or within an elastic pool. For details, see [DB_ID](../../t-sql/functions/db-id-transact-sql.md#remarks).|
+|**database_id**|int|ID of the database, unique within a database or within an elastic pool, but not within a logical server. For details, see [DB_ID](../../t-sql/functions/db-id-transact-sql.md#remarks).|
 |**logical_database_guid**|uniqueidentifier|A unique identifier for a user database that remains unchanged through the life of a user database. Renaming the database or changing its service level objective will not change this value.|
 |**physical_database_guid**|uniqueidentifier|A unique identifier for the current physical database corresponding to the user database. Changing the database service level objective will cause this value to change.|
 |**server_name**|nvarchar|Logical server name.|

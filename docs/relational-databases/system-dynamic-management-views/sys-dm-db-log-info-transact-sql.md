@@ -4,7 +4,7 @@ description: "The sys.dm_db_log_info (Transact-SQL) dynamic management function 
 author: "savjani"
 ms.author: "pariks"
 ms.reviewer: wiassaf
-ms.date: "02/27/2023"
+ms.date: "06/19/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: conceptual
@@ -44,7 +44,7 @@ sys.dm_db_log_info ( database_id )
 
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|database_id|**int**|Database ID.|
+|database_id|**int**|Database ID. <br /><br />In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the values are unique within a single database or an elastic pool, but not within a logical server.|
 |file_id|**smallint**|The file ID of the transaction log.|  
 |vlf_begin_offset|**bigint** |Offset location of the [virtual log file (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) from the beginning of the transaction log file.|
 |vlf_size_mb |**float** |[virtual log file (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) size in MB, rounded to two decimal places.|

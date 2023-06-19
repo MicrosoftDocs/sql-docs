@@ -3,7 +3,7 @@ title: "sys.dm_db_index_operational_stats (Transact-SQL)"
 description: sys.dm_db_index_operational_stats (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "02/24/2023"
+ms.date: "06/19/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -77,7 +77,7 @@ sys.dm_db_index_operational_stats (
     
 |Column name|Data type|Description|    
 |-----------------|---------------|-----------------|    
-|**database_id**|**smallint**|Database ID.|    
+|**database_id**|**smallint**|Database ID. <br /><br />In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the values are unique within a single database or an elastic pool, but not within a logical server.|    
 |**object_id**|**int**|ID of the table or view.|    
 |**index_id**|**int**|ID of the index or heap.<br /><br /> 0 = Heap| 
 |**partition_number**|**int**|1-based partition number within the index or heap.| 

@@ -123,10 +123,22 @@ sql_statement [;] [ ... n ]
   | [ DELAYED_DURABILITY = { OFF | ON } ]
 ```
 
-Transact-SQL syntax for stored procedures in Azure Synapse Analytics and Parallel Data Warehouse and [!INCLUDE [fabric](../../includes/fabric.md)]:
+Transact-SQL syntax for stored procedures in Azure Synapse Analytics and Parallel Data Warehouse:
 
 ```syntaxsql
 CREATE { PROC | PROCEDURE } [ schema_name.] procedure_name
+    [ { @parameter data_type } [ OUT | OUTPUT ] ] [ ,...n ]
+AS
+{
+  [ BEGIN ] sql_statement [;][ ,...n ] [ END ]
+}
+[;]
+```
+
+Transact-SQL syntax for stored procedures in [!INCLUDE [fabric](../../includes/fabric.md)]:
+
+```syntaxsql
+CREATE [ OR ALTER ] { PROC | PROCEDURE } [ schema_name.] procedure_name
     [ { @parameter data_type } [ OUT | OUTPUT ] ] [ ,...n ]
 AS
 {

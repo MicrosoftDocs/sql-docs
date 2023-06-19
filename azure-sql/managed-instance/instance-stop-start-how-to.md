@@ -4,7 +4,7 @@ description: This article describes the stop and start feature of Azure SQL Mana
 author: urosmil
 ms.author: urmilano
 ms.reviewer: mathoma
-ms.date: 11/16/2022
+ms.date: 06/19/2023
 ms.service: sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: conceptual
@@ -43,6 +43,9 @@ This feature introduces three new managed instance states, as the following diag
 
 
 After the stop operation is initiated, it typically takes about 5 minutes to stop the instance. However, starting an instance takes about 20 minutes from the moment the start operation is initiated. 
+
+> [!NOTE]
+> When you create a managed instance, start stopped manged instance, or resize a managed instance (change service tier, storage, hardware generation, or vCores), Microsoft Azure allocates compute resources for underlying Virtual Cluster. We are continually investing in additional infrastructure and features to make sure that we always have all sufficient compute resources available to support customer demand. However, you may occasionally experience resource allocation failures because of unprecedented growth in demand for Azure services in specific regions. This may result with prologned operation duration (around 4h in case that new Virtual Cluster buildout, in accordance with [management operation durations](management-operations-overview.md)), or failure to start the instance in which case you should try again later.
 
 Only managed instances in a ready state can be stopped. After the instance is stopped, it stays in a stopped state until a start operation is initiated, either manually or triggered with a defined schedule. Only instances that are in a stopped state can be started.
 
@@ -193,12 +196,15 @@ $getInstanceResp = Invoke-WebRequest -Method Get -Headers $authHeader -Uri $inst
 Write-Host "Instance Get API Response:`n" $getInstanceResp | ConvertFrom-Json
 ```
 
+### [API](#tab/API)
+
 Stopping the managed instance uses the following API call:
 
 `POST
 https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
 providers/Microsoft.Sql/managedInstances/{managedInstanceName}/stop?api-version=2021-08-01-preview`
 
+[Managed Instances - Stop](/rest/api/sql/managedinstances/stop)
 
 ---
 
@@ -247,11 +253,14 @@ $getInstanceResp = Invoke-WebRequest -Method Get -Headers $authHeader -Uri $inst
 Write-Host "Instance Get API Response:`n" $getInstanceResp | ConvertFrom-Json
 ```
 
+### [API](#tab/API)
 
 Starting the managed instance uses the following API call: 
 
 `https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
 providers/Microsoft.Sql/managedInstances/{managedInstanceName}/start?api-version=2021-08-01-preview`
+
+[Managed Instances - Start](/rest/api/sql/managedinstances/start)
 
 ---
 
@@ -303,11 +312,15 @@ $instanceScheduleBody = ConvertTo-Json -InputObject $requestBody -Depth 3
 Invoke-WebRequest -Method Put -Headers $authHeader -Uri $instanceCreateScheduleUri -Body $instanceScheduleBody
 ```
 
+### [API](#tab/API)
+
 Creating a schedule relies on the start StopSchedules API call: 
 
 `PUT
 https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
 providers/Microsoft.Sql/managedInstances/{managedInstanceName}/startStopSchedules/default?api-version=2021-08-01-preview`
+
+[Start Stop Managed Instance Schedules - Create Or Update](/rest/api/sql/start-stop-managed-instance-schedules/create-or-update)
 
 #### Check a schedule
 
@@ -322,12 +335,15 @@ $instanceScheduleGetUri = $UriPrefix + $SqlMIName + "/startStopSchedules/default
 Invoke-WebRequest -Method Get -Headers $authHeader -Uri $instanceScheduleGetUri
 ```
 
+### [API](#tab/API)
+
 Checking the schedule uses the following API call: 
 
 `GET
 https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
 providers/Microsoft.Sql/managedInstances/{managedInstanceName}/startStopSchedules/default?api-version=2021-08-01-preview`
 
+[Start Stop Managed Instance Schedules - Get](/rest/api/sql/start-stop-managed-instance-schedules/get)
 
 ### Delete a schedule
 
@@ -342,11 +358,15 @@ $instanceScheduleDeleteUri = $UriPrefix + $SqlMIName + "/startStopSchedules/defa
 Invoke-WebRequest -Method Delete -Headers $authHeader -Uri $instanceScheduleDeleteUri
 ```
 
+### [API](#tab/API)
+
 Deleting a schedule uses the following API call: 
 
 `DELETE
 https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
 providers/Microsoft.Sql/managedInstances/{managedInstanceName}/startStopSchedules/default?api-version=2021-08-01-preview`
+
+[Start Stop Managed Instance Schedules - Delete](/rest/api/sql/start-stop-managed-instance-schedules/delete)
 
 ---
 

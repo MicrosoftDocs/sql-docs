@@ -3,7 +3,7 @@ title: "sys.dm_user_db_resource_governance (Transact-SQL)"
 description: sys.dm_user_db_resource_governance (Transact-SQL)
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: 11/28/2022
+ms.date: 06/19/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -26,11 +26,11 @@ Returns actual configuration and capacity settings used by resource governance m
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**database_id**|int|ID of the database, unique within an Azure SQL Database server.|
-|**logical_database_guid**|uniqueidentifier|Logical GUID for user database that stays through the life of a user database.  Renaming the database or changing its service level objective will not change this value.|
-|**physical_database_guid**|uniqueidentifier|Physical GUID for a user database which stays through the life of the physical instance of the user database. Changing the database service level objective will cause this value to change.|
+|**database_id**|int|ID of the database, unique within a database or within an elastic pool. For details, see [DB_ID](../../t-sql/functions/db-id-transact-sql.md#remarks).|
+|**logical_database_guid**|uniqueidentifier|A unique identifier for a user database that remains unchanged through the life of a user database. Renaming the database or changing its service level objective will not change this value.|
+|**physical_database_guid**|uniqueidentifier|A unique identifier for the current physical database corresponding to the user database. Changing the database service level objective will cause this value to change.|
 |**server_name**|nvarchar|Logical server name.|
-|**database_name**|nvarchar|Logical database name.|
+|**database_name**|nvarchar|User database name.|
 |**slo_name**|nvarchar|Service level objective, including hardware generation.|
 |**dtu_limit**|int|DTU limit of database (NULL for vCore).|
 |**cpu_limit**|int|vCore limit of database (NULL for DTU databases).|

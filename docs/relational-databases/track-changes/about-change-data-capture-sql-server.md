@@ -285,17 +285,57 @@ For more information on a particular error code, refer to [Database Engine event
 
 |Issue Category|Issue Details|Mitigation|  
 |-----------------|---------------|-----------------|  
-|Metadata modified|200/208 - Invalid object name. Generally occurs when CDC metadata has been dropped.|Disable CDC and review the [guidelines](../track-changes/about-change-data-capture-sql-server.md?#general-guidelines) before re-enabling.<br/>[sys.sp_cdc_disable_db](../system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)|
-|Metadata modified|1202 - Database principal doesn't exist, or user isn't a member.|If the `cdc` user doesn't already exist, execute the following query to create `cdc` user and assign `db_owner` role. <br/><br/>`if(not exists (select * from sys.database_principals where name = 'cdc'))`<br/><br/>`begin`<br/>`create user [cdc] without login with default_schema = [cdc];`<br/>`end`<br/><br/>`exec sp_addrolemember 'db_owner' , 'cdc'`|
-|Metadata modified|15517 - Can't execute as the database principal because the principal doesn't exist. This type of principal can't be impersonated, or you don't have permission.|Disable CDC and review the [guidelines](../track-changes/about-change-data-capture-sql-server.md#general-guidelines) before re-enabling.<br/>[sys.sp_cdc_disable_db](../system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)|
-|Metadata modified|18807 - Can't find an object ID for the replication system table. Verify that the system table exists and is accessible by querying the table directly.|Disable CDC and review the [guidelines](../track-changes/about-change-data-capture-sql-server.md#general-guidelines) before re-enabling.<br/>[sys.sp_cdc_disable_db](../system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)|
-|Metadata modified|21050 - Only members of the `sysadmin` or `db_owner` fixed server role can perform this operation.|Run the following query to verify if `cdc` user has `sysadmin` or `db_owner` role.<br/><br/>`execute as user = 'cdc'`<br/> `select is_srvrolemember('sysadmin'), is_member('db_owner')`<br/><br/>If `cdc` user doesn't have either role, execute the following query to add `db_owner` permission to `cdc` user.<br/><br/>`exec sp_addrolemember 'db_owner' , 'cdc'`|
+|Metadata modified|200/208 - Invalid object name. Generally occurs when CDC metadata has been dropped.|Disable CDC and review the [guidelines](../track-changes/about-change-data-capture-sql-server.md?#general-guidelines) before re-enabling.<br/>[sys.sp_cdc_disable_db](../system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md).|
+|Metadata modified|1202 - Database principal doesn't exist, or user isn't a member.|If the `cdc` user doesn't already exist, execute the following query to create `cdc` user and assign `db_owner` role.<br/><br/>For an example, see [Create user and assign role](#create-user-and-assign-role).|
+|Metadata modified|15517 - Can't execute as the database principal because the principal doesn't exist. This type of principal can't be impersonated, or you don't have permission.|Disable CDC and review the [guidelines](../track-changes/about-change-data-capture-sql-server.md#general-guidelines) before re-enabling.<br/>[sys.sp_cdc_disable_db](../system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md).|
+|Metadata modified|18807 - Can't find an object ID for the replication system table. Verify that the system table exists and is accessible by querying the table directly.|Disable CDC and review the [guidelines](../track-changes/about-change-data-capture-sql-server.md#general-guidelines) before re-enabling.<br/>[sys.sp_cdc_disable_db](../system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md).|
+|Metadata modified|21050 - Only members of the `sysadmin` or `db_owner` fixed server role can perform this operation.|Check [Check and add role membership](#check-and-add-role-membership).|
 |Data size insufficient|1105 - Couldn't allocate space for object in database because the filegroup is full. Create space by deleting unneeded files, dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup.|Review the [guidelines and take the action as mentioned](/azure/azure-sql/database/file-space-manage).|
 |Data size insufficient|1132 - The elastic pool has reached its storage limit.|Review the [guidelines and take the action as mentioned](/azure/azure-sql/database/elastic-pool-scale?#change-elastic-pool-storage-size).|  
 |CDC limitation and errors|913 - CDC capture job fails when processing changes for a table with system CLR datatype.|Refer this article for mitigation and to avoid this error in future.<br/>[CDC capture job fails when processing changes](/troubleshoot/sql/database-engine/replication/cdc-capture-job-fails-processing-changes-table).|
 
->[NOTE!] 
+> [!NOTE]
 > If you disable CDC on the database as a mitigation measure by executing the stored procedure [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md), this action removes all the CDC artifacts, and captured change data is lost.
+
+### Create user and assign role
+
+The following query creates a user (`cdc`), and assigns it `db_owner` role.
+
+```sql
+IF(
+   NOT EXISTS 
+    ( 
+     SELECT * 
+        FROM sys.database_principals 
+        WHERE NAME = 'cdc'
+    )
+   )
+
+BEGIN
+   CREATE user [cdc] 
+      WITHOUT 
+      LOGIN WITH default_schema = [cdc];
+END
+
+EXEC sp_addrolemember 'db_owner' , 'cdc';
+```
+
+### Check and add role membership
+
+To verify if `cdc` login belongs to either `sysadmin` or `db_owener` role, run the following query:
+
+```sql
+EXECUTE AS USER = 'cdc'
+
+SELECT is_srvrolemember('sysadmin'), 
+       is_member('db_owner')
+```
+
+If `cdc` user doesn't belong to either role, execute the following query to add `db_owner` permission to `cdc` user.
+
+```sql
+EXEC sp_addrolemember 'db_owner' , 'cdc';
+```
 
 ## See also  
  [Track Data Changes &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   

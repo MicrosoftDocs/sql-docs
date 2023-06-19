@@ -10462,24 +10462,28 @@ items:
       items:
         - name: Platform release notes
           href: big-data-cluster/release-notes-big-data-cluster.md
-        - name: Cumulative Update 19
-          href: big-data-cluster/release-notes-cumulative-update-19.md
-        - name: Cumulative Update 18
-          href: big-data-cluster/release-notes-cumulative-update-18.md
-        - name: Cumulative Update 17
-          href: big-data-cluster/release-notes-cumulative-update-17.md
-        - name: Cumulative Update 16
-          href: big-data-cluster/release-notes-cumulative-update-16.md
-        - name: Cumulative Update 15
-          href: big-data-cluster/release-notes-cumulative-update-15.md
-        - name: Cumulative Update 14
-          href: big-data-cluster/release-notes-cumulative-update-14.md
-        - name: Cumulative Update 13
-          href: big-data-cluster/release-notes-cumulative-update-13.md
-        - name: Cumulative Update 12
-          href: big-data-cluster/release-notes-cumulative-update-12.md
-        - name: Cumulative Update history
-          href: big-data-cluster/release-notes-cumulative-updates-history.md
+        - name: Release history
+          items:
+          - name: Cumulative Update history
+            href: big-data-cluster/release-notes-cumulative-updates-history.md
+          - name: Past details
+            items: 
+            - name: Cumulative Update 19
+              href: big-data-cluster/release-notes-cumulative-update-19.md
+            - name: Cumulative Update 18
+              href: big-data-cluster/release-notes-cumulative-update-18.md
+            - name: Cumulative Update 17
+              href: big-data-cluster/release-notes-cumulative-update-17.md
+            - name: Cumulative Update 16
+              href: big-data-cluster/release-notes-cumulative-update-16.md
+            - name: Cumulative Update 15
+              href: big-data-cluster/release-notes-cumulative-update-15.md
+            - name: Cumulative Update 14
+              href: big-data-cluster/release-notes-cumulative-update-14.md
+            - name: Cumulative Update 13
+              href: big-data-cluster/release-notes-cumulative-update-13.md
+            - name: Cumulative Update 12
+              href: big-data-cluster/release-notes-cumulative-update-12.md
   - name: Install
     items:
     - name: Get Started

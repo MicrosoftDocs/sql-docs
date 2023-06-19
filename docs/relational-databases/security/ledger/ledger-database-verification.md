@@ -85,7 +85,7 @@ Ideally, you want to minimize or even eliminate the gap between the time the att
 Scheduling database verification in Azure SQL Database can be done with Elastic Jobs or Azure Automation. For scheduling the database verification in Azure SQL Managed Instance and SQL Server, you can use SQL Server Agent.
 
 > [!NOTE]
-> Ledger in Azure Managed Instance is currently in public preview.
+> Ledger in Azure SQL Managed Instance is currently in public preview.
 
 ### Permissions
 Database verification requires the `VIEW LEDGER CONTENT` permission. For details on permissions related to ledger tables, see [Permissions](../permissions-database-engine.md).

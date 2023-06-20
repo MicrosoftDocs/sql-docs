@@ -44,13 +44,14 @@ For more information on Azure AD hybrid identities, setup, and synchronization, 
 
 ## Create and populate an Azure AD instance
 
-Create an Azure AD instance and populate it with users and groups. Azure AD can be the initial Azure AD managed domain. Azure AD can also be an on-premises Active Directory Domain Services that is federated with the Azure AD.
+Create an Azure AD instance and populate it with users and groups. Azure AD can be the initial Azure AD managed domain. Azure AD can also be an on-premises Active Directory Domain Service that is federated with Azure AD.
 
 For more information, see:
+- [What is Azure Active Directory?](/azure/active-directory/fundamentals/active-directory-whatis)
 - [Integrating your on-premises identities with Azure Active Directory](/azure/active-directory/hybrid/whatis-hybrid-identity)
 - [Add your own domain name to Azure AD](/azure/active-directory/fundamentals/add-custom-domain)
-- [Microsoft Azure now supports federation with Windows Server Active Directory](https://azure.microsoft.com/blog/windows-azure-now-supports-federation-with-windows-server-active-directory/)
-- [What is Azure Active Directory?](/azure/active-directory/fundamentals/active-directory-whatis)
+- [What is Federation with Azure AD?](/azure/active-directory/hybrid/connect/whatis-fed)
+- [Directory synchronization with Azure Active Directory](/azure/active-directory/fundamentals/sync-directory)
 - [Manage Azure AD using Windows PowerShell](/powershell/module/azuread)
 - [Hybrid Identity Required Ports and Protocols](/azure/active-directory/hybrid/reference-connect-ports).
 

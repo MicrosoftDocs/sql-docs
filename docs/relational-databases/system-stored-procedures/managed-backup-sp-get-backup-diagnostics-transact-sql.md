@@ -59,11 +59,11 @@ The end of the time period up to which the events should be displayed. *@end_tim
 
 This stored procedure returns a table with the following information:
 
-| Column Name | Data Type | Description |
+| Column name | Data type | Description |
 | --- | --- | --- |
-| event_type | **nvarchar(512)** | Type of Extended Event |
-| Event | **nvarchar(512)** | Summary of the event logs |
-| Timestamp | **timestamp** | Timestamp of the event that shows when the event was raised |
+| `event_type` | **nvarchar(512)** | Type of Extended Event |
+| `Event` | **nvarchar(512)** | Summary of the event logs |
+| `Timestamp` | **timestamp** | Timestamp of the event that shows when the event was raised |
 
 ## Permissions
 

@@ -68,7 +68,7 @@ The value for the parameter you want to set. *@parameter_value* is **nvarchar(12
 | 'FileRetentionDebugXevent' | { 'true' \| 'false' }
 | 'StorageOperationDebugXevent' = { 'true' \| 'false' } | N/A |
 
-## Return code value
+## Return code values
 
 `0` (success) or `1` (failure).
 

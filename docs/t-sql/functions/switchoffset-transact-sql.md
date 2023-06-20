@@ -8,8 +8,8 @@ ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
-  - "SWITCHTZ"
-  - "SWITCHTZ_TSQL"
+  - "SWITCHOFFSET"
+  - "SWITCHOFFSET_TSQL"
 helpviewer_keywords:
   - "dates [SQL Server], functions"
   - "functions [SQL Server], time"

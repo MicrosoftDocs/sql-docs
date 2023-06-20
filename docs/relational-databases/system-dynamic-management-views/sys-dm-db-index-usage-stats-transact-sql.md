@@ -3,7 +3,7 @@ title: "sys.dm_db_index_usage_stats (Transact-SQL)"
 description: sys.dm_db_index_usage_stats (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "02/24/2023"
+ms.date: "06/19/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -33,7 +33,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**database_id**|**smallint**|ID of the database on which the table or view is defined.|  
+|**database_id**|**smallint**|ID of the database on which the table or view is defined. <br /><br />In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the values are unique within a single database or an elastic pool, but not within a logical server.|  
 |**object_id**|**int**|ID of the table or view on which the index is defined|  
 |**index_id**|**int**|ID of the index.|  
 |**user_seeks**|**bigint**|Number of seeks by user queries.|  

@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2019 Big Data Clusters CU20 release notes
 titleSuffix: SQL Server Big Data Clusters
-description: This article describes the SQL Server 2019 Big Data Clusters Cumulative Update 19 contents.
+description: This article describes the SQL Server 2019 Big Data Clusters Cumulative Update 20 contents.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei

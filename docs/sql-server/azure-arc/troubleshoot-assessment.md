@@ -41,7 +41,7 @@ If such a notification appears and you keep the page open, the portal automatica
 
 ## Assessment run failed
 
-In case the assessment run fails, select the "Failed" hyperlink that should open a page that displays the error message.
+In case the assessment run fails, select the corresponding row to open a page that displays the error message.
 
 1. SQL Connection test failed
 
@@ -49,7 +49,13 @@ In case the assessment run fails, select the "Failed" hyperlink that should open
 
     [Troubleshoot SQL Server connectivity failures](/troubleshoot/sql/database-engine/connect/resolve-connectivity-errors-overview)
 
-2. Azure Monitor Agent (AMA) upload failed
+2. The server principal isn't able to access the database under the current security context.
+
+    :::image type="content" source="media/assess/sql-best-practices-assessment-connection-failed.png" alt-text="Screenshot showing the error message that server principal isn't able to access the database.":::
+
+   Assign the SQL Server sysadmin server role to SQL Server built-in login NT AUTHORITY\SYSTEM for all the SQL Server instances running on the machine.
+
+3. Azure Monitor Agent (AMA) upload failed
 
     Verify that the Azure Monitor Agent is provisioned correctly and the rest of the setup hasn't been deleted. The following components must be configured correctly to ensure that the agent can upload logs to the workspace:
 
@@ -69,6 +75,12 @@ In case the assessment run fails, select the "Failed" hyperlink that should open
          1. Under the **Data Sources** tab, the table name should be `SqlAssessment_CL`.
          2. Under the **Data Sources** tab, the configured log collection path should be `C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft SQL Server Extension Agent\Assessment\*.csv`.
          3. Under the **Destination** tab, the LA workspace name should be present.
+
+    In case any of the components are missing:
+
+      1. Disable assessment by selecting **Configuration** > **Disable assessment**.
+      2. Confirm that you have the required permissions to enable assessment.
+      3. Enable assessment by selecting **Enable assessment**.
 
 ## Assessment deployment failed
 

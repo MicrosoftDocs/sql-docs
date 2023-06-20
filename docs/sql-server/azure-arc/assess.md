@@ -145,7 +145,7 @@ After you have enabled the best practices assessment, you can run, or configure 
 
 ## View best practices assessment results
 
-- On the **Best practices assessment** pane, select **View assessment results**.
+- On the **Best practices assessment** pane, select any of the individual row items to view the results.
 
 ## Results page
 

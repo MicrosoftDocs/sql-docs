@@ -1,33 +1,33 @@
 ---
-title: SQL Server 2019 Big Data Clusters CU19 release notes
+title: SQL Server 2019 Big Data Clusters CU21 release notes
 titleSuffix: SQL Server Big Data Clusters
 description: This article describes the SQL Server 2019 Big Data Clusters Cumulative Update 19 contents.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei
-ms.date: 02/16/2023
+ms.date: 06/19/2023
 ms.service: sql
 ms.subservice: big-data-cluster
 ms.topic: conceptual
 ---
 
-# SQL Server 2019 Big Data Clusters CU19 release notes
+# SQL Server 2019 Big Data Clusters CU21 release notes
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-The following release notes apply to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] cumulative update 19 (CU19).
+The following release notes apply to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] cumulative update 21 (CU21).
 
-## CU19 changes and new capabilities
+## CU21 changes and new capabilities
 
    > [!WARNING]
    > On Cumulative Update 15, __the upgrade order is critical__. Upgrade your big data cluster to CU15 __before__ upgrading the Kubernetes cluster to version 1.21. If the Kubernetes cluster is upgraded to version 1.21 before BDC is upgraded to CU14 or CU15 then the cluster will end up in error state and the BDC upgrade will not succeed. In this case, reverting back to Kubernetes version 1.20 will fix the problem.
    > <br/> This __doesn't affect new deployments__ of SQL Server 2019 Big Data Clusters CU15 on Kubernetes API 1.21 clusters.
 
-For detailed SQL Server engine changes, check the [official SQL Server 2019 CU19 knowledge base article KB 5023049](https://support.microsoft.com/help/5023049).
+For detailed SQL Server engine changes, check the [official SQL Server 2019 CU21 knowledge base article KB 5025808](/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate21).
 
-## Tested configurations for CU19
+## Tested configurations for CU21
 
-[!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] CU19 was tested on the following environment combinations:
+[!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] CU21 was tested on the following environment combinations:
 
 | Container OS | Kubernetes API | Runtime | Data Storage | Log Storage |
 | ------------ | ------- | ------- | ------------ | ----------- |
@@ -41,7 +41,7 @@ Reference Architecture White Papers for [!INCLUDE[big-data-clusters-nover](../in
 ## System environment
 
 * __Operating System__: Ubuntu 20.04.5 LTS
-* __SQL Server__:     15.0.4298.1
+* __SQL Server__:     15.0.4312.1
     * __Java__: Azul Zulu JRE 11.0.9.1
     * __Python__: 3.7.2 (miniconda 4.5.12)
     * __R__: Microsoft R 3.5.2

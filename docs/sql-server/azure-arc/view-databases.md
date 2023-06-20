@@ -118,9 +118,9 @@ resources
 resources
 | extend SQLversion =properties.version
 | extend SQLEdition =properties.edition
-| extend lincentype =properties.licenseType
+| extend LicenseType =properties.licenseType
 | where type contains("microsoft.azurearcdata/sqlserverinstances")
-| project name,SQLversion,SQLEdition,lincentype
+| project name,SQLversion,SQLEdition,LicenseType
 ```
 
 ### Scenario 8: Show a count of databases by compatibility

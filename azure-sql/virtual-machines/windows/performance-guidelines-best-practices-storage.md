@@ -4,7 +4,7 @@ description: Provides storage best practices and guidelines to optimize the perf
 author: bluefooted
 ms.author: pamela
 ms.reviewer: mathoma, randolphwest
-ms.date: 06/13/2023
+ms.date: 06/20/2023
 ms.service: virtual-machines-sql
 ms.subservice: performance
 ms.topic: conceptual
@@ -78,7 +78,7 @@ Format your data disk to use 64-KB allocation unit size for all data files place
 
 ## Premium SSD v2
 
-You should use Premium SSD v2 disks when running SQL Server workloads in [supported regions](/azure/virtual-machines/disks-types#regional-availability), if the [current limitations](/azure/virtual-machines/disks-types#premium-ssd-v2-limitations) are suitable for your environment. Depending on your configuration, Premium SSD v2 can be cheaper than Premium SSDs, while also providing performance improvements. With Premium SSD v2, you can individually adjust your throughput or IOPS independently from the size of your disk. Being able to individually adjust performance options allows for this larger cost savings and allows you to script changes to meet performance requirements during anticipated or known periods of need. We recommend using Premium SSD v2 when using the [Ebdsv5 VM series](/azure/virtual-machines/ebdsv5-ebsv5-series) as it is a more cost-effective solution for these high I/O throughput machines. Note that Premium SSD v2 does not currently support host caching, so choosing a VM size with high uncached throughput such as the Ebdsv5 series VMs is recommended.
+You should use Premium SSD v2 disks when running SQL Server workloads in [supported regions](/azure/virtual-machines/disks-types#regional-availability), if the [current limitations](/azure/virtual-machines/disks-types#premium-ssd-v2-limitations) are suitable for your environment. Depending on your configuration, Premium SSD v2 can be cheaper than Premium SSDs, while also providing performance improvements. With Premium SSD v2, you can individually adjust your throughput or IOPS independently from the size of your disk. Being able to individually adjust performance options allows for this larger cost savings and allows you to script changes to meet performance requirements during anticipated or known periods of need. We recommend using Premium SSD v2 when using the [Ebdsv5 VM series](/azure/virtual-machines/ebdsv5-ebsv5-series) as it is a more cost-effective solution for these high I/O throughput machines. Premium SSD v2 doesn't currently support host caching, so choosing a VM size with high uncached throughput such as the Ebdsv5 series VMs is recommended.
 
 Premium SSD v2 disks aren't currently supported by SQL Server gallery images, but they can be used with SQL Server on Azure VMs when configured manually. Support for SQL Server gallery images will be coming soon.
 
@@ -86,7 +86,7 @@ Premium SSD v2 disks aren't currently supported by SQL Server gallery images, bu
 
 Use Premium SSDs for data and log files for production SQL Server workloads. Premium SSD IOPS and bandwidth vary based on the [disk size and type](/azure/virtual-machines/disks-types).
 
-For production workloads, use the P30 and/or P40 disks for SQL Server data files to ensure caching support and use the P30 up to P80 for SQL Server transaction log files.  For the best total cost of ownership, start with P30s (5000 IOPS/200 MBPS) for data and log files and only choose higher capacities when you need to control the VM disk count. For dev/test or small systems you can choose to use sizes smaller than P30 as these do support caching, but they do not offer reserved pricing.
+For production workloads, use the P30 and/or P40 disks for SQL Server data files to ensure caching support and use the P30 up to P80 for SQL Server transaction log files.  For the best total cost of ownership, start with P30s (5000 IOPS/200 MBPS) for data and log files and only choose higher capacities when you need to control the VM disk count. For dev/test or small systems you can choose to use sizes smaller than P30 as these do support caching, but they don't offer reserved pricing.
 
 For OLTP workloads, match the target IOPS per disk (or storage pool) with your performance requirements using workloads at peak times and the `Disk Reads/sec` + `Disk Writes/sec` performance counters. For data warehouse and reporting workloads, match the target throughput using workloads at peak times and the `Disk Read Bytes/sec` + `Disk Write Bytes/sec`.
 

@@ -4,7 +4,7 @@ description: Learn details about the changes in SQL Server Reporting Services (S
 author: casualoak
 ms.author: petebro
 ms.reviewer: maggies
-ms.date: 06/13/2023
+ms.date: 06/20/2023
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
@@ -94,6 +94,12 @@ Release Candidate 0 (RC0)
 ::: moniker-end
 
 ## SQL Server 2019 Reporting Services
+
+## 15.0.8563.17333, 2023/06/20
+*(Product Version: 15.0.1102.1075)*
+- Fixed issue with date type parameters and Oracle data source
+- Fixed slowness of Large MDX Query as an Expression 
+- Fixed issue with export to Excel / Word when using Virtual Service Account and Execution Account 
 
 ## 15.0.8434.2956, 2023/02/06
 *(Product Version: 15.0.1102.1047)*

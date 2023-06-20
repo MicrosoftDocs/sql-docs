@@ -10468,6 +10468,10 @@ items:
             href: big-data-cluster/release-notes-cumulative-updates-history.md
           - name: Past details
             items: 
+            - name: Cumulative Update 21
+              href: big-data-cluster/release-notes-cumulative-update-21.md
+            - name: Cumulative Update 20
+              href: big-data-cluster/release-notes-cumulative-update-20.md
             - name: Cumulative Update 19
               href: big-data-cluster/release-notes-cumulative-update-19.md
             - name: Cumulative Update 18

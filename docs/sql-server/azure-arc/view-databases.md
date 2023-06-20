@@ -43,7 +43,7 @@ After you create, modify, or delete a database, changes are visible in Azure por
 
 ## How to use Azure Resource Graph to query data
 
-Here are some example scenarios showing how you use [Azure Resource Graph](/azure/governance/resource-graph/overview) to query data that is available with the release of viewing databases for Azure Arc-enabled SQL Server.
+Here are some example scenarios showing how you use [Azure Resource Graph](/azure/governance/resource-graph/overview) to query data that is available with the release of viewing databases for Azure Arc-enabled SQL Server.
 
 ### Scenario 1: Get 10 databases
 
@@ -51,16 +51,16 @@ Get 10 databases and return what properties are available to query:
 
 ```kusto
 resources
-| where type =~ 'Microsoft.AzureArcData/sqlServerInstances/databases'
+| where type =~ 'Microsoft.AzureArcData/sqlServerInstances/databases'
 | limit 10
 ```
 
-Many of the most interesting properties to query on are in the `properties` property. To explore the available properties, run this query and then select **See details** on a row.  This returns the properties in a json viewer on the right side.
+Many of the most interesting properties to query on are in the `properties` property. To explore the available properties, run this query and then select **See details** on a row.  This returns the properties in a json viewer on the right side.
 
 ```kusto
 resources
-| where type =~ 'Microsoft.AzureArcData/sqlServerInstances/databases'
-| project properties
+| where type =~ 'Microsoft.AzureArcData/sqlServerInstances/databases'
+| project properties
 ```
 
 You can navigate the hierarchy of the properties json by using a period in between each level of the properties json.
@@ -69,8 +69,8 @@ You can navigate the hierarchy of the properties json by using a period in betwe
 
 ```kusto
 resources
-| where type =~ 'Microsoft.AzureArcData/sqlServerInstances/databases'
-| where properties.databaseOptions.isEncrypted == false
+| where type =~ 'Microsoft.AzureArcData/sqlServerInstances/databases'
+| where properties.databaseOptions.isEncrypted == false
 ```
 
 ### Scenario 3: Obtain the count of databases that are encrypted vs not encrypted
@@ -79,7 +79,6 @@ resources
 resources
 | extend isEncrypted =properties.databaseOptions.isEncrypted
 | where type contains("microsoft.azurearcdata/sqlserverinstances/databases")
-| project name,isEncrypted
 | summarize count() by tostring(isEncrypted)
 | order by ['isEncrypted'] asc
 ```
@@ -99,9 +98,9 @@ This example returns all databases in `westus3` location with compatibility leve
 
 ```kusto
 resources
-| where type =~ 'Microsoft.AzureArcData/sqlServerInstances/databases'
-| where location == "westus3"
-| where  properties.compatibilityLevel == "160"
+| where type =~ 'Microsoft.AzureArcData/sqlServerInstances/databases'
+| where location == "westus3"
+| where  properties.compatibilityLevel == "160"
 ```
 
 ### Scenario 6: Show the SQL Server version distribution
@@ -110,7 +109,6 @@ resources
 resources
 | extend SQLversion =properties.version
 | where type contains("microsoft.azurearcdata/sqlserverinstances")
-| project name,SQLversion
 | summarize count() by tostring(SQLversion)
 ```
 
@@ -125,18 +123,18 @@ resources
 | project name,SQLversion,SQLEdition,lincentype
 ```
 
-### Scenario 8: Show a count of databases by compatibility
+### Scenario 8: Show a count of databases by compatibility
 
 This example returns the number of databases, ordered by the compatibility level:
 
 ```kusto
 resources
-| where type =~ 'Microsoft.AzureArcData/sqlServerInstances/databases'
-| summarize count() by tostring(properties.compatibilityLevel)
-| order by properties_compatibilityLevel asc
+| where type =~ 'Microsoft.AzureArcData/sqlServerInstances/databases'
+| summarize count() by tostring(properties.compatibilityLevel)
+| order by properties_compatibilityLevel asc
 ```
 
-You can also [create charts and pin them to dashboards](/azure/governance/resource-graph/first-query-portal).
+You can also [create charts and pin them to dashboards](/azure/governance/resource-graph/first-query-portal).
 
 :::image type="content" source="media/view-databases/database-chart.png" alt-text="Diagram of a pie chart that displays the query results for the count of databases by compatibility level.":::
 

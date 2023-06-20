@@ -3,7 +3,7 @@ title: "sys.dm_database_replica_states (Azure SQL Database)"
 description: sys.dm_database_replica_states returns state information for each database that participates in primary and secondary replicas.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 03/15/2023
+ms.date: 06/19/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -29,7 +29,7 @@ Returns state information for each database that participates in primary and sec
 
 | Column name | Data type | Description (on primary replica) |
 | --- | --- | --- |
-| **database_id** | **int** | Identifier of the database. |
+| **database_id** | **int** | Identifier of the database. <br /><br />In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the values are unique within a single database or an elastic pool, but not within a logical server.|
 | **group_id** | **uniqueidentifier** | Identifier of the availability group to which the database belongs. |
 | **replica_id** | **uniqueidentifier** | Identifier of the availability replica within the availability group. |
 | **group_database_id** | **uniqueidentifier** | Identifier of the database within the availability group. This identifier is identical on every replica to which this database is joined. |

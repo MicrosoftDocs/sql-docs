@@ -5,7 +5,7 @@ description: This article describes the updates and known issues for SQL Server 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei, randolphwest
-ms.date: 06/16/2023
+ms.date: 06/19/2023
 ms.service: sql
 ms.subservice: big-data-cluster
 ms.topic: conceptual
@@ -22,17 +22,17 @@ For the latest release notes, see [SQL Server 2019 Big Data Clusters platform re
 
 Cumulative Update 21 (CU21) release for [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] Big Data Clusters, [KB 5025808](/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate21).
 
-| Package version | Image tag |  
+| Package version | Image tag |  Contents|
 | --- | --- | --- |
-| 15.0.4316.3 | [2019-CU21-ubuntu-20.04] |  
+| 15.0.4316.3 | [2019-CU21-ubuntu-20.04] |  [SQL Server Big Data Clusters Cumulative Update 21](release-notes-cumulative-update-21.md) |
 
 ## <a id="cu19"></a> CU20 (April 2023)
 
 Cumulative Update 20 (CU20) release for [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] Big Data Clusters, [KB 5024276](https://support.microsoft.com/help/5024276).
 
-| Package version | Image tag |  
+| Package version | Image tag | Contents |
 | --- | --- | --- |
-| 15.0.4312.2 | [2019-CU20-ubuntu-20.04] |
+| 15.0.4312.2 | [2019-CU20-ubuntu-20.04] | [SQL Server Big Data Clusters Cumulative Update 20](release-notes-cumulative-update-20.md) |
 
 ## <a id="cu19"></a> CU19 (February 2023)
 

@@ -51,22 +51,9 @@ sudo apk add --allow-untrusted mssql-tools18_18.2.1.1-1_amd64.apk
 ### [Debian](#tab/debian18-install)
 
 ```bash
-sudo su
-curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+sudo curl -o /etc/apt/trusted.gpg.d/microsoft.asc https://packages.microsoft.com/keys/microsoft.asc
+sudo curl -o /etc/apt/sources.list.d/mssql-release.list https://packages.microsoft.com/config/debian/$(lsb_release -rs)/prod.list
 
-#Download appropriate package for the OS version
-#Choose only ONE of the following, corresponding to your OS version
-
-#Debian 9
-curl https://packages.microsoft.com/config/debian/9/prod.list > /etc/apt/sources.list.d/mssql-release.list
-
-#Debian 10
-curl https://packages.microsoft.com/config/debian/10/prod.list > /etc/apt/sources.list.d/mssql-release.list
-
-#Debian 11
-curl https://packages.microsoft.com/config/debian/11/prod.list > /etc/apt/sources.list.d/mssql-release.list
-
-exit
 sudo apt-get update
 sudo ACCEPT_EULA=Y apt-get install -y msodbcsql18
 # optional: for bcp and sqlcmd
@@ -141,18 +128,14 @@ sudo zypper install -y unixODBC-devel
 ### [Ubuntu](#tab/ubuntu18-install)
 
 ```bash
-if ! [[ "18.04 20.04 22.04 22.10" == *"$(lsb_release -rs)"* ]];
+if ! [[ "20.04 22.04 22.10 23.04" == *"$(lsb_release -rs)"* ]];
 then
     echo "Ubuntu $(lsb_release -rs) is not currently supported.";
     exit;
 fi
 
-sudo su
-curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
-
-curl https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/prod.list > /etc/apt/sources.list.d/mssql-release.list
-
-exit
+sudo curl -o /etc/apt/trusted.gpg.d/microsoft.asc https://packages.microsoft.com/keys/microsoft.asc
+sudo curl -o /etc/apt/sources.list.d/mssql-release.list https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/prod.list
 sudo apt-get update
 sudo ACCEPT_EULA=Y apt-get install -y msodbcsql18
 # optional: for bcp and sqlcmd
@@ -210,22 +193,9 @@ sudo apk add --allow-untrusted mssql-tools_17.10.1.1-1_amd64.apk
 ### [Debian](#tab/debian17-install)
 
 ```bash
-sudo su
-curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+sudo curl -o /etc/apt/trusted.gpg.d/microsoft.asc https://packages.microsoft.com/keys/microsoft.asc
+sudo curl -o /etc/apt/sources.list.d/mssql-release.list https://packages.microsoft.com/config/debian/$(lsb_release -rs)/prod.list
 
-#Download appropriate package for the OS version
-#Choose only ONE of the following, corresponding to your OS version
-
-#Debian 9
-curl https://packages.microsoft.com/config/debian/9/prod.list > /etc/apt/sources.list.d/mssql-release.list
-
-#Debian 10
-curl https://packages.microsoft.com/config/debian/10/prod.list > /etc/apt/sources.list.d/mssql-release.list
-
-#Debian 11
-curl https://packages.microsoft.com/config/debian/11/prod.list > /etc/apt/sources.list.d/mssql-release.list
-
-exit
 sudo apt-get update
 sudo ACCEPT_EULA=Y apt-get install -y msodbcsql17
 # optional: for bcp and sqlcmd

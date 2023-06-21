@@ -64,7 +64,7 @@ The following steps show how to connect using multi-factor authentication in the
     ![Screenshot of the Connect to Server dialog settings in S S M S, with all fields filled in.](./media/authentication-mfa-ssms-overview/2mfa-connect-to-server.png)
 
 3. Click **Connect**.
-4. When the **Sign in to your account** dialog box appears, it should be pre-filled with the **User name** you provided in step 2. No password is required if a user is part of a domain federated with Azure AD.
+4. When the **Sign in to your account** dialog box appears, it should be automatically populated with the **User name** you provided in step 2. No password is required if a user is part of a domain federated with Azure AD.
 
     ![Screenshot of the Sign in to your account dialog for Azure SQL Database and Data Warehouse. the account name is filled in.](./media/authentication-mfa-ssms-overview/3mfa-sign-in.png)
 

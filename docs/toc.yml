@@ -10448,6 +10448,8 @@ items:
       items:
       - name: Troubleshoot deployment
         href: sql-server/azure-arc/troubleshoot-deployment.md
+      - name: Troubleshoot best practices assessment
+        href: sql-server/azure-arc/troubleshoot-assessment.md
 
 
 - name: Big Data Clusters

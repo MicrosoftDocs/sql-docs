@@ -63,7 +63,10 @@ The server principal isn't able to access the database under the current securit
 
 #### Resolution
 
-Ensure the SQL Server built-in login NT AUTHORITY\SYSTEM must be the member of SQL Server sysadmin server role for all the SQL Server instances running on the machine.  If this isn't allowed, open a Microsoft case.
+Ensure the SQL Server built-in login NT AUTHORITY\SYSTEM must be the member of SQL Server sysadmin server role for all the SQL Server instances running on the machine.
+
+> [!NOTE]
+> This feature implements the principle of least privilege. It's available as a limited preview. To participate in the preview, contact Microsoft support for assistance configuring the solution.
 
 ### Azure Monitor Agent upload failed
 

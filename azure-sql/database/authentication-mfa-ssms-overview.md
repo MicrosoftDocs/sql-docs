@@ -28,7 +28,7 @@ This article provides a brief overview of the benefits of Azure AD MFA, explains
 
 ## How Azure AD MFA works
 
-Azure AD MFA helps safeguard access to data and applications while meeting user demand for a simple sign-in process. Azure AD MFA adds an extra layer of security to user sign-ins by requiring users to provide two or more authentication factors. These factors typically include something the user knows (password), something the user possesses (smartphone or hardware token), and/or something the user is (biometric data). By combining multiple factors, the likelihood of unauthorized access is significantly reduced.
+Azure AD MFA helps safeguard access to data and applications while meeting user demand for a simple sign-in process. Azure AD MFA adds an extra layer of security to user sign-ins by requiring users to provide two or more authentication factors. These factors typically include something the user knows (password), something the user possesses (smartphone or hardware token), and/or something the user is (biometric data). By combining multiple factors, Azure AD MFA significantly reduces the likelihood of unauthorized access.
 
 Azure AD MFA provides all the benefits of Azure AD authentication described in the [Azure AD authentication overview](./authentication-aad-overview.md#overview).
 
@@ -45,7 +45,7 @@ For the full list of authentication methods available, see [What authentication 
 
 ## Azure AD B2B support
 
-Azure AD MFA also supports [Azure AD B2B scenarios](/azure/active-directory/external-identities/what-is-b2b), which enable businesses to invite guest users to collaborate with their organization. Guest users can connect to databases either as individual users or members of an Azure AD group. See [Create guest user in SQL Database and Azure Synapse](/azure/azure-sql/database/authentication-aad-guest-users#create-guest-user-in-sql-database-and-azure-synapse) for more information.
+Azure AD MFA also supports [Azure AD B2B scenarios](/azure/active-directory/external-identities/what-is-b2b), which enable businesses to invite guest users to collaborate with their organization. Guest users can connect to databases either as individual users or members of an Azure AD group. For more information, see [Create guest user in SQL Database and Azure Synapse](/azure/azure-sql/database/authentication-aad-guest-users#create-guest-user-in-sql-database-and-azure-synapse).
 
 ## Connect using Azure AD MFA in SSMS
 

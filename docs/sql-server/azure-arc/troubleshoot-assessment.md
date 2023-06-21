@@ -27,11 +27,7 @@ You might encounter the following issues when you enable best practices assessme
 
 :::image type="content" source="media/assess/sql-best-practices-assessment-no-workspace.png" alt-text="Screenshot showing the error message when no value is visible in the Log Analytics workspace selector dropdown.":::
 
-Verify that the user has the following roles for at least one Log Analytics workspace either at the resource group's scope or at the subscription's scope:
-
-1. Log Analytics Contributor.
-2. Contributor.
-3. Owner.
+Ensure that the user configuring SQL BPA must have Log Analytics Contributor role on the resource group or subscription of the Log Analytics workspace. The list of prerequisites can be found [here](assess.md#prerequisites).
 
 ## Error notifications requiring users to wait five minutes
 
@@ -53,7 +49,7 @@ In case the assessment run fails, select the corresponding row to open a page th
 
     :::image type="content" source="media/assess/sql-best-practices-assessment-connection-failed-model-database.png" alt-text="Screenshot showing the error message that server principal isn't able to access the database.":::
 
-Ensure the SQL Server built-in login NT AUTHORITY\SYSTEM must be the member of SQL Server sysadmin server role for all the SQL Server instances running on the machine.  If this is not allowed, please open a Microsoft case so that we can be able to provide a  workaround.
+Ensure the SQL Server built-in login NT AUTHORITY\SYSTEM must be the member of SQL Server sysadmin server role for all the SQL Server instances running on the machine.  If this isn't allowed, open a Microsoft case so that we can be able to provide a workaround.
 
 3. Azure Monitor Agent (AMA) upload failed
 

@@ -133,6 +133,59 @@ GO
 ```  
   
  [&#91;Top&#93;](#top)  
+
+
+ #### Example C  
+ This example uses the `SINGLE_BLOB` option in an `INSERT ... SELECT * FROM OPENROWSET(BULK...)` statement to import data from a file named `SampleData3.txt`.
+ 
+ We are inserting an XML instance into a multi-column table, sample table `T`.  
+
+ We are also targeting a couple of additional columns.
+  
+```sql
+INSERT INTO T
+(
+      
+      IntCol
+
+    , XmlCol
+
+    , filename
+)  
+SELECT 
+
+        [IntCol] = -1
+
+      , [XmlCol] = x.BulkColumn
+
+      , [filename] = 'SampleData3.txt'
+
+FROM OPENROWSET
+(  
+
+     BULK 'c:\SampleFolder\SampleData3.txt'
+
+   , SINGLE_BLOB
+
+) AS x;  
+```  
+  
+#### Remarks  
+
+For the Bulk Option, we are using SINGLE_BLOB.
+
+SINGLE_BLOB stands for single binary large object.
+
+Explicitly specifying SINGLE_BLOB ensures that the data_file is presented as a single-row, single-column rowset of type varbinary(max).
+
+The name of the lone column returned by OpenRowset is BulkColumn.
+
+Beforehand, we added a new column to our target table, T.
+
+The name of the added table is filename.
+
+  
+ [&#91;Top&#93;](#top)  
   
 ## <a name="file_contains_dtd"></a> Bulk importing XML data from a file that contains a DTD  
   

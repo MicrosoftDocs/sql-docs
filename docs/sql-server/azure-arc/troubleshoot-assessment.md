@@ -57,7 +57,7 @@ In case the assessment run fails, select the corresponding row to open a page th
 
 3. Azure Monitor Agent (AMA) upload failed
 
-    Verify that the Azure Monitor Agent is provisioned correctly and the rest of the setup hasn't been deleted. The following components must be configured correctly to ensure that the agent can upload logs to the workspace:
+    Verify that the Azure Monitor Agent is provisioned and configured correctly.  The following components must be configured correctly to ensure that the agent can upload logs to the workspace:
 
    1. The linked Log Analytics workspace must have a table named `SqlAssessment_CL`.
       1. Navigate to the **Tables** tab under the linked Log Analytics workspace.

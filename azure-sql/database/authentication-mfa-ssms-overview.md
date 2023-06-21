@@ -45,11 +45,7 @@ For the full list of authentication methods available, see [What authentication 
 
 ## Azure AD B2B support
 
-Azure AD users that are supported for [Azure AD B2B scenarios](/azure/active-directory/external-identities/what-is-b2b) as guest users can connect to SQL Database and Azure Synapse as individual users or members of an Azure AD group created in the associated Azure AD, and mapped manually using the [CREATE USER (Transact-SQL)](/sql/t-sql/statements/create-user-transact-sql) statement in a given database. 
-
-For example, if `steve@gmail.com` is invited to Azure AD `contosotest` (with the Azure AD domain `contosotest.onmicrosoft.com`), a user `steve@gmail.com` must be created for a specific database (such as **MyDatabase**) by an Azure AD SQL administrator or Azure AD DBO by executing the Transact-SQL `create user [steve@gmail.com] FROM EXTERNAL PROVIDER` statement. If `steve@gmail.com` is part of an Azure AD group, such as `usergroup` then this group must be created for a specific database (such as **MyDatabase**) by an Azure AD SQL administrator, or Azure AD DBO by executing the Transact-SQL statement `create user [usergroup] FROM EXTERNAL PROVIDER` statement.
-
-After the database user or group is created, then the user `steve@gmail.com` can sign into `MyDatabase` using the SSMS authentication option `Azure Active Directory – Universal with MFA`. By default, the user or group only has connect permission. Any further data access needs to be [granted](/sql/t-sql/statements/grant-transact-sql) in the database by a user with enough privilege.
+Azure AD MFA also supports [Azure AD B2B scenarios](/azure/active-directory/external-identities/what-is-b2b), which enable businesses to invite guest users to collaborate with their organization. Guest users can connect to databases either as individual users or members of an Azure AD group. See [Create guest user in SQL Database and Azure Synapse](/azure/azure-sql/database/authentication-aad-guest-users#create-guest-user-in-sql-database-and-azure-synapse) for more information.
 
 ## Connect using Azure AD MFA in SSMS
 
@@ -64,7 +60,7 @@ The following steps show how to connect using multi-factor authentication in the
     ![Screenshot of the Connect to Server dialog settings in S S M S, with all fields filled in.](./media/authentication-mfa-ssms-overview/2mfa-connect-to-server.png)
 
 3. Click **Connect**.
-4. When the **Sign in to your account** dialog box appears, it should be automatically populated with the **User name** you provided in step 2. No password is required if a user is part of a domain federated with Azure AD.
+4. When the **Sign in to your account** dialog box appears, it should be prepopulated with the **User name** you provided in step 2. No password is required if a user is part of a domain federated with Azure AD.
 
     ![Screenshot of the Sign in to your account dialog for Azure SQL Database and Data Warehouse. the account name is filled in.](./media/authentication-mfa-ssms-overview/3mfa-sign-in.png)
 

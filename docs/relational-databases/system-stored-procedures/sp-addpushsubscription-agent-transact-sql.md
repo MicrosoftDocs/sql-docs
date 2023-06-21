@@ -3,7 +3,7 @@ title: "sp_addpushsubscription_agent (Transact-SQL)"
 description: "sp_addpushsubscription_agent (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
-ms.date: 04/14/2023
+ms.date: 07/15/2023
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -83,9 +83,10 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
  Is the security mode to use when connecting to a Subscriber when synchronizing. *subscriber_security_mode* is **int**, with a default of 1. The following values define the security mode: 
 - **0** specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. 
 - **1** specifies Windows Authentication.  
-- **2** specifies Azure Active Directory (Azure AD) Password Authentication starting with SQL Server 2022 CU7. 
-- **3** specifies Azure AD Integrated Authentication starting with SQL Server 2022 CU7. 
-- **4** specifies Azure AD Token Authentication starting with SQL Server 2022 CU7. 
+- **2** specifies Azure Active Directory (Azure AD) Password Authentication starting with SQL Server 2022 CU 6. 
+- **3** specifies Azure AD Integrated Authentication starting with SQL Server 2022 CU 6. 
+- **4** specifies Azure AD Token Authentication starting with SQL Server 2022 CU 6. 
+
 > [!IMPORTANT]  
 >  For queued updating subscriptions, use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication for connections to Subscribers, and specify a different account for the connection to each Subscriber. For all other subscriptions, use Windows Authentication.  
   

@@ -4,7 +4,7 @@ description: Learn about new features for SQL Server 2022 (16.x), which gives yo
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: wiassaf, randolphwest
-ms.date: 03/15/2023
+ms.date: 07/15/2023
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: "article"

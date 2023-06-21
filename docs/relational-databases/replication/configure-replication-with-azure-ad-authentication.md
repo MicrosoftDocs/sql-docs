@@ -2,7 +2,7 @@
 description: "Learn to configure Transactional or Snapshot replication with Azure AD authentication."
 title: "Configure replication with Azure AD authentication"
 ms.custom: ""
-ms.date: "02/15/2023"
+ms.date: 07/15/2023
 ms.service: sql
 ms.reviewer: ""
 ms.subservice: replication

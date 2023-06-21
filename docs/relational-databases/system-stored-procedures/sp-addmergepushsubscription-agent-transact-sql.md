@@ -3,7 +3,7 @@ title: "sp_addmergepushsubscription_agent (Transact-SQL)"
 description: "sp_addmergepushsubscription_agent (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
-ms.date: 04/14/2023
+ms.date: 07/15/2023
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -68,8 +68,8 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
  Is the security mode to use when connecting to a Subscriber when synchronizing. *subscriber_security_mode* is **int**, with a default of 1. The following values define the security mode: 
 - **0** specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication. 
 - **1** specifies Windows authentication.  
-- **2** specifies Azure Active Directory (Azure AD) password authentication starting with SQL Server 2022 CU7. 
-- **3** specifies Azure AD integrated authentication starting with SQL Server 2022 CU7.  
+- **2** specifies Azure Active Directory (Azure AD) Password Authentication starting with SQL Server 2022 CU 6. 
+- **3** specifies Azure AD Integrated Authentication starting with SQL Server 2022 CU 6.  
   
 `[ @subscriber_login = ] 'subscriber_login'`
  Is the Subscriber login to use when connecting to a Subscriber when synchronizing. *subscriber_login* is required if *subscriber_security_mode* is set to **0**. *subscriber_login* is **sysname**, with a default of NULL.  
@@ -84,9 +84,9 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
  Is the security mode to use when connecting to a Publisher when synchronizing. *publisher_security_mode* is **int**, with a default of 1. The following values define the security mode: 
 - **0** specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. 
 - **1** specifies Windows Authentication.  
-- **2** specifies Azure Active Directory (Azure AD) Password Authentication starting with SQL Server 2022 CU7. 
-- **3** specifies Azure AD Integrated Authentication starting with SQL Server 2022 CU7. 
-- **4** specifies Azure AD Token Authentication starting with SQL Server 2022 CU7. 
+- **2** specifies Azure Active Directory (Azure AD) Password Authentication starting with SQL Server 2022 CU 6. 
+- **3** specifies Azure AD Integrated Authentication starting with SQL Server 2022 CU 6. 
+- **4** specifies Azure AD Token Authentication starting with SQL Server 2022 CU 6. 
   
 `[ @publisher_login = ] 'publisher_login'`
  Is the login to use when connecting to a Publisher when synchronizing. *publisher_login* is **sysname**, with a default of NULL.  

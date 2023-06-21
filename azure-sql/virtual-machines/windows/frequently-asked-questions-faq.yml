@@ -83,6 +83,11 @@ sections:
           I can't find the version and edition of SQL Server that I want from the images available on Azure Marketplace. 
         answer: |
              If the version and edition of SQL Server you're looking for isn't available in the **Images** drop-down on Azure Marketplace, deploy a Windows-only Azure virtual machine, and then manually install the version and edition of SQL Server you want. Register your SQL Server VM with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md) if you want to manage your SQL Server VM from the Azure portal. 
+
+      - question: |
+          I cannot find the version of Windows, such as Azure Edition, among the SQL Server images available on Azure Marketplace.
+        answer: |
+             If the version of Windows you're looking for isn't available in the SQL Server images found in the **Images** drop-down of Azure Marketplace, deploy a Windows-only Azure virtual machine with the desired edition, and then manually install the version and edition of SQL Server you want. Register your SQL Server VM with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md) if you want to manage your SQL Server VM from the Azure portal. 
  
       - question: |
           Is there a free edition of SQL Server available on Azure Marketplace? 

@@ -64,7 +64,7 @@ SET @json=N'{
        "address":{    
          "town":"Bristol",  
          "county":"Avon",  
-         "country":"England"  
+         "country":"Great Britain"  
        },  
        "tags":["Sport", "Water polo"]  
     },  
@@ -80,7 +80,7 @@ FROM OPENJSON(@json,N'lax $.info')
 |Key|Value|Type|  
 |---------|-----------|----------|  
 |type|1|0|  
-|address|{ "town":"Bristol", "county":"Avon", "country":"England" }|5|  
+|address|{ "town":"Bristol", "county":"Avon", "country":"Great Britain" }|5|  
 |tags|[ "Sport", "Water polo" ]|4|  
   
 ## Example - Combine relational data and JSON data  

@@ -3,7 +3,7 @@ title: "Monitor performance by using the Query Store"
 description: Query Store provides insight on query plan choice and performance for SQL Server, Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics. Query Store captures history of queries, plans, and runtime statistics.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 10/12/2022
+ms.date: 6/16/2023
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
@@ -74,6 +74,8 @@ Since the Query Store retains multiple execution plans per query, it can enforce
 
 > [!NOTE]  
 > Query Store collects plans for DML Statements such as SELECT, INSERT, UPDATE, DELETE, MERGE, and BULK INSERT.
+>
+> By design, Query Store does not collect plans for DDL statements such as CREATE INDEX, etc. Query Store captures cumulative resource consumption by collecting plans for the underlying DML statements. For example, Query Store may display the SELECT and INSERT statements executed internally to populate a new index.
 >
 > Query Store does not collect data for natively compiled stored procedures by default. Use [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) to enable data collection for natively compiled stored procedures.
 

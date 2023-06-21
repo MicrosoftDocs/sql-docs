@@ -39,8 +39,8 @@ helpviewer_keywords:
   
 -   Define expressions that provide you with the ability to customize how report data is filtered, grouped, and sorted.  
   
-    ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
-  
+    :::image type="content" source="../report-builder/media/report-builder-in-sql-server-2016/rs-getting-started-report.png" alt-text="Screenshot of Getting Started Report.":::
+
 ##  <a name="bkmk_StagesSummary"></a> Stages of report processing  
  When you create a report, you define a report definition file (.rdl) in XML format. This file contains all the information that is needed to combine report data and report layout by the report processor. When you view a report, the report progresses through the following stages:  
   

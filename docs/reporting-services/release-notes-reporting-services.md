@@ -4,7 +4,7 @@ description: Learn details about the changes in SQL Server Reporting Services (S
 author: casualoak
 ms.author: petebro
 ms.reviewer: maggies
-ms.date: 03/09/2023
+ms.date: 06/20/2023
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
@@ -49,6 +49,14 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 ::: moniker range="=sql-server-ver16"
 ## SQL Server 2022 Reporting Services
 
+## 16.0.8564.33454, 2023/06/13
+*(Product Version: 16.0.1114.11)*
+
+-  Introduced new Accessibility property that lets report authors to add accessible headers to tables and Heading levels to text boxes.
+-  Fixed setting calendar days to a single day for monthly schedules.
+-  Fixed an issue in Report Server (Web Service) page localization, and localization of exported Excel files 
+Fixed slowness of Large MDX Query as an Expression.
+
 ## 16.0.8361.39598, 2022/11/23
 *(Product Version: 16.0.1113.11)*
 
@@ -86,6 +94,12 @@ Release Candidate 0 (RC0)
 ::: moniker-end
 
 ## SQL Server 2019 Reporting Services
+
+## 15.0.8563.17333, 2023/06/20
+*(Product Version: 15.0.1102.1075)*
+- Fixed issue with date type parameters and Oracle data source
+- Fixed slowness of Large MDX Query as an Expression 
+- Fixed issue with export to Excel / Word when using Virtual Service Account and Execution Account 
 
 ## 15.0.8434.2956, 2023/02/06
 *(Product Version: 15.0.1102.1047)*

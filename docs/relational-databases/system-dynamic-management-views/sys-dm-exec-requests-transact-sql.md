@@ -4,7 +4,7 @@ description: sys.dm_exec_requests (Transact-SQL)
 author: akatesmith
 ms.author: katsmith
 ms.reviewer: mikeray, randolphwest
-ms.date: 03/28/2023
+ms.date: 06/19/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -39,7 +39,7 @@ Returns information about each request that is executing in [!INCLUDE[ssNoVersio
 | statement_start_offset | **int** | Indicates, in bytes, beginning with 0, the starting position of the currently executing statement for the currently executing batch or persisted object. Can be used together with the `sql_handle`, the `statement_end_offset`, and the `sys.dm_exec_sql_text` dynamic management function to retrieve the currently executing statement for the request. Nullable. |
 | statement_end_offset | **int** | Indicates, in bytes, starting with 0, the ending position of the currently executing statement for the currently executing batch or persisted object. Can be used together with the `sql_handle`, the `statement_start_offset`, and the `sys.dm_exec_sql_text` dynamic management function to retrieve the currently executing statement for the request. Nullable. |
 | plan_handle | **varbinary(64)** | Is a token that uniquely identifies a query execution plan for a batch that is currently executing. Nullable. |
-| database_id | **smallint** | ID of the database the request is executing against. Not nullable. |
+| database_id | **smallint** | ID of the database the request is executing against. Not nullable. <br /><br />In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the values are unique within a single database or an elastic pool, but not within a logical server.|
 | user_id | **int** | ID of the user who submitted the request. Not nullable. |
 | connection_id | **uniqueidentifier** | ID of the connection on which the request arrived. Nullable. |
 | blocking_session_id | **smallint** | ID of the session that is blocking the request. If this column is NULL or equal to 0, the request isn't blocked, or the session information of the blocking session isn't available (or can't be identified). For more information, see [Understand and resolve SQL Server blocking problems](/troubleshoot/sql/performance/understand-resolve-blocking).<br /><br />-2 = The blocking resource is owned by an orphaned distributed transaction.<br /><br />-3 = The blocking resource is owned by a deferred recovery transaction.<br /><br />-4 = Session ID of the blocking latch owner couldn't be determined at this time because of internal latch state transitions.<br /><br />-5 = Session ID of the blocking latch owner couldn't be determined because it isn't tracked for this latch type (for example, for an SH latch).<br /><br />By itself, blocking_session_id -5 doesn't indicate a performance problem. -5 is an indication that the session is waiting on an asynchronous action to complete. Before -5 was introduced, the same session would have shown blocking_session_id 0, even though it was still in a wait state.<br /><br />Depending on workload, observing -5 as blocking_session_id may be a common occurrence. |

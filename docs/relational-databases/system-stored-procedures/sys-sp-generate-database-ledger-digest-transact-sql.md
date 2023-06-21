@@ -4,7 +4,7 @@ description: "Generates the ledger digest, which is the hash of the last block i
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 05/23/2023
+ms.date: 06/13/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -32,7 +32,7 @@ None.
 
 ## Return code values
 
-0 (success) or 1 (failure).
+`0` (success) or `1` (failure).
 
 ## Result sets
 

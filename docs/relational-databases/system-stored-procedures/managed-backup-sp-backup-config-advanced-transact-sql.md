@@ -73,7 +73,7 @@ For more information, see [Extensible Key Management (EKM)](../../relational-dat
 
 This parameter isn't yet supported.
 
-## Return code value
+## Return code values
 
 `0` (success) or `1` (failure).
 

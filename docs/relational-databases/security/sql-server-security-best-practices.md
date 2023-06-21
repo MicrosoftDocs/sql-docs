@@ -34,7 +34,7 @@ Azure complies with several industry regulations and standards that can enable y
 
 ## Column-level protection
 
-Organizations often need to protect data at the column level as data regarding customers, employees, trade secrets, product data, healthcare, financial, and other sensitive data is often stored in SQL Server databases. Sensitive columns often include national identification/social security numbers, mobile phone numbers, first name, family name, financial account identification, and any other data that could be deemed personally identifiable information (PII). 
+Organizations often need to protect data at the column level as data regarding customers, employees, trade secrets, product data, healthcare, financial, and other sensitive data is often stored in SQL Server databases. Sensitive columns often include identification/social security numbers, mobile phone numbers, first name, family name, financial account identification, and any other data that could be deemed personally identifiable information (PII). 
 
 The methods and features mentioned in this section raise the level of protection at the column level with minimal overhead, and without requiring extensive changes to application code. 
 

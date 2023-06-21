@@ -36,6 +36,9 @@ sudo systemctl start docker
 
 On Windows, verify that you're launching PowerShell or your command-prompt as an Administrator.
 
+> [!IMPORTANT]  
+> The `SA_PASSWORD` environment variable is deprecated. Use `MSSQL_SA_PASSWORD` instead.
+
 ## SQL Server container startup errors
 
 If the SQL Server container fails to run, try the following tests:

@@ -19,7 +19,7 @@ helpviewer_keywords:
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
 > [!IMPORTANT]  
->  The information in this article applies only to features related to paginated reports (RDLs) within Power BI Report Server. Power BI (PBIX) reports and their scheduled refresh activities within Power BI Report Server are not affected by these settings. For help with scheduled refresh memory, see [Troubleshoot scheduled refresh in Power BI Report Server](/powerbi/report-server/scheduled-refresh-troubleshoot.md).
+>  The information in this article applies only to features related to paginated reports (RDLs) within Power BI Report Server. Power BI (PBIX) reports and their scheduled refresh activities within Power BI Report Server are not affected by these settings. For help with scheduled refresh memory, see [Troubleshoot scheduled refresh in Power BI Report Server](/power-bi/report-server/scheduled-refresh-troubleshoot).
 
  Although [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] can use all available memory, you can override default behavior by configuring an upper limit on the total amount of memory resources that are allocated to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server applications. You can also set thresholds that cause the report server to change how it prioritizes and processes requests depending on whether it is under low, medium, or heavy memory pressure. At low levels of memory pressure, the report server responds by giving a slightly higher priority to interactive or on-demand report processing. At high levels of memory pressure, the report server uses multiple techniques to remain operational using the limited resources available to it.  
   

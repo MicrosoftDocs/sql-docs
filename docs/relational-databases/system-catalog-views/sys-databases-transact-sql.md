@@ -3,7 +3,7 @@ title: "sys.databases (Transact-SQL)"
 description: sys.databases (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 11/21/2022
+ms.date: 06/19/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -28,8 +28,8 @@ If a database isn't `ONLINE`, or `AUTO_CLOSE` is set to `ON` and the database is
 
 | Column name | Data type | Description |
 | --- | --- | --- |
-| **name** | **sysname** | Name of database, unique within an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or within a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] server. |
-| **database_id** | **int** | ID of the database, unique within an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or within a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] server. |
+| **name** | **sysname** | Name of database, unique within an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or within a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] logical server. |
+| **database_id** | **int** | ID of the database, unique within an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br />In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the values are unique within a logical server, and are joinable with [sys.database_service_objectives](../../relational-databases/system-catalog-views/sys-database-service-objectives-azure-sql-database.md) on the `database_id` column, but not with other system views where the `database_id` column is present. For details, see [DB_ID](../../t-sql/functions/db-id-transact-sql.md#remarks).|
 | **source_database_id** | **int** | Non-NULL = ID of the source database of this database snapshot.<br />NULL = Not a database snapshot. |
 | **owner_sid** | **varbinary(85)** | SID (Security-Identifier) of the external owner of the database, as registered to the server. For information about who can own a database, see the **ALTER AUTHORIZATION for databases** section of [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md). |
 | **create_date** | **datetime** | Date the database was created or renamed. For `tempdb`, this value changes every time the server restarts. |
@@ -108,7 +108,7 @@ If a database isn't `ONLINE`, or `AUTO_CLOSE` is set to `ON` and the database is
 | **is_temporal_history_retention_enabled** | **bit** | Indicates whether temporal retention policy cleanup task is enabled.<br /><br />1 = temporal retention is enabled<br />0 = temporal retention is disabled<br /><br />**Applies to**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and later versions, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |
 | **catalog_collation_type** | **int** | The catalog collation setting:<br />0 = DATABASE_DEFAULT<br />2 = SQL_Latin_1_General_CP1_CI_AS<br /><br />**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |
 | **catalog_collation_type_desc** | **nvarchar(60)** | The catalog collation setting:<br />DATABASE_DEFAULT<br />SQL_Latin_1_General_CP1_CI_AS<br /><br />**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |
-| **physical_database_name** | **nvarchar(128)** | For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the physical name of the database. For [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], a common ID for the databases on a server.<br /><br />**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later versions, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |
+| **physical_database_name** | **nvarchar(128)** | For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the physical name of the database. For [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], a unique identifier for the current physical database corresponding to the user database. Changing the database service level objective or restoring the database will cause this value to change.<br /><br />**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later versions, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |
 | **is_result_set_caching_on** | **bit** | Indicates whether result set caching is enabled.<br />1 = result set caching is enabled<br />0 = result set caching is disabled<br /><br />**Applies to**: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] Gen2. While this feature is being rolled out to all regions, check the version deployed to your instance and the latest [Azure Synapse release notes](/azure/synapse-analytics/sql-data-warehouse/release-notes-10-0-10106-0) and [Gen2 upgrade schedule](/azure/synapse-analytics/sql-data-warehouse/gen2-migration-schedule) for feature availability. |
 | **is_accelerated_database_recovery_on** | **bit** | Indicates whether Accelerated Database Recovery (ADR) is enabled.<br />1 = ADR is enabled<br />0 = ADR is disabled<br /><br />**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]and later versions, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |
 | **is_tempdb_spill_to_remote_store** | **bit** | Indicates whether `tempdb` spill to remote store is enabled.<br />1 = enabled<br />0 = disabled<br /><br />**Applies to**: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] Gen2. While this feature is being rolled out to all regions, check the version deployed to your instance and the latest [Azure Synapse release notes](/azure/synapse-analytics/sql-data-warehouse/release-notes-10-0-10106-0) and [Gen2 upgrade schedule](/azure/synapse-analytics/sql-data-warehouse/gen2-migration-schedule) for feature availability. |

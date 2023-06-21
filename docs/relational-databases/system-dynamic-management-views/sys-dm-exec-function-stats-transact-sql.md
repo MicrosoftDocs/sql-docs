@@ -3,7 +3,7 @@ title: "sys.dm_exec_function_stats (Transact-SQL)"
 description: sys.dm_exec_function_stats (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "02/24/2023"
+ms.date: "06/19/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: conceptual
@@ -31,7 +31,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**database_id**|**int**|Database ID in which the function resides.|  
+|**database_id**|**int**|Database ID in which the function resides. <br /><br />In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the values are unique within a single database or an elastic pool, but not within a logical server.|  
 |**object_id**|**int**|Object identification number of the function.|  
 |**type**|**char(2)**|Type of the object:   FN = Scalar valued functions|  
 |**type_desc**|**nvarchar(60)**|Description of the object type: SQL_SCALAR_FUNCTION|  

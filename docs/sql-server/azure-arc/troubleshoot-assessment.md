@@ -53,7 +53,7 @@ In case the assessment run fails, select the corresponding row to open a page th
 
     :::image type="content" source="media/assess/sql-best-practices-assessment-connection-failed-model-database.png" alt-text="Screenshot showing the error message that server principal isn't able to access the database.":::
 
-   Assign the SQL Server sysadmin server role to SQL Server built-in login NT AUTHORITY\SYSTEM for all the SQL Server instances running on the machine.
+Ensure the SQL Server built-in login NT AUTHORITY\SYSTEM must be the member of SQL Server sysadmin server role for all the SQL Server instances running on the machine.  If this is not allowed, please open a Microsoft case so that we can be able to provide a  workaround.
 
 3. Azure Monitor Agent (AMA) upload failed
 

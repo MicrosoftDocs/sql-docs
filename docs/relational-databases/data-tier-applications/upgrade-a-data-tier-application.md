@@ -87,13 +87,13 @@ A DAC can only be upgraded by members of the **sysadmin** or **serveradmin** fix
 
 1. Complete the wizard dialogs:
 
-    1. [Introduction Page](#Introduction)
+    1. [Inroduction Page](#Introduction)
 
     1. [Select Package Page](#Select_dac_package)
 
     1. [Detect Change Page](#Detect_change)
 
-    1. [Options](#Review_policy)
+    1. [Options](#Options_Page)
 
     1. [Review Upgrade Plan](#ReviewUpgPlan)
 
@@ -144,20 +144,6 @@ Displays a progress bar as the wizard confirms that the selected file is a valid
 **Next >** - Proceeds to the final version of the **Select Package** page.
 
 **Cancel** - Terminates the wizard without deploying the DAC.
-
-## <a id="Review_policy"></a> Review Policy Page
-
-Use this page to review the results of evaluating the DAC server selection policy if the DAC has a policy. The DAC server selection policy is optional and is assigned to a DAC authored in Microsoft Visual Studio. The policy uses the server selection policy facets to specify conditions in an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] should meet to host the DAC.
-
-**Evaluation results of policy conditions** - A read-only report showing whether the evaluations of the conditions in the DAC server selection policy succeeded. The results of evaluating each condition are reported on a separate line.
-
-**Ignore policy violations** - Use this check box to proceed with the upgrade if one or more of the policy conditions failed. Only select this option if you're sure that all of the failed conditions won't prevent the successful operation of the DAC.
-
-**< Previous** - Returns to the **Select Package** page.
-
-**Next >** - Proceeds to the **Detect Change** page.
-
-**Cancel** - Terminates the wizard without upgrading the DAC.
 
 ## <a id="Detect_change"></a> Detect Change Page
 

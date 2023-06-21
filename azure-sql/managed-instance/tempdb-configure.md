@@ -54,6 +54,9 @@ You can use SQL Server Management Studio (SSMS) to modify the number of `tempdb`
 1. Right-click `tempdb`, and choose **Properties**. 
 1. Select **Files** under **Select a page** to view the existing number of `tempdb` files.
 1. To add a file, choose **Add** and then provide information about the new data file in the row. 
+
+   :::image type="content" source="media/tempdb-configure/add-new-tempdb-file.png.png" alt-text="Screenshot of Database Properties in SSMS, with new database file name highlighted. ":::
+
 1. To remove a `tempdb` file, choose the file you want to remove from the list of database files, and then select **Remove**. 
 
 ### [Transact-SQL (T-SQL)](#tab/tsql)
@@ -170,7 +173,9 @@ To determine your current `tempdb` max size in SSMS, follow these steps:
 1. Connect to your managed instance in SSMS. 
 1. Expand **Databases** in **Object Explorer**, and then expand **System databases**. 
 1. Right-click `tempdb`, and choose **Properties**.
-1. On the **General page**, check the **Size** value under **Database** to determine your max tempdb size. 
+1. On the **General page**, check the **Size** value under **Database** to determine your max tempdb size. A value of `-1` indicates tempdb max size is unlimited. 
+
+
 
 To change your current `tempdb` max size in SSMS, follow these steps: 
 
@@ -185,12 +190,27 @@ To change your current `tempdb` max size in SSMS, follow these steps:
 
 ### [Transact-SQL (T-SQL)](#tab/tsql)
 
+
+To determine `tempdb` max size, run this command: 
+
+```sql
+USE tempdb
+SELECT name, max_size FROM sys.database_files
+```
+
+:::image type="content" source="media/tempdb-configure/tempdb-max-size.png" alt-text="Query result window in SSMS showing the max size of tempdb files. ":::
+
 To get the total `tempdb` size in MB, run this command: 
 
 ```sql
 USE tempdb
 SELECT (SUM(size)*1.0/128) AS TempDB_size_InMB FROM sys.database_files
 ```
+
+
+
+:::image type="content" source="media/tempdb-configure/tempdb-size-in-megabytes.png.png" alt-text="Screenshot of query results in SSMS showing tempdb size in megabytes.":::
+
 
 To set the max size for a new `tempdb` data file, run the following command: 
 

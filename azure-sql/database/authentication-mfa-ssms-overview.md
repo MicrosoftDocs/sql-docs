@@ -30,7 +30,7 @@ This article provides a brief overview of the benefits of Azure AD MFA, explains
 
 Azure AD MFA helps safeguard access to data and applications while meeting user demand for a simple sign-in process. Azure AD MFA adds an extra layer of security to user sign-ins by requiring users to provide two or more authentication factors. These factors typically include something the user knows (password), something the user possesses (smartphone or hardware token), and/or something the user is (biometric data). By combining multiple factors, the likelihood of unauthorized access is significantly reduced.
 
-Azure AD MFA provides all the benefits of Azure AD authentication described in the [Azure AD authentication overview](./authentication-aad-overview.md#overview)
+Azure AD MFA provides all the benefits of Azure AD authentication described in the [Azure AD authentication overview](./authentication-aad-overview.md#overview).
 
 For the full list of authentication methods available, see [What authentication and verification methods are available in Azure Active Directory?](/azure/active-directory/authentication/concept-authentication-methods)
 

@@ -13,18 +13,18 @@ ms.custom:
   - seoapril2019
   - sqldbrb=1
 tags: azure-synapse
-monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
+monikerRange: "= azuresql || = azuresql-db || = azuresql-mi || >=sql-server-ver16 || >= sql-server-linux-ver16"
 ---
 
 # Using Azure Active Directory Multi-Factor Authentication
 [!INCLUDE[appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa.md)]
 
-[Azure Active Directory (Azure AD) Multi-Factor Authentication](/azure/active-directory/authentication/concept-mfa-howitworks) is a security feature provided by Microsoft's cloud-based identity and access management service. Multi-factor authentication (MFA) enhances the security of user sign-ins by requiring users to provide extra verification steps beyond a password. Azure AD MFA is a supported authentication method for [Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md) and [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is).
+[Azure Active Directory (Azure AD) Multi-Factor Authentication](/azure/active-directory/authentication/concept-mfa-howitworks) is a security feature provided by Microsoft's cloud-based identity and access management service. Multi-factor authentication (MFA) enhances the security of user sign-ins by requiring users to provide extra verification steps beyond a password. Azure AD MFA is a supported authentication method for [Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is), and SQL Server 2022 (16.x) and later versions.
 
 This article provides a brief overview of the benefits of Azure AD MFA, explains how to configure it, and shows how to connect to a database using MFA with [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms).
 
 > [!IMPORTANT]
-> Databases in Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse are referred to collectively in the remainder of this article as databases, and the server is referring to the [server](logical-servers.md) that hosts databases for Azure SQL Database and Azure Synapse.
+> Databases in Azure SQL Database, Azure SQL Managed Instance, Azure Synapse, and SQL Server 2022 are referred to collectively in the remainder of this article as databases, and the server is referring to the [server](logical-servers.md) that hosts databases for Azure SQL Database and Azure Synapse.
 
 ## How Azure AD MFA works
 
@@ -76,3 +76,4 @@ Azure AD MFA is supported as an authentication method for all [SQL tools](/sql/t
 - [Configure and manage Azure Active Directory authentication with SQL Database or Azure Synapse](authentication-aad-configure.md)
 - [Create Azure AD guest users and set as an Azure AD admin](authentication-aad-guest-users.md)
 - C# interface [IUniversalAuthProvider Interface](/dotnet/api/microsoft.sqlserver.dac.iuniversalauthprovider)
+- [Tutorial: Set up Azure Active Directory authentication for SQL Server](/sql/relational-databases/security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial)

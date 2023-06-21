@@ -93,7 +93,7 @@ A DAC can only be upgraded by members of the **sysadmin** or **serveradmin** fix
 
     1. [Detect Change Page](#Detect_change)
 
-    1. [Options Page](#Optionse)
+    1. [Options Page](#Options)
 
     1. [Review Upgrade Plan](#ReviewUpgPlan)
 

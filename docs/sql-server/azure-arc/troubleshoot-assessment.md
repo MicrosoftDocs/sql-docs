@@ -55,7 +55,7 @@ Follow the steps at [Troubleshoot SQL Server connectivity failures](/troubleshoo
 
 #### Description
 
-**=The server principal `NT Authority/SYSTEM` is not able to access the database "model" under the current security context.**
+**The server principal `NT Authority/SYSTEM` is not able to access the database "model" under the current security context.**
 
 The server principal isn't able to access the database under the current security context returns this error in the portal.
 

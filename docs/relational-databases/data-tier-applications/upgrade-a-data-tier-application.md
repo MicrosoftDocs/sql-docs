@@ -87,7 +87,7 @@ A DAC can only be upgraded by members of the **sysadmin** or **serveradmin** fix
 
 1. Complete the wizard dialogs:
 
-    1. [Inroduction Page](#Introduction)
+    1. [Introduction Page](#Introduction)
 
     1. [Select Package Page](#Select_dac_package)
 

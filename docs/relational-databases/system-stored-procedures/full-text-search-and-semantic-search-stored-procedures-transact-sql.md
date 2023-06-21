@@ -20,7 +20,7 @@ dev_langs:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports the following system stored procedures that are used to implement and query full-text indexes and semantic indexes.
+[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] supports the following system stored procedures that are used to implement and query full-text indexes and semantic indexes.
 
 ## Full-Text Search stored procedures
 
@@ -28,19 +28,19 @@ dev_langs:
 
   Creates and drops a full-text catalog, and starts and stops the indexing action for a catalog. Multiple full-text catalogs can be created for each database.
 
-  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md), [ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md), and [DROP FULLTEXT CATALOG](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md) instead.
+  [!INCLUDE [ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md), [ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md), and [DROP FULLTEXT CATALOG](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md) instead.
 
 - [sp_fulltext_column](sp-fulltext-column-transact-sql.md)
 
   Specifies whether or not a particular column of a table participates in full-text indexing.
 
-  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) instead.
+  [!INCLUDE [ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) instead.
 
 - [sp_fulltext_database](sp-fulltext-database-transact-sql.md)
 
-  Has no effect on full-text catalogs in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions and is supported for backward compatibility only.
+  Has no effect on full-text catalogs in [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] and later versions and is supported for backward compatibility only.
 
-  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]
+  [!INCLUDE [ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]
 
 - [sp_fulltext_keymappings](sp-fulltext-keymappings-transact-sql.md)
 
@@ -61,37 +61,37 @@ dev_langs:
 - [sp_fulltext_table](sp-fulltext-table-transact-sql.md)
   Marks or unmarks a table for full-text indexing.
 
-  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md), [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md), and [DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md) instead.
+  [!INCLUDE [ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md), [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md), and [DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md) instead.
 
 - [sp_help_fulltext_catalog_components](sp-help-fulltext-catalog-components-transact-sql.md)
 
   Returns a list of all components (filters, word-breakers, and protocol handlers), used for all full-text catalogs in the current database.
 
-  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]
+  [!INCLUDE [ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]
 
 - [sp_help_fulltext_catalogs](sp-help-fulltext-catalogs-transact-sql.md)
 
   Returns the ID, name, root directory, status, and number of full-text indexed tables for the specified full-text catalog.
 
-  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use the [sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md) catalog view instead.
+  [!INCLUDE [ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use the [sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md) catalog view instead.
 
 - [sp_help_fulltext_catalogs_cursor](sp-help-fulltext-catalogs-cursor-transact-sql.md)
 
   Uses a cursor to return the ID, name, root directory, status, and number of full-text indexed tables for the specified full-text catalog.
 
-  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use the [sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md) catalog view instead.
+  [!INCLUDE [ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use the [sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md) catalog view instead.
 
 - [sp_help_fulltext_columns](sp-help-fulltext-columns-transact-sql.md)
 
   Returns the columns designated for full-text indexing.
 
-  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use the [sys.fulltext_index_columns](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md) catalog view instead.
+  [!INCLUDE [ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use the [sys.fulltext_index_columns](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md) catalog view instead.
 
 - [sp_help_fulltext_columns_cursor](sp-help-fulltext-columns-cursor-transact-sql.md)
 
   Uses a cursor to return the columns designated for full-text indexing.
 
-  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use the [sys.fulltext_index_columns](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md) catalog view instead.
+  [!INCLUDE [ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use the [sys.fulltext_index_columns](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md) catalog view instead.
 
 - [sp_help_fulltext_system_components](sp-help-fulltext-system-components-transact-sql.md)
 
@@ -105,17 +105,17 @@ dev_langs:
 
   Returns a list of tables that are registered for full-text indexing.
 
-  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use the [sys.fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md) catalog view instead.
+  [!INCLUDE [ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use the [sys.fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md) catalog view instead.
 
 ## Semantic Search stored procedures
 
 - [sp_fulltext_semantic_register_language_statistics_db](sp-fulltext-semantic-register-language-statistics-db-transact-sql.md)
 
-  Registers a pre-populated Semantic Language Statistics database in the current instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+  Registers a pre-populated Semantic Language Statistics database in the current instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].
 
 - [sp_fulltext_semantic_unregister_language_statistics_db](sp-fulltext-semantic-unregister-language-statistics-db-transact-sql.md)
 
-  Unregisters an existing Semantic Language Statistics database from the current instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and deletes any associated metadata.
+  Unregisters an existing Semantic Language Statistics database from the current instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and deletes any associated metadata.
 
 ## See also
 

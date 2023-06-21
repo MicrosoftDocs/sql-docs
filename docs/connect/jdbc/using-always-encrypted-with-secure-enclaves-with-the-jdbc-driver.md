@@ -38,7 +38,7 @@ To enable enclave computations for a database connection, you need to set the fo
 - **enclaveAttestationProtocol** - specifies an attestation protocol.
   - If you're using [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS), the value of this keyword should be `HGS`.
   - If you're using [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation, the value of this keyword should be `AAS`.
-  - If you're using secure enclaves in an environment where attestation services aren't available, the value of this keyword should be `NONE`. Requires JDBC 11.2.1 or later.
+  - If you're using secure enclaves in an environment where attestation services aren't available, the value of this keyword should be `NONE`. Requires JDBC 12.2 or later.
 
 - **enclaveAttestationUrl:** - specifies an attestation URL (an attestation service endpoint). You need to obtain an attestation URL for your environment from your attestation service administrator.
   - If you're using [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS), see [Determine and share the HGS attestation URL](../../relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).

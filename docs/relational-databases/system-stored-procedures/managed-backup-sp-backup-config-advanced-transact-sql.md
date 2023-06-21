@@ -4,7 +4,7 @@ description: Configures advanced settings for SQL Server Managed Backup to Azure
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/24/2023
+ms.date: 05/31/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -23,7 +23,7 @@ dev_langs:
 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-Configures advanced settings for [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].
+Configures advanced settings for [!INCLUDE [ss_smartbackup](../../includes/ss-smartbackup-md.md)].
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -36,6 +36,7 @@ EXEC managed_backup.sp_backup_config_advanced
     , [ @encryptor_type = ] { 'CERTIFICATE' | 'ASYMMETRIC_KEY' }
     , [ @encryptor_name = ] 'name of the certificate or asymmetric key'
     , [ @local_cache_path = ] 'NOT AVAILABLE'
+[ ; ]
 ```
 
 ## Arguments
@@ -48,7 +49,7 @@ If *@database_name* is set to NULL, the settings are applied at instance level (
 
 #### [ @encryption_algorithm ] = '*name of the encryption algorithm*'
 
-The name of the encryption algorithm used during the backup to encrypt the backup file. *@encryption_algorithm* is **sysname**. It is a required parameter when configuring [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the first time for the database. Specify `NO_ENCRYPTION` if you don't wish to encrypt the backup file. When you change the [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] configuration settings, this parameter is optional. If the parameter isn't specified, the existing configuration values are retained. The allowed values for this parameter are:
+The name of the encryption algorithm used during the backup to encrypt the backup file. *@encryption_algorithm* is **sysname**. It is a required parameter when configuring [!INCLUDE [ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the first time for the database. Specify `NO_ENCRYPTION` if you don't wish to encrypt the backup file. When you change the [!INCLUDE [ss_smartbackup](../../includes/ss-smartbackup-md.md)] configuration settings, this parameter is optional. If the parameter isn't specified, the existing configuration values are retained. The allowed values for this parameter are:
 
 - AES_128
 - AES_192
@@ -72,7 +73,7 @@ For more information, see [Extensible Key Management (EKM)](../../relational-dat
 
 This parameter isn't yet supported.
 
-## Return code value
+## Return code values
 
 `0` (success) or `1` (failure).
 
@@ -82,7 +83,7 @@ Requires membership in the **db_backupoperator** database role, with ALTER ANY C
 
 ## Examples
 
-The following example sets advanced configuration options for [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the instance of SQL Server.
+The following example sets advanced configuration options for [!INCLUDE [ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the instance of SQL Server.
 
 ```sql
 USE msdb;

@@ -20,7 +20,7 @@ dev_langs:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Logs a user-defined message in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log file and in the Windows Event log. `xp_logevent` can be used to send an alert without sending a message to the client.
+Logs a user-defined message in the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] log file and in the Windows Event log. `xp_logevent` can be used to send an alert without sending a message to the client.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -58,7 +58,7 @@ The command(s) completed successfully.
 
 ## Remarks
 
-When you send messages from [!INCLUDE[tsql](../../includes/tsql-md.md)] procedures, triggers, batches, and so on, use the `RAISERROR` statement instead of `xp_logevent`. `xp_logevent` doesn't call a message handler of a client, or set `@@ERROR`. To write messages to the Windows Event log and to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log file within an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], execute the `RAISERROR` statement.
+When you send messages from [!INCLUDE [tsql](../../includes/tsql-md.md)] procedures, triggers, batches, and so on, use the `RAISERROR` statement instead of `xp_logevent`. `xp_logevent` doesn't call a message handler of a client, or set `@@ERROR`. To write messages to the Windows Event log and to the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] error log file within an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], execute the `RAISERROR` statement.
 
 ## Permissions
 

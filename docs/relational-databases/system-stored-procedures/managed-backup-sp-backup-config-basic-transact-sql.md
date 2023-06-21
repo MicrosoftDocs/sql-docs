@@ -4,7 +4,7 @@ description: Configures the SQL Server Managed Backup to Azure basic settings fo
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/24/2023
+ms.date: 05/31/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -23,7 +23,7 @@ dev_langs:
 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-Configures the [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] basic settings for a specific database or for an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Configures the [!INCLUDE [ss_smartbackup](../../includes/ss-smartbackup-md.md)] basic settings for a specific database or for an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].
 
 > [!NOTE]  
 > This procedure can be called on its own to create a basic managed backup configuration. However, if you plan to add advanced features or a custom schedule, configure those settings using [managed_backup.sp_backup_config_advanced](managed-backup-sp-backup-config-advanced-transact-sql.md) and [managed_backup.sp_backup_config_schedule](managed-backup-sp-backup-config-schedule-transact-sql.md), before enabling managed backup with this procedure.
@@ -39,15 +39,16 @@ EXEC managed_backup.sp_backup_config_basic
     , [ @container_url = ] 'Azure_Storage_blob_container'
     , [ @retention_days = ] retention_period_in_days
     , [ @credential_name = ] 'sql_credential_name'
+[ ; ]
 ```
 
 ## Arguments
 
 #### [ @enable_backup = ] { 0 | 1 }
 
-Enable or disable [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the specified database. *@enable_backup* is **bit**.
+Enable or disable [!INCLUDE [ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the specified database. *@enable_backup* is **bit**.
 
-Required parameter when configuring [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the first instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If you're changing an existing [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] configuration, this parameter is optional. In that case, any configuration values not specified retain their existing values.
+Required parameter when configuring [!INCLUDE [ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the first instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. If you're changing an existing [!INCLUDE [ss_smartbackup](../../includes/ss-smartbackup-md.md)] configuration, this parameter is optional. In that case, any configuration values not specified retain their existing values.
 
 For more information, see [Enable SQL Server Managed Backups to Azure](../backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md).
 
@@ -75,16 +76,16 @@ For example, `https://managedbackupstorage.blob.core.windows.net/backupcontainer
 
 #### [ @retention_days = ] *retention_period_in_days*
 
-The retention period for the backup files in days. *@retention_days* is **int**. This is a required parameter when configuring [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the first time on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. When you change the [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] configuration, this parameter is optional. If not specified then the existing configuration values are retained.
+The retention period for the backup files in days. *@retention_days* is **int**. This is a required parameter when configuring [!INCLUDE [ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the first time on the instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. When you change the [!INCLUDE [ss_smartbackup](../../includes/ss-smartbackup-md.md)] configuration, this parameter is optional. If not specified then the existing configuration values are retained.
 
 #### [ @credential_name = ] '*sql_credential_name*'
 
-The name of the SQL credential used to authenticate to the Azure storage account. *@credential_name* is **sysname**. When specified, the backup is stored to a page blob. If this parameter is NULL, the backup is stored as a block blob. Backing up to page blob is deprecated, so it's preferred to use the new block blob backup functionality. When used to change the [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] configuration, this parameter is optional. If not specified, then the existing configuration values are retained.
+The name of the SQL credential used to authenticate to the Azure storage account. *@credential_name* is **sysname**. When specified, the backup is stored to a page blob. If this parameter is NULL, the backup is stored as a block blob. Backing up to page blob is deprecated, so it's preferred to use the new block blob backup functionality. When used to change the [!INCLUDE [ss_smartbackup](../../includes/ss-smartbackup-md.md)] configuration, this parameter is optional. If not specified, then the existing configuration values are retained.
 
 > [!WARNING]  
 > The *@credential_name* parameter isn't supported at this time. Only backup to block blob is supported, which requires this parameter to be NULL.
 
-## Return code value
+## Return code values
 
 `0` (success) or `1` (failure).
 
@@ -108,7 +109,7 @@ New-AzureStorageContainerSASToken -Name myContainer -Permission rwdl -FullUri -C
 
 ### B. Enable SQL Server Managed Backup to Azure
 
-The following example enables [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the instance of SQL Server it's executed on, sets the retention policy to 30 days, and sets the destination to a container named `myContainer` in a storage account named `mystorageaccount`.
+The following example enables [!INCLUDE [ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the instance of SQL Server it's executed on, sets the retention policy to 30 days, and sets the destination to a container named `myContainer` in a storage account named `mystorageaccount`.
 
 ```sql
 USE msdb;
@@ -122,7 +123,7 @@ GO
 
 ### C. Disable SQL Server Managed Backup to Azure
 
-The following example disables [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the instance of SQL Server it's executed on.
+The following example disables [!INCLUDE [ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the instance of SQL Server it's executed on.
 
 ```sql
 USE msdb;

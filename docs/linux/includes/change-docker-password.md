@@ -1,7 +1,7 @@
 ---
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 12/14/2022
+ms.date: 06/14/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: include
@@ -11,6 +11,9 @@ The **SA** account is a system administrator on the SQL Server instance that's c
 1. Choose a strong password to use for the SA user.
 
 1. Use `docker exec` to run the **sqlcmd** utility to change the password through a Transact-SQL statement. Replace `<YourStrong!Passw0rd>` and `<YourNewStrong!Passw0rd>` with your own password values:
+
+   > [!IMPORTANT]  
+   > The `SA_PASSWORD` environment variable is deprecated. Use `MSSQL_SA_PASSWORD` instead.
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \

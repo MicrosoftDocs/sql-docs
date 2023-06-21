@@ -57,7 +57,7 @@ Returns a result set with the following columns.
 
 ## Remarks
 
-When a profile name or profile ID is specified, `sysmail_help_profile_sp` returns information about that profile. Otherwise, `sysmail_help_profile_sp` returns information about every profile in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.
+When a profile name or profile ID is specified, `sysmail_help_profile_sp` returns information about that profile. Otherwise, `sysmail_help_profile_sp` returns information about every profile in the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance.
 
 The stored procedure `sysmail_help_profile_sp` is in the `msdb` database and is owned by the **dbo** schema. The procedure must be executed with a three-part name if the current database isn't `msdb`.
 

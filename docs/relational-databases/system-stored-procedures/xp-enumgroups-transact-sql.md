@@ -4,7 +4,7 @@ description: "Provides a list of local Microsoft Windows groups or a list of glo
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/26/2023
+ms.date: 05/31/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -17,6 +17,7 @@ dev_langs:
   - "TSQL"
 ---
 # xp_enumgroups (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Provides a list of local Microsoft Windows groups or a list of global groups that are defined in a specified Windows domain.
@@ -48,7 +49,7 @@ The name of the Windows domain for which to enumerate a list of global groups. *
 
 ## Remarks
 
-If *domain_name* is the name of the Windows-based computer that an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running on, or no domain name is specified, `xp_enumgroups` enumerates the local groups from the computer that is running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+If *domain_name* is the name of the Windows-based computer that an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is running on, or no domain name is specified, `xp_enumgroups` enumerates the local groups from the computer that is running [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].
 
 ## Permissions
 

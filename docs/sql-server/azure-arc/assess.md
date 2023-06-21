@@ -4,7 +4,7 @@ description: Configure best practices assessment on an Azure Arc-enabled SQL Ser
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mikeray, randolphwest
-ms.date: 03/03/2023
+ms.date: 06/14/2023
 ms.service: sql
 ms.topic: conceptual
 ---
@@ -47,13 +47,14 @@ This article provides instructions for using best practices assessment on an ins
 - The minimum permissions required to access or read the assessment report are:
   - Reader role on the resource group or subscription of the Arc-enabled SQL Server resource.
   - [Log analytics reader](/azure/azure-monitor/logs/manage-access?tabs=portal#log-analytics-reader).
-  - [Monitoring reader](/azure/role-based-access-control/built-in-roles#monitoring-reader) on resource group/subscription of Log analytics workspace.
+  - [Monitoring reader](/azure/role-based-access-control/built-in-roles#monitoring-reader) on resource group/subscription of Log Analytics workspace.
   - The SQL Server built-in login **NT AUTHORITY\SYSTEM** must be the member of SQL Server **sysadmin** server role for all the SQL Server instances running on the machine.
   - If your firewall or proxy server restricts outbound connectivity, make sure they allow to Azure Arc over TCP port 443 for these URLs.
 
     - `global.handler.control.monitor.azure.com`
-    - `<virtual-machine-region-name>.handler.control.monitor.azure.com`
+    - `*.handler.control.monitor.azure.com`
     - `<log-analytics-workspace-id>.ods.opinsights.azure.com`
+    - `*.ingest.monitor.azure.com`
 
 - Your SQL Server instance must have the [TCP/IP protocol enabled](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
 
@@ -69,11 +70,11 @@ This article provides instructions for using best practices assessment on an ins
 
    :::image type="content" source="media/assess/sql-best-practices-assessment-launch.png" alt-text="Screenshot showing how to enable the best practices assessment screen of an Arc-enabled SQL Server resource.":::
 
-1. If the Log Analytics Workspace is not created or the current user does not have Log Analytics Contributor role assigned for the resource group or subscription, you can't initiate the on-demand SQL Assessment.  Review the [Prerequisites](#prerequisites).
+1. If the Log Analytics workspace is not created or the current user does not have Log Analytics Contributor role assigned for the resource group or subscription, you can't initiate the on-demand SQL Assessment.  Review the [Prerequisites](#prerequisites).
 
-   :::image type="content" source="media/assess/enable-log-analytics-workspace.png" alt-text="Screenshot showing how to specify the log analytics workspace for SQL Server best practices assessment.":::
+   :::image type="content" source="media/assess/enable-log-analytics-workspace.png" alt-text="Screenshot showing how to specify the Log Analytics workspace for SQL Server best practices assessment.":::
 
-1. Select the  **Log Analytics Workspace** from the drop-down menu and select **Enable assessment**.
+1. Select the  **Log Analytics workspace** from the drop-down menu and select **Enable assessment**.
 
    :::image type="content" source="media/assess/click-on-enable.png" alt-text="Screenshot showing the enable best practices assessment screen of an Arc-enabled SQL Server resource.":::
 
@@ -102,7 +103,7 @@ You can automatically enable best practices assessment on multiple Arc-enabled S
 1. Choose a scope.
 1. Select **Next**.
 1. On the **Parameters** tab, select **Only show parameters that need input for review**, if the checkbox not already selected.
-   1. Select **Log Analytics Workspace**, **Log Analytics Workspace location**, from drop-down menus respectively.
+   1. Select **Log Analytics workspace**, **Log Analytics workspace location**, from drop-down menus respectively.
    1. Set **Enablement** value to *true* to enabling the best practices assessment. Set to *false* to disable the assessment.
    1. Select **Next**
 1. On the **Remediation** tab, select **Create a remediation task**.
@@ -112,6 +113,8 @@ You can automatically enable best practices assessment on multiple Arc-enabled S
 
 See [Azure Policy documentation](/azure/governance/policy) for general instructions about how to assign an Azure policy using Azure portal or an API of your choice.
 
+   > [!NOTE]
+   > If the Log Analytics workspace is selected from a different resource group than the Arc-enabled SQL Server resource, the scope of the Azure policy must be the whole subscription.
 
 ### Modify license type
 
@@ -130,7 +133,7 @@ After you have enabled the best practices assessment, you can run, or configure 
    > [!NOTE]
    > When you perform any of the following tasks on a specific SQL Server instance, the task is applied to all SQL Server instances running on the machine.
 
-   The **View assessment results** is inactive until the results are ready in Log Analytics. This process might take up to two hours after the data files are processed on the target machine.
+   The **View assessment results** is inactive until the results are ready in Log Analytics workspace. This process might take up to two hours after the data files are processed on the target machine.
 
    :::image type="content" source="media/assess/configure-schedule.png" alt-text="Screen shot showing configuration control and schedule control. ":::
 
@@ -142,7 +145,7 @@ After you have enabled the best practices assessment, you can run, or configure 
 
 ## View best practices assessment results
 
-- On the **Best practices assessment** pane, select **View assessment results**.
+- On the **Best practices assessment** pane, select any of the individual row items to view the results.
 
 ## Results page
 
@@ -156,7 +159,6 @@ To filter results, use the drop-down menu above the grid. Namely:
 
 - **Name**
 - **Severity**
-- **Tags**
 - **Check Id**.
 
 To download results, use **Export to Excel**.
@@ -176,9 +178,12 @@ If there are multiple runs in a single day, only the latest run is included in t
 
 - Best practices assessment is currently limited to SQL Server running on Windows machines. The assessment doesn't work for SQL on Linux machines.
 - It may take a few seconds to populate the history of the previous execution of the assessments on the best practices home page.
-- A failure on one or more SQL Server instances, mark the assessment failure for all SQL Server instances running on the same machine.  You can view the assessment results for successful SQL Server instances by directly querying the log analytical workspaces.  You can find a few sample queries [here](https://techcommunity.microsoft.com/t5/sql-server-blog/best-practices-assessment-arc-enabled-sql-server/ba-p/3715776).
-- If Log analytics workspace is selected from a different resource group than the Arc-enabled SQL Server resource, the scope of the Azure policy must be the whole subscription.
+- The assessment results can also be viewed by directly querying the Log Analytics workspaces. For example queries, see [Best practices assessment - Arc-enabled SQL Server](https://techcommunity.microsoft.com/t5/sql-server-blog/best-practices-assessment-arc-enabled-sql-server/ba-p/3715776).
 - Do not make any other extension configuration changes while the Azure policy is remediating the noncompliant Arc-enabled SQL Server resources. [Track Azure policy remediation task progress.](/azure/governance/policy/how-to/remediate-resources?tabs=azure-portal#step-3-track-remediation-task-progress)
+
+## Troubleshooting
+
+For more information, see the [troubleshooting guide](troubleshoot-assessment.md).
 
 ## Next steps
 
@@ -191,4 +196,5 @@ If there are multiple runs in a single day, only the latest run is included in t
 - To obtain comprehensive support of the best practices assessment feature, a Premier or Unified support subscription is required. For details, see [Azure Premier Support](https://azure.microsoft.com/support/plans/premier).
 
 - [View SQL Server databases - Azure Arc](view-databases.md)
+
 

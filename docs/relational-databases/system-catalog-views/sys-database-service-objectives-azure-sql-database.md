@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: sys.database_service_objectives (Azure SQL Database)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 08/25/2022
+ms.date: 06/19/2023
 ms.service: sql-database
 ms.topic: conceptual
 f1_keywords:
@@ -28,7 +28,7 @@ Returns the edition (service tier), service objective (pricing tier), and elasti
   
 |Column Name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|database_id|int|The ID of the database, unique within the logical server. Joinable with [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
+|database_id|int|The ID of the database, unique within the logical server. Joinable with [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) on the `database_id` column, but with not other system views where the `database_id` column is present. For details, see [DB_ID](../../t-sql/functions/db-id-transact-sql.md#remarks).|  
 |edition|sysname|The service tier for the database or data warehouse: **Basic**, **Standard**, **Premium** or **Data Warehouse**.|  
 |service_objective|sysname|The pricing tier of the database. If the database is in an elastic pool, returns **ElasticPool**.<br /><br /> On the **Basic** tier, returns **Basic**.<br /><br /> **Single database in a standard service tier** returns one of the following: S0, S1, S2, S3, S4, S6, S7, S9 or S12.<br /><br /> **Single database in a premium tier** returns of the following: P1, P2, P4, P6, P11 or P15.<br /><br /> **Azure Synapse Analytics** returns DW100 through DW30000c.<br /><br /> For details, see [single databases](/azure/sql-database/sql-database-dtu-resource-limits-single-databases/), [elastic pools](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools/), [data warehouses](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu/)|  
 |elastic_pool_name|sysname|The name of the [elastic pool](/azure/azure-sql/database/elastic-pool-overview) that the database belongs to. Returns **NULL** if the database is a single database or a dedicated SQL pool.|  

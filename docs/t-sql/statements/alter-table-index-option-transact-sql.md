@@ -4,7 +4,7 @@ description: ALTER TABLE index_option (Transact-SQL)
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/24/2022
+ms.date: 06/06/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -221,7 +221,7 @@ Specifies whether or not to optimize for last-page insert contention. The defaul
  For more information about compression, see [Data Compression](../../relational-databases/data-compression/data-compression.md).  
   
 XML_COMPRESSION   
-**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Preview.
+**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Specifies the XML compression option for any **xml** data type columns in the table. The options are as follows:
 

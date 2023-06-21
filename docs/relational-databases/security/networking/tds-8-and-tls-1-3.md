@@ -4,7 +4,7 @@ description: This article discusses TDS 8.0 and TLS 1.3 support with SQL Server 
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 05/11/2023
+ms.date: 06/06/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
@@ -65,7 +65,7 @@ To use TDS 8.0, [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] added `
 - [ODBC Driver for SQL Server](../../../connect/odbc/download-odbc-driver-for-sql-server.md) version 18.1.2.1 or higher
 - [OLE DB Driver for SQL Server](../../../connect/oledb/download-oledb-driver-for-sql-server.md) version 19.2.0 or higher
 
-In order to prevent a man-in-the-middle attack with `strict` connection encryption, users aren't able to set the `TrustServerCertificate` option to `true` and trust any certificate the server provided. Instead, users would use the `HostNameInCertificate` option to specify the certificate that should be trusted. The certificate supplied by the server would need to pass the certificate validation.
+In order to prevent a man-in-the-middle attack with `strict` connection encryption, users aren't able to set the `TrustServerCertificate` option to `true` and trust any certificate the server provided. Instead, users would use the `HostNameInCertificate` option to specify the certificate `ServerName` that should be trusted. The certificate supplied by the server would need to pass the certificate validation.
 
 ### Features that don't support strict encryption
 

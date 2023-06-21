@@ -42,7 +42,7 @@ The first option is to mount a directory on your host as a data volume in your c
 > Containers for [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] and later versions automatically start up as non-root, while [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] containers start as root by default. For more information on running SQL Server containers as non-root, see [Configure security](sql-server-linux-docker-container-security.md).
 
 > [!IMPORTANT]  
-> The `SA_PASSWORD` environment variable is deprecated. Please use `MSSQL_SA_PASSWORD` instead.
+> The `SA_PASSWORD` environment variable is deprecated. Use `MSSQL_SA_PASSWORD` instead.
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="=sql-server-linux-2017 || =sql-server-2017"

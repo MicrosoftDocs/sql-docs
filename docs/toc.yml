@@ -63,6 +63,8 @@ items:
         href: relational-databases/backup-restore/quickstart-backup-restore-database.md
       - name: To Azure Blob Storage 
         href: relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md
+      - name: To S3-Compatible Object Storage
+        href: relational-databases/tutorial-sql-server-backup-and-restore-to-s3.md
     - name: How-to
       items:
       - name: Backup to Azure
@@ -6769,8 +6771,9 @@ items:
         - name: Tuning Database using workload from Query Store
           href: relational-databases/performance/tuning-database-using-workload-from-query-store.md
     - name: Execution plans
-      href: relational-databases/performance/execution-plans.md
       items:
+      - name: Overview
+        href: relational-databases/performance/execution-plans.md
       - name: Concepts
         items:
         - name: Query Profiling Infrastructure
@@ -10431,6 +10434,10 @@ items:
         href: sql-server/azure-arc/point-in-time-restore.md
       - name: Delete from or restore to Azure Arc
         href: sql-server/azure-arc/delete-from-azure-arc.md
+    - name: Monitor
+      items:
+      - name: Activity Logs
+        href: sql-server/azure-arc/activity-logs.md
     - name: Secure
       items:
       - name: Configure advanced data Security
@@ -10443,6 +10450,8 @@ items:
       items:
       - name: Troubleshoot deployment
         href: sql-server/azure-arc/troubleshoot-deployment.md
+      - name: Troubleshoot best practices assessment
+        href: sql-server/azure-arc/troubleshoot-assessment.md
 
 
 - name: Big Data Clusters
@@ -10457,24 +10466,32 @@ items:
       items:
         - name: Platform release notes
           href: big-data-cluster/release-notes-big-data-cluster.md
-        - name: Cumulative Update 19
-          href: big-data-cluster/release-notes-cumulative-update-19.md
-        - name: Cumulative Update 18
-          href: big-data-cluster/release-notes-cumulative-update-18.md
-        - name: Cumulative Update 17
-          href: big-data-cluster/release-notes-cumulative-update-17.md
-        - name: Cumulative Update 16
-          href: big-data-cluster/release-notes-cumulative-update-16.md
-        - name: Cumulative Update 15
-          href: big-data-cluster/release-notes-cumulative-update-15.md
-        - name: Cumulative Update 14
-          href: big-data-cluster/release-notes-cumulative-update-14.md
-        - name: Cumulative Update 13
-          href: big-data-cluster/release-notes-cumulative-update-13.md
-        - name: Cumulative Update 12
-          href: big-data-cluster/release-notes-cumulative-update-12.md
-        - name: Cumulative Update history
-          href: big-data-cluster/release-notes-cumulative-updates-history.md
+        - name: Release history
+          items:
+          - name: Cumulative Update history
+            href: big-data-cluster/release-notes-cumulative-updates-history.md
+          - name: Past details
+            items: 
+            - name: Cumulative Update 21
+              href: big-data-cluster/release-notes-cumulative-update-21.md
+            - name: Cumulative Update 20
+              href: big-data-cluster/release-notes-cumulative-update-20.md
+            - name: Cumulative Update 19
+              href: big-data-cluster/release-notes-cumulative-update-19.md
+            - name: Cumulative Update 18
+              href: big-data-cluster/release-notes-cumulative-update-18.md
+            - name: Cumulative Update 17
+              href: big-data-cluster/release-notes-cumulative-update-17.md
+            - name: Cumulative Update 16
+              href: big-data-cluster/release-notes-cumulative-update-16.md
+            - name: Cumulative Update 15
+              href: big-data-cluster/release-notes-cumulative-update-15.md
+            - name: Cumulative Update 14
+              href: big-data-cluster/release-notes-cumulative-update-14.md
+            - name: Cumulative Update 13
+              href: big-data-cluster/release-notes-cumulative-update-13.md
+            - name: Cumulative Update 12
+              href: big-data-cluster/release-notes-cumulative-update-12.md
   - name: Install
     items:
     - name: Get Started
@@ -13051,6 +13068,8 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md
       - name: sys.dm_db_task_space_usage
         href: relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md
+      - name: sys.dm_db_tuning_recommendations
+        href: relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md
       - name: sys.dm_db_uncontained_entities
         href: relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md
       - name: sys.dm_database_copies (Azure SQL Database)
@@ -17710,19 +17729,21 @@ items:
           items:
           - name: Overview
             href: t-sql/language-elements/string-operators-transact-sql.md
-          - name: "+ (String Concatenation)"
+          - name: "= (String comparison or assignment)"
+            href: t-sql/language-elements/string-comparison-assignment.md
+          - name: "+ (String concatenation)"
             href: t-sql/language-elements/string-concatenation-transact-sql.md
-          - name: "+= (String Concatenation Assignment)"
+          - name: "+= (String concatenation assignment)"
             href: t-sql/language-elements/string-concatenation-equal-transact-sql.md
-          - name: "% (Wildcard - Character(s) to Match)"
+          - name: "% (Wildcard - character(s) to match)"
             href: t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md
-          - name: "[ ] (Wildcard - Character(s) to Match)"
+          - name: "[ ] (Wildcard - character(s) to match)"
             href: t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md
-          - name: "[^] (Wildcard - Character(s) Not to Match)"
+          - name: "[^] (Wildcard - character(s) not to match)"
             href: t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md
-          - name: "_ (Wildcard - Match One Character)"
+          - name: "_ (Wildcard - match one character)"
             href: t-sql/language-elements/wildcard-match-one-character-transact-sql.md
-        - name: Operator Precedence
+        - name: Operator precedence
           href: t-sql/language-elements/operator-precedence-transact-sql.md
       - name: Transactions
         href: t-sql/language-elements/transactions-transact-sql.md

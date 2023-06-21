@@ -4,7 +4,7 @@ description: Configures automated or custom scheduling options for SQL Server Ma
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 05/24/2023
+ms.date: 05/31/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -23,7 +23,7 @@ dev_langs:
 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-Configures automated or custom scheduling options for [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].
+Configures automated or custom scheduling options for [!INCLUDE [ss_smartbackup](../../includes/ss-smartbackup-md.md)].
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -38,6 +38,7 @@ EXEC managed_backup.sp_backup_config_schedule
     , [ @backup_begin_time = ] 'begin time of the backup window'
     , [ @backup_duration = ] 'backup window length'
     , [ @log_backup_freq = ] 'frequency of log backup'
+[ ; ]
 ```
 
 ## Arguments
@@ -75,7 +76,7 @@ This determines the frequency of transaction log backups. These backups happen a
 > [!NOTE]  
 > If the recovery model changes from simple to full, you need to reconfigure the *@log_backup_freq* from `0:00` to a non-zero value.
 
-## Return code value
+## Return code values
 
 `0` (success) or `1` (failure).
 

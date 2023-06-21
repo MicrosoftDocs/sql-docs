@@ -61,7 +61,7 @@ Returns CPU usage and storage data for a database in Azure SQL Database. The dat
  For a more granular view of this data, use `sys.dm_db_resource_stats` dynamic management view in a user database. This view captures data every 15 seconds and maintains historical data for 1 hour. For more information, see [sys.dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md).  
 
 > [!NOTE]
-> For more information on troubleshooting CPU utilization using dynamic management views, see [Identify CPU performance issues in Microsoft Azure SQL Database and Azure SQL Managed Instance performance](/azure/azure-sql/database/monitoring-with-dmvs#identify-cpu-performance-issues). 
+> For more information on troubleshooting CPU utilization using dynamic management views, see [Identify CPU performance issues in Azure SQL Database performance](/azure/azure-sql/database/monitoring-with-dmvs#identify-cpu-performance-issues) or [Identify CPU performance issues in Azure SQL Managed Instance performance](/azure/azure-sql/managed-instance/monitoring-with-dmvs#identify-cpu-performance-issues). 
 
  To review recent out of memory events, use [sys.dm_os_out_of_memory_events](../system-dynamic-management-views/sys-dm-os-out-of-memory-events.md).
 

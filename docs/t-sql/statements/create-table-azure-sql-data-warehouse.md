@@ -4,7 +4,7 @@ description: "CREATE TABLE creates a new table in Azure Synapse Analytics, Analy
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: vanto, xiaoyul, wiassaf, mariyaali, maghan
-ms.date: 04/14/2023
+ms.date: 06/06/2023
 ms.service: sql
 ms.topic: reference
 dev_langs:
@@ -353,7 +353,8 @@ For more information, see these articles:
 ## <a id="LimitationsRestrictions"></a> Limitations and Restrictions
 
 - You can't define a DEFAULT constraint on a distribution column.  
-- Table Name cannot be greater than 100 characters.
+- Table Name cannot be greater than 128 characters.
+- Column Name cannot be greater than 128 characters.
   
 ### Partitions
 
@@ -785,9 +786,10 @@ Permissions in [!INCLUDE[fabric](../../includes/fabric.md)] are different from p
 
 ## <a id="LimitationsRestrictions"></a> Limitations and restrictions
 
-- Table name cannot be greater than 100 characters.
-- Table names in [!INCLUDE[fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE[fabric](../../includes/fabric.md)] cannot include the characters `/` or `\`.
-- The default and only collation supported  in [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] is Latin1_General_100_BIN2_UTF8.
+- Table names cannot be greater than 128 characters.
+- Table names in [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)] cannot include the characters `/` or `\`.
+- Column names cannot be greater than 128 characters.
+- The default and only collation supported in [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] is Latin1_General_100_BIN2_UTF8.
 
 ## Remarks
 

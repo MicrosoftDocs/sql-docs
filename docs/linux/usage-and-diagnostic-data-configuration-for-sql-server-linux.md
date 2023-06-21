@@ -4,7 +4,7 @@ description: Describes how SQL Server customer usage and diagnostic data is coll
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: randolphwest
-ms.date: 01/16/2023
+ms.date: 06/14/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -66,10 +66,10 @@ To disable usage and diagnostic data collection on Docker, you must have Docker 
    echo 'customerfeedback = false' >> <host directory>/mssql.conf
    ```
 
-1. Run the container image.
+1. Run the container image:
 
    > [!IMPORTANT]  
-   > The `SA_PASSWORD` environment variable is deprecated. Please use `MSSQL_SA_PASSWORD` instead.
+   > The `SA_PASSWORD` environment variable is deprecated. Use `MSSQL_SA_PASSWORD` instead.
 
    ```bash
    docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2017-latest
@@ -81,7 +81,7 @@ To disable usage and diagnostic data collection on Docker, you must have Docker 
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
+::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15"
 
 1. Add an `mssql.conf` file with the lines `[telemetry]` and `customerfeedback = false` in the host directory:
 
@@ -93,14 +93,44 @@ To disable usage and diagnostic data collection on Docker, you must have Docker 
    echo 'customerfeedback = false' >> <host directory>/mssql.conf
    ```
 
-1. Run the container image
+1. Run the container image:
+
+   > [!IMPORTANT]  
+   > The `SA_PASSWORD` environment variable is deprecated. Use `MSSQL_SA_PASSWORD` instead.
 
    ```bash
-   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-latest
    ```
 
    ```PowerShell
-   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-latest
+   ```
+
+::: moniker-end
+<!--SQL Server 2022 on Linux-->
+::: moniker range=">= sql-server-linux-ver16 || >= sql-server-ver16"
+
+1. Add an `mssql.conf` file with the lines `[telemetry]` and `customerfeedback = false` in the host directory:
+
+   ```bash
+   echo '[telemetry]' >> <host directory>/mssql.conf
+   ```
+
+   ```bash
+   echo 'customerfeedback = false' >> <host directory>/mssql.conf
+   ```
+
+1. Run the container image:
+
+   > [!IMPORTANT]  
+   > The `SA_PASSWORD` environment variable is deprecated. Use `MSSQL_SA_PASSWORD` instead.
+
+   ```bash
+   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2022-latest
+   ```
+
+   ```PowerShell
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2022-latest
    ```
 
 ::: moniker-end
@@ -163,7 +193,7 @@ To enable Local Audit on Docker, you must have Docker [persist your data](./sql-
    echo 'userrequestedlocalauditdirectory = <host directory>/audit' >> <host directory>/mssql.conf
    ```
 
-1. Run the container image
+1. Run the container image:
 
    ```bash
    docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2017-latest
@@ -175,7 +205,7 @@ To enable Local Audit on Docker, you must have Docker [persist your data](./sql-
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
+::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15"
 
 1. The target directory for new Local Audit logs will be in the container. Create a target directory for new Local Audit logs in the host directory on your machine. The following example creates a new **/audit** directory:
 
@@ -196,11 +226,41 @@ To enable Local Audit on Docker, you must have Docker [persist your data](./sql-
 1. Run the container image
 
    ```bash
-   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-latest
    ```
 
    ```PowerShell
-   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-latest
+   ```
+
+::: moniker-end
+<!--SQL Server 2022 on Linux-->
+::: moniker range=">= sql-server-linux-ver16 || >= sql-server-ver16"
+
+1. The target directory for new Local Audit logs will be in the container. Create a target directory for new Local Audit logs in the host directory on your machine. The following example creates a new **/audit** directory:
+
+   ```bash
+   sudo mkdir <host directory>/audit
+   ```
+
+1. Add an `mssql.conf` file with the lines `[telemetry]` and `userrequestedlocalauditdirectory = <host directory>/audit` in the host directory:
+
+   ```bash
+   echo '[telemetry]' >> <host directory>/mssql.conf
+   ```
+
+   ```bash
+   echo 'userrequestedlocalauditdirectory = <host directory>/audit' >> <host directory>/mssql.conf
+   ```
+
+1. Run the container image
+
+   ```bash
+   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2022-latest
+   ```
+
+   ```PowerShell
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2022-latest
    ```
 
 ::: moniker-end

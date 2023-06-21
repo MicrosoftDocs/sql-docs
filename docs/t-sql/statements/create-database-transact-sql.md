@@ -4,7 +4,7 @@ description: Create database syntax for SQL Server, Azure SQL Database, Azure Sy
 author: markingmyname
 ms.author: maghan
 ms.reviewer: wiassaf
-ms.date: 05/23/2023
+ms.date: 05/31/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -1008,6 +1008,7 @@ CREATE DATABASE database_name
       | 'HS_MOPRMS_n'
       | { ELASTIC_POOL(name = <elastic_pool_name>) } })
    ]
+   [ WITH BACKUP_STORAGE_REDUNDANCY = { 'LOCAL' | 'ZONE' | 'GEO' } ]
 [;]
 ```
 
@@ -1029,12 +1030,11 @@ Specifies the default collation for the metadata catalog. *DATABASE_DEFAULT* spe
 
 *SQL_Latin1_General_CP1_CI_AS* specifies that the metadata catalog used for system views and tables be collated to a fixed SQL_Latin1_General_CP1_CI_AS collation. This is the default setting on Azure SQL Database if unspecified.
 
-#### BACKUP_STORAGE_REDUNDANCY
+#### BACKUP_STORAGE_REDUNDANCY = ['LOCAL' | 'ZONE' | 'GEO']
 
-Specifies how the point-in-time restore and long-term retention backups for a database are replicated. Geo restore or ability to recover from regional outage is only available when database is created with 'GEO' backup storage redundancy. Unless explicitly specified, databases created with T-SQL use geo-redundant backup storage. 
+Specifies how the point-in-time restore and long-term retention backups for a database are replicated. Geo restore or ability to recover from regional outage is only available when database is created with `GEO` backup storage redundancy. Unless explicitly specified, databases created with T-SQL use geo-redundant backup storage.
 
-> [!IMPORTANT]
-> BACKUP_STORAGE_REDUNDANCY option for Azure SQL Database is available in public preview in Brazil South and generally available in Southeast Asia Azure region only.  
+To enforce data residency when you're creating a database by using T-SQL, use `LOCAL` or `ZONE` as input to the BACKUP_STORAGE_REDUNDANCY parameter.
 
 #### LEDGER = {ON | OFF }
 
@@ -1157,7 +1157,7 @@ The following syntax and semantic rules apply to your use of the `AS COPY OF` ar
 For more information, see [Create a copy of an Azure SQL database using Transact-SQL](/azure/azure-sql/database/database-copy).
 
 > [!IMPORTANT]
-> By default, the database copy is created with the same backup storage redundancy as that of the source database. Changing the backup storage redundancy while creating a database copy is not supported via T-SQL. 
+> By default, the database copy is created with the same backup storage redundancy as that of the source database. 
 
 ## Permissions
 

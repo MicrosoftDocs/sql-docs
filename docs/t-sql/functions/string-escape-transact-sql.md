@@ -34,7 +34,7 @@ STRING_ESCAPE( text , type )
 ## Arguments
 
  *text*  
- Is a **nvarchar**[expression](../../t-sql/language-elements/expressions-transact-sql.md) expression representing the object that should be escaped.  
+ Is a **nvarchar** [expression](../../t-sql/language-elements/expressions-transact-sql.md) representing the object that should be escaped.  
   
  *type*  
  Escaping rules that will be applied. Currently the value supported is `'json'`.  

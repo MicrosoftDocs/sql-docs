@@ -9,7 +9,7 @@ ms.custom: generated
 
 ### List SQL Databases and their elastic pools
 
-The following query uses **leftouter** `join` to bring together SQL Database resources and their related elastic pools, if they've any.
+The following query uses `leftouter join` to bring together SQL Database resources and their related elastic pools, if they've any.
 
 ```kusto
 Resources

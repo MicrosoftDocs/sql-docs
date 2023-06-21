@@ -1,6 +1,6 @@
 ---
 title: Migrate a Python application to use passwordless connections with Azure SQL Database
-description: Learn how to connect to migrate a Python application to use passwordless connections with Azure SQL Database
+description: Learn how to migrate a Python application to use passwordless connections with Azure SQL Database.
 author: bobtabor-msft
 ms.author: rotabor
 ms.date: 05/15/2023
@@ -8,7 +8,7 @@ ms.service: sql-database
 ms.subservice: security
 monikerRange: "= azuresql || = azuresql-db"
 ms.topic: how-to
-ms.custom: devx-track-csharp, passwordless-java, passwordless-js, passwordless-python, passwordless-dotnet, devx-track-azurecli, devx-track-azurepowershell
+ms.custom: devx-track-csharp, passwordless-python, devx-track-azurecli, devx-track-azurepowershell
 ms.devlang: python
 ---
 

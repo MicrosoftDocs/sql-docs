@@ -4,7 +4,7 @@ description: Learn how to use Data Classification with the ODBC driver and how t
 author: "v-makouz"
 ms.author: v-makouz
 ms.reviewer: v-davidengel
-ms.date: "07/26/2018"
+ms.date: "06/15/2023"
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -188,52 +188,47 @@ int main(int argc, char **argv)
     checkRC_exit(SQLGetStmtAttr(stmt, SQL_ATTR_IMP_ROW_DESC, (SQLPOINTER)&ird, SQL_IS_POINTER, 0), stmt, SQL_HANDLE_STMT,
         8, "get IRD handle");
     rc = SQLGetDescFieldW(ird, 0, SQL_CA_SS_DATA_CLASSIFICATION, dcbuf, 0, &dclen);
-    if (rc != SQL_SUCCESS && rc != SQL_SUCCESS_WITH_INFO)
+
+    checkRC_exit(rc, ird, SQL_HANDLE_DESC, 0, 0);
+  
+
+    SQLINTEGER dclenout;
+    unsigned char *dcptr;
+    unsigned short ncols;
+    printf("Data Classification information (%u bytes):\n", dclen);
+    if (!(dcbuf = malloc(dclen)))
     {
-        checkRC_exit(rc, ird, SQL_HANDLE_DESC, 0, 0);
-        printf("Error reading SQL_CA_SS_DATA_CLASSIFICATION IRD field. Ensure that the driver and\n"
-            "server both support the Data Classification feature, and that the query returns columns\n"
-            "with classification information.\n");
+        printf("Memory Allocation Error");
+        return 9;
     }
-    else
-    {
-        SQLINTEGER dclenout;
-        unsigned char *dcptr;
-        unsigned short ncols;
-        printf("Data Classification information (%u bytes):\n", dclen);
-        if (!(dcbuf = malloc(dclen)))
-        {
-            printf("Memory Allocation Error");
-            return 9;
-        }
-        checkRC_exit(SQLGetDescFieldW(ird, 0, SQL_CA_SS_DATA_CLASSIFICATION, dcbuf, dclen, &dclenout),
+    checkRC_exit(SQLGetDescFieldW(ird, 0, SQL_CA_SS_DATA_CLASSIFICATION, dcbuf, dclen, &dclenout),
             ird, SQL_HANDLE_DESC, 10, "reading SQL_CA_SS_DATA_CLASSIFICATION");
-        dcptr = dcbuf;
-        printLabelInfo("Labels", &dcptr);
-        printLabelInfo("Information Types", &dcptr);
-        printf("----- Column Sensitivities(%u) -----\n", ncols = *(unsigned short*)dcptr);
+    dcptr = dcbuf;
+    printLabelInfo("Labels", &dcptr);
+    printLabelInfo("Information Types", &dcptr);
+    printf("----- Column Sensitivities(%u) -----\n", ncols = *(unsigned short*)dcptr);
+    dcptr += sizeof(unsigned short);
+    while (ncols--)
+    {
+        unsigned short nprops = *(unsigned short*)dcptr;
         dcptr += sizeof(unsigned short);
-        while (ncols--)
+        while (nprops--)
         {
-            unsigned short nprops = *(unsigned short*)dcptr;
-            dcptr += sizeof(unsigned short);
-            while (nprops--)
-            {
-                unsigned short labelidx, typeidx;
-                labelidx = *(unsigned short*)dcptr; dcptr += sizeof(unsigned short);
-                typeidx = *(unsigned short*)dcptr; dcptr += sizeof(unsigned short);
-                printf(labelidx == 0xFFFF ? "(none) " : "%u ", labelidx);
-                printf(typeidx == 0xFFFF ? "(none)\n" : "%u\n", typeidx);
-            }
-            printf("-----\n");
+            unsigned short labelidx, typeidx;
+            labelidx = *(unsigned short*)dcptr; dcptr += sizeof(unsigned short);
+            typeidx = *(unsigned short*)dcptr; dcptr += sizeof(unsigned short);
+            printf(labelidx == 0xFFFF ? "(none) " : "%u ", labelidx);
+            printf(typeidx == 0xFFFF ? "(none)\n" : "%u\n", typeidx);
         }
-        if (dcptr != dcbuf + dclen)
-        {
-            printf("Error: unexpected parse of DATACLASSIFICATION data\n");
-            return 11;
-        }
-        free(dcbuf);
+        printf("-----\n");
     }
+    if (dcptr != dcbuf + dclen)
+    {
+        printf("Error: unexpected parse of DATACLASSIFICATION data\n");
+        return 11;
+    }
+    free(dcbuf);
+    
     return 0;
 }
 ```

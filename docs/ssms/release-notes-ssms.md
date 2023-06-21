@@ -4,7 +4,7 @@ description: Release notes for SQL Server Management Studio (SSMS).
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan
-ms.date: 06/02/2023
+ms.date: 06/06/2023
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
@@ -38,7 +38,7 @@ SSMS 19.1 is the latest general availability (GA) release of SSMS. If you need a
 | Azure Data Studio installation integration | The installation of SSMS installs Azure Data Studio 1.44. |
 | Always Encrypted | Added support for secure enclaves and in-place encryption in the Always Encrypted Wizard. See [Configure column encryption using Always Encrypted Wizard](/sql/relational-databases/security/encryption/always-encrypted-wizard). |
 | Azure SQL Managed Instance | Introduced visibility to the status of the Distributed Transaction Coordinator (DTC) service for Azure SQL Managed Instance. Object Explorer can be used to determine if DTC is enabled on the Azure SQL Managed Instance (within the Management node). See [Distributed Transaction Coordinator (DTC) for Azure SQL Managed Instance](/azure/azure-sql/managed-instance/distributed-transaction-coordinator-dtc). |
-| Backup/Restore | Added capability to restore backup files from Amazon S3 storage to SQL Server 2022 and Azure SQL Managed Instance. |
+| Backup/Restore | Added capability to restore backup files from S3-compatible storage to SQL Server 2022 and Azure SQL Managed Instance. |
 | General SSMS | Updated File Version for ssms.exe to align with product version. |
 | General SSMS | Removed deprecated hardware from the list of available service-level objects. |
 | General SSMS | Changed the system browser setting, within **Tools > Options > Azure Services**, to default to True. The external browser will be used, instead of the legacy embedded browser. |

@@ -44,8 +44,16 @@
     "globalMetadata": {
       "layout": "Conceptual",
       "uhfHeaderId": "MSDocsHeader-DocsSQL",
-      "contributors_to_exclude": ["hexiaokai", "openpublishingbuild","sudeepku","saldana","iRaindrop"],
-      "searchScope": ["sql"],
+      "contributors_to_exclude": [
+        "hexiaokai",
+        "openpublishingbuild",
+        "sudeepku",
+        "saldana",
+        "iRaindrop"
+      ],
+      "searchScope": [
+        "sql"
+      ],
       "_op_documentIdPathDepotMapping": {
         "linux/": {
           "depot_name": "SQL.linux",

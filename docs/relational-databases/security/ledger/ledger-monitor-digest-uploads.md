@@ -31,7 +31,7 @@ You can monitor failed and successful ledger digest uploads with [Extended Event
 
 ::: zone pivot="as1-azure-sql-managed-instance"
 
-You can monitor failed and successful ledger digest uploads with [Extended Events](../../extended-events/extended-events.md) in Azure Managed Instance. Select the events *ledger_digest_upload_failed* and *ledger_digest_upload_success* in the Extended Event session.
+You can monitor failed and successful ledger digest uploads with [Extended Events](../../extended-events/extended-events.md) in Azure SQL Managed Instance. Select the events *ledger_digest_upload_failed* and *ledger_digest_upload_success* in the Extended Event session.
 
 ::: zone-end
 

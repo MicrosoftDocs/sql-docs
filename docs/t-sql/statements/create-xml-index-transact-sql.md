@@ -4,7 +4,7 @@ description: CREATE XML INDEX (Transact-SQL)
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/09/2022
+ms.date: 06/06/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -251,7 +251,7 @@ For more information about XML indexes, see [XML Indexes &#40;SQL Server&#41;](.
 
 ### XML compression
 
-**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Preview.
+**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 - XML indexes don't inherit the compression property of the table. To compress indexes, you must explicitly enable XML compression on XML indexes.
 - Secondary XML indexes don't inherit the compression property of the Primary XML index.

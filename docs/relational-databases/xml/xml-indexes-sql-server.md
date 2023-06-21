@@ -4,7 +4,7 @@ description: Learn how creating XML indexes on xml data type columns can benefit
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.date: 05/09/2022
+ms.date: 06/06/2023
 ms.service: sql
 ms.subservice: xml
 ms.topic: conceptual
@@ -216,7 +216,7 @@ Except for the differences described later in this article, creating an XML inde
 
 ## XML compression
 
-**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Preview.
+**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Enabling XML compression changes the physical storage format of the data that is associated with the XML data type to a *compressed binary format*, but doesn't change XML data syntax or semantics. Application changes aren't required when one or more tables are enabled for XML compression.
 

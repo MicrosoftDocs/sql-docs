@@ -4,7 +4,7 @@ description: This page contains a listing of bugs fixed in each release, startin
 author: v-chojas
 ms.author: v-chojas
 ms.reviewer: v-davidengel
-ms.date: 01/31/2023
+ms.date: 06/15/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -14,6 +14,22 @@ helpviewer_keywords:
 # List of bugs fixed
 
 This page contains a listing of bugs fixed in each release, starting with [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+
+
+### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 18.2.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+- Fix a crash when retrieving data with AutoTranslate option off
+- Fix partial writes on Linux in presence of signals
+- Fix crashes when receiving invalid data from server
+- Fix memory leak when processing encrypted columns
+- Fix errors with long enclave queries
+
+### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 17.10.4.1 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+- Fix a crash when retrieving data with AutoTranslate option off
+- Fix partial writes on Linux in presence of signals
+- Fix crashes when receiving invalid data from server
+- Fix memory leak when processing encrypted columns
 
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 18.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

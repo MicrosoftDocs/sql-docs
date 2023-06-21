@@ -59,7 +59,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
 Specifies the local path or network location where the assembly that is being uploaded is located, and also the manifest file name that corresponds to the assembly.  \<client_assembly_specifier> can be expressed as a fixed string or an expression evaluating to a fixed string, with variables. CREATE ASSEMBLY does not support loading multimodule assemblies. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] also looks for any dependent assemblies of this assembly in the same location and also uploads them with the same owner as the root level assembly. If these dependent assemblies are not found and they are not already loaded in the current database, CREATE ASSEMBLY fails. If the dependent assemblies are already loaded in the current database, the owner of those assemblies must be the same as the owner of the newly created assembly.
 
 > [!IMPORTANT]
-> Azure SQL Database does not support creating an assembly from a file.
+> Azure SQL Database & Azure SQL Managed Instance do not support creating an assembly from a file.
   
  \<client_assembly_specifier> cannot be specified if the logged in user is being impersonated.  
   

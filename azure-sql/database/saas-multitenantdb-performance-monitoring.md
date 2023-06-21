@@ -4,7 +4,7 @@ description: Monitor and manage performance of sharded multi-tenant Azure SQL Da
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 01/25/2019
+ms.date: 06/05/2023
 ms.service: sql-database
 ms.subservice: scenario
 ms.topic: tutorial
@@ -28,8 +28,8 @@ In this tutorial you learn how to:
 
 To complete this tutorial, make sure the following prerequisites are completed:
 
-* The Wingtip Tickets SaaS Multi-tenant Database app is deployed. To deploy in less than five minutes, see [Deploy and explore the Wingtip Tickets SaaS Multi-tenant Database application](./saas-multitenantdb-get-started-deploy.md)
-* Azure PowerShell is installed. For details, see [Getting started with Azure PowerShell](/powershell/azure/get-started-azureps)
+- The Wingtip Tickets SaaS Multi-tenant Database app is deployed. To deploy in less than five minutes, see [Deploy and explore the Wingtip Tickets SaaS Multi-tenant Database application](./saas-multitenantdb-get-started-deploy.md)
+- Azure PowerShell is installed. For details, see [Getting started with Azure PowerShell](/powershell/azure/get-started-azureps)
 
 ## Introduction to SaaS performance management patterns
 
@@ -37,10 +37,10 @@ Managing database performance consists of compiling and analyzing performance da
 
 ### Performance management strategies
 
-* To avoid having to manually monitor performance, it's most effective to **set alerts that trigger when databases stray out of normal ranges**.
-* To respond to short-term fluctuations in the compute size of a database, the **DTU level can be scaled up or down**. If this fluctuation occurs on a regular or predictable basis, **scaling the database can be scheduled to occur automatically**. For example, scale down when you know your workload is light, maybe overnight, or during weekends.
-* To respond to longer-term fluctuations, or changes in the tenants, **individual tenants can be moved into other database**.
-* To respond to short-term increases in *individual* tenant load, **individual tenants can be taken out of a database and assigned an individual compute size**. Once the load is reduced, the tenant can then be returned to the multi-tenant database. When this is known in advance, tenants can be moved preemptively to ensure the database always has the resources it needs, and to avoid impact on other tenants in the multi-tenant database. If this requirement is predictable, such as a venue experiencing a rush of ticket sales for a popular event, then this management behavior can be integrated into the application.
+- To avoid having to manually monitor performance, it's most effective to **set alerts that trigger when databases stray out of normal ranges**.
+- To respond to short-term fluctuations in the compute size of a database, the **DTU level can be scaled up or down**. If this fluctuation occurs on a regular or predictable basis, **scaling the database can be scheduled to occur automatically**. For example, scale down when you know your workload is light, maybe overnight, or during weekends.
+- To respond to longer-term fluctuations, or changes in the tenants, **individual tenants can be moved into other database**.
+- To respond to short-term increases in *individual* tenant load, **individual tenants can be taken out of a database and assigned an individual compute size**. Once the load is reduced, the tenant can then be returned to the multi-tenant database. When this is known in advance, tenants can be moved preemptively to ensure the database always has the resources it needs, and to avoid impact on other tenants in the multi-tenant database. If this requirement is predictable, such as a venue experiencing a rush of ticket sales for a popular event, then this management behavior can be integrated into the application.
 
 The [Azure portal](https://portal.azure.com) provides built-in monitoring and alerting on most resources. For SQL Database, monitoring and alerting is available on databases. This built-in monitoring and alerting is resource-specific, so it's convenient to use for small numbers of resources, but is not convenient when working with many resources.
 
@@ -88,23 +88,23 @@ Wingtip Tickets SaaS Multi-tenant Database is a SaaS app, and the real-world loa
 
 ## Monitor resource usage using the Azure portal
 
-To monitor the resource usage that results from the load being applied, open the portal to the multi-tenant database, **tenants1**, containing the tenants:
+To monitor the resource usage that results from the load being applied, open the portal to the multi-tenant database, `tenants1`, containing the tenants:
 
-1. Open the [Azure portal](https://portal.azure.com) and browse to the server *tenants1-mt-&lt;USER&gt;*.
-1. Scroll down and locate databases and click **tenants1**. This sharded multi-tenant database contains all the tenants created so far.
+1. Open the [Azure portal](https://portal.azure.com) and browse to the server `tenants1-mt-<USER>`.
+1. Scroll down and locate databases and select **tenants1**. This sharded multi-tenant database contains all the tenants created so far.
 
-![database chart](./media/saas-multitenantdb-performance-monitoring/multitenantdb.png)
+:::image type="content" source="./media/saas-multitenantdb-performance-monitoring/multitenantdb.png" alt-text="A screenshot of the Azure portal showing the database monitoring chart.":::
 
 Observe the **DTU** chart.
 
 ## Set performance alerts on the database
 
-Set an alert on the database that triggers on \>75% utilization as follows:
+Set an alert on the database that triggers on >75% utilization as follows:
 
-1. Open the *tenants1* database (on the *tenants1-mt-&lt;USER&gt;* server) in the [Azure portal](https://portal.azure.com).
-1. Click **Alert Rules**, and then click **+ Add alert**:
+1. Open the `tenants1` database (on the `tenants1-mt-<USER>` server) in the [Azure portal](https://portal.azure.com).
+1. Select **Alert Rules**, and then select **+ Add alert**:
 
-   ![add alert](./media/saas-multitenantdb-performance-monitoring/add-alert.png)
+   :::image type="content" source="./media/saas-multitenantdb-performance-monitoring/add-alert.png" alt-text="A screenshot from the Azure portal. UnderMonitoring and Alert Rules, the Add alert page is shown.":::
 
 1. Provide a name, such as **High DTU**,
 1. Set the following values:
@@ -112,9 +112,9 @@ Set an alert on the database that triggers on \>75% utilization as follows:
    * **Condition = greater than**
    * **Threshold = 75**.
    * **Period = Over the last 30 minutes**
-1. Add an email address to the *Additional administrator email(s)* box and click **OK**.
+1. Add an email address to the *Additional administrator email(s)* box and select **OK**.
 
-   ![set alert](./media/saas-multitenantdb-performance-monitoring/set-alert.png)
+   :::image type="content" source="./media/saas-multitenantdb-performance-monitoring/set-alert.png" alt-text="A screenshot from the Azure portal. The Add an Alert rule page is shown.":::
 
 ## Scale up a busy database
 
@@ -122,36 +122,39 @@ If the load level increases on a database to the point that it maxes out the dat
 
 **Short term**, consider scaling up the database to provide additional resources, or removing tenants from the multi-tenant database (moving them out of the multi-tenant database to a stand-alone database).
 
-**Longer term**, consider optimizing queries or index usage to improve database performance. Depending on the application's sensitivity to performance issues its best practice to scale a database up before it reaches 100% DTU usage. Use an alert to warn you in advance.
+**Longer term**, consider optimizing queries or index usage to improve database performance. Depending on the application's sensitivity to performance issues it's best practice to scale a database up before it reaches 100% DTU usage. Use an alert to warn you in advance.
 
 You can simulate a busy database by increasing the load produced by the generator. Causing the tenants to burst more frequently, and for longer, increasing the  load on the multi-tenant database without changing the requirements of the individual tenants. Scaling up the database is easily done in the portal or from PowerShell. This exercise uses the portal.
 
-1. Set *$DemoScenario* = **3**, _Generate load with longer and more frequent bursts per database_ to increase the intensity of the aggregate load on the database without changing the peak load required by each tenant.
+1. Set `$DemoScenario` = **3**, _Generate load with longer and more frequent bursts per database_ to increase the intensity of the aggregate load on the database without changing the peak load required by each tenant.
 1. Press **F5** to apply a load to all your tenant databases.
-1. Go to the **tenants1** database in the Azure portal.
+1. Go to the `tenants1` database in the Azure portal.
 
 Monitor the increased database DTU usage on the upper chart. It takes a few minutes for the new higher load to kick in, but you should quickly see the database start to hit max utilization, and as the load steadies into the new pattern, it rapidly overloads the database.
 
-1. To scale up the database, click **Pricing tier (scale DTUs)** in the settings blade.
+1. To scale up the database, select **Pricing tier (scale DTUs)** in the settings page.
 1. Adjust the **DTU** setting to **100**. 
-1. Click **Apply** to submit the request to scale the database.
+1. Select **Apply** to submit the request to scale the database.
 
 Go back to **tenants1** > **Overview** to view the monitoring charts. Monitor the effect of providing the database with more resources (although with few tenants and a randomized load it's not always easy to see conclusively until you run for some time). While you are looking at the charts bear in mind that 100% on the upper chart now represents 100 DTUs, while on the lower chart 100% is still 50 DTUs.
 
 Databases remain online and fully available throughout the process. Application code should always be written to retry dropped connections, and so will reconnect to the database.
 
-## Provision a new tenant in its own database 
+## Provision a new tenant in its own database
 
 The sharded multi-tenant model allows you to choose whether to provision a new tenant in a multi-tenant database alongside other tenants, or to provision the tenant in a database of its own. By provisioning a tenant in its own database, it benefits from the isolation inherent in the separate database, allowing you to manage the performance of that tenant independently of others, restore that tenant independently of others, etc. For example, you might choose to put free-trial or regular customers in a multi-tenant database, and premium customers in individual databases.  If isolated single-tenant databases are created, they can still be managed collectively in an elastic pool to optimize resource costs.
 
 If you already provisioned a new tenant in its own database, skip the next few steps.
 
-1. In the **PowerShell ISE**, open …\\Learning Modules\\ProvisionTenants\\*Demo-ProvisionTenants.ps1*. 
-1. Modify **$TenantName = "Salix Salsa"** and **$VenueType  = "dance"**
-1. Set **$Scenario** = **2**, _Provision a tenant in a new single-tenant database_
+1. In the **PowerShell ISE**, open `...\Learning Modules\ProvisionTenants\Demo-ProvisionTenants.ps1`. 
+1. Modify `$TenantName = "Salix Salsa"` and `$VenueType = "dance"`.
+1. Set `$Scenario = 2`, _Provision a tenant in a new single-tenant database_.
 1. Press **F5** to run the script.
 
-The script will provision this tenant in a separate database, register the database and the tenant with the catalog, and then open the tenant's Events page in the browser. Refresh the Events Hub page and you will see "Salix Salsa" has been added as a venue.
+The script will provision this tenant in a separate database, register the database and the tenant with the catalog, and then open the tenant's **Events** page in the browser. Refresh the Events Hub page and you will see "Salix Salsa" has been added as a venue.
+
+> [!NOTE]
+> Restoring from multi-tenant databases to a single tenant is not possible.
 
 ## Manage performance of an individual database
 
@@ -159,12 +162,12 @@ If a single tenant within a multi-tenant database experiences a sustained high l
 
 This exercise simulates the effect of Salix Salsa experiencing a high load when tickets go on sale for a popular event.
 
-1. Open the …\\*Demo-PerformanceMonitoringAndManagement.ps1* script.
-1. Set **$DemoScenario = 5**, _Generate a normal load plus a high load on a single tenant (approximately 90 DTU)._
-1. Set **$SingleTenantName = Salix Salsa**
+1. Open the `...\Demo-PerformanceMonitoringAndManagement.ps1` script.
+1. Set `$DemoScenario = 5`, _Generate a normal load plus a high load on a single tenant (approximately 90 DTU)._
+1. Set `$SingleTenantName = Salix Salsa`.
 1. Execute the script using **F5**.
 
-Go to portal and navigate to **salixsalsa** > **Overview** to view the monitoring charts. 
+Go to the Azure portal and navigate to **salixsalsa** > **Overview** to view the monitoring charts. 
 
 ## Other performance management patterns
 
@@ -189,4 +192,4 @@ In this tutorial you learn how to:
 ## Additional resources
 
 <!--* [Additional tutorials that build upon the Wingtip Tickets SaaS Multi-tenant Database application deployment](saas-multitenantdb-wingtip-app-overview.md#sql-database-wingtip-saas-tutorials)-->
-* [Azure automation](/azure/automation/automation-intro)
+- [Azure Automation](/azure/automation/automation-intro)

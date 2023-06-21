@@ -48,7 +48,7 @@ EXEC managed_backup.sp_backup_master_switch [ @new_state = ] { 0 | 1 }
 
 Set the state of [!INCLUDE [ss_smartbackup](../../includes/ss-smartbackup-md.md)]. *@new_state* is **bit**. When set to a value of `0`, the operations are paused, and when set to a value of `1`, the operation resume.
 
-## Return code value
+## Return code values
 
 `0` (success) or `1` (failure).
 

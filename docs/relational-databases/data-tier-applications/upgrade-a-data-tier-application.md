@@ -93,7 +93,7 @@ A DAC can only be upgraded by members of the **sysadmin** or **serveradmin** fix
 
     1. [Detect Change Page](#Detect_change)
 
-    1. [Options](#Options_Page)
+    1. [Options Page](#Options)
 
     1. [Review Upgrade Plan](#ReviewUpgPlan)
 
@@ -167,7 +167,7 @@ Use this page to report the results of the wizard's check for changes made to th
 
 **Cancel** - Terminates the wizard without deploying the DAC.
 
-## Options Page
+## <a id="Options"></a> Options Page
 
 Use this page to select the rollback on failure option for the upgrade.
 

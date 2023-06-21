@@ -43,7 +43,7 @@ If such a notification appears and you keep the page open, the portal automatica
 
 In case the assessment run fails, select the corresponding row to open a page that displays the error message.
 
-1. SQL Connection test failed
+1. SQL Server connection failures, general network error
 
     :::image type="content" source="media/assess/sql-best-practices-assessment-connection-failed.png" alt-text="Screenshot showing the error message that SQL Server is offline.":::
 

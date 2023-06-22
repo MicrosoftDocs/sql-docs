@@ -297,10 +297,10 @@ IDENTITY_INSERT specifies whether the identity value or values in the imported d
 
 #### *AUTO_CREATE_TABLE = { 'ON' | 'OFF' }*
 
-*AUTO_CREATE_TABLE* specifies if the table could be automatically created by working alongside with automatic schema discovery. It is available only for Parquet files.
+*AUTO_CREATE_TABLE* specifies if the table could be automatically created by working alongside with automatic schema discovery. It's available only for Parquet files.
 
-- ON: Enables automatic table creation. The COPY INTO process will create a new table automatically by discovering the structure of the file to be loaded. Can also be used with preexisting tables to take advantage of automatic schema discovery of Parquet files.
-- OFF: Automatic table creation is not enabled. Default.
+- ON: Enables automatic table creation. The COPY INTO process creates a new table automatically by discovering the structure of the file to be loaded. Can also be used with preexisting tables to take advantage of automatic schema discovery of Parquet files.
+- OFF: Automatic table creation isn't enabled. Default.
 
 > [!NOTE]  
 > The automatic table creation works alongside with automatic schema discovery. The automatic table creation is NOT enabled by default.
@@ -329,6 +329,10 @@ GRANT INSERT to [mike@contoso.com];
 GRANT CREATE TABLE to [mike@contoso.com];
 GRANT ALTER on SCHEMA::HR to [mike@contoso.com];
 ```
+
+## Remarks
+
+The COPY statement accepts only UTF-8 and UTF-16 valid characters for row data and command parameters. Source files or parameters (such as ROW TERMINATOR or FIELD TERMINATOR) that use invalid characters may be interpreted incorrectly by the COPY statement and cause unexpected results such as data corruption, or other failures. Make sure your source files and parameters are UTF-8 or UTF-16 compliant before you invoke the COPY statement.  
 
 ## Examples
 
@@ -505,7 +509,7 @@ There are no limitations on the number or size of files; however, for best perfo
 
 ### Are there any known issues with the COPY statement?
 
-If you have an Azure Synapse workspace that was created prior to 12/07/2020, you may run into a similar error message when authenticating using Managed Identity: `com.microsoft.sqlserver.jdbc.SQLServerException: Managed Service Identity has not been enabled on this server. Please enable Managed Service Identity and try again.`
+If you have an Azure Synapse workspace that was created prior to December 7, 2020, you may run into a similar error message when authenticating using Managed Identity: `com.microsoft.sqlserver.jdbc.SQLServerException: Managed Service Identity has not been enabled on this server. Please enable Managed Service Identity and try again.`
 
 Follow these steps to work around this issue by re-registering the workspace's managed identity:
 
@@ -721,6 +725,8 @@ ENCODING only applies to CSV. Default is UTF8. Specifies the data encoding stand
 ## Remarks
 
 COPY INTO in [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] doesn't allow setting a date format for interpreting date character strings. By default, all dates are considered to have the month-day-year format. To ingest a CSV file with a different date format, use *SET DATEFORMAT* to specify the desired date format at the session level. For more information, see [SET DATEFORMAT (Transact-SQL)](set-dateformat-transact-sql.md).
+
+Additionally, the COPY statement accepts only UTF-8 and UTF-16 valid characters for row data and command parameters. Source files or parameters (such as ROW TERMINATOR or FIELD TERMINATOR) that use invalid characters may be interpreted incorrectly by the COPY statement and cause unexpected results such as data corruption, or other failures. Make sure your source files and parameters are UTF-8 or UTF-16 compliant before you invoke the COPY statement.  
 
 ## Examples
 

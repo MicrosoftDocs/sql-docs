@@ -62,7 +62,7 @@ For Analysis Services, Integration Services, or Reporting Services projects, you
 
 ### License terms for Visual Studio
 
-To understand the license terms and use cases for Visual Studio, refer to (Visual Studio License Directory)[https://visualstudio.microsoft.com/license-terms/]. For example, if you are using the community edition of Visual Studio for SQL Server Data Tools, review the EULA for that specific edition of Visual Studio in the Visual Studio License Directory.
+To understand the license terms and use cases for Visual Studio, refer to (Visual Studio License Directory)[https://visualstudio.microsoft.com/license-terms/]. For example, if you are using the Community Edition of Visual Studio for SQL Server Data Tools, review the EULA for that specific edition of Visual Studio in the Visual Studio License Directory.
 
 ## SSDT for Visual Studio 2019
 

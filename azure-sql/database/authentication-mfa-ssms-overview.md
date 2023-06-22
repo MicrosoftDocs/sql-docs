@@ -17,9 +17,9 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi || >=sql-server-ver1
 ---
 
 # Using Azure Active Directory Multi-Factor Authentication
-[!INCLUDE[appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa.md)]
+[!INCLUDE[appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa-asvm-arc.md)]
 
-[Azure Active Directory (Azure AD) Multi-Factor Authentication](/azure/active-directory/authentication/concept-mfa-howitworks) is a security feature provided by Microsoft's cloud-based identity and access management service. Multi-factor authentication (MFA) enhances the security of user sign-ins by requiring users to provide extra verification steps beyond a password. Azure AD MFA is a supported authentication method for [Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is), and SQL Server 2022 (16.x) and later versions.
+[Azure Active Directory (Azure AD) Multi-Factor Authentication](/azure/active-directory/authentication/concept-mfa-howitworks) is a security feature provided by Microsoft's cloud-based identity and access management service. Multi-factor authentication (MFA) enhances the security of user sign-ins by requiring users to provide extra verification steps beyond a password. Azure AD MFA is a supported authentication method for [Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is), and [SQL Server 2022 (16.x)](/sql/relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview) and later versions.
 
 This article provides a brief overview of the benefits of Azure AD MFA, explains how to configure it, and shows how to connect to a database using MFA with [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms).
 
@@ -45,7 +45,7 @@ For the full list of authentication methods available, see [What authentication 
 
 ## Azure AD B2B support
 
-Azure AD MFA also supports [Azure AD B2B scenarios](/azure/active-directory/external-identities/what-is-b2b), which enable businesses to invite guest users to collaborate with their organization. Guest users can connect to databases either as individual users or members of an Azure AD group. For more information, see [Create guest user in SQL Database and Azure Synapse](/azure/azure-sql/database/authentication-aad-guest-users#create-guest-user-in-sql-database-and-azure-synapse).
+Azure AD MFA also supports [Azure AD B2B scenarios](/azure/active-directory/external-identities/what-is-b2b), which enable businesses to invite guest users to collaborate with their organization. Guest users can connect to databases either as individual users or members of an Azure AD group. For more information, see [Create guest user in SQL Database, Azure Synapse, and SQL Managed Instance](/azure/azure-sql/database/authentication-aad-guest-users#create-guest-user-in-sql-database-and-azure-synapse).
 
 ## Connect using Azure AD MFA in SSMS
 

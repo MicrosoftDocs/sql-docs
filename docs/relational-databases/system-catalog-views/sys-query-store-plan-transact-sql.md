@@ -50,10 +50,10 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||>=sq
 |**last_compile_duration**|**bigint**|Plan compilation statistics.|
 |**plan_forcing_type**|**int**|Plan forcing type.<br /><br />0: NONE<br /><br />1: MANUAL<br /><br />2: AUTO|
 |**plan_forcing_type_desc**|**nvarchar(60)**|Text description of plan_forcing_type.<br /><br />NONE: No plan forcing<br /><br />MANUAL: Plan forced by user<br /><br />AUTO: Plan forced by automatic tuning.|
-|**has_compile_replay_script**|bit|**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])<BR/><BR/>Indicates whether the plan has an optimization replay script associated with it:<BR/><BR/>0 = No optimization replay script (none or even invalid).<BR/><BR/>1 = optimization replay script recorded.|
-|**is_optimized_plan_forcing_disabled**|bit|**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])<BR/><BR/>Indicates whether optimized plan forcing was disabled for the plan:<BR/><BR/> 0 = disabled.<BR/><BR/> 1 = not disabled.|
-|**plan_type**|int|**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])<BR/><BR/>Plan type.<BR/><BR/> 0: Compiled Plan<BR/><BR/>1: Dispatcher Plan<BR/><BR />2: Query Variant Plan|
-|**plan_type_desc**|nvarchar(120)|**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])<BR/><BR/>Text description of the plan type.<BR/><BR/> Compiled Plan: Indicates that the plan is a non-parameter sensitive plan optimized plan<BR/><BR/>Dispatcher Plan: Indicates that the plan is a parameter sensitive plan optimized dispatcher plan<BR/><BR />Query Variant Plan: Indicates that the plan is a parameter sensitive plan optimized query variant plan|
+|**has_compile_replay_script**|bit|**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])<BR/><BR/>Indicates whether the plan has an optimization replay script associated with it:<BR/><BR/>0 = No optimization replay script (none or even invalid).<BR/><BR/>1 = optimization replay script recorded. <BR/><BR/>Not applicable to Azure Synapse Analytics.|
+|**is_optimized_plan_forcing_disabled**|bit|**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])<BR/><BR/>Indicates whether optimized plan forcing was disabled for the plan:<BR/><BR/> 0 = disabled.<BR/><BR/> 1 = not disabled. <BR/><BR/>Not applicable to Azure Synapse Analytics.|
+|**plan_type**|int|**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])<BR/><BR/>Plan type.<BR/><BR/> 0: Compiled Plan<BR/><BR/>1: Dispatcher Plan<BR/><BR />2: Query Variant Plan <BR/><BR/>Not applicable to Azure Synapse Analytics.|
+|**plan_type_desc**|nvarchar(120)|**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])<BR/><BR/>Text description of the plan type.<BR/><BR/> Compiled Plan: Indicates that the plan is a non-parameter sensitive plan optimized plan<BR/><BR/>Dispatcher Plan: Indicates that the plan is a parameter sensitive plan optimized dispatcher plan<BR/><BR />Query Variant Plan: Indicates that the plan is a parameter sensitive plan optimized query variant plan<BR/><BR/>Not applicable to Azure Synapse Analytics.|
 
 ## Remarks
 
@@ -112,6 +112,37 @@ SELECT TOP 1000
        LEFT JOIN sys.query_store_query_text t ON q.query_text_id = t.query_text_id
     WHERE p.is_forced_plan = 1 and p.last_force_failure_reason != 0;
 ```
+
+### B. Valid query to view query plan results in Azure Synapse Analytics
+
+```sql
+SELECT TOP 1000 
+      plan_id
+      ,query_id
+      ,plan_group_id
+      ,engine_version
+      ,compatibility_level
+      ,query_plan_hash
+      ,query_plan
+      ,is_online_index_plan
+      ,is_trivial_plan
+      ,is_parallel_plan
+      ,is_forced_plan
+      ,is_natively_compiled
+      ,force_failure_count
+      ,last_force_failure_reason
+      ,last_force_failure_reason_desc
+      ,count_compiles
+      ,initial_compile_start_time
+      ,last_compile_start_time
+      ,last_execution_time
+      ,avg_compile_duration
+      ,last_compile_duration
+      ,plan_forcing_type
+      ,plan_forcing_type_desc
+  FROM sys.query_store_plan
+```
+
 
 ## Next steps
 

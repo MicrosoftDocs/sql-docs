@@ -116,10 +116,10 @@ SELECT TOP 1000
 
 ### B. Query to view query plan results in Azure Synapse Analytics
 
-Use the following sample query to find query plan results in Azure Synapse Analytics.
+Use the following sample query to find the 100 most recent query plan results in Azure Synapse Analytics.
 
 ```sql
-SELECT TOP 1000 
+SELECT TOP 100
       plan_id
       ,query_id
       ,plan_group_id
@@ -144,6 +144,7 @@ SELECT TOP 1000
       ,plan_forcing_type
       ,plan_forcing_type_desc
   FROM sys.query_store_plan
+  ORDER BY last_execution_time DESC;
 ```
 
 

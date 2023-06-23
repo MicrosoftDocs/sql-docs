@@ -317,4 +317,4 @@ Auto-failover groups can also be managed programmatically using Azure PowerShell
 - To learn how to save on licensing costs, see [Configure standby replica](auto-failover-group-standby-replica-how-to-configure.md). 
 - For information about business continuity scenarios, review [Business continuity overview](business-continuity-high-availability-disaster-recover-hadr-overview.md)
 - To learn about automated backups, review [SQL Managed Instance automated backups](automated-backups-overview.md).
-- To learn about using automated backups for recovery, review [Restore a database from the service-initiated backups](recovery-using-backups.md).
+- To learn about using automated backups for recovery, review [Restore a database from service-initiated backups](recovery-using-backups.md).

@@ -319,6 +319,6 @@ Auto-failover groups can also be managed programmatically using Azure PowerShell
 - For instructions to configure a failover group, review the [how to guide](auto-failover-group-configure-sql-mi.md) or the detailed [tutorial](failover-group-add-instance-tutorial.md). 
 - For a sample script, review: [Use PowerShell to create an auto-failover group on a SQL Managed Instance](scripts/add-to-failover-group-powershell.md)
 - To learn how to save on licensing costs, see [Configure standby replica](auto-failover-group-standby-replica-how-to-configure.md). 
-- For a business continuity overview and scenarios, review [Business continuity overview](../database/business-continuity-high-availability-disaster-recover-hadr-overview.md)
-- To learn about automated backups, review [SQL Database automated backups](../database/automated-backups-overview.md).
-- To learn about using automated backups for recovery, review [Restore a database from the service-initiated backups](../database/recovery-using-backups.md).
+- For a business continuity overview and scenarios, review [Business continuity overview](../business-continuity-high-availability-disaster-recover-hadr-overview.md)
+- To learn about automated backups, review [SQL Managed Instance automated backups](../automated-backups-overview.md).
+- To learn about using automated backups for recovery, review [Restore a database from the service-initiated backups](../recovery-using-backups.md).

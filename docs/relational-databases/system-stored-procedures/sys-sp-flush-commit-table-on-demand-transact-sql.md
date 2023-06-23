@@ -1,9 +1,10 @@
 ---
 title: "sys.sp_flush_commit_table_on_demand (Transact-SQL)"
-description: "sys.sp_flush_commit_table_on_demand (Transact-SQL)"
+description: Deletes rows from syscommittab in batches.
 author: JetterMcTedder
 ms.author: bspendolini
-ms.date: "10/20/2022"
+ms.reviewer: randolphwest
+ms.date: 07/06/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -22,49 +23,71 @@ dev_langs:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Deletes rows from syscommittab in batches.
-  
- :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
+Deletes rows from `syscommittab` in batches.
+
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+
 ## Syntax
 
-```sql
-sys.sp_flush_commit_table_on_demand [ @numrows = ] numrows
-[ , [@deleted_rows = ] deleted_rows OUTPUT ]
-[ , [@date_cleanedup = ] date_cleanedup OUTPUT ]
-[ , [@cleanup_ts = ] cleanup_ts OUTPUT ] 
+```syntaxsql
+sp_flush_commit_table_on_demand
+    [ @numrows = ] numrows
+    , [ @deleted_rows = ] deleted_rows OUTPUT
+    , [ @date_cleanedup = ] date_cleanedup OUTPUT
+    , [ @cleanup_ts = ] cleanup_ts OUTPUT
+[ ; ]
 ```
 
 ## Arguments
 
-'[@numrows = ] numrows' is the number of rows you want to delete from syscommittab. numrows is a bigint and cannot be NULL.
+#### [ @numrows = ] *numrows*
 
-## Return Code Values
+Specifies the number of rows you want to delete from syscommittab. *@numrows* is **bigint**, and can't be NULL.
 
- **0** (success) or **1** (failure)
+#### [ @deleted_rows = ] *deleted_rows* OUTPUT
+
+*@deleted_rows* is an OUTPUT parameter of type **bigint**.
+
+#### [ @date_cleanedup = ] *date_cleanedup* OUTPUT
+
+*@date_cleanedup* is an OUTPUT parameter of type **datetime**.
+
+#### [ @cleanup_ts = ] *cleanup_ts* OUTPUT
+
+*@cleanup_ts* is an OUTPUT parameter of type **bigint**.
+
+## Return code values
+
+`0` (success) or `1` (failure).
 
 ## Example
 
 ```sql
-DECLARE @deleted_rows bigint;
-DECLARE @date_cleanedup datetime;
-DECLARE @cleanup_ts bigint;
+DECLARE @deleted_rows BIGINT;
+DECLARE @date_cleanedup DATETIME;
+DECLARE @cleanup_ts BIGINT;
 
-exec sys.sp_flush_commit_table_on_demand 3000, @deleted_rows = @deleted_rows OUTPUT, 
-    @date_cleanedup = @date_cleanedup OUTPUT, @cleanup_ts = @cleanup_ts OUTPUT;
+EXEC sys.sp_flush_commit_table_on_demand 3000,
+    @deleted_rows = @deleted_rows OUTPUT,
+    @date_cleanedup = @date_cleanedup OUTPUT,
+    @cleanup_ts = @cleanup_ts OUTPUT;
 
-print concat('Number of rows deleted: ', @deleted_rows);
-print concat('Cleanup Date: ', @date_cleanedup);
-print concat('Change Tracking Version: ', @cleanup_ts);
+PRINT CONCAT ('Number of rows deleted: ', @deleted_rows);
+PRINT CONCAT ('Cleanup date: ', @date_cleanedup);
+PRINT CONCAT ('Change tracking version: ', @cleanup_ts);
 GO
+```
 
+[!INCLUDE [ssresult-md](../../includes/ssresult-md.md)]
+
+```output
 Started executing query at Line 1
 The value returned by change_tracking_hardened_cleanup_version() is 17.
 The value returned by safe_cleanup_version() is 17.
 (0 rows affected)
 Number of rows deleted: 100
-Cleanup Date: Aug 29 2022  8:59PM
-Change Tracking Version: 17
+Cleanup date: Aug 29 2022  8:59PM
+Change tracking Version: 17
 Total execution time: 00:00:02.008
 ```
 
@@ -74,12 +97,12 @@ This procedure must be run in a database that has change tracking enabled.
 
 ## Permissions
 
- Only a member of the sysadmin server role or db_owner database role can execute this procedure.  
-  
-## See Also
+Only a member of the **sysadmin** server role or **db_owner** database role can execute this procedure.
 
- [About Change Tracking &#40;Transact-SQL&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)  
- [Change Tracking Cleanup and Troubleshooting &#40;Transact-SQL&#41;](../../relational-databases/track-changes/cleanup-and-troubleshoot-change-tracking-sql-server.md)  
- [Change Tracking Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)  
- [Change Tracking System Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/change-tracking-tables-transact-sql.md)  
- [Change Tracking Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/change-tracking-stored-procedures-transact-sql.md)  
+## Next steps
+
+- [About change tracking (Transact-SQL)](../track-changes/about-change-tracking-sql-server.md)
+- [Change tracking cleanup and Troubleshooting (Transact-SQL)](../track-changes/cleanup-and-troubleshoot-change-tracking-sql-server.md)
+- [Change tracking functions (Transact-SQL)](../system-functions/change-tracking-functions-transact-sql.md)
+- [Change tracking system tables (Transact-SQL)](../system-tables/change-tracking-tables-transact-sql.md)
+- [Change tracking stored procedures (Transact-SQL)](change-tracking-stored-procedures-transact-sql.md)

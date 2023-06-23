@@ -100,7 +100,7 @@ Deploy both managed instances to [paired regions](/azure/availability-zones/cros
 
 Azure SQL Managed Instance follows a safe deployment practice where Azure paired regions are generally not deployed to at the same time. However, it is not possible to predict which region will be upgraded first, so the order of deployment is not guaranteed. Sometimes, your primary instance will be upgraded first, and sometimes it would be secondary.
 
-In situations where your Azure SQL managed instance has [auto-failover groups](auto-failover-group-sql-mi.md) configured, and the groups are not aligned with the [Azure region pairing](/azure/reliability/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies), you should select different maintenance window schedules for your primary and secondary database. For example, you can select **Weekday** maintenance window for your geo-secondary database and **Weekend** maintenance window for your geo-primary database.
+In situations where Azure SQL Managed Instance is part of an [auto-failover group](auto-failover-group-sql-mi.md), and the instances in the group are not in [Azure paired regions](/azure/reliability/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies), select different maintenance window schedules for your primary and secondary database. For example, select a **Weekday** maintenance window for your geo-secondary database and a **Weekend** maintenance window for your geo-primary database.
 
 ## <a id="enabling-replication-traffic-between-two-instances"></a> Enable and optimize geo-replication traffic flow between the instances
 

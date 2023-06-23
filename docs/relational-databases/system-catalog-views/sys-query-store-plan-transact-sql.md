@@ -1,9 +1,10 @@
 ---
 title: "sys.query_store_plan (Transact-SQL)"
-description: sys.query_store_plan (Transact-SQL)
+description: The sys.query_store_plan view contains information about each execution plan associated with a query.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 09/19/2022
+ms.reviewer: wiassaf
+ms.date: 06/22/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -113,7 +114,9 @@ SELECT TOP 1000
     WHERE p.is_forced_plan = 1 and p.last_force_failure_reason != 0;
 ```
 
-### B. Valid query to view query plan results in Azure Synapse Analytics
+### B. Query to view query plan results in Azure Synapse Analytics
+
+Use the following sample query to find query plan results in Azure Synapse Analytics.
 
 ```sql
 SELECT TOP 1000 

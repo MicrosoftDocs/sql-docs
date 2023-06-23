@@ -220,10 +220,6 @@ You can scale up or scale down the primary and secondary instance to a different
 
 The sequence is recommended specifically to avoid the problem where the geo-secondary at a lower SKU gets overloaded and must be reseeded during an upgrade or downgrade process.
 
-## <a id="using-failover-groups-and-virtual-network-rules"></a> Use failover groups and virtual network service endpoints
-
-If you're using [Virtual Network service endpoints and rules](../database/vnet-service-endpoint-rule-overview.md) to restrict access to your SQL Managed Instance, note that each virtual network service endpoint applies to only one Azure region. The endpoint does not enable other regions to accept communication from the subnet. Therefore, only the client applications deployed in the same region can connect to the primary database.
-
 ## <a id="preventing-the-loss-of-critical-data"></a> Prevent loss of critical data
 
 <!--

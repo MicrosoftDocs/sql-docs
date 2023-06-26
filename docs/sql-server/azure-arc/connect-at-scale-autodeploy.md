@@ -66,11 +66,19 @@ SQL Server machines can be successfully connected to Arc but missing the proper 
 
 ```msgraph-interactive
 resources
-|extend licenseType =properties.licenseType
-|extend licenseType = iff(licenseType=='','Configuration needed',licenseType)
-|extend ResourceName=name
-|where type =="microsoft.azurearcdata/sqlserverinstances" and licenseType in('Configuration needed')
-|project id,tenantId,ResourceName,licenseType
+| where type == "microsoft.hybridcompute/machines"
+| extend
+    joinID = toupper(id)
+| join kind = inner (
+    resources
+    | where type == "microsoft.hybridcompute/machines/extensions"
+    | extend machineId = toupper(substring(id, 0, indexof(id, '/extensions')))
+    | where properties.type in ("WindowsAgent.SqlServer","LinuxAgent.SqlServer")
+    | extend licenseType = iff(properties.settings.LicenseType == '', 'Configuration needed', properties.settings.LicenseType)
+    | project  machineId, licenseType
+    | where licenseType in('Configuration needed')
+) on $left.joinID == $right.machineId
+| project id, licenseType
 ```
 
 Visit [Manage SQL Server license and billing options](manage-license-type.md) to learn more about license types and modifications.

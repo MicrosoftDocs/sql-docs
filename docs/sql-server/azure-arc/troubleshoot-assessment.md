@@ -84,5 +84,10 @@ Ensure the SQL Server built-in login NT AUTHORITY\SYSTEM must be the member of t
 2. If there are any issues with the deployment of the Azure Monitor Agent, verify that the Arc machine is connected.
 3. The deployment can always be retriggered with the same LA Workspace by clicking on the **Enable assessment** button.
 
+## Modify Log analytical workspace
+
+To change the log analytical workspace that is enabled for best practice assessment, please open a support case. This feature is not currently available natively.
+
 For more assistance, create a support ticket with Microsoft and attach the log files. Visit,  [Create an Azure support request](/azure/azure-portal/supportability/how-to-create-azure-support-request)
+
 

@@ -197,7 +197,8 @@ This example returns the count by license type.
 resources
 | where type == "microsoft.hybridcompute/machines/extensions"
 | where properties.type in ("WindowsAgent.SqlServer","LinuxAgent.SqlServer")
-| summarize count() by tostring(properties.settings.LicenseType)
+| extend licenseType = iff(properties.settings.LicenseType == '', 'Configuration needed', properties.settings.LicenseType)
+| summarize count() by tostring(licenseType)
 ```
 
 ### Identify instances where license type is null

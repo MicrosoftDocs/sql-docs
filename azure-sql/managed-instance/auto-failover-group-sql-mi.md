@@ -92,7 +92,7 @@ To ensure non-interrupted connectivity to the primary SQL Managed Instance after
 > [!IMPORTANT]  
 > The first managed instance created in the subnet determines DNS zone for all subsequent instances in the same subnet. This means that two instances from the same subnet cannot belong to different DNS zones.
 
-For more information about creating the secondary SQL Managed Instance in the same DNS zone as the primary instance, see [Create a secondary managed instance](../managed-instance/failover-group-add-instance-tutorial.md#create-a-secondary-managed-instance).
+For more information about creating the secondary SQL Managed Instance in the same DNS zone as the primary instance, see [Create a secondary managed instance](failover-group-add-instance-tutorial.md#create-a-secondary-managed-instance).
 
 ## <a id="using-geo-paired-regions"></a> Use paired regions
 
@@ -100,7 +100,7 @@ Deploy both managed instances to [paired regions](/azure/availability-zones/cros
 
 Azure SQL Managed Instance follows a safe deployment practice where Azure paired regions are generally not deployed to at the same time. However, it is not possible to predict which region will be upgraded first, so the order of deployment is not guaranteed. Sometimes, your primary instance will be upgraded first, and sometimes it would be secondary.
 
-In situations where your Azure SQL managed instance has [auto-failover groups](../managed-instance/auto-failover-group-sql-mi.md) configured, and the groups are not aligned with the [Azure region pairing](/azure/reliability/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies), you should select different maintenance window schedules for your primary and secondary database. For example, you can select **Weekday** maintenance window for your geo-secondary database and **Weekend** maintenance window for your geo-primary database.
+In situations where Azure SQL Managed Instance is part of an [auto-failover group](auto-failover-group-sql-mi.md), and the instances in the group are not in [Azure paired regions](/azure/reliability/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies), select different maintenance window schedules for your primary and secondary database. For example, select a **Weekday** maintenance window for your geo-secondary database and a **Weekend** maintenance window for your geo-primary database.
 
 ## <a id="enabling-replication-traffic-between-two-instances"></a> Enable and optimize geo-replication traffic flow between the instances
 
@@ -220,10 +220,6 @@ You can scale up or scale down the primary and secondary instance to a different
 
 The sequence is recommended specifically to avoid the problem where the geo-secondary at a lower SKU gets overloaded and must be reseeded during an upgrade or downgrade process.
 
-## <a id="using-failover-groups-and-virtual-network-rules"></a> Use failover groups and virtual network service endpoints
-
-If you're using [Virtual Network service endpoints and rules](../database/vnet-service-endpoint-rule-overview.md) to restrict access to your SQL Managed Instance, note that each virtual network service endpoint applies to only one Azure region. The endpoint does not enable other regions to accept communication from the subnet. Therefore, only the client applications deployed in the same region can connect to the primary database.
-
 ## <a id="preventing-the-loss-of-critical-data"></a> Prevent loss of critical data
 
 <!--
@@ -319,6 +315,6 @@ Auto-failover groups can also be managed programmatically using Azure PowerShell
 - For instructions to configure a failover group, review the [how to guide](auto-failover-group-configure-sql-mi.md) or the detailed [tutorial](failover-group-add-instance-tutorial.md). 
 - For a sample script, review: [Use PowerShell to create an auto-failover group on a SQL Managed Instance](scripts/add-to-failover-group-powershell.md)
 - To learn how to save on licensing costs, see [Configure standby replica](auto-failover-group-standby-replica-how-to-configure.md). 
-- For a business continuity overview and scenarios, review [Business continuity overview](../database/business-continuity-high-availability-disaster-recover-hadr-overview.md)
-- To learn about automated backups, review [SQL Database automated backups](../database/automated-backups-overview.md).
-- To learn about using automated backups for recovery, review [Restore a database from the service-initiated backups](../database/recovery-using-backups.md).
+- For information about business continuity scenarios, review [Business continuity overview](business-continuity-high-availability-disaster-recover-hadr-overview.md)
+- To learn about automated backups, review [SQL Managed Instance automated backups](automated-backups-overview.md).
+- To learn about using automated backups for recovery, review [Restore a database from service-initiated backups](recovery-using-backups.md).

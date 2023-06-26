@@ -903,7 +903,7 @@ These common error messages have quick explanations for CETAS for Azure SQL Mana
 
 1. Access problems (invalid credential, expired credential or credential with insufficient permissions). Alternate possibility is an invalid path, where the SQL managed instance received an Error 404 from storage.
 
-   Solution: Verify credential validity and permissions. Alternatively, validate the path is valid and storage exists. For ADLS URL use format adls://container@mystorageaccount.blob.core.windows.net/mybaseoutputfolderpath
+   Solution: Verify credential validity and permissions. Alternatively, validate the path is valid and storage exists. Use the URL path `adls://<container>@<storage_account>.blob.core.windows.net/<path>/`.
 
    Sample error message: `Msg 15883: Access check for '<Read/Write>' operation against '<Storage>' failed with HRESULT = '0x...'`
 

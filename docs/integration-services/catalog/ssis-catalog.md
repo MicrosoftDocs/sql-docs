@@ -610,6 +610,9 @@ Provide the password that you specified while creating the SSIS Catalog in the *
 
 ![New Availability Group](../../integration-services/service/media/ssis-newavailabilitygroup.png "New Availability Group")  
   
+  > [!IMPORTANT]  
+  >  To prevent issues with the master key after a failover, use the method **Full database and log backup** to add the SSISDB database to the Always On Availability Group.
+  
 ####  <a name="Step3"></a> Step 3: Enable SSIS support for Always On  
  After you create the Integration Service Catalog, right-click the **Integration Service Catalogs** node, and click **Enable Always On Support.** You should see the following **Enable Support for Always On** dialog box. If this menu item is disabled, confirm that you have all the prerequisites installed and click **Refresh**.  
   

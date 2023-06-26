@@ -127,6 +127,7 @@ The overview also identifies:
 
 * All instances of SQL Server on the server
 * Host license type
+* Enhanced security update (ESU) status
 
 ### Modify license type
 
@@ -144,11 +145,22 @@ Azure portal opens **SQL Server Configuration** for the server.
 
 Choose one of the license types. See [License types](#license-types) for descriptions.
 
+#### Subscribe to Extended Security Updates
+
+Extended security updates (ESU)  subscription only applies to servers covered with Software Assurance or pay-as-you-go license type. If the server license type is license only, the option to select ESU is disabled.
+
+If you want to change the license type to license only you need to:
+
+1. Unsubscribe from ESU.
+1. Save the change.
+1. Wait approximately 5 minutes for the saved change to complete.
+1. Set the new license type.
+
 #### Exclude instances
 
 If you do not want Arc-enable one or more instances, add those instances under **Skip Instances**.
 
-After you verify the license type and any instance to exclude, select **Save** to apply changes.
+After you verify the license type, ESU setting, and any instance to exclude, select **Save** to apply changes.
 
 ### [PowerShell](#tab/powershell)
 

@@ -49,7 +49,7 @@ In case the assessment run fails, select the corresponding row to open a page th
 
     :::image type="content" source="media/assess/sql-best-practices-assessment-connection-failed-model-database.png" alt-text="Screenshot showing the error message that server principal isn't able to access the database.":::
 
-Ensure the SQL Server built-in login NT AUTHORITY\SYSTEM must be the member of SQL Server sysadmin server role for all the SQL Server instances running on the machine.  If this isn't allowed, open a Microsoft case so that we can be able to provide a workaround.
+Ensure the SQL Server built-in login NT AUTHORITY\SYSTEM must be the member of the SQL Server sysadmin server role for all the SQL Server instances running on the machine.  If this isn't allowed, we have implemented the “Least Privilege account” for running the Azure extension for SQL Server service on your SQL Server machine, and available for preview.  If you are interested to participate in the preview, please open a support case so that we can assist you to set up a preview with a "Least privileged account" for you to test. 
 
 3. Azure Monitor Agent (AMA) upload failed
 
@@ -85,3 +85,4 @@ Ensure the SQL Server built-in login NT AUTHORITY\SYSTEM must be the member of S
 3. The deployment can always be retriggered with the same LA Workspace by clicking on the **Enable assessment** button.
 
 For more assistance, create a support ticket with Microsoft and attach the log files. Visit,  [Create an Azure support request](/azure/azure-portal/supportability/how-to-create-azure-support-request)
+

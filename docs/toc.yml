@@ -13597,6 +13597,7 @@ items:
       - name: sys.dm_os_workers
         href: relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md
     - name: Stretch Database
+      href: relational-databases/system-dynamic-management-views/stretch-database-related-dynamic-management-views-transact-sql.md
       items:
       - name: sys.dm_db_rda_migration_status
         href: relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md

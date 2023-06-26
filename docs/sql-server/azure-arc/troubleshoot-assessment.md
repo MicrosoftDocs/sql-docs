@@ -86,7 +86,7 @@ Ensure the SQL Server built-in login NT AUTHORITY\SYSTEM must be the member of t
 
 ## Modify Log analytical workspace
 
-To change the log analytical workspace that is enabled for best practice assessment, please open a support case. This feature is not currently available natively.
+To change the Log Analytical workspace that is linked for best practices assessment, please open a support case. This feature is not currently available natively.
 
 For more assistance, create a support ticket with Microsoft and attach the log files. Visit,  [Create an Azure support request](/azure/azure-portal/supportability/how-to-create-azure-support-request)
 

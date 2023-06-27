@@ -105,4 +105,4 @@ Go to **Azure Arc > SQL Server** and open the newly registered Arc-enabled SQL S
 ## Next steps
 
 - [Configure advanced data security for your SQL Server instance](configure-advanced-data-security.md)
-- [Configure on-demand SQL assessment for your SQL Server instance](assess.md)
+- [Configure SQL best assessment for your SQL Server instance](assess.md)

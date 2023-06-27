@@ -513,11 +513,14 @@ If you have an Azure Synapse workspace that was created prior to December 7, 202
 
 Follow these steps to work around this issue by re-registering the workspace's managed identity:
 
-1. Go to your Azure Synapse workspace in the Azure portal.
-1. Go to the Managed identities page.
-1. If the "Allow Pipelines" option is already checked, you must uncheck this setting and save.
-1. Check the "Allow Pipelines" option and save.
-
+1. Install Azure PowerShell. Refer to [Install PowerShell](/powershell/azure/install-az-ps?toc=/azure/synapse-analytics/sql-data-warehouse/toc.json&bc=/azure/synapse-analytics/sql-data-warehouse/breadcrumb/toc.json).
+1. Register your workspace's managed identity using PowerShell: 
+   ```powershell
+   Connect-AzAccount
+   Select-AzSubscription -SubscriptionId <subscriptionId>
+   Set-AzSqlServer -ResourceGroupName your-database-server-resourceGroup -ServerName your-SQL-servername -AssignIdentity
+   ```
+   
 ## Next steps
 
 [Loading overview with [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]](/azure/sql-data-warehouse/design-elt-data-loading)

@@ -909,9 +909,9 @@ ALTER DATABASE { database_name | CURRENT }
           | 92160 | 102400 | 153600 | 204800 | 245760
       } GB
       | SERVICE_OBJECTIVE = {
-            'DW100' | 'DW200' | 'DW300' | 'DW400' | 'DW500'
-          | 'DW600' | 'DW1000' | 'DW1200' | 'DW1500' | 'DW2000'
-          | 'DW3000' | 'DW6000' | 'DW500c' | 'DW1000c' | 'DW1500c'
+            'DW100c' | 'DW200c' | 'DW300c' | 'DW400c' | 'DW500c'
+          | 'DW600c' | 'DW1000c' | 'DW1200c' | 'DW1500c' | 'DW2000c'
+          | 'DW3000c' | 'DW6000c' | 'DW500c' | 'DW1000c' | 'DW1500c'
           | 'DW2000c' | 'DW2500c' | 'DW3000c' | 'DW5000c' | 'DW6000c'
           | 'DW7500c' | 'DW10000c' | 'DW15000c' | 'DW30000c'
       }

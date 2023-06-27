@@ -13,19 +13,18 @@ helpviewer_keywords:
   - "edge constraints [Azure SQL Database]"
   - "graph edge constraints"
   - "SQL Graph"
-monikerRange: ">sql-server-2017||>sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current"
+monikerRange: "= azuresqldb-current || >=sql-server-ver15 || = azuresqldb-mi-current"
 ---
 # Edge constraints
-
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sqlserver2019-and-later-asdb-asdbmi.md)]
 
 Edge constraints can be used to enforce data integrity and specific semantics on the edge tables in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] graph database.
 
 ## <a name="Connection"></a> Edge Constraints
 
-By default, edge tables do not enforce anything for the endpoints of the edge. That is, an edge in a graph database could connect any node to any other node, regardless of the type.
+By default, edge tables don't enforce anything for the endpoints of the edge. That is, an edge in a graph database could connect any node to any other node, regardless of the type.
 
-SQL Graph supports edge constraints, which enable users to add constraints to their edge tables, thereby enforcing specific semantics and also maintaining data integrity. When a new edge is added to an edge table with edge constraints, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] enforces that the nodes which the edge is trying to connect, exist in the proper node tables. It is also ensured that a node cannot be dropped, if it is still referenced by an edge.
+SQL Graph supports edge constraints, which enable users to add constraints to their edge tables, thereby enforcing specific semantics and also maintaining data integrity. When a new edge is added to an edge table with edge constraints, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] enforces that the nodes that the edge is trying to connect, exist in the proper node tables. It's also ensured that a node can't be dropped, if any edge is referencing that node.
 
 ### Edge Constraint Clauses
 
@@ -52,7 +51,7 @@ Consider the `Supplier` and `Customer` nodes in your graph. Each can be related 
 CONSTRAINT EC_BOUGHT CONNECTION (Customer TO Product)
 ```
 
-The above example shows one edge constraint, with one edge constraint clause. This constraint supports `Customer-(bought)->Product`. That is, inserting a `bought` edge relationship going from a `Customer` to `Product` would be allowed. Inserting any other combination of nodes, like `Supplier-(bought)->Product`, even though it may describe a valid relationship in the real world, would fail.
+The above example shows one edge constraint, with one edge constraint clause. This constraint supports `Customer-(bought)->Product`. That is, inserting a `bought` edge relationship going from a `Customer` to `Product` would be allowed. If you try to insert any other combination of nodes, like `Supplier-(bought)->Product`, even though it may describe a valid relationship in the real world, would fail.
 
 ```sql
 CONSTRAINT EC_BOUGHT CONNECTION (Supplier TO Product, Customer TO Product)
@@ -65,13 +64,13 @@ CONSTRAINT EC_BOUGHT1 CONNECTION (Supplier TO Product)
 CONSTRAINT EC_BOUGHT2 CONNECTION (Customer TO Product)
 ```
 
-The above example shows two constraints on the same edge table, with each edge constraint specifying one constraint clause. In this situation, SQL would only allow inserts that satisfy BOTH edge constraint clauses simultaneously. This is, of course, impossible. There is no node pair that can satisfy both edge constraint clauses. This edge constraint combination makes the edge table unusable.
+The above example shows two constraints on the same edge table, with each edge constraint specifying one constraint clause. In this situation, SQL would only allow inserts that satisfy BOTH edge constraint clauses simultaneously. This isn't possible. There's no node pair that can satisfy both edge constraint clauses. This edge constraint combination makes the edge table unusable.
 
-For a detailed explanation of where multiple edge constraints can be used in a real-life scenario, please see the example "Creating a new edge constraint on existing edge table, with new edge constraint clause" later in this page.
+For a detailed explanation of where multiple edge constraints can be used in a real-life scenario, see the example "Creating a new edge constraint on existing edge table, with new edge constraint clause" later in this page.
 
 ### Indexes on edge constraints
 
-Creating an edge constraint does not automatically create a corresponding index on `$from_id` and `$to_id` columns in the edge table. Manually creating an index on a `$from_id`, `$to_id` pair is recommended if you have point lookup queries or OLTP workload.
+Creating an edge constraint doesn't automatically create a corresponding index on `$from_id` and `$to_id` columns in the edge table. Manually creating an index on a `$from_id`, `$to_id` pair is recommended if you have point lookup queries or OLTP workload.
 
 ### ON DELETE referential actions on edge constraints
 Cascading actions on an edge constraint let users define the actions that the database engine takes when a user deletes the node(s), which the given edge connects. The following referential actions can be defined:
@@ -251,14 +250,14 @@ CREATE TABLE bought
 GO
  ```
 
-In the preceding example, imagine that we now need to also include the `Supplier` to `Product` relationship, through the `bought` edge table. You may first think of adding a new edge constraint, as given below:
+In the preceding example, imagine that we now need to also include the `Supplier` to `Product` relationship, through the `bought` edge table. You can try adding a new edge constraint:
 ``` sql
 ALTER TABLE bought ADD CONSTRAINT EC_BOUGHT1 CONNECTION (Supplier TO Product);
 ```
 
-However, this is not the correct solution. We created two separate edge constraints on the **bought** edge table, *EC_BOUGHT* and *EC_BOUGHT1*. Both these edge constraints have different edge constraint clauses. If an edge table has more than one edge constraint on it, a given edge has to satisfy **ALL** edge constraints to be allowed in the edge table. Since no edge will be able to satisfy both *EC_BOUGHT* and *EC_BOUGHT1* here, the above `ALTER TABLE` statement will fail if there are any rows at all in the **bought** edge table.
+However, adding a new edge constraint isn't the correct solution. We created two separate edge constraints on the **bought** edge table, *EC_BOUGHT* and *EC_BOUGHT1*. Both these edge constraints have different edge constraint clauses. If an edge table has more than one edge constraint on it, a given edge has to satisfy **ALL** edge constraints to be allowed in the edge table. Since no edge can satisfy both *EC_BOUGHT* and *EC_BOUGHT1* here, the above `ALTER TABLE` statement fails if there are any rows at all in the **bought** edge table.
 
-For this edge constraint to be created successfully, the prescribed way is to follow a sequence like the below:
+For this edge constraint to be created successfully, the prescribed way is to follow a sequence as shown in this sample:
 
 ```sql
 -- First, add the desired ("super-set") constraint:
@@ -273,9 +272,9 @@ GO
 EXECUTE sp_rename '[dbo].[EC_BOUGHT_NEW]', '[dbo].[EC_BOUGHT]';
 ```
 
-The fact that we added the new "super-set" constraint first without dropping the earlier one, allows the operation to be a metadata-only operation - it does not need to check all the existing data in the **bought** table, as it encompasses the existing constraint.
+The fact that we added the new "super-set" constraint first without dropping the earlier one, allows the operation to be a metadata-only operation - it doesn't need to check all the existing data in the **bought** table, as it encompasses the existing constraint.
 
-With this, for a given edge to be allowed in the **bought** edge, it has to satisfy either of the edge constraint clauses in *EC_BOUGHT_NEW* constraint. Hence any edge that is trying to connect valid **Customer** to **Product** or **Supplier** to **Product** nodes, will be allowed.
+With this, for a given edge to be allowed in the **bought** edge, it has to satisfy either of the edge constraint clauses in *EC_BOUGHT_NEW* constraint. Hence any edge that is trying to connect valid **Customer** to **Product** or **Supplier** to **Product** nodes, is allowed.
 
 ### Delete edge constraints
 
@@ -315,7 +314,7 @@ DROP CONSTRAINT EC_BOUGHT;
 
 ### Modify edge constraints
 
-To modify an edge constraint using Transact-SQL, you must first delete the existing edge constraint and then re-create it with the new definition.
+To modify an edge constraint using Transact-SQL, you must first delete the existing edge constraint, and then re-create it with the new definition.
 
 
 ### View edge constraints
@@ -375,4 +374,6 @@ WHERE EC.parent_object_id = object_id('bought');
 [CREATE TABLE (SQL Graph)](../../t-sql/statements/create-table-sql-graph.md)
 [ALTER TABLE table_constraint](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)
 
-For information about graph technology in SQL Server, see [Graph processing with SQL Server and Azure SQL Database](../graphs/sql-graph-overview.md).
+## See also
+- [SQL Graph Architecture](../../relational-databases/graphs/sql-graph-architecture.md)  
+- [SQL Graph Database Sample](../../relational-databases/graphs/sql-graph-sample.md)

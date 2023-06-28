@@ -312,7 +312,7 @@ $instanceScheduleBody = ConvertTo-Json -InputObject $requestBody -Depth 3
 Invoke-WebRequest -Method Put -Headers $authHeader -Uri $instanceCreateScheduleUri -Body $instanceScheduleBody
 ```
 
-### [API](#tab/API)
+### [Rest API](#tab/API)
 
 Creating a schedule relies on the start StopSchedules API call: 
 

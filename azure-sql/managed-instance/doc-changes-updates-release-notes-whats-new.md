@@ -8,7 +8,7 @@ ms.reviewer: wiassaf
 ms.date: 05/25/2023
 ms.service: sql-managed-instance
 ms.subservice: service-overview
-ms.topic: conceptual
+ms.topic: whats-new
 ms.custom: references_regions
 ---
 # What's new in Azure SQL Managed Instance?

@@ -21,7 +21,7 @@ This article lists download links to CAB files for each cumulative update. For m
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016"
-Download Python and R CAB files for SQL Server 2016 R Services. These CAB files contain updates to the the R Services feature and are used when installing SQL Server on a server without internet access.
+Download Python and R CAB files for SQL Server 2016 R Services. These CAB files contain updates to the R Services feature and are used when installing SQL Server on a server without internet access.
 
 This article lists download links to CAB files for each cumulative update. For more information about offline installs, see [Install SQL Server machine learning components without internet access](sql-ml-component-install-without-internet-access.md#apply-cu).
 

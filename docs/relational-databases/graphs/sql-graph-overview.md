@@ -49,7 +49,7 @@ CREATE TABLE friends (StartDate date) AS EDGE;
 
 The following diagram shows how Nodes and Edges are stored as tables.
 
-:::image type="content" source="../../relational-databases/graphs/media/person-friends-tables.png" alt-text="Diagram showing the Nodes and Edges are stored as tables.":::
+:::image type="content" source="../../relational-databases/graphs/media/sql-graph-architecture/person-friends-tables.png" alt-text="Diagram showing the Nodes and Edges are stored as tables.":::
 
 ### Query language extensions
 

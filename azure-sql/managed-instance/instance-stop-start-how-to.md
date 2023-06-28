@@ -335,7 +335,7 @@ $instanceScheduleGetUri = $UriPrefix + $SqlMIName + "/startStopSchedules/default
 Invoke-WebRequest -Method Get -Headers $authHeader -Uri $instanceScheduleGetUri
 ```
 
-### [API](#tab/API)
+### [Rest API](#tab/API)
 
 Checking the schedule uses the following API call: 
 

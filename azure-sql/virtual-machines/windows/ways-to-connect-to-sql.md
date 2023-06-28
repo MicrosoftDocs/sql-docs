@@ -82,24 +82,6 @@ Assuming that you have configured DNS in your virtual network, you can connect t
 Server=mysqlvm;Integrated Security=true
 ```
 
-## <a id="change"></a> Change SQL connectivity settings
-
-You can change the connectivity settings for your SQL Server virtual machine in the Azure portal.
-
-1. In the Azure portal, select **SQL virtual machines**.
-
-1. Select your SQL Server VM.
-
-1. Under **Settings**, select **Security Configuration**.
-
-1. Change the **SQL connectivity level** to your required setting. You can optionally use this area to change the SQL Server port or the SQL authentication settings.
-
-   :::image type="content" source="./media/ways-to-connect-to-sql/sql-vm-portal-connectivity-change.png" alt-text="Screenshot showing how to change SQL connectivity." lightbox="./media/ways-to-connect-to-sql/sql-vm-portal-connectivity-change.png":::
-
-1. Wait several minutes for the update to complete.
-
-   :::image type="content" source="./media/ways-to-connect-to-sql/sql-vm-updating-notification.png" alt-text="Screenshot showing SQL VM update notification.":::
-
 ## <a id="manualtcp"></a> Enable TCP/IP for Developer and Express editions
 
 When changing SQL Server connectivity settings, Azure does not automatically enable the TCP/IP protocol for SQL Server Developer and Express editions. The steps below explain how to manually enable TCP/IP so that you can connect remotely by IP address.

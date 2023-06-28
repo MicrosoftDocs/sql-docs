@@ -7,7 +7,7 @@ ms.reviewer: wiassaf
 ms.date: 02/27/2023
 ms.service: virtual-machines-sql
 ms.subservice: service-overview
-ms.topic: conceptual
+ms.topic: whats-new
 ms.custom: references_regions
 ---
 # What's new in SQL Server on Azure VMs? (Archive)

@@ -8,7 +8,7 @@ ms.reviewer: mathoma
 ms.date: 06/13/2023
 ms.service: sql-database
 ms.subservice: service-overview
-ms.topic: conceptual
+ms.topic: whats-new
 ms.custom:
   - "sqldbrb=2"
   - "references_regions"

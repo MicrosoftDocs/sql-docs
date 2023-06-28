@@ -206,7 +206,7 @@ https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{reso
 providers/Microsoft.Sql/managedInstances/{managedInstanceName}/stop?api-version=2021-08-01-preview
 ```
 
-[Managed Instances - Stop](/rest/api/sql/managedinstances/stop)
+[Managed Instances - Stop](/rest/api/sql/2022-08-01-preview/managed-instances/stop)
 
 ----
 
@@ -264,7 +264,7 @@ https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{reso
 providers/Microsoft.Sql/managedInstances/{managedInstanceName}/start?api-version=2021-08-01-preview
 ```
 
-[Managed Instances - Start](/rest/api/sql/managedinstances/start)
+[Managed Instances - Start](/rest/api/sql/2022-08-01-preview/managed-instances/start)
 
 ----
 
@@ -371,7 +371,7 @@ PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{
 }
 ```
 
-[Start Stop Managed Instance Schedules - Create Or Update](/rest/api/sql/start-stop-managed-instance-schedules/create-or-update)
+[Start Stop Managed Instance Schedules - Create Or Update](/rest/api/sql/2022-08-01-preview/start-stop-managed-instance-schedules/create-or-update)
 
 
 #### Check a schedule
@@ -384,7 +384,7 @@ https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{reso
 providers/Microsoft.Sql/managedInstances/{managedInstanceName}/startStopSchedules/default?api-version=2022-08-01-preview
 ```
 
-[Start Stop Managed Instance Schedules - Get](/rest/api/sql/start-stop-managed-instance-schedules/get)
+[Start Stop Managed Instance Schedules - Get](/rest/api/sql/2022-08-01-preview/start-stop-managed-instance-schedules/get)
 
 
 #### Delete a schedule
@@ -397,7 +397,7 @@ https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{reso
 providers/Microsoft.Sql/managedInstances/{managedInstanceName}/startStopSchedules/default?api-version=2022-08-01-preview
 ```
 
-[Start Stop Managed Instance Schedules - Delete](/rest/api/sql/start-stop-managed-instance-schedules/delete)
+[Start Stop Managed Instance Schedules - Delete](/rest/api/sql/2022-08-01-preview/start-stop-managed-instance-schedules/delete)
 
 ----
 

@@ -18,11 +18,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi.md)]
 
 Adds one or more rows to a `node` or `edge` table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
-
-> [!NOTE]
-> This article describes arguments related to SQL graph. For a full list and description of supported arguments in INSERT statement, see [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)
-> For standard Transact-SQL statements, see [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md).
-  
+ 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## INSERT Into node table syntax
@@ -88,13 +84,13 @@ INSERT
 
 <edge_table_column_list> ::=
     ($from_id, $to_id, [column_list])
-```  
- 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+```
 
 ## Arguments
 
-This article describes arguments related to SQL graph. For a full list and description of supported arguments in INSERT statement, see [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)
+> [!NOTE]
+> This article describes arguments related to SQL graph. For a full list and description of supported arguments in INSERT statement, see [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md).
+> For standard Transact-SQL statements, see [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md).
 
 #### INTO
 Is an optional keyword that can be used between `INSERT` and the target table.  
@@ -153,5 +149,7 @@ INSERT INTO dbo.friend VALUES ((SELECT $node_id FROM dbo.Person WHERE name = 'Al
   
 ## Next steps
 
-- [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)
 - [Graph processing](../../relational-databases/graphs/sql-graph-overview.md)
+- [Create a graph database and run some pattern matching queries using T-SQL](../../relational-databases/graphs/sql-graph-sample.md)
+- [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)
+- [SHORTEST_PATH (Transact-SQL)](../../relational-databases/graphs/sql-graph-shortest-path.md)

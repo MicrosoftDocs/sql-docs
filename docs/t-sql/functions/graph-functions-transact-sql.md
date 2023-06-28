@@ -30,4 +30,3 @@ Use the functions described on the pages in this section to extract values from,
 ## See also
 
 - [SQL Graph Architecture](../../relational-databases/graphs/sql-graph-architecture.md)  
- 

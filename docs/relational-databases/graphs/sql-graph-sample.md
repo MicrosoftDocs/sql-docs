@@ -1,6 +1,6 @@
 ---
 title: SQL Graph Database Sample
-description: A quick sample that will help you get started with the new syntax introduced in SQL graph database.
+description: A quick sample that helps you get started with the new syntax introduced in SQL graph database.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "04/19/2017"
@@ -16,7 +16,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||
 
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi.md)]
 
-This sample provides a [!INCLUDE[tsql-md](../../includes/tsql-md.md)] script to create a graph database with nodes and edges and then use the new MATCH clause to match some patterns and traverse through the graph. This sample script will work on both Azure SQL Database and [!INCLUDE[sssql17](../../includes/sssql17-md.md)]
+This sample provides a [!INCLUDE[tsql-md](../../includes/tsql-md.md)] script to create a graph database with nodes and edges and then use the new MATCH clause to match some patterns and traverse through the graph. This sample script works on both Azure SQL Database and [!INCLUDE[sssql17](../../includes/sssql17-md.md)]
 
 ## Sample Schema
 

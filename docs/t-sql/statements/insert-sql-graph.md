@@ -105,18 +105,14 @@ Is an optional keyword that can be used between `INSERT` and the target table.
 Search pattern provided to `MATCH` clause as part of the graph predicate.
 
 *edge_table_column_list*   
-Users must provide values for `$from_id` and `$to_id` while inserting into an edge. An error will be returned if a value isn't provided or NULLs are inserted into these columns. 
+Users must provide values for `$from_id` and `$to_id` while inserting into an edge. An error is returned if a value isn't provided or NULLs are inserted into these columns. 
   
 
 ## Remarks  
-Inserting into a node is same as inserting into any relational table. Values for the $node_id column are automatically generated.
-
-While inserting into an edge table, users must provide values for `$from_id` and `$to_id` columns.   
-
-BULK insert for node table is the same as for a relational table.
-
-Before bulk inserting into an edge table, the node tables must be imported. Values for `$from_id` and `$to_id` can then be extracted from the `$node_id` column of the node table and inserted as edges. 
-
+- Inserting into a node is same as inserting into any relational table. Values for the $node_id column are automatically generated.
+- While you insert rows into an edge table, you must provide values for `$from_id` and `$to_id` columns.   
+- BULK insert for node table is the same as for a relational table.
+- Before bulk inserting into an edge table, the node tables must be imported. Values for `$from_id` and `$to_id` can then be extracted from the `$node_id` column of the node table and inserted as edges. 
   
 ### Permissions  
 INSERT permission is required on the target table.  
@@ -151,10 +147,7 @@ CREATE TABLE dbo.friend (start_date DATE) AS EDGE;
 INSERT INTO dbo.friend VALUES ((SELECT $node_id FROM dbo.Person WHERE name = 'Alice'),
         (SELECT $node_id FROM dbo.Person WHERE name = 'John'), '9/15/2011');
 ```
-
   
 ## See Also  
-[INSERT TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
-[Graph processing with SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md)  
-
-
+- [INSERT TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+- [Graph processing](../../relational-databases/graphs/sql-graph-overview.md)  

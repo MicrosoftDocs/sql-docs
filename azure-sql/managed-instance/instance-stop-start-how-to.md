@@ -4,7 +4,7 @@ description: This article describes the stop and start feature of Azure SQL Mana
 author: urosmil
 ms.author: urmilano
 ms.reviewer: mathoma
-ms.date: 06/19/2023
+ms.date: 06/28/2023
 ms.service: sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: conceptual
@@ -153,7 +153,7 @@ $instanceGetUri = $UriPrefix + $SqlMIName + $UriSuffix
 
 ## Stop the managed instance 
 
-You can stop the instance by using either the Azure portal or Azure PowerShell. 
+You can stop the instance by using either the Azure portal or invoking API call through Azure PowerShell or any other tool. 
 
 
 ### [Portal](#tab/azure-portal)
@@ -198,9 +198,9 @@ Write-Host "Instance Get API Response:`n" $getInstanceResp | ConvertFrom-Json
 
 ### [Rest API](#tab/API)
 
-Stopping the managed instance uses the following API call:
+Stop the managed instance by calling the following API:
 
-```powershell
+```http
 POST
 https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
 providers/Microsoft.Sql/managedInstances/{managedInstanceName}/stop?api-version=2021-08-01-preview
@@ -212,7 +212,7 @@ providers/Microsoft.Sql/managedInstances/{managedInstanceName}/stop?api-version=
 
 ## Start the managed instance
 
-You can start your instance by using either the Azure portal or Azure PowerShell. 
+You can start your instance by using either the Azure portal or invoking API call throguh Azure PowerShell or any other tool.
 
 ### [Portal](#tab/azure-portal)
 
@@ -257,9 +257,9 @@ Write-Host "Instance Get API Response:`n" $getInstanceResp | ConvertFrom-Json
 
 ### [Rest API](#tab/API)
 
-Starting the managed instance uses the following API call: 
+Start the managed instance by calling the following API: 
 
-```powershell
+```http
 https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
 providers/Microsoft.Sql/managedInstances/{managedInstanceName}/start?api-version=2021-08-01-preview
 ```
@@ -270,7 +270,7 @@ providers/Microsoft.Sql/managedInstances/{managedInstanceName}/start?api-version
 
 ## Manage a stop and start schedule
 
-You can manage a stop and start schedule by using either the Azure portal or Azure PowerShell. 
+You can manage a stop and start schedule by using either the Azure portal or invoking API call through Azure PowerShell or any other tool.
 
 ### [Portal](#tab/azure-portal)
 
@@ -344,7 +344,7 @@ Invoke-WebRequest -Method Delete -Headers $authHeader -Uri $instanceScheduleDele
 
 #### Create or update schedule
 
-You can use the following API call to create or update a schedule to stop and start a managed instance: 
+To create or update a schedule to stop and start a managed instance call the following API and adjust the body content to match your schedule: 
 
 ```http
 PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/managedInstances/{managedInstanceName}/startStopSchedules/default?api-version=2022-08-01-preview
@@ -376,7 +376,7 @@ PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{
 
 #### Check a schedule
 
-Checking the schedule uses the following API call: 
+To check an existing schedule, call the following API: 
 
 ```http
 GET
@@ -389,7 +389,7 @@ providers/Microsoft.Sql/managedInstances/{managedInstanceName}/startStopSchedule
 
 #### Delete a schedule
 
-Delete a schedule using the following API call: 
+To delete an existing schedule, call the following API: 
 
 ```http
 DELETE

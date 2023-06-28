@@ -200,13 +200,15 @@ Write-Host "Instance Get API Response:`n" $getInstanceResp | ConvertFrom-Json
 
 Stopping the managed instance uses the following API call:
 
-`POST
+```powershell
+POST
 https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
-providers/Microsoft.Sql/managedInstances/{managedInstanceName}/stop?api-version=2021-08-01-preview`
+providers/Microsoft.Sql/managedInstances/{managedInstanceName}/stop?api-version=2021-08-01-preview
+```
 
 [Managed Instances - Stop](/rest/api/sql/managedinstances/stop)
 
----
+----
 
 ## Start the managed instance
 
@@ -257,13 +259,14 @@ Write-Host "Instance Get API Response:`n" $getInstanceResp | ConvertFrom-Json
 
 Starting the managed instance uses the following API call: 
 
-`https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
-providers/Microsoft.Sql/managedInstances/{managedInstanceName}/start?api-version=2021-08-01-preview`
+```powershell
+https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
+providers/Microsoft.Sql/managedInstances/{managedInstanceName}/start?api-version=2021-08-01-preview
+```
 
 [Managed Instances - Start](/rest/api/sql/managedinstances/start)
 
----
-
+----
 
 ## Manage a stop and start schedule
 
@@ -285,8 +288,7 @@ On the **Start/Stop Schedule** pane, you can:
 
 ### [PowerShell](#tab/azure-powershell)
 
-
-### Create or update schedule
+#### Create or update schedule
 
 To create or update a schedule to stop and start a managed instance by using PowerShell, run the following script: 
 
@@ -312,16 +314,6 @@ $instanceScheduleBody = ConvertTo-Json -InputObject $requestBody -Depth 3
 Invoke-WebRequest -Method Put -Headers $authHeader -Uri $instanceCreateScheduleUri -Body $instanceScheduleBody
 ```
 
-### [Rest API](#tab/API)
-
-Creating a schedule relies on the start StopSchedules API call: 
-
-`PUT
-https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
-providers/Microsoft.Sql/managedInstances/{managedInstanceName}/startStopSchedules/default?api-version=2021-08-01-preview`
-
-[Start Stop Managed Instance Schedules - Create Or Update](/rest/api/sql/start-stop-managed-instance-schedules/create-or-update)
-
 #### Check a schedule
 
 To check an existing schedule, use the following sample script: 
@@ -335,17 +327,7 @@ $instanceScheduleGetUri = $UriPrefix + $SqlMIName + "/startStopSchedules/default
 Invoke-WebRequest -Method Get -Headers $authHeader -Uri $instanceScheduleGetUri
 ```
 
-### [Rest API](#tab/API)
-
-Checking the schedule uses the following API call: 
-
-`GET
-https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
-providers/Microsoft.Sql/managedInstances/{managedInstanceName}/startStopSchedules/default?api-version=2021-08-01-preview`
-
-[Start Stop Managed Instance Schedules - Get](/rest/api/sql/start-stop-managed-instance-schedules/get)
-
-### Delete a schedule
+#### Delete a schedule
 
 To delete an existing schedule, use the following sample script: 
 
@@ -360,15 +342,64 @@ Invoke-WebRequest -Method Delete -Headers $authHeader -Uri $instanceScheduleDele
 
 ### [Rest API](#tab/API)
 
-Deleting a schedule uses the following API call: 
+#### Create or update schedule
 
-`DELETE
+You can use the following API call to create or update a schedule to stop and start a managed instance: 
+
+```http
+PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/managedInstances/{managedInstanceName}/startStopSchedules/default?api-version=2022-08-01-preview
+
+{
+  "properties": {
+    "timeZoneId": "Central European Standard Time",
+    "description": "This is a schedule for our Dev/Test environment.",
+    "scheduleList": [
+      {
+        "startDay": "Monday",
+        "startTime": "07:30",
+        "stopDay": "Wednesday",
+        "stopTime": "17:00"
+      },
+      {
+        "startDay": "Thursday",
+        "startTime": "15:00",
+        "stopDay": "Friday",
+        "stopTime": "15:00"
+      }
+    ]
+  }
+}
+```
+
+[Start Stop Managed Instance Schedules - Create Or Update](/rest/api/sql/start-stop-managed-instance-schedules/create-or-update)
+
+
+#### Check a schedule
+
+Checking the schedule uses the following API call: 
+
+```http
+GET
 https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
-providers/Microsoft.Sql/managedInstances/{managedInstanceName}/startStopSchedules/default?api-version=2021-08-01-preview`
+providers/Microsoft.Sql/managedInstances/{managedInstanceName}/startStopSchedules/default?api-version=2022-08-01-preview
+```
+
+[Start Stop Managed Instance Schedules - Get](/rest/api/sql/start-stop-managed-instance-schedules/get)
+
+
+#### Delete a schedule
+
+Delete a schedule using the following API call: 
+
+```http
+DELETE
+https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
+providers/Microsoft.Sql/managedInstances/{managedInstanceName}/startStopSchedules/default?api-version=2022-08-01-preview
+```
 
 [Start Stop Managed Instance Schedules - Delete](/rest/api/sql/start-stop-managed-instance-schedules/delete)
 
----
+----
 
 
 ## Next steps

@@ -1,7 +1,7 @@
 ---
-author: MikeRayMSFT
-ms.author: mikeray
-ms.date: 06/11/2020
+author: arvindshmicrosoft
+ms.author: arvindsh
+ms.date: 06/27/2023
 ms.service: sql
 ms.topic: include
 ---

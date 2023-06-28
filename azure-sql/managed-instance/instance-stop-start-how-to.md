@@ -358,7 +358,7 @@ $instanceScheduleDeleteUri = $UriPrefix + $SqlMIName + "/startStopSchedules/defa
 Invoke-WebRequest -Method Delete -Headers $authHeader -Uri $instanceScheduleDeleteUri
 ```
 
-### [API](#tab/API)
+### [Rest API](#tab/API)
 
 Deleting a schedule uses the following API call: 
 

@@ -39,7 +39,7 @@ To repair the extension with the Azure portal:
 
 ## SQL IaaS Agent extension registration fails with error "Creating SQL Virtual Machine resource for PowerBI VM images is not supported"
 
-Note that SQL VM Resource registration is blocked and not supported on PowerBI VM, SQL Server Reporting Server and SQL Server Analysis Service Images deployed from Azure Marketplace.
+Note that SQL IaaS Agent extension registration is blocked and not supported on PowerBI VM, SQL Server Reporting Server and SQL Server Analysis Service Images deployed from Azure Marketplace.
 
 ## Not valid state for management
 

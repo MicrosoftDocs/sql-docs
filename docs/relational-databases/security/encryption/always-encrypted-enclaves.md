@@ -56,7 +56,7 @@ The type of the enclave available for your database depends on the SQL product h
   > VBS enclaves in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] are currently in preview. The [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, in preview, or otherwise not yet released into general availability.
 
   > [!NOTE]
-  > VBS enclaves are currently available in all [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] regions **except**: Australia Central, Australia Central 2,  Korea Central, Korea South, UAE Central, Jio India Central, Jio India West.
+  > VBS enclaves are currently available in all [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] regions **except**: Jio India Central.
 
 See the [Security considerations](#security-considerations) section for important information on the level protection each enclave type provides.
 

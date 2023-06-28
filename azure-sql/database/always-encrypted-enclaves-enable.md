@@ -39,10 +39,7 @@ For detailed instructions on how to configure a new or existing database to use 
 > [!IMPORTANT]
 > The VBS enclaves feature in Azure SQL Database is currently in preview. The [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, in preview, or otherwise not yet released into general availability.
 
-To enable a VBS enclave in your database, you need to set the **preferredEnclaveType** [database property](/azure/templates/microsoft.sql/2022-05-01-preview/servers/databases?pivots=deployment-language-bicep#databaseproperties) to **VBS**, which activates the VBS enclave for the database. You can set **preferredEnclaveType** when you create a new database or by updating an existing database.
-
-> [!NOTE]
-> By default, a new database is created with **preferredEnclaveType** set to **Default**, which doesn't support VBS enclaves.
+By default, a new database is created without VBS enclaves. To enable a VBS enclave in your database or elastic pool, you need to set the **preferredEnclaveType** [database property](/azure/templates/microsoft.sql/2022-05-01-preview/servers/databases?pivots=deployment-language-bicep#databaseproperties) to **VBS**, which activates the VBS enclave for the database or the elastic pool. You can set **preferredEnclaveType** when you create a new database or elastic pool or by updating an existing database or elastic pool. If you add or update a database without an enclave enabled or the same enclave type as the elastic pool, the database inherits the properties of the elastic pool including the enclave. A mismatch error will be returned if you try to add or update a database with a different enclave type than the elastic pool.
 
 You can set the **preferredEnclaveType** using Azure PowerShell or the Azure CLI.
 
@@ -62,6 +59,19 @@ New-AzSqlDatabase  -ResourceGroupName "ResourceGroup01" `
     -PreferredEnclaveType VBS
 ```
 
+Create a new elastic pool with a VBS enclave with the [New-AzSqlElasticPool](/powershell/module/az.sql/New-AzSqlElasticPool) cmdlet. The following example creates an elastic pool with a VBS enclave.
+
+```azurepowershell-interactive
+New-AzSqlElasticPool ` 
+    -ComputeGeneration Gen5 `
+    -Edition 'GeneralPurpose' `
+    -ElasticPoolName $ElasticPoolName `
+    -ResourceGroupName $resourceGroupName `
+    -ServerName $serverName `
+    -VCore 2 `
+    -PreferredEnclaveType 'VBS'
+```
+
 To enable a VBS enclave for an existing database, use the [Set-AzSqlDatabase](/powershell/module/az.sql/Set-AzSqlDatabase) cmdlet. Here's an example:
 
 ```azurepowershell-interactive
@@ -69,6 +79,16 @@ Set-AzSqlDatabase -ResourceGroupName "ResourceGroup01" `
     -DatabaseName "Database01" `
     -ServerName "Server01" `
     -PreferredEnclaveType VBS
+```
+
+To enable a VBS enclave for an existing elastic pool, use the [Set-AzSqlElasticPool](/powershell/module/az.sql/Set-AzSqlElasticPool) cmdlet. Here's an example:
+
+```azurepowershell-interactive
+Set-AzSqlElasticPool `
+    -ResourceGroupName $resourceGroupName `
+    -ServerName $serverName `
+    -ElasticPoolName $ElasticPoolName `
+    -PreferredEnclaveType 'VBS' 
 ```
 
 ## Enabling VBS enclaves with Azure CLI
@@ -87,12 +107,32 @@ az sql db create -g ResourceGroup01 `
     --preferred-enclave-type VBS 
 ```
 
+Create a new elastic pool with a VBS enclave with the [az sql elastic-pool create](/cli/azure/sql/elastic-pool) cmdlet. The following example creates a serverless database with a VBS enclave.
+
+```azurecli-interactive
+az sql elastic-pool -g ResourceGroup01 `
+    -s Server01 `
+    -n ElasticPool01 `
+    -e GeneralPurpose `
+    -f Gen5 `
+    -c 2 `
+    --preferred-enclave-type VBS
+```
+
 To enable a VBS enclave for an existing database, use the [az sql db update](/cli/azure/sql/db) cmdlet. Here's an example:
 
 ```azurecli-interactive
 az sql db update -g ResourceGroup01 `
     -s Server01 `
     -n Database01 `
+    --preferred-enclave-type VBS
+```
+To enable a VBS enclave for an existing elastic pool, use the [az sql elastic-pool update](/cli/azure/sql/elastic-pool) cmdlet. Here's an example:
+
+```azurecli-interactive
+az sql elastic-pool update -g ResourceGroup01 `
+    -s Server01 `
+    -n ElasticPool01 `
     --preferred-enclave-type VBS
 ```
 

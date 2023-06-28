@@ -1,9 +1,9 @@
 ---
 title: "INSERT (SQL Graph)"
-description: Learn about the syntax, permissions, and arguments for the INSERT statement that adds one or more rows to an SQL Graph  node or edge table in SQL Server.
+description: "Learn about the syntax, permissions, and arguments for the INSERT statement that adds one or more rows to an SQL Graph node or edge table in SQL Server."
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-ms.date: "05/12/2017"
+ms.date: 06/28/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -19,13 +19,15 @@ monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||
 
 Adds one or more rows to a `node` or `edge` table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
-> [!NOTE]   
->  For standard Transact-SQL statements, see [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md).
+> [!NOTE]
+> This article describes arguments related to SQL graph. For a full list and description of supported arguments in INSERT statement, see [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)
+> For standard Transact-SQL statements, see [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md).
   
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## INSERT Into Node Table Syntax 
-The syntax for inserting into a Node table is the same as for a regular table. 
+## INSERT Into node table syntax
+
+The syntax for inserting into a Node table is the same as for a regular table.
 
 ```syntaxsql
 [ WITH <common_table_expression> [ ,...n ] ]  
@@ -86,46 +88,46 @@ INSERT
 
 <edge_table_column_list> ::=
     ($from_id, $to_id, [column_list])
-
 ```  
-  
  
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
-This document describes arguments related to SQL graph. For a full list and description of supported arguments in INSERT statement, see [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)
 
-INTO  
+This article describes arguments related to SQL graph. For a full list and description of supported arguments in INSERT statement, see [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)
+
+#### INTO
 Is an optional keyword that can be used between `INSERT` and the target table.  
   
-*search_condition_with_match*   
-`MATCH` clause can be used in a subquery while inserting into a node or edge table. For `MATCH` statement syntax, see [GRAPH MATCH (Transact-SQL)](../../t-sql/queries/match-sql-graph.md)
+*search_condition_with_match*
+`MATCH` clause can be used in a subquery while inserting into a node or edge table. For `MATCH` statement syntax, see [GRAPH MATCH (Transact-SQL)](../../t-sql/queries/match-sql-graph.md).
 
-*graph_search_pattern*   
+*graph_search_pattern*
 Search pattern provided to `MATCH` clause as part of the graph predicate.
 
-*edge_table_column_list*   
-Users must provide values for `$from_id` and `$to_id` while inserting into an edge. An error is returned if a value isn't provided or NULLs are inserted into these columns. 
-  
+*edge_table_column_list*
+Users must provide values for `$from_id` and `$to_id` while inserting into an edge. An error is returned if a value isn't provided or NULLs are inserted into these columns.
 
-## Remarks  
-- Inserting into a node is same as inserting into any relational table. Values for the $node_id column are automatically generated.
+## Remarks
+
+- Inserting into a node is same as inserting into any relational table. Values for the `$node_id` column are automatically generated.
 - While you insert rows into an edge table, you must provide values for `$from_id` and `$to_id` columns.   
 - BULK insert for node table is the same as for a relational table.
 - Before bulk inserting into an edge table, the node tables must be imported. Values for `$from_id` and `$to_id` can then be extracted from the `$node_id` column of the node table and inserted as edges. 
   
-### Permissions  
+### Permissions
+
 INSERT permission is required on the target table.  
   
 INSERT permissions default to members of the **sysadmin** fixed server role, the **db_owner** and **db_datawriter** fixed database roles, and the table owner. Members of the **sysadmin**, **db_owner**, and the **db_securityadmin** roles, and the table owner can transfer permissions to other users.  
   
 To execute INSERT with the OPENROWSET function BULK option, you must be a member of the **sysadmin** fixed server role or of the **bulkadmin** fixed server role.  
-  
 
-## Examples  
+## Examples
   
-#### A.  Insert into node table  
-The following example creates a Person node table and inserts two rows into that table.
+#### A. Insert into node table
+
+The following example creates a `Person` node table and inserts two rows into that table.
 
 ```sql
 -- Create person node table
@@ -136,8 +138,9 @@ INSERT INTO dbo.Person VALUES (1, 'Alice');
 INSERT INTO dbo.Person VALUES (2,'John');
 ```
   
-#### B.  Insert into edge table  
-The following example creates a friend edge table and inserts an edge into the table.
+#### B. Insert into edge table
+
+The following example creates a `friend` edge table and inserts an edge into the table.
 
 ```sql
 -- Create friend edge table
@@ -148,6 +151,7 @@ INSERT INTO dbo.friend VALUES ((SELECT $node_id FROM dbo.Person WHERE name = 'Al
         (SELECT $node_id FROM dbo.Person WHERE name = 'John'), '9/15/2011');
 ```
   
-## See Also  
-- [INSERT TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
-- [Graph processing](../../relational-databases/graphs/sql-graph-overview.md)  
+## Next steps
+
+- [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)
+- [Graph processing](../../relational-databases/graphs/sql-graph-overview.md)

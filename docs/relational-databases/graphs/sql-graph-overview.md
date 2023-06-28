@@ -49,7 +49,7 @@ CREATE TABLE friends (StartDate date) AS EDGE;
 
 The following diagram shows how Nodes and Edges are stored as tables.
 
-:::image type="content" source="../../relational-databases/graphs/media/sql-graph-architecture/person-friends-tables.png" alt-text="Diagram showing the Nodes and Edges are stored as tables.":::
+:::image type="content" source="media/sql-graph-overview/person-friends-tables.png" alt-text="Diagram showing the Nodes and Edges are stored as tables.":::
 
 ### Query language extensions
 
@@ -66,7 +66,7 @@ AND Person1.Name = 'John';
 ### Fully integrated in [!INCLUDE [ssde](../../includes/ssdenoversion-md.md)]
 
 Graph extensions are fully integrated in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] engine. Use the same storage engine, metadata, query processor, etc. to store and query graph data. Query across graph and relational data in a single query. Combining graph capabilities with other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] technologies like columnstore indexes, HA, R services, etc. SQL graph also supports all the security and compliance features available with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
- 
+
 ### Tooling and ecosystem
 
 Benefit from existing tools and ecosystem that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offers. Tools like backup and restore, import and export, BCP just work out of the box. Other tools or services like SSIS, SSRS, or Power BI work with graph tables, just the way they work with relational tables.

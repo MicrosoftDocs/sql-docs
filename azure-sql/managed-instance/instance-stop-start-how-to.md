@@ -196,7 +196,7 @@ $getInstanceResp = Invoke-WebRequest -Method Get -Headers $authHeader -Uri $inst
 Write-Host "Instance Get API Response:`n" $getInstanceResp | ConvertFrom-Json
 ```
 
-### [API](#tab/API)
+### [Rest API](#tab/API)
 
 Stopping the managed instance uses the following API call:
 

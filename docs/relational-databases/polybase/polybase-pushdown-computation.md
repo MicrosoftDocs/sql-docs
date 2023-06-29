@@ -84,7 +84,7 @@ In many cases, PolyBase can facilitate pushdown of the join operator for the joi
 
 If the join can be done at the external data source, this reduces the amount of data movement and improves the query's performance. Without join pushdown, the data from the tables to be joined must be brought locally into tempdb, then joined.
 
-Note that in the case of Distributed Joins (joining a local table to an external table), unless there is some filtering criteria on the external table that is applied to the join condition, all of the data in the external table must be brought locally into tempdb in order to perform the join operation. For example, the following query has no filtering on the external table join condition which will result in all of the data from the external table being read.
+Note that in the case of *distributed joins* (joining a local table to an external table), unless there is some filtering criteria on the external table that is applied to the join condition, all of the data in the external table must be brought locally into `tempdb` in order to perform the join operation. For example, the following query has no filtering on the external table join condition, which will result in all of the data from the external table being read.
 
 ```sql
 SELECT * FROM LocalTable L

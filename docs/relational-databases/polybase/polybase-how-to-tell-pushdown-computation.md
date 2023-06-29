@@ -100,7 +100,7 @@ The estimated execution plan from Azure Data Studio:
 
 ### Pushdown of JOIN
 
-Consider the following query that utilizes the JOIN operator:
+Consider the following query that utilizes the JOIN operator for two external tables on the same external data source:
 
 ```sql
 SELECT be.BusinessEntityID, bea.AddressID

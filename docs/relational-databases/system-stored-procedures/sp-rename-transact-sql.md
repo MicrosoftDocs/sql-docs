@@ -4,7 +4,7 @@ description: "Changes the name of a user-created object in the current database.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest, maghan
-ms.date: 06/13/2023
+ms.date: 06/29/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"

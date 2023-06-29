@@ -4,7 +4,7 @@ description: Learn how to configure geo-replication for an SQL database using th
 author: AbdullahMSFT
 ms.author: amamun
 ms.reviewer: wiassaf, mathoma
-ms.date: 08/20/2021
+ms.date: 06/29/2023
 ms.service: sql-database
 ms.subservice: high-availability
 ms.topic: tutorial

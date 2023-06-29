@@ -110,6 +110,30 @@ When the deployment is complete, you can check the status of the secondary datab
 az sql db replica list-links --name guestlist --resource-group ContosoHotel --server contosowest
 ```
 
+# [PowerShell](#tab/powershell)
+
+Select the database you want to set up for geo-replication. You'll need the following information:
+- Your original Azure SQL database name.
+- The Azure SQL server name.
+- Your resource group name.
+- The name of the server to create the new replica in.
+
+> [!NOTE]
+> The secondary database must have the same service tier as the primary.
+
+You can select any region for your secondary server, but we recommend the [paired region](/azure/availability-zones/cross-region-replication-azure).
+
+```azurecli
+
+New-AzSqlDatabaseSecondary -ResourceGroupName PrimaryRG -ServerName PrimaryServer -DatabaseName TestDB -PartnerResourceGroupName SecondaryRG -PartnerServerName SecondaryServer -PartnerDatabaseName TestDB         
+
+```
+
+When the deployment is complete, you can check the status of the secondary database by running the `Get-AzSqlDatabaseReplicationLink`  command:
+
+```azurecli
+    Get-AzSqlDatabaseReplicationLink -ResourceGroupName PrimaryRG -ServerName PrimaryServer -DatabaseName TestDB -PartnerResourceGroupName SecondaryRG
+```
 ---
 
 ## Initiate a failover
@@ -133,6 +157,15 @@ Run the [az sql db replica set-primary](/cli/azure/sql/db/replica#az-sql-db-repl
 az sql db replica set-primary --name guestlist --resource-group ContosoHotel --server contosowest
 ```
 
+# [PowerShell](#tab/powershell)
+
+Run the following command:
+
+```azurecli
+    Set-AzSqlDatabaseSecondary -ResourceGroupName SecondaryRG -ServerName SecondaryServer -DatabaseName TestDB -PartnerResourceGroupName PrimaryServer -Failover
+```
+
+---
 ---
 
 The command immediately switches the secondary database into the primary role. This process normally should complete within 30 seconds or less.
@@ -162,6 +195,14 @@ az sql db replica delete-link --name guestlist --resource-group ContosoHotel --s
 ```
 
 Confirm that you want to perform the operation.
+
+# [PowerShell](#tab/powershell)
+
+Run the following command:
+
+```azurecli
+Remove-AzSqlDatabaseSecondary -ResourceGroupName SecondaryRG -ServerName  SecondaryServer -DatabaseName TestDB -PartnerResourceGroupName PrimaryRG -PartnerServerName PrimaryServer
+```
 
 ---
 

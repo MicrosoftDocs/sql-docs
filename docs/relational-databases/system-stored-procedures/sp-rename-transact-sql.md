@@ -110,7 +110,7 @@ In `sp_rename` (preview) for [!INCLUDE [ssazuresynapse](../../includes/ssazuresy
 
 - You can change the name of an object or data type in the current database only. The names of most system data types and system objects can't be changed.
 
-- If you use more than 128 characters for the New Name, only the first 128 characters are used and the rest is truncated.
+- If you use more than 128 characters for the new name, only the first 128 characters are used and the rest is truncated.
 
 ## Permissions
 

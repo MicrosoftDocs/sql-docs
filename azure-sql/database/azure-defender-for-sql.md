@@ -1,8 +1,8 @@
 ---
 title: Microsoft Defender for SQL
 description: Learn about functionality for managing your database vulnerabilities and detecting anomalous activities that could indicate a threat to your database in Azure SQL Database, Azure SQL Managed Instance, or Azure Synapse.
-author: bmansheim
-ms.author: benmansheim
+author: MashaMSFT
+ms.author: mathoma
 ms.date: 01/16/2023
 ms.service: sql-db-mi
 ms.subservice: security
@@ -10,6 +10,7 @@ ms.topic: conceptual
 ms.custom: sqldbrb=2
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
+
 # Microsoft Defender for SQL
 
 [!INCLUDE[appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa.md)]
@@ -85,11 +86,11 @@ To view and manage Microsoft Defender for SQL settings:
 
 1. From the **Security** area of your server or managed instance, select **Defender for Cloud**.
 
-    On this page, you'll see the status of Microsoft Defender for SQL(disabled or enabled):
+    On this page, you see the status of Microsoft Defender for SQL(disabled or enabled):
 
     :::image type="content" source="media/azure-defender-for-sql/enable-defender-sql-enabled-disabled.png" alt-text="Screenshot showing status as enabled or disabled." lightbox="media/azure-defender-for-sql/enable-defender-sql-enabled-disabled.png":::
 
-1. If Microsoft Defender for SQL is enabled, you'll see a **Configure** link as shown in the previous graphic. To edit the settings for Microsoft Defender for SQL, select **Configure**.
+1. If Microsoft Defender for SQL is enabled, you see a **Configure** link as shown in the previous graphic. To edit the settings for Microsoft Defender for SQL, select **Configure**.
 
     :::image type="content" source="media/azure-defender-for-sql/defender-sql-configure.png" alt-text="Screenshot showing Configure screen for Microsoft Defender for SQL." lightbox="media/azure-defender-for-sql/defender-sql-configure.png":::
 

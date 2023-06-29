@@ -32,7 +32,7 @@ This quickstart uses the following command line tools to manage the cluster.
 
 - A Kubernetes cluster. For more information on creating and connecting to a Kubernetes cluster in AKS with `kubectl`, see [Deploy an Azure Kubernetes Service (AKS) cluster](/azure/aks/tutorial-kubernetes-deploy-cluster).
 
-  > [!NOTE]  
+  > [!NOTE]
   > To protect against node failure, a Kubernetes cluster requires more than one node.
 
 - Azure CLI. See [How to install the Azure CLI](/cli/azure/install-azure-cli) to install the latest version.
@@ -43,7 +43,7 @@ This quickstart uses the following command line tools to manage the cluster.
 
 - An OpenShift cluster. For more information on creating and connecting to an Azure Red Hat OpenShift cluster with `oc`, see [Tutorial: Create an Azure Red Hat OpenShift 4 cluster](/azure/openshift/tutorial-create-cluster).
 
-  > [!NOTE]  
+  > [!NOTE]
   > To protect against node failure, a Kubernetes cluster requires more than one node.
 
 - Azure CLI. See [How to install the Azure CLI](/cli/azure/install-azure-cli) to install the latest version.
@@ -58,7 +58,7 @@ This quickstart uses the following command line tools to manage the cluster.
 
 1. To create a secret in Kubernetes named `mssql` that holds the value `MyC0m9l&xP@ssw0rd` for the `MSSQL_SA_PASSWORD`, run the following command. Remember to pick your own complex password:
 
-   > [!IMPORTANT]  
+   > [!IMPORTANT]
    > The `SA_PASSWORD` environment variable is deprecated. Use `MSSQL_SA_PASSWORD` instead.
 
    ```console
@@ -71,7 +71,7 @@ This quickstart uses the following command line tools to manage the cluster.
 
 1. To create a secret named `mssql` that holds the value `MyC0m9l&xP@ssw0rd` for the `MSSQL_SA_PASSWORD`, run the following command. Remember to pick your own complex password:
 
-   > [!IMPORTANT]  
+   > [!IMPORTANT]
    > The `SA_PASSWORD` environment variable is deprecated. Use `MSSQL_SA_PASSWORD` instead.
 
    ```console
@@ -174,28 +174,17 @@ For a database in a Kubernetes cluster, you must use persisted storage. You can 
 
 ### [OpenShift](#tab/oc)
 
-For a database in an OpenShift cluster, you must use persisted storage. You can configure a [persistent volume](https://docs.openshift.com/container-platform/4.12/storage/persistent_storage/persistent_storage_local/persistent-storage-local.html) and [persistent volume claim](https://docs.openshift.com/container-platform/4.12/storage/persistent_storage/persistent_storage_local/persistent-storage-local.html#create-local-pvc_persistent-storage-local) in the OpenShift cluster using the following steps:
+For a database in an OpenShift cluster, you must use persisted storage. You can configure a [persistent volume](https://docs.openshift.com/container-platform/latest/storage/persistent_storage/persistent-storage-azure.html) and [persistent volume claim](https://docs.openshift.com/container-platform/latest/storage/persistent_storage/persistent-storage-azure.html#creating-the-persistent-volume-claim) in the OpenShift cluster using the following steps:
 
 1. Create a manifest to define the storage class and the persistent volume claim. The manifest specifies the storage provisioner, parameters, and reclaim policy. The OpenShift cluster uses this manifest to create the persistent storage.
 
-1. The following YAML example defines a storage class and persistent volume claim. The storage class provisioner is `azure-disk`, because this OpenShift cluster is in Azure. The storage account type is `Standard_LRS`. The persistent volume claim is named `mssql-data`. The persistent volume claim metadata includes an annotation connecting it back to the storage class.
+1. The following YAML example defines a persistent volume claim using the default storage class. The persistent volume claim is named `mssql-data`.
 
    ```yaml
-   kind: StorageClass
-   apiVersion: storage.k8s.io/v1
-   metadata:
-        name: azure-disk
-   provisioner: kubernetes.io/azure-disk
-   parameters:
-     storageaccounttype: Standard_LRS
-     kind: Managed
-   ---
    kind: PersistentVolumeClaim
    apiVersion: v1
    metadata:
      name: mssql-data
-     annotations:
-       volume.beta.kubernetes.io/storage-class: azure-disk
    spec:
      accessModes:
      - ReadWriteOnce
@@ -215,7 +204,6 @@ For a database in an OpenShift cluster, you must use persisted storage. You can 
    The persistent volume is automatically created as an Azure storage account, and bound to the persistent volume claim.
 
    ```output
-   storageclass "azure-disk" created
    persistentvolumeclaim "mssql-data" created
    ```
 
@@ -360,7 +348,7 @@ You will create a manifest to describe the container, based on the SQL Server [m
 
    - `securityContext`: Defines privilege and access control settings for a pod or container. In this case it's specified at the pod level, so all containers adhere to that security context. In the security context, we define the `fsGroup` with the value `10001`, which is the Group ID (GID) for the `mssql` group. This value means that all processes of the container are also part of the supplementary GID `10001` (`mssql`). The owner for volume `/var/opt/mssql` and any files created in that volume will be GID `10001` (the `mssql` group).
 
-   > [!WARNING]  
+   > [!WARNING]
    > By using the `LoadBalancer` service type, the SQL Server instance is accessible remotely (via the Internet) at port 1433.
 
    Save the file. For example, `sqldeployment.yaml`.
@@ -451,7 +439,7 @@ You will create a manifest to describe the container, based on the SQL Server [m
          terminationGracePeriodSeconds: 30
          hostname: mssqlinst
          securityContext:
-           fsGroup: 10001
+           fsGroupChangePolicy: OnRootMismatch
          containers:
          - name: mssql
            image: mcr.microsoft.com/mssql/server:2022-latest
@@ -464,6 +452,10 @@ You will create a manifest to describe the container, based on the SQL Server [m
                cpu: "2000m"
            ports:
            - containerPort: 1433
+           securityContext:
+             capabilities:
+               add:
+               - NET_BIND_SERVICE
            env:
            - name: MSSQL_PID
              value: "Developer"
@@ -513,9 +505,9 @@ You will create a manifest to describe the container, based on the SQL Server [m
 
      When OpenShift deploys the container, it refers to the secret named `mssql` to get the value for the password.
 
-   - `securityContext`: Defines privilege and access control settings for a pod or container. In this case it's specified at the pod level, so all containers adhere to that security context. In the security context, we define the `fsGroup` with the value `10001`, which is the Group ID (GID) for the `mssql` group. This value means that all processes of the container are also part of the supplementary GID `10001` (`mssql`). The owner for volume `/var/opt/mssql` and any files created in that volume will be GID `10001` (the `mssql` group).
+   - `securityContext`: Defines privilege and access control settings for a pod or container. There are settings applied at both the pod and container level. At the pod level, we define the `fsGroupChangePolicy` with the value `OnRootMismatch`. This will ensure that the fsGroup selected by OpenShift will be used for all the files in the `/var/opt/mssql` volume. At the container level, we permit the `NET_BIND_SERVICE` capability. This will allow the container to bind to ports lower than 1024.
 
-   > [!WARNING]  
+   > [!WARNING]
    > By using the `LoadBalancer` service type, the SQL Server instance is accessible remotely (via the Internet) at port 1433.
 
    Save the file. For example, `sqldeployment.yaml`.

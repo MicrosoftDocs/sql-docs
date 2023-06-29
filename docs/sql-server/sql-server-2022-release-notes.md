@@ -110,6 +110,12 @@ In [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], setting the **Start Mode*
 
 Currently, MSOLEDBSQL19 prevents the creation of linked servers without encryption and a trusted certificate (a self-signed certificate is insufficient). If linked servers are required, use the existing supported version of MSOLEDBSQL.
 
+### Transaction log growth for databases with In-Memory OLTP
+
+You might notice excessive growth in the transaction log size for databases with [In-Memory OLTP](/sql/relational-databases/in-memory-oltp/overview-and-usage-scenarios) feature enabled. This might be coupled with XTP_CHECKPOINT as log_reuse_wait_desc in [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql). 
+
+Review the article [Transaction log file grows for databases with In-Memory OLTP in SQL Server 2022](/troubleshoot/sql/database-engine/general/transaction-log-file-grows-databases-in-memory-oltp.md) for details about the problem and mitigations.
+
 ## Build number
 
 | Preview build | Version number | Date |

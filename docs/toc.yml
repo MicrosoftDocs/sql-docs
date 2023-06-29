@@ -18316,6 +18316,9 @@ items:
         - name: TABLE
           displayName: CREATE TABLE
           href: t-sql/statements/create-table-transact-sql.md
+        - name: TABLE AS CLONE OF
+          displayName: CREATE TABLE AS CLONE OF
+          href: t-sql/statements/create-table-as-clone-of-transact-sql.md
         - name: TABLE (Synapse Analytics and Fabric)
           displayName: CREATE TABLE
           href: t-sql/statements/create-table-azure-sql-data-warehouse.md

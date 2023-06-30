@@ -86,7 +86,7 @@ To view and manage Microsoft Defender for SQL settings:
 
 1. From the **Security** area of your server or managed instance, select **Defender for Cloud**.
 
-    On this page, you see the status of Microsoft Defender for SQL(disabled or enabled):
+    On this page, you see the status of Microsoft Defender for SQL (disabled or enabled):
 
     :::image type="content" source="media/azure-defender-for-sql/enable-defender-sql-enabled-disabled.png" alt-text="Screenshot showing status as enabled or disabled." lightbox="media/azure-defender-for-sql/enable-defender-sql-enabled-disabled.png":::
 

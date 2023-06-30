@@ -74,14 +74,14 @@ A source table can have a maximum of two capture instances. For more information
 
 #### [ @supports_net_changes = ] *supports_net_changes*
 
-Indicates whether support for querying for net changes is to be enabled for this capture instance. *@supports_net_changes* is **bit** with a default of `1` if the table has a primary key or the table has a unique index that has been identified by using the @index_name parameter. Otherwise, the parameter defaults to `0`.
+Indicates whether support for querying for net changes is to be enabled for this capture instance. *@supports_net_changes* is **bit** with a default of `1` if the table has a primary key or the table has a unique index that has been identified by using the *@index_name* parameter. Otherwise, the parameter defaults to `0`.
 
 - If `0`, only the support functions to query for all changes are generated.
 - If `1`, the functions that are needed to query for net changes are also generated.
 
 If *@supports_net_changes* is set to `1`, *@index_name* must be specified, or the source table must have a defined primary key.
 
-When @supports_net_changes is set to 1, an additional nonclustered index is created on the change table and the net changes query function is created. Because this index needs to be maintained, we found that enabling net changes can have negative impact on change data capture performance.
+When *@supports_net_changes* is set to `1`, an additional nonclustered index is created on the change table, and the net changes query function is created. Because this index needs to be maintained, enabling net changes can have a negative effect on CDC performance.
 
 #### [ @index_name = ] '*index_name*'
 
@@ -157,7 +157,7 @@ GO
 
 ### B. Enable change data capture by specifying additional optional parameters
 
-The following example enables change data capture for the `HumanResources.Department` table. All parameters except `@allow_partition_switch` are specified.
+The following example enables change data capture for the `HumanResources.Department` table. All parameters except *@allow_partition_switch* are specified.
 
 ```sql
 USE AdventureWorks2022;

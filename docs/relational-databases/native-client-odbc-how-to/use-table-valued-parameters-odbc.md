@@ -3,7 +3,7 @@ title: "Use Table-Valued Parameters (ODBC)"
 description: "Use Table-Valued Parameters (ODBC)"
 author: markingmyname
 ms.author: maghan
-ms.date: "03/14/2017"
+ms.date: "06/30/2023"
 ms.service: sql
 ms.subservice: native-client
 ms.topic: "reference"
@@ -647,7 +647,7 @@ void demo_fixed_TVP_binding (SQLHANDLE hstmt){
    // Flush rowcounts  
    do {  
       r = SQLMoreResults(hstmt);  
-      if (r != SQL_SUCCESS && r != SQL_SUCCESS_WITH_INFO) {  
+      if (r != SQL_SUCCESS && r != SQL_SUCCESS_WITH_INFO && r != SQL_NO_DATA) {  
          ODBCError(henv, hdbc, hstmt, NULL, true);   
          exit(-1);  
       }  
@@ -806,8 +806,8 @@ void demo_variable_TVP_binding (SQLHANDLE hstmt) {
                    break;  
   
                 default:  
-                   // Sending 0 indicates that now more TVP rows are available  
-                   r = SQLPutData(hstmt, SQLPOINTER(1), 0);  
+                   // Set StrLenOrIndPtr and DataPtr to 0, and send to indicate no more TVP rows are available
+                   r = SQLPutData(hstmt, 0, 0);  
                    if (r != SQL_SUCCESS && r != SQL_SUCCESS_WITH_INFO) {  
                       ODBCError(henv, hdbc, hstmt, NULL, true);   
                       exit(-1);  

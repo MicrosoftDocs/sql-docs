@@ -55,7 +55,7 @@ You can use SQL Server Management Studio (SSMS) to modify the number of `tempdb`
 1. Select **Files** under **Select a page** to view the existing number of `tempdb` files.
 1. To add a file, choose **Add** and then provide information about the new data file in the row. 
 
-   :::image type="content" source="media/tempdb-configure/add-new-tempdb-file.png.png" alt-text="Screenshot of Database Properties in SSMS, with new database file name highlighted. ":::
+   :::image type="content" source="media/tempdb-configure/add-new-tempdb-file.png" alt-text="Screenshot of Database Properties in SSMS, with new database file name highlighted. ":::
 
 1. To remove a `tempdb` file, choose the file you want to remove from the list of database files, and then select **Remove**. 
 
@@ -209,7 +209,7 @@ SELECT (SUM(size)*1.0/128) AS TempDB_size_InMB FROM sys.database_files
 
 
 
-:::image type="content" source="media/tempdb-configure/tempdb-size-in-megabytes.png.png" alt-text="Screenshot of query results in SSMS showing tempdb size in megabytes.":::
+:::image type="content" source="media/tempdb-configure/tempdb-size-in-megabytes.png" alt-text="Screenshot of query results in SSMS showing tempdb size in megabytes.":::
 
 
 To set the max size for a new `tempdb` data file, run the following command: 

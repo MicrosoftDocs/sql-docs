@@ -4,7 +4,7 @@ description: "Enables change data capture for the specified source table in the 
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 06/13/2023
+ms.date: 06/30/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -80,6 +80,8 @@ Indicates whether support for querying for net changes is to be enabled for this
 - If `1`, the functions that are needed to query for net changes are also generated.
 
 If *@supports_net_changes* is set to `1`, *@index_name* must be specified, or the source table must have a defined primary key.
+
+When @supports_net_changes is set to 1, an additional nonclustered index is created on the change table and the net changes query function is created. Because this index needs to be maintained, we found that enabling net changes can have negative impact on change data capture performance.
 
 #### [ @index_name = ] '*index_name*'
 

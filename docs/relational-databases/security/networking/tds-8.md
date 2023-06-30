@@ -1,6 +1,6 @@
 ---
-title: TDS 8.0 and TLS 1.3 support
-description: This article discusses TDS 8.0 and TLS 1.3 support with SQL Server 2022
+title: TDS 8.0
+description: This article discusses TDS 8.0
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
@@ -10,11 +10,11 @@ ms.subservice: security
 ms.topic: conceptual
 monikerRange: ">= sql-server-ver16||>= sql-server-linux-ver16"
 ---
-# TDS 8.0 and TLS 1.3 support
+# TDS 8.0
 
-[!INCLUDE [SQL Server 2022](../../../includes/applies-to-version/sqlserver2022.md)]
+[!INCLUDE [SQL Server 2022, Azure SQL Database, Azure SQL Managed Instance](../../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
-[!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] supports Tabular Data Stream (TDS) 8.0, and Transport Layer Security (TLS) 1.3 when TDS 8.0 is used.
+[!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)], [!INCLUDE [ssazure_md](../../../includes/ssazure_md.md)] and [!INCLUDE [ssazuremi_md](../../../includes/ssazuremi_md.md)] support Tabular Data Stream (TDS) 8.0.
 
 The [Tabular Data Stream (TDS)](/openspecs/windows_protocols/ms-tds/b46a581a-39de-4745-b076-ec4dbb7d13ec) protocol is an application layer protocol used by clients to connect to SQL Server, while SQL Server uses Transport Layer Security (TLS) to encrypt data that is transmitted across a network between an instance of SQL Server and a client application.
 
@@ -22,7 +22,7 @@ TDS is a secure protocol, but in previous versions of SQL Server, encryption cou
 
 The TLS handshake now precedes any TDS messages, wrapping the TDS session in TLS to enforce encryption, making TDS 8.0 aligned with HTTPS and other web protocols. This significantly contributes to TDS traffic manageability as standard network appliances are now able to filter and securely passthrough SQL queries.
 
-Another benefit to TDS 8.0 is greater compatibility with TLS 1.3, and TLS standards to come. TDS 8.0 is also fully compatible with TLS 1.2 and previous TLS versions.
+Another benefit to TDS 8.0 compared to previous TDS versions is compatibility with TLS 1.3, and TLS standards to come. TDS 8.0 is also fully compatible with TLS 1.2 and previous TLS versions.
 
 ## How TDS works
 
@@ -42,28 +42,16 @@ With the introduction of TDS 8.0, the SQL Server connections are as follows:
 
 TCP handshake :arrow_right: TLS handshake :arrow_right: TDS prelogin (encrypted) and response (encrypted) :arrow_right:  authentication (encrypted) :arrow_right: data exchange (encrypted)
 
-## Differences between TLS 1.2 and TLS 1.3
-
-TLS 1.3 reduces the number of round trips from two to one during the handshake phase, making it faster and more secure than TLS 1.2. The server hello packet containing server certificate is encrypted and one Round Trip Time (1-RTT) resumption is discontinued, and replaced with 0-RTT resumption based on client key share. Added security of TLS 1.3 comes from discontinuing certain cyphers and algorithms.
-
-Here's a list of algorithms and ciphers removed in TLS 1.3:
-
-- RC4 stream cipher
-- RSA key exchange
-- SHA-1 hash function
-- CBC (block) mode ciphers
-- MD5 algorithm
-- Various non-ephemeral Diffie-Hellman groups
-- EXPORT-strength ciphers
-- DES
-- 3DES
-
 ## Strict connection encryption
 
-To use TDS 8.0, [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] added `strict` as an additional connection encryption type to SQL Server drivers (`Encrypt=strict`). Download the latest version of the ODBC or OLE DB drivers to use the `strict` connection encryption type.
+To use TDS 8.0, [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] added `strict` as an additional connection encryption type to SQL Server drivers (`Encrypt=strict`). Download the latest version of the .NET, ODBC, OLE DB, JDBC, PHP and Python drivers to use the `strict` connection encryption type.
 
+- [Microsoft ADO.NET for SQL Server and Azure SQL](../../../connect/ado-net/microsoft-ado-net-sql-server.md) version 5.1 or higher
 - [ODBC Driver for SQL Server](../../../connect/odbc/download-odbc-driver-for-sql-server.md) version 18.1.2.1 or higher
 - [OLE DB Driver for SQL Server](../../../connect/oledb/download-oledb-driver-for-sql-server.md) version 19.2.0 or higher
+- [Microsoft JDBC Driver for SQL Server](../../../connect/jdbc/microsoft-jdbc-driver-for-sql-server.md) version 11.2.0 or higher
+- [Microsoft Drivers for PHP for SQL Server](../../../connect/php/microsoft-php-driver-for-sql-server.md) version 5.10 or higher
+- [Python SQL Driver - pyodbc](../../../connect/python/pyodbc/python-sql-driver-pyodbc.md) 
 
 In order to prevent a man-in-the-middle attack with `strict` connection encryption, users aren't able to set the `TrustServerCertificate` option to `true` and trust any certificate the server provided. Instead, users would use the `HostNameInCertificate` option to specify the certificate `ServerName` that should be trusted. The certificate supplied by the server would need to pass the certificate validation.
 

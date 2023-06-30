@@ -8043,8 +8043,10 @@ items:
         href: relational-databases/security/ledger/ledger-limits.md?view=sql-server-ver16&preserve-view=true
     - name: Networking
       items:
-      - name: TDS 8.0 and TLS 1.3
-        href: relational-databases/security/networking/tds-8-and-tls-1-3.md
+      - name: TDS 8.0
+        href: relational-databases/security/networking/tds-8.md
+      - name: TLS 1.3
+        href: relational-databases/security/networking/tls-1-3.md       
   - name: Tutorials
     items:
     - name: Always Encrypted

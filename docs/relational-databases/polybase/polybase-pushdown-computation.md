@@ -4,7 +4,8 @@ titleSuffix: SQL Server
 description: Enable pushdown computation to improve performance of queries on your Hadoop cluster. You can select a subset of rows/columns in an external table for pushdown.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: 10/07/2022
+ms.reviewer: wiassaf, nathansc 
+ms.date: 6/29/2023
 ms.service: sql
 ms.subservice: polybase
 ms.topic: conceptual
@@ -80,9 +81,24 @@ With PolyBase pushdown computation, you can delegate computation tasks to extern
 
 ### Pushdown of joins
 
-In many cases, PolyBase can facilitate pushdown of the join operator, which will greatly improve performance.  
+In many cases, PolyBase can facilitate pushdown of the join operator for the join of two external tables on same external data source, which will greatly improve performance.  
 
 If the join can be done at the external data source, this reduces the amount of data movement and improves the query's performance. Without join pushdown, the data from the tables to be joined must be brought locally into tempdb, then joined.
+
+Note that in the case of *distributed joins* (joining a local table to an external table), unless there is some filtering criteria on the external table that is applied to the join condition, all of the data in the external table must be brought locally into `tempdb` in order to perform the join operation. For example, the following query has no filtering on the external table join condition, which will result in all of the data from the external table being read.
+
+```sql
+SELECT * FROM LocalTable L
+JOIN ExternalTable E on L.id = E.id
+```
+
+Since the join is on `E.id` column of the external table, if a filter condition is added to that column, the filter can be pushed down thereby reducing the number of rows read from the external table
+
+```sql
+SELECT * FROM LocalTable L
+JOIN ExternalTable E on L.id = E.id
+WHERE E.id = 20000
+```
 
 ### Select a subset of rows
 

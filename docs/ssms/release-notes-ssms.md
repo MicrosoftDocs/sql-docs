@@ -4,7 +4,7 @@ description: Release notes for SQL Server Management Studio (SSMS).
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan
-ms.date: 06/06/2023
+ms.date: 06/28/2023
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
@@ -269,6 +269,8 @@ Download previous SSMS versions by selecting the download link in the related se
 | Stretch DB | Removed Stretch DB Wizard. | Use T-SQL to configure Stretch DB or use SSMS 18.9.1 or earlier to use the Stretch DB Wizard. |
 
 ### 18.12.1
+
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.12.1](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x409)
 
 - Release number: 18.12.1
 - Build number: 15.0.18424.0

@@ -110,6 +110,6 @@ After you connected the SQL Server instances to Azure, go to the [Azure portal](
 
 ## Next steps
 
-- Learn how to [Configure your SQL Server instance for periodic environment health check using on-demand SQL assessment](assess.md)
+- Learn how to [Configure your SQL Server instance for periodic environment health check using best practices assessment](assess.md)
 
 - Learn how to [Protect Azure Arc-enabled SQL Server with Microsoft Defender for Cloud](configure-advanced-data-security.md)

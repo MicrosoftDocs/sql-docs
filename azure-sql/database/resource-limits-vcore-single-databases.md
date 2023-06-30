@@ -4,7 +4,7 @@ description: This page describes some common vCore resource limits for a single 
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 06/13/2023
+ms.date: 06/28/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: reference
@@ -174,7 +174,6 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 | Compute generation | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 |
 | Min-max vCores | 0.5-2 | 0.5-4 | 0.75-6 | 1-8 | 1.25-10 | 1.5-12 | 1.75-14 |
 | Min-max memory (GB) | 2.05-6 | 2.10-12 | 2.25-18 | 3.00-24 | 3.75-30 | 4.50-36 | 5.25-42 |
-| [Max RBPEX Size](hyperscale-architecture.md#compute) | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
 | In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
 | Max data size (TB) | 100 | 100 | 100 | 100 | 100 | 100 | 100 |
@@ -205,7 +204,6 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 | Compute generation | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 |
 | Min-max vCores | 2-16 | 2.25-18 | 2.25-20 | 3-24 | 4-32 | 5-40 | 10-80 |
 | Min-max memory (GB) | 6.00-48 | 6.75-54 | 7.5-60 | 9-72 | 12-96 | 15-120 | 30-240 |
-| [Max RBPEX Size](hyperscale-architecture.md#compute) | 3X Memory | 3X Memory | 3X Memory | 3X Memory | 3X Memory | 3X Memory | 3X Memory |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
 | In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
 | Max data size (TB) | 100 | 100 | 100 | 100 | 100 | 100 | 100 |
@@ -236,7 +234,6 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Hardware|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|
 |vCores|2|4|6|8|10|12|14|
 |Memory (GB)|10.4|20.8|31.1|41.5|51.9|62.3|72.7|
-|[RBPEX](hyperscale-architecture.md#compute) Size|3X Memory|3X Memory|3X Memory|3X Memory|3X Memory|3X Memory|3X Memory|
 |Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|N/A|N/A|
 |Max data size (TB)|100 |100 |100 |100 |100 |100 |100|
@@ -272,7 +269,6 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Hardware|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|
 |vCores|16|18|20|24|32|40|80|
 |Memory (GB)|83|93.4|103.8|124.6|166.1|207.6|415.2|
-|[RBPEX](hyperscale-architecture.md#compute) Size|3X Memory|3X Memory|3X Memory|3X Memory|3X Memory|3X Memory|3X Memory|
 |Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|N/A|N/A|
 |Max data size (TB)|100 |100 |100 |100 |100 |100 |100 |
@@ -308,7 +304,6 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Hardware|DC-series|DC-series|DC-series|DC-series|
 |vCores|2|4|6|8|
 |Memory (GB)|9|18|27|36|
-|[RBPEX](hyperscale-architecture.md#compute) Size|3X Memory|3X Memory|3X Memory|3X Memory|
 |Columnstore support|Yes|Yes|Yes|Yes|
 |In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|
 |Max data size (TB)|100 |100 |100 |100 |
@@ -347,7 +342,6 @@ SLOs in the Hyperscale premium-series tier use the naming convention `HS_PRMS_` 
 |:--- | --: |--: |--: |--: |--: |
 |Hardware|Premium-series|Premium-series|Premium-series|Premium-series|Premium-series|
 |Memory (GB)| 10.4|20.8|31.1|41.5|51.9|
-|[RBPEX](hyperscale-architecture.md#compute) Size|3X Memory|3X Memory|3X Memory|3X Memory|3X Memory|
 |Columnstore support|Yes|Yes|Yes|Yes|Yes|
 |In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|
 |Max data size (TB)|100 |100 |100 |100 |100 |
@@ -385,7 +379,6 @@ SLOs in the Hyperscale premium-series tier use the naming convention `HS_PRMS_` 
 |:--- | --: |--: |--: |--: |--: |
 |Hardware|Premium-series|Premium-series|Premium-series|Premium-series|Premium-series|
 |Memory (GB)|62.3|72.7|83.0|93.4|103.8|
-|[RBPEX](hyperscale-architecture.md#compute) Size|3X Memory|3X Memory|3X Memory|3X Memory|3X Memory|
 |Columnstore support|Yes|Yes|Yes|Yes|Yes|
 |In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|
 |Max data size (TB)|100 |100 |100 |100 |100 |
@@ -421,7 +414,6 @@ SLOs in the Hyperscale premium-series tier use the naming convention `HS_PRMS_` 
 |vCores|24|32|40|64|80|128|
 |:--- | --: |--: |--: |--: |--: |
 |Memory (GB)|124.6|166.1|207.6|332.2|415.2|625|
-|[RBPEX](hyperscale-architecture.md#compute) Size|3X Memory|3X Memory|3X Memory|3X Memory|3X Memory|3X Memory|
 |Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|
 |In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|N/A|
 |Max data size (TB)|100 |100 |100 |100 |100 |100 |
@@ -460,7 +452,6 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 |:--- | --: |--: |--: |--: |--: |
 |Hardware|Premium-series|Premium-series|Premium-series|Premium-series|Premium-series|
 |Memory (GB)| 20.8|41.5|62.3|83|103.8|
-|[RBPEX](hyperscale-architecture.md#compute) Size|3X Memory|3X Memory|3X Memory|3X Memory|3X Memory|
 |Columnstore support|Yes|Yes|Yes|Yes|Yes|
 |In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|
 |Max data size (TB)|100 |100 |100 |100 |100 |
@@ -498,7 +489,6 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 |:--- | --: |--: |--: |--: |--: |
 |Hardware|Premium-series|Premium-series|Premium-series|Premium-series|Premium-series|
 |Memory (GB)|124.6|145.3|166.1|186.9|207.6|
-|[RBPEX](hyperscale-architecture.md#compute) Size|3X Memory|3X Memory|3X Memory|3X Memory|3X Memory|
 |Columnstore support|Yes|Yes|Yes|Yes|Yes|
 |In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|
 |Max data size (TB)|100 |100 |100 |100 |100 |
@@ -535,7 +525,6 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 |vCores|24|32|40|64|80|
 |:--- | --: |--: |--: |--: |
 |Memory (GB)| 249.1|332.2|415.2|664.4|830.5|
-|[RBPEX](hyperscale-architecture.md#compute) Size|3X Memory|3X Memory|3X Memory|3X Memory|3X Memory|
 |Columnstore support|Yes|Yes|Yes|Yes|Yes|
 |In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|
 |Max data size (TB)|100 |100 |100 |100 |100 |

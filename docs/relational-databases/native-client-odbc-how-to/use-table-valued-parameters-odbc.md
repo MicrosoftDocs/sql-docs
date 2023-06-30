@@ -452,7 +452,7 @@ void OrdEntry_TVP (OrdEntryData& order){
       SQL_C_DEFAULT,// ValueType   
       SQL_SS_TABLE,// Parametertype  
       ITEM_ARRAY_SIZE,// ColumnSize - for a TVP this the row array size  
-      0,// DecimalDigits - for a TVP this is the number of columns in the TVP   
+      0,// DecimalDigits - DecimalDigits: For a table-valued parameter this must always be 0.
       NULL,// ParameterValuePtr - for a TVP this is the type name of the TVP  
                         // (not needed with stored proc)  
       NULL,// BufferLength - for a TVP this is the length of the type name or SQL_NTS  

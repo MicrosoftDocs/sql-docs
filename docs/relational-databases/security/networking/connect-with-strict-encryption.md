@@ -28,7 +28,7 @@ In this article, we'll show you how to connect to [!INCLUDE [sssql22-md](../../.
 
 ## Connect to SQL Server using a .NET application
 
-For information on building and connecting to SQL Server using the `strict` encryption type, see [Connection String Syntax](/dotnet/framework/data/adonet/connection-string-syntax) on how to properly build the connection string. For more information on the new connection string properties, see [Additional changes to connection string encryption properties](./tds-8-and-tls-1-3.md#additional-changes-to-connection-string-encryption-properties).
+For information on building and connecting to SQL Server using the `strict` encryption type, see [Connection String Syntax](/dotnet/framework/data/adonet/connection-string-syntax) on how to properly build the connection string. For more information on the new connection string properties, see [Additional changes to connection string encryption properties](./tds-8.md#additional-changes-to-connection-string-encryption-properties).
 
 ## Connect using an ODBC DSN
 
@@ -90,4 +90,4 @@ If you see `SSL certificate validation failed`, validate that:
 
 ## See also
 
-- [TDS 8.0 and TLS 1.3 support](tds-8-and-tls-1-3.md)
+- [TDS 8.0](tds-8.md)

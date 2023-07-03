@@ -84,7 +84,7 @@ SSMS 19.1 is the latest general availability (GA) release of SSMS. If you need a
 
 | New Item | Details | Workaround |
 | -------- | ------- | ---------- |
-| Always Encrypted | Always Encrypted Wizard error "Cannot read property AllowEnclaveComputations" occurs for SQL Server 2016 or SQL Server 2017. |
+| Always Encrypted | Always Encrypted Wizard error "Cannot read property AllowEnclaveComputations" occurs for SQL Server 2016 or SQL Server 2017. | Use an earlier version of SSMS (19.02 or 18.12.1) with SQL Server 2016 and SQL Server 2017. |
 | Azure SQL Managed Instance | Viewing database properties for a SQL MI database may return the error "Subquery returned more than one value. This isn't permitted when the subquery follows =, !=, <, <=, >, >= or when the subquery is used as an expression. (.NET SqlClient Data Provider)". | There's a known problem due to incorrect data in `msdb`. To resolve, remove back up history. For example, `EXEC`msdb`..sp_delete_backuphistory @oldest_date = '<current date>'`. |
 | Database Designer | Selecting the Design option for a view that references a table using spatial data causes SSMS to crash. | Use T-SQL to make changes to the view. |
 | General SSMS | Import setting from SSMS 17 option not available. | Settings can be imported from SSMS 18. |

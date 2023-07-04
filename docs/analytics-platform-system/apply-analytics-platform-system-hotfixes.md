@@ -19,7 +19,7 @@ This article discusses how to apply hotfixes to the Analytics Platform System so
 > Do not attempt to apply a Analytics Platform System hotfix if your appliance or any appliance component is down or in a failed over state. In that case, contact support for assistance.  
   
 > [!WARNING]  
-> Do not apply a Analytics Platform System hotfix while the appliance is in use. Applying a hotfix can cause appliance nodes to reboot. The hotfix should be applied during a maintenance window when the appliance is not being used.  
+> Do not apply a Analytics Platform System hotfix while the appliance is in use. Applying a hotfix can cause appliance nodes to restart. The hotfix should be applied during a maintenance window when the appliance is not being used.  
   
 ### Prerequisites  
 To perform these steps, you will need:  

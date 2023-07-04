@@ -185,9 +185,9 @@ Install-Module -Name AzureADHybridAuthenticationManagement -AllowClobber
     > [!NOTE] 
     > Azure sovereign clouds require setting the `TopLevelNames` property, which is set to `windows.net` by default. Azure sovereign cloud deployments of SQL Managed Instance use a different top level domain name, such as `usgovcloudapi.net` for Azure US Government. Set your Trusted Domain Object to that top level domain name using the following PowerShell command: `Set-AzureADKerberosServer -Domain $domain -DomainCredential $domainCred -CloudCredential $cloudCred -SetupCloudTrust -TopLevelNames "usgovcloudapi.net,windows.net"`. You can verify the setting with the following PowerShell command: `Get-AzureAdKerberosServer -Domain $domain -DomainCredential $domainCred -UserPrincipalName $cloudUserName | Select-Object -ExpandProperty CloudTrustDisplay`.
 
-## Configure the Group Policy Object (GPO) 
+## Configure the Group Policy Object (GPO)
 
-1. Identify your [Azure AD tenant ID](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).
+1. Identify your [Azure AD tenant ID](/azure/active-directory/fundamentals/how-to-find-tenant).
 
 1. Deploy the following Group Policy setting to client machines using the incoming trust-based flow:
 

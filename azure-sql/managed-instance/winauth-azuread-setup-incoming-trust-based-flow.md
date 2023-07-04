@@ -108,7 +108,7 @@ Install-Module -Name AzureADHybridAuthenticationManagement -AllowClobber
 
     If this is the first time calling any Azure AD Kerberos command, you're prompted for Azure AD cloud access.
       - Enter the password for your Azure AD global administrator account.
-      - If your organization uses other modern authentication methods such as MFA (Azure Multi-Factor Authentication) or Smart Card, follow the instructions as requested for sign in.
+      - If your organization uses other modern authentication methods such as Azure Active Directory Multi-Factor Authentication) or Smart Card, follow the instructions as requested for sign in.
 
     If this is the first time you're configuring Azure AD Kerberos settings, the [Get-AzureAdKerberosServer cmdlet](/azure/active-directory/authentication/howto-authentication-passwordless-security-key-on-premises#view-and-verify-the-azure-ad-kerberos-server) displays empty information, as in the following sample output:
 

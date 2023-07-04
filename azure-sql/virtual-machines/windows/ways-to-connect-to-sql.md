@@ -16,7 +16,7 @@ tags: azure-resource-manager
 
 ## Overview
 
-This article describes how to connect to your SQL on Azure virtual machine (VM). It covers some [general connectivity scenarios](#connection-scenarios) and then provides [steps in the portal for changing connectivity settings](#change). If you need to troubleshoot or configure connectivity outside of the portal, see the [manual configuration](#manual) at the end of this topic.
+This article describes how to connect to your SQL on Azure virtual machine (VM). It covers some [general connectivity scenarios](#connection-scenarios). If you need to troubleshoot or configure connectivity outside of the portal, see the [manual configuration](#manual) at the end of this topic.
 
 If you would rather have a full walkthrough of both provisioning and connectivity, see [Provision a SQL Server virtual machine on Azure](create-sql-vm-portal.md).
 
@@ -81,24 +81,6 @@ Assuming that you have configured DNS in your virtual network, you can connect t
 ```text
 Server=mysqlvm;Integrated Security=true
 ```
-
-## <a id="change"></a> Change SQL connectivity settings
-
-You can change the connectivity settings for your SQL Server virtual machine in the Azure portal.
-
-1. In the Azure portal, select **SQL virtual machines**.
-
-1. Select your SQL Server VM.
-
-1. Under **Settings**, select **Security Configuration**.
-
-1. Change the **SQL connectivity level** to your required setting. You can optionally use this area to change the SQL Server port or the SQL authentication settings.
-
-   :::image type="content" source="./media/ways-to-connect-to-sql/sql-vm-portal-connectivity-change.png" alt-text="Screenshot showing how to change SQL connectivity." lightbox="./media/ways-to-connect-to-sql/sql-vm-portal-connectivity-change.png":::
-
-1. Wait several minutes for the update to complete.
-
-   :::image type="content" source="./media/ways-to-connect-to-sql/sql-vm-updating-notification.png" alt-text="Screenshot showing SQL VM update notification.":::
 
 ## <a id="manualtcp"></a> Enable TCP/IP for Developer and Express editions
 

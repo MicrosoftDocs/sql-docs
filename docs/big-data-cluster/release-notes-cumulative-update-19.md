@@ -23,8 +23,6 @@ The following release notes apply to [!INCLUDE[big-data-clusters-2019](../includ
    > On Cumulative Update 15, __the upgrade order is critical__. Upgrade your big data cluster to CU15 __before__ upgrading the Kubernetes cluster to version 1.21. If the Kubernetes cluster is upgraded to version 1.21 before BDC is upgraded to CU14 or CU15 then the cluster will end up in error state and the BDC upgrade will not succeed. In this case, reverting back to Kubernetes version 1.20 will fix the problem.
    > <br/> This __doesn't affect new deployments__ of SQL Server 2019 Big Data Clusters CU15 on Kubernetes API 1.21 clusters.
 
-SQL Server 2019 Big Data Clusters CU19 includes important changes and capabilities. The following known issue has been resolved: 
-
 For detailed SQL Server engine changes, check the [official SQL Server 2019 CU19 knowledge base article KB 5023049](https://support.microsoft.com/help/5023049).
 
 ## Tested configurations for CU19

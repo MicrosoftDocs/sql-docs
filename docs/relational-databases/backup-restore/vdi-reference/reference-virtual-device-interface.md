@@ -4,7 +4,7 @@ titleSuffix: SQL Server VDI reference
 description: This article provides an overview of the virtual device interface reference for SQL Server backup.
 author: MashaMSFT
 ms.author: mathoma
-ms.date: 08/30/2019
+ms.date: 07/03/2023
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: reference
@@ -27,6 +27,8 @@ VDI supports two primary types of backup technologies:
 - Snapshot backups using underlying split-mirror or copy-on-write technology.
 
 Conventional online backups done through VDI can take advantage of the full range of features of backup and restore in SQL Server. Snapshot backups are limited to full database and file/filegroup backups only. However, snapshot backups may be rolled forward with conventional database differential, file differential, and transaction log backups.
+
+Backup or restore operations that use the Microsoft SQL Server Virtual Device Interface (VDI) require that the server connection for SQL Server that is used to issue the `BACKUP` or `RESTORE` commands must be logged on as the sysadmin fixed server role. The VDI connection requires the Sysadmin permission because the connection itself is capable of executing more than simple backup operations and involves shared resources between the client and server. This may not be desirable in all environments and may cause third-party backup applications that use VDI to fail if the service accounts of the applications are configured to only have the `db_backupoperator` fixed database role.
 
 ## Next steps
 

@@ -5,7 +5,7 @@ description: This article describes the latest updates and known issues for SQL 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei, randolphwest
-ms.date: 03/16/2023
+ms.date: 06/16/2023
 ms.service: sql
 ms.subservice: big-data-cluster
 ms.topic: conceptual
@@ -32,6 +32,8 @@ The following table contains the tested configuration matrix for each release of
 
 | Release | Container OS | Kubernetes API | Runtime | Data Storage | Log Storage |
 | --- | --- | --- | --- | --- | --- |
+| CU21 | Ubuntu 20.04 LTS | 1.23.1 | containerd 1.4.6<br />CRI-O 1.20.4 | Block only | Block only |
+| CU20 | Ubuntu 20.04 LTS | 1.23.1 | containerd 1.4.6<br />CRI-O 1.20.4 | Block only | Block only |
 | CU19 | Ubuntu 20.04 LTS | 1.23.1 | containerd 1.4.6<br />CRI-O 1.20.4 | Block only | Block only |
 | CU18 GDR | Ubuntu 20.04 LTS | 1.23.1 | containerd 1.4.6<br />CRI-O 1.20.4 | Block only | Block only |
 | CU18 | Ubuntu 20.04 LTS | 1.23.1 | containerd 1.4.6<br />CRI-O 1.20.4 | Block only | Block only |
@@ -59,30 +61,32 @@ Reference architecture and white papers for [!INCLUDE[big-data-clusters-nover](.
 
 The following table lists the release history for [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)]. For more information, see [SQL Server 2019 Big Data Clusters cumulative updates history](release-notes-cumulative-updates-history.md).
 
-| Release <sup>1</sup> | [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] version | [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] version <sup>2</sup> | Release date |
-| --- | --- | --- | --- |
-| [CU19](release-notes-cumulative-update-19.md) | 15.0.4298.1 | 20.3.12 | February 16 2023 |
-| CU18 GDR [KB 5021124](https://support.microsoft.com/help/5021124) | 15.0.4280.7 | 20.3.12 | February 14 2023 |
-| [CU18](release-notes-cumulative-update-18.md) | 15.0.4261.1 | 20.3.12 | September 28 2022 |
-| [CU17](release-notes-cumulative-update-17.md) | 15.0.4249.2 | 20.3.12 | August 11 2022 |
-| CU16 GDR [KB 5014356](https://support.microsoft.com/help/5014356) | 15.0.4236.7 | 20.3.12 | June 14 2022 |
-| [CU16](release-notes-cumulative-update-16.md) | 15.0.4223.1 | 20.3.11 | May 2 2022 |
-| [CU15](release-notes-cumulative-update-15.md) | 15.0.4198.2 | 20.3.10 | Jan 27 2022 |
-| [CU14](release-notes-cumulative-update-14.md) | 15.0.4188.2 | 20.3.9 | Nov 22 2021 |
-| [CU13](release-notes-cumulative-update-13.md) | 15.0.4178.15 | 20.3.8 | Sept 9 2021 |
-| [CU12](release-notes-cumulative-update-12.md) | 15.0.4153.13 | 20.3.7 | Aug 4 2021 |
-| [CU11](release-notes-cumulative-updates-history.md#cu11) | 15.0.4138.2 | 20.3.5 | June 10 2021 |
-| [CU10](release-notes-cumulative-updates-history.md#cu10) | 15.0.4123.1 | 20.3.2 | April 6 2021 |
-| [CU9](release-notes-cumulative-updates-history.md#cu9) | 15.0.4102.2 | 20.3.0 | Feb 11 2021 |
-| [CU8-GDR](release-notes-cumulative-updates-history.md#cu8-gdr) | 15.0.4083.2 | 20.2.6 | Jan 12 2021 |
-| [CU8](release-notes-cumulative-updates-history.md#cu8) | 15.0.4073.23 | 20.2.2 | Oct 19 2020 |
-| [CU6](release-notes-cumulative-updates-history.md#cu6) | 15.0.4053.23 | 20.0.1 | Aug 4 2020 |
-| [CU5](release-notes-cumulative-updates-history.md#cu5) | 15.0.4043.16 | 20.0.0 | June 22 2020 |
-| [CU4](release-notes-cumulative-updates-history.md#cu4) | 15.0.4033.1 | 15.0.4033 | March 31 2020 |
-| [CU3](release-notes-cumulative-updates-history.md#cu3) | 15.0.4023.6 | 15.0.4023 | March 12 2020 |
-| [CU2](release-notes-cumulative-updates-history.md#cu2) | 15.0.4013.40 | 15.0.4013 | Feb 13 2020 |
-| [CU1](release-notes-cumulative-updates-history.md#cu1) | 15.0.4003.23 | 15.0.4003 | Jan 7 2020 |
-| [GDR1](release-notes-cumulative-updates-history.md#rtm) | 15.0.2070.34 | 15.0.2070 | Nov 4 2019 |
+| Release <sup>1</sup> | [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] version | [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] version <sup>2</sup> | Release date | Details |
+| --- | --- | --- | --- | --- |
+| [CU21](release-notes-cumulative-update-21.md) | 15.0.4316.3 | 20.3.12 | Jun 15 2023 | Tested configurations, libraries are same as CU19. |
+| [CU20](release-notes-cumulative-update-20.md) | 15.0.4312.2 | 20.3.12 | Apr 14 2023 | Tested configurations, libraries are same as CU19. |
+| [CU19](release-notes-cumulative-update-19.md) | 15.0.4298.1 | 20.3.12 | Feb 16 2023 | |
+| CU18 GDR [KB 5021124](https://support.microsoft.com/help/5021124) | 15.0.4280.7 | 20.3.12 | Feb 14 2023 | |
+| [CU18](release-notes-cumulative-update-18.md) | 15.0.4261.1 | 20.3.12 | Sep 28 2022 | |
+| [CU17](release-notes-cumulative-update-17.md) | 15.0.4249.2 | 20.3.12 | Aug 11 2022 | |
+| CU16 GDR [KB 5014356](https://support.microsoft.com/help/5014356) | 15.0.4236.7 | 20.3.12 | Jun 14 2022 | |
+| [CU16](release-notes-cumulative-update-16.md) | 15.0.4223.1 | 20.3.11 | May 2 2022 | |
+| [CU15](release-notes-cumulative-update-15.md) | 15.0.4198.2 | 20.3.10 | Jan 27 2022 | |
+| [CU14](release-notes-cumulative-update-14.md) | 15.0.4188.2 | 20.3.9 | Nov 22 2021 | |
+| [CU13](release-notes-cumulative-update-13.md) | 15.0.4178.15 | 20.3.8 | Sep 9 2021 | |
+| [CU12](release-notes-cumulative-update-12.md) | 15.0.4153.13 | 20.3.7 | Aug 4 2021 | |
+| [CU11](release-notes-cumulative-updates-history.md#cu11) | 15.0.4138.2 | 20.3.5 | Jun 10 2021 | |
+| [CU10](release-notes-cumulative-updates-history.md#cu10) | 15.0.4123.1 | 20.3.2 | Apr 6 2021 | |
+| [CU9](release-notes-cumulative-updates-history.md#cu9) | 15.0.4102.2 | 20.3.0 | Feb 11 2021 | |
+| [CU8-GDR](release-notes-cumulative-updates-history.md#cu8-gdr) | 15.0.4083.2 | 20.2.6 | Jan 12 2021 | |
+| [CU8](release-notes-cumulative-updates-history.md#cu8) | 15.0.4073.23 | 20.2.2 | Oct 19 2020 | |
+| [CU6](release-notes-cumulative-updates-history.md#cu6) | 15.0.4053.23 | 20.0.1 | Aug 4 2020 | |
+| [CU5](release-notes-cumulative-updates-history.md#cu5) | 15.0.4043.16 | 20.0.0 | June 22 2020 | |
+| [CU4](release-notes-cumulative-updates-history.md#cu4) | 15.0.4033.1 | 15.0.4033 | March 31 2020 | |
+| [CU3](release-notes-cumulative-updates-history.md#cu3) | 15.0.4023.6 | 15.0.4023 | March 12 2020 | |
+| [CU2](release-notes-cumulative-updates-history.md#cu2) | 15.0.4013.40 | 15.0.4013 | Feb 13 2020 | |
+| [CU1](release-notes-cumulative-updates-history.md#cu1) | 15.0.4003.23 | 15.0.4003 | Jan 7 2020 | |
+| [GDR1](release-notes-cumulative-updates-history.md#rtm) | 15.0.2070.34 | 15.0.2070 | Nov 4 2019 | |
 
 <sup>1</sup> CU7 isn't available for [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)].
 

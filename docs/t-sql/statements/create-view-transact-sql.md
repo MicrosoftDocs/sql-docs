@@ -70,7 +70,7 @@ AS select_statement
 ```  
   
 ```syntaxsql
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse and Microsoft Fabric
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse
   
 CREATE VIEW [ schema_name . ] view_name [  ( column_name [ ,...n ] ) ]   
 AS <select_statement>   
@@ -80,6 +80,18 @@ AS <select_statement>
     [ WITH <common_table_expression> [ ,...n ] ]  
     SELECT <select_criteria>  
 ```  
+
+```syntaxsql
+-- Syntax for [!INCLUDE [fabric](../../includes/fabric.md)]
+  
+CREATE [ OR ALTER ] VIEW [ schema_name . ] view_name [  ( column_name [ ,...n ] ) ]   
+AS <select_statement>   
+[;]  
+  
+<select_statement> ::=  
+    [ WITH <common_table_expression> [ ,...n ] ]  
+    SELECT <select_criteria>  
+``` 
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -172,8 +184,12 @@ AS <select_statement>
   
  The [!INCLUDE[ssDE](../../includes/ssde-md.md)] saves the settings of SET QUOTED_IDENTIFIER and SET ANSI_NULLS when a view is created. These original settings are used to parse the view when the view is used. Therefore, any client-session settings for SET QUOTED_IDENTIFIER and SET ANSI_NULLS do not affect the view definition when the view is accessed.  
   
-## Updatable Views  
- You can modify the data of an underlying base table through a view, as long as the following conditions are true:  
+## Updatable Views
+
+> [!NOTE] 
+> In Azure Synapse Analytics, currently updatable views, DML triggers (of either type AFTER or INSTEAD OF), and partitioned views are not supported. For more information, see [T-SQL views with dedicated SQL pool and serverless SQL pool in Azure Synapse Analytics](/azure/synapse-analytics/sql/develop-views#limitations).
+
+You can modify the data of an underlying base table through a view, as long as the following conditions are true:  
   
 -   Any modifications, including UPDATE, INSERT, and DELETE statements, must reference columns from only one base table.  
   
@@ -198,8 +214,12 @@ AS <select_statement>
 -   **Partitioned Views**  
   
      If the view is a partitioned view, the view is updatable, subject to certain restrictions. When it is needed, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] distinguishes local partitioned views as the views in which all participating tables and the view are on the same instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and distributed partitioned views as the views in which at least one of the tables in the view resides on a different or remote server.  
-  
-## Partitioned Views  
+
+## Partitioned Views
+
+> [!NOTE] 
+> In Azure Synapse Analytics, currently partitioned views are not supported. For more information, see [T-SQL views with dedicated SQL pool and serverless SQL pool in Azure Synapse Analytics](/azure/synapse-analytics/sql/develop-views#limitations).
+
  A partitioned view is a view defined by a UNION ALL of member tables structured in the same way, but stored separately as multiple tables in either the same instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or in a group of autonomous instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servers, called federated database servers.  
   
 > [!NOTE]  

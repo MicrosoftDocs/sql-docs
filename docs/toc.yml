@@ -63,6 +63,8 @@ items:
         href: relational-databases/backup-restore/quickstart-backup-restore-database.md
       - name: To Azure Blob Storage 
         href: relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md
+      - name: To S3-Compatible Object Storage
+        href: relational-databases/tutorial-sql-server-backup-and-restore-to-s3.md
     - name: How-to
       items:
       - name: Backup to Azure
@@ -8041,8 +8043,10 @@ items:
         href: relational-databases/security/ledger/ledger-limits.md?view=sql-server-ver16&preserve-view=true
     - name: Networking
       items:
-      - name: TDS 8.0 and TLS 1.3
-        href: relational-databases/security/networking/tds-8-and-tls-1-3.md
+      - name: TDS 8.0
+        href: relational-databases/security/networking/tds-8.md
+      - name: TLS 1.3
+        href: relational-databases/security/networking/tls-1-3.md       
   - name: Tutorials
     items:
     - name: Always Encrypted
@@ -10446,6 +10450,8 @@ items:
       items:
       - name: Troubleshoot deployment
         href: sql-server/azure-arc/troubleshoot-deployment.md
+      - name: Troubleshoot best practices assessment
+        href: sql-server/azure-arc/troubleshoot-assessment.md
 
 
 - name: Big Data Clusters
@@ -10460,24 +10466,32 @@ items:
       items:
         - name: Platform release notes
           href: big-data-cluster/release-notes-big-data-cluster.md
-        - name: Cumulative Update 19
-          href: big-data-cluster/release-notes-cumulative-update-19.md
-        - name: Cumulative Update 18
-          href: big-data-cluster/release-notes-cumulative-update-18.md
-        - name: Cumulative Update 17
-          href: big-data-cluster/release-notes-cumulative-update-17.md
-        - name: Cumulative Update 16
-          href: big-data-cluster/release-notes-cumulative-update-16.md
-        - name: Cumulative Update 15
-          href: big-data-cluster/release-notes-cumulative-update-15.md
-        - name: Cumulative Update 14
-          href: big-data-cluster/release-notes-cumulative-update-14.md
-        - name: Cumulative Update 13
-          href: big-data-cluster/release-notes-cumulative-update-13.md
-        - name: Cumulative Update 12
-          href: big-data-cluster/release-notes-cumulative-update-12.md
-        - name: Cumulative Update history
-          href: big-data-cluster/release-notes-cumulative-updates-history.md
+        - name: Release history
+          items:
+          - name: Cumulative Update history
+            href: big-data-cluster/release-notes-cumulative-updates-history.md
+          - name: Past details
+            items: 
+            - name: Cumulative Update 21
+              href: big-data-cluster/release-notes-cumulative-update-21.md
+            - name: Cumulative Update 20
+              href: big-data-cluster/release-notes-cumulative-update-20.md
+            - name: Cumulative Update 19
+              href: big-data-cluster/release-notes-cumulative-update-19.md
+            - name: Cumulative Update 18
+              href: big-data-cluster/release-notes-cumulative-update-18.md
+            - name: Cumulative Update 17
+              href: big-data-cluster/release-notes-cumulative-update-17.md
+            - name: Cumulative Update 16
+              href: big-data-cluster/release-notes-cumulative-update-16.md
+            - name: Cumulative Update 15
+              href: big-data-cluster/release-notes-cumulative-update-15.md
+            - name: Cumulative Update 14
+              href: big-data-cluster/release-notes-cumulative-update-14.md
+            - name: Cumulative Update 13
+              href: big-data-cluster/release-notes-cumulative-update-13.md
+            - name: Cumulative Update 12
+              href: big-data-cluster/release-notes-cumulative-update-12.md
   - name: Install
     items:
     - name: Get Started
@@ -13585,6 +13599,7 @@ items:
       - name: sys.dm_os_workers
         href: relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md
     - name: Stretch Database
+      href: relational-databases/system-dynamic-management-views/stretch-database-related-dynamic-management-views-transact-sql.md
       items:
       - name: sys.dm_db_rda_migration_status
         href: relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md
@@ -18303,6 +18318,9 @@ items:
         - name: TABLE
           displayName: CREATE TABLE
           href: t-sql/statements/create-table-transact-sql.md
+        - name: TABLE AS CLONE OF
+          displayName: CREATE TABLE AS CLONE OF
+          href: t-sql/statements/create-table-as-clone-of-transact-sql.md
         - name: TABLE (Synapse Analytics and Fabric)
           displayName: CREATE TABLE
           href: t-sql/statements/create-table-azure-sql-data-warehouse.md

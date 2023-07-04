@@ -267,9 +267,6 @@ Access to the machine enables you to directly change machine and SQL Server sett
 
 In this walkthrough, you selected **Public** access for the virtual machine and **SQL Server Authentication**. These settings automatically configured the virtual machine to allow SQL Server connections from any client over the internet (assuming they have the correct SQL login).
 
-> [!NOTE]
-> If you did not select Public during provisioning, then you can change your SQL connectivity settings through the portal after provisioning. For more information, see  [Change your SQL connectivity settings](ways-to-connect-to-sql.md#change).
-
 The following sections show how to connect over the internet to your SQL Server VM instance.
 
 [!INCLUDE [Connect to SQL Server in a VM Resource Manager](../../includes/virtual-machines-sql-server-connection-steps-resource-manager.md)]

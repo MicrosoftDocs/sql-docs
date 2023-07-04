@@ -32,7 +32,7 @@ For all the features discussed in this article, use at least July 2017, version 
 
 ## Authentication options
 
-There are two non-interactive authentication models for Azure AD, which can be used in many different applications (ADO.NET, JDCB, ODC, and so on). These two methods never result in pop-up dialog boxes:
+There are two non-interactive authentication models for Azure AD, which can be used in many different applications (ADO.NET, JDBC, ODBC, and so on). These two methods never result in pop-up dialog boxes:
 
 - `Azure Active Directory - Password`
 - `Azure Active Directory - Integrated`

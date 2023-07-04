@@ -84,7 +84,7 @@ namespace FILESTREAM
 
                 sqlFileStream.Write(unicode.GetBytes(someData.ToCharArray()),
                     0,
-                    someData.Length);
+                    Encoding.GetBytes());
 
                 //Read the data from the FILESTREAM
                 //BLOB.

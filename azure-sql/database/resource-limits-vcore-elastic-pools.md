@@ -4,7 +4,7 @@ description: This page describes some common vCore resource limits for elastic p
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 06/15/2023
+ms.date: 07/05/2023
 ms.service: sql-database
 ms.subservice: elastic-pools
 ms.topic: reference
@@ -539,7 +539,6 @@ For important information about M-series hardware availability, see [Azure offer
 | vCores | 4 | 6 | 8 | 10 | 12 | 14 |
 | Memory (GB) | 20.8 | 31.1 | 41.5 | 51.9 | 62.3 | 72.7 |
 | Max number DBs per pool <sup>1</sup> | 25 | 25 | 25 | 25 | 25 | 25 |
-| [RBPEX](hyperscale-architecture.md#compute) Size | 3X Memory | 3X Memory | 3X Memory | 3X Memory | 3X Memory | 3X Memory |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes | Yes |
 | In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A | N/A |
 | Max data size per pool (TB) | 100 | 100 | 100 | 100 | 100 | 100 |
@@ -578,7 +577,6 @@ For important information about M-series hardware availability, see [Azure offer
 | vCores | 16 | 18 | 20 | 24 | 32 | 40 | 80 |
 | Max number DBs per pool <sup>1</sup> | 25 | 25 | 25 | 25 | 25 | 25 |
 | Memory (GB) | 83 | 93.4 | 103.8 | 124.6 | 166.1 | 207.6 | 415.2 |
-| [RBPEX](hyperscale-architecture.md#compute) Size | 3X Memory | 3X Memory | 3X Memory | 3X Memory | 3X Memory | 3X Memory | 3X Memory |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
 | In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
 | Max data size per pool(TB) | 100 | 100 | 100 | 100 | 100 | 100 | 100 |

@@ -3,7 +3,7 @@ title: "sys.dm_tran_version_store_space_usage (Transact-SQL)"
 description: sys.dm_tran_version_store_space_usage (Transact-SQL)
 author: "savjani"
 ms.author: "pariks"
-ms.date: "02/27/2023"
+ms.date: "06/19/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -29,7 +29,7 @@ Because the versioned record is stored as binary, there are no problems with dif
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**database_id**|**int**|Database ID of the database.|  
+|**database_id**|**int**|Database ID of the database. <br /><br />In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the values are unique within a single database or an elastic pool, but not within a logical server.|  
 |**reserved_page_count**|**bigint**|Total count of the pages reserved in tempdb for version store records of the database.|  
 |**reserved_space_kb**|**bigint**|Total space used in kilobytes in tempdb for version store records of the database.|  
   

@@ -102,7 +102,7 @@ mssql soft nofile 16000
 
 #### Disable last accessed date/time on file systems for SQL Server data and log files
 
-To ensure that the drive(s) attached to the system remount automatically after a reboot, add them to the `/etc/fstab` file. You should also use the UUID (Universally Unique Identifier) in `/etc/fstab` to refer to the drive, rather than just the device name (such as `/dev/sdc1`).
+To ensure that the drive(s) attached to the system remount automatically after a restart, add them to the `/etc/fstab` file. You should also use the UUID (Universally Unique Identifier) in `/etc/fstab` to refer to the drive, rather than just the device name (such as `/dev/sdc1`).
 
 Use the `noatime` attribute with any file system that stores [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] data and log files. Refer to your Linux documentation on how to set this attribute. An example of how to enable `noatime` option for a volume mounted in Azure Virtual Machine follows.
 

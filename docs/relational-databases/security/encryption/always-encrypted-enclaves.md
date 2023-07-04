@@ -1,8 +1,8 @@
 ---
 title: "Always Encrypted with secure enclaves"
 description: Learn about the Always Encrypted with secure enclaves feature for SQL Server.
-author: jaszymas
-ms.author: jaszymas
+author: Pietervanhove
+ms.author: pivanho
 ms.reviewer: "vanto"
 ms.date: 02/15/2023
 ms.service: sql

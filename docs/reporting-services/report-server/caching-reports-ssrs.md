@@ -24,7 +24,7 @@ helpviewer_keywords:
 # Caching Reports (SSRS)
   A report server can cache a copy of a processed report and return that copy when a user opens the report. To a user, the only evidence available to indicate the report is a cached copy is the date and time that the report ran. If the date or time is not current and the report is not a snapshot, the report was retrieved from cache.  
   
- Caching can shorten the time required to retrieve a report if the report is large or accessed frequently. If the server is rebooted, all cached instances are reinstated when the Report Server Web service comes back online.  
+ Caching can shorten the time required to retrieve a report if the report is large or accessed frequently. If the server is restarted, all cached instances are reinstated when the Report Server Web service comes back online.  
   
  Caching is a performance-enhancement technique. The contents of the cache are volatile and can change as reports are added, replaced, or removed. If you require a more predictable caching strategy, you should create a report snapshot. For more information, see [Set Report Processing Properties](../../reporting-services/report-server/set-report-processing-properties.md).  
   

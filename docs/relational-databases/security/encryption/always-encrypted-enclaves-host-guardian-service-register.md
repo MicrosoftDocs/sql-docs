@@ -80,7 +80,7 @@ Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Name 
 
 After changing the registry, restart the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer and check if VBS is running again.
 
-If the computer is managed by your company, Group Policy or Microsoft Endpoint Manager may override any changes you make to these registry keys after rebooting. Contact your IT help desk to see if they deploy policies that manage your VBS configuration.
+If the computer is managed by your company, Group Policy or Microsoft Endpoint Manager may override any changes you make to these registry keys after restarting. Contact your IT help desk to see if they deploy policies that manage your VBS configuration.
 
 ## Step 3: Configure the attestation URL
 

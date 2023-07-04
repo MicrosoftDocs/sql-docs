@@ -68,14 +68,14 @@ In this step, you'll configure the HGS computer to run Host Guardian Service sup
    Install-WindowsFeature -Name HostGuardianServiceRole -IncludeManagementTools -Restart
    ```
 
-2. After the HGS computer reboots, sign in with your admin account again, open an elevated Windows PowerShell console and run the following commands to install the Host Guardian Service and configure its domain. The password you specify here will only apply to the Directory Services Repair Mode password for Active Directory; it will not change your admin account's login password. You may provide any domain name of your choosing for -HgsDomainName.
+2. After the HGS computer restarts, sign in with your admin account again, open an elevated Windows PowerShell console and run the following commands to install the Host Guardian Service and configure its domain. The password you specify here will only apply to the Directory Services Repair Mode password for Active Directory; it will not change your admin account's login password. You may provide any domain name of your choosing for -HgsDomainName.
 
    ```powershell
    $adminPassword = ConvertTo-SecureString -AsPlainText '<password>' -Force
    Install-HgsServer -HgsDomainName 'bastion.local' -SafeModeAdministratorPassword $adminPassword -Restart
    ```
 
-3. After the computer reboots again, sign in with your admin account (which is now also a Domain Admin). Open an elevated Windows PowerShell console, and configure host key attestation for your HGS instance.
+3. After the computer restarts again, sign in with your admin account (which is now also a Domain Admin). Open an elevated Windows PowerShell console, and configure host key attestation for your HGS instance.
 
    ```powershell
    Initialize-HgsAttestation -HgsServiceName 'hgs' -TrustHostKey  

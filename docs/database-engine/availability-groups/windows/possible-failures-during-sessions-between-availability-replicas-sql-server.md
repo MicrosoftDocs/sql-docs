@@ -52,7 +52,7 @@ To help you interpret the error conditions that occur on the network, ask a netw
 - [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows has a firewall that blocks a specific port.
 - The application that is monitoring a port fails.
 - A Windows-based server is renamed.
-- A Windows-based server is rebooted.
+- A Windows-based server is restarted.
 
 > [!NOTE]  
 > [!INCLUDE[sshadr](../../../includes/sshadr-md.md)] does not protect against problems specific to client accessing the servers. For example, consider a case in which a public network adapter handles client connections to the primary replica, while a private network interface card handles traffic among the server instances that are hosting the replicas of an availability group. In this case, failure of the public network adapter would prevent clients from accessing the databases.

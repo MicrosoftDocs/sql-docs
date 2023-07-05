@@ -99,7 +99,7 @@ In case any of the components are missing, do the following:
 
 1. Navigate to the deployment and troubleshoot the error.
 2. If there are any issues with the deployment of the Azure Monitor Agent, verify that the Arc machine is connected.
-3. The deployment can always be retriggered with the same Log Analytics Workspace by clicking on the **Enable assessment** button.
+3. The deployment can always be retriggered with the same Log Analytics workspace by clicking on the **Enable assessment** button.
 
 ## Change the Log Analytical workspace
 

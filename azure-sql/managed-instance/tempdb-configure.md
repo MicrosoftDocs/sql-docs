@@ -113,7 +113,7 @@ You can use SQL Server Management Studio (SSMS) to modify the growth increment o
 1. Right-click `tempdb`, and choose **Properties**. 
 1. Select **Files** under **Select a page** to view the existing number of `tempdb` files.
 1. Choose the ellipses (...) next to a data file to open the **Change Autogrowth properties** dialog window. 
-1. Modify your autogrowth settings by specifying the file growth values.
+1. Check the box next to **Enable Autogrwoth** and then modify your autogrowth settings by specifying the file growth values, in either percent, or megabytes. 
 
    :::image type="content" source="media/tempdb-configure/change-growth-increment.png" alt-text="Screenshot of Change Autogrowth for tempdev in SSMS, with new database file name highlighted.":::
 
@@ -246,10 +246,10 @@ ALTER DATABASE tempdb MODIFY FILE (NAME = file_name, MAXSIZE = int_maxsize[KB|MB
 The following table defines limits for various `tempdb` configuration settings: 
 
 
-|Configuration setting  |Limits  |
+|Configuration setting  |Values  |
 |---------|---------|
-|Logical names of `tempdb` files     | Maximum 16 characters      |
-|Number of `tempdb` files     |  Maximum is 128      |
+|Logical names of `tempdb` files     |  16 characters maximum      |
+|Number of `tempdb` files     |  128 files maximum      |
 |Default number of `tempdb` files     |  13 (1 log file + 12 data files)        |
 |Initial size of `tempdb` data files    | 16 MB        |
 |Default growth increment of `tempdb` data files     |   256 MB      |
@@ -261,10 +261,10 @@ The following table defines limits for various `tempdb` configuration settings:
 
 ## Next steps
 
-To learn about specific changes related to the feature wave, see these articles:
-
-- [Simplified connectivity architecture](connectivity-architecture-overview.md)
-- [Instance stop/start](instance-stop-start-how-to.md)
-- [Zone redundancy for Business Critical tier](../database/high-availability-sla.md)
-- [Managed DTC](distributed-transaction-coordinator-dtc.md)
-- [Frequently asked questions](frequently-asked-questions-faq.yml#november-2022-feature-wave)
+- To learn how to create your first managed instance, see [Quickstart guide](instance-create-quickstart.md).
+- For a features and comparison list, see [SQL common features](../database/features-comparison.md).
+- For more information about VNet configuration, see [SQL Managed Instance VNet configuration](connectivity-architecture-overview.md).
+- For a quickstart that creates a managed instance and restores a database from a backup file, see [Create a managed instance](instance-create-quickstart.md).
+- For a tutorial about using Azure Database Migration Service for migration, see [SQL Managed Instance migration using Database Migration Service](/azure/dms/tutorial-sql-server-to-managed-instance).
+- For advanced monitoring of SQL Managed Instance database performance with built-in troubleshooting intelligence, see [Monitor Azure SQL Managed Instance using Azure SQL Analytics](/azure/azure-monitor/insights/azure-sql).
+- For pricing information, see [SQL Database pricing](https://azure.microsoft.com/pricing/details/sql-database/managed/).

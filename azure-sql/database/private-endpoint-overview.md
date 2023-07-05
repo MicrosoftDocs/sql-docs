@@ -5,7 +5,7 @@ description: Overview of Private endpoint feature.
 author: rohitnayakmsft
 ms.author: rohitna
 ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 07/14/2022
+ms.date: 08/31/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: overview
@@ -154,8 +154,26 @@ select client_net_address from sys.dm_exec_connections
 where session_id=@@SPID
 ````
 
-## Limitations 
-Connections to private endpoint only support **Proxy** as the [connection policy](connectivity-architecture.md#connection-policy)
+## Using Redirect connection policy with private endpoints
+
+We recommend that customers use the private link with the redirect connection policy for reduced latency and improved throughput. For connections to use this mode, clients need to:
+
+- Allow outbound communication from the VNET hosting the private endpoint to port range 1433 to 65535. 
+- Use the latest version of drivers that have redirect support built in. Redirect support is included in ODBC, OLEDB, NET SqlClient Data Provider, Core .NET SqlClient Data Provider, and JDBC (version 9.4 or above) drivers. Connections originating from all other drivers will be proxied.
+
+To use a private endpoint with the redirect connection policy, change [connection policy to redirect](connectivity-architecture.md#connection-policy)
+
+If it is not feasible to modify the firewall settings to allow outbound access on the 1433-65535 port range, an alternative solution is to change the connection policy to Proxy.
+
+  
+By August 17th 2023, expect existing SQL Server to use to use Redirect connection policy for private endpoints if
+- The connection policy is explicitly updated to Redirect.
+- A new private endpoint added to a logical server with appropriate connection policy (Default or Redirect). (Note: Connections to existing private endpoints will also be redirected when a new private endpoint is added)
+  
+> [!NOTE]
+> The following regions support redirect with private endpoints:Australia Central,  Australia Central 2, Australia East, Australia Southeast, Brazil South, Canada Central, Canada East, Central US, East Asia, East US, East US 2, France Central, Germany West Central,Central India,  South India,  West India,  Japan East, Japan West,  Korea Central, Korea South, North Central US, North Europe,  Norway East,South Africa North, South Central US, South East Asia, Switzerland North,UAE North,  UK South,  UK West, West Central US, West Europe, West US, West US 2, West US 3
+>
+> Regions missing from this list are in the process of being enabled for private endpoints with the redirect connection policy.
 
 
 ## On-premises connectivity over private peering

@@ -1,7 +1,7 @@
 ---
 author: MashaMSFT
 ms.author: mathoma
-ms.reviewer: kendralittle
+ms.reviewer: 
 ms.date: 08/23/2019
 ms.service: sql-database
 ms.subservice: service-overview

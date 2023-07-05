@@ -50,8 +50,7 @@ In this article you can find a content reference to various guides, scripts, and
 
 - [Configure Azure AD auth](../database/authentication-aad-configure.md)
 - [Configure conditional access](../database/conditional-access-configure.md)
-- [Multi-factor Azure AD auth](../database/authentication-mfa-ssms-overview.md)
-- [Configure multi-factor auth](../database/authentication-mfa-ssms-configure.md)
+- [Azure AD Multi-Factor Authentication](../database/authentication-mfa-ssms-overview.md)
 - [Configure auto-failover group](auto-failover-group-configure-sql-mi.md) to automatically failover all databases on an instance to a secondary instance in another region in the event of a disaster. 
 - [Configure a temporal retention policy](../database/temporal-tables-retention-policy.md)
 - [Configure In-Memory OLTP](../in-memory-oltp-configure.md)

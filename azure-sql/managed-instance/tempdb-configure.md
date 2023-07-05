@@ -20,15 +20,15 @@ Azure SQL Managed Instance allows you to configure the following:
 - The growth increment of `tempdb` files
 - Maximum `tempdb` size 
 
-`tempdb` settings persist after your instance is restarted, updated, or if there is a failover. 
+`tempdb` settings persist after your instance is restarted, updated, or if there's a failover. 
 
 ## Overview 
 
-`tempdb` is one of the default system databases that comes with Azure SQL Managed Instance. The structure of `tempdb` is the same as any other user database structure; the difference is that since `tempdb` used for non-durable storage, transactions are minimally logged. 
+`tempdb` is one of the default system databases that comes with Azure SQL Managed Instance. The structure of `tempdb` is the same as any other user database structure; the difference is that since `tempdb` used for nondurable storage, transactions are minimally logged. 
 
-`tempdb` cannot be dropped, detached, taken offline, renamed, or restored. Attempting any of these operations returns an error. `tempdb` is regenerated upon every start of the server instance and any objects that may have been created in `tempdb` during a previous session don't persist when the service restarts, after an instance update management operation or a failover.
+`tempdb` can't be dropped, detached, taken offline, renamed, or restored. Attempting any of these operations returns an error. `tempdb` is regenerated upon every start of the server instance and any objects that may have been created in `tempdb` during a previous session don't persist when the service restarts, after an instance update management operation or a failover.
 
-The workload in `tempdb` differs from workloads in other user databases; objects and data are frequently created and destroyed and there is extremely high concurrency. There is only one `tempdb` for each managed instance. Even if you have multiple databases and applications connecting to the instance, they all use the same `tempdb` database. Services may experience contention when they try to allocate pages in a heavily-used `tempdb`. Depending on the degree of contention, queries and requests that involve `tempdb` could become unresponsive. This is why `tempdb` is critical to the performance of the service.
+The workload in `tempdb` differs from workloads in other user databases; objects and data are frequently created and destroyed and there's extremely high concurrency. There's only one `tempdb` for each managed instance. Even if you have multiple databases and applications connecting to the instance, they all use the same `tempdb` database. Services may experience contention when they try to allocate pages in a heavily used `tempdb`. Depending on the degree of contention, queries and requests that involve `tempdb` could become unresponsive. This is why `tempdb` is critical to the performance of the service.
 
 ## Number of `tempdb` files
 
@@ -41,7 +41,7 @@ Modifying the number of `tempdb` files has the following limitations:
 - The maximum number of `tempdb` files is 128. 
 
 > [!NOTE]
-> You do not have to restart the server after adding new files; however, the emptier files will be filled with higher priority and the round-robin algorithm for allocating pages will be shortly lost, until the system is rebalanced.
+> You do not have to restart the server after adding new files; however, the emptier files will be filled with higher priority and the round-robin algorithm for allocating pages is lost until the system is rebalanced.
 
 You can use both SQL Server Management Studio (SSMS) and Transact-SQL (T-SQL) to change the number of files for `tempdb` in Azure SQL Managed Instance. 
  
@@ -55,13 +55,13 @@ You can use SQL Server Management Studio (SSMS) to modify the number of `tempdb`
 1. Select **Files** under **Select a page** to view the existing number of `tempdb` files.
 1. To add a file, choose **Add** and then provide information about the new data file in the row. 
 
-   :::image type="content" source="media/tempdb-configure/add-new-tempdb-file.png" alt-text="Screenshot of Database Properties in SSMS, with new database file name highlighted. ":::
+   :::image type="content" source="media/tempdb-configure/add-new-tempdb-file.png" alt-text="Screenshot of Database Properties in SSMS, with new database file name highlighted.":::
 
 1. To remove a `tempdb` file, choose the file you want to remove from the list of database files, and then select **Remove**. 
 
 ### [Transact-SQL (T-SQL)](#tab/tsql)
 
-You can use Transact-SQL (T-SQL) to check the number of existing `tempdb` files, as well as add or remove files. 
+You can use Transact-SQL (T-SQL) to check the number of existing `tempdb` files, and add or remove files. 
 
 To count the number of all existing `tempdb` files, use the following command: 
 
@@ -94,7 +94,7 @@ ALTER DATABASE tempdb ADD FILE (NAME = 'file_name')
 
 ## Growth increment 
 
-`tempdb` file growth can have a performance impact to queries using `tempdb`. As such, `tempdb` data file growth increments that are too small may cause extent fragmentation, while increments that are too large may result in slow growth, or growth failure if there isn't sufficient space for the growth to happen. The optimal value for `tempdb` file growth increments depends on the your workload. 
+`tempdb` file growth can have a performance impact to queries using `tempdb`. As such, `tempdb` data file growth increments that are too small may cause extent fragmentation, while increments that are too large may result in slow growth, or growth failure if there isn't sufficient space for the growth to happen. The optimal value for `tempdb` file growth increments depends on your workload. 
 
 The default growth increments for SQL Managed Instance are 254 MB for `tempdb` data files, and 64 MB for `tempdb` log files, but you can configure growth increments to adapt to your workload and tune your performance. 
 
@@ -106,7 +106,7 @@ You can use both SQL Server Management Studio (SSMS) and Transact-SQL (T-SQL) to
 
 ### [SQL Server Management Studio (SSMS)](#tab/ssms)
 
-You can use SQL Server Management Studio (SSMS) to modify the the growth increment of `tempdb` files. To do so, follow these steps: 
+You can use SQL Server Management Studio (SSMS) to modify the growth increment of `tempdb` files. To do so, follow these steps: 
 
 1. Connect to your managed instance in SSMS. 
 1. Expand **Databases** in **Object Explorer**, and then expand **System databases**. 
@@ -114,6 +114,9 @@ You can use SQL Server Management Studio (SSMS) to modify the the growth increme
 1. Select **Files** under **Select a page** to view the existing number of `tempdb` files.
 1. Choose the ellipses (...) next to a data file to open the **Change Autogrowth properties** dialog window. 
 1. Modify your autogrowth settings by specifying the file growth values.
+
+   :::image type="content" source="media/tempdb-configure/change-growth-increment.png" alt-text="Screenshot of Change Autogrowth for tempdev in SSMS, with new database file name highlighted.":::
+
 1. Select **OK** to save your settings. 
 
 
@@ -131,7 +134,7 @@ ALTER DATABASE tempdb ADD FILE (NAME = 'file_name', FILEGROWTH = int_growth_incr
 
 `tempdb` **size** is the sum size of all `tempdb` files. `tempdb` file size is an allocated (zeroed) space for that `tempdb` file. The initial file size for all `tempdb` files is 16 MB, which is the size of all `tempdb` files when the instance restarts, or fails over. Once a `tempdb` data file's used space reaches the file size, all `tempdb` data files automatically grow by their configured growth increments. 
 
-`tempdb` **used space** is the sum of the used space of all `tempdb` files. `tempdb` file used space is equal to the part of that `tempdb` file size which is occupied with non-zero information. The sum of `tempdb` **used space** and `tempdb` **free space** is equal to the `tempdb` size. 
+`tempdb` **used space** is the sum of the used space of all `tempdb` files. `tempdb` file used space is equal to the part of that `tempdb` file size that is occupied with nonzero information. The sum of `tempdb` **used space** and `tempdb` **free space** is equal to the `tempdb` size. 
 
 You can use T-SQL to determine the current used and free space for your `tempdb` files. 
 
@@ -145,6 +148,11 @@ SELECT SUM((allocated_extent_page_count)*1.0/128) AS TempDB_used_data_space_inMB
 FROM sys.dm_db_file_space_usage
 ```
 
+The following screenshot shows an example output: 
+
+:::image type="content" source="media/tempdb-configure/used-free-space-tempdb-data.png" alt-text="Screenshot of the query result in SSMS showing used and free space in the tempdb data file.":::
+
+
 To get the used space, free space, and size of your `tempdb` log files, run this command: 
 
 ```sql
@@ -154,6 +162,11 @@ SELECT used_log_space_in_bytes*1.0/1024/1024 AS TempDB_used_log_space_inMB,
      total_log_size_in_bytes*1.0/1024/1024 AS TempDB_log_size_inMB
 FROM sys.dm_db_log_space_usage
 ```
+
+The following screenshot shows an example output: 
+
+:::image type="content" source="media/tempdb-configure/used-free-space-tempdb-log.png" alt-text="Screenshot of the query result in SSMS showing used and free space in the tempdb log file.":::
+
 
 `tempdb` max size is the limit after which your `tempdb` can't grow further. 
 
@@ -175,7 +188,7 @@ To determine your current `tempdb` max size in SSMS, follow these steps:
 1. Right-click `tempdb`, and choose **Properties**.
 1. On the **General page**, check the **Size** value under **Database** to determine your max tempdb size. A value of `-1` indicates tempdb max size is unlimited. 
 
-
+:::image type="content" source="media/tempdb-configure/tempdb-max-size.png" alt-text="Screenshot of tempdb database properties showing the max size for tempdb in SSMS.":::
 
 To change your current `tempdb` max size in SSMS, follow these steps: 
 
@@ -186,6 +199,8 @@ To change your current `tempdb` max size in SSMS, follow these steps:
 1. Choose the ellipses (...) next to a data file to open the **Change Autogrowth properties** dialog window. 
 1. Modify your `tempdb` max size settings by changing the values under **Maximum file size**. 
 1. Select **OK** to save your settings. 
+
+:::image type="content" source="media/tempdb-configure/change-max-file-size.png" alt-text="Screenshot of the change autogrowth dialog box in SSMS, with maximum file size highlighted. ":::
 
 
 ### [Transact-SQL (T-SQL)](#tab/tsql)
@@ -198,7 +213,7 @@ USE tempdb
 SELECT name, max_size FROM sys.database_files
 ```
 
-:::image type="content" source="media/tempdb-configure/tempdb-max-size.png" alt-text="Query result window in SSMS showing the max size of tempdb files. ":::
+:::image type="content" source="media/tempdb-configure/tempdb-max-size-query-result.png" alt-text="Screenshot of the query result window in SSMS showing the max size of tempdb files. ":::
 
 To get the total `tempdb` size in MB, run this command: 
 
@@ -207,7 +222,7 @@ USE tempdb
 SELECT (SUM(size)*1.0/128) AS TempDB_size_InMB FROM sys.database_files
 ```
 
-
+The following screenshot shows a sample output: 
 
 :::image type="content" source="media/tempdb-configure/tempdb-size-in-megabytes.png" alt-text="Screenshot of query results in SSMS showing tempdb size in megabytes.":::
 

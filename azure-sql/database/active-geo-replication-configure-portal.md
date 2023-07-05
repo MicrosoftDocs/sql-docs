@@ -182,7 +182,7 @@ az sql db replica set-primary --name guestlist --resource-group ContosoHotel --s
 
 Run the following command:
 
-```azurecli
+```powershell
 $parameters = @{
     ResourceGroupName = 'SecondaryRG'
     ServerName = 'SecondaryServer'

@@ -228,7 +228,7 @@ Confirm that you want to perform the operation.
 
 Run the following command:
 
-```azurecli
+```powershell
 $parameters = @{
     ResourceGroupName = 'SecondaryRG'
     ServerName = 'SecondaryServer'

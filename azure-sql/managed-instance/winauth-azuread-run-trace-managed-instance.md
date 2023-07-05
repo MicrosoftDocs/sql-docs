@@ -3,7 +3,7 @@ title: Run a trace against Azure SQL Managed Instance using Windows Authenticati
 description: Learn how to run a trace against Azure SQL Managed Instance using Authentication for Azure Active Directory principals
 author: sravanisaluru
 ms.author: srsaluru
-ms.reviewer: mathoma, bonova, urmilano, wiassaf, kendralittle
+ms.reviewer: mathoma, bonova, urmilano, wiassaf
 ms.date: 03/01/2022
 ms.service: sql-managed-instance
 ms.topic: how-to

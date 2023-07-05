@@ -3,7 +3,7 @@ title: vCore purchasing model overview
 description: De-duplicating content between SQL Database and SQL Managed Instance, in this case using an include for an overview of the vCore purchasing model.
 author: MashaMSFT
 ms.author: mathoma
-ms.reviewer: kendralittle, dfurman
+ms.reviewer: dfurman, wiassaf
 ms.date: 04/06/2022
 ms.topic: include
 ---

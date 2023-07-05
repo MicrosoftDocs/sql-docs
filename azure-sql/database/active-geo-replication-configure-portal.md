@@ -123,7 +123,12 @@ Select the database you want to set up for geo-replication. You'll need the foll
 
 You can select any region for your secondary server, but we recommend the [paired region](/azure/availability-zones/cross-region-replication-azure).
 
-```azurecli
+As usual, begin your PowerShell session with the following cmdlets to connect your Azure account and set the subscription context:
+
+```powershell
+Connect-AzAccount
+$subscriptionid = <your subscription id here>
+Set-AzContext -SubscriptionId $subscriptionid
 
 $parameters = @{
     ResourceGroupName = 'PrimaryRG'

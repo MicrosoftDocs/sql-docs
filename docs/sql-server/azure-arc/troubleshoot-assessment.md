@@ -63,7 +63,7 @@ The server principal isn't able to access the database under the current securit
 
 #### Resolution
 
-Ensure the SQL Server built-in login NT AUTHORITY\SYSTEM must be the member of SQL Server sysadmin server role for all the SQL Server instances running on the machine.
+Ensure the SQL Server built-in login NT AUTHORITY\SYSTEM is a member of the SQL Server sysadmin server role for all the SQL Server instances running on the machine. If this isn't allowed, we have implemented the *least privilege account*” for running the Azure extension for SQL Server service on your SQL Server machine. Least Privilege account is available for preview. To participate in the preview, please open a support case to set up a preview with a Least privileged account" for you to test.
 
 > [!NOTE]
 > This feature implements the principle of least privilege. It's available as a limited preview. To participate in the preview, contact Microsoft support for assistance configuring the solution.
@@ -101,4 +101,10 @@ In case any of the components are missing, do the following:
 2. If there are any issues with the deployment of the Azure Monitor Agent, verify that the Arc machine is connected.
 3. The deployment can always be retriggered with the same Log Analytics Workspace by clicking on the **Enable assessment** button.
 
+## Change the Log Analytical workspace
+
+To change the Log Analytical workspace that is linked for best practices assessment, please open a support case. This feature is not currently available natively.
+
 For more assistance, create a support ticket with Microsoft and attach the log files. Visit,  [Create an Azure support request](/azure/azure-portal/supportability/how-to-create-azure-support-request)
+
+

@@ -7,7 +7,7 @@ ms.reviewer: randolphwest
 ms.date: 05/25/2023
 ms.service: virtual-machines-sql
 ms.subservice: service-overview
-ms.topic: reference
+ms.topic: whats-new
 ms.custom: ignite-2022
 tags: azure-service-management
 ---

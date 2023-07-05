@@ -98,7 +98,7 @@ Specifies the units for *@freq_subday_interval*. *@freq_subday_type* is **int**,
 
 #### [ @freq_subday_interval = ] *freq_subday_interval*
 
-The number of *@freq_subday_type* periods to occur between each execution of a job. *@freq_subday_interval* is **int**, with a default of `0`. The interval should be longer than 10 seconds. *@freq_subday_interval* is ignored in those cases where *@freq_subday_type* is equal to `1`.
+The number of *@freq_subday_type* periods to occur between each execution of a job. *@freq_subday_interval* is **int**, with a default of `0`. The interval must be at least 10 seconds long. *@freq_subday_interval* is ignored in those cases where *@freq_subday_type* is equal to `1`.
 
 #### [ @freq_relative_interval = ] *freq_relative_interval*
 

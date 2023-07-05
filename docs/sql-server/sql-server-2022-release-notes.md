@@ -66,9 +66,9 @@ The following features aren't available in Setup in [!INCLUDE[sssql22-md](../inc
     :::column-end:::
 :::row-end:::
 
-#### Reboot requirement
+#### Restart requirement
 
-When you install an initial [!INCLUDE[sssql22-md](../includes/sssql22-md.md)] instance on a Windows Server 2022 machine, if the computer doesn't have `VCRuntime140` version 14.29.30139 or a later version installed, Setup will require a reboot.
+When you install an initial [!INCLUDE[sssql22-md](../includes/sssql22-md.md)] instance on a Windows Server 2022 machine, if the computer doesn't have `VCRuntime140` version 14.29.30139 or a later version installed, Setup will require a restart.
 
 Windows Server 2022 was released with VCRuntime version 14.28.29914.
 

@@ -53,7 +53,7 @@ Azure Arc-enabled SQL Server powers some of the Microsoft Purview features such 
 
 ## Pay-as-you-go for SQL Server
 
-Now, with Azure Arc-enabled SQL Servers connected to Azure, you have the option of purchasing SQL Server using a 'pay-as-you-go' model instead of purchasing licenses.  This model is a great alternative if you are looking to save costs on SQL Servers that have variable demand for compute capacity over time such as when you can turn off a SQL Server at night or on weekends, or even just scale down the number of cores used during less busy times.  It's also a great option if you only plan to use a SQL Server for a short period of time and then won't need it anymore.  Pay-as-you-go, billed through Azure, is now available for all versions of SQL Server from 2012 to 2022.
+Now, with Azure Arc-enabled SQL Servers connected to Azure, you have the option of purchasing SQL Server using a 'pay-as-you-go' model instead of purchasing licenses.  This model is a great alternative if you are looking to save costs on SQL Servers that have variable demand for compute capacity over time such as when you can turn off a SQL Server at night or on weekends, or even just scale down the number of cores used during less busy times.  It's also a great option if you only plan to use a SQL Server for a short period of time and then won't need it anymore. Pay-as-you-go, billed through Azure, is now available for all versions of SQL Server from 2012 to 2022.
 
 ## Architecture
 
@@ -77,7 +77,7 @@ The following diagram illustrates the architecture of Azure Arc-enabled SQL Serv
 
 | Feature | 2012 | 2014 | 2016 | 2017 | 2019 | 2022 |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| [Azure pay-as-you-go billing](manage-license-type.md) | No | Yes | Yes | Yes | Yes | Yes |
+| [Azure pay-as-you-go billing](manage-license-type.md) | Yes | Yes | Yes | Yes | Yes | Yes |
 | [Best practices assessment](assess.md) | Yes | Yes | Yes | Yes | Yes | Yes |
 | [Detailed database inventory](view-databases.md#inventory-databases) | Yes | Yes | Yes | Yes | Yes | Yes |
 | [Azure Active Directory authentication for SQL Server](../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md) | No | No | No | No | No | Yes |

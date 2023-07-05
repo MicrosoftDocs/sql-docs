@@ -71,7 +71,7 @@ To migrate your availability group to a multi-subnet configuration, follow these
 
 1. Add the Cluster IP and Listener IP to the [primary replica server](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md?#add-secondary-ips-to-sql-server-vms). Adding these IP addresses is an online operation.
 
-1. In the Azure portal, move the secondary server to the new subnet by going to the virtual machine > **Networking > Network Interface > IP Configurations**. Moving the server to a new subnet reboots the secondary replica server.
+1. In the Azure portal, move the secondary server to the new subnet by going to the virtual machine > **Networking > Network Interface > IP Configurations**. Moving the server to a new subnet restarts the secondary replica server.
 
 1. Add the Cluster IP and the Listener IP to the [secondary replica server](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md?#add-secondary-ips-to-sql-server-vms). Adding these IP addresses is an online operation.
 

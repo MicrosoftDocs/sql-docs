@@ -4,7 +4,7 @@ description: The vCore purchasing model lets you independently scale compute and
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: sashan, moslake, mathoma, dfurman
-ms.date: 06/04/2023
+ms.date: 06/15/2023
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: conceptual
@@ -288,7 +288,7 @@ Standard-series (Gen5) hardware is available in all public regions worldwide.
 
 #### <a id="hyperscale-premium-series-availability"></a> Hyperscale premium-series
  
-Hyperscale service tier premium-series and premium-series memory optimized hardware (currently in preview) is available in the following regions:
+Hyperscale service tier premium-series and premium-series memory optimized hardware is available in the following regions:
 
 - Australia East
 - Canada Central

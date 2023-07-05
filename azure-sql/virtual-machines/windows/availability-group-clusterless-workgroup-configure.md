@@ -58,7 +58,7 @@ To configure the DNS suffix, follow these steps:
 
    ![Screenshot shows where to see your Full computer name.](./media/availability-group-clusterless-workgroup-configure/3-confirm-full-computer-name.png)
 
-1. Reboot the server when you are prompted to do so. 
+1. Restart the server when you are prompted to do so. 
 1. Repeat these steps on any other nodes to be used for the availability group. 
 
 ## Edit a host file

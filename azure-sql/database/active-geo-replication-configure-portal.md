@@ -125,7 +125,16 @@ You can select any region for your secondary server, but we recommend the [paire
 
 ```azurecli
 
-New-AzSqlDatabaseSecondary -ResourceGroupName PrimaryRG -ServerName PrimaryServer -DatabaseName TestDB -PartnerResourceGroupName SecondaryRG -PartnerServerName SecondaryServer -PartnerDatabaseName TestDB         
+$parameters = @{
+    ResourceGroupName = 'PrimaryRG'
+    ServerName = 'PrimaryServer' 
+    DatabaseName = 'TestDB' 
+    PartnerResourceGroupName = 'SecondaryRG'
+    PartnerServerName = 'SecondaryServer'
+    PartnerDatabaseName = 'TestDB'
+}
+
+New-AzSqlDatabaseSecondary @parameters
 
 ```
 

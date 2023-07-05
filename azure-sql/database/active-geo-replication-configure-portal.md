@@ -222,7 +222,14 @@ Confirm that you want to perform the operation.
 Run the following command:
 
 ```azurecli
-Remove-AzSqlDatabaseSecondary -ResourceGroupName SecondaryRG -ServerName  SecondaryServer -DatabaseName TestDB -PartnerResourceGroupName PrimaryRG -PartnerServerName PrimaryServer
+$parameters = @{
+    ResourceGroupName = 'SecondaryRG'
+    ServerName = 'SecondaryServer'
+    DatabaseName = 'TestDB'
+    PartnerResourceGroupName = 'PrimaryRG'
+    PartnerServerName = 'PrimaryServer'
+}
+Remove-AzSqlDatabaseSecondary @parameters
 ```
 
 ---

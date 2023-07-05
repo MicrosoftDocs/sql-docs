@@ -27,7 +27,7 @@ Enabling TLS encryption increases the security of data transmitted across networ
 - Packets sent from the instance of SQL Server to the application must be encrypted by the server TLS stack and decrypted by the client TLS stack.
 
 > [!IMPORTANT]  
-> Starting with SQL Server 2016 (13.x), Secure Sockets Layer (SSL) has been discontinued. Use TLS (TLS 1.2 is recommended) instead. For more information, see [KB3135244 - TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/topic/kb3135244-tls-1-2-support-for-microsoft-sql-server-e4472ef8-90a9-13c1-e4d8-44aad198cdbe). SQL Server 2022 introduces support for TLS 1.3. For more information, see [TDS 8.0 and TLS 1.3 support](../../relational-databases/security/networking/tds-8-and-tls-1-3.md).
+> Starting with SQL Server 2016 (13.x), Secure Sockets Layer (SSL) has been discontinued. Use TLS (TLS 1.2 is recommended) instead. For more information, see [KB3135244 - TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/topic/kb3135244-tls-1-2-support-for-microsoft-sql-server-e4472ef8-90a9-13c1-e4d8-44aad198cdbe). SQL Server 2022 introduces support for TLS 1.3. For more information, see [TLS 1.3 support](../../relational-databases/security/networking/tls-1-3.md).
 > If no matching protocols exist between the client and server computer, you can run into the error described in [An existing connection was forcibly closed by the remote host](/troubleshoot/sql/connect/tls-exist-connection-closed).
 
 ## Digital certificate overview

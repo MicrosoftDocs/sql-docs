@@ -151,7 +151,7 @@ View the resource agent logs at `/var/log/cluster/corosync.log`
    sudo passwd hacluster
    ```
  
-3. Enable and start `pcsd` service and Pacemaker. This will allow the new node to rejoin the cluster after the reboot. Run the following command on the new node.
+3. Enable and start `pcsd` service and Pacemaker. This will allow the new node to rejoin the cluster after the restart. Run the following command on the new node.
 
    ```bash
    sudo systemctl enable pcsd

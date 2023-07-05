@@ -3,20 +3,19 @@ title: Connect to and query Azure SQL Database using Python and the pyodbc libra
 description: Learn how to connect to a database in Azure SQL Database and query data using Python and the pyodbc library.
 author: bobtabor-msft
 ms.author: rotabor
-ms.custom: passwordless-python, ai-gen-docs
+ms.custom: passwordless-python
 ms.date: 05/11/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: quickstart
 monikerRange: "= azuresql || = azuresql-db"
+content_well_notification: 
+  - AI-contribution
 ---
 
 # Connect to and query Azure SQL Database using Python and the pyodbc driver
 
 This quickstart describes how to connect an application to a database in Azure SQL Database and perform queries using Python and the [Python SQL Driver - pyodbc](/sql/connect/python/pyodbc/python-sql-driver-pyodbc). This quickstart follows the recommended passwordless approach to connect to the database. You can learn more about passwordless connections on the [passwordless hub](/azure/developer/intro/passwordless-overview).
-
-> [!NOTE]
-> This article was partially created with the help of artificial intelligence. Before publishing, an author reviewed and revised the content as needed. See [Our principles for using AI-generated content in Microsoft Learn](https://aka.ms/ai-content-principles).
 
 ## Prerequisites
 

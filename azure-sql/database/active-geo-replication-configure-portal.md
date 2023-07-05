@@ -145,7 +145,7 @@ New-AzSqlDatabaseSecondary @parameters
 
 When the deployment is complete, you can check the status of the secondary database by running the `Get-AzSqlDatabaseReplicationLink`  command:
 
-```azurecli
+```powershell
 $parameters = @{
     ResourceGroupName = 'PrimaryRG'
     ServerName = 'PrimaryServer'

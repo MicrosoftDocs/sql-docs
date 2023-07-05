@@ -114,7 +114,7 @@ Currently, MSOLEDBSQL19 prevents the creation of linked servers without encrypti
 
 You may notice excessive growth in the transaction log size for databases with the [In-Memory OLTP](../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md) feature enabled. This might be coupled with `XTP_CHECKPOINT` as `log_reuse_wait_desc` in [sys.databases](../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
-For more information, review [Transaction log file grows for databases with In-Memory OLTP in SQL Server 2022](/troubleshoot/sql/database-engine/general/transaction-log-file-grows-databases-in-memory-oltp.md).
+For more information, review [Transaction log file grows for databases with In-Memory OLTP in SQL Server 2022](/troubleshoot/sql/database-engine/general/transaction-log-file-grows-databases-in-memory-oltp).
 
 ## Build number
 

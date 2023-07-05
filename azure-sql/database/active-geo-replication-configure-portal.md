@@ -183,7 +183,14 @@ az sql db replica set-primary --name guestlist --resource-group ContosoHotel --s
 Run the following command:
 
 ```azurecli
-    Set-AzSqlDatabaseSecondary -ResourceGroupName SecondaryRG -ServerName SecondaryServer -DatabaseName TestDB -PartnerResourceGroupName PrimaryServer -Failover
+$parameters = @{
+    ResourceGroupName = 'SecondaryRG'
+    ServerName = 'SecondaryServer'
+    DatabaseName = 'TestDB'
+    PartnerResourceGroupName = 'PrimaryServer'
+}
+
+Set-AzSqlDatabaseSecondary @parameters -Failover
 ```
 
 ---

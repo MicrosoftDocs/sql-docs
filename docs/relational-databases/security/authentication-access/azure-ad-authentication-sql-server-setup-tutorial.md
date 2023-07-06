@@ -314,7 +314,7 @@ Below is the snapshot of the SQL Server Management Studio (SSMS) connection page
 
 During the authentication process, a database where the user was created must be explicitly indicated in SSMS. Expand **Options > Connection Properties > Connect to database: `database_name`**.
 
-For more information on **Azure Active Directory - Universal with MFA** authentication method, see [Universal with MFA](/azure/azure-sql/database/authentication-mfa-ssms-configure).
+For more information on **Azure Active Directory - Universal with MFA** authentication, see [Using Azure Active Directory Multi-Factor Authentication](/azure/azure-sql/database/authentication-mfa-ssms-overview).
 
 SQL Server tools that support Azure AD authentication for Azure SQL are also supported for [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)].
 

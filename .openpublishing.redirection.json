@@ -59812,7 +59812,7 @@
     },
     {
       "source_path": "docs/relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md",
-      "redirect_url": "/sql/relational-databases/sp-query-store-remove-plan-transact-sql",
+      "redirect_url": "/sql/relational-databases/system-stored-procedures/sp-query-store-remove-plan-transact-sql",
       "redirect_document_id": false
     },
     {

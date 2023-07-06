@@ -82,9 +82,7 @@ landingContent:
         links:
           - text: Conditional Access with Azure SQL
             url: conditional-access-configure.md
-          - text: Configure multi-factor authentication for SQL Server Management Studio and Azure AD
-            url: authentication-mfa-ssms-configure.md
-          - text: Using multi-factor Azure Active Directory authentication
+          - text: Using Azure Active Directory Multi-Factor Authentication
             url: authentication-mfa-ssms-overview.md
 
 

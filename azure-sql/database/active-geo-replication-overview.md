@@ -271,8 +271,8 @@ As discussed previously, active geo-replication can also be managed programmatic
 
 | API | Description |
 | --- | --- |
-| [Create or Update Database (createMode=Restore)](/rest/api/sql/databases/createorupdate) |Creates, updates, or restores a primary or a secondary database. |
-| [Get Create or Update Database Status](/rest/api/sql/databases/createorupdate) |Returns the status during a create operation. |
+| [Create or Update Database (createMode=Restore)](/rest/api/sql/2022-08-01-preview/databases/create-or-update) |Creates, updates, or restores a primary or a secondary database. |
+| [Get Create or Update Database Status](/rest/api/sql/2022-08-01-preview/databases/create-or-update) |Returns the status during a create operation. |
 | [Set Secondary Database as Primary (Planned Failover)](/rest/api/sql/replicationlinks/failover) |Sets which secondary database is primary by failing over from the current primary database. **This option is not supported for SQL Managed Instance.**|
 | [Set Secondary Database as Primary (Unplanned Failover)](/rest/api/sql/replicationlinks/failoverallowdataloss) |Sets which secondary database is primary by failing over from the current primary database. This operation might result in data loss. **This option is not supported for SQL Managed Instance.**|
 | [Get Replication Link](/rest/api/sql/replicationlinks/get) |Gets a specific replication link for a given database in a geo-replication partnership. It retrieves the information visible in the sys.geo_replication_links catalog view. **This option is not supported for SQL Managed Instance.**|

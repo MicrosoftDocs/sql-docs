@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Managed Instance
 description: Learn about Windows Authentication for Azure Active Directory principals on Azure SQL Managed Instance.
 author: sravanisaluru
 ms.author: srsaluru
-ms.reviewer: mathoma, bonova, urmilano, wiassaf, kendralittle
+ms.reviewer: mathoma, bonova, urmilano, wiassaf
 ms.date: 03/01/2022
 ms.service: sql-managed-instance
 ms.subservice: deployment-configuration

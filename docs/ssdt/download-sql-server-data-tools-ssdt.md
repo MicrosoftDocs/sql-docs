@@ -60,6 +60,9 @@ For Analysis Services, Integration Services, or Reporting Services projects, you
 |Analysis Services models<br /><br />Reporting Services reports | SQL Server 2016 - SQL Server 2022|
 |Integration Services packages| SQL Server 2019 - SQL Server 2022 |
 
+### License terms for Visual Studio
+
+To understand the license terms and use cases for Visual Studio, refer to (Visual Studio License Directory)[https://visualstudio.microsoft.com/license-terms/]. For example, if you are using the Community Edition of Visual Studio for SQL Server Data Tools, review the EULA for that specific edition of Visual Studio in the Visual Studio License Directory.
 
 ## SSDT for Visual Studio 2019
 

@@ -94,7 +94,7 @@ For more information about enclave attestation, see [Configure attestation for A
 - [Query columns using Always Encrypted with SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
 - [Run Transact-SQL statements using secure enclaves](always-encrypted-enclaves-query-columns.md)
 - [Develop applications using Always Encrypted](always-encrypted-client-development.md)
-- [Tutorial: Develop a .NET application using Always Encrypted with secure enclaves](/sql/connect/ado-net/sql/tutorial-always-encrypted-enclaves-develop-net-apps)
+- [Tutorial: Develop a .NET application using Always Encrypted with secure enclaves](../../../connect/ado-net/sql/tutorial-always-encrypted-enclaves-develop-net-apps.md)
 
 ## See also  
  - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)

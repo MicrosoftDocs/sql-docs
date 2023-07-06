@@ -2,10 +2,10 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 02/17/2023
+ms.date: 07/06/2023
 ms.topic: include
 ---
-| Error| Severity | Event logged | Description|
+| Error | Severity | Event logged | Description |
 | :--- | :--- | :--- | :--- |
 | 2001 | 10 | No | Cannot use duplicate parameter names. Parameter name '%.\*ls' listed more than once. |
 | 2002 | 16 | No | Cannot create a procedure for replication with group number greater than one. |
@@ -20,7 +20,7 @@ ms.topic: include
 | 2012 | 16 | No | Variables of CLR type cannot be declared within schema-bound object. |
 | 2013 | 10 | No | Warning: 'is_ms_shipped' property is turned off for %S_MSG '%.\*ls' because you do not have permission to create or alter an object with this property. |
 | 2014 | 16 | No | Remote access is not allowed from within a schema-bound object. |
-| [2020](../mssqlserver-2020-database-engine-error.md) | 16 | No | The dependencies reported for entity "%.\*ls" might not include references to all columns. This is either because the entity references an object that does not exist or because of an error in one or more statements in the entity.  Before rerunning the query, ensure that there are no errors in the entity and that all objects referenced by the entity exist. |
+| [2020](../mssqlserver-2020-database-engine-error.md) | 16 | No | The dependencies reported for entity "%.\*ls" might not include references to all columns. This is either because the entity references an object that does not exist or because of an error in one or more statements in the entity. Before rerunning the query, ensure that there are no errors in the entity and that all objects referenced by the entity exist. |
 | 2021 | 16 | No | The referenced entity '%.\*ls' was modified during DDL execution. Please retry the operation. |
 | 2022 | 16 | No | Parsing errors were encountered in the %S_MSG '%.\*ls'. The dependencies referenced from this object could not be determined. |
 | 2023 | 10 | No | Metadata was not updated for the schema-bound object '%ls'. |
@@ -32,7 +32,7 @@ ms.topic: include
 | 2110 | 15 | No | Cannot alter trigger '%.\*ls' on '%.\*ls' because this trigger does not belong to this object. Specify the correct trigger name or the correct target object name. |
 | 2111 | 16 | No | Cannot %S_MSG trigger '%.\*ls' on %S_MSG '%.\*ls' because an INSTEAD OF %s trigger already exists on this object. |
 | 2112 | 16 | No | Cannot create trigger '%.\*ls' on view '%.\*ls' because the view is defined with CHECK OPTION. |
-| 2113 | 16 | No | Cannot %S_MSG INSTEAD OF DELETE or INSTEAD OF UPDATE TRIGGER '%.\*ls' on table '%.\*ls'. This is  because the table has a FOREIGN KEY with cascading DELETE or UPDATE. |
+| 2113 | 16 | No | Cannot %S_MSG INSTEAD OF DELETE or INSTEAD OF UPDATE TRIGGER '%.\*ls' on table '%.\*ls'. This is because the table has a FOREIGN KEY with cascading DELETE or UPDATE. |
 | 2114 | 16 | No | Column '%.\*ls' cannot be used in an IF UPDATE clause because it is a computed column. |
 | 2115 | 16 | No | Server level event notifications are disabled as the database msdb does not exist. |
 | 2116 | 16 | No | Cannot CREATE EVENT NOTIFICATION to database '%.\*ls' because it is not a valid broker database. |
@@ -257,7 +257,7 @@ ms.topic: include
 | 2550 | 16 | No | The index "%.\*ls" (partition %ld) on table "%.\*ls" cannot be reorganized because it is being reorganized by another process. |
 | 2551 | 16 | No | The indexes on table "%.\*ls" cannot be reorganized because there is already an online index build or rebuild in progress on the table. |
 | 2552 | 16 | No | The index "%.\*ls" (partition %ld) on table "%.\*ls" cannot be reorganized because page level locking is disabled. |
-| 2553 | 10 | Yes | Table '%.\*ls' will not be available during reorganizing index '%.\*ls'.  This is because the index reorganization operation performs inside a user transaction and the entire table is exclusively locked. |
+| 2553 | 10 | Yes | Table '%.\*ls' will not be available during reorganizing index '%.\*ls'. This is because the index reorganization operation performs inside a user transaction and the entire table is exclusively locked. |
 | 2554 | 16 | No | The index "%.\*ls" (partition %ld) on table "%.\*ls" cannot be reorganized because the filegroup is read-only. |
 | 2555 | 16 | No | Cannot move all contents of file "%.\*ls" to other places to complete the emptyfile operation. |
 | 2556 | 16 | No | There is insufficient space in the filegroup to complete the emptyfile operation. |
@@ -266,14 +266,14 @@ ms.topic: include
 | 2559 | 16 | No | The '%ls' and '%ls' options are not allowed on the same statement. |
 | 2560 | 16 | No | Parameter %d is incorrect for this DBCC statement. |
 | 2561 | 16 | No | Parameter %d is incorrect for this statement. |
-| 2562 | 16 | No | Checking FILESTREAM filegroup "%.\*ls" (ID %d) is not supported in DBCC CHECKFILEGROUP.  Specify a filegroup containing user objects with FILESTREAM data instead. |
+| 2562 | 16 | No | Checking FILESTREAM filegroup "%.\*ls" (ID %d) is not supported in DBCC CHECKFILEGROUP. Specify a filegroup containing user objects with FILESTREAM data instead. |
 | 2563 | 16 | No | DBCC SHRINKFILE for FILESTREAM containers requires EMPTYFILE option and does not allow any other options. |
 | 2564 | 16 | No | DBCC SHRINKFILE for %.\*ls is aborted. MEMORY_OPTIMIZED_DATA containers are not supported. |
 | 2565 | 16 | No | DBCC DBREINDEX cannot be used on memory optimized tables. |
 | 2566 | 14 | No | DBCC DBREINDEX cannot be used on system tables. |
 | 2567 | 14 | No | DBCC INDEXDEFRAG cannot be used on system table indexes |
 | 2568 | 16 | No | Page %S_PGID is out of range for this database or is in a log file. |
-| [2570](../mssqlserver-2570-database-engine-error.md) | 16 | No | Page %S_PGID, slot %d in object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type "%.\*ls"). Column "%.\*ls" value is out of range for data type "%.\*ls".  Update column to a legal value. |
+| [2570](../mssqlserver-2570-database-engine-error.md) | 16 | No | Page %S_PGID, slot %d in object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type "%.\*ls"). Column "%.\*ls" value is out of range for data type "%.\*ls". Update column to a legal value. |
 | 2571 | 14 | No | User '%.\*ls' does not have permission to run DBCC %.\*ls. |
 | 2572 | 16 | No | DBCC cannot free DLL '%.\*ls'. The DLL is in use. |
 | 2573 | 16 | No | Could not find table or object ID %.\*ls. Check system catalog. |
@@ -389,5 +389,5 @@ ms.topic: include
 | 2809 | 16 | No | The request for %S_MSG '%.\*ls' failed because '%.\*ls' is a %S_MSG object. |
 | 2812 | 16 | No | Could not find stored procedure '%.\*ls'. |
 | 2813 | 16 | No | "%.\*ls" is not supported on this edition of SQL Server. |
-| [2814](../mssqlserver-2814-database-engine-error.md) | 10 | No | A possible infinite recompile was detected for SQLHANDLE %hs, PlanHandle %hs, starting offset %d, ending offset %d.  The last recompile reason was %d. |
+| [2814](../mssqlserver-2814-database-engine-error.md) | 10 | No | A possible infinite recompile was detected for SQLHANDLE %hs, PlanHandle %hs, starting offset %d, ending offset %d. The last recompile reason was %d. |
 | 2815 | 10 | No | A possible infinite recompile was detected for the natively compiled module with ID '%d' in database with ID '%d'. |

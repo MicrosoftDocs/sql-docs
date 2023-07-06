@@ -2,10 +2,10 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 02/17/2023
+ms.date: 07/06/2023
 ms.topic: include
 ---
-| Error| Severity | Event logged | Description|
+| Error | Severity | Event logged | Description |
 | :--- | :--- | :--- | :--- |
 | 15001 | 16 | No | Object '%ls' does not exist or is not a valid object for this operation. |
 | 15002 | 16 | No | The procedure '%s' cannot be executed within a transaction. |
@@ -475,7 +475,7 @@ ms.topic: include
 | 15574 | 10 | No | This object does not have any statistics. |
 | 15575 | 10 | No | This object does not have any statistics or indexes. |
 | 15576 | 16 | No | You cannot set network name on server '%ls' because it is not a linked SQL Server. |
-| 15577 | 10 | No | Warning: A linked server that refers to the originating server is not a supported scenario.  If you wish to use a four-part name to reference a local table, please use the actual server name rather than an alias. |
+| 15577 | 10 | No | Warning: A linked server that refers to the originating server is not a supported scenario. If you wish to use a four-part name to reference a local table, please use the actual server name rather than an alias. |
 | 15578 | 16 | No | There is already a master key in the database. Please drop it before performing this statement. |
 | 15579 | 16 | No | Adding an encryption to the symmetric key failed. An encryption by the same %S_MSG '%.\*s' may already exist. |
 | 15580 | 16 | No | Cannot drop %S_MSG because %S_MSG '%.\*s' is encrypted by it. |
@@ -567,7 +567,7 @@ ms.topic: include
 | 15817 | 10 | No | The stored procedure is not available in this version of SQL Server. |
 | 15818 | 10 | No | Invalid extended metadata of external table. |
 | 15819 | 16 | No | Openrowset statistics encountered an error with openrowset stats table. Table does not exist or it is corrupted. |
-| 15820 | 16 | No | Openrowset statistics for column '%.\*ls' cannot be dropped because they do not exist. Please, correct sp_drop_openrowset_statistics OPENROWSET query argument to make sure that you specify the same OPENROWSET options, |
+| 15820 | 16 | No | Openrowset statistics for column '%.\*ls' cannot be dropped because they do not exist. Please, correct sp_drop_openrowset_statistics OPENROWSET query argument to make sure that you specify the same OPENROWSET options, as when the sp_create_openrowset_statistics was called. |
 | 15821 | 16 | No | Openrowset statistics for column '%.\*ls' cannot be created because they already exist. |
 | 15822 | 10 | No | An internal error occurred. |
 | 15823 | 16 | No | The filepath function requires 0 arguments or exactly 1 constant integer value argument. |
@@ -647,8 +647,8 @@ ms.topic: include
 | 15897 | 16 | No | Column name is missing or doesn't match columns in the CosmosDB: '%s'. |
 | 15898 | 16 | No | Exporting LOB value failed. |
 | 15899 | 16 | No | Export failed. Maximum LOB value size ('%ls') has been exceeded. |
-| 15901 | 16 | No | Query not supported: Cannot determine result column sources.  Column id: %d |
-| 15902 | 16 | No | Query not supported: Cannot determine result column sources.  ValRef type of source: %d |
-| 15903 | 16 | No | Query not supported: Cannot determine result column sources.  ValRef type to determine: %d |
-| 15904 | 16 | No | Query not supported: Cannot determine result column sources.  Class type to determine: %d |
-| 15905 | 16 | No | Query not supported: Cannot determine result column sources.  Invalid metadata. |
+| 15901 | 16 | No | Query not supported: Cannot determine result column sources. Column id: %d |
+| 15902 | 16 | No | Query not supported: Cannot determine result column sources. ValRef type of source: %d |
+| 15903 | 16 | No | Query not supported: Cannot determine result column sources. ValRef type to determine: %d |
+| 15904 | 16 | No | Query not supported: Cannot determine result column sources. Class type to determine: %d |
+| 15905 | 16 | No | Query not supported: Cannot determine result column sources. Invalid metadata. |

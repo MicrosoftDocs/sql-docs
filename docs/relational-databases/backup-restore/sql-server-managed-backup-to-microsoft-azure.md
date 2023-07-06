@@ -119,8 +119,6 @@ ms.topic: conceptual
 
 -   Backups of databases in an Availability Group will be a [**copy_only** backup](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).
 
--  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] is not supported for SQL Server on Linux due to SQL Server Agent limitations
-  
 ## See Also  
 - [Enable SQL Server managed backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)   
 - [Configure Advanced Options for SQL Server managed backup to Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)   

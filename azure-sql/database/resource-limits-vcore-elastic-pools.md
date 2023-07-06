@@ -251,32 +251,71 @@ vCore resource limits are listed in the following articles, please be sure to up
 <sup>5</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 ## General purpose - provisioned compute - DC-series
+### DC-series Hardware (part 1 of 2)
 
-| Compute size (service objective) | GP_DC_2 | GP_DC_4 | GP_DC_6 | GP_DC_8 |
-|:-|-:|-:|-:|-:|
-| Compute generation | DC | DC | DC | DC |
-| vCores | 2 | 4 | 6 | 8 |
-| Memory (GB) | 9 | 18 | 27 | 36 |
-| Max number DBs per pool <sup>1</sup> | 100 | 400 | 400 | 400 |
-| Columnstore support | Yes | Yes | Yes | Yes |
-| In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A |
-| Max data size (GB) | 756 | 1536 | 2048 | 2048 |
-| Max log size (GB) <sup>2</sup> | 227 | 461 | 614 | 614 |
-| TempDB max data size (GB) | 64 | 128 | 192 | 256 |
-| Storage type | Premium (Remote) Storage | Premium (Remote) Storage | Premium (Remote) Storage | Premium (Remote) Storage |
-| Read IO latency (approximate) | 5-10 ms | 5-10 ms | 5-10 ms | 5-10 ms |
-| Write IO latency (approximate) | 5-7 ms | 5-7 ms | 5-7 ms | 5-7 ms |
-| Max data IOPS per pool <sup>3</sup> | 1,400 | 2,800 | 4,200 | 5,600 |
-| Max log rate per pool (MBps) | 12 | 24 | 36 | 48 |
-| Max concurrent workers per pool <sup>4</sup> | 168 | 336 | 504 | 672 |
-| Max concurrent logins per pool | 168 | 336 | 504 | 672 |
-| Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 |
-| Max concurrent external connections per pool <sup>5</sup> | 16 | 33 | 50 | 67 |
-| Min/max elastic pool vCore choices per database | 0, 0.25, 0.5, 2 | 0, 0.25, 0.5, 2, 4 | 0, 0.25, 0.5, 2, 4, 6 | 0, 0.25, 0.5, 2, 4, 6, 8 |
-| Number of replicas | 1 | 1 | 1 | 1 |
-| Multi-AZ | N/A | N/A | N/A | N/A |
-| Read Scale-out | N/A | N/A | N/A | N/A |
-| Included backup storage | 1X DB size | 1X DB size | 1X DB size | 1X DB size |
+| Compute size (service objective) | GP_DC_2 | GP_DC_4 | GP_DC_6 | GP_DC_8 | GP_DC_10 | GP_DC_12 |
+|:-|-:|-:|-:|-:|-:|-:|
+| Compute generation | DC | DC | DC | DC | DC | DC |
+| vCores | 2 | 4 | 6 | 8 | 10 | 12 |
+| Memory (GB) | 9 | 18 | 27 | 36 | 45 | 54 |
+| Max number DBs per pool <sup>1</sup> | 100 | 400 | 400 | 400 | 500 | 500 |
+| Columnstore support | Yes | Yes | Yes | Yes | Yes | Yes |
+| In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A | N/A |
+| Max data size (GB) | 756 | 1536 | 2048 | 2048 | 3072 | 3072 |
+| Max log size (GB) <sup>2</sup> | 227 | 461 | 614 | 614 | 614 | 922 |
+| TempDB max data size (GB) | 64 | 128 | 192 | 256 | 320 | 384 |
+| Storage type | Premium (Remote) Storage | Premium (Remote) Storage | Premium (Remote) Storage | Premium (Remote) Storage | Premium (Remote) Storage | Premium (Remote) Storage |
+| Read IO latency (approximate) | 5-10 ms | 5-10 ms | 5-10 ms | 5-10 ms | 5-10 ms | 5-10 ms |
+| Write IO latency (approximate) | 5-7 ms | 5-7 ms | 5-7 ms | 5-7 ms | 5-7 ms | 5-7 ms |
+| Max data IOPS per pool <sup>3</sup> | 1,400 | 2,800 | 4,200 | 5,600 | 7,000 | 8,400 |
+| Max log rate per pool (MBps) | 12 | 24 | 36 | 48 | 60 | 62.5|
+| Max concurrent workers per pool <sup>4</sup> | 168 | 336 | 504 | 672 | 800 | 960 |
+| Max concurrent logins per pool | 168 | 336 | 504 | 672 | 800 | 960 |
+| Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
+| Max concurrent external connections per pool <sup>5</sup> | 16 | 33 | 50 | 67 | 80 | 96 |
+| Min/max elastic pool vCore choices per database | 0, 0.25, 0.5, 2 | 0, 0.25, 0.5, 2, 4 | 0, 0.25, 0.5, 2, 4, 6 | 0, 0.25, 0.5, 2, 4, 6, 8 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12 |
+| Number of replicas | 1 | 1 | 1 | 1 |1 |1 |
+| Multi-AZ | N/A | N/A | N/A | N/A |N/A |N/A |
+| Read Scale-out | N/A | N/A | N/A | N/A |N/A |N/A |
+| Included backup storage | 1X DB size | 1X DB size | 1X DB size | 1X DB size |1X DB size |1X DB size |
+
+<sup>1</sup> See [Resource management in dense elastic pools](elastic-pool-resource-management.md) for additional considerations.
+
+<sup>2</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
+
+<sup>3</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
+
+<sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using standard-series (Gen5) and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on standard-series (Gen5) there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
+
+<sup>5</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
+
+### DC-series Hardware (part 2 of 2)
+
+| Compute size (service objective) | GP_DC_14 | GP_DC_16 | GP_DC_18 | GP_DC_20 | GP_DC_32 | GP_DC_40 |
+|:-|-:|-:|-:|-:|-:|-:|
+| Compute generation | DC | DC | DC | DC | DC | DC |
+| vCores | 14 | 16 | 18 | 20 | 32 | 40 |
+| Memory (GB) | 63 | 72 | 81 | 90 | 144 | 180 |
+| Max number DBs per pool <sup>1</sup> | 500 | 500 | 500 | 500 | 500 | 500 |
+| Columnstore support | Yes | Yes | Yes | Yes | Yes | Yes |
+| In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A | N/A |
+| Max data size (GB) | 3072 | 3072 | 3072 | 3072 | 3072 | 4096 |
+| Max log size (GB) <sup>2</sup> | 922 | 922 | 922 | 922 | 1024 | 1024 |
+| TempDB max data size (GB) | 384 | 512 | 576 | 640 | 768 | 1024 |
+| Storage type | Premium (Remote) Storage | Premium (Remote) Storage | Premium (Remote) Storage | Premium (Remote) Storage | Premium (Remote) Storage | Premium (Remote) Storage |
+| Read IO latency (approximate) | 5-10 ms | 5-10 ms | 5-10 ms | 5-10 ms | 5-10 ms | 5-10 ms |
+| Write IO latency (approximate) | 5-7 ms | 5-7 ms | 5-7 ms | 5-7 ms | 5-7 ms | 5-7 ms |
+| Max data IOPS per pool <sup>3</sup> | 9,800 | 11,200 | 12,600 | 14,000 | 22,400 | 25,200 |
+| Max log rate per pool (MBps) | 62.5 | 62.5 | 62.5 | 62.5 | 62.550 | 62.550 |
+| Max concurrent workers per pool <sup>4</sup> | 1120 | 1280 | 1440 | 1600 | 2560 | 3200 |
+| Max concurrent logins per pool |  1120 | 1280 | 1440 | 1600 | 2560 | 3200 |
+| Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
+| Max concurrent external connections per pool <sup>5</sup> | 112 | 128 | 144 | 150 | 150 | 150 |
+| Min/max elastic pool vCore choices per database | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 32 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 32, 40
+| Number of replicas | 1 | 1 | 1 | 1 |1 |1 |
+| Multi-AZ | N/A | N/A | N/A | N/A |N/A |N/A |
+| Read Scale-out | N/A | N/A | N/A | N/A |N/A |N/A |
+| Included backup storage | 1X DB size | 1X DB size | 1X DB size | 1X DB size |1X DB size |1X DB size |
 
 <sup>1</sup> See [Resource management in dense elastic pools](elastic-pool-resource-management.md) for additional considerations.
 
@@ -488,33 +527,73 @@ For important information about M-series hardware availability, see [Azure offer
 <sup>5</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 ## Business Critical - provisioned compute - DC-series
+### DC-series hardware (part 1 of 2)
 
-| Compute size (service objective) | BC_DC_2 | BC_DC_4 | BC_DC_6 | BC_DC_8 |
-|:-|-:|-:|-:|-:|
-| Compute generation | DC | DC | DC | DC |
-| vCores | 2 | 4 | 6 | 8 |
-| Memory (GB) | 9 | 18 | 27 | 36 |
-| Max number DBs per pool <sup>1</sup> | 50 | 100 | 100 | 100 |
-| Columnstore support | Yes | Yes | Yes | Yes |
-| In-memory OLTP storage (GB) | 1.7 | 3.7 | 5.9 | 8.2 |
-| Max data size (GB) | 768 | 768 | 768 | 768 |
-| Max log size (GB) <sup>2</sup> | 230 | 230 | 230 | 230 |
-| TempDB max data size (GB) | 64 | 128 | 192 | 256 |
-| [Max local storage size](resource-limits-logical-server.md#storage-space-governance) (GB) | 1406 | 1406 | 1406 | 1406 |
-| Storage type | Local SSD | Local SSD | Local SSD | Local SSD |
-| Read IO latency (approximate) | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms |
-| Write IO latency (approximate) | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms |
-| Max data IOPS per pool <sup>3</sup> | 15,750 | 31,500 | 47,250 | 56,000 |
-| Max log rate per pool (MBps) | 20 | 60 | 90 | 120 |
-| Max concurrent workers per pool <sup>4</sup> | 168 | 336 | 504 | 672 |
-| Max concurrent logins per pool | 168 | 336 | 504 | 672 |
-| Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 |
-| Max concurrent external connections per pool <sup>5</sup> | 16 | 33 | 50 | 67 |
-| Min/max elastic pool vCore choices per database | 0, 0.25, 0.5, 2 | 0, 0.25, 0.5, 2, 4 | 0, 0.25, 0.5, 2, 4, 6 | 0, 0.25, 0.5, 2, 4, 6, 8 |
-| Number of replicas | 4 | 4 | 4 | 4 |
-| Multi-AZ | No | No | No | No |
-| Read Scale-out | Yes | Yes | Yes | Yes |
-| Included backup storage | 1X DB size | 1X DB size | 1X DB size | 1X DB size |
+| Compute size (service objective) | BC_DC_2 | BC_DC_4 | BC_DC_6 | BC_DC_8 | BC_DC_10 | BC_DC_12 |
+|:-|-:|-:|-:|-:|-:|-:|
+| Compute generation | DC | DC | DC | DC | DC | DC |
+| vCores | 2 | 4 | 6 | 8 | 10 | 12 |
+| Memory (GB) | 9 | 18 | 27 | 36 | 45 | 54 |
+| Max number DBs per pool <sup>1</sup> | 50 | 100 | 100 | 100 | 100 | 100 |
+| Columnstore support | Yes | Yes | Yes | Yes |Yes |Yes |
+| In-memory OLTP storage (GB) | 1.7 | 3.7 | 5.9 | 8.2 | 10.65 | 11.02 |
+| Max data size (GB) | 768 | 768 | 768 | 768 | 2048 | 3072 |
+| Max log size (GB) <sup>2</sup> | 230 | 230 | 230 | 230 | 461 | 922 |
+| TempDB max data size (GB) | 64 | 128 | 192 | 256 | 320 | 384 | 
+| [Max local storage size](resource-limits-logical-server.md#storage-space-governance) (GB) | 1406 | 1406 | 1406 | 1406 | 4829 | 4829 |
+| Storage type | Local SSD | Local SSD | Local SSD | Local SSD | Local SSD | Local SSD |
+| Read IO latency (approximate) | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms |
+| Write IO latency (approximate) | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms |
+| Max data IOPS per pool <sup>3</sup> | 15,750 | 31,500 | 47,250 | 56,000 | 72,000 | 86,400 |
+| Max log rate per pool (MBps) | 20 | 60 | 90 | 120 | 120 | 120 |
+| Max concurrent workers per pool <sup>4</sup> | 168 | 336 | 504 | 672 | 804 | 1008 |
+| Max concurrent logins per pool | 168 | 336 | 504 | 672 | 804 | 1008 |
+| Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
+| Max concurrent external connections per pool <sup>5</sup> | 16 | 33 | 50 | 67 | 84 | 100 |
+| Min/max elastic pool vCore choices per database | 0, 0.25, 0.5, 2 | 0, 0.25, 0.5, 2, 4 | 0, 0.25, 0.5, 2, 4, 6 | 0, 0.25, 0.5, 2, 4, 6, 8 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12 |
+| Number of replicas | 4 | 4 | 4 | 4 | 4 | 4 |
+| Multi-AZ | No | No | No | No | No | No |
+| Read Scale-out | Yes | Yes | Yes | Yes | Yes | Yes |
+| Included backup storage | 1X DB size | 1X DB size | 1X DB size | 1X DB size | 1X DB size | 1X DB size |
+
+<sup>1</sup> See [Resource management in dense elastic pools](elastic-pool-resource-management.md) for additional considerations.
+
+<sup>2</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
+
+<sup>3</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
+
+<sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using standard-series (Gen5) and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on standard-series (Gen5) there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
+
+<sup>5</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
+
+### DC-series hardware (part 2 of 2)
+
+| Compute size (service objective) | BC_DC_14 | BC_DC_16 | BC_DC_18 | BC_DC_20 | BC_DC_32 | BC_DC_40 |
+|:-|-:|-:|-:|-:|-:|-:|
+| Compute generation | DC | DC | DC | DC | DC | DC |
+| vCores | 14 | 16 | 18 | 20 | 32 | 40 |
+| Memory (GB) | 63 | 72 | 81 | 90 | 144 | 180 |
+| Max number DBs per pool <sup>1</sup> | 50 | 100 | 100 | 100 | 100 | 100 |
+| Columnstore support | Yes | Yes | Yes | Yes |Yes |Yes |
+| In-memory OLTP storage (GB) | 13.39 | 15.77 | 18.14 | 20.51 | 25.25 | 37.93 |
+| Max data size (GB) | 3072 | 3072 | 3072 | 3072 | 4096 | 4096 |
+| Max log size (GB) <sup>2</sup> | 922 | 922 | 922 | 922 | 1024 | 1024 |
+| TempDB max data size (GB) | 448 | 512 | 576 | 640 | 768 | 1024 | 
+| [Max local storage size](resource-limits-logical-server.md#storage-space-governance) (GB) | 4829 | 4829 | 4829 | 4829 | 4829 | 4829 |
+| Storage type | Local SSD | Local SSD | Local SSD | Local SSD | Local SSD | Local SSD |
+| Read IO latency (approximate) | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms |
+| Write IO latency (approximate) | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms |
+| Max data IOPS per pool <sup>3</sup> | 100,800 | 115,200 | 129,600 | 144,000 | 230,400 | 288,000 |
+| Max log rate per pool (MBps) | 120 | 120 | 120 | 120 | 120 | 120 |
+| Max concurrent workers per pool <sup>4</sup> | 1176 | 1344 | 1512 | 1680 | 2688 | 3360 |
+| Max concurrent logins per pool | 1176 | 1344 | 1512 | 1680 | 2688 | 3360 | 
+| Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
+| Max concurrent external connections per pool <sup>5</sup> | 117 | 134 | 151 | 168 | 268 | 336 |
+| Min/max elastic pool vCore choices per database | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 32 | 0, 0.25, 0.5, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 32, 40 |
+| Number of replicas | 4 | 4 | 4 | 4 | 4 | 4 |
+| Multi-AZ | No | No | No | No | No | No |
+| Read Scale-out | Yes | Yes | Yes | Yes | Yes | Yes |
+| Included backup storage | 1X DB size | 1X DB size | 1X DB size | 1X DB size | 1X DB size | 1X DB size |
 
 <sup>1</sup> See [Resource management in dense elastic pools](elastic-pool-resource-management.md) for additional considerations.
 

@@ -191,7 +191,7 @@ Body: {
 }
 ```
 
-For more information, see [Databases - Create or update](/rest/api/sql/databases/createorupdate).
+For more information, see [Databases - Create or update](/rest/api/sql/2022-08-01-preview/databases/create-or-update).
 
 ## Use the `tempdb` database on a read-only replica
 

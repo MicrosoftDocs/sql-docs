@@ -166,7 +166,7 @@ To change your caching policy in the Azure portal, follow these steps:
 
    ![Screenshot showing the disk caching policy configuration in the Azure portal.](./media/storage-configuration/azure-disk-config.png)
 
-1. After the change takes effect, reboot the SQL Server VM and start the SQL Server service.
+1. After the change takes effect, restart the SQL Server VM and start the SQL Server service.
 
 
 ## Enable Write Accelerator

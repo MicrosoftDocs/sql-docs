@@ -66,9 +66,9 @@ The following features aren't available in Setup in [!INCLUDE[sssql22-md](../inc
     :::column-end:::
 :::row-end:::
 
-#### Reboot requirement
+#### Restart requirement
 
-When you install an initial [!INCLUDE[sssql22-md](../includes/sssql22-md.md)] instance on a Windows Server 2022 machine, if the computer doesn't have `VCRuntime140` version 14.29.30139 or a later version installed, Setup will require a reboot.
+When you install an initial [!INCLUDE[sssql22-md](../includes/sssql22-md.md)] instance on a Windows Server 2022 machine, if the computer doesn't have `VCRuntime140` version 14.29.30139 or a later version installed, Setup will require a restart.
 
 Windows Server 2022 was released with VCRuntime version 14.28.29914.
 
@@ -109,6 +109,12 @@ In [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], setting the **Start Mode*
 ### MSOLEDBSQL19 and linked servers
 
 Currently, MSOLEDBSQL19 prevents the creation of linked servers without encryption and a trusted certificate (a self-signed certificate is insufficient). If linked servers are required, use the existing supported version of MSOLEDBSQL.
+
+### Transaction log growth for databases with In-Memory OLTP
+
+You may notice excessive growth in the transaction log size for databases with the [In-Memory OLTP](../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md) feature enabled. This might be coupled with `XTP_CHECKPOINT` as `log_reuse_wait_desc` in [sys.databases](../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
+
+For more information, review [Transaction log file grows for databases with In-Memory OLTP in SQL Server 2022](/troubleshoot/sql/database-engine/general/transaction-log-file-grows-databases-in-memory-oltp).
 
 ## Build number
 

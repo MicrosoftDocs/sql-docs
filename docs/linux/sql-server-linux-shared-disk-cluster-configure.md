@@ -138,7 +138,7 @@ You need to provide storage that both nodes can access. You can use iSCSI, NFS, 
    ```bash
    sudo passwd hacluster
    ```
-1. Enable and start `pcsd` service and Pacemaker. This will allow nodes to rejoin the cluster after the reboot. Run the following command on both nodes.
+1. Enable and start `pcsd` service and Pacemaker. This will allow nodes to rejoin the cluster after the restart. Run the following command on both nodes.
 
    ```bash
    sudo systemctl enable pcsd

@@ -25,7 +25,7 @@ If you experience difficulties getting RDS to function correctly after you upgra
   
 5.  Using Internet Services Manager, locate the Default Web site and view the properties of the MSADC virtual root. Inspect the Directory Security/IP Address and Domain Name Restrictions. If the "Access is Denied" is checked then select "Granted".  
   
- Be sure to try rebooting the server if the changes to do not appear to solve the problem at first.  
+ Be sure to try restarting the server if the changes to do not appear to solve the problem at first.  
   
 > [!IMPORTANT]
 >  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](/dotnet/framework/wcf/).Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system. Migrate applications that use RDS to [WCF Data Service](/dotnet/framework/wcf/).  

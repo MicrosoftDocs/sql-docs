@@ -78,7 +78,7 @@ helpviewer_keywords:
     netsh.exe firewall show state  
     ```  
   
-5.  Reboot the computer.  
+5.  Restart the computer.  
   
 ### To set DCOM permissions to enable remote WMI access for non-administrators  
   

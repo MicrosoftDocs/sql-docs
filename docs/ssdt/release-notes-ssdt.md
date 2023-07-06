@@ -400,7 +400,7 @@ _SSDT for Visual Studio 2017._
 ### Known issues:
 
 - SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog isn't impacted.
-- When installing SSDT on Windows 10 and choosing "Install new SQL Server Data Tools for Visual Studio 2017 instance", the installation will fail on "The requested metafile operation isn't supported". Reboot the machine and launch SSDT installer again to continue the installation.
+- When installing SSDT on Windows 10 and choosing "Install new SQL Server Data Tools for Visual Studio 2017 instance", the installation will fail on "The requested metafile operation isn't supported". Restart the machine and launch SSDT installer again to continue the installation.
 
 ## 15.7.0,&nbsp; SSDT for VS 2017
 

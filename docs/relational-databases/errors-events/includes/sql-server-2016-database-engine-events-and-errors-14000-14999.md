@@ -586,7 +586,7 @@ ms.topic: include
 | 14849 | 16 | No | Attempted Migration failed. Remote insert failed to insert all the rows. Expected rows : %d, Actual remote rows inserted: %d. |
 | 14850 | 16 | No | Attempted Migration failed. Incrementation of the batch ID failed. Expected batch ID : %I64d, Current batch ID : %I64d. |
 | 14851 | 16 | No | Attempted Reconciliation failed. The new max remote batch IDs is not less than the initial. Initial: %I64d, New: %I64d |
-| 14852 | 16 | No | Cannot query table '%.\*ls' because data reconciliation is in progress. |
+| 14852 | 16 | No | Cannot query table '%.\*ls' because data reconciliation is in progress. This is part of the automatic recovery process for a remote data archive enabled table. You may check the status of this operation in sys.remote_data_archive_tables. |
 | 14853 | 16 | No | Function '%.\*ls' cannot be used as Stretch filter predicate because it does not meet necessary requirements. |
 | 14854 | 10 | No | The Remote Data Archive connection to the server '%ls' succeeded. |
 | 14855 | 16 | No | The Remote Data Archive connection to the server '%ls' failed. |

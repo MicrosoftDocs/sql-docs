@@ -17,7 +17,7 @@ monikerRange: "=fabric"
 
 Creates a new table as a zero-copy clone of another table in [!INCLUDE [fabric-dw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)]. Only the metadata of the table is copied. The underlying data of the table, stored as parquet files, is not copied.
 
-For more information on cloning a table in [!INCLUDE [fabric](../../includes/fabric.md)], see [Clone table](/fabric/data-warehouse/clone-table-using-t-sql).
+For more information on cloning a table in [!INCLUDE [fabric](../../includes/fabric.md)], see [Clone table](/fabric/data-warehouse/tutorial-clone-table).
 
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
@@ -82,4 +82,4 @@ CREATE TABLE dbo.Employee AS CLONE OF dbo1.EmployeeUSA;
  
 - [Create a table on [!INCLUDE [fabric-dw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)]](/fabric/data-warehouse/create-table)
 - [[!INCLUDE [fabric-dw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)]](/fabric/data-warehouse/data-warehousing)
-- [Clone table in [!INCLUDE [fabric](../../includes/fabric.md)]](/fabric/data-warehouse/clone-table-using-t-sql)
+- [Clone table in [!INCLUDE [fabric](../../includes/fabric.md)]](/fabric/data-warehouse/tutorial-clone-table)

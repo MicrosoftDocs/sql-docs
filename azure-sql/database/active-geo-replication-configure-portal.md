@@ -21,27 +21,9 @@ This article shows you how to configure [active geo-replication for Azure SQL Da
 For best practices using auto-failover groups, see [Auto-failover groups with Azure SQL Database](auto-failover-group-sql-db.md) and [Auto-failover groups with Azure SQL Managed Instance](../managed-instance/auto-failover-group-sql-mi.md). 
 
 
-
 ## Prerequisites
 
-# [Portal](#tab/portal)
-
-To configure active geo-replication by using the Azure portal, you need the following resource:
-
-* A database in Azure SQL Database: The primary database that you want to replicate to a different geographical region.
-
-> [!Note]
-> When using Azure portal, you can only create a secondary database within the same subscription as the primary. If a secondary database is required to be in a different subscription, use [Create Database REST API](/rest/api/sql/2022-08-01-preview/databases/create-or-update) or [ALTER DATABASE Transact-SQL API](/sql/t-sql/statements/alter-database-transact-sql).
-
-# [Azure CLI](#tab/azure-cli)
-
-To configure active geo-replication, you need a database in Azure SQL Database. It's the primary database that you want to replicate to a different geographical region.
-
-Prepare your environment for the Azure CLI.
-
-[!INCLUDE [azure-cli-prepare-your-environment-no-header](~/../azure-sql/reusable-content/azure-cli/azure-cli-prepare-your-environment-no-header.md)]
-
----
+To configure active geo-replication, you need a database in Azure SQL Database. To learn how to create a single database with Azure portal, Azure CLI, Azure CLI (sql up), or PowerShell, see [Quickstart: Create a single database - Azure SQL Database](single-database-create-quickstart.md?view=azuresql&tabs=azure-powershell).
 
 ## Add a secondary database
 

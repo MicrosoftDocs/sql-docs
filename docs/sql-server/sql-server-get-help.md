@@ -42,8 +42,8 @@ Every major release of the product is accompanied by the release notes for that 
 
 For example:
 
-- [SQL Server 2022 release notes](/sql/sql-server/sql-server-2022-release-notes)
-- [SQL Server 2019 release notes](/sql/sql-server/sql-server-2019-release-notes)
+- [SQL Server 2022 release notes](sql-server-2022-release-notes.md)
+- [SQL Server 2019 release notes](sql-server-2019-release-notes.md)
 
 ## Ask the community for help
 

@@ -41,7 +41,7 @@ Moving or copying a database is useful when you want to:
 - Manage database growth and performance requirements.
 - Balance workloads across multiple managed instances.
 - Move databases to an instance with more available resources to handle the workload.
-- Consolidate multiple databases from a number of smaller instances.
+- Consolidate multiple databases from several instances.
 - Create database parity between dev, test, and production environments.
 
 ## Workflow
@@ -81,7 +81,7 @@ You can copy or move a database to another managed instance by using the Azure p
 1. Under **Data management**, select **Databases**.
 1. Select one or more databases, and then select either the **Copy** or **Move** option at the top of the pane.
 
-   Selecting **Move** drops the source database when the operation is completed, and selecting **Copy** leaves the source database online when the operation is completed. Selecting either option opens the **Move Managed Database** or **Copy Managed Database** page. After the page opens, you can select additional databases to include in the operation.
+   Selecting **Move** drops the source database when the operation is completed, and selecting **Copy** leaves the source database online when the operation is completed. Selecting either option opens the **Move Managed Database** or **Copy Managed Database** page. After the page opens, you can select more databases to include in the operation.
 
    :::image type="content" source="media/database-copy-move-how-to/start-move-copy-operation.png" alt-text="Screenshot of the 'Databases' page for Azure SQL Managed Instance, with the 'Move' and 'Copy' options highlighted.":::
 

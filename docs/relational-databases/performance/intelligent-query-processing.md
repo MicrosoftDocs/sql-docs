@@ -28,7 +28,7 @@ For demos and sample code of intelligent query processing (IQP) features on GitH
 You can make workloads automatically eligible for intelligent query processing by enabling the applicable database compatibility level for the database. You can set this using [!INCLUDE[tsql](../../includes/tsql-md.md)]. For example:
 
 ```sql
-ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
+ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 160;
 ```
 
 The following table details all intelligent query processing features, along with any requirement they have for database compatibility level. For complete details on all IQP features, including release notes and more in-depth descriptions, see [Intelligent query processing (IQP) feature details](intelligent-query-processing-details.md).

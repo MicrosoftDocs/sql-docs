@@ -2,10 +2,10 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 02/17/2023
+ms.date: 07/06/2023
 ms.topic: include
 ---
-| Error| Severity | Event logged | Description|
+| Error | Severity | Event logged | Description |
 | :--- | :--- | :--- | :--- |
 | 18002 | 20 | Yes | Exception happened when running extended stored procedure '%.\*ls' in the library '%.\*ls'. SQL Server is terminating process %d. Exception type: %ls; Exception code: 0x%lx. To generate a minidump, create an xevent session using the dump routine event with the create dump action. |
 | 18052 | 16 | No | Error: %d, Severity: %d, State: %d. |
@@ -16,7 +16,7 @@ ms.topic: include
 | 18057 | 20 | Yes | Error: Failed to set up execution context. |
 | 18058 | 17 | Yes | Failed to load format string for error %d, language id %d. Operating system error: %s. Check that the resource file matches SQL Server executable, and resource file in localized directory matches the file under English directory. Also check memory usage. |
 | 18059 | 16 | Yes | The connection has been dropped because the principal that opened it subsequently assumed a new security context, and then tried to reset the connection under its impersonated security context. This scenario is not supported. See "Impersonation Overview" in Books Online. |
-| 18060 | 16 | Yes | Failed to format string for error %d, language id %d.  This may be caused by low memory in server, or error happening while formatting the message. |
+| 18060 | 16 | Yes | Failed to format string for error %d, language id %d. This may be caused by low memory in server, or error happening while formatting the message. |
 | 18061 | 20 | Yes | The client was unable to join a session with SPID %d. This error may have been caused by an earlier operation failing or a change in permissions since the session was established. Check the error logs for failed operations immediately before this error message. |
 | 18100 | 10 | Yes | Process ID %d was killed by hostname %.\*ls, host process ID %d. |
 | 18113 | 10 | Yes | SQL Server shutdown after verifying system indexes. |
@@ -44,7 +44,7 @@ ms.topic: include
 | 18275 | 10 | Yes | Unnamed tape was dismounted from drive '%s'. This is an informational message. No user action is required. |
 | 18276 | 10 | Yes | Database file differential changes were backed up. Database: %s, creation date(time): %s(%s), file list: (%s), pages dumped: %I64d, number of dump devices: %d, device information: (%s). This is an informational message only. No user action is required. |
 | 18277 | 10 | Yes | Database file changes were restored. Database: %s, creation date(time): %s(%s), file list: (%s), number of dump devices: %d, device information: (%s). This is an informational message only. No user action is required. |
-| 18279 | 16 | Yes | During a RESTORE operation, an I/O error occurred on checkpoint file '%s' (operating system error %s).  Ensure that a valid storage location exists for the checkpoint file and try the operation again. |
+| 18279 | 16 | Yes | During a RESTORE operation, an I/O error occurred on checkpoint file '%s' (operating system error %s). Ensure that a valid storage location exists for the checkpoint file and try the operation again. |
 | 18280 | 16 | Yes | The file %s is being removed from the database, but is not being removed from the filesystem because file snapshots are still associated with the file. |
 | 18300 | 10 | No | Reason: Infrastructure error occurred. Check for previous errors. |
 | 18301 | 10 | No | Reason: Could not find a login matching the name provided. |
@@ -172,8 +172,8 @@ ms.topic: include
 | [18483](../mssqlserver-18483-database-engine-error.md) | 16 | Yes | Could not connect to server '%.\*ls' because '%.\*ls' is not defined as a remote login at the server. Verify that you have specified the correct login name. %.\*ls. |
 | 18485 | 16 | Yes | Could not connect to server '%.\*ls' because it is not configured to accept remote logins. Use the remote access configuration option to allow remote logins.%.\*ls |
 | 18486 | 14 | Yes | Login failed for user '%.\*ls' because the account is currently locked out. The system administrator can unlock it. %.\*ls |
-| 18487 | 14 | Yes | Login failed for user '%.\*ls'.  Reason: The password of the account has expired.%.\*ls |
-| 18488 | 14 | Yes | Login failed for user '%.\*ls'.  Reason: The password of the account must be changed.%.\*ls |
+| 18487 | 14 | Yes | Login failed for user '%.\*ls'. Reason: The password of the account has expired.%.\*ls |
+| 18488 | 14 | Yes | Login failed for user '%.\*ls'. Reason: The password of the account must be changed.%.\*ls |
 | 18489 | 10 | No | The dedicated administrator connection is in use by "%.\*ls" on "%.\*ls".%.\*ls |
 | 18491 | 16 | Yes | SQL Server could not start because of an invalid serial number. The serial number information retrieved at startup appears invalid. To proceed, reinstall SQL Server. |
 | 18492 | 16 | Yes | SQL Server cannot start because the license agreement for this '%ls' version of SQL Server is invalid. The server is exiting. To proceed, reinstall SQL Server with a valid license. |
@@ -183,7 +183,7 @@ ms.topic: include
 | 18496 | 10 | Yes | System Manufacturer: '%ls', System Model: '%ls'. |
 | 18497 | 10 | No | \[SERVER: %.\*s%.\*ls\] |
 | 18596 | 16 | No | %.\*ls cannot start because your system is low on memory. |
-| 18597 | 16 | No | Your %.\*ls installation is either corrupt or has been tampered with (%hs).  Please uninstall then re-run setup to correct this problem |
+| 18597 | 16 | No | Your %.\*ls installation is either corrupt or has been tampered with (%hs). Please uninstall then re-run setup to correct this problem |
 | 18598 | 16 | No | %.\*ls could not find the default instance (%.\*ls) - error %d. Please specify the name of an existing instance on the invocation of sqlservr.exe.\n\nIf you believe that your installation is corrupt or has been tampered with, uninstall then re-run setup to correct this problem. |
 | 18599 | 16 | No | %.\*ls could not find the specified named instance (%.\*ls) - error %d. Please specify the name of an existing instance on the invocation of sqlservr.exe.\n\nIf you believe that your installation is corrupt or has been tampered with, uninstall then re-run setup to correct this problem. |
 | 18750 | 16 | No | %ls: The parameter '%ls' is not valid. |
@@ -214,13 +214,13 @@ ms.topic: include
 | 18780 | 16 | No | You have specified a value for the @dts_package_password parameter. You must also specify a value for the @dts_package_name parameter. |
 | 18781 | 16 | No | The value specified for the @backupdevicetype parameter is not valid. The value must be 'logical', 'disk', or 'tape'. |
 | 18782 | 16 | No | Could not locate backup header information for database '%s' in the specified backup device. Specify a backup device that contains a backup of the Publisher database. |
-| 18783 | 16 | No | The subscription setup script path has been truncated,  because the snapshot folder directory path is too long. Reconfigure the Distributor to use a shorter path for this Publisher, and then retry the operation. |
+| 18783 | 16 | No | The subscription setup script path has been truncated, because the snapshot folder directory path is too long. Reconfigure the Distributor to use a shorter path for this Publisher, and then retry the operation. |
 | 18784 | 16 | No | The alternate snapshot folder path generated by replication has been truncated. Reconfigure the publication to use a shorter alternate snapshot folder path, and then retry the operation. |
 | 18786 | 16 | No | The specified publication does not allow subscriptions to be initialized from a backup. To allow initialization from a backup, use sp_changepublication: set 'allow_initialize_from_backup' to 'true'. |
 | 18787 | 16 | No | Snapshot publications cannot use the option to initialize a subscription from a backup. This option is only supported for transactional publications. |
 | 18790 | 16 | No | Cannot enable the option to initialize a subscription from a backup. This is not supported for non-SQL Server Publishers; it is only supported for transactional publications from SQL Server Publishers. |
-| 18795 | 16 | No | The valid new types of a log based indexed view article are 'indexed view logbased', 'indexed view logbased manualfilter', 'indexed view logbased manualview',  and 'indexed view logbased manualboth' only. |
-| 18796 | 16 | No | The valid new types of a log based table article are 'logbased', 'logbased manualfilter', 'logbased manualview',  and 'logbased manualboth' only. |
+| 18795 | 16 | No | The valid new types of a log based indexed view article are 'indexed view logbased', 'indexed view logbased manualfilter', 'indexed view logbased manualview', and 'indexed view logbased manualboth' only. |
+| 18796 | 16 | No | The valid new types of a log based table article are 'logbased', 'logbased manualfilter', 'logbased manualview', and 'logbased manualboth' only. |
 | 18799 | 16 | No | Only users who are members of the following roles can perform this operation: sysadmin fixed server role; dbowner or dbcreator fixed database role in the current database. |
 | 18801 | 16 | No | Unable to allocate memory for replication schema version node. |
 | 18802 | 16 | No | Cannot insert a new schema change into the systranschemas system table. HRESULT = '0x%x'. If the problem persists, contact Customer Support Services. |
@@ -247,7 +247,7 @@ ms.topic: include
 | 18830 | 16 | No | A bounded update was logged within the range of another bounded update within the same transaction. First BEGIN_UPDATE {%08lx:%08lx:%04lx}, current BEGIN_UPDATE {%08lx:%08lx:%04lx}. Contact Customer Support Services. |
 | 18832 | 16 | No | The Log Reader Agent scanned to the end of the log while processing a bounded update. BEGIN_UPDATE LSN {%08lx:%08lx:%04lx}, END_UPDATE LSN {%08lx:%08lx:%04lx}, current LSN {%08lx:%08lx:%04lx}. Back up the publication database and contact Customer Support Services. |
 | 18834 | 16 | No | An unexpected Text Information Begin (TIB) log record was encountered while processing the TIB for offset %ld. Last TIB processed: (textInfoFlags 0x%x, coloffset %ld, newSize %I64d, oldSize %I64d). Contact Customer Support Services. |
-| 18835 | 16 | No | Encountered an unexpected Text Information End (TIE) log record. Last Text Information Begin (TIB) processed: (textInfoFlags 0x%x, coloffset %ld, newSize %I64d, oldSize %I64d),  text collection state %d. Contact product support. |
+| 18835 | 16 | No | Encountered an unexpected Text Information End (TIE) log record. Last Text Information Begin (TIB) processed: (textInfoFlags 0x%x, coloffset %ld, newSize %I64d, oldSize %I64d), text collection state %d. Contact product support. |
 | 18836 | 16 | No | %s, ti: {RowsetId %I64d, {TextTimeStamp %I64d, {RowId {PageId %ld, FileId %u}, SlotId %d}}, coloffset %ld, textInfoFlags 0x%x, textSize %I64d, offset %I64d, oldSize %I64d, newSize %I64d}. |
 | 18837 | 16 | No | Cannot find rowset ID %I64d in the current schema. Stop and restart the Log Reader Agent. If the problem persists, reinitialize all subscriptions to the publication. |
 | 18838 | 16 | No | The Log Reader Agent encountered a NULL command that is not valid. Restart the agent if it has stopped. If the problem persists, reinitialize all subscriptions to the publication. |
@@ -259,7 +259,7 @@ ms.topic: include
 | 18846 | 16 | No | Possible inconsistent state in the distribution database: dist_backup_lsn {%08lx:%08lx:%04lx}, dist_last_lsn {%08lx:%08lx:%04lx}. Execute "sp_repldone NULL, NULL, 0, 0, 1", and then execute sp_replflush. Reinitialize all subscriptions to the publication. |
 | 18847 | 16 | No | Cannot retrieve the peer-to-peer database information. Contact Customer Support Services. |
 | 18849 | 16 | No | Failed to evaluate the filter procedure or computed column. Cannot find the column offset information for column ID %d, rowsetId %I64d. Stop and restart the Log Reader Agent. If the problem persists, back up the publication database and then contact Customer Support Services. |
-| 18850 | 16 | No | Unexpected %s log record encountered, last FILESTREAMInfo node processed : {%d, {{%I64d, %I64d}, %I64d, %I64d, %d, %d}, %d, %ld, %I64d, %I64d, %I64d, %I64d, {%08lx:%08lx:%04lx}, %d, {{%I64d, %I64d},  %I64d, %I64d, %d, %d}, {%08lx:%08lx:%04lx}} |
+| 18850 | 16 | No | Unexpected %s log record encountered, last FILESTREAMInfo node processed : {%d, {{%I64d, %I64d}, %I64d, %I64d, %d, %d}, %d, %ld, %I64d, %I64d, %I64d, %I64d, {%08lx:%08lx:%04lx}, %d, {{%I64d, %I64d}, %I64d, %I64d, %d, %d}, {%08lx:%08lx:%04lx}} |
 | 18851 | 16 | No | Failed to %s the replication context for TxF: {%I64d, %.\*ls, %ld, %ld, %I64d, %I64d, %I64d, %I64d, {%08lx:%08lx:%04lx}, %I64d, %.\*ls, {%08lx:%08lx:%04lx}}. If the problem persists, contact product support. |
 | 18852 | 16 | No | Failed to read the TXF_REPLICATION_RECORD_WRITE structure. Last error returned '%ld'. If the problem persists, contact Customer Support Services. |
 | 18853 | 10 | No | Replication is skipping schema version logging because the systranschemas table is not present in database '%d'. This is an informational message only. No user action is required. |

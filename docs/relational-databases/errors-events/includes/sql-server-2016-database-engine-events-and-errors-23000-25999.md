@@ -2,10 +2,10 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 02/17/2023
+ms.date: 07/06/2023
 ms.topic: include
 ---
-| Error| Severity | Event logged | Description|
+| Error | Severity | Event logged | Description |
 | :--- | :--- | :--- | :--- |
 | 23003 | 17 | No | The WinFS share permissions have become corrupted {Error: %ld}. Please try setting the share permissions again. |
 | 23100 | 16 | No | Invalid input parameter(s). |
@@ -98,19 +98,19 @@ ms.topic: include
 | 25036 | 16 | No | Distribution database needs to be in readable state on secondary replica, when distribution database is part of availability group. |
 | 25601 | 17 | No | The Extended Event engine is out of memory. |
 | 25602 | 17 | No | The %S_MSG, "%.\*ls", encountered a configuration error during initialization. Object cannot be added to the event session. %ls |
-| 25603 | 17 | No | The %S_MSG, "%.\*ls", could not be added.  The maximum number of singleton targets has been reached. |
+| 25603 | 17 | No | The %S_MSG, "%.\*ls", could not be added. The maximum number of singleton targets has been reached. |
 | 25604 | 17 | No | The Extended Event engine is disabled. |
 | 25605 | 17 | No | The %S_MSG, "%.\*ls", could not be added. The maximum number of packages has been reached. |
 | 25606 | 17 | No | The Extended Event engine could not be initialized. Check the SQL Server error log and the Windows event logs for information about possible related problems. |
-| 25607 | 17 | No | The Extended Event engine has been disabled by startup options.  Features that depend on Extended Events may fail to start. |
+| 25607 | 17 | No | The Extended Event engine has been disabled by startup options. Features that depend on Extended Events may fail to start. |
 | 25608 | 17 | No | The Extended Event engine could not allocate record for local thread/fiber. |
 | 25623 | 16 | No | The %S_MSG name, "%.\*ls", is invalid, or the object could not be found |
-| 25624 | 16 | No | The constraints of %S_MSG name, "%.\*ls", have been violated. The object does not support binding to actions or predicates.  Event not added to event session. |
+| 25624 | 16 | No | The constraints of %S_MSG name, "%.\*ls", have been violated. The object does not support binding to actions or predicates. Event not added to event session. |
 | 25625 | 16 | No | The %S_MSG, "%.\*ls", already exists in the event session. Object cannot be added to the event session. |
 | 25626 | 16 | No | The %S_MSG, "%.\*ls", was specified multiple times. |
 | 25629 | 16 | No | For %S_MSG, "%.\*ls", the customizable attribute, "%ls", does not exist. |
 | 25630 | 16 | No | The predicate expression bound to %S_MSG ,"%.\*ls", has mismatching types. |
-| 25631 | 16 | No | The %S_MSG, "%.\*ls", already exists.  Choose a unique name for the event session. |
+| 25631 | 16 | No | The %S_MSG, "%.\*ls", already exists. Choose a unique name for the event session. |
 | 25632 | 16 | No | The specified buffer size is less than the minimum size. The minimum allowed size is %d bytes. |
 | 25633 | 16 | No | The buffer size specified exceeds the maximum size. |
 | 25634 | 16 | No | The dispatch latency specified is below the minimum size. |
@@ -125,7 +125,7 @@ ms.topic: include
 | 25646 | 16 | No | The %S_MSG name, "%.\*ls", is invalid. |
 | 25647 | 16 | No | The %S_MSG, "%.\*ls", could not be found. Ensure that the object exists and the name is spelled correctly. |
 | 25648 | 16 | No | The %S_MSG, "%.\*ls", could not be found. Ensure that the package exists and the name is spelled correctly. |
-| 25649 | 16 | No | Two of the actions/predicates for %S_MSG, "%.\*ls", can not coexist.  Please remove one. |
+| 25649 | 16 | No | Two of the actions/predicates for %S_MSG, "%.\*ls", can not coexist. Please remove one. |
 | 25650 | 16 | No | For %S_MSG, "%.\*ls" the customizable attribute, "%ls", was specified multiple times. |
 | 25651 | 16 | No | For %S_MSG, "%.\*ls", the value specified for customizable attribute, "%ls", did not match the expected type, "%ls". |
 | 25653 | 16 | No | The %S_MSG, "%.\*ls", does not exist in the event session. Object cannot be dropped from the event session. |
@@ -150,17 +150,17 @@ ms.topic: include
 | 25711 | 16 | No | Failed to parse an event predicate. |
 | 25712 | 16 | No | An invalid comparison operator was specified for an event predicate. |
 | 25713 | 16 | No | The value specified for %S_MSG, "%.\*ls", %S_MSG, "%.\*ls", is invalid. |
-| 25715 | 16 | No | The predicate on event "%ls" is invalid.  Operator '%ls' is not defined for type "%ls", %S_MSG: "%.\*ls". |
+| 25715 | 16 | No | The predicate on event "%ls" is invalid. Operator '%ls' is not defined for type "%ls", %S_MSG: "%.\*ls". |
 | 25716 | 16 | No | The predicate on event, "%.\*ls", exceeds the maximum length of %d characters. |
 | 25717 | 16 | No | The operating system returned error %ls while reading from the file '%s'. |
-| 25718 | 16 | No | The log file name "%s" is invalid.  Verify that the file exists and that the SQL Server service account has access to it. |
+| 25718 | 16 | No | The log file name "%s" is invalid. Verify that the file exists and that the SQL Server service account has access to it. |
 | 25719 | 16 | No | Initial file name and initial offset must be specified as a pair. Please correct the parameters and retry your query. |
 | 25720 | 10 | No | 'sys.fn_xe_file_target_read_file' is skipping records from "%.\*ls" at offset %I64d. |
 | 25721 | 16 | No | The metadata file name "%s" is invalid. Verify that the file exists and that the SQL Server service account has access to it. |
-| 25722 | 16 | No | The offset %I64d is invalid for log file "%s".  Specify an offset that exists in the log file and retry your query. |
+| 25722 | 16 | No | The offset %I64d is invalid for log file "%s". Specify an offset that exists in the log file and retry your query. |
 | 25723 | 16 | No | An error occurred while obtaining metadata information from the file "%s". The file may be damaged. |
 | 25724 | 16 | No | Predicate too large for display. |
-| 25725 | 16 | No | An error occurred while trying to flush all running Extended Event sessions.  Some events may be lost. |
+| 25725 | 16 | No | An error occurred while trying to flush all running Extended Event sessions. Some events may be lost. |
 | 25726 | 17 | No | The event data stream was disconnected because there were too many outstanding events. To avoid this error either remove events or actions from your session or add a more restrictive predicate filter to your session. |
 | 25727 | 16 | No | The Extended Events session named "%.\*ls" has either been stopped or dropped and can no longer be accessed. |
 | 25728 | 16 | No | The Extended Events session named "%.\*ls" could not be found. Make sure the session exists and is started. |
@@ -169,7 +169,7 @@ ms.topic: include
 | 25731 | 16 | No | Execution of event session state change request failed on remote brick. Event session name: "%.\*ls". Refer to previous errors to identify the cause, and correct any associated problems. |
 | 25732 | 16 | No | One or more event sessions failed to reconcile their runtime states. Refer to previous errors in the current session to identify the cause, and correct any associated problems. |
 | 25733 | 16 | No | Event session "%.\*ls" failed to reconcile its runtime state. Refer to previous errors in the current session to identify the cause, and correct any associated problems. |
-| 25734 | 16 | No | The file pattern "%s" represents a full path.  Use only relative paths with no drive letters. |
+| 25734 | 16 | No | The file pattern "%s" represents a full path. Use only relative paths with no drive letters. |
 | 25735 | 16 | No | The source option %d is invalid. |
 | 25736 | 16 | No | A damaged buffer was found in file "%s" at offset %I64d, no further events will be read from the file. |
 | 25737 | 16 | No | Database scoped extended event sessions are not available in server scope or system databases in Azure DB. |

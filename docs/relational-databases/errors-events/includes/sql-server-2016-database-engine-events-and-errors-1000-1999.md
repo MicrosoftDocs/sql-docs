@@ -2,10 +2,10 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 02/17/2023
+ms.date: 07/06/2023
 ms.topic: include
 ---
-| Error| Severity | Event logged | Description|
+| Error | Severity | Event logged | Description |
 | :--- | :--- | :--- | :--- |
 | 1001 | 16 | No | Line %d: Length or precision specification %d is invalid. |
 | 1002 | 16 | No | Line %d: Specified scale %d is invalid. |
@@ -44,7 +44,7 @@ ms.topic: include
 | 1035 | 15 | No | Incorrect syntax near '%.\*ls', expected '%.\*ls'. |
 | 1036 | 15 | No | File option %hs is required in this CREATE/ALTER DATABASE statement. |
 | 1037 | 15 | No | The CASCADE, WITH GRANT or AS options cannot be specified with statement permissions. |
-| 1038 | 15 | No | An object or column name is missing or empty. For SELECT INTO statements, verify each column |
+| 1038 | 15 | No | An object or column name is missing or empty. For SELECT INTO statements, verify each column has a name. For other statements, look for empty alias names. Aliases defined as "" or \[\] are not allowed. Change the alias to a valid name. |
 | 1039 | 16 | No | Option '%.\*ls' is specified more than once. |
 | 1040 | 15 | No | The value %d used with MAX_OUTSTANDING_IO_PER_VOLUME is not valid; MAX_OUTSTANDING_IO_PER_VOLUME must be greater than 0 and less than or equal to %d. |
 | 1041 | 15 | No | Option %.\*ls is not allowed for a LOG file. |
@@ -119,7 +119,7 @@ ms.topic: include
 | 1127 | 14 | No | Table error: Page %S_PGID. Test (%ls) failed. Values are %ld and %ld. |
 | 1128 | 14 | No | Table error: Page (%d:%d), row %d. Test (%.\*ls) failed. Values are %ld and %ld. |
 | 1129 | 16 | No | Could not cleanup deferred deallocations from filegroup '%.\*ls'. |
-| 1130 | 10 | Yes | Error while allocating extent for a worktable.  Extent %S_PGID in TEMPDB may have been lost. |
+| 1130 | 10 | Yes | Error while allocating extent for a worktable. Extent %S_PGID in TEMPDB may have been lost. |
 | 1131 | 10 | Yes | Failed to truncate AppendOnlyStorageUnit 0x%p. Will retry next time. This is an informational message only. No user action is required. |
 | 1132 | 17 | Yes | The elastic pool has reached its storage limit. The storage usage for the elastic pool cannot exceed (%d) MBs. |
 | 1202 | 16 | No | The database-principal '%.\*ls' does not exist or user is not a member. |
@@ -127,13 +127,13 @@ ms.topic: include
 | [1204](../mssqlserver-1204-database-engine-error.md) | 19 | Yes | The instance of the SQL Server Database Engine cannot obtain a LOCK resource at this time. Rerun your statement when there are fewer active users. Ask the database administrator to check the lock and memory configuration for this instance, or to check for long-running transactions. |
 | [1205](../mssqlserver-1205-database-engine-error.md) | 13 | No | Transaction (Process ID %d) was deadlocked on %.\*ls resources with another process and has been chosen as the deadlock victim. Rerun the transaction. |
 | 1206 | 18 | No | The Microsoft Distributed Transaction Coordinator (MS DTC) has cancelled the distributed transaction. |
-| 1207 | 10 | Yes | Can't allocate %u locks on startup, reverting to %u and turning on dynamic lock allocation.  Maximum allowed memory usage at startup is %I64u KB. |
-| 1208 | 21 | Yes | Could not allocate initial %u lock blocks during startup.  Can not start the server. |
-| 1209 | 21 | Yes | Could not allocate initial %u lock owner blocks during startup.  Can not start the server. |
+| 1207 | 10 | Yes | Can't allocate %u locks on startup, reverting to %u and turning on dynamic lock allocation. Maximum allowed memory usage at startup is %I64u KB. |
+| 1208 | 21 | Yes | Could not allocate initial %u lock blocks during startup. Can not start the server. |
+| 1209 | 21 | Yes | Could not allocate initial %u lock owner blocks during startup. Can not start the server. |
 | 1210 | 21 | Yes | Unable to allocate lock owner block during lock migration. Server halted. |
 | 1212 | 10 | Yes | Lock not logged: %-30ls Mode: %s |
 | 1213 | 21 | Yes | Error spawning Lock Monitor thread: %ls |
-| 1214 | 17 | Yes | Internal Error.  There are too many parallel transactions. |
+| 1214 | 17 | Yes | Internal Error. There are too many parallel transactions. |
 | 1215 | 16 | No | A conflicting ABORT_AFTER_WAIT = BLOCKERS request is waiting for existing transactions to rollback. This request cannot be executed. Please retry when the previous request is completed. |
 | 1216 | 16 | No | The DDL statement with ABORT_AFTER_WAIT = BLOCKERS option cannot be completed due to a conflicting system task. The request can abort only user transactions. Please wait for the system task to complete and retry. |
 | 1217 | 10 | Yes | Process ID %d was killed by an ABORT_AFTER_WAIT = BLOCKERS DDL statement on database_id = %d, object_id = %d. |
@@ -173,7 +173,7 @@ ms.topic: include
 | 1422 | 16 | No | The mirror server instance is not caught up to the recent changes to database "%.\*ls". Unable to fail over. |
 | 1423 | 16 | No | The property name is not supported. |
 | 1424 | 16 | No | The remote server instance has a more recent value for the property '%.\*ls'. Property value not changed. |
-| 1425 | 16 | No | The property value is invalid for '%.\*ls'.  Property value not changed. |
+| 1425 | 16 | No | The property value is invalid for '%.\*ls'. Property value not changed. |
 | 1426 | 16 | No | To issue ALTER DATABASE SET WITNESS, all three server instances must be interconnected, and the mirror database must be caught up. When these conditions are met, reissue the command. |
 | 1427 | 16 | No | The server instance '%.\*ls' could not act as the witness. The ALTER DATABASE SET WITNESS command failed. |
 | 1428 | 16 | No | The request is refused because the responding server instance is not in a state to service the request. |
@@ -201,7 +201,7 @@ ms.topic: include
 | 1450 | 16 | No | The ALTER DATABASE command failed because the worker thread cannot be created. |
 | 1451 | 16 | No | Database mirroring information was not found in the system table. |
 | 1452 | 16 | No | The partner server instance name must be distinct from the server instance that manages the database. The ALTER DATABASE SET PARTNER command failed. |
-| 1453 | 17 | Yes | '%.\*ls', the remote mirroring partner for database '%.\*ls', encountered error %d, status %d, severity %d. Database mirroring has been suspended.  Resolve the error on the remote server and resume mirroring, or remove mirroring and re-establish the mirror server instance. |
+| 1453 | 17 | Yes | '%.\*ls', the remote mirroring partner for database '%.\*ls', encountered error %d, status %d, severity %d. Database mirroring has been suspended. Resolve the error on the remote server and resume mirroring, or remove mirroring and re-establish the mirror server instance. |
 | 1454 | 17 | Yes | Database mirroring will be suspended. Server instance '%.\*ls' encountered error %d, state %d, severity %d when it was acting as a mirroring partner for database '%.\*ls'. The database mirroring partners might try to recover automatically from the error and resume the mirroring session. For more information, view the error log for additional error messages. |
 | 1455 | 16 | No | The database mirroring service cannot be forced for database "%.\*ls" because the database is not in the correct state to become the principal database. |
 | 1456 | 16 | Yes | The ALTER DATABASE command could not be sent to the remote server instance '%.\*ls'. The database mirroring configuration was not changed. Verify that the server is connected, and try again. |
@@ -225,18 +225,18 @@ ms.topic: include
 | 1474 | 16 | No | Database mirroring connection error %d '%.\*ls' for '%.\*ls'. |
 | 1475 | 16 | No | Database "%.\*ls" might contain bulk logged changes that have not been backed up. Take a log backup on the principal database or primary database. Then restore this backup either on the mirror database to enable database mirroring or on every secondary database to enable you to join it to the availability group. |
 | 1476 | 16 | No | Database mirroring timeout value %d exceeds the maximum value 32767. |
-| 1477 | 16 | No | The database mirroring safety level must be FULL to manually failover database "%.\*ls".  Set safety level to FULL and retry. |
-| 1478 | 16 | No | The mirror database, "%.\*ls", has insufficient transaction log data to preserve the log backup chain of the principal database.  This may happen if a log backup from the principal database has not been taken or has not been restored on the mirror database. |
-| 1479 | 16 | No | The mirroring connection to "%.\*ls" has timed out for database "%.\*ls" after %d seconds without a response.  Check the service and network connections. |
+| 1477 | 16 | No | The database mirroring safety level must be FULL to manually failover database "%.\*ls". Set safety level to FULL and retry. |
+| 1478 | 16 | No | The mirror database, "%.\*ls", has insufficient transaction log data to preserve the log backup chain of the principal database. This may happen if a log backup from the principal database has not been taken or has not been restored on the mirror database. |
+| 1479 | 16 | No | The mirroring connection to "%.\*ls" has timed out for database "%.\*ls" after %d seconds without a response. Check the service and network connections. |
 | 1480 | 10 | No | The %S_MSG database "%.\*ls" is changing roles from "%ls" to "%ls" because the mirroring session or availability group failed over due to %S_MSG. This is an informational message only. No user action is required. |
 | 1481 | 10 | No | Database mirroring could not repair physical page %S_PGID in database "%.\*ls". The mirroring partner could not be contacted or did not provide a copy of the page. Possible reasons include a lack of network connectivity or that the copy of the page kept by the partner is also corrupted. To learn whether the partners are currently connected, view the mirroring_state_desc column of the sys.database_mirroring catalog view. If they are connected, for information about why the partner could not provide a copy of the page, examine its error log entries from around the time when this message was reported. Try to resolve the error and resume mirroring. |
 | 1482 | 10 | No | Database mirroring failed to get snapshot synchrinization lock. |
-| 1483 | 10 | No | State information for database '%.\*ls' - Hardened Lsn: '%S_LSN'    Commit LSN: '%S_LSN'    Commit Time: '%S_DATE' |
+| 1483 | 10 | No | State information for database '%.\*ls' - Hardened Lsn: '%S_LSN' Commit LSN: '%S_LSN' Commit Time: '%S_DATE' |
 | 1485 | 10 | No | Database mirroring has been enabled on this instance of SQL Server. |
 | 1486 | 10 | No | Database Mirroring Transport is disabled in the endpoint configuration. |
 | 1487 | 10 | No | Database mirroring is starting %d parallel redo thread(s) with database '%.\*ls' as the mirror copy. This is an informational message only. No user action is required. |
 | 1488 | 16 | No | Database "%.\*ls" database is in single user mode which is incompatible with participating in database mirroring or in an availability group. Set database to multi-user mode, and retry the operation. |
-| 1489 | 10 | No | Database Mirroring is disabled on this server due to error %d.  Check the errorlog and configuration for more information. |
+| 1489 | 10 | No | Database Mirroring is disabled on this server due to error %d. Check the errorlog and configuration for more information. |
 | 1490 | 16 | No | The remote copy of database "%.\*ls" has not been restored to a log backup that includes all filestream data files. |
 | 1491 | 16 | No | Enabling Database Mirroring is not allowed when REMOTE_DATA_ARCHIVE is already enabled on database '%.\*ls'. |
 | 1499 | 16 | Yes | Database mirroring error: status %u, severity %u, state %u, string %.\*ls. |
@@ -367,7 +367,7 @@ ms.topic: include
 | 1831 | 16 | No | File ONLINE/OFFLINE syntax cannot be used with CREATE DATABASE. |
 | 1832 | 20 | No | Cannot attach the file '%.\*ls' as database '%.\*ls'.%.\*ls |
 | 1833 | 16 | No | File '%ls' cannot be reused until after the next BACKUP LOG operation. If the database is participating in an availability group, a dropped file can be reused only after the truncation LSN of the primary availability replica has passed the drop LSN of the file and a subsequent BACKUP LOG operation has completed. |
-| 1834 | 16 | No | The file '%ls' cannot be overwritten.  It is being used by database '%.\*ls'. |
+| 1834 | 16 | No | The file '%ls' cannot be overwritten. It is being used by database '%.\*ls'. |
 | 1835 | 16 | No | Unable to create/attach any new database because the number of existing databases has reached the maximum number allowed: %d. |
 | 1836 | 10 | No | Cannot create the default files because the name that was supplied is too long. |
 | 1837 | 16 | No | The file name "%ls" is too long to create an alternate stream name. |
@@ -381,7 +381,7 @@ ms.topic: include
 | 1846 | 16 | No | Cannot find SQL Volume Shadow Copy (VSS) Writer component for database '%ls' while creating auto-recovered VSS snapshot for online DBCC check. |
 | 1847 | 16 | No | The current version of the operating system doesn't support auto-recovered Volume Shadow Copy (VSS) snapshots. |
 | 1848 | 16 | No | Volume Shadow Copy Service (VSS) failed to create an auto-recovered snapshot of database '%ls' for online DBCC check. |
-| 1849 | 16 | No | CREATE DATABASE failed because FILESTREAM filegroups were declared and ALLOW_SNAPSHOT_ISOLATION or READ_COMMITTED_SNAPSHOT is set to ON in the model database.  Either set ALLOW_SNAPSHOT_ISOLATION and READ_COMMITTED_SNAPSHOT to OFF in the model database, or create the database without declaring any FILESTREAM filegroups, set ALLOW_SNAPSHOT_ISOLATION and READ_COMMITTED_SNAPSHOT to OFF in the new database, and then use ALTER DATABSE to add FILESTREAM filegroups and files. |
+| 1849 | 16 | No | CREATE DATABASE failed because FILESTREAM filegroups were declared and ALLOW_SNAPSHOT_ISOLATION or READ_COMMITTED_SNAPSHOT is set to ON in the model database. Either set ALLOW_SNAPSHOT_ISOLATION and READ_COMMITTED_SNAPSHOT to OFF in the model database, or create the database without declaring any FILESTREAM filegroups, set ALLOW_SNAPSHOT_ISOLATION and READ_COMMITTED_SNAPSHOT to OFF in the new database, and then use ALTER DATABSE to add FILESTREAM filegroups and files. |
 | 1850 | 16 | No | Cannot attach database '%.\*ls' because the file name '%.\*ls' is valid on more than one brick. |
 | 1851 | 16 | No | File name '%.\*ls' as relative path is too long after prefixed with default path '%ls'. |
 | 1852 | 21 | No | Error occured when shrinking the physical file. Please check ERRORLOG for more detail. |
@@ -459,7 +459,7 @@ ms.topic: include
 | 1979 | 16 | No | Cannot use index option ignore_dup_key to alter index '%.\*ls' as it enforces a primary or unique constraint. |
 | 1980 | 16 | No | Index cannot be created on computed column '%.\*ls' of table '%.\*ls' because the underlying object '%.\*ls' has a different owner. |
 | 1981 | 10 | No | Warning: The maximum length of the row exceeds the permissible limit of %d bytes. For some combination of large values, the insert/update operation will fail. |
-| 1982 | 16 | No | Cannot create %S_MSG on view '%.\*ls' because the view references non-deterministic or imprecise member function '%.\*ls' on CLR type '%.\*ls'. Consider removing reference to the function or altering the function to behave in a deterministic way.  Do not declare a CLR function that behaves non-deterministically to have IsDeterministic=true, because that can lead to index corruption. See Books Online for details. |
+| 1982 | 16 | No | Cannot create %S_MSG on view '%.\*ls' because the view references non-deterministic or imprecise member function '%.\*ls' on CLR type '%.\*ls'. Consider removing reference to the function or altering the function to behave in a deterministic way. Do not declare a CLR function that behaves non-deterministically to have IsDeterministic=true, because that can lead to index corruption. See Books Online for details. |
 | 1983 | 16 | No | Cannot create %S_MSG on view '%.\*ls'. The function '%s' yields imprecise results. Use a precise system function, or modify the user-defined function to return precise results. |
 | 1984 | 16 | No | Index '%.\*ls' cannot be created or rebuilt. The specified row length for this index using the vardecimal storage format exceeds the maximum allowed length of '%d' bytes. |
 | 1985 | 16 | No | Cannot create %S_MSG on view '%.\*ls'. It contains one or more XML data type methods. |
@@ -474,6 +474,6 @@ ms.topic: include
 | 1994 | 16 | No | Cannot create or update statistics on view "%.\*ls" because both FULLSCAN and NORECOMPUTE options are required. |
 | 1995 | 16 | No | Cannot rebuild hypothetical index '%.\*ls' online. |
 | 1996 | 16 | No | Could not create index enforcing primary key constraint '%.\*ls' using DROP_EXISTING option because table has an XML or spatial index. Drop the XML or spatial index, create the primary key contstraint, and recreate the XML or spatial index. |
-| 1997 | 16 | No | Could not convert  the XML or spatial index '%.\*ls'  to a relational index by using the DROP_EXISTING option.  Drop the XML or spatial index and create a relational index with the same name. |
+| 1997 | 16 | No | Could not convert the XML or spatial index '%.\*ls' to a relational index by using the DROP_EXISTING option. Drop the XML or spatial index and create a relational index with the same name. |
 | 1998 | 10 | No | Warning: Clustered index '%.\*ls' on view '%.\*ls' referencing table '%.\*ls' was disabled as a result of disabling the index '%.\*ls'. |
 | 1999 | 16 | No | Column '%.\*ls' in table '%.\*ls' is of a type that is invalid for use as included column in an index. |

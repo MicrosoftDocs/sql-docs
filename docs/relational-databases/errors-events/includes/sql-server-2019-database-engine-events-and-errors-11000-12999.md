@@ -2,10 +2,10 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 03/22/2023
+ms.date: 07/06/2023
 ms.topic: include
 ---
-| Error| Severity | Event logged | Description|
+| Error | Severity | Event logged | Description |
 | :--- | :--- | :--- | :--- |
 | 11000 | 16 | No | Unknown status code for this column. |
 | [11001](../mssqlserver-11001-database-engine-error.md) | 16 | No | Non-NULL value successfully returned. |
@@ -141,8 +141,8 @@ ms.topic: include
 | 11292 | 16 | No | The forwarded message has been dropped because a transport send error occurred when sending the message. Check previous events for the error. |
 | 11293 | 16 | No | This forwarded message has been dropped because a transport is shutdown. |
 | 11294 | 16 | No | This forwarded message has been dropped because the destination route is not valid. |
-| 11295 | 10 | No | Endpoint configuration change detected.  Service Broker manager and transport will now restart. |
-| 11296 | 10 | No | Certificate change detected.  Service Broker manager and transport will now restart. |
+| 11295 | 10 | No | Endpoint configuration change detected. Service Broker manager and transport will now restart. |
+| 11296 | 10 | No | Certificate change detected. Service Broker manager and transport will now restart. |
 | 11297 | 16 | No | A corrupted message has been received. The private variable data segment offset is incorrect. |
 | 11298 | 16 | No | A corrupted message has been received. The public variable data segment offset is incorrect. |
 | 11299 | 10 | No | A corrupted message has been received. An unsequenced message had a non-zero sequence number. This occurred in the message with Conversation ID '%.\*ls', Initiator: %d, and Message sequence number: %I64d. |
@@ -150,7 +150,7 @@ ms.topic: include
 | 11301 | 10 | Yes | Error while performing transaction notification for object %p event %d. |
 | 11302 | 10 | Yes | Error during rollback. Shutting down database (location: %d). |
 | 11303 | 10 | Yes | Error releasing reserved log space: %ls space %I64d, code %d, state %d. |
-| 11304 | 10 | Yes | Failed to record outcome of a local two-phase commit transaction.  Taking database offline. |
+| 11304 | 10 | Yes | Failed to record outcome of a local two-phase commit transaction. Taking database offline. |
 | 11306 | 16 | No | Forward progress on this transaction is disallowed. Transaction has been rolled back. |
 | 11313 | 16 | No | This operation must be executed within a parallel nested transaction. |
 | 11314 | 16 | No | The stored procedure %.\*ls must be executed within a user transaction. |
@@ -174,7 +174,7 @@ ms.topic: include
 | 11406 | 16 | No | ALTER TABLE SWITCH statement failed. Source and target partitions have different values for the DATA_COMPRESSION option. |
 | 11407 | 16 | No | Vardecimal storage format can not be enabled for '%.\*ls'. Only Enterprise edition of SQL Server supports vardecimal. |
 | 11408 | 16 | No | Cannot modify the column '%.\*ls' in the table '%.\*ls' to add or remove the COLUMN_SET attribute. To change a COLUMN_SET attribute of a column, either modify the table to remove the column and then add the column again, or drop and re-create the table. |
-| [11409](../mssqlserver-11409-database-engine-error.md) | 16 | No | Cannot remove the column set '%.\*ls' in the table '%.\*ls' because the table contains more than 1025  columns. Reduce the number of columns in the table to less than 1025. |
+| [11409](../mssqlserver-11409-database-engine-error.md) | 16 | No | Cannot remove the column set '%.\*ls' in the table '%.\*ls' because the table contains more than 1025 columns. Reduce the number of columns in the table to less than 1025. |
 | 11410 | 16 | No | Cannot modify the column '%.\*ls' in the table '%.\*ls' to a sparse column because the column has a default or rule bound to it. Unbind the rule or default from the column before designating the column as sparse. |
 | 11411 | 16 | No | Cannot add the sparse column '%.\*ls' to the table '%.\*ls' because the data type of the column has a default or rule bound to it. Unbind the rule or default from the data type before adding the sparse column to the table. |
 | 11412 | 16 | No | ALTER TABLE SWITCH statement failed because column '%.\*ls' does not have the same sparse storage attribute in tables '%.\*ls' and '%.\*ls'. |
@@ -218,10 +218,10 @@ ms.topic: include
 | 11510 | 16 | No | The metadata could not be determined because the statement '%.\*ls' in the main batch is not compatible with the statement '%.\*ls' in procedure '%.\*ls'. |
 | 11511 | 16 | No | The metadata could not be determined because the statement '%.\*ls' in procedure '%.\*ls' is not compatible with the statement '%.\*ls' in the main batch. |
 | 11512 | 16 | No | The metadata could not be determined because the statement '%.\*ls' in procedure '%.\*ls' is not compatible with the statement '%.\*ls' in procedure '%.\*ls'. |
-| 11513 | 16 | No | The metadata could not be determined because statement '%.\*ls' contains dynamic SQL.  Consider using the WITH RESULT SETS clause to explicitly describe the result set. |
-| 11514 | 16 | No | The metadata could not be determined because statement '%.\*ls' in procedure '%.\*ls'  contains dynamic SQL.  Consider using the WITH RESULT SETS clause to explicitly describe the result set. |
-| 11515 | 16 | No | The metadata could not be determined because statement '%.\*ls' invokes a CLR procedure.  Consider using the WITH RESULT SETS clause to explicitly describe the result set. |
-| 11516 | 16 | No | The metadata could not be determined because statement '%.\*ls' in procedure '%.\*ls' invokes a CLR procedure.  Consider using the WITH RESULT SETS clause to explicitly describe the result set. |
+| 11513 | 16 | No | The metadata could not be determined because statement '%.\*ls' contains dynamic SQL. Consider using the WITH RESULT SETS clause to explicitly describe the result set. |
+| 11514 | 16 | No | The metadata could not be determined because statement '%.\*ls' in procedure '%.\*ls' contains dynamic SQL. Consider using the WITH RESULT SETS clause to explicitly describe the result set. |
+| 11515 | 16 | No | The metadata could not be determined because statement '%.\*ls' invokes a CLR procedure. Consider using the WITH RESULT SETS clause to explicitly describe the result set. |
+| 11516 | 16 | No | The metadata could not be determined because statement '%.\*ls' in procedure '%.\*ls' invokes a CLR procedure. Consider using the WITH RESULT SETS clause to explicitly describe the result set. |
 | 11517 | 16 | No | The metadata could not be determined because statement '%.\*ls' invokes a CLR trigger. |
 | 11518 | 16 | No | The metadata could not be determined because statement '%.\*ls' in procedure '%.\*ls' invokes a CLR trigger. |
 | 11519 | 16 | No | The metadata could not be determined because statement '%.\*ls' invokes an extended stored procedure. |
@@ -230,7 +230,7 @@ ms.topic: include
 | 11522 | 16 | No | The metadata could not be determined because statement '%.\*ls' in procedure '%.\*ls' uses an undeclared parameter in a context that affects its metadata. |
 | 11523 | 16 | No | The metadata could not be determined because statement '%.\*ls' causes indirect recursion. |
 | 11524 | 16 | No | The metadata could not be determined because statement '%.\*ls' in procedure '%.\*ls' causes indirect recursion. |
-| 11525 | 16 | No | The metadata could not be determined because statement '%.\*ls' uses a temp table.  Metadata discovery only supports temp tables when analyzing a single-statement batch. |
+| 11525 | 16 | No | The metadata could not be determined because statement '%.\*ls' uses a temp table. Metadata discovery only supports temp tables when analyzing a single-statement batch. |
 | 11526 | 16 | No | The metadata could not be determined because statement '%.\*ls' in procedure '%.\*ls' uses a temp table. |
 | 11527 | 16 | No | The metadata could not be determined because statement '%.\*ls' does not support metadata discovery. |
 | 11528 | 16 | No | The metadata could not be determined because statement '%.\*ls' in procedure '%.\*ls' does not support metadata discovery. |
@@ -244,13 +244,13 @@ ms.topic: include
 | 11536 | 16 | No | EXECUTE statement failed because its WITH RESULT SETS clause specified %d result set(s), but the statement only sent %d result set(s) at run time. |
 | 11537 | 16 | No | EXECUTE statement failed because its WITH RESULT SETS clause specified %d column(s) for result set number %d, but the statement sent %d column(s) at run time. |
 | 11538 | 16 | No | EXECUTE statement failed because its WITH RESULT SETS clause specified type '%ls' for column #%d in result set #%d, and the corresponding type sent at run time was '%ls'; there is no conversion between the two types. |
-| 11539 | 16 | No | One of the types specified in WITH RESULT SETS clause has been modified after the EXECUTE statement started running.  Please rerun the statement. |
+| 11539 | 16 | No | One of the types specified in WITH RESULT SETS clause has been modified after the EXECUTE statement started running. Please rerun the statement. |
 | 11541 | 16 | No | sp_describe_first_result_set cannot be invoked when SET STATISTICS XML or SET STATISTICS PROFILE is on. |
 | 11542 | 16 | No | sp_describe_undeclared_parameters failed to discover parameter metadata for remote procedure call because parameters were passed by name and by name parameter metadata discovery failed. |
 | 11543 | 16 | No | SET STATISTICS XML ON and SET STATISTICS PROFILE ON are not allowed inside any procedure or batch that executes through an EXECUTE statement that has a WITH RESULT SETS clause. |
 | 11544 | 16 | No | Could not deduce type for parameter in position '%d' for remote call to module '%.\*ls'. |
 | 11545 | 16 | No | Remote result set discovery cannot be done inside SELECT INTO. |
-| 11546 | 16 | No | sp_showmemo_xml cannot run when the STATISTICS XML, STATISTICS PROFILE or SHOWPLAN set option is on.  Set these options to OFF and re-run sp_showmemo_xml. |
+| 11546 | 16 | No | sp_showmemo_xml cannot run when the STATISTICS XML, STATISTICS PROFILE or SHOWPLAN set option is on. Set these options to OFF and re-run sp_showmemo_xml. |
 | 11547 | 16 | No | Only one statement can be used as input parameter to sp_showmemo_xml. Modify the input parameter and re-run the stored procedure. |
 | 11548 | 16 | No | The stored procedure 'sp_showmemo_xml' is not available in this edition of SQL Server. |
 | 11549 | 16 | No | Using stored procedures is not supported. Modify the input parameter and re-run sp_showmemo_xml. |
@@ -355,14 +355,14 @@ ms.topic: include
 | 12006 | 16 | No | Duplicate parameters were passed to the create index statement. Validate the statement against the index-creation syntax. |
 | 12007 | 16 | No | The CREATE %S_MSG statement is missing the required parameter '%.\*ls'. Validate the statement against the index-creation syntax. |
 | 12008 | 16 | No | Table '%.\*ls' does not have a clustered primary key as required by the %S_MSG index. Make sure that the primary key column exists on the table before creating a %S_MSG index. |
-| 12009 | 16 | No | Could not find the %S_MSG index '%.\*ls' on table '%.\*ls'. Either no %S_MSG index with this name exists, or a non-%S_MSG index might be using the same name. Fix the index name, avoiding duplicates. If a  relational index has the same name, drop the regular relational index. |
+| 12009 | 16 | No | Could not find the %S_MSG index '%.\*ls' on table '%.\*ls'. Either no %S_MSG index with this name exists, or a non-%S_MSG index might be using the same name. Fix the index name, avoiding duplicates. If a relational index has the same name, drop the regular relational index. |
 | 12010 | 16 | No | Only one spatial index hint may appear per table, either as the first or the last hinted index. |
 | 12011 | 16 | No | The value of parameter '%.\*ls' of CREATE %S_MSG must be less than %d. |
 | 12012 | 16 | No | The value of parameter '%.\*ls' of CREATE %S_MSG must be greater than %d. |
 | 12013 | 16 | No | The value of parameter '%.\*ls' of CREATE %S_MSG must be greater than the value of parameter '%.\*ls'. |
 | 12014 | 16 | No | The '%.\*ls' parameter of CREATE %S_MSG is incompletely defined. If the parameter has more than one part, all the parts must be defined. |
 | 12015 | 16 | No | The index option %.\*ls in the CREATE %S_MSG statement has to appear before the general index options. |
-| 12016 | 16 | No | Creating a %S_MSG index requires that the primary key in the base table satisfy the following restrictions. The maximum number of primary-key columns is %d.  The maximum combined per-row size of the primary-key columns is %d bytes. The primary key on the base table '%.\*ls' has %d columns, and contains %d bytes. Alter the base table to satisfy the primary-key restrictions imposed by the %S_MSG index. |
+| 12016 | 16 | No | Creating a %S_MSG index requires that the primary key in the base table satisfy the following restrictions. The maximum number of primary-key columns is %d. The maximum combined per-row size of the primary-key columns is %d bytes. The primary key on the base table '%.\*ls' has %d columns, and contains %d bytes. Alter the base table to satisfy the primary-key restrictions imposed by the %S_MSG index. |
 | 12017 | 10 | No | The spatial index is disabled or offline |
 | 12018 | 10 | No | The spatial object is not defined in the scope of the predicate |
 | 12019 | 10 | No | Spatial indexes do not support the comparand supplied in the predicate |
@@ -373,8 +373,8 @@ ms.topic: include
 | 12024 | 10 | No | The spatial parameter references a column that is defined below the predicate |
 | 12025 | 10 | No | Could not find required binary spatial method in a condition |
 | 12026 | 10 | No | Could not find required comparison predicate |
-| 12100 | 16 | No | ALTER DATABASE failed because FILESTREAM filegroups cannot be added to a database that has either the READ_COMMITTED_SNAPSHOT or the ALLOW_SNAPSHOT_ISOLATION option set to ON.  To add FILESTREAM filegroups, you must set READ_COMMITTED_SNAPSHOT and ALLOW_SNAPSHOT_ISOLATION to OFF. |
-| 12101 | 16 | No | Cannot disable change tracking on database '%.\*ls' while client connections are waiting on change notification.  Please close those connections before disabling change tracking. |
+| 12100 | 16 | No | ALTER DATABASE failed because FILESTREAM filegroups cannot be added to a database that has either the READ_COMMITTED_SNAPSHOT or the ALLOW_SNAPSHOT_ISOLATION option set to ON. To add FILESTREAM filegroups, you must set READ_COMMITTED_SNAPSHOT and ALLOW_SNAPSHOT_ISOLATION to OFF. |
+| 12101 | 16 | No | Cannot disable change tracking on database '%.\*ls' while client connections are waiting on change notification. Please close those connections before disabling change tracking. |
 | 12104 | 15 | No | ALTER DATABASE CURRENT failed because '%.\*ls' is a system database. System databases cannot be altered by using the CURRENT keyword. Use the database name to alter a system database. |
 | 12106 | 16 | No | The path name '%.\*ls' is already used by another database file. Change to another valid and UNUSED name. |
 | 12107 | 16 | No | Adding a MEMORY_OPTIMIZED_DATA filegroup is not supported for databases that have one or more publications that use sync_method 'database snapshot' or 'database snapshot character'. |
@@ -569,13 +569,13 @@ ms.topic: include
 | 12821 | 16 | No | sp_migrate_user_to_contained cannot be used on a user used in the EXECUTE AS clause of a signed module. |
 | 12822 | 16 | No | sp_migrate_user_to_contained cannot be used to copy a password to an old hash algorithm. |
 | 12823 | 16 | No | sp_migrate_user_to_contained can not find the login for user '%.\*ls'. |
-| 12824 | 16 | No | The sp_configure value 'contained database authentication' must be set to 1 in order to %S_MSG a contained database.  You may need to use RECONFIGURE to set the value_in_use. |
+| 12824 | 16 | No | The sp_configure value 'contained database authentication' must be set to 1 in order to %S_MSG a contained database. You may need to use RECONFIGURE to set the value_in_use. |
 | 12826 | 16 | Yes | RECONFIGURE WITH OVERRIDE set the 'contained database authentication' to 0 while there are contained databases in use. This will disrupt authentication for contained users and will not allow new contained databases to be created. |
 | 12827 | 16 | No | User-named %ls constraint '%.\*ls' is not allowed on temp table '%.\*ls' because it is being created in a contained database. Please consult the Books Online topic Understanding Contained Databases for more information on contained databases. |
 | 12828 | 16 | No | User-defined %S_MSG '%.\*ls' in tempdb cannot be referenced from local temp table '%.\*ls' because the temp table is being created in a contained database. Please consult the Books Online topic Understanding Contained Databases for more information on contained databases. |
 | 12829 | 16 | No | The stored procedure '%.\*ls' refers to a group of numbered stored procedures. Numbered stored procedures are not available in contained databases. Please consult the Books Online topic Understanding Contained Databases for more information on contained databases. |
 | 12830 | 16 | No | The sp_configure 'user options' setting must be zero if the Database Engine has contained databases. |
-| 12831 | 16 | No | Database '%.\*ls' is a contained database. The option 'contained database authentication' setting is 0.  Users with passwords will not be able to login to contained databases. |
+| 12831 | 16 | No | Database '%.\*ls' is a contained database. The option 'contained database authentication' setting is 0. Users with passwords will not be able to login to contained databases. |
 | 12832 | 16 | Yes | The database '%.\*ls' could not be created or altered to a contained database, because the schema bound %S_MSG '%.\*ls' depends on builtin function '%s'. In a contained database, the output collation of this builtin function has changed to '%.\*ls', which differs from the collation used in a non-contained database. |
 | 12833 | 16 | Yes | The database '%.\*ls' could not be created or altered to a contained database, because the check constraint '%.\*ls' on table '%.\*ls' depends on builtin function '%s'. In a contained database, the output collation of this builtin function has changed to '%.\*ls', which differs from the collation used in a non-contained database. |
 | 12834 | 16 | Yes | The database '%.\*ls' could not be created or altered to a contained database, because the computed column '%.\*ls' on %S_MSG '%.\*ls' depends on builtin function '%s'. In a contained database, the output collation of this builtin function has changed to '%.\*ls', which differs from the collation used in a non-contained database. |

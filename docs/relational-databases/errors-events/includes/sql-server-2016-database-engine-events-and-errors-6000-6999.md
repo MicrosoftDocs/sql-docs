@@ -2,10 +2,10 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 02/17/2023
+ms.date: 07/06/2023
 ms.topic: include
 ---
-| Error| Severity | Event logged | Description|
+| Error | Severity | Event logged | Description |
 | :--- | :--- | :--- | :--- |
 | 6001 | 10 | No | SHUTDOWN is waiting for %d process(es) to complete. |
 | 6004 | 10 | No | User does not have permission to perform this action. |
@@ -37,16 +37,16 @@ ms.topic: include
 | 6203 | 16 | No | Method '%ls' of type '%ls' in assembly '%.\*ls' cannot be marked as a mutator. A mutator method must be non-static, public, and returns void type. |
 | 6204 | 16 | No | Trying to send a record with %d columns(s) in a result set with %d column(s). |
 | 6205 | 16 | No | %s ASSEMBLY failed because assembly '%.\*ls' was compiled with /UNSAFE option, but the assembly was not registered with the required PERMISSION_SET = UNSAFE option. |
-| 6206 | 16 | No | Request submitted with too many parameters.  The maximum number is %ld. |
+| 6206 | 16 | No | Request submitted with too many parameters. The maximum number is %ld. |
 | 6207 | 16 | No | Error converting %.\*ls to fixed length binary type. The result would be padded and cannot be converted back. |
 | 6208 | 16 | No | %s failed because the parameter count for the FillRow method should be one more than the SQL declaration for the table valued CLR function. |
 | 6209 | 16 | No | Unsound ordering on CLR type "%.\*ls": returning NULL on non-NULL inputs. |
 | 6210 | 16 | No | CLR type '%.\*ls' is not fully comparable. |
-| 6211 | 16 | No | %s ASSEMBLY failed because type '%.\*ls' in %.\*ls assembly '%.\*ls' has a static field '%.\*ls'. Attributes of static fields in %.\*ls assemblies must be marked  readonly in Visual C#, ReadOnly in Visual Basic, or initonly in Visual C++ and intermediate language. |
-| 6212 | 16 | No | %s ASSEMBLY failed because method '%.\*ls' on type '%.\*ls'  in %.\*ls assembly '%.\*ls' is storing to a static field. Storing to a static field is not allowed in %.\*ls assemblies. |
+| 6211 | 16 | No | %s ASSEMBLY failed because type '%.\*ls' in %.\*ls assembly '%.\*ls' has a static field '%.\*ls'. Attributes of static fields in %.\*ls assemblies must be marked readonly in Visual C#, ReadOnly in Visual Basic, or initonly in Visual C++ and intermediate language. |
+| 6212 | 16 | No | %s ASSEMBLY failed because method '%.\*ls' on type '%.\*ls' in %.\*ls assembly '%.\*ls' is storing to a static field. Storing to a static field is not allowed in %.\*ls assemblies. |
 | 6213 | 16 | No | %s ASSEMBLY failed because method "%.\*ls" on type "%.\*ls" in %.\*ls assembly "%.\*ls" has a synchronized attribute. Explicit synchronization is not allowed in %.\*ls assemblies. |
 | 6214 | 16 | No | %s ASSEMBLY failed because assembly "%.\*ls" has an unmanaged entry point. |
-| 6215 | 16 | No | %s ASSEMBLY failed because method '%.\*ls' on type '%.\*ls'  in %.\*ls assembly '%.\*ls' has invalid attribute 0x%x. |
+| 6215 | 16 | No | %s ASSEMBLY failed because method '%.\*ls' on type '%.\*ls' in %.\*ls assembly '%.\*ls' has invalid attribute 0x%x. |
 | 6216 | 16 | No | %s ASSEMBLY failed because type "%.\*ls" in %.\*ls assembly "%.\*ls" has a finalizer. Finalizers are not allowed in %.\*ls assemblies. |
 | 6217 | 16 | No | ALTER ASSEMBLY ADD FILE failed because the file, "%.\*ls", being added is empty. |
 | 6218 | 16 | No | %s ASSEMBLY for assembly '%.\*ls' failed because assembly '%.\*ls' failed verification. Check if the referenced assemblies are up-to-date and trusted (for external_access or unsafe) to execute in the database. CLR Verifier error messages if any will follow this message%.\*ls |
@@ -87,7 +87,7 @@ ms.topic: include
 | 6253 | 10 | Yes | Common language runtime (CLR) functionality initialized using CLR version %ls from %ls. |
 | 6254 | 10 | Yes | Common language runtime (CLR) functionality initialized. |
 | 6255 | 16 | No | %s failed because type "%s" does not conform to the %s specification: missing custom attribute "%.\*ls". |
-| 6256 | 16 | No | SqlPipe request submitted with too many columns.  The maximum number is %d. |
+| 6256 | 16 | No | SqlPipe request submitted with too many columns. The maximum number is %d. |
 | 6257 | 16 | No | CREATE ASSEMBLY for assembly '%.\*ls' failed because the assembly is built for an unsupported version of the Common Language Runtime. |
 | 6258 | 16 | No | Function signature of "FillRow" method (as designated by SqlFunctionAttribute.FillRowMethodName) does not match SQL declaration for table valued CLR function'%.\*ls' due to column %d. |
 | 6259 | 16 | No | Assembly '%.\*ls' could not be loaded because it failed verification. %.\*ls |
@@ -139,7 +139,7 @@ ms.topic: include
 | 6307 | 16 | No | XML well-formedness check: Attribute cannot appear outside of element declaration. Rewrite your XQuery so it returns well-formed XML. |
 | 6308 | 16 | No | XML well-formedness check: Duplicate attribute '%.\*ls'. Rewrite your XQuery so it returns well-formed XML. |
 | 6309 | 16 | No | XML well-formedness check: the data for node '%.\*ls' contains a character (0x%04X) which is not allowed in XML. |
-| 6310 | 16 | No | Altering existing schema components is not allowed.  There was an attempt to modify an existing XML Schema component, component namespace: '%.\*ls' component name: '%.\*ls' component kind:%.\*ls |
+| 6310 | 16 | No | Altering existing schema components is not allowed. There was an attempt to modify an existing XML Schema component, component namespace: '%.\*ls' component name: '%.\*ls' component kind:%.\*ls |
 | 6311 | 16 | No | An internal XMLDB schema processor error occurred. Contact Technical Support for assistance. |
 | 6312 | 16 | No | Could not find schema components with target namespace '%.\*ls' in collection '%.\*ls'. |
 | 6314 | 16 | No | Collection specified does not exist in metadata : '%.\*ls' |
@@ -148,7 +148,7 @@ ms.topic: include
 | 6317 | 16 | No | XQuery: Cannot update with value '%.\*ls' because it failed validation against type '{%.\*ls}%.\*ls' |
 | 6318 | 16 | No | XQuery: String conversion failed during UPDATE validation |
 | 6320 | 16 | No | XQuery: Only nillable elements or text nodes can be updated with empty sequence |
-| 6321 | 16 | No | xml:space attribute must have a value of 'preserve' or 'default'.  '%.\*ls' is not valid. |
+| 6321 | 16 | No | xml:space attribute must have a value of 'preserve' or 'default'. '%.\*ls' is not valid. |
 | 6322 | 16 | No | XML Parser ran out of memory. This could be caused by too many attributes or namespace declarations. |
 | 6323 | 16 | No | The xml schema collection for variable '%.\*ls' has been altered while the batch was being executed. Remove all XML schema collection DDL operations it is dependent on from the batch, and re-run the batch. |
 | 6324 | 16 | No | DROP XML INDEX does not support any options. |
@@ -165,7 +165,7 @@ ms.topic: include
 | 6335 | 16 | No | XML datatype instance has too many levels of nested nodes. Maximum allowed depth is %d levels. |
 | 6336 | 16 | No | Maximum size of primary index of table '%.\*ls' is %d bytes. CREATE XML INDEX requires that such size should be limited to %d bytes |
 | 6337 | 16 | No | '%.\*ls' is not a valid XML Index name because it starts with '%c' character. XML Index name should not start with '#' or '@' |
-| 6338 | 10 | No | XML DTD has been stripped from one or more XML fragments.  External subsets, if any, have been ignored. |
+| 6338 | 10 | No | XML DTD has been stripped from one or more XML fragments. External subsets, if any, have been ignored. |
 | 6339 | 16 | No | Specified collection '%.\*ls' cannot be modified because it is SQL Server built-in XML Schema Collection. |
 | 6340 | 16 | No | Xml schema collection '%.\*ls' referenced by table variable '%.\*ls' has been dropped or altered during the execution of the batch. Please re-run the batch. |
 | 6341 | 16 | No | Xml schema collection referenced by column '%.\*ls' of table variable '%.\*ls' has been dropped or altered during the execution of the batch. Please re-run the batch. |
@@ -182,8 +182,8 @@ ms.topic: include
 | 6353 | 16 | No | Serialization of built-in schemata is not supported. |
 | 6354 | 16 | No | Target string size is too small to represent the XML instance |
 | 6355 | 16 | No | Conversion of one or more characters from XML to target collation impossible |
-| 6356 | 16 | No | Failed to load DLL.  Make sure xmlrw.dll exists in the SQL Server installation. |
-| 6357 | 16 | No | Internal error: cannot locate CreateInfoSetReaderEx in xmlrw.dll.  You may have an incorrect version of xmlrw.dll. |
+| 6356 | 16 | No | Failed to load DLL. Make sure xmlrw.dll exists in the SQL Server installation. |
+| 6357 | 16 | No | Internal error: cannot locate CreateInfoSetReaderEx in xmlrw.dll. You may have an incorrect version of xmlrw.dll. |
 | 6358 | 16 | No | %d is not a valid style number when converting to XML. |
 | 6359 | 16 | No | Parsing XML with internal subset DTDs not allowed. Use CONVERT with style option 2 to enable limited internal subset DTD support. |
 | 6360 | 16 | No | %d is not a valid style number when converting from XML. |
@@ -287,7 +287,7 @@ ms.topic: include
 | 6557 | 16 | No | %s failed because type '%s' does not conform to %s specification due to field '%s'. |
 | 6558 | 16 | No | %s failed because type '%s' does not conform to %s specification due to method '%s'. |
 | 6559 | 20 | Yes | Could not find type ID %d in database %.\*ls. This is due to a schema inconsistency. |
-| 6560 | 16 | No | Assembly "%.\*ls" is a system assembly.  This operation is permitted only with user assemblies. |
+| 6560 | 16 | No | Assembly "%.\*ls" is a system assembly. This operation is permitted only with user assemblies. |
 | 6561 | 16 | No | Could not find file '%s' in directory '%s%s'. |
 | 6562 | 16 | No | Version mismatch between files '%ls' (%d.%d.%d) and '%ls' (%d.%d.%d). |
 | 6563 | 16 | No | Method, property or field '%ls' in class '%ls' in assembly '%.\*ls' has invalid return type. |
@@ -326,7 +326,7 @@ ms.topic: include
 | 6596 | 16 | No | %s ASSEMBLY failed because assembly '%ls' is a system assembly. Consider creating a user assembly to wrap desired functionality. |
 | 6597 | 16 | No | CREATE %s failed. |
 | 6598 | 16 | No | DROP ASSEMBLY failed because '%ls' is referenced by CLR type '%ls'. |
-| 6599 | 16 | No | Found an empty native serialization class  '%.\*ls'. Empty native serialization classes are not allowed. |
+| 6599 | 16 | No | Found an empty native serialization class '%.\*ls'. Empty native serialization classes are not allowed. |
 | 6600 | 16 | No | XML error: %.\*ls |
 | 6601 | 10 | No | The XML parse error 0x%x occurred on line number %d, near the XML text "%.\*ls". |
 | [6602](../mssqlserver-6602-database-engine-error.md) | 16 | No | The error description is '%.\*ls'. |
@@ -354,10 +354,10 @@ ms.topic: include
 | 6634 | 16 | No | OpenXML cannot be used as the target of a DML or OUTPUT INTO operation. |
 | 6635 | 16 | No | The compressed showplan xml stream is corrupted. |
 | 6636 | 16 | No | Unable to read the compressed showplan xml because it was made with a newer version of SQL server. |
-| 6700 | 16 | No | XQuery: The  ' %ls'  operation is not supported. |
+| 6700 | 16 | No | XQuery: The ' %ls' operation is not supported. |
 | 6701 | 16 | No | The version of the XML index that you are trying to use is not supported anymore. Please drop and recreate the XML index. |
-| 6716 | 16 | No | XML Node ID is invalid.  Re-build the database if the problem persists. |
-| 6717 | 16 | No | XQuery: The document tree is too deep.  If the problem persists you must simplify the XML hierarchy. |
+| 6716 | 16 | No | XML Node ID is invalid. Re-build the database if the problem persists. |
+| 6717 | 16 | No | XQuery: The document tree is too deep. If the problem persists you must simplify the XML hierarchy. |
 | 6718 | 16 | No | XQuery: Invalid ordpath string: "%s" |
 | 6739 | 16 | No | XQuery: SQL type '%s' is not supported in XQuery. |
 | 6743 | 16 | No | XQuery: The maximum allowed depth in XML instances is %d levels. One of the paths in the query tries to access nodes at a lower level. |
@@ -374,7 +374,7 @@ ms.topic: include
 | 6808 | 16 | No | XML tag ID %d could not be added. The server memory resources may be low. |
 | 6809 | 16 | No | Unnamed tables cannot be used as XML identifiers as well as unnamed columns cannot be used for attribute names. Name unnamed columns/tables using AS in the SELECT statement. |
 | 6810 | 16 | No | Column name '%.\*ls' is repeated. The same attribute cannot be generated more than once on the same XML tag. |
-| 6811 | 16 | No | FOR XML is incompatible with COMPUTE expressions.  Remove the COMPUTE expression. |
+| 6811 | 16 | No | FOR XML is incompatible with COMPUTE expressions. Remove the COMPUTE expression. |
 | 6812 | 16 | No | XML tag ID %d that was originally declared as '%.\*ls' is being redeclared as '%.\*ls'. |
 | 6813 | 16 | No | FOR XML EXPLICIT cannot combine multiple occurrences of ID, IDREF, IDREFS, NMTOKEN, and/or NMTOKENS in column name '%.\*ls'. |
 | 6814 | 16 | No | In the FOR XML EXPLICIT clause, ID, IDREF, IDREFS, NMTOKEN, and NMTOKENS require attribute names in '%.\*ls'. |
@@ -397,7 +397,7 @@ ms.topic: include
 | 6834 | 16 | No | XMLTEXT field '%.\*ls' contains an invalid XML document. Check the root tag and its attributes. |
 | 6835 | 16 | No | FOR XML EXPLICIT field '%.\*ls' can specify the directive HIDE only once. |
 | 6836 | 16 | No | FOR XML EXPLICIT requires attribute-centric IDREFS or NMTOKENS field '%.\*ls' to precede element-centric IDREFS/NMTOKEN fields. |
-| 6838 | 16 | No | Attribute-centric IDREFS or NMTOKENS field not supported on tags having element-centric field '%.\*ls' of type TEXT/NTEXT or IMAGE.  Either specify ELEMENT on IDREFS/NMTOKENS field or remove the ELEMENT directive. |
+| 6838 | 16 | No | Attribute-centric IDREFS or NMTOKENS field not supported on tags having element-centric field '%.\*ls' of type TEXT/NTEXT or IMAGE. Either specify ELEMENT on IDREFS/NMTOKENS field or remove the ELEMENT directive. |
 | 6839 | 16 | No | FOR XML EXPLICIT does not support XMLTEXT field on tag '%.\*ls' that has IDREFS or NMTOKENS fields. |
 | 6840 | 16 | No | Neither XMLDATA nor XMLSCHEMA supports namespace elements or attributes such as '%.\*ls'. Run the SELECT FOR XML statement without it or remove the namespace prefix declaration. |
 | 6841 | 16 | No | FOR XML could not serialize the data for node '%.\*ls' because it contains a character (0x%04X) which is not allowed in XML. To retrieve this data using FOR XML, convert it to binary, varbinary or image data type and use the BINARY BASE64 directive. |
@@ -499,7 +499,7 @@ ms.topic: include
 | 6958 | 16 | No | Invalid definition for type '%s'. An 'all' group may not appear as the child or parent of any other model group, it must have minOccurs = maxOccurs = 1, its child elements must have maxOccurs = 1 |
 | 6959 | 16 | No | Invalid definition, top level group definitions can not have model groups as siblings |
 | 6960 | 16 | No | Component '%s' is outside of allowed range. Maximum for 'fractionDigits' is 10 and maximum number of digits for non fractional part is 28 |
-| 6961 | 16 | No | The system limit on the number of XML types has been reached.  Redesign your database to use fewer XML types. |
+| 6961 | 16 | No | The system limit on the number of XML types has been reached. Redesign your database to use fewer XML types. |
 | 6962 | 16 | No | 'default' and 'fixed' values are not allowed on element of this type: '%s' |
 | 6963 | 16 | No | 'Default' or 'Fixed' value is longer than allowed, maximum length allowed is 4000 characters : '%s' |
 | 6964 | 16 | No | Facet value is longer than allowed, maximum length allowed is 4000 characters : '%s' |

@@ -48,9 +48,9 @@ None.
 
 ## Remarks
 
-Change data capture can't be enabled on [system databases](../../relational-databases/databases/system-databases.md) or distribution databases.
+Change data capture can't be enabled on [system databases](../databases/system-databases.md) or distribution databases.
 
-`sys.sp_cdc_enable_db` creates the change data capture objects that have database wide scope, including meta data tables and DDL triggers. It also creates the CDC schema and CDC database user and sets the `is_cdc_enabled` column for the database entry in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view to `1`.
+`sys.sp_cdc_enable_db` creates the change data capture objects that have database wide scope, including meta data tables and DDL triggers. It also creates the CDC schema and CDC database user and sets the `is_cdc_enabled` column for the database entry in the [sys.databases](../system-catalog-views/sys-databases-transact-sql.md) catalog view to `1`.
 
 ## Permissions
 

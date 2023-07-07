@@ -200,5 +200,5 @@ GO
 - [sp_delete_alert (Transact-SQL)](sp-delete-alert-transact-sql.md)
 - [sp_help_alert (Transact-SQL)](sp-help-alert-transact-sql.md)
 - [sp_update_alert (Transact-SQL)](sp-update-alert-transact-sql.md)
-- [sys.sysperfinfo (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-sysperfinfo-transact-sql.md)
+- [sys.sysperfinfo (Transact-SQL)](../system-compatibility-views/sys-sysperfinfo-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

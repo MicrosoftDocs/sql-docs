@@ -116,7 +116,7 @@ The ID of the primary database for the log shipping configuration. *@primary_id*
 
 #### [ @backup_compression = ] *backup_compression_option*
 
-Specifies whether a log shipping configuration uses [backup compression](../../relational-databases/backup-restore/backup-compression-sql-server.md).
+Specifies whether a log shipping configuration uses [backup compression](../backup-restore/backup-compression-sql-server.md).
 
 - `0`: Disabled. Never compress log backups.
 - `1`: Enabled. Always compress log backups.

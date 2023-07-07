@@ -2,10 +2,10 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 02/17/2023
+ms.date: 07/06/2023
 ms.topic: include
 ---
-| Error| Severity | Event logged | Description|
+| Error | Severity | Event logged | Description |
 | :--- | :--- | :--- | :--- |
 | 16001 | 16 | No | Data masking is not supported for the data type of column '%.\*ls'. |
 | 16002 | 16 | No | Invalid data masking function in column '%.\*ls'. |
@@ -342,7 +342,7 @@ ms.topic: include
 | 17122 | 10 | Yes | Trace flag %d is discontinued. Use the options provided with ALTER DATABASE. |
 | 17123 | 10 | Yes | Logging to event log is disabled. Startup option '-%c' is supplied, either from the registry or the command prompt. |
 | 17124 | 10 | Yes | SQL Server has been configured for lightweight pooling. This is an informational message; no user action is required. |
-| 17125 | 10 | Yes | Using dynamic lock allocation.  Initial allocation of %I64u Lock blocks and %I64u Lock Owner blocks per node.  This is an informational message only.  No user action is required. |
+| 17125 | 10 | Yes | Using dynamic lock allocation. Initial allocation of %I64u Lock blocks and %I64u Lock Owner blocks per node. This is an informational message only. No user action is required. |
 | 17126 | 10 | Yes | SQL Server is now ready for client connections. This is an informational message; no user action is required. |
 | 17127 | 16 | Yes | initdata: No memory for kernel buffer hash table. |
 | [17128](../mssqlserver-17128-database-engine-error.md) | 16 | Yes | initdata: No memory for kernel buffers. |
@@ -366,8 +366,8 @@ ms.topic: include
 | 17146 | 10 | Yes | SQL Server is allowing new connections in response to 'continue' request from Service Control Manager. This is an informational message only. No user action is required. |
 | [17147](../mssqlserver-17147-database-engine-error.md) | 10 | Yes | SQL Server is terminating because of a system shutdown. This is an informational message only. No user action is required. |
 | [17148](../mssqlserver-17148-database-engine-error.md) | 10 | Yes | SQL Server is terminating in response to a 'stop' request from Service Control Manager. This is an informational message only. No user action is required. |
-| 17149 | 10 | Yes | Using the static lock allocation specified in the locks configuration option.  Allocated %I64u Lock blocks and %I64u Lock Owner blocks per node.  This is an informational message only. No user action is required. |
-| 17150 | 10 | Yes | Lock partitioning is enabled.  This is an informational message only. No user action is required. |
+| 17149 | 10 | Yes | Using the static lock allocation specified in the locks configuration option. Allocated %I64u Lock blocks and %I64u Lock Owner blocks per node. This is an informational message only. No user action is required. |
+| 17150 | 10 | Yes | Lock partitioning is enabled. This is an informational message only. No user action is required. |
 | 17152 | 10 | Yes | Node configuration: node %ld: CPU mask: 0x%0\*I64x:%u Active CPU mask: 0x%0\*I64x:%u. This message provides a description of the NUMA configuration for this computer. This is an informational message only. No user action is required. |
 | 17153 | 10 | Yes | Processor affinity turned on: node %d, processor mask 0x%0\*I64x. Threads will execute on CPUs per affinity settings. This is an informational message; no user action is required. |
 | 17155 | 10 | Yes | I/O affinity turned on, processor mask 0x%0\*I64x. Disk I/Os will execute on CPUs per affinity I/O mask/affinity64 mask config option. This is an informational message only; no user action is required. |
@@ -415,7 +415,7 @@ ms.topic: include
 | 17201 | 10 | Yes | Dedicated admin connection support was established for listening locally on port %d. |
 | 17202 | 10 | Yes | Dedicated admin connection support was established for listening remotely on port %d. |
 | 17203 | 16 | Yes | SQL Server cannot start on this machine. The processor(s) (CPU) model does not support all instructions needed for SQL Server to run. Refer to the System Requirements section in BOL for further information. |
-| [17204](../mssqlserver-17204-database-engine-error.md) | 16 | Yes | %ls: Could not open file %ls for file number %d.  OS error: %ls. |
+| [17204](../mssqlserver-17204-database-engine-error.md) | 16 | Yes | %ls: Could not open file %ls for file number %d. OS error: %ls. |
 | 17205 | 10 | Yes | File %ls in database %ls has been set to sparse by the file system but does not belong to a database snapshot. The file should be restored to correct the problem. |
 | 17206 | 10 | Yes | File %ls, file number %d for dbid %d is successfully %ls mapped for use by Hybrid Buffer Pool. |
 | [17207](../mssqlserver-17207-database-engine-error.md) | 16 | Yes | %ls: Operating system error %ls occurred while creating or opening file '%ls'. Diagnose and correct the operating system error, and retry the operation. |
@@ -431,7 +431,7 @@ ms.topic: include
 | 17261 | 16 | Yes | initdata: No shared memory for kernel buffers. |
 | 17262 | 16 | Yes | Replicated master not available for server state initialization during startup. |
 | 17263 | 16 | Yes | Contained availability group master database not available for server state initialization during startup. |
-| 17264 | 10 | Yes | CPU vectorization level(s) detected:  %ls |
+| 17264 | 10 | Yes | CPU vectorization level(s) detected: %ls |
 | [17300](../mssqlserver-17300-database-engine-error.md) | 16 | Yes | SQL Server was unable to run a new system task, either because there is insufficient memory or the number of configured sessions exceeds the maximum allowed in the server. Verify that the server has adequate memory. Use sp_configure with option 'user connections' to check the maximum number of user connections allowed. Use sys.dm_exec_sessions to check the current number of sessions, including user processes. |
 | 17303 | 16 | Yes | The session with SPID %d was found to be invalid during termination, possibly because of corruption in the session structure. Contact Product Support Services. |
 | 17305 | 16 | Yes | SQL server is started in a safe boot mode. No new connections can be created. This is informational message. |

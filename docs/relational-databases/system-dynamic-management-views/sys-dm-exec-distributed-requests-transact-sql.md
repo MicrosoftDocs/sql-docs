@@ -31,10 +31,10 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-curren
 |-----------------|---------------|-----------------|-----------|  
 |sql_handle|**varbinary(64)**|Key for this view. Unique numeric id associated with the request.|Unique across all requests in the system.|  
 |execution_id|**nvarchar(32**|Unique numeric id associated with the session in which this query was run.||  
-|status|**nvarchar(32**|Current status of the request.|'Pending', 'Authorizing', 'AcquireSystemResources', 'Initializing', 'Plan', 'Parsing', 'AquireResources', 'Running', 'Cancelling', 'Complete', 'Failed', 'Cancelled'.|  
+|status|**nvarchar(32**|Current status of the request.|'Pending', 'Authorizing', 'AcquireSystemResources', 'Initializing', 'Plan', 'Parsing', 'AcquireResources', 'Running', 'Cancelling', 'Complete', 'Failed', 'Cancelled'.|  
 |error_id|**nvarchar(36)**|Unique id of the error associated with the request, if any.|Set to NULL if no error occurred.|  
 |start_time|**datetime**|Time at which the request execution was started.|0 for queued requests; otherwise, valid datetime smaller or equal to current time.|  
-|end_time|**datetime**|Time at which the engine completed compiling the request.|Null for queued or active requests; otherwise, a valid datetime smaller or equal to current time.|  
+|end_time|**datetime**|Time at which the engine completed compiling the request.|NULL for queued or active requests; otherwise, a valid datetime smaller or equal to current time.|  
 |total_elapsed_time|**int**|Time elapsed in execution since the request was started, in milliseconds.|Between 0 and the difference between start_time and end_time.If total_elapsed_time exceeds the maximum value for an integer, total_elapsed_time will continue to be the maximum value. This condition will generate the warning "The maximum value has been exceeded." The maximum value in milliseconds is equivalent to 24.8 days.|  
   
 ## See Also  

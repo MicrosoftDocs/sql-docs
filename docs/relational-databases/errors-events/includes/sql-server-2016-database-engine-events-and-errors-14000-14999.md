@@ -2,10 +2,10 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 02/17/2023
+ms.date: 07/06/2023
 ms.topic: include
 ---
-| Error| Severity | Event logged | Description|
+| Error | Severity | Event logged | Description |
 | :--- | :--- | :--- | :--- |
 | 14002 | 16 | No | Could not find the 'Sync' subsystem with the task ID %ld. |
 | 14003 | 16 | No | You must supply a publication name. |
@@ -26,11 +26,11 @@ ms.topic: include
 | 14019 | 16 | No | The @operation parameter value must be either add, drop, or alter. |
 | 14020 | 16 | No | Could not obtain the column ID for the specified column. Schema replication failed. |
 | 14021 | 16 | No | The column was not added correctly to the article. |
-| 14022 | 16 | No | The @property parameter value must be either  'description', 'sync_object', 'type', 'ins_cmd', 'del_cmd', 'upd_cmd', 'filter', 'dest_table', 'dest_object', 'creation_script', 'pre_creation_cmd', 'status', 'schema_option', or 'destination_owner'. |
-| 14023 | 16 | No | The type must be '\[indexed view \]logbased\[ (manualview\|manualfilter\|manualboth)\]', '\[serializable \]proc exec',  or '(view\|indexed view\|proc\|func\|aggregate\|synonym) schema only'. |
+| 14022 | 16 | No | The @property parameter value must be either 'description', 'sync_object', 'type', 'ins_cmd', 'del_cmd', 'upd_cmd', 'filter', 'dest_table', 'dest_object', 'creation_script', 'pre_creation_cmd', 'status', 'schema_option', or 'destination_owner'. |
+| 14023 | 16 | No | The type must be '\[indexed view \]logbased\[ (manualview\|manualfilter\|manualboth)\]', '\[serializable \]proc exec', or '(view\|indexed view\|proc\|func\|aggregate\|synonym) schema only'. |
 | 14024 | 16 | No | The value of property 'subscriber_provider' cannot be NULL. |
 | 14025 | 10 | No | Article update successful. |
-| 14026 | 16 | No | The value of property 'subscriber_type is not a supported heterogeneous subscriber type.  The value must be 1 (ODBC subscriber), or 3 (OLEDB subscriber). |
+| 14026 | 16 | No | The value of property 'subscriber_type is not a supported heterogeneous subscriber type. The value must be 1 (ODBC subscriber), or 3 (OLEDB subscriber). |
 | 14027 | 11 | No | %s does not exist in the current database. |
 | 14028 | 16 | No | Only user tables, materialized views, and stored procedures can be published as 'logbased' articles. |
 | 14029 | 16 | No | The vertical partition switch must be either 'true' or 'false'. |
@@ -45,7 +45,7 @@ ms.topic: include
 | 14038 | 16 | No | Could not disable database for publishing. |
 | 14039 | 16 | No | Could not construct column clause for article view. Reduce the number of columns or create the view manually. |
 | 14040 | 16 | No | The server '%s' is already a Subscriber. |
-| 14041 | 16 | No | The '%s' property can only be changed if the publication is enabled for heterogeneous subscriptions.  The publication is not enabled. |
+| 14041 | 16 | No | The '%s' property can only be changed if the publication is enabled for heterogeneous subscriptions. The publication is not enabled. |
 | 14042 | 16 | No | Could not create Subscriber. |
 | 14043 | 16 | No | The parameter %s passed to stored procedure %s cannot be NULL. |
 | 14044 | 16 | No | Unable to clear subscriber status for the server. |
@@ -90,7 +90,7 @@ ms.topic: include
 | 14092 | 16 | No | Could not change article because there is an existing subscription to the article. |
 | 14093 | 16 | No | Cannot grant or revoke access directly on publication '%s' because it uses the default publication access list. |
 | 14094 | 16 | No | Could not subscribe to article '%s' because heterogeneous Subscriber '%s' does not support the @pre_creation_cmd parameter value 'truncate'. |
-| 14095 | 16 | No | The value for the @sync_method parameter is not valid. Could not subscribe to publication '%s' because non-SQL Server Subscriber '%s' only supports values of  'character', 'bcp character', 'concurrent_c', and 'database snapshot character' for the @sync_method parameter. |
+| 14095 | 16 | No | The value for the @sync_method parameter is not valid. Could not subscribe to publication '%s' because non-SQL Server Subscriber '%s' only supports values of 'character', 'bcp character', 'concurrent_c', and 'database snapshot character' for the @sync_method parameter. |
 | 14096 | 16 | No | The path and name of the table creation script must be specified if the @pre_creation_cmd parameter value is 'drop'. |
 | 14097 | 16 | No | The 'status' value must be 'no column names', 'include column names', 'string literals', 'parameters', 'DTS horizontal partitions' or 'no DTS horizontal partitions'. |
 | 14098 | 16 | No | Cannot drop Distribution Publisher '%s'. The remote Publisher is using '%s' as Distributor. Disable publishing at the Publisher before attempting to drop this relationship. |
@@ -163,7 +163,7 @@ ms.topic: include
 | 14201 | 10 | No | 0 (all steps) .. |
 | 14202 | 10 | No | before or after @active_start_time |
 | 14203 | 10 | No | sp_helplogins \[excluding Windows NT groups\] |
-| 14204 | 10 | No | 0 (non-idle), 1 (executing), 2 (waiting for thread), 3 (between retries), 4 (idle),  5 (suspended), 7 (performing completion actions) |
+| 14204 | 10 | No | 0 (non-idle), 1 (executing), 2 (waiting for thread), 3 (between retries), 4 (idle), 5 (suspended), 7 (performing completion actions) |
 | 14205 | 10 | No | (unknown) |
 | 14206 | 10 | No | 0..n seconds |
 | 14207 | 10 | No | -1 \[no maximum\], 0..n |
@@ -359,7 +359,7 @@ ms.topic: include
 | 14538 | 10 | No | SSIS package execution subsystem |
 | 14539 | 16 | No | Only a Standard or Enterprise edition of SQL Server can be enlisted into an MSX. |
 | 14540 | 16 | No | Only a SQL Server running on Microsoft Windows NT can be enlisted into an MSX. |
-| 14541 | 16 | No | The version of the MSX (%s) is not recent enough to support this TSX.  Version %s or later is required at the MSX. |
+| 14541 | 16 | No | The version of the MSX (%s) is not recent enough to support this TSX. Version %s or later is required at the MSX. |
 | 14542 | 16 | No | It is invalid for any TSQL step of a multiserver job to have a non-null %s value. |
 | 14543 | 16 | No | Login '%s' owns one or more multiserver jobs. Ownership of these jobs can only be assigned to members of the %s role. |
 | 14544 | 16 | No | This job is owned by '%s'. Only a job owned by a member of the %s role can be a multiserver job. |
@@ -469,10 +469,10 @@ ms.topic: include
 | 14649 | 16 | No | Unable to test profile. Database Mail is stopped. Use sysmail_start_sp to start Database Mail. |
 | 14650 | 16 | No | Service Broker message delivery is not enabled in this database. Use the ALTER DATABASE statement to enable Service Broker message delivery. |
 | 14651 | 16 | No | Unable to test profile. Service Broker message delivery is not enabled in this database. Use the ALTER DATABASE statement to enable Service Broker message delivery. |
-| 14652 | 16 | No | Invalid message received on the ExternalMailQueue. conversation_handle: %s.  message_type_name: %s.  message body: %s. |
-| 14653 | 16 | No | Invalid %s value received on the ExternalMailQueue. conversation_handle: %s.  message_type_name: %s.  message body: %s. |
-| 14654 | 10 | No | Unexpected message received on the ExternalMailQueue. conversation_handle: %s.  message_type_name: %s.  message body: %s. |
-| 14655 | 16 | No | Invalid XML message format received on the ExternalMailQueue. conversation_handle: %s.  message_type_name: %s.  message body: %s. |
+| 14652 | 16 | No | Invalid message received on the ExternalMailQueue. conversation_handle: %s. message_type_name: %s. message body: %s. |
+| 14653 | 16 | No | Invalid %s value received on the ExternalMailQueue. conversation_handle: %s. message_type_name: %s. message body: %s. |
+| 14654 | 10 | No | Unexpected message received on the ExternalMailQueue. conversation_handle: %s. message_type_name: %s. message body: %s. |
+| 14655 | 16 | No | Invalid XML message format received on the ExternalMailQueue. conversation_handle: %s. message_type_name: %s. message body: %s. |
 | 14657 | 16 | No | Mail not queued. Maximum number of mails per day (%ld) for login %s has been exceeded. |
 | 14658 | 16 | No | Failed to retrieve SQLPath for syssubsystems population. |
 | 14659 | 16 | No | Failed to retrieve VerSpecificRootDir for syssubsystems population. |
@@ -512,7 +512,7 @@ ms.topic: include
 | 14694 | 16 | No | Cannot upload data on-demand for the collection set '%s' in non-cached mode. |
 | 14695 | 16 | No | Cannot collect data on-demand for the collection set '%s' in cached mode. |
 | 14696 | 16 | No | Cannot update or delete a system collection set, or add new collection items to it. |
-| 14697 | 16 | No | Unable to convert showplan to XML.  Error #%d on Line %d: %s |
+| 14697 | 16 | No | Unable to convert showplan to XML. Error #%d on Line %d: %s |
 | 14698 | 10 | No | PowerShell Subsystem |
 | 14699 | 16 | No | Data Collector cannot be enabled when SQL Server Agent is stopped. Start SQL Server Agent. |
 | 14700 | 10 | No | Collects data about the disk and log usage for all databases. |
@@ -554,9 +554,9 @@ ms.topic: include
 | 14817 | 16 | No | The server '%s' is not accessible. Ensure that the remote server exists and the Azure SQL DB Firewall Rules permit access to the server. If you believe that your server should be accessible please retry the command. |
 | 14818 | 10 | No | The %ls on table '%ls' will not be enforced because of the use of REMOTE_DATA_ARCHIVE. |
 | 14819 | 20 | No | Stretch operation failed due to an internal error. |
-| 14820 | 20 | No | The stretch code generator output is corrupted.  Stretch code generation and remote table provisioning will be re-tried. |
+| 14820 | 20 | No | The stretch code generator output is corrupted. Stretch code generation and remote table provisioning will be re-tried. |
 | 14821 | 16 | No | Cannot execute in REMOTE_ONLY mode since remote part does not exist or is invalid for this operation. |
-| 14822 | 16 | No | '%s' is not a valid option for the @mode parameter. Enter  'ALL', 'LOCAL_ONLY' or 'REMOTE_ONLY'. |
+| 14822 | 16 | No | '%s' is not a valid option for the @mode parameter. Enter 'ALL', 'LOCAL_ONLY' or 'REMOTE_ONLY'. |
 | 14823 | 16 | No | %ls failed on table '%.\*ls' because it is not supported on tables with REMOTE_DATA_ARCHIVE option enabled. |
 | 14824 | 16 | No | Access to REMOTE_DATA_ARCHIVE has been disabled through server configuration option 'remote data archive'. Use "exec sp_configure 'remote data archive', 1" to enable access to the server. |
 | 14825 | 16 | No | Cannot perform '%ls' on table '%.\*ls' because REMOTE_DATA_ARCHIVE is enabled. %ls |
@@ -586,7 +586,7 @@ ms.topic: include
 | 14849 | 16 | No | Attempted Migration failed. Remote insert failed to insert all the rows. Expected rows : %d, Actual remote rows inserted: %d. |
 | 14850 | 16 | No | Attempted Migration failed. Incrementation of the batch ID failed. Expected batch ID : %I64d, Current batch ID : %I64d. |
 | 14851 | 16 | No | Attempted Reconciliation failed. The new max remote batch IDs is not less than the initial. Initial: %I64d, New: %I64d |
-| 14852 | 16 | No | Cannot query table '%.\*ls' because data reconciliation is in progress. |
+| 14852 | 16 | No | Cannot query table '%.\*ls' because data reconciliation is in progress. This is part of the automatic recovery process for a remote data archive enabled table. You may check the status of this operation in sys.remote_data_archive_tables. |
 | 14853 | 16 | No | Function '%.\*ls' cannot be used as Stretch filter predicate because it does not meet necessary requirements. |
 | 14854 | 10 | No | The Remote Data Archive connection to the server '%ls' succeeded. |
 | 14855 | 16 | No | The Remote Data Archive connection to the server '%ls' failed. |

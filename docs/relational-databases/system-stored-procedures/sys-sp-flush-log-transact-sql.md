@@ -1,9 +1,10 @@
 ---
 title: "sys.sp_flush_log (Transact-SQL)"
-description: "sys.sp_flush_log (Transact-SQL)"
+description: Flushes to disk the transaction log of the current database, hardening all previously committed delayed durable transactions.
 author: VanMSFT
 ms.author: vanto
-ms.date: "03/14/2017"
+ms.reviewer: randolphwest
+ms.date: 07/06/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -18,39 +19,42 @@ dev_langs:
   - "TSQL"
 ---
 # sys.sp_flush_log (Transact-SQL)
+
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-  Flushes to disk the  transaction log of the current database, thereby hardening all previously committed delayed durable transactions.  
-  
- If you choose to use delayed transaction durability because of the performance benefits, but you also want to have a guaranteed limit on the amount of data that is lost on server crash or failover, then execute `sys.sp_flush_log` on a regular schedule. For example, if you want to make sure you don't lose more than x seconds worth of data, you would execute `sp_flush_log` every x seconds.  
-  
- Executing `sys.sp_flush_log` guarantees that all previously committed delayed durable transactions are made durable. See the conceptual topic [Control Transaction Durability](../../relational-databases/logs/control-transaction-durability.md) for more information.  
-  
- :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## Syntax  
-  
-```sql  
-  
-sys.sp_flush_log  
-  
-```  
-  
-#### Parameters  
- None.  
-  
-## Return Code Values  
- A return code of 1 indicates success.  Any other value indicates failure.  
-  
-## Result Sets  
- None.  
-  
-## Sample code  
-  
-```sql  
-.  
-EXECUTE sys.sp_flush_log  
-  
-```  
-  
-  
+Flushes to disk the transaction log of the current database, thereby hardening all previously committed delayed durable transactions.
+
+If you choose to use delayed transaction durability because of the performance benefits, but you also want to have a guaranteed limit on the amount of data that is lost on server crash or failover, then execute `sys.sp_flush_log` on a regular schedule. For example, if you want to make sure you don't lose more than *n* seconds worth of data, you would execute `sp_flush_log` every *n* seconds.
+
+Executing `sys.sp_flush_log` guarantees that all previously committed delayed durable transactions are made durable. For more information, see [Control Transaction Durability](../logs/control-transaction-durability.md).
+
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+
+## Syntax
+
+```syntaxsql
+sp_flush_log
+[ ; ]
+```
+
+## Arguments
+
+None.
+
+## Return code values
+
+A return code of `1` indicates success. Any other value indicates failure.
+
+## Result sets
+
+None.
+
+## Sample code
+
+```sql
+EXEC sys.sp_flush_log;
+```
+
+## Next steps
+
+- [SQL Server transaction log architecture and management guide](../sql-server-transaction-log-architecture-and-management-guide.md)

@@ -154,7 +154,7 @@ Get-AzSqlInstanceDatabaseMoveOperation -DatabaseName $dbName -InstanceName $miNa
 
 ### [CLI](#tab/azure-cli)
 
-Use Azure CLI commandlets to start, get, complete or cancel [database copy]((cli/azure/sql/midb/copy)) or [database move]((cli/azure/sql/midb/move)) operation.
+Use Azure CLI commandlets to start, get, complete or cancel [database copy](/cli/azure/sql/midb/copy) or [database move](/cli/azure/sql/midb/move) operation.
 
 Here's an example of how you can copy a database.
 

@@ -1,7 +1,7 @@
 ---
-title: Query SQL Database with query editor in the Azure portal
+title: Query SQL Database with Query editor in the Azure portal
 titleSuffix: Azure SQL Database
-description: Learn how to connect to an Azure SQL database and use the Azure portal query editor (preview) to run Transact-SQL (T-SQL) queries.
+description: Learn how to connect to an Azure SQL database and use the Azure portal Query editor (preview) to run Transact-SQL (T-SQL) queries.
 author: grrlgeek
 ms.author: jeschult
 ms.reviewer: wiassaf, mathoma, mbarickman
@@ -29,11 +29,11 @@ The Azure SQL Database [Query editor](query-editor.md) (preview) is a tool to ru
 
 ## Prerequisites
 
-- The AdventureWorksLT sample Azure SQL database. If you don't have it, you can [create a database in Azure SQL Database](single-database-create-quickstart.md) that has the AdventureWorks sample data.
+- This quickstart uses the `AdventureWorksLT` sample database in an Azure SQL database. If you don't have one already, you can [create a database using sample data in Azure SQL Database](single-database-create-quickstart.md).
 
 - A user account with permissions to connect to the database and query editor. You can either:
 
-  - Have or set up a user that can connect to the database with SQL authentication. 
+  - Have or set up a user that can connect to the database with SQL Authentication.
   - Have or set up a user that can connect to the database with Azure Active Directory (Azure AD) authentication.
 
 ## Connect to the query editor
@@ -52,7 +52,7 @@ The Azure SQL Database [Query editor](query-editor.md) (preview) is a tool to ru
 
 ## Query the database
 
-On the **Query editor (preview)** page, run the following example queries against your AdventureWorksLT sample database.
+On the **Query editor (preview)** page, run the following example queries against your `AdventureWorksLT` sample database.
 
 ### Run a SELECT query
 

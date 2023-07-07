@@ -8,7 +8,7 @@ metadata:
   ms.topic: faq
   author: WilliamDAssafMSFT
   ms.author: wiassaf
-  ms.reviewer: kendralittle, mathoma
+  ms.reviewer: mathoma
   ms.custom: 
   ms.date: 12/01/2022
   monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"

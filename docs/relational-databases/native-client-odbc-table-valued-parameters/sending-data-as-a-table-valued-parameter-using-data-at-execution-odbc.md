@@ -3,7 +3,7 @@ title: "Table-Valued Parameter, Data-At-Execution (ODBC)"
 description: "Sending Data as a Table-Valued Parameter Using Data-At-Execution (ODBC)"
 author: markingmyname
 ms.author: maghan
-ms.date: "03/14/2017"
+ms.date: "06/30/2023"
 ms.service: sql
 ms.subservice: native-client
 ms.topic: "reference"
@@ -57,7 +57,6 @@ FROM   @Items;
   
     // Variables for SQL parameters:  
     SQLCHAR CustCode[6];  
-    SQLCHAR *TVP = (SQLCHAR *) "TVPInParam";  
     SQLINTEGER ProdCode, Qty;  
     SQLINTEGER OrdNo;  
     char *OrdDate[23];  
@@ -164,7 +163,7 @@ FROM   @Items;
   
         default:  
           // Passing 0 in StrLenOrIndPtr indicates that no more table-valued parameter rows are available.  
-          r = SQLPutData(hstmt, (SQLPOINTER) 1, 0);  
+          r = SQLPutData(hstmt, 0, 0);  
           break;  
            }  
         }  

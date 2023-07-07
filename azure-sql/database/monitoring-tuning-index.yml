@@ -13,7 +13,7 @@ metadata:
   ms.collection: performance
   author: WilliamDAssafMSFT 
   ms.author: wiassaf 
-  ms.reviewer: kendralittle, mathoma
+  ms.reviewer: mathoma
   ms.date: 10/18/2021 
   monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 

@@ -4,7 +4,7 @@ description: "Changes the name of a user-created object in the current database.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest, maghan
-ms.date: 06/13/2023
+ms.date: 06/29/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -86,7 +86,7 @@ The type of object being renamed. *object_type* is **varchar(13)**, with a defau
 
 **Applies to**: Azure Synapse Analytics
 
-In `sp_rename` (preview) for [!INCLUDE [ssazuresynapse](../../includes/ssazuresynapse-md.md)], *COLUMN* is a mandatory parameter specifying that the object type to be renamed is a column. It is a **varchar(13)** with no default value and must always be included in the `sp_rename` (preview) statement. A column can only be renamed if it is a non-distribution column.
+In `sp_rename` (preview) for [!INCLUDE [ssazuresynapse](../../includes/ssazuresynapse-md.md)], *COLUMN* is a mandatory parameter specifying that the object type to be renamed is a column. It's a **varchar(13)** with no default value and must always be included in the `sp_rename` (preview) statement. A column can only be renamed if it's not a distribution column.
 
 ## Return code values
 
@@ -109,6 +109,8 @@ In `sp_rename` (preview) for [!INCLUDE [ssazuresynapse](../../includes/ssazuresy
 - Renaming a column doesn't automatically update the metadata for any objects which SELECT all columns (using the `*`) from that table. For example, if you rename a table column and that column is referenced by a non-schema-bound view or function that SELECTs all columns (using the `*`), the metadata for the view or function continues to reflect the original column name. Refresh the metadata using [sp_refreshsqlmodule](sp-refreshsqlmodule-transact-sql.md) or [sp_refreshview](sp-refreshview-transact-sql.md).
 
 - You can change the name of an object or data type in the current database only. The names of most system data types and system objects can't be changed.
+
+- If you use more than 128 characters for the new name, only the first 128 characters are used and the rest is truncated.
 
 ## Permissions
 
@@ -223,7 +225,7 @@ CK_Employee_SickLeaveHours            HumanResources     CHECK_CONSTRAINT
 
 ### F. Rename statistics
 
-The following example creates a statistics object named contactMail1 and then renames the statistic to NewContact by using `sp_rename`. When renaming statistics, the object must be specified in the format schema.table.statistics_name.
+The following example creates a statistics object named contactMail1 and then renames the statistic to NewContact by using `sp_rename`. When you rename statistics, the object must be specified in the format schema.table.statistics_name.
 
 ```sql
 CREATE STATISTICS ContactMail1

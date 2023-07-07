@@ -2,10 +2,10 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 02/17/2023
+ms.date: 07/06/2023
 ms.topic: include
 ---
-| Error| Severity | Event logged | Description|
+| Error | Severity | Event logged | Description |
 | :--- | :--- | :--- | :--- |
 | 4001 | 10 | No | Client sends a sp_reset_connection while there is still pending requests, server is disconnecting. |
 | 4002 | 16 | No | The incoming tabular data stream (TDS) protocol stream is incorrect. The stream ended unexpectedly. |
@@ -13,7 +13,7 @@ ms.topic: include
 | 4005 | 16 | No | Cannot update columns from more than one underlying table in a single update call. |
 | 4006 | 16 | No | You cannot delete rows from more than one underlying table in a single delete call. |
 | 4007 | 16 | No | Cannot update or insert column "%.\*ls". It may be an expression. |
-| 4008 | 16 | No | The data types varchar(max), nvarchar(max), varbinary(max), and XML cannot be used in the compute clause by client driver versions earlier than SQL Server 2005.  Please resubmit the query using a more recent client driver. |
+| 4008 | 16 | No | The data types varchar(max), nvarchar(max), varbinary(max), and XML cannot be used in the compute clause by client driver versions earlier than SQL Server 2005. Please resubmit the query using a more recent client driver. |
 | 4009 | 16 | No | The incoming tabular data stream (TDS) protocol stream is incorrect. The TDS headers contained errors. |
 | 4010 | 16 | No | The incoming tabular data stream (TDS) protocol stream is incorrect. The Query Notification TDS header contained errors. |
 | 4011 | 16 | No | The incoming tabular data stream (TDS) protocol stream is incorrect. The MARS TDS header contained errors. |
@@ -47,7 +47,7 @@ ms.topic: include
 | 4070 | 16 | No | More than 255 columns were specified in the COMPUTE clause, and this metadata cannot be sent to a SQL Server version 6.5 client. |
 | 4071 | 10 | No | The XP callback function '%.\*ls' failed in extended procedure '%.\*ls' because it was executed within an INSERT-EXEC statement which does not allow the extended procedure to send information other than result set. |
 | 4072 | 10 | No | The XP callback function '%.\*ls' failed in extended procedure '%.\*ls' because the extended procedure is called inside an UDF which doesn't allow sending data. |
-| 4073 | 16 | No | A return value of data type varchar(max), nvarchar(max), varbinary(max), XML or other large object type can not be returned to client driver versions earlier than SQL Server 2005.  Please resubmit the query using a more recent client driver. |
+| 4073 | 16 | No | A return value of data type varchar(max), nvarchar(max), varbinary(max), XML or other large object type can not be returned to client driver versions earlier than SQL Server 2005. Please resubmit the query using a more recent client driver. |
 | 4074 | 16 | No | Client drivers do not accept result sets that have more than 65,535 columns. |
 | 4075 | 16 | No | The USE database statement failed because the database collation %.\*ls is not recognized by older client drivers. Try upgrading the client operating system or applying a service update to the database client software, or use a different collation. See SQL Server Books Online for more information on changing collations. |
 | 4076 | 16 | No | The ALTER DATABASE statement failed because the database collation %.\*ls is not recognized by older client drivers. Try upgrading the client operating system or applying a service update to the database client software, or use a different collation. See SQL Server Books Online for more information on changing collations. |
@@ -160,7 +160,7 @@ ms.topic: include
 | 4305 | 16 | No | The log in this backup set begins at LSN %.\*ls, which is too recent to apply to the database. An earlier log backup that includes LSN %.\*ls can be restored. |
 | 4307 | 16 | No | The online restore to database '%ls' failed. It may be appropriate to perform an offline restore instead. To force an offline restore, first take the database offline using the ALTER DATABASE statement. |
 | 4308 | 10 | No | The online restore is complete, but WITH NORECOVERY was specified. Use RESTORE WITH RECOVERY to bring affected data online. |
-| 4309 | 16 | No | The state of file "%ls" prevents restoring individual pages.  Only a file restore is currently possible. |
+| 4309 | 16 | No | The state of file "%ls" prevents restoring individual pages. Only a file restore is currently possible. |
 | 4310 | 16 | No | RESTORE PAGE is not allowed on file "%ls" because the file is not online. |
 | 4311 | 16 | No | RESTORE PAGE is not allowed from backups taken with earlier versions of SQL Server. |
 | 4312 | 16 | No | This log cannot be restored because a gap in the log chain was created. Use more recent data backups to bridge the gap. |
@@ -176,7 +176,7 @@ ms.topic: include
 | 4327 | 16 | No | The log in this backup set contains bulk-logged changes. Point-in-time recovery was inhibited. The database has been rolled forward to the end of the log. |
 | 4328 | 16 | No | The file "%ls" is missing. Roll forward stops at log sequence number %.\*ls. The file is created at log sequence number (LSN) %.\*ls, dropped at LSN %.\*ls. Restore the transaction log beyond the point in time when the file was dropped, or restore data to be consistent with rest of the database. |
 | 4329 | 10 | No | This log file contains records logged before the designated mark. The database is being left in the Restoring state so you can apply another log file. |
-| 4330 | 16 | No | This backup set cannot be applied because it is on a recovery path that is inconsistent with the database. The recovery path is the sequence of data and log backups that have brought the database to a particular recovery point. Find a compatible backup to restore, or restore the rest of the database to match a recovery point within this backup set, which will restore the database to a different point in time.  For more information about recovery paths, see SQL Server Books Online. |
+| 4330 | 16 | No | This backup set cannot be applied because it is on a recovery path that is inconsistent with the database. The recovery path is the sequence of data and log backups that have brought the database to a particular recovery point. Find a compatible backup to restore, or restore the rest of the database to match a recovery point within this backup set, which will restore the database to a different point in time. For more information about recovery paths, see SQL Server Books Online. |
 | 4331 | 16 | No | The database cannot be recovered because the files have been restored to inconsistent points in time. |
 | 4332 | 16 | No | RESTORE LOG has been halted. To use the database in its current state, run RESTORE DATABASE %ls WITH RECOVERY. |
 | 4333 | 16 | No | The database cannot be recovered because the log was not restored. |
@@ -196,13 +196,13 @@ ms.topic: include
 | 4347 | 16 | No | The current restore sequence was previously interrupted during the transition to the online state. RESTORE DATABASE WITH RECOVERY can be used to complete the transition to online. |
 | 4348 | 16 | No | The online restore to database '%ls' failed. It may be appropriate to perform an offline restore instead. An offline restore is initiated by using BACKUP LOG WITH NORECOVERY. |
 | 4349 | 16 | No | The log in this backup set begins at LSN %.\*ls, which is too recent to apply to the database. This restore sequence needs to initialize the log to start at LSN %.\*ls. Reissue the RESTORE LOG statement using an earlier log backup. |
-| 4350 | 16 | No | The list of pages provided with the RESTORE PAGE statement is incorrectly formatted. Prior to the problem %d pages were correctly identified. The problem was hit at character offset %d. Check that all pages are identified by numeric \<file\>:\<page\> pairs with commas separating each pair.  For example: PAGE='1:57,2:31'. |
+| 4350 | 16 | No | The list of pages provided with the RESTORE PAGE statement is incorrectly formatted. Prior to the problem %d pages were correctly identified. The problem was hit at character offset %d. Check that all pages are identified by numeric \<file\>:\<page\> pairs with commas separating each pair. For example: PAGE='1:57,2:31'. |
 | 4351 | 16 | No | Backups taken on earlier versions of SQL Server are not supported by fn_dump_dblog. |
 | 4352 | 16 | No | RESTORE LOG is not supported from this data backup because file '%ls' is too old. Use a regular log backup to continue the restore sequence. |
 | 4353 | 16 | No | Conflicting file relocations have been specified for file '%.\*ls'. Only a single WITH MOVE clause should be specified for any logical file name. |
 | 4354 | 10 | Yes | The file '%.\*ls' of restored database '%ls' is being left in the defunct state because the database is being upgraded from a prior version. Piecemeal restore is not supported when an upgrade is involved. |
 | 4355 | 16 | No | The revert command is incorrectly specified. The RESTORE statement must be of the form: RESTORE DATABASE \<x\> FROM DATABASE_SNAPSHOT = \<y\>. |
-| 4403 | 16 | No | Cannot update the view or function '%.\*ls' because it contains aggregates, or a DISTINCT or |
+| 4403 | 16 | No | Cannot update the view or function '%.\*ls' because it contains aggregates, or a DISTINCT or GROUP BY clause, or PIVOT or UNPIVOT operator. |
 | 4405 | 16 | No | View or function '%.\*ls' is not updatable because the modification affects multiple base tables. |
 | 4406 | 16 | No | Update or insert of view or function '%.\*ls' failed because it contains a derived or constant field. |
 | 4408 | 19 | Yes | Too many tables. The query and the views or functions in it exceed the limit of %d tables. Revise the query to reduce the number of tables. |
@@ -211,7 +211,7 @@ ms.topic: include
 | 4415 | 16 | No | View '%.\*ls' is not updatable because either it was created WITH CHECK OPTION or it spans a view created WITH CHECK OPTION and the target table is referenced multiple times in the resulting query. |
 | 4416 | 16 | No | UNION ALL view '%.\*ls' is not updatable because the definition contains a disallowed construct. |
 | 4417 | 16 | No | Derived table '%.\*ls' is not updatable because the definition contains a UNION operator. |
-| 4418 | 16 | No | Derived table '%.\*ls' is not updatable because it contains aggregates, or a DISTINCT or |
+| 4418 | 16 | No | Derived table '%.\*ls' is not updatable because it contains aggregates, or a DISTINCT or GROUP BY clause, or PIVOT or UNPIVOT operator. |
 | 4420 | 16 | No | Derived table '%.\*ls' is not updatable because the modification affects multiple base tables. |
 | 4421 | 16 | No | Derived table '%.\*ls' is not updatable because a column of the derived table is derived or constant. |
 | 4422 | 16 | No | View '%.\*ls' has an INSTEAD OF UPDATE trigger and cannot be a target of an UPDATE FROM statement. |
@@ -446,24 +446,24 @@ ms.topic: include
 | 4961 | 16 | No | ALTER TABLE SWITCH statement failed. Column '%.\*ls' in table '%.\*ls' is nullable and it is not nullable in '%.\*ls'. |
 | 4962 | 16 | No | ALTER TABLE SWITCH statement failed. Partition %d in table '%.\*ls' is not a range partition. |
 | 4963 | 16 | No | ALTER TABLE SWITCH statement failed. Partition %d is not valid for table '%.\*ls'. |
-| 4964 | 16 | No | ALTER TABLE SWITCH statement failed. Table '%.\*ls' has RULE constraint '%.\*ls'.  SWITCH is not allowed on tables with RULE constraints. |
+| 4964 | 16 | No | ALTER TABLE SWITCH statement failed. Table '%.\*ls' has RULE constraint '%.\*ls'. SWITCH is not allowed on tables with RULE constraints. |
 | 4965 | 16 | No | ALTER TABLE SWITCH statement failed. Column '%.\*ls' in table '%.\*ls' is computed column but the same column in '%.\*ls' is not computed. |
 | 4966 | 16 | No | ALTER TABLE SWITCH statement failed. Computed column '%.\*ls' defined as '%.\*ls' in table '%.\*ls' is different from the same column in table '%.\*ls' defined as '%.\*ls'. |
 | 4967 | 16 | No | ALTER TABLE SWITCH statement failed. SWITCH is not allowed because source table '%.\*ls' contains primary key for constraint '%.\*ls'. |
 | 4968 | 16 | No | ALTER TABLE SWITCH statement failed. Target table '%.\*ls' has foreign key for constraint '%.\*ls' but source table '%.\*ls' does not have corresponding key. |
-| 4969 | 16 | No | ALTER TABLE SWITCH statement failed. Foreign key constraint '%.\*ls' is disabled in source table '%.\*ls' and the corresponding constraint '%.\*ls' is enabled in target table '%.\*ls'.  The source table constraint must be enabled. |
+| 4969 | 16 | No | ALTER TABLE SWITCH statement failed. Foreign key constraint '%.\*ls' is disabled in source table '%.\*ls' and the corresponding constraint '%.\*ls' is enabled in target table '%.\*ls'. The source table constraint must be enabled. |
 | 4970 | 16 | No | ALTER TABLE SWITCH statement failed. Target table '%.\*ls' has a table level check constraint '%.\*ls' but the source table '%.\*ls' does not have a corresponding constraint. |
 | 4971 | 16 | No | ALTER TABLE SWITCH statement failed. Target table '%.\*ls' has a column level check constraint '%.\*ls' but the source table '%.\*ls' does not have a corresponding constraint. |
 | 4972 | 16 | No | ALTER TABLE SWITCH statement failed. Check constraints or partition function of source table '%.\*ls' allows values that are not allowed by check constraints or partition function on target table '%.\*ls'. |
 | 4973 | 16 | No | ALTER TABLE SWITCH statement failed. Range defined by partition %d in table '%.\*ls' is not a subset of range defined by partition %d in table '%.\*ls'. |
-| 4974 | 16 | No | ALTER TABLE SWITCH statement failed. Foreign key constraint '%.\*ls' is NOCHECK in source table '%.\*ls' and the corresponding constraint '%.\*ls' is CHECK in target table '%.\*ls'.  The source table constraint must be in CHECK. |
+| 4974 | 16 | No | ALTER TABLE SWITCH statement failed. Foreign key constraint '%.\*ls' is NOCHECK in source table '%.\*ls' and the corresponding constraint '%.\*ls' is CHECK in target table '%.\*ls'. The source table constraint must be in CHECK. |
 | 4975 | 16 | No | ALTER TABLE SWITCH statement failed. Check constraint '%.\*ls' in source table '%.\*ls' and check constraint '%.\*ls' in target table '%.\*ls' have different 'Not For Replication' settings. |
 | 4976 | 16 | No | ALTER TABLE SWITCH statement failed. Target table '%.\*ls' has a check constraint '%.\*ls' on an XML column, but the source table '%.\*ls' does not have an identical check constraint. |
 | 4977 | 16 | No | ALTER TABLE SWITCH statement failed. Target table '%.\*ls' has a check constraint '%.\*ls' on a CLR type column, but the source table '%.\*ls' does not have an identical check constraint. |
-| 4978 | 16 | No | ALTER TABLE SWITCH statement failed.  The partition %d in table '%.\*ls' resides in a read-only filegroup '%.\*ls'. |
-| 4979 | 16 | No | ALTER TABLE SWITCH statement failed.  The table '%.\*ls' resides in a readonly filegroup '%.\*ls'. |
-| 4980 | 16 | No | ALTER TABLE SWITCH statement failed.  The lobdata of partition %d in table '%.\*ls' resides in a readonly filegroup '%.\*ls'. |
-| 4981 | 16 | No | ALTER TABLE SWITCH statement failed.  The lobdata of table '%.\*ls' resides in a readonly filegroup '%.\*ls'. |
+| 4978 | 16 | No | ALTER TABLE SWITCH statement failed. The partition %d in table '%.\*ls' resides in a read-only filegroup '%.\*ls'. |
+| 4979 | 16 | No | ALTER TABLE SWITCH statement failed. The table '%.\*ls' resides in a readonly filegroup '%.\*ls'. |
+| 4980 | 16 | No | ALTER TABLE SWITCH statement failed. The lobdata of partition %d in table '%.\*ls' resides in a readonly filegroup '%.\*ls'. |
+| 4981 | 16 | No | ALTER TABLE SWITCH statement failed. The lobdata of table '%.\*ls' resides in a readonly filegroup '%.\*ls'. |
 | 4982 | 16 | No | ALTER TABLE SWITCH statement failed. Check constraints of source table '%.\*ls' allow values that are not allowed by range defined by partition %d on target table '%.\*ls'. |
 | 4983 | 16 | No | ALTER TABLE SWITCH statement failed. Target table '%.\*ls' has an XML or spatial index '%.\*ls' on it. Only source table can have XML or spatial indexes in the ALTER TABLE SWITCH statement. |
 | 4984 | 16 | No | ALTER TABLE SWITCH statement failed. Target table '%.\*ls' and source table '%.\*ls' have different vardecimal storage format values. Use stored procedure sp_tableoption to alter the 'vardecimal storage format' option for the tables to make sure that the values are the same. |

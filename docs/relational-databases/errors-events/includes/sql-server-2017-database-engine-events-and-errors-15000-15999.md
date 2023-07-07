@@ -2,10 +2,10 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 02/17/2023
+ms.date: 07/06/2023
 ms.topic: include
 ---
-| Error| Severity | Event logged | Description|
+| Error | Severity | Event logged | Description |
 | :--- | :--- | :--- | :--- |
 | 15001 | 16 | No | Object '%ls' does not exist or is not a valid object for this operation. |
 | 15002 | 16 | No | The procedure '%s' cannot be executed within a transaction. |
@@ -475,7 +475,7 @@ ms.topic: include
 | 15574 | 10 | No | This object does not have any statistics. |
 | 15575 | 10 | No | This object does not have any statistics or indexes. |
 | 15576 | 16 | No | You cannot set network name on server '%ls' because it is not a linked SQL Server. |
-| 15577 | 10 | No | Warning: A linked server that refers to the originating server is not a supported scenario.  If you wish to use a four-part name to reference a local table, please use the actual server name rather than an alias. |
+| 15577 | 10 | No | Warning: A linked server that refers to the originating server is not a supported scenario. If you wish to use a four-part name to reference a local table, please use the actual server name rather than an alias. |
 | 15578 | 16 | No | There is already a master key in the database. Please drop it before performing this statement. |
 | 15579 | 16 | No | Adding an encryption to the symmetric key failed. An encryption by the same %S_MSG '%.\*s' may already exist. |
 | 15580 | 16 | No | Cannot drop %S_MSG because %S_MSG '%.\*s' is encrypted by it. |

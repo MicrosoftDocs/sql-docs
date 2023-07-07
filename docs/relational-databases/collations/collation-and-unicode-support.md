@@ -3,7 +3,7 @@ title: Collation and Unicode support
 description: Learn about collation and Unicode support in SQL Server.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 12/10/2021
+ms.date: 07/05/2023
 ms.service: sql
 ms.topic: conceptual
 helpviewer_keywords:
@@ -187,7 +187,7 @@ The following table shows the default collation designations, as determined by t
 |Catalan (Catalan)|0x0403|0x0409|Latin1_General_CI_AS|
 |Chinese (Hong Kong SAR, PRC)|0x0c04|0x0404|Chinese_Taiwan_Stroke_CI_AS|
 |Chinese (Macao SAR)|0x1404|0x1404|Latin1_General_CI_AI|
-|Chinese (Macau)|0x21404|0x21404|Latin1_General_CI_AI|
+|Chinese (Macao SAR)|0x21404|0x21404|Latin1_General_CI_AI|
 |Chinese (PRC)|0x0804|0x0804|Chinese_PRC_CI_AS|
 |Chinese (PRC)|0x20804|0x20804|Chinese_PRC_Stroke_CI_AS|
 |Chinese (Singapore)|0x1004|0x0804|Chinese_PRC_CI_AS|

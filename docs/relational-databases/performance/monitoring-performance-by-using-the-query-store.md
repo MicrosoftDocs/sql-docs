@@ -258,7 +258,7 @@ Stored procedures configure the Query Store.
 :::row-end:::
 :::row:::
     :::column:::
-        [sp_query_store_remove_plan (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)
+        [sp_query_store_remove_plan (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transact-sql.md)
     :::column-end:::
     :::column:::
         [sp_query_store_remove_query (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)

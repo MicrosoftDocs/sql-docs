@@ -165,7 +165,7 @@ To prepare source machines, you'll need information from the cluster.
 >  
 > - Maintain disk ownership throughout the replication process until the final cutover. If there is a change in disk ownership, there is a chance that the volumes could be corrupted and replication would need to be to retriggered. Set the preferred owner for each disk to avoid transfer of ownership during the replication process.
 >  
-> - Avoid patching activities and system reboots during the replication process to avoid transfer of disk ownership.
+> - Avoid patching activities and system restarts during the replication process to avoid transfer of disk ownership.
 
 To prepare source machines, do the following:
 

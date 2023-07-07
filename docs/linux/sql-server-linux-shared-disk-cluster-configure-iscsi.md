@@ -358,7 +358,7 @@ For more information on iSCSI initiator for the supported distributions, consult
     sudo dracut -H -f /boot/initramfs-$(uname -r).img $(uname -r)
     ```
 
-18.	Reboot the server.
+18.	Restart the server.
 
 19.	On another server that will participate in the FCI, perform Steps 1 - 6. This will present the iSCSI target to the SQL Server. 
  

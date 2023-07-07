@@ -15,7 +15,7 @@ ms.custom:
 
 Beginning with [!INCLUDE [sssql19-md](../../../../includes/sssql19-md.md)] CU 13, you can configure peer-to-peer replication to automatically resolve conflicts by allowing the most recent insert or update to win the conflict. If either write deletes the row, SQL Server allows the delete to win the conflict. This method is known as last write wins.
 
-Use stored procedures to configure last write wins.
+Use stored procedures to configure last write wins. Do not use P2P topology wizard to add or remove P2P nodes when you use last writer.
 
 ## Important configuration considerations
 

@@ -192,6 +192,8 @@ az sql midb move cancel --name $dbName --resource-group $rgName --managed-instan
 az sql midb move list --name $dbName --resource-group $rgName --managed-instance $miName
 ```
 
+---
+
 ## Limitations
 
 Consider the following limitations of the copy and move feature:
@@ -209,8 +211,11 @@ Consider the following limitations of the copy and move feature:
 
 ## Next steps
 
-For other data movement options, review:
+Documentation related to database copy and move.
+- Azure PowerShell documentation for [database copy](/powershell/module/az.sql/copy-azsqlinstancedatabase) and [database move](/powershell/module/az.sql/move-azsqlinstancedatabase)
+- Azure CLI documentation for [database copy](/cli/azure/sql/midb/copy) and [database move](/cli/azure/sql/midb/move).
 
+For other data movement options, review:
 - [Managed Instance link](managed-instance-link-feature-overview.md)
 - [Transactional replication](replication-transactional-overview.md)
 - [Log Replay Service](log-replay-service-overview.md)

@@ -211,7 +211,7 @@ Consider the following limitations of the copy and move feature:
 
 ## Next steps
 
-Additional documentation related to database copy and move.
+More documentation related to database copy and move.
 - Azure PowerShell documentation for [database copy](/powershell/module/az.sql/copy-azsqlinstancedatabase) and [database move](/powershell/module/az.sql/move-azsqlinstancedatabase)
 - Azure CLI documentation for [database copy](/cli/azure/sql/midb/copy) and [database move](/cli/azure/sql/midb/move).
 

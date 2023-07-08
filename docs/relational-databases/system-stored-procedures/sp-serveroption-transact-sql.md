@@ -51,7 +51,7 @@ The option to set for the specified server. *option_name* is **varchar(35)**, wi
 | **data access** | Enables and disables a linked server for distributed query access. Can be used only for `sys.server` entries added through `sp_addlinkedserver`. |
 | **dist** | Distributor. |
 | **lazy schema validation** | Determines whether the schema of remote tables is checked.<br /><br />If **true**, skip schema checking of remote tables at the beginning of the query. |
-| **name** | Specifies the name of the linked server object.<br /><br />The name change is reflected in value returned by the `name` column of the `sys.servers` catalog view without affecting the value returned by the `data_source` column. |
+| **name** | Specifies the name of the linked server object.<br /><br />The name change is reflected in the value returned by the `name` column of the `sys.servers` catalog view without affecting the remote data source. |
 | **pub** | Publisher. |
 | **query timeout** | Time-out value for queries against a linked server.<br /><br />If **0**, use the `sp_configure` default. |
 | **rpc** | Enables RPC from the given server. |

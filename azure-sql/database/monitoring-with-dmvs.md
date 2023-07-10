@@ -332,7 +332,9 @@ FROM sys.dm_exec_query_stats
 GO
 
 WITH XMLNAMESPACES('http://schemas.microsoft.com/sqlserver/2004/07/showplan' AS sp)
-SELECT plan_handle, stmt.stmt_details.value('@Database', 'varchar(max)') 'Database', stmt.stmt_details.value('@Schema', 'varchar(max)') 'Schema', stmt.stmt_details.VALUE('@Table', 'varchar(max)') 'table'
+SELECT plan_handle, stmt.stmt_details.value('@Database', 'varchar(max)') AS 'Database'
+, stmt.stmt_details.value('@Schema', 'varchar(max)') AS 'Schema'
+, stmt.stmt_details.value('@Table', 'varchar(max)') AS 'table'
 INTO #tmp2
 FROM
     (SELECT CAST(query_plan AS XML) sqlplan, plan_handle FROM #tmpPlan) AS p
@@ -493,7 +495,7 @@ SELECT TOP 10
                 ELSE r.statement_end_offset
                 END - r.statement_start_offset
             ) / 2
-        ) + 1), 1, 1000), CHAR(10), ' '), CHAR(13), ' ')) AS stmt_text
+        ) + 1), 1, 1000), CHAR(10), ' '), CHAR(13), ' ')) AS stmt_text,
        mg.dop,                                               --Degree of parallelism
        mg.request_time,                                      --Date and time when this query requested the memory grant.
        mg.grant_time,                                        --NULL means memory has not been granted

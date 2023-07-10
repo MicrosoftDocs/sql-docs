@@ -18,8 +18,7 @@ ms.custom:
 
 This article shows you how to configure [active geo-replication for Azure SQL Database](active-geo-replication-overview.md#active-geo-replication-terminology-and-capabilities) using the [Azure portal](https://portal.azure.com) or Azure CLI and to initiate failover.
 
-For best practices using auto-failover groups, see [Auto-failover groups with Azure SQL Database](auto-failover-group-sql-db.md) and [Auto-failover groups with Azure SQL Managed Instance](../managed-instance/auto-failover-group-sql-mi.md). 
-
+For best practices using auto-failover groups, see [Auto-failover groups with Azure SQL Database](auto-failover-group-sql-db.md) and [Auto-failover groups with Azure SQL Managed Instance](../managed-instance/auto-failover-group-sql-mi.md).
 
 ## Prerequisites
 
@@ -40,6 +39,7 @@ After the secondary is created and seeded, data begins replicating from the prim
 # [Portal](#tab/portal)
 
 1. In the [Azure portal](https://portal.azure.com), browse to the database that you want to set up for geo-replication.
+
 2. On the SQL Database page, select your database, scroll to **Data management**, select **Replicas**, and then select **Create replica**.
 
     :::image type="content" source="./media/active-geo-replication-configure-portal/azure-cli-create-geo-replica.png" alt-text="Configure geo-replication":::
@@ -51,6 +51,7 @@ After the secondary is created and seeded, data begins replicating from the prim
     Optionally, you can add a secondary database to an elastic pool. To create the secondary database in a pool, select **Yes** next to **Want to use SQL elastic pool?** and select a pool on the target server. A pool must already exist on the target server. This workflow doesn't create a pool.
 
 4. Click **Review + create**, review the information, and then click **Create**.
+
 5. The secondary database is created and the deployment process begins.
 
     :::image type="content" source="./media/active-geo-replication-configure-portal/azure-portal-geo-replica-deployment.png" alt-text="Screenshot that shows the deployment status of the secondary database.":::
@@ -66,6 +67,7 @@ After the secondary is created and seeded, data begins replicating from the prim
 # [Azure CLI](#tab/azure-cli)
 
 Select the database you want to set up for geo-replication. You'll need the following information:
+
 - Your original Azure SQL database name.
 - The Azure SQL server name.
 - Your resource group name.
@@ -87,7 +89,7 @@ Optionally, you can add a secondary database to an elastic pool. To create the s
 The secondary database is created and the deployment process begins.
 
 When the deployment is complete, you can check the status of the secondary database by running the [az sql db replica list-links](/cli/azure/sql/db/replica#az-sql-db-replica-list-links) command:
-    
+
 ```azurecli
 az sql db replica list-links --name guestlist --resource-group ContosoHotel --server contosowest
 ```
@@ -95,6 +97,7 @@ az sql db replica list-links --name guestlist --resource-group ContosoHotel --se
 # [PowerShell](#tab/powershell)
 
 Select the database you want to set up for geo-replication. You'll need the following information:
+
 - Your original Azure SQL database name.
 - The Azure SQL server name.
 - Your resource group name.

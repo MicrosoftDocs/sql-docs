@@ -127,7 +127,7 @@ In the **Member Database** section, optionally add a SQL Server database to the 
 
    1. Select **OK** to close the **Select Sync Agent** page.
 
-1. On the machine where sync client agent is installed, locate and run the Client Sync Agent app.
+1. On the server where sync client agent is installed, locate and run the Client Sync Agent app.
 
    :::image type="content" source="./media/sql-data-sync-sql-server-configure/datasync-preview-clientagent.png" alt-text="A screenshot from the Microsoft SQL Data Sync 2.0 client agent app. The Submit Agent Key button is highlighted.":::
 

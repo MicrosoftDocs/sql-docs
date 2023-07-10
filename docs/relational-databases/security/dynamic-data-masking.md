@@ -90,8 +90,6 @@ A masking rule can't be defined for the following column types:
 
 - A column with data masking can't be a key for a FULLTEXT index.
 
-- A column in a PolyBase [external table](../../t-sql/statements/create-external-table-transact-sql.md).
-
 For users without the **UNMASK** permission, the deprecated **READTEXT**, **UPDATETEXT**, and **WRITETEXT** statements don't function properly on a column configured for Dynamic Data Masking.
 
 Adding a dynamic data mask is implemented as a schema change on the underlying table, and therefore can't be performed on a column with dependencies. To work around this restriction, you can first remove the dependency, then add the dynamic data mask and then re-create the dependency. For example, if the dependency is due to an index dependent on that column, you can drop the index, then add the mask, and then re-create the dependent index.

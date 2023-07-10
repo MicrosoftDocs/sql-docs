@@ -21,7 +21,7 @@ This release is published July 11, 2023.
 
 ### Azure extension for SQL Server
 
-- Proxy bypass is now supported for Arc SQL Server Extension. Starting this release, you can also specify services which should not use the specified proxy server.
+- Proxy bypass is now supported for Arc SQL Server Extension. Starting this release, you can also specify services which should not use the specified proxy server. For examples and technical information, see [Proxy bypass for private endpoints](/azure/azure-arc/servers/manage-agent?tabs=windows).
 
 ## June 2023
 

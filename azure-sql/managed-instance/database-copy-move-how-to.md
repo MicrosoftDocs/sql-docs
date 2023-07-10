@@ -41,7 +41,7 @@ Moving or copying a database is useful when you want to:
 - Manage database growth and performance requirements.
 - Balance workloads across multiple managed instances.
 - Move databases to an instance with more available resources to handle the workload.
-- Consolidate multiple databases from a number of smaller instances.
+- Consolidate multiple databases from several instances.
 - Create database parity between dev, test, and production environments.
 
 ## Workflow
@@ -73,13 +73,15 @@ Before you can copy or move a database, you must meet the following requirements
 
 ## Copy or move database
 
+### [Portal](#tab/azure-portal)
+
 You can copy or move a database to another managed instance by using the Azure portal. To do so:
 
 1. Go to your managed instance in the [Azure portal](https://portal.azure.com).
 1. Under **Data management**, select **Databases**.
 1. Select one or more databases, and then select either the **Copy** or **Move** option at the top of the pane.
 
-   Selecting **Move** drops the source database when the operation is completed, and selecting **Copy** leaves the source database online when the operation is completed. Selecting either option opens the **Move Managed Database** or **Copy Managed Database** page. After the page opens, you can select additional databases to include in the operation.
+   Selecting **Move** drops the source database when the operation is completed, and selecting **Copy** leaves the source database online when the operation is completed. Selecting either option opens the **Move Managed Database** or **Copy Managed Database** page. After the page opens, you can select more databases to include in the operation.
 
    :::image type="content" source="media/database-copy-move-how-to/start-move-copy-operation.png" alt-text="Screenshot of the 'Databases' page for Azure SQL Managed Instance, with the 'Move' and 'Copy' options highlighted.":::
 
@@ -102,6 +104,96 @@ You can copy or move a database to another managed instance by using the Azure p
 
    If you've moved the database, the database name is unavailable because it's now offline.
 
+### [PowerShell](#tab/azure-powershell)
+
+Use Azure PowerShell commandlets to start, get, complete or cancel [database copy](/powershell/module/az.sql/copy-azsqlinstancedatabase) or [database move](/powershell/module/az.sql/move-azsqlinstancedatabase) operation.
+
+Here's an example of how you can copy a database.
+
+```powershell
+$dbName = "<database_name>"
+$miName = "<source_managed_instance_name>"
+$rgName = "<source_resource_group_name>"
+$tmiName = "<target_managed_instance_name>"
+$trgName = "<target_resource_group_name>"
+
+## Start database copy operation. 
+Copy-AzSqlInstanceDatabase -DatabaseName $dbName -InstanceName $miName -ResourceGroupName $rgName -TargetInstanceName $tmiName -TargetResourceGroupName $trgName
+
+## Verify the operation status is succeeded. 
+Get-AzSqlInstanceDatabaseCopyOperation -DatabaseName $dbName -InstanceName $miName -ResourceGroupName $rgName -TargetInstanceName $tmiName -TargetResourceGroupName $trgName
+
+## Complete database copy operation. 
+Complete-AzSqlInstanceDatabaseCopy -DatabaseName $dbName -InstanceName $miName -ResourceGroupName $rgName -TargetInstanceName $tmiName -TargetResourceGroupName $trgName
+
+## Verify the operation status is succeeded. 
+Get-AzSqlInstanceDatabaseCopyOperation -DatabaseName $dbName -InstanceName $miName -ResourceGroupName $rgName -TargetInstanceName $tmiName -TargetResourceGroupName $trgName
+```
+
+Here's another example of how you can start database move and cancel it.
+
+```powershell
+$dbName = "<database_name>"
+$miName = "<source_managed_instance_name>"
+$rgName = "<source_resource_group_name>"
+$tmiName = "<target_managed_instance_name>"
+$trgName = "<target_resource_group_name>"
+
+## Start database move operation. 
+Move-AzSqlInstanceDatabase -DatabaseName $dbName -InstanceName $miName -ResourceGroupName $rgName -TargetInstanceName $tmiName -TargetResourceGroupName $trgName
+
+## Verify the operation status is succeeded. 
+Get-AzSqlInstanceDatabaseMoveOperation -DatabaseName $dbName -InstanceName $miName -ResourceGroupName $rgName -TargetInstanceName $tmiName -TargetResourceGroupName $trgName
+
+## Complete database copy operation. 
+Stop-AzSqlInstanceDatabaseMove -DatabaseName $dbName -InstanceName $miName -ResourceGroupName $rgName -TargetInstanceName $tmiName -TargetResourceGroupName $trgName
+
+## Verify the operation status is succeeded. 
+Get-AzSqlInstanceDatabaseMoveOperation -DatabaseName $dbName -InstanceName $miName -ResourceGroupName $rgName -TargetInstanceName $tmiName -TargetResourceGroupName $trgName
+```
+
+### [CLI](#tab/azure-cli)
+
+Use Azure CLI commandlets to start, get, complete or cancel [database copy](/cli/azure/sql/midb/copy) or [database move](/cli/azure/sql/midb/move) operation.
+
+Here's an example of how you can copy a database.
+
+```CLI
+dbName="<database_name>"
+miName="<source_managed_instance_name>"
+rgName="<source_resource_group_name>"
+tmiName="<target_managed_instance_name>"
+trgName="<target_resource_group_name>"
+
+az sql midb copy start --name $dbName --resource-group $rgName --managed-instance $miName --dest-rg $trgName --dest-mi $tmiName 
+
+az sql midb copy list --name $dbName --resource-group $rgName --managed-instance $miName
+
+az sql midb copy complete --name $dbName --resource-group $rgName --managed-instance $miName --dest-rg $trgName --dest-mi $tmiName 
+
+az sql midb copy list --name $dbName --resource-group $rgName --managed-instance $miName
+```
+
+Here's another example of how you can start database move and cancel it.
+
+```CLI
+dbName="<database_name>"
+miName="<source_managed_instance_name>"
+rgName="<source_resource_group_name>"
+tmiName="<target_managed_instance_name>"
+trgName="<target_resource_group_name>"
+
+az sql midb move start --name $dbName --resource-group $rgName --managed-instance $miName --dest-rg $trgName --dest-mi $tmiName 
+
+az sql midb move list --name $dbName --resource-group $rgName --managed-instance $miName
+
+az sql midb move cancel --name $dbName --resource-group $rgName --managed-instance $miName --dest-rg $trgName --dest-mi $tmiName 
+
+az sql midb move list --name $dbName --resource-group $rgName --managed-instance $miName
+```
+
+---
+
 ## Limitations
 
 Consider the following limitations of the copy and move feature:
@@ -119,8 +211,11 @@ Consider the following limitations of the copy and move feature:
 
 ## Next steps
 
-For other data movement options, review:
+More documentation related to database copy and move.
+- Azure PowerShell documentation for [database copy](/powershell/module/az.sql/copy-azsqlinstancedatabase) and [database move](/powershell/module/az.sql/move-azsqlinstancedatabase)
+- Azure CLI documentation for [database copy](/cli/azure/sql/midb/copy) and [database move](/cli/azure/sql/midb/move).
 
+For other data movement options, review:
 - [Managed Instance link](managed-instance-link-feature-overview.md)
 - [Transactional replication](replication-transactional-overview.md)
 - [Log Replay Service](log-replay-service-overview.md)

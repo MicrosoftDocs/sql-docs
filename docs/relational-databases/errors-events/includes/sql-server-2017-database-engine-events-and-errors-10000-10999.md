@@ -2,10 +2,10 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 02/17/2023
+ms.date: 07/06/2023
 ms.topic: include
 ---
-| Error| Severity | Event logged | Description|
+| Error | Severity | Event logged | Description |
 | :--- | :--- | :--- | :--- |
 | 10000 | 16 | No | Unknown provider error. |
 | [10001](../mssqlserver-10001-database-engine-error.md) | 16 | No | The provider reported an unexpected catastrophic failure. |
@@ -180,7 +180,7 @@ ms.topic: include
 | 10529 | 16 | No | Cannot create plan guide '%.\*ls' because there is already a planguide '%.\*ls' of @type 'template' on @stmt. |
 | 10530 | 16 | No | Cannot create plan guide '%.\*ls' because the statement specified by @statement_start_offset does not match any statement in specified module or batch. Consider modifying @statement_start_offset to match a statement in module or batch. |
 | [10531](../mssqlserver-10531-database-engine-error.md) | 16 | No | Cannot create plan guide '%.\*ls' from cache because the user does not have adequate permissions. Grant the VIEW SERVER STATE permission to the user creating the plan guide. |
-| [10532](../mssqlserver-10532-database-engine-error.md) | 16 | No | Cannot create plan guide '%.\*ls' because the batch or module specified by @plan_handle does not contain a statement that is eligible for a plan guide.  Specify a different value for @plan_handle. |
+| [10532](../mssqlserver-10532-database-engine-error.md) | 16 | No | Cannot create plan guide '%.\*ls' because the batch or module specified by @plan_handle does not contain a statement that is eligible for a plan guide. Specify a different value for @plan_handle. |
 | [10533](../mssqlserver-10533-database-engine-error.md) | 16 | No | Cannot create plan guide '%.\*ls' because the plan guide name exceeds 124, the maximum number of characters allowed. Specify a name that contains fewer than 125 characters. |
 | [10534](../mssqlserver-10534-database-engine-error.md) | 16 | No | Cannot create plan guide '%.\*ls' because the value specified for @params is invalid. Specify the value in the form \<parameter_name\> \<parameter_type\>, or specify NULL. |
 | [10535](../mssqlserver-10535-database-engine-error.md) | 16 | No | Cannot create plan guide '%.\*ls' because a plan was not found in the plan cache that corresponds to the specified plan handle. Specify a cached plan handle. For a list of cached plan handles, query the sys.dm_exec_query_stats dynamic management view. |
@@ -208,9 +208,9 @@ ms.topic: include
 | 10622 | 16 | No | The %S_MSG '%.\*ls' could not be created or rebuilt. A compressed index is not supported on table that contains sparse columns or a column set column. |
 | 10623 | 16 | No | Filtered statistics '%.\*ls' cannot be created on object '%.\*ls' because it is not a user table. Filtered statistics are only supported on user tables. |
 | 10624 | 16 | No | The CREATE INDEX or REBUILD INDEX statement failed for index '%.\*ls' on table '%.\*ls' because a distribution policy cannot be specified for system databases. |
-| 10625 | 16 | No | A distribution key cannot be created  containing more than %d columns. |
+| 10625 | 16 | No | A distribution key cannot be created containing more than %d columns. |
 | 10626 | 16 | No | Column name '%.\*ls' appears more than one time in the list of columns in the distribution key. |
-| 10627 | 16 | No | Column '%.\*ls' cannot be part of the distribution key  of the index '%.\*ls' because the column is not part of the unique index key. Distribution key columns for a unique index must be part of the index key. |
+| 10627 | 16 | No | Column '%.\*ls' cannot be part of the distribution key of the index '%.\*ls' because the column is not part of the unique index key. Distribution key columns for a unique index must be part of the index key. |
 | 10628 | 16 | No | Index '%.\*ls' on table '%.\*ls' is a hypothetical index that was created to hold column-level statistics. A distribution policy is not allowed for hypothetical indexes. |
 | 10629 | 16 | No | The data type specified for column '%.\*ls' in table '%.\*ls' cannot be used as a column in the distribution key of an index. |
 | 10630 | 16 | No | The index distribution policy is invalid. The policy must be set to HASH, NONE, or REPLICATE. Distribution columns cannot be specified when the distribution policy is set to NONE or REPLICATE. |
@@ -251,7 +251,7 @@ ms.topic: include
 | 10704 | 15 | No | To rethrow an error, a THROW statement must be used inside a CATCH block. Insert the THROW statement inside a CATCH block, or add error parameters to the THROW statement. |
 | 10705 | 15 | No | Subqueries are not allowed in the OUTPUT clause. |
 | 10706 | 15 | No | Too many expressions are specified in the GROUP BY clause. The maximum number is %d when grouping sets are supplied. |
-| 10707 | 15 | No | The CUBE() and ROLLUP() grouping constructs are not allowed in the current compatibility mode.  They are only allowed in 100 mode or higher. |
+| 10707 | 15 | No | The CUBE() and ROLLUP() grouping constructs are not allowed in the current compatibility mode. They are only allowed in 100 mode or higher. |
 | 10708 | 15 | No | DEFAULT is not allowed on the right hand side of "%.\*ls" |
 | 10709 | 15 | No | The number of columns for each row in a table value constructor must be the same. |
 | 10710 | 15 | No | An action of type '%S_MSG' is not allowed in the 'WHEN NOT MATCHED' clause of a MERGE statement. |
@@ -306,7 +306,7 @@ ms.topic: include
 | 10759 | 15 | No | Use of DISTINCT is not allowed with the OVER clause. |
 | 10760 | 16 | No | Scale argument is not valid. Valid expressions for data type %ls scale argument are integer constants and integer constant expressions. |
 | 10761 | 16 | No | Invalid data type %.\*ls in function %.\*ls. |
-| 10762 | 16 | No | The %.\*ls function is not allowed in the current compatibility mode.  It is only allowed in 110 mode or higher. |
+| 10762 | 16 | No | The %.\*ls function is not allowed in the current compatibility mode. It is only allowed in 110 mode or higher. |
 | 10763 | 15 | No | GROUP BY clause can only contain one query hint. Remove the extra hints and re-run the query. |
 | 10764 | 15 | No | Number of grouping columns in the query exceeded maximum number allowed. SQL Server allows 64k grouping columns. Reduce number of grouping columns and re-run the query. |
 | 10765 | 15 | No | DISTRIBUTED_AGG and CENTRAL_AGG hints cannot be used with a CUBE or ROLLUP clause. Modify the query and re-run it. |
@@ -330,7 +330,7 @@ ms.topic: include
 | 10783 | 16 | No | The body of a natively compiled module must be an ATOMIC block. |
 | 10784 | 16 | No | The WITH clause of BEGIN ATOMIC statement must specify a value for the option '%ls'. |
 | [10785](../mssqlserver-10785-database-engine-error.md) | 15 | No | The %S_MSG '%ls' is supported only with %S_MSG. |
-| 10786 | 16 | No | The ALTER AVAILABILITY GROUP command failed because it contained multiple MODIFY REPLICA options: %ls.  Enter a separate ALTER AVAILABILITY GROUP ... MODIFY REPLICA command for each replica option that you want to modify. |
+| 10786 | 16 | No | The ALTER AVAILABILITY GROUP command failed because it contained multiple MODIFY REPLICA options: %ls. Enter a separate ALTER AVAILABILITY GROUP ... MODIFY REPLICA command for each replica option that you want to modify. |
 | [10787](../mssqlserver-10787-database-engine-error.md) | 16 | No | The REPEATABLEREAD and SERIALIZABLE hints are not permitted on Hekaton tables with columnstore indexes. |
 | 10788 | 15 | No | The option '%ls' is not supported with table types. |
 | 10789 | 15 | No | The option '%ls' must be specified for index '%.\*ls' on table '%.\*ls'. It is required for hash indexes. |
@@ -357,37 +357,37 @@ ms.topic: include
 | 10907 | 16 | No | Attribute '%.\*ls' with value of %u is greater than attribute '%.\*ls' with value of %u. |
 | 10908 | 16 | No | Attribute '%.\*ls' with value of %u is less than attribute '%.\*ls' with value of %u. |
 | 10909 | 16 | No | The resource pool cannot be created. The maximum number of resource pools cannot exceed current limit of %u including predefined resource pools. |
-| 10910 | 16 | No | The operation could not be completed.  The specified '%.\*ls' value, %u, causes the sum of minimums on all resource pools on scheduler %u to exceed 100 percent. Reduce the value for one or more pools, or change pool affinity, so that the sum is less than or equal to 100. |
+| 10910 | 16 | No | The operation could not be completed. The specified '%.\*ls' value, %u, causes the sum of minimums on all resource pools on scheduler %u to exceed 100 percent. Reduce the value for one or more pools, or change pool affinity, so that the sum is less than or equal to 100. |
 | 10911 | 16 | No | Requested operation cannot be performed because the resource pool '%.\*ls' does not exist. |
 | 10912 | 16 | No | The operation could not be completed. Dropping predefined %S_MSG is not allowed. |
 | 10913 | 16 | No | Users are not allowed to %S_MSG the workload group '%.\*ls' in the '%.\*ls' resource pool. |
 | 10914 | 16 | No | The name of the %S_MSG '%.\*ls' cannot begin with # of ##. |
 | 10915 | 16 | No | The operation could not be completed. Altering '%.\*ls' %S_MSG is not allowed. |
 | 10916 | 16 | No | Cannot drop resource pool '%.\*ls' because it contains workload group '%.\*ls'. Drop or remove all workload groups using this resource pool before dropping it. |
-| 10917 | 16 | No | ALTER WORKLOAD GROUP failed.  Either a 'WITH' or 'USING' clause must be specified. |
+| 10917 | 16 | No | ALTER WORKLOAD GROUP failed. Either a 'WITH' or 'USING' clause must be specified. |
 | 10918 | 16 | No | Cannot create %S_MSG '%.\*ls' because it already exists. |
 | 10919 | 16 | No | An error occurred while reading the resource governor configuration from master database. Check the integrity of master database or contact the system administrator. |
 | 10920 | 16 | No | Cannot %S_MSG user-defined function '%.\*ls'. It is being used as a resource governor classifier. |
 | 10921 | 16 | No | The '%.\*ls' %S_MSG cannot be moved out of '%.\*ls' %S_MSG. |
 | 10922 | 16 | No | %ls failed. Rerun the statement. |
-| 10923 | 16 | No | %ls failed.  The resource governor is not available in this edition of SQL Server. You can manipulate resource governor metadata but you will not be able to apply resource governor configuration. Only Enterprise edition of SQL Server supports resource governor. |
+| 10923 | 16 | No | %ls failed. The resource governor is not available in this edition of SQL Server. You can manipulate resource governor metadata but you will not be able to apply resource governor configuration. Only Enterprise edition of SQL Server supports resource governor. |
 | 10924 | 16 | No | The pool affinity range is invalid. The lower bound %d must be less than the upper bound %d. |
 | 10925 | 16 | No | A %S_MSG value was specified more than one time in the pool affinity range list. |
-| 10926 | 16 | No | The %S_MSG range that specifies %S_MSG %d includes at least one %S_MSG that is not available to the current instance.  The maximum %S_MSG number that is available to this instance is %d. |
-| 10927 | 16 | No | The operation could not be completed.  The specified '%.\*ls' value, %u, causes the sum of minimums on all workload groups using resource pool '%.\*ls' to exceed 100 percent. Reduce the value or modify other workload groups so that the sum is less than or equal to 100. |
+| 10926 | 16 | No | The %S_MSG range that specifies %S_MSG %d includes at least one %S_MSG that is not available to the current instance. The maximum %S_MSG number that is available to this instance is %d. |
+| 10927 | 16 | No | The operation could not be completed. The specified '%.\*ls' value, %u, causes the sum of minimums on all workload groups using resource pool '%.\*ls' to exceed 100 percent. Reduce the value or modify other workload groups so that the sum is less than or equal to 100. |
 | 10928 | 16 | No | Resource ID : %d. The %ls limit for the database is %d and has been reached. See 'http://go.microsoft.com/fwlink/?LinkId=267637' for assistance. |
 | 10929 | 16 | No | Resource ID : %d. The %ls minimum guarantee is %d, maximum limit is %d and the current usage for the database is %d. However, the server is currently too busy to support %ls greater than %d for this database. See 'http://go.microsoft.com/fwlink/?LinkId=267637' for assistance. Otherwise, please try again later. |
 | 10930 | 16 | No | The service is currently too busy. Please try again later. |
 | 10931 | 16 | No | Cannot drop resource pool '%.\*ls' because it is bound to a database. Remove all bindings to this resource pool before dropping it. |
 | 10932 | 16 | No | Resource governor configuration failed, because there is an active database in the resource pool being dropped. Take the database offline and try again. |
-| 10933 | 16 | No | A %S_MSG with id %d does not exist on this system.  Use sys.dm_os_schedulers to locate valid %S_MSGs for this system. |
+| 10933 | 16 | No | A %S_MSG with id %d does not exist on this system. Use sys.dm_os_schedulers to locate valid %S_MSGs for this system. |
 | 10934 | 16 | No | Requested operation cannot be performed because the external resource pool '%.\*ls' does not exist. |
 | 10935 | 16 | No | External resource pool does not allow more than one processor group. |
 | 10936 | 16 | No | Resource ID : %d. The %ls limit for the elastic pool is %d and has been reached. See 'http://go.microsoft.com/fwlink/?LinkId=267637' for assistance. |
 | 10937 | 16 | No | Default workload group does not allow to alter attribute '%.\*ls'. |
 | 10961 | 16 | No | The request has been aborted because its CPU usage exceeds the maximum configured limit for the workload group. |
 | 10981 | 10 | No | Resource governor reconfiguration succeeded. |
-| 10982 | 16 | Yes | Failed to run resource governor classifier user-defined function '%.\*ls'. Last error %u, state %u. See previous errors in SQL Server error log from session ID %ld for details.  Classifier elapsed time: %I64u ms. |
+| 10982 | 16 | Yes | Failed to run resource governor classifier user-defined function '%.\*ls'. Last error %u, state %u. See previous errors in SQL Server error log from session ID %ld for details. Classifier elapsed time: %I64u ms. |
 | 10983 | 16 | No | Resource governor '%ls' operation was canceled by user. |
 | 10984 | 16 | No | Resource governor reconfiguration failed. |
 | 10985 | 10 | No | Resource governor reconfiguration encountered an issue (HRESULT code : 0x%lx, reason: %ls), while sending active external resource pool ids to launchpad. This will not fail reconfigure. |

@@ -2,10 +2,10 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 02/17/2023
+ms.date: 07/06/2023
 ms.topic: include
 ---
-| Error| Severity | Event logged | Description|
+| Error | Severity | Event logged | Description |
 | :--- | :--- | :--- | :--- |
 | 5001 | 16 | No | User must be in the master database. |
 | 5002 | 16 | No | Database '%.\*ls' does not exist. Verify the name in sys.databases and try the operation again. |
@@ -29,7 +29,7 @@ ms.topic: include
 | 5021 | 10 | No | The %S_MSG name '%.\*ls' has been set. |
 | 5022 | 16 | No | Log file '%ls' for this database is already active. |
 | 5023 | 16 | No | The database must be suspect or in emergency mode to rebuild the log. |
-| 5024 | 16 | No | No entry found for the primary log file in sysfiles1.  Could not rebuild the log. |
+| 5024 | 16 | No | No entry found for the primary log file in sysfiles1. Could not rebuild the log. |
 | 5025 | 16 | No | The file '%ls' already exists. It should be renamed or deleted so that a new log file can be created. |
 | 5027 | 16 | No | System databases master, model, and tempdb cannot have their logs rebuilt. |
 | 5028 | 16 | No | The system could not activate enough of the database to rebuild the log. |
@@ -55,7 +55,7 @@ ms.topic: include
 | 5050 | 16 | No | Cannot change the properties of empty filegroup '%.\*ls'. The filegroup must contain at least one file. |
 | 5051 | 16 | No | Cannot have a filegroup with the name 'DEFAULT'. |
 | 5052 | 16 | No | %ls is not permitted while a database is in the %ls state. |
-| 5054 | 16 | No | Could not cleanup worktable IAM chains to allow shrink or remove file operation.  Please try again when tempdb is idle. |
+| 5054 | 16 | No | Could not cleanup worktable IAM chains to allow shrink or remove file operation. Please try again when tempdb is idle. |
 | 5055 | 16 | No | Cannot add, remove, or modify file '%.\*ls'. The file is read-only. |
 | 5056 | 16 | No | Cannot add, remove, or modify a file in filegroup '%.\*ls' because the filegroup is not online. |
 | 5057 | 16 | No | Cannot add, remove, or modify file '%.\*ls' because it is offline. |
@@ -97,15 +97,15 @@ ms.topic: include
 | 5093 | 16 | No | The operation cannot be performed on a database snapshot. |
 | 5094 | 16 | No | The operation cannot be performed on a database with database snapshots or active DBCC replicas. |
 | 5095 | 16 | No | A database or filegroup cannot be set to read-only mode when any files are subject to a RESTORE PAGE operation. Complete the restore sequence involving file "%ls" before attempting to transition to read-only. |
-| 5096 | 16 | No | The recovery model cannot be changed to SIMPLE when any files are subject to a RESTORE PAGE operation.  Complete the restore sequence involving file "%ls" before attempting to transition to SIMPLE. |
-| 5097 | 16 | No | The container cannot be set to the offline state because changes exist that require a log backup.  Take a log backup and then retry the ALTER DATABASE statement. |
-| 5098 | 16 | No | The container can not be dropped because changes exist that require a log backup.  Take a log backup and then retry the ALTER DATABASE operation. |
-| 5099 | 16 | No | ALTER DATABASE failed because the READ_COMMITTED_SNAPSHOT and the ALLOW_SNAPSHOT_ISOLATION options cannot be set to ON when a database has FILESTREAM filegroups.  To set READ_COMMITTED_SNAPSHOT or ALLOW_SNAPSHOT_ISOLATION to ON, you must remove the FILESTREAM filegroups from the database. |
+| 5096 | 16 | No | The recovery model cannot be changed to SIMPLE when any files are subject to a RESTORE PAGE operation. Complete the restore sequence involving file "%ls" before attempting to transition to SIMPLE. |
+| 5097 | 16 | No | The container cannot be set to the offline state because changes exist that require a log backup. Take a log backup and then retry the ALTER DATABASE statement. |
+| 5098 | 16 | No | The container can not be dropped because changes exist that require a log backup. Take a log backup and then retry the ALTER DATABASE operation. |
+| 5099 | 16 | No | ALTER DATABASE failed because the READ_COMMITTED_SNAPSHOT and the ALLOW_SNAPSHOT_ISOLATION options cannot be set to ON when a database has FILESTREAM filegroups. To set READ_COMMITTED_SNAPSHOT or ALLOW_SNAPSHOT_ISOLATION to ON, you must remove the FILESTREAM filegroups from the database. |
 | 5102 | 22 | No | Attempted to open a filegroup for the invalid ID %d in database "%.\*ls". |
 | 5103 | 16 | No | MAXSIZE cannot be less than SIZE for file '%ls'. |
 | 5104 | 16 | No | File '%.\*ls' already used. |
 | 5105 | 16 | Yes | A file activation error occurred. The physical file name '%.\*ls' may be incorrect. Diagnose and correct additional errors, and retry the operation. |
-| 5108 | 10 | No | Log file '%.\*ls' does not match the primary file.  It may be from a different database or the log may have been rebuilt previously. |
+| 5108 | 10 | No | Log file '%.\*ls' does not match the primary file. It may be from a different database or the log may have been rebuilt previously. |
 | 5110 | 16 | No | The file "%.\*ls" is on a network path that is not supported for system database files. |
 | 5111 | 10 | No | File activation failure. The physical file name "%.\*ls" may be incorrect. |
 | 5112 | 10 | Yes | FCB::SetSize dbid %d fileid %d oldSize %d newSize %d. To prevent this informational message from appearing in the error log, use DBCC TRACEOFF to turn off the trace flag. |
@@ -118,7 +118,7 @@ ms.topic: include
 | 5121 | 16 | No | The path specified by "%.\*ls" is not in a valid directory. |
 | 5123 | 16 | No | CREATE FILE encountered operating system error %ls while attempting to open or create the physical file '%.\*ls'. |
 | 5124 | 16 | Yes | The file header in '%ls' does not match the expected contents for file '%ls' of database '%ls'. The mismatch is possibly between the full-text catalog files and the related database. Perform a restore if necessary. |
-| 5125 | 24 | No | File '%ls' appears to have been truncated by the operating system.  Expected size is %I64d KB but actual size is %I64d KB. |
+| 5125 | 24 | No | File '%ls' appears to have been truncated by the operating system. Expected size is %I64d KB but actual size is %I64d KB. |
 | 5127 | 16 | No | All files must be specified for database snapshot creation. Missing the file "%ls". |
 | 5128 | 17 | No | Write to sparse file '%ls' failed due to lack of disk space. |
 | 5129 | 10 | No | The log cannot be rebuilt when the primary file is read-only. |
@@ -136,8 +136,8 @@ ms.topic: include
 | 5141 | 16 | No | Failed to lock credential manager. Lock Mode: %.\*ls. |
 | 5142 | 16 | No | Failed to lock lease renewal manager. Lock Mode: %.\*ls. |
 | 5143 | 16 | No | Concurrent operation (%.\*ls) failed on file '%.\*ls'. Operating system error %d: "%ls" |
-| 5144 | 10 | Yes | Autogrow of file '%.\*ls' in database '%.\*ls' was cancelled by user or timed out after %d milliseconds.  Use ALTER DATABASE to set a smaller FILEGROWTH value for this file or to explicitly set a new file size. |
-| 5145 | 10 | Yes | Autogrow of file '%.\*ls' in database '%.\*ls' took %d milliseconds.  Consider using ALTER DATABASE to set a smaller FILEGROWTH for this file. |
+| 5144 | 10 | Yes | Autogrow of file '%.\*ls' in database '%.\*ls' was cancelled by user or timed out after %d milliseconds. Use ALTER DATABASE to set a smaller FILEGROWTH value for this file or to explicitly set a new file size. |
+| 5145 | 10 | Yes | Autogrow of file '%.\*ls' in database '%.\*ls' took %d milliseconds. Consider using ALTER DATABASE to set a smaller FILEGROWTH for this file. |
 | 5149 | 16 | No | MODIFY FILE encountered operating system error %ls while attempting to expand the physical file '%ls'. |
 | 5150 | 16 | No | The size of a single log file must not be greater than 2 TB. |
 | 5152 | 16 | No | This operation is not supported for URL %.\*ls. |
@@ -147,7 +147,7 @@ ms.topic: include
 | 5170 | 16 | Yes | Cannot create file '%ls' because it already exists. Change the file path or the file name, and retry the operation. |
 | 5171 | 16 | No | %.\*ls is not a primary database file. |
 | 5172 | 16 | No | The header for file '%ls' is not a valid database file header. The %ls property is incorrect. |
-| 5173 | 16 | Yes | One or more files do not match the primary file of the database. If you are attempting to attach a database, retry the operation with the correct files.  If this is an existing database, the file may be corrupted and should be restored from a backup. |
+| 5173 | 16 | Yes | One or more files do not match the primary file of the database. If you are attempting to attach a database, retry the operation with the correct files. If this is an existing database, the file may be corrupted and should be restored from a backup. |
 | 5174 | 16 | No | Each file size must be greater than or equal to 512 KB. |
 | 5175 | 10 | Yes | The file %.\*ls has been expanded to allow recovery to succeed. After recovery completes, you can increase the size of the files in the database. Contact the system administrator for assistance. |
 | 5176 | 10 | Yes | To allow recovery to succeed, the log file '%.\*ls' has been expanded beyond its maximum size. After recovery completes, you should either increase the size of the log file in the database or schedule more frequent backups of the log (under the full or bulk-logged recovery model). |
@@ -216,15 +216,15 @@ ms.topic: include
 | 5241 | 10 | No | File ID %d of database ID %d cannot be shrunk as the target shrink size (%I64d KB) is greater than the actual file size (%I64d KB). |
 | [5242](../mssqlserver-5242-database-engine-error.md) | 16 | No | An inconsistency was detected during an internal operation in database '%.\*ls'(ID:%d) on page %S_PGID. Please contact technical support. |
 | [5243](../mssqlserver-5243-database-engine-error.md) | 16 | No | An inconsistency was detected during an internal operation. Please contact technical support. |
-| 5244 | 16 | No | Repair statement not processed.  One or more files in the database are read-only and must be made writeable in order to run repair. |
-| [5245](../mssqlserver-5245-database-engine-error.md) | 16 | No | Object ID %ld (object '%.\*ls'):  DBCC could not obtain a lock on this object because the lock request timeout period was exceeded.  This object has been skipped and will not be processed. |
-| 5246 | 16 | No | Repair operations cannot be performed on the MSSQLSYSTEMRESOURCE database.  Consult Books Online topic "Resource Database" for more information. |
-| 5247 | 16 | No | Repair:  insert a secondary index row based on its base table row. |
-| 5248 | 10 | No | Repair:  Successfully %ls row in index "%ls" in database "%ls". |
+| 5244 | 16 | No | Repair statement not processed. One or more files in the database are read-only and must be made writeable in order to run repair. |
+| [5245](../mssqlserver-5245-database-engine-error.md) | 16 | No | Object ID %ld (object '%.\*ls'): DBCC could not obtain a lock on this object because the lock request timeout period was exceeded. This object has been skipped and will not be processed. |
+| 5246 | 16 | No | Repair operations cannot be performed on the MSSQLSYSTEMRESOURCE database. Consult Books Online topic "Resource Database" for more information. |
+| 5247 | 16 | No | Repair: insert a secondary index row based on its base table row. |
+| 5248 | 10 | No | Repair: Successfully %ls row in index "%ls" in database "%ls". |
 | 5249 | 10 | No | %.\*ls: Page %d:%d could not be moved because shrink could not lock the page. |
-| [5250](../mssqlserver-5250-database-engine-error.md) | 16 | No | Database error: %ls page %S_PGID for database '%.\*ls' (database ID %d) is invalid.  This error cannot be repaired.  You must restore from backup. |
+| [5250](../mssqlserver-5250-database-engine-error.md) | 16 | No | Database error: %ls page %S_PGID for database '%.\*ls' (database ID %d) is invalid. This error cannot be repaired. You must restore from backup. |
 | 5251 | 10 | No | %.\*ls: Heap page %d:%d could not be moved because maintaining NC indexes associated with the heap failed. |
-| 5252 | 10 | No | File ID %d of database ID %d cannot be shrunk to the expected size. The high concurrent workload is leading to too many deadlocks during the shrink operation.   Re-run the shrink operation when the workload is lower. |
+| 5252 | 10 | No | File ID %d of database ID %d cannot be shrunk to the expected size. The high concurrent workload is leading to too many deadlocks during the shrink operation. Re-run the shrink operation when the workload is lower. |
 | 5253 | 10 | No | The check statement was aborted. DBCC CHECKALLOC cannot be run on TEMPDB. |
 | 5254 | 10 | No | %.\*ls: Heap page %d:%d could not be moved because the table to which it belonged was building the heap by another process. |
 | 5255 | 10 | No | %.\*ls: Page %d:%d could not be moved because it is a sort page. |
@@ -234,27 +234,27 @@ ms.topic: include
 | 5259 | 10 | No | %.\*ls: Heap page %d:%d could not be moved because populating computed column expression failed. |
 | 5260 | 16 | No | Object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls): At least one record on page %S_PGID contains versioning information, but the VERSION_INFO bit in the page header is not set. |
 | 5261 | 10 | No | %.\*ls: Page %d:%d could not be moved because it has not been formatted. |
-| 5262 | 16 | No | Object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls), page %S_PGID, row %d: Row contains a NULL versioning timestamp, but its version chain pointer is not NULL.  Version chain points to page %S_PGID, slot %d. |
+| 5262 | 16 | No | Object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls), page %S_PGID, row %d: Row contains a NULL versioning timestamp, but its version chain pointer is not NULL. Version chain points to page %S_PGID, slot %d. |
 | 5263 | 10 | No | Found incorrect count(s) for table '%.\*ls', index '%.\*ls', partition %ld: |
-| 5264 | 10 | No | DATA pages %.\*ls: From system table - %I64d pages;     Actual - %I64d pages. |
-| 5265 | 10 | No | USED pages %.\*ls: From system table - %I64d pages;     Actual - %I64d pages. |
-| 5266 | 10 | No | RSVD pages %.\*ls: From system table - %I64d pages;     Actual - %I64d pages. |
-| 5267 | 10 | No | ROWS count: From system table - %I64d rows;     Actual - %I64d rows. |
-| 5268 | 10 | No | DBCC %.\*ls is performing an exhaustive search of %d indexes for possible inconsistencies.  This is an informational message only. No user action is required. |
-| 5269 | 16 | No | Check terminated.  The transient database snapshot for database '%.\*ls' (database ID %d) has been marked suspect due to an IO operation failure.  Refer to the SQL Server error log for details. |
+| 5264 | 10 | No | DATA pages %.\*ls: From system table - %I64d pages; Actual - %I64d pages. |
+| 5265 | 10 | No | USED pages %.\*ls: From system table - %I64d pages; Actual - %I64d pages. |
+| 5266 | 10 | No | RSVD pages %.\*ls: From system table - %I64d pages; Actual - %I64d pages. |
+| 5267 | 10 | No | ROWS count: From system table - %I64d rows; Actual - %I64d rows. |
+| 5268 | 10 | No | DBCC %.\*ls is performing an exhaustive search of %d indexes for possible inconsistencies. This is an informational message only. No user action is required. |
+| 5269 | 16 | No | Check terminated. The transient database snapshot for database '%.\*ls' (database ID %d) has been marked suspect due to an IO operation failure. Refer to the SQL Server error log for details. |
 | 5270 | 10 | No | %.\*ls: Page %d:%d could not be moved because it is an unmovable page in a critical system table. |
-| 5271 | 10 | No | DBCC %ls could not output results for this command due to an internal failure.  Review other errors for details. |
+| 5271 | 10 | No | DBCC %ls could not output results for this command due to an internal failure. Review other errors for details. |
 | 5272 | 10 | No | %.\*ls: Index Allocation Map (IAM) page %d:%d could not be moved because the underlying object could not be accessed exclusively. |
 | 5273 | 10 | No | %.\*ls: Page %d:%d could not be moved because it belonged to an index/heap that was/is in build online. |
-| 5274 | 16 | No | Table error: Object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls), page %S_PGID.  %S_MSG is invalid for compressed page; the following internal test failed:  %.\*ls. Values are %ld and %ld. |
-| 5275 | 10 | No | Exhaustive search of '%.\*ls' (database ID %d) for inconsistencies completed.  Processed %d of %d total searches.  Elapsed time: %I64d milliseconds.  This is an informational message only. No user action is required. |
-| 5276 | 10 | No | Exhaustive search of '%.\*ls' (database ID %d) for inconsistencies failed due to exception %d, state %d.  This is an informational message only. No user action is required. |
+| 5274 | 16 | No | Table error: Object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls), page %S_PGID. %S_MSG is invalid for compressed page; the following internal test failed: %.\*ls. Values are %ld and %ld. |
+| 5275 | 10 | No | Exhaustive search of '%.\*ls' (database ID %d) for inconsistencies completed. Processed %d of %d total searches. Elapsed time: %I64d milliseconds. This is an informational message only. No user action is required. |
+| 5276 | 10 | No | Exhaustive search of '%.\*ls' (database ID %d) for inconsistencies failed due to exception %d, state %d. This is an informational message only. No user action is required. |
 | 5277 | 10 | No | Internal %lsdatabase snapshot has split point LSN = %08x:%08x:%04x and first LSN = %08x:%08x:%04x. |
-| 5278 | 10 | No | DBCC encountered a page with an LSN greater than the current end of log LSN %S_LSN for its internal database snapshot.  Could not read page %S_PGID, database '%.\*ls' (database ID %d), LSN = %S_LSN, type = %ld, isInSparseFile = %d.   Please re-run this DBCC command." |
+| 5278 | 10 | No | DBCC encountered a page with an LSN greater than the current end of log LSN %S_LSN for its internal database snapshot. Could not read page %S_PGID, database '%.\*ls' (database ID %d), LSN = %S_LSN, type = %ld, isInSparseFile = %d. Please re-run this DBCC command." |
 | 5279 | 16 | No | Table error: object ID %d, index ID %d, partition ID %I64d, database fragment ID %d. The row on page (%d:%d), slot ID %d should be on fragment ID %d but was found in fragment ID %d. |
 | 5280 | 16 | No | An unexpected protocol element was recevied during the execution of a consistency check command. Retry the operation. |
 | 5281 | 10 | No | Estimated TEMPDB space (in KB) needed for %s on database %.\*ls = %I64d. |
-| 5282 | 16 | No | Table error: Object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls), page %S_PGID.  The header of the page is invalid: the IS_IN_SYSXACT flag bit is set. |
+| 5282 | 16 | No | Table error: Object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls), page %S_PGID. The header of the page is invalid: the IS_IN_SYSXACT flag bit is set. |
 | 5283 | 10 | No | The Cross Rowset check on nonclustered columnstore index object ID %d, index ID %d, partition number %d failed. Please rebuild the partition. |
 | 5284 | 16 | No | The replicated index '%.\*ls' (object ID %d) and one or more of its clones do not contain the same rows. |
 | 5285 | 16 | No | Nonclustered columnstore index '%.\*ls' on table '%.\*ls' has a missing dictionary on column id %d and rowgroup id %d. Drop and recreate the nonclustered columnstore index. |
@@ -271,8 +271,8 @@ ms.topic: include
 | 5296 | 10 | No | Object ID %ld (object '%.\*ls'): The operation is not supported with memory optimized tables. This object has been skipped and will not be processed. |
 | 5297 | 10 | No | The Cross Rowset check between clustered columnstore index and nonclustered index (object ID %d, index ID %d, partition number %d) failed. Please rebuild the partition. |
 | 5298 | 16 | No | Cannot display content of page %S_PGID. The rowset it belongs to is in tombstone state and pending removal. |
-| 5299 | 16 | No | Query Store Error:%d State:%d  Message:%.\*ls |
-| 5301 | 16 | No | Bulk load failed. User does not have ALTER TABLE permission on table '%.\*ls'. ALTER TABLE permission is required on the target table of a bulk load if the target table contains triggers or check constraints, but the  'FIRE_TRIGGERS' or 'CHECK_CONSTRAINTS' bulk hints are not specified. ALTER TABLE permission is also required if the 'KEEPIDENTITY' bulk hint is specified. |
+| 5299 | 16 | No | Query Store Error:%d State:%d Message:%.\*ls |
+| 5301 | 16 | No | Bulk load failed. User does not have ALTER TABLE permission on table '%.\*ls'. ALTER TABLE permission is required on the target table of a bulk load if the target table contains triggers or check constraints, but the 'FIRE_TRIGGERS' or 'CHECK_CONSTRAINTS' bulk hints are not specified. ALTER TABLE permission is also required if the 'KEEPIDENTITY' bulk hint is specified. |
 | 5302 | 16 | No | Mutator '%.\*ls' on '%.\*ls' cannot be called on a null value. |
 | 5303 | 16 | No | The result of applying mutator '%.\*ls' on CLR type '%.\*ls' cannot be a null value. |
 | 5304 | 16 | No | Bulk copy failed. User does not have ALTER TABLE permission on table '%.\*ls'. ALTER TABLE permission is required on the target table of a bulk copy operation if the table has triggers or check constraints, but 'FIRE_TRIGGERS' or 'CHECK_CONSTRAINTS' bulk hints are not specified as options to the bulk copy command. |
@@ -282,7 +282,7 @@ ms.topic: include
 | 5308 | 16 | No | Windowed functions, aggregates and NEXT VALUE FOR functions do not support integer indices as ORDER BY clause expressions. |
 | 5309 | 16 | No | Windowed functions, aggregates and NEXT VALUE FOR functions do not support constants as ORDER BY clause expressions. |
 | 5310 | 16 | No | Aggregates are not allowed in the VALUES list of an INSERT statement. |
-| 5311 | 16 | No | Invalid quote character '%lc'.  A remote server or user command used an invalid quote character. |
+| 5311 | 16 | No | Invalid quote character '%lc'. A remote server or user command used an invalid quote character. |
 | 5312 | 16 | No | The input to the function 'ntile' cannot be bound. |
 | 5313 | 16 | No | Synonym '%.\*ls' refers to an invalid object. |
 | 5314 | 16 | No | The use of aggregates is not allowed in this context. |
@@ -297,7 +297,7 @@ ms.topic: include
 | 5324 | 15 | No | In a MERGE statement, a '%S_MSG' clause with a search condition cannot appear after a '%S_MSG' clause with no search condition. |
 | 5325 | 15 | No | The order of the data in the data file does not conform to the ORDER hint specified for the BULK rowset '%.\*ls'. The order of the data must match the order specified in the ORDER hint for a BULK rowset. Update the ORDER hint to reflect the order in which the input data is ordered, or update the input data file to match the order specified by the ORDER hint. |
 | 5326 | 15 | No | The data in the data file does not conform to the UNIQUE hint specified for the BULK rowset '%.\*ls'. The data in the data file must be unique if the UNIQUE hint is specified for a BULK rowset. Remove the UNIQUE hint, or update the input data file to ensure that the data is unique. |
-| 5327 | 15 | No | The column '%.\*ls' does not have a valid data type for the ORDER hint specified for data source '%.\*ls'.  The text, ntext, image, xml, varchar(max), nvarchar(max) and varbinary(max) data types cannot be used in the ORDER hint for a BULK rowset or CLR TVF. |
+| 5327 | 15 | No | The column '%.\*ls' does not have a valid data type for the ORDER hint specified for data source '%.\*ls'. The text, ntext, image, xml, varchar(max), nvarchar(max) and varbinary(max) data types cannot be used in the ORDER hint for a BULK rowset or CLR TVF. |
 | 5328 | 15 | No | Cannot insert explicit value for the identity column '%.\*ls' in the target table '%.\*ls' of the INSERT statement when the FROM clause contains a nested INSERT, UPDATE, DELETE, or MERGE statement. |
 | 5329 | 15 | No | Windowed functions are not allowed in the %S_MSG clause when the FROM clause contains a nested INSERT, UPDATE, DELETE, or MERGE statement. |
 | 5330 | 16 | No | Full-text predicates cannot appear in the OUTPUT clause. |
@@ -342,9 +342,9 @@ ms.topic: include
 | 5531 | 16 | No | Error 0x%x (NT status code) was encountered when SQL Server attempts to change the logging mode of Transaction File System Resource Manager located at '%.\*ls' from '%.\*ls' to '%.\*ls'. |
 | 5532 | 16 | No | SQL Server cannot obtain the Kernel Transaction Manager's transaction context to perform file system operation. |
 | 5533 | 23 | No | The FILESTREAM file system log record that has the LSN '%d:%d:%d' is missing. Log folder '%.\*ls' is corrupted. Restore the database from a backup. |
-| 5534 | 23 | No | SQL log record at LSN '%d:%d:%d' for database '%.\*ls' is corrupted.  Database cannot recover. |
-| 5535 | 23 | No | FILESTREAM data container '%.\*ls' is corrupted.  Database cannot recover. |
-| 5536 | 23 | No | FILESTREAM deleted folder '%.\*ls' is corrupted.  Database cannot recover. |
+| 5534 | 23 | No | SQL log record at LSN '%d:%d:%d' for database '%.\*ls' is corrupted. Database cannot recover. |
+| 5535 | 23 | No | FILESTREAM data container '%.\*ls' is corrupted. Database cannot recover. |
+| 5536 | 23 | No | FILESTREAM deleted folder '%.\*ls' is corrupted. Database cannot recover. |
 | 5537 | 16 | No | Function %ls is only valid on columns with the FILESTREAM attribute. |
 | 5538 | 16 | No | Partial updates are not supported on columns that have a FILESTREAM as a source. |
 | 5539 | 16 | No | The ROWGUIDCOL column associated with the FILESTREAM being used is not visible where method %ls is called. |
@@ -392,7 +392,7 @@ ms.topic: include
 | 5593 | 16 | No | FILESTREAM feature is not supported on WoW64. The feature is disabled. |
 | 5594 | 16 | No | The value specified for the computer_name_format parameter of the .%ls() function is not valid. |
 | 5595 | 16 | No | .PhysicalPathName is disabled. |
-| 5596 | 10 | No | FILESTREAM feature configuration might be inconsistent.  To reset the configuration, use the sp_configure stored procedure. |
+| 5596 | 10 | No | FILESTREAM feature configuration might be inconsistent. To reset the configuration, use the sp_configure stored procedure. |
 | 5597 | 16 | No | FILESTREAM feature could not be initialized. The operating system Administrator must enable FILESTREAM on the instance using Configuration Manager. |
 | 5598 | 10 | No | FILESTREAM feature is not supported on user instances. |
 | 5599 | 16 | No | .ContainerId is disabled. |
@@ -420,7 +420,7 @@ ms.topic: include
 | 5834 | 16 | No | The affinity specified conflicts with the IO affinity mask specified. Change the affinity setting to use different CPUs than those specified in the IO affinity mask. |
 | 5835 | 16 | No | Failed to start CPUs with the mask 0x%lx on the system. |
 | 5836 | 16 | No | Lightweight pooling is not supported on this platform or in this edition of SQL Server. |
-| 5837 | 16 | No | The service broker listen port cannot be dynamic.  Valid port values are 1024-32767. |
+| 5837 | 16 | No | The service broker listen port cannot be dynamic. Valid port values are 1024-32767. |
 | 5838 | 16 | No | The service broker connection authentication value is invalid. |
 | 5839 | 16 | No | The service broker message forward store size cannot be set to 0. |
 | 5840 | 16 | No | The service broker message forward mode is invalid. |
@@ -436,12 +436,12 @@ ms.topic: include
 | 5853 | 16 | No | The affinity range is invalid. The lower bound %d must be less than the upper bound %d. |
 | 5854 | 16 | No | A %S_MSG value was specified more than one time in the range list for an ALTER SERVER CONFIGURATION SET PROCESS AFFINITY statement. |
 | 5855 | 16 | No | The affinity setting was not changed. This can be caused by low system resources. |
-| 5856 | 16 | No | The %S_MSG range that specifies %S_MSG %d includes at least one %S_MSG that is not available to the current instance.  The maximum %S_MSG number that is available to this instance is %d. |
+| 5856 | 16 | No | The %S_MSG range that specifies %S_MSG %d includes at least one %S_MSG that is not available to the current instance. The maximum %S_MSG number that is available to this instance is %d. |
 | 5857 | 10 | No | CPU |
 | 5858 | 10 | No | NUMANODE |
 | 5859 | 16 | No | The current affinity setting specifies the use of more than 64 processors. Before you use sp_configure to change affinity settings, remove these processors by using ALTER SERVER CONFIGURATION. |
 | 5860 | 10 | No | Affinity changed for node %d: from 0x%0\*I64x:%u to 0x%0\*I64x:%u. This is an informational message only. No user action is required. |
-| 5861 | 16 | No | A %S_MSG with id %d does not exist on this system.  Use sys.dm_os_schedulers to locate valid %S_MSGs for this system. |
+| 5861 | 16 | No | A %S_MSG with id %d does not exist on this system. Use sys.dm_os_schedulers to locate valid %S_MSGs for this system. |
 | 5862 | 16 | No | The number of max worker threads is set too low. On this computer, the number must be more than %u. You should increase the number of max worker threads. |
 | 5863 | 16 | No | Could not change the value of the '%.\*ls' property. Operating system error %ls |
 | 5864 | 16 | No | IO affinity is not supported on this edition of sql server. |

@@ -2,10 +2,10 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 02/17/2023
+ms.date: 07/06/2023
 ms.topic: include
 ---
-| Error| Severity | Event logged | Description|
+| Error | Severity | Event logged | Description |
 | :--- | :--- | :--- | :--- |
 | 28000 | 16 | No | The decrypted session key has an unexpected size. |
 | 28001 | 16 | No | A corrupted message has been received. It contains invalid flags. This occurred in the message with Conversation ID '%.\*ls', Initiator: %d, and Message sequence number: %I64d. |
@@ -108,10 +108,10 @@ ms.topic: include
 | 28381 | 15 | No | Lock hints other than READCOMMITTED and REPEATABLEREAD are not allowed when clone address syntax is used. |
 | 28382 | 16 | No | A correlation name must be specified for the clone address rowset function. |
 | 28383 | 16 | No | Clone address hint is missing on the tables '%.\*ls'. |
-| 28389 | 16 | No | Target with the clone address: IdxId %d, DbFragId %d, RowsetId 0x%016I64X is not found at brick %d.  Possibly caused by invalid IDs or by an inconsistency between the IDs and the fragmentation function. |
+| 28389 | 16 | No | Target with the clone address: IdxId %d, DbFragId %d, RowsetId 0x%016I64X is not found at brick %d. Possibly caused by invalid IDs or by an inconsistency between the IDs and the fragmentation function. |
 | 28390 | 16 | No | Invalid clone address syntax: IdxId %d, DbFragId %d, RowsetId 0x%016I64X. |
 | 28391 | 16 | No | The use of internal Clone Addressability syntax extensions is incompatible with the feature '%.\*ls'. |
-| 28392 | 16 | No | The internal Clone Addressability syntax extensions is only allowed on user tables.  The target (in the FROM claus) is '%.\*ls'. |
+| 28392 | 16 | No | The internal Clone Addressability syntax extensions is only allowed on user tables. The target (in the FROM claus) is '%.\*ls'. |
 | 28393 | 16 | No | The index (id = %d) selected in the plan is inconsistent with the index specified in the clone address syntax (id = %d). |
 | 28394 | 16 | No | The query plan uses the feature '%.\*ls' which is unexpected with clone address syntax. |
 | 28395 | 16 | No | Multiple conflicting Ids are given on '%.\*ls': old value = %d, new value = %d. |
@@ -338,8 +338,8 @@ ms.topic: include
 | 29307 | 16 | Yes | Cannot set the roster property %s. |
 | 29308 | 16 | Yes | Local brick id \<%d\> does not match brick id \<%d\> in the resource database. |
 | 29309 | 16 | Yes | Brick id has not been set. (Resource instance name: %s) |
-| 29311 | 16 | Yes | An error occurred while trying to connect to a service control manager on machine %ls.  Error returned: %d - %ls. |
-| 29312 | 16 | Yes | An error occurred while trying to perform a service operation on service %ls on machine %ls.  Error returned: %d - %ls. |
+| 29311 | 16 | Yes | An error occurred while trying to connect to a service control manager on machine %ls. Error returned: %d - %ls. |
+| 29312 | 16 | Yes | An error occurred while trying to perform a service operation on service %ls on machine %ls. Error returned: %d - %ls. |
 | 29314 | 16 | Yes | The service %ls on machine %ls failed to start in a timely fashion. Service specific error code %d. |
 | 29315 | 16 | Yes | OS user does not have the required privileges to start the remote service on brick %d. |
 | 29316 | 16 | Yes | The path name for the file matrix.xsd cannot be constructed. (Reason: %d). |
@@ -360,10 +360,10 @@ ms.topic: include
 | 29705 | 16 | Yes | Failed to release the specified edge back to the edge pool. |
 | 29706 | 16 | Yes | GDMA LWFG buffer initialization failed. |
 | 29707 | 16 | Yes | Failed to publish LWFG to GDMA LWFG buffer. |
-| 29708 | 16 | Yes | GDMA request processing failed.  See previous error for details. |
+| 29708 | 16 | Yes | GDMA request processing failed. See previous error for details. |
 | 29709 | 16 | Yes | TCMA API for mapping SOS_Task to federated transaction failed. |
 | 29711 | 16 | Yes | Failed to obtain brick-local active thread count for a federated transaction from local TCMA. |
-| 29801 | 16 | Yes | GDM request processing failed.  See previous error for details. |
+| 29801 | 16 | Yes | GDM request processing failed. See previous error for details. |
 | 29802 | 16 | Yes | GDM failed to allocate message via communication stack API. |
 | 29803 | 10 | Yes | Global Deadlock Monitor is inactive. This is an informational message only. No user action is required. |
 | 30003 | 16 | No | A fulltext system view or stvf cannot open database id %d. |

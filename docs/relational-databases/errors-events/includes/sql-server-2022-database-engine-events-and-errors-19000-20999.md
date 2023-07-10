@@ -2,16 +2,16 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 02/17/2023
+ms.date: 07/06/2023
 ms.topic: include
 ---
-| Error| Severity | Event logged | Description|
+| Error | Severity | Event logged | Description |
 | :--- | :--- | :--- | :--- |
 | 19030 | 10 | Yes | SQL Trace ID %d was started by login "%s". |
 | 19031 | 10 | Yes | SQL Trace stopped. Trace ID = '%d'. Login Name = '%s'. |
 | 19032 | 10 | Yes | SQL Trace was stopped due to server shutdown. Trace ID = '%d'. This is an informational message only; no user action is required. |
 | 19033 | 10 | Yes | Server started with '-f' option. Auditing will not be started. This is an informational message only; no user action is required. |
-| 19034 | 21 | Yes | Cannot start C2 audit trace. SQL Server is shutting down.  Error = %ls |
+| 19034 | 21 | Yes | Cannot start C2 audit trace. SQL Server is shutting down. Error = %ls |
 | 19035 | 16 | Yes | OLE task allocator failed to initialize. Heterogeneous queries, distributed queries, and remote procedure calls are unavailable. Confirm that DCOM is properly installed and configured. |
 | 19036 | 10 | Yes | The OLE DB initialization service failed to load. Reinstall Microsoft Data Access Components. If the problem persists, contact product support for the OLEDB provider. |
 | 19049 | 16 | No | File '%.\*ls' either does not exist or there was an error opening the file. Error = '%ls'. |
@@ -39,7 +39,7 @@ ms.topic: include
 | 19071 | 16 | No | Stopping the trace because the current trace file is full and the rollover option is not specified. |
 | 19096 | 16 | No | Fail to delete an old trace file '%ls'. Error = '%ls'. |
 | 19097 | 10 | No | Operating system error occurred while running %s. Error = %s. |
-| 19098 | 16 | Yes | An error occurred starting the default trace. Cause: %ls  Use sp_configure to turn off and then turn on the 'default trace enabled' advanced server configuration option. |
+| 19098 | 16 | Yes | An error occurred starting the default trace. Cause: %ls Use sp_configure to turn off and then turn on the 'default trace enabled' advanced server configuration option. |
 | 19099 | 16 | Yes | Trace ID '%d' was stopped because of an error. Cause: %ls. Restart the trace after correcting the problem. |
 | 19100 | 10 | No | Initialization succeeded. |
 | 19101 | 10 | No | Initialization failed with an infrastructure error. Check for previous errors. |
@@ -70,7 +70,7 @@ ms.topic: include
 | 19126 | 10 | No | Unable to retrieve registry settings for cluster environment. |
 | 19127 | 10 | No | Server is configured to listen on a specific IP address in a cluster environment. |
 | 19128 | 10 | No | The SQL Server Network Interface cannot check for a duplicate IP address in the SQL Server TCP listening settings. |
-| 19129 | 10 | No | The SQL Server Network Interface found a duplicate IP address in the SQL Server TCP listening settings.  Remove the duplicate IP address by using SQL Server Configuration Manager. |
+| 19129 | 10 | No | The SQL Server Network Interface found a duplicate IP address in the SQL Server TCP listening settings. Remove the duplicate IP address by using SQL Server Configuration Manager. |
 | 19130 | 10 | No | Unable to open SQL Server Network Interface library configuration key in registry for Dedicated Administrator Connection settings. |
 | 19131 | 10 | No | Unable to open Dedicated Administrator Connection configuration key in registry. |
 | 19132 | 10 | No | Unable to open TCP/IP configuration key for Dedicated Administrator Connection in registry. |
@@ -158,7 +158,7 @@ ms.topic: include
 | 19403 | 16 | No | The availability replica '%.\*ls' specified in the READ_ONLY_ROUTING_LIST for availability replica '%.\*ls' does not exist. Only availability replicas that belong to the specified availability group '%.\*ls' can be added to this list. To get the names of availability replicas in a given availability group, select replica_server_name from sys.availability_replicas and name from sys.availability_groups. For more information, see SQL Server Books Online. |
 | 19404 | 16 | No | An availability replica '%.\*ls' that is specified in the READ_ONLY_ROUTING_LIST for availability replica '%.\*ls' does not have a value set for READ_ONLY_ROUTING_URL. Ensure a READ_ONLY_ROUTING_URL is set for each availability replica in the availability group. Specify a valid READ_ONLY_ROUTING_URL for each replica that you want to added to the READ_ONLY_ROUTING_LIST. If you are altering availability replicas of an existing availability group, you can get the names of availability replicas in a given availability group, select replica_server_name from sys.availability_replicas and name from sys.availability_groups. For more information, see SQL Server Books Online. |
 | 19405 | 16 | No | Failed to create, join or add replica to availability group '%.\*ls', because node '%.\*ls' is a possible owner for both replica '%.\*ls' and '%.\*ls'. If one replica is failover cluster instance, remove the overlapped node from its possible owners and try again. |
-| 19406 | 10 | No | The state of the local availability replica in availability group '%.\*ls' has changed from '%ls' to '%ls'.  %ls.  For more information, see the SQL Server error log or cluster log.  If this is a Windows Server Failover Clustering (WSFC) availability group, you can also see the WSFC management console. |
+| 19406 | 10 | No | The state of the local availability replica in availability group '%.\*ls' has changed from '%ls' to '%ls'. %ls. For more information, see the SQL Server error log or cluster log. If this is a Windows Server Failover Clustering (WSFC) availability group, you can also see the WSFC management console. |
 | [19407](../mssqlserver-19407-database-engine-error.md) | 16 | No | The lease between availability group '%.\*ls' and the Windows Server Failover Cluster has expired. A connectivity issue occurred between the instance of SQL Server and the Windows Server Failover Cluster. To determine whether the availability group is failing over correctly, check the corresponding availability group resource in the Windows Server Failover Cluster. |
 | 19408 | 10 | No | The Windows Server Failover Clustering (WSFC) cluster context of Always On Availability Groups has been changed to the remote WSFC cluster, '%.\*ls'. An ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'remote_wsfc_cluster_name' command switched the cluster context from the local WSFC cluster to this remote WSFC cluster. This is an informational message only. No user action is required. |
 | 19409 | 10 | No | The Windows Server Failover Clustering (WSFC) cluster context of Always On Availability Groups has been changed to the local WSFC cluster. An ALTER SERVER CONFIGURATION SET HADR CLUSTER LOCAL command switched the cluster context from the remote WSFC cluster, '%.\*ls', to the local WSFC cluster. On this local WSFC cluster, availability databases no longer belong to any availability group, and they are transitioning to the RESTORING state. This is an informational message only. No user action is required. |
@@ -183,7 +183,7 @@ ms.topic: include
 | 19434 | 16 | No | Always On: AG integrity check failed to find AG name to ID map entry with matching resource ID for AG '%.\*ls' (expected: '%.\*ls'; found '%.\*ls'). |
 | 19435 | 16 | No | Always On: AG integrity check failed for AG '%.\*ls' with error %d, severity %d, state %d. |
 | 19436 | 16 | No | Always On: A failure \[%d\] was encountered while waiting for LSN %S_LSN to be hardened on the Commit Manager \[%d\] for database ID \[%d\] on partner ID \[%s\]. |
-| 19450 | 16 | No | Failed to open a cluster network interface object: '%ls'. The WSFC cluster control API returned error code %d. The WSFC service may not be running or may be inaccessible in its current state.  For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| 19450 | 16 | No | Failed to open a cluster network interface object: '%ls'. The WSFC cluster control API returned error code %d. The WSFC service may not be running or may be inaccessible in its current state. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
 | 19451 | 16 | No | '%.\*ls' and '%.\*ls' belong to the same subnet. Only one IPv4 and/or one IPv6 address from each subnet is allowed. For an advanced configuration, see the Windows Server Failover Clustering (WSFC) administrator to create a customized configuration through the Cluster Manager. |
 | 19452 | 16 | No | The availability group listener (network name) with Windows Server Failover Clustering resource ID '%s', DNS name '%s', port %hu failed to start with a permanent error: %u. Verify port numbers, DNS names and other related network configuration, then retry the operation. |
 | 19453 | 16 | No | The availability group listener (network name) with resource ID '%s', DNS name '%s', port %hu failed to start with this error: %u. Verify network and cluster configuration and logs. |
@@ -195,11 +195,11 @@ ms.topic: include
 | 19459 | 16 | No | The listener with DNS name '%.\*ls' does not conform to SQL Server listener guidelines, and cannot be configured through SQL Server. Reconfigure the listener through the WSFC Cluster Manager. |
 | 19460 | 16 | No | The availability group listener with DNS name '%.\*ls' is configured to use DHCP. For listeners with this configuration, IP addresses cannot be added through SQL Server. To add IP addresses to the listener, drop the DHCP listener and create it again configured to use static IP addresses. |
 | 19461 | 16 | No | The WSFC node that hosts the primary replica belongs to multiple subnets. To use the DHCP option in a multi-subnet environment, supply an IPv4 IP address and subnet mask of the subnet for the listener. |
-| 19462 | 16 | No | Failed to obtain the WSFC node enumeration handle. The error code is %d.  The WSFC service may not be running or may be inaccessible in its current state, or the specified cluster resource handle is invalid.  For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| 19462 | 16 | No | Failed to obtain the WSFC node enumeration handle. The error code is %d. The WSFC service may not be running or may be inaccessible in its current state, or the specified cluster resource handle is invalid. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
 | 19463 | 16 | No | The WSFC cluster network interface control API returned error code %d. The WSFC service may not be running or may be inaccessible in its current state. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
 | 19464 | 16 | No | The WSFC cluster network control API returned an invalid IP address. The WSFC service might have invalid data in its database or it is a not supported version. |
 | 19465 | 16 | No | The WSFC management API returned an unrecognizable dependency expression: '%.\*ls'. The WSFC service might have invalid data in its database or it is a not supported version. |
-| 19466 | 16 | No | Failed to obtain the WSFC resource dependency expression for cluster resource with name or ID '%ls' The error code is %d. The WSFC service may not be running or may be inaccessible in its current state.  For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| 19466 | 16 | No | Failed to obtain the WSFC resource dependency expression for cluster resource with name or ID '%ls' The error code is %d. The WSFC service may not be running or may be inaccessible in its current state. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
 | 19467 | 16 | No | Failed to remove the resource dependency in which resource '%.\*ls' is depending on resource '%.\*ls' in the WSFC cluster. The error code is %d. The WSFC service may not be running or may be inaccessible in its current state, or the specified arguments are invalid. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
 | 19468 | 16 | No | The listener with DNS name '%.\*ls' for the availability group '%.\*ls' is already listening on the TCP port %u. Please choose a different TCP port for the listener. If there is a problem with the listener, try restarting the listener to correct the problem. |
 | 19469 | 16 | No | The specified listener with DNS name, '%.\*ls', does not exist for the Availability Group '%.\*ls'. Use an existing listener, or create a new listener. |
@@ -208,13 +208,13 @@ ms.topic: include
 | 19472 | 16 | No | Failed to delete the WSFC cluster resource '%.\*ls'. The error code is %d. The WSFC service may not be running or may be inaccessible in its current state, or the specified arguments are invalid. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
 | 19473 | 16 | No | Failed to add a resource dependency, making resource '%.\*ls' depend on resource '%.\*ls', in the WSFC cluster. The error code is %d. The WSFC service may not be running or may be inaccessible in its current state, or the specified arguments are invalid. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
 | 19474 | 16 | No | Failed to set the resource dependency expression '%ls' for the WSFC resource '%.\*ls'. The error code is %d. The WSFC service may not be running or may be inaccessible in its current state, or the specified arguments are invalid. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 19475 | 16 | No | Cannot take the WSFC resource with ID '%.\*ls' offline. The error code is %d. The WSFC service may not be running or may be inaccessible in its current state.  For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| 19475 | 16 | No | Cannot take the WSFC resource with ID '%.\*ls' offline. The error code is %d. The WSFC service may not be running or may be inaccessible in its current state. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
 | 19476 | 16 | No | The attempt to create the network name and IP address for the listener failed. If this is a WSFC availability group, the WSFC service may not be running or may be inaccessible in its current state, or the values provided for the network name and IP address may be incorrect. Check the state of the WSFC cluster and validate the network name and IP address with the network administrator. Otherwise, contact your primary support provider. |
-| 19477 | 16 | No | The availability group '%.\*ls' already has a listener with DNS name '%.\*ls'.  Availability groups can have only one listener. Use the existing listener, or drop the existing listener and create a new one. |
-| 19478 | 16 | No | Failed to find a multi-string property (property name '%ls') of the WSFC resource with name or ID '%.\*ls'. The system error code is %d.  The WSFC service may not be running or may be inaccessible in its current state, or the specified arguments are invalid. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 19479 | 16 | No | The WSFC cluster network control API returned error code %d. The WSFC service may not be running or may be inaccessible in its current state.  For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 19480 | 16 | No | Failed to open a cluster network object: '%ls'. The WSFC cluster control API returned error code %d. The WSFC service may not be running or may be inaccessible in its current state.  For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 19481 | 16 | No | Failed to obtain the WSFC resource state for cluster resource with name or ID '%.\*ls'. The WSFC resource state API returned error code %d. The WSFC service may not be running or may be inaccessible in its current state.  For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| 19477 | 16 | No | The availability group '%.\*ls' already has a listener with DNS name '%.\*ls'. Availability groups can have only one listener. Use the existing listener, or drop the existing listener and create a new one. |
+| 19478 | 16 | No | Failed to find a multi-string property (property name '%ls') of the WSFC resource with name or ID '%.\*ls'. The system error code is %d. The WSFC service may not be running or may be inaccessible in its current state, or the specified arguments are invalid. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| 19479 | 16 | No | The WSFC cluster network control API returned error code %d. The WSFC service may not be running or may be inaccessible in its current state. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| 19480 | 16 | No | Failed to open a cluster network object: '%ls'. The WSFC cluster control API returned error code %d. The WSFC service may not be running or may be inaccessible in its current state. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| 19481 | 16 | No | Failed to obtain the WSFC resource state for cluster resource with name or ID '%.\*ls'. The WSFC resource state API returned error code %d. The WSFC service may not be running or may be inaccessible in its current state. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
 | 19482 | 16 | No | The port number, %u, that is specified is invalid. Valid port numbers range from 1 to 65535, inclusive. Select a port number in this range. If a port number is not provided, the default number 1433 is used. |
 | 19483 | 16 | No | The format for the IP address, '%.\*ls', is invalid. Please use a valid value for the IP address. |
 | 19484 | 16 | No | The specified IP Address, '%.\*ls', is duplicated in the IP address list. Each IP address included in the listener configuration must be unique. Change the statement to remove or replace the duplicated values. |
@@ -226,7 +226,7 @@ ms.topic: include
 | 19490 | 16 | No | The attempt to delete FILESTREAM RsFx endpoint failed with HRESULT 0x%x. |
 | 19491 | 10 | No | Always On: The Windows Server Failover Clustering (WSFC) service was started using /forcequorum. This is an informational message only. No user action is required. |
 | 19492 | 16 | No | The availability database %ls in availability group %ls is in an invalid state to perform an internal operation. Refer to the error code for more details. If this condition persists, contact the system administrator. |
-| 19493 | 16 | No | Corrupt secondary replica %ls causing start scan to fail for database with ID %d. Refer to the SQL Server error log for information about the errors that were encountered.  If this condition persists, contact the system administrator. |
+| 19493 | 16 | No | Corrupt secondary replica %ls causing start scan to fail for database with ID %d. Refer to the SQL Server error log for information about the errors that were encountered. If this condition persists, contact the system administrator. |
 | 19494 | 10 | No | Automatic seeding of availability database '%ls' in availability group '%.\*ls' failed with a transient error. The operation will be retried. |
 | 19495 | 10 | No | Automatic seeding of availability database '%ls' in availability group '%.\*ls' failed with an unrecoverable error. Correct the problem, then issue an ALTER AVAILABILITY GROUP command to set SEEDING_MODE = AUTOMATIC on the replica to restart seeding. |
 | 19496 | 10 | No | Automatic seeding of availability database '%.\*ls' in availability group '%.\*ls' failed. |
@@ -234,8 +234,8 @@ ms.topic: include
 | 19498 | 16 | No | To create a distributed availability group, please specify the DISTRIBUTED option. |
 | 19499 | 16 | No | The specified listener URL '%.\*ls' is invalid. Reenter the command specifying the correct URL. For information about specifying the endpoint URL for an availability replica, see SQL Server Books Online. |
 | 19501 | 16 | No | None of the specified availability groups exist locally. Please check your DDL and make sure there is one availability group exist locally. |
-| 19502 | 16 | No | Cannot create a distributed availability replica for availability group '%.\*ls'.  An availability replica of the specified availability group already exists on this instance of SQL Server.  Verify that the specified availability group name is correct and unique, then retry the operation.  To remove the existing availability replica, run DROP AVAILABILITY GROUP command. |
-| 19503 | 16 | No | Cannot create a distributed availability replica for availability group '%.\*ls'.  Local availability group is participating in a distributed availability group as secondary. |
+| 19502 | 16 | No | Cannot create a distributed availability replica for availability group '%.\*ls'. An availability replica of the specified availability group already exists on this instance of SQL Server. Verify that the specified availability group name is correct and unique, then retry the operation. To remove the existing availability replica, run DROP AVAILABILITY GROUP command. |
+| 19503 | 16 | No | Cannot create a distributed availability replica for availability group '%.\*ls'. Local availability group is participating in a distributed availability group as secondary. |
 | 19504 | 16 | No | Cannot failover a distributed availability replica for availability group '%.\*ls'. Only force failover is supported in this version of SQL Server. |
 | 19505 | 10 | No | Cannot initiate a target seeding operation on a non-secondary/forwarder replica for availability group '%.\*ls'. Replica state may have changed since we submit the build task. |
 | 19506 | 16 | No | Local availability replica for availability group '%.\*ls' has not been granted permission to create databases, but has a SEEDING_MODE of AUTOMATIC. Use the ALTER AVAILABILITY GROUP ... GRANT CREATE ANY DATABASE command to allow the creation of databases seeded by the primary availability replica. |
@@ -401,7 +401,7 @@ ms.topic: include
 | 20511 | 16 | No | Updateable Subscriptions: Cannot update timestamp columns. |
 | 20512 | 16 | No | Updateable Subscriptions: Rolling back transaction. |
 | 20513 | 16 | No | Database '%s' does not contain any replication metadata for a row whose ROWGUIDCOL matches the value specified for the @rowguid parameter of sp_showrowreplicainfo. Verify that the value specified for @rowguid parameter is correct. |
-| 20514 | 10 | No | A rowcount validation request has been submitted to heterogeneous publisher %s for article %s of publication %s.  Validation results will be posted to distribution history. |
+| 20514 | 10 | No | A rowcount validation request has been submitted to heterogeneous publisher %s for article %s of publication %s. Validation results will be posted to distribution history. |
 | 20515 | 16 | No | Updateable Subscriptions: Rows do not match between Publisher and Subscriber. Run the Distribution Agent to refresh rows at the Subscriber. |
 | 20516 | 16 | No | Updateable Subscriptions: Replicated data is not updatable. |
 | 20518 | 16 | No | Updateable Subscriptions: INSERT and DELETE operations are not supported unless published table has a timestamp column. |
@@ -475,7 +475,7 @@ ms.topic: include
 | 20590 | 16 | No | The article property 'status' cannot include bit 64, 'DTS horizontal partitions' because the publication does not allow data transformations. |
 | 20591 | 16 | No | Only 'DTS horizontal partitions' and 'no DTS horizontal partitions' are valid 'status' values because the publication allows data transformations. |
 | 20592 | 16 | No | 'dts horizontal partitions' and 'no dts horizontal partitions' are not valid 'status' values because the publication does not allow data transformations. |
-| 20593 | 16 | No | Cannot modify publication '%s'.  The sync_method cannot be changed to 'native', or 'concurrent' because the publication is enabled for heterogeneous subscribers. |
+| 20593 | 16 | No | Cannot modify publication '%s'. The sync_method cannot be changed to 'native', or 'concurrent' because the publication is enabled for heterogeneous subscribers. |
 | 20594 | 16 | No | A push subscription to the publication exists. Use sp_subscription_cleanup to drop defunct push subscriptions. |
 | 20595 | 16 | No | Skipping error signaled. |
 | 20596 | 16 | No | Only '%s' or members of db_owner can drop the anonymous agent. |
@@ -497,7 +497,7 @@ ms.topic: include
 | 20612 | 16 | No | Checksum validation is not supported because the publication allows DTS. Use row count only validation. |
 | 20613 | 16 | No | Validation is not supported for articles that are set up for DTS horizontal partitions. |
 | 20614 | 16 | No | Validation is not supported for heterogeneous Subscribers. |
-| 20615 | 16 | No | Unable to add a heterogeneous subscription to the publication.  The publication is not enabled for heterogeneous subscriptions. |
+| 20615 | 16 | No | Unable to add a heterogeneous subscription to the publication. The publication is not enabled for heterogeneous subscriptions. |
 | 20616 | 10 | No | High Volume Server-to-Server Profile |
 | 20617 | 10 | No | Merge agent profile optimized for the high volume server-to-server synchronization scenario. |
 | 20618 | 16 | No | You must have CREATE DATABASE permission to attach a subscription database. |
@@ -541,7 +541,7 @@ ms.topic: include
 | 20656 | 16 | No | The @subset_filterclause parameter cannot reference a computed column. |
 | 20657 | 16 | No | The value for the @pub_identity_range parameter must be a multiple of the increment for the identity column. The increment for table "%s" and identity column "%s" is %s. |
 | 20658 | 16 | No | The value for the @identity_range parameter must be a multiple of the increment for the identity column. The increment for table "%s" and identity column "%s" is %s. |
-| 20659 | 11 | No | The value of IDENT_CURRENT ("%s") is greater than the value in the max_used column of the  MSmerge_identity_range system table. |
+| 20659 | 11 | No | The value of IDENT_CURRENT ("%s") is greater than the value in the max_used column of the MSmerge_identity_range system table. |
 | 20660 | 16 | No | The republisher's republishing range obtained from its publisher is not large enough to allocate the specified @pub_identity_range. |
 | 20661 | 16 | No | The republisher's republishing range obtained from its publisher is not large enough to allocate the specified @identity_range. |
 | 20662 | 16 | No | The republisher does not have a range of identity values from the root Publisher '%s' that it can assign to its Subscribers. Ensure that the republisher has a server subscription to the publication at the root Publisher, and then run the Merge Agent to synchronize with the root Publisher. |
@@ -579,7 +579,7 @@ ms.topic: include
 | 20694 | 16 | No | One or more rows to be updated for table %s contain changes in the column %s, which is used in one or more filters; merge replication cannot use batch processing for these changes. No action is required, but if this condition occurs frequently, verify that data is partitioned optimally. Batch updates can improve the performance of merge replication. |
 | 20695 | 16 | No | Only %ld out of %ld rows were updated in the batched update procedure for table %s; other rows could not be updated because they have been deleted. No action is required, but if this condition occurs frequently, determine if update-delete conflicts can be avoided. Batch updates can be helpful for performance. |
 | 20696 | 16 | No | The object %s is marked as shipped by Microsoft (ms_shipped). It cannot be added as an article for merge replication. |
-| 20697 | 16 | No | Cannot drop article %s from publication %s. In this publication, this is the only article that uses a parameterized filter. Dropping this article changes the publication to a static publication, which requires reinitialization of all Subscribers. To drop the article and reinitialize all active subscriptions, specify a value of 1 for the  @force_reinit_subscription parameter of sp_dropmergepublication. |
+| 20697 | 16 | No | Cannot drop article %s from publication %s. In this publication, this is the only article that uses a parameterized filter. Dropping this article changes the publication to a static publication, which requires reinitialization of all Subscribers. To drop the article and reinitialize all active subscriptions, specify a value of 1 for the @force_reinit_subscription parameter of sp_dropmergepublication. |
 | 20698 | 16 | No | A value for the parameter @host_name was not specified while publication uses HOST_NAME() for dynamic filtering. |
 | 20699 | 16 | No | A value for the parameter @suser_sname was not specified while publication uses SUSER_SNAME() for dynamic filtering. |
 | 20701 | 16 | No | The dynamic snapshot job schedule could not be changed on the distributor. |
@@ -618,7 +618,7 @@ ms.topic: include
 | 20734 | 16 | No | One or more rows deleted in table '%s' were out of partition while the table was published with 'partition_options' set to %d. |
 | 20735 | 16 | No | Cannot add article '%s' to publication '%s'. The publication already contains 256 articles, which is the maximum. |
 | 20736 | 10 | No | Warning: Values of some of the flags specified in the 'schema_option' property are not compatible with the publication's compatibility level. The modified schema_option value of '%s' will be used instead. |
-| 20737 | 10 | No | Warning: To allow replication of FILESTREAM data to perform optimally and reduce memory utilization, the 'stream_blob_columns' property has been set to 'true'.  To force FILESTREAM table articles to not use blob streaming, use sp_changemergearticle to set 'stream_blob_columns' to 'false'. |
+| 20737 | 10 | No | Warning: To allow replication of FILESTREAM data to perform optimally and reduce memory utilization, the 'stream_blob_columns' property has been set to 'true'. To force FILESTREAM table articles to not use blob streaming, use sp_changemergearticle to set 'stream_blob_columns' to 'false'. |
 | 20738 | 11 | No | Cannot add article '%s' with sparse column or column set to merge publication since merge replication does not support sparse columns and column set. |
 | 20739 | 16 | No | The DDL operation is not supported for article '%s'. If the column in the DDL operation is enabled for FILESTREAM or is of type hierarchyid, geometry, geography, datetime2, date, time, or datetimeoffset, the publication compatibility level must be at least 100RTM. For DDL operations that involve FILESTREAM and hierarchyid columns, the snapshot mode must be native. Character mode, which is required for SQL Server Compact Subscribers, is not supported. |
 | 20800 | 16 | No | Cannot reinitialize the article '%s' in subscription '%s:%s' to publication '%s'. The publication is enabled for peer-to-peer transactional replication, which does not allow subscriptions to be reinitialized with a snapshot. Drop and re-create the subscription instead. |
@@ -637,5 +637,5 @@ ms.topic: include
 | 20813 | 16 | No | Only members of the sysadmin fixed server role can modify a %s that does not have a job with a proxy account defined. |
 | 20814 | 10 | No | Distribution Profile for OLEDB streaming |
 | 20815 | 10 | No | Distribution agent profile enabled for the processing LOB data using OLEDB streaming. |
-| 20816 | 10 | No | Peer-To-Peer publishers are only supported on Enterprise class editions of SQL Server.  This instance is %s. |
+| 20816 | 10 | No | Peer-To-Peer publishers are only supported on Enterprise class editions of SQL Server. This instance is %s. |
 | 20817 | 16 | No | An error occurred during the execution of '%ls'. A call to '%ls' failed with error code: '%ld', return code: '%d'. |

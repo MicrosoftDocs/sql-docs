@@ -224,7 +224,7 @@ SELECT (SUM(size)*1.0/128) AS TempDB_size_InMB FROM sys.database_files
 
 The following screenshot shows a sample output: 
 
-:::image type="content" source="media/tempdb-configure/tempdb-size-in-megabytes.png" alt-text="Screenshot of query results in SSMS showing tempdb size in megabytes.":::
+:::image type="content" source="media/tempdb-configure/tempdb-size-megabytes.png" alt-text="Screenshot of query results in SSMS showing tempdb size in megabytes.":::
 
 
 To set the max size for a new `tempdb` data file, run the following command: 

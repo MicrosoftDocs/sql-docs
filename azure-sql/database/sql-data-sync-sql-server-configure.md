@@ -114,10 +114,12 @@ In the **Member Database** section, optionally add a SQL Server database to the 
 
    If you choose **Create a new agent**, do the following things:
 
-   1. Download the data sync agent from the link provided and install it on the computer where the SQL Server is located. You can also download the agent directly from [Azure SQL Data Sync Agent](https://www.microsoft.com/download/details.aspx?id=27693).
+   1. Download the data sync agent from the link provided and install it on a machine that is different than where SQL Server is located. You can also download the agent directly from [Azure SQL Data Sync Agent](https://www.microsoft.com/download/details.aspx?id=27693).
 
       > [!IMPORTANT]
       > You have to open outbound TCP port 1433 in the firewall to let the client agent communicate with the server.
+      > [!NOTE]
+      > For best practices on sync client agent, refer to [Best practices](sql-data-sync-best-practices.md#client-agent)
 
    1. Enter a name for the agent.
 
@@ -125,7 +127,7 @@ In the **Member Database** section, optionally add a SQL Server database to the 
 
    1. Select **OK** to close the **Select Sync Agent** page.
 
-1. On the SQL Server computer, locate and run the Client Sync Agent app.
+1. On the machine where sync client agent is installed, locate and run the Client Sync Agent app.
 
    :::image type="content" source="./media/sql-data-sync-sql-server-configure/datasync-preview-clientagent.png" alt-text="A screenshot from the Microsoft SQL Data Sync 2.0 client agent app. The Submit Agent Key button is highlighted.":::
 

@@ -26,7 +26,7 @@ For an overview of SQL Data Sync, see [Sync data across multiple cloud and on-pr
 ### Client agent
 
 -   Install the client agent by using the least privileged user account that has network service access.  
--   Install the client agent on a computer that isn't the SQL Server computer.  
+-   Install the client agent on a machine that is different from where SQL Server is installed.  
 -   Don't register an on-premises database with more than one agent.
     -   Avoid this even if you're syncing different tables for different sync groups.  
     -   Registering an on-premises database with multiple client agents poses challenges when you delete one of the sync groups.

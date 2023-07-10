@@ -22,7 +22,7 @@ For best practices using auto-failover groups, see [Auto-failover groups with Az
 
 ## Prerequisites
 
-This tutorial show you how to configure a database for active geo-replication. To learn how to create a single database with Azure portal, Azure CLI, Azure CLI (sql up), or PowerShell, see [Quickstart: Create a single database - Azure SQL Database](single-database-create-quickstart.md?view=azuresql&preserve-view=true&tabs=azure-powershell).
+This tutorial shows you how to configure a database for active geo-replication. To learn how to create a single database with Azure portal, Azure CLI, Azure CLI (sql up), or PowerShell, see [Quickstart: Create a single database - Azure SQL Database](single-database-create-quickstart.md?view=azuresql&preserve-view=true&tabs=azure-powershell).
 
 ## Add a secondary database
 

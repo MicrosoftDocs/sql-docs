@@ -39,7 +39,7 @@ The following are some well-known error codes:
   1. Run `netsh winhttp reset autoproxy`
   2. Run `netsh winhttp reset proxy`
   3. In the Windows registry, find `Computer\HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\iphlpsvc\Parameters\ProxyMgr` and delete any subentry that has a configuration with a port `:8888`
-  4. Reboot the machine and try again using Windows Authentication
+  4. Restart the machine and try again using Windows Authentication
 
 - **0x52f** - Indicates that a referenced user name and authentication information are valid, but some user account restriction has prevented successful authentication. This can happen if you have an Azure AD conditional access policy configured. To mitigate the issue, you must exclude the Azure SQL Managed Instance Service Principal (named `<instance name> principal`) application in the CA rules.
 

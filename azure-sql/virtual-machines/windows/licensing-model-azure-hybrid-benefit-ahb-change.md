@@ -121,7 +121,7 @@ To remove a SQL Server instance and associated billing from a Pay-As-You-Go SQL 
 1. If necessary, uninstall SQL Server, including the SQL IaaS Agent extension.
 1. Download the free [SQL Server Express](https://www.microsoft.com/sql-server/sql-server-downloads) edition.
 1. Install the [SQL IaaS Agent extension](/azure/azure-sql/virtual-machines/windows/sql-agent-extension-manually-register-single-vm).
-1. To stop billing, [change edition in the portal](/azure/azure-sql/virtual-machines/windows/change-sql-server-edition#change-edition-in-portal) to Express edition.
+1. To stop billing, [change edition in the portal](/azure/azure-sql/virtual-machines/windows/change-sql-server-edition#change-edition-property-for-billing) to Express edition.
 
 **Optional**
 

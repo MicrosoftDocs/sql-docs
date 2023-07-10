@@ -212,7 +212,7 @@ sections:
              1. Uninstall SQL Server completely, including the SQL IaaS Agent extension (if present).
              1. Install the free [SQL Express edition](https://www.microsoft.com/sql-server/sql-server-downloads).
              1. Register with the SQL IaaS Agent extension. 
-             1. [Change the edition of SQL Server](change-sql-server-edition.md#change-edition-in-portal) in the [Azure portal](https://portal.azure.com) to Express to stop billing.  
+             1. [Change the edition of SQL Server](change-sql-server-edition.md#change-edition-property-for-billing) in the [Azure portal](https://portal.azure.com) to Express to stop billing.  
              1. (optional) Disable the Express SQL Server service by disabling service startup. 
           
       - question: |

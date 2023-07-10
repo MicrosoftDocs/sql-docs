@@ -68,7 +68,7 @@ This key contains a property of the certificate known as a thumbprint, which ide
 
    `HKLM\SOFTWARE\Microsoft\Microsoft SQL Server\<instance>\MSSQLServer\SuperSocketNetLib\Certificate`
 
-1. If the SQL virtual server is currently on this node, fail over to another node in your cluster and reboot the node where the registry change occurred.
+1. If the SQL virtual server is currently on this node, fail over to another node in your cluster and restart the node where the registry change occurred.
 1. Repeat this procedure on all the nodes.
 
 > [!WARNING]  

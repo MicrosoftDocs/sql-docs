@@ -119,7 +119,7 @@ In the **Member Database** section, optionally add a SQL Server database to the 
       > [!IMPORTANT]
       > You have to open outbound TCP port 1433 in the firewall to let the client agent communicate with the server.
       > [!NOTE]
-      > For best practices on sync client agent, refer to [Best practices](sql-data-sync-best-practices.md#client-agent)
+      > For best practices on sync client agent, refer to [Best practices for Azure SQL Data Sync](sql-data-sync-best-practices.md#client-agent).
 
    1. Enter a name for the agent.
 

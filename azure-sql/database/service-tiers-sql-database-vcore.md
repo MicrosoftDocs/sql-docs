@@ -243,11 +243,11 @@ Fsv2-series in only supported in the General Purpose tier. For regions where Fsv
 ### DC-series
 
 - DC-series hardware uses Intel processors with Software Guard Extensions (Intel SGX) technology.
-- DC-series is required for [Always Encrypted with secure enclaves](/sql/relational-databases/security/encryption/always-encrypted-enclaves), which isn't supported with other hardware configurations.
+- DC-series is required for [Always Encrypted with secure enclaves](/sql/relational-databases/security/encryption/always-encrypted-enclaves) workloads that require stronger security protection of hardware enclaves compared to Virtualization-based Security (VBS) enclaves.
 - DC-series is designed for workloads that process sensitive data and demand confidential query processing capabilities, provided by Always Encrypted with secure enclaves.
 - DC-series hardware provides balanced compute and memory resources.
 
-DC-series is only supported for Provisioned compute (Serverless isn't supported) and doesn't support zone redundancy. For regions where DC-series is available, see [DC-series availability](#dc-series-1).
+DC-series is only supported for Provisioned compute (Serverless isn't supported) and doesn't support zone redundancy. DC-series is available in all public regions worldwide.
 
 #### Azure offer types supported by DC-series
 
@@ -331,27 +331,7 @@ Fsv2-series is available in the following regions:
 
 #### DC-series
 
-DC-series is available in the following regions:
-
-- Canada Central
-- Canada East
-- East US
-- North Europe
-- UK South
-- West Europe
-- West US
-
-If you need DC-series in a currently unsupported region, [submit a support request](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest). On the **Basics** page, provide the following:
-
-1. For **Issue type**, select **Technical**. 
-1. Provide the desired subscription for the hardware. Select **Next**.
-1. For **Service type**, select **SQL Database**.
-1. For **Resource**, select **General question**.
-1. For **Summary**, provide the desired hardware availability and region.
-1. For **Problem type**, select **Security, Private and Compliance**.
-1. For **Problem subtype**, select **Always Encrypted**.
-
-:::image type="content" source="./media/service-tiers-vcore/request-dc-series.png" alt-text="A screenshot of the Azure portal form to request DC-series in a new region." loc-scope="azure-portal":::
+DC-series is available in all public regions worldwide.
 
 ## Previous generation hardware
 

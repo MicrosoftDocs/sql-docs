@@ -51,7 +51,7 @@ Distributed availability groups in SQL Server 2017 or later can mix major versio
 Because the distributed availability groups feature didn't exist in SQL Server 2012 or 2014, availability groups that were created with these versions can't participate in distributed availability groups.
 
 > [!NOTE]  
-> Prior to [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)] with CU 17, distributed availability groups can't be configured with Standard edition, or a mix of Standard and Enterprise editions.
+> Starting with [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)] CU 17, distributed availability groups can be configured with Standard edition, or a mix of Standard and Enterprise editions, only when used with Azure services, such as the [Managed Instance link](azure/azure-sql/managed-instance/managed-instance-link-feature-overview). 
 
 Because there are two separate availability groups, the process of installing a service pack or cumulative update on a replica that's participating in a distributed availability group is slightly different from that of a traditional availability group:
 

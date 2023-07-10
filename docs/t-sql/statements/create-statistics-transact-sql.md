@@ -273,6 +273,8 @@ SQL Server can use `tempdb` to sort the sampled rows before building statistics.
 
 When creating external table statistics, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] imports the external table into a temporary [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table, and then creates the statistics. For samples statistics, only the sampled rows are imported. If you have a large external table, it will be much faster to use the default sampling instead of the full scan option.
 
+When the external table is using `DELIMITEDTEXT`, `CSV`, `PARQUET`, or `DELTA` as data types statistics for external tables only supports one column per `CREATE STATISTICS` command.
+
 ### Statistics with a filtered condition
 
 Filtered statistics can improve query performance for queries that select from well-defined subsets of data. Filtered statistics use a filter predicate in the WHERE clause to select the subset of data that is included in the statistics.

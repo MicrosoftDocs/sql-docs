@@ -109,7 +109,7 @@ INNER JOIN [Person].[BusinessEntityAddress] AS bea
 ON be.BusinessEntityID = bea.BusinessEntityID;
 ```
 
-If the JOIN is pushed down to the external data source, the Join operator will be before the external operator.
+If the JOIN is pushed down to the external data source, the Join operator will be before the external operator. In this example both `[BusinessEntity]` and `[BusinessEntityAddress]` are external tables.
 
 #### With pushdown of join (view with execution plan)
 

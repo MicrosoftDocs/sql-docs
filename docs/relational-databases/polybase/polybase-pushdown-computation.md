@@ -175,8 +175,9 @@ Mathematical functions
 - `TAN`
 
 General functions
-- `COALESCE`
+- `COALESCE` \*
 - `NULLIF`
+\* when using with `COLLATE` can prevent pushdown from happening.
 
 Date & time functions
 - `DATEADD`
@@ -209,6 +210,7 @@ The following T-SQL functions or syntax will prevent pushdown computation:
 Pushdown support for the `FORMAT` and `TRIM` syntax was introduced in [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] CU10.
 
 ### Filter clause with variable
+
 If you are specifying a variable in a filter clause, by default this will prevent pushdown of the filter clause. For example, if you run the following query, the filter clause will not be pushed down:
 
 ```sql
@@ -224,9 +226,52 @@ To achieve pushdown of the variable, you need to enable query optimizer hotfixes
 - Query level: 
         Use query hint OPTION (QUERYTRACEON 4199) or OPTION (USE HINT ('ENABLE_QUERY_OPTIMIZER_HOTFIXES'))
 
-This limitation applies to execution of [sp_executesql](../system-stored-procedures/sp-executesql-transact-sql.md). 
+This limitation applies to execution of [sp_executesql](../system-stored-procedures/sp-executesql-transact-sql.md).
 
-Note: The ability to pushdown the variable was first introduced in SQL Server 2019 CU5. 
+Note: The ability to pushdown the variable was first introduced in SQL Server 2019 CU5.
+
+### Collation conflict
+
+When working with data with different collation pushdown might not be possible, operators like `COLLATE` can also interfere with the outcome. Equal collations or binary collations are supported. Refer to [How to tell if pushdown occurred](../polybase/polybase-how-to-tell-pushdown-computation.md) for further troubleshooting informations.
+
+## Pushdown for parquet files
+
+Starting in SQL Server 2022, PolyBase introduced support for Parquet files. SQL Server is capable of performing both row and column elimination when performing pushdown with Parquet. When working with Parquet files the following operations can be pushed down:
+
+- Binary comparison operators (>, >=, <=, <) for numeric, date, and time values.
+- Combination of comparison operators (> AND <, >= AND <, > AND <=, <= AND >=).
+- In list filter (col1 = val1 OR col1 = val2 OR vol1 = val3).
+- IS NOT NULL over column.
+
+### Prevents parquet files pushdown
+
+- Virtual columns.
+- Column comparison.
+- Parameter type conversion.
+
+### Supported data types
+
+- Bit
+- TinyInt
+- SmallInt
+- BigInt
+- Real
+- Float
+- VARCHAR (Bin2Collation, CodePageConversion, BinCollation)
+- NVARCHAR (Bin2Collation, BinCollation)
+- Binary
+- DateTime2 (default and 7-digit precision)
+- Date
+- Time (default and 7-digit precision)
+- Numeric \*
+\* Supported when parameter scale align with column scale, or when parameter explicitly casted to decimal.
+
+### Data types that prevents parquet pushdown
+
+- Money
+- SmallMoney
+- DateTime
+- SmallDateTime
 
 ## Examples
 

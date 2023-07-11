@@ -177,7 +177,8 @@ Mathematical functions
 General functions
 - `COALESCE` \*
 - `NULLIF`
-\* when using with `COLLATE` can prevent pushdown from happening.
+
+\* Using with `COLLATE` can prevent pushdown in some scenarios. For more information, see [Collation conflict](#collation-conflict).
 
 Date & time functions
 - `DATEADD`
@@ -232,18 +233,18 @@ Note: The ability to pushdown the variable was first introduced in SQL Server 20
 
 ### Collation conflict
 
-When working with data with different collation pushdown might not be possible, operators like `COLLATE` can also interfere with the outcome. Equal collations or binary collations are supported. Refer to [How to tell if pushdown occurred](../polybase/polybase-how-to-tell-pushdown-computation.md) for further troubleshooting informations.
+When working with data with different collation pushdown might not be possible, operators like `COLLATE` can also interfere with the outcome. Equal collations or binary collations are supported. For more information, see [How to tell if pushdown occurred](polybase-how-to-tell-pushdown-computation.md).
 
 ## Pushdown for parquet files
 
-Starting in SQL Server 2022, PolyBase introduced support for Parquet files. SQL Server is capable of performing both row and column elimination when performing pushdown with Parquet. When working with Parquet files the following operations can be pushed down:
+Starting in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], PolyBase introduced support for parquet files. SQL Server is capable of performing both row and column elimination when performing pushdown with parquet. When working with parquet files, the following operations can be pushed down:
 
 - Binary comparison operators (>, >=, <=, <) for numeric, date, and time values.
 - Combination of comparison operators (> AND <, >= AND <, > AND <=, <= AND >=).
 - In list filter (col1 = val1 OR col1 = val2 OR vol1 = val3).
 - IS NOT NULL over column.
 
-### Prevents parquet files pushdown
+Presence of the following prevents pushdown for parquet files:
 
 - Virtual columns.
 - Column comparison.
@@ -264,9 +265,10 @@ Starting in SQL Server 2022, PolyBase introduced support for Parquet files. SQL 
 - Date
 - Time (default and 7-digit precision)
 - Numeric \*
-\* Supported when parameter scale align with column scale, or when parameter explicitly casted to decimal.
 
-### Data types that prevents parquet pushdown
+\* Supported when parameter scale aligns with column scale, or when parameter is explicitly cast to decimal.
+
+### Data types that prevent parquet pushdown
 
 - Money
 - SmallMoney

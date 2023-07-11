@@ -246,11 +246,12 @@ In [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INC
 
 To use CREATE EXTERNAL TABLE AS SELECT containing these characters, you must first run the CREATE EXTERNAL TABLE AS SELECT statement to export the data to delimited text files where you can then convert them to Parquet or ORC by using an external tool.
 
-## Working with Parquet
+## Working with parquet
 
-When working with Parquet file the CREATE EXTERNAL TABLE AS SELECT will generate one Parquet file per available CPU up to the configured maximum degree of parallelism (MAXDOP). Each file can grow up to 190 GB, after that SQL Server will generate more Parquet files as needed.
+When working with parquet files, `CREATE EXTERNAL TABLE AS SELECT` will generate one parquet file per available CPU, up to the configured maximum degree of parallelism (MAXDOP). Each file can grow up to 190 GB, after that SQL Server will generate more Parquet files as needed.
 
-Query Hint OPTION (MAXDOP N) will only affect the SELECT part of CREATE EXTERNAL TABLE AS SELECT, it has no influence on the amount of Parquet files, only database-level MAXDOP and instance-level MAXDOP is considered.
+The query hint `OPTION (MAXDOP n)` will only affect the SELECT part of `CREATE EXTERNAL TABLE AS SELECT`, it has no influence on the amount of parquet files. Only database-level MAXDOP and instance-level MAXDOP is considered.
+
 
 ## Locking
 

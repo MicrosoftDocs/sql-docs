@@ -229,7 +229,8 @@ Since the data for an external table is not under the direct management control 
 
 You can create multiple external tables that each reference different external data sources. If you simultaneously run queries against different Hadoop data sources, then each Hadoop source must use the same 'hadoop connectivity' server configuration setting. For example, you can't simultaneously run a query against a Cloudera Hadoop cluster and a Hortonworks Hadoop cluster since these use different configuration settings. For the configuration settings and supported combinations, see [PolyBase Connectivity Configuration](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
 
-When the external table is using `DELIMITEDTEXT`, `CSV`, `PARQUET`, or `DELTA` as data types statistics for external tables only supports one column per `CREATE STATISTICS` command.
+When the external table is using `DELIMITEDTEXT`, `CSV`, `PARQUET`, or `DELTA` as data types, external tables only support statistics for one column per `CREATE STATISTICS` command.
+
 
 Only these Data Definition Language (DDL) statements are allowed on external tables:
 

@@ -91,7 +91,7 @@ Returns information about each request that is executing in [!INCLUDE[ssNoVersio
 | is_resumable | **bit** | **Applies to**: [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] and later.<br /><br />Indicates whether the request is a resumable index operation. |
 | page_resource | **binary(8)** | **Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]<br /><br />An 8-byte hexadecimal representation of the page resource if the `wait_resource` column contains a page. For more information, see [sys.fn_PageResCracker](../system-functions/sys-fn-pagerescracker-transact-sql.md). |
 | page_server_reads | **bigint** | **Applies to**: Azure SQL Database Hyperscale<br /><br />Number of page server reads performed by this request. Not nullable. |
-
+| dist_statement_id | **uniqueidentifier** | Unique ID for the statement for the request submitted. Not nullable. |
 ## Remarks
 
 To execute code that is outside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (for example, extended stored procedures and distributed queries), a thread has to execute outside the control of the non-preemptive scheduler. To do this, a worker switches to preemptive mode. Time values returned by this dynamic management view don't include time spent in preemptive mode.

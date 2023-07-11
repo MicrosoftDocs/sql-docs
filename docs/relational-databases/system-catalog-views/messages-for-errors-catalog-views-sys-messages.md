@@ -28,7 +28,7 @@ dev_langs:
 |-----------------|---------------|-----------------|  
 |**message_id**|**int**|ID of the message. Is unique across server. Message IDs less than 50000 are system messages.|  
 |**language_id**|**smallint**|Language ID for which the text in **text** is used, as defined in **syslanguages**. This is unique for a specified **message_id**.|  
-|**severity**|**tinyint**|Severity level of the message, between 1 and 25. This is the same for all message languages within a **message_id**.|  
+|**severity**|**tinyint**|Severity level of the message, between 0 and 25. This is the same for all message languages within a **message_id**.|  
 |**is_event_logged**|**bit**|1 = Message is event-logged when an error is raised. This is the same for all message languages within a **message_id**.|  
 |**text**|**nvarchar(2048)**|Text of the message used when the corresponding **language_id** is active.|  
   

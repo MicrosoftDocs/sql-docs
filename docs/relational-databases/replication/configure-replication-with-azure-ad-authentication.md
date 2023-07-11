@@ -20,7 +20,7 @@ This article provides steps to configure Transactional and Snapshot replication 
 Support for Azure AD authentication with SQL Server replication was added in SQL Server 2022 CU 6. When configuring SQL Server replication with Azure AD authentication, the only step that's different is the first step, when you create an Azure AD login, and grant sysadmin permissions. Then use that Azure AD login in the replication stored procedures to configure replication. 
 
 > [!NOTE]
-> Azure AD authentication for replication starting with SQL Server 2022 CU 6 can be disabled by using session trace flag 11561.
+> Starting with SQL Server 2022 CU 6, disable Azure AD authentication for replication by using session trace flag 11561.
 
 
 ## Prerequisites

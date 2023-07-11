@@ -52,6 +52,7 @@ The option to set for the specified server. *option_name* is **varchar(35)**, wi
 | **dist** | Distributor. |
 | **lazy schema validation** | Determines whether the schema of remote tables is checked.<br /><br />If **true**, skip schema checking of remote tables at the beginning of the query. |
 | **name** | Specifies the name of the linked server object.<br /><br />The name change is reflected in the value returned by the `name` column of the `sys.servers` catalog view without affecting the remote data source. |
+| **provider string** | Specifies the OLEDB string that identifies the source of a linked server connection.<br /><br />The provider string change is reflected in the value returned by the `provider_string` column of the `sys.servers` catalog view |
 | **pub** | Publisher. |
 | **query timeout** | Time-out value for queries against a linked server.<br /><br />If **0**, use the `sp_configure` default. |
 | **rpc** | Enables RPC from the given server. |
@@ -67,7 +68,9 @@ Specifies whether or not the *option_name* should be enabled (**true** or **on**
 
 *option_value* may be a non-negative integer for the **connect timeout** and **query timeout** options. For the **collation name** option, *option_value* may be a collation name or NULL.
 
-*option_value* may be a string, representing the new name of the linked server connection, when using the the **name** option.
+*option_value* may be a string, representing the new name of the linked server connection, when using the **name** option.
+
+*option_value* may be a string or NULL, representing the new OLEDB source of the linked server connection, when using the **provider string** option.
 
 ## Return code values
 

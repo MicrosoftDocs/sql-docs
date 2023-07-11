@@ -75,7 +75,7 @@ Once the assessment extension installs, the next step is to connect to MongoDB e
 
    1. In the **Assessment name** field, enter a title, for example, `demo1`.
    1. Select the target MongoDB version from the **Target Platform** dropdown.
-   1. Provide the path to MongoDB profiler Logs. This is an optional field, however specifying the logs path results in more granular findings at the collection level. When the log folder isn't specified, the tool uses details from the `serverStatus` command to perform the assessment. `serverStatus` command returns feature usage only since the last reboot, so you would need to ensure that sufficient time has passed since the last server reboot to get an assessment that captures your workload.
+   1. Provide the path to MongoDB profiler Logs. This is an optional field, however specifying the logs path results in more granular findings at the collection level. When the log folder isn't specified, the tool uses details from the `serverStatus` command to perform the assessment. `serverStatus` command returns feature usage only since the last restart, so you would need to ensure that sufficient time has passed since the last server restart to get an assessment that captures your workload.
    1. Click **Run validation** to validate the assessment inputs.
    1. On successful validation, select **Start assessment** to run the assessment.
 

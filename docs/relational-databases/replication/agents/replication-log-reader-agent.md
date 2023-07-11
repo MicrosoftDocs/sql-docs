@@ -129,7 +129,10 @@ logread [-?]
 >  This parameter is ignored for non- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] publications. For more information, see the section "Configuring the Transaction Set Job" in [Performance Tuning for Oracle Publishers](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md).  
 
 > [!WARNING]  
->  **MaxCmdsInTran** is not supported if the given publication database is enabled for both Change Data Capture and replication. Using **MaxCmdsInTran** in this configuration may lead to data loss in CDC change tables.
+> **MaxCmdsInTran** was not designed to be always turned on. It exists to work around cases where someone accidentally performed a large number of DML operations in a single transaction (causing a delay in the distribution of commands until the entire transaction is in the distribution database, locks being held, etc.). If you routinely fall into this situation,review your applications and find ways to reduce the transaction size.  
+
+> [!WARNING]  
+> **MaxCmdsInTran** is not supported if the given publication database is enabled for both Change Data Capture and replication. Using **MaxCmdsInTran** in this configuration may lead to data loss in CDC change tables. It may also cause PK errors if the **MaxCmdsInTran** parameter is added and removed while replicating a large Transaction.
   
  **-MessageInterval** _message_interval_  
  Is the time interval used for history logging. A history event is logged when the **MessageInterval** value is reached after the last history event is logged.  

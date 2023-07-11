@@ -80,10 +80,8 @@
           href: database/authentication-aad-overview.md
         - name: Configure Azure AD auth
           href: database/authentication-aad-configure.md
-        - name: Multi-factor Azure AD auth
+        - name: Azure AD multi-factor auth
           href: database/authentication-mfa-ssms-overview.md
-        - name: Configure multi-factor auth
-          href: database/authentication-mfa-ssms-configure.md
         - name: Conditional Access
           href: database/conditional-access-configure.md
         - name: Server principals (logins)
@@ -1418,6 +1416,8 @@
           
     - name: Configure settings
       items: 
+      - name: tempdb
+        href: managed-instance/tempdb-configure.md
       - name: Customize time zone
         href: managed-instance/timezones-overview.md
       - name: Configure connection types

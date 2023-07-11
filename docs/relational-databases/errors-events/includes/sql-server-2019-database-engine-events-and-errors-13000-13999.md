@@ -2,10 +2,10 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 03/22/2023
+ms.date: 07/06/2023
 ms.topic: include
 ---
-| Error| Severity | Event logged | Description|
+| Error | Severity | Event logged | Description |
 | :--- | :--- | :--- | :--- |
 | 13001 | 16 | No | file name |
 | 13002 | 16 | No | audit |
@@ -516,8 +516,8 @@ ms.topic: include
 | 13927 | 16 | No | Change Data Capture is not supported for node or edge table '%ls'. |
 | 13928 | 16 | No | Use pseudocolumn '%.\*ls' to add a constraint on a node or edge table. |
 | 13929 | 16 | No | The pseudocolumn '%.\*ls' cannot be part of an index unless the index is on a node or edge table that contains that pseudocolumn. |
-| 13930 | 16 | No | Edge constraint cannot be created on table '%.\*ls'.  The table is not an edge table. |
-| 13931 | 16 | No | Edge constraint '%.\*ls' references invalid table '%.\*ls'.  Table could not be found. |
+| 13930 | 16 | No | Edge constraint cannot be created on table '%.\*ls'. The table is not an edge table. |
+| 13931 | 16 | No | Edge constraint '%.\*ls' references invalid table '%.\*ls'. Table could not be found. |
 | 13932 | 16 | No | Cross-database edge constraints are not supported. |
 | 13933 | 16 | No | Edge constraint must reference node tables. |
 | 13934 | 16 | No | Could not drop node table '%.\*ls' because it is referenced by an edge constraint. |

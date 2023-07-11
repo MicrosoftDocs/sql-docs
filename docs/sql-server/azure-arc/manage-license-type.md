@@ -14,6 +14,9 @@ ms.topic: conceptual
 
 This article explains how to manage SQL Server licenses and set billing options.
 
+> [!TIP]
+> To modify the license type for a larger scope, such as a resource group, subscription, or multiple subscriptions with a single command, use the [Modify license type](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/azure-arc-enabled-sql-server/modify-license-type) PowerShell script. It is published as an open source SQL Server sample and includes the step-by-step instructions.
+
 You can use Azure Arc-enabled SQL Server to accurately track your usage of the SQL Server software and manage your license compliance. You may also elect to pay for the SQL software usage directly through Microsoft Azure using a pay-as-you-go billing option. You can control how you pay for SQL Server software through Azure portal or API. [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] allows you to select a pay-as-you-go billing option during setup.
 
 License type is a property of Azure extension for SQL Server resource. It applies to all instances installed on the server where the extension is running. For your convenience it is also included in Azure portal overview for an Arc-enabled SQL Server instance as **Host License Type**.
@@ -89,7 +92,6 @@ In addition to billing differences, license type determines what features will b
 * Licensing benefit for fail-over servers. Azure extension for SQL Server supports free fail-over servers by automatically detecting if the instance is a replica in an availability group and reporting the usage with a separate meter. You can track the usage of the DR benefit in Cost Management + Billing. See [SQL Server licensing guide](https://www.microsoft.com/licensing/docs/view/SQL-Server) for details.
 * Detailed database inventory. You can manage your SQL database inventory in Azure portal. See [View databases](view-databases.md) for details.
 * Managing automatic updates of SQL Server from Azure.
-* Azure Active Directory authentication. You can manage access to your SQL Server databases using Azure Active Directory credentials. This feature requires that your instance is upgraded to SQL Server 2022. For more information, see [Azure Active Directory authentication for SQL Server 2022](https://cloudblogs.microsoft.com/sqlserver/2022/07/28/azure-active-directory-authentication-for-sql-server-2022/).
 * Best practices assessment. You can generate best practices reports and recommendations by periodic scans of your SQL Server configurations. See [Configure your SQL Server instance for Best practices assessment](assess.md)
 
 The following table shows the meters that track usage and billing for different license types and SQL Server editions:
@@ -124,6 +126,7 @@ The overview also identifies:
 
 * All instances of SQL Server on the server
 * Host license type
+* Enhanced security update (ESU) status
 
 ### Modify license type
 
@@ -141,11 +144,22 @@ Azure portal opens **SQL Server Configuration** for the server.
 
 Choose one of the license types. See [License types](#license-types) for descriptions.
 
+#### Subscribe to Extended Security Updates
+
+Extended security updates (ESU)  subscription only applies to servers covered with Software Assurance or pay-as-you-go license type. If the server license type is license only, the option to select ESU is disabled.
+
+If you want to change the license type to license only you need to:
+
+1. Unsubscribe from ESU.
+1. Save the change.
+1. Wait approximately 5 minutes for the saved change to complete.
+1. Set the new license type.
+
 #### Exclude instances
 
 If you do not want Arc-enable one or more instances, add those instances under **Skip Instances**.
 
-After you verify the license type and any instance to exclude, select **Save** to apply changes.
+After you verify the license type, ESU setting, and any instance to exclude, select **Save** to apply changes.
 
 ### [PowerShell](#tab/powershell)
 
@@ -194,7 +208,8 @@ This example returns the count by license type.
 resources
 | where type == "microsoft.hybridcompute/machines/extensions"
 | where properties.type in ("WindowsAgent.SqlServer","LinuxAgent.SqlServer")
-| summarize count() by tostring(properties.settings.LicenseType)
+| extend licenseType = iff(properties.settings.LicenseType == '', 'Configuration needed', properties.settings.LicenseType)
+| summarize count() by tostring(licenseType)
 ```
 
 ### Identify instances where license type is null

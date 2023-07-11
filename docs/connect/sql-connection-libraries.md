@@ -1,9 +1,9 @@
 ---
-title: "Connection libraries for Microsoft SQL Database"
-description: "Provides download links for modules, which enable connection to Microsoft SQL Server and Azure SQL Database, from a variety of client programming languages."
+title: Connection libraries for Microsoft SQL Database
+description: Provides download links for modules, which enable connection to Microsoft SQL Server and Azure SQL Database, from a variety of client programming languages.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 03/06/2020
+ms.date: 07/07/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: article
@@ -50,7 +50,7 @@ The following table lists examples of Object Relational Mapping (ORM) frameworks
 | Java | [Hibernate ORM](https://hibernate.org/orm)|
 | PHP | [Eloquent ORM, included in Laravel install](https://laravel.com/docs/) |
 | Node.js | [Sequelize ORM](https://sequelize.org/)<br/>[Prisma](https://www.prisma.io/) |
-| Python | [Django](https://www.djangoproject.com/) |
+| Python | [Django](https://www.djangoproject.com/)<br/>[SQL Server backend for Django](https://github.com/Microsoft/mssql-django) |
 | Ruby | [Ruby on Rails](https://rubyonrails.org/) |
 
 <a name="anchor-60-build-an-app-webpages" />

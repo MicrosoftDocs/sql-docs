@@ -88,7 +88,7 @@ As an extra benefit, the local storage availability model includes the ability t
 
 The Hyperscale service tier architecture is described in [Distributed functions architecture](./service-tier-hyperscale.md#distributed-functions-architecture). 
 
-:::image type="content" source="./media/high-availability-sla/hyperscale-architecture.png" alt-text="Diagram showing Hyperscale functional architecture.":::
+:::image type="content" source="./media/service-tier-hyperscale/hyperscale-architecture.png" alt-text="Diagram showing Hyperscale functional architecture.":::
 
 The availability model in Hyperscale includes four layers:
 
@@ -169,7 +169,7 @@ Consider the following limitations:
 - For zone redundant availability, choosing a [maintenance window](maintenance-window.md) other than the default is currently available in [select regions](maintenance-window.md#azure-region-support).
 - Only standard-series (Gen5) hardware is supported.
 - Named replicas aren't currently supported.
-- Zone redundancy can be specified using PowerShell, CLI or REST API when migrating an existing database from another Azure SQL Database service tier to Hyperscale. Support for Azure portal will be available soon. 
+- There's currently no option to specify zone redundancy when migrating a database to Hyperscale using the Azure portal. However, zone redundancy can be specified using Azure PowerShell, Azure CLI, or the REST API when migrating an existing database from another Azure SQL Database service tier to Hyperscale. Here's an example with Azure CLI: `az sql db update --resource-group "myResourceGroup" --server "myServer" --name "myDB" --edition Hyperscale --zone-redundant true`
 - At least 1 high availability compute replica and the use of zone-redundant or geo-zone-redundant backup storage is required for enabling the zone redundant configuration for Hyperscale.
 
 

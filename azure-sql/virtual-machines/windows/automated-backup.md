@@ -1,10 +1,10 @@
 ---
-title: Automated Backup v2 for SQL Server 2016 + Azure VMs
+title: Automated Backup for SQL Server 2016 + Azure VMs
 description: This article explains the Automated Backup feature for SQL Server 2016 and later VMs running on Azure. This article is specific to VMs using the Resource Manager.
-author: bluefooted
-ms.author: pamela
+author: tarynpratt
+ms.author: tarynpratt
 ms.reviewer: mathoma
-ms.date: 03/29/2023
+ms.date: 06/27/2023
 ms.service: virtual-machines-sql
 ms.subservice: backup
 ms.topic: how-to
@@ -12,17 +12,17 @@ ms.custom: devx-track-azurepowershell
 tags: azure-resource-manager
 ---
 
-# Automated Backup v2 for Azure virtual machines (Resource Manager)
+# Automated Backup for Azure virtual machines (Resource Manager)
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
 > [!div class="op_single_selector"]
 > * [SQL Server 2014](automated-backup-sql-2014.md)
 > * [SQL Server 2016 and later](automated-backup.md)
 
-Automated Backup v2 automatically configures [Managed Backup to Microsoft Azure](/sql/relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure) for all existing and new databases on an Azure VM running SQL Server 2016 or later Standard, Enterprise, or Developer editions. This enables you to configure regular database backups that utilize durable Azure Blob Storage. Automated Backup v2 depends on the [SQL Server infrastructure as a service (IaaS) Agent Extension](sql-server-iaas-agent-extension-automate-management.md).
+Automated Backup automatically configures [Managed Backup to Microsoft Azure](/sql/relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure) for all existing and new databases on an Azure VM running SQL Server 2016 or later Standard, Enterprise, or Developer editions. This enables you to configure regular database backups that utilize durable Azure Blob Storage. Automated Backup depends on the [SQL Server infrastructure as a service (IaaS) Agent Extension](sql-server-iaas-agent-extension-automate-management.md).
 
 ## Prerequisites
-To use Automated Backup v2, review the following prerequisites:
+To use Automated Backup, review the following prerequisites:
 
 **Operating system**:
 
@@ -73,7 +73,7 @@ It's important to understand the difference between daily and weekly full backup
 
 You have a SQL Server VM that contains a number of large databases.
 
-On Monday, you enable Automated Backup v2 with the following settings:
+On Monday, you enable Automated Backup with the following settings:
 
 - Backup schedule: **Manual**
 - Full backup frequency: **Weekly**
@@ -92,7 +92,7 @@ This scenario shows that Automated Backup only operates within the specified tim
 
 You have a SQL Server VM that contains a number of large databases.
 
-On Monday, you enable Automated Backup v2 with the following settings:
+On Monday, you enable Automated Backup with the following settings:
 
 - Backup schedule: Manual
 - Full backup frequency: Daily
@@ -151,7 +151,7 @@ If you're enabling Automated Backup for the first time, Azure configures the SQL
 
 ## Configure with PowerShell
 
-You can use PowerShell to configure Automated Backup v2. Before you begin, you must:
+You can use PowerShell to configure Automated Backup. Before you begin, you must:
 
 - [Download and install the latest Azure PowerShell](https://aka.ms/webpi-azps).
 - Open Windows PowerShell and associate it with your account with the **Connect-AzAccount** command.
@@ -208,7 +208,7 @@ If your output shows that **Enable** is set to **False**, then you have to enabl
 > [!NOTE] 
 > If you check the settings immediately after making a change, it is possible that you will get back the old configuration values. Wait a few minutes and check the settings again to make sure that your changes were applied.
 
-### Configure Automated Backup v2
+### Configure Automated Backup
 You can use PowerShell to enable Automated Backup as well as to modify its configuration and behavior at any time. 
 
 First, select, or create a storage account for the backup files. The following script selects a storage account or creates it if it doesn't exist.
@@ -227,7 +227,7 @@ If (-Not $storage)
 > [!NOTE]
 > Automated Backup does not support storing backups in premium storage, but it can take backups from VM disks which use Premium Storage.
 
-Then use the **New-AzVMSqlServerAutoBackupConfig** command to enable and configure the Automated Backup v2 settings to store backups in the Azure storage account. In this example, the backups are set to be retained for 10 days. System database backups are enabled. Full backups are scheduled for weekly with a time window starting at 20:00 for two hours. Log backups are scheduled for every 30 minutes. The second command, **Set-AzVMSqlServerExtension**, updates the specified Azure VM with these settings.
+Then use the **New-AzVMSqlServerAutoBackupConfig** command to enable and configure the Automated Backup settings to store backups in the Azure storage account. In this example, the backups are set to be retained for 10 days. System database backups are enabled. Full backups are scheduled for weekly with a time window starting at 20:00 for two hours. Log backups are scheduled for every 30 minutes. The second command, **Set-AzVMSqlServerExtension**, updates the specified Azure VM with these settings.
 
 ```powershell
 $autobackupconfig = New-AzVMSqlServerAutoBackupConfig -Enable `
@@ -391,7 +391,7 @@ The following table lists the possible solutions if you're having issues disabli
 
 ## Next steps
 
-Automated Backup v2 configures Managed Backup on Azure VMs. So it's important to [review the documentation for Managed Backup](/sql/relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure) to understand the behavior and implications.
+Automated Backup configures Managed Backup on Azure VMs. So it's important to [review the documentation for Managed Backup](/sql/relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure) to understand the behavior and implications.
 
 You can find additional backup and restore guidance for SQL Server on Azure VMs in the following article: [Backup and restore for SQL Server on Azure virtual machines](backup-restore.md).
 

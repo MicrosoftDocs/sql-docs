@@ -5,7 +5,7 @@ description: This article details a feature allowing Azure administrators to blo
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
-ms.date: 06/7/2023
+ms.date: 06/21/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: article
@@ -13,14 +13,14 @@ ROBOTS: NOINDEX
 ---
 
 # What is Block T-SQL CRUD feature?
-[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb-sqlmi.md)]
+[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 
-This feature allows Azure administrators to block the creation or modification of Azure SQL resources through T-SQL. This is enforced at the subscription level to block T-SQL commands from affecting SQL resources in any Azure SQL database or managed instance.
+This feature allows Azure administrators to block the creation or modification of Azure SQL Database resources through T-SQL. This is enforced at the subscription level to block T-SQL commands from affecting Azure SQL Database resources.
 
 ## Overview
 
-To block creation or modification of resources through T-SQL and enforce resource management through an Azure Resource Manager template (ARM template) for a given subscription, the subscription level preview features in Azure portal can be used. This is particularly useful when you are using [Azure Policies](/azure/governance/policy/overview) to enforce organizational standards through ARM templates. Since T-SQL does not adhere to Azure Policies, a block on T-SQL create or modify operations can be applied. The syntax blocked includes CRUD (create, update, delete) operations for databases in Azure SQL.
+To block creation or modification of resources through T-SQL and enforce resource management through an Azure Resource Manager template (ARM template) for a given subscription, the subscription level preview features in Azure portal can be used. This is particularly useful when you are using [Azure Policies](/azure/governance/policy/overview) to enforce organizational standards through ARM templates. Since T-SQL does not adhere to Azure Policies, a block on T-SQL create or modify operations can be applied. The syntax blocked includes CRUD (create, update, delete) operations for databases in Azure SQL Database.
 
 T-SQL CRUD operations can be blocked via Azure portal, [PowerShell](/powershell/module/az.resources/register-azproviderfeature), or [Azure CLI](/cli/azure/feature#az-feature-register).
 

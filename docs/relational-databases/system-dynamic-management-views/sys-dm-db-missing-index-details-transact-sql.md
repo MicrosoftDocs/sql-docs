@@ -30,7 +30,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**index_handle**|**int**|Identifies a particular missing index. The identifier is unique across the server. `index_handle` is the key of this table.|  
-|**database_id**|**smallint**|Identifies the database where the table with the missing index resides.|  
+|**database_id**|**smallint**|Identifies the database where the table with the missing index resides. <br /><br />In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the values are unique within a single database or an elastic pool, but not within a logical server.|  
 |**object_id**|**int**|Identifies the table where the index is missing.|  
 |**equality_columns**|**nvarchar(4000)**|Comma-separated list of columns that contribute to equality predicates of the form:<br /><br /> *table.column* = *constant_value*|  
 |**inequality_columns**|**nvarchar(4000)**|Comma-separated list of columns that contribute to inequality predicates, for example, predicates of the form:<br /><br /> *table.column* > *constant_value*<br /><br /> Any comparison operator other than "=" expresses inequality.|  

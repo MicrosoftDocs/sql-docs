@@ -106,10 +106,10 @@ To create and manage SQL Database elastic pools and pooled databases, use these 
 |[Elastic pools - Update](/rest/api/sql/2020-11-01-preview/elasticpools/update)|Updates an existing elastic pool.|
 |[Elastic pool activities](/rest/api/sql/elasticpoolactivities)|Returns elastic pool activities.|
 |[Elastic pool database activities](/rest/api/sql/elasticpooldatabaseactivities)|Returns activity on databases inside of an elastic pool.|
-|[Databases - Create or update](/rest/api/sql/databases/createorupdate)|Creates a new database or updates an existing database.|
+|[Databases - Create or update](/rest/api/sql/2022-08-01-preview/databases/create-or-update)|Creates a new database or updates an existing database.|
 |[Databases - Get](/rest/api/sql/databases/get)|Gets a database.|
-|[Databases - List by elastic pool](/rest/api/sql/databases/listbyelasticpool)|Returns a list of databases in an elastic pool.|
-|[Databases - List by server](/rest/api/sql/databases/listbyserver)|Returns a list of databases in a server.|
+|[Databases - List by elastic pool](/rest/api/sql/2022-08-01-preview/databases/list-by-elastic-pool)|Returns a list of databases in an elastic pool.|
+|[Databases - List by server](/rest/api/sql/2022-08-01-preview/databases/list-by-server)|Returns a list of databases in a server.|
 |[Databases - Update](/rest/api/sql/databases/update)|Updates an existing database.|
 
 ## Next steps

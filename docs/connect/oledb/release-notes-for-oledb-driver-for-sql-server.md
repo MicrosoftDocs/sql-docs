@@ -84,7 +84,7 @@ If you need to download the installer in a language other than the one detected 
 
 | Feature added | Details |
 | :------------ | :------ |
-| Support for TLS 1.3 | TDS 8.0 connections can now be configured to use TLS 1.3. For more details, see [TLS 1.3 support](../../relational-databases/security/networking/tds-8-and-tls-1-3.md). |
+| Support for TLS 1.3 | TDS 8.0 connections can now be configured to use TLS 1.3. For more details, see [TLS 1.3 support](../../relational-databases/security/networking/tls-1-3.md). |
 | Support for the `Server Certificate` connection string keyword, and the `SSPROP_INIT_SERVER_CERTIFICATE` initialization property | The user may now specify the path to a certificate file to match against the SQL Server TLS/SSL certificate. <br/><br/>For more information, see: [Using connection string keywords](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
 
 ## 19.1.0
@@ -129,7 +129,7 @@ If you need to download the installer in a language other than the one detected 
 | Feature added | Details |
 | :------------ | :------ |
 | TDS 8.0 support | The encryption connection string keyword/property now includes the option for strict encryption, which encrypts the whole connection (including PRELOGIN packets). |
-| Secure by default | **BREAKING CHANGE**<br />The driver now defaults to secure-by-default options. Encrypted connections are enabled by default. The server certificate is now validated when client-side encryption is off but the server requires encryption.<br /><br />To restore previous version behavior, you need to opt-in to non-encrypted connections (`Encrypt` or `Use Encryption for Data` option) and trust the server certificate (`Trust Server Certificate` option), if the server uses a self-signed certificate. For more information, see [Encryption and certificate validation](features/encryption-and-certificate-validation.md). |
+| Secure by default | **BREAKING CHANGE**<br />The driver now defaults to secure-by-default options. Encrypted connections are enabled by default. The server certificate is now validated when client-side encryption is off but the server requires encryption.<br /><br />To restore previous version behavior, you need to opt in to non-encrypted connections (`Encrypt` or `Use Encryption for Data` option) and trust the server certificate (`Trust Server Certificate` option), if the server uses a self-signed certificate. For more information, see [Encryption and certificate validation](features/encryption-and-certificate-validation.md). |
 | Support for the `Host Name In Certificate` connection string keyword, and the `SSPROP_INIT_HOST_NAME_CERTIFICATE` initialization property. | The user may now specify the host name to be used when validating the SQL Server TLS/SSL certificate. |
 
 ## 18.6.6

@@ -624,6 +624,11 @@
       "source_path_from_root": "/azure-sql/database/sql-database-vulnerability-assessment-rules-changelog.md",
       "redirect_url": "/azure/defender-for-cloud/sql-azure-vulnerability-assessment-rules-changelog",
       "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/database/authentication-mfa-ssms-configure.md",
+      "redirect_url": "/azure/azure-sql/database/authentication-mfa-ssms-overview",
+      "redirect_document_id": false
     }
   ]
 }

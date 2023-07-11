@@ -24,7 +24,7 @@ This article demonstrates how to configure an integrated acceleration and offloa
 
 2. Follow the instructions from the vendor to install the drivers on your server.
 
-3. Reboot the server after you install the drivers.
+3. Restart the server after you install the drivers.
 
 ## Verify installed components
 

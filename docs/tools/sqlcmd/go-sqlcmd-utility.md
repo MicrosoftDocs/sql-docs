@@ -21,7 +21,7 @@ The **go-sqlcmd** utility lets you enter Transact-SQL statements, system procedu
 ###### Note
 Installing **go-sqlcmd** via a package manager will replace [sqlcmd](sqlcmd-utility.md) with **go-sqlcmd**. Any current command line sessions will need to be closed and reopened for this take to effect. [sqlcmd](sqlcmd-utility.md) will not be removed and can still be used by specifying the full path to the executable. 
 
-Please review the [breaking changes from sqlcmd](#breaking-changes-from-sqlcmd) section below before installing via a package manager to ensure existing scritps will not be impacted. If you are unsure, consider the direct download option. The direct download option allows the **go-sqlcmd** executable to be downloaded to the directory of your choice and subsequently running the **go-sqlcmd** from that directory or by specifying the full path to the executable. This option does not update any system settings.
+Please review the [breaking changes from sqlcmd](#breaking-changes-from-sqlcmd) section below before installing via a package manager to ensure existing scripts will not be impacted. If you're unsure, consider the direct download option. The direct download option allows the **go-sqlcmd** executable to be downloaded to the directory of your choice. You may then run the **go-sqlcmd** from that directory or by specifying the full path to the executable. This option does not update any system settings.
 
 ## Download and install go-sqlcmd
 

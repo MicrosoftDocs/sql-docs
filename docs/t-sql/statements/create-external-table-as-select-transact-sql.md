@@ -4,7 +4,7 @@ description: "CREATE EXTERNAL TABLE AS SELECT (CETAS) creates an external table 
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest, wiassaf, mlandzic, nzagorac
-ms.date: 05/18/2023
+ms.date: 07/11/2023
 ms.service: sql
 ms.topic: reference
 f1_keywords:

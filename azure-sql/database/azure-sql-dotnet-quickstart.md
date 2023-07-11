@@ -4,7 +4,7 @@ description: Learn how to connect to a database in Azure SQL Database and query 
 author: alexwolfmsft
 ms.author: alexwolf
 ms.custom: passwordless-dotnet
-ms.date: 04/12/2023
+ms.date: 07/11/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: quickstart

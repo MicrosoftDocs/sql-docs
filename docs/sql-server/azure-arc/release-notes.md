@@ -4,7 +4,7 @@ description: Latest release notes
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 07/11/2023
+ms.date: 07/13/2023
 ms.service: sql
 ms.topic: conceptual
 ---
@@ -13,7 +13,7 @@ ms.topic: conceptual
 
 ## July 2023
 
-This release is published July 11, 2023.
+This release is published July 13, 2023.
 
 ### Extension version
 

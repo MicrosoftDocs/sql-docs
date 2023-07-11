@@ -5,7 +5,7 @@ description: Learn about the new features and documentation improvements for Azu
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 06/15/2023
+ms.date: 07/11/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: whats-new
@@ -41,7 +41,6 @@ The following table lists the features of Azure SQL Database that are currently 
 | [Hyperscale elastic pools](hyperscale-elastic-pool-overview.md) | Manage and scale multiple Hyperscale databases in Azure SQL Database by using Hyperscale elastic pools. | 
 | [Hyperscale long-term retention](long-term-retention-overview.md) | Save your Hyperscale database backups for up to 10 years with long-term retention (LTR).  | 
 | [Hyperscale RA-GZRS](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy) | Store your Hyperscale database backups on read access geo-zone-redundancy (RA-GZRS) storage. |
-| [Hyperscale premium-series and premium-series memory optimized hardware](service-tier-hyperscale.md#compute-resources) | Premium-series and premium-series memory optimized hardware is now available for Hyperscale databases.|
 | [Hyperscale short-term retention](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy) | Retain backups from 1 up to 35 days for Hyperscale databases, and perform a point-in-time restore within the configured retention period. |
 | [Invoke External REST endpoints](/sql/relational-databases/system-stored-procedures/sp-invoke-external-rest-endpoint-transact-sql) | Invoke HTTPS REST endpoint natively using a new system stored procedure. |
 | [JavaScript & Python bindings](/azure/azure-functions/functions-bindings-azure-sql)| Use JavaScript or Python SQL bindings with Azure Functions. | 
@@ -60,6 +59,7 @@ The following table lists the new generally available (GA) features of Azure SQL
 
 | Feature | GA Month | Details |
 | ---| --- |--- |
+| [Hyperscale premium-series and premium-series memory optimized hardware](service-tier-hyperscale.md#compute-resources) | July 2023 | Premium-series and premium-series memory optimized hardware is now available for Hyperscale databases.|
 | [128 vCore](resource-limits-vcore-single-databases.md#general-purpose---provisioned-compute---gen5) | June 2023 | Provision your Azure SQL Database with up to [128 vCores, now generally available](https://techcommunity.microsoft.com/t5/azure-sql-blog/announcing-preview-of-128-vcore-provisioned-compute-size-on/ba-p/3631211). | 
 | [Azure SQL bindings for Azure Functions](/azure/azure-functions/functions-bindings-azure-sql) | May 2023 | Azure Functions supports input bindings, output bindings, and a function trigger for the Azure SQL and SQL Server products. | 
 | [Cross-tenant CMK with TDE](transparent-data-encryption-byok-cross-tenant.md) | May 2023 | Cross-tenant CMK with TDE allows SQL databases to be in a separate tenant than the tenant holding the Azure Key Vault resource used to encrypt the databases. |
@@ -88,12 +88,18 @@ The following table lists the new generally available (GA) features of Azure SQL
 
 Learn about significant changes to the Azure SQL Database documentation. For previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md). 
 
+### July 2023
+
+| Changes | Details |
+| --- | --- |
+| Hyperscale premium-series and premium-series memory optimized hardware | Premium-series and premium-series memory optimized hardware is [now available for Hyperscale databases](service-tier-hyperscale.md#compute-resources).|
+
 
 ### June 2023
 
 | Changes | Details |
 | --- | --- |
-| [128 vCore](resource-limits-vcore-single-databases.md) | Provision your Azure SQL Database with up to [128 vCores, now generally available](https://techcommunity.microsoft.com/t5/azure-sql-blog/announcing-preview-of-128-vcore-provisioned-compute-size-on/ba-p/3631211). | 
+| 128 vCore | Provision your Azure SQL Database with up to [128 vCores](resource-limits-vcore-single-databases.md), [now generally available](https://techcommunity.microsoft.com/t5/azure-sql-blog/announcing-preview-of-128-vcore-provisioned-compute-size-on/ba-p/3631211). | 
 | **64 vCore option for Hyperscale premium** | A 64 vCore option is now available for [Azure SQL Database Hyperscale premium-series](resource-limits-vcore-single-databases.md#hyperscale---premium-series) and [Hyperscale premium-series memory optimized](resource-limits-vcore-single-databases.md#hyperscale---premium-series-memory-optimized).|
 
 ### May 2023

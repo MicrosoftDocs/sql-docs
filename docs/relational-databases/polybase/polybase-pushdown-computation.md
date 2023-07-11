@@ -5,7 +5,7 @@ description: Enable pushdown computation to improve performance of queries on yo
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: wiassaf, nathansc 
-ms.date: 6/29/2023
+ms.date: 7/11/2023
 ms.service: sql
 ms.subservice: polybase
 ms.topic: conceptual

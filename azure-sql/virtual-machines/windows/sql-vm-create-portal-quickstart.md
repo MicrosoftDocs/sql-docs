@@ -48,6 +48,8 @@ If you don't have an Azure subscription, create a [free account](https://azure.m
 
    ![New search window](./media/sql-vm-create-portal-quickstart/create-sql-2017-vm-image.png)
 
+[!INCLUDE[appliesto-sqlvm](../../includes/virtual-machines-2008-end-of-support.md)]
+
 ## <a id="configure"></a> Provide basic details
 
 The instructions for basic details vary between deploying a conventional SQL Server on Azure VM, and [SQL Server on an Azure confidential VM](sql-vm-create-confidential-vm-how-to.md). 

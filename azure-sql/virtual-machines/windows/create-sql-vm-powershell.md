@@ -110,6 +110,9 @@ Use the following variables to define the SQL Server image to use for the virtua
    Get-AzVMImageOffer -Location $Location -Publisher 'MicrosoftSQLServer'
    ```
 
+   [!INCLUDE[appliesto-sqlvm](../../includes/virtual-machines-2008-end-of-support.md)]
+
+
 1. For this tutorial, use the following variables to specify SQL Server 2017 on Windows Server 2016.
 
    ```powershell

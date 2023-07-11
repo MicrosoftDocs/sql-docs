@@ -186,8 +186,12 @@ app.MapPost("/Person", (Person person) => {
     conn.Open();
 
     var command = new SqlCommand(
-        $"INSERT INTO Persons (firstName, lastName) VALUES ('{person.FirstName}', '{person.LastName}')",
+        "INSERT INTO Persons (firstName, lastName) VALUES (@firstName, @lastName)",
         conn);
+
+    command.Parameters.Clear();
+    command.Parameters.AddWithValue("@firstName", person.FirstName);
+    command.Parameters.AddWithValue("@lastName", person.LastName);
 
     using SqlDataReader reader = command.ExecuteReader();
 })

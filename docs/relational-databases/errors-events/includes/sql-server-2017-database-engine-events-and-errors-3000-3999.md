@@ -2,10 +2,10 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 02/17/2023
+ms.date: 07/06/2023
 ms.topic: include
 ---
-| Error| Severity | Event logged | Description|
+| Error | Severity | Event logged | Description |
 | :--- | :--- | :--- | :--- |
 | 3001 | 16 | No | obsolete |
 | 3002 | 16 | No | Cannot BACKUP or RESTORE a database snapshot. |
@@ -61,8 +61,8 @@ ms.topic: include
 | 3057 | 16 | No | Invalid device name. The length of the device name provided exceeds supported limit (maximum length is:%d). Reissue the BACKUP statement with a valid device name. |
 | 3058 | 10 | No | File or device name exceeds the supported limit (maximum length is:%d) and will be truncated: %.\*ls. |
 | 3059 | 16 | No | This BACKUP or RESTORE command is not supported on a database mirror or secondary replica. |
-| 3060 | 10 | No | The restart-checkpoint file '%ls' was corrupted. The restored database can not be recovered.  Restart the RESTORE sequence. |
-| 3061 | 16 | No | The restart-checkpoint file '%ls' could not be opened.  Operating system error '%ls'.  Make the file available and retry the operation or, restart the RESTORE sequence. |
+| 3060 | 10 | No | The restart-checkpoint file '%ls' was corrupted. The restored database can not be recovered. Restart the RESTORE sequence. |
+| 3061 | 16 | No | The restart-checkpoint file '%ls' could not be opened. Operating system error '%ls'. Make the file available and retry the operation or, restart the RESTORE sequence. |
 | 3062 | 16 | No | Cannot backup from a HADRON secondary because it is not in Synchronizing or Synchronized state. |
 | 3063 | 16 | No | Write to backup block blob device %ls failed. Device has reached its limit of allowed blocks. |
 | 3064 | 16 | No | Write to backup block blob detected out of order write at offset %ld, last block offset was at %ld. |
@@ -221,14 +221,14 @@ ms.topic: include
 | 3249 | 16 | No | The volume on device '%ls' is a continuation volume for the backup set. Remove it and insert the volume holding the start of the backup set. |
 | 3250 | 16 | No | The value '%d' is not within range for the %ls parameter. |
 | 3251 | 10 | No | The media family on device '%ls' is complete. The device is now being reused for one of the remaining families. |
-| 3252 | 16 | No | Failed to copy snapshot with name  '%ls', timestamp '%ls' to destination '%ls'. Error returned '%ls'. |
+| 3252 | 16 | No | Failed to copy snapshot with name '%ls', timestamp '%ls' to destination '%ls'. Error returned '%ls'. |
 | 3253 | 16 | No | The block size parameter must supply a value that is a power of 2. |
 | 3254 | 16 | No | The volume on device '%ls' is empty. |
 | 3255 | 16 | No | The data set on device '%ls' is a SQL Server backup set not compatible with this version of SQL Server. |
 | 3256 | 16 | No | The backup set on device '%ls' was terminated while it was being created and is incomplete. RESTORE sequence is terminated abnormally. |
 | 3257 | 16 | No | There is insufficient free space on disk volume '%ls' to create the database. The database requires %I64u additional free bytes, while only %I64u bytes are available. |
 | 3258 | 16 | No | The volume on the device "%ls" is not part of the media set that is currently being processed. Ensure that the backup devices are loaded with the correct media. |
-| 3259 | 16 | No | Failed to copy blob with name  '%ls', to destination '%ls'. Error returned '%ls'. |
+| 3259 | 16 | No | Failed to copy blob with name '%ls', to destination '%ls'. Error returned '%ls'. |
 | [3260](../mssqlserver-3260-database-engine-error.md) | 16 | No | An internal buffer has become full. |
 | 3261 | 16 | No | SQL Server cannot use the virtual device configuration. |
 | 3262 | 10 | No | The backup set on file %d is valid. |
@@ -251,7 +251,7 @@ ms.topic: include
 | 3281 | 10 | No | Released and initiated rewind on '%ls'. |
 | 3283 | 16 | No | The file "%ls" failed to initialize correctly. Examine the error logs for more details. |
 | 3284 | 16 | No | Filemark on device '%ls' is not aligned. Re-issue the Restore statement with the same blocksize used to create the backupset: '%d' looks like a possible value. |
-| 3285 | 10 | No | Filemark on device '%ls' appears not to be aligned. The restore operation will proceed using less efficient I/O.  To avoid this, re-issue the Restore statement with the same blocksize used to create the backupset: '%d' looks like a possible value. |
+| 3285 | 10 | No | Filemark on device '%ls' appears not to be aligned. The restore operation will proceed using less efficient I/O. To avoid this, re-issue the Restore statement with the same blocksize used to create the backupset: '%d' looks like a possible value. |
 | 3286 | 16 | No | Backup failed because there is a mismatch in file metadata for file %d. |
 | 3287 | 16 | No | The file ID %d on device '%ls' is incorrectly formed and can not be read. |
 | 3288 | 16 | No | Credential name %.\*ls does not exist or user does not have permission to access it. |
@@ -267,7 +267,7 @@ ms.topic: include
 | 3298 | 16 | No | Backup/Restore to URL device error: %.\*ls. |
 | 3299 | 16 | No | BackupToUrl initiated. |
 | 3301 | 21 | Yes | The transaction log contains a record (logop %d) that is not valid. The log has been corrupted. Restore the database from a full backup, or repair the database. |
-| 3302 | 21 | Yes | Redoing of logged operations in database '%.\*ls' failed to reach end of log at log record ID %S_LSN.  This indicates corruption around log record ID %S_LSN. Restore the database from a full backup, or repair the database. |
+| 3302 | 21 | Yes | Redoing of logged operations in database '%.\*ls' failed to reach end of log at log record ID %S_LSN. This indicates corruption around log record ID %S_LSN. Restore the database from a full backup, or repair the database. |
 | 3303 | 10 | Yes | Remote harden of transaction '%.\*ls' (ID 0x%016I64x %ls) started at %S_DATE in database '%ls' at LSN %S_LSN failed. |
 | [3313](../mssqlserver-3313-database-engine-error.md) | 21 | Yes | During redoing of a logged operation in database '%.\*ls', an error occurred at log record ID %S_LSN. Typically, the specific failure is previously logged as an error in the operating system error log. Restore the database from a full backup, or repair the database. |
 | [3314](../mssqlserver-3314-database-engine-error.md) | 21 | Yes | During undoing of a logged operation in database '%.\*ls', an error occurred at log record ID %S_LSN. Typically, the specific failure is logged previously as an error in the operating system error log. Restore the database or file from a backup, or repair the database. |
@@ -283,7 +283,7 @@ ms.topic: include
 | 3409 | 16 | Yes | Performance counter shared memory setup failed with error %d. Reinstall sqlctr.ini for this instance, and ensure that the instance login account has correct registry permissions. |
 | 3410 | 10 | Yes | Data in filegroup %s is offline, and deferred transactions exist. Use RESTORE to recover the filegroup, or drop the filegroup if you never intend to recover it. Log truncation cannot occur until this condition is resolved. |
 | 3411 | 21 | Yes | Configuration block version %d is not a valid version number. SQL Server is exiting. Restore the master database or reinstall. |
-| 3412 | 10 | Yes | Warning: The server instance was started using minimal configuration startup option (-f). Starting an instance of SQL Server with minimal configuration places the server in single-user mode automatically.  After the server has been started with minimal configuration, you should change the appropriate server option value or values, stop, and then restart the server. |
+| 3412 | 10 | Yes | Warning: The server instance was started using minimal configuration startup option (-f). Starting an instance of SQL Server with minimal configuration places the server in single-user mode automatically. After the server has been started with minimal configuration, you should change the appropriate server option value or values, stop, and then restart the server. |
 | [3413](../mssqlserver-3413-database-engine-error.md) | 21 | Yes | Database ID %d. Could not mark database as suspect. Getnext NC scan on sys.databases.database_id failed. Refer to previous errors in the error log to identify the cause and correct any associated problems. |
 | [3414](../mssqlserver-3414-database-engine-error.md) | 10 | Yes | An error occurred during recovery, preventing the database '%ls' (%d:%d) from restarting. Diagnose the recovery errors and fix them, or restore from a known good backup. If errors are not corrected or expected, contact Technical Support. |
 | 3415 | 16 | Yes | Database '%.\*ls' cannot be upgraded because it is read-only, has read-only files or the user does not have permissions to modify some of the files. Make the database or files writeable, and rerun recovery. |
@@ -291,7 +291,7 @@ ms.topic: include
 | [3417](../mssqlserver-3417-database-engine-error.md) | 21 | Yes | Cannot recover the master database. SQL Server is unable to run. Restore master from a full backup, repair it, or rebuild it. For more information about how to rebuild the master database, see SQL Server Books Online. |
 | 3418 | 10 | Yes | Recovery is unable to defer error %d. Errors can only be deferred in databases using the full recovery model and an active backup log chain. |
 | 3419 | 16 | Yes | Recovery for database '%.\*ls' is being skipped because it requires an upgrade but is marked for Standby. Use RESTORE DATABASE WITH NORECOVERY to take the database back to a Restoring state and continue the restore sequence. |
-| 3420 | 21 | Yes | Database snapshot '%ls' has failed an IO operation and is marked suspect.  It must be dropped and recreated. |
+| 3420 | 21 | Yes | Database snapshot '%ls' has failed an IO operation and is marked suspect. It must be dropped and recreated. |
 | 3421 | 10 | Yes | Recovery completed for database %ls (database ID %d) in %I64d second(s) (analysis %I64d ms, redo %I64d ms, undo %I64d ms.) This is an informational message only. No user action is required. |
 | 3422 | 10 | Yes | Database %ls was shutdown due to error %d in routine '%hs'. Restart for non-snapshot databases will be attempted after all connections to the database are aborted. |
 | 3429 | 10 | Yes | Recovery could not determine the outcome of a cross-database transaction %S_XID, named '%.\*ls', in database '%.\*ls' (database ID %d:%d). The coordinating database (database ID %d:%d) was unavailable. The transaction was assumed to be committed. If the transaction was not committed, you can retry recovery when the coordinating database is available. |
@@ -301,13 +301,13 @@ ms.topic: include
 | 3441 | 21 | Yes | During startup of warm standby database '%.\*ls' (database ID %d), its standby file ('%ls') was inaccessible to the RESTORE statement. The operating system error was '%ls'. Diagnose the operating system error, correct the problem, and retry startup. |
 | 3443 | 21 | Yes | Database '%ls' (database ID %d:%d) was marked for standby or read-only use, but has been modified. The RESTORE LOG statement cannot be performed. Restore the database from a backup. |
 | 3445 | 21 | Yes | File '%ls' is not a valid undo file for database '%.\*ls (database ID %d). Verify the file path, and specify the correct file. |
-| 3446 | 16 | No | Primary log file is not available for database '%ls' (%d:%d).  The log cannot be backed up. |
+| 3446 | 16 | No | Primary log file is not available for database '%ls' (%d:%d). The log cannot be backed up. |
 | 3447 | 16 | No | Could not activate or scan all of the log files for database '%.\*ls'. |
 | 3448 | 21 | Yes | Rollback encountered a page with a log sequence number (LSN) less than the original log record LSN. Could not undo log record %S_LSN, for transaction ID %S_XID, on page %S_PGID, database '%ls' (%d:%d). Page information: LSN = %S_LSN, type = %ld. Log information: OpCode = %ld, context %ld. Restore or repair the database. |
 | 3449 | 21 | Yes | SQL Server must shut down in order to recover a database (database ID %d). The database is either a user database that could not be shut down or a system database. Restart SQL Server. If the database fails to recover after another startup, repair or restore the database. |
 | 3450 | 10 | Yes | Recovery of database '%.\*ls' (%d) is %d%% complete (approximately %d seconds remain). Phase %d of 3. This is an informational message only. No user action is required. |
 | [3452](../mssqlserver-3452-database-engine-error.md) | 10 | Yes | Recovery of database '%.\*ls' (%d) detected possible identity value inconsistency in table ID %d. Run DBCC CHECKIDENT ('%.\*ls'). |
-| 3453 | 16 | No | This version cannot redo any index creation or non-logged operation done by SQL Server 7.0.  Further roll forward is not possible. |
+| 3453 | 16 | No | This version cannot redo any index creation or non-logged operation done by SQL Server 7.0. Further roll forward is not possible. |
 | 3454 | 10 | Yes | Recovery is writing a checkpoint in database '%.\*ls' (%d). This is an informational message only. No user action is required. |
 | [3456](../mssqlserver-3456-database-engine-error.md) | 21 | Yes | Could not redo log record %S_LSN, for transaction ID %S_XID, on page %S_PGID, allocation unit %I64d, database '%.\*ls' (database ID %d). Page: LSN = %S_LSN, allocation unit = %I64d, type = %ld. Log: OpCode = %ld, context %ld, PrevPageLSN: %S_LSN. Restore from a backup of the database, or repair the database. |
 | 3457 | 21 | Yes | Transactional file system resource manager '%.\*ls' failed to recover. For more information, see the accompanying error message, which determines the appropriate user action. |
@@ -322,9 +322,9 @@ ms.topic: include
 | 3607 | 10 | No | Division by zero occurred. |
 | 3608 | 16 | No | Cannot allocate a GUID for the token. |
 | 3609 | 16 | No | The transaction ended in the trigger. The batch has been aborted. |
-| 3611 | 10 | No | %hs SQL Server Execution Times:%hs   CPU time not measured under fiber mode,  elapsed time = %lu ms. |
-| 3612 | 10 | No | %hs SQL Server Execution Times:%hs   CPU time = %lu ms,  elapsed time = %lu ms. |
-| 3613 | 10 | No | SQL Server parse and compile time: %hs   CPU time = %lu ms, elapsed time = %lu ms. |
+| 3611 | 10 | No | %hs SQL Server Execution Times:%hs CPU time not measured under fiber mode, elapsed time = %lu ms. |
+| 3612 | 10 | No | %hs SQL Server Execution Times:%hs CPU time = %lu ms, elapsed time = %lu ms. |
+| 3613 | 10 | No | SQL Server parse and compile time: %hs CPU time = %lu ms, elapsed time = %lu ms. |
 | 3615 | 10 | No | Table '%.\*ls'. Scan count %d, logical reads %d, physical reads %d, read-ahead reads %d, lob logical reads %d, lob physical reads %d, lob read-ahead reads %d. |
 | 3616 | 16 | No | An error was raised during trigger execution. The batch has been aborted and the user transaction, if any, has been rolled back. |
 | [3619](../mssqlserver-3619-database-engine-error.md) | 10 | Yes | Could not write a checkpoint record in database %ls because the log is out of space. Contact the database administrator to truncate the log or allocate more space to the database log files. |
@@ -384,7 +384,7 @@ ms.topic: include
 | 3749 | 16 | No | Cannot drop XML Index '%.\*ls' using old 'Table.Index' syntax, use 'Index ON Table' syntax instead. |
 | 3750 | 10 | No | Warning: Index '%.\*ls' on %S_MSG '%.\*ls' was disabled as a result of disabling the clustered index on the %S_MSG. |
 | 3751 | 16 | No | Cannot use SP_DROPEXTENDEDPROC or DBCC DROPEXTENDEDPROC with '%.\*ls' because '%.\*ls' is a %S_MSG. Use %ls. |
-| 3752 | 16 | No | The database '%.\*ls' is currently joined to an availability group.  Before you can drop the database, you need to remove it from the availability group. |
+| 3752 | 16 | No | The database '%.\*ls' is currently joined to an availability group. Before you can drop the database, you need to remove it from the availability group. |
 | 3753 | 16 | No | Cannot %S_MSG the federation member '%.\*ls', because the federation root does not exist. |
 | 3754 | 16 | No | TRUNCATE TABLE statement failed. Index '%.\*ls' uses partition function '%.\*ls', but table '%.\*ls' uses non-equivalent partition function '%.\*ls'. Index and table must use an equivalent partition function. |
 | 3755 | 16 | No | Cannot drop a database with file snapshots on it. Please detach the database instead of dropping or delete the file snapshots and retry the drop. |
@@ -414,7 +414,7 @@ ms.topic: include
 | 3818 | 20 | No | Invalid or unexpected message received. |
 | 3819 | 10 | No | Warning: The check constraint "%.\*ls" on "%.\*ls"."%.\*ls" was disabled and set as not trusted because the implementation of "%.\*ls" have changed. |
 | 3821 | 10 | No | Warning: The foreign key constraint "%.\*ls" on "%.\*ls"."%.\*ls" was disabled because the implementation of '%.\*ls' have changed. |
-| 3822 | 10 | No | Warning: The heap "%.\*ls"."%.\*ls" has persisted computed columns that depends on a geometry or geography methods and may contain out-of-date information. Because of this, DBCC may report inconsistencies on this table.  The persisted computed columns depending on geometry or geography methods should be unpersisted and persisted again to refresh the data. |
+| 3822 | 10 | No | Warning: The heap "%.\*ls"."%.\*ls" has persisted computed columns that depends on a geometry or geography methods and may contain out-of-date information. Because of this, DBCC may report inconsistencies on this table. The persisted computed columns depending on geometry or geography methods should be unpersisted and persisted again to refresh the data. |
 | 3823 | 10 | No | Warning: The object "%.\*ls"."%.\*ls" could not be bound and was ignored during upgrade. Consider reviewing and correcting its definition. |
 | 3824 | 16 | No | Invalid partition fragment map is specified. |
 | 3827 | 10 | No | Warning: The table "%.\*ls"."%.\*ls" is unavailable because it contains a persisted computed column that depends on "%.\*ls", the implementation of which has changed. Rebuild the table offline and reconstruct the persisted computed column. |
@@ -468,9 +468,9 @@ ms.topic: include
 | 3933 | 16 | No | Cannot promote the transaction to a distributed transaction because there is an active save point in this transaction. |
 | 3934 | 14 | No | The current user cannot use this FILESTREAM transaction context. To obtain a valid FILESTREAM transaction context, use GET_FILESTREAM_TRANSACTION_CONTEXT. |
 | 3935 | 16 | No | A FILESTREAM transaction context could not be initialized. This might be caused by a resource shortage. Retry the operation. Error code: 0x%x. |
-| 3936 | 16 | No | The transaction could not be committed because an error occurred while tyring to flush FILESTREAM data to disk. A file may have been open at commit time or a disk I/O error may have occurred. '%.\*ls' was one of the one or more files involved.  ErorrCode: 0x%x |
-| [3937](../mssqlserver-3937-database-engine-error.md) | 16 | No | While rolling back a transaction, an error occurred while trying to deliver a rollback notification to the FILESTREAM filter driver.  Error code: 0x%0x. |
-| 3938 | 18 | No | The transaction has been stopped because it conflicted with the execution of a FILESTREAM close operation using the same transaction.  The transaction will be rolled back. |
+| 3936 | 16 | No | The transaction could not be committed because an error occurred while tyring to flush FILESTREAM data to disk. A file may have been open at commit time or a disk I/O error may have occurred. '%.\*ls' was one of the one or more files involved. ErorrCode: 0x%x |
+| [3937](../mssqlserver-3937-database-engine-error.md) | 16 | No | While rolling back a transaction, an error occurred while trying to deliver a rollback notification to the FILESTREAM filter driver. Error code: 0x%0x. |
+| 3938 | 18 | No | The transaction has been stopped because it conflicted with the execution of a FILESTREAM close operation using the same transaction. The transaction will be rolled back. |
 | 3939 | 16 | No | An uncommittable transaction was detected at the beginning of the batch. The transaction was rolled back. This was caused by an error that occurred during the processing of a FILESTREAM request in the context of this transaction. |
 | 3940 | 16 | No | Failed to acquire necessary locks during commit and the transaction was rolled back. |
 | 3948 | 16 | No | The transaction was terminated because of the availability replica config/state change or because ghost records are being deleted on the primary and the secondary availability replica that might be needed by queries running under snapshot isolation. Retry the transaction. |
@@ -486,13 +486,13 @@ ms.topic: include
 | 3958 | 16 | No | Transaction aborted when accessing versioned row in table '%.\*ls' in database '%.\*ls'. Requested versioned row was not found. Your tempdb is probably out of space. Please refer to BOL on how to configure tempdb for versioning. |
 | 3959 | 10 | Yes | Version store is full. New version(s) could not be added. A transaction that needs to access the version store may be rolled back. Please refer to BOL on how to configure tempdb for versioning. |
 | 3960 | 16 | No | Snapshot isolation transaction aborted due to update conflict. You cannot use snapshot isolation to access table '%.\*ls' directly or indirectly in database '%.\*ls' to update, delete, or insert the row that has been modified or deleted by another transaction. Retry the transaction or change the isolation level for the update/delete statement. |
-| [3961](../mssqlserver-3961-database-engine-error.md) | 16 | No | Snapshot isolation transaction failed in database '%.\*ls' because the object accessed by the statement has been modified by a DDL statement in another concurrent transaction since the start of this transaction.  It is disallowed because the metadata is not versioned. A concurrent update to metadata can lead to inconsistency if mixed with snapshot isolation. |
+| [3961](../mssqlserver-3961-database-engine-error.md) | 16 | No | Snapshot isolation transaction failed in database '%.\*ls' because the object accessed by the statement has been modified by a DDL statement in another concurrent transaction since the start of this transaction. It is disallowed because the metadata is not versioned. A concurrent update to metadata can lead to inconsistency if mixed with snapshot isolation. |
 | 3962 | 16 | No | Bind to another transaction while executing SQL Server internal query is not supported. Check your logon trigger definition and remove any sp_bindsession usage if any. If this error is not happening during logon trigger execution, contact production support team. |
 | 3963 | 16 | No | Transaction failed in database '%.\*ls' because distributed transactions are not supported under snapshot isolation. |
 | 3964 | 16 | No | Transaction failed because this DDL statement is not allowed inside a snapshot isolation transaction. Since metadata is not versioned, a metadata change can lead to inconsistency if mixed within snapshot isolation. |
 | 3965 | 16 | No | The PROMOTE TRANSACTION request failed because there is no local transaction active. |
 | 3966 | 17 | No | Transaction is rolled back when accessing version store. It was earlier marked as victim when the version store was shrunk due to insufficient space in tempdb. This transaction was marked as a victim earlier because it may need the row version(s) that have already been removed to make space in tempdb. Retry the transaction |
-| 3967 | 17 | Yes | Insufficient space in tempdb to hold row versions.  Need to shrink the version store to free up some space in tempdb. Transaction (id=%I64d xsn=%I64d spid=%d elapsed_time=%d) has been marked as victim and it will be rolled back if it accesses the version store. If the problem persists, the likely cause is improperly sized tempdb or long running transactions. Please refer to BOL on how to configure tempdb for versioning. |
+| 3967 | 17 | Yes | Insufficient space in tempdb to hold row versions. Need to shrink the version store to free up some space in tempdb. Transaction (id=%I64d xsn=%I64d spid=%d elapsed_time=%d) has been marked as victim and it will be rolled back if it accesses the version store. If the problem persists, the likely cause is improperly sized tempdb or long running transactions. Please refer to BOL on how to configure tempdb for versioning. |
 | 3968 | 10 | No | Snapshot isolation or read committed snapshot is not available in database '%.\*ls' because SQL Server was started with one or more undocumented trace flags that prevent enabling database for versioning. Transaction started with snapshot isolation will fail and a query running under read committed snapshot will succeed but will resort back to lock based read committed. |
 | 3969 | 16 | No | Distributed transaction is not supported while running SQL Server internal query. Check your logon trigger definition and remove any distributed transaction usage if any. If this error is not happening during logon trigger execution, contact production support team. |
 | 3970 | 16 | No | This operation conflicts with another pending operation on this transaction. The operation failed. |

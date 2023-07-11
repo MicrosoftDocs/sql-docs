@@ -2,7 +2,7 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 05/08/2023
+ms.date: 07/06/2023
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -24,13 +24,13 @@ ms.topic: include
 | 8015 | 16 | No | The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Parameter %d ("%.\*ls"): Data type 0x%02X is an untyped NULL but is marked as an output parameter. |
 | 8016 | 16 | No | The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Parameter %d ("%.\*ls"): Data type 0x%02X has an invalid data length or metadata length. |
 | 8017 | 16 | No | The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Parameter %d ("%.\*ls"): Data type 0x%02X has an invalid precision or scale. |
-| 8018 | 16 | No | Invalid parameter %d ('%.\*ls'):  Data type 0x%02X is a deprecated large object, or LOB, but is marked as output parameter.  Deprecated types are not supported as output parameters.  Use current large object types instead. |
+| 8018 | 16 | No | Invalid parameter %d ('%.\*ls'): Data type 0x%02X is a deprecated large object, or LOB, but is marked as output parameter. Deprecated types are not supported as output parameters. Use current large object types instead. |
 | 8019 | 16 | No | The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Parameter %d ("%.\*ls"): Data type "0x%02X" (CLR type) has an invalid user type specified. |
 | 8020 | 16 | No | The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Parameter %d ("%.\*ls"): Data type "0x%02X" (CLR type) has an invalid length for serialization metadata. |
 | 8021 | 16 | No | The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Parameter %d ("%.\*ls"): Data type "0x%02X" (CLR type) has an invalid database specified. |
 | 8022 | 16 | No | The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Parameter %d ("%.\*ls"): The supplied value is NULL and data type %.\*ls cannot be NULL. Check the source data for invalid values. |
 | 8023 | 16 | No | The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Parameter %d ("%.\*ls"): The supplied value is not a valid instance of data type %.\*ls. Check the source data for invalid values. An example of an invalid value is data of numeric type with scale greater than precision. |
-| 8024 | 16 | No | The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect.  Parameter %d ("%.\*ls"): Data type 0x%02X (sql_variant) has an invalid collation for type-specific metadata. |
+| 8024 | 16 | No | The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Parameter %d ("%.\*ls"): Data type 0x%02X (sql_variant) has an invalid collation for type-specific metadata. |
 | 8025 | 16 | No | The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Parameter %d ("%.\*ls"): The RPC is marked with the metadata unchanged flag, but data type 0x%02X has a maximum length different from the one sent last time. |
 | 8026 | 16 | No | The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Parameter %d ("%.\*ls"): The RPC is marked with the metadata unchanged flag, but data type 0x%02X has an actual length different from the one sent last time. |
 | 8027 | 16 | No | The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Parameter %d ("%.\*ls"): Data type "0x%02X" (CLR type) has an invalid schema specified. |
@@ -50,10 +50,10 @@ ms.topic: include
 | 8041 | 16 | No | The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Table-valued parameter %d ("%.\*ls"), row %I64d, column %d: Data type 0x%02X (CLR type) has an invalid database specified. |
 | 8042 | 16 | No | The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Table-valued parameter %d ("%.\*ls"), row %I64d, column %d: The supplied value is NULL and data type %.\*ls cannot be NULL. Check the source data for invalid values. |
 | 8043 | 16 | No | The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Table-valued parameter %d ("%.\*ls"), row %I64d, column %d: The supplied value is not a valid instance of data type %.\*ls. Check the source data for invalid values. An example of an invalid value is data of numeric type with scale greater than precision. |
-| 8044 | 16 | No | The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect.  Table-valued parameter %d ("%.\*ls"), row %I64d, column %d: Data type 0x%02X (sql_variant) has an invalid collation for type-specific metadata. |
+| 8044 | 16 | No | The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Table-valued parameter %d ("%.\*ls"), row %I64d, column %d: Data type 0x%02X (sql_variant) has an invalid collation for type-specific metadata. |
 | 8045 | 16 | No | The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Table-valued parameter %d ("%.\*ls"), row %I64d, column %d: Data type 0x%02X (CLR type) has an invalid schema specified. |
 | 8046 | 16 | No | The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Table-valued parameter %d ("%.\*ls"), row %I64d, column %d: The supplied length is not valid for data type %.\*ls. Check the source data for invalid lengths. An example of an invalid length is data of nchar type with an odd length in bytes. |
-| 8047 | 16 | No | The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Table-valued parameter %d ("%.\*ls"), row %I64d, column %d: Data type 0x%02X (user-defined table type) has a non-zero length database name specified.  Database name is not allowed with a table-valued parameter, only schema name and type name are valid. |
+| 8047 | 16 | No | The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Table-valued parameter %d ("%.\*ls"), row %I64d, column %d: Data type 0x%02X (user-defined table type) has a non-zero length database name specified. Database name is not allowed with a table-valued parameter, only schema name and type name are valid. |
 | 8048 | 16 | No | The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Table-valued parameter %d ("%.\*ls"), row %I64d, column %d: Data type 0x%02X (user-defined table type) has an invalid schema specified. |
 | 8049 | 16 | No | The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Table-valued parameter %d ("%.\*ls"), row %I64d, column %d: Data type 0x%02X (user-defined table type) has an invalid type name specified. |
 | 8050 | 16 | No | The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Table-valued parameter %d ("%.\*ls"), row %I64d, column %d: Data type 0x%02X (user-defined table type) has an invalid column count specified. |
@@ -63,10 +63,10 @@ ms.topic: include
 | 8054 | 16 | No | The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Table-valued parameter %d ("%.\*ls"), row %I64d, column %d: Data type 0x%02X (user-defined table type) has invalid ordering and uniqueness metadata specified. |
 | 8055 | 16 | No | The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Table-valued parameter %d ("%.\*ls"), row %I64d, column %d: Data type 0x%02X (user-defined table type) has invalid column ordering metadata specified. |
 | 8056 | 16 | No | The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Table-valued parameter %d ("%.\*ls"), row %I64d, column %d: Data type 0x%02X (user-defined table type) has too many optional metadata tokens specified. |
-| 8057 | 16 | No | Table-valued parameter %d ("%.\*ls"), row %I64d, column %d: Data type 0x%02X (user-defined table type).  The specified column is computed or default and has ordering or uniqueness set.  Ordering and uniqueness can only be set on columns that have client supplied data. |
+| 8057 | 16 | No | Table-valued parameter %d ("%.\*ls"), row %I64d, column %d: Data type 0x%02X (user-defined table type). The specified column is computed or default and has ordering or uniqueness set. Ordering and uniqueness can only be set on columns that have client supplied data. |
 | 8058 | 16 | No | The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Table-valued parameter %d, to a parameterized string has no table type defined. |
 | 8059 | 16 | No | The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Table-valued parameter "%.\*ls", to a parameterized string has no table type defined. |
-| 8060 | 16 | No | The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Table-valued parameter %d ("%.\*ls"), row %I64d, column %d: Data type 0x%02X (user-defined table type) is null and not set to default.  A null table-valued parameter is required to be sent as a default parameter. |
+| 8060 | 16 | No | The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Table-valued parameter %d ("%.\*ls"), row %I64d, column %d: Data type 0x%02X (user-defined table type) is null and not set to default. A null table-valued parameter is required to be sent as a default parameter. |
 | 8061 | 16 | No | The data for table-valued parameter "%.\*ls" doesn't conform to the table type of the parameter. SQL Server error is: %d, state: %d |
 | 8062 | 16 | No | The data for the table-valued parameter %d doesn't conform to the table type of the parameter. SQL Server error is: %d, state: %d |
 | 8063 | 16 | No | The incoming tabular data stream (TDS) remote procedure call stream is sending an unlimited length CLR type. Parameter %d ("%.\*ls") is defined as type %.\*ls. This type is not supported by down-level clients. Send the serialized data of the large CLR type as varbinary(max), or upgrade the client driver to one that supports unlimited CLR types. |
@@ -186,7 +186,7 @@ ms.topic: include
 | 8318 | 16 | No | There was a virtual memory allocation failure during performance counters initialization. SQL Server performance counters are disabled. |
 | 8319 | 16 | No | The operating system kernel object '%ls' already exists. It's not owned by the SQL Server service account. SQL Server performance counters are disabled. |
 | 8320 | 10 | No | @@REMSERVER will be removed in a future version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use the feature. Use linked servers and linked server stored procedures instead. |
-| 8350 | 10 | No | Use of NOLOCK or READUNCOMMITTED hints in the FROM clause of an UPDATE or DELETE statement on the |
+| 8350 | 10 | No | Use of NOLOCK or READUNCOMMITTED hints in the FROM clause of an UPDATE or DELETE statement on the target table of the statement ('%.\*ls') is deprecated. These hints have no effect in this location. Microsoft recommends that you remove these hints from this statement. Support for these hints in this location will be removed in a future version of SQL Server. |
 | 8351 | 16 | Yes | A trace control request could not be processed because invalid parameters were specified when events were registered. Confirm that the parameters are within valid ranges. |
 | 8352 | 16 | Yes | Cannot find the requested trace template: id = %ls. |
 | 8353 | 16 | Yes | Event Tracing for Windows failed to start. %ls. To enable Event Tracing for Windows, restart SQL Server. |
@@ -218,8 +218,8 @@ ms.topic: include
 | 8399 | 10 | No | %ls will be removed in a future version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it. |
 | 8401 | 16 | No | This message could not be delivered because the target user with ID %i in database ID %i does not have permission to receive from the queue '%.\*ls'. |
 | 8402 | 16 | No | The data type of the '%S_MSG' in the '%S_MSG' statement must be %s. The %s data type is not allowed. |
-| 8403 | 16 | No | The message type '%.\*ls' is specified more than once.  Remove the duplicate message type. |
-| 8404 | 16 | No | The service contract '%.\*ls' is specified more than once.  Remove the duplicate service contract. |
+| 8403 | 16 | No | The message type '%.\*ls' is specified more than once. Remove the duplicate message type. |
+| 8404 | 16 | No | The service contract '%.\*ls' is specified more than once. Remove the duplicate service contract. |
 | 8405 | 16 | No | An error occurred in the service broker queue rollback handler, while trying to disable a queue. Database ID: %d, Queue ID: %d, Error: %i, State: %i. |
 | 8406 | 16 | No | The dialog lifetime can not be NULL. Specify a valid dialog lifetime value from %d to %d. |
 | 8407 | 16 | No | Received a message that contains invalid header fields. This may indicate a network problem or that another application is connected to the Service Broker endpoint. |
@@ -231,11 +231,11 @@ ms.topic: include
 | 8413 | 16 | No | The syntax of the broker instance '%.\*ls' is invalid. The specified broker instance is too long, the maximum size is 256 bytes. |
 | 8414 | 16 | No | The conversation group ID '%.\*ls' is invalid in this context. Specify a different conversion group ID. |
 | 8415 | 16 | No | The activated task was aborted because the invoked stored procedure '%ls' did not issue COMMIT or ROLLBACK on one or more transactions that it begun. |
-| 8417 | 16 | No | The service contract name is NULL.  Specify a service contract name. |
+| 8417 | 16 | No | The service contract name is NULL. Specify a service contract name. |
 | 8418 | 16 | No | The conversation handle is missing. Specify a conversation handle. |
 | 8419 | 16 | No | Both the error code and the description must be provided for END CONVERSATION WITH ERROR. Neither value can be NULL. |
 | 8420 | 16 | No | The conversation group is missing. Specify a conversation group. |
-| 8421 | 16 | No | The service name is missing.  Specify a service name. |
+| 8421 | 16 | No | The service name is missing. Specify a service name. |
 | 8422 | 16 | No | The error description is missing. Specify a description of the error. |
 | 8423 | 16 | No | The service "%.\*ls" is not found. |
 | 8424 | 16 | No | The error code and error description are missing. Specify both the error code and description of the error. |
@@ -247,18 +247,18 @@ ms.topic: include
 | 8430 | 16 | No | The message body failed the configured validation. |
 | 8431 | 16 | No | The message type '%.\*ls' is not part of the service contract. |
 | 8432 | 16 | No | The message cannot be sent because the message type '%.\*ls' is marked SENT BY TARGET in the contract, however this service is an Initiator. |
-| 8433 | 16 | No | The message body may not be NULL.  A zero-length UNICODE or binary string is allowed. |
+| 8433 | 16 | No | The message body may not be NULL. A zero-length UNICODE or binary string is allowed. |
 | 8434 | 16 | No | The message cannot be sent because the message type '%.\*ls' is marked SENT BY INTITIATOR in the contract, however this service is a Target. |
 | 8435 | 16 | No | The conversation handle "%.\*ls" at position %d is not found. |
 | 8436 | 16 | No | The conversation group "%.\*ls" is not found. |
 | 8437 | 16 | No | The message received was sent by a Target service, but the message type '%.\*ls' is marked SENT BY INITIATOR in the contract. |
 | 8438 | 16 | No | The conversation endpoint is not in a valid state for MOVE CONVERSATION. The current endpoint state is '%ls'. |
 | 8439 | 16 | No | The destination conversation group '%.\*ls' is invalid. |
-| 8440 | 23 | Yes | The conversation group exists, but no queue exists.  Possible database corruption.  Run DBCC CHECKDB. |
+| 8440 | 23 | Yes | The conversation group exists, but no queue exists. Possible database corruption. Run DBCC CHECKDB. |
 | 8441 | 16 | No | The conversation handle at position %d is missing. Specify a conversation handle. |
 | 8442 | 16 | No | There is no Service Broker active in the database. Change to a database context that contains a Service Broker. |
 | [8443](../mssqlserver-8443-database-engine-error.md) | 23 | Yes | The conversation with ID '%.\*ls' and initiator: %d references a missing conversation group '%.\*ls'. Run DBCC CHECKDB to analyze and repair the database. |
-| 8444 | 23 | Yes | The service queue structure is inconsistent.  Possible database corruption.  Run DBCC CHECKDB. |
+| 8444 | 23 | Yes | The service queue structure is inconsistent. Possible database corruption. Run DBCC CHECKDB. |
 | 8445 | 16 | No | The conversation handle '%ls' is referencing an invalid conversation ID '%ls', initiator: %d. |
 | 8447 | 16 | No | A RECEIVE statement that assigns a value to a variable must not be combined with data retrieval operations. |
 | 8450 | 16 | No | Assignments in the RECEIVE projection are not allowed in conjunction with the INTO clause. |
@@ -267,7 +267,7 @@ ms.topic: include
 | 8458 | 16 | No | The conversation endpoint is not in a valid state for BEGIN CONVERSATION TIMER. The current endpoint state is '%ls'. |
 | 8459 | 16 | No | The message size, including header information, exceeds the maximum allowed of %d. |
 | 8460 | 16 | No | The conversation endpoint with ID '%ls' and is_initiator: %d is referencing the invalid conversation handle '%ls'. |
-| 8461 | 23 | Yes | An internal service broker error detected.  Possible database corruption.  Run DBCC CHECKDB. |
+| 8461 | 23 | Yes | An internal service broker error detected. Possible database corruption. Run DBCC CHECKDB. |
 | 8462 | 16 | No | The remote conversation endpoint is either in a state where no more messages can be exchanged, or it has been dropped. |
 | 8463 | 16 | No | Failed to read the message body while marshaling a message. This message is a symptom of another problem. Check the SQL Server error log and the operating system error log for additional messages and address the underlying problem. If the problem persists, the database may be damaged. To recover the database, restore the database from a clean backup. If no clean backup is available, consider running DBCC CHECKDB. Note that DBCC CHECKDB may remove data to repair the database. |
 | 8468 | 16 | No | Underlying service has been altered. |
@@ -339,18 +339,18 @@ ms.topic: include
 | 8554 | 20 | No | IIDFromString failed for %hs, (%ls). |
 | 8555 | 10 | Yes | RegCloseKey failed: %ls |
 | 8556 | 10 | Yes | Microsoft Distributed Transaction Coordinator (MS DTC) initialization failed due to insufficient memory. It may be necessary to change some server configuration options to make more memory available. |
-| 8557 | 10 | No | The Microsoft Distributed Transaction Coordinator (MS DTC) service could not be contacted.  If you would like distributed transaction functionality, please start this service. |
+| 8557 | 10 | No | The Microsoft Distributed Transaction Coordinator (MS DTC) service could not be contacted. If you would like distributed transaction functionality, please start this service. |
 | 8558 | 20 | Yes | RegDeleteValue of \"%hs\" failed: %ls. |
 | 8559 | 20 | Yes | RegSetValueEx of '%ls' in key '%ls' failed: %ls. |
 | 8560 | 10 | Yes | Attempting to recover in-doubt distributed transactions involving Microsoft Distributed Transaction Coordinator (MS DTC). This is an informational message only. No user action is required. |
 | 8561 | 10 | Yes | Recovery of any in-doubt distributed transactions involving Microsoft Distributed Transaction Coordinator (MS DTC) has completed. This is an informational message only. No user action is required. |
 | 8562 | 10 | Yes | The connection has been lost with Microsoft Distributed Transaction Coordinator (MS DTC). Recovery of any in-doubt distributed transactions involving Microsoft Distributed Transaction Coordinator (MS DTC) will begin once the connection is re-established. This is an informational message only. No user action is required. |
-| 8563 | 10 | Yes | An error occurred while trying to determine the state of the RPCSS service.  A call to "%ls" returned: %ls.  This is an informational message only.  No user action is required. |
+| 8563 | 10 | Yes | An error occurred while trying to determine the state of the RPCSS service. A call to "%ls" returned: %ls. This is an informational message only. No user action is required. |
 | 8565 | 16 | Yes | SQL Server failed to prepare DTC transaction. Failure code: %d. |
 | 8566 | 10 | Yes | Unable to commit a prepared transaction from the Microsoft Distributed Transaction Coordinator (MS DTC). Server will restart the database and MS DTC recovery is expected to resolve any in-doubt transaction. |
-| 8567 | 10 | Yes | Microsoft Distributed Transaction Coordinator (MS DTC) resource manager \[%ls\] has been released.  This is an informational message only. No user action is required. |
-| 8568 | 10 | Yes | Microsoft Distributed Transaction Coordinator (MS DTC) failed to reenlist citing that the database RMID does not match the RMID \[%ls\] associated with the transaction.  Please manually resolve the transaction. |
-| 8569 | 10 | Yes | SQL Server is unable to connect with Microsoft Distributed Transaction Coordinator (MS DTC).  Check MSDTC security settings and, if running Always On, ensure that SQL Server has a firewall rule allowing incoming RPC Dynamic connections. |
+| 8567 | 10 | Yes | Microsoft Distributed Transaction Coordinator (MS DTC) resource manager \[%ls\] has been released. This is an informational message only. No user action is required. |
+| 8568 | 10 | Yes | Microsoft Distributed Transaction Coordinator (MS DTC) failed to reenlist citing that the database RMID does not match the RMID \[%ls\] associated with the transaction. Please manually resolve the transaction. |
+| 8569 | 10 | Yes | SQL Server is unable to connect with Microsoft Distributed Transaction Coordinator (MS DTC). Check MSDTC security settings and, if running Always On, ensure that SQL Server has a firewall rule allowing incoming RPC Dynamic connections. |
 | 8570 | 10 | Yes | Initializing Microsoft Distributed Transaction Coordinator (MS DTC) resource manager \[%ls\] for database '%ls'. This is an informational message only. No user action is required. |
 | 8571 | 10 | Yes | SQL Server is unable to get outcome from Microsoft Distributed Transaction Coordinator (MS DTC) for the transaction with UOW '%ls' because another resource manager with same RMID already exists. |
 | 8572 | 16 | Yes | DNS lookup for hostname '%ls' failed. |
@@ -369,7 +369,7 @@ ms.topic: include
 | 8603 | 16 | No | Invalid syntax for internal DBCC REPAIR statement. |
 | 8604 | 16 | No | ALTER TABLE SWITCH statement failed. Table '%.\*ls' has a column level check constraint '%.\*ls' on column '%.\*ls' that is not loadable for semantic validation. |
 | 8605 | 10 | No | Index creation operation will use %ld KB of memory specified in the advanced sp_configure option "min memory per query (KB)" instead of %lu KB specified in "index create memory (KB)" option because the former has to be smaller than the latter. |
-| 8606 | 17 | No | This index operation requires %I64d KB of memory per DOP. The total requirement of %I64d KB for DOP of %lu is greater than the sp_configure value of %lu KB set for the advanced server configuration option "index create memory (KB)".  Increase this setting or reduce DOP and rerun the query. |
+| 8606 | 17 | No | This index operation requires %I64d KB of memory per DOP. The total requirement of %I64d KB for DOP of %lu is greater than the sp_configure value of %lu KB set for the advanced server configuration option "index create memory (KB)". Increase this setting or reduce DOP and rerun the query. |
 | 8607 | 16 | No | The table '%.\*ls' cannot be modified because one or more non-clustered indexes reside in a filegroup which is not online. |
 | 8608 | 16 | No | The query could not be completed due to an online index build operation and must be recompiled. |
 | 8616 | 10 | No | The index hints for table '%.\*ls' were ignored because the table was considered a fact table in the star join. |
@@ -386,7 +386,7 @@ ms.topic: include
 | [8632](../mssqlserver-8632-database-engine-error.md) | 17 | No | Internal error: An expression services limit has been reached. Please look for potentially complex expressions in your query, and try to simplify them. |
 | 8633 | 16 | No | The query processor could not produce a query plan because distributed query does not support materializing intermediate results with default in DML queries over remote sources. Try to use actual default values instead of default or split the update into multiple statements, one only containing the DEFAULT assignment, the other with the rest. |
 | 8634 | 17 | No | The query processor received an error from a cluster communication layer. |
-| 8635 | 16 | No | The query processor could not produce a query plan for a query with a spatial index hint.  Reason: %S_MSG.  Try removing the index hints or removing SET FORCEPLAN. |
+| 8635 | 16 | No | The query processor could not produce a query plan for a query with a spatial index hint. Reason: %S_MSG. Try removing the index hints or removing SET FORCEPLAN. |
 | 8636 | 16 | No | The query processor could not produce a query plan because there is a subquery in the predicate of the full outer join. This is not supported for distributed queries. |
 | 8637 | 16 | No | The query processor could not produce a query plan because a USE PLAN hint was used for a query that modifies data while the target table of the modification has an index that is currently being built online. Consider waiting until the online index build is done before forcing the plan, or using another way to tune the query, such as updating statistics, or using a different hint or a manual query rewrite. |
 | 8638 | 16 | No | The query processor could not produce a query plan because CURSOR fetch queries cannot reference external tables. Ensure that the input request does not contain remote UPDATE or DELETE on external tables. |
@@ -397,11 +397,11 @@ ms.topic: include
 | 8646 | 21 | Yes | Unable to find index entry in index ID %d, of table %d, in database '%.\*ls'. The indicated index is corrupt or there is a problem with the current update plan. Run DBCC CHECKDB or DBCC CHECKTABLE. If the problem persists, contact product support. |
 | 8648 | 20 | Yes | Could not insert a row larger than the page size into a hash table. Resubmit the query using the ROBUST PLAN optimization hint. |
 | [8649](../mssqlserver-8649-database-engine-error.md) | 17 | No | The query has been canceled because the estimated cost of this query (%d) exceeds the configured threshold of %d. Contact the system administrator. |
-| [8651](../mssqlserver-8651-database-engine-error.md) | 17 | No | Could not perform the operation because the requested memory grant was not available in resource pool '%ls' (%ld).  Rerun the query, reduce the query load, or check resource governor configuration setting. |
+| [8651](../mssqlserver-8651-database-engine-error.md) | 17 | No | Could not perform the operation because the requested memory grant was not available in resource pool '%ls' (%ld). Rerun the query, reduce the query load, or check resource governor configuration setting. |
 | 8653 | 16 | No | The query processor is unable to produce a plan for the table or view '%.\*ls' because the table resides in a filegroup that is not online. |
 | 8655 | 16 | No | The query processor is unable to produce a plan because the index '%.\*ls' on table or view '%.\*ls' is disabled. |
 | 8656 | 16 | No | The query processor could not produce a query plan. Resubmit the query after disabling trace flag %d. |
-| 8657 | 17 | No | Could not get the memory grant of %I64d KB because it exceeds the maximum configuration limit in workload group '%ls' (%ld) and resource pool '%ls' (%ld).  Contact the server administrator to increase the memory usage limit. |
+| 8657 | 17 | No | Could not get the memory grant of %I64d KB because it exceeds the maximum configuration limit in workload group '%ls' (%ld) and resource pool '%ls' (%ld). Contact the server administrator to increase the memory usage limit. |
 | 8658 | 17 | No | Cannot start the columnstore index build because it requires at least %I64d KB, while the maximum memory grant is limited to %I64d KB per query in workload group '%ls' (%ld) and resource pool '%ls' (%ld). Retry after modifying columnstore index to contain fewer columns, or after increasing the maximum memory grant limit with Resource Governor. |
 | 8659 | 17 | No | Cannot continue columnstore index build because it requires %I64d KB misc memory per thread, while the total memory grant for query is %I64d KB, total Columnstore bulk insert memory is limited to %I64d KB in query, and the maximum memory grant is limited to %I64d KB per query in workload group id=%ld and resource pool id=%ld. Retry after modifying columnstore index to contain fewer columns, or after increasing the maximum memory grant limit with Resource Governor. |
 | 8660 | 16 | No | Cannot create the clustered index "%.\*ls" on view "%.\*ls" because the select list of the view definition does not include all columns in the GROUP BY clause. Consider adding these columns to the select list. |
@@ -444,7 +444,7 @@ ms.topic: include
 | 8697 | 16 | No | Cannot run query because in XML plan provided to USE PLAN, element %ls must have %d %ls nodes as children, but has %d. |
 | 8698 | 16 | No | Query processor could not produce query plan because USE PLAN hint contains plan that could not be verified to be legal for query. Remove or replace USE PLAN hint. For best likelihood of successful plan forcing, verify that the plan provided in the USE PLAN hint is one generated automatically by SQL Server for the same query. |
 | 8699 | 16 | No | Cannot run query because it contains more than one USE PLAN hint. Use at most one USE PLAN hint. |
-| 8700 | 16 | No | Query could not run because column store indexes on memory optimized tables are currently disabled.  Rewrite the query with an index hint specifying a different index. |
+| 8700 | 16 | No | Query could not run because column store indexes on memory optimized tables are currently disabled. Rewrite the query with an index hint specifying a different index. |
 | 8705 | 16 | No | A DML statement encountered a missing entry in index ID %d of table ID %d, in the database '%.\*ls' due to an interaction with another transaction. If you continue to see this error, consider using Repeatable Read or higher isolation level. |
 | 8709 | 16 | No | Error due to negative or NULL window delimiter. |
 | [8710](../mssqlserver-8710-database-engine-error.md) | 16 | No | Aggregate functions that are used with CUBE, ROLLUP, or GROUPING SET queries must provide for the merging of subaggregates. To fix this problem, remove the aggregate function or write the query using UNION ALL over GROUP BY clauses. |
@@ -457,7 +457,7 @@ ms.topic: include
 | 8717 | 16 | No | DML Operations are not supported with external tables. |
 | 8720 | 15 | No | Cannot execute query. There is more than one TABLE HINT clause specified for object '%.\*ls'. Use at most one such TABLE HINT clause per table reference. |
 | 8721 | 15 | No | Cannot execute query. TABLE HINT in the OPTION clause leads to ambiguous reference for object '%.\*ls'. Consider USE PLAN query hint instead. |
-| 8722 | 15 | No | Cannot execute query. Semantic affecting hint '%.\*ls' appears in the '%.\*ls' clause of object '%.\*ls' but not in the corresponding '%.\*ls' clause.  Change the OPTION (TABLE HINTS...) clause so the semantic affecting hints match the WITH clause. |
+| 8722 | 15 | No | Cannot execute query. Semantic affecting hint '%.\*ls' appears in the '%.\*ls' clause of object '%.\*ls' but not in the corresponding '%.\*ls' clause. Change the OPTION (TABLE HINTS...) clause so the semantic affecting hints match the WITH clause. |
 | 8723 | 15 | No | Cannot execute query. Object '%.\*ls' is specified in the TABLE HINT clause, but is not used in the query or does not match the alias specified in the query. Table references in the TABLE HINT clause must match the WITH clause. |
 | 8724 | 15 | No | Cannot execute query. Table-valued or OPENROWSET function '%.\*ls' cannot be specified in the TABLE HINT clause. |
 | 8725 | 17 | No | Subproc thread aborted during parallel query execution. |
@@ -501,8 +501,8 @@ ms.topic: include
 | 8904 | 16 | No | Extent %S_PGID in database ID %d is allocated by more than one allocation object. |
 | 8905 | 16 | No | Extent %S_PGID in database ID %d is marked allocated in the GAM, but no SGAM or IAM has allocated it. |
 | 8906 | 16 | No | Page %S_PGID in database ID %d is allocated in the SGAM %S_PGID and PFS %S_PGID, but was not allocated in any IAM. PFS flags '%hs'. |
-| 8907 | 16 | No | The spatial index, XML index or indexed view '%.\*ls' (object ID %d) contains rows that were not produced by the view definition.  This does not necessarily represent an integrity issue with the data in this database. For more information about troubleshooting DBCC errors on indexed views, see SQL Server Books Online. |
-| 8908 | 16 | No | The spatial index, XML index or indexed view '%.\*ls' (object ID %d) does not contain all rows that the view definition produces.  This does not necessarily represent an integrity issue with the data in this database. For more information about troubleshooting DBCC errors on spatial indexes, XML indexes, and indexed views, see SQL Server Books Online. |
+| 8907 | 16 | No | The spatial index, XML index or indexed view '%.\*ls' (object ID %d) contains rows that were not produced by the view definition. This does not necessarily represent an integrity issue with the data in this database. For more information about troubleshooting DBCC errors on indexed views, see SQL Server Books Online. |
+| 8908 | 16 | No | The spatial index, XML index or indexed view '%.\*ls' (object ID %d) does not contain all rows that the view definition produces. This does not necessarily represent an integrity issue with the data in this database. For more information about troubleshooting DBCC errors on spatial indexes, XML indexes, and indexed views, see SQL Server Books Online. |
 | 8909 | 16 | No | Table error: Object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls), page ID %S_PGID contains an incorrect page ID in its page header. The PageId in the page header = %S_PGID. |
 | 8910 | 16 | No | Page %S_PGID in database ID %d is allocated to both object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls), and object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls). |
 | 8911 | 10 | No | The error has been repaired. |
@@ -522,7 +522,7 @@ ms.topic: include
 | 8925 | 16 | No | Table error: Cross object linkage: Page %S_PGID, slot %d, in object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls), refers to page %S_PGID, slot %d, in object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls). |
 | 8926 | 16 | No | Table error: Cross object linkage: Parent page %S_PGID, slot %d in object %d, index %d, partition %I64d, AU %I64d (%.\*ls), and page %S_PGID-\>next in object %d, index %d, partition %I64d, AU %I64d (%.\*ls), refer to page %S_PGID but are not in the same object. |
 | 8927 | 16 | No | Object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls): The ghosted record count in the header (%d) does not match the number of ghosted records (%d) found on page %S_PGID. |
-| 8928 | 16 | No | Object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls): Page %S_PGID could not be processed.  See other errors for details. |
+| 8928 | 16 | No | Object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls): Page %S_PGID could not be processed. See other errors for details. |
 | 8929 | 16 | No | Object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls): Errors found in off-row data with ID %I64d owned by %ls record identified by %.\*ls |
 | 8930 | 16 | No | Database error: Database %d has inconsistent metadata. This error cannot be repaired and prevents further DBCC processing. Please restore from a backup. |
 | 8931 | 16 | No | Table error: Object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls) B-tree level mismatch, page %S_PGID. Level %d does not match level %d from parent %S_PGID. |
@@ -551,7 +551,7 @@ ms.topic: include
 | 8954 | 10 | No | %.\*ls found %d allocation errors and %d consistency errors not associated with any single object. |
 | 8955 | 16 | No | Data row (%d:%d:%d) identified by (%ls) with index values '%ls'. |
 | 8956 | 16 | No | Index row (%d:%d:%d) with values (%ls) pointing to the data row identified by (%ls). |
-| 8957 | 10 | Yes | %lsDBCC %ls (%ls%ls%ls)%ls executed by %ls found %d errors and repaired %d errors. Elapsed time: %d hours %d minutes %d seconds.  %.\*ls |
+| 8957 | 10 | Yes | %lsDBCC %ls (%ls%ls%ls)%ls executed by %ls found %d errors and repaired %d errors. Elapsed time: %d hours %d minutes %d seconds. %.\*ls |
 | 8958 | 10 | No | %ls is the minimum repair level for the errors found by DBCC %ls (%ls%ls%ls). |
 | 8959 | 16 | No | Table error: IAM page %S_PGID for object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls) is linked in the IAM chain for object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls) by page %S_PGID. |
 | 8960 | 16 | No | Table error: Object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls). Page %S_PGID, slot %d, column %d is not a valid complex column. |
@@ -569,7 +569,7 @@ ms.topic: include
 | 8972 | 16 | No | Forwarded row referenced by more than one row. Object ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls), page %S_PGID, slot %d incorrectly points to the forwarded row page %S_PGID, slot %d, which correctly refers back to page %S_PGID, slot %d. |
 | 8973 | 16 | No | CHECKTABLE object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls) processing encountered page %S_PGID, slot %d twice. |
 | [8974](../mssqlserver-8974-database-engine-error.md) | 16 | No | Table error: Object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls). The off-row data node at page %S_PGID, slot %d, text ID %I64d is pointed to by page %S_PGID, slot %d and by page %S_PGID, slot %d. |
-| 8975 | 10 | No | DBCC cross-rowset check failed for object '%.\*ls' (object ID %d) due to internal query error %d, severity %d, state %d.  Refer to Books Online for more information on this error. |
+| 8975 | 10 | No | DBCC cross-rowset check failed for object '%.\*ls' (object ID %d) due to internal query error %d, severity %d, state %d. Refer to Books Online for more information on this error. |
 | 8976 | 16 | No | Table error: Object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls). Page %S_PGID was not seen in the scan although its parent %S_PGID and previous %S_PGID refer to it. Check any previous errors. |
 | 8977 | 16 | No | Table error: Object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls). Parent node for page %S_PGID was not encountered. |
 | 8978 | 16 | No | Table error: Object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls). Page %S_PGID is missing a reference from previous page %S_PGID. Possible chain linkage problem. |

@@ -4979,7 +4979,7 @@ items:
     - name: How-to guides
       items:
       - name: Configure replication
-        items: 
+        items:
         - name: With Azure AD authentication 
           href: relational-databases/replication/configure-replication-with-azure-ad-authentication.md
         - name: Distribution
@@ -8045,8 +8045,10 @@ items:
         href: relational-databases/security/ledger/ledger-limits.md?view=sql-server-ver16&preserve-view=true
     - name: Networking
       items:
-      - name: TDS 8.0 and TLS 1.3
-        href: relational-databases/security/networking/tds-8-and-tls-1-3.md
+      - name: TDS 8.0
+        href: relational-databases/security/networking/tds-8.md
+      - name: TLS 1.3
+        href: relational-databases/security/networking/tls-1-3.md       
   - name: Tutorials
     items:
     - name: Always Encrypted
@@ -13599,6 +13601,7 @@ items:
       - name: sys.dm_os_workers
         href: relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md
     - name: Stretch Database
+      href: relational-databases/system-dynamic-management-views/stretch-database-related-dynamic-management-views-transact-sql.md
       items:
       - name: sys.dm_db_rda_migration_status
         href: relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md
@@ -18317,6 +18320,9 @@ items:
         - name: TABLE
           displayName: CREATE TABLE
           href: t-sql/statements/create-table-transact-sql.md
+        - name: TABLE AS CLONE OF
+          displayName: CREATE TABLE AS CLONE OF
+          href: t-sql/statements/create-table-as-clone-of-transact-sql.md
         - name: TABLE (Synapse Analytics and Fabric)
           displayName: CREATE TABLE
           href: t-sql/statements/create-table-azure-sql-data-warehouse.md

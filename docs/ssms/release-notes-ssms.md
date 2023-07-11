@@ -4,7 +4,7 @@ description: Release notes for SQL Server Management Studio (SSMS).
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan
-ms.date: 06/06/2023
+ms.date: 07/03/2023
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
@@ -36,7 +36,7 @@ SSMS 19.1 is the latest general availability (GA) release of SSMS. If you need a
 | New Item | Details |
 | ---------- | ------- |
 | Azure Data Studio installation integration | The installation of SSMS installs Azure Data Studio 1.44. |
-| Always Encrypted | Added support for secure enclaves and in-place encryption in the Always Encrypted Wizard. See [Configure column encryption using Always Encrypted Wizard](/sql/relational-databases/security/encryption/always-encrypted-wizard). |
+| Always Encrypted | Added support for secure enclaves and in-place encryption in the Always Encrypted Wizard. See [Configure column encryption using Always Encrypted Wizard](../relational-databases/security/encryption/always-encrypted-wizard.md). |
 | Azure SQL Managed Instance | Introduced visibility to the status of the Distributed Transaction Coordinator (DTC) service for Azure SQL Managed Instance. Object Explorer can be used to determine if DTC is enabled on the Azure SQL Managed Instance (within the Management node). See [Distributed Transaction Coordinator (DTC) for Azure SQL Managed Instance](/azure/azure-sql/managed-instance/distributed-transaction-coordinator-dtc). |
 | Backup/Restore | Added capability to restore backup files from S3-compatible storage to SQL Server 2022 and Azure SQL Managed Instance. |
 | General SSMS | Updated File Version for ssms.exe to align with product version. |
@@ -84,6 +84,7 @@ SSMS 19.1 is the latest general availability (GA) release of SSMS. If you need a
 
 | New Item | Details | Workaround |
 | -------- | ------- | ---------- |
+| Always Encrypted | Always Encrypted Wizard error "Cannot read property AllowEnclaveComputations" occurs for SQL Server 2016 or SQL Server 2017. | Use an earlier version of SSMS (19.02 or 18.12.1) with SQL Server 2016 and SQL Server 2017. |
 | Azure SQL Managed Instance | Viewing database properties for a SQL MI database may return the error "Subquery returned more than one value. This isn't permitted when the subquery follows =, !=, <, <=, >, >= or when the subquery is used as an expression. (.NET SqlClient Data Provider)". | There's a known problem due to incorrect data in `msdb`. To resolve, remove back up history. For example, `EXEC`msdb`..sp_delete_backuphistory @oldest_date = '<current date>'`. |
 | Database Designer | Selecting the Design option for a view that references a table using spatial data causes SSMS to crash. | Use T-SQL to make changes to the view. |
 | General SSMS | Import setting from SSMS 17 option not available. | Settings can be imported from SSMS 18. |
@@ -269,6 +270,8 @@ Download previous SSMS versions by selecting the download link in the related se
 | Stretch DB | Removed Stretch DB Wizard. | Use T-SQL to configure Stretch DB or use SSMS 18.9.1 or earlier to use the Stretch DB Wizard. |
 
 ### 18.12.1
+
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.12.1](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x409)
 
 - Release number: 18.12.1
 - Build number: 15.0.18424.0

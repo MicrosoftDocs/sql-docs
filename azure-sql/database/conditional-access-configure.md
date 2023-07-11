@@ -25,7 +25,7 @@ The following steps show how to configure Azure SQL Database, Azure SQL Managed 
 ## Prerequisites
 
 - You must configure Azure SQL Database, Azure SQL Managed Instance, or dedicated SQL pool in Azure Synapse to support Azure Active Directory (Azure AD) authentication. For specific steps, see [Configure and manage Azure Active Directory authentication with SQL Database or Azure Synapse](authentication-aad-configure.md).  
-- When Multi-Factor Authentication is enabled, you must connect with a supported tool, such as the latest SQL Server Management Studio (SSMS). For more information, see [Configure Azure SQL Database multi-factor authentication for SQL Server Management Studio](authentication-mfa-ssms-configure.md).  
+- When Multi-Factor Authentication is enabled, you must connect with a supported tool, such as the latest SQL Server Management Studio (SSMS). For more information, see [Using Azure Active Directory Multi-Factor Authentication](./authentication-mfa-ssms-overview.md).
 
 ## Configure conditional access
 

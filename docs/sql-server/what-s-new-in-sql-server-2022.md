@@ -7,7 +7,7 @@ ms.reviewer: wiassaf, randolphwest
 ms.date: 07/15/2023
 ms.service: sql
 ms.subservice: release-landing
-ms.topic: "article"
+ms.topic: whats-new
 ms.custom: intro-whats-new
 monikerRange: ">= sql-server-2016"
 ---
@@ -81,7 +81,7 @@ The following sections identify features that are improved our introduced in [!I
 | Access Control: Server-level Roles | New [built-in server-level roles](../relational-databases/security/authentication-access/server-level-roles.md#fixed-server-level-roles-introduced-in-sql-server-2022) enable least privileged access for administrative tasks that apply to the whole SQL Server Instance |
 | Dynamic data masking | Granular UNMASK permissions for [Dynamic Data Masking](../relational-databases/security/dynamic-data-masking.md#granular). |
 | Support for PFX certificates, and other cryptographic improvements | New support for import and export of PFX file formatted [certificates](../t-sql/statements/create-certificate-transact-sql.md) and private keys. Ability to [backup](../t-sql/statements/backup-master-key-transact-sql.md) and [restore](../t-sql/statements/restore-master-key-transact-sql.md) master keys to Azure Blob Storage. SQL Server-generated certificates now have a default RSA key size of 3072-bits.<br /><br />Added [BACKUP SYMMETRIC KEY](../t-sql/statements/backup-symmetric-key-transact-sql.md) and [RESTORE SYMMETRIC KEY](../t-sql/statements/restore-symmetric-key-transact-sql.md).<br /><br />See also, [BACKUP CERTIFICATE (Transact-SQL)](../t-sql/statements/backup-certificate-transact-sql.md). |
-| Support MS-TDS 8.0 protocol | New MS-TDS protocol iteration. See [TDS 8.0 and TLS 1.3 support](../relational-databases/security/networking/tds-8-and-tls-1-3.md):<br />- Makes encryption mandatory<br />- Aligns MS-TDS with HTTPS making it manageable by network appliances for additional security<br />- Removes MS-TDS / TLS custom interleaving and enables usage of TLS 1.3 and subsequent TLS protocol versions. |
+| Support MS-TDS 8.0 protocol | New MS-TDS protocol iteration. See [TDS 8.0 support](../relational-databases/security/networking/tds-8.md) and [TLS 1.3 support](../relational-databases/security/networking/tls-1-3.md):<br />- Makes encryption mandatory<br />- Aligns MS-TDS with HTTPS making it manageable by network appliances for additional security<br />- Removes MS-TDS / TLS custom interleaving and enables usage of TLS 1.3 and subsequent TLS protocol versions. |
 
 ## Performance
 

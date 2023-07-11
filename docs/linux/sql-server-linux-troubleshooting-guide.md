@@ -204,7 +204,7 @@ Many factors affect performance, including database design, hardware, and worklo
 
 2. You experience the error message: **ERROR: Hostname must be 15 characters or less.**
 
-   This is a known issue that happens whenever the name of the machine that is trying to install the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] package is longer than 15 characters. There are currently no workarounds other than changing the name of the machine. You can edit the hostname file and reboot the machine, which is explained in detail in the following [website guide](https://www.cyberciti.biz/faq/ubuntu-change-hostname-command/).
+   This is a known issue that happens whenever the name of the machine that is trying to install the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] package is longer than 15 characters. There are currently no workarounds other than changing the name of the machine. You can edit the hostname file and restart the machine, which is explained in detail in the following [website guide](https://www.cyberciti.biz/faq/ubuntu-change-hostname-command/).
 
 3. The system administration (SA) password must be reset, which will stop the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] service temporarily.
 

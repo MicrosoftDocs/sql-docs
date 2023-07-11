@@ -191,7 +191,7 @@ To create the load balancer, follow these steps:
 | LoadBalancerName | Mandatory|Specify the name of the load balancer to be created. |
 
 ```powershell
-./Create-ClusterLoadBalancer.ps1 -ConfigFilePath ./clsuterinfo.csv -ResourceGroupName $resoucegroupname -VNetName $vnetname -subnetName $subnetname -VnetResourceGroupName $vnetresourcegroupname -Location "eastus" -LoadBalancerName $loadbalancername
+./Create-ClusterLoadBalancer.ps1 -ConfigFilePath ./cluster-config.csv -ResourceGroupName $resoucegroupname -VNetName $vnetname -subnetName $subnetname -VnetResourceGroupName $vnetresourcegroupname -Location "eastus" -LoadBalancerName $loadbalancername
 ```
 
 ## Replicate machines
@@ -300,7 +300,7 @@ After your VMs have migrated, reconfigure the cluster. Follow these steps:
 
 1. Start the migrated servers in Azure and sign in to any node.
 
-1. Copy the `ClusterConfig.csv` file and run the `Update-ClusterConfig.ps1` script passing the CSV as a parameter. This ensures the cluster resources are updated with the new configuration for the cluster to work in Azure.
+1. Copy the `Cluster-Config.csv` file and run the `Update-ClusterConfig.ps1` script passing the CSV as a parameter. This ensures the cluster resources are updated with the new configuration for the cluster to work in Azure.
 
    ```powershell
    ./Update-ClusterConfig.ps1 -ConfigFilePath $filepath

@@ -5,10 +5,10 @@ description: Learn about the new features and documentation improvements for Azu
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 06/13/2023
+ms.date: 06/15/2023
 ms.service: sql-database
 ms.subservice: service-overview
-ms.topic: conceptual
+ms.topic: whats-new
 ms.custom:
   - "sqldbrb=2"
   - "references_regions"
@@ -32,7 +32,6 @@ The following table lists the features of Azure SQL Database that are currently 
 
 | Feature | Details |
 | ---| --- |
-| [128 vCore](resource-limits-vcore-single-databases.md#general-purpose---provisioned-compute---gen5) | Provision your Azure SQL Database with up to 128 virtual cores (vCores). | 
 | [Always Encrypted with VBS enclaves](always-encrypted-enclaves-getting-started-vbs.md) | Take advantage of rich confidential queries and in-place cryptographic operations for Azure SQL Database with Always Encrypted with virtualization-based security (VBS) enclaves. | 
 | [Database level CMK with TDE](transparent-data-encryption-byok-database-level-overview.md) | Database level CMK allows setting the TDE protector as a customer-managed key individually for each database within the server. |
 | [Degrees of Parallelism (DOP) feedback](/sql/relational-databases/performance/intelligent-query-processing-feedback#degree-of-parallelism-dop-feedback) | DOP Feedback is currently available as a limited preview. For more information and how to apply for the preview, see [Announcing Degree of Parallelism Feedback Limited Preview](https://techcommunity.microsoft.com/t5/azure-sql-blog/announcing-degree-of-parallelism-feedback-limited-preview/ba-p/3806924). |
@@ -61,6 +60,7 @@ The following table lists the new generally available (GA) features of Azure SQL
 
 | Feature | GA Month | Details |
 | ---| --- |--- |
+| [128 vCore](resource-limits-vcore-single-databases.md#general-purpose---provisioned-compute---gen5) | June 2023 | Provision your Azure SQL Database with up to [128 vCores, now generally available](https://techcommunity.microsoft.com/t5/azure-sql-blog/announcing-preview-of-128-vcore-provisioned-compute-size-on/ba-p/3631211). | 
 | [Azure SQL bindings for Azure Functions](/azure/azure-functions/functions-bindings-azure-sql) | May 2023 | Azure Functions supports input bindings, output bindings, and a function trigger for the Azure SQL and SQL Server products. | 
 | [Cross-tenant CMK with TDE](transparent-data-encryption-byok-cross-tenant.md) | May 2023 | Cross-tenant CMK with TDE allows SQL databases to be in a separate tenant than the tenant holding the Azure Key Vault resource used to encrypt the databases. |
 | [UMI for auditing](auditing-overview.md) | April 2023 | Configure the storage account for your SQL auditing logs by using User-assigned Managed Identity (UMI). | 
@@ -93,6 +93,7 @@ Learn about significant changes to the Azure SQL Database documentation. For pre
 
 | Changes | Details |
 | --- | --- |
+| [128 vCore](resource-limits-vcore-single-databases.md) | Provision your Azure SQL Database with up to [128 vCores, now generally available](https://techcommunity.microsoft.com/t5/azure-sql-blog/announcing-preview-of-128-vcore-provisioned-compute-size-on/ba-p/3631211). | 
 | **64 vCore option for Hyperscale premium** | A 64 vCore option is now available for [Azure SQL Database Hyperscale premium-series](resource-limits-vcore-single-databases.md#hyperscale---premium-series) and [Hyperscale premium-series memory optimized](resource-limits-vcore-single-databases.md#hyperscale---premium-series-memory-optimized).|
 
 ### May 2023

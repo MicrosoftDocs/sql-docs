@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & SQL Managed Instance
 description: A glossary of terms for working with Azure SQL Database, Azure SQL Managed Instance, and SQL on Azure VM.
 author: MashaMSFT
 ms.author: mathoma
-ms.reviewer: kendralittle
+ms.reviewer: wiassaf
 ms.date: 04/06/2022
 ms.service: sql-db-mi
 ms.subservice: service-overview
@@ -71,4 +71,4 @@ ms.custom: sqldbrb=4
 |  | Security considerations | You can enable Microsoft Defender for SQL, integrate Azure Key Vault, control access, and secure connections to your SQL Server VM. Learn [security guidelines](virtual-machines/windows/security-considerations-best-practices.md) to establish secure access to SQL Server VMs. |
 | SQL IaaS Agent extension | | The [SQL IaaS Agent extension](virtual-machines/windows/sql-server-iaas-agent-extension-automate-management.md) (SqlIaasExtension) runs on SQL Server VMs to automate management and administration tasks. There's no extra cost associated with the extension. |
 | | Automated patching | [Automated Patching](virtual-machines/windows/automated-patching.md) establishes a maintenance window for a SQL Server VM when security updates will be automatically applied by the SQL IaaS Agent extension. Note that there may be other mechanisms for applying Automatic Updates. If you configure automated patching using the SQL IaaS Agent extension you should ensure that there are no other conflicting update schedules.  |
-| | Automated backup | [Automated Backup v2](virtual-machines/windows/automated-backup.md) automatically configures Managed Backup to Microsoft Azure for all existing and new databases on a SQL Server VM running SQL Server 2016 or later Standard, Enterprise, or Developer editions. |
+| | Automated backup | [Automated Backup](virtual-machines/windows/automated-backup.md) automatically configures Managed Backup to Microsoft Azure for all existing and new databases on a SQL Server VM running SQL Server 2016 or later Standard, Enterprise, or Developer editions. |

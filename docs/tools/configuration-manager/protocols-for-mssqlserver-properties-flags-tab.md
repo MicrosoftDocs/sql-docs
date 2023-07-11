@@ -45,7 +45,7 @@ For more information, see [Configure SQL Server Database Engine for encrypting c
 
 [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Network Configuration forces all clients to use strict as the encryption type. Any clients or features without the strict connection encryption fail to connect to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)].
 
-To enable strict encryption, you must [add a certificate](../../database-engine/configure-windows/configure-sql-server-encryption.md) that isn't self-signed, and your application must use a driver that supports TDS 8.0. For more information, see [TDS 8.0 and TLS 1.3 support](../../relational-databases/security/networking/tds-8-and-tls-1-3.md).
+To enable strict encryption, you must [add a certificate](../../database-engine/configure-windows/configure-sql-server-encryption.md) that isn't self-signed, and your application must use a driver that supports TDS 8.0. For more information, see [TDS 8.0 support](../../relational-databases/security/networking/tds-8.md).
 
 #### Hide Instance
 

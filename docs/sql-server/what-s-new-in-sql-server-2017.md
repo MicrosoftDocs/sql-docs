@@ -6,7 +6,7 @@ ms.author: mikeray
 ms.date: "10/20/2017"
 ms.service: sql
 ms.subservice: release-landing
-ms.topic: conceptual
+ms.topic: whats-new
 ms.custom: intro-whats-new
 monikerRange: ">= sql-server-2016"
 ---

@@ -19,28 +19,27 @@ This article provides steps to configure Transactional and Snapshot replication 
 
 Support for Azure AD authentication with SQL Server replication was added in SQL Server 2022 CU 6. When configuring SQL Server replication with Azure AD authentication, the only step that's different is the first step, when you create an Azure AD login, and grant sysadmin permissions. Then use that Azure AD login in the replication stored procedures to configure replication. 
 
-The session trace flag 11543 is required to configure replication with Azure AD authentication, so before executing any step, be sure to enable the trace flag in the session by using the following Transact-SQL command: 
+> [!NOTE]
+> Azure AD authentication for replication starting with SQL Server 2022 CU 6 can be disabled by using session trace flag 11561.
 
-```sql
-DBCC TRACEON(11543, -1)
-```
 
 ## Prerequisites
 
 To configure replication with Azure AD authentication, you must meet the following prerequisites: 
 
 - Have SQL Server 2022 Cumulative Update 6 configured with Azure AD authentication for every server in the replication topology. Review [Tutorial: Set up Azure AD authentication for SQL Server](../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial.md) to learn more. 
-- [SQL Server Management Studio v18 or higher](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio). 
-- The user connecting to the publisher and subscriber is a member of the **sysadmin** fixed server role. 
+- [SQL Server Management Studio (SSMS) v19.1 or higher](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio). 
+- The user connecting to the publisher and subscriber is a member of the **sysadmin** fixed server role.
+- The connection must be encrypted using a certificate from a trusted Certificate Authority (CA) or a self-signed certificate.
+   - If a self-signed certificate is used, it must be imported to the client machine and installed into the Trusted Certificates list for the client to trust the SQL Server. This requirement cannot be bypassed by selecting the **Trust server certificate** option in SQL Server Management Studio (SSMS) as it doesn't work with replication.
 
 
 ## Limitations
 
 Configuring your replication with Azure AD authentication currently has the following limitations: 
 
-- It's currently only possible to configure replication by using Transact-SQL (T-SQL), and the replication stored procedures. It's not currently possible to configure replication by using the Replication Wizard in SQL Server Management Studio (SSMS), the RMO replication objects, or other command line languages. 
-- Every server in the replication topology must be on SQL Server 2022 CU 6. 
-- When configuring replication, session trace flag 11543 must be enabled within every query session used to configure replication. Once replication has been established, this trace flag is no longer necessary and can be disabled. 
+- It's currently only possible to configure replication using Transact-SQL (T-SQL) and the replication stored procedures, the Replication Wizard in SSMS v19.1 or higher, or Azure Data Studio. It's not currently possible to configure replication using RMO replication objects or other command line languages. 
+- Every server in the replication topology must be on at least SQL Server 2022 CU 6. Previous versions of SQL Server aren't supported.
 
 ## Create SQL login from Azure AD
 

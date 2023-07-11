@@ -4,7 +4,7 @@ description: CREATE STATISTICS (Transact-SQL)
 author: markingmyname
 ms.author: maghan
 ms.reviewer: katsmith, wiassaf
-ms.date: 10/12/2022
+ms.date: 07/11/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference

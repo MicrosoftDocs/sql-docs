@@ -4434,11 +4434,13 @@ items:
         href: /troubleshoot/sql/releases/download-and-install-latest-updates?toc=/sql/toc.json&bc=/sql/breadcrumb/toc.json
   - name: End of support
     items:
-    - name: Overview
+    - name: End of support options
       href: sql-server/end-of-support/sql-server-end-of-support-overview.md
       displayName: end of support, end of life
-    - name: Extended security updates
+    - name: Extended security updates (ESUs)
       href: sql-server/end-of-support/sql-server-extended-security-updates.md
+    - name: ESU frequently asked questions
+      href: sql-server/end-of-support/extended-security-updates-frequently-asked-questions.md
   - name: Configuration
     href: database-engine/configure-windows/database-engine-instances-sql-server.md
     items:

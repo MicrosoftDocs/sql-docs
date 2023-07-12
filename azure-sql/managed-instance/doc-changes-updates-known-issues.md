@@ -28,7 +28,7 @@ This article lists the currently known issues with [Azure SQL Managed Instance](
 | [When using SQL Server authentication, usernames with '@' aren't supported](#when-using-sql-server-authentication-usernames-with--arent-supported) | Oct 2021 | Resolved | Feb 2022 |
 | [Misleading error message on Azure portal suggesting recreation of the Service Principal](#misleading-error-message-on-azure-portal-suggesting-recreation-of-the-service-principal) | Sep 2021 | | Oct 2021 |
 | [Changing the connection type doesn't affect connections through the failover group endpoint](#changing-the-connection-type-doesnt-affect-connections-through-the-failover-group-endpoint) | Jan 2021 | Has Workaround | |
-| [Procedure sp_send_dbmail may transiently fail when @query parameter is used](#procedure-sp_send_dbmail-may-transiently-fail-when-query-parameter-is-used) | Jan 2021 | Has Workaround | |
+| [Procedure sp_send_dbmail may transiently fail when @query parameter is used](#procedure-sp_send_dbmail-may-transiently-fail-when-query-parameter-is-used) | Jan 2021 | Resolved | March 2022 |
 | [Distributed transactions can be executed after removing managed instance from Server Trust Group](#distributed-transactions-can-be-executed-after-removing-managed-instance-from-server-trust-group) | Oct 2020 | Has Workaround | |
 | [Distributed transactions can't be executed after managed instance scaling operation](#distributed-transactions-cant-be-executed-after-managed-instance-scaling-operation) | Oct 2020 | Resolved | May 2021 |
 | [Can't create SQL Managed Instance with the same name as logical server previously deleted](#cant-create-sql-managed-instance-with-the-same-name-as-logical-server-previously-deleted) | Aug 2020 | Has Workaround | |
@@ -37,7 +37,7 @@ This article lists the currently known issues with [Azure SQL Managed Instance](
 | [Agent becomes unresponsive upon modifying, disabling, or enabling existing jobs](#agent-becomes-unresponsive-upon-modifying-disabling-or-enabling-existing-jobs) | May 2020 | Resolved | June 2020 |
 | [Permissions on resource group not applied to SQL Managed Instance](#permissions-on-resource-group-not-applied-to-sql-managed-instance) | Feb 2020 | Resolved | Nov 2020 |
 | [Limitation of manual failover via portal for failover groups](#limitation-of-manual-failover-via-portal-for-failover-groups) | Jan 2020 | Has Workaround | |
-| [SQL Agent roles need explicit EXECUTE permissions for nonsysadmin logins](#sql-agent-roles-need-explicit-execute-permissions-for-non-sysadmin-logins) | Dec 2019 | Has Workaround | |
+| [SQL Agent roles need explicit EXECUTE permissions for nonsysadmin logins](#sql-agent-roles-need-explicit-execute-permissions-for-non-sysadmin-logins) | Dec 2019 | Resolved | Sep 2022 |
 | [SQL Agent jobs can be interrupted by Agent process restart](#sql-agent-jobs-can-be-interrupted-by-agent-process-restart) | Dec 2019 | Resolved | Mar 2020 |
 | [Azure AD logins and users aren't supported in SSDT](#azure-ad-logins-and-users-arent-supported-in-ssdt) | Nov 2019 | No Workaround | |
 | [In-memory OLTP memory limits aren't applied](#in-memory-oltp-memory-limits-arent-applied) | Oct 2019 | Has Workaround | |

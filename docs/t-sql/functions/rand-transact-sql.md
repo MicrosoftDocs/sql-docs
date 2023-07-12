@@ -53,9 +53,10 @@ RAND ( [ seed ] )
 SELECT RAND(100), RAND(), RAND()   
 ```
 
-  When using RAND() function in an UPDATE or INSERT query, all affected rows get the same value. For example, when the following query is run, all values in the RANDEXAMPLES table will be updated to the same result.
-  ```sql
-UPDATE RANDEXAMPLES SET RANDVALUE = RAND()
+When using the RAND() function in an UPDATE or INSERT query, all affected rows get the same value. For example, when the following query is run, all values for the `RandValue` column in the `RandExamples` table are updated to the same value.
+
+```sql
+UPDATE RandExamples SET RandValue = RAND();
 ```
   
 ## Examples  

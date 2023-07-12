@@ -3,8 +3,8 @@ title: CREATE TABLE
 description: "CREATE TABLE creates a new table in Azure Synapse Analytics, Analytics Platform System (PDW), and Microsoft Fabric."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: vanto, xiaoyul, wiassaf, mariyaali, maghan
-ms.date: 06/06/2023
+ms.reviewer: vanto, xiaoyul, wiassaf, mariyaali, maghan, kecona
+ms.date: 07/12/2023
 ms.service: sql
 ms.topic: reference
 dev_langs:
@@ -639,12 +639,11 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 <column_options> ::=
     [ NULL | NOT NULL ] -- default is NULL
-    [ <column_constraint> ]
 
 <data type> ::=
-      datetime2 [ ( n ) ]  
+      datetime2 ( n )   
     | date  
-    | time [ ( n ) ]  
+    | time ( n )   
     | float [ ( n ) ]  
     | real [ ( n ) ]  
     | decimal [ ( precision [ , scale ] ) ]   
@@ -679,14 +678,6 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  `NULL` | `NOT NULL`  
  Specifies whether `NULL` values are allowed in the column. The default is `NULL`.  
   
- [ `CONSTRAINT` *constraint_name* ] `DEFAULT` *constant_expression*  
- Specifies the default column value.  
-  
- | Argument | Explanation |
- | -------- | ----------- |
- | *constraint_name* | The optional name for the constraint. The constraint name is unique within the database. The name can be reused in other databases. |
- | *constant_expression* | The default value for the column. The expression must be a literal value or a constant. For example, these constant expressions are allowed: `'CA'`, `4`. These constant expressions aren't allowed: `2+3`, `CURRENT_TIMESTAMP`. |
-
 ### <a id="DataTypesFabric"></a> Data type
 
 [!INCLUDE [fabric](../../includes/fabric.md)] supports the most commonly used data types. 

@@ -5,7 +5,7 @@ description: A how-to guide for configuring geo replication for transparent data
 author: strehan1993
 ms.author: strehan
 ms.reviewer: vanto
-ms.date: 03/31/2023
+ms.date: 07/17/2023
 ms.service: sql-database
 ms.subservice: security
 ms.custom: devx-track-azurecli, devx-track-azurepowershell
@@ -33,36 +33,82 @@ In this guide, we go through the steps to configure geo replication and backup r
 
 ## Create an Azure SQL Database with database level customer-managed keys as a secondary or copy
 
-Use the following commands to create a secondary replica or copy target of an Azure SQL Database configured with database level customer-managed keys. A user-assigned managed identity is required for setting up a customer-managed key for transparent data encryption during the database creation phase.
+Use the following instructions or commands to create a secondary replica or copy target of an Azure SQL Database configured with database level customer-managed keys. A user-assigned managed identity is required for setting up a customer-managed key for transparent data encryption during the database creation phase.
+
+# [Portal](#tab/azure-portal)
+
+## Create a database copy that has database level customer-managed keys
+
+To create a database in Azure SQL Database as a copy with database level customer-managed keys, follow these steps:
+
+1. Go to the [Azure portal](https://portal.azure.com) and navigate to the Azure SQL Database configured with database level customer-managed keys. Access the **Transparent Data Encryption** menu and check the list of current keys in use by the database.
+
+   :::image type="content" source="media/transparent-data-encryption-byok-database-level-geo-replication-restore/database-transparent-data-encryption-menu.png" alt-text="Screenshot of the Azure portal transparent data encryption menu for a database.":::
+
+1. Create a copy of the database by selecting **Copy** from the **Overview** menu of the database.
+
+   :::image type="content" source="media/transparent-data-encryption-byok-database-level-geo-replication-restore/database-copy.png" alt-text="Screenshot of the Azure portal copy database menu.":::
+
+1. The **Create SQL Database - Copy database** menu will appear. Use a different server for this database, but the same settings as the database you are trying to copy. In the **Transparent Data Encryption Key Management** section, select **Configure transparent data encryption**.
+
+   :::image type="content" source="media/transparent-data-encryption-byok-database-level-geo-replication-restore/database-copy-configure-tde.png" alt-text="Screenshot of the Azure portal copy database menu with the transparent data encryption key management section expanded.":::
+
+1. When the **Transparent Data Encryption** menu appears, review the CMK settings for this copy database. The settings and keys should be populated with the same identity and keys used in the source database.
+
+1. Select **Apply** to continue and then select **Review + create**, and **Create** to create the copy database.
+
+> [!NOTE]
+> After the copy database is created, the **Transparent Data Encryption** menu will show the new database with the same settings as the source database, but with a key missing. This is by design. **Why is this by design?**
+
+## Create a secondary replica that has database level customer-managed keys
+
+1. Go to the [Azure portal](https://portal.azure.com) and navigate to the Azure SQL Database configured with database level customer-managed keys. Access the **Transparent Data Encryption** menu and check the list of current keys in use by the database.
+
+   :::image type="content" source="media/transparent-data-encryption-byok-database-level-geo-replication-restore/database-transparent-data-encryption-menu.png" alt-text="Screenshot of the Azure portal transparent data encryption menu for a database.":::
+
+1. Under **Data management** settings for the database, select **Replicas**. Select **Create replica** to create a secondary replica of the database.
+
+   :::image type="content" source="media/transparent-data-encryption-byok-database-level-geo-replication-restore/database-create-replica.png" alt-text="Screenshot of the Azure portal database replica menu.":::
+
+1. The **Create SQL Database - Geo Replica** menu will appear. Use a secondary server for this database, but the same settings as the database you are trying to replicate. In the **Transparent Data Encryption Key Management** section, select **Configure transparent data encryption**.
+
+   :::image type="content" source="media/transparent-data-encryption-byok-database-level-geo-replication-restore/database-copy-configure-tde.png" alt-text="Screenshot of the Azure portal copy database menu with the transparent data encryption key management section expanded.":::
+
+1. When the **Transparent Data Encryption** menu appears, review the CMK settings for this database replica. The settings and keys should be populated with the same identity and keys used in the primary database.
+
+1. Select **Apply** to continue and then select **Review + create**, and **Create** to create the copy database.
+
+> [!NOTE]
+> After the database replica is created, the **Transparent Data Encryption** menu will show the new database with the same settings as the source database, but with a key missing. This is by design. **Why is this by design?**
 
 # [Azure CLI](#tab/azure-cli)
 
 For information on installing the current release of Azure CLI, see [Install the Azure CLI](/cli/azure/install-azure-cli) article.
 
-- Prepopulate the list of current keys in use by the primary database using the 'expand-keys' parameter with current as the 'keys-filter'
+- Prepopulate the list of current keys in use by the primary database using the `expand-keys` parameter with `current` as the `keys-filter`.
 
-```azurecli
-az sql db show --name $databaseName --resource-group $resourceGroup --server $serverName --expand-keys --keys-filter current
-```
+    ```azurecli
+    az sql db show --name $databaseName --resource-group $resourceGroup --server $serverName --expand-keys --keys-filter current
+    ```
 
 - Select the user-assigned managed identity (and federated client ID if configuring cross tenant access).
 - Create a new database as a secondary and provide the prepopulated list of keys obtained from the source database and the above identity (and federated client ID if configuring cross tenant access).
 
-```azurecli
-# Create a secondary replica with Active Geo Replication with the same name as the primary database
+    ```azurecli
+    # Create a secondary replica with Active Geo Replication with the same name as the primary database
+    
+    az sql db replica create -g $resourceGroup -s $serverName -n $databaseName --partner-server $secondaryServer --partner-database $secondaryDatabase --partner-resource-group $secondaryResourceGroup -i --encryption-protector $encryptionProtector --user-assigned-identity-id $umi --keys $keys
+    ```
 
-az sql db replica create -g $resourceGroup -s $serverName -n $databaseName --partner-server $secondaryServer --partner-database $secondaryDatabase --partner-resource-group $secondaryResourceGroup -i --encryption-protector $encryptionProtector --user-assigned-identity-id $umi --keys $keys
-```
-
-> [!IMPORTANT]
-> $keys is a space separated list of keys retrieved from the source database.
+    > [!IMPORTANT]
+    > $keys is a space separated list of keys retrieved from the source database.
 
 - To create a copy of the database, az sql db copy can be used with the same parameters.
 
-```azurecli
-# Create a copy of a database configured with database level customer-managed keys
-az sql db copy -g $resourceGroup -s $serverName -n $databaseName --dest-name $secondaryDatabase -i --encryption-protector $encryptionProtector --user-assigned-identity-id $umi --keys $keys
-```
+    ```azurecli
+    # Create a copy of a database configured with database level customer-managed keys
+    az sql db copy -g $resourceGroup -s $serverName -n $databaseName --dest-name $secondaryDatabase -i --encryption-protector $encryptionProtector --user-assigned-identity-id $umi --keys $keys
+    ```
 
 # [PowerShell](#tab/azure-powershell)
 
@@ -70,20 +116,20 @@ For Az PowerShell module installation instructions, see [Install Azure PowerShel
 
 - Prepopulate the list of current keys in use by the primary database using the command [Get-AzSqlDatabase](/powershell/module/az.sql/get-azsqldatabase) and the `-ExpandKeyList` and `-KeysFilter "current"` parameters. Exclude `-KeysFilter` if you wish to retrieve all the keys.
 
-```powershell
-$database = Get-AzSqlDatabase -ResourceGroupName <ResourceGroupName> -ServerName <ServerName> -DatabaseName <DatabaseName> -ExpandKeyList -KeysFilter "current"
-```
+    ```powershell
+    $database = Get-AzSqlDatabase -ResourceGroupName <ResourceGroupName> -ServerName <ServerName> -DatabaseName <DatabaseName> -ExpandKeyList -KeysFilter "current"
+    ```
 
 - Select the user-assigned managed identity (and federated client ID if configuring cross tenant access).
 - Create a new database as a secondary using the command [New-AzSqlDatabaseSecondary](/powershell/module/az.sql/new-azsqldatabasesecondary) and provide the prepopulated list of keys obtained from the source database and the above identity (and federated client ID if configuring cross tenant access) in the API call using the `-KeyList`, `-AssignIdentity`, `-UserAssignedIdentityId`, `-EncryptionProtector ` (and if necessary, `-FederatedClientId`) parameters.
 
-```powershell
-# Create a secondary replica with Active Geo Replication with the same name as the primary database
-$database = Get-AzSqlDatabase -ResourceGroupName <ResourceGroupName> -ServerName <ServerName> -DatabaseName <DatabaseName> -ExpandKeyList -KeysFilter "current"
-
-$database | New-AzSqlDatabaseSecondary -PartnerResourceGroupName <SecondaryResourceGroupName> -PartnerServerName <SecondaryServerName> -AllowConnections "All" -AssignIdentity -UserAssignedIdentityId <UserAssignedIdentityId> -EncryptionProtector <CustomerManagedKeyId> -FederatedClientId <FederatedClientId>
--KeyList $database.Keys.Keys
-```
+    ```powershell
+    # Create a secondary replica with Active Geo Replication with the same name as the primary database
+    $database = Get-AzSqlDatabase -ResourceGroupName <ResourceGroupName> -ServerName <ServerName> -DatabaseName <DatabaseName> -ExpandKeyList -KeysFilter "current"
+    
+    $database | New-AzSqlDatabaseSecondary -PartnerResourceGroupName <SecondaryResourceGroupName> -PartnerServerName <SecondaryServerName> -AllowConnections "All" -AssignIdentity -UserAssignedIdentityId <UserAssignedIdentityId> -EncryptionProtector <CustomerManagedKeyId> -FederatedClientId <FederatedClientId>
+    -KeyList $database.Keys.Keys
+    ```
 
 - To create a copy of the database, [New-AzSqlDatabaseCopy](/powershell/module/az.sql/new-azsqldatabasecopy) can be used with the same parameters.
 
@@ -105,156 +151,156 @@ Use a [Custom deployment in the Azure portal](https://portal.azure.com/#create/M
 
 - Prepopulate the list of current keys in use by the primary database using the following REST API request:
 
-```rest
-GET https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}?api-version=2022-08-01-preview&$expand=keys($filter=pointInTime(‘current’))
-```
+    ```rest
+    GET https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}?api-version=2022-08-01-preview&$expand=keys($filter=pointInTime(‘current’))
+    ```
 
 - Select the user-assigned managed identity (and federated client ID if configuring cross tenant access).
 - Create a new database as a secondary and provide the prepopulated list of keys obtained from the source database and the above identity (and federated client ID if configuring cross tenant access) in the ARM template as the `keys_to_add` parameter.
 
-```json
-{
-  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
-  "contentVersion": "1.0.0.0",
-  "parameters": {
-    "server_name": {
-      "type": "String"
-    },
-    "database_name": {
-      "type": "String"
-    },
-    "user_assigned_identity": {
-      "type": "String"
-    },
-    "encryption_protector": {
-      "type": "String"
-    },
-    "location": {
-      "type": "String"
-    },
-    "source_database_id": {
-      "type": "String"
-    },
-    "keys_to_add": {
-      "type": "Object"
-    }
-  },
-  "variables": {},
-  "resources": [
+    ```json
     {
-      "type": "Microsoft.Sql/servers/databases",
-      "apiVersion": "2022-08-01-preview",
-      "name": "[concat(parameters('server_name'), concat('/',parameters('database_name')))]",
-      "location": "[parameters('location')]",
-      "sku": {
-        "name": "Basic",
-        "tier": "Basic",
-        "capacity": 5
-      },
-      "identity": {
-        "type": "UserAssigned",
-        "userAssignedIdentities": {
-          "[parameters('user_assigned_identity')]": {}
+      "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "server_name": {
+          "type": "String"
+        },
+        "database_name": {
+          "type": "String"
+        },
+        "user_assigned_identity": {
+          "type": "String"
+        },
+        "encryption_protector": {
+          "type": "String"
+        },
+        "location": {
+          "type": "String"
+        },
+        "source_database_id": {
+          "type": "String"
+        },
+        "keys_to_add": {
+          "type": "Object"
         }
       },
-      "properties": {
-        "collation": "SQL_Latin1_General_CP1_CI_AS",
-        "maxSizeBytes": 104857600,
-        "catalogCollation": "SQL_Latin1_General_CP1_CI_AS",
-        "zoneRedundant": false,
-        "readScale": "Disabled",
-        "requestedBackupStorageRedundancy": "Geo",
-        "maintenanceConfigurationId": "/subscriptions/e1775f9f-a286-474d-b6f0-29c42ac74554/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_Default",
-        "isLedgerOn": false,
-        "encryptionProtector": "[parameters('encryption_protector')]",
-        "keys": "[parameters('keys_to_add')]",
-        "createMode": "Secondary",
-        "sourceDatabaseId": "[parameters('source_database_id')]"
-      }
+      "variables": {},
+      "resources": [
+        {
+          "type": "Microsoft.Sql/servers/databases",
+          "apiVersion": "2022-08-01-preview",
+          "name": "[concat(parameters('server_name'), concat('/',parameters('database_name')))]",
+          "location": "[parameters('location')]",
+          "sku": {
+            "name": "Basic",
+            "tier": "Basic",
+            "capacity": 5
+          },
+          "identity": {
+            "type": "UserAssigned",
+            "userAssignedIdentities": {
+              "[parameters('user_assigned_identity')]": {}
+            }
+          },
+          "properties": {
+            "collation": "SQL_Latin1_General_CP1_CI_AS",
+            "maxSizeBytes": 104857600,
+            "catalogCollation": "SQL_Latin1_General_CP1_CI_AS",
+            "zoneRedundant": false,
+            "readScale": "Disabled",
+            "requestedBackupStorageRedundancy": "Geo",
+            "maintenanceConfigurationId": "/subscriptions/e1775f9f-xxxx-xxxx-xxxx-xxxxxxxxxxxx/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_Default",
+            "isLedgerOn": false,
+            "encryptionProtector": "[parameters('encryption_protector')]",
+            "keys": "[parameters('keys_to_add')]",
+            "createMode": "Secondary",
+            "sourceDatabaseId": "[parameters('source_database_id')]"
+          }
+        }
+      ]
     }
-  ]
-}
-```
+    ```
 
-An example of the `encryption_protector` and `keys_to_add` parameter is:
-
-```json
-    "keys_to_add": {
-      "value": {
-        "https://yourvault.vault.azure.net/keys/yourkey1/fd021f84a0d94d43b8ef33154bca0000": {},
-        "https://yourvault.vault.azure.net/keys/yourkey2/fd021f84a0d94d43b8ef33154bca0000": {}
-      }
-    },
-    "encryption_protector": {
-      "value": "https://yourvault.vault.azure.net/keys/yourkey2/fd021f84a0d94d43b8ef33154bca0000"
-    }
-```
+    An example of the `encryption_protector` and `keys_to_add` parameter is:
+    
+    ```json
+        "keys_to_add": {
+          "value": {
+            "https://yourvault.vault.azure.net/keys/yourkey1/fd021f84a0d94d43b8ef33154bca0000": {},
+            "https://yourvault.vault.azure.net/keys/yourkey2/fd021f84a0d94d43b8ef33154bca0000": {}
+          }
+        },
+        "encryption_protector": {
+          "value": "https://yourvault.vault.azure.net/keys/yourkey2/fd021f84a0d94d43b8ef33154bca0000"
+        }
+    ```
 
 - To create a copy of the database, the following template can be used with the same parameters.
 
-```json
-{
-  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
-  "contentVersion": "1.0.0.0",
-  "parameters": {
-    "server_name": {
-      "type": "String"
-    },
-    "database_name": {
-      "type": "String"
-    },
-    "user_assigned_identity": {
-      "type": "String"
-    },
-    "encryption_protector": {
-      "type": "String"
-    },
-    "location": {
-      "type": "String"
-    },
-    "source_database_id": {
-      "type": "String"
-    },
-    "keys_to_add": {
-      "type": "Object"
-    }
-  },
-  "variables": {},
-  "resources": [
+    ```json
     {
-      "type": "Microsoft.Sql/servers/databases",
-      "apiVersion": "2022-08-01-preview",
-      "name": "[concat(parameters('server_name'), concat('/',parameters('database_name')))]",
-      "location": "[parameters('location')]",
-      "sku": {
-        "name": "Basic",
-        "tier": "Basic",
-        "capacity": 5
-      },
-      "identity": {
-        "type": "UserAssigned",
-        "userAssignedIdentities": {
-          "[parameters('user_assigned_identity')]": {}
+      "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "server_name": {
+          "type": "String"
+        },
+        "database_name": {
+          "type": "String"
+        },
+        "user_assigned_identity": {
+          "type": "String"
+        },
+        "encryption_protector": {
+          "type": "String"
+        },
+        "location": {
+          "type": "String"
+        },
+        "source_database_id": {
+          "type": "String"
+        },
+        "keys_to_add": {
+          "type": "Object"
         }
       },
-      "properties": {
-        "collation": "SQL_Latin1_General_CP1_CI_AS",
-        "maxSizeBytes": 104857600,
-        "catalogCollation": "SQL_Latin1_General_CP1_CI_AS",
-        "zoneRedundant": false,
-        "readScale": "Disabled",
-        "requestedBackupStorageRedundancy": "Geo",
-        "maintenanceConfigurationId": "/subscriptions/e1775f9f-a286-474d-b6f0-29c42ac74554/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_Default",
-        "isLedgerOn": false,
-        "encryptionProtector": "[parameters('encryption_protector')]",
-        "keys": "[parameters('keys_to_add')]",
-        "createMode": "Copy",
-        "sourceDatabaseId": "[parameters('source_database_id')]"
-      }
+      "variables": {},
+      "resources": [
+        {
+          "type": "Microsoft.Sql/servers/databases",
+          "apiVersion": "2022-08-01-preview",
+          "name": "[concat(parameters('server_name'), concat('/',parameters('database_name')))]",
+          "location": "[parameters('location')]",
+          "sku": {
+            "name": "Basic",
+            "tier": "Basic",
+            "capacity": 5
+          },
+          "identity": {
+            "type": "UserAssigned",
+            "userAssignedIdentities": {
+              "[parameters('user_assigned_identity')]": {}
+            }
+          },
+          "properties": {
+            "collation": "SQL_Latin1_General_CP1_CI_AS",
+            "maxSizeBytes": 104857600,
+            "catalogCollation": "SQL_Latin1_General_CP1_CI_AS",
+            "zoneRedundant": false,
+            "readScale": "Disabled",
+            "requestedBackupStorageRedundancy": "Geo",
+            "maintenanceConfigurationId": "/subscriptions/e1775f9f-xxxx-xxxx-xxxx-xxxxxxxxxxxx/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_Default",
+            "isLedgerOn": false,
+            "encryptionProtector": "[parameters('encryption_protector')]",
+            "keys": "[parameters('keys_to_add')]",
+            "createMode": "Copy",
+            "sourceDatabaseId": "[parameters('source_database_id')]"
+          }
+        }
+      ]
     }
-  ]
-}
-```
+    ```
 
 ---
 
@@ -272,20 +318,20 @@ For information on installing the current release of Azure CLI, see [Install the
 
 - Prepopulate the list of keys used by the primary database using the `expand-keys` parameter with your restore point in time as the `keys-filter`.
 
-```azurecli
-az sql db show --name $databaseName --resource-group $resourceGroup --server $serverName --expand-keys --keys-filter $timestamp
-```
+    ```azurecli
+    az sql db show --name $databaseName --resource-group $resourceGroup --server $serverName --expand-keys --keys-filter $timestamp
+    ```
 
 - Select the user-assigned managed identity (and federated client ID if configuring cross tenant access).
 - Create a new database as a restore target and provide the prepopulated list of keys obtained from the source database and the above identity (and federated client ID if configuring cross tenant access).
 
-```azurecli
-# Create a restored database
-az sql db restore --dest-name $destName --name $databaseName --resource-group $resourceGroup --server $serverName --subscription $subscriptionId --time $timestamp -i --encryption-protector $encryptionProtector --user-assigned-identity-id $umi --keys $keys
-```
+    ```azurecli
+    # Create a restored database
+    az sql db restore --dest-name $destName --name $databaseName --resource-group $resourceGroup --server $serverName --subscription $subscriptionId --time $timestamp -i --encryption-protector $encryptionProtector --user-assigned-identity-id $umi --keys $keys
+    ```
 
-> [!IMPORTANT]
-> $keys is a space separated list of keys retrieved from the source database.
+    > [!IMPORTANT]
+    > $keys is a space separated list of keys retrieved from the source database.
 
 # [PowerShell](#tab/azure-powershell2)
 
@@ -293,19 +339,19 @@ For Az PowerShell module installation instructions, see [Install Azure PowerShel
 
 - Prepopulate the list of keys used by the primary database using the command [Get-AzSqlDatabase](/powershell/module/az.sql/get-azsqldatabase) and the `-ExpandKeyList` and `-KeysFilter "2023-01-01"` parameters (`2023-01-01` is an example of the point in time you wish to restore the database to). Exclude `-KeysFilter` if you wish to retrieve all the keys.
 
-```powershell
-$database = Get-AzSqlDatabase -ResourceGroupName <ResourceGroupName> -ServerName <ServerName> -DatabaseName <DatabaseName> -ExpandKeyList -KeysFilter <Timestamp>
-```
+    ```powershell
+    $database = Get-AzSqlDatabase -ResourceGroupName <ResourceGroupName> -ServerName <ServerName> -DatabaseName <DatabaseName> -ExpandKeyList -KeysFilter <Timestamp>
+    ```
 
 - Select the user-assigned managed identity (and federated client ID if configuring cross tenant access).
 - Use the command [Restore-AzSqlDatabase](/powershell/module/az.sql/restore-azsqldatabase) with the `-FromPointInTimeBackup` parameter and provide the prepopulated list of keys obtained from the above steps and the above identity (and federated client ID if configuring cross tenant access) in the API call using the `-KeyList`, `-AssignIdentity`, `-UserAssignedIdentityId`, `-EncryptionProtector` (and if necessary, `-FederatedClientId`) parameters.
 
-```powershell
-$database = Get-AzSqlDatabase -ResourceGroupName <ResourceGroupName> -ServerName <ServerName> -DatabaseName <DatabaseName> -ExpandKeyList -KeysFilter <Timestamp>
-
-# Create a restored database
-Restore-AzSqlDatabase -FromPointInTimeBackup -PointInTime <Timestamp> -ResourceId '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}' -ResourceGroupName <ResourceGroupName> -ServerName <ServerName> -TargetDatabaseName <TargetDatabaseName> -KeyList $database.Keys.Keys -EncryptionProtector <EncryptionProtector> -UserAssignedIdentityId <UserAssignedIdentityId> -AssignIdentity
-```
+    ```powershell
+    $database = Get-AzSqlDatabase -ResourceGroupName <ResourceGroupName> -ServerName <ServerName> -DatabaseName <DatabaseName> -ExpandKeyList -KeysFilter <Timestamp>
+    
+    # Create a restored database
+    Restore-AzSqlDatabase -FromPointInTimeBackup -PointInTime <Timestamp> -ResourceId '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}' -ResourceGroupName <ResourceGroupName> -ServerName <ServerName> -TargetDatabaseName <TargetDatabaseName> -KeyList $database.Keys.Keys -EncryptionProtector <EncryptionProtector> -UserAssignedIdentityId <UserAssignedIdentityId> -AssignIdentity
+    ```
 
 ---
 
@@ -319,23 +365,23 @@ For information on installing the current release of Azure CLI, see [Install the
 
 - Prepopulate the list of keys used by the dropped database using the `expand-keys` parameter. It's recommended to pass all the keys that the source database was using. You can also attempt a restore with the keys provided at deletion time by using the `keys-filter` parameter.
 
-```azurecli
-az sql db show-deleted --name $databaseName --resource-group $resourceGroup --server $serverName --restorable-dropped-database-id "databaseName,133201549661600000" --expand-keys
-```
+    ```azurecli
+    az sql db show-deleted --name $databaseName --resource-group $resourceGroup --server $serverName --restorable-dropped-database-id "databaseName,133201549661600000" --expand-keys
+    ```
 
-> [!IMPORTANT]
-> `restorable-dropped-database-id` can be retrieved by listing all restorable dropped databases in the server and is of the format `databaseName,deletedTimestamp`.
+    > [!IMPORTANT]
+    > `restorable-dropped-database-id` can be retrieved by listing all restorable dropped databases in the server and is of the format `databaseName,deletedTimestamp`.
 
 - Select the user-assigned managed identity (and federated client ID if configuring cross tenant access).
 - Create a new database as a restore target and provide the prepopulated list of keys obtained from the deleted source database and the above identity (and federated client ID if configuring cross tenant access).
 
-```azurecli
-# Create a restored database
-az sql db restore --dest-name $destName --name $databaseName --resource-group $resourceGroup --server $serverName --subscription $subscriptionId --time $timestamp -i --encryption-protector $encryptionProtector --user-assigned-identity-id $umi --keys $keys --deleted-time "2023-02-06T11:02:46.160000+00:00"
-```
+    ```azurecli
+    # Create a restored database
+    az sql db restore --dest-name $destName --name $databaseName --resource-group $resourceGroup --server $serverName --subscription $subscriptionId --time $timestamp -i --encryption-protector $encryptionProtector --user-assigned-identity-id $umi --keys $keys --deleted-time "2023-02-06T11:02:46.160000+00:00"
+    ```
 
-> [!IMPORTANT]
-> `$keys` is a space separated list of keys retrieved from the source database.
+    > [!IMPORTANT]
+    > `$keys` is a space separated list of keys retrieved from the source database.
 
 # [PowerShell](#tab/azure-powershell2)
 
@@ -343,22 +389,22 @@ For Az PowerShell module installation instructions, see [Install Azure PowerShel
 
 - Prepopulate the list of keys used by the primary database using the command [Get-AzSqlDeletedDatabaseBackup](/powershell/module/az.sql/get-azsqldeleteddatabasebackup) and the `-ExpandKeyList` parameter. It's recommended to pass all the keys that the source database was using. You can also attempt a restore with the keys provided at deletion time by using the `-KeysFilter` parameter.
 
-```powershell
-$database = Get-AzSqlDeletedDatabaseBackup -ResourceGroupName <ResourceGroupName> -ServerName <ServerName> -DatabaseId "dbName,133201549661600000" -ExpandKeyList -DeletionDate "2/6/2023" -DatabaseName <databaseName>
-```
+    ```powershell
+    $database = Get-AzSqlDeletedDatabaseBackup -ResourceGroupName <ResourceGroupName> -ServerName <ServerName> -DatabaseId "dbName,133201549661600000" -ExpandKeyList -DeletionDate "2/6/2023" -DatabaseName <databaseName>
+    ```
 
-> [!IMPORTANT]
-> `DatabaseId` can be retrieved by listing all restorable dropped databases in the server and is of the format `databaseName,deletedTimestamp`.
+    > [!IMPORTANT]
+    > `DatabaseId` can be retrieved by listing all restorable dropped databases in the server and is of the format `databaseName,deletedTimestamp`.
 
 - Select the user-assigned managed identity (and federated client ID if configuring cross tenant access).
 - Use the command [Restore-AzSqlDatabase](/powershell/module/az.sql/restore-azsqldatabase) with the `-FromDeletedDatabaseBackup` parameter and provide the prepopulated list of keys obtained from the above steps and the above identity (and federated client ID if configuring cross tenant access) in the API call using the `-KeyList`, `-AssignIdentity`, `-UserAssignedIdentityId`, `-EncryptionProtector` (and if necessary, `-FederatedClientId`) parameters.
 
-```powershell
-$database = Get-AzSqlDeletedDatabaseBackup -ResourceGroupName <ResourceGroupName> -ServerName <ServerName> -DatabaseId "dbName,133201549661600000" -ExpandKeyList -DeletionDate <DeletionDate> -DatabaseName <databaseName>
-
-# Create a restored database
-Restore-AzSqlDatabase -FromDeletedDatabaseBackup -DeletionDate <Timestamp> -ResourceId '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/restorableDroppedDatabases/{databaseName}' -ResourceGroupName <ResourceGroupName> -ServerName <ServerName> -TargetDatabaseName <TargetDatabaseName> -KeyList $database.Keys.Keys -EncryptionProtector <EncryptionProtector> -UserAssignedIdentityId <UserAssignedIdentityId> -AssignIdentity
-```
+    ```powershell
+    $database = Get-AzSqlDeletedDatabaseBackup -ResourceGroupName <ResourceGroupName> -ServerName <ServerName> -DatabaseId "dbName,133201549661600000" -ExpandKeyList -DeletionDate <DeletionDate> -DatabaseName <databaseName>
+    
+    # Create a restored database
+    Restore-AzSqlDatabase -FromDeletedDatabaseBackup -DeletionDate <Timestamp> -ResourceId '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/restorableDroppedDatabases/{databaseName}' -ResourceGroupName <ResourceGroupName> -ServerName <ServerName> -TargetDatabaseName <TargetDatabaseName> -KeyList $database.Keys.Keys -EncryptionProtector <EncryptionProtector> -UserAssignedIdentityId <UserAssignedIdentityId> -AssignIdentity
+    ```
 
 ---
 
@@ -372,20 +418,20 @@ For information on installing the current release of Azure CLI, see [Install the
 
 - Prepopulate the list of keys used by the geo backup of the database configured with customer-managed keys at the database level using the `expand-keys` parameter.
 
-```azurecli
-az sql db geo-backup --database-name $databaseName --g $resourceGroup --server $serverName  --expand-keys
-```
+    ```azurecli
+    az sql db geo-backup --database-name $databaseName --g $resourceGroup --server $serverName  --expand-keys
+    ```
 
 - Select the user-assigned managed identity (and federated client ID if configuring cross tenant access).
 - Create a new database as a geo restore target and provide the prepopulated list of keys obtained from the deleted source database and the above identity (and federated client ID if configuring cross tenant access).
 
-```azurecli
-# Create a geo restored database
-az sql db geo-backup restore --geo-backup-id "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/recoverableDatabases/{databaseName}" --dest-database $destName --resource-group $resourceGroup --dest-server $destServerName -i --encryption-protector $encryptionProtector --user-assigned-identity-id $umi --keys $keys
-```
+    ```azurecli
+    # Create a geo restored database
+    az sql db geo-backup restore --geo-backup-id "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/recoverableDatabases/{databaseName}" --dest-database $destName --resource-group $resourceGroup --dest-server $destServerName -i --encryption-protector $encryptionProtector --user-assigned-identity-id $umi --keys $keys
+    ```
 
-> [!IMPORTANT]
-> `$keys` is a space separated list of keys retrieved from the source database.
+    > [!IMPORTANT]
+    > `$keys` is a space separated list of keys retrieved from the source database.
 
 # [PowerShell](#tab/azure-powershell2)
 
@@ -393,22 +439,22 @@ For Az PowerShell module installation instructions, see [Install Azure PowerShel
 
 - Prepopulate the list of keys used by the primary database using the command [Get-AzSqlDatabaseGeoBackup](/powershell/module/az.sql/get-azsqldatabasegeobackup) and the `-ExpandKeyList` to retrieve all the keys.
 
-```powershell
-$database = Get-AzSqlDatabaseGeoBackup -ResourceGroupName <ResourceGroupName> -ServerName <ServerName> -DatabaseName <databaseName> -ExpandKeyList
-```
+    ```powershell
+    $database = Get-AzSqlDatabaseGeoBackup -ResourceGroupName <ResourceGroupName> -ServerName <ServerName> -DatabaseName <databaseName> -ExpandKeyList
+    ```
 
-> [!IMPORTANT]
-> `DatabaseId` can be retrieved by listing all restorable dropped databases in the server and is of the format `databaseName,deletedTimestamp`.
+    > [!IMPORTANT]
+    > `DatabaseId` can be retrieved by listing all restorable dropped databases in the server and is of the format `databaseName,deletedTimestamp`.
 
 - Select the user-assigned managed identity (and federated client ID if configuring cross tenant access).
 - Use the command [Restore-AzSqlDatabase](/powershell/module/az.sql/restore-azsqldatabase) with the `-FromGeoBackup` parameter and provide the prepopulated list of keys obtained from the above steps and the above identity (and federated client ID if configuring cross tenant access) in the API call using the `-KeyList`, `-AssignIdentity`, `-UserAssignedIdentityId`, `-EncryptionProtector` (and if necessary, `-FederatedClientId`) parameters.
 
-```powershell
-$database = Get-AzSqlDatabaseGeoBackup -ResourceGroupName <ResourceGroupName> -ServerName <ServerName> -DatabaseName <databaseName> -ExpandKeyList
-
-# Create a restored database
-Restore-AzSqlDatabase -FromGeoBackup -ResourceId "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/recoverableDatabases/{databaseName}" -ResourceGroupName <ResourceGroupName> -ServerName <ServerName> -TargetDatabaseName <TargetDatabaseName> -KeyList $database.Keys.Keys -EncryptionProtector <EncryptionProtector> -UserAssignedIdentityId <UserAssignedIdentityId> -AssignIdentity
-```
+    ```powershell
+    $database = Get-AzSqlDatabaseGeoBackup -ResourceGroupName <ResourceGroupName> -ServerName <ServerName> -DatabaseName <databaseName> -ExpandKeyList
+    
+    # Create a restored database
+    Restore-AzSqlDatabase -FromGeoBackup -ResourceId "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/recoverableDatabases/{databaseName}" -ResourceGroupName <ResourceGroupName> -ServerName <ServerName> -TargetDatabaseName <TargetDatabaseName> -KeyList $database.Keys.Keys -EncryptionProtector <EncryptionProtector> -UserAssignedIdentityId <UserAssignedIdentityId> -AssignIdentity
+    ```
 
 ---
 

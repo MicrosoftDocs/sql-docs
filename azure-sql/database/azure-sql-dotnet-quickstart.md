@@ -4,7 +4,7 @@ description: Learn how to connect to a database in Azure SQL Database and query 
 author: alexwolfmsft
 ms.author: alexwolf
 ms.custom: passwordless-dotnet
-ms.date: 04/12/2023
+ms.date: 07/11/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: quickstart
@@ -186,8 +186,12 @@ app.MapPost("/Person", (Person person) => {
     conn.Open();
 
     var command = new SqlCommand(
-        $"INSERT INTO Persons (firstName, lastName) VALUES ('{person.FirstName}', '{person.LastName}')",
+        "INSERT INTO Persons (firstName, lastName) VALUES (@firstName, @lastName)",
         conn);
+
+    command.Parameters.Clear();
+    command.Parameters.AddWithValue("@firstName", person.FirstName);
+    command.Parameters.AddWithValue("@lastName", person.LastName);
 
     using SqlDataReader reader = command.ExecuteReader();
 })

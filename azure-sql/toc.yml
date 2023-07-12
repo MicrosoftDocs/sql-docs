@@ -1416,6 +1416,8 @@
           
     - name: Configure settings
       items: 
+      - name: tempdb
+        href: managed-instance/tempdb-configure.md
       - name: Customize time zone
         href: managed-instance/timezones-overview.md
       - name: Configure connection types

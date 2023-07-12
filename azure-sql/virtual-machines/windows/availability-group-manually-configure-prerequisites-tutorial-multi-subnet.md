@@ -4,7 +4,7 @@ description: "This tutorial shows how to configure the prerequisites for creatin
 author: tarynpratt
 ms.author: tarynpratt
 ms.reviewer: mathoma
-ms.date: 04/18/2023
+ms.date: 07/10/2023
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: tutorial
@@ -299,7 +299,7 @@ Follow these steps to create each account:
    :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-multi-subnet/14-ad-dc-new-user.png" alt-text="Active Directory Administrative Center":::
 
 1. Select **OK** to create the user.
-1. Repeat these steps to create all three accounts.
+1. Repeat these steps to create all accounts.
 
 ### Grant installation account permissions
 

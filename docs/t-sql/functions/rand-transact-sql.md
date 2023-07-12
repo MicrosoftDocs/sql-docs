@@ -1,4 +1,4 @@
-meta---
+---
 title: "RAND (Transact-SQL)"
 description: "RAND (Transact-SQL)"
 author: MikeRayMSFT

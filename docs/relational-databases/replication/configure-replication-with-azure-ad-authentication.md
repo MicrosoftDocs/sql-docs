@@ -69,7 +69,7 @@ The following is an example script to create your distribution database on your 
 
 ```sql
 EXEC sp_adddistributiondb @database = N'distribution_db', 
-@data_folder = N' C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER22\MSSQL\DATA', 
+@data_folder = N'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER22\MSSQL\DATA', 
 @log_folder = N'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER22\MSSQL\DATA', 
 @log_file_size = 2, @min_distretention = 0, @max_distretention = 72, 
 @history_retention = 48, @deletebatchsize_xact = 5000, 

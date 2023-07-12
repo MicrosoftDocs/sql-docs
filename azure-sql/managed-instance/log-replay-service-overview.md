@@ -144,6 +144,7 @@ Plan to finish a single LRS migration job within a maximum of 30 days. When this
 
 Consider the following limitations of LRS: 
 
+- Only database `.bak`, `.log`, and `.diff` files are supported by LRS. Dacpac and bacpac files are not supported. 
 - During the migration process, databases that are being migrated can't be used for read-only access on the SQL Managed Instance deployment.
 - You have to configure a [maintenance window](../database/maintenance-window.md) to allow scheduling of system updates at a specific day and time. Plan to run and finish migrations outside the scheduled maintenance window.
 - Database backups that are taken without `CHECKSUM` take longer to restore than do database backups with `CHECKSUM` enabled. 

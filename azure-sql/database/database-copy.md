@@ -4,7 +4,7 @@ description: Create a transactionally consistent copy of an existing database in
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 12/19/2022
+ms.date: 7/12/2023
 ms.service: sql-database
 ms.subservice: data-movement
 ms.topic: how-to

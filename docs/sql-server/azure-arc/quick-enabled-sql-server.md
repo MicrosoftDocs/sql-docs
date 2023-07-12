@@ -30,7 +30,7 @@ In this quickstart, you'll deploy and configure the Azure Connected Machine agen
   * Ensure the machine is in a [supported region](prerequisites.md#supported-regions).
   * Confirm that the Linux hostname or Windows computer name doesn't use a [reserved word or trademark](/azure/azure-resource-manager/troubleshooting/error-reserved-resource-name).
   * If the machine connects through a firewall or proxy server to communicate over the Internet, make sure the URLs [listed](/azure/azure-arc/servers/network-requirements#urls) are not blocked.
-* One or more supported [instances of SQL Server](prerequisites.md/#supported-sql-server-versions-and-operating-systems) on the machine.
+* One or more supported [instances of SQL Server](prerequisites.md#supported-sql-server-versions-and-operating-systems) on the machine.
 
 ## Generate installation script
 

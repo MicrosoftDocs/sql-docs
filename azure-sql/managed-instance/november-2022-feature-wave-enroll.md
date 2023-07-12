@@ -15,7 +15,7 @@ ms.topic: how-to
 
 Learn how to enroll new and existing managed instances in the November 2022 feature wave for Azure SQL Managed Instance.
 
-The November 2022 feature wave is being released in a phased manner. The current phase makes managed instances belonging to Dev/Test subscriptions eligible for feature wave. Instances created in other subscription types will be able to enroll in subsequent phases.
+The November 2022 feature wave is being released in a phased manner. The current phase makes managed instances belonging to Dev/Test subscriptions eligible for the feature wave. 
 
 Existing eligible instances that were created before November 2022 can enroll in the feature wave immediately to unlock new benefits and features.
 
@@ -39,7 +39,7 @@ For more information, see [Frequently asked questions](frequently-asked-question
 
 ## November 2022 feature wave rollout
 
-The November 2022 feature wave is being released in a phased manner. The current phase makes managed instances belonging to [Dev/Test subscriptions](frequently-asked-questions-faq.yml#what-azure-offers-and-subscription-types-are-enrolled-in-the-november-2022-feature-wave) eligible for feature wave. 
+The November 2022 feature wave is being released in a phased manner. The current phase makes managed instances belonging to [Dev/Test subscriptions](frequently-asked-questions-faq.yml#what-azure-offers-and-subscription-types-are-enrolled-in-the-november-2022-feature-wave) eligible for the feature wave. 
 
 The enrollment experience is different for new instances and existing instances:
 
@@ -47,7 +47,7 @@ The enrollment experience is different for new instances and existing instances:
 - *Existing instances* will be enrolled in the November 2022 feature wave gradually and automatically. Eligible existing instances that were created before November 2022 can enroll in the feature wave immediately to unlock the new benefits and features.
 
 > [!NOTE]
-> Benefits and features can't be enabled individually on instances that haven't enrolled in the feature wave.
+> Benefits and features can't be enabled individually on managed instances that haven't enrolled in the feature wave.
 
 ## Enroll an existing instance
 

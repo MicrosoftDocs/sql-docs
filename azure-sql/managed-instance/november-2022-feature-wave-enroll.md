@@ -37,7 +37,7 @@ These new preview features were introduced in the wave:
 
 For more information, see [Frequently asked questions](frequently-asked-questions-faq.yml#november-2022-feature-wave).
 
-## Novemebr 2022 Feature wave rollout
+## November 2022 feature wave rollout
 
 The November 2022 feature wave is being released in a phased manner. The current phase makes managed instances belonging to [Dev/Test subscriptions](frequently-asked-questions-faq.yml#what-azure-offers-and-subscription-types-are-enrolled-in-the-november-2022-feature-wave) eligible for feature wave. 
 

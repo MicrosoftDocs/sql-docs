@@ -126,7 +126,7 @@ If you're using the Azure portal to create your secondary managed instance, you 
 To verify the subnet range of your primary virtual network, follow these steps:
 
 1. In the [Azure portal](https://portal.azure.com), navigate to your resource group and select the virtual network for your primary instance.  
-2. Select **Subnets** under **Settings** and note the **Address range** of the subnet created automatically during creation of your primary instance. The subnet IP address range of the virtual network for the secondary managed instance must not overlap with the IP address range of the subnet hosting primary instance. There should also be no indirect overlap of the IP address ranges between any other VNets they are peered with via local virtual network peering or any other means. 
+2. Select **Subnets** under **Settings** and note the **Address range** of the subnet created automatically during creation of your primary instance. There should be no indirect overlap of the IP address ranges between any VNets that are peered via local virtual network peering or any other means. 
 
 
    ![Primary subnet](./media/failover-group-add-instance-tutorial/verify-primary-subnet-range.png)
@@ -146,7 +146,7 @@ To create a virtual network, follow these steps:
     | **Subscription** | The subscription where your primary managed instance and resource group reside. |
     | **Region** | The location where you will deploy your secondary managed instance. |
     | **Subnet** | The name for your subnet. `default` is offered as a default name. |
-    | **Address range**| The IP address range for your subnet, such as `10.128.0.0/24`. This must not overlap with the IP address range used by the virtual network subnet of your primary managed instance, or any other virtual networks they are peered with. |
+    | **Address range**| The IP address range for your subnet, such as `10.128.0.0/24`. This must not overlap with the IP address range used by any other virtual networks they are peered with. |
 
 
     ![Secondary virtual network values](./media/failover-group-add-instance-tutorial/secondary-virtual-network.png)

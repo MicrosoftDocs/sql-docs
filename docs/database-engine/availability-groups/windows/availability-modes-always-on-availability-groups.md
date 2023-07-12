@@ -53,7 +53,7 @@ helpviewer_keywords:
  Typically, Node 04 as an asynchronous-commit replica, is deployed in a disaster recovery site. The fact that Nodes 01, 02, and 03 remain at asynchronous-commit mode after failing over to Node 04 helps prevent potential performance degradation in your availability group due to high network latency between the two sites.  
   
 ##  <a name="AsyncCommitAvMode"></a> Asynchronous-Commit Availability Mode  
- Under *asynchronous-commit mode*, the secondary replica never becomes synchronized with the primary replica. Though a given secondary database might catch up to the corresponding primary database, any secondary database could lag behind at any point. Asynchronous-commit mode can be useful in a disaster-recovery scenario in which the primary replica and the secondary replica are separated by a significant distance and where you do not want small errors to impact the primary replica or in situations where performance is more important than synchronized data protection. Furthermore, since the primary replica does not wait for acknowledgements from the secondary replica, problems on the secondary replica never impact the primary replica.  
+ Under *asynchronous-commit mode*, the secondary replica never becomes synchronized with the primary replica. Though a given secondary database might catch up to the corresponding primary database, any secondary database could lag behind at any point. Asynchronous-commit mode can be useful in a disaster-recovery scenario in which the primary replica and the secondary replica are separated by a significant distance and where you do not want small errors to impact the primary replica or in situations where performance is more important than synchronized data protection. Furthermore, since the primary replica does not wait for acknowledgments from the secondary replica, problems on the secondary replica never impact the primary replica.  
   
  An asynchronous-commit secondary replica attempts to keep up with the log records received from the primary replica. But asynchronous-commit secondary databases always remain unsynchronized and are likely to lag somewhat behind the corresponding primary databases. Typically the gap between an asynchronous-commit secondary database and the corresponding primary database is small. But the gap can become substantial if the server hosting the secondary replica is over loaded or the network is slow.  
   
@@ -75,7 +75,7 @@ helpviewer_keywords:
 ###  <a name="DisruptSync"></a> Factors That Disrupt Data Synchronization  
  Once all of its databases are synchronized, a secondary replica enters the HEALTHY state. The synchronized secondary replica will remain healthy unless one of the following occurs:  
   
--   A network or computer delay or glitch causes the session between the secondary replica and primary replica to timeout.  
+-   A network or computer delay or glitch causes the session between the secondary replica and primary replica to time out.  
   
     > [!NOTE]  
     >  For information about the session-time property of availability replicas, see [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
@@ -100,7 +100,7 @@ helpviewer_keywords:
   
 2.  Once a log record is written to the transaction log of the primary database, the transaction can be undone only if there is a failover at this point to a secondary that did not receive the log. The primary replica waits for confirmation from the synchronous-commit secondary replica.  
   
-3.  The secondary replica hardens the log and returns an acknowledgement to the primary replica.  
+3.  The secondary replica hardens the log and returns an acknowledgment to the primary replica.  
   
 4.  On receiving the confirmation from the secondary replica, the primary replica finishes the commit processing and sends a confirmation message to the client.  
   

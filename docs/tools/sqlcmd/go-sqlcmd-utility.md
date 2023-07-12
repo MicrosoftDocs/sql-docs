@@ -2,7 +2,7 @@
 title: go-sqlcmd utility
 description: The go-sqlcmd utility lets you enter Transact-SQL statements, system procedures, and script files using different modes.
 author: dlevy-msft
-ms.author: dlevy-msft
+ms.author: dlevy
 ms.reviewer: maghan, randolphwest
 ms.date: 07/11/2023
 ms.service: sql
@@ -19,7 +19,7 @@ The **go-sqlcmd** utility lets you enter Transact-SQL statements, system procedu
 **go-sqlcmd** is open source under the MIT license and available on [GitHub](https://github.com/microsoft/go-sqlcmd). As a CLI, **go-sqlcmd** is ideal for pipelines and edge applications as it has no additional dependencies and supports various environment configurations. The capabilities of **go-sqlcmd** expand beyond the ODBC-based [sqlcmd](sqlcmd-utility.md) to incorporate a [vertical output format](#enhancements) and extensive [Azure Active Directory authentication](#azure-active-directory-authentication) options.
 
 ###### Note
-Installing **go-sqlcmd** via a package manager will replace [sqlcmd](sqlcmd-utility.md) with **go-sqlcmd**. Any current command line sessions will need to be closed and reopened for this take to effect. [sqlcmd](sqlcmd-utility.md) will not be removed and can still be used by specifying the full path to the executable. 
+Installing **go-sqlcmd** via a package manager will replace [sqlcmd](sqlcmd-utility.md) with **go-sqlcmd**. Any current command line sessions will need to be closed and reopened for this take to effect. [sqlcmd](sqlcmd-utility.md) will not be removed and can still be used by specifying the full path to the executable. You can also update your PATH variable to indicate which will take precedence. To do so in Windows 11, open System settings and go to About. Select Advanced system settings. When System Properties opens, select the Environment Variables button. In the lower half, under System variables, select Path and then the Edit button. If the location **go-sqlcmd** is saved to (C:\Program Files\SqlCmd is default) is listed before C:\Program Files\Microsoft SQL Server\<version>\Tools\Binn then **go-sqlcmd** will be used. Simply reverse the order to make the [sqlcmd](sqlcmd-utility.md) the default again.
 
 Please review the [breaking changes from sqlcmd](#breaking-changes-from-sqlcmd) section below before installing via a package manager to ensure existing scripts will not be impacted. If you're unsure, consider the direct download option. The direct download option allows the **go-sqlcmd** executable to be downloaded to the directory of your choice. You may then run the **go-sqlcmd** from that directory or by specifying the full path to the executable. This option does not update any system settings.
 

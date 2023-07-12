@@ -10387,17 +10387,24 @@ items:
       href: /azure/azure-sql/managed-instance/sql-managed-instance-paas-overview
     - name: SQL Server on Azure VMs >
       href: /azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview
-
 - name: Azure Arc-enabled SQL Server
   items:
+    - name: Azure Arc-enabled SQL Server
+      href: sql-server/azure-arc/index.yml
     - name: Overview
-      href: sql-server/azure-arc/overview.md
-    - name: Release notes
-      href: sql-server/azure-arc/release-notes.md
-    - name: Test Arc-enabled SQL Server using an Azure VM
-      href: sql-server/azure-arc/plan-evaluate-on-azure-virtual-machine.md
+      items:
+      - name: What is Azure Arc-enabled SQL Server?
+        href: sql-server/azure-arc/overview.md
+      - name: Release notes
+        href: sql-server/azure-arc/release-notes.md
+    - name: Quickstarts
+      items:
+      - name: Deploy Azure Arc-enabled SQL Server on Azure VM
+        href: sql-server/azure-arc/quick-enabled-sql-server.md
     - name: How-to guides
       items:
+      - name: Test Arc-enabled SQL Server on Azure VM
+        href: sql-server/azure-arc/plan-evaluate-on-azure-virtual-machine.md
       - name: Deploy
         items:
         - name: Prerequisites

@@ -191,7 +191,7 @@ The following requirements exist for SELECT permissions to be sufficient to run 
 - Users must have permissions on all columns in the statistics object
 - Users must have permission on all columns in a filter condition (if one exists)
 - The table cannot have a row-level security policy.
-- If any of the columns within a statistics object is masked with Dynamic Data Masking rules, in addition to the `SELECT` permission, the user must have the `UNMASK` permission.
+- If any of the columns within a statistics object is masked with Dynamic Data Masking rules, in addition to the `SELECT` permission, the user must have the `UNMASK` permission , or db_ddladmin role.
 
 In versions before [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1, the user must own the table or the user must be a member of the `sysadmin` fixed server role, the `db_owner` fixed database role, or the `db_ddladmin` fixed database role.
 

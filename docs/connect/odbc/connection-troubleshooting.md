@@ -3,7 +3,7 @@ title: "Connection Encryption Troubleshooting"
 description: "Learn how to troubleshoot common connection issues related to connection encryption."
 author: David-Engel
 ms.author: v-davidengel
-ms.date: "03/14/2022"
+ms.date: "07/31/2023"
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual

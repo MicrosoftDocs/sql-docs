@@ -3,8 +3,7 @@ title: "Ubuntu: Install SQL Server on Linux"
 description: This quickstart shows how to install SQL Server 2017 or SQL Server 2019 on Ubuntu and then create and query a database with sqlcmd.
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: randolphwest
-ms.date: 01/23/2023
+ms.date: 07/11/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -35,7 +34,7 @@ For more information on supported platforms, see [Release notes for SQL Server 2
 
 In this quickstart, you install [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] on Ubuntu 20.04. Then you can connect with **sqlcmd** to create your first database and run queries.
 
-For more information on supported platforms, see [Release notes for [!INCLUDE[sssql22](../includes/sssql22-md.md)] on Linux](sql-server-linux-release-notes-2022.md).
+For more information on supported platforms, see [Release notes for [!INCLUDE [sssql22](../includes/sssql22-md.md)] on Linux](sql-server-linux-release-notes-2022.md).
 
 ::: moniker-end
 
@@ -251,151 +250,6 @@ At this point, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is run
 
 To create a database, you need to connect with a tool that can run Transact-SQL statements on [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. The following steps install the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] command-line tools: [**sqlcmd**](../tools/sqlcmd/sqlcmd-utility.md) and [**bcp**](../tools/bcp-utility.md).
 
-Use the following steps to install the **mssql-tools** on Ubuntu. If **curl** isn't installed, you can run this code:
-
-```bash
-sudo apt-get update
-sudo apt install curl
-```
-
-<!--SQL Server 2017 on Linux-->
-::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
-
-1. Import the public repository GPG keys.
-
-   ```bash
-   curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
-   ```
-
-1. Register the Ubuntu repository.
-
-   ```bash
-   curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
-   ```
-
-1. Update the sources list and run the installation command with the `unixODBC` developer package. For more information, see [Install the Microsoft ODBC driver for SQL Server (Linux)](../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
-
-   ```bash
-   sudo apt-get update
-   sudo apt-get install mssql-tools unixodbc-dev
-   ```
-
-   You can update to the latest version of **mssql-tools** using the following commands:
-
-   ```bash
-   sudo apt-get update
-   sudo apt-get install mssql-tools
-   ```
-
-1. For convenience, add `/opt/mssql-tools/bin/` to your `PATH` environment variable, to make **sqlcmd** or **bcp** accessible from the bash shell.
-
-   For interactive sessions, modify the `PATH` environment variable in your `~/.bash_profile` file with the following command:
-
-   ```bash
-   echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
-   ```
-
-   For non-interactive sessions, modify the `PATH` environment variable in your `~/.bashrc` file with the following command:
-
-   ```bash
-   echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
-   source ~/.bashrc
-   ```
+[!INCLUDE [odbc-ubuntu](includes/odbc-ubuntu.md)]
 
 [!INCLUDE [Connect, create, and query data](includes/quickstart-connect-query.md)]
-
-::: moniker-end
-<!--SQL Server 2019 on Linux-->
-::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15"
-
-1. Import the public repository GPG keys.
-
-   ```bash
-   curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
-   ```
-
-1. Register the Ubuntu repository.
-
-   ```bash
-   curl https://packages.microsoft.com/config/ubuntu/20.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
-   ```
-
-1. Update the sources list and run the installation command with the `unixODBC` developer package. For more information, see [Install the Microsoft ODBC driver for SQL Server (Linux)](../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
-
-   ```bash
-   sudo apt-get update
-   sudo apt-get install mssql-tools unixodbc-dev
-   ```
-
-   You can update to the latest version of **mssql-tools** using the following commands:
-
-   ```bash
-   sudo apt-get update
-   sudo apt-get install mssql-tools
-   ```
-
-1. For convenience, add `/opt/mssql-tools/bin/` to your `PATH` environment variable, to make **sqlcmd** or **bcp** accessible from the bash shell.
-
-   For interactive sessions, modify the `PATH` environment variable in your `~/.bash_profile` file with the following command:
-
-   ```bash
-   echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
-   ```
-
-   For non-interactive sessions, modify the `PATH` environment variable in your `~/.bashrc` file with the following command:
-
-   ```bash
-   echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
-   source ~/.bashrc
-   ```
-
-[!INCLUDE [Connect, create, and query data](includes/quickstart-connect-query.md)]
-
-::: moniker-end
-<!--SQL Server 2022 on Linux-->
-::: moniker range=">= sql-server-linux-ver16 || >= sql-server-ver16"
-
-1. Import the public repository GPG keys.
-
-   ```bash
-   curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
-   ```
-
-1. Register the Ubuntu repository.
-
-   ```bash
-   curl https://packages.microsoft.com/config/ubuntu/20.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
-   ```
-
-1. Update the sources list and run the installation command with the `unixODBC` developer package. For more information, see [Install the Microsoft ODBC driver for SQL Server (Linux)](../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
-
-   ```bash
-   sudo apt-get update
-   sudo apt-get install mssql-tools unixodbc-dev
-   ```
-
-   You can update to the latest version of **mssql-tools** using the following commands:
-
-   ```bash
-   sudo apt-get update
-   sudo apt-get install mssql-tools
-   ```
-
-1. For convenience, add `/opt/mssql-tools/bin/` to your `PATH` environment variable, to make **sqlcmd** or **bcp** accessible from the bash shell.
-
-   For interactive sessions, modify the `PATH` environment variable in your `~/.bash_profile` file with the following command:
-
-   ```bash
-   echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
-   ```
-
-   For non-interactive sessions, modify the `PATH` environment variable in your `~/.bashrc` file with the following command:
-
-   ```bash
-   echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
-   source ~/.bashrc
-   ```
-
-[!INCLUDE [Connect, create, and query data](includes/quickstart-connect-query.md)]
-
-::: moniker-end

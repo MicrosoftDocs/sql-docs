@@ -64,7 +64,7 @@ Change data capture provides historical change information for a user table by c
 As shown in the following illustration, the changes that were made to user tables are captured in corresponding change tables. These change tables provide a historical view of the changes over time. The [change data capture](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md) functions that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides enable the change data to be consumed easily and systematically.
 
 
-:::image type="content" source="media/track-data-changes-sql-server/concept-change-data-capture.gif" alt-text="Diagram showing the concept of change data capture.":::
+:::image type="content" source="media/track-data-changes-sql-server/concept-change-data-capture.png" alt-text="Diagram showing the concept of change data capture.":::
 
 ### Security model
 
@@ -151,7 +151,7 @@ You can use [sys.sp_cdc_disable_db](../../relational-databases/system-stored-pro
 
  The following illustration shows a synchronization scenario that would benefit by using change tracking. In the scenario, an application requires the following information: all the rows in the table that were changed since the last time that the table was synchronized, and only the current row data. Because a synchronous mechanism is used to track the changes, an application can perform two-way synchronization and reliably detect any conflicts that might have occurred.
 
- :::image type="content" source="media/track-data-changes-sql-server/concept-change-tracking.gif" alt-text="Diagram showing the concept of change tracking.":::
+ :::image type="content" source="media/track-data-changes-sql-server/concept-change-tracking.png" alt-text="Diagram showing the concept of change tracking.":::
 
 ### Change tracking and Sync Services for ADO.NET
 

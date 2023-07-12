@@ -2,8 +2,8 @@
 title: Managed identity in Azure AD for Azure SQL
 titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Learn about system assigned and user assigned managed identities in Azure AD (Azure AD) for Azure SQL Database and SQL Managed Instance.
-author: GithubMirek
-ms.author: mireks
+author: nofield
+ms.author: nofield
 ms.reviewer: vanto, wiassaf
 ms.date: 10/11/2022
 ms.service: sql-db-mi

@@ -2,8 +2,8 @@
 title: "Tutorial: Add SQL Managed Instance to a failover group"
 titleSuffix: Azure SQL Managed Instance
 description: In this tutorial, learn to create a failover group between a primary and secondary Azure SQL Managed Instance.
-author: rajeshsetlem
-ms.author: rsetlem
+author: Stralle
+ms.author: strrodic
 ms.reviewer: mathoma
 ms.date: 04/20/2023
 ms.service: sql-managed-instance

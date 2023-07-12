@@ -1,8 +1,8 @@
 ---
 title: "Plan for secure enclaves in Azure SQL Database"
 description: Plan the deployment of Always Encrypted with secure enclaves in Azure SQL Database.
-author: jaszymas
-ms.author: jaszymas
+author: Pietervanhove
+ms.author: pivanho
 ms.reviewer: vanto
 ms.date: 02/15/2023
 ms.service: sql-database

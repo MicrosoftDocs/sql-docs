@@ -18,7 +18,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-20
 This article describes how the `FOR JSON` clause of a SQL Server `SELECT` statement escapes special characters and represents control characters in the JSON output.
 
 > [!IMPORTANT]  
-> This article describes the built-in support for JSON in Microsoft SQL Server. For general info about escaping and encoding in JSON, see Section 2.5 of the [JSON RFC](https://www.ietf.org/rfc/rfc4627.txt).
+> This article describes the built-in support for JSON in Microsoft SQL Server. For general information about escaping and encoding in JSON, see Section 2.5 of the [JSON RFC](https://www.ietf.org/rfc/rfc4627.txt).
 
 ## Escape of special characters
 

@@ -98,9 +98,13 @@ After you install the agent and configure it to connect to Azure Arc-enabled ser
 
 ## Connected machine agent enables SQL Server for Arc
 
-After you Arc enable the server, if one or more SQL Server instances are on it, the Arc agent will enroll the SQL Server instances in Azure Arc.
+After your server is connected to Azure Arc, if one or more SQL Server instances are on it, the Arc agent automatically enrolls any SQL Server instances in Azure Arc.
 
-## Verify the Azure Arc-enabled SQL Server in Azure
+## Validate your Arc-enabled SQL Server resources
+
+Go to **Azure Arc > SQL Server** and open the newly registered Arc-enabled SQL Server resource to validate.
+
+:::image type="content" source="media/join/validate-sql-server-azure-arc.png" alt-text="Screenshot of validating a connected SQL Server.":::
 
 ## Next steps
 

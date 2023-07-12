@@ -259,3 +259,5 @@ The following values define the security modes for these stored procedures:
 
 
 ## Next steps
+
+To learn more, review [SQL Server Replication](sql-server-replication.md) and [Azure AD authentication for SQL Server](../security/authentication-access/azure-ad-authentication-sql-server-overview.md)

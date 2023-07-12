@@ -66,7 +66,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
 `[ @subscriber = ] 'subscriber'`
- Is the name of the Subscriber instance or the name of the AG listener if the subscriber database is a availability group. *subscriber* is **sysname**, with a default of NULL. 
+ Is the name of the Subscriber instance or the name of the AG listener if the subscriber database is part of an availability group. *subscriber* is **sysname**, with a default of NULL. 
 
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "

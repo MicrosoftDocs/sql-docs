@@ -70,8 +70,8 @@ You can choose one of the following storage redundancies for backups:
 
   The result is:
   
-  * Three synchronous copies in the primary region in a single availability zone.
-  * Three synchronous copies in the paired region in a single availability zone that were copied over from the primary region to the secondary region asynchronously.
+  - Three synchronous copies in the primary region within a single availability zone.
+  - Three synchronous copies in the paired region within a single availability zone that were copied over from the primary region to the secondary region asynchronously.
 
    :::image type="content" source="../database/media/automated-backups-overview/multi-paired-grs.svg" alt-text="Diagram showing the geo-redundant storage (GRS) option.":::
 
@@ -291,8 +291,8 @@ If the default retention doesn't meet your compliance requirements, you can chan
 
 ## Next steps
 
-* To learn about the other SQL Managed Instance business continuity solutions, see [Business continuity overview](business-continuity-high-availability-disaster-recover-hadr-overview.md).
-* For information about how to configure, manage, and restore from long-term retention of automated backups in Azure Blob Storage, see [Manage long-term backup retention by using the Azure portal](long-term-backup-retention-configure.md).
-* For more information about how to restore a database to a point in time by using the Azure portal, see [Recover using automated database backups](recovery-using-backups.md).
-* To learn all about backup storage consumption on Azure SQL Managed Instance, see [Backup storage consumption on SQL Managed Instance explained](https://aka.ms/mi-backup-explained).
-* To learn how to fine-tune backup storage retention and costs for SQL Managed Instance, see [Fine tuning backup storage costs on SQL Managed Instance](https://aka.ms/mi-backup-tuning).
+- [Business continuity overview](business-continuity-high-availability-disaster-recover-hadr-overview.md)
+- [Manage long-term backup retention by using the Azure portal](long-term-backup-retention-configure.md)
+- [Recover using automated database backups](recovery-using-backups.md)
+- [Backup storage consumption on SQL Managed Instance explained](https://aka.ms/mi-backup-explained)
+- [Fine tuning backup storage costs on SQL Managed Instance](https://aka.ms/mi-backup-tuning)

@@ -5,7 +5,7 @@ description: Learn how Azure SQL Managed Instance automatically backs up all dat
 author: Stralle
 ms.author: strrodic
 ms.reviewer: mathoma, wiassaf, danil
-ms.date: 07/20/2022
+ms.date: 07/12/2023
 ms.service: sql-managed-instance
 ms.subservice: backup-restore
 ms.topic: conceptual

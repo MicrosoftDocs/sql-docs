@@ -206,9 +206,13 @@ This release introduces new features and improvements for performance, resource 
 
 This release introduces new features and improvements for accessibility, security, reliability, and bug fixes. For specific updates, see [What's new in SQL Server Reporting Services (SSRS)](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
 
+## SQL Server Integration Services
+
+For changes related to SQL Server Integration Services, see [Integration Services Backward Compatibility](../integration-services/integration-services-backward-compatibility.md).
+
 ## Other services
 
-This release does not add features for SQL Server Integration Services or SQL Server Master Data Services.
+This release does not add features for SQL Server Master Data Services.
 
 ## See also
 

@@ -64,7 +64,7 @@ To disable the Azure VM Guest agent:
 
 ## Connect the SQL Server to Azure Arc
 
-Connect the instance of SQL Server to Azure Arc. Follow the steps in [Connect your SQL Server to Azure Arc](connect.md).
+Connect the instance of SQL Server to Azure Arc. Follow the steps in [Quickstart: Connect SQL Server machines to Azure Arc](quick-enabled-sql-server.md).
 
 ## Clean up your evaluation environment
 

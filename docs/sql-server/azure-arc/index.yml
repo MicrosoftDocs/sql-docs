@@ -26,7 +26,7 @@ landingContent:
             url: /azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-servers/eslz-identity-and-access-management
  
  # Card
-  - title: Connect machines to Azure
+  - title: Arc-enable SQL Server instances
     linkLists: 
       - linkListType: concept
         links:

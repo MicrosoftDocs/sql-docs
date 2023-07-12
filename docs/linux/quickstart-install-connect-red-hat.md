@@ -4,8 +4,7 @@ titleSuffix: SQL Server
 description: This quickstart shows how to install SQL Server on Red Hat Enterprise Linux (RHEL) and then create and query a database with sqlcmd.
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: randolphwest
-ms.date: 10/20/2022
+ms.date: 07/11/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -36,7 +35,7 @@ For more information on supported platforms, see [Release notes for SQL Server 2
 
 In this quickstart, you install [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] on Red Hat Enterprise Linux (RHEL) 8.x. Then you can connect with **sqlcmd** to create your first database and run queries.
 
-For more information on supported platforms, see [Release notes for [!INCLUDE[sssql22](../includes/sssql22-md.md)] on Linux](sql-server-linux-release-notes-2022.md).
+For more information on supported platforms, see [Release notes for [!INCLUDE [sssql22](../includes/sssql22-md.md)] on Linux](sql-server-linux-release-notes-2022.md).
 
 ::: moniker-end
 
@@ -51,7 +50,7 @@ If you choose to have a pre-installed SQL Server VM on RHEL ready to run your pr
 
 You can create your VM based on the following Azure Marketplace image:
 
-- [RHEL 8.0](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-rhel8)
+- [RHEL 8.x](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-rhel8)
 
 When you use the above marketplace image, you avoid the installation step, and can directly configure the instance by providing the SKU and the `sa` password needed to get started with SQL Server. SQL Server Azure VMs deployed on RHEL using the above Marketplace images, are fully supported by both Microsoft and Red Hat.
 
@@ -65,7 +64,7 @@ sudo /opt/mssql/bin/mssql-conf setup
 
 ## Prerequisites
 
-You must have a RHEL 8.0 - 8.6 machine with **at least 2 GB** of memory.
+You must have a RHEL 8.x machine with **at least 2 GB** of memory.
 
 To install Red Hat Enterprise Linux on your own machine, go to [https://access.redhat.com/products/red-hat-enterprise-linux/evaluation](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation). You can also create RHEL virtual machines in Azure. See [Create and Manage Linux VMs with the Azure CLI](/azure/virtual-machines/linux/tutorial-manage-vm), and use `--image RHEL` in the call to `az vm create`.
 
@@ -239,37 +238,6 @@ At this point, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is run
 
 To create a database, you need to connect with a tool that can run Transact-SQL statements on [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. The following steps install the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] command-line tools: [sqlcmd](../tools/sqlcmd/sqlcmd-utility.md) and [bcp](../tools/bcp-utility.md).
 
-1. Download the Red Hat repository configuration file.
-
-   ```bash
-   sudo curl -o /etc/yum.repos.d/msprod.repo https://packages.microsoft.com/config/rhel/8/prod.repo
-   ```
-
-1. If you had a previous version of **mssql-tools** installed, remove any older unixODBC packages.
-
-   ```bash
-   sudo yum remove unixODBC-utf16 unixODBC-utf16-devel
-   ```
-
-1. Run the following commands to install **mssql-tools** with the unixODBC developer package. For more information, see [Install the Microsoft ODBC driver for SQL Server (Linux)](../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
-
-   ```bash
-   sudo yum install -y mssql-tools unixODBC-devel
-   ```
-
-1. For convenience, add `/opt/mssql-tools/bin/` to your `PATH` environment variable, to make **sqlcmd** or **bcp** accessible from the bash shell.
-
-   For interactive sessions, modify the `PATH` environment variable in your `~/.bash_profile` file with the following command:
-
-   ```bash
-   echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
-   ```
-
-   For non-interactive sessions, modify the `PATH` environment variable in your `~/.bashrc` file with the following command:
-
-   ```bash
-   echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
-   source ~/.bashrc
-   ```
+[!INCLUDE [odbc-redhat](includes/odbc-redhat.md)]
 
 [!INCLUDE [Connect, create, and query data](includes/quickstart-connect-query.md)]

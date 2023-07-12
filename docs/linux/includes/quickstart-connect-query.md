@@ -1,8 +1,7 @@
 ---
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: randolphwest
-ms.date: 05/20/2022
+ms.date: 07/11/2023
 ms.service: sql
 ms.subservice: linux
 ---
@@ -15,6 +14,9 @@ The following steps use **sqlcmd** to locally connect to your new SQL Server ins
    ```bash
    sqlcmd -S localhost -U sa -P '<YourPassword>'
    ```
+
+   > [!NOTE]  
+   > Newer versions of **sqlcmd** are secure by default. For more information about connection encryption, see [sqlcmd utility](../../tools/sqlcmd/sqlcmd-utility.md) for Windows, and [Connecting with sqlcmd](../../connect/odbc/linux-mac/connecting-with-sqlcmd.md) for Linux and macOS. If the connection doesn't succeed, you can add the `-No` option to **sqlcmd** to specify that encryption is optional, not mandatory.
 
    You can omit the password on the command line to be prompted to enter it.
 
@@ -120,13 +122,13 @@ After installing SQL Server on Linux, review the best practices for configuring 
 In addition to **sqlcmd**, you can use the following cross-platform tools to manage SQL Server:
 
 | Tool | Description |
-| ---- | ----------- |
+| --- | --- |
 | [Azure Data Studio](../../azure-data-studio/index.yml) | A cross-platform GUI database management utility. |
 | [Visual Studio Code](../../tools/visual-studio-code/sql-server-develop-use-vscode.md) | A cross-platform GUI code editor that run Transact-SQL statements with the mssql extension. |
 | [PowerShell Core](../sql-server-linux-manage-powershell-core.md) | A cross-platform automation and configuration tool based on cmdlets. |
 | [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | A cross-platform command-line interface for running Transact-SQL commands. |
 
-## Connecting from Windows
+## Connect from Windows
 
 SQL Server tools on Windows connect to SQL Server instances on Linux in the same way they would connect to any remote SQL Server instance.
 

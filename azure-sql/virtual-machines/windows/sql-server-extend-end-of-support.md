@@ -1,10 +1,10 @@
 ---
 title: Extend support for SQL Server
-description: Extend support for SQL Server 2008, 2008 R2, and 2012 by migrating your SQL Server instance to Azure, or purchasing extended support to keep instances on-premises.
+description: Extend support for SQL Server 2012 by migrating your SQL Server instance to Azure, or purchasing extended support to keep instances on-premises.
 author: bluefooted
 ms.author: pamela
 ms.reviewer: mathoma, randolphwest
-ms.date: 03/27/2023
+ms.date: 07/10/2023
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: conceptual
@@ -16,9 +16,6 @@ tags: azure-service-management
 
 SQL Server 2012 has reached the [end of its support (EOS) life cycle](/lifecycle/products/microsoft-sql-server-2012). Because many customers are still using this version, we're providing several options to continue getting support. You can migrate your on-premises SQL Server instances to Azure virtual machines (VMs), migrate to Azure SQL Database, or stay on-premises and purchase extended security updates.
 
-> [!TIP]  
-> Customers on SQL Server 2008 and SQL Server 2008 R2 can migrate to Azure SQL Server VMs if they wish to continue receiving Extended Security Updates, until [July 12, 2023](https://www.microsoft.com/windows-server/extended-security-updates).
-
 Unlike with a managed instance, migrating to an Azure VM does not require recertifying your applications. And unlike with staying on-premises, you'll receive free extended security patches by migrating to an Azure VM.
 
 The rest of this article provides considerations for migrating your SQL Server instance to an Azure VM.
@@ -28,6 +25,8 @@ For more information about end of support options, see [End of support](/sql/sql
 ## Provisioning
 
 There is a pay-as-you-go **SQL Server 2012 on Windows Server 2012 R2** image available on Azure Marketplace.
+
+[!INCLUDE[appliesto-sqlvm](../../includes/virtual-machines-2008-end-of-support.md)]
 
 Customers who are on an earlier version of SQL Server will need to either self-install or upgrade to SQL Server 2012. Likewise, customers on an earlier version of Windows Server will need to either deploy their VM from a custom VHD or upgrade to Windows Server 2012 R2.
 

@@ -35,7 +35,7 @@ sections:
       - question: |
           What SQL Server virtual machine gallery images are available? 
         answer: |
-             Azure maintains virtual machine images for all supported major releases of SQL Server on all editions for both Windows and Linux. For more information, see the complete list of [Windows VM images](sql-server-on-azure-vm-iaas-what-is-overview.md#payasyougo) and [Linux VM images](../linux/sql-server-on-linux-vm-what-is-iaas-overview.md#create).
+             Azure maintains virtual machine images for all supported major releases of SQL Server on all editions for both Windows and Linux. For more information, see the complete list of [Windows VM images](sql-server-on-azure-vm-iaas-what-is-overview.md#licensing) and [Linux VM images](../linux/sql-server-on-linux-vm-what-is-iaas-overview.md#create).
           
       - question: |
           Are existing SQL Server virtual machine gallery images updated?
@@ -113,7 +113,7 @@ sections:
       - question: |
           How can I install my licensed copy of SQL Server on an Azure VM?
         answer: |
-             There are three ways to do this. If you're an Enterprise Agreement (EA) customer, you can provision one of the [virtual machine images that support licenses](sql-server-on-azure-vm-iaas-what-is-overview.md#BYOL), which is also known as bring-your-own-license (BYOL). If you have [Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default), you can enable the [Azure Hybrid Benefit](licensing-model-azure-hybrid-benefit-ahb-change.md) on an existing pay-as-you-go (PAYG) image. Or you can copy the SQL Server installation media to a Windows Server VM, and then install SQL Server on the VM. Be sure to register your SQL Server VM with the [extension](sql-agent-extension-manually-register-single-vm.md) for features such as portal management, automated backup and automated patching. 
+             There are three ways to do this. If you're an Enterprise Agreement (EA) customer, you can provision one of the [virtual machine images](sql-server-on-azure-vm-iaas-what-is-overview.md#licensing). If you have [Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default), you can enable the [Azure Hybrid Benefit](licensing-model-azure-hybrid-benefit-ahb-change.md) on an existing pay-as-you-go (PAYG) image. Or you can copy the SQL Server installation media to a Windows Server VM, and then install SQL Server on the VM. Be sure to register your SQL Server VM with the [extension](sql-agent-extension-manually-register-single-vm.md) for features such as portal management, automated backup and automated patching. 
           
           
       - question: |

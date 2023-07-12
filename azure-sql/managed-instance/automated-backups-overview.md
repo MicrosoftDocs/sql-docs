@@ -37,9 +37,9 @@ Database backups are an essential part of any business continuity and disaster r
 
 Azure SQL Managed Instance creates:
 
-* [Full backups](/sql/relational-databases/backup-restore/full-database-backups-sql-server) every week.
-* [Differential backups](/sql/relational-databases/backup-restore/differential-backups-sql-server) every 12 hours.
-* [Transaction log backups](/sql/relational-databases/backup-restore/transaction-log-backups-sql-server) every ~10 minutes.
+- [Full backups](/sql/relational-databases/backup-restore/full-database-backups-sql-server) every week.
+- [Differential backups](/sql/relational-databases/backup-restore/differential-backups-sql-server) every 12 hours.
+- [Transaction log backups](/sql/relational-databases/backup-restore/transaction-log-backups-sql-server) every ~10 minutes.
 
 The frequency of transaction log backups depends on the compute size and the amount of database activity. Transaction logs are taken approximately every 10 minutes, but can vary. When you restore a database, the service determines which full, differential, and transaction log backups need to be restored, in their respective order.
 
@@ -58,15 +58,15 @@ You can configure backup storage redundancy when you create your instance, and y
 
 You can choose one of the following storage redundancies for backups:
 
-* **Locally redundant storage (LRS)**: Copies your backups synchronously three times within a single physical location in the primary region. LRS is the least expensive replication option, but we don't recommend it for applications that require high availability or durability.
+- **Locally redundant storage (LRS)**: Copies your backups synchronously three times within a single physical location in the primary region. LRS is the least expensive replication option, but we don't recommend it for applications that require high availability or durability.
 
    :::image type="content" source="../database/media/automated-backups-overview/multi-paired-lrs.svg" alt-text="Diagram showing the locally-redundant storage (LRS) option.":::
 
-* **Zone-redundant storage (ZRS)**: Copies your backups synchronously across three Azure availability zones in the primary region. It's currently available in [certain regions](/azure/storage/common/storage-redundancy#zone-redundant-storage).
+- **Zone-redundant storage (ZRS)**: Copies your backups synchronously across three Azure availability zones in the primary region. It's currently available in [certain regions](/azure/storage/common/storage-redundancy#zone-redundant-storage).
 
    :::image type="content" source="../database/media/automated-backups-overview/multi-paired-zrs.svg" alt-text="Diagram showing the zone-redundant storage (ZRS) option.":::
 
-* **Geo-redundant storage (GRS)**: Copies your backups synchronously three times within a single physical location in the primary region by using LRS. Then it copies your data asynchronously three times to a single physical location in the [paired](/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies) secondary region.
+- **Geo-redundant storage (GRS)**: Copies your backups synchronously three times within a single physical location in the primary region by using LRS. Then it copies your data asynchronously three times to a single physical location in the [paired](/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies) secondary region.
 
   The result is:
   
@@ -75,24 +75,24 @@ You can choose one of the following storage redundancies for backups:
 
    :::image type="content" source="../database/media/automated-backups-overview/multi-paired-grs.svg" alt-text="Diagram showing the geo-redundant storage (GRS) option.":::
 
-* **Geo-zone-redundant storage (GZRS)**: Combines the high availability provided by redundancy across availability zones with protection from regional outages provided by geo-replication. Data in a GZRS account is copied across three Azure availability zones in the primary region. The data is also replicated to a secondary geographic region for protection from regional disasters. In that region, you also have three synchronous copies in a single availability zone that were copied over from the primary region to the secondary region asynchronously.
+- **Geo-zone-redundant storage (GZRS)**: Combines the high availability provided by redundancy across availability zones with protection from regional outages provided by geo-replication. Data in a GZRS account is copied across three Azure availability zones in the primary region. The data is also replicated to a secondary geographic region for protection from regional disasters. In that region, you also have three synchronous copies in a single availability zone that were copied over from the primary region to the secondary region asynchronously.
 
    :::image type="content" source="media/automated-backups-overview/multi-paired-gzrs.svg" alt-text="Diagram showing the geo-zone-redundant storage (GZRS) option.":::
 
 > [!WARNING]
 >
-> * [Geo-restore](recovery-using-backups.md#geo-restore) is disabled as soon as a database is updated to use locally redundant or zone-redundant storage.
-> * The storage redundancy diagrams all show regions with multiple availability zones (multi-az). However, there are [some regions](/azure/storage/common/redundancy-regions-zrs) which provide only a single availability zone and do not support ZRS or GZRS.
+> - [Geo-restore](recovery-using-backups.md#geo-restore) is disabled as soon as a database is updated to use locally redundant or zone-redundant storage.
+> - The storage redundancy diagrams all show regions with multiple availability zones (multi-az). However, there are [some regions](/azure/storage/common/redundancy-regions-zrs) which provide only a single availability zone and do not support ZRS or GZRS.
 
 ## Backup usage
 
 You can use these backups to:
 
-* [Restore an existing database to a point in time](recovery-using-backups.md#point-in-time-restore) in the past within the retention period by using the Azure portal, Azure PowerShell, the Azure CLI, or the REST API. This operation creates a new database on either the same instance as the original database or a different instance in the same subscription and region. It uses a different name to avoid overwriting the original database. You can also use the Azure portal to restore your point-in-time database backup to an instance in a different subscription from your source instance.
+- [Restore an existing database to a point in time](recovery-using-backups.md#point-in-time-restore) in the past within the retention period by using the Azure portal, Azure PowerShell, the Azure CLI, or the REST API. This operation creates a new database on either the same instance as the original database or a different instance in the same subscription and region. It uses a different name to avoid overwriting the original database. You can also use the Azure portal to restore your point-in-time database backup to an instance in a different subscription from your source instance.
 
   After the restore finishes, you can delete the original database. Alternatively, you can both [rename](/sql/relational-databases/databases/rename-a-database) the original database and rename the restored database to the original database name.
-* [Restore a deleted database to a point in time](recovery-using-backups.md#deleted-database-restore) within the retention period, including the time of deletion. You can restore the deleted database to the same managed instance where the backup was taken, or another instance in the same, or different subscription to the source instance. Before you delete a database, the service takes a final transaction log backup to prevent any data loss.
-* [Restore a database to another geographic region](recovery-using-backups.md#geo-restore). Geo-restore allows you to recover from a geographic disaster when you can't access your database or backups in the primary region. It creates a new database on any existing managed instance in any Azure region.
+- [Restore a deleted database to a point in time](recovery-using-backups.md#deleted-database-restore) within the retention period, including the time of deletion. You can restore the deleted database to the same managed instance where the backup was taken, or another instance in the same, or different subscription to the source instance. Before you delete a database, the service takes a final transaction log backup to prevent any data loss.
+- [Restore a database to another geographic region](recovery-using-backups.md#geo-restore). Geo-restore allows you to recover from a geographic disaster when you can't access your database or backups in the primary region. It creates a new database on any existing managed instance in any Azure region.
    > [!IMPORTANT]
    > Geo-restore is available only for databases that are configured with geo-redundant backup storage. If you're not currently using geo-replicated backups for a database, you can change this by [configuring backup storage redundancy](automated-backups-change-settings.md#configure-backup-storage-redundancy).
 - [Restore a database from a long-term backup](../database/long-term-retention-overview.md) of a database, if the database has a configured LTR policy. LTR allows you to [restore an older version of the database](long-term-backup-retention-configure.md) by using the Azure portal, the Azure CLI, or Azure PowerShell to satisfy a compliance request or to run an old version of the application. For more information, review the [Long-term retention overview](../database/long-term-retention-overview.md) page.
@@ -165,12 +165,12 @@ Azure SQL Managed Instance computes your total used backup storage as a cumulati
 
 Backup storage consumption up to the maximum data size for a database is not charged. Excess backup storage consumption will depend on the workload and maximum size of the individual databases. Consider some of the following tuning techniques to reduce your backup storage consumption:
 
-* Reduce the database [backup retention period](automated-backups-change-settings.md#change-short-term-retention-policy) to the minimum for your needs.
-* Avoid doing large write operations, like index rebuilds, more frequently than you need to.
-* For large data load operations, consider using [clustered columnstore indexes](/sql/relational-databases/indexes/columnstore-indexes-overview) and following related [best practices](/sql/relational-databases/indexes/columnstore-indexes-data-loading-guidance). Also consider reducing the number of non-clustered indexes.
-* In the General Purpose service tier, the provisioned data storage is less expensive than the price of the backup storage. If you have continually high excess backup storage costs, you might consider increasing data storage to save on the backup storage.
-* Use `tempdb` instead of permanent tables in your application logic for storing temporary results or transient data.
-* Use locally redundant backup storage whenever possible (for example, dev/test environments).
+- Reduce the database [backup retention period](automated-backups-change-settings.md#change-short-term-retention-policy) to the minimum for your needs.
+- Avoid doing large write operations, like index rebuilds, more frequently than you need to.
+- For large data load operations, consider using [clustered columnstore indexes](/sql/relational-databases/indexes/columnstore-indexes-overview) and following related [best practices](/sql/relational-databases/indexes/columnstore-indexes-data-loading-guidance). Also consider reducing the number of non-clustered indexes.
+- In the General Purpose service tier, the provisioned data storage is less expensive than the price of the backup storage. If you have continually high excess backup storage costs, you might consider increasing data storage to save on the backup storage.
+- Use `tempdb` instead of permanent tables in your application logic for storing temporary results or transient data.
+- Use locally redundant backup storage whenever possible (for example, dev/test environments).
 
 ## Backup retention
 
@@ -207,10 +207,10 @@ The price for backup storage varies. It depends on your chosen backup storage re
 
 Backup storage redundancy affects backup costs in the following way:
 
-* `Locally redundant price = published price`
-* `Zone-redundant price = published price x 1.25`
-* `Geo-redundant price = published price x 2`
-* `Geo-zone-redundant price = published price x 3.4`
+- `Locally redundant price = published price`
+- `Zone-redundant price = published price x 1.25`
+- `Geo-redundant price = published price x 2`
+- `Geo-zone-redundant price = published price x 3.4`
 
 For pricing, review the [Azure SQL Managed Instance pricing](https://azure.microsoft.com/pricing/details/azure-sql/sql-managed-instance/single/) page.
 
@@ -233,9 +233,9 @@ Each differential backup also contains all changes made in the database since th
 
 For example, assume that a heavy write activity, such as index rebuild,  runs just after a full backup is completed. The modifications that the index rebuild makes will then be included:
 
-* In the transaction log backups taken over the duration of the rebuild.
-* In the next differential backup.
-* In every differential backup taken until the next full backup occurs.
+- In the transaction log backups taken over the duration of the rebuild.
+- In the next differential backup.
+- In every differential backup taken until the next full backup occurs.
 
 For the last scenario in larger databases, an optimization in the service creates a full backup instead of a differential backup if a differential backup would be excessively large otherwise. This reduces the size of all differential backups until the following full backup.
 

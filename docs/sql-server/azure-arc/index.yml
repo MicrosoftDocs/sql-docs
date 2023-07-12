@@ -4,7 +4,7 @@ summary: Azure Arc-enabled SQL Server
 
 metadata:
   title: Azure Arc-enabled SQL Server
-  description: Learn how to connect and manage on-premises, edge, and multi-cloud instances of SQL Server in Azure.
+  description: Learn how to connect and manage on-premises, edge, and multicloud instances of SQL Server in Azure.
   ms.service: sql
   ms.topic: landing-page
   ms.date: 07/11/2023

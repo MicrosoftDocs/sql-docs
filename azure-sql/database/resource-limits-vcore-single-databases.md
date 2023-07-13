@@ -4,7 +4,7 @@ description: This page describes some common vCore resource limits for a single 
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 07/05/2023
+ms.date: 07/19/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: reference
@@ -350,7 +350,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Local read IO latency<sup>2</sup> |1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
 |Remote read IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
 |Write IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
-|Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
+|Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
 |Max concurrent workers|1120|1280|1440|1600|2560|3200|
 |Max concurrent logins|1120|1280|1440|1600|2560|3200|
 |Max concurrent external connections <sup>4</sup>|150|150|150|150|150|150|

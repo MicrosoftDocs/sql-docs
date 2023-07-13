@@ -2,7 +2,7 @@
 title: "sys.dm_db_exec_cursors (Azure SQL Database)"
 description: sys.dm_db_exec_cursors (Azure SQL Database)
 author: RPLogan
-ms.author: RPlogan
+ms.author: RPLogan
 ms.date: "07/12/2023"
 ms.service: sql
 ms.subservice: system-objects
@@ -32,7 +32,7 @@ dm_db_exec_cursors (session_id | 0 )
   
 ## Arguments  
  *session_id* | 0  
- ID of the session. If *session_id* is specified, this function returns information about cursors in the specified session.  
+ ID of the session. If *session_id* is specified, this function returns information about cursors in the specified session. The current user must have VIEW DATABASE STATE permission to view cursor information from other sessions.
   
  If 0 is specified, and the current user has VIEW DATABASE STATE permission, the function returns information about all cursors for all sessions in the current database. Otherwise, it returns information about cursors for the current session.
   
@@ -107,12 +107,23 @@ FROM sys.dm_db_exec_cursors(0) AS c
 JOIN sys.dm_exec_sessions AS s ON c.session_id = s.session_id   
 WHERE DATEDIFF(hh, c.creation_time, GETDATE()) > 36;  
 GO  
+```
+
+### B. Detecting all open cursors  
+ This example returns information about cursors that are currently open in the database.  
+  
 ```  
+SELECT session_id, creation_time, cursor_id, name
+FROM sys.dm_db_exec_cursors(0)
+WHERE is_open = 1;
+GO 
+```   
   
 ## See Also  
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)  
+ [sys.dm_exec_cursors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)
   
   
 

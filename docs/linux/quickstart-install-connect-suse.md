@@ -3,8 +3,7 @@ title: "SUSE: Install SQL Server on Linux"
 description: This quickstart shows how to install SQL Server on SUSE Linux Enterprise Server and then create and query a database with sqlcmd.
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: randolphwest
-ms.date: 01/23/2023
+ms.date: 07/11/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -143,7 +142,7 @@ At this point, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is run
    ```
 
    > [!WARNING]  
-   > SUSE Linux Enterprise Server (SLES) is not a supported platform for the Community Technology Preview (CTP) 2.1 release of [!INCLUDE[sssql22](../includes/sssql22-md.md)]. You won't be able to install [!INCLUDE[sssql22](../includes/sssql22-md.md)].
+   > SUSE Linux Enterprise Server (SLES) is not a supported platform for the Community Technology Preview (CTP) 2.1 release of [!INCLUDE [sssql22](../includes/sssql22-md.md)]. You won't be able to install [!INCLUDE [sssql22](../includes/sssql22-md.md)].
 
    > [!TIP]  
    > If you want to install a different version of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], see the [[!INCLUDE [sssql17-md](../includes/sssql17-md.md)]](quickstart-install-connect-suse.md?view=sql-server-linux-2017&preserve-view=true#install) or [[!INCLUDE [sssql22-md](../includes/sssql22-md.md)]](quickstart-install-connect-suse.md?view=sql-server-linux-ver16&preserve-view=true#install) version of this article.
@@ -249,32 +248,6 @@ At this point, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is run
 
 To create a database, you need to connect with a tool that can run Transact-SQL statements on [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. The following steps install the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] command-line tools: [sqlcmd](../tools/sqlcmd/sqlcmd-utility.md) and [bcp](../tools/bcp-utility.md).
 
-1. Add the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] repository to Zypper.
-
-   ```bash
-   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/15/prod.repo
-   sudo zypper --gpg-auto-import-keys refresh
-   ```
-
-1. Install `mssql-tools` with the unixODBC developer package. For more information, see [Install the Microsoft ODBC driver for SQL Server (Linux)](../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
-
-   ```bash
-   sudo zypper install -y mssql-tools unixODBC-devel
-   ```
-
-1. For convenience, add `/opt/mssql-tools/bin/` to your `PATH` environment variable, to make **sqlcmd** or **bcp** accessible from the bash shell.
-
-   For interactive sessions, modify the `PATH` environment variable in your `~/.bash_profile` file with the following command:
-
-   ```bash
-   echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
-   ```
-
-   For non-interactive sessions, modify the `PATH` environment variable in your `~/.bashrc` file with the following command:
-
-   ```bash
-   echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
-   source ~/.bashrc
-   ```
+[!INCLUDE [odbc-sles](includes/odbc-sles.md)]
 
 [!INCLUDE [Connect, create, and query data](includes/quickstart-connect-query.md)]

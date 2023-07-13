@@ -47,7 +47,7 @@ The Refactor contextual menu in the Transact\-SQL Editor allows you to rename or
 11. Right-click **Product** and select **View Data**. Notice that existing data is kept intact regardless of the rename operation.  
 
 > [!WARNING]  
-If a refactor log is deleted, the complete history of the refactoring will be deleted. When the project is published to a database where prior refactor operations haven't been applied, any refactor operations completed before the refactor file was deleted, will be published as drop and create operations. As a result, data loss may occur.
+> If a refactor log is deleted, the complete history of the refactoring will be deleted. When the project is published to a database where prior refactor operations haven't been applied, any refactor operations completed before the refactor file was deleted, will be published as drop and create operations. As a result, data loss may occur.
   
 ### To expand wildcards  
   

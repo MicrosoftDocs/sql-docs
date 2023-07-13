@@ -119,7 +119,7 @@ ms.topic: include
 | 212 | 16 | No | Expression result length exceeds the maximum. %d max, %d found. |
 | 213 | 16 | No | Column name or number of supplied values does not match table definition. |
 | 214 | 16 | No | Procedure expects parameter '%ls' of type '%ls'. |
-| 215 | 16 | No | Parameters supplied for object '%.\*ls' which is not a function. If the parameters are intended as a table hint, a WITH keyword is required. |
+| 215 | 16 | No | Parameters supplied for object '%.\*ls', which is not a function. If the parameters are intended as a table hint, a WITH keyword is required. |
 | 216 | 16 | No | Parameters were not supplied for the function '%.\*ls'. |
 | 217 | 16 | No | Maximum stored procedure, function, trigger, or view nesting level exceeded (limit %d). |
 | 218 | 16 | No | Could not find the type '%.\*ls'. Either it does not exist or you do not have the necessary permission. |
@@ -189,7 +189,7 @@ ms.topic: include
 | 286 | 16 | No | The logical tables INSERTED and DELETED cannot be updated. |
 | 287 | 16 | No | The %ls statement is not allowed within a trigger. |
 | 288 | 16 | No | The PATINDEX function operates on char, nchar, varchar, nvarchar, text, and ntext data types only. |
-| 289 | 16 | No | Cannot construct data type %ls, some of the arguments have values which are not valid. |
+| 289 | 16 | No | Cannot construct data type %ls, some of the arguments have values, which are not valid. |
 | 290 | 16 | No | Invalid EXECUTE statement using object "%ls", method "%ls". |
 | 291 | 16 | No | CAST or CONVERT: invalid attributes specified for type '%.\*ls' |
 | 292 | 16 | No | There is insufficient result space to convert a smallmoney value to %ls. |
@@ -214,8 +214,8 @@ ms.topic: include
 | 312 | 16 | No | Cannot reference text, ntext, or image columns in a filter stored procedure. |
 | 313 | 16 | No | An insufficient number of arguments were supplied for the procedure or function %.\*ls. |
 | 314 | 16 | No | Cannot use GROUP BY ALL with the special tables INSERTED or DELETED. |
-| 315 | 16 | No | Index "%.\*ls" on table "%.\*ls" (specified in the FROM clause) is disabled or resides in a filegroup which is not online. |
-| 316 | 16 | No | The index ID %d on table "%.\*ls" (specified in the FROM clause) is disabled or resides in a filegroup which is not online. |
+| 315 | 16 | No | Index "%.\*ls" on table "%.\*ls" (specified in the FROM clause) is disabled or resides in a filegroup, which is not online. |
+| 316 | 16 | No | The index ID %d on table "%.\*ls" (specified in the FROM clause) is disabled or resides in a filegroup, which is not online. |
 | 317 | 16 | No | Table-valued function '%.\*ls' cannot have a column alias. |
 | 318 | 16 | No | The table (and its columns) returned by a table-valued method need to be aliased. |
 | 319 | 16 | No | Incorrect syntax near the keyword 'with'. If this statement is a common table expression, an xmlnamespaces clause or a change tracking context clause, the previous statement must be terminated with a semicolon. |
@@ -276,15 +276,15 @@ ms.topic: include
 | 402 | 16 | No | The data types %s and %s are incompatible in the %s operator. |
 | 403 | 16 | No | Invalid operator for data type. Operator equals %ls, type equals %ls. |
 | 404 | 16 | No | The column reference "%ls.%.\*ls" is not allowed because it refers to a base table that is not being modified in this statement. |
-| 405 | 16 | No | A remote table cannot be used as a DML target in a statement which includes an OUTPUT clause or a nested DML statement. |
+| 405 | 16 | No | A remote table cannot be used as a DML target in a statement, which includes an OUTPUT clause or a nested DML statement. |
 | 406 | 16 | No | %ls cannot be used in the PIVOT operator because it is not invariant to NULLs. |
 | 407 | 16 | No | Internal error. The string routine in file %hs, line %d failed with HRESULT 0x%x. |
 | 408 | 16 | No | A constant expression was encountered in the ORDER BY list, position %i. |
 | 411 | 16 | No | COMPUTE clause #%d, aggregate expression #%d is not in the select list. |
 | 412 | 16 | No | The column "%.\*ls" is not updatable because it is derived or constant. |
 | 413 | 16 | No | Correlated parameters or sub-queries are not supported by the inline function "%.\*ls". |
-| 414 | 16 | No | UPDATE is not allowed because the statement updates view "%.\*ls" which participates in a join and has an INSTEAD OF UPDATE trigger. |
-| 415 | 16 | No | DELETE is not allowed because the statement updates view "%.\*ls" which participates in a join and has an INSTEAD OF DELETE trigger. |
+| 414 | 16 | No | UPDATE is not allowed because the statement updates view "%.\*ls", which participates in a join and has an INSTEAD OF UPDATE trigger. |
+| 415 | 16 | No | DELETE is not allowed because the statement updates view "%.\*ls", which participates in a join and has an INSTEAD OF DELETE trigger. |
 | 416 | 16 | No | The service queue "%.\*ls" cannot be directly updated. |
 | 417 | 16 | No | TOP is not allowed in an UPDATE or DELETE statement against a partitioned view. |
 | 418 | 16 | No | Objects exposing CLR type columns are not allowed in distributed queries. Use a pass-through query to access the remote object '%.\*ls'. |
@@ -296,7 +296,7 @@ ms.topic: include
 | 426 | 16 | No | The length %d of the receiving variable is less than the length %d of the column '%.\*ls'. |
 | 427 | 20 | Yes | Could not load the definition for constraint ID %d in database ID %d. Run DBCC CHECKCATALOG to verify the integrity of the database. |
 | 428 | 16 | No | Insert bulk cannot be used in a multi-statement batch. |
-| 432 | 16 | No | Xml data type methods are not supported in check constraints anymore. Please drop the constraint or create a scalar user-defined function to wrap the method invocation. The error occurred at table "%.\*ls". |
+| 432 | 16 | No | Xml data type methods are not supported in check constraints anymore. Drop the constraint or create a scalar user-defined function to wrap the method invocation. The error occurred at table "%.\*ls". |
 | 434 | 16 | No | Function '%ls' is not allowed in the OUTPUT clause. |
 | 435 | 16 | No | Xml data type methods are not supported in computed column definitions. Create a scalar user-defined function to wrap the method invocation. The error occurred at column "%.\*ls", table "%.\*ls", in the %ls statement. |
 | 438 | 16 | No | Xml data type methods are not allowed in rules. The error occurred at table "%.\*ls". |
@@ -379,7 +379,7 @@ ms.topic: include
 | 517 | 16 | No | Adding a value to a '%ls' column caused an overflow. |
 | 518 | 16 | No | Cannot convert data type %ls to %ls. |
 | 520 | 16 | No | SQL Server no longer supports version %d of the SQL Debugging Interface (SDI). |
-| 521 | 10 | No | Cannot load the DLL %ls, or one of the DLLs it references. Reason: %ls Please insure server-side SQL debugger components are installed. |
+| 521 | 10 | No | Cannot load the DLL %ls, or one of the DLLs it references. Reason: %ls Insure server-side SQL debugger components are installed. |
 | 522 | 16 | No | The WAITFOR thread was evicted. |
 | 523 | 16 | No | A trigger returned a resultset and/or was running with SET NOCOUNT OFF while another outstanding result set was active. |
 | 524 | 16 | No | A trigger returned a resultset and the server option 'disallow results from triggers' is true. |
@@ -416,7 +416,7 @@ ms.topic: include
 | 562 | 16 | No | Failed to access file '%.\*ls'. Files can be accessed only through shares |
 | 563 | 14 | No | The transaction for the INSERT EXEC statement has been rolled back. The INSERT EXEC operation will be terminated. |
 | 564 | 16 | No | Attempted to create a record with a fixed length of '%d'. Maximum allowable fixed length is '%d'. |
-| 565 | 18 | No | A stack overflow occurred in the server while compiling the query. Please simplify the query. |
+| 565 | 18 | No | A stack overflow occurred in the server while compiling the query. Simplify the query. |
 | 566 | 21 | Yes | An error occurred while writing an audit trace. SQL Server is shutting down. Check and correct error conditions such as insufficient disk space, and then restart SQL Server. If the problem persists, disable auditing by starting the server at the command prompt with the "-f" switch, and using SP_CONFIGURE. |
 | 567 | 16 | No | File '%.\*ls' is not a recognizable trace file. |
 | 568 | 16 | No | Encountered an error or an unexpected end of trace file '%.\*ls'. |
@@ -435,7 +435,7 @@ ms.topic: include
 | 583 | 16 | No | Negative offset or length in write. |
 | 584 | 16 | No | Select Into not allowed in WAITFOR queries. |
 | 585 | 16 | No | Changing database context is not allowed when populating the resource database. |
-| 586 | 16 | No | The prepared statement handle %d is not valid in this context. Please verify that current database, user default schema, and ANSI_NULLS and QUOTED_IDENTIFIER set options are not changed since the handle is prepared. |
+| 586 | 16 | No | The prepared statement handle %d is not valid in this context. Verify that current database, user default schema, and ANSI_NULLS and QUOTED_IDENTIFIER set options are not changed since the handle is prepared. |
 | 587 | 16 | No | An invalid delayed CLR type fetch token is provided. |
 | 588 | 16 | No | Multiple tasks within the session are using the same delayed CLR type fetch token at the same time. |
 | 589 | 16 | No | This statement has attempted to access data whose access is restricted by the assembly. |
@@ -447,13 +447,13 @@ ms.topic: include
 | 595 | 16 | No | Bulk Insert with another outstanding result set should be run with XACT_ABORT on. |
 | 596 | 16 | No | Cannot continue the execution because the session is in the kill state. |
 | 597 | 16 | No | The execution of in-proc data access is being terminated due to errors in the User Datagram Protocol (UDP). |
-| 598 | 16 | No | An error occurred while executing CREATE/ALTER DB. Please look at the previous error for more information. |
+| 598 | 16 | No | An error occurred while executing CREATE/ALTER DB. Look at the previous error for more information. |
 | 599 | 16 | No | %.\*ls: The length of the result exceeds the length limit (2GB) of the target large type. |
 | [601](../mssqlserver-601-database-engine-error.md) | 12 | No | Could not continue scan with NOLOCK due to data movement. |
 | 602 | 21 | Yes | Could not find an entry for table or index with partition ID %I64d in database %d. This error can occur if a stored procedure references a dropped table, or metadata is corrupted. Drop and re-create the stored procedure, or execute DBCC CHECKDB. |
 | 603 | 21 | Yes | Could not find an entry for table or index with object ID %d (partition ID %I64d) in database %d. This error can occur if a stored procedure references a dropped table, or metadata is corrupted. Drop and re-create the stored procedure, or execute DBCC CHECKDB. |
 | [605](../mssqlserver-605-database-engine-error.md) | 21 | Yes | Attempt to fetch logical page %S_PGID in database %d failed. It belongs to allocation unit %I64d not to %I64d. |
-| 606 | 21 | Yes | Metadata inconsistency. Filegroup id %ld specified for table '%.\*ls' does not exist. Run DBCC CHECKDB or CHECKCATALOG. |
+| 606 | 21 | Yes | Metadata inconsistency. Filegroup ID %ld specified for table '%.\*ls' does not exist. Run DBCC CHECKDB or CHECKCATALOG. |
 | 608 | 16 | Yes | No catalog entry found for partition ID %I64d in database %d. The metadata is inconsistent. Run DBCC CHECKDB to check for a metadata corruption. |
 | 609 | 16 | No | BTree is not empty when waking up on RowsetBulk. |
 | 610 | 16 | Yes | Invalid header value from a page. Run DBCC CHECKDB to check for a data corruption. |
@@ -475,7 +475,7 @@ ms.topic: include
 | 664 | 10 | Yes | Aborting the query because it is trying to do logical revert on a readable secondary. |
 | 666 | 16 | No | The maximum system-generated unique value for a duplicate group was exceeded for index with partition ID %I64d. Dropping and re-creating the index may resolve this; otherwise, use another clustering key. |
 | 667 | 16 | No | The index "%.\*ls" for table "%.\*ls" (RowsetId %I64d) resides on a filegroup ("%.\*ls") that cannot be accessed because it is offline, is being restored, or is defunct. |
-| 669 | 22 | No | The row object is inconsistent. Please rerun the query. |
+| 669 | 22 | No | The row object is inconsistent. Rerun the query. |
 | 670 | 16 | No | Large object (LOB) data for table "%.\*ls" resides on an offline filegroup ("%.\*ls") that cannot be accessed. |
 | 671 | 16 | No | Large object (LOB) data for table "%.\*ls" resides on a read-only filegroup ("%.\*ls"), which cannot be modified. |
 | 672 | 10 | No | Failed to queue cleanup packets for orphaned rowsets in database "%.\*ls". Some disk space may be wasted. Cleanup will be attempted again on database restart. |
@@ -523,12 +523,12 @@ ms.topic: include
 | 830 | 10 | No | stale page (a page read returned a log sequence number (LSN) (%u:%u:%u) that is older than the last one that was written (%u:%u:%u)) |
 | 831 | 20 | No | Unable to deallocate a kept page (database %d, page %S_PGID). |
 | [832](../mssqlserver-832-database-engine-error.md) | 24 | Yes | A page that should have been constant has changed (expected checksum: %08x, actual checksum: %08x, database %d, file '%ls', page %S_PGID). This usually indicates a memory failure or other hardware or OS corruption. |
-| [833](../mssqlserver-833-database-engine-error.md) | 10 | No | SQL Server has encountered %d occurrence(s) of I/O requests taking longer than %d seconds to complete on file \[%ls\] in database id %d. The OS file handle is 0x%p. The offset of the latest long I/O is: %#016I64x. The duration of the long I/O is: %I64u ms. |
+| [833](../mssqlserver-833-database-engine-error.md) | 10 | No | SQL Server has encountered %d occurrence(s) of I/O requests taking longer than %d seconds to complete on file \[%ls\] in database ID %d. The OS file handle is 0x%p. The offset of the latest long I/O is: %#016I64x. The duration of the long I/O is: %I64u ms. |
 | 835 | 16 | No | The operating system returned error %ls to SQL Server. It failed creating event for a %S_MSG at offset %#016I64x in file '%ls'. Additional messages in the SQL Server error log and operating system error log may provide more detail. This is a severe system-level error condition that threatens database integrity and must be corrected immediately. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors; for more information, see SQL Server Books Online. |
 | 836 | 10 | No | Database ID %d, stale page %S_PGID is under restoring. |
-| [844](../mssqlserver-844-database-engine-error.md) | 10 | No | Time out occurred while waiting for buffer latch -- type %d, bp %p, page %d:%d, stat %#x, database id: %d, allocation unit id: %I64d%ls, task 0x%p : %d, waittime %d seconds, flags 0x%I64x, owning task 0x%p. Continuing to wait. %ls |
+| [844](../mssqlserver-844-database-engine-error.md) | 10 | No | Time out occurred while waiting for buffer latch -- type %d, bp %p, page %d:%d, stat %#x, database ID: %d, allocation unit ID: %I64d%ls, task 0x%p : %d, waittime %d seconds, flags 0x%I64x, owning task 0x%p. Continuing to wait. %ls |
 | [845](../mssqlserver-845-database-engine-error.md) | 17 | No | Time-out occurred while waiting for buffer latch type %d for page %S_PGID, database ID %d. %ls |
-| [846](../mssqlserver-846-database-engine-error.md) | 10 | No | A time-out occurred while waiting for buffer latch -- type %d, bp %p, page %d:%d, stat %#x, database id: %d, allocation unit Id: %I64d%ls, task 0x%p : %d, waittime %d seconds, flags 0x%I64x, owning task 0x%p. Not continuing to wait. |
+| [846](../mssqlserver-846-database-engine-error.md) | 10 | No | A time-out occurred while waiting for buffer latch -- type %d, bp %p, page %d:%d, stat %#x, database id: %d, allocation unit ID: %I64d%ls, task 0x%p : %d, waittime %d seconds, flags 0x%I64x, owning task 0x%p. Not continuing to wait. |
 | [847](../mssqlserver-847-database-engine-error.md) | 10 | Yes | Timeout occurred while waiting for latch: class '%ls', id %p, type %d, Task 0x%p : %d, waittime %d seconds, flags 0x%I64x, owning task 0x%p. Continuing to wait. %ls |
 | 848 | 10 | Yes | Using large pages in the memory manager. |
 | 849 | 10 | Yes | Using locked pages in the memory manager. |
@@ -537,12 +537,12 @@ ms.topic: include
 | 852 | 10 | Yes | Using conventional memory in the memory manager. |
 | 853 | 10 | No | Latch acquire failed due to too many concurrent latches. type %d, Task 0x%p : %d |
 | [854](../mssqlserver-854-database-engine-error.md) | 10 | Yes | Machine supports memory error recovery. SQL memory protection is enabled to recover from memory corruption. |
-| [855](../mssqlserver-855-database-engine-error.md) | 10 | Yes | Uncorrectable hardware memory corruption detected. Your system may become unstable. Please check the operating system error log for more details. |
+| [855](../mssqlserver-855-database-engine-error.md) | 10 | Yes | Uncorrectable hardware memory corruption detected. Your system may become unstable. Check the operating system error log for more details. |
 | [856](../mssqlserver-856-database-engine-error.md) | 10 | Yes | SQL Server has detected hardware memory corruption in database '%ls', file ID: %u, page ID; %u, memory address: 0x%I64x and has successfully recovered the page. |
 | 857 | 10 | No | Buffer pool extension "%.\*ls" has been initialized successfully with size is %I64d MB. |
 | 858 | 10 | No | Failed to create buffer pool extension of size %I64d MB on path "%.\*ls". |
 | 859 | 10 | Yes | Buffer pool extension configuration "%.\*ls" is in wrong format. The format should be "\<extension directory\>,\<size in GB\>". |
-| 860 | 10 | Yes | %ls. BUF address %p. Bufno %u. Extension offset %1I64d. Error code %d. Database file id %u. Database file offset %2I64d. |
+| 860 | 10 | Yes | %ls. BUF address %p. Bufno %u. Extension offset %1I64d. Error code %d. Database file ID %u. Database file offset %2I64d. |
 | 861 | 10 | Yes | Buffer pool extension size must be larger than the physical memory size %I64d MB. Buffer pool extension is not enabled. |
 | 862 | 10 | Yes | Attempt to disable buffer pool extension when in state %ls is not allowed. |
 | 863 | 10 | Yes | Attempt to enable buffer pool extension when in state %ls is not allowed. |
@@ -590,7 +590,7 @@ ms.topic: include
 | 910 | 10 | No | Database '%.\*ls' is upgrading script '%.\*ls' from level %d to level %d. |
 | 911 | 16 | No | Database '%.\*ls' does not exist. Make sure that the name is entered correctly. |
 | [912](../mssqlserver-912-database-engine-error.md) | 21 | No | Script level upgrade for database '%.\*ls' failed because upgrade step '%.\*ls' encountered error %d, state %d, severity %d. This is a serious error condition which might interfere with regular operation and the database will be taken offline. If the error happened during upgrade of the 'master' database, it will prevent the entire SQL Server instance from starting. Examine the previous errorlog entries for errors, take the appropriate corrective actions and re-start the database so that the script upgrade steps run to completion. |
-| 913 | 22 | Yes | Could not find database ID %d. Database may not be activated yet or may be in transition. Reissue the query once the database is available. If you do not think this error is due to a database that is transitioning its state and this error continues to occur, contact your primary support provider. Please have available for review the Microsoft SQL Server error log and any additional information relevant to the circumstances when the error occurred. |
+| 913 | 22 | Yes | Could not find database ID %d. Database may not be activated yet or may be in transition. Reissue the query once the database is available. If you do not think this error is due to a database that is transitioning its state and this error continues to occur, contact your primary support provider. Have available for review the Microsoft SQL Server error log and any additional information relevant to the circumstances when the error occurred. |
 | 914 | 21 | No | Script level upgrade for database '%.\*ls' failed because upgrade step '%.\*ls' was aborted before completion. If the abort happened during upgrade of the 'master' database, it will prevent the entire SQL Server instance from starting. Examine the previous errorlog entries for errors, take the appropriate corrective actions and re-start the database so that the script upgrade steps run to completion. |
 | 915 | 21 | No | Unable to obtain the current script level for database '%.\*ls'. If the error happened during startup of the 'master' database, it will prevent the entire SQL Server instance from starting. Examine the previous errorlog entries for errors, take the appropriate corrective actions and re-start the database so that script upgrade may run to completion. |
 | [916](../mssqlserver-916-database-engine-error.md) | 14 | No | The server principal "%.\*ls" is not able to access the database "%.\*ls" under the current security context. |

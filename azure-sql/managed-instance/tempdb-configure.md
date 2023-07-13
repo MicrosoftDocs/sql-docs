@@ -113,7 +113,7 @@ You can use SQL Server Management Studio (SSMS) to modify the growth increment o
 1. Right-click `tempdb`, and choose **Properties**. 
 1. Select **Files** under **Select a page** to view the existing number of `tempdb` files.
 1. Choose the ellipses (...) next to a data file to open the **Change Autogrowth properties** dialog window. 
-1. Check the box next to **Enable Autogrwoth** and then modify your autogrowth settings by specifying the file growth values, in either percent, or megabytes. 
+1. Check the box next to **Enable Autogrowth** and then modify your autogrowth settings by specifying the file growth values, in either percent, or megabytes. 
 
    :::image type="content" source="media/tempdb-configure/change-growth-increment.png" alt-text="Screenshot of Change Autogrowth for tempdev in SSMS, with new database file name highlighted.":::
 

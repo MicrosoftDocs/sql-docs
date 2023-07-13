@@ -142,8 +142,7 @@ The following example creates a new managed instance and sets the maintenance wi
      -ResourceGroupName "your_resource_group_name" `
      -Location "your_mi_location" `
      -SubnetId /subscriptions/{SubID}/resourceGroups/{ResourceGroup}/providers/Microsoft.Network/virtualNetworks/{VNETName}/subnets/{SubnetName} `
-     -MaintenanceConfigurationId "/subscriptions/{SubID}/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_{Region}_{MaintenanceConfigName}" `
-     -AsJob
+     -MaintenanceConfigurationId "/subscriptions/{SubID}/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_{Region}_{MaintenanceConfigName}"
    ```
 
 # [CLI](#tab/azure-cli)
@@ -322,8 +321,7 @@ It's important to make sure that the `$maintenanceConfig` value must be a valid 
    ```powershell-interactive
    Set-AzSqlInstance -Name "your_mi_name" `
      -ResourceGroupName "your_resource_group_name" `
-     -MaintenanceConfigurationId "/subscriptions/{SubID}/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_{Region}_{MaintenanceConfigName}" `
-     -AsJob
+     -MaintenanceConfigurationId "/subscriptions/{SubID}/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_{Region}_{MaintenanceConfigName}"
    ```
 
 # [CLI](#tab/azure-cli)

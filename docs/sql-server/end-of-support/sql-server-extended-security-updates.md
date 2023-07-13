@@ -30,9 +30,9 @@ Once [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] has reached the 
 
 The method of receiving Extended Security Updates depends on where your [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is running.
 
-- **SQL Server on Azure services.** ESUs are free and enabled by default when [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is running on one of the following Azure services:
+- **SQL Server on Azure Virtual Machines.** ESUs are free and enabled by default.
 
-  - [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] on Azure Virtual Machines
+- **SQL Server on-premises or a hosted environment.** ESUs are free and enabled by default on one of the following Azure services:
 
   - Azure Stack HCI
 

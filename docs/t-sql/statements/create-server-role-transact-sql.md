@@ -40,10 +40,10 @@ CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]
 ## Arguments
 
 #### *role_name*
- Is the name of the server role to be created.  
+ The name of the server role to be created.  
   
 #### AUTHORIZATION *server_principal*
- Is the login that will own the new server role. If no login is specified, the server role will be owned by the login that executes CREATE SERVER ROLE.  
+ The login that will own the new server role. If no login is specified, the server role will be owned by the login that executes CREATE SERVER ROLE.  
   
 ## Remarks
 
@@ -60,7 +60,7 @@ CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]
   
  Also requires IMPERSONATE on the *server_principal* for logins, ALTER permission for server roles used as the *server_principal*, or membership in a Windows group that is used as the server_principal.  
   
- This will fire the Audit Server Principal Management event with the object type set to server role and event type to add.  
+ This fires the Audit Server Principal Management event with the object type set to server role and event type to add.  
   
  When you use the AUTHORIZATION option to assign server role ownership, the following permissions are also required:  
   

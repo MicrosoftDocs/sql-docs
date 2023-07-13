@@ -92,10 +92,10 @@ GO
   
 ## Next steps
 
+- [ALTER SERVER ROLE (Transact-SQL)](alter-server-role-transact-sql.md)
 - [DROP SERVER ROLE (Transact-SQL)](../../t-sql/statements/drop-server-role-transact-sql.md)
 - [Principals (Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)
 - [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)
-- [sp_addrolemember (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)
 - [sys.database_role_members (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)
 - [sys.database_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)
 - [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)

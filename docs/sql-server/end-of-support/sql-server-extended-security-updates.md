@@ -3,7 +3,7 @@ title: "What are Extended Security Updates?"
 description: Learn about Extended Security Updates enabled by Azure Arc, for your end-of-support and end-of-life SQL Server products such as SQL Server 2012.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 07/10/2023
+ms.date: 07/13/2023
 ms.service: sql
 ms.subservice: install
 ms.topic: conceptual
@@ -32,7 +32,7 @@ The method of receiving Extended Security Updates depends on where your [!INCLUD
 
 - **SQL Server on Azure Virtual Machines.** ESUs are free and enabled by default.
 
-- **SQL Server on-premises or a hosted environment.** ESUs are free and enabled by default on one of the following Azure services:
+- **SQL Server on-premises or a hosted environment.** ESUs are free and enabled by default on the following Azure services:
 
   - Azure Stack HCI
 

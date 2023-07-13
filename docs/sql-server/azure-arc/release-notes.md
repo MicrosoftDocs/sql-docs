@@ -4,12 +4,24 @@ description: Latest release notes
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 05/10/2023
+ms.date: 07/13/2023
 ms.service: sql
 ms.topic: conceptual
 ---
 
 # Release notes - Azure Arc-enabled SQL Server
+
+## July 2023
+
+This release is published July 13, 2023.
+
+### Extension version
+
+`1.1.2378.31`
+
+### Azure extension for SQL Server
+
+- Proxy bypass is now supported for Arc SQL Server Extension. Starting this release, you can also specify services which should not use the specified proxy server. For examples and technical information, see [Proxy bypass for private endpoints](/azure/azure-arc/servers/manage-agent?tabs=windows#proxy-bypass-for-private-endpoints).
 
 ## June 2023
 
@@ -302,20 +314,3 @@ The October update includes the following improvements:
 The following issues apply to the October release:
 
 - Connecting SQL Server instances to Azure Arc requires an account with a broad set of permissions. For details, see [prerequisites](prerequisites.md).
-
-## September 2020
-
-Azure Arc-enabled SQL Server is released for public preview. Azure Arc-enabled SQL Server extends Azure services to SQL Server instances hosted outside of Azure in the customer's datacenter, on the edge or in a multicloud environment.
-
-For details, see [Azure Arc-enabled SQL Server Overview](overview.md)
-
-### Known issues
-
-The following issues apply to the September release:
-
-- The **Register Azure Arc-enabled SQL Server** pane doesn't support configuring custom tags. To add custom tags, open the **SQL Server - Azure Arc** resource after registration and change Tags in the **Overview** page.
-- Connecting SQL Server instances to Azure Arc requires an account with a broad set of permissions. For details, see [prerequisites](prerequisites.md).
-
-## Next steps
-
-**Just want to try things out?**  Get started quickly with [Azure Arc-enabled SQL Server Jumpstart](https://aka.ms/AzureArcSqlServerJumpstart).

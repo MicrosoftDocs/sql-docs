@@ -4,7 +4,7 @@ description: This page describes some common vCore resource limits for elastic p
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 07/05/2023
+ms.date: 07/19/2023
 ms.service: sql-database
 ms.subservice: elastic-pools
 ms.topic: reference

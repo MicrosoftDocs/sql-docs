@@ -4,7 +4,7 @@ description: sys.dm_exec_requests (Transact-SQL)
 author: akatesmith
 ms.author: katsmith
 ms.reviewer: mikeray, randolphwest
-ms.date: 06/19/2023
+ms.date: 07/12/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -91,7 +91,7 @@ Returns information about each request that is executing in [!INCLUDE[ssNoVersio
 | is_resumable | **bit** | **Applies to**: [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] and later.<br /><br />Indicates whether the request is a resumable index operation. |
 | page_resource | **binary(8)** | **Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]<br /><br />An 8-byte hexadecimal representation of the page resource if the `wait_resource` column contains a page. For more information, see [sys.fn_PageResCracker](../system-functions/sys-fn-pagerescracker-transact-sql.md). |
 | page_server_reads | **bigint** | **Applies to**: Azure SQL Database Hyperscale<br /><br />Number of page server reads performed by this request. Not nullable. |
-
+| dist_statement_id | **uniqueidentifier** | **Applies to**: SQL Server 2022 and later versions, Azure SQL Database, Azure SQL Managed Instance, Azure Synapse Analytics (serverless pools only), and Microsoft Fabric<br /><br /> Unique ID for the statement for the request submitted. Not nullable. |
 ## Remarks
 
 To execute code that is outside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (for example, extended stored procedures and distributed queries), a thread has to execute outside the control of the non-preemptive scheduler. To do this, a worker switches to preemptive mode. Time values returned by this dynamic management view don't include time spent in preemptive mode.

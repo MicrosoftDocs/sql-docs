@@ -48,6 +48,7 @@ Consider the following when working with ledger.
 - Change tracking isn't allowed on the history table but is allowed on ledger tables.
 - Change data capture isn't supported for ledger tables.
 - Transactional replication isn't supported for ledger tables.
+- Database mirroring isn't supported.
 - Azure Synapse Link is supported but only for the ledger table, not the history table.
 - The Managed Instance link feature is not supported.
 - Change the digest path manually after a native restore of a database backup to an Azure SQL managed instance.

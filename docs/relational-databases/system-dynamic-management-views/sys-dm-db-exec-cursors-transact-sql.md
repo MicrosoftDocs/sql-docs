@@ -2,7 +2,7 @@
 title: "sys.dm_db_exec_cursors (Azure SQL Database)"
 description: sys.dm_db_exec_cursors (Azure SQL Database)
 author: RPLogan
-ms.author: RPLogan
+ms.author: rilogan
 ms.date: "07/12/2023"
 ms.service: sql
 ms.subservice: system-objects

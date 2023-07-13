@@ -2,10 +2,10 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 02/17/2023
+ms.date: 07/06/2023
 ms.topic: include
 ---
-| Error| Severity | Event logged | Description|
+| Error | Severity | Event logged | Description |
 | :--- | :--- | :--- | :--- |
 | 11000 | 16 | No | Unknown status code for this column. |
 | [11001](../mssqlserver-11001-database-engine-error.md) | 16 | No | Non-NULL value successfully returned. |
@@ -141,8 +141,8 @@ ms.topic: include
 | 11292 | 16 | No | The forwarded message has been dropped because a transport send error occurred when sending the message. Check previous events for the error. |
 | 11293 | 16 | No | This forwarded message has been dropped because a transport is shutdown. |
 | 11294 | 16 | No | This forwarded message has been dropped because the destination route is not valid. |
-| 11295 | 10 | No | Endpoint configuration change detected.  Service Broker manager and transport will now restart. |
-| 11296 | 10 | No | Certificate change detected.  Service Broker manager and transport will now restart. |
+| 11295 | 10 | No | Endpoint configuration change detected. Service Broker manager and transport will now restart. |
+| 11296 | 10 | No | Certificate change detected. Service Broker manager and transport will now restart. |
 | 11297 | 16 | No | A corrupted message has been received. The private variable data segment offset is incorrect. |
 | 11298 | 16 | No | A corrupted message has been received. The public variable data segment offset is incorrect. |
 | 11299 | 10 | No | A corrupted message has been received. An unsequenced message had a non-zero sequence number. This occurred in the message with Conversation ID '%.\*ls', Initiator: %d, and Message sequence number: %I64d. |
@@ -150,7 +150,7 @@ ms.topic: include
 | 11301 | 10 | Yes | Error while performing transaction notification for object %p event %d. |
 | 11302 | 10 | Yes | Error during rollback. shutting down database (location: %d). |
 | 11303 | 10 | Yes | Error releasing reserved log space: %ls space %I64d, code %d, state %d. |
-| 11304 | 10 | Yes | Failed to record outcome of a local two-phase commit transaction.  Taking database offline. |
+| 11304 | 10 | Yes | Failed to record outcome of a local two-phase commit transaction. Taking database offline. |
 | 11306 | 16 | No | Forward progress on this transaction is disallowed. Transaction has been rolled back. |
 | 11313 | 16 | No | This operation must be executed within a parallel nested transaction. |
 | 11314 | 16 | No | The stored procedure %.\*ls must be executed within a user transaction. |
@@ -174,7 +174,7 @@ ms.topic: include
 | 11406 | 16 | No | ALTER TABLE SWITCH statement failed. Source and target partitions have different values for the DATA_COMPRESSION option. |
 | 11407 | 16 | No | Vardecimal storage format can not be enabled for '%.\*ls'. Only Enterprise edition of SQL Server supports vardecimal. |
 | 11408 | 16 | No | Cannot modify the column '%.\*ls' in the table '%.\*ls' to add or remove the COLUMN_SET attribute. To change a COLUMN_SET attribute of a column, either modify the table to remove the column and then add the column again, or drop and re-create the table. |
-| [11409](../mssqlserver-11409-database-engine-error.md) | 16 | No | Cannot remove the column set '%.\*ls' in the table '%.\*ls' because the table contains more than 1025  columns. Reduce the number of columns in the table to less than 1025. |
+| [11409](../mssqlserver-11409-database-engine-error.md) | 16 | No | Cannot remove the column set '%.\*ls' in the table '%.\*ls' because the table contains more than 1025 columns. Reduce the number of columns in the table to less than 1025. |
 | 11410 | 16 | No | Cannot modify the column '%.\*ls' in the table '%.\*ls' to a sparse column because the column has a default or rule bound to it. Unbind the rule or default from the column before designating the column as sparse. |
 | 11411 | 16 | No | Cannot add the sparse column '%.\*ls' to the table '%.\*ls' because the data type of the column has a default or rule bound to it. Unbind the rule or default from the data type before adding the sparse column to the table. |
 | 11412 | 16 | No | ALTER TABLE SWITCH statement failed because column '%.\*ls' does not have the same sparse storage attribute in tables '%.\*ls' and '%.\*ls'. |
@@ -272,14 +272,14 @@ ms.topic: include
 | 12006 | 16 | No | Duplicate parameters were passed to the create index statement. Validate the statement against the index-creation syntax. |
 | 12007 | 16 | No | The CREATE %S_MSG statement is missing the required parameter '%.\*ls'. Validate the statement against the index-creation syntax. |
 | 12008 | 16 | No | Table '%.\*ls' does not have a clustered primary key as required by the %S_MSG index. Make sure that the primary key column exists on the table before creating a %S_MSG index. |
-| 12009 | 16 | No | Could not find the %S_MSG index '%.\*ls' on table '%.\*ls'. Either no %S_MSG index with this name exists, or a non-%S_MSG index might be using the same name. Fix the index name, avoiding duplicates. If a  relational index has the same name, drop the regular relational index. |
+| 12009 | 16 | No | Could not find the %S_MSG index '%.\*ls' on table '%.\*ls'. Either no %S_MSG index with this name exists, or a non-%S_MSG index might be using the same name. Fix the index name, avoiding duplicates. If a relational index has the same name, drop the regular relational index. |
 | 12010 | 16 | No | Only one spatial index hint may appear per table, either as the first or the last hinted index. |
 | 12011 | 16 | No | The value of parameter '%.\*ls' of CREATE %S_MSG must be less than %d. |
 | 12012 | 16 | No | The value of parameter '%.\*ls' of CREATE %S_MSG must be greater than %d. |
 | 12013 | 16 | No | The value of parameter '%.\*ls' of CREATE %S_MSG must be greater than the value of parameter '%.\*ls'. |
 | 12014 | 16 | No | The '%.\*ls' parameter of CREATE %S_MSG is incompletely defined. If the parameter has more than one part, all the parts must be defined. |
 | 12015 | 16 | No | The index option %.\*ls in the CREATE %S_MSG statement has to appear before the general index options. |
-| 12016 | 16 | No | Creating a %S_MSG index requires that the primary key in the base table satisfy the following restrictions. The maximum number of primary-key columns is %d.  The maximum combined per-row size of the primary-key columns is %d bytes. The primary key on the base table '%.\*ls' has %d columns, and contains %d bytes. Alter the base table to satisfy the primary-key restrictions imposed by the %S_MSG index. |
+| 12016 | 16 | No | Creating a %S_MSG index requires that the primary key in the base table satisfy the following restrictions. The maximum number of primary-key columns is %d. The maximum combined per-row size of the primary-key columns is %d bytes. The primary key on the base table '%.\*ls' has %d columns, and contains %d bytes. Alter the base table to satisfy the primary-key restrictions imposed by the %S_MSG index. |
 | 12017 | 10 | No | The spatial index is disabled or offline |
 | 12018 | 10 | No | The spatial object is not defined in the scope of the predicate |
 | 12019 | 10 | No | Spatial indexes do not support the comparand supplied in the predicate |
@@ -290,8 +290,8 @@ ms.topic: include
 | 12024 | 10 | No | The spatial parameter references a column that is defined below the predicate |
 | 12025 | 10 | No | Could not find required binary spatial method in a condition |
 | 12026 | 10 | No | Could not find required comparison predicate |
-| 12100 | 16 | No | ALTER DATABASE failed because FILESTREAM filegroups cannot be added to a database that has either the READ_COMMITTED_SNAPSHOT or the ALLOW_SNAPSHOT_ISOLATION option set to ON.  To add FILESTREAM filegroups, you must set READ_COMMITTED_SNAPSHOT and ALLOW_SNAPSHOT_ISOLATION to OFF. |
-| 12101 | 16 | No | Cannot disable change tracking on database '%.\*ls' while client connections are waiting on change notification.  Please close those connections before disabling change tracking. |
+| 12100 | 16 | No | ALTER DATABASE failed because FILESTREAM filegroups cannot be added to a database that has either the READ_COMMITTED_SNAPSHOT or the ALLOW_SNAPSHOT_ISOLATION option set to ON. To add FILESTREAM filegroups, you must set READ_COMMITTED_SNAPSHOT and ALLOW_SNAPSHOT_ISOLATION to OFF. |
+| 12101 | 16 | No | Cannot disable change tracking on database '%.\*ls' while client connections are waiting on change notification. Please close those connections before disabling change tracking. |
 | 12102 | 16 | No | ALTER DATABASE failed because the distribution policy of system databases cannot be changed. |
 | 12103 | 16 | No | ALTER DATABASE failed because the distribution policy is invalid. The database distribution policy must be set to either NONE or HASH. For the distribution policy NONE, the number of leading hash columns cannot be specified. For the distribution policy HASH, the number of leading hash columns is optional but cannot be more than 16 columns. |
 | 12104 | 15 | No | ALTER DATABASE CURRENT failed because '%.\*ls' is a system database. System databases cannot be altered by using the CURRENT keyword. Use the database name to alter a system database. |
@@ -446,14 +446,14 @@ ms.topic: include
 | 12821 | 16 | No | sp_migrate_user_to_contained cannot be used on a user used in the EXECUTE AS clause of a signed module. |
 | 12822 | 16 | No | sp_migrate_user_to_contained cannot be used to copy a password to an old hash algorithm. |
 | 12823 | 16 | No | sp_migrate_user_to_contained can not find the login for user '%.\*ls'. |
-| 12824 | 16 | No | The sp_configure value 'contained database authentication' must be set to 1 in order to %S_MSG a contained database.  You may need to use RECONFIGURE to set the value_in_use. |
+| 12824 | 16 | No | The sp_configure value 'contained database authentication' must be set to 1 in order to %S_MSG a contained database. You may need to use RECONFIGURE to set the value_in_use. |
 | 12825 | 16 | No | The database cannot be contained; this functionality is not available in the current edition of SQL Server. |
 | 12826 | 16 | Yes | RECONFIGURE WITH OVERRIDE set the 'contained database authentication' to 0 while there are contained databases in use. This will disrupt authentication for contained users and will not allow new contained databases to be created. |
 | 12827 | 16 | No | User-named %ls constraint '%.\*ls' is not allowed on temp table '%.\*ls' because it is being created in a contained database. Please consult the Books Online topic Understanding Contained Databases for more information on contained databases. |
 | 12828 | 16 | No | User-defined %S_MSG '%.\*ls' in tempdb cannot be referenced from local temp table '%.\*ls' because the temp table is being created in a contained database. Please consult the Books Online topic Understanding Contained Databases for more information on contained databases. |
 | 12829 | 16 | No | The stored procedure '%.\*ls' refers to a group of numbered stored procedures. Numbered stored procedures are not available in contained databases. Please consult the Books Online topic Understanding Contained Databases for more information on contained databases. |
 | 12830 | 16 | No | The sp_configure 'user options' setting must be zero if the Database Engine has contained databases. |
-| 12831 | 16 | No | Database '%.\*ls' is a contained database. The option 'contained database authentication' setting is 0.  Users with passwords will not be able to login to contained databases. |
+| 12831 | 16 | No | Database '%.\*ls' is a contained database. The option 'contained database authentication' setting is 0. Users with passwords will not be able to login to contained databases. |
 | 12832 | 16 | Yes | The database '%.\*ls' could not be created or altered to a contained database, because the schema bound %S_MSG '%.\*ls' depends on builtin function '%s'. In a contained database, the output collation of this builtin function has changed to '%.\*ls', which differs from the collation used in a non-contained database. |
 | 12833 | 16 | Yes | The database '%.\*ls' could not be created or altered to a contained database, because the check constraint '%.\*ls' on table '%.\*ls' depends on builtin function '%s'. In a contained database, the output collation of this builtin function has changed to '%.\*ls', which differs from the collation used in a non-contained database. |
 | 12834 | 16 | Yes | The database '%.\*ls' could not be created or altered to a contained database, because the computed column '%.\*ls' on %S_MSG '%.\*ls' depends on builtin function '%s'. In a contained database, the output collation of this builtin function has changed to '%.\*ls', which differs from the collation used in a non-contained database. |

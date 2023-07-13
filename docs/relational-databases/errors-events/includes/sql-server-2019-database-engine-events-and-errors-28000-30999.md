@@ -2,10 +2,10 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 03/22/2023
+ms.date: 07/06/2023
 ms.topic: include
 ---
-| Error| Severity | Event logged | Description|
+| Error | Severity | Event logged | Description |
 | :--- | :--- | :--- | :--- |
 | 28000 | 16 | No | The decrypted session key has an unexpected size. |
 | 28001 | 16 | No | A corrupted message has been received. It contains invalid flags. This occurred in the message with Conversation ID '%.\*ls', Initiator: %d, and Message sequence number: %I64d. |
@@ -309,8 +309,8 @@ ms.topic: include
 | 29307 | 16 | Yes | Cannot set the roster property %s. |
 | 29308 | 16 | Yes | Local brick id \<%d\> does not match brick id \<%d\> in the resource database. |
 | 29309 | 16 | Yes | Brick id has not been set. (Resource instance name: %s) |
-| 29311 | 16 | Yes | An error occurred while trying to connect to a service control manager on machine %ls.  Error returned: %d - %ls. |
-| 29312 | 16 | Yes | An error occurred while trying to perform a service operation on service %ls on machine %ls.  Error returned: %d - %ls. |
+| 29311 | 16 | Yes | An error occurred while trying to connect to a service control manager on machine %ls. Error returned: %d - %ls. |
+| 29312 | 16 | Yes | An error occurred while trying to perform a service operation on service %ls on machine %ls. Error returned: %d - %ls. |
 | 29314 | 16 | Yes | The service %ls on machine %ls failed to start in a timely fashion. Service specific error code %d. |
 | 29315 | 16 | Yes | OS user does not have the required privileges to start the remote service on brick %d. |
 | 29316 | 16 | Yes | The path name for the file matrix.xsd cannot be constructed. (Reason: %d). |

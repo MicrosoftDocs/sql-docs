@@ -10,6 +10,7 @@ ms.topic: conceptual
 ms.custom: intro-whats-new
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # What's new in columnstore indexes
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,6 +39,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Columnstore index on a memory-optimized table|||yes|yes|yes|yes|yes|yes|
 |Nonclustered columnstore index definition supports using a filtered condition|||yes|yes|yes|yes|yes|yes|
 |Compression delay option for columnstore indexes in `CREATE TABLE` and `ALTER TABLE`|||yes|yes|yes|yes|yes|yes|
+|Support for nvarchar(max) type||||yes|yes|yes|yes|yes|
 |Columnstore index can have a non-persisted computed column||||yes|yes|yes|||
 |Tuple mover background merge support|||||yes|yes|yes|yes|
 |Ordered clustered columnstore indexes||||||yes|yes|yes|
@@ -218,3 +220,4 @@ These in-memory OLTP-based DMVs contain updates for columnstore:
 - [Get started with Columnstore for real-time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)
 - [Columnstore Indexes for Data Warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)
 - [Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)
+

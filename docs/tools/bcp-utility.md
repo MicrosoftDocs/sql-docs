@@ -4,7 +4,7 @@ description: The bulk copy program (bcp) utility bulk copies data between an ins
 author: markingmyname
 ms.author: maghan
 ms.reviewer: v-davidengel, randolphwest
-ms.date: 06/19/2023
+ms.date: 07/12/2023
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: conceptual
@@ -57,7 +57,7 @@ The command-line tools are General Availability (GA), however they're being rele
 
 The new version of **sqlcmd** supports Azure AD authentication, including Multi-Factor Authentication (MFA) support for SQL Database, Azure Synapse Analytics, and Always Encrypted features.
 
-The new BCP supports Azure AD authentication, including Multi-Factor Authentication (MFA) support for SQL Database and Azure Synapse Analytics.
+The new **bcp** supports Azure AD authentication, including Multi-Factor Authentication (MFA) support for SQL Database and Azure Synapse Analytics.
 
 ### System requirements
 
@@ -67,7 +67,7 @@ The new BCP supports Azure AD authentication, including Multi-Factor Authenticat
 
 This component requires both [Windows Installer 4.5](https://windows-installer.soft32.com/) and the latest [Microsoft ODBC Driver for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md).
 
-To check the BCP version, execute `bcp -v` command, and confirm that 15.0.4298.1 or later is in use.
+To check the **bcp** version, execute `bcp -v` command, and confirm that 15.0.4298.1 or later is in use.
 
 ## Syntax
 
@@ -221,7 +221,7 @@ Specifies the full path of a format file. The meaning of this option depends on 
 - If used with the `in` or `out` option, `-f` requires an existing format file.
 
   > [!NOTE]  
-  > Using a format file in with the `in` or `out` option is optional. In the absence of the `-f` option, if `-n`, `-c`, `-w`, or `-N` is not specified, the command prompts for format information and lets you save your responses in a format file (whose default file name is Bcp.fmt).
+  > Using a format file in with the `in` or `out` option is optional. In the absence of the `-f` option, if `-n`, `-c`, `-w`, or `-N` is not specified, the command prompts for format information and lets you save your responses in a format file (whose default file name is `bcp.fmt`).
 
 If *format_file* begins with a hyphen (`-`) or a forward slash (`/`), don't include a space between `-f` and the *format_file* value.
 
@@ -233,14 +233,15 @@ Specifies the number of the first row to export from a table or import from a da
 
 #### -G
 
+**Applies to:** Azure SQL Database and Azure Synapse Analytics only.
+
 This switch is used by the client when connecting to Azure SQL Database or Azure Synapse Analytics to specify that the user be authenticated using Azure Active Directory authentication. The -G switch requires [version 14.0.3008.27](https://go.microsoft.com/fwlink/?LinkID=825643) or later versions. To determine your version, execute `bcp -v`. For more information, see [Use Azure Active Directory Authentication for authentication with SQL Database or Azure Synapse Analytics](/azure/sql-database/sql-database-aad-authentication).
 
 > [!IMPORTANT]  
-> The `-G` option only applies to Azure SQL Database and Azure Synapse Analytics.
-> Azure AD Interactive Authentication is not currently supported on Linux or macOS. Azure AD Integrated Authentication requires [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) version 17.6.1 or higher and a properly [configured Kerberos environment](../connect/odbc/linux-mac/using-integrated-authentication.md#configure-kerberos).
+> Azure AD Interactive Authentication is not currently supported on Linux or macOS. Azure AD Integrated Authentication requires [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) version 17.6.1 and later versions, and a properly [configured Kerberos environment](../connect/odbc/linux-mac/using-integrated-authentication.md#configure-kerberos).
 
 > [!TIP]  
-> To check if your version of **bcp** includes support for Azure Active Directory (Azure AD) Authentication, type `bcp --` and verify that you see `-G` in the list of available arguments.
+> To check if your version of **bcp** includes support for Azure Active Directory (Azure AD) Authentication, type `bcp --help` and verify that you see `-G` in the list of available arguments.
 
 - **Azure Active Directory Username and Password**
 
@@ -328,7 +329,7 @@ Specifies the hint or hints to be used during a bulk import of data into a table
   > [!NOTE]  
   > UNIQUE, PRIMARY KEY, and NOT NULL constraints are always enforced.
 
-  At some point, you will need to check the constraints on the entire table. If the table was nonempty before the bulk import operation, the cost of revalidating the constraint may exceed the cost of applying CHECK constraints to the incremental data. Therefore, we recommend that normally you enable constraint checking during an incremental bulk import.
+  At some point, you need to check the constraints on the entire table. If the table was nonempty before the bulk import operation, the cost of revalidating the constraint may exceed the cost of applying CHECK constraints to the incremental data. Therefore, we recommend that normally you enable constraint checking during an incremental bulk import.
 
   A situation in which you might want constraints disabled (the default behavior) is if the input data contains rows that violate constraints. With CHECK constraints disabled, you can import the data and then use [!INCLUDE [tsql](../includes/tsql-md.md)] statements to remove data that isn't valid.
 
@@ -354,7 +355,7 @@ Specifies that empty columns should retain a null value during the operation, ra
 
 #### -K application_intent
 
-Declares the application workload type when connecting to a server. The only value that is possible is **ReadOnly**. If `-K` isn't specified, the **bcp** utility will not support connectivity to a secondary replica in an Always On availability group. For more information, see [Active Secondaries: Readable Secondary Replicas (Always On Availability Groups)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).
+Declares the application workload type when connecting to a server. The only value that is possible is **ReadOnly**. If `-K` isn't specified, the **bcp** utility doesn't support connectivity to a secondary replica in an Always On availability group. For more information, see [Active Secondaries: Readable Secondary Replicas (Always On Availability Groups)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).
 
 #### -l login_timeout
 
@@ -404,7 +405,7 @@ Specifies the password for the login ID. If this option isn't used, the **bcp** 
 > [!IMPORTANT]  
 > [!INCLUDE [ssNoteStrongPass](../includes/ssnotestrongpass-md.md)]
 
-To mask your password, don't specify the `-P` option along with the `-U` option. Instead, after specifying **bcp** along with the `-U` option and other switches (don't specify `-P`), press ENTER, and the command will prompt you for a password. This method ensures that your password will be masked when it is entered.
+To mask your password, don't specify the `-P` option along with the `-U` option. Instead, after specifying **bcp** along with the `-U` option and other switches (don't specify `-P`), press ENTER, and the command will prompt you for a password. This method ensures that your password is masked when it is entered.
 
 If *password* begins with a hyphen (`-`) or a forward slash (`/`), don't add a space between `-P` and the *password* value.
 
@@ -576,7 +577,7 @@ To bulk export or import SQLXML data, use one of the following data types in you
 
 A `bcp out` operation requires SELECT permission on the source table.
 
-A `bcp in` operation minimally requires SELECT/INSERT permissions on the target table. In addition, ALTER TABLE permission is required if any of the following is true:
+A `bcp in` operation minimally requires SELECT/INSERT permissions on the target table. In addition, ALTER TABLE permission is required if any of the following conditions are true:
 
 - Constraints exist and the CHECK_CONSTRAINTS hint isn't specified.
 
@@ -609,7 +610,7 @@ The examples in this section make use of the `WideWorldImporters` sample databas
 
 ### Example test conditions
 
-Except where specified otherwise, the examples assume that you are using Windows Authentication and have a trusted connection to the server instance on which you are running the **bcp** command. A directory named `D:\BCP` is used in many of the examples.
+Except where specified otherwise, the examples assume that you use Windows Authentication and have a trusted connection to the server instance on which you are running the **bcp** command. A directory named `D:\BCP` is used in many of the examples.
 
 The following script creates an empty copy of the `WideWorldImporters.Warehouse.StockItemTransactions` table and then adds a primary key constraint. Run the following T-SQL script in SQL Server Management Studio (SSMS)
 
@@ -672,7 +673,7 @@ Review `Error_out.log` and `Output_out.log`. `Error_out.log` should be blank. Co
 
 The following example illustrates the `out` option on the `WideWorldImporters.Warehouse.StockItemTransactions` table. This example creates a data file named `StockItemTransactions_character.bcp` and copies the table data into it using **character** format.
 
-The example assumes that you are using mixed-mode authentication, you must use the `-U` switch to specify your login ID. Also, unless you are connecting to the default instance of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] on the local computer, use the `-S` switch to specify the system name and, optionally, an instance name.
+The example assumes that you use mixed-mode authentication, and you must use the `-U` switch to specify your login ID. Also, unless you are connecting to the default instance of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] on the local computer, use the `-S` switch to specify the system name and, optionally, an instance name.
 
 At a command prompt, enter the following command: (The system prompts you for your password.)
 
@@ -786,11 +787,82 @@ The following partial code example shows **bcp** import while specifying a code 
 bcp MyTable in "D:\data.csv" -T -c -C 65001 -t , ...
 ```
 
+### K. Example output file using a custom field and row terminators
+
+This example shows two sample files, generated by **bcp** using custom field and row terminators.
+
+1. Create a table `dbo.T1` in the `tempdb` database, with two columns, `ID` and `Name`.
+
+   ```sql
+   USE tempdb;
+   GO
+
+   CREATE TABLE dbo.T1 (ID INT, [Name] NVARCHAR(20));
+   GO
+
+   INSERT INTO dbo.T1 VALUES (1, N'Natalia');
+   INSERT INTO dbo.T1 VALUES (2, N'Mark');
+   INSERT INTO dbo.T1 VALUES (3, N'Randolph');
+   GO
+   ```
+
+1. Generate an output file from the example table `dbo.T1`, using a custom field terminator.
+
+   In this example, the server name is `MYSERVER`, and the custom field terminator is specified by `-t ,`.
+
+   ```cmd
+   bcp dbo.T1 out T1.txt -T -S MYSERVER -d tempdb -w -t ,
+   ```
+
+   [!INCLUDE [ssresult-md](../includes/ssresult-md.md)].
+
+   ```output
+   1,Natalia
+   2,Mark
+   3,Randolph
+   ```
+
+1. Generate an output file from the example table `dbo.T1`, using a custom field terminator and custom row terminator.
+
+   In this example, the server name is `MYSERVER`, the custom field terminator is specified by `-t ,`, and the custom row terminator is specified by `-r :`.
+
+   ```cmd
+   bcp dbo.T1 out T1.txt -T -S MYSERVER -d tempdb -w -t , -r :
+   ```
+
+   [!INCLUDE [ssresult-md](../includes/ssresult-md.md)].
+
+   ```output
+   1,Natalia:2,Mark:3,Randolph:
+   ```
+
+   > [!NOTE]  
+   > The row terminator is always added, even to the last record. The field terminator, however, isn't added to the last field.
+
 ## Additional examples
 
-| The following articles contain examples of using bcp: |
-| --- |
-| Data Formats for Bulk Import or Bulk Export (SQL Server)<br />&emsp;&#9679;&emsp;[Use Native Format to Import or Export Data (SQL Server)](../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Use Character Format to Import or Export Data (SQL Server)](../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Use Unicode Native Format to Import or Export Data (SQL Server)](../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Use Unicode Character Format to Import or Export Data (SQL Server)](../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)<br /><br />[Specify Field and Row Terminators (SQL Server)](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)<br /><br />[Keep Nulls or Use Default Values During Bulk Import (SQL Server)](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)<br /><br />[Keep Identity Values When Bulk Importing Data (SQL Server)](../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)<br /><br />Format Files for Importing or Exporting Data (SQL Server))<br />&emsp;&#9679;&emsp;[Create a Format File (SQL Server)](../relational-databases/import-export/create-a-format-file-sql-server.md)<br />&emsp;&#9679;&emsp;[Use a Format File to Bulk Import Data (SQL Server)](../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Use a Format File to Skip a Table Column (SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)<br />&emsp;&#9679;&emsp;[Use a Format File to Skip a Data Field (SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)<br />&emsp;&#9679;&emsp;[Use a Format File to Map Table Columns to Data-File Fields (SQL Server)](../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)<br /><br />[Examples of Bulk Import and Export of XML Documents (SQL Server)](../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)<br /><p> </p> |
+The following articles contain examples of using **bcp**:
+
+- Data Formats for Bulk Import or Bulk Export (SQL Server)
+  - [Use Native Format to Import or Export Data (SQL Server)](../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)
+  - [Use Character Format to Import or Export Data (SQL Server)](../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)
+  - [Use Unicode Native Format to Import or Export Data (SQL Server)](../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)
+  - [Use Unicode Character Format to Import or Export Data (SQL Server)](../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)
+
+- [Specify Field and Row Terminators (SQL Server)](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)
+
+- [Keep Nulls or Use Default Values During Bulk Import (SQL Server)](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)
+
+- [Keep Identity Values When Bulk Importing Data (SQL Server)](../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)
+
+- Format Files for Importing or Exporting Data (SQL Server)
+  - [Create a Format File (SQL Server)](../relational-databases/import-export/create-a-format-file-sql-server.md)
+  - [Use a Format File to Bulk Import Data (SQL Server)](../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)
+  - [Use a Format File to Skip a Table Column (SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)
+  - [Use a Format File to Skip a Data Field (SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)
+  - [Use a Format File to Map Table Columns to Data-File Fields (SQL Server)](../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)
+
+- [Examples of Bulk Import and Export of XML Documents (SQL Server)](../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)
 
 ## Considerations and limitations
 

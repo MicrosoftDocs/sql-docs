@@ -1,9 +1,9 @@
 ---
-title: "sys.dm_db_exec_cursors (Transact-SQL)"
-description: sys.dm_db_exec_cursors (Transact-SQL)
+title: "sys.dm_db_exec_cursors (Azure SQL Database)"
+description: sys.dm_db_exec_cursors (Azure SQL Database)
 author: RPLogan
-ms.author: randolphwest
-ms.date: "02/24/2023"
+ms.author: RPlogan
+ms.date: "07/12/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -16,8 +16,9 @@ helpviewer_keywords:
   - "sys.dm_db_exec_cursors dynamic management function"
 dev_langs:
   - "TSQL"
+monikerRange: "=azuresqldb-current"
 ---
-# sys.dm_db_exec_cursors (Transact-SQL)
+# sys.dm_db_exec_cursors (Azure SQL Database)
 [!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
   Returns information about the cursors that are declared or open in the current database.  

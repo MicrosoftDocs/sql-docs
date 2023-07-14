@@ -23,7 +23,7 @@ helpviewer_keywords:
 | Event Source | MSSQLSERVER |
 | Component | SQLEngine |
 | Symbolic Name | RMT_TRANS_JOIN_FAIL |
-| Message Text | The operation could not be performed because OLE DB provider "%ls" for linked server "%ls" was unable to begin a distributed transaction. |
+| Message Text | The operation couldn't be performed because OLE DB provider "%ls" for linked server "%ls" was unable to begin a distributed transaction. |
 
 ## Explanation
 
@@ -59,7 +59,7 @@ Check for the following aspects involved in communication of servers:
 
 - Check whether your network name resolution works. Make sure that the servers can communicate with one another using name and not just by IP address. Check in both directions (for example, from server A to server B and from server B to server A). Resolve all name resolution problems on the network before you run your distributed query. This might involve updating the WINS, DNS, or LMHost files.  
 
-- If you have a firewall, make sure that your Remote Procedure Call (RPC) ports are opened correctly. For additional information, see the following articles:
+- If you have a firewall, make sure that your Remote Procedure Call (RPC) ports are opened correctly. For more information, see the following articles:
 
   - [Remote Procedure Call (RPC) dynamic port work with firewalls - Windows Server](/troubleshoot/windows-server/networking/configure-rpc-dynamic-port-allocation-with-firewalls)
 
@@ -69,7 +69,7 @@ Check for the following aspects involved in communication of servers:
 
 - Check the object you refer to on the destination server. If it's a view or a stored procedure, or causes an execution of a trigger, check whether it implicitly references another server. If so, the third server is the source of the problem. Run the query directly on the third server. If you can't do so, the problem isn't with the linked server query. Resolve the underlying problem first.
 
-- Check whether you are using Remote Access Server (RAS) to access remote servers. If so, make sure that you have implemented Routing RAS (RRAS). Linked server doesn't work on RAS because RAS allows only one way communication.
+- Check whether you're using Remote Access Server (RAS) to access remote servers. If so, make sure that you have implemented Routing RAS (RRAS). Linked server doesn't work on RAS because RAS allows only one way communication.
 
 ### Configuration of servers
 
@@ -87,7 +87,7 @@ Follow these steps for configuring the servers:
 
 1. Check whether any of the servers are on a Windows Server Failover Cluster. The MSDTC on the cluster must have its own IP address. Make sure proper name resolution of the DTC service has happened on each server. The IP address of the DTC must be defined in your name resolution system (such as WINS, DNS, or LMHosts). Verify that each server can communicate with the other's MSDTC by name and not just by IP address. Check in both directions. For example, check from server A to server B's MSDTC, and then check from server B to server A's MSDTC. You must resolve all name resolution problems on the network before you run your distributed query. To configure MSDTC on a cluster, see [MSDTC Recommendations on SQL Failover Cluster - Microsoft Community Hub](/troubleshoot/sql/database-engine/linked-servers/error-message-ole-db-provider).
 
-1. If you are using the older remote servers technology instead of the recommended linked servers, set the **remote proc trans** configuration option setting to `OFF` for the server, or run a `SET REMOTE_PROC_TRANSACTIONS OFF` statement before you run any distributed query. If this setting is set to `ON`, the remote procedure calls are made in a local transaction. For more information, see [Configure the remote proc trans (server configuration option) - SQL Server](../../database-engine/configure-windows/configure-the-remote-proc-trans-server-configuration-option.md).
+1. If you're using the older remote servers technology instead of the recommended linked servers, set the **remote proc trans** configuration option setting to `OFF` for the server, or run a `SET REMOTE_PROC_TRANSACTIONS OFF` statement before you run any distributed query. If this setting is set to `ON`, the remote procedure calls are made in a local transaction. For more information, see [Configure the remote proc trans (server configuration option) - SQL Server](../../database-engine/configure-windows/configure-the-remote-proc-trans-server-configuration-option.md).
 
 1. Check the return value of the system function `@@SERVERNAME` on both servers. Verify whether the return value matches the computer name of each server. If it doesn't match, rename the server.
 

@@ -27,12 +27,12 @@ helpviewer_keywords:
 
 ## Explanation
 
-MSDTC may not be running or may have disabled network access.  
+You might see the following error message when you run a distributed transaction against a linked server on a computer that's running Microsoft Windows Server.
 
-You may see this error when you run a distributed transaction against a linked server on a computer that's running Microsoft Windows Server.
+> "MSDTC may not be running or may have disabled network access."
 
-In some instances, you may also receive error 8522:
-> Microsoft Distributed Transaction Coordinator (MS DTC) has stopped this transaction.
+In some instances, you might also receive error 8522:
+> "Microsoft Distributed Transaction Coordinator (MS DTC) has stopped this transaction."
 
 Error numbers that are in the range of 7300 to 7399 indicate a problem with the provider. As each provider may have different capabilities and return different details, you may not receive the complete error message. To retrieve the complete error message from providers, run the following command before you run the query that shows the error:
 
@@ -49,13 +49,13 @@ If you receive error 7391 from a process such as SQL Server replication or SQL S
 
 ### Supportability
 
-- To check whether the driver supports distributed transactions, contact the vendor of the driver you use in your linked server query.
+- To check whether the driver supports distributed transactions, contact the vendor of the driver that you use in your linked server query.
 
 - Check whether the object on the destination server points back to the first server. This is known as a loopback situation. [Loopback linked servers](../linked-servers/linked-servers-database-engine.md) are intended for testing and aren't supported for many operations, such as distributed transactions.
 
 ### Check the communication of servers
 
-Check for the following possibilities in communication between servers:
+Check for the following aspects involved in communication of servers:
 
 - Check whether your network name resolution works. Make sure that the servers can communicate with one another using name and not just by IP address. Check in both directions (for example, from server A to server B and from server B to server A). Resolve all name resolution problems on the network before you run your distributed query. This might involve updating the WINS, DNS, or LMHost files.  
 

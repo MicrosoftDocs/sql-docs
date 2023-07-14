@@ -49,7 +49,7 @@ This article provides information on configuring a [ledger database](ledger-over
 
 ## Enable ledger database using T-SQL
 
-Open a query editor like [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md) or [SQL Server Data Tools (SSDT)](../../../ssdt/download-sql-server-data-tools-ssdt.md) in Visual Studio and connect to your logical SQL Server. The below example creates a General Purpose database. The `WITH LEDGER=ON` clause will create the ledger database.
+Open a query editor like [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md), [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md) or [SQL Server Data Tools (SSDT)](../../../ssdt/download-sql-server-data-tools-ssdt.md) in Visual Studio and connect to your logical SQL Server. The below example creates a General Purpose database. The `WITH LEDGER=ON` clause will create the ledger database.
 
 ```sql
 CREATE DATABASE Database01
@@ -171,7 +171,7 @@ This article provides information on configuring a [ledger database](ledger-over
 
 ## Enable ledger database using T-SQL
 
-1. Sign into your managed instance using SQL Server Management Studio (SSMS) or Azure Data Studio or SQL Server Data Tools (SSDT).
+1. Sign into your managed instance using SQL Server Management Studio (SSMS), Azure Data Studio or SQL Server Data Tools (SSDT).
 
 1. Create a ledger database using the following T-SQL statement:
 
@@ -227,11 +227,11 @@ This article provides information on creating a [ledger database](ledger-overvie
 ## Prerequisites
 
 - [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)]
-- [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md) or [SQL Server Data Tools](../../../ssdt/download-sql-server-data-tools-ssdt.md)
+- [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md), [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md) or [SQL Server Data Tools](../../../ssdt/download-sql-server-data-tools-ssdt.md)
 
 ## Create a ledger database using T-SQL
 
-1. Sign into your [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] instance using SSMS or Azure Data Studio or SSDT.
+1. Sign into your [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] instance using SSMS, Azure Data Studio or SSDT.
 1. Create a ledger database using the following T-SQL statement:
 
    ```sql

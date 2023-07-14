@@ -51,15 +51,15 @@ If you receive error 7391 from a process such as SQL Server replication or SQL S
 
 - To check whether the driver supports distributed transactions, contact the vendor of the driver you use in your linked server query.
 
-- Check whether the object on the destination server refers to the first server. This is known as a loopback situation. Loopback linked servers are intended for testing and aren't supported for many operations, such as distributed transactions.
+- Check whether the object on the destination server points back to the first server. This is known as a loopback situation. [Loopback linked servers](../linked-servers/linked-servers-database-engine.md) are intended for testing and aren't supported for many operations, such as distributed transactions.
 
-### Communication
+### Check the communication of servers
 
-Check for the following points:
+Check for the following possibilities in communication between servers:
 
-1. Verify that your network name resolution works. Verify that the servers can communicate with one another by name, not just by IP address. Check in both directions (for example, from server A to server B and from server B to server A). You must resolve all name resolution problems on the network before you run your distributed query. This may involve updating WINS, DNS, or LMHost files.  
+- Check whether your network name resolution works. Make sure that the servers can communicate with one another using name and not just by IP address. Check in both directions (for example, from server A to server B and from server B to server A). Resolve all name resolution problems on the network before you run your distributed query. This might involve updating the WINS, DNS, or LMHost files.  
 
-1. If you have a firewall, make sure that your Remote Procedure Call (RPC) ports are opened correctly. For additional information, see the following:
+- If you have a firewall, make sure that your Remote Procedure Call (RPC) ports are opened correctly. For additional information, see the following articles:
 
   - [Remote Procedure Call (RPC) dynamic port work with firewalls - Windows Server](/troubleshoot/windows-server/networking/configure-rpc-dynamic-port-allocation-with-firewalls)
 
@@ -67,11 +67,13 @@ Check for the following points:
 
   - [Configure the Windows Firewall to allow SQL Server access - SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)
 
-1. Check the object you refer to on the destination server. If it's a view or a stored procedure, or executes a trigger, check whether it implicitly references another server. If so, the third server is the source of the problem. Run the query directly on the third server. If you can't run the query directly on the third server, the problem isn't actually with the linked server query. Resolve the underlying problem first.
+- Check the object you refer to on the destination server. If it's a view or a stored procedure, or causes an execution of a trigger, check whether it implicitly references another server. If so, the third server is the source of the problem. Run the query directly on the third server. If you can't do so, the problem isn't with the linked server query. Resolve the underlying problem first.
 
-1. Check whether you are using Remote Access Server (RAS) to access remote servers. If so, make sure that you have implemented Routing RAS (RRAS). Linked server doesn't work on RAS because RAS allows only one way communication.
+- Check whether you are using Remote Access Server (RAS) to access remote servers. If so, make sure that you have implemented Routing RAS (RRAS). Linked server doesn't work on RAS because RAS allows only one way communication.
 
-### Configuration
+### Configuration of servers
+
+Follow these steps for configuring the servers:
 
 1. Start the Distributed Transaction Coordinator (DTC or MS DTC) on all servers that are involved in the distributed transaction. For information on enabling network DTC access, see [Error message of OLE DB provider - SQL Server](/troubleshoot/sql/database-engine/linked-servers/error-message-ole-db-provider).
 
@@ -83,9 +85,9 @@ Check for the following points:
 
 1. Set the `XACT_ABORT` option to `ON` for data modification statements in an implicit or explicit transaction against most OLE DB providers, including SQL Server. This option isn't required if the provider supports nested transactions.
 
-1. Check whether any of the servers are on a Windows Server Failover Cluster. The MSDTC on the cluster must have its own IP address. Make sure proper name resolution of the DTC service on has happened on each server. The IP address of the DTC must be defined in your name resolution system (such as WINS, DNS, or LMHosts). Verify that each server can communicate with the other's MSDTC by name, not just by IP address. Check in both directions. For example, check from server A to server B's MSDTC, and then check from server B to server A's MSDTC. You must resolve all name resolution problems on the network before you run your distributed query. To configure MSDTC on a cluster, see [MSDTC Recommendations on SQL Failover Cluster - Microsoft Community Hub](/troubleshoot/sql/database-engine/linked-servers/error-message-ole-db-provider).
+1. Check whether any of the servers are on a Windows Server Failover Cluster. The MSDTC on the cluster must have its own IP address. Make sure proper name resolution of the DTC service has happened on each server. The IP address of the DTC must be defined in your name resolution system (such as WINS, DNS, or LMHosts). Verify that each server can communicate with the other's MSDTC by name and not just by IP address. Check in both directions. For example, check from server A to server B's MSDTC, and then check from server B to server A's MSDTC. You must resolve all name resolution problems on the network before you run your distributed query. To configure MSDTC on a cluster, see [MSDTC Recommendations on SQL Failover Cluster - Microsoft Community Hub](/troubleshoot/sql/database-engine/linked-servers/error-message-ole-db-provider).
 
-1. If you are using the older remote servers technology instead of the recommended linked servers, set the **remote proc trans** configuration option setting to OFF for the server, or run a `SET REMOTE_PROC_TRANSACTIONS OFF` statement before you run any distributed query. If this setting is set to `ON`, the remote procedure calls are made in a local transaction. For more information, see [Configure the remote proc trans (server configuration option) - SQL Server](../../database-engine/configure-windows/configure-the-remote-proc-trans-server-configuration-option.md).
+1. If you are using the older remote servers technology instead of the recommended linked servers, set the **remote proc trans** configuration option setting to `OFF` for the server, or run a `SET REMOTE_PROC_TRANSACTIONS OFF` statement before you run any distributed query. If this setting is set to `ON`, the remote procedure calls are made in a local transaction. For more information, see [Configure the remote proc trans (server configuration option) - SQL Server](../../database-engine/configure-windows/configure-the-remote-proc-trans-server-configuration-option.md).
 
 1. Check the return value of the system function `@@SERVERNAME` on both servers. Verify whether the return value matches the computer name of each server. If it doesn't match, rename the server.
 

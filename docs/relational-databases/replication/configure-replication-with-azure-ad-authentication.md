@@ -14,7 +14,7 @@ ms.author: "mathoma"
 # Configure replication with Azure AD authentication - Arc-enabled SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver2022.md)]
 
-This article provides steps to configure Transactional and Snapshot replication by using Azure Active Directory (Azure AD) authentication starting with [Azure-Arc enabled SQL Server](../../sql-server/azure-arc/overview.md) CU 6. 
+This article provides steps to configure Transactional and Snapshot replication by using Azure Active Directory (Azure AD) authentication for [Azure-Arc enabled SQL Server](../../sql-server/azure-arc/overview.md). 
 
 ## Overview
 
@@ -28,8 +28,8 @@ Support for Azure AD authentication with SQL Server replication was added in SQL
 
 To configure replication with Azure AD authentication, you must meet the following prerequisites: 
 
-- Your Windows-based SQL Server instance is connected to Azure. Follow the instructions to [onboard your SQL Server instance to Arc-enabled SQL Server](../../sql-server/azure-arc/connect.md).
-- Have SQL Server 2022 Cumulative Update 6 configured with Azure AD authentication for every server in the replication topology. Review [Tutorial: Set up Azure AD authentication for SQL Server](../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial.md) to learn more. 
+- Have [Azure Arc-enabled](../../sql-server/azure-arc/connect.md) SQL Server 2022 starting with [Cumulative Update 6](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate6). 
+- Configured Azure AD authentication for every server in the replication topology. Review [Tutorial: Set up Azure AD authentication for SQL Server](../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial.md) to learn more. 
 - [SQL Server Management Studio (SSMS) v19.1 or higher](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio). 
 - The user connecting to the publisher and subscriber is a member of the **sysadmin** fixed server role.
 - The connection must be encrypted using a certificate from a trusted Certificate Authority (CA) or a self-signed certificate.

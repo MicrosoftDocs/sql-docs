@@ -4982,6 +4982,8 @@ items:
       items:
       - name: Configure replication
         items:
+        - name: With Azure AD authentication
+          href: relational-databases/replication/configure-replication-with-azure-ad-authentication.md
         - name: Distribution
           href: relational-databases/replication/configure-distribution.md
           items:

@@ -4,7 +4,7 @@ description: Learn about new features for SQL Server 2022 (16.x), which gives yo
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: wiassaf, randolphwest
-ms.date: 03/15/2023
+ms.date: 07/15/2023
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: whats-new
@@ -75,7 +75,7 @@ The following sections identify features that are improved our introduced in [!I
 | Microsoft Defender for Cloud integration | Protect your SQL servers using the Defender for SQL plan. Defender for SQL plan requires that SQL Server Extension for Azure is enabled and includes functionalities for discovering and mitigating potential database vulnerabilities and detecting anomalous activities that could indicate a threat to your databases. [Learn more](/azure/defender-for-cloud/defender-for-sql-introduction) on how Defender for SQL can protect your entire database estate anywhere: on-premises, hybrid, and multicloud environments.
 | Microsoft Purview integration | Apply Microsoft Purview access policies to any SQL Server instance that is enrolled in both Azure Arc and the Microsoft Purview Data Use Management.<br /><br />- Newly introduced *SQL Performance Monitor*, and *SQL Security Auditor* roles align with the principle of least privilege using Microsoft Purview access policies.<br /><br />Check out [Provision access by data owner for Azure Arc-enabled SQL Server](/azure/purview/how-to-policies-data-owner-arc-sql-server) for details. |
 | Ledger | The ledger feature provides tamper-evidence capabilities in your database. You can cryptographically attest to other parties, such as auditors or other business parties, that your data hasn't been tampered with. See [Ledger](../relational-databases/security/ledger/ledger-overview.md). |
-| Azure Active Directory authentication | Use [Azure Active Directory (Azure AD) authentication](../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md) to connect to SQL Server. |
+| Azure Active Directory authentication | Use [Azure Active Directory (Azure AD) authentication](../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md) to connect to SQL Server.  <br /><br /> Starting with [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] Cumulative Update 6, you can configure [Transactional and Snapshot Replication with Azure Active Directory authentication](../relational-databases/replication/configure-replication-with-azure-ad-authentication.md).  |
 | Always encrypted with secure enclaves | Support for JOIN, GROUP BY, and ORDER BY, and for text columns using UTF-8 collations in confidential queries using enclaves. Improved performance. See [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md). |
 | Access Control: Permissions | New [granular permissions](https://techcommunity.microsoft.com/t5/sql-server-blog/new-granular-permissions-for-sql-server-2022-and-azure-sql-to/ba-p/3607507) improve adherence with the [Principle of Least Privilege](https://techcommunity.microsoft.com/t5/azure-sql-blog/security-the-principle-of-least-privilege-polp/ba-p/2067390)<br /><br />Read here for an in-depth explanation of the [revamped SQL Permission system for Principle of Least Privilege and external policies](https://techcommunity.microsoft.com/t5/azure-sql-blog/revamped-sql-permission-system-for-principle-of-least-privilege/ba-p/3639399) |
 | Access Control: Server-level Roles | New [built-in server-level roles](../relational-databases/security/authentication-access/server-level-roles.md#fixed-server-level-roles-introduced-in-sql-server-2022) enable least privileged access for administrative tasks that apply to the whole SQL Server Instance |
@@ -205,6 +205,14 @@ This release introduces new features and improvements for performance, resource 
 ## SQL Server Reporting Services
 
 This release introduces new features and improvements for accessibility, security, reliability, and bug fixes. For specific updates, see [What's new in SQL Server Reporting Services (SSRS)](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
+
+## SQL Server Integration Services
+
+For changes related to SQL Server Integration Services, see [Integration Services Backward Compatibility](../integration-services/integration-services-backward-compatibility.md).
+
+## Other services
+
+This release does not add features for SQL Server Master Data Services.
 
 ## See also
 

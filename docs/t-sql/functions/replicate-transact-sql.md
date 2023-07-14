@@ -41,7 +41,7 @@ REPLICATE ( string_expression , integer_expression )
 > If *string_expression* is of type **binary**, REPLICATE will perform an implicit conversion to **varchar**, and therefore will not preserve the binary input.  
 
 > [!NOTE]  
-> If *string_expression* input is of type **varchar(max)** or **nvarchar(max)**, REPLICATE truncates the return value at 8,000 bytes. To return values greater than 8,000 bytes, *string_expression* must be explicitly cast to the appropriate large-value data type.  
+> If *string_expression* input is not of type **varchar(max)** or **nvarchar(max)**, REPLICATE truncates the return value at 8,000 bytes. To return values greater than 8,000 bytes, *string_expression* must be explicitly cast to the appropriate large-value data type.  
   
  *integer_expression*  
  Is an expression of any integer type, including **bigint**. If *integer_expression* is negative, NULL is returned.  

@@ -22,7 +22,7 @@ monikerRange: "= azuresql || = azuresql-db"
 >
 > This preview feature is available for Azure SQL Database (all SQL Database editions). It is not available for Azure SQL Managed Instance, SQL Server on-premises, Azure VMs, and Azure Synapse Analytics (dedicated SQL pools (formerly SQL DW)).
 
-In this guide, we go through the steps to configure geo replication and backup restore on an Azure SQL Database. The Azure SQL Database is configured with transparent data encryption (TDE) and customer-managed keys (CMK) at the database level, utilizing a [user-assigned managed identity](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) to access [Azure Key Vault](/azure/key-vault/general/quick-create-portal). The Azure Key Vault is in an Azure Active Directory (Azure AD) that is in the same tenant as the Azure SQL logical server tenant.
+In this guide, we go through the steps to configure geo replication and backup restore on an Azure SQL Database. The Azure SQL Database is configured with transparent data encryption (TDE) and [customer-managed keys (CMK) at the database level](transparent-data-encryption-byok-database-level-overview.md), utilizing a [user-assigned managed identity](authentication-azure-ad-user-assigned-managed-identity.md#creating-a-user-assigned-managed-identity) to access [Azure Key Vault](/azure/key-vault/general/quick-create-portal). The Azure Key Vault is in an Azure Active Directory (Azure AD) that is in the same tenant as the Azure SQL logical server tenant for this guide, but they can be in different tenants.
 
 ## Prerequisites
 
@@ -49,7 +49,7 @@ To create a database in Azure SQL Database as a copy with database level custome
 
    :::image type="content" source="media/transparent-data-encryption-byok-database-level-geo-replication-restore/database-copy.png" alt-text="Screenshot of the Azure portal copy database menu.":::
 
-1. The **Create SQL Database - Copy database** menu will appear. Use a different server for this database, but the same settings as the database you are trying to copy. In the **Transparent Data Encryption Key Management** section, select **Configure transparent data encryption**.
+1. The **Create SQL Database - Copy database** menu appears. Use a different server for this database, but the same settings as the database you're trying to copy. In the **Transparent Data Encryption Key Management** section, select **Configure transparent data encryption**.
 
    :::image type="content" source="media/transparent-data-encryption-byok-database-level-geo-replication-restore/database-copy-configure-tde.png" alt-text="Screenshot of the Azure portal copy database menu with the transparent data encryption key management section expanded.":::
 
@@ -58,7 +58,7 @@ To create a database in Azure SQL Database as a copy with database level custome
 1. Select **Apply** to continue and then select **Review + create**, and **Create** to create the copy database.
 
 > [!NOTE]
-> After the copy database is created, the **Transparent Data Encryption** menu will show the new database with the same settings as the source database, but with a key missing. This is by design. **Why is this by design?**
+> After the database is created, the **Transparent Data Encryption** menu will show the new database with the same settings as the source database, but may have keys missing. In all cases where a new database is created from a source database, the number of keys displayed for a target database in the Azure portal **Additional Database Keys** list could be less than the number of keys displayed for a source database.  This is because the number of displayed keys depends on individual feature requirements used to create a target database. To list all keys available for a newly create database, use the available APIs in [View the database level customer-managed key settings on an Azure SQL Database](transparent-data-encryption-byok-database-level-basic-actions.md#view-the-database-level-customer-managed-key-settings-on-an-azure-sql-database).
 
 ## Create a secondary replica that has database level customer-managed keys
 
@@ -70,16 +70,16 @@ To create a database in Azure SQL Database as a copy with database level custome
 
    :::image type="content" source="media/transparent-data-encryption-byok-database-level-geo-replication-restore/database-create-replica.png" alt-text="Screenshot of the Azure portal database replica menu.":::
 
-1. The **Create SQL Database - Geo Replica** menu will appear. Use a secondary server for this database, but the same settings as the database you are trying to replicate. In the **Transparent Data Encryption Key Management** section, select **Configure transparent data encryption**.
+1. The **Create SQL Database - Geo Replica** menu appears. Use a secondary server for this database, but the same settings as the database you're trying to replicate. In the **Transparent Data Encryption Key Management** section, select **Configure transparent data encryption**.
 
-   :::image type="content" source="media/transparent-data-encryption-byok-database-level-geo-replication-restore/database-copy-configure-tde.png" alt-text="Screenshot of the Azure portal copy database menu with the transparent data encryption key management section expanded.":::
+   :::image type="content" source="media/transparent-data-encryption-byok-database-level-geo-replication-restore/database-copy-configure-tde.png" alt-text="Screenshot of the Azure portal database replica menu with the transparent data encryption key management section expanded.":::
 
 1. When the **Transparent Data Encryption** menu appears, review the CMK settings for this database replica. The settings and keys should be populated with the same identity and keys used in the primary database.
 
 1. Select **Apply** to continue and then select **Review + create**, and **Create** to create the copy database.
 
 > [!NOTE]
-> After the database replica is created, the **Transparent Data Encryption** menu will show the new database with the same settings as the source database, but with a key missing. This is by design. **Why is this by design?**
+> After the database replica is created, the **Transparent Data Encryption** menu will show the new database with the same settings as the source database, but may have keys missing. In all cases where a new database is created from a source database, the number of keys displayed for a target database in the Azure portal **Additional Database Keys** list could be less than the number of keys displayed for a source database.  This is because the number of displayed keys depends on individual feature requirements used to create a target database. To list all keys available for a newly create database, use the available APIs in [View the database level customer-managed key settings on an Azure SQL Database](transparent-data-encryption-byok-database-level-basic-actions.md#view-the-database-level-customer-managed-key-settings-on-an-azure-sql-database).
 
 # [Azure CLI](#tab/azure-cli)
 
@@ -312,6 +312,25 @@ This section walks you through the steps to restore an Azure SQL Database config
 
 The following section describes how to restore a database configured with customer-managed keys at the database level to a given point in time. To learn more about backup recovery for SQL Database, see [Recover a database in SQL Database](recovery-using-backups.md).
 
+# [Portal](#tab/azure-portal2)
+
+1. Go to the [Azure portal](https://portal.azure.com) and navigate to the Azure SQL Database configured with database level customer-managed keys that you want to restore.
+
+1. To restore the database to a point in time, select **Restore** from the **Overview** menu of the database.
+
+   :::image type="content" source="media/transparent-data-encryption-byok-database-level-geo-replication-restore/database-restore.png" alt-text="Screenshot of the Azure portal copy database menu.":::
+
+1. The **Create SQL Database - Restore database** menu appears. Fill in the source and database details needed. In the **Transparent Data Encryption Key Management** section, select **Configure transparent data encryption**.
+
+   :::image type="content" source="media/transparent-data-encryption-byok-database-level-geo-replication-restore/database-restore-configure-tde.png" alt-text="Screenshot of the Azure portal restore database menu with the transparent data encryption key management section expanded.":::
+
+1. When the **Transparent Data Encryption** menu appears, review the CMK settings for the database. The settings and keys should be populated with the same identity and keys used in the database that you're trying to restore.
+
+1. Select **Apply** to continue and then select **Review + create**, and **Create** to create the copy database.
+
+> [!NOTE]
+> After the database is restored, the **Transparent Data Encryption** menu will show the new database with the same settings as the source database, but may have keys missing. In all cases where a new database is created from a source database, the number of keys displayed for a target database in the Azure portal **Additional Database Keys** list could be less than the number of keys displayed for a source database.  This is because the number of displayed keys depends on individual feature requirements used to create a target database. To list all keys available for a newly create database, use the available APIs in [View the database level customer-managed key settings on an Azure SQL Database](transparent-data-encryption-byok-database-level-basic-actions.md#view-the-database-level-customer-managed-key-settings-on-an-azure-sql-database).
+
 # [Azure CLI](#tab/azure-cli2)
 
 For information on installing the current release of Azure CLI, see [Install the Azure CLI](/cli/azure/install-azure-cli) article.
@@ -358,6 +377,22 @@ For Az PowerShell module installation instructions, see [Install Azure PowerShel
 ### Dropped database restore
 
 The following section describes how to restore a deleted database that was configured with customer-managed keys at the database level. To learn more about backup recovery for SQL Database, see [Recover a database in SQL Database](recovery-using-backups.md).
+
+# [Portal](#tab/azure-portal2)
+
+1. Go to the [Azure portal](https://portal.azure.com) and navigate to the logical server for the deleted database that you want to restore. Under **Data management**, select **Deleted databases**.
+
+   :::image type="content" source="media/transparent-data-encryption-byok-database-level-geo-replication-restore/deleted-databases.png" alt-text="Screenshot of the Azure portal deleted databases menu.":::
+
+1. Select the deleted database that you want to restore.
+
+1. The **Create SQL Database - Restore database** menu appears. Fill in the source and database details needed. In the **Transparent Data Encryption Key Management** section, select **Configure transparent data encryption**.
+
+   :::image type="content" source="media/transparent-data-encryption-byok-database-level-geo-replication-restore/database-restore-configure-tde.png" alt-text="Screenshot of the Azure portal restore database menu with the transparent data encryption key management section expanded.":::
+
+1. When the **Transparent Data Encryption** menu appears, configure the **User-Assigned Managed Identity**, **Customer-Managed Key**, and **Additional Database Keys** section for your database.
+
+1. Select **Apply** to continue and then select **Review + create**, and **Create** to create the copy database.
 
 # [Azure CLI](#tab/azure-cli2)
 
@@ -411,6 +446,22 @@ For Az PowerShell module installation instructions, see [Install Azure PowerShel
 ### Geo restore
 
 The following section describes how to restore a geo-replicated backup of database that is configured with customer-managed keys at the database level. To learn more about backup recovery for SQL Database, see [Recover a database in SQL Database](recovery-using-backups.md).
+
+# [Portal](#tab/azure-portal2)
+
+1. Go to the [Azure portal](https://portal.azure.com) and navigate to the logical server where you want to restore the database.
+
+1. In the **Overview** menu, select **Create database**.
+
+1. The **Create SQL Database** menu appears. Fill **Basic** and **Networking** tabs for your new database. In **Additional settings**, select **Backup** for the **Use existing data** section, and select a geo-replicated backup.
+
+   :::image type="content" source="media/transparent-data-encryption-byok-database-level-geo-replication-restore\create-database-from-backup.png" alt-text="Screenshot of the Azure portal create database menu selecting a backup to use for the database.":::
+
+1. Go to the **Security** tab. In the **Transparent Data Encryption Key Management** section, select **Configure transparent data encryption**.
+
+1. When the **Transparent Data Encryption** menu appears, select **Database level Customer-Managed Key (CMK)**. The **User-Assigned Managed Identity**, **Customer-Managed Key**, and **Additional Database Keys** must match the source database that you want to restore. Make sure the user-assigned managed identity has access to the key vault that contains the customer-managed key that was used in the backup.
+
+1. Select **Apply** to continue and then select **Review + create**, and **Create** to create the backup database.
 
 # [Azure CLI](#tab/azure-cli2)
 

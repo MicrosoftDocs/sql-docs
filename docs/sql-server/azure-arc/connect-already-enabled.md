@@ -10,6 +10,8 @@ ms.topic: conceptual
 ---
 # Connect your SQL Server to Azure Arc on a server already connected to Azure Arc
 
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
+
 Before you proceed, complete the [Prerequisites](prerequisites.md#prerequisites).
 
 This article explains how to connect your SQL Server instance to Azure Arc on an Arc-enabled server. If the physical or virtual server isn't connected to Azure yet, follow the steps in [Connect your SQL Server to Azure Arc](connect.md).

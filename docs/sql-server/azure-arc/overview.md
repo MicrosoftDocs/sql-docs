@@ -11,6 +11,8 @@ ms.topic: conceptual
 
 # Azure Arc-enabled SQL Server
 
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
+
 Azure Arc-enabled SQL Server extends Azure services to SQL Server instances hosted outside of Azure: in your data center, in edge site locations like retail stores, or any public cloud or hosting provider.
 
 ## Manage your SQL Servers at-scale from a single point of control

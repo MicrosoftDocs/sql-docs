@@ -11,6 +11,8 @@ ms.custom: references_regions
 ---
 # Azure Arc-enabled SQL Server data collection and reporting
 
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
+
 This article describes the data that Azure Arc-enabled SQL Server transmits to Microsoft.
 
 Azure Arc-enabled SQL Server, and any of the related Azure Arc-enabled services, don't store any customer data.

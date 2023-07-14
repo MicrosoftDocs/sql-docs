@@ -12,6 +12,8 @@ ms.custom: references_regions
 
 # Prerequisites
 
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
+
 An Azure Arc-enabled instance of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is an instance on-premises or in a cloud provider that is connected to Azure Arc. This article explains those prerequisites.
 
 ## Before you deploy

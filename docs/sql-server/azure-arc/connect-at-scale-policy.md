@@ -11,6 +11,8 @@ ms.topic: conceptual
 
 # Connect SQL Server instances to Azure at scale
 
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
+
 This article describes two methods of how to connect multiple instances of SQL Server to Azure Arc as a single task. Before you start complete the [Prerequisites](prerequisites.md#prerequisites).
 
 

@@ -10,6 +10,8 @@ ms.topic: conceptual
 ---
 # Connect your SQL Server to Azure Arc with installer (.msi)
 
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
+
 This article explains how to connect your SQL Server instance to Azure Arc with an installer (.msi). Before you proceed, complete the [Prerequisites](prerequisites.md#prerequisites).
 
 ## Deploy SQL Server extension from AzureExtensionForSQLServer.msi

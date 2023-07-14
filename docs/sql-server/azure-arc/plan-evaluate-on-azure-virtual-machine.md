@@ -11,6 +11,8 @@ ms.topic: conceptual
 
 # Evaluate Azure Arc-enabled SQL Server instance on an Azure virtual machine
 
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
+
 Azure Arc-enabled SQL Server is designed to help you connect servers running on-premises or in other clouds to Azure. Normally, you wouldn't use Azure Arc-enabled SQL Server on an Azure virtual machine. All the Azure capabilities are natively available for these VMs, for example:
 
 - Representation of the VM in Azure Resource Manager

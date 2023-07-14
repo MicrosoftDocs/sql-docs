@@ -10,6 +10,8 @@ ms.topic: troubleshooting-general
 
 # Troubleshoot Azure extension for SQL Server
 
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
+
 Before you start, note the logs location. The extension log is created in this folder:
 
 `C:\ProgramData\GuestConfig\extension_logs\Microsoft.AzureData.WindowsAgent.SqlServer\ExtensionLog_0.log`

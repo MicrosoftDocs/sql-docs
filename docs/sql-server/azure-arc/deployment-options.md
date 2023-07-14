@@ -11,6 +11,8 @@ ms.topic: conceptual
 
 # Deployment options for Azure Arc-enabled SQL Server
 
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
+
 Connecting machines in your hybrid environment directly with Azure can be accomplished using different methods, depending on your requirements and the tools you prefer to use.
 
 An Arc-enabled server will automatically connect SQL Server instances as Azure Arc-enabled SQL Server. For instructions, see [Quickstart: Connect SQL Server machines to Azure Arc](quick-enabled-sql-server.md).

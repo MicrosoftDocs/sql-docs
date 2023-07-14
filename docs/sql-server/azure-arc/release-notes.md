@@ -11,6 +11,8 @@ ms.topic: conceptual
 
 # Release notes - Azure Arc-enabled SQL Server
 
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
+
 ## July 2023
 
 This release is published July 13, 2023.

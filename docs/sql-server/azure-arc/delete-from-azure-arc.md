@@ -11,6 +11,8 @@ ms.custom: template-how-to-pattern
 
 # Disconnect your SQL Server instances from Azure Arc
 
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
+
 This article describes how you can disconnect the Arc-enabled SQL Server instances from Azure Arc using Azure portal or in the command shell.
 
 ## Prerequisites

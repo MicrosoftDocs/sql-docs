@@ -11,6 +11,8 @@ ms.topic: conceptual
 ---
 # Protect Azure Arc-enabled SQL Server with Microsoft Defender for Cloud 
 
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
+
 You can configure your instance connected to Azure with Microsoft Defender for Cloud by following these steps.
 
 ## Prerequisites

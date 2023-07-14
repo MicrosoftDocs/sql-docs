@@ -11,6 +11,8 @@ ms.topic: troubleshooting
 
 # Troubleshoot best practices assessment on SQL Server
 
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
+
 Before you start, ensure that you have met all the necessary [prerequisites](assess.md#prerequisites) for a successful assessment.
 
 Check the logs location. The extension log is created in this folder:

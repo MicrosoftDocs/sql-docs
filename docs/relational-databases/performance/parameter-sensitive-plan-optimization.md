@@ -316,7 +316,7 @@ PSP optimization provides audit data for the dispatcher plan statement, and any 
 ### Access violation exception occurs in Query Store in SQL Server 2022 under certain conditions
 
 > [!NOTE]  
-> Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Cumulative Update 4, several fixes for a race condition which can lead to an access violation have been released. A supplemental set of fixes for access violations related to race conditions which are described below, have been made available with `Cumulative Update 6`. We strongly advise that you remove any existing query variants from the Query Store prior to the application of Cumulative Update 6. If access violations related to PSP optimization with Query Store integration occur after applying Cumulative Update 6 for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], please consider the workaround section that follows.
+> Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Cumulative Update 6, several fixes for a race condition which can lead to an access violation have been released. We strongly advise that as a one-time operation, you remove any existing query variants from the Query Store after applying Cumulative Update 6. The example script in the Workaround section of this page can be used to remove any query variants that may exist. If access violations related to PSP optimization with Query Store integration occur after applying Cumulative Update 6 for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], please consider the workaround section that follows.
 
 This issue occurs because of a race condition that can be caused when the runtime statistics for an executed query are being persisted from the in memory representation of the Query Store (found in the `MEMORYCLERK_QUERYDISKSTORE_HASHMAP` memory clerk) to the on disk version of the Query Store. The runtime statistics, shown as Runtime Stats, are kept in memory for a period of time, defined by the `DATA_FLUSH_INTERVAL_SECONDS` option of the `SET QUERY_STORE` statement (the default value is 15 minutes). You can use the Management Studio Query Store dialog box to enter a value for Data Flush Interval (Minutes), which is internally converted to seconds. If the system is under memory pressure, runtime statistics can be flushed to disk earlier than defined with the `DATA_FLUSH_INTERVAL_SECONDS` option. When additional Query Store background threads related to Query Store query plan cleanup (that is, `STALE_QUERY_THRESHOLD_DAYS` and/or `MAX_STORAGE_SIZE_MB` Query Store options), queries from the Query Store, there is a scenario in which a query variant and/or its associated dispatcher statement can become dereferenced prematurely. This can result in an access violation during insert or delete operations of query variants into the Query Store.
 
@@ -357,6 +357,7 @@ BEGIN
         INTO @QueryID
         WHILE @@FETCH_STATUS = 0
     BEGIN
+
  -- Deleting query variant(s) from the query store
         EXEC sp_query_store_remove_query @query_id = @QueryID;
         FETCH NEXT FROM @QueryIDsCursor

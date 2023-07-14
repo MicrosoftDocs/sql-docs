@@ -302,19 +302,22 @@ SQL Server supports four authentication methods for Azure AD authentication:
 - Azure Active Directory Password
 - Azure Active Directory Integrated
 - Azure Active Directory Universal with Multi-Factor Authentication
+- Azure Active Directory Service Principal
+- Azure Active Directory Managed Identity
+- Azure Active Directory Default
 - Azure Active Directory access token
 
 Use one of these methods to connect to the SQL Server instance. For more information, see [Azure Active Directory authentication for SQL Server](azure-ad-authentication-sql-server-overview.md).
 
 ## Authentication example using SSMS
 
-Below is the snapshot of the SQL Server Management Studio (SSMS) connection page using the authentication method, **Azure Active Directory - Universal with MFA**.
+Below is the snapshot of the SQL Server Management Studio (SSMS) connection page using the authentication method **Azure Active Directory - Universal with MFA**.
 
 :::image type="content" source="media/sql-server-management-studio-connection.png" alt-text="Screenshot SSMS showing the Connect to Server window.":::
 
 During the authentication process, a database where the user was created must be explicitly indicated in SSMS. Expand **Options > Connection Properties > Connect to database: `database_name`**.
 
-For more information on **Azure Active Directory - Universal with MFA** authentication, see [Using Azure Active Directory Multi-Factor Authentication](/azure/azure-sql/database/authentication-mfa-ssms-overview).
+For more information, see [Using Azure Active Directory Multi-Factor Authentication](/azure/azure-sql/database/authentication-mfa-ssms-overview).
 
 SQL Server tools that support Azure AD authentication for Azure SQL are also supported for [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)].
 

@@ -18,6 +18,8 @@ This article provides information for using [Azure Arc](/azure/azure-arc/overvie
 
 [!INCLUDE [esu-table](includes/esu-table.md)]
 
+For information about ESU pricing, see [Plan your Windows Server 2012/2012 R2 and SQL Server 2012 end-of-support](https://www.microsoft.com/windows-server/extended-security-updates).
+
 For more information about other options, see [End of support options](sql-server-end-of-support-overview.md).
 
 You can also review the [Frequently asked questions](extended-security-updates-frequently-asked-questions.md).

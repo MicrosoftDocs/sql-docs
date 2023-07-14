@@ -18,6 +18,8 @@ General frequently asked questions about Extended Security updates can be found 
 
 For information about using [Azure Arc](/azure/azure-arc/overview) to receive Extended Security Updates (ESUs) for versions of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] that are out of extended support, see [What are Extended Security Updates for SQL Server?](sql-server-extended-security-updates.md)
 
+For information about ESU pricing, see [Plan your Windows Server 2012/2012 R2 and SQL Server 2012 end-of-support](https://www.microsoft.com/windows-server/extended-security-updates).
+
 #### When is the End of Support for SQL Server 2012?
 
 The End of Support date for [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] was July 12, 2022.
@@ -149,10 +151,6 @@ Yes, you must have purchased the Year 1 ESU from VLSC to qualify for the monthly
 
 Yes, you can use your VLSC purchased Year 2 ESU for both registered (disconnected) and Arc-enabled SQL Servers. However, the patches aren't be automatically deployed. You must manually install them. Unlike the ESU subscription, VLSC customers commit for the whole year of the ESU term.
 
-#### If I already paid for Year 2, can I change to monthly instead?
-
-Yes, you can request the refund of your Year 2 purchase after you have subscribed to ESU enabled by Azure Arc.
-
 #### How can I cancel the ESU charges?
 
 Your ESU charges stop immediately in the following cases:
@@ -212,14 +210,6 @@ You don't have access to the patches until the VM is online. When the VM is back
 Microsoft isn't extending [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE [winserver2008-md](../../includes/winserver2008-md.md)] Extended Security Updates. Support for [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] and [!INCLUDE [sql2008r2-md](../../includes/sql2008r2-md.md)] in Azure ended on July 9, 2023, and these servers need to be upgraded to maintain support.
 
 Customers using Windows Server on Azure, will have until January 14, 2024 to upgrade to a supported release.
-
-#### When will SQL Server 2014 reach end-of-support?
-
-[!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] Extended Support ends on July 9, 2024.
-
-#### How much will SQL Server 2014 Extended Security Updates cost?
-
-For information about ESU pricing, see [Plan your Windows Server 2012/2012 R2 and SQL Server 2012 end-of-support](https://www.microsoft.com/windows-server/extended-security-updates).
 
 ## Next steps
 

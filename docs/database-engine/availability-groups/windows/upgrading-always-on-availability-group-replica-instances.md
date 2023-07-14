@@ -95,6 +95,11 @@ If necessary, you can perform an extra manual failover to return the AG to its o
 >
 > If `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` is set to either `1` or `2`, the Primary replica may be unavailable for read/writes when a corresponding number of sync secondary replicas are not available during the update process.
 
+> [!NOTE]  
+> In case of Upgrade in-place on a secondary replica, which upgrades the instance to a newer version, the databases inside the AG will remain on state Synchronized / In Recovery. After a planned manual failover on the AG, the recovery will finish and the databases will be upgraded.
+
+
+
 ## AG with one remote secondary replica
 
 If you have deployed an AG only for disaster recovery, you may need to fail over the AG to an asynchronous-commit secondary replica. Such configuration is illustrated by the following figure:

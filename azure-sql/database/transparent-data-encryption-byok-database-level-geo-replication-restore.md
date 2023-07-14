@@ -43,7 +43,7 @@ To create a database in Azure SQL Database as a copy with database level custome
 
 1. Go to the [Azure portal](https://portal.azure.com) and navigate to the Azure SQL Database configured with database level customer-managed keys. Access the **Transparent Data Encryption** menu and check the list of current keys in use by the database.
 
-   :::image type="content" source="media/transparent-data-encryption-byok-database-level-geo-replication-restore/database-transparent-data-encryption-menu.png" alt-text="Screenshot of the Azure portal transparent data encryption menu for a database.":::
+   :::image type="content" source="media/transparent-data-encryption-byok-database-level-geo-replication-restore/database-transparent-data-encryption-menu.png" alt-text="Screenshot of the Azure portal transparent data encryption menu for a database." lightbox="media/transparent-data-encryption-byok-database-level-geo-replication-restore/database-transparent-data-encryption-menu.png":::
 
 1. Create a copy of the database by selecting **Copy** from the **Overview** menu of the database.
 
@@ -64,11 +64,11 @@ To create a database in Azure SQL Database as a copy with database level custome
 
 1. Go to the [Azure portal](https://portal.azure.com) and navigate to the Azure SQL Database configured with database level customer-managed keys. Access the **Transparent Data Encryption** menu and check the list of current keys in use by the database.
 
-   :::image type="content" source="media/transparent-data-encryption-byok-database-level-geo-replication-restore/database-transparent-data-encryption-menu.png" alt-text="Screenshot of the Azure portal transparent data encryption menu for a database.":::
+   :::image type="content" source="media/transparent-data-encryption-byok-database-level-geo-replication-restore/database-transparent-data-encryption-menu.png" alt-text="Screenshot of the Azure portal transparent data encryption menu for a database." lightbox="media/transparent-data-encryption-byok-database-level-geo-replication-restore/database-transparent-data-encryption-menu.png":::
 
 1. Under **Data management** settings for the database, select **Replicas**. Select **Create replica** to create a secondary replica of the database.
 
-   :::image type="content" source="media/transparent-data-encryption-byok-database-level-geo-replication-restore/database-create-replica.png" alt-text="Screenshot of the Azure portal database replica menu.":::
+   :::image type="content" source="media/transparent-data-encryption-byok-database-level-geo-replication-restore/database-create-replica.png" alt-text="Screenshot of the Azure portal database replica menu." lightbox="media/transparent-data-encryption-byok-database-level-geo-replication-restore/database-create-replica.png":::
 
 1. The **Create SQL Database - Geo Replica** menu appears. Use a secondary server for this database, but the same settings as the database you're trying to replicate. In the **Transparent Data Encryption Key Management** section, select **Configure transparent data encryption**.
 

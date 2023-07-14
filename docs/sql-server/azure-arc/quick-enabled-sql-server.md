@@ -108,9 +108,7 @@ Go to **Azure Arc > SQL Server** and open the newly registered Arc-enabled SQL S
 
 ## Next steps
 
-Now that you've enabled your Linux or Windows hybrid machine and successfully connected to the service, you are ready to enable Azure Policy to understand compliance in Azure.
+Now that you've enabled your Linux or Windows hybrid machine and successfully connected to the service, you are ready to manage, secure and protect your SQL Server from Azure.
 
-To learn how to identify Azure Arc-enabled servers enabled machine that doesn't have the Log Analytics agent installed, continue to the tutorial:
-
-> [!div class="nextstepaction"]
-> [Create a policy assignment to identify non-compliant resources](/azure/azure-arc/servers/learn/tutorial-assign-policy-portal)
+- [Configure advanced data security for your SQL Server instance](configure-advanced-data-security.md)
+- [Configure best practices assessment on an Azure Arc-enabled SQL Server instance](assess.md)

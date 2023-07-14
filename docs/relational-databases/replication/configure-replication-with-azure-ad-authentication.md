@@ -1,6 +1,7 @@
 ---
 description: "Learn to configure Transactional or Snapshot replication with Azure AD authentication."
-title: "Configure replication with Azure AD authentication"
+title: "Configure replication with Azure AD authentication for Azure Arc-enabled SQL Server"
+tittleSuffix: Arc-enabled SQL Server
 ms.custom: ""
 ms.date: 07/15/2023
 ms.service: sql
@@ -10,14 +11,14 @@ ms.topic: how-to
 author: "MashaMSFT"
 ms.author: "mathoma"
 ---
-# Configure replication with Azure AD authentication
+# Configure replication with Azure AD authentication - Arc-enabled SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver2022.md)]
 
-This article provides steps to configure Transactional and Snapshot replication by using Azure Active Directory (Azure AD) authentication starting with SQL Server 2022 CU 6. 
+This article provides steps to configure Transactional and Snapshot replication by using Azure Active Directory (Azure AD) authentication starting with [Azure-Arc enabled SQL Server](../../sql-server/azure-arc/overview.md) CU 6. 
 
 ## Overview
 
-Support for Azure AD authentication with SQL Server replication was added in SQL Server 2022 CU 6. When configuring SQL Server replication with Azure AD authentication, the only step that's different is the first step, when you create an Azure AD login, and grant sysadmin permissions. Then use that Azure AD login in the replication stored procedures to configure replication. 
+Support for Azure AD authentication with SQL Server replication was added in SQL Server 2022 CU 6. When configuring replication with Azure AD authentication for Arc-enabled SQL Server, the only step that's different is the first step, when you create an Azure AD login, and grant sysadmin permissions. Then use that Azure AD login in the replication stored procedures to configure replication. 
 
 > [!NOTE]
 > Starting with SQL Server 2022 CU 6, disable Azure AD authentication for replication by using session trace flag 11561.
@@ -27,6 +28,7 @@ Support for Azure AD authentication with SQL Server replication was added in SQL
 
 To configure replication with Azure AD authentication, you must meet the following prerequisites: 
 
+- Your Windows-based SQL Server instance is connected to Azure. Follow the instructions to [onboard your SQL Server instance to Arc-enabled SQL Server](../../sql-server/azure-arc/connect.md).
 - Have SQL Server 2022 Cumulative Update 6 configured with Azure AD authentication for every server in the replication topology. Review [Tutorial: Set up Azure AD authentication for SQL Server](../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial.md) to learn more. 
 - [SQL Server Management Studio (SSMS) v19.1 or higher](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio). 
 - The user connecting to the publisher and subscriber is a member of the **sysadmin** fixed server role.

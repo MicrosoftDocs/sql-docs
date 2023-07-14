@@ -1,10 +1,10 @@
 ---
 title: go-sqlcmd utility
 description: The go-sqlcmd utility lets you enter Transact-SQL statements, system procedures, and script files using different modes.
-author: grrlgeek
-ms.author: jeschult
+author: dlevy-msft
+ms.author: dlevy
 ms.reviewer: maghan, randolphwest
-ms.date: 06/02/2023
+ms.date: 07/11/2023
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: conceptual
@@ -17,6 +17,11 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 The **go-sqlcmd** utility lets you enter Transact-SQL statements, system procedures, and script files at the command prompt and uses the [go-mssqldb](https://github.com/microsoft/go-mssqldb) driver for go language. **go-sqlcmd** aims to be a complete port of [sqlcmd](sqlcmd-utility.md) to the go language and compiles to executable binaries for Windows, macOS, and Linux on both x64 and arm64 architectures. [Download and install](#download-and-install-go-sqlcmd) the **go-sqlcmd** binaries to get started without additional dependencies. Using **go-sqlcmd** in place of **sqlcmd** removes the ODBC driver dependency, increases options for Azure Active Directory (Azure AD) authentication types, and adds [additional enhancements](#enhancements).
 
 **go-sqlcmd** is open source under the MIT license and available on [GitHub](https://github.com/microsoft/go-sqlcmd). As a CLI, **go-sqlcmd** is ideal for pipelines and edge applications as it has no additional dependencies and supports various environment configurations. The capabilities of **go-sqlcmd** expand beyond the ODBC-based [sqlcmd](sqlcmd-utility.md) to incorporate a [vertical output format](#enhancements) and extensive [Azure Active Directory authentication](#azure-active-directory-authentication) options.
+
+> [!NOTE]  
+> Installing **go-sqlcmd** via a package manager will replace **[sqlcmd](sqlcmd-utility.md)** with **go-sqlcmd** in your environment path. Any current command line sessions will need to be closed and reopened for this take to effect. **sqlcmd** won't be removed and can still be used by specifying the full path to the executable. You can also update your `PATH` variable to indicate which will take precedence. To do so in Windows 11, open **System settings** and go to **About > Advanced system settings**. When **System Properties** opens, select the **Environment Variables** button. In the lower half, under **System variables**, select **Path** and then select **Edit**. If the location **go-sqlcmd** is saved to (`C:\Program Files\sqlcmd` is default) is listed before `C:\Program Files\Microsoft SQL Server\<version>\Tools\Binn`, then **go-sqlcmd** is used. You can reverse the order to make **sqlcmd** the default again.
+
+Review the [breaking changes from sqlcmd](#breaking-changes-from-sqlcmd) section in this article before installing via a package manager, to make sure that existing scripts aren't impacted. If you're unsure, consider the direct download option, which allows you to download the **go-sqlcmd** executable to a directory of your choice. You can then run **go-sqlcmd** from that directory, or by specifying the full path to the executable. This option doesn't update any system settings.
 
 ## Download and install go-sqlcmd
 

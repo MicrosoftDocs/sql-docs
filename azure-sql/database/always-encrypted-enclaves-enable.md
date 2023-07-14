@@ -25,6 +25,9 @@ Configuring the DC-series hardware to enable Intel SGX enclaves is the responsib
 > [!NOTE]
 > Intel SGX is not available in hardware configurations other than DC-series. For example, Intel SGX is not available for standard-series (Gen5) hardware, and it is not available for databases using the [DTU model](service-tiers-dtu.md).
 
+> [!IMPORTANT]
+> Before you configure the DC-series hardware for your database, check the regional availability of DC-series and make sure you understand its performance limitations. For more information, see [DC-series](service-tiers-sql-database-vcore.md#dc-series).
+
 For detailed instructions on how to configure a new or existing database to use a specific hardware configuration, see [Hardware configuration](service-tiers-sql-database-vcore.md#hardware-configuration).
 
 ## Next steps

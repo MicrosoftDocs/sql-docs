@@ -28,8 +28,8 @@ For more information, see [Automatically connect Azure Arc-enabled SQL Servers](
 The following table highlights each method so that you can determine which works best for your deployment. For detailed information, follow the links to view the steps for each topic.
 
 | Method | Description |
-
-| Interactively | Manually connect the SQL Server instance on a single physical or virtual machine. [Connect your SQL Server to Azure Arc](Auto-connect.md)|
+| ------ | ----- |
+| Interactively | Manually connect the SQL Server instance on a single physical or virtual machine. [Connect your SQL Server to Azure Arc](automatically-connect.md)|
 | Interactively | [Connect your SQL Server to Azure Arc with installer (.msi)](connect-with-installer.md) |
 | Interactively | Manually connect the SQL Server on a single physical or virtual machine that is already connected to Azure Arc. [Connect your SQL Server to Azure Arc on a server already connected to Azure Arc](connect-already-enabled.md)|
 |At scale|[Automatically connect Azure Arc-enabled SQL Servers](connect-at-scale-autodeploy.md)|

@@ -1,8 +1,8 @@
 ---
 title: Directory Readers role in Azure Active Directory for Azure SQL
 description: Learn about the directory reader's role in Azure AD for Azure SQL.
-author: GithubMirek
-ms.author: mireks
+author: nofield
+ms.author: nofield
 ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 12/15/2021
 ms.service: sql-db-mi

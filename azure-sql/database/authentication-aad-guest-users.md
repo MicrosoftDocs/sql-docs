@@ -1,8 +1,8 @@
 ---
 title: Create Azure AD guest users
 description: How to create Azure AD guest users and set them as Azure AD admin without using Azure AD groups in Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics
-author: GithubMirek
-ms.author: mireks
+author: nofield
+ms.author: nofield
 ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 05/10/2021
 ms.service: sql-db-mi

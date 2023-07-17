@@ -53,7 +53,7 @@ If you receive error 7391 from a process such as SQL Server replication or SQL S
 
 - Check whether the object on the destination server points back to the first server. This is known as a loopback situation. [Loopback linked servers](../linked-servers/linked-servers-database-engine.md) are intended for testing and aren't supported for many operations, such as distributed transactions.
 
-### Check the communication of servers
+### Server communication
 
 Check for the following aspects involved in communication of servers:
 
@@ -71,7 +71,7 @@ Check for the following aspects involved in communication of servers:
 
 - Check whether you're using Remote Access Server (RAS) to access remote servers. If so, make sure that you have implemented Routing RAS (RRAS). Linked server doesn't work on RAS because RAS allows only one way communication.
 
-### Configuration of servers
+### Server configuration
 
 Follow these steps for configuring the servers:
 

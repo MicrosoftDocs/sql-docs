@@ -18725,6 +18725,8 @@ items:
           href: t-sql/statements/set-query-governor-cost-limit-transact-sql.md
         - name: QUOTED_IDENTIFIER
           href: t-sql/statements/set-quoted-identifier-transact-sql.md
+        - name: RECOMMENDATIONS
+          href: t-sql/statements/set-recommendations-sql.md          
         - name: REMOTE_PROC_TRANSACTIONS
           href: t-sql/statements/set-remote-proc-transactions-transact-sql.md
         - name: RESULT SET CACHING

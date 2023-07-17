@@ -615,6 +615,33 @@ AS [data]
 
 ```
 
+### M. Use OPENROWSET to access several delta files from Azure Data Lake Gen2
+
+**Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later.
+
+In this example the Data Table folder\container is named `Contoso` located on an Azure Data Lake Gen2 storage account.
+
+```sql
+CREATE DATABASE SCOPED CREDENTIAL delta_storage_dsc   
+WITH IDENTITY = 'SHARED ACCESS SIGNATURE', 
+SECRET = '<SAS Token>';  
+
+CREATE EXTERNAL DATA SOURCE Delta_ED
+WITH
+(
+ LOCATION = 'adls://<container>@<storage_account>.dfs.core.windows.net'
+,CREDENTIAL = delta_storage_dsc 
+);
+
+SELECT  * 
+FROM    OPENROWSET
+        (   BULK '/Contoso'
+        ,   FORMAT = 'DELTA'
+        ,   DATA_SOURCE = 'Delta_ED'
+        ) as [result];
+
+```
+
 ### Additional Examples
 
 For additional examples that show using `INSERT...SELECT * FROM OPENROWSET(BULK...)`, see the following topics:

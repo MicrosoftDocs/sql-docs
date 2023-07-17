@@ -250,6 +250,36 @@ To use CREATE EXTERNAL TABLE AS SELECT containing these characters, you must fir
 
 Takes a shared lock on the SCHEMARESOLUTION object.
 
+## Supported data types
+
+CETAS can be used to store result sets with following SQL data types:
+
+- binary
+- varbinary
+- char
+- varchar
+- nchar
+- nvarchar
+- smalldate
+- date
+- datetime
+- datetime2
+- datetimeoffset
+- time
+- decimal
+- numeric
+- float
+- real
+- bigint
+- tinyint
+- smallint
+- int
+- bigint
+- bit
+- money
+- smallmoney
+- uniqueidentifier
+
 ## Examples
 
 ### A. Create a Hadoop table by using CREATE EXTERNAL TABLE AS SELECT

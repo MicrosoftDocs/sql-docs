@@ -70,7 +70,7 @@ Managed identities are special forms of service principals. There are two types 
 
 ### Azure Active Directory Default
 
-The Default authentication option with Azure Active Directory enables authentication that's performed through password-less and non-interactive mechanisms including Managed Identities, Visual Studio Code, Azure CLI, and more. 
+The Default authentication option with Azure Active Directory enables authentication that's performed through password-less and non-interactive mechanisms including Managed Identities, Visual Studio, Visual Studio Code, Azure CLI, and more. 
 
 ### Azure Active Directory access token
 

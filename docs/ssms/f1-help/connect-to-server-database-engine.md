@@ -70,7 +70,7 @@ The current version of SSMS offers eight authentication modes when connecting to
 > In order to use a managed identity to connect to a SQL resource through GUI clients such as SSMS and ADS, the machine running the client application must have an Azure AD client running with the identity's certificate stored in it. This is most commonly achieved through an Azure VM, as the identity can be easily assigned to the machine through the VM's portal blade.
 > 
 > **Azure Active Directory - Default**  
-> The Default authentication option with Azure AD performs authentication based on password-less and non-interactive mechanisms including: Managed Identities, Visual Studio Code, Azure CLI, and more.
+> The Default authentication option with Azure AD performs authentication based on password-less and non-interactive mechanisms including: Managed Identities, Visual Studio, Visual Studio Code, Azure CLI, and more.
   
 **User name**  
 The user name to connect with. This setting is read-only when you select **Windows Authentication** or **Azure Active Directory - Integrated** authentication, and pre-filled with the Windows user name you are currently logged in with.
@@ -80,7 +80,7 @@ If connecting with **Azure Active Directory - Universal with MFA**, **Azure Acti
 **User assigned identity**
 This option is displayed when connecting with **Azure Active Directory - Managed Identity**. How to fill this option properly depends on the type of the identity:
 - With a user-assigned managed identity, the name of the identity should be entered.
-- With a system-assigned managed identity, the field should be left blank.
+- With a system-assigned managed identity, the field must be left blank. Entering the name of the system-assigned managed identity will cause the authentication to fail.
 
 **Login**  
 Enter the login to connect with. This option is only available if you have selected to connect using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.  

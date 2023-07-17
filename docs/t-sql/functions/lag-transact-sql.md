@@ -27,7 +27,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 ## Syntax  
   
 ```syntaxsql  
-LAG (scalar_expression [,offset] [,default])  
+LAG (scalar_expression [,offset] [,default]) [ IGNORE NULLS | RESPECT NULLS ]
     OVER ( [ partition_by_clause ] order_by_clause )  
 ```  
   
@@ -42,7 +42,15 @@ LAG (scalar_expression [,offset] [,default])
   
  *default*  
  The value to return when *offset* is beyond the scope of the partition. If a default value is not specified, NULL is returned. *default* can be a column, subquery, or other expression, but it cannot be an analytic function. *default* must be type-compatible with *scalar_expression*.  
-  
+ 
+[ IGNORE NULLS | RESPECT NULLS ]
+
+**Applies to**: SQL Server (starting with SQL Server 2022 (16.x)), Azure SQL Database, Azure SQL Managed Instance, Azure Synapse Analytics,  Analytics Platform System (PDW),  SQL Endpoint in Microsoft Fabric,  Warehouse in Microsoft Fabric
+
+IGNORE NULLS - Ignore null values in the dataset when computing the LAG value over a partition
+
+RESPECT NULLS - Respect null values in the dataset when computing LAG value over a partition.
+ 
  OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_**)**  
  *partition_by_clause* divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group. *order_by_clause* determines the order of the data before the function is applied. If *partition_by_clause* is specified, it determines the order of the data in the partition. The *order_by_clause* is required. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
@@ -107,7 +115,7 @@ Northwest                280              1352577.1325          1573012.9383
 ```  
   
 ### C. Specifying arbitrary expressions  
- The following example demonstrates specifying a variety of arbitrary expressions in the LAG function syntax.  
+ The following example demonstrates specifying a variety of arbitrary expressions and ignoring NULL values in the LAG function syntax.  
   
 ```sql   
 CREATE TABLE T (a INT, b INT, c INT);   
@@ -115,7 +123,7 @@ GO
 INSERT INTO T VALUES (1, 1, -3), (2, 2, 4), (3, 1, NULL), (4, 3, 1), (5, 2, NULL), (6, 1, 5);   
   
 SELECT b, c,   
-    LAG(2*c, b*(SELECT MIN(b) FROM T), -c/2.0) OVER (ORDER BY a) AS i  
+    LAG(2*c, b*(SELECT MIN(b) FROM T), -c/2.0) IGNORE NULLS OVER (ORDER BY a) AS i  
 FROM T;  
 ```  
   
@@ -128,8 +136,8 @@ b           c           i
 2           4           -2  
 1           NULL        8  
 3           1           -6  
-2           NULL        NULL  
-1           5           NULL  
+2           NULL        8  
+1           5           2  
 ```  
   
 ## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  

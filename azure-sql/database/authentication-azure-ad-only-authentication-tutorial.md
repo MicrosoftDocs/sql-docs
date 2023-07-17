@@ -2,8 +2,8 @@
 title: Enable Azure Active Directory only authentication
 titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: This article guides you through enabling the Azure Active Directory (Azure AD) only authentication feature with Azure SQL Database and Azure SQL Managed Instance
-author: GithubMirek
-ms.author: mireks
+author: nofield
+ms.author: nofield
 ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 11/02/2021
 ms.service: sql-db-mi

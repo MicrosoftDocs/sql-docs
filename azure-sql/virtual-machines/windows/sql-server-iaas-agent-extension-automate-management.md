@@ -85,9 +85,9 @@ There are two permission models for the SQL Server IaaS Agent extension - either
 
 The principle of least privilege model is enabled by default for SQL Server VMs deployed via Azure Marketplace after October 2022. Existing SQL Server VMs deployed prior to this date, or VMs with self-installed SQL Server instances, use the sysadmin model by default and can enable the least privileged permissions model in the Azure portal. 
 
-To enable the least privilege permissions model, go to your [SQL virtual machines resource](manage-sql-vm-portal.md), choose **Additional features** under **Settings** and then check the box next to **SQL IaaS Agent extension least privilege mode**: 
+To enable the least privilege permissions model, go to your [SQL virtual machines resource](manage-sql-vm-portal.md), choose **Security Configuration** under **Security** and then check the box next to **Enable least privilege mode**: 
 
-:::image type="content" source="media/sql-server-iaas-agent-extension-automate-management/least-privilege.png" alt-text="Screenshot of the Azure portal SQL virtual machines resource, Additional features page, enable least privilege highlighted.":::
+:::image type="content" source="media/sql-server-iaas-agent-extension-automate-management/least-privilege.png" alt-text="Screenshot of the Azure portal SQL virtual machines resource, Security Configuration page, enable least privilege highlighted.":::
 
 
 The following table defines the permissions and custom roles used by each feature of the extension: 

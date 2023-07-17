@@ -1,8 +1,8 @@
 ---
 title: Assign Directory Readers role to an Azure AD group and manage role assignments
 description: This article guides you through enabling the Directory Readers role using Azure AD groups to manage Azure AD role assignments with Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics
-author: GithubMirek
-ms.author: mireks
+author: nofield
+ms.author: nofield
 ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 12/15/2021
 ms.service: sql-db-mi

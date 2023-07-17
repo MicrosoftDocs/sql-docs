@@ -1,8 +1,8 @@
 ---
 title: Azure SQL Managed Instance long-term backup retention
 description: Learn how to store and restore automated backups on separate Azure Blob storage containers for an Azure SQL Managed Instance using the Azure portal and PowerShell.
-author: SudhirRaparla
-ms.author: nvraparl
+author: Stralle
+ms.author: strrodic
 ms.reviewer: mathoma
 ms.date: 03/25/2023
 ms.service: sql-managed-instance

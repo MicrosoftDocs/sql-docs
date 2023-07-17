@@ -19,16 +19,14 @@ monikerRange: "=azure-sqldw-latest"
 ---
 # SET RECOMMENDATIONS (Transact-SQL)
 
-[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa-dedicated-sqlpool-only.md)]
 
 Enables or disables the Azure Synapse distribution advisor for the current session. For instructions and samples on the use of the distribution advisor, see [Distribution Advisor in Azure Synapse SQL](/azure/synapse-analytics/sql/distribution-advisor).
 
 > [!NOTE]
 > Distribution Advisor is currently in preview for Azure Synapse Analytics. Preview features are meant for testing only and should not be used on production instances or production data. As a preview feature, Distribution Advisor is subject to undergo changes in behavior or functionality. Please also keep a copy of your test data if the data is important.
-
-Applies to [!INCLUDE[ssSDW](../../includes/ssazuresynapse-md.md)]  
   
- :::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax
 
@@ -45,6 +43,8 @@ Enables Distribution Advisor for the current client session. Subsequently run qu
 Turns Distribution Advisor OFF for the current client session. Returns advice as a string.
 
 ## Remarks
+
+Applies to [!INCLUDE[ssSDW](../../includes/ssazuresynapse_sqlpool_only.md] only.
 
 Run this command when connected to a user database.
 

@@ -10,6 +10,7 @@ ms.subservice: linux
 ms.topic: conceptual
 monikerRange: ">= sql-server-linux-ver15  || >= sql-server-ver15"
 ---
+
 # Configure persistent memory (PMEM) for SQL Server on Linux
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
@@ -29,7 +30,7 @@ This article describes how to configure the persistent memory (PMEM) for [!INCLU
 
 In Linux, use the `ndctl` utility.
 
-- Install `ndctl` to configure PMEM device. You can find it [here](https://docs.pmem.io/getting-started-guide/installing-ndctl).
+- Install `ndctl` to configure PMEM device. You can find it [here](https://docs.pmem.io/persistent-memory/getting-started-guide/installing-ndctl).
 - Use `ndctl` to create a namespace. Namespaces are interleaved across PMEM NVDIMMs and can provide different types of user-space access to memory regions on the device. `fsdax` is default and desired mode for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)].
 
 ```bash

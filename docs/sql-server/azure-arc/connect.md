@@ -19,7 +19,8 @@ This article explains how to connect your SQL Server instance to Azure Arc. Befo
 If the server that runs your SQL Server instance isn't yet connected to Azure, you can initiate the connection from the target machine using the onboarding script. This script connects the server to Azure and installs the Azure extension for SQL Server.
 
 > [!NOTE]  
-> If your server is already connected to Azure, proceed to [When the machine is already connected to an Arc-enabled Server](connect-already-enabled.md).
+> If your server is already connected to Azure and to deploy Azure SQL Server extension for SQL Server proceed to [When the machine is already connected to an Arc-enabled Server](connect-already-enabled.md).
+
 
 ### Generate an onboarding script for SQL Server
 
@@ -94,7 +95,6 @@ In this step, execute the script you downloaded from the Azure portal, on the ta
    ```
 
 ---
-
 ## Validate your Arc-enabled SQL Server resources
 
 Go to **Azure Arc > SQL Server** and open the newly registered Arc-enabled SQL Server resource to validate.

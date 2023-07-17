@@ -38,14 +38,8 @@ landingContent:
             url: quick-enabled-sql-server.md
       - linkListType: deploy
         links:
-          - text: Autodeploy
-            url: connect-at-scale-autodeploy.md
-          - text: Connect at scale - policy
-            url: connect-at-scale-policy.md
-          - text: Connect at scale - script
-            url: connect-at-scale-script.md
-          - text: All deployment options
-            url: deployment-options.md
+          - text: Automatically connect
+            url: automatically-connect.md
   
  # Card
   - title: Proof of concept

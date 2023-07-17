@@ -27,7 +27,7 @@ helpviewer_keywords:
 
 ## Explanation
 
-You might see the following error message when you run a distributed transaction against a linked server on a computer that's running Microsoft Windows Server.
+You might see the following error entry when you run a distributed transaction against a linked server on a computer that's running Microsoft Windows Server.
 
 > "MSDTC may not be running or may have disabled network access."
 
@@ -67,7 +67,7 @@ Check for the following aspects involved in communication of servers:
 
   - [Configure the Windows Firewall to allow SQL Server access - SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)
 
-- Check the object you refer to on the destination server. If it's a view or a stored procedure, or causes an execution of a trigger, check whether it implicitly references another server. If so, the third server is the source of the problem. Run the query directly on the third server. If you can't do so, the problem isn't with the linked server query. Resolve the underlying problem first.
+- Check the object you refer to on the destination server. If it's a view or a stored procedure, or causes an execution of a trigger, check whether it implicitly references another server. If so, the third server is the source of the problem. Run the query directly on the third server. If you can't do this, the problem isn't with the linked server query. Resolve the underlying problem first.
 
 - Check whether you're using Remote Access Server (RAS) to access remote servers. If so, make sure that you have implemented Routing RAS (RRAS). Linked server doesn't work on RAS because RAS allows only one way communication.
 
@@ -75,7 +75,7 @@ Check for the following aspects involved in communication of servers:
 
 Follow these steps for configuring the servers:
 
-1. Start the Distributed Transaction Coordinator (DTC or MS DTC) on all servers that are involved in the distributed transaction. For information on enabling network DTC access, see [Error message of OLE DB provider - SQL Server](/troubleshoot/sql/database-engine/linked-servers/error-message-ole-db-provider).
+1. Start the Distributed Transaction Coordinator (DTC or MS DTC) on all servers that are involved in the distributed transaction. For information about enabling network DTC access, see [Error message of OLE DB provider - SQL Server](/troubleshoot/sql/database-engine/linked-servers/error-message-ole-db-provider).
 
 1. Run the following command before you run your query:
 

@@ -4982,6 +4982,8 @@ items:
       items:
       - name: Configure replication
         items:
+        - name: With Azure AD authentication
+          href: relational-databases/replication/configure-replication-with-azure-ad-authentication.md
         - name: Distribution
           href: relational-databases/replication/configure-distribution.md
           items:
@@ -18723,6 +18725,8 @@ items:
           href: t-sql/statements/set-query-governor-cost-limit-transact-sql.md
         - name: QUOTED_IDENTIFIER
           href: t-sql/statements/set-quoted-identifier-transact-sql.md
+        - name: RECOMMENDATIONS
+          href: t-sql/statements/set-recommendations-sql.md          
         - name: REMOTE_PROC_TRANSACTIONS
           href: t-sql/statements/set-remote-proc-transactions-transact-sql.md
         - name: RESULT SET CACHING

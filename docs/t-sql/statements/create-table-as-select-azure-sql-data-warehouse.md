@@ -116,6 +116,8 @@ Distributes the rows based on the hash values of up to eight columns, allowing f
 For details and to understand how to choose the best distribution column, see the [Table distribution options](create-table-azure-sql-data-warehouse.md#TableDistributionOptions) section in CREATE TABLE. 
 
 
+For recommendations on the best distribution do to use based on your workloads, see the [Synapse SQL Distribution Advisor (Preview)](/azure/synapse-analytics/sql/distribution-advisor).
+
 <a name="table-partition-options-bk"></a>
 
 ### Table partition options

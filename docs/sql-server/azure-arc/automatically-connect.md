@@ -4,7 +4,7 @@ description: Automatically connect an instance of SQL Server to Azure Arc. Allow
 author: anosov1960
 ms.author: rajpo
 ms.reviewer: mikeray, maghan
-ms.date: 07/06/2023
+ms.date: 07/18/2023
 ms.service: sql
 ms.topic: conceptual
 ---

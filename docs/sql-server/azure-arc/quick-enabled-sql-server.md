@@ -2,7 +2,7 @@
 title: Quickstart - Enable SQL Server instance for Azure Arc
 description: In this quickstart, you connect and register a hybrid machine with Azure Arc-enabled servers to create an Arc-enabled SQL Server.
 ms.topic: quickstart
-ms.date: 07/13/2023
+ms.date: 07/18/2023
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mikeray

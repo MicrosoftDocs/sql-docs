@@ -4,7 +4,7 @@ description: In this article, you learn how Microsoft helps you automatically co
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mikeray, randolphwest
-ms.date: 03/23/2023
+ms.date: 07/18/2023
 ms.service: sql
 ms.topic: conceptual
 ---

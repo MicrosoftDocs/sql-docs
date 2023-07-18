@@ -1,15 +1,14 @@
 ---
 title: Automatically connect your SQL Server to Azure Arc
-description: Automatically connect an instance of SQL Server to Azure Arc. Allows you to manage SQL Server centrally, as an Arc-enabled resource.
+description: Connect an instance of SQL Server to Azure Arc. Allows you to manage SQL Server centrally, as an Arc-enabled resource.
 author: anosov1960
-ms.author: sashan
+ms.author: rajpo
 ms.reviewer: mikeray, maghan
 ms.date: 07/06/2023
 ms.service: sql
 ms.topic: conceptual
 ---
-
-# Automatically connect your SQL Server to Azure Arc
+# Automatically Connect your SQL Server to Azure Arc
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
@@ -19,12 +18,14 @@ This article explains how to connect your SQL Server instance to Azure Arc. Befo
 
 Azure Arc automatically installs the Azure extension for SQL Server when a server connected to Azure Arc has SQL Server installed. All the SQL Server instance resources are automatically created in Azure, providing a centralized management platform for all your SQL Servers.
 
-To learn more, see [Auto deploymnet of Azure extension for SQL Server](connect-at-scale-autodeploy.md)
+To learn more, see [Auto deployment of Azure extension for SQL Server](connect-at-scale-autodeploy.md)
 
-To connect your SQL Server to Azure, see [Connect hybrid machines to Azure using a deployment script](/azure/azure-arc/servers/onboard-portal)
+Connecting SQL Servers in your hybrid environment directly with Azure can be accomplished using different methods, depending on your requirements and the tools you prefer to use.
+
+To connect your SQL Server to Azure, see [Azure Connected Machine agent deployment options](https://learn.microsoft.com/en-us/azure/azure-arc/servers/deployment-options)
 
 > [!NOTE]  
-> If your server is already connected to Azure, to deploy Azure SQL Server extension for SQL Server proceed to [When the machine is already connected to an Arc-enabled Server](connect-already-enabled.md).
+> If your server is already connected to Azure, but Azure extension for SQL Server is not deployed automatically using above methods, proceed to [Alternative deployment options for Azure Arc-enabled SQL Server](deployment-options.md) to connect SQL Server to Azure.
 
 ## Validate your Arc-enabled SQL Server resources
 
@@ -35,7 +36,6 @@ Go to **Azure Arc > SQL Server** and open the newly registered Arc-enabled SQL S
 > [!NOTE]  
 > After connecting the server to Arc, you need to wait 10 minutes for the Azure extension for SQL Server to deploy and the Arc-enabled SQL Server resource to be created.
 >
-
 If the Arc-enabled SQL Server resource does not appear in the same resource group as the Arc Server, follow the [Azure extension for SQL Server](troubleshoot-deployment.md) guide to troubleshoot the issue.
 
 ## Next steps

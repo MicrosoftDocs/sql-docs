@@ -25,7 +25,8 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
 # SET NOCOUNT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricdw.md)]
 
-  Controls whether a message that shows the number of rows affected by a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or stored procedure is returned after the result set. This message is a second result set.  
+  Controls whether a message that shows the number of rows affected by a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or stored procedure is returned after the result set. This message is an additional result set.  
+
   
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

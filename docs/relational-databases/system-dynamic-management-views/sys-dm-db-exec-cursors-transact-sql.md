@@ -1,6 +1,7 @@
 ---
-title: "sys.dm_db_exec_cursors (Azure SQL Database)"
-description: sys.dm_db_exec_cursors (Azure SQL Database)
+title: "sys.dm_db_exec_cursors"
+titleSuffix: Azure SQL Database
+description: Use the dynamic management view sys.dm_db_exec_cursors to return information about open or declared cursors in Azure SQL Database.
 author: RPLogan
 ms.author: rilogan
 ms.date: "07/12/2023"
@@ -21,29 +22,30 @@ monikerRange: "=azuresqldb-current"
 # sys.dm_db_exec_cursors (Azure SQL Database)
 [!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
-  Returns information about the cursors that are declared or open in the current database.  
+ Returns information about open or declared cursors in Azure SQL Database. 
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 dm_db_exec_cursors (session_id | 0 )  
 ```  
   
 ## Arguments  
- *session_id* | 0  
- ID of the session. If *session_id* is specified, this function returns information about cursors in the specified session. The current user must have VIEW DATABASE STATE permission to view cursor information from other sessions.
+
+#### *session_id* | 0  
+ ID of the session. If `session_id` is specified, this function returns information about cursors in the specified session. The current user must have VIEW DATABASE STATE permission to view cursor information from other sessions.
   
  If 0 is specified, and the current user has VIEW DATABASE STATE permission, the function returns information about all cursors for all sessions in the current database. Otherwise, it returns information about cursors for the current session.
   
-## Table Returned  
+## Table returned  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|ID of the session that holds this cursor.|  
 |**cursor_id**|**int**|ID of the cursor object.|  
 |**name**|**nvarchar(256)**|Name of the cursor as defined by the user.|  
-|**properties**|**nvarchar(256)**|Specifies the properties of the cursor. The values of the following properties are concatenated to form the value of this column:<br />Declaration Interface<br />Cursor Type <br />Cursor Concurrency<br />Cursor scope<br />Cursor nesting level<br /><br /> For example, the value returned in this column might be "TSQL &#124; Dynamic &#124; Optimistic &#124; Global (0)".|  
+|**properties**|**nvarchar(256)**|Specifies the properties of the cursor. The values of the following properties are concatenated to form the value of this column:<br />`Declaration Interface | Cursor Type | Cursor Concurrency | Cursor scope | (Cursor nesting level)`<br /><br /> For example, the value returned in this column might be `TSQL &#124; Dynamic &#124; Optimistic &#124; Global (0)`.|  
 |**sql_handle**|**varbinary(64)**|Handle to the text of the batch that declared the cursor.|  
 |**statement_start_offset**|**int**|Number of characters into the currently executing batch or stored procedure at which the currently executing statement starts. Can be used together with the **sql_handle**, the **statement_end_offset**, and the [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) dynamic management function to retrieve the currently executing statement for the request.|  
 |**statement_end_offset**|**int**|Number of characters into the currently executing batch or stored procedure at which the currently executing statement ends. Can be used together with the **sql_handle**, the **statement_start_offset**, and the **sys.dm_exec_sql_text** dynamic management function to retrieve the currently executing statement for the request.|  
@@ -62,7 +64,8 @@ dm_db_exec_cursors (session_id | 0 )
 |**dormant_duration**|**bigint**|Milliseconds since the last query (open or fetch) on this cursor was started.|  
   
 ## Permissions  
- Requires VIEW DATABASE STATE permission in the current database to view all declared or open cursors for all sessions in the database.  For the server admin login (set when creating an Azure SQL server), the results are still scoped to cursors declared or open in the current database.
+
+Requires VIEW DATABASE STATE permission in the current database to view all declared or open cursors for all sessions in the database.  For the server admin login (set when creating a [logical server in Azure](/azure/azure-sql/database/logical-servers), the results are still scoped to cursors declared or open in the current database.
 
 ## Remarks  
  The following table provides information about the cursor declaration interface and includes the possible values for the properties column.  
@@ -98,10 +101,11 @@ dm_db_exec_cursors (session_id | 0 )
   
 ## Examples  
   
-### A. Detecting old cursors  
- This example returns information about cursors that have been declared or open in the current database longer than the specified time of 36 hours.  
+### A. Detect old cursors  
+
+The following example returns information about cursors that have been declared or open in the current database longer than the specified time of 36 hours: 
   
-```  
+```tsql
 SELECT creation_time, cursor_id, name, c.session_id, login_name   
 FROM sys.dm_db_exec_cursors(0) AS c   
 JOIN sys.dm_exec_sessions AS s ON c.session_id = s.session_id   
@@ -109,8 +113,9 @@ WHERE DATEDIFF(hh, c.creation_time, GETDATE()) > 36;
 GO  
 ```
 
-### B. Detecting all open cursors  
- This example returns information about cursors that are currently open in the database.  
+### B. Detect all open cursors  
+
+The following example returns information about cursors that are currently open in the database:
   
 ```  
 SELECT session_id, creation_time, cursor_id, name
@@ -119,7 +124,8 @@ WHERE is_open = 1;
 GO 
 ```   
   
-## See Also  
+## See also  
+
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)  

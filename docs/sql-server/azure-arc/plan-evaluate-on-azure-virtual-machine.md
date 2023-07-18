@@ -5,7 +5,6 @@ author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
 ms.date: 04/20/2023
-ms.service: sql
 ms.topic: conceptual
 ---
 

@@ -211,9 +211,9 @@ WHERE is_ms_shipped= 1 AND SCHEMA_NAME(schema_id) = 'cdc'
 
 ```
 
-## Known issues and limitations
+## Known limitations and issues
 
-Known issues and limitations associated with Change data capture (CDC).
+Known limitations and issues associated with Change data capture (CDC).
 
 ### Linux
 CDC is now supported for SQL Server 2017 on Linux starting with CU18, and SQL Server 2019 on Linux.

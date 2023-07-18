@@ -1,6 +1,6 @@
 ---
 title: Automatically connect your SQL Server to Azure Arc
-description: Connect an instance of SQL Server to Azure Arc. Allows you to manage SQL Server centrally, as an Arc-enabled resource.
+description: Automatically connect an instance of SQL Server to Azure Arc. Allows you to manage SQL Server centrally, as an Arc-enabled resource.
 author: anosov1960
 ms.author: rajpo
 ms.reviewer: mikeray, maghan

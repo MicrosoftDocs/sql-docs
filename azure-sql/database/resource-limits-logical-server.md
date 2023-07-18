@@ -160,6 +160,9 @@ A more detailed breakdown of recent resource consumption by user workloads and i
 
 When **total CPU consumption** is high, mitigation options are the same as noted in the [Compute CPU](#compute-cpu) section, and include service objective increase and/or user workload optimization.
 
+> [!NOTE]
+> Even on a completely idle database or elastic pool, **total CPU consumption** is never at zero because of background database engine activities. It can fluctuate in a wide range depending on the specific background activities, compute size, and previous user workload.
+
 ## Resource governance
 
 To enforce resource limits, Azure SQL Database uses a resource governance implementation that is based on SQL Server [Resource Governor](/sql/relational-databases/resource-governor/resource-governor), modified and extended to run in the cloud. In SQL Database, multiple [resource pools](/sql/relational-databases/resource-governor/resource-governor-resource-pool) and [workload groups](/sql/relational-databases/resource-governor/resource-governor-workload-group), with resource limits set at both pool and group levels, provide a [balanced Database-as-a-Service](https://azure.microsoft.com/blog/resource-governance-in-azure-sql-database/). User workload and internal workloads are classified into separate resource pools and workload groups. User workload on the primary and readable secondary replicas, including geo-replicas, is classified into the `SloSharedPool1` resource pool and `UserPrimaryGroup.DBId[N]` workload groups, where `[N]` stands for the database ID value. In addition, there are multiple resource pools and workload groups for various internal workloads.

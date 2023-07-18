@@ -66,7 +66,7 @@ Billing depends on the SKU of your product, the generation hardware of your SKU,
 - Basic (B)
 - Standard (S)
 - Premium (P)
-- General purpose (GP)
+- General Purpose (GP)
 - Business Critical (BC)
 - And for storage: geo-redundant storage (GRS), locally redundant storage (LRS), and zone-redundant storage (ZRS)
 - It's also possible to have a deprecated SKU from deprecated resource offerings

@@ -77,8 +77,9 @@ In Azure, you can have your SQL Server workloads running as a hosted service ([P
 ### Azure SQL Database
 
 [Azure SQL Database](database/sql-database-paas-overview.md) is a relational database-as-a-service (DBaaS) hosted in Azure that falls into the industry category of *Platform-as-a-Service (PaaS)*. 
+
 - Best for modern cloud applications that want to use the latest stable SQL Server features and have time constraints in development and marketing. 
-- A fully managed SQL Server database engine, based on the latest stable Enterprise Edition of SQL Server. SQL Database has two deployment options built on standardized hardware and software that is owned, hosted, and maintained by Microsoft. 
+- A fully managed SQL Server database engine, based on the latest stable Enterprise Edition of SQL Server. SQL Database has two deployment options built on standardized hardware and software that is owned, hosted, and maintained by Microsoft.
 
 With SQL Server, you can use built-in features and functionality that requires extensive configuration (either on-premises or in an Azure virtual machine). When using SQL Database, you pay-as-you-go with options to scale up or out for greater power with no interruption. SQL Database has some additional features that aren't available in SQL Server, such as built-in high availability, intelligence, and management.
 
@@ -129,7 +130,7 @@ Whether you're a startup that is strapped for cash, or a team in an established 
 
 Currently, both **SQL Database** and **SQL Managed Instance** are sold as a service and are available with several options and in several service tiers with different prices for resources, all of which are billed hourly at a fixed rate based on the service tier and compute size you choose. For the latest information on the current supported service tiers, compute sizes, and storage amounts, see [DTU-based purchasing model for SQL Database](database/service-tiers-dtu.md) and [vCore-based purchasing model for both SQL Database and SQL Managed Instance](database/service-tiers-vcore.md).
 
-- With SQL Database, you can choose a service tier that fits your needs from a wide range of prices starting from 5$/month for basic tier and you can create [elastic pools](database/elastic-pool-overview.md) to share resources among databases to reduce costs and accommodate usage spikes.
+- With SQL Database, you can choose a service tier that fits your needs from a wide range of prices starting from 5$/month for Basic tier and you can create [elastic pools](database/elastic-pool-overview.md) to share resources among databases to reduce costs and accommodate usage spikes.
 - With SQL Managed Instance, you can also bring your own license. For more information on bring-your-own licensing, see [License Mobility through Software Assurance on Azure](https://azure.microsoft.com/pricing/license-mobility/) or use the [Azure Hybrid Benefit calculator](https://azure.microsoft.com/pricing/hybrid-benefit/#sql-database) to see how to **save up to 40%**.
 
 In addition, you're billed for outgoing Internet traffic at regular [data transfer rates](https://azure.microsoft.com/pricing/details/data-transfers/). You can dynamically adjust service tiers and compute sizes to match your application's varied throughput needs.

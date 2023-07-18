@@ -1,7 +1,7 @@
 ---
 title: "Getting started using Always Encrypted with secure enclaves"
 description: A collection of tutorials on how to create a basic environment for Always Encrypted with secure enclaves.
-author: pietervanhove
+author: Pietervanhove
 ms.author: pivanho
 ms.reviewer: vanto
 ms.date: 02/15/2023

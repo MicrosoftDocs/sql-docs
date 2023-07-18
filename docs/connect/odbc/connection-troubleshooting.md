@@ -13,7 +13,7 @@ ms.topic: conceptual
 **If you see "SSL Provider: The certificate chain was issued by an authority that is not trusted." or "SSL routines::certificate verify failed: unable to get local issuer certificate" in your error:**
 
 - Connection encryption is enabled by default in version 18 and newer. Users switching from previous versions of ODBC may see these errors if connection encryption was previously not used.
-- Users can also choose to set the `Encrypt` connection string keyword to `no`/`optional` to disable connection encryption to match the default behavior prior to version 18. In the DSN Configuration UI, this option is set using the `Connection Encryption` dropdown.
+- Users can choose to set the `Encrypt` connection string keyword to `no`/`optional` to disable connection encryption to match the default behavior prior to version 18. In the DSN Configuration UI, this option is set using the `Connection Encryption` dropdown.
 - If connection encryption is desired, `TrustServerCertificate` can also be set to `yes` to skip server certificate validation.
 
 **If you see "SSL Provider: The target principal name is incorrect." or "SSL routines::certificate verify failed:subject name does not match host name" in your error:**

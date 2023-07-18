@@ -10411,14 +10411,14 @@ items:
         items:
         - name: Prerequisites
           href: sql-server/azure-arc/prerequisites.md
-        - name: Deployment options
-          href: sql-server/azure-arc/deployment-options.md
         - name: Interactive
           items:
           - name: Connect SQL Server to Azure using a deployment script
             href: sql-server/azure-arc/automatically-connect.md
         - name: Alternate methods to connect
           items:
+            - name: Deployment options
+              href: sql-server/azure-arc/deployment-options.md
             - name: Connect when machine not connected to Azure
               href: sql-server/azure-arc/connect.md
             - name: Connect with installer (.msi)

@@ -45,7 +45,7 @@ You can set the service tier, compute size (service objective), and storage amou
 > [!NOTE]
 > The Gen5 hardware in the vCore purchasing model has been renamed to **standard-series (Gen5)**.
 
-## <a id="general-purpose---serverless-compute---gen5"></a>General purpose - serverless compute - standard-series (Gen5)
+## <a id="general-purpose---serverless-compute---gen5"></a>General Purpose - serverless compute - standard-series (Gen5)
 
 <!---
 vCore resource limits are listed in the following articles, please be sure to update all of them: 
@@ -553,9 +553,9 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 
 <sup>4</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
  
-## <a id="general-purpose---provisioned-compute---gen5"></a>General purpose - provisioned compute - standard-series (Gen5)
+## <a id="general-purpose---provisioned-compute---gen5"></a>General Purpose - provisioned compute - standard-series (Gen5)
 
-### <a id="gen5-hardware-part-1-3"></a>General purpose Standard-series (Gen5) compute (part 1 of 3)
+### <a id="gen5-hardware-part-1-3"></a>General Purpose Standard-series (Gen5) compute (part 1 of 3)
 
 |Compute size (service objective)|GP_Gen5_2|GP_Gen5_4|GP_Gen5_6|GP_Gen5_8|GP_Gen5_10|
 |:--- | --: |--: |--: |--: |--: |
@@ -588,7 +588,7 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 <sup>3</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 
-### <a id="gen5-hardware-part-2-3"></a>General purpose Standard-series (Gen5) compute (part 2 of 3)
+### <a id="gen5-hardware-part-2-3"></a>General Purpose Standard-series (Gen5) compute (part 2 of 3)
 
 |Compute size (service objective)|GP_Gen5_12|GP_Gen5_14|GP_Gen5_16|GP_Gen5_18|GP_Gen5_20|
 |:--- | --: |--: |--: |--: |--: |
@@ -621,7 +621,7 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 <sup>3</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 
-### <a id="gen5-hardware-part-3-3"></a>General purpose Standard-series (Gen5) compute (part 3 of 3)
+### <a id="gen5-hardware-part-3-3"></a>General Purpose Standard-series (Gen5) compute (part 3 of 3)
 
 |Compute size (service objective)|GP_Gen5_24|GP_Gen5_32|GP_Gen5_40|GP_Gen5_80|GP_Gen5_128|
 |:--- | --: |--: |--: |--: |---: |
@@ -653,7 +653,7 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 
 <sup>3</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
-## General purpose - provisioned compute - Fsv2-series
+## General Purpose - provisioned compute - Fsv2-series
 
 ### General Purpose Fsv2-series Hardware (part 1 of 2)
 
@@ -719,7 +719,7 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 
 <sup>3</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
-## General purpose - provisioned compute - DC-series
+## General Purpose - provisioned compute - DC-series
 
 |Compute size (service objective)|GP_DC_2|GP_DC_4|GP_DC_6|GP_DC_8| 
 |:---| ---:|---:|---:|---:|
@@ -751,9 +751,9 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 
 <sup>3</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
-## <a id="business-critical---provisioned-compute---gen5"></a>Business critical - provisioned compute - standard-series (Gen5)
+## <a id="business-critical---provisioned-compute---gen5"></a>Business Critical - provisioned compute - standard-series (Gen5)
 
-### <a id="gen5-hardware-part-1-4"></a>Business critical Standard-series (Gen5) compute generation (part 1 of 3)
+### <a id="gen5-hardware-part-1-4"></a>Business Critical Standard-series (Gen5) compute generation (part 1 of 3)
 
 |Compute size (service objective)|BC_Gen5_2|BC_Gen5_4|BC_Gen5_6|BC_Gen5_8|BC_Gen5_10|
 |:--- | --: |--: |--: |--: |--: | 
@@ -787,7 +787,7 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 <sup>3</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 
-### <a id="gen5-hardware-part-2-4"></a>Business critical Standard-series (Gen5) compute generation (part 2 of 3)
+### <a id="gen5-hardware-part-2-4"></a>Business Critical Standard-series (Gen5) compute generation (part 2 of 3)
 
 |Compute size (service objective)|BC_Gen5_12|BC_Gen5_14|BC_Gen5_16|BC_Gen5_18|BC_Gen5_20|
 |:--- | --: |--: |--: |--: |--: |
@@ -820,7 +820,7 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 
 <sup>3</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
-### <a id="gen5-hardware-part-2-4"></a>Business critical Standard-series (Gen5) compute generation (part 3 of 3)
+### <a id="gen5-hardware-part-2-4"></a>Business Critical Standard-series (Gen5) compute generation (part 3 of 3)
 
 |Compute size (service objective)|BC_Gen5_24|BC_Gen5_32|BC_Gen5_40|BC_Gen5_80|BC_Gen5_128|
 |:--- | --: |--: |--: |--: |--: | 

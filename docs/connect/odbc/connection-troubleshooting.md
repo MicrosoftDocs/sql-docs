@@ -8,17 +8,22 @@ ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
 ---
-# Connection Encryption Troubleshooting
+# Troubleshooting connection encryption problems
 
-### SSL Provider: The certificate chain was issued by an authority that is not trusted.
-Connection encryption is enabled by default in version 18 and newer. Users may see this error if the SQL Server isn't configured to use certificates. To configure connection encryption for the server, see [Configure SQL Server Database Engine for encrypting connections](../../database-engine/configure-windows/configure-sql-server-encryption.md).
+**If you see "SSL Provider: The certificate chain was issued by an authority that is not trusted." or "SSL routines::certificate verify failed: unable to get local issuer certificate" in your error:**
 
-Users can also choose to set the `Encrypt` connection string keyword to `no`/`optional` to disable connection encryption to match the default behavior prior to version 18. In the DSN Configuration UI, this option is set using the `Connection Encryption` dropdown. If connection encryption is desired, `TrustServerCertificate` can also be set to `yes` to skip server certificate validation.
+- Connection encryption is enabled by default in version 18 and newer. Users switching from previous versions of ODBC may see these errors if connection encryption was previously not used.
+- Users can also choose to set the `Encrypt` connection string keyword to `no`/`optional` to disable connection encryption to match the default behavior prior to version 18. In the DSN Configuration UI, this option is set using the `Connection Encryption` dropdown.
+- If connection encryption is desired, `TrustServerCertificate` can also be set to `yes` to skip server certificate validation.
 
-### SSL Provider: The target principal name is incorrect.
-Users may see this error if the host name in the certificate returned by the server doesn't match what is expected. By default, the server name is used to check against the certificate. The `HostNameInCertificate` keyword can be used to specify the name expected from the server certificate. Alternatively, a certificate can also be specified to match and verify the returned server certificate against by using the `ServerCertificate` keyword (v18.1+). For more information, see [DSN and Connection String Keywords and Attributes](dsn-connection-string-attribute.md).
+**If you see "SSL Provider: The target principal name is incorrect." or "SSL routines::certificate verify failed:subject name does not match host name" in your error:**
 
-You may also use `TrustServerCertificate` to skip server certificate validation.
+- Users may see this error if the host name in the certificate returned by the server doesn't match what is expected. By default, the server name is used to check against the certificate.
+- The `HostNameInCertificate` keyword can be used to specify the name expected from the server certificate.
+- Alternatively, a certificate can also be specified to match and verify the returned server certificate against by using the `ServerCertificate` keyword (v18.1+).
+- You may also use `TrustServerCertificate` to skip server certificate validation.
+
+For more information, see [DSN and Connection String Keywords and Attributes](dsn-connection-string-attribute.md).
 
 --------------------------------------------------
 ## See Also  

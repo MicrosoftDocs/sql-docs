@@ -36,7 +36,7 @@ dm_db_exec_cursors (session_id | 0 )
 #### *session_id* | 0  
  ID of the session. If `session_id` is specified, this function returns information about cursors in the specified session. The current user must have VIEW DATABASE STATE permission to view cursor information from other sessions.
   
- If 0 is specified, and the current user has VIEW DATABASE STATE permission, the function returns information about all cursors for all sessions in the current database. Otherwise, it returns information about cursors for the current session.
+ If `0` is specified in a single database or elastic pool, and the current user has VIEW DATABASE STATE permission, the function returns information about all cursors for all sessions in the _current_ database. Otherwise, without the VIEW DATABSE STATE permission, the function returns information about cursors for only the current session.
   
 ## Table returned  
   
@@ -68,14 +68,15 @@ dm_db_exec_cursors (session_id | 0 )
 Requires VIEW DATABASE STATE permission in the current database to view all declared or open cursors for all sessions in the database.  For the server admin login (set when creating a [logical server in Azure](/azure/azure-sql/database/logical-servers), the results are still scoped to cursors declared or open in the current database.
 
 ## Remarks  
- The following table provides information about the cursor declaration interface and includes the possible values for the properties column.  
+
+The following table provides information about the cursor declaration interface and includes the possible values for the `properties` column, which contains a pipe-delimited string of information about the cursor object: 
   
 |Property|Description|  
 |--------------|-----------------|  
 |API|Cursor was declared by using one of the data access APIs (ODBC, OLEDB).|  
 |TSQL|Cursor was declared by using the Transact-SQL DECLARE CURSOR syntax.|  
   
- The following table provides information about the cursor type and includes the possible values for the properties column.  
+The following table provides information about the cursor type and includes the possible values for the `properties` column:
   
 |Type|Description|  
 |----------|-----------------|  
@@ -84,7 +85,7 @@ Requires VIEW DATABASE STATE permission in the current database to view all decl
 |Snapshot|Cursor was declared as Snapshot or Static.|  
 |Fast_Forward|Cursor was declared as Fast Forward.|  
   
- The following table provides information about cursor concurrency and includes the possible values for the properties column.  
+The following table provides information about cursor concurrency and includes the possible values for the `properties` column.
   
 |Concurrency|Description|  
 |-----------------|-----------------|  
@@ -92,7 +93,7 @@ Requires VIEW DATABASE STATE permission in the current database to view all decl
 |Scroll Locks|Cursor uses scroll locks.|  
 |Optimistic|Cursor uses optimistic concurrency control.|  
   
- The following table provides information about cursor scope and includes the possible values for the properties column.  
+The following table provides information about cursor concurrency and includes the possible values for the `properties` column:
   
 |Scope|Description|  
 |-----------|-----------------|  
@@ -105,7 +106,7 @@ Requires VIEW DATABASE STATE permission in the current database to view all decl
 
 The following example returns information about cursors that have been declared or open in the current database longer than the specified time of 36 hours: 
   
-```tsql
+```sql
 SELECT creation_time, cursor_id, name, c.session_id, login_name   
 FROM sys.dm_db_exec_cursors(0) AS c   
 JOIN sys.dm_exec_sessions AS s ON c.session_id = s.session_id   
@@ -117,7 +118,7 @@ GO
 
 The following example returns information about cursors that are currently open in the database:
   
-```  
+```sql
 SELECT session_id, creation_time, cursor_id, name
 FROM sys.dm_db_exec_cursors(0)
 WHERE is_open = 1;

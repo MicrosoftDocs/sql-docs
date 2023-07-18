@@ -211,45 +211,45 @@ WHERE is_ms_shipped= 1 AND SCHEMA_NAME(schema_id) = 'cdc'
 
 ```
 
-## Known limitations and issues
+## Known issues and limitations
 
-This is the list of known limitations and issue with Change data capture (CDC). 
+Known issues and limitations associated with Change data capture (CDC).
 
-**Linux**   
+### Linux
 CDC is now supported for SQL Server 2017 on Linux starting with CU18, and SQL Server 2019 on Linux.
 
-**Columnstore indexes**   
+### Columnstore indexes
 Change data capture can't be enabled on tables with a clustered columnstore index. Starting with SQL Server 2016, it can be enabled on tables with a non-clustered columnstore index.
 
-**Partition switching with variables**   
+### Partition switching with variables
 Using variables with partition switching on databases or tables with change data capture (CDC) isn't supported for the `ALTER TABLE ... SWITCH TO ... PARTITION ...` statement. See [partition switching limitations](../replication/publish/replicate-partitioned-tables-and-indexes.md#replication-support-for-partition-switching) to learn more. 
 
-**Availability of CDC in Azure SQL Databases**  
+### Availability of CDC in Azure SQL Databases
 CDC can only be enabled on databases tiers S3 and above. Subcore (Basic, S0, S1, S2) Azure SQL Databases aren't supported for CDC.
 
 Dbcopy from database tiers above S3 having CDC enabled to a subcore SLO presently retains the CDC artifacts, but CDC artifacts may be removed in the future.
 
-**Capture and Cleanup Customization on Azure SQL Databases**   
+### Capture and Cleanup Customization on Azure SQL Databases
 Configuring the frequency of the capture and the cleanup processes for CDC in Azure SQL Databases isn't possible. Capture and cleanup are run automatically by the scheduler.
 
-**Computed columns**  
+### Computed columns
 CDC doesn't support the values for computed columns even if the computed column is defined as persisted. Computed columns that are included in a capture instance always have a value of `NULL`. This behavior is intended, and not a bug.
 
-**Point-in-time restore (PITR)**  
+### Point-in-time restore (PITR)
 If you enable CDC on your database as a Microsoft Azure Active Directory (Azure AD) user, it isn't possible to Point-in-time restore (PITR) to a subcore SLO. It's recommended that you restore the database to the same as the source or higher SLO, and then disable CDC if necessary.
 
-**Microsoft Azure Active Directory (Azure AD)**  
+### Microsoft Azure Active Directory (Azure AD)
 If you create a database in Azure SQL Database as a Microsoft Azure Active Directory (Azure AD) user and enable change data capture (CDC) on it, a SQL user (for example, even sysadmin role) won't be able to disable/make changes to CDC artifacts. However, another Azure AD user will be able to enable/disable CDC on the same database.
 
 Similarly, if you create an Azure SQL Database as a SQL user, enabling/disabling change data capture as an Azure AD user won't work.
 
-**Aggressive log truncation**  
+### Aggressive log truncation
 When you enable change data capture (CDC) on Azure SQL Database or SQL Server, the aggressive log truncation feature of Accelerated Database Recovery (ADR) is disabled. This is because the CDC scan accesses the database transaction log. Active transactions will continue to hold the transaction log truncation until the transaction commits and CDC scan catches up, or transaction aborts. This might result in the transaction log filling up more than usual and should be monitored so that the transaction log doesn't fill.
 
-**CDC fails after ALTER COLUMN to VARCHAR and VARBINARY**  
+### CDC fails after ALTER COLUMN to VARCHAR and VARBINARY
 When the datatype of a column on a CDC-enabled table is changed from `TEXT` to `VARCHAR` or `IMAGE` to `VARBINARY` and an existing row is updated to an off-row value. After the update, the CDC scan will result in errors.
 
-**Enabling CDC fails on restored Azure SQL DB created with Microsoft Azure Active Directory (Azure AD)**  
+### Enabling CDC fails on restored Azure SQL DB created with Microsoft Azure Active Directory (Azure AD)
 Enabling CDC will fail if you create a database in Azure SQL Database as a Microsoft Azure Active Directory (Azure AD) user and don't enable CDC, then restore the database and enable CDC on the restored database.
 
 To resolve this issue, follow these steps: 
@@ -263,7 +263,7 @@ ALTER AUTHORIZATION ON DATABASE::[<restored_db_name>] TO [<azuread_admin_login_n
 EXEC sys.sp_cdc_enable_db
 ```
 
-**Attempt to enable CDC will fail if the custom schema or user named `cdc` pre-exist in database**  
+### Attempt to enable CDC will fail if the custom schema or user named `cdc` pre-exist in database*
 When you enable CDC on database, it creates a new schema and user named `cdc`. So, it's not recommended to manually create custom schema or user named `cdc`, as it's reserved for system use.  
 If you've manually defined a custom schema or user named `cdc` in your database that isn't related to CDC, the system stored procedure `sys.sp_cdc_enable_db` will fail to enable CDC on the database with below error message.
 
@@ -273,68 +273,63 @@ To resolve this issue:
 
 - Manually drop the empty `cdc` schema and `cdc` user. Then, CDC can be enabled successfully on the database.
 
-**Import database using data-tier Import/Export and Extract/Publish operations**  
+### Import database using data-tier Import/Export and Extract/Publish operations
 For CDC enabled SQL databases, when you use SqlPackage, SSDT, or other SQL tools to Import/Export or Extract/Publish, the `cdc` schema and user get excluded in the new database. Additional CDC objects not included in Import/Export and Extract/Deploy operations include the tables marked as `is_ms_shipped=1` in sys.objects.
 
 Even if CDC isn't enabled and you've defined a custom schema or user named `cdc` in your database that will also be excluded in Import/Export and Extract/Deploy operations to import/setup a new database.
 
 ## Troubleshooting
 
-The following table lists the possible solutions if you're having issues with CDC.
+The following table provides a list of potential solutions for resolving CDC-related problems.
 
-These errors associated with CDC can block the capture process from running properly and cause the database transaction log to grow. To review these errors, query the dynamic management view [sys.dm_cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md). In case any errors are present in [sys.dm_cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md) refer to the table below for mitigation steps.
+CDC-related errors may obstruct the proper functioning of the capture process and lead to the expansion of the database transaction log. To examine these errors, you can query the dynamic management view [sys.dm_cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md). In case any errors are present in [sys.dm_cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md) refer to the table below for mitigation steps.
 
 For more information on a particular error code, refer to [Database Engine events and errors](../../relational-databases/errors-events/database-engine-events-and-errors.md).  
 
 |Issue Category|Issue Details|Mitigation|  
 |-----------------|---------------|-----------------|  
-|Metadata modified|200/208 - Invalid object name. Generally occurs when CDC metadata has been dropped.|Disable CDC and review the [guidelines](../track-changes/about-change-data-capture-sql-server.md?#general-guidelines) before re-enabling.<br/>[sys.sp_cdc_disable_db](../system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md).|
-|Metadata modified|1202 - Database principal doesn't exist, or user isn't a member.|If the `cdc` user doesn't already exist, execute the following query to create `cdc` user and assign `db_owner` role.<br/><br/>For an example, see [Create user and assign role](#create-user-and-assign-role).|
-|Metadata modified|15517 - Can't execute as the database principal because the principal doesn't exist. This type of principal can't be impersonated, or you don't have permission.|Disable CDC and review the [guidelines](../track-changes/about-change-data-capture-sql-server.md#general-guidelines) before re-enabling.<br/>[sys.sp_cdc_disable_db](../system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md).|
-|Metadata modified|18807 - Can't find an object ID for the replication system table. Verify that the system table exists and is accessible by querying the table directly.|Disable CDC and review the [guidelines](../track-changes/about-change-data-capture-sql-server.md#general-guidelines) before re-enabling.<br/>[sys.sp_cdc_disable_db](../system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md).|
-|Metadata modified|21050 - Only members of the `sysadmin` or `db_owner` fixed server role can perform this operation.|To mitigate, follow the instructions at [Check and add role membership](#check-and-add-role-membership).|
-|Data size insufficient|1105 - Couldn't allocate space for object in database because the filegroup is full. Create space by deleting unneeded files, dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup.|Review the [guidelines and take the action as mentioned](/azure/azure-sql/database/file-space-manage).|
-|Data size insufficient|1132 - The elastic pool has reached its storage limit.|Review the [guidelines and take the action as mentioned](/azure/azure-sql/database/elastic-pool-scale?#change-elastic-pool-storage-size).|  
-|CDC limitation and errors|913 - CDC capture job fails when processing changes for a table with system CLR datatype.|Refer this article for mitigation and to avoid this error in future.<br/>[CDC capture job fails when processing changes](/troubleshoot/sql/database-engine/replication/cdc-capture-job-fails-processing-changes-table).|
+|Metadata modified|**Error 200/208** - Invalid object name. Generally occurs when CDC metadata has been dropped.|Disable CDC and review CDC [guidelines](../track-changes/about-change-data-capture-sql-server.md?#general-guidelines) before re-enabling.<br/><br/>For more information, see [sys.sp_cdc_disable_db](../system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md).|
+|Metadata modified|**Error 1202** - Database principal doesn't exist, or user isn't a member.|Ensure the existence of the `cdc` user and assign the `db_owner` role. <br/><br/>To create the `cdc` user, see the example [Create cdc user and assign role](#create-user-and-assign-role).|
+|Metadata modified|**Error 15517** - Can't execute as the database principal because the principal doesn't exist. This type of principal can't be impersonated, or you don't have permission.|Disable CDC and review [CDC guidelines](../track-changes/about-change-data-capture-sql-server.md?#general-guidelines) before re-enabling.<br/><br/>For more information, see [sys.sp_cdc_disable_db](../system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md).|
+|Metadata modified|**Error 18807** - Can't find an object ID for the replication system table. Verify that the system table exists and is accessible by querying the table directly.|Disable CDC and review [CDC guidelines](../track-changes/about-change-data-capture-sql-server.md?#general-guidelines) before re-enabling.<br/><br/>For more information, see [sys.sp_cdc_disable_db](../system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md).|
+|Metadata modified|**Error 21050** - Only members of the `sysadmin` or `db_owner` fixed server role can perform this operation.|To address this problem, please refer to the instructions provided at [Check and add role membership](#check-and-add-role-membership).|
+|Data size insufficient|**Error 1105** - Couldn't allocate space for object in database because the filegroup is full. Create space by deleting unneeded files, dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup.|Review the Azure SQL Database guidelines and take the actions specified at [Manage file space for databases in Azure SQL Database](/azure/azure-sql/database/file-space-manage).|
+|Data size insufficient|**Error 1132** - The elastic pool has reached its storage limit.|Review the Azure SQL Database guidelines and take the actions specified at [Change elastic pool storage size](/azure/azure-sql/database/elastic-pool-scale?#change-elastic-pool-storage-size).|  
+|CDC limitation and errors|**Error 913** - CDC capture job fails when processing changes for a table with system CLR datatype.|Refer this article for mitigation.<br/><br/>For more information, see [CDC capture job fails when processing changes](/troubleshoot/sql/database-engine/replication/cdc-capture-job-fails-processing-changes-table).|
 
 > [!NOTE]
-> If you disable CDC on the database as a mitigation measure by executing the stored procedure [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md), this action removes all the CDC artifacts, and captured change data is lost.
+> If you choose to disable CDC as a mitigation measure, by executing the stored procedure [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md), please be aware that this action will remove all CDC artifacts, resulting in the loss of captured change data.
 
 ### Create user and assign role
 
-The following query creates a user (`cdc`), and assigns it `db_owner` role.
+Use the following T-SQL script, to create a user (`cdc`), and assign the proper role for the same (`db_owner`).
 
 ```sql
-IF(
-   NOT EXISTS 
-    ( 
-     SELECT * 
-        FROM sys.database_principals 
-        WHERE NAME = 'cdc'
-    )
-   )
-
+IF NOT EXISTS 
+(
+    SELECT * 
+    FROM sys.database_principals 
+    WHERE NAME = 'cdc'
+)
 BEGIN
-   CREATE user [cdc] 
-      WITHOUT 
-      LOGIN WITH default_schema = [cdc];
+    CREATE USER [cdc] 
+    WITHOUT LOGIN WITH DEFAULT_SCHEMA = [cdc];
 END
 
-EXEC sp_addrolemember 'db_owner' , 'cdc';
+EXEC sp_addrolemember 'db_owner', 'cdc';
 ```
 
 ### Check and add role membership
 
-To verify if `cdc` login belongs to either `sysadmin` or `db_owener` role, run the following query:
+To verify if `cdc` user belongs to either the `sysadmin` or `db_owner` role, run the following T-SQL query:
 
 ```sql
-EXECUTE AS USER = 'cdc'
+EXECUTE AS USER = 'cdc';
 
-SELECT is_srvrolemember('sysadmin'), 
-       is_member('db_owner')
+SELECT is_srvrolemember('sysadmin'), is_member('db_owner');
 ```
 
-If `cdc` user doesn't belong to either role, execute the following query to add `db_owner` permission to `cdc` user.
+If the `cdc` user doesn't belong to either role, execute the following T-SQL query to add `db_owner` role to the `cdc` user.
 
 ```sql
 EXEC sp_addrolemember 'db_owner' , 'cdc';

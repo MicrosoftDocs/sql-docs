@@ -29,23 +29,24 @@ helpviewer_keywords:
 
 You might see the following error entry when you run a distributed transaction against a linked server on a computer that's running Microsoft Windows Server.
 
-> "MSDTC may not be running or may have disabled network access."
+> MSDTC may not be running or may have disabled network access.
 
 In some instances, you might also receive error 8522:
-> "Microsoft Distributed Transaction Coordinator (MS DTC) has stopped this transaction."
 
-Error numbers that are in the range of 7300 to 7399 indicate a problem with the provider. As each provider may have different capabilities and return different details, you may not receive the complete error message. To retrieve the complete error message from providers, run the following command before you run the query that shows the error:
+> Microsoft Distributed Transaction Coordinator (MS DTC) has stopped this transaction.
+
+Error numbers that are in the range of 7300 to 7399 indicate a problem with the provider. As each provider might have different capabilities and show different details, you might not receive a complete error message. To retrieve the complete error message from providers, run the following command before you run the query that shows the error:
 
    ```sql
    DBCC TRACEON (3604, 7300)
    ```
 
-If you receive error 7391 from a process such as SQL Server replication or SQL Server Integration Services (SSIS), you may also receive the error message when the code contains a `BEGIN DISTRIBUTED TRAN` statement.
+If you receive error 7391 from a process such as SQL Server replication or SQL Server Integration Services (SSIS), you might also receive the error message when the code contains a `BEGIN DISTRIBUTED TRAN` statement.
 
 ## User Action
 
 > [!NOTE]
-> It's a good idea to limit your code in a transaction that involves a distributed query only to the remote server. To limit your code, you may separate locally executed steps from remote steps.
+> It's a good idea to limit your code in a transaction that involves a distributed query only to the remote server. To limit your code, you might separate locally executed steps from remote steps.
 
 ### Supportability
 

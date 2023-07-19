@@ -21,7 +21,7 @@ Use the method below, if your server is already connected to Azure, but Azure ex
 
 Microsoft Endpoint Configuration Manager facilitates comprehensive management of servers supporting the secure and scalable deployment of applications, software updates, and operating systems. Configuration Manager offers the custom task sequence as a flexible paradigm for application deployment.
 
-You can use a custom task sequence, that can deploy the Connected Machine Agent to onboard a collection of devices to Azure Arc-enabled servers.
+You can use a custom task sequence that can deploy the Connected Machine Agent to onboard a collection of devices to Azure Arc-enabled servers.
 
 Before you get started, be sure to review the [prerequisites](prerequisites.md) and verify that your subscription and resources meet the requirements. 
 

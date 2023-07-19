@@ -820,7 +820,7 @@ void demo_variable_TVP_binding (SQLHANDLE hstmt) {
          if (ParamId == &Qty) {  
             Qty = 2;  
             // For a character or binary parameter, SQLPutData can be called multiple times to pass the value in pieces  
-            SQLPutData(hstmt, &Qty, sizeof(SQLINTEGER));  
+            r = SQLPutData(hstmt, &Qty, sizeof(SQLINTEGER));  
             if (r != SQL_SUCCESS && r != SQL_SUCCESS_WITH_INFO) {  
                ODBCError(henv, hdbc, hstmt, NULL, true);   
                exit(-1);  

@@ -4,7 +4,7 @@ description: This page describes some common vCore resource limits for elastic p
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 07/19/2023
+ms.date: 07/25/2023
 ms.service: sql-database
 ms.subservice: elastic-pools
 ms.topic: reference
@@ -56,9 +56,9 @@ vCore resource limits are listed in the following articles, please be sure to up
 /managed-instance/resource-limits.md
 --->
 
-## General purpose - provisioned compute - standard-series (Gen5)
+## General Purpose - provisioned compute - standard-series (Gen5)
 
-### General purpose service tier: standard-series (Gen5) (part 1 of 3)
+### General Purpose service tier: standard-series (Gen5) (part 1 of 3)
 
 | Compute size (service objective) | GP_Gen5_2 | GP_Gen5_4 | GP_Gen5_6 | GP_Gen5_8 | GP_Gen5_10 |
 |:-|-:|-:|-:|-:|-:|
@@ -96,7 +96,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 <sup>5</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
-### General purpose service tier: standard-series (Gen5) (part 2 of 3)
+### General Purpose service tier: standard-series (Gen5) (part 2 of 3)
 
 | Compute size (service objective) | GP_Gen5_12 | GP_Gen5_14 | GP_Gen5_16 | GP_Gen5_18 | GP_Gen5_20 |
 |:-|-:|-:|-:|-:|-:|
@@ -134,7 +134,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 <sup>5</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
-### General purpose service tier: standard-series (Gen5) (part 3 of 3)
+### General Purpose service tier: standard-series (Gen5) (part 3 of 3)
 
 | Compute size (service objective) | GP_Gen5_24 | GP_Gen5_32 | GP_Gen5_40 | GP_Gen5_80 | GP_Gen5_128 |
 |:-|-:|-:|-:|-:|-:|
@@ -172,9 +172,9 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 <sup>5</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
-## General purpose - provisioned compute - Fsv2-series
+## General Purpose - provisioned compute - Fsv2-series
 
-### Fsv2-series Hardware (part 1 of 2)
+### Fsv2-series hardware (part 1 of 2)
 
 | Compute size (service objective) | GP_Fsv2_8 | GP_Fsv2_10 | GP_Fsv2_12 | GP_Fsv2_14 | GP_Fsv2_16 |
 |:-|-:|-:|-:|-:|-:|
@@ -212,7 +212,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 <sup>5</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
-### Fsv2-series Hardware (part 2 of 2)
+### Fsv2-series hardware (part 2 of 2)
 
 | Compute size (service objective) | GP_Fsv2_18 | GP_Fsv2_20 | GP_Fsv2_24 | GP_Fsv2_32 | GP_Fsv2_36 | GP_Fsv2_72 |
 |:-|-:|-:|-:|-:|-:|-:|
@@ -250,8 +250,8 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 <sup>5</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
-## General purpose - provisioned compute - DC-series
-### DC-series Hardware (part 1 of 2)
+## General Purpose - provisioned compute - DC-series
+### DC-series hardware (part 1 of 2)
 
 | Compute size (service objective) | GP_DC_2 | GP_DC_4 | GP_DC_6 | GP_DC_8 | GP_DC_10 | GP_DC_12 |
 |:-|-:|-:|-:|-:|-:|-:|
@@ -289,7 +289,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 <sup>5</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
-### DC-series Hardware (part 2 of 2)
+### DC-series hardware (part 2 of 2)
 
 | Compute size (service objective) | GP_DC_14 | GP_DC_16 | GP_DC_18 | GP_DC_20 | GP_DC_32 | GP_DC_40 |
 |:-|-:|-:|-:|-:|-:|-:|

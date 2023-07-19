@@ -3,7 +3,7 @@ title: Connection libraries for Microsoft SQL Database
 description: Provides download links for modules, which enable connection to Microsoft SQL Server and Azure SQL Database, from a variety of client programming languages.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 07/07/2023
+ms.date: 07/19/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: article
@@ -48,6 +48,7 @@ The following table lists examples of Object Relational Mapping (ORM) frameworks
 | Language | ORM driver download |
 | :------- | :------------------ |
 | C# | [Entity Framework Core](/ef/core/)<br />[Entity Framework (6.x or later)](/ef/) |
+| Go | [GORM](https://gorm.io/)
 | Java | [Hibernate ORM](https://hibernate.org/orm)|
 | PHP | [Eloquent ORM, included in Laravel install](https://laravel.com/docs/) |
 | Node.js | [Sequelize ORM](https://sequelize.org/)<br/>[Prisma](https://www.prisma.io/) |

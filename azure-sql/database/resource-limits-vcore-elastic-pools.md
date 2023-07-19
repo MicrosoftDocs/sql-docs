@@ -56,9 +56,9 @@ vCore resource limits are listed in the following articles, please be sure to up
 /managed-instance/resource-limits.md
 --->
 
-## General purpose - provisioned compute - standard-series (Gen5)
+## General Purpose - provisioned compute - standard-series (Gen5)
 
-### General purpose service tier: standard-series (Gen5) (part 1 of 3)
+### General Purpose service tier: standard-series (Gen5) (part 1 of 3)
 
 | Compute size (service objective) | GP_Gen5_2 | GP_Gen5_4 | GP_Gen5_6 | GP_Gen5_8 | GP_Gen5_10 |
 |:-|-:|-:|-:|-:|-:|
@@ -96,7 +96,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 <sup>5</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
-### General purpose service tier: standard-series (Gen5) (part 2 of 3)
+### General Purpose service tier: standard-series (Gen5) (part 2 of 3)
 
 | Compute size (service objective) | GP_Gen5_12 | GP_Gen5_14 | GP_Gen5_16 | GP_Gen5_18 | GP_Gen5_20 |
 |:-|-:|-:|-:|-:|-:|
@@ -134,7 +134,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 <sup>5</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
-### General purpose service tier: standard-series (Gen5) (part 3 of 3)
+### General Purpose service tier: standard-series (Gen5) (part 3 of 3)
 
 | Compute size (service objective) | GP_Gen5_24 | GP_Gen5_32 | GP_Gen5_40 | GP_Gen5_80 | GP_Gen5_128 |
 |:-|-:|-:|-:|-:|-:|
@@ -172,7 +172,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 <sup>5</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
-## General purpose - provisioned compute - Fsv2-series
+## General Purpose - provisioned compute - Fsv2-series
 
 ### Fsv2-series Hardware (part 1 of 2)
 
@@ -250,7 +250,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 <sup>5</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
-## General purpose - provisioned compute - DC-series
+## General Purpose - provisioned compute - DC-series
 
 | Compute size (service objective) | GP_DC_2 | GP_DC_4 | GP_DC_6 | GP_DC_8 |
 |:-|-:|-:|-:|-:|

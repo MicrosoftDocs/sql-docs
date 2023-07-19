@@ -112,5 +112,6 @@ Go to **Azure Arc > SQL Server** and open the newly registered Arc-enabled SQL S
 
 Now that you've enabled your Linux or Windows hybrid machine and successfully connected to the service, you are ready to manage, secure and protect your SQL Server from Azure.
 
+- [Automatically connect your SQL Server to Azure Arc](automatically-connect.md)
 - [Configure advanced data security for your SQL Server instance](configure-advanced-data-security.md)
 - [Configure best practices assessment on an Azure Arc-enabled SQL Server instance](assess.md)

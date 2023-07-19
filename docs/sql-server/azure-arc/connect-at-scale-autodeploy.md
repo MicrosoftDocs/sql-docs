@@ -18,8 +18,6 @@ Azure Arc-enabled SQL Server is a cloud-native solution provided by Microsoft to
 > [!IMPORTANT]
 > Microsoft only automatically connects Arc servers with SQL Server installed on them when the Arc server resource is in [one of the regions supported by Arc-enabled SQL Server](prerequisites.md#supported-regions).
 
-To automatically connect Azure Arc-enabled SQL Server, follow the steps at [Quickstart: Connect SQL Server machines to Azure Arc](quick-enabled-sql-server.md).
-
 This article details how the streamlined process of connecting SQL Server to Azure works.
 
 ## Prerequisites
@@ -58,6 +56,8 @@ Microsoft automatically installs Azure extension for SQL Server on each Arc-enab
     > The license type is set if the `ArcSQLServerExtensionDeployment` tag value is set.
 
 1. Create Arc-enabled SQL Server instance resource in Azure.
+
+To automatically connect Azure Arc-enabled SQL Server, use one of the methods provided that meet your requirements [Automatically connect your SQL Server to Azure Arc](automatically-connect.md).
 
 Once the connecting is complete, you can benefit from the Azure features for SQL Server. For more information, visit [Manage SQL Server license and billing options](manage-license-type.md).
 
@@ -125,6 +125,6 @@ resources
 ## Next steps
 
 - [Azure Arc-enabled SQL Server](overview.md)
-- [Deployment options for Azure Arc-enabled SQL Server](deployment-options.md)
+- [Automatically connect your SQL Server to Azure Arc](automatically-connect.md)
 - [Prerequisites](prerequisites.md)
 - [Data collected by Arc enabled SQL Server](data-collection.md)

@@ -145,6 +145,6 @@ Before configuring your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md
 
 ## Next steps
 
-- [Connect your SQL Server to Azure Arc](deployment-options.md)
+- [Automatically connect your SQL Server to Azure Arc](automatically-connect.md)
 
 

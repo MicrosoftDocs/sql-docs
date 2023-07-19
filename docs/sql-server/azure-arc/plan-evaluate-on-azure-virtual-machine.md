@@ -73,5 +73,5 @@ Connect the instance of SQL Server to Azure Arc. Follow the steps in [Quickstart
 After you have evaluated Arc-enabled SQL Server on an Azure Virtual Machine, to avoid charges, delete your resource groups.
 
 ## Next steps
-
-[Configure SQL best practices assessment](assess.md)
+- [Automatically connect your SQL Server to Azure Arc](automatically-connect.md)
+- [Configure SQL best practices assessment](assess.md)

@@ -48,4 +48,5 @@ Be sure to review the basic [prerequisites](prerequisites.md) before you deploy 
 
 ## Next steps
 
-* Learn about the Azure Connected Machine agent and network requirements in [prerequisites](prerequisites.md).
+* Learn about the Azure Connected Machine agent and network requirements in [prerequisites](prerequisites.md)
+- [Automatically connect your SQL Server to Azure Arc](automatically-connect.md)

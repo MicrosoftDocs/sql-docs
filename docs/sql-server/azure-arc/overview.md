@@ -109,5 +109,6 @@ The following diagram illustrates the architecture of Azure Arc-enabled SQL Serv
 ## Next steps
 
 - [Learn about the prerequisites to connect your SQL Server to Azure Arc](prerequisites.md)
+- [Automatically connect your SQL Server to Azure Arc](automatically-connect.md)
 - [Learn more about Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-sql-usage)
 - [Lean more about Microsoft Purview](/azure/purview/register-scan-azure-arc-enabled-sql-server)

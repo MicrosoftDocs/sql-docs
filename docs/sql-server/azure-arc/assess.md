@@ -187,9 +187,8 @@ For more information, see the [troubleshooting guide](troubleshoot-assessment.md
 
 ## Next steps
 
-- [Connect your SQL Server to Azure Arc](connect.md).
+- [Automatically connect your SQL Server to Azure Arc](automatically-connect.md)
 
-- [Connect SQL Server instances to Azure at scale](connect-at-scale-policy.md)
 
 - Review the [rich set of nearly 500 rules](https://github.com/microsoft/sql-server-samples/blob/master/samples/manage/sql-assessment-api/DefaultRuleset.csv) best practices assessment applies.
 

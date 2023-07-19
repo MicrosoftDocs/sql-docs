@@ -33,7 +33,9 @@ When you run a distributed transaction against a linked server on a computer tha
 
 This error occurs because the Microsoft Distributed Transaction Coordinator (MSDTC) service is not running or has disabled network access. In some instances, you might also receive error 8522:
 
-> Microsoft Distributed Transaction Coordinator (MS DTC) has stopped this transaction.
+```output
+Microsoft Distributed Transaction Coordinator (MS DTC) has stopped this transaction.
+```
 
 Error numbers that are in the range of 7300 to 7399 indicate a problem that affects the provider. Because each provider might have different capabilities and show different details, you might not receive a complete error message. To retrieve the complete error message from providers, run the following command before you run the query that generates the error:
 

@@ -123,7 +123,7 @@ If you're using the Azure portal to create your secondary managed instance, you 
 
 ### [Portal](#tab/azure-portal) 
 
-To verify the subnet range of your primary virtual network, follow these steps:
+To verify the address range of your primary virtual network, follow these steps:
 
 1. In the [Azure portal](https://portal.azure.com), navigate to your resource group and select the virtual network for your primary instance.  
 2. Select **Address space** under **Settings** and note the **Address range** of the subnet created automatically during creation of your primary instance. The **Address range** for the virtual network of the primary instance must not overlap the address range of the address range of the virtual network for the secondary managed insatnce you plan to create, and any other virtual network peered with either the primary or secondary virtual network. 
@@ -163,7 +163,7 @@ In this step you will create a secondary managed instance, which will also confi
 
 Your second managed instance must be:
 - Empty, i.e. with no user databases on it. 
-- Hosted in a virtual network subnet that has no IP address range overlap with the virtual network subnet hosting the primary managed instance. 
+- Hosted in a virtual network that has no IP address range overlap with the virtual network address range hosting the primary managed instance, or any other virtual network peered with it. 
 
 ### [Portal](#tab/azure-portal)  
 

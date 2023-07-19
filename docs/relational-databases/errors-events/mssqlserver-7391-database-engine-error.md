@@ -3,13 +3,12 @@ title: "MSSQLSERVER_7391"
 description: "MSSQLSERVER_7391"
 author: padmajayaraman
 ms.author: v-jayaramanp
-ms.date: "07/13/2023"
+ms.date: "07/19/2023"
 ms.service: sql
 ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords:
   - "7391 (Database Engine error)"
-  - "single-threaded apartment mode"
 ---
 
 # MSSQLSERVER_7391
@@ -86,7 +85,7 @@ Follow these steps for configuring the servers:
    SET XACT_ABORT ON 
    ```
 
-   **Note:**  This option isn't required if the provider supports nested transactions.
+   **Note:** This option isn't required if the provider supports nested transactions.
 
 1. Check whether any of the servers are on a Windows Server Failover Cluster. The MSDTC service on the cluster must have its own IP address. Make sure that correct name resolution of the DTC service occurs on each server. The IP address of the DTC must be defined in your name resolution system (such as WINS, DNS, or LMHosts). Verify that each server can communicate with MSDTC on the other servers by name and not only by IP address. Check in both directions. For example, check from server A to server B's MSDTC service, and then check from server B to server A's MSDTC. You must resolve all name resolution problems on the network before you run your distributed query. To configure MSDTC on a cluster, see [MSDTC Recommendations on SQL Failover Cluster - Microsoft Community Hub](/troubleshoot/sql/database-engine/linked-servers/error-message-ole-db-provider).
 

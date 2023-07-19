@@ -105,7 +105,7 @@ In case any of the components are missing, do the following:
 
 ## Change the Log Analytical workspace
 
-To change the Log Analytical workspace that is linked for best practices assessment, follow the steps below. 
+To change the Log Analytical workspace that is linked for the best practices assessment, follow the steps below. 
 
 1. Disable the best practice assessment if it's currently enabled.
 2. Make a GET call to the API and get the Azure extension for SQL Server settings

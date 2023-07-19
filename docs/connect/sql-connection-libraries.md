@@ -48,7 +48,7 @@ The following table lists examples of Object Relational Mapping (ORM) frameworks
 | Language | ORM driver download |
 | :------- | :------------------ |
 | C# | [Entity Framework Core](/ef/core/)<br />[Entity Framework (6.x or later)](/ef/) |
-| Go | [GORM]https://gorm.io/
+| Go | [GORM](https://gorm.io/)
 | Java | [Hibernate ORM](https://hibernate.org/orm)|
 | PHP | [Eloquent ORM, included in Laravel install](https://laravel.com/docs/) |
 | Node.js | [Sequelize ORM](https://sequelize.org/)<br/>[Prisma](https://www.prisma.io/) |

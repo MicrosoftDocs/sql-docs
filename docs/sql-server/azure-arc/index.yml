@@ -29,6 +29,8 @@ landingContent:
             url: configure-advanced-data-security.md
           - text: Auto backups 
             url: point-in-time-restore.md
+          - text: Video - Data Exposed
+            url: /shows/data-exposed/new-benefits-of-azure-arc-enabled-sql-server-data-exposed
  
  # Card
   - title: Arc-enable SQL Server
@@ -65,6 +67,6 @@ landingContent:
       - linkListType: learn
         links:
           - text: Learning path
-            url: /training/paths/manage-hybrid-infrastructure-with-azure-arc         
+            url: /training/paths/manage-hybrid-infrastructure-with-azure-arc       
 
  

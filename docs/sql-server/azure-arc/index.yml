@@ -18,7 +18,10 @@ landingContent:
           - text: What is Azure Arc-enabled SQL Server?
             url: overview.md
 
-      - linkListType: how-to-guide
+ # Card
+  - title: Benefits
+    linkLists:
+      - linkListType: concept
         links:
           - text: SQL Server best practice assessments 
             url: assess.md 

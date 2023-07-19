@@ -2,8 +2,8 @@
 title: "Tutorial: Add SQL Managed Instance to a failover group"
 titleSuffix: Azure SQL Managed Instance
 description: In this tutorial, learn to create a failover group between a primary and secondary Azure SQL Managed Instance.
-author: rajeshsetlem
-ms.author: rsetlem
+author: Stralle
+ms.author: strrodic
 ms.reviewer: mathoma
 ms.date: 04/20/2023
 ms.service: sql-managed-instance
@@ -119,17 +119,17 @@ Run these commands in the following order to create your resource group, and pri
 
 ## Create secondary virtual network
 
-If you're using the Azure portal to create your secondary managed instance, you will need to create the virtual network before creating the instance to make sure that the subnets of the primary and secondary managed instance do not have overlapping IP address ranges. If you're using Azure PowerShell to configure your managed instance, skip ahead to [Create a secondary managed instance](#create-a-secondary-managed-instance). 
+If you're using the Azure portal to create your secondary managed instance, you will need to create the virtual network before creating the instance to make sure there's no indirect overlap of the IP address ranges between the VNets hosting the primary and secondary instance, or any other VNets they are peered with via local virtual network peering or other means. If you're using Azure PowerShell to configure your managed instance, skip ahead to [Create a secondary managed instance](#create-a-secondary-managed-instance). 
 
 ### [Portal](#tab/azure-portal) 
 
 To verify the subnet range of your primary virtual network, follow these steps:
 
 1. In the [Azure portal](https://portal.azure.com), navigate to your resource group and select the virtual network for your primary instance.  
-2. Select **Subnets** under **Settings** and note the **Address range** of the subnet created automatically during creation of your primary instance. The subnet IP address range of the virtual network for the secondary managed instance must not overlap with the IP address range of the subnet hosting primary instance. 
+2. Select **Address space** under **Settings** and note the **Address range** of the subnet created automatically during creation of your primary instance. The **Address range** for the virtual network of the primary instance must not overlap the address range of the address range of the virtual network for the secondary managed insatnce you plan to create, and any other virtual network peered with either the primary or secondary virtual network. 
 
 
-   ![Primary subnet](./media/failover-group-add-instance-tutorial/verify-primary-subnet-range.png)
+   ![Primary subnet](./media/failover-group-add-instance-tutorial/verify-primary-address-range.png)
 
 To create a virtual network, follow these steps:
 
@@ -146,7 +146,7 @@ To create a virtual network, follow these steps:
     | **Subscription** | The subscription where your primary managed instance and resource group reside. |
     | **Region** | The location where you will deploy your secondary managed instance. |
     | **Subnet** | The name for your subnet. `default` is offered as a default name. |
-    | **Address range**| The IP address range for your subnet, such as `10.128.0.0/24`. This must not overlap with the IP address range used by the virtual network subnet of your primary managed instance.  |
+    | **Address range**| The IP address range for your virtual entwork, such as `10.128.0.0/24`. This must not overlap with the IP address range used by any other virtual networks they are peered with. |
 
 
     ![Secondary virtual network values](./media/failover-group-add-instance-tutorial/secondary-virtual-network.png)

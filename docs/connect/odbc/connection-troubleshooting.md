@@ -1,20 +1,24 @@
 ---
-title: "Connection Encryption Troubleshooting"
-description: "Learn how to troubleshoot common connection issues related to connection encryption."
+title: Connection encryption troubleshooting
+description: Learn how to troubleshoot common connection issues related to connection encryption.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: "07/31/2023"
+ms.date: 07/31/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
 ---
-# Troubleshooting connection encryption problems
+# Connection encryption troubleshooting in the ODBC driver
+
+## Certificate chain errors
 
 **If you see "SSL Provider: The certificate chain was issued by an authority that is not trusted." or "SSL routines::certificate verify failed: unable to get local issuer certificate" in your error:**
 
 - Connection encryption is enabled by default in version 18 and newer. Users switching from previous versions of ODBC may see these errors if connection encryption was previously not used.
 - Users can choose to set the `Encrypt` connection string keyword to `no`/`optional` to disable connection encryption to match the default behavior prior to version 18. In the DSN Configuration UI, this option is set using the `Connection Encryption` dropdown.
 - If connection encryption is desired, `TrustServerCertificate` can also be set to `yes` to skip server certificate validation.
+
+## Certificate name errors
 
 **If you see "SSL Provider: The target principal name is incorrect." or "SSL routines::certificate verify failed:subject name does not match host name" in your error:**
 

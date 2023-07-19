@@ -225,7 +225,7 @@ To resolve this issue, create a configuration file that allows the Backup to URL
 | **Error:** Backup to URL received an exception from the remote endpoint. Exception Message: The remote server returned an error: (416) The page range specified is invalid. | You may see this if you're on SQL 2012/2014 and if your backup size increases 1 TB. Stripe your backup files to resolve. | 
 | **Backup failed when using a maintenance plan.** | There are a few bugs with the maintenance plan. See if you can execute T-SQL to back up. If you can, then you can create a SQL agent job to run for backing up. | 
 | **Backup failed due to VM limits reached.** | If you're getting disk IO/VM limit reached errors, backups may slow down or fail. To monitor IOPS/VM limits, use [Azure Monitor Metrics](https://learn.microsoft.com/azure/virtual-machines/disks-metrics) and resize the VM/disk, if required, to fix the problem.| 
-| **The remote server returned an error: (409) Conflict for SQL 2012/2014**" | Storage account with hierarchical namespace are equipped for block blobs, not page blobs. Storage account without this feature should be used for backup to url for SQL server 2014. |
+| **The remote server returned an error: (409) Conflict for SQL 2012/2014**" | Storage account with **hierarchical namespace** are equipped for block blobs, not page blobs. Storage account without this feature should be used for backup to url for SQL server 2014. |
 
 ## Next steps
 

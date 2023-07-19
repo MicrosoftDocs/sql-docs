@@ -26,11 +26,9 @@ helpviewer_keywords:
 
 ## Explanation
 
-When you run a distributed transaction against a linked server on a computer that's running Microsoft Windows Server, you receive the following error message:
+This error occurs because the Microsoft Distributed Transaction Coordinator (MSDTC) service is not running or has disabled network access. 
 
-> MSDTC may not be running or may have disabled network access.
-
-This error occurs because the Microsoft Distributed Transaction Coordinator (MSDTC) service is not running or has disabled network access. In some instances, you might also receive error 8522:
+In some instances, you might also receive error 8522:
 
 ```output
 Microsoft Distributed Transaction Coordinator (MS DTC) has stopped this transaction.
@@ -79,7 +77,7 @@ Follow these steps for configuring the servers:
 
 1. Start the Distributed Transaction Coordinator (DTC or MS DTC) on all servers that are involved in the distributed transaction. For information about enabling network DTC access, see [Error message of OLE DB provider - SQL Server](/troubleshoot/sql/database-engine/linked-servers/error-message-ole-db-provider).
 
-1. Set the **XACT_ABORT** option to ON for data modification statements in an implicit or explicit transaction against most OLE DB providers, including SQL Server. You can do this by running the following command before you run your query. This option isn't required:
+1. Set the **XACT_ABORT** option to ON for data modification statements in an implicit or explicit transaction against most OLE DB providers, including SQL Server. You can do this by running the following command before you run your query.
 
    ```sql
    SET XACT_ABORT ON 

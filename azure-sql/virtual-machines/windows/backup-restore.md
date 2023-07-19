@@ -24,7 +24,7 @@ The following table provides information on various backup and restore options f
 | Strategy | SQL versions | Description |
 |---|---|---|
 | [Automated Backup](#automated) | 2014 and later | Automated Backup allows you to schedule regular backups for all databases on a SQL Server VM. Backups are stored in Azure storage for up to 30 days. Beginning with SQL Server 2016, Automated Backup offers additional options such as configuring manual scheduling and the frequency of full and log backups. |
-| [Azure Backup for SQL VMs](#azbackup) | 2008 and later | Azure Backup provides an Enterprise class backup capability for SQL Server on Azure VMs. With this service, you can centrally manage backups for multiple servers and thousands of databases. Databases can be restored to a specific point in time in the portal. It offers a customizable retention policy that can maintain backups for years. |
+| [Azure Backup for SQL VMs](#azbackup) | 2012 and later | Azure Backup provides an Enterprise class backup capability for SQL Server on Azure VMs. With this service, you can centrally manage backups for multiple servers and thousands of databases. Databases can be restored to a specific point in time in the portal. It offers a customizable retention policy that can maintain backups for years. |
 | [Manual backup](#manual) | All | Depending on your version of SQL Server, there are various techniques to manually backup and restore SQL Server on Azure VM. In this scenario, you are responsible for how your databases are backed up and the storage location and management of these backups. |
 
 The following sections describe each option in more detail. The final section of this article provides a summary in the form of a feature matrix.
@@ -72,10 +72,12 @@ If you want to manually manage backup and restore operations on your SQL VMs, th
 - [Backup and restore for SQL Server 2016 and later](/sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases)
 - [Backup and restore for SQL Server 2014](/sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases?viewFallbackFrom=sql-server-2014)
 - [Backup and restore for SQL Server 2012](/previous-versions/sql/sql-server-2012/ms187048(v=sql.110))
-- [Backup and restore for SQL Server SQL Server 2008 R2](/previous-versions/sql/sql-server-2008-r2/ms187048(v=sql.105))
-- [Backup and restore for SQL Server 2008](/previous-versions/sql/sql-server-2008/ms187048(v=sql.100))
+
+[!INCLUDE[appliesto-sqlvm](../../includes/virtual-machines-2008-end-of-support.md)]
 
 The following sections describe several manual backup and restore options in more detail.
+
+
 
 ### Backup to attached disks
 

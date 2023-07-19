@@ -2809,6 +2809,8 @@
           href: ../connect/jdbc/connecting-to-an-azure-sql-database.md
         - name: Connection resiliency
           href: ../connect/jdbc/connection-resiliency.md
+        - name: Connection encryption troubleshooting
+          href: ../connect/odbc/connection-troubleshooting.md
         - name: Building the Connection URL
           href: ../connect/jdbc/building-the-connection-url.md
         - name: Using connection pooling

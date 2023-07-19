@@ -3,7 +3,7 @@ title: Release notes
 description: This article lists the releases of the Microsoft JDBC Driver for SQL Server. For each release version, the changes are named and described.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 02/01/2023
+ms.date: 07/31/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -11,6 +11,70 @@ ms.topic: conceptual
 # Release notes for the Microsoft JDBC Driver for SQL Server
 
 This article lists the releases of the _Microsoft JDBC Driver for SQL Server_. For each release version, the changes are named and described.
+
+## <a id="124"></a> 12.4
+
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 12.4.0 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2223050)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 12.4.0 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2222954)**
+
+Release number: 12.4.0  
+Released: July 31, 2023
+
+If you need to download the driver in a language other than the one detected for you, you can use these direct links.  
+For the driver in a zip file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2223050&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2223050&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2223050&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2223050&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2223050&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2223050&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2223050&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2223050&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2223050&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2223050&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2223050&clcid=0x40a)  
+For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2222954&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2222954&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2222954&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2222954&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2222954&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2222954&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2222954&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2222954&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2222954&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2222954&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2222954&clcid=0x40a)
+
+### 12.4 Compliance
+
+| Compliance change | Details |
+| :---------------- | :------ |
+| Download the latest updates for JDBC Driver 12.4. | &bull; &nbsp; [GitHub, 12.4.0](https://github.com/Microsoft/mssql-jdbc/releases/tag/v12.4.0)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| Fully compliant with JDBC API Specification 4.2. | The jars in the 12.4 package are named according to Java version compatibility.<br/><br/>For example, the mssql-jdbc-12.4.0.jre11.jar file from the 12.4 package should be used with Java 11 (or higher). |
+| Compatible with Java Development Kit (JDK) version 20.0, 17.0, 11.0, and 1.8. | Microsoft JDBC Driver 12.4 for SQL Server is now compatible with Java Development Kit (JDK) version 20.0 in addition to JDK 17.0, 11.0 and 1.8. |
+
+### 12.4 Releases
+
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 12.4.0 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2223050)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 12.4.0 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2222954)**
+
+Release number: 12.4.0  
+Released: July 31, 2023
+
+If you need to download the driver in a language other than the one detected for you, you can use these direct links.  
+For the driver in a zip file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2223050&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2223050&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2223050&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2223050&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2223050&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2223050&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2223050&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2223050&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2223050&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2223050&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2223050&clcid=0x40a)  
+For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2222954&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2222954&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2222954&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2222954&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2222954&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2222954&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2222954&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2222954&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2222954&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2222954&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2222954&clcid=0x40a)
+
+### New features in 12.4
+
+| Feature | Details |
+| :---------- | :----------- |
+| Java 20 support | The driver is now compatible with Java Development Kit (JDK) version 20.0 in addition to JDK 17.0, 11.0 and 1.8. |
+| Added access token callback connection string property | Supplements the previously implemented access token callback by allowing passing in the name of the callback-implementing class in the connection string. |
+| Added support for ActiveDirectoryServicePrincipalCertificate | Improvement to the user experience by supporting `ActiveDirectoryServicePrincipalCertificate` from the Azure Identity Library via the connection option `authentication=ActiveDirectoryServicePrincipalCertificate`. |
+
+### Changes in 12.4
+
+| Change | Details |
+| :---------- | :----------- |
+| Updated federated authentication logic to use persistent token cache when fetching token | This update both improves performance in token fetch scenarios and more easily allows compatibility with future MSAL versions. |
+| Allow failover partner to be tried in case of socket timeout | Allows a supplied failover partner to be tried against in cases of socket timeout.  |
+| Improved performance when building parameter type definitions | By precomputing sizes of arrays and string builders used in `buildParamTypeDefinitions`, and by removing unneeded string allocations, improve performance where this method is used. |
+| Changed serverName sent in `LOGIN` packet to include instanceName | `serverName` is now appended to the end of `instanceName` in `LOGIN` packets. |
+| Upgraded to latest OSGi JDBC specification | Upgrade from `osgi.compendium` 5.0.0 to `osgi.service.jdbc` 1.1.0 to maintain compliance with OSGi JDBC specification 8.1.0. |
+| Updated dependencies | Updated dependency versions for `azure-identity`, `azure-security-keyvault-keys`, `gson`, `h2` and `msal`. |
+
+### Fixes in 12.4
+
+| Fix | Details |
+| :---------- | :----------- |
+| Fixed an error when using BigDecimal with values between 0 and 1 | For values between 0 and 1, precision was incorrectly calculated counting the leading 0, leading to a one higher precision value. [GitHub Issue #2116](https://github.com/microsoft/mssql-jdbc/issues/2116).|
+| Fixed lockTimeout not taking effect when redirect mode is set in Azure DB | Fixed when `lockTimeout` is set, as it should only apply to connections from outside Azure, and not from within Azure, as was previously. [GitHub Issue #2110](https://github.com/microsoft/mssql-jdbc/issues/2110).|
+| Fixed high thread count when using findSocketUsingThreading | Fixes an issue where an uncaught exception lead to interuptions in sleep calls upstream, causing retries to happen too quickly. [GitHub Issue #2104](https://github.com/microsoft/mssql-jdbc/issues/2104).|
+| Fixed shared timer race condition | Fixed a potential race condition in the `SharedTimer` class. [GitHub Issue #2085](https://github.com/microsoft/mssql-jdbc/issues/2085).|
+| Fixed invalid batch inserts when columns provided in insert differs in order from table schema | Fixed an issue where usage of `useBulkCopyForBatchInsert=true` can lead to column mixup and invalid data. [GitHub Issue #1992](https://github.com/microsoft/mssql-jdbc/issues/1992).|
+| Fixes to Activity ID and Client ID behaviour to maintain consistency with JDBC specification | Fixed Activity ID behavior to stay the same for the life of the process, always send Activity ID in `PRELOGIN`, and increment sequence for each new connection. Also fixed client ID to persist for the duration of the process. |
+
+## Previous releases
 
 ## <a id="122"></a> 12.2
 
@@ -69,8 +133,6 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | Fixed cache account name casing issue | Fixes an issue where account names were sent to the Microsoft Authentication Library with case-sensitivity, leading to repeated login requests. [GitHub Issue #1923](https://github.com/microsoft/mssql-jdbc/issues/1923). |
 | Fixed precision sent when using BigDecimal |  Fixes an issue where, by default, BigDecimal values were sent with maximum precision, which could result in undesired decimal rounding. [GitHub Issue #1489](https://github.com/microsoft/mssql-jdbc/issues/1489). [GitHub Issue #942](https://github.com/microsoft/mssql-jdbc/issues/942) |
 | Fixed attestation protocol `NONE` to work in all cases | Fixed logic behind `NONE` attestation protocol to work in all cases, not just specific ones. |
-
-## Previous releases
 
 ## <a id="112"></a> 11.2
 

@@ -3,7 +3,7 @@ title: Connect using Azure Active Directory authentication
 description: Learn how to develop Java applications that use the Azure Active Directory authentication feature with the Microsoft JDBC Driver for SQL Server.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 02/01/2022
+ms.date: 07/31/2022
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -32,6 +32,8 @@ Connection properties to support Azure Active Directory authentication in the Mi
     - Since driver version **v9.2**, `authentication=ActiveDirectoryInteractive` can be used to connect to an Azure SQL Database/Synapse Analytics via interactive authentication flow (multi-factor authentication).
   - **ActiveDirectoryServicePrincipal**
     - Since driver version **v9.2**, `authentication=ActiveDirectoryServicePrincipal` can be used to connect to an Azure SQL Database/Synapse Analytics by specifying the application/client ID in the userName property and secret of a service principal identity in the password property.
+  - **ActiveDirectoryServicePrincipalCertificate**
+    - Since driver version **v12.4**, `authentication=ActiveDirectoryServicePrincipalCertificate` can be used to connect to an Azure SQL Database/Synapse Analytics by specifying the application/client ID in the userName property and the location of the Service Principal certificate in the clientCertificate property.
   - **SqlPassword**
     - Use `authentication=SqlPassword` to connect to a SQL Server using userName/user and password properties.
   - **NotSpecified**
@@ -58,6 +60,7 @@ For other authentication modes, the below components must be installed on the cl
 - If you're using the **ActiveDirectoryIntegrated** mode, you need either [Microsoft Authentication Library (MSAL) for Java](https://github.com/AzureAD/microsoft-authentication-library-for-java) and its dependencies for JDBC Driver 9.1 and above, or [Microsoft Azure Active Directory Authentication Library (ADAL) for Java](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies for driver versions before JDBC Driver 9.1. For more information, see the [Connect using ActiveDirectoryIntegrated authentication mode](#connect-using-activedirectoryintegrated-authentication-mode) section.
 - If you're using the **ActiveDirectoryInteractive** mode, you need either [Microsoft Authentication Library (MSAL) for Java](https://github.com/AzureAD/microsoft-authentication-library-for-java) and its dependencies for JDBC Driver 9.1 and above, or [Microsoft Azure Active Directory Authentication Library (ADAL) for Java](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies for driver versions before JDBC Driver 9.1. For more information, see the [Connect using ActiveDirectoryInteractive authentication mode](#connect-using-activedirectoryinteractive-authentication-mode) section.
 - If you're using the **ActiveDirectoryServicePrincipal** mode, you need either [Microsoft Authentication Library (MSAL) for Java](https://github.com/AzureAD/microsoft-authentication-library-for-java) and its dependencies for JDBC Driver 9.1 and above, or [Microsoft Azure Active Directory Authentication Library (ADAL) for Java](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies. For more information, see the [Connect using ActiveDirectoryServicePrincipal authentication mode](#connect-using-activedirectoryserviceprincipal-authentication-mode) section.
+- If you're using the **ActiveDirectoryServicePrincipalCertificate** mode, you need either [Microsoft Authentication Library (MSAL) for Java](https://github.com/AzureAD/microsoft-authentication-library-for-java) and its dependencies for JDBC Driver 9.1 and above, or [Microsoft Azure Active Directory Authentication Library (ADAL) for Java](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies. For more information, see the [Connect using ActiveDirectoryServicePrincipalCertificate authentication mode](#connect-using-activedirectoryserviceprincipalcertificate-authentication-mode) section.
 
 ## Connect using ActiveDirectoryManagedIdentity authentication mode
 
@@ -469,7 +472,7 @@ To build and run the example:
 
 4. Set the principalId and principal Secret using `setUser` and `setPassword` in version 10.2 and up, and `setAADSecurePrincipalId` and `setAADSecurePrincipalSecret` in version 9.4 and below.
 
-The example to use ActiveDirectoryInteractive authentication mode:
+The example to use ActiveDirectoryServicePrincipal authentication mode:
 
 ```java
 import java.sql.Connection;
@@ -493,6 +496,73 @@ public class AADServicePrincipal {
         try (Connection connection = ds.getConnection();
                 Statement stmt = connection.createStatement();
                 ResultSet rs = stmt.executeQuery("SELECT SUSER_SNAME()")) {
+            if (rs.next()) {
+                System.out.println("You have successfully logged on as: " + rs.getString(1));
+            }
+        }
+    }
+}
+```
+
+If a connection is established, you should see the following message as output:
+
+```output
+You have successfully logged on as: <your app/client ID>
+```
+
+> [!NOTE]
+> A contained user database must exist and a contained database user that represents the specified Azure AD principal or one of the groups the specified Azure AD principal belongs to, must exist in the database and must have the CONNECT permission (except for an Azure Active Directory server admin or group)
+
+## Connect using ActiveDirectoryServicePrincipalCertificate authentication mode
+
+The following example shows how to use `authentication=ActiveDirectoryServicePrincipalCertificate` mode.
+
+To build and run the example:
+
+1. On the client machine where you run the example, download the [Microsoft Authentication Library (MSAL) for Java](https://github.com/AzureAD/microsoft-authentication-library-for-java) and its dependencies for JDBC Driver 9.1 and above, or [Microsoft Azure Active Directory Authentication Library (ADAL) for Java](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies for driver versions before JDBC Driver 9.1, and include them in the Java build path
+
+2. Locate the following lines of code and replace the server/database name with your server/database name.
+
+    ```java
+    ds.setServerName("aad-managed-demo.database.windows.net"); // replace 'aad-managed-demo' with your server name
+    ds.setDatabaseName("demo"); // replace with your database name
+    ```
+
+3. Locate the following lines of code. Replace the value of `principalId` with the Application ID / Client ID of the Azure AD service principal that you want to connect as. Replace the value of `clientCertificate` with the location of the Service Principal certificate.
+
+    ```java
+    String principalId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your AAD service principal ID.
+    String clientCertificate = "..."; // Replace with the location for your AAD service principal certificate.
+    ```
+   
+4. If the above certificate needs a password, set the principal Secret using `setPassword` in version 10.2 and up, and `setAADSecurePrincipalSecret` in version 9.4 and below.
+
+5. If the above certificate has an associated private key, set the private key using `setClientKey`. If this key requires a password, set the password for the private key using `setClientKeyPassword`.
+
+The example to use ActiveDirectoryServicePrincipalCertificate authentication mode:
+
+```java
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
+
+public class AADServicePrincipal {
+    public static void main(String[] args) throws Exception{
+        String principalId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your AAD service principal ID.
+        String clientCertificate = "..."; // Replace with the location of your Service Principal certificate.
+
+        SQLServerDataSource ds = new SQLServerDataSource();
+        ds.setServerName("aad-managed-demo.database.windows.net"); // Replace with your server name
+        ds.setDatabaseName("demo"); // Replace with your database
+        ds.setAuthentication("ActiveDirectoryServicePrincipalCertificate");
+        ds.setUser(principalId); // setAADSecurePrincipalId for JDBC Driver 9.4 and below
+        ds.setClientCertificate(clientCertificate);
+
+        try (Connection connection = ds.getConnection();
+             Statement stmt = connection.createStatement();
+             ResultSet rs = stmt.executeQuery("SELECT SUSER_SNAME()")) {
             if (rs.next()) {
                 System.out.println("You have successfully logged on as: " + rs.getString(1));
             }

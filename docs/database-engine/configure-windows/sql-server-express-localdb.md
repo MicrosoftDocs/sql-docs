@@ -78,7 +78,7 @@ LocalDB supports two kinds of instances: Automatic instances and named instances
 
 - Named instances of LocalDB are private. They are owned by a single application that is responsible for creating and managing the instance. Named instances provide isolation from other instances and can improve performance by reducing resource contention with other database users. Named instances must be created explicitly by the user through the LocalDB management API or implicitly via the app.config file for a managed application (although managed application may also use the API, if desired). Each named instance of LocalDB has an associated LocalDB version that points to the respective set of LocalDB binaries. The instance name of a LocalDB is **sysname** data type and can have up to 128 characters. (This instance name differs from regular named instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], which limits names to regular NetBIOS names of 15 ASCII chars.) The name of an instance of LocalDB can contain any Unicode characters that are legal within a filename. A named instance that uses an automatic instance name becomes an automatic instance.
 
-Different users of a computer can have instances with the same name. Each instance is a different processes running as a different user.
+Different users of a computer can have instances with the same name. Each instance runs as the respective user in a different process.
 
 ## Shared instances of LocalDB
 

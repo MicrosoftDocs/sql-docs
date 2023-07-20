@@ -165,3 +165,11 @@ To change the Log Analytical workspace that is linked for the best practices ass
 1. Go to Best Practice Assessment page on your Arc-enabled SQL Server resource page in the Azure portal and re-enable best practices assessment and select a new log analytical workspace.
 
 For more assistance, create a support ticket with Microsoft and attach the log files. Visit,  [Create an Azure support request](/azure/azure-portal/supportability/how-to-create-azure-support-request)
+
+## Next steps
+
+- [Configure SQL best practices assessment](assess.md)
+- [View SQL Server databases - Azure Arc](view-databases.md)
+- [Manage SQL Server license and billing options](manage-license-type.md)
+- [Azure Arc-enabled SQL Server and Databases activity logs](activity-logs.md)
+- [Data collected by Arc enabled SQL Server](data-collection.md)

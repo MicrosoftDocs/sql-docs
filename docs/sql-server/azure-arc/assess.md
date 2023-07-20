@@ -5,7 +5,6 @@ author: pochiraju
 ms.author: rajpo
 ms.reviewer: mikeray, randolphwest
 ms.date: 06/14/2023
-ms.service: sql
 ms.topic: conceptual
 ---
 

@@ -2,7 +2,6 @@
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 02/10/2023
-ms.service: sql
 ms.topic: include
 ms.custom: references_regions
 ---

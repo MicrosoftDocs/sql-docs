@@ -5,7 +5,6 @@ author: nhebbar2011
 ms.author: nhebbar
 ms.reviewer: mikeray
 ms.date: 06/16/2023
-ms.service: sql
 ms.topic: troubleshooting
 ---
 

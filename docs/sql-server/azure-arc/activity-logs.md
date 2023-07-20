@@ -5,7 +5,6 @@ author: guptasnigdha12
 ms.author: guptasnigdha
 ms.reviewer: mikeray, rajpo
 ms.date: 05/26/2023
-ms.service: sql
 ms.topic: conceptual
 ---
 

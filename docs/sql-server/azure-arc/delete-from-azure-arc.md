@@ -4,7 +4,6 @@ description: Steps to disconnect and unregister your SQL Server instances from A
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 04/09/2023
-ms.service: sql
 ms.topic: how-to
 ms.custom: template-how-to-pattern
 ---

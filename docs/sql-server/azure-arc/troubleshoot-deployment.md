@@ -4,7 +4,6 @@ description: "Describes how to troubleshoot Azure Arc-enabled SQL Server deploym
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 02/01/2023
-ms.service: sql
 ms.topic: troubleshooting-general
 ---
 

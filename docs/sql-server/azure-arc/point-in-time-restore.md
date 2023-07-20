@@ -5,7 +5,6 @@ author: dnethi
 ms.author: dinethi
 ms.reviewer: mikeray, randolphwest
 ms.date: 05/10/2023
-ms.service: sql
 ms.topic: conceptual
 ---
 # Configure automatic backups

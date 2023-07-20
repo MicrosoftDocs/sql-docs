@@ -23,7 +23,7 @@ landingContent:
     linkLists:
       - linkListType: concept
         links:
-          - text: SQL Server best practice assessments 
+          - text: SQL Server best practices assessment 
             url: assess.md 
           - text: Secure SQL Servers
             url: configure-advanced-data-security.md

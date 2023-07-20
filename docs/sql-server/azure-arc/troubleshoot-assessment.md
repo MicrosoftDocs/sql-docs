@@ -107,14 +107,17 @@ In case any of the components are missing, do the following:
 
 To change the Log Analytical workspace that is linked for the best practices assessment, follow the steps below. 
 
-1. Disable the best practice assessment if it's currently enabled.
+1. Disable best practices assessment if it's currently enabled.
 2. Make a GET call to the API and get the Azure extension for SQL Server settings
-```powershell
-GET https://edge.management.azure.com/subscriptions/ <subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.HybridCompute/machines/<arc-resource-name>/extensions/WindowsAgent.SqlServer?api-version=2022-03-10
-   ```
-The best practice assessment settings before the change.
-```powershell
-"AssessmentSettings": {
+
+  ```powershell
+  GET https://edge.management.azure.com/subscriptions/ <subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.HybridCompute/machines/<arc-resource-name>/extensions/WindowsAgent.SqlServer?api-version=2022-03-10
+  ```
+
+   The best practices assessment settings before the change.
+
+   ```powershell
+   "AssessmentSettings": {
      "Enable": true,
      "RunImmediately": true,
      "schedule": {
@@ -129,12 +132,13 @@ The best practice assessment settings before the change.
      "WorkspaceLocation": "<Region>",
      "ResourceNamePrefix": "<Log analytical workspace name>",
      "settingsSaveTime": 1673278632
-}
-```
-3. Update the best practice assessments to null as below.
+   }
+   ```
 
-```powershell
-"AssessmentSettings": {
+1. Update the Workspace related settings to null as below.
+
+   ```powershell
+   "AssessmentSettings": {
      "Enable": false,
      "RunImmediately": true,
      "schedule": {
@@ -148,18 +152,16 @@ The best practice assessment settings before the change.
      "WorkspaceResourceId": null,
      "WorkspaceLocation": null,
      "ResourceNamePrefix": null,
-     "settingsSaveTime": 1673278632
-}
-```
-4. Make a PATCH call below to the API to update the Azure extension for SQL Server assessment settings
+     "SettingsSaveTime": 1673278632
+   }
+   ```
 
-```powershell
-PATCH https://management.azure.com/subscriptions/ <subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.HybridCompute/machines/<arc-resource-name>/extensions/WindowsAgent.SqlServer?api-version=2022-08-11-preview
-```
-5. Go to Best practice assessment page on your Arc-enabled SQL Server resource page in the Azure portal and re-enable best practice assessments and select a new log analytical workspace.
+1. Make a `PATCH` call below to the API to update the Azure extension for SQL Server assessment settings.
 
-Please open a support case if you need assistance.
+   ```powershell
+   PATCH https://management.azure.com/subscriptions/ <subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.HybridCompute/machines/<arc-resource-name>/extensions/WindowsAgent.SqlServer?api-version=2022-08-11-preview
+   ```
+
+1. Go to Best Practice Assessment page on your Arc-enabled SQL Server resource page in the Azure portal and re-enable best practices assessment and select a new log analytical workspace.
 
 For more assistance, create a support ticket with Microsoft and attach the log files. Visit,  [Create an Azure support request](/azure/azure-portal/supportability/how-to-create-azure-support-request)
-
-

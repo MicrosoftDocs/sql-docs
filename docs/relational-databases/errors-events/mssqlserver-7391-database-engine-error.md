@@ -45,7 +45,7 @@ If you receive error 7391 from a process such as SQL Server replication or SQL S
 ## User action
 
 > [!NOTE]
-> It's a good idea to limit your code in a transaction that involves a distributed query only to the remote server. To limit your code, you can separate locally executed steps from remote steps.
+> It's a good idea to limit your code in a transaction that involves a distributed query that is made to only the remote server.
 
 ### Supportability
 
@@ -55,7 +55,7 @@ If you receive error 7391 from a process such as SQL Server replication or SQL S
 
 ### Server communication
 
-Check for the following aspects of communication between servers:
+Follow these steps to make sure server communication is successful:
 
 - Check whether your network name resolution works. Make sure that the servers can communicate with one another by name and not only by IP address. Check in both directions (for example, from server A to server B and from server B to server A). Resolve all name resolution problems on the network before you run your distributed query. This might involve updating the WINS, DNS, or LMHost files.  
 
@@ -69,7 +69,7 @@ Check for the following aspects of communication between servers:
 
 - Check the object that you point to on the destination server. If the object is a view or a stored procedure, or if it causes a trigger to run, check whether it implicitly points to another server. If so, the third server is the source of the problem. Run the query directly on the third server. If you can't do this, the linked server query isn't the problem. Resolve the underlying problem first.
 
-- Check whether you're using Remote Access Server (RAS) to access remote servers. If so, make sure that you have implemented Routing RAS (RRAS). Linked server doesn't work on RAS because RAS allows only one-way communication.
+- Check whether you're using Remote Access Server (RAS) to access remote servers. If so, make sure that you have implemented Routing RAS (RRAS). Linked server don't work on RAS because RAS allows only one-way communication.
 
 ### Server configuration
 

@@ -28,9 +28,193 @@ helpviewer_keywords:
 The column value that is contained in the specified column is outside the range of possible values for the column data type.  
   
 ## User Action  
-The error is not repairable. Update the column to a value within the range for the data type of the column and run the command again.  For more information, see this KB article [923247](https://support.microsoft.com/kb/923247).  
-  
-## See Also  
-[UPDATE &#40;Transact-SQL&#41;](~/t-sql/queries/update-transact-sql.md)  
-[Data Types &#40;Transact-SQL&#41;](~/t-sql/data-types/data-types-transact-sql.md)  
-  
+The error is not repairable. Update the column to a value within the range for the data type of the column and run the command again.  For more information, the following sections.
+
+## DATA_PURITY Checks 
+
+When you execute a DBCC CHECKDB or DBCC CHECKTABLE command, the command will perform "data purity" validations on every column value in all rows of the table or tables in the database. These checks are performed to ensure that the values stored in the columns are valid (that is, that the values are not out-of-range for the domain associated with the data type of that column). The nature of the validation performed depends on the data type of the column. The following non-exhaustive list gives a few examples: 
+
+|Column data type |Type of data validation performed |
+|-|-|
+|Unicode character |The data length should be a multiple of 2.|
+|Datetime |The days field should be between Jan 1 1753 and Dec 31 9999. The time field must be earlier than '11:59:59:999PM'. |
+|Real and Float |Check for existence of invalid floating point values like SNAN, QNAN, NINF, ND, PD, PINF.|
+
+Not all data types are checked for the validity of the column data. Only those where it is possible to have a stored value that is out of range are checked. For example, the tinyint data type has a valid range of 0 through 255 and is stored in a single byte (which can only store values from 0 to 255), so checking the value is not necessary. 
+
+> [!NOTE]These checks are enabled by default and cannot be disabled, so the use of the DATA_PURITY option when executing a DBCC CHECKDB or DBCC CHECKTABLE command is not needed explicitly (for more information, see [DATA_PURITY](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql#data_purity). If the PHYSICAL_ONLY option is specified when the DBCC CHECKDB or DBCC CHECKTABLE command is executed, the data purity checks are not performed. 
+
+Invalid or out-of-range data may have been stored in the SQL Server database in earlier versions for the following reasons:
+
+- Invalid data was passed through RPC event calls made to SQL Server. 
+- Other potential causes of physical data corruption left the column value in an invalid state.
+
+If you have invalid data in a column of a table, you might encounter problems depending on the type of operation that is performed against the invalid data. However, it is also possible that no problem will appear, and the invalid data will not be discovered until you execute a DBCC CHECKDB or DBCC CHECKTABLE command.
+
+Some of the symptoms you may notice due to the presence of invalid data include (but are not limited to): 
+
+- Access violations or other types of exceptions while executing queries against the affected column. 
+- Incorrect results returned by queries executed against the affected column. 
+- Errors or problems when statistics are being built against the affected columns. 
+- Error messages like the following: 
+  > Msg 9100, Level 23, State 2, Line 1 Possible index corruption detected. Run DBCC CHECKDB. 
+
+## DATA_PURITY Problem Report 
+
+When you execute a DBCC CHECKDB or DBCC CHECKTABLE command with the DATA_PURITY option enabled (or the data purity checks are run automatically), and invalid data exists in the tables checked by the DBCC commands, the DBCC output includes additional messages that indicate the problems with the data. Some sample error messages that indicate data purity problems are shown below:
+
+```output
+DBCC results for "account_history". 
+Msg 2570, Level 16, State 2, Line 1 
+Page (1:1073), slot 33 in object ID 1977058079, index ID 0, partition ID 129568478265344, alloc unit ID 129568478265344 (type "In-row data"). Column "account_name_japan" value is out of range for data type "nvarchar". Update column to a legal value. 
+ 
+Msg 2570, Level 16, State 2, Line 1 
+Page (1:1156), slot 120 in object ID 1977058079, index ID 0, partition ID 129568478265344, alloc unit ID 129568478265344 (type "In-row data"). Column "account_name_japan" value is out of range for data type "nvarchar". Update column to a legal value. 
+There are 153137 rows in 1080 pages for object "account_history". 
+CHECKDB found 0 allocation errors and 338 consistency errors in table "account_history" (object ID 1977058079). 
+CHECKDB found 0 allocation errors and 338 consistency errors in database 'BadUnicodeData'. 
+DBCC execution completed. If DBCC printed error messages, contact your system administrator. 
+
+DBCC results for 'table1'. 
+Msg 2570, Level 16, State 3, Line 1 
+Page (1:154), slot 0 in object ID 2073058421, index ID 0, partition ID 72057594038321152, alloc unit ID 72057594042318848 (type "In-row data"). Column "col2" value is out of range for data type "real". Update column to a legal value. 
+There are 4 rows in 2 pages for object "table1". 
+CHECKDB found 0 allocation errors and 1 consistency errors in table 'table1' (object ID 2073058421). 
+CHECKDB found 0 allocation errors and 1 consistency errors in database 'realdata'. DBCC execution completed. If DBCC printed error messages, contact your system administrator. 
+
+DBCC results for 'table2'. 
+Msg 2570, Level 16, State 3, Line 1 
+Page (1:155), slot 0 in object ID 2105058535, index ID 0, partition ID 72057594038452224, alloc unit ID 72057594042449920 (type "In-row data"). Column "col2" value is out of range for data type "decimal". Update column to a legal value. 
+There are 4 rows in 1 pages for object "table2". 
+CHECKDB found 0 allocation errors and 1 consistency errors in table 'table2' (object ID 2105058535). 
+CHECKDB found 0 allocation errors and 1 consistency errors in database 'realdata'. DBCC execution completed. If DBCC printed error messages, contact your system administrator. 
+
+DBCC results for 'table3'. 
+Msg 2570, Level 16, State 3, Line 1 
+Page (1:157), slot 0 in object ID 2121058592, index ID 0, partition ID 72057594038517760, alloc unit ID 72057594042515456 (type "In-row data"). Column "col2" value is out of range for data type "datetime". Update column to a legal value. 
+There are 3 rows in 1 pages for object "table3". 
+CHECKDB found 0 allocation errors and 1 consistency errors in table 'table3' (object ID 2121058592). 
+CHECKDB found 0 allocation errors and 1 consistency errors in database 'realdata'. DBCC execution completed. If DBCC printed error messages, contact your system administrator. 
+
+For every row that contains an invalid column value, a 2570 error is generated. 
+```
+
+## Fixing the Data Purity Problem 
+
+The 2570 errors cannot be repaired using any of the DBCC repair options. This is because it is impossible for DBCC to determine what value should be used to replace the invalid column value. Thus, the column value must be manually updated. 
+ 
+To perform a manual update, you have to find the row that has the problem. There are two ways to accomplish this. 
+
+- Execute a query against the table that contains the invalid values to find the rows that contain the invalid values. 
+- Use the information from the 2570 error to identify the rows that have an invalid value. 
+
+Both of these methods are detail below, using examples to find the rows that have invalid data. 
+ 
+Once you find the correct row, a decision needs to be made on the new value that will be used to replace the existing invalid data. This decision has to be made very carefully based on the range of values that work for the application as well as what makes logical sense for that particular row of data. The choices you have are: 
+
+- If you know what value it should be, set it to that specific value. 
+- Set it to an acceptable default value. 
+- Set the column value to NULL. 
+- Set the column value to the maximum or minimum value for that data type of the column. 
+- If you feel that the specific row is not of any use without a valid value for the column, you can delete that row altogether.
+
+## Finding Rows with Invalid Values Using T-SQL Queries
+
+The type of query that you need to execute to find rows that have invalid values depends on the data type of the column that reported a problem. If you look at the 2570 error message, you will notice two important pieces of information that will help you with this. In the following example, the column "account_name" value is out of range for data type "nvarchar." We can easily identify the column that has the problem as well as the data type of the column involved. Thus, once you know the data type and the column involved, you can formulate the query to find the rows that contain invalid values for that column, selecting the columns needed to identify that row (as the predicates in a WHERE clause) for any further update or delete. 
+
+**Unicode data type:**
+
+```sql
+SELECT col1 ,DATALENGTH(account_name) as Length ,account_name  
+FROM account_history 
+WHERE DATALENGTH(account_name) % 2 != 0
+```
+
+**Float data type:**
+
+-- Change col1 to your actual primary key column(s), col2 to the column from the 2570 error, table1 to the table from the CHECKDB output 
+
+```sql
+SELECT col1, col2 FROM table1 
+WHERE col2<>0.0 AND (col2 < 2.23E-308 OR col2 > 1.79E+308) AND (col2 < -1.79E+308 OR col2 > -2.23E-308)
+```
+
+**Real data type:**
+
+-- Change col1 to your actual primary key column(s), col2 to the column from the 2570 error, table1 to the table from -- the CHECKDB output 
+
+```sql
+SELECT col1, col2 FROM testReal  
+WHERE col2<>0.0 AND (col2 < CONVERT(real,1.18E-38) OR col2 > CONVERT(real,3.40E+38)) AND (col2 < CONVERT(real,-3.40E+38) OR col2 > CONVERT(real,-1.18E-38))  
+ORDER BY col1; -- checks for real out of range 
+```
+
+**Decimal and Numeric data type:**
+
+```sql
+SELECT col1 FROM table2 
+WHERE col2 > 9999999999.99999  
+OR col1 < -9999999999.99999
+```
+
+Keep in mind that you will need to adjust the values based on the precision and scale with which you have defined the decimal or numeric column. In the above example, the column was defined as col2 decimal(15,5). 
+ 
+**Date Time data type:**
+
+You will need to execute two different queries to identify the rows that contain invalid values for date time column. 
+
+```sql
+SELECT col1 FROM table3 
+WHERE col2 < '1/1/1753 12:00:00 AM' OR col2 > '12/31/9999 11:59:59 PM' 
+
+SELECT col1 FROM table3 WHERE 
+((DATEPART(ms,col2)+ (1000*DATEPART(s,col2)) + (1000*60*DATEPART(mi,col2)) + (1000*60*60*DATEPART(hh,col2)))/(1000*0.00333))  
+> 25919999
+```
+
+Finding rows with invalid value using the physical location: 
+
+You can use this method if you are unable to find the rows of interest using the T-SQL method discussed above. In the 2570 error message, the physical location of the row that contains the invalid value is printed. For example, look at the following message: 
+
+```output
+Page (1:157), slot 0 in object ID 2121058592, index ID 0, partition ID 72057594038517760, alloc unit ID 72057594042515456 (type "In-row data"). Column "col2" value is out of range for data type "datetime". Update column to a legal value. 
+```
+
+In this message, you will notice the information: Page (1:157), slot 0. This is the information you need to identify the row. The FileId is 1, the PageInFile is 157, and the SlotId is 0. Once you have this information, you will need to execute the command, as follows: 
+
+DBCC TRACEON ( 3604 ) 
+DBCC PAGE ( realdata , 1 , 157 , 3 ) 
+
+This command will print the entire contents of a page. Parameters to the DBCC PAGE command are: 
+
+- database name
+- FileId 
+- PageInFile 
+- print option 
+
+Once you execute this command, you will notice output that contains information similar to the following format: 
+
+Slot 0  Offset 0x60 Length 19 Record Type = PRIMARY_RECORD Record 
+  Attributes = NULL_BITMAP Memory Dump @0x44D1C060 00000000: 10001000 01000000 
+  ffffffff ffffffff †................ 00000010: 
+  0200fc†††††††††††††††††††††††††††††††...  Slot 0 Column 0  Offset 0x4 Length 4  col1 = 1 Slot 0 Column 1  Offset 0x8 Length 8  col2 = Dec 31 1899 19:04PM  Slot 1 Offset 0x73 Length 19 Record Type = PRIMARY_RECORD Record 
+  Attributes = NULL_BITMAP Memory Dump @0x44D1C073 00000000: 10001000 02000000 
+  0ba96301 f8970000 †..........c..... 00000010: 
+  0200fc†††††††††††††††††††††††††††††††... Slot 1 Column 0 Offset 0x4 Length 4 
+  col1 = 2 Slot 1 Column 1 Offset 0x8 Length 8 col2 = Jul 8 2006 9:34PM Slot 2 
+  Offset 0x86 Length 19 Record Type = PRIMARY_RECORD Record Attributes = 
+  NULL_BITMAP Memory Dump @0x44D1C086 00000000: 10001000 03000000 0ba96301 
+  f8970000 †..........c..... 00000010: 0200fc†††††††††††††††††††††††††††††††... 
+  Slot 2 Column 0 Offset 0x4 Length 4 col1 = 3 Slot 2 Column 1 Offset 0x8 Length 
+  8 col2 = Jul 8 2006 9:34PM   
+
+In this output you can clearly see the column values for the row of interest to you. In this case, you need the row stored in slot 0 of the page. From the error message, you know that col2 is the one with the problem. So you can take the value of col1 for Slot 0 and use it as the predicate in the WHERE clause of your update statement or delete statement. 
+ 
+WARNING We recommend that you use the first method (that is, use T-SQL queries to find the required information). Use the DBCC PAGE command only as a last resort. Take utmost care while you use this command in a production environment. It is advisable to restore the production database on a test server, then get all the required information using DBCC PAGE, and then do the updates on the production server. As always, make sure to keep a backup ready in case something goes wrong and you need to revert to an earlier copy of the database.
+
+## See Also
+
+[UPDATE &#40;Transact-SQL&#41;](~/t-sql/queries/update-transact-sql.md)
+[Data Types &#40;Transact-SQL&#41;](~/t-sql/data-types/data-types-transact-sql.md)
+[DBCC (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-transact-sql)
+[Calling a Stored Procedure](/sql/relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure)

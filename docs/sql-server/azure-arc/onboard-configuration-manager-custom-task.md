@@ -5,7 +5,6 @@ author: pochiraju
 ms.author: rajpo
 ms.reviewer: mikeray, randolphwest
 ms.date: 05/10/2023
-ms.service: sql
 ms.topic: how-to
 ---
 

@@ -162,7 +162,7 @@ To change the Log Analytics workspace that is linked for the best practices asse
    PATCH https://management.azure.com/subscriptions/ <subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.HybridCompute/machines/<arc-resource-name>/extensions/WindowsAgent.SqlServer?api-version=2022-08-11-preview
    ```
 
-1. Go to Best Practice Assessment page on your Arc-enabled SQL Server resource page in the Azure portal and re-enable best practices assessment and select a new log analytics workspace.
+1. Go to **Best Practices Assessment** on your Arc-enabled SQL Server resource page in the Azure portal and re-enable best practices assessment and select a new log analytics workspace.
 
 For more assistance, create a support ticket with Microsoft and attach the log files. Visit,  [Create an Azure support request](/azure/azure-portal/supportability/how-to-create-azure-support-request)
 

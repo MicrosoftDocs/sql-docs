@@ -55,7 +55,7 @@ ms.topic: conceptual
 
  The JDBC Driver 12.4 includes two JAR class libraries in each installation package: **mssql-jdbc-12.4.0.jre8.jar** and **mssql-jdbc-12.4.0.jre11.jar**.
 
- The JDBC Driver 12.4 is designed to work with, and supports all major Java virtual machines, but is tested only on OpenJDK 1.8, OpenJDK 11.0, OpenJDK 17.0, OpenJDK 19.0, Azul Zulu JRE 1.8, Azul Zulu JRE 11.0, and Azul Zulu JRE 17.0.
+ The JDBC Driver 12.4 is designed to work with, and supports all major Java virtual machines, but is tested only on OpenJDK 1.8, OpenJDK 11.0, OpenJDK 17.0, OpenJDK 20.0, Azul Zulu JRE 1.8, Azul Zulu JRE 11.0, and Azul Zulu JRE 17.0.
 
  The following chart summarizes support provided by the two JAR files included with Microsoft JDBC Drivers 12.4 for SQL Server:
 
@@ -64,7 +64,7 @@ ms.topic: conceptual
 |mssql-jdbc-12.4.0.jre8.jar|4.2|8|Requires a Java Runtime Environment (JRE) 1.8. Using JRE 1.7 or lower throws an exception. |
 |mssql-jdbc-12.4.0.jre11.jar|4.3|20|Requires a Java Runtime Environment (JRE) 11.0 or higher. Using JRE 10.0 or lower throws an exception. |
 
- The JDBC Driver 12.2 is available on the Maven Central Repository, and can be added to a Maven project with the following code in the POM.XML:
+ The JDBC Driver 12.4 is available on the Maven Central Repository, and can be added to a Maven project with the following code in the POM.XML:
 
  ```xml
 <dependency>

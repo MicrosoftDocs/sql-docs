@@ -535,7 +535,7 @@ To build and run the example:
     String clientCertificate = "..."; // Replace with the location for your AAD service principal certificate.
     ```
    
-4. If the above certificate needs a password, set the principal Secret using `setPassword` in version 10.2 and up, and `setAADSecurePrincipalSecret` in version 9.4 and below.
+4. If the above certificate needs a password, set the principal Secret using `setPassword` in version 10.2 and up or `setAADSecurePrincipalSecret` in version 9.4 and below.
 
 5. If the above certificate has an associated private key, set the private key using `setClientKey`. If this key requires a password, set the password for the private key using `setClientKeyPassword`.
 
@@ -548,7 +548,7 @@ import java.sql.Statement;
 
 import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
 
-public class AADServicePrincipal {
+public class AADServicePrincipalCertificate {
     public static void main(String[] args) throws Exception{
         String principalId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your AAD service principal ID.
         String clientCertificate = "..."; // Replace with the location of your Service Principal certificate.

@@ -126,7 +126,7 @@ If you're using the Azure portal to create your secondary managed instance, you 
 To verify the address range of your primary virtual network, follow these steps:
 
 1. In the [Azure portal](https://portal.azure.com), navigate to your resource group and select the virtual network for your primary instance.  
-2. Select **Address space** under **Settings** and note the **Address range** of the subnet created automatically during creation of your primary instance. The **Address range** for the virtual network of the primary instance must not overlap the address range of the address range of the virtual network for the secondary managed insatnce you plan to create, and any other virtual network peered with either the primary or secondary virtual network. 
+2. Select **Address space** under **Settings** and note the **Address range** of the subnet created automatically during creation of your primary instance. The **Address range** for the virtual network of the primary instance must not overlap with the address range of the virtual network for the secondary managed instance you plan to create, and any other virtual network peered with either the primary or secondary virtual network. 
 
 
    ![Primary subnet](./media/failover-group-add-instance-tutorial/verify-primary-address-range.png)
@@ -146,7 +146,7 @@ To create a virtual network, follow these steps:
     | **Subscription** | The subscription where your primary managed instance and resource group reside. |
     | **Region** | The location where you will deploy your secondary managed instance. |
     | **Subnet** | The name for your subnet. `default` is offered as a default name. |
-    | **Address range**| The IP address range for your virtual entwork, such as `10.128.0.0/24`. This must not overlap with the IP address range used by any other virtual networks they are peered with. |
+    | **Address range**| The IP address range for your virtual network, such as `10.128.0.0/24`. This must not overlap with the IP address range used by any other virtual networks they are peered with. |
 
 
     ![Secondary virtual network values](./media/failover-group-add-instance-tutorial/secondary-virtual-network.png)

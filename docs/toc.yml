@@ -13108,6 +13108,8 @@ items:
     - name: Execution
       href: relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md
       items:
+      - name: sys.dm_db_exec_cursors
+        href: relational-databases/system-dynamic-management-views/sys-dm-db-exec-cursors-transact-sql.md
       - name: sys.dm_exec_background_job_queue
         href: relational-databases/system-dynamic-management-views/sys-dm-exec-background-job-queue-transact-sql.md
       - name: sys.dm_exec_background_job_queue_stats

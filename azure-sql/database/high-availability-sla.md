@@ -46,7 +46,7 @@ The following table shows the availability options based on service tiers:
 
 | Service tier | High availability model | Locally-redundant availability | Zone-redundant availability |
 |---|---|---| --- |
-| General purpose (vCore) | Remote storage  |  Yes | Yes |
+| General Purpose (vCore) | Remote storage  |  Yes | Yes |
 | Business Critical (vCore) | Local storage  | Yes | Yes |
 | Hyperscale (vCore) | Hyperscale | Yes | Yes |
 | Basic (DTU) | Remote storage  | Yes | No |

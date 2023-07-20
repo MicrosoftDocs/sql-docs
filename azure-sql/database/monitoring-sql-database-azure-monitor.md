@@ -83,7 +83,7 @@ For a list of the tables used by Azure Monitor Logs and queryable by Log Analyti
 > [!NOTE]
 > Occasionally, it might take up to 15 minutes between when an event is emitted and when it [appears in a Log Analytics workspace](/azure/azure-monitor/logs/data-ingestion-time).
 
-Use the following queries to monitor your database. You may see different options available depending on your purchase model.
+Use the following queries to monitor your database. You may see different options available depending on your purchasing model.
 
 Example A: **Log_write_percent** from the past hour
 
@@ -136,7 +136,7 @@ If you are creating or running an application in Azure, [Azure Monitor Applicati
 
 You can also configure alerts with the Azure CLI or PowerShell. For example, see [Use PowerShell to monitor and scale a single database in Azure SQL Database](./scripts/monitor-and-scale-database-powershell.md).
 
-The following table lists common and recommended alert rules for Azure SQL Database. You may see different options available depending on your purchase model.
+The following table lists common and recommended alert rules for Azure SQL Database. You may see different options available depending on your purchasing model.
 
 | Signal name | Operator | Aggregation type  | Threshold value | Description |
 |:---|:---|:---|:---|:---|

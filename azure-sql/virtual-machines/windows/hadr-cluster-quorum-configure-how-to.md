@@ -54,7 +54,7 @@ A cloud witness requires an Azure Storage Account. To configure a storage accoun
 2. On the Hub menu, select New -> Data + Storage -> Storage account.
 3. In the Create a storage account page, do the following:
     1. Enter a name for your storage account. Storage account names must be between 3 and 24 characters in length and may contain numbers and lowercase letters only. The storage account name must also be unique within Azure.
-    2. For **Account kind**, select **General purpose**.
+    2. For **Account kind**, select **General Purpose**.
     3. For **Performance**, select **Standard**.
     2. For **Replication**, select **Local-redundant storage (LRS)**.
 

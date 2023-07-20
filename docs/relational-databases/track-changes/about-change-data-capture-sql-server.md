@@ -246,6 +246,8 @@ Similarly, if you create an Azure SQL Database as a SQL user, enabling/disabling
 ### Aggressive log truncation
 When you enable change data capture (CDC) on Azure SQL Database or SQL Server, the aggressive log truncation feature of Accelerated Database Recovery (ADR) is disabled. This is because the CDC scan accesses the database transaction log. Active transactions continue to hold the transaction log truncation until the transaction commits and CDC scan catches up, or transaction aborts. This might result in the transaction log filling up more than usual and should be monitored so that the transaction log doesn't fill.
 
+When enabling CDC, we recommend using the Resumable index option. Resumable index create or rebuild does not require you to keep open a long-running transaction, allowing log truncation during this operation and better log space management. For more information, see [Guidelines for online index operations - Resumable Index considerations](../../relational-databases/indexes/guidelines-for-online-index-operations.md#resumable-index-considerations)
+
 ### CDC fails after ALTER COLUMN to VARCHAR and VARBINARY
 When the datatype of a column on a CDC-enabled table is changed from `TEXT` to `VARCHAR` or `IMAGE` to `VARBINARY` and an existing row is updated to an off-row value. After the update, the CDC scan will result in errors.
 

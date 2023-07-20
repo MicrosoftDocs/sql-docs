@@ -3,7 +3,7 @@ title: "sys.dm_user_db_resource_governance (Transact-SQL)"
 description: sys.dm_user_db_resource_governance (Transact-SQL)
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: 06/19/2023
+ms.date: 07/18/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -81,6 +81,13 @@ Returns actual configuration and capacity settings used by resource governance m
 |**volume_type_external_xstore_iops**|int|Internal use only.|
 |**volume_pfs_iops**|int|Internal use only.|
 |**volume_type_pfs_iops**|int|Internal use only.|
+|**user_data_directory_space_quota_mb** |     int | Internal use only. |
+|**user_data_directory_space_usage_mb** |     int | Internal use only. |
+|**bufferpool_extension_size_gb** |     int | Internal use only. |
+|**pool_max_log_rate** |     bigint | Internal use only. |
+|**primary_group_max_outbound_connection_workers** |     int | Internal use only. |
+|**primary_pool_max_outbound_connection_workers** |     int | Internal use only. |
+|**replica_role** |     tinyint | Internal use only. |
 
 ## Permissions
 

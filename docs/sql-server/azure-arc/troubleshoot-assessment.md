@@ -109,13 +109,13 @@ To change the Log Analytics workspace that is linked for the best practices asse
 1. Disable best practices assessment if it's currently enabled.
 1. Make a GET call to the API and get the Azure extension for SQL Server settings
 
-   ```powershell
+   ```rest
    GET https://edge.management.azure.com/subscriptions/ <subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.HybridCompute/machines/<arc-resource-name>/extensions/WindowsAgent.SqlServer?api-version=2022-03-10
    ```
 
    The best practices assessment settings before the change.
 
-    ```powershell
+    ```json
     "AssessmentSettings": {
       "Enable": true,
       "RunImmediately": true,
@@ -136,7 +136,7 @@ To change the Log Analytics workspace that is linked for the best practices asse
 
 1. Update the workspace related settings to null as below.
 
-   ```powershell
+   ```json
    "AssessmentSettings": {
      "Enable": false,
      "RunImmediately": true,
@@ -157,7 +157,7 @@ To change the Log Analytics workspace that is linked for the best practices asse
 
 1. Make a `PATCH` call below to the API to update the Azure extension for SQL Server assessment settings.
 
-   ```powershell
+   ```rest
    PATCH https://management.azure.com/subscriptions/ <subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.HybridCompute/machines/<arc-resource-name>/extensions/WindowsAgent.SqlServer?api-version=2022-08-11-preview
    ```
 

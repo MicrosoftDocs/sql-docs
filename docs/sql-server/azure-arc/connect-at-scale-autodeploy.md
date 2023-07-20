@@ -124,7 +124,8 @@ resources
 
 ## Next steps
 
-- [Azure Arc-enabled SQL Server](overview.md)
-- [Automatically connect your SQL Server to Azure Arc](automatically-connect.md)
-- [Prerequisites](prerequisites.md)
+- [Configure SQL best practices assessment](assess.md)
+- [View SQL Server databases - Azure Arc](view-databases.md)
+- [Manage SQL Server license and billing options](manage-license-type.md)
+- [Azure Arc-enabled SQL Server and Databases activity logs](activity-logs.md)
 - [Data collected by Arc enabled SQL Server](data-collection.md)

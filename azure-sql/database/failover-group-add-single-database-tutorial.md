@@ -1,8 +1,8 @@
 ---
 title: "Tutorial: Add a database to a failover group"
 description: Add a database in Azure SQL Database to an auto-failover group using the Azure portal, PowerShell, or the Azure CLI.
-author: AbdullahMSFT
-ms.author: amamun
+author: rajeshsetlem
+ms.author: rsetlem
 ms.reviewer: wiassaf, mathoma
 ms.date: 02/09/2023
 ms.service: sql-database

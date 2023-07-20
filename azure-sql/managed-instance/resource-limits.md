@@ -5,7 +5,7 @@ description: This article provides an overview of the resource limits for Azure 
 author: vladai78
 ms.author: vladiv
 ms.reviewer: mathoma, vladiv, sachinp, wiassaf
-ms.date: 04/10/2023
+ms.date: 06/20/2023
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: reference
@@ -147,7 +147,7 @@ In the General Purpose service tier, every database file gets dedicated IOPS and
 
 | **File size** | **>=0 and <=129 GiB** | **>129 and <=513 GiB** | **>513 and <=1025 GiB**  | **>1025 and <=2049 GiB**    | **>2049 and <=4097 GiB** | **>4097 GiB and <=8 TiB** |
 |:--|:--|:--|:--|:--|:--|:--|
-| IOPS per file       | 500   | 2300              | 5000  | 7500              | 7500              | 12,500   |
+| IOPS per file       | 500   | 2300              | 5000  | 7500              | 7500              | 7500   |
 | Throughput per file | 100 MiB/s | 150 MiB/s | 200 MiB/s | 250 MiB/s| 250 MiB/s | 250 MiB/s |
 
 If you notice high IO latency on some database file or you see that IOPS/throughput is reaching the limit, you might improve performance by [increasing the file size](https://techcommunity.microsoft.com/t5/Azure-SQL-Database/Increase-data-file-size-to-improve-HammerDB-workload-performance/ba-p/823337).
@@ -168,6 +168,9 @@ SQL Managed Instance currently supports deployment only on the following types o
 - [Enterprise Dev/Test](https://azure.microsoft.com/offers/ms-azr-0148p/)
 - [Pay-As-You-Go Dev/Test](https://azure.microsoft.com/offers/ms-azr-0023p/)
 - [Subscriptions with monthly Azure credit for Visual Studio subscribers](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/)
+- [Free Trial](https://azure.microsoft.com/pricing/offers/ms-azr-0044p/)
+- [Azure For Students](https://azure.microsoft.com/pricing/offers/ms-azr-0170p/)
+- [Azure In Open](https://azure.microsoft.com/pricing/offers/ms-azr-0111p/)
 
 ## Regional resource limitations
 

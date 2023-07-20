@@ -3,7 +3,7 @@ title: "Append-only ledger tables"
 description: This article provides information on append-only ledger table schema and views.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: kendralittle, mathoma
+ms.reviewer: mathoma
 ms.date: "05/24/2022"
 ms.service: sql-database
 ms.subservice: security

@@ -6,7 +6,7 @@ ms.author: mikeray
 ms.date: "07/22/2017"
 ms.service: sql
 ms.subservice: release-landing
-ms.topic: conceptual
+ms.topic: whats-new
 ms.custom: intro-whats-new
 helpviewer_keywords:
   - "new features [SQL Server]"

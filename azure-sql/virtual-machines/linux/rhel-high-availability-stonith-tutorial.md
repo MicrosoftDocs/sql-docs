@@ -336,7 +336,7 @@ In this section, we will enable and start the pcsd service, and then configure t
 
 ### Enable and start pcsd service and Pacemaker
 
-1. Run the commands on all nodes. These commands allow the nodes to rejoin the cluster after reboot.
+1. Run the commands on all nodes. These commands allow the nodes to rejoin the cluster after each node restarts.
 
     ```bash
     sudo systemctl enable pcsd

@@ -3,7 +3,7 @@ title: Release notes for OLE DB Driver
 description: This release notes article describes the changes in each release of the Microsoft OLE DB Driver for SQL Server.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 02/14/2023
+ms.date: 06/15/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -20,6 +20,27 @@ Hello, from now on, please use the table-based format standard for all new Relea
 See section "## 18.2.1" for a live example in this article.
 Thank you. For questions, contact GeneMi. (2019/03/16)
 -->
+
+## 19.3.1
+
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2238602)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2238512)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download Arm64 installer](https://go.microsoft.com/fwlink/?linkid=2238411)  
+
+Released: June 15, 2023
+
+If you need to download the installer in a language other than the one detected for you, you can use these direct links.  
+    For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2238602&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2238602&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2238602&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2238602&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2238602&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2238602&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2238602&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2238602&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2238602&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2238602&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2238602&clcid=0x40a)  
+    For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2238512&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2238512&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2238512&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2238512&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2238512&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2238512&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2238512&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2238512&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2238512&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2238512&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2238512&clcid=0x40a)  
+    For the Arm64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2238411&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2238411&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2238411&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2238411&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2238411&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2238411&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2238411&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2238411&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2238411&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2238411&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2238411&clcid=0x40a)
+
+### Bugs fixed
+
+| Bug fixed | Details |
+| :-------- | :------ |
+| Fixed potential crashes. | Fixed potential crashes when invalid metadata is received from the server. |
+
+## Previous releases
 
 ## 19.3.0
 
@@ -48,8 +69,6 @@ If you need to download the installer in a language other than the one detected 
 | Fixed potential crashes. | Fixed potential crashes when invalid metadata is received from the server. |
 | Fixed adal issue. | Fixed an installer issue where a 64-bit version of adal.dll was packaged instead of the 32-bit one. For details, see [Known issues](oledb-driver-for-sql-server-known-issues.md#known-issues). |
 
-## Previous releases
-
 ## 19.2.0
 
 :::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2212594)  
@@ -65,7 +84,7 @@ If you need to download the installer in a language other than the one detected 
 
 | Feature added | Details |
 | :------------ | :------ |
-| Support for TLS 1.3 | TDS 8.0 connections can now be configured to use TLS 1.3. For more details, see [TLS 1.3 support](../../relational-databases/security/networking/tds-8-and-tls-1-3.md). |
+| Support for TLS 1.3 | TDS 8.0 connections can now be configured to use TLS 1.3. For more details, see [TLS 1.3 support](../../relational-databases/security/networking/tls-1-3.md). |
 | Support for the `Server Certificate` connection string keyword, and the `SSPROP_INIT_SERVER_CERTIFICATE` initialization property | The user may now specify the path to a certificate file to match against the SQL Server TLS/SSL certificate. <br/><br/>For more information, see: [Using connection string keywords](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
 
 ## 19.1.0
@@ -110,8 +129,25 @@ If you need to download the installer in a language other than the one detected 
 | Feature added | Details |
 | :------------ | :------ |
 | TDS 8.0 support | The encryption connection string keyword/property now includes the option for strict encryption, which encrypts the whole connection (including PRELOGIN packets). |
-| Secure by default | **BREAKING CHANGE**<br />The driver now defaults to secure-by-default options. Encrypted connections are enabled by default. The server certificate is now validated when client-side encryption is off but the server requires encryption.<br /><br />To restore previous version behavior, you need to opt-in to non-encrypted connections (`Encrypt` or `Use Encryption for Data` option) and trust the server certificate (`Trust Server Certificate` option), if the server uses a self-signed certificate. For more information, see [Encryption and certificate validation](features/encryption-and-certificate-validation.md). |
+| Secure by default | **BREAKING CHANGE**<br />The driver now defaults to secure-by-default options. Encrypted connections are enabled by default. The server certificate is now validated when client-side encryption is off but the server requires encryption.<br /><br />To restore previous version behavior, you need to opt in to non-encrypted connections (`Encrypt` or `Use Encryption for Data` option) and trust the server certificate (`Trust Server Certificate` option), if the server uses a self-signed certificate. For more information, see [Encryption and certificate validation](features/encryption-and-certificate-validation.md). |
 | Support for the `Host Name In Certificate` connection string keyword, and the `SSPROP_INIT_HOST_NAME_CERTIFICATE` initialization property. | The user may now specify the host name to be used when validating the SQL Server TLS/SSL certificate. |
+
+## 18.6.6
+
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2238605)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2238516)  
+
+Released: June 15, 2023
+
+If you need to download the installer in a language other than the one detected for you, you can use these direct links.  
+    For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2238605&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2238605&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2238605&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2238605&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2238605&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2238605&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2238605&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2238605&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2238605&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2238605&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2238605&clcid=0x40a)  
+    For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2238516&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2238516&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2238516&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2238516&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2238516&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2238516&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2238516&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2238516&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2238516&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2238516&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2238516&clcid=0x40a)
+
+### Bugs fixed
+
+| Bug fixed | Details |
+| :-------- | :------ |
+| Fixed potential crashes. | Fixed potential crashes when invalid metadata is received from the server. |
 
 ## 18.6.5
 

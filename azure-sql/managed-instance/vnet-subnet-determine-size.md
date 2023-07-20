@@ -2,8 +2,8 @@
 title: Determine required subnet size & range
 titleSuffix: Azure SQL Managed Instance
 description: This topic describes how to calculate the size of the subnet where Azure SQL Managed Instance will be deployed.
-author: urosmil
-ms.author: urmilano
+author: zoran-rilak-msft
+ms.author: zoranrilak
 ms.reviewer: mathoma, bonova, srbozovi, wiassaf
 ms.date: 04/06/2022
 ms.service: sql-managed-instance
@@ -26,9 +26,6 @@ By design, a managed instance needs a minimum of 32 IP addresses in a subnet. As
   - [Hardware configuration](resource-limits.md#hardware-configuration-characteristics)
   - [Maintenance window](../database/maintenance-window.md)
 - Plans to scale up/down or change the service tier, hardware configuration, or maintenance window
-
-> [!IMPORTANT]
-> A subnet size of 16 IP addresses (subnet mask /28) allows the deployment of a single managed instance inside it. It should be used only for evaluation or for dev/test scenarios where scaling operations won't be performed. 
 
 ## Determine subnet size
 

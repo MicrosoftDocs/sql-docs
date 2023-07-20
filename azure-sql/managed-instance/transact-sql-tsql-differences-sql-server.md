@@ -416,19 +416,20 @@ For more information about configuring transactional replication, see the follow
 
 - Supported syntax:
   - `RESTORE DATABASE`
-  - `RESTORE FILELISTONLY ONLY`
-  - `RESTORE HEADER ONLY`
-  - `RESTORE LABELONLY ONLY`
-  - `RESTORE VERIFYONLY ONLY`
+  - `RESTORE FILELISTONLY`
+  - `RESTORE HEADERONLY`
+  - `RESTORE LABELONLY`
+  - `RESTORE VERIFYONLY`
 - Unsupported syntax:
-  - `RESTORE LOG ONLY`
-  - `RESTORE REWINDONLY ONLY`
+  - `RESTORE LOGONLY`
+  - `RESTORE REWINDONLY`
 - Source: 
   - `FROM URL` (Azure Blob storage) is the only supported option.
   - `FROM DISK`/`TAPE`/backup device isn't supported.
   - Backup sets aren't supported.
-- `WITH` options aren't supported. Restore attempts including `WITH` like `DIFFERENTIAL`, `STATS`, `REPLACE`, etc., will fail.
-- `ASYNC RESTORE`: Restore continues even if the client connection breaks. If your connection is dropped, you can check the `sys.dm_operation_status` view for the status of a restore operation, and for a CREATE and DROP database. See [sys.dm_operation_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database). 
+- `WITH` options aren't supported. Restore attempts including `WITH` like `DIFFERENTIAL`, `STATS`, `REPLACE`, and so on, will fail.
+
+A database restore operation is asynchronous and retryable in Azure SQL Managed Instance. You might get an error in SSMS if the connection fails or a time-out expires. Azure SQL Managed Instance keeps trying to restore the database in the background, and you can track the progress of the restore process by using the [sys.dm_exec_requests](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql) and [sys.dm_operation_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database) dynamic management views.
 
 The following database options are set or overridden and can't be changed later: 
 

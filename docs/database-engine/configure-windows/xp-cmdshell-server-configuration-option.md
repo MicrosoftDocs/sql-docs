@@ -42,6 +42,14 @@ GO
 -- To update the currently configured value for this feature.
 RECONFIGURE;
 GO
+
+-- To set "show advanced options" back to false
+EXECUTE sp_configure 'show advanced options', 0;
+GO
+
+-- To update the currently configured value for advanced options.
+RECONFIGURE;
+GO
 ```
 
 ## Next steps

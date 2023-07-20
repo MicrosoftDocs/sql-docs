@@ -41,7 +41,7 @@ ODBCCONF [switches] action
 |/F|Use a response file, such as `odbcconf /F my.rsp`.<br /><br /> my.rsp might look like this: `REGSVR c:\my.dll`<br /><br /> /A is not used in a response file.|  
 |/H|Display usage (Help). This switch is the same as /?.|  
 |/L[*mode*] *filename*|Send program output to a file in one of three modes: normal (n), verbose (v), and debug (d). Debug mode records the DLLs that are loaded by odbcconf.exe.<br /><br /> If you specify /L without a mode, the log file will be empty.<br /><br /> For example, **/Lv log.txt**.|  
-|/R|The action will be performed after a reboot.|  
+|/R|The action will be performed after a restart.|  
 |/S|Silent mode. Do not display error messages.|  
   
  The following actions are available:  

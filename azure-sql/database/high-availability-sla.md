@@ -5,7 +5,7 @@ description: Learn about the Azure SQL Database service high availability capabi
 author: rajeshsetlem
 ms.author: rsetlem
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 05/01/2023
+ms.date: 06/14/2023
 ms.service: sql-database
 ms.subservice: high-availability
 ms.topic: conceptual
@@ -46,7 +46,7 @@ The following table shows the availability options based on service tiers:
 
 | Service tier | High availability model | Locally-redundant availability | Zone-redundant availability |
 |---|---|---| --- |
-| General purpose (vCore) | Remote storage  |  Yes | Yes |
+| General Purpose (vCore) | Remote storage  |  Yes | Yes |
 | Business Critical (vCore) | Local storage  | Yes | Yes |
 | Hyperscale (vCore) | Hyperscale | Yes | Yes |
 | Basic (DTU) | Remote storage  | Yes | No |
@@ -88,7 +88,7 @@ As an extra benefit, the local storage availability model includes the ability t
 
 The Hyperscale service tier architecture is described in [Distributed functions architecture](./service-tier-hyperscale.md#distributed-functions-architecture). 
 
-:::image type="content" source="./media/high-availability-sla/hyperscale-architecture.png" alt-text="Diagram showing Hyperscale functional architecture.":::
+:::image type="content" source="./media/service-tier-hyperscale/hyperscale-architecture.png" alt-text="Diagram showing Hyperscale functional architecture.":::
 
 The availability model in Hyperscale includes four layers:
 
@@ -124,6 +124,8 @@ Consider the following when configuring your General Purpose databases with zone
 
 - For General Purpose tier the zone-redundant configuration is Generally Available in the following regions: 
   - (Asia Pacific) Australia East
+  - (Asia Pacific) Japan East
+  - (Asia Pacific) Korea Central
   - (Asia Pacific) Southeast Asia  
   - (Europe) France Central
   - (Europe) North Europe
@@ -135,7 +137,6 @@ Consider the following when configuring your General Purpose databases with zone
   - (North America) South Central US
   - (North America) West US 2  
   - (South America) Brazil South
-- It is in preview in the following region: Japan East.
 - For zone redundant availability, choosing a [maintenance window](maintenance-window.md) other than the default is currently available in [select regions](maintenance-window.md#azure-region-support).  
 - Zone-redundant configuration is only available in SQL Database when standard-series (Gen5) hardware is selected. 
 - Zone-redundancy is not available for Basic and Standard service tiers in the DTU purchasing model. 
@@ -168,7 +169,7 @@ Consider the following limitations:
 - For zone redundant availability, choosing a [maintenance window](maintenance-window.md) other than the default is currently available in [select regions](maintenance-window.md#azure-region-support).
 - Only standard-series (Gen5) hardware is supported.
 - Named replicas aren't currently supported.
-- Zone redundancy can't currently be specified when migrating an existing database from another Azure SQL Database service tier to Hyperscale.
+- There's currently no option to specify zone redundancy when migrating a database to Hyperscale using the Azure portal. However, zone redundancy can be specified using Azure PowerShell, Azure CLI, or the REST API when migrating an existing database from another Azure SQL Database service tier to Hyperscale. Here's an example with Azure CLI: `az sql db update --resource-group "myResourceGroup" --server "myServer" --name "myDB" --edition Hyperscale --zone-redundant true`
 - At least 1 high availability compute replica and the use of zone-redundant or geo-zone-redundant backup storage is required for enabling the zone redundant configuration for Hyperscale.
 
 

@@ -2,8 +2,8 @@
 title: Azure Active Directory authentication
 titleSuffix: Azure SQL Database & Azure SQL Managed Instance & Azure Synapse Analytics
 description: Learn about how to use Azure Active Directory for authentication with Azure SQL Database, Azure SQL Managed Instance, and Synapse SQL in Azure Synapse Analytics
-author: GithubMirek
-ms.author: mireks
+author: nofield
+ms.author: nofield
 ms.reviewer: wiassaf, vanto, mathoma, randolphwest
 ms.date: 05/08/2023
 ms.service: sql-db-mi
@@ -99,7 +99,7 @@ To create a contained database user in Azure SQL Database, Azure SQL Managed Ins
 - The following members of Azure AD can be provisioned for Azure SQL Database:
 
   - Native members: A member created in Azure AD in the managed domain or in a customer domain. For more information, see [Add your own domain name to Azure AD](/azure/active-directory/fundamentals/add-custom-domain).
-  - Members of an Active Directory domain federated with Azure Active Directory on a managed domain configured for seamless single sign-on with pass-through or password hash authentication. For more information, see [Microsoft Azure now supports federation with Windows Server Active Directory](https://azure.microsoft.com/blog/windows-azure-now-supports-federation-with-windows-server-active-directory//) and [Azure Active Directory seamless single sign-on](/azure/active-directory/hybrid/how-to-connect-sso).
+  - Members of an Active Directory domain federated with Azure Active Directory on a managed domain configured for seamless single sign-on with pass-through or password hash authentication. For more information, see [Federation with Azure AD](/azure/active-directory/hybrid/connect/whatis-fed) and [Azure Active Directory seamless single sign-on](/azure/active-directory/hybrid/how-to-connect-sso).
   - Imported members from other Azure ADs who are native or federated domain members.
   - Active Directory groups created as security groups.
 

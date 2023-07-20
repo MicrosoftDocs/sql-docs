@@ -29,7 +29,7 @@ monikerRange: "= sql-server-2016"
 - :::image type="icon" source="../includes/media/download.svg"::: [Download SQL Server 2016 Service Pack 3 (SP3)](https://www.microsoft.com/download/details.aspx?id=103440)
 - For a complete list of updates, see [SQL Server 2016 Service Pack 3 release information](https://support.microsoft.com/help/5003279/sql-server-2016-service-pack-3-release-information)
 
-The [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP3 installation may require reboot after installation. As a best practice, we recommend to plan and perform a reboot following the installation of [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP3.
+The [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP3 installation may require restart after installation. As a best practice, we recommend to plan and perform a restart following the installation of [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP3.
 
 Performance and scale related improvements included in [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP3.
 
@@ -129,7 +129,7 @@ For more information, refer to [KB5007039](https://support.microsoft.com/topic/k
 - :::image type="icon" source="../includes/media/download.svg"::: [Download SQL Server 2016 Service Pack 2 (SP2)](https://www.microsoft.com/download/details.aspx?id=56836)
 - For a complete list of updates, see [SQL Server 2016 Service Pack 2 release information](https://support.microsoft.com/help/4052908/sql-server-2016-service-pack-2-release-information)
 
-The [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP2 installation may require reboot after installation. As a best practice, we recommend to plan and perform a reboot following the installation of [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP2.
+The [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP2 installation may require restart after installation. As a best practice, we recommend to plan and perform a restart following the installation of [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP2.
 
 Performance and scale related improvements included in [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP2.
 
@@ -218,7 +218,7 @@ In addition, note the following fixes:
 - Review new [Trace flags](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 - The full versions of the WideWorldImporters sample databases now work with Standard Edition and Express Edition, starting [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP1 and are available on [GitHub]( https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0). No changes are needed in the sample. The database backups created at RTM for Enterprise edition work with Standard and Express in SP1.
 
-The [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP1 installation may require reboot post installation. As a best practice, we recommend to plan and perform a reboot following the installation of [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP1.
+The [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP1 installation may require restart post installation. As a best practice, we recommend to plan and perform a restart following the installation of [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP1.
 
 ### Download pages and more information
 
@@ -247,7 +247,7 @@ The [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP1 installation may requi
     1.  Download the appropriate *vcredist_\*exe*.
     1.  Stop the SQL Server service for all instances of the database engine.
     1.  Install **KB 3138367**.
-    1.  Reboot the computer.
+    1.  Restart the computer.
 
 
  - Install  [KB 3164398 - Critical Update for SQL Server 2016 MSVCRT prerequisites](https://support.microsoft.com/kb/3164398).

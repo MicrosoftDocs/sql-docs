@@ -2,10 +2,10 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 02/17/2023
+ms.date: 07/06/2023
 ms.topic: include
 ---
-| Error| Severity | Event logged | Description|
+| Error | Severity | Event logged | Description |
 | :--- | :--- | :--- | :--- |
 | 26010 | 10 | Yes | The server could not load the certificate it needs to initiate an SSL connection. It returned the following error: %#x. Check certificates to make sure they are valid. |
 | 26011 | 16 | Yes | The server was unable to initialize encryption because of a problem with a security library. The security library may be missing. Verify that security.dll exists on the system. |
@@ -25,7 +25,7 @@ ms.topic: include
 | 26029 | 16 | Yes | Server named pipe provider failed to listen on \[ %s \]. Error: %#x |
 | 26032 | 10 | Yes | Server VIA provider is ready for clients to connect to \[ %hs:%d \]. |
 | 26033 | 16 | Yes | Server VIA provider failed to initialize. Error: %#x |
-| 26034 | 10 | Yes | The SQL Server Network Interface library was unable to execute polite termination due to outstanding connections.  It will proceed with immediate termination. |
+| 26034 | 10 | Yes | The SQL Server Network Interface library was unable to execute polite termination due to outstanding connections. It will proceed with immediate termination. |
 | 26035 | 16 | Yes | The SQL Server Network Interface library was unable to close socket handle due to a closesocket failure under memory pressure. Winsock error code: %#x. |
 | 26037 | 10 | Yes | The SQL Server Network Interface library could not register the Service Principal Name (SPN) for the SQL Server service. Windows return code: %#x, state: %d. Failure to register a SPN might cause integrated authentication to use NTLM instead of Kerberos. This is an informational message. Further action is only required if Kerberos authentication is required by authentication policies and if the SPN has not been manually registered. |
 | 26038 | 10 | Yes | The SQL Server Network Interface library could not deregister the Service Principal Name (SPN) for the SQL Server service. Error: %#x, state: %d. Administrator should deregister this SPN manually to avoid client authentication errors. |
@@ -42,7 +42,7 @@ ms.topic: include
 | 26051 | 10 | Yes | Server local connection provider has successfully re-established listening on \[ %s \]. |
 | 26052 | 10 | Yes | SQL Server Network Interfaces initialized listeners on node %ld of a multi-node (NUMA) server configuration with node affinity mask 0x%0\*I64x. This is an informational message only. No user action is required. |
 | 26053 | 16 | Yes | SQL Server Network Interfaces failed to initialize listeners on node %ld of a multi-node (NUMA) server configuration with node affinity mask 0x%0\*I64x. There may be insufficient memory. Free up additional memory, then turn the node off and on again. If the failure persists repeat this multiple times or restart the SQL Server. |
-| 26054 | 16 | Yes | Could not find any IP address that this SQL Server instance depends upon.  Make sure that the cluster service is running, that the dependency relationship between SQL Server and Network Name resources is correct, and that the IP addresses on which this SQL Server instance depends are available.  Error code: %#x. |
+| 26054 | 16 | Yes | Could not find any IP address that this SQL Server instance depends upon. Make sure that the cluster service is running, that the dependency relationship between SQL Server and Network Name resources is correct, and that the IP addresses on which this SQL Server instance depends are available. Error code: %#x. |
 | 26055 | 16 | Yes | The SQL Server failed to initialize VIA support library \[%hs\]. This normally indicates the VIA support library does not exist or is corrupted. Please repair or disable the VIA network protocol. Error: %#x. |
 | 26056 | 10 | Yes | Failed to update the dedicated administrator connection (DAC) port number in the registry. Clients may not be able to discover the correct DAC port through the SQL Server Browser Service. Error: %#x. |
 | 26057 | 16 | Yes | Failed to determine the fully qualified domain name of the computer while initializing SSL support. This might indicate a problem with the network configuration of the computer. Error: %#x. |
@@ -73,64 +73,64 @@ ms.topic: include
 | 26083 | 10 | Yes | DISTRIBUTED_NETWORK_NAME probing failed with error code %#x. |
 | 26084 | 10 | Yes | Started listening on listener network name '%ls' (VNN or DISTRIBUTED_NETWORK_NAME). No user action is required. |
 | 26085 | 10 | Yes | Stopped listening on listener network name '%ls' (VNN or DISTRIBUTED_NETWORK_NAME). No user action is required. |
-| 27001 | 16 | No | Reserved error message.  Should never be issued. |
+| 27001 | 16 | No | Reserved error message. Should never be issued. |
 | 27002 | 16 | No | A null or invalid SqlCommand object was supplied to Fuzzy Lookup Table Maintenance by SQLCLR. Reset the connection. |
 | 27003 | 16 | No | Bad token encountered during tokenization. |
 | 27004 | 16 | No | Unexpected token type encountered during tokenization. |
 | 27005 | 16 | No | Error Tolerant Index is corrupt. |
-| 27006 | 16 | No | Deleted more than one rid from ridlist during delete operation.  Error Tolerant Index is corrupt. |
-| 27007 | 16 | No | Attempt to delete from empty ridlist.  Error Tolerant Index is corrupt. |
-| 27008 | 16 | No | rid to be deleted not found in rid-list.  Error Tolerant Index is corrupt. |
-| 27009 | 16 | No | Error Tolerant Index frequencies must be non-negative.  Error Tolerant Index is corrupt. |
-| 27010 | 16 | No | Attempt to insert row whose ID is already present.  Error Tolerant Index is corrupt. |
-| 27011 | 16 | No | No ridlist provided for appending.  Error Tolerant Index is corrupt. |
-| 27012 | 16 | No | Cannot delete token.  Error Tolerant Index is corrupt. |
-| 27013 | 16 | No | Tokenizer object has no delimiter set.  Error Tolerant Index is corrupt. |
-| 27014 | 16 | No | Deletion failed because token does not occur in index.  Error Tolerant Index is corrupt. |
-| 27015 | 16 | No | Unexpected ridlist length.  Error Tolerant Index is corrupt. |
-| 27016 | 16 | No | Cannot connect to Error Tolerant Index.  Bad or missing SqlCommand object. |
+| 27006 | 16 | No | Deleted more than one rid from ridlist during delete operation. Error Tolerant Index is corrupt. |
+| 27007 | 16 | No | Attempt to delete from empty ridlist. Error Tolerant Index is corrupt. |
+| 27008 | 16 | No | rid to be deleted not found in rid-list. Error Tolerant Index is corrupt. |
+| 27009 | 16 | No | Error Tolerant Index frequencies must be non-negative. Error Tolerant Index is corrupt. |
+| 27010 | 16 | No | Attempt to insert row whose ID is already present. Error Tolerant Index is corrupt. |
+| 27011 | 16 | No | No ridlist provided for appending. Error Tolerant Index is corrupt. |
+| 27012 | 16 | No | Cannot delete token. Error Tolerant Index is corrupt. |
+| 27013 | 16 | No | Tokenizer object has no delimiter set. Error Tolerant Index is corrupt. |
+| 27014 | 16 | No | Deletion failed because token does not occur in index. Error Tolerant Index is corrupt. |
+| 27015 | 16 | No | Unexpected ridlist length. Error Tolerant Index is corrupt. |
+| 27016 | 16 | No | Cannot connect to Error Tolerant Index. Bad or missing SqlCommand object. |
 | 27017 | 16 | No | Failed to drop index on reference table copy. |
-| 27018 | 16 | No | Could not retrieve metadata from Error Tolerant Index.  The index is probably corrupt. |
-| 27019 | 16 | No | Could not initialize from metadata contained in Error Tolerant Index.  The index is probably corrupt. |
+| 27018 | 16 | No | Could not retrieve metadata from Error Tolerant Index. The index is probably corrupt. |
+| 27019 | 16 | No | Could not initialize from metadata contained in Error Tolerant Index. The index is probably corrupt. |
 | 27022 | 16 | No | An error specific to fuzzy lookup table maintenance has occurred. |
 | 27023 | 16 | No | A system error occurred during execution of fuzzy lookup table maintenance. |
-| 27024 | 16 | No | Cannot write at negative index position.  Could not update Error Tolerant Index.  The index is probably corrupt. |
-| 27025 | 16 | No | Argument is not a valid hex string.  Could not initialize from metadata contained in Error Tolerant Index.  The index is probably corrupt. |
-| 27026 | 16 | No | Negative count in Error Tolerant Index metadata.  The index is probably corrupt. |
-| 27027 | 16 | No | Error tolerant index metadata contains unsupported normalization flags.  The index is probably corrupt. |
-| 27028 | 16 | No | Invalid Error Tolerant Index metadata.  The index is probably corrupt. |
+| 27024 | 16 | No | Cannot write at negative index position. Could not update Error Tolerant Index. The index is probably corrupt. |
+| 27025 | 16 | No | Argument is not a valid hex string. Could not initialize from metadata contained in Error Tolerant Index. The index is probably corrupt. |
+| 27026 | 16 | No | Negative count in Error Tolerant Index metadata. The index is probably corrupt. |
+| 27027 | 16 | No | Error tolerant index metadata contains unsupported normalization flags. The index is probably corrupt. |
+| 27028 | 16 | No | Invalid Error Tolerant Index metadata. The index is probably corrupt. |
 | 27029 | 16 | No | Invalid Error Tolerant Index metadata version. |
-| 27030 | 16 | No | Missing metadata.  The Error Tolerant Index is probably corrupt. |
-| 27031 | 16 | No | Unable to parse token counts in Error Tolerant Index metadata.  The index is probably corrupt. |
-| 27032 | 16 | No | Error Tolerant Index Metadata string too long.  Index is probably corrupt. |
+| 27030 | 16 | No | Missing metadata. The Error Tolerant Index is probably corrupt. |
+| 27031 | 16 | No | Unable to parse token counts in Error Tolerant Index metadata. The index is probably corrupt. |
+| 27032 | 16 | No | Error Tolerant Index Metadata string too long. Index is probably corrupt. |
 | 27033 | 16 | No | Error Tolerant Index Metadata length limit exceeded. |
-| 27034 | 16 | No | Unexpected end of Error Tolerant Index metadata.  Index is probably corrupt. |
-| 27037 | 16 | No | No table name provided for Error Tolerant Index.  The index is probably corrupt. |
-| 27038 | 16 | No | No input provided for decoding in Error Tolerant Index metadata.  Index is probably corrupt. |
-| 27039 | 16 | No | No input provided for encoding in Error Tolerant Index metadata.  Index is probably corrupt. |
-| 27040 | 16 | No | No Error Tolerant Index metadata string provided for initialization.  Index is probably corrupt. |
-| 27041 | 16 | No | No Error Tolerant Index metadata provided for serialization.  The index is probably corrupt. |
-| 27042 | 16 | No | Could not lookup object_id.  No object name provided. |
-| 27043 | 16 | No | Could not lookup object_id.  Null command object provided. |
-| 27044 | 16 | No | Open connection required.  Cannot query Error Tolerant Index. |
-| 27045 | 16 | No | Cannot write to null output buffer.  Could not update Error Tolerant Index.  The index is probably corrupt. |
-| 27046 | 16 | No | Output buffer provided is too small.  Could not update Error Tolerant Index.  The index is probably corrupt. |
+| 27034 | 16 | No | Unexpected end of Error Tolerant Index metadata. Index is probably corrupt. |
+| 27037 | 16 | No | No table name provided for Error Tolerant Index. The index is probably corrupt. |
+| 27038 | 16 | No | No input provided for decoding in Error Tolerant Index metadata. Index is probably corrupt. |
+| 27039 | 16 | No | No input provided for encoding in Error Tolerant Index metadata. Index is probably corrupt. |
+| 27040 | 16 | No | No Error Tolerant Index metadata string provided for initialization. Index is probably corrupt. |
+| 27041 | 16 | No | No Error Tolerant Index metadata provided for serialization. The index is probably corrupt. |
+| 27042 | 16 | No | Could not lookup object_id. No object name provided. |
+| 27043 | 16 | No | Could not lookup object_id. Null command object provided. |
+| 27044 | 16 | No | Open connection required. Cannot query Error Tolerant Index. |
+| 27045 | 16 | No | Cannot write to null output buffer. Could not update Error Tolerant Index. The index is probably corrupt. |
+| 27046 | 16 | No | Output buffer provided is too small. Could not update Error Tolerant Index. The index is probably corrupt. |
 | 27047 | 16 | No | The number of min-hash q-grams per token must be positive. |
 | 27048 | 16 | No | Could not create index on reference table copy. |
-| 27049 | 16 | No | Reference table (or internal copy) missing integer identity column.  Error tolerant index is probably corrupt. |
-| 27050 | 16 | No | The maximum allow integer identity value has been reached.  Consider re-building the error tolerant index to use any gaps in sequence. |
-| 27051 | 16 | No | Could not read rid from data provided (missing column name, null reader object, or corrupted data).  The index is probably corrupted. |
+| 27049 | 16 | No | Reference table (or internal copy) missing integer identity column. Error tolerant index is probably corrupt. |
+| 27050 | 16 | No | The maximum allow integer identity value has been reached. Consider re-building the error tolerant index to use any gaps in sequence. |
+| 27051 | 16 | No | Could not read rid from data provided (missing column name, null reader object, or corrupted data). The index is probably corrupted. |
 | 27052 | 16 | No | Table maintenance insertion failed. |
 | 27053 | 16 | No | A positive q-gram length is required for tokenization. |
 | 27054 | 16 | No | Maintenance trigger already installed on this reference table. |
 | 27055 | 16 | No | Missing extended property on maintenance trigger. |
-| 27056 | 16 | No | Maintenance trigger name out of sync with Error Tolerant Index metadata.  Index is probably corrupt. |
+| 27056 | 16 | No | Maintenance trigger name out of sync with Error Tolerant Index metadata. Index is probably corrupt. |
 | 27058 | 16 | No | A SQL error occurred during execution of fuzzy lookup table maintenance. |
-| 27059 | 16 | No | Could not lookup object_id.  The reference table or maintenance trigger could not be found. |
+| 27059 | 16 | No | Could not lookup object_id. The reference table or maintenance trigger could not be found. |
 | 27060 | 16 | No | The Error Tolerant Index table name provided is not a valid SQL identifier. |
-| 27061 | 16 | No | The Error Tolerant Index table name provided refers to a missing table.  Check sys.tables. |
+| 27061 | 16 | No | The Error Tolerant Index table name provided refers to a missing table. Check sys.tables. |
 | 27062 | 16 | No | An auxiliary Fuzzy Lookup table maintenance table is missing. |
-| 27063 | 16 | No | An auxiliary Fuzzy Lookup table maintenance table name is null.  Maintenance cannot proceed. |
+| 27063 | 16 | No | An auxiliary Fuzzy Lookup table maintenance table name is null. Maintenance cannot proceed. |
 | 27064 | 16 | No | The row deleted from the reference table could not be located in the reference table copy. |
 | 27065 | 16 | No | Fuzzy Lookup Table Maintenance is not installed or the Error Tolerant Index is corrupt. |
 | 27100 | 16 | No | The input parameter, '%ls', cannot be null. Provide a valid value for this parameter. |
@@ -168,7 +168,7 @@ ms.topic: include
 | 27132 | 16 | No | Integration Services server was unable to create process component, '%ls'. Windows returned error code: %ls. |
 | 27133 | 16 | No | Integration Services server was unable to wait for process, '%ls', to finish. Windows returned error code: %ls. |
 | 27135 | 16 | No | The database, '%ls', already exists. Rename or remove the existing database, and then run SQL Server Setup again. |
-| 27136 | 16 | No | The required components for the 32-bit edition of Integration Services cannot be found.  Run SQL Server Setup to add the required components. |
+| 27136 | 16 | No | The required components for the 32-bit edition of Integration Services cannot be found. Run SQL Server Setup to add the required components. |
 | 27137 | 16 | No | The registry key for the system setting '%ls' could not be found. The operation will now exit. |
 | 27138 | 16 | No | The input parameter cannot be null. Provide a valid value for the parameter. |
 | 27139 | 16 | No | Integration Services server cannot be configured because there are active operations. Wait until there are no active operations, and then try to configure the server again. |
@@ -250,7 +250,7 @@ ms.topic: include
 | 27219 | 16 | No | Caller does not have permissions to execute the stored procedure. |
 | 27220 | 16 | No | SSISDB database does not exist. Create the SSISDB database. |
 | 27221 | 16 | No | Unable to map an environment variable with the sensitive property set to True, to a parameter with the sensitive property set to False. Ensure that the property settings match. |
-| 27222 | 16 | No | The required components for the 64-bit edition of Integration Services cannot be found.  Run SQL Server Setup to install the required components. |
+| 27222 | 16 | No | The required components for the 64-bit edition of Integration Services cannot be found. Run SQL Server Setup to install the required components. |
 | 27223 | 16 | No | Cannot move the project to folder '%ls' due to insufficient permissions. |
 | 27224 | 16 | No | The parameter value cannot be changed after the execution has been started. |
 | 27225 | 16 | No | The property cannot be overridden after the execution has been started. |

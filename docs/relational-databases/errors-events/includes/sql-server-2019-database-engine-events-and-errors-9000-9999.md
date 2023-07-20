@@ -2,15 +2,15 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 02/17/2023
+ms.date: 07/06/2023
 ms.topic: include
 ---
-| Error| Severity | Event logged | Description|
+| Error | Severity | Event logged | Description |
 | :--- | :--- | :--- | :--- |
 | [9001](../mssqlserver-9001-database-engine-error.md) | 21 | Yes | The log for database '%.\*ls' is not available. Check the operating system error log for related error messages. Resolve any errors and restart the database. |
 | [9002](../mssqlserver-9002-database-engine-error.md) | 17 | Yes | The transaction log for database '%ls' is full due to '%ls'. |
 | [9003](../mssqlserver-9003-database-engine-error.md) | 20 | Yes | The log scan number %S_LSN passed to log scan in database '%.\*ls' is not valid. This error may indicate data corruption or that the log file (.ldf) does not match the data file (.mdf). If this error occurred during replication, re-create the publication. Otherwise, restore from backup if the problem results in a failure during startup. |
-| [9004](../mssqlserver-9004-database-engine-error.md) | 21 | Yes | An error occurred while processing the log for database '%.\*ls'.  If possible, restore from backup. If a backup is not available, it might be necessary to rebuild the log. |
+| [9004](../mssqlserver-9004-database-engine-error.md) | 21 | Yes | An error occurred while processing the log for database '%.\*ls'. If possible, restore from backup. If a backup is not available, it might be necessary to rebuild the log. |
 | 9005 | 16 | No | Invalid parameter passed to OpenRowset(DBLog, ...). |
 | 9006 | 10 | No | Cannot shrink log file %d (%s) because total number of logical log files cannot be fewer than %d. |
 | 9007 | 10 | No | Cannot shrink log file %d (%s) because requested size (%dKB) is larger than the start of the last logical log file. |
@@ -18,8 +18,8 @@ ms.topic: include
 | 9009 | 10 | No | Cannot shrink log file %d (%s) because of minimum log space required. |
 | 9010 | 14 | No | User does not have permission to query the virtual table, DBLog. Only members of the sysadmin fixed server role and the db_owner fixed database role have this permission |
 | 9011 | 14 | No | User does not have permission to query backup files with the virtual table DBLog. Only members of the sysadmin fixed server role has this permission |
-| 9012 | 10 | No | There have been %d misaligned log IOs which required falling back to synchronous IO.  The current IO is on file %ls. |
-| 9013 | 10 | No | The tail of the log for database %ls is being rewritten to match the new sector size of %d bytes.  %d bytes at offset %I64d in file %ls will be written. |
+| 9012 | 10 | No | There have been %d misaligned log IOs which required falling back to synchronous IO. The current IO is on file %ls. |
+| 9013 | 10 | No | The tail of the log for database %ls is being rewritten to match the new sector size of %d bytes. %d bytes at offset %I64d in file %ls will be written. |
 | 9014 | 21 | Yes | An error occurred while processing the log for database '%ls'. The log block version %d is unsupported. This server supports log version %d to %d. |
 | 9015 | 24 | Yes | The log record at LSN %S_LSN is corrupted. |
 | 9016 | 21 | Yes | An error occurred while processing the log for database '%.\*ls'. The log block could not be decrypted. |
@@ -39,7 +39,7 @@ ms.topic: include
 | 9030 | 16 | Yes | Primary log file '%.\*ls' cannot be created on a persistent main memory volume. |
 | 9031 | 16 | Yes | File '%.\*ls' cannot be created on a persistent main memory volume as there cannot be more than one persistent main memory log files. |
 | 9032 | 16 | Yes | PERSISTENT_LOG_BUFFER can only be turned off when the database is in single user mode. |
-| 9033 | 16 | Yes | The transaction in database '%ls' has exceeded the max size of %I64u bytes.  See 'http://aka.ms/sqldw_loglimit' for assistance. |
+| 9033 | 16 | Yes | The transaction in database '%ls' has exceeded the max size of %I64u bytes. See 'http://aka.ms/sqldw_loglimit' for assistance. |
 | 9034 | 16 | No | PERSISTENT_LOG_BUFFER option is already on in database '%ls'. |
 | 9035 | 16 | No | PERSISTENT_LOG_BUFFER can only be set on the DAX volume. |
 | 9036 | 10 | No | The source has PERSISTENT_LOG_BUFFER enabled, but the current device is not DAX volume. PERSISTENT_LOG_BUFFER has been set to OFF. |
@@ -258,9 +258,9 @@ ms.topic: include
 | 9529 | 16 | No | In the XML content that is supplied for the column set column '%.\*ls', the sqlDBType:base64Encoded attribute on the element '%.\*ls' is not valid. The base64Encoded attribute can only be used when the corresponding sparse column is of character data type (char, varchar, nchar, nvarchar), or if the sparse column is of data type sql_variant and the value of the xsi:type attribute is "Char", "VarChar", "NChar", or "NVarChar". |
 | 9530 | 16 | No | In the XML content that is supplied for the column set column '%.\*ls, the '%.\*ls' attribute on the element '%.\*ls' is not valid. Remove the attribute. |
 | 9531 | 16 | No | In the XML content that is supplied for the column set column '%.\*ls', the '%.\*ls' attribute value on the element '%.\*ls' is not valid. |
-| [9532](../mssqlserver-9532-database-engine-error.md) | 16 | No | In the query/DML operation involving  column set '%.\*ls',  conversion failed when converting from the data type '%ls' to the data type '%ls' for the column '%.\*ls'. |
+| [9532](../mssqlserver-9532-database-engine-error.md) | 16 | No | In the query/DML operation involving column set '%.\*ls', conversion failed when converting from the data type '%ls' to the data type '%ls' for the column '%.\*ls'. |
 | 9533 | 16 | No | In the XML that is supplied for the column set '%.\*ls', the element '%.\*ls' should reside in the global namespace. Remove the default namespace declaration or the prefix on the element. |
-| 9534 | 16 | No | In the query/DML operation involving  column set '%.\*ls',  conversion failed when converting from the data type '%ls' to the data type '%ls' for the column '%.\*ls'. Please refer to the Books-on-line for more details on providing XML conversion methods for CLR types. |
+| 9534 | 16 | No | In the query/DML operation involving column set '%.\*ls', conversion failed when converting from the data type '%ls' to the data type '%ls' for the column '%.\*ls'. Please refer to the Books-on-line for more details on providing XML conversion methods for CLR types. |
 | 9535 | 16 | No | For untyped XML it is not allowed to specify MAXLENGTH or SINGLETON option if XSD type is not already specified for path '%.\*ls' of selective XML index '%.\*ls'. |
 | 9536 | 16 | No | It is not allowed to specify REMOVE '%.\*ls' more than once for the same pathname in alter statement for selective XML index '%.\*ls'. |
 | 9537 | 16 | No | Two paths indexed with selective XML index '%.\*ls' on table '%.\*ls' would have same path name with new collation. |
@@ -277,8 +277,8 @@ ms.topic: include
 | 9611 | 16 | No | Cannot find the specified user '%.\*ls'. |
 | 9613 | 16 | No | The queue '%.\*ls' cannot be activated because the activation user is not specified. |
 | 9614 | 16 | No | The queue '%.\*ls' cannot be activated because the activation stored procedure is either not specified or is invalid. |
-| 9615 | 16 | No | A message of type '%.\*ls' failed XML validation on the target service.  %.\*ls This occurred in the message with Conversation ID '%.\*ls', Initiator: %d, and Message sequence number: %I64d. |
-| 9616 | 16 | No | A message of type '%.\*ls' was received and failed XML validation.  %.\*ls This occurred in the message with Conversation ID '%.\*ls', Initiator: %d, and Message sequence number: %I64d. |
+| 9615 | 16 | No | A message of type '%.\*ls' failed XML validation on the target service. %.\*ls This occurred in the message with Conversation ID '%.\*ls', Initiator: %d, and Message sequence number: %I64d. |
+| 9616 | 16 | No | A message of type '%.\*ls' was received and failed XML validation. %.\*ls This occurred in the message with Conversation ID '%.\*ls', Initiator: %d, and Message sequence number: %I64d. |
 | 9617 | 16 | No | The service queue "%.\*ls" is currently disabled. |
 | 9618 | 16 | No | The message cannot be sent because the service queue '%.\*ls' associated with the dialog is currently disabled and retention is on. |
 | 9619 | 16 | No | Failed to create remote service binding '%.\*ls'. A remote service binding for service '%.\*ls' already exists. |
@@ -317,7 +317,7 @@ ms.topic: include
 | 9652 | 16 | No | Service Broker failed to retrieve the session key for encrypting a message. |
 | 9653 | 16 | No | The signature of activation stored procedure '%.\*ls' is invalid. Parameters are not allowed. |
 | 9654 | 16 | No | Attempting to use database and it doesn't exist. |
-| 9655 | 16 | Yes | The transmission queue table structure in database is inconsistent.  Possible database corruption. |
+| 9655 | 16 | Yes | The transmission queue table structure in database is inconsistent. Possible database corruption. |
 | 9656 | 16 | No | An error occurred in the service broker multicast manager, Error: %i, State: %i. |
 | 9657 | 23 | Yes | The structure of the Service Broker transmission work-table in tempdb is incorrect or corrupt. This indicates possible database corruption or hardware problems. Check the SQL Server error log and the operating system error log for information on possible hardware problems. Restart SQL Server to rebuild tempdb. |
 | 9658 | 16 | No | Cannot access the transmission queue table in database. |
@@ -371,7 +371,7 @@ ms.topic: include
 | 9711 | 16 | No | The transmission queue is referencing the invalid conversation ID '%ls'. |
 | 9712 | 16 | No | The remote service binding with ID %d is referencing the invalid service contract with ID %d. |
 | 9713 | 16 | No | The message type with ID %d is referencing the invalid XML schema collection ID %d. |
-| 9715 | 16 | No | The conversation endpoint with conversation handle '%ls' is in an inconsistent state. |
+| 9715 | 16 | No | The conversation endpoint with conversation handle '%ls' is in an inconsistent state. Check the SQL Server error logs and the operating system error log for information on possible hardware problems. To recover the database, restore the database from a clean backup. If no clean backup is available, consider running DBCC CHECKDB. Note that DBCC CHECKDB may remove data. |
 | 9716 | 16 | No | The conversation group '%ls' reports references to %d conversation handle(s), but actually references %d. |
 | 9717 | 16 | No | Cannot enable stored procedure activation on queue '%.\*ls'. Event notification for queue_activation is already configured on this queue. |
 | 9718 | 16 | No | Cannot create event notification for queue_activation on queue "%.\*ls". Stored procedure activation is already configured on this queue. |
@@ -380,7 +380,7 @@ ms.topic: include
 | 9721 | 10 | No | Service broker failed to clean up conversation endpoints on database '%.\*ls'. Another problem is preventing SQL Server from completing this operation. Check the SQL Server error log for additional messages. |
 | 9722 | 10 | No | Connection attempt to destination '%.\*ls' failed. %.\*ls |
 | 9723 | 10 | No | The database "%i" will not be started as the broker due to duplication in the broker instance ID. |
-| 9724 | 10 | No | The activated proc '%ls' running on queue '%ls' output the following:  '%.\*ls' |
+| 9724 | 10 | No | The activated proc '%ls' running on queue '%ls' output the following: '%.\*ls' |
 | 9725 | 16 | No | The invalid schema has been dropped from the message type with ID %d. |
 | 9726 | 16 | No | The remote service binding with ID %d has been dropped. |
 | 9727 | 16 | Yes | Dialog security is not available for this conversation because there is no remote service binding for the target service. Create a remote service binding, or specify ENCRYPTION = OFF in the BEGIN DIALOG statement. |
@@ -530,7 +530,7 @@ ms.topic: include
 | 9939 | 16 | No | Current user or role '%.\*ls' does not have the required permission to set the owner. |
 | 9940 | 10 | No | Error: Full-text %ls population for table or indexed view '%ls' (table or indexed view ID '%d', database ID '%d') is terminated due to the preceding error. |
 | 9941 | 10 | No | Informational: Full-text %ls population for table or indexed view '%ls' (table or indexed view ID '%d', database ID '%d') is being suspended by the system as the database is unavailable. System will resume the population whenever the database is available |
-| 9942 | 10 | No | Informational: Full-text %ls population for table or indexed view '%ls' (table or indexed view ID '%d', database ID '%d') was cancelled by  user. |
+| 9942 | 10 | No | Informational: Full-text %ls population for table or indexed view '%ls' (table or indexed view ID '%d', database ID '%d') was cancelled by user. |
 | 9943 | 10 | No | Informational: Full-text %ls population completed for table or indexed view '%ls' (table or indexed view ID '%d', database ID '%d'). Number of documents processed: %d. Number of documents failed: %d. Number of documents that will be retried: %d. |
 | 9944 | 10 | No | Informational: Full-text retry pass of %ls population completed for table or indexed view '%ls' (table or indexed view ID '%d', database ID '%d'). Number of retry documents processed: %d. Number of documents failed: %d. |
 | 9945 | 10 | No | Error: All Full-text populations in progress, for catalog '%ls' ('%d') in database '%ls' ('%d') were terminated due to error. Error: 0x%x. |
@@ -542,7 +542,7 @@ ms.topic: include
 | 9951 | 10 | No | Warning: Database %.\*ls cannot be modified during detach because database is in read-only, standby, or shutdown state. Full-text catalog is not dropped, and '@keepfulltextindexfile = false' is ignored. |
 | 9952 | 10 | No | Informational: Full-text auto change tracking is turned off for table or indexed view '%ls' (table or indexed view ID '%d', database ID '%d') due to fatal crawl error. |
 | 9953 | 16 | No | The path '%.\*ls' has invalid attributes. It needs to be a directory. It must not be hidden, read-only, or on a removable drive. |
-| 9954 | 16 | No | SQL Server failed to communicate with filter daemon launch service  (OS error: %ls). Full-Text filter daemon process failed to start. Full-text search functionality will not be available. |
+| 9954 | 16 | No | SQL Server failed to communicate with filter daemon launch service (OS error: %ls). Full-Text filter daemon process failed to start. Full-text search functionality will not be available. |
 | [9955](../mssqlserver-9955-database-engine-error.md) | 16 | No | SQL Server failed to create named pipe '%ls' to communicate with the full-text filter daemon (OS error: %d). Either a named pipe already exists for a filter daemon host process, the system is low on resources, or the security identification number (SID) lookup for the filter daemon account group failed. To resolve this error, terminate any running full-text filter daemon processes, and if necessary reconfigure the full-text daemon launcher service account. |
 | 9956 | 16 | No | SQL Server failed to logon the Full-Text filter daemon account '%ls' (Windows error code %d). The filter daemon process will not be started and full-text search functionality will not be available. Please make sure the account exists and is enabled. |
 | 9957 | 16 | No | Full-text operation failed due to full-text catalog %ls is corrupted. Use rebuild catalog to correct the problem. |

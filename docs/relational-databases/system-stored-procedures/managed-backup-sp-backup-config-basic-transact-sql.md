@@ -85,7 +85,7 @@ The name of the SQL credential used to authenticate to the Azure storage account
 > [!WARNING]  
 > The *@credential_name* parameter isn't supported at this time. Only backup to block blob is supported, which requires this parameter to be NULL.
 
-## Return code value
+## Return code values
 
 `0` (success) or `1` (failure).
 

@@ -1,8 +1,8 @@
 ---
 title: Active geo-replication
 description: Use active geo-replication to create readable secondary databases of individual databases in Azure SQL Database in the same or different regions.
-author: AbdullahMSFT
-ms.author: amamun
+author: rajeshsetlem
+ms.author: rsetlem
 ms.reviewer: wiassaf, mathoma
 ms.date: 10/04/2022
 ms.service: sql-database
@@ -271,8 +271,8 @@ As discussed previously, active geo-replication can also be managed programmatic
 
 | API | Description |
 | --- | --- |
-| [Create or Update Database (createMode=Restore)](/rest/api/sql/databases/createorupdate) |Creates, updates, or restores a primary or a secondary database. |
-| [Get Create or Update Database Status](/rest/api/sql/databases/createorupdate) |Returns the status during a create operation. |
+| [Create or Update Database (createMode=Restore)](/rest/api/sql/2022-08-01-preview/databases/create-or-update) |Creates, updates, or restores a primary or a secondary database. |
+| [Get Create or Update Database Status](/rest/api/sql/2022-08-01-preview/databases/create-or-update) |Returns the status during a create operation. |
 | [Set Secondary Database as Primary (Planned Failover)](/rest/api/sql/replicationlinks/failover) |Sets which secondary database is primary by failing over from the current primary database. **This option is not supported for SQL Managed Instance.**|
 | [Set Secondary Database as Primary (Unplanned Failover)](/rest/api/sql/replicationlinks/failoverallowdataloss) |Sets which secondary database is primary by failing over from the current primary database. This operation might result in data loss. **This option is not supported for SQL Managed Instance.**|
 | [Get Replication Link](/rest/api/sql/replicationlinks/get) |Gets a specific replication link for a given database in a geo-replication partnership. It retrieves the information visible in the sys.geo_replication_links catalog view. **This option is not supported for SQL Managed Instance.**|
@@ -286,6 +286,7 @@ As discussed previously, active geo-replication can also be managed programmatic
   - [Configure and failover a pooled database using active geo-replication](scripts/setup-geodr-and-failover-elastic-pool-powershell.md).
 - SQL Database also supports auto-failover groups. For more information, see using [auto-failover groups](auto-failover-group-sql-db.md).
 - For a business continuity overview and scenarios, see [Business continuity overview](business-continuity-high-availability-disaster-recover-hadr-overview.md).
+- To learn about Azure SQL Database Hyperscale Geo-replica see [Hyperscale Geo-replica](service-tier-hyperscale-replicas.md#geo-replica)
 - To learn about Azure SQL Database automated backups, see [SQL Database automated backups](automated-backups-overview.md).
 - To learn about using automated backups for recovery, see [Restore a database from the service-initiated backups](recovery-using-backups.md).
 - To learn about authentication requirements for a new primary server and database, see [SQL Database security after disaster recovery](active-geo-replication-security-configure.md).

@@ -82,7 +82,7 @@ Find more information about the difference between hardware configurations in [S
 
 SQL Managed Instance is available in two service tiers:
 
-- **General purpose**: Designed for applications with typical performance and I/O latency requirements.
+- **General Purpose**: Designed for applications with typical performance and I/O latency requirements.
 - **Business Critical**: Designed for applications with low I/O latency requirements and minimal impact of underlying maintenance operations on the workload.
 
 Both service tiers guarantee 99.99% availability and enable you to independently select storage size and compute capacity. For more information on the high availability architecture of Azure SQL Managed Instance, see [High availability and Azure SQL Managed Instance](../database/high-availability-sla.md).
@@ -159,7 +159,7 @@ A new syntax is introduced to create Azure AD server principals (logins), **FROM
 
 ### Azure Active Directory integration and multi-factor authentication
 
-SQL Managed Instance enables you to centrally manage identities of database users and other Microsoft services with [Azure Active Directory integration](../database/authentication-aad-overview.md). This capability simplifies permission management and enhances security. Azure Active Directory supports [multi-factor authentication](../database/authentication-mfa-ssms-configure.md) to increase data and application security while supporting a single sign-on process.
+SQL Managed Instance enables you to centrally manage identities of database users and other Microsoft services with [Azure Active Directory integration](../database/authentication-aad-overview.md). This capability simplifies permission management and enhances security. Azure Active Directory supports [multi-factor authentication](../database/authentication-mfa-ssms-overview.md) to increase data and application security while supporting a single sign-on process.
 
 ### Authentication
 

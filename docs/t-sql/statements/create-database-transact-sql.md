@@ -4,7 +4,7 @@ description: Create database syntax for SQL Server, Azure SQL Database, Azure Sy
 author: markingmyname
 ms.author: maghan
 ms.reviewer: wiassaf
-ms.date: 05/31/2023
+ms.date: 07/18/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -1020,15 +1020,32 @@ The name of the new database. This name must be unique on the [!INCLUDE[ssNoVers
 
 #### *Collation_name*
 
-Specifies the default collation for the database. Collation name can be either a Windows collation name or a SQL collation name. If not specified, the database is assigned the default collation, which is SQL_Latin1_General_CP1_CI_AS.
+Specifies the default collation for the database data. Specify `CATALOG_COLLATION` for system metadata, such as object identifiers.
+
+Collation name can be either a Windows collation name or a SQL collation name. If not specified, the database is assigned the default collation, which is SQL_Latin1_General_CP1_CI_AS.
 
 For more information about the Windows and SQL collation names, [COLLATE (Transact-SQL)](../../t-sql/statements/collations.md).
 
 #### CATALOG_COLLATION
 
-Specifies the default collation for the metadata catalog. *DATABASE_DEFAULT* specifies that the metadata catalog used for system views and system tables be collated to match the default collation for the database. This is the behavior found in SQL Server.
+Specifies the default collation for the metadata catalog. The `CATALOG_COLLATION` argument is only available during database creation and cannot be changed after creation.
 
-*SQL_Latin1_General_CP1_CI_AS* specifies that the metadata catalog used for system views and tables be collated to a fixed SQL_Latin1_General_CP1_CI_AS collation. This is the default setting on Azure SQL Database if unspecified.
+By default, the metadata catalog for system object names is collated to *SQL_Latin1_General_CP1_CI_AS* collation. This is the default setting on Azure SQL Database if CATALOG_COLLATION is unspecified.
+
+*DATABASE_DEFAULT* specifies that the metadata catalog used for system views and system tables be collated to match the collation for the database. If you desire that object identifiers in system metadata follow the same collation as data, you should create the database `WITH CATALOG_COLLATION = DATABASE_DEFAULT`.
+
+- You may desire different collations for data and object identifiers. The following example creates the database with a case-sensitive collation for row data, but will use the default SQL_Latin1_General_CP1_CI_AS case-insensitive collation for object identifiers.
+
+   ```sql
+   CREATE DATABASE [different-collations] COLLATE SQL_Latin1_General_CP1_CS_AS
+   ```
+
+- If you desire that both data and system metadata use the same collation, specify `WITH CATALOG_COLLATION = DATABASE_DEFAULT`. The following example creates the database with a case-sensitive collation, which will be used for object identifiers.
+
+   ```sql
+   CREATE DATABASE [same-collations] COLLATE SQL_Latin1_General_CP1_CS_AS
+   WITH CATALOG_COLLATION = DATABASE_DEFAULT
+   ```
 
 #### BACKUP_STORAGE_REDUNDANCY = ['LOCAL' | 'ZONE' | 'GEO']
 
@@ -1100,7 +1117,7 @@ Specifies the compute size and service objective.
 - For DTU purchasing model: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`
 - For the latest vCore purchasing model, choose the tier and provide the number of vCores from a preset list of values, where the number of vCores is `n`. Refer to the [resource limits for single databases](/azure/azure-sql/database/resource-limits-vcore-single-databases) or [resource limits for elastic pools](/azure/azure-sql/database/resource-limits-vcore-elastic-pools).
     - For example: 
-    - `GP_Gen5_8` for General purpose Standard-series (Gen5) compute, 8 vCores.
+    - `GP_Gen5_8` for General Purpose Standard-series (Gen5) compute, 8 vCores.
     - `GP_S_Gen5_8` for General Purpose Serverless Standard-series (Gen5) compute, 8 vCores.
     - `HS_Gen5_8` for Hyperscale - provisioned compute - standard-series (Gen5), 8 vCores.
 
@@ -1134,8 +1151,6 @@ Databases in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] have several 
 
 To change the size, edition, or service objective values later, use [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-transact-sql.md?view=azuresqldb-current&preserve-view=true).
 
-The `CATALOG_COLLATION` argument is only available during database creation.
-
 ## Database Copies
 
 **Applies to:** Single and pooled databases only.
@@ -1157,7 +1172,7 @@ The following syntax and semantic rules apply to your use of the `AS COPY OF` ar
 For more information, see [Create a copy of an Azure SQL database using Transact-SQL](/azure/azure-sql/database/database-copy).
 
 > [!IMPORTANT]
-> By default, the database copy is created with the same backup storage redundancy as that of the source database. Changing the backup storage redundancy while creating a database copy is not supported via T-SQL. 
+> By default, the database copy is created with the same backup storage redundancy as that of the source database. 
 
 ## Permissions
 

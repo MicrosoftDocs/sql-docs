@@ -107,7 +107,7 @@ The driver will attempt to use existing credentials if they're available, before
 
 For more information, see [JAAS Login Configuration File](https://docs.oracle.com/javase/8/docs/technotes/guides/security/jgss/tutorials/LoginConfigFile.html) and [Class Krb5LoginModule](https://docs.oracle.com/javase/8/docs/jre/api/security/jaas/spec/com/sun/security/auth/module/Krb5LoginModule.html).
 
-Beginning in Microsoft JDBC Driver 6.2, the name of the login module configuration file can optionally be passed using the connection property `jaasConfigurationName`. This method allows each connection to have its own login configuration.
+Beginning in Microsoft JDBC Driver 6.2, the entry name of the login module configuration can be passed using the connection property `jaasConfigurationName`. This method allows each connection to have its own login configuration or use a name other than `SQLJDBCDriver`.
 
 ## Creating a Kerberos configuration file
 
@@ -225,7 +225,7 @@ Native platform GSS integration allows Java applications to use the native GSS-A
 GSSCredential credential = GSSManager.getInstance().createCredential(null, GSSCredential.DEFAULT_LIFETIME, new Oid("1.2.840.113554.1.2.2"), GSSCredential.ACCEPT_ONLY);
 
 SQLServerDataSource ds = new SQLServerDataSource();
-dataSource.setURL("jdbc:sqlserver://<server>;databaseName=<database>;integratedSecurity=true;authenticationScheme=JavaKerberos;");
+ds.setURL("jdbc:sqlserver://<server>;databaseName=<database>;integratedSecurity=true;authenticationScheme=JavaKerberos;");
 ds.setGSSCredentials(credential);
 ds.getConnection();
 

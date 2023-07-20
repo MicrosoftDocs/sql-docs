@@ -62,7 +62,7 @@ The following client drivers support Always Encrypted with secure enclaves:
 - Microsoft ODBC Driver for SQL Server, version 17.4 or higher. If you want to use VBS enclaves without attestation, version 18.1 or higher is required.
   - For more information, see [Using Always Encrypted with the ODBC Driver](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md).
   - For information on how to enable enclave computations for a database connection using ODBC, see the [Enabling Always Encrypted with Secure Enclaves](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#enabling-always-encrypted-with-secure-enclaves) section.
-- Microsoft JDBC Driver for SQL Server, version 8.2 or higher. If you want to use VBS enclaves without attestation, version 11.2.1 or higher is required.
+- Microsoft JDBC Driver for SQL Server, version 8.2 or higher. If you want to use VBS enclaves without attestation, version 12.2 or higher is required.
   - For more information, see [Using Always Encrypted with secure enclaves with the JDBC driver](../../../connect/jdbc/using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver.md)
 - .NET Framework Data Provider for SQL Server in .NET Framework 4.7.2 or higher.
   - For more information, see [Using Always Encrypted with the .NET Framework Data Provider for SQL Server](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md).

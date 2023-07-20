@@ -166,14 +166,6 @@ ORDER BY event_time;
 GO
 ```
 
-This example reads all audit logs from servers that begin with `Sh`:
-
-```sql
-SELECT *
-FROM sys.fn_get_audit_file('https://mystorage.blob.core.windows.net/sqldbauditlogs/Sh*', DEFAULT, DEFAULT);
-GO
-```
-
 For a full example about how to create an audit, see [SQL Server Audit (Database Engine)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).
 
 For information on setting up Azure SQL Database auditing, see [Get Started with SQL Database auditing](/azure/sql-database/sql-database-auditing).

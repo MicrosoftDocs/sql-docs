@@ -4,7 +4,7 @@ description: "Verifies the database ledger and the table ledgers using digests a
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 05/23/2023
+ms.date: 06/13/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -63,7 +63,7 @@ Example of the input JSON document:
 
 ## Return code values
 
-0 (success) or 1 (failure).
+`0` (success) or `1` (failure).
 
 ## Result sets
 

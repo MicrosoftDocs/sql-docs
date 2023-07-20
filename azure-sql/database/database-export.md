@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Export a database to a BACPAC file using the Azure portal or a CLI
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma
+ms.reviewer: mathoma, jeschult
 ms.date: 9/29/2022
 ms.service: sql-db-mi
 ms.subservice: data-movement
@@ -26,7 +26,7 @@ When you need to export a database for archiving or for moving to another platfo
 - Exporting a BACPAC file to Azure premium storage using the methods discussed in this article is not supported.
 - Storage behind a firewall is currently not supported.
 - Immutable storage is currently not supported.
-- Storage file name or the input value for StorageURI should be fewer than 128 characters long and cannot end with '.' and cannot contain special characters like a space character or '<,>,*,%,&,:,\,/,?'.
+- Storage file name or the input value for StorageURI should be fewer than 128 characters long and cannot end with '.' and cannot contain special characters like a space character or '<, >, *, %, &, :, \, /, ?'.
 - If the export operation exceeds 20 hours, it may be canceled. To increase performance during export, you can:
 
   - Temporarily increase your compute size.
@@ -108,7 +108,7 @@ $exportStatus
 ```
 ## Cancel the export request
 
-Use the [Database Operations - Cancel API](/rest/api/sql/databaseoperations/cancel)
+Use the [Database Operations - Cancel API](/rest/api/sql/2022-08-01-preview/database-operations/cancel)
 or the PowerShell [Stop-AzSqlDatabaseActivity command](/powershell/module/az.sql/Stop-AzSqlDatabaseActivity) to cancel an export request. Here is an example PowerShell command:
 
 ```cmd

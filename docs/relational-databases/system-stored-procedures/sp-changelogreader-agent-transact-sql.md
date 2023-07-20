@@ -3,7 +3,7 @@ title: "sp_changelogreader_agent (Transact-SQL)"
 description: "sp_changelogreader_agent (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
-ms.date: "06/15/2018"
+ms.date: 07/15/2023
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -46,7 +46,12 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
 >  When possible, prompt users to enter security credentials at runtime. If you must store credentials in a script file, you must secure the file to prevent unauthorized access.  
   
 `[ @publisher_security_mode = ] publisher_security_mode`
- Is the security mode used by the agent when connecting to the Publisher. *publisher_security_mode* is **smallint**, with a default of NULL. **0** specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, and **1** specifies Windows Authentication.  
+ Is the security mode used by the agent when connecting to the Publisher. *publisher_security_mode* is **smallint**, with a default of NULL. The following values define the security mode: 
+- **0** specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. 
+- **1** specifies Windows Authentication.  
+- **2** specifies Azure Active Directory (Azure AD) Password Authentication starting with SQL Server 2022 CU 6. 
+- **3** specifies Azure AD Integrated Authentication starting with SQL Server 2022 CU 6. 
+- **4** specifies Azure AD Token Authentication starting with SQL Server 2022 CU 6. 
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  

@@ -4,7 +4,7 @@ description: "This tutorial shows how to create an Always On availability group 
 author: tarynpratt
 ms.author: tarynpratt
 ms.reviewer: mathoma
-ms.date: 04/18/2023
+ms.date: 07/10/2023
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: tutorial
@@ -227,7 +227,7 @@ To create the backup file share, follow these steps:
 
 7. On **Customize Permissions**, select **Add...**.
 
-8. Check **Full Control** to grant full access to the share for *both* SQL Server service accounts (`Corp\SQLSvc1` and `Corp\SQLSvc2`):  
+8. Check **Full Control** to grant full access to the share the SQL Server service account (`Corp\SQLSvc`):  
 
    :::image type="content" source="./media/availability-group-manually-configure-tutorial-multi-subnet/10-backup-share-permission.png" alt-text="Make sure that the SQL Server service accounts for both servers have full control.":::
 

@@ -41,7 +41,7 @@ In which you create an embedded dataset, choose a shared data source, and create
   
      The **Getting Started** dialog box appears.  
   
-     ![Report Builder Get Started](../reporting-services/media/rb-getstarted.png "Report Builder Get Started")  
+    :::image type="content" source="media/tutorial-add-a-bar-chart-to-your-report-report-builder/report-builder-get-started.png" alt-text="Screenshot of Report Builder Get Started dialog box.":::
   
      If you don't see the **Getting Started** dialog box, click **File** >**New**. The **New Report or Dataset** dialog box has most of the same contents as the **Getting Started** dialog box. 
       

@@ -80,10 +80,8 @@
           href: database/authentication-aad-overview.md
         - name: Configure Azure AD auth
           href: database/authentication-aad-configure.md
-        - name: Multi-factor Azure AD auth
+        - name: Azure AD multi-factor auth
           href: database/authentication-mfa-ssms-overview.md
-        - name: Configure multi-factor auth
-          href: database/authentication-mfa-ssms-configure.md
         - name: Conditional Access
           href: database/conditional-access-configure.md
         - name: Server principals (logins)
@@ -657,9 +655,11 @@
         href: database/manage-data-after-migrating-to-database.md
       - name: Migrate to passwordless
         items: 
-        - name: Migrate an application
+        - name: Migrate a .NET application
           href: database/azure-sql-passwordless-migration.md
-        - name: Migrate a Python application 
+        - name: Migrate a Node.js application
+          href: database/azure-sql-passwordless-migration-nodejs.md
+        - name: Migrate a Python application
           href: database/azure-sql-passwordless-migration-python.md
 
 
@@ -1416,6 +1416,8 @@
           
     - name: Configure settings
       items: 
+      - name: tempdb
+        href: managed-instance/tempdb-configure.md
       - name: Customize time zone
         href: managed-instance/timezones-overview.md
       - name: Configure connection types

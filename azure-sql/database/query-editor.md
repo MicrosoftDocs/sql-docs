@@ -1,11 +1,11 @@
 ---
-title: Query editor
+title: Azure portal Query editor
 titleSuffix: Azure SQL Database
-description: Learn about Query editor in the Azure portal.
+description: Learn how to run T-SQL queries all from within the browser via the Azure portal Query editor for Azure SQL Database.
 author: grrlgeek
 ms.author: jeschult
 ms.reviewer: wiassaf, mbarickman
-ms.date: 06/04/2023
+ms.date: 07/06/2023
 ms.service: sql-database
 ms.subservice: development
 ms.topic: conceptual
@@ -21,18 +21,25 @@ keywords:
   - query editor
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
-# Query editor
+# Azure portal Query editor for Azure SQL Database
+[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-The Query editor (preview) is a tool to run SQL queries against Azure SQL Database in the Azure portal. It's designed for lightweight querying and object exploration in your database. You can run T-SQL queries against your database, as well as edit data in the build-in tabular [data editor](#data-editor).
+The Query editor (preview) is a tool to run T-SQL queries in the Azure portal in the browser against Azure SQL Database. This article details authentication, capabilities, and other details on the Azure portal Query editor for Azure SQL Database.
 
-- For a quickstart on the query editor, see [Quickstart: Use the Azure portal query editor (preview)](connect-query-portal.md).
+- For a quickstart on the Azure portal Query editor, see [Quickstart: Use the Azure portal query editor (preview)](connect-query-portal.md).
 - For more advanced object explorer capabilities and management functions, use [Azure Data Studio](/sql/azure-data-studio/quickstart-sql-database) or [SQL Server Management Studio (SSMS)](connect-query-ssms.md).
+
+## Query your Azure SQL Database from the Azure portal
+
+The Query editor is designed for lightweight querying and object exploration in your Azure SQL database, all from within the browser in the Azure portal. You can run T-SQL queries against your database, as well as edit data in the build-in tabular [data editor](#data-editor).
+
+Similar to the query experience in SQL Server Management Studio, use the Query editor for both simple queries or larger T-SQL queries. You can execute Data Manipulation Language (DML) and Data Definition Language (DDL) queries.
 
 ## Connect via the query editor
 
 There are two authentication options for query editor: SQL Authentication or Azure Active Directory (Azure AD) Authentication.
 
-### Authentication
+### Authentication to Azure SQL Database
 
 For examples, see [Quickstart: Use the Azure portal query editor (preview) to query Azure SQL Database](connect-query-portal.md).
 
@@ -68,13 +75,27 @@ There are four tasks you can perform in the navigation bar.
 
 The object explorer allows you to view and perform tasks against your database's tables, views, and stored procedures. 
 
-- Expand **Tables** to view the list of tables in your database. Expand the table to see the columns in the table. Use the ellipses to select the top 1,000 rows, access Data Editor, or rename the table. If you rename a table, use the refresh arrow to see the changes. 
-- Expand **Views** to view a list of views in your database. Expand the view to see the columns in the view. Use the ellipses to select the top 1,000 rows or rename the view. If you rename a view, use the refresh arrow to see the changes. 
-- Expand **Stored Procedures** to view a list of all stored procedures in your database. Expand a stored procedure to see the output of the stored procedure. Use the ellipses to view the definition of the stored procedure in the query window. 
+- Expand **Tables** to view the list of tables in your database. Expand the table to see the columns in the table. Use the ellipses to select the top 1,000 rows, access the [Data editor](#data-editor), or rename the table. If you rename a table, use the refresh arrow to see the changes. 
+- Expand **Views** to view a list of views in your database. Expand the view to see the columns in the view. Use the ellipses to select the top 1,000 rows or rename the view. If you rename a view, use the refresh arrow to see the changes.
+- Expand **Stored Procedures** to view a list of all stored procedures in your database. Expand a stored procedure to see the output of the stored procedure. Use the ellipses to view the definition of the stored procedure in the query window.
 
-#### Data editor
+### Query window
 
-The data editor allows you to modify data in an existing row, add a new row of data to the table, or delete a row of data. To access data editor, in the object explorer expand **Tables**, then select the ellipses to the right of the table name and select **Edit Data (Preview)**.
+This window allows you to type or paste a query, then run it. The results of the query are shown in the **Results** pane.
+
+You can cancel your query. As noted under [Considerations and limitations](#considerations-and-limitations), there's a five-minute timeout period. 
+
+The **Save query** button allows you to save the query text to your computer as a *.sql* file.
+
+The **Export data as** button allows you to export the query results to your computer as a *.json*, *.csv*, or *.xml* file.
+
+The query execution time, or errors, are shown in the bottom bar.
+
+## Data editor
+
+The data editor allows you to modify data in an existing row, add a new row of data to the table, or delete a row of data. This is similar to the experience in SQL Server Management Studio (SSMS).
+
+To access data editor, in the object explorer expand **Tables**, then select the ellipses to the right of the table name and select **Edit Data (Preview)**.
 
 **To modify data** in an existing row, select the value you want to change, make your change, and then select **Save** at the top.
 
@@ -90,33 +111,29 @@ The data editor allows you to modify data in an existing row, add a new row of d
 
 - If the row has a primary key, and that primary key has a foreign key relationship to another table, when the row is deleted, the related rows in the other table(s) will also be deleted.
 
-### Query window
-
-This window allows you to type or paste a query, then run it. The results of the query are shown in the **Results** pane. 
-
-You can cancel your query. As noted under [Considerations and limitations](#considerations-and-limitations), there's a five-minute timeout period. 
-
-The **Save query** button allows you to save the query text to your computer as a *.sql* file.
-
-The **Export data as** button allows you to export the query results to your computer as a *.json*, *.csv*, or *.xml* file.
-
-The query execution time, or errors, are shown in the bottom bar. 
-
 ## Considerations and limitations
 
-The following considerations and limitations apply when connecting to and querying Azure SQL Database with the query editor.
+The following considerations and limitations apply when connecting to and querying Azure SQL Database with the Azure portal query editor.
 
 ### Query editor limitations
 
 - If your query has multiple statements, only the results of the last statement are shown in the **Results** tab.
-- The query editor doesn't support connecting to the logical server's `master` database. To connect to the `master` database, use [Azure Data Studio](/sql/azure-data-studio/quickstart-sql-database) or [SQL Server Management Studio (SSMS)](connect-query-ssms.md).
+- The query editor doesn't support connecting to the logical server's `master` database. To connect to the `master` database, use [other tools to query your Azure SQL Database](#other-ways-to-query-your-azure-sql-database).
 - The query editor can't connect to a [replica database](read-scale-out.md) with `ApplicationIntent=ReadOnly`. To connect in this way, use SSMS and specify `ApplicationIntent=ReadOnly` on the **Additional Connection Parameters** tab in connection options. For more information, see [Connect to a read-only replica](/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover#ConnectToSecondary).
-- The query editor has a 5-minute timeout for query execution. To run longer queries, use [Azure Data Studio](/sql/azure-data-studio/quickstart-sql-database) or [SSMS](connect-query-ssms.md).
+- The query editor has a 5-minute timeout for query execution. To run longer queries, use [other tools to query your Azure SQL Database](#other-ways-to-query-your-azure-sql-database).
 - The query editor only supports cylindrical projection for geography data types.
-- The query editor doesn't support IntelliSense for database tables and views, but supports autocomplete for names that have already been typed. For IntelliSense support, use [Azure Data Studio](/sql/azure-data-studio/quickstart-sql-database) or [SSMS](connect-query-ssms.md).
+- The query editor doesn't support IntelliSense for database tables and views, but supports autocomplete for names that have already been typed. For IntelliSense support, use [other tools to query your Azure SQL Database](#other-ways-to-query-your-azure-sql-database).
 - Pressing **F5** refreshes the query editor page, and any query currently in the editor isn't saved.
 
-### Connection considerations
+### Other ways to query your Azure SQL Database
+
+In addition to the Azure portal Query editor for Azure SQL Database, consider the following quickstarts for other tools:
+
+- [Quickstart: Use Azure Data Studio to connect and query Azure SQL Database](/sql/azure-data-studio/quickstart-sql-database)
+- [Quickstart: Use SSMS to connect to and query Azure SQL Database or Azure SQL Managed Instance](connect-query-ssms.md)
+- [Quickstart: Use Visual Studio Code to connect and query](connect-query-vscode.md)
+
+## Connection considerations
 
 - For public connections to the query editor, you need to [add your outbound IP address to the server's allowed firewall rules](firewall-create-server-level-portal-quickstart.md) to access your databases.
     - You don't need to add your IP address to the SQL server firewall rules if you have a Private Link connection set up on the server, and you connect to the server from within the private virtual network.
@@ -177,7 +194,3 @@ The following considerations and limitations apply when connecting to and queryi
 - [What is Azure SQL?](../azure-sql-iaas-vs-paas-what-is-overview.md)
 - [Azure SQL glossary of terms](../glossary-terms.md)
 - [T-SQL differences between SQL Server and Azure SQL Database](transact-sql-tsql-differences-sql-server.md)
-- [Quickstart: Use Azure Data Studio to connect and query Azure SQL Database](/sql/azure-data-studio/quickstart-sql-database)
-- [Quickstart: Use SSMS to connect to and query Azure SQL Database or Azure SQL Managed Instance](connect-query-ssms.md)
-- [Quickstart: Use Visual Studio Code to connect and query](connect-query-vscode.md)
-- [Quickstart: Use the Azure portal query editor (preview) to query Azure SQL Database](connect-query-portal.md)

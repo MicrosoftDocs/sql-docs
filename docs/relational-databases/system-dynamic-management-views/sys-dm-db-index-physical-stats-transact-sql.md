@@ -3,7 +3,7 @@ title: "sys.dm_db_index_physical_stats (Transact-SQL)"
 description: sys.dm_db_index_physical_stats (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 05/16/2023
+ms.date: 06/19/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -85,7 +85,7 @@ The name of the mode. *mode* specifies the scan level that is used to obtain sta
 
 | Column name | Data type | Description |
 | --- | --- | --- |
-| database_id | **smallint** | Database ID of the table or view. |
+| database_id | **smallint** | Database ID of the table or view. <br /><br />In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the values are unique within a single database or an elastic pool, but not within a logical server.|
 | object_id | **int** | Object ID of the table or view that the index is on. |
 | index_id | **int** | Index ID of an index.<br /><br />0 = Heap. |
 | partition_number | **int** | 1-based partition number within the owning object; a table, view, or index.<br /><br />1 = Nonpartitioned index or heap. |

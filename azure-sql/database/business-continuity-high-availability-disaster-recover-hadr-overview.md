@@ -2,8 +2,8 @@
 title: Cloud business continuity - disaster recovery
 titleSuffix: Azure SQL Database 
 description: Learn how Azure SQL Database supports cloud business continuity and disaster recovery to help keep mission-critical cloud applications running.
-author: AbdullahMSFT
-ms.author: amamun
+author: rajeshsetlem
+ms.author: rsetlem
 ms.reviewer: wiassaf, mathoma
 ms.date: 05/01/2023
 ms.service: sql-database

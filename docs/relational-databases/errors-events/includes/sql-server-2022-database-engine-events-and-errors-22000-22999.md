@@ -2,10 +2,10 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 04/21/2023
+ms.date: 07/06/2023
 ms.topic: include
 ---
-| Error| Severity | Event logged | Description|
+| Error | Severity | Event logged | Description |
 | :--- | :--- | :--- | :--- |
 | 22001 | 16 | No | FreeStaleVersionSpace failed for page %S_PGID for database id '%d'. It will be retired in the next iteration of the version cleaner. |
 | 22002 | 17 | No | Internal Error: An expected large object wasn't found. |
@@ -47,7 +47,7 @@ ms.topic: include
 | 22119 | 16 | No | Cannot enable change tracking on table '%.\*ls'. Change tracking requires a primary key constraint on the table to be enabled. Enable the primary key constraint on the table before enabling change tracking. |
 | 22120 | 16 | No | Invalid value for cleanup batch size. |
 | 22121 | 16 | No | Deleted %ld row(s) per millisecond from %s |
-| 22122 | 16 | No | Change Tracking autocleanup failed on side table of "%s".  If the failure persists, use sp_flush_CT_internal_table_on_demand to clean up expired records from its side table. |
+| 22122 | 16 | No | Change Tracking autocleanup failed on side table of "%s". If the failure persists, use sp_flush_CT_internal_table_on_demand to clean up expired records from its side table. |
 | 22123 | 16 | No | Change Tracking autocleanup is blocked on side table of "%s". If the failure persists, check if the table "%s" is blocked by any process . |
 | 22124 | 16 | No | Change Tracking manual cleanup is blocked on side table of "%s". If the failure persists, check if the table "%s" is blocked by any process . |
 | 22125 | 16 | No | Change tracking autocleanup is currently not able to maintain retention for database ID %d. Number of expired records: %d. If this warning persists, check the following resource: [https://learn.microsoft.com/sql/relational-databases/track-changes/cleanup-and-troubleshoot-change-tracking-sql-server](../../track-changes/cleanup-and-troubleshoot-change-tracking-sql-server.md) |
@@ -58,7 +58,7 @@ ms.topic: include
 | 22205 | 16 | No | Internal error. Unable to get catalog information via the catalog helper. |
 | 22206 | 16 | No | Internal error. Unable to get lock for protected shared buffer |
 | 22207 | 16 | No | Internal error. Unable to get a valid dbtable. Error Code 22207. |
-| 22208 | 16 | No | Access to  DW Tiered Storage ColumnStore blob failed. See earlier errors for cause. |
+| 22208 | 16 | No | Access to DW Tiered Storage ColumnStore blob failed. See earlier errors for cause. |
 | 22209 | 16 | No | Internal error. Unable to populate instance member list. |
 | 22210 | 16 | No | Internal error. Unable to get instance member. |
 | 22211 | 16 | No | Internal error. Invalid instance member state. |
@@ -209,7 +209,7 @@ ms.topic: include
 | 22424 | 17 | No | %ls is not a supported statement type. |
 | 22425 | 17 | No | %ls is not a supported option in %ls statement. |
 | 22426 | 16 | No | Failed to get the client id from the Resource Manager. |
-| 22427 | 16 | No | Operation failed due to an error in a background task.  Please retry the operation again. If the problem persists contact Microsoft Azure Customer Support. |
+| 22427 | 16 | No | Operation failed due to an error in a background task. Please retry the operation again. If the problem persists contact Microsoft Azure Customer Support. |
 | 22428 | 16 | No | Failed to Begin a new transaction as a valid one already exists. Please Commit or Rollback the existing transaction before starting a new one. |
 | 22429 | 16 | No | Dropping multiple objects including Temp table is not supported in this version of SQL Server |
 | 22430 | 16 | No | Operation failed as the Database '%.\*ls' is shutting down. Please retry the operation again. If the problem persists contact Microsoft Azure Customer Support. |
@@ -258,7 +258,7 @@ ms.topic: include
 | 22473 | 16 | No | %ls is allowed only when connected to the logical master of a Synapse workspace. |
 | 22474 | 16 | No | DBCC CHECKIDENTITY with NORESEED is not supported in Azure Synapse Analytics |
 | 22475 | 17 | No | Failed to set the undrop time of object: '%I64d' as it was not found or drop was not tracked. TxnId %I64d. |
-| 22476 | 16 | No | Toad index tuning policy check failed.  See other errors and telemetry for details. |
+| 22476 | 16 | No | Toad index tuning policy check failed. See other errors and telemetry for details. |
 | 22477 | 16 | No | The period of %ld %S_MSG is too big for data retention. |
 | 22478 | 16 | No | Retention Policy is not supported on temporary table |
 | 22479 | 16 | No | Failed to Alter Column as a concurrent Alter Column transaction has been detected. |
@@ -412,7 +412,7 @@ ms.topic: include
 | 22740 | 16 | No | Parameter '%s' is invalid. Specify a valid value for the named parameter and retry the operation. |
 | 22741 | 16 | No | Landing Zone parameter is not valid on Azure Database. |
 | 22742 | 16 | No | Schema changes on table '%s' are not supported because it is enabled for change feed. |
-| 22743 | 16 | No | There is an issue with cleaning up metadata of some of the table groups of this database.  Retry by dropping the table groups first and then disable Change Feed on the database. |
+| 22743 | 16 | No | There is an issue with cleaning up metadata of some of the table groups of this database. Retry by dropping the table groups first and then disable Change Feed on the database. |
 | 22744 | 16 | No | Cannot disable primary key index "%.\*ls" on table "%.\*ls" because the table has change feed enabled on it. |
 | 22745 | 16 | No | Cannot alter the table '%.\*ls' because it has change feed enabled on it. |
 | 22746 | 10 | No | Change Feed |
@@ -423,13 +423,13 @@ ms.topic: include
 | 22751 | 16 | No | ALTER TABLE SWITCH statement failed because the partitioned source table is enabled for Change Feed. |
 | 22752 | 16 | No | Snapshot DATA_EXPORT query failed. |
 | 22753 | 16 | No | The number of tables enabled for a Change Feed table group can not exceed %d. Current number of table enabled: %d. |
-| 22754 | 16 | No | Aborting Synapse Link Capture task for this database timed out.  Retry this operation later. |
+| 22754 | 16 | No | Aborting Synapse Link Capture task for this database timed out. Retry this operation later. |
 | 22755 | 16 | No | Change Feed is not supported on Free, Basic or Standard tier Single Database (S0,S1,S2) and Database in Elastic pool with max eDTUs \< 100 or max vCore \< 1. Please upgrade to a higher Service Objective. |
 | 22756 | 16 | No | The elastic pool cannot lower its service tier with database max eDTUs \< 100 or max vCore \< 1 since one or more of its database(s) use Change Feed. |
 | 22757 | 16 | No | The database cannot lower its service tier to Standard(S0,S1,S2), Basic or Free, or move to elastic pool with database max eDTUs \< 100 or max vCore \< 1 since it has Change Feed enabled. |
-| 22758 | 16 | No | Aborting Synapse Link Commit task for table group '%s' timed out.  Retry this operation later. |
-| 22759 | 16 | No | Aborting Synapse Link Snapshot task for table %ld timed out.  Retry this operation later. |
-| 22760 | 16 | No | Aborting Synapse Link Publish task for partition %ld timed out.  Retry this operation later. |
+| 22758 | 16 | No | Aborting Synapse Link Commit task for table group '%s' timed out. Retry this operation later. |
+| 22759 | 16 | No | Aborting Synapse Link Snapshot task for table %ld timed out. Retry this operation later. |
+| 22760 | 16 | No | Aborting Synapse Link Publish task for partition %ld timed out. Retry this operation later. |
 | 22761 | 16 | No | Failed to cleanup previous change feed setup. Please try the operation again. If the problem persists contact Microsoft Azure Customer Support. |
 | 22762 | 16 | No | Cannot enable '%S_MSG' on '%s' because it is being used for '%S_MSG'. |
 | 22763 | 10 | No | Replication: Distribution |
@@ -469,14 +469,14 @@ ms.topic: include
 | 22809 | 10 | No | The existing conflict table '%s' was dropped. |
 | 22810 | 16 | No | The @action parameter value is not valid. Valid values are 'enable' and 'disable'. |
 | 22811 | 16 | No | The roundtrip time-out must be greater than 0. |
-| 22812 | 10 | No | The roundtrip '%s' finished with timeout:  %d seconds. |
+| 22812 | 10 | No | The roundtrip '%s' finished with timeout: %d seconds. |
 | 22813 | 10 | No | The topology contains peer node versions that do not support conflict detection. To use conflict detection, ensure that all nodes in the topology are SQL Server 2008 or later versions. |
 | 22814 | 10 | No | The topology contains a duplicate originator ID. To use conflict detection, the originator ID must be unique across the topology. |
-| 22815 | 10 | No | A conflict of type '%s' was detected at peer %d between peer %d (incoming), transaction id %s  and peer %d (on disk), transaction id %s for Table '%s' with Primary Key(s): %s Current Version '%s', Pre-Version '%s' and Post-Version '%s' |
+| 22815 | 10 | No | A conflict of type '%s' was detected at peer %d between peer %d (incoming), transaction id %s and peer %d (on disk), transaction id %s for Table '%s' with Primary Key(s): %s Current Version '%s', Pre-Version '%s' and Post-Version '%s' |
 | 22816 | 16 | No | The qualified table name '%s' is too long to be enabled for peer-to-peer conflict detection. |
 | 22817 | 10 | No | %s has %s. |
 | 22818 | 10 | No | A delete-delete conflict was detected and resolved. The row could not be deleted from the peer since the row does not exist. The incoming delete was skipped. |
-| 22819 | 10 | No | A delete-update conflict between peer %d (incoming) and peer %d (on disk) was detected and could not be resolved automatically.  The incoming delete was skipped by peer %d. The conflict has to be resolved manually to guarantee data convergence between the peers. For steps on how to resolve the conflict refer to BOL. |
+| 22819 | 10 | No | A delete-update conflict between peer %d (incoming) and peer %d (on disk) was detected and could not be resolved automatically. The incoming delete was skipped by peer %d. The conflict has to be resolved manually to guarantee data convergence between the peers. For steps on how to resolve the conflict refer to BOL. |
 | 22820 | 10 | No | A delete-update conflict between peer %d (incoming) and peer %d (on disk) was detected and resolved. The incoming delete was applied to peer %d. |
 | 22821 | 10 | No | An update-update conflict between peer %d (incoming) and peer %d (on disk) was detected and resolved. The incoming update was skipped by peer %d. |
 | 22822 | 10 | No | An update-update conflict between peer %d (incoming) and peer %d (on disk) was detected and resolved. The incoming update was applied to peer %d. |
@@ -532,7 +532,7 @@ ms.topic: include
 | 22878 | 16 | No | The @p2p_conflictdetection_policy parameter value is not valid. Valid values are 'originatorid' and 'lastwriter'. |
 | 22879 | 16 | No | Peer-to-peer publications with last writer conflict detection policy only supports CALL or SCALL command type for @upd_cmd. Change the value for parameter '@upd_cmd'. |
 | 22880 | 16 | No | An insert-insert conflict between peer %d (incoming) with commit datetime value of '%s' and peer %d (on disk) with commit datetime value of '%s' was detected and resolved. The incoming insert was applied to peer %d. |
-| 22881 | 16 | No | A conflict of type '%s' was detected at peer %d between peer %d (incoming), transaction id %s, commit datetime '%s'  and peer %d (on disk), transaction id %s, commit datetime '%s' for Table '%s' with Primary Key(s): %s Current Version '%s', Pre-Version '%s' and Post-Version '%s' |
+| 22881 | 16 | No | A conflict of type '%s' was detected at peer %d between peer %d (incoming), transaction id %s, commit datetime '%s' and peer %d (on disk), transaction id %s, commit datetime '%s' for Table '%s' with Primary Key(s): %s Current Version '%s', Pre-Version '%s' and Post-Version '%s' |
 | 22882 | 10 | No | An update-update conflict between peer %d (incoming) with commit dateime value of '%s' and peer %d (on disk) with commit datetime value of '%s' was detected and resolved. The incoming update was skipped by peer %d. |
 | 22883 | 10 | No | An update-update conflict between peer %d (incoming) with commit datetime value of '%s' and peer %d (on disk) with commit datetime value of '%s' was detected and resolved. The incoming update was applied to peer %d. |
 | 22884 | 10 | No | An delete-update conflict between peer %d (incoming) with commit datetime value of '%s' and peer %d (on disk) with commit datetime value of '%s'was detected and resolved. The incoming delete was skipped by peer %d. |
@@ -552,7 +552,7 @@ ms.topic: include
 | 22907 | 16 | No | Parameter @role_name cannot be empty. Specify a value for @role_name and retry the operation. Supply null as the value if no role is to be used to gate access to captured change data. |
 | 22908 | 16 | No | Could not create the Change Data Capture objects in database '%s'. Refer to previous errors in the current session to identify the cause and correct any associated problems. |
 | 22909 | 16 | No | Failed to cleanup the cdc.lsn_time_mapping table in database '%s' when the last database table enabled for Change Data Capture was disabled. Refer to previous errors in the current session to identify the cause and correct any associated problems. |
-| 22910 | 16 | No | The cleanup request for database '%s' failed.  The database is not enabled for Change Data Capture. |
+| 22910 | 16 | No | The cleanup request for database '%s' failed. The database is not enabled for Change Data Capture. |
 | 22911 | 16 | No | The capture job cannot be used by Change Data Capture to extract changes from the log when transactional replication is also enabled on the same database. When Change Data Capture and transactional replication are both enabled on a database, use the logreader agent to extract the log changes. |
 | 22913 | 16 | No | Could not drop the Change Data Capture objects in database '%s'. Refer to previous errors in the current session to identify the cause and correct any associated problems. |
 | 22914 | 16 | No | Only members of the sysadmin or db_owner or db_ddladmin roles can perform this operation when Change Data Capture is enabled for a database. |

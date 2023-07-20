@@ -49,7 +49,7 @@ Use the following table to determine which file to download and install. Verify 
 ### 2.2 Setup Might Fail if SQAGTRES.dll Is Locked by Another Process  
 **Issue**: A SQL Server setup operation might fail with this error: `Upgrading of cluster resource C:\Program Files\Microsoft SQL Server\MSSQL10_50.<Instance name>\MSSQL\Binn\SQAGTRES.DLL on machine <Computer name> failed with Win32Exception. Please look at inner exception for details.` The root cause is that C:\Windows\system32\SQAGTRES.DLL is locked by another process and Setup was not able to update it.  
   
-**Workaround**: Rename C:\Windows\system32\SQAGTRES.DLL to a temporary name such as C:\Windows\system32\SQAGTRES_old.DLL, and then select the Retry option on the setup error message. That will allow Setup to continue. After a reboot, you can delete the temporary file C:\Windows\system32\SQAGTRES_old.DLL.  
+**Workaround**: Rename C:\Windows\system32\SQAGTRES.DLL to a temporary name such as C:\Windows\system32\SQAGTRES_old.DLL, and then select the Retry option on the setup error message. That will allow Setup to continue. After a restart, you can delete the temporary file C:\Windows\system32\SQAGTRES_old.DLL.  
   
 ## 3.0 Known Issues Fixed in this Service Pack  
 For a complete list of bugs and known issues fixed in this service pack, see this [master KB article](https://support.microsoft.com/kb/2630455).  

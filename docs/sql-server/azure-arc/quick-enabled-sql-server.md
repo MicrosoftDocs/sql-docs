@@ -38,12 +38,6 @@ In this quickstart, you'll deploy and configure the Azure Connected Machine agen
 
 Use the Azure portal to create a script that automates the agent download and installation and establishes the connection with Azure Arc.
 
-<!--1. Launch the Azure Arc service in the Azure portal by searching for and selecting **Servers - Azure Arc**.
-
-   :::image type="content" source="media/quick-enable-hybrid-vm/search-machines.png" alt-text="Search for Azure Arc-enabled servers in the Azure portal.":::
-
-1. On the **Servers - Azure Arc** page, select **Add** near the upper left.-->
-
 1. [Go to the Azure portal page for adding servers with Azure Arc](https://portal.azure.com/#view/Microsoft_Azure_HybridCompute/HybridVmAddBlade). Select the **Add a single server** tile, then select **Generate script**.
 
     > [!NOTE]

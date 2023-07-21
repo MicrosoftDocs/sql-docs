@@ -5,7 +5,6 @@ author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
 ms.date: 03/08/2023
-ms.service: sql
 ms.topic: conceptual
 ms.custom: references_regions
 ---

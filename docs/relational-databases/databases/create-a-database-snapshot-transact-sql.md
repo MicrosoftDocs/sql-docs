@@ -4,7 +4,7 @@ description: "Find out how to create a SQL Server database snapshot by using Tra
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 05/04/2023
+ms.date: 07/21/2023
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
@@ -87,7 +87,7 @@ Any user who can create a database can create a database snapshot; however, to c
 
 1. Based on the current size of the source database, ensure that you have sufficient disk space to hold the database snapshot. The maximum size of a database snapshot is the size of the source database at snapshot creation. For more information, see [View the Size of the Sparse File of a Database Snapshot (Transact-SQL)](view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md).
 
-1. Issue a CREATE DATABASE statement on the files using the AS SNAPSHOT OF clause. Creating a snapshot requires specifying the logical name of every database file of the source database. The syntax is as follows:
+1. Issue a CREATE DATABASE statement on the files using the `AS SNAPSHOT OF`` clause. Creating a snapshot requires specifying the logical name of every database file of the source database. The syntax is as follows:
 
    ```syntaxsql
    CREATE DATABASE database_snapshot_name
@@ -110,16 +110,16 @@ Any user who can create a database can create a database snapshot; however, to c
    | '*os_file_name*' | The path and file name used by the operating system when you create the file. |
    | *source_database_name* | The source database. |
 
-   For a full description of this syntax, see [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md).
+   For a full description of this syntax, see [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md#as-snapshot-of-source_database_name).
 
    > [!NOTE]  
-   >  When you create a database snapshot, log files, offline files, restoring files, and defunct files are not allowed in the `CREATE DATABASE` statement.
+   > When you create a database snapshot, log files, offline files, restoring files, and defunct files are not allowed in the `CREATE DATABASE` statement.
 
 ## Examples
 
 The `.ss` extension used in these examples is for convenience, and is not required.
 
-#### A. Create a snapshot on the `AdventureWorks` database
+#### A. Create a snapshot on the AdventureWorks database
 
 This example creates a database snapshot on the `AdventureWorks` database. The snapshot name, `AdventureWorks_dbss_1800`, and the file name of its sparse file, `AdventureWorks_data_1800.ss`, indicate the creation time of 6 P.M. (1800 hours).
 
@@ -131,7 +131,7 @@ CREATE DATABASE AdventureWorks_dbss1800 ON (
 GO
 ```
 
-#### B. Create a snapshot on the `Sales` database
+#### B. Create a snapshot on the Sales database
 
 This example creates a database snapshot, `sales_snapshot1200`, on the `Sales` database, which is the same example database from [Create a database that has filegroups](../../t-sql/statements/create-database-transact-sql.md#d-create-a-database-that-has-filegroups) in [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md).
 

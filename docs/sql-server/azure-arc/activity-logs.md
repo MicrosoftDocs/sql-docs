@@ -10,6 +10,8 @@ ms.topic: conceptual
 
 # Azure Arc-enabled SQL Server and Databases activity logs
 
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
+
 The activity logs for Azure Arc-enabled SQL Server provide an insight into [SQL Server - Azure Arc](overview.md) and [SQL Server databases - Azure Arc](view-databases.md) related events. The activity logs contain events corresponding to the creation and modification of resources.
 To access activity logs in Azure portal, go to the **SQL Server - Azure Arc resource > Activity Log**. The activity logs help to identify events like SQL Server instance updates, `SqlServerInstance_Update`, SQL Server Databases updates, `SqlServerDatabases_Update`, writing of tags to resources, and so on.
 

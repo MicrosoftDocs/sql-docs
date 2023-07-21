@@ -10,6 +10,8 @@ ms.custom: references_regions
 ---
 # Azure Arc-enabled SQL Server data collection and reporting
 
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
+
 This article describes the data that Azure Arc-enabled SQL Server transmits to Microsoft.
 
 Azure Arc-enabled SQL Server, and any of the related Azure Arc-enabled services, don't store any customer data.
@@ -114,6 +116,8 @@ The following JSON document is an example of the SQL Server database - Azure Arc
 ```
 
 ## Next steps
+
+- [Automatically connect your SQL Server to Azure Arc](automatically-connect.md)
 
 - [Configure advanced data security for your SQL Server instance](configure-advanced-data-security.md)
 - [Configure best practices assessment on an Azure Arc-enabled SQL Server instance](assess.md)

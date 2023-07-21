@@ -4,12 +4,13 @@ description: Steps to disconnect and unregister your SQL Server instances from A
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 04/09/2023
-ms.service: sql
 ms.topic: how-to
 ms.custom: template-how-to-pattern
 ---
 
 # Disconnect your SQL Server instances from Azure Arc
+
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
 This article describes how you can disconnect the Arc-enabled SQL Server instances from Azure Arc using Azure portal or in the command shell.
 

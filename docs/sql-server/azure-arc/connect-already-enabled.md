@@ -5,7 +5,6 @@ author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, maghan
 ms.date: 07/06/2023
-ms.service: sql
 ms.topic: conceptual
 ---
 # Connect your SQL Server to Azure Arc on a server already connected to Azure Arc

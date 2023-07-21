@@ -26,7 +26,7 @@ helpviewer_keywords:
 
 ## Explanation
 
-This error occurs because the Microsoft Distributed Transaction Coordinator (MSDTC) service is not running or has disabled network access. 
+This error occurs because the Microsoft Distributed Transaction Coordinator (MSDTC) service is not running or has disabled network access.
 
 In some instances, you might also receive error 8522:
 
@@ -57,9 +57,9 @@ If you receive error 7391 from a process such as SQL Server replication or SQL S
 
 Follow these steps to make sure server communication is successful:
 
-- Check whether your network name resolution works. Make sure that the servers can communicate with one another by name and not only by IP address. Check in both directions (for example, from server A to server B and from server B to server A). Resolve all name resolution problems on the network before you run your distributed query. This might involve updating the WINS, DNS, or LMHost files.  
+1. Check whether your network name resolution works. Make sure that the servers can communicate with one another by name and not only by IP address. Check in both directions (for example, from server A to server B and from server B to server A). Resolve all name resolution problems on the network before you run your distributed query. This might involve updating the WINS, DNS, or LMHost files.  
 
-- If you have a firewall, make sure that your Remote Procedure Call (RPC) ports are opened correctly. For more information, see the following articles:
+1. If you have a firewall, make sure that your Remote Procedure Call (RPC) ports are opened correctly. For more information, see the following articles:
 
   - [How to configure RPC dynamic port allocation to work with firewalls - Windows Server](/troubleshoot/windows-server/networking/configure-rpc-dynamic-port-allocation-with-firewalls)
 
@@ -67,9 +67,9 @@ Follow these steps to make sure server communication is successful:
 
   - [Configure the Windows Firewall to allow SQL Server access - SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)
 
-- Check the object that you point to on the destination server. If the object is a view or a stored procedure, or if it causes a trigger to run, check whether it implicitly points to another server. If so, the third server is the source of the problem. Run the query directly on the third server. If you can't do this, the linked server query isn't the problem. Resolve the underlying problem first.
+1. Check the object that you point to on the destination server. If the object is a view or a stored procedure, or if it causes a trigger to run, check whether it implicitly points to another server. If so, the third server is the source of the problem. Run the query directly on the third server. If you can't do this, the linked server query isn't the problem. Resolve the underlying problem first.
 
-- Check whether you're using Remote Access Server (RAS) to access remote servers. If so, make sure that you have implemented Routing RAS (RRAS). Linked servers don't work on RAS because RAS allows only one-way communication.
+1. Check whether you're using Remote Access Server (RAS) to access remote servers. If so, make sure that you have implemented Routing RAS (RRAS). Linked servers don't work on RAS because RAS allows only one-way communication.
 
 ### Server configuration
 

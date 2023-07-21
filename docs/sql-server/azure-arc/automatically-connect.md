@@ -26,7 +26,7 @@ Connecting SQL Servers in your hybrid environment directly with Azure can be acc
 To connect your SQL Server to Azure, see [Azure Connected Machine agent deployment options](/azure/azure-arc/servers/deployment-options).
 
 > [!NOTE]  
-> If your server is already connected to Azure, but Azure extension for SQL Server is not deployed automatically using above methods, proceed to [Alternative deployment options for Azure Arc-enabled SQL Server](deployment-options.md) to connect SQL Server to Azure.
+> If your server is already connected to Azure, but Azure extension for SQL Server is not deployed automatically using above methods, proceed to [Alternate deployment options for Azure Arc-enabled SQL Server](deployment-options.md) to connect SQL Server to Azure.
 
 ## Validate your Arc-enabled SQL Server resources
 

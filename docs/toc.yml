@@ -11288,6 +11288,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-7105-database-engine-error.md
         - name: 7308
           href: relational-databases/errors-events/mssqlserver-7308-database-engine-error.md
+        - name: 7391
+          href: relational-databases/errors-events/mssqlserver-7391-database-engine-error.md  
         - name: 7711
           href: relational-databases/errors-events/mssqlserver-7711-database-engine-error.md
         - name: 7901

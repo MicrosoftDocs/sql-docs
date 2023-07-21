@@ -389,7 +389,7 @@ ms.topic: include
 | [7906](../mssqlserver-7906-database-engine-error.md) | 16 | No | Database error: The file "%.\*ls" is not a valid FILESTREAM file in container ID %d. |
 | [7907](../mssqlserver-7907-database-engine-error.md) | 16 | No | Table error: The directory "%.\*ls" under the rowset directory ID %.\*ls is not a valid FILESTREAM directory in container ID %d. |
 | [7908](../mssqlserver-7908-database-engine-error.md) | 16 | No | Table error: The file "%.\*ls" in the rowset directory ID %.\*ls is not a valid FILESTREAM file in container ID %d. |
-| 7909 | 20 | No | The emergency-mode repair failed.You must restore from backup. |
+| 7909 | 20 | No | The emergency-mode repair failed. You must restore from backup. |
 | [7910](../mssqlserver-7910-database-engine-error.md) | 10 | No | Repair: The page %S_PGID has been allocated to object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls). |
 | [7911](../mssqlserver-7911-database-engine-error.md) | 10 | No | Repair: The page %S_PGID has been deallocated from object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls). |
 | [7912](../mssqlserver-7912-database-engine-error.md) | 10 | No | Repair: The extent %S_PGID has been allocated to object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls). |

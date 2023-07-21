@@ -1,5 +1,5 @@
 ---
-title: Alternative deployment options for Azure Arc-enabled SQL Server
+title: Alternate deployment options for Azure Arc-enabled SQL Server
 description: Explains different ways to deploy Azure Arc-enabled SQL Server.
 author: anosov1960
 ms.author: rajpo
@@ -8,7 +8,7 @@ ms.date: 07/18/2023
 ms.topic: conceptual
 ---
 
-# Alternative deployment options for Azure Arc-enabled SQL Server
+# Alternate deployment options for Azure Arc-enabled SQL Server
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 

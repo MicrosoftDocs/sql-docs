@@ -10401,7 +10401,7 @@ items:
         href: sql-server/azure-arc/release-notes.md
     - name: Quickstarts
       items:
-      - name: Deploy Azure Arc-enabled SQL Server on Azure VM
+      - name: Deploy Azure Arc-enabled SQL Server
         href: sql-server/azure-arc/quick-enabled-sql-server.md
     - name: How-to guides
       items:
@@ -10427,7 +10427,7 @@ items:
               href: sql-server/azure-arc/connect-at-scale-policy.md
             - name: Script
               href: sql-server/azure-arc/connect-at-scale-script.md
-            - name: Autodeploy
+            - name: Automatically connect
               href: sql-server/azure-arc/connect-at-scale-autodeploy.md
             - name: Connect machines using Configuration Manager custom task sequence
               href: sql-server/azure-arc/onboard-configuration-manager-custom-task.md

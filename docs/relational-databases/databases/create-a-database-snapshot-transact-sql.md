@@ -29,7 +29,7 @@ The source database, which can use any recovery model, must meet the following p
 
 - The source database can't be configured as a scalable shared database.
 
-- The source database must not contain a MEMORY_OPTIMIZED_DATA filegroup.
+- Prior to SQL Server 2019, the source database could not contain a MEMORY_OPTIMIZED_DATA filegroup. Support for in-memory database snapshots was added in SQL Server 2019.
 
 > [!IMPORTANT]  
 > For information about other significant considerations, see [Database Snapshots (SQL Server)](database-snapshots-sql-server.md).

@@ -82,7 +82,7 @@ Database snapshots are created with the [CREATE DATABASE](../../t-sql/statements
 
 #### Database snapshot
 
-A transactionally-consistent, read-only, static view of a database (the source database).  
+A transactionally consistent, read-only, static view of a database (the source database).  
   
 #### Source database
 

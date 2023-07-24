@@ -2109,7 +2109,7 @@ WITH
 
 #### data_source_name
 
-Specifies the user-defined name for the data source. The name must be unique within the [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
+Specifies the user-defined name for the data source. The name must be unique within the [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
 
 #### LOCATION = *`'<prefix>://<path>'`*
 

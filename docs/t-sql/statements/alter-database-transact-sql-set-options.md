@@ -682,7 +682,7 @@ Controls whether updates are allowed on the database.
 To change this state, you must have exclusive access to the database. For more information, see the SINGLE_USER clause.
 
 > [!NOTE]  
-> On [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] federated databases, `SET { READ_ONLY | READ_WRITE }` is disabled.
+> On [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] federated databases, `SET { READ_ONLY | READ_WRITE }` is disabled.
 
 #### \<db_user_access_option> ::=
 
@@ -2145,7 +2145,7 @@ Controls whether updates are allowed on the database.
 To change this state, you must have exclusive access to the database. For more information, see the SINGLE_USER clause.
 
 > [!NOTE]  
-> On [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] federated databases, `SET { READ_ONLY | READ_WRITE }` is disabled.
+> On [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] federated databases, `SET { READ_ONLY | READ_WRITE }` is disabled.
 
 #### \<db_user_access_option> ::=
 

@@ -4,7 +4,7 @@ description: "CREATE EXTERNAL TABLE AS SELECT (CETAS) creates an external table 
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest, wiassaf, mlandzic, nzagorac
-ms.date: 05/18/2023
+ms.date: 07/24/2023
 ms.service: sql
 ms.topic: reference
 f1_keywords:
@@ -252,7 +252,7 @@ Takes a shared lock on the SCHEMARESOLUTION object.
 
 ## Supported data types
 
-CETAS can be used to store result sets with following SQL data types:
+CETAS can be used to store result sets with the following SQL data types:
 
 - binary
 - varbinary

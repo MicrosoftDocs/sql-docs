@@ -201,19 +201,21 @@ This command will print the entire content of a page. Parameters to the `DBCC PA
 Once you execute this command, you'll notice an output that contains information similar to the following format: 
 
 ```output
-Slot 0  Offset 0x60 Length 19 Record Type = PRIMARY_RECORD Record 
-  Attributes = NULL_BITMAP Memory Dump @0x44D1C060 00000000: 10001000 01000000 
-  ffffffff ffffffff †................ 00000010: 
-  0200fc†††††††††††††††††††††††††††††††...  Slot 0 Column 0  Offset 0x4 Length 4  col1 = 1 Slot 0 Column 1  Offset 0x8 Length 8  col2 = Dec 31 1899 19:04PM  Slot 1 Offset 0x73 Length 19 Record Type = PRIMARY_RECORD Record 
-  Attributes = NULL_BITMAP Memory Dump @0x44D1C073 00000000: 10001000 02000000 
-  0ba96301 f8970000 †..........c..... 00000010: 
-  0200fc†††††††††††††††††††††††††††††††... Slot 1 Column 0 Offset 0x4 Length 4 
-  col1 = 2 Slot 1 Column 1 Offset 0x8 Length 8 col2 = Jul 8 2006 9:34PM Slot 2 
-  Offset 0x86 Length 19 Record Type = PRIMARY_RECORD Record Attributes = 
-  NULL_BITMAP Memory Dump @0x44D1C086 00000000: 10001000 03000000 0ba96301 
-  f8970000 †..........c..... 00000010: 0200fc†††††††††††††††††††††††††††††††... 
-  Slot 2 Column 0 Offset 0x4 Length 4 col1 = 3 Slot 2 Column 1 Offset 0x8 Length 
-  8 col2 = Jul 8 2006 9:34PM
+Slot 0  Offset 0x60 Length 19
+Record Type = PRIMARY_RECORD Record Attributes = NULL_BITMAP
+Memory Dump @0x44D1C060 00000000: 10001000 01000000 ffffffff ffffffff †................ 00000010: 0200fc†††††††††††††††††††††††††††††††...
+Slot 0 Column 0  Offset 0x4 Length 4  col1 = 1
+Slot 0 Column 1  Offset 0x8 Length 8  col2 = Dec 31 1899 19:04PM
+Slot 1 Offset 0x73 Length 19
+Record Type = PRIMARY_RECORD Record Attributes = NULL_BITMAP
+Memory Dump @0x44D1C073 00000000: 10001000 02000000 0ba96301 f8970000 †..........c..... 00000010: 0200fc†††††††††††††††††††††††††††††††...
+Slot 1 Column 0 Offset 0x4 Length 4 col1 = 2
+Slot 1 Column 1 Offset 0x8 Length 8 col2 = Jul 8 2006 9:34PM
+Slot 2 Offset 0x86 Length 19
+Record Type = PRIMARY_RECORD Record Attributes = NULL_BITMAP
+Memory Dump @0x44D1C086 00000000: 10001000 03000000 0ba96301 f8970000 †..........c..... 00000010: 0200fc†††††††††††††††††††††††††††††††... 
+Slot 2 Column 0 Offset 0x4 Length 4 col1 = 3
+Slot 2 Column 1 Offset 0x8 Length 8 col2 = Jul 8 2006 9:34PM
 ```
 
 In this output, you can clearly see the column values for the row of interest. In this case, you need the row stored in `slot 0` of the page. From the error message, you know that `col2` is the one with the problem. So you can take the value of `col1` for `Slot 0` and use it as the predicate in the `WHERE` clause of your update statement or delete statement. 

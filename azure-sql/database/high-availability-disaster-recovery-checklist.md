@@ -4,7 +4,7 @@ description: Learn about the recommended user configurations that you can implem
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: rsetlem
-ms.date: 02/08/2023
+ms.date: 07/24/2023
 ms.service: sql-database
 ms.subservice: high-availability
 ms.topic: conceptual
@@ -29,12 +29,12 @@ The following are recommended configurations that you can implement to maximize 
 
 Although Azure SQL Database automatically maintains high availability, there are instances when having zone redundancy, retry logic, and maintenance windows might not guarantee availability as the impacting outage spans an entire region. An Azure SQL Database outage may require you to initiate disaster recovery. 
 
-Recommendations to be best prepared for disaster recovery include:
+To be best prepared for disaster recovery, follow these recommendations:
 
 * Enable [active geo-replication](active-geo-replication-overview.md) to have a readable secondary database in a different Azure region. 
 * Enable [auto-failover groups](auto-failover-group-sql-db.md) for a group of databases. Use the read-write and read-only listener endpoints that remain unchanged after failover. With auto-failover groups, you can set the failover mode to [automatic (default) or manual](auto-failover-group-sql-db.md#terminology-and-capabilities).
 * Ensure that the geo-secondary database is created with the same service tier, [compute tier](./service-tiers-sql-database-vcore.md#compute) (provisioned or serverless) and compute size (DTUs or vCores) as the primary database.
-* When scaling up, we recommend that you scale up the geo-secondary first, and then scale up the primary.
+* When scaling up, scale up the geo-secondary first, and then scale up the primary.
 * When scaling down, reverse the order: scale down the primary first, and then scale down the secondary.
 * Disaster recovery by nature is designed to make use of asynchronous replication of data between primary and secondary region. To prioritize data availability over higher commit latency, consider calling the [sp_wait_for_database_copy_sync](/sql/relational-databases/system-stored-procedures/sp-wait-for-database-copy-sync-transact-sql) stored procedure immediately after committing the transaction. Calling `sp_wait_for_database_copy_sync` blocks the calling thread until the last committed transaction has been transmitted and hardened in the transaction log of the secondary database.
 * Monitor lag with respect to Recovery Point Objective (RPO), using the `replication_lag_sec` column of the [sys.dm_geo_replication_link_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database?preserve-view=true&view=azuresqldb-current) dynamic management view (DMV) on the primary database. It shows lag in seconds between the transactions committed on the primary and hardened to the transaction log on the secondary. For example, assume that the lag is one second at a point in time. If the primary is impacted by an outage and a geo-failover is initiated at that point in time, transactions committed in the last second will be lost.

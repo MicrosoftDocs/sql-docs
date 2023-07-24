@@ -78,13 +78,15 @@ For more information, see [Configure an auto-failover group](auto-failover-group
 
 You can use Azure PowerShell to create a new failover group, and designate your secondary instance as a standby replica. 
 
-When you create a new failover group by using Azure PowerShell, use the [New-AzSqlDatabaseInstanceFailoverGroup](/powershell/module/az.sql/new-azsqldatabaseinstancefailovergroup) command, and specify `standby` for the `SecondaryType` parameter. 
+When you create a new failover group by using Azure PowerShell, use the:   
+[New-AzSqlDatabaseInstanceFailoverGroup](/powershell/module/az.sql/new-azsqldatabaseinstancefailovergroup) command, and specify `standby` for the `SecondaryType` parameter. 
 
 ### [Azure CLI](#tab/azure-cli)
 
 You can use the Azure CLI to create a new failover group, and designate your secondary instance as a standby replica. 
 
-When you create a new failover group by using the Azure CLI, use the [az sql instance-failover-group create](/cli/azure/sql/instance-failover-group?view=azure-cli-latest#az-sql-instance-failover-group-create) command, and specify `standby` for the `--secondary-type` parameter. 
+When you create a new failover group by using the Azure CLI, use the:   
+[az sql instance-failover-group create](/cli/azure/sql/instance-failover-group#az-sql-instance-failover-group-create) command, and specify `standby` for the `--secondary-type` parameter. 
 
 ---
 
@@ -114,13 +116,15 @@ Alternatively, you can enable failover rights in **Compute + storage** for your 
 
 You can use Azure PowerShell to update an existing failover group, and designate your secondary instance as a standby replica. 
 
-When you update an existing failover group by using Azure PowerShell, use the [Set-AzSqlDatabaseInstanceFailoverGroup](/powershell/module/az.sql/set-azsqldatabaseinstancefailovergroup) command, and specify `standby` for the `SecondaryType` parameter. 
+When you update an existing failover group by using Azure PowerShell, use the:   
+[Set-AzSqlDatabaseInstanceFailoverGroup](/powershell/module/az.sql/set-azsqldatabaseinstancefailovergroup) command, and specify `standby` for the `SecondaryType` parameter. 
 
 ### [Azure CLI](#tab/azure-cli)
 
 You can use the Azure CLI to update an existing failover group, and designate your secondary instance as a standby replica. 
 
-When you update an existing failover group by using the Azure CLI, use the [az sql instance-failover-group update](/cli/azure/sql/instance-failover-group#az-sql-instance-failover-group-update) command, and specify `standby` for the `--secondary-type` parameter. 
+When you update an existing failover group by using the Azure CLI, use the:  
+[az sql instance-failover-group update](/cli/azure/sql/instance-failover-group#az-sql-instance-failover-group-update) command, and specify `standby` for the `--secondary-type` parameter. 
 
 ---
 

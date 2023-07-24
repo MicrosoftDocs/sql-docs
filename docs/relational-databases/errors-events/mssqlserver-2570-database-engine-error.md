@@ -60,7 +60,7 @@ Some symptoms you may notice due to the presence of invalid data include (but ar
 - Incorrect results returned by queries executed against the affected column. 
 - Errors or problems when statistics are being built against the affected column. 
 - Error messages like the following one: 
-  > Msg 9100, Level 23, State 2, Line <LineNum> Possible index corruption detected. Run DBCC CHECKDB. 
+  > Msg 9100, Level 23, State 2, Line \<LineNum\> Possible index corruption detected. Run DBCC CHECKDB. 
 
 ## DATA_PURITY problem report 
 
@@ -179,7 +179,7 @@ SELECT col1 FROM table3 WHERE
 You can use this method if you can't find the rows of interest using the T-SQL method discussed above. In the 2570 error message, the physical location of the row that contains the invalid value is printed. For example, look at the following message: 
 
 ```output
-Page (1:157), slot 0 in object ID 2121058592, index ID 0, partition ID 72057594038517760, alloc unit ID 72057594042515456 (type "In-row data"). Column "col2" value is out of range for data type "datetime". Update column to a legal value. 
+Page (1:157), slot 0 in object ID <ObjectID>, index ID 0, partition ID <PartitionID>, alloc unit ID <UnitID> (type "In-row data"). Column "col2" value is out of range for data type "datetime". Update column to a legal value. 
 ```
 
 In this message, you notice `Page (1:157), slot 0`. This is the information you need to identify the row. The `FileId` is `1`, the `PageInFile` is `157`, and the `SlotId` is `0`.

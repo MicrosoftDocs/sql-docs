@@ -223,7 +223,7 @@ In this output, you can clearly see the column values for the row of interest. I
 
 ## See also
 
-[UPDATE &#40;Transact-SQL&#41;](~/t-sql/queries/update-transact-sql.md)
-[Data Types &#40;Transact-SQL&#41;](~/t-sql/data-types/data-types-transact-sql.md)
-[DBCC (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-transact-sql)
-[Calling a Stored Procedure](/sql/relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure)
+- [UPDATE (Transact-SQL)](~/t-sql/queries/update-transact-sql.md)
+- [Data types (Transact-SQL)](~/t-sql/data-types/data-types-transact-sql.md)
+- [DBCC (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-transact-sql)
+- [Calling a Stored Procedure](/sql/relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure)

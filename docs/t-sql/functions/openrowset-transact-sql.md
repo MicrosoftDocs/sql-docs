@@ -3,7 +3,7 @@ title: "OPENROWSET (Transact-SQL)"
 description: "OPENROWSET (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: "09/19/2022"
+ms.date: "07/24/2023"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -619,7 +619,7 @@ AS [data]
 
 **Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later.
 
-In this example the Data Table folder\container is named `Contoso` located on an Azure Data Lake Gen2 storage account.
+In this example, the data table container is named `Contoso`, and is located on an Azure Data Lake Gen2 storage account.
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL delta_storage_dsc   
@@ -655,7 +655,7 @@ For additional examples that show using `INSERT...SELECT * FROM OPENROWSET(BULK.
 - [Use a Format File to Skip a Data Field &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)
 - [Use a Format File to Map Table Columns to Data-File Fields &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)
 
-## See Also
+## Next steps
 
 - [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)
 - [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)

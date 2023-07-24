@@ -230,7 +230,7 @@ AS { sql_statement
  Unlike DML triggers, DDL triggers are not scoped to schemas. Therefore, the OBJECT_ID, OBJECT_NAME, OBJECTPROPERTY, and OBJECTPROPERTY(EX) cannot be used when querying metadata about DDL triggers. Use the catalog views instead. For more information, see [Get Information About DDL Triggers](../../relational-databases/triggers/get-information-about-ddl-triggers.md).  
   
 ## Logon Triggers  
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] does not support triggers on logon events.  
+ [!INCLUDE[ssSDSfull](../../includes/ssazure-sqldb.md)] does not support triggers on logon events.  
   
 ## Permissions  
  To alter a DML trigger requires ALTER permission on the table or view on which the trigger is defined.  

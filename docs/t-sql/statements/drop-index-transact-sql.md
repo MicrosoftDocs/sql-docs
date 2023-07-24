@@ -151,7 +151,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
 >  Parallel index operations are not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and supported features of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
  ONLINE = ON | **OFF**  
- **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/ssazure-sqldb.md)].  
   
  Specifies whether underlying tables and associated indexes are available for queries and data modification during the index operation. The default is OFF.  
   

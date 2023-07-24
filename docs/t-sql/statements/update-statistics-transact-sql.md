@@ -162,7 +162,7 @@ When **ON**, the statistics will retain the set sampling percentage for subseque
 > [!TIP]
 > [DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) and [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) expose the persisted sample percent value for the selected statistic.
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 CU4 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]  
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 CU4 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1), [!INCLUDE[ssSDSfull](../../includes/ssazure-sqldb.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]  
 
 #### ON PARTITIONS ( { \<partition_number> | \<range> } [, ...n] ) ]
 

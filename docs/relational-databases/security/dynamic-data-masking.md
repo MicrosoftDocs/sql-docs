@@ -27,7 +27,7 @@ Dynamic data masking helps prevent unauthorized access to sensitive data by enab
 
 The purpose of dynamic data masking is to limit exposure of sensitive data, preventing users who shouldn't have access to the data from viewing it. Dynamic data masking doesn't aim to prevent database users from connecting directly to the database and running exhaustive queries that expose pieces of the sensitive data. Dynamic data masking is complementary to other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security features (auditing, encryption, row level security, etc.) and it's highly recommended to use it with them in order to better protect the sensitive data in the database.
 
-Dynamic data masking is available in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], and is configured by using [!INCLUDE[tsql](../../includes/tsql-md.md)] commands. For more information about configuring dynamic data masking by using the Azure portal, see [Get started with SQL Database Dynamic Data Masking (Azure portal)](/azure/azure-sql/database/dynamic-data-masking-overview).
+Dynamic data masking is available in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and [!INCLUDE[ssSDSFull](../../includes/ssazure-sqldb.md)], and is configured by using [!INCLUDE[tsql](../../includes/tsql-md.md)] commands. For more information about configuring dynamic data masking by using the Azure portal, see [Get started with SQL Database Dynamic Data Masking (Azure portal)](/azure/azure-sql/database/dynamic-data-masking-overview).
 
 ## Define a dynamic data mask
 

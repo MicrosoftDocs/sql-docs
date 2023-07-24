@@ -23,7 +23,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Transparent data encryption (TDE) encrypts [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)], and [!INCLUDE[ssazuresynapse-md](../../../includes/ssazuresynapse-md.md)] data files. This encryption is known as encrypting data at rest.
+Transparent data encryption (TDE) encrypts [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSFull](../../../includes/ssazure-sqldb.md)], and [!INCLUDE[ssazuresynapse-md](../../../includes/ssazuresynapse-md.md)] data files. This encryption is known as encrypting data at rest.
 
 To help secure a user database, you can take precautions like:
 
@@ -318,7 +318,7 @@ When you encrypt a database using TDE, files related to buffer pool extension (B
 
 ## TDE and In-Memory OLTP
 
-You can enable TDE on a database that has In-Memory OLTP objects. In [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] and [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], In-Memory OLTP log records and data are encrypted if you enable TDE. In [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], In-Memory OLTP log records are encrypted if you enable TDE, but files in the MEMORY_OPTIMIZED_DATA filegroup are unencrypted.
+You can enable TDE on a database that has In-Memory OLTP objects. In [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] and [!INCLUDE[ssSDSfull](../../../includes/ssazure-sqldb.md)], In-Memory OLTP log records and data are encrypted if you enable TDE. In [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], In-Memory OLTP log records are encrypted if you enable TDE, but files in the MEMORY_OPTIMIZED_DATA filegroup are unencrypted.
 
 ## Guidelines on managing certificates used in TDE
 

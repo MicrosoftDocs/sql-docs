@@ -29,7 +29,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |transaction_id|**bigint**|ID of the transaction at the instance level, not the database level. It is only unique across all databases within an instance, but not unique across all server instances.|  
-|database_id|**int**|ID of the database associated with the transaction. <br /><br />In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the values are unique within a single database or an elastic pool, but not within a logical server.|  
+|database_id|**int**|ID of the database associated with the transaction. <br /><br />In [!INCLUDE[ssSDSfull](../../includes/ssazure-sqldb.md)], the values are unique within a single database or an elastic pool, but not within a logical server.|  
 |database_transaction_begin_time|**datetime**|Time at which the database became involved in the transaction. Specifically, it is the time of the first log record in the database for the transaction.|  
 |database_transaction_type|**int**|1 = Read/write transaction<br /><br /> 2 = Read-only transaction<br /><br /> 3 = System transaction|  
 |database_transaction_state|**int**|1 = The transaction has not been initialized.<br /><br /> 3 = The transaction has been initialized but has not generated any log records.<br /><br /> 4 = The transaction has generated log records.<br /><br /> 5 = The transaction has been prepared.<br /><br /> 10 = The transaction has been committed.<br /><br /> 11 = The transaction has been rolled back.<br /><br /> 12 = The transaction is being committed. (The log record is being generated, but has not been materialized or persisted.)|  

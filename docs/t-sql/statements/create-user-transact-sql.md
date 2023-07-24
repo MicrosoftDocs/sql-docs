@@ -344,7 +344,7 @@ When creating the user in the Azure SQL database, the *login_name* must correspo
   
  In a contained database, users don't have to have logins in the **master** database. [!INCLUDE[ssDE](../../includes/ssde-md.md)] administrators should understand that access to a contained database can be granted at the database level, instead of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] level. For more information, see [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
- When using contained database users on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], configure access using a database-level firewall rule, instead of a server-level firewall rule. For more information, see [sp_set_database_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md).
+ When using contained database users on [!INCLUDE[ssSDSfull](../../includes/ssazure-sqldb.md)], configure access using a database-level firewall rule, instead of a server-level firewall rule. For more information, see [sp_set_database_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md).
  
 For [!INCLUDE[ssSDS_md](../../includes/sssql22-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssdsmifull-md.md)], and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] contained database users, SSMS supports multifactor authentication. For more information, see [Using Azure AD Multi-Factor Authentication](/azure/azure-sql/database/authentication-mfa-ssms-overview).
 

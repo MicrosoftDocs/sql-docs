@@ -3,7 +3,7 @@ title: "MSSQLSERVER_2570"
 description: "MSSQLSERVER_2570"
 author: MashaMSFT
 ms.author: mathoma
-ms.date: "07/21/2023"
+ms.date: "07/24/2023"
 ms.service: sql
 ms.subservice: supportability
 ms.topic: "reference"
@@ -30,11 +30,11 @@ The column value that's contained in the specified column is outside the range o
   
 ## User action
 
-The error isn't repairable. Update the column to a value within the range for the data type of the column and run the command again. For more information, see the following sections.
+The error isn't repairable. Update the column to a value within the range of the column data type and run the command again. For more information, see the following sections.
 
 ## DATA_PURITY checks 
 
-When you execute a [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) or [DBCC CHECKTABLE](/sql/t-sql/database-console-commands/dbcc-checktable-transact-sql) command, the command performs "data purity" validations of each column value in all rows of the table(s) in the database. These checks are performed to ensure that the values stored in the columns are valid (that is, the values aren't out-of-range for the domain associated with the data type of that column). The nature of the validation performed depends on the data type of the column. The following non-exhaustive list gives a few examples: 
+When you execute a [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) or [DBCC CHECKTABLE](/sql/t-sql/database-console-commands/dbcc-checktable-transact-sql) command, the command performs "data purity" validations of each column value in all rows of the table(s) in the database. These checks are performed to ensure that the values stored in the columns are valid (that is, the values aren't out-of-range of the domain associated with the data type of the columns). The nature of the validation performed depends on the data type of the column. The following non-exhaustive list gives some examples: 
 
 |Column data type |Type of data validation performed |
 |-|-|
@@ -42,21 +42,21 @@ When you execute a [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-chec
 |Datetime |The date field should be between Jan 1, 1753 and Dec 31, 9999. The time field must be earlier than "11:59:59.997PM." |
 |Real and Float |Check for the existence of invalid floating-point values like SNAN, QNAN, NINF, ND, PD, and PINF.|
 
-Not all data types are checked for the validity of the column data. Only those where it's possible to have a stored value that's out of range are checked. For example, the `tinyint` data type has a valid range of 0 to 255 and is stored in a single byte (which can only store values between 0 and 255), so checking the value isn't necessary. 
+Not all data types are checked for the validity of the column data. Only those that may have an out-of-range stored value are checked. For example, the `tinyint` data type has a valid range of 0 to 255 and is stored in a single byte (which can only store values between 0 and 255), so checking the value isn't necessary. 
 
 > [!NOTE]
-> These checks are enabled by default and can't be disabled, so there's no need to explicitly use of the [DATA_PURITY](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql#data_purity) option when executing a `DBCC CHECKDB` or `DBCC CHECKTABLE` command (if the [PHYSICAL_ONLY](/sql/t-sql/database-console-commands/dbcc-checktable-transact-sql#physical_only) option is specified when executing the `DBCC CHECKDB` or `DBCC CHECKTABLE` command, no data purity checks are performed. 
+> These checks are enabled by default and can't be disabled, so there's no need to explicitly use the [DATA_PURITY](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql#data_purity) option when executing a `DBCC CHECKDB` or `DBCC CHECKTABLE` command. If the [PHYSICAL_ONLY](/sql/t-sql/database-console-commands/dbcc-checktable-transact-sql#physical_only) option is specified when executing the `DBCC CHECKDB` or `DBCC CHECKTABLE` command, no data purity checks are performed. 
 
 Invalid or out-of-range data may have been stored in the SQL Server database for the following reasons:
 
-- Invalid data was passed through remote procedure call (RPC) events to SQL Server. 
-- Other potential causes of physical data corruption made the column value in an invalid state.
+- Invalid data was passed to SQL Server through remote procedure call (RPC) events. 
+- Other potential causes of physical data corruption made the column value invalid.
 
 If you have invalid data in a table column, you might encounter problems, depending on the type of operations performed against the invalid data. However, it's also possible that no problem will appear, and the invalid data won't be discovered until you execute a `DBCC CHECKDB` or `DBCC CHECKTABLE` command.
 
 Some symptoms you may notice due to the presence of invalid data include (but aren't limited to): 
 
-- Access violations or other types of exceptions when executing queries against the affected column. 
+- Access violations or other exceptions when executing queries against the affected column. 
 - Incorrect results returned by queries executed against the affected column. 
 - Errors or problems when statistics are being built against the affected column. 
 - Error messages like the following one: 
@@ -64,7 +64,7 @@ Some symptoms you may notice due to the presence of invalid data include (but ar
 
 ## DATA_PURITY problem report 
 
-When you execute a `DBCC CHECKDB` or `DBCC CHECKTABLE` command with the `DATA_PURITY` option enabled (or the data purity checks are run automatically), and invalid data exists in the tables checked by the DBCC commands, the DBCC output will include additional messages that indicate the problems related to the data. Some sample error messages that indicate data purity problems are shown below:
+When you execute a `DBCC CHECKDB` or `DBCC CHECKTABLE` command with the `DATA_PURITY` option enabled (or the data purity checks are run automatically), and invalid data exists in the tables checked by the DBCC commands, the DBCC output will include additional messages that indicate the problems related to the data. Some sample error messages that indicate data purity problems are shown below.
 
 ```output
 DBCC results for "account_history". 
@@ -104,26 +104,26 @@ For every row that contains an invalid column value, a 2570 error is generated.
 
 ## Fix the data purity problem 
 
-The 2570 errors can't be repaired using any of the DBCC repair options. This is because DBCC can't determine what value should be used to replace the invalid column value. Thus, the column value must be updated manually. 
+The 2570 errors can't be repaired using any of the DBCC repair options. The reason is that DBCC can't determine what value should be used to replace the invalid column value. Thus, the column value must be updated manually. 
  
 To perform a manual update, you have to find the row that has the problem. There are two ways to accomplish this:
 
 - Execute a query against the table that contains the invalid values to find the rows that contain the invalid values. 
 - Use the information from the 2570 error to identify the rows that have invalid values. 
 
-Both methods are detailed below, using examples to find the rows that have invalid data. 
+Both methods are detailed in the following sections and provide examples to find the rows that have invalid data. 
  
-Once you find the correct row, a decision needs to be made on the new value that will be used to replace the existing invalid data. This decision has to be made very carefully, based on the range of values that work for the application and what makes logical sense for that particular row of data. The choices you have are: 
+Once you find the correct row, a decision needs to be made on the new value that will be used to replace the existing invalid data. This decision has to be made very carefully, based on the range of values applicable to the application and the logical meaning of that particular row of data. The choices you have are: 
 
 - If you know what value it should be, set it to that specific value. 
 - Set it to an acceptable default value. 
 - Set the column value to `NULL`. 
 - Set the column value to the maximum or minimum value for that data type of the column. 
-- If you feel that the specific row isn't of any use without a valid value for the column, you can delete that row altogether.
+- If you believe that the specific row is of no use without a valid value for the column, you can delete that row altogether.
 
 ## Find rows with invalid values using T-SQL queries
 
-The type of query that you need to execute to find rows that have invalid values depends on the data type of the column that reported a problem. If you look at the 2570 error message, you'll notice two important pieces of information that can help you with this. In the following example, the value of the column `account_name` is out of range for data type `nvarchar`. We can easily identify the column with the problem and the data type of the column involved. Thus, once you know the data type and the column involved, you can formulate queries to find the rows that contain invalid values for that column, and select the columns needed to identify that row (as the predicates in a `WHERE` clause) for any further update or deletion. 
+The type of query you need to execute to find rows that have invalid values depends on the data type of the column reporting a problem. If you look at the 2570 error message, you'll notice two important pieces of information that can help you with this. In the following example, the value of the column `account_name` is out-of-range for the data type `nvarchar`. We can easily identify the column with the problem and the data type of the column involved. Thus, once you know the data type and the column involved, you can formulate queries to find the rows that contain invalid values for that column, and select the columns needed to identify that row (as the predicates in a `WHERE` clause) for any further update or deletion. 
 
 **Unicode data type:**
 
@@ -160,7 +160,7 @@ WHERE col2 > 9999999999.99999
 OR col1 < -9999999999.99999
 ```
 
-Keep in mind that you need to adjust the values based on the precision and scale with which you have defined the `decimal` or `numeric` column. In the above example, the column was defined as `col2 decimal(15,5)`. 
+Keep in mind that you need to adjust the values based on the precision and scale with which you have defined the `decimal` or `numeric` column. In the above example, the column is defined as `col2 decimal(15,5)`. 
  
 **Datetime data type:**
 
@@ -193,10 +193,10 @@ DBCC PAGE (realdata , 1 , 157 , 3)
 
 This command will print the entire content of a page. Parameters to the `DBCC PAGE` command are: 
 
-- Database name: The name of the database.
-- FileId: The file number of the database file.
-- PageInFile: The number of the page you want to examine.
-- Print option: An optional parameter that determines the level of output detail.
+- `Database name`: The name of the database.
+- `FileId`: The file number of the database file.
+- `PageInFile`: The number of the page you want to examine.
+- `Print option`: An optional parameter that determines the level of output detail.
 
 Once you execute this command, you'll notice an output that contains information similar to the following format: 
 
@@ -219,7 +219,7 @@ Slot 0  Offset 0x60 Length 19 Record Type = PRIMARY_RECORD Record
 In this output, you can clearly see the column values for the row of interest. In this case, you need the row stored in slot 0 of the page. From the error message, you know that `col2` is the one with the problem. So you can take the value of `col1` for `Slot 0` and use it as the predicate in the `WHERE` clause of your update statement or delete statement. 
  
 > [!WARNING]
-> We recommend that you use the first method (that is, use T-SQL queries to find the required information). Use the `DBCC PAGE` command only as a last resort. Take utmost care when you use this command in a production environment. It's recommended to restore the production database on a test server, get all the required information using `DBCC PAGE`, and then do the updates on the production server. As always, make sure to keep a backup ready in case something goes wrong, and you need to revert to an earlier copy of the database.
+> We recommend that you use the first method (that is, use T-SQL queries to find the required information). Use the `DBCC PAGE` command only as a last resort. Take the utmost care when you use this command in a production environment. It's recommended to restore the production database on a test server, get all the required information using `DBCC PAGE`, and then do the updates on the production server. As always, make sure to keep a backup ready in case something goes wrong, and you need to revert to an earlier copy of the database.
 
 ## See also
 

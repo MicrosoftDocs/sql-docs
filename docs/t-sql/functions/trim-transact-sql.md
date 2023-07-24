@@ -41,7 +41,7 @@ Syntax for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later, and 
 
 > [!IMPORTANT]
 > You will need your SQL Server database compatibility level set to 160 to use the `LEADING`, `TRAILING`, or `BOTH` keywords.
-> `LEADING`, `TRAILING`, or `BOTH` keywords are not supported in Microsoft Fabric.
+> `LEADING`, `TRAILING`, or `BOTH` keywords are not currently supported in Microsoft Fabric.
 
 ```syntaxsql
 TRIM ( [ LEADING | TRAILING | BOTH ] [characters FROM ] string )
@@ -126,7 +126,7 @@ In this example, only the trailing period and spaces from before `#` and after t
 
 > [!IMPORTANT]
 > You will need your SQL Server database compatibility level set to 160 to use the `LEADING`, `TRAILING`, or `BOTH` keywords.
-> `LEADING`, `TRAILING`, or `BOTH` keywords are not supported in Microsoft Fabric.
+> `LEADING`, `TRAILING`, or `BOTH` keywords are not currently supported in Microsoft Fabric.
 
 The following example removes the leading `.` from the start of the string before the word `test`.
 
@@ -144,7 +144,7 @@ SELECT TRIM(LEADING '.,! ' FROM  '     .#     test    .') AS Result;
 
 > [!IMPORTANT]
 > You will need your SQL Server database compatibility level set to 160 to use the `LEADING`, `TRAILING`, or `BOTH` keywords.
-> `LEADING`, `TRAILING`, or `BOTH` keywords are not supported in Microsoft Fabric.
+> `LEADING`, `TRAILING`, or `BOTH` keywords are not currently supported in Microsoft Fabric.
 
 The following example removes the trailing `.` from the end of the string after the word `test`.
 
@@ -162,7 +162,7 @@ SELECT TRIM(TRAILING '.,! ' FROM '     .#     test    .') AS Result;
 
 > [!IMPORTANT]
 > You will need your SQL Server database compatibility level set to 160 to use the `LEADING`, `TRAILING`, or `BOTH` keywords.
-> `LEADING`, `TRAILING`, or `BOTH` keywords are not supported in Microsoft Fabric.
+> `LEADING`, `TRAILING`, or `BOTH` keywords are not currently supported in Microsoft Fabric.
 
 The following example removes the characters `123` from the beginning and end of the string `123abc123`.
 
@@ -177,7 +177,7 @@ abc
 ```
 ::: moniker-end
 
-## See also
+## Next steps
 
 - [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)
 - [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)

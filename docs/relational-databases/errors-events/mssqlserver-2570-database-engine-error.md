@@ -39,7 +39,7 @@ When you execute a [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-che
 |Column data type |Type of data validation performed |
 |-|-|
 |Unicode character |The data length should be a multiple of 2.|
-|Datetime |The date field should be between Jan 1, 1753 and Dec 31, 9999. The time field must be earlier than "11:59:59.997PM." |
+|Datetime |The date field should be between January 1, 1753 and December 31, 9999. The time field must be earlier than "11:59:59.997PM." |
 |Real and Float |Check for the existence of invalid floating-point values like SNAN, QNAN, NINF, ND, PD, and PINF.|
 
 Not all data types are checked for the validity of the column data. Only those that may have an out-of-range stored value are checked. For example, the `tinyint` data type has a valid range of 0 to 255 and is stored in a single byte (which can only store values between 0 and 255), so checking the value isn't necessary. 
@@ -64,7 +64,7 @@ Some symptoms you may notice due to the presence of invalid data include (but ar
 
 ## DATA_PURITY problem report 
 
-When you execute a `DBCC CHECKDB` or `DBCC CHECKTABLE` command with the `DATA_PURITY` option enabled (or the data purity checks are run automatically), and invalid data exists in the tables checked by the `DBCC` commands, the `DBCC` output will include additional messages that indicate the problems related to the data. Some sample error messages that indicate data purity problems are shown below:
+When you execute a `DBCC CHECKDB` or `DBCC CHECKTABLE` command with the `DATA_PURITY` option enabled (or the data purity checks are run automatically), and invalid data exists in the tables checked by the `DBCC` commands, the `DBCC` output will include other messages that indicate the problems related to the data. The following sample error messages indicate data purity problems:
 
 ```output
 DBCC results for "account_history". 
@@ -104,26 +104,24 @@ For every row that contains an invalid column value, a 2570 error is generated.
 
 ## Fix the data purity problem 
 
-The 2570 errors can't be repaired using any of the `DBCC` repair options. The reason is that `DBCC` can't determine what value should be used to replace the invalid column value. Thus, the column value must be updated manually. 
- 
-To perform a manual update, you have to find the row that has the problem. There are two ways to accomplish this:
+The 2570 errors can't be repaired using any of the `DBCC` repair options. The reason is that `DBCC` can't determine what value should be used to replace the invalid column value. Thus, the column value must be updated manually. To perform a manual update, you have to find the row that has the problem. Use one of the following methods to find the row:
 
 - Execute a query against the table that contains the invalid values to find the rows that contain the invalid values. 
 - Use the information from the error 2570 to identify the rows that have invalid values. 
 
 Both methods are detailed in the following sections and provide examples to find the rows that have invalid data. 
  
-Once you find the correct row, a decision needs to be made on the new value that will be used to replace the existing invalid data. This decision has to be made very carefully, based on the range of values applicable to the application and the logical meaning of that particular row of data. The choices you have are: 
+Once you find the correct row, a decision needs to be made on the new value that will be used to replace the existing invalid data. This decision has to be made very carefully, based on the range of values applicable to the application and the logical meaning of that particular row of data. You have the following choices: 
 
 - If you know what value it should be, set it to that specific value. 
 - Set it to an acceptable default value. 
 - Set the column value to `NULL`. 
 - Set the column value to the maximum or minimum value for that data type of the column. 
-- If you believe that the specific row is of no use without a valid value for the column, you can delete that row altogether.
+- If you believe that the specific row isn't useful without a valid value for the column, delete that row altogether.
 
 ## Find rows with invalid values using T-SQL queries
 
-The type of query you need to execute to find rows that have invalid values depends on the data type of the column reporting a problem. If you look at the 2570 error message, you'll notice two important pieces of information that can help you with this. In the following example, the value of the column `account_name` is out-of-range for the data type `nvarchar`. We can easily identify the column with the problem and the data type of the column involved. Thus, once you know the data type and the column involved, you can formulate queries to find the rows that contain invalid values for that column, and select the columns needed to identify that row (as the predicates in a `WHERE` clause) for any further update or deletion. 
+The type of query you need to execute to find rows that have invalid values depends on the data type of the column reporting a problem. If you look at the 2570 error message, you'll notice two important pieces of information that can help you with this problem. In the following example, the value of the column `account_name` is out-of-range for the data type `nvarchar`. We can easily identify the column with the problem and the data type of the column involved. Thus, once you know the data type and the column involved, you can formulate queries to find the rows that contain invalid values for that column, and select the columns needed to identify that row (as the predicates in a `WHERE` clause) for any further update or deletion. 
 
 ### Unicode data type
 
@@ -176,13 +174,13 @@ SELECT col1 FROM table3 WHERE
 
 ## Find rows with invalid values using the physical location
 
-You can use this method if you can't find the rows of interest using the T-SQL method discussed above. In the 2570 error message, the physical location of the row that contains the invalid value is printed. For example, look at the following message: 
+You can use this method if you can't find the rows with invalid values by using the [T-SQL method](#find-rows-with-invalid-values-using-t-sql-queries). In the 2570 error message, the physical location of the row that contains the invalid value is printed. For example, look at the following message: 
 
 ```output
 Page (1:157), slot 0 in object ID <ObjectID>, index ID 0, partition ID <PartitionID>, alloc unit ID <UnitID> (type "In-row data"). Column "col2" value is out of range for data type "datetime". Update column to a legal value. 
 ```
 
-In this message, you notice `Page (1:157), slot 0`. This is the information you need to identify the row. The `FileId` is `1`, the `PageInFile` is `157`, and the `SlotId` is `0`.
+In this message, you notice `Page (1:157), slot 0`. It's the information you need to identify the row. The `FileId` is `1`, the `PageInFile` is `157`, and the `SlotId` is `0`.
 
 Once you have this information, you need to execute the following command: 
 
@@ -191,12 +189,12 @@ DBCC TRACEON (3604)
 DBCC PAGE (realdata , 1 , 157 , 3)
 ```
 
-This command will print the entire content of a page. Parameters to the `DBCC PAGE` command are: 
-
-- `Database name`: The name of the database.
-- `File number`: The file number of the database file.
-- `Page number`: The number of the page you want to examine.
-- `Print option`: An optional parameter that determines the level of output detail.
+> [!NOTE]
+> This command prints the entire content of a page. The parameters to the `DBCC PAGE` command are:
+> - `Database name`: The name of the database.
+> - `File number`: The file number of the database file.
+> - `Page number`: The number of the page you want to examine.
+> - `Print option`: An optional parameter that determines the level of output detail.
 
 Once you execute this command, you'll notice an output that contains information similar to the following format: 
 

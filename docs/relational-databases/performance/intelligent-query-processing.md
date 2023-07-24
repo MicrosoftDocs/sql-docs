@@ -15,7 +15,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-The intelligent query processing (IQP) feature family includes features with broad impact that improve the performance of existing workloads with minimal implementation effort to adopt. The following graphic details the family of IQP features and when they were first introduced for SQL Server. All IQP features are available in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] and [!INCLUDE[ssSDSfull](../../includes/ssazure-sqldb.md)]. Some features depend on the database's compatibility level.
+The intelligent query processing (IQP) feature family includes features with broad impact that improve the performance of existing workloads with minimal implementation effort to adopt. The following graphic details the family of IQP features and when they were first introduced for SQL Server. All IQP features are available in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. Some features depend on the database's compatibility level.
 
 :::image type="content" source="./media/iqp-feature-family.svg" alt-text="A diagram of the Intelligent Query Processing family of features and when they were first introduced to SQL Server.":::
 
@@ -33,9 +33,9 @@ ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 160;
 
 The following table details all intelligent query processing features, along with any requirement they have for database compatibility level. For complete details on all IQP features, including release notes and more in-depth descriptions, see [Intelligent query processing (IQP) feature details](intelligent-query-processing-details.md).
 
-## <a id="sql2022"></a> IQP features for [!INCLUDE[ssSDSfull](../../includes/ssazure-sqldb.md)] and [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]
+## <a id="sql2022"></a> IQP features for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]
 
-| **IQP Feature** | **Supported in [!INCLUDE[ssSDSfull](../../includes/ssazure-sqldb.md)] | **Supported in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]** |**Description** |
+| **IQP Feature** | **Supported in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] | **Supported in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]** |**Description** |
 | ---------------- | ------- | ------- | ---------------- |
 | [Adaptive Joins (Batch Mode)](intelligent-query-processing-details.md#batch-mode-adaptive-joins) | Yes, starting with database compatibility level 140| Yes, starting in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] with database compatibility level 140|Adaptive joins dynamically select a join type during runtime based on actual input rows.|
 | [Approximate Count Distinct](intelligent-query-processing-details.md#approximate-query-processing) | Yes| Yes, starting in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]|Provide approximate COUNT DISTINCT for big data scenarios with the benefit of high performance and a low memory footprint. |
@@ -54,7 +54,7 @@ The following table details all intelligent query processing features, along wit
 | [Parameter Sensitivity Plan Optimization](./parameter-sensitive-plan-optimization.md) | No <!--Yes, starting with database compatibility level 160-->| Yes, (Starting in [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]) with database compatibility level 160 | Parameter Sensitivity Plan Optimization addresses the scenario where a single cached plan for a parameterized query is not optimal for all possible incoming parameter values, for example non-uniform data distributions. |
 | [Table Variable Deferred Compilation](intelligent-query-processing-details.md#table-variable-deferred-compilation) | Yes, starting with database compatibility level 150 | Yes, starting in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] with database compatibility level 150 | Uses the actual cardinality of the table variable encountered on first compilation instead of a fixed guess.|
 
-* [DOP Feedback](intelligent-query-processing-feedback.md#degree-of-parallelism-dop-feedback) is currently available in [!INCLUDE[ssSDSfull](../../includes/ssazure-sqldb.md)] as a limited preview. For more information and how to apply for the preview, see [Announcing Degree of Parallelism Feedback Limited Preview](https://techcommunity.microsoft.com/t5/azure-sql-blog/announcing-degree-of-parallelism-feedback-limited-preview/ba-p/3806924).
+* [DOP Feedback](intelligent-query-processing-feedback.md#degree-of-parallelism-dop-feedback) is currently available in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] as a limited preview. For more information and how to apply for the preview, see [Announcing Degree of Parallelism Feedback Limited Preview](https://techcommunity.microsoft.com/t5/azure-sql-blog/announcing-degree-of-parallelism-feedback-limited-preview/ba-p/3806924).
 
 ## <a id="sqlmi"></a> IQP features for [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 

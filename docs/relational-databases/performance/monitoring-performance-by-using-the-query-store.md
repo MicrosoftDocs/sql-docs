@@ -79,7 +79,7 @@ Since the Query Store retains multiple execution plans per query, it can enforce
 >
 > Query Store does not collect data for natively compiled stored procedures by default. Use [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) to enable data collection for natively compiled stored procedures.
 
-**Wait stats** are another source of information that helps to troubleshoot performance in the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)]. For a long time, wait statistics were available only on instance level, which made it hard to backtrack waits to a specific query. Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and [!INCLUDE[ssSDSfull](../../includes/ssazure-sqldb.md)], Query Store includes a dimension that tracks wait stats. The following example enables the Query Store to collect wait stats.
+**Wait stats** are another source of information that helps to troubleshoot performance in the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)]. For a long time, wait statistics were available only on instance level, which made it hard to backtrack waits to a specific query. Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], Query Store includes a dimension that tracks wait stats. The following example enables the Query Store to collect wait stats.
 
 ```sql
 ALTER DATABASE <database_name>
@@ -142,7 +142,7 @@ To force a plan, select a query and plan, then select **Force Plan**. You can on
 
 ## <a id="Waiting"></a> Find waiting queries
 
-Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and [!INCLUDE[ssSDSfull](../../includes/ssazure-sqldb.md)], wait statistics per query over time are available in Query Store.
+Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], wait statistics per query over time are available in Query Store.
 
 In Query Store, wait types are combined into **wait categories**. The mapping of wait categories to wait types is available in [sys.query_store_wait_stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table).
 

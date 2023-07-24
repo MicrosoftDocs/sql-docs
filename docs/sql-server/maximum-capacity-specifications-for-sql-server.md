@@ -70,7 +70,7 @@ Maximum values of various objects defined in [!INCLUDE[ssNoVersion](../includes/
 |Foreign key table references per table|Outgoing = 253.<br/>Incoming = 10,000.|For restrictions, see [Create Foreign Key Relationships](../relational-databases/tables/create-foreign-key-relationships.md).|
 |Identifier length (in characters)|128||
 |Instances per computer|50 instances on a stand-alone server.<br /><br />25 failover cluster instances when using a shared cluster drive as storage.<br/><br/>50 failover cluster instances with SMB file shares as the storage option.||
-|Indexes per memory-optimized table|999 starting [!INCLUDE[ssSQL17](../includes/ssSQL17-md.md)] and in [!INCLUDE[ssSDSFull](../includes/ssazure-sqldb.md)].<br/><br/>8 in [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] and [!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)].||
+|Indexes per memory-optimized table|999 starting [!INCLUDE[ssSQL17](../includes/ssSQL17-md.md)] and in [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)].<br/><br/>8 in [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] and [!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)].||
 |Locks per connection|Maximum locks per server||
 |Locks per instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Limited only by memory|This value is for static lock allocation. Dynamic locks are limited only by memory.|
 |Nested stored procedure levels|32|If a stored procedure accesses more than 64 databases, or more than two databases in interleaving, you'll receive an error.|

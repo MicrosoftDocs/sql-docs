@@ -147,7 +147,7 @@ For a **float** or **real** *expression*, *style* can have one of the values sho
 | **0** (default) | A maximum of 6 digits. Use in scientific notation, when appropriate. |
 | **1** | Always 8 digits. Always use in scientific notation. |
 | **2** | Always 16 digits. Always use in scientific notation. |
-| **3** | Always 17 digits. Use for lossless conversion. With this style, every distinct float or real value is guaranteed to convert to a distinct character string.<br /><br />**Applies to:** [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later versions, and [!INCLUDE[ssSDSfull](../../includes/ssazure-sqldb.md)]. |
+| **3** | Always 17 digits. Use for lossless conversion. With this style, every distinct float or real value is guaranteed to convert to a distinct character string.<br /><br />**Applies to:** [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later versions, and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. |
 | **126, 128, 129** | Included for legacy reasons. Don't use these values for new development. |
 
 ## money and smallmoney styles

@@ -29,7 +29,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 >  NULL and 0 values across all data types are optimized and take no bytes.  
   
 ## How Row Compression Affects Storage  
- The following table describes how row compression affects the existing types in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull_md](../../includes/ssazure-sqldb.md)]. The table does not include the savings that can be achieved by using page compression.  
+ The following table describes how row compression affects the existing types in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. The table does not include the savings that can be achieved by using page compression.  
   
 |Data type|Is storage affected?|Description|  
 |---------------|--------------------------|-----------------|  

@@ -26,9 +26,9 @@ Automatic tuning, introduced in [!INCLUDE[sssql17-md](../../includes/sssql17-md.
 
 The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] monitors the queries that are executed on the database and automatically improves performance of the workload. The [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] has a built-in intelligence mechanism that can automatically tune and improve performance of your queries by dynamically adapting the database to your workload. There are two automatic tuning features that are available:
 
-- **Automatic plan correction** identifies problematic query execution plans, such as a [parameter sensitivity or parameter sniffing](../../relational-databases/query-processing-architecture-guide.md#parameter-sensitivity) issues, and fixes query execution plan-related performance problems by forcing the last known good plan before the regression occurred. **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/ssazure-sqldb.md)] and Azure SQL Managed Instance]
+- **Automatic plan correction** identifies problematic query execution plans, such as a [parameter sensitivity or parameter sniffing](../../relational-databases/query-processing-architecture-guide.md#parameter-sensitivity) issues, and fixes query execution plan-related performance problems by forcing the last known good plan before the regression occurred. **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and Azure SQL Managed Instance]
 
-- **Automatic index management** identifies indexes that should be added in your database, and indexes that should be removed. **Applies to**: [!INCLUDE[ssSDSfull](../../includes/ssazure-sqldb.md)]
+- **Automatic index management** identifies indexes that should be added in your database, and indexes that should be removed. **Applies to**: [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
 ## Why automatic tuning?
 
@@ -84,7 +84,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 
 Once you enable this option, the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] will automatically force any recommendation where the estimated CPU gain is higher than 10 seconds, or the number of errors in the new plan is higher than the number of errors in the recommended plan, and verify that the forced plan is better than the current one.
 
-To enable [automatic tuning in [!INCLUDE [ssSDSfull](../../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)]](/azure/azure-sql/database/automatic-tuning-overview), see [Enable automatic tuning in Azure SQL Database using Azure portal](/azure/sql-database/sql-database-automatic-tuning-enable).
+To enable [automatic tuning in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)]](/azure/azure-sql/database/automatic-tuning-overview), see [Enable automatic tuning in Azure SQL Database using Azure portal](/azure/sql-database/sql-database-automatic-tuning-enable).
 
 ### Alternative - manual plan choice correction
 
@@ -168,7 +168,7 @@ When the [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] applies a C
 
 ### Automatic index management considerations
 
-Actions required to create necessary indexes in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] might consume resources and temporally affect workload performance. To minimize the impact of index creation on workload performance, [!INCLUDE[ssSDSfull](../../includes/ssazure-sqldb.md)]  finds an appropriate time window for any index management operation. Tuning action is postponed if the database needs resources to execute your workload, and is restarted when the database has enough unused resources that can be used for the maintenance task. One important feature in automatic index management is a verification of the actions. When [!INCLUDE[ssSDSfull](../../includes/ssazure-sqldb.md)]  creates or drops an index, a monitoring process analyzes the performance of your workload to verify that the action improved the overall performance. If it did not bring significant improvement - the action is immediately reverted. This way, [!INCLUDE[ssSDSfull](../../includes/ssazure-sqldb.md)]  ensures that automatic tuning actions do not negatively impact the performance of your workload. Indexes created by automatic tuning are transparent for the maintenance operation on the underlying schema. Schema changes such as dropping or renaming columns are not blocked by the presence of automatically created indexes. Indexes that are automatically created by [!INCLUDE[ssSDSfull](../../includes/ssazure-sqldb.md)]  are immediately dropped when the related table or columns are dropped.
+Actions required to create necessary indexes in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] might consume resources and temporally affect workload performance. To minimize the impact of index creation on workload performance, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]  finds an appropriate time window for any index management operation. Tuning action is postponed if the database needs resources to execute your workload, and is restarted when the database has enough unused resources that can be used for the maintenance task. One important feature in automatic index management is a verification of the actions. When [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]  creates or drops an index, a monitoring process analyzes the performance of your workload to verify that the action improved the overall performance. If it did not bring significant improvement - the action is immediately reverted. This way, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]  ensures that automatic tuning actions do not negatively impact the performance of your workload. Indexes created by automatic tuning are transparent for the maintenance operation on the underlying schema. Schema changes such as dropping or renaming columns are not blocked by the presence of automatically created indexes. Indexes that are automatically created by [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]  are immediately dropped when the related table or columns are dropped.
 
 ### Alternative - manual index management
 
@@ -178,7 +178,7 @@ Without automatic index management, a user or DBA would need to manually query t
 
 ## Next steps
 
-- [Automatic tuning in [!INCLUDE [ssSDSfull](../../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)]](/azure/azure-sql/database/automatic-tuning-overview)
+- [Automatic tuning in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)]](/azure/azure-sql/database/automatic-tuning-overview)
 - [ALTER DATABASE SET AUTOMATIC_TUNING (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)
 - [sys.database_automatic_tuning_options (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)
 - [sys.dm_db_tuning_recommendations (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)

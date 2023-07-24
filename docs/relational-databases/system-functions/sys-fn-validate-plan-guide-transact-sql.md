@@ -53,7 +53,7 @@ sys.fn_validate_plan_guide ( plan_guide_id )
 
 ## Remarks
 
-The `sys.fn_validate_plan_guide` function is not available in [!INCLUDE[ssSDSfull](../../includes/ssazure-sqldb.md)].
+The `sys.fn_validate_plan_guide` function is not available in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 ## Examples  
   

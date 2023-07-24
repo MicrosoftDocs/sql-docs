@@ -23,7 +23,7 @@ monikerRange: "=azuresqldb-current"
 
 [!INCLUDE [Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
-Returns information about backups of a database in an [!INCLUDE[ssSDSfull](../../includes/ssazure-sqldb.md)] server.
+Returns information about backups of a database in an [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] server.
 
 > [!NOTE]  
 > The `sys.dm_database_backups` DMV is currently in preview and is available for all Azure SQL Database service tiers except Hyperscale tier.
@@ -31,9 +31,9 @@ Returns information about backups of a database in an [!INCLUDE[ssSDSfull](../..
 | Column Name | Data Type | Description |
 | --- | --- | --- |
 | backup_file_id | **uniqueidentifier** | ID of the generated backup file. Not null. |
-| database_guid | **uniqueidentifier** | Logical database ID of the [!INCLUDE[ssSDSfull](../../includes/ssazure-sqldb.md)] on which the operation is performed. Not null. |
-| physical_database_name | **nvarchar(128)** | Name of the physical [!INCLUDE[ssSDSfull](../../includes/ssazure-sqldb.md)] on which the operation is performed. Not null. |
-| server_name | **nvarchar(128)** | Name of the physical server on which the [!INCLUDE[ssSDSfull](../../includes/ssazure-sqldb.md)] that is being backed up is present. Not null. |
+| database_guid | **uniqueidentifier** | Logical database ID of the [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] on which the operation is performed. Not null. |
+| physical_database_name | **nvarchar(128)** | Name of the physical [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] on which the operation is performed. Not null. |
+| server_name | **nvarchar(128)** | Name of the physical server on which the [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] that is being backed up is present. Not null. |
 | backup_start_date | **datetime2(7)** | Timestamp when the backup operation started. Not null. |
 | backup_finish_date | **datetime2(7)** | Timestamp when the backup operation finished. Not null. |
 | backup_type | **char(1)** | Type of backup. Not null.<br /><br />D = Full database backup<br />I = Incremental or differential backup<br />L = Log backup. |

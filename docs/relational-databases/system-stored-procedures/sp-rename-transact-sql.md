@@ -79,7 +79,7 @@ The type of object being renamed. *object_type* is **varchar(13)**, with a defau
 | DATABASE | A user-defined database. This object type is required when renaming a database. |
 | INDEX | A user-defined index. Renaming an index with statistics, also automatically renames the statistics. |
 | OBJECT | An item of a type tracked in [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). For example, OBJECT could be used to rename objects including constraints (CHECK, FOREIGN KEY, PRIMARY/UNIQUE KEY), user tables, and rules. |
-| STATISTICS | **Applies to**: [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] and later and [!INCLUDE [ssSDSfull](../../includes/ssazure-sqldb.md)].<br /><br />Statistics created explicitly by a user or created implicitly with an index. Renaming the statistics of an index automatically renames the index as well. |
+| STATISTICS | **Applies to**: [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] and later and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].<br /><br />Statistics created explicitly by a user or created implicitly with an index. Renaming the statistics of an index automatically renames the index as well. |
 | USERDATATYPE | A [CLR user-defined type](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) added by executing [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md) or [sp_addtype](sp-addtype-transact-sql.md). |
 
 #### [ @objtype = ] '*COLUMN*'

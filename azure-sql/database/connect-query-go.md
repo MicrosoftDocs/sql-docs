@@ -5,7 +5,7 @@ description: Use Go to create a program that connects to a database in Azure SQL
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: wiassaf, mathoma
-ms.date: 05/05/2022
+ms.date: 07/25/2023
 ms.service: sql-database
 ms.subservice: connect
 ms.topic: quickstart

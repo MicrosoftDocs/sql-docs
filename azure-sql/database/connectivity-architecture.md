@@ -75,7 +75,7 @@ The table below lists the individual Gateway IP addresses and Gateway IP address
 
 Periodically, we will retire individual **Gateway IP addresses** and migrate the traffic to **Gateway IP address subnets** as per the process outlined at [Azure SQL Database traffic migration to newer Gateways](gateway-migration.md). 
 
-We strongly encourage customers to move away from reliance on any individual Gateway IP address ( since these will be retired in future) and instead allow network traffic to reach ** all the Gateway IP address subnets** in a region.
+We strongly encourage customers to move away from relying on any individual Gateway IP address (since these will be retired in the future) and instead allow network traffic to reach **all the Gateway IP address subnets** in a region.
 
 > [!IMPORTANT]  
 > - Logins for SQL Database or dedicated SQL pools (formerly SQL DW) in Azure Synapse can land on **any of the Gateway IP address subnets in a region**. For consistent connectivity to SQL Database or dedicated SQL pools (formerly SQL DW) in Azure Synapse, allow network traffic to and from **all the Gateway IP address subnets** in a region.

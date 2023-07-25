@@ -3,7 +3,8 @@ title: "SQL Server backup to URL for S3-compatible object storage"
 description: Learn about the concepts, requirements, and components necessary for SQL Server to use the S3-compatible object storage as a backup destination.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 10/15/2022
+ms.reviewer: hudequei
+ms.date: 07/24/2022
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: conceptual
@@ -173,7 +174,7 @@ For more information see [SQL Server back up to URL for S3-compatible storage be
 
 ### Region
 
-Your S3-compatible object storage provider can offer the ability to determine a specific region for the bucket location. The use of this optional parameter can provide more flexibility by specifying which region that particular bucket belongs to. This parameter requires the use of `WITH` together with either `BACKUP_OPTIONS` or `RESTORE_OPTIONS`. These options require the value to be declared in JSON format.
+Your S3-compatible object storage provider can offer the ability to determine a specific region for the bucket location. The use of this optional parameter can provide more flexibility by specifying which region that particular bucket belongs to. This parameter requires the use of `WITH` together with either `BACKUP_OPTIONS` or `RESTORE_OPTIONS`. These options require the value to be declared in JSON format. This allows scenarios in which an S3-compatible storage provider can have the same universal URL but be distributed across several regions. In this case, the backup or restore command will point to the specified regions without the need to change the URL.
 
 If no value is declared, `us-east-1` is assigned as default.
 
@@ -217,7 +218,7 @@ The following are the current limitations of backup and restore with S3-compatib
 1. Due to the current limitation of S3 Standard REST API, the temporary uncommitted data files that are created in the customer's S3-compatible object store (due to an ongoing multipart upload operation) while the BACKUP T-SQL command is running, are not removed in case of failures. These uncommitted data blocks continue to persist in S3-compatible object storage in the case the BACKUP T-SQL command fails or is canceled. If the backup succeeds, these temporary files are automatically removed by the object store to form the final backup file. Some S3-compatible storage providers handle this through their garbage collector system.
 1. The total URL length is limited to 259 characters. The full string is counted in this limitation, including the `s3://` connector name. So, the usable limit is 254 characters. However, we recommend sticking to a limit of 200 characters to allow for possible introduction of query parameters.
 1. The SQL credential name is limited by 128 characters in UTF-16 format.
-1. Secret key ID only supports alphanumeric values.
+1. Secret key ID must not have `:` character.
 
 ### Path style and virtual host style
 

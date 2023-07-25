@@ -3,7 +3,8 @@ title: "Install using graphical user interface"
 description: This article provides a step-by-step procedure for installing a new instance of SQL Server by using the SQL Server Setup Installation Wizard.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 03/06/2023
+ms.reviewer: pijocoder
+ms.date: 07/25/2023
 ms.service: sql
 ms.subservice: install
 ms.topic: conceptual
@@ -360,7 +361,7 @@ This isn't applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md
 
    For more information, see [Database Engine Configuration - Data Directories page](../../sql-server/install/instance-configuration.md#datadir).
 
-   Use the **Database Engine Configuration - TempDB** page to configure the file size, number of files, nondefault installation directories, and file-growth settings for `tempdb`. For more information, see [Database Engine Configuration - TempDB page](../../sql-server/install/instance-configuration.md#tempdb).
+   Use the **Database Engine Configuration - `tempdb` page to configure the file size, number of files, nondefault installation directories, and file-growth settings for `tempdb`. For more information, see [Database Engine Configuration - TempDB page](../../sql-server/install/instance-configuration.md#tempdb).
 
    Use the **[!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuration - MaxDOP** page to specify your max degree of parallelism. This setting determines how many processors a single statement can use during execution. The recommended value is automatically calculated during installation.
 
@@ -444,11 +445,17 @@ This isn't applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md
 
 ## Install SQL Server 2022
 
-1. Insert the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation media. From the root folder, double-click **setup.exe**. To install from a network share, locate the root folder on the share, and then double-click **setup.exe**.
+##### 1. Installation media
 
-1. The Installation Wizard runs the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Center. To create a new installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], select **Installation** in the left navigation area, and then select **New [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] standalone installation or add features to an existing installation**.
+Insert the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation media. From the root folder, double-click **setup.exe**. To install from a network share, locate the root folder on the share, and then double-click **setup.exe**.
 
-1. On the **Edition** page, select the edition you want to install.
+##### 2. SQL Server Installation Center
+
+The Installation Wizard runs the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Center. To create a new installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], select **Installation** in the left navigation area, and then select **New [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] standalone installation or add features to an existing installation**.
+
+##### 3. Edition
+
+On the **Edition** page, select the edition you want to install.
 
    - **Specify a free edition** allows you to select Evaluation, Developer, or Web edition.
    - **Use pay-as-you-go billing through Microsoft Azure** is an alternative to using the traditional license agreement. [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)] introduces this option in setup and allows you to activate your instance for use in production without supplying a product key. This option requires an active Azure subscription. For more information, see [Manage SQL Server license type](../../sql-server/azure-arc/manage-license-type.md). With this option you can specify Standard or Enterprise edition.
@@ -456,7 +463,9 @@ This isn't applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md
 
    To continue, select **Next**.
 
-1. On the **License Terms** page, review the license agreement. If you agree, select the **I accept the license terms and [Privacy Statement](https://privacy.microsoft.com/privacystatement)** check box, and then select **Next**.
+##### 4. License Terms
+
+On the **License Terms** page, review the license agreement. If you agree, select the **I accept the license terms and [Privacy Statement](https://privacy.microsoft.com/privacystatement)** check box, and then select **Next**.
 
    > [!NOTE]  
    > If an Enterprise Server/CAL license product key is entered, and the machine has more than 20 physical cores, or 40 logical cores when Hyper-Threading is enabled, a warning is shown during setup. You can still continue setup by selecting the **Check this box to acknowledge this limitation or select Back/Cancel to enter an Enterprise Core product license that supports the operating system maximum** check box, or select **Back** and enter a product key that supports the operating system maximum number of processors.
@@ -464,89 +473,111 @@ This isn't applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md
    > [!NOTE]  
    > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transmits information about your installation experience, as well as other usage and performance data to help Microsoft improve the product. To learn more about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data processing and privacy controls, see the [privacy statement](https://privacy.microsoft.com/privacystatement) and [Configure SQL Server to send feedback to Microsoft](../../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md).
 
-1. In the **Global Rules** page, Setup automatically advances to the **Microsoft Update** page if there are no rule errors.
+##### 5. Global Rules
+
+In the **Global Rules** page, Setup automatically advances to the **Microsoft Update** page if there are no rule errors.
+
+##### 6. Microsoft Update
 
 1. The **Microsoft Update** page appears next if the **Microsoft Update** check box in **Control Panel** > **All Control Panel Items** > **Windows Update** > **Change settings** isn't selected. Selecting the **Microsoft Update** check box changes the computer settings to include the latest updates for all Microsoft products when you scan for Windows updates.
 
-1. On the **Product Updates** page, the latest available [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] critical product updates are displayed. If no product updates are discovered, Setup doesn't display this page and automatically advances to the **Install Setup Files** page.
+##### 7. Product Updates
 
-1. On the **Install Setup Files** page, Setup provides the progress of downloading, extracting, and installing the Setup files. If an update for Setup is found and you specify to include it, that update will also be installed. If no update is found, Setup will automatically advance.
+On the **Product Updates** page, the latest available [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] critical product updates are displayed. If no product updates are discovered, Setup doesn't display this page and automatically advances to the **Install Setup Files** page.
 
-1. On the **Install Rules** page, Setup checks for potential problems that might occur while running Setup. If failures occur, select an item in the **Status** column for more information. Otherwise, select **Next**.
+##### 8. Install Setup Files
 
-1. On the **Azure Extension for SQL Server** page, you can configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to connect to Azure. [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] introduces this extension to enable using Azure services such as Microsoft Defender for Cloud, Microsoft Purview, Azure Active Directory and others.
+On the **Install Setup Files** page, Setup provides the progress of downloading, extracting, and installing the Setup files. If an update for Setup is found and you specify to include it, that update will also be installed. If no update is found, Setup will automatically advance.
 
-   - If you're installing [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] on a VMware ESX host or an Azure VMware Solution (AVS) host, you won't see the **Azure Extension for SQL Server** page during installation. You can [install the extension during setup using the command line parameters](install-sql-server-from-the-command-prompt.md) or you can install [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] without the Azure Extension for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] first and then later install the [Azure Extension for SQL Server](../../sql-server/azure-arc/connect.md).
+##### 9. Install Rules
 
-   - If you're installing [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] on an Azure VM, you won't see the **Azure Extension for SQL Server** page during installation. Connectivity to Azure Services for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Azure VMs is handled through the [SQL IaaS Agent Extension](/azure/azure-sql/virtual-machines/windows/sql-server-iaas-agent-extension-automate-management), which is automatically pushed to your Azure VM shortly after [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation. You can register your VM with the extension [manually](/azure/azure-sql/virtual-machines/windows/sql-agent-extension-manually-register-single-vm) if you don't want to wait for automatic registration. For more information on supported configurations, see [Supported SQL Server Versions and Operating Systems](../../sql-server/azure-arc/prerequisites.md#supported-sql-server-versions-and-operating-systems).
+On the **Install Rules** page, Setup checks for potential problems that might occur while running Setup. If failures occur, select an item in the **Status** column for more information. Otherwise, select **Next**.
 
-   This feature is selected by default. If you wish to proceed without connecting to Azure, you can unselect **Azure Extension for SQL Server**.
+##### 10. Azure Extension for SQL Server
 
-   To use the Azure extension for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you must have an active Azure subscription and provide a set of additional Azure-related parameters. You also need to make sure the following [Azure resource providers](../../sql-server/azure-arc/prerequisites.md) are registered in your subscription:
+On the **Azure Extension for SQL Server** page, you can configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to connect to Azure. [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] introduces this extension to enable using Azure services such as Microsoft Defender for Cloud, Microsoft Purview, Azure Active Directory and others. This feature is selected by default. If you wish to proceed without connecting to Azure, you can unselect **Azure Extension for SQL Server**.
 
-   - **Microsoft.AzureArcData**
-   - **Microsoft.HybridCompute**
+- If you're installing [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] on a VMware ESX host or an Azure VMware Solution (AVS) host, you won't see the **Azure Extension for SQL Server** page during installation. You can [install the extension during setup using the command line parameters](install-sql-server-from-the-command-prompt.md) or you can install [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] without the Azure Extension for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] first and then later install the [Azure Extension for SQL Server](../../sql-server/azure-arc/connect.md).
 
-   To authenticate the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance with Azure, you can sign in using an Azure account, or you can use an Azure service principal. For specific security requirements to install the extension, see [Required permissions](../../sql-server/azure-arc/prerequisites.md).
+- If you're installing [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] on an Azure VM, you won't see the **Azure Extension for SQL Server** page during installation. Connectivity to Azure Services for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Azure VMs is handled through the [SQL IaaS Agent Extension](/azure/azure-sql/virtual-machines/windows/sql-server-iaas-agent-extension-automate-management), which is automatically pushed to your Azure VM shortly after [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation. You can register your VM with the extension [manually](/azure/azure-sql/virtual-machines/windows/sql-agent-extension-manually-register-single-vm) if you don't want to wait for automatic registration. For more information on supported configurations, see [Supported SQL Server Versions and Operating Systems](../../sql-server/azure-arc/prerequisites.md#supported-sql-server-versions-and-operating-systems).
 
-   To sign in with your Azure account, select **Use Azure Login**. Windows may prompt you to add one or more sites to the Trusted sites zone. Follow your organization's security requirements. After you sign in to Azure, proceed to provide the additional registration information.
 
-   Alternatively, you can use a service principal:
 
-   - **Azure service principal**: If you provide the service principal, provide the service principal secret. This is used to authenticate the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance to Azure.
-   - **Azure subscription ID**: Azure subscription where the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance resource is created.
+To use the Azure extension for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you must have an active Azure subscription and provide a set of additional Azure-related parameters. You also need to make sure the following [Azure resource providers](../../sql-server/azure-arc/prerequisites.md) are registered in your subscription:
 
-   Provide the following information:
+- **Microsoft.AzureArcData**
+- **Microsoft.HybridCompute**
 
-   - **Azure resource group**: Azure resource group where the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance resource is created.
-   - **Azure region**: Azure region where the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance resource is created.
-   - **Azure tenant ID**: Azure tenant ID in which the service principal exists.
-   - **Proxy server URL**: (Optional) - Name of the HTTP proxy server used to connect to Azure Arc.
+To authenticate the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance with Azure, you can sign in using an Azure account, or you can use an Azure service principal. For specific security requirements to install the extension, see [Required permissions](../../sql-server/azure-arc/prerequisites.md).
+
+To sign in with your Azure account, select **Use Azure Login**. Windows may prompt you to add one or more sites to the Trusted sites zone. Follow your organization's security requirements. After you sign in to Azure, proceed to provide the additional registration information.
+
+Alternatively, you can use a service principal:
+
+- **Azure service principal**: If you provide the service principal, provide the service principal secret. This is used to authenticate the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance to Azure.
+- **Azure subscription ID**: Azure subscription where the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance resource is created.
+
+Provide the following information:
+
+- **Azure resource group**: Azure resource group where the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance resource is created.
+- **Azure region**: Azure region where the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance resource is created.
+- **Azure tenant ID**: Azure tenant ID in which the service principal exists.
+- **Proxy server URL**: (Optional) - Name of the HTTP proxy server used to connect to Azure Arc.
+
+> [!NOTE]  
+> To create a service principal, retrieve its password and Tenant ID, see [Connect multiple SQL Server instances to Azure Arc](../../sql-server/azure-arc/connect-at-scale-policy.md). If the server is already connected to Azure via Azure Arc, the subscription ID, resource group, and region will be populated and you won't be able to change them.
+
+Select **Next** to proceed.
+
+##### 11. Feature Selection
+
+On the **Feature Selection** page, select the components for your installation. For example, to install a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)], select **Database Engine Services**.
+
+A description for each component group appears in the **Feature description** pane after you select the feature name. You can select any combination of check boxes.
+
+The prerequisites for the selected features are displayed in the **Prerequisites for selected features** pane. Setup installs the prerequisites that aren't already installed during the installation step described later in this procedure.
+
+You can also specify a custom directory for shared components by using the field at the bottom of the **Feature Selection** page. To change the installation path for shared components, either update the path in the field at the bottom of the dialog box or select **Browse** to go to an installation directory. The default installation path is [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)].
+
+> [!NOTE]  
+> The path specified for the shared components must be an absolute path. The folder must not be compressed or encrypted. Mapped drives aren't supported.
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses two directories for shared features:
+
+- Shared feature directory
+- Shared feature directory (x86)
+
+> [!NOTE]  
+> The path specified for each of the above options must be different.
+
+##### 12. Feature Rules
+
+The **Feature Rules** page automatically advances if all rules pass.
+
+##### 13. Instance Configuration
+
+On the **Instance Configuration** page, specify whether to install a default instance or a named instance. For more information, see [Instance configuration](../../sql-server/install/instance-configuration.md#instance-configuration-page).
+
+- **Instance ID**: By default, the instance name is used as the instance ID. This ID is used to identify the installation directories and registry keys for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The same behavior occurs for default instances and named instances. For a default instance, the instance name and instance ID are `MSSQLSERVER`. To use a nondefault instance ID, specify a different value in the **Instance ID** text box.
 
    > [!NOTE]  
-   > To create a service principal, retrieve its password and Tenant ID, see [Connect multiple SQL Server instances to Azure Arc](../../sql-server/azure-arc/connect-at-scale-policy.md). If the server is already connected to Azure via Azure Arc, the subscription ID, resource group, and region will be populated and you won't be able to change them.
+   > Typical standalone instances of [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)], whether default or named instances, don't use a nondefault value for the instance ID.
 
-   Select **Next** to proceed.
+   All [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service packs and upgrades apply to every component of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-1. On the **Feature Selection** page, select the components for your installation. For example, to install a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)], select **Database Engine Services**.
+- **Installed instances**: The grid shows the instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are on the computer where Setup is running. If a default instance is already installed on the computer, you must install a named instance of [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)].
 
-   A description for each component group appears in the **Feature description** pane after you select the feature name. You can select any combination of check boxes.
+The workflow for the rest of the installation depends on the features that you've specified for your installation. Depending on your selections, you might not see all the pages.
 
-   The prerequisites for the selected features are displayed in the **Prerequisites for selected features** pane. Setup installs the prerequisites that aren't already installed during the installation step described later in this procedure.
+##### 14. Java Install Location
 
-   You can also specify a custom directory for shared components by using the field at the bottom of the **Feature Selection** page. To change the installation path for shared components, either update the path in the field at the bottom of the dialog box or select **Browse** to go to an installation directory. The default installation path is [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)].
+Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], PolyBase no longer requires that Oracle JRE 7 Update 51 (at least) be pre-installed on the computer prior to installing the feature. Selecting to install the PolyBase feature will add the **Java Install Location** page to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup displayed after the **Instance Configuration** page. On the Java Install Location page, you can choose to install the Azul Zulu Open JRE included with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation, or provide a location of a different JRE or JDK that has already been installed on the computer.
 
-   > [!NOTE]  
-   > The path specified for the shared components must be an absolute path. The folder must not be compressed or encrypted. Mapped drives aren't supported.
+Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], Java has been added with Language Extensions. Selecting to install the Java feature will add the **Java Install Location** page to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup dialog window, displayed after the **Instance Configuration** page. On the **Java Install Location** page, you can choose to install the Zulu Open JRE included with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation, or provide a location of a different JRE or JDK that has already been installed on the computer.
 
-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses two directories for shared features:
+##### 15. Server Configuration
 
-   - Shared feature directory
-   - Shared feature directory (x86)
-
-   > [!NOTE]  
-   > The path specified for each of the above options must be different.
-
-1. The **Feature Rules** page automatically advances if all rules pass.
-
-1. On the **Instance Configuration** page, specify whether to install a default instance or a named instance. For more information, see [Instance configuration](../../sql-server/install/instance-configuration.md#instance-configuration-page).
-
-   - **Instance ID**: By default, the instance name is used as the instance ID. This ID is used to identify the installation directories and registry keys for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The same behavior occurs for default instances and named instances. For a default instance, the instance name and instance ID are `MSSQLSERVER`. To use a nondefault instance ID, specify a different value in the **Instance ID** text box.
-
-     > [!NOTE]  
-     > Typical standalone instances of [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)], whether default or named instances, don't use a nondefault value for the instance ID.
-
-     All [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service packs and upgrades apply to every component of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
-
-   - **Installed instances**: The grid shows the instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are on the computer where Setup is running. If a default instance is already installed on the computer, you must install a named instance of [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)].
-
-   The workflow for the rest of the installation depends on the features that you've specified for your installation. Depending on your selections, you might not see all the pages.
-
-1. Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], PolyBase no longer requires that Oracle JRE 7 Update 51 (at least) be pre-installed on the computer prior to installing the feature. Selecting to install the PolyBase feature will add the **Java Install Location** page to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup displayed after the **Instance Configuration** page. On the Java Install Location page, you can choose to install the Azul Zulu Open JRE included with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation, or provide a location of a different JRE or JDK that has already been installed on the computer.
-
-1. Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], Java has been added with Language Extensions. Selecting to install the Java feature will add the **Java Install Location** page to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup dialog window, displayed after the **Instance Configuration** page. On the **Java Install Location** page, you can choose to install the Zulu Open JRE included with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation, or provide a location of a different JRE or JDK that has already been installed on the computer.
-
-1. Use the **Server Configuration - Service Accounts** page to specify the accounts for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services. The actual services that you configure on this page depend on the features that you selected to install. For more information about configuration settings, see [Installation Wizard help](../../sql-server/install/instance-configuration.md#serverconfig).
+- On the **Server Configuration** page, use the **Service Accounts** tab to specify the accounts for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services. The actual services that you configure on this page depend on the features that you selected to install. For more information about configuration settings, see [Installation Wizard help](../../sql-server/install/instance-configuration.md#serverconfig).
 
    You can assign the same account to all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services, or you can configure each service account individually. You can also specify whether services start automatically, start manually, or are disabled. We recommend you configure service accounts individually to provide the least privileges for each service. Make sure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services are granted the minimum permissions they must have to complete their tasks. For more information, see [Configure Windows service accounts and permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
 
@@ -558,48 +589,52 @@ This isn't applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md
    > [!NOTE]  
    > Select the **Grant Perform Volume Maintenance Task privilege to SQL Server Database Engine Service** check box to allow the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service account to use [database instant file initialization](../../relational-databases/databases/database-instant-file-initialization.md).
 
-   Use the **Server Configuration - Collation** page to specify nondefault collations for the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. For more information, see [Collations and Unicode support](../../relational-databases/collations/collation-and-unicode-support.md).
+- On the **Server Configuration** page use the **Collation** tab to specify nondefault collations for the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. For more information, see [Collations and Unicode support](../../relational-databases/collations/collation-and-unicode-support.md).
 
-1. Use the **Database Engine Configuration - Server Configuration** page to specify the following options:
+##### 16. Database Engine Configuration
 
-   - **Security Mode**: Select **Windows Authentication** or **Mixed Mode Authentication** for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If you select **Mixed Mode Authentication**, you must provide a strong password for the built-in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system administrator account (sa).
+- On the **Database Engine Configuration** page use the **Server Configuration** tab to specify the following options:
 
-     After a device establishes a successful connection to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the security mechanism is the same for both Windows authentication and mixed mode authentication. For more information, see [Database Engine Configuration - Server Configuration page](../../sql-server/install/instance-configuration.md#serverconfig).
+  - **Security Mode**: Select **Windows Authentication** or **Mixed Mode Authentication** for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If you select **Mixed Mode Authentication**, you must provide a strong password for the built-in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system administrator account (sa).
 
-   - **SQL Server Administrators**: You must specify at least one system administrator for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. To add the account under which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup is running, select **Add Current User**. To add or remove accounts from the list of system administrators, select **Add** or **Remove**, and then edit the list of users, groups, or computers that have administrator privileges for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  You can also add a Windows Domain Group, to establish a shared SQL Administrator Group in Active Directory with sysadmin Access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+    After a device establishes a successful connection to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the security mechanism is the same for both Windows authentication and mixed mode authentication. For more information, see [Database Engine Configuration - Server Configuration page](../../sql-server/install/instance-configuration.md#serverconfig).
 
-     Use the **Database Engine Configuration - Data Directories** page to specify nondefault installation directories. To install to the default directories, select **Next**.
+  - **SQL Server Administrators**: You must specify at least one system administrator for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. To add the account under which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup is running, select **Add Current User**. To add or remove accounts from the list of system administrators, select **Add** or **Remove**, and then edit the list of users, groups, or computers that have administrator privileges for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  You can also add a Windows Domain Group, to establish a shared SQL Administrator Group in Active Directory with sysadmin Access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+
+- Use the **Data Directories** tab to specify nondefault installation directories. To install to the default directories, select **Next**.
 
    > [!IMPORTANT]  
    > If you specify nondefault installation directories, ensure that the installation folders are unique to this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. None of the directories in this dialog box should be shared with directories from other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
    For more information, see [Database Engine Configuration - Data Directories page](../../sql-server/install/instance-configuration.md#datadir).
 
-   Use the **Database Engine Configuration - TempDB** page to configure the file size, number of files, nondefault installation directories, and file-growth settings for `tempdb`. For more information, see [Database Engine Configuration - TempDB page](../../sql-server/install/instance-configuration.md#tempdb).
+   Use the **Database Engine Configuration - `tempdb` page to configure the file size, number of files, nondefault installation directories, and file-growth settings for `tempdb`. For more information, see [Database Engine Configuration - TempDB page](../../sql-server/install/instance-configuration.md#tempdb).
 
-   Use the **[!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuration - MaxDOP** page to specify your max degree of parallelism. This setting determines how many processors a single statement can use during execution. The recommended value is automatically calculated during installation.
+- Use the **MaxDOP** page to specify your max degree of parallelism. This setting determines how many processors a single statement can use during execution. The recommended value is automatically calculated during installation.
 
    For more information, see the [Database Engine Configuration - MaxDOP page](../../sql-server/install/instance-configuration.md?view=sql-server-ver15&preserve-view=true#maxdop).
 
-   Use the **Database Engine Configuration - Memory** page to specify the **min server memory** and **max server memory** values that this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will use after startup. You can use the default values, use the calculated recommended values, or manually specify your own values after you've chosen the **Recommended** option.
+- Use the **Memory** tab to specify the **min server memory** and **max server memory** values that this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will use after startup. You can use the default values, use the calculated recommended values, or manually specify your own values after you've chosen the **Recommended** option.
 
    For more information, see the [Database Engine Configuration - Memory page](../../sql-server/install/instance-configuration.md?view=sql-server-ver15&preserve-view=true#memory).
 
-   Use the **Database Engine Configuration - FILESTREAM** page to enable FILESTREAM for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Database Engine Configuration - FILESTREAM page](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page).
+- Use the **FILESTREAM** tab to enable FILESTREAM for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Database Engine Configuration - FILESTREAM page](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page).
 
-1. Use the **Analysis Services Configuration - Account Provisioning** page to specify the server mode and the users or accounts that have administrator permissions for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. The server mode determines which memory and storage subsystems are used on the server. Different solution types run in different server modes. If you plan to run multidimensional cube databases on the server, select the default server mode option, **Multidimensional and Data Mining**.
+##### 17. Analysis Services Configuration
 
-   You must specify at least one system administrator for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:
+On the **Analysis Services Configuration** use the **Account Provisioning** tab to specify the server mode and the users or accounts that have administrator permissions for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. The server mode determines which memory and storage subsystems are used on the server. Different solution types run in different server modes. If you plan to run multidimensional cube databases on the server, select the default server mode option, **Multidimensional and Data Mining**.
 
-   - To add the account under which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup is running, select **Add Current User**.
+You must specify at least one system administrator for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:
 
-   - To add or remove accounts from the list of system administrators, select **Add** or **Remove**, and then edit the list of users, groups, or computers that have administrator privileges for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].
+ - To add the account under which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup is running, select **Add Current User**.
+
+ - To add or remove accounts from the list of system administrators, select **Add** or **Remove**, and then edit the list of users, groups, or computers that have administrator privileges for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].
 
    For more information about server mode and administrator permissions, see [Analysis Services Configuration - Account Provisioning page](../../sql-server/install/instance-configuration.md#analysis-services-configuration---account-provisioning-page).
 
    When you're finished editing the list, select **OK**. Verify the list of administrators in the configuration dialog box. After the list is complete, select **Next**.
 
-   Use the **Analysis Services Configuration - Data Directories** page to specify nondefault installation directories. To install to the default directories, select **Next**.
+On the **Analysis Services Configuration** use the **Data Directories** page to specify nondefault installation directories. To install to the default directories, select **Next**.
 
    > [!IMPORTANT]  
    > When installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], if you specify the same directory path for `INSTANCEDIR` and `SQLUSERDBDIR`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent and Full Text Search won't start due to missing permissions.  
@@ -608,20 +643,26 @@ This isn't applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md
 
    For more information, see [Analysis Services Configuration - Data Directories page](../../sql-server/install/instance-configuration.md#analysis-services-configuration---data-directories-page).
 
-1. The **Ready to Install** page shows a tree view of the installation options that you specified during Setup. On this page, Setup indicates whether the **Product Update** feature is enabled or disabled and the final update version.
+##### 18. Ready to Install
 
-   To continue, select **Install**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup first installs the required prerequisites for the selected features, then it installs the selected features.
+The **Ready to Install** page shows a tree view of the installation options that you specified during Setup. On this page, Setup indicates whether the **Product Update** feature is enabled or disabled and the final update version.
+
+To continue, select **Install**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup first installs the required prerequisites for the selected features, then it installs the selected features.
+
+##### 19. Installation Progress
 
 1. During installation, the **Installation Progress** page provides status updates so that you can monitor the installation progress as Setup continues.
 
-1. After installation, the **Complete** page provides a link to the summary log file for the installation and other important notes.
+##### 20. Complete
 
-   > [!IMPORTANT]  
-   > Make sure you read the message from the Installation Wizard when you've finished with Setup. For more information, see [View and read SQL Server Setup log files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
+After installation, a *Successful* status on the **Complete** page indicates a successful completion. This page provides a link to the summary log file for the installation and other important notes.
 
-   To complete the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation process, select **Close**.
+> [!IMPORTANT]  
+> Make sure you read the message from the Installation Wizard when you've finished with Setup. For more information, see [View and read SQL Server Setup log files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
 
-1. If you're instructed to restart the computer, do so now.
+To complete the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation process, select **Close**.
+
+If you're instructed to restart the computer, do so now.
 
 ::: moniker-end
 

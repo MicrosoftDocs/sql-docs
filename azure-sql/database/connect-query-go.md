@@ -18,14 +18,14 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 # Quickstart: Use Golang to query a database in Azure SQL Database or Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
-In this quickstart, you'll use the Golang programming language to connect to a database in Azure SQL Database or Azure SQL Managed Instance with the [go-mssqldb](https://github.com/microsoft/go-mssqldb). The sample queries and modifies data with explicit Transact-SQL statements. [Golang](https://go.dev/) is an open-source programming language that makes it easy to build simple, reliable, and efficient software.  
+In this quickstart, you'll use the Golang programming language to connect to an Azure SQL Database or a database in Azure SQL Managed Instance with the [go-mssqldb](https://github.com/microsoft/go-mssqldb) driver. The sample queries and modifies data with explicit Transact-SQL statements. [Golang](https://go.dev/) is an open-source programming language that makes it easy to build simple, reliable, and efficient software.  
 
 ## Prerequisites
 
 To complete this quickstart, you need:
 
 - An Azure account with an active subscription. [Create an account for free](https://azure.microsoft.com/free/?ref=microsoft.com&utm_source=microsoft.com&utm_medium=docs&utm_campaign=visualstudio).
-- A database in Azure SQL Database or Azure SQL Managed Instance. You can use one of these quickstarts to create a database:
+- An Azure SQL Database or a database in Azure SQL Managed Instance. You can use one of these quickstarts to create a database:
 
   || SQL Database | SQL Managed Instance | SQL Server on Azure VM |
   |:--- |:--- |:---|:---|

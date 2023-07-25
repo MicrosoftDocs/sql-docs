@@ -131,6 +131,10 @@ When you update an existing failover group by using the Azure CLI, use the:
 
 ## View licensing rights
 
+You can check the licensing rights for an existing failover group by using the Azure portal, Azure PowerShell or the Azure CLI. 
+
+### [Azure portal](#tab/azure-portal)
+
 In the Azure portal, you can check the licensing for your secondary managed instance in two locations:
 
 - **Failover groups** for your *primary managed instance*.
@@ -150,6 +154,19 @@ If failover rights aren't activated and you qualify for the benefit, you also se
 
 :::image type="content" source="media/auto-failover-group-standby-replica-how-to-configure/failover-rights-notification.png" alt-text="Screenshot that shows the SQL Managed Instance overview pane, and recommendations showing failover rights aren't used." :::
 
+### [Azure PowerShell](#tab/azure-powershell)
+
+Use the Azure PowerShell [Get-AzSqlDatabaseInstanceFailoverGroup](/powershell/module/az.sql/get-azsqldatabaseinstancefailovergroup) command to determine failover rights for an existing failover group. 
+
+A value of `Standby` for the `SecondaryType` parameter indicates failover rights are activated, and you're currently not paying licensing costs for this secondary standby instance. 
+
+### [Azure CLI](#tab/azure-cli)
+
+Use the Azure CLI [az sql instance-failover-group show](/cli/azure/sql/instance-failover-group#az-sql-instance-failover-group-show) command to determine failover rights for an existing failover group. 
+
+A value of `Standby` for the `secondaryType` parameter indicates failover rights are activated, and you're currently not paying licensing costs for this secondary standby instance. 
+
+---
 
 ## Next steps
 

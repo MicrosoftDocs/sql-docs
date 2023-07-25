@@ -78,7 +78,7 @@ Periodically, we will retire individual **Gateway IP addresses** and migrate the
 We strongly encourage customers to move away from reliance on any individual Gateway IP address ( since these will be retired in future) and instead allow network traffic to reach ** all the Gateway IP address subnets** in a region.
 
 > [!IMPORTANT]  
-> - Logins for SQL Database or dedicated SQL pools (formerly SQL DW) in Azure Synapse can land on **any of the Gateway IP address subnets in a region**. For consistent connectivity to SQL Database or dedicated SQL pools (formerly SQL DW) in Azure Synapse, allow network traffic to and from  ** all the Gateway IP address subnets** in a region.
+> - Logins for SQL Database or dedicated SQL pools (formerly SQL DW) in Azure Synapse can land on **any of the Gateway IP address subnets in a region**. For consistent connectivity to SQL Database or dedicated SQL pools (formerly SQL DW) in Azure Synapse, allow network traffic to and from **all the Gateway IP address subnets** in a region.
 > - Use the Gateway IP address subnets in this section if you're using a Proxy connection policy to connect to Azure SQL Database. If you're using the Redirect connection policy, refer to the [Azure IP Ranges and Service Tags - Public Cloud](https://www.microsoft.com/download/details.aspx?id=56519) for a list of your region's IP addresses to allow. 
 
 | Region name          | Gateway IP addresses | Gateway IP address subnets |

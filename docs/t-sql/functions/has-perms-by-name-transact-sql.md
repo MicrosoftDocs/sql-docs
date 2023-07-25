@@ -43,7 +43,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  *securable_class*  
  Is the name of the class of securable against which the permission is tested. *securable_class* is a scalar expression of type **nvarchar(60)**.  
   
- In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the securable_class argument must be set to one of the following: **DATABASE**, **OBJECT**, **ROLE**, **SCHEMA**, or **USER**.  
+ In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the securable_class argument must be set to one of the following: **DATABASE**, **OBJECT**, **ROLE**, **SCHEMA**, or **USER**.  
   
  *permission*  
  A nonnull scalar expression of type **sysname** that represents the permission name to be checked. There is no default. The permission name ANY is a wildcard.  
@@ -57,7 +57,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  *sub-securable_class*  
  An optional scalar expression of type **nvarchar(60)** that represent the class of securable subentity against which the permission is tested. The default is NULL.  
   
- In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the sub-securable_class argument is valid only if the securable_class argument is set to **OBJECT**. If the securable_class argument is set to **OBJECT**, the sub-securable_class argument must be set to **COLUMN**.  
+ In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the sub-securable_class argument is valid only if the securable_class argument is set to **OBJECT**. If the securable_class argument is set to **OBJECT**, the sub-securable_class argument must be set to **COLUMN**.  
   
 ## Return Types  
  **int**  

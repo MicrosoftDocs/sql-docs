@@ -4,7 +4,7 @@ description: This page describes some common vCore resource limits for a single 
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 07/05/2023
+ms.date: 07/25/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: reference
@@ -298,31 +298,67 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 <sup>4</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 ## Hyperscale - provisioned compute - DC-series
+### Hyperscale DC-series (Gen5) compute generation (part 1 of 2)
 
-|Compute size (service objective)|HS_DC_2|HS_DC_4|HS_DC_6|HS_DC_8|
-|:--- | --: |--: |--: |--: |
-|Hardware|DC-series|DC-series|DC-series|DC-series|
-|vCores|2|4|6|8|
-|Memory (GB)|9|18|27|36|
-|Columnstore support|Yes|Yes|Yes|Yes|
-|In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|
-|Max data size (TB)|100 |100 |100 |100 |
-|Max log size (TB)|Unlimited |Unlimited |Unlimited |Unlimited |
-|Tempdb max data size (GB)|64|128|192|256|
-|Max local SSD IOPS <sup>1</sup>|14,000|28,000|42,000|44,800|
-|Max log rate (MBps)|100 |100 |100 |100 |
-|Local read IO latency<sup>2</sup> |1-2 ms|1-2 ms|1-2 ms|1-2 ms|
-|Remote read IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
-|Write IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
-|Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
-|Max concurrent workers|160|320|480|640|
-|Max concurrent logins|160|320|480|640|
-|Max concurrent external connections <sup>4</sup>|16|32|48|64|
-|Max concurrent sessions|30,000|30,000|30,000|30,000|
-|Secondary replicas|0-4|0-4|0-4|0-4|
-|Multi-AZ|N/A|N/A|N/A|N/A|
-|Read Scale-out|Yes|Yes|Yes|Yes|
-|Backup storage retention|7 days|7 days|7 days|7 days|
+|Compute size (service objective)|HS_DC_2|HS_DC_4|HS_DC_6|HS_DC_8|HS_DC_10|HS_DC_12|
+|:--- | --: |--: |--: |--: |--: |--: |
+|Hardware|DC-series|DC-series|DC-series|DC-series|DC-series|DC-series|
+|vCores|2|4|6|8|10|12|
+|Memory (GB)|9|18|27|36|45|54|
+|Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|
+|In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|N/A|
+|Max data size (TB)|100 |100 |100 |100 |100 |100 |
+|Max log size (TB)|Unlimited |Unlimited |Unlimited |Unlimited |Unlimited |Unlimited |
+|Tempdb max data size (GB)|64|128|192|256|320|384|
+|Max local SSD IOPS <sup>1</sup>|14,000|28,000|42,000|44,800|64,000|76,800|
+|Max log rate (MBps)|100 |100 |100 |100 |100 |100 |
+|Local read IO latency<sup>2</sup> |1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
+|Remote read IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
+|Write IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
+|Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
+|Max concurrent workers|160|320|480|640|800|960|
+|Max concurrent logins|160|320|480|640|800|960|
+|Max concurrent external connections <sup>4</sup>|16|32|48|64|80|150|
+|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|
+|Secondary replicas|0-4|0-4|0-4|0-4|0-4|0-4|
+|Multi-AZ|N/A|N/A|N/A|N/A|N/A|N/A|
+|Read Scale-out|Yes|Yes|Yes|Yes|Yes|Yes|
+|Backup storage retention|7 days|7 days|7 days|7 days|7 days|7 days|
+
+<sup>1</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
+
+<sup>2</sup> Latency numbers are representative for typical workloads at steady state, but are not guaranteed. 
+
+<sup>3</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. For more information, see [Hyperscale service tier architecture](hyperscale-architecture.md).
+
+<sup>4</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
+
+### Hyperscale DC-series (Gen5) compute generation (part 2 of 2)
+
+|Compute size (service objective)|HS_DC_14|HS_DC_16|HS_DC_18|HS_DC_20|HS_DC_32|HS_DC_40|
+|:--- | --: |--: |--: |--: |--: |--: |
+|Hardware|DC-series|DC-series|DC-series|DC-series|DC-series|DC-series|
+|vCores|14|16|18|20|32|40|
+|Memory (GB)|63|72|81|90|144|180|
+|Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|
+|In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|N/A|
+|Max data size (TB)|100 |100 |100 |100 |100 |100 |
+|Max log size (TB)|Unlimited |Unlimited |Unlimited |Unlimited |Unlimited |Unlimited |
+|Tempdb max data size (GB)|448|512|576|640|1024|1280| 
+|Max local SSD IOPS <sup>1</sup>|89,600|102,400|115,200|128,000|204,800|256,000|
+|Max log rate (MBps)|100 |100 |100 |100 |100 |100 |
+|Local read IO latency<sup>2</sup> |1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
+|Remote read IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
+|Write IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
+|Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
+|Max concurrent workers|1120|1280|1440|1600|2560|3200|
+|Max concurrent logins|1120|1280|1440|1600|2560|3200|
+|Max concurrent external connections <sup>4</sup>|150|150|150|150|150|150|
+|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|
+|Secondary replicas|0-4|0-4|0-4|0-4|0-4|0-4|
+|Multi-AZ|N/A|N/A|N/A|N/A|N/A|N/A|
+|Read Scale-out|Yes|Yes|Yes|Yes|Yes|Yes|
+|Backup storage retention|7 days|7 days|7 days|7 days|7 days|7 days|
 
 <sup>1</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
 
@@ -412,7 +448,7 @@ SLOs in the Hyperscale premium-series tier use the naming convention `HS_PRMS_` 
 SLOs in the Hyperscale premium-series tier use the naming convention `HS_PRMS_` followed by the number of vCores, for example, `HS_PRMS_10`.
 
 |vCores|24|32|40|64|80|128|
-|:--- | --: |--: |--: |--: |--: |
+|:--- | --: |--: |--: |--: |--: |--: |
 |Memory (GB)|124.6|166.1|207.6|332.2|415.2|625|
 |Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|
 |In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|N/A|
@@ -523,7 +559,7 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 SLOs in the Premium-series memory optimized tier use the naming convention `HS_MOPRMS_` followed by the number of vCores, for example, `HS_MOPRMS_10`.
 
 |vCores|24|32|40|64|80|
-|:--- | --: |--: |--: |--: |
+|:--- | --: |--: |--: |--: |--: |
 |Memory (GB)| 249.1|332.2|415.2|664.4|830.5|
 |Columnstore support|Yes|Yes|Yes|Yes|Yes|
 |In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|
@@ -655,7 +691,7 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 
 ## General Purpose - provisioned compute - Fsv2-series
 
-### General Purpose Fsv2-series Hardware (part 1 of 2)
+### General Purpose Fsv2-series hardware (part 1 of 2)
 
 |Compute size (service objective)|GP_Fsv2_8|GP_Fsv2_10|GP_Fsv2_12|GP_Fsv2_14|GP_Fsv2_16|
 |:---| ---:|---:|---:|---:|---:|
@@ -720,30 +756,63 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 <sup>3</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 ## General Purpose - provisioned compute - DC-series
+### General Purpose DC-series hardware (part 1 of 2)
 
-|Compute size (service objective)|GP_DC_2|GP_DC_4|GP_DC_6|GP_DC_8| 
-|:---| ---:|---:|---:|---:|
-|Hardware|DC-series|DC-series|DC-series|DC-series|
-|vCores|2|4|6|8|
-|Memory (GB)|9|18|27|36|
-|Columnstore support|Yes|Yes|Yes|Yes|
-|In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|
-|Max data size (GB)|1024|1536|3072|3072|
-|Max log size (GB) <sup>1</sup>|307|461|922|922|
-|Tempdb max data size (GB)|64|128|192|256|
-|Storage type|Remote SSD|Remote SSD|Remote SSD|Remote SSD|
-|Read IO latency (approximate)|5-10 ms|5-10 ms|5-10 ms|5-10 ms|
-|Write IO latency (approximate)|5-7 ms|5-7 ms|5-7 ms|5-7 ms|
-|Max data IOPS <sup>2</sup>|640|1280|1920|2560|
-|Max log rate (MBps)|9|18|27|36|
-|Max concurrent workers|160|320|480|640|
-|Max concurrent logins|160|320|480|640|
-|Max concurrent external connections <sup>3</sup>|16|32|48|64|
-|Max concurrent sessions|30,000|30,000|30,000|30,000|
-|Number of replicas|1|1|1|1|
-|Multi-AZ|N/A|N/A|N/A|N/A|
-|Read Scale-out|N/A|N/A|N/A|N/A|
-|Included backup storage|1X DB size|1X DB size|1X DB size|1X DB size|
+|Compute size (service objective)|GP_DC_2|GP_DC_4|GP_DC_6|GP_DC_8|GP_DC_10|GP_DC_12|
+|:---| ---:|---:|---:|---:|---:|---:|
+|Hardware|DC-series|DC-series|DC-series|DC-series|DC-series|DC-series|
+|vCores|2|4|6|8|10|12|
+|Memory (GB)|9|18|27|36|45|54|
+|Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|
+|In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|N/A|
+|Max data size (GB)|1024|1536|3072|3072|3072|3072|
+|Max log size (GB) <sup>1</sup>|307|461|922|922|922|922|
+|Tempdb max data size (GB)|64|128|192|256|320|384|
+|Storage type|Remote SSD|Remote SSD|Remote SSD|Remote SSD|Remote SSD|Remote SSD|
+|Read IO latency (approximate)|5-10 ms|5-10 ms|5-10 ms|5-10 ms|5-10 ms|5-10 ms|
+|Write IO latency (approximate)|5-7 ms|5-7 ms|5-7 ms|5-7 ms|5-7 ms|5-7 ms|
+|Max data IOPS <sup>2</sup>|640|1280|1920|2560|3200|3840|
+|Max log rate (MBps)|9|18|27|36|45|50|
+|Max concurrent workers|160|320|480|640|800|960|
+|Max concurrent logins|160|320|480|640|800|960|
+|Max concurrent external connections <sup>3</sup>|16|32|48|64|80|96|
+|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|
+|Number of replicas|1|1|1|1|1|1|
+|Multi-AZ|N/A|N/A|N/A|N/A|N/A|N/A|
+|Read Scale-out|N/A|N/A|N/A|N/A|N/A|N/A|
+|Included backup storage|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|
+
+<sup>1</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
+
+<sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
+
+<sup>3</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
+
+### General Purpose DC-series hardware (part 2 of 2)
+
+|Compute size (service objective)|GP_DC_14|GP_DC_16|GP_DC_18|GP_DC_20|GP_DC_32|GP_DC_40|
+|:---| ---:|---:|---:|---:|---:|---:|
+|Hardware|DC-series|DC-series|DC-series|DC-series|DC-series|DC-series|
+|vCores|14|16|18|20|32|40|
+|Memory (GB)|63|72|81|90|144|180|
+|Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|
+|In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|N/A|
+|Max data size (GB)|1024|1536|3072|3072|3072|3072|
+|Max log size (GB) <sup>1</sup>|922|922|922|922|1024|1024|
+|Tempdb max data size (GB)|384|512|576|640|768|1024|
+|Storage type|Remote SSD|Remote SSD|Remote SSD|Remote SSD|Remote SSD|Remote SSD|
+|Read IO latency (approximate)|5-10 ms|5-10 ms|5-10 ms|5-10 ms|5-10 ms|5-10 ms|
+|Write IO latency (approximate)|5-7 ms|5-7 ms|5-7 ms|5-7 ms|5-7 ms|5-7 ms|
+|Max data IOPS <sup>2</sup>|4480|5120|5760|6400|7680|10240|
+|Max log rate (MBps)|50|50|50|50|50|50|
+|Max concurrent workers|1120|1280|1440|1600|2560|3200|
+|Max concurrent logins|1120|1280|1440|1600|2560|3200|
+|Max concurrent external connections <sup>3</sup>|112|128|144|150|150|320|
+|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|
+|Number of replicas|1|1|1|1|1|1|
+|Multi-AZ|N/A|N/A|N/A|N/A|N/A|N/A|
+|Read Scale-out|N/A|N/A|N/A|N/A|N/A|N/A|
+|Included backup storage|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|
 
 <sup>1</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
 
@@ -924,31 +993,65 @@ For important information about M-series hardware availability, see [Azure offer
 <sup>3</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 ## Business Critical - provisioned compute - DC-series
+### Business Critical DC-series hardware (part 1 of 2)
 
-|Compute size (service objective)|BC_DC_2|BC_DC_4|BC_DC_6|BC_DC_8|
-|:--- | --: |--: |--: |--: |
-|Hardware|DC-series|DC-series|DC-series|DC-series|
-|vCores|2|4|6|8|
-|Memory (GB)|9|18|27|36|
-|Columnstore support|Yes|Yes|Yes|Yes|
-|In-memory OLTP storage (GB)|1.7|3.7|5.9|8.2|
-|Max data size (GB)|768|768|768|768|
-|Max log size (GB) <sup>1</sup>|230|230|230|230|
-|Tempdb max data size (GB)|64|128|192|256|
-|[Max local storage size](resource-limits-logical-server.md#storage-space-governance) (GB)|1406|1406|1406|1406|
-|Storage type|Local SSD|Local SSD|Local SSD|Local SSD|
-|Read IO latency (approximate)|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
-|Write IO latency (approximate)|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
-|Max data IOPS <sup>2</sup>|14,000|28,000|42,000|44,800|
-|Max log rate (MBps)|24|48|72|96|
-|Max concurrent workers|200|400|600|800|
-|Max concurrent logins|200|400|600|800|
-|Max concurrent external connections <sup>3</sup>|20|40|60|80|
-|Max concurrent sessions|30,000|30,000|30,000|30,000|
-|Number of replicas|4|4|4|4|
-|Multi-AZ|No|No|No|No|
-|Read Scale-out|No|No|No|No|
-|Included backup storage|1X DB size|1X DB size|1X DB size|1X DB size|
+|Compute size (service objective)|BC_DC_2|BC_DC_4|BC_DC_6|BC_DC_8|BC_DC_10|BC_DC_12|
+|:--- | --: |--: |--: |--: |--: |--: |
+|Hardware|DC-series|DC-series|DC-series|DC-series|DC-series|DC-series|
+|vCores|2|4|6|8|10|12|
+|Memory (GB)|9|18|27|36|45|54|
+|Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|
+|In-memory OLTP storage (GB)|1.7|3.7|5.9|8.2|10.65|13.13|
+|Max data size (GB)|768|768|768|768|2048|3072|
+|Max log size (GB) <sup>1</sup>|230|230|230|230|461|922|
+|Tempdb max data size (GB)|64|128|192|256|320|384|
+|[Max local storage size](resource-limits-logical-server.md#storage-space-governance) (GB)|1406|1406|1406|1406|4829|4829|
+|Storage type|Local SSD|Local SSD|Local SSD|Local SSD|Local SSD|Local SSD|
+|Read IO latency (approximate)|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
+|Write IO latency (approximate)|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
+|Max data IOPS <sup>2</sup>|14,000|28,000|42,000|44,800|64,000|76,800|
+|Max log rate (MBps)|24|48|72|96|96|96|
+|Max concurrent workers|200|400|600|800|800|960|
+|Max concurrent logins|200|400|600|800|800|960|
+|Max concurrent external connections <sup>3</sup>|20|40|60|80|80|120|
+|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|
+|Number of replicas|4|4|4|4|4|4|
+|Multi-AZ|No|No|No|No|No|No|
+|Read Scale-out|No|No|No|No|No|No|
+|Included backup storage|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|
+
+<sup>1</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
+
+<sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
+
+<sup>3</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
+
+### Business Critical DC-series hardware (part 2 of 2)
+
+|Compute size (service objective)|BC_DC_14|BC_DC_16|BC_DC_18|BC_DC_20|BC_DC_32|BC_DC_40|
+|:--- | --: |--: |--: |--: |--: |--: |
+|Hardware|DC-series|DC-series|DC-series|DC-series|DC-series|DC-series|
+|vCores|14|16|18|20|32|40|
+|Memory (GB)|63|72|81|90|144|180|
+|Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|
+|In-memory OLTP storage (GB)|15.61|18.09|20.57|23.05|37.93|47.86|
+|Max data size (GB)|3072|3072|3072|3072|4096|4096|
+|Max log size (GB) <sup>1</sup>|922|922|922|922|1024|1024|
+|Tempdb max data size (GB)|448|512|576|640|768|1024|
+|[Max local storage size](resource-limits-logical-server.md#storage-space-governance) (GB)|4829|4829|4829|4829|4829|4829|
+|Storage type|Local SSD|Local SSD|Local SSD|Local SSD|Local SSD|Local SSD|
+|Read IO latency (approximate)|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
+|Write IO latency (approximate)|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
+|Max data IOPS <sup>2</sup>|89,600|102,400|115,200|128,000|204,800|256,000|
+|Max log rate (MBps)|96|96|96|96|96|96|
+|Max concurrent workers|1120|1280|1440|1600|2560|3200|
+|Max concurrent logins|1120|1280|1440|1600|2560|3200|
+|Max concurrent external connections <sup>3</sup>|122|128|144|150|150|150|
+|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|
+|Number of replicas|4|4|4|4|4|4|
+|Multi-AZ|No|No|No|No|No|No|
+|Read Scale-out|No|No|No|No|No|No|
+|Included backup storage|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|
 
 <sup>1</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
 

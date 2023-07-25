@@ -103,7 +103,7 @@ For more information about new features in [!INCLUDE [sssql22-md](../../includes
 
 ## Azure SQL Managed Instance
 
-If you'd like to take advantage of offloading maintenance and cost, but find the feature set of an [!INCLUDE [ssSDSfull](../../includes/sssdsfull-md.md)] single database too limiting, you can move to [SQL Managed Instance](/azure/sql-database/sql-database-managed-instance). A managed instance closely resembles an on-premises [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], without having to worry about such things as hardware failure, or patching. SQL Managed Instance is a collection of system and user databases with a shared set of resources that is lift-and-shift ready, and can be used for most migrations to the cloud. This option is best for new applications or existing on-premises applications that want to use the latest stable [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)] features and that are migrated to the cloud with minimal changes.
+If you'd like to take advantage of offloading maintenance and cost, but find the feature set of an [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] single database too limiting, you can move to [SQL Managed Instance](/azure/sql-database/sql-database-managed-instance). A managed instance closely resembles an on-premises [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], without having to worry about such things as hardware failure, or patching. SQL Managed Instance is a collection of system and user databases with a shared set of resources that is lift-and-shift ready, and can be used for most migrations to the cloud. This option is best for new applications or existing on-premises applications that want to use the latest stable [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)] features and that are migrated to the cloud with minimal changes.
 
 ### Benefits
 
@@ -114,7 +114,7 @@ If you'd like to take advantage of offloading maintenance and cost, but find the
 - **Automation**: Patching and backups happening automatically, saving you valuable maintenance time.
 - **Availability**: The cost of the service includes both storage and high availability, with 99.99% availability guaranteed.
 - **Intelligent Insights**: Gain insight about the performance of your databases with built-in intelligence analytics.
-- **Versionless**: [!INCLUDE [ssSDSfull](../../includes/sssdsfull-md.md)] is versionless, meaning you're always on the latest version, and never have to worry about upgrading, or downtime. Plus, you're always on the latest and greatest, with our latest stable features being released to the cloud first.
+- **Versionless**: [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] is versionless, meaning you're always on the latest version, and never have to worry about upgrading, or downtime. Plus, you're always on the latest and greatest, with our latest stable features being released to the cloud first.
 - **Low risk for database applications**: When the database compatibility is at the same level as the on-premises databases, existing database applications are protected from functional and performance changes that can have detrimental effects. An application only needs to be fully recertified when it needs to use features available in a newer database compatibility setting. For more information, see [Compatibility Certification](../../database-engine/install-windows/compatibility-certification.md).
 
 ### Considerations
@@ -219,7 +219,7 @@ If you want to offload maintenance, reduce costs, and eliminate the need to upgr
 - **Availability**: The cost of the service includes both storage and high availability, with 99.995% availability guaranteed.
 - **Automation**: Patching and backups happening automatically, saving you valuable maintenance time.
 - **Intelligent Insights**: Gain insight about the performance of your database with built-in intelligence analytics.
-- **Versionless**: [!INCLUDE [ssSDSfull](../../includes/sssdsfull-md.md)] is versionless, meaning you're always on the latest version, and never have to worry about upgrading, or downtime. Plus, you're always on the latest and greatest, with our latest stable features being released to the cloud first.
+- **Versionless**: [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] is versionless, meaning you're always on the latest version, and never have to worry about upgrading, or downtime. Plus, you're always on the latest and greatest, with our latest stable features being released to the cloud first.
 - **Low risk for database applications**: When the database compatibility is at the same level as the on-premises database, existing applications are protected from functional and performance changes that can have detrimental effects. An application only needs to be fully recertified when it needs to use features that are gated by a newer database compatibility setting. For more information, see [Compatibility Certification](../../database-engine/install-windows/compatibility-certification.md).
 
 ### Considerations

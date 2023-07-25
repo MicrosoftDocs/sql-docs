@@ -123,7 +123,7 @@ ms.topic: include
 | 7377 | 16 | No | Cannot specify an index hint for a remote data source. |
 | 7380 | 16 | No | Table-valued parameters are not allowed in remote calls between servers. |
 | 7390 | 16 | No | The requested operation could not be performed because OLE DB provider "%ls" for linked server "%ls" does not support the required transaction interface. |
-| 7391 | 16 | No | The operation could not be performed because OLE DB provider "%ls" for linked server "%ls" was unable to begin a distributed transaction. |
+| [7391](../mssqlserver-7391-database-engine-error.md) | 16 | No | The operation could not be performed because OLE DB provider "%ls" for linked server "%ls" was unable to begin a distributed transaction. |
 | 7392 | 16 | No | Cannot start a transaction for OLE DB provider "%ls" for linked server "%ls". |
 | 7393 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" reported an error 0x%08X aborting the current transaction. |
 | 7394 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" reported an error committing the current transaction. |

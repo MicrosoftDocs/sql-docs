@@ -10,7 +10,7 @@ ms.topic: faq
 ---
 # Migrate SQL Server workloads (FAQ)
 
-[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqlserver-sqldb-sqlmi-asvm.md)]
+[!INCLUDE[appliesto-sqlserver-sqldb-sqlmi-sqlvm](../includes/appliesto-sqlserver-sqldb-sqlmi-sqlvm.md)]
 
 Migrating on-premises SQL Server workloads and associated applications to the cloud usually brings a wide range of questions which go beyond mere product feature information.
 

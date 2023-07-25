@@ -3,7 +3,6 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
 ms.date: 05/10/2023
-ms.service: sql
 ms.topic: include
 ---
 The following table identifies features available by operating system:

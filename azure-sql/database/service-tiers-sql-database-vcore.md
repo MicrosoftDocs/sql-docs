@@ -4,7 +4,7 @@ description: The vCore purchasing model lets you independently scale compute and
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: sashan, moslake, mathoma, dfurman
-ms.date: 07/05/2023
+ms.date: 07/19/2023
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: conceptual
@@ -243,7 +243,7 @@ Fsv2-series in only supported in the General Purpose tier. For regions where Fsv
 ### DC-series
 
 - DC-series hardware uses Intel processors with Software Guard Extensions (Intel SGX) technology.
-- DC-series is required for [Always Encrypted with secure enclaves](/sql/relational-databases/security/encryption/always-encrypted-enclaves), which isn't supported with other hardware configurations.
+- DC-series is required for [Always Encrypted with secure enclaves](/sql/relational-databases/security/encryption/always-encrypted-enclaves) workloads which require stronger security protection of hardware enclaves, compared to Virtualization-based Security (VBS) enclaves.
 - DC-series is designed for workloads that process sensitive data and demand confidential query processing capabilities, provided by Always Encrypted with secure enclaves.
 - DC-series hardware provides balanced compute and memory resources.
 

@@ -5,11 +5,12 @@ author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
 ms.date: 04/20/2023
-ms.service: sql
 ms.topic: conceptual
 ---
 
 # Evaluate Azure Arc-enabled SQL Server instance on an Azure virtual machine
+
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
 Azure Arc-enabled SQL Server is designed to help you connect servers running on-premises or in other clouds to Azure. Normally, you wouldn't use Azure Arc-enabled SQL Server on an Azure virtual machine. All the Azure capabilities are natively available for these VMs, for example:
 
@@ -64,12 +65,12 @@ To disable the Azure VM Guest agent:
 
 ## Connect the SQL Server to Azure Arc
 
-Connect the instance of SQL Server to Azure Arc. Follow the steps in [Connect your SQL Server to Azure Arc](connect.md).
+Connect the instance of SQL Server to Azure Arc. Follow the steps in [Quickstart: Connect SQL Server machines to Azure Arc](quick-enabled-sql-server.md).
 
 ## Clean up your evaluation environment
 
 After you have evaluated Arc-enabled SQL Server on an Azure Virtual Machine, to avoid charges, delete your resource groups.
 
 ## Next steps
-
-[Configure SQL best practices assessment](assess.md)
+- [Automatically connect your SQL Server to Azure Arc](automatically-connect.md)
+- [Configure SQL best practices assessment](assess.md)

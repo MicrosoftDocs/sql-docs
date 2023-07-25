@@ -12,7 +12,7 @@ ms.topic: conceptual
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-This article discusses issues when you use the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] to connect to an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]. For more information to connect to an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], see:  
+This article discusses issues when you use the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] to connect to an [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. For more information to connect to an [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], see:  
   
 - [Azure SQL Database](/azure/sql-database/sql-database-technical-overview)  
   
@@ -22,8 +22,8 @@ This article discusses issues when you use the [!INCLUDE[jdbcNoVersion](../../in
   
 ## Details
 
-To connect to an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], you should connect to the master database to call **SQLServerDatabaseMetaData.getCatalogs**.  
-[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] doesn't support returning the entire set of catalogs from a user database. **SQLServerDatabaseMetaData.getCatalogs** use the sys.databases view to get the catalogs. Refer to the discussion of permissions in [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) to understand **SQLServerDatabaseMetaData.getCatalogs** behavior on an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
+To connect to an [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], you should connect to the master database to call **SQLServerDatabaseMetaData.getCatalogs**.  
+[!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] doesn't support returning the entire set of catalogs from a user database. **SQLServerDatabaseMetaData.getCatalogs** use the sys.databases view to get the catalogs. Refer to the discussion of permissions in [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) to understand **SQLServerDatabaseMetaData.getCatalogs** behavior on an [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].  
   
 ## Login timeout
 
@@ -31,7 +31,7 @@ When connecting to Azure SQL databases, the recommended default `loginTimeout` i
 
 ## Connections dropped
 
-When you connect to an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], idle connections may be terminated by a network component (such as a firewall) after a period of inactivity. There are two types of idle connections, in this context:  
+When you connect to an [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], idle connections may be terminated by a network component (such as a firewall) after a period of inactivity. There are two types of idle connections, in this context:  
 
 - Idle at the TCP layer, where connections can be dropped by any number of network devices.  
 
@@ -82,11 +82,11 @@ shutdown /r /t 1
 
 ## Append the server name to the userId in the connection string  
 
-Prior to the 4.0 version of the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], to connect to an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], you were required to append the server name to the UserId in the connection string. For example, user@servername. Beginning in version 4.0 of the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], it's no longer necessary to append @servername to the UserId in the connection string.  
+Prior to the 4.0 version of the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], to connect to an [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], you were required to append the server name to the UserId in the connection string. For example, user@servername. Beginning in version 4.0 of the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], it's no longer necessary to append @servername to the UserId in the connection string.  
 
 ## Using encryption requires setting hostNameInCertificate
 
-Prior to the 7.2 version of the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], to connect to an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], you should specify **hostNameInCertificate** if you specify **encrypt=true** (If the server name in the connection string is *shortName*.*domainName*, set the **hostNameInCertificate** property to \*.*domainName*.). This property is optional as of version 7.2 of the driver.
+Prior to the 7.2 version of the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], to connect to an [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], you should specify **hostNameInCertificate** if you specify **encrypt=true** (If the server name in the connection string is *shortName*.*domainName*, set the **hostNameInCertificate** property to \*.*domainName*.). This property is optional as of version 7.2 of the driver.
 
 For example:
 

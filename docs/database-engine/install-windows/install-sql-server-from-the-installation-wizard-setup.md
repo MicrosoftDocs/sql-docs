@@ -361,7 +361,7 @@ This isn't applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md
 
    For more information, see [Database Engine Configuration - Data Directories page](../../sql-server/install/instance-configuration.md#datadir).
 
-   Use the **Database Engine Configuration - `tempdb` page to configure the file size, number of files, nondefault installation directories, and file-growth settings for `tempdb`. For more information, see [Database Engine Configuration - TempDB page](../../sql-server/install/instance-configuration.md#tempdb).
+   Use the **Database Engine Configuration - TempDB** page to configure the file size, number of files, nondefault installation directories, and file-growth settings for `tempdb`. For more information, see [Database Engine Configuration - TempDB page](../../sql-server/install/instance-configuration.md#tempdb).
 
    Use the **[!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuration - MaxDOP** page to specify your max degree of parallelism. This setting determines how many processors a single statement can use during execution. The recommended value is automatically calculated during installation.
 
@@ -593,7 +593,7 @@ Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], Java ha
 
 ##### 16. Database Engine Configuration
 
-- On the **Database Engine Configuration** page use the **Server Configuration** tab to specify the following options:
+- Use the **Server Configuration** tab on the **Database Engine Configuration** page to specify the following options:
 
   - **Security Mode**: Select **Windows Authentication** or **Mixed Mode Authentication** for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If you select **Mixed Mode Authentication**, you must provide a strong password for the built-in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system administrator account (sa).
 
@@ -608,9 +608,9 @@ Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], Java ha
 
    For more information, see [Database Engine Configuration - Data Directories page](../../sql-server/install/instance-configuration.md#datadir).
 
-   Use the **Database Engine Configuration - `tempdb` page to configure the file size, number of files, nondefault installation directories, and file-growth settings for `tempdb`. For more information, see [Database Engine Configuration - TempDB page](../../sql-server/install/instance-configuration.md#tempdb).
+- Use the **TempDB** tab to configure the file size, number of files, nondefault installation directories, and file-growth settings for `tempdb`. For more information, see [Database Engine Configuration - TempDB page](../../sql-server/install/instance-configuration.md#tempdb).
 
-- Use the **MaxDOP** page to specify your max degree of parallelism. This setting determines how many processors a single statement can use during execution. The recommended value is automatically calculated during installation.
+- Use the **MaxDOP** tab to specify your max degree of parallelism. This setting determines how many processors a single statement can use during execution. The recommended value is automatically calculated during installation.
 
    For more information, see the [Database Engine Configuration - MaxDOP page](../../sql-server/install/instance-configuration.md?view=sql-server-ver15&preserve-view=true#maxdop).
 

@@ -26,15 +26,21 @@ helpviewer_keywords:
   
 ## Explanation
 
-The column value that's contained in the specified column is outside the range of possible values for the column data type.  
+The column value that's contained in the specified column is outside the range of possible values for the column data type.  If you have invalid data in a table column, you might encounter problems, depending on the type of operations performed against the invalid data. However, it's also possible that no problem will appear, and the invalid data won't be discovered until you execute a `DBCC CHECKDB` or `DBCC CHECKTABLE` command.
+
+Some symptoms you may notice due to the presence of invalid data include (but aren't limited to): 
+
+- Access violations or other exceptions when executing queries against the affected column. 
+- Incorrect results returned by queries executed against the affected column. 
+- Errors or problems when statistics are being built against the affected column. 
+- Error messages like the following one: 
+  > Msg 9100, Level 23, State 2, Line \<LineNum\> Possible index corruption detected. Run DBCC CHECKDB. 
+
   
-## User action
 
-The error isn't repairable. Update the column to a value within the range of the column data type and run the command again. For more information, see the following sections.
+### DATA_PURITY checks 
 
-## DATA_PURITY checks 
-
-When you execute a [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) or [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md) command, the command performs "data purity" validations of each column value in all rows of the table(s) in the database. These checks are performed to ensure that the values stored in the columns are valid (that is, the values aren't out-of-range of the domain associated with the data type of the columns). The nature of the validation performed depends on the data type of the column. The following non-exhaustive list gives some examples: 
+When you execute a [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) or [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md) command, SQL Server performs "data purity" validations of column values in each row of every table in the database. These checks are performed to ensure that the values stored in the columns are valid. That is, the validation ensures the values aren't out-of-range of the domain associated with the data type of the columns. The nature of the validation performed depends on the data type of the column. The following non-exhaustive list gives some examples: 
 
 |Column data type |Type of data validation performed |
 |-|-|
@@ -45,24 +51,15 @@ When you execute a [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-che
 Not all data types are checked for the validity of the column data. Only those that may have an out-of-range stored value are checked. For example, the `tinyint` data type has a valid range of 0 to 255 and is stored in a single byte (which can only store values between 0 and 255), so checking the value isn't necessary. 
 
 > [!NOTE]
-> These checks are enabled by default and can't be disabled, so there's no need to explicitly use the [DATA_PURITY](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md#data_purity) option when executing a `DBCC CHECKDB` or `DBCC CHECKTABLE` command. If the [PHYSICAL_ONLY](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md#physical_only) option is specified when executing the `DBCC CHECKDB` or `DBCC CHECKTABLE` command, no data purity checks are performed. 
-
+> These checks are enabled by default and can't be disabled, so there's no need to explicitly use the [DATA_PURITY](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md#data_purity) option when executing a `DBCC CHECKDB` or `DBCC CHECKTABLE` command. However, if you use the [PHYSICAL_ONLY](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md#physical_only) option with `DBCC CHECKDB` or `DBCC CHECKTABLE`, data purity checks aren't performed. 
+## Cause 
 Invalid or out-of-range data may have been stored in the SQL Server database for the following reasons:
 
-- Invalid data was passed to SQL Server through remote procedure call (RPC) events. 
+- Invalid data was inserted into SQL Server through remote procedure call (RPC) events. 
 - Other potential causes of physical data corruption made the column value invalid.
 
-If you have invalid data in a table column, you might encounter problems, depending on the type of operations performed against the invalid data. However, it's also possible that no problem will appear, and the invalid data won't be discovered until you execute a `DBCC CHECKDB` or `DBCC CHECKTABLE` command.
 
-Some symptoms you may notice due to the presence of invalid data include (but aren't limited to): 
-
-- Access violations or other exceptions when executing queries against the affected column. 
-- Incorrect results returned by queries executed against the affected column. 
-- Errors or problems when statistics are being built against the affected column. 
-- Error messages like the following one: 
-  > Msg 9100, Level 23, State 2, Line \<LineNum\> Possible index corruption detected. Run DBCC CHECKDB. 
-
-## DATA_PURITY problem report 
+### DATA_PURITY problem report 
 
 When you execute a `DBCC CHECKDB` or `DBCC CHECKTABLE` command with the `DATA_PURITY` option enabled (or the data purity checks are run automatically), and invalid data exists in the tables checked by the `DBCC` commands, the `DBCC` output will include other messages that indicate the problems related to the data. The following sample error messages indicate data purity problems:
 
@@ -119,11 +116,11 @@ Once you find the correct row, a decision needs to be made on the new value that
 - Set the column value to the maximum or minimum value for that data type of the column. 
 - If you believe that the specific row isn't useful without a valid value for the column, delete that row altogether.
 
-## Find rows with invalid values using T-SQL queries
+### Find rows with invalid values using T-SQL queries
 
 The type of query you need to execute to find rows that have invalid values depends on the data type of the column reporting a problem. If you look at the 2570 error message, you'll notice two important pieces of information that can help you with this problem. In the following example, the value of the column `account_name` is out-of-range for the data type `nvarchar`. We can easily identify the column with the problem and the data type of the column involved. Thus, once you know the data type and the column involved, you can formulate queries to find the rows that contain invalid values for that column, and select the columns needed to identify that row (as the predicates in a `WHERE` clause) for any further update or deletion. 
 
-### Unicode data type
+#### Unicode data type
 
 ```sql
 SELECT col1, DATALENGTH(account_name) AS Length, account_name  
@@ -131,7 +128,7 @@ FROM account_history
 WHERE DATALENGTH(account_name) % 2 != 0
 ```
 
-### Float data type
+#### Float data type
 
 Run the following code snippet by changing `col1` to your actual primary key column(s), `col2` to the column from the 2570 error, and `table1` to the table from the `CHECKDB` output.
 
@@ -140,7 +137,7 @@ SELECT col1, col2 FROM table1
 WHERE col2<>0.0 AND (col2 < 2.23E-308 OR col2 > 1.79E+308) AND (col2 < -1.79E+308 OR col2 > -2.23E-308)
 ```
 
-### Real data type
+#### Real data type
 
 Run the following code snippet by changing `col1` to your actual primary key column(s), `col2` to the column from the 2570 error, and `table1` to the table from the `CHECKDB` output.
 
@@ -150,7 +147,7 @@ WHERE col2<>0.0 AND (col2 < CONVERT(real,1.18E-38) OR col2 > CONVERT(real,3.40E+
 ORDER BY col1; -- checks for real out of range 
 ```
 
-### Decimal and numeric data types
+#### Decimal and numeric data types
 
 ```sql
 SELECT col1 FROM table2 
@@ -160,7 +157,7 @@ OR col1 < -9999999999.99999
 
 Keep in mind that you need to adjust the values based on the precision and scale with which you have defined the `decimal` or `numeric` column. In the above example, the column is defined as `col2 decimal(15,5)`. 
  
-### Datetime data type
+#### Datetime data type
 
 You need to execute two different queries to identify the rows that contain invalid values for the `datetime` column. 
 
@@ -172,7 +169,7 @@ SELECT col1 FROM table3 WHERE
 ((DATEPART(ms,col2)+ (1000*DATEPART(s,col2)) + (1000*60*DATEPART(mi,col2)) + (1000*60*60*DATEPART(hh,col2)))/(1000*0.00333))  > 25919999
 ```
 
-## Find rows with invalid values using the physical location
+### Find rows with invalid values using the physical location
 
 You can use this method if you can't find the rows with invalid values by using the [T-SQL method](#find-rows-with-invalid-values-using-t-sql-queries). In the 2570 error message, the physical location of the row that contains the invalid value is printed. For example, look at the following message: 
 

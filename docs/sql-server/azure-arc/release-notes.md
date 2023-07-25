@@ -18,7 +18,7 @@ This release is published July 13, 2023.
 
 ### Extension version
 
-`1.1.2378.31`
+`1.1.2384.34`
 
 ### Azure extension for SQL Server
 
@@ -315,3 +315,4 @@ The October update includes the following improvements:
 The following issues apply to the October release:
 
 - Connecting SQL Server instances to Azure Arc requires an account with a broad set of permissions. For details, see [prerequisites](prerequisites.md).
+

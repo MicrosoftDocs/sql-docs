@@ -216,7 +216,7 @@ Except for the differences described later in this article, creating an XML inde
 
 ## XML compression
 
-**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 Enabling XML compression changes the physical storage format of the data that is associated with the XML data type to a *compressed binary format*, but doesn't change XML data syntax or semantics. Application changes aren't required when one or more tables are enabled for XML compression.
 

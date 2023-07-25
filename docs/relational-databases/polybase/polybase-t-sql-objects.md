@@ -387,7 +387,7 @@ Then, create a database scoped credential. `IDENTITY` is the user name to authen
 
 Create the external data source to the other SQL Server. 
 
-- LOCATION should be `<vendor>://<server>[:<port>]`, in this case, `sqlserver://servername` or `sqlserver://servername\instance` or `sqlserver://servername:port`. For [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], use the fully qualified domain name (FQDN) such as `sqlserver://servername.database.windows.net`. Be aware that options for `LOCATION` prefixes vary in different versions of SQL Server and platforms in Azure SQL, always refer to [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md).
+- LOCATION should be `<vendor>://<server>[:<port>]`, in this case, `sqlserver://servername` or `sqlserver://servername\instance` or `sqlserver://servername:port`. For [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], use the fully qualified domain name (FQDN) such as `sqlserver://servername.database.windows.net`. Be aware that options for `LOCATION` prefixes vary in different versions of SQL Server and platforms in Azure SQL, always refer to [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md).
 - PUSHDOWN is ON by default for PolyBase in [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later. Specify whether computation should be pushed down to the source.
 - CREDENTIAL is the database scoped credential name created in the previous step.
 

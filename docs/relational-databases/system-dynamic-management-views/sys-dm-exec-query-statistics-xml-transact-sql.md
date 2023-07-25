@@ -59,7 +59,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 >Trace Flag 2446 isn't meant to be enabled continuously in a production environment, but only for time-limited troubleshooting purposes. Using this trace flag will introduce additional and possibly significant CPU and memory overhead as we will create a Showplan XML fragment with runtime parameter information, whether the ``sys.dm_exec_query_statistics_xml`` DMV is called or not.
 
 > [!NOTE]
->Starting with [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)], [!INCLUDE[Azure SQL Database](../../includes/ssazure_md.md)], and [!INCLUDE[Azure SQL Managed Instance](../../includes/ssazuremi_md.md)], to accomplish this at the database level see the FORCE_SHOWPLAN_RUNTIME_PARAMETER_COLLECTION option in [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+>Starting with [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)], [!INCLUDE[Azure SQL Database](../../includes/ssazure-sqldb.md)], and [!INCLUDE[Azure SQL Managed Instance](../../includes/ssazuremi_md.md)], to accomplish this at the database level see the FORCE_SHOWPLAN_RUNTIME_PARAMETER_COLLECTION option in [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
 This system function is available starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1. See KB [3190871](https://support.microsoft.com/help/3190871)
 

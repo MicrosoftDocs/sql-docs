@@ -51,13 +51,6 @@ Not all data types are checked for the validity of the column data. Only those t
 > [!NOTE]
 > These checks are enabled by default and can't be disabled, so there's no need to explicitly use the [DATA_PURITY](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md#data_purity) option when executing a `DBCC CHECKDB` or `DBCC CHECKTABLE` command. However, if you use the [PHYSICAL_ONLY](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md#physical_only) option with `DBCC CHECKDB` or `DBCC CHECKTABLE`, data purity checks aren't performed.
 
-## Cause
-
-Invalid or out-of-range data may have been stored in the SQL Server database for the following reasons:
-
-- Invalid data was inserted into SQL Server through remote procedure call (RPC) events. 
-- Other potential causes of physical data corruption made the column value invalid.
-
 #### DATA_PURITY problem report 
 
 When you execute a `DBCC CHECKDB` or `DBCC CHECKTABLE` command with the `DATA_PURITY` option enabled (or the data purity checks are run automatically), and invalid data exists in the tables checked by the `DBCC` commands, the `DBCC` output will include other messages that indicate the problems related to the data. The following sample error messages indicate data purity problems:
@@ -97,6 +90,13 @@ CHECKDB found 0 allocation errors and 1 consistency errors in database 'realdata
 
 For every row that contains an invalid column value, a 2570 error is generated. 
 ```
+
+## Cause
+
+Invalid or out-of-range data may have been stored in the SQL Server database for the following reasons:
+
+- Invalid data was inserted into SQL Server through remote procedure call (RPC) events. 
+- Other potential causes of physical data corruption made the column value invalid.
 
 ## Fix the data purity problem 
 

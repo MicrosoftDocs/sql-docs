@@ -79,7 +79,7 @@ ALTER INDEX { index_name | ALL } ON <object>
     { database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }
 }
 
-<rebuild_index_option > ::=
+<rebuild_index_option> ::=
 {
       PAD_INDEX = { ON | OFF }
     | FILLFACTOR = fillfactor
@@ -155,7 +155,7 @@ ALTER INDEX { index_name | ALL }
 }
 [;]
 
-<rebuild_index_option > ::=
+<rebuild_index_option> ::=
 {
     DATA_COMPRESSION = { COLUMNSTORE | COLUMNSTORE_ARCHIVE }
         [ ON PARTITIONS ( {<partition_number> [ TO <partition_number>] } [ , ...n ] ) ]
@@ -163,7 +163,7 @@ ALTER INDEX { index_name | ALL }
         [ ON PARTITIONS ( {<partition_number> [ TO <partition_number>] } [ , ...n ] ) ]
 }
 
-<single_partition_rebuild_index_option > ::=
+<single_partition_rebuild_index_option> ::=
 {
     DATA_COMPRESSION = { COLUMNSTORE | COLUMNSTORE_ARCHIVE }
     | XML_COMPRESSION = { ON | OFF }

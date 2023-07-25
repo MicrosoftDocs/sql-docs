@@ -15,7 +15,7 @@ ms.topic: conceptual
 
 On Azure Arc-enabled SQL Server, Azure automatically rotates certificates for Active Directory. This article explains how the automatic process works and identifies the process specifics for Windows and Linux operating systems.
 
-The way the certificates are managed depend on whether or not you manage your own certificates (customer managed certificates) or the service manages the certificates (service managed certificates).
+Certificate management depends on whether you manage your own certificates - *customer managed certificates*, or the service manages the certificates - *service managed certificates*.
 
 ## Prerequisite
 
@@ -25,16 +25,16 @@ The functionality described in this article applies to an instance of Azure Arc-
 
 ## Customer managed certificate rotation
 
-For Customer Managed Certificate rotation, you will create a new version of the certificate in Azure Key Vault. If you do not do this, by default, Azure Key Vault will automatically rotate the certificate after the certificate lifetime has been met. In Azure Key Vault, you can pick, configure, and choose any percentage for the certificate lifetime period.
+For Customer Managed Certificate rotation, you create a new version of the certificate in Azure Key Vault. If you don't create the new version yourself, Azure Key Vault automatically rotates the certificate after the certificate lifetime has been met. In Azure Key Vault, you can pick, configure, and choose any percentage for the certificate lifetime period.
 
-After this, you can download the new certificate in `.cer` format and upload it to the app registration in place of the old certificate.
+After you create the new version, you can download the new certificate in `.cer` format and upload it to the app registration in place of the old certificate.
 
 > [!NOTE]
 > For Linux, you need to restart the SQL Server service manually so the new certificate is used for authentication.  
 
 ## Service managed certificate rotation
 
-For service managed certificate rotation, Azure Key Vault automatically rotates the certificate for you. By default, the certificate are rotated after the certificate lifetime has been met. You can pick configure and choose any percentage for the certificate lifetime period. If the certificate has expired then the automatic rotation will fail.
+For service managed certificate rotation, Azure Key Vault automatically rotates the certificate for you. By default, the certificate are rotated after the certificate lifetime has been met. You can pick configure and choose any percentage for the certificate lifetime period. If the certificate has expired, then the automatic rotation fails.
 
 > [!NOTE]
 > For Linux, the old certificate will not get deleted and the server will need to be manually restarted.

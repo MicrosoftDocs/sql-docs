@@ -403,7 +403,7 @@ FROM Northwind.dbo.Customers AS c
 ```
 
 > [!IMPORTANT]
-> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] only supports reading from Azure Blob Storage.
+> [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] only supports reading from Azure Blob Storage.
 
 ### D. Using OPENROWSET to bulk insert file data into a varbinary(max) column
 
@@ -478,7 +478,7 @@ FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
 ```
 
 > [!IMPORTANT]
-> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] only supports reading from Azure Blob Storage.
+> [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] only supports reading from Azure Blob Storage.
 
 ### H. Accessing data from a CSV file without a format file
 

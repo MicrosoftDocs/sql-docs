@@ -19,7 +19,7 @@ helpviewer_keywords:
 ---
 # Deploy a Database By Using a DAC
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  Use the **Deploy Database to Microsoft Azure SQL Database** Wizard to deploy a database between an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and a [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] server, or between two [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]servers.  
+  Use the **Deploy Database to Microsoft Azure SQL Database** Wizard to deploy a database between an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and a [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] server, or between two [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]servers.  
   
 ##  <a name="BeforeBegin"></a> Before You Begin  
  The wizard uses a Data-tier Application (DAC) BACPAC archive file to deploy both the data and the definitions of database objects. It performs a DAC export operation from the source database, and a DAC import to the destination.  
@@ -32,15 +32,15 @@ helpviewer_keywords:
 ###  <a name="LimitationsRestrictions"></a> Limitations and Restrictions  
  The **Deploy Database** wizard supports deploying a database:  
   
--   From an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
+-   From an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].  
   
--   From [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+-   From [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
--   Between two [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] servers.  
+-   Between two [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] servers.  
   
  The wizard does not support deploying databases between two instances of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
- An instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] must be running [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) or later to work with the wizard. If a database on an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] contains objects not supported on [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], you cannot use the wizard to deploy the database to [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. If a database on [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] contains objects not supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you cannot use the wizard to deploy the database to instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ An instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] must be running [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) or later to work with the wizard. If a database on an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] contains objects not supported on [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], you cannot use the wizard to deploy the database to [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. If a database on [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] contains objects not supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you cannot use the wizard to deploy the database to instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ###  <a name="Security"></a> Security  
  To improve security, SQL Server Authentication logins are stored in a DAC BACPAC file without a password. When the BACPAC is imported, the login is created as a disabled login with a generated password. To enable the logins, log in using a login that has ALTER ANY LOGIN permission and use ALTER LOGIN to enable the login and assign a new password that can be communicated to the user. This is not needed for Windows Authentication logins because their passwords are not managed by SQL Server.  
@@ -53,7 +53,7 @@ helpviewer_keywords:
 ##  <a name="UsingDeployDACWizard"></a> Using the Deploy Database Wizard  
  **To migrate a database using the Deploy Database Wizard**  
   
-1.  Connect to the location of the database you want to deploy. You can specify either an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)] or a [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] server.  
+1.  Connect to the location of the database you want to deploy. You can specify either an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)] or a [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] server.  
   
 2.  In **Object Explorer**, expand the node for the instance that has the database.  
   

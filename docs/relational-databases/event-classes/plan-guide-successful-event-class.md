@@ -23,7 +23,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-curren
 -   The hints in the plan guide definition, including the `USE PLAN` hint, were applied successfully to the query. That is, the compiled query plan honors the specified hints.  
 
 > [!NOTE]
-> This event class is not available in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+> This event class is not available in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
     
 ## Plan Guide Successful Event Class Data Columns  
   

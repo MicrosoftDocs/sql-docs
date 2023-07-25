@@ -31,7 +31,7 @@ Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], optionally 
 
 ## Syntax
 
-Syntax for SQL Server prior to [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], [!INCLUDE [ssazure_md](../../includes/ssazure_md.md)], [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse-md.md)], and [!INCLUDE [fabric](../../includes/fabric.md)]::
+Syntax for SQL Server prior to [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse-md.md)], and [!INCLUDE [fabric](../../includes/fabric.md)]::
 
 ```syntaxsql
 TRIM ( [ characters FROM ] string )

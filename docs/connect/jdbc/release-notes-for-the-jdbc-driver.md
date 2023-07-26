@@ -67,7 +67,8 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 
 | Fix | Details |
 | :---------- | :----------- |
-| Fixed an error when using BigDecimal with values between 0 and 1 | For values between 0 and 1, precision was incorrectly calculated counting the leading 0, leading to a one higher precision value. [GitHub Issue #2116](https://github.com/microsoft/mssql-jdbc/issues/2116).|
+| Fixed performance and memory issues present with BigDecimal | Reverts all changes, since the 12.2 release, regarding BigDecimal. This addresses the performance issues that were observed, but means users will need to take additional care when using BigDecimal to avoid the truncation issues that were previously addressed. [GitHub Issue #2176](https://github.com/microsoft/mssql-jdbc/issues/2176).|
+| Fixed server certificate validation for encrypt=strict | Fix to ensure the server certificate is properly validated in cases where `encrypt` is set to `strict`. [GitHub Issue #2174](https://github.com/microsoft/mssql-jdbc/issues/2174).|
 | Fixed lockTimeout not taking effect when redirect mode is set in Azure DB | Fixed when `lockTimeout` is set, as it should only apply to connections from outside Azure, and not from within Azure, as was previously. [GitHub Issue #2110](https://github.com/microsoft/mssql-jdbc/issues/2110).|
 | Fixed high thread count when using findSocketUsingThreading | Fixes an issue where an uncaught exception lead to interuption in sleep calls upstream, causing retries to happen too quickly. [GitHub Issue #2104](https://github.com/microsoft/mssql-jdbc/issues/2104).|
 | Fixed shared timer race condition | Fixed a potential race condition in the `SharedTimer` class. [GitHub Issue #2085](https://github.com/microsoft/mssql-jdbc/issues/2085).|

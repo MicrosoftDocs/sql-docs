@@ -3,8 +3,8 @@ title: Active geo-replication
 description: Use active geo-replication to create readable secondary databases of individual databases in Azure SQL Database in the same or different regions.
 author: rajeshsetlem
 ms.author: rsetlem
-ms.reviewer: wiassaf, mathoma
-ms.date: 10/04/2022
+ms.reviewer: wiassaf, mathoma, arvindsh
+ms.date: 07/26/2023
 ms.service: sql-database
 ms.subservice: high-availability
 ms.topic: conceptual
@@ -111,7 +111,7 @@ To ensure that your application can immediately access the new primary after geo
 
 ## <a name="configuring-secondary-database"></a> Configure geo-secondary
 
-Both primary and geo-secondary are required to have the same service tier. It's also strongly recommended that the geo-secondary is configured with the same backup storage redundancy, [compute tier](./service-tiers-sql-database-vcore.md#compute) (provisioned or serverless) and compute size (DTUs or vCores) as the primary. If the primary is experiencing a heavy write workload, a geo-secondary with a lower compute size may not be able to keep up. That causes replication lag on the geo-secondary, and may eventually cause unavailability of the geo-secondary. To mitigate these risks, active geo-replication reduces (throttle) the primary's transaction log rate if necessary to allow its secondaries to catch up.
+Both primary and geo-secondary are required to have the same service tier. It's also strongly recommended that the geo-secondary is configured with the same backup storage redundancy, [compute tier](./service-tiers-sql-database-vcore.md#compute) (provisioned or serverless) and compute size (DTUs or vCores) as the primary. If the primary is experiencing a heavy write workload, a geo-secondary with a lower compute size may not be able to keep up. That causes replication lag on the geo-secondary, and may eventually cause unavailability of the geo-secondary. To mitigate these risks, active geo-replication reduces (throttles) the primary's transaction log rate if necessary to allow its secondaries to catch up.
 
 Another consequence of an imbalanced geo-secondary configuration is that after failover, application performance may suffer due to insufficient compute capacity of the new primary. In that case, it is necessary to scale up the database to have sufficient resources, which may take significant time, and requires a [high availability](high-availability-sla.md) failover at the end of the scale up process, which may interrupt application workloads.
 

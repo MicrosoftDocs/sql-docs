@@ -4,7 +4,7 @@ description: "CREATE EXTERNAL TABLE AS SELECT (CETAS) creates an external table 
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest, wiassaf, mlandzic, nzagorac
-ms.date: 07/24/2023
+ms.date: 07/26/2023
 ms.service: sql
 ms.topic: reference
 f1_keywords:
@@ -245,6 +245,13 @@ In [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INC
 - `\n`
 
 To use CREATE EXTERNAL TABLE AS SELECT containing these characters, you must first run the CREATE EXTERNAL TABLE AS SELECT statement to export the data to delimited text files where you can then convert them to Parquet or ORC by using an external tool.
+
+## Working with parquet
+
+When working with parquet files, `CREATE EXTERNAL TABLE AS SELECT` will generate one parquet file per available CPU, up to the configured maximum degree of parallelism (MAXDOP). Each file can grow up to 190 GB, after that SQL Server will generate more Parquet files as needed.
+
+The query hint `OPTION (MAXDOP n)` will only affect the SELECT part of `CREATE EXTERNAL TABLE AS SELECT`, it has no influence on the amount of parquet files. Only database-level MAXDOP and instance-level MAXDOP is considered.
+
 
 ## Locking
 

@@ -31,7 +31,6 @@ Azure Data Studio 1.45.0 is the latest general availability (GA) release.
 | Connection | Updated Azure tree icons |
 | Connection | Updated the Azure tree in the Connection Pane to show only available resource types |
 | Connection | Added Azure Postgres Flexible Server and Azure CosmosDB for PostgreSQL in the Azure resource tree |
-| Connection | Introduced support for multiple connections against same target, with different profile names and advanced options |
 | Connection | Added support for advanced connection options for other providers |
 | Connection | Added capability to clean encryption keys with the Clear Azure Account Token Cache command |
 | Connection | Introduced support for connection pooling for MSSQL connections |
@@ -92,7 +91,7 @@ Azure Data Studio 1.45.0 is the latest general availability (GA) release.
 | User Management | Removed unsupported database roles for Azure SQL DB user creation |
 | User Management | Included MUST_CHANGE option for Azure SQL when creating a new login or for a password change |
 
-For a full list of bug fixes addressed for the July 2023 Hotfix release, visit the [July 2023 Hotfix Release on GitHub](https://github.com/microsoft/azuredatastudio/milestone/101?closed=1).
+For a full list of bug fixes addressed for the July 2023 release, visit the [July 2023 Release on GitHub](https://github.com/microsoft/azuredatastudio/milestone/101?closed=1).
 
 #### Known issues in 1.45.0
 

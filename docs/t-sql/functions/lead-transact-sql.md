@@ -49,7 +49,7 @@ LEAD ( scalar_expression [ ,offset ] , [ default ] ) [ IGNORE NULLS | RESPECT NU
 
 IGNORE NULLS - Ignore null values in the dataset when computing the LEAD value over a partition.
 
-RESPECT NULLS - Respect null values in the dataset when computing LEAD value over a partition. If not specified, `RESPECT NULLS` is the default value.
+RESPECT NULLS - Respect null values in the dataset when computing LEAD value over a partition. If not specified, `RESPECT NULLS` is the default.
 
  OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_**)**  
  *partition_by_clause* divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group. *order_by_clause* determines the order of the data before the function is applied. When *partition_by_clause* is specified, it determines the order of the data in each partition. The *order_by_clause* is required. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  

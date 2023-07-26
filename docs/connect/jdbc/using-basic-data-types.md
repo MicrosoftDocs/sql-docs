@@ -106,6 +106,9 @@ If you have to pass typed parameters into a stored procedure, you can set the pa
 > [!NOTE]  
 > In this example, a result set is returned with the results of running the stored procedure.
 
+### BigDecimal
+When using BigDecimal values, the precision and scale of the value must be passed alongside the value through setBigDecimal, in order to avoid potential issues such as value truncation. If the value is passed in alone, the driver assumes the maximum allowed value (38) for precision for that BigDecimal value.
+
 For more information about using the JDBC driver with stored procedures and input parameters, see [Using a stored procedure with input parameters](using-a-stored-procedure-with-input-parameters.md).  
 
 ## Retrieving parameters from a stored procedure
@@ -117,7 +120,7 @@ If you have to retrieve parameters back from a stored procedure, you must first 
 > [!NOTE]  
 > In addition to the returned out parameter, a result set might also be returned with the results of running the stored procedure.  
   
-For more information about how to use the JDBC driver with stored procedures and output parameters, see [Using a stored procedure with output parameters](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md).  
+For more information about how to use the JDBC driver with stored procedures and output parameters, see [Using a stored procedure with output parameters](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md).
 
 ## See also
 

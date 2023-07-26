@@ -4,7 +4,7 @@ description: The vCore purchasing model lets you independently scale compute and
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: sashan, moslake, mathoma, dfurman
-ms.date: 07/19/2023
+ms.date: 07/26/2023
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: conceptual
@@ -340,6 +340,7 @@ DC-series is available in the following regions:
 - UK South
 - West Europe
 - West US
+- Southeast Asia
 
 If you need DC-series in a currently unsupported region, [submit a support request](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest). On the **Basics** page, provide the following:
 

@@ -4434,11 +4434,13 @@ items:
         href: /troubleshoot/sql/releases/download-and-install-latest-updates?toc=/sql/toc.json&bc=/sql/breadcrumb/toc.json
   - name: End of support
     items:
-    - name: Overview
+    - name: End of support options
       href: sql-server/end-of-support/sql-server-end-of-support-overview.md
       displayName: end of support, end of life
-    - name: Extended security updates
+    - name: Extended security updates (ESUs)
       href: sql-server/end-of-support/sql-server-extended-security-updates.md
+    - name: ESU frequently asked questions
+      href: sql-server/end-of-support/extended-security-updates-frequently-asked-questions.md
   - name: Configuration
     href: database-engine/configure-windows/database-engine-instances-sql-server.md
     items:
@@ -4980,6 +4982,8 @@ items:
       items:
       - name: Configure replication
         items:
+        - name: With Azure AD authentication
+          href: relational-databases/replication/configure-replication-with-azure-ad-authentication.md
         - name: Distribution
           href: relational-databases/replication/configure-distribution.md
           items:
@@ -10385,41 +10389,48 @@ items:
       href: /azure/azure-sql/managed-instance/sql-managed-instance-paas-overview
     - name: SQL Server on Azure VMs >
       href: /azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview
-
 - name: Azure Arc-enabled SQL Server
   items:
+    - name: Azure Arc-enabled SQL Server
+      href: sql-server/azure-arc/index.yml
     - name: Overview
-      href: sql-server/azure-arc/overview.md
-    - name: Release notes
-      href: sql-server/azure-arc/release-notes.md
-    - name: Test Arc-enabled SQL Server using an Azure VM
-      href: sql-server/azure-arc/plan-evaluate-on-azure-virtual-machine.md
+      items:
+      - name: What is Azure Arc-enabled SQL Server?
+        href: sql-server/azure-arc/overview.md
+      - name: Release notes
+        href: sql-server/azure-arc/release-notes.md
+    - name: Quickstarts
+      items:
+      - name: Deploy Azure Arc-enabled SQL Server
+        href: sql-server/azure-arc/quick-enabled-sql-server.md
     - name: How-to guides
       items:
+      - name: Test Arc-enabled SQL Server on Azure VM
+        href: sql-server/azure-arc/plan-evaluate-on-azure-virtual-machine.md
       - name: Deploy
         items:
         - name: Prerequisites
           href: sql-server/azure-arc/prerequisites.md
-        - name: Deployment options
-          href: sql-server/azure-arc/deployment-options.md
-        - name: Connect interactively
+        - name: Connect SQL Server to Azure using Arc
+          href: sql-server/azure-arc/automatically-connect.md
+        - name: Alternate methods to connect
           items:
-          - name: Connect when machine not connected to Azure
-            href: sql-server/azure-arc/connect.md
-          - name: Connect with installer (.msi)
-            href: sql-server/azure-arc/connect-with-installer.md
-          - name: Connect when machine already connected to Azure
-            href: sql-server/azure-arc/connect-already-enabled.md
-        - name: Connect at scale
-          items:
-          - name: Azure policy
-            href: sql-server/azure-arc/connect-at-scale-policy.md
-          - name: Script
-            href: sql-server/azure-arc/connect-at-scale-script.md
-          - name: Autodeploy
-            href: sql-server/azure-arc/connect-at-scale-autodeploy.md
-          - name: Connect machines using Configuration Manager custom task sequence
-            href: sql-server/azure-arc/onboard-configuration-manager-custom-task.md
+            - name: Deployment options
+              href: sql-server/azure-arc/deployment-options.md
+            - name: Connect when machine not connected to Azure
+              href: sql-server/azure-arc/connect.md
+            - name: Connect with installer (.msi)
+              href: sql-server/azure-arc/connect-with-installer.md
+            - name: Connect when machine already connected to Azure
+              href: sql-server/azure-arc/connect-already-enabled.md
+            - name: Azure policy
+              href: sql-server/azure-arc/connect-at-scale-policy.md
+            - name: Script
+              href: sql-server/azure-arc/connect-at-scale-script.md
+            - name: Automatically connect
+              href: sql-server/azure-arc/connect-at-scale-autodeploy.md
+            - name: Connect machines using Configuration Manager custom task sequence
+              href: sql-server/azure-arc/onboard-configuration-manager-custom-task.md
     - name: Manage
       items:
       - name: Assess
@@ -11284,6 +11295,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-7105-database-engine-error.md
         - name: 7308
           href: relational-databases/errors-events/mssqlserver-7308-database-engine-error.md
+        - name: 7391
+          href: relational-databases/errors-events/mssqlserver-7391-database-engine-error.md  
         - name: 7711
           href: relational-databases/errors-events/mssqlserver-7711-database-engine-error.md
         - name: 7901
@@ -13097,6 +13110,8 @@ items:
     - name: Execution
       href: relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md
       items:
+      - name: sys.dm_db_exec_cursors
+        href: relational-databases/system-dynamic-management-views/sys-dm-db-exec-cursors-transact-sql.md
       - name: sys.dm_exec_background_job_queue
         href: relational-databases/system-dynamic-management-views/sys-dm-exec-background-job-queue-transact-sql.md
       - name: sys.dm_exec_background_job_queue_stats
@@ -18721,6 +18736,8 @@ items:
           href: t-sql/statements/set-query-governor-cost-limit-transact-sql.md
         - name: QUOTED_IDENTIFIER
           href: t-sql/statements/set-quoted-identifier-transact-sql.md
+        - name: RECOMMENDATIONS
+          href: t-sql/statements/set-recommendations-sql.md          
         - name: REMOTE_PROC_TRANSACTIONS
           href: t-sql/statements/set-remote-proc-transactions-transact-sql.md
         - name: RESULT SET CACHING

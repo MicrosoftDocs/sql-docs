@@ -73,47 +73,29 @@ To get started, see the tutorials for [availability groups](availability-group-m
 
 ## Licensing
 
-To get started, choose a SQL Server virtual machine image with your required version, edition, and operating system. The following sections provide direct links to the Azure portal for the SQL Server virtual machine gallery images.
+To get started, choose a SQL Server virtual machine image with your required version, edition, and operating system. The following sections provide direct links to the Azure portal for the SQL Server virtual machine gallery images. Change the licensing model of a pay-per-usage SQL Server VM to use your own license. For more information, see [How to change the licensing model for a SQL Server VM](licensing-model-azure-hybrid-benefit-ahb-change.md).
 
 Azure only maintains one virtual machine image for each supported operating system, version, and edition combination. This means that over time images are refreshed, and older images are removed. For more information, see the **Images** section of the [SQL Server VMs FAQ](./frequently-asked-questions-faq.yml).
 
 > [!TIP]  
 > For more information about how to understand pricing for SQL Server images, see [Pricing guidance for SQL Server on Azure Virtual Machines](pricing-guidance.md).
 
-### <a id="payasyougo"></a> Pay as you go
-
 The following table provides a matrix of pay-as-you-go SQL Server images.
 
-| Version | Operating system | Edition |
-| --- | --- | --- |
-| **SQL Server 2022** | Windows Server 2022 | [Enterprise](https://portal.azure.com/#create/microsoftsqlserver.sql2022-ws2022enterprise-gen2), [Standard](https://portal.azure.com/#create/microsoftsqlserver.sql2022-ws2022standard-gen2), [Web](https://portal.azure.com/#create/microsoftsqlserver.sql2022-ws2022web-gen2), [Developer](https://portal.azure.com/#create/microsoftsqlserver.sql2022-ws2022sqldev-gen2) |
-| **SQL Server 2019** | Windows Server 2019 | [Enterprise](https://portal.azure.com/#create/microsoftsqlserver.sql2019-ws2019enterprise), [Standard](https://portal.azure.com/#create/microsoftsqlserver.sql2019-ws2019standard), [Web](https://portal.azure.com/#create/microsoftsqlserver.sql2019-ws2019web), [Developer](https://portal.azure.com/#create/microsoftsqlserver.sql2019-ws2019sqldev) |
-| **SQL Server 2017** | Windows Server 2016 | [Enterprise](https://portal.azure.com/#create/Microsoft.SQLServer2017EnterpriseWindowsServer2016), [Standard](https://portal.azure.com/#create/Microsoft.SQLServer2017StandardonWindowsServer2016), [Web](https://portal.azure.com/#create/Microsoft.SQLServer2017WebonWindowsServer2016), [Express](https://portal.azure.com/#create/Microsoft.FreeSQLServerLicenseSQLServer2017ExpressonWindowsServer2016), [Developer](https://portal.azure.com/#create/Microsoft.FreeSQLServerLicenseSQLServer2017DeveloperonWindowsServer2016) |
-| **SQL Server 2016 SP2** | Windows Server 2016 | [Enterprise](https://portal.azure.com/#create/Microsoft.SQLServer2016SP2EnterpriseWindowsServer2016), [Standard](https://portal.azure.com/#create/Microsoft.SQLServer2016SP2StandardWindowsServer2016), [Web](https://portal.azure.com/#create/Microsoft.SQLServer2016SP2WebWindowsServer2016), [Express](https://portal.azure.com/#create/Microsoft.FreeLicenseSQLServer2016SP2ExpressWindowsServer2016), [Developer](https://portal.azure.com/#create/Microsoft.FreeLicenseSQLServer2016SP2DeveloperWindowsServer2016) |
-| **SQL Server 2014 SP2** | Windows Server 2012 R2 | [Enterprise](https://portal.azure.com/#create/Microsoft.SQLServer2014SP2EnterpriseWindowsServer2012R2), [Standard](https://portal.azure.com/#create/Microsoft.SQLServer2014SP2StandardWindowsServer2012R2), [Web](https://portal.azure.com/#create/Microsoft.SQLServer2014SP2WebWindowsServer2012R2), [Express](https://portal.azure.com/#create/Microsoft.SQLServer2014SP2ExpressWindowsServer2012R2) |
-| **SQL Server 2012 SP4** | Windows Server 2012 R2 | [Enterprise](https://portal.azure.com/#create/Microsoft.SQLServer2012SP4EnterpriseWindowsServer2012R2), [Standard](https://portal.azure.com/#create/Microsoft.SQLServer2012SP4StandardWindowsServer2012R2), [Web](https://portal.azure.com/#create/Microsoft.SQLServer2012SP4WebWindowsServer2012R2), [Express](https://portal.azure.com/#create/Microsoft.SQLServer2012SP4ExpressWindowsServer2012R2) |
-| **SQL Server 2008 R2 SP3** | Windows Server 2008 R2 | [Enterprise](https://portal.azure.com/#create/Microsoft.SQLServer2008R2SP3EnterpriseWindowsServer2008R2), [Standard](https://portal.azure.com/#create/Microsoft.SQLServer2008R2SP3StandardWindowsServer2008R2), [Web](https://portal.azure.com/#create/Microsoft.SQLServer2008R2SP3WebWindowsServer2008R2), [Express](https://portal.azure.com/#create/Microsoft.SQLServer2008R2SP3ExpressWindowsServer2008R2) |
+| Version | Operating System | 
+| --- | --- | 
+| **SQL Server 2022** | [Windows Server 2022](https://portal.azure.com/#create/microsoftsqlserver.sql2022-ws2022enterprise-gen2) | 
+| **SQL Server 2019** | [Windows Server 2022](https://portal.azure.com/#create/microsoftsqlserver.sql2019-ws2022enterprise-gen2), [Windows Server 2019](https://portal.azure.com/#create/microsoftsqlserver.sql2019-ws2019enterprise-ARM) | 
+| **SQL Server 2017** | [Windows Server 2019](https://portal.azure.com/#create/microsoftsqlserver.sql2017-ws2019enterprise-ARM), [Windows Server 2016](https://portal.azure.com/#create/Microsoft.SQLServer2017EnterpriseWindowsServer2016-ARM)|
+| **SQL Server 2016** | [Windows Server 2019](https://portal.azure.com/#create/microsoftsqlserver.sql2016sp3-ws2019enterprise), [Windows Server 2016](https://portal.azure.com/#create/Microsoft.SQLServer2016SP2EnterpriseWindowsServer2016-ARM)|
+| **SQL Server 2014** | [Windows Server 2012 R2](https://portal.azure.com/#create/microsoftsqlserver.sql2014sp3-ws2012r2enterprise-ARM)| 
+| **SQL Server 2012** | [Windows Server 2012 R2](https://portal.azure.com/#create/Microsoft.SQLServer2012SP4EnterpriseWindowsServer2012R2-ARM)| 
+
+[!INCLUDE[appliesto-sqlvm](../../includes/virtual-machines-2008-end-of-support.md)]
 
 To see the available SQL Server on Linux virtual machine images, see [Overview of SQL Server on Azure Virtual Machines (Linux)](../linux/sql-server-on-linux-vm-what-is-iaas-overview.md).
 
-> [!NOTE]  
-> Change the licensing model of a pay-per-usage SQL Server VM to use your own license. For more information, see [How to change the licensing model for a SQL Server VM](licensing-model-azure-hybrid-benefit-ahb-change.md).
-
-### <a id="BYOL"></a> Bring your own license
-
-You can also bring your own license (BYOL). In this scenario, you only pay for the VM without any additional charges for SQL Server licensing. Bringing your own license can save you money over time for continuous production workloads. For requirements to use this option, see [Pricing guidance for SQL Server Azure VMs](pricing-guidance.md#byol). To deploy BYOL images, you will need an [Enterprise Agreement](https://www.microsoft.com/licensing/licensing-programs/enterprise), along with [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default).
-
-To bring your own license, you can either convert an existing pay-as-you-go SQL Server VM, or you can deploy an image with the prefixed **{BYOL}**. For more information about switching your licensing model between pay-as-you-go and BYOL, see [How to change the licensing model for a SQL Server VM](licensing-model-azure-hybrid-benefit-ahb-change.md).
-
-| Version | Operating system | Edition |
-| --- | --- | --- |
-| **SQL Server 2019** | Windows Server 2019 | [Enterprise BYOL](https://portal.azure.com/#create/microsoftsqlserver.sql2019-ws2019-byolenterprise), [Standard BYOL](https://portal.azure.com/#create/microsoftsqlserver.sql2019-ws2019-byolstandard) |
-| **SQL Server 2017** | Windows Server 2016 | [Enterprise BYOL](https://portal.azure.com/#create/Microsoft.BYOLSQLServer2017EnterpriseWindowsServer2016), [Standard BYOL](https://portal.azure.com/#create/Microsoft.BYOLSQLServer2017StandardonWindowsServer2016) |
-| **SQL Server 2016 SP2** | Windows Server 2016 | [Enterprise BYOL](https://portal.azure.com/#create/Microsoft.BYOLSQLServer2016SP2EnterpriseWindowsServer2016), [Standard BYOL](https://portal.azure.com/#create/Microsoft.BYOLSQLServer2016SP2StandardWindowsServer2016) |
-| **SQL Server 2014 SP2** | Windows Server 2012 R2 | [Enterprise BYOL](https://portal.azure.com/#create/Microsoft.BYOLSQLServer2014SP2EnterpriseWindowsServer2012R2), [Standard BYOL](https://portal.azure.com/#create/Microsoft.BYOLSQLServer2014SP2StandardWindowsServer2012R2) |
-| **SQL Server 2012 SP4** | Windows Server 2012 R2 | [Enterprise BYOL](https://portal.azure.com/#create/Microsoft.BYOLSQLServer2012SP4EnterpriseWindowsServer2012R2), [Standard BYOL](https://portal.azure.com/#create/Microsoft.BYOLSQLServer2012SP4StandardWindowsServer2012R2) |
-
-It's possible to deploy an older image of SQL Server that isn't available in the Azure portal using PowerShell. To view all available images using PowerShell, use the following command:
+It's possible to deploy an older image of SQL Server that isn't available in the Azure portal by using PowerShell. To view all available images by using PowerShell, use the following command:
 
   ```powershell
   Get-AzVMImageOffer -Location $Location -Publisher 'MicrosoftSQLServer'

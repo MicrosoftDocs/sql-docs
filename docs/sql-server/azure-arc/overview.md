@@ -5,11 +5,12 @@ author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
 ms.date: 10/12/2022
-ms.service: sql
 ms.topic: conceptual
 ---
 
 # Azure Arc-enabled SQL Server
+
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
 Azure Arc-enabled SQL Server extends Azure services to SQL Server instances hosted outside of Azure: in your data center, in edge site locations like retail stores, or any public cloud or hosting provider.
 
@@ -107,5 +108,6 @@ The following diagram illustrates the architecture of Azure Arc-enabled SQL Serv
 ## Next steps
 
 - [Learn about the prerequisites to connect your SQL Server to Azure Arc](prerequisites.md)
+- [Automatically connect your SQL Server to Azure Arc](automatically-connect.md)
 - [Learn more about Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-sql-usage)
 - [Lean more about Microsoft Purview](/azure/purview/register-scan-azure-arc-enabled-sql-server)

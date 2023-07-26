@@ -3,7 +3,7 @@ title: "sp_addpushsubscription_agent (Transact-SQL)"
 description: "sp_addpushsubscription_agent (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
-ms.date: "03/29/2021"
+ms.date: 07/15/2023
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -66,7 +66,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
 `[ @subscriber = ] 'subscriber'`
- Is the name of the Subscriber instance or the name of the AG listener if the subscriber database is a availability group. *subscriber* is **sysname**, with a default of NULL. 
+ Is the name of the Subscriber instance or the name of the AG listener if the subscriber database is part of an availability group. *subscriber* is **sysname**, with a default of NULL. 
 
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
@@ -80,8 +80,13 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
  Is the name of the subscription database. *subscriber_db* is **sysname**, with a default of NULL. For a non-SQL Server Subscriber, specify a value of **(default destination)** for *subscriber_db*.  
   
 `[ @subscriber_security_mode = ] subscriber_security_mode`
- Is the security mode to use when connecting to a Subscriber when synchronizing. *subscriber_security_mode* is **int**, with a default of 1. **0** specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. **1** specifies Windows Authentication.  
-  
+ Is the security mode to use when connecting to a Subscriber when synchronizing. *subscriber_security_mode* is **int**, with a default of 1. The following values define the security mode: 
+- **0** specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. 
+- **1** specifies Windows Authentication.  
+- **2** specifies Azure Active Directory (Azure AD) Password Authentication starting with SQL Server 2022 CU 6. 
+- **3** specifies Azure AD Integrated Authentication starting with SQL Server 2022 CU 6. 
+- **4** specifies Azure AD Token Authentication starting with SQL Server 2022 CU 6. 
+
 > [!IMPORTANT]  
 >  For queued updating subscriptions, use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication for connections to Subscribers, and specify a different account for the connection to each Subscriber. For all other subscriptions, use Windows Authentication.  
   

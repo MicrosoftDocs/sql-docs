@@ -4,7 +4,7 @@ description: "CREATE EXTERNAL TABLE AS SELECT (CETAS) creates an external table 
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest, wiassaf, mlandzic, nzagorac
-ms.date: 07/11/2023
+ms.date: 07/26/2023
 ms.service: sql
 ms.topic: reference
 f1_keywords:
@@ -256,6 +256,36 @@ The query hint `OPTION (MAXDOP n)` will only affect the SELECT part of `CREATE E
 ## Locking
 
 Takes a shared lock on the SCHEMARESOLUTION object.
+
+## Supported data types
+
+CETAS can be used to store result sets with the following SQL data types:
+
+- binary
+- varbinary
+- char
+- varchar
+- nchar
+- nvarchar
+- smalldate
+- date
+- datetime
+- datetime2
+- datetimeoffset
+- time
+- decimal
+- numeric
+- float
+- real
+- bigint
+- tinyint
+- smallint
+- int
+- bigint
+- bit
+- money
+- smallmoney
+- uniqueidentifier
 
 ## Examples
 

@@ -225,7 +225,7 @@ Native platform GSS integration allows Java applications to use the native GSS-A
 GSSCredential credential = GSSManager.getInstance().createCredential(null, GSSCredential.DEFAULT_LIFETIME, new Oid("1.2.840.113554.1.2.2"), GSSCredential.ACCEPT_ONLY);
 
 SQLServerDataSource ds = new SQLServerDataSource();
-dataSource.setURL("jdbc:sqlserver://<server>;databaseName=<database>;integratedSecurity=true;authenticationScheme=JavaKerberos;");
+ds.setURL("jdbc:sqlserver://<server>;databaseName=<database>;integratedSecurity=true;authenticationScheme=JavaKerberos;");
 ds.setGSSCredentials(credential);
 ds.getConnection();
 

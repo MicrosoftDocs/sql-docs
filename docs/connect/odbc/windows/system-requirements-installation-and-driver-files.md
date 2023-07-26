@@ -54,7 +54,7 @@ The following matrix indicates driver version support for Windows operating syst
 
 |Operating system&nbsp;&#8594;<br />&#8595; Driver version|Windows Server 2022|Windows Server 2019|Windows Server 2016|Windows Server 2012 R2|Windows Server 2012|Windows Server 2008 R2|Windows 11|Windows 10|Windows 8.1|Windows 7|Windows Vista SP2|
 |----|---|---|---|---|---|---|---|---|---|---|---|
-|18.2|Yes|Yes|Yes|Yes|   |   |Yes|Yes|   |   |   |
+|18.3|Yes|Yes|Yes|Yes|   |   |Yes|Yes|   |   |   |
 |18.2|Yes|Yes|Yes|Yes|   |   |Yes|Yes|   |   |   |
 |18.1|Yes|Yes|Yes|Yes|Yes|   |Yes|Yes|Yes|   |   |
 |18.0|Yes|Yes|Yes|Yes|Yes|   |Yes|Yes|Yes|   |   |

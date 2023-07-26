@@ -340,6 +340,7 @@ DC-series is available in the following regions:
 - UK South
 - West Europe
 - West US
+- Southeast Asia
 
 If you need DC-series in a currently unsupported region, [submit a support request](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest). On the **Basics** page, provide the following:
 

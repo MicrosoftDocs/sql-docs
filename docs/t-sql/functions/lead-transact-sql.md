@@ -49,17 +49,17 @@ LEAD ( scalar_expression [ , offset ] , [ default ] ) [ IGNORE NULLS | RESPECT N
 
 **Applies to**: SQL Server (starting with [!INCLUDE[sssql22](../../includes/sssql22-md.md)]), Azure SQL Database, Azure SQL Managed Instance, [!INCLUDE[ssazurede-md](../../includes/ssazurede-md.md)]
 
-IGNORE NULLS - Ignore null values in the dataset when computing the first value over a partition.
+IGNORE NULLS - Ignore NULL values in the dataset when computing the first value over a partition.
 
-RESPECT NULLS - Respect null values in the dataset when computing first value over a partition.
+RESPECT NULLS - Respect NULL values in the dataset when computing first value over a partition. This is the default behavior if a NULLS option is not specified.
 
-There was a [bug fix in SQL Server 2022 CU4](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate4#2278800) related to IGNORE NULLS in `LAG` and `LEAD`. 
+There was a [bug fix in SQL Server 2022 CU4](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate4#2278800) related to IGNORE NULLS in `LAG` and `LEAD`.
 
 For more information on this argument in [!INCLUDE[ssazurede-md](../../includes/ssazurede-md.md)], see [Imputing missing values](/azure/azure-sql-edge/imputing-missing-values/).
 
 #### OVER ( [ *partition_by_clause* ] *order_by_clause* )
 
- *partition_by_clause* divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group. *order_by_clause* determines the order of the data before the function is applied. When *partition_by_clause* is specified, it determines the order of the data in each partition. The *order_by_clause* is required. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ *partition_by_clause* divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group. *order_by_clause* determines the order of the data before the function is applied. When *partition_by_clause* is specified, it determines the order of the data in each partition. The *order_by_clause* is required. For more information, see [OVER Clause (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## Return Types  
  The data type of the specified *scalar_expression*. NULL is returned if *scalar_expression* is nullable or *default* is set to NULL.  
@@ -145,12 +145,11 @@ b           c           i
 1           5           -2  
 ```  
 
-
 ### D. Use IGNORE NULLS to find non-NULL values
 
 The following sample query demonstrates using the IGNORE NULLS argument.
 
-The IGNORE_NULLS argument is used with both [LAG](lag-transact-sql.md) and LEAD to demonstrate substitution of NULL values for preceding or next non-NULL values.
+The IGNORE NULLS argument is used with both [LAG](lag-transact-sql.md) and LEAD to demonstrate substitution of NULL values for preceding or next non-NULL values.
 
 - If the preceding row contained NULL with `LAG`, then the current row uses the most recent non-NULL value.
 - If the next row contains a NULL with `LEAD`, then the current row uses the next available non-NULL value.
@@ -190,10 +189,58 @@ column_a     column_b    Previous value for column_b    Next value for column_b
 7            11          10                             NULL
 ```
 
-  
+### E. Use RESPECT NULLS to keep NULL values
+
+The following sample query demonstrates using the RESPECT NULLS argument, which is the default behavior if not specified, as opposed to the IGNORE NULLS argument in the previous example.
+
+- If the preceding row contained NULL with `LAG`, then the current row uses the most recent value.
+- If the next row contains a NULL with `LEAD`, then the current row uses the next value.
+
+```sql
+DROP TABLE IF EXISTS #test_ignore_nulls;
+CREATE TABLE #test_ignore_nulls (column_a int, column_b int);
+GO
+
+INSERT INTO #test_ignore_nulls VALUES
+    (1, 8),
+    (2, 9),
+    (3, NULL),
+    (4, 10),
+    (5, NULL),
+    (6, NULL),
+    (7, 11);
+
+SELECT column_a, column_b,
+      [Previous value for column_b] = LAG(column_b) RESPECT NULLS OVER (ORDER BY column_a),
+      [Next value for column_b] = LEAD(column_b) RESPECT NULLS OVER (ORDER BY column_a)
+FROM #test_ignore_nulls
+ORDER BY column_a;
+
+--Identical output
+SELECT column_a, column_b,
+      [Previous value for column_b] = LAG(column_b)  OVER (ORDER BY column_a),
+      [Next value for column_b] = LEAD(column_b)  OVER (ORDER BY column_a)
+FROM #test_ignore_nulls
+ORDER BY column_a;
+
+--cleanup
+DROP TABLE #test_ignore_nulls;
+```
+
+```output
+column_a     column_b    Previous value for column_b    Next value for column_b
+1            8           NULL                           9
+2            9           8                              NULL
+3            NULL        9                              10
+4            10          NULL                           NULL
+5            NULL        10                             NULL
+6            NULL        NULL                           11
+7            11          NULL                           NULL
+```
+
 ## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### E: Compare values between quarters  
+### A. Compare values between quarters  
  The following example demonstrates the LEAD function. The query obtains the difference in sales quota values for a specified employee over subsequent calendar quarters. Notice that because there is no lead value available after the last row, the default of zero (0) is used.  
   
 ```sql  

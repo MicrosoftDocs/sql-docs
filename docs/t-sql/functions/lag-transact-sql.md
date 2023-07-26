@@ -3,7 +3,7 @@ title: "LAG (Transact-SQL)"
 description: "LAG (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
-ms.date: 05/16/2023
+ms.date: 07/26/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -82,7 +82,7 @@ WHERE BusinessEntityID = 275 AND YEAR(QuotaDate) IN ('2005','2006');
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```    
+```output
 BusinessEntityID SalesYear   CurrentQuota          PreviousQuota  
 ---------------- ----------- --------------------- ---------------------  
 275              2005        367000.00             0.00  
@@ -109,7 +109,7 @@ ORDER BY TerritoryName;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```    
+```output    
 TerritoryName            BusinessEntityID SalesYTD              PrevRepSales  
 -----------------------  ---------------- --------------------- ---------------------  
 Canada                   282              2604540.7172          0.00  
@@ -135,7 +135,7 @@ FROM T;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
+```output  
 b           c           i  
 ----------- ----------- -----------  
 1           -3          1  
@@ -145,10 +145,54 @@ b           c           i
 2           NULL        NULL  
 1           5           NULL  
 ```  
+
+### D. Use IGNORE_NULLS to find non-NULL values
+
+The following sample query demonstrates using the IGNORE_NULLS argument. 
+
+The IGNORE_NULLS argument is used with both LAG and [LEAD](lead-transact-sql.md) to demonstrate substitution of NULL values for preceding or next non-NULL values.
+
+- If the preceding row contained NULL with `LAG`, then the current row uses the most recent non-NULL value.
+- If the next row contains a NULL with `LEAD`, then the current row uses the next available non-NULL value.
+
+```sql
+DROP TABLE IF EXISTS #test_ignore_nulls;
+CREATE TABLE #test_ignore_nulls (column_a int, column_b int);
+GO
+
+INSERT INTO #test_ignore_nulls VALUES
+    (1, 8),
+    (2, 9),
+    (3, NULL),
+    (4, 10),
+    (5, NULL),
+    (6, NULL),
+    (7, 11);
+
+SELECT column_a, column_b,
+      [Previous value for column_b] = LAG(column_b) IGNORE NULLS OVER (ORDER BY column_a),
+      [Next value for column_b] = LEAD(column_b) IGNORE NULLS OVER (ORDER BY column_a)
+FROM #test_ignore_nulls
+ORDER BY column_a;
+
+--cleanup
+DROP TABLE #test_ignore_nulls;
+```
+
+```output
+column_a     column_b    Previous value for column_b    Next value for column_b
+1            8           NULL                           9
+2            9           8                              10
+3            NULL        9                              10
+4            10          9                              11
+5            NULL        10                             11
+6            NULL        10                             11
+7            11          10                             NULL
+```
   
 ## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### D: Compare values between quarters  
+### E: Compare values between quarters  
  The following example demonstrates the LAG function. The query uses the LAG function to return the difference in sales quotas for a specific employee over previous calendar quarters. Notice that because there is no lag value available for the first row, the default of zero (0) is returned.  
   
 ```sql   
@@ -164,7 +208,7 @@ ORDER BY CalendarYear, CalendarQuarter;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```
+```output
 Year Quarter  SalesQuota  PrevQuota  Diff  
 ---- -------  ----------  ---------  -------------  
 2001 3        28000.0000      0.0000   28000.0000  

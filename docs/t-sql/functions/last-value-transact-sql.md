@@ -4,7 +4,7 @@ description: "LAST_VALUE (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
 ms.reviewer: kendalv, randolphwest
-ms.date: 05/16/2023
+ms.date: 07/26/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -119,7 +119,7 @@ Information Services        Trenary                 50.4808      2003-01-12   20
 
 The following example uses the `FIRST_VALUE` and `LAST_VALUE` functions in computed expressions to show the difference between the sales quota value for the current quarter and the first and last quarter of the year respectively for a given number of employees. The `FIRST_VALUE` function returns the sales quota value for the first quarter of the year, and subtracts it from the sales quota value for the current quarter. It's returned in the derived column entitled `DifferenceFromFirstQuarter`. For the first quarter of a year, the value of the `DifferenceFromFirstQuarter` column is 0. The `LAST_VALUE` function returns the sales quota value for the last quarter of the year, and subtracts it from the sales quota value for the current quarter. It's returned in the derived column entitled `DifferenceFromLastQuarter`. For the last quarter of a year, the value of the `DifferenceFromLastQuarter` column is 0.
 
-The clause `RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING` is required in this example for the non-zero values to be returned in the `DifferenceFromLastQuarter` column, as shown below. The default range is `RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW`. In this example, using that default range (or not including a range, resulting in the default being used) would result in zeroes being returned in the `DifferenceFromLastQuarter` column. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../queries/select-over-clause-transact-sql.md).
+The clause `RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING` is required in this example for the non-zero values to be returned in the `DifferenceFromLastQuarter` column. The default range is `RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW`. In this example, using that default range (or not including a range, resulting in the default being used) would result in zeroes being returned in the `DifferenceFromLastQuarter` column. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../queries/select-over-clause-transact-sql.md).
 
 ```sql
 USE AdventureWorks2012;

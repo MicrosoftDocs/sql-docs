@@ -4,7 +4,7 @@ description: "FIRST_VALUE (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
 ms.reviewer: kendalv, randolphwest
-ms.date: 05/16/2023
+ms.date: 07/26/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference

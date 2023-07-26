@@ -119,7 +119,7 @@ Northwest                280              1352577.1325          0.00
 ```  
   
 ### C. Specifying arbitrary expressions  
- The following example demonstrates specifying a variety of arbitrary expressions in the LEAD function syntax.  
+ The following example demonstrates specifying various arbitrary expressions in the LEAD function syntax.  
   
 ```sql  
 CREATE TABLE T (a INT, b INT, c INT);   

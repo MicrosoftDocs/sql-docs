@@ -121,7 +121,7 @@ Northwest                280              1352577.1325          1573012.9383
 ```  
   
 ### C. Specifying arbitrary expressions  
- The following example demonstrates specifying a variety of arbitrary expressions in the LAG function syntax.  
+ The following example demonstrates specifying various arbitrary expressions in the LAG function syntax.  
   
 ```sql   
 CREATE TABLE T (a INT, b INT, c INT);   

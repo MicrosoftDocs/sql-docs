@@ -32,9 +32,8 @@ Azure Data Studio 1.45.0 is the latest general availability (GA) release.
 | Connection | Updated the Azure tree in the Connection Pane to show only available resource types |
 | Connection | Added Azure Postgres Flexible Server and Azure CosmosDB for PostgreSQL in the Azure resource tree |
 | Connection | Added support for advanced connection options for other providers |
-| Connection | Added capability to clean encryption keys with the Clear Azure Account Token Cache command |
+| Connection | Added capability to clear encryption keys with the 'Clear Azure Account Token Cache' command |
 | Connection | Introduced support for connection pooling for MSSQL connections |
-| General | Fixed error "Cannot read properties of undefined" |
 | GitHub Copilot | GitHub Copilot extension version 1.95.239 |
 | MySQL Extension | General Availability |
 | Object Explorer | Added support for additional Filter options in Object Explorer |
@@ -45,13 +44,13 @@ Azure Data Studio 1.45.0 is the latest general availability (GA) release.
 | Object Explorer | Added ability to use left and right arrows in OE to open or close trees |
 | Object Explorer | Right-click menu options updated and order modified |
 | Profiler / Extended Events | Introduced support for opening .XEL files up to 1GB in size |
-| Query Editor | Resolved issue when executing USE DATABASE_NAME command and database context did not change in the status bar |
 | Query Editor | Introduced a new configuration option to control whether to add a line break between rows when copying if the previous row has a trailing line break |
 | Result Set | Introduced keyboard shortcut (Ctrl/CMD + Shift + C) to copy information from the results grid with headers |
 | Result Set | Introduced keyboard shortcut (Ctrl/CMD + Shift + O) to sort columns in a result set |
 | SQL Database Projects Extension | Added the ability to create a publish profile from the Add Item… menu |
 | Table Designer | Added configuration option to prevent DDL triggers from being disabled as part of the table modification |
 | User Management | Improved table component performance in the Securables dialog of User properties |
+| VS Code merge | VS Code merges to version 1.79, read [their release notes](https://code.visualstudio.com/updates/v1_79) to learn more |
 
 #### Bug fixes in 1.45.0
 
@@ -71,13 +70,15 @@ Azure Data Studio 1.45.0 is the latest general availability (GA) release.
 | Connection | Improved dialog window for adding an Azure account when authentication code is required |
 | Connection | Fixed throttling of ARM requests when in the Browse Connections tab |
 | General | Fixed issue with vertical scrolling in dialog windows |
+| General | Fixed error "Cannot read properties of undefined" |
 | Notebooks | Addressed inability to open JSON in a new tab from Notebook results cell |
 | Notebooks | Fixed error "Unable to load and parse grammar for scope markdown.math.inline" when creating a Notebook text cell |
 | Object Explorer | Addressed connection leak which occurred when renaming a table |
 | Object Explorer | Improved error handling in server tree expand requests |
-| Object Explorer | Fixed issue with unexpected disconnections in Object Explorer |
+| Object Explorer | Fixed issue with unexpected connection drops in Object Explorer |
 | Query Editor | Corrected syntax highlighting for nested multi-line comments |
 | Query Editor | Addressed issue where folding behavior incorrectly included blank lines at the end of a text block |
+| Query Editor | Resolved issue when executing USE DATABASE_NAME command and database context did not change in the status bar |
 | Query Plan Viewer | Fixed issue with filter icon appearing over query text in Top Operations window |
 | Result Set | Fixed issue where HTML entered in Edit Rows mode was being rendered |
 | Result Set | Fixed incorrect aggregation (sum) when selecting rows in the result set and implemented performance improvements |
@@ -97,7 +98,7 @@ For a full list of bug fixes addressed for the July 2023 release, visit the [Jul
 
  New Item | Details | Workaround |
 | --- | --- | --- |
-| Installation | Azure Data Studio installation fails on REHEL 8 | Use RHEL 9, or manually install glibc-2.29 and add it to the Library Path and then re-install ADS |
+| Installation | Azure Data Studio installation fails on RHEL 8 | Use RHEL 9, or manually install glibc-2.29 and add it to the Library Path and then re-install ADS |
 
 For a list of the current known issues, visit the [issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue).
 

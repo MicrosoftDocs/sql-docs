@@ -4,7 +4,7 @@ description: Learn about the recommended user configurations that you can implem
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: rsetlem
-ms.date: 07/24/2023
+ms.date: 07/26/2023
 ms.service: sql-database
 ms.subservice: high-availability
 ms.topic: conceptual

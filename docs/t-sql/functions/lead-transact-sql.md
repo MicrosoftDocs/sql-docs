@@ -27,7 +27,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 ## Syntax  
   
 ```syntaxsql  
-LEAD ( scalar_expression [ ,offset ] , [ default ] ) [ IGNORE NULLS | RESPECT NULLS ]  
+LEAD ( scalar_expression [ , offset ] , [ default ] ) [ IGNORE NULLS | RESPECT NULLS ]
     OVER ( [ partition_by_clause ] order_by_clause )  
 ```  
   
@@ -57,7 +57,8 @@ There was a [bug fix in SQL Server 2022 CU4](/troubleshoot/sql/releases/sqlserve
 
 For more information on this argument in [!INCLUDE[ssazurede-md](../../includes/ssazurede-md.md)], see [Imputing missing values](/azure/azure-sql-edge/imputing-missing-values/).
 
-#### OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_**)**  
+#### OVER ( [ *partition_by_clause* ] *order_by_clause* )
+
  *partition_by_clause* divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group. *order_by_clause* determines the order of the data before the function is applied. When *partition_by_clause* is specified, it determines the order of the data in each partition. The *order_by_clause* is required. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## Return Types  

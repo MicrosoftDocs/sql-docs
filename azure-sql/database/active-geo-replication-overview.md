@@ -32,7 +32,7 @@ The following diagram illustrates a typical configuration of a geo-redundant clo
 
 If for any reason your primary database fails, you can initiate a geo-failover to any of your secondary databases. When a secondary is promoted to the primary role, all other secondaries are automatically linked to the new primary.
 
-You can manage geo-replication and initiate a geo-failover using any the following methods:
+You can manage geo-replication and initiate a geo-failover using any of the following methods:
 
 - The [Azure portal](active-geo-replication-configure-portal.md)
 - [PowerShell: Single database](scripts/setup-geodr-and-failover-database-powershell.md)

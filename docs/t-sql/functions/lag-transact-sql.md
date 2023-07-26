@@ -49,9 +49,7 @@ LAG (scalar_expression [,offset] [,default]) [ IGNORE NULLS | RESPECT NULLS ]
 
 IGNORE NULLS - Ignore null values in the dataset when computing the LAG value over a partition
 
-RESPECT NULLS - Respect null values in the dataset when computing LAG value over a partition.
-
-For more information, see [Imputing missing values](/azure/azure-sql-edge/imputing-missing-values/).
+RESPECT NULLS - Respect null values in the dataset when computing LAG value over a partition. If not specified, `RESPECT NULLS` is the default value.
 
  OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_**)**  
  *partition_by_clause* divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group. *order_by_clause* determines the order of the data before the function is applied. If *partition_by_clause* is specified, it determines the order of the data in the partition. The *order_by_clause* is required. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  

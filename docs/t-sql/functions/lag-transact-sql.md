@@ -146,9 +146,9 @@ b           c           i
 1           5           NULL  
 ```  
 
-### D. Use IGNORE_NULLS to find non-NULL values
+### D. Use IGNORE NULLS to find non-NULL values
 
-The following sample query demonstrates using the IGNORE_NULLS argument. 
+The following sample query demonstrates using the IGNORE NULLS argument. 
 
 The IGNORE_NULLS argument is used with both LAG and [LEAD](lead-transact-sql.md) to demonstrate substitution of NULL values for preceding or next non-NULL values.
 

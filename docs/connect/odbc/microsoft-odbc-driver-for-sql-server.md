@@ -41,7 +41,7 @@ The following sample demonstrates how to use the ODBC APIs to connect to and acc
 - [Using Azure Active Directory](using-azure-active-directory.md)
 - [Using Transparent Network IP Resolution](using-transparent-network-ip-resolution.md)
 - [Using XA Transactions](use-xa-with-dtc.md)
-- [Connection Troubleshooting](connection-troubleshooting.md) TENTATIVE NAME AND FILENAME
+- [Connection Troubleshooting](connection-troubleshooting.md)
 
 ### Linux and macOS
 

@@ -38,7 +38,7 @@ SQLSERVER:\SQL\MyComputer\MyInstance\Databases\AdventureWorks2012>
 
 ## Permissions
 
-When opened from SQL Server Management Studio, PowerShell does not run with Administrator privileges, which may prevent some activities such as calls to WMI.
+When opened from SQL Server Management Studio, PowerShell doesn't run with Administrator privileges, which may prevent some activities such as calls to WMI.
 
 ## See also
 

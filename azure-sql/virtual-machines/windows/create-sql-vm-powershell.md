@@ -1,5 +1,5 @@
 ---
-title: Guide to use Azure PowerShell to provision SQL Server on Azure VM
+title: Use Azure PowerShell to provision a SQL Server on Azure Virtual Machines
 description: Provides steps and PowerShell commands for creating an Azure VM with SQL Server virtual machine gallery images.
 author: bluefooted
 ms.author: pamela
@@ -11,11 +11,11 @@ ms.topic: how-to
 ms.custom: devx-track-azurepowershell
 tags: azure-resource-manager
 ---
-# How to use Azure PowerShell to provision SQL Server on Azure Virtual Machines
+# Use Azure PowerShell to create a SQL Server on Azure VM
 
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
-This guide covers options for using PowerShell to provision SQL Server on Azure Virtual Machines (VMs). For a streamlined Azure PowerShell example that relies on default values, see the [SQL VM Azure PowerShell quickstart](sql-vm-create-powershell-quickstart.md).
+This guide covers options for using PowerShell to provision a SQL Server on Azure Virtual Machine (VM). For a streamlined Azure PowerShell example that relies on default values, see the [SQL Server on Azure VM PowerShell quickstart](sql-vm-create-powershell-quickstart.md).
 
 If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) before you begin.
 
@@ -109,6 +109,9 @@ Use the following variables to define the SQL Server image to use for the virtua
    ```powershell
    Get-AzVMImageOffer -Location $Location -Publisher 'MicrosoftSQLServer'
    ```
+
+   [!INCLUDE[appliesto-sqlvm](../../includes/virtual-machines-2008-end-of-support.md)]
+
 
 1. For this tutorial, use the following variables to specify SQL Server 2017 on Windows Server 2016.
 

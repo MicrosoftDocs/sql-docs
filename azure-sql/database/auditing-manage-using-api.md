@@ -6,6 +6,7 @@ ms.author: srsaluru
 ms.date: 04/26/2023
 ms.service: sql-database
 ms.subservice: security
+ms.custom: devx-track-azurepowershell
 ms.topic: conceptual
 ---
 # Manage Azure SQL Database Auditing using APIs
@@ -31,17 +32,17 @@ For a script example, see [Configure auditing and threat detection using PowerSh
 
 **REST API**:
 
-- [Create or Update Database Auditing Policy](/rest/api/sql/database%20auditing%20settings/createorupdate)
+- [Create or Update Database Auditing Policy](/rest/api/sql/2017-03-01-preview/database-auditing-settings/create-or-update)
 - [Create or Update Server Auditing Policy](/rest/api/sql/2017-03-01-preview/server-auditing-settings/create-or-update)
-- [Get Database Auditing Policy](/rest/api/sql/database%20auditing%20settings/get)
+- [Get Database Auditing Policy](/rest/api/sql/2017-03-01-preview/database-auditing-settings/get)
 - [Get Server Auditing Policy](/rest/api/sql/2017-03-01-preview/server-auditing-settings/get)
 
 Extended policy with WHERE clause support for additional filtering:
 
-- [Create or Update Database *Extended* Auditing Policy](/rest/api/sql/database%20extended%20auditing%20settings/createorupdate)
+- [Create or Update Database *Extended* Auditing Policy](/rest/api/sql/2017-03-01-preview/database-extended-auditing-settings/create-or-update)
 - [Create or Update Server *Extended* Auditing Policy](/rest/api/sql/server%20auditing%20settings/createorupdate)
-- [Get Database *Extended* Auditing Policy](/rest/api/sql/database%20extended%20auditing%20settings/get)
-- [Get Server *Extended* Auditing Policy](/rest/api/sql/server%20auditing%20settings/get)
+- [Get Database *Extended* Auditing Policy](/rest/api/sql/2017-03-01-preview/database-extended-auditing-settings/get)
+- [Get Server *Extended* Auditing Policy](/rest/api/sql/2017-03-01-preview/server-extended-auditing-settings/get)
 
 ### Use Azure CLI
 

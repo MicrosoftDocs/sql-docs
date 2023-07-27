@@ -25,7 +25,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**database_id**|**int**|Database ID in which the trigger resides.|  
+|**database_id**|**int**|Database ID in which the trigger resides. <br /><br />In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the values are unique within a single database or an elastic pool, but not within a logical server.|  
 |**object_id**|**int**|Object identification number of the trigger.|  
 |**type**|**char(2)**|Type of the object:<br /><br /> TA = Assembly (CLR) trigger<br /><br /> TR = SQL trigger|  
 |**Type_desc**|**nvarchar(60)**|Description of the object type:<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  

@@ -17,11 +17,11 @@ helpviewer_keywords:
   - "declaring variables"
 dev_langs:
   - "TSQL"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current||=fabric"
 ---
 # DECLARE @local_variable (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
 Variables are declared in the body of a batch or procedure with the DECLARE statement and are assigned values by using either a SET or SELECT statement. Cursor variables can be declared with this statement and used with other cursor-related statements. After declaration, all variables are initialized as NULL, unless a value is provided as part of the declaration.
 
@@ -118,7 +118,7 @@ DECLARE
 }
 ```
 
-The following syntax is for Azure Synapse Analytics and Parallel Data Warehouse:
+The following syntax is for Azure Synapse Analytics and Parallel Data Warehouse and [!INCLUDE [fabric](../../includes/fabric.md)]:
 
 ```syntaxsql
 DECLARE
@@ -237,7 +237,7 @@ For this reason, you should be cautious about using a table variable if you expe
 
  - Temp tables may be a better solution than table variables when it is possible for the rowcount to be larger (greater than 100). 
  - For queries that join the table variable with other tables, use the RECOMPILE hint, which will cause the optimizer to use the correct cardinality for the table variable. 
-- In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and starting with [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], the table variable deferred compilation feature will propagate cardinality estimates that are based on actual table variable row counts, providing a more accurate row count for optimizing the execution plan. For more information, see [Intelligent query processing in SQL databases](../../relational-databases/performance/intelligent-query-processing-details.md#table-variable-deferred-compilation).
+- In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and starting with [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], the table variable deferred compilation feature will propagate cardinality estimates that are based on actual table variable row counts, providing a more accurate row count for optimizing the execution plan. For more information, see [Intelligent query processing in SQL databases](../../relational-databases/performance/intelligent-query-processing-details.md#table-variable-deferred-compilation).
 
 ## Remarks
 

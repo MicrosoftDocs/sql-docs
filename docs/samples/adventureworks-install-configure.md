@@ -4,7 +4,7 @@ description: Follow these instructions to download and install AdventureWorks sa
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 05/08/2023
+ms.date: 05/16/2023
 ms.service: sql
 ms.subservice: samples
 ms.topic: conceptual
@@ -19,7 +19,7 @@ For more information about samples, see the [Samples GitHub repository](https://
 
 ## Prerequisites
 
-- [SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2019) or [Azure SQL Database](https://azure.microsoft.com/services/sql-database/)
+- [SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2022) or [Azure SQL Database](https://azure.microsoft.com/services/sql-database/)
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) (SSMS) or [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)
 
 ## Download backup files
@@ -45,7 +45,7 @@ If you're not sure what you need, start with the OLTP version that matches your 
 
 Additional files can be found directly on GitHub:
 
-- [SQL Server 2014 - 2019](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
+- [SQL Server 2014 - 2022](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
 - [SQL Server 2012](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2012)
 - [SQL Server 2008 and 2008R2](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2008r2)
 
@@ -81,15 +81,15 @@ For more information on restoring a [!INCLUDE [ssnoversion-md](../includes/ssnov
 
 # [Transact-SQL (T-SQL)](#tab/tsql)
 
-You can restore your sample database using Transact-SQL (T-SQL). An example to restore `AdventureWorks2019` is provided below, but the database name and installation file path may vary depending on your environment.
+You can restore your sample database using Transact-SQL (T-SQL). An example to restore `AdventureWorks2022` is provided below, but the database name and installation file path may vary depending on your environment.
 
-To restore `AdventureWorks2019` on **Windows**, modify values as appropriate to your environment and then run the following Transact-SQL (T-SQL) command:
+To restore `AdventureWorks2022` on **Windows**, modify values as appropriate to your environment and then run the following Transact-SQL (T-SQL) command:
 
 ```sql
 USE [master];
 GO
-RESTORE DATABASE [AdventureWorks2019]
-FROM DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup\AdventureWorks2019.bak'
+RESTORE DATABASE [AdventureWorks2022]
+FROM DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\Backup\AdventureWorks2022.bak'
 WITH
     FILE = 1,
     NOUNLOAD,
@@ -97,16 +97,16 @@ WITH
 GO
 ```
 
-To restore `AdventureWorks2019` on **Linux**, change the Windows filesystem path to Linux, and then run the following Transact-SQL (T-SQL) command:
+To restore `AdventureWorks2022` on **Linux**, change the Windows filesystem path to Linux, and then run the following Transact-SQL (T-SQL) command:
 
 ```sql
 USE [master];
 GO
-RESTORE DATABASE [AdventureWorks2019]
-FROM DISK = '/var/opt/mssql/backup/AdventureWorks2019.bak'
+RESTORE DATABASE [AdventureWorks2022]
+FROM DISK = '/var/opt/mssql/backup/AdventureWorks2022.bak'
 WITH
-    MOVE 'AdventureWorks2019' TO '/var/opt/mssql/data/AdventureWorks2019.mdf',
-    MOVE 'AdventureWorks2019_log' TO '/var/opt/mssql/data/AdventureWorks2019_log.ldf',
+    MOVE 'AdventureWorks2022' TO '/var/opt/mssql/data/AdventureWorks2022.mdf',
+    MOVE 'AdventureWorks2022_log' TO '/var/opt/mssql/data/AdventureWorks2022_log.ldf',
     FILE = 1,
     NOUNLOAD,
     STATS = 5;

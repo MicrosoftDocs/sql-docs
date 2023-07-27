@@ -40,10 +40,11 @@ You also need to ensure that your environment meets the general [Prerequisites f
 
 A user or an application triggering cryptographic operations must have permissions to make schema changes on the table containing the impacted columns and to access column master keys involved in the operations, and relevant key metadata in the database.
 
-You can only trigger in-place encryption using [ALTER TABLE ALTER COLUMN (Transact-SQL)](../../../t-sql/statements/alter-table-transact-sql.md) from SQL Server Management Studio or your custom application. See [Configure column encryption in-place with Transact-SQL](always-encrypted-enclaves-configure-encryption-tsql.md).
-
-> [!NOTE]
-> Currently, the [Always Encrypted wizard](always-encrypted-wizard.md) and the [Set-SqlColumnEncryption](/powershell/module/sqlserver/set-sqlcolumnencryption) cmdlet do not support in-place encryption, and always download the data for cryptographic operations, even if your configuration meets the above requirements.
+You can trigger in-place encryption using one of the following methods:
+- [ALTER TABLE ALTER COLUMN (Transact-SQL)](../../../t-sql/statements/alter-table-transact-sql.md) from SQL Server Management Studio or your custom application. See [Configure column encryption in-place with Transact-SQL](always-encrypted-enclaves-configure-encryption-tsql.md).
+- The [Always Encrypted wizard](always-encrypted-wizard.md)
+- The [Set-SqlColumnEncryption](/powershell/module/sqlserver/set-sqlcolumnencryption) cmdlet. See [Configure column encryption in-place with PowerShell](always-encrypted-enclaves-configure-encryption-powershell.md).
+- A [data-tier application (DAC) package](../../data-tier-applications/data-tier-applications.md). See [Configure column encryption in-place with DAC package](always-encrypted-enclaves-configure-encryption-dacpac.md).
 
 ## Next steps
 

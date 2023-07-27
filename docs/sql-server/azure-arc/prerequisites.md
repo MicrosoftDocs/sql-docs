@@ -5,12 +5,13 @@ author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
 ms.date: 03/08/2023
-ms.service: sql
 ms.topic: conceptual
 ms.custom: references_regions
 ---
 
 # Prerequisites
+
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
 An Azure Arc-enabled instance of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is an instance on-premises or in a cloud provider that is connected to Azure Arc. This article explains those prerequisites.
 
@@ -30,13 +31,25 @@ Before you can Arc-enable an instance of [!INCLUDE [ssnoversion-md](../../includ
 
 ### Permissions
 
-To [Connect SQL Servers on Azure Arc-enabled servers at scale using Azure policy](connect-at-scale-policy.md) for you to create an Azure Policy assignment, your subscription requires the `Resource Policy Contributor` role assignment for the scope that you're targeting. The scope may be either subscription or resource group. Further, if you are going to create a *new* system assigned managed identity, you need the `User Access Administrator` role assignment in the subscription.
+To [Connect SQL Servers on Azure Arc-enabled servers at scale using Azure policy](connect-at-scale-policy.md):
 
-For all the other onboarding methods, user or service principal must have permissions in the Azure resource group to complete the task. Specifically:
-- `Azure Connected Machine Onboarding` role
-- `Microsoft.AzureArcData/register/action`
-- `Microsoft.HybridCompute/machines/extensions/read`
-- `Microsoft.HybridCompute/machines/extensions/write`
+- The service principal requires read permission on the subscription.
+
+- The installation account requires:
+
+  - [`User Access Administrator`](/azure/role-based-access-control/built-in-roles#user-access-administrator) role assignment is required in the subscription if you are creating a *new* system assigned managed identity.
+  - [`Resource Policy Contributor`](/azure/role-based-access-control/built-in-roles#resource-policy-contributor) role assignment for the scope that you're targeting. The scope may be either subscription or resource group.
+
+For all the other onboarding methods:
+
+- The service principal requires read permission on the subscription.
+
+- User or service principal must have permissions in the Azure resource group to complete the task. Specifically:
+
+  - [`Azure Connected Machine Onboarding`](/azure/role-based-access-control/built-in-roles#azure-connected-machine-onboarding) role
+  - `Microsoft.AzureArcData/register/action`
+  - `Microsoft.HybridCompute/machines/extensions/read`
+  - `Microsoft.HybridCompute/machines/extensions/write`
 
 Users can be assigned to built-in roles that have these permissions, for example [Contributor](/azure/role-based-access-control/built-in-roles#contributor) or [Owner](/azure/role-based-access-control/built-in-roles#owner). For more information, see [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal).
 
@@ -88,7 +101,7 @@ Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] 
 - [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Azure VMware Solution.
 
 > [!NOTE]  
-> Azure extension for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] fully supports VMware clusters outside of Azure. Although the [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] Setup Installation Wizard does not support installation of the Azure extension for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], this component can be installed from the command line in quiet mode, or by connecting [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] to Azure Arc. For more information, see [Install and connect to Azure](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#install-and-connect-to-azure) and [Connect your SQL Server to Azure Arc](connect.md).
+> Azure extension for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] fully supports VMware clusters outside of Azure. Although the [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] Setup Installation Wizard does not support installation of the Azure extension for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], this component can be installed from the command line in quiet mode, or by connecting [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] to Azure Arc. For more information, see [Install and connect to Azure](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#install-and-connect-to-azure) and [Quickstart: Connect SQL Server machines to Azure Arc](quick-enabled-sql-server.md).
 
 ## Register resource providers
 
@@ -119,10 +132,11 @@ az provider register --namespace 'Microsoft.HybridCompute'
 az provider register --namespace 'Microsoft.AzureArcData'
 ```
 
+
 ---
 ## Azure subscription and service limits
 
-The maximum number of resources in a resource group is 800, per resource type. This limitation applies to Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances and databases. Before configuring your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances and machines with Azure Arc, review the Azure Resource Manager [subscription limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#subscription-limits) and [resource group limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#resource-group-limits) to plan for the number of machines to be connected.
+Before configuring your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances and machines with Azure Arc, review the Azure Resource Manager [subscription limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#subscription-limits) and [resource group limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#resource-group-limits) to plan for the number of machines to be connected. 
 
 ## Supported regions
 
@@ -130,4 +144,6 @@ The maximum number of resources in a resource group is 800, per resource type. T
 
 ## Next steps
 
-- [Connect your SQL Server to Azure Arc](deployment-options.md)
+- [Automatically connect your SQL Server to Azure Arc](automatically-connect.md)
+
+

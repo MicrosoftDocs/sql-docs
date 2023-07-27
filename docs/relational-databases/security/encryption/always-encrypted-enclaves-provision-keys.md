@@ -37,8 +37,7 @@ In SQL Server Management Studio you can provision:
 - An enclave-enabled column master key using the **New Column Master Key** dialog.
 - An enclave-enabled column encryption key using the **New Column Encryption Key** dialog.
 
-> [!NOTE]
-> The [Always Encrypted wizard](always-encrypted-wizard.md) does not currently support generating enclave-enabled keys. You can, however, create enclave-enabled keys using the above dialogs first, and then when you run the wizard, select an already existing enclave-enabled column encryption for columns that you want to encrypt.
+The [Always Encrypted Wizard](always-encrypted-wizard.md) also allows you to create an enclave-enabled column master key and an enclave-enabled column encryption key. 
 
 Make sure you have installed [the latest general availability (GA) version of SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md).
 
@@ -49,7 +48,7 @@ To provision an enclave-enabled column master key, follow the steps in [Provisio
 ![Allow enclave computations](./media/always-encrypted-enclaves/allow-enclave-computations.png)
 
 > [!NOTE]
-> The **Allow enclave computations** checkbox appears only if a secure enclave is  configured for your database. If you are using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], see [Configure the secure enclave in SQL Server](always-encrypted-enclaves-configure-enclave-type.md). If you are using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], see [Enable Always Encrypted with secure enclaves for your Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-enable).
+> The **Allow enclave computations** checkbox appears only if a secure enclave is  configured for your database. If you are using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], see [Configure the secure enclave in SQL Server](always-encrypted-enclaves-configure-enclave-type.md). If you are using [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)], see [Enable Always Encrypted with secure enclaves for your Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-enable).
 
 > [!TIP]
 > To check if a column master key is enclave-enabled, right-click on it in Object Explorer and select **Properties**. If the key is enclave-enabled, **Enclave Computations: Allowed** appears in the window showing the properties of the key. Alternativelly, you can use the [sys.column_master_keys (Transact-SQL)](../../system-catalog-views/sys-column-master-keys-transact-sql.md) view.

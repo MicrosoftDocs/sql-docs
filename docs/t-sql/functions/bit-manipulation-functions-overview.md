@@ -12,10 +12,10 @@ helpviewer_keywords:
   - "bit manipulation [SQL Server]"
 dev_langs:
   - "TSQL"
-monikerRange: ">= sql-server-ver16 || >= sql-server-linux-ver16"
+monikerRange: ">= sql-server-ver16 || >= sql-server-linux-ver16 || = azuresqldb-mi-current ||= azuresqldb-current || =fabric"
 ---
 # Bit manipulation functions
-[!INCLUDE [SQL Server 2022, SQL Database, SQL Managed Instance](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
+[!INCLUDE [SQL Server 2022, SQL Database, SQL Managed Instance FabricSE FabricDW](../../includes/applies-to-version/sqlserver2022-asdb-asmi-fabricse-fabricdw.md)]
 
 Bit manipulation functions such as moving, retrieving (getting), setting, or counting single bits within an integer or binary value, allow you to process and store data more efficiently than with individual bits.
 

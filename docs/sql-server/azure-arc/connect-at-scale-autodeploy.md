@@ -4,17 +4,15 @@ description: In this article, you learn how Microsoft helps you automatically co
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mikeray, randolphwest
-ms.date: 03/23/2023
-ms.service: sql
+ms.date: 07/18/2023
 ms.topic: conceptual
 ---
 
 # Automatically connect Azure Arc-enabled SQL Servers
 
-Azure Arc-enabled SQL Server is a cloud-native solution provided by Microsoft to simplify the management, protection, and governance of SQL Server instances running on Azure Arc-enabled servers. This solution streamlines the experience of connecting SQL Servers to Azure by automatically installing the Azure extension for SQL Server on all Arc-enabled servers that have SQL Server installed. For more information, visit [Azure Arc-enabled SQL Server](overview.md). All the SQL Server instance resources are automatically created in Azure, providing a centralized management platform for all your SQL Servers.
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-> [!IMPORTANT]
-> Microsoft will begin automatically connecting newly created Arc servers with SQL Server installed on them starting from April 11, 2023.
+Azure Arc-enabled SQL Server is a cloud-native solution provided by Microsoft to simplify the management, protection, and governance of SQL Server instances running on Azure Arc-enabled servers. This solution streamlines the experience of connecting SQL Servers to Azure by automatically installing the Azure extension for SQL Server on all Arc-enabled servers that have SQL Server installed. For more information, visit [Azure Arc-enabled SQL Server](overview.md). All the SQL Server instance resources are automatically created in Azure, providing a centralized management platform for all your SQL Servers.
 
 > [!IMPORTANT]
 > Microsoft only automatically connects Arc servers with SQL Server installed on them when the Arc server resource is in [one of the regions supported by Arc-enabled SQL Server](prerequisites.md#supported-regions).
@@ -58,6 +56,8 @@ Microsoft automatically installs Azure extension for SQL Server on each Arc-enab
 
 1. Create Arc-enabled SQL Server instance resource in Azure.
 
+To automatically connect Azure Arc-enabled SQL Server, use one of the methods provided that meet your requirements [Automatically connect your SQL Server to Azure Arc](automatically-connect.md).
+
 Once the connecting is complete, you can benefit from the Azure features for SQL Server. For more information, visit [Manage SQL Server license and billing options](manage-license-type.md).
 
 ## Set appropriate license type
@@ -66,11 +66,19 @@ SQL Server machines can be successfully connected to Arc but missing the proper 
 
 ```msgraph-interactive
 resources
-|extend licenseType =properties.licenseType
-|extend licenseType = iff(licenseType=='','Configuration needed',licenseType)
-|extend ResourceName=name
-|where type =="microsoft.azurearcdata/sqlserverinstances" and licenseType in('Configuration needed')
-|project id,tenantId,ResourceName,licenseType
+| where type == "microsoft.hybridcompute/machines"
+| extend
+    joinID = toupper(id)
+| join kind = inner (
+    resources
+    | where type == "microsoft.hybridcompute/machines/extensions"
+    | extend machineId = toupper(substring(id, 0, indexof(id, '/extensions')))
+    | where properties.type in ("WindowsAgent.SqlServer","LinuxAgent.SqlServer")
+    | extend licenseType = iff(properties.settings.LicenseType == '', 'Configuration needed', properties.settings.LicenseType)
+    | project  machineId, licenseType
+    | where licenseType in('Configuration needed')
+) on $left.joinID == $right.machineId
+| project id, licenseType
 ```
 
 Visit [Manage SQL Server license and billing options](manage-license-type.md) to learn more about license types and modifications.
@@ -115,7 +123,8 @@ resources
 
 ## Next steps
 
-- [Azure Arc-enabled SQL Server](overview.md)
-- [Deployment options for Azure Arc-enabled SQL Server](deployment-options.md)
-- [Prerequisites](prerequisites.md)
+- [Configure SQL best practices assessment](assess.md)
+- [View SQL Server databases - Azure Arc](view-databases.md)
+- [Manage SQL Server license and billing options](manage-license-type.md)
+- [Azure Arc-enabled SQL Server and Databases activity logs](activity-logs.md)
 - [Data collected by Arc enabled SQL Server](data-collection.md)

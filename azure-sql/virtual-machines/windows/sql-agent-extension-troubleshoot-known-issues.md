@@ -23,6 +23,10 @@ To avoid errors due to unsupported options or limitations, verify the [prerequis
 
 If you repair, or reinstall the SQL IaaS Agent extension, your setting won't be preserved, other than licensing changes. If you've repaired or reinstalled the extension, you'll have to reconfigure automated backup, automated patching, and any other services you had configured prior to the repair or reinstall. 
 
+## Check extension health
+
+You can use a PowerShell script to check the extension health status on your virtual machines. You can find the full script on GitHub, see [Get SQL IaaS Agent extension health status with Az PowerShell](https://github.com/Azure/azure-docs-powershell-samples/blob/master/sql-virtual-machine/get-sqliaasextension-healthstatus/GetSqlVirtualMachinesExtensionHealthStatus.psm1).
+
 ## Repair extension
 
 It's possible for your SQL IaaS Agent extension to be in a failed state. Use the Azure portal to repair the SQL IaaS Agent extension. 
@@ -37,6 +41,9 @@ To repair the extension with the Azure portal:
 
    :::image type="content" source="media/sql-agent-extension-troubleshoot-known-issues/repair-extension.png" alt-text="Screenshot of the SQL IaaS Agent extension settings page of the SQL virtual machines extension in the Azure portal showing where to repair the extension.":::   
 
+## SQL IaaS Agent extension registration fails with error "Creating SQL Virtual Machine resource for PowerBI VM images is not supported"
+
+Note that SQL IaaS Agent extension registration is blocked and not supported on PowerBI VM, SQL Server Reporting Server and SQL Server Analysis Service Images deployed from Azure Marketplace.
 
 ## Not valid state for management
 

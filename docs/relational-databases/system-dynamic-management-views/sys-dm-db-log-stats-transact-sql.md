@@ -43,7 +43,7 @@ The built-in function [DB_ID](../../t-sql/functions/db-id-transact-sql.md) can b
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|database_id	|**int**	|Database ID |  
+|database_id	|**int**	|Database ID. <br /><br />In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the values are unique within a single database or an elastic pool, but not within a logical server.|  
 |recovery_model	|**nvarchar(60)**	|	Recovery model of the database. Possible values include: <br /> SIMPLE<br /> BULK_LOGGED <br /> FULL |  
 |log_min_lsn	|**nvarchar(24)**	|	Current start [log sequence number (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) in the transaction log.|  
 |log_end_lsn	|**nvarchar(24)**	|	[log sequence number (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) of the last log record in the transaction log.|  

@@ -1,21 +1,21 @@
 ---
 title: "GRANT-DENY-REVOKE permissions"
-titleSuffix: "Azure Synapse Analytics"
-description: "Permissions: GRANT, DENY, REVOKE (Azure Synapse Analytics, Parallel Data Warehouse)"
+titleSuffix: "Azure Synapse Analytics, Analytics Platform System (PDW), Microsoft Fabric"
+description: "Permissions: GRANT, DENY, REVOKE (Azure Synapse Analytics, Analytics Platform System (PDW), Microsoft Fabric)"
 author: VanMSFT
 ms.author: vanto
-ms.date: "08/10/2017"
+ms.date: 04/25/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||=fabric"
 ---
-# Permissions: GRANT, DENY, REVOKE (Azure Synapse Analytics, Parallel Data Warehouse)
-[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
+# Permissions: GRANT, DENY, REVOKE 
+[!INCLUDE[applies-to-version/asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/asa-pdw-fabricse-fabricdw.md)]
 
-  Use [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**GRANT** and **DENY** statements to grant or deny a permission (such as **UPDATE**) on a securable (such as a database, table, view, etc.) to a security principal (a login, a database user, or a database role). Use **REVOKE** to remove the grant or deny of a permission.  
+  Use **GRANT** and **DENY** statements to grant or deny a permission (such as **UPDATE**) on a securable (such as a database, table, view, etc.) to a security principal (a login, a database user, or a database role). Use **REVOKE** to remove the grant or deny of a permission.  
   
  Server level permissions are applied to logins. Database level permissions are applied to database users and database roles.  
   
@@ -32,7 +32,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ## Syntax  
   
 ```syntaxsql
--- Azure Synapse Analytics and Parallel Data Warehouse  
+-- Azure Synapse Analytics and Parallel Data Warehouse and Microsoft Fabric
 GRANT   
     <permission> [ ,...n ]  
     [ ON [ <class_type> :: ] securable ]   
@@ -110,8 +110,12 @@ REVOKE
   
  Some statements require multiple permissions. For example, to create a table requires the **CREATE TABLE** permissions in the database, and the **ALTER SCHEMA** permission for the table that will contain the table.  
   
- PDW sometimes executes stored procedures to distribute user actions to the compute nodes. Therefore, the execute permission for an entire database cannot be denied. (For example `DENY EXECUTE ON DATABASE::<name> TO <user>;` will fail.) As a work around, deny the execute permission to user-schemas or specific objects (procedures).  
+ [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] sometimes executes stored procedures to distribute user actions to the compute nodes. Therefore, the execute permission for an entire database cannot be denied. (For example `DENY EXECUTE ON DATABASE::<name> TO <user>;` will fail.) As a work around, deny the execute permission to user-schemas or specific objects (procedures).  
   
+ In [!INCLUDE [fabric](../../includes/fabric.md)], currently the CREATE USER cannot be explicitly executed. When GRANT or DENY is executed, the user will be created automatically. 
+
+ In [!INCLUDE [fabric](../../includes/fabric.md)], server-level permissions are not manageable. 
+
 ### Implicit and Explicit Permissions  
  An *explicit permission* is a **GRANT** or **DENY** permission given to a principal by a **GRANT** or **DENY** statement.  
   

@@ -35,7 +35,7 @@ sections:
       - question: |
           What SQL Server virtual machine gallery images are available? 
         answer: |
-             Azure maintains virtual machine images for all supported major releases of SQL Server on all editions for both Windows and Linux. For more information, see the complete list of [Windows VM images](sql-server-on-azure-vm-iaas-what-is-overview.md#payasyougo) and [Linux VM images](../linux/sql-server-on-linux-vm-what-is-iaas-overview.md#create).
+             Azure maintains virtual machine images for all supported major releases of SQL Server on all editions for both Windows and Linux. For more information, see the complete list of [Windows VM images](sql-server-on-azure-vm-iaas-what-is-overview.md#licensing) and [Linux VM images](../linux/sql-server-on-linux-vm-what-is-iaas-overview.md#create).
           
       - question: |
           Are existing SQL Server virtual machine gallery images updated?
@@ -45,8 +45,7 @@ sections:
           Can SQL Server virtual machine images get removed from the gallery?
         answer: |
              Yes. Azure only maintains one image per major version and edition. For example, when a new SQL Server service pack is released, Azure adds a new image to the gallery for that service pack. The SQL Server image for the previous service pack is immediately removed from the Azure portal. However, it is still available for provisioning from PowerShell for the next three months. After three months, the previous service pack image is no longer available. This removal policy would also apply if a SQL Server version becomes unsupported when it reaches the end of its lifecycle.
-          
-          
+                
       - question: |
           Is it possible to deploy an older image of SQL Server that is not visible in the Azure portal?
         answer: |
@@ -84,6 +83,11 @@ sections:
           I can't find the version and edition of SQL Server that I want from the images available on Azure Marketplace. 
         answer: |
              If the version and edition of SQL Server you're looking for isn't available in the **Images** drop-down on Azure Marketplace, deploy a Windows-only Azure virtual machine, and then manually install the version and edition of SQL Server you want. Register your SQL Server VM with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md) if you want to manage your SQL Server VM from the Azure portal. 
+
+      - question: |
+          I cannot find the version of Windows, such as Azure Edition, among the SQL Server images available on Azure Marketplace.
+        answer: |
+             If the version of Windows you're looking for isn't available in the SQL Server images found in the **Images** drop-down of Azure Marketplace, deploy a Windows-only Azure virtual machine with the desired edition, and then manually install the version and edition of SQL Server you want. Register your SQL Server VM with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md) if you want to manage your SQL Server VM from the Azure portal. 
  
       - question: |
           Is there a free edition of SQL Server available on Azure Marketplace? 
@@ -109,7 +113,7 @@ sections:
       - question: |
           How can I install my licensed copy of SQL Server on an Azure VM?
         answer: |
-             There are three ways to do this. If you're an Enterprise Agreement (EA) customer, you can provision one of the [virtual machine images that support licenses](sql-server-on-azure-vm-iaas-what-is-overview.md#BYOL), which is also known as bring-your-own-license (BYOL). If you have [Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default), you can enable the [Azure Hybrid Benefit](licensing-model-azure-hybrid-benefit-ahb-change.md) on an existing pay-as-you-go (PAYG) image. Or you can copy the SQL Server installation media to a Windows Server VM, and then install SQL Server on the VM. Be sure to register your SQL Server VM with the [extension](sql-agent-extension-manually-register-single-vm.md) for features such as portal management, automated backup and automated patching. 
+             There are three ways to do this. If you're an Enterprise Agreement (EA) customer, you can provision one of the [virtual machine images](sql-server-on-azure-vm-iaas-what-is-overview.md#licensing). If you have [Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default), you can enable the [Azure Hybrid Benefit](licensing-model-azure-hybrid-benefit-ahb-change.md) on an existing pay-as-you-go (PAYG) image. Or you can copy the SQL Server installation media to a Windows Server VM, and then install SQL Server on the VM. Be sure to register your SQL Server VM with the [extension](sql-agent-extension-manually-register-single-vm.md) for features such as portal management, automated backup and automated patching. 
           
           
       - question: |
@@ -179,7 +183,12 @@ sections:
           What is the maximum number of instances on a VM?
         answer: |
              SQL Server 2012 to SQL Server 2019 can support [50 instances](/sql/sql-server/editions-and-components-of-sql-server-version-15#RDBMSSP) on a stand-alone server. This is the same limit regardless of in Azure on-premises. See [best practices](./performance-guidelines-best-practices-checklist.md) to learn how to better prepare your environment. 
-          
+      
+      - question: |
+          Microsoft Visual C++ Redistributable installed with SQL Server is flagged as end of life or obsolete
+        answer: |
+             When you provision SQL Server on Azure VM, the SQL Server setup program installs a Microsoft Visual C++ Redistributable which is required for SQL Server components to run properly. Your security software may send alerts about end of life (EOL) or obsolete software components due to the version of the Microsoft Visual C++ Redistributable components that was installed by SQL Server, particularly for older versions of SQL Server (SQL Server 2016 and earlier). According to the support lifecycle policy, Microsoft Visual C++ Redistributable components are supported [as long as the product that installed them is supported](/troubleshoot/sql/database-engine/install/windows/visual-c-redistributable-installed-sql-server-flagged-end-of-life-obsolete). As long as your installed version of SQL Server is still supported, you can safely ignore this warning. We recommend not removing VC++ as it may break some SQL Server functionality.
+
       - question: |
           Can I uninstall the default instance of SQL Server?
         answer: |
@@ -203,7 +212,7 @@ sections:
              1. Uninstall SQL Server completely, including the SQL IaaS Agent extension (if present).
              1. Install the free [SQL Express edition](https://www.microsoft.com/sql-server/sql-server-downloads).
              1. Register with the SQL IaaS Agent extension. 
-             1. [Change the edition of SQL Server](change-sql-server-edition.md#change-edition-in-portal) in the [Azure portal](https://portal.azure.com) to Express to stop billing.  
+             1. [Change the edition of SQL Server](change-sql-server-edition.md#change-edition-property-for-billing) in the [Azure portal](https://portal.azure.com) to Express to stop billing.  
              1. (optional) Disable the Express SQL Server service by disabling service startup. 
           
       - question: |
@@ -395,6 +404,9 @@ sections:
           What happened to management modes of the SQL IaaS Agent extension? 
         answer: Management modes were removed from the SQL IaaS Agent extension architecture. Starting in March 2023, registering with the SQL IaaS Agent extension initially just copies the binaries to the SQL Server VM and offers [limited functionality](sql-server-iaas-agent-extension-automate-management.md#feature-benefits). Once you enable a feature that relies on it, the SQL IaaS Agent is installed to the SQL Server VM. 
 
+      - question: |
+          Can I register my virtual machine image if I'm using Reporting Services, Power BI Report Server, or Analysis Services? 
+        answer: No. The SQL IaaS Agent extension is not supported with the following images - SQL Server Reporting Services, SQL Server Power BI Report Server, SQL Server Analysis Services.
              
 
 additionalContent: |

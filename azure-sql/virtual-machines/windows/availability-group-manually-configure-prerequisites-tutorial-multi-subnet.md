@@ -4,7 +4,7 @@ description: "This tutorial shows how to configure the prerequisites for creatin
 author: tarynpratt
 ms.author: tarynpratt
 ms.reviewer: mathoma
-ms.date: 04/18/2023
+ms.date: 07/10/2023
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: tutorial
@@ -177,7 +177,7 @@ To configure **DC-VM-1** as the domain controller, follow these steps:
     | **Domain Controller Options** |**DSRM Password** = Contoso!0000<br/>**Confirm Password** = Contoso!0000 |
 
 1. Select **Next** to go through the other pages in the wizard. On the **Prerequisites Check** page, verify that you see the following message: **All prerequisite checks passed successfully**. You can review any applicable warning messages, but it's possible to continue with the installation.
-1. Select **Install**. The **DC-VM-1** virtual machine automatically reboots.
+1. Select **Install**. The **DC-VM-1** virtual machine automatically restarts.
 
 ### Identify DNS IP address
 
@@ -206,7 +206,7 @@ To configure your virtual network for DNS, follow these steps:
 
 ### Configure second domain controller
 
-After the primary domain controller reboots, you can optionally configure the second domain controller for the purpose of high availability. If you do not want to configure a second domain controller, skip this step. However, a second domain controller is recommended in production environments.
+After the primary domain controller restarts, you can optionally configure the second domain controller for the purpose of high availability. If you do not want to configure a second domain controller, skip this step. However, a second domain controller is recommended in production environments.
 
 Set the preferred DNS server address, join the domain, and then configure the secondary domain controller.
 
@@ -299,7 +299,7 @@ Follow these steps to create each account:
    :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-multi-subnet/14-ad-dc-new-user.png" alt-text="Active Directory Administrative Center":::
 
 1. Select **OK** to create the user.
-1. Repeat these steps to create all three accounts.
+1. Repeat these steps to create all accounts.
 
 ### Grant installation account permissions
 

@@ -58,15 +58,8 @@ WITH (TRACK_COLUMNS_UPDATED = ON)
   
  When the TRACK_COLUMNS_UPDATED option is set to ON, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] stores extra information about which columns were updated to the internal change tracking table. Column tracking can enable an application to synchronize only those columns that were updated. This can improve efficiency and performance. However, because maintaining column tracking information adds some extra storage overhead, this option is set to OFF by default.  
   
-## Disable Change Tracking for a Database or Table  
+## Disable Change Tracking for a Table or Database
  Change tracking must first be disabled for all change-tracked tables before change tracking can be set to OFF for the database. To determine the tables that have change tracking enabled for a database, use the [sys.change_tracking_tables](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md) catalog view.  
-  
- When no tables in a database track changes, you can disable change tracking for the database. The following example shows how to disable change tracking for a database by using [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
-  
-```sql  
-ALTER DATABASE AdventureWorks2012  
-SET CHANGE_TRACKING = OFF  
-```  
   
  The following example shows how to disable change tracking for a table by using [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
@@ -74,7 +67,14 @@ SET CHANGE_TRACKING = OFF
 ALTER TABLE Person.Contact  
 DISABLE CHANGE_TRACKING;  
 ```  
+
+When no tables in a database track changes, you can disable change tracking for the database. The following example shows how to disable change tracking for a database by using [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
+```sql  
+ALTER DATABASE AdventureWorks2012  
+SET CHANGE_TRACKING = OFF  
+```  
+
 ## See Also  
  [Database Properties &#40;ChangeTracking Page&#41;](../../relational-databases/databases/database-properties-changetracking-page.md)   
  [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   

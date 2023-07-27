@@ -1,8 +1,8 @@
 ---
 title: Automatic registration with SQL IaaS Agent extension
 description: Learn how to enable the automatic registration feature to automatically register all past and future SQL Server VMs with the SQL IaaS Agent extension using the Azure portal.
-author: adbadram
-ms.author: adbadram
+author: bluefooted
+ms.author: pamela
 ms.reviewer: mathoma
 ms.date: 03/26/2023
 ms.service: virtual-machines-sql
@@ -23,9 +23,9 @@ This article teaches you to enable the automatic registration feature. Alternati
 
 Register your SQL Server VM with the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md) to unlock a full feature set of benefits. 
 
-By default, Azure VMs with SQL Server 2016 or later are automatically registered with the SQL IaaS Agent extension when detected by the [CEIP service](/sql/sql-server/usage-and-diagnostic-data-configuration-for-sql-server) with limited functionality. You can use the automatic registration feature to automatically register any SQL Server VMs not identified by the CEIP service.  The license type automatically defaults to that of the VM image. If you use a pay-as-you-go image for your VM, then your license type will be `PAYG`, otherwise your license type will be `AHUB` by default. For information about privacy, see the [SQL IaaS Agent extension privacy statements](sql-server-iaas-agent-extension-automate-management.md#in-region-data-residency). 
+By default, Azure VMs with SQL Server 2016 or later are automatically registered with the SQL IaaS Agent extension with limited functionality when detected by the [CEIP service](/sql/sql-server/usage-and-diagnostic-data-configuration-for-sql-server). You can use the automatic registration feature to automatically register any SQL Server VMs not identified by the CEIP service.  The license type automatically defaults to that of the VM image. If you use a pay-as-you-go image for your VM, then your license type will be `PAYG`, otherwise your license type will be `AHUB` by default. For information about privacy, see the [SQL IaaS Agent extension privacy statements](sql-server-iaas-agent-extension-automate-management.md#in-region-data-residency). 
 
-Once automatic registration is enabled for a subscription all current and future VMs that have SQL Server installed are registered with the SQL IaaS Agent extension. This is done by running a monthly job that detects whether or not SQL Server is installed on all the unregistered VMs in the subscription. For unregistered VMs, the job installs the SQL IaaS Agent extension binaries to the VM, then runs a one-time utility to check for the SQL Server registry hive. If the SQL Server hive is detected, the virtual machine is registered with the extension. If no SQL Server hive exists in the registry, the binaries are removed. 
+Once automatic registration is enabled for a subscription all current and future VMs that have SQL Server installed are registered with the SQL IaaS Agent extension. This is done by running a monthly job that detects whether or not SQL Server is installed on all the unregistered VMs in the subscription. For unregistered VMs, the job copies the SQL IaaS Agent extension binaries to the VM, then runs a one-time utility to check for the SQL Server registry hive. If the SQL Server hive is detected, the virtual machine is registered with the extension. If no SQL Server hive exists in the registry, the binaries are removed. 
 
 Automatic registration offers limited functionality of the extension, such as license management. You can enable more features from the [SQL virtual machines](manage-sql-vm-portal.md) resource in the [Azure portal](https://portal.azure.com). 
 
@@ -63,6 +63,9 @@ Once automatic registration is enabled, SQL Server VMs are registered if they:
 - Are deployed using an Azure Resource Model to a [Windows Server 2008 R2 (or later) virtual machine](/azure/virtual-machines/windows/quick-create-portal). Windows Server 2008 isn't supported. 
 - Have [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads) installed.
 - Are deployed to the public or Azure Government cloud. Other clouds aren't currently supported. 
+
+> [!NOTE]
+> Automatic registration is supported for Ubuntu Linux VMs in Azure. 
 
 ## Enable automatic registration 
 

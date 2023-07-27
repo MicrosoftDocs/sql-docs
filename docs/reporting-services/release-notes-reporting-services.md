@@ -4,13 +4,14 @@ description: Learn details about the changes in SQL Server Reporting Services (S
 author: casualoak
 ms.author: petebro
 ms.reviewer: maggies
-ms.date: 03/09/2023
+ms.date: 07/25/2023
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
 ms.custom: updatefrequency5
 monikerRange: ">=sql-server-2017"
 ---
+
 # Release notes for SQL Server Reporting Services (SSRS) 2017 and later
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2017-and-later](../includes/ssrs-appliesto-2017-and-later.md)]
@@ -49,6 +50,14 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 ::: moniker range="=sql-server-ver16"
 ## SQL Server 2022 Reporting Services
 
+## 16.0.8564.33454, 2023/06/13
+*(Product Version: 16.0.1114.11)*
+
+-  Introduced new Accessibility property that lets report authors to add accessible headers to tables and Heading levels to text boxes.
+-  Fixed setting calendar days to a single day for monthly schedules.
+-  Fixed an issue in Report Server (Web Service) page localization, and localization of exported Excel files 
+Fixed slowness of Large MDX Query as an Expression.
+
 ## 16.0.8361.39598, 2022/11/23
 *(Product Version: 16.0.1113.11)*
 
@@ -86,6 +95,16 @@ Release Candidate 0 (RC0)
 ::: moniker-end
 
 ## SQL Server 2019 Reporting Services
+
+## 15.0.8599.29221, 2023/07/20
+*(Product Version: 15.0.1102.1084)*
+- Added support for GB18030-2022 Chinese government standard
+
+## 15.0.8563.17333, 2023/06/20
+*(Product Version: 15.0.1102.1075)*
+- Fixed issue with date type parameters and Oracle data source
+- Fixed slowness of Large MDX Query as an Expression 
+- Fixed issue with export to Excel / Word when using Virtual Service Account and Execution Account 
 
 ## 15.0.8434.2956, 2023/02/06
 *(Product Version: 15.0.1102.1047)*
@@ -324,3 +343,4 @@ Initial release.
 [What's New in Reporting Services (SSRS)?](what-s-new-in-sql-server-reporting-services-ssrs.md)
 
 More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).
+

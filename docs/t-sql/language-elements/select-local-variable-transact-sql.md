@@ -21,11 +21,11 @@ helpviewer_keywords:
   - "local variables [SQL Server]"
 dev_langs:
   - "TSQL"
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = azure-sqldw-latest || >= sql-server-linux-2017"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = azure-sqldw-latest || >= sql-server-linux-2017||=fabric"
 ---
 # SELECT @local_variable (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw.md)]
 
 Sets a local variable to the value of an expression.
 
@@ -86,7 +86,7 @@ One SELECT statement can initialize multiple local variables.
 
 In the following example, the variable `@var1` is assigned "Generic Name" as its value. The query against the `Store` table returns no rows because the value specified for `CustomerID` doesn't exist in the table. The variable retains the "Generic Name" value.
 
-This example uses the AdventureWorks2019LT sample database, for more information, see [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md). The AdventureWorksLT database is used as the `sample` database for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+This example uses the AdventureWorks2019LT sample database, for more information, see [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md). The AdventureWorksLT database is used as the `sample` database for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 ```sql
 -- Uses AdventureWorks2019LT
@@ -111,7 +111,7 @@ Generic Name
 
 In the following example, a subquery is used to assign a value to `@var1`. Because the value requested for `CustomerID` doesn't exist, the subquery returns no value, and the variable is set to `NULL`.
 
-This example uses the AdventureWorks2019LT sample database, for more information, see [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md). The AdventureWorksLT database is used as the `sample` database for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+This example uses the AdventureWorks2019LT sample database, for more information, see [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md). The AdventureWorksLT database is used as the `sample` database for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 ```sql
 -- Uses AdventureWorks2019

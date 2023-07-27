@@ -11,11 +11,11 @@ f1_keywords:
   - "APPROX_COUNT_DISTINCT"
 dev_langs:
   - "TSQL"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current||=fabric"
 ---
 # APPROX_COUNT_DISTINCT (Transact-SQL)
 
-[!INCLUDE [sqlserver2019-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi-asa.md)]
+[!INCLUDE [sqlserver2019-asdb-asdbmi-asa-fabricse-fabricdw](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi-asa-fabricse-fabricdw.md)]
 
 This function returns the approximate number of unique non-null values in a group. 
   

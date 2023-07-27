@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Managed Instance
 description: Learn how to enroll new and existing instances in the November 2022 feature wave.
 author: MashaMSFT
 ms.author: mathoma
-ms.date: 11/16/2022
+ms.date: 07/12/2023
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: how-to
@@ -15,9 +15,9 @@ ms.topic: how-to
 
 Learn how to enroll new and existing managed instances in the November 2022 feature wave for Azure SQL Managed Instance.
 
-The November 2022 feature wave is rolling out over several months. The initial rollout phase focuses on managed instances that belong to Dev/Test subscription types. Other subscription types will enroll in upcoming months.
+The November 2022 feature wave is being released in a phased manner. The current phase makes managed instances belonging to Dev/Test subscriptions eligible for the feature wave. 
 
-Eligible existing instances that were created before November 2022 can enroll in the feature wave immediately to unlock new benefits and features.
+Existing eligible instances that were created before November 2022 can enroll in the feature wave immediately to unlock new benefits and features.
 
 ## New benefits and features
 
@@ -26,7 +26,7 @@ The November 2022 feature wave introduced new features and automatic benefits fo
 The benefits in the feature wave include:
 
 - **Fast instance provisioning**. It takes less time to deploy an instance.
-- [**Simplified connectivity architecture**](connectivity-architecture-overview.md). The connectivity architecture of SQL Managed Instance is simplified by removing the management endpoint and reducing the number of mandatory rules.
+- [**Improved network security**](connectivity-architecture-overview.md). Internal service traffic is now isolated and secured by Microsoft. 
 - [**Enhanced virtual cluster**](connectivity-architecture-overview.md?tab=current#virtual-cluster-connectivity-architecture). The functionality of the underlying virtual cluster is enhanced.
 
 These new preview features were introduced in the wave:
@@ -37,9 +37,9 @@ These new preview features were introduced in the wave:
 
 For more information, see [Frequently asked questions](frequently-asked-questions-faq.yml#november-2022-feature-wave).
 
-## Feature wave rollout
+## November 2022 feature wave rollout
 
-The November 2022 feature wave is rolling out over several months. The initial rollout phase focuses on instances that belong to [Dev/Test subscriptions](frequently-asked-questions-faq.yml#what-azure-offers-and-subscription-types-are-enrolled-in-the-november-2022-feature-wave). Other subscription types will be enrolled in upcoming months. Unsupported subscription types can't be enabled individually.
+The November 2022 feature wave is being released in a phased manner. The current phase makes managed instances belonging to [Dev/Test subscriptions](frequently-asked-questions-faq.yml#what-azure-offers-and-subscription-types-are-enrolled-in-the-november-2022-feature-wave) eligible for the feature wave. 
 
 The enrollment experience is different for new instances and existing instances:
 
@@ -47,13 +47,13 @@ The enrollment experience is different for new instances and existing instances:
 - *Existing instances* will be enrolled in the November 2022 feature wave gradually and automatically. Eligible existing instances that were created before November 2022 can enroll in the feature wave immediately to unlock the new benefits and features.
 
 > [!NOTE]
-> Benefits and features can't be enabled individually on instances that haven't enrolled in the feature wave.
+> Benefits and features can't be enabled individually on managed instances that haven't enrolled in the feature wave.
 
 ## Enroll an existing instance
 
 Existing eligible instances that were created before November 2022 eventually will be automatically enrolled in the feature wave. However, you can choose to enroll your existing instance immediately if your instance meets the following conditions:
 
-- Your instance is hosted in a subscription type that's ready for the November 2022 feature wave. Currently, only the Dev/Test subscription type is supported.
+- Your instance is hosted in a subscription type that's ready for the November 2022 feature wave. Currently, Dev/Test subscription type is supported.
 - You can update the virtual network subnet to one of the supported types:
 
   - A new subnet
@@ -115,7 +115,7 @@ To confirm that your new instance is enrolled in the feature wave during deploym
 
 1. Select **Review + Create** to validate your settings. Check the **Nov 2022 feature wave** section to confirm that all configuration options are compatible with the feature wave:
 
-   :::image type="content" source="media/november-2022-feature-wave-enroll/review-and-create.png" alt-text="Screenshot that shows the Review + create pane in the Azure portal, with the November 22 feature wave options highlighted.":::
+   :::image type="content" source="media/november-2022-feature-wave-enroll/review-and-create.png" alt-text="Screenshot that shows the Review + create pane in the Azure portal, with the November 2022 feature wave options highlighted.":::
 
 ## Known issues
 

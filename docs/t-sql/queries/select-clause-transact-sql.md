@@ -25,7 +25,7 @@ dev_langs:
   - "TSQL"
 ---
 # SELECT Clause (Transact-SQL)
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi-fabricse-fabricdw.md)]
 
   Specifies the columns to be returned by the query.  
   

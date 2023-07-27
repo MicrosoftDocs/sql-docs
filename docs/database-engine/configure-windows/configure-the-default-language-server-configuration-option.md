@@ -1,5 +1,5 @@
 ---
-title: "Configure the default language Server Configuration Option"
+title: "Configure the default language (server configuration option)"
 description: Find out about the default language option. See how to configure it to specify the default language that SQL Server uses for all newly created logins.
 author: rwestMSFT
 ms.author: randolphwest
@@ -10,7 +10,7 @@ ms.topic: conceptual
 helpviewer_keywords:
   - "default language option"
 ---
-# Configure the default language Server Configuration Option
+# Configure the default language (server configuration option)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to configure the **default language** server configuration option in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **default language** option specifies the default language for all newly created logins. To set default language, specify the **langid** value of the language you want. The **langid** value can be obtained by querying the **sys.syslanguages** compatibility view.  

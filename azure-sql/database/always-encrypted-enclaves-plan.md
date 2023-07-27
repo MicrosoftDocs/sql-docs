@@ -1,8 +1,8 @@
 ---
 title: "Plan for secure enclaves in Azure SQL Database"
 description: Plan the deployment of Always Encrypted with secure enclaves in Azure SQL Database.
-author: jaszymas
-ms.author: jaszymas
+author: Pietervanhove
+ms.author: pivanho
 ms.reviewer: vanto
 ms.date: 02/15/2023
 ms.service: sql-database
@@ -38,10 +38,10 @@ SGX enclaves are recommended for workloads that require the strongest data confi
 > [!IMPORTANT]
 > VBS enclaves in Azure SQL Database are currently in preview. The [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, in preview, or otherwise not yet released into general availability.
 
-[VBS enclaves](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) (also known as Virtual Secure Mode, or VSM enclaves) is a software-based technology that relies on Windows hypervisor and doesn't require any special hardware. Therefore, VBS enclaves are available in all Azure SQL Database offerings, providing you with the flexibility to use Always Encrypted with secure enclaves with a compute size, service tier, purchasing model, hardware configuration and region that best meets your workload requirements.
+[VBS enclaves](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) (also known as Virtual Secure Mode, or VSM enclaves) is a software-based technology that relies on Windows hypervisor and doesn't require any special hardware. Therefore, VBS enclaves are available in all Azure SQL Database offerings, including Azure SQL Elastic Pools, providing you with the flexibility to use Always Encrypted with secure enclaves with a compute size, service tier, purchasing model, hardware configuration and region that best meets your workload requirements.
 
 > [!NOTE]
-> In the current state of the preview, VBS enclaves are **not** available in elastic pools. VBS enclaves are available in all Azure SQL Database regions **except**: Australia Central, Australia Central 2, Jio India Central, Jio India West, Korea Central, Korea South, UAE Central.
+> VBS enclaves are available in all Azure SQL Database regions **except**: Jio India Central.
 
 VBS enclaves are the recommended solution for customers who seek protection for data in use from high-privileged users in the customer’s organization, including Database Administrators (DBAs). Without having the cryptographic keys protecting the data, a DBA won't be able to access the data in plaintext.
 

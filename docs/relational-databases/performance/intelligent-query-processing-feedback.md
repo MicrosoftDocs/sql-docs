@@ -4,7 +4,7 @@ description: Learn about query processing feedback features, part of the Intelli
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: katsmith
-ms.date: 05/02/2023
+ms.date: 06/08/2023
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
@@ -39,7 +39,7 @@ Sometimes a query executes with a memory grant that is too large or too small.  
 
 ### Batch mode memory grant feedback
 
-**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]), [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
 A query's execution plan includes the minimum required memory needed for execution and the ideal memory grant size to have all rows fit in memory. Performance suffers when memory grant sizes are incorrectly sized. Excessive grants result in wasted memory and reduced concurrency. Insufficient memory grants cause expensive spills to disk. By addressing repeating workloads, batch mode memory grant feedback recalculates the actual memory required for a query and then updates the grant value for the cached plan. When an identical query statement is executed, the query uses the revised memory grant size, reducing excessive memory grants that impact concurrency and fixing underestimated memory grants that cause expensive spills to disk.
 
@@ -142,7 +142,7 @@ A USE HINT query hint takes precedence over a [database scoped configuration](..
 
 ### Row mode memory grant feedback
 
-**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
 Row mode memory grant feedback expands on the batch mode memory grant feedback feature by adjusting memory grant sizes for both batch and row mode operators.
 
@@ -173,6 +173,7 @@ Values surfaced in this attribute are as follows:
 | No: Accurate Grant | If there's no spill to disk and the statement uses at least 50% of the granted memory, then memory grant feedback isn't triggered. |
 | No: Feedback disabled | If memory grant feedback is continually triggered and fluctuates between memory-increase and memory-decrease operations, the database engine will disable memory grant feedback for the statement. |
 | Yes: Adjusting | Memory grant feedback has been applied and may be further adjusted for the next execution. |
+| Yes: Percentile Adjusting | Memory grant feedback is being applied using the percentile grant algorithm, which looks at more history than only the most recent execution. |
 | Yes: Stable | Memory grant feedback has been applied and granted memory is now stable, meaning that what was last granted for the previous execution is what was granted for the current execution. |
 
 #### Disable row mode memory grant feedback without changing the compatibility level
@@ -201,14 +202,14 @@ A USE HINT query hint takes precedence over a [database scoped configuration](..
 
 ### Percentile and persistence mode memory grant feedback
 
-**Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]), [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
-This feature was introduced in [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)], however this performance enhancement is available for queries that operate in the database compatibility level 140 (introduced in SQL Server 2017) or higher, or the QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n hint of 140 and higher, and when Query Store is enabled for the database and is in a "read write" state.
+This feature was introduced in [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)], however this performance enhancement is available for queries that operate in the database compatibility level 140 (introduced in SQL Server 2017) or higher, or the `QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n` hint of 140 and higher, and when Query Store is enabled for the database and is in a "read write" state.
 
- - Percentile memory grant feedback is enabled by default in [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)], but has no effect if when Query Store is not enabled and in a "read write" state.
- - Persistence for memory grant, CE, and DOP feedback is on by default in [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)], but has no effect if when Query Store is not enabled and in a "read write" state.
- - Percentile memory grant feedback is not currently available in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)].
- - Persistence is not currently available in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)].
+ - Percentile memory grant feedback is enabled by default in [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)], but has no effect if Query Store is not enabled or when Query Store is not in a "read write" state.
+ - Persistence for memory grant, CE, and DOP feedback is on by default in [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)], but has no effect when Query Store is not enabled or when Query Store is not in a "read write" state.
+ - Percentile and persistence for memory grant feedback is available in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and enabled by default on all databases, both existing and new. 
+ - Percentile and persistence for memory grant feedback is not currently available in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)].
 
 It's recommended that you have a performance baseline for your workload before the feature is enabled for your database. The baseline numbers will help you determine if you're getting the intended benefit from the feature.
 
@@ -230,19 +231,21 @@ Persistence also applies to [DOP feedback](#degree-of-parallelism-dop-feedback) 
 
 #### Enable memory grant feedback: persistence and percentile
 
-To enable memory grant feedback persistence and percentile, use database compatibility level 140 or higher for the database you're connected to when executing the query. Persistence and percentile feedback are [enabled by default](#percentile-and-persistence-mode-memory-grant-feedback).
+Persistence and percentile feedback are [enabled by default](#percentile-and-persistence-mode-memory-grant-feedback) in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)].
+
+Use database compatibility level 140 or higher for the database you're connected to when executing the query. You can change this via [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md):
 
 `ALTER DATABASE <DATABASE NAME> SET COMPATIBILITY LEVEL = 140; -- OR HIGHER`
 
-The Query Store must be enabled for every database where the persistence portion of this feature is used. 
+The Query Store must be enabled for every database where the persistence portion of this feature is used.
 
 #### Disable percentile
 
 To disable memory grant feedback percentile for all query executions originating from the database, execute the following within the context of the applicable database:
 
-`ALTER DATABASE SCOPED CONFIGURATION SET MEMORY_GRANT_FEEDBACK_PERCENTILE = OFF;`
+`ALTER DATABASE SCOPED CONFIGURATION SET MEMORY_GRANT_FEEDBACK_PERCENTILE_GRANT = OFF;`
 
-The default setting for `MEMORY_GRANT_FEEDBACK_PERCENTILE` is `OFF`.
+The default setting for `MEMORY_GRANT_FEEDBACK_PERCENTILE_GRANT` is `ON`.
 
 #### Disable persistence
 
@@ -256,9 +259,9 @@ Disabling memory grant feedback persistence will also remove existing collected 
 
 The default setting for `MEMORY_GRANT_FEEDBACK_PERSISTENCE` is `ON`.
 
-#### Considerations for memory grant feedback
+### Considerations for memory grant feedback
 
-You can view your current settings by querying `sys.database_scoped_configurations`.
+You can view your current settings by querying [sys.database_scoped_configurations](../system-catalog-views/sys-database-scoped-configurations-transact-sql.md).
 
 > [!NOTE]  
 > That this feature won't work if both `BATCH_MODE_MEMORY_GRANT_FEEDBACK` and `ROW_MODE_MEMORY_GRANT_FEEDBACK` are set to OFF.
@@ -271,12 +274,12 @@ Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], when Query 
 
 ## Degree of parallelism (DOP) feedback
 
-**Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (Preview)
+**Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] (Preview)
 
 [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] introduced a new feature called degree of parallelism (DOP) feedback to improve query performance by identifying parallelism inefficiencies for repeating queries, based on elapsed time and waits. DOP feedback is part of the [intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) family of features, and addresses suboptimal usage of parallelism for repeating queries. This scenario helps with optimizing resource usage and improving scalability of workloads, when excessive parallelism can cause performance issues. Instead of incurring in the pains of an all-encompassing default or manual adjustments to each query, DOP feedback self-adjusts DOP to avoid the issues described above.
 
 > [!NOTE]
-> This feature is currently available in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] as a limited preview. For more information and how to apply for the preview, see [Announcing Degree of Parallelism Feedback Limited Preview](https://techcommunity.microsoft.com/t5/azure-sql-blog/announcing-degree-of-parallelism-feedback-limited-preview/ba-p/3806924).
+> This feature is currently available in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] as a limited preview. For more information and how to apply for the preview, see [Announcing Degree of Parallelism Feedback Limited Preview](https://techcommunity.microsoft.com/t5/azure-sql-blog/announcing-degree-of-parallelism-feedback-limited-preview/ba-p/3806924).
 
 Instead of incurring in the pains of an all-encompassing default or manual adjustments to each query, DOP feedback self-adjusts DOP to avoid excess parallelism. If parallelism usage is deemed inefficient, DOP feedback lowers the DOP for the next execution of the query, from whatever is the configured DOP, and verify if it helps.
 
@@ -334,7 +337,7 @@ The following XEs are available for the feature:
 
 **Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later. 
 <!---
-Currently in preview for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)].
+Currently in preview for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)].
 -->
 
 Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]), the Cardinality Estimation (CE) feedback is part of the [intelligent query processing family of features](intelligent-query-processing.md) and addresses suboptimal query execution plans for repeating queries when these issues result from incorrect CE model assumptions. This scenario helps with reducing regression risks related to the default CE when upgrading from older versions of the Database Engine.

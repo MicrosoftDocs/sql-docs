@@ -428,7 +428,7 @@ When you run the program, a browser is displayed to authenticate the user. Exact
 
 For information about how to configure Azure AD to require Multi-Factor Authentication, see [Getting started with Azure AD Multi-Factor Authentication in the cloud](/azure/active-directory/authentication/howto-mfa-getstarted).
 
-For screenshots of these dialog boxes, see [Configure multi-factor authentication for SQL Server Management Studio and Azure AD](/azure/azure-sql/database/authentication-mfa-ssms-configure).
+For screenshots of these dialog boxes, see [Using Azure AD Multi-Factor Authentication](/azure/azure-sql/database/authentication-mfa-ssms-overview).
 
 If user authentication is completed successfully, you should see the following message in the browser:
 

@@ -148,6 +148,10 @@ Get-AzSqlVM -Name <vm_name> -ResourceGroupName <resource_group>
 
 An error indicates that the SQL Server VM has not been registered with the extension.
 
+## Automatic registration
+
+[Automatic registration](../windows/sql-agent-extension-automatic-registration-all-vms.md) is supported for Ubuntu Linux VMs. 
+
 
 ## Next steps
 

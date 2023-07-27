@@ -1,8 +1,8 @@
 ---
 title: "Quickstart: Create an Azure SQL Managed Instance (portal)"
 description: Create a managed instance, network environment, and client VM for access using the Azure portal in this quickstart.
-author: urosmil
-ms.author: urmilano
+author: urosran
+ms.author: urandjelovic
 ms.reviewer: mathoma
 ms.date: 04/06/2022
 ms.service: sql-managed-instance
@@ -168,7 +168,7 @@ To optionally fine-tune networking settings, inspect the following:
     To change or add rules, open the **Inbound Security Rules** and **Outbound security rules** in the Network security group settings.
 
 > [!IMPORTANT]
-> If you have configured a public endpoint for SQL Managed Instance, you need to open ports to allow network traffic allowing connections to SQL Managed Instance from the public internet. For more information, see [Configure a public endpoint for SQL Managed Instance](public-endpoint-configure.md#allow-public-endpoint-traffic-on-the-network-security-group).
+> If you have configured a public endpoint for SQL Managed Instance, you need to open ports to allow network traffic allowing connections to SQL Managed Instance from the public internet. For more information, see [Configure a public endpoint for SQL Managed Instance](public-endpoint-configure.md#allow-public-endpoint-traffic-in-the-network-security-group).
 >
 
 ## Retrieve connection details to SQL Managed Instance
@@ -191,7 +191,7 @@ To learn about how to connect to SQL Managed Instance:
 - For a quickstart that shows how to connect to SQL Managed Instance from an on-premises client computer by using a point-to-site connection, see [Configure a point-to-site connection](point-to-site-p2s-configure.md).
 
 To restore an existing SQL Server database from on-premises to SQL Managed Instance: 
-- Use the [Azure Database Migration Service for migration](/azure/dms/tutorial-sql-server-to-managed-instance) to restore from a database backup file. 
+- Use the [Azure Database Migration Service](/azure/dms/tutorial-sql-server-managed-instance-online-ads) to restore from a database backup file.
 - Use the [T-SQL RESTORE command](restore-sample-database-quickstart.md) to restore from a database backup file.
 
 For advanced monitoring of SQL Managed Instance database performance with built-in troubleshooting intelligence, see [Monitor Azure SQL Managed Instance by using Azure SQL Analytics](/azure/azure-monitor/insights/azure-sql).

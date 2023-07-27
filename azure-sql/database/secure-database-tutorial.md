@@ -136,7 +136,7 @@ For information about configuring Azure AD, see:
 
 - [Integrate your on-premises identities with Azure AD](/azure/active-directory/hybrid/whatis-hybrid-identity)
 - [Add your own domain name to Azure AD](/azure/active-directory/fundamentals/add-custom-domain)
-- [Microsoft Azure now supports federation with Windows Server AD](https://azure.microsoft.com/blog/20../../windows-azure-now-supports-federation-with-windows-server-active-directory/)
+- [Federation with Azure AD](/azure/active-directory/hybrid/connect/whatis-fed)
 - [Administer your Azure AD directory](/azure/active-directory/fundamentals/active-directory-whatis)
 - [Manage Azure AD using PowerShell](/powershell/azure/)
 - [Hybrid identity required ports and protocols](/azure/active-directory/hybrid/reference-connect-ports)

@@ -4,7 +4,7 @@ description: The sys.dm_tran_persistent_version_store_stats dynamic management v
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: wiassaf
-ms.date: "02/27/2023"
+ms.date: "06/19/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -28,7 +28,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-curr
 
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|database_id  |  int|  The `database_id` of this row.  |
+|database_id  |  int|  The `database_id` of this row.  <br /><br />In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the values are unique within a single database or an elastic pool, but not within a logical server.|
 |pvs_filegroup_id  |  smallint |  The filegroup that hosts PVS version store. |
 |persistent_version_store_size_kb|    bigint | The PVS size in kilobytes. This value is used to determine current space used by PVS. |
 |online_index_version_store_size_kb|    bigint | The special version store size, in kilobytes, used during online index rebuild.|

@@ -20,10 +20,10 @@ helpviewer_keywords:
   - "SET ANSI_NULL_DFLT_OFF statement"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # SET ANSI_NULL_DFLT_OFF (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
   Alters the behavior of the session to override default nullability of new columns when the ANSI null default option for the database is **true**. For more information about setting the value for ANSI null default, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
@@ -32,7 +32,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Syntax
 
 ```syntaxsql
--- Syntax for SQL Server and Azure SQL Database
+-- Syntax for SQL Server and Azure SQL Database and Microsoft Fabric
   
 SET ANSI_NULL_DFLT_OFF { ON | OFF }
 ```

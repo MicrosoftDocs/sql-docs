@@ -2,10 +2,10 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 02/17/2023
+ms.date: 07/06/2023
 ms.topic: include
 ---
-| Error| Severity | Event logged | Description|
+| Error | Severity | Event logged | Description |
 | :--- | :--- | :--- | :--- |
 | 7000 | 16 | No | OPENXML document handle parameter must be of data type int. |
 | 7001 | 16 | No | OPENXML flags parameter must be of data type int. |
@@ -47,12 +47,12 @@ ms.topic: include
 | 7201 | 17 | No | Could not execute procedure on remote server '%.\*ls' because SQL Server is not configured for remote access. Ask your system administrator to reconfigure SQL Server to allow remote access. |
 | 7202 | 11 | No | Could not find server '%.\*ls' in sys.servers. Verify that the correct server name was specified. If necessary, execute the stored procedure sp_addlinkedserver to add the server to sys.servers. |
 | 7212 | 16 | No | Could not execute procedure '%.\*ls' on remote server '%.\*ls'. |
-| 7213 | 20 | Yes | The attempt by the provider to pass remote stored procedure parameters to remote server '%.\*ls'  failed. Verify that the number of parameters, the order, and the values passed are correct. |
+| 7213 | 20 | Yes | The attempt by the provider to pass remote stored procedure parameters to remote server '%.\*ls' failed. Verify that the number of parameters, the order, and the values passed are correct. |
 | 7214 | 16 | Yes | Remote procedure time out of %d seconds exceeded. Remote procedure '%.\*ls' is canceled. |
 | 7215 | 16 | No | Could not execute statement on remote server '%.\*ls'. |
 | 7221 | 16 | No | Could not relay results of procedure '%.\*ls' from remote server '%.\*ls'. |
 | 7222 | 16 | No | Only a SQL Server provider is allowed on this instance. |
-| 7223 | 10 | No | Warning: Enabling 'remote proc trans' is not supported on this instance.  Defaulting to disabled. |
+| 7223 | 10 | No | Warning: Enabling 'remote proc trans' is not supported on this instance. Defaulting to disabled. |
 | 7224 | 16 | No | Enabling 'remote proc trans' is not supported on this instance. |
 | 7301 | 16 | No | Cannot obtain the required interface ("%ls") from OLE DB provider "%ls" for linked server "%ls". |
 | 7302 | 16 | No | Cannot create an instance of OLE DB provider "%ls" for linked server "%ls". |
@@ -111,7 +111,7 @@ ms.topic: include
 | 7366 | 16 | No | Cannot obtain columns rowset from OLE DB provider "%ls" for linked server "%ls". |
 | 7367 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" supports column level collation, but failed to provide the metadata column "%ls" at run time. |
 | 7368 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" supports column level collation, but failed to provide collation data for column "%ls". |
-| 7369 | 16 | No | The OLE DB provider '%ls' for linked server '%ls' provided invalid collation.  LCID = %08x, Compflags = %08x, SortOrder = '%.\*ls'. |
+| 7369 | 16 | No | The OLE DB provider '%ls' for linked server '%ls' provided invalid collation. LCID = %08x, Compflags = %08x, SortOrder = '%.\*ls'. |
 | 7370 | 16 | No | One or more properties could not be set on the query for OLE DB provider "%ls" for linked server "%ls". %ls |
 | 7371 | 16 | No | The server option 'collation name' in linked server '%ls' for OLE DB provider '%ls' has collation id %08x which is not supported by SQL Server. |
 | 7372 | 16 | No | Cannot get properties from OLE DB provider "%ls" for linked server "%ls". |
@@ -122,7 +122,7 @@ ms.topic: include
 | 7377 | 16 | No | Cannot specify an index hint for a remote data source. |
 | 7380 | 16 | No | Table-valued parameters are not allowed in remote calls between servers. |
 | 7390 | 16 | No | The requested operation could not be performed because OLE DB provider "%ls" for linked server "%ls" does not support the required transaction interface. |
-| 7391 | 16 | No | The operation could not be performed because OLE DB provider "%ls" for linked server "%ls" was unable to begin a distributed transaction. |
+| [7391](../mssqlserver-7391-database-engine-error.md) | 16 | No | The operation could not be performed because OLE DB provider "%ls" for linked server "%ls" was unable to begin a distributed transaction. |
 | 7392 | 16 | No | Cannot start a transaction for OLE DB provider "%ls" for linked server "%ls". |
 | 7393 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" reported an error 0x%08X aborting the current transaction. |
 | 7394 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" reported an error committing the current transaction. |
@@ -155,7 +155,7 @@ ms.topic: include
 | 7426 | 10 | No | OLE DB provider "%ls" for linked server "%ls" returned "%ls" without "%ls" being supported. |
 | 7427 | 10 | No | OLE DB provider "%ls" for linked server "%ls" returned "%ls" for "%ls" during statistics gathering. |
 | 7428 | 10 | No | OLE DB provider "%ls" for linked server "%ls" supported the schema lock interface, but returned "%ls" for "%ls". |
-| 7429 | 10 | No | %hs SQL Server Remote Metadata Gather Time for Table %s.%s:%hs, CPU time = %lu ms,  elapsed time = %lu ms. |
+| 7429 | 10 | No | %hs SQL Server Remote Metadata Gather Time for Table %s.%s:%hs, CPU time = %lu ms, elapsed time = %lu ms. |
 | 7430 | 16 | No | Out-of-process use of OLE DB provider "%ls" with SQL Server is not supported. |
 | 7431 | 16 | No | Unable to delete OLE DB parameter properties. |
 | 7432 | 16 | No | Heterogeneous queries and use of OLEDB providers are not supported in fiber mode. |
@@ -304,7 +304,7 @@ ms.topic: include
 | 7802 | 16 | No | Functions that have a return type of "%.\*ls" are unsupported through SOAP invocation. |
 | 7803 | 15 | No | The clause %.\*ls can not be used in the %.\*ls statement. |
 | 7804 | 15 | No | %.\*ls and %.\*ls can not share the same value. |
-| 7805 | 16 | No | The parameter SITE can not be prefixed by a scheme such as 'http://'.  Valid values for SITE include {'\*' \| '+' \| 'site_name'}. |
+| 7805 | 16 | No | The parameter SITE can not be prefixed by a scheme such as 'http://'. Valid values for SITE include {'\*' \| '+' \| 'site_name'}. |
 | 7806 | 16 | No | The URL specified by endpoint '%.\*ls' is already registered to receive requests or is reserved for use by another service. |
 | 7807 | 16 | No | An error ('0x%x') occurred while attempting to register the endpoint '%.\*ls'. |
 | 7808 | 10 | No | The endpoint '%.\*ls' could not be unregistered. |
@@ -312,7 +312,7 @@ ms.topic: include
 | 7810 | 15 | No | The value '%d' is not within range for the '%.\*ls' parameter. |
 | 7811 | 16 | No | COMPUTE BY queries are not supported over SOAP. |
 | 7812 | 10 | Yes | The endpoint '%.\*ls' has been established in metadata, but HTTP listening has not been enabled because HTTP support did not start successfully. Verify that the operating system and the edition of SQL Server supports native HTTP access. Check the SQL Server error log for any errors that might have occurred while starting HTTP support. |
-| 7813 | 16 | No | The parameter PATH must be supplied in its canonical form.  An acceptable PATH is '%.\*ls'. |
+| 7813 | 16 | No | The parameter PATH must be supplied in its canonical form. An acceptable PATH is '%.\*ls'. |
 | 7814 | 10 | No | The specified value '%.\*ls' already exists. |
 | 7815 | 10 | No | The specified value '%.\*ls' does not exist. |
 | 7816 | 15 | No | A duplicate parameter was specified, '%.\*ls'. |
@@ -328,7 +328,7 @@ ms.topic: include
 | 7826 | 16 | No | Unexpected character data was found in the "%.\*ls" element (in the "%.\*ls" namespace) of the SOAP request. |
 | 7827 | 14 | No | The user does not have permission to reserve and unreserve HTTP namespaces. |
 | 7828 | 11 | No | The statement is not supported on this version of the operating system. Could not find Httpapi.dll in the path. |
-| 7829 | 11 | No | The statement is not supported on this version of the operating system. Could not find function entry point  '%.\*ls' in Httpapi.dll. |
+| 7829 | 11 | No | The statement is not supported on this version of the operating system. Could not find function entry point '%.\*ls' in Httpapi.dll. |
 | 7830 | 16 | No | Unable to complete the operation because of an unexpected error. |
 | 7831 | 16 | No | A reservation for this HTTP namespace (%.\*ls) already exists. |
 | 7832 | 16 | No | A reservation for this HTTP namespace (%.\*ls) does not exist. |
@@ -336,10 +336,10 @@ ms.topic: include
 | 7834 | 10 | No | The reservation for the HTTP namespace (%.\*ls) has been deleted. If there are any endpoints associated with this namespace, they will continue to receive and process requests until the server is restarted. |
 | 7835 | 16 | Yes | Endpoint '%.\*ls' has been disabled because it is insecurely configured. For a more information, attempt to start the endpoint using the ALTER ENDPOINT statement. |
 | 7836 | 20 | No | A fatal error occurred while reading the input stream from the network. The maximum number of network packets in one request was exceeded. Try using bulk insert, increasing network packet size, or reducing the size of the request. The session will be terminated. |
-| 7847 | 16 | No | XML data was found in the parameter '%.\*ls' which is not an XML parameter.  Please entitize any invalid XML character data in this parameter, or pass the parameter in typed as XSD:anyType or sqltypes:xml. |
+| 7847 | 16 | No | XML data was found in the parameter '%.\*ls' which is not an XML parameter. Please entitize any invalid XML character data in this parameter, or pass the parameter in typed as XSD:anyType or sqltypes:xml. |
 | 7848 | 15 | No | An invalid or unsupported localeId was specified for parameter "%.\*ls". |
 | 7849 | 15 | No | Invalid sqlCompareOptions were specified for parameter "%.\*ls". |
-| 7850 | 16 | No | The SQL Server Service account does not have permission to register the supplied URL on the endpoint '%.\*ls'.  Use sp_reserve_http_namespace to explicitly reserve the URL namespace before you try to register the URL again. |
+| 7850 | 16 | No | The SQL Server Service account does not have permission to register the supplied URL on the endpoint '%.\*ls'. Use sp_reserve_http_namespace to explicitly reserve the URL namespace before you try to register the URL again. |
 | 7851 | 15 | No | The %.\*ls attribute must be specified on the %.\*ls element of the parameter "%.\*ls" because it is of type %.\*ls. |
 | 7852 | 15 | No | Parameter "%.\*ls": If the %.\*ls attribute appears on a parameter value node of type "%.\*ls" (in the namespace "%.\*ls"), it must refer to a CLR type. |
 | 7853 | 16 | No | The URL specified as the path ("%.\*ls") is not in an absolute format, and must begin with "%.\*ls". |
@@ -351,19 +351,19 @@ ms.topic: include
 | 7859 | 15 | No | Parameter "%.\*ls": Parameter collation cannot be specified on the "%.\*ls" node (in the namespace "%.\*ls"). |
 | 7860 | 15 | No | An endpoint's transport or content cannot be changed through the ALTER ENDPOINT statement. Use DROP ENDPOINT and execute the CREATE ENDPOINT statement to make these changes. |
 | 7861 | 15 | No | "%.\*ls" endpoints can only be of the "FOR %.\*ls" type. |
-| 7862 | 16 | No | An endpoint of the requested type already exists.  Only one endpoint of this type is supported.  Use ALTER ENDPOINT or DROP the existing endpoint and execute the CREATE ENDPOINT statement. |
+| 7862 | 16 | No | An endpoint of the requested type already exists. Only one endpoint of this type is supported. Use ALTER ENDPOINT or DROP the existing endpoint and execute the CREATE ENDPOINT statement. |
 | 7863 | 16 | No | The endpoint was not changed. The ALTER ENDPOINT statement did not contain any values to modify or update. |
-| 7864 | 16 | No | CREATE/ALTER ENDPOINT cannot be used to update the endpoint with this information.  The Dedicated Administrator Connection endpoint is reserved and cannot be updated. |
+| 7864 | 16 | No | CREATE/ALTER ENDPOINT cannot be used to update the endpoint with this information. The Dedicated Administrator Connection endpoint is reserved and cannot be updated. |
 | 7865 | 16 | No | Web Services Description Language (WSDL) generation failed because the system was unable to query the metadata for the endpoint. |
 | 7866 | 16 | No | XML attribute and element values larger than 4000 characters are only allowed within the SOAP Body node. |
 | 7867 | 15 | No | An invalid sqlCollationVersion was specified for parameter "%.\*ls". |
 | 7868 | 15 | No | An invalid sqlSortId was specified for parameter "%.\*ls". |
-| 7869 | 16 | No | The endpoint name '%.\*ls' is reserved for used by SQL.  Endpoint names cannot begin with '%.\*ls'. |
+| 7869 | 16 | No | The endpoint name '%.\*ls' is reserved for used by SQL. Endpoint names cannot begin with '%.\*ls'. |
 | 7870 | 16 | No | The AFFINITY clause is not supported for endpoints of this type. |
 | 7871 | 16 | No | The clause "%.\*ls" is not valid for this endpoint type. |
 | 7872 | 16 | No | "%.\*ls" is not a parameter for procedure "%.\*ls", or it was supplied out of order. |
 | 7873 | 16 | No | The endpoint "%.\*ls" is a built-in endpoint and cannot be dropped. Use the protocol configuration utilities to ADD or DROP Transact-SQL endpoints. |
-| 7874 | 16 | No | An endpoint already exists with the bindings specified.  Only one endpoint supported for a specific binding.  Use ALTER ENDPOINT or DROP the existing endpoint and execute the CREATE ENDPOINT statement. |
+| 7874 | 16 | No | An endpoint already exists with the bindings specified. Only one endpoint supported for a specific binding. Use ALTER ENDPOINT or DROP the existing endpoint and execute the CREATE ENDPOINT statement. |
 | 7875 | 16 | No | An unexpected XML construct was found in the character data of the "%.\*ls" element (in the "%.\*ls" namespace) of the SOAP request. |
 | 7876 | 16 | No | The operation is not supported because current connection is made to contained availability group. Reconnect to SQL Instance and retry the operation. |
 | 7877 | 16 | No | Backup on secondary replica is not supported in the connection to contained availability group. Reconnect to SQL Instance and retry the operation. |
@@ -376,19 +376,19 @@ ms.topic: include
 | 7884 | 20 | Yes | Violation of tabular data stream (TDS) protocol. This is most often caused by a previous exception on this task. The last exception on the task was error %d, severity %d, address 0x%p. This connection will be terminated. |
 | 7885 | 20 | Yes | Network error 0x%lx occurred while sending data to the client on process ID %d batch ID %d. A common cause for this error is if the client disconnected without reading the entire response from the server. This connection will be terminated. |
 | 7886 | 20 | Yes | A read operation on a large object failed while sending data to the client. A common cause for this is if the application is running in READ UNCOMMITTED isolation level. This connection will be terminated. |
-| 7887 | 20 | Yes | The IPv6 address specified is not supported.  Only addresses that are in their numeric, canonical form are supported for listening. |
-| 7888 | 20 | Yes | The IPv6 address specified is not supported.  The server may not be configured to allow for IPv6 connectivity, or the address may not be in a recognized IPv6 format. |
-| 7889 | 16 | No | The SOAP headers on the request have exceeded the size limits established for this endpoint.  The endpoint owner may increase these limits via ALTER ENDPOINT. |
-| 7890 | 16 | No | An error occurred while attempting to register the endpoint '%.\*ls'.  One or more of the ports specified in the CREATE ENDPOINT statement may be bound to another process. Attempt the statement again with a different port or use netstat to find the application currently using the port and resolve the conflict. |
-| 7891 | 10 | No | Creation of a TSQL endpoint will result in the revocation of any 'Public' connect permissions on the '%.\*ls' endpoint.  If 'Public' access is desired on this endpoint, reapply this permission using 'GRANT CONNECT ON ENDPOINT::\[%.\*ls\] to \[public\]'. |
+| 7887 | 20 | Yes | The IPv6 address specified is not supported. Only addresses that are in their numeric, canonical form are supported for listening. |
+| 7888 | 20 | Yes | The IPv6 address specified is not supported. The server may not be configured to allow for IPv6 connectivity, or the address may not be in a recognized IPv6 format. |
+| 7889 | 16 | No | The SOAP headers on the request have exceeded the size limits established for this endpoint. The endpoint owner may increase these limits via ALTER ENDPOINT. |
+| 7890 | 16 | No | An error occurred while attempting to register the endpoint '%.\*ls'. One or more of the ports specified in the CREATE ENDPOINT statement may be bound to another process. Attempt the statement again with a different port or use netstat to find the application currently using the port and resolve the conflict. |
+| 7891 | 10 | No | Creation of a TSQL endpoint will result in the revocation of any 'Public' connect permissions on the '%.\*ls' endpoint. If 'Public' access is desired on this endpoint, reapply this permission using 'GRANT CONNECT ON ENDPOINT::\[%.\*ls\] to \[public\]'. |
 | 7892 | 16 | No | Internal subset DTDs inside SOAP requests are not allowed. |
-| 7893 | 15 | No | Parameter '%.\*ls':  Incompatible XML attributes were present.  The '%.\*ls' attribute and the '%.\*ls' attribute may not both be present on a parameter value node of type '%.\*ls' (in the namespace '%.\*ls'). |
-| 7894 | 16 | Yes | Listening has not been started on the endpoint '%.\*ls' found in metadata.  Endpoint operations are disabled on this edition of SQL Server. |
+| 7893 | 15 | No | Parameter '%.\*ls': Incompatible XML attributes were present. The '%.\*ls' attribute and the '%.\*ls' attribute may not both be present on a parameter value node of type '%.\*ls' (in the namespace '%.\*ls'). |
+| 7894 | 16 | Yes | Listening has not been started on the endpoint '%.\*ls' found in metadata. Endpoint operations are disabled on this edition of SQL Server. |
 | 7895 | 14 | No | Only a system administrator can specify a custom WSDL stored procedure on the endpoint. |
-| 7896 | 16 | No | The column or parameter '%.\*ls' uses a data type not supported by SOAP.  SOAP only supports data types supported in SQL Server 2005 or earlier. |
+| 7896 | 16 | No | The column or parameter '%.\*ls' uses a data type not supported by SOAP. SOAP only supports data types supported in SQL Server 2005 or earlier. |
 | 7897 | 10 | No | Creating and altering SOAP endpoints will be removed in a future version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it. |
 | 7898 | 10 | Yes | SQL Server native SOAP support is now deprecated and will be removed in a future version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it. |
-| 7899 | 16 | No | The return value uses a data type not supported by SOAP.  SOAP only supports data types supported in SQL Server 2005 or earlier. |
+| 7899 | 16 | No | The return value uses a data type not supported by SOAP. SOAP only supports data types supported in SQL Server 2005 or earlier. |
 | [7901](../mssqlserver-7901-database-engine-error.md) | 16 | No | The repair statement was not processed. This level of repair is not supported when the database is in emergency mode. |
 | 7902 | 16 | No | Columnstore index '%.\*ls' on table '%.\*ls' has metadata mismatch on column id %d and rowgroup id %d. If this is a nonclustered columnstore index, drop it and recreate it. Otherwise, contact CSS. |
 | [7903](../mssqlserver-7903-database-engine-error.md) | 16 | No | Table error: The orphaned file "%.\*ls" was found in the FILESTREAM directory ID %.\*ls container ID %d for object ID %d, index ID %d, partition ID %I64d, column ID %d. |
@@ -404,20 +404,20 @@ ms.topic: include
 | [7913](../mssqlserver-7913-database-engine-error.md) | 10 | No | Repair: The extent %S_PGID has been deallocated from object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls). |
 | [7914](../mssqlserver-7914-database-engine-error.md) | 10 | No | Repair: %ls page at %S_PGID has been rebuilt. |
 | [7915](../mssqlserver-7915-database-engine-error.md) | 10 | No | Repair: IAM chain for object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls), has been truncated before page %S_PGID and will be rebuilt. |
-| [7916](../mssqlserver-7916-database-engine-error.md) | 10 | No | Repair: Deleted record for object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls), on page %S_PGID,  slot %d. Indexes will be rebuilt. |
+| [7916](../mssqlserver-7916-database-engine-error.md) | 10 | No | Repair: Deleted record for object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls), on page %S_PGID, slot %d. Indexes will be rebuilt. |
 | 7917 | 10 | No | Repair: Converted forwarded record for object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls), at page %S_PGID, slot %d to a data row. |
 | 7918 | 10 | No | Repair: Page %S_PGID next and %S_PGID previous pointers have been set to match each other in object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls). |
 | 7919 | 16 | No | Repair statement not processed. Database needs to be in single user mode. |
 | [7920](../mssqlserver-7920-database-engine-error.md) | 10 | No | Processed %ld entries in system catalog for database ID %d. |
 | 7921 | 16 | No | Repair statement not processed. Database cannot be a snapshot. |
 | 7922 | 16 | No | \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\* |
-| [7923](../mssqlserver-7923-database-engine-error.md) | 10 | No | Table %.\*ls                Object ID %ld. |
+| [7923](../mssqlserver-7923-database-engine-error.md) | 10 | No | Table %.\*ls Object ID %ld. |
 | 7924 | 10 | No | Index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls). FirstIAM %S_PGID. Root %S_PGID. Dpages %I64d. |
 | 7925 | 10 | No | Index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls). %I64d pages used in %I64d dedicated extents. |
 | 7926 | 16 | No | Check statement aborted. The database could not be checked as a database snapshot could not be created and the database or table could not be locked. See Microsoft Knowledge Base article 928518 for details of when this behavior is expected and what workarounds exist. Also see previous errors for more details. |
 | 7927 | 10 | No | Total number of extents is %I64d. |
 | 7928 | 16 | No | The database snapshot for online checks could not be created. Either the reason is given in a previous error or one of the underlying volumes does not support sparse files or alternate streams. Attempting to get exclusive access to run checks offline. |
-| 7929 | 16 | No | Check statement aborted.  Database contains deferred transactions. |
+| 7929 | 16 | No | Check statement aborted. Database contains deferred transactions. |
 | 7930 | 16 | No | Mirroring must be removed from the database for this DBCC command. |
 | [7931](../mssqlserver-7931-database-engine-error.md) | 16 | No | Database error: The FILESTREAM directory ID %.\*ls for a partition was seen two times. |
 | [7932](../mssqlserver-7932-database-engine-error.md) | 16 | No | Table error: The FILESTREAM directory ID %.\*ls for object ID %d, index ID %d, partition ID %I64d is in filegroup %d, but should be in filegroup %d. |
@@ -439,7 +439,7 @@ ms.topic: include
 | 7948 | 10 | No | - Avg. Pages per Extent........................: %3.1f |
 | 7949 | 10 | No | - Scan Density \[Best Count:Actual Count\].......: %4.2f%ls \[%I64d:%I64d\] |
 | 7950 | 10 | No | - Logical Scan Fragmentation ..................: %4.2f%ls |
-| 7951 | 10 | No | Warning:  Could not complete filestream consistency checks due to an operating system error.  Any consistency errors found in the filestream subsystem will be silenced.  Please refer to other errors for more information.  This condition is likely transient; try rerunning the command. |
+| 7951 | 10 | No | Warning: Could not complete filestream consistency checks due to an operating system error. Any consistency errors found in the filestream subsystem will be silenced. Please refer to other errors for more information. This condition is likely transient; try rerunning the command. |
 | 7952 | 10 | No | - Extent Scan Fragmentation ...................: %4.2f%ls |
 | 7953 | 10 | No | - Avg. Bytes Free per Page.....................: %3.1f |
 | 7954 | 10 | No | - Avg. Page Density (full).....................: %4.2f%ls |
@@ -462,13 +462,13 @@ ms.topic: include
 | 7971 | 10 | No | SPID (server process ID): %d%s |
 | 7972 | 10 | No | UID (user ID) : %d |
 | 7973 | 16 | No | Clustered column store index '%.\*ls' on table '%.\*ls' has erroneous content in its mapping index. |
-| 7974 | 10 | No | Name          : %.\*ls |
-| 7975 | 10 | No | LSN           : (%d:%d:%d) |
+| 7974 | 10 | No | Name : %.\*ls |
+| 7975 | 10 | No | LSN : (%d:%d:%d) |
 | 7976 | 16 | No | Nonclustered columnstore index '%.\*ls' on table '%.\*ls' has a missing column segment on column id %d and rowgroup id %d. Drop and recreate the nonclustered columnstore index. |
-| 7977 | 10 | No | Start time    : %.\*ls |
-| 7978 | 10 | No | SID           : %.\*ls |
+| 7977 | 10 | No | Start time : %.\*ls |
+| 7978 | 10 | No | SID : %.\*ls |
 | 7979 | 10 | No | %hsReplicated Transaction Information: |
-| 7980 | 10 | No | Oldest distributed LSN     : (%d:%d:%d) |
+| 7980 | 10 | No | Oldest distributed LSN : (%d:%d:%d) |
 | 7981 | 16 | No | Clustered columnstore index '%.\*ls' on table '%.\*ls', column '%.\*ls' has one or more values out of range for data type '%.\*ls'. Restore the data from a backup. |
 | 7982 | 10 | No | Oldest non-distributed LSN : (%d:%d:%d) |
 | 7983 | 14 | No | User '%.\*ls' does not have permission to run DBCC %ls for database '%.\*ls'. |

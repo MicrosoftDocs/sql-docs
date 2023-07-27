@@ -23,7 +23,7 @@ SQL Server VMs deployed through marketplace images automatically follow default 
 
 To use the automated storage configuration settings, your virtual machine requires the following characteristics:
 
-* Provisioned with a [SQL Server gallery image](sql-server-on-azure-vm-iaas-what-is-overview.md#payasyougo).
+* Provisioned with a [SQL Server gallery image](sql-server-on-azure-vm-iaas-what-is-overview.md#licensing).
 * Uses the [Resource Manager deployment model](/azure/azure-resource-manager/management/deployment-models).
 * Uses [premium SSDs](/azure/virtual-machines/disks-types).
 
@@ -166,7 +166,7 @@ To change your caching policy in the Azure portal, follow these steps:
 
    ![Screenshot showing the disk caching policy configuration in the Azure portal.](./media/storage-configuration/azure-disk-config.png)
 
-1. After the change takes effect, reboot the SQL Server VM and start the SQL Server service.
+1. After the change takes effect, restart the SQL Server VM and start the SQL Server service.
 
 
 ## Enable Write Accelerator

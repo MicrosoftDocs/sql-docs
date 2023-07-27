@@ -2,8 +2,8 @@
 title: High availability
 titleSuffix: Azure SQL Managed Instance
 description: Learn about the Azure SQL Managed Instance service high availability capabilities and features.
-author: strahinjas
-ms.author: sstefanovic
+author: Stralle
+ms.author: strrodic
 ms.reviewer: mathoma, randolphwest
 ms.date: 05/01/2023
 ms.service: sql-managed-instance
@@ -74,7 +74,7 @@ As an extra benefit, the local storage availability model includes the ability t
 
 Zone-redundant configuration is currently in preview for SQL Managed Instance, and only available for the Business Critical service tier. 
 
-Zone-redundant availability is based on storing your compute node and data to [zone-redundant storage (ZRS)](/azure/storage/common/storage-redundancy#zone-redundant-storage), which copies your data across three Azure availability zones in the primary region. Each availability zone is a separate physical location with independent power, cooling, and networking. Each availability zone is a separate physical location with independent power, cooling, and networking.
+Zone-redundant availability is based on storing your compute node and data to [zone-redundant storage (ZRS)](/azure/storage/common/storage-redundancy#zone-redundant-storage), which copies your data across three Azure availability zones in the primary region. Each availability zone is a separate physical location with independent power, cooling, and networking.
 
 By default, the cluster of nodes for the local storage availability model is created in the same datacenter. With the introduction of [Azure Availability Zones](/azure/availability-zones/az-overview), SQL Managed Instance can place different replicas of a Business Critical instance in different availability zones in the same region. To eliminate a single point of failure, the control ring is also duplicated across multiple zones as three gateway rings (GW). The routing to a specific gateway ring is controlled by [Azure Traffic Manager](/azure/traffic-manager/traffic-manager-overview) (ATM). Because the zone-redundant configuration in the Business Critical service tier doesn't create additional database redundancy, you can enable it at no extra cost. By selecting a zone-redundant configuration, you can make your Business Critical instances resilient to a much larger set of failures, including catastrophic datacenter outages, without any changes to the application logic. You can also convert any existing Business Critical instances to zone-redundant configuration.
 
@@ -97,10 +97,11 @@ During preview, zone redundancy for SQL Managed Instance is available in the Bus
 |---|---|---|---|---|
 | Brazil South | North Europe | Qatar Central | South Africa North | Australia East |
 | Canada Central | Norway East | UAE North | | Central India |
-| East US | UK South | | | Japan East |
-| South Central US | West Europe | | | Korea Central |
-| West US 3 | Sweden Central | | | East Asia |
-| | Switzerland North | | | |
+| Central US | UK South | | | Japan East |
+| East US | West Europe | | | Korea Central |
+| East US 2 | Sweden Central | | | East Asia |
+| South Central US | Switzerland North | | | |
+| West US 3 | | | | |
 
 
 

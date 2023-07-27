@@ -17,10 +17,10 @@ helpviewer_keywords:
   - "bit shifting [SQL Server], left shift"
 dev_langs:
   - "TSQL"
-monikerRange: ">= sql-server-ver16 || >= sql-server-linux-ver16"
+monikerRange: ">= sql-server-ver16 || >= sql-server-linux-ver16 || = azuresqldb-mi-current ||= azuresqldb-current || =fabric"
 ---
 # LEFT_SHIFT (Transact SQL)
-[!INCLUDE [SQL Server 2022, SQL Database, SQL Managed Instance](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
+[!INCLUDE [SQL Server 2022, SQL Database, SQL Managed Instance FabricSE FabricDW](../../includes/applies-to-version/sqlserver2022-asdb-asmi-fabricse-fabricdw.md)]
 
 LEFT_SHIFT takes two parameters, and returns the first parameter bit-shifted left by the number of bits specified in the second parameter.
 
@@ -56,6 +56,8 @@ LEFT_SHIFT performs a logical shift. After bits are shifted, any vacant position
 ## Remarks
 
 In the initial implementation, Distributed Query functionality for the bit manipulation functions within linked server or ad hoc queries (OPENQUERY) won't be supported.
+
+The `<<` method for the `LEFT_SHIFT` function is not currently supported in [!INCLUDE [fabric](../../includes/fabric.md)].
 
 ## Examples
 

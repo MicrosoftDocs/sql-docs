@@ -47,7 +47,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 > [!NOTE]
-> Server name can be specified as `<Hostname>,<PortNumber>`. You may need to specify the port number for your connection when SQL Server is deployed on Linux or Windows with a custom port, and browser service is disabled. The use of custom port numbers for remote distributor applies to SQL Server 2019 only.
+> Server name can be specified as `<Hostname>,<PortNumber>`. You may need to specify the port number for your connection when SQL Server is deployed on Linux or Windows with a custom port, and browser service is disabled. The use of custom port numbers for remote distributor applies to SQL Server 2019 and later.
 
 ::: moniker-end
   
@@ -77,7 +77,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
  For Azure SQL Database, use `\\<storage_account>.file.core.windows.net\<share>`.
 
 `[ @storage_connection_string = ] 'storage_connection_string'`
- Is required for SQL Database. Use the access key from Azure Portal under storage > settings.
+ Is required for Azure SQL Database. Use the access key from Azure Portal under storage > settings.
 
  > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
 

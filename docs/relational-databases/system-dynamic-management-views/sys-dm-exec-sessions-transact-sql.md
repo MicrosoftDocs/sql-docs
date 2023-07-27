@@ -16,18 +16,18 @@ helpviewer_keywords:
   - "sys.dm_exec_sessions dynamic management view"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=azure-sqldw-latest"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=azure-sqldw-latest||=fabric"
 ---
 # sys.dm_exec_sessions (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
 Returns one row per authenticated session on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. `sys.dm_exec_sessions` is a server-scope view that shows information about all active user connections and internal tasks. This information includes client version, client program name, client login time, login user, current session setting, and more. Use `sys.dm_exec_sessions` to first view the current system load and to identify a session of interest, and then learn more information about that session by using other dynamic management views or dynamic management functions.
 
 The `sys.dm_exec_connections`, `sys.dm_exec_sessions`, and `sys.dm_exec_requests` dynamic management views map to the deprecated [sys.sysprocesses](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) system compatibility view.
 
 > [!NOTE]  
-> To call this from dedicated SQL pool in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], see [sys.dm_pdw_nodes_exec_sessions](sys-dm-pdw-exec-sessions-transact-sql.md). For serverless SQL pool use `sys.dm_exec_sessions`.
+> To call this from dedicated SQL pool in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], see [sys.dm_pdw_nodes_exec_sessions](sys-dm-pdw-exec-sessions-transact-sql.md). For serverless SQL pool or [!INCLUDE[fabric](../../includes/fabric.md)] use `sys.dm_exec_sessions`.
 
 | Column name | Data type | Description and version-specific information |
 | --- | --- | --- |
@@ -78,7 +78,7 @@ The `sys.dm_exec_connections`, `sys.dm_exec_sessions`, and `sys.dm_exec_requests
 | last_unsuccessful_logon | **datetime** | **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions<br /><br />Time of the last unsuccessful logon attempt for the original_login_name before the current session started. |
 | unsuccessful_logons | **bigint** | **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions<br /><br />Number of unsuccessful logon attempts for the original_login_name between the last_successful_logon and login_time. |
 | group_id | **int** | ID of the workload group to which this session belongs. Not nullable. |
-| database_id | **smallint** | **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later versions<br /><br />ID of the current database for each session. |
+| database_id | **smallint** | **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later versions<br /><br />ID of the current database for each session. <br /><br />In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the values are unique within a single database or an elastic pool, but not within a logical server.|
 | authenticating_database_id | **int** | **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later versions<br /><br />ID of the database authenticating the principal. For Logins, the value will be 0. For contained database users, the value will be the database ID of the contained database. |
 | open_transaction_count | **int** | **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later versions<br /><br />Number of open transactions per session. |
 | pdw_node_id | **int** | **Applies to**: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br />The identifier for the node that this distribution is on. |

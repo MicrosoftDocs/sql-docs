@@ -96,12 +96,14 @@ landingContent:
     linkLists:
     - linkListType: overview
       links:
-      - text: Overview
+      - text: End of support options
         url: ../end-of-support/sql-server-end-of-support-overview.md
-      - text: SQL Server 2008 & R2
+      - text: SQL Server 2012
         url: /azure/azure-sql/virtual-machines/windows/sql-server-extend-end-of-support
       - text: Extended Support Updates (ESUs) 
         url: ../end-of-support/sql-server-extended-security-updates.md
+      - text: ESU frequently asked questions
+        url: ../end-of-support/extended-security-updates-frequently-asked-questions.md
       - text: Free ESUs with Azure VM
         url: /azure/azure-sql/virtual-machines/windows/sql-server-extend-end-of-support
     - linkListType: download

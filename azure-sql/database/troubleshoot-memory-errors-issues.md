@@ -149,7 +149,7 @@ In addition to the previous information, it may be helpful to capture a trace of
 
 There are two ways to capture traces in SQL Server; Extended Events (XEvents) and Profiler Traces. However, [SQL Server Profiler](/sql/tools/sql-server-profiler/sql-server-profiler) is deprecated trace technology not supported for Azure SQL Database. [Extended Events](/sql/relational-databases/extended-events/extended-events) is the newer tracing technology that allows more versatility and less impact to the observed system, and its interface is integrated into SQL Server Management Studio (SSMS). For more information on querying extended events in Azure SQL Database, see [Extended events in Azure SQL Database](./xevent-db-diff-from-svr.md).
 
-Refer to the document that explains how to use the [Extended Events New Session Wizard](/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server) in SSMS. For Azure SQL databases however, SSMS provides an Extended Events subfolder under each database in Object Explorer. Use an Extended Events session to capture these useful events, and identify the queries generating them: 
+Refer to the document that explains how to use the [Extended Events New Session Wizard](/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server) in SSMS. For Azure SQL databases however, SSMS provides an Extended Events subfolder under each database in **Object Explorer**. Use an Extended Events session to capture these useful events, and identify the queries generating them: 
 
 -   Category Errors:
     - error_reported
@@ -162,6 +162,8 @@ Refer to the document that explains how to use the [Extended Events New Session 
 -   Category Memory:
     - query_memory_grant_blocking
     - query_memory_grant_usage
+
+- summarized_oom_snapshot
 
 The capture of memory grant blocks, memory grant spills, or excessive memory grants could be potential clue to a query suddenly taking on more memory than it had in the past, and a potential explanation for an emergent out of memory error in an existing workload.
 

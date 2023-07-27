@@ -4,7 +4,7 @@ description: "Verifies the database ledger and the table ledgers."
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 05/03/2023
+ms.date: 06/13/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -14,7 +14,7 @@ monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ve
 ---
 # sys.sp_verify_database_ledger (Transact-SQL)
 
-[!INCLUDE [SQL Server 2022 Azure SQL Database](../../includes/applies-to-version/sqlserver2022-asdb.md)]
+[!INCLUDE [SQL Server 2022 Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
 Verifies the database ledger and the table ledgers. For each row in the `sys.database_ledger` view, the stored procedure:
 
@@ -51,7 +51,7 @@ The name of the table that you want to verify.
 
 ## Return code values
 
-0 (success) or 1 (failure).
+`0` (success) or `1` (failure).
 
 ## Result sets
 

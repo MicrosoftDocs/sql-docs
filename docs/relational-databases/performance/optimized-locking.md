@@ -39,7 +39,7 @@ This article covers these two core concepts of optimized locking in detail.
 
 ### Availability
 
-Currently, optimized locking is available in [!INCLUDE[Azure SQL Database](../../includes/ssazure_md.md)] only. For more information, see [Where is optimized locking currently available?](#where-is-optimized-locking-currently-available)
+Currently, optimized locking is available in [!INCLUDE[Azure SQL Database](../../includes/ssazure-sqldb.md)] only. For more information, see [Where is optimized locking currently available?](#where-is-optimized-locking-currently-available)
 
 #### Is optimized locking enabled?
 
@@ -56,7 +56,7 @@ Optimized locking builds on other database features:
 - Optimized locking requires [accelerated database recovery (ADR)](/azure/azure-sql/accelerated-database-recovery) to be enabled on the database.
 - For the most benefit from optimized locking, [read committed snapshot isolation (RCSI)](../../t-sql/statements/alter-database-transact-sql-set-options.md?view=azuresqldb-current&preserve-view=true#read_committed_snapshot--on--off--1) should be enabled for the database.
 
-Both ADR and RCSI are enabled by default in [!INCLUDE[asdb](../../includes/ssazure_md.md)]. To verify that these options are enabled for your current database, use the following T-SQL query:
+Both ADR and RCSI are enabled by default in [!INCLUDE[asdb](../../includes/ssazure-sqldb.md)]. To verify that these options are enabled for your current database, use the following T-SQL query:
 
 ```sql
 SELECT name
@@ -223,7 +223,7 @@ To maximize the benefits of optimized locking, it is recommended to enable [read
 ALTER DATABASE databasename SET READ_COMMITTED_SNAPSHOT ON;
 ```
 
-In [!INCLUDE[asdb](../../includes/ssazure_md.md)], RCSI is enabled by default and read committed is the default isolation level. With RCSI enabled and when using read committed isolation level, readers don't block writers and writers don't block readers. Readers read a version of the row from the snapshot taken at the start of the query. With LAQ, writers will qualify rows per the predicate based on the latest committed version of the row without acquiring U locks. With LAQ, a query will wait only if the row qualifies and there is an active write transaction on that row. Qualifying based on the latest committed version and locking only the qualified rows reduces blocking and increases concurrency.
+In [!INCLUDE[asdb](../../includes/ssazure-sqldb.md)], RCSI is enabled by default and read committed is the default isolation level. With RCSI enabled and when using read committed isolation level, readers don't block writers and writers don't block readers. Readers read a version of the row from the snapshot taken at the start of the query. With LAQ, writers will qualify rows per the predicate based on the latest committed version of the row without acquiring U locks. With LAQ, a query will wait only if the row qualifies and there is an active write transaction on that row. Qualifying based on the latest committed version and locking only the qualified rows reduces blocking and increases concurrency.
 
 In addition to reduced blocking, the lock memory required will be reduced. This is because readers don't take any locks, and writers take only short duration locks, instead of locks that expire at the end of the transaction. When using stricter isolation levels like repeatable read or serializable, the Database Engine is forced to hold row and page locks until the end of the transaction, for both readers and writers, resulting in increased blocking and lock memory.
 
@@ -267,19 +267,21 @@ In the previous query example, only table `t3` will use the repeatable read isol
 
 ### Where is optimized locking currently available?
 
-Currently, optimized locking is available in [!INCLUDE[Azure SQL Database](../../includes/ssazure_md.md)].
+Currently, optimized locking is available in [!INCLUDE[Azure SQL Database](../../includes/ssazure-sqldb.md)].
 
 Optimized locking is available in the following service tiers:
+
 - all DTU service tiers
 - all vCore service tiers, including provisioned and serverless
 
 Optimized locking is not currently available in:
+
 - [!INCLUDE [Azure SQL Managed Instance](../../includes/ssazuremi_md.md)]
 - [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]
 
 ### Is optimized locking on by default in both new and existing databases?
 
-Where currently supported, yes.
+In [!INCLUDE[Azure SQL Database](../../includes/ssazure-sqldb.md)], yes.
 
 ### How can I detect if optimized locking is enabled?
 

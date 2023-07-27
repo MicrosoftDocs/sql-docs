@@ -3,8 +3,8 @@ title: Copy a database
 description: Create a transactionally consistent copy of an existing database in Azure SQL Database on either the same server or a different server.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma
-ms.date: 12/19/2022
+ms.reviewer: mathoma, jeschult
+ms.date: 7/12/2023
 ms.service: sql-database
 ms.subservice: data-movement
 ms.topic: how-to
@@ -89,8 +89,6 @@ Start copying the source database with the [CREATE DATABASE ... AS COPY OF](/sql
 >  
 > Database copy using T-SQL is not supported when connecting to the destination server over a [private endpoint](private-endpoint-overview.md). If a private endpoint is configured but public network access is allowed, database copy is supported when connected to the destination server from a public IP address. Once the copy operation completes, public access can be [denied](connectivity-settings.md#deny-public-network-access).
 
-> [!IMPORTANT]  
-> Selecting backup storage redundancy when using T-SQL CREATE DATABASE ... AS COPY OF command is not supported yet.
 
 ### Copy to the same server
 
@@ -214,7 +212,11 @@ To create a database copy, you will need to be in the following roles
 
 - Subscription Owner or
 - SQL Server Contributor role or
-- Custom role on the source and target databases with following permission:
+- Custom role on the source server with following permissions:
+  - Microsoft.Sql/servers/databases/read
+  - Microsoft.Sql/servers/databases/write and
+- Custom role on the target server with following permissions:
+  - Microsoft.Sql/servers/read
   - Microsoft.Sql/servers/databases/read
   - Microsoft.Sql/servers/databases/write
 
@@ -222,9 +224,8 @@ To cancel a database copy, you will need to be in the following roles
 
 - Subscription Owner or
 - SQL Server Contributor role or
-- Custom role on the source and target databases with following permission:
-  - Microsoft.Sql/servers/databases/read
-  - Microsoft.Sql/servers/databases/write
+- Custom role on the target database with following permission:
+  - Microsoft.Sql/servers/databases/delete
 
 To manage database copy using the Azure portal, you will also need the following permissions:
 

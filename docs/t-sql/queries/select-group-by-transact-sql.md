@@ -28,12 +28,12 @@ helpviewer_keywords:
   - "summary values [SQL Server]"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 
 # SELECT - GROUP BY- Transact-SQL
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
 A SELECT statement clause that divides the query result into groups of rows, usually by performing one or more aggregations on each group. The SELECT statement returns one row per group.
   
@@ -340,7 +340,7 @@ For a GROUP BY clause that uses ROLLUP, CUBE, or GROUPING SETS, the maximum numb
     GROUP BY CUBE (a1, ..., a13)   
     GROUP BY a1, ..., a13 WITH CUBE   
     ```    
-	For backwards compatible GROUP BY clauses that don't contain CUBE or ROLLUP, the number of group by items is limited by the GROUP BY column sizes, the aggregated columns, and the aggregate values involved in the query. This limit originates from the limit of 8,060 bytes on the intermediate worktable that is needed to hold intermediate query results. A maximum of 12 grouping expressions is permitted when CUBE or ROLLUP is specified.
+    For backwards compatible GROUP BY clauses that don't contain CUBE or ROLLUP, the number of group by items is limited by the GROUP BY column sizes, the aggregated columns, and the aggregate values involved in the query. This limit originates from the limit of 8,060 bytes on the intermediate worktable that is needed to hold intermediate query results. A maximum of 12 grouping expressions is permitted when CUBE or ROLLUP is specified.
 
 ### Support for ISO and ANSI SQL-2006 GROUP BY Features
 

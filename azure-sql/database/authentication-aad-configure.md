@@ -2,8 +2,8 @@
 title: Configure Azure Active Directory authentication
 titleSuffix: Azure SQL Database & SQL Managed Instance & Azure Synapse Analytics
 description: Learn how to connect to SQL Database, SQL Managed Instance, and Azure Synapse Analytics by using Azure Active Directory authentication, after you configure Azure AD.
-author: GithubMirek
-ms.author: mireks
+author: nofield
+ms.author: nofield
 ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 04/09/2022
 ms.service: sql-db-mi
@@ -44,13 +44,14 @@ For more information on Azure AD hybrid identities, setup, and synchronization, 
 
 ## Create and populate an Azure AD instance
 
-Create an Azure AD instance and populate it with users and groups. Azure AD can be the initial Azure AD managed domain. Azure AD can also be an on-premises Active Directory Domain Services that is federated with the Azure AD.
+Create an Azure AD instance and populate it with users and groups. Azure AD can be the initial Azure AD managed domain. Azure AD can also be an on-premises Active Directory Domain Service that is federated with Azure AD.
 
 For more information, see:
+- [What is Azure Active Directory?](/azure/active-directory/fundamentals/active-directory-whatis)
 - [Integrating your on-premises identities with Azure Active Directory](/azure/active-directory/hybrid/whatis-hybrid-identity)
 - [Add your own domain name to Azure AD](/azure/active-directory/fundamentals/add-custom-domain)
-- [Microsoft Azure now supports federation with Windows Server Active Directory](https://azure.microsoft.com/blog/windows-azure-now-supports-federation-with-windows-server-active-directory/)
-- [What is Azure Active Directory?](/azure/active-directory/fundamentals/active-directory-whatis)
+- [What is Federation with Azure AD?](/azure/active-directory/hybrid/connect/whatis-fed)
+- [Directory synchronization with Azure Active Directory](/azure/active-directory/fundamentals/sync-directory)
 - [Manage Azure AD using Windows PowerShell](/powershell/module/azuread)
 - [Hybrid Identity Required Ports and Protocols](/azure/active-directory/hybrid/reference-connect-ports).
 
@@ -111,7 +112,7 @@ To grant your SQL Managed Instance Azure AD read permission using the Azure port
 
 7. On the Azure AD admin page, search for a user, select the user or group to be an administrator, and then select **Select**.
 
-   The Active Directory admin page shows all members and groups of your Active Directory. Users or groups that are grayed out can't be selected because they aren't supported as Azure AD administrators. See the list of supported admins in [Azure AD Features and Limitations](authentication-aad-overview.md#azure-ad-features-and-limitations). Azure role-based access control (Azure RBAC) applies only to the Azure portal and isn't propagated to SQL Database, SQL Managed Instance, or Azure Synapse.
+   The Active Directory admin page shows all members and groups of your Active Directory. Users or groups that are grayed out can't be selected because they aren't supported as Azure AD administrators. See the list of supported admins in [Azure AD Features and Limitations](./authentication-aad-overview.md#azure-ad-features-and-limitations). Azure role-based access control (Azure RBAC) applies only to the Azure portal and isn't propagated to SQL Database, SQL Managed Instance, or Azure Synapse.
 
     :::image type="content" source="./media/authentication-aad-configure/add-azure-active-directory-admin.png" alt-text="Add Azure Active Directory admin":::
 
@@ -455,7 +456,7 @@ Use this method if you are logged into Windows using your Azure Active Directory
 
    ![Select AD Integrated Authentication][11]
 
-2. Select the **Options** button, and on the **Connection Properties** page, in the **Connect to database** box, type the name of the user database you want to connect to. For more information, see the article [Multi-factor Azure AD auth](authentication-mfa-ssms-overview.md#azure-ad-domain-name-or-tenant-id-parameter) on the differences between the Connection Properties for SSMS 17.x and 18.x.
+2. Select the **Options** button, and on the **Connection Properties** page, in the **Connect to database** box, type the name of the user database you want to connect to.
 
    ![Select the database name][13]
 
@@ -477,7 +478,7 @@ Use this method to authenticate to the database in SQL Database or the SQL Manag
 
 ### Active Directory interactive authentication
 
-Use this method for interactive authentication with or without Multi-Factor Authentication (MFA), with password being requested interactively. This method can be used to authenticate to the database in SQL Database, the SQL Managed Instance, and Azure Synapse for Azure AD cloud-only identity users, or those who use Azure AD hybrid identities.
+Use this method for interactive authentication with or without Multi-Factor Authentication (MFA), with the password being requested interactively. This method can be used to authenticate to databases in SQL Database, SQL Managed Instance, and Azure Synapse for Azure AD cloud-only identity users, or those who use Azure AD hybrid identities.
 
 For more information, see [Using multi-factor Azure AD authentication with SQL Database and Azure Synapse (SSMS support for MFA)](authentication-mfa-ssms-overview.md).
 

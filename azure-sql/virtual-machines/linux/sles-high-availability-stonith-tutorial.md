@@ -7,6 +7,7 @@ ms.reviewer: amitkh
 ms.date: 03/08/2023
 ms.service: virtual-machines-sql
 ms.subservice: hadr
+ms.custom: devx-track-azurecli
 ms.topic: tutorial
 ---
 # Tutorial: Configure availability groups for SQL Server on SLES virtual machines in Azure

@@ -4,7 +4,7 @@ description: sys.dm_exec_requests (Transact-SQL)
 author: akatesmith
 ms.author: katsmith
 ms.reviewer: mikeray, randolphwest
-ms.date: 03/28/2023
+ms.date: 07/12/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -17,16 +17,16 @@ helpviewer_keywords:
   - "sys.dm_exec_requests dynamic management view"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest||=fabric"
 ---
 # sys.dm_exec_requests (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
 Returns information about each request that is executing in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information about requests, see the [Thread and Task Architecture Guide](../thread-and-task-architecture-guide.md).
 
-> [!NOTE]  
-> To call this from dedicated SQL pool in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], see [sys.dm_pdw_exec_requests  (Transact-SQL)](sys-dm-pdw-exec-requests-transact-sql.md). For serverless SQL pool use `sys.dm_exec_requests`.
+> [!NOTE]
+> To call this from dedicated SQL pool in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], see [sys.dm_pdw_exec_requests (Transact-SQL)](sys-dm-pdw-exec-requests-transact-sql.md). For serverless SQL pool or [!INCLUDE[fabric](../../includes/fabric.md)] use `sys.dm_exec_requests`.
 
 | Column name | Data type | Description |
 | --- | --- | --- |
@@ -39,7 +39,7 @@ Returns information about each request that is executing in [!INCLUDE[ssNoVersio
 | statement_start_offset | **int** | Indicates, in bytes, beginning with 0, the starting position of the currently executing statement for the currently executing batch or persisted object. Can be used together with the `sql_handle`, the `statement_end_offset`, and the `sys.dm_exec_sql_text` dynamic management function to retrieve the currently executing statement for the request. Nullable. |
 | statement_end_offset | **int** | Indicates, in bytes, starting with 0, the ending position of the currently executing statement for the currently executing batch or persisted object. Can be used together with the `sql_handle`, the `statement_start_offset`, and the `sys.dm_exec_sql_text` dynamic management function to retrieve the currently executing statement for the request. Nullable. |
 | plan_handle | **varbinary(64)** | Is a token that uniquely identifies a query execution plan for a batch that is currently executing. Nullable. |
-| database_id | **smallint** | ID of the database the request is executing against. Not nullable. |
+| database_id | **smallint** | ID of the database the request is executing against. Not nullable. <br /><br />In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the values are unique within a single database or an elastic pool, but not within a logical server.|
 | user_id | **int** | ID of the user who submitted the request. Not nullable. |
 | connection_id | **uniqueidentifier** | ID of the connection on which the request arrived. Nullable. |
 | blocking_session_id | **smallint** | ID of the session that is blocking the request. If this column is NULL or equal to 0, the request isn't blocked, or the session information of the blocking session isn't available (or can't be identified). For more information, see [Understand and resolve SQL Server blocking problems](/troubleshoot/sql/performance/understand-resolve-blocking).<br /><br />-2 = The blocking resource is owned by an orphaned distributed transaction.<br /><br />-3 = The blocking resource is owned by a deferred recovery transaction.<br /><br />-4 = Session ID of the blocking latch owner couldn't be determined at this time because of internal latch state transitions.<br /><br />-5 = Session ID of the blocking latch owner couldn't be determined because it isn't tracked for this latch type (for example, for an SH latch).<br /><br />By itself, blocking_session_id -5 doesn't indicate a performance problem. -5 is an indication that the session is waiting on an asynchronous action to complete. Before -5 was introduced, the same session would have shown blocking_session_id 0, even though it was still in a wait state.<br /><br />Depending on workload, observing -5 as blocking_session_id may be a common occurrence. |
@@ -91,7 +91,7 @@ Returns information about each request that is executing in [!INCLUDE[ssNoVersio
 | is_resumable | **bit** | **Applies to**: [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] and later.<br /><br />Indicates whether the request is a resumable index operation. |
 | page_resource | **binary(8)** | **Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]<br /><br />An 8-byte hexadecimal representation of the page resource if the `wait_resource` column contains a page. For more information, see [sys.fn_PageResCracker](../system-functions/sys-fn-pagerescracker-transact-sql.md). |
 | page_server_reads | **bigint** | **Applies to**: Azure SQL Database Hyperscale<br /><br />Number of page server reads performed by this request. Not nullable. |
-
+| dist_statement_id | **uniqueidentifier** | **Applies to**: SQL Server 2022 and later versions, Azure SQL Database, Azure SQL Managed Instance, Azure Synapse Analytics (serverless pools only), and Microsoft Fabric<br /><br /> Unique ID for the statement for the request submitted. Not nullable. |
 ## Remarks
 
 To execute code that is outside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (for example, extended stored procedures and distributed queries), a thread has to execute outside the control of the non-preemptive scheduler. To do this, a worker switches to preemptive mode. Time values returned by this dynamic management view don't include time spent in preemptive mode.

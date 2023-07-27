@@ -3,7 +3,7 @@ title: "Monitor digest uploads"
 description: This article provides information on monitoring the digest uploads for ledger.
 author: VanMSFT
 ms.author: vanto
-ms.date: 07/25/2022
+ms.date: 05/23/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual
@@ -13,7 +13,7 @@ monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ve
 
 # Monitor digest uploads
 
-[!INCLUDE [SQL Server 2022 Azure SQL Database](../../../includes/applies-to-version/sqlserver2022-asdb.md)]
+[!INCLUDE [SQL Server 2022 Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
 ::: zone pivot="as1-azure-sql-database"
 
@@ -29,6 +29,12 @@ You can monitor failed and successful ledger digest uploads with [Extended Event
 
 ::: zone-end
 
+::: zone pivot="as1-azure-sql-managed-instance"
+
+You can monitor failed and successful ledger digest uploads with [Extended Events](../../extended-events/extended-events.md) in Azure SQL Managed Instance. Select the events *ledger_digest_upload_failed* and *ledger_digest_upload_success* in the Extended Event session.
+
+::: zone-end
+
 ## Digest upload alerts recommendation
 
 ::: zone pivot="as1-azure-sql-database"
@@ -40,6 +46,13 @@ We recommend you configure alerts on failed ledger digest uploads if you want to
 ::: zone pivot="as1-sql-server"
 
 We recommend you configure an alert on event number *37417 - Uploading ledger digest failed*. The alert can be configured using [SQL Agent Alert](../../../ssms/agent/create-an-alert-using-an-error-number.md) or your favorite third-party monitoring tool.
+
+::: zone-end
+
+::: zone pivot="as1-azure-sql-managed-instance"
+
+> [!NOTE]
+> Ledger in Azure SQL Managed Instance is currently in public preview and does not support digest upload alerts.
 
 ::: zone-end
 

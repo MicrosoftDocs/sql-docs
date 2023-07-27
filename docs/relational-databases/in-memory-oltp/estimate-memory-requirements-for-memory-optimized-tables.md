@@ -166,7 +166,7 @@ The number of extra rows can be estimated by computing the peak number of row up
   
 That value is then multiplied by the row size to get the number of bytes you need for row versioning.  
   
-`rowVersions = durationOfLongestTransctoinInSeconds * peakNumberOfRowUpdatesOrDeletesPerSecond`  
+`rowVersions = durationOfLongestTransactionInSeconds * peakNumberOfRowUpdatesOrDeletesPerSecond`  
   
 Memory needs for stale rows is then estimated by multiplying the number of stale rows by the size of a memory-optimized table row (See [Memory for the table](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_MemoryForTable) above).  
   

@@ -175,7 +175,7 @@ Description: Database {database_name} on Server {server_name} has lost access to
   
 **Azure SQL Managed Instance**
 
-EventName: MakeManagedDatabaseInaccessible
+EventName: MakeManagedDbInaccessible
 
 Status: Started 
 
@@ -194,7 +194,7 @@ Description: Database is inaccessible and requires user to resolve Azure key vau
 
 **Azure SQL Managed Instance**
   
-EventName: MakeManagedDatabaseInaccessible 
+EventName: MakeManagedDbInaccessible 
 
 Status: Succeeded 
 

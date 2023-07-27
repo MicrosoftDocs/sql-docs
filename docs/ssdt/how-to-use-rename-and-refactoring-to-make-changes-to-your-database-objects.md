@@ -1,9 +1,9 @@
 ---
 title: Rename and Refactoring to Make Changes to your Database Objects
 description: Learn about the Rename and Refactor menus in the Transact-SQL Editor. See how to rename types, switch object schemas, expand wildcards, and fully qualify names.
-author: markingmyname
-ms.author: maghan
-ms.date: 02/09/2017
+author: subhojit-msft
+ms.author: subasak
+ms.date: 05/07/2023
 ms.service: sql
 ms.subservice: ssdt
 ms.topic: conceptual
@@ -45,6 +45,9 @@ The Refactor contextual menu in the Transact\-SQL Editor allows you to rename or
 10. Expand **Tables**, and notice that the **Products** table has been renamed.  
   
 11. Right-click **Product** and select **View Data**. Notice that existing data is kept intact regardless of the rename operation.  
+
+> [!WARNING]  
+> If a refactor log is deleted, the complete history of the refactoring will be deleted. When the project is published to a database where prior refactor operations haven't been applied, any refactor operations completed before the refactor file was deleted, will be published as drop and create operations. As a result, data loss may occur.
   
 ### To expand wildcards  
   

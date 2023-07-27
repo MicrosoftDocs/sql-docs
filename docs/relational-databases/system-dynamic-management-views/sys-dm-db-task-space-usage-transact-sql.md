@@ -35,7 +35,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**session_id**|**smallint**|Session ID.|  
 |**request_id**|**int**|Request ID within the session.<br /><br /> A request is also called a batch and may contain one or more queries. A session may have multiple requests active at the same time. Each query in the request may start multiple threads (tasks), if a parallel execution plan is used.|  
 |**exec_context_id**|**int**|Execution context ID of the task. For more information, see [sys.dm_os_tasks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md).|  
-|**database_id**|**smallint**|Database ID.|  
+|**database_id**|**smallint**|Database ID. <br /><br />In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the values are unique within a single database or an elastic pool, but not within a logical server.|  
 |**user_objects_alloc_page_count**|**bigint**|Number of pages reserved or allocated for user objects by this task.|  
 |**user_objects_dealloc_page_count**|**bigint**|Number of pages deallocated and no longer reserved for user objects by this task.|  
 |**internal_objects_alloc_page_count**|**bigint**|Number of pages reserved or allocated for internal objects by this task.|  

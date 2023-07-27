@@ -44,6 +44,10 @@ apt-get install php8.1 php8.1-dev php8.1-xml -y --allow-unauthenticated
 
 Install the ODBC driver for Ubuntu by following the instructions on the [Install the Microsoft ODBC driver for SQL Server (Linux)](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md). Make sure to also install the `unixodbc-dev` package. It's used by the `pecl` command to install the PHP drivers.
 
+```bash
+sudo apt-get install unixodbc-dev
+```
+
 ### Step 3. Install the PHP drivers for Microsoft SQL Server (Ubuntu)
 
 ```bash

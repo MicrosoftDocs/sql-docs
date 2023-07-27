@@ -3,7 +3,7 @@ title: Start, stop, pause, resume, and restart SQL Server services
 description: Find out how to start, stop, pause, resume, or restart various SQL Server services. See how to use Transact-SQL, PowerShell, and other tools for these actions.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 02/21/2023
+ms.date: 05/23/2023
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
@@ -38,7 +38,6 @@ helpviewer_keywords:
   - "administering SQL Server, starting and stopping services"
   - "Management Studio [SQL Server], starting or stopping services"
 ---
-
 # Start, stop, pause, resume, and restart SQL Server services
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sql-windows-only.md)]
@@ -57,7 +56,7 @@ The [!INCLUDE[ssDE](../../includes/ssde-md.md)] service can be the default insta
 
 ### SQL Server Agent service
 
-The SQL Server Agent service executes scheduled administrative tasks, which are called jobs and alerts. For more information, see [SQL Server Agent](../../ssms/agent/sql-server-agent.md). SQL Server Agent isn't available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-2019.md).
+The SQL Server Agent service executes scheduled administrative tasks, which are called jobs and alerts. For more information, see [SQL Server Agent](../../ssms/agent/sql-server-agent.md). SQL Server Agent isn't available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).
 
 ### SQL Server Browser service
 
@@ -84,13 +83,13 @@ The SQL Server Browser service listens for incoming requests for [!INCLUDE[ssNoV
 
 By default, only members of the local administrator group can start, stop, pause, resume, or restart a service. To grant non-administrators the ability to manage services, see [How to grant users rights to manage services in Windows Server 2003](https://support.microsoft.com/kb/325349). (The process is similar on other versions of Windows Server.)
 
-Stopping the [!INCLUDE[ssDE](../../includes/ssde-md.md)] by using the Transact-SQL **SHUTDOWN** command requires membership in the **sysadmin** or **serveradmin** fixed server roles, and isn't transferable.
+Stopping the [!INCLUDE[ssDE](../../includes/ssde-md.md)] by using the Transact-SQL `SHUTDOWN` command requires membership in the **sysadmin** or **serveradmin** fixed server roles, and isn't transferable.
 
 ## SQL Server Configuration Manager
 
 ### Start SQL Server Configuration Manager
 
-On the **Start** menu, select **All Programs > Microsoft SQL Server > Configuration Tools > SQL Server Configuration Manager**.
+From the **Start** menu, select **All Programs > Microsoft SQL Server > Configuration Tools > SQL Server Configuration Manager**.
 
 The SQL Server Configuration Manager is a snap-in for the Microsoft Management Console program, and it may not appear as an application in some versions of Windows. For more information, see [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
 
@@ -181,7 +180,7 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services can be st
 
 ### <a id="dbStartup"></a> Start the Database Engine with startup options
 
-- Add startup options to the end of the **net start "SQL Server (MSSQLSERVER)"** statement, separated by a space. When started using **net start**, startup options use a slash (/) instead of a hyphen (-).
+- Add startup options to the end of the `net start "SQL Server (MSSQLSERVER)"` statement, separated by a space. When started using `net start`, startup options use a slash (/) instead of a hyphen (-).
 
   ```cmd
   net start "SQL Server (MSSQLSERVER)" /f /m
@@ -224,7 +223,7 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services can be st
   net start SQLAgent$instancename
   ```
 
- For information about how to run SQL Server Agent in verbose mode for troubleshooting, see [sqlagent90 Application](../../tools/sqlagent90-application.md).
+For information about how to run SQL Server Agent in verbose mode for troubleshooting, see [sqlagent90 Application](../../tools/sqlagent90-application.md).
 
 ### <a id="Browser"></a> Start the SQL Server Browser
 
@@ -244,100 +243,94 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services can be st
 
 To pause or stop services, modify the commands in the following ways.
 
-- To pause a service, replace **net start** with **net pause**.
+- To pause a service, replace `net start` with `net pause`.
 
-- To stop a service, replace **net start** with **net stop**.
+- To stop a service, replace `net start` with `net stop`.
 
 ## <a id="TsqlProcedure"></a> Transact-SQL
 
-The [!INCLUDE[ssDE](../../includes/ssde-md.md)] can be stopped by using the **SHUTDOWN** statement.
+The [!INCLUDE[ssDE](../../includes/ssde-md.md)] can be stopped by using the `SHUTDOWN` statement.
 
 ### Stop the Database Engine using Transact-SQL
 
 - To wait for currently running Transact-SQL statements and stored procedures to finish, and then stop the [!INCLUDE[ssDE](../../includes/ssde-md.md)], execute the following statement.
 
-    ```sql
-    SHUTDOWN;
-    ```
+  ```sql
+  SHUTDOWN;
+  ```
 
 - To stop the [!INCLUDE[ssDE](../../includes/ssde-md.md)] immediately, execute the following statement.
 
-    ```sql
-    SHUTDOWN WITH NOWAIT;
-    ```
+  ```sql
+  SHUTDOWN WITH NOWAIT;
+  ```
 
-For more information about the **SHUTDOWN** statement, see [SHUTDOWN (Transact-SQL)](../../t-sql/language-elements/shutdown-transact-sql.md).
+For more information about the `SHUTDOWN` statement, see [SHUTDOWN (Transact-SQL)](../../t-sql/language-elements/shutdown-transact-sql.md).
 
 ## <a id="PowerShellProcedure"></a> PowerShell
 
 ### Start and stop Database Engine services
 
-1. In a Command Prompt window, start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell by executing the following command.
-
-    ```cmd
-    sqlps
-    ```
-
 1. At a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell command prompt, by executing the following command. Replace `computername` with the name of your computer.
 
-    ```powershell
-    # Get a reference to the ManagedComputer class.
-    CD SQLSERVER:\SQL\computername
-    $Wmi = (get-item .).ManagedComputer
-    ```
+   ```powershell
+   # Get a reference to the ManagedComputer class.
+   CD SQLSERVER:\SQL\computername
+   $Wmi = (get-item .).ManagedComputer
+   ```
 
 1. Identify the service that you want to stop or start. Pick one of the following lines. Replace `instancename` with the name of the named instance.
 
-    - To get a reference to the default instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].
+   - To get a reference to the default instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].
 
-        ```powershell
-        $DfltInstance = $Wmi.Services['MSSQLSERVER']
-        ```
+     ```powershell
+     $DfltInstance = $Wmi.Services['MSSQLSERVER']
+     ```
 
-    - To get a reference to a named instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].
+   - To get a reference to a named instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].
 
-        ```powershell
-        $DfltInstance = $Wmi.Services['MSSQL$instancename']
-        ```
+     ```powershell
+     $DfltInstance = $Wmi.Services['MSSQL$instancename']
+      ```
 
-    - To get a reference to the SQL Server Agent service on the default instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].
+   - To get a reference to the SQL Server Agent service on the default instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].
 
-        ```powershell
-        $DfltInstance = $Wmi.Services['SQLSERVERAGENT']
-        ```
+     ```powershell
+     $DfltInstance = $Wmi.Services['SQLSERVERAGENT']
+     ```
 
-    - To get a reference to the SQL Server Agent service on a named instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].
+   - To get a reference to the SQL Server Agent service on a named instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].
 
-        ```powershell
-        $DfltInstance = $Wmi.Services['SQLAGENT$instancename']
-        ```
+     ```powershell
+     $DfltInstance = $Wmi.Services['SQLAGENT$instancename']
+     ```
 
-    - To get a reference to the SQL Server Browser service.
+   - To get a reference to the SQL Server Browser service.
 
-        ```powershell
-        $DfltInstance = $Wmi.Services['SQLBROWSER']
-        ```
+     ```powershell
+     $DfltInstance = $Wmi.Services['SQLBROWSER']
+     ```
 
 1. Complete the example to start and then stop the selected service.
 
-    ```powershell
-    # Display the state of the service.
-    $DfltInstance
-    # Start the service.
-    $DfltInstance.Start();
-    # Wait until the service has time to start.
-    # Refresh the cache.
-    $DfltInstance.Refresh();
-    # Display the state of the service.
-    $DfltInstance
-    # Stop the service.
-    $DfltInstance.Stop();
-    # Wait until the service has time to stop.
-    # Refresh the cache.
-    $DfltInstance.Refresh();
-    # Display the state of the service.
-    $DfltInstance
-    ```
+   ```powershell
+   # Display the state of the service.
+   $DfltInstance
+   # Start the service.
+   $DfltInstance.Start();
+   # Wait until the service has time to start.
+   # Refresh the cache.
+   $DfltInstance.Refresh();
+   # Display the state of the service.
+   $DfltInstance
+   # Stop the service.
+   $DfltInstance.Stop();
+   # Wait until the service has time to stop.
+   # Refresh the cache.
+   $DfltInstance.Refresh();
+   # Display the state of the service.
+   $DfltInstance
+   ```
 
 ## Check and enable disabled instances
 
@@ -347,15 +340,23 @@ To determine whether a SQL Server service instance is disabled, follow these ste
 1. In [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md), select **SQL Server Services** and then locate the service you're interested in.
 1. If the value of the **Start Mode** column is set to **Other (Boot, System, Disabled or Unknown)**, it typically means the corresponding service is disabled. To enable the service, follow these steps:
 
-    a. In the Name column, right-click on the corresponding service and then switch to **Service** tab in the ***\<Service name\>* Properties** window.  
+   1. In the Name column, right-click on the corresponding service and then switch to **Service** tab in the ***\<Service name\>* Properties** window.
 
-    b. Review the value in the **Start Mode** column and verify that it's set to **Disabled**.
+   1. Review the value in the **Start Mode** column and verify that it's set to **Disabled**.
 
-    c. Change the value to either **Manual** or **Automatic** per your requirements. For more information, see [Configure Server Startup Options (SQL Server Configuration Manager)](scm-services-configure-server-startup-options.md).
+   1. Change the value to either **Manual** or **Automatic** per your requirements. For more information, see [Configure Server Startup Options (SQL Server Configuration Manager)](scm-services-configure-server-startup-options.md).
 
 ## <a id="ServiceController"></a> Use the ServiceController class
 
 You can use the `ServiceController` class to programmatically control the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service, or any other Windows service. For an example using C#, see [ServiceController Class](/dotnet/api/system.serviceprocess.servicecontroller).
+
+## Troubleshoot service startup issues
+
+When you attempt to start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services, they might not start if there is a configuration problem. You can review the service specific logs to identify the problem and resolve it. Detailed troubleshooting steps and resolution for specific issues are available in the following articles:
+
+- [SQL Server startup errors](/troubleshoot/sql/database-engine/startup-shutdown/sql-server-startup-errors)
+- [SQL Server Agent Service fail to start](/troubleshoot/sql/database-engine/startup-shutdown/agent-service-fails-start-stand-alone-server)
+- [SQL Server agent crashes when you try to start it](/troubleshoot/sql/database-engine/startup-shutdown/sql-server-agent-crashes-upon-start)
 
 ## Next steps
 

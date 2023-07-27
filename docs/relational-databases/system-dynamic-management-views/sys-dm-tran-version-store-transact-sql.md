@@ -3,7 +3,7 @@ title: "sys.dm_tran_version_store (Transact-SQL)"
 description: sys.dm_tran_version_store (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "02/27/2023"
+ms.date: "06/19/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -40,7 +40,7 @@ sys.dm_tran_version_store
 |-----------------|---------------|-----------------|  
 |**transaction_sequence_num**|**bigint**|Sequence number of the transaction that generates the record version.|  
 |**version_sequence_num**|**bigint**|Version record sequence number. This value is unique within the version-generating transaction.|  
-|**database_id**|**int**|Database ID of the versioned record.|  
+|**database_id**|**int**|Database ID of the versioned record. <br /><br />In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the values are unique within a single database or an elastic pool, but not within a logical server.|  
 |**rowset_id**|**bigint**|Rowset ID of the record.|  
 |**status**|**tinyint**|Indicates whether a versioned record has been split across two records. If the value is 0, the record is stored in one page. If the value is 1, the record is split into two records that are stored on two different pages.|  
 |**min_length_in_bytes**|**smallint**|Minimum length of the record in bytes.|  

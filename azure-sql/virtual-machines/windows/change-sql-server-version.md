@@ -102,7 +102,7 @@ After you change the version of SQL Server, register your SQL Server VM with the
 
 - We recommend that you initiate backups/update statistics/rebuild indexes/check consistency after the upgrade is finished. You can also check the individual database compatibility levels to make sure that they reflect your desired level.
 - After SQL Server is updated on the VM, make sure that the **Edition** property of SQL Server in the Azure portal matches the installed edition number for billing.
-- The ability to [change the edition](change-sql-server-edition.md#change-edition-in-portal) is a feature of the SQL IaaS Agent extension. Deploying an Azure Marketplace image through the Azure portal automatically registers a SQL Server VM with the extension. However, customers who are self-installing SQL Server will have to manually [register their SQL Server VM](sql-agent-extension-manually-register-single-vm.md).
+- The ability to [change the edition](change-sql-server-edition.md#change-edition-property-for-billing) is a feature of the SQL IaaS Agent extension. Deploying an Azure Marketplace image through the Azure portal automatically registers a SQL Server VM with the extension. However, customers who are self-installing SQL Server will have to manually [register their SQL Server VM](sql-agent-extension-manually-register-single-vm.md).
 - If you drop your SQL Server VM resource, the hard-coded edition setting of the image is restored.
 
 ## Next steps

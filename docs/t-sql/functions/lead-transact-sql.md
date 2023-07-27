@@ -15,10 +15,10 @@ helpviewer_keywords:
   - "analytic functions, LEAD"
 dev_langs:
   - "TSQL"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current||=fabric"
 ---
 # LEAD (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
   Accesses data from a subsequent row in the same result set without the use of a self-join starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. LEAD provides access to a row at a given physical offset that follows the current row. Use this analytic function in a SELECT statement to compare values in the current row with values in a following row.  
   
@@ -51,7 +51,7 @@ LEAD ( scalar_expression [ , offset ] , [ default ] ) [ IGNORE NULLS | RESPECT N
 
 IGNORE NULLS - Ignore NULL values in the dataset when computing the first value over a partition.
 
-RESPECT NULLS - Respect NULL values in the dataset when computing first value over a partition. This is the default behavior if a NULLS option is not specified.
+RESPECT NULLS - Respect NULL values in the dataset when computing first value over a partition. `RESPECT NULLS` is the default behavior if a NULLS option is not specified.
 
 There was a [bug fix in SQL Server 2022 CU4](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate4#2278800) related to IGNORE NULLS in `LAG` and `LEAD`.
 
@@ -120,7 +120,7 @@ Northwest                280              1352577.1325          0.00
 ```  
   
 ### C. Specifying arbitrary expressions  
- The following example demonstrates specifying various arbitrary expressions in the LEAD function syntax.  
+ The following example demonstrates specifying various arbitrary expressions and ignoring NULL values in the LEAD function syntax.
   
 ```sql  
 CREATE TABLE T (a INT, b INT, c INT);   
@@ -128,7 +128,7 @@ GO
 INSERT INTO T VALUES (1, 1, -3), (2, 2, 4), (3, 1, NULL), (4, 3, 1), (5, 2, NULL), (6, 1, 5);   
   
 SELECT b, c,   
-    LEAD(2*c, b*(SELECT MIN(b) FROM T), -c/2.0) OVER (ORDER BY a) AS i  
+    LEAD(2*c, b*(SELECT MIN(b) FROM T), -c/2.0) IGNORE NULLS OVER (ORDER BY a) AS i  
 FROM T;  
 ```  
   
@@ -137,12 +137,12 @@ FROM T;
 ```output  
 b           c           i  
 ----------- ----------- -----------  
-1           -3          8  
-2           4           2  
-1           NULL        2  
-3           1           0  
-2           NULL        NULL  
 1           5           -2  
+2           NULL        NULL  
+3           1           0  
+1           NULL        2  
+2           4           2  
+1           -3          8  
 ```  
 
 ### D. Use IGNORE NULLS to find non-NULL values

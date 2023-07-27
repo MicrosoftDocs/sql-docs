@@ -21,10 +21,11 @@ helpviewer_keywords:
   - "locking [SQL Server], SET statements"
 dev_langs:
   - "TSQL"
-monikerRange: "=azure-sqldw-latest||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017"
+monikerRange: "=azure-sqldw-latest||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=fabric"
 ---
 # SET Statements (Transact-SQL)
-[!INCLUDE [SQL Server asdbmi asa](../../includes/applies-to-version/sql-asdbmi-asa.md)]
+
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
 The [!INCLUDE[tsql](../../includes/tsql-md.md)] programming language provides several SET statements that change the current session handling of specific information. The SET statements are grouped into the categories shown in the following table.  
   

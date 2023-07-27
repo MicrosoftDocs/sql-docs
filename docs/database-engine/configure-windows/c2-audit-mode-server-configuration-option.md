@@ -1,5 +1,5 @@
 ---
-title: "c2 audit mode Server Configuration Option"
+title: "c2 audit mode (server configuration option)"
 description: Get acquainted with C2 audit mode, a SQL Server configuration option that can help you profile system activity and track possible security policy violations.
 author: rwestMSFT
 ms.author: randolphwest
@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "C2 Audit Mode option"
   - "recording attempts"
 ---
-# c2 audit mode Server Configuration Option
+# c2 audit mode (server configuration option)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   C2 audit mode can be configured through [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or with the **c2 audit mode** option in **sp_configure**. Selecting this option will configure the server to record both failed and successful attempts to access statements and objects. This information can help you profile system activity and track possible security policy violations.  

@@ -21,7 +21,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 Your environment needs to meet the following requirements to support Always Encrypted with secure enclaves.
 
-- Your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instance or your database server in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] must be correctly configured to support enclaves and attestation, if applicable/required. For more information, see [Set up the secure enclave and attestation](configure-always-encrypted-enclaves.md#set-up-the-secure-enclave-and-attestation).
+- Your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instance or your database server in [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] must be correctly configured to support enclaves and attestation, if applicable/required. For more information, see [Set up the secure enclave and attestation](configure-always-encrypted-enclaves.md#set-up-the-secure-enclave-and-attestation).
 - Make sure your application:
   - Uses a client driver version supports Always Encrypted with secure enclaves.
   - Enables Always Encrypted when connecting to your database.
@@ -36,19 +36,19 @@ Your environment needs to meet the following requirements to support Always Encr
     | Product | Enclave technology | Supported attestation protocols |
     |:---|:---|:---|
     | [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] and later | VBS enclaves | Host Guardian Service, None |
-    | [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] | SGX enclaves (in DC-series databases) | Microsoft Azure Attestation |
-    | [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] | VBS enclaves (preview)  | None |
+    | [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] | SGX enclaves (in DC-series databases) | Microsoft Azure Attestation |
+    | [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] | VBS enclaves (preview)  | None |
 
   - Sets an attestation URL that is valid for your environment, if you're using attestation.
 
     - If you're using [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS), see [Determine and share the HGS attestation URL](always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
-    - If you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] with Intel SGX enclaves and Microsoft Azure Attestation, see [Determine the attestation URL for your attestation policy](./always-encrypted-enclaves.md#secure-enclave-attestation).
+    - If you're using [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] with Intel SGX enclaves and Microsoft Azure Attestation, see [Determine the attestation URL for your attestation policy](./always-encrypted-enclaves.md#secure-enclave-attestation).
 
 ## Client drivers for Always Encrypted with secure enclaves
 
 To develop applications using Always Encrypted with secure enclaves, you need a SQL client driver version that supports secure enclaves. The client driver plays the following key role:
 
-- Before submitting a query that uses a secure enclave to [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] or [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] for execution, the driver initiates enclave attestation (if it's configured) to verify the secure enclave is trustworthy and can be safely used to process sensitive data. For more information about attestation, see [Secure Enclave Attestation](always-encrypted-enclaves.md#secure-enclave-attestation).
+- Before submitting a query that uses a secure enclave to [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] or [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] for execution, the driver initiates enclave attestation (if it's configured) to verify the secure enclave is trustworthy and can be safely used to process sensitive data. For more information about attestation, see [Secure Enclave Attestation](always-encrypted-enclaves.md#secure-enclave-attestation).
 - The client driver establishes a secure session with the enclave by negotiating a shared secret.
 - The driver uses the shared secret to encrypt the column encryption keys the enclave will need to process the query, and sends the keys to [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)], which forwards them to the secure enclave that decrypts the keys.
 - Finally, the driver submits the query for execution, which triggers computations inside the secure enclave.
@@ -62,7 +62,7 @@ The following client drivers support Always Encrypted with secure enclaves:
 - Microsoft ODBC Driver for SQL Server, version 17.4 or higher. If you want to use VBS enclaves without attestation, version 18.1 or higher is required.
   - For more information, see [Using Always Encrypted with the ODBC Driver](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md).
   - For information on how to enable enclave computations for a database connection using ODBC, see the [Enabling Always Encrypted with Secure Enclaves](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#enabling-always-encrypted-with-secure-enclaves) section.
-- Microsoft JDBC Driver for SQL Server, version 8.2 or higher. If you want to use VBS enclaves without attestation, version 11.2.1 or higher is required.
+- Microsoft JDBC Driver for SQL Server, version 8.2 or higher. If you want to use VBS enclaves without attestation, version 12.2 or higher is required.
   - For more information, see [Using Always Encrypted with secure enclaves with the JDBC driver](../../../connect/jdbc/using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver.md)
 - .NET Framework Data Provider for SQL Server in .NET Framework 4.7.2 or higher.
   - For more information, see [Using Always Encrypted with the .NET Framework Data Provider for SQL Server](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md).

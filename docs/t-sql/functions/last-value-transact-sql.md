@@ -16,11 +16,11 @@ helpviewer_keywords:
   - "LAST_VALUE function"
 dev_langs:
   - "TSQL"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current||=fabric"
 ---
 # LAST_VALUE (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-edge](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-edge.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-edge-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-edge-fabricse-fabricdw.md)]
 
 Returns the last value in an ordered set of values.
 

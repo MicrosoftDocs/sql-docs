@@ -24,12 +24,12 @@ helpviewer_keywords:
   - "syntax [SQL Server], Transact-SQL"
 dev_langs:
   - "TSQL"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current ||=fabric"
 ---
 
 # Transact-SQL syntax conventions (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
 The following table lists and describes conventions that are used in the syntax diagrams in the [!INCLUDE[tsql](../../includes/tsql-md.md)] reference.
 
@@ -108,7 +108,7 @@ Many code examples prefix Unicode character string constants with the letter `N`
 
 ## "Applies to" references
 
-The [!INCLUDE[tsql](../../includes/tsql-md.md)] reference articles encompass multiple versions of [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)], starting with [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], as well as [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], and [!INCLUDE[ssazurepdw_md](../../includes/ssazurepdw_md.md)].
+The [!INCLUDE[tsql](../../includes/tsql-md.md)] reference articles encompass multiple versions of [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)], starting with [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], as well as [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], and [!INCLUDE[ssazurepdw_md](../../includes/ssazurepdw_md.md)].
 
 There's a section near the top of each article indicating which products support the article's subject. If a product is omitted, then the feature described by the article isn't available in that product.
 

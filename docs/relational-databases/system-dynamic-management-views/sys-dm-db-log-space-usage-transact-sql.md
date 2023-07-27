@@ -3,7 +3,7 @@ title: "sys.dm_db_log_space_usage (Transact-SQL)"
 description: "The sys.dm_db_log_space_usage dynamic management view returns space usage information for the transaction log."
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "02/24/2023"
+ms.date: "06/19/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: conceptual
@@ -29,7 +29,7 @@ Returns space usage information for the transaction log.
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|database_id|**smallint**|Database ID.|  
+|database_id|**smallint**|Database ID. <br /><br />In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the values are unique within a single database or an elastic pool, but not within a logical server.|  
 |total_log_size_in_bytes |**bigint** |The size of the log  |
 |used_log_space_in_bytes |**bigint** |The occupied size of the log  |
 |used_log_space_in_percent |**real** |The occupied size of the log as a percent of the total log size |

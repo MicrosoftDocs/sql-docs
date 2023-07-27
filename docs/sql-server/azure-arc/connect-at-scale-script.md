@@ -4,12 +4,19 @@ description: In this article, you learn different ways of connecting SQL Server 
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 01/12/2023
-ms.service: sql
+ms.date: 07/18/2023
 ms.topic: conceptual
 ---
 
 # Connect SQL Server instances to Azure at scale with a script
+
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
+
+> [!IMPORTANT]  
+> Azure Arc automatically installs the Azure extension for SQL Server when a server connected to Azure Arc has SQL Server installed. All the SQL Server instance resources are automatically created in Azure, providing a centralized management platform for all your SQL Servers.
+To automatically connect your SQL Severs, see [Automatically Connect your SQL Server to Azure Arc](automatically-connect.md).
+Use the method below, if your server is already connected to Azure, but Azure extension for SQL Server is not deployed automatically using above methods.
+>
 
 This article describes how to connect SQL Servers installed on multiple Windows or Linux machines to Azure ARC as a single task using a script. If the machines are already connected to Azure Arc, use [Azure policy](connect-at-scale-policy.md) to deploy the Azure SQL extension.
 
@@ -36,7 +43,6 @@ Each machine must have [Azure PowerShell](/powershell/azure/install-az-ps) insta
    >
    > * When you create a service principal, your account must be an Owner or User Access Administrator in the subscription that you want to use for onboarding. If you don't have sufficient permissions to create role assignments, the service principal might be created, but it won't be able to onboard machines. The instructions on how to create a custom role are provided in [prerequisites](prerequisites.md).
    > 
-   > * The service principal must have *Directory.ReadAll* permissions in Microsoft graph. For instructions how to assign [Directory permissions](/graph/permissions-reference#directory-permissions) to a service principal, see [Manage API permissions](/graph/migrate-azure-ad-graph-configure-permissions#option-1-use-the-azure-portal-to-find-the-apis-your-organization-uses).
 
 1. Retrieve the password stored in the `$sp` variable:
 
@@ -111,6 +117,6 @@ After you connected the SQL Server instances to Azure, go to the [Azure portal](
 
 ## Next steps
 
-- Learn how to [Configure your SQL Server instance for periodic environment health check using on-demand SQL assessment](assess.md)
+- Learn how to [Configure your SQL Server instance for periodic environment health check using best practices assessment](assess.md)
 
 - Learn how to [Protect Azure Arc-enabled SQL Server with Microsoft Defender for Cloud](configure-advanced-data-security.md)

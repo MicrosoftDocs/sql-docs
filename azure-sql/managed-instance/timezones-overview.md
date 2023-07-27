@@ -1,10 +1,10 @@
 ---
-title: Azure SQL Managed Instance time zones
+title: Time zones
 description: Learn about the time zone specifics of Azure SQL Managed Instance
 author: MladjoA
 ms.author: mlandzic
 ms.reviewer: mathoma
-ms.date: 10/19/2022
+ms.date: 07/13/2023
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: reference
@@ -144,7 +144,7 @@ Using the same time zone across a primary and secondary instance in a failover g
 | UTC-02 | (UTC-02:00) Coordinated Universal Time-02 |
 | Mid-Atlantic Standard Time | (UTC-02:00) Mid-Atlantic - Old |
 | Azores Standard Time | (UTC-01:00) Azores |
-| Cabo Verde Standard Time | (UTC-01:00) Cabo Verde Is. |
+| Cape Verde Standard Time | (UTC-01:00) Cabo Verde Is. |
 | UTC | (UTC) Coordinated Universal Time |
 | GMT Standard Time | (UTC+00:00) Dublin, Edinburgh, Lisbon, London |
 | Greenwich Standard Time | (UTC+00:00) Monrovia, Reykjavik |
@@ -170,7 +170,7 @@ Using the same time zone across a primary and secondary instance in a failover g
 | Libya Standard Time | (UTC+02:00) Tripoli |
 | Namibia Standard Time | (UTC+02:00) Windhoek |
 | Arabic Standard Time | (UTC+03:00) Baghdad |
-| Türkiye Standard Time | (UTC+03:00) Istanbul |
+| Turkey Standard Time | (UTC+03:00) Istanbul |
 | Arab Standard Time | (UTC+03:00) Kuwait, Riyadh |
 | Belarus Standard Time | (UTC+03:00) Minsk |
 | Russian Standard Time | (UTC+03:00) Moscow, St. Petersburg |

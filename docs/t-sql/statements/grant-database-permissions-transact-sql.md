@@ -16,11 +16,11 @@ helpviewer_keywords:
   - "GRANT statement, databases"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # GRANT Database Permissions (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
 Grants permissions on a database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
@@ -135,7 +135,7 @@ A database is a securable contained by the server that is its parent in the perm
 |ALTER ANY ROLE|ALTER|CONTROL SERVER|
 |ALTER ANY ROUTE|ALTER|CONTROL SERVER|
 |ALTER ANY SCHEMA|ALTER|CONTROL SERVER|
-|ALTER ANY SECURITY POLICY<br /> **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|CONTROL|CONTROL SERVER|
+|ALTER ANY SECURITY POLICY<br /> **Applies to**: [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].|CONTROL|CONTROL SERVER|
 |ALTER ANY SENSITIVITY CLASSIFICATION<br /> **Applies to**: SQL Server (SQL Server 2019 and later), Azure SQL Database.|CONTROL|CONTROL SERVER|
 |ALTER ANY SERVICE|ALTER|CONTROL SERVER|
 |ALTER ANY SYMMETRIC KEY|ALTER|CONTROL SERVER|
@@ -175,11 +175,11 @@ A database is a securable contained by the server that is its parent in the perm
 |CREATE XML SCHEMA COLLECTION|ALTER|CONTROL SERVER|
 |DELETE|CONTROL|CONTROL SERVER|
 |EXECUTE|CONTROL|CONTROL SERVER|
-|EXECUTE ANY EXTERNAL ENDPOINT <br /> **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|CONTROL|CONTROL SERVER|
+|EXECUTE ANY EXTERNAL ENDPOINT <br /> **Applies to**: [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].|CONTROL|CONTROL SERVER|
 |EXECUTE ANY EXTERNAL SCRIPT <br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)].|CONTROL|CONTROL SERVER|
 |EXECUTE EXTERNAL SCRIPT <br /> **Applies to**: [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)].|EXECUTE ANY EXTERNAL SCRIPT|CONTROL SERVER|
 |INSERT|CONTROL|CONTROL SERVER|
-|KILL DATABASE CONNECTION<br />**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|CONTROL|ALTER ANY CONNECTION|
+|KILL DATABASE CONNECTION<br />**Applies to**: [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].|CONTROL|ALTER ANY CONNECTION|
 |REFERENCES|CONTROL|CONTROL SERVER|
 |SELECT|CONTROL|CONTROL SERVER|
 |SHOWPLAN|CONTROL|ALTER TRACE|

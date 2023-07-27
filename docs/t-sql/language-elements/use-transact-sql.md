@@ -17,12 +17,12 @@ helpviewer_keywords:
   - "modifying database context"
 dev_langs:
   - "TSQL"
-monikerRange: ">= aps-pdw-2016 || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
+monikerRange: ">= aps-pdw-2016 || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current ||=fabric"
 ---
 # USE (Transact-SQL)
-[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
+[!INCLUDE [sql-asdbmi-pdw-fabricdw](../../includes/applies-to-version/sql-asdbmi-pdw-fabricdw.md)]
 
-  Changes the database context to the specified database or database snapshot in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Changes the database context to the specified database or database snapshot.  
   
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,7 +39,7 @@ USE { database_name }
  *database_name*  
  Is the name of the database or database snapshot to which the user context is switched. Database and database snapshot names must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md).  
   
- In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the database parameter can only refer to the current database. If a database other than the current database is provided, the `USE` statement does not switch between databases, and error code 40508 is returned. To change databases, you must directly connect to the database. The USE statement is marked as not applicable to SQL Database at the top of this page, because even though you can have the `USE` statement in a batch, it doesn't do anything.
+ In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the database parameter can only refer to the current database. If a database other than the current database is provided, the `USE` statement does not switch between databases, and error code 40508 is returned. To change databases, you must directly connect to the database. The USE statement is marked as not applicable to SQL Database at the top of this page, because even though you can have the `USE` statement in a batch, it doesn't do anything.
   
 ## Remarks  
  When a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login connects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the login is automatically connected to its default database and acquires the security context of a database user. If no database user has been created for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login, the login connects as guest. If the database user does not have CONNECT permission on the database, the USE statement will fail. If no default database has been assigned to the login, its default database will be set to master.  

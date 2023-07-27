@@ -3,7 +3,7 @@ title: "sys.dm_tran_aborted_transactions (Transact-SQL)"
 description: sys.dm_tran_aborted_transactions (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "02/27/2023"
+ms.date: "06/19/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -28,7 +28,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-curr
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |transaction_id  |  int|  The `transaction_id` of the aborted transaction.  |
-|database_id  |  int|  The `database_id` of the aborted transaction.  |
+|database_id  |  int|  The `database_id` of the aborted transaction.  <br /><br />In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the values are unique within a single database or an elastic pool, but not within a logical server.|
 |begin_xact_lsn |   numeric(25,0) | The starting LSN of the aborted transaction. |
 |end_xact_lsn |  numeric(25,0) | The ending LSN of the aborted transaction. |
 |begin_time |   datetime  | The begin time of the aborted transaction. |

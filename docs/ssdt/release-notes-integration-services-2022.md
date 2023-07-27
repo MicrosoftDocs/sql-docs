@@ -42,6 +42,13 @@ Visit https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/bg-
 - If Oracle, Teradata, or other OOB component is not found after upgrading SSDT, please make sure that the connector for latest SQL Server version is installed.
 
 ## Known issues
+**Version 1.0**
+  1. SQL server 2016 is not supported as target server version. (Target server version supported are SQL server 2017, 2019 and 2022.)
+  2. In the context menu (right mouse button) on objects in the project (e.g. the solution, a package) in Visual Studio, many of the entries appear many times. This happens only when Microsoft Analysis Services Projects 2022 is installed together.
+  3. Project name in Solution Explorer UI doesn’t show target server version as suffix.
+  4. Dimension Processing and Partition Processing components are not supported.
+  5. DQO related components are not supported.
+  
 **Version 0.4**
   1. Target sever versions supported: SQL server 2017, SQL server 2019 and SQL server 2022
   2. Can't design Dimension Processing and Partition Processing.

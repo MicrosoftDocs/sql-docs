@@ -4,10 +4,12 @@ description: In this article, you create an Azure SQL Database server and databa
 ms.topic: quickstart
 ms.service: sql-database
 ms.subservice: deployment-configuration
-ms.custom: devx-track-terraform, ai-gen-docs
+ms.custom: devx-track-terraform
 author: TomArcherMsft
 ms.author: tarcher
 ms.date: 5/03/2023
+content_well_notification: 
+  - AI-contribution
 ---
 
 # Quickstart: Create an Azure SQL Database server and database using Terraform
@@ -25,8 +27,6 @@ In this article, you learn how to:
 > * Create a random password for the [logical server in Azure](logical-servers.md) using [random_password](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/password).
 > * Create a [logical server in Azure](logical-servers.md) using [azurerm_mssql_server](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/mssql_server).
 > * Create a database in Azure SQL Database using [azurerm_mssql_database](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/mssql_database).
-
-[!INCLUDE [AI attribution](~/../azure/includes/ai-generated-attribution.md)]
 
 ## Prerequisites
 
@@ -85,7 +85,7 @@ In this article, you learn how to:
    sql_server_name=$(terraform output -raw sql_server_name)
     ```
 
-1. Run [az sql db list](http://cli/azure/sql/db#az-sql-db-list) to display the names of all the databases in your server.
+1. Run [az sql db list](/cli/azure/sql/db#az-sql-db-list) to display the names of all the databases in your server.
 
     ```azurecli
     az sql db list \

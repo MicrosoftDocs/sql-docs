@@ -31,7 +31,7 @@ This function returns the value from the set of values in a group based on the p
 
 ```syntaxsql
 APPROX_PERCENTILE_DISC (numeric_literal)  
-WITHIN GROUP (ORDER BY order_by_expression [ASC|DESC]
+WITHIN GROUP (ORDER BY order_by_expression [ASC|DESC])
 ```
 
 ## Argument

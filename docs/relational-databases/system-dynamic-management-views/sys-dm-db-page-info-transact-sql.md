@@ -4,7 +4,7 @@ description: sys.dm_db_page_info (Transact-SQL)
 author: bluefooted
 ms.author: pamela
 ms.reviewer: randolphwest
-ms.date: "02/27/2023"
+ms.date: "06/19/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: conceptual
@@ -57,7 +57,7 @@ Determines the level of detail in the output of the function. `'LIMITED'` will r
 
 | Column name | Data type | Description |
 | --- | --- | --- |
-| database_id | **int** | Database ID |
+| database_id | **int** | Database ID. <br /><br />In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the values are unique within a single database or an elastic pool, but not within a logical server.|
 | file_id | **int** | File ID |
 | page_id | **int** | Page ID |
 | page_header_version | **int** | Page header version |

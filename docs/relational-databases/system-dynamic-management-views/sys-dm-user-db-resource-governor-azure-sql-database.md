@@ -3,7 +3,7 @@ title: "sys.dm_user_db_resource_governance (Transact-SQL)"
 description: sys.dm_user_db_resource_governance (Transact-SQL)
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: 11/28/2022
+ms.date: 07/21/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -26,11 +26,11 @@ Returns actual configuration and capacity settings used by resource governance m
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**database_id**|int|ID of the database, unique within an Azure SQL Database server.|
-|**logical_database_guid**|uniqueidentifier|Logical GUID for user database that stays through the life of a user database.  Renaming the database or changing its service level objective will not change this value.|
-|**physical_database_guid**|uniqueidentifier|Physical GUID for a user database which stays through the life of the physical instance of the user database. Changing the database service level objective will cause this value to change.|
+|**database_id**|int|ID of the database, unique within a database or within an elastic pool, but not within a logical server. For details, see [DB_ID](../../t-sql/functions/db-id-transact-sql.md#remarks).|
+|**logical_database_guid**|uniqueidentifier|A unique identifier for a user database that remains unchanged through the life of a user database. Renaming the database or changing its service level objective will not change this value.|
+|**physical_database_guid**|uniqueidentifier|A unique identifier for the current physical database corresponding to the user database. Changing the database service level objective will cause this value to change.|
 |**server_name**|nvarchar|Logical server name.|
-|**database_name**|nvarchar|Logical database name.|
+|**database_name**|nvarchar|User database name.|
 |**slo_name**|nvarchar|Service level objective, including hardware generation.|
 |**dtu_limit**|int|DTU limit of database (NULL for vCore).|
 |**cpu_limit**|int|vCore limit of database (NULL for DTU databases).|
@@ -67,8 +67,6 @@ Returns actual configuration and capacity settings used by resource governance m
 |**primary_group_max_io**|int|Maximum IOPS for the user workload group. Resource governance will not allow IOPS above this value.|
 |**primary_group_min_cpu**|float|Minimum CPU percent for the user workload group level. Resource governance will not attempt to reduce CPU utilization below this value.|
 |**primary_group_max_cpu**|float|Maximum CPU percent for the user workload group level. Resource governance will not allow CPU utilization above this value.|
-|**primary_group_max_outbound_connection_workers**|int|Outbound connection worker thread limit for the primary user workload group.|
-|**primary_pool_max_outbound_connection_workers**|int|Outbound connection worker thread limit for the user workload resource pool.|
 |**primary_log_commit_fee**|int|Log rate governance commit fee for the user workload group, in bytes. A commit fee increases the size of each log IO by a fixed value for the purposes of log rate accounting only. Actual log IO to storage is not increased.|
 |**primary_pool_max_workers**|int|Worker thread limit for the user workload resource pool.|
 |**pool_max_io**|int|Maximum IOPS limit for the user workload resource pool.|
@@ -81,6 +79,13 @@ Returns actual configuration and capacity settings used by resource governance m
 |**volume_type_external_xstore_iops**|int|Internal use only.|
 |**volume_pfs_iops**|int|Internal use only.|
 |**volume_type_pfs_iops**|int|Internal use only.|
+|**user_data_directory_space_quota_mb**|int|Maximum local storage for the database engine instance. See [Storage space governance](/azure/azure-sql/database/resource-limits-logical-server#storage-space-governance)|
+|**user_data_directory_space_usage_mb**|int|Current local storage consumption by data files, transaction log files, and `tempdb`` files. Updated every five minutes. |
+|**bufferpool_extension_size_gb**|int| Internal use only.|
+|**pool_max_log_rate**|bigint|Maximum log rate in bytes per second at the user resource pool level. Resource governance will not allow the total log rate across all workload groups in the resource pool to be above this value.|
+|**primary_group_max_outbound_connection_workers**|int|Outbound connection worker thread limit for the primary user workload group.|
+|**primary_pool_max_outbound_connection_workers**|int|Outbound connection worker thread limit for the user workload resource pool.|
+|**replica_role**|tinyint|Represents the current replica role. </br></br> 0 - Primary</br>1 - High availability (HA) secondary</br>2 - Geo-replication forwarder</br>3 - Named replica</br></br>Reports 1 when connected with ReadOnly intent to any [readable secondary](/azure/azure-sql/database/read-scale-out). If connecting to a geo-secondary without specifying ReadOnly intent, reports 2 to reflect a connection to a geo-replication forwarder. If connecting to a named replica without specifying ReadOnly intent, reports 3.|
 
 ## Permissions
 

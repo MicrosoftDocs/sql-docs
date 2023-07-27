@@ -4,10 +4,10 @@ description: Learn about the new features for and improvements to SQL Server on 
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 04/27/2023
+ms.date: 07/12/2023
 ms.service: virtual-machines-sql
 ms.subservice: service-overview
-ms.topic: reference
+ms.topic: whats-new
 ms.custom: ignite-2022
 tags: azure-service-management
 ---
@@ -18,6 +18,18 @@ tags: azure-service-management
 When you deploy an Azure virtual machine (VM) with SQL Server installed on it, either manually, or through a built-in image, you can use Azure features to improve your experience. This article summarizes the documentation changes associated with new features and improvements in the recent releases of [SQL Server on Azure Virtual Machines (VMs)](https://azure.microsoft.com/services/virtual-machines/sql-server/). To learn more about SQL Server on Azure VMs, see the [overview](sql-server-on-azure-vm-iaas-what-is-overview.md). 
 
 For updates made in previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md). 
+
+## July 2023
+
+[!INCLUDE[appliesto-sqlvm](../../includes/virtual-machines-2008-end-of-support.md)]
+
+## May 2023
+
+| Changes | Details |
+| --- | --- |
+| **Azure SQL bindings for Azure Functions GA** | Azure Functions supports input bindings, and output bindings for the Azure SQL and SQL Server products. This feature is now generally available. Review [Azure SQL bindings for Azure Functions](/azure/azure-functions/functions-bindings-azure-sql) to learn more.  | 
+| **Azure SQL triggers for Azure Functions preview** Azure Functions supports function triggers for the Azure SQL and SQL Server products. This feature is currently in preview. Review [Azure SQL triggers for Azure Functions](/azure/azure-functions/functions-bindings-azure-sql-trigger) to learn more. | 
+
 
 ## April 2023
 

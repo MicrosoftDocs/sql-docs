@@ -9,6 +9,8 @@ ms.topic: conceptual
 ---
 # Configure automatic backups
 
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
+
 The Azure extension for SQL Server can perform backups automatically. This article explains how you can configure these automatic backups.
 
 > [!NOTE]  

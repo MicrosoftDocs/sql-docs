@@ -12,7 +12,7 @@ ms.topic: conceptual
 
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
-To ensure that applications remain connected to an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], the ODBC driver can restore idle connections.
+To ensure that applications remain connected to an [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the ODBC driver can restore idle connections.
 
 > [!IMPORTANT]
 > The connection resiliency feature is supported on Microsoft Azure SQL Database and SQL Server 2014 (and later) server versions.

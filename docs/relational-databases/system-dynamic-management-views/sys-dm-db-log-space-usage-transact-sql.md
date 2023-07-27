@@ -29,7 +29,7 @@ Returns space usage information for the transaction log.
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|database_id|**smallint**|Database ID. <br /><br />In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the values are unique within a single database or an elastic pool, but not within a logical server.|  
+|database_id|**smallint**|Database ID. <br /><br />In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the values are unique within a single database or an elastic pool, but not within a logical server.|  
 |total_log_size_in_bytes |**bigint** |The size of the log  |
 |used_log_space_in_bytes |**bigint** |The occupied size of the log  |
 |used_log_space_in_percent |**real** |The occupied size of the log as a percent of the total log size |

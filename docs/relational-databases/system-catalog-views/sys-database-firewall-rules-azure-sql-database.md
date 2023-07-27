@@ -23,7 +23,7 @@ monikerRange: "=azuresqldb-current"
 
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-Returns information about the database-level firewall settings associated with your [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Database-level firewall settings are useful when using contained database users. For more information, see [Contained Database Users - Making Your Database Portable](../../relational-databases/security/contained-database-users-making-your-database-portable.md).
+Returns information about the database-level firewall settings associated with your [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. Database-level firewall settings are useful when using contained database users. For more information, see [Contained Database Users - Making Your Database Portable](../../relational-databases/security/contained-database-users-making-your-database-portable.md).
 
 The `sys.database_firewall_rules` view contains the following columns:
 
@@ -38,7 +38,7 @@ The `sys.database_firewall_rules` view contains the following columns:
 
 ## Remarks
 
-To return information about the server-level firewall settings associated with your [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], use [sys.firewall_rules (Azure SQL Database)](sys-firewall-rules-azure-sql-database.md).
+To return information about the server-level firewall settings associated with your [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], use [sys.firewall_rules (Azure SQL Database)](sys-firewall-rules-azure-sql-database.md).
 
 ## Permissions
 

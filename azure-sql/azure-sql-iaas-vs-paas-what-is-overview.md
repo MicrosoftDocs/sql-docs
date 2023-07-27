@@ -18,7 +18,7 @@ keywords:
   - IaaS
 ---
 # What is Azure SQL? 
-[!INCLUDE[appliesto-asf](includes/appliesto-asf.md)]
+[!INCLUDE[appliesto-sqldb-sqlmi-sqlvm](includes/appliesto-sqldb-sqlmi-sqlvm.md)]
 
 Azure SQL is a family of managed, secure, and intelligent products that use the SQL Server database engine in the Azure cloud.
 

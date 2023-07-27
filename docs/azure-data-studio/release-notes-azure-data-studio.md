@@ -31,7 +31,7 @@ Azure Data Studio 1.45.0 is the latest general availability (GA) release.
 | Connection | Updated Azure tree icons |
 | Connection | Updated the Azure tree in the Connection Pane to show only available resource types |
 | Connection | Added Azure Postgres Flexible Server and Azure CosmosDB for PostgreSQL in the Azure resource tree |
-| Connection | Added support for advanced connection options for other providers |
+| Connection | Introduced support for multiple connections against same target, with different profile names and advanced options |
 | Connection | Added capability to clear encryption keys with the 'Clear Azure Account Token Cache' command |
 | Connection | Introduced support for connection pooling for MSSQL connections |
 | GitHub Copilot | GitHub Copilot extension version 1.95.239 |
@@ -187,6 +187,7 @@ For a full list of bug fixes addressed for the May 2023 Hotfix release, visit th
 | Connection | Enabled Sql Authentication Provider by default for Azure SQL connections and the MSAL Authentication Library.  Learn more at [Connect with Azure Data Studio](https://aka.ms/azuredatastudio-connection) |
 | Connection | Introduced support for passing in advanced connection options in command line arguments |
 | Connection | Added ability to provide an Application Name in the connection string parameter |
+| Connection | Added support for advanced connection options for other providers |
 | General | Added support for customizing table keyboard shortcuts |
 | General | Added warning notification on startup if Azure PII logging is enabled |
 | GitHub Copilot | GitHub Copilot extension for autocomplete-style suggestions added to extension gallery. Learn more at [GitHub Copilot extension](./extensions/github-copilot-extension.md) |

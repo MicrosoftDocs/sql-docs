@@ -122,7 +122,7 @@ Regardless of the connectivity mechanism, there are requirements that must be fu
   - **Inbound** traffic on port 5022 and port range 11000-11999 from the subnet hosting the primary instance.
   - **Outbound** traffic on port 5022 and port range 11000-11999 to the subnet hosting the primary instance.
 - IP address ranges of VNets hosting primary and secondary instance must not overlap.
-- There's no indirect overlap of IP address range between the VNets hosting primary and secondary instance and any other VNets they are peered with via local virtual network peering or other means
+- There's no indirect overlap of IP address ranges between the VNets hosting the primary and secondary instance, or other VNets they are peered with via local virtual network peering or other means.
 
 Additionally, if you're using other mechanisms for providing connectivity between the instances than the recommended [global virtual network peering](/azure/virtual-network/virtual-network-peering-overview), you need to ensure the following:
 - Any networking device used, like firewalls or network virtual appliances (NVAs), do not block the traffic described above.
@@ -216,7 +216,7 @@ Instances in a failover group remain separate Azure resources, and no changes ma
 This section is duplicated in /managed-instance/auto-failover-group-configure-sql-mi.md. Please ensure changes are made to both documents. 
 -->
 
-You can scale up or scale down the primary and secondary instance to a different compute size within the same service tier. When scaling up, we recommend that you scale up the geo-secondary first, and then scale up the primary. When scaling down, reverse the order: scale down the primary first, and then scale down the secondary. When you scale instance to a different service tier, this recommendation is enforced.
+You can scale up or scale down the primary and secondary instance to a different compute size within the same service tier or to a different service tier. When scaling up within the same service tier, we recommend that you scale up the geo-secondary first, and then scale up the primary. When scaling down within the same service tier, reverse the order: scale down the primary first, and then scale down the secondary. When you scale instance to a different service tier, this recommendation is enforced.
 
 The sequence is recommended specifically to avoid the problem where the geo-secondary at a lower SKU gets overloaded and must be reseeded during an upgrade or downgrade process.
 

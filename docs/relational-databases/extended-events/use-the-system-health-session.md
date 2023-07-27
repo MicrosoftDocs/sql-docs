@@ -82,7 +82,7 @@ Be aware that after you restore the session, you must start the session by using
 
 ## The system_health session in Azure SQL 
 
-There is no built-in system_health Extended Event session in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], but you can use `sys.fn_xe_file_target_read_file` to read from Extended Event sessions you create yourself and store in Azure Blob Storage. For an example walkthrough, review [Event File target code for Extended Events in Azure SQL Database](/azure/azure-sql/database/xevent-code-event-file).
+There is no built-in system_health Extended Event session in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], but you can use `sys.fn_xe_file_target_read_file` to read from Extended Event sessions you create yourself and store in Azure Blob Storage. For an example walkthrough, review [Event File target code for Extended Events in Azure SQL Database](/azure/azure-sql/database/xevent-code-event-file).
 
 In [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], the system_health Extended Events session XEL target is not accessible, but system_health can be accessed via the ring buffer target. For more information, see [Targets for Extended Events in SQL Server](../extended-events/targets-for-extended-events-in-sql-server.md#h2_target_ring_buffer).
   

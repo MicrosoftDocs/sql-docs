@@ -2,8 +2,8 @@
 title: Azure Active Directory authentication
 titleSuffix: Azure SQL Database & Azure SQL Managed Instance & Azure Synapse Analytics
 description: Learn about how to use Azure Active Directory for authentication with Azure SQL Database, Azure SQL Managed Instance, and Synapse SQL in Azure Synapse Analytics
-author: GithubMirek
-ms.author: mireks
+author: nofield
+ms.author: nofield
 ms.reviewer: wiassaf, vanto, mathoma, randolphwest
 ms.date: 05/08/2023
 ms.service: sql-db-mi

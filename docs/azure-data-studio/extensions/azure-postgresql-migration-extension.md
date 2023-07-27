@@ -87,6 +87,8 @@ Select the database(s) you want to assess for migration for Azure Database for P
 
 ### 2. Assessment Parameters
 
+In the Assessments parameters, users can choose the target version of the Azure Database for PostgreSQL - Flexible Server for assessing the source PostgreSQL instance with the selected target version of the Azure Database for PostgreSQL - Flexible Server. The target version user can select will be always greater than or equal to the source PostgreSQL version. For example, if the source PostgreSQL instance version is 13 then the target version shown would be 13, 14 and 15.
+
 The SKU recommendation feature allows you to collect performance data from your source PostgreSQL instances hosting your databases and
 recommends the rightsized Azure Database for PostgreSQL - Flexible Server SKU based on the data collected. The feature provides compute level and data size recommendations.
 

@@ -4,7 +4,7 @@ description: Learn how to configure streaming export of metrics and resource log
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 04/26/2023
+ms.date: 07/17/2023
 ms.service: sql-db-mi
 ms.subservice: performance
 ms.topic: how-to
@@ -451,8 +451,8 @@ Refer to the following table for details about advanced metrics.
 
 | **Metric** | **Metric Display Name** | **Description** |
 | --- | --- | --- |
-| sqlserver_process_core_percent <sup>1</sup> | SQL process core percent | CPU usage percentage for the SQL process, as measured by the operating system. |
-| sqlserver_process_memory_percent <sup>1</sup> | SQL process memory percent | Memory usage percentage for the SQL process, as measured by the operating system. |
+| sql_instance_cpu_percent <sup>1</sup> | SQL instance CPU percent | CPU usage by all user and system workloads, as measured by the operating system |
+| sql_instance_memory_percent <sup>1</sup> | SQL instance memory percent | Memory usage by the database engine instance, as measured by the operating system |
 | tempdb_data_size <sup>2</sup> | `tempdb` Data File Size Kilobytes | `tempdb` Data File Size Kilobytes. |
 | tempdb_log_size <sup>2</sup> | `tempdb` Log File Size Kilobytes | `tempdb` Log File Size Kilobytes. |
 | tempdb_log_used_percent <sup>2</sup> | `tempdb` Percent Log Used | `tempdb` Percent Log Used. |

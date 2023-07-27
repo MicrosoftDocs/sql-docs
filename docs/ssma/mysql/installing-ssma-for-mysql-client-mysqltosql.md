@@ -17,16 +17,16 @@ helpviewer_keywords:
 The SSMA for MySQL client consists of the program files that perform the following tasks:
 
 - Connect to a MySQL database.  
-- Connect to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].
-- Convert the MySQL database objects to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] objects.
-- Load the objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].
-- Migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].
+- Connect to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
+- Convert the MySQL database objects to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] objects.
+- Load the objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
+- Migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 This topic provides the installation prerequisites and instructions for installing SSMA for MySQL client.
 
 ## Prerequisites
 
-SSMA for MySQL is designed to work with MySQL 4.1 or later versions and all editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 or later, and [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].
+SSMA for MySQL is designed to work with MySQL 4.1 or later versions and all editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 or later, and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 Before you install SSMA, make sure that the computer meets the following requirements:
 
@@ -35,7 +35,7 @@ Before you install SSMA, make sure that the computer meets the following require
 - The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] version 4.7.2 or a later version. You can obtain it from the [.NET Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=48882).
 - MySQL ODBC 5.1 Driver and connectivity to the MySQL databases that you want to migrate. You can install the MySQL from the MySQL Web site. For information about connectivity, see [Connecting to MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md).
 - Access to and sufficient permissions on the computer that hosts the target instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] where you will be migrating database objects and data. For more information, see [Connecting to SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md).
-- In case of [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] projects, access to and sufficient permissions to the instance of [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] where you will be migrating database objects and data. For more information, see [Connecting to Azure SQL Database &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md).
+- In case of [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] projects, access to and sufficient permissions to the instance of [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] where you will be migrating database objects and data. For more information, see [Connecting to Azure SQL Database &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md).
 - 4 GB RAM recommended.
 
 ## Installing SSMA for MySQL client

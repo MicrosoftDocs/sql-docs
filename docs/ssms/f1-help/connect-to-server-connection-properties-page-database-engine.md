@@ -21,7 +21,7 @@ Use this tab to view or specify options when connecting to an instance of [!INCL
 **Connect to database**  
 Select a database to connect to from the list. If you select **\<default\>**, you connect to the default database for the server. If you select **\<Browse server\>**, you can browse the server for the database to which to connect.  
   
-When connecting to an instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine through [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], you must use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication and specify a database in the **Connect to Server** dialog box, on the **Connection Properties** tab. Ensure that you select the **Encrypt connection** checkbox.  
+When connecting to an instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine through [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], you must use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication and specify a database in the **Connect to Server** dialog box, on the **Connection Properties** tab. Ensure that you select the **Encrypt connection** checkbox.  
   
 By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connects to **master**. When connecting to [!INCLUDE[ssSDS](../../includes/sssds-md.md)], if you specify a user database, you only see that database and its objects in Object Explorer. If you connect to **master**, you can see all databases. For more information, see the [Microsoft Azure SQL Database Overview](/azure/sql-database/sql-database-technical-overview).  
   

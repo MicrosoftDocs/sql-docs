@@ -6,11 +6,12 @@ author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
 ms.date: 06/14/2023
-ms.service: sql
 ms.topic: conceptual
 ---
 
 # Manage SQL Server license and billing options
+
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
 This article explains how to manage SQL Server licenses and set billing options.
 

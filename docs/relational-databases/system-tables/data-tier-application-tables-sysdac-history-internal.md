@@ -64,7 +64,7 @@ WHERE instance_id NOT IN
  Deleting rows for active DACs does not impact DAC operations; the only impact is that you will not be able to report the full history for the DAC.  
   
 > [!NOTE]  
->  Currently, there is no mechanism for deleting **sysdac_history_internal** rows on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+>  Currently, there is no mechanism for deleting **sysdac_history_internal** rows on [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].  
   
 ## Permissions  
  Requires membership in the sysadmin fixed server role. Read-only access to this view is available to all users with permissions to connect to the master database.  

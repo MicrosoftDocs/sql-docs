@@ -3,7 +3,7 @@ title: "MSSQLSERVER_2570"
 description: "MSSQLSERVER_2570"
 author: MashaMSFT
 ms.author: mathoma
-ms.date: "07/24/2023"
+ms.date: "07/27/2023"
 ms.service: sql
 ms.subservice: supportability
 ms.topic: "reference"

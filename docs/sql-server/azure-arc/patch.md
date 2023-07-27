@@ -5,12 +5,13 @@ author: twright-msft
 ms.author: twright
 ms.reviewer: mikeray
 ms.date: 03/13/2023
-ms.service: sql
 ms.subservice: 
 ms.topic: conceptual 
 ---
 
 # Configure automated patching for Arc-enabled SQL Servers preview
+
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
 You can configure automated patching for Azure Arc-enabled SQL Servers.
 

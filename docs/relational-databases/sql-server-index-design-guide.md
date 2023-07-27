@@ -943,7 +943,7 @@ For more information, see [Columnstore indexes - Design Guidance](../relational-
 
 All memory-optimized tables must have at least one index, because it is the indexes that connect the rows together. On a memory-optimized table, every index is also memory-optimized. Hash indexes are one of the possible index types in a memory-optimized table. For more information, see [Indexes for Memory-Optimized Tables](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).
 
-**Applies to:** [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], [!INCLUDE [ssazure_md](../includes/ssazure_md.md)], and [!INCLUDE [ssazuremi_md](../includes/ssazuremi_md.md)].
+**Applies to:** [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi_md](../includes/ssazuremi_md.md)].
 
 ### Hash index architecture
 
@@ -1043,7 +1043,7 @@ Later when the older versions are no longer needed, a garbage collection (GC) th
 
 Nonclustered indexes are one of the possible index types in a memory-optimized table. For more information, see [Indexes for Memory-Optimized Tables](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).
 
-**Applies to:** [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], [!INCLUDE [ssazure_md](../includes/ssazure_md.md)], and [!INCLUDE [ssazuremi_md](../includes/ssazuremi_md.md)].
+**Applies to:** [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi_md](../includes/ssazuremi_md.md)].
 
 ### In-memory nonclustered index architecture
 

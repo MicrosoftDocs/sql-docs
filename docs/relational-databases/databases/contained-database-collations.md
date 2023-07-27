@@ -23,7 +23,7 @@ helpviewer_keywords:
  This article clarifies the content of the change, and examines areas where the change may cause problems.
 
 > [!NOTE]
-> For [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], collations for contained databases are different. The database collation and catalog collation can be set on database creation and cannot be updated. Specify a collation for data (`COLLATE`) and a catalog collation for system metadata and object identifiers (`CATALOG_COLLATION`). For more information, see [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=azuresqldb-current&preserve-view=true#collation_name).
+> For [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], collations for contained databases are different. The database collation and catalog collation can be set on database creation and cannot be updated. Specify a collation for data (`COLLATE`) and a catalog collation for system metadata and object identifiers (`CATALOG_COLLATION`). For more information, see [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=azuresqldb-current&preserve-view=true#collation_name).
   
 ## Non-contained databases
  All databases have a default collation (which can be set when creating or altering a database. This collation is used for all metadata in the database, as well as the default for all string columns within the database. Users can choose a different collation for any particular column by using the `COLLATE` clause.  

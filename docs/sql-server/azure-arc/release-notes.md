@@ -5,11 +5,12 @@ author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
 ms.date: 07/13/2023
-ms.service: sql
 ms.topic: conceptual
 ---
 
 # Release notes - Azure Arc-enabled SQL Server
+
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
 ## July 2023
 
@@ -17,7 +18,7 @@ This release is published July 13, 2023.
 
 ### Extension version
 
-`1.1.2378.31`
+`1.1.2384.34`
 
 ### Azure extension for SQL Server
 
@@ -314,3 +315,4 @@ The October update includes the following improvements:
 The following issues apply to the October release:
 
 - Connecting SQL Server instances to Azure Arc requires an account with a broad set of permissions. For details, see [prerequisites](prerequisites.md).
+

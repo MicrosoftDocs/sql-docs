@@ -3,7 +3,7 @@ title: "OPENROWSET (Transact-SQL)"
 description: "OPENROWSET (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: "09/19/2022"
+ms.date: "07/24/2023"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -403,7 +403,7 @@ FROM Northwind.dbo.Customers AS c
 ```
 
 > [!IMPORTANT]
-> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] only supports reading from Azure Blob Storage.
+> [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] only supports reading from Azure Blob Storage.
 
 ### D. Using OPENROWSET to bulk insert file data into a varbinary(max) column
 
@@ -478,7 +478,7 @@ FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
 ```
 
 > [!IMPORTANT]
-> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] only supports reading from Azure Blob Storage.
+> [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] only supports reading from Azure Blob Storage.
 
 ### H. Accessing data from a CSV file without a format file
 
@@ -615,6 +615,33 @@ AS [data]
 
 ```
 
+### M. Use OPENROWSET to access several delta files from Azure Data Lake Gen2
+
+**Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later.
+
+In this example, the data table container is named `Contoso`, and is located on an Azure Data Lake Gen2 storage account.
+
+```sql
+CREATE DATABASE SCOPED CREDENTIAL delta_storage_dsc   
+WITH IDENTITY = 'SHARED ACCESS SIGNATURE', 
+SECRET = '<SAS Token>';  
+
+CREATE EXTERNAL DATA SOURCE Delta_ED
+WITH
+(
+ LOCATION = 'adls://<container>@<storage_account>.dfs.core.windows.net'
+,CREDENTIAL = delta_storage_dsc 
+);
+
+SELECT  * 
+FROM    OPENROWSET
+        (   BULK '/Contoso'
+        ,   FORMAT = 'DELTA'
+        ,   DATA_SOURCE = 'Delta_ED'
+        ) as [result];
+
+```
+
 ### Additional Examples
 
 For additional examples that show using `INSERT...SELECT * FROM OPENROWSET(BULK...)`, see the following topics:
@@ -628,7 +655,7 @@ For additional examples that show using `INSERT...SELECT * FROM OPENROWSET(BULK.
 - [Use a Format File to Skip a Data Field &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)
 - [Use a Format File to Map Table Columns to Data-File Fields &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)
 
-## See Also
+## Next steps
 
 - [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)
 - [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)

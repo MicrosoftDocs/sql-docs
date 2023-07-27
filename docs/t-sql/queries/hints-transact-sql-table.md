@@ -438,7 +438,7 @@ For a list of features that are supported by the editions of [!INCLUDE[ssNoVersi
 However, for the query optimizer to consider indexed views for matching, or use an indexed view that is referenced with the `NOEXPAND` hint, the following SET options must be set to ON.
 
 > [!NOTE]  
-> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] supports automatic use of indexed views without specifying the `NOEXPAND` hint.
+> [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] supports automatic use of indexed views without specifying the `NOEXPAND` hint.
 
 - ANSI_NULLS
 - ANSI_PADDING

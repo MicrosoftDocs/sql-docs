@@ -44,7 +44,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Tuple mover background merge support|||||yes|yes|yes|yes|
 |Ordered clustered columnstore indexes||||||yes|yes|yes|
 
- <sup>1</sup> For [!INCLUDE[ssSDS](../../includes/sssds-md.md)], columnstore indexes are available in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Premium tiers, Standard tiers - S3 and above, and all vCore tiers. For [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 and above, columnstore indexes are available in all editions. For [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] (before SP1) and earlier versions, columnstore indexes are only available in Enterprise Edition.
+ <sup>1</sup> For [!INCLUDE[ssSDS](../../includes/sssds-md.md)], columnstore indexes are available in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] Premium tiers, Standard tiers - S3 and above, and all vCore tiers. For [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 and above, columnstore indexes are available in all editions. For [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] (before SP1) and earlier versions, columnstore indexes are only available in Enterprise Edition.
 
  <sup>2</sup> The degree of parallelism (DOP) for [batch mode](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) operations is limited to 2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard Edition and 1 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web and Express Editions. This refers to columnstore indexes created over disk-based tables and memory-optimized tables.
 

@@ -68,7 +68,7 @@ You can view server roles by querying the `sys.server_role_members` and `sys.ser
   
 To change the owner of a user-defined server role, use [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md).  
 
-In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], `ALTER SERVER ROLE` must be run in the `master` database.
+In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], `ALTER SERVER ROLE` must be run in the `master` database.
   
 ## Permissions
 Requires `ALTER ANY SERVER ROLE` permission on the server to change the name of a user-defined server role.  

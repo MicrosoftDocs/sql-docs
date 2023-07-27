@@ -124,6 +124,7 @@ Consider the following when configuring your General Purpose databases with zone
 
 - For General Purpose tier the zone-redundant configuration is Generally Available in the following regions: 
   - (Asia Pacific) Australia East
+  - (Asia Pacific) East Asia
   - (Asia Pacific) Japan East
   - (Asia Pacific) Korea Central
   - (Asia Pacific) Southeast Asia  

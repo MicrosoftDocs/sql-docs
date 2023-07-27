@@ -12,7 +12,7 @@ ms.topic: conceptual
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  To use the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] to access data from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], you must have the following components installed on your computer:
+  To use the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] to access data from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], you must have the following components installed on your computer:
 
 - [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ([download](download-microsoft-jdbc-driver-for-sql-server.md))
 - Java Runtime Environment

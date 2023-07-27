@@ -73,13 +73,13 @@ To configure your application:
 2. Integrate the [Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders) NuGet package with your application. The NuGet is a library of enclave providers, implementing the client-side logic for attestation protocols and for establishing a secure channel with a secure enclave.  
 3. Update your application configuration (for example in web.config or app.config) to define the mapping between an enclave type, configured for your database, and an enclave provider. 
     1. If you're using [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS), you need to map the VBS enclave type to the Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders.HostGuardianServiceEnclaveProvider class from the NuGet package.
-    2. If you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation, you need to map the SGX enclave type to the Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders.AzureAttestationEnclaveProvider class from the NuGet package.
+    2. If you're using [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] and Microsoft Azure Attestation, you need to map the SGX enclave type to the Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders.AzureAttestationEnclaveProvider class from the NuGet package.
 
     For detailed instructions for how to edit your application configuration, see [Tutorial: Develop a .NET Framework application using Always Encrypted with secure enclaves](../tutorial-always-encrypted-enclaves-develop-net-framework-apps.md).
 
 4. Set the `Enclave Attestation URL` keyword in your database connection string to an attestation URL (an attestation service endpoint). You need to obtain an attestation URL for your environment from your attestation service administrator.
    1. If you're using [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS), see [Determine and share the HGS attestation URL](always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
-   2. If you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation, see [Determine the attestation URL for your attestation policy](/azure/azure-sql/database/always-encrypted-enclaves-configure-attestation).
+   2. If you're using [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] and Microsoft Azure Attestation, see [Determine the attestation URL for your attestation policy](/azure/azure-sql/database/always-encrypted-enclaves-configure-attestation).
 
 For a step-by-step tutorial, see [Tutorial: Develop a .NET Framework application using Always Encrypted with secure enclaves](../tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
 

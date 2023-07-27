@@ -246,7 +246,7 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], run `sp_estimate_d
     
 ### On Azure SQL Database
 
-[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] does not support the `sp_estimate_data_compression_savings` stored procedure. The following scripts enable compression without estimating the compression amount. 
+[!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] does not support the `sp_estimate_data_compression_savings` stored procedure. The following scripts enable compression without estimating the compression amount. 
 
 #### To enable compression on a table  
   

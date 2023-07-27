@@ -29,7 +29,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-Returns a description of the built in permissions hierarchy of the server. `sys.fn_builtin_permissions` can only be called on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and it returns all permissions regardless of whether they are supported on the current platform. Most permissions apply to all platforms, but some do not. For example server level permissions cannot be granted on SQL Database. For information about which platforms support each permission, see [Permissions &#40;Database Engine&#41;](../../relational-databases/security/permissions-database-engine.md).
+Returns a description of the built in permissions hierarchy of the server. `sys.fn_builtin_permissions` can only be called on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and it returns all permissions regardless of whether they are supported on the current platform. Most permissions apply to all platforms, but some do not. For example server level permissions cannot be granted on SQL Database. For information about which platforms support each permission, see [Permissions &#40;Database Engine&#41;](../../relational-databases/security/permissions-database-engine.md).
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -92,7 +92,7 @@ When called with the name of one securable class, `sys.fn_builtin_permissions` w
 |AL|ALTER|CERTIFICATE|
 |AL|ALTER|CONTRACT|
 |AL|ALTER|DATABASE|
-|AL|ALTER<br /><br />**Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later versions, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. |DATABASE SCOPED CREDENTIAL|
+|AL|ALTER<br /><br />**Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later versions, and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. |DATABASE SCOPED CREDENTIAL|
 |AL|ALTER|ENDPOINT|
 |AL|ALTER|FULLTEXT CATALOG|
 |AL|ALTER|FULLTEXT STOPLIST|
@@ -157,7 +157,7 @@ When called with the name of one securable class, `sys.fn_builtin_permissions` w
 |CL|CONTROL|CERTIFICATE|
 |CL|CONTROL|CONTRACT|
 |CL|CONTROL|DATABASE|
-|CL|CONTROL<br /><br />**Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later versions, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. |DATABASE SCOPED CREDENTIAL|
+|CL|CONTROL<br /><br />**Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later versions, and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. |DATABASE SCOPED CREDENTIAL|
 |CL|CONTROL|ENDPOINT|
 |CL|CONTROL|FULLTEXT CATALOG|
 |CL|CONTROL|FULLTEXT STOPLIST|
@@ -229,14 +229,14 @@ When called with the name of one securable class, `sys.fn_builtin_permissions` w
 |IN|INSERT|DATABASE|
 |IN|INSERT|OBJECT|
 |IN|INSERT|SCHEMA|
-|KIDC|KILL DATABASE CONNECTION<br /><br />**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|DATABASE|
+|KIDC|KILL DATABASE CONNECTION<br /><br />**Applies to**: [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].|DATABASE|
 |RC|RECEIVE|OBJECT|
 |RF|REFERENCES|ASSEMBLY|
 |RF|REFERENCES|ASYMMETRIC KEY|
 |RF|REFERENCES|CERTIFICATE|
 |RF|REFERENCES|CONTRACT|
 |RF|REFERENCES|DATABASE|
-|RF|REFERENCES<br /><br />**Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later versions, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. |DATABASE SCOPED CREDENTIAL|
+|RF|REFERENCES<br /><br />**Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later versions, and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. |DATABASE SCOPED CREDENTIAL|
 |RF|REFERENCES|FULLTEXT CATALOG|
 |RF|REFERENCES|FULLTEXT STOPLIST|
 |RF|REFERENCES|SEARCH PROPERTY LIST|
@@ -260,7 +260,7 @@ When called with the name of one securable class, `sys.fn_builtin_permissions` w
 |TO|TAKE OWNERSHIP|CERTIFICATE|
 |TO|TAKE OWNERSHIP|CONTRACT|
 |TO|TAKE OWNERSHIP|DATABASE|
-|TO|TAKE OWNERSHIP<br /><br />**Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later versions, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. |DATABASE SCOPED CREDENTIAL|
+|TO|TAKE OWNERSHIP<br /><br />**Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later versions, and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. |DATABASE SCOPED CREDENTIAL|
 |TO|TAKE OWNERSHIP|ENDPOINT|
 |TO|TAKE OWNERSHIP|FULLTEXT CATALOG|
 |TO|TAKE OWNERSHIP|FULLTEXT STOPLIST|
@@ -287,7 +287,7 @@ When called with the name of one securable class, `sys.fn_builtin_permissions` w
 |VW|VIEW DEFINITION|CERTIFICATE|
 |VW|VIEW DEFINITION|CONTRACT|
 |VW|VIEW DEFINITION|DATABASE|
-|VW|VIEW DEFINITION<br /><br />**Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later versions, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. |DATABASE SCOPED CREDENTIAL|
+|VW|VIEW DEFINITION<br /><br />**Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later versions, and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. |DATABASE SCOPED CREDENTIAL|
 |VW|VIEW DEFINITION|ENDPOINT|
 |VW|VIEW DEFINITION|FULLTEXT CATALOG|
 |VW|VIEW DEFINITION|FULLTEXT STOPLIST|

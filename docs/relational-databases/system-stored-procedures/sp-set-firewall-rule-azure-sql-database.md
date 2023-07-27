@@ -34,7 +34,7 @@ sp_set_firewall_rule [@name =] 'name',
 ```  
   
 ## Arguments  
- The following table demonstrates the supported arguments and options in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ The following table demonstrates the supported arguments and options in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].  
   
 |Name|Datatype|Description|  
 |----------|--------------|-----------------|  

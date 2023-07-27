@@ -179,7 +179,7 @@ After the Azure Arc agent on the SQL Server host has completed its operation, th
 The same syntax for creating Azure AD logins and users on Azure SQL Database and Azure SQL Managed Instance can now be used on SQL Server.
 
 > [!NOTE]  
-> On SQL Server, any account that has the `ALTER ANY LOGIN` or `ALTER ANY USER` permission can create Azure AD logins respectively users. The account doesn't need to be an Azure AD login.
+> On SQL Server, any account that has the `ALTER ANY LOGIN` or `ALTER ANY USER` permission can create Azure AD logins or users, respectively. The account doesn't need to be an Azure AD login.
 
 To create a login for an Azure AD account, execute the following T-SQL command in the `master` database:
 

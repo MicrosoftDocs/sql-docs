@@ -681,6 +681,79 @@ Access Token: <your access token>
 You have successfully logged on as: <your client ID>
 ```
 
+Starting from version 12.4, the accessToken callback can be set through the `accessTokenCallbackClass` connection string property. The following example shows how to set accessToken callback using this property:
+
+```java
+import com.microsoft.aad.msal4j.IClientCredential;
+import com.microsoft.aad.msal4j.ClientCredentialFactory;
+import com.microsoft.aad.msal4j.ConfidentialClientApplication;
+import com.microsoft.aad.msal4j.IAuthenticationResult;
+import com.microsoft.aad.msal4j.ClientCredentialParameters;
+import java.sql.Connection;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+ 
+
+public class AADAccessTokenCallbackClass {
+    public static class AccessTokenCallbackClass implements SQLServerAccessTokenCallback {
+        @Override
+        public SqlAuthenticationToken getAccessToken(String spn, String stsurl) {
+            String clientSecret = "..."; // Replace with your client secret.
+            String clientId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your client ID.
+            
+            String scope = spn + "/.default";
+            Set<String> scopes = new HashSet<>();
+            scopes.add(scope);
+            
+            try {
+                ExecutorService executorService = Executors.newSingleThreadExecutor();
+                IClientCredential credential = ClientCredentialFactory.createFromSecret(clientSecret);
+                ConfidentialClientApplication clientApplication = ConfidentialClientApplication
+
+                        .builder(clientId, credential).executorService(executorService).authority(stsurl).build();
+                
+                CompletableFuture<IAuthenticationResult> future = clientApplication
+                        .acquireToken(ClientCredentialParameters.builder(scopes).build());
+                
+                IAuthenticationResult authenticationResult = future.get();
+                String accessToken = authenticationResult.accessToken();
+                
+                return new SqlAuthenticationToken(accessToken, authenticationResult.expiresOnDate().getTime());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+    }
+    
+    public static void main(String[] args) throws Exception {
+        
+        SQLServerDataSource ds = new SQLServerDataSource();
+        ds.setServerName("aad-managed-demo.database.windows.net"); // Replaces with your server name.
+        ds.setDatabaseName("demo"); // Replace with your database name.
+        ds.setAccessTokenCallbackClass(AccessTokenCallbackClass.class.getName());
+        
+        try (Connection connection = ds.getConnection();
+             Statement stmt = connection.createStatement();
+             ResultSet rs = stmt.executeQuery("SELECT SUSER_SNAME()")) {
+            if (rs.next()) {
+                System.out.println("You have successfully logged on as: " + rs.getString(1));
+            }
+        }
+    }
+}
+```
+
+If the connection is successful, you should see the following message as output:
+
+```output
+You have successfully logged on as: <your client ID>
+```
+
 ## Connect using access token callback
 
 Like the access token property, the access token callback allows you to register a method that will provide an access token to the driver. The benefit of this callback over the property is the callback allows the driver to request a new access token when the token is expired. A new access token might be requested in a connection pool scenario when the driver recognizes that the access token has expired. Connection pool libraries must use JDBC connection pooling classes in order to take advantage of this functionality. For more information, see [Using connection pooling](using-connection-pooling.md).

@@ -89,19 +89,19 @@ Now let's create a database named TutorialDB by following the below steps:
 
 1. Paste the following T-SQL code snippet into the query window:
 
-```sql
-IF NOT EXISTS (
-   SELECT name
-   FROM sys.databases
-   WHERE name = N'TutorialDB'
-)
-CREATE DATABASE [TutorialDB];
-GO
+   ```sql
+   IF NOT EXISTS (
+      SELECT name
+      FROM sys.databases
+      WHERE name = N'TutorialDB'
+   )
+   CREATE DATABASE [TutorialDB];
+   GO
 
-ALTER DATABASE [TutorialDB]
-SET QUERY_STORE = ON;
-GO
-```
+   ALTER DATABASE [TutorialDB]
+   SET QUERY_STORE = ON;
+   GO
+   ```
 
 1. Execute the query by selecting **Execute** or selecting F5 on your keyboard.
 

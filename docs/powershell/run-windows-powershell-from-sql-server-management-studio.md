@@ -3,11 +3,11 @@ title: Run Windows PowerShell from SQL Server Management Studio
 description: Learn how to start a Windows PowerShell session from Object Explorer in SQL Server Management Studio, with the path preset to the location of your choice of objects.
 author: markingmyname
 ms.author: maghan
-ms.reviewer: matteot, drskwier
+ms.reviewer: matteot, erinstellato
 ms.date: 07/27/2023
 ms.service: sql
 ms.subservice: sql-server-powershell
-ms.topic: conceptual
+ms.topic: conceptual 
 ---
 
 # Run Windows PowerShell from SQL Server Management Studio

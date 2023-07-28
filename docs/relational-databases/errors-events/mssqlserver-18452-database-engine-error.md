@@ -23,7 +23,7 @@ helpviewer_keywords:
 |Event Source|MSSQLSERVER|  
 |Component|SQLEngine|  
 |Symbolic Name|LOGON_INVALID_CONNECT|  
-|Message Text|Login failed. The login is from an untrusted domain and cannot be used with Integrated authentication.%.*ls|  
+|Message Text|Login failed. The login is from an untrusted domain and cannot be used with Integrated authentication.%.\*ls|  
   
 ## Explanation  
 The user attempted to login with credentials that cannot be validated. Possible causes are:  

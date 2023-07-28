@@ -312,21 +312,21 @@ If you're instructed to restart the computer, do so now.
 
 ## Install SQL Server 2019
 
-##### 1. Installation media (2019)
+#### 1. Installation media (2019)
 
 Insert the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation media. From the root folder, double-click **setup.exe**. To install from a network share, locate the root folder on the share, and then double-click **setup.exe**.
 
-##### 2. SQL Server Installation Center (2019)
+#### 2. SQL Server Installation Center (2019)
 
 The Installation Wizard runs the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Center. To create a new installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], select **Installation** in the left navigation area, and then select **New [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] standalone installation or add features to an existing installation**.
 
-##### 3. Product Key (2019)
+#### 3. Product Key (2019)
 
 On the **Product Key** page, select an option to indicate whether you're installing a free edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or a production version that has a PID key. For more information, see [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2019.md).
 
    To continue, select **Next**.
 
-##### 4. License Terms (2019)
+#### 4. License Terms (2019)
 
 On the **License Terms** page, review the license agreement. If you agree, select the **I accept the license terms and [privacy statement](https://privacy.microsoft.com/privacystatement)** check box, and then select **Next**.
 
@@ -336,31 +336,31 @@ On the **License Terms** page, review the license agreement. If you agree, selec
    > [!NOTE]  
    > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transmits information about your installation experience, as well as other usage and performance data to help Microsoft improve the product. To learn more about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data processing and privacy controls, see the [privacy statement](https://privacy.microsoft.com/privacystatement) and [Configure SQL Server to send feedback to Microsoft](../../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md).
 
-##### 5. Global Rules (2019)
+#### 5. Global Rules (2019)
 
 In the **Global Rules** page, Setup will automatically advance to the **Product Updates** page if there are no rule errors.
 
-##### 6. Microsoft Update (2019)
+#### 6. Microsoft Update (2019)
 
 The **Microsoft Update** page appears next if the **Microsoft Update** check box in **Control Panel** > **All Control Panel Items** > **Windows Update** > **Change settings** isn't selected. Selecting the **Microsoft Update** check box changes the computer settings to include the latest updates for all Microsoft products when you scan for Windows updates.
 
-##### 7. Product Updates (2019)
+#### 7. Product Updates (2019)
 
 On the **Product Updates** page, the latest available [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] product updates are displayed. If no product updates are discovered, Setup doesn't display this page and automatically advances to the **Install Setup Files** page.
 
-##### 8. Install Setup Files (2019)
+#### 8. Install Setup Files (2019)
 
 On the **Install Setup Files** page, Setup provides the progress of downloading, extracting, and installing the Setup files. If an update for Setup is found and you specify to include it, that update will also be installed. If no update is found, Setup will automatically advance.
 
-##### 9. Install Rules (2019)
+#### 9. Install Rules (2019)
 
 On the **Install Rules** page, Setup checks for potential problems that might occur while running Setup. If failures occur, select an item in the **Status** column for more information. Otherwise, select **Next**.
 
-##### 10. Installation Type (2019)
+#### 10. Installation Type (2019)
 
 If this is the first installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the machine, Setup skips the **Installation Type** page and goes directly to the **Feature Selection** page. If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is already installed on the system, you can use the **Installation Type** page to select either to perform a new installation, or to add features to an existing installation. To continue, select **Next**.
 
-##### 11. Feature Selection (2019)
+#### 11. Feature Selection (2019)
 
 On the **Feature Selection** page, select the components for your installation. For example, to install a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)], select **Database Engine Services**.
 
@@ -381,11 +381,11 @@ You can also specify a custom directory for shared components by using the field
 > [!NOTE]  
 > The path specified for each of the above options must be different.
 
-##### 12. Feature Rules (2019)
+#### 12. Feature Rules (2019)
 
 The **Feature Rules** page automatically advances if all rules pass.
 
-##### 13. Instance Configuration (2019)
+#### 13. Instance Configuration (2019)
 
 On the **Instance Configuration** page, specify whether to install a default instance or a named instance. For more information, see [Instance configuration](../../sql-server/install/instance-configuration.md#instance-configuration-page).
 
@@ -400,13 +400,13 @@ On the **Instance Configuration** page, specify whether to install a default ins
 
 The workflow for the rest of the installation depends on the features that you've specified for your installation. Depending on your selections, you might not see all the pages.
 
-##### 14. Java Install Location (2019)
+#### 14. Java Install Location (2019)
 
 Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], PolyBase no longer requires that Oracle JRE 7 Update 51 (at least) be pre-installed on the computer prior to installing the feature. Selecting to install the PolyBase feature will add the **Java Install Location** page to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup displayed after the **Instance Configuration** page. On the Java Install Location page, you can choose to install the Azul Zulu Open JRE included with the [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] installation, or provide a location of a different JRE or JDK that has already been installed on the computer.
 
 Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], Java has been added with Language Extensions. Selecting to install the Java feature will add the **Java Install Location** page to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup dialog window, displayed after the **Instance Configuration** page. On the **Java Install Location** page, you can choose to install the Zulu Open JRE included with the [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] installation, or provide a location of a different JRE or JDK that has already been installed on the computer.
 
-##### 15. Server Configuration (2019)
+#### 15. Server Configuration (2019)
 
 Use the **Service Accounts** tab under the **Server Configuration** page to specify the accounts for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services. The actual services that you configure on this page depend on the features that you selected to install. For more information about configuration settings, see [Installation Wizard help](../../sql-server/install/instance-configuration.md#serverconfig).
 
@@ -423,7 +423,7 @@ To specify the same account for all service accounts in this instance of [!INCLU
 Use the **Collation** tab under the **Server Configuration** page to specify nondefault collations for the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. For more information, see [Collations and Unicode support](../../relational-databases/collations/collation-and-unicode-support.md).
 
 
-##### 16. Database Engine Configuration (2019)
+#### 16. Database Engine Configuration (2019)
 
 - Use the **Server Configuration** tab under the **Database Engine Configuration** page to specify the following options:
 
@@ -458,7 +458,7 @@ Use the **Collation** tab under the **Server Configuration** page to specify non
 
 - Use **FILESTREAM** tab under the **Database Engine Configuration** page to enable FILESTREAM for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Database Engine Configuration - FILESTREAM page](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page).
 
-##### 17. Analysis Services Configuration (2019)
+#### 17. Analysis Services Configuration (2019)
 
 Use the **Analysis Services Configuration - Account Provisioning** page to specify the server mode and the users or accounts that have administrator permissions for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. The server mode determines which memory and storage subsystems are used on the server. Different solution types run in different server modes. If you plan to run multidimensional cube databases on the server, select the default server mode option, **Multidimensional and Data Mining**.
 
@@ -481,7 +481,7 @@ Use the **Data Directories** tab under the **Analysis Services Configuration** p
 
 For more information, see [Analysis Services Configuration - Data Directories page](../../sql-server/install/instance-configuration.md#analysis-services-configuration---data-directories-page).
 
-##### 18. Distributed Replay Controller Configuration (2019)
+#### 18. Distributed Replay Controller Configuration (2019)
 
 Use the **Distributed Replay Controller Configuration** page to specify the users you want to grant administrative permissions to for the Distributed Replay controller service. Users that have administrative permissions have unlimited access to the Distributed Replay controller service.
 
@@ -507,17 +507,17 @@ Use the **Distributed Replay Client Configuration** page to specify the users yo
 
 - To continue, select **Next**.
 
-##### 19. Ready to Install (2019)
+#### 19. Ready to Install (2019)
 
 The **Ready to Install** page shows a tree view of the installation options that you specified during Setup. On this page, Setup indicates whether the **Product Update** feature is enabled or disabled and the final update version.
 
    To continue, select **Install**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup first installs the required prerequisites for the selected features, then it installs the selected features.
 
-##### 20. Installation Progress (2019)
+#### 20. Installation Progress (2019)
 
 During installation, the **Installation Progress** page provides status updates so that you can monitor the installation progress as Setup continues.
 
-##### 21. Complete (2019)
+#### 21. Complete (2019)
 
 After installation, the **Complete** page provides a link to the summary log file for the installation and other important notes.
 
@@ -526,7 +526,7 @@ After installation, the **Complete** page provides a link to the summary log fil
 
 To complete the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation process, select **Close**.
 
-##### 22. Restart (2019)
+#### 22. Restart (2019)
 
 If you're instructed to restart the computer, do so now.
 
@@ -536,15 +536,15 @@ If you're instructed to restart the computer, do so now.
 
 ## Install SQL Server 2022
 
-##### 1. Installation media
+#### 1. Installation media
 
 Insert the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation media. From the root folder, double-click **setup.exe**. To install from a network share, locate the root folder on the share, and then double-click **setup.exe**.
 
-##### 2. SQL Server Installation Center
+#### 2. SQL Server Installation Center
 
 The Installation Wizard runs the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Center. To create a new installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], select **Installation** in the left navigation area, and then select **New [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] standalone installation or add features to an existing installation**.
 
-##### 3. Edition
+#### 3. Edition
 
 On the **Edition** page, select the edition you want to install.
 
@@ -554,7 +554,7 @@ On the **Edition** page, select the edition you want to install.
 
    To continue, select **Next**.
 
-##### 4. License Terms
+#### 4. License Terms
 
 On the **License Terms** page, review the license agreement. If you agree, select the **I accept the license terms and [Privacy Statement](https://privacy.microsoft.com/privacystatement)** check box, and then select **Next**.
 
@@ -564,27 +564,27 @@ On the **License Terms** page, review the license agreement. If you agree, selec
    > [!NOTE]  
    > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transmits information about your installation experience, as well as other usage and performance data to help Microsoft improve the product. To learn more about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data processing and privacy controls, see the [privacy statement](https://privacy.microsoft.com/privacystatement) and [Configure SQL Server to send feedback to Microsoft](../../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md).
 
-##### 5. Global Rules
+#### 5. Global Rules
 
 In the **Global Rules** page, Setup automatically advances to the **Microsoft Update** page if there are no rule errors.
 
-##### 6. Microsoft Update
+#### 6. Microsoft Update
 
 1. The **Microsoft Update** page appears next if the **Microsoft Update** check box in **Control Panel** > **All Control Panel Items** > **Windows Update** > **Change settings** isn't selected. Selecting the **Microsoft Update** check box changes the computer settings to include the latest updates for all Microsoft products when you scan for Windows updates.
 
-##### 7. Product Updates
+#### 7. Product Updates
 
 On the **Product Updates** page, the latest available [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] critical product updates are displayed. If no product updates are discovered, Setup doesn't display this page and automatically advances to the **Install Setup Files** page.
 
-##### 8. Install Setup Files
+#### 8. Install Setup Files
 
 On the **Install Setup Files** page, Setup provides the progress of downloading, extracting, and installing the Setup files. If an update for Setup is found and you specify to include it, that update will also be installed. If no update is found, Setup will automatically advance.
 
-##### 9. Install Rules
+#### 9. Install Rules
 
 On the **Install Rules** page, Setup checks for potential problems that might occur while running Setup. If failures occur, select an item in the **Status** column for more information. Otherwise, select **Next**.
 
-##### 10. Azure Extension for SQL Server
+#### 10. Azure Extension for SQL Server
 
 On the **Azure Extension for SQL Server** page, you can configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to connect to Azure. [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] introduces this extension to enable using Azure services such as Microsoft Defender for Cloud, Microsoft Purview, Azure Active Directory and others. This feature is selected by default. If you wish to proceed without connecting to Azure, you can unselect **Azure Extension for SQL Server**.
 
@@ -620,7 +620,7 @@ Provide the following information:
 
 Select **Next** to proceed.
 
-##### 11. Feature Selection
+#### 11. Feature Selection
 
 On the **Feature Selection** page, select the components for your installation. For example, to install a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)], select **Database Engine Services**.
 
@@ -641,11 +641,11 @@ You can also specify a custom directory for shared components by using the field
 > [!NOTE]  
 > The path specified for each of the above options must be different.
 
-##### 12. Feature Rules
+#### 12. Feature Rules
 
 The **Feature Rules** page automatically advances if all rules pass.
 
-##### 13. Instance Configuration
+#### 13. Instance Configuration
 
 On the **Instance Configuration** page, specify whether to install a default instance or a named instance. For more information, see [Instance configuration](../../sql-server/install/instance-configuration.md#instance-configuration-page).
 
@@ -660,13 +660,13 @@ On the **Instance Configuration** page, specify whether to install a default ins
 
 The workflow for the rest of the installation depends on the features that you've specified for your installation. Depending on your selections, you might not see all the pages.
 
-##### 14. Java Install Location
+#### 14. Java Install Location
 
 Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], PolyBase no longer requires that Oracle JRE 7 Update 51 (at least) be pre-installed on the computer prior to installing the feature. Selecting to install the PolyBase feature will add the **Java Install Location** page to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup displayed after the **Instance Configuration** page. On the Java Install Location page, you can choose to install the Azul Zulu Open JRE included with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation, or provide a location of a different JRE or JDK that has already been installed on the computer.
 
 Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], Java has been added with Language Extensions. Selecting to install the Java feature will add the **Java Install Location** page to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup dialog window, displayed after the **Instance Configuration** page. On the **Java Install Location** page, you can choose to install the Zulu Open JRE included with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation, or provide a location of a different JRE or JDK that has already been installed on the computer.
 
-##### 15. Server Configuration
+#### 15. Server Configuration
 
 - On the **Server Configuration** page, use the **Service Accounts** tab to specify the accounts for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services. The actual services that you configure on this page depend on the features that you selected to install. For more information about configuration settings, see [Installation Wizard help](../../sql-server/install/instance-configuration.md#serverconfig).
 
@@ -682,7 +682,7 @@ Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], Java ha
 
 - On the **Server Configuration** page use the **Collation** tab to specify nondefault collations for the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. For more information, see [Collations and Unicode support](../../relational-databases/collations/collation-and-unicode-support.md).
 
-##### 16. Database Engine Configuration
+#### 16. Database Engine Configuration
 
 - Use the **Server Configuration** tab on the **Database Engine Configuration** page to specify the following options:
 
@@ -711,7 +711,7 @@ Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], Java ha
 
 - Use the **FILESTREAM** tab to enable FILESTREAM for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Database Engine Configuration - FILESTREAM page](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page).
 
-##### 17. Analysis Services Configuration
+#### 17. Analysis Services Configuration
 
 On the **Analysis Services Configuration** use the **Account Provisioning** tab to specify the server mode and the users or accounts that have administrator permissions for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. The server mode determines which memory and storage subsystems are used on the server. Different solution types run in different server modes. If you plan to run multidimensional cube databases on the server, select the default server mode option, **Multidimensional and Data Mining**.
 
@@ -734,17 +734,17 @@ On the **Analysis Services Configuration** use the **Data Directories** page to 
 
    For more information, see [Analysis Services Configuration - Data Directories page](../../sql-server/install/instance-configuration.md#analysis-services-configuration---data-directories-page).
 
-##### 18. Ready to Install
+#### 18. Ready to Install
 
 The **Ready to Install** page shows a tree view of the installation options that you specified during Setup. On this page, Setup indicates whether the **Product Update** feature is enabled or disabled and the final update version.
 
 To continue, select **Install**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup first installs the required prerequisites for the selected features, then it installs the selected features.
 
-##### 19. Installation Progress
+#### 19. Installation Progress
 
 1. During installation, the **Installation Progress** page provides status updates so that you can monitor the installation progress as Setup continues.
 
-##### 20. Complete
+#### 20. Complete
 
 After installation, a *Successful* status on the **Complete** page indicates a successful completion. This page provides a link to the summary log file for the installation and other important notes.
 

@@ -49,6 +49,7 @@ Available installation packages for [!INCLUDE [sssql22-md](../includes/sssql22-m
 | Package name | Applies-to | Description |
 |--------------|----------|-------------|
 |mssql-server-extensibility  | All | Extensibility framework used to run Python and R. |
+|libssl-dev | Ubuntu | OpenSSL project's implementation of the SSL and TLS cryptographic protocols. |
 
 ## Install mssql-server-extensibility package
 
@@ -56,7 +57,7 @@ Available installation packages for [!INCLUDE [sssql22-md](../includes/sssql22-m
 
     **Ubuntu**
     ```bash
-    apt-get install mssql-server-extensibility
+    sudo apt-get install mssql-server-extensibility libssl-dev
     ```
 
     **RHEL**
@@ -84,7 +85,13 @@ Available installation packages for [!INCLUDE [sssql22-md](../includes/sssql22-m
 
 1. Download and install the version of R that is desired. Choose a version of R 4.2 or higher, [available for download directly from cran.r-project.org](https://cran.r-project.org/). Follow the instructions for the desired runtime.
 
-1. Install dependencies for `CompatibilityAPI` and `RevoScaleR`. From an admin R terminal of the version you have installed, run the following:
+1. Open an admin R terminal:
+
+    ```bash
+    sudo R
+    ```
+
+1. Install dependencies for `CompatibilityAPI` and `RevoScaleR` by running the following:
 
     ```r
     # R Terminal
@@ -112,8 +119,8 @@ Available installation packages for [!INCLUDE [sssql22-md](../includes/sssql22-m
 1. Configure the installed R runtime with SQL Server for Linux, where `path/to/` is the file path to the R binary, and `RFolderVersion` is the version-specific folder name for your installation of R runtime, for example, `R4.2`.
 
     ```bash  
-    /opt/mssql/bin/mssql-conf set extensibility rbinpath /usr/lib/R/bin/R
-    /opt/mssql/bin/mssql-conf set extensibility datadirectories /usr/lib/R
+    sudo /opt/mssql/bin/mssql-conf set extensibility rbinpath /usr/lib/R/bin/R
+    sudo /opt/mssql/bin/mssql-conf set extensibility datadirectories /usr/lib/R
     ```
 
 1. Restart the `Launchpadd` service.
@@ -162,8 +169,8 @@ Available installation packages for [!INCLUDE [sssql22-md](../includes/sssql22-m
 1. Configure the installed Python runtime with SQL Server, where `pythonbinbath` is set to the path of the installed python binary, and `datadirectories` includes the path where the packages are installed for the desired version of python, for example, `/usr/lib/python3.10/dist-packages`. Use the following script with your actual installation path:
 
     ```bash
-    /opt/mssql/bin/mssql-conf set extensibility pythonbinpath /usr/bin/python3.10
-    /opt/mssql/bin/mssql-conf set extensibility datadirectories /usr/lib:/usr/lib/python3.10/dist-packages
+    sudo /opt/mssql/bin/mssql-conf set extensibility pythonbinpath /usr/bin/python3.10
+    sudo /opt/mssql/bin/mssql-conf set extensibility datadirectories /usr/lib:/usr/lib/python3.10/dist-packages
     ```
 
 1. Restart the `Launchpadd` service.

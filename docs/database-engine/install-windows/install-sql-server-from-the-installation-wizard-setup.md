@@ -481,9 +481,9 @@ Use the **Data Directories** tab under the **Analysis Services Configuration** p
 
 For more information, see [Analysis Services Configuration - Data Directories page](../../sql-server/install/instance-configuration.md#analysis-services-configuration---data-directories-page).
 
-#### 18. Distributed Replay Controller Configuration (2019)
+#### 18. Distributed Replay Controller (2019)
 
-Use the **Distributed Replay Controller Configuration** page to specify the users you want to grant administrative permissions to for the Distributed Replay controller service. Users that have administrative permissions have unlimited access to the Distributed Replay controller service.
+Use the **Distributed Replay Controller** page to specify the users you want to grant administrative permissions to for the Distributed Replay controller service. Users that have administrative permissions have unlimited access to the Distributed Replay controller service.
 
 - To grant access permissions for the Distributed Replay controller service to the user who's running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup, select the **Add Current User** button.
 
@@ -493,7 +493,9 @@ Use the **Distributed Replay Controller Configuration** page to specify the user
 
 - To continue, select **Next**.
 
-Use the **Distributed Replay Client Configuration** page to specify the users you want to grant administrative permissions to for the Distributed Replay client service. Users that have administrative permissions have unlimited access to the Distributed Replay client service.
+#### 19. Distributed Replay Client (2019)
+
+Use the **Distributed Replay Client** page to specify the users you want to grant administrative permissions to for the Distributed Replay client service. Users that have administrative permissions have unlimited access to the Distributed Replay client service.
 
 - **Controller Name** is optional. The default value is \<*blank*>. Enter the name of the controller that the client computer will communicate with for the Distributed Replay client service:
 
@@ -507,17 +509,17 @@ Use the **Distributed Replay Client Configuration** page to specify the users yo
 
 - To continue, select **Next**.
 
-#### 19. Ready to Install (2019)
+#### 20. Ready to Install (2019)
 
 The **Ready to Install** page shows a tree view of the installation options that you specified during Setup. On this page, Setup indicates whether the **Product Update** feature is enabled or disabled and the final update version.
 
    To continue, select **Install**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup first installs the required prerequisites for the selected features, then it installs the selected features.
 
-#### 20. Installation Progress (2019)
+#### 21. Installation Progress (2019)
 
 During installation, the **Installation Progress** page provides status updates so that you can monitor the installation progress as Setup continues.
 
-#### 21. Complete (2019)
+#### 22. Complete (2019)
 
 After installation, the **Complete** page provides a link to the summary log file for the installation and other important notes.
 
@@ -526,7 +528,7 @@ After installation, the **Complete** page provides a link to the summary log fil
 
 To complete the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation process, select **Close**.
 
-#### 22. Restart (2019)
+#### 23. Restart (2019)
 
 If you're instructed to restart the computer, do so now.
 

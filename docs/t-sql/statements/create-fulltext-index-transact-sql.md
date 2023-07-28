@@ -152,6 +152,9 @@ For more information about full-text indexes, see [Create and Manage Full-Text I
 On **xml** columns, you can create a full-text index that indexes the content of the XML elements, but ignores the XML markup. Attribute values are full-text indexed unless they are numeric values. Element tags are used as token boundaries. Well-formed XML or HTML documents and fragments containing multiple languages are supported. For more information, see [Use Full-Text Search with XML Columns](../../relational-databases/xml/use-full-text-search-with-xml-columns.md).  
   
 We recommend that the index key column is an integer data type. This provides optimizations at query execution time.  
+
+> [!NOTE]  
+> The CREATE FULLTEXT INDEX DDL cannot be placed inside a user transaction. This statement must be run in its own implicit transaction.  
   
 ## Interactions of Change Tracking and NO POPULATION Parameter  
  Whether the full-text index is populated depends on whether change-tracking is enabled and whether WITH NO POPULATION is specified in the ALTER FULLTEXT INDEX statement. The following table summarizes the result of their interaction.  

@@ -301,7 +301,7 @@ sections:
       - question: |
           What is the Recovery Point Objective (RPO)/Recovery Time Objective (RTO) for database restore in Hyperscale?
         answer: |
-          The RPO for point-in-time restore is 0 min. Most point-in-time restore operations complete within 60 minutes regardless of database size. Restore time may be longer for larger databases, and if the database had experienced significant write activity before and up to the restore point in time.
+          The RPO for point-in-time restore is 0 min. Most point-in-time restore operations complete within 60 minutes regardless of database size. Restore time may be longer for larger databases, and if the database had experienced significant write activity before and up to the restore point in time. Restore is a size of data operation if you change the [backup storage redundancy](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy) during the restore process as it changes the storage account type.
 
       - question: |
           Does database backup affect compute performance on my primary or secondary replicas?

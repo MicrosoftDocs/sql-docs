@@ -24,7 +24,7 @@ To see a more comprehensive demonstration of the potential performance improveme
  The following subsections describe each step.  
   
 ### Step 1a: Prerequisite If Using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- The steps in this first subsection apply only if you're running in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and doesn't apply if you're running in [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Do the following:  
+ The steps in this first subsection apply only if you're running in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and doesn't apply if you're running in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. Do the following:  
   
 1.  Use SQL Server Management Studio (SSMS.exe) to connect to your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Or any tool similar to SSMS.exe is fine.  
   
@@ -49,8 +49,8 @@ USE imoltp;
 go  
 ```  
   
-### Step 1b: Prerequisite If Using [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
- This subsection applies only if you're using [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Do the following:  
+### Step 1b: Prerequisite If Using [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]  
+ This subsection applies only if you're using [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. Do the following:  
   
 1.  Decide which existing test database you'll use for the code example.  
   

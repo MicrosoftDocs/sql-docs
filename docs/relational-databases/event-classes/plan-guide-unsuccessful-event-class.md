@@ -27,7 +27,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-curren
  This event is included in the [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] Tuning template.  
 
 > [!NOTE]
-> This event class is not available in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+> This event class is not available in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
   
 ## Plan Guide Unsuccessful Event Class Data Columns  
   

@@ -59,7 +59,7 @@ Versions 18, 17, 13.1, and 13 of the Linux and macOS drivers are supported on th
 |SUSE Linux Enterprise Server 15|Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |    |   |
 |Ubuntu Linux 14.04             |    |    |    |    |    |    |    |    |    |    |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
 |Ubuntu Linux 16.04             |    |    |    |    |    |    |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
-|Ubuntu Linux 18.04             |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |   |
+|Ubuntu Linux 18.04             |    |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |   |
 |Ubuntu Linux 20.04             |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |    |    |    |    |   |
 |Ubuntu Linux 22.04             |Yes |Yes |Yes |    |Yes |    |    |    |    |    |    |    |    |    |    |    |   |
 |Ubuntu Linux 23.04             |Yes |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |   |

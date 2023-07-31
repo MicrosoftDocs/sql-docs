@@ -74,6 +74,7 @@ Offers restricted to dev/test usage only are not eligible (like Pay-As-You-Go De
 ### Supported service level objectives
 
 Choosing a maintenance window other than the default is available on all SLOs **except for**:
+
 * Instance pools
 * Basic, S0 and S1 
 * DC, Fsv2, M-series
@@ -81,60 +82,142 @@ Choosing a maintenance window other than the default is available on all SLOs **
 
 <!-- Check Known limitations in azure-sql/database/service-tier-hyperscale.md as well -->
 
-### Azure region support
+### Azure SQL Managed Instance region support for maintenance windows
 
-Choosing a maintenance window other than the default is currently available in the following regions:
+Choosing a maintenance window for Azure SQL Managed Instance other than the default is currently available in the following regions:
 
-| Azure Region | SQL Managed Instance | SQL Database | SQL Database in an [Azure Availability Zone](high-availability-sla.md) | 
+| Azure Region | SQL Managed Instance |
+|:---|:---|
+| Australia Central 1 | Yes | 
+| Australia Central 2 | Yes | 
+| Australia East | Yes | 
+| Australia Southeast | Yes | 
+| Brazil South | Yes | 
+| Brazil Southeast | Yes | 
+| Canada Central | Yes | 
+| Canada East | Yes | 
+| Central India | Yes | 
+| Central US | Yes | 
+| China East 2 |Yes | 
+| China North 2 |Yes|
+| East US | Yes | 
+| East US 2 | Yes | 
+| East Asia | Yes | 
+| France Central | Yes |
+| France South | Yes | 
+| Germany West Central | Yes |
+| Germany North | Yes |  
+| Japan East | Yes | 
+| Japan West | Yes | 
+| Korea Central | Yes |
+| Korea South | Yes | 
+| North Central US | Yes |
+| North Europe | Yes | 
+| Norway East | Yes | 
+| Norway West | Yes | 
+| South Africa North | Yes |
+| South Africa West | Yes | 
+| South Central US | Yes | 
+| South India | Yes | 
+| Southeast Asia | Yes | 
+| Switzerland North | Yes |
+| Switzerland West | Yes |
+| UAE Central | Yes | 
+| UAE North | Yes | 
+| UK South | Yes | 
+| UK West | Yes | 
+| US Gov Arizona | Yes |
+| US Gov Texas| Yes | 
+| US Gov Virginia | Yes | 
+| West Central US | Yes | 
+| West Europe | Yes | 
+| West India | Yes | 
+| West US | Yes |
+| West US 2 | Yes | 
+| West US 3 | Yes | 
+
+
+### Azure SQL Database region support for maintenance windows
+
+Choosing a maintenance window for Azure SQL Database other than the default is currently available in the following regions, organized by purchasing model.
+
+The following table is for databases that do not have [zone-redundancy](high-availability-sla.md#zone-redundant-availability) enabled.
+
+| Azure Region | SQL Database DTU: Premium | SQL Database DTU: Basic, Standard | SQL Database vCore |
 |:---|:---|:---|:---|
-| Australia Central 1 | Yes | | |
-| Australia Central 2 | Yes | | |
 | Australia East | Yes | Yes | Yes |
-| Australia Southeast | Yes | Yes | |
-| Brazil South | Yes | Yes |  |
-| Brazil Southeast | Yes | Yes |  |
-| Canada Central | Yes | Yes | Yes |
-| Canada East | Yes | Yes | |
-| Central India | Yes | Yes | |
-| Central US | Yes | Yes | Yes |
-| China East 2 |Yes | Yes ||
-| China North 2 |Yes|Yes ||
-| East US | Yes | Yes | Yes |
-| East US 2 | Yes | Yes | Yes |
-| East Asia | Yes | Yes | |
-| France Central | Yes | Yes | |
-| France South | Yes | Yes | |
-| Germany West Central | Yes | Yes |  |
-| Germany North | Yes |  |  |
+| Australia Southeast | | Yes | |
+| Brazil South | | Yes |  |
+| Brazil Southeast | | Yes |  |
+| Canada Central  | Yes |  Yes | Yes |
+| Canada East  | | Yes | |
+| Central India | |Yes | |
+| Central US | Yes |Yes | Yes |
+| China East 2 | | Yes ||
+| China North 2 | | Yes ||
+| East US | Yes | Yes |
+| East US 2  | | Yes | Yes |
+| East Asia  | | Yes | |
+| France Central  | | Yes | |
+| France South  | | Yes | |
+| Germany West Central | | Yes |  |
 | Japan East | Yes | Yes | Yes |
-| Japan West | Yes | Yes | |
-| Korea Central | Yes | | |
-| Korea South | Yes | | |
-| North Central US | Yes | Yes | |
+| Japan West | | Yes | |
+| North Central US | | Yes | |
 | North Europe | Yes | Yes | Yes |
-| Norway East | Yes | | |
-| Norway West | Yes | | |
-| South Africa North | Yes | | | 
-| South Africa West | Yes | | | 
 | South Central US | Yes | Yes | Yes |
-| South India | Yes | Yes | |
-| Southeast Asia | Yes | Yes | Yes |
-| Switzerland North | Yes | Yes | |
-| Switzerland West | Yes | | |
-| UAE Central | Yes | | |
-| UAE North | Yes | Yes | |
-| UK South | Yes | Yes | Yes |
-| UK West | Yes | Yes | |
-| US Gov Arizona | Yes | | |
-| US Gov Texas| Yes | Yes | | 
-| US Gov Virginia | Yes | Yes | | 
-| West Central US | Yes | Yes | |
+| South India | | Yes | |
+| Southeast Asia | | Yes | Yes |
+| Switzerland North | | Yes | |
+| UAE North | | Yes | |
+| UK South | | Yes | Yes |
+| UK West | | Yes | |
+| US Gov Texas | | Yes | | 
+| US Gov Virginia | | Yes | | 
+| West Central US | | Yes | |
 | West Europe | Yes | Yes | Yes |
-| West India | Yes | | |
 | West US | Yes | Yes |  |
 | West US 2 | Yes | Yes | Yes |
 | West US 3 | Yes | | |
 
+The following table is for [zone-redundant](high-availability-sla.md#zone-redundant-availability) databases.
+
+| Azure Region | SQL Database DTU: Premium in an [Azure Availability Zone](high-availability-sla.md) | All other Azure SQL Database purchasing models and tiers in an [Azure Availability Zone](high-availability-sla.md) |
+|:---|:---|:---|
+| Australia East |  | Yes |
+| Australia Southeast |  | |
+| Brazil South | |  |
+| Brazil Southeast |  |  |
+| Canada Central  |  | Yes |
+| Canada East  |  | |
+| Central India |  | |
+| Central US | Yes | Yes |
+| China East 2 |  ||
+| China North 2 |  ||
+| East US | Yes | |
+| East US 2  |  | Yes |
+| East Asia  |  | |
+| France Central  | | |
+| France South  |  | |
+| Germany West Central  |  |  |
+| Japan East |  | Yes |
+| Japan West |  | |
+| North Central US |  | |
+| North Europe |  | Yes |
+| South Central US |  | Yes |
+| South India |  | |
+| Southeast Asia |  | Yes |
+| Switzerland North |  | |
+| UAE North |  | |
+| UK South |  | Yes |
+| UK West |  | |
+| US Gov Texas |  | | 
+| US Gov Virginia |  | | 
+| West Central US |  | |
+| West Europe |  | Yes |
+| West US |  |  |
+| West US 2 |  | Yes |
+| West US 3 |  | |
 
 ## Gateway maintenance
 

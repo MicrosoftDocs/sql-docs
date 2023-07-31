@@ -91,7 +91,8 @@ MERGE
 <merge_hint>::=  
 {  
     { [ <table_hint_limited> [ ,...n ] ]  
-    [ [ , ] INDEX ( index_val [ ,...n ] ) ] }  
+    [ [ , ] { INDEX ( index_val [ ,...n ] ) | INDEX = index_val }]
+    }  
 }  
 
 <merge_search_condition> ::=  

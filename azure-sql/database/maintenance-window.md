@@ -156,7 +156,7 @@ The following table is for databases that do not have [zone-redundancy](high-ava
 | China East 2 | | Yes | Yes |
 | China North 2 | | Yes | Yes|
 | East US | Yes | Yes |
-| East US 2  | | Yes | Yes |
+| East US 2  | Yes | Yes | Yes |
 | East Asia  | | Yes |  Yes |
 | France Central  | | Yes | YEs |
 | France South  | | Yes | Yes |
@@ -187,6 +187,7 @@ The following table is for [zone-redundant](high-availability-sla.md#zone-redund
 | Australia East |  | Yes |
 | Canada Central  |  | Yes |
 | Central US | Yes | Yes |
+| East US 1  | Yes | Yes |
 | East US 2  |  | Yes |
 | Japan East |  | Yes |
 | North Europe |  | Yes |

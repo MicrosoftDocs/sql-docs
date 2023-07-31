@@ -4,15 +4,15 @@ description: Learn how to save on licensing costs by using a standby Azure SQL M
 author: Stralle
 ms.author: strrodic
 ms.reviewer: mathoma
-ms.date: 05/25/2023
+ms.date: 07/30/2023
 ms.service: sql-managed-instance
 ms.subservice: high-availability
 ms.topic: how-to
 ---
 
 # Configure a license-free standby replica for Azure SQL Managed Instance
-
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
+
 This article describes how you can save on licensing costs by designating your read-only secondary managed instance for stand-by when using Azure SQL Managed Instance.
 
 ## Overview
@@ -64,17 +64,39 @@ You have two options to designate your secondary managed instance as standby:
 
 ### New failover group
 
-You can designate your secondary instance as a standby replica when you create a new failover group by using the Azure portal.
+You can designate your secondary instance as a standby replica when you create a new failover group by using the Azure portal, Azure PowerShell, and the Azure CLI. 
 
-When you create your failover group in the Azure portal, for **Failover rights**, select **On**. Select the **I confirm that I will use the secondary instance as a standby replica** checkbox. Select **Create** to create your failover group.
+### [Azure portal](#tab/azure-portal)
+
+When you create a new failover group in the Azure portal, for **Failover rights**, select **On**. Check the box next to **I confirm that I will use the secondary instance as a standby replica**. Select **Create** to create your failover group.
 
 :::image type="content" source="media/auto-failover-group-standby-replica-how-to-configure/new-failover-group.png" alt-text="Screenshot that shows creating a new failover group in the Azure portal, with the Failover rights option highlighted. ":::
 
 For more information, see [Configure an auto-failover group](auto-failover-group-configure-sql-mi.md) or [Tutorial: Add SQL Managed Instance to a failover group](failover-group-add-instance-tutorial.md).
 
+### [Azure PowerShell](#tab/azure-powershell)
+
+You can use Azure PowerShell to create a new failover group, and designate your secondary instance as a standby replica. 
+
+When you create a new failover group by using Azure PowerShell, use the:   
+[New-AzSqlDatabaseInstanceFailoverGroup](/powershell/module/az.sql/new-azsqldatabaseinstancefailovergroup) command, and specify `standby` for the `SecondaryType` parameter. 
+
+### [Azure CLI](#tab/azure-cli)
+
+You can use the Azure CLI to create a new failover group, and designate your secondary instance as a standby replica. 
+
+When you create a new failover group by using the Azure CLI, use the:   
+[az sql instance-failover-group create](/cli/azure/sql/instance-failover-group#az-sql-instance-failover-group-create) command, and specify `standby` for the `--secondary-type` parameter. 
+
+---
+
 ### Existing failover group
 
-To update the failover rights for an existing failover group:
+You can use the Azure portal, Azure PowerShell, and the Azure CLI to update failover rights for an existing failover group. 
+
+### [Azure portal](#tab/azure-portal)
+
+To update the failover rights for an existing failover group by using the Azure portal, follow these steps: 
 
 1. In the [Azure portal](https://portal.azure.com), go to your SQL Managed Instance resource.
 1. In the left menu under **Data management**, select **Failover groups**.
@@ -90,7 +112,28 @@ To update the failover rights for an existing failover group:
 
 Alternatively, you can enable failover rights in **Compute + storage** for your *secondary* managed instance. To learn more, review [View licensing rights](#view-licensing-rights).
 
+### [Azure PowerShell](#tab/azure-powershell)
+
+You can use Azure PowerShell to update an existing failover group, and designate your secondary instance as a standby replica. 
+
+When you update an existing failover group by using Azure PowerShell, use the:   
+[Set-AzSqlDatabaseInstanceFailoverGroup](/powershell/module/az.sql/set-azsqldatabaseinstancefailovergroup) command, and specify `standby` for the `SecondaryType` parameter. 
+
+### [Azure CLI](#tab/azure-cli)
+
+You can use the Azure CLI to update an existing failover group, and designate your secondary instance as a standby replica. 
+
+When you update an existing failover group by using the Azure CLI, use the:  
+[az sql instance-failover-group update](/cli/azure/sql/instance-failover-group#az-sql-instance-failover-group-update) command, and specify `standby` for the `--secondary-type` parameter. 
+
+---
+
+
 ## View licensing rights
+
+You can check the licensing rights for an existing failover group by using the Azure portal, Azure PowerShell or the Azure CLI. 
+
+### [Azure portal](#tab/azure-portal)
 
 In the Azure portal, you can check the licensing for your secondary managed instance in two locations:
 
@@ -110,6 +153,20 @@ In **Compute + storage** for your *secondary managed instance*, confirm that the
 If failover rights aren't activated and you qualify for the benefit, you also see the following recommendation in **Overview** for either instance. To activate the benefit, select the recommendation to go to **Edit Configurations**.
 
 :::image type="content" source="media/auto-failover-group-standby-replica-how-to-configure/failover-rights-notification.png" alt-text="Screenshot that shows the SQL Managed Instance overview pane, and recommendations showing failover rights aren't used." :::
+
+### [Azure PowerShell](#tab/azure-powershell)
+
+Use the Azure PowerShell [Get-AzSqlDatabaseInstanceFailoverGroup](/powershell/module/az.sql/get-azsqldatabaseinstancefailovergroup) command to determine failover rights for an existing failover group. 
+
+A value of `Standby` for the `SecondaryType` parameter indicates failover rights are activated, and you're currently not paying licensing costs for this secondary standby instance. 
+
+### [Azure CLI](#tab/azure-cli)
+
+Use the Azure CLI [az sql instance-failover-group show](/cli/azure/sql/instance-failover-group#az-sql-instance-failover-group-show) command to determine failover rights for an existing failover group. 
+
+A value of `Standby` for the `secondaryType` parameter indicates failover rights are activated, and you're currently not paying licensing costs for this secondary standby instance. 
+
+---
 
 ## Next steps
 

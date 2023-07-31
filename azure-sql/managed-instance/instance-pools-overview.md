@@ -99,7 +99,7 @@ The public preview has the following limitations:
 
 ## SQL features supported
 
-Managed instances created in pools support the same [compatibility levels and features supported in single managed instances](sql-managed-instance-paas-overview.md#sql-features-supported).
+Managed instances created in pools support the same [compatibility levels and features supported in single managed instances](sql-managed-instance-paas-overview.md#supported-sql-features).
 
 Every managed instance deployed in a pool has a separate instance of SQL Agent.
 

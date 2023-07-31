@@ -336,10 +336,16 @@ Now you can continue to the [Confirmation](#confirmation) section.
 
 ### Confirmation
 
-1. We recommend using the `Year2OrderID` tag to link your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances to your ESU invoice number for easy reference. The `Year2EntitlementConfirmed` tag is automatically filled in.
+1. We recommend you use a year-specific tag to link your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances to your ESU invoice number for easy reference. For example:
+
+   - First year: `Year1OrderID`
+   - Second year: `Year2OrderID`
+   - Third year: `Year3OrderID`
 
    > [!NOTE]  
    > If you use Azure services such as Azure Dedicated Host, Azure VMware Solution, Azure Nutanix Solution, and Azure Stack (Hub, Edge, and HCI), you can set the ESU invoice number to `InvoiceNotNeeded`.
+
+   The `Year2EntitlementConfirmed` tag is automatically filled in.
 
    :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-tags.png" alt-text="Screenshot of confirmation tags.":::
 

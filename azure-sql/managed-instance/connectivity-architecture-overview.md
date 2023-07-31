@@ -98,7 +98,7 @@ Applications can connect to SQL Managed Instance via three types of endpoints. T
 
 - [VNet-local endpoint](#vnet-local-endpoint)
 - [Public endpoint](#public-endpoint)
-- [Private endpoints (preview)](#private-endpoint-preview)
+- [Private endpoints](#private-endpoints)
 
 :::image type="content" source="media/connectivity-architecture-overview/4-connectivity-architecture-endpoints.png" border="false" alt-text="Diagram that shows the scope of visibility for VNet-local, public, and private endpoints to an Azure SQL Managed Instance.":::
 
@@ -120,11 +120,11 @@ Public endpoint always operates in [proxy connection type](connection-types-over
 
 Learn how to set up a public endpoint in [Configure public endpoint for Azure SQL Managed Instance](public-endpoint-configure.md).
 
-### Private endpoint (preview)
+### Private endpoints
 
-A private endpoint, currently in preview for Azure SQL Managed Instance, is an optional fixed IP address in another virtual network that conducts traffic to your SQL managed instance. One Azure SQL Managed Instance can have multiple private endpoints in multiple virtual networks. Private endpoints allow TDS traffic only to reach SQL Managed Instance on port 1433 and cannot be used for integration scenarios, such as failover groups, Managed Instance link, and other similar technologies.
+A private endpoint is an optional fixed IP address in another virtual network that conducts traffic to your SQL managed instance. One Azure SQL Managed Instance can have multiple private endpoints in multiple virtual networks. Private endpoints allow TDS traffic only to reach SQL Managed Instance on port 1433 and cannot be used for integration scenarios, such as failover groups, Managed Instance link, and other similar technologies.
 
-When connecting to a private endpoint, always use the domain name since connecting to Azure SQL Managed Instance via its IP address is not supported.
+When connecting to a private endpoint, always use the domain name since connecting to Azure SQL Managed Instance via its IP address is not supported yet.
 
 Private endpoints always operate in [proxy connection type](connection-types-overview.md).
 

@@ -89,7 +89,7 @@ Consider the following when using zone-redundancy:
 
 - During preview, zone redundancy for SQL Managed Instance is available in the Business Critical service tier. 
 - For up to date information about the regions that support zone-redundant instances, see [Services support by region](/azure/availability-zones/az-region).
-- For zone redundant availability, choosing a [maintenance window](../database/maintenance-window.md) other than the default is currently available in [select regions](../database/maintenance-window.md?preserve-view=true&view=azuresql#azure-region-support).
+- For zone redundant availability, choosing a [maintenance window](../database/maintenance-window.md) other than the default is currently available in [select regions](../database/maintenance-window.md?preserve-view=true&view=azuresql#azure-sql-managed-instance-region-support-for-maintenance-windows).
 
 During preview, zone redundancy for SQL Managed Instance is available in the Business Critical service tier and supported in the following regions:
 

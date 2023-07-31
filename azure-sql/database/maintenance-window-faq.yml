@@ -148,7 +148,7 @@ sections:
           
       - question: Can I check if my instance has been upgraded in the last X days?
         answer: |
-          You can check this only if you have configured advanced notifications in the service health. You can use the [Azure Resource Graph Explorer](/azure/governance/resource-graph/overview) to [retrieve a list of maintenance events](maintenance-window.md#retrieving-list-of-maintenance-events), or use the [Service Health overview page](/azure/service-health/service-health-overview).
+          You can check this only if you have configured advanced notifications in the service health. You can use the [Azure Resource Graph Explorer](/azure/governance/resource-graph/overview) to [retrieve a list of maintenance events](maintenance-window.md#retrieve-list-of-maintenance-events), or use the [Service Health overview page](/azure/service-health/service-health-overview).
 
 additionalContent: |
  ## See Also

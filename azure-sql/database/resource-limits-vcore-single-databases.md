@@ -333,6 +333,8 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 <sup>4</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
+
+
 ### Hyperscale DC-series (Gen5) compute generation (part 2 of 2)
 
 |Compute size (service objective)|HS_DC_14|HS_DC_16|HS_DC_18|HS_DC_20|HS_DC_32|HS_DC_40|
@@ -761,7 +763,7 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 |Compute size (service objective)|GP_DC_2|GP_DC_4|GP_DC_6|GP_DC_8|GP_DC_10|GP_DC_12|
 |:---| ---:|---:|---:|---:|---:|---:|
 |Hardware|DC-series|DC-series|DC-series|DC-series|DC-series|DC-series|
-|vCores|2|4|6|8|10|12|
+|vCores|2|4|6|8|10<sup>4</sup>|12<sup>4</sup>|
 |Memory (GB)|9|18|27|36|45|54|
 |Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|
 |In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|N/A|
@@ -788,12 +790,14 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 
 <sup>3</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
+<sup>4</sup> DC hardware series vCore offerings from 10 to 40 are currently in Preview.
+
 ### General Purpose DC-series hardware (part 2 of 2)
 
 |Compute size (service objective)|GP_DC_14|GP_DC_16|GP_DC_18|GP_DC_20|GP_DC_32|GP_DC_40|
 |:---| ---:|---:|---:|---:|---:|---:|
 |Hardware|DC-series|DC-series|DC-series|DC-series|DC-series|DC-series|
-|vCores|14|16|18|20|32|40|
+|vCores|14<sup>4</sup>|16<sup>4</sup>|18<sup>4</sup>|20<sup>4</sup>|32<sup>4</sup>|40<sup>4</sup>|
 |Memory (GB)|63|72|81|90|144|180|
 |Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|
 |In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|N/A|
@@ -819,6 +823,8 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
 <sup>3</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
+
+<sup>4</sup> DC hardware series vCore offerings from 10 to 40 are currently in Preview.
 
 ## <a id="business-critical---provisioned-compute---gen5"></a>Business Critical - provisioned compute - standard-series (Gen5)
 
@@ -998,7 +1004,7 @@ For important information about M-series hardware availability, see [Azure offer
 |Compute size (service objective)|BC_DC_2|BC_DC_4|BC_DC_6|BC_DC_8|BC_DC_10|BC_DC_12|
 |:--- | --: |--: |--: |--: |--: |--: |
 |Hardware|DC-series|DC-series|DC-series|DC-series|DC-series|DC-series|
-|vCores|2|4|6|8|10|12|
+|vCores|2|4|6|8|10<sup>4</sup>|12<sup>4</sup>|
 |Memory (GB)|9|18|27|36|45|54|
 |Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|
 |In-memory OLTP storage (GB)|1.7|3.7|5.9|8.2|10.65|13.13|
@@ -1026,12 +1032,14 @@ For important information about M-series hardware availability, see [Azure offer
 
 <sup>3</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
+<sup>4</sup> DC hardware series vCore offerings from 10 to 40 are currently in Preview.
+
 ### Business Critical DC-series hardware (part 2 of 2)
 
 |Compute size (service objective)|BC_DC_14|BC_DC_16|BC_DC_18|BC_DC_20|BC_DC_32|BC_DC_40|
 |:--- | --: |--: |--: |--: |--: |--: |
 |Hardware|DC-series|DC-series|DC-series|DC-series|DC-series|DC-series|
-|vCores|14|16|18|20|32|40|
+|vCores|14<sup>4</sup>|16<sup>4</sup>|18<sup>4</sup>|20<sup>4</sup>|32<sup>4</sup>|40<sup>4</sup>|
 |Memory (GB)|63|72|81|90|144|180|
 |Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|
 |In-memory OLTP storage (GB)|15.61|18.09|20.57|23.05|37.93|47.86|
@@ -1059,11 +1067,13 @@ For important information about M-series hardware availability, see [Azure offer
 
 <sup>3</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
+<sup>4</sup> DC hardware series vCore offerings from 10 to 40 are currently in Preview.
+
 ## Previously available hardware
 
 This section includes details on previously available hardware.
 
-Gen4 hardware has been retired and is not available for provisioning, upscaling, or downscaling. Migrate [your database to a supported hardware generation](service-tiers-sql-database-vcore.md) for a wider range of vCore and storage scalability, accelerated networking, best IO performance, and minimal latency. For more information, see [Azure SQL Database Gen 4 hardware approaching end of life](https://azure.microsoft.com/updates/gen-4-hardware-on-azure-sql-database-approaching-end-of-life-in-2020/).
+Gen4 hardware has been retired and is not available for provisioning, upscaling, or downscaling. [Migrate your database to a supported hardware generation](service-tiers-sql-database-vcore.md) for a wider range of vCore and storage scalability, accelerated networking, best IO performance, and minimal latency. For more information, see [Azure SQL Database Gen 4 hardware approaching end of life](https://azure.microsoft.com/updates/gen-4-hardware-on-azure-sql-database-approaching-end-of-life-in-2020/).
  
 ## Next steps
 

@@ -5,7 +5,7 @@ description: Learn about the new features and documentation improvements for Azu
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 07/19/2023
+ms.date: 07/31/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: whats-new
@@ -35,6 +35,7 @@ The following table lists the features of Azure SQL Database that are currently 
 | [Always Encrypted with VBS enclaves](always-encrypted-enclaves-getting-started-vbs.md) | Take advantage of rich confidential queries and in-place cryptographic operations for Azure SQL Database with Always Encrypted with virtualization-based security (VBS) enclaves. | 
 | [Azure SQL triggers for Azure Functions](/azure/azure-functions/functions-bindings-azure-sql-trigger) | Azure Functions supports function triggers for the Azure SQL and SQL Server products. | 
 | [Database level CMK with TDE](transparent-data-encryption-byok-database-level-overview.md) | Database level CMK allows setting the TDE protector as a customer-managed key individually for each database within the server. |
+| [DC-series hardware up to 40 vCores](resource-limits-vcore-single-databases.md) | DC-series hardware from 10 to 40 vCores is now in preview for in General Purpose, Business Critical, and Hyperscale provisioned compute. |
 | [Degrees of Parallelism (DOP) feedback](/sql/relational-databases/performance/intelligent-query-processing-feedback#degree-of-parallelism-dop-feedback) | DOP Feedback is currently available as a limited preview. For more information and how to apply for the preview, see [Announcing Degree of Parallelism Feedback Limited Preview](https://techcommunity.microsoft.com/t5/azure-sql-blog/announcing-degree-of-parallelism-feedback-limited-preview/ba-p/3806924). |
 | [Elastic jobs](elastic-jobs-overview.md) | The elastic jobs feature is the SQL Server Agent replacement for Azure SQL Database as a PaaS offering.  |
 | [Elastic queries](elastic-query-overview.md) | The elastic queries feature allows for cross-database queries in Azure SQL Database. |
@@ -60,7 +61,6 @@ The following table lists the new generally available (GA) features of Azure SQL
 
 | Feature | GA Month | Details |
 | ---| --- |--- |
-| [DC-series hardware up to 40 vCores](resource-limits-vcore-single-databases.md) | July 2023 | DC-series hardware is now available for up to 40 vCore counts in General Purpose, Business Critical, and Hyperscale provisioned compute. |
 | [Hyperscale premium-series and premium-series memory optimized hardware](service-tier-hyperscale.md#compute-resources) | July 2023 | Premium-series and premium-series memory optimized hardware is now available for Hyperscale databases.|
 | [128 vCore](resource-limits-vcore-single-databases.md#general-purpose---provisioned-compute---gen5) | June 2023 | Provision your Azure SQL Database with up to [128 vCores, now generally available](https://techcommunity.microsoft.com/t5/azure-sql-blog/announcing-preview-of-128-vcore-provisioned-compute-size-on/ba-p/3631211). | 
 | [Azure SQL bindings for Azure Functions](/azure/azure-functions/functions-bindings-azure-sql-trigger) | May 2023 | Azure Functions supports input and output bindings for the Azure SQL and SQL Server products. | 
@@ -95,7 +95,7 @@ Learn about significant changes to the Azure SQL Database documentation. For pre
 | Changes | Details |
 | --- | --- |
 | Hyperscale premium-series and premium-series memory optimized hardware | Premium-series and premium-series memory optimized hardware is [now available for Hyperscale databases](service-tier-hyperscale.md#compute-resources).|
-
+| DC-series hardware up to 10 vCores | [DC-series hardware up to 40 vCores](resource-limits-vcore-single-databases.md) is now in preview for in General Purpose, Business Critical, and Hyperscale provisioned compute. This supports [Always Encrypted on Azure SQL Database with secure enclaves with up to 40 vCores](https://techcommunity.microsoft.com/t5/azure-sql-blog/always-encrypted-with-secure-enclaves-dc-series-databases-with/ba-p/3872338). |
 
 ### June 2023
 

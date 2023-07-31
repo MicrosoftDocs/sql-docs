@@ -5,7 +5,7 @@ description: Export a database to a BACPAC file using the Azure portal or a CLI
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, jeschult
-ms.date: 9/29/2022
+ms.date: 7/31/2023
 ms.service: sql-db-mi
 ms.subservice: data-movement
 ms.topic: how-to
@@ -33,7 +33,8 @@ When you need to export a database for archiving or for moving to another platfo
   - Cease all read and write activity during the export.
   - Use a [clustered index](/sql/relational-databases/indexes/clustered-and-nonclustered-indexes-described) with non-null values on all large tables. Without clustered indexes, an export may fail if it takes longer than 6-12 hours. This is because the export service needs to complete a table scan to try to export entire table. A good way to determine if your tables are optimized for export is to run **DBCC SHOW_STATISTICS** and make sure that the *RANGE_HI_KEY* is not null and its value has good distribution. For details, see [DBCC SHOW_STATISTICS](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql).
 - [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md) does not currently support exporting a database to a BACPAC file using the Azure portal or Azure PowerShell. To export a managed instance into a BACPAC file, use SQL Server Management Studio (SSMS) or [SQLPackage](/sql/tools/sqlpackage).
-- For larger databases, BACPAC export/import may take a long time, and may fail for various reasons.
+- Hyperscale tier of Azure SQL Database is supported only using SQL Server Management Studio (SSMS) and SqlPackage version 18.4 and later. 
+- For larger databases, BACPAC export/import may take a long time, and may fail for various reasons. 
 
 > [!NOTE]
 > BACPACs are not intended to be used for backup and restore operations. Azure automatically creates backups for every user database. For details, see [business continuity overview](business-continuity-high-availability-disaster-recover-hadr-overview.md) and [SQL Database backups](automated-backups-overview.md).

@@ -562,7 +562,7 @@ Index or specified partitions are not compressed.
 Specifies the partitions to which the DATA_COMPRESSION or XML_COMPRESSION settings apply. If the index isn't partitioned, the ON PARTITIONS argument will generate an error. If the ON PARTITIONS clause isn't provided, the DATA_COMPRESSION or XML_COMPRESSION option applies to all partitions of a partitioned index.
 
 > [!NOTE]  
-> XML_COMPRESSION is only available starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] Preview.
+> XML_COMPRESSION is only available starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 `<partition_number_expression>` can be specified in the following ways:
 

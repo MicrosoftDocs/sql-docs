@@ -1,8 +1,8 @@
 ---
 title: What is the SQL Server IaaS Agent extension? (Windows)
 description: This article describes how the SQL Server IaaS Agent extension helps automate management specific administration tasks of SQL Server on Azure Windows VMs. These include features such as automated backup, automated patching, Azure Key Vault integration, licensing management, storage configuration, and central management of all SQL Server VM instances.
-author: adbadram
-ms.author: adbadram
+author: ebruersan
+ms.author: ebrue
 ms.reviewer: mathoma
 ms.date: 03/26/2023
 ms.service: virtual-machines-sql
@@ -100,6 +100,7 @@ The following table defines the permissions and custom roles used by each featur
 |[Credential management](azure-key-vault-integration-configure.md)  | Server permission - CONTROL SERVER|SqlIaaSExtension_CredentialMgmt          |
 |[Availability group portal management](manage-sql-vm-portal.md#high-availability-preview) |sysadmin|         |
 |[R Service](/sql/machine-learning/r/sql-server-r-services)| Server permission - ALTER SETTINGS        | SqlIaaSExtension_RService         |
+|[SQL authentication](manage-sql-vm-portal.md#security-configuration) | sysadmin | |
 |[SQL Server instance settings](manage-sql-vm-portal.md#license-and-edition)|Server permission - ALTER ANY LOGIN, ALTER SETTINGS | SqlIaaSExtension_SqlInstanceSetting          |
 |[Storage configuration](storage-configuration.md)|Server permission - ALTER ANY DATABASE|SqlIaaSExtension_StorageConfig       |
 |[Status reporting](manage-sql-vm-portal.md#access-the-resource) |Server permission - VIEW ANY DEFINITION, VIEW SERVER STATE, ALTER ANY LOGIN, CONNECT SQL         | SqlIaaSExtension_StatusReporting          |

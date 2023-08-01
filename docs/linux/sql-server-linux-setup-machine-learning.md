@@ -34,9 +34,7 @@ You can install Machine Learning Services on Red Hat Enterprise Linux (RHEL), SU
 
 * (R only) Microsoft R Open (MRO) provides the base R distribution for the R feature in SQL Server and is a prerequisite for using RevoScaleR, MicrosoftML, and other R packages installed with Machine Learning Services.
     * The required version is MRO 3.5.2.
-    * Choose from the following two approaches to install MRO:
-        * Download the MRO tarball from MRAN, unpack it, and run its install.sh script. You can follow the [installation instructions on MRAN](https://mran.microsoft.com/releases/3.5.2) if you want this approach.
-        * Register the **packages.microsoft.com** repo as described below to install the MRO distribution: microsoft-r-open-mro and microsoft-r-open-mkl. 
+    * Register the `packages.microsoft.com` repo as described below to install the MRO distribution: `microsoft-r-open-mro` and `microsoft-r-open-mkl`. 
     * See the installation sections below for how to install MRO.
 
 * You should have a tool for running T-SQL commands. 

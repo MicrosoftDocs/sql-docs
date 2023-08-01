@@ -3,7 +3,7 @@ title: What is SQL Server Machine Learning Services (Python and R)?
 description: Machine Learning Services is a feature in SQL Server that gives the ability to run Python and R scripts with relational data. This article explains the basics of SQL Server Machine Learning Services and how to get started.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 05/24/2022
+ms.date: 08/01/2023
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: overview
@@ -101,7 +101,7 @@ The following Python and R packages from Microsoft are also included at installa
 | R | [MicrosoftML (R)](r/ref-r-microsoftml.md) | **Applies only to SQL Server 2016, SQL Server 2017, and SQL Server 2019.** Adds machine learning algorithms to create custom models for text analysis, image analysis, and sentiment analysis. |
 | R | [olapR](r/ref-r-olapr.md) | **Applies only to SQL Server 2016, SQL Server 2017, and SQL Server 2019.** R functions used for MDX queries against a SQL Server Analysis Services OLAP cube. |
 | R | [sqlrutils](r/ref-r-sqlrutils.md) | **Applies only to SQL Server 2016, SQL Server 2017, and SQL Server 2019.** A mechanism to use R scripts in a T-SQL stored procedure, register that stored procedure with a database, and run the stored procedure from an [R development environment](r/set-up-data-science-client.md). |
-| R | [Microsoft R Open](https://mran.microsoft.com/rro) | **Applies only to SQL Server 2016, SQL Server 2017, and SQL Server 2019.** Microsoft R Open (MRO) is the enhanced distribution of R from Microsoft. It is a complete open-source platform for statistical analysis and data science. It is based on and 100% compatible with R, and includes additional capabilities for improved performance and reproducibility. |
+| R | Microsoft R Open ([retired](https://techcommunity.microsoft.com/t5/azure-sql-blog/microsoft-r-application-network-retirement/ba-p/3707161)) | **Applies to:** SQL Server 2016, SQL Server 2017, and SQL Server 2019.<br /><br /> Microsoft R Open (MRO) was the enhanced distribution of R from Microsoft. |
 
 For more information on which packages are installed with Machine Learning Services and how to install other packages, see:
 

@@ -4,7 +4,7 @@ titleSuffix: SQL machine learning
 description: Learn how to install R packages offline by using the miniCRAN package to create a local repository of packages and dependencies.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 11/20/2019
+ms.date: 08/01/2023
 ms.service: sql
 ms.subservice: machine-learning
 ms.topic: how-to
@@ -47,10 +47,10 @@ library("miniCRAN")
 
 ## Set the CRAN mirror and MRAN snapshot
 
-Specify a mirror site to use in getting packages. For example, you could use the MRAN site, or any other site in your region that contains the packages you need. If a download fails, try another mirror site.
+Specify a mirror site to use in getting packages. For example, you could use the MRAN site, or any other site in your region that contains the packages you need. If a download fails, try [another mirror site](https://cran.r-project.org/mirrors.html).
 
 ```R
-CRAN_mirror <- c(CRAN = "https://cran.cnr.berkeley.edu")
+CRAN_mirror <- c(CRAN = "https://mirrors.nics.utk.edu/cran/")
 ```
 
 ## Create a local folder
@@ -75,13 +75,13 @@ Do **not** add dependencies to this initial list. The **igraph** package used by
     pkgs_needed <- c("zoo", "forecast")
     ```
 
-2. Optionally, plot the dependency graph. This is not necessary, but it can be informative.
+1. Optionally, plot the dependency graph. This is not necessary, but it can be informative.
 
     ```R
     plot(makeDepGraph(pkgs_needed))
     ```
 
-3. Create the local repo. Be sure to change the R version, if necessary, to the version installed on your SQL Server instance. If you did a component upgrade, your version might be newer than the original version. For more information, see [Get R package information](../package-management/r-package-information.md).
+1. Create the local repo. Be sure to change the R version, if necessary, to the version installed on your SQL Server instance. If you did a component upgrade, your version might be newer than the original version. For more information, see [Get R package information](../package-management/r-package-information.md).
 
     ```R
     pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror);
@@ -116,7 +116,7 @@ After you have a local repository with the packages you need, move the package r
 
    In this procedure, we assume a folder off the root drive.
 
-2. Open an R tool associated with the instance (for example, you could use Rgui.exe). Right-click and select **Run as administrator** to allow the tool to make updates to your system.
+1. Open an R tool associated with the instance (for example, you could use Rgui.exe). Right-click and select **Run as administrator** to allow the tool to make updates to your system.
 
    ::: moniker range="=sql-server-2016"
    - For example, the default file location for RGUI is `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`.
@@ -130,7 +130,7 @@ After you have a local repository with the packages you need, move the package r
    - For example, the file location for RGUI is `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\R_SERVICES\bin\x64`.
    ::: moniker-end
 
-3. Get the path for the instance library, and add it to the list of library paths.
+1. Get the path for the instance library, and add it to the list of library paths.
 
    ::: moniker range="=sql-server-2016"
    For example,
@@ -159,7 +159,7 @@ After you have a local repository with the packages you need, move the package r
 
    ::: moniker-end
 
-4. Specify the new location on the server where you copied the **miniCRAN** repository as `server_repo`.
+1. Specify the new location on the server where you copied the **miniCRAN** repository as `server_repo`.
 
     In this example, we assume that you copied the repository to a temporary folder on the server.
 
@@ -167,25 +167,25 @@ After you have a local repository with the packages you need, move the package r
     inputlib <- "C:/miniCRANZooPackages"
     ```
 
-5. Since you're working in a new R workspace on the server, you must also furnish the list of packages to install.
+1. Since you're working in a new R workspace on the server, you must also furnish the list of packages to install.
 
     ```R
     mypackages <- c("zoo", "forecast")
     ```
 
-6. Install the packages, providing the path to the local copy of the miniCRAN repo.
+1. Install the packages, providing the path to the local copy of the miniCRAN repo.
 
     ```R
     install.packages(mypackages, repos = file.path("file://", normalizePath(inputlib, winslash = "/")), lib = outputlib, type = "win.binary", dependencies = TRUE);
     ```
 
-7. From the instance library, you can view the installed packages using a command like the following:
+1. From the instance library, you can view the installed packages using a command like the following:
 
     ```R
     installed.packages()
     ```
 
-## See also
+## Next steps
 
-+ [Get R package information](../package-management/r-package-information.md)
-+ [R tutorials](../tutorials/r-tutorials.md)
+- [Get R package information](../package-management/r-package-information.md)
+- [R tutorials](../tutorials/r-tutorials.md)

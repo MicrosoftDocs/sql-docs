@@ -52,7 +52,7 @@ After the new certificate is installed, you can delete older certificates from a
 
 It can take up to 24 hours for a new certificate to be installed on the server.  The recommended time to delete the old certificate from app registration is after 24 hours from the time you create the new version of the certificate.
 
-If the new version of the certificate is created and installed on the server, but not uploaded to app registration, the portal will display an error message on the **SQL Server - Azure Arc** resource under **Azure Active Directory**.
+If the new version of the certificate is created and installed on the server, but not uploaded to app registration, the portal displays an error message on the **SQL Server - Azure Arc** resource under **Azure Active Directory**.
 
 ## Service managed certificate rotation
 

@@ -71,7 +71,6 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | Fixed server certificate validation for encrypt=strict | Fix to ensure the server certificate is properly validated in cases where `encrypt` is set to `strict`. [GitHub Issue #2174](https://github.com/microsoft/mssql-jdbc/issues/2174).|
 | Fixed lockTimeout not taking effect when redirect mode is set in Azure DB | Fixed when `lockTimeout` is set, as it should only apply to connections from outside Azure, and not from within Azure, as was previously. [GitHub Issue #2110](https://github.com/microsoft/mssql-jdbc/issues/2110).|
 | Fixed high thread count when using findSocketUsingThreading | Fixes an issue where an uncaught exception led to interruption in sleep calls upstream, causing retries to happen too quickly. [GitHub Issue #2104](https://github.com/microsoft/mssql-jdbc/issues/2104).|
-
 | Fixed shared timer race condition | Fixed a potential race condition in the `SharedTimer` class. [GitHub Issue #2085](https://github.com/microsoft/mssql-jdbc/issues/2085).|
 | Fixed invalid batch inserts when columns provided in insert differs in order from table schema | Fixed an issue where usage of `useBulkCopyForBatchInsert=true` can lead to column mix-up and invalid data. [GitHub Issue #1992](https://github.com/microsoft/mssql-jdbc/issues/1992).|
 | Fixes to Activity ID and Client ID behavior to maintain consistency with JDBC specification | Fixed Activity ID behavior to stay the same for the life of the process, always send Activity ID in `PRELOGIN`, and increment sequence for each new connection. Also fixed client ID to persist for the duration of the process. |
@@ -175,8 +174,8 @@ Fixed issues in 11.2.2:
 
 - Fixed Idle Connection Resiliency bug
 - Clear prepared statement handle cache on idle reconnect
-- Fixed callable statement index out of bounds error 
-- Fixed check for DONE token when fetching result sets 
+- Fixed callable statement index out of bounds error
+- Fixed check for DONE token when fetching result sets
 - Fixed intermittent error: "Internal error during decryption: Tag mismatch!"
 
 :::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 11.2.2 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2220143)**  
@@ -185,7 +184,6 @@ Fixed issues in 11.2.2:
 If you need to download the driver in a language other than the one detected for you, you can use these direct links.  
 For the driver in a zip file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2220143&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2220143&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2220143&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2220143&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2220143&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2220143&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2220143&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2220143&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2220143&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2220143&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2220143&clcid=0x40a)  
 For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2220142&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2220142&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2220142&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2220142&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2220142&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2220142&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2220142&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2220142&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2220142&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2220142&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2220142&clcid=0x40a)
-
 
 Release number: 11.2.1  
 Released: September 8, 2022
@@ -246,14 +244,14 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 :::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 10.2.3 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2222206)**  
 :::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 10.2.3 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2221562)**
 
-Release number: 10.2.3 
+Release number: 10.2.3  
 Released: Jan 12, 2023
 
 If you need to download the driver in a language other than the one detected for you, you can use these direct links.  
 For the driver in a zip file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2222206&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2222206&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2222206&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2222206&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2222206&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2222206&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2222206&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2222206&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2222206&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2222206&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2222206&clcid=0x40a)  
 For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2221562&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2221562&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2221562&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2221562&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2221562&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2221562&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2221562&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2221562&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2221562&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2221562&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2221562&clcid=0x40a)
 
-Release number: 10.2.2 
+Release number: 10.2.2  
 Released: Dec 13, 2022
 
 :::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 10.2.2 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2220052)**  
@@ -283,12 +281,12 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 
 ### 10.2 Releases
 
-Release number: 10.2.3 
+Release number: 10.2.3  
 Released: Jan 12, 2023
 
 Fixed issues in 10.2.3:
 
-- Fixed incorrect update counts when timeout occurs in batch queries 
+- Fixed incorrect update counts when timeout occurs in batch queries
 - Fixed incorrect token expiration date when using Azure Functions
 - Fixed null SQL state and zero error code when database exception is thrown
 
@@ -298,7 +296,7 @@ Released: Dec 13, 2022
 Fixed issues in 10.2.2:
 
 - Clear prepared statement cache on idle connection resiliency reconnections
-- Fix for setting KeepAlive extended options 
+- Fix for setting KeepAlive extended options
 - Fixed issue where the driver may assert when canceling a statement
 - Fixed callable statement index out of bounds error
 - Fixed issue not checking for DONE token errors so exceptions are ignored

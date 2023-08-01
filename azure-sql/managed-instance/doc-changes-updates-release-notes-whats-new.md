@@ -98,11 +98,17 @@ Learn about significant changes to the Azure SQL Managed Instance documentation.
 | --- | --- |
 |**Private endpoints** | Establish secure and isolated connectivity between Azure SQL Managed Instance and multiple virtual networks without exposing the entire network infrastructure of your service by using a private endpoint. Review [Private Link and private endpoints](private-endpoint-overview.md) to learn more. |
 
+### July 2023
+
+| Changes | Details |
+| --- | --- |
+|**New max vCore limits** | It's now possible to provision your Business Critical Azure SQL Managed Instance with up to 128 vCores on both premium-series and memory optimized premium-series hardware. Review [resource limits](resource-limits.md) to learn more. |
+
 ### June 2023
 
 | Changes | Details |
 | --- | --- |
-| **Configure tempdb**| Configure your `tempdb` settings for Azure SQL Managed Instance. Review [tempdb](tempdb-configure.md) to learn more. | 
+| **Configure tempdb**| Configure your `tempdb` settings for Azure SQL Managed Instance. Review [tempdb](tempdb-configure.md) to learn more. |
 
 
 ### May 2023

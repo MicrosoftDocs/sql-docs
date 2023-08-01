@@ -5,7 +5,7 @@ description: Learn about Azure SQL Managed Instance communication and connectivi
 author: zoran-rilak-msft
 ms.author: zoranrilak
 ms.reviewer: mathoma, bonova
-ms.date: 03/15/2023
+ms.date: 08/02/2023
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: conceptual

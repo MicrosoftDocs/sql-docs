@@ -4,7 +4,7 @@ description: Connect your Azure SQL Managed Instance to virtual networks and Azu
 author: zoran-rilak-msft
 ms.author: zoranrilak
 ms.reviewer: mathoma, srbozovi
-ms.date: 03/15/2023
+ms.date: 08/02/2023
 ms.service: sql-managed-instance
 ms.subservice: backup-restore
 ms.topic: how-to

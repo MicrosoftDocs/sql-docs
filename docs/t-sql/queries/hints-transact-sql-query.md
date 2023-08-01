@@ -235,7 +235,7 @@ Prevents the query from using a nonclustered memory optimized columnstore index.
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
-The maximum memory grant size in PERCENT of configured memory limit. The query is guaranteed not to exceed this limit. The actual limit can be lower if the Resource Governor setting is lower than the value specified by this hint. Valid values are between 0.0 and 100.0.
+The maximum memory grant size in PERCENT of configured memory limit. The query is guaranteed not to exceed this limit if the query is running in a user defined resource pool. In this case, if the query does not have the minimum required memory the system will raise an error. If a query is running in the system pool (default), then it will get at minimum the memory required to run. The actual limit can be lower if the Resource Governor setting is lower than the value specified by this hint. Valid values are between 0.0 and 100.0.
 
 #### MIN_GRANT_PERCENT = <numeric_value>
 

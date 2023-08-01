@@ -256,7 +256,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 | Compute size (service objective) | GP_DC_2 | GP_DC_4 | GP_DC_6 | GP_DC_8 | GP_DC_10 | GP_DC_12 |
 |:-|-:|-:|-:|-:|-:|-:|
 | Compute generation | DC | DC | DC | DC | DC | DC |
-| vCores | 2 | 4 | 6 | 8 | 10 | 12 |
+| vCores | 2 | 4 | 6 | 8 | 10<sup>6</sup> | 12<sup>6</sup> |
 | Memory (GB) | 9 | 18 | 27 | 36 | 45 | 54 |
 | Max number DBs per pool <sup>1</sup> | 100 | 400 | 400 | 400 | 500 | 500 |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes | Yes |
@@ -289,12 +289,14 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 <sup>5</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
+<sup>6</sup> DC hardware series vCore offerings from 10 to 40 are currently in Preview.
+
 ### DC-series hardware (part 2 of 2)
 
 | Compute size (service objective) | GP_DC_14 | GP_DC_16 | GP_DC_18 | GP_DC_20 | GP_DC_32 | GP_DC_40 |
 |:-|-:|-:|-:|-:|-:|-:|
 | Compute generation | DC | DC | DC | DC | DC | DC |
-| vCores | 14 | 16 | 18 | 20 | 32 | 40 |
+| vCores | 14<sup>6</sup> | 16<sup>6</sup> | 18<sup>6</sup> | 20<sup>6</sup> | 32<sup>6</sup> | 40<sup>6</sup> |
 | Memory (GB) | 63 | 72 | 81 | 90 | 144 | 180 |
 | Max number DBs per pool <sup>1</sup> | 500 | 500 | 500 | 500 | 500 | 500 |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes | Yes |
@@ -326,6 +328,8 @@ vCore resource limits are listed in the following articles, please be sure to up
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using standard-series (Gen5) and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on standard-series (Gen5) there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
 
 <sup>5</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
+
+<sup>6</sup> DC hardware series vCore offerings from 10 to 40 are currently in Preview.
 
 ## Business Critical - provisioned compute - standard-series (Gen5)
 
@@ -532,7 +536,7 @@ For important information about M-series hardware availability, see [Azure offer
 | Compute size (service objective) | BC_DC_2 | BC_DC_4 | BC_DC_6 | BC_DC_8 | BC_DC_10 | BC_DC_12 |
 |:-|-:|-:|-:|-:|-:|-:|
 | Compute generation | DC | DC | DC | DC | DC | DC |
-| vCores | 2 | 4 | 6 | 8 | 10 | 12 |
+| vCores | 2 | 4 | 6 | 8 | 10<sup>6</sup> | 12<sup>6</sup> |
 | Memory (GB) | 9 | 18 | 27 | 36 | 45 | 54 |
 | Max number DBs per pool <sup>1</sup> | 50 | 100 | 100 | 100 | 100 | 100 |
 | Columnstore support | Yes | Yes | Yes | Yes |Yes |Yes |
@@ -566,12 +570,14 @@ For important information about M-series hardware availability, see [Azure offer
 
 <sup>5</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
+<sup>6</sup> DC hardware series vCore offerings from 10 to 40 are currently in Preview.
+
 ### DC-series hardware (part 2 of 2)
 
 | Compute size (service objective) | BC_DC_14 | BC_DC_16 | BC_DC_18 | BC_DC_20 | BC_DC_32 | BC_DC_40 |
 |:-|-:|-:|-:|-:|-:|-:|
 | Compute generation | DC | DC | DC | DC | DC | DC |
-| vCores | 14 | 16 | 18 | 20 | 32 | 40 |
+| vCores | 14<sup>6</sup> | 16<sup>6</sup> | 18<sup>6</sup> | 20<sup>6</sup> | 32<sup>6</sup> | 40<sup>6</sup> |
 | Memory (GB) | 63 | 72 | 81 | 90 | 144 | 180 |
 | Max number DBs per pool <sup>1</sup> | 50 | 100 | 100 | 100 | 100 | 100 |
 | Columnstore support | Yes | Yes | Yes | Yes |Yes |Yes |
@@ -604,6 +610,8 @@ For important information about M-series hardware availability, see [Azure offer
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using standard-series (Gen5) and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on standard-series (Gen5) there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
 
 <sup>5</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
+
+<sup>6</sup> DC hardware series vCore offerings from 10 to 40 are currently in Preview.
 
 ## Hyperscale - provisioned compute - standard series (Gen5)
 

@@ -280,6 +280,12 @@ For CDC enabled SQL databases, when you use SqlPackage, SSDT, or other SQL tools
 
 Even if CDC isn't enabled and you've defined a custom schema or user named `cdc` in your database that will also be excluded in Import/Export and Extract/Deploy operations to import/setup a new database.
 
+### DDL changes to source tables
+
+Changing the size of columns of a CDC-enabled table using DDL statements can cause issues with the subsequent CDC capture process, resulting in **error 2628**. Remember that data in CDC change tables are retained based on user-configured settings. So, before making any changes to column size, you must assess whether the alteration is compatible with the existing data in CDC change tables.
+
+If the `sys.dm_cdc_errors` indicate that scans are failing due to the **error 2628** for change tables, you should first consume the change data in the affected change tables. After that, you need to disable and then reenable CDC on the table to resolve the problem effectively.
+
 ## Troubleshooting
 
 The following table provides a list of potential solutions for resolving CDC-related problems.

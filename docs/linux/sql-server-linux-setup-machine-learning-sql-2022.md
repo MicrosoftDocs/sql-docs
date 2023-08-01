@@ -49,7 +49,6 @@ Available installation packages for [!INCLUDE [sssql22-md](../includes/sssql22-m
 | Package name | Applies-to | Description |
 |--------------|----------|-------------|
 |mssql-server-extensibility  | All | Extensibility framework used to run Python and R. |
-|libssl-dev | Ubuntu | OpenSSL project's implementation of the SSL and TLS cryptographic protocols. |
 
 ## Install mssql-server-extensibility package
 
@@ -57,7 +56,7 @@ Available installation packages for [!INCLUDE [sssql22-md](../includes/sssql22-m
 
     **Ubuntu**
     ```bash
-    sudo apt-get install mssql-server-extensibility libssl-dev
+    sudo apt-get install mssql-server-extensibility
     ```
 
     **RHEL**

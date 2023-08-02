@@ -1,11 +1,11 @@
 ---
-title: Azure Active Directory certificate rotation 
+title: Microsoft Entra ID certificate rotation 
 titleSuffix: Azure Arc-enabled SQL Server
-description: Explains how Azure Arc automatically rotates certificates for Azure Active Directory on Azure Arc-enabled SQL Server.
+description: Explains how Azure Arc automatically rotates certificates for Microsoft Entra ID on Azure Arc-enabled SQL Server.
 author: ntakru
 ms.author: nikitatakru
 ms.reviewer: mikeray
-ms.date: 08/01/2023
+ms.date: 08/02/2023
 ms.topic: conceptual
 ---
 
@@ -13,7 +13,10 @@ ms.topic: conceptual
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-On Azure Arc-enabled SQL Server, Azure extension for SQL Server can automatically rotate certificates for Azure Active Directory authentication for service managed certificates. For customer managed certificates, you can follow the steps to rotate the certificate used for Azure Active Directory Authentication.
+On Azure Arc-enabled SQL Server, Azure extension for SQL Server can automatically rotate certificates for Microsoft Entra ID for service managed certificates. For customer managed certificates, you can follow the steps to rotate the certificate used for Microsoft Entra ID.
+
+> [!NOTE]
+> Microsoft Entra ID is the [new name for Azure Active Directory](/azure/active-directory/fundamentals/new-name).
 
 This article explains how automatic certificate rotation and customer managed certificate rotation works and identifies the process specifics for Windows and Linux operating systems.
 
@@ -23,7 +26,7 @@ Certificate management depends on whether you manage your own certificates (*cus
 
 The functionality described in this article applies to an instance Azure Arc-enabled SQL Server configured for Azure Active Directory. For instructions to configure such an instance, see:
 
-- [Azure Active Directory authentication for SQL Server](../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md)
+- [Microsoft Entra ID for SQL Server](../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md)
 
 ## Customer managed certificate rotation
 
@@ -56,12 +59,14 @@ If the new version of the certificate is created and installed on the server, bu
 
 ## Service managed certificate rotation
 
-For service managed certificate rotation, Azure Key Vault automatically rotates the certificate for you. By default, the certificate are rotated after the certificate lifetime has been met. If the certificate has expired, then the automatic rotation fails.
+For service managed certificate rotation, Azure Key Vault automatically rotates the certificate for you. Key vault rotates certificates by default, after the certificate lifetime is at 80%. You can configure this setting. For instructions, review [Configure certificate auto-rotation in Key Vault](/azure/key-vault/certificates/tutorial-rotate-certificates). If the certificate has expired, then the automatic rotation fails.
 
 Service managed certificate rotation requires you to add an access policy to the service principal with permission to sign keys. See [Assign a Key Vault access policy (legacy)](/azure/key-vault/general/assign-access-policy?tabs=azure-portal).
 
+Once a new certificate is discovered, it is uploaded to app registration automatically.
+
 > [!NOTE]
-> For Linux, the old certificate will not be deleted from the app registration used for Azure Active Directory authentication and the SQL server running on the Linux machine will need to be manually restarted.
+> For Linux, the old certificate will not be deleted from the app registration used for Microsoft Entra ID and the SQL server running on the Linux machine will need to be manually restarted.
 
 ## Next steps
 

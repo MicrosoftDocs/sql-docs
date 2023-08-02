@@ -16,7 +16,7 @@ ms.topic: conceptual
 > * [Azure SQL Database](../database/service-tiers-sql-database-vcore.md)
 > * [Azure SQL Managed Instance](service-tiers-managed-instance-vcore.md)
 
-This article reviews the [vCore purchasing model](../database/service-tiers-vcore.md) for [Azure SQL Managed Instance](sql-managed-instance-paas-overview.md). 
+This article reviews the vCore purchasing model for [Azure SQL Managed Instance](sql-managed-instance-paas-overview.md). 
 
 ## Overview
 

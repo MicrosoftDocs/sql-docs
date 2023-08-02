@@ -15,8 +15,7 @@ ms.topic: conceptual
 
 On Azure Arc-enabled SQL Server, Azure extension for SQL Server can automatically rotate certificates for Microsoft Entra ID for service managed certificates. For customer managed certificates, you can follow the steps to rotate the certificate used for Microsoft Entra ID.
 
-> [!NOTE]
-> Microsoft Entra ID is the [new name for Azure Active Directory](/azure/active-directory/fundamentals/new-name).
+[!INCLUDE [entra-id](../../includes/entra-id.md)]
 
 This article explains how automatic certificate rotation and customer managed certificate rotation works and identifies the process specifics for Windows and Linux operating systems.
 

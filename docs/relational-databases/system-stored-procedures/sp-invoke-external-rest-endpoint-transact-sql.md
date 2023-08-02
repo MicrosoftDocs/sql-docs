@@ -132,7 +132,7 @@ Or the *@response* may contain an XML document with the following schema:
 
 Specifically:
 
-- *response*: a XML object that contains the HTTP result and other response metadata.
+- *response*: an XML object that contains the HTTP result and other response metadata.
 - *result*: the XML payload returned by the HTTP call. Omitted if the received HTTP result is a 204 (`No Content`).
 
 In the `response` section, aside from the HTTP status code and description, the entire set of received response headers will be provided in the `headers` object. The following example shows a `response` section in JSON (also the structure for text responses):

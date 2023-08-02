@@ -10,7 +10,7 @@ ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: how-to
 ms.custom: intro-installation
-monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
+monikerRange: "=sql-server-ver15||=sql-server-linux-ver15"
 ---
 # Install SQL Server Machine Learning Services (Python and R) on Docker
 

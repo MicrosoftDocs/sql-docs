@@ -64,7 +64,7 @@ sudo apk add --allow-untrusted mssql-tools18_18.3.1.1-1_$architecture.apk
 
 ```bash
 sudo su
-curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+wget https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
 
 #Download appropriate package for the OS version
 #Choose only ONE of the following, corresponding to your OS version
@@ -160,7 +160,7 @@ then
 fi
 
 sudo su
-curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+wget https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
 
 curl https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/prod.list > /etc/apt/sources.list.d/mssql-release.list
 
@@ -223,7 +223,7 @@ sudo apk add --allow-untrusted mssql-tools_17.10.1.1-1_amd64.apk
 
 ```bash
 sudo su
-curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+wget https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
 
 #Download appropriate package for the OS version
 #Choose only ONE of the following, corresponding to your OS version
@@ -319,7 +319,7 @@ then
 fi
 
 sudo su
-curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+wget https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
 
 curl https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/prod.list > /etc/apt/sources.list.d/mssql-release.list
 
@@ -347,7 +347,7 @@ The following sections explain how to install the Microsoft ODBC driver 13.1 fro
 
 ```bash
 sudo su
-curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+wget https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
 curl https://packages.microsoft.com/config/debian/8/prod.list > /etc/apt/sources.list.d/mssql-release.list
 exit
 sudo apt-get update
@@ -395,7 +395,7 @@ sudo zypper install unixODBC-devel
 
 ```bash
 sudo su
-curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+wget https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
 curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
 exit
 sudo apt-get update
@@ -433,7 +433,7 @@ ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 
 ```bash
 sudo su
-curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+wget https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
 curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
 exit
 sudo apt-get update

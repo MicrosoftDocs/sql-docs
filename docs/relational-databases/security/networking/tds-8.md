@@ -1,14 +1,14 @@
 ---
 title: TDS 8.0
-description: This article discusses TDS 8.0
+description: This article discusses TDS 8.0, the application layer protocol used by clients to connect to SQL Server.
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 06/06/2023
+ms.date: 08/02/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
-monikerRange: ">= sql-server-ver16||>= sql-server-linux-ver16"
+monikerRange: ">= sql-server-ver16||>= sql-server-linux-ver16||=azuresqldb-current||=azuresqldb-mi-current"
 ---
 # TDS 8.0
 

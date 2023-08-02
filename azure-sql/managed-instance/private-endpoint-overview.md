@@ -4,20 +4,15 @@ description: Connect your Azure SQL Managed Instance to virtual networks and Azu
 author: zoran-rilak-msft
 ms.author: zoranrilak
 ms.reviewer: mathoma, srbozovi
-ms.date: 03/15/2023
+ms.date: 08/02/2023
 ms.service: sql-managed-instance
 ms.subservice: backup-restore
 ms.topic: how-to
 ---
-# Azure Private Link for Azure SQL Managed Instance (Preview)
+# Azure Private Link for Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 This article provides an overview of the private endpoint for Azure SQL Managed Instance, as well as steps to configuring it. Private endpoints establish secure, isolated connectivity between a service and multiple virtual networks without exposing your service's entire network infrastructure.
-
-> [!IMPORTANT]
-> **Note for early adopters of November 2022 Feature wave**: We are aware of a defect that may cause loss of connectivity via private endpoints to instances enrolled in the November 2022 Feature wave. The defect is being repaired. As a reminder, Feature wave-enabled instances are not recommended for nor supported in production workloads.
-> 
-> The issue doesn't affect instances not enrolled in November 2022 Feature wave.
 
 ## Overview
 
@@ -49,11 +44,14 @@ The benefits of using private endpoints over a VNet-local or public endpoint inc
 - Avoiding address overlap: peering multiple virtual networks requires careful IP space allocation and can pose a problem when address spaces overlap.
 - Conserving IP address real estate: a private endpoint only consumes one IP address from its subnet's address space.
 
+## Known issues
+
+- Azure portal still shows the word "Preview" next to Private endpoint connections item in SQL Managed Instance's sidebar. This is incorrect; private endpoint connections for SQL Managed Instance are now generally available. The word "Preview" will be removed in an upcoming update.
+
 ## Limitations
 
-- Instances enrolled in the [November 2022 Feature wave](november-2022-feature-wave-enroll.md) may exhibit occasional issues with Private Link connectivity while the feature is in public preview.
 - Azure SQL Managed Instance requires the exact instance _hostname_ to appear in the connection string sent by the SQL client. Using the IP address of the private endpoint is not supported and will fail. To resolve this, configure your DNS server, or use a private DNS zone as described in [Set up domain name resolution for private endpoint](#set-up-domain-name-resolution-for-private-endpoint).
-- Automatic registration of DNS names is disabled while in preview. Follow the steps in [Set up domain name resolution for private endpoint](#set-up-domain-name-resolution-for-private-endpoint) instead.
+- Automatic registration of DNS names is not yet supported. Follow the steps in [Set up domain name resolution for private endpoint](#set-up-domain-name-resolution-for-private-endpoint) instead.
 - Private endpoints to SQL Managed Instance can only be used to connect to port 1433, the standard TDS port for SQL traffic. More complex connectivity scenarios requiring communication on other ports must be established via the instance's VNet-local endpoint.
 - Private endpoints to Azure SQL Managed Instance require a special setup to configure the required DNS resolution, as described in [Set up domain name resolution for private endpoint](#set-up-domain-name-resolution-for-private-endpoint).
 - Private endpoints always operate with the [proxy connection type](connection-types-overview.md#connection-types). 

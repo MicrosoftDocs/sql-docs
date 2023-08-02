@@ -26,7 +26,7 @@ Certificate management depends on whether you manage your own certificates (*cus
 
 The functionality described in this article applies to an instance of Azure Arc-enabled SQL Server configured for authentication with Microsoft Entra ID. For instructions to configure such an instance, see:
 
-- [Microsoft Entra ID for SQL Server](../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md)
+- [Azure Active Directory authentication for SQL Server](../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md)
 
 ## Customer managed certificate rotation
 
@@ -44,7 +44,6 @@ For customer managed certificate rotation:
    For details about certificate configuration options, see [Update certificate lifecycle attributes at the time of creation](/azure/key-vault/certificates/tutorial-rotate-certificates#update-certificate-lifecycle-attributes-at-the-time-of-creation).
 
 1. Download the new certificate in `.cer` format and upload it to the app registration in place of the old certificate.
-
 
 > [!NOTE]
 > For Linux, you need to restart the SQL Server service manually so the new certificate is used for authentication.  

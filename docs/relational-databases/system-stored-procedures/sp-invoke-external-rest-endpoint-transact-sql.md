@@ -510,9 +510,9 @@ EXEC @ret = sp_invoke_external_rest_endpoint @url = @url,
 SELECT @ret AS ReturnCode, @response AS Response;
 ```
 
-### E. Read and write a file to Azure File Storage with an Azure SQL Database Managed Identity
+### E. Read and write a file to Azure File Storage with an Azure SQL Database scoped credential
 
-This example writes a file to an Azure File Storage using an Azure SQL Database Managed Identity for authentication and then returns the contents. The results will be returned in XML, so using the header `"Accept":"application/xml"` will be needed.
+This example writes a file to an Azure File Storage using an Azure SQL Database scoped credential for authentication and then returns the contents. The results will be returned in XML, so using the header `"Accept":"application/xml"` will be needed.
 
 Start by creating a master key for the Azure SQL Database
 

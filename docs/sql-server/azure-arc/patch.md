@@ -50,6 +50,8 @@ Use the Azure portal to configure automated patching for existing Arc-enabled SQ
 1. Under **Operations**, select **SQL Server Configuration**.
 1. Under **Patching (Preview)**, you can enable or disable patching and set a maintenance schedule.
 
+   :::image type="content" source="media/patch/patch-server.png" alt-text="Screenshot of SQL Server Configuration.":::
+
 When you enable or configure automated patching, Azure configures the Azure Extension for SQL Server in the background.
 
 > [!NOTE]

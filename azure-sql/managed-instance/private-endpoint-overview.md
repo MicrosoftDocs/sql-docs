@@ -14,11 +14,6 @@ ms.topic: how-to
 
 This article provides an overview of the private endpoint for Azure SQL Managed Instance, as well as steps to configuring it. Private endpoints establish secure, isolated connectivity between a service and multiple virtual networks without exposing your service's entire network infrastructure.
 
-> [!IMPORTANT]
-> **Note for early adopters of November 2022 Feature wave**: We are aware of a defect that may cause loss of connectivity via private endpoints to instances enrolled in the November 2022 Feature wave. The defect is being repaired. As a reminder, Feature wave-enabled instances are not recommended for nor supported in production workloads.
-> 
-> The issue doesn't affect instances not enrolled in November 2022 Feature wave.
-
 ## Overview
 
 [Private Link](/azure/private-link/private-link-overview) is Azure technology that makes Azure SQL Managed Instance available in a virtual network of your choice. A network administrator can establish a [private endpoint](/azure/private-link/private-endpoint-overview) to Azure SQL Managed Instance in their virtual network, while the SQL administrator chooses to accept or reject the endpoint before it becomes active. Private endpoints establish secure, isolated connectivity between a service and multiple virtual networks without exposing your service's entire network infrastructure.

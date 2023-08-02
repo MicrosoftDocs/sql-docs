@@ -55,9 +55,9 @@ The following tables show the resources available for a single database at each 
 <sup>1</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
 > [!IMPORTANT]
-> The Basic service tier provides less than one vCore (CPU).  For CPU-intensive workloads, a service tier of S3 or greater is recommended. 
+> The Basic service tier provides less than one vCore (CPU).  For Resource-intensive workloads, a service tier of S3 or greater is recommended. 
 > 
-> Database restore operations can be CPU-intensive and may require a service objective of S3 or greater. Once restored, a database can be scaled down to a lower service objective if required.
+> Database restore operations can be Resource-intensive and may require a service objective of S3 or greater. Once restored, a database can be scaled down to a lower service objective if required.
 >
 >Regarding data storage, the Basic service tier is placed on Standard Page Blobs. Standard Page Blobs use hard disk drive (HDD)-based storage media and are best suited for development, testing, and other infrequently accessed workloads that are less sensitive to performance variability.
 >

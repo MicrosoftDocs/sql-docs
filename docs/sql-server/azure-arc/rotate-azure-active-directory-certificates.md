@@ -9,7 +9,7 @@ ms.date: 08/02/2023
 ms.topic: conceptual
 ---
 
-# Azure Active Directory certificate rotation
+# Rotate certificates
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
@@ -24,7 +24,7 @@ Certificate management depends on whether you manage your own certificates (*cus
 
 ## Prerequisite
 
-The functionality described in this article applies to an instance Azure Arc-enabled SQL Server configured for Azure Active Directory. For instructions to configure such an instance, see:
+The functionality described in this article applies to an instance of Azure Arc-enabled SQL Server configured for authentication with Microsoft Entra ID. For instructions to configure such an instance, see:
 
 - [Microsoft Entra ID for SQL Server](../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md)
 
@@ -55,7 +55,7 @@ After the new certificate is installed, you can delete older certificates from a
 
 It can take up to 24 hours for a new certificate to be installed on the server.  The recommended time to delete the old certificate from app registration is after 24 hours from the time you create the new version of the certificate.
 
-If the new version of the certificate is created and installed on the server, but not uploaded to app registration, the portal displays an error message on the **SQL Server - Azure Arc** resource under **Azure Active Directory**.
+If the new version of the certificate is created and installed on the server, but not uploaded to app registration, the portal displays an error message on the **SQL Server - Azure Arc** resource under **Microsoft Entra ID**.
 
 ## Service managed certificate rotation
 

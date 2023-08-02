@@ -118,11 +118,11 @@ Or the *@response* may contain an XML document with the following schema:
 <output>
     <response>
         <status>
-            <http code=" " description=" " />
+            <http code="" description=" " />
         </status>
         <headers>
-            <header key=" " value=" " />
-            <header key=" " value=" " />
+            <header key="" value="" />
+            <header key="" value="" />
         </headers>
     </response>
     <result>
@@ -362,21 +362,21 @@ If the same headers are also specified via the *@headers* parameter, the system-
 
 #### Request and response payload supported [media types](https://developer.mozilla.org/en-US/docs/Glossary/MIME_type)
 
-JSON
+**JSON**
 
 - application/json
 - application/vnd.microsoft.*.json (some Azure services, like Event Hub, uses the .json instead of +json)
 - application/vnd.microsoft.*+json
 - application/*[.|+]json
 
-XML
+**XML**
 
 - application/xml 
 - application/vnd.microsoft.*.xml  
 - application/vnd.microsoft.*+xml  
 - application/*[.|+]xml
 
-TEXT
+**TEXT**
 
 - application/x-www-form-urlencoded
 - text/*

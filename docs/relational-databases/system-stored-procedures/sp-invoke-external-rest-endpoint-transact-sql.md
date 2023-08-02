@@ -135,7 +135,7 @@ Specifically:
 - *response*: a XML object that contains the HTTP result and other response metadata.
 - *result*: the XML payload returned by the HTTP call. Omitted if the received HTTP result is a 204 (`No Content`).
 
-In the `response` section, aside from the HTTP status code and description, the entire set of received response headers will be provided in the `headers` object. The following example shows a `response` section in JSON:
+In the `response` section, aside from the HTTP status code and description, the entire set of received response headers will be provided in the `headers` object. The following example shows a `response` section in JSON (also the structure for text responses):
 
 ```json
 "response": {
@@ -165,7 +165,7 @@ And the following example shows a `response` section in XML:
     <headers>
         <header key="Date" value="Tue, 01 Apr 1976 21:12:04 GMT" />
         <header key="Content-Length" value="2112" />
-        <header key="Content-Type" value="text/plain" />
+        <header key="Content-Type" value="application/xml" />
         <header key="Server" value="Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0" />
         <header key="x-ms-request-id" value="31536000-64bi-64bi-64bi-31536000" />
         <header key="x-ms-version" value="2021-10-04" />
@@ -199,7 +199,10 @@ Only calls to endpoints in the following services are allowed:
 | Analysis Services | *.asazure.windows.net |
 | IoT Central | *.azureiotcentral.com |
 | API Management | *.azure-api.net |
-| Azure Blob Storage | *.blob, file, queue, or table.core.windows.net |
+| Azure Blob Storage | *.blob.core.windows.net |
+| Azure Files | *.file.core.windows.net |
+| Azure Queue Storage | *.queue.core.windows.net |
+| Azure Table Storage | *.table.core.windows.net |
 
 [Outbound Firewall Rules](/azure/azure-sql/database/outbound-firewall-rule-overview) control mechanism can be used to further restrict outbound access to external endpoints.
 
@@ -358,27 +361,24 @@ Only endpoints that are configured to use HTTPS with at least TLS 1.2 encryption
 - *accept*: set to `application/json`
 - *user-agent*: set `<EDITION>/<PRODUCT VERSION>` for example: `SQL Azure/12.0.2000.8`
 
-If the same headers are also specified via the *@headers* parameter, the system-supplied values will take precedence and overwrite any user-specified values for the user-agent header. Including application/json for **content-type**, application/xml is also valid. For the **accept** header, accepted values are application/json, application/xml, and text/*.
+While *user-agent* will always be overwritten by the stored procedure, the *content-type* and *accept* header values can be user defined via the *@headers* parameter. Only the media type directive is allowed to be specified in the content-type and specifying the charset or boundary directives is not possible.
 
 #### Request and response payload supported [media types](https://developer.mozilla.org/en-US/docs/Glossary/MIME_type)
 
-**JSON**
+The following are accepted values for the header *content-type*.
 
 - application/json
-- application/vnd.microsoft.*.json (some Azure services, like Event Hub, uses the .json instead of +json)
-- application/vnd.microsoft.*+json
-- application/*[.|+]json
-
-**XML**
-
+- application/vnd.microsoft.*.json
 - application/xml 
 - application/vnd.microsoft.*.xml  
 - application/vnd.microsoft.*+xml  
-- application/*[.|+]xml
-
-**TEXT**
-
 - application/x-www-form-urlencoded
+- text/*
+
+For the *accept* header, the following are the accepted values.
+
+- application/json
+- application/xml
 - text/*
 
 For more information on text header types, please refer to the [text type registry at IANA](https://www.iana.org/assignments/media-types/media-types.xhtml#text).
@@ -508,6 +508,80 @@ EXEC @ret = sp_invoke_external_rest_endpoint @url = @url,
     @response = @response OUTPUT;
 
 SELECT @ret AS ReturnCode, @response AS Response;
+```
+
+### E. Write a file to Azure Blob Storage with an Azure SQL Database Managed Identity
+
+This example writes a file to an Azure Blob Storage container using an Azure SQL Database Managed Identity for authentication. The results will be returned in XML, so adding the header `"Accept":"application/xml"` will be needed.
+
+Start by creating a master key for the Azure SQL Database
+
+```sql
+create master key encryption by password = '2112templesmlm2BTS21.qwqw!@0dvd'
+go
+```
+
+Then, create the database scoped credentials using the SAS token provided by the Azure Blob Storage Account.
+
+```sql
+create database scoped credential [filestore]
+with identity='SHARED ACCESS SIGNATURE', 
+secret='sv=2022-11-02&ss=bfqt&srt=sco&sp=seespotrun&se=2023-08-03T02:21:25Z&st=2023-08-02T18:21:25Z&spr=https&sig=WWwwWWwwWWYaKCheeseNXCCCCCCDDDDDSSSSSU%3D'
+go
+```
+
+Next, create the file and add text to it with the following two statements:
+
+```sql
+declare @payload nvarchar(max) = (select * from (values('Hello from Azure SQL!', sysdatetime())) payload([message], [timestamp])for json auto, without_array_wrapper)
+declare @response nvarchar(max), @url nvarchar(max), @headers nvarchar(1000);
+declare @len int = len(@payload)
+
+-- Create the File
+set @url = 'https://myfiles.file.core.windows.net/myfiles/test-me-from-azure-sql.json'
+set @headers = json_object(
+        'x-ms-type': 'file',
+        'x-ms-content-length': cast(@len as varchar(9)),
+        'Accept': 'application/xml')
+exec sp_invoke_external_rest_endpoint
+    @url = @url,
+    @method = 'PUT',
+    @headers = @headers,
+    @credential = [filestore],
+    @response = @response output
+select cast(@response as xml);
+
+-- Add text to the File
+set @headers = json_object(
+        'x-ms-range': 'bytes=0-' + cast(@len-1 as varchar(9)),
+        'x-ms-write': 'update',
+        'Accept': 'application/xml');
+set @url = 'https://myfiles.file.core.windows.net/myfiles/test-me-from-azure-sql.json'
+set @url += '?comp=range'
+exec sp_invoke_external_rest_endpoint
+    @url = @url,
+    @method = 'PUT',
+    @headers = @headers,
+    @payload = @payload,
+    @credential = [filestore],
+    @response = @response output
+select cast(@response as xml)
+go
+```
+
+Finally, use the following statement to read the file
+
+```sql
+declare @response nvarchar(max);
+declare @url nvarchar(max) = 'https://myfiles.file.core.windows.net/myfiles/test-me-from-azure-sql.json'
+exec sp_invoke_external_rest_endpoint
+    @url = @url,
+    @headers = '{"Accept":"application/xml"}',
+    @credential = [filestore],
+    @method = 'GET',
+    @response = @response output
+select cast(@response as xml)
+go
 ```
 
 ## See also

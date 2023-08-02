@@ -374,31 +374,30 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 ### Hyperscale - Premium-series (part 1 of 3)
 
-SLOs in the Hyperscale premium-series tier use the naming convention `HS_PRMS_` followed by the number of vCores, for example, `HS_PRMS_10`.
-
-|vCores|2|4|6|8|10|
-|:--- | --: |--: |--: |--: |--: |
-|Hardware|Premium-series|Premium-series|Premium-series|Premium-series|Premium-series|
-|Memory (GB)| 10.4|20.8|31.1|41.5|51.9|
-|Columnstore support|Yes|Yes|Yes|Yes|Yes|
-|In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|
-|Max data size (TB)|100 |100 |100 |100 |100 |
-|Max log size (TB)|Unlimited |Unlimited |Unlimited |Unlimited |Unlimited |
-|Tempdb max data size (GB)|64|128|192|256|320|
-|Max local SSD IOPS <sup>1</sup>|8,000|16,000|24,000|32,000|40,000|
-|Max log rate (MBps)|100 |100 |100 |100 |100 |
-|Local read IO latency<sup>2</sup> |1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
-|Remote read IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
-|Write IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
-|Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
-|Max concurrent workers|200|400|600|800|1000|
-|Max concurrent logins|200|400|600|800|1000|
-|Max concurrent external connections <sup>4</sup>|20|40|60|80|100|
-|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|
-|Secondary replicas|0-4|0-4|0-4|0-4|0-4|
-|Multi-AZ|N/A|N/A|N/A|N/A|N/A|
-|Read Scale-out|Yes|Yes|Yes|Yes|Yes|
-|Backup storage retention|7 days|7 days|7 days|7 days|7 days|
+| Compute size (service objective) | HS_PRMS_2 | HS_PRMS_4 | HS_PRMS_6 | HS_PRMS_8 | HS_PRMS_10 |
+|:-|-:|-:|-:|-:|-:|
+| Hardware | Premium-series | Premium-series | Premium-series | Premium-series | Premium-series |
+| vCores | 2 | 4 | 6 | 8 | 10 |
+| Memory (GB) | 10.4 | 20.8 | 31.1 | 41.5 | 51.9 |
+| Columnstore support | Yes | Yes | Yes | Yes | Yes |
+| In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A |
+| Max data size (TB) | 100 | 100 | 100 | 100 | 100 |
+| Max log size (TB) | Unlimited | Unlimited | Unlimited | Unlimited | Unlimited |
+| Tempdb max data size (GB) | 64 | 128 | 192 | 256 | 320 |
+| Max local SSD IOPS <sup>1</sup> | 8,000 | 16,000 | 24,000 | 32,000 | 40,000 |
+| Max log rate (MBps) | 100 | 100 | 100 | 100 | 100 |
+| Local read IO latency<sup>2</sup> | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms |
+| Remote read IO latency<sup>2</sup> | 1-4 ms | 1-4 ms | 1-4 ms | 1-4 ms | 1-4 ms |
+| Write IO latency<sup>2</sup> | 1-4 ms | 1-4 ms | 1-4 ms | 1-4 ms | 1-4 ms |
+| Storage type | Multi-tiered<sup>3</sup> | Multi-tiered<sup>3</sup> | Multi-tiered<sup>3</sup> | Multi-tiered<sup>3</sup> | Multi-tiered<sup>3</sup> |
+| Max concurrent workers | 200 | 400 | 600 | 800 | 1000 |
+| Max concurrent logins | 200 | 400 | 600 | 800 | 1000 |
+| Max concurrent external connections <sup>4</sup> | 20 | 40 | 60 | 80 | 100 |
+| Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
+| Secondary replicas | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 |
+| Multi-AZ | N/A | N/A | N/A | N/A | N/A |
+| Read Scale-out | Yes | Yes | Yes | Yes | Yes |
+| Backup storage retention | 7 days | 7 days | 7 days | 7 days | 7 days |
 
 <sup>1</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
 
@@ -411,31 +410,30 @@ SLOs in the Hyperscale premium-series tier use the naming convention `HS_PRMS_` 
 
 ### Hyperscale - Premium-series (part 2 of 3)
 
-SLOs in the Hyperscale premium-series tier use the naming convention `HS_PRMS_` followed by the number of vCores, for example, `HS_PRMS_10`.
-
-|vCores|12|14|16|18|20|
-|:--- | --: |--: |--: |--: |--: |
-|Hardware|Premium-series|Premium-series|Premium-series|Premium-series|Premium-series|
-|Memory (GB)|62.3|72.7|83.0|93.4|103.8|
-|Columnstore support|Yes|Yes|Yes|Yes|Yes|
-|In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|
-|Max data size (TB)|100 |100 |100 |100 |100 |
-|Max log size (TB)|Unlimited |Unlimited |Unlimited |Unlimited |Unlimited |
-|Tempdb max data size (GB)|384|448|512|576|640|
-|Max local SSD IOPS <sup>1</sup>|48,000|56,000|64,000|72,000|80,000|
-|Max log rate (MBps)|100 |100 |100 |100 |100 |
-|Local read IO latency<sup>2</sup> |1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
-|Remote read IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
-|Write IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
-|Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
-|Max concurrent workers|1,200|1,400|1,600|1,800|2,000|
-|Max concurrent logins|1,200|1,400|1,600|1,800|2,000|
-|Max concurrent external connections <sup>4</sup>|120|140|150|150|150|
-|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|
-|Secondary replicas|0-4|0-4|0-4|0-4|0-4|
-|Multi-AZ|N/A|N/A|N/A|N/A|N/A|
-|Read Scale-out|Yes|Yes|Yes|Yes|Yes|
-|Backup storage retention|7 days|7 days|7 days|7 days|7 days|
+| Compute size (service objective) | HS_PRMS_12 | HS_PRMS_14 | HS_PRMS_16 | HS_PRMS_18 | HS_PRMS_20 |
+|:-|-:|-:|-:|-:|-:|
+| Hardware | Premium-series | Premium-series | Premium-series | Premium-series | Premium-series |
+| vCores | 12 | 14 | 16 | 18 | 20 |
+| Memory (GB) | 62.3 | 72.7 | 83.0 | 93.4 | 103.8 |
+| Columnstore support | Yes | Yes | Yes | Yes | Yes |
+| In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A |
+| Max data size (TB) | 100 | 100 | 100 | 100 | 100 |
+| Max log size (TB) | Unlimited | Unlimited | Unlimited | Unlimited | Unlimited |
+| Tempdb max data size (GB) | 384 | 448 | 512 | 576 | 640 |
+| Max local SSD IOPS <sup>1</sup> | 48,000 | 56,000 | 64,000 | 72,000 | 80,000 |
+| Max log rate (MBps) | 100 | 100 | 100 | 100 | 100 |
+| Local read IO latency<sup>2</sup> | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms |
+| Remote read IO latency<sup>2</sup> | 1-4 ms | 1-4 ms | 1-4 ms | 1-4 ms | 1-4 ms |
+| Write IO latency<sup>2</sup> | 1-4 ms | 1-4 ms | 1-4 ms | 1-4 ms | 1-4 ms |
+| Storage type | Multi-tiered<sup>3</sup> | Multi-tiered<sup>3</sup> | Multi-tiered<sup>3</sup> | Multi-tiered<sup>3</sup> | Multi-tiered<sup>3</sup> |
+| Max concurrent workers | 1,200 | 1,400 | 1,600 | 1,800 | 2,000 |
+| Max concurrent logins | 1,200 | 1,400 | 1,600 | 1,800 | 2,000 |
+| Max concurrent external connections <sup>4</sup> | 120 | 140 | 150 | 150 | 150 |
+| Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
+| Secondary replicas | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 |
+| Multi-AZ | N/A | N/A | N/A | N/A | N/A |
+| Read Scale-out | Yes | Yes | Yes | Yes | Yes |
+| Backup storage retention | 7 days | 7 days | 7 days | 7 days | 7 days |
 
 <sup>1</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
 
@@ -447,30 +445,30 @@ SLOs in the Hyperscale premium-series tier use the naming convention `HS_PRMS_` 
 
 ### Hyperscale - Premium-series (part 3 of 3)
 
-SLOs in the Hyperscale premium-series tier use the naming convention `HS_PRMS_` followed by the number of vCores, for example, `HS_PRMS_10`.
-
-|vCores|24|32|40|64|80|128|
-|:--- | --: |--: |--: |--: |--: |--: |
-|Memory (GB)|124.6|166.1|207.6|332.2|415.2|625|
-|Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|
-|In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|N/A|
-|Max data size (TB)|100 |100 |100 |100 |100 |100 |
-|Max log size (TB)|Unlimited |Unlimited |Unlimited |Unlimited |Unlimited |Unlimited |
-|Tempdb max data size (GB)|768|1,024|1,280|2,048|2,560|4,096|
-|Max local SSD IOPS <sup>1</sup>|96,000|128,000|160,000|256,000|320,000|327,680|
-|Max log rate (MBps)|100 |100 |100 |100 |100|100|
-|Local read IO latency<sup>2</sup> |1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
-|Remote read IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
-|Write IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
-|Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
-|Max concurrent workers|2,400|3,200|4,000|6,400|8,000|12,800|
-|Max concurrent logins|2,400|3,200|4,000|6,400|8,000|12,800|
-|Max concurrent external connections <sup>4</sup>|150|150|150|150|150|150|
-|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|
-|Secondary replicas|0-4|0-4|0-4|0-4|0-4|0-4|
-|Multi-AZ|N/A|N/A|N/A|N/A|N/A|N/A|
-|Read Scale-out|Yes|Yes|Yes|Yes|Yes|Yes|
-|Backup storage retention|7 days|7 days|7 days|7 days|7 days|7 days|
+| Compute size (service objective) | HS_PRMS_24 | HS_PRMS_32 | HS_PRMS_40 | HS_PRMS_64 | HS_PRMS_80 | HS_PRMS_128 |
+|:-|-:|-:|-:|-:|-:|-:|
+| Hardware | Premium-series | Premium-series | Premium-series | Premium-series | Premium-series | Premium-series |
+| vCores | 24 | 32 | 40 | 64 | 80 | 128 |
+| Memory (GB) | 124.6 | 166.1 | 207.6 | 332.2 | 415.2 | 625 |
+| Columnstore support | Yes | Yes | Yes | Yes | Yes | Yes |
+| In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A | N/A |
+| Max data size (TB) | 100 | 100 | 100 | 100 | 100 | 100 |
+| Max log size (TB) | Unlimited | Unlimited | Unlimited | Unlimited | Unlimited | Unlimited |
+| Tempdb max data size (GB) | 768 | 1,024 | 1,280 | 2,048 | 2,560 | 4,096 |
+| Max local SSD IOPS <sup>1</sup> | 96,000 | 128,000 | 160,000 | 256,000 | 320,000 | 327,680 |
+| Max log rate (MBps) | 100 | 100 | 100 | 100 | 100 | 100 |
+| Local read IO latency<sup>2</sup> | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms |
+| Remote read IO latency<sup>2</sup> | 1-4 ms | 1-4 ms | 1-4 ms | 1-4 ms | 1-4 ms | 1-4 ms |
+| Write IO latency<sup>2</sup> | 1-4 ms | 1-4 ms | 1-4 ms | 1-4 ms | 1-4 ms | 1-4 ms |
+| Storage type | Multi-tiered<sup>3</sup> | Multi-tiered<sup>3</sup> | Multi-tiered<sup>3</sup> | Multi-tiered<sup>3</sup> | Multi-tiered<sup>3</sup> | Multi-tiered<sup>3</sup> |
+| Max concurrent workers | 2,400 | 3,200 | 4,000 | 6,400 | 8,000 | 12,800 |
+| Max concurrent logins | 2,400 | 3,200 | 4,000 | 6,400 | 8,000 | 12,800 |
+| Max concurrent external connections <sup>4</sup> | 150 | 150 | 150 | 150 | 150 | 150 |
+| Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
+| Secondary replicas | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 |
+| Multi-AZ | N/A | N/A | N/A | N/A | N/A | N/A |
+| Read Scale-out | Yes | Yes | Yes | Yes | Yes | Yes |
+| Backup storage retention | 7 days | 7 days | 7 days | 7 days | 7 days | 7 days |
 
 <sup>1</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
 
@@ -484,31 +482,30 @@ SLOs in the Hyperscale premium-series tier use the naming convention `HS_PRMS_` 
 
 ### Hyperscale - Premium-series memory optimized (part 1 of 3)
 
-SLOs in the Premium-series memory optimized tier use the naming convention `HS_MOPRMS_` followed by the number of vCores, for example, `HS_MOPRMS_10`.
-
-|vCores|2|4|6|8|10|
-|:--- | --: |--: |--: |--: |--: |
-|Hardware|Premium-series|Premium-series|Premium-series|Premium-series|Premium-series|
-|Memory (GB)| 20.8|41.5|62.3|83|103.8|
-|Columnstore support|Yes|Yes|Yes|Yes|Yes|
-|In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|
-|Max data size (TB)|100 |100 |100 |100 |100 |
-|Max log size (TB)|Unlimited |Unlimited |Unlimited |Unlimited |Unlimited |
-|Tempdb max data size (GB)|64|128|192|256|320|
-|Max local SSD IOPS <sup>1</sup>|10,240|20,480|30,720|40,960|51,200|
-|Max log rate (MBps)|100 |100 |100 |100 |100 |
-|Local read IO latency<sup>2</sup> |1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
-|Remote read IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
-|Write IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
-|Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
-|Max concurrent workers|200|400|600|800|1000|
-|Max concurrent logins|200|400|600|800|1000|
-|Max concurrent external connections <sup>4</sup>|20|40|60|80|100|
-|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|
-|Secondary replicas|0-4|0-4|0-4|0-4|0-4|
-|Multi-AZ|N/A|N/A|N/A|N/A|N/A|
-|Read Scale-out|Yes|Yes|Yes|Yes|Yes|
-|Backup storage retention|7 days|7 days|7 days|7 days|7 days|
+| Compute size (service objective) | HS_MOPRMS_2 | HS_MOPRMS_4 | HS_MOPRMS_6 | HS_MOPRMS_8 | HS_MOPRMS_10 |
+|:-|-:|-:|-:|-:|-:|
+| Hardware | Premium-series | Premium-series | Premium-series | Premium-series | Premium-series |
+| vCores | 2 | 4 | 6 | 8 | 10 |
+| Memory (GB) | 20.8 | 41.5 | 62.3 | 83 | 103.8 |
+| Columnstore support | Yes | Yes | Yes | Yes | Yes |
+| In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A |
+| Max data size (TB) | 100 | 100 | 100 | 100 | 100 |
+| Max log size (TB) | Unlimited | Unlimited | Unlimited | Unlimited | Unlimited |
+| Tempdb max data size (GB) | 64 | 128 | 192 | 256 | 320 |
+| Max local SSD IOPS <sup>1</sup> | 10,240 | 20,480 | 30,720 | 40,960 | 51,200 |
+| Max log rate (MBps) | 100 | 100 | 100 | 100 | 100 |
+| Local read IO latency<sup>2</sup> | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms |
+| Remote read IO latency<sup>2</sup> | 1-4 ms | 1-4 ms | 1-4 ms | 1-4 ms | 1-4 ms |
+| Write IO latency<sup>2</sup> | 1-4 ms | 1-4 ms | 1-4 ms | 1-4 ms | 1-4 ms |
+| Storage type | Multi-tiered<sup>3</sup> | Multi-tiered<sup>3</sup> | Multi-tiered<sup>3</sup> | Multi-tiered<sup>3</sup> | Multi-tiered<sup>3</sup> |
+| Max concurrent workers | 200 | 400 | 600 | 800 | 1000 |
+| Max concurrent logins | 200 | 400 | 600 | 800 | 1000 |
+| Max concurrent external connections <sup>4</sup> | 20 | 40 | 60 | 80 | 100 |
+| Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
+| Secondary replicas | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 |
+| Multi-AZ | N/A | N/A | N/A | N/A | N/A |
+| Read Scale-out | Yes | Yes | Yes | Yes | Yes |
+| Backup storage retention | 7 days | 7 days | 7 days | 7 days | 7 days |
 
 <sup>1</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
 
@@ -521,31 +518,30 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 
 ### Hyperscale - Premium-series memory optimized (part 2 of 3)
 
-SLOs in the Premium-series memory optimized tier use the naming convention `HS_MOPRMS_` followed by the number of vCores, for example, `HS_MOPRMS_10`.
-
-|vCores|12|14|16|18|20|
-|:--- | --: |--: |--: |--: |--: |
-|Hardware|Premium-series|Premium-series|Premium-series|Premium-series|Premium-series|
-|Memory (GB)|124.6|145.3|166.1|186.9|207.6|
-|Columnstore support|Yes|Yes|Yes|Yes|Yes|
-|In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|
-|Max data size (TB)|100 |100 |100 |100 |100 |
-|Max log size (TB)|Unlimited |Unlimited |Unlimited |Unlimited |Unlimited |
-|Tempdb max data size (GB)|384|448|512|576|640|
-|Max local SSD IOPS <sup>1</sup>|61,440|71,680|81,920|92,160|102,400|
-|Max log rate (MBps)|100 |100 |100 |100 |100 |
-|Local read IO latency<sup>2</sup> |1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
-|Remote read IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
-|Write IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
-|Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
-|Max concurrent workers|1,200|1,400|1,600|1,800|2,000|
-|Max concurrent logins|1,200|1,400|1,600|1,800|2,000|
-|Max concurrent external connections <sup>4</sup>|120|140|150|150|150|
-|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|
-|Secondary replicas|0-4|0-4|0-4|0-4|0-4|
-|Multi-AZ|N/A|N/A|N/A|N/A|N/A|
-|Read Scale-out|Yes|Yes|Yes|Yes|Yes|
-|Backup storage retention|7 days|7 days|7 days|7 days|7 days|
+| Compute size (service objective) | HS_MOPRMS_12 | HS_MOPRMS_14 | HS_MOPRMS_16 | HS_MOPRMS_18 | HS_MOPRMS_20 |
+|:-|-:|-:|-:|-:|-:|
+| Hardware | Premium-series | Premium-series | Premium-series | Premium-series | Premium-series |
+| vCores | 12 | 14 | 16 | 18 | 20 |
+| Memory (GB) | 124.6 | 145.3 | 166.1 | 186.9 | 207.6 |
+| Columnstore support | Yes | Yes | Yes | Yes | Yes |
+| In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A |
+| Max data size (TB) | 100 | 100 | 100 | 100 | 100 |
+| Max log size (TB) | Unlimited | Unlimited | Unlimited | Unlimited | Unlimited |
+| Tempdb max data size (GB) | 384 | 448 | 512 | 576 | 640 |
+| Max local SSD IOPS <sup>1</sup> | 61,440 | 71,680 | 81,920 | 92,160 | 102,400 |
+| Max log rate (MBps) | 100 | 100 | 100 | 100 | 100 |
+| Local read IO latency<sup>2</sup> | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms |
+| Remote read IO latency<sup>2</sup> | 1-4 ms | 1-4 ms | 1-4 ms | 1-4 ms | 1-4 ms |
+| Write IO latency<sup>2</sup> | 1-4 ms | 1-4 ms | 1-4 ms | 1-4 ms | 1-4 ms |
+| Storage type | Multi-tiered<sup>3</sup> | Multi-tiered<sup>3</sup> | Multi-tiered<sup>3</sup> | Multi-tiered<sup>3</sup> | Multi-tiered<sup>3</sup> |
+| Max concurrent workers | 1,200 | 1,400 | 1,600 | 1,800 | 2,000 |
+| Max concurrent logins | 1,200 | 1,400 | 1,600 | 1,800 | 2,000 |
+| Max concurrent external connections <sup>4</sup> | 120 | 140 | 150 | 150 | 150 |
+| Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
+| Secondary replicas | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 |
+| Multi-AZ | N/A | N/A | N/A | N/A | N/A |
+| Read Scale-out | Yes | Yes | Yes | Yes | Yes |
+| Backup storage retention | 7 days | 7 days | 7 days | 7 days | 7 days |
 
 <sup>1</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
 
@@ -558,30 +554,30 @@ SLOs in the Premium-series memory optimized tier use the naming convention `HS_M
 
 ### Hyperscale - Premium-series memory optimized (part 3 of 3)
 
-SLOs in the Premium-series memory optimized tier use the naming convention `HS_MOPRMS_` followed by the number of vCores, for example, `HS_MOPRMS_10`.
-
-|vCores|24|32|40|64|80|
-|:--- | --: |--: |--: |--: |--: |
-|Memory (GB)| 249.1|332.2|415.2|664.4|830.5|
-|Columnstore support|Yes|Yes|Yes|Yes|Yes|
-|In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|
-|Max data size (TB)|100 |100 |100 |100 |100 |
-|Max log size (TB)|Unlimited |Unlimited |Unlimited |Unlimited |Unlimited |
-|Tempdb max data size (GB)|768|1,024|1,280|2,048|2,560|
-|Max local SSD IOPS <sup>1</sup>|122,880|163,840|204,800|327,680|327,680|
-|Max log rate (MBps)|100 |100 |100 |100 |100 |
-|Local read IO latency<sup>2</sup> |1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
-|Remote read IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
-|Write IO latency<sup>2</sup>|1-4 ms|1-4 ms|1-4 ms|1-4 ms|1-4 ms|
-|Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
-|Max concurrent workers|2,400|3,200|4,000|6,400|8,000|
-|Max concurrent logins|2,400|3,200|4,000|6,400|8,000|
-|Max concurrent external connections <sup>4</sup>|150|150|150|150|150|
-|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|
-|Secondary replicas|0-4|0-4|0-4|0-4|0-4|
-|Multi-AZ|N/A|N/A|N/A|N/A|N/A|
-|Read Scale-out|Yes|Yes|Yes|Yes|Yes|
-|Backup storage retention|7 days|7 days|7 days|7 days|7 days|
+| Compute size (service objective) | HS_MOPRMS_24 | HS_MOPRMS_32 | HS_MOPRMS_40 | HS_MOPRMS_64 | HS_MOPRMS_80 |
+|:-|-:|-:|-:|-:|-:|
+| Hardware | Premium-series | Premium-series | Premium-series | Premium-series | Premium-series |
+| vCores | 24 | 32 | 40 | 64 | 80 |
+| Memory (GB) | 249.1 | 332.2 | 415.2 | 664.4 | 830.5 |
+| Columnstore support | Yes | Yes | Yes | Yes | Yes |
+| In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A |
+| Max data size (TB) | 100 | 100 | 100 | 100 | 100 |
+| Max log size (TB) | Unlimited | Unlimited | Unlimited | Unlimited | Unlimited |
+| Tempdb max data size (GB) | 768 | 1,024 | 1,280 | 2,048 | 2,560 |
+| Max local SSD IOPS <sup>1</sup> | 122,880 | 163,840 | 204,800 | 327,680 | 327,680 |
+| Max log rate (MBps) | 100 | 100 | 100 | 100 | 100 |
+| Local read IO latency<sup>2</sup> | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms |
+| Remote read IO latency<sup>2</sup> | 1-4 ms | 1-4 ms | 1-4 ms | 1-4 ms | 1-4 ms |
+| Write IO latency<sup>2</sup> | 1-4 ms | 1-4 ms | 1-4 ms | 1-4 ms | 1-4 ms |
+| Storage type | Multi-tiered<sup>3</sup> | Multi-tiered<sup>3</sup> | Multi-tiered<sup>3</sup> | Multi-tiered<sup>3</sup> | Multi-tiered<sup>3</sup> |
+| Max concurrent workers | 2,400 | 3,200 | 4,000 | 6,400 | 8,000 |
+| Max concurrent logins | 2,400 | 3,200 | 4,000 | 6,400 | 8,000 |
+| Max concurrent external connections <sup>4</sup> | 150 | 150 | 150 | 150 | 150 |
+| Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
+| Secondary replicas | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 |
+| Multi-AZ | N/A | N/A | N/A | N/A | N/A |
+| Read Scale-out | Yes | Yes | Yes | Yes | Yes |
+| Backup storage retention | 7 days | 7 days | 7 days | 7 days | 7 days |
 
 <sup>1</sup> Besides local SSD IO, workloads use remote [page server](hyperscale-architecture.md#page-server) IO. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
 

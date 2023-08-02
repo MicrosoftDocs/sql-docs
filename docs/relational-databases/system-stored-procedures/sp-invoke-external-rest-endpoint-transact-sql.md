@@ -456,7 +456,7 @@ SELECT @ret AS ReturnCode, @response AS Response;
 
 ### C. Read the contents of a file from Azure Blob Storage with a SAS token
 
-This example reads a file from Azure Blob Storage using a SAS token for authentication. The results will be returned in XML, so adding the header `"Accept":"application/xml"` will be needed.
+This example reads a file from Azure Blob Storage using a SAS token for authentication. The results will be returned in XML, so using the header `"Accept":"application/xml"` will be needed.
 
 ```sql
 DECLARE @ret INT, @response NVARCHAR(MAX);
@@ -510,9 +510,9 @@ EXEC @ret = sp_invoke_external_rest_endpoint @url = @url,
 SELECT @ret AS ReturnCode, @response AS Response;
 ```
 
-### E. Write a file to Azure Blob Storage with an Azure SQL Database Managed Identity
+### E. Read and write a file to Azure File Storage with an Azure SQL Database Managed Identity
 
-This example writes a file to an Azure Blob Storage container using an Azure SQL Database Managed Identity for authentication. The results will be returned in XML, so adding the header `"Accept":"application/xml"` will be needed.
+This example writes a file to an Azure File Storage using an Azure SQL Database Managed Identity for authentication and then returns the contents. The results will be returned in XML, so using the header `"Accept":"application/xml"` will be needed.
 
 Start by creating a master key for the Azure SQL Database
 

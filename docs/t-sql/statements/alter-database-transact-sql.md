@@ -934,8 +934,6 @@ ALTER DATABASE { database_name | Current }
 <auto_option> ::= 
 { 
     AUTO_CREATE_STATISTICS { OFF | ON [ ( INCREMENTAL = { ON | OFF } ) ] } 
-  | AUTO_UPDATE_STATISTICS { ON | OFF } 
-  | AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF } 
 } 
 
 <sql_option> ::= 

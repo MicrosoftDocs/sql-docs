@@ -113,7 +113,7 @@ Metadata about the MySQL database isn't automatically refreshed. The metadata in
 
 ## See also
 
-- [Migrating MySQL Databases to SQL Server - Azure SQL Database (MySQLToSql)](migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)
+- [Migrating MySQL Databases to SQL Server - Azure SQL Database (MySQLToSQL)](migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)
 
 ## Next steps
 

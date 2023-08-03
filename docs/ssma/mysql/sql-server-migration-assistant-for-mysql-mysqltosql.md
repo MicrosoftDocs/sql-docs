@@ -22,9 +22,9 @@ This documentation introduces you to SSMA for MySQL and provides step-by-step in
 | Section | Description |
 | --- | --- |
 | [What's New in SSMA for MySQL](what-s-new-in-ssma-for-mysql-mysqltosql.md) | What is new in this version of SSMA for MySQL. |
-| [Installing SSMA for MySQL (MySqlToSql)](installing-ssma-for-mysql-mysqltosql.md) | Contains articles that provide prerequisites and instructions for installing the SSMA for MySQL client and required components on the computer that is running [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. |
+| [Installing SSMA for MySQL (MySQLToSQL)](installing-ssma-for-mysql-mysqltosql.md) | Contains articles that provide prerequisites and instructions for installing the SSMA for MySQL client and required components on the computer that is running [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. |
 | [Getting Started with SSMA for MySQL (MySQLToSQL)](getting-started-with-ssma-for-mysql-mysqltosql.md) | Introduces the user interface, projects, and configuration options. |
-| [Migrating MySQL Databases to SQL Server - Azure SQL Database (MySQLToSql)](migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md) | Provides an overview of the conversion process and detailed information about each step in the process. |
+| [Migrating MySQL Databases to SQL Server - Azure SQL Database (MySQLToSQL)](migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md) | Provides an overview of the conversion process and detailed information about each step in the process. |
 | [User Interface Reference (MySQLToSQL)](user-interface-reference-mysqltosql.md) | Contains documentation for SSMA for MySQL dialog boxes. |
 | [Working with SSMA for MySQL Console](working-with-ssma-for-mysql-console-mysqltosql.md) | Contains documentation on the SSMA console application. |
 | [Getting SSMA for MySQL Assistance](../sql-server-migration-assistant.md) | Provides information about getting additional assistance. |

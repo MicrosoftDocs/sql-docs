@@ -137,7 +137,7 @@ Choosing a maintenance window for Azure SQL Managed Instance other than the defa
 
 Choosing a maintenance window for Azure SQL Database other than the default is currently available in the following regions, organized by purchasing model.
 
-The following table is for databases that do not have [zone-redundancy](high-availability-sla.md#zone-redundant-availability) enabled. For databases in an [Azure Availability Zone](high-availability-sla.md#zone-redundant-availability), see [the table for zone-redundant databases.](#ZR-maintenance-window-availability).
+The following table is for databases that are not [zone-redundant](high-availability-sla.md#zone-redundant-availability). For databases in an [Azure Availability Zone](high-availability-sla.md#zone-redundant-availability), see [the table for zone-redundant databases.](#ZR-maintenance-window-availability)
 
 | Azure Region | SQL Database: Hyperscale Premium-series and Premium-series memory optimized | All other Azure SQL Database purchasing models and tiers |
 |:---|:---|:---|:---|
@@ -177,6 +177,7 @@ The following table is for databases that do not have [zone-redundancy](high-ava
 | West US 3 | Yes | |
 
 <a id="ZR-maintenance-window-availability"></a>
+
 The following table is for [zone-redundant](high-availability-sla.md#zone-redundant-availability) databases.
 
 | Azure Region | SQL Database: Hyperscale Premium-series and Premium-series memory optimized in an [Azure Availability Zone](high-availability-sla.md#zone-redundant-availability) | All other Azure SQL Database purchasing models and tiers in an [Azure Availability Zone](high-availability-sla.md#zone-redundant-availability) |

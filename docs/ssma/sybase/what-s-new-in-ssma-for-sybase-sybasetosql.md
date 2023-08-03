@@ -13,6 +13,14 @@ ms.custom: intro-whats-new
 
 This article lists SQL Server Migration Assistant (SSMA) for SAP ASE (formerly SSMA for Sybase) changes in each release.
 
+## SSMA v9.4
+The v9.4 release of SSMA for SAP ASE contains the following changes:
+
+ * Support for bigdatetime data type
+ * Fix for missing subscriptions in migration through migrationat scale
+ * Improve conversion of Primary and Unique keys present as Index hints
+ * Improve conversion of SELECT statement
+   
 ## SSMA v9.3
 The v9.2 release of SSMA for SAP ASE contains the following changes:
 

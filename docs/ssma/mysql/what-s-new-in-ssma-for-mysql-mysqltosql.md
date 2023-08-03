@@ -13,6 +13,12 @@ ms.custom: intro-whats-new
 
 This article lists SQL Server Migration Assistant (SSMA) for MySQL changes in each release.
 
+## SSMA v9.4
+
+The v9.4 release of SSMA for MySQL contains the following changes:
+ * Fix for missing subscriptions in migration through migration at scale.
+
+
 ## SSMA v9.3
 
 The v9.3 release of SSMA for MySQL contains the following changes:

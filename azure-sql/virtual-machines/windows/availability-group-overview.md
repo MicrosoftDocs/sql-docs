@@ -4,11 +4,10 @@ description: This article introduces SQL Server Always On availability groups on
 author: tarynpratt
 ms.author: tarynpratt
 ms.reviewer: mathoma
-ms.date: 11/10/2021
+ms.date: 03/29/2023
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: overview
-ms.custom: seo-lt-2019
 editor: monicar
 tags: azure-service-management
 ---
@@ -35,13 +34,13 @@ The following diagram illustrates an availability group for SQL Server on Azure 
 
 To increase redundancy and high availability, SQL Server VMs should either be in the same [availability set](/azure/virtual-machines/availability-set-overview), or different [availability zones](/azure/availability-zones/az-overview).
 
-Placing a set of VMs in the same availability set protects from outages within a data center caused by equipment failure (VMs within an Availability Set do not share resources) or from updates (VMs within an availability set are not updated at the same time). 
+Placing a set of VMs in the same availability set protects from outages within a data center caused by equipment failure (VMs within an Availability Set don't share resources) or from updates (VMs within an availability set aren't updated at the same time). 
 
 Availability Zones protect against the failure of an entire data center, with each Zone representing a set of data centers within a region.  By ensuring resources are placed in different Availability Zones, no data center-level outage can take all of your VMs offline.
 
-When creating Azure VMs, you must choose between configuring Availability Sets vs Availability Zones.  An Azure VM cannot participate in both. 
+When creating Azure VMs, you must choose between configuring Availability Sets vs Availability Zones.  An Azure VM can't participate in both. 
 
-While Availability Zones may provide better availability than Availability Sets (99.99% vs 99.95%), performance should also be a consideration. VMs within an Availability Set can be placed in a [proximity placement group](/azure/virtual-machines/co-location) which guarantees that they are close to each other, minimizing network latency between them. VMs located in different Availability Zones will have greater network latency between them, which can increase the time it takes to synchronize data between the primary and secondary replica(s). This may cause delays on the primary replica as well as increase the chance of data loss in the event of an unplanned failover. It is important to test the proposed solution under load and ensure that it meets SLAs for both performance and availability.
+While Availability Zones may provide better availability than Availability Sets (99.99% vs 99.95%), performance should also be a consideration. VMs within an Availability Set can be placed in a [proximity placement group](/azure/virtual-machines/co-location) which guarantees they're close to each other, minimizing network latency between them. VMs located in different Availability Zones have greater network latency between them, which can increase the time it takes to synchronize data between the primary and secondary replica(s). This may cause delays on the primary replica as well as increase the chance of data loss in the event of an unplanned failover. It's important to test the proposed solution under load and ensure that it meets SLAs for both performance and availability.
 
 ## Connectivity
 
@@ -53,7 +52,7 @@ Most SQL Server features work transparently with availability groups when using 
 
 Additionally, there are some behavior differences between the functionality of the VNN listener and DNN listener that are important to note: 
 
-- **Failover time**: Failover time is faster when using a DNN listener since there is no need to wait for the network load balancer to detect the failure event and change its routing. 
+- **Failover time**: Failover time is faster when using a DNN listener since there's no need to wait for the network load balancer to detect the failure event and change its routing. 
 - **Existing connections**: Connections made to a *specific database* within a failing-over availability group will close, but other connections to the primary replica will remain open since the DNN stays online during the failover process. This is different than a traditional VNN environment where all connections to the primary replica typically close when the availability group fails over, the listener goes offline, and the primary replica transitions to the secondary role. When using a DNN listener, you may need to adjust application connection strings to ensure that connections are redirected to the new primary replica upon failover.
 - **Open transactions**: Open transactions against a database in a failing-over availability group will close and roll back, and you need to *manually* reconnect. For example, in SQL Server Management Studio, close the query window and open a new one. 
 
@@ -62,7 +61,7 @@ Setting up a VNN listener in Azure requires a load balancer. There are two main 
 You can still connect to each availability replica separately by connecting directly to the service instance. Also, because availability groups are backward compatible with database mirroring clients, you can connect to the availability replicas like database mirroring partners as long as the replicas are configured similarly to database mirroring:
 
 * There's one primary replica and one secondary replica.
-* The secondary replica is configured as non-readable (**Readable Secondary** option set to **No**).
+* The secondary replica is configured as nonreadable (**Readable Secondary** option set to **No**).
 
 The following is an example client connection string that corresponds to this database mirroring-like configuration using ADO.NET or SQL Server Native Client:
 
@@ -78,33 +77,46 @@ For more information on client connectivity, see:
 * [Availability Group Listeners, Client Connectivity, and Application Failover (SQL Server)](/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover)
 * [Using Database-Mirroring Connection Strings with Availability Groups](/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover)
 
+### Single subnet requires load balancer
+
+When you create an availability group listener on a traditional on-premises Windows Server Failover Cluster (WSFC), a DNS record gets created for the listener with the IP address you provide, and this IP address maps to the MAC address of the current Primary replica in the ARP tables of switches and routers on the on-premises network. The cluster does this by using Gratuitous ARP (GARP), where it broadcasts the latest IP-to-MAC address mapping to the network whenever a new Primary is selected after failover. In this case, the IP address is for the listener, and the MAC is of the current Primary replica. The GARP forces an update to the ARP table entries for the switches and routers, and to any users connecting to the listener IP address are routed seamlessly to the current Primary replica. 
+
+For security reasons, broadcasting on any public cloud (Azure, Google, AWS) isn't allowed, so the uses of ARPs and GARPs on Azure isn't supported. To overcome this difference in networking environments, SQL Server VMs in a single subnet availability group rely on load balancers to route traffic to the appropriate IP addresses. Load balancers are configured with a frontend IP address that corresponds to the listener and a probe port is assigned so that the Azure Load Balancer periodically polls for the status of the replicas in the availability group. Since only the primary replica SQL Server VM responds to the TCP probe, incoming traffic is then routed to the VM that successfully responds to the probe. Additionally, the corresponding probe port is configured as the WSFC cluster IP, ensuring the Primary replica responds to the TCP probe. 
+
+Availability groups configured in a single subnet must either use a load balancer or distributed network name (DNN) to route traffic to the appropriate replica. To avoid these dependencies, configure your availability group in multiple subnets so the availability group listener is configured with an IP address for a replica in each subnet, and can route traffic appropriately. 
+
+If you've already created your availability group in a single subnet, you can [migrate it to a multi-subnet environment](availability-group-manually-migrate-multi-subnet.md). 
+
 ## Lease mechanism 
 
-For SQL Server, the AG resource DLL determines the health of the AG based on the AG lease mechanism and Always On health detection. The AG resource DLL exposes resource health through the *IsAlive* operation. The resource monitor polls IsAlive at the cluster heartbeat interval, which is set by the **CrossSubnetDelay** and **SameSubnetDelay** cluster-wide values. On a primary node, the cluster service initiates failover whenever the IsAlive call to the resource DLL returns that the AG is not healthy.
+For SQL Server, the AG resource DLL determines the health of the AG based on the AG lease mechanism and Always On health detection. The AG resource DLL exposes resource health through the *IsAlive* operation. The resource monitor polls IsAlive at the cluster heartbeat interval, which is set by the **CrossSubnetDelay** and **SameSubnetDelay** cluster-wide values. On a primary node, the cluster service initiates failover whenever the IsAlive call to the resource DLL returns that the AG isn't healthy.
 
 The AG resource DLL monitors the status of internal SQL Server components. Sp_server_diagnostics reports the health of these components to SQL Server on an interval controlled by **HealthCheckTimeout**.
 
 Unlike other failover mechanisms, the SQL Server instance plays an active role in the lease mechanism. The lease mechanism is used as a *LooksAlive* validation between the Cluster resource host and the SQL Server process. The mechanism is used to ensure that the two sides (the Cluster Service and SQL Server service) are in frequent contact, checking each other's state and ultimately preventing a split-brain scenario.
 
-When configuring an AG in Azure VMs, there is often a need to configure these thresholds differently than they would be configured in an on-premises environment. To configure threshold settings according to best practices for Azure VMs, see the [cluster best practices](hadr-cluster-best-practices.md). 
+When configuring an AG in Azure VMs, there's often a need to configure these thresholds differently than they would be configured in an on-premises environment. To configure threshold settings according to best practices for Azure VMs, see the [cluster best practices](hadr-cluster-best-practices.md). 
 
 
 ## Network configuration  
 
 Deploy your SQL Server VMs to multiple subnets whenever possible to avoid the dependency on an Azure Load Balancer or a distributed network name (DNN) to route traffic to your availability group listener. 
 
-On an Azure VM failover cluster, we recommend a single NIC per server (cluster node). Azure networking has physical redundancy, which makes additional NICs unnecessary on an Azure VM failover cluster. Although the cluster validation report will issue a warning that the nodes are only reachable on a single network, this warning can be safely ignored on Azure VM failover clusters.
+On an Azure VM failover cluster, we recommend a single NIC per server (cluster node). Azure networking has physical redundancy, which makes additional NICs unnecessary on an Azure VM failover cluster. Although the cluster validation report issues a warning that the nodes are only reachable on a single network, this warning can be safely ignored on Azure VM failover clusters.
 
 ## Basic availability group
 
-As basic availability group does not allow more than one secondary replica and there is no read access to the secondary replica, you can use the database mirroring connection strings for basic availability groups. Using the connection string eliminates the need to have listeners. Removing the listener dependency is helpful for availability groups on Azure VMs as it eliminates the need for a load balancer or having to add additional IPs to the load balancer when you have multiple listeners for additional databases. 
+As basic availability group doesn't allow more than one secondary replica and there's no read access to the secondary replica, you can use the database mirroring connection strings for basic availability groups. Using the connection string eliminates the need to have listeners. Removing the listener dependency is helpful for availability groups on Azure VMs as it eliminates the need for a load balancer or having to add additional IPs to the load balancer when you have multiple listeners for additional databases. 
 
-For example, to explicitly connect using TCP/IP to the AG database AdventureWorks on either Replica_A or Replica_B of a Basic AG (or any AG that that has only one secondary replica and the read access is not allowed in the secondary replica), a client application could supply the following database mirroring connection string to successfully connect to the AG
+For example, to explicitly connect using TCP/IP to the AG database AdventureWorks on either Replica_A or Replica_B of a Basic AG (or any AG that that has only one secondary replica and the read access isn't allowed in the secondary replica), a client application could supply the following database mirroring connection string to successfully connect to the AG
 
 `Server=Replica_A; Failover_Partner=Replica_B; Database=AdventureWorks; Network=dbmssocn`
 
 
 ## Deployment options
+
+> [!TIP]
+> Eliminate the need for an Azure Load Balancer or distributed network name (DNN) for your Always On availability group by creating your SQL Server VMs in [multiple subnets](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md) within the same Azure virtual network.
 
 There are multiple options for deploying an availability group to SQL Server on Azure VMs, some with more automation than others. 
 
@@ -116,17 +128,17 @@ The following table provides a comparison of the options available:
 |**SQL Server edition** |Enterprise |Enterprise |Enterprise |Enterprise, Standard|Enterprise, Standard|
 |**Windows Server version**| 2016 + | 2016 + | 2016 + | All| All|
 |**Creates the cluster for you**|Yes|Yes | Yes |No| No| 
-|**Creates the availability group for you** |Yes |No|No|No| No| 
-|**Creates listener and load balancer independently** |No|No|No|Yes|N/A|
-|**Possible to create DNN listener using this method?**|No|No|No|Yes|N/A|
+|**Creates the availability group and listener for you** |Yes |No|No|No| No| 
+|**Creates listener and load balancer independently** |N/A|No|No|Yes|N/A|
+|**Possible to create DNN listener using this method?**|N/A|No|No|Yes|N/A|
 |**WSFC quorum configuration**|Cloud witness|Cloud witness|Cloud witness|All|All|
 |**DR with multiple regions** |No|No|No|Yes|Yes|
-|**Multisubnet support** |No|No|No|N/A|Yes|
+|**Multisubnet support** |Yes|No|No|N/A|Yes|
 |**Support for an existing AD**|Yes|Yes|Yes|Yes|Yes|
 |**DR with multizone in the same region**|Yes|Yes|Yes|Yes|Yes|
 |**Distributed AG with no AD**|No|No|No|Yes| Yes| 
 |**Distributed AG with no cluster** |No|No|No|Yes|Yes|
-|**Requires load balancer or DNN**| Yes | Yes | Yes | Yes | No|
+|**Requires load balancer or DNN**| No | Yes | Yes | Yes | No|
 
 ## Next steps
 

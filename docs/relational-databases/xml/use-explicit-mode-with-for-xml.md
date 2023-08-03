@@ -1,23 +1,21 @@
 ---
 title: "Use EXPLICIT Mode with FOR XML"
 description: Learn how using FOR XML EXPLICIT mode provides the most flexibility in generating XML from a query result.
-ms.custom: ""
-ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.date: 05/05/2022
+ms.service: sql
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "EXPLICIT FOR XML mode"
   - "FOR XML clause, EXPLICIT mode"
   - "FOR XML EXPLICIT mode"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Use EXPLICIT mode with FOR XML
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 As described in the article, [Constructing XML Using FOR XML](../../relational-databases/xml/for-xml-sql-server.md), RAW and AUTO mode don't provide much control over the shape of the XML generated from a query result. However, EXPLICIT mode provides the most flexibility in generating the XML you want from a query result.
 

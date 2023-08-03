@@ -4,8 +4,8 @@ description: Learn how OLE DB Driver for SQL Server converts between datetime an
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "06/14/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 helpviewer_keywords:
   - "conversions [OLE DB]"
@@ -58,10 +58,10 @@ helpviewer_keywords:
   
 ## In This Section  
  [Conversions Performed from Client to Server](../../oledb/ole-db-date-time/conversions-performed-from-client-to-server.md)  
- Describes date/time conversions performed between a client application written with OLE DB Driver for SQL Server and [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (or later).  
+ Describes date/time conversions performed between a client application written with OLE DB Driver for [!INCLUDE[sql2008-md](../../../includes/sql2008-md.md)] and later versions.  
   
  [Conversions Performed from Server to Client](../../oledb/ole-db-date-time/conversions-performed-from-server-to-client.md)  
- Describes date/time conversions performed between [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (or later) and a client application written with OLE DB Driver for SQL Server.  
+ Describes date/time conversions performed between [!INCLUDE[sql2008-md](../../../includes/sql2008-md.md)] and later versions, and a client application written with OLE DB Driver for SQL Server.  
   
 ## See Also  
  [Date and Time Improvements &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  

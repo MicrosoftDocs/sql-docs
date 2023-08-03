@@ -1,23 +1,18 @@
 ---
+title: "SQL Server Guides"
 description: "SQL Server Guides"
-title: "SQL Server Guides | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/07/2020"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: 
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "guide"
-  - "guide, list"
-ms.assetid: a5d04171-dfbc-4b90-acd0-1bb27d4b7e34
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "10/07/2020"
+ms.service: sql
+ms.topic: conceptual
+helpviewer_keywords:
+  - "guide"
+  - "guide, list"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Guides
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 The following guides are available. They discuss general concepts and apply to all versions of SQL Server, unless stated otherwise in the respective guide. 
 

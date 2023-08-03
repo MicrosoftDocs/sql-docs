@@ -1,18 +1,18 @@
 ---
-title: "in-doubt xact resolution Server Configuration Option"
+title: "in-doubt xact resolution (server configuration option)"
 description: "Become familiar with the in-doubt xact resolution option. See how it determines the default outcome for in-doubt transactions in SQL Server."
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/02/2017"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "distributed transactions [SQL Server], unresolved transactions"
   - "unresolved transactions"
   - "in-doubt xact resolution option"
 ---
-# in-doubt xact resolution Server Configuration Option
+# in-doubt xact resolution (server configuration option)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Use the **in-doubt xact resolution** option to control the default outcome of transactions that the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) is unable to resolve. Inability to resolve transactions may be related to the MS DTC down time or an unknown transaction outcome at the time of recovery.  

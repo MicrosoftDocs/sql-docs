@@ -1,20 +1,16 @@
 ---
+title: "STConvexHull (geography Data Type)"
 description: "STConvexHull (geography Data Type)"
-title: "STConvexHull (geography Data Type) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "STConvexHull method (geography)"
-ms.assetid: fb435db7-31bb-4243-9d8b-35379184cfb4
 author: MladjoA
-ms.author: mlandzic 
+ms.author: mlandzic
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: t-sql
+ms.topic: reference
+helpviewer_keywords:
+  - "STConvexHull method (geography)"
+dev_langs:
+  - "TSQL"
 ---
 # STConvexHull (geography Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

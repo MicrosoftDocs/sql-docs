@@ -1,14 +1,14 @@
 ---
-title: "Add, change, or delete a map or map layer in a paginated report | Microsoft Docs"
+title: "Add, change, or delete a map or map layer in a paginated report"
 description: Learn how to add, remove, or change map options manually or by using the map layer wizard in a paginated report in Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 05/24/2018
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
+ms.service: reporting-services
+ms.subservice: report-design
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: updatefrequency5
+f1_keywords:
   - "sql13.rtp.rptdesigner.maplayerproperties.general.f1"
   - "10526"
   - "sql13.rtp.rptdesigner.mappolygonlayerproperties.general.f1"
@@ -25,9 +25,6 @@ f1_keywords:
   - "10528"
   - "10527"
   - "sql13.rtp.rptdesigner.shared.layervisibility.f1"
-ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Add, change, or delete a map or map layer in a paginated report (Report Builder)
 

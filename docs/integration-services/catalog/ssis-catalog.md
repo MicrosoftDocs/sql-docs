@@ -1,20 +1,16 @@
 ---
+title: "SSIS Catalog"
 description: "SSIS Catalog"
-title: "SSIS Catalog | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: 09/17/2020
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.ssis.ssms.iscreatecatalog.f1"
   - "sql13.ssis.ssms.iscatalogprop.general.f1"
   - "sql13.ssis.dbupgradewizard.f1"
-ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
-author: chugugrace
-ms.author: chugu
 ---
 
 # SSIS Catalog
@@ -370,7 +366,7 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
   
 ###  <a name="open_dialog"></a> Open the Catalog Properties Dialog Box  
   
-1.  Open [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+1.  Open [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 2.  Connect Microsoft SQL Server Database Engine.  
   
@@ -613,6 +609,9 @@ Adding the SSISDB database to an Always On Availability Group is almost same as 
 Provide the password that you specified while creating the SSIS Catalog in the **Select Databases** page of the **New Availability Group** wizard.
 
 ![New Availability Group](../../integration-services/service/media/ssis-newavailabilitygroup.png "New Availability Group")  
+  
+  > [!IMPORTANT]  
+  >  To prevent issues with the master key after a failover, use the method **Full database and log backup** to add the SSISDB database to the Always On Availability Group.
   
 ####  <a name="Step3"></a> Step 3: Enable SSIS support for Always On  
  After you create the Integration Service Catalog, right-click the **Integration Service Catalogs** node, and click **Enable Always On Support.** You should see the following **Enable Support for Always On** dialog box. If this menu item is disabled, confirm that you have all the prerequisites installed and click **Refresh**.  

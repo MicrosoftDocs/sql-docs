@@ -4,9 +4,8 @@ description: MSdbms_map (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "MSdbms_map"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "MSdbms_map system table"
 dev_langs:
   - "TSQL"
-ms.assetid: df67e691-3a50-450a-99c5-8c4a041749ae
 ---
 # MSdbms_map (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

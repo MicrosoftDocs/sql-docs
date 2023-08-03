@@ -4,9 +4,8 @@ description: MSsnapshot_history (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "MSsnapshot_history"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "MSsnapshot_history system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 56bf4128-1689-4963-9343-432dd0898d31
 ---
 # MSsnapshot_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -4,13 +4,10 @@ description: Learn which database engine functionality and features were discont
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.date: 07/25/2022
-ms.prod: sql
-ms.technology: release-landing
+ms.date: 10/18/2022
+ms.service: sql
+ms.subservice: release-landing
 ms.topic: conceptual
-ms.custom:
-  - seo-lt-2019
-  - event-tier1-build-2022
 helpviewer_keywords:
   - "VIA protocol"
   - "unsupported features [SQL Server]"
@@ -56,7 +53,20 @@ This article describes the [!INCLUDE[ssDE](../includes/ssde-md.md)] features tha
 
 - SQL Server Big Data Clusters will be retired. See information in [[!INCLUDE[big-data-cluster](../includes/ssbigdataclusters-ss-nover.md)] overview](../big-data-cluster/big-data-cluster-overview.md).
 
-- SQL Server PolyBase scale-out groups will be retired. Scale out group functionality is removed from the product in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]. PolyBase data virtualization continues to be fully supported as a scale-up feature in SQL Server. See [Changes to PolyBase support in SQL Server](../big-data-cluster/big-data-options.md#changes-to-polybase-support-in-sql-server).
+- SQL Server PolyBase scale-out groups will be retired. Scale out group functionality is removed from the product in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]. PolyBase data virtualization continues to be fully supported as a scale-up feature in SQL Server. 
+
+- Support for Hadoop (HDFS) external data sources will be retired for SQL Server PolyBase.
+
+- See [Changes to PolyBase support in SQL Server](../big-data-cluster/big-data-options.md#changes-to-polybase-support-in-sql-server).
+
+
+- Starting in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], Hadoop external data sources are no longer supported. It is required to manually recreate external data sources previously created with `TYPE = HADOOP`, and any external table that uses this external data source. Users will also need to configure their external data sources to use new connectors when connecting to Azure Storage.
+
+| External Data Source | From | To |
+|:--|:--|:--|
+| Azure Blob Storage | wasb[s] | abs |
+| ADLS Gen 2 | abfs[s] | adls |
+
 
 ## Discontinued features in [!INCLUDE[sssql19](../includes/sssql19-md.md)]
 
@@ -81,7 +91,7 @@ For current configuration options, see [ALTER DATABASE SCOPED CONFIGURATION (Tra
 
 - Startup parameters **-h** and **-g**. For more information, see [Database Engine Service Startup Options](/previous-versions/sql/2014/database-engine/configure-windows/database-engine-service-startup-options?view=sql-server-2014&preserve-view=true).
 
-- Secure Sockets Layer (SSL) encryption is discontinued. Use Transport Layer Security (TLS) instead. For more information, see [Enable Encrypted Connections to the Database Engine](../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).
+- Secure Sockets Layer (SSL) encryption is discontinued. Use Transport Layer Security (TLS) instead. For more information, see [Enable Encrypted Connections to the Database Engine](./configure-windows/configure-sql-server-encryption.md).
 
 - `precompute rank` Server configuration option was discontinued beginning with SQL Server 2008. The article has been removed from documentation.
 

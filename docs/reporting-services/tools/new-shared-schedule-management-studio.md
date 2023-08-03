@@ -1,18 +1,15 @@
 ---
-title: "New Shared Schedule (Management Studio) | Microsoft Docs"
+title: "New Shared Schedule (Management Studio)"
 description: Learn how to create a new shared schedule to run published reports and subscriptions using the options on the New Schedule page in SQL Server Management Studio.
-ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: tools
-
-
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.reportserver.newschedule.f1"
-ms.assetid: b2c69586-d98e-4933-827d-f5e6c15c5203
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/14/2017
+ms.service: reporting-services
+ms.subservice: tools
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.swb.reportserver.newschedule.f1"
 ---
 # New Shared Schedule (Management Studio)
   Use this page to create a shared schedule to run published reports and subscriptions. Shared schedules can be used in place of report-specific or subscription-specific schedules. Centralized schedule information and the ability to pause and resume scheduled operations are two key features that distinguish shared schedules from item-specific schedules.  

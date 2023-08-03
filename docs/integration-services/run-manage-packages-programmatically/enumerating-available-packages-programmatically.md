@@ -1,20 +1,16 @@
 ---
+title: "Enumerating Available Packages Programmatically"
 description: "Enumerating Available Packages Programmatically"
-title: "Enumerating Available Packages Programmatically | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "programmatically enumerate packages [SSIS]"
   - "existence testing [Integration Services]"
   - "enumerating packages [Integration Services]"
-ms.assetid: 254ec7ee-d3ff-4361-8995-46e9b9c4dc95
-author: chugugrace
-ms.author: chugu
 ---
 # Enumerating Available Packages Programmatically
 

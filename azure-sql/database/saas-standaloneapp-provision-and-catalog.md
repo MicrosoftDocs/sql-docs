@@ -21,7 +21,7 @@ This article has two major parts:
 
 ## Standalone application per tenant pattern
 
-The standalone app per tenant pattern is one of several patterns for multi-tenant SaaS applications.  In this pattern, a standalone app is provisioned for each tenant. The application comprises application level components and an Azure SQL Database.  Each tenant app can be deployed in the vendor’s subscription.  Alternatively, Azure offers a [managed applications program](/azure/azure-resource-manager/managed-applications/overview) in which an app can be deployed in a tenant’s subscription and managed by the vendor on the tenant’s behalf.
+The standalone app per tenant pattern is one of several patterns for multi-tenant SaaS applications.  In this pattern, a standalone app is provisioned for each tenant. The application comprises application level components and an Azure SQL Database.  Each tenant app can be deployed in the vendor's subscription.  Alternatively, Azure offers a [managed applications program](/azure/azure-resource-manager/managed-applications/overview) in which an app can be deployed in a tenant's subscription and managed by the vendor on the tenant's behalf.
 
    ![app-per-tenant pattern](./media/saas-standaloneapp-provision-and-catalog/standalone-app-pattern.png)
 
@@ -29,7 +29,7 @@ When deploying an application for a tenant, the app and database are provisioned
 
 ## Using a tenant catalog with the application per tenant pattern
 
-While each tenant’s app and database are fully isolated, various management and analytics scenarios may operate across tenants.  For example, applying a schema change for a new release of the application requires changes to the schema of each tenant database. Reporting and analytics scenarios may also require access to all the tenant databases regardless of where they are deployed.
+While each tenant's app and database are fully isolated, various management and analytics scenarios may operate across tenants.  For example, applying a schema change for a new release of the application requires changes to the schema of each tenant database. Reporting and analytics scenarios may also require access to all the tenant databases regardless of where they are deployed.
 
    ![Diagram that shows how to use a tenant catalog with the application per tenant pattern.](./media/saas-standaloneapp-provision-and-catalog/standalone-app-pattern-with-catalog.png)
 
@@ -37,7 +37,7 @@ The tenant catalog holds a mapping between a tenant identifier and a tenant data
 
 ## Elastic Database Client Library
 
-In the Wingtip sample application, the catalog is implemented by the shard management features of the [Elastic Database Client Library](elastic-database-client-library.md) (EDCL).  The library enables an application to create, manage, and use a shard map that is stored in a database. In the Wingtip Tickets sample, the catalog is stored in the *tenant catalog* database.  The shard maps a tenant key to the shard (database) in which that tenant’s data is stored.  EDCL functions manage a *global shard map* stored in tables in the *tenant catalog* database and a *local shard map* stored in each shard.
+In the Wingtip sample application, the catalog is implemented by the shard management features of the [Elastic Database Client Library](elastic-database-client-library.md) (EDCL).  The library enables an application to create, manage, and use a shard map that is stored in a database. In the Wingtip Tickets sample, the catalog is stored in the *tenant catalog* database.  The shard maps a tenant key to the shard (database) in which that tenant's data is stored.  EDCL functions manage a *global shard map* stored in tables in the *tenant catalog* database and a *local shard map* stored in each shard.
 
 EDCL functions can be called from applications or PowerShell scripts to create and manage the entries in the shard map. Other EDCL functions can be used to retrieve the set of shards or connect to the correct database for given tenant key.
 
@@ -46,7 +46,7 @@ EDCL functions can be called from applications or PowerShell scripts to create a
 
 ## Tenant provisioning
 
-Each tenant requires a new Azure resource group, which must be created before resources can be provisioned within it. Once the resource group exists, an Azure Resource Management template can be used to deploy the application components and the database, and then configure the database connection. To initialize the database schema, the template can import a bacpac file.  Alternatively, the database can be created as a copy of a ‘template’ database.  The database is then further updated with initial venue data and registered in the catalog.
+Each tenant requires a new Azure resource group, which must be created before resources can be provisioned within it. Once the resource group exists, an Azure Resource Management template can be used to deploy the application components and the database, and then configure the database connection. To initialize the database schema, the template can import a bacpac file.  Alternatively, the database can be created as a copy of a template database.  The database is then further updated with initial venue data and registered in the catalog.
 
 ## Tutorial
 

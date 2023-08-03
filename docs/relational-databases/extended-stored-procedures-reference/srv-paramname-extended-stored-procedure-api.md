@@ -4,9 +4,8 @@ description: Learn how srv_paramname in the Extended Stored Procedure API return
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: stored-procedures
+ms.service: sql
+ms.subservice: stored-procedures
 ms.topic: "reference"
 helpviewer_keywords:
   - "srv_paramname"
@@ -15,7 +14,6 @@ dev_langs:
 apilocation: opends60.dll
 apiname: srv_paramname
 apitype: "DLLExport"
-ms.assetid: 1a53d707-7b06-49cc-a0df-ac727cfe953f
 ---
 # srv_paramname (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

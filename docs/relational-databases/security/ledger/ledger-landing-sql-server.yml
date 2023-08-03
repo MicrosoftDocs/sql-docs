@@ -15,8 +15,8 @@ metadata:
   ms.topic: landing-page
   author: VanMSFT
   ms.author: vanto
-  ms.reviewer: kendralittle, mathoma
-  ms.date: 07/22/2022
+  ms.reviewer: mathoma
+  ms.date: 05/23/2023
   monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
   titleSuffix: SQL Server and Azure SQL Database
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
@@ -86,7 +86,9 @@ landingContent:
           - text: Microsoft Customer Story - Lenovo reinforces customer trust with ledger in Azure SQL Database
             url: https://customers.microsoft.com/story/1497685499820529889-lenovo-manufacturing-azure-SQL-database-ledger
           - text: Microsoft Customer Story - RTGS.global automates financial transfers, unlocks trillions in capital with Azure
-            url: https://customers.microsoft.com/story/1497685499820529889-lenovo-manufacturing-azure-SQL-database-ledger
+            url: https://customers.microsoft.com/en-us/story/1379614319255768839-rtgs-partner-professional-services-azure-sql
+          - text: Microsoft Customer Story - Qode Health Solutions secures COVID-19 vaccination records with the ledger feature in Azure SQL Database
+            url: https://customers.microsoft.com/en-us/story/1595119379301789552-qode-professional-services-azure-sql-database
 
 
   # Card

@@ -1,14 +1,14 @@
 ---
-title: "Replication Agent Administration | Microsoft Docs"
+title: "Replication Agent Administration"
 description: Learn about managing replication agents, which perform tasks for replication, like creating copies of schema and data and propagating changes between servers.
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "08/24/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "Snapshot Agent, administering"
   - "Log Reader Agent, administering"
   - "Queue Reader Agent, administering"
@@ -20,9 +20,6 @@ helpviewer_keywords:
   - "administering replication, agents"
   - "replication [SQL Server], administering"
   - "independent agents [SQL Server replication]"
-ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Replication Agent Administration

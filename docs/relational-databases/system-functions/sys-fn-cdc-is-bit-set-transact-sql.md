@@ -1,33 +1,29 @@
 ---
+title: "sys.fn_cdc_is_bit_set (Transact-SQL)"
 description: "sys.fn_cdc_is_bit_set (Transact-SQL)"
-title: "sys.fn_cdc_is_bit_set (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "fn_cdc_is_bit_set"
   - "sys.fn_cdc_is_bit_set_TSQL"
   - "sys.fn_cdc_is_bit_set"
   - "fn_cdc_is_bit_set_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.fn_cdc_is_bit_set"
   - "fn_cdc_is_bit_set"
-ms.assetid: 792fe7cf-b3b8-4f25-8329-78d63f0e6921
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.fn_cdc_is_bit_set (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Indicates whether a captured column has been updated by checking whether its ordinal position is set within a provided bitmask.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

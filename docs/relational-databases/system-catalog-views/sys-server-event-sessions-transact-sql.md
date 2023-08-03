@@ -4,9 +4,8 @@ description: sys.server_event_sessions (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/30/2022"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "server_event_sessions"
@@ -18,10 +17,9 @@ helpviewer_keywords:
   - "xe"
 dev_langs:
   - "TSQL"
-ms.assetid: 796f3093-6a3e-4d67-8da6-b9810ae9ef5b
 ---
 # sys.server_event_sessions (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Lists all the server-scoped event session definitions that exist in SQL Server or Azure SQL Managed Instance.
 

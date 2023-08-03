@@ -6,8 +6,8 @@ author: rl-msft
 ms.author: rafidl
 ms.reviewer: wiassaf
 ms.date: 06/15/2022
-ms.prod: sql
-ms.technology: big-data-cluster
+ms.service: sql
+ms.subservice: big-data-cluster
 ms.topic: troubleshooting
 ms.custom: kr2b-contr-experiment
 ---

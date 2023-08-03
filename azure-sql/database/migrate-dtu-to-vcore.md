@@ -4,7 +4,7 @@ description: Migrate a database in Azure SQL Database from the DTU model to the 
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma, moslake
-ms.date: 09/13/2022
+ms.date: 04/10/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -21,7 +21,7 @@ Migrating a database from the DTU-based purchasing model to the vCore-based purc
 
 ## Choose the vCore service tier and service objective
 
-For most DTU to vCore migration scenarios, databases and elastic pools in the Basic and Standard service tiers will map to the [General Purpose](service-tier-general-purpose.md) service tier. Databases and elastic pools in the Premium service tier will map to the [Business Critical](service-tier-business-critical.md) service tier. Depending on application scenario and requirements, the [Hyperscale](service-tier-hyperscale.md) service tier can often be used as the migration target for single databases in all DTU service tiers.
+For most DTU to vCore migration scenarios, databases and elastic pools in the Basic and Standard service tiers will map to the [General Purpose](service-tier-general-purpose.md) service tier. Databases and elastic pools in the Premium service tier will map to the [Business Critical](service-tier-business-critical.md) service tier. Depending on application scenario and requirements, the [Hyperscale](service-tier-hyperscale.md) service tier can often be used as the migration target for databases and elastic pools in all DTU service tiers.
 
 To choose the service objective, or compute size, for the migrated database in the vCore model, you can use a simple but approximate rule of thumb: every 100 DTUs in the Basic or Standard tiers require *at least* 1 vCore, and every 125 DTUs in the Premium tier require *at least* 1 vCore. 
 
@@ -36,23 +36,24 @@ The following approach uses this information to determine a vCore service object
 
 ### DTU to vCore mapping
 
-A T-SQL query below, when executed in the context of a DTU database to be migrated, returns a matching (possibly fractional) number of vCores in each hardware configuration in the vCore model. By rounding this number to the closest number of vCores available for [databases](resource-limits-vcore-single-databases.md) and [elastic pools](resource-limits-vcore-elastic-pools.md) in each hardware configuration in the vCore model, customers can choose the vCore service objective that is the closest match for their DTU database or elastic pool. 
+A T-SQL query below, when executed in the context of a DTU database to be migrated, returns a matching (possibly fractional) number of vCores in each hardware configuration in the vCore model. You can round off this number to the closest number of vCores available for [databases](resource-limits-vcore-single-databases.md) and [elastic pools](resource-limits-vcore-elastic-pools.md) in each hardware configuration in the vCore model, customers can choose the vCore service objective that is the closest match for their DTU database or elastic pool.
 
 Sample migration scenarios using this approach are described in the [Examples](#dtu-to-vcore-migration-examples) section.
 
 Execute this query in the context of the database to be migrated, rather than in the `master` database. When migrating an elastic pool, execute the query in the context of any database in the pool.
 
 ```SQL
+
 WITH dtu_vcore_map AS
 (
 SELECT rg.slo_name,
        CAST(DATABASEPROPERTYEX(DB_NAME(), 'Edition') AS nvarchar(40)) COLLATE DATABASE_DEFAULT AS dtu_service_tier,
-       CASE WHEN slo.slo_name LIKE '%SQLG4%' THEN 'Gen4'
-            WHEN slo.slo_name LIKE '%SQLGZ%' THEN 'Gen4'
-            WHEN slo.slo_name LIKE '%SQLG5%' THEN 'Gen5'
-            WHEN slo.slo_name LIKE '%SQLG6%' THEN 'Gen5'
-            WHEN slo.slo_name LIKE '%SQLG7%' THEN 'Gen5'
-            WHEN slo.slo_name LIKE '%GPGEN8%' THEN 'Gen5'
+       CASE WHEN slo.slo_name LIKE '%SQLG4%' THEN 'Gen4' --Gen4 is retired.
+            WHEN slo.slo_name LIKE '%SQLGZ%' THEN 'Gen4' --Gen4 is retired.
+            WHEN slo.slo_name LIKE '%SQLG5%' THEN 'standard_series'
+            WHEN slo.slo_name LIKE '%SQLG6%' THEN 'standard_series'
+            WHEN slo.slo_name LIKE '%SQLG7%' THEN 'standard_series'
+            WHEN slo.slo_name LIKE '%GPGEN8%' THEN 'standard_series'
        END COLLATE DATABASE_DEFAULT AS dtu_hardware_gen,
        s.scheduler_count * CAST(rg.instance_cap_cpu/100. AS decimal(3,2)) AS dtu_logical_cpus,
        CAST((jo.process_memory_limit_mb / s.scheduler_count) / 1024. AS decimal(4,2)) AS dtu_memory_per_core_gb
@@ -69,29 +70,24 @@ WHERE rg.dtu_limit > 0
       rg.database_id = DB_ID()
 )
 SELECT dtu_logical_cpus,
-       dtu_hardware_gen,
        dtu_memory_per_core_gb,
        dtu_service_tier,
        CASE WHEN dtu_service_tier = 'Basic' THEN 'General Purpose'
             WHEN dtu_service_tier = 'Standard' THEN 'General Purpose or Hyperscale'
             WHEN dtu_service_tier = 'Premium' THEN 'Business Critical or Hyperscale'
        END AS vcore_service_tier,
-       CASE WHEN dtu_hardware_gen = 'Gen4' THEN dtu_logical_cpus
-            WHEN dtu_hardware_gen = 'Gen5' THEN dtu_logical_cpus * 0.7
-       END AS Gen4_vcores,
-       7 AS Gen4_memory_per_core_gb,
        CASE WHEN dtu_hardware_gen = 'Gen4' THEN dtu_logical_cpus * 1.7
-            WHEN dtu_hardware_gen = 'Gen5' THEN dtu_logical_cpus
-       END AS Gen5_vcores,
-       5.05 AS Gen5_memory_per_core_gb,
+            WHEN dtu_hardware_gen = 'standard_series' THEN dtu_logical_cpus
+       END AS standard_series_vcores,
+       5.05 AS standard_series_memory_per_core_gb,
        CASE WHEN dtu_hardware_gen = 'Gen4' THEN dtu_logical_cpus
-            WHEN dtu_hardware_gen = 'Gen5' THEN dtu_logical_cpus * 0.8
+            WHEN dtu_hardware_gen = 'standard_series' THEN dtu_logical_cpus * 0.8
        END AS Fsv2_vcores,
        1.89 AS Fsv2_memory_per_core_gb,
-       CASE WHEN dtu_hardware_gen = 'Gen5' THEN dtu_logical_cpus * 0.7
-             WHEN dtu_hardware_gen = 'Gen4' THEN dtu_logical_cpus
-       END AS DC_vcores,
-       4.5 AS DC_memory_per_core_gb
+       CASE WHEN dtu_hardware_gen = 'Gen4' THEN dtu_logical_cpus * 1.4
+            WHEN dtu_hardware_gen = 'standard_series' THEN dtu_logical_cpus * 0.9
+       END AS M_vcores,
+       29.4 AS M_memory_per_core_gb
 FROM dtu_vcore_map;
 ```
 
@@ -124,45 +120,45 @@ Besides the number of vCores (logical CPUs) and the type of hardware, several ot
 
 The mapping query returns the following result (some columns not shown for brevity):
 
-|dtu_logical_cpus|dtu_hardware_gen|dtu_memory_per_core_gb|Gen4_vcores|Gen4_memory_per_core_gb|Gen5_vcores|Gen5_memory_per_core_gb|
+|dtu_logical_cpus|dtu_memory_per_core_gb|standard_series_vcores|standard_series_memory_per_core_gb|
 |----------------|----------------|----------------------|-----------|-----------------------|-----------|-----------------------|
-|24.00|Gen5|5.40|16.800|7|24.000|5.05|
+| 24.00 | 5.40 | 24.000 |  5.05|
 
-We see that the DTU database has 24 logical CPUs (vCores), with 5.4 GB of memory per vCore, and is using Gen5 hardware. The direct match to that is a General Purpose 24 vCore database on Gen5 hardware, i.e. the **GP_Gen5_24** vCore service objective.
+We see that the DTU standard database has 24 logical CPUs (vCores), with 5.4 GB of memory per vCore. The direct match to that is a General Purpose 2 vCore database on standard-series (Gen5) hardware, the **GP_Gen5_24** vCore service objective.
 
 **Migrating a Standard S0 database**
 
 The mapping query returns the following result (some columns not shown for brevity):
 
-|dtu_logical_cpus|dtu_hardware_gen|dtu_memory_per_core_gb|Gen4_vcores|Gen4_memory_per_core_gb|Gen5_vcores|Gen5_memory_per_core_gb|
+|dtu_logical_cpus|dtu_memory_per_core_gb|standard_series_vcores|standard_series_memory_per_core_gb|
 |----------------|----------------|----------------------|-----------|-----------------------|-----------|-----------------------|
-|0.25|Gen4|0.42|0.250|7|0.425|5.05|
+|0.25|1.3|0.500|5.05|
 
-We see that the DTU database has the equivalent of 0.25 logical CPUs (vCores), with 0.42 GB of memory per vCore, and is using Gen4 hardware. The smallest vCore service objectives in the Gen4 and Gen5 hardware configurations, **GP_Gen4_1** and **GP_Gen5_2**, provide more compute resources than the Standard S0 database, so a direct match is not possible. Since Gen4 hardware is being [decommissioned](https://azure.microsoft.com/updates/gen-4-hardware-on-azure-sql-database-approaching-end-of-life-in-2020/), the **GP_Gen5_2** option is preferred. Additionally, if the workload is well-suited for the [Serverless](serverless-tier-overview.md) compute tier, then **GP_S_Gen5_1** would be a closer match.
+We see that the DTU database has the equivalent of 0.25 logical CPUs (vCores), with 1.3 GB of memory per vCore. The smallest vCore service objectives in the standard-series (Gen5) hardware configuration, **GP_Gen5_2**, provides more compute resources than the Standard S0 database, so a direct match is not possible. The **GP_Gen5_2** option is preferred. Additionally, if the workload is well-suited for the [Serverless](serverless-tier-overview.md) compute tier, then **GP_S_Gen5_1** would be a closer match.
 
 **Migrating a Premium P15 database**
 
 The mapping query returns the following result (some columns not shown for brevity):
 
-|dtu_logical_cpus|dtu_hardware_gen|dtu_memory_per_core_gb|Gen4_vcores|Gen4_memory_per_core_gb|Gen5_vcores|Gen5_memory_per_core_gb|
+|dtu_logical_cpus|dtu_memory_per_core_gb|standard_series_vcores|standard_series_memory_per_core_gb|
 |----------------|----------------|----------------------|-----------|-----------------------|-----------|-----------------------|
-|42.00|Gen5|4.86|29.400|7|42.000|5.05|
+|42.00|4.86|42.000|5.05|
 
-We see that the DTU database has 42 logical CPUs (vCores), with 4.86 GB of memory per vCore, and is using Gen5 hardware. While there is not a vCore service objective with 42 cores, the **BC_Gen5_40** service objective is very close both in terms of CPU and memory capacity, and is a good match.
+We see that the DTU database has 42 logical CPUs (vCores), with 4.86 GB of memory per vCore. While there is not a vCore service objective with 42 cores, the **BC_Gen5_40** service objective is nearly equivalent in terms of CPU and memory capacity, and is a good match.
 
 **Migrating a Basic 200 eDTU elastic pool**
 
 The mapping query returns the following result (some columns not shown for brevity):
 
-|dtu_logical_cpus|dtu_hardware_gen|dtu_memory_per_core_gb|Gen4_vcores|Gen4_memory_per_core_gb|Gen5_vcores|Gen5_memory_per_core_gb|
+|dtu_logical_cpus|dtu_memory_per_core_gb|standard_series_vcores|standard_series_memory_per_core_gb|
 |----------------|----------------|----------------------|-----------|-----------------------|-----------|-----------------------|
-|4.00|Gen5|5.40|2.800|7|4.000|5.05|
+|4.00|5.40|4.000|5.05|
 
-We see that the DTU elastic pool has 4 logical CPUs (vCores), with 5.4 GB of memory per vCore, and is using Gen5 hardware. The direct match in the vCore model is a **GP_Gen5_4** elastic pool. However, this service objective supports a maximum of 200 databases per pool, while the Basic 200 eDTU elastic pool supports up to 500 databases. If the elastic pool to be migrated has more than 200 databases, the matching vCore service objective would have to be **GP_Gen5_6**, which supports up to 500 databases.
+We see that the DTU elastic pool has 4 logical CPUs (vCores), with 5.4 GB of memory per vCore. Standard-series hardware calls for 4 vCores, however, this service objective supports a maximum of 200 databases per pool, while the Basic 200 eDTU elastic pool supports up to 500 databases. If the elastic pool to be migrated has more than 200 databases, the matching vCore service objective would have to be **GP_Gen5_6**, which supports up to 500 databases.
 
 ## Migrate geo-replicated databases
 
-Migrating from the DTU-based model to the vCore-based purchasing model is similar to upgrading or downgrading the geo-replication relationships between databases in the standard and premium service tiers. During migration, you don't have to stop geo-replication, but you must follow these sequencing rules:
+Migrating from the DTU-based model to the vCore-based purchasing model is similar to upgrading or downgrading the geo-replication relationships between databases in the Standard and Premium service tiers. During migration, you don't have to stop geo-replication, but you must follow these sequencing rules:
 
 - When upgrading, you must upgrade the secondary database first, and then upgrade the primary.
 - When downgrading, reverse the order: you must downgrade the primary database first, and then downgrade the secondary.
@@ -173,14 +169,14 @@ The following table provides guidance for specific migration scenarios:
 
 |Current service tier|Target service tier|Migration type|User actions|
 |---|---|---|---|
-|Standard|General purpose|Lateral|Can migrate in any order, but need to ensure appropriate vCore sizing as described above|
+|Standard|General Purpose|Lateral|Can migrate in any order, but need to ensure appropriate vCore sizing as described above|
 |Premium|Business Critical|Lateral|Can migrate in any order, but need to ensure appropriate vCore sizing as described above|
 |Standard|Business Critical|Upgrade|Must migrate secondary first|
 |Business Critical|Standard|Downgrade|Must migrate primary first|
-|Premium|General purpose|Downgrade|Must migrate primary first|
-|General purpose|Premium|Upgrade|Must migrate secondary first|
-|Business Critical|General purpose|Downgrade|Must migrate primary first|
-|General purpose|Business Critical|Upgrade|Must migrate secondary first|
+|Premium|General Purpose|Downgrade|Must migrate primary first|
+|General Purpose|Premium|Upgrade|Must migrate secondary first|
+|Business Critical|General Purpose|Downgrade|Must migrate primary first|
+|General Purpose|Business Critical|Upgrade|Must migrate secondary first|
 
 
 ## Migrate failover groups

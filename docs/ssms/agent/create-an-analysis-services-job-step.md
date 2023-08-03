@@ -1,20 +1,16 @@
 ---
-description: "Create an Analysis Services Job Step"
 title: "Create an Analysis Services Job Step"
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-f1_keywords:
-  - sql13.swb.asquery.execgeneral.f1
-helpviewer_keywords: 
-  - "job steps [Analysis Services]"
-ms.assetid: 03d4bb86-514b-4a55-97b9-c2c0fa08b428
+description: "Create an Analysis Services Job Step"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
 ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.asquery.execgeneral.f1"
+helpviewer_keywords:
+  - "job steps [Analysis Services]"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 
@@ -105,7 +101,7 @@ This topic describes how to create and define [!INCLUDE[ssNoVersion](../../inclu
   
 #### To create an Analysis Services command job step  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -122,7 +118,7 @@ This topic describes how to create and define [!INCLUDE[ssNoVersion](../../inclu
             N'Create a relational data source that references the AdventureWorks2012 Microsoft SQL Server database',  
         @subsystem = N'ANALYSISCOMMAND',  
         @command =
-            N' <Create xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
+            N' <Create xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
         <ParentObject>  
             <DatabaseID>AdventureWorks2012</DatabaseID>  
         </ParentObject>  
@@ -148,7 +144,7 @@ For more information, see [sp_add_jobstep (Transact-SQL)](../../relational-datab
   
 #### To create an Analysis Services query job step  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

@@ -1,19 +1,16 @@
 ---
-title: "URL Reservations & Registration (Configuration Manager) | Microsoft Docs"
+title: "URL Reservations & Registration (Configuration Manager)"
 description: "URLs for Reporting Services applications are defined as URL reservations in HTTP.SYS."
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 01/16/2020
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.custom: seo-lt-2019​, seo-mmd-2019
-
+ms.service: reporting-services
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "URL reservations"
   - "URL registration"
   - "Report Server service, URL reservations"
-ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
-author: maggiesMSFT
-ms.author: maggies
 ---
 # About URL Reservations and Registration  (Report Server Configuration Manager)
   URLs for Reporting Services applications are defined as URL reservations in HTTP.SYS. A URL reservation defines the syntax of a URL endpoint to a Web application. URL reservations are defined for both the Report Server Web service and the web portal when you configure the applications on the report server. URL reservations are created for you automatically when configure URLs through Setup or the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool:  

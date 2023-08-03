@@ -4,9 +4,8 @@ description: Data-tier Application Views - dbo.sysdac_instances
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "dbo.sysdac_instances_TSQL"
@@ -18,7 +17,6 @@ helpviewer_keywords:
   - "sysdac_instances"
 dev_langs:
   - "TSQL"
-ms.assetid: 28285f3d-3889-439f-8b24-3bdef08e46b4
 ---
 # Data-tier Application Views - dbo.sysdac_instances
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

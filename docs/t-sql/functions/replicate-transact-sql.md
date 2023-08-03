@@ -3,13 +3,10 @@ title: "REPLICATE (Transact-SQL)"
 description: "REPLICATE (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
 ms.date: "03/13/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "REPLICATE_TSQL"
   - "REPLICATE"
@@ -19,14 +16,14 @@ helpviewer_keywords:
   - "repeating character expressions"
 dev_langs:
   - "TSQL"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current||=fabric"
 ---
 # REPLICATE (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
   Repeats a string value a specified number of times.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -44,7 +41,7 @@ REPLICATE ( string_expression , integer_expression )
 > If *string_expression* is of type **binary**, REPLICATE will perform an implicit conversion to **varchar**, and therefore will not preserve the binary input.  
 
 > [!NOTE]  
-> If *string_expression* input is of type **varchar(max)** or **nvarchar(max)**, REPLICATE truncates the return value at 8,000 bytes. To return values greater than 8,000 bytes, *string_expression* must be explicitly cast to the appropriate large-value data type.  
+> If *string_expression* input is not of type **varchar(max)** or **nvarchar(max)**, REPLICATE truncates the return value at 8,000 bytes. To return values greater than 8,000 bytes, *string_expression* must be explicitly cast to the appropriate large-value data type.  
   
  *integer_expression*  
  Is an expression of any integer type, including **bigint**. If *integer_expression* is negative, NULL is returned.  
@@ -116,7 +113,7 @@ Varchar Column        Char Column
   
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### C: Using REPLICATE  
  The following example replicates a `0` character four times in front of an `ItemCode` value.  

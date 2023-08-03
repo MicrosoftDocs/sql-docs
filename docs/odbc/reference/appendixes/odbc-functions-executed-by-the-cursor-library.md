@@ -1,21 +1,17 @@
 ---
+title: "ODBC Functions Executed by the Cursor Library"
 description: "ODBC Functions Executed by the Cursor Library"
-title: "ODBC Functions Executed by the Cursor Library | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "cursor library [ODBC], functions"
   - "functions [ODBC], cursor library"
   - "ODBC functions [ODBC], cursor library"
   - "ODBC cursor library [ODBC], functions"
-ms.assetid: 2f1d3386-7e59-4d55-a5b4-3440b61343a3
-author: David-Engel
-ms.author: v-davidengel
 ---
 # ODBC Functions Executed by the Cursor Library
 > [!IMPORTANT]  

@@ -4,9 +4,8 @@ description: sys.server_permissions (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "09/20/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, pdw"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.server_permissions_TSQL"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.server_permissions catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 7d78bf17-6c64-4166-bd0b-9e9e20992136
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.server_permissions (Transact-SQL)

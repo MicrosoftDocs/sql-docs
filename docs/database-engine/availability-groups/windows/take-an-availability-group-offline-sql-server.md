@@ -4,8 +4,8 @@ description: Learn how to take an Always On availability group from the ONLINE s
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
 helpviewer_keywords:
   - "Availability Groups [SQL Server], take offline"

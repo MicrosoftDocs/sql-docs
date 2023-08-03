@@ -1,22 +1,18 @@
 ---
-description: "Web Configuration Page (Master Data Services Configuration Manager)"
 title: Web Configuration Page
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.mds.configmanager.webconfigpg.f1"
-ms.assetid: 7b900778-0169-4e42-9faf-98dc1c01313e
+description: "Web Configuration Page (Master Data Services Configuration Manager)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/20/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.mds.configmanager.webconfigpg.f1"
 ---
 # Web Configuration Page (Master Data Services Configuration Manager)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Use the **Web Configuration** page to configure a website and web application. You can also enable Data Quality Services.  
   
@@ -40,7 +36,7 @@ ms.author: jiwang6
   
 |Control Name|Description|  
 |------------------|-----------------|  
-|**Enable integration with Data Quality Services**|Select this option to enable the Data Quality functionality available in the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]. For more information, see [Enable Data Quality Services Integration with Master Data Services](../master-data-services/install-windows/enable-data-quality-services-integration-with-master-data-services.md).|  
+|**Enable integration with Data Quality Services**|Select this option to enable the Data Quality functionality available in the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]. For more information, see [Enable Data Quality Services Integration with Master Data Services](../master-data-services/install-windows/enable-data-quality-services-integration-with-master-data-services.md).|  
   
 ## See Also  
 [Master Data Services Installation and Configuration](../master-data-services/master-data-services-installation-and-configuration.md) 

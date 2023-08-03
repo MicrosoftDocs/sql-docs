@@ -1,14 +1,13 @@
 ---
 title: "OLE DB"
 description: The SQL Server Native Client OLE DB provider is a COM API for accessing data, used for tools, utilities, or low-level components that need high performance.
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
+ms.service: sql
+ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, about SQL Server Native Client OLE DB provider"
   - "OLE DB, SQL Server Native Client OLE DB provider"
   - "data access [SQL Server Native Client], OLE DB"
@@ -16,13 +15,13 @@ helpviewer_keywords:
   - "OLE DB"
   - "SQL Server Native Client OLE DB provider"
   - "SQL Server Native Client, OLE DB"
-ms.assetid: da846da4-ec19-4a4f-81fb-7d5a2b2bf80a
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Native Client (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+> [!IMPORTANT] 
+> [!INCLUDE[snac-removed-oledb-only](../../../includes/snac-removed-oledb-only.md)]
 
 The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider (SQLNCLI) is a low-level COM API that is used for accessing data. The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider is recommended for developing tools, utilities, or low-level components that need high performance. The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider is a native, high performance provider that accesses the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Tabular Data Stream (TDS) protocol directly.  
   

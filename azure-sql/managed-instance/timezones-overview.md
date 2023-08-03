@@ -1,10 +1,10 @@
 ---
-title: Azure SQL Managed Instance time zones
+title: Time zones
 description: Learn about the time zone specifics of Azure SQL Managed Instance
 author: MladjoA
 ms.author: mlandzic
 ms.reviewer: mathoma
-ms.date: 10/12/2020
+ms.date: 07/13/2023
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: reference
@@ -13,12 +13,15 @@ ms.custom: sqldbrb=1
 # Time zones in Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-Coordinated Universal Time (UTC) is the recommended time zone for the data tier of cloud solutions. Azure SQL Managed Instance also offers a choice of time zones to meet the needs of existing applications that store date and time values and call date and time functions with an implicit context of a specific time zone.
+Coordinated Universal Time (UTC) is the recommended time zone for the data tier of newly developed cloud solutions, as it eliminates ambiguity. Azure SQL Managed Instance also offers a choice of time zones to meet the needs of existing applications that store date and time values and call date and time functions with an implicit context of a specific time zone.
 
 T-SQL functions like [GETDATE()](/sql/t-sql/functions/getdate-transact-sql) or CLR code observe the time zone set on the instance level. SQL Server Agent jobs also follow schedules according to the time zone of the instance.
 
   > [!NOTE]
   > Azure SQL Database does not support time zone settings; it always follows UTC. Use [AT TIME ZONE](/sql/t-sql/queries/at-time-zone-transact-sql) in SQL Database if you need to interpret date and time information in a non-UTC time zone.
+
+  > [!IMPORTANT]
+  > When migrating your existing solutions to Azure SQL Managed Instance, consider carefully the timezone ramifications and as a rule of thumb match your original timezone settings unless you are reimplementing the relevant application logic.
 
 ## Supported time zones
 
@@ -189,7 +192,7 @@ Using the same time zone across a primary and secondary instance in a failover g
 | India Standard Time | (UTC+05:30) Chennai, Kolkata, Mumbai, New Delhi |
 | Sri Lanka Standard Time | (UTC+05:30) Sri Jayawardenepura |
 | Nepal Standard Time | (UTC+05:45) Kathmandu |
-| Central Asia Standard Time | (UTC+06:00) Astana |
+| Central Asia Standard Time | (UTC+06:00) Nur-Sultan |
 | Bangladesh Standard Time | (UTC+06:00) Dhaka |
 | Omsk Standard Time | (UTC+06:00) Omsk |
 | Myanmar Standard Time | (UTC+06:30) Yangon (Rangoon) |

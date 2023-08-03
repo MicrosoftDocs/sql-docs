@@ -4,9 +4,8 @@ description: MSrepl_transactions (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "MSrepl_transactions_TSQL"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "MSrepl_transactions system table"
 dev_langs:
   - "TSQL"
-ms.assetid: d325288d-47ae-4488-8799-122f7ab43459
 ---
 # MSrepl_transactions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

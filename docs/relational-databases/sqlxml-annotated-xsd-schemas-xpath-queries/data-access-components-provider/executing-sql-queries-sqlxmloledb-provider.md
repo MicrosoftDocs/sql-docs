@@ -4,16 +4,14 @@ description: Learn how to use the ClientSideXML and xml root properties of the S
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "reference"
 helpviewer_keywords:
   - "queries [SQLXML], SQLXMLOLEDB Provider"
   - "xml root property [SQLXML]"
   - "SQLXMLOLEDB Provider, executing SQL queries"
   - "SQL queries [SQLXML]"
-ms.assetid: 50334cf5-9c87-4c00-9beb-e08577c4fa82
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing SQL Queries (SQLXMLOLEDB Provider)

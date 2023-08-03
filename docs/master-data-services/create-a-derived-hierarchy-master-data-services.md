@@ -1,23 +1,19 @@
 ---
-description: "Create a Derived Hierarchy (Master Data Services)"
 title: Create a Derived Hierarchy
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "derived hierarchies, creating"
-  - "creating derived hierarchies [Master Data Services]"
-ms.assetid: fec653c4-11cc-46a2-8dd8-b605341ebb40
+description: "Create a Derived Hierarchy (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "derived hierarchies, creating"
+  - "creating derived hierarchies [Master Data Services]"
 ---
 # Create a Derived Hierarchy (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], create a derived hierarchy when you want a level-based hierarchy that ensures that members exist at the correct level. Derived hierarchies are based on the domain-based attribute relationships that exist in a model.  
   

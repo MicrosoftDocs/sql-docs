@@ -1,14 +1,14 @@
 ---
+title: "Create, Delete, or Modify a Role (Management Studio)"
 description: "Create, Delete, or Modify a Role (Management Studio)"
-title: "Create, Delete, or Modify a Role (Management Studio) | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 05/07/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: security
-
-
+ms.service: reporting-services
+ms.subservice: security
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "roles [Reporting Services], creating"
   - "deleting roles"
   - "removing roles"
@@ -16,9 +16,6 @@ helpviewer_keywords:
   - "modifying roles"
   - "roles [Reporting Services], deleting"
   - "roles [Reporting Services], modifying"
-ms.assetid: 3d1d56e6-a283-44a7-8417-36cb4d2c74d1
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Role Definitions - Create, Delete, or Modify
 

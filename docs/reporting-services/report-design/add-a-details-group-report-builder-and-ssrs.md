@@ -1,16 +1,13 @@
 ---
-title: "Add a details group to a paginated report | Microsoft Docs"
+title: "Add a details group to a paginated report"
 description: Find out about adding a details group to an existing tablix data region to display the detail data for a matrix in Report Builder.
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: 5ef8efba-6d48-4aeb-a3b9-a02ba5a44614
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Add a details group to a paginated report (Report Builder)
 

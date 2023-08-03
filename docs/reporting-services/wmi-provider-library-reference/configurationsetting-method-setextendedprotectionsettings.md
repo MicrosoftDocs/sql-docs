@@ -1,16 +1,13 @@
 ---
+title: "SetExtendedProtectionSettings Method (WMI MSReportServer_ConfigurationSetting)"
 description: "SetExtendedProtectionSettings Method (WMI MSReportServer_ConfigurationSetting)"
-title: "SetExtendedProtectionSettings Method (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
-ms.date: 03/20/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: wmi-provider-library-reference
-
-
-ms.topic: conceptual
-ms.assetid: 2d8e7232-42f4-41b6-98eb-c856f6c85d8c
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/20/2017
+ms.service: reporting-services
+ms.subservice: wmi-provider-library-reference
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # ConfigurationSetting Method - SetExtendedProtectionSettings
   The SetExtendedProtectionSettings method is used to set the RSWindowsExtendedProtectionLevel and the RSWindowsExtendedProtectionScenario properties in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuration file RSReportServer.config.  

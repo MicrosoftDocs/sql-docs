@@ -1,20 +1,16 @@
 ---
+title: "SQL to C: Character"
 description: "SQL to C: Character"
-title: "SQL to C: Character | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2019"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "converting data from SQL to C types [ODBC], character"
   - "character data type [ODBC]"
   - "data conversions from SQL to C types [ODBC], character"
-ms.assetid: 7fdb7f38-b64d-48f2-bcb4-1ca96b2bbdb6
-author: David-Engel
-ms.author: v-davidengel
 ---
 # SQL to C: Character
 

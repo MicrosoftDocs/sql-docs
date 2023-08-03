@@ -1,23 +1,21 @@
 ---
 title: "Modify a Stored Procedure"
 description: Learn how to modify a stored procedure in SQL Server by using SQL Server Management Studio or Transact-SQL.
-ms.prod: sql
-ms.technology: stored-procedures
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: "10/21/2021"
+ms.service: sql
+ms.subservice: stored-procedures
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "modifying stored procedures"
   - "editing stored procedures"
   - "stored procedures [SQL Server], modifying"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: ""
-ms.custom: FY22Q2Fresh
-ms.date: "10/21/2021"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Modify a Stored Procedure
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 <a name="Top"></a> This article describes how to modify a stored procedure in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
   

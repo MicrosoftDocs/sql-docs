@@ -1,12 +1,12 @@
 ---
 title: Upgrade Python and R runtimes (binding)
 description: Upgrade Python and R runtimes in SQL Server Machine Learning Services or SQL Server R Services using sqlbindr.exe to bind to Machine Learning Server.
-ms.prod: sql
-ms.technology: machine-learning-services
-ms.date: 09/30/2020
-ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: 09/30/2020
+ms.service: sql
+ms.subservice: machine-learning-services
+ms.topic: how-to
 monikerRange: "=sql-server-2016||=sql-server-2017"
 ---
 # Upgrade Python and R runtime with binding in SQL Server Machine Learning Services
@@ -270,7 +270,7 @@ Machine Learning Server Installer and SqlBindR both return the following error c
 |Bind error 3 | Invalid instance | An instance exists, but isn't valid for binding. |
 |Bind error 4 | Not bindable | |
 |Bind error 5 | Already bound | You ran the *bind* command, but the specified instance is already bound. |
-|Bind error 6 | Bind failed | An error occurred while unbinding the instance. This error can occur if you run the Machine Learning Server installer without selecting any features. Binding requires that you select both an MSSQL instance and Python and R, assuming the instance is SQL Server 2017. This error also occurs if SqlBindR couldn't write to the Program Files folder. Open sessions or handles to SQL Server will cause this error to occur. If you get this error, reboot the computer and redo the binding steps before starting any new sessions.|
+|Bind error 6 | Bind failed | An error occurred while unbinding the instance. This error can occur if you run the Machine Learning Server installer without selecting any features. Binding requires that you select both an MSSQL instance and Python and R, assuming the instance is SQL Server 2017. This error also occurs if SqlBindR couldn't write to the Program Files folder. Open sessions or handles to SQL Server will cause this error to occur. If you get this error, restart the computer and redo the binding steps before starting any new sessions.|
 |Bind error 7 | Not bound | The database engine instance has R Services or SQL Server Machine Learning Services. The instance isn't bound to Microsoft Machine Learning Server. |
 |Bind error 8 | Unbind failed | An error occurred while unbinding the instance. |
 |Bind error 9 | No instances found | No database engine instances were found on this computer. |
@@ -290,9 +290,9 @@ Use R commands to synchronize installed packages to the file system using record
 ### Problems with overwritten sqlbinr.ini file in SQL Server
 
 Scenario:
-This issue occurs when binding Machine Learning Server 9.4.7 to SQL Server 2017.  When Python is updated and bound or when you update to a new CU, it doesn’t understand that Python is bound, and overwrites files. There isn't a known issue with R.
+This issue occurs when binding Machine Learning Server 9.4.7 to SQL Server 2017.  When Python is updated and bound or when you update to a new CU, it doesn't understand that Python is bound, and overwrites files. There isn't a known issue with R.
 
-As a workaround, create a `sqlbindr.ini` file in the PYTHON_SERVICES directory that isn’t empty. The contents doesn't impact how the file functions.
+As a workaround, create a `sqlbindr.ini` file in the PYTHON_SERVICES directory that isn't empty. The contents doesn't impact how the file functions.
 
 Create a `sqlbindr.ini` file, containing **9.4.7.82**, save to this location:  
 

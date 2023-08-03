@@ -1,18 +1,14 @@
 ---
+title: "Lesson 2: Creating and Managing Data in a Hierarchical Table"
 description: "Lesson 2: Creating and Managing Data in a Hierarchical Table"
-title: "Lesson 2: Creating and Managing Data in a Hierarchical Table | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: table-view-index
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "HierarchyID"
-ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: table-view-index
+ms.topic: conceptual
+helpviewer_keywords:
+  - "HierarchyID"
 ---
 # Lesson 2: Create and Manage Data in a Hierarchical Table
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

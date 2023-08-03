@@ -1,30 +1,24 @@
 ---
-description: "New Date and Time Features with Previous SQL Server Versions (OLE DB)"
 title: "Date and Time OLE DB Features with Previous SQL Server Versions"
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: 
-
-ms.topic: "reference"
-ms.assetid: 96976bac-018c-47cc-b1b2-fa9605eb55e5
+description: "New Date and Time Features with Previous SQL Server Versions (OLE DB)"
 author: markingmyname
 ms.author: maghan
-ms.custom: seo-dt-2019
+ms.date: "03/14/2017"
+ms.service: sql
+ms.topic: "reference"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # New Date and Time Features with Previous SQL Server Versions (OLE DB)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  This topic describes the expected behavior when a client application that uses enhanced date and time features communicates with a version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] earlier than [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], and when a client compiled with a version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client earlier than [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] sends commands to a server that supports enhanced date and time features.  
+  This topic describes the expected behavior when a client application that uses enhanced date and time features communicates with a version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] earlier than [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], and when a client compiled with a version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client earlier than [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] sends commands to a server that supports enhanced date and time features.  
   
 ## Down-Level Client Behavior  
- Client applications that use a version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client earlier than [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] see the new date/time types as **nvarchar** columns. The column contents are literal representations. For more information, see the "Data Formats: Strings and Literals" section of [Data Type Support for OLE DB Date and Time Improvements](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md). The column size is the maximum literal length for the precision specified for the column.  
+ Client applications that use a version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client earlier than [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] see the new date/time types as **nvarchar** columns. The column contents are literal representations. For more information, see the "Data Formats: Strings and Literals" section of [Data Type Support for OLE DB Date and Time Improvements](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md). The column size is the maximum literal length for the precision specified for the column.  
   
- Catalog APIs will return metadata consistent with the down-level data type code returned to the client (for example, **nvarchar**) and the associated down-level representation (for example, the appropriate literal format). However, the data type name returned will be the real [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] type name.  
+ Catalog APIs will return metadata consistent with the down-level data type code returned to the client (for example, **nvarchar**) and the associated down-level representation (for example, the appropriate literal format). However, the data type name returned will be the real [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] type name.  
   
- When a down-level client application runs against a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (or later) server on which schema changes to date/time types have been made, the expected behavior is as follows:  
+ When a down-level client application runs against a [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] (or later) server on which schema changes to date/time types have been made, the expected behavior is as follows:  
   
 |OLE DB client type|SQL Server 2005 type|SQL Server 2008 (or later) type|Result conversion (server to client)|Parameter conversion (client to server)|  
 |------------------------|--------------------------|---------------------------------------|--------------------------------------------|-----------------------------------------------|  
@@ -42,7 +36,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |DBTYPE_DBTIMESTAMP|||Date fields set to current date.|IRowsetChange will fail due to string truncation if fractional seconds are non-zero.<br /><br /> Date is ignored.|  
 |DBTYPE_DBTIMESTAMP||Datetime2(0)|OK|OK|  
   
- OK means that if it worked with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], it should continue to work with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (or later).  
+ OK means that if it worked with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], it should continue to work with [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] (or later).  
   
  Only the following common schema changes have been considered:  
   
@@ -55,7 +49,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  Applications that use server metadata obtained through ICommandWithParameters::GetParameterInfo or schema rowsets to set parameter type information through ICommandWithParameters::SetParameterInfo will fail during client conversions where the string representation of a source type is larger than the string representation of the destination type. For example, if a client binding uses DBTYPE_DBTIMESTAMP and the server column is date, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client will convert the value to "yyyy-dd-mm hh:mm:ss.fff", but server metadata will be returned as **nvarchar(10)**. The resulting overflow causes DBSTATUS_E_CATCONVERTVALUE. Similar problems arise with data conversions by IRowsetChange, because the rowset metadata is set from the resultset metadata.  
   
 ### Parameter and Rowset Metadata  
- This section describes metadata for parameters, result columns, and schema rowsets for clients that are compiled with a version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client earlier than [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
+ This section describes metadata for parameters, result columns, and schema rowsets for clients that are compiled with a version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client earlier than [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)].  
   
 #### ICommandWithParameters::GetParameterInfo  
  The DBPARAMINFO structure returns the following information through the *prgParamInfo* parameter:  
@@ -96,7 +90,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |datetimeoffset|DBTYPE_WSTR|26,28..34|~0|~0|  
   
 ### Schema Rowsets  
- This section discusses metadata for parameters, result columns, and schema rowsets for new data types. This information is useful is you have a client provider developed using tools earlier than [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
+ This section discusses metadata for parameters, result columns, and schema rowsets for new data types. This information is useful is you have a client provider developed using tools earlier than [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
 #### COLUMNS Rowset  
  The following column values are returned for date/time types:  
@@ -150,7 +144,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |IS_FIXEDLENGTH|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
   
 ## Down-Level Server Behavior  
- When connected to a server of an earlier version than [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], any attempt to use the new server type names (for example, with ICommandWithParameters::SetParameterInfo or ITableDefinition::CreateTable) will result in DB_E_BADTYPENAME.  
+ When connected to a server of an earlier version than [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], any attempt to use the new server type names (for example, with ICommandWithParameters::SetParameterInfo or ITableDefinition::CreateTable) will result in DB_E_BADTYPENAME.  
   
  If new types are bound for parameters or results without the use of a type name, and either the new type is used to specify the server type implicitly or there is no valid conversion from the server type to the client type, DB_E_ERRORSOCCURRED is returned, and DBBINDSTATUS_UNSUPPORTED_CONVERSION is set as the binding status for the accessor used at Execute.  
   

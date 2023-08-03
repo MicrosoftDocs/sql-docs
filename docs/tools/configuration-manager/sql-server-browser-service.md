@@ -1,24 +1,20 @@
 ---
 title: "SQL Server Browser service"
 description: Learn how to use SQL Server Browser, a service that listens for requests for SQL Server resources and provides information about installed SQL Server instances.
-ms.custom: seo-lt-2019
+author: markingmyname
+ms.author: maghan
 ms.date: "02/03/2022"
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.reviewer: ""
-ms.technology: tools-other
+ms.service: sql
+ms.subservice: tools-other
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.browseservers.local.f1"
   - "sql13.swb.browseservers.network.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "services [SQL Server], security"
   - "SQL Browser service (See SQL Server Browser Service)"
   - "Browser Service"
   - "SQL Server Browser service"
-ms.assetid: 3cc00d3a-487c-4cd9-a155-655f02485fa0
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=sql-server-2016"
 ---
 
@@ -63,9 +59,9 @@ Learn how to start and stop the SQL Server Browser service in the article [Start
   
 ## Using SQL Server Browser  
 
-If the SQL Server Browser service isn’t running, you are still able to connect to SQL Server if you provide the correct port number or named pipe. For instance, you can connect to the default instance of SQL Server with TCP/IP if it’s running on port 1433.  
+If the SQL Server Browser service isn't running, you are still able to connect to SQL Server if you provide the correct port number or named pipe. For instance, you can connect to the default instance of SQL Server with TCP/IP if it's running on port 1433.  
   
-However, if the SQL Server Browser service isn’t running, the following connections do not work:  
+However, if the SQL Server Browser service isn't running, the following connections do not work:  
   
 - Any component that tries to connect to a named instance without fully specifying all the parameters (such as the TCP/IP port or named pipe).  
 - Any component that generates or passes server\instance information that could later be used by other components to reconnect.  
@@ -76,12 +72,12 @@ However, if the SQL Server Browser service isn’t running, the following connec
   
 If you are using SQL Server in a client-server scenario (for example, when your application is accessing SQL Server across a network), if you stop or disable the SQL Server Browser service, you must assign a specific port number to each instance and write your client application code to always use that port number. This approach has the following problems:  
 
-- You must update and maintain client application code to ensure it’s connecting to the proper port.
+- You must update and maintain client application code to ensure it's connecting to the proper port.
 - The port you choose for each instance may be used by another service or application on the server, causing the instance of SQL Server to be unavailable.  
   
 ## Clustering  
 
-SQL Server Browser isn’t a clustered resource and doesn’t support failover from one cluster node to the other. Therefore, in the case of a cluster, SQL Server Browser should be installed and turned on for each node of the cluster. On clusters, SQL Server Browser listens on IP_ANY.  
+SQL Server Browser isn't a clustered resource and doesn't support failover from one cluster node to the other. Therefore, in the case of a cluster, SQL Server Browser should be installed and turned on for each node of the cluster. On clusters, SQL Server Browser listens on IP_ANY.  
   
 > [!NOTE]  
 >  When listening on IP_ANY, when you enable listening on specific IPs, the user must configure the same TCP port on each IP, because SQL Server Browser returns the first IP/port pair that it encounters.  
@@ -123,7 +119,7 @@ Setup configures SQL Server Browser to use the account selected for services dur
   
 ### Hiding SQL Server  
 
-Hidden instances are instances of SQL Server that support only shared memory connections. For SQL Server, set the `HideInstance` flag to indicate that SQL Server Browser shouldn’t respond with information about this server instance.  
+Hidden instances are instances of SQL Server that support only shared memory connections. For SQL Server, set the `HideInstance` flag to indicate that SQL Server Browser shouldn't respond with information about this server instance.  
   
 ### Using a firewall  
 

@@ -4,12 +4,9 @@ description: Learn about best practices for natively compiled stored procedures 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/24/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.custom: seo-dt-2019
-ms.assetid: f39fc1c7-cfec-4a95-97f6-6b95954694b
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Best Practices for Calling Natively Compiled Stored Procedures

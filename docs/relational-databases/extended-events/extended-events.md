@@ -4,9 +4,8 @@ description: The Extended Events architecture lets you collect data necessary to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 04/27/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xevents
+ms.service: sql
+ms.subservice: xevents
 ms.topic: overview
 ms.custom: intro-overview
 helpviewer_keywords:

@@ -4,8 +4,8 @@ description: "Learn about single-user mode in SQL Server. See when it is useful 
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 07/20/2022
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "starting SQL Server, single-user mode"
@@ -30,7 +30,7 @@ When you start an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
 > [!NOTE]  
 > Stop the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service before connecting to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode; otherwise, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service uses the connection, thereby blocking it.
 
-When you start an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] can connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Object Explorer in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] might fail because it requires more than one connection for some operations. To manage [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode, execute [!INCLUDE[tsql](../../includes/tsql-md.md)] statements by connecting through the Query Editor in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or Azure Data Studio, or use the [sqlcmd utility](../../tools/sqlcmd-utility.md).
+When you start an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] can connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Object Explorer in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] might fail because it requires more than one connection for some operations. To manage [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode, execute [!INCLUDE[tsql](../../includes/tsql-md.md)] statements by connecting through the Query Editor in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or Azure Data Studio, or use the [sqlcmd utility](../../tools/sqlcmd/sqlcmd-utility.md).
 
 When you use the `-m` option with `SQLCMD` or [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], you can limit the connections to a specified client application.
 
@@ -75,7 +75,7 @@ To get around the problem use the following procedure:
 - [Restore the master database on Linux in single-user mode](../../linux/sql-server-linux-restore-master-database-in-single-user-mode.md)
 - [Start, Stop, or Pause the SQL Server Agent Service](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)
 - [Diagnostic Connection for Database Administrators](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)
-- [sqlcmd Utility](../../tools/sqlcmd-utility.md)
+- [sqlcmd Utility](../../tools/sqlcmd/sqlcmd-utility.md)
 - [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)
 - [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
 - [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md)

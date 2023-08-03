@@ -1,16 +1,13 @@
 ---
-title: "XML Construction (XQuery) | Microsoft Docs"
+title: "XML Construction (XQuery)"
 description: Learn how to construct XML structures in an XQuery using the direct and computed constructors.
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: sql
-ms.reviewer: ""
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "white space [XQuery]"
   - "computed constructor"
   - "construct XML structures [XQuery]"
@@ -19,12 +16,11 @@ helpviewer_keywords:
   - "direct constructor [SQL Server]"
   - "XML [SQL Server], construction"
   - "XQuery, XML construction"
-ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
-author: rothja
-ms.author: jroth
+dev_langs:
+  - "XML"
 ---
 # XML Construction (XQuery)
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   In XQuery, you can use the **direct** and **computed** constructors to construct XML structures within a query.  
   

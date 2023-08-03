@@ -1,23 +1,19 @@
 ---
 title: Entities
 description: Entities are objects that are contained in Master Data Services models. Each entity contains members, which are the rows of master data that you manage.
-ms.custom: ""
-ms.date: "04/01/2016"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "entities [Master Data Services], about entities"
-  - "entities [Master Data Services]"
-ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "04/01/2016"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "entities [Master Data Services], about entities"
+  - "entities [Master Data Services]"
 ---
 # Entities (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Entities are objects that are contained in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] models. Each entity contains members, which are the rows of master data that you manage.  
   

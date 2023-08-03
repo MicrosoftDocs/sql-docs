@@ -4,9 +4,8 @@ description: sysdbmaintplan_jobs (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sysdbmaintplan_jobs"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "sysdbmaintplan_jobs system table"
 dev_langs:
   - "TSQL"
-ms.assetid: bc65cd70-6ef2-4c17-be11-877ecf4efe50
 ---
 # sysdbmaintplan_jobs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

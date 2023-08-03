@@ -4,12 +4,10 @@ description: The SQL Server Installation Wizard provides a single feature tree f
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "12/13/2019"
-ms.prod: sql
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
-ms.custom:
-  - seo-lt-2019
-  - intro-installation
+ms.custom: intro-installation
 helpviewer_keywords:
   - "upgrading Database Engine"
   - "Database Engine [SQL Server], upgrading"

@@ -4,8 +4,8 @@ description: The Microsoft ODBC Driver for SQL Server on Linux and macOS support
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 09/01/2020
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
   - "integrated authentication"

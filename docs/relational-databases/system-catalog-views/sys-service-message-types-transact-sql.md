@@ -4,9 +4,8 @@ description: sys.service_message_types (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.service_message_types"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.service_message_types catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 6a38709a-60fe-46f6-89da-718f74f15600
 ---
 # sys.service_message_types (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

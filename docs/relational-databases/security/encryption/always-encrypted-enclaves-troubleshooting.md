@@ -1,19 +1,18 @@
 ---
 title: "Troubleshoot common issues for Always Encrypted with secure enclaves"
 description: "Troubleshoot common issues for Always Encrypted with secure enclaves"
-ms.custom: ""
-ms.date: 01/15/2021
-ms.reviewer: vanto
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: security
-ms.topic: how-to
 author: jaszymas
 ms.author: jaszymas
-monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
+ms.reviewer: vanto
+ms.date: 02/15/2023
+ms.service: sql
+ms.subservice: security
+ms.topic: how-to
 ---
 
 # Troubleshoot common issues for Always Encrypted with secure enclaves
+
+[!INCLUDE [sqlserver2019-windows-only-asdb](../../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]
 
 This article describes how to identify and resolve common issues you may find when running Transact-SQL (TSQL) statements using [Always Encrypted with secure enclaves](always-encrypted-enclaves.md).
 
@@ -21,15 +20,16 @@ For information on how to run queries using secure enclaves, see [Run Transact-S
 
 ## Database connection errors
 
-To run statements using a secure enclave, you need to enable Always Encrypted and specify an attestation URL for the database connection, as explained [Prerequisites for running statements using secure enclaves](always-encrypted-enclaves-query-columns.md#prerequisites-for-running-statements-using-secure-enclaves). However, your connection will fail if you specify an attestation URL but your database in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] or your target [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instance doesn't support secure enclaves, or is incorrectly configured.
+To run statements using a secure enclave, you need to enable Always Encrypted, specify an attestation protocol and, if applicable, an attestation URL, for the database connection, as explained in [Prerequisites for running statements using secure enclaves](always-encrypted-enclaves-query-columns.md#prerequisites-for-running-statements-using-secure-enclaves). However, your connection will fail if you specify an attestation protocol but your [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] or your target [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instance doesn't support secure enclaves, or is incorrectly configured.
 
-- If you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], check that your database uses the [DC-series](/azure/azure-sql/database/service-tiers-vcore?tabs=azure-portal#dc-series) hardware configuration. For more information, see [Enable Intel SGX for your Azure SQL database](/azure/azure-sql/database/always-encrypted-enclaves-enable-sgx).
-- If you're using [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)], check secure enclave is correctly configured for your instance. For more information, see [Configure the secure enclave in SQL Server](always-encrypted-enclaves-configure-enclave-type.md).
+- If you're using [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] with Intel SGX enclaves, check that your database uses the [DC-series](/azure/azure-sql/database/service-tiers-vcore?tabs=azure-portal#dc-series) hardware configuration. For more information, see [Enable Intel SGX enclaves for your Azure SQL database](/azure/azure-sql/database/always-encrypted-enclaves-enable#tab/IntelSGXenclaves).
+- If you're using [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] with VBS enclaves, verify that the preferredEnclaveType database property is set to VBS. For more information, see [Enable VBS Enclaves for your Azure SQL database](/azure/azure-sql/database/always-encrypted-enclaves-enable#tab/VBSenclaves).
+- If you're using [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] or later, check secure enclave is correctly configured for your instance. For more information, see [Configure the secure enclave in SQL Server](always-encrypted-enclaves-configure-enclave-type.md).
 
 ## Attestation errors when using Microsoft Azure Attestation
 
 > [!NOTE]
-> This section applies only to [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].
+> This section applies only to [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] with Intel SGX enclaves.
 
 Before a client driver submits a T-SQL statement to Azure SQL logical server for execution, the driver triggers the following enclave attestation workflow using Microsoft Azure Attestation.
 
@@ -46,7 +46,7 @@ Errors can occur at various steps of the above workflow due to misconfigurations
   - The attestation provider has been accidentally deleted.
   - The firewall was configured for the attestation provider, but it doesn't allow access to Microsoft services.
   - An intermittent network error causes the attestation provider to be unavailable.
-- Your Azure SQL logical server is not authorized to send attestation requests to the attestation provider. Make sure the administrator of your attestation provider has added the database server to the Attestation Reader role. For more information, see [Grant your Azure SQL database server access to your attestation provider](/azure/azure-sql/database/always-encrypted-enclaves-configure-attestation#grant-your-azure-sql-database-server-access-to-your-attestation-provider).
+- Your Azure SQL logical server isn't authorized to send attestation requests to the attestation provider. Make sure the administrator of your attestation provider has added the database server to the Attestation Reader role. 
 - The validation of the attestation policy fails (in step 3 of the above workflow).
   - An incorrect attestation policy is the likely root cause. Make sure you're using the Microsoft-recommended policy. For more information, see [Create and configure an attestation provider](/azure/azure-sql/database/always-encrypted-enclaves-configure-attestation#create-and-configure-an-attestation-provider).
   - The policy validation may also fail as a result of a security breach compromising the server-side enclave.
@@ -56,7 +56,7 @@ Errors can occur at various steps of the above workflow due to misconfigurations
 ## Attestation errors when using Host Guardian Service
 
 > [!NOTE]
-> This section applies only to [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)].
+> This section applies only to [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] and later.
 
 Before a client driver submits a T-SQL statement to [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] for execution, the driver triggers the following enclave attestation workflow using Host Guardian Service (HGS).
 
@@ -92,7 +92,8 @@ This section lists common errors you may encounter when you run confidential DML
 - The column you're querying uses deterministic encryption. Confidential DML queries using secure enclaves aren't supported with deterministic encryption. For more information on how to change the encryption type to randomized, see [Enable Always Encrypted with secure enclaves for existing encrypted columns](always-encrypted-enclaves-enable-for-encrypted-columns.md).
 - The string column you're querying uses a collation that isn't a BIN2 or UTF-8 collation. Change the collation to BIN2 or UTF-8. For more information, see [DML statements using secure enclaves](always-encrypted-enclaves-query-columns.md#dml-statements-using-secure-enclaves).
 - Your query triggers an unsupported operation. For the list of operations supported inside enclaves, see [DML statements using secure enclaves](always-encrypted-enclaves-query-columns.md#dml-statements-using-secure-enclaves).
-## Next Steps
+
+## Next steps
 
 - [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md)
 
@@ -101,3 +102,4 @@ This section lists common errors you may encounter when you run confidential DML
 - [Run Transact-SQL statements using secure enclaves](always-encrypted-enclaves-query-columns.md).
 - [Configure column encryption in-place using Always Encrypted with secure enclaves](always-encrypted-enclaves-configure-encryption.md)
 - [Create and use indexes on columns using Always Encrypted with secure enclaves](always-encrypted-enclaves-create-use-indexes.md)
+- [Getting started using Always Encrypted with secure enclaves](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)

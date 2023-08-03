@@ -1,16 +1,12 @@
 ---
+title: "Extract Data by Using the ODBC Source"
 description: "Extract Data by Using the ODBC Source"
-title: "Extract Data by Using the ODBC Source | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
-ms.assetid: 10f25703-49a2-4d45-abab-6b4da2a57ba5
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Extract Data by Using the ODBC Source
 

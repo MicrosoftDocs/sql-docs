@@ -3,7 +3,7 @@ title: "sys.dm_db_wait_stats (Azure SQL Database)"
 description: sys.dm_db_wait_stats (Azure SQL Database)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "03/12/2021"
+ms.date: "02/27/2023"
 ms.service: sql-database
 ms.topic: "reference"
 f1_keywords:
@@ -21,7 +21,7 @@ monikerRange: "=azuresqldb-current"
 # sys.dm_db_wait_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-  Returns information about all the waits encountered by threads that executed during operation. You can use this aggregated view to diagnose performance issues with [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and also with specific queries and batches.  
+  Returns information about all the waits encountered by threads that executed during operation. You can use this aggregated view to diagnose performance issues with [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and also with specific queries and batches.  
   
  Specific types of wait times during query execution can indicate bottlenecks or stall points within the query. Similarly, high wait times, or wait counts server wide can indicate bottlenecks or hot spots in interaction query interactions within the server instance. For example, lock waits indicate data contention by queries; page IO latch waits indicate slow IO response times; page latch update waits indicate incorrect file layout.  
   
@@ -54,7 +54,7 @@ monikerRange: "=azuresqldb-current"
 > These statistics are not persisted after SQL Database failover events, and all data is cumulative since the last time the statistics were reset or the database engine started. Use the `sqlserver_start_time` column in [sys.dm_os_sys_info](sys-dm-os-sys-info-transact-sql.md) to find the last database engine startup time.   
   
 ## Permissions  
- Requires VIEW DATABASE STATE permission on the server.  
+ Requires VIEW DATABASE STATE permission on the database.  
   
 ##  <a name="WaitTypes"></a> Types of Waits  
  Resource waits  
@@ -172,7 +172,7 @@ monikerRange: "=azuresqldb-current"
 |INTERNAL_TESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |IO_AUDIT_MUTEX|Occurs during synchronization of trace event buffers.|  
 |IO_COMPLETION|Occurs while waiting for I/O operations to complete. This wait type generally represents non-data page I/Os. Data page I/O completion waits appear as PAGEIOLATCH_* waits.|  
-|IO_QUEUE_LIMIT|Occurs when the asynchronous IO queue for the [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] has too many IOs pending. Tasks trying to issue another IO are blocked on this wait type until the number of pending IOs drop below the threshold. The threshold is proportional to the DTUs assigned to the database.|  
+|IO_QUEUE_LIMIT|Occurs when the asynchronous IO queue for the [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] has too many IOs pending. Tasks trying to issue another IO are blocked on this wait type until the number of pending IOs drop below the threshold. The threshold is proportional to the DTUs assigned to the database.|  
 |IO_RETRY|Occurs when an I/O operation such as a read or a write to disk fails because of insufficient resources, and is then retried.|  
 |IOAFF_RANGE_QUEUE|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |KSOURCE_WAKEUP|Used by the service control task while waiting for requests from the Service Control Manager. Long waits are expected and do not indicate a problem.|  
@@ -350,6 +350,7 @@ monikerRange: "=azuresqldb-current"
 |TRAN_MARKLATCH_SH|Occurs when waiting for a shared mode latch on a marked transaction. Transaction mark latches are used for synchronization of commits with marked transactions.|  
 |TRAN_MARKLATCH_UP|Occurs when waiting for an update mode latch on a marked transaction. Transaction mark latches are used for synchronization of commits with marked transactions.|  
 |TRANSACTION_MUTEX|Occurs during synchronization of access to a transaction by multiple batches.|  
+|THROTTLE_LOG_RATE_LOG_STORAGE|Occurs when writing to the DB log is throttled due to performance capabilities of the underlying storage.|  
 |UTIL_PAGE_ALLOC|Occurs when transaction log scans wait for memory to be available during memory pressure.|  
 |VIA_ACCEPT|Occurs when a Virtual Interface Adapter (VIA) provider connection is completed during startup.|  
 |VIEW_DEFINITION_MUTEX|Occurs during synchronization on access to cached view definitions.|  

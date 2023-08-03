@@ -1,20 +1,16 @@
 ---
-description: "Stop a Job"
 title: "Stop a Job"
-ms.custom: seo-lt-2019
+description: "Stop a Job"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "jobs [SQL Server Agent], stopping"
   - "SQL Server Agent jobs, stopping"
   - "stopping jobs"
-ms.assetid: 4249328a-24d8-4284-9d1d-7d04ed90e3d7
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Stop a Job
@@ -64,7 +60,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
   
 #### To stop a job  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

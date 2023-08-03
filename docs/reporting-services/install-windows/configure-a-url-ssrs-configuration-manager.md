@@ -1,21 +1,19 @@
 ---
+title: "Configure a URL  (Configuration Manager)"
 description: "Configure a URL  (Report Server Configuration Manager)"
-title: "Configure a URL  (Configuration Manager) | Microsoft Docs"
-ms.date: 05/26/2016
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "URL access [Reporting Services], syntax"
-ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 05/26/2016
+ms.service: reporting-services
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "URL access [Reporting Services], syntax"
 ---
 # Configure a URL  (Report Server Configuration Manager)
   Before you can use the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] or the Report Server Web service, you must configure at least one URL for each application. Configuring the URLs is mandatory if you installed [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in "files-only" mode (that is, by selecting the **Install but do not configure the server** option on the Report Server Installation Options page in the Installation Wizard). If you installed [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in the default configuration, URLs are already configured for each application.  
   
- Use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool to configure the URLs. All parts of the URL are defined in this tool. Unlike earlier releases, Internet Information Services (IIS) Web sites no longer provide access to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] applications in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions.  
+ Use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool to configure the URLs. All parts of the URL are defined in this tool. Unlike earlier releases, Internet Information Services (IIS) Web sites no longer provide access to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] applications in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides default values that work well in most deployment scenarios, including side-by-side deployments with other Web services and applications. Default URLs incorporate instance names, minimizing the risk of URL conflicts if you run multiple report server instances on the same computer.  
   

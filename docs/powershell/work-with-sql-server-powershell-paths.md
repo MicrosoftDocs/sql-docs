@@ -1,19 +1,18 @@
 ---
 title: Work With SQL Server PowerShell Paths
 description: Learn how to manipulate and retrieve information using either cmdlets or the methods and properties of the object identified by the provider path.
-ms.prod: sql
-ms.technology: sql-server-powershell
-ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: matteot, drskwier
-ms.custom: ""
 ms.date: 03/14/2017
+ms.service: sql
+ms.subservice: sql-server-powershell
+ms.topic: conceptual
 ---
 
 # Work With SQL Server PowerShell Paths
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 After you have navigated to a node in a [!INCLUDE[ssDE](../includes/ssde-md.md)] provider path, you can perform work or retrieve information by using the methods and properties from the
 [!INCLUDE[ssDE](../includes/ssde-md.md)] management object associated with the node.  

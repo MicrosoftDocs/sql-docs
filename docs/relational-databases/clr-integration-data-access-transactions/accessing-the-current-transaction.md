@@ -4,14 +4,13 @@ description: In SQL Server CLR integration, the Current property of the System.T
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 helpviewer_keywords:
   - "current transaction access"
   - "Current property"
   - "Transaction class"
-ms.assetid: 1a4e2ce5-f627-4c81-8960-6a9968cefda2
 ---
 # Accessing the Current Transaction
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

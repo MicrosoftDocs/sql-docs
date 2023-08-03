@@ -1,14 +1,13 @@
 ---
 title: "Oracle Connection Type (SSRS & Power BI Report Server)"
 description: Use the information in this article about the Oracle connection type to learn how to build a data source.
-ms.date: 08/09/2022
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-data
-ms.topic: conceptual
-ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 08/09/2022
+ms.service: reporting-services
+ms.subservice: report-data
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Oracle Connection Type (SSRS & Power BI Report Server)
 

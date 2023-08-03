@@ -1,19 +1,16 @@
 ---
 title: "About SQL Server Management Studio"
 description: "About SQL Server Management Studio"
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.technology: ssms
-ms.topic: ui-reference
-f1_keywords: 
-  - "sql13.swb.aboutsqlserverworkbench.f1"
-helpviewer_keywords: 
-  - "SQL Server Management Studio dialog box"
 author: "markingmyname"
 ms.author: "maghan"
-ms.reviewer: ""
-ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: ui-reference
+f1_keywords:
+  - "sql13.swb.aboutsqlserverworkbench.f1"
+helpviewer_keywords:
+  - "SQL Server Management Studio dialog box"
 ---
 
 # About SQL Server Management Studio

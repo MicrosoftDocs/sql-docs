@@ -4,11 +4,9 @@ description: Describes the MSmerge_generation_partition_mappings stored procedur
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
-ms.custom: seo-lt-2019
 f1_keywords:
   - "MSmerge_generation_partition_mappings_TSQL"
   - "MSmerge_generation_partition_mappings"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "MSmerge_generation_partition_mappings system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 443a4024-ce48-4772-9ee5-95bd6fb6476b
 ---
 # MSmerge_generation_partition_mappings (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

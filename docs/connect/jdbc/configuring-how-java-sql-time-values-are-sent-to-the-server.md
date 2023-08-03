@@ -4,8 +4,8 @@ description: Learn how to configure how java.sql.Time values are sent to the ser
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 08/12/2019
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Configuring how java.sql.Time values are sent
@@ -29,7 +29,7 @@ You can configure how the java.sql.Time value is sent by using the **sendTimeAsD
 
 You can programmatically modify the value of the **sendTimeAsDatetime** connection property with [SQLServerDataSource.setSendTimeAsDatetime](reference/setsendtimeasdatetime-method-sqlserverdatasource.md).
 
-Versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] earlier than [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] don't support the **time** data type, so applications using java.sql.Time typically store java.sql.Time values either as **datetime** or **smalldatetime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types.
+Versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] earlier than [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] don't support the **time** data type, so applications using java.sql.Time typically store java.sql.Time values either as **datetime** or **smalldatetime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types.
 
 If you want to use the **datetime** and **smalldatetime**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types when working with java.sql.Time values, you should set the **sendTimeAsDatetime** connection property to **true**. If you want to use the **time** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type when working with java.sql.Time values, you should set the **sendTimeAsDatetime** connection property to **false**.
 

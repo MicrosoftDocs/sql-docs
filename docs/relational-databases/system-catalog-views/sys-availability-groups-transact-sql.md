@@ -4,9 +4,8 @@ description: sys.availability_groups (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.availability_groups_TSQL"
@@ -18,7 +17,6 @@ helpviewer_keywords:
   - "sys.availability_groups catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: da7fa55f-c008-45d9-bcfc-3513b02d9e71
 ---
 # sys.availability_groups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

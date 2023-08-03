@@ -1,25 +1,23 @@
 ---
+title: "ISSAsynchStatus::Abort (Native Client OLE DB provider)"
 description: "ISSAsynchStatus::Abort (Native Client OLE DB provider)"
-title: "ISSAsynchStatus::Abort (Native Client OLE DB provider) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
-ms.topic: "reference"
-apiname: 
-  - "ISSAsynchStatus::Abort (OLE DB)"
-apitype: "COM"
-helpviewer_keywords: 
-  - "Abort method"
-ms.assetid: 2a4bd312-839a-45a8-a299-fc8609be9a2a
 author: markingmyname
 ms.author: maghan
+ms.date: "03/07/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "Abort method"
+apiname: "ISSAsynchStatus::Abort (OLE DB)"
+apitype: "COM"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ISSAsynchStatus::Abort (Native Client OLE DB Provider)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+> [!IMPORTANT]
+> [!INCLUDE[snac-removed-oledb-only](../../includes/snac-removed-oledb-only.md)]
 
   Cancels an asynchronously executing operation.  
   

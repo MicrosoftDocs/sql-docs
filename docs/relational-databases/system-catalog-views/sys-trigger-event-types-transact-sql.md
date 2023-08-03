@@ -4,9 +4,8 @@ description: sys.trigger_event_types (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "trigger_event_types_TSQL"
@@ -17,10 +16,9 @@ helpviewer_keywords:
   - "sys.trigger_event_types catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 054aed54-7151-4760-934a-149fa434f1ae
 ---
 # sys.trigger_event_types (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns a row for each event or event group on which a trigger can fire.  
   

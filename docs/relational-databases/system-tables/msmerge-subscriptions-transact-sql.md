@@ -4,9 +4,8 @@ description: MSmerge_subscriptions (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/16/2022"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "MSmerge_subscriptions"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "MSmerge_subscriptions system table"
 dev_langs:
   - "TSQL"
-ms.assetid: cafd954a-92f8-44cb-a5d0-dce9aafa5ee1
 ---
 # MSmerge_subscriptions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

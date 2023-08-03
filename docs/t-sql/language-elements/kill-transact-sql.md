@@ -3,13 +3,10 @@ title: "KILL (Transact-SQL)"
 description: "KILL (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: ""
 ms.date: "08/31/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "KILL_TSQL"
   - "KILL"
@@ -33,16 +30,16 @@ helpviewer_keywords:
   - "terminating process"
 dev_langs:
   - "TSQL"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current||=fabric"
 ---
 # KILL (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
 Ends a user process that is based on the session ID or unit of work (UOW). If the specified session ID or UOW has much work to undo, the KILL statement may take some time to complete. The process takes longer to complete particularly when the process involves rolling back a long transaction.  
   
 KILL ends a normal connection, which internally stops the transactions that are associated with the specified session ID. At times, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) might be in use. If MS DTC is in use, you can also use the statement to end orphaned and in-doubt distributed transactions.  
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -54,7 +51,7 @@ KILL { session ID [ WITH STATUSONLY ] | UOW [ WITH STATUSONLY | COMMIT | ROLLBAC
 ```  
   
 ```syntaxsql  
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse and Microsoft Fabric
   
 KILL 'session_id'  
 [;]   
@@ -133,7 +130,10 @@ The same status report can be obtained by repeating the same KILL _session ID_|_
 ## Permissions  
 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** Requires the ALTER ANY CONNECTION permission. ALTER ANY CONNECTION is included with membership in the sysadmin or processadmin fixed server roles.  
   
-**[!INCLUDE[ssSDS](../../includes/sssds-md.md)]:** Requires the KILL DATABASE CONNECTION permission. The server-level principal login has the KILL DATABASE CONNECTION.  
+**[!INCLUDE[ssSDS](../../includes/sssds-md.md)]:** Requires the KILL DATABASE CONNECTION permission. The server-level principal login has the KILL DATABASE CONNECTION.
+
+**[!INCLUDE [fabric](../../includes/fabric.md)]:** Requires Admin permissions.
+
   
 ## Examples  
   

@@ -1,19 +1,16 @@
 ---
-title: "E-Mail Settings in SSRS Native mode (Configuration Manager) | Microsoft Docs"
+title: "E-Mail Settings in SSRS Native mode (Configuration Manager)"
 description: "SQL ServerReporting Services includes an e-mail delivery extension so that you can distribute reports through e-mail."
-ms.date: 12/04/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.custom: seo-lt-2019​, seo-mmd-2019
-
-ms.topic: conceptual
-f1_keywords: 
-  - "SQL13.rsconfigtool.emailsettings.F1"
-helpviewer_keywords: 
-  - "SQL11.rsconfigtool.emailsettings.F1"
-ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 12/04/2019
+ms.service: reporting-services
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "SQL13.rsconfigtool.emailsettings.F1"
+helpviewer_keywords:
+  - "SQL11.rsconfigtool.emailsettings.F1"
 ---
 # E-Mail Settings - Reporting Services Native mode (Configuration Manager)
 SQL Server Reporting Services includes an e-mail delivery extension so that you can distribute reports through e-mail. Depending on how you define the e-mail subscription, a delivery might consist of a notification, link, attachment, or embedded report. The e-mail delivery extension works with your existing mail server technology. The mail server must be an SMTP server or forwarder. The report server connects to an SMTP server through Collaboration Data Objects (CDO) libraries (cdosys.dll) that are provided by the operating system.

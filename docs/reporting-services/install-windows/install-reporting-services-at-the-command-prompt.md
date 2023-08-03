@@ -1,18 +1,17 @@
 ---
+title: "Install Reporting Services 2016 at the Command Prompt - SSRS"
 description: "Install Reporting Services 2016 at the Command Prompt - SSRS"
-title: "Install Reporting Services 2016 at the Command Prompt - SSRS | Microsoft Docs"
-ms.date: 01/09/2018
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.topic: conceptual
-helpviewer_keywords:
-  - "command line"
-ms.assetid: 048169b3-512c-41e4-895a-0416eff41268
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: "= sql-server-2016"
+ms.date: 01/09/2018
+ms.service: reporting-services
+ms.topic: conceptual
 ms.custom:
   - intro-installation
+  - updatefrequency5
+helpviewer_keywords:
+  - "command line"
+monikerRange: "= sql-server-2016"
 ---
 # Install Reporting Services 2016 at the Command Prompt
 
@@ -73,9 +72,9 @@ Setup.exe /q /ACTION="Upgrade" /INSTANCENAME="MSSQLSERVER" /PID="[PID value]" /F
   
  The following example can be used to upgrade a SharePoint Mode installation that is based on the SharePoint shared service architecture. The example uses switch ALLOWUPGRADEFORSSRSSHAREPOINTMODE. The switch is not needed for upgrading older versions that are not based on the shared service architecture:  
   
--   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
+-   [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)]  
   
--   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
+-   [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]  
   
 ```  
 Setup.exe /q /ACTION="Upgrade" /INSTANCENAME="MSSQLSERVER" /PID="[Your PID Value]" /FTSVCACCOUNT="[ACCOUNT Name]" /FTSVCPASSWORD="[PASSWORD]" /UPDATEENABLED="False" /IACCEPTSQLSERVERLICENSETERMS /ALLOWUPGRADEFORSSRSSHAREPOINTMODE="True"  

@@ -4,11 +4,9 @@ description: Learn how to map XSD data types to XPath data types when performing
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "mapping data types [SQLXML]"
   - "data types [SQLXML], converting"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "data types [SQLXML], mapping data types"
   - "XPath data types [SQLXML]"
   - "XSD schemas [SQLXML], mapping data types"
-ms.assetid: ced1a95e-18d4-4a5a-8da8-dbb6d58bbd45
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Mapping XSD Data Types to XPath Data Types (SQLXML 4.0)

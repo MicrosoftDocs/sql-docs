@@ -1,14 +1,14 @@
 ---
+title: "Ancestor (MDX)"
 description: "Ancestor (MDX)"
-title: "Ancestor (MDX) | Microsoft Docs"
-ms.date: 02/17/2022
-ms.prod: sql
-ms.technology: analysis-services
-ms.custom: mdx
-ms.topic: reference
+author: minewiskan
 ms.author: owend
 ms.reviewer: owend
-author: minewiskan
+ms.date: 02/17/2022
+ms.service: sql
+ms.subservice: analysis-services
+ms.topic: reference
+ms.custom: mdx
 ---
 # Ancestor (MDX)
 
@@ -73,7 +73,7 @@ SELECT {[Measures].[Internet Sales Amount], Measures.x} ON 0,
 FROM [Adventure Works]  
 ```  
   
- The following example uses a numeric expression and returns the Internet Sales Amount for each State-Province in Australia and its percent of the total Internet Sales Amount for all countries.  
+ The following example uses a numeric expression and returns the Internet Sales Amount for each State-Province in Australia and its percent of the total Internet Sales Amount for all countries/regions.  
   
 ```  
 WITH MEMBER Measures.x AS [Measures].[Internet Sales Amount] /   

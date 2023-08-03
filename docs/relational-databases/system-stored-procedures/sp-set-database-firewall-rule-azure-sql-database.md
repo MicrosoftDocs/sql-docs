@@ -1,32 +1,28 @@
 ---
-description: "sp_set_database_firewall_rule (Azure SQL Database)"
 title: "sp_set_database_firewall_rule"
 titleSuffix: Azure SQL Database
+description: "sp_set_database_firewall_rule (Azure SQL Database)"
+author: VanMSFT
+ms.author: vanto
 ms.date: "08/04/2017"
 ms.service: sql-database
-ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_set_database_firewall_rule"
   - "sp_set_database_firewall_rule_TSQL"
   - "sys.sp_set_database_firewall_rule"
   - "sys.sp_set_database_firewall_rule_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_set_database_firewall_rule"
   - "firewall_rules, setting database rules"
-ms.assetid: 8f0506b6-a4ac-4e4d-91db-8077c40cb17a
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 monikerRange: "= azuresqldb-current"
-ms.custom: seo-dt-2019
 ---
 # sp_set_database_firewall_rule (Azure SQL Database)
 [!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
-  Creates or updates the database-level firewall rules for your [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Database firewall rules can be configured for the **master** database, and for user databases on [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Database firewall rules are particularly useful when using contained database users. For more information, see [Contained Database Users - Making Your Database Portable](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+  Creates or updates the database-level firewall rules for your [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. Database firewall rules can be configured for the **master** database, and for user databases on [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Database firewall rules are particularly useful when using contained database users. For more information, see [Contained Database Users - Making Your Database Portable](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
 ## Syntax  
   

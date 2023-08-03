@@ -116,7 +116,7 @@ Azure Monitor alerts proactively notify you when important conditions are found 
 
 If you are creating or running an application in Azure, [Azure Monitor Application Insights](/azure/azure-monitor/overview#application-insights) may offer additional types of alerts.
 
-The following table lists common and recommended alert rules for Azure SQL Managed Instance. You may see different options available depending on your purchase model.
+The following table lists common and recommended alert rules for Azure SQL Managed Instance. You may see different options available depending on your purchasing model.
 
 | Signal name | Operator | Aggregation type  | Threshold value | Description |
 |:---|:---|:---|:---|:---|

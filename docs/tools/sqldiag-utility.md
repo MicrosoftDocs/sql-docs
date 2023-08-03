@@ -1,14 +1,14 @@
 ---
 title: "SQLdiag Utility"
 description: Use the SQLdiag utility to collect logs and data files from SQL Server and other types of servers, and monitor servers over time or troubleshoot problems.
-ms.custom: seo-lt-2019
-ms.date: 10/05/2021
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.reviewer: ""
-ms.technology: tools-other
+author: markingmyname
+ms.author: maghan
+ms.reviewer: jopilov
+ms.date: 02/01/2022
+ms.service: sql
+ms.subservice: tools-other
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "command prompt utilities [SQL Server], SQLdiag"
   - "stopping diagnostic collection"
   - "storing diagnostic information"
@@ -27,9 +27,6 @@ helpviewer_keywords:
   - "configuration files [SQL Server]"
   - "automatic diagnostic collection"
   - "clusters [SQL Server], diagnostic collection"
-ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
-author: markingmyname
-ms.author: maghan
 ---
 # SQLdiag Utility
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -258,23 +255,24 @@ sqldiag
  **SQLdiag** collects most diagnostic data in parallel. All diagnostic information is collected by connecting to tools, such as the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sqlcmd** utility or the Windows command processor, except when information is collected from Windows performance logs and event logs. **SQLdiag** uses one worker thread per computer to monitor the diagnostic data collection of these other tools, often simultaneously waiting for several tools to complete. During the collection process, **SQLdiag** routes the output from each diagnostic to the output folder.  
   
 ## Stopping Data Collection  
- After **SQLdiag** starts collecting diagnostic data, it continues to do so unless you stop it or it is configured to stop at a specified time. You can configure **SQLdiag** to stop at a specified time by using the **/E** argument, which allows you to specify a stop time, or by using the **/X** argument, which causes **SQLdiag** to run in snapshot mode.  
+ After **SQLdiag** starts collecting diagnostic data, it continues to do so unless you stop it manually via `CTRL+C`, or your create a `sqldiag.stop` file, or you configure it to stop at a specified time. You can configure **SQLdiag** to stop at a specific time by using the **/E** argument, or by using the **/X** argument, which causes **SQLdiag** to run in snapshot mode.  
   
  When **SQLdiag** stops, it stops all diagnostics it has started. For example, it stops [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] traces it was collecting, it stops executing [!INCLUDE[tsql](../includes/tsql-md.md)] scripts it was running, and it stops any sub processes it has spawned during data collection. After diagnostic data collection has completed, **SQLdiag** exits.  
   
-> [!NOTE]  
->  Pausing the **SQLdiag** service is not supported. If you attempt to pause the **SQLdiag** service, it stops after it finishes collecting the diagnostics that it was collecting when you paused it. If you restart **SQLdiag** after stopping it, the application restarts and overwrites the output folder. To avoid overwriting the output folder, specify **/N 2** on the command line.  
   
- **To stop SQLdiag when running as a console application**  
+ ### To stop SQLdiag when running as a console application
   
  If you are running **SQLdiag** as a console application, press CTRL+C in the console window where **SQLdiag** is running to stop it. After you press CTRL+C, a message displays in the console window informing you that **SQLDiag** data collection is ending, and that you should wait until the process shuts down, which may take several minutes.  
   
  Press Ctrl+C twice to terminate all child diagnostic processes and immediately terminate the application.  
   
- **To stop SQLdiag when running as a service**  
+ ### To stop SQLdiag when running as a service 
   
- If you are running **SQLdiag** as a service, run **SQLDiag STOP** in the **SQLdiag** startup folder to stop it.  
-  
+ If you are running **SQLdiag** as a service, run **SQLDiag STOP** in the **SQLdiag** startup folder to stop it.  Or you can simply stop the **SQLDiag** services in the Services.msc applet.
+ 
+ > [!NOTE]  
+>  Pausing the **SQLdiag** service is not supported. If you attempt to pause the **SQLdiag** service, it stops after it finishes collecting the diagnostics that it was collecting when you paused it. If you restart **SQLdiag** after stopping it, the application restarts and overwrites the output folder. To avoid overwriting the output folder, specify **/N 2** on the command line.  
+
  If you are running multiple instances of **SQLdiag** on the same computer, you can also pass the **SQLdiag** instance name to on the command line when you stop the service. For example, to stop a **SQLdiag** instance named Instance1, use the following syntax:  
   
 ```  
@@ -288,7 +286,22 @@ SQLDIAG STOP /A Instance1
   
 > [!NOTE]  
 >  Use **SQLDiag STOP** or **SQLDIAG STOP_ABORT** to stop the **SQLdiag** service. Do not use the Windows Services Console to stop **SQLdiag** or other [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] services.  
-  
+
+## To stop SQLDiag using sqldiag.stop file
+
+SQLDiag will also shut down automatically when it finds a file named `sqldiag.stop` in the utility's \Output folder. This option applies regardless if SQLDiag runs as a console app or as a service. Creating a .stop file can be useful when you want to programmatically shut down SQLDiag after some event occurs, but you don't know in advance the time that this event will occur. The contents of the `sqldiag.stop` file are irrelevant. One option, besides manually creating the file, is to use a command like the following in a batch file to create `sqldiag.stop`:
+
+```batch
+ECHO abc > F:\PSSDIAG\Output\sqldiag.stop
+```
+
+Another option is to use PowerShell
+
+```Powershell
+Set-Content -Value "stop please" -Path "G:\pssdiag\output\sqldiag.stop"
+```
+
+
 ## Automatically Starting and Stopping SQLdiag  
  To automatically start and stop diagnostic data collection at a specified time, use the **/B**_start\_time_ and **/E**_stop\_time_ arguments, using 24-hour notation. For example, if you are troubleshooting a problem that consistently appears at approximately 02:00:00, you can configure **SQLdiag** to automatically start collecting diagnostic data at 01:45 and automatically stop at 03:00:00. Use the **/B** and **/E** arguments to specify the start and stop time. Use 24-hour notation to specify an exact start and stop date and time with the general format YYYYMMDD_HH:MM:SS. The following will start data collection at 01:45 and stop it at 3:00.
   
@@ -330,17 +343,17 @@ sqldiag /B 03:00:00 /X /L
 ## Running SQLdiag as a Service  
  When you want to use **SQLdiag** to collect diagnostic data for long periods of time during which you might need to log out of the computer on which **SQLdiag** is running, you can run it as a service.  
   
- **To register SQLDiag to run as a service**  
+ ### To register SQLDiag to run as a service
   
  You can register **SQLdiag** to run as a service by specifying the **/R** argument at the command line. This registers **SQLdiag** to run as a service. The **SQLdiag** service name is SQLDIAG. Any other arguments you specify on the command line when you register **SQLDiag** as a service are preserved and reused when the service is started.  
   
  To change the default SQLDIAG service name, use the **/A** command-line argument to specify another name. **SQLdiag** automatically prefixes DIAG$ to any **SQLdiag** instance name specified with **/A** to create sensible service names.  
   
- **To unregister the SQLDIAG service**  
+ ### To unregister the SQLDIAG service 
   
  To unregister the service, specify the **/U** argument. Unregistering **SQLdiag** as a service also deletes the Windows registry keys of the service.  
   
- **To start or restart the SQLDIAG service**  
+ ### To start or restart the SQLDIAG service
   
  To start or restart the SQLDIAG service, run **SQLDiag START** from the command line.  
   

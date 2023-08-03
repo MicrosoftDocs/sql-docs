@@ -1,22 +1,18 @@
 ---
+title: "System Variables"
 description: "System Variables"
-title: "System Variables | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "containers [Integration Services], variables"
   - "tasks [Integration Services], variables"
   - "system variables [Integration Services]"
   - "event handlers [Integration Services], variables"
   - "variables [Integration Services], system"
-ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
-author: chugugrace
-ms.author: chugu
 ---
 # System Variables
 

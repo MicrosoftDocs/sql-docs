@@ -4,8 +4,8 @@ description: This article covers how SQL Server data types differ from types in 
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 helpviewer_keywords:
   - "precision [CLR integration]"
@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "three-value logic comparisons [CLR integration]"
   - "data types [CLR integration]"
   - "SqlBoolean data type"
-ms.assetid: 13da4c7f-1010-4b2d-a63c-c69b6bfd96f1
 ---
 # Nullability and Three-Value Logic Comparisons
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

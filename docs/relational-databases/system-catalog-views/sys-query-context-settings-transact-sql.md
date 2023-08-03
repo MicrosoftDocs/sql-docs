@@ -4,9 +4,8 @@ description: sys.query_context_settings (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "11/29/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "QUERY_CONTEXT_SETTINGS_TSQL"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.query_context_settings catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 3c1887df-6bd8-491e-82fc-d25ad9589faf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.query_context_settings (Transact-SQL)

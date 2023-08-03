@@ -5,9 +5,8 @@ author: chugugrace
 ms.author: chugu
 ms.reviewer: randolphwest
 ms.date: 08/17/2022
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
   - "string literals"

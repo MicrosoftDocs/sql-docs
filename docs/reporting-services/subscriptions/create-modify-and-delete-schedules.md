@@ -1,13 +1,13 @@
 ---
-title: "Create, Modify, and Delete Schedules | Microsoft Docs"
+title: "Create, Modify, and Delete Schedules"
 description: Create, modify & delete Reporting Services shared schedules. For native mode, use the web portal or Management Studio. For SharePoint mode, use the service app.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 06/11/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: subscriptions
-
-
+ms.service: reporting-services
+ms.subservice: subscriptions
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "report-specific schedules [Reporting Services]"
   - "shared schedules [Reporting Services]"
@@ -20,9 +20,6 @@ helpviewer_keywords:
   - "schedules [Reporting Services], creating"
   - "schedules [Reporting Services], modifying"
   - "shared schedules [Reporting Services], deleting"
-ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Create, Modify, and Delete Schedules
   Use this article to learn about how to create, modify, and delete [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] shared schedules.  To manage shared schedules for native mode, use the Schedules page in the web portal or the shared schedules folder in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. For SharePoint mode use, the management pages for the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application.

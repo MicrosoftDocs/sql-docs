@@ -1,18 +1,15 @@
 ---
+title: "EditionName Property (WMI MSReportServer_Instance)"
 description: "EditionName Property (WMI MSReportServer_Instance)"
-title: "EditionName Property (WMI MSReportServer_Instance) | Microsoft Docs"
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: wmi-provider-library-reference
-
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "EditionName property"
-ms.assetid: 983a5f94-f3c7-4b3a-943e-35fcb9822cc6
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: wmi-provider-library-reference
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "EditionName property"
 ---
 # MSReportServer_Instance Properties - EditionName
   Returns the human readable name of the report server edition. Read-only.  

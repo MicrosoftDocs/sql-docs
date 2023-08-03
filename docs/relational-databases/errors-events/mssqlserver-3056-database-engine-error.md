@@ -1,16 +1,14 @@
 ---
+title: "MSSQLSERVER_3056"
 description: "MSSQLSERVER_3056"
-title: "MSSQLSERVER_3056 | Microsoft Docs"
-ms.custom: ""
+author: pijocoder
+ms.author: jopilov
 ms.date: "08/24/2022"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "3056 (Database Engine error)"
-author: Pijocoder
-ms.author: mathoma
 ---
 # MSSQLSERVER_3056
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -70,7 +68,7 @@ The error message includes the name of the unexpected file. Investigate how this
    - Ensure proper permissions are in place for user access to this FILESTREAM folder(s)
    - Understand and ensure no applications are creating files in the FILESTREAM folder(s)
 
-1. Run a new DBCC CHECKDB and make sure it doesn’t raise any errors
+1. Run a new DBCC CHECKDB and make sure it doesn't raise any errors
 1. If there are any other CHECKDB errors including 7903,7904,7905,7907, then there has been corruption or tampering of SQL Server FILESTREAM folder  beyond the mere invalid addition of foreign files. This situation not repairable manually
    - Check your hardware for any issues and resolve them
    - Ensure your system is protected from malware. Note that FILESTREAM data files should be excluded from antivirus software scanning. See [Recommendations and guidelines for improving FILESTREAM performance](../blob/filestream-sql-server.md#recommendations-and-guidelines-for-improving-filestream-performance)

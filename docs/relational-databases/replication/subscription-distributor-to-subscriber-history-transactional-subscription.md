@@ -1,18 +1,15 @@
 ---
 title: "Distributor to Subscriber History"
 description: Describes the options found on the 'Distributor to Subscriber History' tab within SQL Server Management Studio (SSMS).
-ms.custom: seo-lt-2019
-ms.date: "03/07/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.monitor.subscription.disttosub.f1"
-ms.assetid: 1aad5b82-592e-4907-92f7-b90794175be5
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/07/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.monitor.subscription.disttosub.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Subscription, Distributor to Subscriber History (Transactional Subscription)

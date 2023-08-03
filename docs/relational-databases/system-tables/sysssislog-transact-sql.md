@@ -4,9 +4,8 @@ description: sysssislog (Transact-SQL)
 author: lrtoyou1223
 ms.author: lle
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sysdtslog90_TSQL"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "sysssislog system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 7fa288a1-81e3-42a0-82f6-8a59019693d0
 ---
 # sysssislog (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

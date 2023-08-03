@@ -4,8 +4,8 @@ description: Learn about the sql_variant data type in the JDBC driver and how it
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 03/26/2021
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Using Sql_variant data type

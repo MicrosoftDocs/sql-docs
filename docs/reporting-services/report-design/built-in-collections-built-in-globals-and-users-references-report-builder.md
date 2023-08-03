@@ -1,17 +1,13 @@
 ---
-title: "Built-in Globals and User references in a paginated report | Microsoft Docs"
-
+title: "Built-in Globals and User references in a paginated report"
 description: Find out about the values that can be used in expressions to filter results in a paginated report in Report Builder.
-ms.date: 08/17/2018
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 08/17/2018
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Built-in collections - Globals and User references in a paginated report (Report Builder)
 

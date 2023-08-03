@@ -4,15 +4,12 @@ description: Use the Transaction Performance Analysis report in SQL Server Manag
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "08/02/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 helpviewer_keywords:
   - "Analyze, Migrate, Report"
   - "AMR"
-ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP
@@ -101,7 +98,7 @@ Scan and contention statistics on the table details report is gathered and aggre
   
 **To generate a migration checklist using the UI command**  
   
-1.  In **Object Explorer**, right click a database other than the system database, click **Tasks**, and then click **Generate In-Memory OLTP Migration Checklists**.  
+1.  In **Object Explorer**, right-click a database other than the system database, click **Tasks**, and then click **Generate In-Memory OLTP Migration Checklists**.  
   
 2.  In the Generate In-Memory OLTP Migration Checklists dialog box, click Next to navigate to the **Configure Checklist Generation Options** page. On this page do the following.  
   

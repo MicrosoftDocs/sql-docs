@@ -4,9 +4,8 @@ description: CLR Assembly Catalog Views (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 helpviewer_keywords:
   - "catalog views [SQL Server], CLR assembly"
@@ -14,7 +13,6 @@ helpviewer_keywords:
   - "CLR assembly catalog views"
 dev_langs:
   - "TSQL"
-ms.assetid: b2e71480-92b2-4610-a4ff-dafb121087d9
 ---
 # CLR Assembly Catalog Views (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

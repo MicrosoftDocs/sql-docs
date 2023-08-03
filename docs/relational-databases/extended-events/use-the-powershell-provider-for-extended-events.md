@@ -4,15 +4,13 @@ description: Use the SQL Server PowerShell provider to manage SQL Server Extende
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xevents
+ms.service: sql
+ms.subservice: xevents
 ms.topic: tutorial
 helpviewer_keywords:
   - "PowerShell [SQL Server], xevent"
   - "extended events [SQL Server], PowerShell"
   - "PowerShell [SQL Server], extended events"
-ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use the PowerShell Provider for Extended Events

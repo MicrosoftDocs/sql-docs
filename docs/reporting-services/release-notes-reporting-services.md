@@ -1,17 +1,17 @@
 ---
-title: "Release notes for Reporting Services 2017 and later | Microsoft Docs"
+title: "Release notes for Reporting Services 2017 and later"
 description: Learn details about the changes in SQL Server Reporting Services (SSRS), for versions 2017 and later.
-ms.date: 08/31/2022
-ms.prod: reporting-services
-ms.prod_service: reporting-services-native
-ms.technology: reporting-services
-
-ms.topic: conceptual
-ms.reviewer: maggies
 author: casualoak
 ms.author: petebro
+ms.reviewer: maggies
+ms.date: 07/25/2023
+ms.service: reporting-services
+ms.subservice: reporting-services
+ms.topic: conceptual
+ms.custom: updatefrequency5
 monikerRange: ">=sql-server-2017"
 ---
+
 # Release notes for SQL Server Reporting Services (SSRS) 2017 and later
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2017-and-later](../includes/ssrs-appliesto-2017-and-later.md)]
@@ -46,7 +46,40 @@ We are "standardizing" all our 'Release Notes' style articles:
 
 GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
+
+::: moniker range="=sql-server-ver16"
 ## SQL Server 2022 Reporting Services
+
+## 16.0.8564.33454, 2023/06/13
+*(Product Version: 16.0.1114.11)*
+
+-  Introduced new Accessibility property that lets report authors to add accessible headers to tables and Heading levels to text boxes.
+-  Fixed setting calendar days to a single day for monthly schedules.
+-  Fixed an issue in Report Server (Web Service) page localization, and localization of exported Excel files 
+Fixed slowness of Large MDX Query as an Expression.
+
+## 16.0.8361.39598, 2022/11/23
+*(Product Version: 16.0.1113.11)*
+
+-  Fixed issue where some SQL Server 2022 product keys were not working with SQL Server 2022 Reporting Services.
+
+## 16.0.8353.8096, 2022/11/16
+*(Product Version: 16.0.1112.48)*
+
+Initial release.
+
+- Major changes from SQL Server 2019 Reporting Services:
+    - New portal experience with performance improvements using Angular
+    - Accessibility fixes to many parts of the portal
+    - New [Power BI Migration experience](/power-bi/guidance/migrate-ssrs-reports-to-power-bi#migration-tool-for-sql-server-2022) in the portal
+    - Ability to turn off size calculation for snapshots via configuration property **EnableListHistorySnapshotsSize** if History Snapshots page loads slow due to a large number of snapshots
+    - Security enhancements
+    - Bug fixes
+- [Deprecated features](./deprecated-features-in-sql-server-reporting-services-ssrs.md): 
+    - Report Parts support 
+- [Discontinued features](./discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md): 
+    - Pin to PowerBI functionality
+    - Mobile Reports functionality (.rsmobile) and Mobile Report Publisher
 
 ## 15.0.8264.8408, 2022/08/19
 *(Product Version: 15.0.1111.106)*
@@ -57,17 +90,40 @@ Release Candidate 0 (RC0)
 - Accessibility fixes to many parts of the Portal.
 - Security enhancements.
 - Bug fixes.
-- Deprecation of several features: Pin to Power BI, Mobile Reports, and Mobile Report Publisher.
+- Discontinuation of several features: Pin to Power BI, Mobile Reports, and Mobile Report Publisher.
 
+::: moniker-end
 
 ## SQL Server 2019 Reporting Services
 
-## 15.0.8276.32713, 2022/08/31
+## 15.0.8599.29221, 2023/07/20
+*(Product Version: 15.0.1102.1084)*
+- Added support for GB18030-2022 Chinese government standard
+
+## 15.0.8563.17333, 2023/06/20
+*(Product Version: 15.0.1102.1075)*
+- Fixed issue with date type parameters and Oracle data source
+- Fixed slowness of Large MDX Query as an Expression 
+- Fixed issue with export to Excel / Word when using Virtual Service Account and Execution Account 
+
+## 15.0.8434.2956, 2023/02/06
+*(Product Version: 15.0.1102.1047)*
+- New [Power BI Migration experience](/power-bi/guidance/migrate-ssrs-reports-to-power-bi#migration-tool-for-sql-server-2022) in the portal.
+- Using of single quote in item names is enabled.
+- Fixed issue with exporting Arabic characters with Calibri font to PDF.
+- Fixed layout misalignment in vertical writing mode.
+- Fixed formatting loss of empty cells exported to Word.
+- Fixed problem with row height in matrix after exporting to PDF
+- Changes to telemetry configuration and logging
+- Security fixes
+
+## 15.0.8270.42049, 2022/08/31
 *(Product Version: 15.0.1102.1002)*
 
 - Fixed issue with certain parameters causing connection error to certain data sources.
 - Fixed issue with date time in some locales.
 - Fixed issue with spacing in PDF exports.
+- Fixed issue with email priority in a subscription set incorrectly.
 - Updated versions of some utilized open-source software.
 - Security fixes
 
@@ -134,7 +190,19 @@ Initial release.
 
 ## SQL Server 2017 Reporting Services
 
-## 14.0.600.1860, 2022/04/26 
+## 14.0.601.20, 2023/02/14
+*(Product Version: 14.0.601.20)*
+
+- New [Power BI Migration experience](/power-bi/guidance/migrate-ssrs-reports-to-power-bi#migration-tool-for-sql-server-2022) in the portal.
+
+| Fixed issue | Details |
+| :---------- | :------ |
+| Fixed issue with RTL alignment of toggles in RDL reports.  | &nbsp; |
+| Fixed formatting loss of empty cells exported to Word.  | &nbsp; |
+| Changes to telemetry configuration and logging.  | &nbsp; |
+| Security fixes.  | &nbsp; |
+
+## 14.0.600.1860, 2022/04/26
 *(Product Version: 14.0.600.1860)*
 
 | Fixed issue | Details |
@@ -176,7 +244,7 @@ Initial release.
 | Paginated reports didn't work properly with filter parameters when snapshot is enabled  | &nbsp; |
 | Users with Browser role and default settings didn't have permissions to download Excel files  | &nbsp; |
 | Upgrading to Power BI Report Server from SQL Server 2016 Reporting Services failed during upgrade | &nbsp; |
-| After upgrading from SQL Server 2012 Reporting Services, subscriptions failed with “An invalid character was found in the mail header: ','” message | &nbsp; |
+| After you upgrade from SQL Server 2012 Reporting Services, subscriptions failed with "An invalid character was found in the mail header: ','" message | &nbsp; |
 | Configuration tool: canceling modal windows in Database section would restart the Reporting Services service | &nbsp; |
 | BorderStyle property expression of Textbox controls weren't rendered to Excel format  | &nbsp; |
 | Pagination issue that could get certain reports stuck with rendering the same page without ever reaching the last page of the report | &nbsp; |
@@ -228,7 +296,7 @@ The following issue has been fixed:
 | Fixed issue | Details |
 | :---------- | :------ |
 | Textbox inside Rectangle causes the rectangle to not grow vertically when rc:Toolbar=False and it has long text. | &nbsp; |
-| Text size isn't scaling if pageHeight is less than 0.5 inches. | &nbsp; |
+| Text size isn't scaling if pageHeight is less than 0.5 inch. | &nbsp; |
 | Deadlock occurs in the SSRS catalog database when it is used with CRM. | &nbsp; |
 | Vertically aligned column headers displayed incorrectly when scrolling down in report. | &nbsp; |
 | Users added to System Center Operations Manager Reporting Role have access blocked to SSRS web portal. | &nbsp; |
@@ -275,3 +343,4 @@ Initial release.
 [What's New in Reporting Services (SSRS)?](what-s-new-in-sql-server-reporting-services-ssrs.md)
 
 More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).
+

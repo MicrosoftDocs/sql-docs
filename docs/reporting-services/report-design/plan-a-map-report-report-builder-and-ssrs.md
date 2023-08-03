@@ -1,16 +1,13 @@
 ---
-title: "Plan a map paginated report | Microsoft Docs"
-description: Inspire action and insight with presentation of analytical data against a geographic background by using a map in your paginated reports in Report Builder. 
-ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
+title: "Plan a map paginated report"
+description: Inspire action and insight with presentation of analytical data against a geographic background by using a map in your paginated reports in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/14/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Plan a map paginated report (Report Builder)
 
@@ -45,7 +42,7 @@ Good reports present information that leads to actions or insights. To present a
   
 -   **Lines.** Lines specify paths or routes, for example, delivery routes or flight paths. After you add a line to a map, you can vary the line color and line width.  
   
--   **Polygons.** Polygons specify areas, for example, regions, territories, countries, states, provinces, counties, cities, or areas covered by cities, postal codes, telephone exchanges, or census districts. After you add polygons to a map, in addition to displaying the outline, you can display a marker at the center point of the area of the polygon.  
+-   **Polygons.** Polygons specify areas, for example, territories, countries/regions, states, provinces, counties, cities, or areas covered by cities, postal codes, telephone exchanges, or census districts. After you add polygons to a map, in addition to displaying the outline, you can display a marker at the center point of the area of the polygon.  
   
  After you identify which spatial data that you need, you must find a source for it.  
   

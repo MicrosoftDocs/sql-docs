@@ -7,7 +7,6 @@ ms.reviewer: randolphwest
 ms.date: 07/25/2022
 ms.service: sql-server-stretch-database
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 helpviewer_keywords:
   - "Stretch Database, enabling database"
   - "enabling database for Stretch Database"
@@ -89,7 +88,7 @@ Enabling Stretch Database on a database or a table requires db_owner permissions
 
    For more info about the database master key, see [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md) and [Create a Database Master Key](../../relational-databases/security/encryption/create-a-database-master-key.md).
 
-1. When you configure a database for Stretch Database, you have to provide a credential for Stretch Database to use for communication between the on premises SQL Server and the remote Azure server. You have two options.
+1. When you configure a database for Stretch Database, you have to provide a credential for Stretch Database to use for communication between the on-premises SQL Server and the remote Azure server. You have two options.
 
    - You can provide an administrator credential.
 

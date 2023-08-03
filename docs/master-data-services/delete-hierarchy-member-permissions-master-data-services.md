@@ -1,24 +1,20 @@
 ---
-description: "Delete Hierarchy Member Permissions (Master Data Services)"
 title: Delete Hierarchy Member Permissions
-ms.custom: ""
+description: "Delete Hierarchy Member Permissions (Master Data Services)"
+author: CordeliaGrey
+ms.author: jiwang6
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
+ms.service: sql
+ms.subservice: master-data-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "deleting member permissions [Master Data Services]"
   - "members [Master Data Services], deleting permissions"
   - "permissions [Master Data Services], deleting member permissions"
-ms.assetid: 7f22d5e2-70c1-422c-99c2-e995a47d812a
-author: CordeliaGrey
-ms.author: jiwang6
 ---
 # Delete Hierarchy Member Permissions (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], delete model object permissions to remove any assignments that have been made.  
   

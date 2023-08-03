@@ -4,18 +4,15 @@ description: Create Nonclustered Indexes
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 11/12/2021
-ms.prod: sql
-ms.prod_service: "table-view-index, sql-database"
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
-ms.custom: FY22Q2Fresh
 helpviewer_keywords:
   - "index creation [SQL Server], nonclustered indexes"
   - "nonclustered indexes [SQL Server], creating"
   - "nonclustered indexes [SQL Server], UNIQUE constraint"
   - "indexes [SQL Server], nonclustered"
   - "nonclustered indexes [SQL Server], PRIMARY KEY constraint"
-ms.assetid: 9402029a-1227-46c4-93aa-c2122eb1b943
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Nonclustered Indexes
@@ -66,7 +63,7 @@ You can create nonclustered indexes in [!INCLUDE[ssnoversion](../../includes/ssn
   
 8.  Click **Close**.  
   
-9. On the **File** menu, click **Save**_table_name_.  
+9. On the **File** menu, click **Save** _table_name_.  
 
 #### To create a nonclustered index by using Object Explorer  
   
@@ -82,7 +79,7 @@ You can create nonclustered indexes in [!INCLUDE[ssnoversion](../../includes/ssn
   
 6.  Under **Index key columns**, click **Add...**.  
   
-7.  In the **Select Columns from**_table_name_ dialog box, select the check box or check boxes of the table column or columns to be added to the nonclustered index.  
+7.  In the **Select Columns from** _table_name_ dialog box, select the check box or check boxes of the table column or columns to be added to the nonclustered index.  
   
 8.  Click **OK**.  
   

@@ -1,19 +1,15 @@
 ---
+title: "Managing Running Packages Programmatically"
 description: "Managing Running Packages Programmatically"
-title: "Managing Running Packages Programmatically | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "packages [Integration Services], managing"
-  - "running packages [Integration Services]"
-ms.assetid: 0e91f4ac-6f29-40d7-8c28-9b82e4802c35
 author: chugugrace
 ms.author: chugu
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "reference"
+helpviewer_keywords:
+  - "packages [Integration Services], managing"
+  - "running packages [Integration Services]"
 ---
 # Managing Running Packages Programmatically
 

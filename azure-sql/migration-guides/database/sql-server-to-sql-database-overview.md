@@ -1,10 +1,10 @@
 ---
 title: "SQL Server to Azure SQL Database: Migration overview"
 description: Learn about the tools and options available to migrate your SQL Server databases to Azure SQL Database.
-author: mokabiru
-ms.author: mokabiru
-ms.reviewer: mathoma, kendralittle
-ms.date: 11/06/2020
+author: croblesm
+ms.author: roblescarlos
+ms.reviewer: mathoma
+ms.date: 03/20/2023
 ms.service: sql-database
 ms.subservice: migration-guide
 ms.topic: how-to
@@ -16,12 +16,11 @@ Learn about the options and considerations for migrating your SQL Server databas
 
 You can migrate existing SQL Server databases running on: 
 
-- SQL Server on-premises.  
-- SQL Server on Azure Virtual Machines.
-- Amazon Web Services (AWS) Elastic Compute Cloud (EC2).
-- AWS Relational Database Service (RDS).
-- Compute Engine in Google Cloud Platform (GCP).  
-- Cloud SQL for SQL Server in GCP. 
+- SQL Server on Virtual Machines
+- Amazon EC2 (Elastic Compute Cloud)
+- Amazon RDS (Relational Database Service) for SQL Server
+- Google Compute Engine
+- Cloud SQL for SQL Server - GCP (Google Cloud Platform)
 
 For other migration guides, see [Database Migration](/data-migration). 
 
@@ -66,8 +65,8 @@ Consider general guidelines to help you choose the right deployment model and se
 
 **Service tiers**: Choose between three service tiers designed for different types of applications.
 
-- [General Purpose/standard service tier](../../database/service-tier-general-purpose.md) offers a balanced budget-oriented option with compute and storage suitable to deliver applications in the middle and lower tiers. Redundancy is built in at the storage layer to recover from failures. It's designed for most database workloads. 
-- [Business Critical/premium service tier](../../database/service-tier-business-critical.md) is for high-tier applications that require high transaction rates, low-latency I/O, and a high level of resiliency. Secondary replicas are available for failover and to offload read workloads.
+- [General Purpose/Standard service tier](../../database/service-tier-general-purpose.md) offers a balanced budget-oriented option with compute and storage suitable to deliver applications in the middle and lower tiers. Redundancy is built in at the storage layer to recover from failures. It's designed for most database workloads. 
+- [Business Critical/Premium service tier](../../database/service-tier-business-critical.md) is for high-tier applications that require high transaction rates, low-latency I/O, and a high level of resiliency. Secondary replicas are available for failover and to offload read workloads.
 - [Hyperscale service tier](../../database/service-tier-hyperscale.md) is intended for all customers who require higher performance and availability, fast backup and restore, and/or fast storage and compute scalability. This includes customers who are moving to the cloud to modernize their applications as well as customers who are already using other service tiers in Azure SQL Database. The Hyperscale service tier supports a broad range of database workloads, from pure OLTP to pure analytics. It is optimized for OLTP and hybrid transaction and analytical processing (HTAP) workloads.
 
 > [!IMPORTANT]
@@ -93,17 +92,14 @@ We recommend the following migration tools:
 |Technology | Description|
 |---------|---------|
 | [Azure Migrate](/azure/migrate/how-to-create-azure-sql-assessment) | This Azure service helps you discover and assess your SQL data estate at scale on VMware. It provides Azure SQL deployment recommendations, target sizing, and monthly estimates. | 
-|[Data Migration Assistant](/sql/dma/dma-migrateonpremsqltosqldb)|This desktop tool from Microsoft provides seamless assessments of SQL Server and single-database migrations to Azure SQL Database (both schema and data). </br></br>The tool can be installed on a server on-premises or on your local machine that has connectivity to your source databases. The migration process is a logical data movement between objects in the source and target databases.|
-|[Azure Database Migration Service](/azure/dms/tutorial-sql-server-to-azure-sql)|This Azure service can migrate SQL Server databases to Azure SQL Database through the Azure portal or automatically through PowerShell. Database Migration Service requires you to select a preferred Azure virtual network during provisioning to ensure connectivity to your source SQL Server databases. You can migrate single databases or at scale. |
-
-
+|[Azure SQL Migration extension for Azure Data Studio](/azure/dms/migration-using-azure-data-studio)| Powered by the [Azure Database Migration service](/azure/dms/dms-overview), the Azure SQL Migration extension for Azure Data Studio helps you to assess your database requirements to understand your migration readiness, get the right-sized SKU recommendations for Azure resources, and migrate your SQL Server database to Azure. You can migrate single databases or at scale using [PowerShell and Azure CLI](/azure/dms/migration-dms-powershell-cli). |
 
 The following table lists alternative migration tools: 
 
 |Technology |Description  |
 |---------|---------|
 |[Transactional replication](../../database/replication-to-sql-database.md)|Replicate data from source SQL Server database tables to Azure SQL Database by providing a publisher-subscriber type migration option while maintaining transactional consistency. Incremental data changes are propagated to subscribers as they occur on the publishers.|
-|[Import Export Service/BACPAC](../../database/database-import.md)|[BACPAC](/sql/relational-databases/data-tier-applications/data-tier-applications#bacpac) is a Windows file with a .bacpac extension that encapsulates a database's schema and data. You can use BACPAC to both export data from a SQL Server source and import the data into Azure SQL Database. A BACPAC file can be imported to a new SQL database through the Azure portal. </br></br> For scale and performance with large databases sizes or a large number of databases, consider using the [SqlPackage](../../database/database-import.md#using-sqlpackage) command-line tool to export and import databases.|
+|[Import Export Service/BACPAC](../../database/database-import.md)|[BACPAC](/sql/relational-databases/data-tier-applications/data-tier-applications#bacpac) is a Windows file with a .bacpac extension that encapsulates a database's schema and data. You can use BACPAC to both export data from a SQL Server source and import the data into Azure SQL Database. A BACPAC file can be imported to a new SQL database through the Azure portal. </br></br> For scale and performance with large databases sizes or a large number of databases, consider using the [SqlPackage](../../database/database-import.md#use-sqlpackage) command-line tool to export and import databases.|
 |[Bulk copy](/sql/relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server)|The [bulk copy program (bcp) tool](/sql/tools/bcp-utility) copies data from an instance of SQL Server into a data file. Use the tool to export the data from your source and import the data file into the target SQL database. </br></br> For high-speed bulk copy operations to move data to Azure SQL Database, you can use the [Smart Bulk Copy tool](/samples/azure-samples/smartbulkcopy/smart-bulk-copy/) to maximize transfer speed by taking advantage of parallel copy tasks.|
 |[Azure Data Factory](/azure/data-factory/connector-azure-sql-database)|The [Copy activity](/azure/data-factory/copy-activity-overview) in Azure Data Factory migrates data from source SQL Server databases to Azure SQL Database by using built-in connectors and an [integration runtime](/azure/data-factory/concepts-integration-runtime).</br> </br> Data Factory supports a wide range of [connectors](/azure/data-factory/connector-overview) to move data from SQL Server sources to Azure SQL Database.|
 |[SQL Data Sync](../../database/sql-data-sync-data-sql-server-sql-database.md)|SQL Data Sync is a service built on Azure SQL Database that lets you synchronize selected data bidirectionally across multiple databases, both on-premises and in the cloud.</br>Data Sync is useful in cases where data needs to be kept updated across several databases in Azure SQL Database or SQL Server.|
@@ -111,15 +107,14 @@ The following table lists alternative migration tools:
 
 ## Compare migration options
 
-Compare migration options to choose the path that's appropriate to your business needs. 
+Compare migration options to choose the path that's appropriate to your business needs.
 
 The following table compares the migration options that we recommend: 
 
 |Migration option  |When to use  |Considerations  |
 |---------|---------|---------|
-|[Data Migration Assistant](/sql/dma/dma-migrateonpremsqltosqldb) | - Migrate single databases (both schema and data).  </br> - Can accommodate downtime during the data migration process. </br> </br> Supported sources: </br> - SQL Server (2005 to 2019) on-premises or Azure VM </br> - AWS EC2 </br> - AWS RDS </br> - GCP Compute SQL Server VM | - Migration activity performs data movement between database objects (from source to target), so we recommend that you run it during off-peak times. </br> - Data Migration Assistant reports the status of migration per database object, including the number of rows migrated.  </br> - For large migrations (number of databases or size of database), use Azure Database Migration Service.|
-|[Azure Database Migration Service](/azure/dms/tutorial-sql-server-to-azure-sql)| - Migrate single databases or at scale. </br> - Can run in both online (minimal downtime) and offline modes. </br> </br> Supported sources: </br> - SQL Server (2005 to 2019) on-premises or Azure VM </br> - AWS EC2 </br> - AWS RDS </br> - GCP Compute SQL Server VM | - Migrations at scale can be automated via [PowerShell](/azure/dms/howto-sql-server-to-azure-sql-powershell). </br> - Time to complete migration depends on database size and the number of objects in the database. </br> - Requires the source database to be set as read-only. |
-
+| [Azure Migrate](/azure/migrate/how-to-create-azure-sql-assessment) | - Discovery and assess single databases or at scale from different environments. | - All pre-migration steps such as discovery, assessments, and right-sizing of on-premises resources are included for infrastructure, data, and applications. |
+| [Azure SQL Migration extension for Azure Data Studio](/azure/dms/migration-using-azure-data-studio) | - Migrate single databases or at scale. </br> - Offline mode only. </br> </br> Supported sources: </br> - SQL Server (2008 onwards) on-premises, or on Azure Virtual Machines </br> - SQL Server on Amazon EC2 </br> - Amazon RDS for SQL Server </br> - SQL Server on Google Compute Engine | - Migrations at scale can be automated via [PowerShell or Azure CLI](/azure/dms/migration-dms-powershell-cli). </br> </br> - Time to complete migration depends on database size and the number of objects in the database. </br> </br> - Azure Data Studio is required when you are not using PowerShell or Azure CLI. |
 
 The following table compares the alternative migration options: 
 
@@ -144,7 +139,7 @@ Migrate SQL Server Integration Services (SSIS) packages to Azure by redeploying 
 Migrate SQL Server Reporting Services (SSRS) reports to paginated reports in Power BI. Use the [RDL Migration Tool](https://github.com/microsoft/RdlMigration) to help prepare and migrate your reports. Microsoft developed this tool to help customers migrate Report Definition Language (RDL) reports from their SSRS servers to Power BI. It's available on GitHub, and it documents an end-to-end walkthrough of the migration scenario. 
 
 ### High availability
-Manual setup of SQL Server high-availability features like Always On failover cluster instances and Always On availability groups becomes obsolete on the target SQL database. High-availability architecture is already built into both [General Purpose (standard availability model)](../../database/high-availability-sla.md#basic-standard-and-general-purpose-service-tier-locally-redundant-availability) and [Business Critical (premium availability model)](../../database/high-availability-sla.md#premium-and-business-critical-service-tier-locally-redundant-availability) service tiers for Azure SQL Database. The Business Critical/premium service tier also provides read scale-out that allows connecting into one of the secondary nodes for read-only purposes. 
+Manual setup of SQL Server high-availability features like Always On failover cluster instances and Always On availability groups becomes obsolete on the target SQL database. High-availability architecture is already built into both [General Purpose (standard availability model)](../../database/high-availability-sla.md#locally-redundant-availability) and [Business Critical (premium availability model)](../../database/high-availability-sla.md#locally-redundant-availability) service tiers for Azure SQL Database. The Business Critical/Premium service tier also provides read scale-out that allows connecting into one of the secondary nodes for read-only purposes. 
 
 Beyond the high-availability architecture that's included in Azure SQL Database, the [auto-failover groups](../../database/auto-failover-group-sql-db.md) feature allows you to manage the replication and failover of databases in a managed instance to another region. 
 
@@ -156,7 +151,7 @@ Windows logins are not supported in Azure SQL Database, create an Azure Active D
 SQL Agent jobs are not directly supported in Azure SQL Database and need to be deployed to [elastic database jobs (preview)](../../database/job-automation-overview.md).
 
 ### System databases
-For Azure SQL Database, the only applicable system databases are [master](/sql/relational-databases/databases/master-database) and tempdb. To learn more, see [Tempdb in Azure SQL Database](/sql/relational-databases/databases/tempdb-database#tempdb-database-in-sql-database).
+For Azure SQL Database, the only applicable system databases are [master](/sql/relational-databases/databases/master-database) and `tempdb`. To learn more, see [Tempdb in Azure SQL Database](/sql/relational-databases/databases/tempdb-database#tempdb-database-in-sql-database).
 
 ## Advanced features 
 

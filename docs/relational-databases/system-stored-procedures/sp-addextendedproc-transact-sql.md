@@ -1,23 +1,19 @@
 ---
+title: "sp_addextendedproc (Transact-SQL)"
 description: "sp_addextendedproc (Transact-SQL)"
-title: "sp_addextendedproc (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_addextendedproc_TSQL"
-  - "sp_addextendedproc"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_addextendedproc"
-ms.assetid: c0d4b47b-a855-451e-90e5-5fb2d836ebfa
 author: markingmyname
 ms.author: maghan
+ms.date: "03/16/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_addextendedproc_TSQL"
+  - "sp_addextendedproc"
+helpviewer_keywords:
+  - "sp_addextendedproc"
+dev_langs:
+  - "TSQL"
 ---
 # sp_addextendedproc (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +23,7 @@ ms.author: maghan
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [CLR Integration](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) instead.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -58,7 +54,7 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
  **sp_addextendedproc** adds entries to the [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) catalog view, registering the name of the new extended stored procedure with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. It also adds an entry in the [sys.extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) catalog view.  
   
 > [!IMPORTANT]  
->  Existing DLLs that were not registered with a complete path will not work after upgrading to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. To correct the problem, use **sp_dropextendedproc** to unregister the DLL, and then reregister it with **sp_addextendedproc**, specifying the complete path.  
+>  Existing DLLs that were not registered with a complete path will not work after upgrading to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. To correct the problem, use **sp_dropextendedproc** to unregister the DLL, and then reregister it with **sp_addextendedproc**, specifying the complete path.  
   
 ## Permissions  
  Only members of the **sysadmin** fixed server role can execute **sp_addextendedproc**.  

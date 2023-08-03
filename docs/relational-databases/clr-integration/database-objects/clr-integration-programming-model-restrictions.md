@@ -4,15 +4,14 @@ description: SQL Server performs code checks on managed database objects when th
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 helpviewer_keywords:
   - "common language runtime [SQL Server], programming model restrictions"
   - "assemblies [CLR integration], CREATE ASSEMBLY checks"
   - "programming model restrictions [CLR integration]"
   - "assemblies [CLR integration], runtime checks"
-ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
 ---
 # CLR Integration Programming Model Restrictions
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

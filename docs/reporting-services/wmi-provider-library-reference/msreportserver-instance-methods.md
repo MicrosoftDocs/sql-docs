@@ -1,23 +1,18 @@
 ---
+title: "MSReportServer_Instance Methods"
 description: "MSReportServer_Instance Methods"
-title: "MSReportServer_Instance Methods | Microsoft Docs"
-ms.date: 06/09/2016
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: wmi-provider-library-reference
-
-
-ms.topic: conceptual
-apiname: 
-  - "MSReportServer_Instance Methods"
-apilocation: 
-  - "reportingservices.mof"
-apitype: MOFDef
-helpviewer_keywords: 
-  - "MSReportServer_Instance class"
-ms.assetid: ed079327-0bb0-4245-adb5-e46a90cf3586
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 06/09/2016
+ms.service: reporting-services
+ms.subservice: wmi-provider-library-reference
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "MSReportServer_Instance class"
+apilocation: "reportingservices.mof"
+apiname: "MSReportServer_Instance Methods"
+apitype: MOFDef
 ---
 # MSReportServer_Instance Methods
   The MSReportServer_Instance class provides basic information required for a client to connect to an installed report server.  

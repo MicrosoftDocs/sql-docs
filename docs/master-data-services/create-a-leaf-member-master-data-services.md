@@ -1,28 +1,24 @@
 ---
-description: "Create a Leaf Member (Master Data Services)"
 title: Create a Leaf Member
-ms.custom: ""
+description: "Create a Leaf Member (Master Data Services)"
+author: CordeliaGrey
+ms.author: jiwang6
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
+ms.service: sql
+ms.subservice: master-data-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "leaf members [Master Data Services], creating"
   - "creating leaf members [Master Data Services]"
   - "members [Master Data Services], creating leaf members"
-ms.assetid: 0499d3b3-d508-4d43-a740-19cf53ade9f1
-author: CordeliaGrey
-ms.author: jiwang6
 ---
 # Create a Leaf Member (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], create a leaf member when you want to add master data to your system. If you want to add data in bulk, use staging tables instead. For more information, see  [Import Data from Tables &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md)  
   
- You can also use [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] to import data.  
+ You can also use [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] to import data.  
   
 ## Prerequisites  
  To perform this procedure:  

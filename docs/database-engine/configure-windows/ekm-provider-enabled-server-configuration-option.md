@@ -1,18 +1,18 @@
 ---
-title: "EKM provider enabled Server Configuration Option"
+title: "EKM provider enabled (server configuration option)"
 description: "Learn about the EKM provider enabled option. It controls Extensible Key Management device support in SQL Server. See how to turn this option on or off."
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/02/2017"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 f1_keywords:
   - "external encryption provider"
 helpviewer_keywords:
   - "EKM provider enabled option"
 ---
-# EKM provider enabled Server Configuration Option
+# EKM provider enabled (server configuration option)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **EKM provider enabled** option controls Extensible Key Management device support in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. By default this option is off.  

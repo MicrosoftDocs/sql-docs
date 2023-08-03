@@ -4,9 +4,8 @@ description: sys.server_event_session_events (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "server_event_session_events"
@@ -18,10 +17,9 @@ helpviewer_keywords:
   - "xe"
 dev_langs:
   - "TSQL"
-ms.assetid: 75986e91-1fc7-4f14-98ac-4e90154a74db
 ---
 # sys.server_event_session_events (Transact-SQL)
-[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [sqlserver-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns a row for each event in an event session.  
   

@@ -4,8 +4,8 @@ description: In SQL Server CLR integration, you may want to impersonate the call
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 helpviewer_keywords:
   - "impersonation [CLR integration]"
@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "user impersonation [CLR integration]"
   - "credentials [CLR integration]"
   - "database objects [CLR integration], security"
-ms.assetid: 293dce7d-1db2-4657-992f-8c583d6e9ebb
 ---
 # Impersonation and Credentials for Connections
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

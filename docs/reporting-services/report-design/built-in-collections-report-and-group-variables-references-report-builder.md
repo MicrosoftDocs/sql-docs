@@ -1,23 +1,20 @@
 ---
-title: "Report and group variables collections references in a paginated report | Microsoft Docs"
-description: Create a variable with a unique name when you have a complex calculation that you use in a paginated report more than once. 
+title: "Report and group variables collections references in a paginated report"
+description: Create a variable with a unique name when you have a complex calculation that you use in a paginated report more than once.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
+ms.service: reporting-services
+ms.subservice: report-design
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: updatefrequency5
+f1_keywords:
   - "10404"
   - "10083"
   - "sql13.rtp.rptdesigner.categorygroupproperties.variables.f1"
   - "sql13.rtp.rptdesigner.reportproperties.variables.f1"
   - "10292"
   - "sql13.rtp.rptdesigner.seriesgroupproperties.variables.f1"
-ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Built-in collections - report and group variables references in a paginated report (Report Builder)
 

@@ -1,12 +1,12 @@
 ---
 title: "Data compression"
 description: Apply row and page data compression, or columnstore and columnstore archival compression, using SQL Server and Azure SQL Database.
-ms.custom: ""
-ms.date: 04/29/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.technology: performance
+ms.date: 04/29/2022
+ms.service: sql
+ms.subservice: performance
 ms.topic: conceptual
 helpviewer_keywords:
   - "page compression [Database Engine]"
@@ -20,15 +20,13 @@ helpviewer_keywords:
   - "compression [SQL Server], about compressed tables and indexes"
   - "data compression [Database Engine]"
   - "compressed tables [SQL Server]"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Data compression
 
 [!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE [sssdsmifull-md](../../includes/sssdsmifull-md.md)] support row and page compression for rowstore tables and indexes, and support columnstore and columnstore archival compression for columnstore tables and indexes.
+[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [sssdsmifull-md](../../includes/sssdsmifull-md.md)] support row and page compression for rowstore tables and indexes, and support columnstore and columnstore archival compression for columnstore tables and indexes.
 
 For rowstore tables and indexes, use the data compression feature to help reduce the size of the database. In addition to saving space, data compression can help improve performance of I/O intensive workloads because the data is stored in fewer pages and queries need to read fewer pages from disk. However, extra CPU resources are required on the database server to compress and decompress the data, while data is exchanged with the application. You can configure row and page compression on the following database objects:
 
@@ -52,7 +50,7 @@ For columnstore tables and indexes, all columnstore tables and indexes always us
 When you use row and page compression, be aware the following considerations:
 
 - The details of data compression are subject to change without notice in service packs or subsequent releases.
-- Compression is available in [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]
+- Compression is available in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 - Compression is not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md), [Editions and supported features of SQL Server 2017](~/sql-server/editions-and-components-of-sql-server-2017.md), and [Editions and supported features of SQL Server 2019](~/sql-server/editions-and-components-of-sql-server-version-15.md).
 - Compression is not available for system tables.
 - Compression can allow more rows to be stored on a page, but does not change the maximum row size of a table or index.

@@ -1,18 +1,14 @@
 ---
+title: "Use the EVENTDATA Function"
 description: "Use the EVENTDATA Function"
-title: "Use the EVENTDATA Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology:
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "EVENTDATA function"
-  - "DDL triggers, EVENTDATA function"
-ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "03/14/2017"
+ms.service: sql
+ms.topic: conceptual
+helpviewer_keywords:
+  - "EVENTDATA function"
+  - "DDL triggers, EVENTDATA function"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use the EVENTDATA Function

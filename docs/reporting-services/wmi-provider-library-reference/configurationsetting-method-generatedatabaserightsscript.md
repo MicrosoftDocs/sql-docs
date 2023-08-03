@@ -1,23 +1,18 @@
 ---
+title: "GenerateDatabaseRightsScript Method (WMI MSReportServer_ConfigurationSetting)"
 description: "GenerateDatabaseRightsScript Method (WMI MSReportServer_ConfigurationSetting)"
-title: "GenerateDatabaseRightsScript Method (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
-ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: wmi-provider-library-reference
-
-
-ms.topic: conceptual
-apiname: 
-  - "GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting Class)"
-apilocation: 
-  - "reportingservices.mof"
-apitype: MOFDef
-helpviewer_keywords: 
-  - "GenerateDatabaseRightsScript method"
-ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/14/2017
+ms.service: reporting-services
+ms.subservice: wmi-provider-library-reference
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "GenerateDatabaseRightsScript method"
+apilocation: "reportingservices.mof"
+apiname: "GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting Class)"
+apitype: MOFDef
 ---
 # ConfigurationSetting Method - GenerateDatabaseRightsScript
   Generates a SQL Script that can be used to grant a user rights to the report server database and other databases required for a report server to run. The caller is expected to connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database server and execute the script.  
@@ -104,7 +99,7 @@ out Int32 HRESULT);
   
  If the report server does not have a report server database specified, calling GrantRightsToDatabaseUser returns an error.  
   
- The generated script supports [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005, and [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
+ The generated script supports [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005, and [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)].  
   
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

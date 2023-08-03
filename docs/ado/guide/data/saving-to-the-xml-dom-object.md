@@ -4,8 +4,8 @@ description: "Saving to the XML DOM Object"
 author: rothja
 ms.author: jroth
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.technology: ado
+ms.service: sql
+ms.subservice: ado
 ms.topic: conceptual
 helpviewer_keywords:
   - "XML DOM object [ADO], saving to"

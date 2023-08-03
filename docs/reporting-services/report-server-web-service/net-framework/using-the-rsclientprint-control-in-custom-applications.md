@@ -1,21 +1,18 @@
 ---
-title: "Using the RSClientPrint Control in Custom Applications | Microsoft Docs"
+title: "Using the RSClientPrint Control in Custom Applications"
 description: RSPrintClient provides client-side printing for reports viewed in HTML Viewer. The report server renders the report in the Image (EMF) rendering extension.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server-web-service
-
-
+ms.service: reporting-services
+ms.subservice: report-server-web-service
 ms.topic: reference
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "RSPrintClient control"
   - "print controls [Reporting Services]"
   - "custom printing [Reporting Services]"
   - "client-side printing"
-ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Using the RSClientPrint Control in Custom Applications
   The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX control, **RSPrintClient**, provides client-side printing for reports viewed in HTML Viewer. It provides a **Print** dialog box so that a user can initiate a print job, preview a report, specify pages to print, and change the margins. During a client-side print operation, the report server renders the report in the Image (EMF) rendering extension and uses the print capabilities of the operating system to create the print job and send it to a printer.  

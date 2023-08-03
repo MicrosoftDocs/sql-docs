@@ -1,23 +1,19 @@
 ---
-title: "Data Accessor Functions | Microsoft Docs"
-description: Learn how to use the XQuery data-accessor functions fn:data(), fn:string(), and text().
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: sql
-ms.reviewer: ""
-ms.technology: xml
-ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "data-accessor functions [XQuery]"
-ms.assetid: 31bad04f-7c74-4773-9f83-612704fdd21c
+title: "Data Accessor Functions"
+description: "Learn how to use the XQuery data-accessor functions fn:data(), fn:string(), and text()."
 author: rothja
 ms.author: jroth
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: xml
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "data-accessor functions [XQuery]"
+dev_langs:
+  - "XML"
 ---
 # Data Accessor Functions
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   The topics in this section discuss and provide sample code for the data-accessor functions.  
   

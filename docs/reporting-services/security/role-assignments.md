@@ -1,22 +1,19 @@
 ---
+title: "Role Assignments"
 description: "Role Assignments"
-title: "Role Assignments | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 05/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: security
-
-
+ms.service: reporting-services
+ms.subservice: security
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "users [Reporting Services]"
   - "roles [Reporting Services]"
   - "role-based security [Reporting Services], role assignments"
   - "groups [Reporting Services]"
   - "security [Reporting Services], role assignments"
-ms.assetid: 600e112c-1897-48a6-93c0-6e9f3f12dc01
-author: maggiesMSFT
-ms.author: maggies
 ---
 
 # Role Assignments

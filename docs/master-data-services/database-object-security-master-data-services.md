@@ -1,23 +1,19 @@
 ---
-description: "Database Object Security (Master Data Services)"
 title: Database Object Security
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "database [Master Data Services], object security"
-  - "security [Master Data Services], database objects"
-ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
+description: "Database Object Security (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "database [Master Data Services], object security"
+  - "security [Master Data Services], database objects"
 ---
 # Database Object Security (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database, data is stored in multiple database tables and is visible in views. Information that you might have secured in the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web application is visible to users with access to the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.  
   

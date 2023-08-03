@@ -4,8 +4,8 @@ description: "This topic describes how to retrieve date and time types as PHP Da
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "08/10/2020"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
   - "date and time types, retrieving as datetime objects"

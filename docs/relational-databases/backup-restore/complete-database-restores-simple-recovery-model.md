@@ -1,22 +1,18 @@
 ---
 title: "Restore database - simple recovery model"
 description: Learn about a complete database restore in SQL Server that restores all data to the point in time that the backup was made.
-ms.custom: seo-lt-2019
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "12/17/2019"
-ms.prod: sql
-ms.prod_service: backup-restore
-ms.reviewer: ""
-ms.technology: backup-restore
+ms.service: sql
+ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "complete database restores"
   - "database restores [SQL Server], complete database"
   - "restoring databases [SQL Server], complete database"
   - "simple recovery model [SQL Server]"
   - "restoring [SQL Server], database"
-ms.assetid: 49828927-1727-4d1d-9ef5-3de43f68c026
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Complete Database Restores (Simple Recovery Model)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

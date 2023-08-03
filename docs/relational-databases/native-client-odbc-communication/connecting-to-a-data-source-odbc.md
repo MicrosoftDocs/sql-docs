@@ -1,14 +1,13 @@
 ---
+title: "Connecting to a Data Source (ODBC)"
 description: "Connecting to a Data Source (ODBC)"
-title: "Connecting to a Data Source (ODBC) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
+ms.service: sql
+ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "checking connection states"
   - "ODBC data sources, connections"
   - "data sources [SQL Server Native Client]"
@@ -21,13 +20,10 @@ helpviewer_keywords:
   - "verifying connection states"
   - "SQL Server Native Client ODBC driver, data sources"
   - "SQL Server Native Client ODBC driver, connections"
-ms.assetid: ae30dd1d-06ae-452b-9618-8fd8cd7ba074
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Connecting to a Data Source (ODBC)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   After allocating environment and connection handles and setting any connection attributes, the application connects to the data source or driver. There are three functions you can use to connect:  
   

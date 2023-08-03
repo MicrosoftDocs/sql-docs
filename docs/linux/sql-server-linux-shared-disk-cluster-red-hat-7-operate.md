@@ -1,15 +1,13 @@
 ---
 title: Operate RHEL FCI for SQL Server on Linux
 description: Learn how to operate a Red Hat Enterprise Linux (RHEL) shared disk failover cluster instance (FCI) for SQL Server for high availability, such as manually failover the FCI, and add or remove nodes to the cluster.
-ms.custom: seo-lt-2019
-author: VanMSFT
-ms.author: vanto
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: vanto
 ms.date: 03/17/2017
+ms.service: sql
+ms.subservice: linux
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
-ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ---
 # Operate RHEL failover cluster instance (FCI) for SQL Server
 
@@ -153,7 +151,7 @@ View the resource agent logs at `/var/log/cluster/corosync.log`
    sudo passwd hacluster
    ```
  
-3. Enable and start `pcsd` service and Pacemaker. This will allow the new node to rejoin the cluster after the reboot. Run the following command on the new node.
+3. Enable and start `pcsd` service and Pacemaker. This will allow the new node to rejoin the cluster after the restart. Run the following command on the new node.
 
    ```bash
    sudo systemctl enable pcsd

@@ -5,9 +5,9 @@ author: "markingmyname"
 ms.author: "maghan"
 ms.reviewer: erinstellato
 ms.date: "09/24/2018"
-ms.prod: azure-data-studio
+ms.service: azure-data-studio
 ms.topic: conceptual
-ms.custom: seodec18
+ms.custom: updatefrequency5
 ---
 
 # Azure Data Studio extensibility

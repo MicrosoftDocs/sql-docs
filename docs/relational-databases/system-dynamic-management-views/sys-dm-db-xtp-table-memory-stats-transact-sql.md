@@ -3,10 +3,9 @@ title: "sys.dm_db_xtp_table_memory_stats (Transact-SQL)"
 description: sys.dm_db_xtp_table_memory_stats returns memory usage statistics for each In-Memory OLTP table (user and system) in the current database.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "03/02/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.date: "02/27/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_db_xtp_table_memory_stats_TSQL"
@@ -23,7 +22,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-curren
 # sys.dm_db_xtp_table_memory_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-  Returns memory usage statistics for each [!INCLUDE[inmemory](../../includes/inmemory-md.md)] table (user and system) in the current database. The system tables have negative object IDs and are used to store run-time information for the [!INCLUDE[inmemory](../../includes/inmemory-md.md)] engine. Unlike user objects, system tables are internal and only exist in-memory, therefore, they are not visible through catalog views. System tables are used to store information such as meta-data for all data/delta files in storage, merge requests, watermarks for delta files to filter rows, dropped tables, and relevant information for recovery and backups. Given that the [!INCLUDE[inmemory](../../includes/inmemory-md.md)] engine can have up to 8,192 data and delta file pairs, for large in-memory databases, the memory taken by system tables can be a few megabytes.  
+  Returns memory usage statistics for each [!INCLUDE[inmemory](../../includes/inmemory-md.md)] table (user and system) in the current database. The system tables have negative object IDs and are used to store run-time information for the [!INCLUDE[inmemory](../../includes/inmemory-md.md)] engine. Unlike user objects, system tables are internal and only exist in-memory, therefore, they are not visible through catalog views. System tables are used to store information such as metadata for all data/delta files in storage, merge requests, watermarks for delta files to filter rows, dropped tables, and relevant information for recovery and backups. Given that the [!INCLUDE[inmemory](../../includes/inmemory-md.md)] engine can have up to 8,192 data and delta file pairs, for large in-memory databases, the memory taken by system tables can be a few megabytes.  
   
  For more information, see [[!INCLUDE[inmemory](../../includes/inmemory-md.md)] &#40;In-Memory Optimization&#41;](../in-memory-oltp/overview-and-usage-scenarios.md).  
   
@@ -42,6 +41,10 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-curren
   
  System tables are returned only for users with VIEW DATABASE STATE permission.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW DATABASE PERFORMANCE STATE permission on the database.
+
 ## Examples  
  You can query the following DMV to get the memory allocated for the tables and indexes within the database:  
   

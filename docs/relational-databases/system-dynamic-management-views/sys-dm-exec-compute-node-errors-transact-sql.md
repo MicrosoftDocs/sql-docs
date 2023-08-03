@@ -4,9 +4,8 @@ description: sys.dm_exec_compute_node_errors (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 11/04/2019
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "SYS.DM_EXEC_COMPUTE_NODE_ERRORS_TSQL"
@@ -19,7 +18,6 @@ helpviewer_keywords:
   - "sys.dm_exec_compute_node_errors management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 9a03c039-70e4-4974-95d8-d3fa45984ffb
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_compute_node_errors (Transact-SQL)

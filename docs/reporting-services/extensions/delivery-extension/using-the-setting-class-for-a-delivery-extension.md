@@ -1,19 +1,16 @@
 ---
-title: "Using the Setting Class for a Delivery Extension | Microsoft Docs"
+title: "Using the Setting Class for a Delivery Extension"
 description: Learn how delivery extensions can use the Setting class, which stores information that the delivery extension needs to deliver notifications and reports.
-ms.date: 03/06/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: extensions
-
-
-ms.topic: reference
-helpviewer_keywords: 
-  - "delivery extensions [Reporting Services], settings"
-  - "Setting class"
-ms.assetid: 50746639-da7c-46a5-ac7b-e87dd6b91880
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/06/2017
+ms.service: reporting-services
+ms.subservice: extensions
+ms.topic: reference
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "delivery extensions [Reporting Services], settings"
+  - "Setting class"
 ---
 # Using the Setting Class for a Delivery Extension
   The <xref:Microsoft.ReportingServices.Interfaces.Setting> class is located in the <xref:Microsoft.ReportingServices.Interfaces> namespace and represents information about extension settings for a delivery extension. The <xref:Microsoft.ReportingServices.Interfaces.Setting> class provides infrastructure for storing information about the settings that are required in order for a delivery extension to function properly. For example, in Report Server E-Mail delivery, a user is required to supply settings specific to e-mail delivery, such as the recipient's address, the sender's address, the subject line of the e-mail, and more. Undoubtedly, your custom delivery providers will require the user to supply specific settings in order for the delivery extension to deliver notifications and reports.  

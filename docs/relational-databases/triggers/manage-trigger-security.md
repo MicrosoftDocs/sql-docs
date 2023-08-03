@@ -1,17 +1,13 @@
 ---
+title: "Manage Trigger Security"
 description: "Manage Trigger Security"
-title: "Manage Trigger Security | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/22/2020"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology:
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "triggers [SQL Server], security"
-ms.assetid: e94720a8-a3a2-4364-b0a3-bbe86e3ce4d5
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "06/22/2020"
+ms.service: sql
+ms.topic: conceptual
+helpviewer_keywords:
+  - "triggers [SQL Server], security"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Manage Trigger Security
@@ -55,7 +51,7 @@ What this trigger means is that as soon as a user that has permission to execute
     ```  
 
    > [!NOTE]
-   > Only **sys.triggers** is available for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] unless you are using [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)].
+   > Only **sys.triggers** is available for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] unless you are using [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)].
 
 ::: moniker-end
 

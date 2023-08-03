@@ -43,8 +43,6 @@ landingContent:
             url: windows/sql-server-on-azure-vm-iaas-what-is-overview.md
           - text: What is SQL Server on Linux VM?
             url: linux/sql-server-on-linux-vm-what-is-iaas-overview.md
-          - text: Migrate from SQL Server
-            url: windows/migrate-to-vm-from-sql-server.md
           - text: Security considerations
             url: windows/security-considerations-best-practices.md
           - text: Performance guidelines
@@ -97,10 +95,12 @@ landingContent:
             url: windows/failover-cluster-instance-premium-file-share-manually-configure.md
       - linkListType: tutorial
         links:
-          - text: Availability group (manually)
+          - text: Availability group (manual)
             url: windows/availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md 
-          - text: Stonith availability group (RHEL)
+          - text: STONITH availability group (RHEL)
             url: linux/rhel-high-availability-stonith-tutorial.md
+          - text: STONITH availability group (SLES)
+            url: linux/sles-high-availability-stonith-tutorial.md
           - text: Availability group listener (RHEL)
             url: linux/rhel-high-availability-listener-tutorial.md 
 
@@ -146,7 +146,7 @@ landingContent:
       - linkListType: reference
         links:
           - text: Migration guide
-            url: https://datamigration.microsoft.com/
+            url: /data-migration/
           - text: Transact-SQL (T-SQL)
             url: /sql/t-sql/language-reference
           - text: Azure CLI

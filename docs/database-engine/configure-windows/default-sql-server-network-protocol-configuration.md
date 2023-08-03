@@ -4,8 +4,8 @@ description: View factors that affect whether network protocols are turned on or
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 01/19/2019
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "protocols [SQL Server], default settings"

@@ -1,13 +1,13 @@
 ---
 title: "Search and Replace"
-description: Learn about the four different ways to find and replace text, each of which displays its own version of the Find and Replace dialog box. The Find and Replace option settings affect all these ways of searching. 
-ms.custom: seo-lt-2019
+description: Learn about the four different ways to find and replace text, each of which displays its own version of the Find and Replace dialog box. The Find and Replace option settings affect all these ways of searching.
+author: markingmyname
+ms.author: maghan
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.technology: ssms
-ms.reviewer: ""
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "match case [SQL Server]"
   - "undo operations"
   - "searches [SQL Server Management Studio]"
@@ -25,9 +25,6 @@ helpviewer_keywords:
   - "wildcard options [SQL Server Management Studio]"
   - "match whole word [SQL Server]"
   - "searches [SQL Server Management Studio], replacing"
-ms.assetid: 3641c7b3-3e3e-4ddd-af82-c15b50004f94
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Search and Replace
@@ -48,6 +45,5 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  [Search an Active Document Incrementally](./search-an-active-document-incrementally.md)   
  [Search Documents Interactively](./search-documents-interactively.md)   
  [Search Documents Using Results Lists](./search-documents-using-results-lists.md)   
- [Search Text with Wildcards](./search-text-with-wildcards.md)   
  [Search Text with Regular Expressions](./search-text-with-regular-expressions.md)  
   

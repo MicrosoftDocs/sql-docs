@@ -4,10 +4,9 @@ description: Describes the steps for configuring server instances to use certifi
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.technology: database-mirroring
+ms.service: sql
+ms.subservice: database-mirroring
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "certificates [SQL Server], database mirroring"
   - "inbound connections"

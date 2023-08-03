@@ -7,7 +7,6 @@ ms.reviewer: randolphwest
 ms.date: 07/25/2022
 ms.service: sql-server-stretch-database
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 ---
 # Extended Events for Stretch Database
 
@@ -28,7 +27,7 @@ remote_data_archive_db_ddl|Occurs when the database T-SQL ddl for stretching dat
 remote_data_archive_provision_operation|Occurs when a provisioning operation starts or ends.
 remote_data_archive_query_rewrite|Occurs when RelOp_Get is replaced during query rewrite for Stretch.
 remote_data_archive_table_ddl|Occurs when the table T-SQL ddl for stretching data is processed.
-remote_data_archive_telemetry|Occurs whenever an on premise system transmits a telemetry event to Azure DB.
+remote_data_archive_telemetry|Occurs whenever an on-premises system transmits a telemetry event to Azure DB.
 remote_data_archive_telemetry_rejected|Occurs whenever an AzureDB Stretch telemetry event is rejected
 repopulate_stretch_schema_task_queue_complete|Reports the completion of repopulating stretch schema task queue.
 repopulate_stretch_schema_task_queue_start|Reports the start of repopulating stretch schema task queue.

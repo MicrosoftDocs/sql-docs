@@ -1,16 +1,13 @@
 ---
-title: "Reporting Services Data Alerts | Microsoft Docs"
+title: "Reporting Services Data Alerts"
 description: Learn how SQL Server Reporting Services data alerts help inform you about report data that is interesting or important to you.
-ms.date: 07/02/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
-
-
-ms.topic: conceptual
-ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 07/02/2017
+ms.service: reporting-services
+ms.subservice: reporting-services
+ms.topic: conceptual
+ms.custom: updatefrequency5
 monikerRange: ">=sql-server-2016 <=sql-server-2016"
 ---
 # Reporting Services Data Alerts

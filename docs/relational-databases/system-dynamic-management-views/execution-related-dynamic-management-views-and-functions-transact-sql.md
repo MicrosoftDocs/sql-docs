@@ -4,8 +4,8 @@ description: Execution Related Dynamic Management Views and Functions (Transact-
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 05/28/2021
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 helpviewer_keywords:
   - "dynamic management objects [SQL Server], execution"

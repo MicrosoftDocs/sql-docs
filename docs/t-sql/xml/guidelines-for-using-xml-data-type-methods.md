@@ -1,20 +1,17 @@
 ---
-description: "Guidelines for Using xml Data Type Methods"
 title: Guidelines for Using xml Data Type Methods
-ms.custom: ""
+description: "Guidelines for Using xml Data Type Methods"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-dev_langs:
-  - "TSQL"
 helpviewer_keywords:
   - "xml data type [SQL Server], methods"
   - "methods [XML in SQL Server]"
-ms.assetid: 1a483aa1-42de-4c88-a4b8-c518def3d496
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 ---
 
 # Guidelines for Using xml Data Type Methods
@@ -76,7 +73,7 @@ SELECT nref.value('@genre', 'VARCHAR(max)') LastName
 FROM T CROSS APPLY xCol.nodes('//book') AS R(nref)
 ```
 
-XML schema is used for type checking of typed XML. If a node is specified as a singleton in the XML schema, the compiler uses that information and no error occurs. Otherwise, an ordinal that selects a single node is required. In particular, the use of descendant-or-self axis (//) axis, such as in `/book//title`, looses singleton cardinality inference for the `<title>` element, even if the XML schema specifies it to be so. Therefore, you should rewrite it as `(/book//title)[1]`.
+XML schema is used for type checking of typed XML. If a node is specified as a singleton in the XML schema, the compiler uses that information and no error occurs. Otherwise, an ordinal that selects a single node is required. In particular, the use of descendant-or-self axis (//) axis, such as in `/book//title`, loses singleton cardinality inference for the `<title>` element, even if the XML schema specifies it to be so. Therefore, you should rewrite it as `(/book//title)[1]`.
 
 It is important to remain aware of the difference between `//first-name[1]` and `(//first-name)[1]` for type checking. The former returns a sequence of `<first-name>` nodes in which each node is the leftmost `<first-name>` node among its siblings. The latter returns the first singleton `<first-name>` node in document order in the XML instance.
 

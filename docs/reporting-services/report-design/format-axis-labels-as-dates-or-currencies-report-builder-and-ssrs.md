@@ -1,16 +1,13 @@
 ---
-title: "Format axis labels as dates or currencies in a paginated report | Microsoft Docs"
+title: "Format axis labels as dates or currencies in a paginated report"
 description: Specify a date or time interval for an x-axis by formatting the axis labels and setting the type of axis interval to a valid interval in a paginated report.
-ms.date: 03/03/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: e9a01a74-2f51-4b35-be3a-a6138568f6cf
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/03/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Format axis labels as dates or currencies in a paginated report (Report Builder)
 

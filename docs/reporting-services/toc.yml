@@ -17,15 +17,9 @@
   - name: Backward Compatibility
     href: ../reporting-services/reporting-services-backward-compatibility.md
     items:
-    - name: Deprecated features in 2019
-      href: ../reporting-services/deprecated-features-sql-server-2019-reporting-services-ssrs.md
-    - name: Deprecated features in 2017
-      href: ../reporting-services/deprecated-features-sql-server-2017-reporting-services-ssrs.md
-    - name: Deprecated features in 2016
+    - name: Deprecated features
       href: ../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md
-    - name: Discontinued functionality in 2019
-      href: ../reporting-services/discontinued-functionality-sql-server-reporting-services-2019.md
-    - name: Discontinued functionality in 2016
+    - name: Discontinued functionality
       href: ../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md
     - name: Breaking changes in 2016
       href: ../reporting-services/breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md
@@ -1486,8 +1480,6 @@
     href: ../relational-databases/system-catalog-views/sys-edge-constraint-clauses-transact-sql.md
   - name: sysmail_delete_principalprofile_sp
     href: ../relational-databases/system-catalog-views/sys-edge-constraints-transact-sql.md
-  - name: Tuning Recommendations
-    href: ../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md
   - name: Enum SQL Agent Subsystems
     href: ../relational-databases/system-stored-procedures/sp-enum-sqlagent-subsystems-transact-sql.md
   - name: Delete Principal Profile

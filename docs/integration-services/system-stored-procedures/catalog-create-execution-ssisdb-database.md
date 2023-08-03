@@ -1,16 +1,12 @@
 ---
+title: "catalog.create_execution (SSISDB Database)"
 description: "catalog.create_execution (SSISDB Database)"
-title: "catalog.create_execution (SSISDB Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: "language-reference"
-ms.assetid: 45d0c2f6-1f38-445f-ac06-e2a01f6ac600
 author: chugugrace
 ms.author: chugu
+ms.date: "12/16/2016"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
 ---
 # catalog.create_execution (SSISDB Database)
 

@@ -1,23 +1,19 @@
 ---
-description: "Initiate Actions Based on Attribute Value Changes (Master Data Services)"
 title: Initiate Actions Based on Attribute Value Changes
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "business rules [Master Data Services], tracking attribute changes"
-  - "change tracking groups [Master Data Services], initiating actions"
-ms.assetid: 5e4402ce-31db-4774-a2a1-552335f87693
+description: "Initiate Actions Based on Attribute Value Changes (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "business rules [Master Data Services], tracking attribute changes"
+  - "change tracking groups [Master Data Services], initiating actions"
 ---
 # Initiate Actions Based on Attribute Value Changes (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], create a business rule to initiate actions based on changes to attribute values. For example, when a specific attribute value changes, you may want to change a value, send a notification, or start an external workflow.  
   

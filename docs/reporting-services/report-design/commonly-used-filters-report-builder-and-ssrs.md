@@ -1,21 +1,18 @@
 ---
-title: "Commonly used filters in a paginated report | Microsoft Docs"
+title: "Commonly used filters in a paginated report"
 description: Consider these examples of filters in a paginated report along with the filter equations you specify to create the filter in Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
+ms.service: reporting-services
+ms.subservice: report-design
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "multivalued parameters [Reporting Services]"
   - "single-valued parameters [Reporting Services]"
   - "parameters [Reporting Services], multivalued"
   - "valid values [Reporting Services]"
-ms.assetid: cb70d0cd-707b-4de5-b39f-e4eb57d316aa
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Commonly used filters in a paginated report (Report Builder)
 

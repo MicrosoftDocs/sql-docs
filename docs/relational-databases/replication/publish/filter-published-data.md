@@ -1,14 +1,14 @@
 ---
+title: "Filter Published Data"
 description: "Filter Published Data"
-title: "Filter Published Data | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "filters [SQL Server replication]"
   - "filters [SQL Server replication], about filtering"
   - "filtering [SQL Server replication]"
@@ -18,9 +18,6 @@ helpviewer_keywords:
   - "filtering published data [SQL Server replication]"
   - "snapshot replication [SQL Server], filtering published data"
   - "column filters [SQL Server replication]"
-ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Filter Published Data
@@ -126,7 +123,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 -   Transactional replication allows you to replicate an indexed view as a view or as a table. If you replicate the view as a table, you cannot filter columns from the table.  
   
- Row filters are not designed to work across databases. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] intentionally restricts the execution of **sp_replcmds** (which filters execute under) to the database owner (**dbo**). The **dbo** does not have cross database privileges. With the addition of CDC (Change Data Capture) in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] the **sp_replcmds** logic populates the change tracking tables with information that the user can return to and query. For security reasons, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] restricts the execution of this logic so that a malicious **dbo** can’t highjack this execution path. For example, a malicious **dbo** could add triggers on CDC tables which would then get executed under the context of the user calling **sp_replcmds**, in this case the logreader agent.  If the account the agent is running under has higher privilege the malicious **dbo** could escalate his privileges.  
+ Row filters are not designed to work across databases. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] intentionally restricts the execution of **sp_replcmds** (which filters execute under) to the database owner (**dbo**). The **dbo** does not have cross database privileges. With the addition of CDC (Change Data Capture) in [!INCLUDE[sql2008-md](../../../includes/sql2008-md.md)] the **sp_replcmds** logic populates the change tracking tables with information that the user can return to and query. For security reasons, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] restricts the execution of this logic so that a malicious **dbo** can't highjack this execution path. For example, a malicious **dbo** could add triggers on CDC tables which would then get executed under the context of the user calling **sp_replcmds**, in this case the logreader agent.  If the account the agent is running under has higher privilege the malicious **dbo** could escalate his privileges.  
   
 ## See Also  
  [Publish Data and Database Objects](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  

@@ -1,15 +1,13 @@
 ---
-title: "Prepare data for Reporting Services mobile reports | Microsoft Docs"
+title: "Prepare data for Reporting Services mobile reports"
 description: SQL Server Mobile Report Publisher supports complex data operations, like filtering, aggregation, and time slicing. Learn to prepare data for these operations.
-ms.date: 07/21/2022
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: mobile-reports
-
-ms.topic: conceptual
-ms.assetid: 8adce9ad-6a08-4d20-b1cf-d3c45544d8de
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 07/21/2022
+ms.service: reporting-services
+ms.subservice: mobile-reports
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Prepare data for Reporting Services mobile reports
 
@@ -37,7 +35,7 @@ Date fields in [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] 
 ## Preparing filter data ##  
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] can filter data based on both date/time fields and key fields. Though key fields can be numeric, in most cases they're either an ID or a string value. To prepare a filter field for use with a navigator element such as the Selection List, the filter key should be a single column in the data table. That way, you can group the table rows according to the value in the filter column. Having multiple columns contain different filter keys, or filter criteria, allows for mobile reports with multiple filter navigators to be used together hierarchically or individually.  
   
-| Industry  | Country   | Region    |  
+| Industry  | Location   | Region    |  
 | ------------- | ------------- | ------------- |  
 | Banks     | AFGHANISTAN   | ASIA      |  
 | Commercial & Professional Services | AFGHANISTAN | ASIA |  

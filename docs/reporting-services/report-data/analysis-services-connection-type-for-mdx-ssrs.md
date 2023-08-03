@@ -1,16 +1,13 @@
 ---
-title: "Analysis Services Connection Type for MDX | Microsoft Docs"
+title: "Analysis Services Connection Type for MDX"
 description: Learn details about the Analysis Services Connection type for MDX (SSRS) so you can retrieve metadata for use as report data.
-ms.date: 03/17/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-data
-
-
-ms.topic: conceptual
-ms.assetid: bd2e7148-3124-4e07-9734-22333127c3be
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/17/2017
+ms.service: reporting-services
+ms.subservice: report-data
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Analysis Services Connection Type for MDX (SSRS)
   To include data from an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cube in your report, you must have a dataset that is based on a report data source of type [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. This built-in data source type is based on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data extension. You can retrieve metadata about dimensions, hierarchies, levels, key performance indicators (KPIs), measures, and attributes from a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cube for use as report data.  

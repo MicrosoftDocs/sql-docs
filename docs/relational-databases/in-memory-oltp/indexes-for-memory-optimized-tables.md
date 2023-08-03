@@ -4,11 +4,9 @@ description: Learn how an index on a memory-optimized table differs from a tradi
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "09/16/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Indexes on Memory-Optimized Tables
@@ -55,7 +53,7 @@ To be declared with the default DURABILITY = SCHEMA\_AND_DATA, the memory-optimi
 
 > [!NOTE]  
 > [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] have a limit of 8 indexes per memory-optimized table or table type. 
-> Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], there is no longer a limit on the number of indexes specific to memory-optimized tables and table types.
+> Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], there is no longer a limit on the number of indexes specific to memory-optimized tables and table types.
   
 ### Code sample for syntax  
   

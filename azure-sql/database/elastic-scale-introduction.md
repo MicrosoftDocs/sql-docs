@@ -4,7 +4,7 @@ description: Software as a Service (SaaS) developers can easily create elastic, 
 author: scoriani
 ms.author: scoriani
 ms.reviewer: wiassaf, mathoma
-ms.date: 01/25/2019
+ms.date: 06/05/2023
 ms.service: sql-database
 ms.subservice: scale-out
 ms.topic: conceptual
@@ -82,6 +82,9 @@ Others scenarios pack multiple tenants together into databases, rather than isol
 
 ### Move data from multiple to single-tenancy databases
 When creating a SaaS application, it is typical to offer prospective customers a trial version of the software. In this case, it is cost-effective to use a multi-tenant database for the data. However, when a prospect becomes a customer, a single-tenant database is better since it provides better performance. If the customer had created data during the trial period, use the [split-merge tool](elastic-scale-overview-split-and-merge.md) to move the data from the multi-tenant to the new single-tenant database.
+
+> [!NOTE]
+> Restoring from multi-tenant databases to a single tenant is not possible.
 
 ## Next steps
 For a sample app that demonstrates the client library, see [Get started with Elastic Database tools](elastic-scale-get-started.md).

@@ -4,8 +4,8 @@ description: Learn about the impact of stopping a database mirroring session, wh
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/09/2017"
-ms.prod: sql
-ms.technology: database-mirroring
+ms.service: sql
+ms.subservice: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords:
   - "database mirroring [SQL Server], removing"

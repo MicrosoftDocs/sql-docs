@@ -1,16 +1,12 @@
 ---
+title: "Provide an OData Source Query at Runtime"
 description: "Provide an OData Source Query at Runtime"
-title: "Provide an OData Source Query at Runtime | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
-ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Provide an OData Source Query at Runtime
 
@@ -26,7 +22,7 @@ ms.author: chugu
 ## Provide the query as a parameter  
  The following procedure shows how to expose the query used by an OData Source component as a parameter of the package.  
   
-1.  Right click on the **Data Flow task** and select the **Parameterize...** option.  
+1.  Right-click on the **Data Flow task** and select the **Parameterize...** option.  
   
 2.  In the **Parameterize** dialog, select **[\<Name of the OData Source Component>].[Query]** for **Property**.  
   

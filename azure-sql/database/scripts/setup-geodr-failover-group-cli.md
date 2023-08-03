@@ -9,6 +9,7 @@ ms.service: sql-database
 ms.subservice: high-availability
 ms.topic: sample
 ms.devlang: azurecli
+ms.custom: devx-track-azurecli
 ---
 
 # Configure a failover group for a group of databases in Azure SQL Database using the Azure CLI
@@ -17,7 +18,7 @@ ms.devlang: azurecli
 
 [!INCLUDE [quickstarts-free-trial-note](../../includes/quickstarts-free-trial-note.md)]
 
-[!INCLUDE [azure-cli-prepare-your-environment.md](../../includes/azure-cli-prepare-your-environment.md)]
+[!INCLUDE [azure-cli-prepare-your-environment.md](~/../azure-sql/reusable-content/azure-cli/azure-cli-prepare-your-environment.md)]
 
 ## Sample script
 

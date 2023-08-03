@@ -1,19 +1,19 @@
 ---
 title: "Create and use append-only ledger tables"
 description: Learn how to create and use append-only ledger tables.
-ms.date: "05/24/2022"
-ms.service: sql-database
-ms.subservice: security
-ms.reviewer: kendralittle, mathoma
-ms.topic: how-to
 author: VanMSFT
 ms.author: vanto
+ms.reviewer: mathoma
+ms.date: 05/23/2023
+ms.service: sql-database
+ms.subservice: security
+ms.topic: how-to
 monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
 ---
 
 # Create and use append-only ledger tables
 
-[!INCLUDE [SQL Server 2022 Azure SQL Database](../../../includes/applies-to-version/sqlserver2022-asdb.md)]
+[!INCLUDE [SQL Server 2022 Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
 This article shows you how to create an [append-only ledger table](ledger-append-only-ledger-tables.md). Next, you'll insert values in your append-only ledger table and then attempt to make updates to the data. Finally, you'll view the results by using the ledger view. We'll use an example of a card key access system for a facility, which is an append-only system pattern. Our example will give you a practical look at the relationship between the append-only ledger table and its corresponding ledger view.
 
@@ -32,9 +32,6 @@ We'll create a `KeyCardEvents` table with the following schema.
 | EmployeeID | int | The unique ID of the employee accessing the building |
 | AccessOperationDescription | nvarchar (MAX) | The access operation of the employee |
 | Timestamp | datetime2 | The date and time the employee accessed the building |
-
-> [!IMPORTANT]
-> Creating append-only ledger tables requires the **ENABLE LEDGER** permission. For more information on permissions related to ledger tables, see [Permissions](../permissions-database-engine.md#asdbpermissions). 
 
 1. Use [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md) to create a new schema and table called `[AccessControl].[KeyCardEvents]`.
 
@@ -93,6 +90,9 @@ We'll create a `KeyCardEvents` table with the following schema.
    You'll receive an error message that states the updates aren't allowed for your append-only ledger table.
 
    :::image type="content" source="media/ledger/append-only-how-to-1.png" alt-text="Screenshot that shows the append-only error message.":::
+
+## Permissions
+Creating append-only ledger tables requires the `ENABLE LEDGER` permission. For more information on permissions related to ledger tables, see [Permissions](../permissions-database-engine.md). 
 
 ## Next steps
 

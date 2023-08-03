@@ -1,19 +1,15 @@
 ---
-title: "Azure Storage connection manager | Microsoft Docs"
+title: "Azure Storage connection manager"
 description: The Azure Storage connection manager enables an SSIS package to connect to an Azure Storage account.
-ms.custom: ""
-ms.date: "07/19/2021"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.designer.afpstorageconn.f1"
-  - "sql14.dts.designer.afpstorageconn.f1"
-ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
 author: chugugrace
 ms.author: chugu
+ms.date: "07/19/2021"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.designer.afpstorageconn.f1"
+  - "sql14.dts.designer.afpstorageconn.f1"
 ---
 # Azure Storage connection manager
 
@@ -40,6 +36,9 @@ The following properties are available.
 
 ## Managed identities for Azure resources authentication
 When running SSIS packages on [Azure-SSIS integration runtime (IR) in Azure Data Factory (ADF)](/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime), you can use Azure Active Directory (AAD) authentication with [the specified system/user-assigned managed identity for your ADF](/azure/data-factory/connector-azure-blob-storage#managed-identity) to access Azure Storage. Your Azure-SSIS IR can access and copy data from or to your storage account by using this managed identity.
+
+> [!NOTE]
+> When you use user-assigned managed identity, SSIS integration runtime Azure Active Directory authentication needs to be enabled with the same user-assigned managed identity. For more information, see [Enable Azure Active Directory authentication for Azure-SSIS integration runtime](/azure/data-factory/enable-aad-authentication-azure-ssis-ir).
 
 Refer to the [Authenticate access to Azure Storage using AAD](/azure/storage/common/storage-auth-aad) article for Azure Storage authentication in general. To use AAD authentication with the specified system/user-assigned managed identity for your ADF to access Azure Storage, follow these steps:
  

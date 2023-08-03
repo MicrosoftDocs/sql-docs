@@ -4,8 +4,8 @@ description: Install replication components by using the SQL Server Installation
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "07/26/2017"
-ms.prod: sql
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
 ms.custom: intro-installation
 helpviewer_keywords:

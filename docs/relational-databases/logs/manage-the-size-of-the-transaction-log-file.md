@@ -1,20 +1,16 @@
 ---
-title: "Manage Transaction Log File Size | Microsoft Docs"
+title: "Manage Transaction Log File Size"
 description: Learn how to monitor SQL Server transaction log size, shrink the log, enlarge a log, optimize the tempdb log growth rate, and control transaction log growth.
-ms.custom: ""
-ms.date: "01/05/2018"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: supportability
+author: "MashaMSFT"
+ms.author: "mathoma"
+ms.date: 11/10/2022
+ms.service: sql
+ms.subservice: supportability
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "transaction logs [SQL Server], size management"
   - "manage log size"
   - "log size, manage"
-ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Manage the size of the transaction log file
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -86,7 +82,8 @@ Following are some general recommendations when you are working with transaction
     -  The time required to execute the largest batch in a database.
 
 -   When setting **autogrow** for data and log files using the `FILEGROWTH` option, it might be preferred to set it in **size** instead of **percentage**, to allow better control on the growth ratio, as percentage is an ever-growing amount.
-    -  Keep in mind that transaction logs cannot leverage [Instant File Initialization](../../relational-databases/databases/database-instant-file-initialization.md), so extended log growth times are especially critical. 
+    -  In versions prior to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], transaction logs cannot leverage [Instant File Initialization](../../relational-databases/databases/database-instant-file-initialization.md), so extended log growth times are especially critical. 
+    -  Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] (all editions) and in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], instant file initialization can benefit transaction log growth events up to 64 MB. The default auto growth size increment for new databases is 64 MB. Transaction log file autogrowth events larger than 64 MB cannot benefit from instant file initialization. 
     -  As a best practice, do not set the `FILEGROWTH` option value above 1,024 MB for transaction logs. The default values for `FILEGROWTH` option are:  
   
       |Version|Default values|  

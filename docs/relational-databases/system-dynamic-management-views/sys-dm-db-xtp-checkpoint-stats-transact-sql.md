@@ -3,10 +3,9 @@ title: "sys.dm_db_xtp_checkpoint_stats (Transact-SQL)"
 description: sys.dm_db_xtp_checkpoint_stats returns statistics about the In-Memory OLTP checkpoint operations in the current database. Learn how this view differs for versions of SQL Server.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "03/02/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.date: "02/27/2023"
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: "reference"
 f1_keywords:
   - "dm_db_xtp_checkpoint_stats"
@@ -73,7 +72,8 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 |bootstrap_recovery_lsn|**numeric(38)**|Recovery LSN for the bootstrap.|  
 |bootstrap_root_file_guid|**uniqueidentifier**|GUID of the root file for the bootstrap.|  
 |internal_error_code|**bigint**|Error seen by any of the controller, serializer, close, and merge threads.|
-|bytes_of_large_data_serialized|**bigint**|The amount of data that was serialized. |  
+|bytes_of_large_data_serialized|**bigint**|The amount of data that was serialized.|  
+|db_in_checkpoint_only_mode|**bit**|True if database is in in-memory OLTP checkpoint-only mode.|  
   
 ##  <a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  The following table describes the columns in `sys.dm_db_xtp_checkpoint_stats`, for **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**.  
@@ -97,8 +97,12 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 |task_address|**varbinary(8)**|The address of the SOS_Task. Join to `sys.dm_os_tasks` to find additional information.|  
   
 ## Permissions  
- Requires `VIEW DATABASE STATE` permission on the server.  
+ Requires `VIEW DATABASE STATE` permission on the database.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW DATABASE PERFORMANCE STATE permission on the database.
+
 ## See also
 
 - [Introduction to Memory-Optimized Tables](../in-memory-oltp/introduction-to-memory-optimized-tables.md)

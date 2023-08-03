@@ -1,17 +1,13 @@
 ---
 title: "Install Failover Cluster Instance"
 description: Learn to install a SQL Server failover cluster. Create and configure a failover cluster instance by running SQL Server Setup.
-ms.custom:
-  - seo-lt-2019
-  - intro-installation
-ms.date: "12/13/2019"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: failover-cluster-instance
-ms.topic: how-to
-ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "12/13/2019"
+ms.service: sql
+ms.subservice: failover-cluster-instance
+ms.topic: how-to
+ms.custom: intro-installation
 ---
 # SQL Server Failover Cluster Installation
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +37,8 @@ ms.author: mathoma
 4.  SQL Server failover cluster instance (FCI) requires the cluster nodes to be domain joined. The following configurations are **not supported**:
     - SQL FCI on workgroup clusters. 
     - SQL FCI on Multi-Domain cluster.   
-    - SQL FCI on Domain + Workgroup Clusters. 
+    - SQL FCI on Domain + Workgroup Clusters.
+    - SQL FCI when Read Only Domain Controllers (RODC) are available.
 
 ## [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Failover Cluster Installation options  
   

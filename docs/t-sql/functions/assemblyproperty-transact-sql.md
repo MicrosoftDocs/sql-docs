@@ -4,8 +4,8 @@ description: "ASSEMBLYPROPERTY (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
 ms.date: "07/24/2017"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ASSEMBLYPROPERTY_TSQL"
@@ -21,7 +21,7 @@ dev_langs:
 
 This function returns information about a property of an assembly.
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   

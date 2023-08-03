@@ -5,9 +5,8 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
 ms.date: 09/20/2022
-ms.prod: sql
+ms.service: sql
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 helpviewer_keywords:
   - "change data capture [SQL Server], compared to change tracking"
   - "change data capture vs. change tracking"
@@ -24,8 +23,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] provides two features that track changes to data in a database: [change data capture](#Capture) and [change tracking](#Tracking). These features enable applications to determine the DML changes (insert, update, and delete operations) that were made to user tables in a database. Change data capture and change tracking can be enabled on the same database; no special considerations are required. For the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that support change data capture and change tracking, see [Editions and supported features of SQL Server](../../sql-server/editions-and-components-of-sql-server-2019.md).
-
-Change tracking is supported by [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]. Change data capture is only supported in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and Azure SQL Managed Instance.
 
 ## Benefits of using change data capture or change tracking
 
@@ -67,7 +64,7 @@ Change data capture provides historical change information for a user table by c
 As shown in the following illustration, the changes that were made to user tables are captured in corresponding change tables. These change tables provide a historical view of the changes over time. The [change data capture](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md) functions that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides enable the change data to be consumed easily and systematically.
 
 
-:::image type="content" source="media/track-data-changes-sql-server/concept-change-data-capture.gif" alt-text="Diagram showing the concept of change data capture.":::
+:::image type="content" source="media/track-data-changes-sql-server/concept-change-data-capture.png" alt-text="Diagram showing the concept of change data capture.":::
 
 ### Security model
 
@@ -154,7 +151,7 @@ You can use [sys.sp_cdc_disable_db](../../relational-databases/system-stored-pro
 
  The following illustration shows a synchronization scenario that would benefit by using change tracking. In the scenario, an application requires the following information: all the rows in the table that were changed since the last time that the table was synchronized, and only the current row data. Because a synchronous mechanism is used to track the changes, an application can perform two-way synchronization and reliably detect any conflicts that might have occurred.
 
- :::image type="content" source="media/track-data-changes-sql-server/concept-change-tracking.gif" alt-text="Diagram showing the concept of change tracking.":::
+ :::image type="content" source="media/track-data-changes-sql-server/concept-change-tracking.png" alt-text="Diagram showing the concept of change tracking.":::
 
 ### Change tracking and Sync Services for ADO.NET
 

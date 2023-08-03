@@ -6,12 +6,9 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.date: "4/18/2022"
 ms.service: sql-database
-ms.prod_service: "sql-database"
 ms.topic: "reference"
-ms.custom: seo-lt-2019
 dev_langs:
   - "TSQL"
-ms.assetid: 48519fd9-c7c2-434b-848d-ccbf41133fdd
 monikerRange: "=azuresqldb-current"
 ---
 # sys.dm_xe_database_session_event_actions (Azure SQL Database and Azure SQL Managed Instance)

@@ -9,8 +9,8 @@ ms.service: sql-database
 ms.subservice: security
 ms.topic: how-to
 ms.custom:
-  - "seo-dt-2019"
-  - "sqldbrb=1"
+  - seo-dt-2019
+  - sqldbrb=1
 ---
 # Configure Advanced Threat Protection for Azure SQL Database
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -45,7 +45,7 @@ You can receive notifications about the detected threats via [email notification
     
 ## Set up Advanced Threat Protection using PowerShell
 
-For a script example, see [Configure auditing and Advanced Threat Protection using PowerShell](scripts/auditing-threat-detection-powershell-configure.md).
+For a script example, see [Configure auditing and Advanced Threat Protection using PowerShell](/powershell/module/az.sql/update-azsqlserveradvancedthreatprotectionsetting?preserve-view=true).
 
 ## Next steps
 

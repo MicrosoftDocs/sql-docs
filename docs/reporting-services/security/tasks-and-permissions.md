@@ -1,14 +1,14 @@
 ---
+title: "Tasks and Permissions"
 description: "Tasks and Permissions"
-title: "Tasks and Permissions | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: security
-
-
+ms.service: reporting-services
+ms.subservice: security
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "permissions [Reporting Services], tasks"
   - "role-based security [Reporting Services], permissions"
   - "security [Reporting Services], tasks"
@@ -16,9 +16,6 @@ helpviewer_keywords:
   - "role-based security [Reporting Services], tasks"
   - "predefined tasks [Reporting Services]"
   - "tasks [Reporting Services]"
-ms.assetid: d7ff90b5-b976-4270-b9ad-9d7b801d8263
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Tasks and Permissions
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], *tasks* are actions that a user or administrator can perform. Tasks are predefined. You cannot create custom tasks or modify the ones provided either programmatically or through a tool. There are twenty-five tasks in all. These tasks comprise the entire set of operations that are available in role-based security. Some examples of tasks include "View reports," "Manage reports," and "Manage report server properties."  

@@ -1,14 +1,13 @@
 ---
-title: "Database Lifecycle Management | Microsoft Docs"
+title: "Database Lifecycle Management"
 description: Learn how to use database lifecycle management in SQL Server to manage databases and data assets for performance, protection, availability, and cost.
-ms.custom: ""
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Data sync"
   - "SQL Database"
   - "Azure Training Kit"
@@ -28,9 +27,6 @@ helpviewer_keywords:
   - "SSDT"
   - "Database migration"
   - "Database connectivity"
-ms.assetid: 91da13a4-0eea-4e88-b608-dada881ff5f2
-author: MashaMSFT
-ms.author: mathoma
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Database Lifecycle Management

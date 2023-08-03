@@ -1,23 +1,18 @@
 ---
+title: "SetSecureConnectionLevel Method (WMI MSReportServer_ConfigurationSetting)"
 description: "SetSecureConnectionLevel Method (WMI MSReportServer_ConfigurationSetting)"
-title: "SetSecureConnectionLevel Method (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: wmi-provider-library-reference
-
-
-ms.topic: conceptual
-apiname: 
-  - "SetSecureConnectionLevel (WMI MSReportServer_ConfigurationSetting Class)"
-apilocation: 
-  - "reportingservices.mof"
-apitype: MOFDef
-helpviewer_keywords: 
-  - "SetSecureConnectionLevel method"
-ms.assetid: 0fac7d5e-2670-4657-9439-331e7d93babb
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: wmi-provider-library-reference
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "SetSecureConnectionLevel method"
+apilocation: "reportingservices.mof"
+apiname: "SetSecureConnectionLevel (WMI MSReportServer_ConfigurationSetting Class)"
+apitype: MOFDef
 ---
 # ConfigurationSetting Method - SetSecureConnectionLevel
   Sets the secure connection level of the report server.  
@@ -49,7 +44,7 @@ public void SetSecureConnectionLevel(Int32 Level,
   
 -   When the value is set, the SecureConnectionLevel element in the report server configuration file is changed, and the **URLRoot** element in the configuration file is set to use "https://" if the specified *Level* is greater than or equal to 1, or "http://" if the specified *Level* is 0.  
   
- In [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], SecureConnectionLevel is made an on/off switch, default value is 0. For any value greater than or equal to 1 passed through SetSecureConnectionLevel method API, TLS is considered on and the configuration property SecureConnectionLevel is set accordingly in the rsreportserver.config file. Values of 2 and 3 are still allowed for backward compatibility.  
+ In [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)], SecureConnectionLevel is made an on/off switch, default value is 0. For any value greater than or equal to 1 passed through SetSecureConnectionLevel method API, TLS is considered on and the configuration property SecureConnectionLevel is set accordingly in the rsreportserver.config file. Values of 2 and 3 are still allowed for backward compatibility.  
   
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

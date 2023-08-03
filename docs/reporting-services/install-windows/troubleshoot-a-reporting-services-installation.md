@@ -1,14 +1,12 @@
 ---
+title: "Troubleshoot a Reporting Services installation"
 description: "Troubleshoot a Reporting Services installation"
-title: "Troubleshoot a Reporting Services installation | Microsoft Docs"
-ms.date: 01/17/2018
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-
-ms.topic: conceptual
-ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 01/17/2018
+ms.service: reporting-services
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Troubleshoot a Reporting Services installation

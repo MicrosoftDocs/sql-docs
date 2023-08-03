@@ -1,18 +1,15 @@
 ---
-title: "Security Extensions Overview | Microsoft Docs"
+title: "Security Extensions Overview"
 description: Find out about security extensions in Reporting Services. See the situations in which custom authentication and authorization is appropriate.
-ms.date: 05/24/2018
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: extensions
-
-
-ms.topic: reference
-helpviewer_keywords: 
-  - "security [Reporting Services], extensions"
-ms.assetid: 24ccd795-6506-457c-93ac-6a9dd6bb9a46
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 05/24/2018
+ms.service: reporting-services
+ms.subservice: extensions
+ms.topic: reference
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "security [Reporting Services], extensions"
 ---
 # Security Extensions Overview - Reporting Services (SSRS)
   A [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] security extension enables the authentication and authorization of users or groups; that is, it enables different users to log on to a report server and, based on their identities, perform different tasks or operations. By default, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] uses a Windows-based authentication extension, which uses Windows account protocols to verify the identities of users who claim to have accounts on the system. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] uses a role-based security system to authorize users. The [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] role-based security model is similar to the role-based security models of other technologies.  

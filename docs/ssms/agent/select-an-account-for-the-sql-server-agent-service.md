@@ -1,15 +1,12 @@
 ---
 title: Select an Account for the SQL Server Agent Service
 description: Select an Account for the SQL Server Agent Service
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
 ms.date: 11/11/2021
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 
@@ -93,13 +90,13 @@ You can ignore this informational message. The enlistment operation should compl
 
   SQL Server Agent may fail to start if you run the SQL Server Agent service under the Network Service account, and the Network Service account has been explicitly granted access to log into a SQL Server  instance as a SQL Server user.  
   
-To resolve this, reboot the computer where SQL Server is running. This only needs to be done once.
+To resolve this, restart the computer where SQL Server is running. This only needs to be done once.
   
 ### Limitation 4: Using the Network Service account when SQL Server Reporting Services is running on the same computer
 
   SQL Server Agent may fail to start if you run the SQL Server Agent service under the Network Service account and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is also running on the same computer.  
   
-To resolve this, reboot the computer where SQL Server is running, and then restart both the SQL Server and the SQL Server Agent services. This only needs to be done once.  
+To resolve this, restart the computer where SQL Server is running, and then restart both the SQL Server and the SQL Server Agent services. This only needs to be done once.  
   
 ## Common tasks
 

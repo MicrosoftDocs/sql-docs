@@ -1,12 +1,13 @@
 ---
 title: SSMS Script objects
 description: Generate Transact-SQL (T-SQL) scripts for various objects found within SQL Server Management Studio (SSMS).
-ms.prod: sql
-ms.technology: ssms
-ms.prod_service: sql-tools
+author: markingmyname
+ms.author: maghan
+ms.date: 03/13/2018
+ms.service: sql
+ms.subservice: ssms
 ms.topic: tutorial
-keywords: SQL Server, SSMS, SQL Server Management Studio, Scripts, Scripting
-helpviewer_keywords: 
+helpviewer_keywords:
   - "projects [SQL Server Management Studio], tutorials"
   - "source controls [SQL Server Management Studio], tutorials"
   - "Help [SQL Server], SQL Server Management Studio"
@@ -15,10 +16,12 @@ helpviewer_keywords:
   - "solutions [SQL Server Management Studio], tutorials"
   - "SQL Server Management Studio [SQL Server], tutorials"
   - "scripts [SQL Server], SQL Server Management Studio"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-ms.date: 03/13/2018
+keywords:
+  - SQL Server
+  - SSMS
+  - SQL Server Management Studio
+  - Scripts
+  - Scripting
 ---
 
 # Script objects in SQL Server Management Studio

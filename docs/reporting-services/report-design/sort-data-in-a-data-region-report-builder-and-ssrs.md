@@ -1,16 +1,13 @@
 ---
-title: "Sort data in a data region in a paginated report | Microsoft Docs"
+title: "Sort data in a data region in a paginated report"
 description: Learn how to change the sort order of data in a data region in a paginated report when a report first runs in Report Builder.
-ms.date: 08/17/2018
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: 2fcb9be2-1daa-4c92-ad00-5f63cdf39f70
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 08/17/2018
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Sort data in a data region in a paginated report (Report Builder)
 

@@ -1,12 +1,13 @@
 ---
 title: "View list of databases on SQL Server"
 description: Learn how to view a list of databases on an instance of SQL Server by using SQL Server Management Studio or Transact-SQL.
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: supportability
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: "12/16/2022"
+ms.service: sql
+ms.subservice: supportability
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "current databases"
   - "databases currently on server [SQL Server]"
   - "database list [SQL Server]"
@@ -15,10 +16,6 @@ helpviewer_keywords:
   - "databases [SQL Server], viewing"
   - "servers [SQL Server], databases listed on"
   - "listing databases"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.custom: "seo-lt-2019, FY22Q2Fresh"
-ms.date: "10/21/2021"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -50,8 +47,6 @@ This article describes how to view a list of databases on an instance of [!INCLU
 3.  Copy and paste the following example into the query window and select **Execute**. This example returns a list of databases on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The list includes the names of the databases, their database IDs, and the dates when the databases were created.  
   
 ```sql  
-USE AdventureWorks2012;  
-GO  
 SELECT name, database_id, create_date  
 FROM sys.databases;  
 GO  
@@ -62,5 +57,3 @@ GO
 
  - [Databases and Files Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
  - [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
-  
-  

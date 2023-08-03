@@ -1,16 +1,13 @@
 ---
-title: "Max function in a paginated report | Microsoft Docs"
+title: "Max function in a paginated report"
 description: Learn about the Max function in a paginated report, which returns the maximum value of all non-null numeric values specified by the expression in Report Builder.
-ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: 61c4d6ff-6435-456a-9cbd-5113d2113e8a
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/07/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Report Builder functions - Max function in a paginated report (Report Builder)
 

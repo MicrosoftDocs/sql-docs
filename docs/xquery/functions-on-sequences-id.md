@@ -1,24 +1,20 @@
 ---
-title: "id Function (XQuery) | Microsoft Docs"
-description: Learn how to use the XQuery id function to return a sequence of elements in the XML instance, in document order, with the supplied xs:IDREF values.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: sql
-ms.reviewer: ""
-ms.technology: xml
-ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "fn:id function"
-  - "id function"
-ms.assetid: de99fc60-d0ad-4117-a17d-02bdde6512b4
+title: "id Function (XQuery)"
+description: "Learn how to use the XQuery id function to return a sequence of elements in the XML instance, in document order, with the supplied xs:IDREF values."
 author: "rothja"
 ms.author: "jroth"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: xml
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "fn:id function"
+  - "id function"
+dev_langs:
+  - "XML"
 ---
 # Functions on Sequences - id
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   Returns the sequence of element nodes with xs:ID values that match the values of one or more of the xs:IDREF values supplied in *$arg*.  
   

@@ -1,26 +1,22 @@
 ---
-title: "not Function (XQuery) | Microsoft Docs"
+title: "not Function (XQuery)"
 description: Learn how the XQuery not() function is used with Boolean values.
-ms.custom: ""
+author: "rothja"
+ms.author: "jroth"
 ms.date: "03/09/2017"
-ms.prod: sql
-ms.prod_service: sql
-ms.reviewer: ""
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "effective Boolean value [XQuery]"
   - "fn:not function"
   - "not function [XQuery]"
   - "EBV"
-ms.assetid: 93dfc377-45f1-4384-9392-560d9331a915
-author: "rothja"
-ms.author: "jroth"
+dev_langs:
+  - "XML"
 ---
 # Functions on Boolean Values - not Function 
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   Returns TRUE if the effective Boolean value of *$arg* is false, and returns FALSE if the effective Boolean value of *$arg* is true.  
   

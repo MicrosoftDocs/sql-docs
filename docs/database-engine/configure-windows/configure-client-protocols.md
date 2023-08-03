@@ -4,8 +4,8 @@ description: Learn various ways of configuring the protocols that client applica
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "07/27/2016"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "default protocols"
@@ -27,7 +27,7 @@ helpviewer_keywords:
   
 -   Configure a single client application to use a different network protocol by creating an alias. For more information, see [Create or Delete a Server Alias for Use by a Client &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md).  
   
--   Some client applications, such as sqlcmd.exe, can specify the protocol as part of the connection string. For more information, see [Connect to the Database Engine With sqlcmd](../../ssms/scripting/sqlcmd-connect-to-the-database-engine.md).  
+-   Some client applications, such as sqlcmd.exe, can specify the protocol as part of the connection string. For more information, see [Connect to the Database Engine With sqlcmd](../../tools/sqlcmd/sqlcmd-connect-database-engine.md).  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Configuration Manager  
   
@@ -57,5 +57,4 @@ helpviewer_keywords:
  The shared memory protocol is enabled separately by checking the **Enabled Shared Memory Protocol** box.  
   
 ## See Also  
- [Configure the remote login timeout Server Configuration Option](../../database-engine/configure-windows/configure-the-remote-login-timeout-server-configuration-option.md)  
-  
+ [Configure the remote login timeout Server Configuration Option](../../database-engine/configure-windows/configure-the-remote-login-timeout-server-configuration-option.md)

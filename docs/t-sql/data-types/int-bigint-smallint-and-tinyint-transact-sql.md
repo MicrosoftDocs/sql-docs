@@ -4,8 +4,8 @@ description: "Transact-SQL reference for int, bigint, smallint, and tinyint data
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 09/08/2017
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: "reference"
 f1_keywords:
   - "bigint_TSQL"
@@ -24,19 +24,19 @@ helpviewer_keywords:
   - "smallint data type"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # int, bigint, smallint, and tinyint (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
 Exact-number data types that use integer data. To save space in the database, use the smallest data type that can reliably contain all possible values. For example, tinyint would be sufficient for a person's age because no one lives to be more than 255 years old. But tinyint would not be sufficient for a building's age because a building can be more than 255 years old.
   
-|Data type|Range|Storage|  
-|---|---|---|
-|**bigint**|-2^63 (-9,223,372,036,854,775,808) to 2^63-1 (9,223,372,036,854,775,807)|8 Bytes|  
-|**int**|-2^31 (-2,147,483,648) to 2^31-1 (2,147,483,647)|4 Bytes|  
-|**smallint**|-2^15 (-32,768) to 2^15-1 (32,767)|2 Bytes|  
-|**tinyint**|0 to 255|1 Byte|  
+|Data type|Range|Range expression|Storage|  
+|---|---|---|---|
+|**bigint**| -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 | -2^63 to 2^63-1 | 8 Bytes|  
+|**int**| -2,147,483,648 to 2,147,483,647 |-2^31 to 2^31-1 | 4 Bytes|  
+|**smallint**| -32,768 to 32,767 |-2^15 to 2^15-1 | 2 Bytes|  
+|**tinyint**| 0 to 255 |2^0-1 to 2^8-1 | 1 Byte |  
   
 ## Remarks  
 The **int** data type is the primary integer data type in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The **bigint** data type is intended for use when integer values might exceed the range that is supported by the **int** data type.
@@ -52,6 +52,8 @@ Functions return **bigint** only if the parameter expression is a **bigint** dat
 >   
 >  When a query is autoparameterized, the constant value is always converted to **numeric (10, 0)** before converting to the final data type. When the / operator is involved, not only can the result type's precision differ among similar queries, but the result value can differ also. For example, the result value of an autoparameterized query that includes the expression `SELECT CAST (1.0 / 7 AS float)`, differs from the result value of the same query that is not autoparameterized, because the results of the autoparameterized query, are truncated to fit into the **numeric (10, 0)** data type.  
   
+The **tinyint** data type is not supported in [!INCLUDE [fabric](../../includes/fabric.md)].
+
 ## Converting integer data
 When integers are implicitly converted to a character data type, if the integer is too large to fit into the character field, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enters ASCII character 42, the asterisk (*).
   

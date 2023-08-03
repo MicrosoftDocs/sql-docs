@@ -1,31 +1,19 @@
---- 
- 
-# required metadata 
-title: "rx_oneclass_svm: OneClass SVM" 
-description: "Machine Learning One Class Support Vector Machines" 
-keywords: "models, anomaly, detection" 
-author: WilliamDAssafMSFT
-ms.author: wiassaf 
-manager: "cgronlun" 
-ms.date: 07/15/2019
-ms.topic: "reference" 
-ms.prod: "sql"
-ms.technology: "machine-learning-services" 
-ms.service: "" 
-ms.assetid: "" 
- 
-# optional metadata 
-ROBOTS: "" 
-audience: "" 
-ms.devlang: "Python" 
-ms.reviewer: "" 
-ms.suite: "" 
-ms.tgt_pltfrm: "" 
-ms.custom: "" 
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
- 
 ---
-
+title: "rx_oneclass_svm: OneClass SVM"
+description: "Machine Learning One Class Support Vector Machines"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 07/15/2019
+ms.service: sql
+ms.subservice: "machine-learning-services"
+ms.topic: "reference"
+keywords:
+  - models
+  - anomaly
+  - detection
+ms.devlang: Python
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
+---
 # *microsoftml.rx_oneclass_svm*: Anomaly Detection
 
 
@@ -135,7 +123,7 @@ support vectors (represented by the Greek letter nu). Must be between 0 and
 ### shrink
 
 Uses the shrinking heuristic if `True`. In this case,
-some samples will be “shrunk” during the training procedure, which may speed
+some samples will be "shrunk" during the training procedure, which may speed
 up training. The default value is `True`.
 
 
@@ -238,7 +226,7 @@ no packages outside `RxOptions.get_option("transform_packages")` are preloaded.
 
 NOT SUPPORTED. A user-defined environment to serve as a parent to all
 environments developed internally and used for variable data transformation.
-If `transform_environment = None`, a new “hash” environment with parent
+If `transform_environment = None`, a new "hash" environment with parent
 revoscalepy.baseenv is used instead.
 
 

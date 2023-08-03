@@ -1,16 +1,15 @@
 ---
-description: "MSSQLSERVER_701"
 title: "MSSQLSERVER_701"
-ms.custom: ""
-ms.date: "03/16/2021"
-ms.prod: sql
-ms.technology: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "701 (Database Engine error)"
+description: "MSSQLSERVER_701"
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: wiassaf
+ms.date: "03/16/2021"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "701 (Database Engine error)"
 ---
 # MSSQLSERVER_701
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,7 +62,7 @@ Configure and collect the following counters with Performance Monitor:
 
 Collect periodic outputs of this query on the impacted SQL Server
 
-  ```tsql
+  ```sql
   SELECT pages_kb, type, name, virtual_memory_committed_kb, awe_allocated_kb
   FROM sys.dm_os_memory_clerks
   ORDER BY pages_kb DESC
@@ -167,7 +166,7 @@ To diagnose internal memory pressure caused by modules (DLLs) inside SQL Server,
 - If you identify a clear offender among the memory clerks, focus on addressing the specifics of memory consumption for that component. Here are several examples:
 
   - If MEMORYCLERK_SQLQERESERVATIONS memory clerk is consuming memory, identify queries that are using huge memory grants and optimize them via indexes, rewrite them (remove ORDER by for example), or apply query hints.
-  - If a large number of ad-hoc query plans are cached, then the CACHESTORE_SQLCP memory clerk would use large amounts of memory. Identify non-parameterized queries whose query plans can’t be reused and parameterize them by either converting to stored procedures, or by using sp_executesql, or by using FORCED parameterization.
+  - If a large number of ad hoc query plans are cached, then the CACHESTORE_SQLCP memory clerk would use large amounts of memory. Identify non-parameterized queries whose query plans can't be reused and parameterize them by either converting to stored procedures, or by using sp_executesql, or by using FORCED parameterization.
   - If object plan cache store CACHESTORE_OBJCP is consuming much memory, then do the following: identify which stored procedures, functions, or triggers are using lots of memory and possibly redesign the application. Commonly this may happen due to large amounts of database or schemas with hundreds of procedures in each.
   - If the OBJECTSTORE_LOCK_MANAGER memory clerk is showing the large memory allocations, identify queries that apply many locks and optimize them by using indexes. Shorten transactions that cause locks not to be released for long periods in certain isolation levels, or check if lock escalation is disabled.
 

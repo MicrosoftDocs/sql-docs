@@ -1,15 +1,13 @@
 ---
-title: "Add Data from External Data Sources | Microsoft Docs"
+title: "Add Data from External Data Sources"
 description: Learn about adding data to reports from external data sources and how reports work with data access technologies.
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-data
-ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-reviewer: ""
-ms.custom: ""
 ms.date: 03/17/2017
+ms.service: reporting-services
+ms.subservice: report-data
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Add Data from External Data Sources (SSRS)

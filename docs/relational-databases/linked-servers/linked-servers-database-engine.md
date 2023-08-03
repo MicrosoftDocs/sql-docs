@@ -1,13 +1,12 @@
 ---
-description: "Linked Servers (Database Engine)"
 title: "Linked Servers (Database Engine)"
-ms.date: "11/15/2021"
-ms.prod: sql
-ms.technology: 
-ms.prod_service: "database-engine"
-ms.reviewer: ""
+description: "Linked Servers (Database Engine)"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 02/09/2023
+ms.service: sql
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "OLE DB, linked servers"
   - "OLE DB provider, linked servers"
   - "server management [SQL Server], linked servers"
@@ -16,9 +15,6 @@ helpviewer_keywords:
   - "servers [SQL Server], linked"
   - "remote servers [SQL Server], linked servers"
   - "linked servers [SQL Server], about linked servers"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.custom: seo-dt-2019
 ---
 # Linked Servers (Database Engine)
 
@@ -27,7 +23,7 @@ ms.custom: seo-dt-2019
   Linked servers enable the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] to read data from the remote data sources and execute commands against the remote database servers (for example, OLE DB data sources) outside of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Typically linked servers are configured to enable the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to execute a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement that includes tables in another instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or another database product such as Oracle. Many types OLE DB data sources can be configured as linked servers, including third-party database providers and Azure CosmosDB.
 
 > [!NOTE]
-> Linked servers are available in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]. They are not enabled in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] singleton and elastic pools. There are some [constraints in Managed Instance that can be found here](/azure/sql-database/sql-database-managed-instance-transact-sql-information#linked-servers). 
+> Linked servers are available in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]. They are not enabled in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] singleton and elastic pools. There are some [constraints in Managed Instance that can be found here](/azure/sql-database/sql-database-managed-instance-transact-sql-information#linked-servers). 
 
 ## When to use linked servers?
 
@@ -50,7 +46,10 @@ You can configure a linked server by using [!INCLUDE[ssManStudioFull](../../incl
   
 An *OLE DB provider* is a DLL that manages and interacts with a specific data source. An *OLE DB data source* identifies the specific database that can be accessed through OLE DB. Although data sources queried through linked server definitions are ordinarily databases, OLE DB providers exist for a variety of files and file formats. These include text files, spreadsheet data, and the results of full-text content searches.  
   
-Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], the [Microsoft OLE DB Driver for SQL Server (MSOLEDBSQL)](../../connect/oledb/oledb-driver-for-sql-server.md) (PROGID: MSOLEDBSQL) is the default OLE DB provider. In earlier versions, the [SQL Server Native Client OLE DB provider (SQLNCLI)](../../relational-databases/native-client/sql-server-native-client.md) (PROGID: SQLNCLI11) was the default OLE DB provider.
+Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], the [Microsoft OLE DB Driver for SQL Server (MSOLEDBSQL)](../../connect/oledb/oledb-driver-for-sql-server.md) (PROGID: MSOLEDBSQL) is the default OLE DB provider. In earlier versions, the [SQL Server Native Client OLE DB provider (SQLNCLI)](../../relational-databases/native-client/sql-server-native-client.md) (PROGID: SQLNCLI11) was the default OLE DB provider. 
+
+> [!IMPORTANT]
+> [!INCLUDE[snac-removed-oledb-only](../../includes/snac-removed-oledb-only.md)]
 
 Linked servers to [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access and Excel sources are only supported by Microsoft when using the 32-bit Microsoft.JET.OLEDB.4.0 OLE DB provider.
 
@@ -107,6 +106,10 @@ Azure SQL Managed Instance linked servers support both SQL authentication, and A
 - Azure AD authentication is not supported for Managed Instances in different Azure AD tenants.
 - Azure AD authentication for linked servers is supported only with OLE DB driver version 18.2.1 and higher.
 - Azure AD authentication for linked servers from Managed Instance to SQL Server is supported for mapped local logins only. Propagating security context is not supported. That means that managed identity authentication is supported, while pass-through authentication is not supported.
+
+### MSOLEDBSQL19 and linked servers
+
+Currently, MSOLEDBSQL19 prevents the creation of linked servers without encryption and a trusted certificate (a self-signed certificate is insufficient). If linked servers are required, use the existing supported version of MSOLEDBSQL.
 
 ## See also
 

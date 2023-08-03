@@ -1,23 +1,19 @@
 ---
+title: "For Loop Container"
 description: "For Loop Container"
-title: "For Loop Container | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.forloopcontainerdetails.f1"
   - "sql13.dts.designer.forloopcontainer.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "repeating control flow"
   - "containers [Integration Services], For Loop"
   - "For Loop containers"
-ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
-author: chugugrace
-ms.author: chugu
 ---
 # For Loop Container
 

@@ -4,15 +4,15 @@ description: Learn about the DTU-based purchasing model for Azure SQL Database a
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 04/06/2022
+ms.date: 07/13/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
 ms.custom:
-  - "references_regions"
-  - "azure-sql-split"
+  - references_regions
+  - azure-sql-split
 ---
-# DTU-based purchasing model overview 
+# DTU-based purchasing model overview
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 In this article, learn about the DTU-based purchasing model for Azure SQL Database.
@@ -29,18 +29,18 @@ The ratio among these resources is originally determined by an [online transacti
 
 For single databases, the resources used by your workload don't impact the resources available to other databases in the Azure cloud. Likewise, the resources used by other workloads don't impact the resources available to your database.
 
-![Bounding box](./media/purchasing-models/bounding-box.png)
+:::image type="content" source="./media/purchasing-models/bounding-box.png" alt-text="A descriptive infographic about the DTU purchasing model. The four sides of the box are Writes, CPU, Reads, and Memory, describing how DTU workloads are a blend of CPU, memory, and read-write rates.":::
 
 DTUs are most useful for understanding the relative resources that are allocated for databases at different compute sizes and service tiers. For example:
 
 - Doubling the DTUs by increasing the compute size of a database equates to doubling the set of resources available to that database.
-- A premium service tier P11 database with 1750 DTUs provides 350 times more DTU compute power than a basic service tier database with 5 DTUs.  
+- A Premium service tier P11 database with 1750 DTUs provides 350 times more DTU compute power than a basic service tier database with 5 DTUs.  
 
 To gain deeper insight into the resource (DTU) consumption of your workload, use [query-performance insights](query-performance-insight-use.md) to:
 
 - Identify the top queries by CPU/duration/execution count that can potentially be tuned for improved performance. For example, an I/O-intensive query might benefit from [in-memory optimization techniques](../in-memory-oltp-overview.md) to make better use of the available memory at a certain service tier and compute size.
 - Drill down into the details of a query to view its text and its history of resource usage.
-- Access performance-tuning recommendations that show actions taken by [SQL Database Advisor](database-advisor-implement-performance-recommendations.md).
+- View performance-tuning recommendations that show actions taken by [SQL Database Advisor](database-advisor-implement-performance-recommendations.md).
 
 ### Elastic database transaction units (eDTUs)
 
@@ -48,9 +48,9 @@ Rather than provide a dedicated set of resources (DTUs) that might not always be
 
 The shared resources in an elastic pool are measured by elastic database transaction units (eDTUs). Elastic pools provide a simple, cost-effective solution to manage performance goals for multiple databases that have widely varying and unpredictable usage patterns. An elastic pool guarantees that all the resources can't be consumed by one database in the pool, while ensuring that each database in the pool always has a minimum amount of necessary resources available.
 
-A pool is given a set number of eDTUs for a set price. In the elastic pool, individual databases can autoscale within the configured boundaries. A database under a heavier load will consume more eDTUs to meet demand. Databases under lighter loads will consume fewer eDTUs. Databases with no load will consume no eDTUs. Because resources are provisioned for the entire pool, rather than per database, elastic pools simplify your management tasks and provide a predictable budget for the pool.
+A pool is given a set number of eDTUs for a set price. In the elastic pool, individual databases can autoscale within the configured boundaries. A database under a heavier load consumes more eDTUs to meet demand. Databases under lighter loads consume fewer eDTUs. Databases with no load consume no eDTUs. Because resources are provisioned for the entire pool, rather than per database, elastic pools simplify your management tasks and provide a predictable budget for the pool.
 
-You can add additional eDTUs to an existing pool with minimal database downtime. Similarly, if you no longer need extra eDTUs, remove them from an existing pool at any time. You can also add databases to or remove databases from a pool at any time. To reserve eDTUs for other databases, limit the number of eDTUs databases can use under a heavy load. If a database has consistently high resource utilization that impacts other databases in the pool, move it out of the pool and configure it as a single database with a predictable amount of required resources.
+You can add more eDTUs to an existing pool with minimal database downtime. Similarly, if you no longer need extra eDTUs, remove them from an existing pool at any time. You can also add databases to or remove databases from a pool at any time. To reserve eDTUs for other databases, limit the number of eDTUs databases can use under a heavy load. If a database has consistently high resource utilization that impacts other databases in the pool, move it out of the pool and configure it as a single database with a predictable amount of required resources.
 
 #### Workloads that benefit from an elastic pool of resources
 
@@ -91,34 +91,33 @@ Choosing a service tier depends primarily on business continuity, storage, and p
 | :-- | --: |--:| --:|
 |**Target workload**|Development and production|Development and production|Development and production|
 |**Uptime SLA**|99.99%|99.99%|99.99%|
-|**Maximum backup retention**|7 days|35 days|35 days|
+| **Backup** | A choice of geo-redundant, zone-redundant, or locally redundant backup storage, 1-7 day retention (default 7 days) <br/> Long term retention available up to 10 years | A choice of geo-redundant, zone-redundant, or locally redundant backup storage, 1-35 day retention (default 7 days) <br/> Long term retention available up to 10 years  | A choice of locally-redundant (LRS), zone-redundant (ZRS), or geo-redundant (GRS) storage <br/> 1-35 days (7 days by default) retention, with up to 10 years of long-term retention available |
 |**CPU**|Low|Low, Medium, High|Medium, High|
 |**IOPS (approximate)**\* |1-4 IOPS per DTU| 1-4 IOPS per DTU | >25 IOPS per DTU|
 |**IO latency (approximate)**|5 ms (read), 10 ms (write)|5 ms (read), 10 ms (write)|2 ms (read/write)|
-|**Columnstore indexing** |N/A|S3 and above|Supported|
+|**Columnstore indexing** |N/A|Standard S3 and higher|Supported|
 |**In-memory OLTP**|N/A|N/A|Supported|
 
-\* All read and write IOPS against data files, including background IO (checkpoint and lazy writer)
+\* All read and write IOPS against data files, including background IO (checkpoint and lazy writer).
 
 > [!IMPORTANT]
-> The Basic, S0, S1 and S2 service objectives provide less than one vCore (CPU).  For CPU-intensive workloads, a service objective of S3 or greater is recommended. 
+> The Basic, S0, S1 and S2 service objectives provide less than one vCore (CPU). For CPU-intensive workloads, a service objective of S3 or greater is recommended.
 >
 > In the Basic, S0, and S1 service objectives, database files are stored in Azure Standard Storage, which uses hard disk drive (HDD)-based storage media. These service objectives are best suited for development, testing, and other infrequently accessed workloads that are less sensitive to performance variability.
->
 
 > [!TIP]
-> To see actual [resource governance](resource-limits-logical-server.md#resource-governance) limits for a database or elastic pool, query the [sys.dm_user_db_resource_governance](/sql/relational-databases/system-dynamic-management-views/sys-dm-user-db-resource-governor-azure-sql-database) view.
+> To see actual [resource governance](resource-limits-logical-server.md#resource-governance) limits for a database or elastic pool, query the [sys.dm_user_db_resource_governance](/sql/relational-databases/system-dynamic-management-views/sys-dm-user-db-resource-governor-azure-sql-database) view. For a single database, one row is returned. For a database in an elastic pool, a row is returned for each database in the pool.
 
 > [!NOTE]
-> You can get a free database in Azure SQL Database at the Basic service tier in conjunction with an Azure free account to explore Azure. For information, see [Create a managed cloud database with your Azure free account](https://azure.microsoft.com/free/services/sql-database/).
+> You can get a free database in Azure SQL Database at the Basic service tier with an Azure free account. For information, see [Create a managed cloud database with your Azure free account](https://azure.microsoft.com/free/services/sql-database/).
 
 ## Resource limits
 
-Resource limits differ for single and pooled databases. 
+Resource limits differ for single and pooled databases.
 
 ### Single database storage limits
 
-Compute sizes are expressed in terms of Database Transaction Units (DTUs) for single databases and elastic Database Transaction Units (eDTUs) for elastic pools. To learn more, review [Resource limits for single databases](resource-limits-dtu-single-databases.md). 
+In Azure SQL Database, compute sizes are expressed in terms of Database Transaction Units (DTUs) for single databases and elastic Database Transaction Units (eDTUs) for elastic pools. To learn more, review [Resource limits for single databases](resource-limits-dtu-single-databases.md). 
 
 ||Basic|Standard|Premium|
 | :-- | --: | --: | --: |
@@ -142,10 +141,11 @@ To learn more, review [Resource limits for pooled databases](resource-limits-dtu
 
 > [!IMPORTANT]
 > More than 1 TB of storage in the Premium tier is currently available in all regions except: China East, China North, Germany Central, and Germany Northeast. In these regions, the storage max in the Premium tier is limited to 1 TB.  For more information, see [P11-P15 current limitations](single-database-scale.md#p11-and-p15-constraints-when-max-size-greater-than-1-tb).  
+
 > [!IMPORTANT]
 > Under some circumstances, you may need to shrink a database to reclaim unused space. For more information, see [manage file space in Azure SQL Database](file-space-manage.md).
 
-## DTU Benchmark
+## DTU benchmark
 
 Physical characteristics (CPU, memory, IO) associated with each DTU measure are calibrated using a benchmark that simulates real-world database workload.
 

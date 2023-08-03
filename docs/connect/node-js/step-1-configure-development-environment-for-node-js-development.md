@@ -4,8 +4,8 @@ description: "You will need to configure your development environment with the p
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Step 1:  Configure development environment for Node.js development

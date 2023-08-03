@@ -1,21 +1,18 @@
 ---
+title: "Replication Queue Reader Agent"
 description: "Replication Queue Reader Agent"
-title: "Replication Queue Reader Agent | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "10/29/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "agents [SQL Server replication], Queue Reader Agent"
   - "command prompt [SQL Server replication]"
   - "Queue Reader Agent, parameter reference"
   - "Queue Reader Agent, executables"
-ms.assetid: 8e227793-11f6-47c6-99dc-ffc282f5d4bf
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Replication Queue Reader Agent
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -83,7 +80,7 @@ qrdrsvc [-?]
 |**2**|Specifies that TLS is used, and that the certificate is verified.|  
 
  > [!NOTE]  
- >  A valid TLS/SSL certificate is defined with a fully qualified domain name of the SQL Server. In order for the agent to connect successfully when setting -EncryptionLevel to 2, create an alias on the local SQL Server. The ‘Alias Name’ parameter should be the server name and the ‘Server’ parameter should be set to the fully qualified name of the SQL Server.
+ >  A valid TLS/SSL certificate is defined with a fully qualified domain name of the SQL Server. In order for the agent to connect successfully when setting -EncryptionLevel to 2, create an alias on the local SQL Server. The 'Alias Name' parameter should be the server name and the 'Server' parameter should be set to the fully qualified name of the SQL Server.
   
  For more information, see [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   

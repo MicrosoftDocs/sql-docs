@@ -1,23 +1,19 @@
 ---
-description: "Entity Permissions (Master Data Services)"
 title: Entity Permissions
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "entities [Master Data Services], permissions"
-  - "permissions [Master Data Services], entities"
-ms.assetid: 22785062-4faf-46ee-bffa-01cbd6d5a5b3
+description: "Entity Permissions (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "entities [Master Data Services], permissions"
+  - "permissions [Master Data Services], entities"
 ---
 # Entity Permissions (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Entity permissions apply to:  
   

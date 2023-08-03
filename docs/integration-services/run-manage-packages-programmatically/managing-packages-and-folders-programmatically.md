@@ -1,20 +1,16 @@
 ---
+title: "Managing Packages and Folders Programmatically"
 description: "Managing Packages and Folders Programmatically"
-title: "Managing Packages and Folders Programmatically | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "enumerators [Integration Services]"
   - "packages [Integration Services], managing"
   - "custom enumerators [Integration Services]"
-ms.assetid: ec59b75d-ba09-44ac-9039-9d593bb462d9
-author: chugugrace
-ms.author: chugu
 ---
 # Managing Packages and Folders Programmatically
 

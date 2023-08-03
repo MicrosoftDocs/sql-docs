@@ -1,17 +1,15 @@
 ---
+title: "Files-Only Installation (Reporting Services)"
 description: "Files-Only Installation (Reporting Services)"
-title: "Files-Only Installation (Reporting Services) | Microsoft Docs"
-ms.date: 05/24/2018
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "files-only installation [Reporting Services]"
-  - "installation options [Reporting Services]"
-ms.assetid: bdc74a8f-046c-4aa0-bfbd-4f1711dfb9ce
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 05/24/2018
+ms.service: reporting-services
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "files-only installation [Reporting Services]"
+  - "installation options [Reporting Services]"
 ---
 # Files-Only Installation (Reporting Services)
   *Files-only installation* refers to a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation where Setup creates the folder structure for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] program files, copies the files to disk, registers the Report Server service on the local computer, configures the service account, grants files permissions to the service account, and registers the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI provider.  

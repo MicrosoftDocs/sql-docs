@@ -1,24 +1,20 @@
 ---
-title: "Sequence Type Matching | Microsoft Docs"
+title: "Sequence Type Matching"
 description: Learn how to match the sequence type returned by an XQuery expression with a specific type.
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: sql
-ms.reviewer: ""
-ms.technology: xml
-ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "sequence type matching [XQuery]"
-  - "XQuery, sequence type matching"
-ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
 author: "rothja"
 ms.author: "jroth"
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: xml
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "sequence type matching [XQuery]"
+  - "XQuery, sequence type matching"
+dev_langs:
+  - "XML"
 ---
 # Type System - Sequence Type Matching
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   An XQuery expression value is always a sequence of zero or more items. An item can be either an atomic value or a node. The sequence type refers to the ability to match the sequence type returned by a query expression with a specific type. For example:  
   

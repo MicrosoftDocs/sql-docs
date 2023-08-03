@@ -4,8 +4,8 @@ description: ALTER CREDENTIAL (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: 09/07/2018
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ALTER CREDENTIAL"
@@ -26,7 +26,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-201
   Changes the properties of a credential.  
 
 > [!IMPORTANT]
-> "Should do" info as best practice; "must do" to complete task ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+> "Should do" info as best practice; "must do" to complete task :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

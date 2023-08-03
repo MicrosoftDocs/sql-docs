@@ -1,20 +1,17 @@
 ---
 title: "Optimize download-only article performance (Merge)"
-description: Describes how to optimize the performance of download-only articles used by Merge Replication. 
-ms.custom: seo-lt-2019
+description: Describes how to optimize the performance of download-only articles used by Merge Replication.
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "merge replication [SQL Server replication], download-only articles"
   - "articles [SQL Server replication], download-only"
   - "download-only articles"
-ms.assetid: 8851faa6-e6df-4ea5-a6ea-2a3471680fa3
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Optimize Merge Replication Performance with Download-Only Articles
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

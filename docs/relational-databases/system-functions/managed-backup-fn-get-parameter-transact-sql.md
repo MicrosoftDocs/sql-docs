@@ -1,26 +1,22 @@
 ---
+title: "managed_backup.fn_get_parameter (Transact-SQL)"
 description: "managed_backup.fn_get_parameter (Transact-SQL)"
-title: "managed_backup.fn_get_parameter (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "10/03/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "smart_admin.fn_get_parameter_TSQL"
   - "smart_admin.fn_get_parameter"
   - "fn_get_parameter_TSQL"
   - "fn_get_parameter"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "fn_get_parameter"
   - "smart_admin.fn_get_parameter"
-ms.assetid: ed94e54d-4516-4806-a8ce-f013d3a04122
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 ---
 # managed_backup.fn_get_parameter (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -31,7 +27,7 @@ ms.author: mikeray
   
  If the parameter has never been configured, the function returns 0 rows.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -72,7 +68,7 @@ FROM managed_backup.fn_get_parameter (NULL)
 USE MSDB  
 GO  
 SELECT *  
-FROM managed_backup.fn_get_parameter ('SSMBackup2WANotficationEmailIds')  
+FROM managed_backup.fn_get_parameter ('SSMBackup2WANotificationEmailIds')  
   
 ```  
   

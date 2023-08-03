@@ -1,32 +1,15 @@
---- 
- 
-# required metadata 
-title: "RealtimeDefinition class"
-description: "The RealtimeDefinition class is for SQL Machine Learning Services and Machine Learning Server for managing web services." 
-keywords: "" 
-author: WilliamDAssafMSFT
-ms.author: wiassaf 
-manager: "cgronlun" 
-ms.date: 07/15/2019 
-ms.topic: "reference" 
-ms.prod: "sql"
-ms.technology: "machine-learning-services" 
-ms.service: "" 
-ms.assetid: "" 
- 
-# optional metadata 
-ROBOTS: "" 
-audience: "" 
-ms.devlang: "Python" 
-ms.reviewer: "" 
-ms.suite: "" 
-ms.tgt_pltfrm: "" 
-#ms.technology: "" 
-ms.custom: ""
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
- 
 ---
-
+title: "RealtimeDefinition class"
+description: "The RealtimeDefinition class is for SQL Machine Learning Services and Machine Learning Server for managing web services."
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 07/15/2019
+ms.service: sql
+ms.subservice: "machine-learning-services"
+ms.topic: "reference"
+ms.devlang: Python
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
+---
 # Class RealtimeDefinition
 
 
@@ -43,7 +26,7 @@ azureml.deploy.operationalization.RealtimeDefinition(name, op)
 
 Bases: [`azureml.deploy.operationalization.OperationalizationDefinition`](operationalization-definition.md)
 
-Real-time class defining a *real-time* service’s properties for publishing.
+Real-time class defining a *real-time* service's properties for publishing.
 
 
 
@@ -113,7 +96,7 @@ description(description)
 
 
 
-Set the service’s optional description.
+Set the service's optional description.
 
 
 ### Arguments
@@ -186,7 +169,7 @@ version(version)
 
 
 
-Set the service’s optional version.
+Set the service's optional version.
 
 
 ### Arguments

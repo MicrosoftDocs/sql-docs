@@ -1,24 +1,20 @@
 ---
-title: "concat Function (XQuery) | Microsoft Docs"
+title: "concat Function (XQuery)"
 description: Learn about the XQuery function concat() that returns a string created by concatenating zero or more strings specified as arguments.
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: sql
-ms.prod_service: sql
-ms.reviewer: ""
-ms.technology: xml
-ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "fn:concat function"
-  - "concat function [XQuery]"
-ms.assetid: d50afd20-a297-445e-be9e-13b48017e7ca
 author: "rothja"
 ms.author: "jroth"
+ms.date: "03/09/2017"
+ms.service: sql
+ms.subservice: xml
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "fn:concat function"
+  - "concat function [XQuery]"
+dev_langs:
+  - "XML"
 ---
 # Functions on String Values - concat
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   Accepts zero or more strings as arguments and returns a string created by concatenating the values of each of these arguments.  
   

@@ -1,15 +1,12 @@
 ---
 title: Write a SQL Server Unit Test that Runs a Scope of a Single Transaction
 description: Learn how to start the Distributed Transaction Coordinator service, write a single-transaction SQL Server unit test, and roll back the test changes.
-ms.prod: sql
-ms.technology: ssdt
-ms.topic: conceptual
-ms.assetid: cb241e94-d81c-40e9-a7ae-127762a6b855
 author: markingmyname
 ms.author: maghan
-ms.reviewer: “”
-ms.custom: seo-lt-2019
 ms.date: 02/09/2017
+ms.service: sql
+ms.subservice: ssdt
+ms.topic: conceptual
 ---
 
 # How to: Write a SQL Server Unit Test that Runs within the Scope of a Single Transaction
@@ -30,7 +27,7 @@ For some procedures in this topic, the Distributed Transaction Coordinator servi
   
 #### To create a transaction using Transact\-SQL  
   
-1.  Open a unit test in the SQL Server Unit Test Designer. (Double click the source code file for the unit test to display the designer.)  
+1.  Open a unit test in the SQL Server Unit Test Designer. (Double-click the source code file for the unit test to display the designer.)  
   
 2.  Specify the type of script for which you want to create the transaction. For example, you can specify pre-test, test, or post-test.  
   

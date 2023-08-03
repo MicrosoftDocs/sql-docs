@@ -1,14 +1,14 @@
 ---
-title: "Specify Connections for Custom Data Processing Extensions | Microsoft Docs"
-description: Use this information to learn how to specify connections for third-party custom data processing extensions. 
+title: "Specify Connections for Custom Data Processing Extensions"
+description: Use this information to learn how to specify connections for third-party custom data processing extensions.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 05/24/2018
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-data
-
-
+ms.service: reporting-services
+ms.subservice: report-data
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "custom data processing extensions [Reporting Services]"
   - "IDbConnection interface, connection strings"
   - "impersonation [Reporting Services]"
@@ -19,9 +19,6 @@ helpviewer_keywords:
   - "authentication [Reporting Services]"
   - "external data sources [Reporting Services]"
   - "data processing extensions [Reporting Services], connections"
-ms.assetid: 2cddc9ea-0e28-4350-80ae-332412908e47
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Specify Connections for Custom Data Processing Extensions
   You can create or use third-party custom data processing extensions on a report server to enhance the data processing capability of supported data sources, or to support additional types of data sources that are not available in a default [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation. Connections are handled differently depending on the implementation. The following implementations are available for data processing extensions:  

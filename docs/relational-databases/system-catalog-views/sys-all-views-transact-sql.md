@@ -4,9 +4,8 @@ description: sys.all_views (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.all_views_TSQL"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.all_views catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: d8829213-fce2-41c6-9ab2-aaab5836c941
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.all_views (Transact-SQL)

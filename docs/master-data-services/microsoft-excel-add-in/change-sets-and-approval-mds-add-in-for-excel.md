@@ -1,20 +1,17 @@
 ---
-description: "Change Sets and Approval (MDS Add-in for Excel)"
 title: Change Sets and Approval
-ms.custom: microsoft-excel-add-in
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
-ms.topic: conceptual
-ms.assetid: 5257e054-be61-4a55-b699-708366a759af
+description: "Change Sets and Approval (MDS Add-in for Excel)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+ms.custom: microsoft-excel-add-in
 ---
 # Change Sets and Approval (MDS Add-in for Excel)
 
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Add-in for Excel, you can save pending changes to an entity in a change set. You can apply an existing change set in order to view and modify the pending changes, and you can commit an existing change set.  
   

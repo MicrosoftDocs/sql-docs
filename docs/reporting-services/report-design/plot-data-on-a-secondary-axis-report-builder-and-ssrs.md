@@ -1,16 +1,13 @@
 ---
-title: "Plot data on a secondary axis in a paginated report | Microsoft Docs"
-description:  Find out about the uses for the secondary axis type in a paginated report for comparing two distinct data ranges in Report Builder. 
-ms.date: 05/30/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: 094f39bf-3634-4852-9fc3-3adec4b266e5
+title: "Plot data on a secondary axis in a paginated report"
+description: Find out about the uses for the secondary axis type in a paginated report for comparing two distinct data ranges in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 05/30/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Plot data on a secondary axis in a paginated report (Report Builder)

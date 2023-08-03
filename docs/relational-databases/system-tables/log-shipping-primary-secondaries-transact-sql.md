@@ -4,9 +4,8 @@ description: log_shipping_primary_secondaries (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "log_shipping_primary_secondaries_TSQL"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "log_shipping_primary_secondaries system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 4b315c70-7265-4acd-b35b-a4dbb7881d98
 ---
 # log_shipping_primary_secondaries (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

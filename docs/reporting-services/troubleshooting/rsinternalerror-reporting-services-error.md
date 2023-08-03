@@ -1,18 +1,15 @@
 ---
-title: "rsInternalError - Reporting Services Error | Microsoft Docs"
+title: "rsInternalError - Reporting Services Error"
 description: "In this error reference page, learn about event ID 'rsInternalError': An internal error occurred on the report server. See the error log for more details."
-ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: troubleshooting
-
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "rsInternalError"
-ms.assetid: 52613d52-fc78-4870-93f0-7d393ab9c335
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/14/2017
+ms.service: reporting-services
+ms.subservice: troubleshooting
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "rsInternalError"
 ---
 # rsInternalError - Reporting Services Error
     

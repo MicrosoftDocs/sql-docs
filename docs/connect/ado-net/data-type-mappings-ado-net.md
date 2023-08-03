@@ -4,8 +4,8 @@ description: "Describes the data types are used by Microsoft SqlClient Data Prov
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "11/13/2020"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Data type mappings in ADO.NET

@@ -1,20 +1,17 @@
 ---
 title: "Identify issues with IntelliSense (SSMS)"
 description: Learn about the cases where Intellisense in SQL Server Management Studio (SSMS) does not work as you might expect.
-ms.custom: seo-lt-2019
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: ssms
-ms.reviewer: ""
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "unavailable options [IntelliSense]"
   - "IntelliSense [SQL Server], troubleshooting"
   - "IntelliSense [SQL Server], unavailable options"
   - "troubleshooting [IntelliSense]"
-ms.assetid: 4b72ffc6-aea2-4e11-ab36-fa2de4d7bcc5
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Identify issues with IntelliSense - SQL Server Management Studio (SSMS)
@@ -49,7 +46,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   The IntelliSense functionality of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor does not support all [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax elements. Parameter help does not support the parameters in some objects, such as extended stored procedures. For more information, see [Transact-SQL Syntax Supported by IntelliSense](./transact-sql-syntax-supported-by-intellisense.md).  
   
--   IntelliSense is only available when the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor is connected to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] from [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later. IntelliSense is not available when the Query Editor is connected to earlier versions of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+-   IntelliSense is only available when the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor is connected to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] from [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or later. IntelliSense is not available when the Query Editor is connected to earlier versions of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 -   IntelliSense is turned off in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor when the SQLCMD mode is set on.  
   

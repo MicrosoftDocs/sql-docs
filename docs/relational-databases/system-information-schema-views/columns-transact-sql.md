@@ -1,29 +1,26 @@
 ---
 title: COLUMNS (Transact-SQL)
 description: "COLUMNS (Transact-SQL)"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "COLUMNS"
-  - "COLUMNS_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "COLUMNS view"
-  - "INFORMATION_SCHEMA.COLUMNS view"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
-ms.custom: ""
 ms.date: "03/15/2017"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "COLUMNS"
+  - "COLUMNS_TSQL"
+helpviewer_keywords:
+  - "COLUMNS view"
+  - "INFORMATION_SCHEMA.COLUMNS view"
+dev_langs:
+  - "TSQL"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 
 # COLUMNS (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
 Returns one row for each column that can be accessed by the current user in the current database.  
   

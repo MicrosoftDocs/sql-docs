@@ -9,9 +9,9 @@ ms.service: sql-database
 ms.subservice: high-availability
 ms.topic: how-to
 ms.custom:
-  - "seo-lt-2019 sqldbrb=1"
-  - "devx-track-azurecli"
-  - "devx-track-azurepowershell"
+  - sqldbrb=1
+  - devx-track-azurecli
+  - devx-track-azurepowershell
 keywords: dns sql database
 ms.devlang: PowerShell
 ---

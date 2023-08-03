@@ -1,22 +1,19 @@
 ---
+title: "Authentication with the Report Server"
 description: "Authentication with the Report Server"
-title: "Authentication with the Report Server | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 05/30/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: security
-
-
+ms.service: reporting-services
+ms.subservice: security
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "connections [Reporting Services], configuring"
   - "connections [Reporting Services], accounts"
   - "Windows authentication [Reporting Services]"
   - "authentication [Reporting Services]"
   - "Forms authentication"
-ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
-author: maggiesMSFT
-ms.author: maggies
 ---
 
 # Authentication with the Report Server

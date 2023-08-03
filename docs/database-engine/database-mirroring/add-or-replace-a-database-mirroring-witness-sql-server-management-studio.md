@@ -4,10 +4,9 @@ description: Learn how to add or replace a database mirroring witness using SQL 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/07/2017"
-ms.prod: sql
-ms.technology: database-mirroring
+ms.service: sql
+ms.subservice: database-mirroring
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "witness [SQL Server], establishing"
   - "database mirroring [SQL Server], witness"

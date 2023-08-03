@@ -4,9 +4,8 @@ description: Disk Space Requirements for Index DDL Operations
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "02/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
   - "disk space [SQL Server], indexes"
@@ -14,10 +13,9 @@ helpviewer_keywords:
   - "space [SQL Server], indexes"
   - "indexes [SQL Server], disk space requirements"
   - "temporary disk space [SQL Server]"
-ms.assetid: 35930826-c870-44c1-a966-a6a4638f62ef
 ---
 # Disk Space Requirements for Index DDL Operations
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+ [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Disk space is an important consideration when you create, rebuild, or drop indexes. Inadequate disk space can degrade performance or even cause the index operation to fail. This topic provides general information that can help you determine the amount of disk space required for index data definition language (DDL) operations.  
   

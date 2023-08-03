@@ -4,9 +4,8 @@ description: System Tables (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 helpviewer_keywords:
   - "status information [SQL Server]"
@@ -20,10 +19,9 @@ helpviewer_keywords:
   - "retrieving system table information"
 dev_langs:
   - "TSQL"
-ms.assetid: 56b8ad51-930c-4e5c-8d99-8c939d5b70ac
 ---
 # System Tables (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   The topics in this section describe the system tables in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

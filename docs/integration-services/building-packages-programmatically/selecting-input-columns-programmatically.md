@@ -1,17 +1,13 @@
 ---
+title: "Selecting Input Columns Programmatically"
 description: "Selecting Input Columns Programmatically"
-title: "Selecting Input Columns Programmatically | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services 
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "input column mapping"
   - "data flow task [Integration Services], components"
   - "data flow task [Integration Services], column mapping"
@@ -19,9 +15,9 @@ helpviewer_keywords:
   - "column mapping [Integration Services]"
   - "data flow [Integration Services], column mapping"
   - "data flow [Integration Services], components"
-ms.assetid: b53b110a-dcf4-4464-ae98-81e892ab74c3
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
+  - "CSharp"
 ---
 # Selecting Input Columns Programmatically
 

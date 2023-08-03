@@ -1,14 +1,14 @@
 ---
-title: "Drilldown action in a paginated report | Microsoft Docs"
+title: "Drilldown action in a paginated report"
 description: Enable users with drilldown action in a paginated report to hide and display items interactively in Report Builder by providing plus and minus icons on a text box.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 05/24/2018
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
+ms.service: reporting-services
+ms.subservice: report-design
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: updatefrequency5
+f1_keywords:
   - "10249"
   - "10186"
   - "10092"
@@ -38,9 +38,6 @@ f1_keywords:
   - "10053"
   - "sql13.rtp.rptdesigner.minorgridlineproperties.visibility.f1"
   - "sql13.rtp.rptdesigner.seriesproperties.visibility.f1"
-ms.assetid: 1f8d1ef2-0daf-40c6-9ba7-3b391249bcd4
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Drilldown action in a paginated report (Report Builder)
 

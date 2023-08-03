@@ -1,11 +1,11 @@
 ---
-title: "SqlClient troubleshooting guide"
-description: "Page that provides resolutions to commonly observed problems."
+title: SqlClient troubleshooting guide
+description: Page that provides resolutions to commonly observed problems.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: "03/03/2021"
-ms.prod: sql
-ms.technology: connectivity
+ms.date: 03/06/2023
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 dev_langs:
   - "csharp"
@@ -17,9 +17,9 @@ dev_langs:
 
 ## Exceptions when connecting to SQL Server
 
-There are various reasons why connection can fail to be established. Below are some troubleshooting tips that can be used as a guide to analyze and solve many of the problems.
+There are various reasons why connection can fail to be established. Here are some troubleshooting tips that can be used as a guide to analyze and solve many of the problems.
 
-### Unable to load native SNI (Server Name Indication) library
+### Unable to load native SNI (Server Network Interface) library
 
 #### Issues in .NET Framework applications
 
@@ -37,9 +37,9 @@ DllNotFoundException: Unable to load DLL 'Microsoft.Data.SqlClient.SNI.x86.dll':
 
 SNI is the native C++ library that SqlClient depends on for various network operations when running on Windows. In .NET Framework applications that are built with the MSBuild Project SDK, native DLLs aren't managed with restore commands. So a ".targets" file is included in the "Microsoft.Data.SqlClient.SNI" NuGet package that defines the necessary "Copy" operations.
 
-The included ".targets" file is auto-referenced when a direct dependency is made to the "Microsoft.Data.SqlClient" library. In scenarios where a transitive (indirect) reference is made, this ".targets" file should be manually referenced to ensure "Copy" operations can execute when necessary.
+The included ".targets" file is autoreferenced when a direct dependency is made to the "Microsoft.Data.SqlClient" library. In scenarios where a transitive (indirect) reference is made, this ".targets" file should be manually referenced to ensure "Copy" operations can execute when necessary.
 
-**Recommended Solution:** Make sure the ".targets" file is referenced in the application's ".csproj" file to ensure "Copy" operations are executed.
+**Recommended Solution:** Make sure the ".targets" file is referenced in the application's project file to ensure "Copy" operations are executed. An example of edits to a project file can be found in this [related GitHub issue](https://github.com/dotnet/SqlClient/issues/612#issuecomment-1401341941).
 
 These targets cover Microsoft's well-known and commonly used targets only. If an external tool or application defines custom targets to copy binaries, new targets must be defined by tool maintainers to ensure native SNI DLLs are copied along-side the Microsoft.Data.SqlClient.dll binaries and are available when executing client applications.
 
@@ -151,16 +151,16 @@ at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception
 
 - SQL Server enforced encryption
 
-  If the target Server is an Azure SQL instance or an On-Premise SQL Server with the "Force Encryption" property turned on, an encrypted connection will be made, for which the client must establish trust with the server.
+  If the target Server is an Azure SQL instance or an on-premises SQL Server with the "Force Encryption" property turned on, an encrypted connection is made, for which the client must establish trust with the server.
 
   **Recommended Solution:** There are two available options to fix this issue:
 
-    1. Install the target SQL Server's TLS/SSL certificate in the client environment. It will be validated if encryption is needed.
-    2. Set the "TrustServerCertificate=true" property in the connection string.
+    1. Install the target SQL Server's TLS/SSL certificate in the client environment. It's validated if encryption is needed.
+    2. (Less secure) Set the "TrustServerCertificate=true" property in the connection string.
 
   **Insecure solution:** Disable the "Force Encryption" setting on SQL Server.
 
-- TLS/SSL Certificates not signed with SHA-256 or above.
+- TLS/SSL Certificates not signed with SHA-256 or greater.
 
   **Recommended Solution:** Generate a new TLS/SSL Certificate for the server whose hash is signed with at-least the SHA-256 hashing algorithm.
 
@@ -170,6 +170,22 @@ at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception
   
   Read more on [Default TLS cipher suites for .NET on Linux
 ](/dotnet/core/compatibility/cryptography/5.0/default-cipher-suites-for-tls-on-linux) for recommended action.
+
+```log
+Microsoft.Data.SqlClient.SqlException (0x80131904): A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - The certificate chain was issued by an authority that is not trusted.)
+ ---> System.ComponentModel.Win32Exception (0x80090325): The certificate chain was issued by an authority that is not trusted.
+```
+
+- SQL Server enforced encryption
+
+  If the target Server is an on-premises SQL Server with the "Force Encryption" property turned on and a self-signed certificate, an encrypted connection is made, for which the client must establish trust with the server.
+
+  **Recommended Solution:** There are two available options to fix this issue:
+
+    1. Install the target SQL Server's TLS/SSL certificate in the client environment. It's validated if encryption is needed.
+    2. (Less secure) Set the "TrustServerCertificate=true" property in the connection string.
+
+  **Insecure solution:** Disable the "Force Encryption" setting on SQL Server.
 
 ### Connection Pool exhaustion errors
 

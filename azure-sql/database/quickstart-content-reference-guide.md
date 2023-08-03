@@ -7,7 +7,7 @@ ms.reviewer: mathoma
 ms.date: 07/29/2019
 ms.service: sql-database
 ms.subservice: service-overview
-ms.topic: guide
+ms.topic: conceptual
 ms.custom: sqldbrb=1
 ---
 # Getting started with single databases in Azure SQL Database

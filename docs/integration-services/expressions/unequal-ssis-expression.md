@@ -1,19 +1,15 @@
 ---
+title: "!= (Unequal) (SSIS Expression)"
 description: "!= (Unequal) (SSIS Expression)"
-title: "!= (Unequal) (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "unequal operator (!=)"
-  - "!= (not equal to)"
-ms.assetid: fad20e85-c0e6-42bf-af70-2bc80ee09be5
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "unequal operator (!=)"
+  - "!= (not equal to)"
 ---
 # != (Unequal) (SSIS Expression)
 

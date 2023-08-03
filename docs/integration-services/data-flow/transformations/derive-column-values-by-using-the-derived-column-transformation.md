@@ -1,21 +1,17 @@
 ---
+title: "Derive Column Values with the Derived Column Transformation"
 description: "Derive Column Values with the Derived Column Transformation"
-title: "Derive Column Values with the Derived Column Transformation | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "columns [Integration Services]"
   - "derived columns"
   - "columns [Integration Services], values"
   - "Derived Column transformation"
-ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
-author: chugugrace
-ms.author: chugu
 ---
 # Derive Column Values with the Derived Column Transformation
 

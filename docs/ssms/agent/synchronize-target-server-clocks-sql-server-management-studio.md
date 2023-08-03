@@ -1,22 +1,18 @@
 ---
-description: "Synchronize Target Server Clocks"
 title: Synchronize Target Server Clocks
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+description: "Synchronize Target Server Clocks"
+author: markingmyname
+ms.author: maghan
+ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Agent jobs, target servers"
   - "clocks [SQL Server]"
   - "master servers [SQL Server], clock synchronization"
   - "synchronization [SQL Server], target server clocks"
   - "target servers [SQL Server], clock synchronization"
-ms.assetid: 4fb80502-d271-4d06-bcbc-bfbbceb5f2a2
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 
@@ -60,7 +56,7 @@ Requires membership in the **sysadmin** fixed server role.
   
 #### To synchronize target server clocks  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

@@ -1,18 +1,14 @@
 ---
-description: "Add a Custom Report to Management Studio"
 title: "Add a Custom Report to Management Studio"
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
-ms.technology: ssms
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQL Server Management Studio [SQL Server], custom reports"
-ms.assetid: 3cf8d726-0a90-4f80-98d0-352a2a59be0f
+description: "Add a Custom Report to Management Studio"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQL Server Management Studio [SQL Server], custom reports"
 ---
 # Add a Custom Report to Management Studio
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,15 +29,15 @@ This topic describes how to create a simple [!INCLUDE[ssRSnoversion](../../inclu
   
 6.  On the **Report Wizard** introduction page, click **Next**.  
   
-7.  On the **Select the Data Source** page, in the Name box type a name for this connection to your [!INCLUDE[ssDE](../../includes/ssde_md.md)], and then click **Edit**.  
+7.  On the **Select the Data Source** page, in the Name box type a name for this connection to your [!INCLUDE[ssDE](../../includes/ssde-md.md)], and then click **Edit**.  
   
-8.  In the **Connection Properties** dialog box, in the **Server name** box, type the name of your instance of the [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+8.  In the **Connection Properties** dialog box, in the **Server name** box, type the name of your instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 9. In the **Select or enter a database name** box, type the name of any database on your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], such as [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], and then click **OK**.  
   
 10. On the **Select the Data Source** page, click **Next**.  
   
-11. On the **Design the Query** page, in the **Query string** box, type the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement that lists the current connections to your [!INCLUDE[ssDE](../../includes/ssde_md.md)], and then click **Next**. The Report Wizard Query string box will not accept report parameters. More complex custom reports must be created manually.  
+11. On the **Design the Query** page, in the **Query string** box, type the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement that lists the current connections to your [!INCLUDE[ssDE](../../includes/ssde-md.md)], and then click **Next**. The Report Wizard Query string box will not accept report parameters. More complex custom reports must be created manually.  
   
     **SELECT session_id, net_transport FROM sys.dm_exec_connections;**  
   

@@ -1,20 +1,18 @@
 ---
 title: "Generate an Inline XDR Schema"
 description: View information about generating an inline XDR schema and about the deprecation of the XMLDATA directive in the FOR XML clause.
-ms.custom: ""
-ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.date: 05/05/2022
+ms.service: sql
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "XDR schemas [SQL Server]"
   - "inline XDR schema generation [SQL Server]"
   - "XMLDATA option"
   - "FOR XML clause, inline XDR schema generation"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Generate an inline XDR schema
 

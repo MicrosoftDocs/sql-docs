@@ -1,16 +1,13 @@
 ---
-title: "Specify a logarithmic scale in a paginated report | Microsoft Docs"
-description: Improve the appearance of your chart by making your data more manageable with a logarithmic scale on a chart in a paginated report.  
-ms.date: 03/03/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: f3092c1c-b128-433d-9a95-983508b2a8d4
+title: "Specify a logarithmic scale in a paginated report"
+description: Improve the appearance of your chart by making your data more manageable with a logarithmic scale on a chart in a paginated report.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/03/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Specify a logarithmic scale in a paginated report (Report Builder)
 

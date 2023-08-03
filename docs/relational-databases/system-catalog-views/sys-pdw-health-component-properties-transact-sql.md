@@ -4,12 +4,11 @@ description: sys.pdw_health_component_properties (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "05/12/2022"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: reference
 dev_langs:
   - "TSQL"
-ms.assetid: 66999c0c-dc43-4327-99fb-8366f465e69d
 monikerRange: ">=aps-pdw-2016"
 ---
 # sys.pdw_health_component_properties (Transact-SQL)

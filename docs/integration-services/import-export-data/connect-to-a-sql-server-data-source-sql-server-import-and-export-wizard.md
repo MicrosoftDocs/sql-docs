@@ -1,15 +1,12 @@
 ---
+title: "Connect to a SQL Server Data Source (SQL Server Import and Export Wizard)"
 description: "Connect to a SQL Server Data Source (SQL Server Import and Export Wizard)"
-title: "Connect to a SQL Server Data Source (SQL Server Import and Export Wizard) | Microsoft Docs"
-ms.custom: ""
-ms.date: 06/29/2020
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
-ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
 author: chugugrace
 ms.author: chugu
+ms.date: 06/29/2020
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Connect to a SQL Server Data Source (SQL Server Import and Export Wizard)
 
@@ -29,7 +26,7 @@ After you select **.NET Framework Data Provider for SQL Server** on the **Choose
 
 |Required info|.Net Framework Data Provider for SQL Server property|
 |---|---|
-|Authentication|Default **NotSpecified** as “Integrated Security”, or choose other authentication mode. “Interactive Active Directory Authentication” is not supported. |
+|Authentication|Default **NotSpecified** as "Integrated Security", or choose other authentication mode. "Interactive Active Directory Authentication" is not supported. |
 |Server name|**Data Source**|
 |Authentication (login) info|**Integrated Security**; or, **User ID** and **Password**<br/>If you want to see a drop-down list of databases on the server, you first have to provide valid login info.|
 |Database name|**Initial Catalog**|

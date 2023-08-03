@@ -1,32 +1,21 @@
---- 
-
-# required metadata 
-title: "mutualInformation function (MicrosoftML) " 
-description: " Mutual information mode of feature selection used in the feature selection transform [selectFeatures](selectFeatures.md). " 
-keywords: "(MicrosoftML), mutualInformation, feature, information, mutual, selection" 
+---
+title: "mutualInformation function (MicrosoftML)"
+description: "Mutual information mode of feature selection used in the feature selection transform [selectFeatures](selectFeatures.md)."
 author: "rothja"
-ms.author: "jroth" 
-manager: "cgronlun" 
+ms.author: "jroth"
 ms.date: 07/15/2019
-ms.topic: "reference" 
-ms.prod: "mlserver" 
-ms.service: "" 
-ms.assetid: "" 
-
-# optional metadata 
-ROBOTS: "" 
-audience: "" 
-ms.devlang: "" 
-ms.reviewer: "" 
-ms.suite: "" 
-ms.tgt_pltfrm: "" 
-#ms.technology: "" 
-ms.custom: "" 
-
+ms.service: sql
+ms.subservice: machine-learning
+ms.topic: "reference"
+keywords:
+  - (MicrosoftML)
+  - mutualInformation
+  - feature
+  - information
+  - mutual
+  - selection
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
---- 
-
-
+---
 
 
  # mutualInformation: Feature Selection Mutual Information Mode 

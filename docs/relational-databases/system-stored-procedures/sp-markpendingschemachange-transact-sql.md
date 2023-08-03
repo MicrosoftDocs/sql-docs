@@ -1,23 +1,19 @@
 ---
+title: "sp_markpendingschemachange (Transact-SQL)"
 description: "sp_markpendingschemachange (Transact-SQL)"
-title: "sp_markpendingschemachange (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_markpendingschemachange"
-  - "sp_markpendingschemachange_TSQL"
-helpviewer_keywords: 
-  - "sp_markpendingschemachange"
-ms.assetid: 01100309-7bef-4154-85bf-f18489577e37
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_markpendingschemachange"
+  - "sp_markpendingschemachange_TSQL"
+helpviewer_keywords:
+  - "sp_markpendingschemachange"
+dev_langs:
+  - "TSQL"
 ---
 # sp_markpendingschemachange (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

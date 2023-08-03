@@ -4,9 +4,8 @@ description: sys.xml_schema_wildcard_namespaces (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "xml_schema_wildcard_namespaces_TSQL"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.xml_schema_wildcard_namespaces catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: a3caa932-41c7-48a9-9b2d-ff090afbb66b
 ---
 # sys.xml_schema_wildcard_namespaces (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -4,8 +4,8 @@ description: "Marking Business Objects as Safe for Scripting"
 author: rothja
 ms.author: jroth
 ms.date: 11/09/2018
-ms.prod: sql
-ms.technology: ado
+ms.service: sql
+ms.subservice: ado
 ms.topic: conceptual
 helpviewer_keywords:
   - "business objects in RDS [ADO]"

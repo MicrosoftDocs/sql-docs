@@ -1,19 +1,16 @@
 ---
-title: "Understanding groups in a paginated report | Microsoft Docs"
-description: Gain an understanding of how a group organizes a view of a report dataset in a paginated report in Report Builder. 
-ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-f1_keywords: 
-  - "10056"
-  - "10424"
-ms.assetid: c32d4d89-45e4-4f77-a3e9-0429f53f9d6f
+title: "Understanding groups in a paginated report"
+description: Gain an understanding of how a group organizes a view of a report dataset in a paginated report in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/07/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "10056"
+  - "10424"
 ---
 # Understanding groups in a paginated report (Report Builder)
 

@@ -1,16 +1,14 @@
 ---
 title: Connect and query a dedicated SQL pool (formerly SQL DW) in Azure Synapse Analytics with SQL Server Management Studio (SSMS)
 description: Connect to a dedicated SQL pool (formerly SQL DW) in Azure Synapse Analytics using SSMS. Create and query a dedicated SQL pool (formerly SQL DW) in Azure Synapse Analytics by running basic T-SQL queries in SSMS.
-ms.prod: sql
-ms.technology: ssms
-ms.topic: quickstart
 author: markingmyname
 ms.author: maghan
 ms.reviewer: mikeray
-ms.custom:
-  - contperf-fy21q2
-  - intro-quickstart
 ms.date: 12/15/2020
+ms.service: sql
+ms.subservice: ssms
+ms.topic: quickstart
+ms.custom: intro-quickstart
 ---
 
 # Quickstart: Connect and query a dedicated SQL pool (formerly SQL DW) in Azure Synapse Analytics with SQL Server Management Studio (SSMS)
@@ -73,7 +71,7 @@ You can experience connection problems with dedicated SQL pool (formerly SQL DW)
 
 In this section, you create a table in your dedicated SQL pool (formerly SQL DW).
 
-1. In Object Explorer, right click on your dedicated SQL pool (formerly SQL DW), select **New query**. 
+1. In Object Explorer, right-click on your dedicated SQL pool (formerly SQL DW), select **New query**. 
 
 2. Paste the following T-SQL code snippet into the query window:
 

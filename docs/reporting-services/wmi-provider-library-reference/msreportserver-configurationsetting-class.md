@@ -1,24 +1,19 @@
 ---
+title: "MSReportServer_ConfigurationSetting Class"
 description: "MSReportServer_ConfigurationSetting Class"
-title: "MSReportServer_ConfigurationSetting Class | Microsoft Docs"
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: wmi-provider-library-reference
-
-
-ms.topic: conceptual
-apiname: 
-  - "MSReportServer_ConfigurationSetting Class"
-apilocation: 
-  - "reportingservices.mof"
-apitype: MOFDef
-helpviewer_keywords: 
-  - "WMI provider [Reporting Services], MSReportServer_ConfigurationSetting class"
-  - "MSReportServer_ConfigurationSetting class"
-ms.assetid: 874be718-54b9-49e8-a3d6-b83a0ba13dc3
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: wmi-provider-library-reference
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "WMI provider [Reporting Services], MSReportServer_ConfigurationSetting class"
+  - "MSReportServer_ConfigurationSetting class"
+apilocation: "reportingservices.mof"
+apiname: "MSReportServer_ConfigurationSetting Class"
+apitype: MOFDef
 ---
 # MSReportServer_ConfigurationSetting Class
   Represents the installation and runtime parameters of a report server instance. These parameters are stored in the configuration file for the report server.  

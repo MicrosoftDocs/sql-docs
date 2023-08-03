@@ -1,14 +1,13 @@
 ---
 title: "Access external data: SQL Server - PolyBase"
 description: Learn how to use PolyBase on a SQL Server instance to query external data in another SQL Server instance. Create external tables to reference external data.
-ms.date: 10/06/2020
-ms.custom: seo-lt-2019
-ms.prod: sql
-ms.technology: polybase
-ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
+ms.date: 10/18/2022
+ms.service: sql
+ms.subservice: polybase
+ms.topic: conceptual
 monikerRange: ">= sql-server-linux-ver15 || >= sql-server-ver15"
 ---
 
@@ -86,7 +85,8 @@ The following Transact-SQL commands are used in this section:
 
 ## SQL Server connector compatible types
 
-You can make a connection to other data sources that recognizes a SQL Server connection. Use the SQL Server PolyBase connector to create an external table of both Azure Synapse Analytics and Azure SQL Database. To accomplish this task, follow the same steps listed previously. Make sure the database scoped credential, server address, port, and location string correlate to that of the compatible data source you want to connect to.
+You can also utilize the SQL Server (sqlserver://) connector to access Azure SQL Database. To accomplish this task, follow the same steps listed previously. Make sure the database scoped credential, server address, port, and location string correlate to that of the Azure SQL Database data source you want to connect to.
+
 
 ## Next steps
 

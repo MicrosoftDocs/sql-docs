@@ -4,8 +4,8 @@ description: Learn about how to control transaction isolation levels in the JDBC
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 08/06/2021
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Understanding isolation levels
@@ -68,7 +68,7 @@ or you can use:
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED + 4094);
 ```
 
-For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] isolation levels, see "Isolation Levels in the [!INCLUDE[ssDE](../../includes/ssde_md.md)]" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.
+For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] isolation levels, see "Isolation Levels in the [!INCLUDE[ssDE](../../includes/ssde-md.md)]" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.
 
 ## See also
 

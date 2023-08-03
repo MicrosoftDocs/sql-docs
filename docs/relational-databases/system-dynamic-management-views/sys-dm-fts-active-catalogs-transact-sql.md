@@ -3,10 +3,9 @@ title: "sys.dm_fts_active_catalogs (Transact-SQL)"
 description: sys.dm_fts_active_catalogs returns information on the full-text catalogs that have some population activity in progress on the server.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "06/03/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.date: "02/27/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_fts_active_catalogs_TSQL"
@@ -48,7 +47,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 |**is_importing**|**bit**|Indicates whether the full-text catalog is being imported:<br /><br /> 1 = The catalog is being imported.<br /><br /> 2 = The catalog is not being imported.|  
   
 ## Remarks  
- The `is_importing` column was introduced in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
+ The `is_importing` column was introduced in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)].  
   
 ## Permissions  
 
@@ -56,6 +55,10 @@ On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] and SQL Managed 
 
 On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databases in **elastic pools**, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account, the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account, or membership in the `##MS_ServerStateReader##` [server role](/azure/azure-sql/database/security-server-roles) is required. On all other SQL Database service objectives, either the `VIEW DATABASE STATE` permission on the database, or membership in the `##MS_ServerStateReader##` server role is required.   
    
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Physical joins  
  
 :::image type="content" source="../../relational-databases/system-dynamic-management-views/media/join-dm-fts-active-catalogs-1.svg" alt-text="Diagram of physical joins for sys.dm_fts_active_catalogs.":::

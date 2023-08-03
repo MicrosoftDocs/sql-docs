@@ -4,13 +4,11 @@ description: Learn the core security guidelines for using SQLXML for data access
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "reference"
 helpviewer_keywords:
   - "security [SQLXML], about security"
-ms.assetid: 330cd2ff-d5d5-4c8e-8f93-0869c977be94
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Core SQLXML Security Considerations

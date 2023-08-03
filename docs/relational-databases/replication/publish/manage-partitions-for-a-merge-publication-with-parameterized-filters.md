@@ -1,20 +1,17 @@
 ---
 title: "Manage parameterized filters partition (Merge)"
 description: Manage partitions with parameterized filters used for SQL Server merge replication.
-ms.custom: seo-lt-2019
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "partitions [SQL Server replication]"
   - "merge replication partitions [SQL Server replication], SQL Server Management Studio"
   - "parameterized filters [SQL Server replication], partition management"
-ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Manage Partitions for a Merge Publication with Parameterized Filters
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

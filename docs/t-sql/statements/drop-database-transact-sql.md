@@ -5,9 +5,8 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
 ms.date: 07/25/2022
-ms.prod: sql
-ms.prod_service: "synapse-analytics, database-engine, pdw, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DROP DATABASE"
@@ -31,7 +30,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 Removes one or more user databases or database snapshots from an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
@@ -58,7 +57,7 @@ Conditionally drops the database only if it already exists.
 Specifies the name of the database to be removed. To display a list of databases, use the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view.
 
 *database_snapshot_name*
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.
 
 Specifies the name of a database snapshot to be removed.
 
@@ -73,7 +72,7 @@ When a database is dropped, the [master database](../../relational-databases/dat
 Dropping a database deletes the database from an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and deletes the physical disk files used by the database. If the database or any one of its files is offline when it is dropped, the disk files are not deleted. These files can be deleted manually by using Windows Explorer. To remove a database from the current server without deleting the files from the file system, use [sp_detach_db](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md).
 
 > [!WARNING]
-> Dropping a database that has FILE_SNAPSHOT backups associated with it will succeed, but the database files that have associated snapshots will not be deleted to avoid invalidating the backups referring to these database files. The file will be truncated, but will not be physically deleted in order to keep the FILE_SNAPSHOT backups intact. For more information, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through [current version](/troubleshoot/sql/general/determine-version-edition-update-level).
+> Dropping a database that has FILE_SNAPSHOT backups associated with it will succeed, but the database files that have associated snapshots will not be deleted to avoid invalidating the backups referring to these database files. The file will be truncated, but will not be physically deleted in order to keep the FILE_SNAPSHOT backups intact. For more information, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through [current version](/troubleshoot/sql/general/determine-version-edition-update-level).
 
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
@@ -105,13 +104,13 @@ Dropping a database enable for Stretch Database does not remove the remote data.
 > [!IMPORTANT]  
 > Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
 
-### [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+### [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
 You must be connected to the master database to drop a database.
 
  The DROP DATABASE statement must be the only statement in a SQL batch and you can drop only one database at a time.
 
-### [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]
+### [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 You must be connected to the master database to drop a database.
 
@@ -123,7 +122,7 @@ The DROP DATABASE statement must be the only statement in a SQL batch and you ca
 
 Requires the **CONTROL** permission on the database, or **ALTER ANY DATABASE** permission, or membership in the **db_owner** fixed database role.
 
-### [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+### [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
 Only the server-level principal login (created by the provisioning process) or members of the **dbmanager** database role can drop a database.
 
@@ -143,7 +142,7 @@ DROP DATABASE Sales;
 
 ### B. Dropping multiple databases
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.
 
 The following example removes each of the listed databases.
 
@@ -153,7 +152,7 @@ DROP DATABASE Sales, NewSales;
 
 ### C. Dropping a database snapshot
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.
 
 The following example removes a database snapshot, named `sales_snapshot0600`, without affecting the source database.
 

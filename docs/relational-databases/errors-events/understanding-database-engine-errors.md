@@ -1,25 +1,21 @@
 ---
-title: "Understanding Database Engine Errors | Microsoft Docs"
+title: "Understanding Database Engine Errors"
 description: Learn about the attributes of errors raised by the SQL Server Database Engine and how to access all system and user-defined error messages from sys.messages.
-ms.custom: ""
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "errors [SQL Server], about errors"
   - "errors [SQL Server], Database Engine"
   - "errors [SQL Server]"
   - "Database Engine [SQL Server], errors"
-ms.assetid: ddaca9d3-956f-46a5-8cd3-a7a15ec75878
-author: MashaMSFT
-ms.author: mathoma
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # Understanding Database Engine Errors
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW FabricSE FabricDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
   Errors raised by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] have the attributes described in the following table.  
   
 |Attribute|Description|  

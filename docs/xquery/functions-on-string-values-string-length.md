@@ -1,24 +1,20 @@
 ---
-title: "string-length Function (XQuery) | Microsoft Docs"
+title: "string-length Function (XQuery)"
 description: Learn how to use the XQuery function string-length().
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: sql
-ms.reviewer: ""
-ms.technology: xml
-ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "string-length function"
-  - "fn:string-length function"
-ms.assetid: 7cd69c8b-cf2c-478c-b9a3-e0e14e1aa8aa
 author: "rothja"
 ms.author: "jroth"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: xml
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "string-length function"
+  - "fn:string-length function"
+dev_langs:
+  - "XML"
 ---
 # Functions on String Values - string-length
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   Returns the length of the string in characters.  
   

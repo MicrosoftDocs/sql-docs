@@ -1,21 +1,18 @@
 ---
-title: "Cells, rows, & columns in a tablix in a paginated report | Microsoft Docs"
-description: Understand how to specify rows and columns in a paginated report for data, labels, and totals, enabling you to control the display in a SQL Server report. 
+title: "Cells, rows, & columns in a tablix in a paginated report"
+description: Understand how to specify rows and columns in a paginated report for data, labels, and totals, enabling you to control the display in a SQL Server report.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 12/16/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
+ms.service: reporting-services
+ms.subservice: report-design
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: updatefrequency5
+f1_keywords:
   - "10058"
   - "10057"
   - "sql13.rtp.rptdesigner.deletecolumns.f1"
   - "sql13.rtp.rptdesigner.deleterows.f1"
-ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Cells, rows, & columns in a tablix in a paginated report (Report Builder)
 

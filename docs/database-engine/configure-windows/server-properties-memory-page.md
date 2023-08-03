@@ -4,8 +4,8 @@ description: Get acquainted with server memory options in SQL Server. Learn abou
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/08/2016"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 f1_keywords:
   - "sql13.swb.serverproperties.memory.f1"

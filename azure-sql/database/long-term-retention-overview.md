@@ -2,10 +2,10 @@
 title: "Long-term backup retention"
 titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Learn how Azure SQL Database & Azure SQL Managed Instance support storing full database backups for up to 10 years via the long-term retention policy.
-author: SudhirRaparla
-ms.author: nvraparl
+author: grrlgeek
+ms.author: jeschult
 ms.reviewer: wiassaf, mathoma
-ms.date: 09/08/2022
+ms.date: 06/23/2023
 ms.service: sql-database
 ms.subservice: backup-restore
 ms.topic: conceptual
@@ -13,14 +13,16 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Long-term retention - Azure SQL Database and Azure SQL Managed Instance
 
-Many applications have regulatory, compliance, or other business purposes that require you to retain database backups beyond the 7-35 days provided by Azure SQL Database and Azure SQL Managed Instance [automatic backups](automated-backups-overview.md). By using the long-term retention (LTR) feature, you can store specified SQL Database and SQL Managed Instance full backups in Azure Blob storage with [configured redundancy](automated-backups-overview.md#backup-storage-redundancy) for up to 10 years. LTR backups can then be restored as a new database.
+Many applications have regulatory, compliance, or other business purposes that require you to retain database backups beyond the 1-35 days provided by Azure SQL Database and Azure SQL Managed Instance [automatic backups](automated-backups-overview.md). By using the long-term retention (LTR) feature, you can store specified SQL Database and SQL Managed Instance full backups in Azure Blob storage with [configured redundancy](automated-backups-overview.md#backup-storage-redundancy) for up to 10 years. LTR backups can then be restored as a new database.
 
 Long-term retention can be enabled for Azure SQL Database and for Azure SQL Managed Instance. This article provides a conceptual overview of long-term retention. To configure long-term retention, see [Configure Azure SQL Database LTR](long-term-backup-retention-configure.md) and [Configure Azure SQL Managed Instance LTR](../managed-instance/long-term-backup-retention-configure.md). 
 
-In Azure SQL Managed Instance, you can use SQL Agent jobs to schedule [copy-only database backups](/sql/relational-databases/backup-restore/copy-only-backups-sql-server) as an alternative to LTR beyond 35 days.
-
 > [!NOTE]
-> Long-term backup retention for Hyperscale databases is now in preview.
+> - In Azure SQL Managed Instance, use SQL Agent jobs to schedule [copy-only database backups](/sql/relational-databases/backup-restore/copy-only-backups-sql-server) as an alternative to LTR beyond 35 days.
+> - Long-term backup retention for Hyperscale databases is now in preview.
+
+
+
 
 ## How long-term retention works
      
@@ -62,7 +64,9 @@ If you modify the above policy and set W=0 (no weekly backups), Azure only retai
 > [!IMPORTANT]
 > The timing of individual LTR backups is controlled by Azure. You cannot manually create an LTR backup or control the timing of the backup creation. After configuring an LTR policy, it  may take up to 7 days before the first LTR backup will show up on the list of available backups.  
 > 
-> If you delete a server or a managed instance, all databases on that server or managed instance are also deleted and can't be recovered. You can't restore a deleted server or managed instance. However, if you had configured LTR for a database or managed instance, LTR backups are not deleted, and they can be used to restore databases on a different server or managed instance in the same subscription, to a point in time when an LTR backup was taken.
+> If you delete a logical server or a managed instance, all databases on that server or managed instance are also deleted and can't be recovered. You can't restore a deleted server or managed instance. However, if you had configured LTR for a database or managed instance, LTR backups are not deleted, and they can be used to restore databases on a different server or managed instance in the same subscription, to a point in time when an LTR backup was taken.
+>
+> Similarly if you delete a database, LTR backups are not deleted and are retained for the configured retention period. These backups can be restored to the same server or a different server in the same subscription.
 
 
 

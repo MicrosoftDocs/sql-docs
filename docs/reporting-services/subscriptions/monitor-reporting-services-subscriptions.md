@@ -1,22 +1,19 @@
 ---
-title: "Monitor Reporting Services Subscriptions | Microsoft Docs"
+title: "Monitor Reporting Services Subscriptions"
 description: Learn to use the UI, PowerShell, or log files to track Reporting Services subscriptions. Monitoring options depend on the report server mode you're running.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 06/12/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: subscriptions
-
-
+ms.service: reporting-services
+ms.subservice: subscriptions
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "subscriptions [Reporting Services], inactive"
   - "subscriptions [Reporting Services], status"
   - "monitoring [Reporting Services], subscriptions"
   - "status information [Reporting Services]"
   - "inactive subscriptions [Reporting Services]"
-ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Monitor Reporting Services Subscriptions
   You can monitor [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscriptions from the user interface, Windows PowerShell, or log files. The options available to you for monitoring depend on what mode of report server you are running.  

@@ -1,16 +1,13 @@
 ---
-title: "Interactive sort, document maps, and links in a paginated report | Microsoft Docs"
+title: "Interactive sort, document maps, and links in a paginated report"
 description: Enable your users to change the sort order of values in a paginated report, show or hide items, or select links to other reports or Web pages in Report Builder.
-ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: cc6ef408-4a76-408a-9d3f-033481fe21cf
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/14/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Interactive sort, document maps, and links in a paginated report (Report Builder)
 

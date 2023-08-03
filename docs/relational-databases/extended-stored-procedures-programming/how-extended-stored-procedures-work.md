@@ -4,12 +4,10 @@ description: How Extended Stored Procedures Work
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.topic: "reference"
 helpviewer_keywords:
   - "extended stored procedures [SQL Server], about extended stored procedures"
-ms.assetid: 6e946d8c-3268-4b59-8a1c-1637909cd701
 ---
 # How Extended Stored Procedures Work
 

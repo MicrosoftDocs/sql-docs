@@ -1,23 +1,17 @@
 ---
-description: "PropertyValueType Property (SqlServiceAdvancedProperty Class)"
 title: "PropertyValueType Property (SqlServiceAdvancedProperty)"
-ms.custom: seo-lt-2019
-ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: wmi
-ms.topic: "reference"
-apiname: 
-  - "PropertyValueType Property (SqlServiceAdvancedProperty Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "PropertyValueType property"
-ms.assetid: f1b1dcc6-6d44-4ad2-8c2e-4fd48c2c8086
+description: "PropertyValueType Property (SqlServiceAdvancedProperty Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "PropertyValueType property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "PropertyValueType Property (SqlServiceAdvancedProperty Class)"
+apitype: "MOFDef"
 ---
 # PropertyValueType Property (SqlServiceAdvancedProperty Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

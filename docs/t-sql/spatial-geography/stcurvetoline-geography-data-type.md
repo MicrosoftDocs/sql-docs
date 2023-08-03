@@ -1,23 +1,19 @@
 ---
+title: "STCurveToLine (geography Data Type)"
 description: "STCurveToLine (geography Data Type)"
-title: "STCurveToLine (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STCurveToLine_TSQL"
   - "STCurveToLine"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STCurveToLine method (geography)"
-ms.assetid: 2f863a85-6168-465a-b32f-bb5e3de58dee
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STCurveToLine (geography Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

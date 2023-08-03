@@ -3,8 +3,8 @@ title: Best practices for Azure SQL Data Sync
 description: Learn about best practices for configuring and running Azure SQL Data Sync.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: wiassaf, mathoma
-ms.date: 07/19/2022
+ms.reviewer: wiassaf, mathoma, jeschult
+ms.date: 07/10/2023
 ms.service: sql-database
 ms.subservice: sql-data-sync
 ms.topic: conceptual
@@ -26,7 +26,7 @@ For an overview of SQL Data Sync, see [Sync data across multiple cloud and on-pr
 ### Client agent
 
 -   Install the client agent by using the least privileged user account that has network service access.  
--   Install the client agent on a computer that isn't the SQL Server computer.  
+-   Install the client agent on a server that is different from where SQL Server is installed.  
 -   Don't register an on-premises database with more than one agent.
     -   Avoid this even if you're syncing different tables for different sync groups.  
     -   Registering an on-premises database with multiple client agents poses challenges when you delete one of the sync groups.
@@ -100,6 +100,7 @@ SQL Data Sync has the following limitations for autoprovisioning:
 -   Select only the columns that are created in the destination table. Any columns that aren't part of the sync group aren't provisioned in the destination tables.
 -   Indexes are created only for selected columns. If the source table index has columns that aren't part of the sync group, those indexes aren't provisioned in the destination tables.  
 -   Indexes on XML type columns aren't provisioned.  
+-   Data Sync supports only the following two index properties: Unique, Clustered/Non-Clustered. Other properties of index like IGNORE_DUP_KEY, Where filter predicate etc are not supported and the destination index is provisioned without these properties even if the source Index has these properties set.
 -   CHECK constraints aren't provisioned.  
 -   Existing triggers on the source tables aren't provisioned.  
 -   Views and stored procedures aren't created on the destination database.

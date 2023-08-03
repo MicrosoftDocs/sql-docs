@@ -1,20 +1,17 @@
 ---
-title: "Preventing Invalid Requests | Microsoft Docs"
+title: "Preventing Invalid Requests"
 description: Learn how to prevent invalid requests by analyzing your application flow and ensuring that the requests being sent to the report server are valid.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/16/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server-web-service-net-framework-exception-handling
-
-
+ms.service: reporting-services
+ms.subservice: report-server-web-service
 ms.topic: reference
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "invalid requests [Reporting Services]"
   - "exceptions [Reporting Services], invalid requests"
   - "valid requests [Reporting Services]"
-ms.assetid: 4a4a2d97-4c10-43a9-8298-ef5a820ea549
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Preventing Invalid Requests
   You can prevent some types of exceptions from being thrown by analyzing your application flow and ensuring that the requests being sent to the report server are valid. For example, in applications that enable users to add or update the name of a report, data source, or other report server item, you should validate the text that a user might enter. You should always check for reserved characters before sending the request to a report server. Use conditional **if** statements or other logical constructs in your code to alert the user that they have not met the conditions necessary to send requests to the report server.  

@@ -4,8 +4,8 @@ description: Learn how to enable automatic decryption of the database master key
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.technology: database-mirroring
+ms.service: sql
+ms.subservice: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords:
   - "cryptography [SQL Server], database mirroring"

@@ -4,9 +4,8 @@ description: sysmail_sentitems (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sysmail_sentitems_TSQL"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "sysmail_sentitems database mail view"
 dev_langs:
   - "TSQL"
-ms.assetid: 16eb2a44-cebb-4cec-93ac-e2498c39989f
 ---
 # sysmail_sentitems (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

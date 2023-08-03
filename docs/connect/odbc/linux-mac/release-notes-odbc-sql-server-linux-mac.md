@@ -3,11 +3,10 @@ title: Release Notes ODBC Driver for SQL Server on Linux and macOS
 description: "Learn what's new and changed in released versions of the Microsoft ODBC Driver for SQL Server."
 author: v-chojas
 ms.author: v-chojas
-manager: kenvh
 ms.reviewer: v-davidengel
-ms.date: 08/08/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.date: 07/31/2023
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Release Notes for the Microsoft ODBC Driver for SQL Server on Linux and macOS
@@ -28,6 +27,47 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
+
+## 18.3.1, July 2023
+
+| New item | Details |
+| :------- | :------ |
+| Improved Performance | More efficient packet buffer memory allocation |
+| New Managed Identity (MSI) Authentication Support | Support for MSI authentication for Azure Arc and Azure Cloud Shell and updated to a newer Azure App Service API version |
+| New distributions supported. | Ubuntu 23.04, Alpine 3.17, Alpine 3.18 |
+| Bug fixes. | [Bug fixes](../bug-fixes.md). |
+
+## 18.2.2, June 2023
+
+| New item | Details |
+| :------- | :------ |
+| Bug fixes. | [Bug fixes](../bug-fixes.md). |
+
+## 17.10.4, June 2022
+
+| New item | Details |
+| :------- | :------ |
+| Bug fixes. | [Bug fixes](../bug-fixes.md). |
+
+## 18.2, January 2023
+
+| New item | Details |
+| :------- | :------ |
+| New distributions supported. | Ubuntu 22.10, macOS 13, Alpine 3.16 |
+| Server name details added to connection errors | Added original and redirected server names to connect errors |
+| Bug fixes. | [Bug fixes](../bug-fixes.md). |
+
+## 17.10.2, November 2022
+
+| New item | Details |
+| :------- | :------ |
+| Bug fixes. | [Bug fixes](../bug-fixes.md). |
+
+## 18.1.2, November 2022
+
+| New item | Details |
+| :------- | :------ |
+| Bug fixes. | [Bug fixes](../bug-fixes.md). |
 
 ## 18.1, August 2022
 

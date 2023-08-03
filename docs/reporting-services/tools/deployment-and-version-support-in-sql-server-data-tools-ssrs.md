@@ -1,16 +1,15 @@
 ---
-title: "Deployment and Version Support in SQL Server Data Tools (SSDT) | Microsoft Docs"
+title: "Deployment and Version Support in SQL Server Data Tools (SSDT)"
 description: Learn about the supported versions for authoring and publishing reports in SQL Server Data Tools and how to set project configuration and deployment properties.
-ms.date: 03/15/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: tools
-ms.topic: conceptual
-ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/15/2017
+ms.service: reporting-services
+ms.subservice: tools
+ms.topic: conceptual
 ms.custom:
   - intro-deployment
+  - updatefrequency5
 ---
 # Deployment and Version Support in SQL Server Data Tools (SSDT)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] supports the following scenarios:  
@@ -52,15 +51,15 @@ ms.custom:
  The following table describes the supported versions for authoring and publishing reports in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 > [!NOTE]  
->  The schema has not changed since [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
+>  The schema has not changed since [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)].  
   
 |Project or File type|Version|Author Reports|Publish Reports|Notes|  
 |--------------------------|-------------|--------------------|---------------------|-----------|  
 |Report Server Project<br /><br /> or<br /><br /> Report Server Wizard Project|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]|2016 RDL schema|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]||  
 |Report Server Project<br /><br /> or<br /><br /> Report Server Wizard Project|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|2014 RDL schema|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
 |Report Server Project<br /><br /> or<br /><br /> Report Server Wizard Project|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|2012 RDL schema|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
-|Report Server Project<br /><br /> or<br /><br /> Report Server Wizard Project|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|2008 R2 RDL schema|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
-|Report Server Project<br /><br /> or<br /><br /> Report Server Wizard Project|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|2008 RDL schema|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server only|Upgrades 2003 RDL and 2005 RDL to the 2008 RDL schema locally.|  
+|Report Server Project<br /><br /> or<br /><br /> Report Server Wizard Project|[!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)]|2008 R2 RDL schema|[!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
+|Report Server Project<br /><br /> or<br /><br /> Report Server Wizard Project|[!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]|2008 RDL schema|[!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server only|Upgrades 2003 RDL and 2005 RDL to the 2008 RDL schema locally.|  
   
  For more information about opening reports in a previous version of the report definition schema, see [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md). For more information about specific report definition schemas, see [Report Definition Language Specification](/openspecs/sql_server_protocols/ms-rdl/53287204-7cd0-4bc9-a5cd-d42a5925dca1).  
   

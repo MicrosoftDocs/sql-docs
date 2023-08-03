@@ -1,24 +1,19 @@
 ---
+title: "MSReportServer_ConfigurationSetting Members"
 description: "MSReportServer_ConfigurationSetting Members"
-title: "MSReportServer_ConfigurationSetting Members | Microsoft Docs"
-ms.date: 03/20/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: wmi-provider-library-reference
-
-
-ms.topic: conceptual
-apiname: 
-  - "MSReportServer_ConfigurationSetting Members"
-apilocation: 
-  - "reportingservices.mof"
-apitype: MOFDef
-helpviewer_keywords: 
-  - "WMI provider [Reporting Services], MSReportServer_ConfigurationSetting class"
-  - "MSReportServer_ConfigurationSetting class"
-ms.assetid: 5e21a53a-a2f8-4b35-a8d9-5483519e3857
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/20/2017
+ms.service: reporting-services
+ms.subservice: wmi-provider-library-reference
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "WMI provider [Reporting Services], MSReportServer_ConfigurationSetting class"
+  - "MSReportServer_ConfigurationSetting class"
+apilocation: "reportingservices.mof"
+apiname: "MSReportServer_ConfigurationSetting Members"
+apitype: MOFDef
 ---
 # MSReportServer_ConfigurationSetting Members
   The MSReportServer_ConfigurationSetting class contains the following properties and methods.  

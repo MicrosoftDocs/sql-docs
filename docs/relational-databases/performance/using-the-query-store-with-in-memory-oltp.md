@@ -1,18 +1,14 @@
 ---
-title: "Using the Query Store with In-Memory OLTP | Microsoft Docs"
+title: "Using the Query Store with In-Memory OLTP"
 description: Learn how SQL Server Query Store allows you to monitor the performance of natively compiled code for workloads running in-memory OLTP.
-ms.custom: ""
-ms.date: "03/29/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: performance
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Query Store, in-memory"
-ms.assetid: aae5ae6d-7c90-4661-a1c5-df704319888a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/29/2016"
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Query Store, in-memory"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using the Query Store with In-Memory OLTP
@@ -36,7 +32,7 @@ However, there are some specific aspects that users should be aware of when usin
   
 -   Queries and plans are captured and stored on the first native compilation and updated upon every recompilation.  
   
--   If you enabled Query Store or cleared its content after all native stored procedure were compiled you must recompile them manually in order to make them captured by the Query Store. The same applies if you removed queries manually by using [sp_query_store_remove_query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md) or [sp_query_store_remove_plan &#40;Transct-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md). Use [sp_recompile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md) to force procedure recompilation.  
+-   If you enabled Query Store or cleared its content after all native stored procedure were compiled you must recompile them manually in order to make them captured by the Query Store. The same applies if you removed queries manually by using [sp_query_store_remove_query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md) or [sp_query_store_remove_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transact-sql.md?view=sql-server-ver16). Use [sp_recompile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md) to force procedure recompilation.  
   
 -   Query Store leverages plan generation mechanisms from in-memory OLTP to capture query execution plan during the compilation. Stored plan is semantically equivalent to one that you would get by using `SET SHOWPLAN_XML ON` with one difference; plans in Query Store are split and stored per individual statement.  
     

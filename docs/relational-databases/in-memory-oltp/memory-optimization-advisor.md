@@ -4,14 +4,12 @@ description: Use the memory optimization advisor in SQL Server Management Studio
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
 f1_keywords:
   - "swb.memoryoptimizationwizard.f1"
   - "sql13.swb.memoryoptimizationwizard.f1"
-ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Memory Optimization Advisor
@@ -28,7 +26,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
  For information about migration methodologies, see [In-Memory OLTP - Common Workload Patterns and Migration Considerations](/previous-versions/dn673538(v=msdn.10)).  
   
 ## Walkthrough Using the Memory-Optimization Advisor  
- In **Object Explorer**, right click the table you want to convert, and select **Memory-Optimization Advisor**. This will display the welcome page for the **Table Memory Optimization Advisor**.  
+ In **Object Explorer**, right-click the table you want to convert, and select **Memory-Optimization Advisor**. This will display the welcome page for the **Table Memory Optimization Advisor**.  
   
 ### Memory Optimization Checklist  
  When you click **Next** in the welcome page for the **Table Memory Optimization Advisor**, you will see the memory optimization checklist. Memory-optimized tables do not support all the features in a disk-based table. The memory optimization checklist reports if the disk-based table uses any features that are incompatible with a memory-optimized table. The **Table Memory Optimization Advisor** does not modify the disk-based table so that it can be migrated to use In-Memory OLTP. You must make those changes before continuing migration. For each incompatibility found, the **Table Memory Optimization Advisor** displays a link to information that can help you modify your disk-based tables.  

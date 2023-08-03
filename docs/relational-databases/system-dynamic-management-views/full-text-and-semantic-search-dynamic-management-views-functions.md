@@ -4,15 +4,14 @@ description: Full-Text and Semantic Search Dynamic Management Views - Functions
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 helpviewer_keywords:
   - "dynamic management objects [SQL Server], full-text search"
   - "full-text search [SQL Server], dynamic management views"
 dev_langs:
   - "TSQL"
-ms.assetid: 199dbd5a-29f6-4ef0-8e65-86e32c0aaa3a
 ---
 # Full-Text and Semantic Search Dynamic Management Views - Functions
 

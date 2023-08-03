@@ -4,10 +4,9 @@ description: Possible causes and solutions for when your availability group repl
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 f1_keywords:
   - "sql13.swb.agdashboard.agp7allconnected.issues.f1"
 helpviewer_keywords:

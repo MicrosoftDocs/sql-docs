@@ -4,9 +4,8 @@ description: MSreplication_queue (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "MSreplication_queue"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "MSreplication_queue system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 664bf817-8021-4417-96d6-2bb1e4baabff
 ---
 # MSreplication_queue (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

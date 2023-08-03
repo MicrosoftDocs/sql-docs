@@ -1,20 +1,16 @@
 ---
+title: "Using SQLBindCol"
 description: "Using SQLBindCol"
-title: "Using SQLBindCol | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "result sets [ODBC], binding columns"
   - "binding columns [ODBC]"
   - "SQLBindCol function [ODBC], using"
-ms.assetid: 17277ab3-33ad-44d3-a81c-a26b5e338512
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Using SQLBindCol
 The application binds columns by calling **SQLBindCol**. This function binds one column at a time. With it, the application specifies the following:  

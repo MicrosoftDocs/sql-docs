@@ -4,8 +4,8 @@ description: Learn about the OLE DB date and time enhancements in relation to CO
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "06/14/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 helpviewer_keywords:
   - "date/time [OLE DB], schema rowsets"
@@ -15,7 +15,7 @@ helpviewer_keywords:
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  This topic provides information about COLUMNS rowset and PROCEDURE_PARAMETERS rowset. This information relates to the OLE DB date and time enhancements introduced in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  
+  This topic provides information about COLUMNS rowset and PROCEDURE_PARAMETERS rowset. This information relates to the OLE DB date and time enhancements introduced in [!INCLUDE[sql2008-md](../../../includes/sql2008-md.md)].  
   
 ## COLUMNS Rowset  
  The following column values are returned for date/time types:  
@@ -49,7 +49,7 @@ helpviewer_keywords:
   
  A new flag, DBCOLUMNFLAGS_SS_ISVARIABLESCALE, is provided in COLUMN_FLAGS to allow an application to determine the server type of columns where DATA_TYPE is DBTYPE_DBTIMESTAMP. DATETIME_PRECISION must also be used to identify the server type.  
   
- DBCOLUMNFLAGS_SS_ISVARIABLESCALE is only valid when connected to a [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] or later server. DBCOLUMNFLAGS_SS_ISFIXEDSCALE is undefined when connected to down-level servers.  
+ DBCOLUMNFLAGS_SS_ISVARIABLESCALE is only valid when connected to a server running [!INCLUDE[sql2008-md](../../../includes/sql2008-md.md)] and later versions. DBCOLUMNFLAGS_SS_ISFIXEDSCALE is undefined when connected to down-level servers.  
   
 ## PROCEDURE_PARAMETERS Rowset  
  DATA_TYPE contains the same values as the COLUMNS schema rowset and TYPE_NAME contains the server type.  

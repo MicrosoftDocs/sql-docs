@@ -1,20 +1,16 @@
 ---
+title: "Extending Packages with Scripting"
 description: "Extending Packages with Scripting"
-title: "Extending Packages with Scripting | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Integration Services, scripting"
   - "SSIS, scripting"
   - "scripts [Integration Services], about scripting"
-ms.assetid: 67fe18ef-f3aa-41d4-9b9d-5defd4618c4b
-author: chugugrace
-ms.author: chugu
 ---
 # Extending Packages with Scripting
 

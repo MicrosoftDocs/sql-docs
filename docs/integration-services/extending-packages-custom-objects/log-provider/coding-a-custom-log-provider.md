@@ -1,18 +1,14 @@
 ---
+title: "Coding a Custom Log Provider"
 description: "Coding a Custom Log Provider"
-title: "Coding a Custom Log Provider | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "custom log providers [Integration Services], coding"
-ms.assetid: 979a29ca-956e-4fdd-ab47-f06e84cead7a
 author: chugugrace
 ms.author: chugu
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "reference"
+helpviewer_keywords:
+  - "custom log providers [Integration Services], coding"
 ---
 # Coding a Custom Log Provider
 

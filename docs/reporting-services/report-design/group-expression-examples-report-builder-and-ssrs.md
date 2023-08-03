@@ -1,22 +1,18 @@
 ---
-title: "Group expression examples in paginated reports | Microsoft Docs"
-
-description:  Find out how to group paginated report data by a single field or create more complex expressions that identify the data on which to group in Report Builder. 
+title: "Group expression examples in paginated reports"
+description: Find out how to group paginated report data by a single field or create more complex expressions that identify the data on which to group in Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
+ms.service: reporting-services
+ms.subservice: report-design
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "data [Reporting Services], grouping"
   - "grouping data"
   - "expressions [Reporting Services], adding"
   - "groups [Reporting Services], expressions"
-ms.assetid: 34cd0249-fc74-4cf2-ba11-7b072992bfd2
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Group expression examples in paginated reports (Report Builder)
 

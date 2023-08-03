@@ -4,8 +4,8 @@ description: "API reference for the PDOStatement::errorInfo function in the Micr
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "01/29/2021"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: reference
 ---
 # PDOStatement::errorInfo

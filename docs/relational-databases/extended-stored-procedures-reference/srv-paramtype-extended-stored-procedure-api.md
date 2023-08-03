@@ -4,9 +4,8 @@ description: Learn how srv_paramtype in the Extended Stored Procedure API return
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: stored-procedures
+ms.service: sql
+ms.subservice: stored-procedures
 ms.topic: "reference"
 helpviewer_keywords:
   - "srv_paramtype"
@@ -15,7 +14,6 @@ dev_langs:
 apilocation: opends60.dll
 apiname: srv_paramtype
 apitype: "DLLExport"
-ms.assetid: badc6d36-8a87-42b5-b28c-9c4f5ded8552
 ---
 # srv_paramtype (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

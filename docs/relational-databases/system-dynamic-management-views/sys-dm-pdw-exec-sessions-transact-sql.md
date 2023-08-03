@@ -4,12 +4,11 @@ description: sys.dm_pdw_exec_sessions (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/22/2019"
-ms.prod: sql
-ms.technology: data-warehouse
+ms.service: sql
+ms.subservice: data-warehouse
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-ms.assetid: 31c262b3-7e4d-44c4-af71-aaef0fd1a980
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.dm_pdw_exec_sessions (Transact-SQL)
@@ -30,7 +29,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 |login_time|**datetime**|Date and time at which the user logged in and this session was created.|Valid **datetime** before current time.|  
 |query_count|**int**|Captures the number of queries/requeststhis session has run since creation.|Greater than or equal to 0.|  
 |is_transactional|**bit**|Captures whether a session is currently within a transaction or not.|0 for auto-commit, 1 for transactional.|  
-|client_id|**nvarchar(255)**|Captures client information for the session.|Any valid string.|  
+|client_id|**nvarchar(255)**|Captures client information for the session. IPv6 address indicates private endpoint is used.|Any valid string.|  
 |app_name|**nvarchar(255)**|Captures application name information optionally set as part of the connection process.|Any valid string.|  
 |sql_spid|**int**|The IDs column contains closed SPIDs.||  
   

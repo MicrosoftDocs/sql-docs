@@ -1,18 +1,15 @@
 ---
+title: "MSSQL_ENG021331"
 description: "MSSQL_ENG021331"
-title: "MSSQL_ENG021331 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: reference
-helpviewer_keywords: 
-  - "MSSQL_ENG021331 error"
-ms.assetid: 9acd75d9-fda1-44cd-ba17-20295ad53ea0
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: reference
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "MSSQL_ENG021331 error"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # MSSQL_ENG021331

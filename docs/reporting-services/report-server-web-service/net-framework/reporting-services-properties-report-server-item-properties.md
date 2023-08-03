@@ -1,21 +1,18 @@
 ---
-title: "Report Server Item Properties | Microsoft Docs"
+title: "Report Server Item Properties"
 description: Item properties are specific to items in the report server database. Items include reports, linked reports, folders, resources, models, and data sources.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/06/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server-web-service
-
-
+ms.service: reporting-services
+ms.subservice: report-server-web-service
 ms.topic: reference
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "report servers [Reporting Services], properties"
   - "item-specific properties [Reporting Services]"
   - "report items [Reporting Services], properties"
   - "items [Reporting Services], properties"
-ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Reporting Services Properties - Report Server Item Properties
   Item properties are properties that are specific to items in the report server database. Such items include reports, linked reports, folders, resources, models, and data sources.  

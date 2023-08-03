@@ -2,17 +2,17 @@
 title: Enable SQL TDE with Azure Key Vault
 titleSuffix: Azure SQL Database & SQL Managed Instance & Azure Synapse Analytics
 description: Learn how to configure an Azure SQL Database and Azure Synapse Analytics to start using Transparent Data Encryption (TDE) for encryption-at-rest using PowerShell or Azure CLI.
-author: rwestMSFT
-ms.author: randolphwest
+author: GithubMirek
+ms.author: mireks
 ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 06/23/2021
+ms.date: 01/20/2023
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: how-to
 ms.custom:
-  - "seo-lt-2019 sqldbrb=1"
-  - "devx-track-azurecli"
-  - "devx-track-azurepowershell"
+  - sqldbrb=1
+  - devx-track-azurecli
+  - devx-track-azurepowershell
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
@@ -20,7 +20,7 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 
 [!INCLUDE[appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa.md)]
 
-This article walks through how to use a key from Azure Key Vault for Transparent Data Encryption (TDE) on Azure SQL Database or Azure Synapse Analytics. To learn more about the TDE with Azure Key Vault integration - Bring Your Own Key (BYOK) Support, visit [TDE with customer-managed keys in Azure Key Vault](transparent-data-encryption-byok-overview.md).
+This article walks through how to use a key from Azure Key Vault for transparent data encryption (TDE) on Azure SQL Database or Azure Synapse Analytics. To learn more about the TDE with Azure Key Vault integration - Bring Your Own Key (BYOK) Support, visit [TDE with customer-managed keys in Azure Key Vault](transparent-data-encryption-byok-overview.md). If you are looking for Azure portal instructions on how to enable TDE with a customer-managed key from Azure Key Vault, see [Create server configured with user-assigned managed identity and customer-managed TDE](transparent-data-encryption-byok-create-server.md).
 
 > [!NOTE] 
 > Azure SQL now supports using a RSA key stored in a Managed HSM as TDE Protector. Azure Key Vault Managed HSM is a fully managed, highly available, single-tenant, standards-compliant cloud service that enables you to safeguard cryptographic keys for your cloud applications, using FIPS 140-2 Level 3 validated HSMs. Learn more about [Managed HSMs](/azure/key-vault/managed-hsm/index).
@@ -38,8 +38,9 @@ This article walks through how to use a key from Azure Key Vault for Transparent
     - The key vault must have the following property to be used for TDE:
   - [soft-delete](/azure/key-vault/general/soft-delete-overview) and purge protection
 - The key must have the following attributes to be used for TDE:
-  - No expiration date
-  - Not disabled
+  - The activation date (if set) must be a date and time in the past
+  - The expiration date (if set) must be a future date and time
+  - The key must be in the Enabled state
   - Able to perform *get*, *wrap key*, *unwrap key* operations
 - To use a Managed HSM key, follow instructions to [create and activate a Managed HSM using Azure CLI](/azure/key-vault/managed-hsm/quick-create-cli)
 
@@ -122,16 +123,12 @@ Now the database or data warehouse has TDE enabled with an encryption key in Key
 
 ## Check the encryption state and encryption activity
 
-Use the [Get-AzSqlDatabaseTransparentDataEncryption](/powershell/module/az.sql/get-azsqldatabasetransparentdataencryption) to get the encryption state and the [Get-AzSqlDatabaseTransparentDataEncryptionActivity](/powershell/module/az.sql/get-azsqldatabasetransparentdataencryptionactivity) to check the encryption progress for a database or data warehouse.
+Use the [Get-AzSqlDatabaseTransparentDataEncryption](/powershell/module/az.sql/get-azsqldatabasetransparentdataencryption) to get the encryption state for a database or data warehouse.
 
 ```powershell
-# get the encryption state
+# get the encryption state of the database
 Get-AzSqlDatabaseTransparentDataEncryption -ResourceGroupName <SQLDatabaseResourceGroupName> `
    -ServerName <LogicalServerName> -DatabaseName <DatabaseName> `
-
-# check the encryption progress for a database or data warehouse
-Get-AzSqlDatabaseTransparentDataEncryptionActivity -ResourceGroupName <SQLDatabaseResourceGroupName> `
-   -ServerName <LogicalServerName> -DatabaseName <DatabaseName>  
 ```
 
 # [The Azure CLI](#tab/azure-cli)

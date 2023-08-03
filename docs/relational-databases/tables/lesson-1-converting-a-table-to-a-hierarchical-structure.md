@@ -1,18 +1,14 @@
 ---
+title: "Lesson 1: Converting a Table to a Hierarchical Structure"
 description: "Lesson 1: Converting a Table to a Hierarchical Structure"
-title: "Lesson 1: Converting a Table to a Hierarchical Structure | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/22/2018"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: table-view-index
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "HierarchyID"
-ms.assetid: 5ee6f19a-6dd7-4730-a91c-bbed1bd77e0b
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "08/22/2018"
+ms.service: sql
+ms.subservice: table-view-index
+ms.topic: conceptual
+helpviewer_keywords:
+  - "HierarchyID"
 ---
 # Lesson 1: Converting a Table to a Hierarchical Structure
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

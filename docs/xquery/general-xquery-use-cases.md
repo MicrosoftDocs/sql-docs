@@ -1,23 +1,19 @@
 ---
-title: "General XQuery Use Cases | Microsoft Docs"
+title: "General XQuery Use Cases"
 description: View several examples of general XQuery use including searching, retrieving, and listing specific data from a product catalog.
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: sql
-ms.prod_service: sql
-ms.reviewer: ""
-ms.technology: xml
-ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "XQuery, general usage cases"
-ms.assetid: 5187c97b-6866-474d-8bdb-a082634039cc
 author: "rothja"
 ms.author: "jroth"
+ms.date: "03/07/2017"
+ms.service: sql
+ms.subservice: xml
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "XQuery, general usage cases"
+dev_langs:
+  - "XML"
 ---
 # General XQuery Use Cases
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   This topic provides general examples of XQuery use.  
   

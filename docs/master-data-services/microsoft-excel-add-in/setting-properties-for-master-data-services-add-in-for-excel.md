@@ -1,20 +1,17 @@
 ---
-description: "Setting Properties for Master Data Services Add-in for Excel"
 title: Setting Properties
-ms.custom: microsoft-excel-add-in, seo-lt-2019
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
-ms.topic: conceptual
-ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
+description: "Setting Properties for Master Data Services Add-in for Excel"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+ms.custom: microsoft-excel-add-in
 ---
 # Setting Properties for Master Data Services Add-in for Excel
 
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Master Data Services Add-in for Excel settings determine how data is loaded from MDS into the Excel Add-in and how data is published from the Excel Add-in into MDS.  
   

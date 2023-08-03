@@ -4,8 +4,8 @@ description: SQL Server supports the enhanced FILESTREAM feature, which lets you
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "09/13/2019"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 helpviewer_keywords:
   - "FILESTREAM [SQL Server], OLE DB Driver for SQL Server"
@@ -16,7 +16,7 @@ helpviewer_keywords:
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-Beginning with [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], OLE DB Driver for SQL Server supports the enhanced FILESTREAM feature. For samples, see [Filestream and OLE DB](../../oledb/ole-db-how-to/filestream/filestream-and-ole-db.md).  
+Beginning with [!INCLUDE[sql2008-md](../../../includes/sql2008-md.md)], OLE DB Driver for SQL Server supports the enhanced FILESTREAM feature. For samples, see [Filestream and OLE DB](../../oledb/ole-db-how-to/filestream/filestream-and-ole-db.md).  
 
 FILESTREAM provides a way to store and access large binary values, either through [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] or by direct access to the Windows file system. A large binary value is a value larger than 2 gigabytes (GB). For more information about enhanced FILESTREAM support, see [FILESTREAM &#40;SQL Server&#41;](../../../relational-databases/blob/filestream-sql-server.md).  
   

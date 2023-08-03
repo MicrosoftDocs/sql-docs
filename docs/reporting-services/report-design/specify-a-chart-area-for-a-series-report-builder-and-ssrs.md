@@ -1,19 +1,16 @@
 ---
-title: "Specify a chart area for a series in a paginated report | Microsoft Docs"
+title: "Specify a chart area for a series in a paginated report"
 description: Find out about the chart area as a top-level container in a paginated report that includes the outer border, the chart title, and the legend in Report Builder.
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-f1_keywords: 
-  - "10157"
-  - "sql13.rtp.rptdesigner.chartareaproperties.alignment.f1"
-ms.assetid: dc3c365b-c263-402a-bf6f-c2a7081db073
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "10157"
+  - "sql13.rtp.rptdesigner.chartareaproperties.alignment.f1"
 ---
 # Specify a chart area for a series in a paginated report (Report Builder)
 

@@ -1,21 +1,18 @@
 ---
-title: "Handling Exceptions in Reporting Services | Microsoft Docs"
+title: "Handling Exceptions in Reporting Services"
 description: Learn how to handle exceptions that occur in Reporting Services so you can determine the next appropriate action to take in your applications.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server-web-service-net-framework-exception-handling
-
-
+ms.service: reporting-services
+ms.subservice: report-server-web-service
 ms.topic: reference
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "SOAP [Reporting Services], exceptions"
   - ".NET Framework [Reporting Services]"
   - "exceptions [Reporting Services], about exception handling"
   - "SoapException object"
-ms.assetid: 1a443432-2db5-48c5-bc29-433b4688082f
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Handling Exceptions in Reporting Services
   When a Reporting Services SOAP API client request cannot be completed, the report server returns an error rather than the expected results of the call. When a call cannot complete, an error for the Report Server Web service is returned as a SOAP **Fault** XML element. The key descriptive element of the fault is the **detail** element, which includes all of the error information provided by the report server as well as any additional Web service error information. The key information in the **detail** element is the report server error code. Based on the message and error code, you can determine the next appropriate action to take in your applications. For more information about SOAP faults, see the World Wide Web Consortium (W3C) Web site at http://www.w3.org/TR/SOAP.  

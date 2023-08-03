@@ -1,22 +1,18 @@
 ---
-description: "Create Database Mail Profile and Account Dialog Box"
 title: Create Database Mail Profile and Account Dialog Box
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.mds.configmanager.dbmailprofileacct.f1"
-ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
+description: "Create Database Mail Profile and Account Dialog Box"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/20/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.mds.configmanager.dbmailprofileacct.f1"
 ---
 # Create Database Mail Profile and Account Dialog Box
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Use the **Create Database Mail Profile and Account** dialog box to create a Database Mail profile and a Database Mail account for the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database. This profile will be used to notify users and groups by email when business rule validation fails.  
   

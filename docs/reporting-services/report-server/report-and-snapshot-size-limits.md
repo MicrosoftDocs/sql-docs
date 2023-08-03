@@ -1,23 +1,20 @@
 ---
-title: "Report and Snapshot Size Limits | Microsoft Docs"
-description: Learn about report size limits when a report is published in Report Server, rendered at run time, and saved to the file system. 
+title: "Report and Snapshot Size Limits"
+description: Learn about report size limits when a report is published in Report Server, rendered at run time, and saved to the file system.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server
-
-
+ms.service: reporting-services
+ms.subservice: report-server
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "large reports"
   - "maximum report size"
   - "size [SQL Server], reports"
   - "report size [Reporting Services]"
   - "reports [Reporting Services], size"
   - "denial of service attacks [Reporting Services]"
-ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Report and Snapshot Size Limits
   Administrators who manage a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] deployment can use the information in this topic to understand report size limits when the report is published to a report server, rendered at run time, and saved to the file system. This topic also provides practical guidance on how to measure the size of a report server database, and describes the effect of snapshot size on server performance.  

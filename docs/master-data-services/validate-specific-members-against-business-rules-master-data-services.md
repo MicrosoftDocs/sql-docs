@@ -1,23 +1,19 @@
 ---
-description: "Validate Specific Members against Business Rules (Master Data Services)"
 title: Validate Specific Members against Business Rules
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "applying business rules [Master Data Services]"
-  - "business rules [Master Data Services], applying to select members"
-ms.assetid: 2288ef43-5392-47ea-b651-ec25e5692a14
+description: "Validate Specific Members against Business Rules (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "applying business rules [Master Data Services]"
+  - "business rules [Master Data Services], applying to select members"
 ---
 # Validate Specific Members against Business Rules (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], apply business rules selectively when you want to update or validate subsets of members against business rules.  
   

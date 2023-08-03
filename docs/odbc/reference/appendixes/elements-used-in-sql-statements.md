@@ -1,20 +1,16 @@
 ---
+title: "Elements Used in SQL Statements"
 description: "Elements Used in SQL Statements"
-title: "Elements Used in SQL Statements | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL statements [ODBC], elements supported"
   - "minimum SQL syntax supported [ODBC]"
   - "ODBC drivers [ODBC], minimum SQL syntax supported"
-ms.assetid: 85777525-1555-4731-8309-63a464c6b43a
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Elements Used in SQL Statements
 The following elements are used in the SQL statements listed previously.  

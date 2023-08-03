@@ -4,9 +4,8 @@ description: MSrepl_version (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "MSrepl_version"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "MSrepl_version system table"
 dev_langs:
   - "TSQL"
-ms.assetid: c1330f03-940b-4564-ac42-6030c6e21173
 ---
 # MSrepl_version (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

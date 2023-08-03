@@ -1,21 +1,17 @@
 ---
+title: "Testing Migrated Database Objects (OracleToSQL)"
 description: "Testing Migrated Database Objects (OracleToSQL)"
-title: "Testing Migrated Database Objects (OracleToSQL) | Microsoft Docs"
-ms.prod: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "04/29/2021"
-ms.reviewer: ""
-ms.technology: ssma
+ms.service: sql
+ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: f03ef5e1-66e6-4c84-ada2-252dd5ada82f
-author: cpichuka 
-ms.author: cpichuka 
-manager: madhuriy
 ---
 
 # Testing Migrated Database Objects (OracleToSQL)
 
-[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for Oracle Tester (SSMA Tester) automatically tests the database object conversion and the data migration made by SSMA. After all SSMA migration steps are finished, use SSMA Tester to verify that converted objects work the same way and that all data was transferred properly.
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for Oracle Tester (SSMA Tester) automatically tests the database object conversion and the data migration made by SSMA. After all SSMA migration steps are finished, use SSMA Tester to verify that converted objects work the same way and that all data was transferred properly.
   
 You can test the following object types with SSMA Tester:
 

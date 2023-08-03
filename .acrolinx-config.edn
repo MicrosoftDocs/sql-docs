@@ -1,2 +1,19 @@
 {:allowed-branchname-matches ["main" "release-.*" "sandbox-.*"]
- :allowed-filename-matches ["(?i)docs/(?:(?!toc.yml))" "docs-msdn" "(?i)azure-sql/(?:(?!toc.yml))" "(?i)data-migration/(?:(?!toc.yml))"]}
+ :allowed-filename-matches ["(?i)docs/(?:(?!toc.yml))" "docs-msdn" "(?i)azure-sql/(?:(?!toc.yml))" "(?i)data-migration/(?:(?!toc.yml))"]
+
+ :template-header
+ "
+## Acrolinx scorecard
+ 
+**A minimum total score of 80 is required.**
+
+Select the total score link to review all feedback on brand, terms, spelling, grammar, readability, and inclusive language. *You should fix all spelling errors regardless of your total score.* This helps maintain customer trust in overall content quality.
+
+| Article | **Total score**<br />**Required:80** | Word and phrases<br />(Brand, terms)<br />Preferred: 100 | Correctness<br />(Spelling, grammar)<br />Preferred: 100 | Clarity<br />(Readability)<br />Preferred: 80 |
+|---------|:------------------------------------:|:--------------------------------------------------------:|:--------------------------------------------------------:|:---------------------------------------------:|
+"
+
+ :template-change
+ "| ${s/status} ${s/file} | [${acrolinx/qualityscore}](${acrolinx/scorecard}) | ${acrolinx/scores/words_and_phrases}  | ${acrolinx/scores/correctness}  | ${acrolinx/scores/clarity}  | ${acrolinx/scores/inclusive}  |
+"
+}

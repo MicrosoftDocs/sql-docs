@@ -1,28 +1,24 @@
 ---
+title: "VIEW_TABLE_USAGE (Transact-SQL)"
 description: "VIEW_TABLE_USAGE (Transact-SQL)"
-title: "VIEW_TABLE_USAGE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "VIEW_TABLE_USAGE_TSQL"
-  - "VIEW_TABLE_USAGE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "INFORMATION_SCHEMA.VIEW_TABLE_USAGE view"
-  - "VIEW_TABLE_USAGE view"
-ms.assetid: 0aeefb3f-02ef-457e-8c42-84ddb26f1c88
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.date: "03/15/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "VIEW_TABLE_USAGE_TSQL"
+  - "VIEW_TABLE_USAGE"
+helpviewer_keywords:
+  - "INFORMATION_SCHEMA.VIEW_TABLE_USAGE view"
+  - "VIEW_TABLE_USAGE view"
+dev_langs:
+  - "TSQL"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # VIEW_TABLE_USAGE (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
   Returns one row for each table in the current database that is used in a view. This information schema view returns information about the objects to which the current user has permissions.  
   

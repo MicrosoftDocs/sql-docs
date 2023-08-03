@@ -1,23 +1,19 @@
 ---
+title: "SQLMoreResults"
 description: "SQLMoreResults"
-title: "SQLMoreResults | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
-ms.topic: "reference"
-apitype: "DLLExport"
-helpviewer_keywords: 
-  - "SQLMoreResults function"
-ms.assetid: f65698c3-7291-480d-9dab-58b13feb7771
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "SQLMoreResults function"
+apitype: "DLLExport"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLMoreResults
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   **SQLMoreResults** allows the application to retrieve multiple sets of result rows. A [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT statement containing a COMPUTE clause, or a submitted batch of ODBC or [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, causes the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver to generate multiple result sets. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not allow creating a server cursor to process the results in either case. Therefore, the developer must ensure that the ODBC statement is blocking. The developer must exhaust the returned data or cancel the ODBC statement before processing data from other active statements on the connection.  
   

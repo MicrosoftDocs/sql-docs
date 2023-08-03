@@ -4,9 +4,8 @@ description: sys.availability_groups_cluster (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.availability_groups_cluster"
@@ -19,7 +18,6 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], WSFC clusters"
 dev_langs:
   - "TSQL"
-ms.assetid: d0f4683f-cdf0-4227-8b68-720ffe58f158
 ---
 # sys.availability_groups_cluster (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

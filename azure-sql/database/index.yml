@@ -12,7 +12,7 @@ metadata:
   ms.topic: landing-page
   author: MashaMSFT
   ms.author: mathoma
-  ms.reviewer: kendralittle, mathoma
+  ms.reviewer: mathoma
   ms.date: 01/25/2021
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
@@ -56,25 +56,20 @@ landingContent:
             url: reserved-capacity-overview.md
 
   # Card 
-  - title: Business continuity  
+  - title: Learn Azure SQL 
     linkLists:
-      - linkListType: how-to-guide
+      - linkListType: learn
         links:
-          - text: Business continuity 
-            url: business-continuity-high-availability-disaster-recover-hadr-overview.md
-          - text: High availability
-            url: high-availability-sla.md
-          - text: Active-geo replication
-            url: active-geo-replication-overview.md 
-          - text: Auto-failover groups
-            url: auto-failover-group-sql-db.md 
-          - text: Automated backups
-            url: automated-backups-overview.md
-          - text: Recover with backup 
-            url: recovery-using-backups.md 
-          - text: Long-term backup retention  
-            url: long-term-retention-overview.md
-
+        - text: Azure SQL for beginners
+          url: /shows/azure-sql-for-beginners/
+        - text: Azure SQL fundamentals 
+          url: /training/paths/azure-sql-fundamentals/
+        - text: Azure SQL hands-on labs
+          url: https://aka.ms/asqlworkshop
+        - text: Azure SQL bootcamp 
+          url: /users/marisabrasile/collections/8oq1i8p0z2qygw
+        - text: Educational SQL resources
+          url: /sql/sql-server/educational-sql-resources
 
   # Card 
   - title: Advanced security
@@ -111,20 +106,25 @@ landingContent:
             url: elastic-pool-resource-management.md
 
   # Card 
-  - title: Learn Azure SQL 
+  - title: Business continuity  
     linkLists:
-      - linkListType: learn
+      - linkListType: how-to-guide
         links:
-        - text: Azure SQL for beginners
-          url: /shows/azure-sql-for-beginners/
-        - text: Azure SQL fundamentals 
-          url: /training/paths/azure-sql-fundamentals/
-        - text: Azure SQL hands-on labs
-          url: https://aka.ms/asqlworkshop
-        - text: Azure SQL bootcamp 
-          url: /users/marisabrasile/collections/8oq1i8p0z2qygw
-        - text: Educational SQL resources
-          url: /sql/sql-server/educational-sql-resources
+          - text: Business continuity 
+            url: business-continuity-high-availability-disaster-recover-hadr-overview.md
+          - text: High availability
+            url: high-availability-sla.md
+          - text: Active-geo replication
+            url: active-geo-replication-overview.md 
+          - text: Auto-failover groups
+            url: auto-failover-group-sql-db.md 
+          - text: Automated backups
+            url: automated-backups-overview.md
+          - text: Recover with backup 
+            url: recovery-using-backups.md 
+          - text: Long-term backup retention  
+            url: long-term-retention-overview.md
+
 
   # Card 
   - title: Reference 
@@ -150,7 +150,7 @@ landingContent:
       - linkListType: reference
         links:
           - text: Migration guide
-            url: https://datamigration.microsoft.com/
+            url: /data-migration/
           - text: Transact-SQL (T-SQL)
             url: /sql/t-sql/language-reference
           - text: Azure CLI
@@ -176,6 +176,29 @@ landingContent:
           - text: Elastic query 
             url: elastic-query-overview.md
 
+  # Card
+  - title: Development
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Application development 
+            url:  develop-overview.md
+          - text: Connect apps to Azure SQL 
+            url: develop-overview.md#client-connections
+          - text: Disaster recovery app design
+            url: designing-cloud-solutions-for-disaster-recovery.md
+          - text: Managing rolling upgrades
+            url: manage-application-rolling-upgrade.md
+          - text: SaaS database tenancy patterns
+            url: saas-tenancy-app-design-patterns.md
+      - linkListType: how-to-guide
+        links:
+          - text: Design first database (SSMS)
+            url: design-first-database-tutorial.md
+          - text: Design first database (C#)
+            url: design-first-database-csharp-tutorial.md
+
+
   # Card 
   - title: Planned maintenance
     linkLists:
@@ -194,4 +217,5 @@ landingContent:
             url: maintenance-window-configure.md
           - text: Maintenance window notifications
             url: advance-notifications.md
- 
+
+

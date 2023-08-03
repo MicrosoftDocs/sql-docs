@@ -1,32 +1,18 @@
---- 
-
-# required metadata 
-title: "concat function (MicrosoftML) " 
-description: " Combines several columns into a single vector-valued column. " 
-keywords: "(MicrosoftML), concat, transform" 
+---
+title: "concat function (MicrosoftML)"
+description: "Combines several columns into a single vector-valued column (MicrosoftML)."
 author: "rothja"
-ms.author: "jroth" 
-manager: "cgronlun" 
+ms.author: "jroth"
 ms.date: 07/15/2019
-ms.topic: "reference" 
-ms.prod: "mlserver" 
-ms.service: "" 
-ms.assetid: "" 
-
-# optional metadata 
-ROBOTS: "" 
-audience: "" 
-ms.devlang: "" 
-ms.reviewer: "" 
-ms.suite: "" 
-ms.tgt_pltfrm: "" 
-#ms.technology: "" 
-ms.custom: "" 
-
+ms.service: sql
+ms.subservice: machine-learning
+ms.topic: "reference"
+keywords:
+  - (MicrosoftML)
+  - concat
+  - transform
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
---- 
-
-
+---
 
 
  # concat: Machine Learning Concat Transform 

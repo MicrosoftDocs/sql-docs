@@ -1,16 +1,11 @@
 ---
+title: "CircularString"
 description: "CircularString"
-title: "CircularString | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/16/2020"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: 
-ms.topic: conceptual
-ms.assetid: 9fe06b03-d98c-4337-9f89-54da98f49f9f
 author: MladjoA
 ms.author: mlandzic
+ms.date: "07/16/2020"
+ms.service: sql
+ms.topic: conceptual
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CircularString

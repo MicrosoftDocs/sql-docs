@@ -1,19 +1,16 @@
 ---
-title: "Compute capacity limits by edition of SQL Server | Microsoft Docs"
+title: "Compute capacity limits by edition of SQL Server"
 description: This article discusses compute capacity limits for SQL Server 2019 and how they differ in physical and virtualized environments with hyperthreaded processors.
-ms.custom: ""
+author: "MikeRayMSFT"
+ms.author: "mikeray"
 ms.date: "11/07/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: release-landing
+ms.service: sql
+ms.subservice: release-landing
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "processors [SQL Server], supported"
   - "number of processors supported"
   - "maximum number of processors supported"
-ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
-author: "MikeRayMSFT"
-ms.author: "mikeray"
 ---
 # Compute capacity limits by edition of SQL Server
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -72,7 +69,7 @@ These limits apply to a single instance of [!INCLUDE[ssNoVersion](../includes/ss
   
 The following table specifies the compute capacity limits for a single instance of each edition of [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]:  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition|Maximum compute capacity for a single instance ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Maximum compute capacity for a single instance (AS, RS)|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition|Maximum compute capacity for a single instance ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)])|Maximum compute capacity for a single instance (AS, RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
 |Enterprise Edition: Core-based Licensing\*|Operating system maximum|Operating system maximum|  
 |Developer|Operating system maximum|Operating system maximum|  
@@ -94,5 +91,3 @@ You might want to disable hyperthreading when the performance for each virtual p
  [Quickstart installation of SQL Server 2016](../database-engine/install-windows/install-sql-server.md)  
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-
-[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

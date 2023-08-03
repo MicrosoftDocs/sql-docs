@@ -1,32 +1,17 @@
---- 
-
-# required metadata 
-title: "execute2D function (olapR) | Microsoft Docs" 
-description: "   Takes a Query object or an MDX string, and returns the result as a data frame. " 
-keywords: "(olapR), execute2D" 
+---
+title: "execute2D function (olapR)"
+description: "Takes a Query object or an MDX string, and returns the result as a data frame."
 author: "rothja"
-ms.author: "jroth" 
-manager: "cgronlun" 
+ms.author: "jroth"
 ms.date: 07/15/2019
-ms.topic: "reference" 
-ms.prod: "mlserver" 
-ms.service: "" 
-ms.assetid: "" 
-
-# optional metadata 
-ROBOTS: "" 
-audience: "" 
-ms.devlang: "" 
-ms.reviewer: "" 
-ms.suite: "" 
-ms.tgt_pltfrm: "" 
-#ms.technology: "" 
-ms.custom: "" 
-
+ms.service: sql
+ms.subservice: machine-learning
+ms.topic: "reference"
+keywords:
+  - (olapR)
+  - execute2D
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
---- 
-
-
+---
 
 
 # execute2D: olapR execute2D Methods 

@@ -1,16 +1,13 @@
 ---
+title: "RSWindowsExtendedProtectionLevel Property"
 description: "RSWindowsExtendedProtectionLevel Property"
-title: "RSWindowsExtendedProtectionLevel Property | Microsoft Docs"
-ms.date: 03/20/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: wmi-provider-library-reference
-
-
-ms.topic: conceptual
-ms.assetid: 162ffe86-69c3-49d2-b9ed-49d097c05551
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/20/2017
+ms.service: reporting-services
+ms.subservice: wmi-provider-library-reference
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # RSWindowsExtendedProtectionLevel Property
   Returns a string value that indicates the level of protection the report server is configured to support. This property is read-only.  

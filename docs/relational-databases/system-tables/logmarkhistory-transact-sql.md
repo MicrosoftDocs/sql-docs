@@ -4,9 +4,8 @@ description: logmarkhistory (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "logmarkhistory"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "logmarkhistory system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 5c1becc5-f34e-4869-bf69-dfafab684540
 ---
 # logmarkhistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

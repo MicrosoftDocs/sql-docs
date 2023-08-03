@@ -5,17 +5,15 @@ description: sys.database_event_session_events (Azure SQL Database and Azure SQL
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "04/18/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-ms.assetid: f4c9eb0a-173c-4c66-8dd8-6f7176b2657f
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.database_event_session_events (Azure SQL Database and Azure SQL Managed Instance)
-[!INCLUDE [sqlserver2016-asdb](../../includes/applies-to-version/sqlserver2016-asdb.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 Returns a row for each event in a database-scoped event session. For information on events in *active* database-scoped sessions, see [sys.dm_xe_database_session_events](../system-dynamic-management-views/sys-dm-xe-database-session-events-azure-sql-database.md).
 

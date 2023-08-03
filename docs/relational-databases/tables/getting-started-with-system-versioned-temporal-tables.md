@@ -1,15 +1,13 @@
 ---
-description: "Getting Started with System-Versioned Temporal Tables"
 title: "Getting Started with System-Versioned Temporal Tables"
-ms.custom:
-  - intro-get-started
-ms.date: 04/06/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: table-view-index
-ms.topic: conceptual
+description: "Getting Started with System-Versioned Temporal Tables"
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: 04/06/2022
+ms.service: sql
+ms.subservice: table-view-index
+ms.topic: conceptual
+ms.custom: intro-get-started
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Getting Started with system-versioned temporal tables

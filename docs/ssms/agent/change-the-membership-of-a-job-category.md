@@ -1,21 +1,17 @@
 ---
-description: "Change the Membership of a Job Category"
 title: "Change the Membership of a Job Category"
-ms.custom: seo-lt-2019
+description: "Change the Membership of a Job Category"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Agent jobs, categories"
   - "jobs [SQL Server Agent], categories"
   - "categories [SQL Server Agent jobs]"
   - "members [SQL Server], job categories"
-ms.assetid: 6a18f7f0-eb50-485f-a9c7-df31ae0f994e
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Change the Membership of a Job Category
@@ -55,7 +51,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
   
 #### To change the membership of a job category  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

@@ -1,14 +1,14 @@
 ---
-title: "Reporting Services Tools | Microsoft Docs"
+title: "Reporting Services Tools"
 description: Learn about the tools for development, configuration, administration, and report viewing that are contained in SQL Server Reporting Services.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 06/06/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: tools
-
-
+ms.service: reporting-services
+ms.subservice: tools
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "SSRS, tools"
   - "Reporting Services, tools"
   - "components [Reporting Services]"
@@ -19,9 +19,6 @@ helpviewer_keywords:
   - "SQL Server Reporting Services, components"
   - "SQL Server Reporting Services, tools"
   - "architecture [Reporting Services]"
-ms.assetid: 23d616e3-eb90-43fb-9b7a-869bd7e22e7b
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Reporting Services Tools
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] contains a set of graphical and scripting tools that support the development and use of rich reports in a managed environment. The tool set includes development tools, configuration and administration tools, and report viewing tools. This article gives a brief overview of each tool in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and how it can be accessed.  

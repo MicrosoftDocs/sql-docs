@@ -58,7 +58,7 @@ To configure the DNS suffix, follow these steps:
 
    ![Screenshot shows where to see your Full computer name.](./media/availability-group-clusterless-workgroup-configure/3-confirm-full-computer-name.png)
 
-1. Reboot the server when you are prompted to do so. 
+1. Restart the server when you are prompted to do so. 
 1. Repeat these steps on any other nodes to be used for the availability group. 
 
 ## Edit a host file
@@ -277,6 +277,20 @@ In this step, configure your availability group, and add your databases to it. D
 ## Configure a load balancer
 
 In this final step, configure the load balancer using either the [Azure portal](availability-group-load-balancer-portal-configure.md) or [PowerShell](availability-group-listener-powershell-configure.md).
+
+However, there may be some [limitations](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/sql-server-workgroup-cluster-fcm-errors/ba-p/371387) when using the Windows Cluster GUI, and as such, you should use PowerShell to create a client access point or the network name for your listener with the following example script:
+
+```powershell
+Add-ClusterResource -Name "IPAddress1" -ResourceType "IP Address" -Group "WGAG" 
+Get-ClusterResource -Name IPAddress1 | Set-ClusterParameter -Multiple @{"Network" = "Cluster Network 1";"Address" = "10.0.0.4";"SubnetMask" = "255.0.0.0";"EnableDHCP" = 0} 
+Add-ClusterResource -Name "IPAddress2" -ResourceType "IP Address" -Group "WGAG" 
+Get-ClusterResource -Name IPAddress2 | Set-ClusterParameter -Multiple @{"Network" = "Cluster Network 2";"Address" = "10.0.0.5";"SubnetMask" = "255.0.0.0";"EnableDHCP" = 0} 
+Add-ClusterResource -Name "TestName" -Group "WGAG" -ResourceType "Network Name" 
+Get-ClusterResource -Name "TestName" | Set-ClusterParameter -Multiple @{"DnsName" = "TestName";"RegisterAllProvidersIP" = 1} 
+Set-ClusterResourceDependency -Resource TestName -Dependency "[IPAddress1] or [IPAddress2]" 
+Start-ClusterResource -Name TestName -Verbose 
+```
+
 
 
 ## Next steps

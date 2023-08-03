@@ -1,26 +1,22 @@
 ---
+title: "Raising and Defining Events in a Data Flow Component"
 description: "Raising and Defining Events in a Data Flow Component"
-title: "Raising and Defining Events in a Data Flow Component | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data flow components [Integration Services], events"
   - "events [Integration Services], custom"
   - "custom events [Integration Services]"
   - "custom data flow components [Integration Services], events"
   - "events [Integration Services], raising"
   - "predefined events [Integration Services]"
-ms.assetid: 1d8c5358-9384-47a8-b7cb-7b0650384119
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
+  - "CSharp"
 ---
 # Raising and Defining Events in a Data Flow Component
 

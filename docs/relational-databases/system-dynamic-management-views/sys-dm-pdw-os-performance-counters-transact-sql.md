@@ -4,12 +4,11 @@ description: sys.dm_pdw_os_performance_counters (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/07/2017"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-ms.assetid: 0673a8f8-8bed-41eb-8959-a9e3e9e03a65
 monikerRange: ">=aps-pdw-2016"
 ---
 # sys.dm_pdw_os_performance_counters (Transact-SQL)

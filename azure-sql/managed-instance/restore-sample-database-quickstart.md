@@ -2,8 +2,8 @@
 title: "Quickstart: Restore a backup (SSMS)"
 titleSuffix: Azure SQL Managed Instance
 description: In this quickstart, learn how to restore a database backup to Azure SQL Managed Instance by using SQL Server Management Studio (SSMS).
-author: MilanMSFT
-ms.author: mlazic
+author: Stralle
+ms.author: strrodic
 ms.reviewer: mathoma, nvraparl
 ms.date: 09/13/2021
 ms.service: sql-managed-instance
@@ -27,7 +27,7 @@ The quickstart restores the Wide World Importers database from a backup file. Yo
 > [!VIDEO https://www.youtube.com/embed/RxWYojo_Y3Q]
 
 > [!NOTE]
-> - For more information on migration using Azure Database Migration Service, see [Tutorial: Migrate SQL Server to an Azure Managed Instance using Database Migration Service](/azure/dms/tutorial-sql-server-to-managed-instance).
+> - For more information on migration using Azure Database Migration Service, see [Tutorial: Migrate SQL Server to an Azure SQL Managed Instance using Database Migration Service](/azure/dms/tutorial-sql-server-to-managed-instance).
 > - For more information on various migration methods, see [SQL Server to Azure SQL Managed Instance Guide](../migration-guides/managed-instance/sql-server-to-managed-instance-guide.md).
 
 ## Prerequisites

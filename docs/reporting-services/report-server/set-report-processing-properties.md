@@ -1,23 +1,20 @@
 ---
-title: "Set Report Processing Properties | Microsoft Docs"
+title: "Set Report Processing Properties"
 description: Learn about report execution properties in Report Server that control how reports are processed and how to set them for each report by using the web portal.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 06/10/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server
-
-
+ms.service: reporting-services
+ms.subservice: report-server
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "on-demand reports"
   - "report processing [Reporting Services], execution properties"
   - "snapshots [Reporting Services], running reports from"
   - "cached reports [Reporting Services]"
   - "report snapshots [Reporting Services], running reports from"
   - "report execution snapshots [Reporting Services]"
-ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Set Report Processing Properties
   Report execution properties control how a report is processed. Execution properties must be set for each report individually.  

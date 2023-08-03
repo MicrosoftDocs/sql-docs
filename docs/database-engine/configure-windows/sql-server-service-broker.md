@@ -4,8 +4,8 @@ description: Learn about Service Broker. See how it provides native support for 
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/07/2021"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 f1_keywords:
   - "SQL13.SWB.SSBMSGTYPEPROPERTIES.GENERAL.F1"
@@ -110,7 +110,7 @@ Service broker is enabled by default and cannot be disabled. The following ALTER
 - `ENABLE_BROKER`
 - `DISABLE_BROKER`
 
-No significant changes were introduced in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  The following changes were introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. 
+No significant changes were introduced in [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)].  The following changes were introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. 
 
 ### Messages can be sent to multiple target services (multicast)  
  The syntax of the [SEND &#40;Transact-SQL&#41;](../../t-sql/statements/send-transact-sql.md) statement has been extended to enable multicast by supporting multiple conversation handles.  

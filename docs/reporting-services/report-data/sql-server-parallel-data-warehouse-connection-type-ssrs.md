@@ -1,25 +1,22 @@
 ---
-title: "SQL Server Parallel Data Warehouse Connection Type | Microsoft Docs"
+title: "SQL Server Parallel Data Warehouse Connection Type"
 description: Use the information in this article about the SQL Server Parallel Data Warehouse connection type to learn how to build a data source.
-ms.date: 05/30/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-data
-
-
-ms.topic: conceptual
-ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 05/30/2017
+ms.service: reporting-services
+ms.subservice: report-data
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # SQL Server Parallel Data Warehouse Connection Type (SSRS)
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] is a scalable data warehouse appliance that delivers performance and scalability through massively parallel processing. [!INCLUDE[ssDW](../../includes/ssdw-md.md)] uses SQL Server databases for distributed processing and data storage.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] is a scalable data warehouse appliance that delivers performance and scalability through massively parallel processing. [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] uses SQL Server databases for distributed processing and data storage.  
   
- The appliance partitions large database tables across multiple physical nodes, with each node running its own instance of SQL Server. When a report connects to [!INCLUDE[ssDW](../../includes/ssdw-md.md)] to retrieve report data, it connects to the control node, which manages query processing, in the [!INCLUDE[ssDW](../../includes/ssdw-md.md)] appliance. After the connection is made, there are no differences between working with an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is and is not within a [!INCLUDE[ssDW](../../includes/ssdw-md.md)] environment.  
+ The appliance partitions large database tables across multiple physical nodes, with each node running its own instance of SQL Server. When a report connects to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] to retrieve report data, it connects to the control node, which manages query processing, in the [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] appliance. After the connection is made, there are no differences between working with an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is and is not within a [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] environment.  
   
- To include data from [!INCLUDE[ssDW](../../includes/ssdw-md.md)] in your report, you must have a dataset that is based on a report data source of type [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Parallel Data Warehouse. This built-in data source type is based on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Parallel Data Warehouse data extension. Use this data source type to connect to and retrieve data from [!INCLUDE[ssDW](../../includes/ssdw-md.md)].  
+ To include data from [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] in your report, you must have a dataset that is based on a report data source of type [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Parallel Data Warehouse. This built-in data source type is based on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Parallel Data Warehouse data extension. Use this data source type to connect to and retrieve data from [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].  
   
  This data extension supports multivalued parameters, server aggregates, and credentials managed separately from the connection string.  
    
@@ -27,18 +24,18 @@ ms.author: maggies
  Use the information in this topic to build a data source. For step-by-step instructions, see [Add and Verify a Data Connection &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
 ##  <a name="Connection"></a> Connection String  
- When you connect to [!INCLUDE[ssDW](../../includes/ssdw-md.md)], you are connecting to a database object within a [!INCLUDE[ssDW](../../includes/ssdw-md.md)] appliance. You specify the database object to use in the query designer. If you do not specify a database in the connection string, you connect to the default database that the administrator assigned to you. Contact your database administrator for connection information and for the credentials to use to connect to the data source. The following connection string example specifies the sample database, **CustomerSales**, in the [!INCLUDE[ssDW](../../includes/ssdw-md.md)] appliance:  
+ When you connect to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], you are connecting to a database object within a [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] appliance. You specify the database object to use in the query designer. If you do not specify a database in the connection string, you connect to the default database that the administrator assigned to you. Contact your database administrator for connection information and for the credentials to use to connect to the data source. The following connection string example specifies the sample database, **CustomerSales**, in the [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] appliance:  
   
 ```  
 HOST=<IP address>; database= CustomerSales; port=<port>  
 ```  
   
- In addition, you use the **Data Sources Properties** dialog box to provide credentials such as user name and password, The `User Id` and `Password` options are automatically appended to the connection string, you do not need to type them as part of the connection string. The user interface also provides options to specify the IP address of the control node in the [!INCLUDE[ssDW](../../includes/ssdw-md.md)] appliance and the port number. By default, the port is 17000. The port is configurable by an administrator and your connection string might use a different port number.  
+ In addition, you use the **Data Sources Properties** dialog box to provide credentials such as user name and password, The `User Id` and `Password` options are automatically appended to the connection string, you do not need to type them as part of the connection string. The user interface also provides options to specify the IP address of the control node in the [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] appliance and the port number. By default, the port is 17000. The port is configurable by an administrator and your connection string might use a different port number.  
   
  For more information about connection string examples, see [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
 ##  <a name="Credentials"></a> Credentials  
- [!INCLUDE[ssDW](../../includes/ssdw-md.md)] provides its own security technology to implement and store user names and passwords. You cannot use Windows Authentication. If you attempt to connect to [!INCLUDE[ssDW](../../includes/ssdw-md.md)] using Windows Authentication an error occurs.  
+ [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] provides its own security technology to implement and store user names and passwords. You cannot use Windows Authentication. If you attempt to connect to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] using Windows Authentication an error occurs.  
   
  Credentials must be sufficient to access the database. Depending on your query, you might need other permissions, such as sufficient permissions to access tables and views. The owner of the external data source must configure credentials that are sufficient to provide read-only access to the database objects that you need.  
   
@@ -68,18 +65,18 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
 -   [Text](#QueryText)  
   
- You use [!INCLUDE[DWsql](../../includes/dwsql-md.md)] with [!INCLUDE[ssDW](../../includes/ssdw-md.md)] and [!INCLUDE[tsql](../../includes/tsql-md.md)] with SQL Server. The two dialects of the SQL language are very similar. Queries written for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source connection type can typically be used for the [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] data source connection type.  
+ You use [!INCLUDE[DWsql](../../includes/dwsql-md.md)] with [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[tsql](../../includes/tsql-md.md)] with SQL Server. The two dialects of the SQL language are very similar. Queries written for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source connection type can typically be used for the [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] data source connection type.  
   
- A query that retrieves report data from a large database, including a data warehouse such as [!INCLUDE[ssDW](../../includes/ssdw-md.md)], might generate a result set that has a very large number of rows unless you aggregate and summarize data to reduce the number of rows that the query returns. You can write queries that include aggregates and grouping by using either the graphical or text-based query designer.  
+ A query that retrieves report data from a large database, including a data warehouse such as [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], might generate a result set that has a very large number of rows unless you aggregate and summarize data to reduce the number of rows that the query returns. You can write queries that include aggregates and grouping by using either the graphical or text-based query designer.  
   
  [!INCLUDE[DWsql](../../includes/dwsql-md.md)] support the clause, keyword, and aggregates that the query designer provides to summarize data.  
   
- The graphical query designer used by [!INCLUDE[ssDW](../../includes/ssdw-md.md)] provides built-in support for grouping and aggregates to help you write queries that retrieve only summary data. The [!INCLUDE[DWsql](../../includes/dwsql-md.md)] language features are: the GROUP BY clause, DISTINCT keyword, and aggregates such as SUM and COUNT. The text-based query designer provides full support for the [!INCLUDE[DWsql](../../includes/dwsql-md.md)] language, including grouping and aggregates.  
+ The graphical query designer used by [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] provides built-in support for grouping and aggregates to help you write queries that retrieve only summary data. The [!INCLUDE[DWsql](../../includes/dwsql-md.md)] language features are: the GROUP BY clause, DISTINCT keyword, and aggregates such as SUM and COUNT. The text-based query designer provides full support for the [!INCLUDE[DWsql](../../includes/dwsql-md.md)] language, including grouping and aggregates.  
   
  For more information about [!INCLUDE[tsql](../../includes/tsql-md.md)], see [Transact-SQL Reference &#40;Database Engine&#41;](../../t-sql/language-reference.md).  
   
 ###  <a name="QueryText"></a> Using Query Type Text  
- In the text-based query designer, you type [!INCLUDE[DWsql](../../includes/dwsql-md.md)] commands to define the data in a dataset. The queries that you use to retrieve data from [!INCLUDE[ssDW](../../includes/ssdw-md.md)] are the same as ones you use to retrieve data from instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are not running within a [!INCLUDE[ssDW](../../includes/ssdw-md.md)] application. For example, the following [!INCLUDE[DWsql](../../includes/dwsql-md.md)] query selects the names of all employees who are marketing assistants:  
+ In the text-based query designer, you type [!INCLUDE[DWsql](../../includes/dwsql-md.md)] commands to define the data in a dataset. The queries that you use to retrieve data from [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] are the same as ones you use to retrieve data from instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are not running within a [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] application. For example, the following [!INCLUDE[DWsql](../../includes/dwsql-md.md)] query selects the names of all employees who are marketing assistants:  
   
 ```  
 SELECT  

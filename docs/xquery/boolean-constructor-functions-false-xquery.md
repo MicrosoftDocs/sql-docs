@@ -1,24 +1,20 @@
 ---
-title: "false Function (XQuery) | Microsoft Docs"
+title: "false Function (XQuery)"
 description: Learn about the false() function that returns the boolean value False.
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: sql
-ms.reviewer: ""
-ms.technology: xml
-ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "false function"
-  - "fn:false function"
-ms.assetid: 577d84c1-9285-4580-b6f5-86fbc4827547
 author: "rothja"
 ms.author: "jroth"
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: xml
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "false function"
+  - "fn:false function"
+dev_langs:
+  - "XML"
 ---
 # Boolean Constructor Functions - false (XQuery)
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   Returns the xs:boolean value False. This is equivalent to `xs:boolean("0")`.  
   

@@ -4,9 +4,8 @@ description: sysreplicationalerts (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "sysreplicationalerts_TSQL"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "sysreplicationalerts system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 6ed15828-8cca-4cf0-b2ff-1ecd0d8db11a
 ---
 # sysreplicationalerts (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

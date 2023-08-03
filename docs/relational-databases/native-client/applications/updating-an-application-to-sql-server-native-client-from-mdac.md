@@ -1,29 +1,32 @@
 ---
 title: "Update from MDAC"
 description: Upgrade from Windows Data Access Components to SQL Server Native Client, which exposes new features of SQL Server 2005 with backward compatibility.
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: native-client
+ms.service: sql
+ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MDAC [SQL Server]"
   - "SQLNCLI, vs. MDAC"
   - "SQL Server Native Client, vs. MDAC"
   - "data access [SQL Server Native Client], vs. MDAC"
   - "SQL Server Native Client, updating applications"
-ms.assetid: 2860efdd-c59a-4deb-8a0e-5124a8f4e6dd
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Updating an Application to SQL Server Native Client from MDAC
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
+> [!IMPORTANT] 
+> [!INCLUDE[snac-removed-oledb-and-odbc](../../../includes/snac-removed-oledb-and-odbc.md)]
+
   There are a number of differences between [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client and Microsoft Data Access Components (MDAC; starting with Windows Vista, the data access components are now called Windows Data Access Components, or Windows DAC). Although both provide native data access to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] databases, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client has been specifically designed to expose the new features of [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], while at the same time maintaining backward compatibility with earlier versions.  
   
- The information in this topic helps update your MDAC (or Windows DAC) application to be current with the version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client that was included in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. To help you make this application be current with the version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client that shipped in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], see [Updating an Application from SQL Server 2005 Native Client](../../../relational-databases/native-client/applications/updating-an-application-from-sql-server-2005-native-client.md).  
+ The information in this topic helps update your MDAC (or Windows DAC) application to be current with the version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client that was included in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. To help you make this application be current with the version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client that shipped in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], see [Updating an Application from SQL Server 2005 Native Client](../../../relational-databases/native-client/applications/updating-an-application-from-sql-server-2005-native-client.md).  
+
+ > [!NOTE]  
+ > [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client has been removed from [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)].
   
  In addition, although MDAC contains components for using OLE DB, ODBC, and ActiveX Data Objects (ADO), [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client only implements OLE DB and ODBC (although ADO can access the functionality of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client).  
   

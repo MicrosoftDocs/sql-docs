@@ -8,9 +8,7 @@ ms.date: "03/23/2022"
 ms.service: sql-database
 ms.subservice: security
 ms.topic: how-to
-ms.custom:
-  - "azure-synapse"
-  - "subject-rbac-steps"
+ms.custom: azure-synapse, subject-rbac-steps, devx-track-arm-template, devx-track-azurepowershell
 ---
 # Write audit to a storage account behind VNet and firewall
 [!INCLUDE[appliesto-sqldb-asa](../includes/appliesto-sqldb-asa.md)]
@@ -39,10 +37,9 @@ For audit to write to a storage account behind a VNet or firewall, the following
 > * The storage account must be on the same tenant and at the same location as the [logical SQL server](logical-servers.md) (it's OK to be on different subscriptions).
 > * The Azure Storage account requires `Allow trusted Microsoft services to access this storage account`. Set this on the Storage Account **Firewalls and Virtual networks**.
 > * You must have `Microsoft.Authorization/roleAssignments/write` permission on the selected storage account. For more information, see [Azure built-in roles](/azure/role-based-access-control/built-in-roles).
-> * **User managed identity authentication** type for enabling auditing to storage behind firewall is not currently supported.
 
 > [!NOTE]
-> When Auditing to stoarge account is already enabled on a server / db, and if the target storage account is moved behind a firewall, we lose write access to 
+> When Auditing to storage account is already enabled on a server / db, and if the target storage account is moved behind a firewall, we lose write access to 
 the storage account and audit logs stop getting written to it.To make auditing work we have to resave the audit settings from portal. 
    
 

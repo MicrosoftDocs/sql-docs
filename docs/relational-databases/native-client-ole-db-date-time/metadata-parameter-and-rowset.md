@@ -1,23 +1,17 @@
 ---
-description: "Metadata - Parameter and Rowset in SQL Server Native Client"
 title: Parameter and rowset metadata (Native Client OLE DB provider)
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: 
-
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "metadata [OLE DB]"
-ms.assetid: 31b318a4-20e7-4db0-b367-eb9938859029
+description: "Metadata - Parameter and Rowset in SQL Server Native Client"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.topic: "reference"
+helpviewer_keywords:
+  - "metadata [OLE DB]"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Metadata - Parameter and Rowset in SQL Server Native Client
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   This topic provides information about the following type and type members, related to the OLE DB date and time enhancements.  
   
@@ -45,7 +39,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  Notice that in some cases value ranges are not continuous. This is due to the addition of a decimal point when fractional precision is greater than zero.  
   
- DBPARAMFLAGS_SS_ISVARIABLESCALE is only valid when connected to a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (or later) server. DBPARAMFLAGS_SS_ISVARIABLESCALE is never set when connected to down-level servers.  
+ DBPARAMFLAGS_SS_ISVARIABLESCALE is only valid when connected to a [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] (or later) server. DBPARAMFLAGS_SS_ISVARIABLESCALE is never set when connected to down-level servers.  
   
 ## ICommandWithParameters::SetParameterInfo and Implied Parameter Types  
  The information provided in the DBPARAMBINDINFO structure must conform to the following:  
@@ -63,7 +57,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  The *bPrecision* parameter is ignored.  
   
- "DBPARAMFLAGS_SS_ISVARIABLESCALE" is ignored when sending data to the server. Applications can force the use of legacy tabular-data stream (TDS) types by using the provider-specific type names "**datetime**" and "**smalldatetime**". When connected to [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (or later) servers, "**datetime2**" format will be used and an implicit server conversion will occur, if necessary, when the type name is "**datetime2**" or "DBTYPE_DBTIMESTAMP". *bScale* is ignored if the provider specific type names "**datetime**" or "**smalldatetime**" are used. Otherwise, appications must ensure that *bScale* is set correctly. Applications upgraded from MDAC and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client from [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] that use "DBTYPE_DBTIMESTAMP" will fail if they do not set *bScale* correctly. When connected to server instances earlier than [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], a *bScale* value other than 0 or 3 with "DBTYPE_DBTIMESTAMP" is an error and E_FAIL will be returned.  
+ "DBPARAMFLAGS_SS_ISVARIABLESCALE" is ignored when sending data to the server. Applications can force the use of legacy tabular-data stream (TDS) types by using the provider-specific type names "**datetime**" and "**smalldatetime**". When connected to [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] (or later) servers, "**datetime2**" format will be used and an implicit server conversion will occur, if necessary, when the type name is "**datetime2**" or "DBTYPE_DBTIMESTAMP". *bScale* is ignored if the provider specific type names "**datetime**" or "**smalldatetime**" are used. Otherwise, appications must ensure that *bScale* is set correctly. Applications upgraded from MDAC and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client from [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] that use "DBTYPE_DBTIMESTAMP" will fail if they do not set *bScale* correctly. When connected to server instances earlier than [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], a *bScale* value other than 0 or 3 with "DBTYPE_DBTIMESTAMP" is an error and E_FAIL will be returned.  
   
  When ICommandWithParameters::SetParameterInfo is not called, the provider imples the server type from the binding type as specified in IAccessor::CreateAccessor as follows:  
   
@@ -108,7 +102,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  A new flag DBCOLUMNFLAGS_SS_ISVARIABLESCALE is provided in DBCOLUMN_FLAGS to allow an application to determine the server type of columns, where DBCOLUMN_TYPE is DBTYPE_DBTIMESTAMP. DBCOLUMN_SCALE or DBCOLUMN_DATETIMEPRECISION must also be used to identify the server type.  
   
- DBCOLUMNFLAGS_SS_ISVARIABLESCALE is only valid when connected to a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (or later) server. DBCOLUMNFLAGS_SS_ISVARIABLESCALE is undefined when connected to down-level servers.  
+ DBCOLUMNFLAGS_SS_ISVARIABLESCALE is only valid when connected to a [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] (or later) server. DBCOLUMNFLAGS_SS_ISVARIABLESCALE is undefined when connected to down-level servers.  
   
 ## IColumnsInfo::GetColumnInfo  
  DBCOLUMNINFO structure returns the following information:  

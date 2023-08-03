@@ -1,20 +1,17 @@
 ---
 title: "SQL Server, Availability Group object"
-description: Learn about SQLServer:Availability Group performance object, which contains performance counters about Always On availability groups.
-ms.custom: ""
+description: "Learn about SQLServer:Availability Group performance object, which contains performance counters about Always On availability groups."
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "07/12/2021"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: performance
+ms.service: sql
+ms.subservice: performance
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "performance counters [SQL Server], AlwaysOn Availability Groups"
   - "SQLServer:Availability Group"
   - "Availability Groups [SQL Server], performance counters"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # SQL Server, Availability Group object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

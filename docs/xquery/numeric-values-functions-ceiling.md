@@ -1,24 +1,20 @@
 ---
-title: "ceiling Function (XQuery) | Microsoft Docs"
+title: "ceiling Function (XQuery)"
 description: Learn how to use the XQuery ceiling() function to return the smallest number without a fractional part that is not less than the value of the function argument.
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: sql
-ms.reviewer: ""
-ms.technology: xml
-ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "fn:ceiling function"
-  - "ceiling function [XQuery]"
-ms.assetid: 594f1dd0-3c27-41b3-b809-9ce6714c5a97
 author: "rothja"
 ms.author: "jroth"
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: xml
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "fn:ceiling function"
+  - "ceiling function [XQuery]"
+dev_langs:
+  - "XML"
 ---
 # Numeric Values Functions - ceiling 
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   Returns the smallest number without a fractional part and that is not less than the value of its argument. If the argument is an empty sequence, it returns the empty sequence.  
   

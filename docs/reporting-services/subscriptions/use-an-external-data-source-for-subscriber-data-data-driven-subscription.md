@@ -1,23 +1,20 @@
 ---
-title: "Use an External Data Source for Subscriber Data (Data-Driven Subscription) | Microsoft Docs"
+title: "Use an External Data Source for Subscriber Data (Data-Driven Subscription)"
 description: Learn to use an external data source for a dynamic data-driven subscription. Understand data processing, querying, delivery options, and parameter passing.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: subscriptions
-
-
+ms.service: reporting-services
+ms.subservice: subscriptions
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "subscriber data sources [Reporting Services]"
   - "subscriptions [Reporting Services], external data sources"
   - "query-based subscriptions [Reporting Services]"
   - "external data sources [Reporting Services]"
   - "data-driven subscriptions"
   - "data sources [Reporting Services], subscriptions"
-ms.assetid: 1cade8ec-729c-4df8-a428-e75c9ad86369
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Use an External Data Source for Subscriber Data (Data-Driven Subscription)
   In a data-driven subscription, dynamic subscription data is provided by a query or command that retrieves data from an external data source. Subscription data can be retrieved from any supported data source that meets the requirements for data-driven subscription processing. The query or command syntax must be valid for a data processing extension installed with your report server.  

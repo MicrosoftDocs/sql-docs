@@ -4,8 +4,8 @@ description: "Learn how to use FormatDecimals and DecimalPlaces options to forma
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "08/10/2020"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
   - "formatting, decimal types, money values"

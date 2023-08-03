@@ -1,11 +1,13 @@
 ---
 title: dta utility
 description: The dta utility is a command prompt version of Database Engine Tuning Advisor that allows you to use functionality in applications and scripts.
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: tools-other
+author: markingmyname
+ms.author: maghan
+ms.date: 05/11/2021
+ms.service: sql
+ms.subservice: tools-other
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "physical design structures [SQL Server]"
   - "command prompt utilities [SQL Server], dta"
   - "dta utility"
@@ -15,11 +17,6 @@ helpviewer_keywords:
   - "performance [SQL Server], Database Engine Tuning Advisor"
   - "Database Engine Tuning Advisor [SQL Server], command prompt"
   - "optimizing databases [SQL Server]"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 05/11/2021
 ---
 
 # dta utility
@@ -29,7 +26,7 @@ ms.date: 05/11/2021
 The **dta** utility is the command prompt version of Database Engine Tuning Advisor. The **dta** utility is designed to allow you to use Database Engine Tuning Advisor functionality in applications and scripts.  
   
 > [!NOTE]
-> The Database Engine Tuning Advisor is not supported for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] or [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]. Instead, consider the strategies recommended in [Monitoring and performance tuning in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/monitor-tune-overview). For [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], see also the [Database Advisor performance recommendations for Azure SQL Database](/azure/azure-sql/database/database-advisor-implement-performance-recommendations).
+> The Database Engine Tuning Advisor is not supported for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] or [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]. Instead, consider the strategies recommended in [Monitoring and performance tuning in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/monitor-tune-overview). For [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], see also the [Database Advisor performance recommendations for Azure SQL Database](/azure/azure-sql/database/database-advisor-implement-performance-recommendations).
 
 Like Database Engine Tuning Advisor, the **dta** utility analyzes a workload and recommends physical design structures to improve server performance for that workload. The workload can be a plan cache, a [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] trace file or table, or a [!INCLUDE[tsql](../../includes/tsql-md.md)] script. Physical design structures include indexes, indexed views, and partitioning. After analyzing a workload, the **dta** utility produces a recommendation for the physical design of databases and can generate the necessary script to implement the recommendation. Workloads can be specified from the command prompt with the **-if** or the **-it** argument. You can also specify an XML input file from the command prompt with the **-ix** argument. In that case, the workload is specified in the XML input file.  
   
@@ -139,7 +136,7 @@ dta -d AdventureWorks2012 ...
   
  If you are using an XML input file, you can specify the first database to which **dta** connects by using the **DatabaseToConnect** element that is located under the **TuningOptions** element. For more information, see [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md).  
   
- If you are tuning only one database, the **-d** argument provides functionality that is similar to the **-d** argument in the **sqlcmd** utility, but it does not execute the USE *database_name* statement. For more information, see [sqlcmd Utility](../../tools/sqlcmd-utility.md).  
+ If you are tuning only one database, the **-d** argument provides functionality that is similar to the **-d** argument in the **sqlcmd** utility, but it does not execute the USE *database_name* statement. For more information, see [sqlcmd Utility](../sqlcmd/sqlcmd-utility.md).  
   
  **-E**  
  Uses a trusted connection instead of requesting a password. Either the **-E** argument or the **-U** argument, which specifies a login ID, must be used.  

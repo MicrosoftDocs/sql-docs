@@ -1,14 +1,12 @@
 ---
-description: "Move System Databases"
 title: "Move System Databases"
-ms.custom: ""
+description: "Move System Databases"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "02/24/2022"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
+ms.service: sql
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "moving system databases"
   - "disaster recovery [SQL Server], moving database files"
   - "database files [SQL Server], moving"
@@ -25,8 +23,6 @@ helpviewer_keywords:
   - "model database [SQL Server], moving"
   - "Resource database [SQL Server]"
   - "databases [SQL Server], moving"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # Move system databases
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -108,7 +104,7 @@ If the `msdb` database is moved and [Database Mail](../../relational-databases/d
 2.  Verify that Database Mail is working by sending a test mail.  
   
 ##  <a name="Failure"></a> Failure Recovery Procedure  
- If a file must be moved because of a hardware failure, follow these steps to relocate the file to a new location. This procedure applies to all system databases except the `master` and `Resource` databases. The following examples use the Windows command-line prompt and [sqlcmd Utility](../../ssms/scripting/sqlcmd-use-the-utility.md).  
+ If a file must be moved because of a hardware failure, follow these steps to relocate the file to a new location. This procedure applies to all system databases except the `master` and `Resource` databases. The following examples use the Windows command-line prompt and [sqlcmd Utility](../../tools/sqlcmd/sqlcmd-use-utility.md).  
   
 > [!IMPORTANT]  
 >  If the database cannot be started, if it is in suspect mode or in an unrecovered state, only members of the sysadmin fixed role can move the file.  
@@ -148,9 +144,9 @@ If the `msdb` database is moved and [Database Mail](../../relational-databases/d
     sqlcmd -S localhost\instancename
     ```
 
-    For more information on **sqlcmd** syntax, see [sqlcmd utility](../../tools/sqlcmd-utility.md). 
+    For more information on **sqlcmd** syntax, see [sqlcmd utility](../../tools/sqlcmd/sqlcmd-utility.md). 
     
-    For each file to be moved, use **sqlcmd** commands or [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to run the following statement. For more information about using the **sqlcmd** utility, see [Use the sqlcmd Utility](../../ssms/scripting/sqlcmd-use-the-utility.md). Once the **sqlcmd** session is open, run the following statement once for each file to be moved:
+    For each file to be moved, use **sqlcmd** commands or [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to run the following statement. For more information about using the **sqlcmd** utility, see [Use the sqlcmd Utility](../../tools/sqlcmd/sqlcmd-use-utility.md). Once the **sqlcmd** session is open, run the following statement once for each file to be moved:
 
     ```cmd  
     ALTER DATABASE database_name MODIFY FILE( NAME = logical_name , FILENAME = 'new_path\os_file_name' )  
@@ -207,7 +203,7 @@ If the `msdb` database is moved and [Database Mail](../../relational-databases/d
 
 8.  Stop the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by right-clicking the instance name and choosing **Stop**.  
   
-9.  Copy the master.mdf and mastlog.ldf files to the new location.  
+9.  Copy the `master.mdf` and `mastlog.ldf` files to the new location.  
   
 10. Restart the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -215,15 +211,15 @@ If the `msdb` database is moved and [Database Mail](../../relational-databases/d
   
     ```sql  
     SELECT name, physical_name AS CurrentLocation, state_desc  
-    FROM sys.master_files  
+    FROM sys.master_files
     WHERE database_id = DB_ID('master');  
     ```  
 
-12. At this point [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should run normally. However Microsoft recommends also adjusting the registry entry at `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\instance_ID\Setup`, where *instance_ID* is like `MSSQL13.MSSQLSERVER`. In that hive, change the `SQLDataRoot` value to the new path. Failure to update the registry can cause patching and upgrading to fail.
+12. At this point [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should run normally. However Microsoft recommends also adjusting the registry entry at `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\instance_ID\Setup`, where *instance_ID* is like `MSSQL13.MSSQLSERVER`. In that hive, change the `SQLDataRoot` value to the new path of the new location of the `master` database files. Failure to update the registry can cause patching and upgrading to fail.
 
 13. Since in Step 9 you copied the database files instead of moving them, now you can safely delete the unused database files from their previous location. 
   
-##  <a name="Resource"></a> Moving the Resource Database  
+##  <a name="Resource"></a> Moving the Resource database  
  The location of the `Resource` database is `\<*drive*>:\Program Files\Microsoft SQL Server\MSSQL\<version>.\<*instance_name*>\MSSQL\Binn\\`. The database cannot be moved.  
   
 ##  <a name="Follow"></a> Follow-up: After moving all system databases  
@@ -236,12 +232,14 @@ If you have moved all of the system databases to a new drive or volume or to ano
   
 #### Change the SQL Server Agent Log Path  
   
+If you have moved all of the system databases to a new volume or have migrated to another server with a different drive letter, and the path of the SQL Agent error log file `SQLAGENT.OUT` no longer exists, make the following updates.
+  
 1.  From SQL Server Management Studio, in **Object Explorer**, expand **SQL Server Agent**.  
   
 2.  Right-click **Error Logs** and select **Configure**.  
   
 3.  In the **Configure SQL Server Agent Error Logs** dialog box, specify the new location of the SQLAGENT.OUT file. The default location is `C:\Program Files\Microsoft SQL Server\MSSQL\<version>.<instance_name>\MSSQL\Log\\`.  
-  
+
 #### Change the database default location  
   
 1.  From SQL Server Management Studio, in **Object Explorer**, connect to the desired [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. Right-click the instance and select **Properties**.  
@@ -316,5 +314,4 @@ If you have moved all of the system databases to a new drive or volume or to ano
 - [Move Database Files](../../relational-databases/databases/move-database-files.md)   
 - [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
 - [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
-- [Rebuild System Databases](../../relational-databases/databases/rebuild-system-databases.md)  
-   
+- [Rebuild System Databases](../../relational-databases/databases/rebuild-system-databases.md)

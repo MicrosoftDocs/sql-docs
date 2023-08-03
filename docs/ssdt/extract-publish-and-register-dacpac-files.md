@@ -1,24 +1,22 @@
 ---
 title: Extract, Publish, and Register .dacpac Files
 description: "Learn about actions that you can take with data-tier applications (DACs). Examples include extracting, publishing, and registering snapshot (.dacpac) files."
-ms.prod: sql
-ms.technology: ssdt
+author: markingmyname
+ms.author: maghan
+ms.date: 02/09/2017
+ms.service: sql
+ms.subservice: ssdt
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql.data.tools.DacTableChooser"
   - "sql.data.tools.DacPublishDialog"
   - "sql.data.tools.DacPropertiesDialog"
   - "sql.data.tools.DacExtractDialog"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: “”
-ms.custom: seo-lt-2019
-ms.date: 02/09/2017
 ---
 
 # Extract, Publish, and Register .dacpac Files
 
-This topic describes four procedures that you can perform by right clicking a connected database in SQL Server Object Explorer:  
+This topic describes four procedures that you can perform by right-clicking a connected database in SQL Server Object Explorer:  
   
 -   Publish Data-tier Application  
   

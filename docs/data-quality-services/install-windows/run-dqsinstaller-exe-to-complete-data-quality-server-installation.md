@@ -4,14 +4,13 @@ description: Learn how to run the DQSInstaller.exe to complete an installation o
 author: swinarko
 ms.author: sawinark
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.technology: data-quality-services
+ms.service: sql
+ms.subservice: data-quality-services
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 # Run DQSInstaller.exe to Complete Data Quality Server Installation
 
-[!INCLUDE [SQL Server - Windows only ](../../includes/applies-to-version/sql-windows-only.md)]
+[!INCLUDE [SQL Server - Windows only](../../includes/applies-to-version/sql-windows-only.md)]
 
   To complete the [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] installation, you must run the DQSInstaller.exe file after installing [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. This topic describes how to run the DQSInstaller.exe from the **Start** screen, **Start** menu, Windows Explorer, or Command Prompt; you can choose any of the ways to run the DQSInstaller.exe file.  
   

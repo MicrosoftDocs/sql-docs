@@ -1,23 +1,19 @@
 ---
-title: "OLEDB connection manager | Microsoft Docs"
+title: "OLEDB connection manager"
 description: An OLEDB connection manager enables a package to connect to a data source by using an OLEDB provider.
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "07/19/2021"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.oledbconnection.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "OLEDB connection manager"
   - "data sources [Integration Services], connections"
   - "connection managers [Integration Services], OLEDB"
   - "connections [Integration Services], OLEDB"
-ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
-author: chugugrace
-ms.author: chugu
 ---
 # OLEDB connection manager
 
@@ -84,7 +80,9 @@ Use the **Configure OLEDB Connection Manager** dialog box to add a connection to
 When running SSIS packages on [Azure-SSIS integration runtime (IR) in Azure Data Factory (ADF)](/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime), you can use Azure Active Directory (AAD) authentication with [the specified system/user-assigned managed identity for your ADF](/azure/data-factory/connector-azure-sql-database#managed-identity) to access Azure SQL Database server/Managed Instance. Your Azure-SSIS IR can access and copy data from or to your database by using this managed identity.
 
 > [!NOTE]
->  When you use AAD authentication to access Azure SQL Database server/Managed Instance, you might encounter a problem related to package execution failure or unexpected behavior change. For more information, see [AAD features and limitations](/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations).
+> - When you use user-assigned managed identity, SSIS integration runtime Azure Active Directory authentication needs to be enabled with the same user-assigned managed identity. For more information, see [Enable Azure Active Directory authentication for Azure-SSIS integration runtime](/azure/data-factory/enable-aad-authentication-azure-ssis-ir).
+>  
+> - When you use AAD authentication to access Azure SQL Database server/Managed Instance, you might encounter a problem related to package execution failure or unexpected behavior change. For more information, see [AAD features and limitations](/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations).
 
 To use AAD authentication with the specified system/user-assigned managed identity for your ADF to access Azure SQL Database server, follow these steps:
 

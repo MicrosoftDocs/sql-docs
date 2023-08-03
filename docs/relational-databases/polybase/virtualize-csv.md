@@ -5,8 +5,8 @@ author: HugoMSFT
 ms.author: hudequei 
 ms.reviewer: wiassaf
 ms.date: 07/01/2022
-ms.prod: sql
-ms.technology: polybase
+ms.service: sql
+ms.subservice: polybase
 ms.topic: tutorial
 dev_langs:
   - "TSQL"
@@ -78,7 +78,7 @@ WITH
 )
 ```
 
-## Use OPENROWQUERY to access the data
+## Use OPENROWSET to access the data
 
 In this example the file is named `call_center.csv`, and the data starts on the second row. 
 

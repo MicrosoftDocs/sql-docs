@@ -1,21 +1,18 @@
 ---
-title: "Report Server Content Management (Native Mode) | Microsoft Docs"
+title: "Report Server Content Management (Native Mode)"
 description: Learn about the web portal and the new web portal experience for Reporting Services content management. Manage items through properties and security settings.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 06/14/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server
-
-
+ms.service: reporting-services
+ms.subservice: report-server
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "administering Reporting Services"
   - "published reports [Reporting Services], managing"
   - "report servers [Reporting Services], content management"
   - "content management [Reporting Services]"
-ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Report Server Content Management (SSRS Native Mode)
 In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], content management refers to the management of report server items. All items can be managed independently of each other through properties and security settings. Any item can be moved to a different location in the report server folder namespace. To manage items effectively, you need to know which tasks a content manager performs. Starting in SQL Server 2016 Reporting Services or later (SSRS) CTP 3.2, the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web portal is available. This article will look at the web portal and the new web portal experience.  

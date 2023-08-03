@@ -1,23 +1,16 @@
 ---
+title: "Make Changes to the Tables Selected for Capturing Changes"
 description: "Make Changes to the Tables Selected for Capturing Changes"
-title: "Make Changes to the Tables Selected for Capturing Changes | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "makChanToTab"
-ms.assetid: a309f82a-c6ef-464d-a6ef-df555bfb609a
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "makChanToTab"
 ---
 # Make Changes to the Tables Selected for Capturing Changes
-
-[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
 
   In this dialog box, you can select specific columns from the selected table to capture changes from. You can also edit the **Security Role** and **Capture Instance** information.  
   

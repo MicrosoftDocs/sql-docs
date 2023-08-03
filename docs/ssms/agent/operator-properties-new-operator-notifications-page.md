@@ -1,18 +1,14 @@
 ---
-description: "Operator Properties - New Operator (Notifications Page)"
 title: New Operator (Notifications Page)
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.ag.operator.notifications.f1"
-ms.assetid: d10a381e-b567-4701-aa2d-2db09f62ad81
+description: "Operator Properties - New Operator (Notifications Page)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
 ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.ag.operator.notifications.f1"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 

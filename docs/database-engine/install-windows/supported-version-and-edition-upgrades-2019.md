@@ -3,9 +3,9 @@ title: "Supported version and edition upgrades (SQL Server 2019)"
 description: The supported version and edition upgrades for SQL Server 2019.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 05/24/2022
-ms.prod: sql
-ms.technology: install
+ms.date: 10/20/2022
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
 helpviewer_keywords:
   - "components [SQL Server], adding to existing installations"
@@ -43,7 +43,7 @@ You can upgrade from [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUD
 
 - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4 or later
 - [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 or later
-- [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] SP2 or later
+- [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] RTM or later
 - [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]
 
 The following table lists the supported upgrade scenarios from earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)].
@@ -87,22 +87,22 @@ The following table lists the supported upgrade scenarios from earlier versions 
 
 You can migrate databases from older versions of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] to [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)], as long as the source database compatibility level is `90` or higher. Databases with a compatibility level of `90` (for example, on [!INCLUDE [ssversion2005-md](../../includes/ssversion2005-md.md)]), are automatically upgraded to a compatibility level of `100` when migrated to [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)]. If the compatibility level on the source database is `100` or higher, it will be unchanged on [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)].
 
-For information, see [Azure Database Migration Guide](https://datamigration.microsoft.com/scenario/sql-to-sqlserver).
+For information, see [Azure Database Migration Guide](../../sql-server/migrate/guides/sql-server-to-sql-server-upgrade-guide.md).
 
 The following tips and tools can help you plan and implement your migration.
 
 - **Migration tools.** Migration is supported through [Data Migration Assistant (DMA)](../../dma/dma-overview.md).
 
-- **Backup and restore.** A backup taken on [!INCLUDE [sskatmai-md](../../includes/sskatmai-md.md)] and later, can be restored to [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] without changing its compatibility level, as long as the database backup has a compatibility level of `100` or higher.
+- **Backup and restore.** A backup taken on [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, can be restored to [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] without changing its compatibility level, as long as the database backup has a compatibility level of `100` or higher.
 
   Databases with a compatibility level of `90`, including backups taken on [!INCLUDE [ssversion2005-md](../../includes/ssversion2005-md.md)], are automatically upgraded to a compatibility level of `100` when restored to [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)].
 
-- **Log shipping.** Log shipping is supported if the primary is running [!INCLUDE [sskatmai-md](../../includes/sskatmai-md.md)] SP3 or later, or [!INCLUDE [sskilimanjaro-md](../../includes/sskilimanjaro-md.md)] SP2 or later, and the secondary is running [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)].
+- **Log shipping.** Log shipping is supported if the primary is running [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] SP3 or later, or [!INCLUDE [sql2008r2-md](../../includes/sql2008r2-md.md)] SP2 or later, and the secondary is running [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)].
 
    > [!WARNING]
-   > If an automatic or manual failover happens and the [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] instance becomes primary, [!INCLUDE [sskatmai-md](../../includes/sskatmai-md.md)] or [!INCLUDE [sskilimanjaro-md](../../includes/sskilimanjaro-md.md)] instance becomes secondary and cannot receive changes from primary.
+   > If an automatic or manual failover happens and the [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] instance becomes primary, [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or [!INCLUDE [sql2008r2-md](../../includes/sql2008r2-md.md)] instance becomes secondary and cannot receive changes from primary.
 
-- **Bulk load.** Tables can be bulk copied from [!INCLUDE [sskatmai-md](../../includes/sskatmai-md.md)] or [!INCLUDE [sskilimanjaro-md](../../includes/sskilimanjaro-md.md)] to [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)].
+- **Bulk load.** Tables can be bulk copied from [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or [!INCLUDE [sql2008r2-md](../../includes/sql2008r2-md.md)] to [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)].
 
 ## [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] edition upgrade
 

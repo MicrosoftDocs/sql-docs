@@ -1,22 +1,18 @@
 ---
+title: "Conversions from SQL to C"
 description: "datetime Data Type Conversions from SQL to C"
-title: "Conversions from SQL to C | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "conversions [ODBC], SQL to C"
-ms.assetid: 059431e2-a65c-4587-ba4a-9929a1611e96
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "conversions [ODBC], SQL to C"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # datetime Data Type Conversions from SQL to C
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   The following table lists issues to consider when you convert from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] date/time types to C types.  
   
@@ -36,7 +32,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Symbol|Meaning|  
 |------------|-------------|  
 |OK|No conversion issues.|  
-|1|Rules prior to [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] apply.|  
+|1|Rules prior to [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] apply.|  
 |2|Leading and trailing spaces are ignored.|  
 |3|The string is parsed into a date, time, timezone, or timezoneoffset, and allows up to 9 digits for fractional seconds. If a timezoneoffset is parsed, the time is converted to the client timezone. If an error occurs during this conversion, a diagnostic record is generated with SQLSTATE 22018 and the message "Datetime field overflow".|  
 |4|If the value is not a valid date, timestamp, or timestampoffset value, a diagnostic record is generated with SQLSTATE 22018 and the message "Invalid character value for cast specification".|  

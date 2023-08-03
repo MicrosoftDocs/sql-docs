@@ -1,15 +1,12 @@
 ---
 title: Specify Pre or Post deployment Scripts
 description: Find out how to use pre-deployment and post-deployment scripts to execute Transact-SQL statements before and after the main deployment script runs.
-ms.prod: sql
-ms.technology: ssdt
-ms.topic: conceptual
-ms.assetid: 7f78f517-f13d-4f4b-84b9-e804cb490b2c
 author: markingmyname
 ms.author: maghan
-ms.reviewer: “”
-ms.custom: seo-lt-2019
 ms.date: 02/09/2017
+ms.service: sql
+ms.subservice: ssdt
+ms.topic: conceptual
 ---
 
 # How to: Specify Predeployment or Postdeployment Scripts
@@ -31,13 +28,13 @@ END
   
 1.  In **Solution Explorer**, expand your database project to display the Scripts folder.  
   
-2.  Right click on the Scripts folder and select Add.  
+2.  Right-click on the Scripts folder and select Add.  
   
 3.  Select Scripts in the context menu.  
   
 4.  Select Pre-Deployment Script or Post-Deployment Script. Optionally, specify a non-default name. Click Add to finish.  
   
-5.  Double click the file in the Scripts folder.  
+5.  Double-click the file in the Scripts folder.  
   
     The Transact\-SQL editor opens, displaying the contents of the file.  
   

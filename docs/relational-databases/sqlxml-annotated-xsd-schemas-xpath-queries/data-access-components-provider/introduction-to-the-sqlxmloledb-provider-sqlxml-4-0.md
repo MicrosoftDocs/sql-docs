@@ -4,16 +4,13 @@ description: Learn about the SQLXMLOLEDB Provider, an OLE DB provider that expos
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "SQLXMLOLEDB Provider, properties"
   - "adExecuteStream flag"
   - "SQLXMLOLEDB Provider, about SQLXMLOLEDB Provider"
-ms.assetid: 2e3f3817-4209-4bf4-9f46-248c95bc6f1b
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Introduction to the SQLXMLOLEDB Provider (SQLXML 4.0)

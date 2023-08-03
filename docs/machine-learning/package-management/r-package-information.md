@@ -1,15 +1,12 @@
 ---
 title: Get R package information
 description: Learn how to get information about installed R packages on SQL Server Machine Learning Services and SQL Server R Services.
-ms.custom:
-- event-tier1-build-2022
-ms.prod: sql
-ms.technology: machine-learning
-ms.date: 05/24/2022
-ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-
+ms.date: 05/24/2022
+ms.service: sql
+ms.subservice: machine-learning
+ms.topic: how-to
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 
@@ -126,8 +123,6 @@ In addition, you can add MicrosoftML and olapR packages to a SQL Server instance
 ## Default open-source R packages
 
 R support includes open-source R so that you can call base R functions and install additional open-source and third-party packages. R language support includes core functionality such as **base**, **stats**, **utils**, and others. A base installation of R also includes numerous sample datasets and standard R tools such as **RGui** (a lightweight interactive editor) and **RTerm** (an R command prompt).
-
-The distribution of open-source R included in your installation is [Microsoft R Open (MRO)](https://mran.microsoft.com/open). MRO adds value to base R by including additional open-source packages such as the [Intel Math Kernel Library](https://en.wikipedia.org/wiki/Math_Kernel_Library).
 
 For information on which version of R is included with each SQL Server version, see [Python and R versions](../sql-server-machine-learning-services.md#versions).
 

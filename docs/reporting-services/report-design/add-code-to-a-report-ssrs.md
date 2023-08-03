@@ -1,22 +1,19 @@
 ---
-title: "Add code to a paginated report | Microsoft Docs"
+title: "Add code to a paginated report"
 description: Find out how to call your own custom code for any expression you have in your paginated report in Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
+ms.service: reporting-services
+ms.subservice: report-design
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "code [Reporting Services]"
   - "custom code [Reporting Services]"
   - "expressions [Reporting Services], code"
   - "adding code"
   - "reports [Reporting Services], code"
-ms.assetid: 00ef8fc6-99fe-49b2-8a22-7eb475881dc4
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Add code to a paginated report (Report Builder)
 

@@ -4,9 +4,8 @@ description: sys.sequences (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.sequences_TSQL"
@@ -18,7 +17,6 @@ helpviewer_keywords:
   - "sys.sequences catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 0e1b0e32-1cce-40f7-83c8-860ec660138a
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.sequences (Transact-SQL)

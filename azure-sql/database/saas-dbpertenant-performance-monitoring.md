@@ -8,9 +8,7 @@ ms.date: 01/25/2019
 ms.service: sql-database
 ms.subservice: scenario
 ms.topic: tutorial
-ms.custom:
-  - "seo-lt-2019"
-  - "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 # Monitor and manage performance of Azure SQL Database in a multi-tenant SaaS app
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -44,7 +42,7 @@ Pools, and the databases in pools, should be monitored to ensure they stay withi
 
 ### Performance management strategies
 
-* To avoid having to manually monitor performance, it’s most effective to **set alerts that trigger when databases or pools stray out of normal ranges**.
+* To avoid having to manually monitor performance, it's most effective to **set alerts that trigger when databases or pools stray out of normal ranges**.
 * To respond to short-term fluctuations in the aggregate compute size of a pool, the **pool eDTU level can be scaled up or down**. If this fluctuation occurs on a regular or predictable basis, **scaling the pool can be scheduled to occur automatically**. For example, scale down when you know your workload is light, maybe overnight, or during weekends.
 * To respond to longer-term fluctuations, or changes in the number of databases, **individual databases can be moved into other pools**.
 * To respond to short-term increases in *individual* database load **individual databases can be taken out of a pool and assigned an individual compute size**. Once the load is reduced, the database can then be returned to the pool. When this is known in advance, databases can be moved preemptively to ensure the database always has the resources it needs, and to avoid impact on other databases in the pool. If this requirement is predictable, such as a venue experiencing a rush of ticket sales for a popular event, then this management behavior can be integrated into the application.
@@ -153,7 +151,7 @@ Monitor the increased pool eDTU usage on the upper chart. It takes a few minutes
 1. Adjust the **Pool eDTU** setting to **100**. Changing the pool eDTU does not change the per-database settings (which is still 50 eDTU max per database). You can see the per-database settings on the right side of the **Configure pool** page.
 1. Click **Save** to submit the request to scale the pool.
 
-Go back to **Pool1** > **Overview** to view the monitoring charts. Monitor the effect of providing the pool with more resources (although with few databases and a randomized load it’s not always easy to see conclusively until you run for some time). While you are looking at the charts bear in mind that 100% on the upper chart now represents 100 eDTUs, while on the lower chart 100% is still 50 eDTUs as the per-database max is still 50 eDTUs.
+Go back to **Pool1** > **Overview** to view the monitoring charts. Monitor the effect of providing the pool with more resources (although with few databases and a randomized load it's not always easy to see conclusively until you run for some time). While you are looking at the charts bear in mind that 100% on the upper chart now represents 100 eDTUs, while on the lower chart 100% is still 50 eDTUs as the per-database max is still 50 eDTUs.
 
 Databases remain online and fully available throughout the process. At the last moment as each database is ready to be enabled with the new pool eDTU, any active connections are broken. Application code should always be written to retry dropped connections, and so will reconnect to the database in the scaled-up pool.
 
@@ -209,12 +207,12 @@ This exercise simulates the effect of Contoso Concert Hall experiencing a high l
 8. Click **Apply** to move the database out of the pool and make it a *Standard S3* database.
 9. Once scaling is complete, monitor the effect on the contosoconcerthall database and Pool1 on the elastic pool and database blades.
 
-Once the high load on the contosoconcerthall database subsides you should promptly return it to the pool to reduce its cost. If it’s unclear when that will happen you could set an alert on the database that will trigger when its DTU usage drops below the per-database max on the pool. Moving a database into a pool is described in exercise 5.
+Once the high load on the contosoconcerthall database subsides you should promptly return it to the pool to reduce its cost. If it's unclear when that will happen you could set an alert on the database that will trigger when its DTU usage drops below the per-database max on the pool. Moving a database into a pool is described in exercise 5.
 
 ## Other performance management patterns
 
 **Pre-emptive scaling**
-In the exercise above where you explored how to scale an isolated database, you knew which database to look for. If the management of Contoso Concert Hall had informed Wingtips of the impending ticket sale, the database could have been moved out of the pool preemptively. Otherwise, it would likely have required an alert on the pool or the database to spot what was happening. You wouldn’t want to learn about this from the other tenants in the pool complaining of degraded performance. And if the tenant can predict how long they will need additional resources you can set up an Azure Automation runbook to move the database out of the pool and then back in again on a defined schedule.
+In the exercise above where you explored how to scale an isolated database, you knew which database to look for. If the management of Contoso Concert Hall had informed Wingtips of the impending ticket sale, the database could have been moved out of the pool preemptively. Otherwise, it would likely have required an alert on the pool or the database to spot what was happening. You wouldn't want to learn about this from the other tenants in the pool complaining of degraded performance. And if the tenant can predict how long they will need additional resources you can set up an Azure Automation runbook to move the database out of the pool and then back in again on a defined schedule.
 
 **Tenant self-service scaling**
 Because scaling is a task easily called via the management API, you can easily build the ability to scale tenant databases into your tenant-facing application, and offer it as a feature of your SaaS service. For example, let tenants self-administer scaling up and down, perhaps linked directly to their billing!

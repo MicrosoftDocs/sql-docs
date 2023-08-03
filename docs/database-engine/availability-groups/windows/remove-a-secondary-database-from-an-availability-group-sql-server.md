@@ -4,10 +4,9 @@ description: "Steps to remove a secondary database from an Always On availabilit
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
-ms.custom: seodec18
 f1_keywords:
   - "sql13.swb.availabilitygroup.unjoindb.f1"
 helpviewer_keywords:

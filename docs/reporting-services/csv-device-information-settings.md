@@ -1,19 +1,16 @@
 ---
-title: "CSV Device Information Settings | Microsoft Docs"
+title: "CSV Device Information Settings"
 description: Learn about the CSV device information settings that are available for rendering in text format.
-ms.date: 03/16/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
-
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "CSV [Reporting Services]"
-  - "device information settings [Reporting Services], CSV rendering"
-ms.assetid: f96f83a6-50bc-48ce-9fcd-fd9e1952d40a
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/16/2017
+ms.service: reporting-services
+ms.subservice: reporting-services
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "CSV [Reporting Services]"
+  - "device information settings [Reporting Services], CSV rendering"
 ---
 # CSV Device Information Settings
   The device information settings for the CSV rendering extension allow delimiters and qualifiers to be changed and line break handling to be specified. The extension of the file can also be submitted, as well as the encoding and inclusion of header rows in the output. Because delimiters are likely to be special characters, you should encode them in a CDATA section, if the settings are written as XML.  

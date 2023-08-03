@@ -4,9 +4,8 @@ description: dbo.sysjobactivity (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "08/05/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "dbo.sysjobactivity_TSQL"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sysjobactivity system table"
 dev_langs:
   - "TSQL"
-ms.assetid: fd17cac9-5d1f-4b44-b2dc-ee9346d8bf1e
 ---
 # dbo.sysjobactivity (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

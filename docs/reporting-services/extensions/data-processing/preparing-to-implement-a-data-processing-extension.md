@@ -1,19 +1,16 @@
 ---
-title: "Preparing to Implement a Data Processing Extension | Microsoft Docs"
+title: "Preparing to Implement a Data Processing Extension"
 description: Discover how to implement a data processing extension in Reporting Services. Learn about available interfaces and required and optional functionality.
-ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: extensions
-
-
-ms.topic: reference
-helpviewer_keywords: 
-  - "interfaces [Reporting Services]"
-  - "data processing extensions [Reporting Services], implementing"
-ms.assetid: 698817e4-33da-4eb5-9407-4103e1c35247
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/14/2017
+ms.service: reporting-services
+ms.subservice: extensions
+ms.topic: reference
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "interfaces [Reporting Services]"
+  - "data processing extensions [Reporting Services], implementing"
 ---
 # Preparing to Implement a Data Processing Extension
   Before you implement your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data processing extension, you should define the interfaces to implement. You may want to provide extension-specific implementations of the entire set of interfaces, or you may simply want to focus your implementation on a subset, such as the <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> and <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> interfaces in which clients would interact primarily with a result set as a **DataReader** object and would use your [!INCLUDE[ssRS](../../../includes/ssrs.md)] data processing extension as a bridge between the result set and your data source.  

@@ -4,8 +4,8 @@ description: "IS_OBJECTSIGNED (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/10/2016"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "IS_OBJECTSIGNED"
@@ -20,7 +20,7 @@ dev_langs:
 
   Indicates whether an object is signed by a specified certificate or asymmetric key.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

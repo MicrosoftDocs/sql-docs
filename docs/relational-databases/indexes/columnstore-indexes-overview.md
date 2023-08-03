@@ -4,9 +4,8 @@ description: "An overview on columnstore indexes. Columnstore indexes are the st
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 07/25/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
   - "indexes creation, columnstore"
@@ -18,7 +17,7 @@ helpviewer_keywords:
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Columnstore indexes: Overview
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Columnstore indexes are the standard for storing and querying large data warehousing fact tables. This index uses column-based data storage and query processing to achieve gains up to 10 times the query performance in your data warehouse over traditional row-oriented storage. You can also achieve gains up to 10 times the data compression over the uncompressed data size. Beginning with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1, columnstore indexes enable operational analytics: the ability to run performant real-time analytics on a transactional workload.  
   
@@ -55,7 +54,7 @@ A rowgroup from where all data has been deleted transitions from COMPRESSED into
 > After merging smaller rowgroups, the index quality should be improved. 
 
 > [!NOTE]
-> <a name="bckmergetsk"></a> Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)],  [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)], and dedicated SQL pools in Azure Synapse Analytics, the tuple-mover is helped by a background merge task that automatically compresses smaller OPEN delta rowgroups that have existed for some time as determined by an internal threshold, or merges COMPRESSED rowgroups from where a large number of rows has been deleted. This improves the columnstore index quality over time.         
+> <a name="bckmergetsk"></a> Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)],  [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)], and dedicated SQL pools in Azure Synapse Analytics, the tuple-mover is helped by a background merge task that automatically compresses smaller OPEN delta rowgroups that have existed for some time as determined by an internal threshold, or merges COMPRESSED rowgroups from where a large number of rows has been deleted. This improves the columnstore index quality over time.         
 
 #### Column segment
 A column segment is a column of data from within the rowgroup.  

@@ -4,9 +4,8 @@ description: sys.master_files (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, pdw"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.master_files"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.master_files catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 803b22f2-0016-436b-a561-ce6f023d6b6a
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.master_files (Transact-SQL)
@@ -30,8 +28,8 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azur
 |database_id|**int**|ID of the database to which this file applies. The masterdatabase_id is always 1.|  
 |file_id|**int**|ID of the file within database. The primary file_id is always 1.|  
 |file_guid|**uniqueidentifier**|Unique identifier of the file.<br /><br /> NULL = Database was upgraded from an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Valid for SQL Server 2005 and earlier) .|  
-|type|**tinyint**|File type:<br /><br /> 0 = Rows.<br /><br /> 1 = Log<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = Full-text (Full-text catalogs earlier than [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]; full-text catalogs that are upgraded to or created in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or higher will report a file type 0.)|  
-|type_desc|**nvarchar(60)**|Description of the file type:<br /><br /> ROWS<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT (Full-text catalogs earlier than [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].)|  
+|type|**tinyint**|File type:<br /><br /> 0 = Rows.<br /><br /> 1 = Log<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = Full-text (Full-text catalogs earlier than [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]; full-text catalogs that are upgraded to or created in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or higher will report a file type 0.)|  
+|type_desc|**nvarchar(60)**|Description of the file type:<br /><br /> ROWS<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT (Full-text catalogs earlier than [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)].)|  
 |data_space_id|**int**|ID of the data space to which this file belongs. Data space is a filegroup.<br /><br /> 0 = Log files|  
 |name|**sysname**|Logical name of the file in the database.|  
 |physical_name|**nvarchar(260)**|Operating-system file name.|  
@@ -57,7 +55,7 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azur
 |redo_target_lsn|**numeric(25,0)**|LSN at which the online roll forward on this file can stop.<br /><br /> Is NULL unless state = RESTORING or state = RECOVERY_PENDING.|  
 |redo_target_fork_guid|**uniqueidentifier**|The recovery fork on which the container can be recovered. Paired with redo_target_lsn.|  
 |backup_lsn|**numeric(25,0)**|The LSN of the most recent data or differential backup of the file.|  
-|credential_id|**int**|The `credential_id` from `sys.credentials` used for storing the file. For example, when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running on an Azure Virtual Machine and the database files are stored in Azure blob storage, a credential is configured with the access credentials to the storage location.|  
+|credential_id|**int**|The `credential_id` from `sys.credentials` used for storing the file. For example, when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running on an Azure Virtual Machine and the database files are stored in Azure Blob Storage, a credential is configured with the access credentials to the storage location.|  
   
 > [!NOTE]  
 >  When you drop or rebuild large indexes, or drop or truncate large tables, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] defers the actual page deallocations, and their associated locks, until after the transaction commits. Deferred drop operations do not release allocated space immediately. Therefore, the values returned by sys.master_files immediately after dropping or truncating a large object may not reflect the actual disk space available.  

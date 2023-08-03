@@ -9,9 +9,7 @@ ms.date: 03/01/2022
 ms.service: sql-database
 ms.subservice: high-availability
 ms.topic: how-to
-ms.custom:
-  - "devx-track-azurecli"
-  - "azure-sql-split"
+ms.custom: azure-sql-split, devx-track-azurepowershell
 zone_pivot_groups: azure-sql-deployment-option-single-elastic
 ---
 # Configure an auto-failover group for Azure SQL Database
@@ -52,7 +50,9 @@ Create your failover group and add your single database to it using the Azure po
 
    ![Add new failover group](./media/auto-failover-group-configure-sql-db/sqldb-add-new-failover-group.png)
 
-1. On the **Failover Group** page, enter or select the required values, and then select **Create**.
+1. On the **Failover Group** page, enter or select the required values, and then select **Create**. The failover group must be created in a different region.
+
+
 
    - **Databases within the group**: Choose the database you want to add to your failover group. Adding the database to the failover group will automatically start the geo-replication process.
 
@@ -60,7 +60,7 @@ Create your failover group and add your single database to it using the Azure po
 
 # [PowerShell](#tab/azure-powershell)
 
-Create your failover group and add your database to it using PowerShell.
+Create your failover group and add your database to it using PowerShell. 
 
    ```powershell-interactive
    $subscriptionId = "<SubscriptionID>"

@@ -1,16 +1,13 @@
 ---
-title: "Register a Service Principal Name (SPN) for a Report Server | Microsoft Docs"
+title: "Register a Service Principal Name (SPN) for a Report Server"
 description: Learn how to create an SPN for the Report Server service if it runs as a domain user, if your network uses Kerberos for authentication.
-ms.date: 09/24/2020
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server
-
-
-ms.topic: conceptual
-ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 09/24/2020
+ms.service: reporting-services
+ms.subservice: report-server
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Register a Service Principal Name (SPN) for a Report Server
   If you are deploying [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in a network that uses the Kerberos protocol for mutual authentication, you must create a Service Principal Name (SPN) for the Report Server service if you configure it to run as a domain user account.  

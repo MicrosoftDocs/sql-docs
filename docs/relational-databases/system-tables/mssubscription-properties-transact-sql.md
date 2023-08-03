@@ -4,9 +4,8 @@ description: MSsubscription_properties (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "MSsubscription_properties"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "MSsubscription_properties system table"
 dev_langs:
   - "TSQL"
-ms.assetid: f96fc1ae-b798-4b05-82a7-564ae6ef23b8
 ---
 # MSsubscription_properties (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

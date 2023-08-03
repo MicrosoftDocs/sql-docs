@@ -1,12 +1,12 @@
 ---
 title: "Add Namespaces to Queries with WITH XMLNAMESPACES"
 description: Learn how to add namespaces to queries using the WITH XMLNAMESPACES clause.
-ms.custom: ""
-ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.date: 05/05/2022
+ms.service: sql
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "ELEMENTS XSINIL directive"
@@ -19,8 +19,6 @@ helpviewer_keywords:
   - "namespaces [XML in SQL Server]"
   - "xml data type [SQL Server], WITH XMLNAMESPACES clause"
   - "WITH XMLNAMESPACES clause"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Add namespaces to queries using WITH XMLNAMESPACES
 

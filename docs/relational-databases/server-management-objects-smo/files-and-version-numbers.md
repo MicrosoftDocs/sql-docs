@@ -1,27 +1,21 @@
 ---
+title: "Files and Version Numbers"
 description: "Files and Version Numbers"
-title: "Files and Version Numbers | Microsoft Docs"
-ms.custom: ""
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: "08/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
-
+ms.service: sql
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Management Objects, versions"
   - "components [SMO]"
   - "files [SMO], components"
   - "SMO [SQL Server], versions"
   - "versions [SMO]"
-ms.assetid: 510907b6-e7a9-41bd-b892-d6d99a5118e1
-author: "markingmyname"
-ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Files and Version Numbers
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   All required SQL Server Management Object (SMO) components are included in the Microsoft.SqlServer.SqlManagementObjects NuGet package. SMO is implemented in several managed assemblies. You can develop SMO applications on either a client or a server.  
 

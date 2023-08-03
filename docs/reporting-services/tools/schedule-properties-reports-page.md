@@ -1,18 +1,15 @@
 ---
-title: "Schedule Properties (Reports Page) | Microsoft Docs"
+title: "Schedule Properties (Reports Page)"
 description: Learn about the Reporting Services schedule properties page in SQL Server Management Studio that lists all reports for a specific shared schedule.
-ms.date: 06/30/2016
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: tools
-
-
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.reportserver.scheduleproperties.reports.f1"
-ms.assetid: 7db728bd-4b08-43ef-a49a-e8dcdd37cf89
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 06/30/2016
+ms.service: reporting-services
+ms.subservice: tools
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.swb.reportserver.scheduleproperties.reports.f1"
 ---
 # Schedule Properties (Reports Page)
   Use the [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] schedule properties page in [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] to view a list of all reports that use the specific shared schedule. Schedules can be used to refresh report snapshots, generate report history, trigger a subscription, or expire a cached copy of the report. To find out how the schedule is used, view the property and subscription information of the report.  

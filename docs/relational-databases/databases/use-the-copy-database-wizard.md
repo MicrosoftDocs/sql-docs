@@ -1,14 +1,12 @@
 ---
-description: "Use the Copy Database Wizard"
 title: "Use the Copy Database Wizard"
-ms.custom: ""
-ms.date: "10/21/2021"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
+description: "Use the Copy Database Wizard"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: "04/14/2023"
+ms.service: sql
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.cdw.packageconfiguration.f1"
   - "sql13.swb.cdw.schedule.f1"
   - "sql13.swb.cdw.transfermethod.f1"
@@ -20,11 +18,9 @@ f1_keywords:
   - "sql13.swb.cdw.selectdatabaseobjects.f1"
   - "sql13.swb.cdw.complete.f1"
   - "sql13.swb.cdw.welcome.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Copy Database Wizard"
   - "starting Copy Database Wizard"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # Use the Copy Database Wizard
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -80,7 +76,8 @@ The Copy Database Wizard moves or copies databases and certain server objects ea
 
 > [!WARNING]
 > The **detach and attach** method will cause the source and destination database ownership to become set to the login executing the **Copy Database Wizard**. See [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md) to change the ownership of a database.
-  
+
+- Copy database fails if the `model` database in the destination server contains a user account which also exists in the source database. This creates an expected error, as when the new database is created, the user is automatically added to the new database from the `model`. Then, the copy database steps fail to create the user of the same name on the target database. To prevent, make sure that the `model` database on the target server and the source database of the copy database wizard do not have any users of the same name.
   
 ##  <a name="Prerequisites"></a> Prerequisites  
 -   Ensure that SQL Server Agent is started on the destination server.  
@@ -348,7 +345,7 @@ The following example will move the `Sales` database, a Windows login named `con
 16.    **Post Move Steps**
 Consider executing the following T-SQL statements on the new host, `Server2`:
   
-        ```tsql 
+        ```sql 
         ALTER AUTHORIZATION ON DATABASE::Sales TO sa;
         GO
         ALTER DATABASE Sales 

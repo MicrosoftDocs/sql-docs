@@ -4,9 +4,8 @@ description: You can use the bcp command, BULK INSERT statement, or OPENROWSET(B
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: data-movement
+ms.service: sql
+ms.subservice: data-movement
 ms.topic: conceptual
 helpviewer_keywords:
   - "bulk importing [SQL Server], about bulk importing"

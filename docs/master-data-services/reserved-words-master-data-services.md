@@ -1,23 +1,19 @@
 ---
-description: "Reserved Words (Master Data Services)"
 title: Reserved Words
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "reserved words [Master Data Services]"
-  - "Master Data Services, reserved words"
-ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
+description: "Reserved Words (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "reserved words [Master Data Services]"
+  - "Master Data Services, reserved words"
 ---
 # Reserved Words (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], when you create model objects or members, some words cannot be used. Using these words may cause errors.  
   

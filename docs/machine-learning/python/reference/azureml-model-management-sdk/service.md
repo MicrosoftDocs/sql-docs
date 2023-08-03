@@ -1,32 +1,15 @@
---- 
- 
-# required metadata 
-title: "Service class"
-description: "The Service class is for SQL Machine Learning Services and Machine Learning Server for managing web services." 
-keywords: "" 
-author: WilliamDAssafMSFT
-ms.author: wiassaf 
-manager: "cgronlun" 
-ms.date: "09/20/2017" 
-ms.topic: "reference" 
-ms.prod: "sql"
-ms.technology: "machine-learning-services" 
-ms.service: "" 
-ms.assetid: "" 
- 
-# optional metadata 
-ROBOTS: "" 
-audience: "" 
-ms.devlang: "Python" 
-ms.reviewer: "" 
-ms.suite: "" 
-ms.tgt_pltfrm: "" 
-#ms.technology: "" 
-ms.custom: ""
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
- 
 ---
-
+title: "Service class"
+description: "The Service class is for SQL Machine Learning Services and Machine Learning Server for managing web services."
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: "09/20/2017"
+ms.service: sql
+ms.subservice: "machine-learning-services"
+ms.topic: "reference"
+ms.devlang: Python
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
+---
 # Class Service
 
 
@@ -76,7 +59,7 @@ high of a number because it might negatively impact performance.
 
 ### Returns
 
-The [`Batch`](batch.md) instance to control this service’s
+The [`Batch`](batch.md) instance to control this service's
 batching lifecycle.
 
 
@@ -121,7 +104,7 @@ service:
 
 * *operation_id* - The function `alias`. 
 
-* *swagger* - The API REST endpoint to this service’s *swagger.json* document. 
+* *swagger* - The API REST endpoint to this service's *swagger.json* document. 
 
 
 ### Returns
@@ -152,7 +135,7 @@ The identifier of the batch execution.
 
 ### Returns
 
-The [`Batch`](batch.md) instance to control this service’s
+The [`Batch`](batch.md) instance to control this service's
 batching lifecycle.
 
 

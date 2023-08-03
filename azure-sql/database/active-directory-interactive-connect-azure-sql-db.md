@@ -1,24 +1,24 @@
 ---
 title: ActiveDirectoryInteractive connects to SQL
 description: "C# Code example, with explanations, for connecting to Azure SQL Database by using SqlAuthenticationMethod.ActiveDirectoryInteractive mode."
-author: GithubMirek
-ms.author: MirekS
+author: nofield
+ms.author: nofield
 ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 04/06/2022
 ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual
 ms.custom:
-  - "active directory"
-  - "has-adal-ref"
-  - "sqldbrb=1"
+  - active directory
+  - has-adal-ref
+  - sqldbrb=1
 ---
 # Connect to Azure SQL Database with Azure AD Multi-Factor Authentication
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 This article provides a C# program that connects to Azure SQL Database. The program uses interactive mode authentication, which supports [Azure AD Multi-Factor Authentication](/azure/active-directory/authentication/concept-mfa-howitworks).
 
-For more information about Multi-Factor Authentication support for SQL tools, see [Using multi-factor Azure Active Directory authentication](./authentication-mfa-ssms-overview.md).
+For more information about Multi-Factor Authentication support for SQL tools, see [Using Azure Active Directory Multi-Factor Authentication](./authentication-mfa-ssms-overview.md).
 
 ## Multi-Factor Authentication for Azure SQL Database
 
@@ -36,7 +36,7 @@ For more information about Multi-Factor Authentication support for SQL tools, se
 
 For information about how to configure Azure AD to require Multi-Factor Authentication, see [Getting started with Azure AD Multi-Factor Authentication in the cloud](/azure/active-directory/authentication/howto-mfa-getstarted).
 
-For screenshots of these dialog boxes, see [Configure multi-factor authentication for SQL Server Management Studio and Azure AD](authentication-mfa-ssms-configure.md).
+For screenshots of these dialog boxes, see [Using Azure Active Directory Multi-Factor Authentication](./authentication-mfa-ssms-overview.md).
 
 > [!TIP]
 > You can search .NET Framework APIs with the [.NET API Browser tool page](/dotnet/api/).
@@ -72,9 +72,9 @@ Run SSMS from the same computer, in the same building, where you plan to run the
 
 ### Verify Azure Active Directory Multi-Factor Authentication
 
-Run SSMS again, this time with **Authentication** set to **Azure Active Directory - Universal with MFA**. This option requires SSMS version 17.5 or later.
+Run SSMS again, this time with **Authentication** set to **Azure Active Directory - Universal with MFA**. This option requires SSMS version 18.6 or later.
 
-For more information, see [Configure Multi-Factor Authentication for SSMS and Azure AD](authentication-mfa-ssms-configure.md).
+For more information, see [Using Azure Active Directory Multi-Factor Authentication](./authentication-mfa-ssms-overview.md).
 
 > [!NOTE]
 > If you are a guest user in the database, you also need to provide the Azure AD domain name for the database: Select **Options** > **AD domain name or tenant ID**. If you are running SSMS 18.x or later, the AD domain name or tenant ID is no longer needed for guest users because 18.x or later automatically recognizes it.
@@ -137,4 +137,4 @@ Microsoft SQL Azure (RTM) - 12.0.2000.8
 
 - [Azure Active Directory server principals](authentication-azure-ad-logins.md)
 - [Azure AD-only authentication with Azure SQL](authentication-azure-ad-only-authentication.md)
-- [Using multi-factor Azure Active Directory authentication](authentication-mfa-ssms-overview.md)
+- [Using Azure Active Directory Multi-Factor Authentication](./authentication-mfa-ssms-overview.md)

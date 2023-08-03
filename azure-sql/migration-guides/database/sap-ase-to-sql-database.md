@@ -1,9 +1,9 @@
 ---
 title: "SAP ASE to Azure SQL Database: Migration guide"
 description: In this guide you learn how to migrate your SAP ASE databases to an Azure SQL database by using SQL Server Migration Assistant for SAP Adapter Server Enterprise.
-author: mokabiru
-ms.author: chadam
-ms.reviewer: mathoma, kendralittle
+author: croblesm
+ms.author: roblescarlos
+ms.reviewer: mathoma
 ms.date: 03/19/2021
 ms.service: sql-database
 ms.subservice: migration-guide

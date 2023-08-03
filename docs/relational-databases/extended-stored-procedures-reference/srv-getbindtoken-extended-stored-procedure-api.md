@@ -4,9 +4,8 @@ description: Learn how srv_getbindtoken obtains a bind token of the transaction 
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: stored-procedures
+ms.service: sql
+ms.subservice: stored-procedures
 ms.topic: "reference"
 helpviewer_keywords:
   - "srv_getbindtoken"
@@ -15,7 +14,6 @@ dev_langs:
 apilocation: opends60.dll
 apiname: srv_getbindtoken
 apitype: "DLLExport"
-ms.assetid: c947d011-08ac-4fb8-b925-3da6e0999277
 ---
 # srv_getbindtoken (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

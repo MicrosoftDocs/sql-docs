@@ -4,11 +4,9 @@ description: Learn about IDENTITY in memory-optimized tables in SQL Server. Memo
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.assetid: c0a704a3-3a31-4c2c-b967-addacda62ef8
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Implementing IDENTITY in a Memory-Optimized Table

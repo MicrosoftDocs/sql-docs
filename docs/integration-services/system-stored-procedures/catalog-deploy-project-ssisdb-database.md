@@ -1,16 +1,12 @@
 ---
+title: "catalog.deploy_project (SSISDB Database)"
 description: "catalog.deploy_project (SSISDB Database)"
-title: "catalog.deploy_project (SSISDB Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: "language-reference"
-ms.assetid: 2e3439b4-7226-4b61-a993-7a1d161eac7e
 author: chugugrace
 ms.author: chugu
+ms.date: "03/09/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
 ---
 # catalog.deploy_project (SSISDB Database)
 

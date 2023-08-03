@@ -1,27 +1,26 @@
 ---
+title: "Distributed Query Support in Schema Rowsets"
 description: "Schema Rowsets - Distributed Query Support in SQL Server Native Client"
-title: "Distributed Query Support in Schema Rowsets | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
+ms.service: sql
+ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DBPROPSET_SQLSERVERSESSION property"
   - "schema rowsets [OLE DB]"
   - "distributed queries [SQL Server], SQL Server Native Client OLE DB provider"
   - "OLE DB, schema rowsets"
   - "OLE DB rowsets, schema"
   - "rowsets [OLE DB], schema"
-ms.assetid: 11354bb6-be42-4d8d-854c-42dd3dc38656
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Schema Rowsets - Distributed Query Support in SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+> [!IMPORTANT] 
+> [!INCLUDE[snac-removed-oledb-only](../../../includes/snac-removed-oledb-only.md)]
 
   To support [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] distributed queries, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider **IDBSchemaRowset** interface returns metadata on linked servers.  
   

@@ -1,14 +1,14 @@
 ---
-title: "Configure and Administer a Report Server (Native Mode) | Microsoft Docs"
+title: "Configure and Administer a Report Server (Native Mode)"
 description: Learn about approaches that you can use to configure Reporting Services and find articles about how to configure components, features, or server capabilities.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 05/15/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server
-
-
+ms.service: reporting-services
+ms.subservice: report-server
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "Reporting Services, components"
   - "deploying [Reporting Services], component options"
   - "report servers [Reporting Services], component options"
@@ -16,9 +16,6 @@ helpviewer_keywords:
   - "administering Reporting Services"
   - "components [Reporting Services], configuring"
   - "configuring servers [Reporting Services]"
-ms.assetid: cfec012b-56f1-4346-9814-247acf22351c
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Configure and Administer a Report Server (SSRS Native Mode)
   This article summarizes the approaches that you can use to configure [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. It also includes a list of topics that explain how to configure specific components, features, or server capabilities. To configure [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], you can:  

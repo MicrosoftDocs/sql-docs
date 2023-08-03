@@ -4,9 +4,8 @@ description: sys.soap_endpoints (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "soap_endpoints_TSQL"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.soap_endpoints catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: f50dcbfc-02ed-4a19-9c07-c78a5a1b3224
 ---
 # sys.soap_endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +28,7 @@ ms.assetid: f50dcbfc-02ed-4a19-9c07-c78a5a1b3224
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**< inherited columns>**||For a list of columns that this view inherits, see [sys.endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
-|**is_sql_language_enabled**|**bit**|1 = BATCHES = ENABLED option was specified, meaning that ad-hoc SQL batches are allowed on the endpoint.|  
+|**is_sql_language_enabled**|**bit**|1 = BATCHES = ENABLED option was specified, meaning that ad hoc SQL batches are allowed on the endpoint.|  
 |**wsdl_generator_procedure**|**nvarchar(776)**|The three-part name of the stored procedure that implements this method.<br /><br /> Names of methods require strict three-part syntax. one, two, or four-part names are not allowed.|  
 |**default_database**|**sysname**|The name of the default database given in the DATABASE = option.<br /><br /> NULL = DEFAULT was specified.|  
 |**default_namespace**|**nvarchar(384)**|The default namespace specified in the NAMESPACE = option, or `https://tempuri.org` if DEFAULT was specified instead.|  

@@ -1,17 +1,17 @@
 ---
-title: "show advanced options Server Configuration Option"
+title: "show advanced options (server configuration option)"
 description: "Learn about the show advanced options option. See how to use it to list advanced options when you run the SQL Server system stored procedure sp_configure."
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/02/2017"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "sp_configure"
   - "show advanced options option"
 ---
-# show advanced options Server Configuration Option
+# show advanced options (server configuration option)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Use the **show advanced options** option to display the **sp_configure** system stored procedure advanced options. When you set **show advanced options** to 1, you can list the advanced options by using **sp_configure**. The default is 0.  

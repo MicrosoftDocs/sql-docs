@@ -1,21 +1,26 @@
 ---
-title: "Configure Available Memory for Report Server Applications | Microsoft Docs"
+title: "Configure Available Memory for Report Server Applications"
 description: Learn about the configuration settings for memory usage in Reporting Services and how a server responds when memory pressure is a factor in processing requests.
-ms.date: 05/30/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server
-
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "memory [Reporting Services]"
-  - "memory thresholds [Reporting Services]"
-ms.assetid: ac7ab037-300c-499d-89d4-756f8d8e99f6
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 04/24/2023
+ms.service: reporting-services
+ms.subservice: report-server
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "memory [Reporting Services]"
+  - "memory thresholds [Reporting Services]"
 ---
 # Configure Available Memory for Report Server Applications
+
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+
+[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
+
+> [!IMPORTANT]  
+>  The information in this article applies only to features related to paginated reports (RDLs) within Power BI Report Server. Power BI (PBIX) reports and their scheduled refresh activities within Power BI Report Server are not affected by these settings. For help with scheduled refresh memory, see [Troubleshoot scheduled refresh in Power BI Report Server](/power-bi/report-server/scheduled-refresh-troubleshoot).
+
  Although [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] can use all available memory, you can override default behavior by configuring an upper limit on the total amount of memory resources that are allocated to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server applications. You can also set thresholds that cause the report server to change how it prioritizes and processes requests depending on whether it is under low, medium, or heavy memory pressure. At low levels of memory pressure, the report server responds by giving a slightly higher priority to interactive or on-demand report processing. At high levels of memory pressure, the report server uses multiple techniques to remain operational using the limited resources available to it.  
   
  This article describes the configuration settings that you can specify and how the server responds when memory pressure becomes a factor in processing requests.  
@@ -69,7 +74,7 @@ ms.author: maggies
 |**MemorySafetyMargin**|Specifies a percentage of **WorkingSetMaximum** that defines the boundary between medium and low pressure scenarios. This value is the percentage of available memory that is reserved for the system and cannot be used for report server operations. The default value is 80.|  
   
 > [!NOTE]  
->  **MemoryLimit** and **MaximumMemoryLimit** settings are obsolete in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions. If you upgraded an existing installation or using an RSReportServer.config file that includes those settings, the report server no longer reads those values.  
+>  **MemoryLimit** and **MaximumMemoryLimit** settings are obsolete in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions. If you upgraded an existing installation or using an RSReportServer.config file that includes those settings, the report server no longer reads those values.  
   
 #### Example of memory configuration settings  
  The following example shows the configuration settings for a report server computer that uses custom memory configuration values. If you want to add **WorkingSetMaximum** or **WorkingSetMinimum**, you must type the elements and values in the RSReportServer.config file. Both values are integers that express kilobytes of RAM you are allocating to the server applications. The following example specifies that total memory allocation for the report server applications cannot exceed 4 gigabytes. If the default value for **WorkingSetMinimum** (60% of **WorkingSetMaximum**) is acceptable, you can omit it and specify just **WorkingSetMaximum** in the RSReportServer.config file. This example includes **WorkingSetMinimum** to show how it would appear if you wanted to add it:  

@@ -1,19 +1,16 @@
 ---
-title: "Word Device Information Settings | Microsoft Docs"
+title: "Word Device Information Settings"
 description: Learn about the device information settings that are available for rendering in Microsoft Word format.
-ms.date: 03/16/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
-
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Word [Reporting Services]"
-  - "device information settings [Reporting Services], Word"
-ms.assetid: 28146498-fae7-4b13-b47f-6ec05aa8e057
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/16/2017
+ms.service: reporting-services
+ms.subservice: reporting-services
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "Word [Reporting Services]"
+  - "device information settings [Reporting Services], Word"
 ---
 # Word Device Information Settings
   The following table lists the device information settings for rendering in [!INCLUDE[ofprword](../includes/ofprword-md.md)] format.  

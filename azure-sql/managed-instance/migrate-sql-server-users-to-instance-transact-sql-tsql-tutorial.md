@@ -8,9 +8,7 @@ ms.date: 05/10/2021
 ms.service: sql-managed-instance
 ms.subservice: security
 ms.topic: tutorial
-ms.custom:
-  - seo-lt-2019
-  - sqldbrb=1
+ms.custom: sqldbrb=1
 ---
 
 # Tutorial: Migrate Windows users and groups in a SQL Server instance to Azure SQL Managed Instance using T-SQL DDL syntax

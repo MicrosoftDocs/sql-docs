@@ -1,21 +1,18 @@
 ---
 title: Use the Visual Studio Code mssql extension
 description: Use the mssql extension for Visual Studio Code to edit and run Transact-SQL scripts on Windows, macOS, and Linux.
-ms.topic: conceptual
-ms.custom:
-- event-tier1-build-2022
-ms.prod: sql
-ms.technology: tools-other
-ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
-ms.date: 5/24/2022
+ms.date: 1/25/2023
+ms.service: sql
+ms.subservice: tools-other
+ms.topic: conceptual
 ---
 
 # SQL Server extension for Visual Studio Code
 
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 This article shows how to use the **mssql** extension for Visual Studio Code (Visual Studio Code) to work with databases in SQL Server on Windows, macOS, and Linux, as well as Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics. The [mssql extension for Visual Studio Code](https://aka.ms/mssql-marketplace) lets you connect to a SQL Server, query with Transact-SQL (T-SQL), and view the results.
 
@@ -30,7 +27,7 @@ The mssql extension enables mssql commands and T-SQL IntelliSense in the code ed
    ![Screenshot of Visual Studio Code G U I, SQL language mode.](./media/sql-server-develop-use-vscode/vscode-language-mode.png)
 
    > [!NOTE]
-   > If this is the first time you have used the extension, the extension installs the SQL tools service in the background.
+   > If this is the first time you have used the extension, the extension installs the [SQL Tools Service](https://github.com/microsoft/sqltoolsservice) in the background.
 
 If you open an existing file that has a *.sql* file extension, the language mode is automatically set to SQL.  
 
@@ -73,6 +70,16 @@ Follow these steps to create a connection profile and connect to a SQL Server.
    ![Screenshot of Visual Studio Code G U I, Connection status.](./media/sql-server-develop-use-vscode/vscode-connection-status.png)
 
 As an alternative to the previous steps, you can also create and edit connection profiles in the User Settings file (*settings.json*). To open the settings file, select **File** > **Preferences** > **Settings**. For more information, see [Manage connection profiles](https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles).
+
+### Encrypt and Trust server certificate
+
+The mssql extension for VS Code v1.17.0 and later includes an important change to the Encrypt property, which is now enabled (set to True) by default for MSSQL provider connections, and SQL Server must be configured with TLS certificates signed by a trusted root certificate authority. In addition, if an initial connection attempt fails with encryption enabled (default), the mssql extension will provide a notification prompt with an option to attempt the connection with Trust Server Certificate enabled. Both the Encrypt and Trust server certificate properties are also available for manual editing in the [user settings file](https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles#edit-connections-in-the-user-settings-file) (*settings.json*). The [best practice](../../relational-databases/security/securing-sql-server.md) is to support a trusted encrypted connection to the server.
+
+   ![Screenshot of Visual Studio Code GUI, Notification with prompt for Trust server certificate.](./media/sql-server-develop-use-vscode/vscode-enable-trust-server-certificate.png)
+
+For users connecting to Azure SQL Database, no changes to existing, saved connections are needed; Azure SQL Database supports encrypted connections and is configured with trusted certificates.
+
+For users connecting to on-premises SQL Server, or SQL Server in a Virtual Machine, if Encrypt is set to True, ensure that you have a certificate from a trusted certificate authority (e.g. not a self-signed certificate). Alternatively, you may choose to connect without encryption (Encrypt set to False), or to trust the server certificate (Encrypt set to True and Trust server certificate set to True).
 
 ## Create a database
 

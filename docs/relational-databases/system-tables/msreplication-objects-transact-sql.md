@@ -4,9 +4,8 @@ description: MSreplication_objects (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "MSreplication_objects"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "MSreplication_objects system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 08f9710d-976d-448e-bead-ac9835e87bc5
 ---
 # MSreplication_objects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

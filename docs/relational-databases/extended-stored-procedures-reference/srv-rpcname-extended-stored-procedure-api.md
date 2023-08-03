@@ -4,9 +4,8 @@ description: Learn how srv_rpcname in the Extended Stored Procedure API returns 
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: stored-procedures
+ms.service: sql
+ms.subservice: stored-procedures
 ms.topic: "reference"
 helpviewer_keywords:
   - "srv_rpcname"
@@ -15,7 +14,6 @@ dev_langs:
 apilocation: opends60.dll
 apiname: srv_rpcname
 apitype: "DLLExport"
-ms.assetid: 0a1424e4-3319-4836-b8d8-5e0344cc683f
 ---
 # srv_rpcname (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,17 +1,13 @@
 ---
-title: "Dataset Fields collection references in a paginated report | Microsoft Docs"
-
-description: Create a dataset for display of individual or summarized values in the Report Data pane of Report Builder in a paginated report. 
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
+title: "Dataset Fields collection references in a paginated report"
+description: Create a dataset for display of individual or summarized values in the Report Data pane of Report Builder in a paginated report.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Built-in collections - dataset Fields collection references in a paginated report (Report Builder)
 

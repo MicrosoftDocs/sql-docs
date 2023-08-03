@@ -1,23 +1,19 @@
 ---
-title: "Compare Execution Plans | Microsoft Docs"
+title: "Compare Execution Plans"
 description: Learn how to compare similarities and differences between actual graphical execution plans by using SQL Server Management Studio Plan Comparison feature.
-ms.custom: ""
-ms.date: "11/21/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: "wiassaf"
-ms.technology: performance
+ms.date: "11/21/2018"
+ms.service: sql
+ms.subservice: performance
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "comparing execution plans"
   - "compare execution plans"
   - "plan comparison"
   - "execution plans [SQL Server], comparing"
   - "Query Store, comparing plans"
-ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
-author: rwestMSFT
-ms.author: randolphwest
-manager: amitban
 ---
 # Compare execution plans
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

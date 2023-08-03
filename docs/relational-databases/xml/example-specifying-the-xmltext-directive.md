@@ -1,21 +1,19 @@
 ---
 title: "Example: Specifying the XMLTEXT Directive"
 description: Learn how to address the unconsumed part of an XML document by specifying the XMLTEXT directive in a SELECT statement using EXPLICIT mode.
-ms.custom: ""
-ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.date: 05/05/2022
+ms.service: sql
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "XMLTEXT directive"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Example: Specify the XMLTEXT directive
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This example illustrates how data in the overflow column is addressed by using the **XMLTEXT** directive in a `SELECT` statement using EXPLICIT mode.
 
@@ -152,7 +150,7 @@ If the `XMLTEXT` column data contains attributes on the root element, these attr
 
 ```sql
 SELECT 1 AS Tag,
-       0 ASParent,
+       0 AS Parent,
        N'<overflow a="1"/>' AS 'overflow!1!!xmltext'
 FOR XML EXPLICIT, xmldata;
 ```

@@ -4,8 +4,8 @@ description: This article describes how to prepare and complete images by using 
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "09/07/2017"
-ms.prod: sql
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
 ms.custom: intro-installation
 monikerRange: ">=sql-server-2016"
@@ -251,9 +251,9 @@ For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
   
 ### Removing features from a prepared instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-1. To begin the uninstall process, from the **Start** menu click **Control Panel** and double click **Program and Features**. 
+1. To begin the uninstall process, from the **Start** menu click **Control Panel** and double-click **Program and Features**. 
   
-2. Double click the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] component to uninstall and click **Remove**. 
+2. Double-click the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] component to uninstall and click **Remove**. 
   
 3. Setup support rules will run to verify your computer configuration. Click **OK** to continue. 
   
@@ -273,9 +273,9 @@ For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
   
 ### Uninstall a prepared instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-1. To begin the uninstall process, from the **Start** menu click **Control Panel** and double click **Program and Features**. 
+1. To begin the uninstall process, from the **Start** menu click **Control Panel** and double-click **Program and Features**. 
   
-2. Double click the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] component to uninstall and click **Remove**. 
+2. Double-click the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] component to uninstall and click **Remove**. 
   
 3. Setup support rules will run to verify your computer configuration. Click **OK** to continue. 
   

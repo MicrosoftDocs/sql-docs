@@ -1,23 +1,20 @@
 ---
-title: "Data Processing Extensions and .NET Framework Data Providers | Microsoft Docs"
+title: "Data Processing Extensions and .NET Framework Data Providers"
 description: Learn about data processing extensions, a component installed with Reporting Services, and .NET Framework data providers.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-data
-
-
+ms.service: reporting-services
+ms.subservice: report-data
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "reports [Reporting Services], data"
   - "data processing extensions [Reporting Services]"
   - "data providers [Reporting Services]"
   - "data retrieval [Reporting Services]"
   - "Reporting Services, data sources"
   - "report data [Report Builder], accessing"
-ms.assetid: 42a5afb5-f4c8-4957-b1fd-77bf39afa5be
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Data Processing Extensions and .NET Framework Data Providers (SSRS)
   A [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension is a component installed with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], designed to retrieve data from a specific type of data source and to provide extra functionality to support report design and report processing. A [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] data provider is a component available from [!INCLUDE[msCoName](../../includes/msconame-md.md)] or third-party sources that supports <xref:System.Data> interfaces that allow you to retrieve and to modify data from a specific type of data source.  

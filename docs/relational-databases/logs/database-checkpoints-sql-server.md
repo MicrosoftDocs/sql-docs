@@ -5,9 +5,8 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ms.reviewer: randolphwest
 ms.date: 07/21/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: conceptual
 helpviewer_keywords:
   - "automatic checkpoints"

@@ -4,9 +4,8 @@ description: sysdbmaintplan_databases (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sysdbmaintplan_databases"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "sysdbmaintplan_databases system table"
 dev_langs:
   - "TSQL"
-ms.assetid: f8413a44-8fcc-4899-84f2-b4afe0f8ec08
 ---
 # sysdbmaintplan_databases (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

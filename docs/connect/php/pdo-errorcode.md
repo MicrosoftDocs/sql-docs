@@ -4,8 +4,8 @@ description: "API reference for the PDO::errorCode function in the Microsoft PDO
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "08/10/2020"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: reference
 ---
 # PDO::errorCode

@@ -1,20 +1,16 @@
 ---
+title: "Environment Transitions"
 description: "Environment Transitions"
-title: "Environment Transitions | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "environment transitions [ODBC]"
   - "transitioning states [ODBC], environment"
   - "state transitions [ODBC], environment"
-ms.assetid: 9d11b1ab-f4c8-48ca-9812-8c04303f939d
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Environment Transitions
 ODBC environments have the following three states.  

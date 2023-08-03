@@ -1,15 +1,12 @@
 ---
+title: "Appendix - 1 (MySQLToSQL)"
 description: "Appendix - 1 (MySQLToSQL)"
-title: "Appendix - 1 (MySQLToSQL) | Microsoft Docs"
-ms.prod: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.technology: ssma
+ms.service: sql
+ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 2d22766d-ff09-420d-ae7c-13b443e28bd0
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Appendix - 1 (MySQLToSQL)
 Quick view of the SSMA Console command line options:  

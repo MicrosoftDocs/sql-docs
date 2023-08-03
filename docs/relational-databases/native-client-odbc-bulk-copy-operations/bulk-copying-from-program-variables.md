@@ -1,14 +1,13 @@
 ---
+title: "Bulk Copying from Program Variables"
 description: "Bulk Copying from Program Variables"
-title: "Bulk Copying from Program Variables | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
+ms.service: sql
+ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "bulk copy [ODBC], program variables"
   - "bcp_bind function"
   - "mapping data types [ODBC]"
@@ -16,13 +15,10 @@ helpviewer_keywords:
   - "data types [ODBC], bulk copying"
   - "ODBC, bulk copy operations"
   - "program variables [ODBC]"
-ms.assetid: e4284a1b-7534-4b34-8488-b8d05ed67b8c
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Bulk Copying from Program Variables
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   You can bulk copy directly from program variables. After allocating variables to hold the data for a row and calling [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) to start the bulk copy, call [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) for each column to specify the location and format of the program variable to be associated with the column. Fill each variable with data, then call [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) to send one row of data to the server. Repeat the process of filling the variables and calling **bcp_sendrow** until all the rows have been sent to the server, then call [bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) to specify that the operation is complete.  
   

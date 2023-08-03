@@ -1,20 +1,17 @@
 ---
-title: "Design View | Microsoft Docs"
+title: "Design View"
 description: Learn how to use the Design view in the Reporting Services Report Designer to arrange report items in a report.
-ms.date: 05/31/2016
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: tools
-
-
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.layoutview.f1"
-helpviewer_keywords: 
-  - "Layout View dialog box"
-ms.assetid: 6fa378aa-442f-4d2f-beab-02a0fb5cd3ce
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 05/31/2016
+ms.service: reporting-services
+ms.subservice: tools
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rtp.rptdesigner.layoutview.f1"
+helpviewer_keywords:
+  - "Layout View dialog box"
 ---
 # Design View
 In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Report Designer, use Design view to arrange report items in the report. Design view is sometimes called the design surface or layout view.  

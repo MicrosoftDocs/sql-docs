@@ -1,19 +1,16 @@
 ---
+title: "UPDATE (Transact-SQL)"
 description: "UPDATE (Transact-SQL)"
-title: "UPDATE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "05/19/2020"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "UPDATE_TSQL"
   - "UPDATE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DML [SQL Server], UPDATE statement"
   - "data updates [SQL Server], UPDATE statement"
   - "updating data [SQL Server]"
@@ -35,17 +32,16 @@ helpviewer_keywords:
   - "UPDATE statement [SQL Server]"
   - "FROM clause, UPDATE statement"
   - "WHERE clause, UPDATE statement"
-ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
-author: VanMSFT
-ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # UPDATE (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricdw.md)]
 
   Changes existing data in a table or view in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. For examples, see [Examples](#UpdateExamples).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -99,7 +95,7 @@ UPDATE
 ```  
   
 ```syntaxsql 
--- Syntax for Azure Synapse Analytics
+-- Syntax for Azure Synapse Analytics and Microsoft Fabric
 
 [ WITH <common_table_expression> [ ,...n ] ]
 UPDATE [ database_name . [ schema_name ] . | schema_name . ] table_name
@@ -146,7 +142,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  Parentheses delimiting *expression* in TOP are required in INSERT, UPDATE, and DELETE statements. For more information, see [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
   
  *table_alias*  
- The alias specified in the FROM clause representing the table or view from which the rows are to be updated.  
+ The alias specified in the UPDATE clause representing the table or view from which the rows are to be updated.  
   
  *server_name*  
  Is the name of the server (using a linked server name or the [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) function as the server name) on which the table or view is located. If *server_name* is specified, *database_name* and *schema_name* are required.  
@@ -164,7 +160,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  Is either the [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) or [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) function, subject to provider capabilities.  
   
  WITH **(** \<Table_Hint_Limited> **)**  
- Specifies one or more table hints that are allowed for a target table. The WITH keyword and the parentheses are required. NOLOCK, READUNCOMMITTED, and NOEXPAND are not allowed. For information about table hints, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+ Specifies one or more table hints that are allowed for a target table. The WITH keyword and the parentheses are required. NOLOCK, READUNCOMMITTED, NOEXPAND, and several others are not allowed. For information about table hints, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  @*table_variable*  
  Specifies a [table](../../t-sql/data-types/table-transact-sql.md) variable as a table source.  
@@ -412,7 +408,9 @@ To achieve the same functionality of **\.WRITE** with other character or binary 
  UPDATE statements are allowed in the body of user-defined functions only if the table being modified is a table variable.  
   
  When an `INSTEAD OF` trigger is defined on UPDATE actions against a table, the trigger is running instead of the UPDATE statement. Earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] only support AFTER triggers defined on UPDATE and other data modification statements. The FROM clause cannot be specified in an UPDATE statement that references, either directly or indirectly, a view with an `INSTEAD OF` trigger defined on it. For more information about INSTEAD OF triggers, see [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
-  
+
+ Currently, the FROM clause cannot be specified in an UPDATE statement on [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)]. Single-table UPDATE statements are supported.
+
 ## Limitations and restrictions  
  The FROM clause cannot be specified in an UPDATE statement that references, either directly or indirectly, a view that has an `INSTEAD OF` trigger defined on it. For more information about `INSTEAD OF` triggers, see [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
@@ -476,7 +474,7 @@ ID     Value
 ```  
 
 ## Locking behavior  
- An UPDATE statement acquires an exclusive (X) lock on any rows that it modifies, and holds these locks until the transaction completes. Depending on the query plan for the UPDATE statement, the number of rows being modified, and the isolation level of the transaction, locks may be acquired at the PAGE level or TABLE level rather than the ROW level. To avoid these higher level locks, consider dividing update statements that affect thousands of rows or more into batches, and ensure that any join and filter conditions are supported by indexes. See the article on [Locking in the Database Engine](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#Lock_Engine) for more details on locking mechanics in SQL Server.  
+ An UPDATE statement acquires an exclusive (X) lock on any rows that it modifies, and holds these locks until the transaction completes. Depending on the query plan for the UPDATE statement, the number of rows being modified, and the isolation level of the transaction, locks may be acquired at the PAGE level or TABLE level rather than the ROW level. To avoid these higher level locks, consider dividing update statements that affect thousands of rows or more into batches, and ensure that any join and filter conditions are supported by indexes. See the article on [Locking in the Database Engine](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#lock_engine) for more details on locking mechanics in SQL Server.  
   
 ## Logging behavior  
  The UPDATE statement is logged; however, partial updates to large value data types using the **\.WRITE** clause are minimally logged. For more information, see "Updating Large Value Data Types" in the earlier section "Data Types".  
@@ -493,16 +491,16 @@ ID     Value
 |Category|Featured syntax elements|  
 |--------------|------------------------------|  
 |[Basic Syntax](#BasicSyntax)|UPDATE|  
-|[Limiting the Rows that Are Updated](#LimitingValues)|WHERE • TOP • WITH common table expression • WHERE CURRENT OF|  
-|[Setting Column Values](#ColumnValues)|computed values • compound operators • default values • subqueries|  
-|[Specifying Target Objects Other than Standard Tables](#TargetObjects)|views • table variables • table aliases|  
+|[Limiting the Rows that Are Updated](#LimitingValues)|WHERE * TOP * WITH common table expression * WHERE CURRENT OF|  
+|[Setting Column Values](#ColumnValues)|computed values * compound operators * default values * subqueries|  
+|[Specifying Target Objects Other than Standard Tables](#TargetObjects)|views * table variables * table aliases|  
 |[Updating Data Based on Data From Other Tables](#OtherTables)|FROM|  
-|[Updating Rows in a Remote Table](#RemoteTables)|linked server • OPENQUERY • OPENDATASOURCE|  
-|[Updating Large Object Data Types](#LOBValues)|.WRITE • OPENROWSET|  
+|[Updating Rows in a Remote Table](#RemoteTables)|linked server * OPENQUERY * OPENDATASOURCE|  
+|[Updating Large Object Data Types](#LOBValues)|.WRITE * OPENROWSET|  
 |[Updating User-defined Types](#UDTs)|user-defined types|  
-|[Overriding the Default Behavior of the Query Optimizer by Using Hints](#TableHints)|table hints • query hints|  
+|[Overriding the Default Behavior of the Query Optimizer by Using Hints](#TableHints)|table hints * query hints|  
 |[Capturing the Results of the UPDATE Statement](#CaptureResults)|OUTPUT clause|  
-|[Using UPDATE in Other Statements](#Other)|Stored Procedures • TRY...CATCH|  
+|[Using UPDATE in Other Statements](#Other)|Stored Procedures * TRY...CATCH|  
   
 ###  <a name="BasicSyntax"></a> Basic syntax  
  Examples in this section demonstrate the basic functionality of the UPDATE statement using the minimum required syntax.  
@@ -1024,7 +1022,7 @@ OUTPUT inserted.BusinessEntityID,
       inserted.VacationHours,  
       inserted.ModifiedDate  
 INTO @MyTableVar
-	WHERE VacationHours < 10  
+    WHERE VacationHours < 10  
 --Display the result set of the table variable.  
 SELECT EmpID, OldVacationHours
 , NewVacationHours, ModifiedDate  
@@ -1034,7 +1032,7 @@ GO
 --Display the result set of the table.  
 SELECT BusinessEntityID, VacationHours, ModifiedDate, HireDate  
 FROM HumanResources.Employee
-	WHERE VacationHours < 10  
+    WHERE VacationHours < 10  
 GO  
 ```  
   
@@ -1096,7 +1094,7 @@ IF @@TRANCOUNT > 0
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### AD. Using a simple UPDATE statement  
  The following examples show how all rows can be affected when a WHERE clause is not used to specify the row (or rows) to update.  

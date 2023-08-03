@@ -9,8 +9,8 @@ ms.service: sql-database
 ms.subservice: security
 ms.topic: how-to
 ms.custom:
-  - "sqldbrb=1"
-  - "subject-rbac-steps"
+  - sqldbrb=1
+  - subject-rbac-steps
 ---
 # Use virtual network service endpoints and rules for servers in Azure SQL Database
 

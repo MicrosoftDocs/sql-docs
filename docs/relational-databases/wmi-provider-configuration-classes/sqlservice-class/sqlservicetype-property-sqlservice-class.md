@@ -1,23 +1,17 @@
 ---
-description: "SqlServiceType Property (SqlService Class)"
 title: "SqlServiceType Property (SqlService)"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: wmi
-ms.topic: "reference"
-apiname: 
-  - "SqlServiceType Property (SqlService Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "SqlServiceType property"
-ms.assetid: dbff2968-3011-41d6-a141-52d814af0213
+description: "SqlServiceType Property (SqlService Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "SqlServiceType property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "SqlServiceType Property (SqlService Class)"
+apitype: "MOFDef"
 ---
 # SqlServiceType Property (SqlService Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

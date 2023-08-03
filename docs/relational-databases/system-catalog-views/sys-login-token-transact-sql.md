@@ -4,9 +4,8 @@ description: sys.login_token (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "login_token_TSQL"
@@ -19,7 +18,6 @@ helpviewer_keywords:
   - "tokens [SQL Server]"
 dev_langs:
   - "TSQL"
-ms.assetid: 86e06938-9d0a-44e5-99e2-55c8ef5f2f84
 ---
 # sys.login_token (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

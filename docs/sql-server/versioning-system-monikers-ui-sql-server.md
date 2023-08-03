@@ -1,18 +1,18 @@
 ---
-description: "Versioning system for SQL documentation"
 title: Versioning system SQL docs
-ms.date: 08/12/2020
-ms.prod: sql
-ms.technology: release-landing
-ms.topic: conceptual
+description: "Versioning system for SQL documentation"
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: 08/12/2020
+ms.service: sql
+ms.subservice: release-landing
+ms.topic: conceptual
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||>=sql-server-2016"
 ---
 
 # Versioning system for SQL documentation
 
-[!INCLUDE[includes_appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[sql-asdb-asa-pdw](../includes/applies-to-version/sql-asdb-asa-pdw.md)]
 
 This article explains our _versioning system_ for SQL documentation. The versioning system knows about products and their versions. The system enables you to choose the product and version you are interested in. The system then displays the appropriate documentation.
 

@@ -1,16 +1,13 @@
 ---
-title: "Embedded and Shared Datasets (Report Builder) | Microsoft Docs"
-description: Learn about embedded and shared datasets. Datasets contain a query command, parameters, and data options that include case sensitivity and collation. 
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-data
-
-
-ms.topic: conceptual
-ms.assetid: adc95cc0-d15a-413d-bc5a-302eab37a069
+title: "Embedded and Shared Datasets (Report Builder)"
+description: Learn about embedded and shared datasets. Datasets contain a query command, parameters, and data options that include case sensitivity and collation.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: report-data
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Embedded and Shared Datasets (Report Builder and SSRS)
   In a report, a dataset represents report data that is returned from running a query on an external data source. The dataset depends on the data connection that contains information about the external data source. The data itself is not included in the report definition. The dataset contains a query command, a field collection, parameters, filters, and data options that include case sensitivity and collation. There are two types of datasets:  

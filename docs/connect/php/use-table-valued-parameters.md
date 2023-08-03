@@ -4,8 +4,8 @@ description: Learn how to use table-valued parameters with the Microsoft Drivers
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 01/31/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Use table-valued parameters (PHP)

@@ -1,18 +1,15 @@
 ---
-title: "Custom Report Item Implementation Requirements | Microsoft Docs"
+title: "Custom Report Item Implementation Requirements"
 description: Learn about the development and deployment requirements that you need for custom report item implementations.
-ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: custom-report-items
-
-
-ms.topic: reference
-helpviewer_keywords: 
-  - "custom report items"
-ms.assetid: cfacd816-00d6-4a3d-be72-1bba6f7f6886
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/14/2017
+ms.service: reporting-services
+ms.subservice: custom-report-items
+ms.topic: reference
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "custom report items"
 ---
 # Custom Report Item Implementation Requirements
   This topic will discuss the prerequisites for developing and deploying custom report items.  

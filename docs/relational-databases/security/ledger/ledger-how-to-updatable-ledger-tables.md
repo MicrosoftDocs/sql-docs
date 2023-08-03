@@ -1,19 +1,19 @@
 ---
 title: "Create and use updatable ledger tables"
 description: Learn how to create and use updatable ledger tables.
-ms.date: "05/24/2022"
-ms.service: sql-database
-ms.subservice: security
-ms.reviewer: kendralittle, mathoma
-ms.topic: how-to
 author: VanMSFT
 ms.author: vanto
+ms.reviewer: mathoma
+ms.date: 05/24/2023
+ms.service: sql-database
+ms.subservice: security
+ms.topic: how-to
 monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
 ---
 
 # Create and use updatable ledger tables
 
-[!INCLUDE [SQL Server 2022 Azure SQL Database](../../../includes/applies-to-version/sqlserver2022-asdb.md)]
+[!INCLUDE [SQL Server 2022 Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
 This article shows you how to create an [updatable ledger table](ledger-updatable-ledger-tables.md). Next, you'll insert values in your updatable ledger table and then make updates to the data. Finally, you'll view the results by using the ledger view. We'll use an example of a banking application that tracks banking customers' balances in their accounts. Our example will give you a practical look at the relationship between the updatable ledger table and its corresponding history table and ledger view.
 
@@ -31,9 +31,6 @@ We'll create an account balance table with the following schema.
 | LastName    | varchar (50)   | Customer last name                  |
 | FirstName   | varchar (50)   | Customer first name                 |
 | Balance     | decimal (10,2) | Account balance                     |
-
-> [!IMPORTANT]
-> Creating updatable ledger tables requires the **ENABLE LEDGER** permission. For more information on permissions related to ledger tables, see [Permissions](../permissions-database-engine.md#asdbpermissions). 
 
 1. Use [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md) to create a new schema and table called `[Account].[Balance]`.
 
@@ -141,6 +138,9 @@ We'll create an account balance table with the following schema.
     The ledger view shows that updating the ledger table is a `DELETE` of the original row with `50`. The balance with a corresponding `INSERT` of a new row with `100` shows the new balance for `Nick`.
 
    :::image type="content" source="media/ledger/sql-updatable-how-to-3.png" alt-text="Screenshot that shows ledger table example 3.":::
+
+## Permissions
+Creating updatable ledger tables requires the `ENABLE LEDGER` permission. For more information on permissions related to ledger tables, see [Permissions](../permissions-database-engine.md). 
 
 ## Next steps
 

@@ -4,8 +4,8 @@ description: "Learn about the different methods to connect to the database using
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "03/26/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Connecting to the Server

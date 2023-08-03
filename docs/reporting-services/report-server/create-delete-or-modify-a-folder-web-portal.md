@@ -1,15 +1,13 @@
 ---
-title: "Create, Delete, or Modify a Folder - Reporting Services | Microsoft Docs"
+title: "Create, Delete, or Modify a Folder - Reporting Services"
 description: Learn how to create, modify, and delete folders so that you can organize and manage the items that you publish to a Reporting Services report server.
-ms.date: 06/26/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server
-
-ms.topic: conceptual
-ms.assetid: 70a38879-856c-414b-8479-5f9dead38f15
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 06/26/2019
+ms.service: reporting-services
+ms.subservice: report-server
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Create, Delete, or Modify a Folder - Reporting Services
   You can create folders to organize and manage the items you publish to a report server. Creating folders can help users find reports of interest to them. For content managers, folders provide a framework for applying permissions. You can create role assignments on specific folders to restrict access to reports that are in development or that should not be widely distributed.  

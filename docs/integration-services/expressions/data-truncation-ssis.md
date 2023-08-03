@@ -1,21 +1,17 @@
 ---
+title: "Data Truncation (SSIS)"
 description: "Data Truncation (SSIS)"
-title: "Data Truncation (SSIS) | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "truncating data"
   - "data truncation [Integration Services]"
   - "expressions [Integration Services], data truncation"
   - "truncate options [Integration Services]"
-ms.assetid: 02461e15-49ca-445b-abb3-5c369c283ec2
-author: chugugrace
-ms.author: chugu
 ---
 # Data Truncation (SSIS)
 

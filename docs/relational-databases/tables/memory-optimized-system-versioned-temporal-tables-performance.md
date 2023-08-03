@@ -1,18 +1,13 @@
 ---
+title: "Memory-Optimized System-Versioned Temporal Tables Performance"
 description: "Memory-Optimized System-Versioned Temporal Tables Performance"
-title: "Memory-Optimized System-Versioned Temporal Tables Performance | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/28/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: table-view-index
-ms.topic: conceptual
-ms.assetid: 2e110984-7703-4806-a24b-b41e8c3018c6
 author: markingmyname
 ms.author: maghan
+ms.date: "03/28/2016"
+ms.service: sql
+ms.subservice: table-view-index
+ms.topic: conceptual
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
-
 ---
 # Memory-Optimized System-Versioned Temporal Tables Performance
 

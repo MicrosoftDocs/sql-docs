@@ -1,18 +1,17 @@
 ---
 title: Common errors with customer-managed keys in Azure Key Vault
 description: Learn how to identify and resolve access issues and common errors with transparent data encryption (TDE) and customer-managed keys in Azure Key Vault.
-ms.custom: seo-lt-2019
-helpviewer_keywords: 
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: vanto
+ms.date: 03/04/2022
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
   - "troublshooting, tde akv"
   - "tde akv configuration, troubleshooting"
   - "tde troubleshooting"
-author: rwestMSFT
-ms.author: randolphwest
-ms.prod: sql
-ms.technology: security
-ms.reviewer: vanto
-ms.topic: conceptual
-ms.date: 03/04/2022
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest"
 ---
 # Common errors for transparent data encryption with customer-managed keys in Azure Key Vault
@@ -176,14 +175,14 @@ Description: Database {database_name} on Server {server_name} has lost access to
   
 **Azure SQL Managed Instance**
 
-EventName: MakeManagedDatabaseInaccessible
+EventName: MakeManagedDbInaccessible
 
 Status: Started 
 
 Description: Database { database_name} on managed server {server_name} has lost access to Azure Key Vault Key and is now transitioning to inaccessible state.
 
 
-**Event when the issue wasn’t resolved within 30 minutes and Azure Key Vault key access has to be validated manually** 
+**Event when the issue wasn't resolved within 30 minutes and Azure Key Vault key access has to be validated manually** 
 
 **Azure SQL Database**
   
@@ -195,7 +194,7 @@ Description: Database is inaccessible and requires user to resolve Azure key vau
 
 **Azure SQL Managed Instance**
   
-EventName: MakeManagedDatabaseInaccessible 
+EventName: MakeManagedDbInaccessible 
 
 Status: Succeeded 
 

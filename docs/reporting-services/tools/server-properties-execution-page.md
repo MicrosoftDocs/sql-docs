@@ -1,18 +1,15 @@
 ---
-title: "Server Properties (Execution Page) | Microsoft Docs"
+title: "Server Properties (Execution Page)"
 description: Learn how to use the options on the Server Properties Execution page to set a timeout value for report execution.
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: tools
-
-
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.reportserver.serverproperties.execution.f1"
-ms.assetid: 53b77db1-b013-4dac-82dd-30c0de276639
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: tools
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.swb.reportserver.serverproperties.execution.f1"
 ---
 # Server Properties (Execution Page)
   Use this page to set a timeout value for report execution. This value applies to all reports that are processed by the current report server instance. You can override this value for individual reports. The value you specify must accommodate all report processing that occurs on the report server, plus query processing performed on the database server when the report server retrieves data that is used in the report.  

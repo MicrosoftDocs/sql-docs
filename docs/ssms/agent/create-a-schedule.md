@@ -1,21 +1,17 @@
 ---
-description: "Create a Schedule"
 title: "Create a Schedule"
-ms.custom: seo-lt-2019
+description: "Create a Schedule"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "scheduling jobs [SQL Server]"
   - "SQL Server Agent jobs, scheduling"
   - "jobs [SQL Server Agent], scheduling"
   - "schedules [SQL Server], jobs"
-ms.assetid: 8c7ef3b3-c06d-4a27-802d-ed329dc86ef3
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Create a Schedule
@@ -69,7 +65,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
   
 #### To create a schedule  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

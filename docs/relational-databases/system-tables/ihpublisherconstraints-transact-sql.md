@@ -4,9 +4,8 @@ description: IHpublisherconstraints (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "IHpublisherconstraints"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "IHpublisherconstraints system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 537b1e1a-7228-4680-aa27-5ad7072ea01e
 ---
 # IHpublisherconstraints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

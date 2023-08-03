@@ -1,23 +1,21 @@
 ---
 title: "Use the value() and nodes() Methods with OPENXML"
 description: Learn how to extract a rowset of XML values in an SQL query using the value() and nodes() methods or the OpenXML() method.
-ms.custom: ""
-ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.date: 05/05/2022
+ms.service: sql
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "OpenXML method [XML in SQL Server]"
   - "value method [XML in SQL Server]"
   - "nodes method [XML in SQL Server]"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Use the value() and nodes() methods with OPENXML
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 You can use multiple `value()` methods on **xml** data type in a **SELECT** clause to generate a rowset of extracted values. The `nodes()` method yields an internal reference for each selected node that can be used for additional query. The combination of the `nodes()` and `value()` methods can be more efficient in generating the rowset when it has several columns and, perhaps, when the path expressions used in its generation are complex.
 

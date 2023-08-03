@@ -5,7 +5,7 @@ author: "SQLvariant"
 ms.author: "aanelson"
 ms.reviewer: "alayu, maghan"
 ms.date: "04/19/2019"
-ms.prod: azure-data-studio
+ms.service: azure-data-studio
 ms.topic: conceptual
 ---
 
@@ -21,7 +21,7 @@ Now you can write and debug PowerShell scripts using the excellent IDE-like inte
 - Syntax highlighting
 - Code snippets
 - IntelliSense for cmdlets and more
-- Rule-based analysis provided by [PowerShell Script Analyzer](http://github.com/PowerShell/PSScriptAnalyzer)
+- Rule-based analysis provided by [PowerShell Script Analyzer](https://github.com/PowerShell/PSScriptAnalyzer)
 - Go to Definition of cmdlets and variables
 - Find References of cmdlets and variables
 - Document and workspace symbol discovery

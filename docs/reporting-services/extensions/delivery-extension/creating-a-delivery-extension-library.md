@@ -1,20 +1,17 @@
 ---
-title: "Creating a Delivery Extension Library | Microsoft Docs"
+title: "Creating a Delivery Extension Library"
 description: Find out how to assign a delivery extension that you create in Reporting Services to a unique namespace and build it into a library or assembly file.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: extensions
-
-
+ms.service: reporting-services
+ms.subservice: extensions
 ms.topic: reference
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "delivery extensions [Reporting Services], namespace assignments"
   - "library [Reporting Services]"
   - "assigning namespaces to extensions"
-ms.assetid: 63b32f93-4bab-4b07-bd72-39a47aca1cda
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Creating a Delivery Extension Library
   Each [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] delivery extension you create should be assigned to a unique namespace and built into a library or assembly file. The exact name of the namespace is not important, but it must be unique and not shared with any other extension. You should create your own unique namespaces for your company's delivery extensions.  

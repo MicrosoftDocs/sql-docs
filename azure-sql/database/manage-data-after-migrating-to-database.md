@@ -2,8 +2,8 @@
 title: Manage after migration
 titleSuffix: Azure SQL Database
 description: Learn how to manage your single and pooled databases after migration to Azure SQL Database.
-author: mokabiru
-ms.author: mokabiru
+author: croblesm
+ms.author: roblescarlos
 ms.reviewer: wiassaf, mathoma
 ms.date: 02/13/2019
 ms.service: sql-database
@@ -234,7 +234,7 @@ With Query Performance Insights, you can get tailored recommendations for your d
 
 ### Security optimization
 
-SQL Database provides actionable security recommendations to help you secure your data and threat detection for identifying and investigating suspicious database activities that may pose a potential thread to the database. [Vulnerability assessment](sql-vulnerability-assessment.md) is a database scanning and reporting service that allows you to monitor the security state of your databases at scale and identify security risks and drift from a security baseline defined by you. After every scan, a customized list of actionable steps and remediation scripts is provided, as well as an assessment report that can be used to help meet compliance requirements.
+SQL Database provides actionable security recommendations to help you secure your data and threat detection for identifying and investigating suspicious database activities that may pose a potential thread to the database. [Vulnerability assessment](/azure/defender-for-cloud/sql-azure-vulnerability-assessment-overview) is a database scanning and reporting service that allows you to monitor the security state of your databases at scale and identify security risks and drift from a security baseline defined by you. After every scan, a customized list of actionable steps and remediation scripts is provided, as well as an assessment report that can be used to help meet compliance requirements.
 
 With Microsoft Defender for Cloud, you identify the security recommendations across the board and quickly apply them.
 

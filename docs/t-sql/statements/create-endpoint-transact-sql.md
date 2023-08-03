@@ -4,9 +4,8 @@ description: CREATE ENDPOINT (Transact-SQL)
 author: markingmyname
 ms.author: maghan
 ms.date: "08/10/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ENDPOINT"
@@ -50,7 +49,7 @@ dev_langs:
 > [!NOTE]  
 > Native XML Web Services (SOAP/HTTP endpoints) was removed in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -142,7 +141,7 @@ FOR DATABASE_MIRRORING (
  The following arguments apply only to the TCP protocol option.  
   
  LISTENER_PORT **=**_listenerPort_  
- Specifies the port number listened to for connections by the service broker TCP/IP protocol. By convention, 4022 is used but any number between 1024 and 32767 is valid.  
+ Specifies the port number listened to for connections by the service broker TCP/IP protocol. By convention, 5022 is used but any number between 1024 and 32767 is valid.  
   
  LISTENER_IP **=** ALL | **(**_4-part-ip_ **)** | **(** "*ip_address_v6*" **)**  
  Specifies the IP address that the endpoint will listen on. The default is ALL. This means that the listener will accept a connection on any valid IP address.  
@@ -241,7 +240,7 @@ FOR DATABASE_MIRRORING (
  Enables the endpoint to perform in the role of a witness in the mirroring process.  
   
 > [!NOTE]  
->  For [!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)], WITNESS is the only option available.  
+>  For [!INCLUDE[ssexpress-2005-md](../../includes/ssexpress-2005-md.md)], WITNESS is the only option available.  
   
  PARTNER  
  Enables the endpoint to perform in the role of a partner in the mirroring process.  

@@ -1,20 +1,16 @@
 ---
-description: "Explorer Functional Area (Master Data Manager)"
 title: Explorer Functional Area
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
-ms.topic: conceptual
-ms.assetid: e2763613-79ef-414a-8dbf-837a0331ebf8
+description: "Explorer Functional Area (Master Data Manager)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/15/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
 ---
 # Explorer Functional Area (Master Data Manager)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In the Explorer functional area, you can update data and work with hierarchies and collections.  
   

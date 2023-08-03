@@ -1,19 +1,15 @@
 ---
+title: "SQLColumns (Access Driver)"
 description: "SQLColumns (Access Driver)"
-title: "SQLColumns (Access Driver) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQLColumns function [ODBC], Access Driver"
-  - "Access driver [ODBC], SQLColumns"
-ms.assetid: 1eac255c-6110-4805-a1bc-feee1eec35d0
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQLColumns function [ODBC], Access Driver"
+  - "Access driver [ODBC], SQLColumns"
 ---
 # SQLColumns (Access Driver)
 > [!NOTE]  

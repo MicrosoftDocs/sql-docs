@@ -13,7 +13,7 @@ metadata:
   author: MashaMSFT
   ms.author: mathoma
   ms.reviewer:
-  ms.date: 05/27/2020
+  ms.date: 07/30/2023
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -24,6 +24,10 @@ landingContent:
   # Card 
   - title: Azure SQL Managed Instance 
     linkLists:
+      - linkListType: overview
+        links:
+          - text: What is Azure SQL Managed Instance?
+            url: sql-managed-instance-paas-overview.md    
       - linkListType: whats-new
         links:
           - text: What's new? 
@@ -32,23 +36,79 @@ landingContent:
         links:
           - text: Create SQL Managed Instance
             url: instance-create-quickstart.md
+          - text: Restore a backup
+            url: restore-sample-database-quickstart.md          
       - linkListType: video
         links:
           - text: Azure SQL Managed Instance overview
             url: /shows/Azure-SQL-for-Beginners/Azure-SQL-Managed-Instance-Overview-6-of-61
       - linkListType: concept
         links:
-          - text: What is SQL Managed Instance?
-            url: sql-managed-instance-paas-overview.md
           - text: vCore purchasing model
             url: service-tiers-managed-instance-vcore.md
-          - text: Transactional replication 
-            url: replication-transactional-overview.md 
-          - text: Migrate from SQL Server
-            url: ../migration-guides/managed-instance/sql-server-to-managed-instance-guide.md
           - text: T-SQL differences with SQL Server
             url: transact-sql-tsql-differences-sql-server.md
+          - text: Connectivity architecture
+            url:  connectivity-architecture-overview.md
+          - text: Frequently asked questions
+            url: frequently-asked-questions-faq.yml
 
+  # Card 
+  - title: Management
+    linkLists:
+      - linkListType: concept
+        links:
+        - text: Migrate from SQL Server
+          url: ../migration-guides/managed-instance/sql-server-to-managed-instance-guide.md
+        - text: November 2022 feature wave
+          url:  november-2022-feature-wave-enroll.md
+        - text: Management operations
+          url:  management-operations-overview.md
+        - text: Start and stop instance 
+          url:  instance-stop-start-how-to.md
+        - text: Managed Instance link
+          url: managed-instance-link-feature-overview.md 
+        - text: Copy or move a database
+          url:  database-copy-move-how-to.md
+        - text: Transactional replication
+          url:  replication-transactional-overview.md
+        - text: Connect apps to Azure SQL Managed Instance 
+          url: ../database/develop-overview.md#client-connections
+
+
+  # Card 
+  - title: Learn Azure SQL 
+    linkLists:
+      - linkListType: learn
+        links:
+        - text: Azure SQL for beginners
+          url: /shows/azure-sql-for-beginners/
+        - text: Azure SQL fundamentals 
+          url: /training/paths/azure-sql-fundamentals/
+        - text: Azure SQL hands-on labs
+          url: https://aka.ms/asqlworkshop
+        - text: Azure SQL bootcamp 
+          url: /users/marisabrasile/collections/8oq1i8p0z2qygw
+        - text: Educational SQL resources
+          url: /sql/sql-server/educational-sql-resources
+
+  # Card 
+  - title: Business continuity  
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Business continuity 
+            url: ../database/business-continuity-high-availability-disaster-recover-hadr-overview.md
+          - text: High availability
+            url: ../database/high-availability-sla.md
+          - text: Auto-failover groups
+            url: auto-failover-group-sql-mi.md 
+          - text: Automated backups
+            url: ../database/automated-backups-overview.md
+          - text: Recover with backup 
+            url: ../database/recovery-using-backups.md 
+          - text: Long-term backup retention  
+            url: ../database/long-term-retention-overview.md
 
   # Card 
   - title: Advanced security
@@ -71,23 +131,8 @@ landingContent:
             url: ../database/dynamic-data-masking-overview.md 
           - text: Public endpoints
             url: public-endpoint-overview.md 
-
-
-  # Card 
-  - title: Learn Azure SQL 
-    linkLists:
-      - linkListType: learn
-        links:
-        - text: Azure SQL for beginners
-          url: /shows/azure-sql-for-beginners/
-        - text: Azure SQL fundamentals 
-          url: /training/paths/azure-sql-fundamentals/
-        - text: Azure SQL hands-on labs
-          url: https://aka.ms/asqlworkshop
-        - text: Azure SQL bootcamp 
-          url: /users/marisabrasile/collections/8oq1i8p0z2qygw
-        - text: Educational SQL resources
-          url: /sql/sql-server/educational-sql-resources
+          - text: Private endpoints
+            url: private-endpoint-overview.md 
 
   # Card 
   - title: Reference 
@@ -98,7 +143,7 @@ landingContent:
           url: ../database/az-cli-script-samples-content-guide.md
         - text: PowerShell samples
           url: ../database/powershell-script-content-guide.md
-        - text: ARM template samples 
+        - text: Azure Resource Manager template samples 
           url: ../database/arm-templates-content-guide.md
       - linkListType: download
         links:
@@ -113,7 +158,7 @@ landingContent:
       - linkListType: reference
         links:
           - text: Migration guide
-            url: https://datamigration.microsoft.com/
+            url: /data-migration/
           - text: Transact-SQL (T-SQL)
             url: /sql/t-sql/language-reference
           - text: Azure CLI
@@ -121,35 +166,7 @@ landingContent:
           - text: PowerShell
             url: /powershell/module/az.sql
           - text: REST API
-            url: /rest/api/sql/
-
-  # Card 
-  - title: Business continuity  
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Business continuity 
-            url: ../database/business-continuity-high-availability-disaster-recover-hadr-overview.md
-          - text: High availability
-            url: ../database/high-availability-sla.md
-          - text: Auto-failover groups
-            url: auto-failover-group-sql-mi.md 
-          - text: Automated backups
-            url: ../database/automated-backups-overview.md
-          - text: Recover with backup 
-            url: ../database/recovery-using-backups.md 
-          - text: Long-term backup retention  
-            url: ../database/long-term-retention-overview.md
-          
-  # Card 
-  - title: Instance pools
-    linkLists:
-      - linkListType: concept
-        links:
-          - text: What is an instance pool? 
-            url: instance-pools-overview.md
-          - text: Configure
-            url: instance-pools-configure.md
+            url: /rest/api/sql/  
 
   # Card 
   - title: Planned maintenance
@@ -169,4 +186,3 @@ landingContent:
             url: ../database/maintenance-window-configure.md
           - text: Maintenance Window Notifications
             url: ../database/advance-notifications.md
- 

@@ -4,9 +4,8 @@ description: sys.symmetric_keys (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/07/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "symmetric_keys"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.symmetric_keys catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: d410eae1-3a52-45de-b9a1-52d2bd93a8eb
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.symmetric_keys (Transact-SQL)

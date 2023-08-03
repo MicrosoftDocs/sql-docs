@@ -1,16 +1,13 @@
 ---
-title: "Teradata Connection Type | Microsoft Docs"
+title: "Teradata Connection Type"
 description: Use the information in this article about the Teradata connection type to learn how to build a data source.
-ms.date: 03/17/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-data
-
-
-ms.topic: conceptual
-ms.assetid: b02779c2-a6b9-453c-815f-adad53353952
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/17/2017
+ms.service: reporting-services
+ms.subservice: report-data
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Teradata Connection Type (SSRS)
   To include data from Teradata in your report, you must have a dataset that is based on a report data source of type Teradata. This built-in data source type is based on the .NET Managed Provider for Teradata data processing extension.  

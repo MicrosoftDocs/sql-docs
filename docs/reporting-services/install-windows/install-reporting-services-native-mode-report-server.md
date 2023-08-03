@@ -1,19 +1,18 @@
 ---
+title: "Install Reporting Services 2016 native mode report server"
 description: "Install Reporting Services 2016 native mode report server"
-title: "Install Reporting Services 2016 native mode report server | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 12/20/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
+ms.service: reporting-services
 ms.topic: conceptual
+ms.custom:
+  - intro-installation
+  - updatefrequency5
 helpviewer_keywords:
   - "default configuration [Reporting Services]"
   - "report servers [Reporting Services], default configurations"
   - "installation options [Reporting Services]"
-ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
-author: maggiesMSFT
-ms.author: maggies
-ms.custom:
-  - intro-installation
 ---
 
 # Install Reporting Services 2016 native mode report server

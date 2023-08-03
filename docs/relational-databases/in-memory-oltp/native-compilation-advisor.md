@@ -4,14 +4,12 @@ description: Learn how to use the Native Compilation Advisor to migrate an inter
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
 f1_keywords:
   - "sql13.swb.nativecompilationwizard.f1"
   - "swb.nativecompilationwizard.f1"
-ms.assetid: d3898a47-2985-4a08-bc70-fd8331a01b7b
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Native Compilation Advisor
@@ -26,7 +24,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
  For information about migration methodologies, see [In-Memory OLTP - Common Workload Patterns and Migration Considerations](/previous-versions/dn673538(v=msdn.10)).  
   
 ## Walkthrough Using the Native Compilation Advisor  
- In **Object Explorer**, right click the stored procedure you want to convert, and select **Native Compilation Advisor**. This will display the welcome page for the **Stored Procedure Native Compilation Advisor**. Click **Next** to continue.  
+ In **Object Explorer**, right-click the stored procedure you want to convert, and select **Native Compilation Advisor**. This will display the welcome page for the **Stored Procedure Native Compilation Advisor**. Click **Next** to continue.  
   
 ### Stored Procedure Validation  
  This page will report if the stored procedure uses any constructs that are not compatible with native compilation. You can click **Next** to see details. If there are constructs that are not compatible with native compilation, you can click **Next** to see details.  

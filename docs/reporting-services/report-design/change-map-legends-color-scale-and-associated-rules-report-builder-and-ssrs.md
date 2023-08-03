@@ -1,15 +1,14 @@
 ---
-title: "Change map legends-color scale-associated rules in a paginated report | Microsoft Docs"
-
-description: Learn how to change map legends in a paginated report to help users interpret the data visualization on maps in Report Builder. 
+title: "Change map legends-color scale-associated rules in a paginated report"
+description: Learn how to change map legends in a paginated report to help users interpret the data visualization on maps in Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
+ms.service: reporting-services
+ms.subservice: report-design
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: updatefrequency5
+f1_keywords:
   - "sql13.rtp.rptdesigner.mapcolorscaleproperties.labels.f1"
   - "sql13.rtp.rptdesigner.mappointlayerproperties.typerules.f1"
   - "sql13.rtp.rptdesigner.shared.maprulesdistribution.f1"
@@ -32,9 +31,6 @@ f1_keywords:
   - "sql13.rtp.rptdesigner.maplegendproperties.general.f1"
   - "10540"
   - "10517"
-ms.assetid: a1d691b2-c5ae-420f-af60-b7c54a7385a4
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Change map legends, color scale, and associated rules in a paginated report (Report Builder)
 

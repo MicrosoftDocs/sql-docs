@@ -1,23 +1,19 @@
 ---
+title: "sysextendedarticlesview (Transact-SQL)"
 description: "sysextendedarticlesview (Transact-SQL)"
-title: "sysextendedarticlesview (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: "reference"
-f1_keywords: 
-  - "sysextendedarticlesview_TSQL"
-  - "sysextendedarticlesview"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sysextendedarticlesview view"
-ms.assetid: 8bdd22f7-c268-49b6-820c-3fe603feb128
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sysextendedarticlesview_TSQL"
+  - "sysextendedarticlesview"
+helpviewer_keywords:
+  - "sysextendedarticlesview view"
+dev_langs:
+  - "TSQL"
 ---
 # sysextendedarticlesview (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

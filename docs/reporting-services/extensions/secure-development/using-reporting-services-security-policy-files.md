@@ -1,14 +1,14 @@
 ---
-title: "Using Reporting Services Security Policy Files | Microsoft Docs"
+title: "Using Reporting Services Security Policy Files"
 description: Learn about the configuration files that Reporting Services uses to store security policy information for code assemblies. Find out how to modify them.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/06/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: extensions
-
-
+ms.service: reporting-services
+ms.subservice: extensions
 ms.topic: reference
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "code groups [Reporting Services]"
   - "CodeGroup elements"
   - "configuration files [Reporting Services]"
@@ -16,9 +16,6 @@ helpviewer_keywords:
   - "security policies [Reporting Services]"
   - "security configuration files [Reporting Services]"
   - "named permission sets [Reporting Services]"
-ms.assetid: 2280fff6-3de7-44b1-87da-5db0ec975928
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Using Reporting Services Security Policy Files
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] stores component security policy information in three configuration files that are copied to the file system during setup. These configuration files can contain a combination of internal-use and user-defined security policies for code assemblies in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. The three configuration files correspond to three securable components in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]: The report server and Windows service, the Report Manager Web application, and the Report Designer preview window.  

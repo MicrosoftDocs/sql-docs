@@ -1,30 +1,26 @@
 ---
+title: "sys.syscolumns (Transact-SQL)"
 description: "sys.syscolumns (Transact-SQL)"
-title: "sys.syscolumns (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.syscolumns"
   - "sys.syscolumns_TSQL"
   - "syscolumns_TSQL"
   - "syscolumns"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "syscolumns system table"
   - "sys.syscolumns compatibility view"
-ms.assetid: 863fd87b-ff33-4ac5-9aa9-df21140681da
-author: rwestMSFT
-ms.author: randolphwest
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # sys.syscolumns (Transact-SQL)
-[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
   Returns one row for every column in every table and view, and a row for each parameter in a stored procedure in the database.  
   

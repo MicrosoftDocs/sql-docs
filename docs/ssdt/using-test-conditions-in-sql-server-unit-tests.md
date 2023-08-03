@@ -1,17 +1,14 @@
 ---
 title: Using Test Conditions in SQL Server Unit Tests
 description: Learn about test conditions in SQL Server unit tests. See how to use predefined conditions and negative testing, and view information on custom conditions.
-ms.prod: sql
-ms.technology: ssdt
-ms.topic: conceptual
-f1_keywords: 
-  - "sql.data.tools.unittesting.testconditions"
-ms.assetid: e3d1c86c-1e58-4d2c-b625-d1b591b221aa
 author: markingmyname
 ms.author: maghan
-ms.reviewer: “”
-ms.custom: seo-lt-2019
 ms.date: 02/09/2017
+ms.service: sql
+ms.subservice: ssdt
+ms.topic: conceptual
+f1_keywords:
+  - "sql.data.tools.unittesting.testconditions"
 ---
 
 # Using Test Conditions in SQL Server Unit Tests
@@ -71,7 +68,7 @@ Any unspecified parameters are ignored. You pass these parameters to the **THROW
 For an example of how to use expected exceptions and a negative SQL Server unit test, see [Walkthrough: Creating and Running a SQL Server Unit Test](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md).  
   
 ## <a name="SpecifyDataChecksum"></a>Specifying a Data Checksum  
-To display the SQL Server Unit Test Designer, double click the unit test source code file in **Solution Explorer**.  
+To display the SQL Server Unit Test Designer, double-click the unit test source code file in **Solution Explorer**.  
   
 After you add a Data Checksum test condition to your database unit test, you must configure the expected checksum by using the following procedure:  
   

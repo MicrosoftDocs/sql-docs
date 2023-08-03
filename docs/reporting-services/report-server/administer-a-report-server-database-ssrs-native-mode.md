@@ -1,23 +1,20 @@
 ---
-title: "Administer a Report Server Database (Native Mode) | Microsoft Docs"
+title: "Administer a Report Server Database (Native Mode)"
 description: Learn about administering a Reporting Services deployment, including backup and restore of report server databases and managing encryption keys.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server
-
-
+ms.service: reporting-services
+ms.subservice: report-server
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "report servers [Reporting Services], databases"
   - "renaming databases"
   - "report server database"
   - "databases [Reporting Services], administering"
   - "reportservertempdb"
   - "reportserver database"
-ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Administer a Report Server Database (SSRS Native Mode)
   A [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] deployment uses two [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relational databases for internal storage. By default, the databases are named ReportServer and ReportServerTempdb. ReportServerTempdb is created with the primary report server database and is used to store temporary data, session information, and cached reports.  

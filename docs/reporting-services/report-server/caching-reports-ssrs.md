@@ -1,14 +1,14 @@
 ---
-title: "Caching Reports | Microsoft Docs"
-description: Learn about caching reports in Report Manager, which speeds up viewing for a processed report while it remains cached. 
+title: "Caching Reports"
+description: Learn about caching reports in Report Manager, which speeds up viewing for a processed report while it remains cached.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 05/14/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server
-
-
+ms.service: reporting-services
+ms.subservice: report-server
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "report execution properties [Reporting Services]"
   - "cache [Reporting Services]"
   - "report processing [Reporting Services], caching"
@@ -20,14 +20,11 @@ helpviewer_keywords:
   - "performance [Reporting Services]"
   - "expiration [Reporting Services]"
   - "snapshots [Reporting Services], caching"
-ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Caching Reports (SSRS)
   A report server can cache a copy of a processed report and return that copy when a user opens the report. To a user, the only evidence available to indicate the report is a cached copy is the date and time that the report ran. If the date or time is not current and the report is not a snapshot, the report was retrieved from cache.  
   
- Caching can shorten the time required to retrieve a report if the report is large or accessed frequently. If the server is rebooted, all cached instances are reinstated when the Report Server Web service comes back online.  
+ Caching can shorten the time required to retrieve a report if the report is large or accessed frequently. If the server is restarted, all cached instances are reinstated when the Report Server Web service comes back online.  
   
  Caching is a performance-enhancement technique. The contents of the cache are volatile and can change as reports are added, replaced, or removed. If you require a more predictable caching strategy, you should create a report snapshot. For more information, see [Set Report Processing Properties](../../reporting-services/report-server/set-report-processing-properties.md).  
   

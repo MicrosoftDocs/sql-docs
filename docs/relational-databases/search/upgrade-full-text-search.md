@@ -1,21 +1,19 @@
 ---
+title: "Upgrade Full-Text Search"
 description: "Upgrade Full-Text Search"
-title: "Upgrade Full-Text Search | Microsoft Docs"
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "search, sql-database"
-ms.technology: search
+ms.service: sql
+ms.subservice: search
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "full-text search [SQL Server], installing"
   - "migrating full-text indexes [SQL Server]"
   - "upgrading Full-Text Search"
   - "installing Full-Text Search"
   - "full-text search [SQL Server], upgrading"
-ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Upgrade Full-Text Search
@@ -35,9 +33,9 @@ For an in-place upgrade, an instance of [!INCLUDE[ssnoversion](../../includes/ss
  The full-text filter daemon hosts are processes that safely load and drive extensible external components used for index and query, such as word breakers, stemmers, and filters, without compromising the integrity of the Full-Text Engine. A server instance uses a multithreaded process for all multithreaded filters and a single-threaded process for all single-threaded filters.  
   
 > [!NOTE]  
->  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] introduced a service account for the FDHOST Launcher service (MSSQLFDLauncher). This service propagates the service account information to the filter daemon host processes of a specific instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For information about setting the service account, see [Set the Service Account for the Full-text Filter Daemon Launcher](../../relational-databases/search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md).  
+>  [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] introduced a service account for the FDHOST Launcher service (MSSQLFDLauncher). This service propagates the service account information to the filter daemon host processes of a specific instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For information about setting the service account, see [Set the Service Account for the Full-text Filter Daemon Launcher](../../relational-databases/search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md).  
   
- In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], each full-text index resides in a full-text catalog that belongs to a filegroup, has a physical path, and is treated as a database file. In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions, a full-text catalog is a logical or virtual object that contains a group of full-text indexes. Therefore, a new full-text catalog is not treated as a database file with a physical path. However, during upgrade of any full-text catalog that contains data files, a new filegroup is created on same disk. This maintains the old disk I/O behavior after upgrade. Any full-text index from that catalog is placed in the new filegroup if the root path exists. If the old full-text catalog path is invalid, the upgrade keeps the full-text index in the same filegroup as the base table or, for a partitioned table, in the primary filegroup.  
+ In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], each full-text index resides in a full-text catalog that belongs to a filegroup, has a physical path, and is treated as a database file. In [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions, a full-text catalog is a logical or virtual object that contains a group of full-text indexes. Therefore, a new full-text catalog is not treated as a database file with a physical path. However, during upgrade of any full-text catalog that contains data files, a new filegroup is created on same disk. This maintains the old disk I/O behavior after upgrade. Any full-text index from that catalog is placed in the new filegroup if the root path exists. If the old full-text catalog path is invalid, the upgrade keeps the full-text index in the same filegroup as the base table or, for a partitioned table, in the primary filegroup.  
   
 ## <a name="FT_Upgrade_Options"></a> Full-text upgrade options  
 
@@ -174,7 +172,7 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
   
 ##  <a name="Attaching_2005_ft_catalogs"></a> Attaching a SQL Server 2005 database
 
-In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions, a full-text catalog is a logical concept that refers to a group of full-text indexes. The full-text catalog is a virtual object that does not belong to any filegroup. However, when you attach a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database that contains full-text catalog files onto a newer [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] server instance, the catalog files are attached from their previous location along with the other database files, the same as in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+In [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions, a full-text catalog is a logical concept that refers to a group of full-text indexes. The full-text catalog is a virtual object that does not belong to any filegroup. However, when you attach a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database that contains full-text catalog files onto a newer [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] server instance, the catalog files are attached from their previous location along with the other database files, the same as in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
 The state of each attached full-text catalog on [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] is the same as when the database was detached from [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. If any full-text index population was suspended by the detach operation, the population is resumed on [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], and the full-text index becomes available for full-text search.  
   

@@ -1,23 +1,18 @@
 ---
+title: "SetServiceState Method (WMI MSReportServer_ConfigurationSetting)"
 description: "SetServiceState Method (WMI MSReportServer_ConfigurationSetting)"
-title: "SetServiceState Method (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
-ms.date: 03/17/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: wmi-provider-library-reference
-
-
-ms.topic: conceptual
-apiname: 
-  - "SetServiceState (WMI MSReportServer_ConfigurationSetting Class)"
-apilocation: 
-  - "reportingservices.mof"
-apitype: MOFDef
-helpviewer_keywords: 
-  - "SetServiceState method"
-ms.assetid: 9e1ee42d-b388-4929-89c7-8741b956c3be
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/17/2017
+ms.service: reporting-services
+ms.subservice: wmi-provider-library-reference
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "SetServiceState method"
+apilocation: "reportingservices.mof"
+apiname: "SetServiceState (WMI MSReportServer_ConfigurationSetting Class)"
+apitype: MOFDef
 ---
 # ConfigurationSetting Method - SetServiceState
   Turns the Report Server Windows and Web services on and off.  

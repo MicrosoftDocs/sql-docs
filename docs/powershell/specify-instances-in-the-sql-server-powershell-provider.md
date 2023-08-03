@@ -1,19 +1,18 @@
 ---
 title: "Specify instances in SQL Server PowerShell Provider"
-description: Learn how to specify instances when using the SQL Server PowerShell provider. 
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: sql-server-powershell
-ms.topic: conceptual
+description: Learn how to specify instances when using the SQL Server PowerShell provider.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: matteot, drskwier
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: sql-server-powershell
+ms.topic: conceptual
 ---
 
 # Specify Instances in the SQL Server PowerShell Provider
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 The paths specified for the SQL Server PowerShell provider must identify the instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)] and the computer it is running on. The syntax for specifying the computer and the instance must comply with both the rules for SQL Server identifiers and Windows PowerShell paths.  
 

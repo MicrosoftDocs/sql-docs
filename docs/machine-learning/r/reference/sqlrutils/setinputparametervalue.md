@@ -1,32 +1,17 @@
---- 
-
-# required metadata 
-title: "setInputParameterValue function (sqlrutils) | Microsoft Docs" 
-description: " setInputParameterValue: assigns a value to an input parameter of the                  stored procedure/embedded R function that is going to be                  used in the next run of the stored procedure. " 
-keywords: "(sqlrutils), setInputParameterValue" 
+---
+title: "setInputParameterValue function (sqlrutils)"
+description: "setInputParameterValue: assigns a value to an input parameter of the stored procedure/embedded R function that is going to be used in the next run of the stored procedure."
 author: "rothja"
-ms.author: "jroth" 
-manager: "cgronlun" 
+ms.author: "jroth"
 ms.date: 07/15/2019
-ms.topic: "reference" 
-ms.prod: "mlserver" 
-ms.service: "" 
-ms.assetid: "" 
-
-# optional metadata 
-ROBOTS: "" 
-audience: "" 
-ms.devlang: "" 
-ms.reviewer: "" 
-ms.suite: "" 
-ms.tgt_pltfrm: "" 
-#ms.technology: "" 
-ms.custom: "" 
-
+ms.service: sql
+ms.subservice: machine-learning
+ms.topic: "reference"
+keywords:
+  - (sqlrutils)
+  - setInputParameterValue
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
---- 
-
-
+---
 
 
  # setInputParameterValue: Assign a Value to the Input Data Parameter of the SQL Stored Procedure 

@@ -4,9 +4,8 @@ description: MSagent_profiles (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "MSagent_profiles"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "MSagent_profiles system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 4ab1b2ae-b6d9-42b7-9b31-98547dbb7f99
 ---
 # MSagent_profiles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

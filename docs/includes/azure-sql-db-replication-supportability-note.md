@@ -2,7 +2,7 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 05/30/2019
-ms.service: sql-server
+ms.service: sql
 ms.topic: include
 ---
   > [!NOTE] 

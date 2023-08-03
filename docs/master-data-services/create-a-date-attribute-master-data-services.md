@@ -1,23 +1,19 @@
 ---
-description: "Create a Date Attribute (Master Data Services)"
 title: Create a Date Attribute
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "creating date attributes [Master Data Services]"
-  - "attributes [Master Data Services], creating date attributes"
-ms.assetid: 22a8f1a3-b4f2-4cfa-8495-7daad5ce9d12
+description: "Create a Date Attribute (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/15/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "creating date attributes [Master Data Services]"
+  - "attributes [Master Data Services], creating date attributes"
 ---
 # Create a Date Attribute (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], create a date attribute when you want users to enter a date as an attribute value.  
   

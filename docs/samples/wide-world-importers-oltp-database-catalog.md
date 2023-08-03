@@ -1,15 +1,12 @@
 ---
-title: "WideWorldImporters OLTP database catalog - SQL | Microsoft Docs"
+title: "WideWorldImporters OLTP database catalog - SQL"
 description: Understand the schemas, tables, stored procedures, and design considerations for the WideWorldImporters sample database catalog.
-ms.prod: sql
-ms.prod_service: sql
-ms.technology: samples
-ms.custom: ""
-ms.date: "04/04/2018"
-ms.reviewer: ""
-ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2018"
+ms.service: sql
+ms.subservice: samples
+ms.topic: conceptual
 ---
 # WideWorldImporters database catalog
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -21,11 +18,11 @@ WideWorldImporters uses schemas for different purposes, such as storing data, de
 
 ### Data schemas
 
-These schemas contain the data. A number of tables are needed by all other schemas and are located in the Application schema.
+These schemas contain the data. Many tables are needed by all other schemas and are located in the Application schema.
 
 |Schema|Description|
 |-----------------------------|---------------------|
-|Application|Application-wide users, contacts, and parameters. This also contains reference tables with data that is used by multiple schemas|
+|Application|Application-wide users, contacts, and parameters. This schema also contains reference tables with data that is used by multiple schemas|
 |Purchasing|Stock item purchases from suppliers and details about suppliers.|  
 |Sales|Stock item sales to retail customers, and details about customers and sales people. |  
 |Warehouse|Stock item inventory and transactions.|  
@@ -40,7 +37,7 @@ These schemas are used for external applications that are not allowed to access 
 |Reports|All access to the database from Reporting Services reports is through this schema.|
 |PowerBI|All access to the database from the Power BI dashboards via the Enterprise Gateway is through this schema.|
 
-Note that the Reports and PowerBI schemas are not used in the initial release of the sample database. However, all Reporting Services and Power BI samples built on top of this database are encouraged to use these schemas.
+The Reports and PowerBI schemas are not used in the initial release of the sample database. However, all Reporting Services and Power BI samples built on top of this database are encouraged to use these schemas.
 
 ### Development schemas
 
@@ -48,7 +45,7 @@ Special-purpose schemas
 
 |Schema|Description|
 |-----------------------------|---------------------|
-|Integration|Objects and procedures required for data warehouse integration (i.e. migrating the data to the WideWorldImportersDW database).|
+|Integration|Objects and procedures required for data warehouse integration (that is, migrating the data to the WideWorldImportersDW database).|
 |Sequences|Holds sequences used by all tables in the application.|
 
 ## Tables
@@ -62,13 +59,13 @@ Details of parameters and people (users and contacts), along with common referen
 |Table|Description|
 |-----------------------------|---------------------|
 |SystemParameters|Contains system-wide configurable parameters.|
-|People|Contains user names, contact information, for all who use the application, and for the people that the Wide World Importers deals with at customer organizations. This includes staff, customers, suppliers, and any other contacts. For people who have been granted permission to use the system or website, the information includes login details.|
+|People|Contains user names, contact information, for all who use the application, and for the people that the Wide World Importers deals with at customer organizations. This table includes staff, customers, suppliers, and any other contacts. For people who have been granted permission to use the system or website, the information includes login details.|
 |Cities|There are many addresses stored in the system, for people, customer organization delivery addresses, pickup addresses at suppliers, etc. Whenever an address is stored, there is a reference to a city in this table. There is also a spatial location for each city.|
 |StateProvinces|Cities are part of states or provinces. This table has details of those, including spatial data describing the boundaries each state or province.|
-|Countries|States or Provinces are part of countries. This table has details of those, including spatial data describing the boundaries of each country.|
-|DeliveryMethods|Choices for delivering stock items (e.g., truck/van, post, pickup, courier, etc.)|
-|PaymentMethods|Choices for making payments (e.g., cash, check, EFT, etc.)|
-|TransactionTypes|Types of customer, supplier, or stock transactions (e.g., invoice, credit note, etc.)|
+|Countries|States or Provinces are part of countries/regions. This table has details of those, including spatial data describing the boundaries of each country/region.|
+|DeliveryMethods|Choices for delivering stock items (for example, truck/van, post, pickup, courier, etc.)|
+|PaymentMethods|Choices for making payments (for example, cash, check, EFT, etc.)|
+|TransactionTypes|Types of customer, supplier, or stock transactions (for example, invoice, credit note, etc.)|
 
 ### Purchasing Schema
 
@@ -77,7 +74,7 @@ Details of suppliers and of stock item purchases.
 |Table|Description|
 |-----------------------------|---------------------|
 |Suppliers|Main entity table for suppliers (organizations)|
-|SupplierCategories|Categories for suppliers (e.g., novelties, toys, clothing, packaging, etc.)|
+|SupplierCategories|Categories for suppliers (for example, novelties, toys, clothing, packaging, etc.)|
 |SupplierTransactions|All financial transactions that are supplier-related (invoices, payments)|
 |PurchaseOrders|Details of supplier purchase orders|
 |PurchaseOrderLines|Detail lines from supplier purchase orders|
@@ -90,7 +87,7 @@ Details of customers, salespeople, and of stock item sales.
 |Table|Description|
 |-----------------------------|---------------------|
 |Customers|Main entity tables for customers (organizations or individuals)|
-|CustomerCategories|Categories for customers (ie novelty stores, supermarkets, etc.)|
+|CustomerCategories|Categories for customers (for example, novelty stores, supermarkets, etc.)|
 |BuyingGroups|Customer organizations can be part of groups that exert greater buying power|
 |CustomerTransactions|All financial transactions that are customer-related (invoices, payments)|
 |SpecialDeals|Special pricing. This can include fixed prices, discount in dollars or discount percent.|
@@ -107,10 +104,10 @@ Details of stock items, their holdings and transactions.
 |-----------------------------|---------------------|
 |StockItems|Main entity table for stock items|
 |StockItemHoldings|Non-temporal columns for stock items. These are frequently updated columns.|
-|StockGroups|Groups for categorizing stock items (e.g., novelties, toys, edible novelties, etc.)|
+|StockGroups|Groups for categorizing stock items (for example, novelties, toys, edible novelties, etc.)|
 |StockItemStockGroups|Which stock items are in which stock groups (many to many)|
 |Colors|Stock items can (optionally) have colors|
-|PackageTypes|Ways that stock items can be packaged (e.g., box, carton, pallet, kg, etc.|
+|PackageTypes|Ways that stock items can be packaged (for example, box, carton, pallet, kg, etc.|
 |StockItemTransactions|Transactions covering all movements of all stock items (receipt, sale, write-off)|
 |VehicleTemperatures|Regularly recorded temperatures of vehicle chillers|
 |ColdRoomTemperatures|Regularly recorded temperatures of cold room chillers|
@@ -122,11 +119,11 @@ Database design is subjective and there is no right or wrong way to design a dat
 
 ### Schema design
 
-WideWorldImporters uses a small number of schemas so that it is easy to understand the database system and demonstrate database principles.  
+WideWorldImporters uses a few schemas so that it is easy to understand the database system and demonstrate database principles.  
 
 Wherever possible, the database collocates tables that are commonly queried together into the same schema to minimize join complexity.
 
-The database schema has been code-generated based on a series of metadata tables in another database WWI_Preparation. This gives WideWorldImporters a very high degree of design consistency, naming consistency, and completeness. For details on how the schema has been generated see the source code: [wide-world-importers/wwi-database-scripts](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/sample-scripts)
+The database schema has been code-generated based on a series of metadata tables in another database WWI_Preparation. This gives WideWorldImporters a high degree of design consistency, naming consistency, and completeness. For details on how the schema has been generated see the source code: [wide-world-importers/wwi-database-scripts](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/sample-scripts)
 
 ### Table design
 
@@ -141,7 +138,7 @@ The database schema has been code-generated based on a series of metadata tables
 
 For security, WideWorldImporters does not allow external applications to access data schemas directly. To isolate access, WideWorldImporters uses security-access schemas that do not hold data, but contain views and stored procedures. External applications use the security schemas to retrieve the data that they are allowed to view.  This way, users can only run the views and stored procedures in the secure-access schemas
 
-For example, this sample includes Power BI dashboards. An external application accesses these Power BI dashboards from the Power BI gateway as a user that has read-only permission on the PowerBI schema.  For read-only permission, the user only needs SELECT and EXECUTE permission on the PowerBI schema. A database administrator at WWI assigns these permissions as needed.
+For example, this sample includes Power BI dashboards. An external application accesses these Power BI dashboards from the Power BI gateway as a user that has read-only permission on the Power BI schema.  For read-only permission, the user only needs SELECT and EXECUTE permission on the Power BI schema. A database administrator at WWI assigns these permissions as needed.
 
 ## Stored Procedures
 
@@ -149,7 +146,7 @@ Stored procedures are organized in schemas. Most of the schemas are used for con
 
 The `Website` schema contains the stored procedures that can be used by a Web front-end.
 
-The `Reports` and `PowerBI` schemas are meant for reporting services and PowerBI purposes. Any extensions of the sample are encouraged to use these schemas for reporting purposes.
+The `Reports` and `PowerBI` schemas are meant for reporting services and Power BI purposes. Any extensions of the sample are encouraged to use these schemas for reporting purposes.
 
 ### Website schema
 

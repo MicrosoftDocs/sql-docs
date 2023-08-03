@@ -1,13 +1,12 @@
 ---
 title: Develop applications for SQL Server on Linux
 description: You can create applications that connect to and use SQL Server on Linux from a variety of programming languages and popular web frameworks.
-author: VanMSFT 
-ms.author: vanto
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 10/21/2021
+ms.service: sql
+ms.subservice: linux
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
-ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
 ---
 # How to get started developing applications for SQL Server on Linux
 
@@ -58,7 +57,7 @@ You can use the new [mssql extension](https://aka.ms/mssql-marketplace) for [Vis
 
 You can also use new command-line tools that are native for Linux. These tools include the following:
 
-- [sqlcmd](../tools/sqlcmd-utility.md)
+- [sqlcmd](../tools/sqlcmd/sqlcmd-utility.md)
 - [bcp](sql-server-linux-migrate-bcp.md)
 - [mssql-conf](sql-server-linux-configure-mssql-conf.md)
 

@@ -4,14 +4,13 @@ description: In SQL Server CLR integration, the .NET Framework string APIs use t
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 helpviewer_keywords:
   - "data types [CLR integration]"
   - "parameter collation [CLR integration]"
   - "collations [CLR integration]"
-ms.assetid: 6ebaed8e-2e2b-4f6d-bf4b-bc25452de441
 ---
 # Collation and CLR Integration Data Types
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

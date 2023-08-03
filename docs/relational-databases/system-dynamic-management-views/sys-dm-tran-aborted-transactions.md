@@ -3,10 +3,9 @@ title: "sys.dm_tran_aborted_transactions (Transact-SQL)"
 description: sys.dm_tran_aborted_transactions (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "02/18/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: system-objects
+ms.date: "06/19/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "dm_tran_aborted_transactions"
@@ -20,7 +19,7 @@ dev_langs:
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current"
 ---
 # sys.dm_tran_aborted_transactions (Transact-SQL)
-[!INCLUDE [SQL Server 2019, ASDB, ASDBMI ](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi.md)]
+[!INCLUDE [SQL Server 2019, ASDB, ASDBMI](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi.md)]
 
   Returns information about unresolved, aborted transactions on the SQL Server instance.
 
@@ -29,7 +28,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-curr
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |transaction_id  |  int|  The `transaction_id` of the aborted transaction.  |
-|database_id  |  int|  The `database_id` of the aborted transaction.  |
+|database_id  |  int|  The `database_id` of the aborted transaction.  <br /><br />In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the values are unique within a single database or an elastic pool, but not within a logical server.|
 |begin_xact_lsn |   numeric(25,0) | The starting LSN of the aborted transaction. |
 |end_xact_lsn |  numeric(25,0) | The ending LSN of the aborted transaction. |
 |begin_time |   datetime  | The begin time of the aborted transaction. |
@@ -40,6 +39,10 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-curr
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] and SQL Managed Instance, requires `VIEW SERVER STATE` permission.
 
 On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databases in **elastic pools**, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account, the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account, or membership in the `##MS_ServerStateReader##` [server role](/azure/azure-sql/database/security-server-roles) is required. On all other SQL Database service objectives, either the `VIEW DATABASE STATE` permission on the database, or membership in the `##MS_ServerStateReader##` server role is required.   
+
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 
 ## Remarks   
 

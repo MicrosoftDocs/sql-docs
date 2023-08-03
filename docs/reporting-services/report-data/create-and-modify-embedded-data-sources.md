@@ -1,16 +1,13 @@
 ---
-title: "Create and Modify Embedded Data Sources | Microsoft Docs"
+title: "Create and Modify Embedded Data Sources"
 description: Learn how to create and modify embedded data sources that are defined in a report definition and only used by that report.
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-data
-
-
-ms.topic: conceptual
-ms.assetid: 1c38c2e8-7a29-4f79-a4a3-85ed2b13723b
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: report-data
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Create and Modify Embedded Data Sources
   An embedded data source is defined in a report definition and used only by that report.  

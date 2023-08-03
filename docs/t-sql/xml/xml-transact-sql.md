@@ -1,21 +1,19 @@
 ---
 title: xml (Transact-SQL)
 description: xml (Transact-SQL)
-ms.prod: sql
-ms.technology: t-sql
-ms.topic: reference
-f1_keywords: 
-  - "xml_TSQL"
-  - "xml"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "xml data type [SQL Server], about xml data type"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
-ms.custom: ""
 ms.date: "07/26/2017"
+ms.service: sql
+ms.subservice: t-sql
+ms.topic: reference
+f1_keywords:
+  - "xml_TSQL"
+  - "xml"
+helpviewer_keywords:
+  - "xml data type [SQL Server], about xml data type"
+dev_langs:
+  - "TSQL"
 ---
 
 # xml (Transact-SQL)
@@ -24,7 +22,7 @@ ms.date: "07/26/2017"
 
 It's the data type that stores XML data. You can store **xml** instances in a column, or a variable of **xml** type.  
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -49,7 +47,7 @@ Is the name of an XML schema collection. To create a typed **xml** column or var
   
 ## Remarks
 
-The stored representation of **xml** data type instances can’t exceed 2 gigabytes (GB) in size.  
+The stored representation of **xml** data type instances can't exceed 2 gigabytes (GB) in size.  
   
 The CONTENT and DOCUMENT facets apply only to typed XML. For more information, see [Compare Typed XML to Untyped XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   

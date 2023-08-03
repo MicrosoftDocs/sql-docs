@@ -4,11 +4,9 @@ description: Use the SQL Server Extended Events Wizard to alter an Extended Even
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "05/24/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xevents
+ms.service: sql
+ms.subservice: xevents
 ms.topic: tutorial
-ms.assetid: 114ec05b-7eca-4c87-b276-25e37b84be39
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Alter an Extended Events Session

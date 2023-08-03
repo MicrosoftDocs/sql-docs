@@ -5,8 +5,8 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: randolphwest
 ms.date: 09/09/2022
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.firewall_rules"
@@ -24,7 +24,7 @@ monikerRange: "=azuresqldb-current"
 
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-Returns information about the server-level firewall settings associated with your [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+Returns information about the server-level firewall settings associated with your [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 The `sys.firewall_rules` view contains the following columns:
 
@@ -39,7 +39,7 @@ The `sys.firewall_rules` view contains the following columns:
 
 ## Remarks
 
-To return information about the database-level firewall settings associated with your [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], use [sys.database_firewall_rules (Azure SQL Database)](sys-database-firewall-rules-azure-sql-database.md).
+To return information about the database-level firewall settings associated with your [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], use [sys.database_firewall_rules (Azure SQL Database)](sys-database-firewall-rules-azure-sql-database.md).
 
 ## Permissions
 

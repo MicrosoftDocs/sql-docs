@@ -4,8 +4,8 @@ description: "Transact-SQL reference for the FORMAT function."
 author: markingmyname
 ms.author: maghan
 ms.date: "08/15/2017"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "FORMAT_TSQL"
@@ -14,15 +14,15 @@ helpviewer_keywords:
   - "FORMAT function"
 dev_langs:
   - "TSQL"
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azure-sqldw-latest"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azure-sqldw-latest||=fabric"
 ---
 # FORMAT (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw.md)]
 
 Returns a value formatted with the specified format and optional culture. Use the FORMAT function for locale-aware formatting of date/time and number values as strings. For general data type conversions, use CAST or CONVERT.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -95,12 +95,12 @@ FORMAT( value, format [, culture ] )
 ```sql  
 DECLARE @d DATE = '11/22/2020';
 SELECT FORMAT( @d, 'd', 'en-US' ) 'US English'  
-      ,FORMAT( @d, 'd', 'en-gb' ) 'Great Britain English'  
+      ,FORMAT( @d, 'd', 'en-gb' ) 'British English'  
       ,FORMAT( @d, 'd', 'de-de' ) 'German'  
       ,FORMAT( @d, 'd', 'zh-cn' ) 'Chinese Simplified (PRC)';  
   
 SELECT FORMAT( @d, 'D', 'en-US' ) 'US English'  
-      ,FORMAT( @d, 'D', 'en-gb' ) 'Great Britain English'  
+      ,FORMAT( @d, 'D', 'en-gb' ) 'British English'  
       ,FORMAT( @d, 'D', 'de-de' ) 'German'  
       ,FORMAT( @d, 'D', 'zh-cn' ) 'Chinese Simplified (PRC)';  
 ```  
@@ -108,11 +108,11 @@ SELECT FORMAT( @d, 'D', 'en-US' ) 'US English'
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
-US English  Great Britain English German     Simplified Chinese (PRC)  
+US English  British English       German     Simplified Chinese (PRC)  
 ----------  --------------------- ---------- ------------------------  
 11/22/2020  22/11/2020            22.11.2020 2020/11/22 
   
-US English                  Great Britain English  German                      Chinese (Simplified PRC)  
+US English                  British English        German                      Chinese (Simplified PRC)  
 --------------------------- ---------------------- --------------------------  ---------------------------------------  
 Sunday, November 22, 2020   22 November 2020       Sonntag, 22. November 2020  2020年11月22日  
   
@@ -120,7 +120,7 @@ Sunday, November 22, 2020   22 November 2020       Sonntag, 22. November 2020  2
   
 ### B. FORMAT with custom formatting strings
 
- The following example shows formatting numeric values by specifying a custom format. The example assumes that the current date is September 27, 2012. For more information about these and other custom formats, see [Custom Numeric Format Strings](/dotnet/standard/base-types/custom-numeric-format-strings).  
+ The following example shows formatting numeric values by specifying a custom format. The example assumes that the current date is November 22, 2020. For more information about these and other custom formats, see [Custom Numeric Format Strings](/dotnet/standard/base-types/custom-numeric-format-strings).  
   
 ```sql  
 DECLARE @d DATE = GETDATE();  

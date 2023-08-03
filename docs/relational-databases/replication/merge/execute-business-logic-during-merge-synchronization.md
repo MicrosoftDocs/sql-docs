@@ -1,23 +1,20 @@
 ---
 title: "Business logic for Merge synchronization"
-description: Learn about writing managed assembly code tor the business logic used for synchronization for Merge Replication. 
-ms.custom: seo-lt-2019
+description: Learn about writing managed assembly code tor the business logic used for synchronization for Merge Replication.
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "custom error resolution [SQL Server replication]"
   - "custom change handling [SQL Server replication]"
   - "errors [SQL Server replication], business logic handlers"
   - "merge replication business logic handlers [SQL Server replication]"
   - "conflict resolution [SQL Server replication], merge replication"
   - "business logic handlers [SQL Server replication]"
-ms.assetid: 9d4da2ef-c17f-4a31-a1f6-5c3b7ca85f71
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Execute Business Logic During Merge Synchronization
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +41,7 @@ ms.author: "mathoma"
   
 -   Reject the data  
   
-     This is useful for applications that do not want changes propagated to or from a given Subscriber. For example, an administrator could filter out inserts that do not belong in the Subscriber’s partition, or possibly reject deletes performed at a Subscriber. As another example, an application could reject an order entered at a Subscriber because the inventory is no longer available.  
+     This is useful for applications that do not want changes propagated to or from a given Subscriber. For example, an administrator could filter out inserts that do not belong in the Subscriber's partition, or possibly reject deletes performed at a Subscriber. As another example, an application could reject an order entered at a Subscriber because the inventory is no longer available.  
   
 -   Accept the data  
   

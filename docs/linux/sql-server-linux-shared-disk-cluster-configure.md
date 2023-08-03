@@ -1,15 +1,13 @@
 ---
 title: Configure FCI - SQL Server on Linux (RHEL)
-description: Learn to configure a failover cluster instance (FCI) on Red Hat Enterprise Linux (RHEL) for SQL Server. 
-ms.custom: seo-lt-2019
-author: VanMSFT
-ms.author: vanto
+description: Learn to configure a failover cluster instance (FCI) on Red Hat Enterprise Linux (RHEL) for SQL Server.
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: vanto
 ms.date: 08/28/2017
+ms.service: sql
+ms.subservice: linux
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
-ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85 
 ---
 # Configure failover cluster instance - SQL Server on Linux (RHEL)
 
@@ -140,7 +138,7 @@ You need to provide storage that both nodes can access. You can use iSCSI, NFS, 
    ```bash
    sudo passwd hacluster
    ```
-1. Enable and start `pcsd` service and Pacemaker. This will allow nodes to rejoin the cluster after the reboot. Run the following command on both nodes.
+1. Enable and start `pcsd` service and Pacemaker. This will allow nodes to rejoin the cluster after the restart. Run the following command on both nodes.
 
    ```bash
    sudo systemctl enable pcsd

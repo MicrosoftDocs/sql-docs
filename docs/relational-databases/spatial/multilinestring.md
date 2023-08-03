@@ -1,18 +1,14 @@
 ---
+title: "MultiLineString"
 description: "MultiLineString"
-title: "MultiLineString | Microsoft Docs"
-ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: 
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "MultiLineString geometry subtype [SQL Server]"
-  - "geometry subtypes [SQL Server]"
-ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
 author: MladjoA
 ms.author: mlandzic
+ms.date: "03/03/2017"
+ms.service: sql
+ms.topic: conceptual
+helpviewer_keywords:
+  - "MultiLineString geometry subtype [SQL Server]"
+  - "geometry subtypes [SQL Server]"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # MultiLineString

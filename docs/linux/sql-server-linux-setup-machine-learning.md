@@ -4,15 +4,12 @@ titleSuffix: SQL Server 2019 Machine Learning Services
 description: "Learn how to install SQL Server 2019 Machine Learning Services on Linux: Red Hat, Ubuntu, and SUSE."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-manager: rothja
-ms.date: 05/24/2022
+ms.date: 01/27/2023
+ms.service: sql
+ms.subservice: machine-learning-services
 ms.topic: how-to
-ms.prod: sql
-ms.technology: machine-learning-services
+ms.custom: intro-installation
 monikerRange: "=sql-server-ver15||=sql-server-linux-ver15"
-ms.custom:
-- intro-installation
-- event-tier1-build-2022
 ---
 # Install SQL Server 2019 Machine Learning Services (Python and R) on Linux
 
@@ -37,9 +34,7 @@ You can install Machine Learning Services on Red Hat Enterprise Linux (RHEL), SU
 
 * (R only) Microsoft R Open (MRO) provides the base R distribution for the R feature in SQL Server and is a prerequisite for using RevoScaleR, MicrosoftML, and other R packages installed with Machine Learning Services.
     * The required version is MRO 3.5.2.
-    * Choose from the following two approaches to install MRO:
-        * Download the MRO tarball from MRAN, unpack it, and run its install.sh script. You can follow the [installation instructions on MRAN](https://mran.microsoft.com/releases/3.5.2) if you want this approach.
-        * Register the **packages.microsoft.com** repo as described below to install the MRO distribution: microsoft-r-open-mro and microsoft-r-open-mkl. 
+    * Register the `packages.microsoft.com` repo as described below to install the MRO distribution: `microsoft-r-open-mro` and `microsoft-r-open-mkl`. 
     * See the installation sections below for how to install MRO.
 
 * You should have a tool for running T-SQL commands. 
@@ -147,6 +142,9 @@ sudo su
 
 # Optionally, if your system does not have the https apt transport option
 apt-get install apt-transport-https
+
+# If you are on Ubuntu 20.04, install the following package (MRO 3.5 has a dependency on libtinfo.so.5 in Ubuntu 20.04)
+apt-get install libncurses5
 
 # Set the location of the package repo the "prod" directory containing the distribution.
 # This example specifies 20.04. Replace with 16.04 or 14.04 if you want those versions.

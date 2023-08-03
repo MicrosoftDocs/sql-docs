@@ -1,14 +1,12 @@
 ---
+title: "Modifying Data in a System-Versioned Temporal Table"
 description: "Modifying Data in a System-Versioned Temporal Table"
-title: "Modifying Data in a System-Versioned Temporal Table | Microsoft Docs"
-ms.custom: ""
-ms.date: 03/04/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: table-view-index
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: 03/04/2022
+ms.service: sql
+ms.subservice: table-view-index
+ms.topic: conceptual
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Modifying data in a system-versioned temporal table

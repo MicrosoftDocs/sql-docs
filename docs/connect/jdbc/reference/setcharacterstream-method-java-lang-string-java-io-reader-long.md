@@ -4,8 +4,8 @@ description: "setCharacterStream Method (java.lang.String, java.io.Reader, long)
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: reference
 ---
 # setCharacterStream Method (java.lang.String, java.io.Reader, long)

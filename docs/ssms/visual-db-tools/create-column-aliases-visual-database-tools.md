@@ -1,20 +1,15 @@
 ---
-description: "Create Column Aliases (Visual Database Tools)"
 title: Create Column Aliases
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "columns [SQL Server], aliases"
-  - "aliases [SQL Server], columns"
-ms.assetid: e2e1c166-8ea7-47a2-b6a7-e419bf0fa3bb
+description: "Create Column Aliases (Visual Database Tools)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: 
-
+ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+helpviewer_keywords:
+  - "columns [SQL Server], aliases"
+  - "aliases [SQL Server], columns"
 ---
 # Create Column Aliases (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

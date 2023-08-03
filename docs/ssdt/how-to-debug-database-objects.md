@@ -1,15 +1,12 @@
 ---
 title: Debug Database Objects
 description: Find out how to debug stored procedures, functions, and triggers. See how to turn on debugging, set breakpoints, and run a SQL Server unit test in debug mode.
-ms.prod: sql
-ms.technology: ssdt
-ms.topic: conceptual
-ms.assetid: f5d4584f-e85f-4558-b056-83681c365978
 author: markingmyname
 ms.author: maghan
-ms.reviewer: “”
-ms.custom: seo-lt-2019
 ms.date: 02/09/2017
+ms.service: sql
+ms.subservice: ssdt
+ms.topic: conceptual
 ---
 
 # How to:  Debug Database Objects
@@ -85,7 +82,7 @@ The procedures in this topic describe how to debug particular database objects, 
   
 1.  Visual Studio 2010, open the (Test -> Windows) **Test View** window. In Visual Studio 2012, open the **Test Explorer** window.  
   
-2.  Right click the test whose Transact\-SQL script exercises the database object in which you set breakpoints and select **Debug Selection**.  
+2.  Right-click the test whose Transact\-SQL script exercises the database object in which you set breakpoints and select **Debug Selection**.  
   
     The test runs in debug mode until a breakpoint in the database object is encountered.  
   

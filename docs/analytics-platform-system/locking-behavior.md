@@ -5,10 +5,9 @@ author: charlesfeddersen
 ms.author: charlesf
 ms.reviewer: martinle
 ms.date: 04/17/2018
-ms.prod: sql
-ms.technology: data-warehouse
+ms.service: sql
+ms.subservice: data-warehouse
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 ---
 
 # Locking behavior in Parallel Data Warehouse
@@ -43,7 +42,7 @@ SQL Server PDW does not implement any configurable isolation levels. It supports
 SQL Server PDW relies on the underlying SQL Server engine to implement locking and concurrency control. If operations lead to an underlying SQL Server deadlock within the same node, SQL Server PDW leverages the SQL Server deadlock detection capability and terminates one of the blocking statements.  
   
 > [!NOTE]  
-> SQL Server does not allow statements that are waiting for locks to be blocked by newer lock requests. SQL Server PDW has not fully implemented this process. In SQL Server PDW, continuous requests for new shared locks can sometimes block a previous (but waiting) request for an exclusive lock. For example, an **UPDATE** statement (requiring an exclusive lock) can be blocked by shared locks that are granted for series of **SELECT** statements. To resolve a blocked process (identified by reviewing the [sys.dm_pdw_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md) DVM), stop submitting new requests until the exclusive lock has been satisfied.  
+> SQL Server does not allow statements that are waiting for locks to be blocked by newer lock requests. SQL Server PDW has not fully implemented this process. In SQL Server PDW, continuous requests for new shared locks can sometimes block a previous (but waiting) request for an exclusive lock. For example, an **UPDATE** statement (requiring an exclusive lock) can be blocked by shared locks that are granted for series of **SELECT** statements. To resolve a blocked process (identified by reviewing the [sys.dm_pdw_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md) DMV), stop submitting new requests until the exclusive lock has been satisfied.  
   
 ## Lock Definition Table  
 SQL Server supports the following types of locks. Not all lock types are available on the control node, but could occur on the compute nodes.  

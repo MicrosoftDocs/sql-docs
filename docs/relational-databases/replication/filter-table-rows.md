@@ -1,18 +1,15 @@
 ---
+title: "Filter Table Rows"
 description: "Filter Table Rows"
-title: "Filter Table Rows | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.newpubwizard.filtertablerows.f1"
-ms.assetid: 005f5c71-0401-490e-8823-adc54a2e9675
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.newpubwizard.filtertablerows.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Filter Table Rows

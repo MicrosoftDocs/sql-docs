@@ -1,11 +1,13 @@
 ---
 title: "Delete an Alert"
 description: "Delete an Alert"
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+author: markingmyname
+ms.author: maghan
+ms.date: 02/04/2021
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Agent, alerts"
   - "alerts [SQL Server], deleting"
   - "deleting alerts"
@@ -13,11 +15,6 @@ helpviewer_keywords:
   - "dropping alerts"
   - "disabling alerts"
   - "removing alerts"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 02/04/2021
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 
@@ -60,7 +57,7 @@ By default, only members of the **sysadmin** fixed server role can delete alerts
 
 ### To delete an alert
 
-1. In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].
+1. In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].
 
 2. On the Standard bar, select **New Query**.  
 

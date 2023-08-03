@@ -1,22 +1,20 @@
 ---
 title: "Wildcard Components and Content Validation"
 description: Learn how the XML Element and Attribute wildcard components are used to increase flexibility in what is allowed to appear in a content model.
-ms.custom: ""
-ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.date: 05/05/2022
+ms.service: sql
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "wildcard components [XML]"
   - "content validation [XML]"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Wildcard components and content validation
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Wildcard components are used to increase flexibility in what is allowed to appear in a content model. These components are supported in the XSD language in the following ways:
 
@@ -34,7 +32,7 @@ Both wildcard character elements, `<xsd:any>` and `<xsd:anyAttribute>`, support 
 
 ## Lax validation and xs:anyType elements
 
-The XML Schema specification uses **lax** validation for elements of the **anyType** type. Because [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] didn't support lax validation, strict validation was applied for elements of the **anyType**. Beginning with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], lax validation is supported. Content of elements of type **anyType** will be validated using lax validation.
+The XML Schema specification uses **lax** validation for elements of the **anyType** type. Because [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] didn't support lax validation, strict validation was applied for elements of the **anyType**. Beginning with [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], lax validation is supported. Content of elements of type **anyType** will be validated using lax validation.
 
 The following example illustrates the lax validation. The schema element `e` is of the **anyType** type. The example creates typed **xml** variables and illustrates the lax validation of the element of the **anyType** type.
 

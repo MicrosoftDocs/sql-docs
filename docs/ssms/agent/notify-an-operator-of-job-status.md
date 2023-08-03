@@ -1,23 +1,19 @@
 ---
-description: "Notify an Operator of Job Status"
 title: "Notify an Operator of Job Status"
-ms.custom: seo-lt-2019
+description: "Notify an Operator of Job Status"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "status information [SQL Server], jobs"
   - "jobs [SQL Server Agent], notification options"
   - "SQL Server Agent jobs, status"
   - "jobs [SQL Server Agent], status"
   - "SQL Server Agent jobs, notification options"
   - "notifications [SQL Server], job status"
-ms.assetid: e7399505-27ac-48d9-a637-73bf92b9df49
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Notify an Operator of Job Status
@@ -71,7 +67,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
   
 #### To notify an operator of job status  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

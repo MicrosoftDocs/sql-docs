@@ -1,22 +1,18 @@
 ---
+title: "STGeometryN (geography Data Type)"
 description: "STGeometryN (geography Data Type)"
-title: "STGeometryN (geography Data Type) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: reference
-f1_keywords: 
-  - "STGeometryN (geography Data Type)"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "STGeometryN method"
-ms.assetid: 53755f69-cd50-475b-b3b8-a1a9157cf03a
 author: MladjoA
-ms.author: mlandzic 
+ms.author: mlandzic
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: t-sql
+ms.topic: reference
+f1_keywords:
+  - "STGeometryN (geography Data Type)"
+helpviewer_keywords:
+  - "STGeometryN method"
+dev_langs:
+  - "TSQL"
 ---
 # STGeometryN (geography Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

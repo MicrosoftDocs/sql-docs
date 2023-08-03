@@ -4,8 +4,8 @@ description: "This topic describes how to retrieve binary data as a stream when 
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "08/10/2020"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
   - "retrieving data, as a binary stream"

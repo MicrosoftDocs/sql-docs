@@ -5,8 +5,7 @@ description: Create partitioned tables and indexes
 author: VanMSFT
 ms.author: vanto
 ms.date: "4/20/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.topic: conceptual
 f1_keywords:
   - "sql13.swb.createpartition.progress.f1"

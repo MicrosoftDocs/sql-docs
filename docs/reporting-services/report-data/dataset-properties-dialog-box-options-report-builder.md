@@ -1,19 +1,16 @@
 ---
-title: "Dataset Properties Dialog Box, Options (Report Builder) | Microsoft Docs"
+title: "Dataset Properties Dialog Box, Options (Report Builder)"
 description: Learn how to use the Dataset Properties dialog box to change data options, such as collation options and treating subtotals as detail data.
-ms.date: 08/17/2018
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-data
-
-
-ms.topic: reference
-f1_keywords: 
-  - "10020"
-  - "sql13.rtp.rptdesigner.datasetproperties.options.f1"
-ms.assetid: 43e50133-45ef-47a2-b575-34dfcc28ec98
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 08/17/2018
+ms.service: reporting-services
+ms.subservice: report-data
+ms.topic: reference
+ms.custom: updatefrequency5
+f1_keywords:
+  - "10020"
+  - "sql13.rtp.rptdesigner.datasetproperties.options.f1"
 ---
 # Dataset Properties Dialog Box, Options (Report Builder)
   Select **Options** on the **DatasetProperties** dialog box to change data options, such as collation options and treating subtotals as detail data, for the query. For more information about collations, see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  

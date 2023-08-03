@@ -1,16 +1,13 @@
 ---
-title: "Managing Report Parts | Microsoft Docs"
+title: "Managing Report Parts"
 description: Organize report parts for multiple users and reports, with choices of flexible options for publishing, permissions, and security.
-ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/14/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Managing Report Parts
 

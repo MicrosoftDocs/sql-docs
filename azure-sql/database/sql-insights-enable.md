@@ -39,7 +39,7 @@ The instructions below cover the process per type of SQL that you can monitor. T
 > SQL Insights (preview) has limited support for the following Azure SQL Database scenarios:
 > - **Serverless tier**: Metrics can be gathered for databases using the [serverless compute tier](./serverless-tier-overview.md). However, the process of gathering metrics will reset the auto-pause delay timer, preventing the database from entering an auto-paused state.
 
-Connect to an Azure SQL database with [SQL Server Management Studio](./connect-query-ssms.md), [Query Editor (preview)](./connect-query-portal.md) in the Azure portal, or any other SQL client tool.
+Connect to an Azure SQL database with [SQL Server Management Studio](./connect-query-ssms.md), [Query Editor (preview)](./query-editor.md) in the Azure portal, or any other SQL client tool.
 
 Run the following script to create a user with the required permissions. Replace *user* with a username and *mystrongpassword* with a strong password.
 
@@ -143,7 +143,7 @@ For access via the public endpoint, you would add a rule under the **Firewall se
 
 ### Azure SQL Managed Instance
 
-If your monitoring virtual machine will be in the same VNet as your SQL MI resources, then see [Connect inside the same VNet](../managed-instance/connect-application-instance.md#connect-inside-the-same-vnet). If your monitoring virtual machine will be in the different VNet than your SQL MI resources, then see [Connect inside a different VNet](../managed-instance/connect-application-instance.md#connect-inside-a-different-vnet).
+If your monitoring virtual machine will be in the same VNet as your SQL MI resources, then see [Connect inside the same VNet](../managed-instance/connect-application-instance.md#connect-from-inside-the-same-vnet). If your monitoring virtual machine will be in the different VNet than your SQL MI resources, then see [Connect inside a different VNet](../managed-instance/connect-application-instance.md#connect-from-inside-a-different-vnet).
 
 ### SQL Server 
 If your monitoring virtual machine is in the same VNet as your SQL virtual machine resources, then see [Connect to SQL Server within a virtual network](../virtual-machines/windows/ways-to-connect-to-sql.md#connect-to-sql-server-within-a-virtual-network). If your monitoring virtual machine will be in the different VNet than your SQL virtual machine resources, then see  [Connect to SQL Server over the internet](../virtual-machines/windows/ways-to-connect-to-sql.md#connect-to-sql-server-over-the-internet).

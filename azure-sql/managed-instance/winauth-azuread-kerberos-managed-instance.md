@@ -2,9 +2,9 @@
 title: Configure Azure SQL Managed Instance for Windows Authentication for Azure Active Directory
 titleSuffix: Azure SQL Managed Instance
 description: Learn how to configure Azure SQL Managed Instance for Windows Authentication for Azure Active Directory.
-author: srdan-bozovic-msft
-ms.author: srbozovi
-ms.reviewer: mathoma, bonova, urmilano, wiassaf, kendralittle
+author: sravanisaluru
+ms.author: srsaluru
+ms.reviewer: mathoma, bonova, urmilano, wiassaf
 ms.date: 03/01/2022
 ms.service: sql-managed-instance
 ms.subservice: deployment-configuration
@@ -23,11 +23,12 @@ The following prerequisites are required to configure a managed instance for Win
 |---------|---------|
 |Az.Sql PowerShell module | This PowerShell module provides management cmdlets for Azure SQL resources.<BR/><BR/> Install this module by running the following PowerShell command: `Install-Module -Name Az.Sql`   |
 |Azure Active Directory PowerShell Module  | This module provides management cmdlets for Azure AD administrative tasks such as user and service principal management.<BR/><BR/> Install this module by running the following PowerShell command: `Install-Module –Name AzureAD`  |
-| A managed instance | You may [create a new managed instance](/azure/azure-arc/data/create-sql-managed-instance) or use an existing managed instance. You must [enable Azure AD authentication](../database/authentication-aad-configure.md) on the managed instance. |
+| A managed instance | You may [create a new managed instance](instance-create-quickstart.md) or use an existing managed instance. You must [enable Azure AD authentication](../database/authentication-aad-configure.md) on the managed instance. |
 
 ## Configure Azure AD Authentication for Azure SQL Managed Instance
 
 To enable Windows Authentication for Azure AD Principals, you need to enable a system assigned service principal on each managed instance. The system assigned service principal allows managed instance users to authenticate using the Kerberos protocol. You also need to grant admin consent to each service principal.
+
 ### Enable a system assigned service principal
 
 To enable a system assigned service principal for a managed instance:

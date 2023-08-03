@@ -4,11 +4,10 @@ description: Provides best practices for choosing the right SQL Server virtual m
 author: bluefooted
 ms.author: pamela
 ms.reviewer: mathoma
-ms.date: 08/09/2018
+ms.date: 04/18/2023
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 tags: azure-service-management
 ---
 # Pricing guidance for SQL Server on Azure VMs
@@ -29,16 +28,14 @@ If you want to develop, test, or build a proof of concept, then use the freely l
 
 If you want to run a lightweight workload in production (<4 cores, <1-GB memory, <10 GB/database), use the freely licensed **SQL Server Express edition**. A SQL Server Express edition VM also only incurs charges for the cost of the VM.
 
-For these development/test and lightweight production workloads, you can also save money by choosing a smaller VM size that matches these workloads. The DS1v2 might be a good choice in some scenarios.
+For these development/test and lightweight production workloads, you can also save money by choosing a smaller VM size that matches these workloads. The [D2as_v5](/azure/virtual-machines/dasv5-dadsv5-series) might be a good choice in some scenarios.
 
-To create an Azure VM running SQL Server 2017 with one of these images, see the following links:
+To create an Azure VM running SQL Server 2022 with one of these images, see the following links:
 
 | Platform | Freely licensed images |
 |---|---|
-| Windows Server 2016 | [SQL Server 2017 Developer Azure VM](https://portal.azure.com/#create/Microsoft.FreeSQLServerLicenseSQLServer2017DeveloperonWindowsServer2016)<br/>[SQL Server 2017 Express Azure VM](https://portal.azure.com/#create/Microsoft.FreeSQLServerLicenseSQLServer2017ExpressonWindowsServer2016) |
-| Red Hat Enterprise Linux | [SQL Server 2017 Developer Azure VM](https://portal.azure.com/#create/Microsoft.FreeSQLServerLicenseSQLServer2017DeveloperonRedHatEnterpriseLinux74)<br/>[SQL Server 2017 Express Azure VM](https://portal.azure.com/#create/Microsoft.FreeSQLServerLicenseSQLServer2017ExpressonRedHatEnterpriseLinux74) |
-| SUSE Linux Enterprise Server | [SQL Server 2017 Developer Azure VM](https://portal.azure.com/#create/Microsoft.FreeSQLServerLicenseSQLServer2017DeveloperonSLES12SP2)<br/>[SQL Server 2017 Express Azure VM](https://portal.azure.com/#create/Microsoft.FreeSQLServerLicenseSQLServer2017ExpressonSLES12SP2) |
-| Ubuntu | [SQL Server 2017 Developer Azure VM](https://portal.azure.com/#create/Microsoft.FreeSQLServerLicenseSQLServer2017DeveloperonUbuntuServer1604LTS)<br/>[SQL Server 2017 Express Azure VM](https://portal.azure.com/#create/Microsoft.FreeSQLServerLicenseSQLServer2017ExpressonUbuntuServer1604LTS) |
+| Windows Server 2022 | [SQL Server 2022 Developer Azure VM](https://portal.azure.com/#create/microsoftsqlserver.sql2022-ws2022sqldev-gen2) |
+| Ubuntu Pro 20.04 LTS | [SQL Server 2022 Developer Azure VM](https://portal.azure.com/#create/microsoftsqlserver.sql2019-ubuntupro2004sqldev_upro-ARM) |
 
 ## Paid SQL Server editions
 
@@ -50,13 +47,13 @@ If you have a non-lightweight production workload, use one of the following SQL 
 | Standard | Small to medium workloads |
 | Enterprise | Large or mission-critical workloads|
 
-You have two options to pay for SQL Server licensing for these editions: *pay per usage* or *bring your own license (BYOL)*.
+You have two options to pay for SQL Server licensing for these editions: *pay per usage* or *Azure Hybrid Benefit*.
 
 ## Pay per usage
 
 **Paying the SQL Server license per usage** (also known as **pay as you go**) means that the per-second cost of running the Azure VM includes the cost of the SQL Server license. You can see the pricing for the different SQL Server editions (Web, Standard, Enterprise) in the Azure Virtual Machines pricing page for [Windows](https://azure.microsoft.com/pricing/details/virtual-machines/windows) or [Linux](https://azure.microsoft.com/pricing/details/virtual-machines/linux).
 
-The cost is the same for all versions of SQL Server (2012 SP3 to 2019). The per-second licensing cost depends on the number of VM vCPUs.
+The cost is the same for all versions of SQL Server (2012 SP3 to 2022). The per-second licensing cost depends on the number of VM vCPUs.
 
 Paying the SQL Server licensing per usage is recommended for:
 
@@ -64,14 +61,12 @@ Paying the SQL Server licensing per usage is recommended for:
 
 - **Workloads with unknown lifetime or scale**. For example, an app that may not be required in a few months, or which may require more, or less compute power, depending on demand.
 
-To create an Azure VM running SQL Server 2017 with one of these pay-as-you-go images, see the following links:
+To create an Azure VM running SQL Server 2022 with one of these pay-as-you-go images, see the following links:
 
 | Platform | Licensed images |
 |---|---|
-| Windows Server 2016 | [SQL Server 2017 Web Azure VM](https://portal.azure.com/#create/Microsoft.SQLServer2017WebonWindowsServer2016)<br/>[SQL Server 2017 Standard Azure VM](https://portal.azure.com/#create/Microsoft.SQLServer2017StandardonWindowsServer2016)<br/>[SQL Server 2017 Enterprise Azure VM](https://portal.azure.com/#create/Microsoft.SQLServer2017EnterpriseWindowsServer2016) |
-| Red Hat Enterprise Linux | [SQL Server 2017 Web Azure VM](https://portal.azure.com/#create/Microsoft.SQLServer2017WebonRedHatEnterpriseLinux74)<br/>[SQL Server 2017 Standard Azure VM](https://portal.azure.com/#create/Microsoft.SQLServer2017StandardonRedHatEnterpriseLinux74)<br/>[SQL Server 2017 Enterprise Azure VM](https://portal.azure.com/#create/Microsoft.SQLServer2017EnterpriseonRedHatEnterpriseLinux74) |
-| SUSE Linux Enterprise Server | [SQL Server 2017 Web Azure VM](https://portal.azure.com/#create/Microsoft.SQLServer2017WebonSLES12SP2)<br/>[SQL Server 2017 Standard Azure VM](https://portal.azure.com/#create/Microsoft.SQLServer2017StandardonSLES12SP2)<br/>[SQL Server 2017 Enterprise Azure VM](https://portal.azure.com/#create/Microsoft.SQLServer2017EnterpriseonSLES12SP2) |
-| Ubuntu | [SQL Server 2017 Web Azure VM](https://portal.azure.com/#create/Microsoft.SQLServer2017WebonUbuntuServer1604LTS)<br/>[SQL Server 2017 Standard Azure VM](https://portal.azure.com/#create/Microsoft.SQLServer2017StandardonUbuntuServer1604LTS)<br/>[SQL Server 2017 Enterprise Azure VM](https://portal.azure.com/#create/Microsoft.SQLServer2017EnterpriseonUbuntuServer1604LTS) |
+| Windows Server 2022 | [SQL Server 2022 Web Azure VM](https://portal.azure.com/#create/microsoftsqlserver.sql2022-ws2022web-gen2)<br/>[SQL Server 2022 Standard Azure VM](https://portal.azure.com/#create/microsoftsqlserver.sql2022-ws2022standard-gen2)<br/>[SQL Server 2022 Enterprise Azure VM](https://portal.azure.com/#create/microsoftsqlserver.sql2022-ws2022enterprise-gen2) |
+| Ubuntu Pro 20.04 LTS | [SQL Server 2022 Web Azure VM](https://portal.azure.com/#create/microsoftsqlserver.sql2022-ubuntupro2004web_upro)<br/>[SQL Server 2022 Standard Azure VM](https://portal.azure.com/#create/microsoftsqlserver.sql2022-ubuntupro2004standard_upro)<br/>[SQL Server 2022 Enterprise Azure VM](https://portal.azure.com/#create/microsoftsqlserver.sql2022-ubuntupro2004enterprise_upro) |
 
 > [!IMPORTANT]
 > When you create a SQL Server virtual machine in the Azure portal, the **Choose a size** window shows an estimated cost. It is important to note that this estimate is only the compute costs for running the VM along with any OS licensing costs (Windows or third-party Linux operating systems).
@@ -81,40 +76,27 @@ To create an Azure VM running SQL Server 2017 with one of these pay-as-you-go im
 >It does not include additional SQL Server licensing costs for Web, Standard, and Enterprise editions. To get the most accurate pricing estimate, select your operating system and SQL Server edition on the pricing page for [Windows](https://azure.microsoft.com/pricing/details/virtual-machines/windows/) or [Linux](https://azure.microsoft.com/pricing/details/virtual-machines/linux/).
 
 > [!NOTE]
-> It is now possible to change the licensing model from pay-per-usage to bring your own license (BYOL) and back. For more information, see [How to change the licensing model for a SQL Server VM](licensing-model-azure-hybrid-benefit-ahb-change.md). 
+> It is now possible to change the licensing model from pay-as-you-go to Azure Hybrid Benefit and back. For more information, see [How to change the licensing model for a SQL Server VM](licensing-model-azure-hybrid-benefit-ahb-change.md). 
 
-## <a id="byol"></a> Bring your own license (BYOL)
+## <a id="byol"></a> Azure Hybrid Benefit (AHB)
 
-**Bringing your own SQL Server license through License Mobility**, also referred to as **BYOL**, means using an existing SQL Server Volume License with Software Assurance in an Azure VM. A SQL Server VM using BYOL only charges for the cost of running the VM, not for SQL Server licensing, given that you have already acquired licenses and Software Assurance through a Volume Licensing program or through a Cloud Solution Partner (CSP).
+[**Azure Hybrid Benefit**](https://azure.microsoft.com/pricing/hybrid-benefit/#overview), also referred to as **AHB**, is a program that allows customers to use existing SQL Server core licenses with Software Assurance in an Azure VM. A SQL Server VM using AHB only charges for the cost of running the VM, not for SQL Server licensing, given that you have already acquired licenses and Software Assurance through a Volume Licensing program or through a Cloud Solution Partner (CSP).
 
-> [!NOTE]
-> The BYOL images are currently only available for Windows virtual machines. However, you can manually install SQL Server on a Linux-only VM. See the guidelines in the [SQL Server on a Linux VM FAQ](../linux/frequently-asked-questions-faq.yml).
-
-Bringing your own SQL Server licensing through License Mobility is recommended for:
+Bringing your own SQL Server licensing through Azure Hybrid Benefit is recommended for:
 
 - **Continuous workloads**. For example, an app that needs to support business operations 24x7.
 
 - **Workloads with known lifetime and scale**. For example, an app that is required for the whole year and which demand has been forecasted.
 
-To use BYOL with a SQL Server VM, you must have a license for SQL Server Standard or Enterprise and [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default.aspx#tab=1), which is a required option through some volume licensing programs and an optional purchase with others. The pricing level provided through Volume Licensing programs varies, based on the type of agreement and the quantity and or commitment to SQL Server. But as a rule of thumb, bringing your own license for continuous production workloads has the following benefits:
+To use AHB with a SQL Server VM, you must have a license for SQL Server Standard or Enterprise and [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default.aspx#tab=1), which is a required option through some volume licensing programs and an optional purchase with others. The pricing level provided through Volume Licensing programs varies, based on the type of agreement and the quantity and or commitment to SQL Server. But as a rule of thumb, Azure Hybrid Benefit for continuous production workloads has the following benefits:
 
-| BYOL benefit | Description |
+| AHB benefit | Description |
 |-----|-----|
 | **Cost savings** | The [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/) offers up to 55% savings. For more information, see [Switch licensing model](licensing-model-azure-hybrid-benefit-ahb-change.md) |
-| **Free passive secondary replica** | Another benefit of bringing your own license is the [free licensing for one passive secondary replica](https://azure.microsoft.com/pricing/licensing-faq/) per SQL Server for high availability purposes. This cuts in half the licensing cost of a highly available SQL Server deployment (for example, using Always On Availability Groups). The rights to run the passive secondary are provided through the Fail-Over Servers Software Assurance benefit. |
-
-To create an Azure VM running SQL Server 2017 with one of these bring-your-own-license images, see the VMs prefixed with "{BYOL}":
-
-- [SQL Server 2017 Enterprise Azure VM](https://portal.azure.com/#create/Microsoft.BYOLSQLServer2017EnterpriseWindowsServer2016)
-- [SQL Server 2017 Standard Azure VM](https://portal.azure.com/#create/Microsoft.BYOLSQLServer2017StandardonWindowsServer2016)
-
-> [!IMPORTANT]
-> Let us know within 10 days how many SQL Server licenses you are using in Azure. The links to the previous images have instructions on how to do this.
+| **Free passive secondary replica** | Another benefit of bringing your own license is the [free licensing for one passive secondary replica](https://azure.microsoft.com/pricing/licensing-faq/) for high availability and one passive secondary for disaster recovery per SQL Server. This cuts the licensing cost of a highly available SQL Server deployment (for example, using Always On availability groups) by more than half. |
 
 > [!NOTE]
-> It is now possible to change the licensing model from pay-per-usage to bring your own license (BYOL) and back. For more information, see [How to change the licensing model for a SQL Server VM](licensing-model-azure-hybrid-benefit-ahb-change.md). 
-
-
+> As of November 2022, it's possible to use free licensing for one passive secondary replica for high availability and one passive secondary replica for disaster recovery when using [pay-as-you-go licensing as well as AHB](https://cloudblogs.microsoft.com/sqlserver/2022/11/16/new-sql-server-on-azure-virtual-machines-and-azure-sql-managed-instance-dr-benefits/). 
 
 ## Reduce costs
 
@@ -124,17 +106,8 @@ To avoid unnecessary costs, choose an optimal virtual machine size and consider 
 
 The licensing cost of SQL Server is directly related to the number of vCPUs. Choose a VM size that matches your expected needs for CPU, memory, storage, and I/O bandwidth. For a complete list of machine size options, see [Windows VM sizes](/azure/virtual-machines/sizes) and [Linux VM sizes](/azure/virtual-machines/sizes?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).
 
-There are new machine sizes that work well with certain types of SQL Server workloads. These machines sizes maintain high levels of memory, storage, and I/O bandwidth, but they have a lower virtualized core count. For example, consider the following example:
+For more information on choosing the best VM size for your workload, see [VM size best practices](performance-guidelines-best-practices-vm-size.md).
 
-| VM size | vCPUs | Memory | Max disks | Max I/O throughput | SQL Server licensing costs | Total costs (compute + licensing) |
-|---|---|---|---|---|---|---|
-| **Standard_DS14v2** | 16 | 112 GB | 32 | 51,200 IOPS or 768 MB/s | | |
-| **Standard_DS14-4v2** | 4 | 112 GB | 32 | 51,200 IOPS or 768 MB/s | 75% lower | 57% lower |
-
-> [!IMPORTANT]
-> This is a point-in-time example. For the most recent specifications, refer to the machine sizes articles and the Azure pricing page for [Windows](https://azure.microsoft.com/pricing/details/virtual-machines/windows/) and [Linux](https://azure.microsoft.com/pricing/details/virtual-machines/linux/).
-
-In the previous example, you can see that the specifications for **Standard_DS14v2** and **Standard_DS14-4v2** are identical except for vCPUs. The suffix **-4v2** at the end of the **Standard_DS14-4v2** machine size indicates the number of active vCPUs. Because SQL Server licensing costs are tied to the number of vCPUs, this significantly reduces the cost of the VM in scenarios where the extra vCPUs are not needed. This is one example, and there are many machine sizes with constrained vCPUs that are identified with this suffix pattern. For more information, see the blog post [Announcing new Azure VM sizes for more cost-effective database work](https://azure.microsoft.com/blog/announcing-new-azure-vm-sizes-for-more-cost-effective-database-workloads/).
 
 ### Shut down your VM when possible
 

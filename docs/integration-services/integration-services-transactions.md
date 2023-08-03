@@ -1,21 +1,17 @@
 ---
+title: "Integration Services Transactions"
 description: "Integration Services Transactions"
-title: "Integration Services Transactions | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "containers [Integration Services], transactions"
   - "transactions [Integration Services], about transactions in packages"
   - "tasks [Integration Services], transactions"
   - "transactions [Integration Services]"
-ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
-author: chugugrace
-ms.author: chugu
 ---
 # Integration Services Transactions
 

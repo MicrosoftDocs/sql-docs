@@ -3,9 +3,9 @@ title: Microsoft ODBC Driver for SQL Server
 description: The Microsoft ODBC Driver for SQL Server provides connectivity to SQL Server and Azure SQL Database via standard ODBC APIs.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 08/08/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.date: 07/31/2023
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Microsoft ODBC Driver for SQL Server
@@ -16,7 +16,7 @@ ms.topic: conceptual
 
 ODBC is the primary native data access API for applications written in C and C++ for SQL Server. There's an ODBC driver for most data sources. Other languages that can use ODBC include COBOL, Perl, PHP, and Python. ODBC is widely used in data integration scenarios.
 
-The ODBC driver comes with tools such as [**sqlcmd**](../../tools/sqlcmd-utility.md) and [**bcp**](../../tools/bcp-utility.md). The **sqlcmd** utility lets you run Transact-SQL statements, system procedures, and SQL scripts. The **bcp** utility bulk copies data between an instance of Microsoft SQL Server and a data file in a format you choose. You can use **bcp** to import many new rows into SQL Server tables or to export data out of tables into data files.  
+The ODBC driver comes with tools such as [**sqlcmd**](../../tools/sqlcmd/sqlcmd-utility.md) and [**bcp**](../../tools/bcp-utility.md). The **sqlcmd** utility lets you run Transact-SQL statements, system procedures, and SQL scripts. The **bcp** utility bulk copies data between an instance of Microsoft SQL Server and a data file in a format you choose. You can use **bcp** to import many new rows into SQL Server tables or to export data out of tables into data files.  
 
 ## Code example in C++
 
@@ -41,6 +41,7 @@ The following sample demonstrates how to use the ODBC APIs to connect to and acc
 - [Using Azure Active Directory](using-azure-active-directory.md)
 - [Using Transparent Network IP Resolution](using-transparent-network-ip-resolution.md)
 - [Using XA Transactions](use-xa-with-dtc.md)
+- [Connection Troubleshooting](connection-troubleshooting.md)
 
 ### Linux and macOS
 
@@ -70,4 +71,4 @@ The following sample demonstrates how to use the ODBC APIs to connect to and acc
 ## Community
 
 - [SQL Server Drivers blog](https://techcommunity.microsoft.com/t5/SQL-Server/bg-p/SQLServer/label-name/SQLServerDrivers)  
-- [SQL Server Data Access Forum](https://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)  
+- [SQL Server Data Access Forum](https://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)

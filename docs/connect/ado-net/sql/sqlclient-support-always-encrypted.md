@@ -3,9 +3,9 @@ title: Using Always Encrypted with SqlClient
 description: Learn how to develop applications using Microsoft.Data.SqlClient and Always Encrypted to keep your data secure.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 02/08/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.date: 02/15/2023
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 
@@ -19,9 +19,9 @@ Always Encrypted allows client applications to encrypt sensitive data and never 
 
 ## Prerequisites
 
-- Configure Always Encrypted in your database. This process involves provisioning Always Encrypted keys and setting up encryption for selected database columns. If you don't already have a database with Always Encrypted configured, follow the directions in [Getting Started with Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted).
+- Configure Always Encrypted in your database. This process involves provisioning Always Encrypted keys and setting up encryption for selected database columns. If you don't already have a database with Always Encrypted configured, follow the directions in [Tutorial: Getting started with Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-tutorial-getting-started.md).
 - If you're using Always Encrypted with secure enclaves, see [Develop applications using Always Encrypted with secure enclaves](../../../relational-databases/security/encryption/always-encrypted-enclaves-client-development.md) for more prerequisites.
-- Ensure the required .NET platform is installed on your development machine. With [Microsoft.Data.SqlClient](../microsoft-ado-net-sql-server.md), the Always Encrypted feature is supported for both .NET Framework and .NET Core. Make sure [.NET Framework 4.6](/dotnet/framework/) or higher, or [.NET Core 2.1](/dotnet/core/) or higher is configured as the target .NET platform version in your development environment. With Microsoft.Data.SqlClient version 2.1.0 and higher, the Always Encrypted feature is also supported for [.NET Standard 2.0](/dotnet/standard/net-standard). To use Always Encrypted with secure enclaves, [.NET Standard 2.1](/dotnet/standard/net-standard) is required. If you're using Visual Studio, refer to [Framework targeting overview](/visualstudio/ide/visual-studio-multi-targeting-overview).
+- Ensure the required .NET platform is installed on your development machine. With [Microsoft.Data.SqlClient](../microsoft-ado-net-sql-server.md), the Always Encrypted feature is supported for both .NET Framework and .NET Core. Make sure [.NET Framework 4.6](/dotnet/framework/) or higher, or [.NET Core 2.1](/dotnet/core/) or higher is configured as the target .NET platform version in your development environment. With Microsoft.Data.SqlClient version 2.1.0 and higher, the Always Encrypted feature is also supported for [.NET Standard 2.0](/dotnet/standard/net-standard). To use Always Encrypted with secure enclaves, [.NET Standard 2.1](/dotnet/standard/net-standard) is required. If you want to use VBS enclaves without attestation, Microsoft.Data.SqlClient version  4.1 or higher is required. If you're using Visual Studio, refer to [Framework targeting overview](/visualstudio/ide/visual-studio-multi-targeting-overview).
 
 The following table summarizes the required .NET platforms to use Always Encrypted with **Microsoft.Data.SqlClient**.
 
@@ -74,15 +74,18 @@ To enable enclave computations for a database connection, you must set the follo
 
 - `Attestation Protocol` - specifies an attestation protocol.
   - If this keyword isn't specified, secure enclaves are disabled on the connection.
-  - If you're using [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS), the value of this keyword should be `HGS`.
-  - If you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation, the value of this keyword should be `AAS`.
-  - If you're using Virtualization-based security (VBS) enclaves and want to forgo attestation, the value of this keyword should be `None`.
+  - If you're using [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] with Virtualization-based security (VBS) enclaves and Host Guardian Service (HGS), the value of this keyword should be `HGS`.
+  - If you're using [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] with Intel SGX enclaves and Microsoft Azure Attestation, the value of this keyword should be `AAS`.
+  - If you're using [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] or [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] with VBS enclaves and want to forgo attestation, the value of this keyword should be `None`. Requires version 4.1 or higher. 
+
+  > [!NOTE]
+  > 'None' (no attestation) is the only option currently supported for VBS enclaves in [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)].
 
 - `Enclave Attestation URL` - specifies an attestation URL (an attestation service endpoint). You need to obtain an attestation URL for your environment from your attestation service administrator.
 
   - If you're using [!INCLUDE[ssnoversion-md](../../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS), see [Determine and share the HGS attestation URL](../../../relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
-  - If you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation, see [Determine the attestation URL for your attestation policy](../../../relational-databases/security/encryption/always-encrypted-enclaves.md#secure-enclave-attestation).
-  - If you're using the `None` Attestation Protocol, an attestation URL is not required. 
+  - If you're using [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] and Microsoft Azure Attestation, see [Determine the attestation URL for your attestation policy](../../../relational-databases/security/encryption/always-encrypted-enclaves.md#secure-enclave-attestation).
+  - If you're using the `None` Attestation Protocol, an attestation URL isn't required.
 
 For a step-by-step tutorial, see [Tutorial: Develop a .NET application using Always Encrypted with secure enclaves](tutorial-always-encrypted-enclaves-develop-net-apps.md).
 
@@ -207,7 +210,7 @@ using (SqlCommand cmd = connection.CreateCommand())
 >
 > - All values printed by the program will be in plaintext, as the **Microsoft .NET Data Provider for SQL Server** will transparently decrypt the data retrieved from the `SSN` and `BirthDate` columns.
 >
-> - Queries can perform equality comparisons on columns if they are encrypted using deterministic encryption. For more information, see [Selecting Deterministic or Randomized Encryption](../../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
+> - Queries can perform equality comparisons on columns if they are encrypted using [deterministic encryption](../../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
 
 ### Retrieving encrypted data example
 
@@ -544,7 +547,7 @@ By default, the **Microsoft .NET Data Provider for SQL Server** relies on the da
 
 ### Forcing Parameter Encryption
 
-Before the **Microsoft .NET Data Provider for SQL Server** sends a parameterized query to SQL Server, it asks SQL Server (by calling [sys.sp_describe_parameter_encryption](../../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md)) to analyze the query statement and provide information about which parameters in the query should be encrypted. A compromised SQL Server instance could mislead the **Microsoft .NET Data Provider for SQL Server** by sending metadata indicating the parameter doesn't target an encrypted column, even though the column is encrypted in the database. As a result, the **Microsoft .NET Data Provider for SQL Server** wouldn't encrypt the parameter value and it would send it as plaintext to the compromised SQL Server instance.
+Before the **Microsoft .NET Data Provider for SQL Server** sends a parameterized query to SQL Server, it asks SQL Server (by calling [sys.sp_describe_parameter_encryption](../../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md)) to analyze the query statement and provide information about which parameters in the query should be encrypted. A compromised SQL Server instance could mislead the **Microsoft .NET Data Provider for SQL Server** by sending metadata indicating the parameter doesn't target an encrypted column, even though the column is encrypted in the database. As a result, the **Microsoft .NET Data Provider for SQL Server** wouldn't encrypt the parameter value, and it would send it as plaintext to the compromised SQL Server instance.
 
 To prevent such an attack, an application can set the [SqlParameter.ForceColumnEncryption Property](/dotnet/api/microsoft.data.sqlclient.sqlparameter.forcecolumnencryption) for the parameter to true. This setting will cause the **Microsoft .NET Data Provider for SQL Server** to throw an exception, if the metadata it has received from the server indicates the parameter doesn't need to be encrypted.
 

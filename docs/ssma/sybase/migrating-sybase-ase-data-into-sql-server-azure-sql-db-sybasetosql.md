@@ -1,22 +1,18 @@
 ---
+title: "Migrate Sybase ASE Data into SQL Server - Azure SQL Database"
 description: "Migrating Sybase ASE Data into SQL Server - Azure SQL Database  (SybaseToSQL)"
-title: "Migrate Sybase ASE Data into SQL Server - Azure SQL Database | Microsoft Docs"
-ms.custom:
-  - intro-migration
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: ssma
+ms.service: sql
+ms.subservice: ssma
 ms.topic: conceptual
+ms.custom: intro-migration
+f1_keywords:
+  - "ssma.sybase.migratedata.f1"
 helpviewer_keywords:
   - "Migrating data,Client Side Data Migration"
   - "Migrating data,Server Side Data Migration"
-ms.assetid: 54a39f5e-9250-4387-a3ae-eae47c799811
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
-    - "ssma.sybase.migratedata.f1"
-
 ---
 # Migrating Sybase ASE Data into SQL Server - Azure SQL Database  (SybaseToSQL)
 After you have successfully loaded the Sybase Adaptive Server Enterprise (ASE) database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Database, you can migrate data from ASE to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Database.  
@@ -108,7 +104,7 @@ To view the migration messages, make sure that the Output pane is visible. Other
 
 ## Migrating data at scale (Preview)
 
-When large data size 100GB and above needs to be migrated within a short duration, at scale offline migration is a suitable option. This feature uses the azure data factory pipeline and the scalability of cloud to migrate on-premise or external Sybase data source to Azure SQL platform whether IaaS VM or SQL PaaS. This capability will create the data factory or use an existing data factory to migrate data from Sybase.
+When large data size 100GB and above needs to be migrated within a short duration, at scale offline migration is a suitable option. This feature uses the azure data factory pipeline and the scalability of cloud to migrate on-premises or external Sybase data source to Azure SQL platform whether IaaS VM or SQL PaaS. This capability will create the data factory or use an existing data factory to migrate data from Sybase.
 
 1. For large offline migration, click on Migrate data at scale. The offline data migration supports database level migration.
 

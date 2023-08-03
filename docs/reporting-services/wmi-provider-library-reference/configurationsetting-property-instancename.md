@@ -1,23 +1,18 @@
 ---
+title: "InstanceName Property (WMI MSReportServer_ConfigurationSetting)"
 description: "InstanceName Property (WMI MSReportServer_ConfigurationSetting)"
-title: "InstanceName Property (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: wmi-provider-library-reference
-
-
-ms.topic: conceptual
-apiname: 
-  - "InstanceName Property"
-apilocation: 
-  - "reportingservices.mof"
-apitype: MOFDef
-helpviewer_keywords: 
-  - "InstanceName property"
-ms.assetid: 5e8aa5fb-2d4a-45ac-bbd8-47ed3c667cbb
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: wmi-provider-library-reference
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "InstanceName property"
+apilocation: "reportingservices.mof"
+apiname: "InstanceName Property"
+apitype: MOFDef
 ---
 # ConfigurationSetting Property - InstanceName
   Specifies the name of a report server instance on a specific computer. Read-only.  

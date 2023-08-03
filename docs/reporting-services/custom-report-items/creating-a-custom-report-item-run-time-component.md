@@ -1,18 +1,15 @@
 ---
-title: "Creating a Custom Report Item Run-Time Component | Microsoft Docs"
+title: "Creating a Custom Report Item Run-Time Component"
 description: Learn how to create a custom report item run-time component and define the properties for that component in the design environment.
-ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: custom-report-items
-
-
-ms.topic: reference
-helpviewer_keywords: 
-  - "custom report items, creating"
-ms.assetid: b3e15a4a-98f8-4dbb-b847-bbcb20327051
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/15/2017
+ms.service: reporting-services
+ms.subservice: custom-report-items
+ms.topic: reference
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "custom report items, creating"
 ---
 # Creating a Custom Report Item Run-Time Component
   The custom report item run-time component is implemented as a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] component using any CLS-compliant language, and is called by the report processor at run time. You define the properties for the run-time component in the design environment by modifying the custom report item's corresponding design-time component.  

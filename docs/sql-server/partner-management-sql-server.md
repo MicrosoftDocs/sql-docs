@@ -1,55 +1,28 @@
 ---
-title: Managing SQL Server partners | Microsoft Docs
+title: Managing SQL Server partners
 description: Lists of third-party partners with solutions to monitor SQL Server.
-ms.topic: conceptual
-ms.custom: ""
-ms.date: 09/17/2017    
-ms.prod: sql
-ms.technology: release-landing
-ms.author: mikeray
 author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
+ms.date: 12/09/2022
+ms.service: sql
+ms.subservice: release-landing
+ms.topic: conceptual
 ---
 # SQL Server managing partners
-[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
-To manage your SQL Server services, choose from a wide variety of industry-leading tools.  This article highlights Microsoft partner companies with management solutions supporting Microsoft SQL Server.
 
-## Our management partners
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
+
+To manage your [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] services, choose from a wide variety of industry-leading tools.  This article highlights [!INCLUDE[msconame-md](../includes/msconame-md.md)] partner companies with management solutions supporting [!INCLUDE[msconame-md](../includes/msconame-md.md)] [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)].
+
+## Management partners
 
 | Partner | Description | Links |
-| --- | --- | --- |
-|![idera][1] |**IDERA**<br>SQL Compliance Manager is a comprehensive auditing solution that displays who did what, when and how on SQL Servers to help ensure compliance with regulatory and data security requirements.<br><br>[System requirements][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Website][idera_website]<br>[Twitter][idera_twitter]<br>[Video][idera_youtube] |
+| :---: | --- | --- |
+| :::image type="icon" source="media/partner-hadr-sql-server/idera-logo.png" border="false":::<br />**IDERA** | SQL Compliance Manager is a comprehensive auditing solution that displays who did what, when and how on [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], to help ensure compliance with regulatory and data security requirements.<br /><br />- [System requirements](https://wiki.idera.com/display/SQLCM/Software+requirements) | -&nbsp;[Website](https://www.idera.com/products/sql-compliance-manager/)<br />- [Twitter](https://twitter.com/Idera_Software)<br />- [Video](https://www.idera.com/products/sql-compliance-manager/) |
 
 ## Next steps
-To learn more about some of our other partners, see [High availability, and disaster recovery partners][hadr_partners], [management partners][monitor_partners], and [development partners][dev_partners].
 
-<!--Image references-->
-[1]: ./media/partner-hadr-sql-server/idera-logo.png
-
-
-<!--Article links-->
-[hadr_partners]: ./partner-hadr-sql-server.md
-[monitor_partners]: ./partner-monitor-sql-server.md
-[dev_partners]: ./partner-dev-sql-server.md
-
-<!--Website links -->
-
-[idera_website]: https://www.idera.com/products/sql-compliance-manager/
-
-<!--Get Started Links-->
-
-<!--Datasheet Links-->
-
-<!--Marketplace Links -->
-<!----Not available[idera_marketplace]:https://azure.microsoft.com/marketplace/-->
-
-<!--Press links-->
-<!--[idera_press]:-->
-
-<!--YouTube links-->
-[idera_youtube]: https://www.idera.com/products/sql-compliance-manager/
-
-<!--Twitter links-->
-[idera_twitter]:https://twitter.com/Idera_Software
-
-<!--Supported Systems-->
-[idera_requirements]: https://wiki.idera.com/display/SQLCM/Software+requirements
+- [SQL Server high availability and disaster recovery partners](partner-hadr-sql-server.md)
+- [SQL Server monitoring partners](partner-monitor-sql-server.md)
+- [SQL Server development partners](partner-dev-sql-server.md)

@@ -4,9 +4,8 @@ description: sys.services (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.services"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.services catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 16d0b0c5-5cce-469b-aa3d-4b9248e0c085
 ---
 # sys.services (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

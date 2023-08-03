@@ -9,6 +9,7 @@ ms.service: sql-database
 ms.subservice: high-availability
 ms.topic: sample
 ms.devlang: azurecli
+ms.custom: devx-track-azurecli
 ---
 
 # Configure active geo-replication for a single database in Azure SQL Database using the Azure CLI
@@ -19,7 +20,7 @@ This Azure CLI script example configures active geo-replication for a single dat
 
 [!INCLUDE [quickstarts-free-trial-note](../../includes/quickstarts-free-trial-note.md)]
 
-[!INCLUDE [azure-cli-prepare-your-environment.md](../../includes/azure-cli-prepare-your-environment.md)]
+[!INCLUDE [azure-cli-prepare-your-environment.md](~/../azure-sql/reusable-content/azure-cli/azure-cli-prepare-your-environment.md)]
 
 ## Sample script
 

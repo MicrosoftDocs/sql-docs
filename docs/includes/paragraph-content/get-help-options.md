@@ -1,4 +1,4 @@
-## :::image type="icon" source="../media/info-tip.png" border="false"::: Get help
+## :::image type="icon" source="../media/info-tip.svg" border="false"::: Get help
 
 - [Ideas for SQL: Have suggestions for improving SQL Server?](https://feedback.azure.com/forums/908035-sql-server)
 - [Microsoft Q & A (SQL Server)](/answers/products/sql-server)
@@ -9,3 +9,5 @@
 - [Support options for business users](https://support.microsoft.com/gp/support-options-for-business)
 - [Contact Microsoft](https://support.microsoft.com/gp/contactus81?Audience=Commercial)
 - [Additional SQL Server help and feedback](../../sql-server/sql-server-get-help.md)
+
+[!INCLUDE [contribute-to-content](contribute-to-content.md)]

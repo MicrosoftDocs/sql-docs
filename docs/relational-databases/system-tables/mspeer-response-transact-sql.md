@@ -4,9 +4,8 @@ description: MSpeer_response (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "MSpeer_response"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "MSpeer_response system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 510e24cf-0292-47a9-b1d9-71a30fef030f
 ---
 # MSpeer_response (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

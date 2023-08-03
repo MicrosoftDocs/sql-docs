@@ -1,20 +1,18 @@
 ---
+title: "Migrate data to or from columns using Always Encrypted with SQL Server Import and Export Wizard"
 description: "Migrate data to or from columns using Always Encrypted with SQL Server Import and Export Wizard"
-title: "Migrate data to or from columns using Always Encrypted with SQL Server Import and Export Wizard  | Microsoft Docs"
-ms.custom:
-  - intro-migration
-ms.date: 10/31/2019
-ms.prod: sql
+author: jaszymas
+ms.author: jaszymas
 ms.reviewer: vanto
-ms.technology: security
+ms.date: 10/31/2019
+ms.service: sql
+ms.subservice: security
 ms.topic: conceptual
+ms.custom: intro-migration
 f1_keywords:
   - "SQL13.SWB.COLUMNMASTERKEY.ROTATION.F1"
 helpviewer_keywords:
   - "Always Encrypted, configure with SSMS"
-ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
-author: jaszymas
-ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Migrate data to or from columns using Always Encrypted with SQL Server Import and Export Wizard 
@@ -65,11 +63,11 @@ The following data providers in the SQL Server Import and Export Wizard support 
 
 To encrypt or decrypt data stored in a SQL Server source or destination database, you need the *VIEW ANY COLUMN MASTER KEY DEFINITION* and *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* permissions in the source database. You also need key store permissions to access and use your column master key. For detailed information on key store permissions required for key management operations, go to [Create and store column master keys for Always Encrypted](create-and-store-column-master-keys-always-encrypted.md) and find a section relevant for your key store.
 
-## Next Steps
+## Next steps
 - [Query columns using Always Encrypted with SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
 - [Develop applications using Always Encrypted](always-encrypted-client-development.md)
 
-## See Also
+## See also
 - [Always Encrypted](always-encrypted-database-engine.md)
 - [Export and import databases using Always Encrypted](always-encrypted-migrate-using-bacpac.md)
 - [Back up and restore databases using Always Encrypted](always-encrypted-migrate-using-backup-restore.md)

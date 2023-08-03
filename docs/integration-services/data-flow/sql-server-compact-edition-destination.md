@@ -1,22 +1,18 @@
 ---
+title: "SQL Server Compact Edition Destination"
 description: "SQL Server Compact Edition Destination"
-title: "SQL Server Compact Edition Destination | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.sqlservercompactdest.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "destinations [Integration Services], SQL Server Compact"
   - "SQL Server Compact, destination"
   - "inserting data"
-ms.assetid: 697742ba-cc14-414d-8187-1845ad0dd99b
-author: chugugrace
-ms.author: chugu
 ---
 # SQL Server Compact Edition Destination
 

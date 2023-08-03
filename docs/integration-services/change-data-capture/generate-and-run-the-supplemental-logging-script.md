@@ -1,23 +1,16 @@
 ---
+title: "Generate and Run the Supplemental Logging Script"
 description: "Generate and Run the Supplemental Logging Script"
-title: "Generate and Run the Supplemental Logging Script | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "supLog"
-ms.assetid: 6e940d93-12c6-4cda-9333-5489b245f0e4
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "supLog"
 ---
 # Generate and Run the Supplemental Logging Script
-
-[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
 
   Use the Set up Tables for Capturing Changes page to run a script on the Oracle source database that will set up supplemental logging.  
   

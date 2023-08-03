@@ -4,10 +4,9 @@ description: A reference of articles describing tools that can be used to monito
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "06/14/2017"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 # Useful tools for troubleshooting
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

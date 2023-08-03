@@ -1,23 +1,20 @@
 ---
-title: "SAP NetWeaver BI Query Designer User Interface | Microsoft Docs"
+title: "SAP NetWeaver BI Query Designer User Interface"
 description: Learn about the graphical query designer for building Multidimensional Expression (MDX) queries for a SAP NetWeaver Business Intelligence data source.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-data
-
-
+ms.service: reporting-services
+ms.subservice: report-data
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: updatefrequency5
+f1_keywords:
   - "sql13.rtp.rptdesigner.dataview.sapbwquerydesigner.f1"
   - "10014"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data sources [Reporting Services], SAP NetWeaver Business Intelligence"
   - "SAP NetWeaver Business Intelligence [Reporting Services], query designer"
   - "query designers [Reporting Services]"
-ms.assetid: 102da66e-ca31-41aa-ab4b-c9b5ab752a72
-author: maggiesMSFT
-ms.author: maggies
 ---
 # SAP NetWeaver BI Query Designer User Interface
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides a graphical query designer for building Multidimensional Expression (MDX) queries for a SAP NetWeaver® Business Intelligence data source. The MDX graphical query designer has two modes: Design mode and Query mode. Each mode provides a Metadata pane from which you can drag members from an InfoCube, MultiProvider, or Web-enabled query defined on the data source to build an MDX query that retrieves data when the report is processed.  

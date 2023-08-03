@@ -1,18 +1,14 @@
 ---
+title: "Keep the Affinity Mask Default Value"
 description: "Keep the Affinity Mask Default Value"
-title: "Keep the Affinity Mask Default Value | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Best Practices [Database Engine]"
-ms.assetid: 8abdc79b-fc26-42e9-8f73-ec6c98713142
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Best Practices [Database Engine]"
 ---
 # Keep the Affinity Mask Default Value
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

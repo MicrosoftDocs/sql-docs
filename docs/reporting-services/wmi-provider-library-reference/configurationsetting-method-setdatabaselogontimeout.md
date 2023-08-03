@@ -1,23 +1,18 @@
 ---
+title: "SetDatabaseLogonTimeout Method (WMI MSReportServer_ConfigurationSetting)"
 description: "SetDatabaseLogonTimeout Method (WMI MSReportServer_ConfigurationSetting)"
-title: "SetDatabaseLogonTimeout Method (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: wmi-provider-library-reference
-
-
-ms.topic: conceptual
-apiname: 
-  - "SetDatabaseLogonTimeout (WMI MSReportServer_ConfigurationSetting Class)"
-apilocation: 
-  - "reportingservices.mof"
-apitype: MOFDef
-helpviewer_keywords: 
-  - "SetDatabaseLogonTimeout method"
-ms.assetid: b8773596-5b98-4355-a4ab-4412e1317c67
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: wmi-provider-library-reference
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "SetDatabaseLogonTimeout method"
+apilocation: "reportingservices.mof"
+apiname: "SetDatabaseLogonTimeout (WMI MSReportServer_ConfigurationSetting Class)"
+apitype: MOFDef
 ---
 # ConfigurationSetting Method - SetDatabaseLogonTimeout
   Specifies the default timeout value for report server database connections.  

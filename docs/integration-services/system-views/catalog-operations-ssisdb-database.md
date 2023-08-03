@@ -1,19 +1,15 @@
 ---
+title: "catalog.operations (SSISDB Database)"
 description: "catalog.operations (SSISDB Database)"
-title: "catalog.operations (SSISDB Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: "language-reference"
-helpviewer_keywords: 
-  - "operations view [Integration Services]"
-  - "catalog.operations view [Integration Services]"
-ms.assetid: 9455c5b1-60ff-45fc-8599-cc3abbd6daf5
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "operations view [Integration Services]"
+  - "catalog.operations view [Integration Services]"
 ---
 # catalog.operations (SSISDB Database)
 

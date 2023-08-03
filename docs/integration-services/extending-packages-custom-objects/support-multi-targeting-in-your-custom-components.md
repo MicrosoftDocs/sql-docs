@@ -1,16 +1,12 @@
 ---
+title: "Support multi-targeting in your custom components"
 description: "Support multi-targeting in your custom components"
-title: "Support multi-targeting in your custom components | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
-ms.assetid: ec611374-16bf-4a56-8fd9-45d3ddd7befc
 author: chugugrace
 ms.author: chugu
+ms.date: "03/17/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Support multi-targeting in your custom components
 

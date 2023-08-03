@@ -4,9 +4,8 @@ description: MSdynamicsnapshotviews (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "MSdynamicsnapshotviews_TSQL"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "MSdynamicsnapshotviews system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 4fc1822a-5d6e-4034-a2e2-363210232d3b
 ---
 # MSdynamicsnapshotviews (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

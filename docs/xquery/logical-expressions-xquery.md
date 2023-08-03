@@ -1,27 +1,23 @@
 ---
-title: "Logical Expressions (XQuery) | Microsoft Docs"
+title: "Logical Expressions (XQuery)"
 description: Learn about the logical expressions supported in XQuery.
-ms.custom: ""
+author: "rothja"
+ms.author: "jroth"
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: sql
-ms.reviewer: ""
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "logical operators [SQL Server], XQuery"
   - "effective Boolean value [XQuery]"
   - "logical expressions [XQuery]"
   - "EBV"
   - "expressions [XQuery], logical"
-ms.assetid: de94cd2e-2d48-49fb-9ebd-a2d90c79bf62
-author: "rothja"
-ms.author: "jroth"
+dev_langs:
+  - "XML"
 ---
 # Logical Expressions (XQuery)
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   XQuery supports the logical **and** and **or** operators.  
   

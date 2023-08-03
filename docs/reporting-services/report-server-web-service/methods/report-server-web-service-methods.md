@@ -1,23 +1,20 @@
 ---
-title: "Report Server Web Service Methods | Microsoft Docs"
+title: "Report Server Web Service Methods"
 description: Report Server Web services include methods based on component features provided through Web service endpoints which are exposed through generated classes.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server-web-service
-
-
+ms.service: reporting-services
+ms.subservice: report-server-web-service
 ms.topic: reference
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "Report Server Web service, methods"
   - "Web service [Reporting Services], methods"
   - "XML Web service [Reporting Services], features"
   - "Web service [Reporting Services], features"
   - "Report Server Web service, features"
   - "XML Web service [Reporting Services], methods"
-ms.assetid: ce5afa27-e90c-44a7-b204-098a065b3665
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Report Server Web Service Methods
   The Report Server Web services include several categories of methods that are based on component features. These methods are provided through several Web service endpoints (three for report management and one for report execution) which are exposed as members of the <xref:ReportService2010.ReportingService2010> and <xref:ReportExecution2005.ReportExecutionService> classes. These classes can be generated through a proxy class tool such as wsdl.exe, which is included with the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK. For more information about the Report Server Web services and the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], see [Building Applications Using the Web Service and the .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  

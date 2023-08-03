@@ -1,24 +1,20 @@
 ---
-title: "data Function (XQuery) | Microsoft Docs"
+title: "data Function (XQuery)"
 description: Learn how to use the XQuery function data() to return the typed value for each item in a specified sequence of items.
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: sql
-ms.prod_service: sql
-ms.reviewer: ""
-ms.technology: xml
-ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "fn:data function"
-  - "data function [XQuery]"
-ms.assetid: 511b5d7d-c679-4cb2-a3dd-170cc126f49d
 author: "rothja"
 ms.author: "jroth"
+ms.date: "03/09/2017"
+ms.service: sql
+ms.subservice: xml
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "fn:data function"
+  - "data function [XQuery]"
+dev_langs:
+  - "XML"
 ---
 # Data Accessor Functions - data (XQuery)
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   Returns the typed value for each item specified by *$arg*.  
   

@@ -1,22 +1,18 @@
 ---
-description: "View Information About an Alert"
 title: "View Information About an Alert"
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+description: "View Information About an Alert"
+author: markingmyname
+ms.author: maghan
+ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Agent, alerts"
   - "viewing alerts"
   - "alerts [SQL Server], viewing"
   - "displaying alerts"
   - "status information [SQL Server], alerts"
-ms.assetid: a0e3a8c4-e3c2-42a5-b2f8-aa06061d3fa6
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 
@@ -64,7 +60,7 @@ By default, members of the **sysadmin** fixed server role can view information a
   
 #### To view information about an alert  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

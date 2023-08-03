@@ -1,21 +1,17 @@
 ---
+title: "Understanding Synchronous and Asynchronous Transformations"
 description: "Understanding Synchronous and Asynchronous Transformations"
-title: "Understanding Synchronous and Asynchronous Transformations | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "transformations [Integration Services], synchronous and asynchronous"
   - "asynchronous transformations [Integration Services]"
   - "data flow components [Integration Services], synchronous and asynchronous"
   - "synchronous transformations [Integration Services]"
-ms.assetid: 0bc2bda5-3f8a-49c2-aaf1-01dbe4c3ebba
-author: chugugrace
-ms.author: chugu
 ---
 # Understanding Synchronous and Asynchronous Transformations
 

@@ -1,20 +1,16 @@
 ---
-description: "ODBC Programmer&#39;s Reference"
-title: "ODBC Programmer&#39;s Reference | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "ODBC [ODBC], reference"
-ms.assetid: b33c3c43-ae66-44a3-be17-9cd82624dd96
+title: "ODBC Programmer's Reference"
+description: "ODBC Programmer's Reference"
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "ODBC [ODBC], reference"
 ---
-# ODBC Programmer&#39;s Reference
+# ODBC Programmer's Reference
 The *ODBC Programmer's Reference* contains the following sections.  
   
 -   [What's New in ODBC 3.8](../../odbc/reference/what-s-new-in-odbc-3-8.md) lists the new ODBC features that were added in the Windows 8 SDK.  

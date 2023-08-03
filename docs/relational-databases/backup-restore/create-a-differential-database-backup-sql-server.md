@@ -1,21 +1,17 @@
 ---
 title: "Differential backup"
 description: This article shows you how to create a differential database backup in SQL Server using SQL Server Management Studio or Transact-SQL.
-ms.custom: seo-lt-2019
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "12/17/2019"
-ms.prod: sql
-ms.prod_service: backup-restore
-ms.reviewer: ""
-ms.technology: backup-restore
+ms.service: sql
+ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "full differential backups [SQL Server]"
   - "database backups [SQL Server], full differential backups"
   - "backing up databases [SQL Server], full differential backups"
   - "backups [SQL Server], creating"
-ms.assetid: 70f49794-b217-4519-9f2a-76ed61fa9f99
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Create a Differential Database Backup (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,7 +73,7 @@ ms.author: mathoma
 5.  In the **Backup type** list box, select **Differential**.  
   
     > [!IMPORTANT]  
-    >  When you select**Differential** , verify that the **Copy Only Backup** check box is cleared.  
+    >  When you select **Differential** , verify that the **Copy Only Backup** check box is cleared.  
   
 6.  For **Backup component**, click **Database**.  
   

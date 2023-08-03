@@ -1,20 +1,16 @@
 ---
-title: "Set the Expiration Date on a Backup (SQL Server) | Microsoft Docs"
+title: "Set the Expiration Date on a Backup (SQL Server)"
 description: This article shows you how to set the expiration date on a backup in SQL Server by using SQL Server Management Studio or Transact-SQL.
-ms.custom: ""
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: backup-restore
-ms.reviewer: ""
-ms.technology: backup-restore
+ms.service: sql
+ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "backing up databases [SQL Server], expiration dates"
   - "expiration [SQL Server]"
   - "database backups [SQL Server], expiration dates"
-ms.assetid: 76e814df-6487-4893-9f09-7759f1863a5c
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Set the Expiration Date on a Backup (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

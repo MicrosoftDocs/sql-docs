@@ -1,19 +1,17 @@
 ---
+title: "Back Up and Restore Reporting Services Encryption Keys"
 description: "SSRS Encryption Keys - Back Up and Restore Encryption Keys"
-title: "Back Up and Restore Reporting Services Encryption Keys | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 05/31/2016
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-
+ms.service: reporting-services
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "backing up encryption keys [Reporting Services]"
   - "restoring encryption keys [Reporting Services]"
   - "encryption keys [Reporting Services]"
   - "symmetric keys [Reporting Services]"
-ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
-author: maggiesMSFT
-ms.author: maggies
 ---
 # SSRS Encryption Keys - Back Up and Restore Encryption Keys
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

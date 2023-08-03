@@ -4,11 +4,9 @@ description: Learn about Transact-SQL features supported only for natively compi
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.assetid: e6b34010-cf62-4f65-bbdf-117f291cde7b
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating Natively Compiled Stored Procedures

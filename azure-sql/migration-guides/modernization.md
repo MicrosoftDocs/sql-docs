@@ -10,7 +10,7 @@ ms.topic: faq
 ---
 # Migrate SQL Server workloads (FAQ)
 
-[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqlserver-sqldb-sqlmi-asvm.md)]
+[!INCLUDE[appliesto-sqlserver-sqldb-sqlmi-sqlvm](../includes/appliesto-sqlserver-sqldb-sqlmi-sqlvm.md)]
 
 Migrating on-premises SQL Server workloads and associated applications to the cloud usually brings a wide range of questions which go beyond mere product feature information.
 
@@ -90,7 +90,7 @@ Whenever a Platform-as-a-Service (PaaS) solution doesn't fit your workload, Azur
 
 #### Scenario 5: Meeting regulatory compliance: How does Azure SQL help meet regulatory compliance requirements?
 
-[Azure Policy](/azure/governance/policy/overview) has built-in policies that help organizations meet regulatory compliance. Ad-hoc and customized policies can also be created. For more information, see [Azure Policy Regulatory Compliance controls for Azure SQL Database and SQL Managed Instance](../database/security-controls-policy.md). For an overview of compliance offerings, you can consult [Azure compliance documentation](/azure/compliance/).
+[Azure Policy](/azure/governance/policy/overview) has built-in policies that help organizations meet regulatory compliance. Ad hoc and customized policies can also be created. For more information, see [Azure Policy Regulatory Compliance controls for Azure SQL Database and SQL Managed Instance](../database/security-controls-policy.md). For an overview of compliance offerings, you can consult [Azure compliance documentation](/azure/compliance/).
 
 ### Getting started, the holistic approach
 
@@ -144,7 +144,7 @@ Yes, qualifying subscription licenses can be used to pay Azure SQL services at a
 
 #### I'm using SQL Server CAL licenses. How can I move to Azure SQL?
 
-SQL Server CAL licenses with appropriate license mobility rights can be used on Azure SQL VMs, and on Azure SQL Dedicated Host.
+SQL Server CAL licenses with appropriate [license mobility](https://www.microsoft.com/licensing/licensing-programs/software-assurance-license-mobility) rights can be used on Azure SQL VMs, and on Azure SQL Dedicated Host.
 
 #### What is Azure Hybrid Benefit (AHB)?
 
@@ -264,7 +264,7 @@ SQL Managed Instance and Database are built on top of inherent [high availabilit
 
 #### How does disaster recovery work in SQL Managed Instance and SQL Database?
 
-See the [SQL Database and SQL Managed Instance](../database/business-continuity-high-availability-disaster-recover-hadr-overview.md) documentation. [SQL Managed Instance Frequently Asked Questions](/azure/azure-sql/managed-instance/frequently-asked-questions-faq#business-continuity) provide information on DR options.
+See the [SQL Database and SQL Managed Instance](../database/business-continuity-high-availability-disaster-recover-hadr-overview.md) documentation. [SQL Managed Instance Frequently Asked Questions](../managed-instance/frequently-asked-questions-faq.yml#business-continuity) provide information on DR options.
 
 ### Performance and scale
 

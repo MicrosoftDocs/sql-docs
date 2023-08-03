@@ -3,7 +3,7 @@ title: Troubleshoot SQL Insights (preview)
 description: Learn how to troubleshoot SQL Insights (preview) in Azure Monitor.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 07/29/2022
+ms.date: 10/18/2022
 ms.service: sql-db-mi
 ms.topic: conceptual
 ms.custom: subject-monitoring
@@ -46,8 +46,8 @@ If there are no log entries, check the logs on the monitoring virtual machine fo
   - Service: mdsd 
 - `Microsoft.Azure.Monitor.Workloads.Workload.WLILinuxExtension`
   - Service: wli 
-  - Service: ms-telegraf 
-  - Service: td-agent-bit-wli 
+  - Service: telegraf 
+  - Service: fluent-bit
   - Extension log to check installation failures: `/var/log/azure/Microsoft.Azure.Monitor.Workloads.Workload.WLILinuxExtension/wlilogs.log`
 
 ### wli service logs 
@@ -61,7 +61,7 @@ If you see the following error log, there's a problem with the `mdsd` service: `
 
 ### Telegraf service logs 
 
-Service logs: `/var/log/ms-telegraf/telegraf.log`
+Service logs: `/var/log/telegraf/telegraf.log`
 
 To see recent logs: `tail -n 100 -f /var/log/ms-telegraf/telegraf.log`
 
@@ -192,6 +192,7 @@ During preview of SQL Insights, you may encounter the following known issues.
     Using certain special characters in SQL authentication passwords saved in the monitoring VM configuration or in Key Vault may prevent the monitoring VM from connecting to a SQL server or database. This set of characters includes parentheses, square and curly brackets, the dollar sign, forward and back slashes, and dot (`[ { ( ) } ] $ \ / .`).
 * Spaces in the database connection string attributes may be replaced with special characters, leading to database connection failures. For example, if the space in the `User Id` attribute is replaced with a special character, connections will fail with the **Login failed for user ''** error. To resolve, edit the monitoring profile configuration, and delete every special character appearing in place of a space. Some special characters may look indistinguishable from a space, thus you may want to delete every space character, type it again, and save the configuration.
 * Data collection and visualization may not work if the OS computer name of the monitoring VM is different from the monitoring VM name.
+* A message "WLI extension on this machine is below the recommended version [...]" may incorrectly appear even when the WLI extension is up to date.
 
 ## Best practices
 

@@ -1,19 +1,15 @@
 ---
-description: "Set a SQL Server Alias for the SQL Server Agent Service"
 title: Set a SQL Server Alias for the SQL Server Agent Service
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "aliases [SQL Server], creating"
-  - "SQL Server Agent, aliases"
-ms.assetid: 02d6295d-ab52-44f0-8f1b-f3910a507d8f
+description: "Set a SQL Server Alias for the SQL Server Agent Service"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
 ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+helpviewer_keywords:
+  - "aliases [SQL Server], creating"
+  - "SQL Server Agent, aliases"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 
@@ -24,7 +20,7 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 > [!IMPORTANT]  
 > On [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
 
-This topic describes how to set a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alias for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to use to connect to the [!INCLUDE[ssDE](../../includes/ssde_md.md)] by using SQL Server Management Studio. By default, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service connects to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] over named pipes by using dynamic server names that require no additional client configuration. You need to configure a server connection alias only if you are not using the default network transport or if you are connecting to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that listens on an alternate named pipe.  
+This topic describes how to set a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alias for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to use to connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)] by using SQL Server Management Studio. By default, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service connects to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] over named pipes by using dynamic server names that require no additional client configuration. You need to configure a server connection alias only if you are not using the default network transport or if you are connecting to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that listens on an alternate named pipe.  
 
 ## <a name="BeforeYouBegin"></a>Before You Begin  
   

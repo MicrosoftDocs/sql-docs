@@ -4,8 +4,8 @@ description: Learn about the breaking changes in OLE DB Driver for SQL Server si
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "06/12/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 helpviewer_keywords:
   - "OLE DB Driver for SQL Server, updating applications"
@@ -20,7 +20,7 @@ This article discusses the breaking changes in OLE DB Driver for SQL Server sinc
 
 When you upgrade from Microsoft Data Access Components (MDAC) to OLE DB Driver for SQL Server, you might also see some behavior differences. For more information, see [Updating an Application to OLE DB Driver for SQL Server from MDAC](updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md).
 
-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 9.0 shipped with [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 shipped with [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.5 shipped with [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 shipped with [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] and [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)].
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 9.0 shipped with [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 shipped with [!INCLUDE[sql2008-md](../../../includes/sql2008-md.md)].  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.5 shipped with [!INCLUDE[sql2008r2](../../../includes/sql2008r2-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 shipped with [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] and [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)].
 
 |Changed behavior in OLE DB Driver for SQL Server compared to [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Native Client|Description|
 |------------------------------------------------------------------------------------|-----------------|
@@ -34,7 +34,7 @@ When you upgrade from Microsoft Data Access Components (MDAC) to OLE DB Driver f
 |IBCPSession::BCColFmt conversion changes.|In OLE DB Driver for SQL Server, when you use IBCPSession::BCOColFmt to convert SQLDATETIME or SQLDATETIME to a string type, a fractional value is exported. For example, when converting type SQLDATETIME to type SQLNVARCHARMAX, versions prior to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 returned<br /> 1989-02-01 00:00:00.<br />OLE DB Driver for SQL Server returns <br />1989-02-01 00:00:00.0000000.|
 |Custom applications that use the BCP API can now see a warning.|The BCP API will generate a warning message if data length is greater than the specified length for a field for all types. Previously, this warning was only given for character types, but will not be issued for all types.|
 |Inserting an empty string into a **sql_variant** bound as a date/time type generates an error.|In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 9.0, inserting an empty string into a **sql_variant** bound as a date/time type did not generate an error. OLE DB Driver for SQL Server correctly generates an error in this situation.|
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] might return different results when a trigger runs.|Changes introduced in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] might cause an application to have different results returned from a statement that caused a trigger to run when **NOCOUNT OFF** was in effect. In this situation, your application might generate an error. To resolve this error, set **NOCOUNT ON** in the trigger.|
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] might return different results when a trigger runs.|Changes introduced in [!INCLUDE[sql2008-md](../../../includes/sql2008-md.md)] might cause an application to have different results returned from a statement that caused a trigger to run when **NOCOUNT OFF** was in effect. In this situation, your application might generate an error. To resolve this error, set **NOCOUNT ON** in the trigger.|
 
 ## See also
 

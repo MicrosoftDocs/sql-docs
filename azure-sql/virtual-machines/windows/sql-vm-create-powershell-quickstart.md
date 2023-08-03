@@ -144,10 +144,7 @@ If you don't have an Azure subscription, create a [free account](https://azure.m
 
 ## Register with SQL VM RP 
 
-To get portal integration and SQL VM features, you must register with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md).
-
-To get full functionality, you need to register with the extension in [full mode](sql-agent-extension-manually-register-single-vm.md#full-mode). Otherwise, register in lightweight mode. 
-
+To get portal integration and SQL VM features, you must [register](sql-agent-extension-manually-register-single-vm.md#register-with-extension) with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md).
 
 ## Remote desktop into the VM
 
@@ -188,4 +185,4 @@ You can also permanently delete all resources associated with the virtual machin
 In this quickstart, you created a SQL Server 2017 virtual machine using Azure PowerShell. To learn more about how to migrate your data to the new SQL Server, see the following article.
 
 > [!div class="nextstepaction"]
-> [Migrate a database to a SQL VM](migrate-to-vm-from-sql-server.md)
+> [Migration guide: SQL Server to SQL Server on Azure Virtual Machines](../../migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-individual-databases-guide.md)

@@ -1,18 +1,18 @@
 ---
-title: "Configure the query wait Server Configuration Option"
+title: "Configure the query wait (server configuration option)"
 description: Learn about the query wait option. See how to use it to specify the number of seconds a SQL Server query waits for resources before it times out.
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/02/2017"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "queries [SQL Server], timing out"
   - "time [SQL Server], query wait time"
   - "query wait option [SQL Server]"
 ---
-# Configure the query wait Server Configuration Option
+# Configure the query wait (server configuration option)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to configure the **query wait** server configuration option in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Memory-intensive queries (such as those involving sorting and hashing) are queued when there is not enough memory available to run the query. The **query wait** option specifies the time, in seconds (from 0 through 2147483647), that a query waits for resources before it times out. The default value for this option is -1. This means the time-out is calculated as 25 times the estimated query cost.  

@@ -4,8 +4,8 @@ description: Find out about different ways of signing in to an instance of SQL S
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "SQL Server, logging in"
@@ -87,6 +87,6 @@ WHERE session_id = @@SPID;
 
 - [Choose an Authentication Mode](../../relational-databases/security/choose-an-authentication-mode.md)
   
-- [Use the sqlcmd Utility](../../ssms/scripting/sqlcmd-use-the-utility.md)
+- [Use the sqlcmd Utility](../../tools/sqlcmd/sqlcmd-use-utility.md)
   
 - [Creating a Login](../../t-sql/lesson-2-configuring-permissions-on-database-objects.md)

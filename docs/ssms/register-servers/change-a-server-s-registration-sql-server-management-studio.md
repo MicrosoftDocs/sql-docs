@@ -1,19 +1,15 @@
 ---
-description: "Change a Server&#39;s Registration (SQL Server Management Studio)"
 title: Change a Server's Registration
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-ms.assetid: ce6d9d88-3ac8-4f5d-8ea9-e9b55ceca0f4
+description: "Change a Server's Registration (SQL Server Management Studio)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
 ms.date: 03/01/2017
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
 ---
 
-# Change a Server&#39;s Registration (SQL Server Management Studio)
+# Change a Server's Registration (SQL Server Management Studio)
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 

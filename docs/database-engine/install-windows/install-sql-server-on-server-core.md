@@ -4,8 +4,8 @@ description: You can install SQL Server on a Server Core installation. The Serve
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 09/16/2021
-ms.prod: sql
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
 ms.custom: intro-installation
 monikerRange: ">=sql-server-2016"
@@ -24,7 +24,7 @@ The Server Core installation option provides a minimal environment for running s
   
 |Requirement|How to install|  
 |-----------------|--------------------|  
-|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 |For all editions of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] except [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], Setup requires the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 Server Core Profile. SQL Server Setup will automatically install this if it is not already installed. Installation requires a reboot. You can install [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] before you run setup to avoid a reboot.|  
+|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 |For all editions of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] except [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], Setup requires the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 Server Core Profile. SQL Server Setup will automatically install this if it is not already installed. Installation requires a restart. You can install [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] before you run setup to avoid a restart.|  
 |Windows Installer 4.5|Shipped with Server Core installation.|  
 |Windows PowerShell|Shipped with Server Core installation.|  
 |Java Runtime |In order to use PolyBase, you need to install the appropriate Java Runtime. For more information, see [PolyBase installation](../../relational-databases/polybase/polybase-installation.md).|
@@ -123,7 +123,7 @@ The Server Core installation option provides a minimal environment for running s
   
     - Installing [!INCLUDE[ssDE](../../includes/ssde-md.md)]. 
     
-    The following example shows how to install a new stand-alone instance that includes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]:  
+    The following example shows how to install a new stand-alone instance that includes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]:  
 
     ```console
     ; SQL Server Configuration File  

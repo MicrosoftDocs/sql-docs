@@ -4,8 +4,8 @@ description: "The SQLServerBulkCopy class allows you to write data load solution
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "08/24/2020"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Using bulk copy with the JDBC driver

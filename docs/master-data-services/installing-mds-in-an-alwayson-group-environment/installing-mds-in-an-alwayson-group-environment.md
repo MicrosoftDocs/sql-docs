@@ -1,21 +1,17 @@
 ---
 title: High Availability and Disaster Recovery
 description: Install and configure SQL Master Data Services on an Always On Availability group to improve high availability and disaster recovery of backend data.
-ms.custom: "seo-lt-2019"
-ms.date: "07/28/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
-ms.topic: conceptual
-ms.assetid: ""
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "07/28/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
 ---
 
 # High Availability and Disaster Recovery for Master Data Services
 
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 This article describes a solution for Master Data Service (MDS) hosted on Always On Availability Group configuration. The article describes how to install and configure SQL 2016 Master Data Services on a SQL 2016 Always On Availability group (AG). The main purpose of this solution is to improve high availability and disaster recovery of MDS backend data hosted on a SQL Server database.
 
@@ -339,7 +335,7 @@ You should usually enable synchronous commit only when the two nodes are in the 
 
 1. Open SSMS and connect to the listener DNS name you just created in the [Create an Availability Group](#create-an-availability-group) section. In this example, it is MDSSQLServer.
 
-2. In **Object Explorer**, expand the **Always On High Availability** folder, right click the AG you just created in the [Create an Availability Group](#create-an-availability-group) section, and then click **Show Dashboard**. See Figure 20. The status of the new AG and its replicas appears.
+2. In **Object Explorer**, expand the **Always On High Availability** folder, right-click the AG you just created in the [Create an Availability Group](#create-an-availability-group) section, and then click **Show Dashboard**. See Figure 20. The status of the new AG and its replicas appears.
 
    ![View the dashboard](media/Fig20_ShowDashboard.png)
 

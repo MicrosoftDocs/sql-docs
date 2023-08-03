@@ -5,13 +5,15 @@ author: VanMSFT
 ms.author: vanto
 ms.date: 06/25/2020
 ms.service: virtual-machines-sql
+ms.subservice: hadr
+ms.custom: devx-track-azurecli
 ms.topic: tutorial
 ---
 # Tutorial: Configure availability groups for SQL Server on RHEL virtual machines in Azure 
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
 > [!NOTE]
-> We use SQL Server 2017 with RHEL 7.6 in this tutorial, but it is possible to use SQL Server 2019 in RHEL 7 or RHEL 8 to configure high availability. The commands to configure the pacemake cluster and availability group resources has changed in RHEL 8, and you'll want to look at the article [Create availability group resource](/sql/linux/sql-server-linux-availability-group-cluster-rhel#create-availability-group-resource) and RHEL 8 resources for more information on the correct commands.
+> We use SQL Server 2017 with RHEL 7.6 in this tutorial, but it is possible to use SQL Server 2019 in RHEL 7 or RHEL 8 to configure high availability. The commands to configure the pacemake cluster and availability group resources has changed in RHEL 8, and you'll want to look at the article [Create availability group resource](/sql/linux/sql-server-linux-availability-group-cluster-pacemaker?tabs=rhel#create-availability-group-resource) and RHEL 8 resources for more information on the correct commands.
 
 In this tutorial, you learn how to:
 
@@ -29,7 +31,7 @@ This tutorial will use the Azure CLI to deploy resources in Azure.
 
 If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) before you begin.
 
-[!INCLUDE [azure-cli-prepare-your-environment.md](../../includes/azure-cli-prepare-your-environment.md)]
+[!INCLUDE [azure-cli-prepare-your-environment.md](~/../azure-sql/reusable-content/azure-cli/azure-cli-prepare-your-environment.md)]
 
 - This article requires version 2.0.30 or later of the Azure CLI. If using Azure Cloud Shell, the latest version is already installed.
 
@@ -278,7 +280,7 @@ Type `exit` to leave the SSH session.
 > [!IMPORTANT]
 > In order to complete this portion of the tutorial, you must have a subscription for RHEL and the High Availability Add-on. If you are using an image recommended in the previous section, you do not have to register another subscription.
  
-Connect to each VM node and follow the guide below to enable HA. For more information, see [enable high availability subscription for RHEL](/sql/linux/sql-server-linux-availability-group-cluster-rhel#enable-the-high-availability-subscription-for-rhel).
+Connect to each VM node and follow the guide below to enable HA. For more information, see [enable high availability subscription for RHEL](/sql/linux/sql-server-linux-availability-group-cluster-pacemaker?tabs=rhel#enable-the-high-availability-subscription-for-rhel).
 
 > [!TIP]
 > It will be easier if you open an SSH session to each of the VMs simultaneously as the same commands will need to be run on each VM throughout the article.
@@ -335,7 +337,7 @@ In this section, we will enable and start the pcsd service, and then configure t
 
 ### Enable and start pcsd service and Pacemaker
 
-1. Run the commands on all nodes. These commands allow the nodes to rejoin the cluster after reboot.
+1. Run the commands on all nodes. These commands allow the nodes to rejoin the cluster after each node restarts.
 
     ```bash
     sudo systemctl enable pcsd
@@ -940,7 +942,7 @@ If the `synchronization_state_desc` lists SYNCHRONIZED for `db1`, this means the
 We will be following the guide to [create the availability group resources in the Pacemaker cluster](/sql/linux/sql-server-linux-create-availability-group#create-the-availability-group-resources-in-the-pacemaker-cluster-external-only).
 
 > [!NOTE]
-> This article contains references to the term *slave*, a term that Microsoft no longer uses. When the term is removed from the software, we’ll remove it from this article.
+> This article contains references to the term *slave*, a term that Microsoft no longer uses. When the term is removed from the software, we'll remove it from this article.
 
 ### Create the AG cluster resource
 

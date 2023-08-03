@@ -4,10 +4,9 @@ description: "A description of the various options found on the 'Connect to Exis
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: end-user-help
-ms.custom: seodec18
 f1_keywords:
   - "sql13.swb.adddatabasewizard.connecttoreplicas.f1"
   - "sql13.swb.addreplicawizard.connecttoreplicas.f1"

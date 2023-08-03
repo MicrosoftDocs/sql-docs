@@ -6,11 +6,10 @@ author: HugoMSFT
 ms.author: hudequei
 ms.reviewer: wiassaf
 ms.date: 10/05/2021
-ms.prod: sql
-ms.technology: big-data-cluster
+ms.service: sql
+ms.subservice: big-data-cluster
 ms.topic: conceptual
 ms.custom: kr2b-contr-experiment
-ms.metadata: seo-lt-2019
 ---
 
 # Encryption at rest concepts and configuration guide

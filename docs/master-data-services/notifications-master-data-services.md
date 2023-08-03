@@ -1,25 +1,21 @@
 ---
-description: "Notifications (Master Data Services)"
 title: Notifications
-ms.custom: ""
+description: "Notifications (Master Data Services)"
+author: CordeliaGrey
+ms.author: jiwang6
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
+ms.service: sql
+ms.subservice: master-data-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "notifications [Master Data Services]"
   - "notifications [Master Data Services], about notifications"
   - "e-mail [Master Data Services]"
   - "e-mail [Master Data Services], about e-mail notifications"
-ms.assetid: d7ad32d5-9fe5-48fd-8c61-0b00c0aff082
-author: CordeliaGrey
-ms.author: jiwang6
 ---
 # Notifications (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] can be configured to send an email notification when business rule validation fails, the status of a model version changes, or the status of a changeset changes.  
   

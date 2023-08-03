@@ -1,19 +1,16 @@
 ---
-title: "Implementing the IRenderingExtension Interface | Microsoft Docs"
+title: "Implementing the IRenderingExtension Interface"
 description: Learn how to implement the IRenderingExtension interface, which transforms report data into output formats that viewers, printers, and other targets consume.
-ms.date: 03/16/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: extensions
-
-
-ms.topic: reference
-helpviewer_keywords: 
-  - "IRenderingExtension interface"
-  - "rendering extensions [Reporting Services], IRenderingExtension interface"
-ms.assetid: 74b2f2b7-6796-42da-ab7d-b05891ad4001
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/16/2017
+ms.service: reporting-services
+ms.subservice: extensions
+ms.topic: reference
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "IRenderingExtension interface"
+  - "rendering extensions [Reporting Services], IRenderingExtension interface"
 ---
 # Implementing the IRenderingExtension Interface
   The rendering extension takes the results from a report definition that is combined with the actual data and renders the resulting data to a format that is useable. The transformation of the combined data and formatting is done by using a common language runtime (CLR) class that implements <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>. This transforms the object model into an output format that is consumable by a viewer, printer, or other output target.  

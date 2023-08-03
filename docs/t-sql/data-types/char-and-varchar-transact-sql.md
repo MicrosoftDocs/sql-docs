@@ -5,8 +5,8 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
 ms.date: 09/22/2022
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: "reference"
 f1_keywords:
   - "varchar"
@@ -21,12 +21,12 @@ helpviewer_keywords:
   - "utf8"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 
 # char and varchar (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
 Character data types that are either fixed-size, **char**, or variable-size, **varchar**. Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], when a UTF-8 enabled collation is used, these data types store the full range of [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) character data and use the [UTF-8](https://www.wikipedia.org/wiki/UTF-8) character encoding. If a non-UTF-8 collation is specified, then these data types store only a subset of characters supported by the corresponding code page of that collation.
 
@@ -44,7 +44,7 @@ Variable-size string data. Use *n* to define the string size in bytes and can be
 
 A common misconception is to think that with **char(*n*)** and **varchar(*n*)**, the *n* defines the number of characters. However, in **char(*n*)** and **varchar(*n*)**, the *n* defines the string length in **bytes** (0 to 8,000). *n* never defines numbers of characters that can be stored. This is similar to the definition of [**nchar(*n*)** and **nvarchar(*n*)**](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md).
 
-The misconception happens because when using single-byte encoding, the storage size of char and varchar is *n* bytes and the number of characters is also *n*. However, for multibyte encoding such as [UTF-8](https://www.wikipedia.org/wiki/UTF-8), higher Unicode ranges (128 to 1,114,111) result in one character using two or more bytes. For example, in a column defined as **char(10)**, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] can store 10 characters that use single-byte encoding (Unicode range 0 to 127), but fewer than 10 characters when using multibyte encoding (Unicode range 128 to 1,114,111). For more information about Unicode storage and character ranges, see [Storage differences between UTF-8 and UTF-16](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences).
+The misconception happens because when using single-byte encoding, the storage size of char and varchar is *n* bytes and the number of characters is also *n*. However, for multibyte encoding such as [UTF-8](https://www.wikipedia.org/wiki/UTF-8), higher Unicode ranges (128 to 1,114,111) result in one character using two or more bytes. For example, in a column defined as **char(10)**, the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] can store 10 characters that use single-byte encoding (Unicode range 0 to 127), but fewer than 10 characters when using multibyte encoding (Unicode range 128 to 1,114,111). For more information about Unicode storage and character ranges, see [Storage differences between UTF-8 and UTF-16](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences).
 
 When *n* isn't specified in a data definition or variable declaration statement, the default length is 1. If *n* isn't specified when using the `CAST` and `CONVERT` functions, the default length is 30.
 

@@ -1,16 +1,12 @@
 ---
+title: "catalog.catalog_properties (SSISDB Database)"
 description: "catalog.catalog_properties (SSISDB Database)"
-title: "catalog.catalog_properties (SSISDB Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/11/2018"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: "language-reference"
-ms.assetid: e604a382-95c8-4764-b268-742eb5c6d4cf
 author: chugugrace
 ms.author: chugu
+ms.date: "12/11/2018"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
 ---
 # catalog.catalog_properties (SSISDB Database)
 

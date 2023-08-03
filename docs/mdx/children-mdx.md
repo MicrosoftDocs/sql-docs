@@ -5,8 +5,8 @@ author: minewiskan
 ms.author: owend
 ms.reviewer: owend, randolphwest
 ms.date: 08/08/2022
-ms.prod: sql
-ms.technology: analysis-services
+ms.service: sql
+ms.subservice: analysis-services
 ms.topic: reference
 ms.custom: mdx
 ---

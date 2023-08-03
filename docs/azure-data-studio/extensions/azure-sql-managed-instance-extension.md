@@ -5,7 +5,7 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: erinstellato
 ms.date: 10/07/2019
-ms.prod: azure-data-studio
+ms.service: azure-data-studio
 ms.topic: conceptual
 ---
 

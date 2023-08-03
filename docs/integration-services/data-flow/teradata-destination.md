@@ -1,15 +1,12 @@
 ---
+title: "Teradata destination"
 description: "Teradata destination"
-title: "Teradata destination | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/22/2019"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
+ms.date: "11/22/2019"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 
 # Teradata destination
@@ -39,7 +36,7 @@ Fast load mode has below restrictions:
 - Foreign key references in target tables are not supported.
 - Target tables defined with a secondary index are not supported.
 
-For more information on the Teradata fast load restrictions, see Teradata’s fast load reference.
+For more information on the Teradata fast load restrictions, see Teradata's fast load reference.
 
 You can set the mode in the [Teradata Destination Editor (Connection Manager Page)](#teradata-destination-editor-connection-manager-page).
 
@@ -120,7 +117,7 @@ For more information, see one of the following topics:
 The **Advanced Editor** dialog box contains the properties that can be set programmatically.
 To open the **Advanced Editor** dialog box:
 
-- In the **Data Flow** screen of your Integration Services project, right click the Teradata destination and select **Show Advanced Editor**.
+- In the **Data Flow** screen of your Integration Services project, right-click the Teradata destination and select **Show Advanced Editor**.
 
 For more information about the properties that you can set in the Advanced Editor dialog box, see [Teradata destination custom properties](#teradata-destination-custom-properties).
 

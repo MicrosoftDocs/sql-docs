@@ -4,8 +4,8 @@ description: "Learn how the IBCPSession::BCPColFmt method creates a binding betw
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "05/25/2020"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: reference
 helpviewer_keywords:
   - "BCPColFmt method"

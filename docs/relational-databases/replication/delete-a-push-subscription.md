@@ -1,21 +1,18 @@
 ---
-title: "Delete a Push Subscription | Microsoft Docs"
+title: "Delete a Push Subscription"
 description: Learn how to delete a push subscription in SQL Server by using SQL Server Management Studio, Transact-SQL, or Replication Management Objects.
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "removing subscriptions"
   - "push subscriptions [SQL Server replication], deleting"
   - "deleting subscriptions"
   - "subscriptions [SQL Server replication], push"
-ms.assetid: 3c4847e2-aed9-4488-b45d-8164422bdb10
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-current||>=sql-server-2016"
 ---
 # Delete a Push Subscription
@@ -86,7 +83,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016"
   
 #### To delete a push subscription to a snapshot or transactional publication  
   
-1.  Create a connection to the Subscriber by using the <xref:Microsoft.SqlServer.Management.Common.ServerConnection> class.  
+1.  Create a connection to the Publisher by using the <xref:Microsoft.SqlServer.Management.Common.ServerConnection> class.  
   
 2.  Create an instance of the <xref:Microsoft.SqlServer.Replication.TransSubscription> class.  
   
@@ -100,7 +97,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016"
   
 #### To delete a push subscription to a merge publication  
   
-1.  Create a connection to the Subscriber by using the <xref:Microsoft.SqlServer.Management.Common.ServerConnection> class.  
+1.  Create a connection to the Publisher by using the <xref:Microsoft.SqlServer.Management.Common.ServerConnection> class.  
   
 2.  Create an instance of the <xref:Microsoft.SqlServer.Replication.MergeSubscription> class.  
   

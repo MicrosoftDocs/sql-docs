@@ -1,24 +1,20 @@
 ---
+title: "CHANGETABLE (Transact-SQL)"
 description: "CHANGETABLE (Transact-SQL)"
-title: "CHANGETABLE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/12/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "CHANGETABLE_TSQL"
-  - "CHANGETABLE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "CHANGETABLE"
-  - "change tracking [SQL Server], CHANGETABLE"
-ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "02/12/2021"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "CHANGETABLE_TSQL"
+  - "CHANGETABLE"
+helpviewer_keywords:
+  - "CHANGETABLE"
+  - "change tracking [SQL Server], CHANGETABLE"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CHANGETABLE (Transact-SQL)
@@ -26,7 +22,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
   Returns change tracking information for a table. You can use this statement to return all changes for a table or change tracking information for a specific row.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -68,7 +64,7 @@ CHANGETABLE (
  Is the value of the primary key. If there are multiple primary key columns, the values must be specified in the same order as the columns appear in the *column_name* list.  
 
  [ FORCESEEK ]   
- **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU16, [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] CU24, and [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] CU11), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]    
+ **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU16, [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] CU24, and [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] CU11), [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]    
  
  Optional parameter that forces a seek operation to be used to access the *table_name*. In some cases where very few rows have changed, a scan operation may still be used to access the *table_name*. If a scan operation this introduces a performance issue, use the `FORCESEEK` parameter.
 

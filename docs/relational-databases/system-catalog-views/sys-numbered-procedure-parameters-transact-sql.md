@@ -4,9 +4,8 @@ description: sys.numbered_procedure_parameters (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "numbered_procedure_parameters_TSQL"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.numbered_procedure_parameters catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: a441d46d-1f30-41c2-8d94-e9442f59786e
 ---
 # sys.numbered_procedure_parameters (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

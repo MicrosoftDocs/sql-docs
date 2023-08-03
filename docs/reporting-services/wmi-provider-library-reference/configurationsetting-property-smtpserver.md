@@ -1,23 +1,18 @@
 ---
+title: "SMTPServer Property (WMI MSReportServer_ConfigurationSetting)"
 description: "SMTPServer Property (WMI MSReportServer_ConfigurationSetting)"
-title: "SMTPServer Property (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: wmi-provider-library-reference
-
-
-ms.topic: conceptual
-apiname: 
-  - "SMTPServer"
-apilocation: 
-  - "reportingservices.mof"
-apitype: MOFDef
-helpviewer_keywords: 
-  - "SMTPServer property"
-ms.assetid: 8bcceeba-e1a0-44ef-bda1-600c6925e1db
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: wmi-provider-library-reference
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "SMTPServer property"
+apilocation: "reportingservices.mof"
+apiname: "SMTPServer"
+apitype: MOFDef
 ---
 # ConfigurationSetting Property - SMTPServer
   Gets the SMTP server property from the report server configuration file. Read-only.  

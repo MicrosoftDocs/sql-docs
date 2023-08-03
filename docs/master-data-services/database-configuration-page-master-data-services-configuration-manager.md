@@ -1,22 +1,18 @@
 ---
-description: "Database Configuration Page (Master Data Services Configuration Manager)"
 title: Database Configuration Page
-ms.custom: "seo-lt-2019"
-ms.date: "03/20/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.mds.configmanager.dbpg.f1"
-ms.assetid: dd72220e-a599-465d-8b84-9bb6a7433216
+description: "Database Configuration Page (Master Data Services Configuration Manager)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/20/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.mds.configmanager.dbpg.f1"
 ---
 # Database Configuration Page (Master Data Services Configuration Manager)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Use the **Database Configuration** page to edit system settings of a [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database. System settings affect all web applications and web services associated with the selected [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database. You must select or create a [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database before system settings are enabled and available for configuration.  
   

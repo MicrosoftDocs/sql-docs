@@ -1,16 +1,13 @@
 ---
-title: "Accessing the WMI Provider Programmatically | Microsoft Docs"
-description: Learn what an WMI provider is, how to find a report server instance, and how to access the WMI Provider programmatically. 
-ms.date: 11/02/2016
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
-
-
-ms.topic: reference
-ms.assetid: 67bd266b-1484-4863-8152-060a993420a9
+title: "Accessing the WMI Provider Programmatically"
+description: Learn what an WMI provider is, how to find a report server instance, and how to access the WMI Provider programmatically.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 11/02/2016
+ms.service: reporting-services
+ms.subservice: reporting-services
+ms.topic: reference
+ms.custom: updatefrequency5
 ---
 # Accessing the WMI Provider Programmatically
 

@@ -1,18 +1,14 @@
 ---
+title: "HDFS File Source"
 description: "HDFS File Source"
-title: "HDFS File Source | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.ssis.designer.hdfsfilesrc.f1"
-ms.assetid: f8cda200-c389-4a2e-8ee9-5d59b326aac1
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.ssis.designer.hdfsfilesrc.f1"
 ---
 # HDFS File Source
 

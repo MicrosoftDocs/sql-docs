@@ -3,10 +3,9 @@ title: "sys.dm_exec_query_stats (Transact-SQL)"
 description: sys.dm_exec_query_stats (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "05/30/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.date: "04/06/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "dm_exec_query_stats_TSQL"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_exec_query_stats dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.dm_exec_query_stats (Transact-SQL)
@@ -27,7 +25,7 @@ Returns aggregate performance statistics for cached query plans in [!INCLUDE[ssN
   
 > [!NOTE]
 > - The results of **sys.dm_exec_query_stats**  may vary with each execution as the data only reflects finished queries, and not ones still in-flight.
-> - To call this from dedicated SQL pool in [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_exec_query_stats**. For serverless SQL pool use **sys.dm_exec_query_stats**.
+> - To call this from dedicated SQL pool in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_exec_query_stats**. For serverless SQL pool use **sys.dm_exec_query_stats**.
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -107,7 +105,7 @@ Returns aggregate performance statistics for cached query plans in [!INCLUDE[ssN
 |**last_spills**|**bigint**|The number of pages spilled the last time the query was executed.<br /><br /> **Applies to**: Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**min_spills**|**bigint**|The minimum number of pages that this query has ever spilled during a single execution.<br /><br /> **Applies to**: Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**max_spills**|**bigint**|The maximum number of pages that this query has ever spilled during a single execution.<br /><br /> **Applies to**: Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**pdw_node_id**|**int**|The identifier for the node that this distribution is on.<br /><br /> **Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
+|**pdw_node_id**|**int**|The identifier for the node that this distribution is on.<br /><br /> **Applies to**: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
 |**total_page_server_reads**|**bigint**|Total number of remote page server reads performed by executions of this plan since it was compiled.<br /><br /> **Applies to:** Azure SQL Database Hyperscale |  
 |**last_page_server_reads**|**bigint**|Number of remote page server reads performed the last time the plan was executed.<br /><br /> **Applies To:** Azure SQL Database Hyperscale |  
 |**min_page_server_reads**|**bigint**|Minimum number of remote page server reads that this plan has ever performed during a single execution.<br /><br /> **Applies To:** Azure SQL Database Hyperscale |  
@@ -121,18 +119,22 @@ On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] and SQL Managed 
 
 On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databases in **elastic pools**, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account, the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account, or membership in the `##MS_ServerStateReader##` [server role](/azure/azure-sql/database/security-server-roles) is required. On all other SQL Database service objectives, either the `VIEW DATABASE STATE` permission on the database, or membership in the `##MS_ServerStateReader##` server role is required.   
    
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Remarks  
  Statistics in the view are updated when a query is completed.  
   
 ## Examples  
   
 ### A. Finding the TOP N queries  
- The following example returns information about the top five queries ranked by average CPU time. This example aggregates the queries according to their query hash so that logically equivalent queries are grouped by their cumulative resource consumption.  
+ The following example returns information about the top five queries ranked by average CPU time. This example aggregates the queries according to their query hash so that logically equivalent queries are grouped by their cumulative resource consumption. The Sample_Statement_Text column shows an example of the query structure that matches the query hash, but it should be read without regard to specific values in the statement. For example, if a statement contains `WHERE Id = 5`, you may read it in its more generic form: `WHERE Id = @some_value`
   
 ```sql  
-SELECT TOP 5 query_stats.query_hash AS "Query Hash",   
-    SUM(query_stats.total_worker_time) / SUM(query_stats.execution_count) AS "Avg CPU Time",  
-    MIN(query_stats.statement_text) AS "Statement Text"  
+SELECT TOP 5 query_stats.query_hash AS Query_Hash,   
+    SUM(query_stats.total_worker_time) / SUM(query_stats.execution_count) AS Avg_CPU_Time,  
+    MIN(query_stats.statement_text) AS Sample_Statement_Text
 FROM   
     (SELECT QS.*,   
     SUBSTRING(ST.text, (QS.statement_start_offset/2) + 1,  

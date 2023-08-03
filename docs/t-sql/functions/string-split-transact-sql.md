@@ -3,14 +3,10 @@ title: "STRING_SPLIT (Transact-SQL)"
 description: "Transact-SQL reference for the STRING_SPLIT function. This table-valued function splits a string into substrings based on a character delimiter."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: ""
 ms.date: "05/24/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom:
-  - "event-tier1-build-2022"
 f1_keywords:
   - "STRING_SPLIT"
   - "STRING_SPLIT_TSQL"
@@ -18,11 +14,11 @@ helpviewer_keywords:
   - "STRING_SPLIT function"
 dev_langs:
   - "TSQL"
-monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017"
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017||=fabric"
 ---
 # STRING_SPLIT (Transact-SQL)
 
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics fabricse fabricdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-fabricse-fabricdw.md)]
 
 A table-valued function that splits a string into rows of substrings, based on a specified separator character.
 
@@ -35,7 +31,7 @@ To change the compatibility level of a database, refer to [View or Change the Co
 > [!NOTE]
 > Compatibility configuration is not needed for `STRING_SPLIT` in Azure Synapse Analytics.
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
 

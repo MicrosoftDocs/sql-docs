@@ -1,12 +1,13 @@
 ---
 title: Generate and Publish Scripts Wizard
 description: Learn how to use the Generate and Publish Scripts Wizard to create scripts to transfer a database between database instances. The instances can be instances of the SQL Server Database Engine or Azure SQL Database.
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.reviewer: ""
+author: markingmyname
+ms.author: maghan
+ms.date: 04/07/2020
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql9.swb.generatescriptswizard.chooseviews.f1"
   - "sql13.swb.generatescriptswizard.manageproviders.f1"
   - "sql9.swb.generatescriptswizard.scriptwizarddescription.f1"
@@ -31,18 +32,13 @@ f1_keywords:
   - "sql13.swb.generatescriptswizard.advancedscriptingoptions.f1"
   - "sql9.swb.generatescriptswizard.choosescriptoptions.f1"
   - "sql9.swb.generatescriptswizard.chooseudf.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "databases [SQL Server], publishing"
   - "publishing databases"
   - "scripts [SQL Server], generating"
   - "scripts [SQL Server], publishing"
   - "databases [SQL Server], generating scripts"
   - "Publish Database Wizard"
-ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
-author: markingmyname
-ms.author: maghan
-ms.custom: seo-lt-2019
-ms.date: 04/07/2020
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -50,7 +46,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-You can use the **Generate and Publish Scripts Wizard** to create scripts for transferring a database between instances of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] or [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. You can generate scripts for a database on an instance of the Database Engine in your local network, or from [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. The generated scripts can be run on another instance of the Database Engine or [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. You can also use the wizard to publish the contents of a database directly to a Web service created by using the Database Publishing Services. You can create scripts for an entire database, or limit it to specific objects.
+You can use the **Generate and Publish Scripts Wizard** to create scripts for transferring a database between instances of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] or [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. You can generate scripts for a database on an instance of the Database Engine in your local network, or from [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. The generated scripts can be run on another instance of the Database Engine or [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. You can also use the wizard to publish the contents of a database directly to a Web service created by using the Database Publishing Services. You can create scripts for an entire database, or limit it to specific objects.
 
 For a more detailed Tutorial on using the Generate and Publish Scripts wizard, see [Tutorial: Generate Scripts Wizard](../tutorials/scripting-ssms.md#script-databases).
 
@@ -244,11 +240,11 @@ If all the settings are correct, your configuration finishes successfully.
 
 ## Generating scripts on Azure Synapse Analytics
 
-If the syntax generated when using "Script As..." does not look like [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] syntax or if you receive an error message, you may need to set your scripting options in SQL Server Management Studio to [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].
+If the syntax generated when using "Script As..." does not look like [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] syntax or if you receive an error message, you may need to set your scripting options in SQL Server Management Studio to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
 
 ### How to set default scripting options to SQL Data Warehouse
 
-In order to script objects with [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] syntax, set the default scripting option to [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] as follows:
+In order to script objects with [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] syntax, set the default scripting option to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] as follows:
 
 1. Select **Tools** then **Options**. 
 1. Select **SQL Server Object Explorer**, and **Scripting**.
@@ -259,7 +255,7 @@ In order to script objects with [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]
 
 ### How to generate scripts for SQL Data Warehouse when it is not the default scripting option
 
-If you set [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] as your default scripting option as shown above, these instructions can be ignored. However, if you choose to use different default scripting options, you may encounter an error. To avoid errors, follow these steps in order to Generate and Publish Scripts for [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]:
+If you set [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] as your default scripting option as shown above, these instructions can be ignored. However, if you choose to use different default scripting options, you may encounter an error. To avoid errors, follow these steps in order to Generate and Publish Scripts for [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]:
 
 1. In **Object Explorer**, right-click your dedicated SQL pool under **Databases**.
 2. Select **Generate Scripts**.

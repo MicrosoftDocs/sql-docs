@@ -4,8 +4,8 @@ description: Learn about the database states in a database mirroring session in 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.technology: database-mirroring
+ms.service: sql
+ms.subservice: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords:
   - "states [SQL Server], database mirroring"

@@ -1,21 +1,17 @@
 ---
+title: "Microsoft Access Driver Programming Considerations"
 description: "Microsoft Access Driver Programming Considerations"
-title: "Microsoft Access Driver Programming Considerations | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ODBC desktop database drivers [ODBC], Access driver"
   - "Jet-based ODBC drivers [ODBC], Access driver"
   - "Access driver [ODBC]"
   - "desktop database drivers [ODBC], Access driver"
-ms.assetid: 2d2f09c0-18ef-45a4-a72a-d7a3bdcef646
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Microsoft Access Driver Programming Considerations
 This section contains the following topics.  

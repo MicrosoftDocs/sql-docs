@@ -4,9 +4,8 @@ description: MSmerge_identity_range (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "MSmerge_identity_range_TSQL"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "MSmerge_identity_range system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 493a2028-88a0-4e83-ad89-ae5661d9f477
 ---
 # MSmerge_identity_range (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,1 +1,1 @@
- SQL Server 2005 Enterprise Edition 
+ SQL Server 2005 Enterprise edition 

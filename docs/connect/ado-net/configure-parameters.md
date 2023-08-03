@@ -4,10 +4,9 @@ description: Command objects use parameters to pass values to SQL statements or 
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 11/25/2020
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
-ms.custom: event-tier1-build-2022
 dev_langs:
   - "csharp"
 ---

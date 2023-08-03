@@ -1,16 +1,12 @@
 ---
+title: "Direct the CDC Stream According to the Type of Change"
 description: "Direct the CDC Stream According to the Type of Change"
-title: "Direct the CDC Stream According to the Type of Change | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
-ms.assetid: 3afa531e-f425-40a4-a1bf-1c3e1727287e
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Direct the CDC Stream According to the Type of Change
 
@@ -47,7 +43,7 @@ ms.author: chugu
   
      To open the **Advanced Editor** dialog box:  
   
-    -   In the **Data Flow** screen of your [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] project, right click the CDC splitter and select **Show Advanced Editor**.  
+    -   In the **Data Flow** screen of your [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] project, right-click the CDC splitter and select **Show Advanced Editor**.  
   
      For more information about using the CDC splitter see CDC Components for Microsoft SQL Server Integration Services.  
   

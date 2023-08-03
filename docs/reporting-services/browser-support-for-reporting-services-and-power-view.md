@@ -1,14 +1,14 @@
 ---
-title: "Browser Support for Reporting Services and Power View | Microsoft Docs"
+title: "Browser Support for Reporting Services and Power View"
 description: Learn about what browser versions are supported for managing and viewing SQL Server Reporting Services, the ReportViewer Controls and Power View.
-ms.date: 12/01/2021
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
-
-
+author: maggiesMSFT
+ms.author: maggies
+ms.date: 05/01/2023
+ms.service: reporting-services
+ms.subservice: reporting-services
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "displaying reports"
   - "scripts [Reporting Services], requirements"
   - "viewing reports"
@@ -17,9 +17,6 @@ helpviewer_keywords:
   - "browsing reports [Reporting Services]"
   - "components [Reporting Services], browsers"
   - "Web browsers [Reporting Services]"
-ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Browser Support for Reporting Services and Power View
 
@@ -31,7 +28,7 @@ Learn about what browser versions are supported for managing and viewing SQL Ser
 > Reporting Services integration with SharePoint is no longer available after SQL Server 2016. Power View support is no longer available after SQL Server 2017.
 
 > [!NOTE]
-> Support for the Microsoft Edge Legacy browser stopped beginning March 9, 2021, and support for Microsoft Internet Explorer 11 stopped beginning August 17, 2021. Support for Edge (Internet Explorer mode) and Chrome will be supported going forward, but may experience some visual (non-functional) issues on versions of SSRS prior to 2016.
+> Support for the Microsoft Edge Legacy browser stopped beginning March 9, 2021, and support for Microsoft Internet Explorer 11 stopped beginning August 17, 2021. 
 
 ## Browser requirements for the web portal
 

@@ -1,26 +1,30 @@
 ---
 title: SqlPackage in development pipelines
-description: Learn how to troubleshoot database development pipelines with SqlPackage.exe.
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: tools-other
-ms.topic: conceptual
-ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
+description: Learn how to troubleshoot database development pipelines with SqlPackage.
 author: "dzsquared"
 ms.author: "drskwier"
 ms.reviewer: "maghan"
 ms.date: 09/17/2021
+ms.service: sql
+ms.subservice: tools-other
+ms.topic: conceptual
 ---
 
 # SqlPackage in development pipelines
 
-**SqlPackage.exe** is a command-line utility that automates several database development tasks and can be incorporated into CI/CD pipelines.
+**SqlPackage** is a command-line utility that automates several database development tasks and can be incorporated into CI/CD pipelines.
+
 
 ## Virtual environments
 
+> [!NOTE]
+> Utilizing a standalone installation of SqlPackage for pipeline automation is recommended over using the SqlPackage executables bundled with other applications, including SQL Server Management Studio or Visual Studio.  The standalone installation of SqlPackage is updated more frequently and is not tied to the release cadence of other applications.
+
+On Windows, the standalone install of SqlPackage is available on the path `C:\Program Files\Microsoft SQL Server\160\DAC\bin` (DacFx.msi) or `%USERPROFILE%\.dotnet\tools` (dotnet tool).  On Linux, the standalone install of SqlPackage is available on the path `~/.dotnet/tools` (dotnet tool).  In both Windows and Linux environments, if you download the self-contained .zip SqlPackage for .NET Core, you can extract the executable to a location of your choosing.
+
 ### Managed virtual environments
 
-The virtual environments used for GitHub Actions hosted runners and Azure Pipelines VM images are managed in the [virtual-environments](https://github.com/actions/virtual-environments) GitHub repository.  SqlPackage is included in several environments including `windows-latest` and `ubuntu-latest`. Updates to the images in [virtual-environments](https://github.com/actions/virtual-environments) are made within a few weeks of each SqlPackage release.
+The virtual environments used for GitHub Actions hosted runners and Azure Pipelines VM images are managed in the [runner-images](https://github.com/actions/runner-images) GitHub repository.  SqlPackage is included in several environments including `windows-latest` and `ubuntu-latest`. Updates to the images in [runner-images](https://github.com/actions/runner-images) are made within a few weeks of each SqlPackage release.
 
 ### Self-hosted virtual environments
 
@@ -45,7 +49,7 @@ During troubleshooting efforts, it's important to know the SqlPackage version is
 When the [script](/azure/devops/pipelines/yaml-schema#script) keyword is used in an Azure Pipeline, a step can be added to an Azure Pipeline that outputs the SqlPackage version number.
 
 ```yaml
-- script: sqlpackage.exe /version
+- script: SqlPackage /version
   workingDirectory: C:\Program Files\Microsoft SQL Server\160\DAC\bin\
   displayName: 'get sqlpackage version'
 ```
@@ -57,7 +61,7 @@ By using the [run](https://docs.github.com/en/actions/using-workflows/workflow-s
 ```yaml
 - name: get sqlpackage version
   working-directory: C:\Program Files\Microsoft SQL Server\160\DAC\bin\
-  run: ./sqlpackage.exe /version
+  run: ./SqlPackage /version
 ```
 
 :::image type="content" source="media/sqlpackage-pipelines-github-action.png" alt-text="GitHub action output displaying build number 15.0.4897.1":::
@@ -68,7 +72,7 @@ By using the [run](https://docs.github.com/en/actions/using-workflows/workflow-s
 Diagnostic information from SqlPackage is available in the command line through the parameter `/DiagnosticsFile`, which can be used in virtual environments such as Azure Pipelines and GitHub Actions.  The diagnostic information is written to a file in the working directory.  The file name is dictated by the `/DiagnosticsFile` parameter.
 
 #### Azure Pipelines
-Adding the `/DiagnosticsFile` parameter to the "Additional SqlPackage.exe Arguments" field in the Azure Pipeline SqlAzureDacpacDeployment configuration will cause the SqlPackage diagnostic information to be written to the file specified.  Following the SqlAzureDacpacDeployment task, the diagnostic file can be made available outside of the virtual environment by publishing a pipeline artifact as seen in the example below.
+Adding the `/DiagnosticsFile` parameter to the "Additional SqlPackage Arguments" field in the Azure Pipeline SqlAzureDacpacDeployment configuration will cause the SqlPackage diagnostic information to be written to the file specified.  Following the SqlAzureDacpacDeployment task, the diagnostic file can be made available outside of the virtual environment by publishing a pipeline artifact as seen in the example below.
 
 ```yaml
 - task: SqlAzureDacpacDeployment@1
@@ -99,15 +103,14 @@ Adding the `/DiagnosticsFile` parameter to the "arguments" field in the GitHub A
 
 ```yaml
 - name: Azure SQL Deploy
-  uses: Azure/sql-action@v1
+  uses: Azure/sql-action@v2
   with:
-    # Name of the Azure SQL Server name, like Fabrikam.database.windows.net.
-    server-name: ${{ secrets.AZURE_SQL_SERVER }}
     # The connection string, including authentication information, for the Azure SQL Server database.
     connection-string: ${{ secrets.AZURE_SQL_CONNECTION_STRING }}
     # Path to DACPAC file to deploy
-    dacpac-package: .\DatabaseProjectAdventureWorksLT\bin\Release\DatabaseProjectAdventureWorksLT.dacpac
-    # additional SqlPackage.exe arguments
+    path: .\DatabaseProjectAdventureWorksLT\bin\Release\DatabaseProjectAdventureWorksLT.dacpac
+    action: publish
+    # additional SqlPackage arguments
     arguments: /DiagnosticsFile:DatabaseProjectAdventureWorksLT/DiagnosticLog.log
 
 - uses: actions/upload-artifact@v2

@@ -1,13 +1,14 @@
 ---
-title: "Tutorial: Locate & Start Reporting Services Tools | Microsoft Docs"
+title: "Tutorial: Locate & Start Reporting Services Tools"
 description: Learn tools used to configure a report server, manage report server content & operations, and create and publish paginated & mobile Reporting Services reports.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 12/09/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: tools
-ms.custom: seodec18
+ms.service: reporting-services
+ms.subservice: tools
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "Reporting Services, tutorials"
   - "Reporting Services, tools"
   - "Reporting Services Configuration tool"
@@ -17,9 +18,6 @@ helpviewer_keywords:
   - "tools [Reporting Services]"
   - "tutorials [Reporting Services]"
   - "Report Builder"
-ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
-author: maggiesMSFT
-ms.author: maggies
 ---
 
 # Tutorial: How to Locate and Start Reporting Services Tools (SSRS)

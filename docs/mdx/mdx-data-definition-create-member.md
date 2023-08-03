@@ -1,14 +1,14 @@
 ---
+title: "CREATE MEMBER Statement (MDX)"
 description: "MDX Data Definition - CREATE MEMBER"
-title: "CREATE MEMBER Statement (MDX) | Microsoft Docs"
-ms.date: 07/22/2020
-ms.prod: sql
-ms.technology: analysis-services
-ms.custom: mdx
-ms.topic: reference
+author: minewiskan
 ms.author: owend
 ms.reviewer: owend
-author: minewiskan
+ms.date: 07/22/2020
+ms.service: sql
+ms.subservice: analysis-services
+ms.topic: reference
+ms.custom: mdx
 ---
 # MDX Data Definition - CREATE MEMBER
 

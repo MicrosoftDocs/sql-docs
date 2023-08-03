@@ -1,9 +1,9 @@
 ---
 title: Certificate rotation for Azure SQL Database & SQL Managed Instance
 description: Learn about the upcoming changes of root certificate changes that will affect Azure SQL Database and Azure SQL Managed Instance
-author: srdan-bozovic-msft
-ms.author: srbozovi
-ms.reviewer: kendralittle, mathoma, vanto
+author: tameikal-msft
+ms.author: talawren
+ms.reviewer: mathoma, vanto
 ms.date: 09/13/2020
 ms.service: sql-db-mi
 ms.subservice: security
@@ -18,7 +18,7 @@ Azure SQL Database & SQL Managed Instance will be changing the root certificate 
 
 [Certificate Authority (CA) Browser forum](https://cabforum.org/) recently published reports of multiple certificates issued by CA vendors to be non-compliant.
 
-As per the industry’s compliance requirements, CA vendors began revoking CA certificates for non-compliant CAs, requiring servers to use certificates issued by compliant CAs, and signed by CA certificates from those compliant CAs. Since Azure SQL Database & SQL Managed Instance currently use one of these non-compliant certificates, which client applications use to validate their SSL connections, we need to ensure that appropriate actions are taken (described below) to minimize the potential impact to your Azure SQL servers.
+As per the industry's compliance requirements, CA vendors began revoking CA certificates for non-compliant CAs, requiring servers to use certificates issued by compliant CAs, and signed by CA certificates from those compliant CAs. Since Azure SQL Database & SQL Managed Instance currently use one of these non-compliant certificates, which client applications use to validate their SSL connections, we need to ensure that appropriate actions are taken (described below) to minimize the potential impact to your Azure SQL servers.
 
 The new certificate will be used starting October 26, 2020. If you use full validation of the server certificate when connecting from a SQL client (TrustServerCertificate=false), you need to ensure that your SQL client would be able to validate new root certificate before October 26, 2020.
 
@@ -30,11 +30,11 @@ If you are not using SSL/TLS currently, there is no impact to your application a
 
 If your client driver utilizes OS certificate store, as majority of drivers do, and your OS is regularly maintained this change will likely not affect you, as the root certificate we are switching to should be already available in your Trusted Root Certificate Store. Check for Baltimore CyberDigiCert GlobalRoot G2 and validate it is present.
 
-If your client driver utilizes local file certificate store, to avoid your application’s availability being interrupted due to certificates being unexpectedly revoked, or to update a certificate, which has been revoked, refer to the [**What do I need to do to maintain connectivity**](./ssl-root-certificate-expiring.md#what-do-i-need-to-do-to-maintain-connectivity) section.
+If your client driver utilizes local file certificate store, to avoid your application's availability being interrupted due to certificates being unexpectedly revoked, or to update a certificate, which has been revoked, refer to the [**What do I need to do to maintain connectivity**](./ssl-root-certificate-expiring.md#what-do-i-need-to-do-to-maintain-connectivity) section.
 
 ## What do I need to do to maintain connectivity
 
-To avoid your application’s availability being interrupted due to certificates being unexpectedly revoked, or to update a certificate, which has been revoked, follow the steps below:
+To avoid your application's availability being interrupted due to certificates being unexpectedly revoked, or to update a certificate, which has been revoked, follow the steps below:
 
 *   Download Baltimore CyberTrust Root & DigiCert GlobalRoot G2 Root CA from links below:
     *   https://www.digicert.com/CACerts/BaltimoreCyberTrustRoot.crt.pem
@@ -43,7 +43,7 @@ To avoid your application’s availability being interrupted due to certificates
 *   Generate a combined CA certificate store with both **BaltimoreCyberTrustRoot** and **DigiCertGlobalRootG2** certificates are included.
 
 ## What can be the impact?
-If you are validating server certificates as documented here, your application’s availability might be interrupted since the database will not be reachable. Depending on your application, you may receive a variety of error messages including but not limited to:
+If you are validating server certificates as documented here, your application's availability might be interrupted since the database will not be reachable. Depending on your application, you may receive a variety of error messages including but not limited to:
 *	Invalid certificate/revoked certificate
 *	Connection timed out
 *	Error if applicable

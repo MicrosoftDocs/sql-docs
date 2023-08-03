@@ -1,14 +1,14 @@
 ---
 title: "SQL Server security best practices"
 description: This topic provides general guidance for securing SQL Server running in an Azure virtual machine.
-ms.custom: ""
-ms.date: "03/04/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+author: dplessMSFT
+ms.author: dpless
 ms.reviewer: "rohitna"
-ms.technology: security
+ms.date: "03/04/2022"
+ms.service: sql
+ms.subservice: security
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "logins [SQL Server], passwords"
   - "passwords [SQL Server], strong"
   - "symbols [SQL Server]"
@@ -16,13 +16,10 @@ helpviewer_keywords:
   - "passwords [SQL Server], symbols"
   - "characters [SQL Server], password policies"
   - "strong passwords [SQL Server]"
-ms.assetid: 338548f4-c4d8-47ca-b597-5c9c0f2fa205
-author: dplessMSFT
-ms.author: dpless
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server security best practices
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This article provides information about best practices and guidelines that help establish security for SQL Server. For a comprehensive review of SQL Server security features, see [Securing SQL Server](securing-sql-server.md). 
 
@@ -37,7 +34,7 @@ Azure complies with several industry regulations and standards that can enable y
 
 ## Column-level protection
 
-Organizations often need to protect data at the column level as data regarding customers, employees, trade secrets, product data, healthcare, financial, and other sensitive data is often stored in SQL Server databases. Sensitive columns often include national identification/social security numbers, mobile phone numbers, first name, family name, financial account identification, and any other data that could be deemed personally identifiable information (PII). 
+Organizations often need to protect data at the column level as data regarding customers, employees, trade secrets, product data, healthcare, financial, and other sensitive data is often stored in SQL Server databases. Sensitive columns often include identification/social security numbers, mobile phone numbers, first name, family name, financial account identification, and any other data that could be deemed personally identifiable information (PII). 
 
 The methods and features mentioned in this section raise the level of protection at the column level with minimal overhead, and without requiring extensive changes to application code. 
 

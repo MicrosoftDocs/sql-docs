@@ -4,8 +4,8 @@ description: "setCharacterStream Method (int, java.io.Reader)"
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: reference
 ---
 # setCharacterStream Method (int, java.io.Reader)
@@ -14,7 +14,7 @@ ms.topic: reference
   Sets the designated parameter to the specified java.io.Reader object.  
   
 > [!NOTE]
->  This feature is introduced starting with the [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver version 2.0.  
+>  This feature is introduced starting with the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver version 2.0.  
   
 ## Syntax  
   

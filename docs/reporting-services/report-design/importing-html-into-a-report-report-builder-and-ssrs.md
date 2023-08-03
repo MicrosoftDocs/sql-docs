@@ -1,15 +1,13 @@
 ---
-title: "Importing HTML into a paginated report | Microsoft Docs"
-ms.date: 12/06/2018
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
+title: "Importing HTML into a paginated report"
 description: Learn about using a text box to insert HTML-formatted text that you have retrieved from a field in your dataset into a paginated report.
-ms.custom: seodec18
-ms.topic: conceptual
-ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 12/06/2018
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Importing HTML into a paginated report (Report Builder)
 

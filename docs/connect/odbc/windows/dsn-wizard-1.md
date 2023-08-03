@@ -4,8 +4,8 @@ description: Learn how to define name and description in the Data Source Wizard 
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "09/27/2017"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Data Source Wizard Screen 1

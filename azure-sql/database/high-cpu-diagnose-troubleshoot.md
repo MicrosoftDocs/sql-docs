@@ -23,15 +23,15 @@ It's helpful to understand the number of virtual cores (vCores) available to you
 
 ### Identify vCore count in the Azure portal
 
-You can quickly identify the vCore count for a database in the Azure portal if you're using a [vCore-based service tier](service-tiers-vcore.md) with the provisioned compute tier. In this case, the **pricing tier** listed for the database on its **Overview** page will contain the vCore count. For example, a database's pricing tier might be 'General Purpose: Gen5, 16 vCores'. 
+You can quickly identify the vCore count for a database in the Azure portal if you're using a [vCore-based service tier](service-tiers-vcore.md) with the provisioned compute tier. In this case, the **pricing tier** listed for the database on its **Overview** page will contain the vCore count. For example, a database's pricing tier might be 'General Purpose: Standard-series (Gen5), 16 vCores'. 
 
-For databases in the [serverless](serverless-tier-overview.md) compute tier, vCore count will always be equivalent to the max vCore setting for the database. VCore count will show in the **pricing tier** listed for the database on its **Overview** page. For example, a database's pricing tier might be 'General Purpose: Serverless, Gen5, 16 vCores'.
+For databases in the [serverless](serverless-tier-overview.md) compute tier, vCore count will always be equivalent to the max vCore setting for the database. VCore count will show in the **pricing tier** listed for the database on its **Overview** page. For example, a database's pricing tier might be 'General Purpose: Serverless, standard-series (Gen5), 16 vCores'.
 
 If you're using a database under the [DTU-based purchasing model](service-tiers-dtu.md), you will need to use Transact-SQL to query the database's vCore count.
 
 ### Identify vCore count with Transact-SQL
 
-You can identify the current vCore count for any database with Transact-SQL. You can run Transact-SQL against Azure SQL Database with [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms), [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio), or [the Azure portal's query editor (preview)](connect-query-portal.md).
+You can identify the current vCore count for any database with Transact-SQL. You can run Transact-SQL against Azure SQL Database with [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms), [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio), or [the Azure portal's query editor (preview)](query-editor.md).
 
 Connect to your database and run the following query:
 
@@ -43,8 +43,7 @@ WHERE status = N'VISIBLE ONLINE';
 GO
 ```
 
-> [!NOTE]
-> For databases using Gen4 hardware, the number of visible online schedulers in `sys.dm_os_schedulers` may be double the number of vCores specified at database creation and shown in Azure portal.
+- For databases using retired Gen4 hardware, the number of visible online schedulers in `sys.dm_os_schedulers` may be double the number of vCores specified at database creation and shown in Azure portal.
 
 ## Identify the causes of high CPU
 You can measure and analyze CPU utilization using the Azure portal, Query Store interactive tools in SSMS, and Transact-SQL queries in SSMS and Azure Data Studio.
@@ -113,7 +112,7 @@ The page will show the execution plan(s) and related metrics for the query over 
 
 Transact-SQL allows you to identify currently running queries with CPU time they have used so far. You can also use Transact-SQL to query recent CPU usage in your database, top queries by CPU, and queries that compiled the most often.
 
-You can query CPU metrics with [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms), [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio), or [the Azure portal's query editor (preview)](connect-query-portal.md). When using SSMS or Azure Data Studio, open a new query window and connect it to your database (not the master database).
+You can query CPU metrics with [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms), [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio), or [the Azure portal's query editor (preview)](query-editor.md). When using SSMS or Azure Data Studio, open a new query window and connect it to your database (not the `master` database).
 
 Find currently running queries with CPU usage and execution plans by executing the following query. CPU time is returned in milliseconds.
 

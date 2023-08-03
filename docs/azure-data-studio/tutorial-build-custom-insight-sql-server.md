@@ -5,9 +5,9 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu
 ms.date: 08/26/2020
-ms.prod: azure-data-studio
+ms.service: azure-data-studio
 ms.topic: tutorial
-ms.custom: seodec18
+ms.custom: updatefrequency5
 ---
 
 # Tutorial: Build a custom insight widget

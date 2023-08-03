@@ -1,14 +1,14 @@
 ---
-title: "Filter, group, and sort data in paginated reports | Microsoft Docs"
-description: Learn about ways to control, organize, and sort paginated report data with expressions based on dataset fields, parameters in the Report Data pane of Report Builder. 
+title: "Filter, group, and sort data in paginated reports"
+description: Learn about ways to control, organize, and sort paginated report data with expressions based on dataset fields, parameters in the Report Data pane of Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 08/27/2021
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
+ms.service: reporting-services
+ms.subservice: report-design
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: updatefrequency5
+f1_keywords:
   - "sql13.rtp.rptdesigner.categorygroupproperties.general.f1"
   - "10403"
   - "sql13.rtp.rptdesigner.categorygroupproperties.sorting.f1"
@@ -17,9 +17,6 @@ f1_keywords:
   - "10410"
   - "sql13.rtp.rptdesigner.seriesgroupproperties.sorting.f1"
   - "10412"
-ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Filter, group, and sort data in paginated reports (Report Builder)
 

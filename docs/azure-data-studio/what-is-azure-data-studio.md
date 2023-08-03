@@ -5,12 +5,9 @@ author: "markingmyname"
 ms.author: "maghan"
 ms.reviewer: erinstellato
 ms.date: 7/11/2022
-ms.prod: azure-data-studio
+ms.service: azure-data-studio
 ms.topic: "overview"
-ms.custom:
-  - seodec18
-  - sqlfreshmay19
-  - intro-overview
+ms.custom: intro-overview
 ---
 
 # What is Azure Data Studio?

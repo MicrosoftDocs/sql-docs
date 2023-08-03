@@ -1,17 +1,17 @@
 ---
-title: "Suppress recovery model errors - server configuration option"
-description: "Suppress recovery model errors - server configuration option"
+title: "Suppress recovery model errors (server configuration option)"
+description: "Suppress recovery model errors"
 author: MladjoA
 ms.author: mlandzic
 ms.date: "07/20/2020"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 ---
 
-# Suppress recovery model errors server configuration option
+# Suppress recovery model errors (server configuration option)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdbmi-xxxx-xxx-md.md](../../includes/tsql-appliesto-xxxxxx-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[_asmi](../../includes/applies-to-version/asmi.md)]
 
 SQL Server [recovery models](../../relational-databases/backup-restore/recovery-models-sql-server.md) control transaction log maintenance. Full recovery model ensures no work is lost because of a lost or damaged data file, and supports recovery to an arbitrary point in time within backup retention policy. Full recovery model is a default and the only recovery model supported in SQL Managed Instance. Attempts to change recovery model in SQL Managed Instance will return error message.
 

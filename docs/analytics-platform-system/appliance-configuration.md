@@ -5,10 +5,9 @@ author: charlesfeddersen
 ms.author: charlesf
 ms.reviewer: martinle
 ms.date: 04/17/2018
-ms.prod: sql
-ms.technology: data-warehouse
+ms.service: sql
+ms.subservice: data-warehouse
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 ---
 
 # Appliance configuration checklists for Analytics Platform System
@@ -67,7 +66,7 @@ After performing the **Configuration Manager** tasks, perform the following list
 |Third-party antivirus software can be installed and configured on the SQL Server PDW appliance for externally facing nodes.<br /><br />(Optional)|For more information, see [Antivirus Software &#40;Analytics Platform System&#41;](antivirus-software.md).|  
 |The password for DSRM can be changed.<br /><br />(Optional)|For more information, see [Set Admin Password for Logging on to AD Nodes in Directory Services Restore Mode &#40;DSRM&#41; &#40;Analytics Platform System&#41;](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md).|  
 |Configure the appliance to receive software updates<br /><br />(Recommended)|The appliance needs to be configured to receive updates to the SQL Server PDW and underlying software.<br /><br />For more information, see [Configure Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md). For information about WSUS, see [Software Servicing &#40;Analytics Platform System&#41;](software-servicing.md).|  
-|Configure connectivity to external data such as Hadoop or Azure blob storage.<br /><br />(Optional)|For more information, see [Configure PolyBase Connectivity to External Data &#40;Analytics Platform System&#41;](configure-polybase-connectivity-to-external-data.md).|  
+|Configure connectivity to external data such as Hadoop or Azure Blob Storage.<br /><br />(Optional)|For more information, see [Configure PolyBase Connectivity to External Data &#40;Analytics Platform System&#41;](configure-polybase-connectivity-to-external-data.md).|  
 |Configure Antivirus Software<br /><br />(Optional)|Third-party antivirus solutions can be used to protect externally facing nodes but is not required. Follow the guidelines in.|  
 |Configure InfiniBand Network Adapters on Backup and Loading Servers<br /><br />(Optional)|To configure Backup and Loading servers to connect to SQL Server PDW by using the InfiniBand network, you need to configure the network adapters to allow the appliance DNS to resolve the InfiniBand connection to the currently active InfiniBand network.|  
 |Configure to send telemetry data to Microsoft<br /><br />(Optional)|To configure Analytics Platform System to send telemetry data to Microsoft, you need to run a PowerShell script on the Control node. For specific instructions, see [Send Telemetry Feedback to Microsoft &#40;SQL Server PDW&#41;](send-telemetry-feedback-to-microsoft-sql-server-pdw.md).|  

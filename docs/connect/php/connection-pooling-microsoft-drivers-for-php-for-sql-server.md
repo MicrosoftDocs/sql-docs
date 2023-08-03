@@ -4,8 +4,8 @@ description: "Learn the details of connection pooling when using the Microsoft D
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "08/01/2020"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
   - "connection pooling support"

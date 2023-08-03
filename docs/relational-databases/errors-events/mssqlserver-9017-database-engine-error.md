@@ -1,16 +1,14 @@
 ---
+title: "MSSQLSERVER_9017"
 description: "MSSQLSERVER_9017"
-title: "MSSQLSERVER_9017 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/18/2022"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "9017 (Database Engine error)"
 author: pijocoder
 ms.author: jopilov
+ms.date: "08/18/2022"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "9017 (Database Engine error)"
 ---
 # MSSQLSERVER_9017
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -20,7 +18,7 @@ ms.author: jopilov
 | Attribute | Value |  
 | :-------- | :---- |  
 |Product Name|SQL Server|  
-|Event ID|9004|  
+|Event ID|9017|  
 |Event Source|MSSQLSERVER|  
 |Component|SQLEngine|  
 |Symbolic Name|LOG_MANY_VLFS|  
@@ -51,7 +49,7 @@ This problem occurs when you specify small values for the FILEGROWTH parameter f
 The SQL Server Database Engine internally divides each physical log file into several virtual log files (VLFs). SQL Server 2008 R2 Service Pack 2 introduced a new message (9017) that is logged when a database starts (either because of the starting of an instance of SQL Server or because of the attaching or restoring of the database) and has more than 1,000 VLFs in SQL Server 2008 R2 or has more than 10,000 VLFS in SQL Server 2012 and later versions.
 
 >[!NOTE]
->In SQL Server 2012, although this message is logged when the database has 10,000 VLFs, the actual message that is reported in the error log incorrectly states "1000 VLF." The warning does occur after 10,000 VLFs. However, the message reports 1,000 VLFs. This issue is corrected in a later releases.
+>In SQL Server 2012, although this message is logged when the database has 10,000 VLFs, the actual message that is reported in the error log incorrectly states "1000 VLF." The warning does occur after 10,000 VLFs. However, the message reports 1,000 VLFs. This issue is corrected in later releases.
 
 ## User action
 

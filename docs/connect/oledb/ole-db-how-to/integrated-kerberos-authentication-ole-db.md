@@ -4,8 +4,8 @@ description: Learn how to get mutual Kerberos authentication by using OLE DB in 
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "02/18/2022"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 ---
 # Integrated Kerberos Authentication (OLE DB)
@@ -13,12 +13,12 @@ ms.topic: "reference"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  This sample shows how to get mutual Kerberos authentication by using OLE DB in OLE DB Driver for SQL Server. This sample works with [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] or later.  
+  This sample shows how to get mutual Kerberos authentication by using OLE DB in OLE DB Driver for SQL Server. This sample works with [!INCLUDE[sql2008-md](../../../includes/sql2008-md.md)] and later versions.  
   
  For more information about SPNs and Kerberos authentication, see [Service Principal Name &#40;SPN&#41; Support in Client Connections](../../oledb/features/service-principal-name-spn-support-in-client-connections.md).  
   
 ## Example  
- You must specify a server. In the .cpp file, change "MyServer" to a machine name that has an instance of [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (or later).  
+ You must specify a server. In the .cpp file, change "MyServer" to a machine name that has an instance of [!INCLUDE[sql2008-md](../../../includes/sql2008-md.md)] and later versions.  
   
  You will also have to specify a customer-provided SPN. In the .cpp file, change "CPSPN" to a customer-provided SPN.  
   

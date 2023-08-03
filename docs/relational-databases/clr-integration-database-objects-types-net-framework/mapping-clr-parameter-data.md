@@ -4,8 +4,8 @@ description: This article lists Microsoft SQL Server data types, equivalents in 
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "08/01/2016"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 helpviewer_keywords:
   - "SqlBinary data type"
@@ -23,7 +23,6 @@ helpviewer_keywords:
   - "mapping data types [CLR integration]"
   - "SqlChars data type"
   - "SqlInt32 data type"
-ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
 ---
 # Mapping CLR Parameter Data
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

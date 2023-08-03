@@ -5,10 +5,9 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: wiassaf
 ms.date: 08/01/2022
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
-ms.custom: contperf-fy20q4
 helpviewer_keywords:
   - "Virtual Memory Manager"
   - "max server memory option"

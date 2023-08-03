@@ -1,19 +1,16 @@
 ---
-title: "Associate a Query Parameter with a Report Parameter (Report Builder) | Microsoft Docs"
+title: "Associate a Query Parameter with a Report Parameter (Report Builder)"
 description: Learn uses for Reporting Services report parameters, the properties you can set, and how to associate a dataset query parameter with a report parameter.
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-data
-
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "queries [Reporting Services], parameters"
-  - "parameters [Reporting Services], queries"
-ms.assetid: 6d297e1a-ff71-472a-addc-349e863092b5
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: report-data
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "queries [Reporting Services], parameters"
+  - "parameters [Reporting Services], queries"
 ---
 # Associate a Query Parameter with a Report Parameter (Report Builder and SSRS)
   When you define a dataset query that contains a query variable, the query command is parsed. For each query variable, a corresponding dataset parameter and report parameter are created. The dataset parameter points to the report parameter. This enables a user to enter a value that passes directly to the query. Each time you edit the query command, the same process takes place.  

@@ -4,9 +4,8 @@ description: sysssispackagefolders (Transact-SQL)
 author: lrtoyou1223
 ms.author: lle
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sysdtspackagefolders90"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "sysssispackagefolders system table"
 dev_langs:
   - "TSQL"
-ms.assetid: ddc4833f-27bf-4610-b739-d257961d17ac
 ---
 # sysssispackagefolders (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

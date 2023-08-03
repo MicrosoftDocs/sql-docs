@@ -1,14 +1,14 @@
 ---
-title: "Building Applications Using the Web Service and the .NET Framework | Microsoft Docs"
+title: "Building Applications Using the Web Service and the .NET Framework"
 description: A Report Server Web service client communicates with a report server by SOAP. Use the .NET Framework to create Web service clients to work with any Web service.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/16/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server-web-service
-
-
+ms.service: reporting-services
+ms.subservice: report-server-web-service
 ms.topic: reference
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "Report Server Web service, application building"
   - ".NET Framework [Reporting Services]"
   - "XML Web service [Reporting Services], client creation"
@@ -18,9 +18,6 @@ helpviewer_keywords:
   - "client configuration [Reporting Services]"
   - "XML Web service [Reporting Services], application building"
   - "Web service [Reporting Services], client creation"
-ms.assetid: 92a9678c-bc4f-4d7a-ba44-85989bfe27ca
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Building Applications Using the Web Service and the .NET Framework
   With the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], you can use familiar programming constructs, such as methods, primitive types, and user-defined complex types to work with Web services. The [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] contains an infrastructure and tools you can use to create Web service clients that can call any World Wide Web Consortium (W3C) standards-compliant Web service.  

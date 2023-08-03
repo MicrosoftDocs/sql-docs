@@ -1,19 +1,16 @@
 ---
-title: "Dataset Properties Dialog Box, Query (Report Builder) | Microsoft Docs"
+title: "Dataset Properties Dialog Box, Query (Report Builder)"
 description: Learn how to use Query on the Dataset Properties dialog box in the Report Builder to choose a shared dataset from a report server or to create an embedded dataset.
-ms.date: 08/17/2018
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-data
-
-
-ms.topic: reference
-f1_keywords: 
-  - "10024"
-  - "sql13.rtp.rptdesigner.datasetproperties.query.f1"
-ms.assetid: 75432318-0b00-4797-917c-0a2e74f9d951
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 08/17/2018
+ms.service: reporting-services
+ms.subservice: report-data
+ms.topic: reference
+ms.custom: updatefrequency5
+f1_keywords:
+  - "10024"
+  - "sql13.rtp.rptdesigner.datasetproperties.query.f1"
 ---
 # Dataset Properties Dialog Box, Query (Report Builder)
  

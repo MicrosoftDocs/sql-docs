@@ -1,14 +1,13 @@
 ---
+title: "Developing a Custom Connection Manager"
 description: "Developing a Custom Connection Manager"
-title: "Developing a Custom Connection Manager | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "packages [Integration Services], connections"
   - "custom connection managers [Integration Services], about custom connection managers"
   - "connection managers [Integration Services], custom"
@@ -16,9 +15,6 @@ helpviewer_keywords:
   - "SSIS packages, connection managers"
   - "SQL Server Integration Services packages, connection managers"
   - "custom connection managers [Integration Services]"
-ms.assetid: bda0b29e-57f5-4879-b04d-1396dc56daa8
-author: chugugrace
-ms.author: chugu
 ---
 # Developing a Custom Connection Manager
 

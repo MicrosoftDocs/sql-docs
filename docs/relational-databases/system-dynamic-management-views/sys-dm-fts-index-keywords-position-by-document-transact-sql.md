@@ -4,8 +4,8 @@ description: sys.dm_fts_index_keywords_position_by_document (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_fts_index_keywords_position_by_document_TSQL"
@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_fts_index_keywords_position_by_document dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 0d70184f-baa2-411b-a32d-a4c5af890edd
 ---
 # sys.dm_fts_index_keywords_position_by_document (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,16 +1,13 @@
 ---
-title: "Add empty points to a chart in a paginated report | Microsoft Docs"
-description: Specify empty points on a chart in a paginated report. These points are calculated in Report Builder by taking the average of the previous and next data points that contain a value. 
-ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: 2b056119-439f-494f-83cf-ee0c05dc6487
+title: "Add empty points to a chart in a paginated report"
+description: Specify empty points on a chart in a paginated report. These points are calculated in Report Builder by taking the average of the previous and next data points that contain a value.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/07/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Add empty points to a chart in a paginated report (Report Builder)
 

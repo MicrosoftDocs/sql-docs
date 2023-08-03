@@ -9,11 +9,7 @@ ms.date: 09/14/2022
 ms.service: sql-database
 ms.subservice: backup-restore
 ms.topic: conceptual
-ms.custom:
-  - "references_regions"
-  - "devx-track-azurepowershell"
-  - "devx-track-azurecli"
-  - "azure-sql-split"
+ms.custom: references_regions, azure-sql-split
 monikerRange: "= azuresql || = azuresql-db"
 ---
 # Automated backups in Azure SQL Database
@@ -54,7 +50,7 @@ The Hyperscale architecture does not require full, differential, or log backups.
 
 ## Backup storage redundancy
 
-By default, Azure SQL Database stores data in geo-redundant [storage blobs](/azure/storage/common/storage-redundancy) that are replicated to a [paired region](/azure/availability-zones/cross-region-replication-azure). Geo-redundancy helps protect against outages that affect backup storage in the primary region. It also allows you to restore your databases in a different region in the event of a regional outage. 
+By default, Azure SQL Database stores backups in geo-redundant [storage blobs](/azure/storage/common/storage-redundancy) that are replicated to a [paired region](/azure/availability-zones/cross-region-replication-azure). Geo-redundancy helps protect against outages that affect backup storage in the primary region. It also allows you to restore your databases in a different region in the event of a regional outage. 
 
 The storage redundancy mechanism stores multiple copies of your data so that it's protected from planned and unplanned events. These events might include transient hardware failure, network or power outages, or massive natural disasters. 
 
@@ -158,7 +154,7 @@ Hyperscale databases use a different backup scheduling mechanism. For more infor
 
 Backups that are no longer needed to provide PITR functionality are automatically deleted. Because differential backups and log backups require an earlier full backup to be restorable, all three backup types are purged together in weekly sets.
 
-For all databases, including [TDE-encrypted](transparent-data-encryption-tde-overview.md) databases, backups are compressed to reduce backup storage compression and costs. Average backup compression ratio is 3 to 4 times. However, it can be significantly lower or higher depending on the nature of the data and whether data compression is used in the database.
+For all databases, including [TDE-encrypted](transparent-data-encryption-tde-overview.md) databases, backups are compressed to reduce backup storage consumption and costs. Average backup compression ratio is 3 to 4 times. However, it can be significantly lower or higher depending on the nature of the data and whether data compression is used in the database.
 
 Azure SQL Database computes your total used backup storage as a cumulative value. Every hour, this value is reported to the Azure billing pipeline. The pipeline is responsible for aggregating this hourly usage to calculate your consumption at the end of each month. After the database is deleted, consumption decreases as backups age out and are deleted. After all backups are deleted and PITR is no longer possible, billing stops.
    
@@ -181,7 +177,7 @@ Backup storage consumption up to the maximum data size for a database is not cha
 - Avoid doing large write operations, like index rebuilds, more often than you need to.
 - For large data load operations, consider using [clustered columnstore indexes](/sql/relational-databases/indexes/columnstore-indexes-overview) and following related [best practices](/sql/relational-databases/indexes/columnstore-indexes-data-loading-guidance). Also consider reducing the number of non-clustered indexes.
 - In the General Purpose service tier, the provisioned data storage is less expensive than the price of the backup storage. If you have continually high excess backup storage costs, you might consider increasing data storage to save on the backup storage.
-- Use TempDB instead of permanent tables in your application logic for storing temporary results or transient data.
+- Use `tempdb` instead of permanent tables in your application logic for storing temporary results or transient data.
 - Use locally redundant backup storage whenever possible (for example, dev/test environments).
 
 ## Backup retention
@@ -232,7 +228,10 @@ For pricing, see the [Azure SQL Database pricing](https://azure.microsoft.com/pr
 
 ### DTU model
 
-In the DTU model, there's no additional charge for backup storage for databases and elastic pools. The price of backup storage is a part of the database or pool price.
+In the DTU model, for databases and elastic pools there's no additional charge for PITR backup storage for default retention of 7 days and beyond. The price of PITR backup storage is a part of the database or pool price.
+
+> [!IMPORTANT]
+> In the DTU model, databases and elastic pools are charged for the [LTR backup](long-term-retention-overview.md) storage based on the actual storage consumed by LTR backups. 
 
 ### vCore model
 

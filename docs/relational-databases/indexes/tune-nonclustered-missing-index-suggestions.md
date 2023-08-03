@@ -4,11 +4,9 @@ description: How to use missing index suggestions to create and tune nonclustere
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 3/15/2022
-ms.prod: sql
-ms.service:
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.topic: how-to
-ms.custom: "template-how-to #Required; leave this attribute/value as-is."
+ms.custom: template-how-to
 ---
 
 # Tune nonclustered indexes with missing index suggestions
@@ -77,7 +75,7 @@ To generate and view the missing index requests:
 
 1. Right-click on the execution plan and select **Show Execution Plan XML...** from the menu.
     
-    :::image type="content" source="media/missing-index-graphic-execution-plan-show-xml.png" alt-text="Screenshot showing the menu that appears after right clicking on an execution plan.":::
+    :::image type="content" source="media/missing-index-graphic-execution-plan-show-xml.png" alt-text="Screenshot showing the menu that appears after right-clicking on an execution plan.":::
     
     The execution plan XML will open as a new tab inside SSMS.
 

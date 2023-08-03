@@ -4,14 +4,11 @@ titleSuffix: Azure SQL Database and Azure SQL Managed Instance
 description: sys.dm_xe_database_session_events (Azure SQL Database and Azure SQL Managed Instance)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "4/18/2022"
+ms.date: "11/28/2022"
 ms.service: sql-database
-ms.prod_service: "sql-database"
 ms.topic: "reference"
-ms.custom: seo-lt-2019
 dev_langs:
   - "TSQL"
-ms.assetid: 9e985a19-f93f-4c56-b644-12c529298011
 monikerRange: "=azuresqldb-current"
 ---
 # sys.dm_xe_database_session_events (Azure SQL Database and Azure SQL Managed Instance)
@@ -27,6 +24,10 @@ Azure SQL Database supports only [database-scoped sessions](/azure/azure-sql/dat
 |event_name|**nvarchar(60)**|The name of the event that an action is bound to. Is not nullable.|  
 |event_package_guid|**uniqueidentifier**|The GUID for the package containing the event. Is not nullable.|  
 |event_predicate|**nvarchar(2048)**|An XML representation of the predicate tree that is applied to the event. Is nullable.|  
+|event_fire_count|**bigint**|Internal use only.|  
+|event_fire_average_time|**bigint**|Internal use only.|  
+|event_fire_min_time|**bigint**|The minimum time taken to publish the event, in microseconds. Is not nullable.|  
+|event_fire_max_time|**bigint**|The maximum time taken to publish the event, in microseconds. Is not nullable.|  
   
 ## Permissions  
 

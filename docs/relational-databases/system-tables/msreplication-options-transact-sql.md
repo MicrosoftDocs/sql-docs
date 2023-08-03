@@ -4,9 +4,8 @@ description: MSreplication_options (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "MSreplication_options"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "MSreplication_options system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 23cf10d7-8bc1-4368-b5eb-e5576421e776
 ---
 # MSreplication_options (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

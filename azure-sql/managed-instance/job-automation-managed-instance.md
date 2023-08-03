@@ -169,7 +169,7 @@ For more information, see [View SQL Agent job history](/sql/ssms/agent/view-the-
 
 ## Fixed database role membership
 
-If users linked to non-sysadmin logins are added to any of the three SQL Agent fixed database roles in the `msdb` system database, there exists an issue in which explicit EXECUTE permissions need to be granted to three system stored procedures in the master database. If this issue is encountered, the error message "The EXECUTE permission was denied on the object <object_name> (Microsoft SQL Server, Error: 229)" will be shown. 
+If users linked to non-sysadmin logins are added to any of the three SQL Agent fixed database roles in the `msdb` system database, there exists an issue in which explicit EXECUTE permissions need to be granted to three system stored procedures in the `master` database. If this issue is encountered, the error message `The EXECUTE permission was denied on the object <object_name> (Microsoft SQL Server, Error: 229)` will be shown. 
 
 Once you add users to a SQL Agent fixed database role (SQLAgentUserRole, SQLAgentReaderRole, or SQLAgentOperatorRole) in `msdb`, for each of the user's logins added to these roles, execute the below T-SQL script to explicitly grant EXECUTE permissions to the system stored procedures listed. This example assumes that the user name and login name are the same:
 

@@ -1,20 +1,17 @@
 ---
+title: "Role definitions - predefined roles"
 description: "Role definitions - predefined roles"
-title: "Role definitions - predefined roles | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 02/04/2021
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: security
-
-
+ms.service: reporting-services
+ms.subservice: security
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "security [Reporting Services], defaults"
   - "default security"
   - "role-based security [Reporting Services], defaults"
-ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Role definitions - predefined roles
 

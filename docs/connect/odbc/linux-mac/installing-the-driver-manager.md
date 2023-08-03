@@ -4,8 +4,8 @@ description: "This article contains instructions to install the unixODBC Driver 
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "02/15/2022"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ms.custom: intro-installation
 helpviewer_keywords:
@@ -38,7 +38,7 @@ To install the driver manager:
   
 1.  Make sure that you have root permission.  
   
-2.  Go to the directory where the [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC Driver download placed the file called `msodbcsql-11.0.2270.0.tar.gz`. Make sure that you have the \*.tar.gz file that matches your version of Linux. To extract the files, execute the following command: **tar xvzf msodbcsql-11.0.2270.0.tar.gz**.  
+2.  Go to the directory where the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC Driver download placed the file called `msodbcsql-11.0.2270.0.tar.gz`. Make sure that you have the \*.tar.gz file that matches your version of Linux. To extract the files, execute the following command: **tar xvzf msodbcsql-11.0.2270.0.tar.gz**.  
 
 3.  Change to the `msodbcsql-11.0.2270.0` directory and there you should see a file called `build_dm.sh`. You can run `build_dm.sh` to install the unixODBC Driver Manager.
 

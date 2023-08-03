@@ -3,21 +3,25 @@ title: System requirements
 description: Find the system requirements for the JDBC driver. Including what Java, operation system, and database versions are supported.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 08/08/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.date: 07/31/2023
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # System requirements for the JDBC driver
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  To use the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] to access data from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], you must have the following components installed on your computer:
+  To use the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] to access data from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], you must have the following components installed on your computer:
 
 - [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ([download](download-microsoft-jdbc-driver-for-sql-server.md))
 - Java Runtime Environment
 
 ## Java Runtime Environment requirements  
+
+ As of Microsoft JDBC Driver 12.4 for SQL Server, Java Development Kit (JDK) 20.0 and Java Runtime Environment (JRE) 20.0 are supported.
+ 
+ As of Microsoft JDBC Driver 12.2 for SQL Server, Java Development Kit (JDK) 19.0 and Java Runtime Environment (JRE) 19.0 are supported.
 
  As of Microsoft JDBC Driver 11.2 for SQL Server, Java Development Kit (JDK) 18.0 and Java Runtime Environment (JRE) 18.0 are supported.
 
@@ -47,13 +51,59 @@ ms.topic: conceptual
   
  When you deploy the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] on Windows and UNIX operating systems, you must use the installation packages, *sqljdbc_\<version>_enu.exe*, and *sqljdbc_\<version>_enu.tar.gz*, respectively. For more information about how to deploy the JDBC driver, see [Deploying the JDBC driver](deploying-the-jdbc-driver.md) article. 
 
+ **Microsoft JDBC Driver 12.4 for SQL Server:**
+
+ The JDBC Driver 12.4 includes two JAR class libraries in each installation package: **mssql-jdbc-12.4.0.jre8.jar** and **mssql-jdbc-12.4.0.jre11.jar**.
+
+ The JDBC Driver 12.4 is designed to work with, and supports all major Java virtual machines, but is tested only on OpenJDK 1.8, OpenJDK 11.0, OpenJDK 17.0, OpenJDK 20.0, Azul Zulu JRE 1.8, Azul Zulu JRE 11.0, and Azul Zulu JRE 17.0.
+
+ The following chart summarizes support provided by the two JAR files included with Microsoft JDBC Drivers 12.4 for SQL Server:
+
+ |JAR|JDBC Version Compliance|Recommended Java Version|Description|  
+|---------|-----------------------------|----------------------|-----------------|  
+|mssql-jdbc-12.4.0.jre8.jar|4.2|8|Requires a Java Runtime Environment (JRE) 1.8. Using JRE 1.7 or lower throws an exception. |
+|mssql-jdbc-12.4.0.jre11.jar|4.3|20|Requires a Java Runtime Environment (JRE) 11.0 or higher. Using JRE 10.0 or lower throws an exception. |
+
+ The JDBC Driver 12.4 is available on the Maven Central Repository, and can be added to a Maven project with the following code in the POM.XML:
+
+ ```xml
+<dependency>
+    <groupId>com.microsoft.sqlserver</groupId>
+    <artifactId>mssql-jdbc</artifactId>
+    <version>12.4.0.jre11</version>
+</dependency> 
+```
+
+ **Microsoft JDBC Driver 12.2 for SQL Server:**  
+
+  The JDBC Driver 12.2 includes two JAR class libraries in each installation package: **mssql-jdbc-12.2.0.jre8.jar** and **mssql-jdbc-12.2.0.jre11.jar**.
+
+  The JDBC Driver 12.2 is designed to work with, and supports all major Java virtual machines, but is tested only on OpenJDK 1.8, OpenJDK 11.0, OpenJDK 17.0, OpenJDK 19.0, Azul Zulu JRE 1.8, Azul Zulu JRE 11.0, and Azul Zulu JRE 17.0.
+  
+  The following chart summarizes support provided by the two JAR files included with Microsoft JDBC Drivers 12.2 for SQL Server:  
+  
+   |JAR|JDBC Version Compliance|Recommended Java Version|Description|  
+ |---------|-----------------------------|----------------------|-----------------|  
+ |mssql-jdbc-12.2.0.jre8.jar|4.2|8|Requires a Java Runtime Environment (JRE) 1.8. Using JRE 1.7 or lower throws an exception. |
+ |mssql-jdbc-12.2.0.jre11.jar|4.3|19|Requires a Java Runtime Environment (JRE) 11.0 or higher. Using JRE 10.0 or lower throws an exception. |
+ 
+  The JDBC Driver 12.2 is available on the Maven Central Repository, and can be added to a Maven project with the following code in the POM.XML:  
+  
+ ```xml
+<dependency>
+    <groupId>com.microsoft.sqlserver</groupId>
+    <artifactId>mssql-jdbc</artifactId>
+    <version>12.2.0.jre11</version>
+</dependency> 
+```
+
  **Microsoft JDBC Driver 11.2 for SQL Server:**  
 
   The JDBC Driver 11.2 includes four JAR class libraries in each installation package: **mssql-jdbc-11.2.0.jre8.jar**, **mssql-jdbc-11.2.0.jre11.jar**, **mssql-jdbc-11.2.0.jre17.jar**, and **mssql-jdbc-11.2.0.jre18.jar**.
 
   The JDBC Driver 11.2 is designed to work with, and supports all major Java virtual machines, but is tested only on OpenJDK 1.8, OpenJDK 11.0, OpenJDK 17.0, OpenJDK 18.0, Azul Zulu JRE 1.8, Azul Zulu JRE 11.0, and Azul Zulu JRE 17.0.
   
-  The following chart summarizes support provided by the two JAR files included with Microsoft JDBC Drivers 11.2 for SQL Server:  
+  The following chart summarizes support provided by the four JAR files included with Microsoft JDBC Drivers 11.2 for SQL Server:  
   
   |JAR|JDBC Version Compliance|Recommended Java Version|Description|  
 |---------|-----------------------------|----------------------|-----------------|  
@@ -62,7 +112,7 @@ ms.topic: conceptual
 |mssql-jdbc-11.2.0.jre17.jar|4.3|17|Requires a Java Runtime Environment (JRE) 17.0. Using JRE 16.0 or lower throws an exception. |
 |mssql-jdbc-11.2.0.jre18.jar|4.3|18|Requires a Java Runtime Environment (JRE) 18.0. Using JRE 17.0 or lower throws an exception. |
 
-  The JDBC Driver 10.2 is available on the Maven Central Repository, and can be added to a Maven project with the following code in the POM.XML:  
+  The JDBC Driver 11.2 is available on the Maven Central Repository, and can be added to a Maven project with the following code in the POM.XML:  
   
  ```xml
 <dependency>
@@ -86,13 +136,13 @@ ms.topic: conceptual
 |mssql-jdbc-10.2.0.jre11.jar|4.3|11|Requires a Java Runtime Environment (JRE) 11.0. Using JRE 10.0 or lower throws an exception. |
 |mssql-jdbc-10.2.0.jre17.jar|4.3|17|Requires a Java Runtime Environment (JRE) 17.0. Using JRE 16.0 or lower throws an exception. |
 
-  The JDBC Driver 11.2 is available on the Maven Central Repository, and can be added to a Maven project with the following code in the POM.XML:  
+  The JDBC Driver 10.2 is available on the Maven Central Repository, and can be added to a Maven project with the following code in the POM.XML:  
   
  ```xml
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>11.2.0.jre11</version>
+    <version>10.2.0.jre11</version>
 </dependency>
 ```
 

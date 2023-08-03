@@ -4,11 +4,9 @@ description: Learn how the query optimizer uses statistics about columns in memo
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "10/23/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Statistics for Memory-Optimized Tables
@@ -22,7 +20,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
  Considerations for statistics on memory-optimized tables:  
   
--   Starting in SQL Server 2016 and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], automatic update of statistics is supported for memory-optimized tables, when using database compatibility level of at least 130. See [ALTER DATABASE Compatibility Level (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). If a database has tables that were previously created using a lower compatibility level, the statistics need to be updated manually once, to enable automatic update of statistics going forward.
+-   Starting in SQL Server 2016 and in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], automatic update of statistics is supported for memory-optimized tables, when using database compatibility level of at least 130. See [ALTER DATABASE Compatibility Level (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). If a database has tables that were previously created using a lower compatibility level, the statistics need to be updated manually once, to enable automatic update of statistics going forward.
   
 -   For natively compiled stored procedures, execution plans for queries in the procedure are optimized when the procedure is compiled, which happens at create time. They are not automatically recompiled when statistics are updated. Therefore, the tables should contain a representative set of data before the procedures are created.  
   

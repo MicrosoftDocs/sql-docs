@@ -1,19 +1,16 @@
 ---
-title: "Format a Reporting Services Script File | Microsoft Docs"
+title: "Format a Reporting Services Script File"
 description: Learn how to format a Reporting Services script file in Microsoft Visual Basic .NET that contains user-defined procedures and module-level variables.
-ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: tools
-
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "scripts [Reporting Services], formats"
-  - "formats [Reporting Services], script files"
-ms.assetid: 85a207dd-4e0f-4d40-a41e-0c75f65d719c
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/14/2017
+ms.service: reporting-services
+ms.subservice: tools
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "scripts [Reporting Services], formats"
+  - "formats [Reporting Services], script files"
 ---
 # Format a Reporting Services Script File
   A [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] script is a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET code file, written against a proxy that is built on Web Service Description Language (WSDL), which defines the Reporting Services SOAP API. A script file is stored as a Unicode or UTF-8 text file with the extension .rss.  

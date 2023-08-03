@@ -1,14 +1,13 @@
 ---
+title: "Logged vs. Unlogged Modifications"
 description: "Logged vs. Unlogged Modifications"
-title: "Logged vs. Unlogged Modifications | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
+ms.service: sql
+ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "text columns [ODBC]"
   - "SQL Server Native Client ODBC driver, image columns"
   - "SQL Server Native Client ODBC driver, text columns"
@@ -20,13 +19,10 @@ helpviewer_keywords:
   - "nonlogged vs. logged modifications"
   - "ODBC data types, text columns"
   - "image columns [ODBC]"
-ms.assetid: 20aa5b27-4a2c-46e7-8356-beb0eebf4b7e
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Logged vs. Unlogged Modifications
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   An application can request that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver not log **text**, **ntext**, and **image** modifications. Care should be used with this option, however. It should be used only for those situations where the **text**, **ntext**, or **image** data is not critical and data owners are willing to trade off the ability to recover data for higher performance.  
   

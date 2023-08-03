@@ -4,10 +4,9 @@ description: "The Always On availability groups health model evaluates a set of 
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: reference
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "Availability Groups [SQL Server], troubleshooting"
   - "Availability Groups [SQL Server], policies"

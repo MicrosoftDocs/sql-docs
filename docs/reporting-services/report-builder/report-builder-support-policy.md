@@ -1,14 +1,13 @@
 ---
-title: "Microsoft Report Builder support policy | Microsoft Docs"
+title: "Microsoft Report Builder support policy"
 description: Learn about the Microsoft Report Builder support policy.
-ms.date: 06/22/2022
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: tools
-ms.topic: conceptual
-ms.assetid: 
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 06/22/2022
+ms.service: reporting-services
+ms.subservice: tools
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Microsoft Report Builder support policy
 
@@ -26,7 +25,7 @@ For the best experience, we recommend that customers install the most recent ver
 
 ### Full Support servicing phase
 
-When you're running the latest current branch version of Microsoft Report Builder, you receive all updates: 
+When you're running the latest current branch version of Microsoft Report Builder, you receive all updates:
 
 - Security updates.
 - Critical updates.

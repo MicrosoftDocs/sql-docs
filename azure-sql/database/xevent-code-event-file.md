@@ -4,13 +4,13 @@ description: Provides PowerShell and Transact-SQL for a two-phase code sample th
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
-ms.date: 03/25/2022
+ms.date: 05/25/2023
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: sample
 ms.custom:
-  - "sqldbrb=1"
-  - "devx-track-azurepowershell"
+  - sqldbrb=1
+  - devx-track-azurepowershell
 ms.devlang: PowerShell
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
@@ -21,7 +21,8 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 
 You want a complete code sample for a robust way to capture and report information for an extended event.
 
-In Microsoft SQL Server, the [Event File target](/sql/relational-databases/extended-events/targets-for-extended-events-in-sql-server) is used to store event outputs into a local hard drive file. But local storage is not available to Azure SQL Database or SQL Managed Instance. Instead, use Azure Blob Storage to support the Event File target.
+- In Microsoft SQL Server, the [Event File target](/sql/relational-databases/extended-events/targets-for-extended-events-in-sql-server) is used to store event outputs into a locally-stored `.xel` file. 
+- Since local storage is not available to Azure SQL Database or SQL Managed Instance, use Azure Blob Storage to support the Event File target.
 
 This article presents a two-phase code sample:
 
@@ -35,18 +36,18 @@ This article presents a two-phase code sample:
 [!INCLUDE [updated-for-az](../includes/updated-for-az.md)]
 
 > [!IMPORTANT]
-> The PowerShell Azure Resource Manager module is still supported by Azure SQL Database, but all future development is for the Az.Sql module. For these cmdlets, see [AzureRM.Sql](/powershell/module/AzureRM.Sql/). The arguments for the commands in the Az module and in the AzureRm modules are substantially identical.
+> The PowerShell Azure Resource Manager module is still supported by Azure SQL Database, but all future development is for the `Az.Sql` module. For these cmdlets, see [AzureRM.Sql](/powershell/module/AzureRM.Sql/). The arguments for the commands in the `Az` module and in the AzureRm modules are substantially identical.
 
 - An Azure account and subscription. You can sign up for a [free trial](https://azure.microsoft.com/pricing/free-trial/).
 - Any database you can create a table in.
 
-  - Optionally you can [create an **AdventureWorksLT** demonstration database](single-database-create-quickstart.md) in minutes.
+  - Optionally you can [create an `AdventureWorksLT` demonstration database](single-database-create-quickstart.md) in minutes.
 
-- SQL Server Management Studio (ssms.exe), ideally its latest monthly update version: [Download SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms)
+- SQL Server Management Studio (ssms.exe): [Download SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms)
 
-- You must have the [Azure PowerShell modules](https://go.microsoft.com/?linkid=9811175) installed.
+- You must have the [Azure PowerShell modules](/powershell/azure/install-azure-powershell) installed.
 
-  - The modules provide commands, such as - `New-AzStorageAccount`.
+  - The modules provide commands, such as `New-AzStorageAccount`.
 
 ## Phase 1: PowerShell code for Azure Storage container
 
@@ -54,15 +55,15 @@ This PowerShell is phase 1 of the two-phase code sample.
 
 The script starts with commands to clean up after a possible previous run, and is rerunnable.
 
-1. Paste the PowerShell script into a simple text editor such as Notepad.exe, and save the script as a file with the extension **.ps1**.
-2. Start PowerShell ISE as an Administrator.
-3. At the prompt, type<br/>`Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser`<br/>and then press Enter.
-4. In PowerShell ISE, open your **.ps1** file. Run the script.
-5. The script first starts a new window in which you sign in to Azure.
+1. Paste the PowerShell script into a simple text editor such as Notepad.exe, and save the script as a file with the extension `.ps1`.
+1. Start PowerShell ISE as an Administrator.
+1. At the prompt, type<br/>`Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser`<br/>and then press **Enter**.
+1. In PowerShell ISE, open your **.ps1** file. Run the script.
+1. The script first starts a new window in which you sign in to Azure.
 
-   - If you rerun the script without disrupting your session, you have the convenient option of commenting out the **Add-AzureAccount** command.
+   - If you rerun the script without disrupting your session, you have the convenient option of commenting out the [Add-AzureAccount](/powershell/module/servicemanagement/azure/add-azureaccount) cmdlet.
 
-![PowerShell ISE, with Azure module installed, ready to run script.](./media/xevent-code-event-file/event-file-powershell-ise-b30.png)
+:::image type="content" source="./media/xevent-code-event-file/event-file-powershell-ise-b30.png" alt-text="A screenshot of the PowerShell ISE, with Azure module installed, ready to run script.":::
 
 ### PowerShell code
 
@@ -242,11 +243,11 @@ The script starts with commands to clean up after a possible previous run, and i
 The PowerShell script printed a few named values when it ended. You must edit the Transact-SQL script to use those values. Find **TODO** in the Transact-SQL script to locate the edit points.
 
 1. Open SQL Server Management Studio (ssms.exe).
-2. Connect to your database in Azure SQL Database or SQL Managed Instance.
-3. Select to open a new query pane.
-4. Paste the following Transact-SQL script into the query pane.
-5. Find every **TODO** in the script and make the appropriate edits.
-6. Save, and then run the script.
+1. Connect to your database in Azure SQL Database or SQL Managed Instance.
+1. Select to open a new query pane.
+1. Paste the following Transact-SQL script into the query pane.
+1. Find every **TODO** in the script and make the appropriate edits.
+1. Save, and then run the script.
 
 > [!WARNING]
 > The SAS key value generated by the preceding PowerShell script might begin with a '?' (question mark). When you use the SAS key in the following T-SQL script, you must *remove the leading '?'*. Otherwise your efforts might be blocked by security.
@@ -293,7 +294,8 @@ IF NOT EXISTS
     (SELECT * FROM sys.symmetric_keys
         WHERE symmetric_key_id = 101)
 BEGIN
-    CREATE MASTER KEY ENCRYPTION BY PASSWORD = '0C34C960-6621-4682-A123-C7EA08E3FC46' -- Or any newid().
+---- TODO: Provide a strong password in the next line.
+    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'add strong password here'
 END
 GO
 
@@ -317,7 +319,7 @@ CREATE
     WITH
         IDENTITY = 'SHARED ACCESS SIGNATURE',  -- "SAS" token.
         -- TODO: Paste in the long SasToken string here for Secret, but exclude any leading '?'.
-        SECRET = 'sv=2014-02-14&sr=c&si=gmpolicysastoken&sig=EjAqjo6Nu5xMLEZEkMkLbeF7TD9v1J8DNB2t8gOKTts%3D'
+        SECRET = 'sv=2014-02-14&sr=c&si=gmpolicysastoken&sig=Ej...t8gOKTts%3D'
     ;
 GO
 
@@ -444,9 +446,9 @@ GO
 
 ## Output
 
-When the Transact-SQL script completes, select a cell under the **event_data_XML** column header. One **\<event>** element is displayed which shows one UPDATE statement.
+When the Transact-SQL script completes, select a cell under the `event_data_XML` column header. One `<event>` element is displayed which shows one UPDATE statement.
 
-Here is one **\<event>** element that was generated during testing:
+Here is one `<event>` element that was generated during testing:
 
 ```xml
 <event name="sql_statement_starting" package="sqlserver" timestamp="2015-09-22T19:18:45.420Z">
@@ -487,21 +489,16 @@ SELECT 'AFTER__Updates', EmployeeKudosCount, * FROM gmTabEmployee;
 </event>
 ```
 
-The preceding Transact-SQL script used the following system function to read the event_file:
+- The preceding Transact-SQL script used the [sys.fn_xe_file_target_read_file](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql) system function to read the event_file.
+- For an explanation of advanced options for the viewing of data from extended events, see [Advanced Viewing of Target Data from Extended Events](/sql/relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server).
 
-- [sys.fn_xe_file_target_read_file (Transact-SQL)](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)
-
-An explanation of advanced options for the viewing of data from extended events is available at:
-
-- [Advanced Viewing of Target Data from Extended Events](/sql/relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server)
-
-## Converting the code sample to run on SQL Server
+## Convert the code sample to run on SQL Server
 
 Suppose you wanted to run the preceding Transact-SQL sample on Microsoft SQL Server.
 
 - For simplicity, you would want to completely replace use of the Azure Storage container with a simple file such as `C:\myeventdata.xel`. The file would be written to the local hard drive of the computer that hosts SQL Server.
-- You would not need any kind of Transact-SQL statements for **CREATE MASTER KEY** and **CREATE CREDENTIAL**.
-- In the **CREATE EVENT SESSION** statement, in its **ADD TARGET** clause, you would replace the Http value assigned made to **filename=** with a full path string like `C:\myfile.xel`.
+- You would not need any kind of Transact-SQL statements for `CREATE MASTER KEY` and `CREATE CREDENTIAL`.
+- In the `CREATE EVENT SESSION` statement, in its `ADD TARGET` clause, you would replace the http value assigned made to `filename=` with a full path string like `C:\myfile.xel`. For more information, see [CREATE EVENT SESSION (Transact-SQL)](/sql/t-sql/statements/create-event-session-transact-sql).
 
   - An Azure Storage account is not needed.
 
@@ -513,5 +510,5 @@ For more info about accounts and containers in the Azure Storage service, see:
 - [Naming and Referencing Containers, Blobs, and Metadata](/rest/api/storageservices/Naming-and-Referencing-Containers--Blobs--and-Metadata)
 - [Working with the Root Container](/rest/api/storageservices/Working-with-the-Root-Container)
 - [Lesson 1: Create a stored access policy and a shared access signature on an Azure container](/sql/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016#1---create-stored-access-policy-and-shared-access-storage)
-  - [Lesson 2: Create a SQL Server credential using a shared access signature](/sql/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016#2---create-a-sql-server-credential-using-a-shared-access-signature)
+- [Lesson 2: Create a SQL Server credential using a shared access signature](/sql/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016#2---create-a-sql-server-credential-using-a-shared-access-signature)
 - [Extended Events for Microsoft SQL Server](/sql/relational-databases/extended-events/extended-events)

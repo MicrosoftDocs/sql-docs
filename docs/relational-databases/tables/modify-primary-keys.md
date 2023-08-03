@@ -1,19 +1,15 @@
 ---
+title: "Modify Primary Keys"
 description: "Modify Primary Keys"
-title: "Modify Primary Keys | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/25/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: table-view-index
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "modifying primary keys"
-  - "primary keys [SQL Server], modifying"
-ms.assetid: 8e2a15ba-1cd1-4408-b860-16c3ee37d635
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "07/25/2017"
+ms.service: sql
+ms.subservice: table-view-index
+ms.topic: conceptual
+helpviewer_keywords:
+  - "modifying primary keys"
+  - "primary keys [SQL Server], modifying"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Modify Primary Keys

@@ -3,21 +3,19 @@ title: "System Functions (Transact-SQL)"
 description: "System Functions (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 helpviewer_keywords:
   - "system functions [SQL Server]"
   - "functions [SQL Server], system"
 dev_langs:
   - "TSQL"
+monikerRange: ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current||=fabric"
 ---
 # System Functions (Transact-SQL)
-[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance FabricSE FabricDW](../../includes/applies-to-version/sql-asdbmi-fabricse-fabricdw.md)]
 
   The following system functions perform operations on and return information about values, objects, and settings in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

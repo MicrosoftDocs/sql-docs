@@ -1,24 +1,20 @@
 ---
-title: "last Function (XQuery) | Microsoft Docs"
+title: "last Function (XQuery)"
 description: Learn about the XQuery last() function that returns the integer index of the last item in a sequence.
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: sql
-ms.prod_service: sql
-ms.reviewer: ""
-ms.technology: xml
-ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "last function [XQuery]"
-  - "fn:last function"
-ms.assetid: dc92086e-3b01-4b0b-9f54-3bbf306cf7ae
 author: "rothja"
 ms.author: "jroth"
+ms.date: "03/09/2017"
+ms.service: sql
+ms.subservice: xml
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "last function [XQuery]"
+  - "fn:last function"
+dev_langs:
+  - "XML"
 ---
 # Context Functions - last (XQuery)
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   Returns the number of items in the sequence that is currently being processed. Specifically, it returns the integer index of the last item in the sequence. The first item in the sequence has an index value of 1.  
   

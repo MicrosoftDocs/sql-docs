@@ -4,8 +4,8 @@ description: In OLE DB Driver for SQL Server, consumers set property values to r
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "05/20/2020"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 helpviewer_keywords:
   - "OLE DB, properties"

@@ -1,20 +1,16 @@
 ---
+title: "Binding Arrays of Parameters"
 description: "Binding Arrays of Parameters"
-title: "Binding Arrays of Parameters | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "binding parameter arrays [ODBC]"
   - "arrays of parameter values [ODBC]"
   - "parameter arrays [ODBC]"
-ms.assetid: 037afe23-052d-4f3a-8aa7-45302b199ad0
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Binding Arrays of Parameters
 Applications that use arrays of parameters bind the arrays to the parameters in the SQL statement. There are two binding styles:  

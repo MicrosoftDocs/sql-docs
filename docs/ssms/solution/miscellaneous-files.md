@@ -1,21 +1,17 @@
 ---
-description: "Miscellaneous Files"
 title: "Miscellaneous Files"
-ms.custom: seo-lt-2019
+description: "Miscellaneous Files"
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "files [SQL Server Management Studio], miscellaneous"
   - "projects [SQL Server Management Studio], files"
   - "solutions [SQL Server Management Studio], files"
   - "miscellaneous files folder [SQL Server]"
-ms.assetid: 3c952b0b-8f5f-4d86-9e5d-616c10b9df0d
-author: "markingmyname"
-ms.author: "maghan"
 ---
 # Miscellaneous Files
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

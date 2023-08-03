@@ -1,24 +1,20 @@
 ---
-description: "Object Explorer Details Pane"
 title: "Object Explorer Details Pane"
-ms.custom: seo-lt-2019
+description: "Object Explorer Details Pane"
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.summary.general.f1"
   - "sql13.swb.summary.report.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "object search [SQL Server], Object Explorer"
   - "Object Explorer"
   - "object search [SQL Server]"
   - "searching objects [SQL Server]"
-ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
-author: "markingmyname"
-ms.author: "maghan"
 ---
 # Object Explorer Details Pane
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -83,7 +79,7 @@ Object Explorer Details supports multiple object selection. For example, if you 
 ## SQL Server Object Search  
 Wildcards  
   
--   Standard wildcard characters are supported. For example, searching for **dm_os%counters** returns both dm_os_memory_cache_counters and dm_os_performance_counters. For more information, see [How to: Search with Wildcards](../scripting/search-text-with-wildcards.md).  
+-   Standard wildcard characters are supported. For example, searching for **dm_os%counters** returns both dm_os_memory_cache_counters and dm_os_performance_counters. For more information, see [How to: Search with regular expressions](../scripting/search-text-with-regular-expressions.md).  
   
 Search Scope  
   

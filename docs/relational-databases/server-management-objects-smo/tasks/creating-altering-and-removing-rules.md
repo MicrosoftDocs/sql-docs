@@ -1,23 +1,17 @@
 ---
-description: "Creating, Altering, and Removing Rules"
 title: "Creating, Altering, and Removing Rules"
-ms.custom: seo-dt-2019
-ms.date: "08/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
-
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "rules [SMO]"
-ms.assetid: 16981459-524e-4b39-a899-4370eaf763cc
+description: "Creating, Altering, and Removing Rules"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "08/06/2017"
+ms.service: sql
+ms.topic: "reference"
+helpviewer_keywords:
+  - "rules [SMO]"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating, Altering, and Removing Rules
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   In SMO, rules are represented by the <xref:Microsoft.SqlServer.Management.Smo.Rule> object. The rule is defined by the <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.TextBody%2A> property, which is a text string that contains a condition expression that uses operators or predicates, such as IN, LIKE, or BETWEEN. A rule cannot reference columns or other database objects. Built-in functions that do not reference database objects can be included.  
   

@@ -1,22 +1,18 @@
 ---
-description: "Descriptor Fields for Table-Valued Parameter Constituent Columns"
 title: "Descriptor Field for Table-Valued Parameter"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "table-valued parameters (ODBC), descriptor fields for constituent columns"
-ms.assetid: 944b3968-fd47-4847-98d6-b87e8ef2acdc
+description: "Descriptor Fields for Table-Valued Parameter Constituent Columns"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "table-valued parameters (ODBC), descriptor fields for constituent columns"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Descriptor Fields for Table-Valued Parameter Constituent Columns
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   The table-valued parameter descriptor fields described in this section are manipulated by using [SQLSetDescField](../../relational-databases/native-client-odbc-api/sqlsetdescfield.md) and [SQLSetDescField](../../relational-databases/native-client-odbc-api/sqlsetdescfield.md) with the handle for the implementation parameter descriptor (IPD).  
   

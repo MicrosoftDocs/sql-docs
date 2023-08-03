@@ -1,24 +1,16 @@
 ---
-description: "ServerSettings Class"
 title: "ServerSettings Class"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
-
-ms.topic: "reference"
-apiname: 
-  - "ServerSettings Class"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "ServerSettings class"
-ms.assetid: d11ef801-dcb3-4fe1-84db-bf943ccf0e99
+description: "ServerSettings Class"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.topic: "reference"
+helpviewer_keywords:
+  - "ServerSettings class"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "ServerSettings Class"
+apitype: "MOFDef"
 ---
 # ServerSettings Class
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

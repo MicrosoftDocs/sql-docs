@@ -1,20 +1,16 @@
 ---
+title: "MakeValid (geography Data Type)"
 description: "MakeValid (geography Data Type)"
-title: "MakeValid (geography Data Type) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "MakeValid method (geography)"
-ms.assetid: f67038e3-4f62-4465-994e-e95ac27d8ada
 author: MladjoA
-ms.author: mlandzic 
+ms.author: mlandzic
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: t-sql
+ms.topic: reference
+helpviewer_keywords:
+  - "MakeValid method (geography)"
+dev_langs:
+  - "TSQL"
 ---
 # MakeValid (geography Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

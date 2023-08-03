@@ -1,16 +1,12 @@
 ---
+title: "catalog.set_execution_property_override_value"
 description: "catalog.set_execution_property_override_value"
-title: "catalog.set_execution_property_override_value | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: "language-reference"
-ms.assetid: 37cb3c01-f4c0-4978-8e40-a975456def5a
 author: chugugrace
 ms.author: chugu
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
 ---
 # catalog.set_execution_property_override_value 
 

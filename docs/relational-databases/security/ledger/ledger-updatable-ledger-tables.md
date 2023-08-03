@@ -1,19 +1,19 @@
 ---
 title: "Updatable ledger tables"
 description: This article provides information on updatable ledger tables, ledger schema, and ledger views.
-ms.date: "05/24/2022"
-ms.service: sql-database
-ms.subservice: security
-ms.reviewer: kendralittle, mathoma
-ms.topic: conceptual
 author: VanMSFT
 ms.author: vanto
+ms.reviewer: mathoma
+ms.date: 05/23/2023
+ms.service: sql-database
+ms.subservice: security
+ms.topic: conceptual
 monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
 ---
 
 # Updatable ledger tables
 
-[!INCLUDE [SQL Server 2022 Azure SQL Database](../../../includes/applies-to-version/sqlserver2022-asdb.md)]
+[!INCLUDE [SQL Server 2022 Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
 Updatable ledger tables are system-versioned tables on which users can perform updates and deletes while also providing tamper-evidence capabilities. When updates or deletes occur, all earlier versions of a row are preserved in a secondary table, known as the history table. The history table mirrors the schema of the updatable ledger table. When a row is updated, the latest version of the row remains in the ledger table, while its earlier version is inserted into the history table by the system, transparently to the application. 
 

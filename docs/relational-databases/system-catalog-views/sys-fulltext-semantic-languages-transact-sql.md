@@ -5,9 +5,8 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "fulltext_semantic_languages"
@@ -18,7 +17,6 @@ helpviewer_keywords:
   - "sys.fulltext_semantic_languages catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: b42a85e6-1db9-4a22-8a70-014574c95198
 ---
 # sys.fulltext_semantic_languages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

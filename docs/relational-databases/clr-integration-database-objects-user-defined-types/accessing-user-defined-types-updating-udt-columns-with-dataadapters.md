@@ -4,8 +4,8 @@ description: UDTs in a SQL Server database are supported by using System.Data.Da
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 helpviewer_keywords:
   - "ADO.NET [CLR integration]"
@@ -20,7 +20,6 @@ dev_langs:
   - "TSQL"
   - "VB"
   - "CSharp"
-ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
 ---
 # Accessing User-Defined Types - Updating UDT Columns with DataAdapters
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

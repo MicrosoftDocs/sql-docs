@@ -1,14 +1,13 @@
 ---
+title: "Profiling ODBC Driver Performance"
 description: "Profiling ODBC Driver Performance"
-title: "Profiling ODBC Driver Performance | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
+ms.service: sql
+ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "profiling ODBC driver performance data [SQL Server Native Client]"
   - "performance [ODBC]"
   - "application statistics [ODBC]"
@@ -17,13 +16,13 @@ helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, profiling performance data"
   - "SQLPERF data structure"
   - "statistical information [ODBC]"
-ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Profiling ODBC Driver Performance
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+> [!IMPORTANT] 
+> [!INCLUDE[snac-removed-oledb-and-odbc](../../../includes/snac-removed-oledb-and-odbc.md)]
 
   The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver can profile two types of performance data:  
   

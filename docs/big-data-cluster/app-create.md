@@ -6,11 +6,10 @@ author: HugoMSFT
 ms.author: hudequei
 ms.reviewer: wiassaf
 ms.date: 04/13/2021
-ms.prod: sql
-ms.technology: big-data-cluster
+ms.service: sql
+ms.subservice: big-data-cluster
 ms.topic: conceptual
 ms.custom: intro-deployment
-ms.metadata: seo-lt-2019
 ---
 
 # How to deploy an app on SQL Server Big Data Clusters

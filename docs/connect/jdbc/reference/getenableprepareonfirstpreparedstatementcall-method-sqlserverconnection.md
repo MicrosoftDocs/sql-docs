@@ -4,8 +4,8 @@ description: "getEnablePrepareOnFirstPreparedStatementCall Method (SQLServerConn
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "01/19/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: reference
 apilocation: "sqljdbc.jar"
 apiname: "SQLServerConnection.getEnablePrepareOnFirstPreparedStatementCall"

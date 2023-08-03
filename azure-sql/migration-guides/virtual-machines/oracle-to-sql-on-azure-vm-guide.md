@@ -2,8 +2,8 @@
 title: "Oracle to SQL Server on Azure Virtual Machines: Migration guide"
 titleSuffix: SQL Server on Azure VMs
 description: This guide teaches you to migrate your Oracle schemas to SQL Server on Azure Virtual Machines by using SQL Server Migration Assistant for Oracle.
-author: mokabiru
-ms.author: mokabiru
+author: croblesm
+ms.author: roblescarlos
 ms.reviewer: mathoma, randolphwest
 ms.date: 05/24/2022
 ms.service: virtual-machines-sql
@@ -135,7 +135,7 @@ Validate the default data type mappings and change them based on requirements, i
 
 To convert the schema, follow these steps:
 
-1. (Optional) To convert dynamic or ad-hoc queries, right-click the node and select **Add statement**.
+1. (Optional) To convert dynamic or ad hoc queries, right-click the node and select **Add statement**.
 
 1. Select **Connect to SQL Server** in the top menu.
      1. Enter connection details for your SQL Server on Azure VM.

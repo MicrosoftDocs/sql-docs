@@ -1,3 +1,3 @@
 INSERT INTO Archive.dbo.Records
-    VALUES (newid (), 1, NULL);
+    VALUES (NEWID(), 1, NULL);
 GO

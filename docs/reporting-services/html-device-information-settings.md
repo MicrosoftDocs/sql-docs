@@ -1,19 +1,16 @@
 ---
-title: "HTML Device Information Settings | Microsoft Docs"
+title: "HTML Device Information Settings"
 description: Learn about the various device information settings that are available for rendering in HTML format.
-ms.date: 03/16/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
-
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "HTML [Reporting Services], rendering"
-  - "device information settings [Reporting Services], HTML rendering"
-ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/16/2017
+ms.service: reporting-services
+ms.subservice: reporting-services
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "HTML [Reporting Services], rendering"
+  - "device information settings [Reporting Services], HTML rendering"
 ---
 # HTML Device Information Settings
 The following table lists the device information settings for rendering in HTML format.  
@@ -23,7 +20,7 @@ The following table lists the device information settings for rendering in HTML 
   
 |Setting|Value|  
 |-------------|-----------|  
-|**AccessibleTablix**|Indicates whether to render with additional accessibility metadata for use with screen readers. The additional accessibility metadata causes the rendered report to be compliant with the following technical standards in the "Web-based Intranet and Internet Information and Applications" section (1194.22) of the Electronic and Information Technology Accessibility Standards (Section 508) document:<br /><br /> (g) Row and column headers shall be identified for data tables.<br /><br /> (h) Markup shall be used to associate data cells and header cells for data tables that have two or more logical levels of row or column headers.|  
+|**AccessibleTablix**|Indicates whether to render with additional accessibility metadata for use with screen readers. The additional accessibility metadata causes the rendered report to be compliant with the following technical standards in the "Web-based Intranet and Internet Information and Applications" section (1194.22) of the Electronic and Information Technology Accessibility Standards:<br /><br /> (g) Row and column headers shall be identified for data tables.<br /><br /> (h) Markup shall be used to associate data cells and header cells for data tables that have two or more logical levels of row or column headers.|  
 |**ActionScript(\*)**|Specifies the name of the JavaScript function to use when an action event occurs, such as a drillthrough or bookmark click. If this parameter is specified, an action event will trigger the named JavaScript function instead of a postback to the server.|  
 |**BookmarkID**|The bookmark ID to jump to in the report.|  
 |**DocMap**|Indicates whether to show or hide the report document map. The default value of this parameter is **true**.|  

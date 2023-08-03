@@ -1,14 +1,13 @@
 ---
-title: "Binding Parameters | Microsoft Docs"
+title: "Binding Parameters"
 description: Find out how to bind each parameter marker in an SQL statement to a variable in the application before the statement can run.
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
+ms.service: sql
+ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, parameters"
   - "parameters [SQL Server Native Client], ODBC"
   - "statements [ODBC], parameters"
@@ -18,13 +17,10 @@ helpviewer_keywords:
   - "SQLBindParameter function"
   - "ODBC applications, parameters"
   - "bound parameter markers [SQL Server Native Client]"
-ms.assetid: d6c69739-8f89-475f-a60a-b2f6c06576e2
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Statement Parameters - Binding Parameters
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Each parameter marker in an SQL statement must be associated, or bound, to a variable in the application before the statement can be executed. This is done by calling the [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) function. **SQLBindParameter** describes the program variable (address, C data type, and so on) to the driver. It also identifies the parameter marker by indicating its ordinal value and then describes the characteristics of the SQL object it represents (SQL data type, precision, and so on).  
   

@@ -1,16 +1,15 @@
 ---
-title: "Database States | Microsoft Docs"
+title: "Database States"
 description: "Find out about various database states, such as ONLINE, OFFLINE, or SUSPECT. Learn how to verify the current state of a database."
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "07/14/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "SQL13.SWB.DATABASESTATES.F1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "emergency database state [SQL Server]"
   - "verifying database states"
   - "viewing database states"
@@ -24,13 +23,10 @@ helpviewer_keywords:
   - "online database state"
   - "states [SQL Server]"
   - "restoring database state [SQL Server]"
-ms.assetid: b7f1f111-ca73-4a89-b567-a98d64d6ecb3
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Database States
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   A database is always in one specific state. For example, these states include ONLINE, OFFLINE, or SUSPECT. To verify the current state of a database, select the **state_desc** column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view or the **Status** property in the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function.  
   
 ## Database State Definitions  

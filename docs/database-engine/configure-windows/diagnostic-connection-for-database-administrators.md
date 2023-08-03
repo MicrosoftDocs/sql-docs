@@ -4,8 +4,8 @@ description: "Find out about the dedicated administrator connection (DAC). View 
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 08/12/2022
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "server management [SQL Server], connections"
@@ -34,7 +34,7 @@ By default, the connection is only allowed from a client running on the server. 
 
 Only members of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin role can connect using the DAC.
 
-The DAC is available and supported through the `sqlcmd` command-prompt utility using a special administrator switch (`-A`). For more information about using `sqlcmd`, see [Use sqlcmd with Scripting Variables](../../ssms/scripting/sqlcmd-use-with-scripting-variables.md). You can also connect prefixing `admin:` to the instance name in the format `sqlcmd -S admin:<instance_name>`. You can also initiate a DAC from a [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor by connecting to `admin:<instance_name>`.
+The DAC is available and supported through the `sqlcmd` command-prompt utility using a special administrator switch (`-A`). For more information about using `sqlcmd`, see [Use sqlcmd with Scripting Variables](../../tools/sqlcmd/sqlcmd-use-scripting-variables.md). You can also connect prefixing `admin:` to the instance name in the format `sqlcmd -S admin:<instance_name>`. You can also initiate a DAC from a [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor by connecting to `admin:<instance_name>`.
 
 To establish a DAC from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:
 
@@ -105,7 +105,7 @@ sqlcmd -S 127.0.0.1,1434
 ```
 
 > [!TIP]  
-> When connecting to the [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] with the DAC, you must also specify the database name in the connection string by using the `-d` option.
+> When connecting to the [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] with the DAC, you must also specify the database name in the connection string by using the `-d` option.
 
 ## Example
 
@@ -125,8 +125,8 @@ sqlcmd -S serverName.database.windows.net,1434 -U sa -P <StrongPassword> -d Adve
 
 ## See also
 
-- [Use sqlcmd with Scripting Variables](../../ssms/scripting/sqlcmd-use-with-scripting-variables.md)  
-- [sqlcmd Utility](../../tools/sqlcmd-utility.md)  
+- [Use sqlcmd with Scripting Variables](../../tools/sqlcmd/sqlcmd-use-scripting-variables.md)  
+- [sqlcmd Utility](../../tools/sqlcmd/sqlcmd-utility.md)  
 - [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
 - [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
 - [sp_lock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)  

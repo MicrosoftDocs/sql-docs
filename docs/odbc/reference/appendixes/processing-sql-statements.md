@@ -1,20 +1,16 @@
 ---
+title: "Processing SQL Statements"
 description: "Processing SQL Statements"
-title: "Processing SQL Statements | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ODBC cursor library [ODBC], statement processing"
   - "SQL statements [ODBC], cursor library"
   - "cursor library [ODBC], statement processing"
-ms.assetid: 54dad6a3-e86c-477b-ba7c-4e95e0385ec1
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Processing SQL Statements
 > [!IMPORTANT]  

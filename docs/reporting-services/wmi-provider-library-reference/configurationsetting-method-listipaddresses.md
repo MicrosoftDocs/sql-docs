@@ -1,18 +1,15 @@
 ---
+title: "ListIPAddresses Method (WMI MSReportServer_ConfigurationSetting)"
 description: "ListIPAddresses Method (WMI MSReportServer_ConfigurationSetting)"
-title: "ListIPAddresses Method (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: wmi-provider-library-reference
-
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "ListIPAddresses method"
-ms.assetid: 7e7cf182-fba0-4604-a474-098461e23e9d
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: wmi-provider-library-reference
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "ListIPAddresses method"
 ---
 # ConfigurationSetting Method - ListIPAddresses
   Lists the IP addresses for the report server computer.  

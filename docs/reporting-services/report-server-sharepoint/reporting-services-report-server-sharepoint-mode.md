@@ -1,13 +1,13 @@
 ---
-title: "Reporting Services Report Server (SharePoint Mode) | Microsoft Docs"
+title: "Reporting Services Report Server (SharePoint Mode)"
 description: A Reporting Services report server with SharePoint Mode can run in SharePoint to use collaboration and management features for Reporting Services content types.
-ms.date: 09/26/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server-sharepoint
-ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 09/26/2017
+ms.service: reporting-services
+ms.subservice: report-server-sharepoint
+ms.topic: conceptual
+ms.custom: updatefrequency5
 monikerRange: ">=sql-server-2016 <=sql-server-2016"
 ---
 

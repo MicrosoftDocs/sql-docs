@@ -1,32 +1,17 @@
---- 
-
-# required metadata 
-title: "InputData function (sqlrutils) | Microsoft Docs" 
-description: " InputData: generates an InputData Object that captures the information about the input parameter that is a data frame. The data frame needs to be populated upon the execution a given query. This object is necessary  for creation of stored procedures in which the embedded R function takes in a data frame input parameter. " 
-keywords: "(sqlrutils), InputData" 
+---
+title: "InputData function (sqlrutils)"
+description: "InputData: generates an InputData Object that captures the information about the input parameter that is a data frame. The data frame needs to be populated upon the execution a given query."
 author: "rothja"
-ms.author: "jroth" 
-manager: "cgronlun" 
+ms.author: "jroth"
 ms.date: 07/15/2019
-ms.topic: "reference" 
-ms.prod: "mlserver" 
-ms.service: "" 
-ms.assetid: "" 
-
-# optional metadata 
-ROBOTS: "" 
-audience: "" 
-ms.devlang: "" 
-ms.reviewer: "" 
-ms.suite: "" 
-ms.tgt_pltfrm: "" 
-#ms.technology: "" 
-ms.custom: "" 
-
+ms.service: sql
+ms.subservice: machine-learning
+ms.topic: "reference"
+keywords:
+  - (sqlrutils)
+  - InputData
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
---- 
-
-
+---
 
 
  # InputData: Input Data for SQL Stored Procedure: Class Generator 

@@ -1,16 +1,13 @@
 ---
-title: "Formatting ranges on a gauge in a paginated report | Microsoft Docs"
+title: "Formatting ranges on a gauge in a paginated report"
 description: Visually indicate with a gauge range in a paginated report when the pointer value has gone into a certain span of values in Report Builder.
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: ffdec8ca-3e95-41cd-850b-9e8c83be4b49
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Formatting ranges on a gauge in a paginated report (Report Builder)
 

@@ -1,20 +1,16 @@
 ---
+title: "Data Viewer"
 description: "Data Viewer"
-title: "Data Viewer | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.designer.dataviewer.f1"
-helpviewer_keywords: 
-  - "Data Viewer dialog box"
-ms.assetid: 6351309a-688f-4e82-9697-1712130f10a1
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.designer.dataviewer.f1"
+helpviewer_keywords:
+  - "Data Viewer dialog box"
 ---
 # Data Viewer
 

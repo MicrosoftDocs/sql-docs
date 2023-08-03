@@ -1,15 +1,12 @@
 ---
 title: Usage and Diagnostic Data
 description: "Local audit for SSMS usage and diagnostic data collection"
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.technology: ssms
-ms.topic: conceptual
 author: "markingmyname"
 ms.author: "maghan"
-ms.reviewer: ""
-ms.custom: seo-lt-2019
 ms.date: 05/03/2021
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
 ---
 
 # Local audit for SSMS usage and diagnostic data collection

@@ -1,19 +1,16 @@
 ---
-title: "Create and Manage Subscriptions for Native Mode Report Servers | Microsoft Docs"
+title: "Create and Manage Subscriptions for Native Mode Report Servers"
 description: Learn to create and manage a standard subscription as an individual user who wants a report delivered through email or to a shared folder.
-ms.date: 05/28/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: subscriptions
-
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "standard subscriptions [Reporting Services]"
-  - "subscriptions [Reporting Services], standard"
-ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 05/28/2019
+ms.service: reporting-services
+ms.subservice: subscriptions
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "standard subscriptions [Reporting Services]"
+  - "subscriptions [Reporting Services], standard"
 ---
 # Create and Manage Subscriptions for Native Mode Report Servers
   A standard subscription is one that is created by individual users who want to have a report delivered through e-mail or to a shared folder. This topic provides information about standard subscriptions that are created and managed by individual users. Data-driven subscriptions have different requirements and steps, and are discussed in a separate topic. For more information, see [Create, Modify, and Delete Data-Driven Subscriptions](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)  

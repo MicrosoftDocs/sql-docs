@@ -1,30 +1,27 @@
 ---
+title: "ORDER BY Clause (Transact-SQL)"
 description: "SELECT - ORDER BY Clause (Transact-SQL)"
-title: "ORDER BY Clause (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "12/24/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ORDER_TSQL"
   - "BY"
   - "ORDER_BY_TSQL"
   - "BY_TSQL"
   - "ORDER"
   - "ORDER BY"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "ad-hoc query paging"
+helpviewer_keywords:
+  - "ad hoc query paging"
   - "OFFSET clause"
   - "SELECT statement [SQL Server], FETCH clause"
   - "clauses [SQL Server], ORDER BY"
   - "SELECT statement [SQL Server], limiting the rows returned"
   - "data [SQL Server], limiting the rows returned"
-  - "data [SQL Server], ad-hoc query paging"
+  - "data [SQL Server], ad hoc query paging"
   - "sort orders [SQL Server]"
   - "SELECT statement [SQL Server], OFFSET clause"
   - "ORDER BY clause [Transact-SQL]"
@@ -36,14 +33,13 @@ helpviewer_keywords:
   - "limiting data returned in a query"
   - "sort orders [SQL Server], ORDER BY clause"
   - "FETCH clause"
-ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
-author: VanMSFT
-ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # SELECT - ORDER BY Clause (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
   Sorts data returned by a query in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use this clause to:  
   
@@ -51,10 +47,10 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   Determine the order in which [ranking function](../../t-sql/functions/ranking-functions-transact-sql.md) values are applied to the result set.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 > [!NOTE]  
->  ORDER BY is not supported in SELECT/INTO or CREATE TABLE AS SELECT (CTAS) statements in [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+>  ORDER BY is not supported in SELECT/INTO or CREATE TABLE AS SELECT (CTAS) statements in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
 ## Syntax  
   
@@ -113,7 +109,7 @@ ORDER BY SchemaName + ''; -- wrong
  OFFSET { *integer_constant* | *offset_row_count_expression* } { ROW | ROWS }  
  Specifies the number of rows to skip before it starts to return rows from the query expression. The value can be an integer constant or expression that is greater than or equal to zero.  
   
-**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].s  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].s  
   
  *offset_row_count_expression* can be a variable, parameter, or constant scalar subquery. When a subquery is used, it cannot reference any columns defined in the outer query scope. That is, it cannot be correlated with the outer query.  
   
@@ -124,7 +120,7 @@ ORDER BY SchemaName + ''; -- wrong
  FETCH { FIRST \| NEXT } { *integer_constant* \| *fetch_row_count_expression* } { ROW \| ROWS } ONLY  
  Specifies the number of rows to return after the OFFSET clause has been processed. The value can be an integer constant or expression that is greater than or equal to one.  
   
-**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].  
   
  *fetch_row_count_expression* can be a variable, parameter, or constant scalar subquery. When a subquery is used, it cannot reference any columns defined in the outer query scope. That is, it cannot be correlated with the outer query.  
   
@@ -199,11 +195,11 @@ ORDER BY SchemaName + ''; -- wrong
 |Category|Featured syntax elements|  
 |--------------|------------------------------|  
 |[Basic syntax](#BasicSyntax)|ORDER BY|  
-|[Specifying ascending and descending order](#SortOrder)|DESC • ASC|  
+|[Specifying ascending and descending order](#SortOrder)|DESC * ASC|  
 |[Specifying a collation](#Collation)|COLLATE|  
 |[Specifying a conditional order](#Case)|CASE expression|  
 |[Using ORDER BY in a ranking function](#Rank)|Ranking functions|  
-|[Limiting the number of rows returned](#Offset)|OFFSET • FETCH|  
+|[Limiting the number of rows returned](#Offset)|OFFSET * FETCH|  
 |[Using ORDER BY with UNION, EXCEPT, and INTERSECT](#Union)|UNION|  
   
 ###  <a name="BasicSyntax"></a> Basic syntax  
@@ -351,7 +347,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 ###  <a name="Offset"></a> Limiting the number of rows returned  
  The following examples use OFFSET and FETCH to limit the number of rows returned by a query.  
   
-**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].  
   
 #### A. Specifying integer constants for OFFSET and FETCH values  
  The following example specifies an integer constant as the value for the OFFSET and FETCH clauses. The first query returns all rows sorted by the column `DepartmentID`. Compare the results returned by this query with the results of the two queries that follow it. The next query uses the clause `OFFSET 5 ROWS` to skip the first 5 rows and return all remaining rows. The final query uses the clause `OFFSET 0 ROWS` to start with the first row and then uses `FETCH NEXT 10 ROWS ONLY` to limit the rows returned to 10 rows from the sorted result set.  
@@ -490,7 +486,7 @@ WHERE Color = 'Yellow'
 ORDER BY ListPrice ASC;  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example demonstrates ordering of a result set by the numerical `EmployeeKey` column in ascending order.  
   
 ```sql

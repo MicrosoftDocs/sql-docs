@@ -1,20 +1,17 @@
 ---
-title: "Removing a Delivery Extension | Microsoft Docs"
+title: "Removing a Delivery Extension"
 description: "Learn how to remove a delivery extension from Reporting Services so the report server doesn't list it as available and deactivates subscriptions that use it."
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/06/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: extensions
-
-
+ms.service: reporting-services
+ms.subservice: extensions
 ms.topic: reference
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "removing delivery extensions"
   - "deleting delivery extensions"
   - "delivery extensions [Reporting Services], removing"
-ms.assetid: dcb7caf2-d19a-4bc5-afb3-2b61ad11cac5
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Removing a Delivery Extension
   To remove a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] delivery extension, simply remove the **Extension** element for your delivery extension from the configuration file. After the configuration information is removed, the delivery extension is no longer available to the report server.  

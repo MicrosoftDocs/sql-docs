@@ -1,32 +1,20 @@
---- 
-
-# required metadata 
-title: "rxOneClassSvm function (MicrosoftML) " 
-description: " Machine Learning One Class Support Vector Machines " 
-keywords: "(MicrosoftML), rxOneClassSvm, anomaly, detection, models" 
+---
+title: "rxOneClassSvm function (MicrosoftML)"
+description: "Machine Learning One Class Support Vector Machines (MicrosoftML)."
 author: "rothja"
-ms.author: "jroth" 
-manager: "cgronlun" 
+ms.author: "jroth"
 ms.date: 07/15/2019
-ms.topic: "reference" 
-ms.prod: "mlserver" 
-ms.service: "" 
-ms.assetid: "" 
-
-# optional metadata 
-ROBOTS: "" 
-audience: "" 
-ms.devlang: "" 
-ms.reviewer: "" 
-ms.suite: "" 
-ms.tgt_pltfrm: "" 
-#ms.technology: "" 
-ms.custom: "" 
-
+ms.service: sql
+ms.subservice: machine-learning
+ms.topic: "reference"
+keywords:
+  - (MicrosoftML)
+  - rxOneClassSvm
+  - anomaly
+  - detection
+  - models
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
---- 
-
-
+---
 
 
  # rxOneClassSvm: OneClass SVM 

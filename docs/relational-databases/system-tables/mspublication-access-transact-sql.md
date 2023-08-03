@@ -4,9 +4,8 @@ description: MSpublication_access (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "MSpublication_access_TSQL"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "MSpublication_access system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 7bebe47e-3153-4579-8092-5723667a24c6
 ---
 # MSpublication_access (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

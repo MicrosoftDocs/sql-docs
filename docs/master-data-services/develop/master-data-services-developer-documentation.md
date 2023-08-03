@@ -1,21 +1,16 @@
 ---
-description: "Master Data Services Developer Documentation"
 title: Developer Documentation
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
-
-ms.topic: "reference"
-ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
+description: "Master Data Services Developer Documentation"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/17/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: "reference"
 ---
 # Master Data Services Developer Documentation
 
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Find information about how to write code to customize the way you and your users interact with [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Learn how to:  
   

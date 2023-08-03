@@ -1,15 +1,12 @@
 ---
+title: "Connect to Azure Blob Storage (SQL Server Import and Export Wizard)"
 description: "Connect to Azure Blob Storage (SQL Server Import and Export Wizard)"
-title: "Connect to Azure Blob Storage (SQL Server Import and Export Wizard) | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
-ms.assetid: e2e482b8-5f90-48c5-93fb-b412ed52659f
 author: chugugrace
 ms.author: chugu
+ms.date: "02/17/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Connect to Azure Blob Storage (SQL Server Import and Export Wizard)
 
@@ -26,7 +23,7 @@ This topic shows you how to connect to an **Azure Blob Storage** data source fro
 
 The following screen shot shows the options to configure for a connection to Azure Blob Storage.
 
-![Azure blob storage connection](../../integration-services/import-export-data/media/azure-blob-storage-connection.png)
+![Azure Blob Storage connection](../../integration-services/import-export-data/media/azure-blob-storage-connection.png)
 
 ## Options to specify
 

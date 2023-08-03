@@ -1,24 +1,20 @@
 ---
 title: Administrators
 description: "Learn about the types of administrators in Master Data Services: model administrators, entity administrators, and super user."
-ms.custom: ""
+author: CordeliaGrey
+ms.author: jiwang6
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
+ms.service: sql
+ms.subservice: master-data-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "administrators [Master Data Services], about administrators"
   - "administrators [Master Data Services]"
   - "models [Master Data Services], administrators"
-ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
-author: CordeliaGrey
-ms.author: jiwang6
 ---
 # Administrators (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   This article describes the types of administrators in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]: model administrators, entity administrators, and super user.  
   

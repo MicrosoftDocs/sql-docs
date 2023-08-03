@@ -1,20 +1,17 @@
 ---
-title: "Security Considerations for Extensions | Microsoft Docs"
+title: "Security Considerations for Extensions"
 description: Learn about the security policies, conditions, and requirements that determine how report servers grant permissions to Reporting Services extensions.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/06/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: extensions
-
-
+ms.service: reporting-services
+ms.subservice: extensions
 ms.topic: reference
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "security [Reporting Services], extensions"
   - "extensions [Reporting Services], security"
   - "permissions [Reporting Services], extensions"
-ms.assetid: 58cbdfeb-1105-4a7d-a3b8-b897ff95f367
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Security Considerations for Extensions
   Every application that targets the common language runtime (CLR) must interact with the CLR security system. When such an application runs, it is automatically evaluated and given a set of permissions by the CLR. Depending on the permissions that the application receives, it either continues running or generates a security exception. The local security settings and policies in the security policy configuration files for a particular report server define the code permissions that an assembly receives.  

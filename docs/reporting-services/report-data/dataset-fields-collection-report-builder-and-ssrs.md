@@ -1,16 +1,13 @@
 ---
-title: "Dataset Fields Collection (Report Builder) | Microsoft Docs"
+title: "Dataset Fields Collection (Report Builder)"
 description: Learn about dataset field collection. Dataset fields represent the data from a data connection. A field can represent either numeric or non-numeric data.
-ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-data
-
-
-ms.topic: conceptual
-ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/14/2017
+ms.service: reporting-services
+ms.subservice: report-data
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Dataset Fields Collection (Report Builder and SSRS)
   Dataset fields represent the data from a data connection. A field can represent either numeric or non-numeric data. Examples include sales amounts, total sales, customer names, database identifiers, URLs, images, spatial data, and e-mail addresses. On the design surface, fields appear as expressions in report items such as text boxes, tables, and charts.  
@@ -55,7 +52,7 @@ ms.author: maggies
  Data sources that support multidimensional queries, such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], support field properties on fields. Field properties appear in the result set for a query, but are not visible in the **Report Data** pane. They are still available to use in your report. To refer to a property for a field, drag the field onto the report, and change the default property **Value** to the field name of the property you want. For example, in an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cube, you can define formats for values in the cube cells. The formatted value is available by using the field property **FormattedValue**. To use the value directly instead of using a value and setting the format property of the text box, drag the field to the text box and change the default expression `=Fields!FieldName.Value` to `=Fields!FieldName.FormattedValue`.  
   
 > [!NOTE]
->  Not all **Field** properties can be used for all data sources. The **Value** and **IsMissing** properties are defined for all data sources. Other predefined properties (such as **Key**, **UniqueName**, and **ParentUniqueName** for multidimensional data sources) are supported only if the data source provides those properties. Custom properties are supported by some data providers. For more information, see specific topics about extended field properties for your data source type in [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md). For example, for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data source, see [Extended Field Properties for an Analysis Services Database &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
+>  Not all **Field** properties can be used for all data sources. The **Value** and **IsMissing** properties are defined for all data sources. Other predefined properties (such as **Key**, **UniqueName**, and **ParentUniqueName** for multidimensional data sources) are supported only if the data source provides those properties. Custom properties are supported by some data providers. For more information, see specific topics about extended field properties for your data source type in [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md). For example, for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data source, see [Extended Field Properties for an Analysis Services Database &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
   
 ##  <a name="Defaults"></a> Understanding Default Expressions for Fields  
@@ -75,7 +72,7 @@ ms.author: maggies
   
 -   **Data source** The data types supported by the version of the type of data source to which you are connecting.  
   
-     For example, typical data types for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source include **int**, **datetime**, and **varchar**. Data types introduced by [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] added support for **date**, **time**, **datetimetz**, and **datetime2**. For more information, see [Data Types (Transact-SQL)](/previous-versions/sql/sql-server-2008/ms187752(v=sql.100)).  
+     For example, typical data types for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source include **int**, **datetime**, and **varchar**. Data types introduced by [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] added support for **date**, **time**, **datetimetz**, and **datetime2**. For more information, see [Data Types (Transact-SQL)](/previous-versions/sql/sql-server-2008/ms187752(v=sql.100)).  
   
 -   **Data provider or data processing extension** The data types supported by the version of the data provider of the data processing extension you select when you connect to the data source. Data providers based on the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] use data types supported by the CLR. For more information about [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] data provider data types, see [Data Type Mappings (ADO.NET)](/dotnet/framework/data/adonet/data-type-mappings-in-ado-net) and [Working with Base Types](/dotnet/standard/base-types/common-type-system) on MSDN.  
   
@@ -86,7 +83,7 @@ ms.author: maggies
   
 -   **Report processor** The data types are based on the version of the CLR installed when you installed [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-     For example, the data types the report processor uses for the new date and time types introduced in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] are shown in the following table:  
+     For example, the data types the report processor uses for the new date and time types introduced in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] are shown in the following table:  
   
     |SQL Data Type|CLR Data Type|Description|  
     |-------------------|-------------------|-----------------|  

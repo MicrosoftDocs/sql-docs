@@ -1,23 +1,18 @@
 ---
-title: "Access the Reporting Services WMI Provider | Microsoft Docs"
-description: Learn how to access the Reporting Services WMI provider that exposes two WMI classes for administration of Native mode report server instances through scripting. 
-ms.date: 11/02/2016
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: tools
-
-
-ms.topic: conceptual
-apiname: 
-  - "Reporting Services WMI Provider"
-apilocation: 
-  - "reportingservices.mof"
-helpviewer_keywords: 
-  - "WMI provider [Reporting Services]"
-  - "programming [Reporting Services]"
-ms.assetid: 22cfbeb8-4ea3-4182-8f54-3341c771e87b
+title: "Access the Reporting Services WMI Provider"
+description: Learn how to access the Reporting Services WMI provider that exposes two WMI classes for administration of Native mode report server instances through scripting.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 11/02/2016
+ms.service: reporting-services
+ms.subservice: tools
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "WMI provider [Reporting Services]"
+  - "programming [Reporting Services]"
+apilocation: "reportingservices.mof"
+apiname: "Reporting Services WMI Provider"
 ---
 # Access the Reporting Services WMI Provider
   The Reporting Services WMI provider exposes two WMI classes for administration of Native mode report server instances through scripting:  

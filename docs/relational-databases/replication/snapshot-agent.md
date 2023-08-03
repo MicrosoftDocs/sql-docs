@@ -1,20 +1,17 @@
 ---
+title: "Snapshot Agent"
 description: "Snapshot Agent"
-title: "Snapshot Agent | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.monitor.snapshotagent.f1"
-helpviewer_keywords: 
-  - "Snapshot Agent dialog box"
-ms.assetid: b715e621-2cd5-4a15-8f58-a341aa8ef5e4
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/07/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.monitor.snapshotagent.f1"
+helpviewer_keywords:
+  - "Snapshot Agent dialog box"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Snapshot Agent

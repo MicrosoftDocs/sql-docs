@@ -4,8 +4,8 @@ description: Learn how to troubleshoot a failover on an Always On availability g
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "06/13/2017"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: troubleshooting
 ms.custom: ag-guide
 ---

@@ -3,9 +3,9 @@ title: "sys.dm_exec_query_statistics_xml (Transact-SQL)"
 description: sys.dm_exec_query_statistics_xml (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "11/16/2016"
-ms.prod: sql
-ms.technology: system-objects
+ms.date: "02/24/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: conceptual
 f1_keywords:
   - "sys.dm_exec_query_statistics_xml"
@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_exec_query_statistics_xml management view"
 dev_langs:
   - "TSQL"
-ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 ---
 # sys.dm_exec_query_statistics_xml (Transact-SQL)
 
@@ -51,6 +50,17 @@ sys.dm_exec_query_statistics_xml(session_id)
 |query_plan|**xml**|Contains the runtime Showplan representation of the query execution plan that is specified with *plan_handle* containing partial statistics. The Showplan is in XML format. One plan is generated for each batch that contains, for example ad hoc [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, stored procedure calls, and user-defined function calls. Nullable.|
 
 ## Remarks
+> [!IMPORTANT]
+> Owning to a possible random access violation (AV) while executing a monitoring stored procedure with the ``sys.dm_exec_query_statistics_xml`` DMV, the Showplan XML attribute \<ParameterList\> value `ParameterRuntimeValue` was removed in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU 26 and [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU 12. This value could be useful while troubleshooting long running stored procedures.
+>
+> Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU 31 and [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU 19, the collection of the Showplan XML attribute \<ParameterList\> value `ParameterRuntimeValue` has been re-enabled with the inclusion of trace flag 2446. This trace flag enables the collection of the runtime parameter value at the cost of introducing additional overhead.
+
+> [!WARNING]
+>Trace Flag 2446 isn't meant to be enabled continuously in a production environment, but only for time-limited troubleshooting purposes. Using this trace flag will introduce additional and possibly significant CPU and memory overhead as we will create a Showplan XML fragment with runtime parameter information, whether the ``sys.dm_exec_query_statistics_xml`` DMV is called or not.
+
+> [!NOTE]
+>Starting with [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)], [!INCLUDE[Azure SQL Database](../../includes/ssazure-sqldb.md)], and [!INCLUDE[Azure SQL Managed Instance](../../includes/ssazuremi_md.md)], to accomplish this at the database level see the FORCE_SHOWPLAN_RUNTIME_PARAMETER_COLLECTION option in [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+
 This system function is available starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1. See KB [3190871](https://support.microsoft.com/help/3190871)
 
 This system function works under both **standard** and **lightweight** query execution statistics profiling infrastructure. For more information, see [Query Profiling Infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md).  
@@ -64,6 +74,10 @@ Due to a limitation in the number of nested levels allowed in the **xml** data t
 ## Permissions  
 On [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission on the server.  
 On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the **Server admin** or an **Azure Active Directory admin** account.
+
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 
 ## Examples  
   
@@ -87,9 +101,28 @@ GO
   
 ```sql  
 --Run this in a different session than the session in which your query is running.
-SELECT * FROM sys.dm_exec_requests
-CROSS APPLY sys.dm_exec_query_statistics_xml(session_id);  
-GO  
+SELECT 
+	eqs.query_plan, 
+	er.session_id, 
+	er.request_id, 
+	er.database_id,
+	er.start_time,
+	er.[status], 
+	er.wait_type,
+	er.wait_resource, 
+	er.last_wait_type,
+	(er.cpu_time/1000) AS cpu_time_sec,
+	(er.total_elapsed_time/1000)/60 AS elapsed_time_minutes,
+	(er.logical_reads*8)/1024 AS logical_reads_KB,
+	er.granted_query_memory,
+	er.dop,
+	er.row_count, 
+	er.query_hash, 
+	er.query_plan_hash
+FROM sys.dm_exec_requests er
+	CROSS APPLY sys.dm_exec_query_statistics_xml(session_id) eqs
+WHERE er.session_id <> @@spid;
+GO
 ```   
   
 ## See Also

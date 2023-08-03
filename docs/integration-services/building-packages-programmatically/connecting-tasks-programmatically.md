@@ -1,23 +1,19 @@
 ---
+title: "Connecting Tasks Programmatically"
 description: "Connecting Tasks Programmatically"
-title: "Connecting Tasks Programmatically | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services 
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "tasks [Integration Services], precedence constraints"
   - "precedence constraints [Integration Services], connecting tasks"
   - "constraints [Integration Services]"
-ms.assetid: 23668e88-cef4-4009-a9cf-38e607eab7a2
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
+  - "CSharp"
 ---
 # Connecting Tasks Programmatically
 

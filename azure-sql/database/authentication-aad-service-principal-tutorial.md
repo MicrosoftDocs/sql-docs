@@ -1,14 +1,13 @@
 ---
 title: Create Azure AD users using service principals
 description: This tutorial walks you through creating an Azure AD user with an Azure AD applications (service principals) in Azure SQL Database
-author: GithubMirek
-ms.author: mireks
+author: nofield
+ms.author: nofield
 ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 08/24/2022
 ms.service: sql-database
 ms.subservice: security
 ms.topic: tutorial
-ms.custom: devx-track-azurepowershell
 ---
 
 # Tutorial: Create Azure AD users using Azure AD applications
@@ -215,7 +214,7 @@ Once a service principal is created in Azure AD, create the user in SQL Database
 ## Create an Azure AD user in SQL Database using an Azure AD service principal
 
 > [!IMPORTANT]
-> The service principal used to login to SQL Database must have a client secret. If it doesn’t have one, follow step 2 of [Create a service principal (an Azure AD application) in Azure AD](#create-a-service-principal-an-azure-ad-application-in-azure-ad). This client secret needs to be added as an input parameter in the script below.
+> The service principal used to login to SQL Database must have a client secret. If it doesn't have one, follow step 2 of [Create a service principal (an Azure AD application) in Azure AD](#create-a-service-principal-an-azure-ad-application-in-azure-ad). This client secret needs to be added as an input parameter in the script below.
 
 1. Use the following script to create an Azure AD service principal user *myapp* using the service principal *AppSP*.
 

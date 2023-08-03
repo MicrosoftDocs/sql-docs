@@ -1,20 +1,17 @@
 ---
-title: "Add, change, or delete available values for a paginated report parameter | Microsoft Docs"
+title: "Add, change, or delete available values for a paginated report parameter"
 description: Customize the list of choices a user can make in a paginated report for a parameter in Report Builder by specifying a list of available values to display to the user.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
+ms.service: reporting-services
+ms.subservice: report-design
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: updatefrequency5
+f1_keywords:
   - "sql13.rtp.rptdesigner.reportparameters.availablevalues.f1"
   - "10455"
   - "10071"
-ms.assetid: 0e03264c-523f-4c59-b71b-ceef600f75f6
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Add, change, or delete available values for a paginated report parameter (Report Builder)
 

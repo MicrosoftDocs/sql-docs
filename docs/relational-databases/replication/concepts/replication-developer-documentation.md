@@ -1,20 +1,17 @@
 ---
+title: "Replication Developer Documentation"
 description: "Replication Developer Documentation"
-title: "Replication Developer Documentation | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "developer's guide [SQL Server replication]"
   - "programming [SQL Server replication]"
   - "replication [SQL Server], development"
-ms.assetid: 7ee134ae-1cab-4a35-8017-8ac6d8fc64b6
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Replication Developer Documentation

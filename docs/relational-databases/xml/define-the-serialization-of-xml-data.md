@@ -1,12 +1,12 @@
 ---
 title: "Define the Serialization of XML Data"
 description: Learn about the rules used when serializing xml data in SQL Server.
-ms.custom: ""
-ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.date: 05/05/2022
+ms.service: sql
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "entitization rules [XML in SQL Server]"
@@ -16,12 +16,10 @@ helpviewer_keywords:
   - "XML [SQL Server], serialization"
   - "xml data type [SQL Server], serialization"
   - "typed XML"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Define the serialization of XML data
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 When casting the **xml** data type explicitly or implicitly to a SQL string or binary type, the content of the **xml** data type will be serialized according to the rules outlined in this article.
 
@@ -114,14 +112,14 @@ The [query() Method (xml Data Type)](../../t-sql/xml/query-method-xml-data-type.
 
 ```sql
 DECLARE @x xml
-SET @x = N'<a>This example contains an entitized char: <.</a>'
+SET @x = N'<a>This example contains an entitized char: .</a>'
 SELECT @x.query('/a/text()');
 ```
 
 This is the result:
 
 ```console
-This example contains an entitized char: <.
+This example contains an entitized char: .
 ```
 
 Following is an example of using the `value()` method:
@@ -133,7 +131,7 @@ SELECT @x.value('(/a/text())[1]', 'nvarchar(100)');
 This is the result:
 
 ```console
-This example contains an entitized char: <.
+This example contains an entitized char: .
 ```
 
 ## Serializing a typed xml data type

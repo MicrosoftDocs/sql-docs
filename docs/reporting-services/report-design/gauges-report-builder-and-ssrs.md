@@ -1,14 +1,14 @@
 ---
-title: "Gauges in a paginated report | Microsoft Docs"
-description: Display key performance indicators in a paginated report to illustrate values or to compare data by using a radial or linear gauge in Report Builder. 
+title: "Gauges in a paginated report"
+description: Display key performance indicators in a paginated report to illustrate values or to compare data by using a radial or linear gauge in Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/03/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
+ms.service: reporting-services
+ms.subservice: report-design
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: updatefrequency5
+f1_keywords:
   - "10226"
   - "10264"
   - "sql13.rtp.rptdesigner.linearscalerangeproperties.shadow.f1"
@@ -156,9 +156,6 @@ f1_keywords:
   - "10270"
   - "10190"
   - "10232"
-ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Gauges in a paginated report (Report Builder)
 

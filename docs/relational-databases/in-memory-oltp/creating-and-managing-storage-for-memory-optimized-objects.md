@@ -4,12 +4,9 @@ description: Learn about attributes of memory-optimized tables and disk-based ta
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.custom: seo-dt-2019
-ms.assetid: 622aabe6-95c7-42cc-8768-ac2e679c5089
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating and Managing Storage for Memory-Optimized Objects

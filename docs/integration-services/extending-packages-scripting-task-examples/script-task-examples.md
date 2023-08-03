@@ -1,22 +1,18 @@
 ---
+title: "Script Task Examples"
 description: "Script Task Examples"
-title: "Script Task Examples | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Script task [Integration Services], examples"
   - "examples [Integration Services]"
   - "SSIS Script task, examples"
-ms.assetid: b0dd77ee-ee11-4cd9-87aa-61dd67f2fe1c
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
 ---
 # Script Task Examples
 

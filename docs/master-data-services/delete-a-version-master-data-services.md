@@ -1,23 +1,19 @@
 ---
-description: "Delete a Version (Master Data Services)"
 title: Delete a Version
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "versions [Master Data Services], deleting"
-  - "deleting versions [Master Data Services]"
-ms.assetid: 2a4eeffe-8379-4744-ad44-c27d8c8ac9a8
+description: "Delete a Version (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "versions [Master Data Services], deleting"
+  - "deleting versions [Master Data Services]"
 ---
 # Delete a Version (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], delete a version when you are sure you no longer need the master data associated with the version. After you delete a version, you cannot retrieve the associated master data.  
   

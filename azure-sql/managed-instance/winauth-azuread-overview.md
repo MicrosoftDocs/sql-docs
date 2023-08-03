@@ -2,9 +2,9 @@
 title: What is Windows Authentication for Azure Active Directory principals on Azure SQL Managed Instance?
 titleSuffix: Azure SQL Managed Instance
 description: Learn about Windows Authentication for Azure Active Directory principals on Azure SQL Managed Instance.
-author: srdan-bozovic-msft
-ms.author: srbozovi
-ms.reviewer: mathoma, bonova, urmilano, wiassaf, kendralittle
+author: sravanisaluru
+ms.author: srsaluru
+ms.reviewer: mathoma, bonova, urmilano, wiassaf
 ms.date: 03/01/2022
 ms.service: sql-managed-instance
 ms.subservice: deployment-configuration
@@ -12,6 +12,7 @@ ms.topic: overview
 ---
 
 # What is Windows Authentication for Azure Active Directory principals on Azure SQL Managed Instance? 
+[!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 [Azure SQL Managed Instance](sql-managed-instance-paas-overview.md) is the intelligent, scalable cloud database service that combines the broadest SQL Server database engine compatibility with the benefits of a fully managed and evergreen platform as a service. Kerberos authentication for Azure Active Directory (Azure AD) enables Windows Authentication access to Azure SQL Managed Instance. Windows Authentication for managed instances empowers customers to move existing services to the cloud while maintaining a seamless user experience and provides the basis for infrastructure modernization.
 

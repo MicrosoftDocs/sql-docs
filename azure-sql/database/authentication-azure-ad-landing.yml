@@ -1,0 +1,123 @@
+### YamlMime:Landing
+
+title: Azure Active Directory (Azure AD) authentication with SQL documentation
+summary: "Find documentation about Azure Active Directory (Azure AD) authentication for SQL Server 2022 and Azure SQL"
+
+metadata:
+  title: Azure Active Directory (Azure AD) authentication with SQL documentation
+  description: "Find documentation about Azure Active Directory (Azure AD) authentication for SQL Server 2022 and Azure SQL"
+  ms.service: sql-database
+  ms.subservice: security
+  ms.topic: landing-page
+  author: VanMSFT
+  ms.author: vanto
+  ms.reviewer:
+  ms.date: 03/06/2023
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+# Cards and links should be based on top customer tasks or top subjects
+# Start card title with a verb
+
+
+  # Card 
+  - title: Azure AD authentication overviews
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: What is Azure Active Directory authentication?
+            url: /azure/active-directory/authentication/overview-authentication
+          - text: Use Azure Active Directory authentication in Azure SQL
+            url: authentication-aad-overview.md
+          
+
+  # Card 
+  - title: Azure AD authentication concepts
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Configure and manage Azure AD authentication with Azure SQL
+            url: authentication-aad-configure.md
+          - text: Azure Active Directory server principals
+            url: authentication-azure-ad-logins.md
+          - text: Azure Active Directory service principal with Azure SQL
+            url: authentication-aad-service-principal.md
+          - text: Azure AD-only authentication with Azure SQL
+            url: authentication-azure-ad-only-authentication.md
+          - text: Azure Policy for Azure Active Directory only authentication with Azure SQL
+            url: authentication-azure-ad-only-authentication-policy.md
+          - text: Managed identities in Azure AD for Azure SQL
+            url: authentication-azure-ad-user-assigned-managed-identity.md
+          - text: Directory Readers role in Azure Active Directory for Azure SQL
+            url: authentication-aad-directory-readers-role.md
+          - text: What is Windows Authentication for Azure Active Directory principals on Azure SQL Managed Instance?
+            url: ../managed-instance/winauth-azuread-overview.md
+
+
+  # Card
+  - title: Azure AD authentication tutorials
+    linkLists:
+      - linkListType: tutorial
+        links:
+          - text: Create server with Azure AD-only authentication enabled in Azure SQL
+            url: authentication-azure-ad-only-authentication-create-server.md
+          - text: Create and utilize Azure Active Directory server logins
+            url: authentication-azure-ad-logins-tutorial.md
+          - text: Create Azure AD guest users and set as an Azure AD admin
+            url: authentication-aad-guest-users.md
+          - text: Enable Azure Active Directory only authentication with Azure SQL
+            url: authentication-azure-ad-only-authentication-tutorial.md
+          - text: Using Azure Policy to enforce Azure Active Directory only authentication with Azure SQL
+            url: authentication-azure-ad-only-authentication-policy-how-to.md
+          - text: Assign Directory Readers role to an Azure AD group and manage role assignments
+            url: authentication-aad-directory-readers-role-tutorial.md
+          - text: Security in Azure SQL Managed Instance using Azure AD server principals (logins)
+            url: ../managed-instance/aad-security-configure-tutorial.md
+          
+
+  # Card
+  - title: Azure AD authentication how-to guides
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Conditional Access with Azure SQL
+            url: conditional-access-configure.md
+          - text: Using Azure Active Directory Multi-Factor Authentication
+            url: authentication-mfa-ssms-overview.md
+
+
+  # Card 
+  - title: Azure AD authentication for SQL Server and SQL Server on Azure Virtual Machines
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Azure AD authentication for SQL Server overview
+            url: /sql/relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview
+          - text: Security considerations for SQL Server on Azure Virtual Machines
+            url: ../virtual-machines/windows/configure-azure-ad-authentication-for-sql-vm.md
+
+
+  # Card
+  - title: Azure AD authentication for SQL Server and SQL Server on Azure Virtual Machines tutorials
+    linkLists:
+      - linkListType: tutorial
+        links:
+          - text: Set up Azure Active Directory authentication for SQL Server
+            url: /sql/relational-databases/security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial
+          - text: Using automation to set up the Azure Active Directory admin for SQL Server
+            url: /sql/relational-databases/security/authentication-access/azure-ad-authentication-sql-server-automation-setup-tutorial
+          - text: Linked server for SQL Server with Azure Active Directory authentication
+            url: /sql/relational-databases/security/authentication-access/azure-ad-authentication-sql-server-linked-server
+          - text: Enable Azure AD authentication for SQL Server on Azure VMs
+            url: ../virtual-machines/windows/configure-azure-ad-authentication-for-sql-vm.md
+
+
+  # Card 
+  - title: Azure AD authentication video references
+    linkLists:
+      - linkListType: video
+        links:
+          - text: Understanding access and authentication
+            url: https://techcommunity.microsoft.com/t5/video-hub/azure-sql-security-series-understanding-access-and/ba-p/2280726
+          - text: Azure AD authentication and Microsoft Purview access policies
+            url: https://www.youtube.com/watch?v=4WPtdTv785Q

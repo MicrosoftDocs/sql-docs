@@ -4,8 +4,8 @@ description: Learn about the function of a witness in automatic failover in SQL 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: database-mirroring
+ms.service: sql
+ms.subservice: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords:
   - "witness [SQL Server], about witness"
@@ -41,7 +41,7 @@ helpviewer_keywords:
  A single-server instance can also function at the same time as a witness in some sessions and a partner in other sessions. However, in practice, a server instance typically functions as either a witness or a partner. This is because the partners require sophisticated computers that have enough hardware to support a production database, whereas the witness can run on any available Windows system that supports [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
 ##  <a name="SwHwRecommendations"></a> Software and Hardware Recommendations  
- We strongly recommend that the witness reside on a separate computer from the partners. Database mirroring partners are supported only by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard edition and by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition. Witnesses, in contrast, are also supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Workgroup and by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Except during an upgrade from an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the server instances in a mirroring session must all be running the same version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For example, a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] witness is supported when you are upgrading from a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] mirroring configuration but cannot be added to an existing or new [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or later mirroring configuration.  
+ We strongly recommend that the witness reside on a separate computer from the partners. Database mirroring partners are supported only by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard edition and by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition. Witnesses, in contrast, are also supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Workgroup and by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Except during an upgrade from an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the server instances in a mirroring session must all be running the same version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For example, a [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] witness is supported when you are upgrading from a [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] mirroring configuration but cannot be added to an existing or new [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] or later mirroring configuration.  
   
  A witness can run on any reliable computer system that supports any of these editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. However, we recommend that every server instance that is used as a witness correspond to the minimum configuration that is required for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard version that you are running. For more information about these requirements, see [Hardware and Software Requirements for Installing SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   

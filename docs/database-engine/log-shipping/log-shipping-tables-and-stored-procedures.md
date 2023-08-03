@@ -4,8 +4,8 @@ description: Review all the tables and stored procedures associated with a log s
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: log-shipping
+ms.service: sql
+ms.subservice: log-shipping
 ms.topic: conceptual
 helpviewer_keywords:
   - "secondary servers [SQL Server]"

@@ -1,21 +1,18 @@
 ---
-description: "CDC Source"
-title: "CDC Source | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+title: "CDC Source"
+description: The CDC source reads a range of change data from SQL Server change tables and delivers the changes downstream to other SSIS components.
+author: chugugrace
+ms.author: chugu
+ms.reviewer: randolphwest
+ms.date: 02/22/2023
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.ssis.designer.cdcsource.f1"
   - "sql13.ssis.designer.cdcsource.connection.f1"
   - "sql13.ssis.designer.cdcsource.columns.f1"
   - "sql13.ssis.designer.cdcsource.errorhandling.f1"
-ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
-author: chugugrace
-ms.author: chugu
 ---
 # CDC Source
 
@@ -109,7 +106,7 @@ use <cdc-enabled-database-name>
   
  To open the **Advanced Editor** dialog box:  
   
--   In the **Data Flow** screen of your [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] project, right click the CDC source and select **Show Advanced Editor**.  
+-   In the **Data Flow** screen of your [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] project, right-click the CDC source and select **Show Advanced Editor**.  
   
  For more information about the properties that you can set in the **Advanced Editor** dialog box, see [CDC Source Custom Properties](../../integration-services/data-flow/cdc-source-custom-properties.md).  
   
@@ -241,8 +238,3 @@ use <cdc-enabled-database-name>
   
  **Redirect Flow**  
  The error or the truncation data row is directed to the error output of the CDC source. In this case the CDC source error handling is used. For more information, see [CDC Source](../../integration-services/data-flow/cdc-source.md).  
-  
-## Related Content  
-  
--   Blog entry, [Processing Modes for the CDC Source](https://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/), on mattmasson.com.  
-  

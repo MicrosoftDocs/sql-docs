@@ -1,18 +1,15 @@
 ---
+title: "Configure TLS Connections on a Native Mode Report Server"
 description: "Configure TLS Connections on a Native Mode Report Server"
-title: "Configure TLS Connections on a Native Mode Report Server | Microsoft Docs"
-ms.date: 09/27/2020
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: security
-
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Secure Sockets Layer (SSL)"
-ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 09/27/2020
+ms.service: reporting-services
+ms.subservice: security
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "Secure Sockets Layer (SSL)"
 ---
 # Configure TLS connections on a native mode report server
 
@@ -39,7 +36,7 @@ ms.author: maggies
   
 -   Uninstalling IIS can temporarily disrupt service to a TLS-bound report server URL. For this reason, it is recommended that you restart the computer after you uninstall IIS.  
   
-     Rebooting the computer is necessary to clear all TLS sessions from cache. Some operating systems cache TLS sessions up to 10 hours, causing an https:// URL to continue to work even after the TLS binding has been removed from the URL reservation in HTTP.SYS. Rebooting the computer closes any open connections that use the channel.  
+     Restarting the computer is necessary to clear all TLS sessions from cache. Some operating systems cache TLS sessions up to 10 hours, causing an https:// URL to continue to work even after the TLS binding has been removed from the URL reservation in HTTP.SYS. Restarting the computer closes any open connections that use the channel.  
   
 ## Bind TLS to a reporting services URL reservation  
  The following steps do not include instructions for requesting, generating, downloading, or installing a certificate. You must have a certificate installed and available to use. The certificate properties that you specify, the certificate authority you obtain it from, and the tools and utilities you use to request and install the certificate are up to you.  

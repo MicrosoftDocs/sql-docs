@@ -6,10 +6,9 @@ author: HugoMSFT
 ms.author: hudequei
 ms.reviewer: wiassaf
 ms.date: 07/16/2021
-ms.prod: sql
-ms.technology: big-data-cluster
+ms.service: sql
+ms.subservice: big-data-cluster
 ms.topic: troubleshooting
-ms.metadata: seo-lt-2019
 ---
 
 # Troubleshoot Big Data Clusters by using Jupyter Notebooks and Azure Data Studio

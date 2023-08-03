@@ -4,10 +4,9 @@ description: Learn about the database-level health detection feature available f
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 01/19/2019
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "AlwaysOn"
   - "DB_FAILOVER"
@@ -33,11 +32,11 @@ Though it is generally recommended, the Database Health option is **off by defau
 
 There are several easy ways to enable database level health detection setting:
 
-1. In SQL Server Management Studio, connect to your SQL Server database engine. Using the Object Explorer window, right click on the Always On High Availability node, and run the **New Availability Group Wizard**. Check the **Database Level Health Detection** checkbox on the Specify Name page. Then complete the rest of the pages in the wizard.
+1. In SQL Server Management Studio, connect to your SQL Server database engine. Using the Object Explorer window, right-click on the Always On High Availability node, and run the **New Availability Group Wizard**. Check the **Database Level Health Detection** checkbox on the Specify Name page. Then complete the rest of the pages in the wizard.
 
    ![Always On Enable Database Health Checkbox](../../../database-engine/availability-groups/windows/media/always-on-enable-database-health-checkbox.png)
 
-2. View the **Properties** of an existing Availability Group in SQL Server Management Studio. Connect to your SQL Server. Using the Object Explorer window, expand Always On High Availability node. Expand Availability Groups. Right click on the availability group, and choose Properties. Check the option **Database Level Health Detection**, then click OK or Script the change.
+2. View the **Properties** of an existing Availability Group in SQL Server Management Studio. Connect to your SQL Server. Using the Object Explorer window, expand Always On High Availability node. Expand Availability Groups. Right-click on the availability group, and choose Properties. Check the option **Database Level Health Detection**, then click OK or Script the change.
 
    ![Always On AG Properties Database Level Health Detection](../../../database-engine/availability-groups/windows/media/always-on-ag-properties-database-level-health-detection.png)
 
@@ -183,3 +182,4 @@ In this example output, the fault_type shows that a critical event happened on t
 * [Enhance Always On Failover Policy to Test SQL Server Database Data and Log Drives](/archive/blogs/alwaysonpro/enhance-alwayson-failover-policy-to-test-sql-server-database-data-and-log-drives)
 
 * [Extended Events](../../../relational-databases/extended-events/extended-events.md)
+* [How to configure an Always On availability group to perform a failover when the database data file is unavailable](/troubleshoot/sql/database-engine/availability-groups/configure-always-on-availability-group-perform-failover)

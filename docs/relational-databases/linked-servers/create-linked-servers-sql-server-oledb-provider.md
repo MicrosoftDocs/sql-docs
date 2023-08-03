@@ -1,16 +1,12 @@
 ---
-description: "Microsoft SQL Server Distributed Queries: OLE DB Connectivity"
 title: "Create linked server provider"
-ms.date: "07/01/2019"
-ms.prod: sql
-ms.technology: 
-ms.prod_service: "database-engine"
-ms.reviewer: "MikeRayMSFT"
-ms.topic: conceptual
+description: "Microsoft SQL Server Distributed Queries: OLE DB Connectivity"
 author: rwestMSFT
 ms.author: randolphwest
-manager: rothj
-ms.custom: seo-dt-2019
+ms.reviewer: "MikeRayMSFT"
+ms.date: "07/01/2019"
+ms.service: sql
+ms.topic: conceptual
 ---
 
 # Microsoft SQL Server Distributed Queries: OLE DB Connectivity

@@ -1,23 +1,19 @@
 ---
+title: "sp_changelogreader_agent (Transact-SQL)"
 description: "sp_changelogreader_agent (Transact-SQL)"
-title: "sp_changelogreader_agent (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2018"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_changelogreader_agent"
-  - "sp_changelogreader_agent_TSQL"
-helpviewer_keywords: 
-  - "sp_changelogreader_agent"
-ms.assetid: 929b2fa7-1267-41d0-8b69-e9ab26a62c0f
 author: markingmyname
 ms.author: maghan
+ms.date: 07/15/2023
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_changelogreader_agent"
+  - "sp_changelogreader_agent_TSQL"
+helpviewer_keywords:
+  - "sp_changelogreader_agent"
+dev_langs:
+  - "TSQL"
 ---
 # sp_changelogreader_agent (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -25,7 +21,7 @@ ms.author: maghan
   Changes security properties of a Log Reader agent. This stored procedure is executed at the Publisher on the publication database.  
   
 > [!IMPORTANT]  
->  When configuring a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+>  When configuring a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/configure-sql-server-encryption.md).  
   
 ## Syntax  
   
@@ -50,7 +46,12 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
 >  When possible, prompt users to enter security credentials at runtime. If you must store credentials in a script file, you must secure the file to prevent unauthorized access.  
   
 `[ @publisher_security_mode = ] publisher_security_mode`
- Is the security mode used by the agent when connecting to the Publisher. *publisher_security_mode* is **smallint**, with a default of NULL. **0** specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, and **1** specifies Windows Authentication.  
+ Is the security mode used by the agent when connecting to the Publisher. *publisher_security_mode* is **smallint**, with a default of NULL. The following values define the security mode: 
+- **0** specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. 
+- **1** specifies Windows Authentication.  
+- **2** specifies Azure Active Directory (Azure AD) Password Authentication starting with SQL Server 2022 CU 6. 
+- **3** specifies Azure AD Integrated Authentication starting with SQL Server 2022 CU 6. 
+- **4** specifies Azure AD Token Authentication starting with SQL Server 2022 CU 6. 
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
@@ -84,5 +85,3 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
  [View and Modify Replication Security Settings](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [sp_helplogreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md)   
  [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)  
-  
-  

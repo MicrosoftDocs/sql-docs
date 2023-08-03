@@ -5,17 +5,15 @@ description: sys.database_event_session_fields (Azure SQL Database and Azure SQL
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "4/18/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-ms.assetid: 9b5c94d6-612c-4e0f-976d-ac6ba55da3ac
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.database_event_session_fields (Azure SQL Database and Azure SQL Managed Instance)
-[!INCLUDE [sqlserver2016-asdb](../../includes/applies-to-version/sqlserver2016-asdb.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 Returns a row for each customizable column that was explicitly set on [events](sys-database-event-session-events-azure-sql-database.md) and [targets](sys-database-event-session-targets-azure-sql-database.md) in a database-scoped event session.
 

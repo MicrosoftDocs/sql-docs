@@ -1,19 +1,16 @@
 ---
+title: "Configure Custom or Forms Authentication on the Report Server"
 description: "Configure Custom or Forms Authentication on the Report Server"
-title: "Configure Custom or Forms Authentication on the Report Server | Microsoft Docs"
-ms.date: 04/18/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: security
-
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Forms authentication, configuring"
-  - "custom authentication [Reporting Services]"
-ms.assetid: e8601a8f-e66d-4649-8e4d-a46ca20ec7d0
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 04/18/2017
+ms.service: reporting-services
+ms.subservice: security
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "Forms authentication, configuring"
+  - "custom authentication [Reporting Services]"
 ---
 # Configure Custom or Forms Authentication on the Report Server
 

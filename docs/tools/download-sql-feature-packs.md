@@ -1,20 +1,18 @@
 ---
 title: Download SQL Server extended features and tools
 description: This article provides a brief explanation of the various downloads and stand-alone packages Microsoft provides to add value for SQL Server.
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: tools-other
-ms.topic: conceptual
-keywords: feature pack
 author: markingmyname
 ms.author: maghan
 ms.reviewer: mikeray
-ms.custom: seo-lt-2019
 ms.date: 09/17/2021
+ms.service: sql
+ms.subservice: tools-other
+ms.topic: conceptual
+keywords: feature pack
 ---
 # Download SQL Server extended features and tools
 
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 This article provides a brief explanation of the various downloads and stand-alone packages Microsoft provides to add value for SQL Server.
 
@@ -35,7 +33,7 @@ This article provides a brief explanation of the various downloads and stand-alo
 
 | Feature | Description |
 |----|-----|
-| [Command Line Utilities for SQL Server](sqlcmd-utility.md) | The SQLCMD utility allows users to connect to, send Transact-SQL batches from, and output rowset information from SQL Server instances. |
+| [Command Line Utilities for SQL Server](./sqlcmd/sqlcmd-utility.md) | The SQLCMD utility allows users to connect to, send Transact-SQL batches from, and output rowset information from SQL Server instances. |
 | [Drivers for PHP for SQL Server](../connect/php/download-drivers-php-sql-server.md) | The Microsoft Drivers for PHP for SQL Server are PHP extensions that allow for the reading and writing of SQL Server data from within PHP scripts. |
 | [JDBC Driver for SQL Server](../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md) | The Microsoft JDBC Driver for SQL Server provides access to SQL Server from any Java application, application server, or Java-enabled applet.|
 | [SQL Server Data-Tier Application Framework](sqlpackage/sqlpackage-download.md#dacfx) | The SQL Server Data-tier Application framework (DacFx) is a .NET component that provides application lifecycle services for database development and management and is available in the [SqlPackage](sqlpackage/sqlpackage-download.md) CLI and as a [NuGet package](https://www.nuget.org/packages/Microsoft.SqlServer.DacFx). The Data-tier Application Framework includes TransactSql.ScriptDOM. |
@@ -48,7 +46,7 @@ This article provides a brief explanation of the various downloads and stand-alo
 
 | Feature | Description |
 |----|-----|
-| [Command Line Utilities for SQL Server](sqlcmd-utility.md) | The SQLCMD utility allows users to connect to, send Transact-SQL batches from, and output rowset information from SQL Server instances. |
+| [Command Line Utilities for SQL Server](./sqlcmd/sqlcmd-utility.md) | The SQLCMD utility allows users to connect to, send Transact-SQL batches from, and output rowset information from SQL Server instances. |
 | [Remote Blob Store](https://go.microsoft.com/fwlink/?linkid=2109005) | The SQL Server Remote Blob Store is a method for storing blobs of unstructured data in an external Content Addressable data store. The component consists of a client-side DLL that is linked into a user application, and a set of stored procedures to be installed on SQL Server. |
 | [SQL Server Upgrade Advisor](../database-engine/install-windows/supported-version-and-edition-upgrades-2019.md) | Microsoft Upgrade Advisor analyzes instances of SQL Server in preparation for upgrading to SQL Server. |
 
@@ -57,7 +55,6 @@ This article provides a brief explanation of the various downloads and stand-alo
 | Feature | Description |
 |----|-----|
 | [Integration Services Feature Pack for Azure](../integration-services/azure-feature-pack-for-integration-services-ssis.md) | The Microsoft Integration Services Feature Pack for Azure provides tools for using IS to connect to the Azure Stack. |
-| [Integration Services Feature Pack for latest SQL Server](https://www.microsoft.com/download/details.aspx?id=100430) | These stand-alone packages provide additional value for the latest Microsoft SQL Server Integration Services. |
 
 ## Kerberos
 
@@ -69,7 +66,7 @@ This article provides a brief explanation of the various downloads and stand-alo
 
 | Feature | Description |
 |----|-----|
-| [Master Data Service Add-in for Microsoft Excel](https://go.microsoft.com/fwlink/?LinkID=390972) | The Master Data Services (MDS) Add-in for Microsoft Excel is a data management tool that delivers a multitude of master data management capabilities with ease and efficiency. |
+| [Master Data Service Add-in for Microsoft Excel](https://go.microsoft.com/fwlink/?LinkID=2086948) | The Master Data Services (MDS) Add-in for Microsoft Excel is a data management tool that delivers a multitude of master data management capabilities with ease and efficiency. |
 
 ## Providers and Drivers
 
@@ -97,7 +94,7 @@ This article provides a brief explanation of the various downloads and stand-alo
 
 - [SQL Server Management Studio documentation](../ssms/download-sql-server-management-studio-ssms.md)
 - [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)
-- [Additional updates and service packs](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
+- [Additional updates and service packs](/troubleshoot/sql/releases/download-and-install-latest-updates?bc=%2fsql%2fbreadcrumb%2ftoc.json&toc=%2fsql%2ftoc.json)
 - [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

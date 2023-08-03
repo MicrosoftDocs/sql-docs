@@ -1,23 +1,19 @@
 ---
+title: "geometry (Transact-SQL)"
 description: "Spatial Types - geometry (Transact-SQL)"
-title: "geometry (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "geometry"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "spatial data types [SQL Server]"
   - "geometry data type [SQL Server], Transact-SQL"
-ms.assetid: 3fefdf7b-f931-404c-821c-82c0375eaf51
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # Spatial Types - geometry (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

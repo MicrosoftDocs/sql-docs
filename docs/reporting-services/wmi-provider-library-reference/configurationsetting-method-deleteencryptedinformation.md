@@ -1,23 +1,18 @@
 ---
+title: "DeleteEncryptedInformation Method (WMI MSReportServer_ConfigurationSetting)"
 description: "DeleteEncryptedInformation Method (WMI MSReportServer_ConfigurationSetting)"
-title: "DeleteEncryptedInformation Method (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: wmi-provider-library-reference
-
-
-ms.topic: conceptual
-apiname: 
-  - "DeleteEncryptedInformation (WMI MSReportServer_ConfigurationSetting Class)"
-apilocation: 
-  - "reportingservices.mof"
-apitype: MOFDef
-helpviewer_keywords: 
-  - "DeleteEncryptedInformation method"
-ms.assetid: c14ed187-bdd9-4304-88e3-72072f03c21b
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: wmi-provider-library-reference
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "DeleteEncryptedInformation method"
+apilocation: "reportingservices.mof"
+apiname: "DeleteEncryptedInformation (WMI MSReportServer_ConfigurationSetting Class)"
+apitype: MOFDef
 ---
 # ConfigurationSetting Method - DeleteEncryptedInformation
   Deletes the encrypted information from the report server database.  

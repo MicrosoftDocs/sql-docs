@@ -1,21 +1,20 @@
 ---
 title: "PolyBase errors and possible solutions"
 description: PolyBase reference for errors and suggested solutions.
-ms.date: 03/22/2021
-ms.prod: sql
-ms.technology: polybase
-ms.topic: conceptual
-dev_langs: 
--  "TSQL"
--  "XML"
-f1_keywords: 
-   - "PolyBase, monitoring"
-   - "PolyBase, performance monitoring"
-helpviewer_keywords: 
-   - "PolyBase, troubleshooting"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: ""
+ms.date: 03/22/2021
+ms.service: sql
+ms.subservice: polybase
+ms.topic: conceptual
+f1_keywords:
+  - "PolyBase, monitoring"
+  - "PolyBase, performance monitoring"
+helpviewer_keywords:
+  - "PolyBase, troubleshooting"
+dev_langs:
+  - "TSQL"
+  - "XML"
 monikerRange: ">= sql-server-linux-ver15 || >= sql-server-2016"
 ---
 # PolyBase errors and possible solutions
@@ -83,6 +82,8 @@ Create External Table foo
 (col1 int) WITH (LOCATION = '/bar/', DATA_SOURCE…);
 ```
 
+> [!NOTE] 
+> [!INCLUDE[snac-removed-oledb-and-odbc](../../includes/snac-removed-oledb-and-odbc.md)]
 
 ### Kerberos support
 
@@ -199,7 +200,7 @@ Set the Hadoop connectivity to a value (preferably 7) which supports Azure Blob 
 ### Create Table As Select error
 
 **Scenario:**  
-Trying to export data to Azure blob storage or Hadoop file system using PolyBase with CREATE EXTERNAL TABLE AS SELECT (CETAS) syntax from SQL Server fails with the following error message:
+Trying to export data to Azure Blob Storage or Hadoop file system using PolyBase with CREATE EXTERNAL TABLE AS SELECT (CETAS) syntax from SQL Server fails with the following error message:
 
 > Msg 156, Level 15, State 1, Line 177<BR>
 > Incorrect syntax near the keyword 'WITH'.<BR>
@@ -213,10 +214,10 @@ When exporting data to Hadoop or Azure Blob Storage via PolyBase, only the data 
 Create the external table first and then use INSERT INTO SELECT to export to the external location. For a code sample, see [PolyBase query scenarios](polybase-queries.md#export-data).
 
 
-### Create External Table from Azure blob storage fails
+### Create External Table from Azure Blob Storage fails
 
 **Scenario:**  
-Dedicated SQL pool (formerly SQL DW) is set up to import data from Azure blob storage. Create external table fails with the following message.
+Dedicated SQL pool (formerly SQL DW) is set up to import data from Azure Blob Storage. Create external table fails with the following message.
 
 > Msg 105019, Level 16, State 1, Line 34<BR>
 > External TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_IsDirExist. Java exception message:com.microsoft.azure.storage.StorageException: Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.: Error [com.microsoft.azure.storage.StorageException: Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.] occurred while accessing external file.'<BR>

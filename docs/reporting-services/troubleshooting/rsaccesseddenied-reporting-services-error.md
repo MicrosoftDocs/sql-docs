@@ -1,18 +1,15 @@
 ---
-title: "rsAccessedDenied - Reporting Services Error | Microsoft Docs"
+title: "rsAccessedDenied - Reporting Services Error"
 description: "In this error reference, learn about 'rsAccessedDenied': The permissions granted to user 'mydomain\\myAccount' are insufficient for performing this operation."
-ms.date: 05/22/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: troubleshooting
-
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "rsAccessDenied error"
-ms.assetid: 2f76b1bf-96a2-4755-b76b-84e933220efc
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 05/22/2019
+ms.service: reporting-services
+ms.subservice: troubleshooting
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "rsAccessDenied error"
 ---
 # rsAccessedDenied - Reporting Services error
   The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] error **rsAccessedDenied** occurs when a user does not have permission to perform an action. For example, they don't have a role assignment that allows them to open a report, or they didn't open their browser with the required permissions.  

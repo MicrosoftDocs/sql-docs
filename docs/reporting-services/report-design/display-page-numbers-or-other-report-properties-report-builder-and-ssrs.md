@@ -1,16 +1,13 @@
 ---
-title: "Display page numbers or other paginated report properties | Microsoft Docs"
-description:  Add properties of your paginated report including page numbers, filenames, and titles, for display in page headers or footers. 
-ms.date: 01/18/2022
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
+title: "Display page numbers or other paginated report properties"
+description: Add properties of your paginated report including page numbers, filenames, and titles, for display in page headers or footers.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 01/18/2022
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Display page numbers or other paginated report properties (Report Builder)
 
@@ -61,7 +58,7 @@ ms.author: maggies
   
 ## To add total number of pages after the page number  
   
-1.  Right click the text box with the expression and click **Expressions**.  
+1.  Right-click the text box with the expression and click **Expressions**.  
   
 2.  Type **&" of "&** at the end of the expression.  
   

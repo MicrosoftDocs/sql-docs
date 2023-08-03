@@ -8,7 +8,7 @@ ms.date: 09/22/2022
 ms.service: sql-db-mi
 ms.subservice: development
 ms.topic: sample
-ms.custom: sqldbrb=2
+ms.custom: sqldbrb=2, devx-track-azurepowershell
 ms.devlang: PowerShell
 ---
 

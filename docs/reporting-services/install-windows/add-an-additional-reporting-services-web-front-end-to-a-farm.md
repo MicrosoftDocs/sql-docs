@@ -1,14 +1,12 @@
 ---
+title: "Add an Additional Reporting Services Web Front-end to a Farm"
 description: "Add an Additional Reporting Services Web Front-end to a Farm"
-title: "Add an Additional Reporting Services Web Front-end to a Farm | Microsoft Docs"
-ms.date: 05/30/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint"
-
-ms.topic: conceptual
-ms.assetid: d7a11bda-ae26-49ac-b071-37d83cae5afe
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 05/30/2017
+ms.service: reporting-services
+ms.topic: conceptual
+ms.custom: updatefrequency5
 monikerRange: ">=sql-server-2016 <=sql-server-2016"
 ---
 # Add an Additional Reporting Services Web Front-end to a Farm

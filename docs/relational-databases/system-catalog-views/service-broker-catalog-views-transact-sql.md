@@ -4,16 +4,14 @@ description: Service Broker Catalog Views (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 helpviewer_keywords:
   - "Service Broker, catalog views"
   - "catalog views [SQL Server], Service Broker"
 dev_langs:
   - "TSQL"
-ms.assetid: 00682b5e-4720-422e-a5ec-4a96f26e1300
 ---
 # Service Broker Catalog Views (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

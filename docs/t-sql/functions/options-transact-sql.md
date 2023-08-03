@@ -4,9 +4,9 @@ description: "Returns information about the current SET options."
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.date: 09/08/2022
-ms.prod: sql
-ms.technology: t-sql
+ms.date: 03/13/2023
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "@@OPTIONS"
@@ -24,7 +24,7 @@ dev_langs:
 
 Returns information about the current SET options.
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
@@ -81,7 +81,7 @@ The following example uses table-valued constructors to generate a numbers-list 
 
 ```sql
 SELECT S.Bits,
-    FLAGS.*
+    Flags.*
 FROM (
     SELECT optRef,
         posRef,
@@ -131,8 +131,34 @@ CROSS APPLY (
     ) AS Flags;
 ```
 
+### D. Review @@OPTIONS bitmask with GET_BIT
+
+**Applies to**: [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions.
+
+The following example uses the [GET_BIT](get-bit-transact-sql.md) function to get the value from each specific bit in `@@OPTIONS`.
+
+```sql
+SELECT
+      GET_BIT(@@OPTIONS, 0)  /* 1     */ AS [DISABLE_DEF_CNST_CHK] -- Controls interim or deferred constraint checking.
+    , GET_BIT(@@OPTIONS, 1)  /* 2     */ AS [IMPLICIT_TRANSACTIONS] -- For dblib network library connections, controls whether a transaction is started implicitly when a statement is executed. The IMPLICIT_TRANSACTIONS setting has no effect on ODBC or OLEDB connections.
+    , GET_BIT(@@OPTIONS, 2)  /* 4     */ AS [CURSOR_CLOSE_ON_COMMIT] -- Controls behavior of cursors after a commit operation has been performed.
+    , GET_BIT(@@OPTIONS, 3)  /* 8     */ AS [ANSI_WARNINGS] -- Controls truncation and NULL in aggregate warnings.
+    , GET_BIT(@@OPTIONS, 4)  /* 16    */ AS [ANSI_PADDING] -- Controls padding of fixed-length variables.
+    , GET_BIT(@@OPTIONS, 5)  /* 32    */ AS [ANSI_NULLS] -- Controls NULL handling when using equality operators.
+    , GET_BIT(@@OPTIONS, 6)  /* 64    */ AS [ARITHABORT] -- Terminates a query when an overflow or divide-by-zero error occurs during query execution.
+    , GET_BIT(@@OPTIONS, 7)  /* 128   */ AS [ARITHIGNORE] -- Returns NULL when an overflow or divide-by-zero error occurs during a query.
+    , GET_BIT(@@OPTIONS, 8)  /* 256   */ AS [QUOTED_IDENTIFIER] -- Differentiates between single and double quotation marks when evaluating an expression.
+    , GET_BIT(@@OPTIONS, 9)  /* 512   */ AS [NOCOUNT] -- Turns off the message returned at the end of each statement that states how many rows were affected.
+    , GET_BIT(@@OPTIONS, 10) /* 1024  */ AS [ANSI_NULL_DFLT_ON] -- Alters the session's behavior to use ANSI compatibility for nullability. New columns defined without explicit nullability are defined to allow nulls.
+    , GET_BIT(@@OPTIONS, 11) /* 2048  */ AS [ANSI_NULL_DFLT_OFF] -- Alters the session's behavior not to use ANSI compatibility for nullability. New columns defined without explicit nullability do not allow nulls.
+    , GET_BIT(@@OPTIONS, 12) /* 4096  */ AS [CONCAT_NULL_YIELDS_NULL] -- Returns NULL when concatenating a NULL value with a string.
+    , GET_BIT(@@OPTIONS, 13) /* 8192  */ AS [NUMERIC_ROUNDABORT] -- Generates an error when a loss of precision occurs in an expression.
+    , GET_BIT(@@OPTIONS, 14) /* 16384 */ AS [XACT_ABORT] -- Rolls back a transaction if a Transact-SQL statement raises a run-time error.*/
+GO
+```
+
 ## See also
 
-- [Configuration Functions (Transact-SQL)](../../t-sql/functions/configuration-functions-transact-sql.md)
+- [Configuration Functions (Transact-SQL)](configuration-functions-transact-sql.md)
 - [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
 - [Configure the user options Server Configuration Option](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)

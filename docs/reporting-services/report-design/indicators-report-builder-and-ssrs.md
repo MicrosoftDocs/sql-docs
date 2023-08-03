@@ -1,23 +1,20 @@
 ---
 title: "Indicators in a paginated report| Microsoft Docs"
-description: Learn about indicators, the small gauges that convey the state of a single data value in paginated reports in Report Builder. 
+description: Learn about indicators, the small gauges that convey the state of a single data value in paginated reports in Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
+ms.service: reporting-services
+ms.subservice: report-design
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: updatefrequency5
+f1_keywords:
   - "10545"
   - "10547"
   - "sql13.rtp.rptdesigner.indicatorproperties.action.f1"
   - "10546"
   - "sql13.rtp.rptdesigner.indicatorproperties.validateandstates.f1"
   - "sql13.rtp.rptdesigner.indicatorproperties.general.f1"
-ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Indicators in a paginated report (Report Builder)
 
@@ -44,7 +41,7 @@ ms.author: maggies
  For more information about using indicators as KPIs, see [Tutorial: Adding a KPI to Your Report &#40;Report Builder&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
   
 > [!NOTE]  
->  You can publish indicators separately from a report as report parts. Read more about [Report Parts](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md). However, report parts are deprecated for all releases of SQL Server Reporting Services after SQL Server Reporting Services 2019.
+>  You can publish indicators separately from a report as report parts. Read more about [Report Parts](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md). However, report parts are deprecated for all releases of SQL Server Reporting Services after SQL Server Reporting Services 2019, discontinued starting in SQL Server Reporting Services 2022 and Power BI Report Server.
   
 ##  <a name="ComparingIndicatorsToGauges"></a> Comparing Indicators to Gauges  
  Although they look very different, indicators are just simple gauges. Both indicators and gauges display a single data value. The key differences are that gauges have elements such as frames and  pointers. Indicators have only states, icons, and (optionally) labels. Indicator states are similar to gauge ranges.  
@@ -56,7 +53,7 @@ ms.author: maggies
  Depending on how you want to depict the data value, gauges might be more effective than indicators. For more information, see [Gauges &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md).  
   
 ##  <a name="ChoosingIndicatorTypes"></a> Choosing the Indicator Type to Use  
- Using the right indicator set is key to instantly communicating the meaning of the data, whether the data is in a detail row or row or column group in a table or matrix, or by itself in the report body or dashboard. The built-in indicator sets have three or more icons. The icons can vary by shape, color, or both. Each icon communicates a different data state.  
+ Using the right indicator set is key to instantly communicating the meaning of the data, whether the data is in a detail row, or in a row or column group in a table or matrix, or by itself in the report body or dashboard. The built-in indicator sets have three or more icons. The icons can vary by shape, color, or both. Each icon communicates a different data state.  
   
  The following table lists the built-in indicator sets and describes some common uses of them.  
   
@@ -67,7 +64,7 @@ ms.author: maggies
 |![Rs_ShapeIcons](../../reporting-services/report-design/media/rs-shapeicons.gif "Rs_ShapeIcons")|Shape: indicates conditions using commonly shapes such as traffic signs and diamond shapes.|  
 |![rs_RatingIcons](../../reporting-services/report-design/media/rs-ratingicons.gif "rs_RatingIcons")|Ratings: indicates ratings by using common recognized shapes and symbols that show progressive values such as number of quadrants in a square.|  
   
- After you choose a indicator set, you can customize the appearance of each indicator icon in the set by setting its properties in the dialog boxes for indicators or the Properties pane. You can use the built-in colors, icons, and sizes or expressions to configure indicators.  
+ After you choose an indicator set, you can customize the appearance of each indicator icon in the set by setting its properties in the dialog boxes for indicators or the Properties pane. You can use the built-in colors, icons, and sizes or expressions to configure indicators.  
   
 ##  <a name="CustomizingIndicators"></a> Customizing Indicators  
  Indicators can be customized to suit your needs. You can modify the indicators sets as well as individual indicator icon within a set in the following ways:  

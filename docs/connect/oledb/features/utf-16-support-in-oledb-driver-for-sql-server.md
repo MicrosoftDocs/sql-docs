@@ -4,8 +4,8 @@ description: Learn about UTF-16 support in OLE DB Driver for SQL Server and when
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "06/12/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 ---
 # UTF-16 Support in OLE DB Driver for SQL Server

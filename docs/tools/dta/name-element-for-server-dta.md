@@ -1,20 +1,16 @@
 ---
 title: "Name Element for Server (DTA)"
 description: In the dta utility, the Name element for Server contains the name of the server where the databases you want to tune reside.
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: tools-other
-ms.topic: conceptual
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "Name element"
-ms.assetid: 4c94754d-6d62-4357-8ce7-f107ebf90c71
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
 ms.date: 03/01/2017
+ms.service: sql
+ms.subservice: tools-other
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Name element"
+dev_langs:
+  - "XML"
 ---
 
 # Name Element for Server (DTA)

@@ -4,11 +4,9 @@ description: In SQL Server 2019, you can use bcp to import native and character 
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: data-movement
+ms.service: sql
+ms.subservice: data-movement
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "earlier versions [SQL Server], import and export data formats"
   - "-V switch"
@@ -17,9 +15,9 @@ helpviewer_keywords:
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Import native and character format data from earlier versions of SQL Server
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-In [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] and later, you can use **bcp** to import native and character format data from [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], or [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] by using the **-V** switch. The **-V** switch causes [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] to use data types from the specified earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and the data file format are the same as the format in that earlier version.  
+In [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] and later, you can use **bcp** to import native and character format data from [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)], or [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] by using the **-V** switch. The **-V** switch causes [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] to use data types from the specified earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and the data file format are the same as the format in that earlier version.  
   
 To specify an earlier [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version for a data file, use the **-V** switch with one of the following qualifiers:  
   
@@ -27,7 +25,7 @@ To specify an earlier [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
 |------------------------|---------------|  
 |[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]|**-V80**|  
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|**-V90**|  
-|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|**-V100**|  
+|[!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]|**-V100**|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|**-V 110**|  
   
 ## Interpretation of Data Types  

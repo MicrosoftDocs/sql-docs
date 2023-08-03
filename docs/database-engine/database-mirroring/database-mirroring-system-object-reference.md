@@ -4,8 +4,8 @@ description: "See information about database mirroring system objects: system ca
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: database-mirroring
+ms.service: sql
+ms.subservice: database-mirroring
 ms.topic: conceptual
 ---
 # Database mirroring system object reference

@@ -1,15 +1,13 @@
 ---
+title: "Backup and restore databases using Always Encrypted"
 description: "Backup and restore databases using Always Encrypted"
-title: "Backup and restore databases using Always Encrypted | Microsoft Docs"
-ms.custom: ""
-ms.date: 10/30/2019
-ms.prod: sql
-ms.reviewer: vanto
-ms.technology: security
-ms.topic: conceptual
-ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
+ms.reviewer: vanto
+ms.date: 10/30/2019
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Backup and restore databases using Always Encrypted 
@@ -25,13 +23,13 @@ If you restored the database on a different server or under a different name, yo
 
 For detailed information about how to back up and restore a database, see:
 - [Backup Overview (SQL Server)](../../backup-restore/backup-overview-sql-server.md)
-- [Restore a database to a Managed Instance](/azure/sql-database/sql-database-managed-instance-get-started-restore)
+- [Restore a database to Azure SQL Managed Instance with SSMS](/azure/azure-sql/managed-instance/restore-sample-database-quickstart)
 
-## Next Steps
+## Next steps
 - [Query columns using Always Encrypted with SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
 - [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md) 
 
-## See Also
+## See also
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Export and import databases using Always Encrypted](always-encrypted-migrate-using-bacpac.md)
 - [Migrate data to or from columns using Always Encrypted with SQL Server Import and Export Wizard](always-encrypted-migrate-using-import-export-wizard.md)

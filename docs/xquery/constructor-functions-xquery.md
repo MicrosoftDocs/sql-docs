@@ -1,23 +1,19 @@
 ---
-title: "Constructor Functions (XQuery) | Microsoft Docs"
+title: "Constructor Functions (XQuery)"
 description: Learn about the constructor functions in XQuery that allow you to create instances of the XSD built-in or user-defined atomic types.
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: sql
-ms.prod_service: sql
-ms.reviewer: ""
-ms.technology: xml
-ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "constructor functions [XQuery]"
-ms.assetid: 98562d0e-d0e0-4f62-b001-90acbac67277
 author: "rothja"
 ms.author: "jroth"
+ms.date: "03/09/2017"
+ms.service: sql
+ms.subservice: xml
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "constructor functions [XQuery]"
+dev_langs:
+  - "XML"
 ---
 # Constructor Functions (XQuery)
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   From a specified input, the constructor functions create instances of any of the XSD built-in or user-defined atomic types.  
   

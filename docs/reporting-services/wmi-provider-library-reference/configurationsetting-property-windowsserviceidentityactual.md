@@ -1,23 +1,18 @@
 ---
+title: "ConfigurationSetting Property - WindowsServiceIdentityActual"
 description: "ConfigurationSetting Property - WindowsServiceIdentityActual"
-title: "ConfigurationSetting Property - WindowsServiceIdentityActual | Microsoft Docs"
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: wmi-provider-library-reference
-
-
-ms.topic: conceptual
-apiname: 
-  - "WindowsServiceIdentityActual"
-apilocation: 
-  - "reportingservices.mof"
-apitype: MOFDef
-helpviewer_keywords: 
-  - "WindowsServiceIdentityActual property"
-ms.assetid: 08289240-098d-4ad1-b165-227699747ba4
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: wmi-provider-library-reference
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "WindowsServiceIdentityActual property"
+apilocation: "reportingservices.mof"
+apiname: "WindowsServiceIdentityActual"
+apitype: MOFDef
 ---
 # ConfigurationSetting Property - WindowsServiceIdentityActual
   The identity that the Report Server Windows service is running under. Read-only.  

@@ -1,31 +1,19 @@
---- 
- 
-# required metadata 
-title: "rx_fast_forest: Fast Forest" 
-description: "Machine Learning Fast Forest" 
-keywords: "models, classification, regression" 
-author: WilliamDAssafMSFT
-ms.author: wiassaf 
-manager: "cgronlun" 
-ms.date: 07/15/2019
-ms.topic: "reference" 
-ms.prod: "sql"
-ms.technology: "machine-learning-services" 
-ms.service: "" 
-ms.assetid: "" 
- 
-# optional metadata 
-ROBOTS: "" 
-audience: "" 
-ms.devlang: "Python" 
-ms.reviewer: "" 
-ms.suite: "" 
-ms.tgt_pltfrm: "" 
-ms.custom: "" 
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
- 
 ---
-
+title: "rx_fast_forest: Fast Forest"
+description: "Machine Learning Fast Forest"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 07/15/2019
+ms.service: sql
+ms.subservice: "machine-learning-services"
+ms.topic: "reference"
+keywords:
+  - models
+  - classification
+  - regression
+ms.devlang: Python
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
+---
 # *microsoftml.rx_fast_forest*: Random Forest
 
 
@@ -143,7 +131,7 @@ The default value is 20.
 
 Minimum number of training instances required to form a
 leaf. That is, the minimal number of documents allowed in a leaf of a
-regression tree, out of the sub-sampled data. A ‘split’ means that features
+regression tree, out of the sub-sampled data. A 'split' means that features
 in each level of the tree (node) are randomly divided. The default value is 10.
 
 
@@ -180,7 +168,7 @@ value is 0.
 ### gain_conf_level
 
 Tree fitting gain confidence requirement (should be in
-the range [0,1) ). The default value is 0.
+the range `[0,1]`). The default value is 0.
 
 
 ### train_threads
@@ -274,7 +262,7 @@ no packages outside `RxOptions.get_option("transform_packages")` are preloaded.
 
 NOT SUPPORTED. A user-defined environment to serve as a parent to all
 environments developed internally and used for variable data transformation.
-If `transform_environment = None`, a new “hash” environment with parent
+If `transform_environment = None`, a new "hash" environment with parent
 revoscalepy.baseenv is used instead.
 
 

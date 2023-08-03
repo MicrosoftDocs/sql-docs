@@ -1,25 +1,19 @@
 ---
-description: "SQL Server Native Client Conversions (OLE DB)"
 title: "Bindings and Conversions (OLE DB)"
+description: "SQL Server Native Client Conversions (OLE DB)"
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: 
-
+ms.service: sql
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "conversions [OLE DB]"
   - "bindings [OLE DB]"
   - "OLE DB, bindings and conversions"
-ms.assetid: c187df58-a8c8-4c74-a76f-663abbc5f0c1
-author: markingmyname
-ms.author: maghan
-ms.custom: seo-dt-2019
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Native Client Conversions (OLE DB)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   This section discusses how to convert between **datetime** and **datetimeoffset** values. The conversions described in this section are either already provided by OLE DB or are a consistent extension of OLE DB.  
   
@@ -62,10 +56,10 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## In This Section  
  [Conversions Performed from Client to Server](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-client-to-server.md)  
- Describes date/time conversions performed between a client application written with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB and [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (or later).  
+ Describes date/time conversions performed between a client application written with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB and [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] (or later).  
   
  [Conversions Performed from Server to Client](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-server-to-client.md)  
- Describes date/time conversions performed between [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (or later) and a client application written with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB.  
+ Describes date/time conversions performed between [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] (or later) and a client application written with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB.  
   
 ## See Also  
  [Date and Time Improvements &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  

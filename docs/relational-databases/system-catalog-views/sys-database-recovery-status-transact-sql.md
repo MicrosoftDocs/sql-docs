@@ -4,9 +4,8 @@ description: sys.database_recovery_status (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "08/12/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "database_recovery_status_TSQL"
@@ -17,10 +16,9 @@ helpviewer_keywords:
   - "sys.database_recovery_status catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 46fab234-1542-49be-8edf-aa101e728acf
 ---
 # sys.database_recovery_status (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Contains one row per database. If the database is not opened, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] tries to start it.  
   

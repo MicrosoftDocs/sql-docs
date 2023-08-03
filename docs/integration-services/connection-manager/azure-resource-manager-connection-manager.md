@@ -1,19 +1,16 @@
 ---
+title: "Azure Resource Manager Connection Manager"
 description: "Azure Resource Manager Connection Manager"
-title: "Azure Resource Manager Connection Manager | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "SQL13.DTS.DESIGNER.AFPARMCM.F1"
-  - "SQL14.DTS.DESIGNER.AFPARMCM.F1"
-ms.assetid: 8ce8024f-153f-4066-b607-0d36fefc79ed
 author: "Lingxi-Li"
 ms.author: "lingxl"
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.custom: devx-track-arm-template
+ms.topic: conceptual
+f1_keywords:
+  - "SQL13.DTS.DESIGNER.AFPARMCM.F1"
+  - "SQL14.DTS.DESIGNER.AFPARMCM.F1"
 ---
 # Azure Resource Manager Connection Manager
 

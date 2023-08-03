@@ -4,9 +4,8 @@ description: sysmergearticlecolumns (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "sysmergearticlecolumns"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "sysmergearticlecolumns system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 1ad8663f-a624-42a2-8641-fefac3433c97
 ---
 # sysmergearticlecolumns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,22 +1,19 @@
 ---
-title: "Limit Report History - Reporting Services | Microsoft Docs"
+title: "Limit Report History - Reporting Services"
 description: Learn how to configure the report history for a report server. Also learn how to configure report history for a specific report.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 06/26/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reports
-
-
+ms.service: reporting-services
+ms.subservice: reports
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "viewing report history"
   - "report history [Reporting Services], viewing history"
   - "report history [Reporting Services], configuring history"
   - "historical data [Reporting Services]"
   - "displaying report history"
-ms.assetid: 8e255792-d9ef-496f-a26c-9e969c1209a0
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Limit Report History - Reporting Services
   Report history is a collection of report snapshots that you create over time. You can create report history on demand, or schedule how often a snapshot is created and added to report history.  

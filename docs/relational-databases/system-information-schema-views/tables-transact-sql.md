@@ -1,29 +1,26 @@
 ---
 title: TABLES (Transact-SQL)
 description: "TABLES (Transact-SQL)"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "TABLES_TSQL"
-  - "TABLES"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "TABLES view"
-  - "INFORMATION_SCHEMA.TABLES view"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
-ms.custom: ""
 ms.date: "05/20/2019"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "TABLES_TSQL"
+  - "TABLES"
+helpviewer_keywords:
+  - "TABLES view"
+  - "INFORMATION_SCHEMA.TABLES view"
+dev_langs:
+  - "TSQL"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 
 # TABLES (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
 Returns one row for each table or view in the current database for which the current user has permissions.  
   

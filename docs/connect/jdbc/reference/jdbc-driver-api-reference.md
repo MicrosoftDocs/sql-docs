@@ -4,8 +4,8 @@ description: The technical API reference for the JDBC classes in the JDBC Driver
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 01/11/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: reference
 ---
 # JDBC driver API reference
@@ -14,7 +14,7 @@ ms.topic: reference
 
 ## Overview
 
-The [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] provides an API that can be used within Java programming code to connect to and interact with a [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database.
+The [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] provides an API that can be used within Java programming code to connect to and interact with a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database.
 
 ### JavaDoc.io website is primary
 

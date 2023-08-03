@@ -4,8 +4,8 @@ description: Learn about Connection objects, used to connect to data sources in 
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "11/13/2020"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Connecting to a data source in ADO.NET

@@ -1,17 +1,14 @@
 ---
-title: "Subscription Settings & File Share Account (Configuration Manager) | Microsoft Docs"
+title: "Subscription Settings & File Share Account (Configuration Manager)"
 description: "Use the Subscription Settings page of the Report Server Configuration Manager to configure a file share account for Native mode report servers and file share subscriptions."
-ms.date: 09/15/2022
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.custom: seo-lt-2019​, seo-mmd-2019
-
-ms.topic: conceptual
-f1_keywords: 
-  - "SQL13.rsconfigtool.subscriptionsettings.F1"
-ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 09/15/2022
+ms.service: reporting-services
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "SQL13.rsconfigtool.subscriptionsettings.F1"
 ---
 # Subscription Settings and a File Share Account (Report Server Configuration Manager)
   Use the **Subscription Settings** page of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager to configure a file share account for Native mode report servers and file share subscriptions. The file share account allows you to use a single set of credentials in multiple subscriptions that deliver reports to a file share. When it is time to change the credentials, you configure the change for the file share account and you do not need to update each individual subscription.  

@@ -1,20 +1,17 @@
 ---
+title: "&lt;AgentProfileName&gt; Properties"
 description: "&lt;AgentProfileName&gt; Properties"
-title: "&lt;AgentProfileName&gt; Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.profiles.perfprofileprops.f1"
-helpviewer_keywords: 
-  - "Agent Profile Properties dialog box"
-ms.assetid: 01a992d2-e4ff-417c-93f0-dc43ab2d1624
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.profiles.perfprofileprops.f1"
+helpviewer_keywords:
+  - "Agent Profile Properties dialog box"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # &lt;AgentProfileName&gt; Properties

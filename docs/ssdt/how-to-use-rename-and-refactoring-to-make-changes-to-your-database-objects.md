@@ -1,21 +1,18 @@
 ---
 title: Rename and Refactoring to Make Changes to your Database Objects
 description: Learn about the Rename and Refactor menus in the Transact-SQL Editor. See how to rename types, switch object schemas, expand wildcards, and fully qualify names.
-ms.prod: sql
-ms.technology: ssdt
+author: subhojit-msft
+ms.author: subasak
+ms.date: 05/07/2023
+ms.service: sql
+ms.subservice: ssdt
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql.data.tools.dbrefactoring.previewdialog"
   - "sql.data.tools.editor.howto.refactoring"
   - "sql.data.tools.dbrefactoring.renamedialog"
   - "sql.data.tools.dbrefactoring.moveschemadialog"
   - "sql.data.tools.dbrefactoring.renameserverdatabasedialog"
-ms.assetid: f35520e6-8e6e-47b1-87a3-22c0cf2cabdb
-author: markingmyname
-ms.author: maghan
-ms.reviewer: “”
-ms.custom: seo-lt-2019
-ms.date: 02/09/2017
 ---
 
 # How to: Use Rename and Refactoring to Make Changes to your Database Objects
@@ -29,7 +26,7 @@ The Refactor contextual menu in the Transact\-SQL Editor allows you to rename or
   
 1.  Right-click the **Products** table (Products.sql) in **Solution Explorer** and select **View Code** to open the script in Transact\-SQL editor.  
   
-2.  Right click `[Products]` in the script, select **Refactor**, and **Rename**.  
+2.  Right-click `[Products]` in the script, select **Refactor**, and **Rename**.  
   
 3.  In the **New Name** field, change it to **Product**. Leave the **Preview Changes** option checked and click **OK**.  
   
@@ -48,6 +45,9 @@ The Refactor contextual menu in the Transact\-SQL Editor allows you to rename or
 10. Expand **Tables**, and notice that the **Products** table has been renamed.  
   
 11. Right-click **Product** and select **View Data**. Notice that existing data is kept intact regardless of the rename operation.  
+
+> [!WARNING]  
+> If a refactor log is deleted, the complete history of the refactoring will be deleted. When the project is published to a database where prior refactor operations haven't been applied, any refactor operations completed before the refactor file was deleted, will be published as drop and create operations. As a result, data loss may occur.
   
 ### To expand wildcards  
   

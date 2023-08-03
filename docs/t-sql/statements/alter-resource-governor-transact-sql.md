@@ -4,9 +4,8 @@ description: ALTER RESOURCE GOVERNOR (Transact-SQL)
 author: markingmyname
 ms.author: maghan
 ms.date: "05/01/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ALTER RESOURCE GOVERNOR"
@@ -20,7 +19,7 @@ dev_langs:
   - "TSQL"
 ---
 # ALTER RESOURCE GOVERNOR (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   This statement is used to perform the following Resource Governor actions in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
@@ -34,7 +33,7 @@ dev_langs:
   
 -   Sets the maximum I/O operations per disk volume.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

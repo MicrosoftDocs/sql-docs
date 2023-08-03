@@ -68,7 +68,7 @@ First, review the venue types included in each tenant database. Connect to one o
 1. Open SSMS and connect to the tenant server: *tenants1-dpt-&lt;user&gt;.database.windows.net*
 1. To confirm that *Motorcycle Racing* and *Swimming Club* **are not** currently included, browse to the _contosoconcerthall_ database on the *tenants1-dpt-&lt;user&gt;* server and query the *VenueTypes* table.
 
-Now let’s create a job to update the *VenueTypes* table in all the tenant databases to add the new venue types.
+Now let's create a job to update the *VenueTypes* table in all the tenant databases to add the new venue types.
 
 To create a new job, you use a set of jobs system stored procedures created in the _jobagent_ database when the job agent was created.
 
@@ -95,11 +95,11 @@ Create a job using the same jobs 'system' stored procedures.
 
 1. Open SSMS and connect to the _catalog-dpt-&lt;user&gt;.database.windows.net_ server
 1. Open the file _…\\Learning Modules\\Schema Management\\OnlineReindex.sql_
-1. Right click, select Connection, and connect to the _catalog-dpt-&lt;user&gt;.database.windows.net_ server, if not already connected
+1. Right-click, select Connection, and connect to the _catalog-dpt-&lt;user&gt;.database.windows.net_ server, if not already connected
 1. Ensure you are connected to the _jobagent_ database and press **F5** to run the script
 
 Observe the following elements in the _OnlineReindex.sql_ script:
-* **sp\_add\_job** creates a new job called “Online Reindex PK\_\_VenueTyp\_\_265E44FD7FD4C885”
+* **sp\_add\_job** creates a new job called "Online Reindex PK\_\_VenueTyp\_\_265E44FD7FD4C885"
 * **sp\_add\_jobstep** creates the job step containing T-SQL command text to update the index
 * The remaining views in the script monitor job execution. Use these queries to review the status value in the **lifecycle** column to determine when the job has successfully finished on all target group members.
 

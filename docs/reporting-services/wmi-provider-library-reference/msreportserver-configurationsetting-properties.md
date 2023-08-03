@@ -1,24 +1,19 @@
 ---
+title: "MSReportServer_ConfigurationSetting Properties"
 description: "MSReportServer_ConfigurationSetting Properties"
-title: "MSReportServer_ConfigurationSetting Properties | Microsoft Docs"
-ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: wmi-provider-library-reference
-
-
-ms.topic: conceptual
-apiname: 
-  - "MSReportServer_ConfigurationSetting Properties"
-apilocation: 
-  - "reportingservices.mof"
-apitype: MOFDef
-helpviewer_keywords: 
-  - "WMI provider [Reporting Services], MSReportServer_ConfigurationSetting class"
-  - "MSReportServer_ConfigurationSetting class"
-ms.assetid: e75fe1e5-197b-4c65-859b-370821cad003
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/14/2017
+ms.service: reporting-services
+ms.subservice: wmi-provider-library-reference
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "WMI provider [Reporting Services], MSReportServer_ConfigurationSetting class"
+  - "MSReportServer_ConfigurationSetting class"
+apilocation: "reportingservices.mof"
+apiname: "MSReportServer_ConfigurationSetting Properties"
+apitype: MOFDef
 ---
 # MSReportServer_ConfigurationSetting Properties
   The MSReportServer_ConfigurationSetting class represents the installation and runtime parameters of a report server instance. These settings are stored in the RSReportServer.config configuration file.  

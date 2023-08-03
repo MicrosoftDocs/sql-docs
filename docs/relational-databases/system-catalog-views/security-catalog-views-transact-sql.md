@@ -4,11 +4,9 @@ description: Security Catalog Views (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "05/24/2022"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-ms.custom: event-tier1-build-2022
 helpviewer_keywords:
   - "cryptography [SQL Server], catalog views"
   - "encryption [SQL Server], catalog views"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "security catalog views [SQL Server]"
 dev_langs:
   - "TSQL"
-ms.assetid: 4d5cf1bf-09a7-4ee0-9dbb-5c584750fc67
 ---
 # Security Catalog Views (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

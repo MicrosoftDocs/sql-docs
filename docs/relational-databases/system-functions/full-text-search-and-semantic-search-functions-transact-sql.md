@@ -1,20 +1,16 @@
 ---
+title: "Full-Text Search and Semantic Search Functions (Transact-SQL)"
 description: "Full-Text Search and Semantic Search Functions (Transact-SQL)"
-title: "Full-Text Search and Semantic Search Functions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "semantic search [SQL Server], system functions"
-ms.assetid: a61a3694-7604-4583-962e-fc30f771c6fa
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+helpviewer_keywords:
+  - "semantic search [SQL Server], system functions"
+dev_langs:
+  - "TSQL"
 ---
 # Full-Text Search and Semantic Search Functions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

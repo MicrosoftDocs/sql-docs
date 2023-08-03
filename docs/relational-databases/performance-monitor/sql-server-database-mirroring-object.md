@@ -1,20 +1,17 @@
 ---
 title: "SQL Server, Database Mirroring object"
-description: Learn about the SQLServer:Database Mirroring performance object, which contains performance counters to report information about SQL Server database mirroring.
-ms.custom: ""
+description: "Learn about the SQLServer:Database Mirroring performance object, which contains performance counters to report information about SQL Server database mirroring."
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "07/12/2021"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: performance
+ms.service: sql
+ms.subservice: performance
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQLServer:Database Mirroring"
   - "database mirroring [SQL Server], performance counters"
   - "performance counters [SQL Server], database mirroring"
   - "Database Mirroring object"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # SQL Server, Database Mirroring object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

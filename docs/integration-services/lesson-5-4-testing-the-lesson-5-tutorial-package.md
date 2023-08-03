@@ -1,16 +1,12 @@
 ---
+title: "Step 4: Test the Lesson 5 package"
 description: "Lesson 5-4: Test the Lesson 5 package"
-title: "Step 4: Test the Lesson 5 package | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/08/2019"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: tutorial
-ms.assetid: 5215b77d-c2ec-4b25-a3de-ca49ea197d74
 author: chugugrace
 ms.author: chugu
+ms.date: "01/08/2019"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: tutorial
 ---
 # Lesson 5-4: Test the Lesson 5 package
 
@@ -31,7 +27,7 @@ Before you test the package, verify that the control and data flows in the Lesso
   
 **Data Flow**  
   
-![Data flow in package](../integration-services/media/task9lesson1data.gif "Data flow in package")  
+![Data flow in package](../integration-services/media/task5lesson5data.gif "Data flow in package")
   
 ## Test the Lesson 5 package  
   

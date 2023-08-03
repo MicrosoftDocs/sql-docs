@@ -4,16 +4,13 @@ description: View the annotated XSD schema that is used by the examples in this 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "XPath queries [SQLXML], annotated XSD schemas in queries"
   - "annotated XSD schemas, samples"
   - "annotated XSD schemas, queries"
-ms.assetid: fefa2cc8-2d3c-4336-aeae-ce063a3a8df2
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Sample Annotated XSD Schema for XPath Examples (SQLXML 4.0)

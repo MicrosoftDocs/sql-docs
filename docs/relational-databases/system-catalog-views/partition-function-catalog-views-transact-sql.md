@@ -4,16 +4,14 @@ description: Partition Function Catalog Views (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 helpviewer_keywords:
   - "catalog views [SQL Server], partition function"
   - "partition function catalog views [SQL Server]"
 dev_langs:
   - "TSQL"
-ms.assetid: 12400676-7f6b-4437-8fcb-ba9a33f35469
 ---
 # Partition Function Catalog Views (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

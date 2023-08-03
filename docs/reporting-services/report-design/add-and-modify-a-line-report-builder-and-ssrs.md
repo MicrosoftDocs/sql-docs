@@ -1,16 +1,13 @@
 ---
-title: "Add and modify a line in a paginated report | Microsoft Docs"
+title: "Add and modify a line in a paginated report"
 description: Customize the appearance of reports by adding a graphical element to separate sections or by editing line properties to change color or style in Report Builder.
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: 8dc4998b-a214-49b6-96e7-fbc179015209
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Add and modify a line in a paginated report (Report Builder)
 

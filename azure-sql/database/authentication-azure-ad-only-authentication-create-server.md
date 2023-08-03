@@ -2,12 +2,13 @@
 title: Create server with Azure Active Directory only authentication enabled
 titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: This article guides you through creating an Azure SQL logical server or managed instance with Azure Active Directory (Azure AD) only authentication enabled, which disables connectivity using SQL Authentication
-author: GithubMirek
-ms.author: mireks
+author: nofield
+ms.author: nofield
 ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 04/06/2022
 ms.service: sql-db-mi
 ms.subservice: security
+ms.custom: devx-track-azurepowershell, devx-track-azurecli
 ms.topic: how-to
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---

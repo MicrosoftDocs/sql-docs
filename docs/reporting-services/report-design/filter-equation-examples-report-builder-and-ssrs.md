@@ -1,18 +1,15 @@
 ---
-title: "Filter equation examples in a paginated report | Microsoft Docs"
-description:  Find out how to create a paginated report filter. Consider these examples of often-used filters to create your own. 
-ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "filtering data [Reporting Services], filter equation examples"
-ms.assetid: 66bec93d-7c3b-4d4a-8cb6-7a7bb2f34ec6
+title: "Filter equation examples in a paginated report"
+description: Find out how to create a paginated report filter. Consider these examples of often-used filters to create your own.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/07/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "filtering data [Reporting Services], filter equation examples"
 ---
 # Filter equation examples in a paginated report (Report Builder)
 

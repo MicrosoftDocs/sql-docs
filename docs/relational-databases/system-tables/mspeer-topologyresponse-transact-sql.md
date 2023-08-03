@@ -4,9 +4,8 @@ description: MSpeer_topologyresponse (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "MSpeer_topologyresponse"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "MSpeer_topologyresponse"
 dev_langs:
   - "TSQL"
-ms.assetid: 1bc5c0c6-c432-405c-89fd-e953d173a247
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # MSpeer_topologyresponse (Transact-SQL)

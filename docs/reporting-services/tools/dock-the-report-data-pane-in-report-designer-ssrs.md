@@ -1,18 +1,15 @@
 ---
-title: "Dock the Report Data Pane in Report Designer | Microsoft Docs"
+title: "Dock the Report Data Pane in Report Designer"
 description: Learn how to view and dock the Report Data pane that displays a hierarchical view of report data objects in the Reporting Services Report Designer in SQL Server Data Tools.
-ms.date: 05/31/2016
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: tools
-
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Report Data pane, docking"
-ms.assetid: 8b87bb59-6083-44cb-ab34-493855b41585
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 05/31/2016
+ms.service: reporting-services
+ms.subservice: tools
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "Report Data pane, docking"
 ---
 # Dock the Report Data Pane in Report Designer (SSRS)
   In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Report Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], the Report Data pane displays a hierarchical view of data objects that you can use in a report, including data sources, datasets, fields, parameters, and images. Data sources in this view can be embedded or references to shared data sources that are displayed in Solution Explorer.  

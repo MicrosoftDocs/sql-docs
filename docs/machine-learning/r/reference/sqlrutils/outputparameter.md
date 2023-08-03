@@ -1,32 +1,17 @@
---- 
-
-# required metadata 
-title: "OutputParameter function (sqlrutils) | Microsoft Docs" 
-description: " OutputParameter: generates an OutputParameter Object that captures the information about the output parameters of the function that is to be embedded into a SQL Server Stored Procesure. Those will become the output parameters of the stored procedure. Supported R types of the output parameters are POSIXct, numeric, character, integer, logical, and raw. This object must be created if the R function is returning a named list for non-data frame memebers of the list " 
-keywords: "(sqlrutils), OutputParameter" 
+---
+title: "OutputParameter function (sqlrutils)"
+description: "OutputParameter: generates an OutputParameter Object that captures the information about the output parameters of the function that is to be embedded into a SQL Server stored procedure."
 author: "rothja"
-ms.author: "jroth" 
-manager: "cgronlun" 
+ms.author: "jroth"
 ms.date: 07/15/2019
-ms.topic: "reference" 
-ms.prod: "mlserver" 
-ms.service: "" 
-ms.assetid: "" 
-
-# optional metadata 
-ROBOTS: "" 
-audience: "" 
-ms.devlang: "" 
-ms.reviewer: "" 
-ms.suite: "" 
-ms.tgt_pltfrm: "" 
-#ms.technology: "" 
-ms.custom: "" 
-
+ms.service: sql
+ms.subservice: machine-learning
+ms.topic: "reference"
+keywords:
+  - (sqlrutils)
+  - OutputParameter
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
---- 
-
-
+---
 
 
  # OutputParameter: Output Parameter for SQL Stored Procedure: Class Generator 

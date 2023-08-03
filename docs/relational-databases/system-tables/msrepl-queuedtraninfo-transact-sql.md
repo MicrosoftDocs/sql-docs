@@ -4,9 +4,8 @@ description: MSrepl_queuedtraninfo (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "MSrepl_queuedtraninfo_TSQL"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "MSrepl_queuedtraninfo system table"
 dev_langs:
   - "TSQL"
-ms.assetid: af7a5baf-32ea-475f-b6b9-68c557b4980c
 ---
 # MSrepl_queuedtraninfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

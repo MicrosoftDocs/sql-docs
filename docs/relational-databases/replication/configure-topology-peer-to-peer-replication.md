@@ -1,18 +1,15 @@
 ---
+title: "Configure Topology (Peer-to-Peer Replication)"
 description: "Configure Topology (Peer-to-Peer Replication)"
-title: "Configure Topology (Peer-to-Peer Replication) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.p2pwizard.peers.f1"
-ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.p2pwizard.peers.f1"
 ---
 # Configure Topology (Peer-to-Peer Replication)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -28,7 +25,7 @@ ms.author: "mathoma"
 |-----------------------|-----------------|  
 |Design surface|Displays other interface elements. To add elements, right-click the design surface.|  
 |![The first node in a topology](../../relational-databases/replication/media/p2pwizard-firstnode.gif "The first node in a topology")|The original node in the topology. New nodes are initialized by using a copy of the publication database from the original node.|  
-|![A node for which we have complete information](../../relational-databases/replication/media/p2pwizard-complete.gif "A node for which we have complete information")|A node that is running an instance of [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or a later version, for which replication has complete information. To specify configuration options, right-click the node.|  
+|![A node for which we have complete information](../../relational-databases/replication/media/p2pwizard-complete.gif "A node for which we have complete information")|A node that is running an instance of [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or a later version, for which replication has complete information. To specify configuration options, right-click the node.|  
 |![A node for which we have incomplete information](../../relational-databases/replication/media/p2pwizard-incomplete.gif "A node for which we have incomplete information")|A node for which replication has incomplete information. To specify configuration options, right-click the node.<br /><br /> Replication has incomplete information because of one of the following reasons:<br /><br /> -The node is running an instance of [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], which does not store all the metadata required by the wizard.<br /><br /> -The node is running a later version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], but replication cannot retrieve subscription information from the node. To troubleshoot this situation:<br /><br /> Make sure that the database at the node is online and that you can connect to it by using the same credentials as the Distribution Agents that connect to the node.<br /><br /> Make sure that the Log Reader Agent and all Distribution Agents that connect to the node are running.<br /><br /> Make sure that the refresh timeout is set high enough to gather all topology information. To set the time-out, right-click the design surface, and click **Set Refresh Timeout**.|  
 |Gray line with arrows|The connection between two nodes. To add a connection, right-click one of the nodes that you want to connect. To remove a connection, right-click the connection.<br /><br /> If the line has a single arrow, replication has incomplete information for one of the nodes.|  
   

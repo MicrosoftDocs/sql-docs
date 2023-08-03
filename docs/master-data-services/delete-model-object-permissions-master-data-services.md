@@ -1,24 +1,20 @@
 ---
-description: "Delete Model Object Permissions (Master Data Services)"
 title: Delete Model Object Permissions
-ms.custom: ""
+description: "Delete Model Object Permissions (Master Data Services)"
+author: CordeliaGrey
+ms.author: jiwang6
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
+ms.service: sql
+ms.subservice: master-data-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "deleting model object permissions [Master Data Services]"
   - "permissions [Master Data Services], deleting model object permissions"
   - "models [Master Data Services], deleting object permissions"
-ms.assetid: 859c5952-f600-4940-8064-1afd13f7f6dc
-author: CordeliaGrey
-ms.author: jiwang6
 ---
 # Delete Model Object Permissions (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], delete model object permissions to remove any assignments that have been made.  
   

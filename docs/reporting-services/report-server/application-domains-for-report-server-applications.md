@@ -1,19 +1,16 @@
 ---
-title: "Application Domains for Report Server Applications | Microsoft Docs"
+title: "Application Domains for Report Server Applications"
 description: Learn about events that cause an application domain to recycle for Reporting Services applications for troubleshooting.
-ms.date: 03/20/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server
-
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "application domains [Reporting Services]"
-  - "recycling application domains"
-ms.assetid: a455e2e6-8764-493d-a1bc-abe80829f543
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/20/2017
+ms.service: reporting-services
+ms.subservice: report-server
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "application domains [Reporting Services]"
+  - "recycling application domains"
 ---
 # Application Domains for Report Server Applications
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], the report server is implemented as a single service that contains the Report Server Web service, Report Manager, and a background processing application. Each application runs in its own application domain within the single report server process. For the most part, application domains are created, configured, and managed internally. However, knowing how recycle operations occur for report server application domains can be helpful if you are investigating performance or memory issues or troubleshooting service disruptions.  

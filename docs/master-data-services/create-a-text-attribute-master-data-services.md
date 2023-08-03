@@ -1,23 +1,19 @@
 ---
-description: "Create a Text Attribute (Master Data Services)"
 title: Create a Text Attribute
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "attributes [Master Data Services], creating text attributes"
-  - "creating text attributes [Master Data Services]"
-ms.assetid: cd8b57de-364d-42a3-9273-c1c6b992bb40
+description: "Create a Text Attribute (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/15/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "attributes [Master Data Services], creating text attributes"
+  - "creating text attributes [Master Data Services]"
 ---
 # Create a Text Attribute (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], create a text attribute when you want users to enter a text string as an attribute value.  
   

@@ -1,18 +1,15 @@
 ---
-title: "Report Parts (Report Builder) | Microsoft Docs"
+title: "Report Parts (Report Builder)"
 description: Create tables, matrices, charts, and images to be published as separate report parts available so you can reuse them in other paginated reports in Report Builder.
-ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-f1_keywords: 
-  - "10543"
-ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/14/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "10543"
 ---
 # Report Parts (Report Builder and SSRS)
 
@@ -129,7 +126,7 @@ Report items such as tables, matrices, charts, and images can be published as *r
   
   
 ##  <a name="RptPartsRptDesigner"></a> Working with Report Parts in Report Designer  
- Report parts work a little differently in Report Designer in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. In Report Designer, publishing is one-way: you can publish a report part from Report Designer, but you cannot reuse an existing report part in Report Designer. For more information, see [Report Parts in Report Designer &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
+ Report parts work a little differently in Report Designer in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. In Report Designer, publishing is one-way: you can publish a report part from Report Designer, but you cannot reuse an existing report part in Report Designer. For more information, see [Report Parts in Report Designer &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
   
 ##  <a name="HowTo"></a> How-to Topics  
  [Publish and Republish Report Parts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)  

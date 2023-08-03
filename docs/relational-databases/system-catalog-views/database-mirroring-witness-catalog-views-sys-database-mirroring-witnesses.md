@@ -4,9 +4,8 @@ description: Database Mirroring Witness Catalog Views - sys.database_mirroring_w
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.database_mirroring_witnesses"
@@ -19,7 +18,6 @@ helpviewer_keywords:
   - "witness [SQL Server], sys.database_mirroring_witnesses catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 0dd5b794-733b-4a3c-b5a4-62f9f1f0f22d
 ---
 # Database Mirroring Witness Catalog Views - sys.database_mirroring_witnesses
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

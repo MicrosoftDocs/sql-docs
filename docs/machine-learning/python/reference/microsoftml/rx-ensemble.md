@@ -1,31 +1,16 @@
---- 
- 
-# required metadata 
-title: "rx_ensemble: Ensembles" 
-description: "Train an ensemble of models" 
-keywords: "ensemble" 
-author: WilliamDAssafMSFT
-ms.author: wiassaf 
-manager: "cgronlun" 
-ms.date: 07/15/2019 
-ms.topic: "reference" 
-ms.prod: "sql"
-ms.technology: "machine-learning-services" 
-ms.service: "" 
-ms.assetid: "" 
- 
-# optional metadata 
-ROBOTS: "" 
-audience: "" 
-ms.devlang: "Python" 
-ms.reviewer: "" 
-ms.suite: "" 
-ms.tgt_pltfrm: "" 
-ms.custom: "" 
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
- 
 ---
-
+title: "rx_ensemble: Ensembles"
+description: "Train an ensemble of models"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 07/15/2019
+ms.service: sql
+ms.subservice: "machine-learning-services"
+ms.topic: "reference"
+keywords: ensemble
+ms.devlang: Python
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
+---
 # *microsoftml.rx_ensemble*: Combine models into a single one
 
 
@@ -38,13 +23,13 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
 
 ```
 microsoftml.rx_ensemble(formula: str,
-    data: [<class ‘revoscalepy.datasource.RxDataSource.RxDataSource’>,
-    <class ‘pandas.core.frame.DataFrame’>, <class ‘list’>],
+    data: [<class 'revoscalepy.datasource.RxDataSource.RxDataSource'>,
+    <class 'pandas.core.frame.DataFrame'>, <class 'list'>],
     trainers: typing.List[microsoftml.modules.base_learner.BaseLearner],
     method: str = None, model_count: int = None,
     random_seed: int = None, replace: bool = False,
-    samp_rate: float = None, combine_method: [‘Average’, ‘Median’,
-    ‘Vote’] = ‘Median’, max_calibration: int = 100000,
+    samp_rate: float = None, combine_method: ['Average', 'Median',
+    'Vote'] = 'Median', max_calibration: int = 100000,
     split_data: bool = False, ml_transforms: list = None,
     ml_transform_vars: list = None, row_selection: str = None,
     transforms: dict = None, transform_objects: dict = None,
@@ -145,7 +130,7 @@ Specifies the method used to combine the models:
 
 * `"Average"`: to compute the average of the individual model outputs and 
 
-* `"Vote"`: to compute (pos-neg) / the total number of models, where ‘pos’ is the number of positive outputs and ‘neg’ is the number of negative outputs.
+* `"Vote"`: to compute (pos-neg) / the total number of models, where 'pos' is the number of positive outputs and 'neg' is the number of negative outputs.
 
 
 ### max_calibration
@@ -231,7 +216,7 @@ no packages outside `RxOptions.get_option("transform_packages")` are preloaded.
 
 NOT SUPPORTED. A user-defined environment to serve as a parent to all
 environments developed internally and used for variable data transformation.
-If `transform_environment = None`, a new “hash” environment with parent
+If `transform_environment = None`, a new "hash" environment with parent
 `revoscalepy.baseenv` is used instead.
 
 

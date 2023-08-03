@@ -2,8 +2,8 @@
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 07/29/2022
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.topic: include
 ---
 The following sections describe known issues with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] on Linux.

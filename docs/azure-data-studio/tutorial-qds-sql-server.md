@@ -5,9 +5,9 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu
 ms.date: 06/01/2020
-ms.prod: azure-data-studio
+ms.service: azure-data-studio
 ms.topic: tutorial
-ms.custom: seodec18; seo-lt-2019
+ms.custom: updatefrequency5
 ---
 
 # Tutorial: Add the *five slowest queries* sample widget to the database dashboard

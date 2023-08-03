@@ -5,14 +5,14 @@ description: Configure server-level IP firewall rules for a database in Azure SQ
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: wiassaf, mathoma
-ms.date: 03/09/2022
+ms.date: 07/06/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual
 ms.custom:
-  - "sqldbrb=1"
-  - "devx-track-azurecli"
-  - "devx-track-azurepowershell"
+  - sqldbrb=1
+  - devx-track-azurecli
+  - devx-track-azurepowershell
 ---
 # Azure SQL Database and Azure Synapse IP firewall rules
 [!INCLUDE[appliesto-sqldb-asa](../includes/appliesto-sqldb-asa.md)]
@@ -33,7 +33,7 @@ Connection attempts from the internet and Azure must pass through the firewall b
 
 ### Server-level IP firewall rules
 
-These rules enable clients to access your entire server, that is, all the databases managed by the server. The rules are stored in the *master* database. The default value is up to 256 server-level IP firewall rules for a server. If you have the **Allow Azure Services and resources to access this server** setting enabled, this counts as a single firewall rule for the server.
+These rules enable clients to access your entire server, that is, all the databases managed by the server. The rules are stored in the *master* database. The maximum number of server-level IP firewall rules is limited to 128 for a server. If you have the **Allow Azure Services and resources to access this server** setting enabled, this counts as a single firewall rule for the server.
   
 You can configure server-level IP firewall rules by using the Azure portal, PowerShell, or Transact-SQL statements.
 
@@ -102,7 +102,7 @@ When a computer tries to connect to your server from the internet, the firewall 
 
 To allow applications hosted inside Azure to connect to your SQL server, Azure connections must be enabled. To enable Azure connections, there must be a firewall rule with starting and ending IP addresses set to 0.0.0.0. This recommended rule is only applicable to Azure SQL Database.
 
-When an application from Azure tries to connect to the server, the firewall checks that Azure connections are allowed by verifying this firewall rule exists. This can be turned on directly from the Azure portal blade by switching the **Allow Azure Services and resources to access this server** to **ON** in the **Firewalls and virtual networks** settings. Switching the setting to ON creates an inbound firewall rule for IP 0.0.0.0 - 0.0.0.0 named **AllowAllWindowsAzureIps**. The rule can be viewed in your master database [sys.firewall_rules](/sql/relational-databases/system-catalog-views/sys-firewall-rules-azure-sql-database) view. Use PowerShell or the Azure CLI to create a firewall rule with start and end IP addresses set to 0.0.0.0 if you’re not using the portal. 
+When an application from Azure tries to connect to the server, the firewall checks that Azure connections are allowed by verifying this firewall rule exists. This can be turned on directly from the Azure portal blade by switching the **Allow Azure Services and resources to access this server** to **ON** in the **Firewalls and virtual networks** settings. Switching the setting to ON creates an inbound firewall rule for IP 0.0.0.0 - 0.0.0.0 named **AllowAllWindowsAzureIps**. The rule can be viewed in your `master` database [sys.firewall_rules](/sql/relational-databases/system-catalog-views/sys-firewall-rules-azure-sql-database) view. Use PowerShell or the Azure CLI to create a firewall rule with start and end IP addresses set to 0.0.0.0 if you're not using the portal. 
 
 > [!IMPORTANT]
 > This option configures the firewall to allow all connections from Azure, including connections from the subscriptions of other customers. If you select this option, make sure that your login and user permissions limit access to authorized users only.
@@ -138,11 +138,11 @@ To set a server-level IP firewall rule in the Azure portal, go to the overview p
 
 1. To set a server-level IP firewall rule from the database overview page, select **Set server firewall** on the toolbar, as the following image shows.
 
-    ![Server IP firewall rule](./media/firewall-configure/sql-database-server-set-firewall-rule.png)
+    :::image type="content" source="media/firewall-configure/sql-database-server-set-firewall-rule.png" alt-text="Screenshot of the set server firewall setting in the Azure portal.":::
 
-    The **Firewall settings** page for the server opens.
+    The **Networking** page for the server opens.
 
-2. Select **Add client IP** on the toolbar to add the IP address of the computer that you're using, and then select **Save**. A server-level IP firewall rule is created for your current IP address.
+2. Add a rule in the **Firewall rules** section to add the IP address of the computer that you're using, and then select **Save**. A server-level IP firewall rule is created for your current IP address.
 
     ![Set server-level IP firewall rule](./media/firewall-configure/sql-database-server-firewall-settings.png)
 
@@ -150,9 +150,9 @@ To set a server-level IP firewall rule in the Azure portal, go to the overview p
 
 The overview page for your server opens. It shows the fully qualified server name (such as *mynewserver20170403.database.windows.net*) and provides options for further configuration.
 
-1. To set a server-level rule from this page, select **Firewall** from the **Settings** menu on the left side.
+1. To set a server-level rule from this page, select **Networking** from the **Settings** menu on the left side.
 
-2. Select **Add client IP** on the toolbar to add the IP address of the computer that you're using, and then select **Save**. A server-level IP firewall rule is created for your current IP address.
+2. Add a rule in the **Firewall rules** section to add the IP address of the computer that you're using, and then select **Save**. A server-level IP firewall rule is created for your current IP address.
 
 ### Use Transact-SQL to manage IP firewall rules
 
@@ -228,9 +228,26 @@ az sql server firewall-rule create --resource-group myResourceGroup --server $se
 ```
 
 > [!TIP]
-> For $servername specify the server name and not the fully qualified DNS name e.g. specify **mysqldbserver** instead of **mysqldbserver.database.windows.net**
+> For `$servername`, specify the server name and not the fully qualified DNS name. For example, use `mysqldbserver` instead of `mysqldbserver.database.windows.net`.
 >
 > For a CLI example in the context of a quickstart, see [Create DB - Azure CLI](az-cli-script-samples-content-guide.md) and [Create a single database and configure a server-level IP firewall rule using the Azure CLI](scripts/create-and-configure-database-cli.md).
+
+For Azure Synapse Analytics, refer to the following examples: 
+
+| Cmdlet | Level | Description |
+| --- | --- | --- |
+|[az synapse workspace firewall-rule create](/cli/azure/synapse/workspace/firewall-rule#az-synapse-workspace-firewall-rule-create)|Server|Create a firewall rule|
+|[az synapse workspace firewall-rule delete](/cli/azure/synapse/workspace/firewall-rule#az-synapse-workspace-firewall-rule-delete)|Server|Delete a firewall rule|
+|[az synapse workspace firewall-rule list](/cli/azure/synapse/workspace/firewall-rule#az-synapse-workspace-firewall-rule-list)|Server|List all firewall rules|
+|[az synapse workspace firewall-rule show](/cli/azure/synapse/workspace/firewall-rule#az-synapse-workspace-firewall-rule-show)|Server|Get a firewall rule|
+|[az synapse workspace firewall-rule update](/cli/azure/synapse/workspace/firewall-rule#az-synapse-workspace-firewall-rule-update)|Server|Update a firewall rule|
+|[az synapse workspace firewall-rule wait](/cli/azure/synapse/workspace/firewall-rule##az-synapse-workspace-firewall-rule-wait)|Server|Place the CLI in a waiting state until a condition of a firewall rule is met|
+
+The following example uses CLI to set a server-level IP firewall rule in Azure Synapse:
+
+```azurecli-interactive
+az synapse workspace firewall-rule create --name AllowAllWindowsAzureIps --workspace-name $workspacename --resource-group $resourcegroupname --start-ip-address 0.0.0.0 --end-ip-address 0.0.0.0
+```
 
 ### Use a REST API to manage server-level IP firewall rules
 

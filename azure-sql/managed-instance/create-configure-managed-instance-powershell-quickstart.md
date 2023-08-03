@@ -7,11 +7,7 @@ ms.date: 06/25/2021
 ms.service: sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: quickstart
-ms.custom:
-  - contperf-fy21q1
-  - devx-track-azurecli
-  - devx-track-azurepowershell
-  - mode-api
+ms.custom: contperf-fy21q1, devx-track-azurepowershell, mode-api
 ---
 # Quickstart: Create a managed instance using Azure PowerShell
 
@@ -50,7 +46,7 @@ $edition = "General Purpose"
 $vCores = 4
 $maxStorage = 128
 $computeGeneration = "Gen5"
-$license = "LicenseIncluded" #"BasePrice" or LicenseIncluded if you have don't have SQL Server licence that can be used for AHB discount
+$license = "LicenseIncluded" #"BasePrice" or LicenseIncluded if you have don't have SQL Server license that can be used for AHB discount
 ```
 
 ## Create resource group 

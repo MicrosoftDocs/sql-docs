@@ -1,30 +1,26 @@
 ---
+title: "sp_helpmergepublication (Transact-SQL)"
 description: "sp_helpmergepublication (Transact-SQL)"
-title: "sp_helpmergepublication (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_helpmergepublication"
-  - "sp_helpmergepublication_TSQL"
-helpviewer_keywords: 
-  - "sp_helpmergepublication"
-ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helpmergepublication"
+  - "sp_helpmergepublication_TSQL"
+helpviewer_keywords:
+  - "sp_helpmergepublication"
+dev_langs:
+  - "TSQL"
 ---
 # sp_helpmergepublication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns information about a merge publication. This stored procedure is executed at the Publisher on the publication database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -93,7 +89,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |allow_subscription_copy|**int**|Specifies whether the ability to copy the subscription databases that subscribe to this publication has been enabled. A value of **0** means copying is not allowed.|  
 |allow_synctoalternate|**int**|Specifies whether an alternate synchronization partner is allowed to synchronize with this Publisher. A value of **0** means a synchronization partner is not allowed.|  
 |validate_subscriber_info|**nvarchar(500)**|Lists the functions that are being used to retrieve Subscriber information and validate the parameterized row filtering criteria on the Subscriber. Assists in verifying that the information is partitioned consistently with each merge.|  
-|backward_comp_level|**int**|Database compatibility level, and can be one of the following:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+|backward_comp_level|**int**|Database compatibility level, and can be one of the following:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2<br /><br /> **100** = [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]|  
 |publish_to_activedirectory|**bit**|Specifies if the publication information is published to Active Directory. A value of **0** means the publication information is not available from Active Directory.<br /><br /> This parameter has been deprecated and is only supported for the backward compatibility of scripts. You can no longer add publication information to Active Directory.|  
 |max_concurrent_merge|**int**|The number of concurrent merge processes. If **0**, there is no limit to the number of concurrent merge processes running at any given time.|  
 |max_concurrent_dynamic_snapshots|**int**|The maximum number of concurrent filtered data snapshot sessions that can be running against the merge publication. If **0**, there is no limit to the maximum number of concurrent filtered data snapshot sessions that can run simultaneously against the publication at any given time.|  

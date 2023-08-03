@@ -1,23 +1,18 @@
 ---
+title: "SetDatabaseConnection Method (WMI MSReportServer_ConfigurationSetting)"
 description: "SetDatabaseConnection Method (WMI MSReportServer_ConfigurationSetting)"
-title: "SetDatabaseConnection Method (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
-ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: wmi-provider-library-reference
-
-
-ms.topic: conceptual
-apiname: 
-  - "SetDatabaseConnection (WMI MSReportServer_ConfigurationSetting Class)"
-apilocation: 
-  - "reportingservices.mof"
-apitype: MOFDef
-helpviewer_keywords: 
-  - "SetDatabaseConnection method"
-ms.assetid: c040aa78-92b8-41e4-9ae2-eff9fcdddc5b
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/14/2017
+ms.service: reporting-services
+ms.subservice: wmi-provider-library-reference
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "SetDatabaseConnection method"
+apilocation: "reportingservices.mof"
+apiname: "SetDatabaseConnection (WMI MSReportServer_ConfigurationSetting Class)"
+apitype: MOFDef
 ---
 # ConfigurationSetting Method - SetDatabaseConnection
   Sets the report server database connection to a particular report server database.  
@@ -31,7 +26,7 @@ Public Sub SetDatabaseConnection(Server as String, _
 ```  
   
 ```csharp  
-public void BackupEncryptionKey(string Server,   
+public void SetDatabaseConnection(string Server,   
     string DatabaseName, Int32 CredentialsType,   
     string UserName, string Password, out Int32 HRESULT);  
 ```  

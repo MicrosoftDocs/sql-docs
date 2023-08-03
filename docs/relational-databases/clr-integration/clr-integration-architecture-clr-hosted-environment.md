@@ -4,8 +4,8 @@ description: This article describes how CLR and SQL Server are integrated to man
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 helpviewer_keywords:
   - "type-safe code [CLR integration]"
@@ -24,7 +24,6 @@ helpviewer_keywords:
   - "scalability [CLR integration]"
   - "hosted environments [CLR integration]"
   - "HPAs [CLR integration]"
-ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 ---
 # CLR Integration Architecture - CLR Hosted Environment
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

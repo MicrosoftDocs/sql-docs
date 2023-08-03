@@ -4,8 +4,8 @@ description: "Read (Database Engine) by using CSharp"
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "04/16/2020"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: "reference"
 f1_keywords:
   - "Read_TSQL"

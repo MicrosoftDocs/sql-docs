@@ -1,14 +1,14 @@
 ---
-title: "Batching Methods | Microsoft Docs"
+title: "Batching Methods"
 description: Learn how to use SOAP headers in Reporting Services to include multiple Web service methods in a single operation.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/04/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server-web-service-net-framework-soap-headers
-
-
+ms.service: reporting-services
+ms.subservice: report-server-web-service
 ms.topic: reference
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "methods [Reporting Services], batches"
   - "BatchHeader SOAP header"
   - "Web service [Reporting Services], methods"
@@ -17,9 +17,6 @@ helpviewer_keywords:
   - "XML Web service [Reporting Services], methods"
   - "locking [Reporting Services]"
   - "multiple Web service methods"
-ms.assetid: 86435534-c9fe-4b49-b88c-7fb6d21976b0
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Batching Methods
   The use of SOAP headers in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enables you to include multiple Web service methods in a single operation. Methods run within the scope of a single database transaction, in the order in which they are called.  

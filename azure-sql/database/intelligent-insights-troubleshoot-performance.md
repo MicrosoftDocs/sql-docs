@@ -36,7 +36,7 @@ Intelligent Insights automatically detects performance issues based on query exe
 | [Missing Index](intelligent-insights-troubleshoot-performance.md#missing-index) | Missing index was detected affecting performance. | Missing index was detected affecting the database performance. |
 | [New Query](intelligent-insights-troubleshoot-performance.md#new-query) | New query was detected affecting the overall performance. | New query was detected affecting the overall database performance. |
 | [Increased Wait Statistic](intelligent-insights-troubleshoot-performance.md#increased-wait-statistic) | Increased database wait times were detected affecting performance. | Increased database wait times were detected affecting the database performance. |
-| [TempDB Contention](intelligent-insights-troubleshoot-performance.md#tempdb-contention) | Multiple threads are trying to access the same TempDB resource causing a bottleneck. This is affecting performance. | Multiple threads are trying to access the same TempDB resource causing a bottleneck. This is affecting the database performance. |
+| [TempDB Contention](intelligent-insights-troubleshoot-performance.md#tempdb-contention) | Multiple threads are trying to access the same `tempdb` resource causing a bottleneck. This is affecting performance. | Multiple threads are trying to access the same `tempdb` resource causing a bottleneck. This is affecting the database performance. |
 | [Elastic pool DTU shortage](intelligent-insights-troubleshoot-performance.md#elastic-pool-dtu-shortage) | Shortage of available eDTUs in the elastic pool is affecting performance. | Not available for Azure SQL Managed Instance as it uses the vCore model. |
 | [Plan Regression](intelligent-insights-troubleshoot-performance.md#plan-regression) | New plan, or a change in the workload of an existing plan was detected. This is affecting performance. | New plan, or a change in the workload of an existing plan was detected. This is affecting the database performance. |
 | [Database-scoped configuration value change](intelligent-insights-troubleshoot-performance.md#database-scoped-configuration-value-change) | Configuration change on the database was detected affecting the database performance. | Configuration change on the database was detected affecting the database performance. |
@@ -219,11 +219,11 @@ For more information on optimizing query performance, see [Query tuning](/previo
 
 ### What is happening
 
-This detectable performance pattern indicates a database performance condition in which a bottleneck of threads trying to access tempDB resources exists. (This condition isn't IO-related.) The typical scenario for this performance issue is hundreds of concurrent queries that all create, use, and then drop small tempDB tables. The system detected that the number of concurrent queries using the same tempDB tables increased with sufficient statistical significance to affect database performance compared to the past seven-day performance baseline.
+This detectable performance pattern indicates a database performance condition in which a bottleneck of threads trying to access `tempdb` resources exists. (This condition isn't IO-related.) The typical scenario for this performance issue is hundreds of concurrent queries that all create, use, and then drop small `tempdb` tables. The system detected that the number of concurrent queries using the same `tempdb` tables increased with sufficient statistical significance to affect database performance compared to the past seven-day performance baseline.
 
 ### Troubleshooting
 
-The diagnostics log outputs tempDB contention details. You can use the information as the starting point for troubleshooting. There are two things you can pursue to alleviate this kind of contention and increase the throughput of the overall workload: You can stop using the temporary tables. You also can use memory-optimized tables.
+The diagnostics log outputs `tempdb` contention details. You can use the information as the starting point for troubleshooting. There are two things you can pursue to alleviate this kind of contention and increase the throughput of the overall workload: You can stop using the temporary tables. You also can use memory-optimized tables.
 
 For more information, see [Introduction to memory-optimized tables](/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables).
 

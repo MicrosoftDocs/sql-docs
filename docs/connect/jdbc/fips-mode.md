@@ -5,8 +5,8 @@ author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: mikeray
 ms.date: 03/21/2021
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # FIPS mode
@@ -83,7 +83,7 @@ To run the JDBC Driver in FIPS-compliant mode, configure connection properties a
 
 |Property|Type|Default|Description|Notes|
 |---|---|---|---|---|
-|`encrypt`|boolean ["true / false"]|"false"|For FIPS enabled JVM encrypt property should be **true**||
+|`encrypt`|String ["true / false / strict"]|"true"|For FIPS enabled JVM encrypt property should be **true**|The default changed from false to true in version 10.2. In version 11.2.0, the type changed from boolean to String and the strict option was added to allow for TDS 8.0 support.|
 |`TrustServerCertificate`|boolean ["true / false"]|"false"|For FIPS, the user needs to validate certificate chain, so the user should use **"false"** value for this property. ||
 |`trustStore`|String|null|Your Java Keystore file path where you imported your certificate. If you install certificate on your system, then no need to pass anything. Driver uses cacerts or jssecacerts files.||
 |`trustStorePassword`|String|null|The password used to check the integrity of the trustStore data.||

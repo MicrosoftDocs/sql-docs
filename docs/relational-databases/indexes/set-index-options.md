@@ -4,9 +4,8 @@ description: Set Index Options
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 06/26/2019
-ms.prod: sql
-ms.prod_service: "table-view-index, sql-database"
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
   - "ALLOW_ROW_LOCKS option"
@@ -22,7 +21,6 @@ helpviewer_keywords:
   - "ALLOW_PAGE_LOCKS option"
   - "OPTIMIZE_FOR_SEQUENTIAL_KEY option"
   - "ONLINE"
-ms.assetid: 7969af33-e94c-41f7-ab89-9d9a2747cd5c
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Set Index Options

@@ -1,22 +1,20 @@
 ---
-title: "Manage Subscription Owners and Run Subscription - PowerShell | Microsoft Docs"
+title: "Manage Subscription Owners and Run Subscription - PowerShell"
 description: Learn how to programmatically transfer the ownership of a Reporting Services subscription from one user to another.
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: subscriptions
-ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.reviewer: ""
-ms.custom: ""
 ms.date: 01/16/2020
+ms.service: reporting-services
+ms.subservice: subscriptions
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Manage Subscription Owners and Run Subscription - PowerShell
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-Starting with [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] you can programmatically transfer the ownership of a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscription from one user to another. This topic provides several Windows PowerShell scripts you can use to change or simply list subscription ownership. Each sample includes sample syntax for both Native mode and SharePoint mode. After you change the subscription owner, the subscription will then execute in the security context of the new owner, and the User!UserID field in the report will display the value of new owner. For more information on the object model the PowerShell samples call, see <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
+Starting with [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] you can programmatically transfer the ownership of a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscription from one user to another. This topic provides several Windows PowerShell scripts you can use to change or simply list subscription ownership. Each sample includes sample syntax for both Native mode and SharePoint mode. After you change the subscription owner, the subscription will then execute in the security context of the new owner, and the User!UserID field in the report will display the value of new owner. For more information on the object model the PowerShell samples call, see <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
 
 ![PowerShell related content](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")
 
@@ -92,7 +90,7 @@ This section summarizes the permission levels required to use each of the method
   
 - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
-- [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
+- [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)]  
   
 ## <a name="bkmk_list_ownership_all"></a> Script: List the ownership of all subscriptions
 

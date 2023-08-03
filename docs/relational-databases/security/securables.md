@@ -1,28 +1,24 @@
 ---
-title: "Securables | Microsoft Docs"
+title: "Securables"
 description: Learn about the securable scopes, which the SQL Server Database Engine authorization system uses to regulate access to securables.
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "10/18/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: security
+ms.service: sql
+ms.subservice: security
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.roleproperties.selectobject.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "securables [SQL Server]"
   - "schemas [SQL Server], securables"
   - "database securables [SQL Server]"
   - "hierarchies [SQL Server], securables"
   - "server securables [SQL Server]"
-ms.assetid: bfa748f0-70b0-453c-870a-04b7b205b9ff
-author: VanMSFT
-ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Securables
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Securables are the resources to which the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] authorization system regulates access. For example, a table is a securable. Some securables can be contained within others, creating nested hierarchies called "scopes" that can themselves be secured. The securable scopes are **server**, **database**, and **schema**.  
   

@@ -1,15 +1,13 @@
 ---
-title: "Tutorial: Creating a Free Form Report (Report Builder) | Microsoft Docs"
+title: "Tutorial: Creating a Free Form Report (Report Builder)"
 description: Learn how to create a paginated report that acts as a newsletter and where each page displays static text, summary visuals, and detailed sample sales data.
-ms.date: 09/02/2016
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
-
-ms.topic: conceptual
-ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 09/02/2016
+ms.service: reporting-services
+ms.subservice: reporting-services
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Tutorial: Creating a Free Form Report (Report Builder)
 In this tutorial, you create a paginated report that acts as a newsletter. Each page displays static text, summary visuals, and detailed sample sales data.
@@ -447,7 +445,7 @@ Rectangles help you control how the report renders. Place a pie and column chart
     * **Size** **12 pt**.
     * **Color** **Black**.  
   
-15. Right click the legend, and then click **Delete Legend**.  
+15. Right-click the legend, and then click **Delete Legend**.  
   
     > [!NOTE]  
     > Removing the legend makes the chart more readable when the chart is small.  

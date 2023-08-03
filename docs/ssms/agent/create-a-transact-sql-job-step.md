@@ -1,20 +1,16 @@
 ---
-description: "Create a Transact-SQL Job Step"
 title: "Create a Transact-SQL Job Step"
-ms.custom: seo-lt-2019
+description: "Create a Transact-SQL Job Step"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Transact-SQL job step"
   - "job steps [Transact-SQL]"
   - "SQL Server Agent jobs, Transact-SQL step"
-ms.assetid: 69c571a7-debe-4063-9d38-e4b6a1e8e84c
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Create a Transact-SQL Job Step
@@ -60,7 +56,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
   
 #### To create a Transact-SQL job step  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

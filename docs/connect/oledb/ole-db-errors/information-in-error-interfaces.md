@@ -4,8 +4,8 @@ description: "The OLE DB Driver for SQL Server reports some error and status inf
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "05/06/2020"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 helpviewer_keywords:
   - "OLE DB Driver for SQL Server, errors"

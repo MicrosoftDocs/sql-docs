@@ -4,11 +4,14 @@ description: Create a single database in Azure SQL Database with ledger enabled 
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: wiassaf, mathoma
-ms.date: "05/24/2022"
+ms.date: 04/26/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: quickstart
-ms.custom: mode-other
+ms.custom:
+  - mode-other
+  - devx-track-azurepowershell
+  - devx-track-azurecli
 ---
 
 # Quickstart: Create a database in Azure SQL Database with ledger enabled
@@ -33,7 +36,7 @@ To create a single database in the Azure portal, this quickstart starts at the A
 
 1. Under **SQL databases**, leave **Resource type** set to **Single database**, and select **Create**.
 
-   ![Screenshot that shows adding to Azure SQL.](./media/single-database-create-quickstart/select-deployment.png)
+   :::image type="content" source="./media/single-database-create-quickstart/select-deployment.png" alt-text="Screenshot of the Azure portal, select Azure SQL deployment page, creating a new single database.":::
 
 1. On the **Basics** tab of the **Create SQL Database** form, under **Project details**, select the Azure subscription you want to use.
 
@@ -51,13 +54,8 @@ To create a single database in the Azure portal, this quickstart starts at the A
    Select **OK**.
    
 1. Leave **Want to use SQL elastic pool** set to **No**.
-
 1. Under **Compute + storage**, select **Configure database**.
-
 1. This quickstart uses a serverless database, so select **Serverless**, and then select **Apply**. 
-
-      ![Screenshot that shows configuring a serverless database.](./media/single-database-create-quickstart/configure-database.png)
-
 1. On the **Networking** tab, for **Connectivity method**, select **Public endpoint**.
 1. For **Firewall rules**, set **Add current client IP address** to **Yes**. Leave **Allow Azure services and resources to access this server** set to **No**.
 1. Select **Next: Security** at the bottom of the page.
@@ -177,7 +175,7 @@ az sql server firewall-rule create \
     --end-ip-address $endIP
 ```
 
-### Create a single ledger database 
+### Create a single ledger database
 
 Create a ledger database with the [az sql db create](/cli/azure/sql/db) command. The following command creates a serverless database with ledger enabled.
 
@@ -193,7 +191,7 @@ az sql db create \
     --ledger-on
 ```
 
-### Create a storage account 
+### Create a storage account
 
 Create a storage account to store ledger digests with the [az storage account create](/cli/azure/sql/db) command. 
 

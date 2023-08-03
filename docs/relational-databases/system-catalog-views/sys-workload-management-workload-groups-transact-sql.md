@@ -5,9 +5,8 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: "wiassaf"
 ms.date: 11/05/2019
-ms.prod: sql
-ms.prod_service: "synapse-analytics"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 dev_langs:
   - "TSQL"

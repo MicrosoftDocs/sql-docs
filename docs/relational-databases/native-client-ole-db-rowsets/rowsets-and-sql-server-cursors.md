@@ -1,26 +1,22 @@
 ---
-description: "Rowsets and SQL Server Cursors (Native Client OLE DB provider)"
 title: Rowsets and SQL Server cursors (Native Client OLE DB provider)
-ms.custom: ""
+description: "Rowsets and SQL Server Cursors (Native Client OLE DB provider)"
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
+ms.service: sql
+ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "OLE DB rowsets, cursors"
   - "SQL Server Native Client OLE DB provider, rowsets"
   - "rowsets [OLE DB], cursors"
   - "properties [OLE DB]"
   - "cursors [OLE DB]"
-ms.assetid: 26a11e26-2a3a-451e-8f78-fba51e330ecb
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Rowsets and SQL Server Cursors (Native Client OLE DB provider)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns result sets to consumers using two methods:  
   

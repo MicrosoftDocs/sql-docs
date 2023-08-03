@@ -1,15 +1,14 @@
 ---
-title: "Install Microsoft Report Builder | Microsoft Docs"
+title: "Install Microsoft Report Builder"
 description: Report Builder is stand-alone app, installed on your computer by you or an administrator.
-ms.date: 08/15/2022
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.topic: conceptual
-ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 08/15/2022
+ms.service: reporting-services
+ms.topic: conceptual
 ms.custom:
   - intro-installation
+  - updatefrequency5
 ---
 # Install Microsoft Report Builder
 

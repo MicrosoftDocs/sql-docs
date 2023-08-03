@@ -35,10 +35,10 @@ This article provides a list of the rules used to assess the feasibility of migr
  | FileStream | Database | Issue | [Filestream and Filetable are not supported in Azure SQL Managed Instance.](#FileStream) | 
  | LinkedServerWithNonSQLProvider | Database | Issue | [Linked server with non-SQL Server Provider isn't supported in Azure SQL Managed Instance.](#LinkedServerWithNonSQLProvider) | 
  | MergeJob | Instance | Warning | [Merge job step isn't supported in Azure SQL Managed Instance.](#MergeJob) | 
- | MIDatabaseSize | Database | Issue | [Azure SQL Managed Instance does not support database size greater than 8 TB.](#MIDatabaseSize<) | 
+ | MIDatabaseSize | Database | Issue | [Azure SQL Managed Instance does not support database size greater than 16 TB.](#MIDatabaseSize) | 
  | MIHeterogeneousMSDTCTransactSQL | Database | Issue | [BEGIN DISTRIBUTED TRANSACTION with non-SQL Server remote server isn't supported in Azure SQL Managed Instance.](#MIHeterogeneousMSDTCTransactSQL) | 
  | MIHomogeneousMSDTCTransactSQL | Database | Issue | [BEGIN DISTRIBUTED TRANSACTION is supported across multiple servers for Azure SQL Managed Instance.](#MIHomogeneousMSDTCTransactSQL) | 
- | MIInstanceSize | Instance | Warning | [Maximum instance storage size in Azure SQL Managed Instance cannot be greater than 8 TB.](#MIInstanceSize<) | 
+ | MIInstanceSize | Instance | Warning | [Maximum instance storage size in Azure SQL Managed Instance cannot be greater than 8 TB.](#MIInstanceSize) | 
  | MultipleLogFiles | Database | Issue | [Azure SQL Managed Instance does not support databases with multiple log files.](#MultipleLogFiles<) | 
  | NextColumn | Database | Issue | [Tables and Columns named NEXT will lead to an error In Azure SQL Managed Instance.](#NextColumn) | 
  | NonANSILeftOuterJoinSyntax | Database | Warning | [Non-ANSI style left outer join is no longer supported and has been removed.](#NonANSILeftOuterJoinSyntax) | 
@@ -68,7 +68,7 @@ It is a job step that runs an Analysis Services command. AnalysisCommand job ste
 **Recommendation**     
 Review impacted objects section in Azure Migrate to see all jobs using Analysis Service Command job step and evaluate if the job step or the impacted object can be removed. Alternatively, migrate to SQL Server on Azure Virtual Machine.
 
-More information: [SQL Server Agent differences in Azure SQL Managed Instance ](../../managed-instance/transact-sql-tsql-differences-sql-server.md#sql-server-agent)
+More information: [SQL Server Agent differences in Azure SQL Managed Instance](../../managed-instance/transact-sql-tsql-differences-sql-server.md#sql-server-agent)
 
 ## AnalysisQuery job<a id="AnalysisQueryJob"></a>
 
@@ -82,7 +82,7 @@ It is a job step that runs an Analysis Services query. AnalysisQuery job step is
 **Recommendation**   
 Review impacted objects section in Azure Migrate to see all jobs using Analysis Service Query job step and evaluate if the job step or the impacted object can be removed. Alternatively, migrate to SQL Server on Azure Virtual Machine.
 
-More information: [SQL Server Agent differences in Azure SQL Managed Instance ](../../managed-instance/transact-sql-tsql-differences-sql-server.md#sql-server-agent)
+More information: [SQL Server Agent differences in Azure SQL Managed Instance](../../managed-instance/transact-sql-tsql-differences-sql-server.md#sql-server-agent)
 
 
 ## Assembly from file<a id="AssemblyFromFile"></a>
@@ -96,7 +96,7 @@ Azure SQL Managed Instance does not support 'CREATE ASSEMBLY' or 'ALTER ASSEMBLY
 **Recommendation**   
 Review objects using 'CREATE ASSEMBLY' or 'ALTER ASSEMBLY with a file parameter. If any such objects that are required, convert the file parameter to a binary parameter. Alternatively, migrate to SQL Server on Azure Virtual Machine. 
 
-More information: [CLR differences in Azure SQL Managed Instance ](../../managed-instance/transact-sql-tsql-differences-sql-server.md#clr)
+More information: [CLR differences in Azure SQL Managed Instance](../../managed-instance/transact-sql-tsql-differences-sql-server.md#clr)
 
 ## Bulk insert<a id="BulkInsert"></a>
 
@@ -104,13 +104,13 @@ More information: [CLR differences in Azure SQL Managed Instance ](../../managed
 **Category**: Issue   
 
 **Description**   
-Azure SQL Managed Instance cannot access file shares or Windows folders. See the "Impacted Objects" section for the specific uses of BULK INSERT statements that do not reference an Azure blob. Objects with 'BULK INSERT' where the source is not Azure blob storage will not work after migrating to Azure SQL Managed Instance.
+Azure SQL Managed Instance cannot access file shares or Windows folders. See the "Impacted Objects" section for the specific uses of BULK INSERT statements that do not reference an Azure blob. Objects with 'BULK INSERT' where the source is not Azure Blob Storage will not work after migrating to Azure SQL Managed Instance.
 
 
 **Recommendation**   
-You will need to convert BULK INSERT statements that use local files or file shares to use files from Azure blob storage instead, when migrating to Azure SQL Managed Instance.
+You will need to convert BULK INSERT statements that use local files or file shares to use files from Azure Blob Storage instead, when migrating to Azure SQL Managed Instance.
 
-More information: [Bulk Insert and OPENROWSET differences in Azure SQL Managed Instance ](../../managed-instance/transact-sql-tsql-differences-sql-server.md#bulk-insert--openrowset)
+More information: [Bulk Insert and OPENROWSET differences in Azure SQL Managed Instance](../../managed-instance/transact-sql-tsql-differences-sql-server.md#bulk-insert--openrowset)
 
 
 ## CLR Security<a id="ClrStrictSecurity"></a>
@@ -168,7 +168,7 @@ Azure SQL Managed Instance does not support CRYPTOGRAPHIC PROVIDER statements be
 **Recommendation**   
 Review objects with 'CREATE CRYPTOGRAPHIC PROVIDER' or 'ALTER CRYPTOGRAPHIC PROVIDER'. In any such objects that are required, remove the uses of these features. Alternatively, migrate to SQL Server on Azure Virtual Machine. 
 
-More information: [Cryptographic provider differences in Azure SQL Managed Instance ](../../managed-instance/transact-sql-tsql-differences-sql-server.md#cryptographic-providers)
+More information: [Cryptographic provider differences in Azure SQL Managed Instance](../../managed-instance/transact-sql-tsql-differences-sql-server.md#cryptographic-providers)
 
 ## Database compatibility<a id="DbCompatLevelLowerThan100"></a>
 
@@ -182,7 +182,7 @@ Database Compatibility Level is a valuable tool to assist in database modernizat
 **Recommendation**...
 Evaluate if the application functionality is intact when the database compatibility level is upgraded to 100 on Azure SQL Managed Instance. Alternatively, migrate to SQL Server on Azure Virtual Machine.
 
-More information: [Supported compatibility levels in Azure SQL Managed Instance ](../../managed-instance/transact-sql-tsql-differences-sql-server.md#compatibility-levels)
+More information: [Supported compatibility levels in Azure SQL Managed Instance](../../managed-instance/transact-sql-tsql-differences-sql-server.md#compatibility-levels)
 
 ## Database principal alias<a id="DatabasePrincipalAlias"></a>
 
@@ -247,9 +247,9 @@ Distributed transaction started by Transact SQL BEGIN DISTRIBUTED TRANSACTION an
 
 
 **Recommendation**   
-Review impacted objects section in Azure Migrate to see all objects using BEGIN DISTRUBUTED TRANSACTION. Consider migrating the participant databases to Azure SQL Managed Instance where distributed transactions across multiple instances are supported (Currently in preview). Alternatively, migrate to SQL Server on Azure Virtual Machine.
+Review impacted objects section in Azure Migrate to see all objects using BEGIN DISTRUBUTED TRANSACTION. Consider migrating the participant databases to Azure SQL Managed Instance where distributed transactions across multiple instances are supported. For more information, see [Transactions across multiple servers for Azure SQL Managed Instance](../../database/elastic-transactions-overview.md#transactions-for-sql-managed-instance). 
 
-More information: [Transactions across multiple servers for Azure SQL Managed Instance ](../../database/elastic-transactions-overview.md#transactions-for-sql-managed-instance)
+Alternatively, migrate to SQL Server on Azure Virtual Machine. 
 
 ## Homogenous MS DTC<a id="MIHomogeneousMSDTCTransactSQL"></a>
 
@@ -261,10 +261,9 @@ Distributed transaction started by Transact SQL BEGIN DISTRIBUTED TRANSACTION an
 
 
 **Recommendation**   
-Review impacted objects section in Azure Migrate to see all objects using BEGIN DISTRUBUTED TRANSACTION. Consider migrating the participant databases to Azure SQL Managed Instance where distributed transactions across multiple instances are supported (Currently in preview). Alternatively, migrate to SQL Server on Azure Virtual Machine. 
+Review impacted objects section in Azure Migrate to see all objects using BEGIN DISTRUBUTED TRANSACTION. Consider migrating the participant databases to Azure SQL Managed Instance where distributed transactions across multiple instances are supported. For more information, see [Transactions across multiple servers for Azure SQL Managed Instance](../../database/elastic-transactions-overview.md#transactions-for-sql-managed-instance).
 
-More information: [Transactions across multiple servers for Azure SQL Managed Instance](../../database/elastic-transactions-overview.md#transactions-for-sql-managed-instance)
-
+Alternatively, migrate to SQL Server on Azure Virtual Machine. 
 
 ## Linked server (non-SQL provider)<a id="LinkedServerWithNonSQLProvider"></a>
 
@@ -298,12 +297,12 @@ It is a job step that activates the replication Merge Agent. The Replication Mer
 **Recommendation**   
 Review impacted objects section in Azure Migrate to see all jobs using Merge job step and evaluate if the job step or the impacted object can be removed. Alternatively, migrate to SQL Server on Azure Virtual Machine
 
-More information: [SQL Server Agent differences in Azure SQL Managed Instance ](../../managed-instance/transact-sql-tsql-differences-sql-server.md#sql-server-agent)
+More information: [SQL Server Agent differences in Azure SQL Managed Instance](../../managed-instance/transact-sql-tsql-differences-sql-server.md#sql-server-agent)
 
 
-## MI database size<a id="MIDatabaseSize<"></a>
+## MI database size<a id="MIDatabaseSize"></a>
 
-**Title: Azure SQL Managed Instance does not support database size greater than 8 TB.**   
+**Title: Azure SQL Managed Instance does not support database size greater than 16 TB.**   
 **Category**: Issue   
 
 **Description**   
@@ -313,11 +312,11 @@ The size of the database is greater than maximum instance reserved storage. **Th
 **Recommendation**   
 Evaluate if the data can be archived compressed or sharded into multiple databases. Alternatively, migrate to SQL Server on Azure Virtual Machine.
 
-More information: [Hardware characteristics of Azure SQL Managed Instance ](../../managed-instance/resource-limits.md#hardware-configuration-characteristics)
+More information: [Hardware characteristics of Azure SQL Managed Instance](../../managed-instance/resource-limits.md#hardware-configuration-characteristics)
 
 
 
-## MI instance size<a id="MIInstanceSize<"></a>
+## MI instance size<a id="MIInstanceSize"></a>
 
 **Title: Maximum instance storage size in Azure SQL Managed Instance cannot be greater than 8 TB.**   
 **Category**: Warning   
@@ -329,7 +328,7 @@ The size of all databases is greater than maximum instance reserved storage.
 **Recommendation**   
 Consider migrating the databases to different Azure SQL Managed Instances or to SQL Server on Azure Virtual Machine if all the databases must exist on the same instance. 
 
-More information: [Hardware characteristics of Azure SQL Managed Instance ](../../managed-instance/resource-limits.md#hardware-configuration-characteristics)
+More information: [Hardware characteristics of Azure SQL Managed Instance](../../managed-instance/resource-limits.md#hardware-configuration-characteristics)
 
 
 ## Multiple log files<a id="MultipleLogFiles<"></a>
@@ -348,7 +347,7 @@ Azure SQL Managed Instance supports only a single log per database. You need to 
 ALTER DATABASE [database_name] REMOVE FILE [log_file_name]
 ```
 
-More information: [Unsupported database options in Azure SQL Managed Instance  ](../../managed-instance/transact-sql-tsql-differences-sql-server.md#database-options)
+More information: [Unsupported database options in Azure SQL Managed Instance](../../managed-instance/transact-sql-tsql-differences-sql-server.md#database-options)
 
 
 
@@ -408,20 +407,20 @@ Maximum number of databases supported in Azure SQL Managed Instance is 100, unle
 **Recommendation**   
 Consider migrating the databases to different Azure SQL Managed Instances or to SQL Server on Azure Virtual Machine if all the databases must exist on the same instance. 
 
-More information: [Azure SQL Managed Instance Resource Limits ](../../managed-instance/resource-limits.md#service-tier-characteristics)
+More information: [Azure SQL Managed Instance Resource Limits](../../managed-instance/resource-limits.md#service-tier-characteristics)
 
 ## OPENROWSET (non-blob data source)<a id="OpenRowsetWithNonBlobDataSourceBulk"></a>
 
-**Title: OpenRowSet used in bulk operation with non-Azure Blob Storage data source is not supported in Azure SQL Managed Instance.**   
+**Title: OpenRowSet used in bulk operation with non-Azure blob storage data source is not supported in Azure SQL Managed Instance.**   
 **Category**: Issue   
 
 **Description**   
 OPENROWSET supports bulk operations through a built-in BULK provider that enables data from a file to be read and returned as a rowset. OPENROWSET with non-Azure blob storage data source is not supported in Azure SQL Managed Instance. 
 
 **Recommendation**   
-Azure SQL Managed Instance cannot access file shares and Windows folders, so the files must be imported from Azure blob storage. Therefore, only blob type DATASOURCE is supported in OPENROWSET function. Alternatively, migrate to SQL Server on Azure Virtual Machine.
+Azure SQL Managed Instance cannot access file shares and Windows folders, so the files must be imported from Azure Blob Storage. Therefore, only blob type DATASOURCE is supported in OPENROWSET function. Alternatively, migrate to SQL Server on Azure Virtual Machine.
 
-More information: [Bulk Insert and OPENROWSET differences in Azure SQL Managed Instance ](../../managed-instance/transact-sql-tsql-differences-sql-server.md#bulk-insert--openrowset)
+More information: [Bulk Insert and OPENROWSET differences in Azure SQL Managed Instance](../../managed-instance/transact-sql-tsql-differences-sql-server.md#bulk-insert--openrowset)
 
 ## OPENROWSET (non-SQL provider)<a id="OpenRowsetWithNonSQLProvider"></a>
 
@@ -434,9 +433,11 @@ This method is an alternative to accessing tables in a linked server and is a on
 
 
 **Recommendation**   
-OPENROWSET function can be used to execute queries only on SQL Server instances (either managed, on-premises, or in Virtual Machines). Only SQLNCLI, SQLNCLI11, and SQLOLEDB values are supported as provider. Therefore, the recommendation action is that identify the dependent database(s) from remote non-SQL Servers and consider moving these into the database being migrated.
+OPENROWSET function can be used to execute queries only on SQL Server instances (either managed, on-premises, or in Virtual Machines). The providers `SQLNCLI`, `SQLNCLI11`, `SQLOLEDB`, and `MSOLEDBSQL` (recommended) are supported. The [Microsoft OLE DB Driver (MSOLEDBSQL) for SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server) is recommended for new development.
 
-More information: [Bulk Insert and OPENROWSET differences in Azure SQL Managed Instance ](../../managed-instance/transact-sql-tsql-differences-sql-server.md#bulk-insert--openrowset)
+The recommendation action is to identify the dependent database(s) from remote non-SQL Servers and consider moving these into the instance being migrated.
+
+More information: [Bulk Insert and OPENROWSET differences in Azure SQL Managed Instance](../../managed-instance/transact-sql-tsql-differences-sql-server.md#bulk-insert--openrowset)
 
 
 ## PowerShell job<a id="PowerShellJob"></a>
@@ -452,7 +453,7 @@ It is a job step that runs a PowerShell script. PowerShell job step is not suppo
 **Recommendation**   
 Review impacted objects section in Azure Migrate to see all jobs using PowerShell job step and evaluate if the job step or the impacted object can be removed.  Evaluate if Azure Automation can be used. Alternatively, migrate to SQL Server on Azure Virtual Machine
 
-More information: [SQL Server Agent differences in Azure SQL Managed Instance ](../../managed-instance/transact-sql-tsql-differences-sql-server.md#sql-server-agent)
+More information: [SQL Server Agent differences in Azure SQL Managed Instance](../../managed-instance/transact-sql-tsql-differences-sql-server.md#sql-server-agent)
 
 ## Queue Reader job<a id="QueueReaderJob"></a>
 
@@ -466,7 +467,7 @@ It is a job step that activates the replication Queue Reader Agent. The Replicat
 **Recommendation**   
 Review impacted objects section in Azure Migrate to see all jobs using Queue Reader job step and evaluate if the job step or the impacted object can be removed. Alternatively, migrate to SQL Server on Azure Virtual Machine.
 
-More information: [SQL Server Agent differences in Azure SQL Managed Instance ](../../managed-instance/transact-sql-tsql-differences-sql-server.md#sql-server-agent)
+More information: [SQL Server Agent differences in Azure SQL Managed Instance](../../managed-instance/transact-sql-tsql-differences-sql-server.md#sql-server-agent)
 
 
 ## RAISERROR<a id="RAISERROR"></a>
@@ -533,7 +534,7 @@ It is a job step that runs TSQL scripts at scheduled time. TSQL job step include
 **Recommendation**   
 Review impacted objects section in Azure Migrate to see all jobs that include unsupported commands in Azure SQL Managed Instance and evaluate if the job step or the impacted object can be removed. Alternatively, migrate to SQL Server on Azure Virtual Machine.
 
-More information: [SQL Server Agent differences in Azure SQL Managed Instance ](../../managed-instance/transact-sql-tsql-differences-sql-server.md#sql-server-agent)
+More information: [SQL Server Agent differences in Azure SQL Managed Instance](../../managed-instance/transact-sql-tsql-differences-sql-server.md#sql-server-agent)
 
 
 ## Trace flags<a id="TraceFlags"></a>

@@ -1,20 +1,17 @@
 ---
-title: "Project Property Pages Dialog Box | Microsoft Docs"
+title: "Project Property Pages Dialog Box"
 description: Learn about the options in the Project Property Pages dialog box that allow you to configure deployment properties for a Report Server project.
-ms.date: 05/30/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: tools
-
-
-ms.topic: reference
-f1_keywords: 
-  - "sql13.rpt.rptdesigner.projectpropertypages.general.f1"
-helpviewer_keywords: 
-  - "Project Property Pages dialog box"
-ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 05/30/2017
+ms.service: reporting-services
+ms.subservice: tools
+ms.topic: reference
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rpt.rptdesigner.projectpropertypages.general.f1"
+helpviewer_keywords:
+  - "Project Property Pages dialog box"
 ---
 
 # Project Property Pages Dialog Box

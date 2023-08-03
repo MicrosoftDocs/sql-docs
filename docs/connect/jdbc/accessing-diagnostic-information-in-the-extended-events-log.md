@@ -4,8 +4,8 @@ description: Learn how to access extended events on the server that are related 
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 05/06/2020
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Accessing diagnostic information in the extended events log

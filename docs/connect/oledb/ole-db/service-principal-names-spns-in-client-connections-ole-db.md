@@ -4,8 +4,8 @@ description: Learn about OLE DB Driver for SQL Server properties and member func
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "12/08/2021"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 ---
 # Service Principal Names (SPNs) in Client Connections (OLE DB) in SQL Server Native Client

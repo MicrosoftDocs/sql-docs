@@ -1,18 +1,14 @@
 ---
-description: "Alert Properties - New Alert (Response Page)"
 title: "Alert Properties - New Alert (Response Page)"
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.ag.alert.response.f1"
-ms.assetid: 72daf008-f9ea-4077-b217-5048e7759d3e
+description: "Alert Properties - New Alert (Response Page)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
+ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.ag.alert.response.f1"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Alert Properties - New Alert (Response Page)

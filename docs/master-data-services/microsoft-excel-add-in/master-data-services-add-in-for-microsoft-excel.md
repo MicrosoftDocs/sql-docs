@@ -1,20 +1,17 @@
 ---
-title: Overview
+title: Master Data Services Add-in for Microsoft Excel
 description: Learn how to load data from Master Data Services into Excel, and then publish it back to MDS by using the Master Data Services Add-in for Excel.
-ms.custom: microsoft-excel-add-in, seo-lt-2019
-ms.date: 07/25/2017
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
-ms.topic: conceptual
-ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: 03/20/2023
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+ms.custom: microsoft-excel-add-in
 ---
 # Master Data Services Add-in for Microsoft Excel
 
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 With the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]&nbsp;[!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], you can load filtered lists of data from Master Data Services (MDS) into Excel and then work with it just as you would any other data. When you are done, you can publish the data back to MDS where it's centrally stored. Security level determines which data you can view and update.  
   
@@ -22,11 +19,18 @@ If you're an administrator, you can use the [!INCLUDE[ssMDSXLS](../../includes/s
   
 With the [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], you can use Data Quality Services (DQS) to match data before loading it into MDS. This feature helps to prevent duplicate data in MDS.
 
+> [!NOTE]
+> Be aware of the following size limitations when interacting with the workbook in MDS Excel add-in.
+>
+> - Excel on the web has a payload size limit for requests and responses of 5 MB. A `RichAPI.Error` will be thrown if that limit is exceeded.
+> - A range is limited to five million cells for get operations.
+
 ## Downloads
 
 - [Master Data Services Add-in for Excel for SQL Server 2016 SP2](https://www.microsoft.com/download/details.aspx?id=56838).
 - [[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] for SQL Server 2017](https://go.microsoft.com/fwlink/?linkid=836867).
-- [Master Data Services Add-in for Excel for SQL Server 2019 CTP](https://go.microsoft.com/fwlink/?linkid=2086948).
+- [Master Data Services Add-in for Excel for SQL Server 2019](https://go.microsoft.com/fwlink/?linkid=2086948).
+- [Master Data Services Add-in for Excel for SQL Server 2022](https://www.microsoft.com/download/details.aspx?id=104535).
 
 > [!NOTE]
 > The Master Data Services Add-in for Excel requires the Office Automation Security to be set to one of the following:
@@ -76,4 +80,4 @@ When working with the add-in, you might come across the following terms. For mor
 - [Data quality matching in the MDS Add-in for Excel](../../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)  
 - [Building a model &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/building-a-model-mds-add-in-for-excel.md)
 - [Setting properties for Master Data Services Add-in for Excel](../../master-data-services/microsoft-excel-add-in/setting-properties-for-master-data-services-add-in-for-excel.md)  
-- [Security &#40;Master Data Services&#41;](../../master-data-services/security-master-data-services.md)  
+- [Security &#40;Master Data Services&#41;](../../master-data-services/security-master-data-services.md)

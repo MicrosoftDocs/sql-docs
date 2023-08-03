@@ -2,16 +2,14 @@
 title: Azure Active Directory-only authentication
 titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: This article provides information on the Azure AD-only authentication feature with Azure SQL
-author: GithubMirek
-ms.author: mireks
+author: nofield
+ms.author: nofield
 ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 04/01/2022
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
-ms.custom:
-  - "ignite-fall-2021"
-  - "devx-track-azurecli"
+ms.custom: ignite-fall-2021, devx-track-azurecli, devx-track-azurepowershell
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
@@ -377,7 +375,7 @@ For more information, see [Microsoft.Sql managedInstances/azureADOnlyAuthenticat
 
 ### Checking Azure AD-only authentication using T-SQL
 
-The [SEVERPROPERTY](/sql/t-sql/functions/serverproperty-transact-sql) `IsExternalAuthenticationOnly` has been added to check if Azure AD-only authentication is enabled for your server or managed instance. `1` indicates that the feature is enabled, and `0` represents the feature is disabled.
+The [SERVERPROPERTY](/sql/t-sql/functions/serverproperty-transact-sql) `IsExternalAuthenticationOnly` has been added to check if Azure AD-only authentication is enabled for your server or managed instance. `1` indicates that the feature is enabled, and `0` represents the feature is disabled.
 
 ```sql
 SELECT SERVERPROPERTY('IsExternalAuthenticationOnly') 

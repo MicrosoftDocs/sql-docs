@@ -1,23 +1,20 @@
 ---
 title: "Set thresholds & warnings (Replication Monitor)"
-description: Learn how to enable warnings for various conditions that can occur with your replication using Replication Monitor within SQL Server Management Studio (SSMS). 
-ms.custom: seo-lt-2019
+description: Learn how to enable warnings for various conditions that can occur with your replication using Replication Monitor within SQL Server Management Studio (SSMS).
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "alerts [SQL Server replication]"
   - "Merge Agent, thresholds and warnings"
   - "Distribution Agent, thresholds and warnings"
   - "thresholds [SQL Server replication]"
   - "Replication Monitor, thresholds and warnings"
   - "monitoring performance [SQL Server replication], thresholds and warnings"
-ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Set Thresholds and Warnings in Replication Monitor

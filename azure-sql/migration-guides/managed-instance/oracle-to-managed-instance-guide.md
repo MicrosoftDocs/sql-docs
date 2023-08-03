@@ -1,8 +1,8 @@
 ---
 title: "Oracle to Azure SQL Managed Instance: Migration guide"
 description: In this guide, you learn how to migrate your Oracle schemas to Azure SQL Managed Instance by using SQL Server Migration Assistant for Oracle.
-author: mokabiru
-ms.author: mokabiru
+author: croblesm
+ms.author: roblescarlos
 ms.reviewer: mathoma
 ms.date: 11/06/2020
 ms.service: sql-managed-instance
@@ -75,7 +75,7 @@ Validate the default data type mappings and change them based on requirements if
 
 To convert the schema:
 
-1. (Optional) Add dynamic or ad-hoc queries to statements. Right-click the node, and then select **Add statements**.
+1. (Optional) Add dynamic or ad hoc queries to statements. Right-click the node, and then select **Add statements**.
 1. Select the **Connect to Azure SQL Managed Instance** tab.
     1. Enter connection details to connect your database in **SQL Database Managed Instance**.
     1. Select your target database from the drop-down list, or enter a new name, in which case a database will be created on the target server.

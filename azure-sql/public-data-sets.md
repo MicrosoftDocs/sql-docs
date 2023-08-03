@@ -3,15 +3,17 @@ title: Public data sets for Azure analytics
 description: Learn about public data sets that you can use to prototype and test Azure analytics services and solutions.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: mathoma, kendralittle
+ms.reviewer: mathoma
 ms.date: 10/01/2018
 ms.service: sql-database
 ms.subservice: development
 ms.topic: reference
 ms.custom: sqldbrb=2
 ---
+
 # Public data sets for testing and prototyping
-[!INCLUDE[appliesto-asf](includes/appliesto-asf.md)]
+
+[!INCLUDE[appliesto-sqldb-sqlmi-sqlvm](includes/appliesto-sqldb-sqlmi-sqlvm.md)]
 
 Browse this list of public data sets for data that you can use to prototype and test storage and analytics services and solutions.
 
@@ -35,10 +37,9 @@ Browse this list of public data sets for data that you can use to prototype and 
 | [New York City taxi data](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) | "Taxi trip records include fields capturing pick-up and dropoff dates/times, pick-up and dropoff locations, trip distances, itemized fares, rate types, payment types, and driver-reported passenger counts." | Data sets are in CSV files by month. |
 | [Microsoft Research data sets - "Data Science for Research"](https://www.microsoft.com/research/academic-program/data-science-microsoft-research/) | Multiple data sets covering human-computer interaction, audio/video, data mining/information retrieval, geospatial/location, natural language processing, and robotics/computer vision. | Data sets are in various formats, zipped for download. |
 | [Open Science Data Cloud data](https://www.opensciencedatacloud.org/projects/) | "The Open Science Data Cloud provides the scientific community with resources for storing, sharing, and analyzing terabyte and petabyte-scale scientific datasets."| Data sets are in various formats. |
-| [Global climate data - WorldClim](https://worldclim.org/) | "WorldClim is a set of global climate layers (gridded climate data) with a spatial resolution of about 1 km2. These data can be used for mapping and spatial modeling." | These files contain geospatial data. For more info, see [Data format](https://worldclim.org/formats1). |
+| [Global climate data - WorldClim](https://worldclim.org/) | "WorldClim is a set of global climate layers (gridded climate data) with a spatial resolution of about 1 km2. These data can be used for mapping and spatial modeling." | These files contain geospatial data. |
 | [Data about human society - The GDELT Project](https://www.gdeltproject.org/data.html) | "The GDELT Project is the largest, most comprehensive, and highest resolution open database of human society ever created." | The raw data files are in CSV format. |
 | [Advertising click prediction data for machine learning from Criteo](https://labs.criteo.com/2013/12/download-terabyte-click-logs/) | "The largest ever publicly released ML dataset." For more info, see [Criteo's 1 TB Click Prediction Dataset](/archive/blogs/machinelearning/now-available-on-azure-ml-criteos-1tb-click-prediction-dataset). | |
-| [ClueWeb09 text mining data set from The Lemur Project](https://www.lemurproject.org/clueweb09.php/) | "The ClueWeb09 dataset was created to support research on information retrieval and related human language technologies. It consists of about 1 billion web pages in 10 languages that were collected in January and February 2009." | See [Dataset Information](https://www.lemurproject.org/clueweb09/datasetInformation.php).|
 
 ## Online service data
 

@@ -4,8 +4,8 @@ description: "sqlsrv_send_stream_data"
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "02/28/2019"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: reference
 helpviewer_keywords:
   - "sqlsrv_send_stream_data"

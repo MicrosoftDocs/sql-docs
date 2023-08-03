@@ -1,21 +1,18 @@
 ---
+title: "Validate a DAC Package"
 description: "Validate a DAC Package"
-title: "Validate a DAC Package | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 7/12/2022
-ms.prod: sql
-ms.technology:
+ms.service: sql
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data-tier application [SQL Server], validate"
   - "data-tier application [SQL Server], compare"
   - "validate DAC"
   - "compare DACs"
   - "data-tier application [SQL Server], view"
   - "view DAC"
-ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # Validate a DAC package
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -41,11 +38,11 @@ There are two mechanisms for viewing the contents of a data-tier application (DA
 
 2.  Select the **SQL Server** project template, and specify a **Name**, **Location**, and **Solution name**.
 
-3.  In **Solution Explorer**, right click the project node and select **Properties...**.
+3.  In **Solution Explorer**, right-click the project node and select **Properties...**.
   
 4.  On the **Project Settings** tab, in the **Output Types** section, select the **Data-tier Application (.dacpac File)** check box, and then close the properties dialog.  
 
-5.  In **Solution Explorer**, right click the project node and select **Import Data-tier Application...**.  
+5.  In **Solution Explorer**, right-click the project node and select **Import Data-tier Application...**.  
 
 6.  Use **Solution Explorer** to open all of the files in the DAC, such as the server selection policy and the pre- and post-deployment scripts.  
 

@@ -4,9 +4,8 @@ description: sys.availability_read_only_routing_lists (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "availability_read_only_routing_lists_TSQL"
@@ -22,7 +21,6 @@ helpviewer_keywords:
   - "sys.availability_read_only_routing_lists dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 0686bc5a-c206-41ef-b40a-79a8259d51d2
 ---
 # sys.availability_read_only_routing_lists (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

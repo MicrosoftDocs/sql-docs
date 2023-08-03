@@ -1,17 +1,14 @@
 ---
+title: "Data Migration Settings (MySQLToSQL)"
 description: "Data Migration Settings (MySQLToSQL)"
-title: "Data Migration Settings (MySQLToSQL) | Microsoft Docs"
-ms.prod: sql
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.technology: ssma
-ms.topic: conceptual
-ms.assetid: 9c396df4-5676-4f32-9c57-70d4f15f9b7a
-author: cpichuka 
+author: cpichuka
 ms.author: cpichuka
-f1_keywords: 
-    - "ssma.mysql.detaildatamigrationsettingcontrol.f1" 
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ssma
+ms.topic: conceptual
+f1_keywords:
+  - "ssma.mysql.detaildatamigrationsettingcontrol.f1"
 ---
 # Data Migration Settings (MySQLToSQL)
   

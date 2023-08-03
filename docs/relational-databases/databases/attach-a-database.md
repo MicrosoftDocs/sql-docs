@@ -1,20 +1,17 @@
 ---
 title: "Attach a Database"
 description: Learn how to attach a database in SQL Server by using SQL Server Management Studio or Transact-SQL. Use this feature to copy, move, or upgrade a database.
-ms.custom: ""
-ms.date: "01/31/2022"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: backup-restore
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.attachdatabase.f1"
-helpviewer_keywords: 
-  - "database attaching [SQL Server]"
-  - "attaching databases [SQL Server]"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "01/31/2022"
+ms.service: sql
+ms.subservice: backup-restore
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.attachdatabase.f1"
+helpviewer_keywords:
+  - "database attaching [SQL Server]"
+  - "attaching databases [SQL Server]"
 ---
 # Attach a Database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

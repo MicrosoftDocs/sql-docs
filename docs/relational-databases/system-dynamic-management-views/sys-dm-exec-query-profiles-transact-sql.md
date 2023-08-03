@@ -3,10 +3,9 @@ title: "sys.dm_exec_query_profiles (Transact-SQL)"
 description: sys.dm_exec_query_profiles (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "10/25/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.date: "02/27/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "dm_exec_query_profiles_TSQL"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_exec_query_profiles dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_query_profiles (Transact-SQL)
@@ -82,9 +80,15 @@ Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1, the *sta
 > The query under investigation has to start **after** the query profiling infrastructure has been enabled, enabling it after the query started will not produce results in `sys.dm_exec_query_profiles`. For more information on how to enable the query profiling infrastructures, see [Query Profiling Infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md).
 
 ## Permissions  
-On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] and Azure SQL Managed Instance, requires `VIEW DATABASE STATE` permission and membership of the `db_owner` database role.   
-On [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] On SQL Database Basic, S0, and S1 service objectives, and for databases in elastic pools, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account or the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account is required. On all other SQL Database service objectives, the `VIEW DATABASE STATE` permission is required in the database.   
+
+- On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] and Azure SQL Managed Instance, requires `VIEW DATABASE STATE` permission and membership of the `db_owner` database role.   
+- On [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. 
+- On [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] Basic, S0, and S1 service objectives, and for databases in elastic pools, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account or the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account is required. On all other SQL Database service objectives, the `VIEW DATABASE STATE` permission is required in the database.   
    
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW DATABASE PERFORMANCE STATE permission on the database.
+
 ## Examples  
  Step 1: Login to a session in which you plan to run the query you will analyze with `sys.dm_exec_query_profiles`. To configure the query for profiling use `SET STATISTICS PROFILE ON`. Run your query in this same session.  
   

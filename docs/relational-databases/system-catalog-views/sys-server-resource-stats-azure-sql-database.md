@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "server_resource_stats"
 dev_langs:
   - "TSQL"
-monikerRange: " = azuresqldb-current || = azuresqldb-mi-current"
+monikerRange: "= azuresqldb-current || = azuresqldb-mi-current"
 ---
 # sys.server_resource_stats (Azure SQL Managed Instance)
 

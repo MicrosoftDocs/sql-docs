@@ -2,14 +2,13 @@
 title: Support for Report Viewer control versions
 description: The Microsoft Report Viewer control is compatible with SQL Server Reporting Services and Power BI Report Server that follow the modern support lifecycle policy.
 author: maggiesMSFT
-ms.custom: seo-lt-2019
 ms.author: maggies
 ms.reviewer: jonhp
-ms.prod: reporting-services
-ms.prod_service: reporting-services-native
-ms.technology: application-integration
-ms.topic: reference
 ms.date: 12/01/2020
+ms.service: reporting-services
+ms.subservice: application-integration
+ms.topic: reference
+ms.custom: updatefrequency5
 ---
 # Support for Report Viewer current branch versions
 
@@ -24,7 +23,7 @@ For a version history of the Report Viewer control, see the following links:
 
 ## Application server and report server combinations
 
-Some features of the Report Viewer control rely on the operating system’s default behaviors. Thus, they may require running the same version for both the client (the application server running the Report Viewer control) and the server (running Reporting Services). The following combinations of application server and report server are supported:
+Some features of the Report Viewer control rely on the operating system's default behaviors. Thus, they may require running the same version for both the client (the application server running the Report Viewer control) and the server (running Reporting Services). The following combinations of application server and report server are supported:
 
 | Application server | Report server |
 | :----------------- | :------ |

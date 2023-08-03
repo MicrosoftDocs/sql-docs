@@ -1,21 +1,17 @@
 ---
+title: "ODBC Destination"
 description: "ODBC Destination"
-title: "ODBC Destination | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.ssis.designer.odbcdest.f1"
   - "sql13.ssis.designer.odbcdest.connection.f1"
   - "sql13.ssis.designer.odbcdest.columns.f1"
   - "sql13.ssis.designer.odbcdest.errorhandling.f1"
-ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
-author: chugugrace
-ms.author: chugu
 ---
 # ODBC Destination
 
@@ -71,7 +67,7 @@ ms.author: chugu
   
  To open the **Advanced Editor** dialog box:  
   
--   In the **Data Flow** screen of your [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] project, right click the ODBC destination and select **Show Advanced Editor**.  
+-   In the **Data Flow** screen of your [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] project, right-click the ODBC destination and select **Show Advanced Editor**.  
   
  For more information about the properties that you can set in the Advanced Editor dialog box, see [ODBC Destination Custom Properties](../../integration-services/data-flow/odbc-destination-custom-properties.md).  
   

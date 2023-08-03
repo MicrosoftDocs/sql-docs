@@ -1,21 +1,18 @@
 ---
-title: "Reporting Services Configuration Files | Microsoft Docs"
+title: "Reporting Services Configuration Files"
 description: Learn about configuration files where Reporting Services stores component information. You might need to modify the files to add or configure advanced settings.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 05/30/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server
-
-
+ms.service: reporting-services
+ms.subservice: report-server
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "deploying [Reporting Services], configuration files"
   - "configuration options [Reporting Services]"
   - "modifying configuration files"
   - "configuration files [Reporting Services]"
-ms.assetid: 21e5c32f-ad67-4917-b55a-8e21bd64f5a6
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Reporting Services Configuration Files
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stores component information in the registry and in configuration files that are copied to the file system during setup. Configuration files contain a combination of internal-use-only and user-defined values. User-defined values are specified through Setup, the configuration tools, the command line utilities, and by manually editing the configuration files.  
@@ -23,7 +20,7 @@ ms.author: maggies
  Modifying the configuration files is only necessary if you are adding or configuring advanced settings. Configuration settings are specified as either XML elements or attributes. If you understand XML and configuration files, you can use a text or code editor to modify user-definable settings. For more information about how to modify a configuration file or to learn more about how the report server reads new and updated configuration settings, see [Modify a Reporting Services Configuration File &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
 > [!NOTE]  
-> In previous releases, Report Manager had its own configuration file named RSWebApplication.config. That file is now obsolete. If you upgraded from a previous installation, the file will not be deleted but the report server will not read any settings from it. If the file exists on your computer, you should delete it. In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions, all Report Manager and web portal configuration settings are stored in and read from the RSReportServer.config file. To review a list of which settings were deleted or moved, see [Breaking Changes in SQL Server Reporting Services in SQL Server 2016](../../reporting-services/breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md).  
+> In previous releases, Report Manager had its own configuration file named RSWebApplication.config. That file is now obsolete. If you upgraded from a previous installation, the file will not be deleted but the report server will not read any settings from it. If the file exists on your computer, you should delete it. In [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions, all Report Manager and web portal configuration settings are stored in and read from the RSReportServer.config file. To review a list of which settings were deleted or moved, see [Breaking Changes in SQL Server Reporting Services in SQL Server 2016](../../reporting-services/breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md).  
   
  In this article:  
   

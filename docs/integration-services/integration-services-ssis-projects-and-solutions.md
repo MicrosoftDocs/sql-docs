@@ -1,24 +1,21 @@
 ---
+title: "Integration Services (SSIS) Projects and Solutions"
 description: "Integration Services (SSIS) Projects and Solutions"
-title: "Integration Services (SSIS) Projects and Solutions | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/20/2019"
-ms.prod: sql
-ms.prod_service: "integration-services"
+author: chugugrace
+ms.author: chugu
 ms.reviewer: "vanto"
-ms.technology: integration-services
+ms.date: "09/20/2019"
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.ssis.importprojectwizard.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "projects [Integration Services], creating"
   - "folders [Integration Services], projects"
   - "files [Integration Services], projects"
   - "folders [Integration Services]"
   - "projects [Integration Services], about projects"
-ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
-author: chugugrace
-ms.author: chugu
 ---
 # Integration Services (SSIS) Projects and Solutions
 

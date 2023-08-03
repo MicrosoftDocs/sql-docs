@@ -4,9 +4,8 @@ description: backupfile (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "08/09/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "backupfile"
@@ -16,7 +15,6 @@ helpviewer_keywords:
   - "backupfile system table"
 dev_langs:
   - "TSQL"
-ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
 ---
 # backupfile (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,17 +1,13 @@
 ---
-title: "Create a Shared Dataset or Embedded Dataset (Report Builder) | Microsoft Docs"
+title: "Create a Shared Dataset or Embedded Dataset (Report Builder)"
 description: Learn how to create embedded datasets and shared datasets for use in various reports. To create a dataset, you need an embedded or shared data source.
-
-ms.date: 05/10/2021
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-data
-
-
-ms.topic: conceptual
-ms.assetid: d1d7bc71-f0e9-4ce5-b3ad-6fee54388a31
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 05/10/2021
+ms.service: reporting-services
+ms.subservice: report-data
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Create a Shared Dataset or Embedded Dataset (Report Builder and SSRS)
 

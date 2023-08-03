@@ -1,19 +1,15 @@
 ---
-description: "New Job Schedule - Job Schedule Properties"
 title: "New Job Schedule - Job Schedule Properties"
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.ag.job.scheduleproperties.f1"
-  - "sql13.swb.maint.editrecurringjobsched.f1"
-ms.assetid: 5c0b1bc9-dd87-49cc-b0dd-75d0d922b177
+description: "New Job Schedule - Job Schedule Properties"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
+ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.ag.job.scheduleproperties.f1"
+  - "sql13.swb.maint.editrecurringjobsched.f1"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # New Job Schedule - Job Schedule Properties

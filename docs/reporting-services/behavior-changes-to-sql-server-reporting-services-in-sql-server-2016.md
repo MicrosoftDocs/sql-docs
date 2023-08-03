@@ -1,14 +1,14 @@
 ---
-title: "Behavior changes to SQL Server Reporting Services in SQL Server 2016 | Microsoft Docs"
+title: "Behavior changes to SQL Server Reporting Services in SQL Server 2016"
 description: Learn about behavior changes in Reporting Services and how the features work or interact in SQL Server 2016 as compared to previous versions of SQL Server.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 07/02/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
-
-
+ms.service: reporting-services
+ms.subservice: reporting-services
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "Reporting Services, backward compatibility"
   - "rows [Reporting Services], heights"
   - "leading blanks"
@@ -21,9 +21,6 @@ helpviewer_keywords:
   - "blank characters [SQL Server]"
   - "initializing installations [Reporting Services]"
   - "behavior changes [Reporting Services]"
-ms.assetid: 2a767f0f-84f2-4099-8784-1e37790f858e
-author: maggiesMSFT
-ms.author: maggies
 ---
 
 # Behavior changes to SQL Server Reporting Services in SQL Server 2016

@@ -1,19 +1,15 @@
 ---
+title: "Developing a User Interface for a Custom Log Provider"
 description: "Developing a User Interface for a Custom Log Provider"
-title: "Developing a User Interface for a Custom Log Provider | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "custom user interface [Integration Services], custom log providers"
-  - "custom log providers [Integration Services], developing custom user interface"
-ms.assetid: 6fd2d269-d87a-4134-82a1-40a09b3b5453
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "reference"
+helpviewer_keywords:
+  - "custom user interface [Integration Services], custom log providers"
+  - "custom log providers [Integration Services], developing custom user interface"
 ---
 # Developing a User Interface for a Custom Log Provider
 

@@ -1,26 +1,22 @@
 ---
-description: "Upgrade a database using detach and attach (Transact-SQL)"
 title: "Upgrade a database using detach & attach (Transact-SQL)"
+description: "Upgrade a database using detach and attach (Transact-SQL)"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 06/03/2020
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: 
+ms.service: sql
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "database attaching [SQL Server]"
   - "upgrading databases"
   - "database upgrades [SQL Server]"
   - "database detaching [SQL Server]"
   - "detaching databases [SQL Server]"
   - "attaching databases [SQL Server]"
-ms.assetid: 99f66ed9-3a75-4e38-ad7d-6c27cc3529a9
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.custom: seo-dt-2019
 ---
 # Upgrade a database using detach and attach (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-This topic describes how to use detach and attach operations to upgrade a database in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. After being attached to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], the database is available immediately and is automatically upgraded. This prevents the database from being used with an older version of the [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. However, metadata upgrade does not affect the [database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) setting of a database. See more information in [Database Compatibility Level After Upgrade](#dbcompat) later in this topic.  
+This topic describes how to use detach and attach operations to upgrade a database in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. After being attached to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], the database is available immediately and is automatically upgraded. This prevents the database from being used with an older version of the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)]. However, metadata upgrade does not affect the [database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) setting of a database. See more information in [Database Compatibility Level After Upgrade](#dbcompat) later in this topic.  
   
  **In this topic**  
   

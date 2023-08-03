@@ -1,20 +1,17 @@
 ---
-title: "Manage a Reporting Services Native Mode Report Server | Microsoft Docs"
+title: "Manage a Reporting Services Native Mode Report Server"
 description: Refer to these articles when configuring a native mode report server, or when configuring a report server to run in SharePoint integrated mode.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 05/14/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server
-
-
+ms.service: reporting-services
+ms.subservice: report-server
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "Reporting Services Configuration tool"
   - "configuration options [Reporting Services]"
   - "report servers [Reporting Services], configuring"
-ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Manage a Reporting Services Native Mode Report Server
   This section contains procedures for configuring a native mode report server instance using the Report Server Configuration Manager.  

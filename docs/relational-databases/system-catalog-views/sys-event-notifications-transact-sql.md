@@ -4,9 +4,8 @@ description: sys.event_notifications (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "event_notifications_TSQL"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.event_notifications catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 136a76ee-2b35-4418-ab46-fda2d51f7d99
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.event_notifications (Transact-SQL)

@@ -1,23 +1,19 @@
 ---
 title: Models
 description: A model defines the structure of data in your master data management solution. Models are the highest level of data organization in Master Data Services.
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "models [Master Data Services], about models"
-  - "models [Master Data Services]"
-ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/15/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "models [Master Data Services], about models"
+  - "models [Master Data Services]"
 ---
 # Models (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Models are the highest level of data organization in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. A model defines the structure of data in your master data management solution. A model contains the following objects:  
   
@@ -62,7 +58,7 @@ ms.author: jiwang6
   
 -   Customer, which could include entities such as gender, education, occupation, and marital status.  
   
--   Geography, which could include entities such as postal codes, cities, counties, states, provinces, regions, territories, countries, and continents.  
+-   Geography, which could include entities such as postal codes, cities, counties, states, provinces, territories, countries/regions, and continents.  
   
 ## Related Tasks  
   

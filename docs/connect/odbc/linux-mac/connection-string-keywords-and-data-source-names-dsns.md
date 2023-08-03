@@ -3,9 +3,9 @@ title: Connecting from Linux or macOS
 description: Learn how to create a connection to a database from Linux or macOS using the Microsoft ODBC Driver for SQL Server.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 08/08/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.date: 07/31/2023
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
   - "connect to linux"
@@ -131,11 +131,12 @@ TLS on Linux and macOS uses the OpenSSL library. The following table shows the m
 |Red Hat Enterprise Linux 6|1.0.0-10|/etc/pki/tls/cert.pem|
 |SUSE Linux Enterprise 15|1.1.0|/etc/ssl/certs|
 |SUSE Linux Enterprise 11, 12|1.0.1|/etc/ssl/certs|
-|Ubuntu 22.04|3.0.2|/etc/ssl/certs|
-|Ubuntu 20.04, 21.04, 21.10 |1.1.1|/etc/ssl/certs|
+|Ubuntu 22.04, 23.04|3.0.2|/etc/ssl/certs|
+|Ubuntu 20.04|1.1.1|/etc/ssl/certs|
 |Ubuntu 18.04|1.1.0|/etc/ssl/certs|
-|Ubuntu 16.04, 16.10, 17.10|1.0.2|/etc/ssl/certs|
+|Ubuntu 16.04|1.0.2|/etc/ssl/certs|
 |Ubuntu 14.04|1.0.1|/etc/ssl/certs|
+|Alpine 3.17, 3.18|3.0.1|/etc/ssl/certs|
 
 You can also specify encryption in the connection string using the `Encrypt` option when using **SQLDriverConnect** to connect.
 

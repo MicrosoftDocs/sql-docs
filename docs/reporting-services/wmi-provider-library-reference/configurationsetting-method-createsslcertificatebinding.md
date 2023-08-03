@@ -1,18 +1,15 @@
 ---
+title: "CreateSSLCertificateBinding Method (WMI MSReportServer_ConfigurationSetting)"
 description: "CreateSSLCertificateBinding Method (WMI MSReportServer_ConfigurationSetting)"
-title: "CreateSSLCertificateBinding Method (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: wmi-provider-library-reference
-
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "CreateSSLCertificateBinding"
-ms.assetid: 407d50e4-0a55-43cb-8ddf-2d82714071b1
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: wmi-provider-library-reference
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "CreateSSLCertificateBinding"
 ---
 # ConfigurationSetting Method - CreateSSLCertificateBinding
   Creates a TLS/SSL Certificate binding.  

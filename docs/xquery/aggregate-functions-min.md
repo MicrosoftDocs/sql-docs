@@ -1,24 +1,20 @@
 ---
-title: "min Function (XQuery) | Microsoft Docs"
+title: "min Function (XQuery)"
 description: Learn about the XQuery min() function that returns the one item in a sequence whose value is less that that of all the others.
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: sql
-ms.prod_service: sql
-ms.reviewer: ""
-ms.technology: xml
-ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "fn:min function"
-  - "min function [XQuery]"
-ms.assetid: db0b7d94-3fa6-488f-96d6-6a9a7d6eda23
 author: "rothja"
 ms.author: "jroth"
+ms.date: "03/09/2017"
+ms.service: sql
+ms.subservice: xml
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "fn:min function"
+  - "min function [XQuery]"
+dev_langs:
+  - "XML"
 ---
 # Aggregate Functions - min
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   Returns from a sequence of atomic values, *$arg*, the one item whose value is less than that of all the others.  
   

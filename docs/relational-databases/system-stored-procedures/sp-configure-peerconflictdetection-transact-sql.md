@@ -1,23 +1,19 @@
 ---
+title: "sp_configure_peerconflictdetection (Transact-SQL)"
 description: "sp_configure_peerconflictdetection (Transact-SQL)"
-title: "sp_configure_peerconflictdetection (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: 10/05/2021
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_configure_peerconflictdetection_TSQL"
-  - "sp_configure_peerconflictdetection"
-helpviewer_keywords: 
-  - "sp_configure_peerconflictdetection"
-ms.assetid: 45117cb2-3247-433f-ba3d-7fa19514b1c3
 author: markingmyname
 ms.author: maghan
+ms.date: 10/05/2021
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_configure_peerconflictdetection_TSQL"
+  - "sp_configure_peerconflictdetection"
+helpviewer_keywords:
+  - "sp_configure_peerconflictdetection"
+dev_langs:
+  - "TSQL"
 ---
 # sp_configure_peerconflictdetection (Transact-SQL)
 
@@ -28,7 +24,7 @@ ms.author: maghan
 > [!IMPORTANT]
 > You can't use `sp_configure_peerconflictdetection` to enable `lastwriter`. To change the conflict resolution of an existing replication topology, drop the publication and recreate it.
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -79,7 +75,7 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
  **0** (success) or **1** (failure)  
   
 ## Remarks  
- sp_configure_peerconflictdetection is used in peer-to-peer transactional replication. To use conflict detection, all nodes must be running [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later versions; and detection must be enabled for all nodes.  
+ sp_configure_peerconflictdetection is used in peer-to-peer transactional replication. To use conflict detection, all nodes must be running [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or later versions; and detection must be enabled for all nodes.  
   
 ## Permissions  
  Requires membership in the sysadmin fixed server role or db_owner fixed database role.  

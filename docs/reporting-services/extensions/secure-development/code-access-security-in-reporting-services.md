@@ -1,23 +1,20 @@
 ---
-title: "Code Access Security in Reporting Services | Microsoft Docs"
+title: "Code Access Security in Reporting Services"
 description: Find out about code access security in Reporting Services. Learn how evidence, code groups, and named permission sets factor into a security policy.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: extensions
-
-
+ms.service: reporting-services
+ms.subservice: extensions
 ms.topic: reference
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "code groups [Reporting Services]"
   - "code access security [Reporting Services]"
   - "permission sets [Reporting Services]"
   - "evidence [Reporting Services]"
   - "code access security [Reporting Services], about code access security"
   - "named permission sets [Reporting Services]"
-ms.assetid: 97480368-1fc3-4c32-b1b0-63edfb54e472
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Code Access Security in Reporting Services
   Code access security centers on these core concepts: evidence, code groups, and named permission sets. In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], the Report Manager, Report Designer, and Report Server components each have a policy file that configures code access security for custom assemblies as well as data, delivery, rendering, and security extensions. The following sections provide an overview of code access security. For more detailed information about the topics covered in this section, see "Security Policy Model" in the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK documentation.  

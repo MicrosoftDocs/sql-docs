@@ -1,20 +1,17 @@
 ---
-title: "Map Wizard and Map Layer Wizard (Report Builder) | Microsoft Docs"
+title: "Map Wizard and Map Layer Wizard (Report Builder)"
 description: Find out how to automate creating a map, adding a map layer, or changing map layer options with the Map Wizards or Map Layer Wizard in Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
+ms.service: reporting-services
+ms.subservice: report-design
 ms.topic: reference
-f1_keywords: 
+ms.custom: updatefrequency5
+f1_keywords:
   - "sql13.rtp.rptdesigner.mapandlayerwizard.f1"
   - "10542"
   - "MICROSOFT.REPORTDESIGNER.MAPLAYER.NAME"
-ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Map Wizard and Map Layer Wizard (Report Builder and SSRS)
  In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated reports, the Map Wizard and Map Layer Wizard automate the task of creating a map, adding a map layer, or changing map layer options on an existing layer.  
@@ -98,7 +95,7 @@ ms.author: maggies
  For more information about maps, see [Maps &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md). For step-by-step instructions to add a map to a report, see [Tutorial: Map Report &#40;Report Builder&#41;](../../reporting-services/tutorial-map-report-report-builder.md).  
   
 ##  <a name="SpatialDataSource"></a> Choose a source of spatial data  
- On this page, specify the spatial data source and which spatial data to include. Spatial data can come from the map gallery, an ESRI Shapefile, or a dataset query that specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spatial data from a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later version database.  
+ On this page, specify the spatial data source and which spatial data to include. Spatial data can come from the map gallery, an ESRI Shapefile, or a dataset query that specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spatial data from a [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or later version database.  
   
  You can use the same source or a different source of spatial data for each layer, but you must specify the source every time you add a layer. When the spatial data is from the map gallery or an ESRI Shapefile, the spatial data source is not a separate report item. It does not appear in the Report Data pane.  
   

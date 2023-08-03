@@ -1,19 +1,16 @@
 ---
+title: "Configure the Web Portal to Pass Custom Authentication Cookies"
 description: "Configure the Web Portal to Pass Custom Authentication Cookies"
-title: "Configure the Web Portal to Pass Custom Authentication Cookies | Microsoft Docs"
-ms.date: 04/18/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: security
-
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "authentication [Reporting Services]"
-  - "extensions [Reporting Services], custom security"
-ms.assetid: 91aeb053-149e-4562-ae4c-a688d0e1b2ba
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 04/18/2017
+ms.service: reporting-services
+ms.subservice: security
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "authentication [Reporting Services]"
+  - "extensions [Reporting Services], custom security"
 ---
 # Configure the Web Portal to Pass Custom Authentication Cookies
 

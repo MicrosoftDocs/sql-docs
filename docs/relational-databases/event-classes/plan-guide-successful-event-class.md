@@ -1,16 +1,14 @@
 ---
-description: "Plan Guide Successful Event Class"
 title: "Plan Guide Successful Event Class"
-ms.custom: ""
-ms.date: "06/22/2021"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "Plan Guide Successful event class"
+description: "Plan Guide Successful Event Class"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "06/22/2021"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "Plan Guide Successful event class"
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Plan Guide Successful Event Class
@@ -25,7 +23,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-curren
 -   The hints in the plan guide definition, including the `USE PLAN` hint, were applied successfully to the query. That is, the compiled query plan honors the specified hints.  
 
 > [!NOTE]
-> This event class is not available in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+> This event class is not available in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
     
 ## Plan Guide Successful Event Class Data Columns  
   

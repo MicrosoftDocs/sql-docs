@@ -1,16 +1,13 @@
 ---
-title: "Add an expand or collapse action to a paginated report | Microsoft Docs"
+title: "Add an expand or collapse action to a paginated report"
 description: Enable a user to expand or collapse items, rows, and columns associated with a group for a table or matrix in a paginated report in Report Builder.
-ms.date: 12/19/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: 49f07ad6-242b-4861-8fc1-91ca78c36d6c
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 12/19/2019
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Add an expand or collapse action to a paginated report (Report Builder)
 

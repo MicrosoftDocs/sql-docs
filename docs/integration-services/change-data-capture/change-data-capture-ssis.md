@@ -1,19 +1,15 @@
 ---
+title: "Change Data Capture (SSIS)"
 description: "Change Data Capture (SSIS)"
-title: "Change Data Capture (SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "incremental loads [SQL Server change data capture]"
-  - "change data capture [SQL Server], Integration Services and"
-ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "incremental loads [SQL Server change data capture]"
+  - "change data capture [SQL Server], Integration Services and"
 ---
 # Change Data Capture (SSIS)
 

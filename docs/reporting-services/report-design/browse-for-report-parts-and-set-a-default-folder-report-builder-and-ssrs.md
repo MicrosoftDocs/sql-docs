@@ -1,16 +1,13 @@
 ---
-title: "Browse for Report Parts and Set a Default Folder (Report Builder) | Microsoft Docs"
+title: "Browse for Report Parts and Set a Default Folder (Report Builder)"
 description: Learn how to add existing report parts, such as tables and charts, to your report from the Report Part Gallery in Report Builder.
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: 5cf38068-65d1-4fe8-81f3-a404d8fbc663
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Browse for Report Parts and Set a Default Folder (Report Builder and SSRS)
 

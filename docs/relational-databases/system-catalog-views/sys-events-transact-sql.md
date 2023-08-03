@@ -4,9 +4,8 @@ description: sys.events (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.events_TSQL"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.events catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: f245a97a-80fc-43fb-a6e4-139420c9a47a
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.events (Transact-SQL)

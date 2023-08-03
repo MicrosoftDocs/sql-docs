@@ -4,12 +4,11 @@ description: You can view or modify properties for an assembly hosted on SQL Ser
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 f1_keywords:
   - "sql13.swb.assemblies.general.f1"
-ms.assetid: 88d40d3b-8983-4a57-b79d-ed1477a5c3c6
 ---
 # Assemblies - Properties
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

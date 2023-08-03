@@ -1,28 +1,24 @@
 ---
-title: "Type Casting Rules in XQuery | Microsoft Docs"
-description: Learn about the rules that are applied when explicitly or implicitly casting from one data type to another in XQuery. 
-ms.custom: ""
+title: "Type Casting Rules in XQuery"
+description: Learn about the rules that are applied when explicitly or implicitly casting from one data type to another in XQuery.
+author: "rothja"
+ms.author: "jroth"
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: sql
-ms.reviewer: ""
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "XQuery, type casting"
   - "casting rules [XML in SQL Server]"
   - "explicit casting [SQL Server]"
   - "type casting rules [XML in SQL Server]"
   - "cast as operator"
   - "implicit casting"
-ms.assetid: f2e91306-2b1b-4e1c-b6d8-a34fb9980057
-author: "rothja"
-ms.author: "jroth"
+dev_langs:
+  - "XML"
 ---
 # Type Casting Rules in XQuery
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   The following W3C XQuery 1.0 and XPath 2.0 Functions and Operators specifications diagram shows the built-in data types. This includes the built-in primitive and built-in derived types.  
   

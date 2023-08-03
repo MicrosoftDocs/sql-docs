@@ -4,8 +4,8 @@ description: "Learn how the Microsoft Drivers for PHP for SQL Server support con
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "05/06/2020"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Support for LocalDB
@@ -67,7 +67,7 @@ $conn = new PDO( 'sqlsrv:server=(localdb)\\myInstance;'
     . 'database=myData', NULL, NULL);
 ```
 
-For instructions on installing LocalDB, see the [LocalDB documentation](../../database-engine/configure-windows/sql-server-express-localdb.md). If you use sqlcmd.exe to modify data in your LocalDB instance, you will need the [sqlcmd utility](../../tools/sqlcmd-utility.md).
+For instructions on installing LocalDB, see the [LocalDB documentation](../../database-engine/configure-windows/sql-server-express-localdb.md). If you use sqlcmd.exe to modify data in your LocalDB instance, you will need the [sqlcmd utility](../../tools/sqlcmd/sqlcmd-utility.md).
 
 ## See Also
 

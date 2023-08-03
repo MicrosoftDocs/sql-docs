@@ -1,14 +1,11 @@
 ---
 title: include file
 description: include file
-ms.prod: reporting-services
-services: 
 author: eross-msft
- 
-ms.service: 
-ms.topic: include
-ms.date: 05/01/2018
 ms.author: lizross
+ms.date: 05/01/2018
+ms.service: reporting-services
+ms.topic: include
 ms.custom: include file
 ---
 

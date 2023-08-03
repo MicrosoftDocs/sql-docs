@@ -4,8 +4,8 @@ description: "getEnablePrepareOnFirstPreparedStatementCall Method (SQLServerData
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "01/19/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: reference
 ---
 # getEnablePrepareOnFirstPreparedStatementCall Method (SQLServerDataSource)

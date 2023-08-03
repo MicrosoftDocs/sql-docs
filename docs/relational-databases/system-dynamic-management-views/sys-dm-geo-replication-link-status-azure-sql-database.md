@@ -7,7 +7,6 @@ ms.author: randolphwest
 ms.date: 06/10/2022
 ms.service: sql-database
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 f1_keywords:
   - "dm_geo_replication_link_status"
   - "dm_geo_replication_link_status_TSQL"
@@ -18,7 +17,6 @@ helpviewer_keywords:
   - "sys.dm_geo_replication_link_status dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: d763d679-470a-4c21-86ab-dfe98d37e9fd
 monikerRange: "=azuresqldb-current"
 ---
 # sys.dm_geo_replication_link_status (Azure SQL Database and Azure SQL Managed Instance)
@@ -69,6 +67,6 @@ Learn more about related concepts in the following articles:
 - [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
 - [sys.geo_replication_links &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
 - [sys.dm_operation_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)   
-- [sp_wait_for_database_copy_sync](../system-stored-procedures/active-geo-replication-sp-wait-for-database-copy-sync.md)
+- [sp_wait_for_database_copy_sync](../system-stored-procedures/sp-wait-for-database-copy-sync-transact-sql.md)
 - [Active geo-replication](/azure/azure-sql/database/active-geo-replication-overview)
 - [Auto-failover groups overview & best practices (Azure SQL Database)](/azure/azure-sql/database/auto-failover-group-sql-db)

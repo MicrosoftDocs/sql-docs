@@ -1,19 +1,15 @@
 ---
-description: "Database mail: Mail queued, not delivered"
 title: "Database mail: Mail queued, not delivered| Microsoft Docs"
-ms.custom: ""
+description: "Database mail: Mail queued, not delivered"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "04/22/2019"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
+ms.service: sql
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "architecture [SQL Server], Database Mail"
   - "Database Mail [SQL Server], architecture"
   - "Database Mail [SQL Server], components"
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Database mail: Mail queued, not delivered 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -36,7 +32,7 @@ GO
 Then, execute the following statement in the **msdb** database to check the status of the mail queue:
 
 ```sql
-sysmail_help_queue_sp @queue_type = 'Mail' ;
+EXEC msdb.dbo.sysmail_help_queue_sp @queue_type = 'Mail';
 ```
 
 For a detailed explanation of the columns, see [sysmail_help_queue_sp (Transact-SQL)](../system-stored-procedures/sysmail-help-queue-sp-transact-sql.md#result-set).

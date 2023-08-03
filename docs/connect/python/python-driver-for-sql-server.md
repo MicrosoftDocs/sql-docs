@@ -4,8 +4,8 @@ description: "Connect to a SQL Database using Python on Windows, Linux, or macOS
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "03/24/2022"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 

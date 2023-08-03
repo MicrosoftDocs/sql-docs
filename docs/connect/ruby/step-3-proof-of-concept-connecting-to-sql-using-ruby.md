@@ -4,8 +4,8 @@ description: "Step 3 is a proof of concept, which shows how you can connect to S
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 06/22/2020
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Step 3: Proof of concept connecting to SQL using Ruby

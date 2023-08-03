@@ -1,16 +1,12 @@
 ---
+title: "New GUI features in SSMA for Oracle (OracleToSQL)"
 description: "New GUI features in SSMA for Oracle (OracleToSQL)"
-title: "New GUI features in SSMA for Oracle (OracleToSQL) | Microsoft Docs"
-ms.prod: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.technology: ssma
+ms.service: sql
+ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 62e2d30f-a73f-42d9-a6ab-3510a8198f4e
-author: cpichuka 
-ms.author: cpichuka 
-manager: madhuriy
 ---
 # New GUI features in SSMA for Oracle (OracleToSQL)
 This chapter describes new features of SSMA User Interface.  

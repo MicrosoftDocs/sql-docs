@@ -1,27 +1,23 @@
 ---
 title: Members
 description: In Master Data Services, members are the physical master data, such as a Road-150 bike in a Product entity or a specific customer in a Customer entity.
-ms.custom: ""
+author: CordeliaGrey
+ms.author: jiwang6
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
+ms.service: sql
+ms.subservice: master-data-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "leaf members [Master Data Services]"
   - "consolidated members [Master Data Services]"
   - "consolidated members [Master Data Services], about consolidated members"
   - "members [Master Data Services], about members"
   - "leaf members [Master Data Services], about leaf members"
   - "members [Master Data Services]"
-ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
-author: CordeliaGrey
-ms.author: jiwang6
 ---
 # Members (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], members are the physical master data. For example, a member can be a Road-150 bike in a Product entity or a specific customer in a Customer entity.  
   

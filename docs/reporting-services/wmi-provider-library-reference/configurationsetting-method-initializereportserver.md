@@ -1,23 +1,18 @@
 ---
+title: "InitializeReportServer Method (WMI MSReportServer_ConfigurationSetting)"
 description: "InitializeReportServer Method (WMI MSReportServer_ConfigurationSetting)"
-title: "InitializeReportServer Method (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: wmi-provider-library-reference
-
-
-ms.topic: conceptual
-apiname: 
-  - "InitializeReportServer (WMI MSReportServer_ConfigurationSetting Class)"
-apilocation: 
-  - "reportingservices.mof"
-apitype: MOFDef
-helpviewer_keywords: 
-  - "InitializeReportServer method"
-ms.assetid: 0304acc2-1fd7-437b-94d9-1c1073dd3ca4
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: wmi-provider-library-reference
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "InitializeReportServer method"
+apilocation: "reportingservices.mof"
+apiname: "InitializeReportServer (WMI MSReportServer_ConfigurationSetting Class)"
+apitype: MOFDef
 ---
 # ConfigurationSetting Method - InitializeReportServer
   Initializes the specified report service instance.  

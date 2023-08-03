@@ -1,16 +1,13 @@
 ---
-title: "Add a border frame to a chart in a paginated report | Microsoft Docs"
-description: Learn how to give a chart more visual impact using a border frame around the outside of the chart in paginated reports in Report Builder. 
-ms.date: 03/03/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: ca0c5040-40bb-4cb7-bc2b-5bcbe73858bb
+title: "Add a border frame to a chart in a paginated report"
+description: Learn how to give a chart more visual impact using a border frame around the outside of the chart in paginated reports in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/03/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Add a border frame to a chart in a paginated report (Report Builder)
 

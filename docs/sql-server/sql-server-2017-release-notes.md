@@ -1,15 +1,12 @@
 ---
-title: "SQL Server 2017 Release Notes | Microsoft Docs"
+title: "SQL Server 2017 Release Notes"
 description: This article describes limitations and issues with SQL Server 2017 and provides links to related information.
-ms.custom: ""
-ms.date: "11/01/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: release-landing
-ms.topic: conceptual
-ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "11/01/2017"
+ms.service: sql
+ms.subservice: release-landing
+ms.topic: conceptual
 monikerRange: "= sql-server-2017"
 ---
 # SQL Server 2017 Release Notes
@@ -31,7 +28,7 @@ This article describes limitations and issues with SQL Server 2017. For related 
 
 - **Issue and customer impact:** After upgrade, the existing FILESTREAM network share may be no longer available.
 
-- **Workaround:** First, reboot the computer and check if the FILESTREAM network share is available. If the share is still not available, complete the following steps:
+- **Workaround:** First, restart the computer and check if the FILESTREAM network share is available. If the share is still not available, complete the following steps:
 
     1. In SQL Server Configuration Manager, right-click the SQL Server instance, and click **Properties**. 
     2. In the **FILESTREAM** tab clear **Enable FILESTREAM for file I/O streaming access**, then click **Apply**.
@@ -46,7 +43,7 @@ On the user permissions page, when granting permission to the root level in the 
   - Grant permission on the sub nodes in the tree view instead of the root level.
 
 ### Analysis Services
-- **Issue and customer impact:** Data connectors for the following sources are not yet avaialble for tabular models at the 1400 compatibility level.
+- **Issue and customer impact:** Data connectors for the following sources are not yet available for tabular models at the 1400 compatibility level.
   - Amazon Redshift
   - IBM Netezza
   - Impala
@@ -147,10 +144,8 @@ There are no release notes for SQL Server on Windows related to this release. Se
 ## More information
 - [SQL Server Reporting Services release notes](../reporting-services/release-notes-reporting-services.md).
 - [Known Issues for Machine Learning Services](../machine-learning/troubleshooting/known-issues-for-sql-server-machine-learning-services.md)
-- [SQL Server Update Center - links and information for all supported versions](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
+- [SQL Server Update Center - links and information for all supported versions](/troubleshoot/sql/releases/download-and-install-latest-updates?bc=%2fsql%2fbreadcrumb%2ftoc.json&toc=%2fsql%2ftoc.json)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-
-[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
 
 ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)

@@ -4,8 +4,8 @@ description: "ADO Event Instantiation: ADO and WFC"
 author: rothja
 ms.author: jroth
 ms.date: "02/15/2017"
-ms.prod: sql
-ms.technology: ado
+ms.service: sql
+ms.subservice: ado
 ms.topic: conceptual
 ---
 # ADO Event Instantiation: ADO and WFC

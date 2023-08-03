@@ -1,31 +1,25 @@
 ---
-description: "sp_datatype_info_90 (Azure Synapse Analytics)"
-title: "sp_datatype_info_90 (Azure Synapse Analytics)"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: sql
-ms.prod_service: "synapse-analytics, pdw"
-ms.reviewer: ""
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-ms.assetid: 1d043964-dc6e-4c3e-ab61-bc444d5e25ae
+title: "sp_datatype_info_90"
+description: "sp_datatype_info_90 returns information about the data types supported by the current environment."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
+ms.date: "03/13/2017"
+ms.service: sql
+ms.topic: "reference"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = fabric"
 ---
-# sp_datatype_info_90 (Azure Synapse Analytics)
-[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
+# sp_datatype_info_90
+[!INCLUDE[applies-to-version/asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/asa-pdw-fabricse-fabricdw.md)]
 
-  Returns information about the data types supported by the current environment.  
+  Returns information about the data types supported by the current environment in [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)], [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse-md.md)], and [!INCLUDE [fabric](../../includes/fabric.md)].
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
-```syntaxsql  
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
-  
+```syntaxsql   
 sp_datatype_info_90 [ [ @data_type = ] data_type ]   
      [ , [ @ODBCVer = ] odbc_version ]   
 ```  
@@ -74,7 +68,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 ## Permissions  
  Requires membership in the public role.  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example retrieves information for the **sysname** and **nvarchar** data types by specifying the *data_type* value of `-9`.  
   
 ```sql  

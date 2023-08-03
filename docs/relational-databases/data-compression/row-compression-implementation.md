@@ -1,18 +1,15 @@
 ---
 title: "Row Compression Implementation"
 description: Learn how the SQL Server Database Engine implements row compression to help you plan the storage space that you need for your data.
-ms.custom: ""
-ms.date: "03/27/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: performance
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "compression [SQL Server], row"
-  - "row compression [Database Engine]"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/27/2021"
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+helpviewer_keywords:
+  - "compression [SQL Server], row"
+  - "row compression [Database Engine]"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Row Compression Implementation
@@ -32,7 +29,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 >  NULL and 0 values across all data types are optimized and take no bytes.  
   
 ## How Row Compression Affects Storage  
- The following table describes how row compression affects the existing types in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]. The table does not include the savings that can be achieved by using page compression.  
+ The following table describes how row compression affects the existing types in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. The table does not include the savings that can be achieved by using page compression.  
   
 |Data type|Is storage affected?|Description|  
 |---------------|--------------------------|-----------------|  

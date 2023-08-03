@@ -20,7 +20,11 @@ To complete this Quickstart, you must first [Set up a local development environm
 
 ## Create a blank project
 
-To get started, either create a blank Database Project, or open an existing project. The steps in this section help you create a new blank project, but you can open an existing project by going to the **Projects** view or by searching for **Database Projects: Open Existing** in the command palette. start from an existing database by selecting **Create Project from Database** from the command palette or database context menu. Finally, you can start from an OpenAPI/Swagger spec by using the **Database Projects: Generate SQL Project from OpenAPI/Swagger spec** command in the command palette.
+To get started, either create a blank Database Project, or open an existing project. The steps in this section help you create a new blank project, but you can also:
+
+1. Open an existing project by going to the **Database Projects** view or by searching for **Database Projects: Open Existing** in the command palette.
+2. Start from an existing database by selecting **Create Project from Database** from the command palette or database context menu. 
+3. Start from an OpenAPI/Swagger spec by using the **Database Projects: Generate SQL Project from OpenAPI/Swagger spec (Preview)** command in the command palette.
 
 The steps for creating a new project using Visual Studio Code, or Azure Data Studio are the same. To create a blank project, follow these steps: 
 
@@ -74,7 +78,7 @@ The steps for creating a new project using Visual Studio Code, or Azure Data Stu
  
     :::image type="content" source="./media/local-dev-experience-quickstart/connect-query-azure-sql-database.png" alt-text="Screenshot of connecting to and querying an Azure SQL Database emulator.":::
      
-1. Rebuild and deploy your Database project to one of the containerized instances running on your local machine with each iteration of adding or modifying objects in your Database Project, until it’s ready.
+1. Rebuild and deploy your Database project to one of the containerized instances running on your local machine with each iteration of adding or modifying objects in your Database Project, until it's ready.
  
      :::image type="content" source="./media/local-dev-experience-quickstart/deploy-dacpac-succeeded.png" alt-text="Screenshot of iterating on a Database Project.":::
     

@@ -4,9 +4,8 @@ description: Learn about Microsoft SQLXML Managed Classes that expose the functi
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "reference"
 helpviewer_keywords:
   - ".NET Framework [SQLXML], Managed Classes"
@@ -20,7 +19,6 @@ helpviewer_keywords:
   - "providers [SQLXML], SQLXML Managed Classes"
   - "data providers [SQLXML], SQLXML Managed Classes"
   - "SQLXML, Managed Classes"
-ms.assetid: 73a5faeb-dabf-4895-acb5-a9651b646065
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLXML 4.0 .NET Framework Support - Managed Classes

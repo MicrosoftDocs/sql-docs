@@ -4,9 +4,8 @@ description: Learn how srv_parammaxlen returns the maximum data length of a remo
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: stored-procedures
+ms.service: sql
+ms.subservice: stored-procedures
 ms.topic: "reference"
 helpviewer_keywords:
   - "srv_parammaxlen"
@@ -15,7 +14,6 @@ dev_langs:
 apilocation: opends60.dll
 apiname: srv_parammaxlen
 apitype: "DLLExport"
-ms.assetid: 49bfc29d-f76a-4963-b0e6-b8532dfda850
 ---
 # srv_parammaxlen (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

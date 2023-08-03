@@ -1,20 +1,17 @@
 ---
-title: "Reporting Services Report Server (Native Mode) | Microsoft Docs"
+title: "Reporting Services Report Server (Native Mode)"
 description: Learn about Report Server configured for native mode, including managing content, managing a resource, and referencing an image resource from a report.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 04/21/2020
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server
-
-
+ms.service: reporting-services
+ms.subservice: report-server
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "administering Reporting Services"
   - "administering [Reporting Services]"
   - "Reporting Services, administration"
-ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Reporting Services Report Server (Native Mode)
   A report server configured for native mode runs as an application server that provides all processing and management capability exclusively through [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] components.  

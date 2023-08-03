@@ -1,15 +1,14 @@
 ---
-title: "Custom code and assembly references in expressions in a paginated report in Report Designer | Microsoft Docs"
-
+title: "Custom code and assembly references in expressions in a paginated report in Report Designer"
 description: Find out how to add references to custom code embedded in a paginated report. Build and save to your computer and deploy to the report server in Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
+ms.service: reporting-services
+ms.subservice: report-design
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "items [Reporting Services], expressions"
   - "data [Reporting Services], expressions"
   - "expressions [Reporting Services], about expressions"
@@ -18,9 +17,6 @@ helpviewer_keywords:
   - "formulas [Reporting Services]"
   - "data manipulation [Reporting Services]"
   - "SQL Server Reporting Services, expressions"
-ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Custom code and assembly references in expressions in a paginated report in Report Designer (SSRS)
 

@@ -14,7 +14,7 @@ ms.topic: tutorial
 > [!NOTE]
 > The tutorial presented is in **public preview**. 
 >
-> We use SQL Server 2017 with RHEL 7.6 in this tutorial, but it is possible to use SQL Server 2019 in RHEL 7 or RHEL 8 to configure high availability. The commands to configure availability group resources has changed in RHEL 8, and you'll want to look at the article [Create availability group resource](/sql/linux/sql-server-linux-availability-group-cluster-rhel#create-availability-group-resource) and RHEL 8 resources for more information on the correct commands.
+> We use SQL Server 2017 with RHEL 7.6 in this tutorial, but it is possible to use SQL Server 2019 in RHEL 7 or RHEL 8 to configure high availability. The commands to configure availability group resources has changed in RHEL 8, and you'll want to look at the article [Create availability group resource](/sql/linux/sql-server-linux-availability-group-cluster-pacemaker?tabs=rhel#create-availability-group-resource) and RHEL 8 resources for more information on the correct commands.
 
 This tutorial will go over steps on how to create an availability group listener for your SQL Servers on RHEL virtual machines (VMs) in Azure. You will learn how to:
 
@@ -258,7 +258,7 @@ At this point, the resource group has a load balancer that connects to all SQL S
 1. Check your cluster resources using the command `sudo pcs resource`, and you should see that the primary instance is now `<VM2>`.
 
     > [!NOTE]
-    > This article contains references to the term *slave*, a term that Microsoft no longer uses. When the term is removed from the software, we’ll remove it from this article.
+    > This article contains references to the term *slave*, a term that Microsoft no longer uses. When the term is removed from the software, we'll remove it from this article.
 
 
     ```output

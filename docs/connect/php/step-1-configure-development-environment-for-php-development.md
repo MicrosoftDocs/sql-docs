@@ -4,8 +4,8 @@ description: Step 1 of this getting started guide involves installing PHP, the M
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 03/26/2018
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Step 1: Configure environment for PHP development

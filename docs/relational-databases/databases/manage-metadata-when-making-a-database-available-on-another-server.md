@@ -4,10 +4,9 @@ description: "Manage Metadata When Making a Database Available on Another Server
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 08/17/2022
-ms.prod: sql
+ms.date: 12/16/2022
+ms.service: sql
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 helpviewer_keywords:
   - "cross-database queries [SQL Server]"
   - "logins [SQL Server], recreating on another server instance"
@@ -45,9 +44,13 @@ helpviewer_keywords:
   
 -   Restoring a database to another server instance.  
   
--   Attaching a copy of a database on another server instance.  
+-   Attaching a copy of a database on another server instance.    
+
+-   Performing database engine upgrade using the method - migrate to a new installation.    
+
+-   Migrating databases to Azure SQL (Virtual Machine or Managed Instance).  
   
- Some applications depend on information, entities, and/or objects that are outside of the scope of a single user database. Typically, an application has dependencies on the `master` and `msdb` databases, and also on the user database. Anything stored outside of a user database that is required for the correct functioning of that database must be made available on the destination server instance. For example, the logins for an application are stored as metadata in the `master` database, and they must be re-created on the destination server. If an application or database maintenance plan depends on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs, whose metadata is stored in the `msdb` database, you must re-create those jobs on the destination server instance. Similarly, the metadata for a server-level trigger is stored in `master`.  
+Some applications depend on information, entities, and/or objects that are outside of the scope of a single user database. Typically, an application has dependencies on the `master` and `msdb` databases, and also on the user database. Anything stored outside of a user database that is required for the correct functioning of that database must be made available on the destination server instance. For example, the logins for an application are stored as metadata in the `master` database, and they must be re-created on the destination server. If an application or database maintenance plan depends on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs, whose metadata is stored in the `msdb` database, you must re-create those jobs on the destination server instance. Similarly, the metadata for a server-level trigger is stored in `master`.  
   
  When you move the database for an application to another server instance, you must re-create all the metadata of the dependent entities and objects in `master` and `msdb` on the destination server instance. For example, if a database application uses server-level triggers, just attaching or restoring the database on the new system isn't enough. The database won't work as expected unless you manually re-create the metadata for those triggers in the `master` database.  
   
@@ -339,5 +342,5 @@ The TRUSTWORHTY database property is used to indicate whether this instance of S
  [Set Up an Encrypted Mirror Database](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   
  [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)   
  [Troubleshoot Orphaned Users &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)  
-  
-  
+ [Migrate to a new installation](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md#migrate-to-a-new-installation) 
+ [Migration overview: SQL Server to SQL Server on Azure VMs](/azure/azure-sql/migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-migration-overview#server-objects) 

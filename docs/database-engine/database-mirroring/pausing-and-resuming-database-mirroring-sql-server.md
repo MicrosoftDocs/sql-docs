@@ -4,10 +4,9 @@ description: Learn how to pause and later resume a SQL Server database mirroring
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.technology: database-mirroring
+ms.service: sql
+ms.subservice: database-mirroring
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "sessions [SQL Server], database mirroring"
   - "resuming database mirroring"

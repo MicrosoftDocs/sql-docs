@@ -1,24 +1,20 @@
 ---
-title: "Additional Sample XQueries Against the xml Data Type | Microsoft Docs"
+title: "Additional Sample XQueries Against the xml Data Type"
 description: View samples that show how to use XQuery queries against the xml data type.
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: sql
-ms.reviewer: ""
-ms.technology: xml
-ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "XQuery, samples"
-  - "sample applications [XQuery]"
-ms.assetid: 2af66304-c021-427c-b3b3-e000ec0896cd
 author: rothja
 ms.author: jroth
+ms.date: "03/16/2017"
+ms.service: sql
+ms.subservice: xml
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "XQuery, samples"
+  - "sample applications [XQuery]"
+dev_langs:
+  - "XML"
 ---
 # Additional Sample XQueries Against the xml Data Type
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   The topics in this section provide additional samples that show how to use XQuery queries against the **xml** data type:  
   

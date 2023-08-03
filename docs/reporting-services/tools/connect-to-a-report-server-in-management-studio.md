@@ -1,26 +1,23 @@
 ---
-title: "Connect to a Report Server in Management Studio | Microsoft Docs"
+title: "Connect to a Report Server in Management Studio"
 description: Learn how to connect to any server in the SQL Server family and graphically browse its contents by using the Object Explorer in SQL Server Management Studio.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 05/07/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: tools
-
-
+ms.service: reporting-services
+ms.subservice: tools
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: updatefrequency5
+f1_keywords:
   - "sql13.swb.connecttors.connectionproperties.f1"
   - "sql13.swb.connecttors.login.f1"
   - "sql13.swb.connection.login.reportserver.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "report servers [Reporting Services], connections"
   - "connections [Reporting Services], report server"
   - "registering report servers"
   - "report servers [Reporting Services], registering"
   - "Connect to Server dialog box, Reporting Services"
-ms.assetid: c875ff87-ee7d-443a-a702-bdb4b6c27c6e
-author: maggiesMSFT
-ms.author: maggies
 ---
 
 # Connect to a Report Server in Management Studio

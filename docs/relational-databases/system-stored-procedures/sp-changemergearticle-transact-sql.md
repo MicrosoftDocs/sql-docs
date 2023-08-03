@@ -1,30 +1,26 @@
 ---
+title: "sp_changemergearticle (Transact-SQL)"
 description: "sp_changemergearticle (Transact-SQL)"
-title: "sp_changemergearticle (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/09/2015"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_changemergearticle_TSQL"
-  - "sp_changemergearticle"
-helpviewer_keywords: 
-  - "sp_changemergearticle"
-ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: markingmyname
 ms.author: maghan
+ms.date: "11/09/2015"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_changemergearticle_TSQL"
+  - "sp_changemergearticle"
+helpviewer_keywords:
+  - "sp_changemergearticle"
+dev_langs:
+  - "TSQL"
 ---
 # sp_changemergearticle (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Changes the properties of a merge article. This stored procedure is executed at the Publisher on the publication database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -123,7 +119,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x40000000**|Replicate permissions.|  
 ||**0x80000000**|Attempt to drop dependencies to any objects that are not part of the publication.|  
 ||**0x100000000**|Use this option to replicate the FILESTREAM attribute if it is specified on **varbinary(max)** columns. Do not specify this option if you are replicating tables to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Subscribers. Replicating tables that have  FILESTREAM columns to [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Subscribers is not supported, regardless of how this schema option is set. See related option **0x800000000**.|  
-||**0x200000000**|Converts date and time data types (**date**, **time**, **datetimeoffset**, and **datetime2**) that are introduced in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] to data types that are supported on earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+||**0x200000000**|Converts date and time data types (**date**, **time**, **datetimeoffset**, and **datetime2**) that are introduced in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] to data types that are supported on earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 ||**0x400000000**|Replicates the compression option for data and indexes. For more information, see [Data Compression](../../relational-databases/data-compression/data-compression.md).|  
 ||**0x800000000**|Set this option to store FILESTREAM data on its own filegroup at the Subscriber. If this option is not set, FILESTREAM data is stored on the default filegroup. Replication does not create filegroups; therefore, if you set this option, you must create the filegroup before you apply the snapshot at the Subscriber. For more information about how to create objects before you apply the snapshot, see [Execute Scripts Before and After the Snapshot Is Applied](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied).<br /><br /> See related option **0x100000000**.|  
 ||**0x1000000000**|Converts common language runtime (CLR) user-defined types (UDTs) to **varbinary(max)** so that columns of type UDT can be replicated to Subscribers that are running [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  

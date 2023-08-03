@@ -3,10 +3,9 @@ title: "Linux and macOS Installation for the Drivers for PHP"
 description: "In these instructions, learn how to install the Microsoft Drivers for PHP for SQL Server on Linux or macOS."
 author: David-Engel
 ms.author: v-davidengel
-manager: v-mabarw
-ms.date: 03/01/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.date: 03/06/2023
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ms.custom: intro-installation
 ---
@@ -15,18 +14,22 @@ ms.custom: intro-installation
 
 The following instructions assume a clean environment and show how to install PHP 8.1, the Microsoft ODBC driver, the Apache web server, and the Microsoft Drivers for PHP for SQL Server on Ubuntu, Red Hat, Debian, Suse, Alpine, and macOS. These instructions advise installing the drivers using PECL, but you can also download the prebuilt binaries from the [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) GitHub project page and install them following the instructions in [Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md). For an explanation of extension loading and why we do not add the extensions to php.ini, see the section on [loading the drivers](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup).
 
-The following instructions install PHP 8.1 by default using `pecl install`, if the PHP 8.1 packages are available. You may need to run `pecl channel-update pecl.php.net` first. Some supported Linux distros default to PHP 7.1 or earlier, which is not supported for the latest version of the PHP drivers for SQL Server. See the notes at the beginning of each section to install PHP 7.4 or 8.0 instead.
+The following instructions install PHP 8.1 by default using `pecl install`, if the PHP 8.1 packages are available. You may need to run `pecl channel-update pecl.php.net` first. Some supported Linux distros default to PHP 7.1 or earlier, which is not supported for the latest version of the PHP drivers for SQL Server. See the notes at the beginning of each section to install PHP 8.0 or 8.2 instead.
 
 Also included are instructions for installing the PHP FastCGI Process Manager, PHP-FPM, on Ubuntu. PHP-FPM is needed if you're using the nginx web server instead of Apache.
 
 While these instructions contain commands to install both SQLSRV and PDO_SQLSRV drivers, the drivers can be installed and function independently. Users comfortable with customizing their configuration can adjust these instructions to be specific to SQLSRV or PDO_SQLSRV. Both drivers have the same dependencies except where noted below.
 
-## Installing on Ubuntu
-
-Ubuntu versions 18.04, 20.04, 21.04 and 21.10 are supported.
+Please refer to [Support Matrix](microsoft-php-drivers-for-sql-server-support-matrix.md) for the latest supported operating systems version.
 
 > [!NOTE]
-> To install PHP 7.4 or 8.0, replace 8.1 with 7.4 or 8.0 in the following commands.
+> Make sure you have installed the latest ODBC driver version to ensure optimal performance and security. For installation instructions, see [Install the Microsoft ODBC driver for SQL Server (Linux)](../odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) or [Install the Microsoft ODBC driver for SQL Server (macOS)](../odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md).
+
+## Installing on Ubuntu
+
+
+> [!NOTE]
+> To install PHP 8.0 or 8.2, replace 8.1 with 8.0 or 8.2 in the following commands.
 
 ### Step 1. Install PHP (Ubuntu)
 
@@ -40,6 +43,10 @@ apt-get install php8.1 php8.1-dev php8.1-xml -y --allow-unauthenticated
 ### Step 2. Install prerequisites (Ubuntu)
 
 Install the ODBC driver for Ubuntu by following the instructions on the [Install the Microsoft ODBC driver for SQL Server (Linux)](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md). Make sure to also install the `unixodbc-dev` package. It's used by the `pecl` command to install the PHP drivers.
+
+```bash
+sudo apt-get install unixodbc-dev
+```
 
 ### Step 3. Install the PHP drivers for Microsoft SQL Server (Ubuntu)
 
@@ -76,10 +83,9 @@ To test your installation, see [Testing your installation](#testing-your-install
 
 ## Installing on Ubuntu with PHP-FPM
 
-Ubuntu versions 18.04, 20.04, 21.04 and 21.10 are supported.
 
 > [!NOTE]
-> To install PHP 7.4 or 8.0, replace 8.1 with 7.4 or 8.0 in the following commands.
+> To install PHP 8.0 or 8.2, replace 8.1 with 8.0 or 8.2 in the following commands.
 
 ### Step 1. Install PHP (Ubuntu with PHP-FPM)
 
@@ -163,13 +169,12 @@ To test your installation, see [Testing your installation](#testing-your-install
 
 ## Installing on Red Hat
 
-Red Hat versions 7 and 8 are supported.
 
 ### Step 1. Install PHP (Red Hat)
 
 To install PHP on Red Hat 7, run the following commands:
 > [!NOTE]
-> To install PHP 7.4 or 8.0, replace remi-php81 with remi-php74 or remi-php80 respectively in the following commands.
+> To install PHP 8.0 or 8.2, replace remi-php81 with remi-php80 or remi-php82 respectively in the following commands.
 
 ```bash
 sudo su
@@ -185,7 +190,7 @@ yum install php php-pdo php-pear php-devel
 
 To install PHP on Red Hat 8, run the following commands:
 > [!NOTE]
-> To install PHP 7.4 or 8.0, replace remi-8.1 with remi-7.4 or remi-8.0 respectively in the following commands.
+> To install PHP 8.0 or 8.2, replace remi-8.1 with remi-8.0 or remi-8.2 respectively in the following commands.
 
 ```bash
 sudo su
@@ -243,10 +248,9 @@ To test your installation, see [Testing your installation](#testing-your-install
 
 ## Installing on Debian
 
-Debian versions 9, 10 and 11 are supported.
 
 > [!NOTE]
-> To install PHP 7.4 or 8.0, replace 8.1 in the following commands with 7.4 or 8.0.
+> To install PHP 8.0 or 8.2, replace 8.1 in the following commands with 8.0 or 8.2.
 
 ### Step 1. Install PHP (Debian)
 
@@ -307,7 +311,6 @@ To test your installation, see [Testing your installation](#testing-your-install
 
 ## Installing on Suse
 
-Suse Enterprise Linux versions 12 and 15 are supported.
 
 > [!NOTE]
 > In the following instructions, replace `<SuseVersion>` with your version of Suse - if you are using Suse Enterprise Linux 15, it will be SLE_15_SP3 or SLE_15_SP4 (or above). For Suse 12, use SLE_12_SP5 (or above). Not all versions of PHP are available for all versions of Suse Linux - please refer to `http://download.opensuse.org/repositories/devel:/languages:/php` to see which versions of Suse have the default version PHP available, or check `http://download.opensuse.org/repositories/devel:/languages:/php:/` to see which other versions of PHP are available for which versions of Suse.
@@ -360,7 +363,6 @@ To test your installation, see [Testing your installation](#testing-your-install
 
 ## Installing on Alpine
 
-Alpine versions 3.13, 3.14 and 3.15 are supported.
 
 > [!NOTE]
 > PHP 8.1 or above may be available from testing or edge repositories for Alpine. You can instead compile PHP from source.
@@ -423,7 +425,6 @@ To test your installation, see [Testing your installation](#testing-your-install
 
 ## Installing on macOS
 
-MacOS versions 10.15 (Catalina), 11.0 (Big Sur), and 12.0 (Monterey) are supported.
 
 If you do not already have it, install brew as follows:
 
@@ -432,7 +433,7 @@ If you do not already have it, install brew as follows:
 ```
 
 > [!NOTE]
-> To install PHP 7.4 or 8.0, replace php@8.1 with php@7.4 or php@8.0 respectively in the following commands.
+> To install PHP 8.0 or 8.2, replace php@8.1 with php@8.0 or php@8.2 respectively in the following commands.
 
 ### Step 1. Install PHP (macOS)
 

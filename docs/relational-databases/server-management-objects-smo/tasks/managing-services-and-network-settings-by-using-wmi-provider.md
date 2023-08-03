@@ -1,26 +1,20 @@
 ---
-description: "Managing Services and Network Settings by Using WMI Provider"
 title: "Managing Services and Network Settings by Using WMI Provider"
-ms.custom: seo-dt-2019
+description: "Managing Services and Network Settings by Using WMI Provider"
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: "08/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
-
+ms.service: sql
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "WMI provider [SMO]"
   - "services [SQL Server], SMO"
   - "network settings [SMO]"
   - "monitoring [SMO]"
-ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
-author: "markingmyname"
-ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Managing Services and Network Settings by Using WMI Provider
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [sqlserver2022](../../../includes/applies-to-version/sqlserver2022.md)]
 
   The WMI provider is a published interface that is used by [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Management Console (MMC) to manage the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] services and network protocols. In SMO, the <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> object represents the WMI Provider.  
   

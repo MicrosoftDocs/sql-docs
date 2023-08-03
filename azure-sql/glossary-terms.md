@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & SQL Managed Instance
 description: A glossary of terms for working with Azure SQL Database, Azure SQL Managed Instance, and SQL on Azure VM.
 author: MashaMSFT
 ms.author: mathoma
-ms.reviewer: kendralittle
+ms.reviewer: wiassaf
 ms.date: 04/06/2022
 ms.service: sql-db-mi
 ms.subservice: service-overview
@@ -12,7 +12,7 @@ ms.topic: reference
 ms.custom: sqldbrb=4
 ---
 # Azure SQL glossary of terms
-[!INCLUDE[appliesto-asf](./includes/appliesto-asf.md)] 
+[!INCLUDE[appliesto-sqldb-sqlmi-sqlvm](./includes/appliesto-sqldb-sqlmi-sqlvm.md)] 
 
 ## Azure SQL Database
 
@@ -28,12 +28,12 @@ ms.custom: sqldbrb=4
 ||DTU-based purchasing model|The [Database Transaction Unit (DTU)-based purchasing model](database/service-tiers-dtu.md) is based on a bundled measure of compute, storage, and I/O resources. Compute sizes are expressed in DTUs for single databases and in elastic database transaction units (eDTUs) for elastic pools. |
 ||vCore-based purchasing model (recommended)| A virtual core (vCore) represents a logical CPU. The [vCore-based purchasing model](database/service-tiers-vcore.md) offers greater control over the hardware configuration to better match compute and memory requirements of the workload, pricing discounts for [Azure Hybrid Benefit (AHB)](azure-hybrid-benefit.md) and [Reserved Instance (RI)](database/reserved-capacity-overview.md), more granular scaling, and greater transparency in hardware details. Newer capabilities (for example, Hyperscale, serverless) are only available in the vCore model. |
 |Service tier|| The service tier defines the storage architecture, storage and I/O limits, and business continuity options. Options for service tiers vary by purchasing model. |
-||DTU-based service tiers | [Basic, standard, and premium service tiers](database/service-tiers-dtu.md#compare-service-tiers) are available in the DTU-based purchasing model.|
-||vCore-based service tiers (recommended) |[General purpose, Business Critical, and Hyperscale service tiers](database/service-tiers-sql-database-vcore.md#service-tiers) are available in the vCore-based purchasing model (recommended).|
+||DTU-based service tiers | [Basic, Standard, and Premium service tiers](database/service-tiers-dtu.md#compare-service-tiers) are available in the DTU-based purchasing model.|
+||vCore-based service tiers (recommended) |[General Purpose, Business Critical, and Hyperscale service tiers](database/service-tiers-sql-database-vcore.md#service-tiers) are available in the vCore-based purchasing model (recommended).|
 |Compute tier|| The compute tier determines whether resources are continuously available (provisioned) or autoscaled (serverless). Compute tier availability varies by purchasing model and service tier. Only the vCore purchasing model's General Purpose service tier makes serverless compute available.|
-||Provisioned compute|The [provisioned compute tier](database/service-tiers-sql-database-vcore.md#compute-tiers) provides a specific amount of compute resources that are continuously provisioned independent of workload activity. Under the provisioned compute tier, you are billed at a fixed price per hour.
-||Serverless compute| The [serverless compute tier](database/serverless-tier-overview.md) autoscales compute resources based on workload activity and bills for the amount of compute used per second. Azure SQL Database serverless is currently available in the vCore purchasing model's General Purpose service tier with Gen5 hardware or newer.|
-|Hardware configuration| Available hardware configurations | The vCore-based purchasing model allows you to select the appropriate hardware configuration for your workload. [Hardware configuration options](database/service-tiers-sql-database-vcore.md#hardware-configuration) include Gen5, M-series, Fsv2-series, and DC-series.|
+||Provisioned compute|The [provisioned compute tier](database/service-tiers-sql-database-vcore.md#compute) provides a specific amount of compute resources that are continuously provisioned independent of workload activity. Under the provisioned compute tier, you are billed at a fixed price per hour.
+||Serverless compute| The [serverless compute tier](database/serverless-tier-overview.md) autoscales compute resources based on workload activity and bills for the amount of compute used per second. Azure SQL Database serverless is currently available in the vCore purchasing model's General Purpose service tier with standard-series (Gen5) hardware or newer.|
+|Hardware configuration| Available hardware configurations | The vCore-based purchasing model allows you to select the appropriate hardware configuration for your workload. [Hardware configuration options](database/service-tiers-sql-database-vcore.md#hardware-configuration) include standard series (Gen5), M-series, Fsv2-series, and DC-series.|
 |Compute size (service objective) ||Compute size (service objective) is the amount of CPU, memory, and storage resources available for a single database or elastic pool. Compute size also defines resource consumption limits, such as maximum IOPS, maximum log rate, etc.
 ||vCore-based sizing options| Configure the compute size for your database or elastic pool by selecting the appropriate service tier, compute tier, and hardware for your workload. When using an elastic pool, configure the reserved vCores for the pool, and optionally configure per-database settings. For sizing options and resource limits in the vCore-based purchasing model, see [vCore single databases](database/resource-limits-vcore-single-databases.md), and [vCore elastic pools](database/resource-limits-vcore-elastic-pools.md).|
 ||DTU-based sizing options| Configure the compute size for your database or elastic pool by selecting the appropriate service tier and selecting the maximum data size and number of DTUs. When using an elastic pool, configure the reserved eDTUs for the pool, and optionally configure per-database settings. For sizing options and resource limits in the DTU-based purchasing model, see [DTU single databases](database/resource-limits-dtu-single-databases.md) and [DTU elastic pools](database/resource-limits-dtu-elastic-pools.md).
@@ -71,4 +71,4 @@ ms.custom: sqldbrb=4
 |  | Security considerations | You can enable Microsoft Defender for SQL, integrate Azure Key Vault, control access, and secure connections to your SQL Server VM. Learn [security guidelines](virtual-machines/windows/security-considerations-best-practices.md) to establish secure access to SQL Server VMs. |
 | SQL IaaS Agent extension | | The [SQL IaaS Agent extension](virtual-machines/windows/sql-server-iaas-agent-extension-automate-management.md) (SqlIaasExtension) runs on SQL Server VMs to automate management and administration tasks. There's no extra cost associated with the extension. |
 | | Automated patching | [Automated Patching](virtual-machines/windows/automated-patching.md) establishes a maintenance window for a SQL Server VM when security updates will be automatically applied by the SQL IaaS Agent extension. Note that there may be other mechanisms for applying Automatic Updates. If you configure automated patching using the SQL IaaS Agent extension you should ensure that there are no other conflicting update schedules.  |
-| | Automated backup | [Automated Backup v2](virtual-machines/windows/automated-backup.md) automatically configures Managed Backup to Microsoft Azure for all existing and new databases on a SQL Server VM running SQL Server 2016 or later Standard, Enterprise, or Developer editions. |
+| | Automated backup | [Automated Backup](virtual-machines/windows/automated-backup.md) automatically configures Managed Backup to Microsoft Azure for all existing and new databases on a SQL Server VM running SQL Server 2016 or later Standard, Enterprise, or Developer editions. |

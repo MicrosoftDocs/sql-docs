@@ -4,8 +4,8 @@ description: "RecordCount Property (ADO)"
 author: rothja
 ms.author: jroth
 ms.date: "03/20/2018"
-ms.prod: sql
-ms.technology: ado
+ms.service: sql
+ms.subservice: ado
 ms.topic: reference
 f1_keywords:
   - "Recordset15::RecordCount"

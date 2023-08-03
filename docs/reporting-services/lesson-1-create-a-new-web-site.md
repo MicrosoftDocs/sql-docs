@@ -1,15 +1,13 @@
 ---
-title: "Lesson 1: Create a new website | Microsoft Docs"
-description: Learn how to create a new website project by using the ASP.NET website template for Visual C#.
-ms.date: 05/18/2016
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
-
-ms.topic: conceptual
-ms.assetid: 3f226bc8-614e-4dac-9078-3448a83342b5
+title: "Lesson 1: Create a new website"
+description: "Learn how to create a new website project by using the ASP.NET website template for Visual C#."
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 05/18/2016
+ms.service: reporting-services
+ms.subservice: reporting-services
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Lesson 1: Create a new website
 In this lesson you'll learn how to create a new website project using the ASP.NET website template for Visual C#.  

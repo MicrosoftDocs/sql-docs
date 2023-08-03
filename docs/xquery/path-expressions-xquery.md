@@ -1,25 +1,21 @@
 ---
-title: "Path Expressions (XQuery) | Microsoft Docs"
+title: "Path Expressions (XQuery)"
 description: Learn how XQuery path expressions locate nodes, such as element, attribute, and text nodes, in a document.
-ms.custom: ""
+author: "rothja"
+ms.author: "jroth"
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: sql
-ms.reviewer: ""
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "axis step [XQuery]"
   - "path expressions [XQuery]"
   - "expressions [XQuery], path"
-ms.assetid: b93fa36c-bf69-46b9-b137-f597d66fd0c0
-author: "rothja"
-ms.author: "jroth"
+dev_langs:
+  - "XML"
 ---
 # Path Expressions (XQuery)
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   XQuery path expressions locate nodes, such as element, attribute, and text nodes, in a document. The result of a path expression always occurs in document order without duplicate nodes in the result sequence. In specifying a path, you can use either unabbreviated or abbreviated syntax. The following information focuses on the unabbreviated syntax. Abbreviated syntax is described later in this topic.  
   

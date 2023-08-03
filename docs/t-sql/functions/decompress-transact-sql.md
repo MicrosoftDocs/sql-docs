@@ -1,11 +1,12 @@
 ---
 title: "DECOMPRESS (Transact-SQL)"
-description: "DECOMPRESS (Transact-SQL)"
+description: "DECOMPRESS function decompresses an input expression value, using the Gzip algorithm."
 author: markingmyname
 ms.author: maghan
-ms.date: "10/11/2018"
-ms.prod: sql
-ms.technology: t-sql
+ms.reviewer: randolphwest
+ms.date: 03/09/2023
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DECOMPRESS"
@@ -14,62 +15,67 @@ helpviewer_keywords:
   - "DECOMPRESS function"
 dev_langs:
   - "TSQL"
-monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqledge-current || = azure-sqldw-latest"
+monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqledge-current || = azure-sqldw-latest ||=fabric"
 ---
 # DECOMPRESS (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
-This function will decompress an input expression value, using the GZIP algorithm. `DECOMPRESS` will return a byte array (VARBINARY(MAX) type).  
-  
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## Syntax  
-  
-```syntaxsql  
-DECOMPRESS ( expression )  
-```  
-  
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-fabricse-fabricdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-fabricse-fabricdw.md)]
+
+This function decompresses an input expression value, using the **Gzip** algorithm. `DECOMPRESS` returns a byte array in the **varbinary(max)** data type.
+
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+
+## Syntax
+
+```syntaxsql
+DECOMPRESS ( expression )
+```
+
 ## Arguments
- *expression*  
-A **varbinary(**_n_**)**, **varbinary(max)**, or **binary(**_n_**)** value. See [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md) for more information.  
-  
-## Return Types  
-A value of data type **varbinary(max)**. `DECOMPRESS` will use the ZIP algorithm to decompress the input argument. The user should explicitly cast result to a target type if necessary.  
-  
-## Remarks  
-  
-## Examples  
-  
-### A. Decompress Data at Query Time  
-This example shows how to return compressed table data:  
 
+#### *expression*
 
-  
-```sql  
-SELECT _id, name, surname, datemodified,  
-             CAST(DECOMPRESS(info) AS NVARCHAR(MAX)) AS info  
-FROM player;  
-```  
-  
-### B. Display Compressed Data Using Computed Column
+A **varbinary(*n*)**, **varbinary(max)**, or **binary(*n*)** value. For more information, see [Expressions (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md).
 
-> [!NOTE]
+## Return types
+
+A value of data type **varbinary(max)**. `DECOMPRESS` uses the **Gzip** algorithm to decompress the input argument. You should explicitly cast the result to a target type if necessary.
+
+## Remarks
+
+## Examples
+
+### A. Decompress Data at Query Time
+
+This example shows how to return compressed table data:
+
+```sql
+SELECT _id,
+    name,
+    surname,
+    datemodified,
+    CAST(DECOMPRESS(info) AS NVARCHAR(MAX)) AS info
+FROM player;
+```
+
+### B. Display compressed data using computed column
+
+> [!NOTE]  
 > This example does not apply to Azure Synapse Analytics.
 
-This example shows how to create a table for decompressed data storage:  
-  
-```sql  
-CREATE TABLE example_table (  
-    _id INT PRIMARY KEY IDENTITY,  
-    name NVARCHAR(max),  
-    surname NVARCHAR(max),  
-    info VARBINARY(max),  
-    info_json as CAST(DECOMPRESS(info) as NVARCHAR(max))  
-);  
-```  
-  
-## See Also  
- [String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
- [COMPRESS &#40;Transact-SQL&#41;](../../t-sql/functions/compress-transact-sql.md)  
-  
-  
+This example shows how to create a table for decompressed data storage:
+
+```sql
+CREATE TABLE example_table (
+    _id INT PRIMARY KEY IDENTITY,
+    name NVARCHAR(MAX),
+    surname NVARCHAR(MAX),
+    info VARBINARY(MAX),
+    info_json AS CAST(DECOMPRESS(info) AS NVARCHAR(MAX))
+);
+```
+
+## See also
+
+- [String Functions (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)
+- [COMPRESS (Transact-SQL)](../../t-sql/functions/compress-transact-sql.md)

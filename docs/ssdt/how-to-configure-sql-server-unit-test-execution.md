@@ -1,15 +1,12 @@
 ---
 title: Configure SQL Server Unit Test Execution
 description: Learn how to configure SQL Server unit tests. See how to specify connection strings and how to deploy a database schema.
-ms.prod: sql
-ms.technology: ssdt
-ms.topic: conceptual
-ms.assetid: e0179429-13ce-4d23-ae27-e6419de0a575
 author: markingmyname
 ms.author: maghan
-ms.reviewer: “”
-ms.custom: seo-lt-2019
 ms.date: 02/09/2017
+ms.service: sql
+ms.subservice: ssdt
+ms.topic: conceptual
 ---
 
 # How to: Configure SQL Server Unit Test Execution
@@ -31,7 +28,7 @@ These settings control how your test connects to the database that you will test
   
 #### To specify database connection strings  
   
-1.  Right click on the unit test project in **Solution Explorer** and click **SQL Server Test Configuration**.  
+1.  Right-click on the unit test project in **Solution Explorer** and click **SQL Server Test Configuration**.  
   
     The **SQL Server Test Configuration -'\<projectname\>'** dialog box appears.  
   
@@ -59,7 +56,7 @@ These settings control how your test connects to the database that you will test
   
 2.  Select the test project that you want to configure.  
   
-3.  Right click on the unit test project in **Solution Explorer** and click **SQL Server Test Configuration**.  
+3.  Right-click on the unit test project in **Solution Explorer** and click **SQL Server Test Configuration**.  
   
     The **SQL Server Test Configuration -'\<projectname\>'** dialog box appears.  
   

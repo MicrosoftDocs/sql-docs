@@ -1,19 +1,15 @@
 ---
+title: "Azure SQL DW Upload Task"
 description: "Azure SQL DW Upload Task"
-title: "Azure SQL DW Upload Task | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "SQL13.DTS.DESIGNER.AFPDWUPTASK.F1"
-  - "sql14.dts.designer.afpdwuptask.f1"
-ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
 author: "Lingxi-Li"
 ms.author: "lingxl"
+ms.date: "12/16/2016"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "SQL13.DTS.DESIGNER.AFPDWUPTASK.F1"
+  - "sql14.dts.designer.afpdwuptask.f1"
 ---
 # Azure Synapse Analytics Task
 
@@ -29,7 +25,7 @@ When copying from file system, data will first be uploaded to Azure Blob Storage
 > [!NOTE]
 > Azure Storage connection manager with Data Lake Gen2 service type is not supported.
 >
-> To use Azure Data Lake Gen2 for staging or source, you can connect via Azure Storage connection manager with Blob Storage service type.
+> To use Azure Data Lake Gen2 for staging or source, you can connect via Azure Storage connection manager with the Azure Blob Storage type.
 
 The **Azure Synapse Analytics Task** is a component of the [SQL Server Integration Services (SSIS) Feature Pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 

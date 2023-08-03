@@ -1,24 +1,20 @@
 ---
-title: "Comments in XQuery | Microsoft Docs"
+title: "Comments in XQuery"
 description: Learn the syntax and delimiters for adding comments to an XQuery.
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: sql
-ms.reviewer: ""
-ms.technology: xml
-ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "comments [XQuery]"
-  - "XQuery, comments"
-ms.assetid: 4d977268-de9d-4bf0-b310-b63f6a0fb0db
 author: "rothja"
 ms.author: "jroth"
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: xml
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "comments [XQuery]"
+  - "XQuery, comments"
+dev_langs:
+  - "XML"
 ---
 # Comments in XQuery
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   You can add comments to XQuery. The comment strings are added by using the "`(:`" and "`:)`" delimiters. For example:  
   

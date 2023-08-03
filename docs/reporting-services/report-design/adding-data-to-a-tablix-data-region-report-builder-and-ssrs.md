@@ -1,16 +1,13 @@
 ---
-title: "Adding data to a tablix data region in a paginated report | Microsoft Docs"
-description: Learn how to display detailed or grouped data, from a report dataset in a table or matrix, to a tablix data region in a paginated report. 
-ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: 8f1d0a76-afed-480f-98fb-89e2d4eb09b1
+title: "Adding data to a tablix data region in a paginated report"
+description: Learn how to display detailed or grouped data, from a report dataset in a table or matrix, to a tablix data region in a paginated report.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/07/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Adding data to a tablix data region in a paginated report (Report Builder)
 

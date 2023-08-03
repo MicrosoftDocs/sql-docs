@@ -1,7 +1,7 @@
 ---
 author: MashaMSFT
 ms.author: mathoma
-ms.reviewer: kendralittle
+ms.reviewer: 
 ms.date: 08/23/2019
 ms.service: sql-database
 ms.subservice: service-overview
@@ -15,7 +15,7 @@ The Azure portal provides a single page where you can manage [all of your Azure 
 To access the **Azure SQL** page, from the Azure portal menu, select **Azure SQL** or search for and select **Azure SQL** in any page.
 
 > [!NOTE]
-> **Azure SQL** provides a quick and easy way to access all of your SQL resources in the Azure portal, including single and pooled databases in Azure SQL Database as well as the logical server hosting them, SQL Managed Instances, and SQL Server on Azure VMs. [Azure SQL](../azure-sql-iaas-vs-paas-what-is-overview.md) is not a service or resource, but rather a family of SQL-related services.
+> **Azure SQL** provides a quick and easy way to access all of your SQL resources in the Azure portal, including single and pooled databases in Azure SQL Database as well as the logical server hosting them, Azure SQL Managed Instances, and SQL Server on Azure VMs. [Azure SQL](../azure-sql-iaas-vs-paas-what-is-overview.md) is not a service or resource, but rather a family of SQL-related services.
 
 To manage existing resources, select the desired item in the list. To create new Azure SQL resources, select **+ Create**.
 

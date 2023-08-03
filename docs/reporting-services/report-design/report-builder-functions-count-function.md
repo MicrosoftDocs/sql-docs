@@ -1,16 +1,13 @@
 ---
-title: "Count function in a paginated report | Microsoft Docs"
+title: "Count function in a paginated report"
 description: Learn about the Count function, which returns a count of non-null values specified by an expression, which is evaluated in the context of a specified scope in a paginated report.
-ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/07/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Report Builder functions - Count function in a paginated report (Report Builder)
 

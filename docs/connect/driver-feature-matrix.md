@@ -4,9 +4,9 @@ description: Learn which SQL Server features are supported in the drivers for .N
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-davidengel
-ms.date: 02/01/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.date: 02/16/2023
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Driver feature support matrix for Microsoft SQL Server
@@ -46,6 +46,7 @@ We wish all drivers supported every feature and spend effort to ensure feature p
 | [Table-Valued Parameters (TVP)](../relational-databases/tables/use-table-valued-parameters-database-engine.md) | [Yes](ado-net/sql/table-valued-parameters.md) | [Yes](ado-net/sql/table-valued-parameters.md) | [Yes](/dotnet/framework/data/adonet/sql/table-valued-parameters) | [Yes](/dotnet/framework/data/adonet/sql/table-valued-parameters) |
 | [MultiSubnetFailover](../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [Yes](ado-net/sql/sqlclient-support-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [Yes](ado-net/sql/sqlclient-support-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [Yes](/dotnet/api/system.data.sqlclient.sqlconnectionstringbuilder.multisubnetfailover?view=netcore-1.0&preserve-view=true) | [Yes](/dotnet/api/system.data.sqlclient.sqlconnectionstringbuilder.multisubnetfailover?view=netframework-4.8&preserve-view=true) |
 | [Transparent Network IP Resolution](odbc/using-transparent-network-ip-resolution.md) | | [Yes](/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring?view=sqlclient-dotnet-1.1&preserve-view=true) | | [Yes](/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring?view=netframework-4.8&preserve-view=true) |
+| [TDS 8.0 (strict encryption) and TLS 1.3](../relational-databases/security/networking/tds-8.md) | Yes (v5.1+) | Yes (v5.1+) | | |
 
 | <a id="table2"></a>Feature | [ODBC Driver for SQL Server on Windows](odbc/microsoft-odbc-driver-for-sql-server.md) | [ODBC Driver for SQL Server on Linux and macOS](odbc/microsoft-odbc-driver-for-sql-server.md) | [JDBC Driver for SQL Server](jdbc/microsoft-jdbc-driver-for-sql-server.md) | [OLE DB Driver for SQL Server](oledb/oledb-driver-for-sql-server.md) |
 | :-- | :-- | :-- | :-- | :-- |
@@ -65,12 +66,13 @@ We wish all drivers supported every feature and spend effort to ensure feature p
 | [Table-Valued Parameters (TVP)](../relational-databases/tables/use-table-valued-parameters-database-engine.md) | [Yes](../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md) | [Yes](../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md) | [Yes](jdbc/using-table-valued-parameters.md) (v6.0+) | [Yes](oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md) |
 | [MultiSubnetFailover](../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [Yes](../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [Yes](../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [Yes](jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md) | [Yes](oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) |
 | [Transparent Network IP Resolution](odbc/using-transparent-network-ip-resolution.md) | [Yes](odbc/using-transparent-network-ip-resolution.md) (v13.0+) | [Yes](odbc/using-transparent-network-ip-resolution.md) (v13.1+) | [Yes](jdbc/setting-the-connection-properties.md) (v6.0+) | [Yes](oledb/features/using-transparent-network-ip-resolution.md) (v18.4+) |
+| [TDS 8.0 (strict encryption) and TLS 1.3](../relational-databases/security/networking/tds-8.md) | Yes (v18.0+) | Yes (v18.0+) | Yes (v11.2+) | Yes (v19.2+) |
 
 | <a id="table3"></a>Feature | [Drivers for PHP for SQL Server on Windows](php/microsoft-php-driver-for-sql-server.md)<sup>[1](#note1)</sup> | [Drivers for PHP for SQL Server on Linux and macOS](php/microsoft-php-driver-for-sql-server.md)<sup>[1](#note1)</sup> | [Tedious (Node.js)](node-js/node-js-driver-for-sql-server.md) | [pyODBC (Python)](python/pyodbc/python-sql-driver-pyodbc.md)<sup>[1](#note1)</sup> |
 | :-- | :-- | :-- | :-- | :-- |
 | [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md) | [Yes](php/using-always-encrypted-php-drivers.md) (v5.2+) | [Yes](php/using-always-encrypted-php-drivers.md) (v5.2+) | | Yes |
 | [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md) | [Yes](php/always-encrypted-secure-enclaves.md) (v5.8+) | [Yes](php/always-encrypted-secure-enclaves.md) (v5.8+) | | Yes |
-| [Azure Active Directory Access Token authentication](/azure/active-directory/develop/access-tokens) | [Yes](php/azure-active-directory.md) (v4.3+) | [Yes](php/azure-active-directory.md) (v4.3+) | [Yes](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | Yes |
+| [Azure Active Directory Access Token authentication](/azure/active-directory/develop/access-tokens) | [Yes](php/azure-active-directory.md) (v4.3+) | [Yes](php/azure-active-directory.md) (v4.3+) | [Yes](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | [Yes](https://github.com/mkleehammer/pyodbc/wiki/Connecting-to-SQL-Server-from-Linux#connecting-to-servers-with-access-tokens) |
 | [Azure Active Directory Password authentication](/azure/sql-database/sql-database-aad-authentication) | [Yes](php/azure-active-directory.md) (v4.3+) | [Yes](php/azure-active-directory.md) (v4.3+) | [Yes](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | Yes |
 | [Azure Active Directory Integrated authentication](/azure/sql-database/sql-database-aad-authentication) | [Yes](php/azure-active-directory.md) (v4.3+) | [Yes](php/azure-active-directory.md) (v4.3+) | | Yes |
 | [Azure Active Directory Interactive (MFA) authentication](/azure/sql-database/sql-database-aad-authentication) | | | | Yes<sup>[2](#note2)</sup> |
@@ -84,11 +86,10 @@ We wish all drivers supported every feature and spend effort to ensure feature p
 | [Table-Valued Parameters (TVP)](../relational-databases/tables/use-table-valued-parameters-database-engine.md) | [Yes](php/use-table-valued-parameters.md) (v5.10+) | [Yes](php/use-table-valued-parameters.md) (v5.10+) | [Yes](https://tediousjs.github.io/tedious/parameters.html) | Yes |
 | [MultiSubnetFailover](../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [Yes](php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) | [Yes](php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) | | [Yes](../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) |
 | [Transparent Network IP Resolution](odbc/using-transparent-network-ip-resolution.md) | [Yes](php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) | [Yes](php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) | | [Yes](odbc/using-transparent-network-ip-resolution.md) |
+| [TDS 8.0 (strict encryption) and TLS 1.3](../relational-databases/security/networking/tds-8.md) | Yes (v5.10+) | Yes (v5.10+) | | Yes |
 
 <a id="note1"></a><sup>1</sup> Since these drivers rely on the Microsoft ODBC Driver for SQL Server, a version of that driver that supports the feature must also be used.
 
 <a id="note2"></a><sup>2</sup> Only on Windows.
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-
-[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

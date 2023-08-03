@@ -1,16 +1,13 @@
 ---
-title: "Data types in expressions in a paginated report | Microsoft Docs"
-description:  Explore how data types represent different kinds of data in a paginated report so that the data can be stored and processed in Report Builder. 
-ms.date: 08/17/2018
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
+title: "Data types in expressions in a paginated report"
+description: Explore how data types represent different kinds of data in a paginated report so that the data can be stored and processed in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 08/17/2018
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Data types in expressions in a paginated report (Report Builder)
 

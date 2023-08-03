@@ -1,15 +1,13 @@
 ---
 title: "Report Server Service Trace Log"
 description: Learn about report server trace logs in Reporting Services, which contain detailed information for Report Server service operations.
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server
-ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.reviewer: ""
-ms.custom: ""
 ms.date: 04/23/2019
+ms.service: reporting-services
+ms.subservice: report-server
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Report Server Service Trace Log
@@ -95,7 +93,7 @@ The following fields can be found in a trace log:
 
 ## Previous versions
 
-In previous releases of [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], there were multiple trace log files, one for each application. The following files are obsolete and are no longer created in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions:
+In previous releases of [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], there were multiple trace log files, one for each application. The following files are obsolete and are no longer created in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions:
 + ReportServerWebApp_*\<timestamp>*.log
 + ReportServer_*\<timestamp>*.log
 + ReportServerService_main_*\<timestamp>*.log

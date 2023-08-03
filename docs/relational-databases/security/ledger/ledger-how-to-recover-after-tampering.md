@@ -1,21 +1,19 @@
 ---
 title: "Recover ledger database after tampering"
 description: This article discusses how to recover a database after discovering that it's been tampered with using the ledger feature.
-ms.date: "05/24/2022"
-ms.service: sql-database
-ms.subservice: security
-ms.custom:
-- event-tier1-build-2022
-ms.reviewer: kendralittle, mathoma
-ms.topic: conceptual
 author: VanMSFT
 ms.author: vanto
+ms.reviewer: mathoma
+ms.date: 05/24/2023
+ms.service: sql-database
+ms.subservice: security
+ms.topic: conceptual
 monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
 ---
 
 # Recover ledger database after tampering
 
-[!INCLUDE [SQL Server 2022 Azure SQL Database](../../../includes/applies-to-version/sqlserver2022-asdb.md)]
+[!INCLUDE [SQL Server 2022 Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
 ## How to recover after tampering occurs?
 
@@ -37,10 +35,10 @@ If the attacker didn't tamper with the database level ledger, this is easy to de
 
 The tampering event affected data that was later used by further transactions, therefore affecting their execution. For example, in a banking application where the current account balances are stored in a ledger table, modifying the current state of the table can be disastrous for further transactions since it can allow new transactions to overspend.
 
-If the attacker tampered with the database ledger, recomputing the hashes of blocks to make it internally consistent (until verified against external database digests), then new transactions and database digests will be generated over invalid hashes. This leads to a fork in the ledger, since the new database digests generated map to an invalid state and even if you repair the ledger by using earlier backups, all these database digests are permanently invalid. Additionally, since the database ledger is broken, you can’t trust the details about transactions that occurred after tampering until you verify them. Based on that, the tampering can be potentially reverted by:
+If the attacker tampered with the database ledger, recomputing the hashes of blocks to make it internally consistent (until verified against external database digests), then new transactions and database digests will be generated over invalid hashes. This leads to a fork in the ledger, since the new database digests generated map to an invalid state and even if you repair the ledger by using earlier backups, all these database digests are permanently invalid. Additionally, since the database ledger is broken, you can't trust the details about transactions that occurred after tampering until you verify them. Based on that, the tampering can be potentially reverted by:
 
 1. Using backups to restore the state for the tampered transactions.
-1. [Verifying](ledger-verify-database.md) the portion of the ledger after the last transaction recovered by the backup and until the end of the ledger. For this, you have to use the database digests from the forked part of the chain. Although the database digests don’t match the original part of the ledger, it can still verify the forked portion of the ledger hasn't been tampered with. If these also indicate tampering, this means that there have been more than one tampering events and the process needs to be applied recursively to recover the different portions of the ledger from backups.
+1. [Verifying](ledger-verify-database.md) the portion of the ledger after the last transaction recovered by the backup and until the end of the ledger. For this, you have to use the database digests from the forked part of the chain. Although the database digests don't match the original part of the ledger, it can still verify the forked portion of the ledger hasn't been tampered with. If these also indicate tampering, this means that there have been more than one tampering events and the process needs to be applied recursively to recover the different portions of the ledger from backups.
 1. Manually repair the table ledgers by reinserting the information for the verified transactions and recomputing the hashes for these new transactions that occurred after the first tampering event in the database ledger.
 
 ## See also

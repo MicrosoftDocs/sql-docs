@@ -4,9 +4,8 @@ description: sys.server_audits (Transact-SQL)
 author: sravanisaluru
 ms.author: srsaluru
 ms.date: "03/23/2022"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "server_audits_TSQL"
@@ -17,10 +16,9 @@ helpviewer_keywords:
   - "sys.server_audits catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: c2c4a000-1127-46a8-b1e9-947fd1136e1e
 ---
 # sys.server_audits (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Contains one row for each [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] audit in a server instance. For more information, see [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   

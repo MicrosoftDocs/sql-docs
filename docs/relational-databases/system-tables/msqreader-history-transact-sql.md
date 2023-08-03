@@ -4,9 +4,8 @@ description: MSqreader_history (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "MSqreader_history"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "MSqreader_history system table"
 dev_langs:
   - "TSQL"
-ms.assetid: c5c91d39-513c-4a77-870b-c8ef74a1cd6b
 ---
 # MSqreader_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,25 +1,21 @@
 ---
-title: "Handling Namespaces in XQuery | Microsoft Docs"
+title: "Handling Namespaces in XQuery"
 description: View examples of handling namespaces in an XQuery that include how to declare new and default namespaces.
-ms.custom: ""
+author: "rothja"
+ms.author: "jroth"
 ms.date: "03/07/2017"
-ms.prod: sql
-ms.prod_service: sql
-ms.reviewer: ""
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "declaring namespaces"
   - "namespaces [XQuery]"
   - "XQuery, namespaces"
-ms.assetid: 542b63da-4d3d-4ad5-acea-f577730688f1
-author: "rothja"
-ms.author: "jroth"
+dev_langs:
+  - "XML"
 ---
 # Handling Namespaces in XQuery
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   This topic provides samples for handling namespaces in queries.  
   
@@ -61,7 +57,7 @@ where ProductModelID=7
  This is the result  
   
 ```  
-<step xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">Insert <material>aluminum sheet MS-2341</material> into the <tool>T-85A framing tool</tool>. </step>  
+<step xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">Insert <material>aluminum sheet MS-2341</material> into the <tool>T-85A framing tool</tool>. </step>  
 ...  
 ```  
   
@@ -87,7 +83,7 @@ where ProductModelID=19
 ```  
   
       <myNS:Result xmlns:myNS="uri:SomeNamespace">  
-  <Summary xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
+  <Summary xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
    <p1:p xmlns:p1="http://www.w3.org/1999/xhtml">  
      Our top-of-the-line competition mountain bike. Performance-enhancing   
      options include the innovative HL Frame, super-smooth front   

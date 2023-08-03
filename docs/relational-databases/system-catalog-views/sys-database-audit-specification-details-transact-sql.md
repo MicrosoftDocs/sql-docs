@@ -4,9 +4,8 @@ description: sys.database_audit_specification_details (Transact-SQL)
 author: sravanisaluru
 ms.author: srsaluru
 ms.date: "03/23/2022"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "database_audit_specification_details"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.database_audit_specification_details catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 03fc60a9-1696-4109-b15e-a50046310859
 ---
 # sys.database_audit_specification_details (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

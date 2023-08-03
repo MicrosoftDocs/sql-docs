@@ -1,14 +1,14 @@
 ---
-title: "Strategies for Backing Up and Restoring Snapshot and Transactional Replication | Microsoft Docs"
+title: "Strategies for Backing Up and Restoring Snapshot and Transactional Replication"
 description: Learn about considerations for designing a backup and restore strategy for snapshot and transactional replication in SQL Server.
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "backups [SQL Server replication], snapshot replication"
   - "restoring [SQL Server replication], transactional replication"
   - "snapshot replication [SQL Server], backup and restore"
@@ -18,9 +18,6 @@ helpviewer_keywords:
   - "recovery [SQL Server replication], snapshot replication"
   - "sync with backup [SQL Server replication]"
   - "backups [SQL Server replication], transactional replication"
-ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-current||>=sql-server-2016"
 ---
 # Strategies for Backing Up and Restoring Snapshot and Transactional Replication
@@ -49,7 +46,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016"
  If you perform regular log backups, any replication-related changes should be captured in the log backups. If you do not perform log backups, a backup should be performed whenever a setting relevant to replication is changed. For more information, see [Common Actions Requiring an Updated Backup](../../../relational-databases/replication/administration/common-actions-requiring-an-updated-backup.md).  
   
 ## Backup Settings for Transactional Replication  
- Transactional replication includes using the **sync with backup** option, which can be set on the distribution database and the publication database:  
+
+Transactional replication includes using the **sync with backup** option, which can be set on the distribution database and the publication database:  
   
 -   We recommend that you always set this option on the distribution database.  
   
@@ -64,7 +62,15 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016"
      Latency and throughput are affected because transactions cannot be delivered to the distribution database until they have been backed up at the Publisher. For example, if the transaction log is backed up every five minutes, there is an additional five minutes of latency between when a transaction is committed at the Publisher and when the transaction is delivered to the distribution database, and subsequently the Subscriber.  
   
     > [!NOTE]  
-    >  The **sync with backup** option ensures consistency between the publication database and the distribution database, but the option does not guarantee against data loss. For example, if the transaction log is lost, transactions that have been committed since the last transaction log backup will not be available in the publication database or the distribution database. This is the same behavior as a nonreplicated database.  
+    >  The **sync with backup** option ensures consistency between the publication database and the distribution database, but the option does not guarantee against data loss. For example, if the transaction log is lost, transactions that have been committed since the last transaction log backup will not be available in the publication database or the distribution database. This is the same behavior as a nonreplicated database.
+    >
+    > Setting the sync with backup option on distribution database is not compatible when publisher database is part of availability group. This could lead to following error when log reader agent runs after failover.
+    >
+    >   *The process could not execute 'sp_repldone/sp_replcounters' on 'machinename\instance'. (Source: MSSQL_REPL, Error number: MSSQL_REPL20011)
+    >   Get help: [http://help/MSSQL_REPL20011](../mssql-repl020011.md)
+    >   Possible inconsistent state in the distribution database: dist_backup_lsn {nnnnnnnn:nnnnnnnn:nnnn}, dist_last_lsn {nnnnnnnn:nnnnnnnn:nnnn}. Execute "sp_repldone NULL, NULL, 0, 0, 1", and then execute sp_replflush. Reinitialize all subscriptions to the publication. (Source: MSSQLServer, Error number: 18846)*
+
+ 
   
  **To set the sync with backup option**  
   

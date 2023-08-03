@@ -1,14 +1,14 @@
 ---
-title: "rskeymgmt Utility | Microsoft Docs"
+title: "rskeymgmt Utility"
 description: Learn about the reskeymgmt utility that manages the symmetric key that protects sensitive report server data against unauthorized access.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/20/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: tools
-
-
+ms.service: reporting-services
+ms.subservice: tools
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "report servers [Reporting Services], encryption"
   - "joining report server instances [SQL Server]"
   - "report server scale-out deployments [Reporting Services]"
@@ -19,9 +19,6 @@ helpviewer_keywords:
   - "encryption [Reporting Services]"
   - "rskeymgmt utility"
   - "scale-out deployments [Reporting Services]"
-ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
-author: maggiesMSFT
-ms.author: maggies
 ---
 # rskeymgmt Utility (SSRS)
   Extracts, restores, creates, and deletes the symmetric key used to protect sensitive report server data against unauthorized access. This utility is also used to join report server instances in a scale-out deployment. A *report server scale-out deployment* refers to multiple report server instances that share a single report server database.  

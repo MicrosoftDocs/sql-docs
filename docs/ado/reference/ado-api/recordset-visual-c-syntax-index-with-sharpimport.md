@@ -4,8 +4,8 @@ description: "Recordset (Visual C++ Syntax Index with #import)"
 author: rothja
 ms.author: jroth
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.technology: ado
+ms.service: sql
+ms.subservice: ado
 ms.topic: reference
 helpviewer_keywords:
   - "Recordset collection [ADO], Visual C++ syntax index with #import"

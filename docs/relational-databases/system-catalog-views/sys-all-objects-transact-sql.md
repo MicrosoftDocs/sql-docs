@@ -4,8 +4,8 @@ description: sys.all_objects (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "05/20/2020"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.all_objects"
@@ -16,11 +16,10 @@ helpviewer_keywords:
   - "sys.all_objects catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 547e4be4-a8e4-48ce-9d8d-37b169985081
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # sys.all_objects (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
   Shows the UNION of all schema-scoped user-defined objects and system objects.  
   

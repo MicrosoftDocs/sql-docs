@@ -1,18 +1,15 @@
 ---
+title: "MSSQL_ENG002627"
 description: "MSSQL_ENG002627"
-title: "MSSQL_ENG002627 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: reference
-helpviewer_keywords: 
-  - "MSSQL_ENG002627 error"
-ms.assetid: 7f4136ac-3784-4a41-a98c-8a02308e4883
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: reference
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "MSSQL_ENG002627 error"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # MSSQL_ENG002627

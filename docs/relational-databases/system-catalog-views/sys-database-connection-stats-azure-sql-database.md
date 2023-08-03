@@ -7,7 +7,6 @@ ms.author: randolphwest
 ms.date: "04/18/2022"
 ms.service: sql-database
 ms.topic: "reference"
-ms.custom: seo-dt-2019
 f1_keywords:
   - "sys.database_connection_stats"
   - "database_connection_stats"
@@ -18,7 +17,6 @@ helpviewer_keywords:
   - "database_connection_stats"
 dev_langs:
   - "TSQL"
-ms.assetid: 5c8cece0-63b0-4dee-8db7-6b43d94027ec
 monikerRange: "=azuresqldb-current"
 ---
 # sys.database_connection_stats (Azure SQL Database)

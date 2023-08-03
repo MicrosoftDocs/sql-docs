@@ -1,19 +1,17 @@
 ---
 title: Import and export of a database takes a long time
 description: Azure SQL Database and Azure SQL Managed Instance Import/Export service takes a long time to import or export a database
-author: v-miegge
-ms.author: ramakoni
-ms.reviewer: wiassaf, mathoma
+author: suresh-kandoth
+ms.author: sureshka
+ms.reviewer: wiassaf, mathoma, jeschult
 ms.date: 09/27/2019
 ms.service: sql-db-mi
 ms.subservice: data-movement
 ms.topic: troubleshooting
-ms.custom:
-  - "seo-lt-2019"
-  - "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 
-# Azure SQL Database and Managed Instance Import/Export service takes a long time to import or export a database
+# Azure SQL Database and SQL Managed Instance Import/Export service takes a long time to import or export a database
 
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
@@ -21,7 +19,7 @@ When you use the Import/Export service, the process might take longer than expec
 
 ## Azure SQL Database Import/Export service
 
-The Azure SQL Database Import/Export service is a REST-based web service that runs in every Azure data center. This service is called when you use either the [Import database](database-import.md#using-azure-portal) or [Export](./database-import.md#using-azure-portal) option to move your database in the Azure portal. The service provides free request queuing and compute services to perform imports and exports between Azure SQL Database and Azure Blob storage.
+The Azure SQL Database Import/Export service is a REST-based web service that runs in every Azure data center. This service is called when you use either the [Import or Export a database](database-import.md#use-azure-portal) option to move your database in the Azure portal. The service provides free request queuing and compute services to perform imports and exports between Azure SQL Database and Azure Blob storage.
 
 The import and export operations don't represent a traditional physical database backup but instead a logical backup of the database that uses a special BACPAC format. The BACPAC format lets you avoid having to use a physical format that might vary between versions of Microsoft SQL Server, Azure SQL Database, and Azure SQL Managed Instance.
 
@@ -31,6 +29,8 @@ The Azure SQL Database Import/Export service provides a limited number of comput
 
 Additionally, as the Import/Export service performs a logical backup of the database the time to complete is more dependent on the number of objects in the database than a traditional physical database backup.
 
+> [!NOTE]
+> After resources are assigned and a request starts to process, the service automatically cancels the request after two days.
 
 ## Recommended solutions
 
@@ -45,7 +45,7 @@ If your database exports are used only for recovery from accidental data deletio
 
 ## Things to consider when you export or import a database
 
-* All the methods discussed in this article use up the Database Transaction Unit (DTU) quota, which causes throttling by the Azure SQL Database service. You can [view the DTU stats for the database on the Azure portal](./monitor-tune-overview.md#azure-sql-database-and-azure-sql-managed-instance-resource-monitoring). If the database has reached its resource limits, [upgrade the service tier](./scale-resources.md) to add more resources.
+* All the methods discussed in this article consume Database Transaction Units (DTUs) or CPU quota, which causes throttling by the Azure SQL Database service. You can [view the DTU stats for the database on the Azure portal](./monitor-tune-overview.md#azure-sql-database-and-azure-sql-managed-instance-resource-monitoring). If the database has reached its resource limits, [upgrade the service tier](./scale-resources.md) to add more resources.
 * Ideally, you should run client applications (like the sqlpackage utility or your custom DAC application) from a VM in the same region as your database. Otherwise, you might experience performance issues related to network latency.
 * Exporting large tables without clustered indexes can be very slow or even cause failure. This behavior occurs because the table can't be split up and exported in parallel. Instead, it must be exported in a single transaction, and that causes slow performance and potential failure during export, especially for large tables.
 

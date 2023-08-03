@@ -1,23 +1,17 @@
 ---
-description: "CInstance Class - InstanceName Property"
 title: "InstanceName Property (CInstance)"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: wmi
-ms.topic: "reference"
-apiname: 
-  - "InstanceName Property (CInstance Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "InstanceName property"
-ms.assetid: 806fafa8-bf89-4ce8-a082-8081dde9fcc3
+description: "CInstance Class - InstanceName Property"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "InstanceName property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "InstanceName Property (CInstance Class)"
+apitype: "MOFDef"
 ---
 # CInstance Class - InstanceName Property
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

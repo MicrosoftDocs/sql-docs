@@ -4,11 +4,9 @@ description: View detailed examples of the XML Bulk Load functionality in SQKXML
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "overflow-field annotation"
   - "ConnectionCommand property"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "multiple table bulk loading"
   - "examples [SQLXML], XML Bulk Load"
   - "overflow data [SQLXML]"
-ms.assetid: 970e4553-b41d-4a12-ad50-0ee65d1f305d
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # XML Bulk Load Examples (SQLXML 4.0)
@@ -1233,7 +1230,7 @@ End Sub
 <?xml version="1.0" encoding="utf-8" ?>  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
            xmlns:sql="urn:schemas-microsoft-com:mapping-schema"  
-           xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">   
+           xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">   
   <xsd:element name="ProductModel"  sql:relation="Production.ProductModel" >  
     <xsd:complexType>  
       <xsd:sequence>  

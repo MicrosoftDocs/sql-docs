@@ -1,13 +1,13 @@
 ---
 title: "Programming"
-description: Use these resources to understand SQL Server Native Client, a stand-alone data access API, used for both OLE DB and ODBC. 
-ms.custom: ""
+description: Use these resources to understand SQL Server Native Client, a stand-alone data access API, used for both OLE DB and ODBC.
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: native-client
+ms.service: sql
+ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQLNCLI, about SQL Server Native Client"
   - "SQL Server Native Client, about SQL Server Native Client"
   - "data access [SQL Server Native Client], about SQL Server Native Client"
@@ -15,13 +15,13 @@ helpviewer_keywords:
   - "SQL Server Native Client"
   - "SQLNCLI"
   - "native data access [SQL Server Native Client]"
-ms.assetid: 14ba2cb1-a424-4e4d-b224-0bf1015ab801
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Native Client Programming
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+> [!IMPORTANT] 
+> [!INCLUDE[snac-removed-oledb-and-odbc](../../includes/snac-removed-oledb-and-odbc.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client is a stand-alone data access application programming interface (API), used for both OLE DB and ODBC, that was introduced in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client combines the SQL OLE DB provider and the SQL ODBC driver into one native dynamic-link library (DLL). It also provides new functionality above and beyond that supplied by the Windows Data Access Components (Windows DAC, formerly Microsoft Data Access Components, or MDAC). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client can be used to create new applications or enhance existing applications that need to take advantage of features introduced in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], such as multiple active result sets (MARS), user-defined data types (UDT), query notifications, snapshot isolation, and XML data type support.  
   

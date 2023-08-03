@@ -55,7 +55,7 @@ For operations related to instances both inside pools and single instances, use 
 
 Prepare your environment for the Azure CLI.
 
-[!INCLUDE [azure-cli-prepare-your-environment-no-header](../includes/azure-cli-prepare-your-environment-no-header.md)]
+[!INCLUDE [azure-cli-prepare-your-environment-no-header](~/../azure-sql/reusable-content/azure-cli/azure-cli-prepare-your-environment-no-header.md)]
 
 Available [Azure CLI](/cli/azure/sql) commands:
 
@@ -90,7 +90,7 @@ After completing the previous steps, you are ready to create an instance pool.
 
 The following restrictions apply to instance pools:
 
-- Only General Purpose and Gen5 are available in public preview.
+- Only General Purpose and standard-series (Gen5) are available in public preview.
 - The pool name can contain only lowercase letters, numbers and hyphens, and can't start with a hyphen.
 - If you want to use Azure Hybrid Benefit, it is applied at the instance pool level. You can set the license type during pool creation or update it anytime after creation.
 
@@ -257,7 +257,7 @@ This parameter can be set during instance creation as well.
 
 This step can be done through the Azure portal or using PowerShell commands, and can be done anytime after the subnet is prepared for the managed instance.
 
-For details, see [Allow public endpoint traffic on the network security group](public-endpoint-configure.md#allow-public-endpoint-traffic-on-the-network-security-group).
+For details, see [Allow public endpoint traffic on the network security group](public-endpoint-configure.md#allow-public-endpoint-traffic-in-the-network-security-group).
 
 
 ## Move an existing single instance to a pool

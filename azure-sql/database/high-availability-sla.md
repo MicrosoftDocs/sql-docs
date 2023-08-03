@@ -55,7 +55,7 @@ The following table shows the availability options based on service tiers:
 
 
 
-## locally redundant availability 
+## Locally redundant availability 
 
 Locally redundant availability is based on storing your database to [locally redundant storage (LRS)](/azure/storage/common/storage-redundancy#locally-redundant-storage) which copies your data three times within a single datacenter in the primary region and protects your data in the event of local failure, such as a small-scale network or power failure. LRS is the lowest-cost redundancy option and offers the least durability compared to other options.  If a large-scale disaster such as fire or flooding occurs within a region, all replicas of a storage account using LRS may be lost or unrecoverable. As such, to further protect your data when using the locally redundant availability option, consider using a more resilient storage option for your [database backups](automated-backups-overview.md#backup-storage-redundancy). This does not apply to Hyperscale databases, where the same storage is used for both data files and backups. 
 
@@ -74,7 +74,7 @@ The remote storage availability model includes two layers:
 
 Whenever the database engine or the operating system is upgraded, or a failure is detected, Azure Service Fabric will move the stateless database engine process to another stateless compute node with sufficient free capacity. Data in Azure Blob storage isn't affected by the move, and the data/log files are attached to the newly initialized database engine process. This process guarantees high availability, but a heavy workload may experience some performance degradation during the transition since the new database engine process starts with cold cache.
 
-### <a id="premium-and-business-critical-service-tier-locally redundant-availability"></a> Premium and Business Critical service tier
+### <a id="premium-and-business-critical-service-tier-locally-redundant-availability"></a> Premium and Business Critical service tier
 
 Premium and Business Critical service tiers use the local storage availability model, which integrates compute resources (database engine process) and storage (locally attached SSD) on a single node. High availability is achieved by replicating both compute and storage to additional nodes.
 

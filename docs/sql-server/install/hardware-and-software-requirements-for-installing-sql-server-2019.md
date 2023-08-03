@@ -3,7 +3,7 @@ title: "SQL Server 2019: Hardware & software requirements"
 description: A list of hardware, software, and operating system requirements for installing and running SQL Server 2019.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: 09/16/2021
+ms.date: 08/04/2023
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: conceptual
@@ -44,16 +44,20 @@ helpviewer_keywords:
   - "localized SQL Server versions"
 ---
 # SQL Server 2019: Hardware and software requirements
+
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 The article lists the minimum hardware and software requirements to install and run [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] on the Windows operating system.
 
 For hardware and software requirements for other versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , see:
+
+- [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2022](hardware-and-software-requirements-for-installing-sql-server-2022.md)
 - [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 and 2017](hardware-and-software-requirements-for-installing-sql-server.md)
 - [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  on Linux](../../linux/sql-server-linux-setup.md#system)
 - [Big data cluster](../../big-data-cluster/deployment-guidance.md)
 
-##  <a name="pmosr"></a> Hardware requirements  
+##  <a name="pmosr"></a> Hardware requirements
+
  The following memory and processor requirements apply to all editions of [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]:  
   
 |Component|Requirement|  

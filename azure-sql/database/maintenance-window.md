@@ -78,7 +78,6 @@ Choosing a maintenance window other than the default is available on all SLOs **
 - Instance pools
 - Basic, S0 and S1
 - DC, Fsv2, M-series
-- Hyperscale service tier with zone redundancy
 
 <!-- Check Known limitations in azure-sql/database/service-tier-hyperscale.md as well -->
 
@@ -86,102 +85,101 @@ Choosing a maintenance window other than the default is available on all SLOs **
 
 Choosing a maintenance window for Azure SQL Managed Instance other than the default is currently available in the following regions:
 
-| Azure Region | SQL Managed Instance |
-|:---|:---|
-| Australia Central 1 | Yes | 
-| Australia Central 2 | Yes | 
-| Australia East | Yes | 
-| Australia Southeast | Yes | 
-| Brazil South | Yes | 
-| Brazil Southeast | Yes | 
-| Canada Central | Yes | 
-| Canada East | Yes | 
-| Central India | Yes | 
-| Central US | Yes | 
-| China East 2 |Yes | 
-| China North 2 |Yes|
-| East US | Yes | 
-| East US 2 | Yes | 
-| East Asia | Yes | 
-| France Central | Yes |
-| France South | Yes | 
-| Germany West Central | Yes |
-| Germany North | Yes |  
-| Japan East | Yes | 
-| Japan West | Yes | 
-| Korea Central | Yes |
-| Korea South | Yes | 
-| North Central US | Yes |
-| North Europe | Yes | 
-| Norway East | Yes | 
-| Norway West | Yes | 
-| South Africa North | Yes |
-| South Africa West | Yes | 
-| South Central US | Yes | 
-| South India | Yes | 
-| Southeast Asia | Yes | 
-| Switzerland North | Yes |
-| Switzerland West | Yes |
-| UAE Central | Yes | 
-| UAE North | Yes | 
-| UK South | Yes | 
-| UK West | Yes | 
-| US Gov Arizona | Yes |
-| US Gov Texas| Yes | 
-| US Gov Virginia | Yes | 
-| West Central US | Yes | 
-| West Europe | Yes | 
-| West India | Yes | 
-| West US | Yes |
-| West US 2 | Yes | 
-| West US 3 | Yes | 
+- Australia Central 1
+- Australia Central 2
+- Australia East
+- Australia Southeast
+- Brazil South
+- Brazil Southeast
+- Canada Central
+- Canada East
+- Central India
+- Central US
+- China East 2
+- China North 2
+- East US
+- East US 2
+- East Asia
+- France Central
+- France South
+- Germany West Central
+- Germany North  
+- Japan East
+- Japan West
+- Korea Central
+- Korea South
+- North Central US
+- North Europe
+- Norway East
+- Norway West
+- South Africa North
+- South Africa West
+- South Central US
+- South India
+- Southeast Asia
+- Switzerland North
+- Switzerland West
+- UAE Central
+- UAE North
+- UK South
+- UK West
+- US Gov Arizona
+- US Gov Texas
+- US Gov Virginia
+- West Central US
+- West Europe
+- West India
+- West US
+- West US 2
+- West US 3
 
 ### Azure SQL Database region support for maintenance windows
 
 Choosing a maintenance window for Azure SQL Database other than the default is currently available in the following regions, organized by purchasing model.
 
-The following table is for databases that do not have [zone-redundancy](high-availability-sla.md#zone-redundant-availability) enabled.
+The following table is for databases that do not have [zone-redundancy](high-availability-sla.md#zone-redundant-availability) enabled. For databases in an [Azure Availability Zone](high-availability-sla.md#zone-redundant-availability), see [the table for zone-redundant databases.](#ZR-maintenance-window-availability).
 
-| Azure Region | SQL Database: Hyperscale Premium series and Premium-series memory optimized, not in AZ | All other Azure SQL Database purchasing models and tiers, not in AZ |
+| Azure Region | SQL Database: Hyperscale Premium-series and Premium-series memory optimized | All other Azure SQL Database purchasing models and tiers |
 |:---|:---|:---|:---|
-| Australia East | Yes | Yes | 
+| Australia East | Yes | Yes |
 | Australia Southeast | | Yes |
 | Brazil South | | Yes |  
-| Brazil Southeast | | Yes | 
-| Canada Central  | Yes |  Yes | 
-| Canada East  | | Yes | 
-| Central India | |Yes | 
-| Central US | Yes |Yes | 
-| China East 2 | | Yes | 
+| Brazil Southeast | | Yes |
+| Canada Central  | Yes | Yes |
+| Canada East  | | Yes |
+| Central India | | Yes |
+| Central US | Yes | Yes |
+| China East 2 | | Yes |
 | China North 2 | | Yes |
 | East US | Yes | Yes |
-| East US 2  | Yes | Yes | 
-| East Asia  | | Yes |  
-| France Central  | | Yes | 
-| France South  | | Yes | 
-| Germany West Central | | Yes | 
-| Japan East | Yes | Yes | 
-| Japan West | | Yes | 
-| North Central US | | Yes | 
-| North Europe | Yes | Yes | 
-| South Central US | Yes | Yes | 
-| South India | | Yes | 
-| Southeast Asia | | Yes | 
-| Switzerland North | | Yes | 
-| UAE North | | Yes | 
-| UK South | | Yes | 
-| UK West | | Yes | 
-| US Gov Texas | | Yes | 
-| US Gov Virginia | | Yes | 
-| West Central US | | Yes | 
-| West Europe | Yes | Yes | 
-| West US | Yes | Yes | 
-| West US 2 | Yes | Yes | 
-| West US 3 | Yes | | 
+| East US 2  | Yes | Yes |
+| East Asia  | | Yes |
+| France Central  | | Yes |
+| France South  | | Yes |
+| Germany West Central | | Yes |
+| Japan East | Yes | Yes |
+| Japan West | | Yes |
+| North Central US | | Yes |
+| North Europe | Yes | Yes |
+| South Central US | Yes | Yes |
+| South India | | Yes |
+| Southeast Asia | | Yes |
+| Switzerland North | | Yes |
+| UAE North | | Yes |
+| UK South | | Yes |
+| UK West | | Yes |
+| US Gov Texas | | Yes |
+| US Gov Virginia | | Yes |
+| West Central US | | Yes |
+| West Europe | Yes | Yes |
+| West US | Yes | Yes |
+| West US 2 | Yes | Yes |
+| West US 3 | Yes | |
 
+<a id="ZR-maintenance-window-availability"></a>
 The following table is for [zone-redundant](high-availability-sla.md#zone-redundant-availability) databases.
 
-| Azure Region | SQL Database: Hyperscale Premium series and Premium-series memory optimized in an [Azure Availability Zone](high-availability-sla.md) | All other Azure SQL Database purchasing models and tiers in an [Azure Availability Zone](high-availability-sla.md) |
+| Azure Region | SQL Database: Hyperscale Premium-series and Premium-series memory optimized in an [Azure Availability Zone](high-availability-sla.md#zone-redundant-availability) | All other Azure SQL Database purchasing models and tiers in an [Azure Availability Zone](high-availability-sla.md#zone-redundant-availability) |
 |:---|:---|:---|
 | Australia East |  | Yes |
 | Canada Central  |  | Yes |

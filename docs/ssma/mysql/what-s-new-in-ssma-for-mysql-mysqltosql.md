@@ -1,5 +1,5 @@
 ---
-title: "What's New in SSMA for MySQL (MySQLToSql)"
+title: "What's New in SSMA for MySQL (MySQLToSQL)"
 description: Find out about changes to SQL Server Migration Assistant (SSMA) for MySQL (MySQLToSQL) for each release.
 author: cpichuka
 ms.author: cpichuka
@@ -9,7 +9,7 @@ ms.subservice: ssma
 ms.topic: conceptual
 ms.custom: intro-whats-new
 ---
-# What's New in SSMA for MySQL (MySQLToSql)
+# What's New in SSMA for MySQL (MySQLToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for MySQL changes in each release.
 
@@ -34,12 +34,12 @@ The v9.2 release of SSMA for MySQL contains the following changes:
 ## SSMA v9.1
 
 The v9.1 release of SSMA for MySQL contains the following changes:
- * Add support for at scale data migration from Mysql to SQL target
+ * Add support for at scale data migration from MySQL to SQL target
  * Improve get help experience
 
 ## SSMA v9.0
 
-The v9.0 release of SSMA for Mysql contains minor performance improvements, bug fixes and online help viewer support.
+The v9.0 release of SSMA for MySQL contains minor performance improvements, bug fixes and online help viewer support.
 
 ## SSMA v8.24
 
@@ -321,7 +321,7 @@ The May 2016 release of SSMA for MySQL contains  the following changes:
 * Improved parser and resolver.
 * Removed installer check for .NET 2.0.
 * Updated Extension Pack dependency from .NET 3.5 to .NET 4.0.
-* Fixed default BigInt type mapping for MySql.
+* Fixed default BigInt type mapping for MySQL.
 * Fixed `save-project` and `open-project` commands for SSMA Console.
 * Fixed `securepassword` command for SSMA Console.
 * Fixed counting of objects for initial loading.

@@ -14,6 +14,14 @@ ms.custom: intro-whats-new
 
 This article lists SQL Server Migration Assistant (SSMA) for DB2 changes in each release.
 
+## SSMA v9.4
+
+The v9.4 release of SSMA for DB2 contains the following changes:
+
+ - Fix for conversion of multiple DELETE statement.
+ - Improve conversion of handlers
+ - Improve conversion of Fetch Clause
+
 ## SSMA v9.3
 
 The v9.3 release of SSMA for DB2 contains the following changes:

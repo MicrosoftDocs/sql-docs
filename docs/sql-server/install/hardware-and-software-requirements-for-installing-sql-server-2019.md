@@ -3,7 +3,7 @@ title: "SQL Server 2019: Hardware & software requirements"
 description: A list of hardware, software, and operating system requirements for installing and running SQL Server 2019.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: 09/16/2021
+ms.date: 08/04/2023
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: conceptual
@@ -44,16 +44,20 @@ helpviewer_keywords:
   - "localized SQL Server versions"
 ---
 # SQL Server 2019: Hardware and software requirements
+
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 The article lists the minimum hardware and software requirements to install and run [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] on the Windows operating system.
 
-For hardware and software requirements for other versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , see:
+For hardware and software requirements for other versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see:
+
+- [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2022](hardware-and-software-requirements-for-installing-sql-server-2022.md)
 - [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 and 2017](hardware-and-software-requirements-for-installing-sql-server.md)
 - [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  on Linux](../../linux/sql-server-linux-setup.md#system)
 - [Big data cluster](../../big-data-cluster/deployment-guidance.md)
 
-##  <a name="pmosr"></a> Hardware requirements  
+##  <a name="pmosr"></a> Hardware requirements
+
  The following memory and processor requirements apply to all editions of [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]:  
   
 |Component|Requirement|  
@@ -78,13 +82,13 @@ The following requirements apply to all installations:
 |Component|Requirement|  
 |---------------|-----------------|  
 |Operating system|Windows 10 TH1 1507 or greater<br/><br>Windows Server 2016 or greater<br/><br/>
-|.NET Framework|Minimum operating systems includes minimum .NET framework.|  
+|.NET Framework|Minimum operating system includes minimum .NET framework.|  
 |Network Software|Supported operating systems for [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] have built-in network software. Named and default instances of a stand-alone installation support the following network protocols: Shared memory, Named Pipes, and TCP/IP.<br/><br/> |  
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup installs the following software components required by the product:  
   
-   - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client    
-   - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup support files  
+   - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client
+   - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup application support files  
 
 
 > [!IMPORTANT]
@@ -144,7 +148,7 @@ Installing [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] on Server Core 
 For more information on installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  on Server Core, see [Install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md). 
 
 > [!NOTE]  
-> Installing SQL Server on a Windows OS on which case sensitivity is enabled is not supported. For more information review [SQL Server is not supported on a Windows operating system on which case sensitivity is enabled](/troubleshoot/sql/install/sql-server-not-supported-in-windows-os-where-case-sensitivity-enabled)
+> Installing SQL Server on a Windows OS on which case sensitivity is enabled isn't supported. For more information review [SQL Server isn't supported on a Windows operating system on which case sensitivity is enabled](/troubleshoot/sql/install/sql-server-not-supported-in-windows-os-where-case-sensitivity-enabled)
 
 ##  <a name="CrossLanguageSupport"></a> Cross-language support  
  For more information about cross-language support and considerations for installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in localized languages, see [Local Language Versions in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]](../../sql-server/install/local-language-versions-in-sql-server.md).  
@@ -183,20 +187,20 @@ For more information on installing [!INCLUDE[ssNoVersion](../../includes/ssnover
 - Shared Storage  
 - [Storage Spaces Direct \(S2D\)](/windows-server/storage/storage-spaces/storage-spaces-direct-overview)  
 - SMB File Share  
-    - SMB storage is not supported for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data files for either standalone or clustered installations. Use direct attached storage, a storage area network, or S2D instead. 
+    - SMB storage isn't supported for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data files for either standalone or clustered installations. Use direct attached storage, a storage area network, or S2D instead. 
     - SMB storage can be hosted by a Windows File Server or a third-party SMB storage device. If Windows File Server is used, the Windows File Server version should be 2008 or later. For more information about installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using SMB file share as a storage option, see [Install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  with SMB Fileshare as a Storage Option](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md).  
   
   
   
 ##  <a name="DC_support"></a> Installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a domain controller  
- For security reasons, we recommend that you do not install [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] on a domain controller. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup will not block installation on a computer that is a domain controller, but the following limitations apply:  
+ For security reasons, don't install [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] on a domain controller. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup doesn't block installation on a computer that is a domain controller, but the following limitations apply:  
   
-- You cannot run [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services on a domain controller under a local service account.    
-- After [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed on a computer, you cannot change the computer from a domain member to a domain controller. You must uninstall [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] before you change the host computer to a domain controller.    
-- After [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed on a computer, you cannot change the computer from a domain controller to a domain member. You must uninstall [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] before you change the host computer to a domain member.   
+- You can't run [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services on a domain controller under a local service account.    
+- After [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed on a computer, you can't change the computer from a domain member to a domain controller. You must uninstall [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] before you change the host computer to a domain controller.    
+- After [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed on a computer, you can't change the computer from a domain controller to a domain member. You must uninstall [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] before you change the host computer to a domain member.   
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instances are not supported where cluster nodes are domain controllers.   
-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is not supported on a read-only domain controller. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup cannot create security groups or provision [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service accounts on a read-only domain controller. In this scenario, Setup will fail. 
-- A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance is not supported in an environment where only a read-only domain controller is accessible. 
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] isn't supported on a read-only domain controller. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup can't create security groups or provision [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service accounts on a read-only domain controller. In this scenario, Setup will fail. 
+- A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance isn't supported in an environment where only a read-only domain controller is accessible. 
   
 ## Installation media
 
@@ -210,4 +214,4 @@ Alternatively, you can create an [Azure virtual machine already running [!INCLUD
 
 ## Next steps
 
-Once you've reviewed the hardware and software requirements for installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , you can start to [Plan a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  Installation](../../sql-server/install/planning-a-sql-server-installation.md) or review the [Security considerations for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).
+Once you've reviewed the hardware and software requirements for installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can start to [Plan a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  Installation](../../sql-server/install/planning-a-sql-server-installation.md) or review the [Security considerations for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).

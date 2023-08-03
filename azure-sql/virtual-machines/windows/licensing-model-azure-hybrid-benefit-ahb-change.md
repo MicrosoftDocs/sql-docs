@@ -102,7 +102,7 @@ Changing the license model is:
 
 - Only supported for the Standard and Enterprise editions of SQL Server. License changes for Express, Web, and Developer are not supported.
 - Only supported for virtual machines deployed through the Azure Resource Manager model. Virtual machines deployed through the classic model are not supported.
-- Available only for the public or Azure Government clouds. Currently unavailable for the Azure China region.
+- Available only for the public or Azure Government clouds. Currently unavailable for Azure portal operated by 21Vianet.
 
 Additionally, changing the license model to **Azure Hybrid Benefit** requires [Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-overview).
 

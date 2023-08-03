@@ -137,7 +137,7 @@ In a proxy environment, user applications may need to allow specific domains use
 - https://management.core.usgovcloudapi.net/
 - https://login.microsoftonline.us/
 
-**Azure (China)**
+**Azure operated by 21Vianet**
 
 - https://management.core.chinacloudapi.cn/
 - https://login.partner.microsoftonline.cn/

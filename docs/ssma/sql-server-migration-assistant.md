@@ -43,7 +43,7 @@ The following target versions are supported for SSMA.
 
 - [SSMA for Access](https://aka.ms/ssmaforaccess)
 - [SSMA for DB2](https://aka.ms/ssmafordb2)
-- [SSMA for MySql](https://aka.ms/ssmaformysql)
+- [SSMA for MySQL](https://aka.ms/ssmaformysql)
 - [SSMA for Oracle](https://aka.ms/ssmafororacle)
 - [SSMA for SAP ASE](https://aka.ms/ssmaforsybase)
 

@@ -5,7 +5,7 @@ description: Understand how the Azure SQL Database and Azure SQL Managed Instanc
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma, urosmil, scottkim
-ms.date: 07/31/2023
+ms.date: 08/03/2023
 ms.service: sql-db-mi
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -136,53 +136,52 @@ Choosing a maintenance window for Azure SQL Managed Instance other than the defa
 | West US 2 | Yes | 
 | West US 3 | Yes | 
 
-
 ### Azure SQL Database region support for maintenance windows
 
 Choosing a maintenance window for Azure SQL Database other than the default is currently available in the following regions, organized by purchasing model.
 
 The following table is for databases that do not have [zone-redundancy](high-availability-sla.md#zone-redundant-availability) enabled.
 
-| Azure Region | SQL Database DTU: Premium | SQL Database DTU: Basic, Standard | SQL Database vCore |
+| Azure Region | SQL Database: Hyperscale Premium series and Premium-series memory optimized, not in AZ | All other Azure SQL Database purchasing models and tiers, not in AZ |
 |:---|:---|:---|:---|
-| Australia East | Yes | Yes | Yes |
-| Australia Southeast | | Yes | Yes|
-| Brazil South | | Yes |  Yes |
-| Brazil Southeast | | Yes | Yes |
-| Canada Central  | Yes |  Yes | Yes |
-| Canada East  | | Yes | Yes |
-| Central India | |Yes | Yes |
-| Central US | Yes |Yes | Yes |
-| China East 2 | | Yes | Yes |
-| China North 2 | | Yes | Yes|
+| Australia East | Yes | Yes | 
+| Australia Southeast | | Yes |
+| Brazil South | | Yes |  
+| Brazil Southeast | | Yes | 
+| Canada Central  | Yes |  Yes | 
+| Canada East  | | Yes | 
+| Central India | |Yes | 
+| Central US | Yes |Yes | 
+| China East 2 | | Yes | 
+| China North 2 | | Yes |
 | East US | Yes | Yes |
-| East US 2  | Yes | Yes | Yes |
-| East Asia  | | Yes |  Yes |
-| France Central  | | Yes | YEs |
-| France South  | | Yes | Yes |
-| Germany West Central | | Yes | Yes |
-| Japan East | Yes | Yes | Yes |
-| Japan West | | Yes | Yes |
-| North Central US | | Yes | Yes |
-| North Europe | Yes | Yes | Yes |
-| South Central US | Yes | Yes | Yes |
-| South India | | Yes | Yes |
-| Southeast Asia | | Yes | Yes |
-| Switzerland North | | Yes | Yes |
-| UAE North | | Yes | Yes |
-| UK South | | Yes | Yes |
-| UK West | | Yes | Yes |
-| US Gov Texas | | Yes | Yes | 
-| US Gov Virginia | | Yes | Yes | 
-| West Central US | | Yes | Yes |
-| West Europe | Yes | Yes | Yes |
-| West US | Yes | Yes | Yes |
-| West US 2 | Yes | Yes | Yes |
-| West US 3 | Yes | | |
+| East US 2  | Yes | Yes | 
+| East Asia  | | Yes |  
+| France Central  | | Yes | 
+| France South  | | Yes | 
+| Germany West Central | | Yes | 
+| Japan East | Yes | Yes | 
+| Japan West | | Yes | 
+| North Central US | | Yes | 
+| North Europe | Yes | Yes | 
+| South Central US | Yes | Yes | 
+| South India | | Yes | 
+| Southeast Asia | | Yes | 
+| Switzerland North | | Yes | 
+| UAE North | | Yes | 
+| UK South | | Yes | 
+| UK West | | Yes | 
+| US Gov Texas | | Yes | 
+| US Gov Virginia | | Yes | 
+| West Central US | | Yes | 
+| West Europe | Yes | Yes | 
+| West US | Yes | Yes | 
+| West US 2 | Yes | Yes | 
+| West US 3 | Yes | | 
 
 The following table is for [zone-redundant](high-availability-sla.md#zone-redundant-availability) databases.
 
-| Azure Region | SQL Database DTU: Premium in an [Azure Availability Zone](high-availability-sla.md) | All other Azure SQL Database purchasing models and tiers in an [Azure Availability Zone](high-availability-sla.md) |
+| Azure Region | SQL Database: Hyperscale Premium series and Premium-series memory optimized in an [Azure Availability Zone](high-availability-sla.md) | All other Azure SQL Database purchasing models and tiers in an [Azure Availability Zone](high-availability-sla.md) |
 |:---|:---|:---|
 | Australia East |  | Yes |
 | Canada Central  |  | Yes |

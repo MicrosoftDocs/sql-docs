@@ -21,6 +21,8 @@ This article explains how automatic certificate rotation and customer managed ce
 
 Certificate management depends on whether you manage your own certificates (*customer managed certificates*), or the service manages the certificates (*service managed certificates*).
 
+Azure Key Vault automatically rotates the certificate for you. Key vault rotates certificates by default, after the certificate lifetime is at 80%. You can configure this setting. For instructions, review [Configure certificate auto-rotation in Key Vault](/azure/key-vault/certificates/tutorial-rotate-certificates). If the certificate has expired, then the automatic rotation fails.
+
 ## Prerequisite
 
 The functionality described in this article applies to an instance of Azure Arc-enabled SQL Server configured for authentication with Microsoft Entra ID. For instructions to configure such an instance, see:
@@ -57,9 +59,11 @@ If the new version of the certificate is created and installed on the server, bu
 
 ## Service managed certificate rotation
 
-For service managed certificate rotation, Azure Key Vault automatically rotates the certificate for you. Key vault rotates certificates by default, after the certificate lifetime is at 80%. You can configure this setting. For instructions, review [Configure certificate auto-rotation in Key Vault](/azure/key-vault/certificates/tutorial-rotate-certificates). If the certificate has expired, then the automatic rotation fails.
+With service managed certificate rotation, the Azure Extension for SQL Server rotates the certificates.
 
-Service managed certificate rotation requires you to add an access policy to the service principal with permission to sign keys. See [Assign a Key Vault access policy (legacy)](/azure/key-vault/general/assign-access-policy?tabs=azure-portal).
+To allow the service to manage the certificate, add an access policy for the service principal with permission to sign keys. See [Assign a Key Vault access policy (legacy)](/azure/key-vault/general/assign-access-policy?tabs=azure-portal). The access policy assignment needs to explicity reference the service principal of the Arc server.
+
+For instructions, see [Create and assign a certificate](../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial.md#create-and-assign-a-certificate).
 
 Once a new certificate is discovered, it is uploaded to app registration automatically.
 

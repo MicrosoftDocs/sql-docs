@@ -27,8 +27,8 @@ Azure Data Studio 1.45.1 is the latest general availability (GA) release.
 
 | New Item | Details |
 | --- | --- |
-| Connection | Fixed an issue that prevented all connections from appearing in the server tree view. |
-| Connection | Updated recent connections list to include connections that are not saved. |
+| Connection | Fixed an issue that prevented all connections from appearing in the recent and saved connection tree views. |
+| Connection | Fixed an issue where temporary connections were not saved in the recent connection list. |
 | Database Migration Assessment for Oracle | Resolved issue where links to open the assessment output were no longer working. |
 | Database Schema Conversion Toolkit | Resolved issue where links to open the conversion output were no longer working. |
 | Installation | Addressed error "gyp WARN install" for Windows arm64. |

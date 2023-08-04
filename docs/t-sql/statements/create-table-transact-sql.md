@@ -879,7 +879,7 @@ For more information, see [Data Compression](../../relational-databases/data-com
 
 #### XML_COMPRESSION
 
-**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
+**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi_md.md)].
 
 Specifies the XML compression option for any **xml** data type columns in the table. The options are as follows:
 
@@ -894,9 +894,6 @@ Specifies the XML compression option for any **xml** data type columns in the ta
 #### ON PARTITIONS ( { <partition_number_expression> | [ ,... *n* ] )
 
 Specifies the partitions to which the `DATA_COMPRESSION` or `XML_COMPRESSION` settings apply. If the table isn't partitioned, the `ON PARTITIONS` argument will generate an error. If the `ON PARTITIONS` clause isn't provided, the `DATA_COMPRESSION` option will apply to all partitions of a partitioned table.
-
-> [!NOTE]  
-> `XML_COMPRESSION` is only available starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] Preview.
 
 *partition_number_expression* can be specified in the following ways:
 
@@ -1684,9 +1681,9 @@ For additional data compression examples, see [Data Compression](../../relationa
 
 ### O. Create a table that uses XML compression
 
-**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
+**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi_md.md)].
 
-The following example creates a table that uses row compression.
+The following example creates a table that uses XML compression.
 
 ```sql
 CREATE TABLE dbo.T1

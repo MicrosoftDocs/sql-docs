@@ -4,7 +4,7 @@ description: Learn how to configure streaming export of metrics and resource log
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 07/17/2023
+ms.date: 08/04/2023
 ms.service: sql-db-mi
 ms.subservice: performance
 ms.topic: how-to
@@ -737,6 +737,14 @@ Learn more about [database wait statistics](/sql/relational-databases/system-dyn
 | EstimatedImpact_s | Estimated effect of automatic tuning recommendation JSON |
 | Event_s | Type of Automatic tuning event |
 | Timestamp_t | Last updated timestamp |
+
+> [!TIP]
+> `query_hash_s` and `query_plan_hash_s` are provided as numeric values. If you want to find the matching queries and query plans in [Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store), use the following T-SQL expression to convert numeric hash values to binary hash values used in [sys.query_store_query](/sql/relational-databases/system-catalog-views/sys-query-store-query-transact-sql) and [sys.query_store_plan](/sql/relational-databases/system-catalog-views/sys-query-store-plan-transact-sql):
+>
+> `SELECT CAST(CAST(hash_value as bigint) AS binary(8))`.
+>
+> Replace the `hash_value` placeholder with the actual `query_hash_s` or `query_plan_hash_s` numeric value.
+
 
 #### Intelligent Insights dataset
 

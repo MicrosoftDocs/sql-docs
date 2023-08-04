@@ -1681,9 +1681,9 @@ For additional data compression examples, see [Data Compression](../../relationa
 
 ### O. Create a table that uses XML compression
 
-**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
+**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi_md.md)].
 
-The following example creates a table that uses row compression.
+The following example creates a table that uses XML compression.
 
 ```sql
 CREATE TABLE dbo.T1

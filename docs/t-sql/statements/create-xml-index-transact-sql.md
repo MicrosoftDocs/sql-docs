@@ -251,7 +251,7 @@ For more information about XML indexes, see [XML Indexes &#40;SQL Server&#41;](.
 
 ### XML compression
 
-**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
+**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi_md.md)].
 
 - XML indexes don't inherit the compression property of the table. To compress indexes, you must explicitly enable XML compression on XML indexes.
 - Secondary XML indexes don't inherit the compression property of the Primary XML index.

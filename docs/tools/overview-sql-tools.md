@@ -69,5 +69,5 @@ Different databases you can use with these tools.
 - [SQL Server](/sql/sql-server/)
 - [Azure SQL Database](/azure/azure-sql/database/)
 - [Azure Database for PostgreSQL](/azure/postgresql/)
-- [Azure Database for MySQL](/azure/mysql/>)
+- [Azure Database for MySQL](/azure/mysql/)
 - [Azure Cosmos DB](/azure/cosmos-db/introduction)

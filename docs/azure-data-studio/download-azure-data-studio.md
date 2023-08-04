@@ -36,7 +36,7 @@ Azure Data Studio 1.45.1 is the latest general availability (GA) version.
 | | .rpm<sup>1</sup> | [64-bit](https://go.microsoft.com/fwlink/?linkid=2242640) |
 | macOS | .zip | [Universal](https://go.microsoft.com/fwlink/?linkid=2242850)&emsp;[Intel Chip](https://go.microsoft.com/fwlink/?linkid=2242553)&emsp;[Apple Silicon](https://go.microsoft.com/fwlink/?linkid=2242554) |
 
-<sup>1</sup> There is a known issue with install on RHEL, please see the [release notes](release-notes-azure-data-studio.md#known-issues-in-1451) for more details.
+<sup>1</sup> There is a known issue with install on RHEL. For more information see the [release notes](release-notes-azure-data-studio.md#known-issues-in-1451).
 
 If you have comments or suggestions or want to report a problem with downloading Azure Data Studio, submit an issue to our team on the [Azure Data Studio feedback page](https://github.com/microsoft/azuredatastudio/issues/).
 

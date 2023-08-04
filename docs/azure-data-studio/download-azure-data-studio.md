@@ -4,7 +4,7 @@ description: Download and install Azure Data Studio for Windows, macOS, or Linux
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan, randolphwest
-ms.date: 07/26/2023
+ms.date: 08/07/2023
 ms.service: azure-data-studio
 ms.topic: overview
 ms.custom: intro-overview
@@ -21,10 +21,10 @@ For more information about Azure Data Studio, visit [What is Azure Data Studio?]
 
 ## Download Azure Data Studio
 
-Azure Data Studio 1.45.0 is the latest general availability (GA) version.
+Azure Data Studio 1.45.1 is the latest general availability (GA) version.
 
-- Release number: 1.45.0
-- Release date: July 26, 2023
+- Release number: 1.45.1
+- Release date: August 07, 2023
 
 | Platform | Type | Download |
 | --- | --- | --- |
@@ -36,7 +36,7 @@ Azure Data Studio 1.45.0 is the latest general availability (GA) version.
 | | .rpm<sup>1</sup> | [64-bit](https://go.microsoft.com/fwlink/?linkid=2242640) |
 | macOS | .zip | [Universal](https://go.microsoft.com/fwlink/?linkid=2242850)&emsp;[Intel Chip](https://go.microsoft.com/fwlink/?linkid=2242553)&emsp;[Apple Silicon](https://go.microsoft.com/fwlink/?linkid=2242554) |
 
-<sup>1</sup> There is a known issue with install on RHEL, please see the [release notes](release-notes-azure-data-studio.md#known-issues-in-1450) for more details.
+<sup>1</sup> There is a known issue with install on RHEL, please see the [release notes](release-notes-azure-data-studio.md#known-issues-in-1451) for more details.
 
 If you have comments or suggestions or want to report a problem with downloading Azure Data Studio, submit an issue to our team on the [Azure Data Studio feedback page](https://github.com/microsoft/azuredatastudio/issues/).
 

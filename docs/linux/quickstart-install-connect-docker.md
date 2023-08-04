@@ -617,7 +617,7 @@ The following steps use the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-m
 1. Once inside the container, connect locally with **sqlcmd**, using its full path.
 
    ```bash
-   /opt/mssql-tools18/bin/sqlcmd -S localhost -U SA -P "<YourNewStrong@Passw0rd>"
+   /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "<YourNewStrong@Passw0rd>"
    ```
 
    > [!NOTE]  
@@ -626,7 +626,7 @@ The following steps use the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-m
    You can omit the password on the command-line to be prompted to enter it. For example:
 
    ```bash
-     /opt/mssql-tools18/bin/sqlcmd -S localhost -U SA
+     /opt/mssql-tools/bin/sqlcmd -S localhost -U SA
    ```
 
 1. If successful, you should get to a **sqlcmd** command prompt: `1>`.

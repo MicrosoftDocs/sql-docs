@@ -51,7 +51,7 @@ SQLRETURN SQLNativeSql(
  If *OutStatementText* is NULL, *TextLength2Ptr* will still return the total number of characters (excluding the null-termination character for character data) available to return in the buffer pointed to by *OutStatementText*.  
   
  *BufferLength*  
- [Input] Number of characters in the \**OutStatementText* buffer. If the value returned in *\*InStatementText* is a Unicode string (when calling **SQLNativeSqlW**), the *BufferLength* argument must be an even number.  
+ [Input] Number of characters in the \**OutStatementText* buffer. Past versions of this documentation mistakenly implied that this count of characters must be even if the value returned in *\*InStatementText* is a Unicode string (when calling **SQLNativeSqlW**). There is no such a restriction. For optimal interoperability, driver writers should expect any count of characters to be passed to this function, while application writers are recommended to always use an even count.  
   
  *TextLength2Ptr*  
  [Output] Pointer to a buffer in which to return the total number of characters (excluding null-termination) available to return in \**OutStatementText*. If the number of characters available to return is greater than or equal to *BufferLength*, the translated SQL string in \**OutStatementText* is truncated to *BufferLength* minus the length of a null-termination character.  

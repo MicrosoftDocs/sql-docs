@@ -89,7 +89,7 @@ The following software requirements apply to all installations:
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup installs the following software components required by the product:  
   
    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client    
-   - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup application support files  
+   - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup support files  
 
   
   

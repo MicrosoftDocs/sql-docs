@@ -104,7 +104,7 @@ Use the Quorum Configuration Wizard built into Failover Cluster Manager to confi
    2. (Required parameter) Access Key corresponding to the Storage Account.
        1. When creating for the first time, use Primary Access Key 
        2. When rotating the Primary Access Key, use Secondary Access Key
-   3. (Optional parameter) If you intend to use a different Azure service endpoint (for example the Microsoft Azure service in China), then update the endpoint server name.
+   3. (Optional parameter) If you intend to use a different Azure service endpoint (for example, Azure operated by 21Vianet), update the endpoint server name.
 
     ![Snapshot of the Cloud Witness configuration pane in the Cluster Quorum wizard](./media/hadr-create-quorum-windows-failover-cluster-how-to/cloud-witness-10.png)
       

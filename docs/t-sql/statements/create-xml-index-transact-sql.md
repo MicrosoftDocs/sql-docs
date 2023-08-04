@@ -282,6 +282,8 @@ GO
 
 ### B. Creating a primary XML index with XML compression
 
+**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi_md.md)].
+
 The following example creates a primary XML index on the `CatalogDescription` column in the `Production.ProductModel` table.
 
 ```sql
@@ -313,6 +315,8 @@ GO
 ```
 
 ### D. Creating a secondary XML index with XML compression
+
+**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi_md.md)].
 
 The following example creates a secondary XML index on the `CatalogDescription` column in the `Production.ProductModel` table.
 

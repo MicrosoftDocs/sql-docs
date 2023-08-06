@@ -44,10 +44,6 @@ The benefits of using private endpoints over a VNet-local or public endpoint inc
 - Avoiding address overlap: peering multiple virtual networks requires careful IP space allocation and can pose a problem when address spaces overlap.
 - Conserving IP address real estate: a private endpoint only consumes one IP address from its subnet's address space.
 
-## Known issues
-
-- Azure portal still shows the word "Preview" next to Private endpoint connections item in SQL Managed Instance's sidebar. This is incorrect; private endpoint connections for SQL Managed Instance are now generally available. The word "Preview" will be removed in an upcoming update.
-
 ## Limitations
 
 - Azure SQL Managed Instance requires the exact instance _hostname_ to appear in the connection string sent by the SQL client. Using the IP address of the private endpoint is not supported and will fail. To resolve this, configure your DNS server, or use a private DNS zone as described in [Set up domain name resolution for private endpoint](#set-up-domain-name-resolution-for-private-endpoint).

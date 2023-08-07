@@ -21,7 +21,7 @@ The intelligent query processing (IQP) feature family includes features with bro
 
 Watch this 6-minute video for an overview of intelligent query processing:
 
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Overview-Intelligent-Query-processing-in-SQL-Server-2019/player?WT.mc_id=dataexposed-c9-niner]
+> [!VIDEO https://learn.microsoft.com/shows/data-exposed/how-sql-is-getting-smarter-intelligent-query-processing-2017-to-today-data-exposed/player?WT.mc_id=dataexposed-c9-niner]
 
 For demos and sample code of intelligent query processing (IQP) features on GitHub, visit [https://aka.ms/IQPDemos](https://aka.ms/IQPDemos).
 

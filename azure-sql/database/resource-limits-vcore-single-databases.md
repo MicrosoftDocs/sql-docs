@@ -229,7 +229,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 ### <a id="gen5-hardware-part-1-2"></a>Hyperscale Standard-series (Gen5) compute generation (part 1 of 2)
 
-SLOs in the Hyperscale standard-series tier use the naming convention `HS_Gen5_` followed by the number of vCores. Here are the limits for the `HS_Gen5_2`, `HS_Gen5_4`, `HS_Gen5_6`, `HS_Gen5_8`, `HS_Gen5_10`, `HS_Gen5_12` and `HS_Gen5_14` SLOs:
+SLOs in the Hyperscale standard-series tier use the naming convention `HS_Gen5_` followed by the number of vCores. This table covers the following SLOs: `HS_Gen5_2`, `HS_Gen5_4`, `HS_Gen5_6`, `HS_Gen5_8`, `HS_Gen5_10`, `HS_Gen5_12` and `HS_Gen5_14`:
 
 | vCores | 2 | 4 | 6 | 8 | 10 | 12 | 14 |
 |:-|-:|-:|-:|-:|-:|-:|-:|
@@ -265,7 +265,7 @@ SLOs in the Hyperscale standard-series tier use the naming convention `HS_Gen5_`
 
 ### <a id="gen5-hardware-part-2-2"></a>Hyperscale Standard-series (Gen5) compute generation (part 2 of 2)
 
-SLOs in the Hyperscale standard-series tier use the naming convention `HS_Gen5_` followed by the number of vCores. Here are the limits for the `HS_Gen5_16`, `HS_Gen5_18`, `HS_Gen5_20`, `HS_Gen5_24`, `HS_Gen5_32`, `HS_Gen5_40` and `HS_Gen5_80` SLOs:
+SLOs in the Hyperscale standard-series tier use the naming convention `HS_Gen5_` followed by the number of vCores. This table covers the following SLOs: `HS_Gen5_16`, `HS_Gen5_18`, `HS_Gen5_20`, `HS_Gen5_24`, `HS_Gen5_32`, `HS_Gen5_40` and `HS_Gen5_80`:
 
 | vCores | 16 | 18 | 20 | 24 | 32 | 40 | 80 |
 |:-|-:|-:|-:|-:|-:|-:|-:|
@@ -302,7 +302,7 @@ SLOs in the Hyperscale standard-series tier use the naming convention `HS_Gen5_`
 ## Hyperscale - provisioned compute - DC-series
 ### Hyperscale DC-series (Gen5) compute generation (part 1 of 2)
 
-SLOs in the Hyperscale DC-series tier use the naming convention `HS_DC_` followed by the number of vCores. Here are the limits for the `HS_DC_2`, `HS_DC_4`, `HS_DC_6`, `HS_DC_8`, `HS_DC_10` and `HS_DC_12` SLOs:
+SLOs in the Hyperscale DC-series tier use the naming convention `HS_DC_` followed by the number of vCores. This table covers the following SLOs: `HS_DC_2`, `HS_DC_4`, `HS_DC_6`, `HS_DC_8`, `HS_DC_10` and `HS_DC_12`:
 
 | vCores | 2 | 4 | 6 | 8 | 10 | 12 |
 |:-|-:|-:|-:|-:|-:|-:|
@@ -340,7 +340,7 @@ SLOs in the Hyperscale DC-series tier use the naming convention `HS_DC_` followe
 
 ### Hyperscale DC-series (Gen5) compute generation (part 2 of 2)
 
-SLOs in the Hyperscale DC-series tier use the naming convention `HS_DC_` followed by the number of vCores. Here are the limits for the `HS_DC_14`, `HS_DC_16`, `HS_DC_18`, `HS_DC_20`, `HS_DC_32` and `HS_DC_40` SLOs:
+SLOs in the Hyperscale DC-series tier use the naming convention `HS_DC_` followed by the number of vCores. This table covers the following SLOs: `HS_DC_14`, `HS_DC_16`, `HS_DC_18`, `HS_DC_20`, `HS_DC_32` and `HS_DC_40`:
 
 | vCores | 14 | 16 | 18 | 20 | 32 | 40 |
 |:-|-:|-:|-:|-:|-:|-:|
@@ -378,7 +378,7 @@ SLOs in the Hyperscale DC-series tier use the naming convention `HS_DC_` followe
 
 ### Hyperscale - Premium-series (part 1 of 3)
 
-SLOs in the Hyperscale premium-series tier use the naming convention `HS_PRMS_` followed by the number of vCores. Here are the limits for the `HS_PRMS_2`, `HS_PRMS_4`, `HS_PRMS_6`, `HS_PRMS_8` and `HS_PRMS_10` SLOs:
+SLOs in the Hyperscale premium-series tier use the naming convention `HS_PRMS_` followed by the number of vCores. This table covers the following SLOs: `HS_PRMS_2`, `HS_PRMS_4`, `HS_PRMS_6`, `HS_PRMS_8` and `HS_PRMS_10`:
 
 | vCores | 2 | 4 | 6 | 8 | 10 |
 |:-|-:|-:|-:|-:|-:|
@@ -415,7 +415,7 @@ SLOs in the Hyperscale premium-series tier use the naming convention `HS_PRMS_` 
 
 ### Hyperscale - Premium-series (part 2 of 3)
 
-SLOs in the Hyperscale premium-series tier use the naming convention `HS_PRMS_` followed by the number of vCores. Here are the limits for the `HS_PRMS_12`, `HS_PRMS_14`, `HS_PRMS_16`, `HS_PRMS_18` and `HS_PRMS_20` SLOs:
+SLOs in the Hyperscale premium-series tier use the naming convention `HS_PRMS_` followed by the number of vCores. This table covers the following SLOs: `HS_PRMS_12`, `HS_PRMS_14`, `HS_PRMS_16`, `HS_PRMS_18` and `HS_PRMS_20`:
 
 | vCores | 12 | 14 | 16 | 18 | 20 |
 |:-|-:|-:|-:|-:|-:|
@@ -451,7 +451,7 @@ SLOs in the Hyperscale premium-series tier use the naming convention `HS_PRMS_` 
 
 ### Hyperscale - Premium-series (part 3 of 3)
 
-SLOs in the Hyperscale premium-series tier use the naming convention `HS_PRMS_` followed by the number of vCores. Here are the limits for the `HS_PRMS_24`, `HS_PRMS_32`, `HS_PRMS_40`, `HS_PRMS_64`, `HS_PRMS_80` and `HS_PRMS_128` SLOs:
+SLOs in the Hyperscale premium-series tier use the naming convention `HS_PRMS_` followed by the number of vCores. This table covers the following SLOs: `HS_PRMS_24`, `HS_PRMS_32`, `HS_PRMS_40`, `HS_PRMS_64`, `HS_PRMS_80` and `HS_PRMS_128`:
 
 | vCores | 24 | 32 | 40 | 64 | 80 | 128 |
 |:-|-:|-:|-:|-:|-:|-:|
@@ -489,7 +489,7 @@ SLOs in the Hyperscale premium-series tier use the naming convention `HS_PRMS_` 
 
 ### Hyperscale - Premium-series memory optimized (part 1 of 3)
 
-SLOs in the Hyperscale Premium-series memory optimized tier use the naming convention `HS_MOPRMS_` followed by the number of vCores. Here are the limits for the `HS_MOPRMS_2`, `HS_MOPRMS_4`, `HS_MOPRMS_6`, `HS_MOPRMS_8` and `HS_MOPRMS_10` SLOs:
+SLOs in the Hyperscale Premium-series memory optimized tier use the naming convention `HS_MOPRMS_` followed by the number of vCores. This table covers the following SLOs: `HS_MOPRMS_2`, `HS_MOPRMS_4`, `HS_MOPRMS_6`, `HS_MOPRMS_8` and `HS_MOPRMS_10`:
 
 | vCores | 2 | 4 | 6 | 8 | 10 |
 |:-|-:|-:|-:|-:|-:|
@@ -526,7 +526,7 @@ SLOs in the Hyperscale Premium-series memory optimized tier use the naming conve
 
 ### Hyperscale - Premium-series memory optimized (part 2 of 3)
 
-SLOs in the Hyperscale Premium-series memory optimized tier use the naming convention `HS_MOPRMS_` followed by the number of vCores. Here are the limits for the `HS_MOPRMS_12`, `HS_MOPRMS_14`, `HS_MOPRMS_16`, `HS_MOPRMS_18` and `HS_MOPRMS_20` SLOs:
+SLOs in the Hyperscale Premium-series memory optimized tier use the naming convention `HS_MOPRMS_` followed by the number of vCores. This table covers the following SLOs: `HS_MOPRMS_12`, `HS_MOPRMS_14`, `HS_MOPRMS_16`, `HS_MOPRMS_18` and `HS_MOPRMS_20`:
 
 | vCores | 12 | 14 | 16 | 18 | 20 |
 |:-|-:|-:|-:|-:|-:|
@@ -563,7 +563,7 @@ SLOs in the Hyperscale Premium-series memory optimized tier use the naming conve
 
 ### Hyperscale - Premium-series memory optimized (part 3 of 3)
 
-SLOs in the Hyperscale Premium-series memory optimized tier use the naming convention `HS_MOPRMS_` followed by the number of vCores. Here are the limits for the `HS_MOPRMS_24`, `HS_MOPRMS_32`, `HS_MOPRMS_40`, `HS_MOPRMS_64` and `HS_MOPRMS_128` SLOs:
+SLOs in the Hyperscale Premium-series memory optimized tier use the naming convention `HS_MOPRMS_` followed by the number of vCores. This table covers the following SLOs: `HS_MOPRMS_24`, `HS_MOPRMS_32`, `HS_MOPRMS_40`, `HS_MOPRMS_64` and `HS_MOPRMS_128`:
 
 | vCores | 24 | 32 | 40 | 64 | 80 |
 |:-|-:|-:|-:|-:|-:|
@@ -601,7 +601,7 @@ SLOs in the Hyperscale Premium-series memory optimized tier use the naming conve
 
 ### <a id="gen5-hardware-part-1-3"></a>General Purpose Standard-series (Gen5) compute (part 1 of 3)
 
-SLOs in the General Purpose Standard-series tier use the naming convention `GP_Gen5_` followed by the number of vCores. Here are the limits for the `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `GP_Gen5_8` and `GP_Gen5_10` SLOs:
+SLOs in the General Purpose Standard-series tier use the naming convention `GP_Gen5_` followed by the number of vCores. This table covers the following SLOs: `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `GP_Gen5_8` and `GP_Gen5_10`:
 
 | vCores | 2 | 4 | 6 | 8 | 10 |
 |:-|-:|-:|-:|-:|-:|
@@ -635,7 +635,7 @@ SLOs in the General Purpose Standard-series tier use the naming convention `GP_G
 
 ### <a id="gen5-hardware-part-2-3"></a>General Purpose Standard-series (Gen5) compute (part 2 of 3)
 
-SLOs in the General Purpose Standard-series tier use the naming convention `GP_Gen5_` followed by the number of vCores. Here are the limits for the `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`, `GP_Gen5_18` and `GP_Gen5_20` SLOs:
+SLOs in the General Purpose Standard-series tier use the naming convention `GP_Gen5_` followed by the number of vCores. This table covers the following SLOs: `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`, `GP_Gen5_18` and `GP_Gen5_20`:
 
 | vCores | 12 | 14 | 16 | 18 | 20 |
 |:-|-:|-:|-:|-:|-:|
@@ -669,7 +669,7 @@ SLOs in the General Purpose Standard-series tier use the naming convention `GP_G
 
 ### <a id="gen5-hardware-part-3-3"></a>General Purpose Standard-series (Gen5) compute (part 3 of 3)
 
-SLOs in the General Purpose Standard-series tier use the naming convention `GP_Gen5_` followed by the number of vCores. Here are the limits for the `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`, `GP_Gen5_80` and `GP_Gen5_128` SLOs:
+SLOs in the General Purpose Standard-series tier use the naming convention `GP_Gen5_` followed by the number of vCores. This table covers the following SLOs: `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`, `GP_Gen5_80` and `GP_Gen5_128`:
 
 | vCores | 24 | 32 | 40 | 80 | 128 |
 |:-|-:|-:|-:|-:|-:|
@@ -704,7 +704,7 @@ SLOs in the General Purpose Standard-series tier use the naming convention `GP_G
 
 ### General Purpose Fsv2-series hardware (part 1 of 2)
 
-SLOs in the General Purpose Fsv2-series tier use the naming convention `GP_Fsv2_` followed by the number of vCores. Here are the limits for the `GP_Fsv2_8`, `GP_Fsv2_10`, `GP_Fsv2_12`, `GP_Fsv2_14` and `GP_Fsv2_16` SLOs:
+SLOs in the General Purpose Fsv2-series tier use the naming convention `GP_Fsv2_` followed by the number of vCores. This table covers the following SLOs: `GP_Fsv2_8`, `GP_Fsv2_10`, `GP_Fsv2_12`, `GP_Fsv2_14` and `GP_Fsv2_16`:
 
 | vCores | 8 | 10 | 12 | 14 | 16 |
 |:-|-:|-:|-:|-:|-:|
@@ -737,7 +737,7 @@ SLOs in the General Purpose Fsv2-series tier use the naming convention `GP_Fsv2_
 
 ### General Purpose Fsv2-series hardware (part 2 of 2)
 
-SLOs in the General Purpose Fsv2-series tier use the naming convention `GP_Fsv2_` followed by the number of vCores. Here are the limits for the `GP_Fsv2_18`, `GP_Fsv2_20`, `GP_Fsv2_24`, `GP_Fsv2_32`, `GP_Fsv2_36` and `GP_Fsv2_72` SLOs:
+SLOs in the General Purpose Fsv2-series tier use the naming convention `GP_Fsv2_` followed by the number of vCores. This table covers the following SLOs: `GP_Fsv2_18`, `GP_Fsv2_20`, `GP_Fsv2_24`, `GP_Fsv2_32`, `GP_Fsv2_36` and `GP_Fsv2_72`:
 
 | vCores | 18 | 20 | 24 | 32 | 36 | 72 |
 |:-|-:|-:|-:|-:|-:|-:|
@@ -771,7 +771,7 @@ SLOs in the General Purpose Fsv2-series tier use the naming convention `GP_Fsv2_
 ## General Purpose - provisioned compute - DC-series
 ### General Purpose DC-series hardware (part 1 of 2)
 
-SLOs in the General Purpose DC-series tier use the naming convention `GP_DC_` followed by the number of vCores. Here are the limits for the `GP_DC_2`, `GP_DC_4`, `GP_DC_6`, `GP_DC_8`, `GP_DC_10` and `GP_DC_12` SLOs:
+SLOs in the General Purpose DC-series tier use the naming convention `GP_DC_` followed by the number of vCores. This table covers the following SLOs: `GP_DC_2`, `GP_DC_4`, `GP_DC_6`, `GP_DC_8`, `GP_DC_10` and `GP_DC_12`:
 
 | vCores | 2 | 4 | 6 | 8 | 10<sup>4</sup> | 12<sup>4</sup> |
 |:-|-:|-:|-:|-:|-:|-:|
@@ -806,7 +806,7 @@ SLOs in the General Purpose DC-series tier use the naming convention `GP_DC_` fo
 
 ### General Purpose DC-series hardware (part 2 of 2)
 
-SLOs in the General Purpose DC-series tier use the naming convention `GP_DC_` followed by the number of vCores. Here are the limits for the `GP_DC_14`, `GP_DC_16`, `GP_DC_18`, `GP_DC_20`, `GP_DC_32` and `GP_DC_40` SLOs:
+SLOs in the General Purpose DC-series tier use the naming convention `GP_DC_` followed by the number of vCores. This table covers the following SLOs: `GP_DC_14`, `GP_DC_16`, `GP_DC_18`, `GP_DC_20`, `GP_DC_32` and `GP_DC_40`:
 
 | vCores | 14<sup>4</sup> | 16<sup>4</sup> | 18<sup>4</sup> | 20<sup>4</sup> | 32<sup>4</sup> | 40<sup>4</sup> |
 |:-|-:|-:|-:|-:|-:|-:|
@@ -843,7 +843,7 @@ SLOs in the General Purpose DC-series tier use the naming convention `GP_DC_` fo
 
 ### <a id="gen5-hardware-part-1-4"></a>Business Critical Standard-series (Gen5) compute generation (part 1 of 3)
 
-SLOs in the Business Critical Standard-series tier use the naming convention `BC_Gen5_` followed by the number of vCores. Here are the limits for the `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8` and `BC_Gen5_10` SLOs:
+SLOs in the Business Critical Standard-series tier use the naming convention `BC_Gen5_` followed by the number of vCores. This table covers the following SLOs: `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8` and `BC_Gen5_10`:
 
 | vCores | 2 | 4 | 6 | 8 | 10 |
 |:-|-:|-:|-:|-:|-:|--|
@@ -878,7 +878,7 @@ SLOs in the Business Critical Standard-series tier use the naming convention `BC
 
 ### <a id="gen5-hardware-part-2-4"></a>Business Critical Standard-series (Gen5) compute generation (part 2 of 3)
 
-SLOs in the Business Critical Standard-series tier use the naming convention `BC_Gen5_` followed by the number of vCores. Here are the limits for the `BC_Gen5_12`, `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18` and `BC_Gen5_20` SLOs:
+SLOs in the Business Critical Standard-series tier use the naming convention `BC_Gen5_` followed by the number of vCores. This table covers the following SLOs: `BC_Gen5_12`, `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18` and `BC_Gen5_20`:
 
 | vCores | 12 | 14 | 16 | 18 | 20 |
 |:-|-:|-:|-:|-:|-:|
@@ -912,7 +912,7 @@ SLOs in the Business Critical Standard-series tier use the naming convention `BC
 
 ### <a id="gen5-hardware-part-2-4"></a>Business Critical Standard-series (Gen5) compute generation (part 3 of 3)
 
-SLOs in the Business Critical Standard-series tier use the naming convention `BC_Gen5_` followed by the number of vCores. Here are the limits for the `BC_Gen5_24`, `BC_Gen5_32`, `BC_Gen5_40`, `BC_Gen5_80` and `BC_Gen5_128` SLOs:
+SLOs in the Business Critical Standard-series tier use the naming convention `BC_Gen5_` followed by the number of vCores. This table covers the following SLOs: `BC_Gen5_24`, `BC_Gen5_32`, `BC_Gen5_40`, `BC_Gen5_80` and `BC_Gen5_128`:
 
 | vCores | 24 | 32 | 40 | 80 | 128 |
 |:-|-:|-:|-:|-:|-:|--|
@@ -950,7 +950,7 @@ For important information about M-series hardware availability, see [Azure offer
 
 ### Business Critical M-series hardware (part 1 of 2)
 
-SLOs in the Business Critical M-series tier use the naming convention `BC_M_` followed by the number of vCores. Here are the limits for the `BC_M_8`, `BC_M_10`, `BC_M_12`, `BC_M_14`, `BC_M_16` and `BC_M_18` SLOs:
+SLOs in the Business Critical M-series tier use the naming convention `BC_M_` followed by the number of vCores. This table covers the following SLOs: `BC_M_8`, `BC_M_10`, `BC_M_12`, `BC_M_14`, `BC_M_16` and `BC_M_18`:
 
 | vCores | 8 | 10 | 12 | 14 | 16 | 18 |
 |:-|-:|-:|-:|-:|-:|-:|
@@ -984,7 +984,7 @@ SLOs in the Business Critical M-series tier use the naming convention `BC_M_` fo
 
 ### Business Critical M-series hardware (part 2 of 2)
 
-SLOs in the Business Critical M-series tier use the naming convention `BC_M_` followed by the number of vCores. Here are the limits for the `BC_M_20`, `BC_M_24`, `BC_M_32`, `BC_M_64` and `BC_M_128` SLOs:
+SLOs in the Business Critical M-series tier use the naming convention `BC_M_` followed by the number of vCores. This table covers the following SLOs: `BC_M_20`, `BC_M_24`, `BC_M_32`, `BC_M_64` and `BC_M_128`:
 
 | vCores | 20 | 24 | 32 | 64 | 128 |
 |:-|-:|-:|-:|-:|-:|
@@ -1019,7 +1019,7 @@ SLOs in the Business Critical M-series tier use the naming convention `BC_M_` fo
 ## Business Critical - provisioned compute - DC-series
 ### Business Critical DC-series hardware (part 1 of 2)
 
-SLOs in the Business Critical DC-series tier use the naming convention `BC_DC_` followed by the number of vCores. Here are the limits for the `BC_DC_2`, `BC_DC_4`, `BC_DC_6`, `BC_DC_8`, `BC_DC_10` and `BC_DC_12` SLOs:
+SLOs in the Business Critical DC-series tier use the naming convention `BC_DC_` followed by the number of vCores. This table covers the following SLOs: `BC_DC_2`, `BC_DC_4`, `BC_DC_6`, `BC_DC_8`, `BC_DC_10` and `BC_DC_12`:
 
 | vCores | 2 | 4 | 6 | 8 | 10<sup>4</sup> | 12<sup>4</sup> |
 |:-|-:|-:|-:|-:|-:|-:|
@@ -1055,7 +1055,7 @@ SLOs in the Business Critical DC-series tier use the naming convention `BC_DC_` 
 
 ### Business Critical DC-series hardware (part 2 of 2)
 
-SLOs in the Business Critical DC-series tier use the naming convention `BC_DC_` followed by the number of vCores. Here are the limits for the `BC_DC_14`, `BC_DC_16`, `BC_DC_18`, `BC_DC_20`, `BC_DC_32` and `BC_DC_40` SLOs:
+SLOs in the Business Critical DC-series tier use the naming convention `BC_DC_` followed by the number of vCores. This table covers the following SLOs: `BC_DC_14`, `BC_DC_16`, `BC_DC_18`, `BC_DC_20`, `BC_DC_32` and `BC_DC_40`:
 
 | vCores | 14<sup>4</sup> | 16<sup>4</sup> | 18<sup>4</sup> | 20<sup>4</sup> | 32<sup>4</sup> | 40<sup>4</sup> |
 |:-|-:|-:|-:|-:|-:|-:|

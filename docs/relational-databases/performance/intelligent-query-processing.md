@@ -4,7 +4,7 @@ description: "Intelligent query processing features to improve query performance
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 ms.reviewer: "wiassaf"
-ms.date: 06/08/2023
+ms.date: 08/07/2023
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
@@ -19,9 +19,9 @@ The intelligent query processing (IQP) feature family includes features with bro
 
 :::image type="content" source="./media/iqp-feature-family.svg" alt-text="A diagram of the Intelligent Query Processing family of features and when they were first introduced to SQL Server.":::
 
-Watch this 6-minute video for an overview of intelligent query processing:
+Watch this video for an overview of intelligent query processing:
 
-> [!VIDEO https://learn.microsoft.com/shows/data-exposed/how-sql-is-getting-smarter-intelligent-query-processing-2017-to-today-data-exposed/player?WT.mc_id=dataexposed-c9-niner]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?show=data-exposed&ep=how-sql-is-getting-smarter-intelligent-query-processing-2017-to-today-data-exposed]
 
 For demos and sample code of intelligent query processing (IQP) features on GitHub, visit [https://aka.ms/IQPDemos](https://aka.ms/IQPDemos).
 

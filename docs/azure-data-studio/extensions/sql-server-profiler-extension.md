@@ -48,7 +48,7 @@ The SQL Server Profiler extension (preview) provides a simple SQL Server tracing
 
 1. To view an XEL file that you have saved locally, open the Command Palette using **Ctrl/CMD + Shift + P** and then type **Profiler: Open XEL File** and select the command.
 2. Browse to the saved XEL file and select Open.
-3. The file will open the viewer. 
+3. The file will open in the viewer. 
 
 ## Next steps
 

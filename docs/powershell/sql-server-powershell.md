@@ -39,7 +39,7 @@ To ship SQL PowerShell updates, we had to change the identity of the SQL PowerSh
 
 If you have any PowerShell scripts that run `Import-Module -Name SQLPS`, and you want to take advantage of the new provider functionality and new cmdlets, you must change them to `Import-Module -Name SqlServer`. The new module is installed to `%ProgramFiles%\WindowsPowerShell\Modules\SqlServer` folder. As such, you don't have to update the $env:PSModulePath variable. If you have scripts that use a third-party or community version of a module named **SqlServer**, use the Prefix parameter to avoid name collisions.
 
-It is recommended to start your script with *Import-Module SQLServer* to avoid side-by-side issues if the SQLPS module is installed on the same machine.
+It's recommended to start your script with *Import-Module SQLServer* to avoid side-by-side issues if the SQLPS module is installed on the same machine.
 
 This section applies to scripts executed from PowerShell and not the SQL Agent. The new module can be used with SQL Agent job steps using [#NOSQLPS](#sql-server-agent).
 
@@ -69,7 +69,7 @@ Query expressions are strings that use syntax similar to XPath to specify a set 
 
 ## SQL Server Agent
 
-There's no change to the module used by SQL Server Agent. As such, SQL Server Agent jobs, which have PowerShell type job steps use the SQLPS module. For more information, see [How to run PowerShell with SQL Server Agent](run-windows-powershell-steps-in-sql-server-agent.md). However, starting with SQL Server 2019, you can disable SQLPS. To do so, on the first line of a job step of the type PowerShell you can add `#NOSQLPS`, which stops the SQL Agent from auto-loading the SQLPS module. When you do this, your SQL Agent Job runs the version of PowerShell installed on the machine, and then you can use any other PowerShell module you like.
+There's no change to the module used by SQL Server Agent. As such, SQL Server Agent jobs, which have PowerShell type job steps use the SQLPS module. For more information, see [How to run PowerShell with SQL Server Agent](run-windows-powershell-steps-in-sql-server-agent.md). However, starting with SQL Server 2019, you can disable SQLPS. To do so, on the first line of a job step of the type PowerShell you can add `#NOSQLPS`, which stops the SQL Agent from autoloading the SQLPS module. When you do this, your SQL Agent Job runs the version of PowerShell installed on the machine, and then you can use any other PowerShell module you like.
 
 ### Troubleshoot SQLPS
 
@@ -83,7 +83,7 @@ The SQLPS module must be available at the environment variable PSModulePath.  Un
  $env:PSModulePath -split ";"
 ```
 
-If the path is set, you will see an entry similar to `C:\Program Files (x86)\Microsoft SQL Server\130\Tools\PowerShell\Modules`.  If the path is not set, locate the SQLPS folder on your server and add it to the environment variable value either through PowerShell or in *System Properties>Advanced>Environment Variables*.
+If the path is set, you'll see an entry similar to `C:\Program Files (x86)\Microsoft SQL Server\130\Tools\PowerShell\Modules`.  If the path isn't set, locate the SQLPS folder on your server and add it to the environment variable value either through PowerShell or in *System Properties>Advanced>Environment Variables*.
 
 ### SQLServer module with SQL Agent
 

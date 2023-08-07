@@ -149,7 +149,7 @@ To install the **mssql-server-is** package on Ubuntu, follow these steps:
 1. Import the public repository GPG keys.
 
    ```bash
-   sudo wget https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
+   curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
    ```
 
 1. Register the SQL Server Ubuntu repository.
@@ -185,7 +185,7 @@ To install the **mssql-server-is** package on Ubuntu, follow these steps:
 1. Import the public repository GPG keys.
 
    ```bash
-   sudo wget https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
+   curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
    ```
 
 1. Register the SQL Server Ubuntu repository.
@@ -221,7 +221,7 @@ To install the **mssql-server-is** package on Ubuntu, follow these steps:
 1. Import the public repository GPG keys.
 
    ```bash
-   sudo wget https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
+   curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
    ```
 
 1. Register the SQL Server Ubuntu repository.

@@ -123,7 +123,7 @@ To configure [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Ubunt
 1. Import the public repository GPG keys:
 
    ```bash
-   sudo wget https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
+   curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
    ```
 
 1. Register the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Ubuntu repository:
@@ -165,7 +165,7 @@ To configure [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Ubunt
 1. Import the public repository GPG keys:
 
    ```bash
-   sudo wget https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
+   curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
    ```
 
 1. Register the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Ubuntu repository:
@@ -207,7 +207,7 @@ To configure [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Ubunt
 1. Import the public repository GPG keys:
 
    ```bash
-   sudo wget https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
+   curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
    ```
 
 1. Register the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Ubuntu repository:

@@ -47,9 +47,9 @@ The following table lists the initial configuration values of the `tempdb` data 
 
 | File | Logical name | Physical name | Initial size | File growth |
 | --- | --- | --- | --- | --- |
-| Primary data | tempdev | tempdb.mdf | 8 megabytes | Autogrow by 64 MB until the disk is full |
-| Secondary data files | temp# | tempdb_mssql_#.ndf | 8 megabytes | Autogrow by 64 MB until the disk is full |
-| Log | templog | templog.ldf | 8 megabytes | Autogrow by 64 megabytes to a maximum of 2 terabytes |
+| Primary data | `tempdev` | `tempdb.mdf` | 8 megabytes | Autogrow by 64 MB until the disk is full |
+| Secondary data files | `temp#` | `tempdb_mssql_#.ndf` | 8 megabytes | Autogrow by 64 MB until the disk is full |
+| Log | `templog` | `templog.ldf` | 8 megabytes | Autogrow by 64 megabytes to a maximum of 2 terabytes |
 
 The number of secondary data files depends on the number of (logical) processors on the machine. As a general rule, if the number of logical processors is less than or equal to eight, use the same number of data files as logical processors. If the number of logical processors is greater than eight, use eight data files. Then if contention continues, increase the number of data files by multiples of four until the contention decreases to acceptable levels, or make changes to the workload/code.
 
@@ -156,7 +156,7 @@ Preallocate space for all `tempdb` files by setting the file size to a value lar
 
 Data files should be of equal size within each [filegroup](../../relational-databases/databases/database-files-and-filegroups.md#filegroups), because [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses a proportional-fill algorithm that favors allocations in files with more free space. Dividing `tempdb` into multiple data files of equal size provides a high degree of parallel efficiency in operations that use `tempdb`.
 
-Set the file growth increment to a reasonable size and set it to the same increment in all data files, to prevent the `tempdb` database files from growing by too small a value. If the file growth is too small compared to the amount of data that's being written to `tempdb`, `tempdb` might have to constantly expand. That will affect performance.
+Set the file growth increment to a reasonable size and set it to the same increment in all data files, to prevent the `tempdb` database files from growing by too small a value. If the file growth is too small compared to the amount of data that's being written to `tempdb`, `tempdb` might have to frequently expand via autogrowth events. Autogrowth events negatively affect performance.
 
 To check current size and growth parameters for `tempdb`, use the following query:
 
@@ -189,7 +189,7 @@ Put the `tempdb` database on a fast I/O subsystem. Use disk striping if there ar
 Put the `tempdb` database on disks that differ from the disks that user databases use.
 
 > [!NOTE]
-> Even though the database option `DELAYED_DURABILITY` is set to DISABLED for `tempdb`, SQL Server by default uses [lazy commits](../logs/control-transaction-durability.md) to flush log changes to disk, since `tempdb` is created at startup and doesn't need to run the recovery process.
+> Even though the database option `DELAYED_DURABILITY` is set to DISABLED for `tempdb`, SQL Server uses [lazy commits](../logs/control-transaction-durability.md) to flush `tempdb` log changes to disk, since `tempdb` is created at startup and doesn't need to run the recovery process.
 
 ## Performance improvements in tempdb for SQL Server
 
@@ -202,7 +202,7 @@ Starting with [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)], `tempdb` pe
 - When there are multiple `tempdb` data files, all files autogrow at the same time and by the same amount, depending on growth settings. [Trace flag 1117](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) is no longer required.
 - All allocations in `tempdb` use uniform extents. [Trace flag 1118](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) is no longer required.
 - For the primary filegroup, the `AUTOGROW_ALL_FILES` property is turned on and the property can't be modified.
-- Starting in [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)], SQL Server does not use the `FILE_FLAG_WRITE_THROUGH` option when opening files for `tempdb` to allow for maximum disk throughput. Since `tempdb` is recreated on startup of SQL Server, these options are not needed as they are for other system databases and user databases for data consistency.
+- Starting in [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)], SQL Server does not use the `FILE_FLAG_WRITE_THROUGH` option when opening files for `tempdb` to allow for maximum disk throughput. Since `tempdb` is recreated on startup of SQL Server, these options are not needed as they are for other system databases and user databases for data consistency. For more information on `FILE_FLAG_WRITE_THROUGH`, see [Logging and data storage algorithms that extend data reliability in SQL Server](/troubleshoot/sql/database-engine/database-file-operations/logging-data-storage-algorithms#performance-impacts).
 
 For more information on performance improvements in `tempdb`, see the blog article [TEMPDB - Files and Trace Flags and Updates, Oh My!](/archive/blogs/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my).
 
@@ -249,7 +249,7 @@ This change also requires a restart to take effect, even if memory-optimized `te
 
 - Toggling the feature on and off is not dynamic. Because of the intrinsic changes that need to be made to the structure of `tempdb`, a restart is required to either enable or disable the feature.
 
-- A single transaction is not allowed to access memory-optimized tables in more than one database. Any transactions that involve a memory-optimized table in a user database won't be able to access `tempdb` system views in the same transaction. If you try to access `tempdb` system views in the same transaction as a memory-optimized table in a user database, you'll receive the following error:
+- A single transaction is not allowed to access memory-optimized tables in more than one database. Any transactions that involve a memory-optimized table in a user database won't be able to access `tempdb` system views in the same transaction. If you try to access `tempdb` system views in the same transaction as a memory-optimized table in a user database, you receive the following error:
 
   ```output
   A user transaction that accesses memory optimized tables or natively compiled modules cannot access more than one user database or databases model and msdb, and it cannot write to master.
@@ -269,7 +269,7 @@ This change also requires a restart to take effect, even if memory-optimized `te
   COMMIT TRAN;
   ```
 
-- Queries against memory-optimized tables don't support locking and isolation hints, so queries against memory-optimized `tempdb` catalog views won't honor locking and isolation hints. As with other system catalog views in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], all transactions against system views will be in `READ COMMITTED` (or in this case, `READ COMMITTED SNAPSHOT`) isolation.
+- Queries against memory-optimized tables don't support locking and isolation hints, so queries against memory-optimized `tempdb` catalog views won't honor locking and isolation hints. As with other system catalog views in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], all transactions against system views are in `READ COMMITTED` (or in this case, `READ COMMITTED SNAPSHOT`) isolation.
 
 - [Columnstore indexes](../indexes/columnstore-indexes-overview.md) can't be created on temporary tables when memory-optimized `tempdb` metadata is enabled.
 

@@ -4,7 +4,7 @@ description: This article provides details about the configuration and use of th
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 04/05/2023
+ms.date: 08/07/2023
 ms.service: sql
 ms.topic: conceptual
 ms.custom: P360
@@ -101,7 +101,7 @@ For a description of these database options, see [ALTER DATABASE SET Options (Tr
 
 ## tempdb in Azure SQL
 
-The behavior of `tempdb` in Azure SQL Database differs from the behavior SQL Server, Azure SQL Managed Instance, and SQL Server on Azure VMs.
+The behavior of `tempdb` in Azure SQL Database differs from the behavior SQL Server, Azure SQL Managed Instance, and SQL Server on Azure VMs. 
 
 ### tempdb in SQL Database
 
@@ -116,7 +116,9 @@ To learn more about `tempdb` sizes in Azure SQL Database, review:
 
 ### tempdb in SQL Managed Instance
 
-[Azure SQL Managed Instance](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview) supports temporary objects in the same way as SQL Server, where all global temporary tables and global temporary stored procedures are accessible by all user sessions within the same managed instance. Likewise, all system databases are accessible.
+Azure SQL Managed Instance supports temporary objects in the same way as SQL Server, where all global temporary tables and global temporary stored procedures are accessible by all user sessions within the same managed instance. Likewise, all system databases are accessible.
+
+For more information on configuring `tempdb` settings in Azure SQL Managed Instance, see [Configure tempdb settings for Azure SQL Managed Instance](/azure/azure-sql/managed-instance/tempdb-configure?view=azuresql-mi&preserve-view=true).
 
 To learn more about `tempdb` sizes in Azure SQL Managed Instance, review [resource limits](/azure/azure-sql/managed-instance/resource-limits).
 
@@ -186,9 +188,12 @@ Put the `tempdb` database on a fast I/O subsystem. Use disk striping if there ar
 
 Put the `tempdb` database on disks that differ from the disks that user databases use.
 
+> [!NOTE]
+> Even though the database option `DELAYED_DURABILITY` is set to DISABLED for `tempdb`, SQL Server by default uses [lazy commits](../logs/control-transaction-durability.md) to flush log changes to disk, since `tempdb` is created at startup and doesn't need to run the recovery process.
+
 ## Performance improvements in tempdb for SQL Server
 
-Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], `tempdb` performance is further optimized in the following ways:
+Starting with [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)], `tempdb` performance is further optimized in the following ways:
 
 - Temporary tables and table variables are cached. Caching allows operations that drop and create the temporary objects to run very quickly. Caching also reduces page allocation and metadata contention.
 - The allocation page latching protocol is improved to reduce the number of `UP` (update) latches that are used.
@@ -197,6 +202,7 @@ Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], `tempdb` per
 - When there are multiple `tempdb` data files, all files autogrow at the same time and by the same amount, depending on growth settings. [Trace flag 1117](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) is no longer required.
 - All allocations in `tempdb` use uniform extents. [Trace flag 1118](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) is no longer required.
 - For the primary filegroup, the `AUTOGROW_ALL_FILES` property is turned on and the property can't be modified.
+- Starting in [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)], SQL Server does not use the `FILE_FLAG_WRITE_THROUGH` option when opening files for `tempdb` to allow for maximum disk throughput. Since `tempdb` is recreated on startup of SQL Server, these options are not needed as they are for other system databases and user databases for data consistency.
 
 For more information on performance improvements in `tempdb`, see the blog article [TEMPDB - Files and Trace Flags and Updates, Oh My!](/archive/blogs/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my).
 
@@ -276,16 +282,20 @@ This change also requires a restart to take effect, even if memory-optimized `te
 
 ## Capacity planning for tempdb in SQL Server
 
-Determining the appropriate size for `tempdb` in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] production environment depends on many factors. As described earlier, these factors include the existing workload and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features that are used. We recommend that you analyze the existing workload by performing the following tasks in a SQL Server test environment:
+Determining the appropriate size for `tempdb` in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] production environment depends on many factors. As described earlier, these factors include the existing workload and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features that are used. 
 
-- Set autogrow on for `tempdb`.
+We recommend that you analyze the existing workload by performing the following tasks in a SQL Server test environment:
+
+- Set [autogrow on](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md) for `tempdb`.
 - Run individual queries or workload trace files and monitor `tempdb` space use.
 - Execute index maintenance operations such as rebuilding indexes, and monitor `tempdb` space.
 - Use the space-use values from the previous steps to predict your total workload usage. Adjust this value for projected concurrent activity, and then set the size of `tempdb` accordingly.
 
 ## <a id="monitoring-tempdb-use"></a> Monitor tempdb use
 
-Running out of disk space in `tempdb` can cause significant disruptions in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] production environment. It can also prevent applications that are running from completing operations. You can use the [sys.dm_db_file_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md) dynamic management view to monitor the disk space that's used in the `tempdb` files:
+Running out of disk space in `tempdb` can cause significant disruptions in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] production environment. It can also prevent applications that are running from completing operations. You can use the [sys.dm_db_file_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md) dynamic management view to monitor the disk space that's used in the `tempdb` files.
+
+For example, the following four sample scripts find the amount of free space in `tempdb`, the amount of space used by the version store, the amount of space used by internal objects, and amount of space used by user objects:
 
 ```sql
  -- Determining the amount of free space in tempdb
@@ -311,6 +321,8 @@ FROM tempdb.sys.dm_db_file_space_usage;
 
 To monitor the page allocation or deallocation activity in `tempdb` at the session or task level, you can use the [sys.dm_db_session_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md) and [sys.dm_db_task_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md) dynamic management views. These views can help you identify large queries, temporary tables, or table variables that are using lots of `tempdb` disk space. You can also use several counters to monitor the free space that's available in `tempdb` and the resources that are using `tempdb`.
 
+For example, use the following script to obtaining the `tempdb` space consumed by internal objects in all currently running tasks in each session:
+
 ```sql
 -- Obtaining the space consumed by internal objects in all currently running tasks in each session
 SELECT session_id,
@@ -318,7 +330,11 @@ SELECT session_id,
   SUM(internal_objects_dealloc_page_count) AS task_internal_objects_dealloc_page_count
 FROM sys.dm_db_task_space_usage
 GROUP BY session_id;
+```
 
+Use the following script to find the `tempdb` space consumed by internal objects in the current session, for both running and completed tasks:
+
+```sql
 -- Obtaining the space consumed by internal objects in the current session for both running and completed tasks
 SELECT R2.session_id,
   R1.internal_objects_alloc_page_count
@@ -338,3 +354,4 @@ GROUP BY R2.session_id, R1.internal_objects_alloc_page_count,
 - [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
 - [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)
 - [Move database files](../../relational-databases/databases/move-database-files.md)
+- 

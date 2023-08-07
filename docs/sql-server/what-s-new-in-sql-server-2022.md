@@ -4,7 +4,7 @@ description: Learn about new features for SQL Server 2022 (16.x), which gives yo
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: wiassaf, randolphwest
-ms.date: 07/15/2023
+ms.date: 07/31/2023
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: whats-new
@@ -97,7 +97,7 @@ The following sections identify features that are improved our introduced in [!I
 |Reduced buffer pool I/O promotions | Reduced the incidents of a single page being promoted to eight pages when populating the buffer pool from storage, causing unnecessary I/O. The buffer pool can be populated more efficiently by the read-ahead mechanism. This change was introduced in SQL Server 2022 (all editions) and included in [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)] and [!INCLUDE[ssazuremi_md](../includes/ssazuremi_md.md)]. |
 | Enhanced spinlock algorithms | Spinlocks are a huge part of the consistency inside the engine for multiple threads. Internal adjustments to the Database Engine make spinlocks more efficient. This change was introduced in SQL Server 2022 (all editions) and included in [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)] and [!INCLUDE[ssazuremi_md](../includes/ssazuremi_md.md)]. |
 | Improved virtual log file (VLF) algorithms | Virtual File Log (VLF) is an abstraction of the physical transaction log. Having a large number of small VLFs based on log growth can affect performance of operations like recovery. We changed the algorithm for how many VLF files we create during certain log grow scenarios. To read more about how we have changed this algorithm in [!INCLUDE[sssql22-md](../includes/sssql22-md.md)], see [Virtual Log Files (VLFs)](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#virtual-log-files-vlfs). This change was introduced in SQL Server 2022 (all editions) and included in [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)]. |
-| Instant file initialization for transaction log file growth events | In general, transaction log files cannot benefit from instant file initialization (IFI). Starting with [!INCLUDE[sssql22-md](../includes/sssql22-md.md)] (all editions) and in [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)], instant file initialization can benefit transaction log *growth events* up to 64 MB. The default auto growth size increment for new databases is 64 MB. Transaction log file autogrowth events larger than 64 MB cannot benefit from instant file initialization. |
+| Instant file initialization for transaction log file growth events | In general, transaction log files cannot benefit from instant file initialization (IFI). Starting with [!INCLUDE[sssql22-md](../includes/sssql22-md.md)] (all editions) and in [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)], instant file initialization can benefit transaction log *growth events* up to 64 MB. The default auto growth size increment for new databases is 64 MB. Transaction log file autogrowth events larger than 64 MB cannot benefit from instant file initialization.  For more information, see [Database Instant File Initialization](../relational-databases/databases/database-instant-file-initialization.md).|
 
 ## Query Store and intelligent query processing
 

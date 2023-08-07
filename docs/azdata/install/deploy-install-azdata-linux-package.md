@@ -36,7 +36,7 @@ For Linux distributions with `apt` there is a package for the `azdata-cli`. The 
 2. Import the Microsoft repository key.
 
    ```bash
-   sudo wget https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
+   curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
    ```
 
 3. Create local repository information.

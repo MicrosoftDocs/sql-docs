@@ -12,17 +12,24 @@ ms.custom: intro-whats-new
 # What's New in SSMA for Oracle (OracleToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for Oracle changes in each release.
+## SSMA v9.4
+
+The v9.4 release of SSMA for Oracle contains the following changes:
+ * Add support for BULK COLLECT conversion using bulk emulation function to retrive multiple rows in a single fetch.
+ * Fix for missing subscriptions in migration through migration at scale.
+ * Improve conversion of DECODE function.
+ * Improve conversion for comparison of empty strings with NULL.
 
 ## SSMA v9.3
 
 The v9.3 release of SSMA for Oracle contains the following changes:
-  * Added support for SQL Server 2022 target
+  * Add support for SQL Server 2022 target
 
 ## SSMA v9.2
 
 The v9.2 release of SSMA for Oracle contains the following changes:
- * Added Support for legacy unicode string literals
- * Added Support for arbitary expressions in ESCAPE clause
+ * Add Support for legacy unicode string literals
+ * Add Support for arbitary expressions in ESCAPE clause
  * Conversion Support for EXTRACT(XML) and XMLQUERY
  * Enhanced data pipeline monitoring for at scale migration
  * Conversion Support for EXTRACT(XML),EXTRACTVALUE and XMLQUERY

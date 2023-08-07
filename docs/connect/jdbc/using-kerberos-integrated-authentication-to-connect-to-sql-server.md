@@ -222,7 +222,7 @@ try (Connection c = ds.getConnection(); Statement s = c.createStatement();
 Native platform GSS integration allows Java applications to use the native GSS-API rather than the cryptographic mechanisms of the JDK implementation of the GSS-API. For example, the following sample code demonstrates how to enable use of the native GSS-API within the driver:
 
 ```java
-GSSCredential credential = GSSManager.getInstance().createCredential(null, GSSCredential.DEFAULT_LIFETIME, new Oid("1.2.840.113554.1.2.2"), GSSCredential.ACCEPT_ONLY);
+GSSCredential credential = GSSManager.getInstance().createCredential(null, GSSCredential.DEFAULT_LIFETIME, new Oid("1.2.840.113554.1.2.2"), GSSCredential.INITIATE_ONLY);
 
 SQLServerDataSource ds = new SQLServerDataSource();
 ds.setURL("jdbc:sqlserver://<server>;databaseName=<database>;integratedSecurity=true;authenticationScheme=JavaKerberos;");

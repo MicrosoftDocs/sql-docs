@@ -374,10 +374,11 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 ### Hyperscale - Premium-series (part 1 of 3)
 
-| Compute size (service objective) | HS_PRMS_2 | HS_PRMS_4 | HS_PRMS_6 | HS_PRMS_8 | HS_PRMS_10 |
+SLOs in the Hyperscale premium-series tier use the naming convention `HS_PRMS_` followed by the number of vCores. Here are the limits for the `HS_PRMS_2`, `HS_PRMS_4`, `HS_PRMS_6`, `HS_PRMS_8` and `HS_PRMS_10` SLOs:
+
+| vCores | 2 | 4 | 6 | 8 | 10 |
 |:-|-:|-:|-:|-:|-:|
 | Hardware | Premium-series | Premium-series | Premium-series | Premium-series | Premium-series |
-| vCores | 2 | 4 | 6 | 8 | 10 |
 | Memory (GB) | 10.4 | 20.8 | 31.1 | 41.5 | 51.9 |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes |
 | In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A |
@@ -410,10 +411,11 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 ### Hyperscale - Premium-series (part 2 of 3)
 
-| Compute size (service objective) | HS_PRMS_12 | HS_PRMS_14 | HS_PRMS_16 | HS_PRMS_18 | HS_PRMS_20 |
+SLOs in the Hyperscale premium-series tier use the naming convention `HS_PRMS_` followed by the number of vCores. Here are the limits for the `HS_PRMS_12`, `HS_PRMS_14`, `HS_PRMS_16`, `HS_PRMS_18` and `HS_PRMS_20` SLOs:
+
+| vCores | 12 | 14 | 16 | 18 | 20 |
 |:-|-:|-:|-:|-:|-:|
 | Hardware | Premium-series | Premium-series | Premium-series | Premium-series | Premium-series |
-| vCores | 12 | 14 | 16 | 18 | 20 |
 | Memory (GB) | 62.3 | 72.7 | 83.0 | 93.4 | 103.8 |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes |
 | In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A |
@@ -445,10 +447,11 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 ### Hyperscale - Premium-series (part 3 of 3)
 
-| Compute size (service objective) | HS_PRMS_24 | HS_PRMS_32 | HS_PRMS_40 | HS_PRMS_64 | HS_PRMS_80 | HS_PRMS_128 |
+SLOs in the Hyperscale premium-series tier use the naming convention `HS_PRMS_` followed by the number of vCores. Here are the limits for the `HS_PRMS_24`, `HS_PRMS_32`, `HS_PRMS_40`, `HS_PRMS_64`, `HS_PRMS_80` and `HS_PRMS_128` SLOs:
+
+| vCores | 24 | 32 | 40 | 64 | 80 | 128 |
 |:-|-:|-:|-:|-:|-:|-:|
 | Hardware | Premium-series | Premium-series | Premium-series | Premium-series | Premium-series | Premium-series |
-| vCores | 24 | 32 | 40 | 64 | 80 | 128 |
 | Memory (GB) | 124.6 | 166.1 | 207.6 | 332.2 | 415.2 | 625 |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes | Yes |
 | In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A | N/A |
@@ -482,10 +485,11 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 ### Hyperscale - Premium-series memory optimized (part 1 of 3)
 
-| Compute size (service objective) | HS_MOPRMS_2 | HS_MOPRMS_4 | HS_MOPRMS_6 | HS_MOPRMS_8 | HS_MOPRMS_10 |
+SLOs in the Premium-series memory optimized tier use the naming convention `HS_MOPRMS_` followed by the number of vCores. Here are the limits for the `HS_MOPRMS_2`, `HS_MOPRMS_4`, `HS_MOPRMS_6`, `HS_MOPRMS_8` and `HS_MOPRMS_10` SLOs:
+
+| vCores | 2 | 4 | 6 | 8 | 10 |
 |:-|-:|-:|-:|-:|-:|
 | Hardware | Premium-series | Premium-series | Premium-series | Premium-series | Premium-series |
-| vCores | 2 | 4 | 6 | 8 | 10 |
 | Memory (GB) | 20.8 | 41.5 | 62.3 | 83 | 103.8 |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes |
 | In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A |
@@ -518,10 +522,11 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 ### Hyperscale - Premium-series memory optimized (part 2 of 3)
 
-| Compute size (service objective) | HS_MOPRMS_12 | HS_MOPRMS_14 | HS_MOPRMS_16 | HS_MOPRMS_18 | HS_MOPRMS_20 |
+SLOs in the Premium-series memory optimized tier use the naming convention `HS_MOPRMS_` followed by the number of vCores. Here are the limits for the `HS_MOPRMS_12`, `HS_MOPRMS_14`, `HS_MOPRMS_16`, `HS_MOPRMS_18` and `HS_MOPRMS_20` SLOs:
+
+| vCores | 12 | 14 | 16 | 18 | 20 |
 |:-|-:|-:|-:|-:|-:|
 | Hardware | Premium-series | Premium-series | Premium-series | Premium-series | Premium-series |
-| vCores | 12 | 14 | 16 | 18 | 20 |
 | Memory (GB) | 124.6 | 145.3 | 166.1 | 186.9 | 207.6 |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes |
 | In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A |
@@ -554,10 +559,11 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 ### Hyperscale - Premium-series memory optimized (part 3 of 3)
 
-| Compute size (service objective) | HS_MOPRMS_24 | HS_MOPRMS_32 | HS_MOPRMS_40 | HS_MOPRMS_64 | HS_MOPRMS_80 |
+SLOs in the Premium-series memory optimized tier use the naming convention `HS_MOPRMS_` followed by the number of vCores. Here are the limits for the `HS_MOPRMS_24`, `HS_MOPRMS_32`, `HS_MOPRMS_40`, `HS_MOPRMS_64` and `HS_MOPRMS_128` SLOs:
+
+| vCores | 24 | 32 | 40 | 64 | 80 |
 |:-|-:|-:|-:|-:|-:|
 | Hardware | Premium-series | Premium-series | Premium-series | Premium-series | Premium-series |
-| vCores | 24 | 32 | 40 | 64 | 80 |
 | Memory (GB) | 249.1 | 332.2 | 415.2 | 664.4 | 830.5 |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes |
 | In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A |

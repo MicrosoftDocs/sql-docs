@@ -32,7 +32,7 @@ Azure Data Studio 1.45.1 is the latest general availability (GA) release.
 | Database Migration Assessment for Oracle | Resolved issue where links to open the assessment output were no longer working. |
 | Database Schema Conversion Toolkit | Resolved issue where links to open the conversion output were no longer working. |
 | Profiler | Fixed an issue where the session dropdown was not populated when Profiler is opened. |
-| Profiler | Addressed issue where running state was incorrectly set after a session was started. |
+| Profiler | Addressed an issue where the running state was incorrectly set after a session was started. |
 
 For a full list of bug fixes addressed for the July 2023 hotfix release, visit the [July 2023 Hotfix Release on GitHub](https://github.com/microsoft/azuredatastudio/milestone/104?closed=1).
 

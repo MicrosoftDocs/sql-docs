@@ -114,7 +114,7 @@ You can reference [Azure Data Studio feedback](https://github.com/microsoft/azur
 | Connection | Introduced support for Tenant hierarchy in the Azure tree |
 | Connection | Updated Azure tree icons |
 | Connection | Updated the Azure tree in the Connection Pane to show only available resource types |
-| Connection | Added Azure Postgres Flexible Server and Azure CosmosDB for PostgreSQL in the Azure resource tree |
+| Connection | Added Azure Postgres Flexible Server and Azure Cosmos DB for PostgreSQL in the Azure resource tree |
 | Connection | Introduced support for multiple connections against same target, with different profile names and advanced options |
 | Connection | Added capability to clear encryption keys with the 'Clear Azure Account Token Cache' command |
 | Connection | Introduced support for connection pooling for MSSQL connections |
@@ -283,7 +283,7 @@ For a full list of bug fixes addressed for the May 2023 release, visit the [May 
 | Connection | Added ability to include optional name and grouping when creating a new connection using a connection string |
 | Connection | Updating username in MSSQL connections to use Preferred username for the display name |
 | Connection | Fixed issue with encoding for OSX keychain on macOS |
-| Connection | Added support for Azure MFA and ‘Sql Authentication Provider’ on Linux |
+| Connection | Added support for Azure AD Multi-Factor Authentication and ‘Sql Authentication Provider’ on Linux |
 | Dataverse | Addressed error generated when expanding the database node for a Dataverse database in Object Explorer |
 | IntelliCode extension | Fixed error that occurred when launching Azure Data Studio with Visual Studio Code IntelliCode extension installed |
 | PostgreSQL extension | Implemented support for exporting query results on Apple M1 from a notebook |

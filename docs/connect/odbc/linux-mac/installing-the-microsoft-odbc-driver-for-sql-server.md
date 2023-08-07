@@ -4,7 +4,7 @@ description: Learn how to install the Microsoft ODBC Driver for SQL Server on Li
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: randolphwest
-ms.date: 08/02/2023
+ms.date: 08/07/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -63,19 +63,19 @@ sudo apk add --allow-untrusted mssql-tools18_18.3.1.1-1_$architecture.apk
 ### [Debian](#tab/debian18-install)
 
 ```bash
-sudo wget https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
+curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
 
 #Download appropriate package for the OS version
 #Choose only ONE of the following, corresponding to your OS version
 
 #Debian 9
-sudo curl https://packages.microsoft.com/config/debian/9/prod.list > /etc/apt/sources.list.d/mssql-release.list
+curl https://packages.microsoft.com/config/debian/9/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
 
 #Debian 10
-sudo curl https://packages.microsoft.com/config/debian/10/prod.list > /etc/apt/sources.list.d/mssql-release.list
+curl https://packages.microsoft.com/config/debian/10/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
 
 #Debian 11
-sudo curl https://packages.microsoft.com/config/debian/11/prod.list > /etc/apt/sources.list.d/mssql-release.list
+curl https://packages.microsoft.com/config/debian/11/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
 
 sudo apt-get update
 sudo ACCEPT_EULA=Y apt-get install -y msodbcsql18
@@ -99,13 +99,13 @@ sudo apt-get install -y libgssapi-krb5-2
 #Choose only ONE of the following, corresponding to your OS version
 
 #RHEL 7 and Oracle Linux 7
-sudo curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
+curl https://packages.microsoft.com/config/rhel/7/prod.repo | sudo tee /etc/yum.repos.d/mssql-release.repo
 
 #RHEL 8 and Oracle Linux 8
-sudo curl https://packages.microsoft.com/config/rhel/8/prod.repo > /etc/yum.repos.d/mssql-release.repo
+curl https://packages.microsoft.com/config/rhel/8/prod.repo | sudo tee /etc/yum.repos.d/mssql-release.repo
 
 #RHEL 9
-sudo curl https://packages.microsoft.com/config/rhel/9.0/prod.repo > /etc/yum.repos.d/mssql-release.repo
+curl https://packages.microsoft.com/config/rhel/9/prod.repo | sudo tee /etc/yum.repos.d/mssql-release.repo
 
 sudo yum remove unixODBC-utf16 unixODBC-utf16-devel #to avoid conflicts
 sudo ACCEPT_EULA=Y yum install -y msodbcsql18
@@ -152,9 +152,9 @@ then
     exit;
 fi
 
-sudo wget https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
+curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
 
-sudo curl https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/prod.list > /etc/apt/sources.list.d/mssql-release.list
+curl https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
 
 sudo apt-get update
 sudo ACCEPT_EULA=Y apt-get install -y msodbcsql18
@@ -213,19 +213,19 @@ sudo apk add --allow-untrusted mssql-tools_17.10.1.1-1_amd64.apk
 ### [Debian](#tab/debian17-install)
 
 ```bash
-sudo wget https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
+curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
 
 #Download appropriate package for the OS version
 #Choose only ONE of the following, corresponding to your OS version
 
 #Debian 9
-sudo curl https://packages.microsoft.com/config/debian/9/prod.list > /etc/apt/sources.list.d/mssql-release.list
+curl https://packages.microsoft.com/config/debian/9/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
 
 #Debian 10
-sudo curl https://packages.microsoft.com/config/debian/10/prod.list > /etc/apt/sources.list.d/mssql-release.list
+curl https://packages.microsoft.com/config/debian/10/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
 
 #Debian 11
-sudo curl https://packages.microsoft.com/config/debian/11/prod.list > /etc/apt/sources.list.d/mssql-release.list
+curl https://packages.microsoft.com/config/debian/11/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
 
 sudo apt-get update
 sudo ACCEPT_EULA=Y apt-get install -y msodbcsql17
@@ -249,13 +249,13 @@ sudo apt-get install -y libgssapi-krb5-2
 #Choose only ONE of the following, corresponding to your OS version
 
 #RHEL 7 and Oracle Linux 7
-sudo curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
+curl https://packages.microsoft.com/config/rhel/7/prod.repo | sudo tee /etc/yum.repos.d/mssql-release.repo
 
 #RHEL 8 and Oracle Linux 8
-sudo curl https://packages.microsoft.com/config/rhel/8/prod.repo > /etc/yum.repos.d/mssql-release.repo
+curl https://packages.microsoft.com/config/rhel/8/prod.repo | sudo tee /etc/yum.repos.d/mssql-release.repo
 
 #RHEL 9
-sudo curl https://packages.microsoft.com/config/rhel/9.0/prod.repo > /etc/yum.repos.d/mssql-release.repo
+curl https://packages.microsoft.com/config/rhel/9/prod.repo | sudo tee /etc/yum.repos.d/mssql-release.repo
 
 sudo yum remove unixODBC-utf16 unixODBC-utf16-devel #to avoid conflicts
 sudo ACCEPT_EULA=Y yum install -y msodbcsql17
@@ -302,9 +302,9 @@ then
     exit;
 fi
 
-sudo wget https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
+curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
 
-sudo curl https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/prod.list > /etc/apt/sources.list.d/mssql-release.list
+curl https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
 
 sudo apt-get update
 sudo ACCEPT_EULA=Y apt-get install -y msodbcsql17
@@ -328,8 +328,8 @@ The following sections explain how to install the Microsoft ODBC driver 13.1 fro
 ### [Debian 8](#tab/debian8-install)
 
 ```bash
-sudo wget https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
-sudo curl https://packages.microsoft.com/config/debian/8/prod.list > /etc/apt/sources.list.d/mssql-release.list
+curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
+curl https://packages.microsoft.com/config/debian/8/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
 sudo apt-get update
 sudo ACCEPT_EULA=Y apt-get install msodbcsql
 # optional: for bcp and sqlcmd
@@ -343,7 +343,7 @@ sudo apt-get install unixodbc-dev
 ### [RHEL 7](#tab/redhat7-install)
 
 ```bash
-sudo curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
+curl https://packages.microsoft.com/config/rhel/7/prod.repo | sudo tee /etc/yum.repos.d/mssql-release.repo
 sudo yum remove unixODBC-utf16 unixODBC-utf16-devel #to avoid conflicts
 sudo ACCEPT_EULA=Y yum install msodbcsql
 # optional: for bcp and sqlcmd
@@ -370,8 +370,8 @@ sudo zypper install unixODBC-devel
 ### [Ubuntu 16.04](#tab/ubuntu16-install)
 
 ```bash
-sudo wget https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
-sudo curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
+curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
+curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
 sudo apt-get update
 sudo ACCEPT_EULA=Y apt-get install msodbcsql
 # optional: for bcp and sqlcmd
@@ -391,7 +391,7 @@ The following sections explain how to install the Microsoft ODBC driver 13 from 
 ### [RHEL 7 (ODBC 13)](#tab/redhat7-13-install)
 
 ```bash
-sudo curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
+curl https://packages.microsoft.com/config/rhel/7/prod.repo | sudo tee /etc/yum.repos.d/mssql-release.repo
 sudo yum update
 sudo yum remove unixODBC #to avoid conflicts
 sudo ACCEPT_EULA=Y yum install msodbcsql-13.0.1.0-1 mssql-tools-14.0.2.0-1
@@ -404,8 +404,8 @@ sudo ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 ### [Ubuntu 16.04 (ODBC 13)](#tab/ubuntu16-13-install)
 
 ```bash
-sudo wget https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
-sudo curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
+curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
+curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
 sudo apt-get update
 sudo ACCEPT_EULA=Y apt-get install msodbcsql=13.0.1.0-1 mssql-tools=14.0.2.0-1
 sudo apt-get install unixodbc-dev-utf16 #this step is optional but recommended*

@@ -40,11 +40,11 @@ There are two high availability architectural models:
 - **Local storage model** that is based on a cluster of database engine processes. It relies on the fact that there is always a quorum of available database engine nodes. This architecture targets mission-critical applications with high IO performance, high transaction rate and guarantees minimal performance impact on your workload during maintenance activities.
 
 
-## Locally-redundant availability 
+## Locally redundant availability 
 
-Locally-redundant availability is based on storing your compute node and data on [locally-redundant storage (LRS)](/azure/storage/common/storage-redundancy#locally-redundant-storage) which copies your data three times within a single datacenter in the primary region and protects your data in the event of local failure, such as a small-scale network or power failure. LRS is the lowest-cost redundancy option and offers the least durability compared to other options. If a large-scale disaster such as fire or flooding occurs within a region, all replicas of a storage account using LRS may be lost or unrecoverable. As such, to further protect your data when using the locally-redundant availability option, consider using a more resilient storage option for your [database backups](automated-backups-overview.md#backup-storage-redundancy). 
+Locally redundant availability is based on storing your compute node and data on [locally redundant storage (LRS)](/azure/storage/common/storage-redundancy#locally-redundant-storage) which copies your data three times within a single datacenter in the primary region and protects your data in the event of local failure, such as a small-scale network or power failure. LRS is the lowest-cost redundancy option and offers the least durability compared to other options. If a large-scale disaster such as fire or flooding occurs within a region, all replicas of a storage account using LRS may be lost or unrecoverable. As such, to further protect your data when using the locally redundant availability option, consider using a more resilient storage option for your [database backups](automated-backups-overview.md#backup-storage-redundancy). 
 
-Locally-redundant availability is available to instances in either service tier. 
+Locally redundant availability is available to instances in either service tier. 
 
 ### General Purpose service tier
 
@@ -89,7 +89,7 @@ Consider the following when using zone-redundancy:
 
 - During preview, zone redundancy for SQL Managed Instance is available in the Business Critical service tier. 
 - For up to date information about the regions that support zone-redundant instances, see [Services support by region](/azure/availability-zones/az-region).
-- For zone redundant availability, choosing a [maintenance window](../database/maintenance-window.md) other than the default is currently available in [select regions](../database/maintenance-window.md?preserve-view=true&view=azuresql#azure-region-support).
+- For zone redundant availability, choosing a [maintenance window](../database/maintenance-window.md) other than the default is currently available in [select regions](../database/maintenance-window.md?preserve-view=true&view=azuresql#azure-sql-managed-instance-region-support-for-maintenance-windows).
 
 During preview, zone redundancy for SQL Managed Instance is available in the Business Critical service tier and supported in the following regions:
 

@@ -61,7 +61,7 @@ If the new version of the certificate is created and installed on the server, bu
 
 With service managed certificate rotation, the Azure Extension for SQL Server rotates the certificates.
 
-To allow the service to manage the certificate, add an access policy for the service principal with permission to sign keys. See [Assign a Key Vault access policy (legacy)](/azure/key-vault/general/assign-access-policy?tabs=azure-portal). The access policy assignment needs to explicity reference the service principal of the Arc server.
+To allow the service to manage the certificate, add an access policy for the service principal with permission to sign keys. See [Assign a Key Vault access policy (legacy)](/azure/key-vault/general/assign-access-policy?tabs=azure-portal). The access policy assignment needs to explicitly reference the service principal of the Arc server.
 
 For instructions, see [Create and assign a certificate](../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial.md#create-and-assign-a-certificate).
 

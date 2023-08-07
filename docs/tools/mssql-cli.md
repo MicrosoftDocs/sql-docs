@@ -38,7 +38,7 @@ The following example applies to Ubuntu 18.04 (Bionic), more information and exa
 
 ```bash
 # Import the public repository GPG keys
-sudo wget https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
+curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
 
 # Register the Microsoft Ubuntu repository
 sudo apt-add-repository https://packages.microsoft.com/ubuntu/18.04/prod

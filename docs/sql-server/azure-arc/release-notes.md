@@ -12,6 +12,22 @@ ms.topic: conceptual
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
+## August 2023
+
+This release is published August 10, 2023.
+
+### Extension version
+
+`1.1.2406.45`
+
+### Azure extension for SQL Server
+
+- Support to automatically rotate certificates for Microsoft Entra ID authentication. Review [Rotate certificates](rotate-certificates.md).
+
+   [!INCLUDE [entra-id](../../includes/entra-id.md)]
+
+- Configure patching in Azure portal. Review [Configure in the Azure portal](patch.md#configure-in-the-azure-portal).
+
 ## July 2023
 
 This release is published July 13, 2023.

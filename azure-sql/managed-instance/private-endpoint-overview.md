@@ -168,6 +168,8 @@ After you complete these steps, SQL clients inside the endpoint virtual network 
    - Type: A
    - IP address: IP address of the private endpoint obtained in the previous steps.
 
+---
+
 ## Next steps
 
 - Learn about the [Connectivity architecture of Azure SQL Managed Instance](connectivity-architecture-overview.md).

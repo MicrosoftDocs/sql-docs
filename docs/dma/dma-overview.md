@@ -92,7 +92,7 @@ DMA replaces all previous versions of SQL Server Upgrade Advisor and should be u
 - SQL Server 2022
 - Azure SQL Database single database
 - Azure SQL Managed Instance (assessment only)
-- SQL server running on an Azure Virtual Machine
+- SQL Server running on an Azure Virtual Machine
 
 ## See also
 

@@ -223,7 +223,7 @@ In addition, SSMA for DB2 now provides:
 
 ## SSMA v8.5
 
-The v8.5 release of SSMA for DB2 is enhanced with support for Azure Active Directory authentication and basic support for JSON features in SQL server, together with a targeted set of fixes designed to improve usability and performance.
+The v8.5 release of SSMA for DB2 is enhanced with support for Azure Active Directory authentication and basic support for JSON features in SQL Server, together with a targeted set of fixes designed to improve usability and performance.
 
 In addition, SSMA for DB2 has been enhanced with:
 

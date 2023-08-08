@@ -16,8 +16,8 @@ ms.custom:
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](service-tiers-sql-database-vcore.md)
-> * [Azure SQL Managed Instance](../managed-instance/service-tiers-managed-instance-vcore.md)
+> * [Azure SQL Database](service-tiers-sql-database-vcore.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](../managed-instance/service-tiers-managed-instance-vcore.md?view=azuresql-mi&preserve-view=true)
 
 This article reviews the [vCore purchasing model](service-tiers-vcore.md) for [Azure SQL Database](sql-database-paas-overview.md). 
 

@@ -473,7 +473,8 @@ WITH
 
  To create an Azure AD user from an Azure AD login, use the following syntax.
 
- Sign into your SQL server or SQL managed instance with an Azure AD login granted with the `sysadmin` role in managed instance, or `loginmanager` role in SQL Database. The following creates an Azure AD user `bob@contoso.com`, from the login `bob@contoso.com`. This login was created in the [CREATE LOGIN](./create-login-transact-sql.md#examples) example.
+ Sign in to your Azure SQL logical server or SQL managed instance with an Azure AD login granted with the `sysadmin` role in managed instance, or `loginmanager` role in SQL Database. The following creates an Azure AD user `bob@contoso.com`, from the login `bob@contoso.com`. This login was created in the [CREATE LOGIN](./create-login-transact-sql.md#examples) example.
+
 
 ```sql
 CREATE USER [bob@contoso.com] FROM LOGIN [bob@contoso.com];

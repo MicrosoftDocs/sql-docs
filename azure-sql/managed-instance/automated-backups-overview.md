@@ -22,8 +22,8 @@ Some of the content in this article is duplicated in /azure-sql/database/automat
 
 > [!div class="op_single_selector"]
 >
-> * [Azure SQL Database](../database/automated-backups-overview.md)
-> * [Azure SQL Managed Instance](automated-backups-overview.md)
+> * [Azure SQL Database](../database/automated-backups-overview.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](automated-backups-overview.md?view=azuresql-mi&preserve-view=true)
 
 This article describes the automated backup feature for Azure SQL Managed Instance.
 

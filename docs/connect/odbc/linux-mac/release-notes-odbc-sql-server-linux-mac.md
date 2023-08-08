@@ -34,7 +34,7 @@ GeneMi.  2019/04/03.
 | :------- | :------ |
 | Improved Performance | More efficient packet buffer memory allocation |
 | New Managed Identity (MSI) Authentication Support | Support for MSI authentication for Azure Arc and Azure Cloud Shell and updated to a newer Azure App Service API version |
-| New distributions supported. | Ubuntu 23.04, Alpine 3.17, Alpine 3.18 |
+| New distributions supported. | Ubuntu 23.04, Alpine 3.17, Alpine 3.18. ARM64 is now supported on Alpine  |
 | Bug fixes. | [Bug fixes](../bug-fixes.md). |
 
 ## 18.2.2, June 2023

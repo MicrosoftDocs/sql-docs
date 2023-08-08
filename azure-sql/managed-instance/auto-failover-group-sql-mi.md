@@ -16,8 +16,8 @@ ms.custom: azure-sql-split
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](../database/auto-failover-group-sql-db.md)
-> * [Azure SQL Managed Instance](auto-failover-group-sql-mi.md)
+> * [Azure SQL Database](../database/auto-failover-group-sql-db.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](auto-failover-group-sql-mi.md?view=azuresql-mi&preserve-view=true)
 
 The auto-failover groups feature allows you to manage the replication and failover of all user databases in a managed instance to another Azure region. This article focuses on using the Auto-failover group feature with Azure SQL Managed Instance and some best practices.
 

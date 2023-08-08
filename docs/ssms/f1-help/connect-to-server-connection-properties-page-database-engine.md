@@ -31,10 +31,10 @@ Select a protocol from the list. The available client protocols are configured u
 **Network packet size**  
 Enter the size of the network packets to be sent. The default is 4096 bytes.  
   
-**Connection timeout**  
+**Connection time-out**  
 Enter the number of seconds to wait for a connection to be established before timing out. The default value is 15 seconds.  
   
-**Execution timeout**  
+**Execution time-out**  
 Enter the amount of time in seconds to wait before execution of a task is completed on the server. The default value is zero seconds, which indicates there is no time-out.  
   
 **Encrypt connection**  
@@ -48,9 +48,6 @@ Select to specify the background color for the status bar in a [!INCLUDE[ssDE](.
 -   When you specify a color for a server entry in the **Registered Servers** pane, that color is used when you open a Query Editor window. To open a Query Editor window, either right-click the server entry and select **New Query**; or, when the **Registered Server** pane is active and focused on this server, click **New Query** on the toolbar.  
   
 -   On the **File** menu, when you click **New** and then **Database Engine Query**, the color you that you specify in the **Connect to Server** dialog box applies to that Query Editor window.  
-  
-**AD domain name or tenant ID**  
-When connecting with **Active Directory - Universal with MFA** authentication, specify the authenticating domain. This option is only available when using SSMS version 17.2 or later. 
 
 **Reset All**  
 Replace all manually entered connection property values with their defaults.  

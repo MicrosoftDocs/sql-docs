@@ -5,7 +5,7 @@ description: This article compares the database engine features of Azure SQL Dat
 author: danimir
 ms.author: danil
 ms.reviewer: wiassaf, bonova, mathoma, danil
-ms.date: 07/18/2023
+ms.date: 07/24/2023
 ms.service: sql-db-mi
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -158,7 +158,7 @@ The following table compares the maximum resource limits available for Azure SQL
 
 | **Category** | **Azure SQL Database** | **Azure SQL Managed Instance** |
 |:--|:--|:--|
-| **Compute size**| Up to 128 vCores  | Up to 80 vCores| 
+| **Compute size**| Up to 128 vCores  | Up to 128 vCores| 
 | **Storage size** | 1 GB - 100 TB | 16 TB | 
 | **Tempdb size** | [32 GB per vCore](resource-limits-vcore-single-databases.md), up to 2,560 GB |Up to 4 TB - [limited by reserved storage size](../managed-instance/resource-limits.md#service-tier-characteristics) |
 | **Log write throughput** | Up to 100mb/sec | [4 MB/s per vCore (max 48 MB/s)](../managed-instance/resource-limits.md#service-tier-characteristics) |

@@ -10,6 +10,7 @@ ms.subservice: tools-other
 ms.topic: conceptual
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017"
 ---
+
 # go-sqlcmd utility
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -80,7 +81,7 @@ Review the [breaking changes from sqlcmd](#breaking-changes-from-sqlcmd) section
 1. Import the public repository GPG keys.
 
    ```bash
-   curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+   sudo wget https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
    ```
 
 1. Add the Microsoft repository, where the `ubuntu/20.04` segment may be `debian/11`, `ubuntu/20.04`, or `ubuntu/22.04`.

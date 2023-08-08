@@ -4605,7 +4605,7 @@ items:
         href: database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md
       - name: Configure the recovery interval
         href: database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md
-      - name: Configure the remote access
+      - name: Configure remote access
         href: database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md
       - name: remote admin connections
         href: database-engine/configure-windows/remote-admin-connections-server-configuration-option.md

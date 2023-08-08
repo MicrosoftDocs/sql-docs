@@ -112,7 +112,7 @@ Type of the destination. Currently SSIS Deploy task supports two types:
 
 #### Destination server
 
-Name of destination SQL server. It can be the name of an on-premises SQL Server, Azure SQL Database, or Azure SQL Managed Instance. This property is only visible when destination type is SSISDB.
+Name of destination Database Engine. It can be the name of an on-premises SQL Server, Azure SQL Database, or Azure SQL Managed Instance. This property is only visible when destination type is SSISDB.
 
 #### Destination path
 

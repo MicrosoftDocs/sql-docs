@@ -226,7 +226,7 @@ In addition, SSMA for Oracle now provides improved parsing of the `XMLTABLE` cla
 
 ## SSMA v8.5
 
-The v8.5 release of SSMA for Oracle is enhanced with support for Azure Active Directory authentication and basic support for JSON features in SQL server, together with a targeted set of fixes designed to improve usability and performance.
+The v8.5 release of SSMA for Oracle is enhanced with support for Azure Active Directory authentication and basic support for JSON features in SQL Server, together with a targeted set of fixes designed to improve usability and performance.
 
 In addition, SSMA for Oracle has been enhanced with support for:
 

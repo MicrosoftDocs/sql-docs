@@ -19,8 +19,8 @@ monikerRange: "= azuresql || = azuresql-mi"
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](../database/high-availability-sla.md)
-> * [Azure SQL Managed Instance](high-availability-sla.md)
+> * [Azure SQL Database](../database/high-availability-sla.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](high-availability-sla.md?view=azuresql-mi&preserve-view=true)
 
 This article describes high availability in Azure SQL Managed Instance.
 

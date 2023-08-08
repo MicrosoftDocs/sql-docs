@@ -23,7 +23,7 @@ Use the following steps to install the **mssql-tools18** on Ubuntu.
 1. Import the public repository GPG keys.
 
    ```bash
-   sudo wget https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
+   curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
    ```
 
 1. Register the Microsoft Ubuntu repository.

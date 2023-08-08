@@ -27,7 +27,7 @@ The Table Designer consists of a window split into three separate panes. The fir
 
 ### Create and update database tables using the Table Designer
 
-The SQL server connection in which your database resides needs to be active in order to create tables. This is indicated by the green dot at the bottom right corner of the server connection icon in the object explorer (below). If red (this means the connection is inactive), select the server connection name in the object explorer to activate the connection. For a tutorial on connecting to SQL Server, check out the [Use Azure Data Studio to connect and query SQL Server tutorial](quickstart-sql-server.md) article.
+The SQL Server connection in which your database resides needs to be active in order to create tables. This is indicated by the green dot at the bottom right corner of the server connection icon in the object explorer (below). If red (this means the connection is inactive), select the server connection name in the object explorer to activate the connection. For a tutorial on connecting to SQL Server, check out the [Use Azure Data Studio to connect and query SQL Server tutorial](quickstart-sql-server.md) article.
 
 > [!NOTE]
 > We will be using the "AdventureWorks2019" sample database in this tutorial. If you haven't already, please refer to [AdventureWorks sample databases](../samples/adventureworks-install-configure.md) to download this sample database.

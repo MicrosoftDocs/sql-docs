@@ -176,7 +176,7 @@ To leverage this setting, in SSMA for SAP ASE, navigate to **Tools** > **Project
 
 ## SSMA v8.5
 
-The v8.5 release of SSMA for SAP ASE is enhanced with support for Azure Active Directory authentication and basic support for JSON features in SQL server, together with a targeted set of fixes designed to improve usability and performance.
+The v8.5 release of SSMA for SAP ASE is enhanced with support for Azure Active Directory authentication and basic support for JSON features in SQL Server, together with a targeted set of fixes designed to improve usability and performance.
 
 In addition, SSMA for SAP ASE now allows you to hide system tables and views (exclude them from conversion).
 

@@ -46,11 +46,23 @@ The following table describes the options that you may configure for automated p
 
 Use the Azure portal to configure automated patching for existing Arc-enabled SQL Server instances.
 
-For existing Arc-enabled SQL Server instances:
-
-1. Open the [Arc-enabled SQL Server instances view](https://ms.portal.azure.com/#view/Microsoft_Azure_HybridCompute/AzureArcCenterBlade/~/sqlServers)
-1. Select an Arc-enabled SQL Server instance and select **Settings** > **Patching**.
-1. Configure your settings.
-1. Select **Apply** to save your changes.
+1. In the portal, locate the **Server - Azure Arc**.
+1. Under **Operations**, select **SQL Server Configuration**.
+1. Under **Patching (Preview)**, you can enable or disable patching and set a maintenance schedule.
 
 When you enable or configure automated patching, Azure configures the Azure Extension for SQL Server in the background.
+
+> [!NOTE]
+> Patching only applies to servers covered with Software Assurance or pay-as-you-go license type. If the server license type is license only, the option to select patching is disabled.
+>
+> To change the license type to license only, follow these steps:
+>
+> 1. Unsubscribe from patching and ESU if it is enabled.
+> 1. Save the change.
+> 1. Wait approximately 5 minutes for the saved change to complete.
+> 1. Set the new license type.
+>
+
+## Next steps
+
+[Manage SQL Server license and billing options](manage-license-type.md)

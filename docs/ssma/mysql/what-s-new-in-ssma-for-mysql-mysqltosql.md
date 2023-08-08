@@ -183,7 +183,7 @@ To use this setting, in SSMA for MySQL, navigate to **Tools** > **Project Settin
 
 ## SSMA v8.5
 
-The v8.5 release of SSMA for MySQL is enhanced with support for Azure Active Directory authentication and basic support for JSON features in SQL server, together with a targeted set of fixes designed to improve usability and performance.
+The v8.5 release of SSMA for MySQL is enhanced with support for Azure Active Directory authentication and basic support for JSON features in SQL Server, together with a targeted set of fixes designed to improve usability and performance.
 
 > [!IMPORTANT]  
 > With SSMA v8.5, .NET 4.7.2 is an installation prerequisite. If you need to install this version, you can [download the runtime file](https://dotnet.microsoft.com/download/dotnet-framework/net472).

@@ -230,7 +230,7 @@ To use DMA to create a migration project, complete the following steps.
    1. Select the New icon, select the **Migration** project type, select **SQL Server** as source and target types, and then select **Create**.
 
       ![New Migration](./media/sql-server-to-sql-server-upgrade-guide/dma-migrate.png)
-   1. Provide source and target SQL server connection details, and then select **Next**.
+   1. Provide source and target SQL Server connection details, and then select **Next**.
 
       ![Source & Target details](./media/sql-server-to-sql-server-upgrade-guide/dma-source-target.png)
    1. Select databases from the source to migrate, and then specify the **Shared location accessible by source and target SQL servers for backup operation**.

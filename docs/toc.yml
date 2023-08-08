@@ -10453,6 +10453,8 @@ items:
       items:
       - name: Configure advanced data Security
         href: sql-server/azure-arc/configure-advanced-data-security.md
+      - name: Certificate rotation
+        href: sql-server/azure-arc/rotate-certificates.md
     - name: FAQ
       href: sql-server/azure-arc/faq.yml
     - name: Data collection and reporting

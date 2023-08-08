@@ -42,7 +42,7 @@ To modify the installed Visual Studio workloads to include SSDT, use the Visual 
 
 1. Select **SQL Server Data Tools** under **Data storage and processing** in the list of workloads.
 
-   :::image type="content" source="../ssdt/media/download-sql-server-data-tools-ssdt/data-workload-2022.png" alt-text="Data storage and processing workload 2022." lightbox="../ssdt/media/download-sql-server-data-tools-ssdt/data-workload-2022.png":::
+   :::image type="content" source="../ssdt/media/download-sql-server-data-tools-ssdt/data-workload-2022.png" alt-text="Screenshot of Data storage and processing workload 2022." lightbox="../ssdt/media/download-sql-server-data-tools-ssdt/data-workload-2022.png":::
 
 For Analysis Services, Integration Services, or Reporting Services projects, you can install the appropriate [extensions](/visualstudio/ide/finding-and-using-visual-studio-extensions) from within Visual Studio with **Extensions** > **Manage Extensions** or from the [Marketplace](https://marketplace.visualstudio.com/search?term=services&target=VS&category=All%20categories&vsVersion=&sortBy=Relevance).
 
@@ -60,7 +60,7 @@ For Analysis Services, Integration Services, or Reporting Services projects, you
 
 ### License terms for Visual Studio
 
-To understand the license terms and use cases for Visual Studio, refer to (Visual Studio License Directory)[https://visualstudio.microsoft.com/license-terms/]. For example, if you are using the Community Edition of Visual Studio for SQL Server Data Tools, review the EULA for that specific edition of Visual Studio in the Visual Studio License Directory.
+To understand the license terms and use cases for Visual Studio, refer to [Visual Studio License Directory](https://visualstudio.microsoft.com/license-terms/). For example, if you are using the Community Edition of Visual Studio for SQL Server Data Tools, review the EULA for that specific edition of Visual Studio in the Visual Studio License Directory.
 
 ## SSDT for Visual Studio 2019
 
@@ -85,7 +85,7 @@ To modify the installed Visual Studio workloads to include SSDT, use the Visual 
 
 1. Select **SQL Server Data Tools** under **Data storage and processing** in the list of workloads.
 
-   :::image type="content" source="../ssdt/media/download-sql-server-data-tools-ssdt/data-workload-2019.png" alt-text="Data storage and processing workload 2019." lightbox="../ssdt/media/download-sql-server-data-tools-ssdt/data-workload-2019.png":::
+   :::image type="content" source="../ssdt/media/download-sql-server-data-tools-ssdt/data-workload-2019.png" alt-text="Screenshot of data storage and processing workload 2019." lightbox="../ssdt/media/download-sql-server-data-tools-ssdt/data-workload-2019.png":::
 
 For Analysis Services, Integration Services, or Reporting Services projects, you can install the appropriate [extensions](/visualstudio/ide/finding-and-using-visual-studio-extensions) from within Visual Studio with **Extensions** > **Manage Extensions** or from the [Marketplace](https://marketplace.visualstudio.com/search?term=services&target=VS&category=All%20categories&vsVersion=&sortBy=Relevance).
 
@@ -104,6 +104,7 @@ For Analysis Services, Integration Services, or Reporting Services projects, you
 ## Offline installation
 
 For scenarios where offline installation is required, such as low bandwidth or isolated networks, SSDT is available for offline installation.  Two approaches are available:
+
 - For a single machine, [Download All, then install](/visualstudio/install/create-an-offline-installation-of-visual-studio#use-the-download-all-then-install-feature)
 - For installation on one or more machines, [use the Visual Studio bootstrapper from the command line](/visualstudio/install/create-an-offline-installation-of-visual-studio#use-the-command-line-to-create-a-local-layout)
 

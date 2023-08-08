@@ -58,7 +58,7 @@ A full-text index includes one or more character-based columns in a table. These
     ```sql  
     SELECT product_id   
     FROM products   
-    WHERE CONTAINS(product_description, '"Snap Happy 100EZ"' OR FORMSOF(THESAURUS,'"Snap Happy"') OR '100EZ')   
+    WHERE CONTAINS(product_description, '"Snap Happy 100EZ" OR FORMSOF(THESAURUS,"Snap Happy") OR "100EZ"')
     AND product_cost < 200 ;  
     ```  
   

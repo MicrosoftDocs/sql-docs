@@ -10453,6 +10453,8 @@ items:
       items:
       - name: Configure advanced data Security
         href: sql-server/azure-arc/configure-advanced-data-security.md
+      - name: Certificate rotation
+        href: sql-server/azure-arc/rotate-certificates.md
     - name: FAQ
       href: sql-server/azure-arc/faq.yml
     - name: Data collection and reporting
@@ -11295,6 +11297,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-7105-database-engine-error.md
         - name: 7308
           href: relational-databases/errors-events/mssqlserver-7308-database-engine-error.md
+        - name: 7357
+          href: relational-databases/errors-events/mssqlserver-7357-database-engine-error.md
         - name: 7391
           href: relational-databases/errors-events/mssqlserver-7391-database-engine-error.md  
         - name: 7711

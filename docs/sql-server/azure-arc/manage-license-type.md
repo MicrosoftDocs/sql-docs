@@ -252,4 +252,5 @@ For more examples of Azure Resource Graph Queries, see [Starter Resource Graph q
 - [Review SQL Server 2022 Pricing](https://www.microsoft.com/sql-server/sql-server-2022-pricing)
 - [Install SQL Server 2022 using the pay-as-you-go activation option](../../database-engine/install-windows/install-sql-server.md)
 - [Frequently asked questions](faq.yml#billing)
+- [Configure automated patching for Arc-enabled SQL Servers preview](patch.md)
 

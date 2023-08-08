@@ -86,10 +86,11 @@ Some non-GUI clients such as [Invoke-sqlcmd](/powershell/module/sqlserver/invoke
 
 ## See also
 
-- [Tutorial: Set up Azure Active Directory authentication for SQL Server](azure-ad-authentication-sql-server-setup-tutorial.md)
 - [Azure Active Directory (Azure AD) authentication](/azure/active-directory/authentication/overview-authentication)
 - [Linked server for SQL Server with Azure Active Directory authentication](azure-ad-authentication-sql-server-linked-server.md)
 - [Tutorial: Using automation to set up the Azure Active Directory admin for SQL Server](azure-ad-authentication-sql-server-automation-setup-tutorial.md)
+- [Tutorial: Set up Azure Active Directory authentication for SQL Server](azure-ad-authentication-sql-server-setup-tutorial.md)
+- [Rotate certificates - Azure Arc-enabled SQL Server](../../../sql-server/azure-arc/rotate-certificates.md)
 
 ## Next steps
 

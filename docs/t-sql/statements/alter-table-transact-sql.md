@@ -503,6 +503,8 @@ When using Always Encrypted (without secure enclaves), if the column being modif
 
 When using Always Encrypted with secure enclaves, you can change any encryption setting, if the column encryption key protecting the column (and the new column encryption key, if you're changing the key) support enclave computations (encrypted with enclave-enabled column master keys). For details, see [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
+When you modify a column, SQL Server keeps track of each modification by adding a row in a system table and marks the previous column modification as dropped column. Therefore, in the rare case that you need to modify a column too many times, SQL Server may reach the record size limit. You may get error [511](../../relational-databases/errors-events/mssqlserver-511-database-engine-error.md) or 1708. To avoid these errors, either rebuild the clustered index on the table periodically or reduce the number of column modifications. 
+
 #### *column_name*  
 The name of the column to be altered, added, or dropped. The *column_name* maximum is 128 characters. For new columns, you can omit *column_name* for columns created with a **timestamp** data type. The name **timestamp** is used if you don't specify *column_name* for a **timestamp** data type column.
 

@@ -16,8 +16,8 @@ ms.custom:
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](../database/resource-limits-logical-server.md)
-> * [Azure SQL Managed Instance](resource-limits.md)
+> * [Azure SQL Database](../database/resource-limits-logical-server.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](resource-limits.md?view=azuresql-mi&preserve-view=true)
 
 This article provides an overview of the technical characteristics and resource limits for Azure SQL Managed Instance, and provides information about how to request an increase to these limits.
 

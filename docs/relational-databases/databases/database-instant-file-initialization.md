@@ -3,7 +3,7 @@ title: Database instant file initialization
 description: Learn about instant file initialization and how to enable it on your database. Instant file initialization (IFI) allows for faster file operations.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 08/07/2023
+ms.date: 08/08/2023
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
@@ -36,7 +36,7 @@ Historically, transaction log files could not be initialized instantaneously. Ho
 
 ## Enable instant file initialization
 
-Instant file initialization is only available if the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service startup account has been granted *SE_MANAGE_VOLUME_NAME*. Members of the Windows Administrator group have this right and can grant it to other users by adding them to the **Perform Volume Maintenance Tasks** security policy.  
+Instant file initialization of data files is only available if the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service startup account has been granted *SE_MANAGE_VOLUME_NAME*. Members of the Windows Administrator group have this right and can grant it to other users by adding them to the **Perform Volume Maintenance Tasks** security policy. The *SE_MANAGE_VOLUME_NAME* right is not required for instant file initialization of growth events up to 64 MB in the transaction log, which was introduced with the release of [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
 
 > [!IMPORTANT]
 > Some feature usage, such as [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md), can prevent instant file initialization.  

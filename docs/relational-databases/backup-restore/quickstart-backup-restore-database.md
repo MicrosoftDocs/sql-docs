@@ -76,7 +76,7 @@ To take a backup of your database, follow these steps:
 1. Under **Destination**, confirm that the path for your backup is correct. If you need to change the path, select **Remove** to remove the existing path, and then **Add** to type in a new path. You can use the ellipses to navigate to a specific file.
 1. Select **OK** to take a backup of your database.
 
-:::image type="content" source="media/quickstart-backup-restore-database/backup-db-ssms.png" alt-text="Take SQL backup" lightbox="media/quickstart-backup-restore-database/backup-db-ssms.png":::
+:::image type="content" source="media/quickstart-backup-restore-database/backup-db-ssms.png" alt-text="Screenshot of SQL Server Management Studio take backup." lightbox="media/quickstart-backup-restore-database/backup-db-ssms.png":::
 
 #### [T-SQL](#tab/t-sql)
 

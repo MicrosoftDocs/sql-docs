@@ -19,8 +19,8 @@ monikerRange: "= azuresql || = azuresql-db"
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](high-availability-sla.md)
-> * [Azure SQL Managed Instance](../managed-instance/high-availability-sla.md)
+> * [Azure SQL Database](high-availability-sla.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](../managed-instance/high-availability-sla.md?view=azuresql-mi&preserve-view=true)
 
 This article describes the high availability architecture in Azure SQL Database.
 

@@ -44,14 +44,8 @@ Connect as user that either has above roles or use [grantRolesToUser](https://ww
  
  ### Question 3
  
-**Question:** How do I collect profiler logs and what are the implications of enabling profiler? 
+**Question:** How do I collect Log Messages? 
 
-**Answer:** Profiling may have an effect on MongoDB performance, especially when configured with a profiling level of 2, or when using a low threshold value is used with a profiling level of 1. Profiling also consumes another disk space, so you would need to make sure you have enough space available. You would need to carefully consider any performance and other implications while enabling profiler. You should preferably enable it in a nonproduction environment or during off-peak hours. 
+**Answer:** You can locate the log file at this path /var/log/mongodb/mongodb.log, if the log file is not found, please check the MongoDB config file. 
 
-**Remediation actions:** To collect profile logs, follow the steps [here](https://www.mongodb.com/docs/manual/tutorial/manage-the-database-profiler/)
-
- ### Question 4
- 
-**Question:** How long should the profiler be left on?
-
-**Answer:** The duration for which you leave the profiler on depends upon your workload. You should leave it on long enough to capture all the regular operation patterns within your workload in the log file. Only the entries captured by the logs are assessed by the extension. The judgment regarding the right duration for your workload (for example, 2 hrs, 2 days or more) would be yours to take, based upon the known access patterns and their frequency. 
+**Remediation actions:** To know more about logs, refer [here](https://www.mongodb.com/docs/manual/reference/log-messages/)

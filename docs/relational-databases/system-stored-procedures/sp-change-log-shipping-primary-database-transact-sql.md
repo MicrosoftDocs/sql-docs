@@ -101,7 +101,7 @@ The length of time in minutes in which the history is retained. *@history_retent
 
 #### [ @backup_compression = ] *backup_compression_option*
 
-Specifies whether a log shipping configuration uses [backup compression](../../relational-databases/backup-restore/backup-compression-sql-server.md). This parameter is supported in Enterprise edition for [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] (and later versions), and all editions on [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] with Service Pack 1 (and later versions).
+Specifies whether a log shipping configuration uses [backup compression](../backup-restore/backup-compression-sql-server.md). This parameter is supported in Enterprise edition for [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] (and later versions), and all editions on [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] with Service Pack 1 (and later versions).
 
 - `0`: Disabled. Never compress log backups
 

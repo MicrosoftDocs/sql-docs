@@ -72,5 +72,5 @@ EXEC sp_add_maintenance_plan_db
 
 ## See also
 
-- [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md)
+- [Maintenance Plans](../maintenance-plans/maintenance-plans.md)
 - [Database Maintenance Plan stored procedures (Transact-SQL)](database-maintenance-plan-stored-procedures-transact-sql.md)

@@ -182,4 +182,4 @@ EXEC sys.sp_query_store_clear_hints @query_id = 39;
 - [Table Hints (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md)
 - [sp_query_store_clear_hints (Transact-SQL)](sys-sp-query-store-clear-hints-transact-sql.md)
 - [sys.query_store_query_hints (Transact-SQL)](../system-catalog-views/sys-query-store-query-hints-transact-sql.md)
-- [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
+- [Monitoring Performance By Using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md)

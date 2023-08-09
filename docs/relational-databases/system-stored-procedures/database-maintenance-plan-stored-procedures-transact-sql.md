@@ -35,4 +35,4 @@ dev_langs:
 ## See also
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
-- [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md)
+- [Maintenance Plans](../maintenance-plans/maintenance-plans.md)

@@ -897,7 +897,7 @@ ALTER INDEX idxcci_cci_target ON cci_target REORGANIZE WITH (COMPRESS_ALL_ROW_GR
 
 This example uses the `REORGANIZE` option to compress each CLOSED delta rowgroup into the columnstore as a compressed  rowgroup. This isn't necessary, but is useful when the tuple-mover isn't compressing CLOSED rowgroups fast enough.
 
-You can run both example in the `AdventureWorksDW` sample database.
+You can run both example in the [!INCLUDE [sssampledbdwobject-md](../../includes/sssampledbdwobject-md.md)] sample database.
 
 This sample will run REORGANIZE on all partitions.
 
@@ -920,7 +920,7 @@ The command `REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = ON )` compresses each O
 
 REORGANIZE combines rowgroups to fill rowgroups up to a maximum number of rows <= 1,024,576. Therefore, when you compress all OPEN and CLOSED rowgroups you won't end up with lots of compressed rowgroups that only have a few rows in them. You want rowgroups to be as full as possible to reduce the compressed size and improve query performance.
 
-The following examples use the `AdventureWorksDW2016` database.
+The following examples use the [!INCLUDE [sssampledbdwobject-md](../../includes/sssampledbdwobject-md.md)] database.
 
 This example moves all OPEN and CLOSED delta rowgroups into the columnstore index.
 
@@ -959,7 +959,7 @@ Applies to: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting 
 > [!NOTE]  
 > In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], `REORGANIZE` is only used to compress CLOSED rowgroups into the columnstore. The only way to perform defragmentation operations and to force all delta rowgroups into the columnstore is to rebuild the index.
 
-This example shows how to rebuild a clustered columnstore index and force all delta rowgroups into the columnstore. This first step prepares a table `FactInternetSales2` in the `AdventureWorksDW` database with a clustered columnstore index, and inserts data from the first four columns.
+This example shows how to rebuild a clustered columnstore index and force all delta rowgroups into the columnstore. This first step prepares a table `FactInternetSales2` in the [!INCLUDE [sssampledbdwobject-md](../../includes/sssampledbdwobject-md.md)] database with a clustered columnstore index, and inserts data from the first four columns.
 
 ```sql
 CREATE TABLE dbo.FactInternetSales2 (
@@ -1044,7 +1044,7 @@ GO
 
 ### A. Rebuild an index
 
-The following example rebuilds a single index on the `Employee` table in the `AdventureWorks2012` database.
+The following example rebuilds a single index on the `Employee` table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.
 
 ```sql
 ALTER INDEX PK_Employee_EmployeeID ON HumanResources.Employee REBUILD;
@@ -1052,7 +1052,7 @@ ALTER INDEX PK_Employee_EmployeeID ON HumanResources.Employee REBUILD;
 
 ### B. Rebuild all indexes on a table and specify options
 
-The following example specifies the keyword ALL. This rebuilds all indexes associated with the table `Production.Product` in the `AdventureWorks2012` database. Three options are specified.
+The following example specifies the keyword ALL. This rebuilds all indexes associated with the table `Production.Product` in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database. Three options are specified.
 
 ```sql
 ALTER INDEX ALL ON Production.Product
@@ -1077,7 +1077,7 @@ REBUILD WITH
 
 ### C. Reorganize an index with LOB compaction
 
-The following example reorganizes a single clustered index in the `AdventureWorks2012` database. Because the index contains a LOB data type in the leaf level, the statement also compacts all pages that contain the large object data. Specifying the `WITH (LOB_COMPACTION = ON)` option isn't required because the default value is ON.
+The following example reorganizes a single clustered index in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database. Because the index contains a LOB data type in the leaf level, the statement also compacts all pages that contain the large object data. Specifying the `WITH (LOB_COMPACTION = ON)` option isn't required because the default value is ON.
 
 ```sql
 ALTER INDEX PK_ProductPhoto_ProductPhotoID ON Production.ProductPhoto REORGANIZE WITH (LOB_COMPACTION = ON);
@@ -1085,7 +1085,7 @@ ALTER INDEX PK_ProductPhoto_ProductPhotoID ON Production.ProductPhoto REORGANIZE
 
 ### D. Set options on an index
 
-The following example sets several options on the index `AK_SalesOrderHeader_SalesOrderNumber` in the `AdventureWorks2012` database.
+The following example sets several options on the index `AK_SalesOrderHeader_SalesOrderNumber` in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.
 
 ```sql
 ALTER INDEX AK_SalesOrderHeader_SalesOrderNumber ON
@@ -1100,7 +1100,7 @@ GO
 
 ### E. Disable an index
 
-The following example disables a nonclustered index on the `Employee` table in the `AdventureWorks2012` database.
+The following example disables a nonclustered index on the `Employee` table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.
 
 ```sql
 ALTER INDEX IX_Employee_ManagerID ON HumanResources.Employee DISABLE;
@@ -1108,7 +1108,7 @@ ALTER INDEX IX_Employee_ManagerID ON HumanResources.Employee DISABLE;
 
 ### F. Disable constraints
 
-The following example disables a PRIMARY KEY constraint by disabling the PRIMARY KEY index in the `AdventureWorks2012` database. The FOREIGN KEY constraint on the underlying table is automatically disabled and warning message is displayed.
+The following example disables a PRIMARY KEY constraint by disabling the PRIMARY KEY index in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database. The FOREIGN KEY constraint on the underlying table is automatically disabled and warning message is displayed.
 
 ```sql
 ALTER INDEX PK_Department_DepartmentID ON HumanResources.Department DISABLE;
@@ -1142,7 +1142,7 @@ GO
 
 ### H. Rebuild a partitioned index
 
-The following example rebuilds a single partition, partition number `5`, of the partitioned index `IX_TransactionHistory_TransactionDate` in the `AdventureWorks2012` database. Partition 5 is rebuilt with `ONLINE=ON` and the 10 minutes wait time for the low priority lock applies separately to every lock acquired by index rebuild operation. If during this time the lock can't be obtained to complete index rebuild, the rebuild operation statement itself is aborted, due to `ABORT_AFTER_WAIT = SELF`.
+The following example rebuilds a single partition, partition number `5`, of the partitioned index `IX_TransactionHistory_TransactionDate` in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database. Partition 5 is rebuilt with `ONLINE=ON` and the 10 minutes wait time for the low priority lock applies separately to every lock acquired by index rebuild operation. If during this time the lock can't be obtained to complete index rebuild, the rebuild operation statement itself is aborted, due to `ABORT_AFTER_WAIT = SELF`.
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 

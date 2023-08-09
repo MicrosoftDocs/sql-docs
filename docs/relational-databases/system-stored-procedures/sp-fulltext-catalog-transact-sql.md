@@ -92,7 +92,7 @@ The caller is required to be member of the **db_owner** role. Depending on the a
 
 ### A. Create a full-text catalog
 
-This example creates an empty full-text catalog, `Cat_Desc`, in the `AdventureWorks2022` database.
+This example creates an empty full-text catalog, `Cat_Desc`, in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.
 
 ```sql
 USE AdventureWorks2022;
@@ -103,7 +103,7 @@ GO
 
 ### B. Rebuild a full-text catalog
 
-This example rebuilds an existing full-text catalog, `Cat_Desc`, in the `AdventureWorks2022` database.
+This example rebuilds an existing full-text catalog, `Cat_Desc`, in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.
 
 ```sql
 USE AdventureWorks2022;

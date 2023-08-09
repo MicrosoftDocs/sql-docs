@@ -56,7 +56,7 @@ HAS_DBACCESS ( 'database_name' )
  Requires membership in the public role.  
   
 ## Examples  
- The following example tests whether current user has access to the `AdventureWorks2022` database.  
+ The following example tests whether current user has access to the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql  
 SELECT HAS_DBACCESS('AdventureWorks2022');  

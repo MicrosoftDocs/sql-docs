@@ -983,7 +983,7 @@ CREATE INDEX IX_FF ON dbo.FactFinance (FinanceKey, DateKey, OrganizationKey DESC
 
 ### E. Create a unique nonclustered index
 
-The following example creates a unique nonclustered index on the `Name` column of the `Production.UnitMeasure` table in the `AdventureWorks2012` database. The index will enforce uniqueness on the data inserted into the `Name` column.
+The following example creates a unique nonclustered index on the `Name` column of the `Production.UnitMeasure` table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database. The index will enforce uniqueness on the data inserted into the `Name` column.
 
 ```sql
 CREATE UNIQUE INDEX AK_UnitMeasure_Name
@@ -1080,7 +1080,7 @@ Notice that none of the rows from the `Production.UnitMeasure` table were insert
 
 ### G. Using DROP_EXISTING to drop and re-create an index
 
-The following example drops and re-creates an existing index on the `ProductID` column of the `Production.WorkOrder` table in the `AdventureWorks2012` database by using the `DROP_EXISTING` option. The options `FILLFACTOR` and `PAD_INDEX` are also set.
+The following example drops and re-creates an existing index on the `ProductID` column of the `Production.WorkOrder` table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database by using the `DROP_EXISTING` option. The options `FILLFACTOR` and `PAD_INDEX` are also set.
 
 ```sql
 CREATE NONCLUSTERED INDEX IX_WorkOrder_ProductID
@@ -1163,7 +1163,7 @@ GO
 
 ### J. Create a partitioned index
 
-The following example creates a nonclustered partitioned index on `TransactionsPS1`, an existing partition scheme in the `AdventureWorks2012` database. This example assumes the partitioned index sample has been installed.
+The following example creates a nonclustered partitioned index on `TransactionsPS1`, an existing partition scheme in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database. This example assumes the partitioned index sample has been installed.
 
 ```sql
 CREATE NONCLUSTERED INDEX IX_TransactionHistory_ReferenceOrderID
@@ -1174,7 +1174,7 @@ GO
 
 ### K. Creating a filtered index
 
-The following example creates a filtered index on the Production.BillOfMaterials table in the `AdventureWorks2012` database. The filter predicate can include columns that are not key columns in the filtered index. The predicate in this example selects only the rows where EndDate is non-NULL.
+The following example creates a filtered index on the Production.BillOfMaterials table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database. The filter predicate can include columns that are not key columns in the filtered index. The predicate in this example selects only the rows where EndDate is non-NULL.
 
 ```sql
 CREATE NONCLUSTERED INDEX "FIBillOfMaterialsWithEndDate"

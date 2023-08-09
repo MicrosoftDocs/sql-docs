@@ -239,7 +239,7 @@ GO
 
 ### B. Truncate a database
 
-The following example shrinks the data and log files in the `AdventureWorks2022` sample database to the last assigned extent.
+The following example shrinks the data and log files in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample database to the last assigned extent.
 
 ```sql
 DBCC SHRINKDATABASE (AdventureWorks2022, TRUNCATEONLY);
@@ -254,7 +254,7 @@ DBCC SHRINKDATABASE (database_B, 10);
 
 ### D. Shrink a database with WAIT_AT_LOW_PRIORITY
 
-The following example attempts to reduce the size of the data and log files in the `AdventureWorks2022` database to allow for 20% free space in the database. If a lock can't be obtained within one minute, the shrink operation will abort.
+The following example attempts to reduce the size of the data and log files in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database to allow for 20% free space in the database. If a lock can't be obtained within one minute, the shrink operation will abort.
 
 ```sql
 DBCC SHRINKDATABASE ([AdventureWorks2022], 20) WITH WAIT_AT_LOW_PRIORITY (ABORT_AFTER_WAIT = SELF);

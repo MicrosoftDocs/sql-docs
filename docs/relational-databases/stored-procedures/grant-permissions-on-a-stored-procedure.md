@@ -7,7 +7,7 @@ ms.date: "08/09/2023"
 ms.service: sql
 ms.subservice: stored-procedures
 ms.topic: conceptual
-ms.custom = "UpdateFrequency5"
+ms.custom: "UpdateFrequency5"
 helpviewer_keywords:
   - "stored procedures [SQL Server], permissions"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"

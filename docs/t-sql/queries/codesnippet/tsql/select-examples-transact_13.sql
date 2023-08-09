@@ -1,4 +1,4 @@
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT SalesOrderID, SUM(LineTotal) AS SubTotal
 FROM Sales.SalesOrderDetail

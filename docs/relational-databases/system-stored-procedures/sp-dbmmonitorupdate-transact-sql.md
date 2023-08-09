@@ -60,7 +60,7 @@ sp_dbmmonitorupdate [ database_name ]
   
 ```  
 USE msdb;  
-EXEC sp_dbmmonitorupdate AdventureWorks2012 ;  
+EXEC sp_dbmmonitorupdate AdventureWorks2022 ;  
 ```  
   
 ## See Also  

@@ -64,7 +64,7 @@ The command(s) completed successfully.
 The Windows process spawned by `xp_cmdshell` has the same security rights as the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] service account.
 
 > [!CAUTION]  
-> `xp_cmdshell` is a powerful feature and disabled by default. `xp_cmdshell` can be enabled and disabled by using Policy-Based Management or by executing `sp_configure`. For more information, see [Surface area configuration](../../relational-databases/security/surface-area-configuration.md) and [xp_cmdshell (server configuration option)](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md). Using `xp_cmdshell` can trigger security audit tools.
+> `xp_cmdshell` is a powerful feature and disabled by default. `xp_cmdshell` can be enabled and disabled by using Policy-Based Management or by executing `sp_configure`. For more information, see [Surface area configuration](../security/surface-area-configuration.md) and [xp_cmdshell (server configuration option)](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md). Using `xp_cmdshell` can trigger security audit tools.
 
 `xp_cmdshell` operates synchronously. Control isn't returned to the caller until the command-shell command is completed. If `xp_cmdshell` is executed within a batch and returns an error, the batch will fail.
 
@@ -187,5 +187,5 @@ EXEC master..xp_cmdshell @cmd;
 
 - [General extended stored procedures (Transact-SQL)](general-extended-stored-procedures-transact-sql.md)
 - [xp_cmdshell (server configuration option)](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)
-- [Surface area configuration](../../relational-databases/security/surface-area-configuration.md)
+- [Surface area configuration](../security/surface-area-configuration.md)
 - [sp_xp_cmdshell_proxy_account (Transact-SQL)](sp-xp-cmdshell-proxy-account-transact-sql.md)

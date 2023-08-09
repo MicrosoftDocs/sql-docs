@@ -65,7 +65,7 @@ GO
   
  `-------------- ----------------- -------------------- ------------------------------`  
   
- `1              65538             MsxAccount           AdventureWorks2012\MsxAccount`  
+ `1              65538             MsxAccount           AdventureWorks2022\MsxAccount`  
   
 ## See Also  
  [SQL Server Agent Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   

@@ -79,7 +79,7 @@ helpviewer_keywords:
 3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md) to define a logical backup device for a tape. The example adds the tape backup device named `tapedump1`, with the physical name `\\.\tape0`.  
   
 ```sql  
-USE AdventureWorks2012 ;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_addumpdevice 'tape', 'tapedump1', '\\.\tape0' ;  
 GO  

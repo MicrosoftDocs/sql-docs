@@ -87,5 +87,5 @@ ProhibitedExtensions            exe,dll,vbs,js  Extensions not allowed in outgoi
 
 ## See also
 
-- [Database Mail](../../relational-databases/database-mail/database-mail.md)
+- [Database Mail](../database-mail/database-mail.md)
 - [Database Mail stored procedures (Transact-SQL)](database-mail-stored-procedures-transact-sql.md)

@@ -6,7 +6,7 @@ SET @article = N'SalesOrderHeader';
 -- Enable column-level conflict tracking.
 -- Changing this property requires that existing subscriptions
 -- be reinitialized and that a new snapshot be generated.
-USE [AdventureWorks2012]
+USE [AdventureWorks2022]
 EXEC sp_changemergearticle 
   @publication = @publication,
   @article = @article, 

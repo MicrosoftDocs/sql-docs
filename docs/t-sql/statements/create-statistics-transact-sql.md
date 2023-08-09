@@ -315,7 +315,7 @@ The following example creates the `NamePurchase` statistics for all rows in the 
 
 ```sql
 CREATE STATISTICS NamePurchase
-    ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)
+    ON AdventureWorks2022.Person.Person (BusinessEntityID, EmailPromotion)
     WITH FULLSCAN, NORECOMPUTE;
 ```
 
@@ -351,7 +351,7 @@ The following example creates the `NamePurchase` statistics for all rows in the 
 
 ```sql
 CREATE STATISTICS NamePurchase
-    ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)
+    ON AdventureWorks2022.Person.Person (BusinessEntityID, EmailPromotion)
     WITH FULLSCAN, PERSIST_SAMPLE_PERCENT = ON;
 ```
 

@@ -57,7 +57,7 @@ The **bcp** command contains the following qualifiers.
 At the Windows command prompt, enter the following `bcp` command:
 
 ```cmd
-bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-n.fmt
+bcp AdventureWorks2022.HumanResources.Department format nul -T -n -f Department-n.fmt
 ```
 
 The generated format file, `Department-n.fmt`, contains the following information:
@@ -88,7 +88,7 @@ The **bcp** command contains the following qualifiers.
 At the Windows command prompt, enter the following `bcp` command:
 
 ```cmd
-bcp AdventureWorks2012.HumanResources.Department format nul -c -f Department-c.fmt -T
+bcp AdventureWorks2022.HumanResources.Department format nul -c -f Department-c.fmt -T
 ```
 
 The generated format file, `Department-c.fmt`, contains the following information:
@@ -109,7 +109,7 @@ For more information, see [Non-XML Format Files &#40;SQL Server&#41;](../../rela
 To create a non-XML format file for Unicode native data for the `HumanResources.Department` table, use the following command:
 
 ```cmd
-bcp AdventureWorks2012.HumanResources.Department format nul -T -N -f Department-n.fmt
+bcp AdventureWorks2022.HumanResources.Department format nul -T -N -f Department-n.fmt
 ```
 
 For more information about how to use Unicode native data, see [Use Unicode Native Format to Import or Export Data &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md).
@@ -119,7 +119,7 @@ For more information about how to use Unicode native data, see [Use Unicode Nati
 To create a non-XML format file for Unicode character data for the `HumanResources.Department` table that uses default terminators, use the following command:
 
 ```cmd
-bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-w.fmt
+bcp AdventureWorks2022.HumanResources.Department format nul -T -w -f Department-w.fmt
 ```
 
 For more information about how to use Unicode character data, see [Use Unicode Character Format to Import or Export Data &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md).
@@ -189,7 +189,7 @@ The **bcp** command contains the following qualifiers.
 At the Windows command prompt, enter the following `bcp` command:
 
 ```cmd
-bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c.xml -t, -T
+bcp AdventureWorks2022.HumanResources.Department format nul -c -x -f Department-c.xml -t, -T
 ```
 
 The generated format file, `Department-c.xml`, contains the following XML elements:
@@ -229,7 +229,7 @@ The **bcp** command contains the following qualifiers.
 At the Windows command prompt, enter the following `bcp` command:
 
 ```cmd
-bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n.xml -n -T
+bcp AdventureWorks2022.HumanResources.Department format nul -x -f Department-n.xml -n -T
 ```
 
 The generated format file, `Department-n.xml`, contains the following XML elements:

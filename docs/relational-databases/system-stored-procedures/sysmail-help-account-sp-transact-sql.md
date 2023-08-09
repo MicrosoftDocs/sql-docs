@@ -112,6 +112,6 @@ account_id  name                         description                            
 
 ## See also
 
-- [Database Mail](../../relational-databases/database-mail/database-mail.md)
-- [Create a Database Mail Account](../../relational-databases/database-mail/create-a-database-mail-account.md)
+- [Database Mail](../database-mail/database-mail.md)
+- [Create a Database Mail Account](../database-mail/create-a-database-mail-account.md)
 - [Database Mail stored procedures (Transact-SQL)](database-mail-stored-procedures-transact-sql.md)

@@ -131,7 +131,7 @@ SCOPE_IDENTITY
  The `Person.ContactType` table has a maximum identity value of 20. If you insert a row into the table, `@@IDENTITY` and `SCOPE_IDENTITY()` return the same value.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 INSERT INTO Person.ContactType ([Name]) VALUES ('Assistant to the Manager');  
 GO  

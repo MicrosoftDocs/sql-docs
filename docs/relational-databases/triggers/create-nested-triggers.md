@@ -72,10 +72,10 @@ AS
  A recursive UPDATE trigger can be used to keep the `NoOfReports` column up-to-date as new employee records are inserted. The INSERT trigger updates the `NoOfReports` column of the manager record, which recursively updates the `NoOfReports` column of other records up the management hierarchy.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 -- Turn recursive triggers ON in the database.  
-ALTER DATABASE AdventureWorks2012  
+ALTER DATABASE AdventureWorks2022  
    SET RECURSIVE_TRIGGERS ON;  
 GO  
 CREATE TABLE dbo.emp_mgr (  

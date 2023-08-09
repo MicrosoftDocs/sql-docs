@@ -187,7 +187,7 @@ Class RMOTestEnv
     End Sub
 
     Public Shared Sub Initialize()
-        Dim subscriptionDbName As String = "AdventureWorks2012Replica"
+        Dim subscriptionDbName As String = "AdventureWorks2022Replica"
         Dim conn As ServerConnection = New ServerConnection(subscriberInstance)
         Dim NewDatabase As Database
         Dim subServer As Server = New Server(conn)
@@ -204,7 +204,7 @@ Class RMOTestEnv
         ' Set the server and database names
         Dim distributionDbName As String = "distribution"
         Dim publisherName As String = publisherInstance
-        Dim publicationDbName As String = "AdventureWorks2012"
+        Dim publicationDbName As String = "AdventureWorks2022"
 
         Dim distributionDb As DistributionDatabase
         Dim distributor As ReplicationServer
@@ -237,7 +237,7 @@ Class RMOTestEnv
             publisher.PublisherSecurity.WindowsAuthentication = True
             publisher.Create()
 
-            ' Enable AdventureWorks2012 as a publication database.
+            ' Enable AdventureWorks2022 as a publication database.
             publicationDb = New ReplicationDatabase(publicationDbName, conn)
 
             publicationDb.EnabledTransPublishing = True
@@ -316,7 +316,7 @@ Class RMOTestEnv
         Dim publisherName As String = publisherInstance
         Dim distributorName As String = subscriberInstance
         Dim distributionDbName As String = "distribution"
-        Dim publicationDbName As String = "AdventureWorks2012"
+        Dim publicationDbName As String = "AdventureWorks2022"
 
         ' Create connections to the Publisher and Distributor
         ' using Windows Authentication.
@@ -337,7 +337,7 @@ Class RMOTestEnv
             publisherConn.Connect()
             distributorConn.Connect()
 
-            ' Disable all publishing on the AdventureWorks2012 database.
+            ' Disable all publishing on the AdventureWorks2022 database.
             If publicationDb.LoadProperties() Then
                 If publicationDb.EnabledMergePublishing Then
                     publicationDb.EnabledMergePublishing = False
@@ -441,7 +441,7 @@ Class RMOTestEnv
         '<snippetrmo_vb_CreateTranPub>
         ' Set the Publisher, publication database, and publication names.
         Dim publicationName As String = "AdvWorksProductTran"
-        Dim publicationDbName As String = "AdventureWorks2012"
+        Dim publicationDbName As String = "AdventureWorks2022"
         Dim publisherName As String = publisherInstance
 
         Dim publicationDb As ReplicationDatabase
@@ -455,7 +455,7 @@ Class RMOTestEnv
             ' Connect to the Publisher.
             conn.Connect()
 
-            ' Enable the AdventureWorks2012 database for transactional publishing.
+            ' Enable the AdventureWorks2022 database for transactional publishing.
             publicationDb = New ReplicationDatabase(publicationDbName, conn)
 
             ' If the database exists and is not already enabled, 
@@ -541,7 +541,7 @@ Class RMOTestEnv
         ' and publication names.
         Dim publisherName As String = publisherInstance
         Dim publicationName As String = "AdvWorksProductTran"
-        Dim publicationDbName As String = "AdventureWorks2012"
+        Dim publicationDbName As String = "AdventureWorks2022"
 
         Dim publication As TransPublication
         Dim publicationDb As ReplicationDatabase
@@ -600,7 +600,7 @@ Class RMOTestEnv
         ' Set the Publisher, publication database, and publication names.
         Dim publisherName As String = publisherInstance
         Dim publicationName As String = "AdvWorksSalesOrdersMerge"
-        Dim publicationDbName As String = "AdventureWorks2012"
+        Dim publicationDbName As String = "AdventureWorks2022"
 
         Dim publicationDb As ReplicationDatabase
         Dim publication As MergePublication
@@ -680,7 +680,7 @@ Class RMOTestEnv
         ' Define the server, database, and publication names
         Dim publisherName As String = publisherInstance
         Dim publicationName As String = "AdvWorksSalesOrdersMerge"
-        Dim publicationDbName As String = "AdventureWorks2012"
+        Dim publicationDbName As String = "AdventureWorks2022"
 
         Dim publication As MergePublication
 
@@ -725,7 +725,7 @@ Class RMOTestEnv
         ' Define the server, database, and publication names
         Dim publisherName As String = publisherInstance
         Dim publicationName As String = "AdvWorksProductTran"
-        Dim publicationDbName As String = "AdventureWorks2012"
+        Dim publicationDbName As String = "AdventureWorks2022"
 
         Dim publication As TransPublication
 
@@ -782,7 +782,7 @@ Class RMOTestEnv
         ' and publication names.
         Dim publisherName As String = publisherInstance
         Dim publicationName As String = "AdvWorksSalesOrdersMerge"
-        Dim publicationDbName As String = "AdventureWorks2012"
+        Dim publicationDbName As String = "AdventureWorks2022"
 
         Dim publication As MergePublication
         Dim publicationDb As ReplicationDatabase
@@ -842,7 +842,7 @@ Class RMOTestEnv
         ' Define the Publisher, publication, and article names.
         Dim publisherName As String = publisherInstance
         Dim publicationName As String = "AdvWorksProductTran"
-        Dim publicationDbName As String = "AdventureWorks2012"
+        Dim publicationDbName As String = "AdventureWorks2022"
         Dim articleName As String = "Product"
         Dim schemaOwner As String = "Production"
 
@@ -901,7 +901,7 @@ Class RMOTestEnv
         ' Define the Publisher and publication names.
         Dim publisherName As String = publisherInstance
         Dim publicationName As String = "AdvWorksSalesOrdersMerge"
-        Dim publicationDbName As String = "AdventureWorks2012"
+        Dim publicationDbName As String = "AdventureWorks2022"
 
         ' Specify article names.
         Dim articleName1 As String = "Employee"
@@ -1034,8 +1034,8 @@ Class RMOTestEnv
         Dim publicationName As String = "AdvWorksProductTran"
         Dim publisherName As String = publisherInstance
         Dim subscriberName As String = subscriberInstance
-        Dim subscriptionDbName As String = "AdventureWorks2012Replica"
-        Dim publicationDbName As String = "AdventureWorks2012"
+        Dim subscriptionDbName As String = "AdventureWorks2022Replica"
+        Dim publicationDbName As String = "AdventureWorks2022"
 
         'Create a connection to the Publisher.
         Dim conn As ServerConnection = New ServerConnection(publisherName)
@@ -1101,8 +1101,8 @@ Class RMOTestEnv
         Dim publicationName As String = "AdvWorksProductTran"
         Dim publisherName As String = publisherInstance
         Dim subscriberName As String = subscriberInstance
-        Dim subscriptionDbName As String = "AdventureWorks2012Replica"
-        Dim publicationDbName As String = "AdventureWorks2012"
+        Dim subscriptionDbName As String = "AdventureWorks2022Replica"
+        Dim publicationDbName As String = "AdventureWorks2022"
 
         'Create connections to the Publisher and Subscriber.
         Dim subscriberConn As ServerConnection = New ServerConnection(subscriberName)
@@ -1192,8 +1192,8 @@ Class RMOTestEnv
         Dim publicationName As String = "AdvWorksSalesOrdersMerge"
         Dim publisherName As String = publisherInstance
         Dim subscriberName As String = subscriberInstance
-        Dim subscriptionDbName As String = "AdventureWorks2012Replica"
-        Dim publicationDbName As String = "AdventureWorks2012"
+        Dim subscriptionDbName As String = "AdventureWorks2022Replica"
+        Dim publicationDbName As String = "AdventureWorks2022"
         Dim hostname As String = "adventure-works\garrett1"
 
         'Create connections to the Publisher and Subscriber.
@@ -1278,8 +1278,8 @@ Class RMOTestEnv
         Dim publicationName As String = "AdvWorksSalesOrdersMerge"
         Dim publisherName As String = publisherInstance
         Dim subscriberName As String = subscriberInstance
-        Dim subscriptionDbName As String = "AdventureWorks2012Replica"
-        Dim publicationDbName As String = "AdventureWorks2012"
+        Dim subscriptionDbName As String = "AdventureWorks2022Replica"
+        Dim publicationDbName As String = "AdventureWorks2022"
         Dim hostname As String = "adventure-works\garrett1"
 
         'Create a connection to the Publisher.
@@ -1355,8 +1355,8 @@ Class RMOTestEnv
         Dim publicationName As String = "AdvWorksSalesOrdersMerge"
         Dim publisherName As String = publisherInstance
         Dim subscriberName As String = subscriberInstance
-        Dim subscriptionDbName As String = "AdventureWorks2012Replica"
-        Dim publicationDbName As String = "AdventureWorks2012"
+        Dim subscriptionDbName As String = "AdventureWorks2022Replica"
+        Dim publicationDbName As String = "AdventureWorks2022"
 
         'Create connections to the Publisher and Subscriber.
         Dim subscriberConn As ServerConnection = New ServerConnection(subscriberName)
@@ -1419,8 +1419,8 @@ Class RMOTestEnv
         Dim publicationName As String = "AdvWorksProductTran"
         Dim publisherName As String = publisherInstance
         Dim subscriberName As String = subscriberInstance
-        Dim subscriptionDbName As String = "AdventureWorks2012Replica"
-        Dim publicationDbName As String = "AdventureWorks2012"
+        Dim subscriptionDbName As String = "AdventureWorks2022Replica"
+        Dim publicationDbName As String = "AdventureWorks2022"
 
         'Create connections to the Publisher and Subscriber.
         Dim subscriberConn As ServerConnection = New ServerConnection(subscriberName)
@@ -1483,8 +1483,8 @@ Class RMOTestEnv
         Dim publicationName As String = "AdvWorksProductTran"
         Dim publisherName As String = publisherInstance
         Dim subscriberName As String = subscriberInstance
-        Dim subscriptionDbName As String = "AdventureWorks2012Replica"
-        Dim publicationDbName As String = "AdventureWorks2012"
+        Dim subscriptionDbName As String = "AdventureWorks2022Replica"
+        Dim publicationDbName As String = "AdventureWorks2022"
 
         'Create a connection to the Publisher.
         Dim conn As ServerConnection = New ServerConnection(publisherName)
@@ -1529,8 +1529,8 @@ Class RMOTestEnv
         Dim publicationName As String = "AdvWorksSalesOrdersMerge"
         Dim publisherName As String = publisherInstance
         Dim subscriberName As String = subscriberInstance
-        Dim subscriptionDbName As String = "AdventureWorks2012Replica"
-        Dim publicationDbName As String = "AdventureWorks2012"
+        Dim subscriptionDbName As String = "AdventureWorks2022Replica"
+        Dim publicationDbName As String = "AdventureWorks2022"
 
         'Create a connection to the Publisher.
         Dim conn As ServerConnection = New ServerConnection(publisherName)
@@ -1574,8 +1574,8 @@ Class RMOTestEnv
         Dim subscriberName As String = subscriberInstance
         Dim publisherName As String = publisherInstance
         Dim publicationName As String = "AdvWorksProductTran"
-        Dim subscriptionDbName As String = "AdventureWorks2012Replica"
-        Dim publicationDbName As String = "AdventureWorks2012"
+        Dim subscriptionDbName As String = "AdventureWorks2022Replica"
+        Dim publicationDbName As String = "AdventureWorks2022"
 
         ' Create a connection to the Subscriber.
         Dim conn As ServerConnection = New ServerConnection(subscriberName)
@@ -1632,8 +1632,8 @@ Class RMOTestEnv
         Dim subscriberName As String = subscriberInstance
         Dim publisherName As String = publisherInstance
         Dim publicationName As String = "AdvWorksProductTran"
-        Dim subscriptionDbName As String = "AdventureWorks2012Replica"
-        Dim publicationDbName As String = "AdventureWorks2012"
+        Dim subscriptionDbName As String = "AdventureWorks2022Replica"
+        Dim publicationDbName As String = "AdventureWorks2022"
 
         ' Create a connection to the Publisher.
         Dim conn As ServerConnection = New ServerConnection(publisherName)
@@ -1684,8 +1684,8 @@ Class RMOTestEnv
         Dim subscriberName As String = subscriberInstance
         Dim publisherName As String = publisherInstance
         Dim publicationName As String = "AdvWorksProductTran"
-        Dim publicationDbName As String = "AdventureWorks2012"
-        Dim subscriptionDbName As String = "AdventureWorks2012Replica"
+        Dim publicationDbName As String = "AdventureWorks2022"
+        Dim subscriptionDbName As String = "AdventureWorks2022Replica"
 
         ' Create a connection to the Subscriber.
         Dim conn As ServerConnection = New ServerConnection(subscriberName)
@@ -1727,8 +1727,8 @@ Class RMOTestEnv
         Dim subscriberName As String = subscriberInstance
         Dim publisherName As String = publisherInstance
         Dim publicationName As String = "AdvWorksProductTran"
-        Dim subscriptionDbName As String = "AdventureWorks2012Replica"
-        Dim publicationDbName As String = "AdventureWorks2012"
+        Dim subscriptionDbName As String = "AdventureWorks2022Replica"
+        Dim publicationDbName As String = "AdventureWorks2022"
 
         ' Create a connection to the Publisher.
         Dim conn As ServerConnection = New ServerConnection(publisherName)
@@ -1771,8 +1771,8 @@ Class RMOTestEnv
         Dim subscriberName As String = subscriberInstance
         Dim publisherName As String = publisherInstance
         Dim publicationName As String = "AdvWorksSalesOrdersMerge"
-        Dim publicationDbName As String = "AdventureWorks2012"
-        Dim subscriptionDbName As String = "AdventureWorks2012Replica"
+        Dim publicationDbName As String = "AdventureWorks2022"
+        Dim subscriptionDbName As String = "AdventureWorks2022Replica"
 
         ' Create a connection to the Subscriber.
         Dim conn As ServerConnection = New ServerConnection(subscriberName)
@@ -1814,8 +1814,8 @@ Class RMOTestEnv
         Dim subscriberName As String = subscriberInstance
         Dim publisherName As String = publisherInstance
         Dim publicationName As String = "AdvWorksSalesOrdersMerge"
-        Dim subscriptionDbName As String = "AdventureWorks2012Replica"
-        Dim publicationDbName As String = "AdventureWorks2012"
+        Dim subscriptionDbName As String = "AdventureWorks2022Replica"
+        Dim publicationDbName As String = "AdventureWorks2022"
 
         ' Create a connection to the Subscriber.
         Dim conn As ServerConnection = New ServerConnection(subscriberName)
@@ -1872,8 +1872,8 @@ Class RMOTestEnv
         Dim subscriberName As String = subscriberInstance
         Dim publisherName As String = publisherInstance
         Dim publicationName As String = "AdvWorksSalesOrdersMerge"
-        Dim subscriptionDbName As String = "AdventureWorks2012Replica"
-        Dim publicationDbName As String = "AdventureWorks2012"
+        Dim subscriptionDbName As String = "AdventureWorks2022Replica"
+        Dim publicationDbName As String = "AdventureWorks2022"
 
         ' Create a connection to the Publisher.
         Dim conn As ServerConnection = New ServerConnection(publisherName)
@@ -1926,8 +1926,8 @@ Class RMOTestEnv
         Dim subscriberName As String = subscriberInstance
         Dim publisherName As String = publisherInstance
         Dim publicationName As String = "AdvWorksSalesOrdersMerge"
-        Dim subscriptionDbName As String = "AdventureWorks2012Replica"
-        Dim publicationDbName As String = "AdventureWorks2012"
+        Dim subscriptionDbName As String = "AdventureWorks2022Replica"
+        Dim publicationDbName As String = "AdventureWorks2022"
 
         ' Create a connection to the Publisher.
         Dim conn As ServerConnection = New ServerConnection(publisherName)
@@ -1969,7 +1969,7 @@ Class RMOTestEnv
         ' Set the Publisher, publication database, and publication names.
         Dim publisherName As String = publisherInstance
         Dim publicationName As String = "AdvWorksSalesOrdersMerge"
-        Dim publicationDbName As String = "AdventureWorks2012"
+        Dim publicationDbName As String = "AdventureWorks2022"
 
         Dim publicationDb As ReplicationDatabase
         Dim publication As MergePublication
@@ -2054,8 +2054,8 @@ Class RMOTestEnv
         Dim publicationName As String = "AdvWorksSalesOrdersMerge"
         Dim publisherName As String = publisherInstance
         Dim subscriberName As String = subscriberInstance
-        Dim subscriptionDbName As String = "AdventureWorks2012Replica"
-        Dim publicationDbName As String = "AdventureWorks2012"
+        Dim subscriptionDbName As String = "AdventureWorks2022Replica"
+        Dim publicationDbName As String = "AdventureWorks2022"
         Dim hostname As String = "adventure-works\garrett1"
         Dim webSyncUrl As String = "https://" + publisherInstance + "/WebSync/replisapi.dll"
 
@@ -2153,8 +2153,8 @@ Class RMOTestEnv
         Dim publicationName As String = "AdvWorksSalesOrdersMerge"
         Dim publisherName As String = publisherInstance
         Dim subscriberName As String = subscriberInstance
-        Dim subscriptionDbName As String = "AdventureWorks2012Replica"
-        Dim publicationDbName As String = "AdventureWorks2012"
+        Dim subscriptionDbName As String = "AdventureWorks2022Replica"
+        Dim publicationDbName As String = "AdventureWorks2022"
 
         'Create connections to the Publisher and Subscriber.
         Dim subscriberConn As ServerConnection = New ServerConnection(subscriberName)
@@ -2236,8 +2236,8 @@ Class RMOTestEnv
         Dim subscriberName As String = subscriberInstance
         Dim publisherName As String = publisherInstance
         Dim publicationName As String = "AdvWorksSalesOrdersMerge"
-        Dim subscriptionDbName As String = "AdventureWorks2012Replica"
-        Dim publicationDbName As String = "AdventureWorks2012"
+        Dim subscriptionDbName As String = "AdventureWorks2022Replica"
+        Dim publicationDbName As String = "AdventureWorks2022"
         Dim hostname As String = "adventure-works\garrett1"
         Dim webSyncUrl As String = "https://" + publisherInstance + "/SalesOrders/replisapi.dll"
 
@@ -2307,7 +2307,7 @@ Class RMOTestEnv
         '<snippetrmo_vb_GenerateSnapshot_WithJob>
         ' Set the Publisher, publication database, and publication names.
         Dim publicationName As String = "AdvWorksProductTran"
-        Dim publicationDbName As String = "AdventureWorks2012"
+        Dim publicationDbName As String = "AdventureWorks2022"
         Dim publisherName As String = publisherInstance
 
         Dim publication As TransPublication
@@ -2347,7 +2347,7 @@ Class RMOTestEnv
         '<snippetrmo_vb_GenerateSnapshot>
         ' Set the Publisher, publication database, and publication names.
         Dim publicationName As String = "AdvWorksProductTran"
-        Dim publicationDbName As String = "AdventureWorks2012"
+        Dim publicationDbName As String = "AdventureWorks2022"
         Dim publisherName As String = publisherInstance
         Dim distributorName As String = publisherInstance
 
@@ -2379,7 +2379,7 @@ Class RMOTestEnv
         '<snippetrmo_vb_GenerateMergeSnapshot>
         ' Set the Publisher, publication database, and publication names.
         Dim publicationName As String = "AdvWorksSalesOrdersMerge"
-        Dim publicationDbName As String = "AdventureWorks2012"
+        Dim publicationDbName As String = "AdventureWorks2022"
         Dim publisherName As String = publisherInstance
         Dim distributorName As String = publisherInstance
 
@@ -2411,7 +2411,7 @@ Class RMOTestEnv
         '<snippetrmo_vb_GenerateFilteredSnapshot>
         ' Set the Publisher, publication database, and publication names.
         Dim publicationName As String = "AdvWorksSalesOrdersMerge"
-        Dim publicationDbName As String = "AdventureWorks2012"
+        Dim publicationDbName As String = "AdventureWorks2022"
         Dim publisherName As String = publisherInstance
         Dim distributorName As String = publisherInstance
 
@@ -2447,7 +2447,7 @@ Class RMOTestEnv
         ' Define the server, database, and publication names
         Dim publisherName As String = publisherInstance
         Dim publicationName As String = "AdvWorksSalesOrdersMerge"
-        Dim publicationDbName As String = "AdventureWorks2012"
+        Dim publicationDbName As String = "AdventureWorks2022"
         Dim distributorName As String = publisherInstance
 
         Dim publication As MergePublication
@@ -2620,7 +2620,7 @@ Class RMOTestEnv
         ' Define the Publisher, publication, and article names.
         Dim publisherName As String = publisherInstance
         Dim publicationName As String = "AdvWorksSalesOrdersMerge"
-        Dim publicationDbName As String = "AdventureWorks2012"
+        Dim publicationDbName As String = "AdventureWorks2022"
         Dim articleName As String = "SalesOrderHeader"
 
         ' Set the friendly name of the business logic handler.
@@ -2666,8 +2666,8 @@ Class RMOTestEnv
         Dim subscriberName As String = subscriberInstance
         Dim publisherName As String = publisherInstance
         Dim publicationName As String = "AdvWorksProductTran"
-        Dim publicationDbName As String = "AdventureWorks2012"
-        Dim subscriptionDbName As String = "AdventureWorks2012Replica"
+        Dim publicationDbName As String = "AdventureWorks2022"
+        Dim subscriptionDbName As String = "AdventureWorks2022Replica"
 
         ' Create a connection to the Subscriber.
         Dim conn As ServerConnection = New ServerConnection(subscriberName)
@@ -2711,8 +2711,8 @@ Class RMOTestEnv
         Dim subscriberName As String = subscriberInstance
         Dim publisherName As String = publisherInstance
         Dim publicationName As String = "AdvWorksSalesOrdersMerge"
-        Dim publicationDbName As String = "AdventureWorks2012"
-        Dim subscriptionDbName As String = "AdventureWorks2012Replica"
+        Dim publicationDbName As String = "AdventureWorks2022"
+        Dim subscriptionDbName As String = "AdventureWorks2022Replica"
 
         ' Create a connection to the Subscriber.
         Dim conn As ServerConnection = New ServerConnection(subscriberName)
@@ -2804,7 +2804,7 @@ Class RMOTestEnv
         ' Define the server, database, and publication names
         Dim publisherName As String = publisherInstance
         Dim publicationName As String = "AdvWorksProductTran"
-        Dim publicationDbName As String = "AdventureWorks2012"
+        Dim publicationDbName As String = "AdventureWorks2022"
 
         Dim publication As TransPublication
 
@@ -2851,9 +2851,9 @@ Class RMOTestEnv
         ' Define the server, database, and publication names
         Dim publisherName As String = publisherInstance
         Dim publicationName As String = "AdvWorksSalesOrdersMerge"
-        Dim publicationDbName As String = "AdventureWorks2012"
+        Dim publicationDbName As String = "AdventureWorks2022"
         Dim subscriberName As String = subscriberInstance
-        Dim subscriptionDbName As String = "AdventureWorks2012Replica"
+        Dim subscriptionDbName As String = "AdventureWorks2022Replica"
 
         Dim publication As MergePublication
 
@@ -2898,7 +2898,7 @@ Class RMOTestEnv
         ' Define the Publisher and publication names.
         Dim publisherName As String = publisherInstance
         Dim publicationName As String = "AdvWorksSalesOrdersMerge"
-        Dim publicationDbName As String = "AdventureWorks2012"
+        Dim publicationDbName As String = "AdventureWorks2022"
 
         ' Specify article names.
         Dim articleName1 As String = "SalesOrderHeader"
@@ -2997,8 +2997,8 @@ Class RMOTestEnv
         Dim publicationName As String = "AdvWorksSalesOrdersMerge"
         Dim publisherName As String = publisherInstance
         Dim subscriberName As String = subscriberInstance
-        Dim subscriptionDbName As String = "AdventureWorks2012Replica"
-        Dim publicationDbName As String = "AdventureWorks2012"
+        Dim subscriptionDbName As String = "AdventureWorks2022Replica"
+        Dim publicationDbName As String = "AdventureWorks2022"
         Dim hostname As String = "adventure-works\\garrett1"
         Dim webSyncUrl As String = "https://" + publisherInstance + "/WebSync/replisapi.dll"
 

@@ -64,7 +64,7 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
  The following example returns information about the filegroups in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_helpfilegroup;  
 GO  
@@ -74,7 +74,7 @@ GO
  The following example returns information for all files in the `PRIMARY` filegroup in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_helpfilegroup 'PRIMARY';  
 GO  

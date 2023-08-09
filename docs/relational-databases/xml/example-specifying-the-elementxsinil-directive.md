@@ -20,7 +20,7 @@ When you specify the ELEMENT directive to retrieve element-centric XML, if the c
 The following query constructs XML that includes an employee address. For `AddressLine2` and `City` columns, the column names specify the `ELEMENTXSINIL` directive. This generates the element for NULL values in the `AddressLine2` and `City` columns in the rowset.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT 1    as Tag,
        NULL as Parent,

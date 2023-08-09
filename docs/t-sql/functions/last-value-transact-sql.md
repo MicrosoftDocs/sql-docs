@@ -76,7 +76,7 @@ The same type as *scalar_expression*.
 The following example returns the hire date of the last employee in each department for the given salary (`Rate`). The `PARTITION BY` clause partitions the employees by department and the `LAST_VALUE` function is applied to each partition independently. The `ORDER BY` clause specified in the `OVER` clause determines the logical order in which the `LAST_VALUE` function is applied to the rows in each partition.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT Department
     , LastName
@@ -122,7 +122,7 @@ The following example uses the `FIRST_VALUE` and `LAST_VALUE` functions in compu
 The clause `RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING` is required in this example for the non-zero values to be returned in the `DifferenceFromLastQuarter` column. The default range is `RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW`. In this example, using that default range (or not including a range, resulting in the default being used) would result in zeroes being returned in the `DifferenceFromLastQuarter` column. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../queries/select-over-clause-transact-sql.md).
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT BusinessEntityID
     , DATEPART(QUARTER, QuotaDate) AS Quarter

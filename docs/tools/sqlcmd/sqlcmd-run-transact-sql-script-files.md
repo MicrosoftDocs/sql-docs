@@ -28,7 +28,7 @@ Use **sqlcmd** to run a Transact-SQL script file. A Transact-SQL script file is 
 1. Copy and paste the following Transact-SQL code into Notepad:
 
     ```
-    USE AdventureWorks2012;
+    USE AdventureWorks2022;
     GO
     SELECT p.FirstName + ' ' + p.LastName AS 'Employee Name',
     a.AddressLine1, a.AddressLine2 , a.City, a.PostalCode

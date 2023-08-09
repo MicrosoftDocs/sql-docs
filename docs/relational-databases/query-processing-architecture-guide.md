@@ -210,7 +210,7 @@ No other functions or operators are evaluated by the Query Optimizer during card
 Consider this stored procedure:
 
 ```sql
-USE AdventureWorks2014;
+USE AdventureWorks2022;
 GO
 CREATE PROCEDURE MyProc( @d datetime )
 AS
@@ -224,7 +224,7 @@ During optimization of the `SELECT` statement in the procedure, the Query Optimi
 Now consider an example similar to the previous one, except that a local variable `@d2` replaces `@d+1` in the query and the expression is evaluated in a SET statement instead of in the query.
 
 ```sql
-USE AdventureWorks2014;
+USE AdventureWorks2022;
 GO
 CREATE PROCEDURE MyProc2( @d datetime )
 AS
@@ -263,7 +263,7 @@ When an [!INCLUDE[tsql](../includes/tsql-md.md)] statement references a nonindex
 For example, consider the following view:
 
 ```sql
-USE AdventureWorks2014;
+USE AdventureWorks2022;
 GO
 CREATE VIEW EmployeeName AS
 SELECT h.BusinessEntityID, p.LastName, p.FirstName
@@ -278,17 +278,17 @@ Based on this view, both of these [!INCLUDE[tsql](../includes/tsql-md.md)] state
 ```sql
 /* SELECT referencing the EmployeeName view. */
 SELECT LastName AS EmployeeLastName, SalesOrderID, OrderDate
-FROM AdventureWorks2014.Sales.SalesOrderHeader AS soh
-JOIN AdventureWorks2014.dbo.EmployeeName AS EmpN
+FROM AdventureWorks2022.Sales.SalesOrderHeader AS soh
+JOIN AdventureWorks2022.dbo.EmployeeName AS EmpN
   ON (soh.SalesPersonID = EmpN.BusinessEntityID)
 WHERE OrderDate > '20020531';
 
 /* SELECT referencing the Person and Employee tables directly. */
 SELECT LastName AS EmployeeLastName, SalesOrderID, OrderDate
-FROM AdventureWorks2014.HumanResources.Employee AS e
-JOIN AdventureWorks2014.Sales.SalesOrderHeader AS soh
+FROM AdventureWorks2022.HumanResources.Employee AS e
+JOIN AdventureWorks2022.Sales.SalesOrderHeader AS soh
   ON soh.SalesPersonID = e.BusinessEntityID
-JOIN AdventureWorks2014.Person.Person AS p
+JOIN AdventureWorks2022.Person.Person AS p
   ON e.BusinessEntityID =p.BusinessEntityID
 WHERE OrderDate > '20020531';
 ```
@@ -300,7 +300,7 @@ The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio Sho
 Hints that are placed on views in a query may conflict with other hints that are discovered when the view is expanded to access its base tables. When this occurs, the query returns an error. For example, consider the following view that contains a table hint in its definition:
 
 ```sql
-USE AdventureWorks2014;
+USE AdventureWorks2022;
 GO
 CREATE VIEW Person.AddrState WITH SCHEMABINDING AS
 SELECT a.AddressID, a.AddressLine1,
@@ -494,7 +494,7 @@ When any [!INCLUDE[tsql](../includes/tsql-md.md)] statement is executed in [!INC
 The algorithms to match new [!INCLUDE[tsql](../includes/tsql-md.md)] statements to existing, unused execution plans in the plan cache require that all object references be fully qualified. For example, assume that `Person` is the default schema for the user executing the below `SELECT` statements. While in this example it isn't required that the `Person` table is fully qualified to execute, it means that the second statement isn't matched with an existing plan, but the third is matched:
 
 ```sql
-USE AdventureWorks2014;
+USE AdventureWorks2022;
 GO
 SELECT * FROM Person;
 GO
@@ -843,13 +843,13 @@ The only difference between the following two `SELECT` statements is the values 
 
 ```sql
 SELECT *
-FROM AdventureWorks2014.Production.Product
+FROM AdventureWorks2022.Production.Product
 WHERE ProductSubcategoryID = 1;
 ```
 
 ```sql
 SELECT *
-FROM AdventureWorks2014.Production.Product
+FROM AdventureWorks2022.Production.Product
 WHERE ProductSubcategoryID = 4;
 ```
 
@@ -864,7 +864,7 @@ Separating constants from the [!INCLUDE[tsql](../includes/tsql-md.md)] statement
   SET @MyIntParm = 1
   EXEC sp_executesql
      N'SELECT *
-     FROM AdventureWorks2014.Production.Product
+     FROM AdventureWorks2022.Production.Product
      WHERE ProductSubcategoryID = @Parm',
      N'@Parm INT',
      @MyIntParm
@@ -881,7 +881,7 @@ Separating constants from the [!INCLUDE[tsql](../includes/tsql-md.md)] statement
     ```vb
     SQLExecDirect(hstmt,
       "SELECT *
-      FROM AdventureWorks2014.Production.Product
+      FROM AdventureWorks2022.Production.Product
       WHERE ProductSubcategoryID = ?",
       SQL_NTS);
      ```
@@ -913,19 +913,19 @@ If a [!INCLUDE[tsql](../includes/tsql-md.md)] statement is executed without para
 Consider this statement:
 
 ```sql
-SELECT * FROM AdventureWorks2014.Production.Product
+SELECT * FROM AdventureWorks2022.Production.Product
 WHERE ProductSubcategoryID = 1;
 ```
 
 The value 1 at the end of the statement can be specified as a parameter. The relational engine builds the execution plan for this batch as if a parameter had been specified in place of the value 1. Because of this simple parameterization, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] recognizes that the following two statements generate essentially the same execution plan and reuses the first plan for the second statement:
 
 ```sql
-SELECT * FROM AdventureWorks2014.Production.Product
+SELECT * FROM AdventureWorks2022.Production.Product
 WHERE ProductSubcategoryID = 1;
 ```
 
 ```sql
-SELECT * FROM AdventureWorks2014.Production.Product
+SELECT * FROM AdventureWorks2022.Production.Product
 WHERE ProductSubcategoryID = 4;
 ```
 
@@ -1024,7 +1024,7 @@ Preparing a statement is more effective if parameter markers are used. For examp
 Using the first way, the application can execute a separate query for each product requested:
 
 ```sql
-SELECT * FROM AdventureWorks2014.Production.Product
+SELECT * FROM AdventureWorks2022.Production.Product
 WHERE ProductID = 63;
 ```
 
@@ -1033,7 +1033,7 @@ Using the second way, the application does the following:
 1. Prepares a statement that contains a parameter marker (?):
 
    ```sql
-   SELECT * FROM AdventureWorks2014.Production.Product
+   SELECT * FROM AdventureWorks2022.Production.Product
    WHERE ProductID = ?;
    ```
 
@@ -1303,7 +1303,7 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports two me
 
   ```sql
   SELECT JobTitle, HireDate
-  FROM DeptSQLSrvr.AdventureWorks2014.HumanResources.Employee;
+  FROM DeptSQLSrvr.AdventureWorks2022.HumanResources.Employee;
   ```
 
   The linked server name can also be specified in an `OPENQUERY` statement to open a rowset from the OLE DB data source. This rowset can then be referenced like a table in [!INCLUDE[tsql](../includes/tsql-md.md)] statements.

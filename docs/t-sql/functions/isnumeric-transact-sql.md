@@ -60,7 +60,7 @@ ISNUMERIC ( expression )
  The following example uses `ISNUMERIC` to return all the postal codes that are not numeric values.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT City, PostalCode  
 FROM Person.Address   

@@ -141,7 +141,7 @@ sys.dm_sql_referenced_entities (
  The following example returns the entities (tables and columns) that are referenced by the database-level DDL trigger `ddlDatabaseTriggerLog`.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT
         referenced_schema_name,
@@ -161,7 +161,7 @@ GO
  The following example returns the entities that are referenced by the user-defined function `dbo.ufnGetContactInformation`.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT
         referenced_schema_name,
@@ -296,7 +296,7 @@ GO
  The following example returns the objects and column dependencies of the stored procedure `HumanResources.uspUpdateEmployeePersonalInfo`. This procedure updates the columns `NationalIDNumber`, `BirthDate,``MaritalStatus`, and `Gender` of the `Employee` table based on a specified `BusinessEntityID` value. Another stored procedure, `upsLogError` is defined in a TRY...CATCH block to capture any execution errors. The `is_selected`, `is_updated`, and `is_select_all` columns return information about how these objects and columns are used within the referencing object. The table and columns that are modified are indicated by a 1 in the is_updated column. The `BusinessEntityID` column is only selected and the stored procedure `uspLogError` is neither selected nor modified.  
 
 ```sql  
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT
         referenced_entity_name AS table_name,

@@ -48,7 +48,7 @@ UnionAggregate ( geography_operand )
  The following example performs a `UnionAggregate` on a set of **geography** location points within a city.  
   
  ```sql
- USE AdventureWorks2012  
+ USE AdventureWorks2022  
  GO  
  SELECT City,  
  geography::UnionAggregate(SpatialLocation) AS SpatialLocation  

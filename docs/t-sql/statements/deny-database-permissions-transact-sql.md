@@ -187,7 +187,7 @@ If you are using the AS option, the specified principal must own the database.
 The following example denies `CREATE CERTIFICATE` permission on the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to user `MelanieK`.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 DENY CREATE CERTIFICATE TO MelanieK;
 GO
 ```
@@ -199,7 +199,7 @@ The following example denies `REFERENCES` permission on the [!INCLUDE[ssSampleDB
 **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 DENY REFERENCES TO AuditMonitor;
 GO
 ```
@@ -209,7 +209,7 @@ GO
 The following example denies `VIEW DEFINITION` permission on the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to user `CarmineEs` and to all principals to which `CarmineEs` has granted `VIEW DEFINITION` permission.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 DENY VIEW DEFINITION TO CarmineEs CASCADE;
 GO
 ```

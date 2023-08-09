@@ -371,7 +371,7 @@ EXEC sp_addlinkedserver @server = N'MyLinkServer',
     @srvproduct = N' ',  
     @provider = N'SQLNCLI',   
     @datasrc = N'server_name',  
-    @catalog = N'AdventureWorks2012';  
+    @catalog = N'AdventureWorks2022';  
 GO  
 ```  
   
@@ -379,7 +379,7 @@ GO
 -- Specify the remote data source using a four-part name   
 -- in the form linked_server.catalog.schema.object.  
   
-DELETE MyLinkServer.AdventureWorks2012.HumanResources.Department 
+DELETE MyLinkServer.AdventureWorks2022.HumanResources.Department 
 WHERE DepartmentID > 16;  
 GO  
 ```  
@@ -389,7 +389,7 @@ GO
   
 ```sql
 DELETE OPENQUERY (MyLinkServer, 'SELECT Name, GroupName 
-FROM AdventureWorks2012.HumanResources.Department  
+FROM AdventureWorks2022.HumanResources.Department  
 WHERE DepartmentID = 18');  
 GO  
 ```  
@@ -400,7 +400,7 @@ GO
 ```sql
 DELETE FROM OPENDATASOURCE('SQLNCLI',  
     'Data Source= <server_name>; Integrated Security=SSPI')  
-    .AdventureWorks2012.HumanResources.Department   
+    .AdventureWorks2022.HumanResources.Department   
 WHERE DepartmentID = 17;
 ```  
   

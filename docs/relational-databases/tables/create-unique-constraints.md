@@ -53,7 +53,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 3.  Copy and paste the following example into the query window and select **Execute**. The example creates the table `TransactionHistoryArchive4` and creates a unique constraint on the column `TransactionID`.  
   
     ```sql  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     CREATE TABLE Production.TransactionHistoryArchive4  
      (  
@@ -73,7 +73,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 3.  Copy and paste the following example into the query window and select **Execute**. The example creates a unique constraint on the columns `PasswordHash` and `PasswordSalt` in the table `Person.Password`.  
   
     ```sql  
-    USE AdventureWorks2012;   
+    USE AdventureWorks2022;   
     GO  
     ALTER TABLE Person.Password   
     ADD CONSTRAINT AK_Password UNIQUE (PasswordHash, PasswordSalt);   
@@ -90,7 +90,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 3.  Copy and paste the following example into the query window and select **Execute**. The example creates a table and defines a unique constraint on the column `TransactionID`.  
   
     ```sql  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     CREATE TABLE Production.TransactionHistoryArchive2  
     (  

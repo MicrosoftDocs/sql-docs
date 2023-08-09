@@ -30,10 +30,10 @@ helpviewer_keywords:
  You can retrieve the properties of the full-text indexes by using the following [SELECT](../../t-sql/queries/select-transact-sql.md) statement, which selects columns from the [sys.fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md) and [sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md) catalog views.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DECLARE @TableID int;  
-SET @TableID = (SELECT OBJECT_ID('AdventureWorks2012.Production.Product'));  
+SET @TableID = (SELECT OBJECT_ID('AdventureWorks2022.Production.Product'));  
 SELECT object_name(@TableID), i.is_enabled, i.change_tracking_state,   
    i.has_crawl_completed, i.crawl_type, c.name as fulltext_catalog_name   
    FROM sys.fulltext_indexes i, sys.fulltext_catalogs c   

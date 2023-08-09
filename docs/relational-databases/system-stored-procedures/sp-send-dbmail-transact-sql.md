@@ -245,7 +245,7 @@ This example sends an e-mail message to your friend using the e-mail address `yo
 EXEC msdb.dbo.sp_send_dbmail
     @profile_name = 'Adventure Works Administrator',
     @recipients = 'yourfriend@adventure-works.com',
-    @query = 'SELECT COUNT(*) FROM AdventureWorks2012.Production.WorkOrder
+    @query = 'SELECT COUNT(*) FROM AdventureWorks2022.Production.WorkOrder
                   WHERE DueDate > ''2022-04-30''
                   AND  DATEDIFF(dd, ''2022-04-30'', DueDate) < 2',
     @subject = 'Work Order Count',
@@ -290,7 +290,7 @@ EXEC msdb.dbo.sp_send_dbmail @recipients = 'yourfriend@adventure-works.com',
 
 ## See also
 
-- [Database Mail](../../relational-databases/database-mail/database-mail.md)
-- [Database Mail Configuration Objects](../../relational-databases/database-mail/database-mail-configuration-objects.md)
-- [Database Mail Stored Procedures (Transact-SQL)](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)
-- [sp_addrolemember (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)
+- [Database Mail](../database-mail/database-mail.md)
+- [Database Mail Configuration Objects](../database-mail/database-mail-configuration-objects.md)
+- [Database Mail Stored Procedures (Transact-SQL)](database-mail-stored-procedures-transact-sql.md)
+- [sp_addrolemember (Transact-SQL)](sp-addrolemember-transact-sql.md)

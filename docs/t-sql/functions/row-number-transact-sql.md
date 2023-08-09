@@ -128,7 +128,7 @@ FROM sys.databases WHERE database_id < 5;
  The following example calculates a row number for the salespeople in [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] based on their year-to-date sales ranking.  
   
 ```sql  
-USE AdventureWorks2012;   
+USE AdventureWorks2022;   
 GO  
 SELECT ROW_NUMBER() OVER(ORDER BY SalesYTD DESC) AS Row,   
     FirstName, LastName, ROUND(SalesYTD,2,1) AS "Sales YTD"   
@@ -162,7 +162,7 @@ Row FirstName    LastName               SalesYTD
  The following example calculates row numbers for all rows in the `SalesOrderHeader` table in the order of the `OrderDate` and returns only rows `50` to `60` inclusive.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 WITH OrderedOrders AS  
 (  
@@ -179,7 +179,7 @@ WHERE RowNumber BETWEEN 50 AND 60;
  The following example uses the `PARTITION BY` argument to partition the query result set by the column `TerritoryName`. The `ORDER BY` clause specified in the `OVER` clause orders the rows in each partition by the column `SalesYTD`. The `ORDER BY` clause in the `SELECT` statement orders the entire query result set by `TerritoryName`.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT FirstName, LastName, TerritoryName, ROUND(SalesYTD,2,1) AS SalesYTD,  
 ROW_NUMBER() OVER(PARTITION BY TerritoryName ORDER BY SalesYTD DESC) 

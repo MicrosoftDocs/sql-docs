@@ -74,7 +74,7 @@ This topic describes how to rename a stored procedure in [!INCLUDE[ssnoversion](
   
 ```sql  
 --Create the stored procedure.  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 
 CREATE PROCEDURE HumanResources.uspGetAllEmployeesTest  

@@ -124,7 +124,7 @@ The query returns AdventureWorks sales order detail data with sales territory, p
     4. Enter the connection string to your server and database. For example:  
   
         ```
-        Data Source=[server name];Initial Catalog=AdventureWorks2016  
+        Data Source=[server name];Initial Catalog=AdventureWorks2022  
         ```  
   
     5. To verify the connection, select the **Test Connection** button, and then select **OK**.  

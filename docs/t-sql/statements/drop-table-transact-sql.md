@@ -115,7 +115,7 @@ DROP TABLE ProductVendor1 ;
  The following example drops the `SalesPerson2` table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. The example can be executed from any database on the server instance.  
   
 ```sql  
-DROP TABLE AdventureWorks2012.dbo.SalesPerson2 ;  
+DROP TABLE AdventureWorks2022.dbo.SalesPerson2 ;  
 ```  
   
 ### C. Dropping a temporary table  

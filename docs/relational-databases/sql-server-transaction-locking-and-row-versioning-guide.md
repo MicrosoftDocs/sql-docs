@@ -1227,11 +1227,11 @@ In this example, a transaction running under snapshot isolation reads data that 
 On session 1:  
   
 ```sql  
-USE AdventureWorks2019;  
+USE AdventureWorks2022;  
 GO  
   
 -- Enable snapshot isolation on the database.  
-ALTER DATABASE AdventureWorks2019  
+ALTER DATABASE AdventureWorks2022  
     SET ALLOW_SNAPSHOT_ISOLATION ON;  
 GO  
   
@@ -1250,7 +1250,7 @@ BEGIN TRANSACTION;
 On session 2:  
   
 ```sql  
-USE AdventureWorks2019;  
+USE AdventureWorks2022;  
 GO  
   
 -- Start a transaction.  
@@ -1327,14 +1327,14 @@ In this example, a read-committed transaction using row versioning runs concurre
 On session 1:
 
 ```sql
-USE AdventureWorks2019;  -- Or any earlier version of the AdventureWorks database.  
+USE AdventureWorks2022;  -- Or any earlier version of the AdventureWorks database.  
 GO  
   
 -- Enable READ_COMMITTED_SNAPSHOT on the database.  
 -- For this statement to succeed, this session  
--- must be the only connection to the AdventureWorks2019  
+-- must be the only connection to the AdventureWorks2022  
 -- database.  
-ALTER DATABASE AdventureWorks2019  
+ALTER DATABASE AdventureWorks2022  
     SET READ_COMMITTED_SNAPSHOT ON;  
 GO  
   
@@ -1353,7 +1353,7 @@ BEGIN TRANSACTION;
 On session 2:  
   
 ```sql  
-USE AdventureWorks2019;  
+USE AdventureWorks2022;  
 GO  
   
 -- Start a transaction.  
@@ -1426,7 +1426,7 @@ When the `READ_COMMITTED_SNAPSHOT` database option is set ON, the mechanisms use
 The following [!INCLUDE[tsql](../includes/tsql-md.md)] statement enables `READ_COMMITTED_SNAPSHOT`:  
   
 ```sql  
-ALTER DATABASE AdventureWorks2019  
+ALTER DATABASE AdventureWorks2022  
     SET READ_COMMITTED_SNAPSHOT ON;  
 ```  
   
@@ -1435,7 +1435,7 @@ When the `ALLOW_SNAPSHOT_ISOLATION` database option is set ON, the instance of t
 The following [!INCLUDE[tsql](../includes/tsql-md.md)] statement will enable ALLOW_SNAPSHOT_ISOLATION:  
   
 ```sql  
-ALTER DATABASE AdventureWorks2019  
+ALTER DATABASE AdventureWorks2022  
     SET ALLOW_SNAPSHOT_ISOLATION ON;  
 ```  
   
@@ -1465,7 +1465,7 @@ Row versioning-based isolation levels are enabled at the database level. Any app
 -   Read-committed that uses row versioning by setting the `READ_COMMITTED_SNAPSHOT` database option to `ON` as shown in the following code example:  
   
     ```sql  
-    ALTER DATABASE AdventureWorks2019  
+    ALTER DATABASE AdventureWorks2022  
         SET READ_COMMITTED_SNAPSHOT ON;  
     ```  
   
@@ -1474,7 +1474,7 @@ Row versioning-based isolation levels are enabled at the database level. Any app
 -   Snapshot isolation by setting the `ALLOW_SNAPSHOT_ISOLATION` database option to `ON` as shown in the following code example:  
   
     ```sql  
-    ALTER DATABASE AdventureWorks2019  
+    ALTER DATABASE AdventureWorks2022  
         SET ALLOW_SNAPSHOT_ISOLATION ON;  
     ```  
   
@@ -1518,7 +1518,7 @@ Consider the following limitations when working with row versioning-based isolat
      For example, a database administrator executes the following `ALTER INDEX` statement.  
   
     ```sql  
-    USE AdventureWorks2019;  
+    USE AdventureWorks2022;  
     GO  
     ALTER INDEX AK_Employee_LoginID  
         ON HumanResources.Employee REBUILD;  
@@ -1566,7 +1566,7 @@ When the isolation level is specified, the locking behavior for all queries and 
 The following example sets the `SERIALIZABLE` isolation level:  
   
 ```sql  
-USE AdventureWorks2019;  
+USE AdventureWorks2022;  
 GO  
 SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;  
 GO  
@@ -1583,7 +1583,7 @@ The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] might have to acq
 To determine the transaction isolation level currently set, use the `DBCC USEROPTIONS` statement as shown in the following example. The result set may vary from the result set on your system.  
   
 ```sql  
-USE AdventureWorks2019;  
+USE AdventureWorks2022;  
 GO  
 SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;  
 GO  
@@ -1625,7 +1625,7 @@ The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] might have to acq
 As shown in the following example, if the transaction isolation level is set to `SERIALIZABLE`, and the table-level locking hint `NOLOCK` is used with the `SELECT` statement, key-range locks typically used to maintain serializable transactions are not acquired.  
   
 ```sql  
-USE AdventureWorks2019;  
+USE AdventureWorks2022;  
 GO  
 SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;  
 GO  

@@ -743,8 +743,8 @@ The following stored procedures aren't documented:
 ## See also
 
 - [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)
-- [Stored Procedures (Database Engine)](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)
-- [Running stored procedures (OLE DB)](../../relational-databases/native-client/ole-db/stored-procedures-running.md)
-- [Running stored procedures](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)
+- [Stored Procedures (Database Engine)](../stored-procedures/stored-procedures-database-engine.md)
+- [Running stored procedures (OLE DB)](../native-client/ole-db/stored-procedures-running.md)
+- [Running stored procedures](../native-client-odbc-stored-procedures/running-stored-procedures.md)
 - [Database Engine stored procedures (Transact-SQL)](database-engine-stored-procedures-transact-sql.md)
-- [Running stored procedures](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)
+- [Running stored procedures](../native-client-odbc-stored-procedures/running-stored-procedures.md)

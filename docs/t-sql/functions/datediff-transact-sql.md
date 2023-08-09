@@ -177,7 +177,7 @@ SELECT DATEDIFF(millisecond, GETDATE(), SYSDATETIME());
 This example uses scalar subqueries and scalar functions as arguments for *startdate* and *enddate*.
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT DATEDIFF(day,
     (SELECT MIN(OrderDate) FROM Sales.SalesOrderHeader),  
@@ -197,13 +197,13 @@ SELECT DATEDIFF(day,
 This example uses a numeric expression, `(GETDATE() + 1)`, and scalar system functions `GETDATE` and `SYSDATETIME`, as arguments for *enddate*.
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT DATEDIFF(day, '2007-05-07 09:53:01.0376635', GETDATE() + 1)
     AS NumberOfDays  
     FROM Sales.SalesOrderHeader;  
 GO  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT
     DATEDIFF(
@@ -219,7 +219,7 @@ GO
 This example uses a ranking function as an argument for *startdate*.
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT p.FirstName, p.LastName  
     ,DATEDIFF(day, ROW_NUMBER() OVER (ORDER BY   
@@ -237,7 +237,7 @@ WHERE TerritoryID IS NOT NULL
 This example uses an aggregate window function as an argument for *startdate*.
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT soh.SalesOrderID, sod.ProductID, sod.OrderQty, soh.OrderDate,
     DATEDIFF(day, MIN(soh.OrderDate)   

@@ -1,4 +1,4 @@
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT ProductID, SpecialOfferID, AVG(UnitPrice) AS [Average Price], 
     SUM(LineTotal) AS SubTotal

@@ -82,7 +82,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 3.  Copy and paste one of the following examples into the query window and click **Execute**. Each example shows how you can view the definition of the `iuPerson` trigger.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT definition   
 FROM sys.sql_modules  
@@ -91,7 +91,7 @@ GO
 ```  
   
 ```sql  
-USE AdventureWorks2012;   
+USE AdventureWorks2022;   
 GO  
 SELECT OBJECT_DEFINITION (OBJECT_ID(N'Person.iuPerson')) AS ObjectDefinition;   
 GO  
@@ -99,7 +99,7 @@ GO
 ```  
   
 ```sql  
-USE AdventureWorks2012;   
+USE AdventureWorks2022;   
 GO  
 EXEC sp_helptext 'Person.iuPerson'  
 GO  
@@ -115,7 +115,7 @@ GO
 3.  Copy and paste one of the following examples into the query window and click **Execute**. Each example shows how you can view the dependencies of `iuPerson` trigger.  
   
 ```  
-USE AdventureWorks2012;   
+USE AdventureWorks2022;   
 GO  
 SELECT OBJECT_NAME(referencing_id) AS referencing_entity_name,   
     o.type_desc AS referencing_desciption,   
@@ -141,7 +141,7 @@ GO
 3.  Copy and paste one of the following examples into the query window and click **Execute**. Each example shows how you can view information about DML triggers (`TR`) in the database.  
   
 ```  
-USE AdventureWorks2012;   
+USE AdventureWorks2022;   
 GO  
 SELECT  name, parent_id, create_date, modify_date, is_instead_of_trigger  
 FROM sys.triggers  
@@ -151,7 +151,7 @@ GO
 ```  
   
 ```sql  
-USE AdventureWorks2012;   
+USE AdventureWorks2022;   
 GO  
 SELECT  name, object_id, schema_id, parent_object_id, type_desc, create_date, modify_date, is_published  
 FROM sys.objects  
@@ -161,7 +161,7 @@ GO
 ```  
   
 ```sql  
-USE AdventureWorks2012;   
+USE AdventureWorks2022;   
 GO  
 SELECT OBJECTPROPERTY(OBJECT_ID(N'Person.iuPerson'), 'ExecIsInsteadOfTrigger');   
 GO  
@@ -177,7 +177,7 @@ GO
 3.  Copy and paste one of the following examples into the query window and click **Execute**. Each example shows how you can view the events that fire the `iuPerson` trigger.  
   
 ```sql  
-USE AdventureWorks2012;   
+USE AdventureWorks2022;   
 GO  
 SELECT object_id, type, type_desc, is_trigger_event, event_group_type, event_group_type_desc   
 FROM sys.events  
@@ -186,7 +186,7 @@ GO
 ```  
   
 ```sql  
-USE AdventureWorks2012;   
+USE AdventureWorks2022;   
 GO   
 SELECT object_id, type,is_first, is_last  
 FROM sys.trigger_events  

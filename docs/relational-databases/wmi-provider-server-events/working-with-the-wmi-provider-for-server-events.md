@@ -60,7 +60,7 @@ SELECT name, is_broker_enabled, service_broker_guid FROM sys.databases;
   
 ```  
 SELECT * FROM ALTER_TABLE  
-WHERE DatabaseName = "AdventureWorks2012"   
+WHERE DatabaseName = "AdventureWorks2022"   
     AND SchemaName = "Person"  
     AND ObjectName = "Person"  
     AND ObjectType = "TABLE";  

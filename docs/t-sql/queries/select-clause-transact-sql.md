@@ -130,7 +130,7 @@ FROM Cities;
  Aliases are used also to specify names for the results of expressions, for example:  
   
  ```sql
- USE AdventureWorks2012;  
+ USE AdventureWorks2022;  
  GO  
  SELECT AVG(UnitPrice) AS [Average Price]  
  FROM Sales.SalesOrderDetail;

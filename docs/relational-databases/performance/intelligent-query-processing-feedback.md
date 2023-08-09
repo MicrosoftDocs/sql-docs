@@ -381,7 +381,7 @@ When the Query Optimizer estimates the selectivity of predicates on a given tabl
 The following example uses partial correlation when the database compatibility is set to 120 or higher:
 
 ```sql
-USE AdventureWorks2016_EXT;
+USE AdventureWorks2022_EXT;
 GO
 SELECT AddressID, AddressLine1, AddressLine2
 FROM Person.Address
@@ -406,7 +406,7 @@ where join selectivity is calculated first, and then the filter selectivity is f
 The following example uses base containment when the database compatibility is set to 120 or higher:
 
 ```sql
-USE AdventureWorksDW2016_EXT;
+USE AdventureWorksDW2022_EXT;
 GO
 SELECT *
 FROM dbo.FactCurrencyRate AS f
@@ -422,7 +422,7 @@ For more information, see [versions of the CE](cardinality-estimation-sql-server
 When the Query Optimizer estimates the cardinality of an execution plan, it usually assumes that all qualifying rows from all tables have to be processed. However, some query patterns cause the Query Optimizer to search for a plan that will return a smaller number of rows to reduce I/O. If the query specifies a target number of rows (row goal) that may be expected at runtime by using a `TOP`, `IN` or `EXISTS` keywords, the `FAST` query hint, or a `SET ROWCOUNT` statement, that row goal is used as part of the query optimization process such as in the following example:
 
 ```sql
-USE AdventureWorks2016_EXT;
+USE AdventureWorks2022_EXT;
 GO
 SELECT TOP 1 soh.*
 FROM Sales.SalesOrderHeader AS soh

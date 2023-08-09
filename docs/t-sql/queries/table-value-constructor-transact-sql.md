@@ -62,7 +62,7 @@ VALUES ( <row value expression list> ) [ ,...n ]
  Only single scalar values are allowed as a row value expression. A subquery that involves multiple columns is not allowed as a row value expression. For example, the following code results in a syntax error because the third row value expression list contains a subquery with multiple columns.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 CREATE TABLE dbo.MyProducts (Name VARCHAR(50), ListPrice MONEY);  
 GO  
@@ -107,7 +107,7 @@ INSERT INTO dbo.t VALUES (1,'a'), (2, CONVERT(CHAR,1));
  The following example creates the table `dbo.Departments` and then uses the table value constructor to insert five rows into the table. Because values for all columns are supplied and are listed in the same order as the columns in the table, the column names do not have to be specified in the column list.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 INSERT INTO Production.UnitMeasure  
 VALUES (N'FT2', N'Square Feet ', '20080923'), (N'Y', N'Yards', '20080923'),
@@ -119,7 +119,7 @@ GO
  The following example demonstrates specifying DEFAULT and NULL when using the table value constructor to insert rows into a table.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 CREATE TABLE Sales.MySalesReason(  
 SalesReasonID int IDENTITY(1,1) NOT NULL,  
@@ -149,7 +149,7 @@ ON a.Name = b.Name;
  The following example uses MERGE to modify the `SalesReason` table by either updating or inserting rows. When the value of `NewName` in the source table matches a value in the `Name` column of the target table, (`SalesReason`), the `ReasonType` column is updated in the target table. When the value of `NewName` does not match, the source row is inserted into the target table. The source table is a derived table that uses the [!INCLUDE[tsql](../../includes/tsql-md.md)] table value constructor to specify multiple rows for the source table.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 -- Create a temporary table variable to hold the output actions.  
 DECLARE @SummaryOfChanges TABLE(Change VARCHAR(20));  

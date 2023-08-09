@@ -54,7 +54,7 @@ sp_defaultdb [ @loginame = ] 'login', [ @defdb = ] 'database'
  The following example sets [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] as the default database for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login `Victoria`.  
   
 ```  
-EXEC sp_defaultdb 'Victoria', 'AdventureWorks2012';  
+EXEC sp_defaultdb 'Victoria', 'AdventureWorks2022';  
 ```  
   
 ## See Also  

@@ -204,13 +204,13 @@ EXEC sp_create_plan_guide
  The following example creates a plan guide that matches any query that parameterizes to a specified form, and directs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to force parameterization of the query. The following two queries are syntactically equivalent, but differ only in their constant literal values.  
   
 ```sql  
-SELECT * FROM AdventureWorks2012.Sales.SalesOrderHeader AS h  
-INNER JOIN AdventureWorks2012.Sales.SalesOrderDetail AS d   
+SELECT * FROM AdventureWorks2022.Sales.SalesOrderHeader AS h  
+INNER JOIN AdventureWorks2022.Sales.SalesOrderDetail AS d   
     ON h.SalesOrderID = d.SalesOrderID  
 WHERE h.SalesOrderID = 45639;  
   
-SELECT * FROM AdventureWorks2012.Sales.SalesOrderHeader AS h  
-INNER JOIN AdventureWorks2012.Sales.SalesOrderDetail AS d   
+SELECT * FROM AdventureWorks2022.Sales.SalesOrderHeader AS h  
+INNER JOIN AdventureWorks2022.Sales.SalesOrderDetail AS d   
     ON h.SalesOrderID = d.SalesOrderID  
 WHERE h.SalesOrderID = 45640;  
 ```  
@@ -220,8 +220,8 @@ WHERE h.SalesOrderID = 45640;
 ```sql  
 EXEC sp_create_plan_guide   
     @name = N'TemplateGuide1',  
-    @stmt = N'SELECT * FROM AdventureWorks2012.Sales.SalesOrderHeader AS h  
-              INNER JOIN AdventureWorks2012.Sales.SalesOrderDetail AS d   
+    @stmt = N'SELECT * FROM AdventureWorks2022.Sales.SalesOrderHeader AS h  
+              INNER JOIN AdventureWorks2022.Sales.SalesOrderDetail AS d   
                   ON h.SalesOrderID = d.SalesOrderID  
               WHERE h.SalesOrderID = @0',  
     @type = N'TEMPLATE',  
@@ -236,8 +236,8 @@ EXEC sp_create_plan_guide
 DECLARE @stmt nvarchar(max);  
 DECLARE @params nvarchar(max);  
 EXEC sp_get_query_template   
-    N'SELECT * FROM AdventureWorks2012.Sales.SalesOrderHeader AS h  
-      INNER JOIN AdventureWorks2012.Sales.SalesOrderDetail AS d   
+    N'SELECT * FROM AdventureWorks2022.Sales.SalesOrderHeader AS h  
+      INNER JOIN AdventureWorks2022.Sales.SalesOrderDetail AS d   
           ON h.SalesOrderID = d.SalesOrderID  
       WHERE h.SalesOrderID = 45639;',  
     @stmt OUTPUT,   
@@ -294,7 +294,7 @@ EXEC sp_create_plan_guide
  The following example creates a plan guide for a simple ad hoc SQL statement. The desired query plan for this statement is provided in the plan guide by specifying the XML Showplan for the query directly in the `@hints` parameter. The example first executes the SQL statement to generate a plan in the plan cache. For the purposes of this example, it is assumed that the generated plan is the desired plan and no additional query tuning is required. The XML Showplan for the query is obtained by querying the `sys.dm_exec_query_stats`, `sys.dm_exec_sql_text`, and `sys.dm_exec_text_query_plan` dynamic management views and is assigned to the `@xml_showplan` variable. The `@xml_showplan` variable is then passed to the `sp_create_plan_guide` statement in the `@hints` parameter. Or, you can create a plan guide from a query plan in the plan cache by using the [sp_create_plan_guide_from_handle](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md) stored procedure.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT City, StateProvinceID, PostalCode FROM Person.Address ORDER BY PostalCode DESC;  
 GO  

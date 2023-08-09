@@ -55,9 +55,9 @@ Use `FILE_IDEX` in a SELECT list, a WHERE clause, or anywhere that supports use 
 This example returns the file ID for the `AdventureWorks_Data` file.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
-SELECT FILE_IDEX('AdventureWorks2012_Data') AS 'File ID';  
+SELECT FILE_IDEX('AdventureWorks2022_Data') AS 'File ID';  
 GO  
 ```  
   
@@ -74,7 +74,7 @@ File ID
 This example returns the file ID of the `AdventureWorks` log file. The Transact-SQL (T-SQL) code snippet selects the logical file name from the `sys.database_files` catalog view, where the file type equals `1` (log).  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT FILE_IDEX((SELECT TOP (1) name FROM sys.database_files WHERE type = 1)) AS 'File ID';  
 GO  

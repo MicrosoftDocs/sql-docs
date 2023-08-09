@@ -171,7 +171,7 @@ OBJECTPROPERTYEX ( id , property )
 ```sql  
 USE master;  
 GO  
-SELECT OBJECTPROPERTYEX(OBJECT_ID(N'AdventureWorks2012.HumanResources.vEmployee'), 'IsView');  
+SELECT OBJECTPROPERTYEX(OBJECT_ID(N'AdventureWorks2022.HumanResources.vEmployee'), 'IsView');  
 GO  
 ```  
   
@@ -187,7 +187,7 @@ GO
  The following example creates a SYNONYM `MyEmployeeTable` for the `Employee` table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database and then returns the base type of the SYNONYM.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 CREATE SYNONYM MyEmployeeTable FOR HumanResources.Employee;  
 GO  
@@ -207,7 +207,7 @@ U
  The following example returns the number of UPDATE triggers on the specified table.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT OBJECTPROPERTYEX(OBJECT_ID(N'HumanResources.Employee'), N'TABLEUPDATETRIGGERCOUNT');  
 GO  
@@ -217,7 +217,7 @@ GO
  The following example uses the `TableHasForeignKey` property to return all the tables that have a FOREIGN KEY constraint.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT name, object_id, schema_id, type_desc  
 FROM sys.objects   

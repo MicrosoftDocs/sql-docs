@@ -99,7 +99,7 @@ For additional examples using TDE, see [Transparent Data Encryption &#40;TDE&#41
 The following example creates a database encryption key by using the `AES_256` algorithm, and protects the private key with a certificate named `MyServerCert`.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 CREATE DATABASE ENCRYPTION KEY  
 WITH ALGORITHM = AES_256  

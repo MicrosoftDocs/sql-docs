@@ -95,12 +95,12 @@ EXEC sp_tables ;
  The following example returns information about the tables that belong to the `Person` schema in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_tables   
    @table_name = '%',  
    @table_owner = 'Person',  
-   @table_qualifier = 'AdventureWorks2012';  
+   @table_qualifier = 'AdventureWorks2022';  
 ```  
   
 ## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  

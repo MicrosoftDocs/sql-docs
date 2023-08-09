@@ -61,7 +61,7 @@ c:\> sqlcmd -l 60
 You can also use the **-v** option to set a scripting variable that exists in a script. In the following script (the file name is `testscript.sql`), `ColumnName` is a scripting variable.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 
 SELECT x.$(ColumnName)
 FROM Person.Person x
@@ -147,7 +147,7 @@ R/W indicates that the value can be reset by using the **setvar** command and su
 :setvar server "testserver"
 :connect $(server) -l $(SQLCMDLOGINTIMEOUT)
 
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 
 SELECT FirstName, LastName
 FROM Person.Person;
@@ -165,7 +165,7 @@ sqlcmd -i c:\test.sql
 
 ```sql
 sqlcmd
-:setvar MYDATABASE AdventureWorks2012
+:setvar MYDATABASE AdventureWorks2022
 USE $(MYDATABASE);
 GO
 ```
@@ -173,7 +173,7 @@ GO
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
 
 ```bash
-Changed database context to 'AdventureWorks2012'
+Changed database context to 'AdventureWorks2022'
 1>
 ```
 
@@ -186,7 +186,7 @@ C:\>SET tablename=Person.Person
 C:\>SET col1=FirstName
 C:\>SET col2=LastName
 C:\>SET title=Ms.
-C:\>sqlcmd -d AdventureWorks2012
+C:\>sqlcmd -d AdventureWorks2022
 1> SELECT TOP 5 $(col1) + ' ' + $(col2) AS Name
 2> FROM $(tablename)
 3> WHERE Title ='$(title)'
@@ -201,10 +201,10 @@ The following code is in the input file `c:\testscript.txt`:
 
 ```sql
 :OUT $(MyTempDirectory)
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 
 SELECT FirstName
-FROM AdventureWorks2012.Person.Person
+FROM AdventureWorks2022.Person.Person
 WHERE BusinessEntityID` `< 5;
 ```
 
@@ -218,7 +218,7 @@ C:\ >sqlcmd -i C:\testscript.txt
  The following result is sent to the output file C:\Documents and Settings\\<user\>\Local Settings\Temp\output.txt.
 
 ```output
-Changed database context to 'AdventureWorks2012'.
+Changed database context to 'AdventureWorks2022'.
 FirstName
 --------------------------------------------------
 Gustavo
@@ -273,8 +273,8 @@ c:\> SET sqlcmdini=c:\init.sql
  The following example shows working with data in the form of a **sqlcmd** variable.
 
 ```sql
-USE AdventureWorks2012;
-CREATE TABLE AdventureWorks2012.dbo.VariableTest
+USE AdventureWorks2022;
+CREATE TABLE AdventureWorks2022.dbo.VariableTest
 (
 Col1 nvarchar(50)
 );
@@ -284,7 +284,7 @@ GO
 Insert one row into `Col1` of `dbo.VariableTest` that contains the value `$(tablename)`.
 
 ```sql
-INSERT INTO AdventureWorks2012.dbo.VariableTest(Col1)
+INSERT INTO AdventureWorks2022.dbo.VariableTest(Col1)
 VALUES('$(tablename)');
 GO
 ```

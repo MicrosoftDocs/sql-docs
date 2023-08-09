@@ -115,7 +115,7 @@ GO
  The following example removes the property named `MS_Description` from the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database. Because the property is on the database itself, no object types and names are specified.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_dropextendedproperty   
 @name = N'MS_Description';  

@@ -102,7 +102,7 @@ Requires VIEW SERVER PERFORMANCE STATE permission on the server.
  The following example returns statistics for the log file in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
 ```sql  
-SELECT * FROM sys.dm_io_virtual_file_stats(DB_ID(N'AdventureWorks2012'), 2);  
+SELECT * FROM sys.dm_io_virtual_file_stats(DB_ID(N'AdventureWorks2022'), 2);  
 GO  
 ```  
   

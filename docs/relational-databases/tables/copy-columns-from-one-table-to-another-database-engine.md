@@ -94,7 +94,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     CREATE TABLE dbo.EmployeeSales  
     ( BusinessEntityID   varchar(11) NOT NULL,  

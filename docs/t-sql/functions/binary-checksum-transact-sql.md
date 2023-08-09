@@ -78,7 +78,7 @@ For example, the strings "McCavity" and "Mccavity" have different `BINARY_CHECKS
 This example uses `BINARY_CHECKSUM` to detect changes in a table row.
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 CREATE TABLE myTable (column1 INT, column2 VARCHAR(256));  
 GO  

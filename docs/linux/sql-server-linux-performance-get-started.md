@@ -63,7 +63,7 @@ SQL Server provides In-Memory OLTP features that can greatly improve the perform
 1. It's recommended to set the database to a compatibility level of at least 130 to use In-Memory OLTP. Use the following query to check the current compatibility level of AdventureWorks:
 
    ```sql
-   USE AdventureWorks
+   USE AdventureWorks2022;
    GO
    SELECT d.compatibility_level
    FROM sys.databases as d

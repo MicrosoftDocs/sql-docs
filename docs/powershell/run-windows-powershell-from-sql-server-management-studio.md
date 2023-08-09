@@ -23,7 +23,7 @@ When you specify running PowerShell for an object in **Object Explorer**, SQL Se
 For example, if you right-click the AdventureWorks database object in Object Explorer and select **Start PowerShell**, the Windows PowerShell path is set as seen below:
 
 ```powershell
-SQLSERVER:\SQL\MyComputer\MyInstance\Databases\AdventureWorks2012>
+SQLSERVER:\SQL\MyComputer\MyInstance\Databases\AdventureWorks2022>
 ```
 
 ## Run PowerShell

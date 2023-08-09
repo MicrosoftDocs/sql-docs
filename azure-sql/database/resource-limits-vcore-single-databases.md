@@ -62,7 +62,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 ### <a id="gen5-hardware-part-1-1"></a>General Purpose - serverless compute - Standard-series (Gen5) (part 1 of 3)
 
-Compute sizes (service level objectives, or SLOs) for General Purpose serverless Standard-series databases follow the naming convention `GP_S_Gen5_` followed by the number of max vCores. This table covers the following SLOs: `GP_S_Gen5_1`, `GP_S_Gen5_2`, `GP_S_Gen5_4`, `GP_S_Gen5_6` and `GP_S_Gen5_8` SLOs:
+Compute sizes (service level objectives, or SLOs) for General Purpose serverless Standard-series databases follow the naming convention `GP_S_Gen5_` followed by the number of max vCores. This table covers the following SLOs: `GP_S_Gen5_1`, `GP_S_Gen5_2`, `GP_S_Gen5_4`, `GP_S_Gen5_6` and `GP_S_Gen5_8`:
 
 | Min-max vCores | 0.5 - 1 | 0.5 - 2 | 0.5 - 4 | 0.75 - 6 | 1.0 - 8 |
 |:-|-:|-:|-:|-:|-:|
@@ -98,7 +98,7 @@ Compute sizes (service level objectives, or SLOs) for General Purpose serverless
 
 ### <a id="gen5-hardware-part-2-1"></a>General Purpose - serverless compute - Standard-series (Gen5) (part 2 of 3)
 
-Compute sizes (service level objectives, or SLOs) for General Purpose serverless Standard-series databases follow the naming convention `GP_S_Gen5_` followed by the number of max vCores. This table covers the following SLOs: `GP_S_Gen5_10`, `GP_S_Gen5_12`, `GP_S_Gen5_14`, `GP_S_Gen5_16` and `GP_S_Gen5_18` SLOs:
+Compute sizes (service level objectives, or SLOs) for General Purpose serverless Standard-series databases follow the naming convention `GP_S_Gen5_` followed by the number of max vCores. This table covers the following SLOs: `GP_S_Gen5_10`, `GP_S_Gen5_12`, `GP_S_Gen5_14`, `GP_S_Gen5_16` and `GP_S_Gen5_18`:
 
 | Min-max vCores | 1.25-10 | 1.50-12 | 1.75-14 | 2.00-16 | 2.25-18 |
 |:-|-:|-:|-:|-:|-:|
@@ -132,7 +132,7 @@ Compute sizes (service level objectives, or SLOs) for General Purpose serverless
 
 ### <a id="gen5-hardware-part-3-1"></a>General Purpose - serverless compute - Standard-series (Gen5) (part 3 of 3)
 
-Compute sizes (service level objectives, or SLOs) for General Purpose serverless Standard-series databases follow the naming convention `GP_S_Gen5_` followed by the number of max vCores. This table covers the following SLOs: `GP_S_Gen5_20`, `GP_S_Gen5_24`, `GP_S_Gen5_32`, `GP_S_Gen5_40` and `GP_S_Gen5_80` SLOs:
+Compute sizes (service level objectives, or SLOs) for General Purpose serverless Standard-series databases follow the naming convention `GP_S_Gen5_` followed by the number of max vCores. This table covers the following SLOs: `GP_S_Gen5_20`, `GP_S_Gen5_24`, `GP_S_Gen5_32`, `GP_S_Gen5_40` and `GP_S_Gen5_80`:
 
 | Min-max vCores | 2.5-20 | 3-24 | 4-32 | 5-40 | 10-80 <sup>3</sup> |
 |:-|-:|-:|-:|-:|-:|
@@ -171,11 +171,11 @@ Compute sizes (service level objectives, or SLOs) for General Purpose serverless
 The [serverless compute tier](serverless-tier-overview.md) is currently available on Gen5 hardware only.
 
 > [!NOTE]
-> - Serverless in the Hyperscale service tier is currently in preview.
+> - Serverless compute for the Hyperscale service tier is currently in preview.
 
 ### Hyperscale - serverless compute - Standard-series (Gen5) (part 1 of 2)
 
-Compute sizes (service level objectives, or SLOs) for Hyperscale serverless Standard-series databases follow the naming convention `HS_S_Gen5_` followed by the number of max vCores. This table covers the following SLOs: `HS_S_Gen5_2`, `HS_S_Gen5_4`, `HS_S_Gen5_6`, `HS_S_Gen5_8`, `HS_S_Gen5_10`, `HS_S_Gen5_12` and `HS_S_Gen5_14` SLOs:
+Compute sizes (service level objectives, or SLOs) for Hyperscale serverless Standard-series databases follow the naming convention `HS_S_Gen5_` followed by the number of max vCores. This table covers the following SLOs: `HS_S_Gen5_2`, `HS_S_Gen5_4`, `HS_S_Gen5_6`, `HS_S_Gen5_8`, `HS_S_Gen5_10`, `HS_S_Gen5_12` and `HS_S_Gen5_14`:
 
 | Min-max vCores | 0.5-2 | 0.5-4 | 0.75-6 | 1-8 | 1.25-10 | 1.5-12 | 1.75-14 |
 |--|--|--|--|--|--|--|--|
@@ -206,7 +206,7 @@ Compute sizes (service level objectives, or SLOs) for Hyperscale serverless Stan
 
 ### Hyperscale - serverless compute - Standard-series (Gen5) (part 2 of 2)
 
-Compute sizes (service level objectives, or SLOs) for Hyperscale serverless Standard-series databases follow the naming convention `HS_S_Gen5_` followed by the number of max vCores. This table covers the following SLOs: `HS_S_Gen5_16`, `HS_S_Gen5_18`, `HS_S_Gen5_20`, `HS_S_Gen5_24`, `HS_S_Gen5_32`, `HS_S_Gen5_40` and `HS_S_Gen5_80` SLOs:
+Compute sizes (service level objectives, or SLOs) for Hyperscale serverless Standard-series databases follow the naming convention `HS_S_Gen5_` followed by the number of max vCores. This table covers the following SLOs: `HS_S_Gen5_16`, `HS_S_Gen5_18`, `HS_S_Gen5_20`, `HS_S_Gen5_24`, `HS_S_Gen5_32`, `HS_S_Gen5_40` and `HS_S_Gen5_80`:
 
 | Min-max vCores | 2-16 | 2.25-18 | 2.25-20 | 3-24 | 4-32 | 5-40 | 10-80 <sup>4</sup> |
 |--|--|--|--|--|--|--|--|

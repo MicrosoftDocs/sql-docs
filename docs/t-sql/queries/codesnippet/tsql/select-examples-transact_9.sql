@@ -1,4 +1,4 @@
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT DISTINCT Name
 FROM Production.Product AS p 
@@ -11,7 +11,7 @@ GO
 
 -- OR
 
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT DISTINCT Name
 FROM Production.Product

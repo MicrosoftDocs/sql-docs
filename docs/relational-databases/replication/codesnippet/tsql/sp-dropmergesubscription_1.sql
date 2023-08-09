@@ -11,9 +11,9 @@ DECLARE @subscriber AS sysname;
 DECLARE @subscriptionDB AS sysname;
 SET @publication = N'AdvWorksSalesOrdersMerge';
 SET @subscriber = $(SubServer);
-SET @subscriptionDB = N'AdventureWorks2012Replica';
+SET @subscriptionDB = N'AdventureWorks2022Replica';
 
-USE [AdventureWorks2012]
+USE [AdventureWorks2022]
 EXEC sp_dropmergesubscription 
   @publication = @publication, 
   @subscriber = @subscriber, 

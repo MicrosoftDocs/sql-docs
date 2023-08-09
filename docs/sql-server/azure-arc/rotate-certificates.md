@@ -68,7 +68,7 @@ For instructions, see [Create and assign a certificate](../../relational-databas
 Once a new certificate is discovered, it is uploaded to app registration automatically.
 
 > [!NOTE]
-> For Linux, the old certificate will not be deleted from the app registration used for Microsoft Entra ID and the SQL server running on the Linux machine will need to be manually restarted.
+> For Linux, the old certificate will not be deleted from the app registration used for Microsoft Entra ID and the SQL Server running on the Linux machine will need to be manually restarted.
 
 ## Next steps
 

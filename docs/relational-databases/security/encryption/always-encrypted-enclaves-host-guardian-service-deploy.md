@@ -234,7 +234,7 @@ It's recommended that all production instances of HGS use an HTTPS binding.
 
 ## Step 6: Determine and share the HGS attestation URL
 
-As the HGS administrator you need share the attestation URL of HGS with both SQL server computer administrators and application administrators in your organization. The SQL Server computers administrators will need the attestation URL to verify SQL Server computers can attest with HGS. Application administrators will need the attestation URL to configure how their apps connect to SQL Server.
+As the HGS administrator you need share the attestation URL of HGS with both SQL Server computer administrators and application administrators in your organization. The SQL Server computers administrators will need the attestation URL to verify SQL Server computers can attest with HGS. Application administrators will need the attestation URL to configure how their apps connect to SQL Server.
 
 To determine the attestation URL, run the following cmdlet.
 

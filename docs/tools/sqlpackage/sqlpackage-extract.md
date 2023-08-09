@@ -33,7 +33,7 @@ SqlPackage /Action:Extract /TargetFile:{filename}.dacpac /DiagnosticsFile:{logFi
 
 # example extract to create a .sql file containing the schema definition of the database
 SqlPackage /Action:Extract /TargetFile:{filename}.dacpac /DiagnosticsFile:{logFile}.log /SourceServerName:{serverFQDN} \
-    /SourceDatabaseName:{databaseName} /SourceUser:{username} /SourcePassword:{password} /p:ExtractTarget:File
+    /SourceDatabaseName:{databaseName} /SourceUser:{username} /SourcePassword:{password} /p:ExtractTarget=File
 
 # example extract to create a .dacpac file with data connecting using SQL authentication
 SqlPackage /Action:Extract /TargetFile:{filename}.dacpac /DiagnosticsFile:{logFile}.log /p:ExtractAllTableData=true /p:VerifyExtraction=true \

@@ -89,5 +89,5 @@ EXEC @hr = sp_OAMethod @object,
 
 ## See also
 
-- [OLE Automation Sample Script](../../relational-databases/stored-procedures/ole-automation-sample-script.md)
+- [OLE Automation Sample Script](../stored-procedures/ole-automation-sample-script.md)
 - [OLE Automation stored procedures (Transact-SQL)](ole-automation-stored-procedures-transact-sql.md)

@@ -45,7 +45,7 @@ None.
 
 ## Remarks
 
-`sys.sp_cdc_disable_db` disables change data capture for all tables in the database currently enabled. All system objects related to change data capture, such as change tables, jobs, stored procedures and functions, are dropped. The `is_cdc_enabled` column for the database entry in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view is set to `0`.
+`sys.sp_cdc_disable_db` disables change data capture for all tables in the database currently enabled. All system objects related to change data capture, such as change tables, jobs, stored procedures and functions, are dropped. The `is_cdc_enabled` column for the database entry in the [sys.databases](../system-catalog-views/sys-databases-transact-sql.md) catalog view is set to `0`.
 
 If there are many capture instances defined for the database at the time change data capture is disabled, a long running transaction can cause the execution of `sys.sp_cdc_disable_db` to fail. This problem can be avoided by disabling the individual capture instances by using `sys.sp_cdc_disable_table` before running `sys.sp_cdc_disable_db`.
 

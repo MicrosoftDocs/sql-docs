@@ -20,7 +20,7 @@ dev_langs:
 
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-Creates a new [Database Mail](../../relational-databases/database-mail/database-mail.md) profile.
+Creates a new [Database Mail](../database-mail/database-mail.md) profile.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -96,13 +96,13 @@ SELECT @profileId;
 
 ## See also
 
-- [Database Mail](../../relational-databases/database-mail/database-mail.md)
-- [Database Mail Configuration Objects](../../relational-databases/database-mail/database-mail-configuration-objects.md)
+- [Database Mail](../database-mail/database-mail.md)
+- [Database Mail Configuration Objects](../database-mail/database-mail-configuration-objects.md)
 - [Database Mail stored procedures (Transact-SQL)](database-mail-stored-procedures-transact-sql.md)
 
 ## Next steps
 
-- [Configure Database Mail](../../relational-databases/database-mail/configure-database-mail.md)
-- [Create a Database Mail Account](../../relational-databases/database-mail/create-a-database-mail-account.md)
-- [Configure SQL Server Agent Mail to Use Database Mail](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)
+- [Configure Database Mail](../database-mail/configure-database-mail.md)
+- [Create a Database Mail Account](../database-mail/create-a-database-mail-account.md)
+- [Configure SQL Server Agent Mail to Use Database Mail](../database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)
 - [Automate management tasks using SQL Agent jobs in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/job-automation-managed-instance)

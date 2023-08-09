@@ -134,7 +134,7 @@ This example replaces values in a manufacturing instructions document stored in 
 In the example, you first create a table (T) with a typed XML column in the AdventureWorks database. You then copy a manufacturing instructions XML instance from the Instructions column in the ProductModel table into table T. Insertions are then applied to XML in table T.  
   
 ```sql
-USE AdventureWorks  
+USE AdventureWorks2022;
 GO  
 DROP TABLE T  
 GO  

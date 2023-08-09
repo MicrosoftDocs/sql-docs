@@ -90,7 +90,7 @@ This article describes how to create a [!INCLUDE[tsql](../../includes/tsql-md.md
 1. Copy and paste the following example into the query window and select **Execute**. This example creates the same stored procedure as in the previous example, but using a different procedure name.  
   
     ```sql 
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     CREATE PROCEDURE HumanResources.uspGetEmployeesTest2   
         @LastName nvarchar(50),   

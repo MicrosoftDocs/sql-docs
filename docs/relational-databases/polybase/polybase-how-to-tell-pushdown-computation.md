@@ -139,7 +139,7 @@ Consider the following query, which uses an aggregate function:
 
 ```sql
 SELECT SUM([Quantity]) as Quant
-FROM [AdventureWorks2017].[Production].[ProductInventory];
+FROM [AdventureWorks2022].[Production].[ProductInventory];
 ```
 
 #### With pushdown of aggregation (view with execution plan)
@@ -203,7 +203,7 @@ SELECT [T1_1].[BusinessEntityID] AS [BusinessEntityID], [T1_1].[rowguid] AS [row
   [T1_1].[ModifiedDate] AS [ModifiedDate] FROM 
   (SELECT [T2_1].[BusinessEntityID] AS [BusinessEntityID], [T2_1].[rowguid] AS [rowguid], 
     [T2_1].[ModifiedDate] AS [ModifiedDate] 
-FROM [AdventureWorks2017].[Person].[BusinessEntity] AS T2_1 
+FROM [AdventureWorks2022].[Person].[BusinessEntity] AS T2_1 
 WHERE ([T2_1].[BusinessEntityID] = CAST ((17907) AS INT))) AS T1_1;
 ```
 
@@ -214,7 +214,7 @@ The WHERE clause is in the command sent to the external data source, which means
 If pushdown is not occurring, you'll see something like:
 
 ```sql
-SELECT "BusinessEntityID","rowguid","ModifiedDate" FROM "AdventureWorks2017"."Person"."BusinessEntity"
+SELECT "BusinessEntityID","rowguid","ModifiedDate" FROM "AdventureWorks2022"."Person"."BusinessEntity"
 ```
 
 There is no WHERE clause in the command sent to the external data source, so the filter predicate is not pushed down. Filtering on the entire dataset occurred on the SQL Server side, after the dataset was retrieved by PolyBase.
@@ -236,8 +236,8 @@ If the JOIN is pushed down to the external data source, you will see something l
 ```sql
 SELECT [T1_1].[BusinessEntityID] AS [BusinessEntityID], [T1_1].[AddressID] AS [AddressID] 
 FROM (SELECT [T2_2].[BusinessEntityID] AS [BusinessEntityID], [T2_1].[AddressID] AS [AddressID] 
-FROM [AdventureWorks2017].[Person].[BusinessEntityAddress] AS T2_1 
-INNER JOIN  [AdventureWorks2017].[Person].[BusinessEntity] AS T2_2  
+FROM [AdventureWorks2022].[Person].[BusinessEntityAddress] AS T2_1 
+INNER JOIN  [AdventureWorks2022].[Person].[BusinessEntity] AS T2_2  
 ON ([T2_1].[BusinessEntityID] = [T2_2].[BusinessEntityID])) AS T1_1;
 ```
 
@@ -249,9 +249,9 @@ If the pushdown of the join is not occurring, you'll see there are two different
 
 ```sql
 SELECT [T1_1].[BusinessEntityID] AS [BusinessEntityID], [T1_1].[AddressID] AS [AddressID] 
-FROM [AdventureWorks2017].[Person].[BusinessEntityAddress] AS T1_1;
+FROM [AdventureWorks2022].[Person].[BusinessEntityAddress] AS T1_1;
 
-SELECT [T1_1].[BusinessEntityID] AS [BusinessEntityID] FROM [AdventureWorks2017].[Person].[BusinessEntity] AS T1_1;
+SELECT [T1_1].[BusinessEntityID] AS [BusinessEntityID] FROM [AdventureWorks2022].[Person].[BusinessEntity] AS T1_1;
 ```
 
 The joining the two datasets occurred on the SQL Server side, after both datasets are retrieved by PolyBase.
@@ -262,7 +262,7 @@ Consider the following query, which uses an aggregate function:
 
 ```sql
 SELECT SUM([Quantity]) as Quant
-FROM [AdventureWorks2017].[Production].[ProductInventory];
+FROM [AdventureWorks2022].[Production].[ProductInventory];
 ```
 
 #### With Pushdown of aggregation (view with DMV)
@@ -271,7 +271,7 @@ If pushdown of the aggregation is occurring, you see the aggregation function in
 
 ```sql
 SELECT [T1_1].[col] AS [col] FROM (SELECT SUM([T2_1].[Quantity]) AS [col] 
-FROM [AdventureWorks2017].[Production].[ProductInventory] AS T2_1) AS T1_1
+FROM [AdventureWorks2022].[Production].[ProductInventory] AS T2_1) AS T1_1
 ```
 
 The aggregation function is in the command sent to the external data source, so the aggregation is pushed down. The aggregation occurred at the external data source, and only the aggregated dataset was retrieved by PolyBase.
@@ -281,7 +281,7 @@ The aggregation function is in the command sent to the external data source, so 
 If the pushdown of the aggregation isn't occurring, you won't see the aggregation function in the `read_command`. For example:
 
 ```sql
-SELECT "Quantity" FROM "AdventureWorks2017"."Production"."ProductInventory"
+SELECT "Quantity" FROM "AdventureWorks2022"."Production"."ProductInventory"
 ```
 
 The aggregation was performed in SQL Server, after the unaggregated dataset was retrieved by PolyBase.

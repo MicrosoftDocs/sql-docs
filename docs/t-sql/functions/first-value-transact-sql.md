@@ -77,7 +77,7 @@ The same type as *scalar_expression*.
 The following example uses `FIRST_VALUE` to return the name of the product that is the least expensive in a given product category.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT Name, ListPrice,
        FIRST_VALUE(Name) OVER (ORDER BY ListPrice ASC) AS LeastExpensive
@@ -108,7 +108,7 @@ HL Mountain Tire        35.00                 Patch Kit/8 Patches
 The following example uses `FIRST_VALUE` to return the employee with the fewest number of vacation hours compared to other employees with the same job title. The `PARTITION BY` clause partitions the employees by job title and the `FIRST_VALUE` function is applied to each partition independently. The `ORDER BY` clause specified in the `OVER` clause determines the logical order in which the `FIRST_VALUE` function is applied to the rows in each partition. The `ROWS UNBOUNDED PRECEDING` clause specifies the starting point of the window is the first row of each partition.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT JobTitle, LastName, VacationHours,
        FIRST_VALUE(LastName) OVER (PARTITION BY JobTitle

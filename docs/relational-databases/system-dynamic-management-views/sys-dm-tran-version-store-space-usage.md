@@ -57,8 +57,8 @@ FROM sys.dm_tran_version_store_space_usage;
 Database Name            reserved_page_count reserved_space_kb  
 ------------------------ -------------------- -----------  
 msdb                      0                    0             
-AdventureWorks2016        10                   80             
-AdventureWorks2016DW      0                    0             
+AdventureWorks2022        10                   80             
+AdventureWorks2022DW      0                    0             
 WideWorldImporters        20                   160             
 ```
  

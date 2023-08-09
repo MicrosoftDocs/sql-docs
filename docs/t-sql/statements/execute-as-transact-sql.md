@@ -139,7 +139,7 @@ If the user is orphaned (the associated login no longer exists), and the user wa
   
 
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 --Create two temporary principals  
 CREATE LOGIN login1 WITH PASSWORD = 'J345#$)thb';  

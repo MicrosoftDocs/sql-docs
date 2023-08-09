@@ -69,7 +69,7 @@ helpviewer_keywords:
 ```  
 USE master;  
 GO  
-RESTORE DATABASE AdventureWorks2012  
+RESTORE DATABASE AdventureWorks2022  
    FROM TAPE = '\\.\Tape0';  
 GO  
 ```  

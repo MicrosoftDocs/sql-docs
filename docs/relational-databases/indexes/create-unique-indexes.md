@@ -153,7 +153,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     -- Find an existing index named AK_UnitMeasure_Name 
     -- on the Production.UnitMeasure table and delete it if found. 

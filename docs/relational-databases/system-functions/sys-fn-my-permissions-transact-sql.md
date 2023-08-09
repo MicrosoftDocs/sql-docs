@@ -92,7 +92,7 @@ GO
  The following example returns a list of the effective permissions of the caller on the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 SELECT * FROM fn_my_permissions (NULL, 'DATABASE');  
 GO  
 ```  
@@ -101,7 +101,7 @@ GO
  The following example returns a list of the effective permissions of the caller on the `vIndividualCustomer` view in the `Sales` schema of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 SELECT * FROM fn_my_permissions('Sales.vIndividualCustomer', 'OBJECT')   
     ORDER BY subentity_name, permission_name ;   
 GO   
@@ -130,7 +130,7 @@ GO
  The following example returns a list of the effective permissions of the caller on an XML Schema Collection named `ProductDescriptionSchemaCollection` in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 SELECT * FROM fn_my_permissions('ProductDescriptionSchemaCollection',  
     'XML SCHEMA COLLECTION');  
 GO  
@@ -149,7 +149,7 @@ GO
   
 ```sql
 EXECUTE AS LOGIN = 'WanidaBenshoof';  
-SELECT * FROM fn_my_permissions('AdventureWorks2012.HumanResources.Employee', 'OBJECT')   
+SELECT * FROM fn_my_permissions('AdventureWorks2022.HumanResources.Employee', 'OBJECT')   
     ORDER BY subentity_name, permission_name ;    
 REVERT;  
 GO  

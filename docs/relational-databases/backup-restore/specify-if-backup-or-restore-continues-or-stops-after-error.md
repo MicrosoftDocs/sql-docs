@@ -64,7 +64,7 @@ helpviewer_keywords:
 3.  In the [BACKUP](../../t-sql/statements/backup-transact-sql.md) statement, specify the CONTINUE_AFTER ERROR option to continue or the STOP_ON_ERROR option to stop. The default behavior is to stop after encountering an error. This example instructs the backup operation to continue despite encountering an error.  
   
 ```sql  
-BACKUP DATABASE AdventureWorks2012   
+BACKUP DATABASE AdventureWorks2022   
  TO DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'  
    WITH CHECKSUM, CONTINUE_AFTER_ERROR;  
 GO  
@@ -79,7 +79,7 @@ GO
 3.  In the [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) statement, specify the CONTINUE_AFTER ERROR option to continue or the STOP_ON_ERROR option to stop. The default behavior is to stop after encountering an error. This example instructs the restore operation to continue despite encountering an error.  
   
 ```sql  
-RESTORE DATABASE AdventureWorks2012   
+RESTORE DATABASE AdventureWorks2022   
  FROM DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'   
    WITH CHECKSUM, CONTINUE_AFTER_ERROR;  
 GO  

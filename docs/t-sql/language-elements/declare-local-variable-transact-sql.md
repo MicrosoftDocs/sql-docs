@@ -277,7 +277,7 @@ A cursor variable:
 The following example uses a local variable named `@find` to retrieve contact information for all last names beginning with `Man`.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 DECLARE @find VARCHAR(30);
 /* Also allowed:
@@ -307,7 +307,7 @@ Manzanares          Tomas                   1 (11) 500 555-0178
 The following example retrieves the names of [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] sales representatives who are located in the North American sales territory and have at least $2,000,000 in sales for the year.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SET NOCOUNT ON;
 GO
@@ -325,7 +325,7 @@ WHERE TerritoryGroup = @Group and SalesYTD >= @Sales;
 The following example creates a `table` variable that stores the values specified in the OUTPUT clause of the UPDATE statement. Two `SELECT` statements follow that return the values in `@MyTableVar` and the results of the update operation in the `Employee` table. The results in the `INSERTED.ModifiedDate` column differ from the values in the `ModifiedDate` column in the `Employee` table. This is because the `AFTER UPDATE` trigger, which updates the value of `ModifiedDate` to the current date, is defined on the `Employee` table. However, the columns returned from `OUTPUT` reflect the data before triggers are fired. For more information, see [OUTPUT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 DECLARE @MyTableVar TABLE (
     EmpID INT NOT NULL,

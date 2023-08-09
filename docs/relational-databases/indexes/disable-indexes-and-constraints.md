@@ -167,7 +167,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     -- disables the IX_Employee_OrganizationLevel_OrganizationNode index  
     -- on the HumanResources.Employee table  
@@ -184,7 +184,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     -- Disables all indexes on the HumanResources.Employee table.  
     ALTER INDEX ALL ON HumanResources.Employee  

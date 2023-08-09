@@ -74,7 +74,7 @@ OPTION ( <query_option> [ ,...n ] )
  The following example shows how the `OPTION` clause is used with a `GROUP BY` clause.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT ProductID, OrderQty, SUM(LineTotal) AS Total  
 FROM Sales.SalesOrderDetail  

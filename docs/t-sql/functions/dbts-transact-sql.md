@@ -45,7 +45,7 @@ Changes to the transaction isolation levels do  not affect the @@DBTS function.
 This example returns the current **timestamp** from the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT @@DBTS;  
 ```  

@@ -78,7 +78,7 @@ It's important that applications don't wait in a tight loop, checking for the **
 The following example returns the number of full-text indexed items in a full-text catalog named `Cat_Desc`.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT fulltextcatalogproperty('Cat_Desc', 'ItemCount');  
 GO  

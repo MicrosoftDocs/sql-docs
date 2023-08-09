@@ -454,7 +454,7 @@ AT DATA_SOURCE data_source_name
  Changes in database context last only until the end of the EXECUTE statement. For example, after the `EXEC` in this following statement is run, the database context is master.  
   
 ```sql  
-USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FROM HumanResources.Employee;');  
+USE master; EXEC ('USE AdventureWorks2022; SELECT BusinessEntityID, JobTitle FROM HumanResources.Employee;');  
 ```  
   
 ## Context Switching  
@@ -558,7 +558,7 @@ GO
   
 ```sql    
 DECLARE @retstat INT;  
-EXECUTE @retstat = SQLSERVER1.AdventureWorks2012.dbo.uspGetEmployeeManagers @BusinessEntityID = 6;  
+EXECUTE @retstat = SQLSERVER1.AdventureWorks2022.dbo.uspGetEmployeeManagers @BusinessEntityID = 6;  
 ```  
   
 ### E. Using EXECUTE with a stored procedure variable  
@@ -617,7 +617,7 @@ EXECUTE dbo.ProcTestDefaults DEFAULT, 'I', @p3 = DEFAULT;
 ```sql    
 EXEC sp_addlinkedserver 'SeattleSales', 'SQL Server'  
 GO  
-EXECUTE ( 'CREATE TABLE AdventureWorks2012.dbo.SalesTbl   
+EXECUTE ( 'CREATE TABLE AdventureWorks2022.dbo.SalesTbl   
 (SalesID int, SalesName varchar(10)) ; ' ) AT SeattleSales;  
 GO  
 ```  
@@ -695,7 +695,7 @@ EXEC sp_addlinkedserver 'SeattleSales', 'SQL Server'
 GO  
 -- Execute the SELECT statement.  
 EXECUTE ('SELECT ProductID, Name   
-    FROM AdventureWorks2012.Production.Product  
+    FROM AdventureWorks2022.Production.Product  
     WHERE ProductID = ? ', 952) AT SeattleSales;  
 GO  
 ```  

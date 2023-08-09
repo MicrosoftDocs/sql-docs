@@ -103,7 +103,7 @@ On multiprocessor systems that are running [!INCLUDE[ssNoVersion](../../includes
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```sql  
-    USE AdventureWorks2012;   
+    USE AdventureWorks2022;   
     GO  
     /*Alters the IX_ProductVendor_VendorID index on the Purchasing.ProductVendor table so that, if the server has eight or more processors, the Database Engine will limit the execution of the index operation to eight or fewer processors.  
     */  
@@ -123,7 +123,7 @@ On multiprocessor systems that are running [!INCLUDE[ssNoVersion](../../includes
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```sql  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     CREATE INDEX IX_ProductVendor_NewVendorID   
     ON Purchasing.ProductVendor (BusinessEntityID)  

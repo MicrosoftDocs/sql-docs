@@ -41,7 +41,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ### Code  
   
 ```  
-use AdventureWorks  
+USE AdventureWorks2022;
 IF EXISTS (SELECT name FROM sysobjects WHERE name = 'BadOne')  
    DROP PROCEDURE BadOne  
   
@@ -224,7 +224,7 @@ void ProcessLogMessages(SQLSMALLINT plm_handle_type, SQLHANDLE plm_handle, char 
 ### Code  
   
 ```  
-use AdventureWorks  
+USE AdventureWorks2022;
 DROP PROCEDURE BadOne  
 GO  
 ```  

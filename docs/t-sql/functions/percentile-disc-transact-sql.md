@@ -70,7 +70,7 @@ The following example uses PERCENTILE_CONT and PERCENTILE_DISC to find  each dep
 * PERCENTILE_DISC returns an actual set value.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
   
 SELECT DISTINCT Name AS DepartmentName  
       ,PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY ph.Rate)   

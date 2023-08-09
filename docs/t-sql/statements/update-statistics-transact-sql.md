@@ -295,7 +295,7 @@ Requires `ALTER` permission on the table or view.
 The following example updates all statistics on the `SalesOrderDetail` table.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 UPDATE STATISTICS Sales.SalesOrderDetail;  
 GO  
@@ -306,7 +306,7 @@ GO
 The following example updates the statistics for the `AK_SalesOrderDetail_rowguid` index of the `SalesOrderDetail` table.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 UPDATE STATISTICS Sales.SalesOrderDetail AK_SalesOrderDetail_rowguid;  
 GO  
@@ -317,7 +317,7 @@ GO
 The following example creates and then updates the statistics for the `Name` and `ProductNumber` columns in the `Product` table.
   
 ```sql  
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO  
 CREATE STATISTICS Products
     ON Production.Product ([Name], ProductNumber)
@@ -332,7 +332,7 @@ UPDATE STATISTICS Production.Product(Products)
 The following example updates the `Products` statistics in the `Product` table, forces a full scan of all rows in the `Product` table, and turns off automatic statistics for the `Products` statistics.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 UPDATE STATISTICS Production.Product(Products)  
     WITH FULLSCAN, NORECOMPUTE;  

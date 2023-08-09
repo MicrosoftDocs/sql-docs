@@ -111,7 +111,7 @@ AS <select_statement>
  The following example creates a view that contains all employees and their hire dates called `EmployeeHireDate`. Permissions are granted to the view, but requirements are changed to select employees whose hire dates fall before a certain date. Then, `ALTER VIEW` is used to replace the view.  
   
 ```sql 
-USE AdventureWorks2012 ;  
+USE AdventureWorks2022;  
 GO  
 CREATE VIEW HumanResources.EmployeeHireDate  
 AS  

@@ -20,7 +20,7 @@ The following query specifies the `ELEMENTS` directive to generate element-centr
 ## Example
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT ProductID, Name, Color
 FROM Production.Product
@@ -46,7 +46,7 @@ This is the partial result.
 Because the `Color` column has null values for some products, the resulting XML won't generate the corresponding `<Color>` element. By adding the `XSINIL` directive with `ELEMENTS`, you can generate the `<Color>` element even for NULL color values in the result set.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT ProductID, Name, Color
 FROM Production.Product

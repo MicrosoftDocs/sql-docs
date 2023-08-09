@@ -89,7 +89,7 @@ sp_updateextendedproperty
  The following example updates the value of property `Caption` on column `ID` in table `T1`.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 CREATE TABLE T1 (id int , name char (20));  
 GO  
@@ -114,15 +114,15 @@ GO
  The following example first creates an extended property on the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database and then updates the value of that property.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_addextendedproperty   
-@name = N'NewCaption', @value = 'AdventureWorks2012 Sample OLTP Database';  
+@name = N'NewCaption', @value = 'AdventureWorks2022 Sample OLTP Database';  
 GO  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_updateextendedproperty   
-@name = N'NewCaption', @value = 'AdventureWorks2012 Sample Database';  
+@name = N'NewCaption', @value = 'AdventureWorks2022 Sample Database';  
 GO  
 ```  
   

@@ -206,8 +206,8 @@ sys.dm_db_index_operational_stats (
 ```sql    
 DECLARE @db_id int;    
 DECLARE @object_id int;    
-SET @db_id = DB_ID(N'AdventureWorks2012');    
-SET @object_id = OBJECT_ID(N'AdventureWorks2012.Person.Address');    
+SET @db_id = DB_ID(N'AdventureWorks2022');    
+SET @object_id = OBJECT_ID(N'AdventureWorks2022.Person.Address');    
 IF @db_id IS NULL     
   BEGIN;    
     PRINT N'Invalid database';    

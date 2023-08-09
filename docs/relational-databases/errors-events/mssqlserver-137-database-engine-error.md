@@ -36,7 +36,7 @@ SELECT @mycol;
 One of the more complicated causes of this error includes the use of a variable that is declared outside the EXECUTE statement. For example, the variable **\@mycol** specified in the SELECT statement is local to the SELECT statement; thus it is outside the EXECUTE statement.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
   
 GO  
   
@@ -53,7 +53,7 @@ Verify that any variables used in a SQL script are declared before being used el
 Rewrite the script so that it does not reference variables in the EXECUTE statement that are declared outside of it. For example:  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
   
 GO  
   

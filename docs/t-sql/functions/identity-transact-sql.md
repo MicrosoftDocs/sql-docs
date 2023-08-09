@@ -57,7 +57,7 @@ dev_langs:
  The following example inserts a row into a table with an identity column (`LocationID`) and uses `@@IDENTITY` to display the identity value used in the new row.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 --Display the value of LocationID in the last row in the table.  
 SELECT MAX(LocationID) FROM Production.Location;  

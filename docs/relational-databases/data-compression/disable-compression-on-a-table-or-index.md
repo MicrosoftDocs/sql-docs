@@ -193,7 +193,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     ALTER TABLE Person.Person REBUILD PARTITION = ALL  
     WITH (DATA_COMPRESSION = NONE);  
@@ -209,7 +209,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     ALTER INDEX AK_Person_rowguid ON Person.Person REBUILD PARTITION = ALL WITH (DATA_COMPRESSION = NONE);  
     GO  

@@ -54,7 +54,7 @@ Requires ALTER permission on the schema to which the function belongs, or CONTRO
 
    ```sql
    -- creates function called "Sales.ufn_SalesByStore"
-   USE AdventureWorks2012;
+   USE AdventureWorks2022;
    GO
    CREATE FUNCTION Sales.ufn_SalesByStore (@storeid int)
    RETURNS TABLE
@@ -75,7 +75,7 @@ Requires ALTER permission on the schema to which the function belongs, or CONTRO
    The following code sample deletes the user-defined function created in the previous example.
 
    ```sql
-   USE AdventureWorks2012;
+   USE AdventureWorks2022;
    GO
    -- determines if function exists in database
    IF OBJECT_ID (N'Sales.fn_SalesByStore', N'IF') IS NOT NULL

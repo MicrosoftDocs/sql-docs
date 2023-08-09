@@ -50,7 +50,7 @@ The _partition\_by\_clause_ divides the FROM clause result set into partitions, 
 This example uses the `CUME_DIST` function to calculate the salary percentile for each employee within a given department. `CUME_DIST` returns a value that represents the percent of employees with a salary less than or equal to the current employee in the same department. The `PERCENT_RANK` function calculates the percent rank of the employee's salary within a department. To partition the result set rows by department, the example specifies the _partition\_by\_clause_ value. The ORDER BY clause of the OVER clause logically orders the rows in each partition. The ORDER BY clause of the SELECT statement determines the display order of the result set.
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT Department, LastName, Rate,   
        CUME_DIST () OVER (PARTITION BY Department ORDER BY Rate) AS CumeDist,   

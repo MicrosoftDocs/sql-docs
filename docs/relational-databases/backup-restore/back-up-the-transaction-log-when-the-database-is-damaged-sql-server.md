@@ -150,7 +150,7 @@ helpviewer_keywords:
  This example backs up the currently active transaction log when a database is damaged and inaccessible, if the transaction log is undamaged and accessible.  
   
 ```sql  
-BACKUP LOG AdventureWorks2012  
+BACKUP LOG AdventureWorks2022  
    TO MyAdvWorks_FullRM_log1  
    WITH NO_TRUNCATE;  
 GO  

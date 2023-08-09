@@ -17,7 +17,7 @@ monikerRange: ">=sql-server-2016"
   This article contains an example of a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement batch that uses the OLE Automation stored procedures to create and use a SQL-DMO SQLServer object in the local instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Parts of the code are used as examples in the reference articles for the OLE Automation system stored procedures.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DECLARE @Object int;  
 DECLARE @HR int;  

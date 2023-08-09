@@ -72,7 +72,7 @@ For more information on this argument in [!INCLUDE[ssazurede-md](../../includes/
  The query uses the LEAD function to return the difference in sales quotas for a specific employee over subsequent years. Notice that because there is no lead value available for the last row, the default of zero (0) is returned.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT BusinessEntityID, YEAR(QuotaDate) AS SalesYear, SalesQuota AS CurrentQuota,   
     LEAD(SalesQuota, 1,0) OVER (ORDER BY YEAR(QuotaDate)) AS NextQuota  
@@ -97,7 +97,7 @@ BusinessEntityID SalesYear   CurrentQuota          NextQuota
  The following example uses the LEAD function to compare year-to-date sales between employees. The PARTITION BY clause is specified to partition the rows in the result set by sales territory. The LEAD function is applied to each partition separately and computation restarts for each partition. The ORDER BY clause specified in the OVER clause orders the rows in each partition before the function is applied. The ORDER BY clause in the SELECT statement orders the rows in the whole result set. Notice that because there is no lead value available for the last row of each partition, the default of zero (0) is returned.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT TerritoryName, BusinessEntityID, SalesYTD,   
        LEAD (SalesYTD, 1, 0) OVER (PARTITION BY TerritoryName ORDER BY SalesYTD DESC) AS NextRepSales  

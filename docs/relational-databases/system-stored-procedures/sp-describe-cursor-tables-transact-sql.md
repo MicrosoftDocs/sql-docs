@@ -83,7 +83,7 @@ sp_describe_cursor_tables
  The following example opens a global cursor and uses `sp_describe_cursor_tables` to report on the tables that are referenced by the cursor.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 -- Declare and open a global cursor.  
 DECLARE abc CURSOR KEYSET FOR  

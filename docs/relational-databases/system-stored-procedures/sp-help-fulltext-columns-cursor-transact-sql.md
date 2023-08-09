@@ -67,7 +67,7 @@ sp_help_fulltext_columns_cursor [ @cursor_return = ] @cursor_variable OUTPUT
  The following example returns information about the columns that have been designated for full-text indexing in all of the tables in the database.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DECLARE @mycursor CURSOR;  
 EXEC sp_help_fulltext_columns_cursor @mycursor OUTPUT  

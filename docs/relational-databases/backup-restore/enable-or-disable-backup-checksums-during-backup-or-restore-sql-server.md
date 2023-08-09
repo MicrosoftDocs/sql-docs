@@ -63,7 +63,7 @@ helpviewer_keywords:
 3.  To enable backup checksums in a [BACKUP](../../t-sql/statements/backup-transact-sql.md) statement, specify the WITH CHECKSUM option. To disable backup checksums, specify the WITH NO_CHECKSUM option. This is the default behavior, except for a compressed backup. The following example specifies that checksums be performed.  
   
 ```sql  
-BACKUP DATABASE AdventureWorks2012   
+BACKUP DATABASE AdventureWorks2022   
  TO DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'  
    WITH CHECKSUM;  
 GO  
@@ -78,7 +78,7 @@ GO
 3.  To enable backup checksums in a [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) statement, specify the WITH CHECKSUM option. This is the default behavior for a compressed backup. To disable backup checksums, specify the WITH NO_CHECKSUM option. This is the default behavior, except for a compressed backup. The following example specifies that backup checksums be performed.  
   
 ```sql  
-RESTORE DATABASE AdventureWorks2012   
+RESTORE DATABASE AdventureWorks2022   
  FROM DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'  
    WITH CHECKSUM;  
 GO  

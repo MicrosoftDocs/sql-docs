@@ -96,7 +96,7 @@ ALTER SCHEMA schema_name
  The following example modifies the schema `HumanResources` by transferring the table `Address` from schema `Person` into the `HumanResources` schema.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 ALTER SCHEMA HumanResources TRANSFER Person.Address;  
 GO  
@@ -106,7 +106,7 @@ GO
  The following example creates a type in the `Production` schema, and then transfers the type to the `Person` schema.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
   
 CREATE TYPE Production.TestType FROM [VARCHAR](10) NOT NULL ;  

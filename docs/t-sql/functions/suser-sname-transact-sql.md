@@ -92,7 +92,7 @@ GO
 The following example uses `SUSER_SNAME` as a DEFAULT constraint in a `CREATE TABLE` statement.
 
 ```sql
-USE AdventureWorks2019;
+USE AdventureWorks2022;
 GO
 
 CREATE TABLE sname_example (

@@ -56,7 +56,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 3.  Copy and paste the following example into the query window and select **Execute**. This example grants `EXECUTE` permission on the stored procedure `HumanResources.uspUpdateEmployeeHireInfo` to an application role named `Recruiting11`.  
   
 ```sql  
-USE AdventureWorks2012;   
+USE AdventureWorks2022;   
 GRANT EXECUTE ON OBJECT::HumanResources.uspUpdateEmployeeHireInfo  
     TO Recruiting11;  
 GO  
@@ -71,7 +71,7 @@ GO
 3.  Copy and paste the following example into the query window and select **Execute**. This example grants `EXECUTE` permission to all stored procedures that exist, or will exist, in the `HumanResources` schema, to an application role named `Recruiting11`. 
   
 ```sql  
-USE AdventureWorks2012;   
+USE AdventureWorks2022;   
 GRANT EXECUTE ON SCHEMA::HumanResources
     TO Recruiting11;  
 GO  

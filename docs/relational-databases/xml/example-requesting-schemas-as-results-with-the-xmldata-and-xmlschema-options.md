@@ -21,7 +21,7 @@ The following query returns the XML-DATA schema that describes the document stru
 ## Example
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT ProductModelID, Name
 FROM Production.ProductModel
@@ -52,7 +52,7 @@ This is the result:
 By specifying the `XMLSCHEMA` option, you can request the XSD schema for the result.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT ProductModelID, Name
 FROM Production.ProductModel
@@ -87,7 +87,7 @@ This is the result:
 You can specify the target namespace URI as an optional argument to XMLSCHEMA in FOR XML. This returns the specified target namespace in the schema. This target namespace remains the same every time you execute the query. For example, the following modified version of the previous query includes the namespace URI, `'urn:example.com'`, as an argument.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT ProductModelID, Name
 FROM Production.ProductModel

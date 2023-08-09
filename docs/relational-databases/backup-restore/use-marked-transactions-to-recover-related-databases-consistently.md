@@ -84,7 +84,7 @@ helpviewer_keywords:
  The following example restores the transaction log to the mark in the marked transaction named `ListPriceUpdate`.  
   
 ```sql  
-USE AdventureWorks  
+USE AdventureWorks2022;
 GO  
 BEGIN TRANSACTION ListPriceUpdate  
    WITH MARK 'UPDATE Product list prices';  

@@ -27,9 +27,9 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
 'Connect to the local, default instance of SQL Server.
 Dim srv As Server
 srv = New Server
-'Reference the AdventureWorks2012 database.
+'Reference the AdventureWorks2022 database.
 Dim db As Database
-db = srv.Databases("AdventureWorks2012")
+db = srv.Databases("AdventureWorks2022")
 'Define a Default object variable by supplying the parent database and the default name 
 'in the constructor.
 Dim def As [Default]
@@ -39,7 +39,7 @@ def.TextHeader = "CREATE DEFAULT [Test_Default2] AS"
 def.TextBody = "GetDate()"
 'Create the default on the instance of SQL Server.
 def.Create()
-'Declare a Column object variable and reference a column in the AdventureWorks2012 database.
+'Declare a Column object variable and reference a column in the AdventureWorks2022 database.
 Dim col As Column
 col = db.Tables("SpecialOffer", "Sales").Columns("StartDate")
 'Bind the default to the column.
@@ -57,8 +57,8 @@ def.Drop()
   
           Server srv = new Server();  
   
-            //Reference the AdventureWorks2012 database.   
-            Database  db = srv.Databases["AdventureWorks2012"];  
+            //Reference the AdventureWorks2022 database.   
+            Database  db = srv.Databases["AdventureWorks2022"];  
   
             //Define a Default object variable by supplying the parent database and the default name   
             //in the constructor.   
@@ -71,7 +71,7 @@ def.Drop()
             //Create the default on the instance of SQL Server.   
             def.Create();  
   
-            //Bind the default to a column in a table in AdventureWorks2012  
+            //Bind the default to a column in a table in AdventureWorks2022  
             def.BindToColumn("SpecialOffer", "StartDate", "Sales");  
   
             //Unbind the default from the column and remove it from the database.   
@@ -84,9 +84,9 @@ def.Drop()
  This code example shows how to create one default that is simple text, and another default that is a [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement. The default must be attached to the column by using the <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.BindToColumn%2A> method and detached by using the <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.UnbindFromColumn%2A> method.  
   
 ```powershell   
-# Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  
+# Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2022  
 CD \sql\localhost\default\databases  
-$db = get-item Adventureworks2012  
+$db = get-item AdventureWorks2022  
   
 #Define a Default object variable by supplying the parent database and the default name in the constructor.  
 $def = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Default `  

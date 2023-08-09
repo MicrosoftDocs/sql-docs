@@ -138,7 +138,7 @@ Caller must own the schema that contains the table, or be a member of the **sysa
 The following example resets the current identity value, if it's needed, of the specified table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.
 
 ```sql
-USE AdventureWorks2019;
+USE AdventureWorks2022;
 GO
 DBCC CHECKIDENT ('Person.AddressType');
 GO
@@ -149,7 +149,7 @@ GO
 The following example reports the current identity value in the specified table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database, and doesn't correct the identity value if it's incorrect.
 
 ```sql
-USE AdventureWorks2019;
+USE AdventureWorks2022;
 GO
 DBCC CHECKIDENT ('Person.AddressType', NORESEED);
 GO

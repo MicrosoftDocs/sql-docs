@@ -166,7 +166,7 @@ OBJECTPROPERTY ( id , property )
 ```sql  
 USE master;  
 GO  
-SELECT OBJECTPROPERTY(OBJECT_ID(N'AdventureWorks2012.HumanResources.vEmployee'), 'IsView');  
+SELECT OBJECTPROPERTY(OBJECT_ID(N'AdventureWorks2022.HumanResources.vEmployee'), 'IsView');  
 GO  
 ```  
   
@@ -182,7 +182,7 @@ GO
  The following example tests whether `UnitMeasure` is a table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 IF OBJECTPROPERTY (OBJECT_ID(N'Production.UnitMeasure'),'ISTABLE') = 1  
    PRINT 'UnitMeasure is a table.'  
@@ -197,7 +197,7 @@ GO
  The following example tests whether the user-defined scalar-valued function `ufnGetProductDealerPrice`, which returns a **money** value, is deterministic.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT OBJECTPROPERTY(OBJECT_ID('dbo.ufnGetProductDealerPrice'), 'IsDeterministic');  
 GO  

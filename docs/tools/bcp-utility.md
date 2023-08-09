@@ -542,7 +542,7 @@ Computed and **timestamp** columns are bulk copied from [!INCLUDE [ssNoVersion](
   For example, the following `bcp out` command creates a data file named `Currency Types.dat`:
 
   ```cmd
-  bcp AdventureWorks2012.Sales.Currency out "Currency Types.dat" -T -c
+  bcp AdventureWorks2022.Sales.Currency out "Currency Types.dat" -T -c
   ```
 
 - To specify a database name that contains a space or quotation mark, you must use the `-q` option.

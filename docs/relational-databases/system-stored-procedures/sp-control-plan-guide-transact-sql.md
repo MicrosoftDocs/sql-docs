@@ -119,7 +119,7 @@ EXEC sp_control_plan_guide N'DROP', N'Guide3';
  The following example disables all plan guides in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_control_plan_guide N'DISABLE ALL';  
 ```  

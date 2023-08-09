@@ -196,7 +196,7 @@ ALTER QUEUE ExpenseQueue WITH ACTIVATION (MAX_QUEUE_READERS = 7) ;
 ```sql  
 ALTER QUEUE ExpenseQueue  
     WITH ACTIVATION (  
-        PROCEDURE_NAME = AdventureWorks2012.dbo.new_stored_proc ,  
+        PROCEDURE_NAME = AdventureWorks2022.dbo.new_stored_proc ,  
         EXECUTE AS 'SecurityAccount') ;  
 ```  
   

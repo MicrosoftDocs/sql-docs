@@ -176,7 +176,7 @@ GO
  The following example displays information about the `Person` table.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_help 'Person.Person';  
 GO  

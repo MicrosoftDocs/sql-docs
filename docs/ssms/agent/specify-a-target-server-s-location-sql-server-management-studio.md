@@ -57,7 +57,7 @@ Requires membership in the **sysadmin** fixed server role.
     GO  
     -- enlists the current server into the AdventureWorks1 master server.   
     -- The location for the current server is Building 21, Room 309, Rack 5  
-    EXEC dbo.sp_msx_enlist N'AdventureWorks2012',   
+    EXEC dbo.sp_msx_enlist N'AdventureWorks2022',   
         N'Building 21, Room 309, Rack 5' ;  
     GO  
     ```  

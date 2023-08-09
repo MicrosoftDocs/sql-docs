@@ -81,7 +81,7 @@ The current system user is: WillisJo
  The following example creates a table with `SYSTEM_USER` as a `DEFAULT` constraint for the `SRep_tracking_user` column.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 CREATE TABLE Sales.Sales_Tracking  
 (  

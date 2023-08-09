@@ -89,7 +89,7 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
  The following example opens the symmetric key `SymKeyMarketing3` and decrypts it by using the private key of certificate `MarketingCert9`.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 OPEN SYMMETRIC KEY SymKeyMarketing3   
     DECRYPTION BY CERTIFICATE MarketingCert9;  
 GO  
@@ -99,7 +99,7 @@ GO
  The following example opens the symmetric key `MarketingKey11` and decrypts it by using symmetric key `HarnpadoungsatayaSE3`.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 -- First open the symmetric key that you want for decryption.  
 OPEN SYMMETRIC KEY HarnpadoungsatayaSE3   
     DECRYPTION BY CERTIFICATE sariyaCert01;  

@@ -27,7 +27,7 @@ Version 18.2.1.1 is the latest general availability (GA) version. The Microsoft 
 
 ### Version information
 
-- Release number: 18.3.1.1
+- Release number: 18.2.1.1
 - Released: July 31, 2023
 
 > [!NOTE]
@@ -37,13 +37,13 @@ Version 18.2.1.1 is the latest general availability (GA) version. The Microsoft 
 
 This release of Microsoft ODBC Driver for SQL Server can be installed in the following languages:
 
-Microsoft ODBC Driver 18.3.1.1 for SQL Server (x64):  
+Microsoft ODBC Driver 18.2.1.1 for SQL Server (x64):  
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2242886&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2242886&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2242886&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2242886&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2242886&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2242886&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2242886&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2242886&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2242886&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2242886&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2242886&clcid=0x40a)
 
-Microsoft ODBC Driver 18.3.1.1 for SQL Server (x86):  
+Microsoft ODBC Driver 18.2.1.1 for SQL Server (x86):  
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2242980&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2242980&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2242980&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2242980&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2242980&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2242980&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2242980&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2242980&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2242980&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2242980&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2242980&clcid=0x40a)
 
-Microsoft ODBC Driver 18.3.1.1 for SQL Server (ARM64):  
+Microsoft ODBC Driver 18.2.1.1 for SQL Server (ARM64):  
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2243268&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2243268&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2243268&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2243268&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2243268&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2243268&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2243268&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2243268&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2243268&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2243268&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2243268&clcid=0x40a)
 
 ## Version 17

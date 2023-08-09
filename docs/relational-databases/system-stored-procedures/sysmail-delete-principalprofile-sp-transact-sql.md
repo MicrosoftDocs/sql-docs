@@ -78,6 +78,6 @@ EXEC msdb.dbo.sysmail_delete_principalprofile_sp
 
 ## See also
 
-- [Database Mail](../../relational-databases/database-mail/database-mail.md)
-- [Database Mail Configuration Objects](../../relational-databases/database-mail/database-mail-configuration-objects.md)
+- [Database Mail](../database-mail/database-mail.md)
+- [Database Mail Configuration Objects](../database-mail/database-mail-configuration-objects.md)
 - [Database Mail stored procedures (Transact-SQL)](database-mail-stored-procedures-transact-sql.md)

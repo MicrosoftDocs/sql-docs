@@ -145,7 +145,7 @@ GO
 
 ## Next steps
 
-- [View or Change Registered Filters and Word Breakers](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)
-- [Configure and Manage Word Breakers and Stemmers for Search](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)
-- [Configure and Manage Filters for Search](../../relational-databases/search/configure-and-manage-filters-for-search.md)
+- [View or Change Registered Filters and Word Breakers](../search/view-or-change-registered-filters-and-word-breakers.md)
+- [Configure and Manage Word Breakers and Stemmers for Search](../search/configure-and-manage-word-breakers-and-stemmers-for-search.md)
+- [Configure and Manage Filters for Search](../search/configure-and-manage-filters-for-search.md)
 - [Full-Text Search and Semantic Search stored procedures (Transact-SQL)](full-text-search-and-semantic-search-stored-procedures-transact-sql.md)

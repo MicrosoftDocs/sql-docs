@@ -73,25 +73,25 @@ dev_langs:
 
   Returns the ID, name, root directory, status, and number of full-text indexed tables for the specified full-text catalog.
 
-  [!INCLUDE [ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use the [sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md) catalog view instead.
+  [!INCLUDE [ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use the [sys.fulltext_catalogs](../system-catalog-views/sys-fulltext-catalogs-transact-sql.md) catalog view instead.
 
 - [sp_help_fulltext_catalogs_cursor](sp-help-fulltext-catalogs-cursor-transact-sql.md)
 
   Uses a cursor to return the ID, name, root directory, status, and number of full-text indexed tables for the specified full-text catalog.
 
-  [!INCLUDE [ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use the [sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md) catalog view instead.
+  [!INCLUDE [ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use the [sys.fulltext_catalogs](../system-catalog-views/sys-fulltext-catalogs-transact-sql.md) catalog view instead.
 
 - [sp_help_fulltext_columns](sp-help-fulltext-columns-transact-sql.md)
 
   Returns the columns designated for full-text indexing.
 
-  [!INCLUDE [ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use the [sys.fulltext_index_columns](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md) catalog view instead.
+  [!INCLUDE [ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use the [sys.fulltext_index_columns](../system-catalog-views/sys-fulltext-index-columns-transact-sql.md) catalog view instead.
 
 - [sp_help_fulltext_columns_cursor](sp-help-fulltext-columns-cursor-transact-sql.md)
 
   Uses a cursor to return the columns designated for full-text indexing.
 
-  [!INCLUDE [ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use the [sys.fulltext_index_columns](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md) catalog view instead.
+  [!INCLUDE [ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use the [sys.fulltext_index_columns](../system-catalog-views/sys-fulltext-index-columns-transact-sql.md) catalog view instead.
 
 - [sp_help_fulltext_system_components](sp-help-fulltext-system-components-transact-sql.md)
 
@@ -105,7 +105,7 @@ dev_langs:
 
   Returns a list of tables that are registered for full-text indexing.
 
-  [!INCLUDE [ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use the [sys.fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md) catalog view instead.
+  [!INCLUDE [ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use the [sys.fulltext_indexes](../system-catalog-views/sys-fulltext-indexes-transact-sql.md) catalog view instead.
 
 ## Semantic Search stored procedures
 
@@ -119,7 +119,7 @@ dev_langs:
 
 ## See also
 
-- [Full-Text Search and Semantic Search Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/full-text-search-and-semantic-search-catalog-views-transact-sql.md)
-- [Full-Text Search and Semantic Search Dynamic Management Views and Functions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)
+- [Full-Text Search and Semantic Search Catalog Views (Transact-SQL)](../system-catalog-views/full-text-search-and-semantic-search-catalog-views-transact-sql.md)
+- [Full-Text Search and Semantic Search Dynamic Management Views and Functions (Transact-SQL)](../system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
-- [Full-Text Search](../../relational-databases/search/full-text-search.md)
+- [Full-Text Search](../search/full-text-search.md)

@@ -48,7 +48,7 @@ The `-Group` value must be the name of the cluster group that corresponds to the
 
 ```powershell
 Add-ClusterResource -Name <dnnResourceName> `
--ResourceType "Distributed Network Name" -Group "<WSFC role of SQL server instance>"
+-ResourceType "Distributed Network Name" -Group "<WSFC role of SQL Server instance>"
 ```
 
 For example, to create your DNN resource `dnn-demo` for a default SQL Server FCI, use the following PowerShell command:

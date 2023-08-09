@@ -78,4 +78,4 @@ Go
 
 ## See also
 
-- [SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)
+- [SQL Server Managed Backup to Microsoft Azure](../backup-restore/sql-server-managed-backup-to-microsoft-azure.md)

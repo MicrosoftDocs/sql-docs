@@ -30,11 +30,11 @@ For more information about how to configure other [!INCLUDE[ssNoVersion](../../i
 
 There are three possible values:
 
-- **Off**: Means **Extended Protection** is disabled. The instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will accept connections from any client regardless of whether the client is protected or not. **Off** is compatible with older and unpatched operating systems, but is less secure. Only use this setting when you know that the client operating systems do not support extended protection.
+- **Off**: Means **Extended Protection** is disabled. The instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accepts connections from any client regardless of whether the client is protected or not. **Off** is compatible with older and unpatched operating systems, but is less secure. Only use this setting when you know that the client operating systems don't support extended protection.
 
-- **Allowed**: Means **Extended Protection** is required for connections from operating systems that support **Extended Protection**. Connections from unprotected client applications that are running on protected client operating systems are rejected. **Extended Protection** is ignored for connections from unprotected operating systems. This setting is more secure than **Off**, but is not the most secure setting. Use this setting in mixed environments, where some operating systems or applications support **Extended Protection** and some do not.
+- **Allowed**: Means **Extended Protection** is required for connections from operating systems that support **Extended Protection**. Connections from unprotected client applications that are running on protected client operating systems are rejected. **Extended Protection** is ignored for connections from unprotected operating systems. This setting is more secure than **Off**, but isn't the most secure setting. Use this setting in mixed environments, where some operating systems or applications support **Extended Protection** and some don't.
 
-- **Required**: Means that for a connection to be accepted, it must come from a protected application on a protected operating system. This setting is the most secure of the three options. But connections from operating systems that do not support **Extended Protection** will not be able to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+- **Required**: Means that for a connection to be accepted, it must come from a protected application on a protected operating system. This setting is the most secure of the three options. But connections from operating systems that don't support **Extended Protection** won't be able to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 ### Accepted NTLM SPNs
 

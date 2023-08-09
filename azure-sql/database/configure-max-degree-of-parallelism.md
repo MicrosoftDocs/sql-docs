@@ -88,7 +88,7 @@ ms.devlang: tsql
  
 ## Examples   
 
-  These examples use the latest **AdventureWorksLT** sample database when the `SAMPLE` option is chosen for a new single database of Azure SQL Database.
+  These examples use the latest `AdventureWorksLT` sample database when the `SAMPLE` option is chosen for a new single database of Azure SQL Database.
 
 ### PowerShell
 

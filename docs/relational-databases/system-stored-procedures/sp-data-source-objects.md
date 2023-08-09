@@ -83,7 +83,7 @@ Requires ALTER ANY EXTERNAL DATA SOURCE permission.
 
 ## Remarks
 
-The SQL Server instance must have the [PolyBase](../../relational-databases/polybase/polybase-guide.md) feature installed. This procedure was first introduced in SQL Server 2019 CU5.
+The SQL Server instance must have the [PolyBase](../polybase/polybase-guide.md) feature installed. This procedure was first introduced in SQL Server 2019 CU5.
 
 This stored procedure supports connectors for:
 

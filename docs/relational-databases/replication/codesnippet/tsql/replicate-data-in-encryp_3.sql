@@ -1,6 +1,6 @@
 
 -- Execute at the Subscription on the subscription database.
-USE AdventureWorks2012Replica;
+USE AdventureWorks2022Replica;
 GO
 
 -- Create the database master key if it doesn't exist.

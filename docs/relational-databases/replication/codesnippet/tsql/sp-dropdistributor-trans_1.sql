@@ -10,10 +10,10 @@ DECLARE @publisher AS sysname;
 DECLARE @publicationDB as sysname;
 SET @distributionDB = N'distribution';
 SET @publisher = $(DistPubServer);
-SET @publicationDB = N'AdventureWorks2012';
+SET @publicationDB = N'AdventureWorks2022';
 
 -- Disable the publication database.
-USE [AdventureWorks2012]
+USE [AdventureWorks2022]
 EXEC sp_removedbreplication @publicationDB;
 
 -- Remove the registration of the local Publisher at the Distributor.

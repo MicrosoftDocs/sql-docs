@@ -57,7 +57,7 @@ Data Migration Assistant v5.0 introduces support for analyzing database connecti
 
 1. Select **Add Sources** to open the connection flyout menu.
 
-2. Enter the SQL server instance name, choose the Authentication type, set the correct connection properties, and then select **Connect**.
+2. Enter the SQL Server instance name, choose the Authentication type, set the correct connection properties, and then select **Connect**.
 
 3. Select the databases to assess, and then select **Add**.
 

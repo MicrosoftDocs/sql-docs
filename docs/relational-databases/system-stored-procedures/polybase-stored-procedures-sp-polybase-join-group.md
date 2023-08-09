@@ -21,7 +21,7 @@ dev_langs:
 
 Adds a SQL Server instance as a compute node to a PolyBase group for scale-out computation.
 
-The SQL Server instance must have the [PolyBase](../../relational-databases/polybase/polybase-guide.md) feature installed. PolyBase enables the integration of non-SQL Server data sources, such as Hadoop and Azure Blob Storage. See also [sp_polybase_leave_group (Transact-SQL)](polybase-stored-procedures-sp-polybase-leave-group.md).
+The SQL Server instance must have the [PolyBase](../polybase/polybase-guide.md) feature installed. PolyBase enables the integration of non-SQL Server data sources, such as Hadoop and Azure Blob Storage. See also [sp_polybase_leave_group (Transact-SQL)](polybase-stored-procedures-sp-polybase-leave-group.md).
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 

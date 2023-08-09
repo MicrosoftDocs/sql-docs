@@ -135,7 +135,7 @@ When [Memory-Optimized TempDB Metadata](../databases/tempdb-database.md#memory-o
 
 Starting with [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)], and in Azure SQL Database and Azure SQL Managed Instance, `sp_estimate_compression_savings` supports estimating both columnstore and columnstore archive compression. Unlike page and row compression, applying columnstore compression to an object requires creating a new columnstore index. For this reason, when using the COLUMNSTORE and COLUMNSTORE_ARCHIVE options of this procedure, the type of the source object provided to the procedure determines the type of columnstore index used for the compressed size estimate. The following table illustrates the reference objects used to estimate compression savings for each source object type when the `@data_compression` parameter is set to either COLUMNSTORE or COLUMNSTORE_ARCHIVE.
 
-| Source Object | Reference Object |
+| Source Object | Reference object |
 | --- | --- |
 | Heap | Clustered columnstore index |
 | Clustered index | Clustered columnstore index |
@@ -148,7 +148,7 @@ Starting with [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)], and in
 
 Similarly, when the `@data_compression` parameter is set to `NONE`, `ROW`, or `PAGE` and the source object is a columnstore index, the following table outlines the reference objects used.
 
-| Source Object | Reference Object |
+| Source Object | Reference object |
 | --- | --- |
 | Clustered columnstore index | Heap |
 | Nonclustered columnstore index | Nonclustered index (including the columns contained in the nonclustered columnstore index as key columns, and the partition column of the table, if any, as an included column) |

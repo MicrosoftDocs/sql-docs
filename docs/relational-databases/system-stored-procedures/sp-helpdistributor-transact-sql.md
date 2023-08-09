@@ -83,11 +83,11 @@ The name of the distribution cleanup agent. *@distrib_cleanupagent* is **nvarcha
 
 #### [ @publisher = ] '*publisher*'
 
-The name of the Publisher. *@publisher* is **sysname**, with a default of NULL.
+The name of the Publisher. *@publisher* is **sysname**, with a default of `NULL`.
 
 #### [ @local = ] '*local*'
 
-Whether [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] should get local server values. *@local* is **nvarchar(5)**, with a default of NULL.
+Whether [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] should get local server values. *@local* is **nvarchar(5)**, with a default of `NULL`.
 
 #### [ @rpcsrvname = ] '*rpcsrvname*' OUTPUT
 

@@ -64,8 +64,8 @@ The type of subscription. *subscription_type* is **int**, with no default and ca
 
 | Value | Description |
 | --- | --- |
-| **0** | Push subscription |
-| **1** | Pull subscription |
+| `0` | Push subscription |
+| `1` | Pull subscription |
 
 #### [ @subdb_version = ] *subdb_version*
 

@@ -75,7 +75,7 @@ A new message or error number for the alert definition. Typically, *message_id* 
 
 #### [ @severity = ] *severity*
 
-A new severity level (from `1` through `25`) for the alert definition. Any [!INCLUDE [msCoName](../../includes/msconame-md.md)] [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] message sent to the Windows application log with the specified severity activates the alert. *@severity* is **int**, with a default of `NULL`. A severity level can be used only if the message ID setting for the alert is `0`.
+A new severity level (from `1` through `25`) for the alert definition. Any [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] message sent to the Windows application log with the specified severity activates the alert. *@severity* is **int**, with a default of `NULL`. A severity level can be used only if the message ID setting for the alert is `0`.
 
 #### [ @delay_between_responses = ] *delay_between_responses*
 

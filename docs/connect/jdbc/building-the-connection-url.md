@@ -45,7 +45,7 @@ Connect to the default database on the local computer by using a user name and p
 `jdbc:sqlserver://localhost;encrypt=true;user=MyUserName;password=*****;`
 
 > [!NOTE]
-> Although the previous example uses a username and password in the connection string, you should use integrated security as it's more secure. For more information, see the [Connecting with Integrated authentication](#Connectingintegrated) section later in this article.
+> Although the previous example uses a username and password in the connection string, you should use integrated security as it's more secure. For more information, see the [Connecting with integrated authentication](#Connectingintegrated) section later in this article.
 
 The following connection string shows an example of how to connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database using integrated authentication and Kerberos from an application running on any operating system supported by the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]:
 

@@ -127,7 +127,7 @@ The `CREATE SYNONYM` permission is a grantable permission.
 
 ### A. Create a synonym for a local object
 
-The following example first creates a synonym for the base object, `Product` in the `AdventureWorks2022` database, and then queries the synonym.
+The following example first creates a synonym for the base object, `Product` in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database, and then queries the synonym.
 
 ```sql
 -- Create a synonym for the Product table in AdventureWorks2022.

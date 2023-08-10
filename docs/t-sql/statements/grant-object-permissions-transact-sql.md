@@ -149,7 +149,7 @@ PRIVILEGES
 ## Examples  
   
 ### A. Granting SELECT permission on a table  
- The following example grants `SELECT` permission to user `RosaQdM` on table `Person.Address` in the `AdventureWorks2012` database.  
+ The following example grants `SELECT` permission to user `RosaQdM` on table `Person.Address` in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql  
 GRANT SELECT ON OBJECT::Person.Address TO RosaQdM;  
@@ -160,7 +160,7 @@ GO
  The following example grants `EXECUTE` permission on stored procedure `HumanResources.uspUpdateEmployeeHireInfo` to an application role called `Recruiting11`.  
   
 ```sql  
-USE AdventureWorks2012;   
+USE AdventureWorks2022;   
 GRANT EXECUTE ON OBJECT::HumanResources.uspUpdateEmployeeHireInfo  
     TO Recruiting11;  
 GO   
@@ -176,7 +176,7 @@ GO
 ```  
   
 ### D. Granting SELECT permission on a table without using the OBJECT phrase  
- The following example grants `SELECT` permission to user `RosaQdM` on table `Person.Address` in the `AdventureWorks2012` database.  
+ The following example grants `SELECT` permission to user `RosaQdM` on table `Person.Address` in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql  
 GRANT SELECT ON Person.Address TO RosaQdM;  
@@ -184,15 +184,15 @@ GO
 ```  
   
 ### E. Granting SELECT permission on a table to a domain account  
- The following example grants `SELECT` permission to user `AdventureWorks2012\RosaQdM` on table `Person.Address` in the `AdventureWorks2012` database.  
+ The following example grants `SELECT` permission to user `AdventureWorks2022\RosaQdM` on table `Person.Address` in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql  
-GRANT SELECT ON Person.Address TO [AdventureWorks2012\RosaQdM];  
+GRANT SELECT ON Person.Address TO [AdventureWorks2022\RosaQdM];  
 GO  
 ```  
   
 ### F. Granting EXECUTE permission on a procedure to a role  
- The following example creates a role and then grants `EXECUTE` permission to the role on procedure `uspGetBillOfMaterials` in the `AdventureWorks2012` database.  
+ The following example creates a role and then grants `EXECUTE` permission to the role on procedure `uspGetBillOfMaterials` in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql  
 CREATE ROLE newrole ;  

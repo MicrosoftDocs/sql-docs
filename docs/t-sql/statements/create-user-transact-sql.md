@@ -354,13 +354,13 @@ For [!INCLUDE[ssSDS_md](../../includes/sssql22-md.md)], [!INCLUDE[ssSDS_md](../.
 ## Examples  
   
 ### A. Creating a database user based on a SQL Server login  
- The following example first creates a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login named `AbolrousHazem`, and then creates a corresponding database user `AbolrousHazem` in `AdventureWorks2012`.  
+ The following example first creates a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login named `AbolrousHazem`, and then creates a corresponding database user `AbolrousHazem` in [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)].  
   
 ```sql  
 CREATE LOGIN AbolrousHazem   
     WITH PASSWORD = '340$Uuxwp7Mcxo7Khy';  
 ```   
-Change to a user database. For example, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] use the `USE AdventureWorks2012` statement. In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], you must make a new connection to the user database.
+Change to a user database. For example, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] use the `USE AdventureWorks2022` statement. In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], you must make a new connection to the user database.
 
 ```sql   
 CREATE USER AbolrousHazem FOR LOGIN AbolrousHazem;  
@@ -373,7 +373,7 @@ GO
 ```sql  
 CREATE LOGIN WanidaBenshoof   
     WITH PASSWORD = '8fdKJl3$nlNv3049jsKK';  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 CREATE USER Wanida FOR LOGIN WanidaBenshoof   
     WITH DEFAULT_SCHEMA = Marketing;  
 GO  
@@ -385,7 +385,7 @@ GO
 **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 CREATE CERTIFICATE CarnationProduction50  
     WITH SUBJECT = 'Carnation Production Facility Supervisors',  
     EXPIRY_DATE = '11/11/2011';  
@@ -398,7 +398,7 @@ GO
  The following example creates a database user `CustomApp` that doesn't map to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login. The example then grants a user `adventure-works\tengiz0` permission to impersonate the `CustomApp` user.  
   
 ```sql  
-USE AdventureWorks2012 ;  
+USE AdventureWorks2022;  
 CREATE USER CustomApp WITHOUT LOGIN ;  
 GRANT IMPERSONATE ON USER::CustomApp TO [adventure-works\tengiz0] ;  
 GO   
@@ -424,7 +424,7 @@ GO
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later. This example works in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] if DEFAULT_LANGUAGE is removed.  
   
 ```sql  
-USE AdventureWorks2012 ;  
+USE AdventureWorks2022;  
 GO  
 CREATE USER Carlo  
 WITH PASSWORD='RN92piTCh%$!~3K9844 Bl*'  
@@ -439,7 +439,7 @@ GO
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.  
   
 ```sql  
-USE AdventureWorks2012 ;  
+USE AdventureWorks2022;  
 GO  
 CREATE USER [Contoso\Fritz] ;  
 GO   
@@ -451,7 +451,7 @@ GO
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.  
   
 ```sql  
-USE AdventureWorks2012 ;  
+USE AdventureWorks2022;  
 GO  
 CREATE USER CarmenW WITH PASSWORD = 'a8ea v*(Rd##+'  
 , SID = 0x01050000000000090300000063FF0451A9E7664BA705B10E37DDC4B7;

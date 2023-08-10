@@ -40,11 +40,11 @@ This article describes the options that are available to you for working with th
 
 To use MDAC components to access the types and features that were introduced in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], you must set the DataTypeCompatibility initialization property in the ADO connection string.
 
-For example, the following Visual Basic Scripting Edition (VBScript) sample shows the results of querying an **xml** data type column, `Demographics`, in the `Sales.Store` table of the `AdventureWorks2012` sample database. Specifically, the query looks for the instance value of this column for the row where the `CustomerID` is equal to `3`.
+For example, the following Visual Basic Scripting Edition (VBScript) sample shows the results of querying an **xml** data type column, `Demographics`, in the `Sales.Store` table of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample database. Specifically, the query looks for the instance value of this column for the row where the `CustomerID` is equal to `3`.
 
 ```vb
 Const DS = "MyServer"
-Const DB = "AdventureWorks2012"
+Const DB = "AdventureWorks2022"
 
 Set objConn = CreateObject("ADODB.Connection")
 Set objRs = CreateObject("ADODB.Recordset")

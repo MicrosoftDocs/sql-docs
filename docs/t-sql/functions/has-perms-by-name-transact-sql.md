@@ -148,7 +148,7 @@ SELECT HAS_PERMS_BY_NAME
 ```  
   
 ### G. Do I have INSERT permission on the SalesPerson table in AdventureWorks2022?  
- The following example assumes `AdventureWorks2022` is my current database context, and uses a two-part name.  
+ The following example assumes [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] is my current database context, and uses a two-part name.  
   
 ```sql  
 SELECT HAS_PERMS_BY_NAME('Sales.SalesPerson', 'OBJECT', 'INSERT');  

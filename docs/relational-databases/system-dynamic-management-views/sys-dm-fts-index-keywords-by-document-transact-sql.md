@@ -107,13 +107,13 @@ GO
 ## Examples  
   
 ### A. Displaying full-text index content at the document level  
- The following example displays the content of the full-text index at the document level in the `HumanResources.JobCandidate` table of the `AdventureWorks2012` sample database.  
+ The following example displays the content of the full-text index at the document level in the `HumanResources.JobCandidate` table of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample database.  
   
 > [!NOTE]  
 >  You can create this index by executing the example provided for the `HumanResources.JobCandidate` table in [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
   
 ```  
-SELECT * FROM sys.dm_fts_index_keywords_by_document(db_id('AdventureWorks'),   
+SELECT * FROM sys.dm_fts_index_keywords_by_document(db_id('AdventureWorks2022'),   
 object_id('HumanResources.JobCandidate'));  
 GO  
 ```  

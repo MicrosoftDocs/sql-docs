@@ -94,7 +94,7 @@ To use TDE, follow these steps.
 
 1. Set the database to use encryption.
 
-The following example shows encryption and decryption of the `AdventureWorks2012` database using a certificate named `MyServerCert` that's installed on the server.
+The following example shows encryption and decryption of the [!INCLUDE [sssampledbobject-md](../../../includes/sssampledbobject-md.md)] database using a certificate named `MyServerCert` that's installed on the server.
 
 ```sql
 USE master;
@@ -103,13 +103,13 @@ CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<UseStrongPasswordHere>';
 GO
 CREATE CERTIFICATE MyServerCert WITH SUBJECT = 'My DEK Certificate';
 GO
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 CREATE DATABASE ENCRYPTION KEY
 WITH ALGORITHM = AES_256
 ENCRYPTION BY SERVER CERTIFICATE MyServerCert;
 GO
-ALTER DATABASE AdventureWorks2012
+ALTER DATABASE AdventureWorks2022
 SET ENCRYPTION ON;
 GO
 ```
@@ -253,7 +253,7 @@ Letting a database use TDE removes the remaining part of the current virtual tra
 To find the status of log-file encryption, see the `encryption_state` column in the `sys.dm_database_encryption_keys` view, as in this example:
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 /* The value 3 represents an encrypted state
    on the database and transaction logs. */

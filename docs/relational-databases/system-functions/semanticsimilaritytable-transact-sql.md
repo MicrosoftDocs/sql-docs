@@ -86,7 +86,7 @@ SEMANTICSIMILARITYTABLE
  Requires SELECT permissions on the base table on which the full-text and semantic indexes were created.  
   
 ## Examples  
- The following example retrieves the top 10 candidates who are similar to a specified candidate from the HumanResources.JobCandidate table in the AdventureWorks2012 sample database.  
+ The following example retrieves the top 10 candidates who are similar to a specified candidate from the HumanResources.JobCandidate table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample database.  
   
 ```scr  
 SELECT TOP(10) KEY_TBL.matched_document_key AS Candidate_ID  

@@ -56,13 +56,13 @@ You can use Transact-SQL to view or change the compatibility level of a database
   
 2. Open a **New Query**.  
   
-3. Copy and paste the following example into the query window and select **Execute**. This example returns the compatibility level of the **AdventureWorks2019** [sample database](../../samples/adventureworks-install-configure.md).  
+3. Copy and paste the following example into the query window and select **Execute**. This example returns the compatibility level of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] [sample database](../../samples/adventureworks-install-configure.md).  
   
 ```sql  
-USE AdventureWorks2019;  
+USE AdventureWorks2022;  
 GO  
 SELECT compatibility_level  
-FROM sys.databases WHERE name = 'AdventureWorks2019';  
+FROM sys.databases WHERE name = 'AdventureWorks2022';  
 GO  
 ```  
   
@@ -72,12 +72,12 @@ GO
   
 2.  From the Standard bar, select **New Query**.  
   
-3.  Copy and paste the following example into the query window and select **Execute**. This example changes the compatibility level of the `AdventureWorks2019` database to `150`, which is the compatibility level for [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)].  
+3.  Copy and paste the following example into the query window and select **Execute**. This example changes the compatibility level of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database to `160`, which is the compatibility level for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].  
 
   
 ```sql  
-ALTER DATABASE AdventureWorks2019  
-SET COMPATIBILITY_LEVEL = 150;  
+ALTER DATABASE AdventureWorks2022  
+SET COMPATIBILITY_LEVEL = 160;  
 GO
 ```  
   

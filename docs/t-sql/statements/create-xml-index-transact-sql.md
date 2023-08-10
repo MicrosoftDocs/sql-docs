@@ -263,7 +263,7 @@ For more information about index creation, see the "Remarks" section in [CREATE 
 
 ## Examples
 
-The following examples use the `AdventureWorks2012` sample database.
+[!INCLUDE [article-uses-adventureworks](../../includes/article-uses-adventureworks.md)]
 
 ### A. Creating a primary XML index
 

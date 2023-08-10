@@ -280,7 +280,7 @@ WITH    REPLACE -- overwrite
 
 ### Options for encryption and compression
 
-The following example shows how to back up and restore the `AdventureWorks2022` database with encryption, `MAXTRANSFERSIZE` as 20 MB and compression:
+The following example shows how to back up and restore the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database with encryption, `MAXTRANSFERSIZE` as 20 MB and compression:
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = <password>;
@@ -304,7 +304,7 @@ WITH REPLACE
 
 ### Use region for backup and restore
 
-The following example shows how to back up and restore the AdventureWorks2022 database using `REGION_OPTIONS`:
+The following example shows how to back up and restore the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database using `REGION_OPTIONS`:
 
 ```sql
 -- Backup Database

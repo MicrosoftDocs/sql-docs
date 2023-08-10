@@ -791,19 +791,19 @@ GO
 
 ### H. Attach a full-text catalog that has been moved
 
-The following example attaches the full-text catalog `AdvWksFtCat` along with the `AdventureWorks2012` data and log files. In this example, the full-text catalog is moved from its default location to a new location `c:\myFTCatalogs`. The data and log files remain in their default locations.
+The following example attaches the full-text catalog `AdvWksFtCat` along with the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] data and log files. In this example, the full-text catalog is moved from its default location to a new location `c:\myFTCatalogs`. The data and log files remain in their default locations.
 
 ```sql
 USE master;
 GO
---Detach the AdventureWorks2012 database
-sp_detach_db AdventureWorks2012;
+--Detach the AdventureWorks2022 database
+sp_detach_db AdventureWorks2022;
 GO
 -- Physically move the full text catalog to the new location.
---Attach the AdventureWorks2012 database and specify the new location of the full-text catalog.
-CREATE DATABASE AdventureWorks2012 ON
-    (FILENAME = 'c:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\AdventureWorks2012_data.mdf'),
-    (FILENAME = 'c:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\AdventureWorks2012_log.ldf'),
+--Attach the AdventureWorks2022 database and specify the new location of the full-text catalog.
+CREATE DATABASE AdventureWorks2022 ON
+    (FILENAME = 'c:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\AdventureWorks2022_data.mdf'),
+    (FILENAME = 'c:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\AdventureWorks2022_log.ldf'),
     (FILENAME = 'c:\myFTCatalogs\AdvWksFtCat')
 FOR ATTACH;
 GO

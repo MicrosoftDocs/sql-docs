@@ -18,7 +18,7 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Poll servers
 
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 > [!IMPORTANT]
 >  

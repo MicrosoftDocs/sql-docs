@@ -200,7 +200,7 @@ Seconds 2020-04-30 21:21:21.0000000
 
 These examples use different types of expressions as arguments for the *number* and *date* parameters.
 
-These examples are built using the `AdventureWorksDW2017` database.
+These examples are built using the [!INCLUDE [sssampledbdwobject-md](../../includes/sssampledbdwobject-md.md)] database.
 
 #### Specify user-defined variables as number and date
 

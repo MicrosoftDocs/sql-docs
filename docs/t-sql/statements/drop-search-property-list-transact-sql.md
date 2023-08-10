@@ -64,7 +64,7 @@ SELECT name FROM sys.registered_search_property_lists;
 >  The property list owner can grant CONTROL permissions on the list. By default, the user who creates a search property list is its owner. The owner can be changed by using the [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] statement.  
   
 ## Examples  
- The following example drops the `JobCandidateProperties` property list from the `AdventureWorks2012` database.  
+ The following example drops the `JobCandidateProperties` property list from the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql  
 DROP SEARCH PROPERTY LIST JobCandidateProperties;  

@@ -234,10 +234,10 @@ GO
 
 ### C. Display the contents of one statistics object
 
- The following example creates a statistics object and then displays the contents of the `Customer_LastName` statistics on the `DimCustomer` table in the `AdventureWorks2022` sample database.
+ The following example creates a statistics object and then displays the contents of the `Customer_LastName` statistics on the `DimCustomer` table in the [!INCLUDE [ssawpdw-md](../../includes/ssawpdw-md.md)] sample database.
 
 ```sql
--- Uses AdventureWorks2022
+-- Uses AdventureWorksPDW
 --First, create a statistics object
 CREATE STATISTICS Customer_LastName
 ON AdventureWorksPDW2012.dbo.DimCustomer (LastName);

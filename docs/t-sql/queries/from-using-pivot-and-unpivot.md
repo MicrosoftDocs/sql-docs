@@ -68,7 +68,7 @@ In [!INCLUDE [fabric](../../includes/fabric.md)] and [!INCLUDE [ssazuresynapse_m
 The following code example produces a two-column table that has four rows.  
   
 ```sql
-USE AdventureWorks2014 ;  
+USE AdventureWorks2022;  
 GO  
 SELECT DaysToManufacture, AVG(StandardCost) AS AverageCost   
 FROM Production.Product  
@@ -117,10 +117,10 @@ AverageCost                    5.0885      223.88      359.1082    NULL        9
   
 ## Complex PIVOT example
 
-A common scenario where `PIVOT` can be useful is when you want to generate cross-tabulation reports to give a summary of the data. For example, suppose you want to query the `PurchaseOrderHeader` table in the `AdventureWorks2014` sample database to determine the number of purchase orders placed by certain employees. The following query provides this report, ordered by vendor.  
+A common scenario where `PIVOT` can be useful is when you want to generate cross-tabulation reports to give a summary of the data. For example, suppose you want to query the `PurchaseOrderHeader` table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample database to determine the number of purchase orders placed by certain employees. The following query provides this report, ordered by vendor.  
   
 ```sql
-USE AdventureWorks2014;  
+USE AdventureWorks2022;  
 GO  
 SELECT VendorID, [250] AS Emp1, [251] AS Emp2, [256] AS Emp3, [257] AS Emp4, [260] AS Emp5  
 FROM   

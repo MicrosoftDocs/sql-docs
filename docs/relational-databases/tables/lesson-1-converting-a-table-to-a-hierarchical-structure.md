@@ -22,19 +22,19 @@ To complete this tutorial, you need SQL Server Management Studio, access to a se
 
 - Install [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
 - Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- Download [AdventureWorks2017 sample databases](../../samples/adventureworks-install-configure.md).
+- Download [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md).
 
 Instructions for restoring databases in SSMS are here: [Restore a database](../backup-restore/restore-a-database-backup-using-ssms.md).  
 
 ## Examine the current structure of the employee table
-The sample Adventureworks2017 (or later) database contains an **Employee** table in the **HumanResources** schema. To avoid changing the original table, this step makes a copy of the **Employee** table named **EmployeeDemo**. To simplify the example, you only copy five columns from the original table. Then, you query the **HumanResources.EmployeeDemo** table to review how the data is structured in a table without using the **hierarchyid** data type.  
+The sample [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database contains an **Employee** table in the **HumanResources** schema. To avoid changing the original table, this step makes a copy of the **Employee** table named **EmployeeDemo**. To simplify the example, you only copy five columns from the original table. Then, you query the **HumanResources.EmployeeDemo** table to review how the data is structured in a table without using the **hierarchyid** data type.  
   
 ### Copy the Employee table  
   
 1.  In a Query Editor window, run the following code to copy the table structure and data from the **Employee** table into a new table named **EmployeeDemo**. Since the original table already uses hierarchyid, this query essentially flattens the hierarchy to retrieve the manager of the employee. In subsequent parts of this lesson we will be reconstructing this hierarchy.
 
    ```sql  
-   USE AdventureWorks2017;  
+   USE AdventureWorks2022;  
    GO  
      if OBJECT_ID('HumanResources.EmployeeDemo') is not null
     drop table HumanResources.EmployeeDemo 

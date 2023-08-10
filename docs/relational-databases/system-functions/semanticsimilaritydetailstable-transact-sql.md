@@ -83,7 +83,7 @@ SEMANTICSIMILARITYDETAILSTABLE
  Requires SELECT permissions on the base table on which the full-text and semantic indexes were created.  
   
 ## Examples  
- The following example retrieves the 5 key phrases that had the highest similarity score between the specified candidates in **HumanResources.JobCandidate** table of the AdventureWorks2012 sample database. The @CandidateId and @MatchedID variables represent values from the key column of the full-text index.  
+ The following example retrieves the 5 key phrases that had the highest similarity score between the specified candidates in **HumanResources.JobCandidate** table of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample database. The @CandidateId and @MatchedID variables represent values from the key column of the full-text index.  
   
 ```sql  
 SELECT TOP(5) KEY_TBL.keyphrase, KEY_TBL.score  

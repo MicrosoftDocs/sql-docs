@@ -4,16 +4,16 @@ description: Download and install Azure Data Studio for Windows, macOS, or Linux
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan, randolphwest
-ms.date: 08/07/2023
+ms.date: 08/10/2023
 ms.service: azure-data-studio
 ms.topic: overview
 ms.custom: intro-overview
 ---
 # Download and install Azure Data Studio
 
-Azure Data Studio is a cross-platform database tool for data professionals who use on-premises and cloud data platforms on Windows, macOS, and Linux.
+Azure Data Studio is a lightweight, cross-platform data management and development tool with connectivity to popular cloud and on-premises databases. Azure Data Studio supports Windows, macOS, and Linux, with immediate capability to connect to Azure SQL and SQL Server.  Browse the extension library for more database support options including MySQL, PostgreSQL, and CosmosDB.
 
-Azure Data Studio offers a modern editor experience with IntelliSense, code snippets, source control integration, and an integrated terminal. It's engineered with the data platform user in mind, with the built-in charting of query result sets and customizable dashboards.
+Azure Data Studio’s familiar interface offers a modern editor experience with IntelliSense, code snippets, source control integration, and an integrated terminal.  Engineered with the data platform user in mind, its extensibility allows users to customize their experience by installing the extensions relevant to their workflow, including database migrations, charting, GitHub Copilot, and more!
 
 Use Azure Data Studio to query, design, and manage your databases and data warehouses wherever they are, on your local computer or in the cloud.
 

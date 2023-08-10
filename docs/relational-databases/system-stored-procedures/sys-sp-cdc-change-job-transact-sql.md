@@ -111,7 +111,7 @@ Requires membership in the **db_owner** fixed database role.
 
 ### A. Change a capture job
 
-The following example updates the *@job_type*, *@maxscans*, and *@maxtrans* parameters of a capture job in the `AdventureWorks2022` database. The other valid parameters for a capture job, *@continuous* and *@pollinginterval*, are omitted; their values aren't modified.
+The following example updates the *@job_type*, *@maxscans*, and *@maxtrans* parameters of a capture job in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database. The other valid parameters for a capture job, *@continuous* and *@pollinginterval*, are omitted; their values aren't modified.
 
 ```sql
 USE AdventureWorks2022;
@@ -126,7 +126,7 @@ GO
 
 ### B. Change a cleanup job
 
-The following example updates a cleanup job in the `AdventureWorks2022` database. All valid parameters for this job type, except *@threshold*, are specified. The value of *@threshold* isn't modified.
+The following example updates a cleanup job in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database. All valid parameters for this job type, except *@threshold*, are specified. The value of *@threshold* isn't modified.
 
 ```sql
 USE AdventureWorks2022;

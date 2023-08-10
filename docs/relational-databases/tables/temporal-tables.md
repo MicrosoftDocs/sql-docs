@@ -125,7 +125,7 @@ See this [ASP.NET Core web application](https://github.com/microsoft/sql-server-
 
 ### Download Adventure Works sample database
 
-You can download the [AdventureWorks database for SQL Server](https://github.com/microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2016_EXT.bak), which includes temporal table features.
+You can download the [AdventureWorks database for SQL Server](https://github.com/microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2022_EXT.bak), which includes temporal table features.
 
 ## See also
 

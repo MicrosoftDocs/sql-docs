@@ -30,7 +30,7 @@ Matches any string of zero or more characters. This wildcard character can be us
 
 ### Example A: Match end of string
 
-The following example returns the first and last names of people in the `Person.Person` table of `AdventureWorks2019`, where the first name starts with `Dan`.
+The following example returns the first and last names of people in the `Person.Person` table of [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)], where the first name starts with `Dan`.
 
 ```sql
 SELECT FirstName, LastName
@@ -41,7 +41,7 @@ GO
 
 ### Example B: Match middle of string
 
-The following example returns the first and last names of people in the `Person.Person` table of `AdventureWorks2019`, where the first name starts with `J` and ends with `n`.
+The following example returns the first and last names of people in the `Person.Person` table of [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)], where the first name starts with `J` and ends with `n`.
 
 ```sql
 SELECT FirstName, LastName

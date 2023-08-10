@@ -14,7 +14,7 @@ ms.topic: tutorial
 
 
 
-In this lesson, you create a simple ETL package that extracts data from a single flat file source, transforms the data using two lookup transformations, and writes the transformed data to a copy of the **FactCurrencyRate** fact table in the **AdventureWorksDW2012** sample database. As part of this lesson, you learn how to create new packages, add and configure data source and destination connections, and work with new control flow and data flow components.  
+In this lesson, you create a simple ETL package that extracts data from a single flat file source, transforms the data using two lookup transformations, and writes the transformed data to a copy of the **FactCurrencyRate** fact table in the [!INCLUDE [sssampledbdwobject-md](../includes/sssampledbdwobject-md.md)] sample database. As part of this lesson, you learn how to create new packages, add and configure data source and destination connections, and work with new control flow and data flow components.  
   
 Before creating a package, you need to understand the formatting used in both the source data and the destination. Then, you be ready to define the transformations necessary to map the source data to the destination.  
 
@@ -34,7 +34,7 @@ This tutorial relies on Microsoft SQL Server Data Tools, a set of example packag
 
     4.  After the file downloads, unzip its contents to a local directory.  
 
-* To install and deploy the **AdventureWorksDW2012** sample database, see [Install and configure AdventureWorks sample database - SQL](../samples/adventureworks-install-configure.md).
+* To install and deploy the [!INCLUDE [sssampledbdwobject-md](../includes/sssampledbdwobject-md.md)] sample database, see [Install and configure AdventureWorks sample database - SQL](../samples/adventureworks-install-configure.md).
   
 ## Look at the source data
 For this tutorial, the source data is a set of historical currency data in a flat file named **SampleCurrencyData.txt**. The source data has the following four columns: the average rate of the currency, a currency key, a date key, and the end-of-day rate.  
@@ -57,7 +57,7 @@ Here is an example of the source data in the SampleCurrencyData.txt file:
 When working with flat file source data, it's important to understand how the Flat File connection manager interprets the flat file data. If the flat file source is Unicode, the Flat File connection manager defines all columns as [DT_WSTR] with a default column width of 50. If the flat file source is ANSI-encoded, the columns are defined as [DT_STR] with a default column width of 50. You probably have to change these defaults to make the string column types more applicable for your data. You need to look at the data type of the destination, and then choose that type within the Flat File connection manager.  
   
 ## Look at the destination data
-The destination for the source data is a copy of the **FactCurrencyRate** fact table in **AdventureWorksDW**. The **FactCurrencyRate** fact table has four columns, and has relationships to two dimension tables, as shown in the following table.  
+The destination for the source data is a copy of the **FactCurrencyRate** fact table in [!INCLUDE [sssampledbdwobject-md](../includes/sssampledbdwobject-md.md)]. The **FactCurrencyRate** fact table has four columns, and has relationships to two dimension tables, as shown in the following table.  
   
 |Column Name|Data Type|Lookup Table|Lookup Column|  
 |---------------|-------------|----------------|-----------------|  

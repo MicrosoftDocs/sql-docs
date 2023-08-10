@@ -52,10 +52,10 @@ Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases
 Get-Item . | Get-Member -Type Properties  
 ```  
   
- This example navigates to the AdventureWorks2012 node in a SQLSERVER: path and lists the object properties:  
+ This example navigates to the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] node in a SQLSERVER: path and lists the object properties:  
   
 ```powershell
-Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012  
+Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2022  
 Get-Item . | Get-Member -Type Properties  
 ```  
 
@@ -67,18 +67,18 @@ To perform work on objects from a [!INCLUDE[ssDE](../includes/ssde-md.md)] provi
 
 ### Examples: Using Methods and Properties
 
-This example uses the SMO **Schema** property to get a list of the tables from the Sales schema in AdventureWorks2012:  
+This example uses the SMO **Schema** property to get a list of the tables from the Sales schema in [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)]:  
 
 ```powershell
-Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables  
+Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2022\Tables  
 Get-ChildItem | where {$_.Schema -eq "Sales"}  
 ```
 
-This example uses the SMO **Script** method to generate a script that contains the **CREATE VIEW** statements you must have to re-create the views in AdventureWorks2012:  
+This example uses the SMO **Script** method to generate a script that contains the **CREATE VIEW** statements you must have to re-create the views in [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)]:  
 
 ```powershell
 Remove-Item C:\PowerShell\CreateViews.sql  
-Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Views  
+Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2022\Views  
 foreach ($Item in Get-ChildItem) { $Item.Script() | Out-File -Filepath C:\PowerShell\CreateViews.sql -append }  
 ```
 

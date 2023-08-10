@@ -88,8 +88,7 @@ Get the information you need to connect to a database in Azure SQL Database. You
    end
    ```
 
-   >[!IMPORTANT]
-   >This example uses the sample AdventureWorksLT data, which you can choose as source when creating your database. If your database has different data, use tables from your own database in the SELECT query.
+   [!INCLUDE [article-uses-adventureworks](../../docs/includes/article-uses-adventureworks.md)]
 
 ## Run the code
 

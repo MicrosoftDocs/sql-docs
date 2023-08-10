@@ -44,7 +44,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  In the DBCOLUMNACCESS structure, if pData is NULL and cbMaxLen is 0, the call to IRow->GetColumns returns only the actual column length. In this case IRow->GetColumns can be called again on the same column to retrieve the actual data. This sample is not supported on IA64.  
   
- This sample requires the AdventureWorks sample database, which you can download from the [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) home page.  
+ [!INCLUDE [article-uses-adventureworks](../../includes/article-uses-adventureworks.md)]
   
  The first ([!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing creates a table used by the sample.  
   
@@ -53,8 +53,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  The third ([!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing deletes the table used by the sample.  
   
 ```  
-use AdventureWorks  
-go  
+USE AdventureWorks2022;
+GO  
   
 if exists (select name from sysobjects where name = 'MyTable')  
      drop table MyTable  
@@ -502,8 +502,8 @@ int InitializeAndEstablishConnection() {
 ```  
   
 ```  
-use AdventureWorks  
-go  
+USE AdventureWorks2022;
+GO  
   
 if exists (select name from sysobjects where name = 'MyTable')  
      drop table MyTable  

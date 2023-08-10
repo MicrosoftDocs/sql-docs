@@ -50,10 +50,10 @@ USE { database_name }
  Requires CONNECT permission on the target database.  
   
 ## Examples  
- The following example changes the database context to the `AdventureWorks2012` database.  
+ The following example changes the database context to the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 ```  
   

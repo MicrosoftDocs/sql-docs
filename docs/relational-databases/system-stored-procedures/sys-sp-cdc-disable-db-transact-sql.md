@@ -55,7 +55,7 @@ Requires membership in the **sysadmin** fixed server role for change data captur
 
 ## Examples
 
-The following example disables change data capture for the `AdventureWorks2022` database.
+The following example disables change data capture for the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.
 
 ```sql
 USE AdventureWorks2022;

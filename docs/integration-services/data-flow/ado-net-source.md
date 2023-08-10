@@ -59,7 +59,7 @@ helpviewer_keywords:
  You can log the calls that the ADO NET source makes to external data providers. You can use this logging capability to troubleshoot the loading of data from external data sources that the ADO NET source performs. To log the calls that the ADO NET source makes to external data providers, enable package logging and select the **Diagnostic** event at the package level. For more information, see [Troubleshooting Tools for Package Execution](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
 ## ADO NET Source Configuration  
- You configure the ADO NET source by providing the SQL statement that defines the result set. For example, an ADO NET source that connects to the [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] database and uses the SQL statement `SELECT * FROM Production.Product` extracts all the rows from the **Production.Product** table and provides the dataset to a downstream component.  
+ You configure the ADO NET source by providing the SQL statement that defines the result set. For example, an ADO NET source that connects to the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database and uses the SQL statement `SELECT * FROM Production.Product` extracts all the rows from the **Production.Product** table and provides the dataset to a downstream component.  
   
 > [!NOTE]  
 >  When you use an SQL statement to invoke a stored procedure that returns results from a temporary table, use the WITH RESULT SETS option to define metadata for the result set.  

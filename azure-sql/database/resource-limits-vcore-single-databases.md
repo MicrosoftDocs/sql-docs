@@ -45,7 +45,7 @@ You can set the service tier, compute size (service objective), and storage amou
 > [!NOTE]
 > The Gen5 hardware in the vCore purchasing model has been renamed to **Standard-series (Gen5)**.
 
-## <a id="general-purpose---serverless-compute---gen5"></a>General Purpose - serverless compute - Standard-series (Gen5)
+## <a id="general-purpose---serverless-compute---gen5"></a>General Purpose - serverless compute - standard-series (Gen5)
 
 <!---
 vCore resource limits are listed in the following articles, please be sure to update all of them: 
@@ -62,7 +62,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 ### <a id="gen5-hardware-part-1-1"></a>General Purpose - serverless compute - Standard-series (Gen5) (part 1 of 3)
 
-Compute sizes (service level objectives, or SLOs) for General Purpose serverless Standard-series databases follow the naming convention `GP_S_Gen5_` followed by the number of max vCores. This table covers the following SLOs: `GP_S_Gen5_1`, `GP_S_Gen5_2`, `GP_S_Gen5_4`, `GP_S_Gen5_6` and `GP_S_Gen5_8`:
+Compute sizes (service level objectives, or SLOs) for General Purpose serverless Standard-series databases follow the naming convention `GP_S_Gen5_` followed by the number of max vCores. This table covers the following SLOs: `GP_S_Gen5_1`, `GP_S_Gen5_2`, `GP_S_Gen5_4`, `GP_S_Gen5_6`, and `GP_S_Gen5_8`:
 
 | Min-max vCores | 0.5 - 1 | 0.5 - 2 | 0.5 - 4 | 0.75 - 6 | 1.0 - 8 |
 |:-|-:|-:|-:|-:|-:|
@@ -360,7 +360,7 @@ Compute sizes (service level objectives, or SLOs) for Hyperscale DC-series datab
 | In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A | N/A |
 | Max data size (TB) | 100 | 100 | 100 | 100 | 100 | 100 |
 | Max log size (TB) | Unlimited | Unlimited | Unlimited | Unlimited | Unlimited | Unlimited |
-| Tempdb max data size (GB) | 448 | 512 | 576 | 640 | 1024 | 1280 |  |
+| Tempdb max data size (GB) | 448 | 512 | 576 | 640 | 1024 | 1280 | 
 | Max local SSD IOPS <sup>1</sup> | 89,600 | 102,400 | 115,200 | 128,000 | 204,800 | 256,000 |
 | Max log rate (MBps) | 100 | 100 | 100 | 100 | 100 | 100 |
 | Local read IO latency<sup>2</sup> | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms |

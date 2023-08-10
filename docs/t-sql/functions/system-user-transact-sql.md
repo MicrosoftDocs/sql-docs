@@ -54,7 +54,7 @@ SYSTEM_USER
  You cannot EXECUTE AS a SYSTEM_USER.
  
  Azure SQL Database: 
- The SSYSTEM_USER statement doesn't support execution using an impersonated security context through EXECUTE AS.
+ The SYSTEM_USER statement doesn't support execution using an impersonated security context through EXECUTE AS.
 
 ## Examples  
   

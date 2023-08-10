@@ -370,7 +370,7 @@ FROM Tn;
   
 ## Examples  
 
-The following examples use the AdventureWorks 2012 or AdventureWorksDW database.  
+The following examples use the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] or [!INCLUDE [sssampledbdwobject-md](../../includes/sssampledbdwobject-md.md)] database.  
 
 ### A. Using a simple CREATE VIEW  
  The following example creates a view by using a simple `SELECT` statement. A simple view is helpful when a combination of columns is queried frequently. The data from this view comes from the `HumanResources.Employee` and `Person.Person` tables of the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. The data provides name and hire date information for the employees of [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]. The view could be created for the person in charge of tracking work anniversaries but without giving this person access to all the data in these tables.  

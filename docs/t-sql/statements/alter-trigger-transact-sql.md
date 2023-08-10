@@ -238,7 +238,7 @@ AS { sql_statement
  To alter a DDL trigger defined with server scope (ON ALL SERVER) or a logon trigger requires CONTROL SERVER permission on the server. To alter a DDL trigger defined with database scope (ON DATABASE) requires ALTER ANY DATABASE DDL TRIGGER permission in the current database.  
   
 ## Examples  
- The following example creates a DML trigger in the AdventureWorks 2012 database, that prints a user-defined message to the client when a user tries to add or change data in the `SalesPersonQuotaHistory` table. The trigger is then modified by using `ALTER TRIGGER` to apply the trigger only on `INSERT` activities. This trigger is helpful because it reminds the user that updates or inserts rows into this table to also notify the `Compensation` department.  
+ The following example creates a DML trigger in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database, that prints a user-defined message to the client when a user tries to add or change data in the `SalesPersonQuotaHistory` table. The trigger is then modified by using `ALTER TRIGGER` to apply the trigger only on `INSERT` activities. This trigger is helpful because it reminds the user that updates or inserts rows into this table to also notify the `Compensation` department.  
   
 ```sql  
 CREATE TRIGGER Sales.bonus_reminder  

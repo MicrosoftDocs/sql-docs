@@ -23,7 +23,7 @@ To complete this tutorial, you need SQL Server Management Studio, access to a se
 
 - Install [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
 - Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- Download [AdventureWorks2022 sample database](../../samples/adventureworks-install-configure.md).
+- Download [AdventureWorks sample database](../../samples/adventureworks-install-configure.md).
 
 
 Instructions for restoring databases in SSMS are here: [Restore a database.](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)

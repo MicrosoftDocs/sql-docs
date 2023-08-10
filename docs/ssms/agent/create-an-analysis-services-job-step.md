@@ -127,7 +127,7 @@ This topic describes how to create and define [!INCLUDE[ssNoVersion](../../inclu
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xsi:type="RelationalDataSource">  
                 <ID>AdventureWorks2022</ID>  
-                <Name>Adventure Works 2012</Name>  
+                <Name>Adventure Works 2022</Name>  
                 <ConnectionString>Data Source=localhost;Initial Catalog=AdventureWorks2022;Integrated Security=True</ConnectionString>  
                 <ImpersonationInfo>  
                     <ImpersonationMode>ImpersonateServiceAccount</ImpersonationMode>  

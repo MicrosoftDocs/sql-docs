@@ -79,7 +79,7 @@ The `sys.dm_exec_connections`, `sys.dm_exec_sessions`, and `sys.dm_exec_requests
 | unsuccessful_logons | **bigint** | **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions<br /><br />Number of unsuccessful logon attempts for the `original_login_name` between the `last_successful_logon` and `login_time`. |
 | group_id | **int** | ID of the workload group to which this session belongs. Not nullable. |
 | database_id | **smallint** | **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later versions<br /><br />ID of the current database for each session. <br /><br />In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the values are unique within a single database or an elastic pool, but not within a logical server.|
-| authenticating_database_id | **int** | **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later versions<br /><br />ID of the database authenticating the principal. For Logins, the value will be 0. For contained database users, the value will be the database ID of the contained database. |
+| authenticating_database_id | **int** | **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later versions<br /><br />ID of the database authenticating the principal. For logins, the value will be 0. For contained database users, the value will be the database ID of the contained database. |
 | open_transaction_count | **int** | **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later versions<br /><br />Number of open transactions per session. |
 | pdw_node_id | **int** | **Applies to**: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br />The identifier for the node that this distribution is on. |
 | page_server_reads | **bigint** | **Applies to**: Azure SQL Database Hyperscale<br /><br />Number of page server reads performed, by requests in this session, during this session. Not nullable. |
@@ -106,7 +106,7 @@ When the **common criteria compliance enabled** server configuration option is e
 
 If this option isn't enabled, these columns will return null values. For more information about how to set this server configuration option, see [common criteria compliance enabled server configuration option](../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md).
 
-The admin connections on Azure SQL Database will see one row per authenticated session. The "sa" sessions that appear in the resultset, don't have any effect on the user quota for sessions. The non-admin connections will only see information related to their database user sessions.
+The admin connections on Azure SQL Database see one row per authenticated session. The "sa" sessions that appear in the resultset, don't have any effect on the user quota for sessions. The non-admin connections will only see information related to their database user sessions.
 
 Because of differences in how they are recorded, `open_transaction_count` may not match `sys.dm_tran_session_transactions`.`open_transaction_count`.
 

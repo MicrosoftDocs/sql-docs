@@ -50,9 +50,9 @@ On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databa
 Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 
 ## Remarks
- Through bound sessions and distributed transactions, it is possible for a transaction to be running under more than one session. In such cases, `sys.dm_tran_session_transactions` will show multiple rows for the same `transaction_id`, one for each session under which the transaction is running. Because of differences in how they are recorded, `open_transaction_count` may not match `sys.dm_exec_sessions`.`open_transaction_count`.
+ Through bound sessions and distributed transactions, it is possible for a transaction to be running under more than one session. In such cases, `sys.dm_tran_session_transactions` shows multiple rows for the same `transaction_id`, one for each session under which the transaction is running. Because of differences in how they are recorded, `open_transaction_count` may not match `sys.dm_exec_sessions`.`open_transaction_count`.
   
- By executing multiple requests in autocommit mode using multiple active result sets (MARS), it is possible to have more than one active transaction on a single session. In such cases, `sys.dm_tran_session_transactions` will show multiple rows for the same `session_id`, one for each transaction running under that session.  
+ By executing multiple requests in autocommit mode using multiple active result sets (MARS), it is possible to have more than one active transaction on a single session. In such cases, `sys.dm_tran_session_transactions` shows multiple rows for the same `session_id`, one for each transaction running under that session.  
   
 ## Next steps
 

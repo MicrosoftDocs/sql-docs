@@ -26,7 +26,7 @@ Data virtualization provides two ways of querying files intended for different s
 
 In either case, an [external data source](#external-data-source) must be created using the [CREATE EXTERNAL DATA SOURCE](/sql/t-sql/statements/create-external-data-source-transact-sql?view=azuresqldb-mi-current&preserve-view=true) T-SQL syntax, as demonstrated in this article.
 
-Also available is [CREATE EXTERNAL TABLE AS SELECT syntax](/sql/t-sql/statements/create-external-table-as-select-transact-sql?view=azuresqldb-mi-current&preserve-view=true) for Azure SQL Managed Instance, for creating an external table on top of Parquet or CSV files in Azure Blob storage or Azure Data Lake Storage (ADLS) Gen2, or, exporting the results of a T-SQL SELECT statement into the created external table.
+Also available is [CREATE EXTERNAL TABLE AS SELECT syntax](/sql/t-sql/statements/create-external-table-as-select-transact-sql?view=azuresqldb-mi-current&preserve-view=true) for Azure SQL Managed Instance, for exporting the results of a T-SQL SELECT statement into the Parquet or CSV files in Azure Blob Storage or Azure Data Lake Storage (ADLS) Gen 2 and creating an external table on top of those files.
 
 ### File formats
 

@@ -79,7 +79,6 @@ To learn about authoring extensions, see [Extension authoring](extensions/extens
 |Integrated Terminal|Yes||
 |Object Explorer|Yes|Yes|
 |Object Scripting|Yes|Yes|
-|Project System|Yes||
 |Select from Table|Yes|Yes|
 |Source Code Control|Yes||
 |Task Pane|Yes||

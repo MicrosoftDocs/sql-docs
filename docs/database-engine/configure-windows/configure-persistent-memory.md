@@ -83,7 +83,7 @@ Get-Partition | Select-Object DiskNumber, DriveLetter, IsDAX, Offset, Size, Part
 Check the file alignment of a particular file using `fsutil`. Our file size must be a modulo of 2 MB.
 
 ```bash
-fsutil dax queryFileAlignment A:\AdventureWorks2019_A.mdf
+fsutil dax queryFileAlignment A:\AdventureWorks2022_A.mdf
 ```
 
 ## Replacing PMEM

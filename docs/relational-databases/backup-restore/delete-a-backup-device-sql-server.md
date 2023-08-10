@@ -63,12 +63,12 @@ helpviewer_keywords:
   
 ```sql  
 --Define a backup device and physical name.   
-USE AdventureWorks2012 ;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_addumpdevice 'disk', 'mybackupdisk', 'c:\backup\backup1.bak' ;  
 GO  
 --Delete the backup device and the physical name.  
-USE AdventureWorks2012 ;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_dropdevice ' mybackupdisk ', 'delfile' ;  
 GO  

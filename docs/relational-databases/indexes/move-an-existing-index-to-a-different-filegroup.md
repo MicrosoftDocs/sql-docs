@@ -134,15 +134,15 @@ For design considerations including why you might want to place a nonclustered i
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
-    -- Creates the TransactionsFG1 filegroup on the AdventureWorks2012 database  
-    ALTER DATABASE AdventureWorks2012  
+    -- Creates the TransactionsFG1 filegroup on the AdventureWorks2022 database  
+    ALTER DATABASE AdventureWorks2022  
     ADD FILEGROUP TransactionsFG1;  
     GO  
     /* Adds the TransactionsFG1dat3 file to the TransactionsFG1 filegroup. Please note that you will have to change the filename parameter in this statement to execute it without errors.  
     */  
-    ALTER DATABASE AdventureWorks2012   
+    ALTER DATABASE AdventureWorks2022   
     ADD FILE   
     (  
         NAME = TransactionsFG1dat3,  

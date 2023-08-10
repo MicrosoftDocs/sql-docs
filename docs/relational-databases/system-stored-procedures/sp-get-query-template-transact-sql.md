@@ -58,7 +58,7 @@ sp_get_query_template
  The following example returns the parameterized form of a query that contains two constant literal values.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DECLARE @my_templatetext nvarchar(max)  
 DECLARE @my_parameters nvarchar(max)  

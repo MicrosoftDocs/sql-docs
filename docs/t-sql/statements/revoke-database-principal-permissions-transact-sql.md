@@ -156,7 +156,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  The following example revokes `CONTROL` permission on [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] user `Wanida` from user `RolandX`.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 REVOKE CONTROL ON USER::Wanida FROM RolandX;  
 GO  
 ```  
@@ -165,7 +165,7 @@ GO
  The following example revokes `VIEW DEFINITION` permission on [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] role `SammamishParking` from database user `JinghaoLiu`. The `CASCADE` option is specified because the user `JinghaoLiu` was granted `VIEW DEFINITION` permission `WITH GRANT OPTION`.  
   
 ```sql 
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 REVOKE VIEW DEFINITION ON ROLE::SammamishParking   
     FROM JinghaoLiu CASCADE;  
 GO  
@@ -177,7 +177,7 @@ GO
 **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 REVOKE IMPERSONATE ON USER::HamithaL FROM AccountsPayable17;  
 GO    
 ```  

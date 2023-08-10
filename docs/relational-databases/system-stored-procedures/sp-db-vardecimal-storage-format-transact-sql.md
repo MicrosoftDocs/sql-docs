@@ -73,7 +73,7 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
  Changing the state to OFF will fail if there are tables using vardecimal database compression. To change the storage format of a table, use [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). To determine which tables in a database are using vardecimal storage format, use the `OBJECTPROPERTY` function and search for the `TableHasVarDecimalStorageFormat` property, as shown in the following example.  
   
 ```sql  
-USE AdventureWorks2012 ;  
+USE AdventureWorks2022;  
 GO  
 SELECT name, object_id, type_desc  
 FROM sys.objects   
@@ -83,13 +83,13 @@ GO
 ```  
   
 ## Examples  
- The following code enables compression in the `AdventureWorks2012` database, confirms the state, and then compresses decimal and numeric columns in the `Sales.SalesOrderDetail` table.  
+ The following code enables compression in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database, confirms the state, and then compresses decimal and numeric columns in the `Sales.SalesOrderDetail` table.  
   
 ```sql  
 USE master ;  
 GO  
   
-EXEC sp_db_vardecimal_storage_format 'AdventureWorks2012', 'ON' ;  
+EXEC sp_db_vardecimal_storage_format 'AdventureWorks2022', 'ON' ;  
 GO  
   
 -- Check the vardecimal storage format state for  
@@ -97,7 +97,7 @@ GO
 EXEC sp_db_vardecimal_storage_format ;  
 GO  
   
-USE AdventureWorks2012 ;  
+USE AdventureWorks2022;  
 GO  
   
 EXEC sp_tableoption 'Sales.SalesOrderDetail', 'vardecimal storage format', 1 ;  

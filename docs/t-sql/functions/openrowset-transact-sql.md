@@ -118,7 +118,7 @@ Remote table or view containing the data that `OPENROWSET` should read. It can b
 ```sql
 SELECT d.*
 FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
-                 AdventureWorks2012.HumanResources.Department) AS d;
+                 AdventureWorks2022.HumanResources.Department) AS d;
 ```
 
 ### '*query*'
@@ -128,7 +128,7 @@ Is a string constant sent to and executed by the provider. The local instance of
 SELECT a.*
 FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
      'SELECT TOP 10 GroupName, Name
-     FROM AdventureWorks2012.HumanResources.Department') AS a;
+     FROM AdventureWorks2022.HumanResources.Department') AS a;
 ```
 
 ### BULK
@@ -363,7 +363,7 @@ The following example uses the [!INCLUDE[ssNoVersion](../../includes/ssnoversion
 SELECT a.*
 FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
      'SELECT GroupName, Name, DepartmentID
-      FROM AdventureWorks2012.HumanResources.Department
+      FROM AdventureWorks2022.HumanResources.Department
       ORDER BY GroupName, Name') AS a;
 ```
 

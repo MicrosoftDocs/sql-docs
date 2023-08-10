@@ -54,12 +54,12 @@ sp_clean_db_free_space
  Requires membership in the `db_owner` database role.  
   
 ## Examples  
- The following example cleans all residual information from the `AdventureWorks2012` database.  
+ The following example cleans all residual information from the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql  
 USE master;  
 GO  
-EXEC sp_clean_db_free_space @dbname = N'AdventureWorks2012';  
+EXEC sp_clean_db_free_space @dbname = N'AdventureWorks2022';  
 ```  
   
 ## See Also  

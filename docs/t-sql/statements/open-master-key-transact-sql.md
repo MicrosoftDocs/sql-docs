@@ -68,10 +68,10 @@ Requires CONTROL permission on the database.
   
 ## Examples
 
-The following example opens the Database Master Key of the `AdventureWorks2012` database, which has been encrypted with a password.  
+The following example opens the Database Master Key of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database, which has been encrypted with a password.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 OPEN MASTER KEY DECRYPTION BY PASSWORD = '43987hkhj4325tsku7';  
 GO  
 ```  

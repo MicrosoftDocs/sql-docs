@@ -9,12 +9,12 @@ DECLARE @publicationDB AS sysname;
 DECLARE @publication AS sysname;
 DECLARE @login AS sysname;
 DECLARE @password AS sysname;
-SET @publicationDB = N'AdventureWorks2012'; 
+SET @publicationDB = N'AdventureWorks2022'; 
 SET @publication = N'AdvWorksProductTran'; 
 SET @login = $(Login); 
 SET @password = $(Password); 
 
-USE [AdventureWorks2012]
+USE [AdventureWorks2022]
 -- Enable transactional replication on the publication database.
 EXEC sp_replicationdboption 
 	@dbname=@publicationDB, 
@@ -60,7 +60,7 @@ SET @article = N'Product';
 SET @owner = N'Production'; 
 
 -- Add a horizontally and vertically filtered article for the Product table.
-USE [AdventureWorks2012]
+USE [AdventureWorks2022]
 EXEC sp_addarticle 
 	@publication = @publication, 
 	@article = @article, 

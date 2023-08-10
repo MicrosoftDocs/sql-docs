@@ -42,7 +42,7 @@ helpviewer_keywords:
   
 ```sql  
 -- Restore database using WITH RECOVERY.  
-RESTORE DATABASE AdventureWorks2012  
+RESTORE DATABASE AdventureWorks2022  
    WITH RECOVERY  
 ```  
   

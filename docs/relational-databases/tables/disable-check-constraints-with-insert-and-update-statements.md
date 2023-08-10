@@ -50,7 +50,7 @@ For more information, see [Check Constraints](unique-constraints-and-check-const
 3.  Copy and paste the following examples into the query window and click **Execute**.  
   
     ```sql  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     ALTER TABLE Purchasing.PurchaseOrderHeader  
     NOCHECK CONSTRAINT CK_PurchaseOrderHeader_Freight;   

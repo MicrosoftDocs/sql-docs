@@ -114,7 +114,7 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a user can only vi
 This example returns the status of the AUTO_SHRINK database option for the `AdventureWorks` database.
   
 ```sql
-SELECT DATABASEPROPERTYEX('AdventureWorks2014', 'IsAutoShrink');  
+SELECT DATABASEPROPERTYEX('AdventureWorks2022', 'IsAutoShrink');  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)] This indicates that AUTO_SHRINK is off.
@@ -129,10 +129,10 @@ This example returns several attributes of the `AdventureWorks` database.
   
 ```sql
 SELECT   
-    DATABASEPROPERTYEX('AdventureWorks2014', 'Collation') AS Collation,  
-    DATABASEPROPERTYEX('AdventureWorks2014', 'Edition') AS Edition,  
-    DATABASEPROPERTYEX('AdventureWorks2014', 'ServiceObjective') AS ServiceObjective,  
-    DATABASEPROPERTYEX('AdventureWorks2014', 'MaxSizeInBytes') AS MaxSizeInBytes  
+    DATABASEPROPERTYEX('AdventureWorks2022', 'Collation') AS Collation,  
+    DATABASEPROPERTYEX('AdventureWorks2022', 'Edition') AS Edition,  
+    DATABASEPROPERTYEX('AdventureWorks2022', 'ServiceObjective') AS ServiceObjective,  
+    DATABASEPROPERTYEX('AdventureWorks2022', 'MaxSizeInBytes') AS MaxSizeInBytes  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]

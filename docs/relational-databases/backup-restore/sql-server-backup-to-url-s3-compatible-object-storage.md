@@ -280,43 +280,43 @@ WITH    REPLACE -- overwrite
 
 ### Options for encryption and compression
 
-The following example shows how to back up and restore the `AdventureWorks2019` database with encryption, `MAXTRANSFERSIZE` as 20 MB and compression:
+The following example shows how to back up and restore the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database with encryption, `MAXTRANSFERSIZE` as 20 MB and compression:
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = <password>;
 GO
 
-CREATE CERTIFICATE AdventureWorks2019Cert
-    WITH SUBJECT = 'AdventureWorks2019 Backup Certificate';
+CREATE CERTIFICATE AdventureWorks2022Cert
+    WITH SUBJECT = 'AdventureWorks2022 Backup Certificate';
 GO
 -- Backup database
-BACKUP DATABASE AdventureWorks2019
-TO URL = 's3://<endpoint>:<port>/<bucket>/AdventureWorks2019_Encrypt.bak'
+BACKUP DATABASE AdventureWorks2022
+TO URL = 's3://<endpoint>:<port>/<bucket>/AdventureWorks2022_Encrypt.bak'
 WITH FORMAT, MAXTRANSFERSIZE = 20971520, COMPRESSION,
-ENCRYPTION (ALGORITHM = AES_256, SERVER CERTIFICATE = AdventureWorks2019Cert)
+ENCRYPTION (ALGORITHM = AES_256, SERVER CERTIFICATE = AdventureWorks2022Cert)
 GO
 
 -- Restore database
-RESTORE DATABASE AdventureWorks2019
-FROM URL = 's3://<endpoint>:<port>/<bucket>/AdventureWorks2019_Encrypt.bak'
+RESTORE DATABASE AdventureWorks2022
+FROM URL = 's3://<endpoint>:<port>/<bucket>/AdventureWorks2022_Encrypt.bak'
 WITH REPLACE
 ```
 
 ### Use region for backup and restore
 
-The following example shows how to back up and restore the AdventureWorks2019 database using `REGION_OPTIONS`:
+The following example shows how to back up and restore the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database using `REGION_OPTIONS`:
 
 ```sql
 -- Backup Database
-BACKUP DATABASE AdventureWorks2019
-TO URL = 's3://<endpoint>:<port>/<bucket>/AdventureWorks2019.bak'
+BACKUP DATABASE AdventureWorks2022
+TO URL = 's3://<endpoint>:<port>/<bucket>/AdventureWorks2022.bak'
 WITH BACKUP_OPTIONS = '{"s3": {"region":"us-east-1"}}'
 
 -- Restore Database
-RESTORE DATABASE AdventureWorks2019
-FROM URL = 's3://<endpoint>:<port>/<bucket>/AdventureWorks2019.bak'
-WITH MOVE 'AdventureWorks2019' TO 'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA\AdventureWorks2019.mdf'
-, MOVE 'AdventureWorks2019_log' TO 'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA\AdventureWorks2019.ldf'
+RESTORE DATABASE AdventureWorks2022
+FROM URL = 's3://<endpoint>:<port>/<bucket>/AdventureWorks2022.bak'
+WITH MOVE 'AdventureWorks2022' TO 'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA\AdventureWorks2022.mdf'
+, MOVE 'AdventureWorks2022_log' TO 'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA\AdventureWorks2022.ldf'
 , RESTORE_OPTIONS = '{"s3": {"region":"us-east-1"}}'
 ```
 

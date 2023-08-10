@@ -115,7 +115,7 @@ Regarding the primary XML index, instead of shredding each XML binary large obje
 The primary XML index isn't used when retrieving a full XML instance. For example, the following query retrieves from the table the whole XML instance that describes the manufacturing instructions for a specific product model.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 
 SELECT Instructions
 FROM   Production.ProductModel

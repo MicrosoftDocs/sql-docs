@@ -147,8 +147,8 @@ SELECT HAS_PERMS_BY_NAME
     'OBJECT', 'SELECT') AS have_select, * FROM sys.tables  
 ```  
   
-### G. Do I have INSERT permission on the SalesPerson table in AdventureWorks2012?  
- The following example assumes `AdventureWorks2012` is my current database context, and uses a two-part name.  
+### G. Do I have INSERT permission on the SalesPerson table in AdventureWorks2022?  
+ The following example assumes [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] is my current database context, and uses a two-part name.  
   
 ```sql  
 SELECT HAS_PERMS_BY_NAME('Sales.SalesPerson', 'OBJECT', 'INSERT');  
@@ -157,7 +157,7 @@ SELECT HAS_PERMS_BY_NAME('Sales.SalesPerson', 'OBJECT', 'INSERT');
  The following example makes no assumptions about my current database context, and uses a three-part name.  
   
 ```sql  
-SELECT HAS_PERMS_BY_NAME('AdventureWorks2012.Sales.SalesPerson',   
+SELECT HAS_PERMS_BY_NAME('AdventureWorks2022.Sales.SalesPerson',   
     'OBJECT', 'INSERT');  
 ```  
   

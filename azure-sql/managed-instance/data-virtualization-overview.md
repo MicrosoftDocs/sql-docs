@@ -4,8 +4,8 @@ titleSuffix: Azure SQL Managed Instance
 description: Learn about data virtualization capabilities of Azure SQL Managed Instance
 author: MladjoA
 ms.author: mlandzic
-ms.reviewer: mathoma, wiassaf
-ms.date: 06/23/2023
+ms.reviewer: mathoma, wiassaf, nzagorac
+ms.date: 08/10/2023
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -15,7 +15,7 @@ ms.topic: conceptual
 
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-The data virtualization feature of Azure SQL Managed Instance allows you to execute Transact-SQL (T-SQL) queries on files storing data in common data formats in Azure Data Lake Storage Gen2 or Azure Blob Storage, and combine it with locally stored relational data using joins. This way you can transparently access external data while keeping it in its original format and location - also known as data virtualization.
+The data virtualization feature of Azure SQL Managed Instance allows you to execute Transact-SQL (T-SQL) queries on files storing data in common data formats in Azure Data Lake Storage Gen2 or Azure Blob Storage, and combine it with locally stored relational data using joins. This way you can transparently access external data (in read-only mode) while keeping it in its original format and location - also known as data virtualization.
 
 ## Overview
 
@@ -26,7 +26,7 @@ Data virtualization provides two ways of querying files intended for different s
 
 In either case, an [external data source](#external-data-source) must be created using the [CREATE EXTERNAL DATA SOURCE](/sql/t-sql/statements/create-external-data-source-transact-sql?view=azuresqldb-mi-current&preserve-view=true) T-SQL syntax, as demonstrated in this article.
 
-Also available is [CREATE EXTERNAL TABLE AS SELECT syntax](/sql/t-sql/statements/create-external-table-as-select-transact-sql?view=azuresqldb-mi-current&preserve-view=true) for Azure SQL Managed Instance, for creating an external table on top of Parquet or CSV files in Azure Blob storage or Azure Data Lake Storage (ADLS) Gen2, or, exporting the results of a T-SQL SELECT statement into the created external table.
+Also available is [CREATE EXTERNAL TABLE AS SELECT syntax](/sql/t-sql/statements/create-external-table-as-select-transact-sql?view=azuresqldb-mi-current&preserve-view=true) for Azure SQL Managed Instance, for exporting the results of a T-SQL SELECT statement into the Parquet or CSV files in Azure Blob Storage or Azure Data Lake Storage (ADLS) Gen 2 and creating an external table on top of those files.
 
 ### File formats
 
@@ -86,7 +86,7 @@ Before accessing the data, the Azure storage administrator must grant permission
 
 1. In the Azure portal, in the **Access Control (IAM)** page of a storage account, select **Add role assignment**.  
 1. Choose the **Storage Blob Data Reader** built-in Azure RBAC role. This provides read access to the managed identity for the necessary Azure Blob Storage containers.
-    - Instead of granting the managed identity the **Storage Blob Data Reader** Azure RBAC role, you can also grant more granular permissions on a subset of files. All users who need access to **Read** individual files some data in this container also must have **Execute** permission on all parent folders up to the root (the container). Learn more about how to [set ACLs in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-explorer-acl). Currently, data virtualization with Azure SQL Managed Instance is read-only.
+    - Instead of granting the managed identity the **Storage Blob Data Reader** Azure RBAC role, you can also grant more granular permissions on a subset of files. All users who need access to **Read** individual files some data in this container also must have **Execute** permission on all parent folders up to the root (the container). Learn more about how to [set ACLs in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-explorer-acl).
 1. On the next page, select **Assign access to** **Managed identity**. **+ Select members**, and under the **Managed identity** drop-down list, select the desired managed identity. For more information, see [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal).
 1. Then, creating the database scoped credential for managed identity authentication is simple. Note in the following example that `'Managed Identity'` is a hard-coded string.
 

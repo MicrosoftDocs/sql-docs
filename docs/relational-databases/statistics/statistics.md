@@ -271,7 +271,7 @@ When creating multicolumn statistics, the order of the columns in the statistics
 To create densities that are useful for cardinality estimates, the columns in the query predicate must match one of the prefixes of columns in the statistics object definition. For example, the following example creates a multicolumn statistics object on the columns `LastName`, `MiddleName`, and `FirstName`.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 IF EXISTS (SELECT name FROM sys.stats
     WHERE name = 'LastFirst'
@@ -406,7 +406,7 @@ To improve the cardinality estimates for variables and functions, follow these g
     For example, the following stored procedure `Sales.GetRecentSales` changes the value of the parameter `@date` when `@date` is NULL.
 
     ```sql
-    USE AdventureWorks2012;
+    USE AdventureWorks2022;
     GO
     IF OBJECT_ID ( 'Sales.GetRecentSales', 'P') IS NOT NULL
         DROP PROCEDURE Sales.GetRecentSales;
@@ -425,7 +425,7 @@ To improve the cardinality estimates for variables and functions, follow these g
     If the first call to the stored procedure `Sales.GetRecentSales` passes a NULL for the `@date` parameter, the Query Optimizer will compile the stored procedure with the cardinality estimate for `@date = NULL` even though the query predicate is not called with `@date = NULL`. This cardinality estimate might be significantly different than the number of rows in the actual query result. As a result, the Query Optimizer might choose a suboptimal query plan. To help avoid this, you can rewrite the stored procedure into two procedures as follows:
 
     ```sql
-    USE AdventureWorks2012;
+    USE AdventureWorks2022;
     GO
     IF OBJECT_ID ( 'Sales.GetNullRecentSales', 'P') IS NOT NULL
         DROP PROCEDURE Sales.GetNullRecentSales;
@@ -456,7 +456,7 @@ To improve cardinality estimates for local variables, you can use the `OPTIMIZE 
 For some applications, recompiling the query each time it executes might take too much time. The `OPTIMIZE FOR` query hint can help even if you don't use the `RECOMPILE` option. For example, you could add an `OPTIMIZE FOR` option to the stored procedure `Sales.GetRecentSales` to specify a specific date. The following example adds the `OPTIMIZE FOR` option to the `Sales.GetRecentSales` procedure.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 IF OBJECT_ID ( 'Sales.GetRecentSales', 'P') IS NOT NULL
     DROP PROCEDURE Sales.GetRecentSales;

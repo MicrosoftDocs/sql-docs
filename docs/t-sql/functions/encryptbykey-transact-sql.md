@@ -98,7 +98,7 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
  The following example adds a column to the `Employee` table, and then encrypts the value of the Social Security number that is stored in column `NationalIDNumber`.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
   
 -- Create a column in which to store the encrypted data.  
@@ -121,7 +121,7 @@ GO
 ### B. Encrypting a record together with an authentication value  
   
 ```sql 
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
   
 -- Create a column in which to store the encrypted data.  
 ALTER TABLE Sales.CreditCard   

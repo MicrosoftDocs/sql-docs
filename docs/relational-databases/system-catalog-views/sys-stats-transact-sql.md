@@ -61,7 +61,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  The following examples return all the statistics and statistics columns for the `HumanResources.Employee` table.
 
 ```sql
-USE AdventureWorks2019;
+USE AdventureWorks2022;
 GO
 SELECT s.name AS statistics_name
       ,c.name AS column_name

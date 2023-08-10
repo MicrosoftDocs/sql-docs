@@ -71,7 +71,7 @@ Developer
  The following example returns a simple character string based on the value in the `ProductCategoryID` column.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT ProductCategoryID, CHOOSE (ProductCategoryID, 'A','B','C','D','E') AS Expression1  
 FROM Production.ProductCategory;  

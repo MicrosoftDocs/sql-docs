@@ -46,10 +46,10 @@ SELECT table_id, status FROM sys.fulltext_index_fragments
    WHERE status=4 OR status=6;  
 ```  
   
- If many queryable fragments exist, Microsoft recommends that you reorganize the full-text catalog that contains the full-text index to merge the fragments together. To reorganize a of full-text catalog use [ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)*catalog_name* REORGANIZE. For example, to reorganize a full-text catalog named `ftCatalog` in the `AdventureWorks2012` database, enter:  
+ If many queryable fragments exist, Microsoft recommends that you reorganize the full-text catalog that contains the full-text index to merge the fragments together. To reorganize a of full-text catalog use [ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)*catalog_name* REORGANIZE. For example, to reorganize a full-text catalog named `ftCatalog` in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database, enter:  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 ALTER FULLTEXT CATALOG ftCatalog REORGANIZE;  
 GO  

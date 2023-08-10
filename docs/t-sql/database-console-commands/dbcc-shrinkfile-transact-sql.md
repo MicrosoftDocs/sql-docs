@@ -250,7 +250,7 @@ GO
 
 ### B. Shrink a log file to a specified target size
 
-The following example shrinks the log file in the `AdventureWorks2022` database to 1 MB. To allow the `DBCC SHRINKFILE` command to shrink the file, the file is first truncated by setting the database recovery model to SIMPLE.
+The following example shrinks the log file in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database to 1 MB. To allow the `DBCC SHRINKFILE` command to shrink the file, the file is first truncated by setting the database recovery model to SIMPLE.
 
 ```sql
 USE AdventureWorks2022;
@@ -270,7 +270,7 @@ GO
 
 ### C. Truncate a data file
 
-The following example truncates the primary data file in the `AdventureWorks2022` database. The `sys.database_files` catalog view is queried to obtain the `file_id` of the data file.
+The following example truncates the primary data file in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database. The `sys.database_files` catalog view is queried to obtain the `file_id` of the data file.
 
 ```sql
 USE AdventureWorks2022;

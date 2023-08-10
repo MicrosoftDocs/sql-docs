@@ -104,7 +104,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
  The following example specifies that trigger `uSalesOrderHeader` be the first trigger to fire after an `UPDATE` operation occurs on the `Sales.SalesOrderHeader` table.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 sp_settriggerorder @triggername= 'Sales.uSalesOrderHeader', @order='First', @stmttype = 'UPDATE';  
 ```  
@@ -113,7 +113,7 @@ sp_settriggerorder @triggername= 'Sales.uSalesOrderHeader', @order='First', @stm
  The following example specifies that trigger `ddlDatabaseTriggerLog` be the first trigger to fire after an `ALTER_TABLE` event occurs in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 sp_settriggerorder @triggername= 'ddlDatabaseTriggerLog', @order='First', @stmttype = 'ALTER_TABLE', @namespace = 'DATABASE';  
 ```  

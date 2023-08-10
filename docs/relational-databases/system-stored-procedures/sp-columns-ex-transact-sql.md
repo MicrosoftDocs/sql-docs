@@ -99,7 +99,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
 EXEC sp_columns_ex 'Seattle1',   
    'Employee',   
    'HumanResources',   
-   'AdventureWorks2012',   
+   'AdventureWorks2022',   
    'JobTitle';  
 ```  
   

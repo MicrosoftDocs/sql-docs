@@ -86,7 +86,7 @@ HAVING COUNT(l.database_id) > 100;
 The following query can be used to determine the position of the last active VLF before running SHRINK FILE on transaction log to determine if transaction log can shrink.
 
 ```sql
-USE AdventureWorks2016
+USE AdventureWorks2022;
 GO
 
 ;WITH cte_vlf AS (

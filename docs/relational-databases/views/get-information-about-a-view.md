@@ -179,7 +179,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 3.  Copy and paste one of the following examples into the query window and select **Execute**.  
   
     ```sql  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     SELECT definition, uses_ansi_nulls, uses_quoted_identifier, is_schema_bound  
     FROM sys.sql_modules  
@@ -188,7 +188,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
     ```  
   
     ```sql  
-    USE AdventureWorks2012;   
+    USE AdventureWorks2022;   
     GO  
     SELECT OBJECT_DEFINITION (OBJECT_ID('HumanResources.vEmployee')) AS ObjectDefinition;   
     GO  
@@ -212,7 +212,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 3.  Copy and paste the following example into the query window and select **Execute**.  
   
     ```sql  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     SELECT OBJECT_NAME(referencing_id) AS referencing_entity_name,   
         o.type_desc AS referencing_desciption,   

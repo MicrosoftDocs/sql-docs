@@ -87,14 +87,14 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
 >  Unless MS DTC is currently installed on the computer running the instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], this example produces an error message. For more information about installing MS DTC, see the Microsoft Distributed Transaction Coordinator documentation.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 BEGIN DISTRIBUTED TRANSACTION;
 -- Delete candidate from local instance.
-DELETE AdventureWorks2012.HumanResources.JobCandidate
+DELETE AdventureWorks2022.HumanResources.JobCandidate
     WHERE JobCandidateID = 13;
 -- Delete candidate from remote instance.
-DELETE RemoteServer.AdventureWorks2012.HumanResources.JobCandidate
+DELETE RemoteServer.AdventureWorks2022.HumanResources.JobCandidate
     WHERE JobCandidateID = 13;
 COMMIT TRANSACTION;
 GO

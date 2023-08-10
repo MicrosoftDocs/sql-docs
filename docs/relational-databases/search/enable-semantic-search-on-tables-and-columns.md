@@ -52,7 +52,7 @@ helpviewer_keywords:
   
  **Example 1: Create a unique index, full-text index, and semantic index**  
   
- The following example creates a default full-text catalog, **ft**. The example then creates a unique index on the **JobCandidateID** column of the **HumanResources.JobCandidate** table of the AdventureWorks2012 sample database. This unique index is required as the key column for a full-text index. The example then creates a full-text index and a semantic index on the **Resume** column.  
+ The following example creates a default full-text catalog, **ft**. The example then creates a unique index on the **JobCandidateID** column of the **HumanResources.JobCandidate** table of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample database. This unique index is required as the key column for a full-text index. The example then creates a full-text index and a semantic index on the **Resume** column.  
   
 ```sql  
 CREATE FULLTEXT CATALOG ft AS DEFAULT  
@@ -74,7 +74,7 @@ GO
   
  **Example 2: Create a full-text and semantic index on several columns with delayed index population**  
   
- The following example creates a full-text catalog, **documents_catalog**, in the AdventureWorks2012 sample database. The example then creates a full-text index that uses this new catalog. The full-text index is created on the **Title**, **DocumentSummary**, and **Document** columns of the **Production.Document** table, while the semantic index is only created on the **Document** column. This full-text index uses the newly-created full-text catalog and an existing unique key index, **PK_Document_DocumentID**. As recommended, this index key is created on an integer column, **DocumentID**. The example specifies the LCID for English, 1033, which is the language of the data in the columns.  
+ The following example creates a full-text catalog, **documents_catalog**, in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample database. The example then creates a full-text index that uses this new catalog. The full-text index is created on the **Title**, **DocumentSummary**, and **Document** columns of the **Production.Document** table, while the semantic index is only created on the **Document** column. This full-text index uses the newly-created full-text catalog and an existing unique key index, **PK_Document_DocumentID**. As recommended, this index key is created on an integer column, **DocumentID**. The example specifies the LCID for English, 1033, which is the language of the data in the columns.  
   
  This example also specifies that change tracking is off with no population. Later, during off-peak hours, the example uses an **ALTER FULLTEXT INDEX** statement to start a full population on the new index and enable automatic change tracking.  
   
@@ -125,7 +125,7 @@ GO
   
  **Example: Add semantic indexing to a column that already has full-text indexing**  
   
- The following example alters an existing full-text index on **Production.Document** table in AdventureWorks2012 sample database. The example adds a semantic index on the **Document** column of the **Production.Document** table, which already has a full-text index. The example specifies that the index will not be repopulated automatically.  
+ The following example alters an existing full-text index on **Production.Document** table in [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample database. The example adds a semantic index on the **Document** column of the **Production.Document** table, which already has a full-text index. The example specifies that the index will not be repopulated automatically.  
   
 ```sql  
 ALTER FULLTEXT INDEX ON Production.Document  

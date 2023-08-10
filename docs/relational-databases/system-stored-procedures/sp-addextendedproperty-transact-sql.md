@@ -100,22 +100,22 @@ sp_addextendedproperty
 ## Examples  
   
 ### A. Adding an extended property to a database  
- The following example adds the property name `'Caption'` with a value of `'AdventureWorks2012 Sample OLTP Database'` to the `AdventureWorks2012` sample database.  
+ The following example adds the property name `Caption` with a value of `AdventureWorks2022 Sample OLTP Database` to the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample database.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
---Add a caption to the AdventureWorks2012 Database object itself.  
+--Add a caption to the AdventureWorks2022 Database object itself.  
 EXEC sp_addextendedproperty   
 @name = N'Caption',   
-@value = 'AdventureWorks2012 Sample OLTP Database';  
+@value = 'AdventureWorks2022 Sample OLTP Database';  
 ```  
   
 ### B. Adding an extended property to a column in a table  
  The following example adds a caption property to column `PostalCode` in table `Address`.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_addextendedproperty   
 @name = N'Caption',   
@@ -130,7 +130,7 @@ GO
  The following example adds an input mask property '`99999 or 99999-9999 or #### ###`' to the column `PostalCode` in the table `Address`.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_addextendedproperty   
 @name = N'Input Mask ', @value = '99999 or 99999-9999 or #### ###',  
@@ -144,11 +144,11 @@ GO
  The following example adds an extended property to the `PRIMARY` filegroup.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sys.sp_addextendedproperty   
 @name = N'MS_DescriptionExample',   
-@value = N'Primary filegroup for the AdventureWorks2012 sample database.',   
+@value = N'Primary filegroup for the AdventureWorks sample database.',   
 @level0type = N'FILEGROUP', @level0name = 'PRIMARY';  
 GO  
 ```  
@@ -157,7 +157,7 @@ GO
  The following example adds an extended property to the `HumanResources` schema.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXECUTE sys.sp_addextendedproperty   
 @name = N'MS_DescriptionExample',  
@@ -170,7 +170,7 @@ EXECUTE sys.sp_addextendedproperty
  The following example adds an extended property to the `Address` table in the `Person` schema.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sys.sp_addextendedproperty   
 @name = N'MS_DescriptionExample',   
@@ -184,7 +184,7 @@ GO
  The following example creates an application role and adds an extended property to the role.  
   
 ```  
-USE AdventureWorks2012;   
+USE AdventureWorks2022;   
 GO  
 CREATE APPLICATION ROLE Buyers  
 WITH Password = '987G^bv876sPY)Y5m23';   
@@ -200,7 +200,7 @@ EXEC sys.sp_addextendedproperty
  The following example adds an extended property to a type.  
   
 ```  
-USE AdventureWorks2012;   
+USE AdventureWorks2022;   
 GO  
 EXEC sys.sp_addextendedproperty   
 @name = N'MS_Description',   
@@ -215,7 +215,7 @@ EXEC sys.sp_addextendedproperty
  The following example creates a user and adds an extended property to the user.  
   
 ```  
-USE AdventureWorks2012;   
+USE AdventureWorks2022;   
 GO  
 CREATE USER CustomApp WITHOUT LOGIN ;   
 GO  

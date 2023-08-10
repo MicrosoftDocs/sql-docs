@@ -70,9 +70,9 @@ By default, only members of the **sysadmin** fixed server role can execute **sp_
   
     ```  
     -- adds an alert (Test Alert) that runs the Back up
-    -- the AdventureWorks2012 Database job when fired   
+    -- the AdventureWorks2022 Database job when fired   
     -- assumes that the message 55001 and the Back up
-    -- the AdventureWorks2012 Database job already exist.  
+    -- the AdventureWorks2022 Database job already exist.  
     USE msdb ;  
     GO  
   
@@ -81,7 +81,7 @@ By default, only members of the **sysadmin** fixed server role can execute **sp_
         @message_id = 55001,   
        @severity = 0,   
        @notification_message = N'Error 55001 has occurred. The DB will be backed up...',   
-       @job_name = N'Back up the AdventureWorks2012 Database' ;  
+       @job_name = N'Back up the AdventureWorks2022 Database' ;  
     GO  
     ```  
   

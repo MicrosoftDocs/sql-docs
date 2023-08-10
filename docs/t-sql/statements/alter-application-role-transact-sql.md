@@ -77,7 +77,7 @@ If the new application role name already exists in the database, the statement w
  The following example changes the name of the application role `weekly_receipts` to `receipts_ledger`.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 CREATE APPLICATION ROLE weekly_receipts   
     WITH PASSWORD = '987Gbv8$76sPYY5m23' ,   
     DEFAULT_SCHEMA = Sales;  

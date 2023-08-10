@@ -86,7 +86,7 @@ An [expression](../../t-sql/language-elements/expressions-transact-sql.md) that 
  The following example creates a character default called `unknown`.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 CREATE DEFAULT phonedflt AS 'unknown';  
 ```  
@@ -100,7 +100,7 @@ CREATE DEFAULT phonedflt AS 'unknown';
  Because a default named `phonedflt` doesn't exist, the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement fails. This example is for illustration only.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 sp_bindefault 'phonedflt', 'Person.PersonPhone.PhoneNumber';  
 ```  

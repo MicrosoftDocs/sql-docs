@@ -65,7 +65,7 @@ VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )
 SELECT Data,  
      VerifySignedByAsymKey( AsymKey_Id( 'WillisKey74' ), SignedData,  
      DataSignature ) as IsSignatureValid  
-FROM [AdventureWorks2012].[SignedData04]   
+FROM [AdventureWorks2022].[SignedData04]   
 WHERE Description = N'data encrypted by asymmetric key ''WillisKey74''';  
 GO  
 RETURN;  
@@ -76,7 +76,7 @@ RETURN;
   
 ```sql
 SELECT Data   
-FROM [AdventureWorks2012].[SignedData04]   
+FROM [AdventureWorks2022].[SignedData04]   
 WHERE VerifySignedByAsymKey( AsymKey_Id( 'WillisKey74' ), Data,  
      DataSignature ) = 1  
 AND Description = N'data encrypted by asymmetric key ''WillisKey74''';  

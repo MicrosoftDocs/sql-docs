@@ -13,7 +13,7 @@ ms.topic: conceptual
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-This article provides direct links to download `AdventureWorks` sample databases, and instructions for restoring them to SQL Server and Azure SQL Database.
+This article provides direct links to download `AdventureWorks` sample databases, and instructions for restoring them to SQL Server, Azure SQL Database, and Azure SQL Managed Instance.
 
 For more information about samples, see the [Samples GitHub repository](https://github.com/microsoft/sql-server-samples/tree/master/samples/databases).
 

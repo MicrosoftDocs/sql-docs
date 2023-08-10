@@ -117,12 +117,12 @@ GO
 USE AdventureWorks2022;  
 GO  
 EXEC sp_addextendedproperty   
-@name = N'NewCaption', @value = 'AdventureWorks2022 Sample OLTP Database';  
+@name = N'NewCaption', @value = 'AdventureWorks Sample OLTP Database';  
 GO  
 USE AdventureWorks2022;  
 GO  
 EXEC sp_updateextendedproperty   
-@name = N'NewCaption', @value = 'AdventureWorks2022 Sample Database';  
+@name = N'NewCaption', @value = 'AdventureWorks Sample Database';  
 GO  
 ```  
   

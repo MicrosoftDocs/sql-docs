@@ -58,7 +58,7 @@ Module SMO_VBBackup3
         'Specify the type of backup, the description, the name, and the database to be backed up.  
         bk.Action = BackupActionType.Database  
         bk.BackupSetDescription = "Full backup of AdventureWorks2022"  
-        bk.BackupSetName = "AdventureWorks 2012 Backup"  
+        bk.BackupSetName = "AdventureWorks 2022 Backup"  
         bk.Database = "AdventureWorks2022"  
   
         'Declare a BackupDeviceItem by supplying the backup device file name in the constructor, and the type of device is a file.  

@@ -4,7 +4,7 @@ description: This article provides details about the configuration and use of th
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 08/07/2023
+ms.date: 08/10/2023
 ms.service: sql
 ms.topic: conceptual
 ms.custom: P360
@@ -118,7 +118,7 @@ To learn more about `tempdb` sizes in Azure SQL Database, review:
 
 Azure SQL Managed Instance supports temporary objects in the same way as SQL Server, where all global temporary tables and global temporary stored procedures are accessible by all user sessions within the same managed instance. Likewise, all system databases are accessible.
 
-For more information on configuring `tempdb` settings in Azure SQL Managed Instance, see [Configure tempdb settings for Azure SQL Managed Instance](/azure/azure-sql/managed-instance/tempdb-configure?view=azuresql-mi&preserve-view=true).
+You can configure the number of `tempdb` files, their growth increments, and their maximum size. For more information on configuring `tempdb` settings in Azure SQL Managed Instance, see [Configure tempdb settings for Azure SQL Managed Instance](/azure/azure-sql/managed-instance/tempdb-configure?view=azuresql-mi&preserve-view=true). 
 
 To learn more about `tempdb` sizes in Azure SQL Managed Instance, review [resource limits](/azure/azure-sql/managed-instance/resource-limits).
 
@@ -193,18 +193,32 @@ Put the `tempdb` database on disks that differ from the disks that user database
 
 ## Performance improvements in tempdb for SQL Server
 
-Starting with [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)], `tempdb` performance is further optimized in the following ways:
+#### Introduced in [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)]
 
 - Temporary tables and table variables are cached. Caching allows operations that drop and create the temporary objects to run very quickly. Caching also reduces page allocation and metadata contention.
 - The allocation page latching protocol is improved to reduce the number of `UP` (update) latches that are used.
 - Logging overhead for `tempdb` is reduced to reduce disk I/O bandwidth consumption on the `tempdb` log file.
 - Setup adds multiple `tempdb` data files during a new instance installation. You can accomplish this task by using the new UI input control in the **Database Engine Configuration** section and the command-line parameter `/SQLTEMPDBFILECOUNT`. By default, setup adds as many `tempdb` data files as the logical processor count or eight, whichever is lower.
-- When there are multiple `tempdb` data files, all files autogrow at the same time and by the same amount, depending on growth settings. [Trace flag 1117](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) is no longer required.
-- All allocations in `tempdb` use uniform extents. [Trace flag 1118](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) is no longer required.
+- When there are multiple `tempdb` data files, all files autogrow at the same time and by the same amount, depending on growth settings. [Trace flag 1117](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) is no longer required. For more information, read [-T1117 and -T1118 changes for TEMPDB and user databases](/archive/blogs/psssql/sql-2016-it-just-runs-faster-t1117-and-t1118-changes-for-tempdb-and-user-databases).
+- All allocations in `tempdb` use uniform extents. [Trace flag 1118](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) is no longer required. For more information on performance improvements in `tempdb`, see the blog article [TEMPDB - Files and Trace Flags and Updates, Oh My!](/archive/blogs/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my).
 - For the primary filegroup, the `AUTOGROW_ALL_FILES` property is turned on and the property can't be modified.
-- Starting in [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)], SQL Server does not use the `FILE_FLAG_WRITE_THROUGH` option when opening files for `tempdb` to allow for maximum disk throughput. Since `tempdb` is recreated on startup of SQL Server, these options are not needed as they are for other system databases and user databases for data consistency. For more information on `FILE_FLAG_WRITE_THROUGH`, see [Logging and data storage algorithms that extend data reliability in SQL Server](/troubleshoot/sql/database-engine/database-file-operations/logging-data-storage-algorithms#performance-impacts).
 
-For more information on performance improvements in `tempdb`, see the blog article [TEMPDB - Files and Trace Flags and Updates, Oh My!](/archive/blogs/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my).
+#### Introduced in [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]
+
+- The SQL Setup experience improves guidance for initial `tempdb` file allocation. SQL Setup will warn customers if the initial file size is set to a value greater than 1 GB and if [instant file initialization](database-instant-file-initialization.md) is not enabled, preventing instance startup delays.
+- A new DMV [sys.dm_tran_version_store_space_usage](../system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md) is introduced in SQL Server 2017 to track version store usage per database. This new DMV will be useful in monitoring `tempdb` for version store usage for DBAs who can proactively plan `tempdb` sizing based on the version store usage requirement per database.
+- New [intelligent query processing](../performance/intelligent-query-processing.md) features such as adaptive joins and memory grant feedback reduce memory spills on consecutive executions of a query, reducing unnecessary `tempdb` utilization.
+
+#### Introduced in [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)]
+
+- Starting in [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)], SQL Server does not use the `FILE_FLAG_WRITE_THROUGH` option when opening files for `tempdb` to allow for maximum disk throughput. Since `tempdb` is recreated on startup of SQL Server, these options are not needed as they are for other system databases and user databases for data consistency. For more information on `FILE_FLAG_WRITE_THROUGH`, see [Logging and data storage algorithms that extend data reliability in SQL Server](/troubleshoot/sql/database-engine/database-file-operations/logging-data-storage-algorithms#performance-impacts).
+- Memory-optimized `tempdb` metadata removes a bottleneck on PAGELATCH waits in `tempdb`, and unlocks a new level of scalability. For more information, watch this [video demo on How (and When) To: Memory Optimized TempDB Metadata](https://learn.microsoft.com/shows/data-exposed/how-and-when-to-memory-optimized-tempdb-metadata). For more information, read [monitoring and troubleshooting memory-optimized tempdb metadata](/troubleshoot/sql/database-engine/performance/memory-optimized-tempdb-out-of-memory).
+- Concurrent Page Free Space (PFS) page updates reduce patch latch contention in all databases, an issue most commonly seen in `tempdb`. This improvement changes the way that concurrency is managed with PFS updates so that they can be updated under a shared latch, rather than an exclusive latch. This behavior is on by default in all databases (including TempDB) starting with SQL Server 2019 (15.x). For more information on PFS pages, read [Under the covers: GAM, SGAM, and PFS pages](https://techcommunity.microsoft.com/t5/sql-server-blog/under-the-covers-gam-sgam-and-pfs-pages/ba-p/383125).
+- By default, a new installation of SQL Server on Linux creates multiple `tempdb` data files, based on the number of logical processor cores. This doesn't apply to in-place minor or major version upgrades. This behavior is similar to the default SQL Server installation on Windows.
+
+#### Introduced in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]
+
+- [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduced [improved scalability with system page latch concurrency enhancements](https://cloudblogs.microsoft.com/sqlserver/2022/07/21/improve-scalability-with-system-page-latch-concurrency-enhancements-in-sql-server-2022/). Concurrent updates to global allocation map (GAM) pages and shared global allocation map (SGAM) pages reduce page latch contention while allocating/deallocating data pages and extents. These enhancements apply to all user databases and especially benefit `tempdb` heavy workloads. For more information on GAM and SGAM pages, read [Under the covers: GAM, SGAM, and PFS pages](https://techcommunity.microsoft.com/t5/sql-server-blog/under-the-covers-gam-sgam-and-pfs-pages/ba-p/383125). For more information, watch [System Page Latch Concurrency Enhancements (Ep. 6) | Data Exposed](/shows/data-exposed/system-page-latch-concurrency-enhancements). 
 
 ## Memory-optimized tempdb metadata
 

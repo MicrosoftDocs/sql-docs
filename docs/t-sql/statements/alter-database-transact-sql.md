@@ -4,7 +4,7 @@ description: ALTER DATABASE (Transact-SQL) syntax for SQL Server, Azure SQL Data
 author: markingmyname
 ms.author: maghan
 ms.reviewer: wiassaf
-ms.date: 05/31/2023
+ms.date: 08/10/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -490,10 +490,10 @@ Specifies the compute size and service objective.
 
 #### SERVICE_OBJECTIVE
 
-Specifies the compute size and service objective. 
+Specifies the compute size (also known as service level objective, or SLO).
 
-- For DTU purchasing model: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`
-- For the vCore purchasing model, choose the tier and provide the number of vCores from a preset list of values, where the number of vCores is `n`. Refer to the [resource limits for single databases](/azure/azure-sql/database/resource-limits-vcore-single-databases) or [resource limits for elastic pools](/azure/azure-sql/database/resource-limits-vcore-elastic-pools).
+- For DTU purchasing model: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`. Refer to the [resource limits for DTU single databases](/azure/azure-sql/database/resource-limits-dtu-single-databases) or [resource limits for DTU elastic pools](/azure/azure-sql/database/resource-limits-dtu-elastic-pools) to find the number of DTU assigned to each compute size.
+- For the vCore purchasing model, choose the tier and provide the number of vCores from a preset list of values, where the number of vCores is `n`. Refer to the [resource limits for vCore single databases](/azure/azure-sql/database/resource-limits-vcore-single-databases) or [resource limits for vCore elastic pools](/azure/azure-sql/database/resource-limits-vcore-elastic-pools).
     - For example: 
     - `GP_Gen5_8` for General Purpose Standard-series (Gen5) compute, 8 vCores.
     - `GP_S_Gen5_8` for General Purpose Serverless Standard-series (Gen5) compute, 8 vCores.

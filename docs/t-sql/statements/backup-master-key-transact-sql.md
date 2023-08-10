@@ -81,22 +81,22 @@ Requires CONTROL permission on the database.
   
 ## Examples
 
-The following example creates a backup of the `AdventureWorks2012` master key to a file. Because this master key isn't encrypted by the service master key, a password must be specified when it's opened.  
+The following example creates a backup of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] master key to a file. Because this master key isn't encrypted by the service master key, a password must be specified when it's opened.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 OPEN MASTER KEY DECRYPTION BY PASSWORD = 'sfj5300osdVdgwdfkli7';  
-BACKUP MASTER KEY TO FILE = 'c:\temp\AdventureWorks2012_master_key'   
+BACKUP MASTER KEY TO FILE = 'c:\temp\AdventureWorks2022_master_key'   
     ENCRYPTION BY PASSWORD = 'sd092735kjn$&adsg';  
 GO   
 ```  
 
-The following example creates a backup of the `AdventureWorks2012` master key to an Azure Blob storage. Because this master key isn't encrypted by the service master key, a password must be specified when it's opened.  
+The following example creates a backup of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] master key to an Azure Blob storage. Because this master key isn't encrypted by the service master key, a password must be specified when it's opened.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 OPEN MASTER KEY DECRYPTION BY PASSWORD = 'sfj5300osdVdgwdfkli7';  
-BACKUP MASTER KEY TO URL = 'https://mydocsteststorage.blob.core.windows.net/mytestcontainer/AdventureWorks2012_master_key.bak'  
+BACKUP MASTER KEY TO URL = 'https://mydocsteststorage.blob.core.windows.net/mytestcontainer/AdventureWorks2022_master_key.bak'  
     ENCRYPTION BY PASSWORD = 'sd092735kjn$&adsg';  
 GO   
 ```  

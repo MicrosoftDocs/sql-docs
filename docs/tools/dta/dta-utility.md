@@ -129,7 +129,7 @@ dta -D db_name1, db_name2 -d db_name1
  Specifies the first database to which **dta** connects when tuning a workload. Only one database can be specified for this argument. For example:  
   
 ```console  
-dta -d AdventureWorks2012 ...  
+dta -d AdventureWorks2022 ...  
 ```  
   
  If multiple database names are specified, then **dta** returns an error. The **-d** argument is optional.  
@@ -334,7 +334,7 @@ In this case, DTA will use Query Store as the source of workload and only consid
  Specifies the name of the tuning session. This is required if **-ID** is not specified.  
   
  **-Tf** _table_list_file_  
- Specifies the name of a file containing a list of tables to be tuned. Each table listed within the file should begin on a new line. Table names should be qualified with three-part naming, for example, **AdventureWorks2012.HumanResources.Department**. Optionally, to invoke the table-scaling feature, the name of an existing table can be followed by a number indicating the projected number of rows in the table. Database Engine Tuning Advisor takes into consideration the projected number of rows while tuning or evaluating statements in the workload that reference these tables. Note that there can be one or more spaces between the *number_of_rows* count and the *table_name*.  
+ Specifies the name of a file containing a list of tables to be tuned. Each table listed within the file should begin on a new line. Table names should be qualified with three-part naming, for example, **AdventureWorks2022.HumanResources.Department**. Optionally, to invoke the table-scaling feature, the name of an existing table can be followed by a number indicating the projected number of rows in the table. Database Engine Tuning Advisor takes into consideration the projected number of rows while tuning or evaluating statements in the workload that reference these tables. Note that there can be one or more spaces between the *number_of_rows* count and the *table_name*.  
   
  This is the file format for *table_list_file*:  
   
@@ -395,9 +395,9 @@ dta -D orders -if orders_wkld.sql -of script.sql -A 15 -n 10
  This example demonstrates the use of *table_list_file* (the **-Tf** argument). The contents of the file table_list.txt are as follows:  
 
 ```console
-AdventureWorks2012.Sales.Customer  100000  
-AdventureWorks2012.Sales.Store  
-AdventureWorks2012.Production.Product  2000000  
+AdventureWorks2022.Sales.Customer  100000  
+AdventureWorks2022.Sales.Store  
+AdventureWorks2022.Production.Product  2000000  
 ```
 
 The contents of table_list.txt specifies that:  

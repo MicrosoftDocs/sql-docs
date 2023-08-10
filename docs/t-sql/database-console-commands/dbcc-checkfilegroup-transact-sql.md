@@ -236,9 +236,9 @@ DBCC CHECKFILEGROUP;
 GO
 ```
 
-### B. Check the AdventureWorks2022 PRIMARY filegroup without nonclustered indexes
+### B. Check the AdventureWorks PRIMARY filegroup without nonclustered indexes
 
-The following example checks the `AdventureWorks2022` database primary filegroup (excluding nonclustered indexes) by specifying the identification number of the primary filegroup, and by specifying `NOINDEX`.
+The following example checks the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database primary filegroup (excluding nonclustered indexes) by specifying the identification number of the primary filegroup, and by specifying `NOINDEX`.
 
 ```sql
 USE AdventureWorks2022;

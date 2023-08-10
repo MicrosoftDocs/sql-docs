@@ -114,10 +114,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  Requires CONTROL permission on the XML schema collection. If you use the AS option, the specified principal must own the XML schema collection.  
   
 ## Examples  
- The following example revokes `EXECUTE` permission on the XML schema collection `Invoices4` from the user `Wanida`. The XML schema collection `Invoices4` is located inside the `Sales` schema of the `AdventureWorks2012` database.  
+ The following example revokes `EXECUTE` permission on the XML schema collection `Invoices4` from the user `Wanida`. The XML schema collection `Invoices4` is located inside the `Sales` schema of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
   
  ```sql
- USE AdventureWorks2012;  
+ USE AdventureWorks2022;  
  REVOKE EXECUTE ON XML SCHEMA COLLECTION::Sales.Invoices4 FROM Wanida;  
  GO
  ```  

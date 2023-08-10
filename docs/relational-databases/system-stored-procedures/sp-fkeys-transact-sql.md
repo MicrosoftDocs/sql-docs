@@ -95,10 +95,10 @@ The sp_fkeys stored procedure is equivalent to SQLForeignKeys in ODBC.
  Requires `SELECT` permission on the schema.  
   
 ## Examples  
- The following example retrieves a list of foreign keys for the `HumanResources.Department` table in the `AdventureWorks2012` database.  
+ The following example retrieves a list of foreign keys for the `HumanResources.Department` table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_fkeys @pktable_name = N'Department'  
     ,@pktable_owner = N'HumanResources';  

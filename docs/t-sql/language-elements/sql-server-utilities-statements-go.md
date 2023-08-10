@@ -48,7 +48,7 @@ GO [count]
  Users must follow the rules for batches. For example, any execution of a stored procedure after the first statement in a batch must include the EXECUTE keyword. The scope of local (user-defined) variables is limited to a batch, and cannot be referenced after a GO command.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DECLARE @MyMsg VARCHAR(50)  
 SELECT @MyMsg = 'Hello, World.'  
@@ -83,10 +83,10 @@ GO;
  GO is a utility command that requires no permissions. It can be executed by any user.    
   
 ## Examples  
- The following example creates two batches. The first batch contains only a `USE AdventureWorks2012` statement to set the database context. The remaining statements use a local variable. Therefore, all local variable declarations must be grouped in a single batch. This is done by not having a `GO` command until after the last statement that references the variable.  
+ The following example creates two batches. The first batch contains only a `USE AdventureWorks2022` statement to set the database context. The remaining statements use a local variable. Therefore, all local variable declarations must be grouped in a single batch. This is done by not having a `GO` command until after the last statement that references the variable.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DECLARE @NmbrPeople INT  
 SELECT @NmbrPeople = COUNT(*)  

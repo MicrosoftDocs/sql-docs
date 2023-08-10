@@ -59,7 +59,7 @@ ISNULL ( check_expression , replacement_value )
  The following example finds the average of the weight of all products. It substitutes the value `50` for all NULL entries in the `Weight` column of the `Product` table.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT AVG(ISNULL(Weight, 50))  
 FROM Production.Product;  
@@ -76,10 +76,10 @@ GO
  ```  
   
 ### B. Using ISNULL  
- The following example selects the description, discount percentage, minimum quantity, and maximum quantity for all special offers in `AdventureWorks2012`. If the maximum quantity for a particular special offer is NULL, the `MaxQty` shown in the result set is `0.00`.  
+ The following example selects the description, discount percentage, minimum quantity, and maximum quantity for all special offers in [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)]. If the maximum quantity for a particular special offer is NULL, the `MaxQty` shown in the result set is `0.00`.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT Description, DiscountPct, MinQty, ISNULL(MaxQty, 0.00) AS 'Max Quantity'  
 FROM Sales.SpecialOffer;  
@@ -113,7 +113,7 @@ GO
  Do not use ISNULL to find NULL values. Use IS NULL instead. The following example finds all products that have `NULL` in the weight column. Note the space between `IS` and `NULL`.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT Name, Weight  
 FROM Production.Product  

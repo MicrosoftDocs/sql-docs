@@ -238,7 +238,7 @@ The following messages are an example of the messages logged in the error log du
 
 ### A. Create a clone of a database that includes schema, statistics and Query Store
 
-The following example creates a clone of the `AdventureWorks2022` database that includes schema, statistics and Query Store data ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Service Pack 1 and later versions):
+The following example creates a clone of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database that includes schema, statistics and Query Store data ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Service Pack 1 and later versions):
 
 ```sql
 DBCC CLONEDATABASE (AdventureWorks2022, AdventureWorks_Clone);
@@ -247,7 +247,7 @@ GO
 
 ### B. Create a schema-only clone of a database without statistics
 
-The following example creates a clone of the `AdventureWorks2022` database that doesn't include statistics ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2 CU 3 and later versions):
+The following example creates a clone of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database that doesn't include statistics ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2 CU 3 and later versions):
 
 ```sql
 DBCC CLONEDATABASE (AdventureWorks2022, AdventureWorks_Clone) WITH NO_STATISTICS;
@@ -256,7 +256,7 @@ GO
 
 ### C. Create a schema-only clone of a database without statistics and Query Store
 
-The following example creates a clone of the `AdventureWorks2022` database that doesn't include statistics and Query Store data ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Service Pack 1 and later versions):
+The following example creates a clone of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database that doesn't include statistics and Query Store data ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Service Pack 1 and later versions):
 
 ```sql
 DBCC CLONEDATABASE (AdventureWorks2022, AdventureWorks_Clone) WITH NO_STATISTICS, NO_QUERYSTORE;
@@ -265,7 +265,7 @@ GO
 
 ### D. Create a clone of a database that is verified for production use
 
-The following example creates a schema-only clone of the `AdventureWorks2022` database without statistics and Query Store data that is verified for use as a production database ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Service Pack 2 and later versions):
+The following example creates a schema-only clone of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database without statistics and Query Store data that is verified for use as a production database ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Service Pack 2 and later versions):
 
 ```sql
 DBCC CLONEDATABASE (AdventureWorks2022, AdventureWorks_Clone) WITH VERIFY_CLONEDB;
@@ -274,7 +274,7 @@ GO
 
 ### E. Create a clone of a database that is verified for production use that includes a backup of the cloned database
 
-The following example creates a schema-only clone of the `AdventureWorks2022` database without statistics and Query Store data that is verified for use as a production database. A verified backup of the cloned database will also be created ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Service Pack 2 and later versions).
+The following example creates a schema-only clone of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database without statistics and Query Store data that is verified for use as a production database. A verified backup of the cloned database will also be created ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Service Pack 2 and later versions).
 
 ```sql
 DBCC CLONEDATABASE (AdventureWorks2022, AdventureWorks_Clone) WITH VERIFY_CLONEDB, BACKUP_CLONEDB;

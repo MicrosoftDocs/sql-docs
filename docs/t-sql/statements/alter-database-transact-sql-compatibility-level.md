@@ -147,7 +147,7 @@ For more information, including the recommended workflow for upgrading database 
      Examples of breaking changes **not protected** by compatibility level are:
 
      - Changed column names in system objects. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] the column `single_pages_kb` in `sys.dm_os_sys_info` was renamed to `pages_kb`. Regardless of the compatibility level, the query `SELECT single_pages_kb FROM sys.dm_os_sys_info` will produce error 207 (Invalid column name).
-     - Removed system objects. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] the `sp_dboption` was removed. Regardless of the compatibility level, the statement `EXEC sp_dboption 'AdventureWorks2016', 'autoshrink', 'FALSE';` will produce error 2812 (Couldn't find stored procedure 'sp_dboption').
+     - Removed system objects. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] the `sp_dboption` was removed. Regardless of the compatibility level, the statement `EXEC sp_dboption 'AdventureWorks2022', 'autoshrink', 'FALSE';` will produce error 2812 (Couldn't find stored procedure 'sp_dboption').
 
      For more information on breaking changes, see [Breaking Changes to Database Engine Features in SQL Server 2019](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2019.md), [Breaking Changes to Database Engine Features in SQL Server 2017](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [Breaking Changes to Database Engine Features in SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md), and [Breaking Changes to Database Engine Features in SQL Server 2014](/previous-versions/sql/2014/database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016?preserve-view=true&view=sql-server-2014).
 
@@ -354,10 +354,10 @@ Requires `ALTER` permission on the database.
 
 ### A. Change the compatibility level
 
-The following example changes the compatibility level of the **AdventureWorks2019** [sample database](../../samples/adventureworks-install-configure.md) database to 150, the default for [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)].
+The following example changes the compatibility level of the **AdventureWorks2022** [sample database](../../samples/adventureworks-install-configure.md) database to 150, the default for [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)].
 
 ```sql
-ALTER DATABASE AdventureWorks2019
+ALTER DATABASE AdventureWorks2022
 SET COMPATIBILITY_LEVEL = 150;
 GO
 ```
@@ -439,10 +439,10 @@ This returns results such as the following:
 Under the database compatibility level setting of 90, variable assignment is allowed in a statement containing a top-level UNION operator, but returns unexpected results. For example, in the following statements, local variable `@v` is assigned the value of the column `BusinessEntityID` from the union of two tables. By definition, when the SELECT statement returns more than one value, the variable is assigned the last value that is returned. In this case, the variable is correctly assigned the last value, however, the result set of the SELECT UNION statement is also returned.
 
 ```sql
-ALTER DATABASE AdventureWorks2012
+ALTER DATABASE AdventureWorks2022
 SET compatibility_level = 110;
 GO
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 DECLARE @v int;
 SELECT @v = BusinessEntityID FROM HumanResources.Employee

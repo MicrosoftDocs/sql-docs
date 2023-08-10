@@ -81,7 +81,7 @@ The following is the result set for one table.
 
 ### A. DBCC PDW_SHOWSPACEUSED basic syntax
 
-The following examples using the `AdventureWorks2022` sample database show multiple ways to display the number of rows, disk space reserved, and disk space used by the `FactInternetSales` table in the [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] database.
+The following examples using the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample database show multiple ways to display the number of rows, disk space reserved, and disk space used by the `FactInternetSales` table in the [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] database.
 
 ```sql
 -- Uses AdventureWorks2022
@@ -94,7 +94,7 @@ DBCC PDW_SHOWSPACEUSED ( FactInternetSales );
 
 ### B. Show the disk space used by all tables in the current database
 
- The following example using the `AdventureWorks2022` sample database shows the disk space reserved and used by all user tables and system tables in the [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] database.
+ The following example using the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample database shows the disk space reserved and used by all user tables and system tables in the [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] database.
 
 ```sql
 -- Uses AdventureWorks2022  

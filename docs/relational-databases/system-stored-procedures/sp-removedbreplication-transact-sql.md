@@ -61,10 +61,10 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
   
 ## Examples
 
-### A. Remove replication objects, AdventureWorks2012Replica subscription database
+### A. Remove replication objects, AdventureWorks replica subscription database
  [!code-sql[HowTo#sp_removedbreplication](../../relational-databases/replication/codesnippet/tsql/sp-removedbreplication-t_1.sql)]  
   
-### B. Remove replication objects, AdventureWorksReplica subscription database
+### B. Remove replication objects, AdventureWorks replica subscription database
   
 ```sql
 -- Remove replication objects from the subscription database on MYSUB.  

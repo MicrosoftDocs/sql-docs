@@ -64,7 +64,7 @@ When using IDENT_CURRENT on a view that contains joins, NULL is returned. This i
 ## Examples  
   
 ### A. Returning the last identity value generated for a specified table  
- The following example returns the last identity value generated for the `Person.Address` table in the `AdventureWorks2022` database.  
+ The following example returns the last identity value generated for the `Person.Address` table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql  
 USE AdventureWorks2022;  

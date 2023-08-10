@@ -712,7 +712,7 @@ SELECT * FROM Sales.ufn_SalesByStore (602);
 
 ### C. Creating a multi-statement table-valued function
 
-The following example creates the table-valued function `fn_FindReports(InEmpID)` in the AdventureWorks2012 database. When supplied with a valid employee ID, the function returns a table that corresponds to all the employees that report to the employee either directly or indirectly. The function uses a recursive common table expression (CTE) to produce the hierarchical list of employees. For more information about recursive CTEs, see [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).
+The following example creates the table-valued function `fn_FindReports(InEmpID)` in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database. When supplied with a valid employee ID, the function returns a table that corresponds to all the employees that report to the employee either directly or indirectly. The function uses a recursive common table expression (CTE) to produce the hierarchical list of employees. For more information about recursive CTEs, see [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).
 
 ```sql
 CREATE FUNCTION dbo.ufn_FindReports (@InEmpID INTEGER)

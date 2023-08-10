@@ -672,7 +672,7 @@ GO
 
 ### C. Create a nonclustered columnstore index with a filtered predicate
 
-The following example creates a filtered, nonclustered columnstore index on the `Production.BillOfMaterials` table in the `AdventureWorks2019` sample database. The filter predicate can include columns that aren't key columns in the filtered index. The predicate in this example selects only the rows where `EndDate` is non-NULL.
+The following example creates a filtered, nonclustered columnstore index on the `Production.BillOfMaterials` table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample database. The filter predicate can include columns that aren't key columns in the filtered index. The predicate in this example selects only the rows where `EndDate` is non-NULL.
 
 ```sql
 IF EXISTS (SELECT name FROM sys.indexes

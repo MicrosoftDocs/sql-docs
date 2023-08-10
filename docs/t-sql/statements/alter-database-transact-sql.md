@@ -238,12 +238,12 @@ Requires `ALTER` permission on the database.
 
 ### A. Change the name of a database
 
-The following example changes the name of the `AdventureWorks2012` database to `Northwind`.
+The following example changes the name of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database to `Northwind`.
 
 ```sql
 USE master;
 GO
-ALTER DATABASE AdventureWorks2012
+ALTER DATABASE AdventureWorks2022
 Modify Name = Northwind ;
 GO
 ```
@@ -1017,7 +1017,7 @@ Before you run these examples, make sure the database you are altering is not th
 ### A. Change the name of the database
 
 ```sql
-ALTER DATABASE AdventureWorks2012
+ALTER DATABASE AdventureWorks2022
 MODIFY NAME = Northwind;
 ```
 

@@ -198,32 +198,32 @@ permission | ALL [ PRIVILEGES ]
 ## Examples  
   
 ### A. Revoking permission to create certificates  
- The following example revokes `CREATE CERTIFICATE` permission on the `AdventureWorks2012` database from user `MelanieK`.  
+ The following example revokes `CREATE CERTIFICATE` permission on the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database from user `MelanieK`.  
   
 **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 REVOKE CREATE CERTIFICATE FROM MelanieK;  
 GO  
 ```  
   
 ### B. Revoking REFERENCES permission from an application role  
- The following example revokes `REFERENCES` permission on the `AdventureWorks2012` database from application role `AuditMonitor`.  
+ The following example revokes `REFERENCES` permission on the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database from application role `AuditMonitor`.  
   
 **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 REVOKE REFERENCES FROM AuditMonitor;  
 GO  
 ```  
   
 ### C. Revoking VIEW DEFINITION with CASCADE  
- The following example revokes `VIEW DEFINITION` permission on the `AdventureWorks2012` database from user `CarmineEs` and from all principals to which `CarmineEs` has granted `VIEW DEFINITION` permission.  
+ The following example revokes `VIEW DEFINITION` permission on the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database from user `CarmineEs` and from all principals to which `CarmineEs` has granted `VIEW DEFINITION` permission.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 REVOKE VIEW DEFINITION FROM CarmineEs CASCADE;  
 GO  
 ```  

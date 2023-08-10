@@ -100,7 +100,7 @@ sp_addextendedproperty
 ## Examples  
   
 ### A. Adding an extended property to a database  
- The following example adds the property name `Caption` with a value of `AdventureWorks2022 Sample OLTP Database` to the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample database.  
+ The following example adds the property name `Caption` with a value of `AdventureWorks Sample OLTP Database` to the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample database.  
   
 ```  
 USE AdventureWorks2022;  
@@ -108,7 +108,7 @@ GO
 --Add a caption to the AdventureWorks2022 Database object itself.  
 EXEC sp_addextendedproperty   
 @name = N'Caption',   
-@value = 'AdventureWorks2022 Sample OLTP Database';  
+@value = 'AdventureWorks Sample OLTP Database';  
 ```  
   
 ### B. Adding an extended property to a column in a table  

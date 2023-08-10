@@ -91,7 +91,7 @@ In this lesson, you will learn to build all the objects that enable a database t
 
 ## Next Steps
 
-You have successfully configured AdventureWorks 2008 R2 to support a conversation between the **//AWDB/InternalAct/InitiatorService** and the **//AWDB/InternalAct/TargetService**. Next, you will create a stored procedure to support internal activation on the target queue. For more information, see [Lesson 2: Creating an Internal Activation Procedure](lesson-2-creating-an-internal-activation-procedure.md).
+You have successfully configured [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] to support a conversation between the **//AWDB/InternalAct/InitiatorService** and the **//AWDB/InternalAct/TargetService**. Next, you will create a stored procedure to support internal activation on the target queue. For more information, see [Lesson 2: Creating an Internal Activation Procedure](lesson-2-creating-an-internal-activation-procedure.md).
 
 ## See also
 

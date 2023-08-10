@@ -52,11 +52,11 @@ Available installation packages for [!INCLUDE [sssql22-md](../includes/sssql22-m
 
 ## Install mssql-server-extensibility package
 
-1. [Configure Linux Repositories](sql-server-linux-change-repo.md) corresponding to the Linux distribution. Install the SQL Server extensibility feature with the package `mssql-server-extensibility`.
+1. [Configure Linux Repositories](sql-server-linux-change-repo.md) corresponding to the Linux distribution. Install the SQL Server extensibility feature with the package `mssql-server-extensibility` and associated dependency `libssl-dev`.
 
     **Ubuntu**
     ```bash
-    sudo apt-get install mssql-server-extensibility
+    sudo apt-get install mssql-server-extensibility libssl-dev
     ```
 
     **RHEL**

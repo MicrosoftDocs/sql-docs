@@ -4,7 +4,7 @@ description: Download the latest version of SQL Server Management Studio (SSMS).
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan
-ms.date: 06/28/2023
+ms.date: 08/10/2023
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
@@ -30,6 +30,8 @@ keywords:
 SQL Server Management Studio (SSMS) is an integrated environment for managing any SQL infrastructure, from SQL Server to Azure SQL Database. SSMS provides tools to configure, monitor, and administer instances of SQL Server and databases. Use SSMS to deploy, monitor, and upgrade the data-tier components used by your applications and build queries and scripts.
 
 Use SSMS to query, design, and manage your databases and data warehouses, wherever they are - on your local computer or in the cloud.
+
+For customers in need of a cross-platform companion to SSMS for managing SQL and other Azure databases, use [Azure Data Studio](what-is-azure-data-studio.md).
 
 ## Download SSMS
 

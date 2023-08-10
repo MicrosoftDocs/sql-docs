@@ -4,7 +4,7 @@ description: Release notes for SQL Server Management Studio (SSMS).
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan
-ms.date: 07/03/2023
+ms.date: 08/10/2023
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
@@ -90,6 +90,7 @@ SSMS 19.1 is the latest general availability (GA) release of SSMS. If you need a
 | General SSMS | Import setting from SSMS 17 option not available. | Settings can be imported from SSMS 18. |
 | General SSMS | Upgrading from SSMS 19.0.2 to 19.1 results in some bug fixes not appearing to be resolved.  Specifically, users will still have issues editing a NVARCHAR(255) column in a table, users will see an unknown table name when editing data if the database name in Azure contains a period (.), and SSMS file versions will be incorrect. | Uninstall SSMS 19.1 and then re-install SSMS 19.1. |
 | Import/Export Data-Tier Application | Using Export to Data-Tier Application with a Microsoft Azure Storage Account generates the error "An error occurred while loading data." | Use SSMS 19.0.2 or earlier. |
+| Object Explorer | Modifying a stored procedure when using Azure AD Authentication generates a "Cannot open server" server. | Use a non-Azure AD login, or SSMS 18.12.1. |
 | PolyBase | PolyBase node is not visible in Object Explorer when connecting to SQL 2022. | Use SSMS 18.12.1. |
 | Profiler | The Profiler menu isn't localized. | No current alternative. |
 | Query Editor | When SSMS opens after double-clicking on a `.sql` file, the Object Explorer window is displayed as a separate window. | No current alternative. |

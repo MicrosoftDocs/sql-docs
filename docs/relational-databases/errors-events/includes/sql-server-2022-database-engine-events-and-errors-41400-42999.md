@@ -2,7 +2,7 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 07/06/2023
+ms.date: 08/01/2023
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -273,6 +273,7 @@ ms.topic: include
 | 41975 | 16 | No | Unsupported storage type. Azure SQL Managed Instance does not support database backup to the provided storage type. |
 | 41976 | 16 | No | Connection with availability group '%.\*ls' on the server with endpoint '%.\*ls' cannot be established as it is not responding. Possible causes could be nonexistence of availability group or distributed availability group on the partner server, incorrectly specified names or configuration parameters. Please check the log file on the partner server for the exact error cause. |
 | 41977 | 16 | No | Connection with availability group '%.\*ls' on the server with endpoint '%.\*ls' is established, but there is no response from the target database. Possible causes could be errors with creating a database on the partner server, incorrectly specified names or configuration parameters. Please check the log file on the partner server for the exact error cause. |
+| 41978 | 16 | No | The parameters (%ls) are not supported for this stored procedure in SQL Database Managed Instance. Review the documentation for supported parameters. |
 | 42001 | 16 | No | Failed to parse XML configuration. The operating system returned error %ls. |
 | 42002 | 16 | No | Failed to parse XML configuration. The parser returned error %.\*ls |
 | 42003 | 16 | No | Failed to parse XML configuration. A required attribute '%ls' is missing. |

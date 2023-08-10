@@ -72,7 +72,7 @@ helpviewer_keywords:
      The following example removes database mirroring from the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database.  
   
     ```  
-    ALTER DATABASE AdventureWorks2012 SET PARTNER OFF;  
+    ALTER DATABASE AdventureWorks2022 SET PARTNER OFF;  
     ```  
   
 ##  <a name="FollowUp"></a> Follow Up: Removing Database Mirroring  

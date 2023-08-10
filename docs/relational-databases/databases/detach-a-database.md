@@ -105,10 +105,10 @@ Be sure to account for all files associated with the database before you detach,
   
 2.  From the Standard bar, select **New Query**.  
   
-3.  Copy and paste the following example into the query window and select **Execute**. This example detaches the AdventureWorks2012 database with the `skipchecks` option set to `true`. For more information, see [sp_detach_db](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md).
+3.  Copy and paste the following example into the query window and select **Execute**. This example detaches the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database with the `skipchecks` option set to `true`. For more information, see [sp_detach_db](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md).
   
 ```sql  
-EXEC sp_detach_db 'AdventureWorks2012', 'true';  
+EXEC sp_detach_db 'AdventureWorks2022', 'true';  
 ```  
   
 ## See also  

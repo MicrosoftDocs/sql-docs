@@ -384,7 +384,7 @@ Warehouse    StockItemTransactions  CCX_Warehouse_StockItemTransactions  CLUSTER
 
 #### Reorganize an index
 
-The following example reorganizes the `IX_Employee_OrganizationalLevel_OrganizationalNode` index on the `HumanResources.Employee` table in the `AdventureWorks2016` database.
+The following example reorganizes the `IX_Employee_OrganizationalLevel_OrganizationalNode` index on the `HumanResources.Employee` table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.
 
 ```sql
 ALTER INDEX IX_Employee_OrganizationalLevel_OrganizationalNode
@@ -392,7 +392,7 @@ ALTER INDEX IX_Employee_OrganizationalLevel_OrganizationalNode
     REORGANIZE;
 ```
 
-The following example reorganizes the `IndFactResellerSalesXL_CCI` columnstore index on the `dbo.FactResellerSalesXL_CCI` table in the `AdventureWorksDW2016` database. This command forces all closed and open row groups into columnstore.
+The following example reorganizes the `IndFactResellerSalesXL_CCI` columnstore index on the `dbo.FactResellerSalesXL_CCI` table in the [!INCLUDE [sssampledbdwobject-md](../../includes/sssampledbdwobject-md.md)] database. This command forces all closed and open row groups into columnstore.
 
 ```sql
 -- This command forces all closed and open row groups into columnstore.
@@ -403,7 +403,7 @@ ALTER INDEX IndFactResellerSalesXL_CCI
 
 #### Reorganize all indexes in a table
 
-The following example reorganizes all indexes on the `HumanResources.Employee` table in the `AdventureWorks2016` database.
+The following example reorganizes all indexes on the `HumanResources.Employee` table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.
 
 ```sql
 ALTER INDEX ALL ON HumanResources.Employee
@@ -412,13 +412,13 @@ ALTER INDEX ALL ON HumanResources.Employee
 
 #### Rebuild an index
 
-The following example rebuilds a single index on the `Employee` table in the `AdventureWorks2016` database.
+The following example rebuilds a single index on the `Employee` table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.
 
 [!code-sql[IndexDDL#AlterIndex1](../../relational-databases/indexes/codesnippet/tsql/reorganize-and-rebuild-i_1.sql)]
 
 #### Rebuild all indexes in a table
 
-The following example rebuilds all indexes associated with the table in the `AdventureWorks2016` database using the `ALL` keyword. Three options are specified.
+The following example rebuilds all indexes associated with the table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database using the `ALL` keyword. Three options are specified.
 
 [!code-sql[IndexDDL#AlterIndex2](../../relational-databases/indexes/codesnippet/tsql/reorganize-and-rebuild-i_2.sql)]
 

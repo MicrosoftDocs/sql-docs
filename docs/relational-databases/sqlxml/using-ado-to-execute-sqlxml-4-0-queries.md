@@ -88,7 +88,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
     -   Find "`@@SERVER_NAME@@`" and replace it with the name of your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance (for example, "`(local)`" if [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running locally).  
   
-    -   Find "`@@DATABASE_NAME@@`" and replace it with the name of the database (for example, either "`AdventureWorks2012`" or "`tempdb`").  
+    -   Find "`@@DATABASE_NAME@@`" and replace it with the name of the database (for example, either "`AdventureWorks2022`" or "`tempdb`").  
   
      Update any other values if mentioned in the specific instructions for the example you are attempting to recreate locally on your computer.  
   

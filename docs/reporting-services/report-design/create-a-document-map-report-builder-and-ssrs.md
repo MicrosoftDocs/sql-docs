@@ -75,7 +75,7 @@ Create a document map to provides a set of clickable links or table of contents 
   
 1.  In the web portal, browse to the report that has the document map.  
   
-     For example, for the [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] sample reports, the following URL specifies the report named Product Catalog.  
+     For example, for the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample reports, the following URL specifies the report named Product Catalog.  
   
     ```  
     https://localhost/Reports/Pages/Report.aspx?ItemPath=%2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog  

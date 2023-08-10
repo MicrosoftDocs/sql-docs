@@ -704,7 +704,7 @@ Backup media is formatted by a BACKUP statement if and only if any of the follow
 #### Backup devices in a striped media set (a stripe set)
 A *stripe set* is a set of disk files on which data is divided into blocks and distributed in a fixed order. The number of backup devices used in a stripe set must stay the same (unless the media is reinitialized with `FORMAT`).
 
-The following example writes a backup of the [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] database to a new striped media set that uses three disk files.
+The following example writes a backup of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database to a new striped media set that uses three disk files.
 
 ```sql
 BACKUP DATABASE AdventureWorks2012
@@ -864,7 +864,7 @@ This section contains the following examples:
 
 ### <a name="backing_up_db"></a> A. Backing up a complete database
 
-The following example backs up the [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] database to a disk file.
+The following example backs up the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database to a disk file.
 
 ```sql
 BACKUP DATABASE AdventureWorks2012
@@ -941,7 +941,7 @@ GO
 
 ### <a name="create_single_family_mirrored_media_set"></a> E. Creating and backing up to a single-family mirrored media set
 
-The following example creates a mirrored media set containing a single media family and four mirrors and backs up the [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] database to them.
+The following example creates a mirrored media set containing a single media family and four mirrors and backs up the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database to them.
 
 ```sql
 BACKUP DATABASE AdventureWorks2012
@@ -956,7 +956,7 @@ WITH
 
 ### <a name="create_multifamily_mirrored_media_set"></a> F. Creating and backing up to a multifamily mirrored media set
 
-The following example creates a mirrored media set in which each mirror consists of two media families. The example then backs up the [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] database to both mirrors.
+The following example creates a mirrored media set in which each mirror consists of two media families. The example then backs up the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database to both mirrors.
 
 ```sql
 BACKUP DATABASE AdventureWorks2012
@@ -985,7 +985,7 @@ WITH
 
 ### <a name="creating_compressed_backup_new_media_set"></a> H. Creating a compressed backup in a new media set
 
-The following example formats the media, creating a new media set, and performs a compressed full backup of the [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] database.
+The following example formats the media, creating a new media set, and performs a compressed full backup of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.
 
 ```sql
 BACKUP DATABASE AdventureWorks2012 TO DISK='Z:\SQLServerBackups\AdvWorksData.bak'

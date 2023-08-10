@@ -15,7 +15,7 @@ ms.topic: conceptual
 
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-The data virtualization feature of Azure SQL Managed Instance allows you to execute Transact-SQL (T-SQL) queries on files storing data in common data formats in Azure Data Lake Storage Gen2 or Azure Blob Storage, and combine it with locally stored relational data using joins. This way you can transparently access external data while keeping it in its original format and location - also known as data virtualization.
+The data virtualization feature of Azure SQL Managed Instance allows you to execute Transact-SQL (T-SQL) queries on files storing data in common data formats in Azure Data Lake Storage Gen2 or Azure Blob Storage, and combine it with locally stored relational data using joins. This way you can transparently access external data (in read-only mode) while keeping it in its original format and location - also known as data virtualization.
 
 ## Overview
 

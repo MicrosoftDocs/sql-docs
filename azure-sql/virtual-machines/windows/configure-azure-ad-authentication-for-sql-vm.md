@@ -110,7 +110,7 @@ You can use [Azure PowerShell](/powershell/azure/install-azure-powershell) to gr
 
    ```powershell
    $AAD_AppRole = $AAD_SP.AppRoles | Where-Object {$_.Value -eq "User.Read.All"}
-   New-AzureADServiceAppRoleAssignment -ObjectId $MSI.ObjectId  -PrincipalId $MSI.ObjectId  
+   New-AzureADServiceAppRoleAssignment -ObjectId $MI.ObjectId  -PrincipalId $MI.ObjectId  
    -ResourceId $AAD_SP.ObjectId  -Id $AAD_AppRole.Id
    ```
 
@@ -118,7 +118,7 @@ You can use [Azure PowerShell](/powershell/azure/install-azure-powershell) to gr
 
     ```powershell
     $AAD_AppRole = $AAD_SP.AppRoles | Where-Object {$_.Value -eq "GroupMember.Read.All"}  
-    New-AzureADServiceAppRoleAssignment -ObjectId $MSI.ObjectId  -PrincipalId $MSI.ObjectId  
+    New-AzureADServiceAppRoleAssignment -ObjectId $MI.ObjectId  -PrincipalId $MI.ObjectId  
     -ResourceId $AAD_SP.ObjectId  -Id $AAD_AppRole.Id 
     ```
 
@@ -126,15 +126,10 @@ You can use [Azure PowerShell](/powershell/azure/install-azure-powershell) to gr
 
    ```powershell
     $AAD_AppRole = $AAD_SP.AppRoles | Where-Object {$_.Value -eq "Application.Read.All"}  
-   New-AzureADServiceAppRoleAssignment -ObjectId $MSI.ObjectId  -PrincipalId $MSI.ObjectId  
+   New-AzureADServiceAppRoleAssignment -ObjectId $MI.ObjectId  -PrincipalId $MI.ObjectId  
    -ResourceId $AAD_SP.ObjectId  -Id $AAD_AppRole.Id 
    ```
 
-You can validate permissions were assigned to the managed identity by doing the following:
-
-1. Go to **Azure Active Directory** in the [Azure portal](https://portal.azure.com). 
-1. Choose **Enterprise applications** and then select **All applications** under **Manage**. 
-1. Select the managed identity and then choose **Permissions** under **Security**. You should see the following permissions: `User.Read.All`, `GroupMember.Read.All`, `Application.Read.All`. 
 
 ## Enable outbound communication
 

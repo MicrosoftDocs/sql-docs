@@ -1330,7 +1330,6 @@ For SQL Server 2012 or 2014, you can use either **SSDT-BI for Visual Studio 2012
 ## Next steps
 
 - [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
-- [SQL Server Data Tools (SSDT) Release Notes](release-notes-ssdt.md)
 - [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 - [Download Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)
 - [SQL Tools and Utilities](../tools/overview-sql-tools.md)

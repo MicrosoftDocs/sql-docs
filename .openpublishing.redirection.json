@@ -59834,6 +59834,21 @@
       "source_path": "docs/relational-databases/system-stored-procedures/active-geo-replication-sp-wait-for-database-copy-sync.md",
       "redirect_url": "/sql/relational-databases/system-stored-procedures/sp-wait-for-database-copy-sync-transact-sql",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/system-stored-procedures/release-notes-integration-services-2022.md",
+      "redirect_url": "/sql/ssdt/ssis-vs2022-troubleshooting-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/system-stored-procedures/release-notes-ssdt-2019.md",
+      "redirect_url": "/sql/ssdt/ssis-vs2019-troubleshooting-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/system-stored-procedures/release-notes-ssdt.md",
+      "redirect_url": "/sql/ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi",
+      "redirect_document_id": false
     }
   ]
 }

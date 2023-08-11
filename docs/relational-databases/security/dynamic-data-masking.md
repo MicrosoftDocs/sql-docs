@@ -31,7 +31,7 @@ Dynamic data masking is available in [!INCLUDE[sssql16-md](../../includes/sssql1
 
 ## Define a dynamic data mask
 
-A masking rule may be defined on a column in a table, in order to obfuscate the data in that column. Four types of masks are available.
+A masking rule may be defined on a column in a table, in order to obfuscate the data in that column. Five types of masks are available.
 
 | Function | Description | Examples |
 | --- | --- | --- |

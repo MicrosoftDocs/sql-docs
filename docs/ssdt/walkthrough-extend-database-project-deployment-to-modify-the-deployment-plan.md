@@ -654,7 +654,7 @@ You must always update the SQL project file to specify the ID of the contributor
   
 1.  You can manually modify the .sqlproj file to add the required arguments. You might choose to do this if your contributor does not have any contributor arguments required for configuration, or if you do not intend to reuse the build contributor across a large number of projects. If you choose this option, add the following statements to the .sqlproj file after the first Import node in the file:  
   
-    ```  
+    ```xml
     <PropertyGroup>  
       <DeploymentContributors>  
         $(DeploymentContributors); MyOtherDeploymentContributor.RestartableScriptContributor  
@@ -670,7 +670,7 @@ You must always update the SQL project file to specify the ID of the contributor
   
     3.  Create a new file "MyContributors.targets" inside this directory, add the following text to it and save the file:  
   
-        ```  
+        ```xml
         <?xml version="1.0" encoding="utf-8"?>  
   
         <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -683,7 +683,7 @@ You must always update the SQL project file to specify the ID of the contributor
   
     4.  Inside the .sqlproj file for any project you want to run contributors, import the targets file by adding the following statement to the .sqlproj file after the \<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" \/> node in the file :  
   
-        ```  
+        ```xml
         <Import Project="$(MSBuildExtensionsPath)\MyContributors\MyContributors.targets " />  
   
         ```  
@@ -709,7 +709,7 @@ After you have followed one of these approaches, you can use MSBuild to pass in 
   
     5.  Examine the resulting deployment script. Just before the section labeled "Pre-Deployment Script Template", you should see something that resembles the following Transact-SQL syntax:  
   
-        ```  
+        ```sql
         :setvar CompletedBatches __completedBatches_CompareProjectDB_cd1e348a-8f92-44e0-9a96-d25d65900fca  
         :setvar TotalBatchCount 17  
         GO  
@@ -729,7 +729,7 @@ After you have followed one of these approaches, you can use MSBuild to pass in 
   
         Later in the deployment script, around each batch, you see an IF statement that surrounds the original statement. For example, the following T-SQL script might appear for a CREATE SCHEMA statement:  
   
-        ```  
+        ```sql
         IF NOT EXISTS (SELECT 1  
                        FROM   [tempdb].[dbo].[$(CompletedBatches)]  
                        WHERE  [BatchId] = 0)  
@@ -746,7 +746,7 @@ After you have followed one of these approaches, you can use MSBuild to pass in 
   
         Notice that CREATE SCHEMA is one of the statements that must be enclosed within an EXECUTE sp_executesql statement within the IF statement. Statements such as CREATE TABLE do not require the EXECUTE sp_executesql statement and resembles the following example:  
   
-        ```  
+        ```sql
         IF NOT EXISTS (SELECT 1  
                        FROM   [tempdb].[dbo].[$(CompletedBatches)]  
                        WHERE  [BatchId] = 1)  

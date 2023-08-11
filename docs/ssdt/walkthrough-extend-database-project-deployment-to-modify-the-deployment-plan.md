@@ -666,7 +666,7 @@ You must always update the SQL project file to specify the ID of the contributor
   
     1.  Navigate to %Program Files%\MSBuild.  
   
-    2.  Create a new folder "MyContributors" where your targets files will be stored.  
+    2.  Create a new folder "MyContributors" where your targets files are stored.  
   
     3.  Create a new file "MyContributors.targets" inside this directory, add the following text to it and save the file:  
   
@@ -697,7 +697,7 @@ After you have followed one of these approaches, you can use MSBuild to pass in 
   
 #### To deploy your SQL project and generate a deployment report  
   
--   Your project can be published or deployed as normal inside Visual Studio. Simply open a solution containing your SQL project and choose the Publish... option from the right-click context menu for the project, or use F5 for a debug deployment to LocalDB. In this example we will use the "Publish..." dialog to generate a deployment script.  
+-   Your project can be published or deployed as normal inside Visual Studio. Simply open a solution containing your SQL project and choose the Publish... option from the right-click context menu for the project, or use F5 for a debug deployment to LocalDB. In this example we use the "Publish..." dialog to generate a deployment script.  
   
     1.  Open Visual Studio and open the solution containing your SQL Project.  
   
@@ -705,7 +705,7 @@ After you have followed one of these approaches, you can use MSBuild to pass in 
   
     3.  Set the server name and database name to publish to.  
   
-    4.  Choose **Generate Script** from the options at the bottom of the dialog. This will create a script that can be used for deployment. We will examine this to verify that our IF statements have been added in order to make the script restartable.  
+    4.  Choose **Generate Script** from the options at the bottom of the dialog. This action creates a script that can be used for deployment. We can examine this script to verify that our IF statements have been added in order to make the script restartable.  
   
     5.  Examine the resulting deployment script. Just before the section labeled "Pre-Deployment Script Template", you should see something that resembles the following Transact-SQL syntax:  
   
@@ -727,7 +727,7 @@ After you have followed one of these approaches, you can use MSBuild to pass in 
   
         ```  
   
-        Later in the deployment script, around each batch, you see an IF statement that surrounds the original statement. For example, the following might appear for a CREATE SCHEMA statement:  
+        Later in the deployment script, around each batch, you see an IF statement that surrounds the original statement. For example, the following T-SQL script might appear for a CREATE SCHEMA statement:  
   
         ```  
         IF NOT EXISTS (SELECT 1  
@@ -744,7 +744,7 @@ After you have followed one of these approaches, you can use MSBuild to pass in 
   
         ```  
   
-        Notice that CREATE SCHEMA is one of the statements that must be enclosed within an EXECUTE sp_executesql statement within the IF statement. Statements such as CREATE TABLE do not require the EXECUTE sp_executesql statement and will resemble the following example:  
+        Notice that CREATE SCHEMA is one of the statements that must be enclosed within an EXECUTE sp_executesql statement within the IF statement. Statements such as CREATE TABLE do not require the EXECUTE sp_executesql statement and resembles the following example:  
   
         ```  
         IF NOT EXISTS (SELECT 1  
@@ -769,7 +769,7 @@ After you have followed one of these approaches, you can use MSBuild to pass in 
         > If you deploy a database project that is identical to the target database, the resulting report will not be very meaningful. For more meaningful results, either deploy changes to a database or deploy a new database.  
   
 ## Command-line deployment using generated dacpac file  
-Once a SQL project has been built, a dacpac file is created that can be used to deploy the schema from the command line, and which can enable deployment from a different machine such as a build machine. SqlPackage is a command-line utility that enables deployment of dacpacs with a full range of options that enable users to deploy a dacpac or generate a deployment script, among other actions. For more information, see [SqlPackage.exe](../tools/sqlpackage/sqlpackage.md).  
+The ouput artifact from a SQL project build is a dacpac file. A dacpac file can be used to deploy the schema from the command line, and which can enable deployment from a different machine such as a build machine. SqlPackage is a command-line utility with a full range of options that enables users to deploy a dacpac or generate a deployment script, among other actions. For more information, see [SqlPackage.exe](../tools/sqlpackage/sqlpackage.md).  
   
 > [!NOTE]  
 > To successfully deploy dacpacs built from projects with the DeploymentContributors property defined, the DLL(s) containing your deployment contributor(s) must be installed on the machine being used. This is because they have been marked as required for the deployment to complete successfully.  
@@ -781,7 +781,7 @@ You can experiment with other types of modifications to deployment plans before 
   
 -   Adding an extended property to all database objects that associate a version number with them.  
   
--   Adding or removing additional diagnostic print statements or comments from deployment scripts.  
+-   Adding or removing extra diagnostic print statements or comments from deployment scripts.  
   
 ## See Also  
 [Customize Database Build and Deployment by Using Build and Deployment Contributors](../ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md)  

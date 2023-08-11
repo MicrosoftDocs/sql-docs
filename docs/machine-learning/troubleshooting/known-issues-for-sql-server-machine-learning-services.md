@@ -766,7 +766,7 @@ sudo cp /opt/mssql/lib/libc++abi.so.1 /opt/mssql-extensibility/lib/
 
 **Applies to:** [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] on Linux
 
-### Generic Error when running `sp_execute_external_script` on Ubuntu 20.04 with SQL Server 2022 CU6 on Linux
+### Generic error when running `sp_execute_external_script` on Ubuntu 20.04 with SQL Server 2022 CU6 on Linux
 
 Installing SQL Server 2022 CU6 for Linux on Ubuntu 20.04 can result in the following error when running `sp_execute_external_script`
 for R and Python scripts:
@@ -782,7 +782,7 @@ STDERR message(s) from external script:
 
 #### Workaround
 
-Run the following command to install the package dependency `libssl-dev` which enables SQL Server to resolve the system provided shared libraries `libssl` and `libcrypto`.
+Run the following command to install the package dependency `libssl-dev`, which enables SQL Server to resolve the system provided shared libraries `libssl` and `libcrypto`.
 
 ```bash
 sudo apt-get update

@@ -3,7 +3,8 @@ title: Extend Database Project Deployment to Modify the Deployment Plan
 description: Create a deployment contributor of type DeploymentPlanModifier that programs the deployment script batches to rerun if errors occur during execution.
 author: markingmyname
 ms.author: maghan
-ms.date: 02/09/2017
+ms.reviewer: drskwier
+ms.date: 07/31/2023
 ms.service: sql
 ms.subservice: ssdt
 ms.topic: conceptual
@@ -24,7 +25,7 @@ In this walkthrough, you will accomplish the following major tasks:
 ## Prerequisites  
 You need the following components to complete this walkthrough:  
   
--   You must have installed a version of Visual Studio that includes SQL Server Data Tools and supports C# or VB development.  
+-   You must have installed a version of Visual Studio that includes SQL Server Data Tools and supports C# development.
   
 -   You must have a SQL project that contains SQL objects.  
   
@@ -48,7 +49,7 @@ To create a deployment contributor, you must perform the following tasks:
   
 #### To create a class library project  
   
-1.  Create a Visual C# or Visual Basic class library project named MyOtherDeploymentContributor.  
+1.  Create a C# class library (.NET Framework) project named MyOtherDeploymentContributor.  
   
 2.  Rename the file "Class1.cs" to "SqlRestartableScriptContributor.cs."  
   
@@ -56,10 +57,8 @@ To create a deployment contributor, you must perform the following tasks:
   
 4.  Select **System.ComponentModel.Composition** on the Frameworks tab.  
   
-5.  Click **Browse** and navigate to the **C:\Program Files (x86)\Microsoft SQL Server\110\SDK\Assemblies** directory, select **Microsoft.SqlServer.TransactSql.ScriptDom.dll**, and the click **OK**.  
-  
-6.  Add required SQL references: right-click the project node and then click **Add Reference**. Click **Browse** and navigate to the **C:\Program Files (x86)\Microsoft SQL Server\110\DAC\Bin** folder. Choose the **Microsoft.SqlServer.Dac.dll**, **Microsoft.SqlServer.Dac.Extensions.dll**, and **Microsoft.Data.Tools.Schema.Sql.dll** entries and click **Add**, then click **OK**.  
-  
+5. From the **Project** menu select the **Manage NuGet packages** option.  Install the latest stable releases for **Microsoft.SqlServer.DacFx**.
+
 Next, start to add code to the class.  
   
 #### To define the SqlRestartableScriptContributor class  
@@ -100,7 +99,7 @@ Next, start to add code to the class.
   
 3.  Add the following member declarations:  
   
-    ```vb  
+    ```csharp
          private const string BatchIdColumnName = "BatchId";  
             private const string DescriptionColumnName = "Description";  
   
@@ -145,7 +144,7 @@ Next, start to add code to the class.
   
 2.  Now add the beginnings of a body to the OnExecute method:  
   
-    ```vb  
+    ```csharp
     // Obtain the first step in the Plan from the provided context  
     DeploymentStep nextStep = context.PlanHandle.Head;  
     int batchId = 0;  
@@ -636,9 +635,9 @@ To install a deployment contributor, you must copy the assembly and associated .
   
 #### To install the MyOtherDeploymentContributor assembly  
   
-1.  Next, you will copy the assembly information to the Extensions directory. When Visual Studio starts, it will identify any extensions in the %Program Files%\Microsoft SQL Server\110\DAC\Bin\Extensions directory and subdirectories, and make them available for use.  
+1.  Next, you will copy the assembly information to the Extensions directory. When Visual Studio 2022 starts, it will identify any extensions in the %Program Files%\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\Extensions\Microsoft\SQLDB\DAC directory and subdirectories, and make them available for use.
   
-2.  Copy the **MyOtherDeploymentContributor.dll** assembly file from the output directory to the %Program Files%\Microsoft SQL Server\110\DAC\Bin\Extensions directory. By default, the path of your compiled .dll file is YourSolutionPath\YourProjectPath\bin\Debug or YourSolutionPath\YourProjectPath\bin\Release.  
+2.  Copy the **MyOtherDeploymentContributor.dll** assembly file from the output directory to the %Program Files%\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\Extensions\Microsoft\SQLDB\DAC directory. By default, the path of your compiled .dll file is YourSolutionPath\YourProjectPath\bin\Debug or YourSolutionPath\YourProjectPath\bin\Release.  
   
 ## <a name="TestDeploymentContributor"></a>Run or Test your Deployment Contributor  
 To run or test your deployment contributor, you must perform the following tasks:  

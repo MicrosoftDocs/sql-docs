@@ -1304,23 +1304,24 @@ items:
         href: relational-databases/indexes/configure-parallel-index-operations.md
       - name: Index Properties F1 Help
         href: relational-databases/indexes/index-properties-f1-help.md
-    - name: Columnstore indexes
-      href: relational-databases/indexes/columnstore-indexes-overview.md
-      items:
-      - name: What's new
-        href: relational-databases/indexes/columnstore-indexes-what-s-new.md
-      - name: Design Guidance
-        href: relational-databases/indexes/columnstore-indexes-design-guidance.md
-      - name: Data loading Guidance
-        href: relational-databases/indexes/columnstore-indexes-data-loading-guidance.md
-      - name: Query performance
-        href: relational-databases/indexes/columnstore-indexes-query-performance.md
-      - name: Real-time operational analytics
-        href: relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md
-      - name: Data warehouse
-        href: relational-databases/indexes/columnstore-indexes-data-warehouse.md
-      - name: Defragment
-        href: relational-databases/indexes/reorganize-and-rebuild-indexes.md
+      - name: Columnstore indexes
+        items:
+        - name: Overview
+          href: relational-databases/indexes/columnstore-indexes-overview.md
+        - name: What's new
+          href: relational-databases/indexes/columnstore-indexes-what-s-new.md
+        - name: Design Guidance
+          href: relational-databases/indexes/columnstore-indexes-design-guidance.md
+        - name: Data loading Guidance
+          href: relational-databases/indexes/columnstore-indexes-data-loading-guidance.md
+        - name: Query performance
+          href: relational-databases/indexes/columnstore-indexes-query-performance.md
+        - name: Real-time operational analytics
+          href: relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md
+        - name: Data warehouse
+          href: relational-databases/indexes/columnstore-indexes-data-warehouse.md
+        - name: Defragment
+          href: relational-databases/indexes/reorganize-and-rebuild-indexes.md
   - name: SQL Graph
     href: relational-databases/graphs/sql-graph-overview.md
     items:

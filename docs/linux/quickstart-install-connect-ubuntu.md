@@ -43,7 +43,7 @@ For more information on supported platforms, see [Release notes for [!INCLUDE [s
 > [!TIP]  
 > This tutorial requires user input and an internet connection. If you are interested in the [unattended](sql-server-linux-setup.md#unattended) or [offline](sql-server-linux-setup.md#offline) installation procedures, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
 
-If you choose to have a pre-installed SQL Server VM on Ubuntu ready to run your production-based workload, then please follow the [best practices](/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices-checklist) for creating the SQL Server VM.
+If you choose to have a preinstalled SQL Server VM on Ubuntu ready to run your production-based workload, then follow the [best practices](/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices-checklist) for creating the SQL Server VM.
 
 <!--SQL Server 2019 on Linux-->
 ::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15"
@@ -248,16 +248,16 @@ To configure [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Ubunt
 
 ### [Ubuntu 22.04 (preview)](#tab/ubuntu2204)
 
-1. Import the public repository GPG keys:
+1. Download the public key, convert from ASCII to GPG format, and write it to the required location:
 
    ```bash
-   curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
+   curl -fsSL https://packages.microsoft.com/keys/microsoft.asc | sudo gpg --dearmor -o /usr/share/keyrings/microsoft-prod.gpg
    ```
 
-1. Register the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Ubuntu repository:
+1. Manually download and register the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Ubuntu repository:
 
    ```bash
-   sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/22.04/mssql-server-preview.list)"
+   curl -fsSL https://packages.microsoft.com/config/ubuntu/22.04/mssql-server-preview.list | sudo tee /etc/apt/sources.list.d/mssql-server-preview.list
    ```
 
    > [!TIP]  
@@ -276,7 +276,7 @@ To configure [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Ubunt
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
-   For this preview, only Evaluation edition is available, which is limited to 180 days starting Thursday, July 27th, 2023.
+   For this preview, only Evaluation edition is available, which is limited to 180 days starting Thursday, July 27, 2023.
 
    ```output
    This is a preview version (free, no production use rights, 180-day limit starting Thu Jul 27 02:57:54 GMT 2023), continue? [Yes/No]:

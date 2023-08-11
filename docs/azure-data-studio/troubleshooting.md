@@ -1,17 +1,17 @@
 ---
 title: Azure Data Studio Troubleshooting
 description: "Learn how to get logs and troubleshoot Azure Data Studio, which is helpful in reporting bug reports."
-author: dzsquared
-ms.author: drskwier
-ms.reviewer: hanqin, maghan
-ms.date: 06/06/2023
+author: erinstellato-ms
+ms.author: erinstellato
+ms.reviewer: maghan, randolphwest
+ms.date: 08/11/2023
 ms.service: azure-data-studio
 ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
 
 # Azure Data Studio Troubleshooting
-Azure Data Studio tracks issues and feature requests using on a [GitHub repository issue tracker](https://github.com/Microsoft/azuredatastudio/issues) for the `azuredatastudio` repository. 
+Azure Data Studio tracks issues and feature requests using on a [GitHub repository issue tracker](https://github.com/Microsoft/azuredatastudio/issues) for the `azuredatastudio` repository.
 
 ## If you've experienced any issue
 
@@ -70,6 +70,11 @@ From Azure Data Studio, run the `Developer: Open Logs Folder` command to open th
 1. `exthost#/output_logging_#######` - these folders contain the messages displayed in the `Output` panel in Azure Data Studio. Each file is named `#-<Channel Name>` so for example the `Notebooks` output channel may output to a file named `3-Notebooks.log`.
 
 If you are asked to provide logs, zip up the entire folder to ensure that the correct logs are included.
+
+## Recovering editor files after a crash
+
+If Azure Data Studio crashes unexpectedly and editor files do not appear after re-opening, navigate to ~/Library/Application Support/azuredatastudio/Backups/ which may contain one or folders containing the files.
+
 
 ## Next Steps
 - [Report an issue](https://github.com/Microsoft/azuredatastudio/issues)

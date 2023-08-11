@@ -1,9 +1,9 @@
 ---
-title: "Clustered and nonclustered indexes described"
-description: Clustered and nonclustered indexes described
+title: "Clustered and nonclustered indexes"
+description: Describes clustered and nonclustered indexes.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: 10/25/2021
+ms.date: 08/11/2023
 ms.service: sql
 ms.subservice: table-view-index
 ms.topic: conceptual
@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "index concepts [SQL Server]"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Clustered and nonclustered indexes described
+# Clustered and nonclustered indexes
 
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
@@ -42,11 +42,11 @@ See [Indexes](../../relational-databases/indexes/indexes.md) for additional type
 
 ## Indexes and constraints
 
-Indexes are automatically created when PRIMARY KEY and UNIQUE constraints are defined on table columns. For example, when you create a table with a UNIQUE constraint, [!INCLUDE[ssDE](../../includes/ssde-md.md)] automatically creates a nonclustered index. If you configure a PRIMARY KEY, [!INCLUDE[ssDE](../../includes/ssde-md.md)] automatically creates a clustered index, unless a clustered index already exists. When you try to enforce a PRIMARY KEY constraint on an existing table and a clustered index already exists on that table, SQL Server enforces the primary key using a nonclustered index.
+SQL Server auatomatically creates indexes when PRIMARY KEY and UNIQUE constraints are defined on table columns. For example, when you create a table with a UNIQUE constraint, [!INCLUDE[ssDE](../../includes/ssde-md.md)] automatically creates a nonclustered index. If you configure a PRIMARY KEY, [!INCLUDE[ssDE](../../includes/ssde-md.md)] automatically creates a clustered index, unless a clustered index already exists. When you try to enforce a PRIMARY KEY constraint on an existing table and a clustered index already exists on that table, SQL Server enforces the primary key using a nonclustered index.
 
 For more information, see [Create primary keys](../../relational-databases/tables/create-primary-keys.md) and [Create unique constraints](../../relational-databases/tables/create-unique-constraints.md).
 
-## How indexes are used by the Query Optimizer
+## How indexes are used by the query optimizer
 
 Well-designed indexes can reduce disk I/O operations and consume fewer system resources therefore improving query performance. Indexes can be helpful for a variety of queries that contain SELECT, UPDATE, DELETE, or MERGE statements. Consider the query `SELECT Title, HireDate FROM HumanResources.Employee WHERE EmployeeID = 250` in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. When this query is executed, the query optimizer evaluates each available method for retrieving the data and selects the most efficient method. The method may be a table scan, or may be scanning one or more indexes if they exist.
 
@@ -57,10 +57,10 @@ When the query optimizer uses an index, it searches the index key columns, finds
  The query optimizer typically selects the most efficient method when executing queries. However, if no indexes are available, the query optimizer must use a table scan. Your task is to design and create indexes that are best suited to your environment so that the query optimizer has a selection of efficient indexes from which to select. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md) to help with the analysis of your database environment and in the selection of appropriate indexes.
 
 > [!IMPORTANT]
-> For more information about index design guidelines and internals, refer to the [SQL Server Index Design Guide](../../relational-databases/sql-server-index-design-guide.md).
+> For more information about index design guidelines and internals, refer to the [SQL Server and Azure SQL index architecture and design guide](../../relational-databases/sql-server-index-design-guide.md).
 
 ## Next steps
 
-- [SQL Server Index Design Guide](../../relational-databases/sql-server-index-design-guide.md)
-- [Create Clustered Indexes](../../relational-databases/indexes/create-clustered-indexes.md)
-- [Create Nonclustered Indexes](../../relational-databases/indexes/create-nonclustered-indexes.md)
+- [SQL Server and Azure SQL index architecture and design guide](../../relational-databases/sql-server-index-design-guide.md)
+- [Create clustered indexes](../../relational-databases/indexes/create-clustered-indexes.md)
+- [Create nonclustered indexes](../../relational-databases/indexes/create-nonclustered-indexes.md)

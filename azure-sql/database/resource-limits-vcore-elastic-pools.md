@@ -4,7 +4,7 @@ description: This page describes some common vCore resource limits for elastic p
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 07/25/2023
+ms.date: 08/11/2023
 ms.service: sql-database
 ms.subservice: elastic-pools
 ms.topic: reference
@@ -40,7 +40,7 @@ You can set the service tier, compute size (service objective), and storage amou
 
 If all vCores of an elastic pool are busy, then each database in the pool receives an equal amount of compute resources to process queries. Azure SQL Database provides resource sharing fairness between databases by ensuring equal slices of compute time. Elastic pool resource sharing fairness is in addition to any amount of resource otherwise guaranteed to each database when the vCore min per database is set to a non-zero value.
 
-For the same number of vCores, resources provided to an elastic pool may exceed the resources provided to a single database outside of an elastic pool. This means it is possible for the CPU, Data IO, and Log write utilization of an elastic pool to be less than the summation of CPU, Data IO, and Log write utilization across databases within the pool, depending on workload patterns. For example, in an extreme case with only one database in an elastic pool where database Data IO utilization is 100%, it is possible for pool Data IO utilization to be 50% for certain workload patterns. This can happen even if max vCores per database remains at the maximum supported value for the given pool size.
+For the same number of vCores, resources provided to an elastic pool may exceed the resources provided to a single database outside of an elastic pool. This means it's possible for the CPU, Data IO, and Log write utilization of an elastic pool to be less than the summation of CPU, Data IO, and Log write utilization across databases within the pool, depending on workload patterns. For example, in an extreme case with only one database in an elastic pool where database Data IO utilization is 100%, it's possible for pool Data IO utilization to be 50% for certain workload patterns. This can happen even if max vCores per database remains at the maximum supported value for the given pool size.
 
 > [!NOTE]
 > The Gen5 hardware in the vCore purchasing model has been renamed to **standard-series (Gen5)**.
@@ -58,12 +58,15 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 ## General Purpose - provisioned compute - standard-series (Gen5)
 
-### General Purpose service tier: standard-series (Gen5) (part 1 of 3)
+### General Purpose - standard-series (Gen5) (part 1 of 3)
 
-| Compute size (service objective) | GP_Gen5_2 | GP_Gen5_4 | GP_Gen5_6 | GP_Gen5_8 | GP_Gen5_10 |
+Compute sizes (service level objectives, or SLOs) for General Purpose standard-series elastic pools follow the naming convention `GP_Gen5_` followed by the number of max vCores.
+
+The following table covers these SLOs: `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `GP_Gen5_8` and `GP_Gen5_10`:
+
+| vCores | 2 | 4 | 6 | 8 | 10 |
 |:-|-:|-:|-:|-:|-:|
 | Compute generation | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 |
-| vCores | 2 | 4 | 6 | 8 | 10 |
 | Memory (GB) | 10.4 | 20.8 | 31.1 | 41.5 | 51.9 |
 | Max number DBs per pool <sup>1</sup> | 100 | 200 | 500 | 500 | 500 |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes |
@@ -96,12 +99,15 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 <sup>5</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
-### General Purpose service tier: standard-series (Gen5) (part 2 of 3)
+### General Purpose - standard-series (Gen5) (part 2 of 3)
 
-| Compute size (service objective) | GP_Gen5_12 | GP_Gen5_14 | GP_Gen5_16 | GP_Gen5_18 | GP_Gen5_20 |
-|:-|-:|-:|-:|-:|-:|
-| Compute generation | Gen5 | Gen5 | Gen5 | en5 | Gen5 |
+Compute sizes (service level objectives, or SLOs) for General Purpose standard-series elastic pools follow the naming convention `GP_Gen5_` followed by the number of max vCores.
+
+The following table covers these SLOs: `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`, `GP_Gen5_18` and `GP_Gen5_20`:
+
 | vCores | 12 | 14 | 16 | 18 | 20 |
+|:-|-:|-:|-:|-:|-:|
+| Compute generation | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 |
 | Memory (GB) | 62.3 | 72.7 | 83 | 93.4 | 103.8 |
 | Max number DBs per pool <sup>1</sup> | 500 | 500 | 500 | 500 | 500 |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes |
@@ -134,12 +140,15 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 <sup>5</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
-### General Purpose service tier: standard-series (Gen5) (part 3 of 3)
+### General Purpose - standard-series (Gen5) (part 3 of 3)
 
-| Compute size (service objective) | GP_Gen5_24 | GP_Gen5_32 | GP_Gen5_40 | GP_Gen5_80 | GP_Gen5_128 |
+Compute sizes (service level objectives, or SLOs) for General Purpose standard-series elastic pools follow the naming convention `GP_Gen5_` followed by the number of max vCores.
+
+The following table covers these SLOs: `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`, `GP_Gen5_80` and `GP_Gen5_128`:
+
+| vCores | 24 | 32 | 40 | 80 | 128 |
 |:-|-:|-:|-:|-:|-:|
 | Compute generation | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 |
-| vCores | 24 | 32 | 40 | 80 | 128 |
 | Memory (GB) | 124.6 | 166.1 | 207.6 | 415.2 | 625 |
 | Max number DBs per pool <sup>1</sup> | 500 | 500 | 500 | 500 | 500 |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes |
@@ -174,12 +183,15 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 ## General Purpose - provisioned compute - Fsv2-series
 
-### Fsv2-series hardware (part 1 of 2)
+### General Purpose - Fsv2-series (part 1 of 2)
 
-| Compute size (service objective) | GP_Fsv2_8 | GP_Fsv2_10 | GP_Fsv2_12 | GP_Fsv2_14 | GP_Fsv2_16 |
+Compute sizes (service level objectives, or SLOs) for General Purpose Fsv2-series elastic pools follow the naming convention `GP_Fsv2_` followed by the number of vCores. 
+
+The following table covers these SLOs: `GP_Fsv2_8`, `GP_Fsv2_10`, `GP_Fsv2_12`, `GP_Fsv2_14` and `GP_Fsv2_16`:
+
+| vCores | 8 | 10 | 12 | 14 | 16 |
 |:-|-:|-:|-:|-:|-:|
 | Compute generation | Fsv2-series | Fsv2-series | Fsv2-series | Fsv2-series | Fsv2-series |
-| vCores | 8 | 10 | 12 | 14 | 16 |
 | Memory (GB) | 15.1 | 18.9 | 22.7 | 26.5 | 30.2 |
 | Max number DBs per pool <sup>1</sup> | 500 | 500 | 500 | 500 | 500 |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes |
@@ -212,12 +224,15 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 <sup>5</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
-### Fsv2-series hardware (part 2 of 2)
+### General Purpose - Fsv2-series (part 2 of 2)
 
-| Compute size (service objective) | GP_Fsv2_18 | GP_Fsv2_20 | GP_Fsv2_24 | GP_Fsv2_32 | GP_Fsv2_36 | GP_Fsv2_72 |
+Compute sizes (service level objectives, or SLOs) for General Purpose Fsv2-series elastic pools follow the naming convention `GP_Fsv2_` followed by the number of vCores. 
+
+The following table covers these SLOs: `GP_Fsv2_18`, `GP_Fsv2_20`, `GP_Fsv2_24`, `GP_Fsv2_32`, `GP_Fsv2_36` and `GP_Fsv2_72`:
+
+| vCores | 18 | 20 | 24 | 32 | 36 | 72 |
 |:-|-:|-:|-:|-:|-:|-:|
 | Compute generation | Fsv2-series | Fsv2-series | Fsv2-series | Fsv2-series | Fsv2-series | Fsv2-series |
-| vCores | 18 | 20 | 24 | 32 | 36 | 72 |
 | Memory (GB) | 34.0 | 37.8 | 45.4 | 60.5 | 68.0 | 136.0 |
 | Max number DBs per pool <sup>1</sup> | 500 | 500 | 500 | 500 | 500 |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes | Yes |
@@ -251,12 +266,15 @@ vCore resource limits are listed in the following articles, please be sure to up
 <sup>5</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 ## General Purpose - provisioned compute - DC-series
-### DC-series hardware (part 1 of 2)
+### General Purpose - DC-series (part 1 of 2)
 
-| Compute size (service objective) | GP_DC_2 | GP_DC_4 | GP_DC_6 | GP_DC_8 | GP_DC_10 | GP_DC_12 |
+Compute sizes (service level objectives, or SLOs) for General Purpose DC-series elastic pools follow the naming convention `GP_DC_` followed by the number of vCores. 
+
+The following table covers these SLOs: `GP_DC_2`, `GP_DC_4`, `GP_DC_6`, `GP_DC_8`, `GP_DC_10` and `GP_DC_12`:
+
+| vCores | 2 | 4 | 6 | 8 | 10<sup>6</sup> | 12<sup>6</sup> |
 |:-|-:|-:|-:|-:|-:|-:|
 | Compute generation | DC | DC | DC | DC | DC | DC |
-| vCores | 2 | 4 | 6 | 8 | 10<sup>6</sup> | 12<sup>6</sup> |
 | Memory (GB) | 9 | 18 | 27 | 36 | 45 | 54 |
 | Max number DBs per pool <sup>1</sup> | 100 | 400 | 400 | 400 | 500 | 500 |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes | Yes |
@@ -291,12 +309,15 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 <sup>6</sup> DC hardware series vCore offerings from 10 to 40 are currently in Preview.
 
-### DC-series hardware (part 2 of 2)
+### General Purpose - DC-series (part 2 of 2)
 
-| Compute size (service objective) | GP_DC_14 | GP_DC_16 | GP_DC_18 | GP_DC_20 | GP_DC_32 | GP_DC_40 |
+Compute sizes (service level objectives, or SLOs) for General Purpose DC-series elastic pools follow the naming convention `GP_DC_` followed by the number of vCores. 
+
+The following table covers these SLOs: `GP_DC_14`, `GP_DC_16`, `GP_DC_18`, `GP_DC_20`, `GP_DC_32` and `GP_DC_40`:
+
+| vCores | 14<sup>6</sup> | 16<sup>6</sup> | 18<sup>6</sup> | 20<sup>6</sup> | 32<sup>6</sup> | 40<sup>6</sup> |
 |:-|-:|-:|-:|-:|-:|-:|
 | Compute generation | DC | DC | DC | DC | DC | DC |
-| vCores | 14<sup>6</sup> | 16<sup>6</sup> | 18<sup>6</sup> | 20<sup>6</sup> | 32<sup>6</sup> | 40<sup>6</sup> |
 | Memory (GB) | 63 | 72 | 81 | 90 | 144 | 180 |
 | Max number DBs per pool <sup>1</sup> | 500 | 500 | 500 | 500 | 500 | 500 |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes | Yes |
@@ -333,12 +354,15 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 ## Business Critical - provisioned compute - standard-series (Gen5)
 
-### Business Critical service tier: standard-series (Gen5) (part 1 of 3)
+### Business Critical - standard-series (Gen5) (part 1 of 3)
 
-| Compute size (service objective) | BC_Gen5_4 | BC_Gen5_6 | BC_Gen5_8 | BC_Gen5_10 | BC_Gen5_12 |
+Compute sizes (service level objectives, or SLOs) in the Business Critical standard-series elastic pools follow the naming convention `BC_Gen5_` followed by the number of vCores. 
+
+The following table covers these SLOs: `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8`, `BC_Gen5_10` and `BC_Gen5_12`:
+
+| vCores | 4 | 6 | 8 | 10 | 12 |
 |:-|-:|-:|-:|-:|-:|
 | Compute generation | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 |
-| vCores | 4 | 6 | 8 | 10 | 12 |
 | Memory (GB) | 20.8 | 31.1 | 41.5 | 51.9 | 62.3 |
 | Max number DBs per pool <sup>1</sup> | 50 | 100 | 100 | 100 | 100 |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes |
@@ -372,12 +396,15 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 <sup>5</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
-### Business Critical service tier: standard-series (Gen5) (part 2 of 3)
+### Business Critical - standard-series (Gen5) (part 2 of 3)
 
-| Compute size (service objective) | BC_Gen5_14 | BC_Gen5_16 | BC_Gen5_18 | BC_Gen5_20 | BC_Gen5_24 |
+Compute sizes (service level objectives, or SLOs) in the Business Critical standard-series elastic pools follow the naming convention `BC_Gen5_` followed by the number of vCores. 
+
+The following table covers these SLOs: `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18`, `BC_Gen5_20` and `BC_Gen5_24`:
+
+| vCores | 14 | 16 | 18 | 20 | 24 |
 |:-|-:|-:|-:|-:|-:|
 | Compute generation | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 |
-| vCores | 14 | 16 | 18 | 20 | 24 |
 | Memory (GB) | 72.7 | 83 | 93.4 | 103.8 | 124.6 |
 | Max number DBs per pool <sup>1</sup> | 100 | 100 | 100 | 100 | 100 |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes |
@@ -409,12 +436,15 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using standard-series (Gen5) and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on standard-series (Gen5) there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
 
-### Business Critical service tier: standard-series (Gen5) (part 3 of 3)
+### Business Critical - standard-series (Gen5) (part 3 of 3)
 
-| Compute size (service objective) | BC_Gen5_32 | BC_Gen5_40 | BC_Gen5_80 | BC_Gen5_128 |
+Compute sizes (service level objectives, or SLOs) in the Business Critical standard-series elastic pools follow the naming convention `BC_Gen5_` followed by the number of vCores. 
+
+The following table covers these SLOs: `BC_Gen5_32`, `BC_Gen5_40`, `BC_Gen5_80` and `BC_Gen5_128`:
+
+| vCores | 32 | 40 | 80 | 128 |
 |:-|-:|-:|-:|-:|
 | Compute generation | Gen5 | Gen5 | Gen5 | Gen5 |
-| vCores | 32 | 40 | 80 | 128 |
 | Memory (GB) | 166.1 | 207.6 | 415.2 | 625 |
 | Max number DBs per pool <sup>1</sup> | 100 | 100 | 100 | 100 |
 | Columnstore support | Yes | Yes | Yes | Yes |
@@ -452,12 +482,15 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 For important information about M-series hardware availability, see [Azure offer types supported by M-series](service-tiers-sql-database-vcore.md#azure-offer-types-supported-by-m-series).
 
-### M-series hardware (part 1 of 2)
+### Business Critical - M-series (part 1 of 2)
 
-| Compute size (service objective) | BC_M_8 | BC_M_10 | BC_M_12 | BC_M_14 | BC_M_16 | BC_M_18 |
+Compute sizes (service level objectives, or SLOs) in the Business Critical M-series elastic pools follow the naming convention `BC_M_` followed by the number of vCores. 
+
+The following table covers these SLOs: `BC_M_8`, `BC_M_10`, `BC_M_12`, `BC_M_14`, `BC_M_16` and `BC_M_18`:
+
+| vCores | 8 | 10 | 12 | 14 | 16 | 18 |
 |:-|-:|-:|-:|-:|-:|-:|
 | Compute generation | M-series | M-series | M-series | M-series | M-series | M-series |
-| vCores | 8 | 10 | 12 | 14 | 16 | 18 |
 | Memory (GB) | 235.4 | 294.3 | 353.2 | 412.0 | 470.9 | 529.7 |
 | Max number DBs per pool <sup>1</sup> | 100 | 100 | 100 | 100 | 100 | 100 |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes | Yes |
@@ -491,12 +524,15 @@ For important information about M-series hardware availability, see [Azure offer
 
 <sup>5</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
-### M-series hardware (part 2 of 2)
+### Business Critical - M-series (part 2 of 2)
 
-| Compute size (service objective) | BC_M_20 | BC_M_24 | BC_M_32 | BC_M_64 | BC_M_128 |
+Compute sizes (service level objectives, or SLOs) in the Business Critical M-series elastic pools follow the naming convention `BC_M_` followed by the number of vCores. 
+
+The following table covers these SLOs: `BC_M_20`, `BC_M_24`, `BC_M_32`, `BC_M_64` and `BC_M_128`:
+
+| vCores | 20 | 24 | 32 | 64 | 128 |
 |:-|-:|-:|-:|-:|-:|
 | Compute generation | M-series | M-series | M-series | M-series | M-series |
-| vCores | 20 | 24 | 32 | 64 | 128 |
 | Memory (GB) | 588.6 | 706.3 | 941.8 | 1883.5 | 3767.0 |
 | Max number DBs per pool <sup>1</sup> | 100 | 100 | 100 | 100 | 100 |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes |
@@ -531,12 +567,15 @@ For important information about M-series hardware availability, see [Azure offer
 <sup>5</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 ## Business Critical - provisioned compute - DC-series
-### DC-series hardware (part 1 of 2)
+### Business Critical - DC-series (part 1 of 2)
 
-| Compute size (service objective) | BC_DC_2 | BC_DC_4 | BC_DC_6 | BC_DC_8 | BC_DC_10 | BC_DC_12 |
+Compute sizes (service level objectives, or SLOs) in the Business Critical DC-series elastic pools follow the naming convention `BC_DC_` followed by the number of vCores. 
+
+The following table covers these SLOs: `BC_DC_2`, `BC_DC_4`, `BC_DC_6`, `BC_DC_8`, `BC_DC_10` and `BC_DC_12`:
+
+| vCores | 2 | 4 | 6 | 8 | 10<sup>6</sup> | 12<sup>6</sup> |
 |:-|-:|-:|-:|-:|-:|-:|
 | Compute generation | DC | DC | DC | DC | DC | DC |
-| vCores | 2 | 4 | 6 | 8 | 10<sup>6</sup> | 12<sup>6</sup> |
 | Memory (GB) | 9 | 18 | 27 | 36 | 45 | 54 |
 | Max number DBs per pool <sup>1</sup> | 50 | 100 | 100 | 100 | 100 | 100 |
 | Columnstore support | Yes | Yes | Yes | Yes |Yes |Yes |
@@ -572,12 +611,15 @@ For important information about M-series hardware availability, see [Azure offer
 
 <sup>6</sup> DC hardware series vCore offerings from 10 to 40 are currently in Preview.
 
-### DC-series hardware (part 2 of 2)
+### Business Critical - DC-series (part 2 of 2)
 
-| Compute size (service objective) | BC_DC_14 | BC_DC_16 | BC_DC_18 | BC_DC_20 | BC_DC_32 | BC_DC_40 |
+Compute sizes (service level objectives, or SLOs) in the Business Critical DC-series elastic pools follow the naming convention `BC_DC_` followed by the number of vCores. 
+
+The following table covers these SLOs: `BC_DC_14`, `BC_DC_16`, `BC_DC_18`, `BC_DC_20`, `BC_DC_32` and `BC_DC_40`:
+
+| vCores | 14<sup>6</sup> | 16<sup>6</sup> | 18<sup>6</sup> | 20<sup>6</sup> | 32<sup>6</sup> | 40<sup>6</sup> |
 |:-|-:|-:|-:|-:|-:|-:|
 | Compute generation | DC | DC | DC | DC | DC | DC |
-| vCores | 14<sup>6</sup> | 16<sup>6</sup> | 18<sup>6</sup> | 20<sup>6</sup> | 32<sup>6</sup> | 40<sup>6</sup> |
 | Memory (GB) | 63 | 72 | 81 | 90 | 144 | 180 |
 | Max number DBs per pool <sup>1</sup> | 50 | 100 | 100 | 100 | 100 | 100 |
 | Columnstore support | Yes | Yes | Yes | Yes |Yes |Yes |
@@ -618,12 +660,15 @@ For important information about M-series hardware availability, see [Azure offer
 > [!NOTE]
 > Elastic pools for Hyperscale databases are currently in preview.
 
-### Gen5 compute generation (part 1 of 2)
+### Hyperscale - standard series (Gen5) (part 1 of 2)
 
-| Compute size (service objective) | HS_Gen5_4 | HS_Gen5_6 | HS_Gen5_8 | HS_Gen5_10 | HS_Gen5_12 | HS_Gen5_14 |
+Compute sizes (service level objectives, or SLOs) in the Hyperscale standard-series elastic pools follow the naming convention `HS_Gen5_` followed by the number of vCores. 
+
+The following table covers these SLOs: `HS_Gen5_4`, `HS_Gen5_6`, `HS_Gen5_8`, `HS_Gen5_10`, `HS_Gen5_12` and `HS_Gen5_14`:
+
+| vCores | 4 | 6 | 8 | 10 | 12 | 14 |
 |-:|-:|-:|-:|-:|-:|-:|
 | Compute generation | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 |
-| vCores | 4 | 6 | 8 | 10 | 12 | 14 |
 | Memory (GB) | 20.8 | 31.1 | 41.5 | 51.9 | 62.3 | 72.7 |
 | Max number DBs per pool <sup>1</sup> | 25 | 25 | 25 | 25 | 25 | 25 |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes | Yes |
@@ -656,12 +701,15 @@ For important information about M-series hardware availability, see [Azure offer
 
 <sup>6</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
-### Gen5 compute generation (part 2 of 2)
+### Hyperscale - standard series (Gen5) (part 2 of 2)
 
-| Compute size (service objective) | HS_Gen5_16 | HS_Gen5_18 | HS_Gen5_20 | HS_Gen5_24 | HS_Gen5_32 | HS_Gen5_40 | HS_Gen5_80 |
+Compute sizes (service level objectives, or SLOs) in the Hyperscale standard-series elastic pools follow the naming convention `HS_Gen5_` followed by the number of vCores. 
+
+The following table covers these SLOs: `HS_Gen5_16`, `HS_Gen5_18`, `HS_Gen5_20`, `HS_Gen5_24`, `HS_Gen5_32`, `HS_Gen5_40` and `HS_Gen5_80`:
+
+| vCores | 16 | 18 | 20 | 24 | 32 | 40 | 80 |
 |:-|-:|-:|-:|-:|-:|-:|-:|
 | Compute generation | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 |
-| vCores | 16 | 18 | 20 | 24 | 32 | 40 | 80 |
 | Max number DBs per pool <sup>1</sup> | 25 | 25 | 25 | 25 | 25 | 25 |
 | Memory (GB) | 83 | 93.4 | 103.8 | 124.6 | 166.1 | 207.6 | 415.2 |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
@@ -696,7 +744,7 @@ For important information about M-series hardware availability, see [Azure offer
 
 ## Database properties for pooled databases
 
-For each elastic pool, you can optionally specify per database minimum and maximum vCores to modify resource consumption patterns within the pool. Specified min and max values apply to all databases in the pool. Customizing min and max vCores for individual databases in the pool is not supported. 
+For each elastic pool, you can optionally specify per database minimum and maximum vCores to modify resource consumption patterns within the pool. Specified min and max values apply to all databases in the pool. Customizing min and max vCores for individual databases in the pool isn't supported. 
 
 You can also set maximum storage per database, for example to prevent a database from consuming all pool storage. This setting can be configured independently for each database.
 
@@ -704,9 +752,9 @@ The following table describes per database properties for pooled databases.
 
 | Property | Description |
 |:--- |:--- |
-| Max vCores per database |The maximum number of vCores that any database in the pool may use, if available based on utilization by other databases in the pool. Max vCores per database is not a resource guarantee for a database. If the workload in each database does not need all available pool resources to perform adequately, consider setting max vCores per database to prevent a single database from monopolizing pool resources. Some degree of over-committing is expected since the pool generally assumes hot and cold usage patterns for databases, where all databases are not simultaneously peaking. |
+| Max vCores per database |The maximum number of vCores that any database in the pool may use, if available based on utilization by other databases in the pool. Max vCores per database isn't a resource guarantee for a database. If the workload in each database doesn't need all available pool resources to perform adequately, consider setting max vCores per database to prevent a single database from monopolizing pool resources. Some degree of over-committing is expected since the pool generally assumes hot and cold usage patterns for databases, where all databases aren't simultaneously peaking. |
 | Min vCores per database |The minimum number of vCores reserved for any database in the pool. Consider setting a min vCores per database when you want to guarantee resource availability for each database regardless of resource consumption by other databases in the pool. The min vCores per database may be set to 0, and is also the default value. This property is set to anywhere between 0 and the average vCores utilization per database.|
-| Max storage per database |The maximum database size set by the user for a database in a pool. Pooled databases share allocated pool storage, so the size a database can reach is limited to the smaller of remaining pool storage and maximum database size. Maximum database size refers to the maximum size of the data files and does not include the space used by the log file. |
+| Max storage per database |The maximum database size set by the user for a database in a pool. Pooled databases share allocated pool storage, so the size a database can reach is limited to the smaller of remaining pool storage and maximum database size. Maximum database size refers to the maximum size of the data files and doesn't include the space used by the log file. |
 
 > [!IMPORTANT]
 > Because resources in an elastic pool are finite, setting min vCores per database to a value greater than 0 implicitly limits resource utilization by each database. If, at a point in time, most databases in a pool are idle, resources reserved to satisfy the min vCores guarantee are not available to databases active at that point in time.
@@ -715,7 +763,7 @@ The following table describes per database properties for pooled databases.
 
 Even though the per database properties are expressed in vCores, they also govern consumption of other resource types, such as data IO, log IO, buffer pool memory, and worker threads. As you adjust min and max per database vCore values, reservations and limits for all resource types are adjusted proportionally.
 
-Min and max per database vCore values apply to resource consumption by user workloads, but not to resource consumption by internal processes. For example, for a database with a per database max vCores set to half of the pool vCores, user workload cannot consume more than one half of the buffer pool memory. However, this database can still take advantage of pages in the buffer pool that were loaded by internal processes. For more information, see [Resource consumption by user workloads and internal processes](resource-limits-logical-server.md#resource-consumption-by-user-workloads-and-internal-processes).
+Min and max per database vCore values apply to resource consumption by user workloads, but not to resource consumption by internal processes. For example, for a database with a per database max vCores set to half of the pool vCores, user workload can't consume more than one half of the buffer pool memory. However, this database can still take advantage of pages in the buffer pool that were loaded by internal processes. For more information, see [Resource consumption by user workloads and internal processes](resource-limits-logical-server.md#resource-consumption-by-user-workloads-and-internal-processes).
 
 > [!NOTE]
 > The resource limits of individual databases in elastic pools are generally the same as for single databases outside of pools that have the same compute size (service objective). For example, the max concurrent workers for an GP_S_Gen5_10 database is 750 workers. So, the max concurrent workers for a database in a GP_Gen5_10 pool is also 750 workers. Note, the total number of concurrent workers in GP_Gen5_10 pool is 1050. For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md?view=azuresql&preserve-view=true).
@@ -724,7 +772,7 @@ Min and max per database vCore values apply to resource consumption by user work
 
 This section includes details on previously available hardware.
 
-- Gen4 hardware has been retired and is not available for provisioning, upscaling, or downscaling. Migrate your database to a supported hardware generation for a wider range of vCore and storage scalability, accelerated networking, best IO performance, and minimal latency. For more information, see [Support has ended for Gen 4 hardware on Azure SQL Database](https://azure.microsoft.com/updates/support-has-ended-for-gen-4-hardware-on-azure-sql-database/).
+- Gen4 hardware has been retired and isn't available for provisioning, upscaling, or downscaling. Migrate your database to a supported hardware generation for a wider range of vCore and storage scalability, accelerated networking, best IO performance, and minimal latency. For more information, see [Support has ended for Gen 4 hardware on Azure SQL Database](https://azure.microsoft.com/updates/support-has-ended-for-gen-4-hardware-on-azure-sql-database/).
 
 [!INCLUDE[identify-gen4-hardware](../includes/identify-gen4-hardware.md)]
 

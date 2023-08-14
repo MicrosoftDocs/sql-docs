@@ -102,7 +102,7 @@ The following table covers these SLOs: `GP_S_Gen5_1`, `GP_S_Gen5_2`, `GP_S_Gen5_
 
 Compute sizes (service level objectives, or SLOs) for General Purpose serverless standard-series databases follow the naming convention `GP_S_Gen5_` followed by the number of max vCores. 
 
-The following table covers these SLOs: `GP_S_Gen5_10`, `GP_S_Gen5_12`, `GP_S_Gen5_14`, `GP_S_Gen5_16` and `GP_S_Gen5_18`:
+The following table covers these SLOs: `GP_S_Gen5_10`, `GP_S_Gen5_12`, `GP_S_Gen5_14`, `GP_S_Gen5_16`, and `GP_S_Gen5_18`:
 
 | Min-max vCores | 1.25-10 | 1.50-12 | 1.75-14 | 2.00-16 | 2.25-18 |
 |:-|-:|-:|-:|-:|-:|
@@ -138,7 +138,7 @@ The following table covers these SLOs: `GP_S_Gen5_10`, `GP_S_Gen5_12`, `GP_S_Gen
 
 Compute sizes (service level objectives, or SLOs) for General Purpose serverless standard-series databases follow the naming convention `GP_S_Gen5_` followed by the number of max vCores. 
 
-The following table covers these SLOs: `GP_S_Gen5_20`, `GP_S_Gen5_24`, `GP_S_Gen5_32`, `GP_S_Gen5_40` and `GP_S_Gen5_80`:
+The following table covers these SLOs: `GP_S_Gen5_20`, `GP_S_Gen5_24`, `GP_S_Gen5_32`, `GP_S_Gen5_40`, and `GP_S_Gen5_80`:
 
 | Min-max vCores | 2.5-20 | 3-24 | 4-32 | 5-40 | 10-80 <sup>3</sup> |
 |:-|-:|-:|-:|-:|-:|
@@ -177,13 +177,13 @@ The following table covers these SLOs: `GP_S_Gen5_20`, `GP_S_Gen5_24`, `GP_S_Gen
 The [serverless compute tier](serverless-tier-overview.md) is currently available on Gen5 hardware only.
 
 > [!NOTE]
-> - Serverless compute for the Hyperscale service tier is currently in preview.
+> Serverless compute for the Hyperscale service tier is currently in preview.
 
 ### Hyperscale - serverless compute - standard-series (Gen5) (part 1 of 2)
 
 Compute sizes (service level objectives, or SLOs) for Hyperscale serverless standard-series databases follow the naming convention `HS_S_Gen5_` followed by the number of max vCores. 
 
-The following table covers these SLOs: `HS_S_Gen5_2`, `HS_S_Gen5_4`, `HS_S_Gen5_6`, `HS_S_Gen5_8`, `HS_S_Gen5_10`, `HS_S_Gen5_12` and `HS_S_Gen5_14`:
+The following table covers these SLOs: `HS_S_Gen5_2`, `HS_S_Gen5_4`, `HS_S_Gen5_6`, `HS_S_Gen5_8`, `HS_S_Gen5_10`, `HS_S_Gen5_12`, and `HS_S_Gen5_14`:
 
 | Min-max vCores | 0.5-2 | 0.5-4 | 0.75-6 | 1-8 | 1.25-10 | 1.5-12 | 1.75-14 |
 |--|--|--|--|--|--|--|--|
@@ -216,7 +216,7 @@ The following table covers these SLOs: `HS_S_Gen5_2`, `HS_S_Gen5_4`, `HS_S_Gen5_
 
 Compute sizes (service level objectives, or SLOs) for Hyperscale serverless standard-series databases follow the naming convention `HS_S_Gen5_` followed by the number of max vCores. 
 
-The following table covers these SLOs: `HS_S_Gen5_16`, `HS_S_Gen5_18`, `HS_S_Gen5_20`, `HS_S_Gen5_24`, `HS_S_Gen5_32`, `HS_S_Gen5_40` and `HS_S_Gen5_80`:
+The following table covers these SLOs: `HS_S_Gen5_16`, `HS_S_Gen5_18`, `HS_S_Gen5_20`, `HS_S_Gen5_24`, `HS_S_Gen5_32`, `HS_S_Gen5_40`, and `HS_S_Gen5_80`:
 
 | Min-max vCores | 2-16 | 2.25-18 | 2.25-20 | 3-24 | 4-32 | 5-40 | 10-80 <sup>4</sup> |
 |--|--|--|--|--|--|--|--|
@@ -251,7 +251,7 @@ The following table covers these SLOs: `HS_S_Gen5_16`, `HS_S_Gen5_18`, `HS_S_Gen
 
 Compute sizes (service level objectives, or SLOs) for Hyperscale standard-series databases follow the naming convention `HS_Gen5_` followed by the number of vCores. 
 
-The following table covers these SLOs: `HS_Gen5_2`, `HS_Gen5_4`, `HS_Gen5_6`, `HS_Gen5_8`, `HS_Gen5_10`, `HS_Gen5_12` and `HS_Gen5_14`:
+The following table covers these SLOs: `HS_Gen5_2`, `HS_Gen5_4`, `HS_Gen5_6`, `HS_Gen5_8`, `HS_Gen5_10`, `HS_Gen5_12`, and `HS_Gen5_14`:
 
 | vCores | 2 | 4 | 6 | 8 | 10 | 12 | 14 |
 |:-|-:|-:|-:|-:|-:|-:|-:|
@@ -289,7 +289,7 @@ The following table covers these SLOs: `HS_Gen5_2`, `HS_Gen5_4`, `HS_Gen5_6`, `H
 
 Compute sizes (service level objectives, or SLOs) for Hyperscale standard-series databases follow the naming convention `HS_Gen5_` followed by the number of vCores. 
 
-The following table covers these SLOs: `HS_Gen5_16`, `HS_Gen5_18`, `HS_Gen5_20`, `HS_Gen5_24`, `HS_Gen5_32`, `HS_Gen5_40` and `HS_Gen5_80`:
+The following table covers these SLOs: `HS_Gen5_16`, `HS_Gen5_18`, `HS_Gen5_20`, `HS_Gen5_24`, `HS_Gen5_32`, `HS_Gen5_40`, and `HS_Gen5_80`:
 
 | vCores | 16 | 18 | 20 | 24 | 32 | 40 | 80 |
 |:-|-:|-:|-:|-:|-:|-:|-:|
@@ -328,7 +328,7 @@ The following table covers these SLOs: `HS_Gen5_16`, `HS_Gen5_18`, `HS_Gen5_20`,
 
 Compute sizes (service level objectives, or SLOs) for Hyperscale DC-series databases follow the naming convention `HS_DC_` followed by the number of vCores. 
 
-The following table covers these SLOs: `HS_DC_2`, `HS_DC_4`, `HS_DC_6`, `HS_DC_8`, `HS_DC_10` and `HS_DC_12`:
+The following table covers these SLOs: `HS_DC_2`, `HS_DC_4`, `HS_DC_6`, `HS_DC_8`, `HS_DC_10`, and `HS_DC_12`:
 
 | vCores | 2 | 4 | 6 | 8 | 10 | 12 |
 |:-|-:|-:|-:|-:|-:|-:|
@@ -368,7 +368,7 @@ The following table covers these SLOs: `HS_DC_2`, `HS_DC_4`, `HS_DC_6`, `HS_DC_8
 
 Compute sizes (service level objectives, or SLOs) for Hyperscale DC-series databases follow the naming convention `HS_DC_` followed by the number of vCores. 
 
-The following table covers these SLOs: `HS_DC_14`, `HS_DC_16`, `HS_DC_18`, `HS_DC_20`, `HS_DC_32` and `HS_DC_40`:
+The following table covers these SLOs: `HS_DC_14`, `HS_DC_16`, `HS_DC_18`, `HS_DC_20`, `HS_DC_32`, and `HS_DC_40`:
 
 | vCores | 14 | 16 | 18 | 20 | 32 | 40 |
 |:-|-:|-:|-:|-:|-:|-:|
@@ -406,9 +406,9 @@ The following table covers these SLOs: `HS_DC_14`, `HS_DC_16`, `HS_DC_18`, `HS_D
 
 ### Hyperscale - Premium-series (part 1 of 3)
 
-Compute sizes (service level objectives, or SLOs) for Hyperscale Premium-series databases follow the naming convention `HS_PRMS_` followed by the number of vCores. 
+Compute sizes (service level objectives, or SLOs) for Hyperscale premium-series databases follow the naming convention `HS_PRMS_` followed by the number of vCores. 
 
-The following table covers these SLOs: `HS_PRMS_2`, `HS_PRMS_4`, `HS_PRMS_6`, `HS_PRMS_8` and `HS_PRMS_10`:
+The following table covers these SLOs: `HS_PRMS_2`, `HS_PRMS_4`, `HS_PRMS_6`, `HS_PRMS_8`, and `HS_PRMS_10`:
 
 | vCores | 2 | 4 | 6 | 8 | 10 |
 |:-|-:|-:|-:|-:|-:|
@@ -445,9 +445,9 @@ The following table covers these SLOs: `HS_PRMS_2`, `HS_PRMS_4`, `HS_PRMS_6`, `H
 
 ### Hyperscale - Premium-series (part 2 of 3)
 
-Compute sizes (service level objectives, or SLOs) for Hyperscale Premium-series databases follow the naming convention `HS_PRMS_` followed by the number of vCores. 
+Compute sizes (service level objectives, or SLOs) for Hyperscale premium-series databases follow the naming convention `HS_PRMS_` followed by the number of vCores. 
 
-The following table covers these SLOs: `HS_PRMS_12`, `HS_PRMS_14`, `HS_PRMS_16`, `HS_PRMS_18` and `HS_PRMS_20`:
+The following table covers these SLOs: `HS_PRMS_12`, `HS_PRMS_14`, `HS_PRMS_16`, `HS_PRMS_18`, and `HS_PRMS_20`:
 
 | vCores | 12 | 14 | 16 | 18 | 20 |
 |:-|-:|-:|-:|-:|-:|
@@ -483,9 +483,9 @@ The following table covers these SLOs: `HS_PRMS_12`, `HS_PRMS_14`, `HS_PRMS_16`,
 
 ### Hyperscale - Premium-series (part 3 of 3)
 
-Compute sizes (service level objectives, or SLOs) for Hyperscale Premium-series databases follow the naming convention `HS_PRMS_` followed by the number of vCores. 
+Compute sizes (service level objectives, or SLOs) for Hyperscale premium-series databases follow the naming convention `HS_PRMS_` followed by the number of vCores. 
 
-The following table covers these SLOs: `HS_PRMS_24`, `HS_PRMS_32`, `HS_PRMS_40`, `HS_PRMS_64`, `HS_PRMS_80` and `HS_PRMS_128`:
+The following table covers these SLOs: `HS_PRMS_24`, `HS_PRMS_32`, `HS_PRMS_40`, `HS_PRMS_64`, `HS_PRMS_80`, and `HS_PRMS_128`:
 
 | vCores | 24 | 32 | 40 | 64 | 80 | 128 |
 |:-|-:|-:|-:|-:|-:|-:|
@@ -523,9 +523,9 @@ The following table covers these SLOs: `HS_PRMS_24`, `HS_PRMS_32`, `HS_PRMS_40`,
 
 ### Hyperscale - Premium-series memory optimized (part 1 of 3)
 
-Compute sizes (service level objectives, or SLOs) for Hyperscale Premium-series memory optimized databases follow the naming convention `HS_MOPRMS_` followed by the number of vCores. 
+Compute sizes (service level objectives, or SLOs) for Hyperscale premium-series memory optimized databases follow the naming convention `HS_MOPRMS_` followed by the number of vCores. 
 
-The following table covers these SLOs: `HS_MOPRMS_2`, `HS_MOPRMS_4`, `HS_MOPRMS_6`, `HS_MOPRMS_8` and `HS_MOPRMS_10`:
+The following table covers these SLOs: `HS_MOPRMS_2`, `HS_MOPRMS_4`, `HS_MOPRMS_6`, `HS_MOPRMS_8`, and `HS_MOPRMS_10`:
 
 | vCores | 2 | 4 | 6 | 8 | 10 |
 |:-|-:|-:|-:|-:|-:|
@@ -562,9 +562,9 @@ The following table covers these SLOs: `HS_MOPRMS_2`, `HS_MOPRMS_4`, `HS_MOPRMS_
 
 ### Hyperscale - Premium-series memory optimized (part 2 of 3)
 
-Compute sizes (service level objectives, or SLOs) for Hyperscale Premium-series memory optimized databases follow the naming convention `HS_MOPRMS_` followed by the number of vCores. 
+Compute sizes (service level objectives, or SLOs) for Hyperscale premium-series memory optimized databases follow the naming convention `HS_MOPRMS_` followed by the number of vCores. 
 
-The following table covers these SLOs: `HS_MOPRMS_12`, `HS_MOPRMS_14`, `HS_MOPRMS_16`, `HS_MOPRMS_18` and `HS_MOPRMS_20`:
+The following table covers these SLOs: `HS_MOPRMS_12`, `HS_MOPRMS_14`, `HS_MOPRMS_16`, `HS_MOPRMS_18`, and `HS_MOPRMS_20`:
 
 | vCores | 12 | 14 | 16 | 18 | 20 |
 |:-|-:|-:|-:|-:|-:|
@@ -601,9 +601,9 @@ The following table covers these SLOs: `HS_MOPRMS_12`, `HS_MOPRMS_14`, `HS_MOPRM
 
 ### Hyperscale - Premium-series memory optimized (part 3 of 3)
 
-Compute sizes (service level objectives, or SLOs) for Hyperscale Premium-series memory optimized databases follow the naming convention `HS_MOPRMS_` followed by the number of vCores. 
+Compute sizes (service level objectives, or SLOs) for Hyperscale premium-series memory optimized databases follow the naming convention `HS_MOPRMS_` followed by the number of vCores. 
 
-The following table covers these SLOs: `HS_MOPRMS_24`, `HS_MOPRMS_32`, `HS_MOPRMS_40`, `HS_MOPRMS_64` and `HS_MOPRMS_128`:
+The following table covers these SLOs: `HS_MOPRMS_24`, `HS_MOPRMS_32`, `HS_MOPRMS_40`, `HS_MOPRMS_64`, and `HS_MOPRMS_128`:
 
 | vCores | 24 | 32 | 40 | 64 | 80 |
 |:-|-:|-:|-:|-:|-:|
@@ -643,7 +643,7 @@ The following table covers these SLOs: `HS_MOPRMS_24`, `HS_MOPRMS_32`, `HS_MOPRM
 
 Compute sizes (service level objectives, or SLOs) for General Purpose standard-series databases follow the naming convention `GP_Gen5_` followed by the number of vCores. 
 
-The following table covers these SLOs: `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `GP_Gen5_8` and `GP_Gen5_10`:
+The following table covers these SLOs: `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `GP_Gen5_8`, and `GP_Gen5_10`:
 
 | vCores | 2 | 4 | 6 | 8 | 10 |
 |:-|-:|-:|-:|-:|-:|
@@ -679,7 +679,7 @@ The following table covers these SLOs: `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `G
 
 Compute sizes (service level objectives, or SLOs) for General Purpose standard-series databases follow the naming convention `GP_Gen5_` followed by the number of vCores. 
 
-The following table covers these SLOs: `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`, `GP_Gen5_18` and `GP_Gen5_20`:
+The following table covers these SLOs: `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`, `GP_Gen5_18`, and `GP_Gen5_20`:
 
 | vCores | 12 | 14 | 16 | 18 | 20 |
 |:-|-:|-:|-:|-:|-:|
@@ -715,7 +715,7 @@ The following table covers these SLOs: `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`,
 
 Compute sizes (service level objectives, or SLOs) for General Purpose standard-series databases follow the naming convention `GP_Gen5_` followed by the number of vCores. 
 
-The following table covers these SLOs: `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`, `GP_Gen5_80` and `GP_Gen5_128`:
+The following table covers these SLOs: `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`, `GP_Gen5_80`, and `GP_Gen5_128`:
 
 | vCores | 24 | 32 | 40 | 80 | 128 |
 |:-|-:|-:|-:|-:|-:|
@@ -752,7 +752,7 @@ The following table covers these SLOs: `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`,
 
 Compute sizes (service level objectives, or SLOs) for General Purpose Fsv2-series databases follow the naming convention `GP_Fsv2_` followed by the number of vCores. 
 
-The following table covers these SLOs: `GP_Fsv2_8`, `GP_Fsv2_10`, `GP_Fsv2_12`, `GP_Fsv2_14` and `GP_Fsv2_16`:
+The following table covers these SLOs: `GP_Fsv2_8`, `GP_Fsv2_10`, `GP_Fsv2_12`, `GP_Fsv2_14`, and `GP_Fsv2_16`:
 
 | vCores | 8 | 10 | 12 | 14 | 16 |
 |:-|-:|-:|-:|-:|-:|
@@ -787,7 +787,7 @@ The following table covers these SLOs: `GP_Fsv2_8`, `GP_Fsv2_10`, `GP_Fsv2_12`, 
 
 Compute sizes (service level objectives, or SLOs) for General Purpose Fsv2-series databases follow the naming convention `GP_Fsv2_` followed by the number of vCores. 
 
-The following table covers these SLOs: `GP_Fsv2_18`, `GP_Fsv2_20`, `GP_Fsv2_24`, `GP_Fsv2_32`, `GP_Fsv2_36` and `GP_Fsv2_72`:
+The following table covers these SLOs: `GP_Fsv2_18`, `GP_Fsv2_20`, `GP_Fsv2_24`, `GP_Fsv2_32`, `GP_Fsv2_36`, and `GP_Fsv2_72`:
 
 | vCores | 18 | 20 | 24 | 32 | 36 | 72 |
 |:-|-:|-:|-:|-:|-:|-:|
@@ -823,7 +823,7 @@ The following table covers these SLOs: `GP_Fsv2_18`, `GP_Fsv2_20`, `GP_Fsv2_24`,
 
 Compute sizes (service level objectives, or SLOs) for General Purpose DC-series databases follow the naming convention `GP_DC_` followed by the number of vCores. 
 
-The following table covers these SLOs: `GP_DC_2`, `GP_DC_4`, `GP_DC_6`, `GP_DC_8`, `GP_DC_10` and `GP_DC_12`:
+The following table covers these SLOs: `GP_DC_2`, `GP_DC_4`, `GP_DC_6`, `GP_DC_8`, `GP_DC_10`, and `GP_DC_12`:
 
 | vCores | 2 | 4 | 6 | 8 | 10<sup>4</sup> | 12<sup>4</sup> |
 |:-|-:|-:|-:|-:|-:|-:|
@@ -860,7 +860,7 @@ The following table covers these SLOs: `GP_DC_2`, `GP_DC_4`, `GP_DC_6`, `GP_DC_8
 
 Compute sizes (service level objectives, or SLOs) for General Purpose DC-series databases follow the naming convention `GP_DC_` followed by the number of vCores. 
 
-The following table covers these SLOs: `GP_DC_14`, `GP_DC_16`, `GP_DC_18`, `GP_DC_20`, `GP_DC_32` and `GP_DC_40`:
+The following table covers these SLOs: `GP_DC_14`, `GP_DC_16`, `GP_DC_18`, `GP_DC_20`, `GP_DC_32`, and `GP_DC_40`:
 
 | vCores | 14<sup>4</sup> | 16<sup>4</sup> | 18<sup>4</sup> | 20<sup>4</sup> | 32<sup>4</sup> | 40<sup>4</sup> |
 |:-|-:|-:|-:|-:|-:|-:|
@@ -899,7 +899,7 @@ The following table covers these SLOs: `GP_DC_14`, `GP_DC_16`, `GP_DC_18`, `GP_D
 
 Compute sizes (service level objectives, or SLOs) in the Business Critical standard-series databases follow the naming convention `BC_Gen5_` followed by the number of vCores. 
 
-The following table covers these SLOs: `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8` and `BC_Gen5_10`:
+The following table covers these SLOs: `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8`, and `BC_Gen5_10`:
 
 | vCores | 2 | 4 | 6 | 8 | 10 |
 |:-|-:|-:|-:|-:|-:|--|
@@ -936,7 +936,7 @@ The following table covers these SLOs: `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_6`, `B
 
 Compute sizes (service level objectives, or SLOs) in the Business Critical standard-series databases follow the naming convention `BC_Gen5_` followed by the number of vCores. 
 
-The following table covers these SLOs: `BC_Gen5_12`, `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18` and `BC_Gen5_20`:
+The following table covers these SLOs: `BC_Gen5_12`, `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18`, and `BC_Gen5_20`:
 
 | vCores | 12 | 14 | 16 | 18 | 20 |
 |:-|-:|-:|-:|-:|-:|
@@ -972,7 +972,7 @@ The following table covers these SLOs: `BC_Gen5_12`, `BC_Gen5_14`, `BC_Gen5_16`,
 
 Compute sizes (service level objectives, or SLOs) in the Business Critical standard-series databases follow the naming convention `BC_Gen5_` followed by the number of vCores. 
 
-The following table covers these SLOs: `BC_Gen5_24`, `BC_Gen5_32`, `BC_Gen5_40`, `BC_Gen5_80` and `BC_Gen5_128`:
+The following table covers these SLOs: `BC_Gen5_24`, `BC_Gen5_32`, `BC_Gen5_40`, `BC_Gen5_80`, and `BC_Gen5_128`:
 
 | vCores | 24 | 32 | 40 | 80 | 128 |
 |:-|-:|-:|-:|-:|-:|--|
@@ -1012,7 +1012,7 @@ For important information about M-series hardware availability, see [Azure offer
 
 Compute sizes (service level objectives, or SLOs) in the Business Critical M-series databases follow the naming convention `BC_M_` followed by the number of vCores. 
 
-The following table covers these SLOs: `BC_M_8`, `BC_M_10`, `BC_M_12`, `BC_M_14`, `BC_M_16` and `BC_M_18`:
+The following table covers these SLOs: `BC_M_8`, `BC_M_10`, `BC_M_12`, `BC_M_14`, `BC_M_16`, and `BC_M_18`:
 
 | vCores | 8 | 10 | 12 | 14 | 16 | 18 |
 |:-|-:|-:|-:|-:|-:|-:|
@@ -1048,7 +1048,7 @@ The following table covers these SLOs: `BC_M_8`, `BC_M_10`, `BC_M_12`, `BC_M_14`
 
 Compute sizes (service level objectives, or SLOs) in the Business Critical M-series databases follow the naming convention `BC_M_` followed by the number of vCores. 
 
-The following table covers these SLOs: `BC_M_20`, `BC_M_24`, `BC_M_32`, `BC_M_64` and `BC_M_128`:
+The following table covers these SLOs: `BC_M_20`, `BC_M_24`, `BC_M_32`, `BC_M_64`, and `BC_M_128`:
 
 | vCores | 20 | 24 | 32 | 64 | 128 |
 |:-|-:|-:|-:|-:|-:|
@@ -1085,7 +1085,7 @@ The following table covers these SLOs: `BC_M_20`, `BC_M_24`, `BC_M_32`, `BC_M_64
 
 Compute sizes (service level objectives, or SLOs) in the Business Critical DC-series databases follow the naming convention `BC_DC_` followed by the number of vCores. 
 
-The following table covers these SLOs: `BC_DC_2`, `BC_DC_4`, `BC_DC_6`, `BC_DC_8`, `BC_DC_10` and `BC_DC_12`:
+The following table covers these SLOs: `BC_DC_2`, `BC_DC_4`, `BC_DC_6`, `BC_DC_8`, `BC_DC_10`, and `BC_DC_12`:
 
 | vCores | 2 | 4 | 6 | 8 | 10<sup>4</sup> | 12<sup>4</sup> |
 |:-|-:|-:|-:|-:|-:|-:|
@@ -1123,7 +1123,7 @@ The following table covers these SLOs: `BC_DC_2`, `BC_DC_4`, `BC_DC_6`, `BC_DC_8
 
 Compute sizes (service level objectives, or SLOs) in the Business Critical DC-series databases follow the naming convention `BC_DC_` followed by the number of vCores. 
 
-The following table covers these SLOs: `BC_DC_14`, `BC_DC_16`, `BC_DC_18`, `BC_DC_20`, `BC_DC_32` and `BC_DC_40`:
+The following table covers these SLOs: `BC_DC_14`, `BC_DC_16`, `BC_DC_18`, `BC_DC_20`, `BC_DC_32`, and `BC_DC_40`:
 
 | vCores | 14<sup>4</sup> | 16<sup>4</sup> | 18<sup>4</sup> | 20<sup>4</sup> | 32<sup>4</sup> | 40<sup>4</sup> |
 |:-|-:|-:|-:|-:|-:|-:|

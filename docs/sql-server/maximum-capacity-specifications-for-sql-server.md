@@ -117,7 +117,6 @@ Maximum values of various objects defined in [!INCLUDE[ssNoVersion](../includes/
 
 ## See also
 
-- [SQL Server utility features and tasks](../relational-databases/manage/sql-server-utility-features-and-tasks.md)
 - [Hardware and software requirements for installing SQL Server](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 - [Check parameters for system configuration checker](../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)
 - [Download SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)

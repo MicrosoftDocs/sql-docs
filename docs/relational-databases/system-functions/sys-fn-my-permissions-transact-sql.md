@@ -74,6 +74,8 @@ GO
   
  If DEFAULT is supplied as the value of *securable* or *securable_class*, the value will be interpreted as NULL.  
  
+### Azure Synapse Dedicated SQL Pools
+In Dedicated SQL Pools the fn_my_permissions function is not supported.
    
 ## Permissions  
  Requires membership in the public role.  

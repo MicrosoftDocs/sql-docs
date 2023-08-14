@@ -660,7 +660,7 @@ The following table covers these SLOs: `BC_DC_14`, `BC_DC_16`, `BC_DC_18`, `BC_D
 > [!NOTE]
 > Elastic pools for Hyperscale databases are currently in preview.
 
-### Hyperscale - standard series (Gen5) (part 1 of 2)
+### Hyperscale - standard-series (Gen5) (part 1 of 2)
 
 Compute sizes (service level objectives, or SLOs) in the Hyperscale standard-series elastic pools follow the naming convention `HS_Gen5_` followed by the number of vCores. 
 

@@ -4,7 +4,7 @@ description: This article shows maximum sizes and numbers of various objects def
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.date: 03/11/2022
+ms.date: 08/14/2023
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: conceptual
@@ -91,22 +91,6 @@ Maximum values of various objects defined in [!INCLUDE[ssNoVersion](../includes/
 |Triggers per table|Limited by number of objects in a database|Objects include tables, views, stored procedures, user-defined functions, triggers, rules, defaults, and constraints. The sum of the number of all objects in a database can't exceed 2,147,483,647.|
 |User connections|32,767||
 |XML indexes|249||
-
-## [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility objects
-
-Maximum values of various objects that were tested in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility.
-
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility object|Maximum&nbsp;values&nbsp;for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64-bit)|Additional information|
-|---|---|---|
-|Computers (physical computers or virtual machines) per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility|100||
-|Instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per computer|5||
-|Total number of instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility|200|The maximum number may vary based on the hardware configuration of the server. For getting started information, see [SQL Server Utility Features and Tasks](../relational-databases/manage/sql-server-utility-features-and-tasks.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility control point isn't available in every edition of SQL Server. You can read about the features supported by each edition of [SQL Server 2019](./editions-and-components-of-sql-server-2019.md), [SQL Server 2017](editions-and-components-of-sql-server-2017.md), and [SQL Server 2016](editions-and-components-of-sql-server-2016.md).|
-|User databases per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance, including data-tier applications|50||
-|Total number of user databases per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility|1,000||
-|File groups per database|1||
-|Data files per file group|1||
-|Log files per database|1||
-|Volumes per computer|3||
 
 ## [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data-tier application objects
 

@@ -508,7 +508,7 @@ When using Always Encrypted (without secure enclaves), if the column being modif
 
 When using Always Encrypted with secure enclaves, you can change any encryption setting, if the column encryption key protecting the column (and the new column encryption key, if you're changing the key) support enclave computations (encrypted with enclave-enabled column master keys). For details, see [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
-When you modify a column, the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] keeps track of each modification by adding a row in a system table, and marking the previous column modification as a dropped column. In the rare case that you modify a column too many times, the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] might reach the record size limit. If this happens, you will get error [511](../../relational-databases/errors-events/mssqlserver-511-database-engine-error.md) or 1708. To avoid these errors, either rebuild the clustered index on the table periodically, or reduce the number of column modifications.
+When you modify a column, the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] keeps track of each modification by adding a row in a system table, and marking the previous column modification as a dropped column. In the rare case that you modify a column too many times, the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] might reach the record size limit. If this happens, you'll get error [511](../../relational-databases/errors-events/mssqlserver-511-database-engine-error.md) or 1708. To avoid these errors, either rebuild the clustered index on the table periodically, or reduce the number of column modifications.
 
 #### *column_name*
 
@@ -613,7 +613,7 @@ Specifies that values are incremented in identity columns when replication agent
 
 #### SPARSE
 
-Indicates that the column is a sparse column. The storage of sparse columns is optimized for null values. You can't set sparse columns as NOT NULL. When you convert a column from sparse to nonsparse, or from nonsparse to sparse, locks the table for the duration of the command execution. You may need to use the REBUILD clause to reclaim any space savings. For additional restrictions and more information about sparse columns, see [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).
+Indicates that the column is a sparse column. The storage of sparse columns is optimized for null values. You can't set sparse columns as NOT NULL. When you convert a column from sparse to nonsparse, or from nonsparse to sparse, this option locks the table for the duration of the command execution. You may need to use the REBUILD clause to reclaim any space savings. For additional restrictions and more information about sparse columns, see [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).
 
 #### ADD MASKED WITH ( FUNCTION = ' *mask_function* ')
 
@@ -663,7 +663,7 @@ Online alter column has similar requirements, restrictions, and functionality as
 
 Specifies whether the data in the table is or isn't validated against a newly added or re-enabled FOREIGN KEY or CHECK constraint. If you don't specify, WITH CHECK is assumed for new constraints, and WITH NOCHECK is assumed for re-enabled constraints.
 
-If you don't want to verify new CHECK or FOREIGN KEY constraints against existing data, use WITH NOCHECK. We don't recommend doing this, except in rare cases. The new constraint is evaluated in all later data updates. Any constraint violations that are suppressed by WITH NOCHECK when the constraint is added may cause future updates to fail if they update rows with data that doesn't follow the constraint. The query optimizer doesn't consider constraints that are defined WITH NOCHECK. Such constraints are ignored until they are re-enabled by using `ALTER TABLE table WITH CHECK CHECK CONSTRAINT ALL`. For more information, see [Disable Foreign Key Constraints with INSERT and UPDATE Statements](../../relational-databases/tables/disable-foreign-key-constraints-with-insert-and-update-statements.md).
+If you don't want to verify new CHECK or FOREIGN KEY constraints against existing data, use WITH NOCHECK. We don't recommend doing this, except in rare cases. The new constraint is evaluated in all later data updates. Any constraint violations that are suppressed by WITH NOCHECK when the constraint is added may cause future updates to fail if they update rows with data that doesn't follow the constraint. The query optimizer doesn't consider constraints that are defined WITH NOCHECK. Such constraints are ignored until they're re-enabled by using `ALTER TABLE table WITH CHECK CHECK CONSTRAINT ALL`. For more information, see [Disable Foreign Key Constraints with INSERT and UPDATE Statements](../../relational-databases/tables/disable-foreign-key-constraints-with-insert-and-update-statements.md).
 
 #### ALTER INDEX *index_name*
 
@@ -699,7 +699,7 @@ As of [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], users can mark one or b
 Specifies that one or more column definitions, computed column definitions, or table constraints are dropped, or to drop the specification for the columns that the system uses for system versioning.
 
 > [!NOTE]  
-> Columns dropped in ledger tables are only soft deleted. A dropped column remains in the ledger table, but it is marked as a dropped column by setting the `dropped_ledger_table` column in `sys.tables` to `1`. The ledger view of the dropped ledger table is also marked as dropped by setting the `dropped_ledger_view` column in `sys.tables` to `1`. A dropped ledger table, its history table, and its ledger view are renamed by adding a prefix (`MSSQL_DroppedLedgerTable`, `MSSQL_DropedLedgerHistory`, `MSSQL_DroppedLedgerView`), and appending a GUID to the original name.
+> Columns dropped in ledger tables are only soft deleted. A dropped column remains in the ledger table, but it is marked as a dropped column by setting the `dropped_ledger_table` column in `sys.tables` to `1`. The ledger view of the dropped ledger table is also marked as dropped by setting the `dropped_ledger_view` column in `sys.tables` to `1`. A dropped ledger table, its history table, and its ledger view are renamed by adding a prefix (`MSSQL_DroppedLedgerTable`, `MSSQL_DroppedLedgerHistory`, `MSSQL_DroppedLedgerView`), and appending a GUID to the original name.
 
 #### CONSTRAINT *constraint_name*
 
@@ -752,13 +752,15 @@ Use the MAXDOP option to limit the number of processors used in parallel plan ex
 
 *max_degree_of_parallelism* can be one of the following values:
 
-1  
-Suppresses parallel plan generation.
+- `1`
 
-\>1  
-Restricts the maximum number of processors used in a parallel index operation to the specified number.
+    Suppresses parallel plan generation.
 
-0 (default)  
+- `>1`
+
+    Restricts the maximum number of processors used in a parallel index operation to the specified number.
+
+- `0` (default)
 Uses the actual number of processors or fewer based on the current system workload.
 
 For more information, see [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).
@@ -794,7 +796,7 @@ Specifies a location to move the data rows currently in the leaf level of the cl
 
 #### { CHECK | NOCHECK } CONSTRAINT
 
-Specifies that *constraint_name* is enabled or disabled. This option can only be used with FOREIGN KEY and CHECK constraints. When NOCHECK is specified, the constraint is disabled and future inserts or updates to the column are not validated against the constraint conditions. DEFAULT, PRIMARY KEY, and UNIQUE constraints can't be disabled.
+Specifies that *constraint_name* is enabled or disabled. This option can only be used with FOREIGN KEY and CHECK constraints. When NOCHECK is specified, the constraint is disabled and future inserts or updates to the column aren't validated against the constraint conditions. DEFAULT, PRIMARY KEY, and UNIQUE constraints can't be disabled.
 
 ALL  
 Specifies that all constraints are either disabled with the NOCHECK option or enabled with the CHECK option.
@@ -849,9 +851,9 @@ A partitioned table with a clustered columnstore index behaves like a partitione
 
 For **SWITCH** restriction when using replication, see [Replicate Partitioned Tables and Indexes](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).
 
-Nonclustered columnstore indexes were built in a read-only format before [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 and for SQL Database before version V12. You must rebuild nonclustered columnstore indexes to the current format (which is updatable) before any PARTITION operations can be run.
+Nonclustered columnstore indexes were built in a read-only format before [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] and for SQL Database before version V12. You must rebuild nonclustered columnstore indexes to the current format (which is updatable) before any PARTITION operations can be run.
 
-##### Limitations
+**Limitations**
 
 If both tables are partitioned identically, including nonclustered indexes, and the target table doesn't have any nonclustered indexes, you may receive a [4907 error](../../relational-databases/errors-events/database-engine-events-and-errors-4000-to-4999.md).
 
@@ -882,7 +884,7 @@ If you specify *partition_scheme_name*, the rules for [CREATE TABLE](../../t-sql
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
-Either disables or enables system versioning of a table. To enable system versioning of a table, the system verifies that the datatype, nullability constraint, and primary key constraint requirements for system versioning are met. The system will record the history of each record in the system-versioned table in a separate history table. If the `HISTORY_TABLE` argument is not used, the name of this history table will be `MSSQL_TemporalHistoryFor<primary_table_object_id>`. If the history table does not exists, the system generates a new history table matching the schema of the current table, creates a link between the two tables, and enables the system to record the history of each record in the current table in the history table. If you use the HISTORY_TABLE argument to create a link to and use an existing history table, the system creates a link between the current table and the specified table. When creating a link to an existing history table, you can choose to do a data consistency check. This data consistency check ensures that existing records don't overlap. Running the data consistency check is the default. Use the `SYSTEM_VERSIONING = ON` argument on a table that is defined with the `PERIOD FOR SYSTEM_TIME` clause to make the existing table a temporal table. For more information, see [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
+Either disables or enables system versioning of a table. To enable system versioning of a table, the system verifies that the datatype, nullability constraint, and primary key constraint requirements for system versioning are met. The system will record the history of each record in the system-versioned table in a separate history table. If the `HISTORY_TABLE` argument isn't used, the name of this history table will be `MSSQL_TemporalHistoryFor<primary_table_object_id>`. If the history table doesn't exists, the system generates a new history table matching the schema of the current table, creates a link between the two tables, and enables the system to record the history of each record in the current table in the history table. If you use the HISTORY_TABLE argument to create a link to and use an existing history table, the system creates a link between the current table and the specified table. When creating a link to an existing history table, you can choose to do a data consistency check. This data consistency check ensures that existing records don't overlap. Running the data consistency check is the default. Use the `SYSTEM_VERSIONING = ON` argument on a table that is defined with the `PERIOD FOR SYSTEM_TIME` clause to make the existing table a temporal table. For more information, see [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
 
 #### HISTORY_RETENTION_PERIOD = { INFINITE \| number {DAY \| DAYS \| WEEK \| WEEKS \| MONTH \| MONTHS \| YEAR \| YEARS} }
 
@@ -916,7 +918,7 @@ Specifies the allowed methods of lock escalation for a table.
 AUTO  
 This option allows [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] to select the lock escalation granularity that's appropriate for the table schema.
 
-- If the table is partitioned, lock escalation will be allowed to the heap or B-tree (HoBT) granularity. In other words, escalation will be allowed to the partition level. After the lock is escalated to the HoBT level, the lock will not be escalated later to TABLE granularity.
+- If the table is partitioned, lock escalation will be allowed to the heap or B-tree (HoBT) granularity. In other words, escalation will be allowed to the partition level. After the lock is escalated to the HoBT level, the lock won't be escalated later to TABLE granularity.
 - If the table isn't partitioned, the lock escalation is done to the TABLE granularity.
 
 TABLE  
@@ -982,7 +984,7 @@ ON
 Columns using the **xml** data type are compressed.
 
 OFF  
-Columns using the **xml** data type are not compressed.
+Columns using the **xml** data type aren't compressed.
 
 #### ONLINE = { ON | OFF } \<as applies to single_partition_rebuild_option>
 
@@ -1118,7 +1120,7 @@ Conditionally drops the column or constraint only if it already exists.
 
 **Applies to**: [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later.
 
-Specifies whether an `ALTER TABLE ADD CONSTRAINT` operation is resumable. Add table constraint operation is resumable when `ON`. Add table constraint operation is not resumable when `OFF`. Default is `OFF`. The `RESUMABLE` option can be used as part of the [ALTER TABLE index_option](./alter-table-index-option-transact-sql.md) in the [ALTER TABLE table_constraint](./alter-table-table-constraint-transact-sql.md).
+Specifies whether an `ALTER TABLE ADD CONSTRAINT` operation is resumable. Add table constraint operation is resumable when `ON`. Add table constraint operation isn't resumable when `OFF`. Default is `OFF`. The `RESUMABLE` option can be used as part of the [ALTER TABLE index_option](./alter-table-index-option-transact-sql.md) in the [ALTER TABLE table_constraint](./alter-table-table-constraint-transact-sql.md).
 
 **MAX_DURATION** when used with `RESUMABLE = ON` (requires `ONLINE = ON`) indicates time (an integer value specified in minutes) that a resumable online add constraint operation is executed before being paused. If not specified, the operation continues until completion.
 

@@ -8,7 +8,7 @@ ms.reviewer: mathoma
 ms.date: 02/27/2023
 ms.service: sql-database
 ms.subservice: service-overview
-ms.topic: conceptual
+ms.topic: whats-new
 ms.custom:
   - sqldbrb=2
   - references_regions
@@ -18,8 +18,8 @@ ms.custom:
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](doc-changes-updates-release-notes-whats-new-archive.md)
-> * [Azure SQL Managed Instance](../managed-instance/doc-changes-updates-release-notes-whats-new-archive.md)
+> * [Azure SQL Database](doc-changes-updates-release-notes-whats-new-archive.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](../managed-instance/doc-changes-updates-release-notes-whats-new-archive.md?view=azuresql-mi&preserve-view=true)
 
 This article summarizes older documentation changes associated with new features and improvements in the releases of [Azure SQL Database](https://azure.microsoft.com/products/azure-sql/database/). To learn more about Azure SQL Database, see [What is Azure SQL Database?](sql-database-paas-overview.md)
 

@@ -49,7 +49,7 @@ To set an application name in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-
 This example checks whether the client application that initiated this process is a `SQL Server Management Studio` session. It then provides a date value in either US or ANSI format.
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 IF APP_NAME() = 'Microsoft SQL Server Management Studio - Query'  
 PRINT 'This process was started by ' + APP_NAME() + '. The date is ' + CONVERT ( VARCHAR(100) , GETDATE(), 101) + '.';  

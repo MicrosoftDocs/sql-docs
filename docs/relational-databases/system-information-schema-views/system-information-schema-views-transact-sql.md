@@ -87,7 +87,7 @@ When you reference the information schema views, you must use a qualified name t
 
 ```sql
 SELECT TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, COLUMN_DEFAULT
-FROM AdventureWorks2012.INFORMATION_SCHEMA.COLUMNS
+FROM AdventureWorks2022.INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_NAME = N'Product';
 ```
 

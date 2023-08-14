@@ -1,5 +1,5 @@
 ---
-title: "Configure the scan for startup procs Server Configuration Option"
+title: "Configure the scan for startup procs (server configuration option)"
 description: "Learn about the scan for startup procs option. See how it specifies whether SQL Server scans for and runs all automatically run stored procedures at startup."
 author: rwestMSFT
 ms.author: randolphwest
@@ -10,7 +10,7 @@ ms.topic: conceptual
 helpviewer_keywords:
   - "scan for startup procs option"
 ---
-# Configure the scan for startup procs Server Configuration Option
+# Configure the scan for startup procs (server configuration option)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to configure the **scan for startup procs** server configuration option in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Use the **scan for startup procs** option to scan for automatic execution of stored procedures at [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] startup time. If this option is set to 1, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] scans for and runs all automatically run stored procedures that are defined on the server. The default value for **scan for startup procs** is 0 (do not scan).  
@@ -65,7 +65,7 @@ helpviewer_keywords:
 3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) to set the value of the `scan for startup procs` option to `1`.  
   
 ```sql  
-USE AdventureWorks2012 ;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_configure 'show advanced options', 1 ;  
 GO  

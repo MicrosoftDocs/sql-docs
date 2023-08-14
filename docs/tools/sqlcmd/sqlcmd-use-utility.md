@@ -79,13 +79,13 @@ The **sqlcmd** utility is a command-line utility for ad hoc, interactive executi
 - Connecting to the default instance on the local computer by using Windows Authentication, executing a query, and having **sqlcmd** remain running after the query has finished running:
 
     ```cmd
-    sqlcmd -q "SELECT * FROM AdventureWorks2012.Person.Person"
+    sqlcmd -q "SELECT * FROM AdventureWorks2022.Person.Person"
     ```
 
 - Connecting to the default instance on the local computer by using Windows Authentication, executing a query, directing the output to a file, and having **sqlcmd** exit after the query has finished running:
 
     ```cmd
-    sqlcmd -Q "SELECT * FROM AdventureWorks2012.Person.Person" -o MyOutput.txt
+    sqlcmd -Q "SELECT * FROM AdventureWorks2022.Person.Person" -o MyOutput.txt
     ```
 
 - Connecting to a named instance using SQL Server Authentication to interactively run Transact\-SQL statements, with **sqlcmd** prompting for a password:
@@ -155,27 +155,27 @@ Transact\-SQL statements that are entered in an interactive session can be edite
 
  `1> _`
 
- This means you've connected to the instance of SQL Server and `sqlcmd` is now ready to accept Transact\-SQL statements and `sqlcmd` commands. The flashing underscore after the `1>` is the `sqlcmd` prompt that marks the location at which the statements and commands you type will be displayed. Now, type **USE AdventureWorks2012** and press ENTER, and then type **GO** and press ENTER. The contents of the Command Prompt window will be:
+ This means you've connected to the instance of SQL Server and `sqlcmd` is now ready to accept Transact\-SQL statements and `sqlcmd` commands. The flashing underscore after the `1>` is the `sqlcmd` prompt that marks the location at which the statements and commands you type will be displayed. Now, type `USE AdventureWorks2022` and press ENTER, and then type `GO` and press ENTER. The contents of the Command Prompt window will be:
 
  `sqlcmd`
 
- `USE AdventureWorks2012;`
+ `USE AdventureWorks2022;`
 
  `GO`
 
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
 
- `Changed database context to 'AdventureWorks2012'.`
+ `Changed database context to 'AdventureWorks2022'.`
 
  `1> _`
 
- Select ENTER after entering `USE AdventureWorks2012` signaled `sqlcmd` to start a new line. Select ENTER, after you type `GO,` signaled `sqlcmd` to send the `USE AdventureWorks2012` statement to the instance of SQL Server. `sqlcmd` then returned a message to indicate that the `USE` statement completed successfully and displayed a new `1>` prompt as a signal to enter a new statement or command.
+ Select ENTER after entering `USE AdventureWorks2022` signaled `sqlcmd` to start a new line. Select ENTER, after you type `GO,` signaled `sqlcmd` to send the `USE AdventureWorks2022` statement to the instance of SQL Server. `sqlcmd` then returned a message to indicate that the `USE` statement completed successfully and displayed a new `1>` prompt as a signal to enter a new statement or command.
 
  The following example shows what the Command Prompt window contains if you type a `SELECT` statement, a `GO` to execute the `SELECT`, and an `EXIT` to exit `sqlcmd`:
 
  `sqlcmd`
 
- `USE AdventureWorks2012;`
+ `USE AdventureWorks2022;`
 
  `GO`
 
@@ -221,7 +221,7 @@ Transact\-SQL statements that are entered in an interactive session can be edite
 
  Start Notepad, and type the following Transact\-SQL statements:
 
- `USE AdventureWorks2012;`
+ `USE AdventureWorks2022;`
 
  `GO`
 
@@ -237,7 +237,7 @@ Transact\-SQL statements that are entered in an interactive session can be edite
 
  When you view the contents of `MyOutput.txt` in Notepad, you'll see the following:
 
- `Changed database context to 'AdventureWorks2012'.`
+ `Changed database context to 'AdventureWorks2022'.`
 
  `BusinessEntityID FirstName   LastName`
 
@@ -281,7 +281,7 @@ Transact\-SQL statements that are entered in an interactive session can be edite
 
  The following example shows how to execute a stored procedure by using `sqlcmd`. Create the following stored procedure.
 
- `USE AdventureWorks2012;`
+ `USE AdventureWorks2022;`
 
  `IF OBJECT_ID ( ' dbo.ContactEmailAddress, 'P' ) IS NOT NULL`
 
@@ -383,7 +383,7 @@ Transact\-SQL statements that are entered in an interactive session can be edite
 
  The following example shows how XML output is returned unformatted, in a continuous stream.
 
- `C:\>sqlcmd -d AdventureWorks2012`
+ `C:\>sqlcmd -d AdventureWorks2022`
 
  `1> :XML ON`
 

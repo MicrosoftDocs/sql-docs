@@ -103,7 +103,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
  The following example specifies that the **xml** data in the `HumanResources.JobCandidate` table be stored out of row.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_tableoption 'HumanResources.JobCandidate', 'large value types out of row', 1;  
 ```  
@@ -116,9 +116,9 @@ USE master;
 GO  
 -- The database must be enabled for vardecimal storage format  
 -- before a table can be enabled for vardecimal storage format  
-EXEC sp_db_vardecimal_storage_format 'AdventureWorks2012', 'ON';  
+EXEC sp_db_vardecimal_storage_format 'AdventureWorks2022', 'ON';  
 GO  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_tableoption 'Production.WorkOrderRouting',   
    'vardecimal storage format', 'ON';  

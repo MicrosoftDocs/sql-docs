@@ -24,7 +24,7 @@ helpviewer_keywords:
   
 2.  Locate the ReportViewer control in the **Toolbox**. If the **Toolbox** is not visible, you can access it from the **View** menu by selecting **Toolbox**.  
   
-     ![Selecting ReportViewer control](../../reporting-services/application-integration/media/windowsapp-toolboxreportviewer.png "Selecting ReportViewer control")  
+     :::image type="content" source="media/windows-app-toolbox-report-viewer.png" alt-text="Screenshot of selecting ReportViewer control in the Toolbox.":::  
   
 3.  Drag the ReportViewer control onto the design surface of the Windows Form.  
   
@@ -34,11 +34,11 @@ helpviewer_keywords:
   
  If the report you wish to view has been deployed to a report server, select the **\<Server Report>** option from the **Choose Report** drop-down list. After the **\<Server Report>** option is selected, two additional properties appear: **Report Server Url** and **Report Path**. The **Report Server Url** is the address to the report server and the **Report Path** is the full path to the report to render.  
   
- ![Select server report](../../reporting-services/application-integration/media/windowsapp-serverreportsettings.png "Select server report")  
+ :::image type="content" source="media/windows-app-server-report-settings.png" alt-text="Screenshot of selecting server report in the ReportViewer Tasks smart tag.":::  
   
  If the report you wish to view a report in local mode, select either the **Design a new report** option to launch the report designer or select a report that is already part of the existing project.  
   
- ![Select local report](../../reporting-services/application-integration/media/windowsapp-localreportsettings.png "Select local report")  
+ :::image type="content" source="media/windows-app-local-report-settings.png" alt-text="Screenshot of selecting local report in the ReportViewer Tasks smart tag.":::  
   
 ## Viewing Reports in Remote Processing Mode  
  The following example demonstrates how to render a report that has been deployed to a report server using the WinForms ReportViewer control. This example uses the Sales Order Detail report that is included with the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample reports project.  
@@ -145,13 +145,13 @@ End Class
   
 3.  Browse to the location where you installed the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Report Samples project.  
   
-     The download the report samples, go to [AdventureWorks 2012 Report Samples](https://go.microsoft.com/fwlink/?LinkId=404153)  
+     The download the report samples, go to [AdventureWorks Report Samples](https://go.microsoft.com/fwlink/?LinkId=404153)  
   
 4.  Select the Sales Order Detail.rdl file and click the **Add** button.  
   
      The Sales Order Detail.rdl file should now be part of the project.  
   
-     ![Sales Order Detail Report](../../reporting-services/application-integration/media/windowsapp-salesorderdetailreport.png "Sales Order Detail Report")  
+     :::image type="content" source="media/windows-app-sales-order-detail-report.png" alt-text="Screenshot of Sales Order Detail Report in the Solution Explorer.":::  
   
 5.  Right-click the Sales Order Detail.rdl file in Solution Explorer and select **Rename**. Rename the report to **Sales Order Detail.rdlc** and press ENTER.  
   
@@ -162,7 +162,7 @@ End Class
   
 6.  After the report has been renamed, select the file and locate the Properties window. Change the **Copy to Output Directory** property to **Copy if Newer**.  
   
-     ![Configuring Copy To Output setting](../../reporting-services/application-integration/media/windowsapp-copytooutputsetting.png "Configuring Copy To Output setting")  
+     :::image type="content" source="media/windows-app-copy-to-output-setting.png" alt-text="Screenshot of configuring Copy To Output setting in the Properties window.":::  
   
      If the **Properties** window is not visible, you can open it from the **View** menu by selecting **Properties Window**.  
   

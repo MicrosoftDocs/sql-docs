@@ -228,7 +228,7 @@ The KDC logs are available in **/var/log/krb5kdc.log**, by default, which includ
 In Active Directory, the SPNs can be viewed by browsing to Control Panel > Active Directory Users and Computers > *MyRealm* > *MyOrganizationalUnit*. If Kerberos is properly configured on the Hadoop cluster, there is one SPN for each one of the services available (for example: `nn`, `dn`, `rm`, `yarn`, `spnego`, etc.)
 
 ### General debugging tips
-It is helpful to have some java experience to look into the logs and debug the Kerberos issues, which are independent of SQL server PolyBase feature.
+It is helpful to have some java experience to look into the logs and debug the Kerberos issues, which are independent of SQL Server PolyBase feature.
 
 If you are still having issues accessing Kerberos, follow the steps below to debug:
 

@@ -21,9 +21,9 @@ This article describes requirements, limitations and known issues for [!INCLUDE[
 
 For hardware and software requirements, see [SQL Server 2022: Hardware and software requirements](install/hardware-and-software-requirements-for-installing-sql-server-2022.md).
 
-## Feature notes
+## Known issues
 
-This section identifies known issues you may experience with this product.
+This section identifies known issues you may experience with this product. You may also review the Known Issues section of the [Cumulative Update](/troubleshoot/sql/releases/sqlserver-2022/build-versions) articles.
 
 ### SQL Setup
 
@@ -66,15 +66,19 @@ The following features aren't available in Setup in [!INCLUDE[sssql22-md](../inc
     :::column-end:::
 :::row-end:::
 
-#### Reboot requirement
+#### Restart requirement
 
-When you install an initial [!INCLUDE[sssql22-md](../includes/sssql22-md.md)] instance on a Windows Server 2022 machine, if the computer doesn't have `VCRuntime140` version 14.29.30139 or a later version installed, Setup will require a reboot.
+When you install an initial [!INCLUDE[sssql22-md](../includes/sssql22-md.md)] instance on a Windows Server 2022 machine, if the computer doesn't have `VCRuntime140` version 14.29.30139 or a later version installed, Setup will require a restart.
 
 Windows Server 2022 was released with VCRuntime version 14.28.29914.
 
 ### Query Store for secondary replicas
 
 [Query Store for secondary replicas](../relational-databases/performance/query-store-for-secondary-replicas.md) is available for preview. It isn't available for use in production environments.
+
+### Known issues with Parameter Sensitive Plan optimization
+
+If you are using the [Parameter Sensitive Plan optimization](../relational-databases/performance/parameter-sensitive-plan-optimization.md) feature, please review the guidance and mitigation for known issues that  can results in exceptions during query store cleanup process. More information and details is available at [Access violation exception occurs in Query Store in SQL Server 2022 under certain conditions](../relational-databases/performance/parameter-sensitive-plan-optimization.md#access-violation-exception-occurs-in-query-store-in-sql-server-2022-under-certain-conditions).
 
 ### RPC calls fail with `Encrypt=Strict`
 
@@ -88,9 +92,15 @@ An issue in the TDS 8.0 protocol implementation may cause RPC calls to fail if t
 
 **Applies to**: [!INCLUDE[sssql22-md](../includes/sssql22-md.md)] RTM
 
-The fix for this issue will be released in Cumulative Update 1 for [!INCLUDE [sssql22-md](../includes/sssql22-md.md)].
+The fix for this issue is released in [Cumulative Update 1](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate1#1993393) for [!INCLUDE [sssql22-md](../includes/sssql22-md.md)].
 
 To work around this issue, you can use Trace Flag 12324 as either as startup trace flag, or at the session level (using `DBCC TRACEON`).
+
+### SQL Server Agent errors when using contained Availability Group
+
+You might encounter error messages in SQL Server Agent or Database Mail when using contained Availability Group feature of [!INCLUDE [sssql22-md](../includes/sssql22-md.md)].
+
+Review the article [Errors occur after you apply a cumulative update to an instance of SQL Server that has a contained availability group](/troubleshoot/sql/releases/sqlserver-2022/errors-apply-cu-contained-availability-group) for details on addressing the issue.
 
 ### SQL Server services are set to Automatic (Delayed Start) start mode
 
@@ -99,6 +109,12 @@ In [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], setting the **Start Mode*
 ### MSOLEDBSQL19 and linked servers
 
 Currently, MSOLEDBSQL19 prevents the creation of linked servers without encryption and a trusted certificate (a self-signed certificate is insufficient). If linked servers are required, use the existing supported version of MSOLEDBSQL.
+
+### Transaction log growth for databases with In-Memory OLTP
+
+You may notice excessive growth in the transaction log size for databases with the [In-Memory OLTP](../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md) feature enabled. This might be coupled with `XTP_CHECKPOINT` as `log_reuse_wait_desc` in [sys.databases](../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
+
+For more information, review [Transaction log file grows for databases with In-Memory OLTP in SQL Server 2022](/troubleshoot/sql/database-engine/general/transaction-log-file-grows-databases-in-memory-oltp).
 
 ## Build number
 

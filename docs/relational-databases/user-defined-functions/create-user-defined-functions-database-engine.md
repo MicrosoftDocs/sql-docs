@@ -3,7 +3,7 @@ title: "Create User-defined Functions (Database Engine)"
 description: "Create User-defined Functions (Database Engine)"
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "06/28/2022"
+ms.date: "06/29/2023"
 ms.service: sql
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,11 +14,11 @@ helpviewer_keywords:
   - "valid statements [SQL Server]"
   - "UDF"
   - "TVF"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # Create user-defined functions (Database Engine)
 
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This article describes how to create a user-defined function (UDF) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[tsql](../../includes/tsql-md.md)].
 

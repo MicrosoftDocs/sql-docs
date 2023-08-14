@@ -2,8 +2,8 @@
 title: Change automated backup settings
 titleSuffix: Azure SQL Managed Instance
 description: Change point-in-time restore and backup redundancy options for automatic backups in Azure SQL Managed Instance by using the Azure portal, the Azure CLI, Azure PowerShell, and the REST API.
-author: strahinjas 
-ms.author: sstefanovic
+author: Stralle
+ms.author: strrodic
 ms.reviewer: wiassaf, mathoma, danil
 ms.date: 07/20/2022
 ms.service: sql-managed-instance
@@ -24,8 +24,8 @@ Some of the content in this article is duplicated in /azure-sql/database/automat
 --->
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](../database/automated-backups-change-settings.md)
-> * [Azure SQL Managed Instance](automated-backups-change-settings.md)
+> * [Azure SQL Database](../database/automated-backups-change-settings.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](automated-backups-change-settings.md?view=azuresql-mi&preserve-view=true)
 
 This article provides examples to modify [automated backup](automated-backups-overview.md) settings for Azure SQL Managed Instance, such as the short-term retention policy and the backup storage redundancy option that's used for backups. For Azure SQL Database, see [Change automated backup settings for Azure SQL Database](../database/automated-backups-change-settings.md).
 
@@ -153,7 +153,7 @@ Status code: 200
 }
 ```
 
-For more information, see [Backup retention REST API](/rest/api/sql/backupshorttermretentionpolicies).
+For more information, see [Backup retention REST API](/rest/api/sql/2020-08-01-preview/backup-short-term-retention-policies).
 
 ---
 

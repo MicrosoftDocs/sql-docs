@@ -1,9 +1,9 @@
 ---
 title: Import a .bacpac file to create a database in Azure SQL Database
 description: Create a new database in Azure SQL Database or Azure SQL Managed Instance from a .bacpac file.
-author: SudhirRaparla
-ms.author: nvraparl
-ms.reviewer: wiassaf, mathoma
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: jeschult, mathoma
 ms.date: 12/22/2022
 ms.service: sql-db-mi
 ms.subservice: backup-restore
@@ -151,7 +151,7 @@ az sql db import --resource-group "<resourceGroup>" --server "<server>" --name "
 
 ## Cancel the import request
 
-Use the [Database Operations - Cancel API](/rest/api/sql/databaseoperations/cancel)
+Use the [Database Operations - Cancel API](/rest/api/sql/2022-08-01-preview/database-operations/cancel)
 or the [Stop-AzSqlDatabaseActivity](/powershell/module/az.sql/Stop-AzSqlDatabaseActivity) PowerShell command, as in the following example:
 
 ```cmd

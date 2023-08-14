@@ -3,7 +3,7 @@ title: "DB_ID (Transact-SQL)"
 description: "DB_ID (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
-ms.date: "08/13/2019"
+ms.date: "06/19/2023"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -47,7 +47,7 @@ The name of the database whose database ID number `DB_ID` will return. If the ca
 `DB_ID` may only be used to return the database identifier of the current database in Azure SQL Database. NULL is returned if the specified database name is other than the current database.
 
 > [!NOTE]
-> When used with Azure SQL Database, `DB_ID` may not return the same result as querying `database_id` from **sys.databases**. If the caller of `DB_ID` is comparing the result to other **sys** views, then **sys.databases** should be queried instead.
+> In Azure SQL Database, `DB_ID` may not return the same value as the `database_id` column in **sys.databases** and **sys.database_service_objectives**. These two views return `database_id` values that are unique within the logical server, while `DB_ID` and the `database_id` column in other system views return values that are unique within a single database or within an elastic pool.
   
 ## Permissions  
 If the caller of `DB_ID` does not own a specific non-**master** or non-**tempdb** database, `ALTER ANY DATABASE` or `VIEW ANY DATABASE` server-level permissions at minimum are required to see the corresponding `DB_ID` row. For the **master** database, `DB_ID` needs `CREATE DATABASE` permission at minimum. The database to which the caller connects will always appear in **sys.databases**.
@@ -79,8 +79,8 @@ This example uses `DB_ID` to return the database ID of the [!INCLUDE[ssSampleDBo
 ```sql
 DECLARE @db_id INT;  
 DECLARE @object_id INT;  
-SET @db_id = DB_ID(N'AdventureWorks2012');  
-SET @object_id = OBJECT_ID(N'AdventureWorks2012.Person.Address');  
+SET @db_id = DB_ID(N'AdventureWorks2022');  
+SET @object_id = OBJECT_ID(N'AdventureWorks2022.Person.Address');  
 IF @db_id IS NULL   
   BEGIN;  
     PRINT N'Invalid database';  
@@ -106,7 +106,7 @@ SELECT DB_ID();
 ```  
   
 ### E. Return the ID of a named database.  
-This example returns the database ID of the AdventureWorksDW2012 database.
+This example returns the database ID of the AdventureWorksDW2022 database.
   
 ```sql
 SELECT DB_ID('AdventureWorksPDW2012');  

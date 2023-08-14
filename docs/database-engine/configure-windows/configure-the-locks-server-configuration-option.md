@@ -1,5 +1,5 @@
 ---
-title: "Configure the locks Server Configuration Option"
+title: "Configure the locks (server configuration option)"
 description: Learn about the locks option. See how to use it to limit the amount of memory that the SQL Server Database Engine uses for locks.
 author: rwestMSFT
 ms.author: randolphwest
@@ -10,7 +10,7 @@ ms.topic: conceptual
 helpviewer_keywords:
   - "locks option [SQL Server]"
 ---
-# Configure the locks Server Configuration Option
+# Configure the locks (server configuration option)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to configure the **locks** server configuration option in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **locks** option sets the maximum number of available locks, thereby limiting the amount of memory the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] uses for them. The default setting is 0, which allows the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to allocate and deallocate lock structures dynamically, based on changing system requirements.  
@@ -76,7 +76,7 @@ helpviewer_keywords:
 3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) to set the value of the `locks` option to set the number of locks available for all users to `20000`.  
   
 ```sql  
-Use AdventureWorks2012 ;  
+USE AdventureWorks2022;  
 GO  
 sp_configure 'show advanced options', 1;  
 GO  

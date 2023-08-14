@@ -21,7 +21,11 @@ dev_langs:
 # Change Data Capture - sys.dm_cdc_log_scan_sessions
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-  Returns one row for each log scan session in the current database. The last row returned represents the current session. You can use this view to return status information about the current log scan session, or aggregated information about all sessions since the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] was last started. For more information, see [What is change data capture (CDC)?](../track-changes/about-change-data-capture-sql-server.md)
+  Returns one row for each log scan session in the current database. The last row returned represents the current session. You can use this view to return status information about the current log scan session, or aggregated information about all sessions since the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] was last started. 
+  
+  The records in `sys.dm_cdc_log_scan_sessions` are reset whenever the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is restarted or after a failover occurs. Additionally, if the queried database is in the secondary role of an Always On availability group, then no records are returned.
+  
+  For more information, review [What is change data capture (CDC)?](../track-changes/about-change-data-capture-sql-server.md)
    
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -49,9 +53,7 @@ dev_langs:
   
 ## Remarks  
 
-The `sys.dm_cdc_log_scan_sessions` can contain up to 32 scan sessions and an aggregate of all the scan sessions with `session_id= 0`. So, at any given time, this dynamic management view can contain a maximum of 33 rows.
-
- The values in this dynamic management view are reset whenever the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is restarted or a failover (local & GeoDR) occurs.  
+The `sys.dm_cdc_log_scan_sessions` DMV contains up to 32 scan sessions and an aggregate of all the scan sessions with `session_id= 0`. So, at any given time, this dynamic management view can contain a maximum of 33 rows. 
   
 ## Permissions  
  Requires VIEW DATABASE STATE permission to query the `sys.dm_cdc_log_scan_sessions` dynamic management view. For more information about permissions on dynamic management views, see [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
@@ -64,7 +66,7 @@ Requires VIEW DATABASE PERFORMANCE STATE permission on the database.
  The following example returns information for the most current session.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT session_id, start_time, end_time, duration, scan_phase,  
     error_count, start_lsn, current_lsn, end_lsn, tran_count,  

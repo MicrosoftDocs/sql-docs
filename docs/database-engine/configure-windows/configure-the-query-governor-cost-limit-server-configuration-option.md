@@ -1,5 +1,5 @@
 ---
-title: "Configure the query governor cost limit Server Configuration Option"
+title: "Configure the query governor cost limit (server configuration option)"
 description: Learn about the query governor cost limit option. See how to use it to limit execution of queries.
 author: rwestMSFT
 ms.author: randolphwest
@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "query governor cost limit option [SQL Server]"
   - "time [SQL Server], query run time"
 ---
-# Configure the query governor cost limit Server Configuration Option
+# Configure the query governor cost limit (server configuration option)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This topic describes how to configure the **query governor cost limit** server configuration option in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The cost limit option specifies an upper limit on the estimated cost allowed for a given query to run. Query cost is an abstract figure determined by the query optimizer based on estimated execution requirements such as CPU time, memory, and disk IO. It refers to the estimated elapsed time, in seconds, that would be required to complete a query on a specific hardware configuration. This abstract figure does not equate to the time required to complete a query on the running instance. It should be treated as a relative measure. The default value for this option is 0, which sets the query governor to off. Setting the value to 0 allows all queries to run without any time limitation. If you specify a nonzero, nonnegative value, the query governor disallows execution of any query that has an estimated cost that exceeds that value.   
@@ -69,7 +69,7 @@ This topic describes how to configure the **query governor cost limit** server c
 3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) to set the value of the `query governor cost limit` option to a estimated query cost upper limit of `120`.
   
 ```sql  
-USE AdventureWorks2012 ;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_configure 'show advanced options', 1;  
 GO  

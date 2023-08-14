@@ -18,12 +18,12 @@ helpviewer_keywords:
   - "binary [SQL Server], about binary data type"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 
 # binary and varbinary (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
 Binary data types of either fixed length or variable length.
 
@@ -93,6 +93,10 @@ The final result is `57921`, not `123457`.
 
 > [!NOTE]  
 > Conversions between any data type and the **binary** data types are not guaranteed to be the same between versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+
+## Limitations
+
+Currently, in [!INCLUDE [fabric](../../includes/fabric.md)], only varbinary(*n*) is supported. The binary and varbinary(max) data types are not supported.
 
 ## See also
 

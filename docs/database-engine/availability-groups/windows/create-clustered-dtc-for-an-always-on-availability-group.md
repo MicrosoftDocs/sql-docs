@@ -61,7 +61,7 @@ foreach ($node in $nodes) {
 
     # At least 2012 R2
     $os = (Get-WmiObject -class Win32_OperatingSystem -ComputerName $node).caption;
-    IF($os -like "*2012 R2*" -or $os -like "*2016*")
+    IF($os -like "*2012 R2*" -or $os -like "*2016*" -or $os -like "*2019*" -or $os -like "*2022*")
     {
         Write-Host "$os is supported on $node.";
     }

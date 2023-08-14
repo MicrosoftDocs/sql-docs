@@ -6,6 +6,7 @@ ms.author: vanto
 ms.date: 06/25/2020
 ms.service: virtual-machines-sql
 ms.subservice: hadr
+ms.custom: devx-track-azurecli
 ms.topic: tutorial
 ---
 # Tutorial: Configure availability groups for SQL Server on RHEL virtual machines in Azure 
@@ -336,7 +337,7 @@ In this section, we will enable and start the pcsd service, and then configure t
 
 ### Enable and start pcsd service and Pacemaker
 
-1. Run the commands on all nodes. These commands allow the nodes to rejoin the cluster after reboot.
+1. Run the commands on all nodes. These commands allow the nodes to rejoin the cluster after each node restarts.
 
     ```bash
     sudo systemctl enable pcsd

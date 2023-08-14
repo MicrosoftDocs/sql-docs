@@ -16,10 +16,10 @@ helpviewer_keywords:
   - "sys.sql_expression_dependencies catalog view"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # sys.sql_expression_dependencies (Transact-SQL)
-[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
   Contains one row for each by-name dependency on a user-defined entity in the current database. This includes dependences between natively compiled, scalar user-defined functions and other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] modules. A dependency between two entities is created when one entity, called the *referenced entity*, appears by name in a persisted SQL expression of another entity, called the *referencing entity*. For example, when a table is referenced in the definition of a view, the view, as the referencing entity, depends on the table, the referenced entity. If the table is dropped, the view is unusable.  
   
@@ -97,7 +97,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-ser
  The following example returns the tables and columns referenced in the view `Production.vProductAndDescription`. The view depends on the entities (tables and columns) returned in the `referenced_entity_name` and `referenced_column_name` columns.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT OBJECT_NAME(referencing_id) AS referencing_entity_name,   
     o.type_desc AS referencing_description,   
@@ -118,7 +118,7 @@ GO
  The following example returns the entities that reference the table `Production.Product`. The entities returned in the `referencing_entity_name` column depend on the `Product` table.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT OBJECT_SCHEMA_NAME ( referencing_id ) AS referencing_schema_name,  
     OBJECT_NAME(referencing_id) AS referencing_entity_name,   

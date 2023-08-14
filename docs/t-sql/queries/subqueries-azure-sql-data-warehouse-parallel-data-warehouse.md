@@ -1,20 +1,20 @@
 ---
 title: Subqueries
 titleSuffix: "Azure Synapse Analytics"
-description: Subqueries in Azure Synapse Analytics and Parallel Data Warehouse
+description: Subqueries in Azure Synapse Analytics, Parallel Data Warehouse, Microsoft Fabric.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/03/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest ||=fabric"
 ---
 
-# Subqueries (Azure Synapse Analytics, Parallel Data Warehouse)
-[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
+# Subqueries
+[!INCLUDE[applies-to-version/asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/asa-pdw-fabricse-fabricdw.md)]
 
-This topic gives examples of using subqueries in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+This topic gives examples of using subqueries in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], or [!INCLUDE [fabric](../../includes/fabric.md)].  
   
 For the SELECT statement, see [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
   

@@ -30,7 +30,7 @@ ms.topic: include
    sudo passwd hacluster
    ```
 
-1. To allow nodes to rejoin the cluster after the reboot, enable and start `pcsd` service and Pacemaker. Run the following command on all nodes.
+1. To allow nodes to rejoin the cluster after the restart, enable and start `pcsd` service and Pacemaker. Run the following command on all nodes.
 
    ```bash
    sudo systemctl enable pcsd

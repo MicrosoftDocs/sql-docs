@@ -110,7 +110,7 @@ Requires ALTER permission on the object and CONTROL permission on the certificat
  The following example signs the stored procedure `HumanResources.uspUpdateEmployeeLogin` with the certificate `HumanResourcesDP`.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 ADD SIGNATURE TO HumanResources.uspUpdateEmployeeLogin   
     BY CERTIFICATE HumanResourcesDP;  
 GO  

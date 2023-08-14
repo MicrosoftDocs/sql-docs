@@ -3,7 +3,7 @@ title: "RESTORE (Transact-SQL)"
 description: RESTORE Statements restore SQL database backups taken using the BACKUP command.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: 10/12/2022
+ms.date: 05/18/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -78,7 +78,7 @@ This command enables you to perform the following restore scenarios:
  - For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restore scenarios, see [Restore and Recovery Overview](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md). 
  - When restoring a database from another instance, consider the information from [Manage Metadata When Making a Database Available on Another Server Instance (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).
  - For more information about restoring from the Microsoft Azure Blob Storage, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).
- - For more information about restoring from S3-compatible object storage, see [SQL Server backup and restore with S3-compatible object storage preview](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-s3-compatible-object-storage.md). For more information, see [SQL Server backup to URL for S3-compatible object storage](../../relational-databases/backup-restore/sql-server-backup-to-url-s3-compatible-object-storage.md). Backup and restore to S3-compatible object storage was introduced in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
+ - Backup and restore to S3-compatible object storage was introduced in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. For more information about restoring from S3-compatible object storage, see [SQL Server backup and restore with S3-compatible object storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-s3-compatible-object-storage.md). Also review the option for [SQL Server backup to URL for S3-compatible object storage](../../relational-databases/backup-restore/sql-server-backup-to-url-s3-compatible-object-storage.md). 
 
 ## Syntax
 
@@ -98,7 +98,7 @@ RESTORE DATABASE { database_name | @database_name_var }
    | , <change_data_capture_WITH_option>
    | , <FILESTREAM_WITH_option>
    | , <service_broker_WITH options>
-   | , \<point_in_time_WITH_options-RESTORE_DATABASE>
+   | , <point_in_time_WITH_options-RESTORE_DATABASE>
    } [ ,...n ]
  ]
 [;]
@@ -110,7 +110,7 @@ RESTORE DATABASE { database_name | @database_name_var }
    WITH
       PARTIAL, NORECOVERY
       [  , <general_WITH_options> [ ,...n ]
-       | , \<point_in_time_WITH_options-RESTORE_DATABASE>
+       | , <point_in_time_WITH_options-RESTORE_DATABASE>
       ] [ ,...n ]
 [;]
   
@@ -146,7 +146,7 @@ RESTORE LOG { database_name | @database_name_var }
        ]
     | , <general_WITH_options> [ ,...n ]
     | , <replication_WITH_option>
-    | , \<point_in_time_WITH_options-RESTORE_LOG>
+    | , <point_in_time_WITH_options-RESTORE_LOG>
    } [ ,...n ]
  ]
 [;]
@@ -220,7 +220,7 @@ FROM DATABASE_SNAPSHOT = database_snapshot_name
  | ERROR_BROKER_CONVERSATIONS
  | NEW_BROKER
 
-\<point_in_time_WITH_options-RESTORE_DATABASE>::=
+<point_in_time_WITH_options-RESTORE_DATABASE>::=
  | {
    STOPAT = { 'datetime'| @datetime_var }
  | STOPATMARK = 'lsn:lsn_number'
@@ -229,7 +229,7 @@ FROM DATABASE_SNAPSHOT = database_snapshot_name
                  [ AFTER 'datetime']
    }
 
-\<point_in_time_WITH_options-RESTORE_LOG>::=
+<point_in_time_WITH_options-RESTORE_LOG>::=
  | {
    STOPAT = { 'datetime'| @datetime_var }
  | STOPATMARK = { 'mark_name' | 'lsn:lsn_number' }
@@ -363,7 +363,7 @@ URL is the format used to specify the location and the file name for Microsoft A
 
 - For more information about restoring from the Microsoft Azure Blob Storage, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).
 
-- For more information about restoring from S3-compatible object storage, see [SQL Server backup and restore with S3-compatible object storage preview](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-s3-compatible-object-storage.md). For more information, see [SQL Server backup to URL for S3-compatible object storage](../../relational-databases/backup-restore/sql-server-backup-to-url-s3-compatible-object-storage.md). Backup and restore to S3-compatible storage was introduced in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
+ - Backup and restore to S3-compatible object storage was introduced in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. For more information about restoring from S3-compatible object storage, see [SQL Server backup and restore with S3-compatible object storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-s3-compatible-object-storage.md). Also review the option for [SQL Server backup to URL for S3-compatible object storage](../../relational-databases/backup-restore/sql-server-backup-to-url-s3-compatible-object-storage.md). 
 
 ## Interoperability
 
@@ -453,7 +453,7 @@ A backup operation may optionally specify passwords for a media set, a backup se
 
 - For information specific to SQL Server backup and restore with the Microsoft Azure Blob Storage, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).
 
-- Backup and restore to S3-compatible object storage was introduced in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. [SQL Server backup and restore with S3-compatible object storage preview](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-s3-compatible-object-storage.md). For more information, see [SQL Server backup to URL for S3-compatible object storage](../../relational-databases/backup-restore/sql-server-backup-to-url-s3-compatible-object-storage.md).
+ - Backup and restore to S3-compatible object storage was introduced in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. For more information about restoring from S3-compatible object storage, see [SQL Server backup and restore with S3-compatible object storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-s3-compatible-object-storage.md). Also review the option for [SQL Server backup to URL for S3-compatible object storage](../../relational-databases/backup-restore/sql-server-backup-to-url-s3-compatible-object-storage.md). 
 
 ### Permissions
 
@@ -488,8 +488,8 @@ The RESTORE examples include the following:
 The following example restores a full database backup from the `AdventureWorksBackups` logical backup device. For an example of creating this device, see [Backup Devices](../../relational-databases/backup-restore/backup-devices-sql-server.md).
 
 ```sql
-RESTORE DATABASE AdventureWorks2012
-  FROM AdventureWorks2012Backups;
+RESTORE DATABASE AdventureWorks2022
+  FROM AdventureWorks2022Backups;
 ```
 
 > [!NOTE]  
@@ -499,16 +499,16 @@ RESTORE DATABASE AdventureWorks2012
 
 ### <a id="restoring_full_n_differential_db_backups"></a> B. Restore full and differential database backups
 
-The following example restores a full database backup followed by a differential backup from the `Z:\SQLServerBackups\AdventureWorks2012.bak` backup device, which contains both backups. The full database backup to be restored is the sixth backup set on the device (`FILE = 6`), and the differential database backup is the ninth backup set on the device (`FILE = 9`). As soon as the differential backup is recovered, the database is recovered.
+The following example restores a full database backup followed by a differential backup from the `Z:\SQLServerBackups\AdventureWorks2022.bak` backup device, which contains both backups. The full database backup to be restored is the sixth backup set on the device (`FILE = 6`), and the differential database backup is the ninth backup set on the device (`FILE = 9`). As soon as the differential backup is recovered, the database is recovered.
 
 ```sql
-RESTORE DATABASE AdventureWorks2012
-    FROM DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak'
-    WITH FILE = 6
+RESTORE DATABASE AdventureWorks2022
+    FROM DISK = 'Z:\SQLServerBackups\AdventureWorks2022.bak'
+    WITH FILE = 6,
       NORECOVERY;
-RESTORE DATABASE AdventureWorks2012
-    FROM DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak'
-    WITH FILE = 9
+RESTORE DATABASE AdventureWorks2022
+    FROM DISK = 'Z:\SQLServerBackups\AdventureWorks2022.bak'
+    WITH FILE = 9,
       RECOVERY;
 ```
 
@@ -520,10 +520,10 @@ The following example uses the `RESTART` option to restart a `RESTORE` operation
 
 ```sql
 -- This database RESTORE halted prematurely due to power failure.
-RESTORE DATABASE AdventureWorks2012
+RESTORE DATABASE AdventureWorks2022
     FROM AdventureWorksBackups;
 -- Here is the RESTORE RESTART operation.
-RESTORE DATABASE AdventureWorks2012
+RESTORE DATABASE AdventureWorks2022
     FROM AdventureWorksBackups WITH RESTART;
 ```
 
@@ -534,14 +534,14 @@ RESTORE DATABASE AdventureWorks2012
 The following example restores a full database and transaction log and moves the restored database into the `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data` directory.
 
 ```sql
-RESTORE DATABASE AdventureWorks2012
+RESTORE DATABASE AdventureWorks2022
     FROM AdventureWorksBackups
     WITH NORECOVERY,
-      MOVE 'AdventureWorks2012_Data' TO
+      MOVE 'AdventureWorks2022_Data' TO
 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\NewAdvWorks.mdf',
-      MOVE 'AdventureWorks2012_Log'
+      MOVE 'AdventureWorks2022_Log'
 TO 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\NewAdvWorks.ldf';
-RESTORE LOG AdventureWorks2012
+RESTORE LOG AdventureWorks2022
     FROM AdventureWorksBackups
     WITH RECOVERY;
 ```
@@ -553,7 +553,7 @@ RESTORE LOG AdventureWorks2012
 The following example uses both the `BACKUP` and `RESTORE` statements to make a copy of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. The `MOVE` statement causes the data and log file to be restored to the specified locations. The `RESTORE FILELISTONLY` statement is used to determine the number and names of the files in the database being restored. The new copy of the database is named `TestDB`. For more information, see [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).
 
 ```sql
-BACKUP DATABASE AdventureWorks2012
+BACKUP DATABASE AdventureWorks2022
     TO AdventureWorksBackups ;
 
 RESTORE FILELISTONLY
@@ -561,8 +561,8 @@ RESTORE FILELISTONLY
 
 RESTORE DATABASE TestDB
     FROM AdventureWorksBackups
-    WITH MOVE 'AdventureWorks2012_Data' TO 'C:\MySQLServer\testdb.mdf',
-    MOVE 'AdventureWorks2012_Log' TO 'C:\MySQLServer\testdb.ldf';
+    WITH MOVE 'AdventureWorks2022_Data' TO 'C:\MySQLServer\testdb.mdf',
+    MOVE 'AdventureWorks2022_Log' TO 'C:\MySQLServer\testdb.ldf';
 GO
 ```
 
@@ -573,18 +573,18 @@ GO
 The following example restores a database to its state as of `12:00 AM` on `April 15, 2020` and shows a restore operation that involves multiple log backups. On the backup device, `AdventureWorksBackups`, the full database backup to be restored is the third backup set on the device (`FILE = 3`), the first log backup is the fourth backup set (`FILE = 4`), and the second log backup is the fifth backup set (`FILE = 5`).
 
 ```sql
-RESTORE DATABASE AdventureWorks2012
+RESTORE DATABASE AdventureWorks2022
     FROM AdventureWorksBackups
-    WITH FILE=3, NORECOVERY;
+    WITH FILE = 3, NORECOVERY;
   
-RESTORE LOG AdventureWorks2012
+RESTORE LOG AdventureWorks2022
     FROM AdventureWorksBackups
-    WITH FILE=4, NORECOVERY, STOPAT = 'Apr 15, 2020 12:00 AM';
+    WITH FILE = 4, NORECOVERY, STOPAT = 'Apr 15, 2020 12:00 AM';
   
-RESTORE LOG AdventureWorks2012
+RESTORE LOG AdventureWorks2022
     FROM AdventureWorksBackups
-    WITH FILE=5, NORECOVERY, STOPAT = 'Apr 15, 2020 12:00 AM';
-RESTORE DATABASE AdventureWorks2012 WITH RECOVERY;
+    WITH FILE = 5, NORECOVERY, STOPAT = 'Apr 15, 2020 12:00 AM';
+RESTORE DATABASE AdventureWorks2022 WITH RECOVERY;
 ```
 
 [&#91;Top of examples&#93;](#examples)
@@ -594,7 +594,7 @@ RESTORE DATABASE AdventureWorks2012 WITH RECOVERY;
 The following example restores the transaction log to the mark in the marked transaction named `ListPriceUpdate`.
 
 ```sql
-USE AdventureWorks2012
+USE AdventureWorks2022;
 GO
 BEGIN TRANSACTION ListPriceUpdate
     WITH MARK 'UPDATE Product list prices';
@@ -614,12 +614,12 @@ GO
 USE master;
 GO
 
-RESTORE DATABASE AdventureWorks2012
+RESTORE DATABASE AdventureWorks2022
 FROM AdventureWorksBackups
 WITH FILE = 3, NORECOVERY;
 GO
 
-RESTORE LOG AdventureWorks2012
+RESTORE LOG AdventureWorks2022
   FROM AdventureWorksBackups
     WITH FILE = 4,
     RECOVERY,
@@ -633,7 +633,7 @@ RESTORE LOG AdventureWorks2012
 The following example restores a full database backup from a `TAPE` backup device.
 
 ```sql
-RESTORE DATABASE AdventureWorks2012
+RESTORE DATABASE AdventureWorks2022
     FROM TAPE = '\\.\tape0';
 ```
 
@@ -643,12 +643,12 @@ RESTORE DATABASE AdventureWorks2012
 
 The following example restores a database named `MyDatabase` that has two files, one secondary filegroup, and one transaction log. The database uses the full recovery model.
 
-The database backup is the ninth backup set in the media set on a logical backup device named `MyDatabaseBackups`. Next, three log backups, which are in the next three backup sets (`10`, `11`, and `12`) on the `MyDatabaseBackups` device, are restored by using `WITH NORECOVERY`. After restoring the last log backup, the database is recovered.
+The database backup is the ninth backup set in the media set on a logical backup device named `MyDatabaseBackups`. Next, three log backups, which are in the next three backup sets (`10`, `11`, and `12`) on the `MyDatabaseBackups` device, are restored by using `WITH NORECOVERY`. After the last log backup is restored with `NORECOVERY`, the database is recovered.
 
 > [!NOTE]  
 > Recovery is performed as a separate step to reduce the possibility of you recovering too early, before all of the log backups have been restored. For more information about the recovery process, see [Restore and Recovery Overview (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
 
-In the `RESTORE DATABASE`, notice that there are two types of `FILE` options. The `FILE` options preceding the backup device name specify the logical file names of the database files that are to be restored from the backup set; for example, `FILE = 'MyDatabase_data_1'`. This backup set is not the first database backup in the media set; therefore, its position in the media set is indicated by using the `FILE` option in the `WITH` clause, `FILE=9`.
+In the `RESTORE DATABASE`, notice that there are two types of `FILE` options. The `FILE` options preceding the backup device name specify the logical file names of the database files that are to be restored from the backup set; for example, `FILE = 'MyDatabase_data_1'`. This backup set is not the first database backup in the media set; therefore, its position in the media set is indicated by using the `FILE` option in the `WITH` clause, `FILE = 9`.
 
 ```sql
 RESTORE DATABASE MyDatabase
@@ -692,7 +692,7 @@ The following example reverts a database to a database snapshot. The example ass
 
 ```sql
 USE master;
-RESTORE DATABASE AdventureWorks2012 FROM DATABASE_SNAPSHOT = 'AdventureWorks_dbss1800';
+RESTORE DATABASE AdventureWorks2022 FROM DATABASE_SNAPSHOT = 'AdventureWorks_dbss1800';
 GO
 ```
 
@@ -868,9 +868,9 @@ These limitations apply:
 - .BAK files containing multiple log files cannot be restored.
 - Restore will fail if .bak contains FILESTREAM data.
 - Backups containing databases that have active In-memory objects cannot be restored to a General Purpose performance tier.
-- Backups containing databases in read-only mode cannot currently be restored. This limitation will be removed soon.
+- Backups containing databases in read-only mode cannot currently be restored. 
 
-For more information, see [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance)
+For more information, see [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview)
 
 ## Restore an encrypted database
 

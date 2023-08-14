@@ -52,7 +52,7 @@ helpviewer_keywords:
   
  The following is an example connection string, where the [AvailabilityGroupListenerName] is the **Listener DNS Name** that was configured when replicas were created:  
   
- `Data Source=[AvailabilityGroupListenerName];Initial Catalog = AdventureWorks2016; ApplicationIntent=ReadOnly`  
+ `Data Source=[AvailabilityGroupListenerName];Initial Catalog = AdventureWorks2022; ApplicationIntent=ReadOnly`  
   
  The **Test Connection** button in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] user interfaces will validate if a connection can be established but it will not validate AG configuration. For example if you include ApplicationIntent in a connection string to a server that is not part of AG, the extra parameter is ignored and the **Test Connection** button will only validate a connection can be established to the specified server.  
   

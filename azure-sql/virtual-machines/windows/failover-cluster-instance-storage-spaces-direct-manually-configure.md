@@ -8,9 +8,7 @@ ms.date: 11/10/2021
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: how-to
-ms.custom:
-  - na
-  - devx-track-azurepowershell
+ms.custom: na
 editor: monicar
 tags: azure-service-management
 ---

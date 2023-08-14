@@ -4,7 +4,7 @@ description: SQL Server provides several roles that are security principals that
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: "andreas.wolter"
-ms.date: 12/16/2021
+ms.date: 07/31/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
@@ -41,9 +41,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-To easily manage the permissions in your databases, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provides several *roles that are security principals that group other principals. They are like ***groups*** in the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows operating system. Database-level roles are database-wide in their permissions scope.  
+To easily manage the permissions in your databases, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provides several roles that are security principals that group other principals. They are like ***groups*** in the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows operating system. Database-level roles are database-wide in their permissions scope.  
 
-To add and remove users to a database role, use the `ADD MEMBER` and `DROP MEMBER` options of the [ALTER ROLE](../../../t-sql/statements/alter-role-transact-sql.md) statement. [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] and Azure Synapse doesn't support this use of `ALTER ROLE`. Use the older [sp_addrolemember](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) and [sp_droprolemember](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) procedures instead.
+To add and remove users to a database role, use the `ADD MEMBER` and `DROP MEMBER` options of the [ALTER ROLE](../../../t-sql/statements/alter-role-transact-sql.md) statement. [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] and Azure Synapse Analytics doesn't support the use of `ALTER ROLE`. Use the older [sp_addrolemember](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) and [sp_droprolemember](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) procedures instead.
   
 There are two types of database-level roles: *fixed-database roles* that are predefined in the database and *user-defined database roles* that you can create.  
   
@@ -56,44 +56,45 @@ You can add any database account and other [!INCLUDE[ssNoVersion](../../../inclu
 
 The permissions of user-defined database roles can be customized by using the [GRANT](../../../t-sql/statements/grant-transact-sql.md), [DENY](../../../t-sql/statements/deny-transact-sql.md), and [REVOKE](../../../t-sql/statements/revoke-transact-sql.md) statements. For more information, see [Permissions (Database Engine)](../../../relational-databases/security/permissions-database-engine.md).
 
-For a list of all the permissions, see the [Database Engine Permissions](https://aka.ms/sql-permissions-poster) poster. Server-level permissions cannot be granted to database roles. Logins and other server-level principals (such as server roles) cannot be added to database roles. For server-level security in [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)], use [server roles](../../../relational-databases/security/authentication-access/server-level-roles.md) instead. Server-level permissions cannot be granted through roles in [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] and Azure Synapse.
+For a list of all the permissions, see the [Database Engine Permissions](https://aka.ms/sql-permissions-poster) poster. Server-level permissions can't be granted to database roles. Logins and other server-level principals (such as server roles) can't be added to database roles. For server-level security in [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)], use [server roles](../../../relational-databases/security/authentication-access/server-level-roles.md) instead. Server-level permissions can't be granted through roles in Azure SQL Database and Azure Synapse Analytics.
 
 ## Fixed-database roles
   
- The following table shows the fixed-database roles and their capabilities. These roles exist in all databases. Except for the **public** database role, the permissions assigned to the fixed-database roles cannot be changed.   
+The following table shows the fixed-database roles and their capabilities. These roles exist in all databases. Except for the **public** database role, the permissions assigned to the fixed-database roles can't be changed.
   
 |Fixed-Database role name|Description|  
 |-------------------------------|-----------------|  
-|**db_owner**|Members of the **db_owner** fixed database role can perform all configuration and maintenance activities on the database, and can also `drop` the database in [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]. (In [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] and Azure Synapse, some maintenance activities require server-level permissions and cannot be performed by **db_owners**.)|  
+|**db_owner**|Members of the **db_owner** fixed database role can perform all configuration and maintenance activities on the database, and can also `drop` the database in [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]. (In [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] and Azure Synapse, some maintenance activities require server-level permissions and can't be performed by **db_owners**.)|  
 |**db_securityadmin**|Members of the **db_securityadmin** fixed database role can modify role membership for custom roles only and manage permissions. Members of this role can potentially elevate their privileges and their actions should be monitored.|  
 |**db_accessadmin**|Members of the **db_accessadmin** fixed database role can add or remove access to the database for Windows logins, Windows groups, and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] logins.|  
 |**db_backupoperator**|Members of the **db_backupoperator** fixed database role can back up the database.|  
 |**db_ddladmin**|Members of the **db_ddladmin** fixed database role can run any Data Definition Language (DDL) command in a database. Members of this role can potentially elevate their privileges by manipulating code that may get executed under high privileges and their actions should be monitored.|  
 |**db_datawriter**|Members of the **db_datawriter** fixed database role can add, delete, or change data in all user tables. In most use cases this role will be combined with **db_datareader** membership to allow reading the data that is to be modified.|  
 |**db_datareader**|Members of the **db_datareader** fixed database role can read all data from all user tables and views. User objects can exist in any schema except *sys* and *INFORMATION_SCHEMA*. |  
-|**db_denydatawriter**|Members of the **db_denydatawriter** fixed database role cannot add, modify, or delete any data in the user tables within a database.|  
-|**db_denydatareader**|Members of the **db_denydatareader** fixed database role cannot read any data from the user tables and views within a database.|  
+|**db_denydatawriter**|Members of the **db_denydatawriter** fixed database role can't add, modify, or delete any data in the user tables within a database.|  
+|**db_denydatareader**|Members of the **db_denydatareader** fixed database role can't read any data from the user tables and views within a database.|  
 
-The permissions assigned to the fixed-database roles cannot be changed. The following figure shows the permissions assigned to the fixed-database roles:
+The permissions assigned to the fixed-database roles can't be changed. The following figure shows the permissions assigned to the fixed-database roles:
 
 ![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-database-roles.png)
 
 ## Special roles for [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] and Azure Synapse
 
-These database roles exist only in the virtual master database. Their permissions are restricted to actions performed in master. Only database users in master can be added to these roles. Logins cannot be added to these roles, but users can be created based on logins and then those users can be added to the roles. Contained database users in master can also be added to these roles. However, contained database users added to the **dbmanager** role in master cannot be used to create new databases.
+These database roles exist only in the virtual `master` database. Their permissions are restricted to actions performed in `master`. Only database users in `master` can be added to these roles. Logins can't be added to these roles, but users can be created based on logins and then those users can be added to the roles. Contained database users in `master` can also be added to these roles. However, contained database users added to the **dbmanager** role in `master` can't be used to create new databases.
 
 |Role name|Description|  
 |--------------------|-----------------|
 |**dbmanager** | Can create and delete databases. A member of the dbmanager role that creates a database, becomes the owner of that database, which allows that user to connect to that database as the dbo user. The dbo user has all database permissions in the database. Members of the dbmanager role don't necessarily have permission to access databases that they don't own.|
 |**db_exporter** | *Applies only to Azure Synapse Analytics dedicated SQL pools (formerly SQL DW).*<BR>Members of the **db_exporter** fixed database role can perform all data export activities. Permissions granted via this role are CREATE TABLE, ALTER ANY SCHEMA, ALTER ANY EXTERNAL DATA SOURCE, ALTER ANY EXTERNAL FILE FORMAT. |
-|**loginmanager** | Can create and delete logins in the virtual master database.|
+|**loginmanager** | Can create and delete logins in the virtual `master` database.|
 
 > [!NOTE]
-> The server-level principal and the Azure Active Directory Administrator (if configured) have all permissions in the [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] and Azure Synapse without needing to be members of any roles. For more information, see [SQL Database Authentication and Authorization: Granting Access](/azure/azure-sql/database/logins-create-manage). 
+> The server-level principal and the Azure Active Directory administrator (if configured) have all permissions in [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] and Azure Synapse Analytics without needing to be members of any roles. For more information, see [SQL Database Authentication and Authorization: Granting Access](/azure/azure-sql/database/logins-create-manage).
 
 Some database roles aren't applicable to Azure SQL or Azure Synapse:
-- **db_backupoperator** is not applicable in Azure SQL database (not managed instance) and Azure Synapse serverless pool because backup and restore T-SQL commands are not available.
-- **db_datawriter** and **db_denydatawriter** are not applicable to Azure Synapse serverless because it just reads external data.
+
+- **db_backupoperator** isn't applicable in Azure SQL Database (not Azure SQL Managed Instance) and Azure Synapse Analytics serverless pool because backup and restore T-SQL commands aren't available.
+- **db_datawriter** and **db_denydatawriter** aren't applicable to Azure Synapse Analytics serverless because it just reads external data.
   
 ## msdb roles  
  The msdb database contains the special-purpose roles that are shown in the following table.  
@@ -133,7 +134,7 @@ Some database roles aren't applicable to Azure SQL or Azure Synapse:
 
 ## Public database role
 
-Every database user belongs to the **public** database role. When a user hasn't been granted or denied specific permissions on a securable object, the user inherits the permissions granted to **public** on that object. Database users cannot be removed from the **public** role. 
+Every database user belongs to the **public** database role. When a user hasn't been granted or denied specific permissions on a securable object, the user inherits the permissions granted to **public** on that object. Database users can't be removed from the **public** role.
 
 ## <a name="_examples"></a> Examples
 

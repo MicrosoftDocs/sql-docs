@@ -1,26 +1,27 @@
 ---
-title: "Quickstart: Back up & restore database"
+title: "Quickstart: Back up & restore database with SSMS"
 titleSuffix: SQL Server
-description: In this article, learn how to create a new database, take a backup of the database, and restore the backup in SQL Server.
+description: In this article, learn how to create a new database, take a backup of the database, and restore the backup in SQL Server using SSMS
 author: MashaMSFT
 ms.author: mathoma
-ms.reviewer: randolphwest
-ms.date: 03/03/2022
+ms.reviewer: randolphwest, markingmyname
+ms.date: 08/04/2023
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: conceptual
 ---
-# Quickstart: Backup and restore a SQL Server database on-premises
+
+# Quickstart: Backup and restore a SQL Server database with SSMS
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-In this quickstart, you'll create a new database, take a full backup of it, and then restore it.
+In this quickstart, you create a new database, take a full backup of it, and then restore it.
 
 For a more detailed how-to, see [Create a full database backup](create-a-full-database-backup-sql-server.md) and [Restore a backup using SSMS](restore-a-database-backup-using-ssms.md).
 
 ## Prerequisites
 
-To complete this quickstart, you'll need:
+To complete this quickstart, you need:
 
 - [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)
 - [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)
@@ -41,9 +42,9 @@ To complete this quickstart, you'll need:
     USE [SQLTestDB];
     GO
     CREATE TABLE SQLTest (
-    	ID INT NOT NULL PRIMARY KEY,
-    	c1 VARCHAR(100) NOT NULL,
-    	dt1 DATETIME NOT NULL DEFAULT GETDATE()
+        ID INT NOT NULL PRIMARY KEY,
+        c1 VARCHAR(100) NOT NULL,
+        dt1 DATETIME NOT NULL DEFAULT GETDATE()
     );
     GO
     
@@ -60,12 +61,14 @@ To complete this quickstart, you'll need:
     SELECT * FROM SQLTest;
     GO
     ```
- 
+
 1. Refresh the **Databases** node in **Object Explorer** to see your new database.
 
 ## Take a backup
 
 To take a backup of your database, follow these steps:
+
+#### [SSMS](#tab/ssms)
 
 1. Launch [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) and connect to your SQL Server instance.
 1. Expand the **Databases** node in **Object Explorer**.
@@ -73,7 +76,9 @@ To take a backup of your database, follow these steps:
 1. Under **Destination**, confirm that the path for your backup is correct. If you need to change the path, select **Remove** to remove the existing path, and then **Add** to type in a new path. You can use the ellipses to navigate to a specific file.
 1. Select **OK** to take a backup of your database.
 
-:::image type="content" source="media/quickstart-backup-restore-database/backup-db-ssms.png" alt-text="Take SQL backup":::
+:::image type="content" source="media/quickstart-backup-restore-database/backup-db-ssms.png" alt-text="Screenshot of SQL Server Management Studio take backup." lightbox="media/quickstart-backup-restore-database/backup-db-ssms.png":::
+
+#### [T-SQL](#tab/t-sql)
 
 Alternatively, you can run the following Transact-SQL command to back up your database. The path may be different on your computer:
 
@@ -81,15 +86,19 @@ Alternatively, you can run the following Transact-SQL command to back up your da
 USE [master];
 GO
 BACKUP DATABASE [SQLTestDB]
-TO DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\Backup\SQLTestDB.bak' 
+TO DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\Backup\SQLTestDB.bak'
 WITH NOFORMAT, NOINIT,
 NAME = N'SQLTestDB-Full Database Backup', SKIP, NOREWIND, NOUNLOAD, STATS = 10;
 GO
 ```
 
+---
+
 To read more about the different backup options, see [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md).
 
 ## Restore a backup
+
+#### [SSMS](#tab/ssms)
 
 To restore your database, follow these steps:
 
@@ -103,19 +112,23 @@ To restore your database, follow these steps:
 1. Select **OK** to close the **Select backup devices** dialog box.
 1. Select **OK** to restore the backup of your database.
 
-    :::image type="content" source="media/quickstart-backup-restore-database/restore-db-ssms2.png" alt-text="Restore the database":::
+    :::image type="content" source="media/quickstart-backup-restore-database/restore-db-ssms2.png" alt-text="Restore the database" lightbox="media/quickstart-backup-restore-database/restore-db-ssms2.png":::
+
+#### [T-SQL](#tab/t-sql)
 
 Alternatively, you can run the following Transact-SQL script to restore your database. The path may be different on your computer:
 
 ```sql
 USE [master];
 GO
-RESTORE DATABASE [SQLTestDB] 
+RESTORE DATABASE [SQLTestDB]
 FROM DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\Backup\SQLTestDB.bak' WITH  FILE = 1, NOUNLOAD, STATS = 5;
 GO
 ```
 
-### Clean up resources
+---
+
+## Clean up resources
 
 Run the following Transact-SQL command to remove the database you created, along with its backup history in the `msdb` database:
 

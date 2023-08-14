@@ -116,7 +116,7 @@ SELECT * FROM FREETEXTTABLE (Flags, FlagColors, 'Yellow');
  The following example returns the description and rank of any products with a description that matches the meaning of `high level of performance`.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
   
 SELECT FT_TBL.Description  
@@ -134,7 +134,7 @@ GO
  The following example is identical and shows the use of the `LANGUAGE`*language_term* and *top_n_by_rank* parameters.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
   
 SELECT FT_TBL.Description  

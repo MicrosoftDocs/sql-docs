@@ -18,11 +18,11 @@ helpviewer_keywords:
   - "time data type [SQL Server]"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # time (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
   Defines a time of a day. The time is without time zone awareness and is based on a 24-hour clock.  
   
@@ -35,7 +35,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |--------------|-----------|  
 |Syntax|**time** [ (*fractional second scale*) ]|  
 |Usage|DECLARE \@MyTime **time(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **time(7)** )|  
-|*fractional seconds scale*|Specifies the number of digits for the fractional part of the seconds.<br /><br /> This can be an integer from 0 to 7. For Informatica, this can be an integer from 0 to 3.<br /><br /> The default fractional scale is 7 (100ns).|  
+|*fractional seconds scale*|Specifies the number of digits for the fractional part of the seconds.<br /><br /> This can be an integer from 0 to 7. For Informatica, this can be an integer from 0 to 3. <br /><br /> The default fractional scale is 7 (100ns).<br /><br /> In [!INCLUDE [fabric](../../includes/fabric.md)], this can be an integer from 0 to 6, with no default. Precision must be specified in [!INCLUDE [fabric](../../includes/fabric.md)]. |  
 |Default string literal format<br /><br /> (used for down-level client)|hh:mm:ss[.nnnnnnn] for Informatica)<br /><br /> For more information, see the [Backward Compatibility for Down-level Clients](#BackwardCompatibilityforDownlevelClients) section.|  
 |Range|00:00:00.0000000 through 23:59:59.9999999 (00:00:00.000 through 23:59:59.999 for Informatica)|  
 |Element ranges|hh is two digits, ranging from 0 to 23, that represent the hour.<br /><br /> mm is two digits, ranging from 0 to 59, that represent the minute.<br /><br /> ss is two digits, ranging from 0 to 59, that represent the second.<br /><br /> n\* is zero to seven digits, ranging from 0 to 9999999, that represent the fractional seconds. For Informatica, n\* is zero to three digits, ranging from 0 to 999.|  
@@ -55,11 +55,15 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**time(1)**|(10,1)|3|0-2|  
 |**time(2)**|(11,2)|3|0-2|  
 |**time(3)**|(12,3)|4|3-4|  
-|**time(4)**<br /><br /> Not supported in Informatica.|(13,4)|4|3-4|  
-|**time(5)**<br /><br /> Not supported in Informatica.|(14,5)|5|5-7|  
-|**time(6)**<br /><br /> Not supported in Informatica.|(15,6)|5|5-7|  
-|**time(7)**<br /><br /> Not supported in Informatica.|(16,7)|5|5-7|  
-  
+|**time(4)**\* |(13,4)|4|3-4|  
+|**time(5)**\* |(14,5)|5|5-7|  
+|**time(6)**\* |(15,6)|5|5-7|  
+|**time(7)**\* \+|(16,7)|5|5-7|  
+
+\* Not supported in Informatica.
+
+\+ Not supported in [!INCLUDE [fabric](../../includes/fabric.md)].
+
 ## Supported String Literal Formats for time  
  The following table shows the valid string literal formats for the **time** data type.  
   

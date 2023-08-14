@@ -8,9 +8,9 @@ metadata:
   ms.topic: faq
   author: WilliamDAssafMSFT
   ms.author: wiassaf
-  ms.reviewer: kendralittle, mathoma
+  ms.reviewer: mathoma
   ms.custom: 
-  ms.date: 12/01/2022
+  ms.date: 07/31/2023
   monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 
 title: Maintenance window FAQ
@@ -24,7 +24,7 @@ sections:
 
       - question: What is the default maintenance policy if I don't choose any specific window? 
         answer: |
-          Maintenance events will occur during the default window 5PM to 8AM local time, Monday - Sunday. 
+          Maintenance events occur during the default window 5PM to 8AM local time, Monday - Sunday. 
 
       - question: Users work in a different time zone than the Azure data center. Which time zone is local?
         answer: |
@@ -32,15 +32,15 @@ sections:
 
       - question: Can I choose a specific time/day for the maintenance window?
         answer: |
-          No, you can choose between pre-scheduled weekday or weekend windows. The maintenance can happen anytime or day within the window.  
+          No, you can choose between prescheduled weekday or weekend windows. The maintenance can happen anytime or day within the window.  
 
       - question: What happens once I choose a maintenance window? 
         answer: | 
-          Configuring maintenance window is a long running asynchronous operation, similar to changing the service tier of your Azure SQL resource. The resource is available during the process, except a short reconfiguration that happens at the end of the operation and typically lasts up to 8 seconds even in case of interrupted long-running transactions. To minimize the impact of the reconfiguration, you should perform the operation outside of the peak hours. For Azure SQL Managed Instance, the IP address of the managed instance will change.
+          Configuring maintenance window is a long running asynchronous operation, similar to changing the service tier of your Azure SQL resource. The resource is available during the process, except a short reconfiguration that happens at the end of the operation and typically lasts up to 8 seconds even in case of interrupted long-running transactions. To minimize the impact of the reconfiguration, you should perform the operation outside of the peak hours. 
 
       - question: What types of updates are typically performed during a maintenance window? 
         answer: |
-          The maintenance event may contain updates for hardware, firmware, operating system, satellite software components, or the SQL database engine. They're typically combined into a single batch to minimize the incidence of maintenance events. In case of SQL Managed Instance, updates are combined in two batches, one focused on physical infrastructure, and another one focused on SQL engine and logical infrastructure.
+          The maintenance event may contain updates for hardware, firmware, operating system, satellite software components, or the SQL database engine. They're typically combined into a single batch to minimize the incidence of maintenance events. In case of SQL Managed Instance, updates are combined in two batches, one focused on physical infrastructure, and another one focused on SQL engine and logical infrastructure. For Azure SQL Managed Instance, the IP address of the SQL managed instance changes.
 
       - question: How frequent the updates are?
         answer: |
@@ -104,7 +104,7 @@ sections:
 
       - question: Can I configure a different maintenance window for each Azure SQL database in an elastic pool?
         answer: |
-         If the database is part of an elastic pool, the maintenance window configuration of the elastic pool will be applied. Single databases outside of an elastic pool can have their own maintenance window configuration.
+         If the database is part of an elastic pool, the maintenance window configuration of the elastic pool is applied. Single databases outside of an elastic pool can have their own maintenance window configuration.
 
       - question: What are supported options to configure a maintenance window for an existing Azure SQL Database or SQL managed instance?
         answer: |
@@ -120,7 +120,7 @@ sections:
 
       - question: I'm not able to set up advance notifications for planned maintenance, will I still see planned maintenance event in Service Health dashboard?
         answer: |
-          In case of [Azure SQL Database](sql-database-paas-overview.md), if advance notifications aren't configured, Service Health won't show the planned maintenance events. In case of [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), you are able to see planned maintenance event in Service Health dashboard even if advance notifications aren't configured.
+          For [Azure SQL Database](sql-database-paas-overview.md), if advance notifications aren't configured, Service Health won't show the planned maintenance events. For [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), planned maintenance events are visible in the Service Health dashboard, even if advance notifications aren't configured.
 
       - question: Does advance notification cover all maintenance events? 
         answer: | 
@@ -138,17 +138,17 @@ sections:
         answer: |
           Yes, you can [retrieve the list of impacted resources](advance-notifications.md#retrieve-the-list-of-impacted-resources) by using [Azure Resource Graph Explorer](/azure/governance/resource-graph/overview). You will receive an advance notification email that contains the notification ID and a link to the Azure Resource Graph Explorer. 
           
-      - question: The notification says "In Progress", but window has not started yet?
+      - question: The notification says "In Progress", but window hasn't started yet?
         answer: |
-          There is a period of 1 hour in which notifications are sent. This means that you can receive notification 25 to 24 hours before the event, 1 hour to 1 minute before the window opens, and 1 minute to 1 hour after the window is closed. Even though the notification title is "In Progress", the content of the notification contains the maintenance window start and end time and that is the moment when maintenance will begin and end.  
+          There's a period of 1 hour in which notifications are sent. This means that you can receive notification 25 to 24 hours before the event, 1 hour to 1 minute before the window opens, and 1 minute to 1 hour after the window is closed. Even though the notification title is "In Progress", the content of the notification contains the maintenance window start and end time and that is the moment when maintenance will begin and end.  
           
-      - question: Is there a scenario where I do not get notification about planned event?
+      - question: Is there a scenario where I don't get notification about planned event?
         answer: |
-          Yes, in case that you have created a new resource, executed scaling operation, or changed maintenance window, your database or instance can end up on the machine that is already scheduled for upgrade. In this case, you will be notified only when deployment window starts and ends. For all future deployments, you will get advance notification about planned events.
+          Yes, in case that you have created a new resource, executed scaling operation, or changed maintenance window, your database or instance can end up on the machine that is already scheduled for upgrade. In this case, you are notified only when deployment window starts and ends. For all future deployments, you will get advance notification about planned events.
           
       - question: Can I check if my instance has been upgraded in the last X days?
         answer: |
-          You can check this only if you have configured advanced notifications in the service health. You can use the [Azure Resource Graph Explorer](/azure/governance/resource-graph/overview) to [retrieve a list of maintenance events](maintenance-window.md#retrieving-list-of-maintenance-events), or use the [Service Health overview page](/azure/service-health/service-health-overview).
+          You can check this only if you have configured advanced notifications in the service health. You can use the [Azure Resource Graph Explorer](/azure/governance/resource-graph/overview) to [retrieve a list of maintenance events](maintenance-window.md#retrieve-list-of-maintenance-events), or use the [Service Health overview page](/azure/service-health/service-health-overview).
 
 additionalContent: |
  ## See Also

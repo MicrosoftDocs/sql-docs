@@ -20,7 +20,7 @@ The following query returns product model information. `RAW` mode is specified i
 ## Example
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT ProductModelID, Name
 FROM Production.ProductModel
@@ -39,7 +39,7 @@ This is the partial result:
 You can retrieve element-centric XML by specifying the `ELEMENTS` directive.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT ProductModelID, Name
 FROM Production.ProductModel
@@ -64,7 +64,7 @@ This is the result:
 You can optionally specify the `TYPE` directive to retrieve the results as **xml** type. The `TYPE` directive doesn't change the content of the results. Only the data type of the results is affected.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT ProductModelID, Name
 FROM Production.ProductModel

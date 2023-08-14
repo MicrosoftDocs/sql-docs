@@ -92,7 +92,7 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
  The following example opens a global cursor and uses `sp_describe_cursor` to report on the attributes of the cursor.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 -- Declare and open a global cursor.  
 DECLARE abc CURSOR STATIC FOR  

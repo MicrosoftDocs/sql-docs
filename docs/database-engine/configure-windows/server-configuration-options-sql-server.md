@@ -4,7 +4,7 @@ description: Find out how to manage and optimize SQL Server resources. View avai
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray
-ms.date: 12/23/2022
+ms.date: 05/12/2023
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
@@ -90,7 +90,7 @@ The following table lists all available configuration options, the range of poss
 | [access check cache bucket count](access-check-cache-server-configuration-options.md) (A) | 0 | 16384 | 0 |
 | [access check cache quota](access-check-cache-server-configuration-options.md) (A) | 0 | 2147483647 | 0 |
 | [ad hoc distributed queries](ad-hoc-distributed-queries-server-configuration-option.md) (A) | 0 | 1 | 0 |
-| [ADR cleaner retry timeout (min)](adr-cleaner-retry-timeout-configuration-option.md)<br /><br />**Applies to:** [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and later versions. | 0 | 32767 | 15 |
+| [ADR cleaner retry timeout (min)](adr-cleaner-retry-timeout-configuration-option.md)<br /><br />**Applies to:** [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and later versions. | 0 | 32767 | 120 |
 | [ADR Preallocation Factor](adr-preallocation-factor-server-configuration-option.md)<br /><br />**Applies to:** [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and later versions. | 0 | 32767 | 4 |
 | [affinity I/O mask](affinity-input-output-mask-server-configuration-option.md) (A, RR) | -2147483648 | 2147483647 | 0 |
 | [affinity mask](affinity-mask-server-configuration-option.md) (A) | -2147483648 | 2147483647 | 0 |

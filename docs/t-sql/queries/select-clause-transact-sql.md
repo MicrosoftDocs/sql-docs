@@ -25,7 +25,7 @@ dev_langs:
   - "TSQL"
 ---
 # SELECT Clause (Transact-SQL)
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi-fabricse-fabricdw.md)]
 
   Specifies the columns to be returned by the query.  
   
@@ -130,7 +130,7 @@ FROM Cities;
  Aliases are used also to specify names for the results of expressions, for example:  
   
  ```sql
- USE AdventureWorks2012;  
+ USE AdventureWorks2022;  
  GO  
  SELECT AVG(UnitPrice) AS [Average Price]  
  FROM Sales.SalesOrderDetail;

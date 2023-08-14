@@ -28,7 +28,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||>=sq
 |-----------------|---------------|-----------------|  
 |**query_text_id**|**bigint**|Primary key.|  
 |**query_sql_text**|**nvarchar(max)**|SQL text of the query, as provided by the user. Includes whitespaces, hints and comments. Comments and spaces before and after the query text are ignored. Comments and spaces inside text are not ignored.|  
-|**statement_sql_handle**|**vabinary(64)**|SQL handle of the individual query.|  
+|**statement_sql_handle**|**varbinary(64)**|SQL handle of the individual query.|  
 |**is_part_of_encrypted_module**|**bit**|Query text is a part of an encrypted module.<br/>**Note:** Azure Synapse Analytics will always return zero (0).|
 |**has_restricted_text**|**bit**|Query text contains a password or other unmentionable words.<br/>**Note:** Azure Synapse Analytics will always return zero (0).|
   

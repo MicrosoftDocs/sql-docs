@@ -48,14 +48,11 @@ The `options` configuration region has the following schema:
 ```json
 {
   "msSqlDialect":
-    "AzureSynapse"
-    | "AzureSqlDatabase"
+    "AzureSqlDatabase"
     | "AzureSqlManagedInstance"
-    | "SqlServer2012"
-    | "SqlServer2014"
-    | "SqlServer2016"
     | "SqlServer2017"
-    | "SqlServer2019",
+    | "SqlServer2019"
+    | "SqlServer2022",
   "quoteIdentifiers": true | false,
   "isMsSqlCaseSensitive": true | false,
 }
@@ -67,7 +64,10 @@ Following table describes all possible configuration options in this region:
 | ----------- | ----------- |
 | `msSqlDialect` | Determines which Microsoft SQL platform dialect to use when converting the source object definitions. This option will be derived from the target SQL Database project and you should not need to set it explicitly. |
 | `quoteIdentifiers` | Determines whether all identifiers should be quoted in converted SQL scripts. Default is `true`. It is recommended to set it to `true`, as quotation might be required when special characters are used in identifier names. |
-| `isMsSqlCaseSensitive` | Controls whether [DSCT01000](../conversion-messages/dsct01000.md) conversion message will be produced during conversion. This option will be derived from the default collation of the target SQL Database project and you should not need to set it explicitly. |
+| `isMsSqlCaseSensitive` | Controls whether the case sensitivity check for object names will be performed during conversion and [DSCT01000](../conversion-messages/dsct01000.md) conversion message will be produced. This option will be derived from the default collation of the target SQL Database project and you should not need to set it explicitly. |
+| `AddRowIdColumnWhenNeededByTrigger` | Indicates whether DSCT should add a ROWID column of type uniqueidentifier to a table on which a trigger is defined. This column helps in emulation of dml operation when converting Oracle's Before triggers to Instead Of triggers in SQL Server. Default is 'Yes' which adds a ROWID column. |
+| `ConvertSubstringFunctionToCustomFunction` | Indicates whether DSCT converts the ORACLE's SUBSTR function to MSSQLSERVER's SUBSTRING function or a custom DSCT implementation. Default is 'No' which uses MSSQLSERVER's SUBSTRING function. |
+| `EmulateNullOrderByBehavior` | Indicates whether DSCT emulates Oracle null value handling in ORDER BY clauses, or uses Microsoft SQL defaults. Default is 'No' which uses Microsoft SQL defaults.|
 
 ### Data type mappings
 

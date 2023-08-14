@@ -48,7 +48,7 @@ Permission to run **sp_spaceused** is granted to the **public** role. Only membe
 3. Paste the following example into the query window and then select **Execute**. This example uses the [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) system stored procedure to report disk space information for the entire database, including tables and indexes.  
   
    ```sql  
-   USE AdventureWorks2012;  
+   USE AdventureWorks2022;  
    GO  
    EXEC sp_spaceused;  
    GO  
@@ -95,7 +95,7 @@ Permission to run **sp_spaceused** is granted to the **public** role. Only membe
 3. Paste the following example into the query window then select **Execute**. This example queries the [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) catalog view to return specific information about the data and log files in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
    ```sql  
-   USE AdventureWorks2012;  
+   USE AdventureWorks2022;  
    GO  
    SELECT file_id, name, type_desc, physical_name, size, max_size  
    FROM sys.database_files;  

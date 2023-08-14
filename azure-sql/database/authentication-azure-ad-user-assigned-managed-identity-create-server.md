@@ -2,25 +2,25 @@
 title: Create an Azure SQL logical server using a user-assigned managed identity
 titleSuffix: Azure SQL Database
 description: This article guides you through creating an Azure SQL logical server using a user-assigned managed identity
-author: GithubMirek
-ms.author: mireks
-ms.reviewer: vanto
+author: nofield
+ms.author: nofield
 ms.date: 06/30/2022
 ms.service: sql-database
 ms.subservice: security
-ms.topic: conceptual
+ms.topic: how-to
 ---
 
 # Create an Azure SQL Database server with a user-assigned managed identity
 
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
+> [!div class="op_single_selector"]
+> * [Azure SQL Database](authentication-azure-ad-user-assigned-managed-identity-create-server.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](../managed-instance/authentication-azure-ad-user-assigned-managed-identity-create-managed-instance.md?view=azuresql-mi&preserve-view=true)
+
 This how-to guide outlines the steps to create a [logical server](logical-servers.md) for Azure SQL Database with a [user-assigned managed identity](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types). For more information on the benefits of using a user-assigned managed identity for the server identity in Azure SQL Database, see [User-assigned managed identity in Azure AD for Azure SQL](authentication-azure-ad-user-assigned-managed-identity.md).
 
 To retrieve the system-assigned managed identity (SMI) or user-assigned managed identity or identities (UMI) of an Azure SQL Database, see [Get or set a managed identity for a logical server or managed instance](authentication-azure-ad-user-assigned-managed-identity.md#get-or-set-a-managed-identity-for-a-logical-server-or-managed-instance).
-
-> [!NOTE]
-> If you're looking for a guide on Azure SQL Managed Instance, see [Create an Azure SQL Managed Instance with a user-assigned managed identity](../managed-instance/authentication-azure-ad-user-assigned-managed-identity-create-managed-instance.md).
 
 
 ## Prerequisites

@@ -83,7 +83,7 @@ Be sure to account for all files associated with the database before you detach,
   
 3.  In the **Attach Databases** dialog box, to specify the database to be attached, select **Add**. In the **Locate Database Files** dialog box, select the location where the database resides and expand the directory tree to find and select the .mdf file of the database; for example:
 
-     `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA\AdventureWorks2012_Data.mdf`  
+     `C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA\AdventureWorks2022_Data.mdf`  
   
     > [!IMPORTANT]  
     > Trying to select a database that is already attached generates an error.  

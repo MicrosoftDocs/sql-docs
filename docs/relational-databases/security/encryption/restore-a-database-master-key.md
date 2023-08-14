@@ -45,11 +45,11 @@ Requires CONTROL permission on the database.
 4. Copy and paste the following example into the query window and click **Execute**.  
 
     ```sql
-    -- Restores the database master key of the AdventureWorks2012 database.  
-    USE AdventureWorks2012;  
+    -- Restores the database master key of the AdventureWorks2022 database.  
+    USE AdventureWorks2022;  
     GO  
     RESTORE MASTER KEY   
-        FROM FILE = 'c:\backups\keys\AdventureWorks2012_master_key'   
+        FROM FILE = 'c:\backups\keys\AdventureWorks2022_master_key'   
         DECRYPTION BY PASSWORD = '3dH85Hhk003#GHkf02597gheij04'   
         ENCRYPTION BY PASSWORD = '259087M#MyjkFkjhywiyedfgGDFD';  
     GO  

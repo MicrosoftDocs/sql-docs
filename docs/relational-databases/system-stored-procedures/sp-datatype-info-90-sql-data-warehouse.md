@@ -1,6 +1,6 @@
 ---
-title: "sp_datatype_info_90 (Azure Synapse Analytics)"
-description: "sp_datatype_info_90 (Azure Synapse Analytics)"
+title: "sp_datatype_info_90"
+description: "sp_datatype_info_90 returns information about the data types supported by the current environment."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/13/2017"
@@ -8,20 +8,18 @@ ms.service: sql
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = fabric"
 ---
-# sp_datatype_info_90 (Azure Synapse Analytics)
-[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
+# sp_datatype_info_90
+[!INCLUDE[applies-to-version/asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/asa-pdw-fabricse-fabricdw.md)]
 
-  Returns information about the data types supported by the current environment.  
+  Returns information about the data types supported by the current environment in [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)], [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse-md.md)], and [!INCLUDE [fabric](../../includes/fabric.md)].
   
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
-```syntaxsql  
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
-  
+```syntaxsql   
 sp_datatype_info_90 [ [ @data_type = ] data_type ]   
      [ , [ @ODBCVer = ] odbc_version ]   
 ```  

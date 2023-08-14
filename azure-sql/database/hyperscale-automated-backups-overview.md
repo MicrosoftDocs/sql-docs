@@ -9,11 +9,7 @@ ms.date: 09/08/2022
 ms.service: sql-db-mi
 ms.subservice: backup-restore
 ms.topic: conceptual
-ms.custom:
-  - references_regions
-  - devx-track-azurepowershell
-  - devx-track-azurecli
-  - azure-sql-split
+ms.custom: references_regions, azure-sql-split
 monikerRange: "= azuresql || = azuresql-db"
 ---
 # Automated backups for Hyperscale databases
@@ -36,7 +32,8 @@ You can restore a database to any point in time within its backup retention peri
 1. Reverting to applicable file snapshots.
 1. Applying transaction logs to make the restored database transactionally consistent. 
 
-As such, restore is not a size-of-data operation. Restore of a Hyperscale database within the same Azure region finishes in minutes instead of hours or days, even for multi-terabyte databases. 
+As such, restore is not a size-of-data operation remains the same. Restore of a Hyperscale database within the same Azure region finishes in minutes instead of hours or days, even for multi-terabyte database. 
+Changing the [storage redundancy](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy) when issuing a restore can result in longer restore times as the restore is size of data and hence the time will be proportional to the database size.
 
 Creation of new databases by restoring an existing backup or copying the database also takes advantage of compute and storage separation in Hyperscale. Creating copies for development or testing purposes, even of multi-terabyte databases, is doable in minutes within the same region when you use the same storage type.
 
@@ -160,4 +157,3 @@ If you prefer, you can copy the database to a different region. Use this method 
 - For information about how to configure, manage, and restore from long-term retention of automated backups in Azure Blob Storage by using PowerShell, see [Manage long-term backup retention by using PowerShell](long-term-backup-retention-configure.md). 
 - Get more information about how to [restore a database to a point in time by using the Azure portal](recovery-using-backups.md).
 - Get more information about how to [restore a database to a point in time by using PowerShell](scripts/restore-database-powershell.md).
-

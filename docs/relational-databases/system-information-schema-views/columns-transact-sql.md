@@ -15,12 +15,12 @@ helpviewer_keywords:
   - "INFORMATION_SCHEMA.COLUMNS view"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 
 # COLUMNS (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
 Returns one row for each column that can be accessed by the current user in the current database.  
   
@@ -57,10 +57,10 @@ To retrieve information from these views, specify the fully qualified name of **
 The **ORDINAL_POSITION** column of the **INFORMATION_SCHEMA.COLUMNS** view is not compatible with the bit pattern of columns returned by the COLUMNS_UPDATED function. To obtain a bit pattern that is compatible with COLUMNS_UPDATED, you must reference the **ColumnID** property of the COLUMNPROPERTY system function when you query the **INFORMATION_SCHEMA.COLUMNS** view. For example:  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT TABLE_NAME, COLUMN_NAME, COLUMNPROPERTY(OBJECT_ID(TABLE_SCHEMA + '.' + TABLE_NAME), COLUMN_NAME, 'ColumnID') AS COLUMN_ID  
-FROM AdventureWorks2012.INFORMATION_SCHEMA.COLUMNS  
+FROM AdventureWorks2022.INFORMATION_SCHEMA.COLUMNS  
 WHERE TABLE_NAME = 'Person';  
 GO  
 ```  

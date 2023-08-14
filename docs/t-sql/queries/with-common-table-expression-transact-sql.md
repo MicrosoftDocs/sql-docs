@@ -24,11 +24,11 @@ helpviewer_keywords:
   - "clauses [SQL Server], WITH common_table_expression"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # WITH common_table_expression (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
 Specifies a temporary named result set, known as a common table expression (CTE). This is derived from a simple query and defined within the execution scope of a single SELECT, INSERT, UPDATE, DELETE or MERGE statement. This clause can also be used in a CREATE VIEW statement as part of its defining SELECT statement. A common table expression can include references to itself. This is referred to as a recursive common table expression.
 
@@ -406,7 +406,7 @@ FROM cte;
 The following example shows the hierarchy of product assemblies and components that are required to build the bicycle for `ProductAssemblyID = 800`.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 WITH Parts(AssemblyID, ComponentID, PerAssemblyQty, EndDate, ComponentLevel) AS
 (
@@ -436,7 +436,7 @@ ORDER BY ComponentLevel, AssemblyID, ComponentID;
 The following example updates the `PerAssemblyQty` value for all parts that are used to build the product 'Road-550-W Yellow, 44' `(ProductAssemblyID``800`). The common table expression returns a hierarchical list of parts that are used to build `ProductAssemblyID 800` and the components that are used to create those parts, and so on. Only the rows returned by the common table expression are modified.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 WITH Parts(AssemblyID, ComponentID, PerAssemblyQty, EndDate, ComponentLevel) AS
 (
@@ -587,7 +587,7 @@ Lvl  N
 The following example creates a new table containing the total number of sales orders per year for each sales representative at [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 CREATE TABLE SalesOrdersPerYear
 WITH
@@ -617,7 +617,7 @@ GO
 The following example creates a new external table containing the total number of sales orders per year for each sales representative at [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 CREATE EXTERNAL TABLE SalesOrdersPerYear
 WITH

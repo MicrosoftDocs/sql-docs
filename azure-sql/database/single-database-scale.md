@@ -8,10 +8,7 @@ ms.date: 08/01/2022
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: conceptual
-ms.custom:
-  - sqldbrb=1
-  - references_regions
-  - devx-track-azurepowershell
+ms.custom: sqldbrb=1, references_regions
 ---
 # Scale single database resources in Azure SQL Database
 

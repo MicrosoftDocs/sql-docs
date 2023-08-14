@@ -27,7 +27,7 @@ An Azure subscription. Create a [free account](https://azure.microsoft.com/free/
 
 Use the Azure Marketplace to choose one of several pre-configured images from the virtual machine gallery. 
 
-The Developer edition is used in this article because it is a full-featured, free edition of SQL Server for development testing. You pay only for the cost of running the VM. However, you are free to choose any of the images to use in this walkthrough. For a description of available images, see the [SQL Server Windows Virtual Machines overview](sql-server-on-azure-vm-iaas-what-is-overview.md#payasyougo).
+The Developer edition is used in this article because it is a full-featured, free edition of SQL Server for development testing. You pay only for the cost of running the VM. However, you are free to choose any of the images to use in this walkthrough. For a description of available images, see the [SQL Server Windows Virtual Machines overview](sql-server-on-azure-vm-iaas-what-is-overview.md#licensing).
 
 Licensing costs for SQL Server are incorporated into the per-second pricing of the VM you create and varies by edition and cores. However, SQL Server Developer edition is free for development and testing, not production. Also, SQL Express is free for lightweight workloads (less than 1 GB of memory, less than 10 GB of storage). You can also bring-your-own-license (BYOL) and pay only for the VM. Those image names are prefixed with {BYOL}. For more information on these options, see [Pricing guidance for SQL Server Azure VMs](pricing-guidance.md).
 
@@ -41,6 +41,8 @@ To choose an image, follow these steps:
    ![Select SQL VM image](./media/create-sql-vm-portal/select-sql-vm-image-portal.png)
 
 1. Select **Create**.
+
+[!INCLUDE[appliesto-sqlvm](../../includes/virtual-machines-2008-end-of-support.md)]
 
 ## Basic settings
 
@@ -266,9 +268,6 @@ Access to the machine enables you to directly change machine and SQL Server sett
 ## <a id="connect"></a> Connect to SQL Server remotely
 
 In this walkthrough, you selected **Public** access for the virtual machine and **SQL Server Authentication**. These settings automatically configured the virtual machine to allow SQL Server connections from any client over the internet (assuming they have the correct SQL login).
-
-> [!NOTE]
-> If you did not select Public during provisioning, then you can change your SQL connectivity settings through the portal after provisioning. For more information, see  [Change your SQL connectivity settings](ways-to-connect-to-sql.md#change).
 
 The following sections show how to connect over the internet to your SQL Server VM instance.
 

@@ -2,10 +2,10 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 03/22/2023
+ms.date: 07/06/2023
 ms.topic: include
 ---
-| Error| Severity | Event logged | Description|
+| Error | Severity | Event logged | Description |
 | :--- | :--- | :--- | :--- |
 | 15001 | 16 | No | Object '%ls' does not exist or is not a valid object for this operation. |
 | 15002 | 16 | No | The procedure '%s' cannot be executed within a transaction. |
@@ -475,7 +475,7 @@ ms.topic: include
 | 15574 | 10 | No | This object does not have any statistics. |
 | 15575 | 10 | No | This object does not have any statistics or indexes. |
 | 15576 | 16 | No | You cannot set network name on server '%ls' because it is not a linked SQL Server. |
-| 15577 | 10 | No | Warning: A linked server that refers to the originating server is not a supported scenario.  If you wish to use a four-part name to reference a local table, please use the actual server name rather than an alias. |
+| 15577 | 10 | No | Warning: A linked server that refers to the originating server is not a supported scenario. If you wish to use a four-part name to reference a local table, please use the actual server name rather than an alias. |
 | 15578 | 16 | No | There is already a master key in the database. Please drop it before performing this statement. |
 | 15579 | 16 | No | Adding an encryption to the symmetric key failed. An encryption by the same %S_MSG '%.\*s' may already exist. |
 | 15580 | 16 | No | Cannot drop %S_MSG because %S_MSG '%.\*s' is encrypted by it. |
@@ -567,7 +567,7 @@ ms.topic: include
 | 15817 | 10 | No | This stored procedure is available only in Polaris. |
 | 15818 | 10 | No | %.\*ls input argument should be a query text in the following form: 'SELECT col FROM OPENROWSET(BULK)'.%hs%hs |
 | 15819 | 16 | No | File statistics encountered an error with global statistics table. Table does not exist or it is corrupted. |
-| 15820 | 16 | No | File statistics for column '%.\*ls' cannot be dropped because they do not exist. Please, correct sp_drop_file_statistics OPENROWSET query argument to make sure that you specify the same OPENROWSET options, |
+| 15820 | 16 | No | File statistics for column '%.\*ls' cannot be dropped because they do not exist. Please, correct sp_drop_file_statistics OPENROWSET query argument to make sure that you specify the same OPENROWSET options, as when the sp_create_file_statistics was called. |
 | 15821 | 16 | No | File statistics for column '%.\*ls' cannot be created because they already exist. |
 | 15822 | 10 | No | An internal error occurred. |
 | 15823 | 16 | No | The filepath function requires 0 arguments or exactly 1 constant integer value argument. |
@@ -578,7 +578,7 @@ ms.topic: include
 | 15828 | 16 | No | The filepath function requires 0 to 1 arguments. |
 | 15829 | 16 | No | The name, '%s', is invalid. The prefix 'RESOLVED_WILDCARD_VIRTUAL_COLUMN_' is reserved. |
 | 15830 | 10 | No | Provided expression does not match any known RWVC. |
-| 15831 | 16 | No | File statistics for column '%.\*ls' do not exist. Please, correct sp_show_file_statistics OPENROWSET query argument to make sure that you specify the same OPENROWSET options, |
+| 15831 | 16 | No | File statistics for column '%.\*ls' do not exist. Please, correct sp_show_file_statistics OPENROWSET query argument to make sure that you specify the same OPENROWSET options, as when the sp_create_file_statistics was called. |
 | 15832 | 16 | No | Internal error number %d encountered while creating statistics. |
 | 15833 | 16 | No | Create/drop/show stats operations are currently not supported for queries that use schema inference. |
 | 15839 | 16 | No | '%ls' is not supported by data_export. |

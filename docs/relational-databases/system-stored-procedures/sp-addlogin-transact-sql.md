@@ -116,17 +116,17 @@ GO
 ```  
   
 ### C. Creating a SQL Server login that has a different default language  
- The following example creates a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login for the user `TzTodorov`, with a password of `709hLKH7chjfwv`, a default database of `AdventureWorks2012`, and a default language of `Bulgarian`.  
+ The following example creates a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login for the user `TzTodorov`, with a password of `709hLKH7chjfwv`, a default database of [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)], and a default language of `Bulgarian`.  
   
 ```  
-EXEC sp_addlogin 'TzTodorov', '709hLKH7chjfwv', 'AdventureWorks2012', N'български'  
+EXEC sp_addlogin 'TzTodorov', '709hLKH7chjfwv', 'AdventureWorks2022', N'български'  
 ```  
   
 ### D. Creating a SQL Server login that has a specific SID  
- The following example creates a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login for the user `Michael`, with a password of `B548bmM%f6`, a default database of `AdventureWorks2012`, a default language of `us_english`, and a SID of `0x0123456789ABCDEF0123456789ABCDEF`.  
+ The following example creates a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login for the user `Michael`, with a password of `B548bmM%f6`, a default database of [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)], a default language of `us_english`, and a SID of `0x0123456789ABCDEF0123456789ABCDEF`.  
   
 ```  
-EXEC sp_addlogin 'Michael', 'B548bmM%f6', 'AdventureWorks2012', 'us_english', 0x0123456789ABCDEF0123456789ABCDEF  
+EXEC sp_addlogin 'Michael', 'B548bmM%f6', 'AdventureWorks2022', 'us_english', 0x0123456789ABCDEF0123456789ABCDEF  
 ```  
   
 ## See Also  

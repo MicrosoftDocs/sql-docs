@@ -5,11 +5,12 @@ author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
 ms.date: 04/20/2023
-ms.service: sql
 ms.topic: conceptual
 ---
 
 # Evaluate Azure Arc-enabled SQL Server instance on an Azure virtual machine
+
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
 Azure Arc-enabled SQL Server is designed to help you connect servers running on-premises or in other clouds to Azure. Normally, you wouldn't use Azure Arc-enabled SQL Server on an Azure virtual machine. All the Azure capabilities are natively available for these VMs, for example:
 
@@ -40,6 +41,7 @@ Create an Azure SQL Virtual Machine. Use an [available Azure SQL VM image](/azur
 1. Notice any extensions. Because this VM is an Azure SQL VM, it has *SQLIaasExtension*.
 1. Select **SQLIaasExtension**, and select **Uninstall**.
 1. If there are any other extensions installed on the VM, select each extension individually, and then select **Uninstall**.
+1. Wait for all extensions to finish uninstalling before you proceed.
 
 ## Disable the Azure VM Guest agent
 
@@ -53,16 +55,22 @@ To disable the Azure VM Guest agent:
    Stop-Service WindowsAzureGuestAgent -Force -Verbose
    ```
 
-1. Wait for all extensions to finish uninstalling before you proceed.
+1. Block access to the Azure IMDS endpoint
+
+   While still connected to the server, run the following commands to block access to the Azure IMDS endpoint. For Windows, run the following PowerShell command:
+
+   ```powershell
+   New-NetFirewallRule -Name BlockAzureIMDS -DisplayName "Block access to Azure IMDS" -Enabled True -Profile Any -Direction Outbound -Action Block -RemoteAddress 169.254.169.254
+   ```
 
 ## Connect the SQL Server to Azure Arc
 
-Connect the instance of SQL Server to Azure Arc. Follow the steps in [Connect your SQL Server to Azure Arc](connect.md).
+Connect the instance of SQL Server to Azure Arc. Follow the steps in [Quickstart: Connect SQL Server machines to Azure Arc](quick-enabled-sql-server.md).
 
 ## Clean up your evaluation environment
 
 After you have evaluated Arc-enabled SQL Server on an Azure Virtual Machine, to avoid charges, delete your resource groups.
 
 ## Next steps
-
-[Configure SQL best practices assessment](assess.md)
+- [Automatically connect your SQL Server to Azure Arc](automatically-connect.md)
+- [Configure SQL best practices assessment](assess.md)

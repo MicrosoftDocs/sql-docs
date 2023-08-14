@@ -1,9 +1,10 @@
 ---
 title: "sp_query_store_clear_message_queues (Transact-SQL)"
-description: "sp_query_store_clear_message_queues (Transact-SQL)"
+description: "Clears all queued (non-persisted) Query Store messages pending for the replica against which the command is executed."
 author: markingmyname
 ms.author: maghan
-ms.date: "04/26/2022"
+ms.reviewer: randolphwest
+ms.date: 05/29/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -18,34 +19,36 @@ dev_langs:
 monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
 ---
 # sp_query_store_clear_message_queues (Transact-SQL)
+
 [!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022.md)]
 
-Clears all queued (non-persisted) Query Store messages pending for the replica against which the command is executed. The `sp_query_store_clear_message_queues` is used when [Query Store for secondary replicas](../performance/query-store-for-secondary-replicas.md) has been enabled. 
+Clears all queued (non-persisted) Query Store messages pending for the replica against which the command is executed. `sp_query_store_clear_message_queues` is used when [Query Store for secondary replicas](../performance/query-store-for-secondary-replicas.md) has been enabled.
 
-:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## Syntax  
-  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+
+## Syntax
+
 ```syntaxsql
-sp_query_store_clear_message_queues [;]  
-```  
-  
-## Return Code Values  
+sp_query_store_clear_message_queues
+[ ; ]
+```
 
-0 (success) or 1 (failure)  
-  
-## Permissions  
+## Return code values
 
-Requires **ALTER** permission on the database.
-  
-## Examples  
+`0` (success) or `1` (failure).
+
+## Permissions
+
+Requires the ALTER permission on the database.
+
+## Examples
 
 The following example clears all queued (non-persisted) Query Store messages pending. The action applies to the replica against which the command is executed.
-  
+
 ```sql
-EXEC sp_query_store_clear_message_queues;  
-```  
-  
+EXEC sp_query_store_clear_message_queues;
+```
+
 ## Next steps
 
 Learn more about Query Store in the following articles:

@@ -4,12 +4,19 @@ description: Connect an instance of SQL Server to Azure Arc. Allows you to manag
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, maghan
-ms.date: 01/12/2023
-ms.service: sql
+ms.date: 07/18/2023
 ms.topic: conceptual
 ---
 
 # Connect your SQL Server to Azure Arc
+
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
+
+> [!IMPORTANT]  
+> Azure Arc automatically installs the Azure extension for SQL Server when a server connected to Azure Arc has SQL Server installed. All the SQL Server instance resources are automatically created in Azure, providing a centralized management platform for all your SQL Servers.
+> To automatically connect your SQL Server instances, see [Automatically Connect your SQL Server to Azure Arc](automatically-connect.md).
+> Use the method below, if your server is already connected to Azure, but Azure extension for SQL Server is not deployed automatically using above methods.
+>
 
 This article explains how to connect your SQL Server instance to Azure Arc. Before you proceed, complete the [Prerequisites](prerequisites.md#prerequisites).
 
@@ -17,8 +24,9 @@ This article explains how to connect your SQL Server instance to Azure Arc. Befo
 
 If the server that runs your SQL Server instance isn't yet connected to Azure, you can initiate the connection from the target machine using the onboarding script. This script connects the server to Azure and installs the Azure extension for SQL Server.
 
-> [!NOTE]
-> If your server is already connected to Azure, proceed to [When the machine is already connected to an Arc-enabled Server](connect-already-enabled.md).
+> [!NOTE]  
+> If your server is already connected to Azure and to deploy Azure SQL Server extension for SQL Server proceed to [When the machine is already connected to an Arc-enabled Server](connect-already-enabled.md).
+
 
 ### Generate an onboarding script for SQL Server
 
@@ -39,9 +47,11 @@ If the server that runs your SQL Server instance isn't yet connected to Azure, y
 
     If necessary, specify the proxy your network uses to connect to the Internet.
 
+    To use a specific name for Azure Arc enabled Server instead of default host name, users can add the name for Azure Arc enabled Server in **Server Name**.
+
    :::image type="content" source="media/join/server-details-sql-server-azure-arc.png" alt-text="Screenshot of server details for Azure Arc.":::
 
-1. Select the SQL Server edition and license type you are using on this machine. Please note that some Arc-enabled SQL Server features are only available for SQL Servers with Software Assurance (Paid) or with Azure pay-as-you-go. For more information, review [Manage SQL Server license type](manage-license-type.md).
+1. Select the SQL Server edition and license type you are using on this machine. Some Arc-enabled SQL Server features are only available for SQL Servers with Software Assurance (Paid) or with Azure pay-as-you-go. For more information, review [Manage SQL Server license type](manage-license-type.md).
 
 1. Specify the SQL Server instance(s) you want to exclude from registering (if you have multiple instances installed on the server).  Separate each excluded instance by a space.
 
@@ -61,7 +71,7 @@ Screenshot of
 
 ### Connect SQL Server instances to Azure Arc
 
-In this step, you'll take the script you downloaded from the Azure portal and execute it on the target machine. The script installs Azure extension for SQL Server. If the machine itself doesn't have the Azure connected machine agent installed, the script will install it first, then install the Azure extension for SQL Server. Azure connected machine agent will register the connected server as an Azure resource of type `Server - Azure Arc`, and Azure extension for SQL Server will connect the SQL Server instances as Azure resources of type `SQL Server - Azure Arc`.
+In this step, execute the script you downloaded from the Azure portal, on the target machine. The script installs Azure extension for SQL Server. If the machine itself doesn't have the Azure connected machine agent installed, the script installs it first, then install the Azure extension for SQL Server. Azure connected machine agent registers the connected server as an Azure resource of type `Server - Azure Arc`, and the Azure extension for SQL Server connects the SQL Server instances as an Azure resource of type `SQL Server - Azure Arc`.
 
 > [!IMPORTANT]  
 > Make sure to execute the script using an account that meets the minimum permission requirements described in [prerequisites](prerequisites.md).
@@ -91,16 +101,13 @@ In this step, you'll take the script you downloaded from the Azure portal and ex
    ```
 
 ---
-
 ## Validate your Arc-enabled SQL Server resources
 
 Go to **Azure Arc > SQL Server** and open the newly registered Arc-enabled SQL Server resource to validate.
 
-   :::image type="content" source="media/join/validate-sql-server-azure-arc.png" alt-text="Screenshot of validating a connected SQL server.":::
-
-
+   :::image type="content" source="media/join/validate-sql-server-azure-arc.png" alt-text="Screenshot of validating a connected SQL Server.":::
 
 ## Next steps
 
 - [Configure advanced data security for your SQL Server instance](configure-advanced-data-security.md)
-- [Configure on-demand SQL assessment for your SQL Server instance](assess.md)
+- [Configure best practices assessment on an Azure Arc-enabled SQL Server instance](assess.md)

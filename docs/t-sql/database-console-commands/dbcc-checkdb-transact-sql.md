@@ -235,7 +235,7 @@ Running `DBCC CHECKDB` against `tempdb` doesn't perform any allocation or catalo
 The new files are visible by using ordinary file utilities such as Windows Explorer.
 
 > [!NOTE]  
-> Prior to [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)], named [file streams](/windows/win32/fileio/file-streams) were used instead to create the internal snapshot files. Named file streams are not visible by using ordinary file utilities such as Windows Explorer. Therefore, in [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)] and earlier versions, you may encounter error messages 7926 and 5030 when you run the `DBCC CHECKDB` command for database files located on an [ReFS](/windows-server/storage/refs/refs-overview)-formatted volume. This is because file streams cannot be created on [Resilient File System (RefS)](/windows-server/storage/refs/refs-overview). For more information, see Knowledge Base article 2974455: [DBCC CHECKDB behavior when the SQL Server database is located on an ReFS volume.](https://support.microsoft.com/kb/2974455).
+> Prior to [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)], named [file streams](/windows/win32/fileio/file-streams) were used instead to create the internal snapshot files. The named file streams used the format <filename.extension>:MSSQL_DBCC<database_id_of_snapshot>. Named file streams are not visible by using ordinary file utilities such as Windows Explorer. Therefore, in [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)] and earlier versions, you may encounter error messages 7926 and 5030 when you run the `DBCC CHECKDB` command for database files located on an [ReFS](/windows-server/storage/refs/refs-overview)-formatted volume. This is because file streams cannot be created on [Resilient File System (RefS)](/windows-server/storage/refs/refs-overview). 
 
 ## Check and repair FILESTREAM data
 
@@ -438,8 +438,8 @@ The following example executes `DBCC CHECKDB` for the current database and for t
 -- Check the current database.
 DBCC CHECKDB;
 GO
--- Check the AdventureWorks2019 database without nonclustered indexes.
-DBCC CHECKDB (AdventureWorks2019, NOINDEX);
+-- Check the AdventureWorks2022 database without nonclustered indexes.
+DBCC CHECKDB (AdventureWorks2022, NOINDEX);
 GO
 ```
 

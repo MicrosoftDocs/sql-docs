@@ -1,5 +1,5 @@
 ---
-title: Configure the priority boost server configuration option
+title: Configure the priority boost (server configuration option)
 description: Learn about the deprecated priority boost option. See how to use it to set the priority base for SQL Server in the Windows 2008 or Windows Server 2008 R2 scheduler.
 author: rwestMSFT
 ms.author: randolphwest
@@ -10,7 +10,7 @@ ms.topic: conceptual
 helpviewer_keywords:
   - "priority boost option"
 ---
-# Configure the priority boost server configuration option
+# Configure the priority boost (server configuration option)
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 

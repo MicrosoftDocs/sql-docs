@@ -81,7 +81,7 @@ This example shows how `DECRYPTBYKEYAUTOASYMKEY` can simplify decryption code. T
 
 ```sql  
 --Create the keys and certificate.  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'mzkvdMlk979438teag$$ds987yghn)(*&4fdg^';  
 OPEN MASTER KEY DECRYPTION BY PASSWORD = 'mzkvdMlk979438teag$$ds987yghn)(*&4fdg^';  
 CREATE ASYMMETRIC KEY SSN_AKey   

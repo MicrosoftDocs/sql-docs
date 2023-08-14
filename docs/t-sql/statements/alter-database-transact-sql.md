@@ -4,7 +4,7 @@ description: ALTER DATABASE (Transact-SQL) syntax for SQL Server, Azure SQL Data
 author: markingmyname
 ms.author: maghan
 ms.reviewer: wiassaf
-ms.date: 02/02/2023
+ms.date: 08/10/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -61,7 +61,7 @@ For more information about the syntax conventions, see [Transact-SQL syntax conv
 
 ## Overview: SQL Server
 
-In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this statement modifies a database, or the files and filegroups associated with the database. Adds or removes files and filegroups from a database, changes the attributes of a database or its files and filegroups, changes the database collation, and sets database options. Database snapshots cannot be modified. To modify database options associated with replication, use [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md).
+In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this statement modifies a database, or the files and filegroups associated with the database. ALTER DATABASE adds or removes files and filegroups from a database, changes the attributes of a database or its files and filegroups, changes the database collation, and sets database options. Database snapshots cannot be modified. To modify database options associated with replication, use [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md).
 
 Because of its length, the `ALTER DATABASE` syntax is separated into the multiple articles.
 
@@ -146,7 +146,7 @@ Renames the database with the name specified as *new_database_name*.
 Specifies the collation for the database. *collation_name* can be either a Windows collation name or a SQL collation name. If not specified, the database is assigned the collation of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 > [!NOTE]
-> Collation cannot be changed after database has been created on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+> Collation cannot be changed after database has been created on [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 When creating databases with other than the default collation, the data in the database always respects the specified collation. For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], when creating a contained database, the internal catalog information is maintained using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] default collation, **Latin1_General_100_CI_AS_WS_KS_SC**.
 
@@ -205,7 +205,7 @@ Before you apply a different collation to a database, make sure that the followi
 - You are the only one currently using the database.
 - No schema-bound object depends on the collation of the database.
 
-If the following objects, which depend on the database collation, exist in the database, the ALTER DATABASE*database_name*COLLATE statement will fail. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will return an error message for each object blocking the `ALTER` action:
+If the following objects, which depend on the database collation, exist in the database, the `ALTER DATABASE database_name COLLATE` statement will fail. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will return an error message for each object blocking the `ALTER` action:
 
 - User-defined functions and views created with SCHEMABINDING
 - Computed columns
@@ -238,12 +238,12 @@ Requires `ALTER` permission on the database.
 
 ### A. Change the name of a database
 
-The following example changes the name of the `AdventureWorks2012` database to `Northwind`.
+The following example changes the name of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database to `Northwind`.
 
 ```sql
 USE master;
 GO
-ALTER DATABASE AdventureWorks2012
+ALTER DATABASE AdventureWorks2022
 Modify Name = Northwind ;
 GO
 ```
@@ -313,7 +313,7 @@ In Azure SQL Database, use this statement to modify a database. Use this stateme
 Because of its length, the `ALTER DATABASE` syntax is separated into the multiple articles.
 
 ALTER DATABASE   
-The current article provides the syntax and related information for changing the name and the collation of a database.
+The current article provides the syntax and related information for changing the name and other settings of a database.
 
 [ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md?view=azuresqldb-current&preserve-view=true)    
 Provides the syntax and related information for changing the attributes of a database by using the SET options of ALTER DATABASE.
@@ -353,6 +353,7 @@ ALTER DATABASE { database_name | CURRENT }
 <add-secondary-option> ::=
    {
       ALLOW_CONNECTIONS = { ALL | NO }
+     | BACKUP_STORAGE_REDUNDANCY = { 'LOCAL' | 'ZONE' | 'GEO' }
      | SERVICE_OBJECTIVE =
        { <service-objective>
        | { ELASTIC_POOL ( name = <elastic_pool_name>) }
@@ -431,12 +432,11 @@ ALTER DATABASE current
 > [!IMPORTANT]
 > EDITION change fails if the MAXSIZE property for the database is set to a value outside the valid range supported by that edition.
 
-#### MODIFY (BACKUP_STORAGE_REDUNDANCY = ['LOCAL' \| 'ZONE' \| 'GEO'])
+#### MODIFY (BACKUP_STORAGE_REDUNDANCY = ['LOCAL' | 'ZONE' | 'GEO'])
 
-Changes the storage redundancy of point-in-time restore backups and long-term retention backups (if configured) of the database. The changes are applied to all the future backups taken. Existing backups continue to use the previous setting. 
+Changes the storage redundancy of point-in-time restore backups and long-term retention backups (if configured) of the database. The changes are applied to all the future backups taken. Existing backups continue to use the previous setting.
 
-> [!IMPORTANT]
-> BACKUP_STORAGE_REDUNDANCY option for Azure SQL Database is available in public preview in Brazil South and generally available in Southeast Asia Azure region only.  
+To enforce data residency when you're creating a database by using T-SQL, use `LOCAL` or `ZONE` as input to the BACKUP_STORAGE_REDUNDANCY parameter.
 
 #### MODIFY (MAXSIZE = [100 MB \| 500 MB \| 1 \| 1024...4096] GB)
 
@@ -473,7 +473,7 @@ Specifies the maximum size of the database. The maximum size must comply with th
 
 \* P11 and P15 allow MAXSIZE up to 4 TB with 1024 GB being the default size. P11 and P15 can use up to 4 TB of included storage at no additional charge. In the Premium tier, MAXSIZE greater than 1 TB is currently available in the following regions: US East2, West US, US Gov Virginia, West Europe, Germany Central, South East Asia, Japan East, Australia East, Canada Central, and Canada East. For more details regarding resource limitations for the DTU model, see [DTU resource limits](/azure/sql-database/sql-database-dtu-resource-limits).
 
-The MAXSIZE value for the DTU model, if specified, has to be a valid value shown in the table above for the service tier specified.
+The MAXSIZE value for the DTU model, if specified, has to be a valid value shown in the previous table for the service tier specified.
 
 For limits such as maximum data size and `tempdb` size in the vCore purchasing model, refer to the articles for [resource limits for single databases](/azure/azure-sql/database/resource-limits-vcore-single-databases) or [resource limits for elastic pools](/azure/azure-sql/database/resource-limits-vcore-elastic-pools).
 
@@ -490,12 +490,12 @@ Specifies the compute size and service objective.
 
 #### SERVICE_OBJECTIVE
 
-Specifies the compute size and service objective. 
+Specifies the compute size (also known as service level objective, or SLO).
 
-- For DTU purchasing model: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`
-- For the vCore purchasing model, choose the tier and provide the number of vCores from a preset list of values, where the number of vCores is `n`. Refer to the [resource limits for single databases](/azure/azure-sql/database/resource-limits-vcore-single-databases) or [resource limits for elastic pools](/azure/azure-sql/database/resource-limits-vcore-elastic-pools).
+- For DTU purchasing model: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`. Refer to the [resource limits for DTU single databases](/azure/azure-sql/database/resource-limits-dtu-single-databases) or [resource limits for DTU elastic pools](/azure/azure-sql/database/resource-limits-dtu-elastic-pools) to find the number of DTU assigned to each compute size.
+- For the vCore purchasing model, choose the tier and provide the number of vCores from a preset list of values, where the number of vCores is `n`. Refer to the [resource limits for vCore single databases](/azure/azure-sql/database/resource-limits-vcore-single-databases) or [resource limits for vCore elastic pools](/azure/azure-sql/database/resource-limits-vcore-elastic-pools).
     - For example: 
-    - `GP_Gen5_8` for General purpose Standard-series (Gen5) compute, 8 vCores.
+    - `GP_Gen5_8` for General Purpose Standard-series (Gen5) compute, 8 vCores.
     - `GP_S_Gen5_8` for General Purpose Serverless Standard-series (Gen5) compute, 8 vCores.
     - `HS_Gen5_8` for Hyperscale - provisioned compute - standard-series (Gen5), 8 vCores.
 
@@ -521,7 +521,7 @@ Only for Azure SQL Database Hyperscale. The database name that will be created. 
 
 Only for Azure SQL Database Hyperscale. **GEO** specifies a geo-replica, **NAMED** specifies a named replica. Default is **GEO**. For more information, see [Hyperscale Secondary Replicas](/azure/azure-sql/database/service-tier-hyperscale-replicas).
 
-For service objective descriptions and more information about the size, editions, and the service objectives combinations, see [Azure SQL Database Service Tiers and Performance Levels](/azure/azure-sql/database/purchasing-models), [DTU resource limits](/azure/sql-database/sql-database-dtu-resource-limits) and [vCore resource limits](/azure/sql-database/sql-database-dtu-resource-limits). Support for PRS service objectives have been removed. 
+For service objective descriptions and more information about the size, editions, and the service objectives combinations, see [Azure SQL Database Service Tiers and Performance Levels](/azure/azure-sql/database/purchasing-models), [DTU resource limits](/azure/sql-database/sql-database-dtu-resource-limits) and [vCore resource limits](/azure/sql-database/sql-database-dtu-resource-limits). Support for PRS service objectives has been removed. 
 
 When SERVICE_OBJECTIVE is not specified, the secondary database is created at the same service level as the primary database. When SERVICE_OBJECTIVE is specified, the secondary database is created at the specified level. The SERVICE_OBJECTIVE specified must be within the same edition as the source. For example, you cannot specify S0 if the edition is premium.
 
@@ -601,7 +601,7 @@ You can use catalog views, system functions, and system stored procedures to ret
 
 ## Permissions
 
-To alter a database a login must be either the server admin login (created when the Azure SQL Database logical server was provisioned), the Azure AD admin of the server, a member of the dbmanager database role in `master`, a member of the db_owner database role in the current database, or `dbo` of the database.
+To alter a database, a login must be either the server admin login (created when the Azure SQL Database logical server was provisioned), the Azure AD admin of the server, a member of the dbmanager database role in `master`, a member of the db_owner database role in the current database, or `dbo` of the database.
 
 To scale databases via T-SQL, ALTER DATABASE permissions are needed.  To scale databases via the Azure portal, PowerShell, Azure CLI, or REST API, Azure RBAC permissions are needed, specifically the Contributor, SQL DB Contributor role, or SQL Server Contributor Azure RBAC roles. For more information, visit [Azure RBAC built-in roles](/azure/role-based-access-control/built-in-roles).
 
@@ -745,7 +745,7 @@ Provides the syntax and related information for the SET options of ALTER DATABAS
 ## Syntax
 
 ```syntaxsql
--- Azure SQL Database Syntax  
+-- Azure SQL Managed Instance syntax  
 ALTER DATABASE { database_name | CURRENT }  
 {
     MODIFY NAME = new_database_name
@@ -799,7 +799,7 @@ Designates that the current database in use should be altered.
 
 - The `ALTER DATABASE` statement must run in auto-commit mode (the default transaction management mode) and is not allowed in an explicit or implicit transaction.
 
-- The plan cache for the Managed Instance is cleared by setting one of the following options.
+- The plan cache for the Azure SQL Managed Instance is cleared by setting one of the following options.
     - COLLATE
     - MODIFY FILEGROUP DEFAULT
     - MODIFY FILEGROUP READ_ONLY
@@ -833,7 +833,7 @@ Only the server-level principal login (created by the provisioning process) or m
 
 ## Examples
 
-The following examples show you how to set automatic tuning and how to add a file in a managed instance.
+The following examples show you how to set automatic tuning and how to add a file to a database in Azure SQL Managed Instance.
 
 ```sql
 ALTER DATABASE WideWorldImporters
@@ -934,8 +934,6 @@ ALTER DATABASE { database_name | Current }
 <auto_option> ::= 
 { 
     AUTO_CREATE_STATISTICS { OFF | ON [ ( INCREMENTAL = { ON | OFF } ) ] } 
-  | AUTO_UPDATE_STATISTICS { ON | OFF } 
-  | AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF } 
 } 
 
 <sql_option> ::= 
@@ -997,7 +995,7 @@ The owner of the database cannot alter the database unless the owner is a member
 
 The current database must be a different database than the one you are altering, therefore ALTER must be run while connected to the `master` database.
 
-COMPATIBILITY_LEVEL in SQL Analytics is set to 130 by default and cannot be changed. For more details, see [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](./alter-database-transact-sql-compatibility-level.md).
+COMPATIBILITY_LEVEL in SQL Analytics is set to 130 by default and cannot be changed. For more information, see [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](./alter-database-transact-sql-compatibility-level.md).
 
 > [!NOTE]
 > COMPATIBILITY_LEVEL applies to provisioned resources (pools) only.
@@ -1019,7 +1017,7 @@ Before you run these examples, make sure the database you are altering is not th
 ### A. Change the name of the database
 
 ```sql
-ALTER DATABASE AdventureWorks2012
+ALTER DATABASE AdventureWorks2022
 MODIFY NAME = Northwind;
 ```
 
@@ -1071,7 +1069,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 
 ## Overview: Analytics Platform System
 
-Modifies the maximum database size options for replicated tables, distributed tables, and the transaction log in PDW. Use this statement to manage disk space allocations for a database as it grows or shrinks in size. The article also describes syntax related to setting database options in PDW.
+ In [!INCLUDE [sspdw-md](../../includes/sspdw-md.md)], ALTER DATABASE modifies the maximum database size options for replicated tables, distributed tables, and the transaction log. Use this statement to manage disk space allocations for a database as it grows or shrinks in size. This article also describes syntax related to setting database options in [!INCLUDE [sspdw-md](../../includes/sspdw-md.md)].
 
 ## Syntax
 
@@ -1262,7 +1260,7 @@ ALTER DATABASE CustomerSales
 
 ### E. Check for current statistics values
 
-The following query returns the current statistics values for all databases. The value 1 means the feature is on, and a 0 means the feature is off.
+The following query returns the current statistics values for all databases. The value `1` means the feature is on, and a `0` means the feature is off.
 
 ```sql
 SELECT NAME,

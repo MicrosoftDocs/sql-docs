@@ -29,12 +29,12 @@ helpviewer_keywords:
   - "displaying distribution statistics"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 
 # DBCC SHOW_STATISTICS (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
 Displays current query optimization statistics for a table or indexed view. The query optimizer uses statistics to estimate the cardinality or number of rows in the query result, which enables the Query Optimizer to create a high quality query plan. For example, the Query Optimizer could use cardinality estimates to choose the index seek operator instead of the index scan operator in the query plan, improving query performance by avoiding a resource-intensive index scan.
 
@@ -50,6 +50,10 @@ Important updates in past versions of SQL Server:
 
 - Starting in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Service Pack 1 CU 2, the [sys.dm_db_stats_histogram](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) dynamic management view is available to programmatically retrieve histogram information contained in the statistics object.
 
+- [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
+- For more information on statistics in Microsoft Fabric, see [Statistics](/fabric/data-warehouse/statistics).
+
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
@@ -63,16 +67,13 @@ DBCC SHOW_STATISTICS ( table_or_indexed_view_name , target )
     STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM
 ```
 
-Syntax for [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:
+Syntax for [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], and [!INCLUDE[fabric](../../includes/fabric.md)]:
 
 ```syntaxsql
 DBCC SHOW_STATISTICS ( table_name , target )
     [ WITH { STAT_HEADER | DENSITY_VECTOR | HISTOGRAM } [ , ...n ] ]
 [;]
 ```
-
-> [!NOTE]  
-> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -88,9 +89,16 @@ Name of the table that contains the statistics to display. The table cannot be a
 
 #### *target*
 
-Name of the index, statistics, or column for which to display statistics information. *target* is enclosed in brackets, single quotes, double quotes, or no quotes. If *target* is a name of an existing index or statistics on a table or indexed view, the statistics information about this target is returned. If *target* is the name of an existing column, and an automatically created statistics object on this column exists, information about that auto-created statistic is returned. If an automatically created statistic does not exist for a column target, error message 2767 is returned.  
+Name of the index, statistics, or column for which to display statistics information. *target* is enclosed in brackets, single quotes, double quotes, or no quotes.
+
+- If *target* is a name of an existing index or statistics on a table or indexed view, the statistics information about this target is returned. 
+- If *target* is the name of an existing column, and an automatically created statistics object on this column exists, information about that auto-created statistic is returned. 
+
+If an automatically created statistic does not exist for a column target, error message 2767 is returned.  
 
 In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], *target* cannot be a column name.
+
+In [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)], *target* can be either the name of a single-column histogram statistics or a column. If a column name is used for *target*, this command will return distribution information only about the automatically generated histogram statistic. To view the information about a manually created histogram statistic, specify the statistics name as *target*.
 
 #### NO_INFOMSGS
 
@@ -200,6 +208,8 @@ In versions before [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pac
 
 `DBCC SHOW_STATISTICS` is not supported on external tables.
 
+In [!INCLUDE [fabric](../../includes/fabric.md)], `DBCC SHOW_STATISTICS` only shows results for histogram statistics, not ACE-* statistics.
+
 ## Examples: SQL Server and Azure SQL Database
 
 ### A. Return all statistics information
@@ -224,10 +234,10 @@ GO
 
 ### C. Display the contents of one statistics object
 
- The following example creates a statistics object and then displays the contents of the `Customer_LastName` statistics on the `DimCustomer` table in the `AdventureWorks2022` sample database.
+ The following example creates a statistics object and then displays the contents of the `Customer_LastName` statistics on the `DimCustomer` table in the [!INCLUDE [ssawpdw-md](../../includes/ssawpdw-md.md)] sample database.
 
 ```sql
--- Uses AdventureWorks2022
+-- Uses AdventureWorksPDW
 --First, create a statistics object
 CREATE STATISTICS Customer_LastName
 ON AdventureWorksPDW2012.dbo.DimCustomer (LastName);
@@ -243,6 +253,7 @@ The results show the header, the density vector, and part of the histogram.
 ## See also
 
 - [Statistics](../../relational-databases/statistics/statistics.md)
+- [Statistics in Microsoft Fabric](/fabric/data-warehouse/statistics)
 - [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)
 - [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)
 - [sys.dm_db_incremental_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md)

@@ -21,8 +21,8 @@ Some of the content in this article is duplicated in /azure-sql/managed-instance
 
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](recovery-using-backups.md)
-> * [Azure SQL Managed Instance](../managed-instance/recovery-using-backups.md)
+> * [Azure SQL Database](recovery-using-backups.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](../managed-instance/recovery-using-backups.md?view=azuresql-mi&preserve-view=true)
 
 This article provides steps to recover any database from a backup in Azure SQL Database, including Hyperscale databases. For Azure SQL Managed Instance, see [Restore a database from a backup in Azure SQL Managed Instance](../managed-instance/recovery-using-backups.md).
 
@@ -83,7 +83,7 @@ When the restore is complete, it creates a new database on the same server as th
 You generally restore a database to an earlier point for recovery purposes. You can treat the restored database as a replacement for the original database or use it as a data source to update the original database.
 
 > [!IMPORTANT]
-> - You can run a restore only on the same server. Point-in-time restore doesn't support cross-server restoration.
+> - You can perform a point-in-time restore of a database to the same server. Cross-server, cross-subscription and cross-geo point-in-time restore is not currently supported. To restore a database to a different region using geo-replicated backups see [Geo-restore](#geo-restore).
 > - You can't perform a point-in-time restore on a geo-secondary database. You can do so only on a primary database.
 > - The `BackupFrequency` parameter isn't supported for Hyperscale databases. 
 > - Database restore operations are resource-intensive and may require a service tier of S3 or greater for the restoring (target) database. Once restore completes, the database or elastic pool may be scaled down, if required.

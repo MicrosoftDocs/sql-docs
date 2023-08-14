@@ -45,7 +45,7 @@ You will need to create a credential and a login, and create a database encrypti
   
     -   Edit the `IDENTITY` argument (`ContosoDevKeyVault`) to point to your Azure Key Vault.
         - If you're using **global Azure**, replace the `IDENTITY` argument with the name of your Azure Key Vault from Part II.
-        - If you're using a **private Azure cloud** (ex. Azure Government, Azure China 21Vianet, or Azure Germany), replace the `IDENTITY` argument with the Vault URI that is returned in Part II, step 3. Do not include "https://" in the Vault URI.   
+        - If you're using a **private Azure cloud** (ex. Azure Government, Azure operated by 21Vianet, or Azure Germany), replace the `IDENTITY` argument with the Vault URI that is returned in Part II, step 3. Do not include "https://" in the Vault URI.   
   
     -   Replace the first part of the `SECRET` argument with the Azure Active Directory **Client ID** from Part I. In this example, the **Client ID** is `EF5C8E094D2A4A769998D93440D8115D`.
   
@@ -61,7 +61,7 @@ You will need to create a credential and a login, and create a database encrypti
     CREATE CREDENTIAL Azure_EKM_TDE_cred   
         WITH IDENTITY = 'ContosoDevKeyVault', -- for global Azure
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.usgovcloudapi.net', -- for Azure Government
-        -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Azure China 21Vianet
+        -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Microsoft Azure operated by 21Vianet
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.microsoftazure.de', -- for Azure Germany   
         SECRET = 'EF5C8E094D2A4A769998D93440D8115DReplaceWithAADClientSecret'   
     FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov;  
@@ -144,7 +144,7 @@ The [!INCLUDE[ssDE](../../../includes/ssde-md.md)] needs the credential when acc
   
     -   Edit the `IDENTITY` argument (`ContosoDevKeyVault`) to point to your Azure Key Vault.
         - If you're using **global Azure**, replace the `IDENTITY` argument with the name of your Azure Key Vault from Part II.
-        - If you're using a **private Azure cloud** (ex. Azure Government, Azure China 21Vianet, or Azure Germany), replace the `IDENTITY` argument with the Vault URI that is returned in Part II, step 3. Do not include "https://" in the Vault URI.    
+        - If you're using a **private Azure cloud** (ex. Azure Government, Microsoft Azure operated by 21Vianet, or Azure Germany), replace the `IDENTITY` argument with the Vault URI that is returned in Part II, step 3. Do not include "https://" in the Vault URI.    
   
     -   Replace the first part of the `SECRET` argument with the Azure Active Directory **Client ID** from Part I. In this example, the **Client ID** is `EF5C8E094D2A4A769998D93440D8115D`.  
   
@@ -159,7 +159,7 @@ The [!INCLUDE[ssDE](../../../includes/ssde-md.md)] needs the credential when acc
         CREATE CREDENTIAL Azure_EKM_Backup_cred   
             WITH IDENTITY = 'ContosoDevKeyVault', -- for global Azure
             -- WITH IDENTITY = 'ContosoDevKeyVault.vault.usgovcloudapi.net', -- for Azure Government
-            -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Azure China 21Vianet
+            -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Microsoft Azure operated by 21Vianet
             -- WITH IDENTITY = 'ContosoDevKeyVault.vault.microsoftazure.de', -- for Azure Germany   
             SECRET = 'EF5C8E094D2A4A769998D93440D8115DReplace-With-AAD-Client-Secret'   
         FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov;    
@@ -170,7 +170,7 @@ The [!INCLUDE[ssDE](../../../includes/ssde-md.md)] needs the credential when acc
      Create a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login to be used by the [!INCLUDE[ssDE](../../../includes/ssde-md.md)]e for encryption backups, and add the credential from Step 1 to it. This [!INCLUDE[tsql](../../../includes/tsql-md.md)] example uses the same key that was imported earlier.  
   
     > [!IMPORTANT]  
-    >  You cannot use the same asymmetric key for backup encryption if you've already used that key for TDE (the above example) or column level Encryption (the following example).  
+    > You cannot use the same asymmetric key for backup encryption if you've already used that key for TDE (the above example), or column level encryption (the following example).
   
      This example uses the `CONTOSO_KEY_BACKUP` asymmetric key stored in the key vault, which can be imported or created earlier for the master database, as Part IV, Step 5 earlier.  
   
@@ -232,7 +232,7 @@ The [!INCLUDE[ssDE](../../../includes/ssde-md.md)] needs the credential when acc
  The following example creates a symmetric key protected by the asymmetric key in the key vault. Then the symmetric key is used to encrypt data in the database.  
   
 > [!IMPORTANT]  
->  You cannot use the same asymmetric key for backup encryption if you've already used that key for TDE or backup encryption (the preceding examples).  
+> You cannot use the same asymmetric key for column level encryption if you've already used that key for backup encryption.
   
  This example uses the `CONTOSO_KEY_COLUMNS` asymmetric key stored in the key vault, which can be imported or created earlier, as described in Step 3, section 3 of [Setup Steps for Extensible Key Management Using the Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md). To use this asymmetric key in the `ContosoDatabase` database, you must execute the `CREATE ASYMMETRIC KEY` statement again, to provide the `ContosoDatabase` database with a reference to the key.  
   

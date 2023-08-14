@@ -30,7 +30,7 @@ Assume that you want to construct XML that provides sales order information. In 
 The following EXPLICIT mode query constructs this XML. The query specifies `Tag` values of 1 for the `<OrderHeader>` element, 2 for the `<SalesPerson>` element, and 3 for the `<OrderDetail>` element. Because `<SalesPerson>` and `<OrderDetail>` are siblings, the query specifies the same `Parent` tag value of 1 identifying the `<OrderHeader>` element.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT  1 as Tag,
         0 as Parent,

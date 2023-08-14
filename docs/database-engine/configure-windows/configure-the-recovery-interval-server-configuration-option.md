@@ -1,5 +1,5 @@
 ---
-title: Configure the recovery interval server configuration option
+title: Configure the recovery interval (server configuration option)
 description: Learn about the recovery interval option. See how its value affects how often SQL Server issues automatic checkpoints on a database.
 author: rwestMSFT
 ms.author: randolphwest
@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "maximum number of minutes per database recovery"
   - "recovery [SQL Server], recovery interval option"
 ---
-# Configure the recovery interval (min) server configuration option
+# Configure the recovery interval (min) (server configuration option)
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
@@ -61,7 +61,7 @@ Execute permissions on `sp_configure` with no parameters or with only the first 
 1. Copy and paste the following example into the query window and select **Execute**. This example shows how to use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) to set the value of the `recovery interval (min)` option to `3` minutes.
 
 ```sql
-USE AdventureWorks2019;
+USE AdventureWorks2022;
 GO
 EXEC sp_configure 'show advanced options', 1;
 GO

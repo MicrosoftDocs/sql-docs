@@ -154,6 +154,9 @@ If the certificate is kept in the SQL Server local machine certificate store, it
 
 The certificate is now available to the specified managed instance, and the backup of the corresponding TDE-protected database can be restored successfully.
 
+> [!NOTE]
+> Uploaded certificate is not visible in the sys.certificates catalog view. To confirm successful upload of the certificate you can run [RESTORE FILELISTONLY](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql) command.
+
 ## Next steps
 
 In this article, you learned how to migrate a certificate protecting the encryption key of a database with Transparent Data Encryption, from the on-premises or IaaS SQL Server instance to Azure SQL Managed Instance.

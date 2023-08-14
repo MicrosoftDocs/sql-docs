@@ -3,7 +3,7 @@ title: "sys.dm_db_index_operational_stats (Transact-SQL)"
 description: sys.dm_db_index_operational_stats (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "02/24/2023"
+ms.date: "06/19/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -77,11 +77,11 @@ sys.dm_db_index_operational_stats (
     
 |Column name|Data type|Description|    
 |-----------------|---------------|-----------------|    
-|**database_id**|**smallint**|Database ID.|    
+|**database_id**|**smallint**|Database ID. <br /><br />In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the values are unique within a single database or an elastic pool, but not within a logical server.|    
 |**object_id**|**int**|ID of the table or view.|    
 |**index_id**|**int**|ID of the index or heap.<br /><br /> 0 = Heap| 
 |**partition_number**|**int**|1-based partition number within the index or heap.| 
-|**hobt_id**|**bigint**|[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> ID of the data heap or B-tree rowset that tracks internal data for a columnstore index.<br /><br /> NULL - this is not an internal columnstore rowset.<br /><br /> For more details, see [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|       
+|**hobt_id**|**bigint**|[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].<br /><br /> ID of the data heap or B-tree rowset that tracks internal data for a columnstore index.<br /><br /> NULL - this is not an internal columnstore rowset.<br /><br /> For more details, see [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|       
 |**leaf_insert_count**|**bigint**|Cumulative count of leaf-level inserts.|    
 |**leaf_delete_count**|**bigint**|Cumulative count of leaf-level deletes. leaf_delete_count is only incremented for deleted records that are not marked as ghost first. For deleted records that are ghosted first, **leaf_ghost_count** is incremented instead.|    
 |**leaf_update_count**|**bigint**|Cumulative count of leaf-level updates.|    
@@ -206,8 +206,8 @@ sys.dm_db_index_operational_stats (
 ```sql    
 DECLARE @db_id int;    
 DECLARE @object_id int;    
-SET @db_id = DB_ID(N'AdventureWorks2012');    
-SET @object_id = OBJECT_ID(N'AdventureWorks2012.Person.Address');    
+SET @db_id = DB_ID(N'AdventureWorks2022');    
+SET @object_id = OBJECT_ID(N'AdventureWorks2022.Person.Address');    
 IF @db_id IS NULL     
   BEGIN;    
     PRINT N'Invalid database';    

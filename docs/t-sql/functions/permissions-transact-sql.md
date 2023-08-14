@@ -116,20 +116,20 @@ ELSE
 ```  
   
 ### B. Using the PERMISSIONS function with object permissions  
- The following example determines whether the current user can insert a row of data into the `Address` table in the `AdventureWorks2012` database.  
+ The following example determines whether the current user can insert a row of data into the `Address` table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql  
-IF PERMISSIONS(OBJECT_ID('AdventureWorks2012.Person.Address','U'))&8=8   
+IF PERMISSIONS(OBJECT_ID('AdventureWorks2022.Person.Address','U'))&8=8   
    PRINT 'The current user can insert data into Person.Address.'  
 ELSE  
    PRINT 'ERROR: The current user cannot insert data into Person.Address.';  
 ```  
   
 ### C. Using the PERMISSIONS function with grantable permissions  
- The following example determines whether the current user can grant the INSERT permission on the `Address` table in the `AdventureWorks2012` database to another user.  
+ The following example determines whether the current user can grant the INSERT permission on the `Address` table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database to another user.  
   
 ```sql  
-IF PERMISSIONS(OBJECT_ID('AdventureWorks2012.Person.Address','U'))&0x80000=0x80000  
+IF PERMISSIONS(OBJECT_ID('AdventureWorks2022.Person.Address','U'))&0x80000=0x80000  
    PRINT 'INSERT on Person.Address is grantable.'  
 ELSE  
    PRINT 'You may not GRANT INSERT permissions on Person.Address.';  

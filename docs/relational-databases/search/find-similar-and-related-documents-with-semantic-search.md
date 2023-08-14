@@ -28,7 +28,7 @@ helpviewer_keywords:
 >  The columns that you target must have full-text and semantic indexing enabled.  
   
 ###  <a name="HowToIdentifySimilar"></a> Example: Find the top documents that are similar to another document  
- The following example retrieves the top 10 candidates who are similar to the candidate specified by *\@CandidateID* from the HumanResources.JobCandidate table in the AdventureWorks2012 sample database.  
+ The following example retrieves the top 10 candidates who are similar to the candidate specified by *\@CandidateID* from the HumanResources.JobCandidate table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample database.  
   
 ```scr  
 SELECT TOP(10) KEY_TBL.matched_document_key AS Candidate_ID  
@@ -53,7 +53,7 @@ GO
 >  The columns that you target must have full-text and semantic indexing enabled.  
   
 ###  <a name="HowToSimilarPhrases"></a> Example: Find the top key phrases that are similar between documents  
- The following example retrieves the 5 key phrases that have the highest similarity score between the specified candidates in **HumanResources.JobCandidate** table of the AdventureWorks2012 sample database.  
+ The following example retrieves the 5 key phrases that have the highest similarity score between the specified candidates in **HumanResources.JobCandidate** table of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample database.  
   
 ```sql  
 SELECT TOP(5) KEY_TBL.keyphrase, KEY_TBL.score  

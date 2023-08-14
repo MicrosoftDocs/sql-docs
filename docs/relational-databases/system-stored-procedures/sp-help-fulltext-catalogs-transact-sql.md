@@ -57,7 +57,7 @@ sp_help_fulltext_catalogs [ @fulltext_catalog_name = ] 'fulltext_catalog_name'
  The following example returns information about the `Cat_Desc` full-text catalog.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_help_fulltext_catalogs 'Cat_Desc' ;  
 GO  

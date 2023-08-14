@@ -610,6 +610,9 @@ Provide the password that you specified while creating the SSIS Catalog in the *
 
 ![New Availability Group](../../integration-services/service/media/ssis-newavailabilitygroup.png "New Availability Group")  
   
+  > [!IMPORTANT]  
+  >  To prevent issues with the master key after a failover, use the method **Full database and log backup** to add the SSISDB database to the Always On Availability Group.
+  
 ####  <a name="Step3"></a> Step 3: Enable SSIS support for Always On  
  After you create the Integration Service Catalog, right-click the **Integration Service Catalogs** node, and click **Enable Always On Support.** You should see the following **Enable Support for Always On** dialog box. If this menu item is disabled, confirm that you have all the prerequisites installed and click **Refresh**.  
   
@@ -655,11 +658,11 @@ If the **Enable Always On support** option on the context menu appears to be dis
 
 By default, the remote invocation of SSIS packages stored under the SSISDB catalog doesn't support the delegation of credentials, sometimes referred to as a double-hop. 
 
-Imagine a scenario in which a user logs in to client machine A and launches SQL Server Management Studio (SSMS). From within SSMS, the user connects to a SQL server that's hosted on machine B, which has the SSISDB catalog. The SSIS package is stored under this SSISDB catalog and the package in turn connects to a SQL Server service that is running on machine C (the package could also be accessing any other services). When the user invokes the execution of the SSIS package from machine A, SSMS first successfully passes the user credentials from machine A to machine B (where the SSIS runtime process is executing the package). The SSIS execution runtime process (ISServerExec.exe) is now required to delegate the user credentials from machine B to machine C for the execution to complete successfully. However, delegation of credentials is not enabled by default.
+Imagine a scenario in which a user logs in to client machine A and launches SQL Server Management Studio (SSMS). From within SSMS, the user connects to a SQL Server that's hosted on machine B, which has the SSISDB catalog. The SSIS package is stored under this SSISDB catalog and the package in turn connects to a SQL Server service that is running on machine C (the package could also be accessing any other services). When the user invokes the execution of the SSIS package from machine A, SSMS first successfully passes the user credentials from machine A to machine B (where the SSIS runtime process is executing the package). The SSIS execution runtime process (ISServerExec.exe) is now required to delegate the user credentials from machine B to machine C for the execution to complete successfully. However, delegation of credentials is not enabled by default.
 
 A user can enable the delegation of credentials by granting the *Trust this user for delegation to any service (Kerberos Only)* right to the SQL Server service account (on machine B), which launches ISServerExec.exe as a child process. This process is referred to as setting up unconstrained delegation or open delegation for a SQL Server service account. Before you grant this right, consider whether it meets the security requirements of your organization.
 
-SSISDB doesn't support constrained delegation. In a double-hop environment, if the service account of the SQL server that hosts the SSISDB catalog (machine B in our example) is set up for constrained delegation, ISServerExec.exe won't be able to delegate the credentials to the third machine (machine C). This is applicable to scenarios in which Windows Credential Guard is enabled, which mandatorily requires constrained delegation to be set up.
+SSISDB doesn't support constrained delegation. In a double-hop environment, if the service account of the SQL Server that hosts the SSISDB catalog (machine B in our example) is set up for constrained delegation, ISServerExec.exe won't be able to delegate the credentials to the third machine (machine C). This is applicable to scenarios in which Windows Credential Guard is enabled, which mandatorily requires constrained delegation to be set up.
 
   
 ##  <a name="RelatedContent"></a> Related Content  

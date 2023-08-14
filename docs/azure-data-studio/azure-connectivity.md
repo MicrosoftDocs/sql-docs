@@ -4,7 +4,7 @@ description: Explains the Azure connection options available in Azure Data Studi
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan, randolphwest
-ms.date: 03/22/2023
+ms.date: 06/06/2023
 ms.service: azure-data-studio
 ms.topic: "overview"
 ---
@@ -76,9 +76,6 @@ Azure Data Studio supports Azure Active Directory (Azure AD) authentication with
 
 :::image type="content" source="media/azure-connectivity/national-clouds.png" alt-text="Screenshot of Azure authentication National Clouds.":::
 
-> [!NOTE]  
-> Only one National Cloud can be enabled in a session.
-
 ## Azure resource configuration
 
 These settings apply filters on Azure resources and tenants.
@@ -140,7 +137,7 @@ In a proxy environment, user applications may need to allow specific domains use
 - https://management.core.usgovcloudapi.net/
 - https://login.microsoftonline.us/
 
-**Azure (China)**
+**Azure operated by 21Vianet**
 
 - https://management.core.chinacloudapi.cn/
 - https://login.partner.microsoftonline.cn/
@@ -184,13 +181,35 @@ If the user application is running in an environment behind a proxy, user authen
 
 As a cross-platform application, ADS proxy resolution fetches the proxy from either setting within the application, or through environment variables. The aim is to avoid interaction with system settings, which can vary significantly on different operating systems.
 
+### Issue: Azure Core extension is disabled
+
+Azure Core extension is `@builtin` extension in Azure Data Studio, please ensure it's not disabled or uninstalled accidentally. This extension is required to be able to authenticate Azure accounts and connect to resources with Azure MFA authentication.
+
+:::image type="content" source="media/azure-connectivity/azure-connectivity-azure-core-extension.png" alt-text="Screenshot of built-in Azure Core extension.":::
+
+### Issue: System CA certificates are expired
+
+Azure Data Studio's default behavior includes validating system's root CA certificates when making REST API calls using HTTPS Protocol. This is controlled by the below setting that is enabled by default:
+
+:::image type="content" source="media/azure-connectivity/azure-connectivity-system-certificates.png" alt-text="Screenshot of system certificates setting.":::
+
+```
+"http.systemCertificates": true
+```
+
+If a system's Root CA certificate is expired, authentication requests to Azure Active Directory will fail and an error like below would be captured in 'Azure Account' logs:
+
+`error: certificate is expired`
+
+To mitigate this error, you should remove any expired Root CA Certificates or disable the setting to not validate system certificates.
+
 ## Capture logs for Azure authentication
 
 Azure Data Studio captures Error events for Azure account activity by default. To enable more detailed traces, users can modify these settings:
 
 ### Azure: Logging level
 
-This setting configures the logging level for information from Azure core that can be captured in Azure Data Studio. Change it to *Verbose* or *All* to capture detailed logs that can be useful to diagnose authentication failures. For more information, see [Debug Trace Logging](https://github.com/microsoft/azuredatastudio/wiki/Debug-Trace-Logging) to learn how to capture logging information.
+This setting configures the logging level for information from Azure core that can be captured in Azure Data Studio. Change it to *Verbose* or *All* to capture detailed logs that can be useful to diagnose authentication failures. For more information, see [Azure Data Studio logs and location](troubleshooting.md#azure-data-studio-logs-and-location) to learn how to capture logging information.
 
 `Settings.json`
 

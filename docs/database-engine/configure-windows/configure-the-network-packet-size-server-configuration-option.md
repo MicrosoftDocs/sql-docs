@@ -1,5 +1,5 @@
 ---
-title: "Configure the network packet size server configuration option"
+title: "Configure the network packet size (server configuration option)"
 description: Learn how to use the network packet size option to set the packet size that SQL Server uses when transferring requests and results between clients and servers.
 author: rwestMSFT
 ms.author: randolphwest
@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "packets [SQL Server], size"
   - "network packet size option"
 ---
-# Configure the network packet size server configuration option
+# Configure the network packet size (server configuration option)
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
@@ -65,7 +65,7 @@ Execute permissions on `sp_configure` with no parameters or with only the first 
 1. Copy and paste the following example into the query window and select **Execute**. This example shows how to use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) to set the value of the `network packet size` option to `6500` bytes.
 
 ```sql
-USE AdventureWorks2019;
+USE AdventureWorks2022;
 GO
 EXEC sp_configure 'show advanced options', 1;
 GO

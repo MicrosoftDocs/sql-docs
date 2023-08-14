@@ -4,13 +4,11 @@ description: Learn how to configure streaming export of metrics and resource log
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 04/26/2023
+ms.date: 08/04/2023
 ms.service: sql-db-mi
 ms.subservice: performance
 ms.topic: how-to
-ms.custom:
-  - seoapril2019
-  - devx-track-azurepowershell
+ms.custom: seoapril2019
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Configure streaming export of Azure SQL Database and SQL Managed Instance diagnostic telemetry
@@ -453,8 +451,8 @@ Refer to the following table for details about advanced metrics.
 
 | **Metric** | **Metric Display Name** | **Description** |
 | --- | --- | --- |
-| sqlserver_process_core_percent <sup>1</sup> | SQL process core percent | CPU usage percentage for the SQL process, as measured by the operating system. |
-| sqlserver_process_memory_percent <sup>1</sup> | SQL process memory percent | Memory usage percentage for the SQL process, as measured by the operating system. |
+| sql_instance_cpu_percent <sup>1</sup> | SQL instance CPU percent | CPU usage by all user and system workloads, as measured by the operating system |
+| sql_instance_memory_percent <sup>1</sup> | SQL instance memory percent | Memory usage by the database engine instance, as measured by the operating system |
 | tempdb_data_size <sup>2</sup> | `tempdb` Data File Size Kilobytes | `tempdb` Data File Size Kilobytes. |
 | tempdb_log_size <sup>2</sup> | `tempdb` Log File Size Kilobytes | `tempdb` Log File Size Kilobytes. |
 | tempdb_log_used_percent <sup>2</sup> | `tempdb` Percent Log Used | `tempdb` Percent Log Used. |
@@ -739,6 +737,14 @@ Learn more about [database wait statistics](/sql/relational-databases/system-dyn
 | EstimatedImpact_s | Estimated effect of automatic tuning recommendation JSON |
 | Event_s | Type of Automatic tuning event |
 | Timestamp_t | Last updated timestamp |
+
+> [!TIP]
+> `query_hash_s` and `query_plan_hash_s` are provided as numeric values. If you want to find the matching queries and query plans in [Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store), use the following T-SQL expression to convert numeric hash values to binary hash values used in [sys.query_store_query](/sql/relational-databases/system-catalog-views/sys-query-store-query-transact-sql) and [sys.query_store_plan](/sql/relational-databases/system-catalog-views/sys-query-store-plan-transact-sql):
+>
+> `SELECT CAST(CAST(hash_value as bigint) AS binary(8))`.
+>
+> Replace the `hash_value` placeholder with the actual `query_hash_s` or `query_plan_hash_s` numeric value.
+
 
 #### Intelligent Insights dataset
 

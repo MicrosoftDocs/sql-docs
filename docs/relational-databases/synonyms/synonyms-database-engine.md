@@ -24,7 +24,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 For example, consider the **Employee** table of [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)], located on a server named **Server1**. To reference this table from another server, **Server2**, a client application would have to use the four-part name **Server1.AdventureWorks.Person.Employee**. Also, if the location of the table were to change, for example, to another server, the client application would have to be modified to reflect that change.  
   
-To address both these issues, you can create a synonym, **EmpTable**, on **Server2** for the **Employee** table on **Server1**. Now, the client application only has to use the single-part name, **EmpTable**, to reference the **Employee** table. Also, if the location of the **Employee** table changes, you will have to modify the synonym, **EmpTable**, to point to the new location of the **Employee** table. Because there is no ALTER SYNONYM statement, you first have to drop the synonym, **EmpTable**, and then re-create the synonym with the same name, but point the synonym to the new location of **Employee**.  
+To address both these issues, you can create a synonym, **EmpTable** in a dedicated or existing schema, **RemoteObjects**, on **Server2** for the **Employee** table on **Server1**. Now, the client application only has to use the two-part name, **RemoteObjects.EmpTable**, to reference the **Employee** table Server1. Also, if the location of the **Employee** table changes, you will have to modify the synonym, **EmpTable**, to point to the new location of the **Employee** table. Because there is no ALTER SYNONYM statement, you first have to drop the synonym, **RemoteObjects.EmpTable**, and then re-create the synonym with the same name, but now point the synonym to the new location of the **Employee** table.  
   
 A synonym belongs to a schema, and like other objects in a schema, the name of a synonym must be unique. You can create synonyms for the following database objects:  
 
@@ -62,12 +62,12 @@ A synonym belongs to a schema, and like other objects in a schema, the name of a
   
 A synonym cannot be the base object for another synonym, and a synonym cannot reference a user-defined aggregate function.  
   
-The binding between a synonym and its base object is by name only. All existence, type, and permissions checking on the base object is deferred until run time. Therefore, the base object can be modified, dropped, or dropped and replaced by another object that has the same name as the original base object. For example, consider a synonym, **MyContacts**, that references the **Person.Contact** table in [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]. If the **Contact** table is dropped and replaced by a view named **Person.Contact**, **MyContacts** now references the **Person.Contact** view.  
+The binding between a synonym and its base object is by name only. All existence, type, and permissions checking on the base object is deferred until run time. Therefore, the base object can be modified, dropped, or dropped and replaced by another object that has the same name as the original base object. For example, consider a synonym, **dbo.MyContacts**, that references the **Person.Contact** table in [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]. If the **Contact** table is dropped and replaced by a view named **Person.Contact**, **MyContacts** now references the **Person.Contact** view.  
   
 References to synonyms are not schema-bound. Therefore, a synonym can be dropped at any time. However, by dropping a synonym, you run the risk of leaving dangling references to the synonym that was dropped. These references will only be found at run time.  
   
 ## Synonyms and Schemas  
-If you have a default schema that you do not own and want to create a synonym, you must qualify the synonym name with the name of a schema that you do own. For example, if you own a schema **x**, but **y** is your default schema and you use the CREATE SYNONYM statement, you must prefix the name of the synonym with the schema **x**, instead of naming the synonym by using a single-part name. For more information about how to create synonyms, see [CREATE SYNONYM &#40;Transact-SQL&#41;](../../t-sql/statements/create-synonym-transact-sql.md).  
+If you have a default schema that you do not own and want to create a synonym, you must qualify the synonym name with the name of a schema that you do own. For example, if you own a schema **S1**, but **S2** is your default schema and you use the CREATE SYNONYM statement, you must prefix the name of the synonym with the schema **S1**, instead of naming the synonym by using a single-part name. For more information about how to create synonyms, see [CREATE SYNONYM &#40;Transact-SQL&#41;](../../t-sql/statements/create-synonym-transact-sql.md).  
   
 ## Granting Permissions on a Synonym  
 Only synonym owners, members of **db_owner**, or members of **db_ddladmin** can grant permission on a synonym.  
@@ -177,11 +177,13 @@ The following example returns the base type of a synonym's base object that is a
   
 ```sql  
 USE tempdb;  
+GO
+CREATE SCHEMA SynSchema
 GO  
-CREATE SYNONYM MyEmployee   
-FOR AdventureWorks2012.HumanResources.Employee;  
+CREATE SYNONYM SynSchema.MyEmployee   
+FOR AdventureWorks2022.HumanResources.Employee;  
 GO  
-SELECT OBJECTPROPERTYEX(OBJECT_ID('MyEmployee'), 'BaseType') AS BaseType;  
+SELECT OBJECTPROPERTYEX(OBJECT_ID('SynSchema.MyEmployee'), 'BaseType') AS BaseType;  
 ```  
   
 The following example returns the base type of a synonym's base object that is a remote object located on a server named `Server1`.  
@@ -189,8 +191,8 @@ The following example returns the base type of a synonym's base object that is a
 ```sql  
 EXECUTE sp_addlinkedserver Server1;  
 GO  
-CREATE SYNONYM MyRemoteEmployee  
-FOR Server1.AdventureWorks2012.HumanResources.Employee;  
+CREATE SYNONYM SynSchema.MyRemoteEmployee  
+FOR Server1.AdventureWorks2022.HumanResources.Employee;  
 GO  
 SELECT OBJECTPROPERTYEX(OBJECT_ID('MyRemoteEmployee'), 'BaseType') AS BaseType;  
 GO  

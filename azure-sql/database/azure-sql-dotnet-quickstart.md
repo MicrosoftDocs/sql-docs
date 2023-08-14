@@ -4,7 +4,7 @@ description: Learn how to connect to a database in Azure SQL Database and query 
 author: alexwolfmsft
 ms.author: alexwolf
 ms.custom: passwordless-dotnet
-ms.date: 04/12/2023
+ms.date: 07/11/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: quickstart
@@ -186,8 +186,12 @@ app.MapPost("/Person", (Person person) => {
     conn.Open();
 
     var command = new SqlCommand(
-        $"INSERT INTO Persons (firstName, lastName) VALUES ('{person.FirstName}', '{person.LastName}')",
+        "INSERT INTO Persons (firstName, lastName) VALUES (@firstName, @lastName)",
         conn);
+
+    command.Parameters.Clear();
+    command.Parameters.AddWithValue("@firstName", person.FirstName);
+    command.Parameters.AddWithValue("@lastName", person.LastName);
 
     using SqlDataReader reader = command.ExecuteReader();
 })
@@ -271,3 +275,5 @@ When the deployment finishes, Visual Studio launches the browser to display the 
 > If you receive a 500 Internal Server error while testing, it may be due to your database networking configurations. Verify that your logical server is configured with the settings outlined in the [Configure the database](/azure/azure-sql/database/azure-sql-dotnet-quickstart#configure-the-database) section.
 
 Congratulations! Your application is now connected to Azure SQL Database in both local and hosted environments.
+
+[!INCLUDE [passwordless-resource-cleanup](../includes/passwordless-resource-cleanup.md)]

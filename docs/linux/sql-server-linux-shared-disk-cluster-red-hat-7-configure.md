@@ -287,7 +287,7 @@ At this point both instances of SQL Server are configured to run with the databa
 
     
 
-3. Enable and start `pcsd` service and Pacemaker. This will allow nodes to rejoin the cluster after the reboot. Run the following command on both nodes.
+3. Enable and start `pcsd` service and Pacemaker. This will allow nodes to rejoin the cluster after the restart. Run the following command on both nodes.
 
    ```bash
    sudo systemctl enable pcsd

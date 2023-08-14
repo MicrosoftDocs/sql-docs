@@ -21,7 +21,7 @@ This example illustrates the difference between the **ELEMENT** and **XML** dire
 Consider this query:
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT  1 as Tag,
         0 as Parent,

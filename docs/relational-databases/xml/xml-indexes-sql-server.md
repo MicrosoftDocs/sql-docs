@@ -4,7 +4,7 @@ description: Learn how creating XML indexes on xml data type columns can benefit
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.date: 05/09/2022
+ms.date: 08/04/2023
 ms.service: sql
 ms.subservice: xml
 ms.topic: conceptual
@@ -42,7 +42,7 @@ XML indexes can be created on **xml** data type columns. They index all tags, va
 
 - Your XML values are relatively large and the retrieved parts are relatively small. Building the index avoids parsing the whole data at run time and benefits index lookups for efficient query processing.
 
-Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], you can use [XML compression](#xml-compression), which provides a method to compress off-row XML data for both XML columns and indexes, improving capacity requirements.
+Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later versions, and in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi](../../includes/ssazuremi_md.md)], you can use [XML compression](#xml-compression) to compress off-row XML data for both XML columns and indexes. XML compression reduces data storage capacity requirements.
 
 XML indexes fall into the following categories:
 
@@ -100,7 +100,7 @@ OR
 
 The query processor uses the primary XML index for queries that involve [xml Data Type Methods](../../t-sql/xml/xml-data-type-methods.md) and returns either scalar values or the XML subtrees from the primary index itself. (This index stores all the necessary information to reconstruct the XML instance.)
 
-For example, the following query returns summary information stored in the `CatalogDescription`**xml** type column in the `ProductModel` table. The query returns `<Summary>` information only for product models whose catalog description also stores the `<Features>` description.
+For example, the following query returns summary information stored in the `CatalogDescription` **xml** type column in the `ProductModel` table. The query returns `<Summary>` information only for product models whose catalog description also stores the `<Features>` description.
 
 ```sql
 ;WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")
@@ -115,7 +115,7 @@ Regarding the primary XML index, instead of shredding each XML binary large obje
 The primary XML index isn't used when retrieving a full XML instance. For example, the following query retrieves from the table the whole XML instance that describes the manufacturing instructions for a specific product model.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 
 SELECT Instructions
 FROM   Production.ProductModel
@@ -176,7 +176,7 @@ The key columns of the VALUE index are (node value and path) of the primary XML 
 
 - `/book[@* = "someValue"]` where the query looks for the `<book>` element that has some attribute having the value `"someValue"`.
 
-The following query returns `ContactID` from the `Contact` table. The `WHERE` clause specifies a filter that looks for values in the `AdditionalContactInfo`**xml** type column. The contact IDs are returned only if the corresponding additional contact information XML binary large object includes a specific telephone number. Because the `telephoneNumber` element may appear anywhere in the XML, the path expression specifies the descendent-or-self axis.
+The following query returns `ContactID` from the `Contact` table. The `WHERE` clause specifies a filter that looks for values in the `AdditionalContactInfo` **xml** type column. The contact IDs are returned only if the corresponding additional contact information XML binary large object includes a specific telephone number. Because the `telephoneNumber` element may appear anywhere in the XML, the path expression specifies the descendent-or-self axis.
 
 ```sql
 ;WITH XMLNAMESPACES (
@@ -210,13 +210,13 @@ WHERE ProductModelID = 19;
 
 Except for the differences described later in this article, creating an XML index on an**xml** type column is similar to creating an index on a non-**xml** type column. The following [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL statements can be used to create and manage XML indexes:
 
-- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)
-- [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)
-- [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)
+- [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)
+- [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)
+- [DROP INDEX (Transact-SQL)](../../t-sql/statements/drop-index-transact-sql.md)
 
 ## XML compression
 
-**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Preview.
+**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi_md.md)].
 
 Enabling XML compression changes the physical storage format of the data that is associated with the XML data type to a *compressed binary format*, but doesn't change XML data syntax or semantics. Application changes aren't required when one or more tables are enabled for XML compression.
 
@@ -226,7 +226,7 @@ XML compression can be enabled side-by-side with data compression on the same ta
 
 XML indexes don't inherit the compression property of the table. To compress indexes, you must explicitly enable XML compression on XML indexes.
 
-Secondary XML indexes don't inherit the compression property of the Primary XML index.
+Secondary XML indexes don't inherit the compression property of the primary XML index.
 
 By default, the XML compression setting for XML indexes is set to OFF when the index is created.
 
@@ -238,7 +238,9 @@ XML indexes are also recorded in the catalog view `sys.xml_indexes`. This contai
 
 The space use of XML indexes can be found in the table-valued function [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md). It provides information, such as the number of data pages occupied, average row size in bytes, and number of records, for all index types. This also includes XML indexes. This information is available for each database partition. XML indexes use the same partitioning scheme and partitioning function of the base table.
 
-## See also
+## Next steps
 
-- [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)
-- [XML Data &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)
+- [Create XML indexes](create-xml-indexes.md)
+- [ALTER INDEX (Selective XML Indexes)](../../t-sql/statements/alter-index-selective-xml-indexes.md)
+- [sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)
+- [XML Data (SQL Server)](../../relational-databases/xml/xml-data-sql-server.md)

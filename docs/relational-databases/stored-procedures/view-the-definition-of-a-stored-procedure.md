@@ -72,9 +72,9 @@ This article describes how to view the definition of procedure in Object Explore
 3.  In the query window, enter the following statement that uses the `sp_helptext` system stored procedure. Change the database name and stored procedure name to reference the database and stored procedure that you want.  
   
     ```sql  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
-    EXEC sp_helptext N'AdventureWorks2012.dbo.uspLogError';  
+    EXEC sp_helptext N'AdventureWorks2022.dbo.uspLogError';  
     ```  
   
 #### System Function: **OBJECT_DEFINITION**  
@@ -86,9 +86,9 @@ This article describes how to view the definition of procedure in Object Explore
 3.  In the query window, enter the following statements that use the `OBJECT_DEFINITION` system function. Change the database name and stored procedure name to reference the database and stored procedure that you want.  
   
     ```sql  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
-    SELECT OBJECT_DEFINITION (OBJECT_ID(N'AdventureWorks2012.dbo.uspLogError'));  
+    SELECT OBJECT_DEFINITION (OBJECT_ID(N'AdventureWorks2022.dbo.uspLogError'));  
     ```  
   
 #### <a id=sql_modules></a> Object Catalog View: **sys.sql_modules**  
@@ -100,7 +100,7 @@ This article describes how to view the definition of procedure in Object Explore
 3.  In the query window, enter the following statements that use the `sys.sql_modules` catalog view. Change the database name and stored procedure name to reference the database and stored procedure that you want.  
   
     ```sql  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     SELECT [definition]
     FROM sys.sql_modules  

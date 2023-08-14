@@ -80,7 +80,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 4.  Under **Index key columns**, click **Add...**.  
   
-5.  In the **Select Columns from**_table\_name_ dialog box, select the check box of the table column to be added to the clustered index.  
+5.  In the **Select Columns from** _table\_name_ dialog box, select the check box of the table column to be added to the clustered index.  
   
 6.  Click **OK**.  
   
@@ -119,7 +119,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     -- Create a new table with three columns.  
     CREATE TABLE dbo.TestTable  

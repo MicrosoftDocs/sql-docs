@@ -14,10 +14,10 @@ helpviewer_keywords:
   - "sp_pkeys"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # sp_pkeys (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricdw.md)]
 
   Returns primary key information for a single table in the current environment.  
   
@@ -68,10 +68,10 @@ sp_pkeys [ @table_name = ] 'name'
  Requires SELECT permission on the schema.  
   
 ## Examples  
- The following example retrieves the primary key for the `HumanResources.Department` table in the `AdventureWorks2012` database.  
+ The following example retrieves the primary key for the `HumanResources.Department` table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_pkeys @table_name = N'Department'  
     ,@table_owner = N'HumanResources';  
@@ -81,7 +81,7 @@ EXEC sp_pkeys @table_name = N'Department'
  The following example retrieves the primary key for the `DimAccount` table in the `AdventureWorksPDW2012` database. It returns zero rows indicating that the table does not have a primary key.  
   
 ```sql  
--- Uses AdventureWorks  
+-- Uses AdventureWorksPDW
   
 EXEC sp_pkeys @table_name = N'DimAccount';  
 ```  

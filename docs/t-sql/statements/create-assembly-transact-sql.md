@@ -59,7 +59,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
 Specifies the local path or network location where the assembly that is being uploaded is located, and also the manifest file name that corresponds to the assembly.  \<client_assembly_specifier> can be expressed as a fixed string or an expression evaluating to a fixed string, with variables. CREATE ASSEMBLY does not support loading multimodule assemblies. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] also looks for any dependent assemblies of this assembly in the same location and also uploads them with the same owner as the root level assembly. If these dependent assemblies are not found and they are not already loaded in the current database, CREATE ASSEMBLY fails. If the dependent assemblies are already loaded in the current database, the owner of those assemblies must be the same as the owner of the newly created assembly.
 
 > [!IMPORTANT]
-> Azure SQL Database does not support creating an assembly from a file.
+> Azure SQL Database & Azure SQL Managed Instance do not support creating an assembly from a file.
   
  \<client_assembly_specifier> cannot be specified if the logged in user is being impersonated.  
   
@@ -143,7 +143,7 @@ When attempting to access the assembly specified in \<client_assembly_specifier>
 ## Permissions  
  Requires CREATE ASSEMBLY permission.  
   
- If PERMISSION_SET = EXTERNAL_ACCESS is specified, requires**EXTERNAL ACCESS ASSEMBLY** permission on the server. If PERMISSION_SET = UNSAFE is specified, requires **UNSAFE ASSEMBLY** permission on the server.  
+ If PERMISSION_SET = EXTERNAL_ACCESS is specified, requires **EXTERNAL ACCESS ASSEMBLY** permission on the server. If PERMISSION_SET = UNSAFE is specified, requires **UNSAFE ASSEMBLY** permission on the server.  
   
  User must be the owner of any assemblies that are referenced by the assembly that are to be uploaded if the assemblies already exist in the database. To upload an assembly by using a file path, the current user must be a Windows authenticated login or a member of the **sysadmin** fixed server role. The Windows login of the user that executes CREATE ASSEMBLY must have read permission on the share and the files being loaded in the statement.  
 

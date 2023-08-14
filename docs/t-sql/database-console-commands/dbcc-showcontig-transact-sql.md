@@ -226,7 +226,7 @@ GO
 The following example uses `OBJECT_ID` and the `sys.indexes` catalog view to obtain the table ID and index ID for the `AK_Product_Name` index of the `Production.Product` table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.
 
 ```sql
-USE AdventureWorks2019;
+USE AdventureWorks2022;
 GO
 DECLARE @id INT, @indid INT
 SET @id = OBJECT_ID('Production.Product');
@@ -245,7 +245,7 @@ GO
 The following example returns an abbreviated result set for the `Product` table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.
 
 ```sql
-USE AdventureWorks2019;
+USE AdventureWorks2022;
 GO
 DBCC SHOWCONTIG ('Production.Product', 1) WITH FAST;
 GO
@@ -256,7 +256,7 @@ GO
 The following example returns a full table result set for every index on every table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.
 
 ```sql
-USE AdventureWorks2019;
+USE AdventureWorks2022;
 GO
 DBCC SHOWCONTIG WITH TABLERESULTS, ALL_INDEXES;
 GO

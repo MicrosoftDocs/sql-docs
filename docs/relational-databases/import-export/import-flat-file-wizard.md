@@ -4,7 +4,7 @@ description: Import Flat File Wizard is a simple way to copy data from a .csv or
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan
-ms.date: "09/26/2017"
+ms.date: "07/26/2023"
 ms.service: sql
 ms.subservice: data-movement
 ms.topic: conceptual
@@ -107,6 +107,7 @@ The given value of type String from the data source cannot be converted to type 
 Failed to convert parameter value from a String to a Double. (System.Data)
 ```
 
+Currently, the importer uses encoding based on the system's active code page.  On most machines this defaults to ANSI.
 
 ## Learn More
 

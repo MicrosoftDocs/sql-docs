@@ -3,7 +3,8 @@ title: "SQL Server transaction log architecture and management guide"
 description: "The SQL Server transaction log is a critical component. Learn about its architecture and how to manage it."
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 11/24/2022
+ms.reviewer: pijocoder
+ms.date: 05/11/2023
 ms.service: sql
 ms.topic: conceptual
 helpviewer_keywords:
@@ -26,7 +27,11 @@ Every [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database has a tran
 
 ## <a id="Logical_Arch"></a> Transaction log logical architecture
 
-The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] transaction log operates logically as if the transaction log is a string of log records. Each log record is identified by a *log sequence number* (LSN). Each new log record is written to the logical end of the log with an LSN that is higher than the LSN of the record before it. Log records are stored in a serial sequence as they are created such that if LSN2 is greater than LSN1, the change described by the log record referred to by LSN2 occurred after the change described by the log record LSN1. Each log record contains the ID of the transaction that it belongs to. For each transaction, all log records associated with the transaction are individually linked in a chain using backward pointers that speed the rollback of the transaction.
+The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] transaction log operates logically as if the transaction log is a string of log records. Each log record is identified by a *log sequence number* (LSN). Each new log record is written to the logical end of the log with an LSN that is higher than the LSN of the record before it. Log records are stored in a serial sequence as they're created, such that if LSN2 is greater than LSN1, the change described by the log record referred to by LSN2 occurred after the change described by the log record LSN1. Each log record contains the ID of the transaction that it belongs to. For each transaction, all log records associated with the transaction are individually linked in a chain using backward pointers that speed the rollback of the transaction.
+
+The basic structure of an LSN is `[VLF ID:Log Block ID:Log Record ID]`. For more information, see the [VLF](#virtual-log-files-vlfs) and [log block](#log-blocks) sections.
+
+Here's an example of an LSN: `00000031:00000da0:0001`, where `0x31` is the ID of the VLF, `0xda0` is the log block ID, and `0x1` is the first log record in that log block. For examples of LSNs, look at the output of [sys.dm_db_log_info](system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md) DMV and examine the `vlf_create_lsn` column.
 
 Log records for data modifications record either the logical operation performed, or they record the before and after images of the modified data. The *before image* is a copy of the data before the operation is performed; the *after image* is a copy of the data after the operation has been performed.
 
@@ -46,7 +51,7 @@ Many types of operations are recorded in the transaction log. These operations i
 
 - The start and end of each transaction.
 
-- Every data modification (insert, update, or delete). This includes changes by system stored procedures or data definition language (DDL) statements to any table, including system tables.
+- Every data modification (insert, update, or delete). Modifications include changes by system stored procedures or data definition language (DDL) statements to any table, including system tables.
 
 - Every extent and page allocation or deallocation.
 
@@ -66,32 +71,35 @@ The database transaction log maps over one or more physical files. Conceptually,
 
 The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] divides each physical log file internally into several virtual log files (VLFs). Virtual log files have no fixed size, and there's no fixed number of virtual log files for a physical log file. The [!INCLUDE[ssDE](../includes/ssde-md.md)] chooses the size of the virtual log files dynamically while it's creating or extending log files. The [!INCLUDE[ssDE](../includes/ssde-md.md)] tries to maintain a few virtual files. The size of the virtual files after a log file has been extended is the sum of the size of the existing log and the size of the new file increment. The size or number of virtual log files can't be configured or set by administrators.
 
+
+#### Virtual log file creation
+
 Virtual log file (VLF) creation follows this method:
 
 - In [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] and later versions, if the next growth is less than 1/8 of the current log physical size, then create 1 VLF that covers the growth size.
-- If the next growth is more than 1/8 of the current log size, use the pre-2014 method:
-  - If growth is less than 64 MB, create 4 VLFs that cover the growth size (for example, for 1 MB growth, create 4 VLFs of size 256 KB).
-    - In [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)], and starting with [!INCLUDE[sssql22-md](../includes/sssql22-md.md)] (all editions), this is slightly different. If the growth is less than or equal to 64 MB, the Database Engine creates only 1 VLF to cover the growth size.
+- If the next growth is more than 1/8 of the current log size, use the pre-2014 method, namely:
+  - If growth is less than 64 MB, create 4 VLFs that cover the growth size (for example, for 1-MB growth, create 4 VLFs of size 256 KB).
+    - In [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)], and starting with [!INCLUDE[sssql22-md](../includes/sssql22-md.md)] (all editions), the logic is slightly different. If the growth is less than or equal to 64 MB, the Database Engine creates only one VLF to cover the growth size.
   - If growth is from 64 MB up to 1 GB, create 8 VLFs that cover the growth size (for example, for 512-MB growth, create 8 VLFs of size 64 MB).
   - If growth is larger than 1 GB, create 16 VLFs that cover the growth size for example, for 8-GB growth, create 16 VLFs of size 512 MB).
 
-If the log files grow to a large size in many small increments, they'll have many virtual log files. **This can slow down database startup, and log backup and restore operations.** Conversely, if the log files are set to a large size with few or just one increment, they'll have few very large virtual log files. For more information on properly estimating the **required size** and **autogrow** setting of a transaction log, see the *Recommendations* section of [Manage the size of the transaction log file](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations).
+If the log files grow to a large size in many small increments, they end up with many virtual log files. **This can slow down database startup, and log backup and restore operations.** Conversely, if the log files are set to a large size with few or just one increment, they contain few very large virtual log files. For more information on properly estimating the **required size** and **autogrow** setting of a transaction log, see the *Recommendations* section of [Manage the size of the transaction log file](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations).
 
-We recommend that you assign log files a *size* value close to the final size required, using the increments needed to achieve optimal VLF distribution, and have a relatively large *growth_increment* value.
+We recommend that you create your log files close to the final size required, using the increments needed to achieve optimal VLF distribution, and have a relatively large *growth_increment* value.
 
 See the following tips to determine the optimal VLF distribution for the current transaction log size:
 
 - The *size* value, set by the `SIZE` argument of `ALTER DATABASE` is the initial size for the log file.
-- The *growth_increment* value (also known as the autogrow value), which is set by the `FILEGROWTH` argument of `ALTER DATABASE`, is the amount of space added to the file every time new space is required.
+- The *growth_increment* value (also known as the autogrow value), which the `FILEGROWTH` argument of `ALTER DATABASE` sets, is the amount of space added to the file every time new space is required.
 
 For more information on `FILEGROWTH` and `SIZE` arguments of `ALTER DATABASE`, see [ALTER DATABASE (Transact-SQL) File and Filegroup Options](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
 > [!TIP]  
 > To determine the optimal VLF distribution for the current transaction log size of all databases in a given instance, and the required growth increments to achieve the required size, see this [Fixing-VLFs script](https://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs) on GitHub.
 
-### What happens when you have too many VLFs?
+#### What happens when you have too many VLFs?
 
-During the initial stages of a database recovery process, SQL Server does a discovery of all VLFs present in all transaction log files, and builds a list of these VLFs. This process can take a very long time depending on the number of VLFs present in the specific database. The more VLFs, the longer the process. A database can end up with large number of VLFs if frequent transaction log auto-growth or manual growth is encountered in small increments. When the number of VLFs reaches the range of several hundred thousand, you may encounter some or most of the following symptoms:
+During the initial stages of a database recovery process, SQL Server discovers all VLFs in all transaction log files, and builds a list of these VLFs. This process can take a long time depending on the number of VLFs present in the specific database. The more VLFs, the longer the process. A database can end up with large number of VLFs if frequent transaction log autogrowth or manual growth is encountered in small increments. When the number of VLFs reaches the range of several hundred thousand, you may encounter some or most of the following symptoms:
 
 - One or more databases take a very long time to finish recovery during SQL Server startup.
 - Restoring a database takes a very long time to complete.
@@ -115,7 +123,7 @@ Database %ls has more than %d virtual log files which is excessive. Too many vir
 
 For more information, see [MSSQLSERVER_9017](errors-events/mssqlserver-9017-database-engine-error.md).
 
-### Fix databases with a large number of VLFs
+#### Fix databases with a large number of VLFs
 
 To keep the total number of VLFs at a reasonable amount, such as a maximum of several thousand, you can reset the transaction log file to contain a smaller number of VLFs by performing the following steps:
 
@@ -127,11 +135,21 @@ To keep the total number of VLFs at a reasonable amount, such as a maximum of se
    > [!NOTE]  
    > This step is also possible in SQL Server Management Studio, using the database properties page.
 
-After you set the new layout of the transaction log file with fewer VLFs, review and make necessary changes to the auto-grow settings of the transaction log. This ensures that the log file avoids encountering the same problem in the future.
+After you set the new layout of the transaction log file with fewer VLFs, review and make necessary changes to the autogrow settings of the transaction log. This setting validation ensures that the log file avoids encountering the same problem in the future.
 
 Before you perform any of these operations, make sure that you have a valid restorable backup in case you encounter issues later.
 
 To determine the optimal VLF distribution for the current transaction log size of all databases in a given instance, and the required growth increments to achieve the required size, you can use the following GitHub script to [fix VLFs](https://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
+
+### Log blocks
+
+Each VLF contains one or more *log blocks*. Each log block consists of the log records (aligned at a 4-byte boundary). A log block is variable in size and is always an integer multiple of 512 bytes (the minimum sector size SQL Server supports), with a maximum size of 60 KB. A log block is the basic unit of I/O for transaction logging.
+
+In summary, a log block is a container of log records that's used as the basic unit of transaction logging when writing log records to disk.
+
+Each log block within a VLF is uniquely addressed by its *block offset*. The first block always has a block offset that points past the first 8 KB in the VLF.
+
+In general, a VLF is always filled up with log blocks. It's possible that the last log block in a VLF is empty (for example, doesn't contain any log records). This happens when a log record to be written doesn't fit into the current log block and also when the space left on the VLF is insufficient to hold this log record. In this case, an empty log block is created that fills up the VLF. The log record is inserted into the first block on the next VLF.
 
 ### Circular nature of the transaction log
 
@@ -149,24 +167,22 @@ This cycle repeats endlessly, as long as the end of the logical log never reache
 
 - If the `FILEGROWTH` setting isn't enabled, or the disk that is holding the log file has less free space than the amount specified in *growth_increment*, a 9002 error is generated. Refer to [Troubleshoot a Full Transaction Log](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md) for more information.
 
-If the log contains multiple physical log files, the logical log will move through all the physical log files before it wraps back to the start of the first physical log file.
+If the log contains multiple physical log files, the logical log moves through all the physical log files before it wraps back to the start of the first physical log file.
 
 > [!IMPORTANT]  
 > For more information about transaction log size management, see [Manage the Size of the Transaction Log File](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md).
 
 ### Log truncation
 
-Log truncation is essential to keep the log from filling. Log truncation deletes inactive virtual log files from the logical transaction log of a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database, freeing space in the logical log for reuse by the physical transaction log. If a transaction log is never truncated, it will eventually fill all the disk space that is allocated to its physical log files. However, before the log can be truncated, a checkpoint operation must occur. A checkpoint writes the current in-memory modified pages (known as *dirty pages*) and transaction log information from memory to disk. When the checkpoint is performed, the inactive portion of the transaction log is marked as reusable. Thereafter, the inactive portion can be freed by log truncation. For more information about checkpoints, see [Database Checkpoints (SQL Server)](../relational-databases/logs/database-checkpoints-sql-server.md).
+Log truncation is essential to keep the log from filling. Log truncation deletes inactive virtual log files from the logical transaction log of a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database, freeing space in the logical log for reuse by the physical transaction log. If a transaction log is never truncated, it will eventually fill all the disk space that is allocated to its physical log files. However, before the log can be truncated, a checkpoint operation must occur. A checkpoint writes the current in-memory modified pages (known as *dirty pages*) and transaction log information from memory to disk. When the checkpoint is performed, the inactive portion of the transaction log is marked as reusable. Thereafter, a log truncation can free the inactive portion. For more information about checkpoints, see [Database Checkpoints (SQL Server)](../relational-databases/logs/database-checkpoints-sql-server.md).
 
 The following illustrations show a transaction log before and after truncation. The first illustration shows a transaction log that has never been truncated. Currently, four virtual log files are in use by the logical log. The logical log starts at the front of the first virtual log file and ends at virtual log 4. The MinLSN record is in virtual log 3. Virtual log 1 and virtual log 2 contain only inactive log records. These records can be truncated. Virtual log 5 is still unused and isn't part of the current logical log.
 
 :::image type="content" source="media/sql-server-transaction-log-architecture-and-management-guide/transaction-log-before-truncate.png" alt-text="Illustration that shows how a transaction log appears before it's truncated.":::
 
-
 The second illustration shows how the log appears after being truncated. Virtual log 1 and virtual log 2 have been freed for reuse. The logical log now starts at the beginning of virtual log 3. Virtual log 5 is still unused, and it isn't part of the current logical log.
 
 :::image type="content" source="media/sql-server-transaction-log-architecture-and-management-guide/transaction-log-after-truncate.png" alt-text="Illustration that shows how a transaction log appears after it's truncated.":::
-
 
 Log truncation occurs automatically after the following events, except when delayed for some reason:
 
@@ -248,7 +264,7 @@ Checkpoints occur in the following situations:
 - An instance of SQL Server is stopped by a SHUTDOWN statement or by stopping the SQL Server (MSSQLSERVER) service. Either action causes a checkpoint in each database in the instance of SQL Server.
 - An instance of SQL Server periodically generates automatic checkpoints in each database to reduce the time that the instance would take to recover the database.
 - A database backup is taken.
-- An activity requiring a database shutdown is performed. For example, AUTO_CLOSE is ON and the last user connection to the database is closed, or a database option change is made that requires a restart of the database.
+- An activity requiring a database shutdown is performed. This can happen when the AUTO_CLOSE option is ON and the last user connection to the database is closed. Another example is when a database option change is made that requires a restart of the database.
 
 ### Automatic checkpoints
 
@@ -285,12 +301,12 @@ LSN 148 is the last record in the transaction log. At the time that the recorded
 
 ### Long-running transactions
 
-The active log must include every part of all uncommitted transactions. An application that starts a transaction and doesn't commit it or roll it back prevents the [!INCLUDE[ssDE-md](../includes/ssde-md.md)] from advancing the MinLSN. This can cause two types of problems:
+The active log must include every part of all uncommitted transactions. An application that starts a transaction and doesn't commit it or roll it back prevents the [!INCLUDE[ssDE-md](../includes/ssde-md.md)] from advancing the MinLSN. This situation can cause two types of problems:
 
 - If the system is shut down after the transaction has performed many uncommitted modifications, the recovery phase of the subsequent restart can take much longer than the time specified in the **recovery interval** option.
-- The log might grow very large, because the log can't be truncated past the MinLSN. This occurs even if the database is using the simple recovery model, in which the transaction log is generally truncated on each automatic checkpoint.
+- The log might grow very large, because the log can't be truncated past the MinLSN. This occurs even if the database is using the simple recovery model, in which the transaction log is truncated on each automatic checkpoint.
 
-Starting with [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] and in [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)], recovery of long-running transactions and the problems described above can be avoided by using [Accelerated database recovery](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr).
+Recovery of long-running transactions, and the problems described in this article, can be avoided by using [Accelerated database recovery](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr), a feature available starting with [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] and in [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)].
 
 ### Replication transactions
 

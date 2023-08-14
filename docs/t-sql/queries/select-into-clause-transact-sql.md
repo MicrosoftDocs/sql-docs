@@ -25,10 +25,10 @@ helpviewer_keywords:
   - "row additions [SQL Server], INTO clause"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # SELECT - INTO Clause (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricdw.md)]
 
 SELECT...INTO creates a new table in the default filegroup and inserts the resulting rows from the query into it. To view the complete SELECT syntax, see [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
@@ -77,6 +77,8 @@ If any one of these conditions is true, the column is created NOT NULL instead o
 
 ## Remarks  
 The `SELECT...INTO` statement operates in two parts - the new table is created, and then rows are inserted.  This means that if the inserts fail, they will all be rolled back, but the new (empty) table will remain.  If you need the entire operation to succeed or fail as a whole, use an [explicit transaction](../language-elements/begin-transaction-transact-sql.md).
+
+[!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)] doesn't support filegroups. References and examples in this article to filegroups don't apply to [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)].
   
 ## Limitations and Restrictions  
  You cannot specify a table variable or table-valued parameter as the new table.  
@@ -124,7 +126,7 @@ GO
  The following example creates the table `dbo.NewProducts` and inserts rows from the `Production.Product` table. The example assumes that the recovery model of the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database is set to FULL. To ensure minimal logging is used, the recovery model of the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database is set to BULK_LOGGED before rows are inserted and reset to FULL after the SELECT...INTO statement. This process ensures that the SELECT...INTO statement uses minimal space in the transaction log and performs efficiently.  
   
 ```sql  
-ALTER DATABASE AdventureWorks2012 SET RECOVERY BULK_LOGGED;  
+ALTER DATABASE AdventureWorks2022 SET RECOVERY BULK_LOGGED;  
 GO  
   
 SELECT * INTO dbo.NewProducts  
@@ -132,7 +134,7 @@ FROM Production.Product
 WHERE ListPrice > $25   
 AND ListPrice < $100;  
 GO  
-ALTER DATABASE AdventureWorks2012 SET RECOVERY FULL;  
+ALTER DATABASE AdventureWorks2022 SET RECOVERY FULL;  
 GO  
 ```  
   
@@ -178,22 +180,22 @@ EXEC sp_addlinkedserver @server = N'MyLinkServer',
     @srvproduct = N' ',  
     @provider = N'SQLNCLI',   
     @datasrc = N'server_name',  
-    @catalog = N'AdventureWorks2012';  
+    @catalog = N'AdventureWorks2022';  
 GO  
 
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 -- Specify the remote data source in the FROM clause using a four-part name   
 -- in the form linked_server.catalog.schema.object.  
 SELECT DepartmentID, Name, GroupName, ModifiedDate  
 INTO dbo.Departments  
-FROM MyLinkServer.AdventureWorks2012.HumanResources.Department  
+FROM MyLinkServer.AdventureWorks2022.HumanResources.Department  
 GO  
 -- Use the OPENQUERY function to access the remote data source.  
 SELECT DepartmentID, Name, GroupName, ModifiedDate  
 INTO dbo.DepartmentsUsingOpenQuery  
 FROM OPENQUERY(MyLinkServer, 'SELECT *  
-               FROM AdventureWorks2012.HumanResources.Department');   
+               FROM AdventureWorks2022.HumanResources.Department');   
 GO  
 -- Use the OPENDATASOURCE function to specify the remote data source.  
 -- Specify a valid server name for Data Source using the format 
@@ -202,7 +204,7 @@ SELECT DepartmentID, Name, GroupName, ModifiedDate
 INTO dbo.DepartmentsUsingOpenDataSource  
 FROM OPENDATASOURCE('SQLNCLI',  
     'Data Source=server_name;Integrated Security=SSPI')  
-    .AdventureWorks2012.HumanResources.Department;  
+    .AdventureWorks2022.HumanResources.Department;  
 GO  
 ```  
   
@@ -229,12 +231,12 @@ The following example demonstrates creating a new table as a copy of another tab
  **Applies to:** [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 and later.
 
 ```sql
-ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
-ALTER DATABASE [AdventureWorksDW2016]
+ALTER DATABASE [AdventureWorksDW2022] ADD FILEGROUP FG2;
+ALTER DATABASE [AdventureWorksDW2022]
 ADD FILE
 (
 NAME='FG2_Data',
-FILENAME = '/var/opt/mssql/data/AdventureWorksDW2016_Data1.mdf'
+FILENAME = '/var/opt/mssql/data/AdventureWorksDW2022_Data1.mdf'
 )
 TO FILEGROUP FG2;
 GO

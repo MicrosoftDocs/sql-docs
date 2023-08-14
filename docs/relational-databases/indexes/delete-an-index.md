@@ -89,7 +89,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016"
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     -- delete the IX_ProductVendor_BusinessEntityID index  
     -- from the Purchasing.ProductVendor table  

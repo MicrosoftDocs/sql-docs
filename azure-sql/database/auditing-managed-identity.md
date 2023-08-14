@@ -1,9 +1,10 @@
 ---
 title: Auditing using managed identity
-description: How to use managed identity with storage accounts for Auditing
+description: How to use managed identity with storage accounts for auditing
 author: sravanisaluru
 ms.author: srsaluru
-ms.date: 04/26/2023
+ms.reviewer: randolphwest
+ms.date: 05/31/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual
@@ -12,14 +13,14 @@ ms.topic: conceptual
 
 [!INCLUDE[appliesto-sqldb-asa](../includes/appliesto-sqldb-asa.md)]
 
-Auditing can be configured to use a **Storage account** with two authentication methods:
+Auditing for Azure SQL Database can be configured to use a **Storage account** with two authentication methods:
 
 - Managed Identity
 - Storage Access Keys
 
 **Managed Identity** can be a system-assigned managed identity (SMI) or user-assigned managed identity (UMI).
 
-To configure writing audit logs to a storage account, Go to the [Azure portal](https://portal.azure.com), and select your logical server resource for Azure SQL Database. Select **Storage** in the **Auditing** menu. Select the Azure storage account where logs will be saved.
+To configure writing audit logs to a storage account, go to the [Azure portal](https://portal.azure.com), and select your logical server resource for Azure SQL Database. Select **Storage** in the **Auditing** menu. Select the Azure storage account where logs will be saved.
 
 By default, the identity used is the primary user identity assigned to the server. If there's no user identity, the server creates a system-assigned managed identity and uses it for authentication.
 
@@ -27,13 +28,16 @@ By default, the identity used is the primary user identity assigned to the serve
 
 Select the retention period by opening the **Advanced properties**. Then select **Save**. Logs older than the retention period are deleted.
 
+> [!NOTE]  
+> To set up managed identity-based auditing on Azure Synapse Analytics, see the [Configure system-assigned managed identity for Azure Synapse Analytics auditing](#configure-system-assigned-managed-identity-for-azure-synapse-analytics-auditing) section later in this article.
+
 ## User-assigned managed identity
 
 UMI gives users flexibility to create and maintain their own UMI for a given tenant. UMI can be used as server identities for Azure SQL. UMI is managed by the user, compared to a system-assigned managed identity, which identity is uniquely defined per server, and assigned by the system.
 
-For more information about UMI, see [Managed identities in Azure AD for Azure SQL](authentication-azure-ad-user-assigned-managed-identity.md)
+For more information about UMI, see [Managed identities in Azure AD for Azure SQL](authentication-azure-ad-user-assigned-managed-identity.md).
 
-## Configure user-assigned managed identity for Auditing
+## Configure user-assigned managed identity for Azure SQL Database auditing
 
 Before auditing can be set up to send logs to your storage account, the managed identity assigned to the server needs to have the [Storage Blob Data Contributor](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor) role assignment. This assignment is required if you're configuring auditing using PowerShell, the Azure CLI, REST API, or ARM templates. Role assignment is done automatically when using the Azure portal to configure Auditing, so the below steps are unnecessary if you're configuring Auditing through the Azure portal.
 
@@ -96,13 +100,39 @@ PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{
 }
 ```
 
-For more information, see [Server Auditing Settings - Create Or Update](/rest/api/sql/2017-03-01-preview/server-auditing-settings/create-or-update)
+For more information, see [Server Auditing Settings - Create Or Update](/rest/api/sql/2017-03-01-preview/server-auditing-settings/create-or-update).
 
 ---
 
-## See also
+## Configure system-assigned managed identity for Azure Synapse Analytics auditing
+
+You can't use UMI based authentication to a storage account for auditing. Only system-assigned managed identity (SMI) can be used for Azure Synapse Analytics. For SMI authentication to work, the managed identity must have the **Storage Blob Data Contributor** role assigned to it, in the storage account's **Access Control** settings. This role is automatically added if Azure portal is used to configure auditing.
+
+In the Azure portal for Azure Synapse Analytics, there is no option to explicitly choose SAS key or SMI authentication, as is the case for Azure SQL Database.
+
+- If the storage account is behind a VNet or firewall, auditing is automatically configured using SMI authentication.
+
+- If the storage account isn't behind a VNet or firewall, then auditing is automatically configured using SAS key based authentication.
+
+To force the use of SMI authentication, regardless of whether the storage account is behind a VNet or firewall, use REST API or PowerShell, as follows:
+
+- If using the REST API, omit the `StorageAccountAccessKey` field explicitly in the request body.
+
+  For more information, reference:
+
+  - [Server Blob Auditing Policies - Create Or Update - REST API (Azure SQL Database)](/rest/api/sql/2022-08-01-preview/server-blob-auditing-policies/create-or-update?tabs=HTTP)
+  - [Database Blob Auditing Policies - Create Or Update - REST API (Azure SQL Database](/rest/api/sql/2021-02-01-preview/database-blob-auditing-policies/create-or-update?tabs=HTTP)
+
+- If using PowerShell, pass the `UseIdentity` parameter as `true`.
+
+  For more information, reference:
+
+  - [Set-AzSqlServerAudit (Az.Sql)](/powershell/module/az.sql/set-azsqlserveraudit)
+  - [Set-AzSqlDatabaseAudit (Az.Sql)](/powershell/module/az.sql/set-azsqldatabaseaudit)
+
+## Next steps
 
 - [Auditing overview](auditing-overview.md)
-- Data Exposed episode [What's New in Azure SQL Auditing](/Shows/Data-Exposed/Whats-New-in-Azure-SQL-Auditing)
+- Data Exposed episode: [What's New in Azure SQL Auditing](/Shows/Data-Exposed/Whats-New-in-Azure-SQL-Auditing)
 - [Auditing for SQL Managed Instance](../managed-instance/auditing-configure.md)
 - [Auditing for SQL Server](/sql/relational-databases/security/auditing/sql-server-audit-database-engine)

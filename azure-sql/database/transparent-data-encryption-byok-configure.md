@@ -38,8 +38,9 @@ This article walks through how to use a key from Azure Key Vault for transparent
     - The key vault must have the following property to be used for TDE:
   - [soft-delete](/azure/key-vault/general/soft-delete-overview) and purge protection
 - The key must have the following attributes to be used for TDE:
-  - No expiration date
-  - Not disabled
+  - The activation date (if set) must be a date and time in the past
+  - The expiration date (if set) must be a future date and time
+  - The key must be in the Enabled state
   - Able to perform *get*, *wrap key*, *unwrap key* operations
 - To use a Managed HSM key, follow instructions to [create and activate a Managed HSM using Azure CLI](/azure/key-vault/managed-hsm/quick-create-cli)
 

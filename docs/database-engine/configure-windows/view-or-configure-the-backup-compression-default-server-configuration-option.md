@@ -1,5 +1,5 @@
 ---
-title: "View or Configure the backup compression default Server Configuration Option"
+title: "View or Configure the backup compression default (server configuration option)"
 description: "Find out about the backup compression default option. See how it determines whether SQL Server creates compressed backups by default, and learn how to set it."
 author: rwestMSFT
 ms.author: randolphwest
@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "SQL Server Management Studio [SQL Server], backup compression default option"
   - "backup compression [SQL Server], backup compression default Option"
 ---
-# View or Configure the backup compression default Server Configuration Option
+# View or Configure the backup compression default (server configuration option)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to view or configure the **backup compression default** server configuration option in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **backup compression default** option determines whether the server instance creates compressed backups by default. When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed, the **backup compression default** option is off.  

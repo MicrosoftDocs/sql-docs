@@ -50,7 +50,7 @@ CLOSE MASTER KEY
 ## Examples  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 CLOSE MASTER KEY;  
 GO  
 ```  

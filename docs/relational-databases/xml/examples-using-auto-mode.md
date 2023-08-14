@@ -22,7 +22,7 @@ The following examples illustrate the use of AUTO mode. Many of these queries ar
 This query retrieves customer, order, and order detail information for a specific customer.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT Cust.CustomerID,
        OrderHeader.CustomerID,
@@ -76,7 +76,7 @@ This is the partial result.
 The following query returns individual customer IDs and the number of orders that the customer has requested.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT C.CustomerID, COUNT(*) AS NoOfOrders
 FROM Sales.Customer AS C
@@ -99,7 +99,7 @@ This is the partial result:
 This query returns concatenated individual customer names and the order information. Because the computed column is assigned to the innermost level encountered at that point, the `<SOH>` element in this example. The concatenated customer names are added as attributes of the `<SOH>` element in the result.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT P.FirstName + ' ' + P.LastName AS Name,
        SOH.SalesOrderID

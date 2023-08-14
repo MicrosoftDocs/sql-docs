@@ -1,9 +1,9 @@
 ---
 title: "MSSQLSERVER_17120"
 description: "MSSQLSERVER_17120"
-author: MashaMSFT
+author: pijocoder
 ms.author: jopilov
-ms.reviewer: pijocoder
+ms.reviewer: mathoma
 ms.date: 01/18/2023
 ms.service: sql
 ms.subservice: supportability

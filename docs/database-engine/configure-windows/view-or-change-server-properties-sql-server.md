@@ -75,7 +75,7 @@ Execute permissions on `sp_configure` with no parameters or with only the first 
 1. Copy and paste the following example into the query window and select **Execute**. This example queries the [sys.servers](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md) catalog view to return the name (`name`) and ID (`server_id`) of the current server, and the name of the OLE DB provider (`provider`) for connecting to a linked server.
 
    ```sql
-   USE AdventureWorks2019;
+   USE AdventureWorks2022;
    GO
    SELECT name, server_id, provider
    FROM sys.servers;

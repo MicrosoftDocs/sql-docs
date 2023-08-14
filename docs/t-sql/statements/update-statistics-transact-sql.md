@@ -17,17 +17,24 @@ helpviewer_keywords:
   - "statistical information [SQL Server], updating"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 
 # UPDATE STATISTICS (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
 Updates query optimization statistics on a table or indexed view. By default, the query optimizer already updates statistics as necessary to improve the query plan; in some cases you can improve query performance by using `UPDATE STATISTICS` or the stored procedure [sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) to update statistics more frequently than the default updates.  
   
 Updating statistics ensures that queries compile with up-to-date statistics. Updating statistics via any process may cause query plans to recompile automatically. We recommend not updating statistics too frequently because there's a performance tradeoff between improving query plans and the time it takes to recompile queries. The specific tradeoffs depend on your application. `UPDATE STATISTICS` can use `tempdb` to sort the sample of rows for building statistics.  
-  
+
+::: moniker range="=fabric"
+
+> [!NOTE]
+> For more information on statistics in [!INCLUDE [fabric](../../includes/fabric.md)], see [Statistics in [!INCLUDE [fabric](../../includes/fabric.md)]](/fabric/data-warehouse/statistics).
+
+::: moniker-end
+
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
@@ -64,9 +71,9 @@ UPDATE STATISTICS table_or_indexed_view_name
     [ ROWCOUNT = numeric_constant ]  
     [ PAGECOUNT = numeric_contant ]  
 ```  
-  
+ 
 ```syntaxsql
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse 
   
 UPDATE STATISTICS [ schema_name . ] table_name   
     [ ( { statistics_name | index_name } ) ]  
@@ -75,6 +82,21 @@ UPDATE STATISTICS [ schema_name . ] table_name
               FULLSCAN   
             | SAMPLE number PERCENT   
             | RESAMPLE   
+        }  
+    ]  
+[;]  
+```  
+
+ 
+```syntaxsql
+-- Syntax for Microsoft Fabric
+
+UPDATE STATISTICS [ schema_name . ] table_name   
+    [ ( { statistics_name } ) ]  
+    [ WITH   
+       {  
+              FULLSCAN   
+            | SAMPLE number PERCENT   
         }  
     ]  
 [;]  
@@ -91,9 +113,9 @@ UPDATE STATISTICS [ schema_name . ] table_name
 
 Is the name of the table or indexed view that contains the statistics object.  
   
-#### *index_or_statistics_name*  
+#### <a id="index_or_statistics_name"></a> *index_or_statistics_name* or *statistics_name | index_name* or *statistics_name* 
 
-Is the name of the index to update statistics on or name of the statistics to update. If *index_or_statistics_name* isn't specified, the query optimizer updates all statistics for the table or indexed view. This includes statistics created using the CREATE STATISTICS statement, single-column statistics created when AUTO_CREATE_STATISTICS is on, and statistics created for indexes.  
+Is the name of the index to update statistics on or name of the statistics to update. If *index_or_statistics_name* or *statistics_name* isn't specified, the query optimizer updates all statistics for the table or indexed view. This includes statistics created using the CREATE STATISTICS statement, single-column statistics created when AUTO_CREATE_STATISTICS is on, and statistics created for indexes.  
   
  For more information about AUTO_CREATE_STATISTICS, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md). To view all indexes for a table or view, you can use [sp_helpindex](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md).  
   
@@ -121,6 +143,8 @@ Update each statistic using its most recent sample rate.
   
 Using RESAMPLE can result in a full-table scan. For example, statistics for indexes use a full-table scan for their sample rate. When none of the sample options (SAMPLE, FULLSCAN, RESAMPLE) are specified, the query optimizer samples the data and computes the sample size by default.  
 
+In [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)], RESAMPLE is not supported.
+
 #### PERSIST_SAMPLE_PERCENT = { ON | OFF }
 
 When **ON**, the statistics will retain the set sampling percentage for subsequent updates that don't explicitly specify a sampling percentage. When **OFF**, statistics sampling percentage will get reset to default sampling in subsequent updates that don't explicitly specify a sampling percentage. The default is **OFF**.
@@ -138,7 +162,7 @@ When **ON**, the statistics will retain the set sampling percentage for subseque
 > [!TIP]
 > [DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) and [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) expose the persisted sample percent value for the selected statistic.
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 CU4 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]  
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 CU4 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1), [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]  
 
 #### ON PARTITIONS ( { \<partition_number> | \<range> } [, ...n] ) ]
 
@@ -271,7 +295,7 @@ Requires `ALTER` permission on the table or view.
 The following example updates all statistics on the `SalesOrderDetail` table.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 UPDATE STATISTICS Sales.SalesOrderDetail;  
 GO  
@@ -282,7 +306,7 @@ GO
 The following example updates the statistics for the `AK_SalesOrderDetail_rowguid` index of the `SalesOrderDetail` table.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 UPDATE STATISTICS Sales.SalesOrderDetail AK_SalesOrderDetail_rowguid;  
 GO  
@@ -293,7 +317,7 @@ GO
 The following example creates and then updates the statistics for the `Name` and `ProductNumber` columns in the `Product` table.
   
 ```sql  
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO  
 CREATE STATISTICS Products
     ON Production.Product ([Name], ProductNumber)
@@ -308,7 +332,7 @@ UPDATE STATISTICS Production.Product(Products)
 The following example updates the `Products` statistics in the `Product` table, forces a full scan of all rows in the `Product` table, and turns off automatic statistics for the `Products` statistics.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 UPDATE STATISTICS Production.Product(Products)  
     WITH FULLSCAN, NORECOMPUTE;  
@@ -351,7 +375,8 @@ UPDATE STATISTICS Customer (CustomerStats1) WITH AUTO_DROP = ON
   
 ## See also
 
-- [Statistics](../../relational-databases/statistics/statistics.md)   
+- [Statistics](../../relational-databases/statistics/statistics.md)
+- [Statistics in Microsoft Fabric](/fabric/data-warehouse/statistics)
 - [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
 - [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)    
 - [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)

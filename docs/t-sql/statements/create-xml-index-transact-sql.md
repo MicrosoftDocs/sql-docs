@@ -4,7 +4,7 @@ description: CREATE XML INDEX (Transact-SQL)
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/09/2022
+ms.date: 06/06/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -251,7 +251,7 @@ For more information about XML indexes, see [XML Indexes &#40;SQL Server&#41;](.
 
 ### XML compression
 
-**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Preview.
+**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi_md.md)].
 
 - XML indexes don't inherit the compression property of the table. To compress indexes, you must explicitly enable XML compression on XML indexes.
 - Secondary XML indexes don't inherit the compression property of the Primary XML index.
@@ -263,7 +263,7 @@ For more information about index creation, see the "Remarks" section in [CREATE 
 
 ## Examples
 
-The following examples use the `AdventureWorks2012` sample database.
+[!INCLUDE [article-uses-adventureworks](../../includes/article-uses-adventureworks.md)]
 
 ### A. Creating a primary XML index
 
@@ -281,6 +281,8 @@ GO
 ```
 
 ### B. Creating a primary XML index with XML compression
+
+**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi_md.md)].
 
 The following example creates a primary XML index on the `CatalogDescription` column in the `Production.ProductModel` table.
 
@@ -313,6 +315,8 @@ GO
 ```
 
 ### D. Creating a secondary XML index with XML compression
+
+**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi_md.md)].
 
 The following example creates a secondary XML index on the `CatalogDescription` column in the `Production.ProductModel` table.
 

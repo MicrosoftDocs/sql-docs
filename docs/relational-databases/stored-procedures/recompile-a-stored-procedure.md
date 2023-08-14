@@ -63,7 +63,7 @@ If this option is used in an EXECUTE statement, it requires EXECUTE permissions 
 1. Copy and paste the following example into the query window and select **Execute**. This example creates the procedure definition.  
 
    ```sql
-   USE AdventureWorks2012;  
+   USE AdventureWorks2022;  
    GO  
    IF OBJECT_ID ( 'dbo.uspProductByVendor', 'P' ) IS NOT NULL   
        DROP PROCEDURE dbo.uspProductByVendor;  
@@ -86,7 +86,7 @@ If this option is used in an EXECUTE statement, it requires EXECUTE permissions 
 Select **New Query**, then copy and paste the following code example into the query window and select **Execute**. This executes the procedure and recompiles the procedure's query plan.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXECUTE HumanResources.uspProductByVendor WITH RECOMPILE;  
 GO
@@ -97,7 +97,7 @@ GO
 Select **New Query**, then copy and paste the following example into the query window and select **Execute**. This does not execute the procedure but it does mark the procedure to be recompiled so that its query plan is updated the next time that the procedure is executed.  
 
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_recompile N'dbo.uspProductByVendor';   
 GO

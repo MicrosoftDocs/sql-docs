@@ -1,5 +1,5 @@
 ---
-title: "Configure the nested triggers Server Configuration Option"
+title: "Configure the nested triggers (server configuration option)"
 description: Learn about the nested triggers option. See how to use it to set the number of levels of AFTER triggers that can cascade in SQL Server.
 author: rwestMSFT
 ms.author: randolphwest
@@ -10,7 +10,7 @@ ms.topic: conceptual
 helpviewer_keywords:
   - "nested triggers option"
 ---
-# Configure the nested triggers Server Configuration Option
+# Configure the nested triggers (server configuration option)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to configure the **nested triggers** server configuration option in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **nested triggers** option controls whether an AFTER trigger can cascade. That is, perform an action that initiates another trigger, which initiates another trigger, and so on. When **nested triggers** is set to 0, AFTER triggers cannot cascade. When **nested triggers** is set to 1 (the default), AFTER triggers can cascade to as many as 32 levels. INSTEAD OF triggers can be nested regardless of the setting of this option.  
@@ -54,8 +54,8 @@ helpviewer_keywords:
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) to set the value of the `nested triggers` option to `0`.  
   
-```wmimof  
-USE AdventureWorks2012 ;  
+```sql  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_configure 'show advanced options', 1;  
 GO  

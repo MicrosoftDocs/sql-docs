@@ -6,10 +6,10 @@
 
 DECLARE @publicationDB AS sysname;
 DECLARE @publication AS sysname;
-SET @publicationDB = N'AdventureWorks2012';
+SET @publicationDB = N'AdventureWorks2022';
 SET @publication = N'AdvWorksSalesOrdersMerge';
 
-USE [AdventureWorks2012Replica]
+USE [AdventureWorks2022Replica]
 
 -- Execute at the Subscriber to reinitialize the pull subscription. 
 -- Pending changes at the Subscrber are lost.

@@ -2,10 +2,10 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 02/17/2023
+ms.date: 08/01/2023
 ms.topic: include
 ---
-| Error| Severity | Event logged | Description|
+| Error | Severity | Event logged | Description |
 | :--- | :--- | :--- | :--- |
 | 21 | 20 | No | Warning: Fatal error %d occurred at %S_DATE. Note the error and time, and contact your system administrator. |
 | 101 | 15 | No | Query not allowed in Waitfor. |
@@ -234,16 +234,16 @@ ms.topic: include
 | 332 | 15 | No | The target table '%.\*ls' of the OUTPUT INTO clause cannot be on either side of a (primary key, foreign key) relationship. Found reference constraint '%ls'. |
 | 333 | 15 | No | The target table '%.\*ls' of the OUTPUT INTO clause cannot have any enabled check constraints or any enabled rules. Found check constraint or rule '%ls'. |
 | 334 | 15 | No | The target table '%.\*ls' of the DML statement cannot have any enabled triggers if the statement contains an OUTPUT clause without INTO clause. |
-| 335 | 16 | No | Function call cannot be used to match a target table in the FROM clause of a DELETE or UPDATE statement. |
+| 335 | 16 | No | Function call cannot be used to match a target table in the FROM clause of a DELETE or UPDATE statement. Use function name '%.\*ls' without parameters instead. |
 | 336 | 15 | No | Incorrect syntax near '%.\*ls'. If this is intended to be a common table expression, you need to explicitly terminate the previous statement with a semi-colon. |
 | 337 | 10 | No | Warning: the floating point value '%.\*ls' is too small. It will be interpreted as 0. |
 | 338 | 16 | No | READEXT, WRITETEXT, and UPDATETEXT statements cannot be used with views, remote tables, and inserted or deleted tables inside triggers. |
 | 339 | 16 | No | DEFAULT or NULL are not allowed as explicit identity values. |
 | 340 | 16 | No | Cannot create the trigger "%.\*ls" on view "%.\*ls". AFTER triggers cannot be created on views. |
 | 341 | 16 | No | Replication filter procedures may not contain columns of large object, large value, XML or CLR type. |
-| 342 | 16 | No | Column "%.\*ls" is not allowed in this context, and the user-defined function or aggregate "%.\*ls" |
+| 342 | 16 | No | Column "%.\*ls" is not allowed in this context, and the user-defined function or aggregate "%.\*ls" could not be found. |
 | 343 | 15 | No | Unknown object type '%.\*ls' used in a CREATE, DROP, or ALTER statement. |
-| 344 | 16 | No | Remote function reference '%.\*ls' is not allowed, and the column name '%.\*ls' could not be found or |
+| 344 | 16 | No | Remote function reference '%.\*ls' is not allowed, and the column name '%.\*ls' could not be found or is ambiguous. |
 | 345 | 16 | No | Function '%.\*ls' is not allowed in the OUTPUT clause, because it performs user or system data access, or is assumed to perform this access. A function is assumed by default to perform data access if it is not schemabound. |
 | 346 | 15 | No | The parameter "%.\*ls" can not be declared READONLY since it is not a table-valued parameter. |
 | 347 | 16 | No | The table-valued parameter "%.\*ls" cannot be declared as an OUTPUT parameter. |
@@ -256,8 +256,8 @@ ms.topic: include
 | 354 | 16 | No | The target '%.\*ls' of the INSERT statement cannot be a view or common table expression when the FROM clause contains a nested INSERT, UPDATE, DELETE, or MERGE statement. |
 | 355 | 16 | No | The target table '%.\*ls' of the INSERT statement cannot have any enabled triggers when the FROM clause contains a nested INSERT, UPDATE, DELETE, or MERGE statement. |
 | 356 | 16 | No | The target table '%.\*ls' of the INSERT statement cannot be on either side of a (primary key, foreign key) relationship when the FROM clause contains a nested INSERT, UPDATE, DELETE, or MERGE statement. Found reference constraint '%ls'. |
-| 357 | 16 | No | The target table '%.\*ls' of the INSERT statement cannot have any enabled rules when the FROM clause contains a nested INSERT, UPDATE, DELETE, or MERGE statement.  Found rule '%ls'. |
-| 358 | 16 | No | The target table '%.\*ls' of the MERGE statement cannot have any enabled rules.  Found rule '%ls'. |
+| 357 | 16 | No | The target table '%.\*ls' of the INSERT statement cannot have any enabled rules when the FROM clause contains a nested INSERT, UPDATE, DELETE, or MERGE statement. Found rule '%ls'. |
+| 358 | 16 | No | The target table '%.\*ls' of the MERGE statement cannot have any enabled rules. Found rule '%ls'. |
 | 359 | 16 | No | The target '%.\*ls' of an OUTPUT INTO clause has an index with the ignore_dup_key option and cannot be used when an OUTPUT clause is also used. |
 | [360](../mssqlserver-360-database-engine-error.md) | 16 | No | The target column list of an INSERT, UPDATE, or MERGE statement cannot contain both a sparse column and the column set that contains the sparse column. Rewrite the statement to include either the sparse column or the column set, but not both. |
 | 361 | 16 | No | The number of target columns that are specified in an INSERT, UPDATE, or MERGE statement exceeds the maximum of %d. This total number includes identity, timestamp, and columns that have default values. To correct this error, change the query to target a sparse column set instead of single sparse columns. |
@@ -272,6 +272,7 @@ ms.topic: include
 | 371 | 14 | No | The user does not have the external policy action '%ls' or permission '%.\*ls' to perform this action. |
 | 372 | 14 | No | External access policies needed to validate access are either expired or not found. To force a policy fetch, execute the procedure 'sys.sp_external_policy_refresh'. If the error persists, please check provided errors related to external access policy fetch. |
 | 373 | 14 | No | The %ls permission or external policy action '%ls' was denied on the object '%.\*ls', database '%.\*ls', schema '%.\*ls'. |
+| 374 | 14 | No | The Babylon engine could not be initialized. |
 | 401 | 16 | No | Unimplemented statement or expression %ls. |
 | 402 | 16 | No | The data types %s and %s are incompatible in the %s operator. |
 | 403 | 16 | No | Invalid operator for data type. Operator equals %ls, type equals %ls. |
@@ -435,7 +436,7 @@ ms.topic: include
 | 583 | 16 | No | Negative offset or length in write. |
 | 584 | 16 | No | Select Into not allowed in WAITFOR queries. |
 | 585 | 16 | No | Changing database context is not allowed when populating the resource database. |
-| 586 | 16 | No | The prepared statement handle %d is not valid in this context.  Please verify that current database, user default schema, and ANSI_NULLS and QUOTED_IDENTIFIER set options are not changed since the handle is prepared. |
+| 586 | 16 | No | The prepared statement handle %d is not valid in this context. Please verify that current database, user default schema, and ANSI_NULLS and QUOTED_IDENTIFIER set options are not changed since the handle is prepared. |
 | 587 | 16 | No | An invalid delayed CLR type fetch token is provided. |
 | 588 | 16 | No | Multiple tasks within the session are using the same delayed CLR type fetch token at the same time. |
 | 589 | 16 | No | This statement has attempted to access data whose access is restricted by the assembly. |
@@ -452,8 +453,8 @@ ms.topic: include
 | [601](../mssqlserver-601-database-engine-error.md) | 12 | No | Could not continue scan with NOLOCK due to data movement. |
 | 602 | 21 | Yes | Could not find an entry for table or index with partition ID %I64d in database %d. This error can occur if a stored procedure references a dropped table, or metadata is corrupted. Drop and re-create the stored procedure, or execute DBCC CHECKDB. |
 | 603 | 21 | Yes | Could not find an entry for table or index with object ID %d (partition ID %I64d) in database %d. This error can occur if a stored procedure references a dropped table, or metadata is corrupted. Drop and re-create the stored procedure, or execute DBCC CHECKDB. |
-| [605](../mssqlserver-605-database-engine-error.md) | 21 | Yes | Attempt to fetch logical page %S_PGID in database %d failed. |
-| 606 | 21 | Yes | Metadata inconsistency.  Filegroup id %ld specified for |
+| [605](../mssqlserver-605-database-engine-error.md) | 21 | Yes | Attempt to fetch logical page %S_PGID in database %d failed. It belongs to allocation unit %I64d not to %I64d. |
+| 606 | 21 | Yes | Metadata inconsistency. Filegroup id %ld specified for table '%.\*ls' does not exist. Run DBCC CHECKDB or CHECKCATALOG. |
 | 608 | 16 | Yes | No catalog entry found for partition ID %I64d in database %d. The metadata is inconsistent. Run DBCC CHECKDB to check for a metadata corruption. |
 | 609 | 16 | No | BTree is not empty when waking up on RowsetBulk. |
 | 610 | 16 | Yes | Invalid header value from a page. Run DBCC CHECKDB to check for a data corruption. |
@@ -464,7 +465,7 @@ ms.topic: include
 | [617](../mssqlserver-617-database-engine-error.md) | 20 | Yes | Descriptor for object ID %ld in database ID %d not found in the hash table during attempt to unhash it. A work table is missing an entry. Rerun the query. If a cursor is involved, close and reopen the cursor. |
 | 622 | 16 | No | The filegroup "%.\*ls" has no files assigned to it. Tables, indexes, text columns, ntext columns, and image columns cannot be populated on this filegroup until a file is added. |
 | 627 | 16 | No | Cannot use SAVE TRANSACTION within a distributed transaction. |
-| 628 | 16 | No | Cannot issue SAVE TRANSACTION when there is no active |
+| 628 | 16 | No | Cannot issue SAVE TRANSACTION when there is no active transaction. |
 | 650 | 16 | No | You can only specify the READPAST lock in the READ COMMITTED or REPEATABLE READ isolation levels. |
 | 651 | 16 | No | Cannot use the %ls granularity hint on the table "%.\*ls" because locking at the specified granularity is inhibited. |
 | 652 | 16 | No | The index "%.\*ls" for table "%.\*ls" (RowsetId %I64d) resides on a read-only filegroup ("%.\*ls"), which cannot be modified. |
@@ -479,6 +480,7 @@ ms.topic: include
 | 670 | 16 | No | Large object (LOB) data for table "%.\*ls" resides on an offline filegroup ("%.\*ls") that cannot be accessed. |
 | 671 | 16 | No | Large object (LOB) data for table "%.\*ls" resides on a read-only filegroup ("%.\*ls"), which cannot be modified. |
 | 672 | 10 | No | Failed to queue cleanup packets for orphaned rowsets in database "%.\*ls". Some disk space may be wasted. Cleanup will be attempted again on database restart. |
+| 673 | 16 | No | Failure to access row object in snapshot isolation. Error code 0x%X. |
 | 674 | 10 | Yes | Exception occurred in destructor of RowsetNewSS 0x%p. This error may indicate a problem related to releasing pre-allocated disk blocks used during bulk-insert operations. Restart the server to resolve this problem. |
 | 675 | 10 | Yes | Worktable with partition ID %I64d was dropped successfully after %d repeated attempts. |
 | 676 | 10 | Yes | Error occurred while attempting to drop worktable with partition ID %I64d. |
@@ -488,8 +490,8 @@ ms.topic: include
 | 680 | 10 | Yes | Error \[%d, %d, %d\] occurred while attempting to drop allocation unit ID %I64d belonging to worktable with partition ID %I64d. |
 | 681 | 16 | No | Attempting to set a non-NULL-able column's value to NULL. |
 | 682 | 16 | No | Internal error. Buffer provided to read column value is too small. Run DBCC CHECKDB to check for any corruption. |
-| 683 | 22 | No | An internal error occurred while trying to convert between variable-length and fixed-length decimal formats.  Run DBCC CHECKDB to check for any database corruption. |
-| 684 | 22 | No | An internal error occurred while attempting to convert between compressed and uncompressed storage formats.  Run DBCC CHECKDB to check for any corruption. |
+| 683 | 22 | No | An internal error occurred while trying to convert between variable-length and fixed-length decimal formats. Run DBCC CHECKDB to check for any database corruption. |
+| 684 | 22 | No | An internal error occurred while attempting to convert between compressed and uncompressed storage formats. Run DBCC CHECKDB to check for any corruption. |
 | 685 | 22 | No | An internal error occurred while attempting to retrieve a backpointer for a heap forwarded record. |
 | 686 | 22 | No | The maximum level of the B-Tree for rowset %I64d has been reached. SQL Server only supports upto 255 levels. |
 | 687 | 16 | No | Cannot compress a nchar or nvarchar column that has an odd number of bytes. |
@@ -515,14 +517,14 @@ ms.topic: include
 | 821 | 20 | Yes | Could not unhash buffer at 0x%p with a buffer page number of %S_PGID and database ID %d with HASHED status set. The buffer was not found. %S_PAGE. Contact Technical Support. |
 | 822 | 21 | Yes | Could not start I/O operation for request %S_BLKIOPTR. Contact Technical Support. |
 | [823](../mssqlserver-823-database-engine-error.md) | 24 | Yes | The operating system returned error %ls to SQL Server during a %S_MSG at offset %#016I64x in file '%ls'. Additional messages in the SQL Server error log and operating system error log may provide more detail. This is a severe system-level error condition that threatens database integrity and must be corrected immediately. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors; for more information, see SQL Server Books Online. |
-| [824](../mssqlserver-824-database-engine-error.md) | 24 | Yes | SQL Server detected a logical consistency-based I/O error: %ls. It occurred during a %S_MSG of page %S_PGID in database ID %d at offset %#016I64x in file '%ls'.  Additional messages in the SQL Server error log or operating system error log may provide more detail. This is a severe error condition that threatens database integrity and must be corrected immediately. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors; for more information, see SQL Server Books Online. |
+| [824](../mssqlserver-824-database-engine-error.md) | 24 | Yes | SQL Server detected a logical consistency-based I/O error: %ls. It occurred during a %S_MSG of page %S_PGID in database ID %d at offset %#016I64x in file '%ls'. Additional messages in the SQL Server error log or operating system error log may provide more detail. This is a severe error condition that threatens database integrity and must be corrected immediately. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors; for more information, see SQL Server Books Online. |
 | [825](../mssqlserver-825-database-engine-error.md) | 10 | Yes | A read of the file '%ls' at offset %#016I64x succeeded after failing %d time(s) with error: %ls. Additional messages in the SQL Server error log and operating system error log may provide more detail. This error condition threatens database integrity and must be corrected. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors; for more information, see SQL Server Books Online. |
 | 826 | 10 | Yes | incorrect pageid (expected %d:%d; actual %d:%d) |
 | 829 | 21 | Yes | Database ID %d, Page %S_PGID is marked RestorePending, which may indicate disk corruption. To recover from this state, perform a restore. |
 | 830 | 10 | No | stale page (a page read returned a log sequence number (LSN) (%u:%u:%u) that is older than the last one that was written (%u:%u:%u)) |
 | 831 | 20 | No | Unable to deallocate a kept page (database %d, page %S_PGID). |
 | [832](../mssqlserver-832-database-engine-error.md) | 24 | Yes | A page that should have been constant has changed (expected checksum: %08x, actual checksum: %08x, database %d, file '%ls', page %S_PGID). This usually indicates a memory failure or other hardware or OS corruption. |
-| [833](../mssqlserver-833-database-engine-error.md) | 10 | No | SQL Server has encountered %d occurrence(s) of I/O requests taking longer than %d seconds to complete on file \[%ls\] in database id %d.  The OS file handle is 0x%p.  The offset of the latest long I/O is: %#016I64x.  The duration of the long I/O is: %I64u ms. |
+| [833](../mssqlserver-833-database-engine-error.md) | 10 | No | SQL Server has encountered %d occurrence(s) of I/O requests taking longer than %d seconds to complete on file \[%ls\] in database id %d. The OS file handle is 0x%p. The offset of the latest long I/O is: %#016I64x. The duration of the long I/O is: %I64u ms. |
 | 835 | 16 | No | The operating system returned error %ls to SQL Server. It failed creating event for a %S_MSG at offset %#016I64x in file '%ls'. Additional messages in the SQL Server error log and operating system error log may provide more detail. This is a severe system-level error condition that threatens database integrity and must be corrected immediately. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors; for more information, see SQL Server Books Online. |
 | 836 | 10 | No | Database ID %d, stale page %S_PGID is under restoring. |
 | [844](../mssqlserver-844-database-engine-error.md) | 10 | No | Time out occurred while waiting for buffer latch -- type %d, bp %p, page %d:%d, stat %#x, database id: %d, allocation unit id: %I64d%ls, task 0x%p : %d, waittime %d seconds, flags 0x%I64x, owning task 0x%p. Continuing to wait. %ls |
@@ -612,13 +614,13 @@ ms.topic: include
 | 933 | 21 | Yes | Database '%.\*ls' cannot be started because some of the database functionality is not available in the current edition of SQL Server. |
 | 934 | 21 | Yes | SQL Server cannot load database '%.\*ls' because Change Data Capture is enabled. The currently installed edition of SQL Server does not support Change Data Capture. Either restore database without KEEP_CDC option, or upgrade the instance to one that supports Change Data Capture. |
 | 935 | 21 | Yes | The script level for '%.\*ls' in database '%.\*ls' cannot be downgraded from %d to %d, which is supported by this server. This usually implies that a future database was attached and the downgrade path is not supported by the current installation. Install a newer version of SQL Server and re-try opening the database. |
-| 938 | 21 | Yes | The target database version %d is not supported by the current code version %d.   Change target version to a supported level and restart the server. |
+| 938 | 21 | Yes | The target database version %d is not supported by the current code version %d. Change target version to a supported level and restart the server. |
 | 939 | 16 | Yes | Database '%.\*ls' cannot be started because it failed to initialize the persistent version store due to error %d. Refer to previous errors in the error log to identify the cause and correct any associated problems. |
 | 941 | 16 | No | Database '%.\*ls' cannot be opened because it is not started. Retry when the database is started. |
 | 942 | 14 | No | Database '%.\*ls' cannot be opened because it is offline. |
 | 943 | 14 | No | Database '%.\*ls' cannot be opened because its version (%d) is later than the current server version (%d). |
 | 944 | 10 | No | Converting database '%.\*ls' from version %d to the current version %d. |
-| [945](../mssqlserver-945-database-engine-error.md) | 16 | No | Database '%.\*ls' cannot be opened due to inaccessible files or insufficient memory or disk space.  See the SQL Server errorlog for details. |
+| [945](../mssqlserver-945-database-engine-error.md) | 16 | No | Database '%.\*ls' cannot be opened due to inaccessible files or insufficient memory or disk space. See the SQL Server errorlog for details. |
 | 946 | 14 | Yes | Cannot open database '%.\*ls' version %d. Upgrade the database to the latest version. |
 | 947 | 16 | Yes | Error while closing database '%.\*ls'. Check for previous additional errors and retry the operation. |
 | [948](../mssqlserver-948-database-engine-error.md) | 20 | Yes | The database '%.\*ls' cannot be opened because it is version %d. This server supports version %d and earlier. A downgrade path is not supported. |
@@ -627,7 +629,7 @@ ms.topic: include
 | 951 | 10 | No | Database '%.\*ls' running the upgrade step from version %d to version %d. |
 | 952 | 16 | No | Database '%.\*ls' is in transition. Try the statement later. |
 | 954 | 14 | No | The database "%.\*ls" cannot be opened. It is acting as a mirror database. |
-| 955 | 14 | No | Database %.\*ls is enabled for Database Mirroring, but the database lacks quorum: the database cannot be opened.  Check the partner and witness connections if configured. |
+| 955 | 14 | No | Database %.\*ls is enabled for Database Mirroring, but the database lacks quorum: the database cannot be opened. Check the partner and witness connections if configured. |
 | 956 | 14 | No | Database %.\*ls is enabled for Database Mirroring, but has not yet synchronized with its partner. Try the operation again later. |
 | 957 | 17 | No | Database '%.\*ls' is enabled for database mirroring or has joined an availability group. The name of the database cannot be changed. |
 | 958 | 10 | Yes | The resource database build version is %.\*ls. This is an informational message only. No user action is required. |
@@ -645,10 +647,10 @@ ms.topic: include
 | 970 | 10 | No | Warning: The XML instances in the XML column "%.\*ls.%.\*ls.%.\*ls" may contain negative simple type values of type xs:date or xs:dateTime. It will be impossible to run XQuery or build a primary or selective XML index on these XML instances. |
 | 971 | 10 | No | The resource database has been detected in two different locations. Attaching the resource database in the same directory as sqlservr.exe at '%.\*ls' instead of the currently attached resource database at '%.\*ls'. |
 | 972 | 17 | No | Could not use database '%d' during procedure execution. |
-| 973 | 10 | Yes | Database %ls was started . However,  FILESTREAM is not compatible with the READ_COMMITTED_SNAPSHOT  and  ALLOW_SNAPSHOT_ISOLATION options. Either remove the FILESTREAM files and the FILESTREAM filegroups, or set READ_COMMITTED_SNAPSHOT and ALLOW_SNAPSHOT_ISOLATION to OFF. |
+| 973 | 10 | Yes | Database %ls was started . However, FILESTREAM is not compatible with the READ_COMMITTED_SNAPSHOT and ALLOW_SNAPSHOT_ISOLATION options. Either remove the FILESTREAM files and the FILESTREAM filegroups, or set READ_COMMITTED_SNAPSHOT and ALLOW_SNAPSHOT_ISOLATION to OFF. |
 | 974 | 10 | No | Attaching the resource database in the same directory as sqlservr.exe at '%.\*ls' failed as the database files do not exist. |
 | 975 | 10 | Yes | System objects could not be updated in database '%.\*ls' because it is read-only. |
-| 976 | 14 | No | The target database, '%.\*ls', is participating in an availability group and is currently not accessible for queries. Either data movement is suspended or the availability replica is not enabled for read access. To allow read-only access to this and other databases in the availability group, enable read access to one or more secondary availability replicas in the group.  For more information, see the ALTER AVAILABILITY GROUP statement in SQL Server Books Online. |
+| 976 | 14 | No | The target database, '%.\*ls', is participating in an availability group and is currently not accessible for queries. Either data movement is suspended or the availability replica is not enabled for read access. To allow read-only access to this and other databases in the availability group, enable read access to one or more secondary availability replicas in the group. For more information, see the ALTER AVAILABILITY GROUP statement in SQL Server Books Online. |
 | 977 | 10 | No | Warning: Could not find associated index for the constraint '%.\*ls' on object_id '%d' in database '%.\*ls'. |
 | 978 | 14 | No | The target database ('%.\*ls') is in an availability group and is currently accessible for connections when the application intent is set to read only. For more information about application intent, see SQL Server Books Online. |
 | 979 | 14 | No | The target database ('%.\*ls') is in an availability group and currently does not allow read only connections. For more information about application intent, see SQL Server Books Online. |
@@ -658,7 +660,7 @@ ms.topic: include
 | 983 | 14 | No | Unable to access availability database '%.\*ls' because the database replica is not in the PRIMARY or SECONDARY role. Connections to an availability database is permitted only when the database replica is in the PRIMARY or SECONDARY role. Try the operation again later. |
 | 984 | 21 | Yes | Failed to perform a versioned copy of sqlscriptdowngrade.dll from Binn to Binn\Cache folder. VerInstallFile API failed with error code %d. |
 | 985 | 10 | Yes | Successfully installed the file '%ls' into folder '%ls'. |
-| 986 | 10 | No | Couldn't get a clean bootpage for database  '%.\*ls' after %d tries. This is an informational message only. No user action is required. |
+| 986 | 10 | No | Couldn't get a clean bootpage for database '%.\*ls' after %d tries. This is an informational message only. No user action is required. |
 | 987 | 23 | Yes | A duplicate key insert was hit when updating system objects in database '%.\*ls'. |
 | 988 | 14 | No | Unable to access database '%.\*ls' because it lacks a quorum of nodes for high availability. Try the operation again later. |
 | 989 | 16 | No | Failed to take the host database with ID %d offline when one or more of its partition databases is marked as suspect. |

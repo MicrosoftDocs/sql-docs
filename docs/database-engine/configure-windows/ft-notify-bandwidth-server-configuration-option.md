@@ -1,5 +1,5 @@
 ---
-title: "ft notify bandwidth Server Configuration Option"
+title: "ft notify bandwidth (server configuration option)"
 description: "Learn about the ft notify bandwidth option. See how it affects the number of buffers that SQL Server maintains in the pool of small memory buffers."
 author: rwestMSFT
 ms.author: randolphwest
@@ -14,7 +14,7 @@ helpviewer_keywords:
 dev_langs:
   - "TSQL"
 ---
-# ft notify bandwidth Server Configuration Option
+# ft notify bandwidth (server configuration option)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Use the **ft notify bandwidth** option to specify the size to which the pool of small memory buffers can grow. Small memory buffers are 64 kilobytes (KB) in size. The *max* parameter value specifies the maximum number of buffers that the full-text memory manager should maintain in a small buffer pool. If the **max** value is zero, then there is no upper limit to the number of buffers that can be in a small buffer pool.  

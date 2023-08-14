@@ -7,6 +7,7 @@ ms.reviewer: vanto
 ms.date: "04/05/2023"
 ms.service: sql
 ms.subservice: security
+ms.custom: devx-track-azurepowershell
 ms.topic: conceptual
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -183,11 +184,12 @@ for($i=0; $i -lt $tables.Count; $i++){
 Set-SqlColumnEncryption -ColumnEncryptionSettings $ces -InputObject $database -LogFileDirectory . -EnclaveAttestationProtocol "AAS" -EnclaveAttestationURL "https://<attestationURL>" -KeyVaultAccessToken $keyVaultAccessToken
 ```
  
-## Next Steps
+## Next steps
 - [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md)
 
-## See Also  
+## See also  
  - [Always Encrypted with secure enclaves](../../../relational-databases/security/encryption/always-encrypted-enclaves.md)
  - [Manage keys for Always Encrypted with secure enclaves](always-encrypted-enclaves-manage-keys.md)
  - [Configure column encryption in-place with Transact-SQL](always-encrypted-enclaves-configure-encryption-tsql.md)
  - [Configure column encryption in-place with a DAC package](always-encrypted-enclaves-configure-encryption-dacpac.md)
+ - [Configure column encryption in-place with the Always Encrypted wizard in SSMS](always-encrypted-wizard.md)

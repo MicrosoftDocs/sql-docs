@@ -43,12 +43,13 @@ To publish DAC package if Always Encrypted with secure enclaves is set up in the
 If the upgrade operation triggers a data encryption operation, you also need key store permissions to access and use your column master key. For detailed information on key store permissions, go to [Provision enclave-enabled keys](always-encrypted-enclaves-provision-keys.md) and find a section relevant for your key store.
 
  
-## Next Steps
+## Next steps
 - [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md)
 - [Run Transact-SQL statements using secure enclaves](always-encrypted-enclaves-query-columns-ssms.md)
 
-## See Also  
+## See also  
  - [Always Encrypted with secure enclaves](../../../relational-databases/security/encryption/always-encrypted-enclaves.md)
  - [Manage keys for Always Encrypted with secure enclaves](always-encrypted-enclaves-manage-keys.md) 
  - [Configure column encryption in-place with Transact-SQL](always-encrypted-enclaves-configure-encryption-tsql.md)
-  - [Configure column encryption in-place with PowerShell](always-encrypted-enclaves-configure-encryption-powershell.md)
+ - [Configure column encryption in-place with PowerShell](always-encrypted-enclaves-configure-encryption-powershell.md)
+ - [Configure column encryption in-place with the Always Encrypted wizard in SSMS](always-encrypted-wizard.md)

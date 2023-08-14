@@ -13,6 +13,10 @@ ms.custom: intro-whats-new
 
 This article lists SQL Server Migration Assistant (SSMA) for Access changes in each release.
 
+## SSMA v9.4
+
+The v9.4 release of SSMA for Access contains minor performance improvements, bug fixes, and an enhanced help experience.
+
 ## SSMA v9.3
 
 The v9.2 release of SSMA for Access contains the following changes:
@@ -167,7 +171,7 @@ To leverage this setting, in SSMA for Access, navigate to **Tools** > **Project 
 
 ## SSMA v8.5
 
-The v8.5 release of SSMA for Access is enhanced with support for Azure Active Directory authentication and basic support for JSON features in SQL server, together with a targeted set of fixes designed to improve usability and performance.
+The v8.5 release of SSMA for Access is enhanced with support for Azure Active Directory authentication and basic support for JSON features in SQL Server, together with a targeted set of fixes designed to improve usability and performance.
 
 In addition, SSMA for Access now supports conversion of multiple standard functions (`ISNULL`, `IIF`, etc.).
 

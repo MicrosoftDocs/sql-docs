@@ -20,14 +20,21 @@ helpviewer_keywords:
   - "statistical information [SQL Server], removing"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 
 # DROP STATISTICS (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
 Drops statistics for multiple collections within the specified tables in the current database.  
+
+::: moniker range="=fabric"
+
+> [!NOTE]
+> For more information on statistics in [!INCLUDE [fabric](../../includes/fabric.md)], see [Statistics in [!INCLUDE [fabric](../../includes/fabric.md)]](/fabric/data-warehouse/statistics).
+
+::: moniker-end
   
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,7 +47,7 @@ DROP STATISTICS table.statistics_name | view.statistics_name [ ,...n ]
 ```  
   
 ```syntaxsql
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse and Microsoft Fabric
   
 DROP STATISTICS [ schema_name . ] table_name.statistics_name   
 [;]  
@@ -72,7 +79,7 @@ DROP STATISTICS [ schema_name . ] table_name.statistics_name
   
 ```sql  
 -- Create the statistics groups.  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 CREATE STATISTICS VendorCredit  
     ON Purchasing.Vendor (Name, CreditRating)  
@@ -106,5 +113,4 @@ DROP STATISTICS dbo.Customer.CustomerStats1;
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)  
-  
-  
+ [Statistics in Microsoft Fabric](/fabric/data-warehouse/statistics)

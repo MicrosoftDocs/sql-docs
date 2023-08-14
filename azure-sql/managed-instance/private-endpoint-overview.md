@@ -4,18 +4,15 @@ description: Connect your Azure SQL Managed Instance to virtual networks and Azu
 author: zoran-rilak-msft
 ms.author: zoranrilak
 ms.reviewer: mathoma, srbozovi
-ms.date: 03/15/2023
+ms.date: 08/02/2023
 ms.service: sql-managed-instance
 ms.subservice: backup-restore
 ms.topic: how-to
 ---
-# Azure Private Link for Azure SQL Managed Instance (Preview)
+# Azure Private Link for Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 This article provides an overview of the private endpoint for Azure SQL Managed Instance, as well as steps to configuring it. Private endpoints establish secure, isolated connectivity between a service and multiple virtual networks without exposing your service's entire network infrastructure.
-
-> [!NOTE]
-> Private Link for Azure SQL Managed Instance is currently in preview. While in preview, private endpoints to instances enrolled in the November 2022 Feature wave may experience transient loss of connectivity. Private endpoints to instances not enrolled in the November 2022 Feature wave are not affected.
 
 ## Overview
 
@@ -49,9 +46,8 @@ The benefits of using private endpoints over a VNet-local or public endpoint inc
 
 ## Limitations
 
-- Instances enrolled in the [November 2022 Feature wave](november-2022-feature-wave-enroll.md) may exhibit occasional issues with Private Link connectivity while the feature is in public preview.
 - Azure SQL Managed Instance requires the exact instance _hostname_ to appear in the connection string sent by the SQL client. Using the IP address of the private endpoint is not supported and will fail. To resolve this, configure your DNS server, or use a private DNS zone as described in [Set up domain name resolution for private endpoint](#set-up-domain-name-resolution-for-private-endpoint).
-- Automatic registration of DNS names is disabled while in preview. Follow the steps in [Set up domain name resolution for private endpoint](#set-up-domain-name-resolution-for-private-endpoint) instead.
+- Automatic registration of DNS names is not yet supported. Follow the steps in [Set up domain name resolution for private endpoint](#set-up-domain-name-resolution-for-private-endpoint) instead.
 - Private endpoints to SQL Managed Instance can only be used to connect to port 1433, the standard TDS port for SQL traffic. More complex connectivity scenarios requiring communication on other ports must be established via the instance's VNet-local endpoint.
 - Private endpoints to Azure SQL Managed Instance require a special setup to configure the required DNS resolution, as described in [Set up domain name resolution for private endpoint](#set-up-domain-name-resolution-for-private-endpoint).
 - Private endpoints always operate with the [proxy connection type](connection-types-overview.md#connection-types). 
@@ -171,6 +167,8 @@ After you complete these steps, SQL clients inside the endpoint virtual network 
    - Name: `<instance-name>`
    - Type: A
    - IP address: IP address of the private endpoint obtained in the previous steps.
+
+---
 
 ## Next steps
 

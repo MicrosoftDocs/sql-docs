@@ -50,7 +50,7 @@ _SSDT for Visual Studio 2017._
 
 | New Item | Details |
 |-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Integration Services (SSIS) | Azure-enabled SQL Server Integration Services (SSIS) projects now support national cloud (Azure US Government and Azure China). |
+| Integration Services (SSIS) | Azure-enabled SQL Server Integration Services (SSIS) projects now support national cloud (Azure US Government and Microsoft Azure operated by 21Vianet). |
 | Integration Services (SSIS) | Fixed an issue that can't sign in with Azure Active Directory when editing Analysis Services Processing Task. |
 | Integration Services (SSIS) | Fixed some issues related to accessibility and high DPI. |
 
@@ -400,7 +400,7 @@ _SSDT for Visual Studio 2017._
 ### Known issues:
 
 - SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog isn't impacted.
-- When installing SSDT on Windows 10 and choosing "Install new SQL Server Data Tools for Visual Studio 2017 instance", the installation will fail on "The requested metafile operation isn't supported". Reboot the machine and launch SSDT installer again to continue the installation.
+- When installing SSDT on Windows 10 and choosing "Install new SQL Server Data Tools for Visual Studio 2017 instance", the installation will fail on "The requested metafile operation isn't supported". Restart the machine and launch SSDT installer again to continue the installation.
 
 ## 15.7.0,&nbsp; SSDT for VS 2017
 
@@ -817,16 +817,16 @@ _Supports up to SQL Server 2017._
         - Return Error Values as Null (default is false - when set to true, cell level errors are returned as null. When false, an exception is raised when a cell contains an error)  
     - Additional data sources (file data sources) using PowerQuery
         - Excel 
-		- Text/CSV 
-		- Xml 
-		- Json 
-		- Folder 
-		- Access Database 
-		- Azure Blob Storage 
+        - Text/CSV 
+        - Xml 
+        - Json 
+        - Folder 
+        - Access Database 
+        - Azure Blob Storage 
     - Localized PowerQuery user interface
 - DAX Editor Tool Window
     - Improved DAX editing experience for measures, calculated columns, and detail-rows expressions, available via the View, Other Windows menu in SSDT
-	- Improvements to DAX parser\Intellisense
+    - Improvements to DAX parser\Intellisense
 
 
 **RS projects:**

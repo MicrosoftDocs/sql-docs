@@ -44,8 +44,8 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
             {  
                 Server srv = new Server();  
   
-                //Reference the AdventureWorks2012 database.   
-                Database db = srv.Databases["AdventureWorks2012"];  
+                //Reference the AdventureWorks2022 database.   
+                Database db = srv.Databases["AdventureWorks2022"];  
   
                 //Define a Certificate object variable by supplying the parent database and name in the constructor.   
                 Certificate c = new Certificate(db, "Test_Certificate");  
@@ -67,9 +67,9 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
  The code example creates a simple certificate with an encryption password. Unlike other objects, the <xref:Microsoft.SqlServer.Management.Smo.Certificate.Create%2A> method has several overloads. The overload used in the example creates a new certificate with an encryption password.  
   
 ```powershell  
-# Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  
+# Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2022  
 CD \sql\localhost\default\databases  
-$db = get-item AdventureWorks2012  
+$db = get-item AdventureWorks2022  
   
 #Create a certificate  
   

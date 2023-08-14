@@ -171,7 +171,7 @@ CONTAINS (
 *\<contains_search_condition>* is **nvarchar**. An implicit conversion occurs when another character data type is used as input. Large string data types nvarchar(max) and varchar(max) cannot be used. In the following example, the `@SearchWord` variable, which is defined as `varchar(30)`, causes an implicit conversion in the `CONTAINS` predicate.
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DECLARE @SearchWord VARCHAR(30)  
 SET @SearchWord ='performance'  
@@ -183,7 +183,7 @@ WHERE CONTAINS(Description, @SearchWord);
  Because "parameter sniffing" does not work across conversion, use **nvarchar** for better performance. In the example, declare `@SearchWord` as `nvarchar(30)`.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DECLARE @SearchWord NVARCHAR(30)  
 SET @SearchWord = N'performance'  
@@ -356,7 +356,7 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
  For example, the following CONTAINS query searches for the term `Red` in the `Name` and `Color` columns of the `Production.Product` table of the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database.  
   
 ```sql  
-Use AdventureWorks2012;  
+Use AdventureWorks2022;  
 GO  
 SELECT Name, Color   
 FROM Production.Product  
@@ -369,7 +369,7 @@ WHERE CONTAINS((Name, Color), 'Red');
  The following example finds all products with a price of `$80.99` that contain the word `Mountain`.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT Name, ListPrice  
 FROM Production.Product  
@@ -382,7 +382,7 @@ GO
  The following example returns all products that contain either the phrase `Mountain` or `Road`.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT Name  
 FROM Production.Product  
@@ -394,7 +394,7 @@ GO
  The following example returns all product names with at least one word starting with the prefix chain in the `Name` column.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT Name  
 FROM Production.Product  
@@ -406,7 +406,7 @@ GO
  The following example returns all category descriptions containing strings with prefixes of either `chain` or `full`.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT Name  
 FROM Production.Product  
@@ -421,7 +421,7 @@ GO
  The following example searches the `Production.ProductReview` table for all comments that contain the word `bike` within 10 terms of the word "`control`" and in the specified order (that is, where "`bike`" precedes "`control`").  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT Comments  
 FROM Production.ProductReview  
@@ -433,7 +433,7 @@ GO
  The following example searches for all products with words of the form `ride`: riding, ridden, and so on.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT Description  
 FROM Production.ProductDescription  
@@ -445,7 +445,7 @@ GO
  The following example searches for all product names containing the words `performance`, `comfortable`, or `smooth`, and different weights are given to each word.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT Description  
 FROM Production.ProductDescription  
@@ -458,7 +458,7 @@ GO
  The following example uses a variable instead of a specific search term.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DECLARE @SearchWord NVARCHAR(30)  
 SET @SearchWord = N'Performance'  
@@ -472,7 +472,7 @@ GO
  The following example uses the ProductDescription table of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. The query uses the CONTAINS predicate to search for descriptions in which the description ID is not equal to 5 and the description contains both the word `Aluminum` and the word `spindle`. The search condition uses the AND Boolean operator.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT Description  
 FROM Production.ProductDescription  
@@ -485,7 +485,7 @@ GO
  The following example uses CONTAINS within a SELECT subquery. Using the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database, the query obtains the comment value of all the comments in the ProductReview table for a particular cycle. The search condition uses the AND Boolean operator.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 INSERT INTO Production.ProductReview   
   (ProductID, ReviewerName, EmailAddress, Rating, Comments)   
@@ -521,7 +521,7 @@ GO
 >  For a property-search to return rows, the filter or filters that parse the column during indexing must extract the specified property. Also, the full-text index of the specified table must have been configured to include the property. For more information, see [Search Document Properties with Search Property Lists](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
 ```sql  
-Use AdventureWorks2012;  
+Use AdventureWorks2022;  
 GO  
 SELECT Document 
 FROM Production.Document  

@@ -1,5 +1,5 @@
 ---
-title: "Configure the user options Server Configuration Option"
+title: "Configure the user options (server configuration option)"
 description: "Learn about the user options option. See how it changes the default values of the query processing options that SQL Server establishes for user work sessions."
 author: rwestMSFT
 ms.author: randolphwest
@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "users [SQL Server], global defaults"
   - "user options option [SQL Server]"
 ---
-# Configure the user options Server Configuration Option
+# Configure the user options (server configuration option)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to configure the **user options** server configuration option in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **user options** option specifies global defaults for all users. A list of default query processing options is established for the duration of a user's work session. The **user options** option allows you to change the default values of the SET options (if the server's default settings are not appropriate).  
@@ -89,7 +89,7 @@ helpviewer_keywords:
 3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) to configure the `user options` to change the setting for the ANSI_WARNINGS server option.  
   
 ```sql  
-USE AdventureWorks2012 ;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_configure 'user options', 8 ;  
 GO  

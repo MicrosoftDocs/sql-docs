@@ -3,7 +3,7 @@ title: "sys.dm_os_buffer_descriptors (Transact-SQL)"
 description: sys.dm_os_buffer_descriptors (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "02/27/2023"
+ms.date: "06/19/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -30,7 +30,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|database_id|**int**|ID of database associated with the page in the buffer pool. Is nullable.|  
+|database_id|**int**|ID of database associated with the page in the buffer pool. Is nullable. <br /><br />In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the values are unique within a single database or an elastic pool, but not within a logical server.|  
 |file_id|**int**|ID of the file that stores the persisted image of the page. Is nullable.|  
 |page_id|**int**|ID of the page within the file. Is nullable.|  
 |page_level|**int**|Index level of the page. Is nullable.|  

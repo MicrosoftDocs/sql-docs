@@ -4,7 +4,7 @@ description: This article discusses the Transact-SQL (T-SQL) differences between
 author: danimir
 ms.author: danil
 ms.reviewer: mathoma, bonova, danil
-ms.date: 02/22/2023
+ms.date: 05/11/2023
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: reference
@@ -54,7 +54,7 @@ Azure SQL Managed Instance has automatic backups, so users can create full datab
   - `FILE`, `TAPE`, and backup devices aren't supported.
 - Most of the general `WITH` options are supported.
   - `COPY_ONLY` is mandatory.
-  - `FILE_SNAPSHOT` isn't supported.
+  - `FILE_SNAPSHOT` and `CREDENTIAL` aren't supported.
   - Tape options: `REWIND`, `NOREWIND`, `UNLOAD`, and `NOUNLOAD` aren't supported.
   - Log-specific options: `NORECOVERY`, `STANDBY`, and `NO_TRUNCATE` aren't supported.
 
@@ -63,7 +63,7 @@ Limitations:
 - With a SQL Managed Instance, you can back up an instance database to a backup with up to 32 stripes, which is enough for databases up to 4 TB if backup compression is used.
 - You can't execute `BACKUP DATABASE ... WITH COPY_ONLY` on a database that's encrypted with service-managed Transparent Data Encryption (TDE). Service-managed TDE forces backups to be encrypted with an internal TDE key. The key can't be exported, so you can't restore the backup. Use automatic backups and point-in-time restore, or use [customer-managed (BYOK) TDE](../database/transparent-data-encryption-tde-overview.md#customer-managed-transparent-data-encryption---bring-your-own-key) instead. You also can disable encryption on the database.
 - Native backups taken on a SQL Managed Instance can be restored to a SQL Server 2022 instance only. This is because SQL Managed Instance has higher internal database version compared to other versions of SQL Server. For more information, review [Restore a SQL Managed Instance database backup to SQL Server 2022](restore-database-to-sql-server.md).
-- To back up or restore a database to/from an Azure storage, it is necessary to create a shared access signature (SAS) an URI that grants you restricted access rights to Azure Storage resources [Learn more on this](restore-sample-database-quickstart.md#use-t-sql-to-restore-from-a-backup-file). Using Access keys for these scenarios is not supported.
+- To back up or restore a database to/from an Azure storage, you can authenticate using either managed identity or shared access signature (SAS) which is an URI that grants you restricted access rights to Azure Storage resources [Learn more on this](restore-sample-database-quickstart.md#use-t-sql-to-restore-from-a-backup-file). Using Access keys for these scenarios is not supported.
 - The maximum backup stripe size by using the `BACKUP` command in SQL Managed Instance is 195 GB, which is the maximum blob size. Increase the number of stripes in the backup command to reduce individual stripe size and stay within this limit.
 
     > [!TIP]
@@ -75,7 +75,7 @@ Limitations:
     >
     > The `Restore` command in SQL Managed Instance supports bigger blob sizes in the backup files because a different blob type is used for storage of the uploaded backup files.
 
-For information about backups using T-SQL, see [BACKUP](/sql/t-sql/statements/backup-transact-sql).
+For information about backups using T-SQL, see [BACKUP](/sql/t-sql/statements/backup-transact-sql?view=azuresqldb-mi-current&preserve-view=true).
 
 ## Security
 
@@ -119,7 +119,7 @@ WITH PRIVATE KEY (<private_key_options>)
 
 ### Credential
 
-Only Azure Key Vault and `SHARED ACCESS SIGNATURE` identities are supported. Windows users aren't supported.
+Managed identity, Azure Key Vault and `SHARED ACCESS SIGNATURE` identities are supported. Windows users aren't supported.
 
 See [CREATE CREDENTIAL](/sql/t-sql/statements/create-credential-transact-sql) and [ALTER CREDENTIAL](/sql/t-sql/statements/alter-credential-transact-sql).
 
@@ -389,7 +389,7 @@ Operations:
 
 - `sp_dropserver` is supported for dropping a linked server. See [sp_dropserver](/sql/relational-databases/system-stored-procedures/sp-dropserver-transact-sql).
 - The `OPENROWSET` function can be used to execute queries only on SQL Server instances. They can be either managed, on-premises, or in virtual machines. See [OPENROWSET](/sql/t-sql/functions/openrowset-transact-sql).
-- The [OPENDATASOURCE](/sql/t-sql/functions/opendatasource-transact-sql) function can be used to execute queries only on SQL Server instances. They can be either managed, on-premises, or in virtual machines. An example is `SELECT * FROM OPENDATASOURCE('SQLNCLI', '...').AdventureWorks2012.HumanResources.Employee`. Only the `SQLNCLI`, `SQLNCLI11`, `SQLOLEDB`, and `MSOLEDBSQL` values are supported as a provider. The [SQL Server Native Client](/sql/relational-databases/native-client/sql-server-native-client) (often abbreviated SNAC) has been removed from SQL Server 2022 and SQL Server Management Studio 19 (SSMS). The SQL Server Native Client (SQLNCLI or SQLNCLI11) and the legacy Microsoft OLE DB Provider for SQL Server (SQLOLEDB) are not recommended for new development. Switch to the new [Microsoft OLE DB Driver (MSOLEDBSQL) for SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server) or the latest [Microsoft ODBC Driver for SQL Server](/sql/connect/odbc/microsoft-odbc-driver-for-sql-server) going forward.
+- The [OPENDATASOURCE](/sql/t-sql/functions/opendatasource-transact-sql) function can be used to execute queries only on SQL Server instances. They can be either managed, on-premises, or in virtual machines. An example is `SELECT * FROM OPENDATASOURCE('SQLNCLI', '...').AdventureWorks2022.HumanResources.Employee`. Only the `SQLNCLI`, `SQLNCLI11`, `SQLOLEDB`, and `MSOLEDBSQL` values are supported as a provider. The [SQL Server Native Client](/sql/relational-databases/native-client/sql-server-native-client) (often abbreviated SNAC) has been removed from SQL Server 2022 and SQL Server Management Studio 19 (SSMS). The SQL Server Native Client (SQLNCLI or SQLNCLI11) and the legacy Microsoft OLE DB Provider for SQL Server (SQLOLEDB) are not recommended for new development. Switch to the new [Microsoft OLE DB Driver (MSOLEDBSQL) for SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server) or the latest [Microsoft ODBC Driver for SQL Server](/sql/connect/odbc/microsoft-odbc-driver-for-sql-server) going forward.
 - Linked servers cannot be used to read files (Excel, CSV) from the network shares. Try to use [BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql#e-importing-data-from-a-csv-file), [OPENROWSET](/sql/t-sql/functions/openrowset-transact-sql#g-accessing-data-from-a-csv-file-with-a-format-file) that reads CSV files from Azure Blob Storage, or a [linked server that references a serverless SQL pool in Synapse Analytics](https://devblogs.microsoft.com/azure-sql/linked-server-to-synapse-sql-to-implement-polybase-like-scenarios-in-managed-instance/). Track this requests on [SQL Managed Instance Feedback item](https://feedback.azure.com/d365community/idea/db80cf6e-3425-ec11-b6e6-000d3a4f0f84)
 
 Linked servers on Azure SQL Managed Instance support SQL authentication and [Azure AD authentication](/sql/relational-databases/linked-servers/create-linked-servers-sql-server-database-engine#linked-servers-with-azure-sql-managed-instance).
@@ -416,19 +416,20 @@ For more information about configuring transactional replication, see the follow
 
 - Supported syntax:
   - `RESTORE DATABASE`
-  - `RESTORE FILELISTONLY ONLY`
-  - `RESTORE HEADER ONLY`
-  - `RESTORE LABELONLY ONLY`
-  - `RESTORE VERIFYONLY ONLY`
+  - `RESTORE FILELISTONLY`
+  - `RESTORE HEADERONLY`
+  - `RESTORE LABELONLY`
+  - `RESTORE VERIFYONLY`
 - Unsupported syntax:
-  - `RESTORE LOG ONLY`
-  - `RESTORE REWINDONLY ONLY`
+  - `RESTORE LOGONLY`
+  - `RESTORE REWINDONLY`
 - Source: 
   - `FROM URL` (Azure Blob storage) is the only supported option.
   - `FROM DISK`/`TAPE`/backup device isn't supported.
   - Backup sets aren't supported.
-- `WITH` options aren't supported. Restore attempts including `WITH` like `DIFFERENTIAL`, `STATS`, `REPLACE`, etc., will fail.
-- `ASYNC RESTORE`: Restore continues even if the client connection breaks. If your connection is dropped, you can check the `sys.dm_operation_status` view for the status of a restore operation, and for a CREATE and DROP database. See [sys.dm_operation_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database). 
+- `WITH` options aren't supported. Restore attempts including `WITH` like `DIFFERENTIAL`, `STATS`, `REPLACE`, and so on, will fail.
+
+A database restore operation is asynchronous and retryable in Azure SQL Managed Instance. You might get an error in SSMS if the connection fails or a time-out expires. Azure SQL Managed Instance keeps trying to restore the database in the background, and you can track the progress of the restore process by using the [sys.dm_exec_requests](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql) and [sys.dm_operation_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database) dynamic management views.
 
 The following database options are set or overridden and can't be changed later: 
 

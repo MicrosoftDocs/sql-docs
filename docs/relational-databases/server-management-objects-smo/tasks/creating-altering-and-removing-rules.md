@@ -29,9 +29,9 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
 'Connect to the local, default instance of SQL Server.
 Dim srv As Server
 srv = New Server
-'Reference the AdventureWorks2012 database.
+'Reference the AdventureWorks2022 database.
 Dim db As Database
-db = srv.Databases("AdventureWorks2012")
+db = srv.Databases("AdventureWorks2022")
 'Declare a Table object variable and reference the Product table.
 Dim tb As Table
 tb = db.Tables("Product", "Production")
@@ -62,9 +62,9 @@ ru.Drop()
             //Connect to the local, default instance of SQL Server.   
             Server srv;  
             srv = new Server();  
-            //Reference the AdventureWorks2012 database.   
+            //Reference the AdventureWorks2022 database.   
             Database db;  
-            db = srv.Databases["AdventureWorks2012"];  
+            db = srv.Databases["AdventureWorks2022"];  
   
             //Define a Rule object variable by supplying the parent database, name and schema in the constructor.   
             //Note that the full namespace must be given for the Rule type to differentiate it from other Rule types.   
@@ -91,9 +91,9 @@ ru.Drop()
  The **Dim** statement for the <xref:Microsoft.SqlServer.Management.Smo.Rule> object is specified with the full assembly path to avoid ambiguity with a <xref:Microsoft.SqlServer.Management.Smo.Rule> object in the System.Data assembly.  
   
 ```powershell   
-# Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  
+# Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2022  
 CD \sql\localhost\default\databases  
-$db = get-item Adventureworks2012  
+$db = get-item AdventureWorks2022  
   
 # Define a Rule object variable by supplying the parent database, name and schema in the constructor.   
 $ru = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Rule `  

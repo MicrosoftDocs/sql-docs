@@ -22,11 +22,11 @@ helpviewer_keywords:
   - "deleting data"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # DELETE (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricdw.md)]
 
   Removes one or more rows from a table or view in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -72,7 +72,7 @@ DELETE
 ```  
   
 ```syntaxsql
--- Syntax for Azure Synapse Analytics
+-- Syntax for Azure Synapse Analytics and Microsoft Fabric
 
 [ WITH <common_table_expression> [ ,...n ] ] 
 DELETE [database_name . [ schema ] . | schema. ] table_name  
@@ -200,6 +200,8 @@ DELETE
   
  The FROM clause cannot be specified in a DELETE statement that references, either directly or indirectly, a view with an `INSTEAD OF` trigger defined on it. For more information about INSTEAD OF triggers, see [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
+ Currently, the FROM clause cannot be specified in a DELETE statement on [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)].
+
 ## Limitations and Restrictions  
 When `TOP` is used with `DELETE`, the referenced rows are not arranged in any order and the `ORDER BY` clause can not be directly specified in this statement. If you need to use TOP to delete rows in a meaningful chronological order, you must use `TOP` together with an `ORDER BY` clause in a subselect statement. See the Examples section that follows in this topic.  
   
@@ -238,8 +240,8 @@ The DELETE statement is always fully logged.
 |Category|Featured syntax elements|  
 |--------------|------------------------------|  
 |[Basic syntax](#BasicSyntax)|DELETE|  
-|[Limiting the rows deleted](#LimitRows)|WHERE • FROM • cursor •|  
-|[Deleting rows from a remote table](#RemoteTables)|Linked server • OPENQUERY rowset function • OPENDATASOURCE rowset function|  
+|[Limiting the rows deleted](#LimitRows)|WHERE * FROM * cursor *|  
+|[Deleting rows from a remote table](#RemoteTables)|Linked server * OPENQUERY rowset function * OPENDATASOURCE rowset function|  
 |[Capturing the results of the DELETE statement](#CaptureResults)|OUTPUT clause|  
   
 ###  <a name="BasicSyntax"></a> Basic Syntax  
@@ -369,7 +371,7 @@ EXEC sp_addlinkedserver @server = N'MyLinkServer',
     @srvproduct = N' ',  
     @provider = N'SQLNCLI',   
     @datasrc = N'server_name',  
-    @catalog = N'AdventureWorks2012';  
+    @catalog = N'AdventureWorks2022';  
 GO  
 ```  
   
@@ -377,7 +379,7 @@ GO
 -- Specify the remote data source using a four-part name   
 -- in the form linked_server.catalog.schema.object.  
   
-DELETE MyLinkServer.AdventureWorks2012.HumanResources.Department 
+DELETE MyLinkServer.AdventureWorks2022.HumanResources.Department 
 WHERE DepartmentID > 16;  
 GO  
 ```  
@@ -387,7 +389,7 @@ GO
   
 ```sql
 DELETE OPENQUERY (MyLinkServer, 'SELECT Name, GroupName 
-FROM AdventureWorks2012.HumanResources.Department  
+FROM AdventureWorks2022.HumanResources.Department  
 WHERE DepartmentID = 18');  
 GO  
 ```  
@@ -398,7 +400,7 @@ GO
 ```sql
 DELETE FROM OPENDATASOURCE('SQLNCLI',  
     'Data Source= <server_name>; Integrated Security=SSPI')  
-    .AdventureWorks2012.HumanResources.Department   
+    .AdventureWorks2022.HumanResources.Department   
 WHERE DepartmentID = 17;
 ```  
   

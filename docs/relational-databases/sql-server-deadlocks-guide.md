@@ -161,7 +161,7 @@ The following example shows the output, after selecting on the first link of the
         <process-list>
           <process id="process27b9b0b9848" taskpriority="0" logused="0" waitresource="KEY: 5:72057594214350848 (1a39e6095155)" waittime="1631" ownerId="11088595" transactionname="SELECT" lasttranstarted="2022-02-18T00:26:23.073" XDES="0x27b9f79fac0" lockMode="S" schedulerid="9" kpid="15336" status="suspended" spid="62" sbid="0" ecid="0" priority="0" trancount="0" lastbatchstarted="2022-02-18T00:26:22.893" lastbatchcompleted="2022-02-18T00:26:22.890" lastattention="1900-01-01T00:00:00.890" clientapp="SQLCMD" hostname="ContosoServer" hostpid="7908" loginname="CONTOSO\user" isolationlevel="read committed (2)" xactid="11088595" currentdb="5" lockTimeout="4294967295" clientoption1="538968096" clientoption2="128056">
             <executionStack>
-              <frame procname="AdventureWorks2019.dbo.p1" line="3" stmtstart="78" stmtend="180" sqlhandle="0x0300050020766505ca3e07008ba8000001000000000000000000000000000000000000000000000000000000">
+              <frame procname="AdventureWorks2022.dbo.p1" line="3" stmtstart="78" stmtend="180" sqlhandle="0x0300050020766505ca3e07008ba8000001000000000000000000000000000000000000000000000000000000">
 SELECT c2, c3 FROM t1 WHERE c2 BETWEEN @p1 AND @p1+    </frame>
               <frame procname="adhoc" line="4" stmtstart="82" stmtend="98" sqlhandle="0x020000006263ec01ebb919c335024a072a2699958d3fcce60000000000000000000000000000000000000000">
 unknown    </frame>
@@ -176,7 +176,7 @@ END
           </process>
           <process id="process27b9ee33c28" taskpriority="0" logused="252" waitresource="KEY: 5:72057594214416384 (e5b3d7e750dd)" waittime="1631" ownerId="11088593" transactionname="UPDATE" lasttranstarted="2022-02-18T00:26:23.073" XDES="0x27ba15a4490" lockMode="X" schedulerid="6" kpid="5584" status="suspended" spid="58" sbid="0" ecid="0" priority="0" trancount="2" lastbatchstarted="2022-02-18T00:26:22.890" lastbatchcompleted="2022-02-18T00:26:22.890" lastattention="1900-01-01T00:00:00.890" clientapp="SQLCMD" hostname="ContosoServer" hostpid="15316" loginname="CONTOSO\user" isolationlevel="read committed (2)" xactid="11088593" currentdb="5" lockTimeout="4294967295" clientoption1="538968096" clientoption2="128056">
             <executionStack>
-              <frame procname="AdventureWorks2019.dbo.p2" line="3" stmtstart="76" stmtend="150" sqlhandle="0x03000500599a5906ce3e07008ba8000001000000000000000000000000000000000000000000000000000000">
+              <frame procname="AdventureWorks2022.dbo.p2" line="3" stmtstart="76" stmtend="150" sqlhandle="0x03000500599a5906ce3e07008ba8000001000000000000000000000000000000000000000000000000000000">
 UPDATE t1 SET c2 = c2+1 WHERE c1 = @p    </frame>
               <frame procname="adhoc" line="4" stmtstart="82" stmtend="98" sqlhandle="0x02000000008fe521e5fb1099410048c5743ff7da04b2047b0000000000000000000000000000000000000000">
 unknown    </frame>
@@ -191,7 +191,7 @@ END
           </process>
         </process-list>
         <resource-list>
-          <keylock hobtid="72057594214350848" dbid="5" objectname="AdventureWorks2019.dbo.t1" indexname="cidx" id="lock27b9dd26a00" mode="X" associatedObjectId="72057594214350848">
+          <keylock hobtid="72057594214350848" dbid="5" objectname="AdventureWorks2022.dbo.t1" indexname="cidx" id="lock27b9dd26a00" mode="X" associatedObjectId="72057594214350848">
             <owner-list>
               <owner id="process27b9ee33c28" mode="X" />
             </owner-list>
@@ -199,7 +199,7 @@ END
               <waiter id="process27b9b0b9848" mode="S" requestType="wait" />
             </waiter-list>
           </keylock>
-          <keylock hobtid="72057594214416384" dbid="5" objectname="AdventureWorks2019.dbo.t1" indexname="idx1" id="lock27afa392600" mode="S" associatedObjectId="72057594214416384">
+          <keylock hobtid="72057594214416384" dbid="5" objectname="AdventureWorks2022.dbo.t1" indexname="idx1" id="lock27afa392600" mode="S" associatedObjectId="72057594214416384">
             <owner-list>
               <owner id="process27b9b0b9848" mode="S" />
             </owner-list>
@@ -293,7 +293,7 @@ deadlock-list
    isolationlevel=read committed (2) xactid=310444 currentdb=6   
    lockTimeout=4294967295 clientoption1=671090784 clientoption2=390200  
     executionStack  
-     frame procname=AdventureWorks2019.dbo.usp_p1 line=6 stmtstart=202   
+     frame procname=AdventureWorks2022.dbo.usp_p1 line=6 stmtstart=202   
      sqlhandle=0x0300060013e6446b027cbb00c69600000100000000000000  
      UPDATE T2 SET COL1 = 3 WHERE COL1 = 1;       
      frame procname=adhoc line=3 stmtstart=44   
@@ -314,7 +314,7 @@ deadlock-list
    isolationlevel=read committed (2) xactid=310462 currentdb=6   
    lockTimeout=4294967295 clientoption1=671090784 clientoption2=390200  
     executionStack  
-     frame procname=AdventureWorks2019.dbo.usp_p2 line=6 stmtstart=200   
+     frame procname=AdventureWorks2022.dbo.usp_p2 line=6 stmtstart=200   
      sqlhandle=0x030006004c0a396c027cbb00c69600000100000000000000  
      UPDATE T1 SET COL1 = 4 WHERE COL1 = 1;       
      frame procname=adhoc line=3 stmtstart=44   
@@ -324,13 +324,13 @@ deadlock-list
       BEGIN TRANSACTION  
         EXEC usp_p2      
   resource-list  
-   ridlock fileid=1 pageid=20789 dbid=6 objectname=AdventureWorks2019.dbo.T2   
+   ridlock fileid=1 pageid=20789 dbid=6 objectname=AdventureWorks2022.dbo.T2   
    id=lock3136940 mode=X associatedObjectId=72057594057392128  
     owner-list  
      owner id=process689978 mode=X  
     waiter-list  
      waiter id=process6891f8 mode=U requestType=wait  
-   keylock hobtid=72057594057457664 dbid=6 objectname=AdventureWorks2019.dbo.T1   
+   keylock hobtid=72057594057457664 dbid=6 objectname=AdventureWorks2022.dbo.T1   
    indexname=nci_T1_COL1 id=lock3136fc0 mode=X   
    associatedObjectId=72057594057457664  
     owner-list  
@@ -393,9 +393,11 @@ Avoid writing transactions that include user interaction, because the speed of b
   
 ### Keep transactions short and in one batch
 
-A deadlock typically occurs when several long-running transactions execute concurrently in the same database. The longer the transaction, the longer the exclusive or update locks are held, blocking other activity and leading to possible deadlock situations.  
+A deadlock typically occurs when several long-running transactions execute concurrently in the same database. The longer the transaction, the longer the exclusive or update locks are held, blocking other activity and leading to possible deadlock situations. 
   
 Keeping transactions in one batch minimizes network roundtrips during a transaction, reducing possible delays in completing the transaction and releasing locks.  
+
+For more about update locks, see [Transaction locking and row versioning guide](sql-server-transaction-locking-and-row-versioning-guide.md#update).
   
 ### Use a lower isolation level
 

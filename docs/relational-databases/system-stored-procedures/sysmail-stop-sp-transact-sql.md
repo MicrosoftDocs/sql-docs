@@ -1,9 +1,10 @@
 ---
 title: "sysmail_stop_sp (Transact-SQL)"
-description: "sysmail_stop_sp (Transact-SQL)"
+description: "Stops Database Mail by stopping the Service Broker objects that the external program uses."
 author: MashaMSFT
 ms.author: mathoma
-ms.date: "06/10/2016"
+ms.reviewer: randolphwest
+ms.date: 05/30/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -16,54 +17,59 @@ dev_langs:
   - "TSQL"
 ---
 # sysmail_stop_sp (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Stops Database Mail by stopping the [!INCLUDE[ssSB](../../includes/sssb-md.md)] objects that the external program uses.  
-  
- :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## Syntax  
-  
-```  
-  
-sysmail_stop_sp  
-```  
-  
-## Arguments  
- None  
-  
-## Return Code Values  
- **0** (success) or **1** (failure)  
-  
-## Remarks  
- This stored procedure is in the **msdb** database.  
-  
- This stored procedure stops the Database Mail queue that holds outgoing message requests and turns off [!INCLUDE[ssSB](../../includes/sssb-md.md)] activation for the external program.  
-  
- When the queues are stopped, the Database Mail external program does not process messages. This stored procedure allows you to stop Database Mail for troubleshooting or maintenance purposes.  
-  
- To start Database Mail, use **sysmail_start_sp**. Notice that **sp_send_dbmail** still accepts mail when the [!INCLUDE[ssSB](../../includes/sssb-md.md)] objects are stopped.  
-  
+Stops Database Mail by stopping the [!INCLUDE [ssSB](../../includes/sssb-md.md)] objects that the external program uses.
+
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+
+## Syntax
+
+```syntaxsql
+sysmail_stop_sp
+[ ; ]
+```
+
+## Arguments
+
+None.
+
+## Return code values
+
+`0` (success) or `1` (failure).
+
+## Remarks
+
+This stored procedure is in the `msdb` database.
+
+`sysmail_stop_sp` stops the Database Mail queue that holds outgoing message requests and turns off [!INCLUDE [ssSB](../../includes/sssb-md.md)] activation for the external program.
+
+When the queues are stopped, the Database Mail external program doesn't process messages. This stored procedure allows you to stop Database Mail for troubleshooting or maintenance purposes.
+
+To start Database Mail, use `sysmail_start_sp`. Notice that `sp_send_dbmail` still accepts mail when the [!INCLUDE [ssSB](../../includes/sssb-md.md)] objects are stopped.
+
 > [!NOTE]  
->  This stored procedure only stops the queues for Database Mail. This stored procedure does not deactivate [!INCLUDE[ssSB](../../includes/sssb-md.md)] message delivery in the database. This stored procedure does not disable the Database Mail extended stored procedures to reduce the surface area. To disable the extended stored procedures, see the [Database Mail XPs option](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) of the **sp_configure** system stored procedure.  
-  
-## Permissions  
- Execute permissions for this procedure default to members of the **sysadmin** fixed server role.  
-  
-## Examples  
- The following example shows stopping Database Mail in the **msdb** database. The example assumes that Database Mail has been enabled.  
-  
-```  
-USE msdb ;  
-GO  
-  
-EXECUTE dbo.sysmail_stop_sp ;  
-GO  
-```  
-  
-## See Also  
- [Database Mail](../../relational-databases/database-mail/database-mail.md)   
- [sysmail_start_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)   
- [Database Mail Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
-  
-  
+> `sysmail_stop_sp` only stops the queues for Database Mail. This stored procedure does not deactivate [!INCLUDE [ssSB](../../includes/sssb-md.md)] message delivery in the database. This stored procedure does not disable the Database Mail extended stored procedures to reduce the surface area. To disable the extended stored procedures, see the [Database Mail XPs option](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) of the `sp_configure` system stored procedure.
+
+## Permissions
+
+[!INCLUDE [msdb-execute-permissions](../../includes/msdb-execute-permissions.md)]
+
+## Examples
+
+The following example shows stopping Database Mail in the `msdb` database. The example assumes that Database Mail has been enabled.
+
+```sql
+USE msdb;
+GO
+
+EXECUTE dbo.sysmail_stop_sp;
+GO
+```
+
+## See also
+
+- [Database Mail](../database-mail/database-mail.md)
+- [sysmail_start_sp (Transact-SQL)](sysmail-start-sp-transact-sql.md)
+- [Database Mail stored procedures (Transact-SQL)](database-mail-stored-procedures-transact-sql.md)

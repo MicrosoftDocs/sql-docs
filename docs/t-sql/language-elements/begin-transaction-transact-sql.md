@@ -26,10 +26,10 @@ helpviewer_keywords:
   - "starting transactions"
 dev_langs:
   - "TSQL"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current || =fabric"
 ---
 # BEGIN TRANSACTION (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricdw.md)]
 
   Marks the starting point of an explicit, local transaction. Explicit transactions start with the BEGIN TRANSACTION statement and end with the COMMIT or ROLLBACK statement.  
 
@@ -48,7 +48,7 @@ BEGIN { TRAN | TRANSACTION }
 ```  
  
 ```syntaxsql
---Applies to Azure Synapse Analytics and Parallel Data Warehouse
+--Applies to Synpase Data Warehouse in Microsoft Fabric, Azure Synapse Analytics and Parallel Data Warehouse
  
 BEGIN { TRAN | TRANSACTION }   
 [ ; ]  
@@ -174,8 +174,8 @@ DECLARE @TranName VARCHAR(20);
 SELECT @TranName = 'MyTransaction';  
   
 BEGIN TRANSACTION @TranName;  
-USE AdventureWorks2012;  
-DELETE FROM AdventureWorks2012.HumanResources.JobCandidate  
+USE AdventureWorks2022;  
+DELETE FROM AdventureWorks2022.HumanResources.JobCandidate  
     WHERE JobCandidateID = 13;  
   
 COMMIT TRANSACTION @TranName;  
@@ -191,9 +191,9 @@ The following example shows how to mark a transaction. The transaction `Candidat
 BEGIN TRANSACTION CandidateDelete  
     WITH MARK N'Deleting a Job Candidate';  
 GO  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
-DELETE FROM AdventureWorks2012.HumanResources.JobCandidate  
+DELETE FROM AdventureWorks2022.HumanResources.JobCandidate  
     WHERE JobCandidateID = 13;  
 GO  
 COMMIT TRANSACTION CandidateDelete;  

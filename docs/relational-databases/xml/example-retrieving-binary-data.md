@@ -20,7 +20,7 @@ The following query returns the product photo stored in a **varbinary(max)** typ
 ## Example
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT ProductPhotoID, ThumbNailPhoto
 FROM Production.ProductPhoto

@@ -1,5 +1,5 @@
 ---
-title: "clr enabled Server Configuration Option"
+title: "clr enabled (server configuration option)"
 description: Learn how to use the clr enabled option to specify whether SQL Server can run user assemblies. See when common language runtime execution is not supported.
 author: rwestMSFT
 ms.author: randolphwest
@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "assemblies [CLR integration], verifying can run"
   - "clr enabled option"
 ---
-# clr enabled Server Configuration Option
+# clr enabled (server configuration option)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Use the `clr enabled` option to specify whether user assemblies can be run by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The `clr enabled` option provides the following values: 
@@ -33,7 +33,7 @@ When you run RECONFIGURE, and the run value of the `clr enabled` option is chang
 >  CLR uses Code Access Security (CAS) in the .NET Framework, which is no longer supported as a security boundary. A CLR assembly created with `PERMISSION_SET = SAFE` may be able to access external system resources, call unmanaged code, and acquire sysadmin privileges. Beginning with [!INCLUDE[sssql17](../../includes/sssql17-md.md)], an `sp_configure` option called `clr strict security` is introduced to enhance the security of CLR assemblies. `clr strict security` is enabled by default, and treats `SAFE` and `EXTERNAL_ACCESS` assemblies as if they were marked `UNSAFE`. The `clr strict security` option can be disabled for backward compatibility, but this is not recommended. Microsoft recommends that all assemblies be signed by a certificate or asymmetric key with a corresponding login that has been granted `UNSAFE ASSEMBLY` permission in the master database. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrators can also add assemblies to a list of assemblies, which the Database Engine should trust. For more information, see [sys.sp_add_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md).
 
 > [!NOTE]
-> Though the `clr enabled` configuration option is enabled in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], developing CLR user functions are not supported in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+> Though the `clr enabled` configuration option is enabled in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], developing CLR user functions are not supported in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 ## Example  
  The following example first displays the current setting of the `clr enabled` option and then enables the option by setting the option value to 1. To disable the option, set the value to 0.  

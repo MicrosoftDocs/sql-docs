@@ -512,7 +512,7 @@ Emp2(SalesPersonID, FirstName, LastName, ReportsTo)
 1.  Create these tables in the AdventureWorks database:  
   
     ```  
-    USE AdventureWorks  
+    USE AdventureWorks2022;
     CREATE TABLE Sales.Emp1 (  
            SalesPersonID int primary key,   
            FirstName  varchar(20),   

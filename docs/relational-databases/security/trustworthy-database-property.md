@@ -15,7 +15,7 @@ helpviewer_keywords:
 
 [!INCLUDE [sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
-The `TRUSTWORTHY` database property is used to indicate whether the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trusts the database and the contents within it. By default, this setting is OFF, but can be set to ON by using the `ALTER DATABASE` statement. For example: `ALTER DATABASE AdventureWorks2019 SET TRUSTWORTHY ON;`.
+The `TRUSTWORTHY` database property is used to indicate whether the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trusts the database and the contents within it. By default, this setting is OFF, but can be set to ON by using the `ALTER DATABASE` statement. For example: `ALTER DATABASE AdventureWorks2022 SET TRUSTWORTHY ON;`.
 
 > [!NOTE]  
 > To set this option, you must be a member of the **sysadmin** fixed server role.

@@ -3,7 +3,7 @@ title: Configure SQL Server Database Engine for encryption
 description: This article describes how to configure a SQL Server instance to enable encrypted connections.
 author: sevend2
 ms.author: v-sidong
-ms.reviewer: ramakoni1, randolphwest
+ms.reviewer: sureshka, randolphwest
 ms.date: 03/13/2023
 ms.service: sql
 ms.subservice: configuration
@@ -64,11 +64,11 @@ This key contains a property of the certificate known as a thumbprint, which ide
 
 1. Navigate to the certificate store where the FQDN certificate is stored. On the properties page for the certificate, go to the **Details** tab and copy the thumbprint value of the certificate to a **Notepad** window.
 1. Remove the spaces between the hex characters in the thumbprint value in **Notepad**.
-1. Start **Registry Editor**, navigate to the following registry key, and copy the value from Step 2:
+1. Start **Registry Editor**, navigate to the following registry key, and paste the value from Step 2:
 
    `HKLM\SOFTWARE\Microsoft\Microsoft SQL Server\<instance>\MSSQLServer\SuperSocketNetLib\Certificate`
 
-1. If the SQL virtual server is currently on this node, fail over to another node in your cluster and reboot the node where the registry change occurred.
+1. If the SQL virtual server is currently on this node, fail over to another node in your cluster and restart the node where the registry change occurred.
 1. Repeat this procedure on all the nodes.
 
 > [!WARNING]  
@@ -123,7 +123,7 @@ The following code snippet can be used to create a self-signed certificate on a 
 
 ```powershell
 New-SelfSignedCertificate -Type SSLServerAuthentication -Subject "CN=$env:COMPUTERNAME" `
--DnsName "[System.Net.Dns]::GetHostByName($env:computerName)",'localhost' `
+-DnsName ("{0}" -f [System.Net.Dns]::GetHostByName($env:computerName).HostName),'localhost' `
 -KeyAlgorithm "RSA" -KeyLength 2048 -HashAlgorithm "SHA256" -TextExtension "2.5.29.37={text}1.3.6.1.5.5.7.3.1" `
 -NotAfter (Get-Date).AddMonths(36) -KeySpec KeyExchange -Provider "Microsoft RSA SChannel Cryptographic Provider" `
 -CertStoreLocation "cert:\LocalMachine\My"
@@ -140,3 +140,5 @@ SELECT DISTINCT (encrypt_option)
 FROM sys.dm_exec_connections;
 GO
 ```
+
+The `encrypt_option` column is a Boolean value indicating whether encryption is enabled for this connection. If the value is `TRUE`, the connection is securely encrypted. If the value is `FALSE`, the connection isn't encrypted.

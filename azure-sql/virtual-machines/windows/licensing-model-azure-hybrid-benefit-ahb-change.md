@@ -102,7 +102,6 @@ Changing the license model is:
 
 - Only supported for the Standard and Enterprise editions of SQL Server. License changes for Express, Web, and Developer are not supported.
 - Only supported for virtual machines deployed through the Azure Resource Manager model. Virtual machines deployed through the classic model are not supported.
-- Available only for the public or Azure Government clouds. Currently unavailable for the Azure China region.
 
 Additionally, changing the license model to **Azure Hybrid Benefit** requires [Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-overview).
 
@@ -121,7 +120,7 @@ To remove a SQL Server instance and associated billing from a Pay-As-You-Go SQL 
 1. If necessary, uninstall SQL Server, including the SQL IaaS Agent extension.
 1. Download the free [SQL Server Express](https://www.microsoft.com/sql-server/sql-server-downloads) edition.
 1. Install the [SQL IaaS Agent extension](/azure/azure-sql/virtual-machines/windows/sql-agent-extension-manually-register-single-vm).
-1. To stop billing, [change edition in the portal](/azure/azure-sql/virtual-machines/windows/change-sql-server-edition#change-edition-in-portal) to Express edition.
+1. To stop billing, [change edition in the portal](/azure/azure-sql/virtual-machines/windows/change-sql-server-edition#change-edition-property-for-billing) to Express edition.
 
 **Optional**
 

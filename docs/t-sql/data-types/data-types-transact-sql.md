@@ -3,7 +3,7 @@ title: "Data types (Transact-SQL)"
 description: "This article provides a summary of the different data types available in SQL Server."
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: "09/13/2017"
+ms.date: 04/11/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: "reference"
@@ -13,10 +13,11 @@ helpviewer_keywords:
   - "data types [SQL Server], about data types"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # Data types (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricdw.md)]
 
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], each column, local variable, expression, and parameter has a related data type. A data type is an attribute that specifies the type of data that the object can hold: integer data, character data, monetary data, date and time data, binary strings, and so on.
   
@@ -29,6 +30,10 @@ When two expressions that have different data types, collations, precision, scal
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides data type synonyms for ISO compatibility. For more information, see [Data Type Synonyms &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-synonyms-transact-sql.md).
   
+> [!NOTE]
+> For more specific information on data types in [!INCLUDE [ssazuresynapse_md](../../includes/ssazuresynapse-md.md)], see [Table data types in Synapse SQL](/azure/synapse-analytics/sql/develop-tables-data-types).
+> For more specific information on data types in [!INCLUDE [fabric](../../includes/fabric.md)], see [Data type](../statements/create-table-azure-sql-data-warehouse.md#DataTypesFabric).
+
 ## Data type categories
 Data types in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are organized into the following categories:
   

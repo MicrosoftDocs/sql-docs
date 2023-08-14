@@ -63,7 +63,7 @@ db.Create();
 Dim srv As Server  
 srv = New Server  
 Dim tb As Table  
-tb = srv.Databases("AdventureWorks2012").Tables("Employee", "HumanResources")  
+tb = srv.Databases("AdventureWorks2022").Tables("Employee", "HumanResources")  
 tb.RebuildIndexes(70)  
 ```  
   
@@ -75,7 +75,7 @@ tb.RebuildIndexes(70)
 Server srv = default(Server);   
 srv = new Server();   
 Table tb = default(Table);   
-tb = srv.Databases("AdventureWorks2012").Tables("Employee", "HumanResources");   
+tb = srv.Databases("AdventureWorks2022").Tables("Employee", "HumanResources");   
 tb.RebuildIndexes(70);   
 }   
 ```  
@@ -153,7 +153,7 @@ Console.WriteLine(d.Name)
 Server srv;   
 srv = new Server();   
 Table tb;   
-tb = srv.Databases("AdventureWorks2012").Tables("Employee", "HumanResources");   
+tb = srv.Databases("AdventureWorks2022").Tables("Employee", "HumanResources");   
 tb.RebuildIndexes(70);   
 //Connect to the local, default instance of SQL Server.   
 Server srv;   
@@ -175,7 +175,7 @@ Console.WriteLine(d.Name);
 Dim srv1 As Server
 srv1 = New Server()
 'Modify the default database and the timeout period for the connection.
-srv1.ConnectionContext.DatabaseName = "AdventureWorks2012"
+srv1.ConnectionContext.DatabaseName = "AdventureWorks2022"
 srv1.ConnectionContext.ConnectTimeout = 30
 'Make a second connection using a copy of the ConnectionContext property and verify settings.
 Dim srv2 As Server
@@ -192,7 +192,7 @@ Console.WriteLine(srv2.ConnectionContext.ConnectTimeout.ToString)
 Server srv1;   
 srv1 = new Server();   
 //Modify the default database and the timeout period for the connection.   
-srv1.ConnectionContext.DatabaseName = "AdventureWorks2012";   
+srv1.ConnectionContext.DatabaseName = "AdventureWorks2022";   
 srv1.ConnectionContext.ConnectTimeout = 30;   
 //Make a second connection using a copy of the ConnectionContext property and verify settings.   
 Server srv2;   

@@ -28,7 +28,7 @@ This article describes limitations and issues with SQL Server 2017. For related 
 
 - **Issue and customer impact:** After upgrade, the existing FILESTREAM network share may be no longer available.
 
-- **Workaround:** First, reboot the computer and check if the FILESTREAM network share is available. If the share is still not available, complete the following steps:
+- **Workaround:** First, restart the computer and check if the FILESTREAM network share is available. If the share is still not available, complete the following steps:
 
     1. In SQL Server Configuration Manager, right-click the SQL Server instance, and click **Properties**. 
     2. In the **FILESTREAM** tab clear **Enable FILESTREAM for file I/O streaming access**, then click **Apply**.

@@ -4,12 +4,76 @@ description: Latest release notes
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 04/10/2023
-ms.service: sql
+ms.date: 07/13/2023
 ms.topic: conceptual
 ---
 
 # Release notes - Azure Arc-enabled SQL Server
+
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
+
+## August 2023
+
+This release is published August 10, 2023.
+
+### Extension version
+
+`1.1.2406.45`
+
+### Azure extension for SQL Server
+
+- Support to automatically rotate certificates for Microsoft Entra ID authentication. Review [Rotate certificates](rotate-certificates.md).
+
+   [!INCLUDE [entra-id](../../includes/entra-id.md)]
+
+- Configure patching in Azure portal. Review [Configure in the Azure portal](patch.md#configure-in-the-azure-portal).
+
+## July 2023
+
+This release is published July 13, 2023.
+
+### Extension version
+
+`1.1.2384.34`
+
+### Azure extension for SQL Server
+
+- Proxy bypass is now supported for Arc SQL Server Extension. Starting this release, you can also specify services which should not use the specified proxy server. For examples and technical information, see [Proxy bypass for private endpoints](/azure/azure-arc/servers/manage-agent?tabs=windows#proxy-bypass-for-private-endpoints).
+
+## June 2023
+
+This release is published June 13, 2023.
+
+### Extension version
+
+`1.1.2355.20`
+
+### Azure extension for SQL Server
+
+- Support for being able to view your SQL Server configuration is now available. See [Manage SQL Server license and billing options](manage-license-type.md).
+  - View SQL Server instances
+  - Modify host level properties like license type
+  - Subscribe to Extended Security Update (ESU)
+  - Skip instances
+
+## May 2023
+
+This release is published May 09, 2023.
+
+### Extension version
+
+`1.1.2313.14`
+
+### Azure extension for SQL Server
+
+- Support for automated backups for all supported versions of SQL Server. For information, review [Configure automatic backups](point-in-time-restore.md).
+- Provide a name for the server that host an Azure Arc-enabled SQL Server instance when you enable SQL Server for Azure Arc. Use parameter `--machineName <"ArcServerName">`. For information, see [Connect your SQL Server to Azure Arc with installer (.msi)](connect-with-installer.md), or [Connect SQL Server machines at scale with a Configuration Manager custom task sequence](onboard-configuration-manager-custom-task.md).
+
+### Additional improvements
+
+- Arc virtual machines on-boarded from AWS use AWS resource name rather than host computer name. Fix allows customers to provide a name when onboarding using script.
+- Fixed a bug where the exclude instance setting in portal throws an incorrect error about excluding SQL instance named separated by space.
+- Fixed a bug where the Purview governance status does not report correctly upon on-demand refresh intermittently.
 
 ## April 2023
 
@@ -267,24 +331,4 @@ The October update includes the following improvements:
 The following issues apply to the October release:
 
 - Connecting SQL Server instances to Azure Arc requires an account with a broad set of permissions. For details, see [prerequisites](prerequisites.md).
-
-## September 2020
-
-Azure Arc-enabled SQL Server is released for public preview. Azure Arc-enabled SQL Server extends Azure services to SQL Server instances hosted outside of Azure in the customer's datacenter, on the edge or in a multicloud environment.
-
-For details, see [Azure Arc-enabled SQL Server Overview](overview.md)
-
-### Known issues
-
-The following issues apply to the September release:
-
-- The **Register Azure Arc-enabled SQL Server** pane doesn't support configuring custom tags. To add custom tags, open the **SQL Server - Azure Arc** resource after registration and change Tags in the **Overview** page.
-- Connecting SQL Server instances to Azure Arc requires an account with a broad set of permissions. For details, see [prerequisites](prerequisites.md).
-
-## Next steps
-
-**Just want to try things out?**  Get started quickly with [Azure Arc-enabled SQL Server Jumpstart](https://aka.ms/AzureArcSqlServerJumpstart).
-
-
-
 

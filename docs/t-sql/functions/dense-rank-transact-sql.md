@@ -17,10 +17,10 @@ helpviewer_keywords:
   - "ranking rows"
 dev_langs:
   - "TSQL"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current||=fabric"
 ---
 # DENSE_RANK (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
 This function returns the rank of each row within a result set partition, with no gaps in the ranking values. The rank of a specific row is one plus the number of distinct rank values that come before that specific row.  
   
@@ -57,7 +57,7 @@ The sort order used for the whole query determines the order of the rows in the 
 This example ranks the products in inventory, by the specified inventory locations, according to their quantities. `DENSE_RANK` partitions the result set by `LocationID` and logically orders the result set by `Quantity`. Notice that products 494 and 495 have the same quantity. Because they both have the same quantity value, they both have a rank value of one.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT i.ProductID, p.Name, i.LocationID, i.Quantity  
     ,DENSE_RANK() OVER   
@@ -94,7 +94,7 @@ ProductID   Name                               LocationID Quantity Rank
 This example returns the top ten employees ranked by their salary. Because the `SELECT` statement did not specify a `PARTITION BY` clause, the `DENSE_RANK` function applied to all result set rows.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT TOP(10) BusinessEntityID, Rate,   
        DENSE_RANK() OVER (ORDER BY Rate DESC) AS RankBySalary  
@@ -129,7 +129,7 @@ This example shows the four ranking functions
 used in the same query. See each ranking function for function-specific examples.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT p.FirstName, p.LastName  
     ,ROW_NUMBER() OVER (ORDER BY a.PostalCode) AS "Row Number"  

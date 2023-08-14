@@ -61,7 +61,7 @@ helpviewer_keywords:
   
 -   A Windows-based server is renamed.  
   
--   A Windows-based server is rebooted.  
+-   A Windows-based server is restarted.  
   
 > [!NOTE]  
 >  Mirroring does not protect against problems specific to client accessing the servers. For example, consider a case in which a public network adapter handles client connections to the principal server instance, while a private network interface card handles all mirroring traffic among server instances. In this case, failure of the public network adapter would prevent clients from accessing the database, though the database would continue to be mirrored.  

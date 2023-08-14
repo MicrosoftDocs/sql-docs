@@ -28,11 +28,10 @@ helpviewer_keywords:
   - "inserting data"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # INSERT (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricdw.md)]
 
 Adds one or more rows to a table or a view in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For examples, see [Examples](#InsertExamples).  
   
@@ -111,7 +110,7 @@ INSERT
 ```  
   
 ```syntaxsql
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse and Microsoft Fabric
 
 INSERT [INTO] { database_name.schema_name.table_name | schema_name.table_name | table_name }
     [ ( column_name [ ,...n ] ) ]  
@@ -296,6 +295,7 @@ OUTPUT Clause
 For information specific to inserting data into SQL graph tables, see [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md). 
 
 ## Best Practices  
+
  Use the @@ROWCOUNT function to return the number of inserted rows to the client application. For more information, see [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md).  
   
 ### Best Practices for Bulk Importing Data  
@@ -322,6 +322,12 @@ Parallelism for the statement above has the following requirements, which are si
 -   The `TABLOCK` hint is specified for the target table.
 
 For scenarios where requirements for minimal logging and parallel insert are met, both improvements will work together to ensure maximum throughput of your data load operations.
+
+::: moniker range="=fabric"
+
+For more information on using INSERT on your [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)], see [Ingest data into your [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] using TSQL](/fabric/data-warehouse/ingest-data-tsql).
+
+::: moniker-end
 
 > [!NOTE]
 > Inserts into local temporary tables (identified by the # prefix) and global temporary tables (identified by ## prefixes) are also enabled for parallelism using the TABLOCK hint.
@@ -418,12 +424,12 @@ In Parallel Data Warehouse, the ORDER BY clause is invalid in VIEWS, CREATE TABL
   
 |Category|Featured syntax elements|  
 |--------------|------------------------------|  
-|[Basic syntax](#BasicSyntax)|INSERT • table value constructor|  
-|[Handling column values](#ColumnValues)|IDENTITY • NEWID • default values • user-defined types|  
-|[Inserting data from other tables](#OtherTables)|INSERT...SELECT • INSERT...EXECUTE • WITH common table expression • TOP • OFFSET FETCH|  
-|[Specifying target objects other than standard tables](#TargetObjects)|Views • table variables|  
-|[Inserting rows into a remote table](#RemoteTables)|Linked server • OPENQUERY rowset function • OPENDATASOURCE rowset function|  
-|[Bulk loading data from tables or data files](#BulkLoad)|INSERT...SELECT • OPENROWSET function|  
+|[Basic syntax](#BasicSyntax)|INSERT * table value constructor|  
+|[Handling column values](#ColumnValues)|IDENTITY * NEWID * default values * user-defined types|  
+|[Inserting data from other tables](#OtherTables)|INSERT...SELECT * INSERT...EXECUTE * WITH common table expression * TOP * OFFSET FETCH|  
+|[Specifying target objects other than standard tables](#TargetObjects)|Views * table variables|  
+|[Inserting rows into a remote table](#RemoteTables)|Linked server * OPENQUERY rowset function * OPENDATASOURCE rowset function|  
+|[Bulk loading data from tables or data files](#BulkLoad)|INSERT...SELECT * OPENROWSET function|  
 |[Overriding the default behavior of the query optimizer by using hints](#TableHints)|Table hints|  
 |[Capturing the results of the INSERT statement](#CaptureResults)|OUTPUT clause|  
   
@@ -442,7 +448,7 @@ VALUES (N'FT', N'Feet', '20080414');
  The following example uses the [table value constructor](../../t-sql/queries/table-value-constructor-transact-sql.md) to insert three rows into the `Production.UnitMeasure` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database in a single INSERT statement. Because values for all columns are supplied and are listed in the same order as the columns in the table, the column names do not have to be specified in the column list.
 
 >[!NOTE]
-> The table vaule constructor is not supported in Azure Synapse Analytics.  
+> The table value constructor is not supported in Azure Synapse Analytics.  
   
 ```sql
 INSERT INTO Production.UnitMeasure  
@@ -736,7 +742,7 @@ EXEC sp_addlinkedserver @server = N'MyLinkServer',
     @srvproduct = N' ',  
     @provider = N'SQLNCLI',   
     @datasrc = N'server_name',  
-    @catalog = N'AdventureWorks2012';  
+    @catalog = N'AdventureWorks2022';  
 GO  
 ```  
   
@@ -744,7 +750,7 @@ GO
 -- Specify the remote data source in the FROM clause using a four-part name   
 -- in the form linked_server.catalog.schema.object.  
   
-INSERT INTO MyLinkServer.AdventureWorks2012.HumanResources.Department (Name, GroupName)  
+INSERT INTO MyLinkServer.AdventureWorks2022.HumanResources.Department (Name, GroupName)  
 VALUES (N'Public Relations', N'Executive General and Administration');  
 GO  
 ```  
@@ -757,7 +763,7 @@ GO
 ```sql
 INSERT OPENQUERY (MyLinkServer, 
     'SELECT Name, GroupName 
-     FROM AdventureWorks2012.HumanResources.Department')  
+     FROM AdventureWorks2022.HumanResources.Department')  
 VALUES ('Environmental Impact', 'Engineering');  
 GO  
 ```  
@@ -774,7 +780,7 @@ GO
   
 INSERT INTO OPENDATASOURCE('SQLNCLI',  
     'Data Source= <server_name>; Integrated Security=SSPI')  
-    .AdventureWorks2012.HumanResources.Department (Name, GroupName)  
+    .AdventureWorks2022.HumanResources.Department (Name, GroupName)  
     VALUES (N'Standards and Methods', 'Quality Assurance');  
 GO  
 ```  
@@ -813,7 +819,7 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
  Examples in this section demonstrate two methods to bulk load data into a table by using the INSERT statement.  
   
 #### Q. Inserting data into a heap with minimal logging  
- The following example creates a new table (a heap) and inserts data from another table into it using minimal logging. The example assumes that the recovery model of the `AdventureWorks2012` database is set to FULL. To ensure minimal logging is used, the recovery model of the `AdventureWorks2012` database is set to BULK_LOGGED before rows are inserted and reset to FULL after the INSERT INTO...SELECT statement. In addition, the TABLOCK hint is specified for the target table `Sales.SalesHistory`. This ensures that the statement uses minimal space in the transaction log and performs efficiently.  
+ The following example creates a new table (a heap) and inserts data from another table into it using minimal logging. The example assumes that the recovery model of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database is set to FULL. To ensure minimal logging is used, the recovery model of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database is set to BULK_LOGGED before rows are inserted and reset to FULL after the INSERT INTO...SELECT statement. In addition, the TABLOCK hint is specified for the target table `Sales.SalesHistory`. This ensures that the statement uses minimal space in the transaction log and performs efficiently.  
   
 ```sql
 -- Create the target heap.  
@@ -831,7 +837,7 @@ CREATE TABLE Sales.SalesHistory(
     ModifiedDate datetime NOT NULL );  
 GO  
 -- Temporarily set the recovery model to BULK_LOGGED.  
-ALTER DATABASE AdventureWorks2012  
+ALTER DATABASE AdventureWorks2022  
 SET RECOVERY BULK_LOGGED;  
 GO  
 -- Transfer data from Sales.SalesOrderDetail to Sales.SalesHistory  
@@ -850,7 +856,7 @@ INSERT INTO Sales.SalesHistory WITH (TABLOCK)
 SELECT * FROM Sales.SalesOrderDetail;  
 GO  
 -- Reset the recovery model.  
-ALTER DATABASE AdventureWorks2012  
+ALTER DATABASE AdventureWorks2022  
 SET RECOVERY FULL;  
 GO  
 ```  

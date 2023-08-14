@@ -4,8 +4,8 @@ titleSuffix: Azure SQL Managed Instance
 description: Learn about data virtualization capabilities of Azure SQL Managed Instance
 author: MladjoA
 ms.author: mlandzic
-ms.reviewer: mathoma, wiassaf
-ms.date: 03/31/2023
+ms.reviewer: mathoma, wiassaf, nzagorac
+ms.date: 08/10/2023
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -15,7 +15,7 @@ ms.topic: conceptual
 
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-The data virtualization feature of Azure SQL Managed Instance allows you to execute Transact-SQL (T-SQL) queries on files storing data in common data formats in Azure Data Lake Storage Gen2 or Azure Blob Storage, and combine it with locally stored relational data using joins. This way you can transparently access external data while keeping it in its original format and location - also known as data virtualization.
+The data virtualization feature of Azure SQL Managed Instance allows you to execute Transact-SQL (T-SQL) queries on files storing data in common data formats in Azure Data Lake Storage Gen2 or Azure Blob Storage, and combine it with locally stored relational data using joins. This way you can transparently access external data (in read-only mode) while keeping it in its original format and location - also known as data virtualization.
 
 ## Overview
 
@@ -26,7 +26,7 @@ Data virtualization provides two ways of querying files intended for different s
 
 In either case, an [external data source](#external-data-source) must be created using the [CREATE EXTERNAL DATA SOURCE](/sql/t-sql/statements/create-external-data-source-transact-sql?view=azuresqldb-mi-current&preserve-view=true) T-SQL syntax, as demonstrated in this article.
 
-Also available is [CREATE EXTERNAL TABLE AS SELECT syntax](/sql/t-sql/statements/create-external-table-as-select-transact-sql?view=azuresqldb-mi-current&preserve-view=true) for Azure SQL Managed Instance, for creating an external table on top of Parquet or CSV files in Azure Blob storage or Azure Data Lake Storage (ADLS) Gen2, or, exporting the results of a T-SQL SELECT statement into the created external table.
+Also available is [CREATE EXTERNAL TABLE AS SELECT syntax](/sql/t-sql/statements/create-external-table-as-select-transact-sql?view=azuresqldb-mi-current&preserve-view=true) for Azure SQL Managed Instance, for exporting the results of a T-SQL SELECT statement into the Parquet or CSV files in Azure Blob Storage or Azure Data Lake Storage (ADLS) Gen 2 and creating an external table on top of those files.
 
 ### File formats
 
@@ -85,8 +85,8 @@ A **managed identity** is a feature of Azure Active Directory (Azure AD) that pr
 Before accessing the data, the Azure storage administrator must grant permissions to managed identity to access the data. Granting permissions to the system assigned managed identity of the managed instance is done the same way as granting permission to any other Azure AD user. For example:
 
 1. In the Azure portal, in the **Access Control (IAM)** page of a storage account, select **Add role assignment**.  
-1. Choose the **Storage Blob Data Reader** built-in Azure RBAC role. This will provide read access to the managed identity for the necessary Azure Blob Storage containers.
-    - Instead of granting the managed identity the **Storage Blob Data Reader** Azure RBAC role, you can also grant more granular permissions on a subset of files. All users who need access to **Read** individual files some data in this container also must have **Execute** permission on all parent folders up to the root (the container). Learn more about how to [set ACLs in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-explorer-acl). Currently, data virtualization with Azure SQL Managed Instance is read-only.
+1. Choose the **Storage Blob Data Reader** built-in Azure RBAC role. This provides read access to the managed identity for the necessary Azure Blob Storage containers.
+    - Instead of granting the managed identity the **Storage Blob Data Reader** Azure RBAC role, you can also grant more granular permissions on a subset of files. All users who need access to **Read** individual files some data in this container also must have **Execute** permission on all parent folders up to the root (the container). Learn more about how to [set ACLs in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-explorer-acl).
 1. On the next page, select **Assign access to** **Managed identity**. **+ Select members**, and under the **Managed identity** drop-down list, select the desired managed identity. For more information, see [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal).
 1. Then, creating the database scoped credential for managed identity authentication is simple. Note in the following example that `'Managed Identity'` is a hard-coded string.
 
@@ -109,7 +109,7 @@ You can get an SAS token multiple ways:
 
 Grant **Read** and **List** permissions via the SAS to access external data. Currently, data virtualization with Azure SQL Managed Instance is read-only.
 
-When an SAS token is generated, it includes a question mark ('?') at the beginning of the token. To use the token, you must remove the question mark ('?') when creating a credential. For example:
+When an SAS token is generated, it includes a question mark (`?`) at the beginning of the token. To use the token, you must remove the question mark (`?`) when creating a credential. For example:
 
 ```sql
 -- Optional: Create MASTER KEY if it doesn't exist in the database:
@@ -244,7 +244,7 @@ WITH (
 
 ### File metadata functions
 
-When querying multiple files or folders, you can use `Filepath` and `Filename` functions to read file metadata and get part of the path or full path and name of the file that the row in the result set originates from:
+When querying multiple files or folders, you can use `filepath()` and `filename()` functions to read file metadata and get part of the path or full path and name of the file that the row in the result set originates from:
 
 ```sql
 --Query all files and project file path and file name information for each row:
@@ -262,11 +262,11 @@ FROM OPENROWSET(
  FORMAT = 'parquet') AS filerows;
 ```
 
-When called without a parameter, the `Filepath` function returns the file path that the row originates from. When `DATA_SOURCE` is used in `OPENROWSET`, it returns the path relative to the `DATA_SOURCE`, otherwise it returns full file path.
+When called without a parameter, the `filepath()` function returns the file path that the row originates from. When `DATA_SOURCE` is used in `OPENROWSET`, it returns the path relative to the `DATA_SOURCE`, otherwise it returns full file path.
 
 When called with a parameter, it returns part of the path that matches the wildcard on the position specified in the parameter. For example, parameter value 1 would return part of the path that matches the first wildcard.
 
-The `Filepath` function can also be used for filtering and aggregating rows:
+The `filepath()` function can also be used for filtering and aggregating rows:
 
 ```sql
 SELECT
@@ -304,7 +304,7 @@ FROM OPENROWSET(
 ) AS filerows
 ```
 
-It's also convenient to add columns with the file location data to a view using the `Filepath` function for easier and more performant filtering. Using views can reduce the number of files and the amount of data the query on top of the view needs to read and process when filtered by any of those columns:
+It's also convenient to add columns with the file location data to a view using the `filepath()` function for easier and more performant filtering. Using views can reduce the number of files and the amount of data the query on top of the view needs to read and process when filtered by any of those columns:
 
 ```sql
 CREATE VIEW TaxiRides AS
@@ -371,7 +371,7 @@ SELECT TOP 10 *
 FROM tbl_TaxiRides;
 ```
 
-Just like `OPENROWSET`, external tables allow querying multiple files and folders by using wildcards. Schema inference and filepath/filename functions aren't supported with external tables.
+Just like `OPENROWSET`, external tables allow querying multiple files and folders by using wildcards. Schema inference isn't supported with external tables.
 
 ## Performance considerations
 
@@ -379,7 +379,7 @@ There's no hard limit to the number of files or the amount of data that can be q
 
 ### Query partitioned data
 
-Data is often organized in subfolders also called partitions. You can instruct managed instance to query only particular folders and files. Doing so reduces the number of files and the amount of data the query needs to read and process, resulting in better performance. This type of query optimization is known as partition pruning or partition elimination. You can eliminate partitions from query execution by using metadata function filepath() in the WHERE clause of the query.
+Data is often organized in subfolders also called partitions. You can instruct managed instance to query only particular folders and files. Doing so reduces the number of files and the amount of data the query needs to read and process, resulting in better performance. This type of query optimization is known as partition pruning or partition elimination. You can eliminate partitions from query execution by using metadata function `filepath()` in the WHERE clause of the query.
 
 The following sample query reads NYC Yellow Taxi data files only for the last three months of 2017:
 
@@ -410,9 +410,53 @@ ORDER BY
 
 If your stored data isn't partitioned, consider partitioning it to improve query performance.
 
+If you are using external tables, `filepath()` and `filename()` functions are supported but not in the WHERE clause. You can still filter by `filename` or `filepath` if you use them in computed columns. The following example demonstrates this:
+
+```sql
+CREATE EXTERNAL TABLE tbl_TaxiRides (
+ vendorID VARCHAR(100) COLLATE Latin1_General_BIN2,
+ tpepPickupDateTime DATETIME2,
+ tpepDropoffDateTime DATETIME2,
+ passengerCount INT,
+ tripDistance FLOAT,
+ puLocationId VARCHAR(8000),
+ doLocationId VARCHAR(8000),
+ startLon FLOAT,
+ startLat FLOAT,
+ endLon FLOAT,
+ endLat FLOAT,
+ rateCodeId SMALLINT,
+ storeAndFwdFlag VARCHAR(8000),
+ paymentType VARCHAR(8000),
+ fareAmount FLOAT,
+ extra FLOAT,
+ mtaTax FLOAT,
+ improvementSurcharge VARCHAR(8000),
+ tipAmount FLOAT,
+ tollsAmount FLOAT,
+ totalAmount FLOAT,
+ [Year]  AS CAST(filepath(1) AS INT), --use filepath() for partitioning
+ [Month]  AS CAST(filepath(2) AS INT) --use filepath() for partitioning
+)
+WITH (
+ LOCATION = 'yellow/puYear=*/puMonth=*/*.parquet',
+ DATA_SOURCE = NYCTaxiExternalDataSource,
+ FILE_FORMAT = DemoFileFormat
+);
+GO
+
+SELECT *
+      FROM tbl_TaxiRides
+WHERE
+      [year]=2017            
+      AND [month] in (10,11,12);
+```
+
+If your stored data isn't partitioned, consider partitioning it to improve query performance.
+
 ### Statistics
 
-Collecting statistics on your external data is one of the most important things you can do for query optimization. The more the instance knows about your data, the faster it can execute queries. The SQL engine query optimizer is a cost-based optimizer. It compares the cost of various query plans, and then chooses the plan with the lowest cost. In most cases, it chooses the plan that will execute the fastest.
+Collecting statistics on your external data is one of the most important things you can do for query optimization. The more the instance knows about your data, the faster it can execute queries. The SQL engine query optimizer is a cost-based optimizer. It compares the cost of various query plans, and then chooses the plan with the lowest cost. In most cases, it chooses the plan that executes the fastest.
 
 ### Automatic creation of statistics
 

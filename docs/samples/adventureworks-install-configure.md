@@ -4,7 +4,7 @@ description: Follow these instructions to download and install AdventureWorks sa
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 03/30/2023
+ms.date: 05/16/2023
 ms.service: sql
 ms.subservice: samples
 ms.topic: conceptual
@@ -13,13 +13,13 @@ ms.topic: conceptual
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-This article provides direct links to download `AdventureWorks` sample databases, and instructions for restoring them to SQL Server and Azure SQL Database.
+This article provides direct links to download `AdventureWorks` sample databases, and instructions for restoring them to SQL Server, Azure SQL Database, and Azure SQL Managed Instance.
 
 For more information about samples, see the [Samples GitHub repository](https://github.com/microsoft/sql-server-samples/tree/master/samples/databases).
 
 ## Prerequisites
 
-- [SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2019) or [Azure SQL Database](https://azure.microsoft.com/services/sql-database/)
+- [SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2022) or [Azure SQL Database](https://azure.microsoft.com/services/sql-database/)
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) (SSMS) or [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)
 
 ## Download backup files
@@ -34,6 +34,7 @@ If you're not sure what you need, start with the OLTP version that matches your 
 
 | OLTP | Data Warehouse | Lightweight |
 | --- | --- | --- |
+| [AdventureWorks2022.bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2022.bak) | [AdventureWorksDW2022.bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2022.bak) | [AdventureWorksLT2022.bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2022.bak) | 
 | [AdventureWorks2019.bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2019.bak) | [AdventureWorksDW2019.bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2019.bak) | [AdventureWorksLT2019.bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2019.bak) |
 | [AdventureWorks2017.bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2017.bak) | [AdventureWorksDW2017.bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2017.bak) | [AdventureWorksLT2017.bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2017.bak) |
 | [AdventureWorks2016.bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2016.bak) | [AdventureWorksDW2016.bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2016.bak) | [AdventureWorksLT2016.bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2016.bak) |
@@ -44,7 +45,7 @@ If you're not sure what you need, start with the OLTP version that matches your 
 
 Additional files can be found directly on GitHub:
 
-- [SQL Server 2014 - 2019](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
+- [SQL Server 2014 - 2022](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
 - [SQL Server 2012](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2012)
 - [SQL Server 2008 and 2008R2](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2008r2)
 
@@ -80,15 +81,15 @@ For more information on restoring a [!INCLUDE [ssnoversion-md](../includes/ssnov
 
 # [Transact-SQL (T-SQL)](#tab/tsql)
 
-You can restore your sample database using Transact-SQL (T-SQL). An example to restore `AdventureWorks2019` is provided below, but the database name and installation file path may vary depending on your environment.
+You can restore your sample database using Transact-SQL (T-SQL). An example to restore [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] is provided below, but the database name and installation file path may vary depending on your environment.
 
-To restore `AdventureWorks2019` on **Windows**, modify values as appropriate to your environment and then run the following Transact-SQL (T-SQL) command:
+To restore [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] on **Windows**, modify values as appropriate to your environment and then run the following Transact-SQL (T-SQL) command:
 
 ```sql
 USE [master];
 GO
-RESTORE DATABASE [AdventureWorks2019]
-FROM DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup\AdventureWorks2019.bak'
+RESTORE DATABASE [AdventureWorks2022]
+FROM DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\Backup\AdventureWorks2022.bak'
 WITH
     FILE = 1,
     NOUNLOAD,
@@ -96,16 +97,16 @@ WITH
 GO
 ```
 
-To restore `AdventureWorks2019` on **Linux**, change the Windows filesystem path to Linux, and then run the following Transact-SQL (T-SQL) command:
+To restore [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] on **Linux**, change the Windows filesystem path to Linux, and then run the following Transact-SQL (T-SQL) command:
 
 ```sql
 USE [master];
 GO
-RESTORE DATABASE [AdventureWorks2019]
-FROM DISK = '/var/opt/mssql/backup/AdventureWorks2019.bak'
+RESTORE DATABASE [AdventureWorks2022]
+FROM DISK = '/var/opt/mssql/backup/AdventureWorks2022.bak'
 WITH
-    MOVE 'AdventureWorks2019' TO '/var/opt/mssql/data/AdventureWorks2019.mdf',
-    MOVE 'AdventureWorks2019_log' TO '/var/opt/mssql/data/AdventureWorks2019_log.ldf',
+    MOVE 'AdventureWorks2022' TO '/var/opt/mssql/data/AdventureWorks2022.mdf',
+    MOVE 'AdventureWorks2022_log' TO '/var/opt/mssql/data/AdventureWorks2022_log.ldf',
     FILE = 1,
     NOUNLOAD,
     STATS = 5;

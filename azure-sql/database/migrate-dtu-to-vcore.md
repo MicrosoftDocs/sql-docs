@@ -21,7 +21,7 @@ Migrating a database from the DTU-based purchasing model to the vCore-based purc
 
 ## Choose the vCore service tier and service objective
 
-For most DTU to vCore migration scenarios, databases and elastic pools in the Basic and Standard service tiers will map to the [General Purpose](service-tier-general-purpose.md) service tier. Databases and elastic pools in the Premium service tier will map to the [Business Critical](service-tier-business-critical.md) service tier. Depending on application scenario and requirements, the [Hyperscale](service-tier-hyperscale.md) service tier can often be used as the migration target for single databases in all DTU service tiers.
+For most DTU to vCore migration scenarios, databases and elastic pools in the Basic and Standard service tiers will map to the [General Purpose](service-tier-general-purpose.md) service tier. Databases and elastic pools in the Premium service tier will map to the [Business Critical](service-tier-business-critical.md) service tier. Depending on application scenario and requirements, the [Hyperscale](service-tier-hyperscale.md) service tier can often be used as the migration target for databases and elastic pools in all DTU service tiers.
 
 To choose the service objective, or compute size, for the migrated database in the vCore model, you can use a simple but approximate rule of thumb: every 100 DTUs in the Basic or Standard tiers require *at least* 1 vCore, and every 125 DTUs in the Premium tier require *at least* 1 vCore. 
 
@@ -36,7 +36,7 @@ The following approach uses this information to determine a vCore service object
 
 ### DTU to vCore mapping
 
-A T-SQL query below, when executed in the context of a DTU database to be migrated, returns a matching (possibly fractional) number of vCores in each hardware configuration in the vCore model. By rounding this number to the closest number of vCores available for [databases](resource-limits-vcore-single-databases.md) and [elastic pools](resource-limits-vcore-elastic-pools.md) in each hardware configuration in the vCore model, customers can choose the vCore service objective that is the closest match for their DTU database or elastic pool. 
+A T-SQL query below, when executed in the context of a DTU database to be migrated, returns a matching (possibly fractional) number of vCores in each hardware configuration in the vCore model. You can round off this number to the closest number of vCores available for [databases](resource-limits-vcore-single-databases.md) and [elastic pools](resource-limits-vcore-elastic-pools.md) in each hardware configuration in the vCore model, customers can choose the vCore service objective that is the closest match for their DTU database or elastic pool.
 
 Sample migration scenarios using this approach are described in the [Examples](#dtu-to-vcore-migration-examples) section.
 
@@ -144,7 +144,7 @@ The mapping query returns the following result (some columns not shown for brevi
 |----------------|----------------|----------------------|-----------|-----------------------|-----------|-----------------------|
 |42.00|4.86|42.000|5.05|
 
-We see that the DTU database has 42 logical CPUs (vCores), with 4.86 GB of memory per vCore. While there is not a vCore service objective with 42 cores, the **BC_Gen5_40** service objective is very close both in terms of CPU and memory capacity, and is a good match.
+We see that the DTU database has 42 logical CPUs (vCores), with 4.86 GB of memory per vCore. While there is not a vCore service objective with 42 cores, the **BC_Gen5_40** service objective is nearly equivalent in terms of CPU and memory capacity, and is a good match.
 
 **Migrating a Basic 200 eDTU elastic pool**
 
@@ -158,7 +158,7 @@ We see that the DTU elastic pool has 4 logical CPUs (vCores), with 5.4 GB of mem
 
 ## Migrate geo-replicated databases
 
-Migrating from the DTU-based model to the vCore-based purchasing model is similar to upgrading or downgrading the geo-replication relationships between databases in the standard and premium service tiers. During migration, you don't have to stop geo-replication, but you must follow these sequencing rules:
+Migrating from the DTU-based model to the vCore-based purchasing model is similar to upgrading or downgrading the geo-replication relationships between databases in the Standard and Premium service tiers. During migration, you don't have to stop geo-replication, but you must follow these sequencing rules:
 
 - When upgrading, you must upgrade the secondary database first, and then upgrade the primary.
 - When downgrading, reverse the order: you must downgrade the primary database first, and then downgrade the secondary.
@@ -169,14 +169,14 @@ The following table provides guidance for specific migration scenarios:
 
 |Current service tier|Target service tier|Migration type|User actions|
 |---|---|---|---|
-|Standard|General purpose|Lateral|Can migrate in any order, but need to ensure appropriate vCore sizing as described above|
+|Standard|General Purpose|Lateral|Can migrate in any order, but need to ensure appropriate vCore sizing as described above|
 |Premium|Business Critical|Lateral|Can migrate in any order, but need to ensure appropriate vCore sizing as described above|
 |Standard|Business Critical|Upgrade|Must migrate secondary first|
 |Business Critical|Standard|Downgrade|Must migrate primary first|
-|Premium|General purpose|Downgrade|Must migrate primary first|
-|General purpose|Premium|Upgrade|Must migrate secondary first|
-|Business Critical|General purpose|Downgrade|Must migrate primary first|
-|General purpose|Business Critical|Upgrade|Must migrate secondary first|
+|Premium|General Purpose|Downgrade|Must migrate primary first|
+|General Purpose|Premium|Upgrade|Must migrate secondary first|
+|Business Critical|General Purpose|Downgrade|Must migrate primary first|
+|General Purpose|Business Critical|Upgrade|Must migrate secondary first|
 
 
 ## Migrate failover groups

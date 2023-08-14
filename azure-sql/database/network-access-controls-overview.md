@@ -9,9 +9,7 @@ ms.date: 03/07/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual
-ms.custom:
-  - sqldbrb=3
-  - devx-track-azurepowershell
+ms.custom: sqldbrb=3
 ---
 
 # Azure SQL Database and Azure Synapse Analytics network access controls

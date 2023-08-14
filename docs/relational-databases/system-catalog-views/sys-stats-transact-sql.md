@@ -16,15 +16,24 @@ helpviewer_keywords:
   - "sys.stats catalog view"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # sys.stats (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
   Contains a row for each statistics object that exists for the tables, indexes, and indexed views in the database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Every index will have a corresponding statistics row with the same name and ID (`index_id` = `stats_id`), but not every statistics row has a corresponding index.
 
- The catalog view [sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) provides statistics information for each column in the database. For more information about statistics, see [Statistics](../../relational-databases/statistics/statistics.md).
+ The catalog view [sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) provides statistics information for each column in the database. 
+
+ For more information about statistics, see [Statistics](../../relational-databases/statistics/statistics.md).
+
+::: moniker range="=fabric"
+
+> [!NOTE]
+> For more information on statistics in [!INCLUDE [fabric](../../includes/fabric.md)], see [Statistics in [!INCLUDE [fabric](../../includes/fabric.md)]](/fabric/data-warehouse/statistics).
+
+::: moniker-end
 
 |Column name|Data type|Description|
 |-----------------|---------------|-----------------|
@@ -41,7 +50,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**has_persisted_sample**|**bit**|Indicates whether the statistics were created or updated with the PERSIST_SAMPLE_PERCENT option.<br /><br />**0** = Statistics are not persisting the sample percentage.<br /><br />1 = Statistics were created or updated with the PERSIST_SAMPLE_PERCENT option.<br /><br />**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)])|
 |**stats_generation_method**|**int**|Indicates the method by which statistics are created.<br /><br />**0** = Sort based statistics<br /><br />1 = Internal use only<br /><br />**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)])|
 |**stats_generation_method_desc**|**varchar(255)**|The text description of the method by which statistics are created.<br /><br />Sort based statistics<br /><br />Internal use only<br /><br />**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)])|
-|**auto_drop**|**bit**|Indicates whether or not the auto drop feature is enabled for this statistics object. The AUTO_DROP property allows the creation of statistics objects in a mode such that a subsequent schema change will not be blocked by the statistic object, but instead the statistics will be dropped as necessary. In this way, manually created statistics with AUTO_DROP enabled behave like auto-created statistics. For more information, see [AUTO_DROP option](../statistics/statistics.md#auto_drop-option).<br /><br />**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], and starting with [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)]. |
+|**auto_drop**|**bit**|Indicates whether or not the auto drop feature is enabled for this statistics object. The AUTO_DROP property allows the creation of statistics objects in a mode such that a subsequent schema change will not be blocked by the statistic object, but instead the statistics will be dropped as necessary. In this way, manually created statistics with AUTO_DROP enabled behave like auto-created statistics. For more information, see [AUTO_DROP option](../statistics/statistics.md#auto_drop-option).<br /><br />**Applies to**: [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], and starting with [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)]. |
 
 ## Permissions
 
@@ -52,7 +61,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  The following examples return all the statistics and statistics columns for the `HumanResources.Employee` table.
 
 ```sql
-USE AdventureWorks2019;
+USE AdventureWorks2022;
 GO
 SELECT s.name AS statistics_name
       ,c.name AS column_name

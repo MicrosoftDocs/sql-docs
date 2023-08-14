@@ -39,7 +39,7 @@ To prevent nondeterministic behavior, the OUTPUT clause cannot reference a colum
 The following example creates a view that uses a subquery in the select list to define the column `State`. An UPDATE statement then references the `State` column in the OUTPUT clause and fails because ob the subquery in the select list.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 CREATE VIEW dbo.V1  
 AS  
@@ -62,7 +62,7 @@ GO
 The following example creates a view that uses the data accessing, scalar function `dbo.ufnGetStock` in the select list to define the column `CurrentInventory`. An UPDATE statement then references the `CurrentInventory` column in the OUTPUT clause .  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 CREATE VIEW Production.ReorderLevels  
 AS  
@@ -84,7 +84,7 @@ Error 4186 can be corrected in one of the following ways:
 -   Use joins instead of subqueries to define the column in the view or function. For example, you can rewrite the view `dbo.V1` as follows.  
   
     ```  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     CREATE VIEW dbo.V1  
     AS  

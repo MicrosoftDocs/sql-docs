@@ -2,9 +2,9 @@
 title: Cloud business continuity - disaster recovery
 titleSuffix: Azure SQL  Managed Instance
 description: Learn how Azure SQL Managed Instance supports cloud business continuity and disaster recovery to help keep mission-critical cloud applications running.
-author: MilanMSFT
-ms.author: mlazic
-ms.reviewer:  mathoma
+author: Stralle
+ms.author: strrodic
+ms.reviewer: mathoma
 ms.date: 05/01/2023
 ms.service: sql-managed-instance
 ms.subservice: high-availability
@@ -21,8 +21,8 @@ monikerRange: "= azuresql || = azuresql-mi"
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](../database/business-continuity-high-availability-disaster-recover-hadr-overview.md)
-> * [Azure SQL Managed Instance](business-continuity-high-availability-disaster-recover-hadr-overview.md)
+> * [Azure SQL Database](../database/business-continuity-high-availability-disaster-recover-hadr-overview.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](business-continuity-high-availability-disaster-recover-hadr-overview.md?view=azuresql-mi&preserve-view=true)
 
 
 **Business continuity** in Azure SQL Managed Instance refers to the mechanisms, policies, and procedures that enable your business to continue operating in the face of disruption, particularly to its computing infrastructure. In most cases, SQL Managed Instance handles the disruptive events that might happen in the cloud environment and keep your applications and business processes running. However, there are some disruptive events that can't be handled by SQL Managed Instance automatically, such as:
@@ -44,11 +44,11 @@ From an instance perspective, there are four major potential disruption scenario
 
 To mitigate the local hardware and software failures, SQL Managed Instance includes a [high availability architecture](high-availability-sla.md), which guarantees automatic recovery from these failures with up to 99.995% availability SLA.  
 
-To protect your business from data loss, SQL Managed Instance automatically creates full database backups weekly, differential database backups every 12 hours, and transaction log backups every 10 minutes. By default, the backups are stored in [redundant storage](automated-backups-overview.md#backup-storage-redundancy) for seven days for both service tiers, with a configurable backup retention period for point-in-time restore of 0 to 35 days.
+To protect your business from data loss, SQL Managed Instance automatically creates full database backups weekly, differential database backups every 12 hours, and transaction log backups every 10 minutes. By default, the backups are stored in [redundant storage](automated-backups-overview.md#backup-storage-redundancy) for seven days for both service tiers, with a configurable backup retention period for point-in-time restore of 1 to 35 days.
 
 SQL Managed Instance also provides several business continuity features that you can use to mitigate various unplanned scenarios: 
 
-- [Built-in automated backups](automated-backups-overview.md) and [Point in Time Restore](recovery-using-backups.md#point-in-time-restore) enables you to restore complete database to some point in time within the configured retention period of 0 to 35 days.
+- [Built-in automated backups](automated-backups-overview.md) and [Point in Time Restore](recovery-using-backups.md#point-in-time-restore) enables you to restore complete database to some point in time within the configured retention period of 1 to 35 days.
 - You can [restore a deleted database](recovery-using-backups.md#deleted-database-restore) to the point at which it was deleted.
 - [Long-term backup retention](../database/long-term-retention-overview.md) enables you to keep backups up to 10 years.  
 - [Auto-failover group](auto-failover-group-sql-mi.md#terminology-and-capabilities) allows the application to automatically recover in the event of a regional outage.

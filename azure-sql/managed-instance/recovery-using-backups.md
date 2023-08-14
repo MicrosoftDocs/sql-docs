@@ -2,10 +2,10 @@
 title: Restore a database from a backup
 titleSuffix: Azure SQL Managed Instance
 description: Learn about point-in-time restore, which enables you to roll back a database in Azure SQL Managed Instance up to 35 days.
-author: strahinjas 
-ms.author: sstefanovic
+author: Stralle
+ms.author: strrodic
 ms.reviewer: wiassaf, mathoma, danil
-ms.date: 03/25/2023
+ms.date: 06/23/2023
 ms.service: sql-managed-instance
 ms.subservice: backup-restore
 ms.topic: how-to
@@ -22,8 +22,8 @@ Some of the content in this article is duplicated in /azure-sql/database/recover
 
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](../database/recovery-using-backups.md)
-> * [Azure SQL Managed Instance](recovery-using-backups.md)
+> * [Azure SQL Database](../database/recovery-using-backups.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](recovery-using-backups.md?view=azuresql-mi&preserve-view=true)
 
 This article provides steps to recover a database from a backup in Azure SQL Managed Instance. For Azure SQL Database, see [Restore a database from a backup in Azure SQL Database](../database/recovery-using-backups.md).
 
@@ -35,8 +35,6 @@ This article provides steps to recover a database from a backup in Azure SQL Man
 - Create a new database on the same managed instance or a different managed instance, recovered to a specified point in time within the retention period.
 - Create a database on the same managed instance or a different managed instance, recovered to the deletion time for a deleted database.
 - Create a new database on any managed instance in same subscription or different subscription in same tenant and in the same region, recovered to the point of the most recent backups.
-
-Cross-region restore for SQL Managed Instance isn't currently supported. Additionally, when [service endpoint policies](service-endpoint-policies-configure.md) are enabled on Azure SQL Managed Instance, placing a service endpoint policy on a subnet prevents point-in-time restores (PITR) from instances in different subnets. 
 
 If you configured [long-term retention (LTR)](../database/long-term-retention-overview.md), you can also create a new database from any long-term retention backup on any instance.
 
@@ -180,7 +178,6 @@ To geo-restore to a new instance by using the Azure portal, follow these steps:
 1. Under **Data source**, choose the appropriate type of backup, and then provide details for the data source. 
 1. Select a backup from the list of available geo-restore backups. 
 
-
 After you complete the process of creating an instance database, it will contain the restored geo-restore backup.
 
 ### [Azure CLI](#tab/azure-cli)
@@ -207,8 +204,9 @@ Consider the following limitations when working with backups and Azure SQL Manag
 
 - Geo-restore of a database can only be performed to an instance in the same subscription as the source SQL managed instance. 
 - SQL Managed Instance databases can only be [restored to SQL Server 2022](restore-database-to-sql-server.md) (either on-premises, or on a virtual machine) if the source SQL Managed Instance has enrolled in the [November 2022 feature wave](november-2022-feature-wave-enroll.md).
-- SQL Managed Instance databases are encrypted with TDE by default. To restore your database to an instance other than the source SQL Managed Instance, the target instance must have access to the same key in Azure Key Vault used to encrypt the source database, or you must disable TDE encryption on the source database before taking the backup. 
-
+- SQL Managed Instance databases are encrypted with TDE by default. When the source database uses a customer-managed key (CMK) as the TDE protector, to restore your database to an instance other than the source SQL Managed Instance, the target instance must have access to the same key used to encrypt the source database in Azure Key Vault, or you must disable TDE encryption on the source database before taking the backup.
+- You can only track the progress of the restore process by using the [sys.dm_exec_requests](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql) and [sys.dm_operation_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database) dynamic management views.
+- When [service endpoint policies](service-endpoint-policies-configure.md) are enabled on Azure SQL Managed Instance, placing a service endpoint policy on a subnet prevents point-in-time restores (PITR) from instances in different subnets. 
 
 ## Next steps
 

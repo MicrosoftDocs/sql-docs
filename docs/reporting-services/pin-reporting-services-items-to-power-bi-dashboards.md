@@ -128,7 +128,7 @@ From the [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dashboard the pinned
 
 ## Video
 
-> [!VIDEO https://www.youtube.com/embed/QhPQObqmMPc]
+> [!VIDEO https://www.youtube-nocookie.com/embed/QhPQObqmMPc]
 
 ## See Also  
  [Power BI Report Server Integration &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)   

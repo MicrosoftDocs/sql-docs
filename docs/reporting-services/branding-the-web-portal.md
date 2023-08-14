@@ -16,7 +16,7 @@ ms.custom: updatefrequency5
 
 You can alter the appearance of the web portal by branding it to your business. This is done through a brand package. The brand package is designed so you don't need deep cascading stylesheet (CSS) knowledge to create it.
 
-> [!VIDEO https://www.youtube.com/embed/m08kLuofwFA]
+> [!VIDEO https://www.youtube-nocookie.com/embed/m08kLuofwFA]
 
 ## Creating the brand package
   

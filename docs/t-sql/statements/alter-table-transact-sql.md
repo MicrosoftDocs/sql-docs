@@ -699,7 +699,7 @@ As of [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], users can mark one or b
 Specifies that one or more column definitions, computed column definitions, or table constraints are dropped, or to drop the specification for the columns that the system uses for system versioning.
 
 > [!NOTE]  
-> Columns dropped in ledger tables are only soft deleted. A dropped column remains in the ledger table, but it is marked as a dropped column by setting `sys.tables`.dropped_ledger_table to 1. The ledger view of the dropped ledger table is also marked as dropped by setting `sys.tables`.dropped_ledger_view_column to 1. A dropped ledger table, its history table, and its ledger view are renamed by adding a prefix (MSSQL_DroppedLedgerTable, MSSQL_DropedLedgerHistory, MSSQL_DroppedLedgerView) and appending a GUID to the original name.ing
+> Columns dropped in ledger tables are only soft deleted. A dropped column remains in the ledger table, but it is marked as a dropped column by setting the `dropped_ledger_table` column in `sys.tables` to `1`. The ledger view of the dropped ledger table is also marked as dropped by setting the `dropped_ledger_view` column in `sys.tables` to `1`. A dropped ledger table, its history table, and its ledger view are renamed by adding a prefix (`MSSQL_DroppedLedgerTable`, `MSSQL_DropedLedgerHistory`, `MSSQL_DroppedLedgerView`), and appending a GUID to the original name.
 
 #### CONSTRAINT *constraint_name*
 
@@ -853,7 +853,7 @@ Nonclustered columnstore indexes were built in a read-only format before [!INCLU
 
 ##### Limitations
 
-If both tables are partitioned identically, including nonclustered indexes and the target table doesn't have any non-clustered indexes you may recieve a [4907 error](sql/relational-databases/errors-events/database-engine-events-and-errors-4000-to-4999?view=sql-server-ver16).
+If both tables are partitioned identically, including nonclustered indexes, and the target table doesn't have any nonclustered indexes, you may receive a [4907 error](../../relational-databases/errors-events/database-engine-events-and-errors-4000-to-4999.md).
 
 Example output:
 
@@ -1202,7 +1202,7 @@ The following restrictions apply to partitioned tables:
 - The `ALTER TABLE <table> REBUILD PARTITION` ... syntax rebuilds the specified partition.
 - The `ALTER TABLE <table> REBUILD WITH` ... syntax rebuilds all partitions.
 
-## Dropp NTEXT columns
+## Drop NTEXT columns
 
 When dropping columns using the deprecated [NTEXT data type](../data-types/ntext-text-and-image-transact-sql.md), the cleanup of the deleted data occurs as a serialized operation on all rows. The cleanup can require a large amount of time. When dropping an NTEXT column in a table with lots of rows, update the NTEXT column to NULL value first, then drop the column. You can run this option with parallel operations and make it much faster.
 
@@ -1484,11 +1484,11 @@ ADD CONSTRAINT PK_Constrain PRIMARY KEY CLUSTERED (a)
 WITH (ONLINE = ON, MAXDOP = 2, RESUMABLE = ON, MAX_DURATION = 240);
 ```
 
-### <a id="Drop"></a> Dropp columns and constraints
+### <a id="Drop"></a> Drop columns and constraints
 
 The examples in this section demonstrate dropping columns and constraints.
 
-#### A. Dropp a column or columns
+#### A. Drop a column or columns
 
 The first example modifies a table to remove a column. The second example removes multiple columns.
 
@@ -1506,7 +1506,7 @@ GO
 ALTER TABLE dbo.doc_exb DROP COLUMN column_c, column_d;
 ```
 
-#### B. Dropp constraints and columns
+#### B. Drop constraints and columns
 
 The first example removes a `UNIQUE` constraint from a table. The second example removes two constraints and a single column.
 
@@ -1534,7 +1534,7 @@ DROP CONSTRAINT my_constraint, my_pk_constraint, COLUMN column_b ;
 GO
 ```
 
-#### C. Dropp a PRIMARY KEY constraint in the ONLINE mode
+#### C. Drop a PRIMARY KEY constraint in the ONLINE mode
 
 The following example deletes a PRIMARY KEY constraint with the `ONLINE` option set to `ON`.
 
@@ -1566,7 +1566,7 @@ GO
 DROP TABLE Person.ContactBackup ;
 ```
 
-### <a id="alter_column"></a> Altere a column definition
+### <a id="alter_column"></a> Alter a column definition
 
 #### A. Change the data type of a column
 
@@ -1661,7 +1661,7 @@ WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 
 GO
 ```
 
-### <a id="alter_table"></a> Altere a table definition
+### <a id="alter_table"></a> Alter a table definition
 
 The examples in this section demonstrate how to alter the definition of a table.
 
@@ -1733,7 +1733,7 @@ ALTER TABLE PartitionTable SWITCH PARTITION 2 TO NonPartitionTable ;
 GO
 ```
 
-#### D. Allowe lock escalation on partitioned tables
+#### D. Allow lock escalation on partitioned tables
 
 The following example enables lock escalation to the partition level on a partitioned table. If the table isn't partitioned, lock escalation is set at the TABLE level.
 
@@ -1779,9 +1779,9 @@ ALTER TABLE Person.Person
 DISABLE CHANGE_TRACKING ;
 ```
 
-### <a id="disable_enable"></a> Disabl and enabling constraints and triggers
+### <a id="disable_enable"></a> Disable and enable constraints and triggers
 
-#### A. Disabl and re-enabling a constraint
+#### A. Disable and re-enable a constraint
 
 The following example disables a constraint that limits the salaries accepted in the data. `NOCHECK CONSTRAINT` is used with `ALTER TABLE` to disable the constraint and allow for an insert that would typically violate the constraint. `CHECK CONSTRAINT` re-enables the constraint.
 
@@ -1808,7 +1808,7 @@ ALTER TABLE dbo.cnst_example CHECK CONSTRAINT salary_cap;
 INSERT INTO dbo.cnst_example VALUES (4,'Eric James',110000) ;
 ```
 
-#### B. Disabl and re-enabling a trigger
+#### B. Disable and re-enable a trigger
 
 The following example uses the `DISABLE TRIGGER` option of `ALTER TABLE` to disable the trigger and allow for an insert that would typically violate the trigger. `ENABLE TRIGGER` is then used to re-enable the trigger.
 
@@ -1930,7 +1930,7 @@ ALTER TABLE ProjectTask
 SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.ProjectTaskHistory, DATA_CONSISTENCY_CHECK = ON))
 ```
 
-#### C. Disabl and re-enabling system versioning to change table schema
+#### C. Disable and re-enable system versioning to change table schema
 
 This example shows how to disable system versioning on the `Department` table, add a column, and re-enable system versioning. Disabling system versioning is required to modify the table schema. Do these steps within a transaction to prevent updates to both tables while updating the table schema, which enables the DBA to skip the data consistency check when re-enabling system versioning and gain a performance benefit. Tasks such as creating statistics, switching partitions, or applying compression to one or both tables doesn't require disabling system versioning.
 
@@ -2025,7 +2025,7 @@ AND i.type <= 1
 AND c.column_id = ic.column_id ;
 ```
 
-### D. Merg two partitions
+### D. Merge two partitions
 
 The following example merges two partitions on a table.
 
@@ -2063,7 +2063,7 @@ WITH
     FOR VALUES (1, 5, 25, 50, 100))) ;
 ```
 
-### E. Splitt a partition
+### E. Split a partition
 
 The following example splits a partition on a table.
 

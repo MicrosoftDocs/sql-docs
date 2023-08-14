@@ -43,7 +43,7 @@ Visit https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/bg-
 
 ## Known issues
 **Version 1.0**
-  1. SQL Server 2016 is not supported as target server version. (Target server version supported are SQL Server 2017, 2019 and 2022.)
+  1. SQL Server 2016 is not supported as target server version. (Target server versions supported are SQL Server 2017, 2019 and 2022.)
   2. In the context menu (right mouse button) on objects in the project (e.g. the solution, a package) in Visual Studio, many of the entries appear many times. This happens only when Microsoft Analysis Services Projects 2022 is installed together.
   3. Project name in Solution Explorer UI doesn’t show target server version as suffix.
   4. Dimension Processing and Partition Processing components are not supported.
@@ -72,7 +72,7 @@ Visit https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/bg-
   4. Project name in Solution Explorer UI doesn’t show target server version as suffix.
   5. Side by side, localization and globalization aren't supported.
   6. Azure-enabled SSIS projects aren't supported
-  7. Repair action doesn't take effct. Reinstall it instead.
+  7. Repair action doesn't take effect. Reinstall it instead.
   8. Logging container can't choose packages.
   
 **Version 0.1**

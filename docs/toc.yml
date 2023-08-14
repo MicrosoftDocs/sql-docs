@@ -8601,9 +8601,9 @@ items:
         href: ssdt/dac-framework-compatibility.md
     - name: Alter DacFx Used by SSDT
       href: ssdt/alter-dacfx-used-by-ssdt.md
-    - name: SSIS Projects extension for VS2019 troubleshooting guide
+    - name: VS2019 SSIS troubleshooting guide
       href: ssdt/ssis-vs2019-troubleshooting-guide.md
-    - name: SSIS Projects extension for VS2022 troubleshooting guide
+    - name: VS2022 SSIS troubleshooting guide
       href: ssdt/ssis-vs2022-troubleshooting-guide.md
   - name: SQL Server Management Studio (SSMS)
     items:

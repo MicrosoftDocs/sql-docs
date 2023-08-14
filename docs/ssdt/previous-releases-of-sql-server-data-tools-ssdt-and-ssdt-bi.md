@@ -513,8 +513,8 @@ _SSDT for Visual Studio 2017._
 
 **SSIS:**
 
-1. Add support for [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)].
-2. Remove support for SQL Server 2012.
+- Add support for [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)].
+- Remove support for SQL Server 2012.
 
 ##### Known issues:
 
@@ -531,9 +531,9 @@ _SSDT for Visual Studio 2017._
 
 **SSIS:**
 
-1. Fix regression in VS 15.8 that saving Script Task/Component will hit compile error.
-1. Fix regression in VS 15.8 that deployment wizard doesn't work.
-1. Fix an issue that ADO.NET connection manager doesn't support third-party ADO.NET provider.
+- Fix regression in VS 15.8 that saving Script Task/Component will hit compile error.
+- Fix regression in VS 15.8 that deployment wizard doesn't work.
+- Fix an issue that ADO.NET connection manager doesn't support third-party ADO.NET provider.
 
 **Installer:**
 
@@ -554,7 +554,7 @@ _SSDT for Visual Studio 2017._
 
 **SSIS:**
 
-- Add support for new Azure Government AAD authority (login.microsoftonline.us) for use with AS Tasks.
+- Add support for new Azure Government Azure AD authority (login.microsoftonline.us) for use with AS Tasks.
 - Fix an issue that AS processing task UI will show "Method not found" when target server version is SQLServer2016.
 - Fix an issue that some pipeline components can't be executed when target server version is SQLServer2012.
 
@@ -652,8 +652,8 @@ _SSDT for Visual Studio 2017._
 
 Visual Studio 2017 (15.5.1) is the same release as version 15.5.0 except for the following bug fixes to the installer:
 
-1. Fix an issue where the installer stops responding on SQL Server Integration Services post install.
-2. Fix an issue where setup fails with the following error message: "The requested metafile operation isn't supported (0x800707D3)".
+- Fix an issue where the installer stops responding on SQL Server Integration Services post install.
+- Fix an issue where setup fails with the following error message: "The requested metafile operation isn't supported (0x800707D3)".
 
 In addition to these two bug fixes, the following details for 15.5.0 still apply to 15.5.1
 
@@ -667,12 +667,12 @@ _SSDT for Visual Studio 2017._
 SSDT for Visual Studio 2017 (15.5.0) moves from preview to general availability (GA).
 
 **Installer**
-1. Setup UI is localized.
-1. Replace the icon with a higher-quality version.
+- Setup UI is localized.
+- Replace the icon with a higher-quality version.
 
 **Integration Services (IS)**
-1. Added package validation step in Deployment Wizard when deploying to Azure SSIS IR in ADF, which discovers potential compatibility issues in SSIS packages to execute in Azure SSIS IR. For more info, see [Validate SSIS packages deployed to Azure](../integration-services/lift-shift/ssis-azure-validate-packages.md).
-1. SSIS extension is localized.
+- Added package validation step in Deployment Wizard when deploying to Azure SSIS IR in ADF, which discovers potential compatibility issues in SSIS packages to execute in Azure SSIS IR. For more info, see [Validate SSIS packages deployed to Azure](../integration-services/lift-shift/ssis-azure-validate-packages.md).
+- SSIS extension is localized.
 
 
 #### 15.4.0 (preview),&nbsp; SSDT for VS 2017
@@ -710,8 +710,8 @@ This release provides a standalone web installer for SQL Server Database, Analys
 ##### Bug fixes
 
 **Integration Services (IS)**
-1. Fixed an issue where the layout of OLEDB and ADO.NET connection manager is corrupt.
-2. Fixed an issue where an assembly not found error is raised when attempting to edit a Dimension Processing Task.
+- Fixed an issue where the layout of OLEDB and ADO.NET connection manager is corrupt.
+- Fixed an issue where an assembly not found error is raised when attempting to edit a Dimension Processing Task.
 
 ##### Known issues
 
@@ -920,7 +920,7 @@ _SSDT for Visual Studio 2015._
 
 **AS projects:**
 - Object Level Security can now be configured in the *Roles* dialog for advanced security in 1400 compatibility level tabular models.
-- New AAD role member selection for users without email addresses in AS Azure models in SSDT AS projects for VS2017.
+- New Azure AD role member selection for users without email addresses in AS Azure models in SSDT AS projects for VS2017.
 - New AS Azure "Always Prompt" project property in SSDT AS tabular projects to customize behavior of ADAL credential caching.
 
 ##### Bug Fixes
@@ -1237,9 +1237,9 @@ _For SQL Server 2016._
 
 - **Release Versioning & Numbering:** Releases are now tagged numerically rather than by month. This aligns with the new SSMS policy and simplifies cases where we have multiple releases or hotfixes in a month. This release is 16.3, which means the third update after the RTM release. Any hotfix will be 16.3.1, and so on, with our next update (planned for next month) being 16.4.
 - **Analysis Services - Tabular Model Explorer:** Tabular Model Explorer lets you conveniently navigate through the various metadata objects in a model, such as data sources, tables, measures, and relationships. It's implemented as a separate tools window that you can display by opening the View menu in Visual Studio, pointing to Other Windows, and then clicking Tabular Model Explorer. The Tabular Model Explorer appears by default in the Solution Explorer area on a separate tab. Tabular Model Explorer organizes the metadata objects in a tree structure that closely resembles the schema of a tabular 1200 model and many more new features.
-- **Database Tools - Always Encrypted**:  This release provides new [Always Encrypted Key management](../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md) dialogs to easily add Column Master Keys or Column Encryption Keys to your database project, or a live database in SQL Server Object Explorer. This release supports certificates in Windows Certificate Store. In upcoming releases, Azure Key Vault and CNG Providers will be supported.
+- **Database Tools - Always Encrypted**:  This release provides new [Always Encrypted Key management](../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md) dialogs to easily add Column Master Keys or Column Encryption Keys to your database project, or a live database in SQL Server Object Explorer. This release supports certificates in Windows Certificate Store.
     - While creating Column Master Key or Column Encryption Key, you may experience that the changes aren't reflected on SQL Server Object Explorer immediately after clicking Update Database. To work around, refresh the database node in SQL Server Object Explorer.
-    - If you try to encrypt a column in a table with data from SQL Server Object Explorer, you may experience a failure. This feature is currently supported only in SSDT database projects and SSMS. Support for SQL Server Object Explorer will be enabled in a later release.
+    - If you try to encrypt a column in a table with data from SQL Server Object Explorer, you may experience a failure. This feature is currently supported only in SSDT database projects and SSMS.
 
 **Updates and fixes**
 * **Database tools:**
@@ -1287,7 +1287,7 @@ _For SQL Server 2016._
     * Fixed an issue where Users weren't appearing in the Security folder for Azure SQL DW and APS connections.
 
 * **Analysis Services & Reporting Services:**
-    * Fixed a SxS issue with MSOLAP OLEDB provider where only the 32-bit provider was getting installed, impacting 64-bit Excel 2016 connecting to SQL Server 2014 (didn't repro with ClickOnce installs from Office365, only MSI Excel install).
+    * Fixed a SxS issue with MSOLAP OLEDB provider where only the 32-bit provider was getting installed, impacting 64-bit Excel 2016 connecting to SQL Server 2014 (didn't repro with ClickOnce installs from Office 365, only MSI Excel install).
     * Fixed an issue for a corner case to be more robust when upgrading AS model with pasted tables from 1103 to 1200 compatibility level that could give error "Relationship uses an invalid column ID".
     * Fixed a SxS issue when SSDT-BI 2013 on same machine, could no longer import data in AS model after uninstalling SSDT 2015 (cartridges shared registry setting).
     * Improved robustness to address issues\crashes when the connection to the AS engine is lost (i.e. SSDT left open overnight and AS server recycled, or other cases where the connection is temporarily lost). 
@@ -1321,7 +1321,7 @@ BI templates are used to create SSAS models, SSRS reports, and SSIS packages. BI
 
 [Download SSDT-BI for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=42313) (SQL Server 2014, SQL Server 2012, SQL Server 2008, and 2008 R2)
 
-[Download SSDT-BI for Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=36843) (SQL Server 2014, SQL Server 2012, SQL Server 2008, and 2008 R2
+[Download SSDT-BI for Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=36843) (SQL Server 2014, SQL Server 2012, SQL Server 2008, and 2008 R2)
 
 Business Intelligence Development Studio (BIDS) is installed via SQL Server Setup. There's no web download (SQL Server 2008, and 2008 R2).
 

@@ -62,7 +62,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 Compute sizes (service level objectives, or SLOs) for General Purpose standard-series elastic pools follow the naming convention `GP_Gen5_` followed by the number of max vCores.
 
-The following table covers these SLOs: `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `GP_Gen5_8` and `GP_Gen5_10`:
+The following table covers these SLOs: `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `GP_Gen5_8`, and `GP_Gen5_10`:
 
 | vCores | 2 | 4 | 6 | 8 | 10 |
 |:-|-:|-:|-:|-:|-:|
@@ -103,7 +103,7 @@ The following table covers these SLOs: `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `G
 
 Compute sizes (service level objectives, or SLOs) for General Purpose standard-series elastic pools follow the naming convention `GP_Gen5_` followed by the number of max vCores.
 
-The following table covers these SLOs: `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`, `GP_Gen5_18` and `GP_Gen5_20`:
+The following table covers these SLOs: `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`, `GP_Gen5_18`, and `GP_Gen5_20`:
 
 | vCores | 12 | 14 | 16 | 18 | 20 |
 |:-|-:|-:|-:|-:|-:|
@@ -144,7 +144,7 @@ The following table covers these SLOs: `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`,
 
 Compute sizes (service level objectives, or SLOs) for General Purpose standard-series elastic pools follow the naming convention `GP_Gen5_` followed by the number of max vCores.
 
-The following table covers these SLOs: `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`, `GP_Gen5_80` and `GP_Gen5_128`:
+The following table covers these SLOs: `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`, `GP_Gen5_80`, and `GP_Gen5_128`:
 
 | vCores | 24 | 32 | 40 | 80 | 128 |
 |:-|-:|-:|-:|-:|-:|
@@ -187,7 +187,7 @@ The following table covers these SLOs: `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`,
 
 Compute sizes (service level objectives, or SLOs) for General Purpose Fsv2-series elastic pools follow the naming convention `GP_Fsv2_` followed by the number of vCores. 
 
-The following table covers these SLOs: `GP_Fsv2_8`, `GP_Fsv2_10`, `GP_Fsv2_12`, `GP_Fsv2_14` and `GP_Fsv2_16`:
+The following table covers these SLOs: `GP_Fsv2_8`, `GP_Fsv2_10`, `GP_Fsv2_12`, `GP_Fsv2_14`, and `GP_Fsv2_16`:
 
 | vCores | 8 | 10 | 12 | 14 | 16 |
 |:-|-:|-:|-:|-:|-:|
@@ -228,7 +228,7 @@ The following table covers these SLOs: `GP_Fsv2_8`, `GP_Fsv2_10`, `GP_Fsv2_12`, 
 
 Compute sizes (service level objectives, or SLOs) for General Purpose Fsv2-series elastic pools follow the naming convention `GP_Fsv2_` followed by the number of vCores. 
 
-The following table covers these SLOs: `GP_Fsv2_18`, `GP_Fsv2_20`, `GP_Fsv2_24`, `GP_Fsv2_32`, `GP_Fsv2_36` and `GP_Fsv2_72`:
+The following table covers these SLOs: `GP_Fsv2_18`, `GP_Fsv2_20`, `GP_Fsv2_24`, `GP_Fsv2_32`, `GP_Fsv2_36`, and `GP_Fsv2_72`:
 
 | vCores | 18 | 20 | 24 | 32 | 36 | 72 |
 |:-|-:|-:|-:|-:|-:|-:|
@@ -270,7 +270,7 @@ The following table covers these SLOs: `GP_Fsv2_18`, `GP_Fsv2_20`, `GP_Fsv2_24`,
 
 Compute sizes (service level objectives, or SLOs) for General Purpose DC-series elastic pools follow the naming convention `GP_DC_` followed by the number of vCores. 
 
-The following table covers these SLOs: `GP_DC_2`, `GP_DC_4`, `GP_DC_6`, `GP_DC_8`, `GP_DC_10` and `GP_DC_12`:
+The following table covers these SLOs: `GP_DC_2`, `GP_DC_4`, `GP_DC_6`, `GP_DC_8`, `GP_DC_10`, and `GP_DC_12`:
 
 | vCores | 2 | 4 | 6 | 8 | 10<sup>6</sup> | 12<sup>6</sup> |
 |:-|-:|-:|-:|-:|-:|-:|
@@ -313,7 +313,7 @@ The following table covers these SLOs: `GP_DC_2`, `GP_DC_4`, `GP_DC_6`, `GP_DC_8
 
 Compute sizes (service level objectives, or SLOs) for General Purpose DC-series elastic pools follow the naming convention `GP_DC_` followed by the number of vCores. 
 
-The following table covers these SLOs: `GP_DC_14`, `GP_DC_16`, `GP_DC_18`, `GP_DC_20`, `GP_DC_32` and `GP_DC_40`:
+The following table covers these SLOs: `GP_DC_14`, `GP_DC_16`, `GP_DC_18`, `GP_DC_20`, `GP_DC_32`, and `GP_DC_40`:
 
 | vCores | 14<sup>6</sup> | 16<sup>6</sup> | 18<sup>6</sup> | 20<sup>6</sup> | 32<sup>6</sup> | 40<sup>6</sup> |
 |:-|-:|-:|-:|-:|-:|-:|
@@ -358,7 +358,7 @@ The following table covers these SLOs: `GP_DC_14`, `GP_DC_16`, `GP_DC_18`, `GP_D
 
 Compute sizes (service level objectives, or SLOs) in the Business Critical standard-series elastic pools follow the naming convention `BC_Gen5_` followed by the number of vCores. 
 
-The following table covers these SLOs: `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8`, `BC_Gen5_10` and `BC_Gen5_12`:
+The following table covers these SLOs: `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8`, `BC_Gen5_10`, and `BC_Gen5_12`:
 
 | vCores | 4 | 6 | 8 | 10 | 12 |
 |:-|-:|-:|-:|-:|-:|
@@ -400,7 +400,7 @@ The following table covers these SLOs: `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8`, `B
 
 Compute sizes (service level objectives, or SLOs) in the Business Critical standard-series elastic pools follow the naming convention `BC_Gen5_` followed by the number of vCores. 
 
-The following table covers these SLOs: `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18`, `BC_Gen5_20` and `BC_Gen5_24`:
+The following table covers these SLOs: `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18`, `BC_Gen5_20`, and `BC_Gen5_24`:
 
 | vCores | 14 | 16 | 18 | 20 | 24 |
 |:-|-:|-:|-:|-:|-:|
@@ -440,7 +440,7 @@ The following table covers these SLOs: `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18`,
 
 Compute sizes (service level objectives, or SLOs) in the Business Critical standard-series elastic pools follow the naming convention `BC_Gen5_` followed by the number of vCores. 
 
-The following table covers these SLOs: `BC_Gen5_32`, `BC_Gen5_40`, `BC_Gen5_80` and `BC_Gen5_128`:
+The following table covers these SLOs: `BC_Gen5_32`, `BC_Gen5_40`, `BC_Gen5_80`, and `BC_Gen5_128`:
 
 | vCores | 32 | 40 | 80 | 128 |
 |:-|-:|-:|-:|-:|
@@ -486,7 +486,7 @@ For important information about M-series hardware availability, see [Azure offer
 
 Compute sizes (service level objectives, or SLOs) in the Business Critical M-series elastic pools follow the naming convention `BC_M_` followed by the number of vCores. 
 
-The following table covers these SLOs: `BC_M_8`, `BC_M_10`, `BC_M_12`, `BC_M_14`, `BC_M_16` and `BC_M_18`:
+The following table covers these SLOs: `BC_M_8`, `BC_M_10`, `BC_M_12`, `BC_M_14`, `BC_M_16`, and `BC_M_18`:
 
 | vCores | 8 | 10 | 12 | 14 | 16 | 18 |
 |:-|-:|-:|-:|-:|-:|-:|
@@ -528,7 +528,7 @@ The following table covers these SLOs: `BC_M_8`, `BC_M_10`, `BC_M_12`, `BC_M_14`
 
 Compute sizes (service level objectives, or SLOs) in the Business Critical M-series elastic pools follow the naming convention `BC_M_` followed by the number of vCores. 
 
-The following table covers these SLOs: `BC_M_20`, `BC_M_24`, `BC_M_32`, `BC_M_64` and `BC_M_128`:
+The following table covers these SLOs: `BC_M_20`, `BC_M_24`, `BC_M_32`, `BC_M_64`, and `BC_M_128`:
 
 | vCores | 20 | 24 | 32 | 64 | 128 |
 |:-|-:|-:|-:|-:|-:|
@@ -571,7 +571,7 @@ The following table covers these SLOs: `BC_M_20`, `BC_M_24`, `BC_M_32`, `BC_M_64
 
 Compute sizes (service level objectives, or SLOs) in the Business Critical DC-series elastic pools follow the naming convention `BC_DC_` followed by the number of vCores. 
 
-The following table covers these SLOs: `BC_DC_2`, `BC_DC_4`, `BC_DC_6`, `BC_DC_8`, `BC_DC_10` and `BC_DC_12`:
+The following table covers these SLOs: `BC_DC_2`, `BC_DC_4`, `BC_DC_6`, `BC_DC_8`, `BC_DC_10`, and `BC_DC_12`:
 
 | vCores | 2 | 4 | 6 | 8 | 10<sup>6</sup> | 12<sup>6</sup> |
 |:-|-:|-:|-:|-:|-:|-:|
@@ -615,7 +615,7 @@ The following table covers these SLOs: `BC_DC_2`, `BC_DC_4`, `BC_DC_6`, `BC_DC_8
 
 Compute sizes (service level objectives, or SLOs) in the Business Critical DC-series elastic pools follow the naming convention `BC_DC_` followed by the number of vCores. 
 
-The following table covers these SLOs: `BC_DC_14`, `BC_DC_16`, `BC_DC_18`, `BC_DC_20`, `BC_DC_32` and `BC_DC_40`:
+The following table covers these SLOs: `BC_DC_14`, `BC_DC_16`, `BC_DC_18`, `BC_DC_20`, `BC_DC_32`, and `BC_DC_40`:
 
 | vCores | 14<sup>6</sup> | 16<sup>6</sup> | 18<sup>6</sup> | 20<sup>6</sup> | 32<sup>6</sup> | 40<sup>6</sup> |
 |:-|-:|-:|-:|-:|-:|-:|
@@ -664,7 +664,7 @@ The following table covers these SLOs: `BC_DC_14`, `BC_DC_16`, `BC_DC_18`, `BC_D
 
 Compute sizes (service level objectives, or SLOs) in the Hyperscale standard-series elastic pools follow the naming convention `HS_Gen5_` followed by the number of vCores. 
 
-The following table covers these SLOs: `HS_Gen5_4`, `HS_Gen5_6`, `HS_Gen5_8`, `HS_Gen5_10`, `HS_Gen5_12` and `HS_Gen5_14`:
+The following table covers these SLOs: `HS_Gen5_4`, `HS_Gen5_6`, `HS_Gen5_8`, `HS_Gen5_10`, `HS_Gen5_12`, and `HS_Gen5_14`:
 
 | vCores | 4 | 6 | 8 | 10 | 12 | 14 |
 |-:|-:|-:|-:|-:|-:|-:|
@@ -701,11 +701,11 @@ The following table covers these SLOs: `HS_Gen5_4`, `HS_Gen5_6`, `HS_Gen5_8`, `H
 
 <sup>6</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
-### Hyperscale - standard series (Gen5) (part 2 of 2)
+### Hyperscale - standard-series (Gen5) (part 2 of 2)
 
 Compute sizes (service level objectives, or SLOs) in the Hyperscale standard-series elastic pools follow the naming convention `HS_Gen5_` followed by the number of vCores. 
 
-The following table covers these SLOs: `HS_Gen5_16`, `HS_Gen5_18`, `HS_Gen5_20`, `HS_Gen5_24`, `HS_Gen5_32`, `HS_Gen5_40` and `HS_Gen5_80`:
+The following table covers these SLOs: `HS_Gen5_16`, `HS_Gen5_18`, `HS_Gen5_20`, `HS_Gen5_24`, `HS_Gen5_32`, `HS_Gen5_40`, and `HS_Gen5_80`:
 
 | vCores | 16 | 18 | 20 | 24 | 32 | 40 | 80 |
 |:-|-:|-:|-:|-:|-:|-:|-:|

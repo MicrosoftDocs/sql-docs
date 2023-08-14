@@ -34,7 +34,7 @@ Maximum values of various objects defined in [!INCLUDE[ssNoVersion](../includes/
 
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] object|Maximum&nbsp;values&nbsp;for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64-bit)|Additional Information|
 |---|---|---|
-|Batch size|65,536 * (network packet size)|Network packet size is the size of the tabular data stream (TDS) packets used to communicate between the relational [!INCLUDE[ssDE](../includes/ssde-md.md)] and applications. The default packet size is 4 KB, and is controlled by the network packet size configuration option.|
+|Batch size|65,536 * (network packet size)|Network packet size is the size of the tabular data stream (TDS) packets used to communicate between the relational [!INCLUDE[ssDE](../includes/ssde-md.md)] and applications. The default packet size is 4 KB. Network packet size controls this configuration option.|
 |Byte length of a string containing [!INCLUDE[tsql](../includes/tsql-md.md)] statements (batch size)|65,536 * (network packet size)|Network packet size is the size of the tabular data stream (TDS) packets used to communicate between the relational [!INCLUDE[ssDE](../includes/ssde-md.md)] and applications. The default packet size is 4 KB, and is controlled by the network packet size configuration option.|
 |Bytes per short string column|8,000||
 |Bytes per `GROUP BY`, `ORDER BY`|8,060||
@@ -50,7 +50,7 @@ Maximum values of various objects defined in [!INCLUDE[ssNoVersion](../includes/
 |Clustered indexes per table|1||
 |Columns in `GROUP BY`, `ORDER BY`|Limited only by number of bytes||
 |Columns or expressions in a `GROUP BY WITH CUBE` or `GROUP BY WITH ROLLUP` statement|10||
-|Columns per index key|32|If the table contains one or more XML indexes, the clustering key of the user table is limited to 31 columns because the XML column is added to the clustering key of the primary XML index. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] you can include non-key columns in a nonclustered index, to avoid the limitation of a maximum of 32 key columns. For more information, see [Create Indexes with Included Columns](../relational-databases/indexes/create-indexes-with-included-columns.md).|
+|Columns per index key|32|If the table contains one or more XML indexes, the clustering key of the user table is limited to 31 columns because the XML column is added to the clustering key of the primary XML index. You can include non-key columns in a nonclustered index, to avoid the limitation of a maximum of 32 key columns. For more information, see [Create Indexes with Included Columns](../relational-databases/indexes/create-indexes-with-included-columns.md).|
 |Columns per foreign key or primary key|32||
 |Columns per `INSERT` statement|4,096||
 |Columns per `SELECT` statement|4,096||
@@ -109,7 +109,7 @@ Maximum values of various objects defined in [!INCLUDE[ssNoVersion](../includes/
 |---|---|---|
 |Articles (merge publication)|2,048||
 |Articles (snapshot or transactional publication)|32,767||
-|Columns in a table (merge publication)|246|If row tracking is used for conflict detection (the default), the base table can include a maximum of 1,024 columns, but columns must be filtered from the article so that a maximum of 246 columns is published. If column tracking is used, the base table can include a maximum of 246 columns.|
+|Columns in a table (merge publication)|246|If row tracking is used for conflict detection (the default), the base table can include a maximum of 1,024 columns. However, the publication needs to filter the article so that a maximum of 246 columns are published. If column tracking is used, the base table can include a maximum of 246 columns.|
 |Columns in a table ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] snapshot or transactional publication)|1,000|The base table can include the maximum number of columns allowable in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] publication database (1,024), but columns must be filtered from the article if they exceed the maximum specified for the publication type.|
 |Columns in a table (Oracle snapshot or transactional publication)|995|The base table can include the maximum number of columns allowable in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] publication database (1,024), but columns must be filtered from the article if they exceed the maximum specified for the publication type.|
 |Bytes for a column used in a row filter (merge publication)|1,024||

@@ -113,7 +113,7 @@ The SQL memory cache grows as data is fetched from disk in the same way and with
 
 ### <a name="disk-cache-mgmt"></a> Disk cache management
 
-In the Hyperscale service tier for both serverless and provisioned compute tiers, each compute replica uses a Resilient Buffer Pool Extension (RBPEX) cache, which stores data pages on local SSD to improve IO performance.  However, in the serverless compute tier for Hyperscale, the RBPEX cache for each compute replica automatically grows and shrinks in response to increasing and decreasing workload demand.  The maximum size the RBPEX cache can grow to is three times the maximum memory configured for the database.  For details on maximum memory and RBPEX auto-scaling limits in serverless, see [serverless Hyperscale resource limits](resource-limits-vcore-single-databases.md#hyperscale---serverless-compute---gen-5).
+In the Hyperscale service tier for both serverless and provisioned compute tiers, each compute replica uses a Resilient Buffer Pool Extension (RBPEX) cache, which stores data pages on local SSD to improve IO performance.  However, in the serverless compute tier for Hyperscale, the RBPEX cache for each compute replica automatically grows and shrinks in response to increasing and decreasing workload demand.  The maximum size the RBPEX cache can grow to is three times the maximum memory configured for the database.  For details on maximum memory and RBPEX auto-scaling limits in serverless, see [serverless Hyperscale resource limits](resource-limits-vcore-single-databases.md#hyperscale---serverless-compute---standard-series-gen5).
 
 ## Auto-pausing and auto-resuming
 

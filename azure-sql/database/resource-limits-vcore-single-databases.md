@@ -172,7 +172,7 @@ The following table covers these SLOs: `GP_S_Gen5_20`, `GP_S_Gen5_24`, `GP_S_Gen
 
 <sup>4</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
-## Hyperscale - serverless compute - Gen 5
+## Hyperscale - serverless compute - standard-series (Gen5)
 
 The [serverless compute tier](serverless-tier-overview.md) is currently available on standard-series (Gen5) hardware only.
 

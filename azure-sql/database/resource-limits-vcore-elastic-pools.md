@@ -66,7 +66,7 @@ The following table covers these SLOs: `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `G
 
 | vCores | 2 | 4 | 6 | 8 | 10 |
 |:-|-:|-:|-:|-:|-:|
-| Compute generation | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 |
+| Hardware | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 |
 | Memory (GB) | 10.4 | 20.8 | 31.1 | 41.5 | 51.9 |
 | Max number DBs per pool <sup>1</sup> | 100 | 200 | 500 | 500 | 500 |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes |
@@ -107,7 +107,7 @@ The following table covers these SLOs: `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`,
 
 | vCores | 12 | 14 | 16 | 18 | 20 |
 |:-|-:|-:|-:|-:|-:|
-| Compute generation | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 |
+| Hardware | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 |
 | Memory (GB) | 62.3 | 72.7 | 83 | 93.4 | 103.8 |
 | Max number DBs per pool <sup>1</sup> | 500 | 500 | 500 | 500 | 500 |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes |
@@ -148,7 +148,7 @@ The following table covers these SLOs: `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`,
 
 | vCores | 24 | 32 | 40 | 80 | 128 |
 |:-|-:|-:|-:|-:|-:|
-| Compute generation | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 |
+| Hardware | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 |
 | Memory (GB) | 124.6 | 166.1 | 207.6 | 415.2 | 625 |
 | Max number DBs per pool <sup>1</sup> | 500 | 500 | 500 | 500 | 500 |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes |
@@ -191,7 +191,7 @@ The following table covers these SLOs: `GP_Fsv2_8`, `GP_Fsv2_10`, `GP_Fsv2_12`, 
 
 | vCores | 8 | 10 | 12 | 14 | 16 |
 |:-|-:|-:|-:|-:|-:|
-| Compute generation | Fsv2-series | Fsv2-series | Fsv2-series | Fsv2-series | Fsv2-series |
+| Hardware | Fsv2-series | Fsv2-series | Fsv2-series | Fsv2-series | Fsv2-series |
 | Memory (GB) | 15.1 | 18.9 | 22.7 | 26.5 | 30.2 |
 | Max number DBs per pool <sup>1</sup> | 500 | 500 | 500 | 500 | 500 |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes |
@@ -232,7 +232,7 @@ The following table covers these SLOs: `GP_Fsv2_18`, `GP_Fsv2_20`, `GP_Fsv2_24`,
 
 | vCores | 18 | 20 | 24 | 32 | 36 | 72 |
 |:-|-:|-:|-:|-:|-:|-:|
-| Compute generation | Fsv2-series | Fsv2-series | Fsv2-series | Fsv2-series | Fsv2-series | Fsv2-series |
+| Hardware | Fsv2-series | Fsv2-series | Fsv2-series | Fsv2-series | Fsv2-series | Fsv2-series |
 | Memory (GB) | 34.0 | 37.8 | 45.4 | 60.5 | 68.0 | 136.0 |
 | Max number DBs per pool <sup>1</sup> | 500 | 500 | 500 | 500 | 500 |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes | Yes |
@@ -274,7 +274,7 @@ The following table covers these SLOs: `GP_DC_2`, `GP_DC_4`, `GP_DC_6`, `GP_DC_8
 
 | vCores | 2 | 4 | 6 | 8 | 10<sup>6</sup> | 12<sup>6</sup> |
 |:-|-:|-:|-:|-:|-:|-:|
-| Compute generation | DC | DC | DC | DC | DC | DC |
+| Hardware | DC | DC | DC | DC | DC | DC |
 | Memory (GB) | 9 | 18 | 27 | 36 | 45 | 54 |
 | Max number DBs per pool <sup>1</sup> | 100 | 400 | 400 | 400 | 500 | 500 |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes | Yes |
@@ -317,7 +317,7 @@ The following table covers these SLOs: `GP_DC_14`, `GP_DC_16`, `GP_DC_18`, `GP_D
 
 | vCores | 14<sup>6</sup> | 16<sup>6</sup> | 18<sup>6</sup> | 20<sup>6</sup> | 32<sup>6</sup> | 40<sup>6</sup> |
 |:-|-:|-:|-:|-:|-:|-:|
-| Compute generation | DC | DC | DC | DC | DC | DC |
+| Hardware | DC | DC | DC | DC | DC | DC |
 | Memory (GB) | 63 | 72 | 81 | 90 | 144 | 180 |
 | Max number DBs per pool <sup>1</sup> | 500 | 500 | 500 | 500 | 500 | 500 |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes | Yes |
@@ -362,7 +362,7 @@ The following table covers these SLOs: `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8`, `B
 
 | vCores | 4 | 6 | 8 | 10 | 12 |
 |:-|-:|-:|-:|-:|-:|
-| Compute generation | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 |
+| Hardware | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 |
 | Memory (GB) | 20.8 | 31.1 | 41.5 | 51.9 | 62.3 |
 | Max number DBs per pool <sup>1</sup> | 50 | 100 | 100 | 100 | 100 |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes |
@@ -404,7 +404,7 @@ The following table covers these SLOs: `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18`,
 
 | vCores | 14 | 16 | 18 | 20 | 24 |
 |:-|-:|-:|-:|-:|-:|
-| Compute generation | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 |
+| Hardware | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 |
 | Memory (GB) | 72.7 | 83 | 93.4 | 103.8 | 124.6 |
 | Max number DBs per pool <sup>1</sup> | 100 | 100 | 100 | 100 | 100 |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes |
@@ -444,7 +444,7 @@ The following table covers these SLOs: `BC_Gen5_32`, `BC_Gen5_40`, `BC_Gen5_80`,
 
 | vCores | 32 | 40 | 80 | 128 |
 |:-|-:|-:|-:|-:|
-| Compute generation | Gen5 | Gen5 | Gen5 | Gen5 |
+| Hardware | Gen5 | Gen5 | Gen5 | Gen5 |
 | Memory (GB) | 166.1 | 207.6 | 415.2 | 625 |
 | Max number DBs per pool <sup>1</sup> | 100 | 100 | 100 | 100 |
 | Columnstore support | Yes | Yes | Yes | Yes |
@@ -490,7 +490,7 @@ The following table covers these SLOs: `BC_M_8`, `BC_M_10`, `BC_M_12`, `BC_M_14`
 
 | vCores | 8 | 10 | 12 | 14 | 16 | 18 |
 |:-|-:|-:|-:|-:|-:|-:|
-| Compute generation | M-series | M-series | M-series | M-series | M-series | M-series |
+| Hardware | M-series | M-series | M-series | M-series | M-series | M-series |
 | Memory (GB) | 235.4 | 294.3 | 353.2 | 412.0 | 470.9 | 529.7 |
 | Max number DBs per pool <sup>1</sup> | 100 | 100 | 100 | 100 | 100 | 100 |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes | Yes |
@@ -532,7 +532,7 @@ The following table covers these SLOs: `BC_M_20`, `BC_M_24`, `BC_M_32`, `BC_M_64
 
 | vCores | 20 | 24 | 32 | 64 | 128 |
 |:-|-:|-:|-:|-:|-:|
-| Compute generation | M-series | M-series | M-series | M-series | M-series |
+| Hardware | M-series | M-series | M-series | M-series | M-series |
 | Memory (GB) | 588.6 | 706.3 | 941.8 | 1883.5 | 3767.0 |
 | Max number DBs per pool <sup>1</sup> | 100 | 100 | 100 | 100 | 100 |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes |
@@ -575,7 +575,7 @@ The following table covers these SLOs: `BC_DC_2`, `BC_DC_4`, `BC_DC_6`, `BC_DC_8
 
 | vCores | 2 | 4 | 6 | 8 | 10<sup>6</sup> | 12<sup>6</sup> |
 |:-|-:|-:|-:|-:|-:|-:|
-| Compute generation | DC | DC | DC | DC | DC | DC |
+| Hardware | DC | DC | DC | DC | DC | DC |
 | Memory (GB) | 9 | 18 | 27 | 36 | 45 | 54 |
 | Max number DBs per pool <sup>1</sup> | 50 | 100 | 100 | 100 | 100 | 100 |
 | Columnstore support | Yes | Yes | Yes | Yes |Yes |Yes |
@@ -619,7 +619,7 @@ The following table covers these SLOs: `BC_DC_14`, `BC_DC_16`, `BC_DC_18`, `BC_D
 
 | vCores | 14<sup>6</sup> | 16<sup>6</sup> | 18<sup>6</sup> | 20<sup>6</sup> | 32<sup>6</sup> | 40<sup>6</sup> |
 |:-|-:|-:|-:|-:|-:|-:|
-| Compute generation | DC | DC | DC | DC | DC | DC |
+| Hardware | DC | DC | DC | DC | DC | DC |
 | Memory (GB) | 63 | 72 | 81 | 90 | 144 | 180 |
 | Max number DBs per pool <sup>1</sup> | 50 | 100 | 100 | 100 | 100 | 100 |
 | Columnstore support | Yes | Yes | Yes | Yes |Yes |Yes |
@@ -668,7 +668,7 @@ The following table covers these SLOs: `HS_Gen5_4`, `HS_Gen5_6`, `HS_Gen5_8`, `H
 
 | vCores | 4 | 6 | 8 | 10 | 12 | 14 |
 |-:|-:|-:|-:|-:|-:|-:|
-| Compute generation | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 |
+| Hardware | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 |
 | Memory (GB) | 20.8 | 31.1 | 41.5 | 51.9 | 62.3 | 72.7 |
 | Max number DBs per pool <sup>1</sup> | 25 | 25 | 25 | 25 | 25 | 25 |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes | Yes |
@@ -709,7 +709,7 @@ The following table covers these SLOs: `HS_Gen5_16`, `HS_Gen5_18`, `HS_Gen5_20`,
 
 | vCores | 16 | 18 | 20 | 24 | 32 | 40 | 80 |
 |:-|-:|-:|-:|-:|-:|-:|-:|
-| Compute generation | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 |
+| Hardware | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 |
 | Max number DBs per pool <sup>1</sup> | 25 | 25 | 25 | 25 | 25 | 25 |
 | Memory (GB) | 83 | 93.4 | 103.8 | 124.6 | 166.1 | 207.6 | 415.2 |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes | Yes | Yes |

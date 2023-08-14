@@ -187,7 +187,7 @@ The following table covers these SLOs: `HS_S_Gen5_2`, `HS_S_Gen5_4`, `HS_S_Gen5_
 
 | Min-max vCores | 0.5-2 | 0.5-4 | 0.75-6 | 1-8 | 1.25-10 | 1.5-12 | 1.75-14 |
 |--|--|--|--|--|--|--|--|
-| Compute generation | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 |
+| Hardware | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 |
 | Min-max memory (GB) | 2.05-6 | 2.10-12 | 2.25-18 | 3.00-24 | 3.75-30 | 4.50-36 | 5.25-42 |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
 | In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
@@ -220,7 +220,7 @@ The following table covers these SLOs: `HS_S_Gen5_16`, `HS_S_Gen5_18`, `HS_S_Gen
 
 | Min-max vCores | 2-16 | 2.25-18 | 2.25-20 | 3-24 | 4-32 | 5-40 | 10-80 <sup>4</sup> |
 |--|--|--|--|--|--|--|--|
-| Compute generation | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 |
+| Hardware | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 |
 | Min-max memory (GB) | 6.00-48 | 6.75-54 | 7.5-60 | 9-72 | 12-96 | 15-120 | 30-240 |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
 | In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
@@ -247,7 +247,7 @@ The following table covers these SLOs: `HS_S_Gen5_16`, `HS_S_Gen5_18`, `HS_S_Gen
 
 ## <a id="hyperscale---provisioned-compute---gen5"></a>Hyperscale - provisioned compute - standard-series (Gen5)
 
-### <a id="gen5-hardware-part-1-2"></a>Hyperscale standard-series (Gen5) compute generation (part 1 of 2)
+### <a id="gen5-hardware-part-1-2"></a>Hyperscale standard-series (Gen5) (part 1 of 2)
 
 Compute sizes (service level objectives, or SLOs) for Hyperscale standard-series databases follow the naming convention `HS_Gen5_` followed by the number of vCores. 
 
@@ -285,7 +285,7 @@ The following table covers these SLOs: `HS_Gen5_2`, `HS_Gen5_4`, `HS_Gen5_6`, `H
 
 <sup>4</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
-### <a id="gen5-hardware-part-2-2"></a>Hyperscale standard-series (Gen5) compute generation (part 2 of 2)
+### <a id="gen5-hardware-part-2-2"></a>Hyperscale standard-series (Gen5) (part 2 of 2)
 
 Compute sizes (service level objectives, or SLOs) for Hyperscale standard-series databases follow the naming convention `HS_Gen5_` followed by the number of vCores. 
 
@@ -324,7 +324,7 @@ The following table covers these SLOs: `HS_Gen5_16`, `HS_Gen5_18`, `HS_Gen5_20`,
 <sup>4</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 ## Hyperscale - provisioned compute - DC-series
-### Hyperscale DC-series (Gen5) compute generation (part 1 of 2)
+### Hyperscale DC-series (part 1 of 2)
 
 Compute sizes (service level objectives, or SLOs) for Hyperscale DC-series databases follow the naming convention `HS_DC_` followed by the number of vCores. 
 
@@ -364,7 +364,7 @@ The following table covers these SLOs: `HS_DC_2`, `HS_DC_4`, `HS_DC_6`, `HS_DC_8
 
 
 
-### Hyperscale DC-series (Gen5) compute generation (part 2 of 2)
+### Hyperscale DC-series (part 2 of 2)
 
 Compute sizes (service level objectives, or SLOs) for Hyperscale DC-series databases follow the naming convention `HS_DC_` followed by the number of vCores. 
 
@@ -402,9 +402,9 @@ The following table covers these SLOs: `HS_DC_14`, `HS_DC_16`, `HS_DC_18`, `HS_D
 
 <sup>4</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
-## Hyperscale - Premium-series
+## Hyperscale - provisioned compute - premium-series
 
-### Hyperscale - Premium-series (part 1 of 3)
+### Hyperscale premium-series (part 1 of 3)
 
 Compute sizes (service level objectives, or SLOs) for Hyperscale premium-series databases follow the naming convention `HS_PRMS_` followed by the number of vCores. 
 
@@ -443,7 +443,7 @@ The following table covers these SLOs: `HS_PRMS_2`, `HS_PRMS_4`, `HS_PRMS_6`, `H
 <sup>4</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 
-### Hyperscale - Premium-series (part 2 of 3)
+### Hyperscale premium-series (part 2 of 3)
 
 Compute sizes (service level objectives, or SLOs) for Hyperscale premium-series databases follow the naming convention `HS_PRMS_` followed by the number of vCores. 
 
@@ -481,7 +481,7 @@ The following table covers these SLOs: `HS_PRMS_12`, `HS_PRMS_14`, `HS_PRMS_16`,
 
 <sup>4</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
-### Hyperscale - Premium-series (part 3 of 3)
+### Hyperscale premium-series (part 3 of 3)
 
 Compute sizes (service level objectives, or SLOs) for Hyperscale premium-series databases follow the naming convention `HS_PRMS_` followed by the number of vCores. 
 
@@ -519,9 +519,9 @@ The following table covers these SLOs: `HS_PRMS_24`, `HS_PRMS_32`, `HS_PRMS_40`,
 
 <sup>4</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
  
-## Hyperscale - Premium-series memory optimized
+## Hyperscale - provisioned compute - premium-series memory optimized
 
-### Hyperscale - Premium-series memory optimized (part 1 of 3)
+### Hyperscale premium-series memory optimized (part 1 of 3)
 
 Compute sizes (service level objectives, or SLOs) for Hyperscale premium-series memory optimized databases follow the naming convention `HS_MOPRMS_` followed by the number of vCores. 
 
@@ -560,7 +560,7 @@ The following table covers these SLOs: `HS_MOPRMS_2`, `HS_MOPRMS_4`, `HS_MOPRMS_
 <sup>4</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 
-### Hyperscale - Premium-series memory optimized (part 2 of 3)
+### Hyperscale premium-series memory optimized (part 2 of 3)
 
 Compute sizes (service level objectives, or SLOs) for Hyperscale premium-series memory optimized databases follow the naming convention `HS_MOPRMS_` followed by the number of vCores. 
 
@@ -599,7 +599,7 @@ The following table covers these SLOs: `HS_MOPRMS_12`, `HS_MOPRMS_14`, `HS_MOPRM
 <sup>4</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 
-### Hyperscale - Premium-series memory optimized (part 3 of 3)
+### Hyperscale premium-series memory optimized (part 3 of 3)
 
 Compute sizes (service level objectives, or SLOs) for Hyperscale premium-series memory optimized databases follow the naming convention `HS_MOPRMS_` followed by the number of vCores. 
 
@@ -639,7 +639,7 @@ The following table covers these SLOs: `HS_MOPRMS_24`, `HS_MOPRMS_32`, `HS_MOPRM
  
 ## <a id="general-purpose---provisioned-compute---gen5"></a>General Purpose - provisioned compute - standard-series (Gen5)
 
-### <a id="gen5-hardware-part-1-3"></a>General Purpose standard-series (Gen5) compute (part 1 of 3)
+### <a id="gen5-hardware-part-1-3"></a>General Purpose standard-series (Gen5) (part 1 of 3)
 
 Compute sizes (service level objectives, or SLOs) for General Purpose standard-series databases follow the naming convention `GP_Gen5_` followed by the number of vCores. 
 
@@ -675,7 +675,7 @@ The following table covers these SLOs: `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `G
 <sup>3</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 
-### <a id="gen5-hardware-part-2-3"></a>General Purpose standard-series (Gen5) compute (part 2 of 3)
+### <a id="gen5-hardware-part-2-3"></a>General Purpose standard-series (Gen5) (part 2 of 3)
 
 Compute sizes (service level objectives, or SLOs) for General Purpose standard-series databases follow the naming convention `GP_Gen5_` followed by the number of vCores. 
 
@@ -711,7 +711,7 @@ The following table covers these SLOs: `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`,
 <sup>3</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 
-### <a id="gen5-hardware-part-3-3"></a>General Purpose standard-series (Gen5) compute (part 3 of 3)
+### <a id="gen5-hardware-part-3-3"></a>General Purpose standard-series (Gen5) (part 3 of 3)
 
 Compute sizes (service level objectives, or SLOs) for General Purpose standard-series databases follow the naming convention `GP_Gen5_` followed by the number of vCores. 
 
@@ -895,7 +895,7 @@ The following table covers these SLOs: `GP_DC_14`, `GP_DC_16`, `GP_DC_18`, `GP_D
 
 ## <a id="business-critical---provisioned-compute---gen5"></a>Business Critical - provisioned compute - standard-series (Gen5)
 
-### <a id="gen5-hardware-part-1-4"></a>Business Critical standard-series (Gen5) compute generation (part 1 of 3)
+### <a id="gen5-hardware-part-1-4"></a>Business Critical standard-series (Gen5) (part 1 of 3)
 
 Compute sizes (service level objectives, or SLOs) in the Business Critical standard-series databases follow the naming convention `BC_Gen5_` followed by the number of vCores. 
 
@@ -932,7 +932,7 @@ The following table covers these SLOs: `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_6`, `B
 <sup>3</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
 
-### <a id="gen5-hardware-part-2-4"></a>Business Critical standard-series (Gen5) compute generation (part 2 of 3)
+### <a id="gen5-hardware-part-2-4"></a>Business Critical standard-series (Gen5) (part 2 of 3)
 
 Compute sizes (service level objectives, or SLOs) in the Business Critical standard-series databases follow the naming convention `BC_Gen5_` followed by the number of vCores. 
 
@@ -968,7 +968,7 @@ The following table covers these SLOs: `BC_Gen5_12`, `BC_Gen5_14`, `BC_Gen5_16`,
 
 <sup>3</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
-### <a id="gen5-hardware-part-2-4"></a>Business Critical standard-series (Gen5) compute generation (part 3 of 3)
+### <a id="gen5-hardware-part-2-4"></a>Business Critical standard-series (Gen5) (part 3 of 3)
 
 Compute sizes (service level objectives, or SLOs) in the Business Critical standard-series databases follow the naming convention `BC_Gen5_` followed by the number of vCores. 
 

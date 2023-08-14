@@ -174,7 +174,7 @@ The following table covers these SLOs: `GP_S_Gen5_20`, `GP_S_Gen5_24`, `GP_S_Gen
 
 ## Hyperscale - serverless compute - Gen 5
 
-The [serverless compute tier](serverless-tier-overview.md) is currently available on Gen5 hardware only.
+The [serverless compute tier](serverless-tier-overview.md) is currently available on standard-series (Gen5) hardware only.
 
 > [!NOTE]
 > Serverless compute for the Hyperscale service tier is currently in preview.

@@ -655,7 +655,7 @@ The following table covers these SLOs: `BC_DC_14`, `BC_DC_16`, `BC_DC_18`, `BC_D
 
 <sup>6</sup> DC hardware series vCore offerings from 10 to 40 are currently in Preview.
 
-## Hyperscale - provisioned compute - standard series (Gen5)
+## Hyperscale - provisioned compute - standard-series (Gen5)
 
 > [!NOTE]
 > Elastic pools for Hyperscale databases are currently in preview.

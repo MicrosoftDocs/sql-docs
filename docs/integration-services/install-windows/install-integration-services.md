@@ -91,22 +91,12 @@ For a complete installation of [!INCLUDE[ssISnoversion](../../includes/ssisnover
 
 - **Database Engine Services**. Install the Database Engine with the SQL Server Setup Wizard. Selecting the Database Engine Services allows you to create and host the SSIS Catalog database, `SSISDB`, to store, manage, run, and monitor SSIS packages.
 
-- **SQL Server Data Tools (SSDT)**. To download and install SSDT, see [Download SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md). Installing SSDT lets you design and deploy SSIS packages. SSDT installs the following things:
+- **SQL Server Data Tools (SSDT)** and appropriate extensions. To download and install SSDT, see [Download SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md). Installing SSDT lets you design and deploy SSIS packages.
 
-  - The SSIS package design and development tools, including SSIS Designer.
+  After you install SSDT, you need to install the appropriate extensions.
 
-  - 32-bit SSIS components only.
-
-  - A limited version of Visual Studio (if a Visual Studio edition isn't already installed).
-
-  - Visual Studio Tools for Applications (VSTA), the script editor used by the SSIS Script Task and Script Component.
-
-  - SSIS wizards including the Deployment Wizard and the Package Upgrade Wizard.
-
-  - SQL Server Import and Export Wizard.
-
-   > [!IMPORTANT]
-   > Beginning with Visual Studio 2019, there is no standalone installer for SSDT. You now can get the SSIS designer extension from the [VS market place](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects&ssr=false#overview).
+  - For Visual Studio 2022, [SQL Server Integration Services Projects 2022](https://marketplace.visualstudio.com/items?itemName=SSIS.MicrosoftDataToolsIntegrationServices)
+  - For earlier versions, [SQL Server Integration Services Projects](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects)
 
 - **Integration Services Feature Pack for Azure**. To download and install the Feature Pack, see [Microsoft SQL Server Integration Services Feature Pack for Azure](../azure-feature-pack-for-integration-services-ssis.md). Installing the Feature Pack lets your packages connect to storage and analytics services in the Azure cloud, including the following services:
 
@@ -122,9 +112,13 @@ For a complete installation of [!INCLUDE[ssISnoversion](../../includes/ssisnover
 
 - **Optional additional components**. You can optionally download additional third-party components from the SQL Server Feature Package.
 
-  - Microsoft® Connector for SAP BW for Microsoft SQL Server®. To get these components, see [Microsoft® SQL Server® 2017 Feature Pack](https://www.microsoft.com/download/details.aspx?id=55992).
+  - [Microsoft Connector for Oracle](../data-flow/oracle-connector.md)
+  
+  - [Microsoft Connector for Teradata (SSIS)](../data-flow/teradata-connector.md)
 
-  - Microsoft Connectors for Oracle and Teradata by Attunity. To get these components, see [Attunity connectors](../attunity-connectors.md).
+  - For Microsoft Connectors for Oracle and Teradata by Attunity for SQL Server 2017 and before,, see [Attunity connectors](../attunity-connectors.md).
+
+  - Microsoft® Connector for SAP BW for Microsoft SQL Server®. To get these components, see [Microsoft® SQL Server® 2017 Feature Pack](https://www.microsoft.com/download/details.aspx?id=55992).
 
 ## Next steps
 
@@ -132,6 +126,4 @@ For more information about Integration Services installation and feature updates
 
 - [Installing Integration Services Versions Side by Side](installing-integration-services-versions-side-by-side.md)
 
-- [What's New in Integration Services in SQL Server 2017](../what-s-new-in-integration-services-in-sql-server-2017.md)
-
-- [What's New in Integration Services in SQL Server 2016](../what-s-new-in-integration-services-in-sql-server-2016.md)
+- [Integration Services Backward Compatibility](../integration-services-backward-compatibility.md)

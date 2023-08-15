@@ -793,6 +793,12 @@ Database or log backups can be appended to any disk or tape device, allowing a d
 
 The BACKUP statement is not allowed in an explicit or implicit transaction.
 
+You can't back up a database in the following states:
+
+* Restoring
+* Standby
+* Read only
+
 Cross-platform backup operations, even between different processor types, can be performed as long as the collation of the database is supported by the operating system.
 
 Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], setting `MAXTRANSFERSIZE` **larger than 65536 (64 KB)** enables an optimized compression algorithm for [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) encrypted databases that first decrypts a page, compresses it, and then encrypts it again. If `MAXTRANSFERSIZE` is not specified, or if `MAXTRANSFERSIZE = 65536` (64 KB) is used, backup compression with TDE encrypted databases directly compresses the encrypted pages, and may not yield good compression ratios. For more information, see [Backup Compression for TDE-enabled Databases](/archive/blogs/sqlcat/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases).

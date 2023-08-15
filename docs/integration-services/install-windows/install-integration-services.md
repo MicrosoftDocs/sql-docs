@@ -3,7 +3,7 @@ title: Install SQL Server Integration Services
 description: Learn how to install Microsoft SQL Server Integration Services (SSIS) and how to get other downloads for SSIS.
 author: chugugrace
 ms.author: chugu
-ms.date: 12/10/2021
+ms.date: 08/15/2023
 ms.service: sql
 ms.subservice: integration-services
 ms.topic: conceptual
@@ -30,7 +30,7 @@ This article highlights important considerations that you should know before you
 
 Before you install [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], review the following information:
 
-- [Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2019.md)
+- [Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2022.md)
 
 - [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)
 

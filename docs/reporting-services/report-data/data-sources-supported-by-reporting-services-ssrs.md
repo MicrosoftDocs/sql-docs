@@ -3,7 +3,7 @@ title: "Data Sources Supported by Reporting Services"
 description: Learn about the various data sources that are supported by Reporting Services, including Microsoft SQL Server, Oracle, and ODBC.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 10/21/2021
+ms.date: 08/15/2023
 ms.service: reporting-services
 ms.subservice: report-data
 ms.topic: conceptual
@@ -101,7 +101,7 @@ helpviewer_keywords:
 |[!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] appliance|[Microsoft Parallel Data Warehouse](#PWD)|Deprecated [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension|N/A|N/A|N/A|[!INCLUDE[ssDWfull](../../includes/ssdwfull-md.md)]|N|N|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] multidimensional or tabular database|[Microsoft SQL Server Analysis Services](#AnalysisServices)|Built-in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension|Uses ADOMD.NET|Y|Y|SQL Server 2012 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and later|Y|Y|  
 |Power BI Premium dataset (Starting with Reporting Services 2019 and Power BI Report Server January 2020) |[Microsoft SQL Server Analysis Services](#AnalysisServices)|Built-in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension|Uses ADOMD.NET|Y|Y|SQL Server 2019 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and later|Y|Y|
-|Azure Analysis Services |[Microsoft SQL Server Analysis Services](#AnalysisServices)|Built-in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension|Uses ADOMD.NET|Y|Y|SQL Server 2017 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and later|Y|Y| 
+|Azure Analysis Services (Starting with Reporting Services 2017) |[Microsoft SQL Server Analysis Services](#AnalysisServices)|Built-in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension|Uses ADOMD.NET|Y|Y|SQL Server 2017 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and later|Y|Y| 
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] multidimensional database|OLEDB|Built-in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension|Extends System.Data.OledbClient<br /><br /> Version 10.0|Y|Y|SQL Server 2012 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Y|Y|
 |SharePoint lists|[Microsoft SharePoint List](#SharePointList)|Built-in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension|Gets data from Lists.asmx or the SharePoint object model API interfaces.<br /><br /> See [Note](#SharePointList).|N|Y|SharePoint 2013 Products and later|Y|Y|   
 |XML|[XML](#XML)|Built-in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension|XML data sources do not have platform dependencies.|N/A|N/A|[!INCLUDE[vstecwebservices](../../includes/vstecwebservices-md.md)] or documents|Y|Y|  

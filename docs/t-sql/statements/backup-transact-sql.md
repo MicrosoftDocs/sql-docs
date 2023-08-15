@@ -793,7 +793,11 @@ Database or log backups can be appended to any disk or tape device, allowing a d
 
 The BACKUP statement is not allowed in an explicit or implicit transaction.
 
-A BACKUP statement cannot be run on a database that is in the Restoring or standby/Read-Only states.
+You can't back up a database in the following states:
+
+* Restoring
+* Standby
+* Read only
 
 Cross-platform backup operations, even between different processor types, can be performed as long as the collation of the database is supported by the operating system.
 

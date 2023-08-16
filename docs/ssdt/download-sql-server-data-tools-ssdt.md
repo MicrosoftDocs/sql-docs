@@ -21,6 +21,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 **SQL Server Data Tools (SSDT)** is a modern development tool for building SQL Server relational databases, databases in Azure SQL, Analysis Services (AS) data models, Integration Services (IS) packages, and Reporting Services (RS) reports. With SSDT, you can design and deploy any SQL Server content type with the same ease as you would develop an application in Visual Studio.
 
+The release notes for SSDT and its components are outlined on the [SSDT Overview](sql-server-data-tools.md#release-notes).
+
 ## SSDT for Visual Studio 2022
 
 ### Changes in SSDT for Visual Studio 2022

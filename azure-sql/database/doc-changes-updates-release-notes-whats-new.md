@@ -111,7 +111,7 @@ Learn about significant changes to the Azure SQL Database documentation. For pre
 | Changes | Details |
 | --- | --- |
 | **128 vCore** | Provision your Azure SQL Database with up to [128 vCores](resource-limits-vcore-single-databases.md), [now generally available](https://techcommunity.microsoft.com/t5/azure-sql-blog/announcing-preview-of-128-vcore-provisioned-compute-size-on/ba-p/3631211). | 
-| **64 vCore option for Hyperscale premium** | A 64 vCore option is now available for [Azure SQL Database Hyperscale premium-series](resource-limits-vcore-single-databases.md#hyperscale---premium-series) and [Hyperscale premium-series memory optimized](resource-limits-vcore-single-databases.md#hyperscale---premium-series-memory-optimized).|
+| **64 vCore option for Hyperscale premium** | A 64 vCore option is now available for [Azure SQL Database Hyperscale premium-series](resource-limits-vcore-single-databases.md#hyperscale---provisioned-compute---premium-series) and [Hyperscale premium-series memory optimized](resource-limits-vcore-single-databases.md#hyperscale---provisioned-compute---premium-series-memory-optimized).|
 
 ### May 2023
 

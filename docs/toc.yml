@@ -15500,7 +15500,7 @@ items:
       - name: changefeed.change_feed_table_groups
         href: relational-databases/system-tables/changefeed-change-feed-table-groups-transact-sql.md
       - name: changefeed.change_feed_tables
-        href: relational-databases/system-tables/changefeed-change-feed-tables-transact-sql.md      
+        href: relational-databases/system-tables/changefeed-change-feed-tables-transact-sql.md
     - name: Backup & Restore Tables
       href: relational-databases/system-tables/backup-and-restore-tables-transact-sql.md
       items:
@@ -15607,7 +15607,35 @@ items:
       - name: dbo.sysjobschedules
         href: relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md
       - name: dbo.sysjobservers
-
+        href: relational-databases/system-tables/dbo-sysjobservers-transact-sql.md      
+      - name: dbo.sysjobsteps
+        href: relational-databases/system-tables/dbo-sysjobsteps-transact-sql.md
+      - name: dbo.sysjobstepslogs
+        href: relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql.md
+      - name: dbo.sysnotifications
+        href: relational-databases/system-tables/dbo-sysnotifications-transact-sql.md
+      - name: dbo.sysoperators
+        href: relational-databases/system-tables/dbo-sysoperators-transact-sql.md
+      - name: dbo.sysproxies
+        href: relational-databases/system-tables/dbo-sysproxies-transact-sql.md
+      - name: dbo.sysproxylogin
+        href: relational-databases/system-tables/dbo-sysproxylogin-transact-sql.md
+      - name: dbo.sysproxysubsystem
+        href: relational-databases/system-tables/dbo-sysproxysubsystem-transact-sql.md
+      - name: dbo.sysschedules
+        href: relational-databases/system-tables/dbo-sysschedules-transact-sql.md
+      - name: dbo.syssessions
+        href: relational-databases/system-tables/dbo-syssessions-transact-sql.md
+      - name: dbo.syssubsystems
+        href: relational-databases/system-tables/dbo-syssubsystems-transact-sql.md
+      - name: dbo.systargetservergroupmembers
+        href: relational-databases/system-tables/dbo-systargetservergroupmembers-transact-sql.md
+      - name: dbo.systargetservergroups
+        href: relational-databases/system-tables/dbo-systargetservergroups-transact-sql.md
+      - name: dbo.systargetservers
+        href: relational-databases/system-tables/dbo-systargetservers-transact-sql.md
+      - name: dbo.systaskids
+        href: relational-databases/system-tables/dbo-systaskids-transact-sql.md
       - name: sp_unsetapprole
         href: relational-databases/system-stored-procedures/sp-unsetapprole-transact-sql.md
       - name: sp_validatelogins
@@ -15647,7 +15675,7 @@ items:
       - name: sp_change_feed_disable_db
         href: relational-databases/system-stored-procedures/sp-change-feed-disable-db.md
       - name: sp_change_feed_disable_table
-        href: relational-databases/system-stored-procedures/sp-change-feed-disable-table.md        
+        href: relational-databases/system-stored-procedures/sp-change-feed-disable-table.md
       - name: sp_change_feed_drop_table_group
         href: relational-databases/system-stored-procedures/sp-change-feed-drop-table-group.md
       - name: sp_help_change_feed
@@ -15874,164 +15902,6 @@ items:
         href: relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md
       - name: sp_db_selective_xml_index
         href: relational-databases/system-stored-procedures/sp-db-selective-xml-index-transact-sql.md
-  - name: System tables
-    href: relational-databases/system-tables/system-tables-transact-sql.md
-    items:
-    - name: Extended Events Tables - trace_xe_action_map
-      href: relational-databases/system-tables/extended-events-tables-trace-xe-action-map.md
-    - name: Extended Events Tables - trace_xe_event_map
-      href: relational-databases/system-tables/extended-events-tables-trace-xe-event-map.md
-    - name: Data-tier Application Tables - sysdac_history_internal
-      href: relational-databases/system-tables/data-tier-application-tables-sysdac-history-internal.md
-    - name: Data-tier Application Tables - sysdac_instances_internal
-      href: relational-databases/system-tables/data-tier-application-tables-sysdac-instances-internal.md
-    - name: Mapping System Tables to System Views
-      href: relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md
-    - name: System Base Tables
-      href: relational-databases/system-tables/system-base-tables.md
-    - name: Azure Synapse Link for SQL Tables
-      items:
-      - name: changefeed.change_feed_settings
-        href: relational-databases/system-tables/changefeed-change-feed-settings.md
-      - name: changefeed.change_feed_table_groups
-        href: relational-databases/system-tables/changefeed-change-feed-table-groups-transact-sql.md
-      - name: changefeed.change_feed_tables
-        href: relational-databases/system-tables/changefeed-change-feed-tables-transact-sql.md      
-    - name: Backup & Restore Tables
-      href: relational-databases/system-tables/backup-and-restore-tables-transact-sql.md
-      items:
-      - name: backupfile
-        href: relational-databases/system-tables/backupfile-transact-sql.md
-      - name: backupfilegroup
-        href: relational-databases/system-tables/backupfilegroup-transact-sql.md
-      - name: backupmediafamily
-        href: relational-databases/system-tables/backupmediafamily-transact-sql.md
-      - name: backupmediaset
-        href: relational-databases/system-tables/backupmediaset-transact-sql.md
-      - name: backupset
-        href: relational-databases/system-tables/backupset-transact-sql.md
-      - name: logmarkhistory
-        href: relational-databases/system-tables/logmarkhistory-transact-sql.md
-      - name: restorefile
-        href: relational-databases/system-tables/restorefile-transact-sql.md
-      - name: restorefilegroup
-        href: relational-databases/system-tables/restorefilegroup-transact-sql.md
-      - name: restorehistory
-        href: relational-databases/system-tables/restorehistory-transact-sql.md
-      - name: suspect_pages
-        href: relational-databases/system-tables/suspect-pages-transact-sql.md
-      - name: sysopentapes
-        href: relational-databases/system-tables/sysopentapes-transact-sql.md
-    - name: Change Data Capture Tables
-      href: relational-databases/system-tables/change-data-capture-tables-transact-sql.md
-      items:
-      - name: cdc.<capture_instance>_CT
-        href: relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md
-      - name: cdc.captured_columns
-        href: relational-databases/system-tables/cdc-captured-columns-transact-sql.md
-      - name: cdc.change_tables
-        href: relational-databases/system-tables/cdc-change-tables-transact-sql.md
-      - name: cdc.ddl_history
-        href: relational-databases/system-tables/cdc-ddl-history-transact-sql.md
-      - name: cdc.lsn_time_mapping
-        href: relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md
-      - name: cdc.index_columns
-        href: relational-databases/system-tables/cdc-index-columns-transact-sql.md
-      - name: dbo.cdc_jobs
-        href: relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md
-    - name: Change Tracking Tables
-      href: relational-databases/system-tables/change-tracking-tables-transact-sql.md
-      items:
-      - name: dbo.MSchange_tracking_history
-        href: relational-databases/system-tables/dbo-mschange-tracking-history-transact-sql.md
-    - name: Database Maintenance Plan Tables
-      href: relational-databases/system-tables/database-maintenance-plan-tables-transact-sql.md
-      items:
-      - name: sysdbmaintplan_databases
-        href: relational-databases/system-tables/sysdbmaintplan-databases-transact-sql.md
-      - name: sysdbmaintplan_history
-        href: relational-databases/system-tables/sysdbmaintplan-history-transact-sql.md
-      - name: sysdbmaintplan_jobs
-        href: relational-databases/system-tables/sysdbmaintplan-jobs-transact-sql.md
-      - name: sysdbmaintplans
-        href: relational-databases/system-tables/sysdbmaintplans-transact-sql.md
-    - name: Integration Services Tables
-      href: relational-databases/system-tables/integration-services-tables-transact-sql.md
-      items:
-      - name: sysssislog
-        href: relational-databases/system-tables/sysssislog-transact-sql.md
-      - name: sysssispackagefolders
-        href: relational-databases/system-tables/sysssispackagefolders-transact-sql.md
-      - name: sysssispackages
-        href: relational-databases/system-tables/sysssispackages-transact-sql.md
-    - name: Log Shipping Tables
-      href: relational-databases/system-tables/log-shipping-tables-transact-sql.md
-      items:
-      - name: log_shipping_monitor_alert
-        href: relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md
-      - name: log_shipping_monitor_error_detail
-        href: relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md
-      - name: log_shipping_monitor_history_detail
-        href: relational-databases/system-tables/log-shipping-monitor-history-detail-transact-sql.md
-      - name: log_shipping_monitor_primary
-        href: relational-databases/system-tables/log-shipping-monitor-primary-transact-sql.md
-      - name: log_shipping_monitor_secondary
-        href: relational-databases/system-tables/log-shipping-monitor-secondary-transact-sql.md
-      - name: log_shipping_primary_databases
-        href: relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md
-      - name: log_shipping_primary_secondaries
-        href: relational-databases/system-tables/log-shipping-primary-secondaries-transact-sql.md
-      - name: log_shipping_secondary
-        href: relational-databases/system-tables/log-shipping-secondary-transact-sql.md
-      - name: log_shipping_secondary_databases
-        href: relational-databases/system-tables/log-shipping-secondary-databases-transact-sql.md
-    - name: SQL Server Agent Tables
-      href: relational-databases/system-tables/sql-server-agent-tables-transact-sql.md
-      items:
-      - name: dbo.sysalerts
-        href: relational-databases/system-tables/dbo-sysalerts-transact-sql.md
-      - name: dbo.syscategories
-        href: relational-databases/system-tables/dbo-syscategories-transact-sql.md
-      - name: dbo.sysdownloadlist
-        href: relational-databases/system-tables/dbo-sysdownloadlist-transact-sql.md
-      - name: dbo.sysjobactivity
-        href: relational-databases/system-tables/dbo-sysjobactivity-transact-sql.md
-      - name: dbo.sysjobhistory
-        href: relational-databases/system-tables/dbo-sysjobhistory-transact-sql.md
-      - name: dbo.sysjobs
-        href: relational-databases/system-tables/dbo-sysjobs-transact-sql.md
-      - name: dbo.sysjobschedules
-        href: relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md
-      - name: dbo.sysjobservers
-        href: relational-databases/system-tables/dbo-sysjobservers-transact-sql.md
-      - name: dbo.sysjobsteps
-        href: relational-databases/system-tables/dbo-sysjobsteps-transact-sql.md
-      - name: dbo.sysjobstepslogs
-        href: relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql.md
-      - name: dbo.sysnotifications
-        href: relational-databases/system-tables/dbo-sysnotifications-transact-sql.md
-      - name: dbo.sysoperators
-        href: relational-databases/system-tables/dbo-sysoperators-transact-sql.md
-      - name: dbo.sysproxies
-        href: relational-databases/system-tables/dbo-sysproxies-transact-sql.md
-      - name: dbo.sysproxylogin
-        href: relational-databases/system-tables/dbo-sysproxylogin-transact-sql.md
-      - name: dbo.sysproxysubsystem
-        href: relational-databases/system-tables/dbo-sysproxysubsystem-transact-sql.md
-      - name: dbo.sysschedules
-        href: relational-databases/system-tables/dbo-sysschedules-transact-sql.md
-      - name: dbo.syssessions
-        href: relational-databases/system-tables/dbo-syssessions-transact-sql.md
-      - name: dbo.syssubsystems
-        href: relational-databases/system-tables/dbo-syssubsystems-transact-sql.md
-      - name: dbo.systargetservergroupmembers
-        href: relational-databases/system-tables/dbo-systargetservergroupmembers-transact-sql.md
-      - name: dbo.systargetservergroups
-        href: relational-databases/system-tables/dbo-systargetservergroups-transact-sql.md
-      - name: dbo.systargetservers
-        href: relational-databases/system-tables/dbo-systargetservers-transact-sql.md
-      - name: dbo.systaskids
-        href: relational-databases/system-tables/dbo-systaskids-transact-sql.md
     - name: Replication Tables
       href: relational-databases/system-tables/replication-tables-transact-sql.md
       items:

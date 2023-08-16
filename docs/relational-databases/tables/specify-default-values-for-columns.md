@@ -3,10 +3,11 @@ title: "Specify Default Values for Columns"
 description: "Specify Default Values for Columns"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 10/21/2021
+ms.date: 08/21/2023
 ms.service: sql
 ms.subservice: table-view-index
-ms.topic: conceptual
+ms.topic: how-to
+ms.custom: UpdateFrequency5
 helpviewer_keywords:
   - "columns [SQL Server], defaults"
   - "default values"
@@ -16,7 +17,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
-You can use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to specify a default value that will be entered into the table column. You can set a default by using the SQL Server Management Studio (SSMS) Object Explorer or by executing [!INCLUDE[tsql](../../includes/tsql-md.md)].
+You can use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to specify a default value that will be entered into the table column. You can set a default by using the SSMS Object Explorer or by executing [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
 If you do not assign a default value to the column, and the user leaves the column blank, then:
 
@@ -29,11 +30,8 @@ If you do not assign a default value to the column, and the user leaves the colu
 Before you begin, be aware of the following limitations and restrictions:
 
 - If your entry in the **Default Value** field replaces a bound default (which is shown without parentheses), you will be prompted to unbind the default and replace it with your new default.
-
 - To enter a text string, enclose the value in single quotation marks ('); do not use double quotation marks (") because they are reserved for quoted identifiers.
-
 - To enter a numeric default, enter the number without quotation marks around it.
-
 - To enter an object/function, enter the name of the object/function without quotation marks around it.
 
 > [!NOTE]
@@ -45,10 +43,9 @@ The actions described in this article require **ALTER** permission on the table.
 
 ## <a name="SSMSProcedure"></a> Use SSMS to specify a default
 
-You can use the Object Explorer to specify a default value for a table column.
+You can use Object Explorer in SSMS to specify a default value for a table column. To do so, follow these steps: 
 
-### Object Explorer
-
+1. Connect to your SQL Server instance in SSMS. 
 1. In **Object Explorer**, right-click the table with columns for which you want to change the scale and select **Design**.
 
 2. Select the column for which you want to specify a default value.
@@ -62,7 +59,7 @@ You can use the Object Explorer to specify a default value for a table column.
 
 ## <a name="TsqlProcedure"></a> Use Transact-SQL to specify a default
 
-There are various ways that you can specify a default value for a column, by using SSMS to submit T-SQL.
+There are various ways that you can specify a default value for a column by using submit T-SQL.
 
 ### ALTER TABLE (T-SQL)
 

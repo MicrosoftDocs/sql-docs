@@ -49,7 +49,7 @@ If you want to run the wizard, but you don't have [!INCLUDE[msCoName](../../incl
 
     
 
-    :::image type="content" source="../../integration-services/import-export-data/media/start-wizard-start-64.png" alt-text="Start wizard Start" lightbox="media/start-wizard-start-64.png":::
+    :::image type="content" source="../../integration-services/import-export-data/media/start-wizard-start-64.png" alt-text="Screenshot of Start menu find Import and Export Wizard" lightbox="media/start-wizard-start-64.png":::
 
 ## Command prompt
 

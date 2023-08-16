@@ -91,7 +91,7 @@ For a complete installation of [!INCLUDE[ssISnoversion](../../includes/ssisnover
 
 - **Database Engine Services**. Install the Database Engine with the SQL Server Setup Wizard. Selecting the Database Engine Services allows you to create and host the SSIS Catalog database, `SSISDB`, to store, manage, run, and monitor SSIS packages.
 
-- **SQL Server Data Tools (SSDT)** and appropriate extensions. To download and install SSDT, see [Download SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md). Installing SSDT lets you design and deploy SSIS packages.
+- **SQL Server Data Tools (SSDT)** and appropriate extensions. Use SSDT to design and deploy SSIS packages. To download and install SSDT, see [Download SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md). 
 
   After you install SSDT, you need to install the appropriate extensions.
 
@@ -116,7 +116,7 @@ For a complete installation of [!INCLUDE[ssISnoversion](../../includes/ssisnover
   
   - [Microsoft Connector for Teradata (SSIS)](../data-flow/teradata-connector.md)
 
-  - For Microsoft Connectors for Oracle and Teradata by Attunity for SQL Server 2017 and before,, see [Attunity connectors](../attunity-connectors.md).
+  - For Microsoft Connectors for Oracle and Teradata by Attunity for SQL Server 2017 and before, see [Attunity connectors](../attunity-connectors.md).
 
   - Microsoft® Connector for SAP BW for Microsoft SQL Server®. To get these components, see [Microsoft® SQL Server® 2017 Feature Pack](https://www.microsoft.com/download/details.aspx?id=55992).
 

@@ -85,6 +85,21 @@ ALTER DATABASE msdb SET TRUSTWORTHY ON;
 GO
 ```
 
+The following SQL code can be used to obtain a list of databases users in MSDB that are granted DB_OWNER role. Accounts granted DB_OWNER role can escalate to SYSADMIN role.
+
+SELECT    roles.principal_id    AS RolePrincipalID
+    ,    roles.name       AS RolePrincipalName
+    ,    database_role_members.member_principal_id  AS MemberPrincipalID
+    ,    members.name      AS MemberPrincipalName
+FROM sys.database_role_members AS database_role_members  
+JOIN sys.database_principals AS roles  
+    ON database_role_members.role_principal_id = roles.principal_id  
+JOIN sys.database_principals AS members  
+    ON database_role_members.member_principal_id = members.principal_id where  roles.name='db_owner' and members.name <>'dbo'
+GO
+
+
+
 ## Next steps
 
 - [Security Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)

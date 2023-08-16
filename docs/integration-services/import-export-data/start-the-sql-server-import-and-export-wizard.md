@@ -47,7 +47,9 @@ If you want to run the wizard, but you don't have [!INCLUDE[msCoName](../../incl
 
     Run the 64-bit version of the wizard unless you know that your data source requires a 32-bit data provider.
 
-    :::image type="content" source="../../integration-services/import-export-data/media/start-wizard-start-64.png" alt-text="Start wizard Start":::
+    
+
+    :::image type="content" source="../../integration-services/import-export-data/media/start-wizard-start-64.png" alt-text="Start wizard Start" lightbox="media/start-wizard-start-64.png":::
 
 ## Command prompt
 

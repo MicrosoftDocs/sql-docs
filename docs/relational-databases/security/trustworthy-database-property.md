@@ -86,7 +86,7 @@ GO
 ```
 
 > [!WARNING]
-> There are ways to elevate a user with the `db_owner` role to become a `sysadmin` when setting `TRUSTWORTHY` to ON. Use caution when using the `TRUSTWORTHY` property. The following SQL code can be used to obtain a list of databases users in the `msdb` database that are granted the `db_owner` role.
+> There are ways to elevate a user with the `db_owner` role to become a `sysadmin` when setting `TRUSTWORTHY` to ON. Use caution when using the `TRUSTWORTHY` property. The following SQL code can be used to obtain a list of database users in a database that are granted the `db_owner` role.
 >
 >```sql
 >SELECT    roles.principal_id    AS RolePrincipalID

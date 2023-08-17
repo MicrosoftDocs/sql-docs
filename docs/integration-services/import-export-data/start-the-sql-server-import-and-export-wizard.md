@@ -47,8 +47,6 @@ If you want to run the wizard, but you don't have [!INCLUDE[msCoName](../../incl
 
     Run the 64-bit version of the wizard unless you know that your data source requires a 32-bit data provider.
 
-    
-
     :::image type="content" source="../../integration-services/import-export-data/media/start-wizard-start-64.png" alt-text="Screenshot of Start menu find Import and Export Wizard" lightbox="media/start-wizard-start-64.png":::
 
 ## Command prompt
@@ -65,8 +63,12 @@ In a Command Prompt window, run **DTSWizard.exe** from one of the following loca
 
 Run the 64-bit version of the wizard unless you know that your data source requires a 32-bit data provider.
 
-:::image type="content" source="../../integration-services/import-export-data/media/start-wizard-cmd.png" alt-text="Start wizard cmd":::
-  
+For example, to launch the 64-bit version of the wizard from the command prompt on SQL Server 2022, run the following command:
+
+```console
+C:\Program Files\Microsoft SQL Server\160\DTS\Binn\DTSWizard.exe
+```
+
 ## SQL Server Management Studio (SSMS)
 
 ### Start the SQL Server Import and Export Wizard from SQL Server Management Studio (SSMS)

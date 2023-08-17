@@ -47,7 +47,7 @@ If you want to run the wizard, but you don't have [!INCLUDE[msCoName](../../incl
 
     Run the 64-bit version of the wizard unless you know that your data source requires a 32-bit data provider.
 
-    :::image type="content" source="../../integration-services/import-export-data/media/start-wizard-start-64.png" alt-text="Screenshot of Start menu find Import and Export Wizard" lightbox="media/start-wizard-start-64.png":::
+    :::image type="content" source="../../integration-services/import-export-data/media/start-wizard-start-64.png" alt-text="Screenshot of Start menu find Import and Export Wizard." lightbox="media/start-wizard-start-64.png":::
 
 ## Command prompt
 
@@ -87,7 +87,7 @@ C:\Program Files\Microsoft SQL Server\160\DTS\Binn\DTSWizard.exe
 
    - **Export Data**  
 
-   :::image type="content" source="../../integration-services/import-export-data/media/start-wizard-ssms.jpg" alt-text="Start wizard SSMS":::
+   :::image type="content" source="../../integration-services/import-export-data/media/start-wizard-ssms.jpg" alt-text="Screetshot of start wizard SSMS.":::
 
 If you don't have SQL Server Management Studio installed, see [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
 

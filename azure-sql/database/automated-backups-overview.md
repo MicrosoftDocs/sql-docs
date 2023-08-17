@@ -50,9 +50,16 @@ The Hyperscale architecture does not require full, differential, or log backups.
 
 ## Backup storage redundancy
 
-By default, Azure SQL Database stores backups in geo-redundant [storage blobs](/azure/storage/common/storage-redundancy) that are replicated to a [paired region](/azure/availability-zones/cross-region-replication-azure). Geo-redundancy helps protect against outages that affect backup storage in the primary region. It also allows you to restore your databases in a different region in the event of a regional outage. 
 
 The storage redundancy mechanism stores multiple copies of your data so that it's protected from planned and unplanned events. These events might include transient hardware failure, network or power outages, or massive natural disasters. 
+
+By default, new databases in Azure SQL Database store backups in geo-redundant [storage blobs](/azure/storage/common/storage-redundancy) that are replicated to a [paired region](/azure/availability-zones/cross-region-replication-azure). Geo-redundancy helps protect against outages that affect backup storage in the primary region. It also allows you to restore your databases in a different region in the event of a regional outage. 
+
+The Azure portal provides a **Workload environment** option that helps to pre-set some configuration settings. These settings can be overridden. This option applies to the **Create SQL Database** portal page only.
+
+- Choosing the **development** workload environment sets the **Backup storage redundancy** option to use locally-redundant storage. Locally-redundant storage incurs less cost and is appropriate for pre-production environments that do not require the redundance of zone- or geo-replicated storage. 
+- Choosing the **Production** workload environment sets the **Backup storage redundancy** to geo-redundant storage, the default. 
+- The **Workload environment** option also changes the initial setting for compute, though this can be overridden. Otherwise, the **Workload environment** option has no impact on licensing or other database configuration settings. 
 
 To ensure that your backups stay within the same region where your database is deployed, you can change backup storage redundancy from the default geo-redundant storage to other types of storage that keep your data within the region. The configured backup storage redundancy is applied to both short-term retention (STR) backups and LTR backups. To learn more about storage redundancy, see [Data redundancy](/azure/storage/common/storage-redundancy). 
 

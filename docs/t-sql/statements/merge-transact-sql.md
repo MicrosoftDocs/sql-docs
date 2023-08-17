@@ -185,7 +185,7 @@ The table or view against which the data rows from \<table_source> are matched b
   
 If *target_table* is a view, any actions against it must satisfy the conditions for updating views. For more information, see [Modify Data Through a View](../../relational-databases/views/modify-data-through-a-view.md).  
   
-*target_table* can't be a remote table. *target_table* can't have any rules defined on it.  
+*target_table* can't be a remote table. *target_table* can't have any rules defined on it. *target_table* can't be a memory-optimized table. 
 
 
 Hints can be specified as a <merge_hint>. 

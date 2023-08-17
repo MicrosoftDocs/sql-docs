@@ -46,7 +46,7 @@ The **sqlcmd** utility is a command-line utility for ad hoc, interactive executi
 
 ## Connect to the sqlcmd utility
 
-- Connecting to a default instance by using Windows Authentication to interactively run T-SQL statements:
+- Connect to a default instance by using Windows Authentication to interactively run T-SQL statements:
 
   ```cmd
   sqlcmd -S <ComputerName>
@@ -55,7 +55,7 @@ The **sqlcmd** utility is a command-line utility for ad hoc, interactive executi
   > [!NOTE]  
   > In the previous example, `-E` is not specified because it is the default and **sqlcmd** connects to the default instance by using Windows Authentication.
 
-- Connecting to a named instance by using Windows Authentication to interactively run T-SQL statements:
+- Connect to a named instance by using Windows Authentication to interactively run T-SQL statements:
 
   ```cmd
   sqlcmd -S <ComputerName>\<InstanceName>
@@ -67,25 +67,25 @@ The **sqlcmd** utility is a command-line utility for ad hoc, interactive executi
   sqlcmd -S .\<InstanceName>
   ```
 
-- Connecting to a named instance by using Windows Authentication and specifying input and output files:
+- Connect to a named instance by using Windows Authentication and specifying input and output files:
 
   ```cmd
   sqlcmd -S <ComputerName>\<InstanceName> -i <MyScript.sql> -o <MyOutput.rpt>
   ```
 
-- Connecting to the default instance on the local computer by using Windows Authentication, executing a query, and having **sqlcmd** remain running after the query has finished running:
+- Connect to the default instance on the local computer by using Windows Authentication, executing a query, and having **sqlcmd** remain running after the query has finished running:
 
   ```cmd
   sqlcmd -q "SELECT * FROM AdventureWorks2022.Person.Person"
   ```
 
-- Connecting to the default instance on the local computer by using Windows Authentication, executing a query, directing the output to a file, and having **sqlcmd** exit after the query has finished running:
+- Connect to the default instance on the local computer by using Windows Authentication, executing a query, directing the output to a file, and having **sqlcmd** exit after the query has finished running:
 
   ```cmd
   sqlcmd -Q "SELECT * FROM AdventureWorks2022.Person.Person" -o MyOutput.txt
   ```
 
-- Connecting to a named instance using SQL Server Authentication to interactively run T-SQL statements, with **sqlcmd** prompting for a password:
+- Connect to a named instance using [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Authentication to interactively run T-SQL statements, with **sqlcmd** prompting for a password:
 
   ```cmd
   sqlcmd -U MyLogin -S <ComputerName>\<InstanceName>
@@ -112,7 +112,7 @@ T-SQL statements that are entered in an interactive session can be edited by ent
 
 ## Quoted strings
 
-Characters that are enclosed in quotation marks are used without any additional preprocessing, except that quotations marks can be inserted into a string by entering two consecutive quotation marks. [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] treats this character sequence as one quotation mark. (However, the translation occurs in the server.) Scripting variables won't be expanded when they appear within a string.
+Characters that are enclosed in quotation marks are used without any additional preprocessing, except that quotations marks can be inserted into a string by entering two consecutive quotation marks. [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] treats this character sequence as one quotation mark. (However, the translation occurs in the server.) Scripting variables aren't expanded when they appear within a string.
 
 For example:
 
@@ -151,14 +151,14 @@ C:\Temp\>
 
 This means the folder `C:\Temp\` is the current folder, and if you specify a file name, Windows looks for the file in that folder.
 
-Type **sqlcmd** to connect to the default instance of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on the local computer, and the contents of the Command Prompt window will be:
+Type **sqlcmd** to connect to the default instance of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on the local computer, and the contents of the Command Prompt window are as follows:
 
 ```cmd
 C:\Temp>sqlcmd
 1>
 ```
 
-This means you've connected to the instance of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and **sqlcmd** is now ready to accept T-SQL statements and **sqlcmd** commands. The flashing underscore after the `1>` is the **sqlcmd** prompt that marks the location at which the statements and commands you type will be displayed. Now, type `USE AdventureWorks2022` and press **Enter**, and then type `GO` and press **Enter**. The contents of the Command Prompt window will be:
+This means you've connected to the instance of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and **sqlcmd** is now ready to accept T-SQL statements and **sqlcmd** commands. The flashing underscore after the `1>` is the **sqlcmd** prompt that marks the location at which the statements and commands you type are displayed. Now, type `USE AdventureWorks2022` and press **Enter**, and then type `GO` and press **Enter**. The contents of the Command Prompt window are as follows:
 
 ```cmd
 sqlcmd
@@ -199,24 +199,24 @@ After you generate output, **sqlcmd** resets the **sqlcmd** prompt and displays 
 
 ## Create and query a SQL Server container
 
-You can use **sqlcmd** (Go) to create a new instance of SQL Server in a container. **sqlcmd** (Go) exposes a `create` statement that allows you to specify a container image and SQL Server backup, to quickly create a SQL Server instance for development, debugging, and analysis purposes.
+You can use **sqlcmd** (Go) to create a new instance of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] in a container. **sqlcmd** (Go) exposes a `create` statement that allows you to specify a container image and [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] backup, to quickly create a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance for development, debugging, and analysis purposes.
 
 > [!IMPORTANT]  
 > You need a container runtime installed, such as [Docker](https://www.docker.com/), or [Podman](https://podman.io/).
 
-The following command shows how to see all available options to create a new SQL Server container:
+The following command shows how to see all available options to create a new [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] container:
 
 ```cmd
 sqlcmd create mssql --help
 ```
 
-The following command creates a new SQL Server instance using the latest version of SQL Server 2022, then restore the Wide World Importers sample database:
+The following command creates a new [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance using the latest version of [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], then restores the Wide World Importers sample database:
 
 ```cmd
 sqlcmd create mssql --accept-eula --tag 2022-latest --using https://github.com/Microsoft/sql-server-samples/releases/download/wide-world-importers-v1.0/WideWorldImporters-Full.bak
 ```
 
-Once the SQL Server instance is created, you can use **sqlcmd** (Go) to manage and query it.
+Once the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance is created, you can use **sqlcmd** (Go) to manage and query it.
 
 The following command confirms the version of the instance that was created:
 
@@ -230,7 +230,7 @@ The following command starts an interactive session with the instance that was c
 sqlcmd query
 ```
 
-The following command opens Azure Data Studio and connect automatically to the database that was restored during the create process:
+The following command opens Azure Data Studio, and connects automatically to the database that was restored during the create process:
 
 ```cmd
 sqlcmd open ads

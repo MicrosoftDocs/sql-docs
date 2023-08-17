@@ -22,7 +22,12 @@ keywords: SSIS
 
 [!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
-SQL Server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] is a platform for building enterprise-level data integration and data transformations solutions. Use [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] to solve complex business problems by copying or downloading files, loading data warehouses, cleansing and mining data, and managing [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] objects and data.
+SQL Server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] is a platform for building enterprise-level data integration and data transformations solutions. Use [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] to solve complex business problems. For example:
+
+- Copy or download files
+- Load data warehouses
+- Cleanse and mine data
+- Manage [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] objects and data
 
 ## Capabilities
 

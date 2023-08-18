@@ -65,4 +65,4 @@ When you enable or configure automated patching, Azure configures the Azure Exte
 
 ## Next steps
 
-[Manage SQL Server license and billing options](manage-license-type.md)
+[Manage SQL Server license and billing options](manage-configuration.md)

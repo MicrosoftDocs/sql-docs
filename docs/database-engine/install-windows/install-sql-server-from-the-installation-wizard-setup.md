@@ -550,7 +550,7 @@ The Installation Wizard runs the [!INCLUDE [ssNoVersion](../../includes/ssnovers
 On the **Edition** page, select the edition you want to install.
 
 - **Specify a free edition** allows you to select Evaluation, Developer, or Web edition.
-- **Use pay-as-you-go billing through Microsoft Azure** is an alternative to using the traditional license agreement. [!INCLUDE [sql-server-2022](../../includes/sssql22-md.md)] introduces this option in setup and allows you to activate your instance for use in production without supplying a product key. This option requires an active Azure subscription. For more information, see [Manage SQL Server license type](../../sql-server/azure-arc/manage-license-type.md). With this option you can specify Standard or Enterprise edition.
+- **Use pay-as-you-go billing through Microsoft Azure** is an alternative to using the traditional license agreement. [!INCLUDE [sql-server-2022](../../includes/sssql22-md.md)] introduces this option in setup and allows you to activate your instance for use in production without supplying a product key. This option requires an active Azure subscription. For more information, see [Manage SQL Server license type](../../sql-server/azure-arc/manage-configuration.md). With this option you can specify Standard or Enterprise edition.
 - **Enter the product key** allows you to provide a product key for a specific edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. You may also specify if you have a license with Software Assurance or SQL Software Subscription, and if you have a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] license only.
 
 To continue, select **Next**.

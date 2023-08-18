@@ -41322,7 +41322,12 @@
     },
     {
       "source_path": "docs/sql-server/azure-arc/billing.md",
-      "redirect_url": "/sql/sql-server/azure-arc/manage-license-type",
+      "redirect_url": "/sql/sql-server/azure-arc/manage-configuration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-server/azure-arc/manage-license-type.md",
+      "redirect_url": "/sql/sql-server/azure-arc/manage-configuration",
       "redirect_document_id": false
     },
     {

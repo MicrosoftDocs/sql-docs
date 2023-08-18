@@ -50,7 +50,7 @@ This release is published June 13, 2023.
 
 ### Azure extension for SQL Server
 
-- Support for being able to view your SQL Server configuration is now available. See [Manage SQL Server license and billing options](manage-license-type.md).
+- Support for being able to view your SQL Server configuration is now available. See [Manage SQL Server license and billing options](manage-configuration.md).
   - View SQL Server instances
   - Modify host level properties like license type
   - Subscribe to Extended Security Update (ESU)
@@ -116,8 +116,8 @@ This release is published February 17, 2023
 
 ### Azure extension for SQL Server
 
-- [Best practices assessment](assess.md) (BPA) on Arc-enabled SQL Server requires Software Assurance or [Azure pay-as-you-go license](manage-license-type.md#manage-sql-server-license-and-billing-options).
-- [Viewing SQL Server databases - Azure Arc](view-databases.md) on Arc-enabled SQL Server requires Software Assurance or [Azure pay-as-you-go license](manage-license-type.md#manage-sql-server-license-and-billing-options).
+- [Best practices assessment](assess.md) (BPA) on Arc-enabled SQL Server requires Software Assurance or [Azure pay-as-you-go license](manage-configuration.md).
+- [Viewing SQL Server databases - Azure Arc](view-databases.md) on Arc-enabled SQL Server requires Software Assurance or [Azure pay-as-you-go license](manage-configuration.md).
 
 ## January 2023
 

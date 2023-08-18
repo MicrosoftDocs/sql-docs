@@ -24,7 +24,6 @@ You can use a custom task sequence that can deploy the Connected Machine Agent t
 
 Before you get started, be sure to review the [prerequisites](prerequisites.md) and verify that your subscription and resources meet the requirements. 
 
-
 ## Generate a service principal
 
 Create an Azure Active Directory [service principal](/azure/active-directory/develop/app-objects-and-service-principals). A service principal is a special limited management identity that is granted only the minimum permission necessary to connect machines to Azure and to create the Azure resources for Azure Arc-enabled server and Azure Arc-enabled SQL Server.

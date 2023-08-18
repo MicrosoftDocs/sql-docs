@@ -67,7 +67,7 @@ CREATE SYMMETRIC KEY key_name
 
 ## Arguments
  *Key_name*  
- Specifies the unique name by which the symmetric key is known in the database. Temporary keys are designated when the _key_name_ begins with one number (#) sign. For example, **#temporaryKey900007**. You cannot create a symmetric key that has a name that starts with more than one #. You cannot create a temporary symmetric key using an EKM provider.  
+ Specifies the unique name by which the symmetric key is known in the database. Temporary keys are designated when the _key_name_ begins with one number (#) sign. For example, **#temporaryKey900007**. You cannot create a symmetric key that has a name that starts with more than one #. You cannot create a temporary symmetric key using an EKM provider. The name is required.
   
  AUTHORIZATION *owner_name*  
  Specifies the name of the database user or application role that will own this key.  
@@ -79,10 +79,10 @@ CREATE SYMMETRIC KEY key_name
 >  This option is not available in a contained database.  
   
  KEY_SOURCE **='**_pass\_phrase_**'**  
- Specifies a pass phrase from which to derive the key.  
+ Specifies a pass phrase from which to derive the key. This parameter is optional.
   
  IDENTITY_VALUE **='**_identity\_phrase_**'**  
- Specifies an identity phrase from which to generate a GUID for tagging data that is encrypted with a temporary key.  
+ Specifies an identity phrase from which to generate a GUID for tagging data that is encrypted with a temporary key. This parameter is optional.
   
  PROVIDER_KEY_NAME**='**_key\_name\_in\_provider_**'**  
  Specifies the name referenced in the Extensible Key Management provider.  
@@ -109,7 +109,7 @@ CREATE SYMMETRIC KEY key_name
  Specifies an asymmetric key, used to encrypt the key that is being created. This asymmetric key must already exist in the database.  
   
  \<algorithm>  
-Specify the encrypting algorithm.   
+Specify the encrypting algorithm. This parameter is required.
 > [!WARNING]  
 > Beginning with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], all algorithms other than AES_128, AES_192, and AES_256 are deprecated. To use older algorithms (not recommended), you must set the database to database compatibility level 120 or lower.  
   

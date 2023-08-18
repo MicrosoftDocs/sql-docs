@@ -426,7 +426,9 @@ The query optimizer won't consider an index hint if the SET options don't have t
 
 ## <a id="using-noexpand"></a> Use NOEXPAND
 
-`NOEXPAND` applies only to *indexed views*. An indexed view is a view with a unique clustered index created on it. If a query contains references to columns that are present both in an indexed view and base tables, and the query optimizer determines that using the indexed view provides the best method for executing the query, the query optimizer uses the index on the view. This functionality is called *indexed view matching*. Prior to [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] Service Pack 1, automatic use of an indexed view by the query optimizer is supported only in specific editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+`NOEXPAND` applies only to *indexed views*. An indexed view is a view with a unique clustered index created on it. If a query contains references to columns that are present both in an indexed view and base tables, and the query optimizer determines that using the indexed view provides the best method for executing the query, the query optimizer uses the index on the view. This functionality is called *indexed view matching*. Prior to [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] Service Pack 1, automatic use of an indexed view by the query optimizer is supported only in specific editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Since, all editions support automatic use of an indexed view. [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] also support automatic use of indexed views without specifying the `NOEXPAND` hint.
+
+For more information, see [Query processing architecture guide](../../relational-databases/query-processing-architecture-guide.md#use-hints-with-indexed-views).
 
 For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see:
 
@@ -436,9 +438,6 @@ For a list of features that are supported by the editions of [!INCLUDE[ssNoVersi
 - [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md)
 
 However, for the query optimizer to consider indexed views for matching, or use an indexed view that is referenced with the `NOEXPAND` hint, the following SET options must be set to ON.
-
-> [!NOTE]  
-> [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] supports automatic use of indexed views without specifying the `NOEXPAND` hint.
 
 - ANSI_NULLS
 - ANSI_PADDING
@@ -452,7 +451,8 @@ However, for the query optimizer to consider indexed views for matching, or use 
 Also, the NUMERIC_ROUNDABORT option must be set to OFF.
 
  To force the query optimizer to use an index for an indexed view, specify the `NOEXPAND` option. This hint can be used only if the view is also named in the query. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doesn't provide a hint to force a particular indexed view to be used in a query that doesn't name the view directly in the FROM clause. However, the query optimizer considers using indexed views, even if they aren't referenced directly in the query. The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] will only automatically create statistics on an indexed view when a `NOEXPAND` table hint is used. Omitting this hint can lead to execution plan warnings about missing statistics that can't be resolved by creating statistics manually.  
-During query optimization, the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] will use view statistics that were created automatically or manually when the query references the view directly and the `NOEXPAND` hint is used.
+
+ During query optimization, the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] will use view statistics that were created automatically or manually when the query references the view directly and the `NOEXPAND` hint is used.
 
 ## Use a table hint as a query hint
 

@@ -44,7 +44,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 ##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Installing the In-Memory OLTP sample based on AdventureWorks  
  Follow these steps to install the sample:  
   
-1.  Download `AdventureWorks2022.bak` and `SQLServer2016Samples.zip` from: [https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks) to a local folder, for example `C:\Temp`.  
+1.  Download `AdventureWorks2016_EXT.bak` and `SQLServer2016Samples.zip` from: [https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks) to a local folder, for example `C:\Temp`.  
   
 2.  Restore the database backup using [!INCLUDE[tsql](../../includes/tsql-md.md)] or [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
   

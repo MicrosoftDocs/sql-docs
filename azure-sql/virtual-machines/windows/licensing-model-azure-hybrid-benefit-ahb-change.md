@@ -100,7 +100,7 @@ Update-AzSqlVM -ResourceGroupName <resource_group_name> -Name <VM_name> -License
 
 Changing the license model is:
 
-- Only supported for the Standard and Enterprise editions of SQL Server. License changes for Express, Web, and Developer are not supported.
+- Only supported for the Standard and Enterprise editions of SQL Server. License changes for Express, Web, Developer, and Evaluation are not supported.
 - Only supported for virtual machines deployed through the Azure Resource Manager model. Virtual machines deployed through the classic model are not supported.
 
 Additionally, changing the license model to **Azure Hybrid Benefit** requires [Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-overview).

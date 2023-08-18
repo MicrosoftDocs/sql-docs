@@ -10440,7 +10440,7 @@ items:
         href: sql-server/azure-arc/assess.md
       - name: View databases
         href: sql-server/azure-arc/view-databases.md
-      - name: Manage SQL Server license and billing options
+      - name: Configure SQL Server
         href: sql-server/azure-arc/manage-configuration.md
       - name: Automated patching
         href: sql-server/azure-arc/patch.md

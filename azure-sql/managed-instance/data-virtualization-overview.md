@@ -148,7 +148,7 @@ WITH (
 
 The [OPENROWSET](/sql/t-sql/functions/openrowset-transact-sql) syntax enables instant ad hoc querying while only creating the minimal number of database objects necessary.
 
-`OPENROWSET` only requires creating the external data source (and possibly the credential) as opposed to the external table approach, which requires an [external file format](/sql/t-sql/statements/create-external-file-format-transact-sql?view=azuresqldb-mi-current&preserve-view=true) and the [external table]](/sql/t-sql/statements/create-external-table-transact-sql?view=azuresqldb-mi-current&preserve-view=true) itself.
+`OPENROWSET` only requires creating the external data source (and possibly the credential) as opposed to the external table approach, which requires an [external file format](/sql/t-sql/statements/create-external-file-format-transact-sql?view=azuresqldb-mi-current&preserve-view=true) and the [external table](/sql/t-sql/statements/create-external-table-transact-sql?view=azuresqldb-mi-current&preserve-view=true) itself.
 
 The `DATA_SOURCE` parameter value is automatically prepended to the BULK parameter to form the full path to the file.
 

@@ -4,7 +4,7 @@ description: Start here to learn how to monitor Azure SQL Database with Azure Mo
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 07/29/2022
+ms.date: 08/10/2023
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: conceptual
@@ -54,6 +54,8 @@ Diagnostic settings available include:
 For more information on the resource logs and diagnostics available, see [Diagnostic telemetry for export](metrics-diagnostic-telemetry-logging-streaming-export-configure.md?tabs=azure-portal#diagnostic-telemetry-for-export). 
 
 See [Create diagnostic setting to collect platform logs and metrics in Azure](/azure/azure-monitor/essentials/diagnostic-settings) for the detailed process for creating a diagnostic setting using the Azure portal, CLI, or PowerShell. When you create a diagnostic setting, you specify which categories of logs to collect. The categories for Azure SQL Database are listed in [Azure SQL Database monitoring data reference](monitoring-sql-database-azure-monitor-reference.md#resource-logs).
+
+Logs are grouped into **Category groups**. Category groups are a collection of different logs to help you achieve different monitoring goals. These groups are defined dynamically and may change over time as new resource logs become available and are added to the category group. Note that this may incur additionally charges. The **audit** resource log category group allows you to select the resource logs that are necessary for auditing your resource. For more information, see [Diagnostic settings in Azure Monitor: Resource logs](/azure/azure-monitor/essentials/diagnostic-settings).
 
 ## Analyzing metrics
 

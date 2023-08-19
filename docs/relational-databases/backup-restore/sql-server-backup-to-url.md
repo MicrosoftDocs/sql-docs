@@ -396,21 +396,21 @@ The following examples create [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
 
 ### <a id="complete"></a> Perform a full database backup
 
-The following examples perform a full database backup of the `AdventureWorks2016` database to Azure Blob Storage. Use one of the following samples:
+The following examples perform a full database backup of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database to Azure Blob Storage. Use one of the following samples:
 
 1. **To URL using Shared Access Signature**  
 
    ```sql  
-   BACKUP DATABASE AdventureWorks2016   
-   TO URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016.bak';  
+   BACKUP DATABASE AdventureWorks2022   
+   TO URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2022.bak';  
    GO   
    ```  
 
 1. **To URL using storage account identity and access key**  
 
    ```sql
-   BACKUP DATABASE AdventureWorks2016  
-   TO URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016.bak'   
+   BACKUP DATABASE AdventureWorks2022  
+   TO URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2022.bak'   
          WITH CREDENTIAL = '<mycredentialname>'   
         ,COMPRESSION  
         ,STATS = 5;  
@@ -419,20 +419,20 @@ The following examples perform a full database backup of the `AdventureWorks2016
 
 ### <a id="PITR"></a> Restore to a point-in-time using STOPAT
 
-The following example restores the `AdventureWorks2016` sample database to its state at a point in time, and shows a restore operation.  
+The following example restores the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample database to its state at a point in time, and shows a restore operation.  
 
 **From URL using Shared Access Signature**  
 
    ```sql
-   RESTORE DATABASE AdventureWorks2016 FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016_2015_05_18_16_00_00.bak'   
-   WITH MOVE 'AdventureWorks2016_data' to 'C:\Program Files\Microsoft SQL Server\<myinstancename>\MSSQL\DATA\AdventureWorks2016.mdf'  
-   ,MOVE 'AdventureWorks2016_log' to 'C:\Program Files\Microsoft SQL Server\<myinstancename>\MSSQL\DATA\AdventureWorks2016.ldf'  
+   RESTORE DATABASE AdventureWorks2022 FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2022_2015_05_18_16_00_00.bak'   
+   WITH MOVE 'AdventureWorks2022_data' to 'C:\Program Files\Microsoft SQL Server\<myinstancename>\MSSQL\DATA\AdventureWorks2022.mdf'  
+   ,MOVE 'AdventureWorks2022_log' to 'C:\Program Files\Microsoft SQL Server\<myinstancename>\MSSQL\DATA\AdventureWorks2022.ldf'  
    ,NORECOVERY  
    ,REPLACE  
    ,STATS = 5;  
    GO   
   
-   RESTORE LOG AdventureWorks2016 FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016_2015_05_18_18_00_00.trn'   
+   RESTORE LOG AdventureWorks2022 FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2022_2015_05_18_18_00_00.trn'   
    WITH   
    RECOVERY   
    ,STOPAT = 'May 18, 2015 5:35 PM'   

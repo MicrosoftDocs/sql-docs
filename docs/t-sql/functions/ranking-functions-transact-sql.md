@@ -44,7 +44,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
  The following example shows the four ranking functions used in the same query. For function-specific examples, see each ranking function.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT p.FirstName, p.LastName  
     ,ROW_NUMBER() OVER (ORDER BY a.PostalCode) AS "Row Number"  

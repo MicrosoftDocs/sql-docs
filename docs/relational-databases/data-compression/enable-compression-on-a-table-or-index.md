@@ -209,7 +209,7 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], run `sp_estimate_d
 3.  Copy and paste the following example into the query window and select **Execute**. The example first executes the stored procedure `sp_estimate_data_compression_savings` to return the estimated size of the object if it were to use the ROW compression setting. The example then enables ROW compression on all partitions in the specified table.  
   
     ```sql  
-    USE AdventureWorks2016;  
+    USE AdventureWorks2022;  
     GO  
     EXEC sp_estimate_data_compression_savings 'Production', 'TransactionHistory', NULL, NULL, 'ROW' ;  
   
@@ -227,7 +227,7 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], run `sp_estimate_d
 3.  Copy and paste the following example into the query window and select **Execute**. The example first queries the `sys.indexes` catalog view to return the name and `index_id` for each index on the `Production.TransactionHistory` table. It then executes the stored procedure `sp_estimate_data_compression_savings` to return the estimated size of the specified index ID if it were to use the PAGE compression setting. Finally, the example rebuilds index ID 2 (`IX_TransactionHistory_ProductID`), specifying PAGE compression.  
   
     ```sql  
-    USE AdventureWorks2012;   
+    USE AdventureWorks2022;   
     GO  
     SELECT name, index_id  
     FROM sys.indexes  
@@ -246,7 +246,7 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], run `sp_estimate_d
     
 ### On Azure SQL Database
 
-[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] does not support the `sp_estimate_data_compression_savings` stored procedure. The following scripts enable compression without estimating the compression amount. 
+[!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] does not support the `sp_estimate_data_compression_savings` stored procedure. The following scripts enable compression without estimating the compression amount. 
 
 #### To enable compression on a table  
   
@@ -257,7 +257,7 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], run `sp_estimate_d
 3.  Copy and paste the following example into the query window and select **Execute**. The example enables ROW compression on all partitions in the specified table.  
   
     ```sql  
-    USE AdventureWorks2016;  
+    USE AdventureWorks2022;  
     GO  
 
     ALTER TABLE Production.TransactionHistory REBUILD PARTITION = ALL  
@@ -274,7 +274,7 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], run `sp_estimate_d
 3.  Copy and paste the following example into the query window and select **Execute**. The example first queries the `sys.indexes` catalog view to return the name and `index_id` for each index on the `Production.TransactionHistory` table. Finally, the example rebuilds index ID 2 (`IX_TransactionHistory_ProductID`), specifying PAGE compression.  
   
     ```sql  
-    USE AdventureWorks2016;   
+    USE AdventureWorks2022;   
     GO  
     SELECT name, index_id  
     FROM sys.indexes  

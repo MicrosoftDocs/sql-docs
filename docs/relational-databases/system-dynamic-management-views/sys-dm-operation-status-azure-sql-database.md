@@ -23,7 +23,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||=azuresqldb-mi-current"
 
 [!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
 
-Returns information about operations performed on databases in a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] server.
+Returns information about operations performed on databases in a [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] server.
 
 | Column name | Data type | Description |
 | --- | --- | --- |

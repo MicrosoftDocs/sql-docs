@@ -58,7 +58,7 @@ Requires membership in the **db_owner** fixed database role.
 
 ## Examples
 
-The following example stops the capture job for the `AdventureWorks2022` database.
+The following example stops the capture job for the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.
 
 ```sql
 USE AdventureWorks2022;

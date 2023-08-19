@@ -97,7 +97,7 @@ To use Always Encrypted with secure enclaves in a .NET Framework application, yo
       </configuration>
       ```
 
-   1. If you're using [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] with SGX enclaves and Microsoft Azure Attestation (you're using the database from [Tutorial: Getting started with Always Encrypted with secure Intel SGX enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started-sgx)), add the below section.
+   1. If you're using [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] with SGX enclaves and Microsoft Azure Attestation (you're using the database from [Tutorial: Getting started with Always Encrypted with secure Intel SGX enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started-sgx)), add the below section.
 
       ```xml
       <SqlColumnEncryptionEnclaveProviders>

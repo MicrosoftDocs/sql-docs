@@ -791,19 +791,19 @@ GO
 
 ### H. Attach a full-text catalog that has been moved
 
-The following example attaches the full-text catalog `AdvWksFtCat` along with the `AdventureWorks2012` data and log files. In this example, the full-text catalog is moved from its default location to a new location `c:\myFTCatalogs`. The data and log files remain in their default locations.
+The following example attaches the full-text catalog `AdvWksFtCat` along with the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] data and log files. In this example, the full-text catalog is moved from its default location to a new location `c:\myFTCatalogs`. The data and log files remain in their default locations.
 
 ```sql
 USE master;
 GO
---Detach the AdventureWorks2012 database
-sp_detach_db AdventureWorks2012;
+--Detach the AdventureWorks2022 database
+sp_detach_db AdventureWorks2022;
 GO
 -- Physically move the full text catalog to the new location.
---Attach the AdventureWorks2012 database and specify the new location of the full-text catalog.
-CREATE DATABASE AdventureWorks2012 ON
-    (FILENAME = 'c:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\AdventureWorks2012_data.mdf'),
-    (FILENAME = 'c:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\AdventureWorks2012_log.ldf'),
+--Attach the AdventureWorks2022 database and specify the new location of the full-text catalog.
+CREATE DATABASE AdventureWorks2022 ON
+    (FILENAME = 'c:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\AdventureWorks2022_data.mdf'),
+    (FILENAME = 'c:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\AdventureWorks2022_log.ldf'),
     (FILENAME = 'c:\myFTCatalogs\AdvWksFtCat')
 FOR ATTACH;
 GO
@@ -957,7 +957,7 @@ GO
 
 ## Overview
 
-In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], this statement can be used with an Azure SQL server to create a single database or a database in an elastic pool. With this statement, you specify the database name, collation, maximum size, edition, service objective, and, if applicable, the elastic pool for the new database. It can also be used to create the database in an elastic pool. Additionally, it can be used to create a copy of the database on another SQL Database server.
+In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], this statement can be used with an Azure SQL server to create a single database or a database in an elastic pool. With this statement, you specify the database name, collation, maximum size, edition, service objective, and, if applicable, the elastic pool for the new database. It can also be used to create the database in an elastic pool. Additionally, it can be used to create a copy of the database on another SQL Database server.
 
 ## Syntax
 
@@ -1158,7 +1158,7 @@ The name of the database that is to be copied.
 
 ## Remarks
 
-Databases in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] have several default settings that are set when the database is created. For more information about these default settings, see the list of values in [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
+Databases in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] have several default settings that are set when the database is created. For more information about these default settings, see the list of values in [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
 `MAXSIZE` provides the ability to limit the size of the database. If the size of the database reaches its `MAXSIZE`, you receive error code 40544. When this occurs, you cannot insert or update data, or create new objects (such as tables, stored procedures, views, and functions). However, you can still read and delete data, truncate tables, drop tables and indexes, and rebuild indexes. You can then update `MAXSIZE` to a value larger than your current database size or delete some data to free storage space. There might be as much as a fifteen-minute delay before you can insert new data.
 
@@ -1364,7 +1364,7 @@ When set to `ON`, it creates a ledger database, in which the integrity of all us
 
 ## Remarks
 
-Databases in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] have several default settings that are set when the database is created. For more information about these default settings, see the list of values in [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
+Databases in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] have several default settings that are set when the database is created. For more information about these default settings, see the list of values in [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
 > [!IMPORTANT]
 > The `CREATE DATABASE` statement must be the only statement in a [!INCLUDE[tsql](../../includes/tsql-md.md)] batch.
@@ -1474,7 +1474,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 
 #### *database_name*
 
-The name of the new database. This name must be unique on the SQL server, which can host both databases in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] databases, and comply with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rules for identifiers. For more information, see [Identifiers](../../relational-databases/databases/database-identifiers.md).
+The name of the new database. This name must be unique on the SQL server, which can host both databases in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] databases, and comply with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rules for identifiers. For more information, see [Identifiers](../../relational-databases/databases/database-identifiers.md).
 
 #### *collation_name*
 

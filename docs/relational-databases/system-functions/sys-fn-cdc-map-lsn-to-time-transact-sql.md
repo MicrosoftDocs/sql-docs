@@ -49,7 +49,7 @@ sys.fn_cdc_map_lsn_to_time ( lsn_value )
  The following example uses the function `sys.fn_cdc_map_lsn_to_time` to determine the commit time associated with the last change processed in the specified LSN interval for the `HumanResources_Employee` capture instance.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DECLARE @max_lsn binary(10);  
 SELECT @max_lsn = MAX(__$start_lsn)  

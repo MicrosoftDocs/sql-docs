@@ -4,7 +4,7 @@ description: Learn about the TRUSTWORTHY database property, which indicates whet
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 01/16/2023
+ms.date: 08/15/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
@@ -15,7 +15,7 @@ helpviewer_keywords:
 
 [!INCLUDE [sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
-The `TRUSTWORTHY` database property is used to indicate whether the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trusts the database and the contents within it. By default, this setting is OFF, but can be set to ON by using the `ALTER DATABASE` statement. For example: `ALTER DATABASE AdventureWorks2019 SET TRUSTWORTHY ON;`.
+The `TRUSTWORTHY` database property is used to indicate whether the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trusts the database and the contents within it. By default, this setting is OFF, but can be set to ON by using the `ALTER DATABASE` statement. For example: `ALTER DATABASE AdventureWorks2022 SET TRUSTWORTHY ON;`.
 
 > [!NOTE]  
 > To set this option, you must be a member of the **sysadmin** fixed server role.
@@ -26,9 +26,9 @@ We recommend that you leave the `TRUSTWORTHY` database property set to OFF to mi
 
 - Malicious modules that are defined to execute as high privileged users. For more information, see [EXECUTE AS Clause (Transact-SQL)](../../t-sql/statements/execute-as-clause-transact-sql.md).
 
-Both situations require a specific degree of privilege and are protected by appropriate mechanisms when they are used in the context of a database that is already attached to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. However, if the database is taken offline, if you have access to the database file you can potentially attach it to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] of your choice and add malicious content to the database. When databases are detached and attached in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], certain permissions are set on the data and log files that restrict access to the database files.
+Both situations require a specific degree of privilege and are protected by appropriate mechanisms when they're used in the context of a database that is already attached to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. However, if the database is taken offline, if you have access to the database file you can potentially attach it to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] of your choice and add malicious content to the database. When databases are detached and attached in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], certain permissions are set on the data and log files that restrict access to the database files.
 
-Because a database that is attached to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can't be immediately trusted, the database isn't allowed to access resources beyond the scope of the database until the database is explicitly marked trustworthy. Therefore, if you back up or detach a database that has the `TRUSTWORTHY` option ON and you attach or restore the database to the same or another SQL Server instance, the `TRUSTWORTHY` property will be set to OFF when attach or restore is completed. Also, modules that are designed to access resources outside the database, and assemblies with either the EXTERNAL_ACCESS and UNSAFE permission setting, have additional requirements to run successfully.
+Because a database that is attached to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can't be immediately trusted, the database isn't allowed to access resources beyond the scope of the database until the database is explicitly marked trustworthy. Therefore, if you back up or detach a database that has the `TRUSTWORTHY` option ON and you attach or restore the database to the same or another SQL Server instance, the `TRUSTWORTHY` property is set to OFF when attach or restore is completed. Also, modules that are designed to access resources outside the database, and assemblies with either the EXTERNAL_ACCESS and UNSAFE permission setting, have extra requirements to run successfully.
 
 > [!NOTE]  
 > By default, the `TRUSTWORTHY` setting is set to ON for the `msdb` database. If you change this setting from its default value, it might result in unexpected behavior by SQL Server components that use the `msdb` database.
@@ -39,7 +39,7 @@ If the `TRUSTWORTHY` setting is set to ON, and if the owner of the database is a
 
 In an Internet Service Provider (ISP) environment (for example, in a web-hosting service), each customer is permitted to manage their own database and is restricted from accessing system databases and other user databases. For example, the databases of two competing companies could be hosted by the same ISP and exist in the same instance of SQL Server. Dangerous code could be added to a user database when the database is attached to its original instance, and the code would be enabled on the ISP instance when the database is deployed. This situation makes controlling cross-database access crucial.
 
-If the same general entity owns and manages each database, it is still not a good practice to establish a trust relationship with a database unless an application-specific feature, such as a cross-database Service Broker communication, is required. A trust relationship between databases can be established by enabling cross-database ownership chaining or by marking a database as trusted by the instance using the `TRUSTWORTHY` property. The `is_trustworthy_on` column of the `sys.databases` catalog view indicates if a database has its `TRUSTWORTHY` property set.
+If the same general entity owns and manages each database, it's still not a good practice to establish a trust relationship with a database unless an application-specific feature, such as a cross-database Service Broker communication, is required. A trust relationship between databases can be established by enabling cross-database ownership chaining or by marking a database as trusted by the instance using the `TRUSTWORTHY` property. The `is_trustworthy_on` column of the `sys.databases` catalog view indicates if a database has its `TRUSTWORTHY` property set.
 
 The best practices for database ownership and trust include the following:
 
@@ -84,6 +84,22 @@ If this query shows that the `TRUSTWORTHY` property is set to OFF, you can run t
 ALTER DATABASE msdb SET TRUSTWORTHY ON;
 GO
 ```
+
+> [!WARNING]
+> There are ways to elevate a user with the `db_owner` role to become a `sysadmin` when setting `TRUSTWORTHY` to ON. Use caution when using the `TRUSTWORTHY` property. The following SQL code can be used to obtain a list of database users in a database that are granted the `db_owner` role.
+>
+>```sql
+>SELECT    roles.principal_id    AS RolePrincipalID
+>    ,    roles.name       AS RolePrincipalName
+>    ,    database_role_members.member_principal_id  AS MemberPrincipalID
+>    ,    members.name      AS MemberPrincipalName
+>FROM sys.database_role_members AS database_role_members  
+>JOIN sys.database_principals AS roles  
+>    ON database_role_members.role_principal_id = roles.principal_id  
+>JOIN sys.database_principals AS members  
+>    ON database_role_members.member_principal_id = members.principal_id where  roles.name='db_owner' and members.name <>'dbo'
+>GO
+>```
 
 ## Next steps
 

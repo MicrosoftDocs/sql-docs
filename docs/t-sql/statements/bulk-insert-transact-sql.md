@@ -405,10 +405,10 @@ Additionally, ALTER TABLE permission is required if one or more of the following
 
 ### A. Use pipes to import data from a file
 
-The following example imports order detail information into the `AdventureWorks2012.Sales.SalesOrderDetail` table from the specified data file by using a pipe (`|`) as the field terminator and `|\n` as the row terminator.
+The following example imports order detail information into the `AdventureWorks2022.Sales.SalesOrderDetail` table from the specified data file by using a pipe (`|`) as the field terminator and `|\n` as the row terminator.
 
 ```sql
-BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
+BULK INSERT AdventureWorks2022.Sales.SalesOrderDetail
    FROM 'f:\orders\lineitem.tbl'
    WITH
       (
@@ -426,7 +426,7 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 The following example specifies the `FIRE_TRIGGERS` argument.
 
 ```sql
-BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
+BULK INSERT AdventureWorks2022.Sales.SalesOrderDetail
    FROM 'f:\orders\lineitem.tbl'
    WITH
      (
@@ -445,7 +445,7 @@ The following example imports a file that uses the line feed as a row terminator
 
 ```sql
 DECLARE @bulk_cmd VARCHAR(1000);
-SET @bulk_cmd = 'BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
+SET @bulk_cmd = 'BULK INSERT AdventureWorks2022.Sales.SalesOrderDetail
 FROM ''<drive>:\<path>\<filename>''
 WITH (ROWTERMINATOR = '''+CHAR(10)+''')';
 EXEC(@bulk_cmd);

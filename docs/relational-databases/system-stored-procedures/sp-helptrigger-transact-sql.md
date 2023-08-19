@@ -68,7 +68,7 @@ sp_helptrigger [ @tabname = ] 'table'
  The following example executes `sp_helptrigger` to produce information about the trigger(s) on the `Person.Person` table.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_helptrigger 'Person.Person';  
 ```  

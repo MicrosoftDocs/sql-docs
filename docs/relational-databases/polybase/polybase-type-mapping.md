@@ -80,10 +80,10 @@ For external tables that reference files in external data sources, the column an
 **Type mismatch**
 
 **Float:**
-Oracle supports floating point precision of 126, which is lower than what SQL server supports (53). Therefore, **Float (1-53)** can be mapped directly, but beyond that, there is data loss due to truncation.
+Oracle supports floating point precision of 126, which is lower than what SQL Server supports (53). Therefore, **Float (1-53)** can be mapped directly, but beyond that, there is data loss due to truncation.
 
 **Timestamp:**  
-Timestamp and Timestamp with local timezone in Oracle supports 9 fractional seconds precision whereas, SQL server DateTime2 supports only 7 fractional seconds precision.
+Timestamp and Timestamp with local timezone in Oracle supports 9 fractional seconds precision whereas, SQL Server DateTime2 supports only 7 fractional seconds precision.
 
 
 ## MongoDB Type Mapping

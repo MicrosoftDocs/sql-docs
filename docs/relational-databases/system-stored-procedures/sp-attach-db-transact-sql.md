@@ -82,11 +82,11 @@ sp_attach_db [ @dbname= ] 'dbname'
  The following example attaches files from [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] to the current server.  
   
 ```  
-EXEC sp_attach_db @dbname = N'AdventureWorks2012',   
+EXEC sp_attach_db @dbname = N'AdventureWorks2022',   
     @filename1 =   
-N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\AdventureWorks2012_Data.mdf',   
+N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\AdventureWorks2022_Data.mdf',   
     @filename2 =   
-N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\AdventureWorks2012_log.ldf';  
+N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\AdventureWorks2022_log.ldf';  
 ```  
   
 ## See Also  

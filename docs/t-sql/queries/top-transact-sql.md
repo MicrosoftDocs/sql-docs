@@ -161,7 +161,7 @@ Examples in this section demonstrate the basic functionality of the ORDER BY cla
 The following examples use a constant value to specify the number of employees that are returned in the query result set. In the first example, the first 10 undefined rows are returned because an ORDER BY clause isn't used. In the second example, an ORDER BY clause is used to return the top 10 recently hired employees.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 -- Select the first 10 random employees.  
 SELECT TOP(10)JobTitle, HireDate  
@@ -178,7 +178,7 @@ GO
 The following example uses a variable to specify the number of employees that are returned in the query result set.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DECLARE @p AS INT = 10;  
 SELECT TOP(@p)JobTitle, HireDate, VacationHours  
@@ -191,7 +191,7 @@ GO
 The following example uses PERCENT to specify the number of employees that are returned in the query result set. There are 290 employees in the `HumanResources.Employee` table. Because five percent of 290 is a fractional value, the value is rounded up to the next whole number.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT TOP(5)PERCENT JobTitle, HireDate  
 FROM HumanResources.Employee  
@@ -205,7 +205,7 @@ GO
 The following example gets the top `10` percent of all employees with the highest salary and returns them in descending order according to their salary. Specifying `WITH TIES` ensures that employees with salaries equal to the lowest salary returned (the last row) are also included in the result set, even if it exceeds `10` percent of employees.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT TOP(10) PERCENT WITH TIES  
 pp.FirstName, pp.LastName, e.JobTitle, e.Gender, r.Rate  
@@ -224,7 +224,7 @@ GO
 When you use a TOP (*n*) clause with DELETE, the delete operation is done on an undefined selection of *n* number of rows. That is, the DELETE statement chooses any (*n*) number of rows that meet the criteria defined in the WHERE clause. The following example deletes `20` rows from the `PurchaseOrderDetail` table that have due dates earlier than July 1, 2002.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DELETE TOP (20)   
 FROM Purchasing.PurchaseOrderDetail  
@@ -235,7 +235,7 @@ GO
 If you want to use TOP to delete rows in a meaningful chronological order, use TOP with ORDER BY in a subselect statement. The following query deletes the 10 rows of the `PurchaseOrderDetail` table that have the earliest due dates. To ensure that only 10 rows are deleted, the column specified in the subselect statement (`PurchaseOrderID`) is the primary key of the table. Using a nonkey column in the subselect statement may result in the deletion of more than 10 rows if the specified column contains duplicate values.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DELETE FROM Purchasing.PurchaseOrderDetail  
 WHERE PurchaseOrderDetailID IN  
@@ -249,7 +249,7 @@ GO
 The following example creates the table `EmployeeSales` and inserts the name and year-to-date sales data for the top five employees from the table `HumanResources.Employee`. The INSERT statement chooses any five rows returned by the `SELECT` statement that meet the criteria defined in the WHERE clause. The OUTPUT clause displays the rows that are inserted into the `EmployeeSales` table. Notice that the ORDER BY clause in the SELECT statement isn't used to determine the top five employees.  
   
 ```sql  
-USE AdventureWorks2012 ;  
+USE AdventureWorks2022;  
 GO  
 IF OBJECT_ID ('dbo.EmployeeSales', 'U') IS NOT NULL  
     DROP TABLE dbo.EmployeeSales;  
@@ -290,7 +290,7 @@ GO
 The following example uses the TOP clause to update rows in a table. When you use a TOP (*n*) clause with UPDATE, the update operation runs on an undefined number of rows. That is, the UPDATE statement chooses any (*n*) number of rows that meet the criteria defined in the WHERE clause. The following example assigns 10 customers from one salesperson to another.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 UPDATE TOP (10) Sales.Store  
 SET SalesPersonID = 276  
 WHERE SalesPersonID = 275;  

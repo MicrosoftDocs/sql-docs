@@ -12,7 +12,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 # Implementing a CASE Expression in a Natively Compiled Stored Procedure
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-**Applies to:** [!INCLUDE[ssSDSFull_md](../../includes/sssdsfull-md.md)] and SQL Server starting [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]
+**Applies to:** [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and SQL Server starting [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]
 
 CASE expressions are supported in natively compiled T-SQL modules. The following example demonstrates a way to use
 the CASE expression in a query. 

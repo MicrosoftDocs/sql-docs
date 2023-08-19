@@ -37,6 +37,9 @@ The following properties are available.
 ## Managed identities for Azure resources authentication
 When running SSIS packages on [Azure-SSIS integration runtime (IR) in Azure Data Factory (ADF)](/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime), you can use Azure Active Directory (AAD) authentication with [the specified system/user-assigned managed identity for your ADF](/azure/data-factory/connector-azure-blob-storage#managed-identity) to access Azure Storage. Your Azure-SSIS IR can access and copy data from or to your storage account by using this managed identity.
 
+> [!NOTE]
+> When you use user-assigned managed identity, SSIS integration runtime Azure Active Directory authentication needs to be enabled with the same user-assigned managed identity. For more information, see [Enable Azure Active Directory authentication for Azure-SSIS integration runtime](/azure/data-factory/enable-aad-authentication-azure-ssis-ir).
+
 Refer to the [Authenticate access to Azure Storage using AAD](/azure/storage/common/storage-auth-aad) article for Azure Storage authentication in general. To use AAD authentication with the specified system/user-assigned managed identity for your ADF to access Azure Storage, follow these steps:
  
 1. [Find the specified system/user-assigned managed identity for your ADF from Azure portal](/azure/data-factory/data-factory-service-identity). Go to your data factory's **Properties**. Copy the **Managed Identity Application ID** (not the **Managed Identity Object ID**).

@@ -143,7 +143,7 @@ The second time a user pins an item, the steps 1-4 are skipped and instead the A
 
 ![Diagram showing what happens when a subscription fires to refresh a dashboard tile.](../../reporting-services/install-windows/media/ssrs-subscription-to-powerbi-flow.png)
 
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/QhPQObqmMPc" frameborder="0" allowfullscreen></iframe>
+   > [!VIDEO https://www.youtube-nocookie.com/embed/QhPQObqmMPc]
 
 ## Considerations and limitations
 

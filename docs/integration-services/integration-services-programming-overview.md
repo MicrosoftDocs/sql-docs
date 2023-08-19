@@ -60,7 +60,7 @@ The [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Script task and S
 
 In [!INCLUDE[ssSQL19](../includes/sssql19-md.md)], the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] assemblies were upgraded to .NET 4.0. There's a separate global assembly cache for .NET 4, located in `*\<drive>*:\Windows\Microsoft.NET\assembly`. You can find all of the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] assemblies under this path, usually in the GAC_MSIL folder.
 
-As in previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the core [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] extensibility .dll files are also located at `*\<drive>*:\Program Files\Microsoft SQL Server\\\<nnn>\SDK\Assemblies`. `<nnn>` identifies the version of [SQL sever shared Files location](../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md#shared-files-for-all-instances-of-).
+As in previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the core [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] extensibility .dll files are also located at `*\<drive>*:\Program Files\Microsoft SQL Server\\\<nnn>\SDK\Assemblies`. `<nnn>` identifies the version of [SQL Server shared Files location](../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md#shared-files-for-all-instances-of-).
 
 ## Commonly Used Assemblies
 

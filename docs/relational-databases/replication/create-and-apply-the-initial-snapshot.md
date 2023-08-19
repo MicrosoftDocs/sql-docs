@@ -149,7 +149,7 @@ Initial snapshots can be programmatically created either by creating and running
   
 REM -- Declare variables  
 SET Publisher=%InstanceName%  
-SET PublicationDB=AdventureWorks2012   
+SET PublicationDB=AdventureWorks2022   
 SET Publication=AdvWorksSalesOrdersMerge   
   
 REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersMerge.  

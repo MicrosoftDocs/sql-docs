@@ -58,7 +58,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
   
 |Return value|Description|  
 |------------------|-----------------|  
-|0|*login* is not a member of *role*.<br /><br /> In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], this statement always returns 0.|  
+|0|*login* is not a member of *role*.<br /><br /> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], this statement always returns 0.|  
 |1|*login* is a member of *role*.|  
 |NULL|*role* or *login* is not valid, or you do not have permission to view the role membership.|  
   

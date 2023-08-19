@@ -239,7 +239,7 @@ After you have created the availability group, connect to each server instance t
   
 #### REPLICA ON
 
-Specifies from one to five SQL server instances to host availability replicas in the new availability group.  Each replica is specified by its server instance address followed by a WITH (...) clause. Minimally, you must specify your local server instance, which becomes the initial primary replica. Optionally, you can also specify up to four secondary replicas.  
+Specifies from one to five SQL Server instances to host availability replicas in the new availability group.  Each replica is specified by its server instance address followed by a WITH (...) clause. Minimally, you must specify your local server instance, which becomes the initial primary replica. Optionally, you can also specify up to four secondary replicas.  
   
  You need to join every secondary replica to the availability group. For more information, see [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md).  
   

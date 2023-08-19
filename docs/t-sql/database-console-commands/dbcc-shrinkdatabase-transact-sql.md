@@ -108,7 +108,7 @@ Suppresses all informational messages that have severity levels from 0 through 1
 
 ### WAIT_AT_LOW_PRIORITY with shrink operations
 
-**Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later versions, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]
+**Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]
 
 The wait at low priority feature reduces lock contention. For more information, see [Understanding concurrency issues with DBCC SHRINKDATABASE](#understand-concurrency-issues-with-dbcc-shrinkdatabase).
 
@@ -239,7 +239,7 @@ GO
 
 ### B. Truncate a database
 
-The following example shrinks the data and log files in the `AdventureWorks2022` sample database to the last assigned extent.
+The following example shrinks the data and log files in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample database to the last assigned extent.
 
 ```sql
 DBCC SHRINKDATABASE (AdventureWorks2022, TRUNCATEONLY);
@@ -254,7 +254,7 @@ DBCC SHRINKDATABASE (database_B, 10);
 
 ### D. Shrink a database with WAIT_AT_LOW_PRIORITY
 
-The following example attempts to reduce the size of the data and log files in the `AdventureWorks2022` database to allow for 20% free space in the database. If a lock can't be obtained within one minute, the shrink operation will abort.
+The following example attempts to reduce the size of the data and log files in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database to allow for 20% free space in the database. If a lock can't be obtained within one minute, the shrink operation will abort.
 
 ```sql
 DBCC SHRINKDATABASE ([AdventureWorks2022], 20) WITH WAIT_AT_LOW_PRIORITY (ABORT_AFTER_WAIT = SELF);

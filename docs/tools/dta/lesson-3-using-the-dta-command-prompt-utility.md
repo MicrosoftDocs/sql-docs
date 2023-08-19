@@ -26,17 +26,16 @@ Using the XML input functionality of Database Engine Tuning Advisor is beyond th
   
 This task guides you through starting the **dta** utility, viewing its Help, and then using it to tune a workload from the command prompt. It uses the workload, MyScript.sql, which you created for the Database Engine Tuning Advisor graphical user interface (GUI) practice [Tuning a Workload](lesson-2-using-database-engine-tuning-advisor.md#tuning-a-workload)  
   
-The tutorial uses the AdventureWorks2017 sample database. For security reasons, the sample databases are not installed by default. To install the sample databases, see [Installing SQL Server Samples and Sample Databases](../../samples/adventureworks-install-configure.md).  
+[!INCLUDE [article-uses-adventureworks](../../includes/article-uses-adventureworks.md)]
   
 The following tasks guide you through opening a command prompt, starting the **dta** command prompt utility, viewing its syntax Help, and tuning a simple workload, MyScript.sql, which you created in [Tuning a Workload](./lesson-2-using-database-engine-tuning-advisor.md).  
 
-## Prerequisites 
+## Prerequisites
 
-To complete this tutorial, you need SQL Server Management Studio, access to a server that's running SQL Server, and an AdventureWorks database.
+To complete this tutorial, you need SQL Server Management Studio, access to a server that's running SQL Server, and the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.
 
-- Install [SQL Server 2017 Developer Edition.](https://www.microsoft.com/sql-server/sql-server-downloads)
-- Download [AdventureWorks2017 sample database.](../../samples/adventureworks-install-configure.md)
-
+- Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+- Download [AdventureWorks sample database](../../samples/adventureworks-install-configure.md).
 
 Instructions for restoring databases in SSMS are here: [Restore a database.](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)
 
@@ -67,7 +66,7 @@ Instructions for restoring databases in SSMS are here: [Restore a database.](../
 2.  At the command prompt, type the following, and press ENTER to run the command and start the tuning session (note that the utility is case-sensitive when it parses commands):  
   
     ```  
-    dta -S YourServerName\YourSQLServerInstanceName -E -D AdventureWorks2012 -if MyScript.sql -s MySession2 -of MySession2OutputScript.sql -ox MySession2Output.xml -fa IDX_IV -fp NONE -fk NONE  
+    dta -S YourServerName\YourSQLServerInstanceName -E -D AdventureWorks2022 -if MyScript.sql -s MySession2 -of MySession2OutputScript.sql -ox MySession2Output.xml -fa IDX_IV -fp NONE -fk NONE  
     ```  
   
     where `-S` specifies the name of your server and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance where the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database is installed. The setting `-E` specifies that you want to use a trusted connection to the instance, which is appropriate if you are connecting with a Windows domain account. The setting `-D` specifies the database that you want to tune, `-if` specifies the workload file, `-s` specifies the session name, `-of` specifies the file to which you want the tool to write the [!INCLUDE[tsql](../../includes/tsql-md.md)] recommendations script, and `-ox` specifies the file to which you want the tool to write the recommendations in XML format. The last three switches specify tuning options as follows: `-fa IDX_IV` specifies that Database Engine Tuning Advisor should only consider adding indexes (both clustered and nonclustered) and indexed views; `-fp NONE` specifies that no partition strategy should be considered during analysis; and `-fk NONE` specifies that no existing physical design structures in the database must be kept when Database Engine Tuning Advisor makes its recommendations.  

@@ -49,6 +49,17 @@ To create a single database in the Azure portal, this quickstart starts at the A
    Select **OK**.
 
 1. Leave **Want to use SQL elastic pool** set to **No**.
+1. For **Workload environment**, specify **Development** for this exercise. 
+
+   The Azure portal provides a **Workload environment** option that helps to pre-set some configuration settings. These settings can be overridden. This option applies to the **Create SQL Database** portal page only. Otherwise, the **Workload environment** option has no impact on licensing or other database configuration settings.
+
+   - Choosing the **development** workload environment sets a few options, including: 
+      - **Backup storage redundancy** option is locally-redundant storage. Locally-redundant storage incurs less cost and is appropriate for pre-production environments that do not require the redundance of zone- or geo-replicated storage. 
+      - **Compute + storage** is General Purpose, Serverless with a single vCore. By default, there is a [one-hour auto-pause delay](serverless-tier-overview.md?view=azuresql&preserve-view=true&tabs=general-purpose#performance-configuration).
+   - Choosing the **Production** workload environment sets: 
+      - **Backup storage redundancy** is geo-redundant storage, the default. 
+      - **Compute + storage** is General Purpose, Provisioned with 2 vCores and 32 GB of storage. This can be further modified in the next step.
+      
 1. Under **Compute + storage**, select **Configure database**.
 1. This quickstart uses a serverless database, so leave **Service tier** set to **General Purpose (Most budget-friendly, serverless compute)** and set **Compute tier** to **Serverless**. Select **Apply**.
 1. Under **Backup storage redundancy**, choose a redundancy option for the storage account where your backups will be saved. To learn more, see [backup storage redundancy](automated-backups-overview.md#backup-storage-redundancy). 

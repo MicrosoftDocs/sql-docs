@@ -120,7 +120,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
  An example of an URN for a database is  
   
 ```  
-/Server/Database[@Name='Adventureworks2012']  
+/Server/Database[@Name='AdventureWorks2022']  
 ```  
   
  The URN of an object can be retrieved by referencing its URN property. The Scripter object also uses URNs as parameters that pass object references to the method of the **Scripter** object. Additionally, an URN can be specified for the **GetSmoObject** method of the **Server** object. This is used to create an instance of the SMO object.  

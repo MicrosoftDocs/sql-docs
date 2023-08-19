@@ -15,9 +15,7 @@ ms.custom: intro-get-started
 
 If you are a Linux user who is new to SQL Server, the following tasks walk you through some of the security tasks. These are not unique or specific to Linux, but it helps to give you an idea of areas to investigate further. In each example, a link is provided to the in-depth documentation for that area.
 
-> [!NOTE]
->  The following examples use the **AdventureWorks2014** sample database. For instructions on how to obtain and install this sample database, see [Restore a SQL Server database from Windows to Linux](sql-server-linux-migrate-restore-database.md).
-
+[!INCLUDE [article-uses-adventureworks](../includes/article-uses-adventureworks.md)]
 
 ## Create a login and a database user 
 
@@ -30,10 +28,10 @@ CREATE LOGIN Larry WITH PASSWORD = '************';
 > [!NOTE]
 >  Always use a strong password in place of the asterisks in the previous command.
 
-Logins can connect to SQL Server and have access (with limited permissions) to the master database. To connect to a user-database, a login needs a corresponding identity at the database level, called a database user. Users are specific to each database and must be separately created in each database to grant them access. The following example moves you into the AdventureWorks2014 database, and then uses the [CREATE USER](../t-sql/statements/create-user-transact-sql.md) statement to create a user named Larry that is associated with the login named Larry. Though the login and the user are related (mapped to each other), they are different objects. The login is a server-level principal. The user is a database-level principal.
+Logins can connect to SQL Server and have access (with limited permissions) to the master database. To connect to a user-database, a login needs a corresponding identity at the database level, called a database user. Users are specific to each database and must be separately created in each database to grant them access. The following example moves you into the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database, and then uses the [CREATE USER](../t-sql/statements/create-user-transact-sql.md) statement to create a user named Larry that is associated with the login named Larry. Though the login and the user are related (mapped to each other), they are different objects. The login is a server-level principal. The user is a database-level principal.
 
 ```
-USE AdventureWorks2014;
+USE AdventureWorks2022;
 GO
 CREATE USER Larry;
 GO
@@ -48,7 +46,7 @@ Later you can authorize other logins to create a more logins by granting them th
 GRANT ALTER ANY LOGIN TO Larry;   
 GO   
    
-USE AdventureWorks2014;   
+USE AdventureWorks2022;   
 GO   
 GRANT ALTER ANY USER TO Jerry;    
 GO   
@@ -64,7 +62,7 @@ The first people to connect to a user-database will be the administrator and dat
 When you are just getting started, you can assign some general categories of permissions by using the built-in *fixed database roles*. For example, the `db_datareader` fixed database role can read all tables in the database, but make no changes. Grant membership in a fixed database role by using the [ALTER ROLE](../t-sql/statements/alter-role-transact-sql.md) statement. The following example add the user `Jerry` to the `db_datareader` fixed database role.   
    
 ```   
-USE AdventureWorks2014;   
+USE AdventureWorks2022;   
 GO   
    
 ALTER ROLE db_datareader ADD MEMBER Jerry;   
@@ -96,7 +94,7 @@ The following steps walk through setting up two Users with different row-level a
 Create two user accounts to test the row level security:    
    
 ```   
-USE AdventureWorks2014;   
+USE AdventureWorks2022;   
 GO   
    
 CREATE USER Manager WITHOUT LOGIN;     
@@ -164,7 +162,7 @@ WITH (STATE = OFF);
 Use an `ALTER TABLE` statement to add a masking function to the `EmailAddress` column in the `Person.EmailAddress` table: 
  
 ```
-USE AdventureWorks2014;
+USE AdventureWorks2022;
 GO
 ALTER TABLE Person.EmailAddress    
 ALTER COLUMN EmailAddress    
@@ -212,7 +210,7 @@ Since the Database Engine can read the data, Transparent Data Encryption does no
 
 Configuring TDE requires `CONTROL` permission on the master database and `CONTROL` permission on the user database. Typically an administrator configures TDE. 
 
-The following example illustrates encrypting and decrypting the `AdventureWorks2014` database using a certificate installed on the server named `MyServerCert`.
+The following example illustrates encrypting and decrypting the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database using a certificate installed on the server named `MyServerCert`.
 
 
 ```
@@ -225,7 +223,7 @@ GO
 CREATE CERTIFICATE MyServerCert WITH SUBJECT = 'My Database Encryption Key Certificate';  
 GO  
 
-USE AdventureWorks2014;  
+USE AdventureWorks2022;  
 GO
   
 CREATE DATABASE ENCRYPTION KEY  
@@ -233,11 +231,11 @@ WITH ALGORITHM = AES_256
 ENCRYPTION BY SERVER CERTIFICATE MyServerCert;  
 GO
   
-ALTER DATABASE AdventureWorks2014  
+ALTER DATABASE AdventureWorks2022  
 SET ENCRYPTION ON;   
 ```
 
-To remove TDE, execute `ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`   
+To remove TDE, execute `ALTER DATABASE AdventureWorks2022 SET ENCRYPTION OFF;`   
 
 The encryption and decryption operations are scheduled on background threads by SQL Server. You can view the status of these operations using the catalog views and dynamic management views in the list that appears later in this topic.   
 
@@ -262,8 +260,8 @@ GO  
 CREATE CERTIFICATE BackupEncryptCert   
    WITH SUBJECT = 'Database backups';  
 GO 
-BACKUP DATABASE [AdventureWorks2014]  
-TO DISK = N'/var/opt/mssql/backups/AdventureWorks2014.bak'  
+BACKUP DATABASE [AdventureWorks2022]  
+TO DISK = N'/var/opt/mssql/backups/AdventureWorks2022.bak'  
 WITH  
   COMPRESSION,  
   ENCRYPTION   

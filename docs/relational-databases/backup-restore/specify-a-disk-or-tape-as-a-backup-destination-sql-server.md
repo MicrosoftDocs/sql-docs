@@ -69,13 +69,13 @@ helpviewer_keywords:
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  In the [BACKUP](../../t-sql/statements/backup-transact-sql.md) statement, specify the file or device and its physical name. This example backs up the `AdventureWorks2012` database to the disk file `Z:\SQLServerBackups\AdventureWorks2012.Bak`.  
+3.  In the [BACKUP](../../t-sql/statements/backup-transact-sql.md) statement, specify the file or device and its physical name. This example backs up the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database to the disk file `Z:\SQLServerBackups\AdventureWorks2022.bak`.  
   
-```  
-USE AdventureWorks2012;  
+```sql
+USE AdventureWorks2022;  
 GO  
-BACKUP DATABASE AdventureWorks2012  
-TO DISK = 'Z:\SQLServerBackups\AdventureWorks2012.Bak'  
+BACKUP DATABASE AdventureWorks2022  
+TO DISK = 'Z:\SQLServerBackups\AdventureWorks2022.bak'  
 GO  
 ```  
   

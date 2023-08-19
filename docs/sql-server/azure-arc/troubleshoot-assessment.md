@@ -169,6 +169,6 @@ For more assistance, create a support ticket with Microsoft and attach the log f
 
 - [Configure SQL best practices assessment](assess.md)
 - [View SQL Server databases - Azure Arc](view-databases.md)
-- [Manage SQL Server license and billing options](manage-license-type.md)
+- [Manage SQL Server license and billing options](manage-configuration.md)
 - [Azure Arc-enabled SQL Server and Databases activity logs](activity-logs.md)
 - [Data collected by Arc enabled SQL Server](data-collection.md)

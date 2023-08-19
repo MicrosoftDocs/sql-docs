@@ -176,7 +176,7 @@ Here is a sample of what that output will look like:
 Name                 Status           Size     Space  Recovery Compat. Owner
                                             Available  Model     Level
 ----                 ------           ---- ---------- -------- ------- -----
-AdventureWorks2017   Normal      336.00 MB   57.01 MB Simple       140 sa
+AdventureWorks2022   Normal      336.00 MB   57.01 MB Simple       140 sa
 master               Normal        6.00 MB  368.00 KB Simple       140 sa
 model                Normal       16.00 MB    5.53 MB Full         140 sa
 msdb                 Normal       48.44 MB    1.70 MB Simple       140 sa
@@ -221,7 +221,7 @@ Here is a sample of what that output will look like:
 Name                 Status           Size  Space     Recovery Compat. Owner
                                             Available Model    Level
 ----                 ------           ---- ---------- -------- ------- -----
-AdventureWorks2017   Normal      336.00 MB   57.01 MB Simple       140 sa
+AdventureWorks2022   Normal      336.00 MB   57.01 MB Simple       140 sa
 master               Normal        6.00 MB  368.00 KB Simple       140 sa
 model                Normal       16.00 MB    5.53 MB Full         140 sa
 msdb                 Normal       48.44 MB    1.70 MB Simple       140 sa

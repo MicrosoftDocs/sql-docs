@@ -1,4 +1,4 @@
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 IF OBJECT_ID ('dbo.EmployeeOne', 'U') IS NOT NULL
 DROP TABLE dbo.EmployeeOne;

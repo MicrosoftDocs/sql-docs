@@ -61,7 +61,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     SELECT * FROM sys.sql_expression_dependencies  
     WHERE referencing_id = OBJECT_ID(N'Production.vProductAndDescription');   
@@ -78,7 +78,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 3.  The following example returns the objects that depend on the table `Production.Product`. Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    USE AdventureWorks2012;   
+    USE AdventureWorks2022;   
     GO  
     SELECT * FROM sys.sql_expression_dependencies  
     WHERE referenced_id = OBJECT_ID(N'Production.Product');   

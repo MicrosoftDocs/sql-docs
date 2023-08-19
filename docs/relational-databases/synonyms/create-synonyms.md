@@ -69,7 +69,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 USE tempdb;  
 GO  
 CREATE SYNONYM MyAddressType  
-FOR AdventureWorks2012.Person.AddressType;  
+FOR AdventureWorks2022.Person.AddressType;  
 GO  
 ```  
   

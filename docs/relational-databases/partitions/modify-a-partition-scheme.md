@@ -50,27 +50,27 @@ This example uses the [AdventureWorks sample database](../../samples/adventurewo
     > For simplicity, this code creates new filegroups but does not assign files to them. This  allows the demonstration of how to modify the partition scheme but is not a complete example of configuring a partitioned object. Find examples of creating partitioned tables and indexes in [Create partitioned tables and indexes](create-partitioned-tables-and-indexes.md).
   
     ```sql
-    USE AdventureWorks2019;  
+    USE AdventureWorks2022;  
     GO
-    -- add five new filegroups to the AdventureWorks2019 database  
-    ALTER DATABASE AdventureWorks2019  
+    -- add five new filegroups to the AdventureWorks2022 database  
+    ALTER DATABASE AdventureWorks2022  
     ADD FILEGROUP test1fg;  
     GO  
-    ALTER DATABASE AdventureWorks2019  
+    ALTER DATABASE AdventureWorks2022  
     ADD FILEGROUP test2fg;  
     GO  
-    ALTER DATABASE AdventureWorks2019  
+    ALTER DATABASE AdventureWorks2022  
     ADD FILEGROUP test3fg;  
     GO  
-    ALTER DATABASE AdventureWorks2019  
+    ALTER DATABASE AdventureWorks2022  
     ADD FILEGROUP test4fg;  
     GO  
-    ALTER DATABASE AdventureWorks2019  
+    ALTER DATABASE AdventureWorks2022  
     ADD FILEGROUP test5fg;  
     GO 
 
     -- if the "myRangePF1" partition function and the "myRangePS1" partition scheme exist,  
-    -- drop them from the AdventureWorks2019 database  
+    -- drop them from the AdventureWorks2022 database  
     IF EXISTS (SELECT * FROM sys.partition_functions  
         WHERE name = 'myRangePF1')  
     DROP PARTITION FUNCTION myRangePF1;  

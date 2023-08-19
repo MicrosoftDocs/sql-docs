@@ -61,7 +61,7 @@ sp_help_fulltext_tables [ [ @fulltext_catalog_name = ] 'fulltext_catalog_name' ]
  The following example returns the names of the full-text indexed tables associated with the `Cat_Desc` full-text catalog.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_help_fulltext_tables 'Cat_Desc';  
 GO  

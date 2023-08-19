@@ -16,12 +16,12 @@ ms.topic: conceptual
  The following example creates the mirrored media set illustrated in the previous illustration and backs up the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to both mirrors.  
   
 ```sql  
-BACKUP DATABASE AdventureWorks2012  
+BACKUP DATABASE AdventureWorks2022  
 TO TAPE = '\\.\tape0', TAPE = '\\.\tape1'  
 MIRROR TO TAPE = '\\.\tape2', TAPE = '\\.\tape3'  
 WITH  
     FORMAT,  
-    MEDIANAME = 'AdventureWorks2012Set1';  
+    MEDIANAME = 'AdventureWorks2022Set1';  
 GO  
 ```  
   

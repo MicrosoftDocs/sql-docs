@@ -69,7 +69,7 @@ Requires VIEW DATABASE PERFORMANCE STATE and VIEW SECURITY DEFINITION permission
  The following example shows all counts for all partitions of all indexes and heaps in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT * FROM sys.dm_db_partition_stats;  
 GO  
@@ -79,7 +79,7 @@ GO
  The following example shows all counts for all partitions of the `HumanResources.Employee` table and its indexes.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT * FROM sys.dm_db_partition_stats   
 WHERE object_id = OBJECT_ID('HumanResources.Employee');  
@@ -90,7 +90,7 @@ GO
  The following example returns total used pages and total number of rows for the heap or clustered index of the `HumanResources.Employee` table. Because the `Employee` table is not partitioned by default, note the sum includes only one partition.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT SUM(used_page_count) AS total_number_of_used_pages,   
     SUM (row_count) AS total_number_of_rows   

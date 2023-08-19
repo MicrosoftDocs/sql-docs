@@ -27,7 +27,7 @@ Returns the Showplan in text format for a [!INCLUDE[tsql](../../includes/tsql-md
 -   The output of the query plan is not limited in size.  
 -   Individual statements within the batch can be specified.  
   
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later), [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
   
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

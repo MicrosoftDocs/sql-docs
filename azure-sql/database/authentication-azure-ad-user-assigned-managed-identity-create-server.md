@@ -15,8 +15,8 @@ ms.topic: how-to
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](authentication-azure-ad-user-assigned-managed-identity-create-server.md)
-> * [Azure SQL Managed Instance](../managed-instance/authentication-azure-ad-user-assigned-managed-identity-create-managed-instance.md)
+> * [Azure SQL Database](authentication-azure-ad-user-assigned-managed-identity-create-server.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](../managed-instance/authentication-azure-ad-user-assigned-managed-identity-create-managed-instance.md?view=azuresql-mi&preserve-view=true)
 
 This how-to guide outlines the steps to create a [logical server](logical-servers.md) for Azure SQL Database with a [user-assigned managed identity](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types). For more information on the benefits of using a user-assigned managed identity for the server identity in Azure SQL Database, see [User-assigned managed identity in Azure AD for Azure SQL](authentication-azure-ad-user-assigned-managed-identity.md).
 

@@ -81,13 +81,13 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 ## Examples  
  The following example creates a sample table and then calls **sp_help_spatial_geometry_histogram** on the table.  
   
- `USE AdventureWorksDW2012`  
+ `USE AdventureWorksDW2022`  
   
  `GO`  
   
  `-- Set database compatibility for circular arc segments`  
   
- `ALTER DATABASE AdventureWorksDW2012`  
+ `ALTER DATABASE AdventureWorksDW2022`  
   
  `SET COMPATIBILITY_LEVEL = 110;`  
   

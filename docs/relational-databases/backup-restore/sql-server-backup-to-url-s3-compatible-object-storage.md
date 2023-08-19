@@ -3,7 +3,8 @@ title: "SQL Server backup to URL for S3-compatible object storage"
 description: Learn about the concepts, requirements, and components necessary for SQL Server to use the S3-compatible object storage as a backup destination.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 10/15/2022
+ms.reviewer: hudequei
+ms.date: 07/24/2022
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: conceptual
@@ -173,7 +174,7 @@ For more information see [SQL Server back up to URL for S3-compatible storage be
 
 ### Region
 
-Your S3-compatible object storage provider can offer the ability to determine a specific region for the bucket location. The use of this optional parameter can provide more flexibility by specifying which region that particular bucket belongs to. This parameter requires the use of `WITH` together with either `BACKUP_OPTIONS` or `RESTORE_OPTIONS`. These options require the value to be declared in JSON format.
+Your S3-compatible object storage provider can offer the ability to determine a specific region for the bucket location. The use of this optional parameter can provide more flexibility by specifying which region that particular bucket belongs to. This parameter requires the use of `WITH` together with either `BACKUP_OPTIONS` or `RESTORE_OPTIONS`. These options require the value to be declared in JSON format. This allows scenarios in which an S3-compatible storage provider can have the same universal URL but be distributed across several regions. In this case, the backup or restore command will point to the specified regions without the need to change the URL.
 
 If no value is declared, `us-east-1` is assigned as default.
 
@@ -217,7 +218,7 @@ The following are the current limitations of backup and restore with S3-compatib
 1. Due to the current limitation of S3 Standard REST API, the temporary uncommitted data files that are created in the customer's S3-compatible object store (due to an ongoing multipart upload operation) while the BACKUP T-SQL command is running, are not removed in case of failures. These uncommitted data blocks continue to persist in S3-compatible object storage in the case the BACKUP T-SQL command fails or is canceled. If the backup succeeds, these temporary files are automatically removed by the object store to form the final backup file. Some S3-compatible storage providers handle this through their garbage collector system.
 1. The total URL length is limited to 259 characters. The full string is counted in this limitation, including the `s3://` connector name. So, the usable limit is 254 characters. However, we recommend sticking to a limit of 200 characters to allow for possible introduction of query parameters.
 1. The SQL credential name is limited by 128 characters in UTF-16 format.
-1. Secret key ID only supports alphanumeric values.
+1. Secret key ID must not have `:` character.
 
 ### Path style and virtual host style
 
@@ -279,43 +280,43 @@ WITH    REPLACE -- overwrite
 
 ### Options for encryption and compression
 
-The following example shows how to back up and restore the `AdventureWorks2019` database with encryption, `MAXTRANSFERSIZE` as 20 MB and compression:
+The following example shows how to back up and restore the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database with encryption, `MAXTRANSFERSIZE` as 20 MB and compression:
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = <password>;
 GO
 
-CREATE CERTIFICATE AdventureWorks2019Cert
-    WITH SUBJECT = 'AdventureWorks2019 Backup Certificate';
+CREATE CERTIFICATE AdventureWorks2022Cert
+    WITH SUBJECT = 'AdventureWorks2022 Backup Certificate';
 GO
 -- Backup database
-BACKUP DATABASE AdventureWorks2019
-TO URL = 's3://<endpoint>:<port>/<bucket>/AdventureWorks2019_Encrypt.bak'
+BACKUP DATABASE AdventureWorks2022
+TO URL = 's3://<endpoint>:<port>/<bucket>/AdventureWorks2022_Encrypt.bak'
 WITH FORMAT, MAXTRANSFERSIZE = 20971520, COMPRESSION,
-ENCRYPTION (ALGORITHM = AES_256, SERVER CERTIFICATE = AdventureWorks2019Cert)
+ENCRYPTION (ALGORITHM = AES_256, SERVER CERTIFICATE = AdventureWorks2022Cert)
 GO
 
 -- Restore database
-RESTORE DATABASE AdventureWorks2019
-FROM URL = 's3://<endpoint>:<port>/<bucket>/AdventureWorks2019_Encrypt.bak'
+RESTORE DATABASE AdventureWorks2022
+FROM URL = 's3://<endpoint>:<port>/<bucket>/AdventureWorks2022_Encrypt.bak'
 WITH REPLACE
 ```
 
 ### Use region for backup and restore
 
-The following example shows how to back up and restore the AdventureWorks2019 database using `REGION_OPTIONS`:
+The following example shows how to back up and restore the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database using `REGION_OPTIONS`:
 
 ```sql
 -- Backup Database
-BACKUP DATABASE AdventureWorks2019
-TO URL = 's3://<endpoint>:<port>/<bucket>/AdventureWorks2019.bak'
+BACKUP DATABASE AdventureWorks2022
+TO URL = 's3://<endpoint>:<port>/<bucket>/AdventureWorks2022.bak'
 WITH BACKUP_OPTIONS = '{"s3": {"region":"us-east-1"}}'
 
 -- Restore Database
-RESTORE DATABASE AdventureWorks2019
-FROM URL = 's3://<endpoint>:<port>/<bucket>/AdventureWorks2019.bak'
-WITH MOVE 'AdventureWorks2019' TO 'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA\AdventureWorks2019.mdf'
-, MOVE 'AdventureWorks2019_log' TO 'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA\AdventureWorks2019.ldf'
+RESTORE DATABASE AdventureWorks2022
+FROM URL = 's3://<endpoint>:<port>/<bucket>/AdventureWorks2022.bak'
+WITH MOVE 'AdventureWorks2022' TO 'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA\AdventureWorks2022.mdf'
+, MOVE 'AdventureWorks2022_log' TO 'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA\AdventureWorks2022.ldf'
 , RESTORE_OPTIONS = '{"s3": {"region":"us-east-1"}}'
 ```
 

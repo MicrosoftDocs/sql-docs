@@ -97,7 +97,7 @@ WHERE (h.OrderDate >= '2014-3-28 00:00:00');
 ```
 
 > [!TIP]  
-> The example query can be executed using the [AdventureWorks2019_EXT sample database](../samples/adventureworks-install-configure.md) database. The tables `Sales.SalesOrderHeader` and `Sales.SalesOrderDetail` were enlarged 50 times and renamed to `Sales.SalesOrderHeaderBulk` and `Sales.SalesOrderDetailBulk`.
+> The example query can be executed using the [AdventureWorks2016_EXT sample database](../samples/adventureworks-install-configure.md) database. The tables `Sales.SalesOrderHeader` and `Sales.SalesOrderDetail` were enlarged 50 times and renamed to `Sales.SalesOrderHeaderBulk` and `Sales.SalesOrderDetailBulk`.
 
 The execution plan shows a [Hash Join](../relational-databases/performance/joins.md#hash) between two tables, and each of the operators executed in parallel, as indicated by the yellow circle with two arrows. Each Parallelism operator is a different branch in the plan. Therefore, there are three branches in the following execution plan.
 

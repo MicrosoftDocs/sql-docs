@@ -69,10 +69,10 @@ By default, only members of the **sysadmin** fixed server role can execute `sp_a
 
    EXEC dbo.sp_add_alert @name = N'Test Alert 2',
        @message_id = 54001,
-       @notification_message = N'Error 54001 has occurred on the Sales.SalesOrderDetail table on the AdventureWorks2012 database.',
+       @notification_message = N'Error 54001 has occurred on the Sales.SalesOrderDetail table on the AdventureWorks2022 database.',
        @wmi_namespace = '\.\root\Microsoft\SqlServer\ServerEvents',
        @wmi_query = N'SELECT * FROM ALTER_TABLE
-   WHERE DatabaseName = ''AdventureWorks2012'' AND SchemaName = ''Sales''
+   WHERE DatabaseName = ''AdventureWorks2022'' AND SchemaName = ''Sales''
    AND ObjectType=''Table'' AND ObjectName = ''SalesOrderDetail''';
    GO
    ```

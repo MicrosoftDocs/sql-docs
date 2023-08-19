@@ -75,7 +75,7 @@ Using `sys.sql_expression_dependencies` to find all the dependencies on a functi
    The following code sample gets the function name, definition, and relevant properties.
 
    ```sql
-   USE AdventureWorks2012;
+   USE AdventureWorks2022;
    GO
    -- Get the function name, definition, and relevant properties
    SELECT sm.object_id,
@@ -99,7 +99,7 @@ Using `sys.sql_expression_dependencies` to find all the dependencies on a functi
    The following code sample gets the definition of the example function `dbo.ufnGetProductDealerPrice`.
 
    ```sql
-   USE AdventureWorks2012;
+   USE AdventureWorks2022;
    GO
    -- Get the definition of the function dbo.ufnGetProductDealerPrice
    SELECT OBJECT_DEFINITION (OBJECT_ID('dbo.ufnGetProductDealerPrice')) AS ObjectDefinition;
@@ -117,7 +117,7 @@ For more information, see [sys.sql_modules &#40;Transact-SQL&#41;](../../relatio
 1. Copy and paste the following example into the query window and select **Execute**.
 
    ```sql
-   USE AdventureWorks2012;
+   USE AdventureWorks2022;
    GO
    -- Get all of the dependency information
    SELECT OBJECT_NAME(sed.referencing_id) AS referencing_entity_name,

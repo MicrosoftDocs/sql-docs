@@ -23,9 +23,9 @@ monikerRange: "= azuresqldb-current"
 
 [!INCLUDE [Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
-Instruct the change data capture (CDC) scheduler to pause or resume scheduling of CDC scan and/or CDC cleanup jobs for [!INCLUDE [ssazure_md](../../includes/ssazure_md.md)], or abort the currently running CDC scan and/or CDC cleanup job.
+Instruct the change data capture (CDC) scheduler to pause or resume scheduling of CDC scan and/or CDC cleanup jobs for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], or abort the currently running CDC scan and/or CDC cleanup job.
 
-This system stored procedure is applicable to [!INCLUDE [ssazure_md](../../includes/ssazure_md.md)] only.
+This system stored procedure is applicable to [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] only.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -63,7 +63,7 @@ None.
 
 ## Remarks
 
-`sys.sp_cdc_set_scheduler_job` applies to [!INCLUDE [ssazure_md](../../includes/ssazure_md.md)] only.
+`sys.sp_cdc_set_scheduler_job` applies to [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] only.
 
 - The CDC scheduler periodically schedules CDC scan and CDC cleanup jobs. Use `sp_cdc_set_scheduler_job` to instruct the scheduler to either pause the scheduling or resume scheduling of these jobs.
 

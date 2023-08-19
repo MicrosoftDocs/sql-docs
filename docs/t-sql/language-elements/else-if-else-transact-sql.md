@@ -68,7 +68,7 @@ GO
  The following example executes a query as part of the Boolean expression. Because there are 10 bikes in the `Product` table that meet the `WHERE` clause, the first print statement will execute. Change `> 5` to `> 15` to see how the second part of the statement could execute.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 IF   
 (SELECT COUNT(*) FROM Production.Product WHERE Name LIKE 'Touring-3000%' ) > 5  
@@ -81,7 +81,7 @@ GO
  The following example executes a query as part of the Boolean expression and then executes slightly different statement blocks based on the result of the Boolean expression. Each statement block starts with `BEGIN` and completes with `END`.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DECLARE @AvgWeight DECIMAL(8,2), @BikeCount INT  
 IF   

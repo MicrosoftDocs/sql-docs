@@ -64,7 +64,7 @@ This key contains a property of the certificate known as a thumbprint, which ide
 
 1. Navigate to the certificate store where the FQDN certificate is stored. On the properties page for the certificate, go to the **Details** tab and copy the thumbprint value of the certificate to a **Notepad** window.
 1. Remove the spaces between the hex characters in the thumbprint value in **Notepad**.
-1. Start **Registry Editor**, navigate to the following registry key, and copy the value from Step 2:
+1. Start **Registry Editor**, navigate to the following registry key, and paste the value from Step 2:
 
    `HKLM\SOFTWARE\Microsoft\Microsoft SQL Server\<instance>\MSSQLServer\SuperSocketNetLib\Certificate`
 

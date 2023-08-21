@@ -41,6 +41,14 @@ f1_keywords:
    Check this box to enable database level health detection (DB_FAILOVER) option for the availability group. The database health detection notices when a database is no longer in the online status, when something goes wrong and will trigger the automatic failover of the availability group. See 
    [SQL Server Always On Database Health Detection Failover Option](sql-server-always-on-database-health-detection-failover-option.md).
 
+   **Per Database DTC Support** Check this box to enable distributed transactions for the databases in the availability group. In order to guarantee distributed transdactions, the availability group mught be configured to register databases as distributed transaction resource managers. See [Configure distributed transactions for an Always On availability group](configure-availability-group-for-distributed-transactions.md)
+
+   **Contained** Check this box to create a [contained availability group](contained-availability-groups-overview.md). A contained availability group support managing metadata objects (users, logins, permissions, SQL Agent jobs, etc) at the availability group level in addition to the instance level. 
+
+   * **Reuse System Databases**
+
+      When using a contained availability group, check this box if you want to reuse exisitng system databases from e previouew Contained Availability Group of the same name. 
+
 
 Select Databases Page (New Availability Group Wizard and Add Database Wizard)  
   

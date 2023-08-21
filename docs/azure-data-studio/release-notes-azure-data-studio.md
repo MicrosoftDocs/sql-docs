@@ -283,7 +283,7 @@ For a full list of bug fixes addressed for the May 2023 release, visit the [May 
 | Connection | Added ability to include optional name and grouping when creating a new connection using a connection string |
 | Connection | Updating username in MSSQL connections to use Preferred username for the display name |
 | Connection | Fixed issue with encoding for OSX keychain on macOS |
-| Connection | Added support for Azure AD Multi-Factor Authentication and ‘Sql Authentication Provider’ on Linux |
+| Connection | Added support for Azure AD Multi-Factor Authentication and 'Sql Authentication Provider' on Linux |
 | Dataverse | Addressed error generated when expanding the database node for a Dataverse database in Object Explorer |
 | IntelliCode extension | Fixed error that occurred when launching Azure Data Studio with Visual Studio Code IntelliCode extension installed |
 | PostgreSQL extension | Implemented support for exporting query results on Apple M1 from a notebook |

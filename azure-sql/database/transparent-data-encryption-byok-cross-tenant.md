@@ -25,7 +25,7 @@ You can configure TDE with CMK for Azure SQL Database for keys stored in key vau
 
 ## Common use scenario
 
-Cross-tenant CMK capabilities allow service providers or independent software vendors (ISV) building services on top of Azure SQL to extend Azure SQL’s TDE with CMK capabilities to their respective customers. With cross-tenant CMK support enabled, ISV customers can own the key vault and encryption keys in their own subscription and Azure AD tenant. The customer has full control over key management operations, while accessing Azure SQL resources in the ISV tenant.
+Cross-tenant CMK capabilities allow service providers or independent software vendors (ISV) building services on top of Azure SQL to extend Azure SQL's TDE with CMK capabilities to their respective customers. With cross-tenant CMK support enabled, ISV customers can own the key vault and encryption keys in their own subscription and Azure AD tenant. The customer has full control over key management operations, while accessing Azure SQL resources in the ISV tenant.
 
 ## Cross-tenant interactions
 

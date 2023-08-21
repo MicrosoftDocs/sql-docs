@@ -168,7 +168,7 @@ Feature limitations include:
 - If you're using Transparent Data Encryption (TDE) to encrypt SQL Server databases, the database encryption key from SQL Server needs to be exported and uploaded to Azure Key Vault, and you need to also configure the BYOK TDE option on SQL Managed Instance before creating the link.
 - You can't establish a link between SQL Server and SQL Managed Instance if the functionality that's used on the SQL Server instance isn't supported on the managed instance. For example: 
     - Databases with file tables and file streams can't be replicated, because SQL Managed Instance doesn't support file tables or file streams.
-    - Databases that use In-Memory OLTP (Hekaton) can be replicated only to the *Business Critical* service tier for SQL Managed Instance, because the *General Purpose* service tier doesn't support In-Memory OLTP. Databases with multiple Hekaton files can’t be replicated to the Business Critical service tier for SQL Managed Instance, as multiple Hekaton files aren't supported.
+    - Databases that use In-Memory OLTP (Hekaton) can be replicated only to the *Business Critical* service tier for SQL Managed Instance, because the *General Purpose* service tier doesn't support In-Memory OLTP. Databases with multiple Hekaton files can't be replicated to the Business Critical service tier for SQL Managed Instance, as multiple Hekaton files aren't supported.
 
 Trying to add an unsupported functionality to a replicated database in: 
    - SQL Server 2019 and 2022 fails with an error. 

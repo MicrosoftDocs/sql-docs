@@ -65,7 +65,7 @@ Data Sync isn't the preferred solution for the following scenarios:
 
 ## How it works
 
-- **Tracking data changes:** Data Sync tracks changes using insert, update, and delete triggers. The changes are recorded in a side table in the user database. Note that BULK INSERT doesn't fire triggers by default. If FIRE_TRIGGERS isn't specified, no insert triggers execute. Add the FIRE_TRIGGERS option so Data Sync can track those inserts. 
+- **Tracking data changes:** Data Sync tracks changes using insert, update, and delete triggers. The changes are recorded in a side table in the user database. BULK INSERT doesn't fire triggers by default. If FIRE_TRIGGERS isn't specified, no insert triggers execute. Add the FIRE_TRIGGERS option so Data Sync can track those inserts. 
 - **Synchronizing data:** Data Sync is designed in a hub and spoke model. The hub syncs with each member individually. Changes from the hub are downloaded to the member and then changes from the member are uploaded to the hub.
 - **Resolving conflicts:** Data Sync provides two options for conflict resolution, *Hub wins* or *Member wins*.
   - If you select *Hub wins*, the changes in the hub always overwrite changes in the member.
@@ -139,7 +139,7 @@ Provisioning and deprovisioning during sync group creation, update, and deletion
 
 - Snapshot isolation must be enabled for both Sync members and hub. For more info, see [Snapshot Isolation in SQL Server](/dotnet/framework/data/adonet/sql/snapshot-isolation-in-sql-server).
 
-- In order to use Data Sync private link, both the member and hub databases must be hosted in Azure (same or different regions), in the same cloud type (for example, both in public cloud or both in government cloud). Additionally, to use private link, `Microsoft.Network` resource providers must be Registered for the subscriptions that host the hub and member servers. Lastly, you must manually approve the private link for Data Sync during the sync configuration, within the "Private endpoint connections" section in the Azure portal or through PowerShell. For more information on how to approve the private link, see [Set up SQL Data Sync](./sql-data-sync-sql-server-configure.md). Once you approve the service managed private endpoint, all communication between the sync service and the member/hub databases will happen over the private link. Existing sync groups can be updated to have this feature enabled.
+- In order to use Data Sync private link, both the member and hub databases must be hosted in Azure (same or different regions), in the same cloud type (for example, both in public cloud or both in government cloud). Additionally, to use private link, `Microsoft.Network` resource providers must be Registered for the subscriptions that host the hub and member servers. Lastly, you must manually approve the private link for Data Sync during the sync configuration, within the "Private endpoint connections" section in the Azure portal or through PowerShell. For more information on how to approve the private link, see [Set up SQL Data Sync](./sql-data-sync-sql-server-configure.md). Once you approve the service managed private endpoint, all communication between the sync service and the member/hub databases happen over the private link. Existing sync groups can be updated to have this feature enabled.
 
 ### General limitations
 
@@ -148,7 +148,7 @@ Provisioning and deprovisioning during sync group creation, update, and deletion
 - Be cautious when you use the following data types as a primary key, because the supported precision is only to the second: time, datetime, datetime2, datetimeoffset.
 - The names of objects (databases, tables, and columns) can't contain the printable characters period (`.`), left square bracket (`[`), or right square bracket (`]`).
 - A table name can't contain printable characters: `! " # $ % ' ( ) * + -` or space.
-- Azure Active Directory authentication isn't supported.
+- Microsoft Entra ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) authentication isn't supported.
 - If there are tables with the same name but different schema (for example, `dbo.customers` and `sales.customers`) only one of the tables can be added into sync.
 - Columns with user-defined data types aren't supported.
 - Moving servers between different subscriptions isn't supported. 
@@ -157,7 +157,8 @@ Provisioning and deprovisioning during sync group creation, update, and deletion
 - Using an Azure SQL Hyperscale database as a Hub or Sync Metadata database is not supported. However, a Hyperscale database can be a member database in a Data Sync topology.
 - Memory-optimized tables are not supported.
 - Schema changes aren't automatically replicated. A custom solution can be created to [automate the replication of schema changes](./sql-data-sync-update-sync-schema.md).
-- Data Sync supports only the following two index properties: Unique, Clustered/Non-Clustered. Other properties of index like IGNORE_DUP_KEY, Where filter predicate etc are not supported and the destination index is provisioned without these properties even if the source Index has these properties set.
+- Data Sync supports only the following two index properties: Unique, Clustered/Non-Clustered. Other properties of an index, like IGNORE_DUP_KEY or the WHERE filter predicate, are not supported and the destination index is provisioned without these properties even if the source Index has these properties set.
+- An Azure Elastic jobs database cannot be used as the SQL Data Sync Metadata database, and vice versa.
 
 #### Unsupported data types
 
@@ -198,67 +199,67 @@ When the sync group is established, the Data Sync service needs to connect to th
  * *Deny public network access* must be set to *Off*.
  * *Allow Azure services and resources to access this server* must be set to *Yes*, or you must create IP rules for the [IP addresses used by Data Sync service](network-access-controls-overview.md#data-sync).
 
-Once the sync group is created and provisioned, you can then disable these settings. The sync agent will connect directly to the hub database, and you can use the server's [firewall IP rules](firewall-configure.md) or [private endpoints](private-endpoint-overview.md) to allow the agent to access the hub server.
+Once the sync group is created and provisioned, you can then disable these settings. The sync agent connects directly to the hub database, and you can use the server's [firewall IP rules](firewall-configure.md) or [private endpoints](private-endpoint-overview.md) to allow the agent to access the hub server.
 
 > [!NOTE]
 > If you change the sync group's schema settings, you will need to allow the Data Sync service to access the server again so that the hub database can be re-provisioned.
 
 ### Region data residency 
 
-If you synchronize data within the same region, SQL Data Sync doesn't store/process customer data outside that region in which the service instance is deployed. If you synchronize data across different regions, SQL Data Sync will replicate customer data to the paired regions.
+If you synchronize data within the same region, SQL Data Sync doesn't store/process customer data outside that region in which the service instance is deployed. If you synchronize data across different regions, SQL Data Sync replicates customer data to the paired regions.
 
 ## FAQ about SQL Data Sync
 
-### How much does the SQL Data Sync service cost
+### How much does the SQL Data Sync service cost?
 
 There's no charge for the SQL Data Sync service itself. However, you still collect data transfer charges for data movement in and out of your SQL Database instance. For more information, see [data transfer charges](https://azure.microsoft.com/pricing/details/bandwidth/).
 
-### What regions support Data Sync
+### What regions support Data Sync?
 
 SQL Data Sync is available in all regions.
 
-### Is a SQL Database account required
+### Is a SQL Database account required?
 
 Yes. You must have a SQL Database account to host the hub database.
 
-### Can I use Data Sync to sync between SQL Server databases only
+### Can I use Data Sync to sync between SQL Server databases only?
 
 Not directly. You can sync between SQL Server databases indirectly, however, by creating a Hub database in Azure, and then adding the on-premises databases to the sync group.
 
-### Can I configure Data Sync to sync between databases in Azure SQL Database that belong to different subscriptions
+### Can I configure Data Sync to sync between databases in Azure SQL Database that belong to different subscriptions?
 
 Yes. You can configure sync between databases that belong to resource groups owned by different subscriptions, even if the subscriptions belong to different tenants.
 
 - If the subscriptions belong to the same tenant and you have permission to all subscriptions, you can configure the sync group in the Azure portal.
 - Otherwise, you have to use PowerShell to add the sync members.
 
-### Can I set up Data Sync to sync between databases in SQL Database that belong to different clouds (like Azure Public Cloud and Azure operated by 21Vianet)
+### Can I set up Data Sync to sync between databases in SQL Database that belong to different clouds (like Azure Public Cloud and Azure operated by 21Vianet)?
 
 Yes. You can set up sync between databases that belong to different clouds. You have to use PowerShell to add the sync members that belong to the different subscriptions.
 
-### Can I use Data Sync to seed data from my production database to an empty database, and then sync them
+### Can I use Data Sync to seed data from my production database to an empty database, and then sync them?
 
 Yes. Create the schema manually in the new database by scripting it from the original. After you create the schema, add the tables to a sync group to copy the data and keep it synced.
 
-### Should I use SQL Data Sync to back up and restore my databases
+### Should I use SQL Data Sync to back up and restore my databases?
 
 It isn't recommended to use SQL Data Sync to create a backup of your data. You can't back up and restore to a specific point in time because SQL Data Sync synchronizations aren't versioned. Furthermore, SQL Data Sync doesn't back up other SQL objects, such as stored procedures, and doesn't do the equivalent of a restore operation quickly.
 
 For one recommended backup technique, see [Copy a database in Azure SQL Database](database-copy.md).
 
-### Can Data Sync sync encrypted tables and columns
+### Can Data Sync sync encrypted tables and columns?
 
 - If a database uses Always Encrypted, you can sync only the tables and columns that are *not* encrypted. You can't sync the encrypted columns, because Data Sync can't decrypt the data.
 - If a column uses Column-Level Encryption (CLE), you can sync the column, as long as the row size is less than the maximum size of 24 Mb. Data Sync treats the column encrypted by key (CLE) as normal binary data. To decrypt the data on other sync members, you need to have the same certificate.
 
-### Is collation supported in SQL Data Sync
+### Is collation supported in SQL Data Sync?
 
-Yes. SQL Data Sync supports collation in the following scenarios:
+Yes. SQL Data Sync supports configuring collation settings in the following scenarios:
 
 - If the selected sync schema tables aren't already in your hub or member databases, then when you deploy the sync group, the service automatically creates the corresponding tables and columns with the collation settings selected in the empty destination databases.
 - If the tables to be synced already exist in both your hub and member databases, SQL Data Sync requires that the primary key columns have the same collation between hub and member databases to successfully deploy the sync group. There are no collation restrictions on columns other than the primary key columns.
 
-### Is federation supported in SQL Data Sync
+### Is federation supported in SQL Data Sync?
 
 Federation Root Database can be used in the SQL Data Sync Service without any limitation. You can't add the Federated Database endpoint to the current version of SQL Data Sync.
 
@@ -268,7 +269,7 @@ The Dynamics 365 bring your own database feature lets administrators export data
 
 ### How do I create Data Sync in Failover group to support Disaster Recovery?
 
-- To ensure data sync operations in failover region are at par with Primary region, after failover you have to manually re-create the Sync Group in failover region with same settings as primary region.       
+- To ensure data sync operations in failover region are at par with Primary region, after failover you have to manually re-create the Sync Group in failover region with same settings as primary region.
 
 ## Next steps
 

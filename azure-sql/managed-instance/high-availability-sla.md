@@ -61,7 +61,7 @@ Whenever the database engine or the operating system is upgraded, or a failure i
 
 ### Business Critical service tier 
 
-The Business Critical service tier uses the local storage availability model, which integrates compute resources (database engine process) and storage (locally attached SSD) on a single node. High availability is achieved by replicating both compute and storage to additional. 
+The Business Critical service tier uses the local storage availability model, which integrates compute resources (database engine process) and storage (locally attached SSD) on a single node. High availability is achieved by replicating both compute and storage to additional nodes. 
 
 :::image type="content" source="../database/media/high-availability-sla/business-critical-service-tier.png" alt-text="Diagram of a cluster of database engine nodes.":::
 

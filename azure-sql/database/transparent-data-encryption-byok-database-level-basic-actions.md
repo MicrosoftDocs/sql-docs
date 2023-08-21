@@ -8,7 +8,7 @@ ms.reviewer: vanto
 ms.date: 05/25/2023
 ms.service: sql-database
 ms.subservice: security
-ms.custom: devx-track-azurecli, devx-track-azurepowershell
+ms.custom: devx-track-azurecli, devx-track-azurepowershell, has-azure-ad-ps-ref
 ms.topic: how-to
 monikerRange: "= azuresql || = azuresql-db"
 ---
@@ -464,7 +464,7 @@ GET https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{
 Retrieve the basic database level customer-managed key settings from a database and the current keys in use
 
 ```rest
-GET https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}?api-version=2022-08-01-preview&$expand=keys($filter=pointInTime(‘current’))
+GET https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}?api-version=2022-08-01-preview&$expand=keys($filter=pointInTime('current'))
 ```
 
 Retrieve the basic database level customer-managed key settings from a database and the keys in use at a particular point in time

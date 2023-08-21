@@ -214,7 +214,7 @@ Reference Architecture White Papers for [!INCLUDE[big-data-clusters-nover](../in
 
 ## Runtime for Apache Spark release 2022.1 (BDC.3.2022.1) - Installed R libraries
 
-_Packages from [CRAN Archive](https://cran.r-project.org/src/contrib/Archive/)_
+_Packages from [CRAN as of 2021-09-21](https://cran.r-project.org/web/packages/available_packages_by_date.html)_
 
 The following table lists packages available in this release.
 

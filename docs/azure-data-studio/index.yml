@@ -105,7 +105,7 @@ landingContent:
           - text: SQL Server Profiler extension
             url:  extensions/sql-server-profiler-extension.md
 
-  - title: Migration Extensions
+  - title: Migration extensions
     linkLists:
       - linkListType: concept
         links:

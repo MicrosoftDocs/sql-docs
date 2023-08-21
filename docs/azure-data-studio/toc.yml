@@ -156,6 +156,8 @@
       href: extensions/jupyter-book-extension.md
     - name: Wizard extension
       href: extensions/wizard-extension.md
+  - name: Command line interface
+    href: command-line.md
   - name: Integrated terminal (PowerShell, Bash)
     href: integrated-terminal.md
   - name: Preview features

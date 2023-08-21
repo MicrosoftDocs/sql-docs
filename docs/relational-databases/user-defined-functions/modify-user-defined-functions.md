@@ -60,7 +60,7 @@ Requires ALTER permission on the function or on the schema. If the function spec
 
    ```sql
    -- Scalar-Valued Function
-   USE [AdventureWorks2012]
+   USE [AdventureWorks2022]
    GO
    ALTER FUNCTION [dbo].[ufnGetAccountingEndDate]()
    RETURNS [datetime]
@@ -74,7 +74,7 @@ Requires ALTER permission on the function or on the schema. If the function spec
 
    ```sql
    -- Table-Valued Function
-   USE [AdventureWorks2012]
+   USE [AdventureWorks2022]
    GO
    ALTER FUNCTION [dbo].[ufnGetContactInformation](@PersonID int)
    RETURNS @retContactInformation TABLE

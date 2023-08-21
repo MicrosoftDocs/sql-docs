@@ -94,7 +94,7 @@ Use T-SQL to move the existing files to a new location:
 1. Get the existing files and locations:
 
    ```sql
-   USE AdventureWorks
+   USE AdventureWorks2022;
    GO
 
    sp_helpfile

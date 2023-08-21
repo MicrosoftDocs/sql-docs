@@ -19,14 +19,14 @@ SQL Server Migration Assistant (SSMA) for MySQL lets you quickly convert MySQL d
 This topic introduces the installation process, and then helps familiarize you with the SSMA user interface.  
   
 ## Installing SSMA  
-To use SSMA, you first must install the SSMA client program on a computer that can access both the source MySQL database and the target instance of SQL Server or Azure SQL Database. Then, install the MySQL providers (MySQL ODBC 5.1 Driver (trusted)) on the computer that is running SSMA Client Program. For installation instructions, see [Installing SSMA for MySQL &#40;MySqlToSql&#41;](../../ssma/mysql/installing-ssma-for-mysql-mysqltosql.md)  
+To use SSMA, you first must install the SSMA client program on a computer that can access both the source MySQL database and the target instance of SQL Server or Azure SQL Database. Then, install the MySQL providers (MySQL ODBC 5.1 Driver (trusted)) on the computer that is running SSMA Client Program. For installation instructions, see [Installing SSMA for MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/installing-ssma-for-mysql-mysqltosql.md)  
   
 To start SSMA, click **Start**, point to **All Programs**, point to **SQL Server Migration Assistant for MySQL**, and then click **SQL Server Migration Assistant for MySQL**.  
   
 ## SSMA for MySQL User Interface  
 After SSMA is installed and licensed, you can use SSMA to migrate MySQL databases to SQL Server or Azure SQL Database. It helps to become familiar with the SSMA user interface before you start. The following diagram shows the user interface for SSMA, including the metadata explorers, metadata, toolbars, output pane, and error list pane:  
   
-![SSMA for MySql Graphical User Interface](../../ssma/mysql/media/ssmaformysqlgui.gif "SSMA for MySql Graphical User Interface")  
+![SSMA for MySQL Graphical User Interface](../../ssma/mysql/media/ssmaformysqlgui.gif "SSMA for MySQL Graphical User Interface")  
   
 To start a migration, you must:  
   
@@ -44,7 +44,7 @@ You must connect to Azure SQL Database if you have selected Azure SQL Database f
   
 After you synchronize converted schemas with SQL Server or Azure SQL Database, you can return to MySQL Metadata Explorer and migrate data from MySQL schemas into SQL Server or Azure SQL Database databases.  
   
-For more information about these tasks and how to perform them, see [Migrating MySQL Databases to SQL Server - Azure SQL Database &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md).  
+For more information about these tasks and how to perform them, see [Migrating MySQL Databases to SQL Server - Azure SQL Database &#40;MySQLToSQL&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md).  
   
 The following sections describe the features of the SSMA user interface.  
   

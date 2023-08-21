@@ -21,7 +21,7 @@ monikerRange: "=azuresqldb-current"
 # sys.dm_db_wait_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-  Returns information about all the waits encountered by threads that executed during operation. You can use this aggregated view to diagnose performance issues with [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and also with specific queries and batches.  
+  Returns information about all the waits encountered by threads that executed during operation. You can use this aggregated view to diagnose performance issues with [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and also with specific queries and batches.  
   
  Specific types of wait times during query execution can indicate bottlenecks or stall points within the query. Similarly, high wait times, or wait counts server wide can indicate bottlenecks or hot spots in interaction query interactions within the server instance. For example, lock waits indicate data contention by queries; page IO latch waits indicate slow IO response times; page latch update waits indicate incorrect file layout.  
   
@@ -172,7 +172,7 @@ monikerRange: "=azuresqldb-current"
 |INTERNAL_TESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |IO_AUDIT_MUTEX|Occurs during synchronization of trace event buffers.|  
 |IO_COMPLETION|Occurs while waiting for I/O operations to complete. This wait type generally represents non-data page I/Os. Data page I/O completion waits appear as PAGEIOLATCH_* waits.|  
-|IO_QUEUE_LIMIT|Occurs when the asynchronous IO queue for the [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] has too many IOs pending. Tasks trying to issue another IO are blocked on this wait type until the number of pending IOs drop below the threshold. The threshold is proportional to the DTUs assigned to the database.|  
+|IO_QUEUE_LIMIT|Occurs when the asynchronous IO queue for the [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] has too many IOs pending. Tasks trying to issue another IO are blocked on this wait type until the number of pending IOs drop below the threshold. The threshold is proportional to the DTUs assigned to the database.|  
 |IO_RETRY|Occurs when an I/O operation such as a read or a write to disk fails because of insufficient resources, and is then retried.|  
 |IOAFF_RANGE_QUEUE|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |KSOURCE_WAKEUP|Used by the service control task while waiting for requests from the Service Control Manager. Long waits are expected and do not indicate a problem.|  

@@ -11,7 +11,7 @@ DECLARE @subscriber AS sysname;
 SET @publication = N'AdvWorksProductTran';
 SET @subscriber = $(SubServer);
 
-USE [AdventureWorks2012]
+USE [AdventureWorks2022]
 EXEC sp_dropsubscription 
   @publication = @publication, 
   @article = N'all',

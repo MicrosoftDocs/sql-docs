@@ -31,7 +31,7 @@ This article gives you some tips and tricks for using SQL Server Management Stud
 
 ## Prerequisites
 
-To test out the steps provided in this article, you need SQL Server Management Studio, access to a SQL server, and an AdventureWorks database. 
+To test out the steps provided in this article, you need SQL Server Management Studio, access to a SQL Server Database Engine, and an AdventureWorks database. 
 
 * Install [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md).
 * Install [[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
@@ -43,7 +43,7 @@ You can comment and uncomment portions of your text by using the **Comment** but
 
 1. Open SQL Server Management Studio.
 
-2. Connect to your SQL server.
+2. Connect to your SQL Server.
 
 3. Open a New Query window.
 
@@ -132,7 +132,7 @@ You can use the indentation buttons on the toolbar to increase or decrease the i
 
 In databases that have many objects, you can use filtering to search for specific tables, views, etc. This section describes how to filter tables, but you can use the following steps in any other node in Object Explorer:
 
-1. Connect to your SQL server.
+1. Connect to your SQL Server.
 
 2. Expand **Databases** > **AdventureWorks** > **Tables**. All the tables in the database appear.
 
@@ -169,7 +169,7 @@ The error log is a file that contains details about things that occur in your [!
 
 ### Query the error log in SSMS
 
-1. Connect to your SQL server.
+1. Connect to your SQL Server.
 
 2. Open a New Query window.
 
@@ -219,13 +219,13 @@ The path for your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erro
 
     ![Error log](media/ssms-tricks/errorlog.png)
 
-    There are several error log files in this location. The file name that ends with *log is the current error log file. File names that end with numbers are previous log files. A new log is created every time the SQL server restarts.
+    There are several error log files in this location. The file name that ends with *log is the current error log file. File names that end with numbers are previous log files. A new log is created every time the SQL Server restarts.
 
 6. Open the errorlog.log file in Notepad.
 
 ## Find SQL Server instance name
 
-You have a few options for finding the name of your SQL server before and after you connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+You have a few options for finding the name of your SQL Server before and after you connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 ### Before you connect to SQL Server
 
@@ -239,7 +239,7 @@ You have a few options for finding the name of your SQL server before and after 
 
     ![Find the server name in the error log](media/ssms-tricks/servernameinlog.png)
 
-    The format of the name is HOSTNAME\INSTANCENAME. If you see only the host name, then you've installed the default instance and your instance name is MSSQLSERVER. When you connect to a default instance, the host name is all you need to enter to connect to your SQL server.  
+    The format of the name is HOSTNAME\INSTANCENAME. If you see only the host name, then you've installed the default instance and your instance name is MSSQLSERVER. When you connect to a default instance, the host name is all you need to enter to connect to your SQL Server.  
 
 ### When you're connected to SQL Server
 
@@ -260,7 +260,7 @@ When you're connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
 
 If you're connected to an alias or to an Availability Group listener, that information appears in Object Explorer and Properties. In this case, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] name might not be readily apparent, and must be queried:
 
-1. Connect to your SQL server.
+1. Connect to your SQL Server.
 
 2. Open a New Query window.
 

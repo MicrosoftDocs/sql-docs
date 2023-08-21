@@ -69,7 +69,7 @@ SET STATISTICS IO { ON | OFF }
  This example shows how many logical and physical reads are used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as it processes the statements.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO         
 SET STATISTICS IO ON;  
 GO  

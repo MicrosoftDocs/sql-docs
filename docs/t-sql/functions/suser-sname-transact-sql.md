@@ -47,7 +47,7 @@ SUSER_SNAME ( [ server_user_sid ] )
 
 The optional login security identification number. *server_user_sid* is **varbinary(85)**. *server_user_sid* can be the security identification number of any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login or [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows user or group. If *server_user_sid* isn't specified, information about the current user is returned. If the parameter contains the word NULL will return NULL.
 
-*server_user_sid* is not supported on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+*server_user_sid* is not supported on [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 ## Return type
 
@@ -59,7 +59,7 @@ The optional login security identification number. *server_user_sid* is **varbin
 
 When called without an argument, `SUSER_SNAME` returns the name of the current security context. When called without an argument within a batch that has switched context by using EXECUTE AS, `SUSER_SNAME` returns the name of the impersonated context. When called from an impersonated context, `ORIGINAL_LOGIN` returns the name of the original context.
 
-## [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] remarks
+## [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] remarks
 
 `SUSER_SNAME` always returns the login name for the current security context.
 
@@ -92,7 +92,7 @@ GO
 The following example uses `SUSER_SNAME` as a DEFAULT constraint in a `CREATE TABLE` statement.
 
 ```sql
-USE AdventureWorks2019;
+USE AdventureWorks2022;
 GO
 
 CREATE TABLE sname_example (

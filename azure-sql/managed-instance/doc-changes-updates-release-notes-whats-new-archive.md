@@ -16,8 +16,8 @@ ms.custom: references_regions
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqlmi.md)]
 
 > [!div class="op_single_selector"]
-> - [Azure SQL Database](../database/doc-changes-updates-release-notes-whats-new-archive.md)
-> - [Azure SQL Managed Instance](../managed-instance/doc-changes-updates-release-notes-whats-new-archive.md)
+> - [Azure SQL Database](../database/doc-changes-updates-release-notes-whats-new-archive.md?view=azuresql-db&preserve-view=true)
+> - [Azure SQL Managed Instance](../managed-instance/doc-changes-updates-release-notes-whats-new-archive.md?view=azuresql-mi&preserve-view=true)
 
 This article summarizes older documentation changes associated with new features and improvements in the releases of [Azure SQL Managed Instance](https://azure.microsoft.com/updates/?product=sql-database&query=sql%20managed%20instance). To learn more about Azure SQL Managed Instance, see the [overview](sql-managed-instance-paas-overview.md).
 

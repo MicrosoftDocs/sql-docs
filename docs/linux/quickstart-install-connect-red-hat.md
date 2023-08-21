@@ -4,8 +4,7 @@ titleSuffix: SQL Server
 description: This quickstart shows how to install SQL Server on Red Hat Enterprise Linux (RHEL) and then create and query a database with sqlcmd.
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: randolphwest
-ms.date: 10/20/2022
+ms.date: 08/10/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -36,7 +35,9 @@ For more information on supported platforms, see [Release notes for SQL Server 2
 
 In this quickstart, you install [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] on Red Hat Enterprise Linux (RHEL) 8.x. Then you can connect with **sqlcmd** to create your first database and run queries.
 
-For more information on supported platforms, see [Release notes for [!INCLUDE[sssql22](../includes/sssql22-md.md)] on Linux](sql-server-linux-release-notes-2022.md).
+[!INCLUDE [red-hat-support](includes/red-hat-support.md)]
+
+For more information on supported platforms, see [Release notes for [!INCLUDE [sssql22](../includes/sssql22-md.md)] on Linux](sql-server-linux-release-notes-2022.md).
 
 ::: moniker-end
 
@@ -51,7 +52,7 @@ If you choose to have a pre-installed SQL Server VM on RHEL ready to run your pr
 
 You can create your VM based on the following Azure Marketplace image:
 
-- [RHEL 8.0](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-rhel8)
+- [RHEL 8.x](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-rhel8)
 
 When you use the above marketplace image, you avoid the installation step, and can directly configure the instance by providing the SKU and the `sa` password needed to get started with SQL Server. SQL Server Azure VMs deployed on RHEL using the above Marketplace images, are fully supported by both Microsoft and Red Hat.
 
@@ -65,7 +66,7 @@ sudo /opt/mssql/bin/mssql-conf setup
 
 ## Prerequisites
 
-You must have a RHEL 8.0 - 8.6 machine with **at least 2 GB** of memory.
+You must have a RHEL 8.x machine with **at least 2 GB** of memory.
 
 To install Red Hat Enterprise Linux on your own machine, go to [https://access.redhat.com/products/red-hat-enterprise-linux/evaluation](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation). You can also create RHEL virtual machines in Azure. See [Create and Manage Linux VMs with the Azure CLI](/azure/virtual-machines/linux/tutorial-manage-vm), and use `--image RHEL` in the call to `az vm create`.
 
@@ -192,11 +193,13 @@ At this point, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is run
 <!--SQL Server 2022 on Linux-->
 ::: moniker range=">= sql-server-linux-ver16 || >= sql-server-ver16"
 
+### [Red Hat 8](#tab/rhel8)
+
 The following commands for installing [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] point to the RHEL 8 repository.
 
 To configure [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on RHEL, run the following commands in a terminal to install the `mssql-server` package:
 
-1. Download the [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] Red Hat repository configuration file:
+1. Download the [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] Red Hat 8 repository configuration file:
 
    ```bash
    sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2022.repo
@@ -233,43 +236,86 @@ To configure [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on RHEL,
    ```
 
 At this point, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is running on your RHEL machine and is ready to use!
+
+### [Red Hat 9 (preview)](#tab/rhel9)
+
+Starting with RHEL 9, you can run [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] as a confined application with SELinux enabled. For more information about confined and unconfined applications with SELinux, see [Getting started with SELinux](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/using_selinux/getting-started-with-selinux_using-selinux).
+
+To run [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] as a confined application, follow these steps:
+
+- Ensure that [SELinux is enabled and in enforcing mode](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/using_selinux/changing-selinux-states-and-modes_using-selinux).
+
+- Install the `mssql-server-preview` package using the steps mentioned later in this section.
+
+- Install the new `mssql-server-selinux` package.
+
+  ```bash
+  sudo yum install -y mssql-server-selinux
+  ```
+
+> [!NOTE]  
+> You can still install and run [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] as an unconfined application like in previous versions of RHEL.
+
+To configure [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on RHEL 9, run the following commands in a terminal to install the `mssql-server` package:
+
+1. Download the [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] Red Hat 9 repository configuration file:
+
+   ```bash
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/9/mssql-server-preview.repo
+   ```
+
+   > [!TIP]  
+   > If you want to install a different version of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], see the [[!INCLUDE [sssql17-md](../includes/sssql17-md.md)]](quickstart-install-connect-red-hat.md?view=sql-server-linux-2017&preserve-view=true#install) or [[!INCLUDE [sssql19-md](../includes/sssql19-md.md)]](quickstart-install-connect-red-hat.md?view=sql-server-linux-ver15&preserve-view=true#install) versions of this article.
+
+1. Run the following command to install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]:
+
+   ```bash
+   sudo yum install -y mssql-server
+   ```
+
+   Optionally, if you want to run [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] as a confined application, install the `mssql-server-selinux` package, which enables custom policies.
+
+   ```bash
+   sudo yum install -y mssql-server-preview
+   ```
+
+1. After the package installation finishes, run `mssql-conf setup` using its full path, and follow the prompts to set the SA password.
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf setup
+   ```
+
+   For this preview, only Evaluation edition is available, which is limited to 180 days starting Thursday, July 27th, 2023.
+
+   ```output
+   This is a preview version (free, no production use rights, 180-day limit starting Thu Jul 27 02:57:54 GMT 2023), continue? [Yes/No]:
+   ```
+
+   Once you agree to install Evaluation edition, the configuration proceeds, and you can follow the prompts to set the SA password. Remember to specify a strong password for the SA account. You need a minimum length 8 characters, including uppercase and lowercase letters, base-10 digits and/or non-alphanumeric symbols.
+
+1. Once the configuration is done, verify that the service is running:
+
+   ```bash
+   systemctl status mssql-server
+   ```
+
+1. To allow remote connections, open the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] port on the RHEL firewall. The default [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] port is TCP 1433. If you're using **FirewallD** for your firewall, you can use the following commands:
+
+   ```bash
+   sudo firewall-cmd --zone=public --add-port=1433/tcp --permanent
+   sudo firewall-cmd --reload
+   ```
+
+At this point, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is running on your RHEL machine and is ready to use!
+
+---
+
 ::: moniker-end
 
 ## <a id="tools"></a> Install the SQL Server command-line tools
 
 To create a database, you need to connect with a tool that can run Transact-SQL statements on [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. The following steps install the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] command-line tools: [sqlcmd](../tools/sqlcmd/sqlcmd-utility.md) and [bcp](../tools/bcp-utility.md).
 
-1. Download the Red Hat repository configuration file.
-
-   ```bash
-   sudo curl -o /etc/yum.repos.d/msprod.repo https://packages.microsoft.com/config/rhel/8/prod.repo
-   ```
-
-1. If you had a previous version of **mssql-tools** installed, remove any older unixODBC packages.
-
-   ```bash
-   sudo yum remove unixODBC-utf16 unixODBC-utf16-devel
-   ```
-
-1. Run the following commands to install **mssql-tools** with the unixODBC developer package. For more information, see [Install the Microsoft ODBC driver for SQL Server (Linux)](../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
-
-   ```bash
-   sudo yum install -y mssql-tools unixODBC-devel
-   ```
-
-1. For convenience, add `/opt/mssql-tools/bin/` to your `PATH` environment variable, to make **sqlcmd** or **bcp** accessible from the bash shell.
-
-   For interactive sessions, modify the `PATH` environment variable in your `~/.bash_profile` file with the following command:
-
-   ```bash
-   echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
-   ```
-
-   For non-interactive sessions, modify the `PATH` environment variable in your `~/.bashrc` file with the following command:
-
-   ```bash
-   echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
-   source ~/.bashrc
-   ```
+[!INCLUDE [odbc-redhat](includes/odbc-redhat.md)]
 
 [!INCLUDE [Connect, create, and query data](includes/quickstart-connect-query.md)]

@@ -4,7 +4,7 @@ description: "Learn what's new and changed in released versions of the Microsoft
 author: v-chojas
 ms.author: v-chojas
 ms.reviewer: v-davidengel
-ms.date: 06/15/2023
+ms.date: 07/31/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -27,6 +27,15 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
+
+## 18.3.1, July 2023
+
+| New item | Details |
+| :------- | :------ |
+| Improved Performance | More efficient packet buffer memory allocation |
+| New Managed Identity (MSI) Authentication Support | Support for MSI authentication for Azure Arc and Azure Cloud Shell and updated to a newer Azure App Service API version |
+| New distributions supported. | Ubuntu 23.04, Alpine 3.17, Alpine 3.18. ARM64 is now supported on Alpine  |
+| Bug fixes. | [Bug fixes](../bug-fixes.md). |
 
 ## 18.2.2, June 2023
 
@@ -64,7 +73,7 @@ GeneMi.  2019/04/03.
 
 | New item | Details |
 | :------- | :------ |
-| New distributions supported. | Ubuntu 22.04, Red Hat 9. ARM64 Linux platforms: Debian 11, RedHat 8 and 9, Ubuntu 20.04, 22.04 |
+| New distributions supported. | Ubuntu 22.04, Red Hat 9. ARM64 Linux platforms: Debian 11, Red Hat 8 and 9, Ubuntu 20.04, 22.04 |
 | IpAddressPreference option | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
 | RetryExec option | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
 | VBS-NONE enclave attestation protocol | New enclave attestation option to not attest the enclave. See [Using Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md) |

@@ -68,7 +68,7 @@ SET STATISTICS XML { ON | OFF }
  The two statements that follow use the SET STATISTICS XML settings to show the way [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] analyzes and optimizes the use of indexes in queries. The first query uses the Equals (=) comparison operator in the WHERE clause on an indexed column. The second query uses the LIKE operator in the WHERE clause. This forces [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to use a clustered index scan to find the data that satisfies the WHERE clause condition. The values in the **EstimateRows** and the **EstimatedTotalSubtreeCost** attributes are smaller for the first indexed query indicating that it was processed much faster and used fewer resources than the nonindexed query.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SET STATISTICS XML ON;  
 GO  

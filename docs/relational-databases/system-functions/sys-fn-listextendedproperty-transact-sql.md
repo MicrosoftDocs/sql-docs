@@ -157,7 +157,7 @@ WHERE o.name = 'Employee';
  The following example displays all extended properties set on the database object itself.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT objtype, objname, name, value  
 FROM fn_listextendedproperty(default, default, default, default, default, default, default);  
@@ -178,7 +178,7 @@ GO
  The following example lists extended properties for columns in the `ScrapReason` table. This is contained in the schema `Production`.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT objtype, objname, name, value  
 FROM fn_listextendedproperty (NULL, 'schema', 'Production', 'table', 'ScrapReason', 'column', default);  
@@ -203,7 +203,7 @@ GO
  The following example lists extended properties for all tables contained in the `Sales` schema.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT objtype, objname, name, value  
 FROM fn_listextendedproperty (NULL, 'schema', 'Sales', 'table', default, NULL, NULL);  

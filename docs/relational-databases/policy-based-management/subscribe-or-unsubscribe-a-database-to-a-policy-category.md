@@ -81,8 +81,8 @@ f1_keywords:
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    USE AdventureWorks2012;  
-    -- Adds a subscription to the 'Finance' policy category for the AdventureWorks2012 database.  
+    USE AdventureWorks2022;  
+    -- Adds a subscription to the 'Finance' policy category for the AdventureWorks2022 database.  
     EXEC sys.sp_syspolicy_subscribe_to_policy_category @policy_category = N'Finance';  
     GO  
     ```  
@@ -98,8 +98,8 @@ f1_keywords:
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    USE AdventureWorks2012;  
-    -- Deletes a subscription to the 'Finance' policy category for the AdventureWorks2012 database.  
+    USE AdventureWorks2022;  
+    -- Deletes a subscription to the 'Finance' policy category for the AdventureWorks2022 database.  
     EXEC sys.sp_syspolicy_unsubscribe_from_policy_category @policy_category = N'Finance';  
     GO  
     ```  

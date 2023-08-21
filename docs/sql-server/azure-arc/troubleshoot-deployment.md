@@ -4,11 +4,12 @@ description: "Describes how to troubleshoot Azure Arc-enabled SQL Server deploym
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 02/01/2023
-ms.service: sql
 ms.topic: troubleshooting-general
 ---
 
 # Troubleshoot Azure extension for SQL Server
+
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
 Before you start, note the logs location. The extension log is created in this folder:
 

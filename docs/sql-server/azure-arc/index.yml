@@ -1,0 +1,74 @@
+### YamlMime:Landing
+title: Azure Arc-enabled SQL Server
+summary: Azure Arc-enabled SQL Server
+
+metadata:
+  title: Azure Arc-enabled SQL Server
+  description: Learn how to connect and manage on-premises, edge, and multicloud instances of SQL Server in Azure.
+  ms.service: sql
+  ms.topic: landing-page
+  ms.date: 07/18/2023
+
+landingContent:
+ # Card
+  - title: About Azure Arc-enabled SQL Server
+    linkLists: 
+      - linkListType: overview
+        links:
+          - text: What is Azure Arc-enabled SQL Server?
+            url: overview.md
+
+ # Card
+  - title: Benefits
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: SQL Server best practices assessment 
+            url: assess.md 
+          - text: Secure SQL Servers
+            url: configure-advanced-data-security.md
+          - text: Auto backups 
+            url: point-in-time-restore.md
+          - text: Video - Data Exposed
+            url: /shows/data-exposed/new-benefits-of-azure-arc-enabled-sql-server-data-exposed
+          - text: Extended Security Updates
+            url: ../end-of-support/sql-server-extended-security-updates.md
+ 
+ # Card
+  - title: Arc-enable SQL Server
+    linkLists: 
+      - linkListType: concept
+        links:
+          - text: Prerequisites
+            url: prerequisites.md
+      - linkListType: quickstart
+        links:
+          - text: Connect a hybrid machine
+            url: quick-enabled-sql-server.md
+      - linkListType: deploy
+        links:
+          - text: Automatically connect
+            url: automatically-connect.md
+  
+ # Card
+  - title: Proof of concept
+    linkLists:
+     - linkListType: sample
+       links:
+          - text: Jumpstart for Azure Arc-enabled servers
+            url: https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/
+     - linkListType: get-started
+       links:
+          - text: Test Arc-enabled servers using an Azure VM
+            url: plan-evaluate-on-azure-virtual-machine.md
+
+ 
+ # Card
+  - title: Training
+    linkLists: 
+      - linkListType: learn
+        links:
+          - text: Learning path
+            url: /training/paths/manage-hybrid-infrastructure-with-azure-arc       
+
+ 

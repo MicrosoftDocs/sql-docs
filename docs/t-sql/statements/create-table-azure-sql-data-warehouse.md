@@ -3,8 +3,8 @@ title: CREATE TABLE
 description: "CREATE TABLE creates a new table in Azure Synapse Analytics, Analytics Platform System (PDW), and Microsoft Fabric."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: vanto, xiaoyul, wiassaf, mariyaali, maghan
-ms.date: 06/06/2023
+ms.reviewer: vanto, xiaoyul, mariyaali, maghan, kecona
+ms.date: 07/16/2023
 ms.service: sql
 ms.topic: reference
 dev_langs:
@@ -158,13 +158,12 @@ Assigns each row to one distribution by hashing the value stored in *distributio
 `DISTRIBUTION = HASH ( [distribution_column_name [, ...n]] )` 
 Distributes the rows based on the hash values of up to eight columns, allowing for more even distribution of the base table data, reducing the data skew over time and improving query performance.
 
->[!NOTE]
->
-> - To enable the Multi-Column Distribution (MCD) feature, change the database's compatibility level to 50 with this command. For more information on setting the database compatibility level, see [ALTER DATABASE SCOPED CONFIGURATION](./alter-database-scoped-configuration-transact-sql.md). For example: `ALTER DATABASE SCOPED CONFIGURATION SET DW_COMPATIBILITY_LEVEL = 50;`
+> [!NOTE]
+> - To enable the multi-column distribution (MCD) feature, change the database's compatibility level to 50 with this command. For more information on setting the database compatibility level, see [ALTER DATABASE SCOPED CONFIGURATION](./alter-database-scoped-configuration-transact-sql.md). For example: `ALTER DATABASE SCOPED CONFIGURATION SET DW_COMPATIBILITY_LEVEL = 50;`
 > - To disable the Multi-Column distribution (MCD) feature, run this command to change the database's compatibility level to AUTO. For example: `ALTER DATABASE SCOPED CONFIGURATION SET DW_COMPATIBILITY_LEVEL = AUTO;` Existing MCD tables will stay but become unreadable. Queries over MCD tables will return this error: `Related table/view is not readable because it distributes data on multiple columns and multi-column distribution is not supported by this product version or this feature is disabled.`
 >   - To regain access to MCD tables, enable the feature again.
 >   - To load data into a MCD table, use CTAS statement and the data source needs be Synapse SQL tables.  
-> - Using SSMS for [generating a script](../../ssms/scripting/generate-scripts-sql-server-management-studio.md) to create MCD tables is currently supported beyond SSMS version 19.
+> - [Generating a script](../../ssms/scripting/generate-scripts-sql-server-management-studio.md) to create MCD tables is currently supported SSMS version 19 and later versions.
 
 `DISTRIBUTION = ROUND_ROBIN`
 Distributes the rows evenly across all the distributions in a round-robin fashion. This behavior is the default for [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
@@ -639,12 +638,11 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 <column_options> ::=
     [ NULL | NOT NULL ] -- default is NULL
-    [ <column_constraint> ]
 
 <data type> ::=
-      datetime2 [ ( n ) ]  
+      datetime2 ( n )   
     | date  
-    | time [ ( n ) ]  
+    | time ( n )   
     | float [ ( n ) ]  
     | real [ ( n ) ]  
     | decimal [ ( precision [ , scale ] ) ]   
@@ -679,14 +677,6 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  `NULL` | `NOT NULL`  
  Specifies whether `NULL` values are allowed in the column. The default is `NULL`.  
   
- [ `CONSTRAINT` *constraint_name* ] `DEFAULT` *constant_expression*  
- Specifies the default column value.  
-  
- | Argument | Explanation |
- | -------- | ----------- |
- | *constraint_name* | The optional name for the constraint. The constraint name is unique within the database. The name can be reused in other databases. |
- | *constant_expression* | The default value for the column. The expression must be a literal value or a constant. For example, these constant expressions are allowed: `'CA'`, `4`. These constant expressions aren't allowed: `2+3`, `CURRENT_TIMESTAMP`. |
-
 ### <a id="DataTypesFabric"></a> Data type
 
 [!INCLUDE [fabric](../../includes/fabric.md)] supports the most commonly used data types. 

@@ -1,4 +1,4 @@
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 IF OBJECT_ID ('dbo.ProductResults', 'U') IS NOT NULL
 DROP TABLE dbo.ProductResults;
@@ -13,7 +13,7 @@ FROM Production.ProductModel
 WHERE ProductModelID IN (3, 4);
 GO
 
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT ProductModelID, Name
 INTO dbo.ProductResults

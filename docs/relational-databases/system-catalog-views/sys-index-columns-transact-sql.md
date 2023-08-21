@@ -45,7 +45,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  The following example returns all indexes and index columns for the table `Production.BillOfMaterials`.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT i.name AS index_name
     ,COL_NAME(ic.object_id,ic.column_id) AS column_name

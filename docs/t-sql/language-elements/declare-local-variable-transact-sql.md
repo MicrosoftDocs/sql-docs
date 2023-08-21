@@ -237,7 +237,7 @@ For this reason, you should be cautious about using a table variable if you expe
 
  - Temp tables may be a better solution than table variables when it is possible for the rowcount to be larger (greater than 100). 
  - For queries that join the table variable with other tables, use the RECOMPILE hint, which will cause the optimizer to use the correct cardinality for the table variable. 
-- In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and starting with [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], the table variable deferred compilation feature will propagate cardinality estimates that are based on actual table variable row counts, providing a more accurate row count for optimizing the execution plan. For more information, see [Intelligent query processing in SQL databases](../../relational-databases/performance/intelligent-query-processing-details.md#table-variable-deferred-compilation).
+- In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and starting with [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], the table variable deferred compilation feature will propagate cardinality estimates that are based on actual table variable row counts, providing a more accurate row count for optimizing the execution plan. For more information, see [Intelligent query processing in SQL databases](../../relational-databases/performance/intelligent-query-processing-details.md#table-variable-deferred-compilation).
 
 ## Remarks
 
@@ -277,7 +277,7 @@ A cursor variable:
 The following example uses a local variable named `@find` to retrieve contact information for all last names beginning with `Man`.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 DECLARE @find VARCHAR(30);
 /* Also allowed:
@@ -307,7 +307,7 @@ Manzanares          Tomas                   1 (11) 500 555-0178
 The following example retrieves the names of [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] sales representatives who are located in the North American sales territory and have at least $2,000,000 in sales for the year.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SET NOCOUNT ON;
 GO
@@ -325,7 +325,7 @@ WHERE TerritoryGroup = @Group and SalesYTD >= @Sales;
 The following example creates a `table` variable that stores the values specified in the OUTPUT clause of the UPDATE statement. Two `SELECT` statements follow that return the values in `@MyTableVar` and the results of the update operation in the `Employee` table. The results in the `INSERTED.ModifiedDate` column differ from the values in the `ModifiedDate` column in the `Employee` table. This is because the `AFTER UPDATE` trigger, which updates the value of `ModifiedDate` to the current date, is defined on the `Employee` table. However, the columns returned from `OUTPUT` reflect the data before triggers are fired. For more information, see [OUTPUT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 DECLARE @MyTableVar TABLE (
     EmpID INT NOT NULL,

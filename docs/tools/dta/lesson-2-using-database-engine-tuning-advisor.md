@@ -19,11 +19,11 @@ Database Engine Tuning Advisor enables you to tune databases, manage tuning sess
 
 ## Prerequisites 
 
-To complete this tutorial, you need SQL Server Management Studio, access to a server that's running SQL Server, and an AdventureWorks database.
+To complete this tutorial, you need SQL Server Management Studio, access to a server that's running SQL Server, and an [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.
 
-- Install [SQL Server Management Studio.](../../ssms/download-sql-server-management-studio-ssms.md)
-- Install [SQL Server 2017 Developer Edition.](https://www.microsoft.com/sql-server/sql-server-downloads)
-- Download [AdventureWorks2017 sample database.](../../samples/adventureworks-install-configure.md)
+- Install [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
+- Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+- Download [AdventureWorks sample database](../../samples/adventureworks-install-configure.md).
 
 
 Instructions for restoring databases in SSMS are here: [Restore a database.](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)
@@ -34,10 +34,10 @@ Instructions for restoring databases in SSMS are here: [Restore a database.](../
 ## Tuning a workload
 The Database Engine Tuning Advisor can be used to find the best physical database design for query performance on the databases and tables that you select for tuning.  
 
-1.  Copy a sample [SELECT](../../t-sql/queries/select-examples-transact-sql.md) statement and paste the statement into the Query Editor of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Save the file as **MyScript.sql** in a directory where you can easily find it. An example that works against the AdventureWorks2017 database has been provided below.  
+1.  Copy a sample [SELECT](../../t-sql/queries/select-examples-transact-sql.md) statement and paste the statement into the Query Editor of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Save the file as **MyScript.sql** in a directory where you can easily find it. An example that works against the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database has been provided below.  
 
  ```sql
- Use [Adventureworks2017]; -- may need to modify database name to match database
+ Use [AdventureWorks2022]; -- may need to modify database name to match database
  GO
  SELECT DISTINCT pp.LastName, pp.FirstName 
  FROM Person.Person pp JOIN HumanResources.Employee e
@@ -64,7 +64,7 @@ The Database Engine Tuning Advisor can be used to find the best physical databas
 
    ![Find the script that was saved previously](media/dta-tutorials/dta-script.png)
   
-5.  Select AdventureWorks2017 in the **Database for workload analysis** list, select AdventureWorks2017 in the **Select databases and tables to tune** grid, and selecet  **Save tuning log**. **Database for workload analysis** specifies the first database to which Database Engine Tuning Advisor connects when tuning a workload. After tuning begins, Database Engine Tuning Advisor connects to the databases specified by the `USE DATABASE` statements contained in the workload.  
+5.  Select [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] in the **Database for workload analysis** list, select [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] in the **Select databases and tables to tune** grid, and selecet  **Save tuning log**. **Database for workload analysis** specifies the first database to which Database Engine Tuning Advisor connects when tuning a workload. After tuning begins, Database Engine Tuning Advisor connects to the databases specified by the `USE DATABASE` statements contained in the workload.  
 
   ![DTA options for db](media/dta-tutorials/dta-select-db.png)
   

@@ -1,8 +1,8 @@
 ---
 title: SQL Managed Instance security with Azure AD server principals (logins)
 description: Learn about techniques and features to secure Azure SQL Managed Instance, and use Azure AD server principals (logins)
-author: GitHubMirek
-ms.author: mireks
+author: nofield
+ms.author: nofield
 ms.reviewer: vanto
 ms.date: 11/06/2019
 ms.service: sql-managed-instance
@@ -219,6 +219,11 @@ Now that we've created a database called **MyMITestDB**, and a login that only h
 For more information on granting database permissions, see [Getting Started with Database Engine Permissions](/sql/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions).
 
 ### Create an Azure AD user and create a sample table
+
+> [!NOTE]
+> There are some limitations when the Azure AD user, which is part of the Azure AD group used as the Azure AD admin on SQL Managed Instance, signs into SQL Managed Instance.
+> For example, a call to `SUSER_SID` returns `NULL`, since the given Azure AD user is not part of the `sys.server_principals` table.
+> Therefore, access to certain stored procedures or a list of granted permissions may be limited in this case.
 
 1. Log into your managed instance using a `sysadmin` account using SQL Server Management Studio.
 1. In **Object Explorer**, right-click the server and choose **New Query**.

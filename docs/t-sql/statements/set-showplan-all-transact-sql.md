@@ -95,7 +95,7 @@ SET SHOWPLAN_ALL { ON | OFF }
  The values in the **EstimateRows** and the **TotalSubtreeCost** columns are smaller for the first indexed query, indicating that it is processed much faster and uses fewer resources than the nonindexed query.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SET SHOWPLAN_ALL ON;  
 GO  

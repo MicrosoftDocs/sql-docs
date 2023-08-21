@@ -74,7 +74,7 @@ If an authenticator was included at the time of the ciphertext encryption, `DECR
 This example decrypts the record updated in [EncryptByPassPhrase](../../t-sql/functions/encryptbypassphrase-transact-sql.md).  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 -- Get the passphrase from the user.  
 DECLARE @PassphraseEnteredByUser NVARCHAR(128);  
 SET @PassphraseEnteredByUser   

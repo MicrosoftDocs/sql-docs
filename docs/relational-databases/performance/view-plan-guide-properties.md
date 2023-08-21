@@ -88,8 +88,8 @@ helpviewer_keywords:
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    -- If a plan guide named "Guide1" already exists in the AdventureWorks2012 database, delete it.  
-    USE AdventureWorks2012;  
+    -- If a plan guide named "Guide1" already exists in the AdventureWorks2022 database, delete it.  
+    USE AdventureWorks2022;  
     GO  
     IF OBJECT_ID(N'Guide1') IS NOT NULL  
        EXEC sp_control_plan_guide N'DROP', N'Guide1';  

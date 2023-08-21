@@ -13,10 +13,10 @@ ms.topic: conceptual
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](../database/service-tiers-sql-database-vcore.md)
-> * [Azure SQL Managed Instance](service-tiers-managed-instance-vcore.md)
+> * [Azure SQL Database](../database/service-tiers-sql-database-vcore.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](service-tiers-managed-instance-vcore.md?view=azuresql-mi&preserve-view=true)
 
-This article reviews the [vCore purchasing model](../database/service-tiers-vcore.md) for [Azure SQL Managed Instance](sql-managed-instance-paas-overview.md). 
+This article reviews the vCore purchasing model for [Azure SQL Managed Instance](sql-managed-instance-paas-overview.md). 
 
 ## Overview
 

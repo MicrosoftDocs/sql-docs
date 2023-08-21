@@ -4,13 +4,11 @@ description: "Learn how to configure a public endpoint for Azure SQL Managed Ins
 author: zoran-rilak-msft
 ms.author: zoranrilak
 ms.reviewer: vanto, mathoma
-ms.date: 06/12/2023
+ms.date: 07/14/2023
 ms.service: sql-managed-instance
 ms.subservice: security
 ms.topic: how-to
-ms.custom:
-  - sqldbrb=1
-  - devx-track-azurepowershell
+ms.custom: sqldbrb=1, devx-track-azurepowershell, devx-track-azurecli
 ---
 # Configure public endpoints in Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
@@ -162,6 +160,15 @@ Use the Azure portal to allow public traffic within the network security group. 
 
     > [!NOTE]
     > Port 3342 is used for public endpoint connections to managed instance, and can't be changed currently.
+
+
+## Confirm that routing is properly configured
+
+A route with the 0.0.0.0/0 address prefix instructs Azure how to route traffic destined for an IP address that is not within the address prefix of any other route in a subnet's route table. When a subnet is created, Azure creates a default route to the 0.0.0.0/0 address prefix, with the **Internet** next hop type.
+
+Overriding this default route without adding the necessary route(s) to ensure the public endpoint traffic is routed directly to **Internet** may cause asymmetric routing issues since incoming traffic does not flow via the Virtual appliance/Virtual network gateway. Ensure that all traffic reaching the managed instance over public internet goes back out over public internet as well by either adding specific routes for each source or setting the default route to the 0.0.0.0/0 address prefix back to **Internet** as next hop type.
+
+See more the details about impact of changes on this default route at [0.0.0.0/0 address prefix](/azure/virtual-network/virtual-networks-udr-overview#default-route).
 
 ## Obtain the public endpoint connection string
 

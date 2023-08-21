@@ -42,7 +42,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 1.  To perform this task in [!INCLUDE[tsql](../../includes/tsql-md.md)], script out the foreign key constraint. In **Object Explorer**, expand the table with the foreign key constraint you want to modify, and then expand the **Keys** folder.  
 
-2. Right-click the foreign key constraint, select **Script Key As**, then select **DROP and CREATE To**, then select **New Query Editor Window**. The resulting script should look similar the following example from the `AdventureWorks2019` sample database:
+2. Right-click the foreign key constraint, select **Script Key As**, then select **DROP and CREATE To**, then select **New Query Editor Window**. The resulting script should look similar the following example from the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample database:
 
     ```sql
     ALTER TABLE [Sales].[SalesTerritoryHistory] 

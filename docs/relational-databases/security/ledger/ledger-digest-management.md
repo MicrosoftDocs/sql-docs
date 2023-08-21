@@ -43,7 +43,7 @@ If you use an Azure Storage account for the storage of the database digests, con
 
 #### Azure Storage account permission
 
-If you use **Azure SQL Database** or **Azure SQL Managed Instance**, make sure that your logical server or managed instance (System Identity) has sufficient RBAC permissions to write digests by adding it to the [Storage Blob Data Contributor](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor) role.
+If you use **Azure SQL Database** or **Azure SQL Managed Instance**, make sure that your logical server or managed instance (System Identity) has sufficient RBAC permissions to write digests by adding it to the [Storage Blob Data Contributor](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor) role. In case you use Active geo-replication or auto-failover groups make sure that the secondary replica(s) have the same RBAC permission on the Azure Storage account.
 
 If you use **SQL Server**, you have to create a shared access signature (SAS) on the digest container to allow SQL Server to connect and authenticate against the Azure Storage account.
 
@@ -103,7 +103,10 @@ Restoring the database back to an earlier point in time, also known as [Point in
 
 ### Active geo-replication and Always On availability groups
 
-Active geo-replication or auto-failover groups can be configured for Azure SQL Database or Azure SQL Managed Instance. Replication across geographic regions is asynchronous for performance reasons and, thus, allows the secondary database to be slightly behind compared to the primary. In the event of a geographic failover, any latest data that hasn't yet been replicated is lost. Ledger will only issue database digests for data that has been replicated to geographic secondaries to guarantee that digests will never reference data that might be lost in case of a geographic failover. This only applies for automatic generation and storage of database digests.
+Active geo-replication or auto-failover groups can be configured for Azure SQL Database or Azure SQL Managed Instance. Replication across geographic regions is asynchronous for performance reasons and, thus, allows the secondary database to be slightly behind compared to the primary. In the event of a geographic failover, any latest data that hasn't yet been replicated is lost. Ledger will only issue database digests for data that has been replicated to geographic secondaries to guarantee that digests will never reference data that might be lost in case of a geographic failover. This only applies for automatic generation and storage of database digests. In a failover group, both primary and secondary database will have the same digest path. Even when you perform a failover, the digest path doesn't change for both primary and secondary database.
+
+If failover group is deleted or you drop the link, both databases will behave as primary databases.
+At that point the digest path of the previous secondary database will change and we will add a folder RemovedSecondaryReplica to the path.
 
 When your database is part of an Always On availability group in SQL Server, the same principle as active geo-replication is used. The upload of the digests is only done if all transactions have been replicated to the secondary replicas.
 

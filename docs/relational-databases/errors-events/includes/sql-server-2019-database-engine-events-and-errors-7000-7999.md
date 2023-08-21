@@ -2,7 +2,7 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 07/06/2023
+ms.date: 08/08/2023
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -101,7 +101,7 @@ ms.topic: include
 | 7354 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" supplied invalid metadata for column "%ls". %ls |
 | 7355 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" supplied inconsistent metadata for a column. The name was changed at execution time. |
 | 7356 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" supplied inconsistent metadata for a column. The column "%ls" (compile-time ordinal %ld) of object "%ls" was reported to have a "%ls" of %ld at compile time and %ld at run time. |
-| 7357 | 16 | No | Cannot process the object "%ls". The OLE DB provider "%ls" for linked server "%ls" indicates that either the object has no columns or the current user does not have permissions on that object. |
+| [7357](../mssqlserver-7357-database-engine-error.md) | 16 | No | Cannot process the object "%ls". The OLE DB provider "%ls" for linked server "%ls" indicates that either the object has no columns or the current user does not have permissions on that object. |
 | 7358 | 16 | No | Cannot execute the query. The OLE DB provider "%ls" for linked server "%ls" did not provide an appropriate interface to access the text, ntext, or image column "%ls.%ls". |
 | 7359 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" reported a change in schema version between compile time ("%ls") and run time ("%ls") for table "%ls". |
 | 7360 | 16 | No | Cannot get the length of a storage object from OLE DB provider "%ls" for linked server "%ls" for table "%ls", column "%ls". |
@@ -122,7 +122,7 @@ ms.topic: include
 | 7377 | 16 | No | Cannot specify an index hint for a remote data source. |
 | 7380 | 16 | No | Table-valued parameters are not allowed in remote calls between servers. |
 | 7390 | 16 | No | The requested operation could not be performed because OLE DB provider "%ls" for linked server "%ls" does not support the required transaction interface. |
-| 7391 | 16 | No | The operation could not be performed because OLE DB provider "%ls" for linked server "%ls" was unable to begin a distributed transaction. |
+| [7391](../mssqlserver-7391-database-engine-error.md) | 16 | No | The operation could not be performed because OLE DB provider "%ls" for linked server "%ls" was unable to begin a distributed transaction. |
 | 7392 | 16 | No | Cannot start a transaction for OLE DB provider "%ls" for linked server "%ls". |
 | 7393 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" reported an error 0x%08X aborting the current transaction. |
 | 7394 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" reported an error committing the current transaction. |

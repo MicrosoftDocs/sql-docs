@@ -64,7 +64,7 @@ ON { SERVER | DATABASE | QUEUE queue_name }
  The following example creates a database-scoped event notification, then drops it:  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 CREATE EVENT NOTIFICATION NotifyALTER_T1  
 ON DATABASE  

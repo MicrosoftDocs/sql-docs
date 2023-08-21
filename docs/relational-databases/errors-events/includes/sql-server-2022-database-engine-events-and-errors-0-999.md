@@ -2,7 +2,7 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 07/06/2023
+ms.date: 08/01/2023
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -272,6 +272,7 @@ ms.topic: include
 | 371 | 14 | No | The user does not have the external policy action '%ls' or permission '%.\*ls' to perform this action. |
 | 372 | 14 | No | External access policies needed to validate access are either expired or not found. To force a policy fetch, execute the procedure 'sys.sp_external_policy_refresh'. If the error persists, please check provided errors related to external access policy fetch. |
 | 373 | 14 | No | The %ls permission or external policy action '%ls' was denied on the object '%.\*ls', database '%.\*ls', schema '%.\*ls'. |
+| 374 | 14 | No | The Babylon engine could not be initialized. |
 | 401 | 16 | No | Unimplemented statement or expression %ls. |
 | 402 | 16 | No | The data types %s and %s are incompatible in the %s operator. |
 | 403 | 16 | No | Invalid operator for data type. Operator equals %ls, type equals %ls. |
@@ -479,6 +480,7 @@ ms.topic: include
 | 670 | 16 | No | Large object (LOB) data for table "%.\*ls" resides on an offline filegroup ("%.\*ls") that cannot be accessed. |
 | 671 | 16 | No | Large object (LOB) data for table "%.\*ls" resides on a read-only filegroup ("%.\*ls"), which cannot be modified. |
 | 672 | 10 | No | Failed to queue cleanup packets for orphaned rowsets in database "%.\*ls". Some disk space may be wasted. Cleanup will be attempted again on database restart. |
+| 673 | 16 | No | Failure to access row object in snapshot isolation. Error code 0x%X. |
 | 674 | 10 | Yes | Exception occurred in destructor of RowsetNewSS 0x%p. This error may indicate a problem related to releasing pre-allocated disk blocks used during bulk-insert operations. Restart the server to resolve this problem. |
 | 675 | 10 | Yes | Worktable with partition ID %I64d was dropped successfully after %d repeated attempts. |
 | 676 | 10 | Yes | Error occurred while attempting to drop worktable with partition ID %I64d. |

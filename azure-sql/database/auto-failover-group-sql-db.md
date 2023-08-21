@@ -1,8 +1,8 @@
 ---
 title: Auto-failover groups overview & best practices
 description: Auto-failover groups let you manage geo-replication and automatic / coordinated failover of a group of databases on a server for both single and pooled database in Azure SQL Database.
-author: AbdullahMSFT
-ms.author: amamun
+author: rajeshsetlem
+ms.author: rsetlem
 ms.reviewer: wiassaf, mathoma
 ms.date: 05/09/2023
 ms.service: sql-database
@@ -15,8 +15,8 @@ ms.custom: azure-sql-split
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](auto-failover-group-sql-db.md)
-> * [Azure SQL Managed Instance](../managed-instance/auto-failover-group-sql-mi.md)
+> * [Azure SQL Database](auto-failover-group-sql-db.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](../managed-instance/auto-failover-group-sql-mi.md?view=azuresql-mi&preserve-view=true)
 
 The auto-failover groups feature allows you to manage the replication and failover of some or all databases on a [logical server](logical-servers.md) to a logical server another region. This article focuses on using the Auto-failover group feature with Azure SQL Database and some best practices.  
 

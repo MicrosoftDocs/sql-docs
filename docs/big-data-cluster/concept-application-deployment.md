@@ -186,7 +186,7 @@ For next steps, see [How to deploy an app on SQL Server Big Data Clusters](app-c
 
 #### Limitations of R runtime
 
-These limitations align with the [Microsoft R Application Network](https://mran.microsoft.com/open).
+These limitations align with the Microsoft R Application Network, which was retired on July 1, 2023. For more information and workarounds, see [Microsoft R Application Network retirement](https://techcommunity.microsoft.com/t5/azure-sql-blog/microsoft-r-application-network-retirement/ba-p/3707161).
 
 ### Using app deploy dtexec runtime
 

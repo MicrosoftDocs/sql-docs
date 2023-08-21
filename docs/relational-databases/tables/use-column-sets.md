@@ -151,7 +151,7 @@ GO
 >  This table has only five columns to make it easier to display and read.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
   
 CREATE TABLE DocumentStoreWithColumnSet  

@@ -2,8 +2,8 @@
 title: Azure Active Directory authentication
 titleSuffix: Azure SQL Database & Azure SQL Managed Instance & Azure Synapse Analytics
 description: Learn about how to use Azure Active Directory for authentication with Azure SQL Database, Azure SQL Managed Instance, and Synapse SQL in Azure Synapse Analytics
-author: GithubMirek
-ms.author: mireks
+author: nofield
+ms.author: nofield
 ms.reviewer: wiassaf, vanto, mathoma, randolphwest
 ms.date: 05/08/2023
 ms.service: sql-db-mi
@@ -61,7 +61,7 @@ The configuration steps include the following procedures to configure and use Az
 
 ## Trust architecture
 
-- Only the cloud portion of Azure AD, SQL Database, SQL Managed Instance, [SQL Server on Windows Azure VMs], and Azure Synapse is considered to support Azure AD native user passwords.
+- Only the cloud portion of Azure AD, SQL Database, SQL Managed Instance, [SQL Server on Windows Azure VMs](../virtual-machines/windows/configure-azure-ad-authentication-for-sql-vm.md), and Azure Synapse is considered to support Azure AD native user passwords.
 - To support Windows single sign-on credentials (or user/password for Windows credential), use Azure Active Directory credentials from a federated or managed domain that is configured for seamless single sign-on for pass-through and password hash authentication. For more information, see [Azure Active Directory seamless single sign-on](/azure/active-directory/hybrid/how-to-connect-sso).
 - To support Federated authentication (or user/password for Windows credentials), the communication with ADFS block is required.
 

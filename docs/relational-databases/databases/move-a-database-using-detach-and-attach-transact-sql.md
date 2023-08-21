@@ -44,7 +44,7 @@ helpviewer_keywords:
     ```sql
     USE master;  
     GO  
-    EXEC sp_detach_db @dbname = N'AdventureWorks2012';  
+    EXEC sp_detach_db @dbname = N'AdventureWorks2022';  
     GO  
     ```  
   
@@ -61,8 +61,8 @@ helpviewer_keywords:
     USE master;  
     GO  
     CREATE DATABASE MyAdventureWorks   
-        ON (FILENAME = 'C:\MySQLServer\AdventureWorks2012_Data.mdf'),  
-        (FILENAME = 'C:\MySQLServer\AdventureWorks2012_Log.ldf')  
+        ON (FILENAME = 'C:\MySQLServer\AdventureWorks2022_Data.mdf'),  
+        (FILENAME = 'C:\MySQLServer\AdventureWorks2022_Log.ldf')  
         FOR ATTACH;  
     GO  
     ```  

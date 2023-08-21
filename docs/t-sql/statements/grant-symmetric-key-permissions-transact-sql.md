@@ -126,7 +126,7 @@ GRANT permission [ ,...n ]
  The following example grants `ALTER` permission on the symmetric key `SamInventory42` to the database user `HamidS`.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GRANT ALTER ON SYMMETRIC KEY::SamInventory42 TO HamidS;  
 GO  
 ```  

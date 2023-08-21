@@ -8,7 +8,7 @@ ms.service: sql-database
 ms.subservice: security
 monikerRange: "= azuresql || = azuresql-db"
 ms.topic: how-to
-ms.custom: passwordless-js, devx-track-azurecli, devx-track-azurepowershell, devx-track-javascript
+ms.custom: passwordless-js, devx-track-azurecli, devx-track-javascript
 ms.devlang: nodejs
 ---
 

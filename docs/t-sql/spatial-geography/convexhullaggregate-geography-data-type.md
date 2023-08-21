@@ -51,7 +51,7 @@ ConvexHullAggregate ( geography_operand )
  The following example returns a convex hull of the set of **geography** objects.  
   
  ```sql
- USE AdventureWorks2012  
+ USE AdventureWorks2022  
  GO  
  SELECT geography::ConvexHullAggregate(SpatialLocation).ToString() AS SpatialLocation  
  FROM Person.Address  

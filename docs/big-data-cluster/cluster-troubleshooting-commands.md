@@ -161,10 +161,10 @@ kubectl cp master-0:/var/opt/mssql/log -c mssql-server -n mssql-cluster ~/tmp/sq
 
 ### <a id="copyinto"></a> Copy files into container
 
-The following example copies the **AdventureWorks2016CTP3.bak** file from the local machine to the SQL Server master instance container (`mssql-server`) in the `master-0` pod. The file is copied to the `/tmp` directory in the container. 
+The following example copies the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] file from the local machine to the SQL Server master instance container (`mssql-server`) in the `master-0` pod. The file is copied to the `/tmp` directory in the container. 
 
 ```bash
-kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak master-0:/tmp -c mssql-server -n mssql-cluster
+kubectl cp ~/Downloads/AdventureWorks2022.bak master-0:/tmp -c mssql-server -n mssql-cluster
 ```
 
 ## <a id="forcedelete"></a> Force delete a pod

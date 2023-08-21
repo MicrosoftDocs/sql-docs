@@ -64,7 +64,7 @@ To install these packages:
 
 ## Plot histogram
 
-The distributed data displayed in the histogram is based on a SQL query from `AdventureWorksDW`. The histogram visualizes data and the frequency of data values.
+The distributed data displayed in the histogram is based on a SQL query from [!INCLUDE [sssampledbdwobject-md](../../includes/sssampledbdwobject-md.md)]. The histogram visualizes data and the frequency of data values.
 
 Edit the connection string variables: 'server', 'database', 'username', and 'password' to connect to SQL Server database.
 
@@ -89,7 +89,7 @@ from matplotlib import pyplot as plt
 # server = 'localhost\sqlexpress' # for a named instance
 # server = 'myserver,port' # to specify an alternate port
 server = 'servername'
-database = 'AdventureWorksDW2019'
+database = 'AdventureWorksDW2022'
 username = 'yourusername'
 password = 'databasename'
 

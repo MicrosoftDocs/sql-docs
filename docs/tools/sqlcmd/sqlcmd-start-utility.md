@@ -1,31 +1,30 @@
 ---
-title: Sqlcmd utility - Start the sqlcmd utility
+title: sqlcmd utility - Start the sqlcmd utility
 description: Learn how to start the sqlcmd utility, which lets you enter Transact-SQL statements, system procedures, and script files, in SQLCMD mode or in scripts and jobs.
-author: grrlgeek
-ms.author: jeschult
-ms.reviewer: maghan
-ms.date: 01/10/2023
+author: dlevy-msft
+ms.author: dlevy
+ms.reviewer: maghan, randolphwest
+ms.date: 08/15/2023
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
-
 # sqlcmd - Start the utility
 
-[!INCLUDE[sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-The [Sqlcmd utility](sqlcmd-utility.md) lets you enter Transact\-SQL statements, system procedures, and script files at the command prompt, in [SQLCMD mode](edit-sqlcmd-scripts-query-editor.md) in [SQL Server Management Studio](../../ssms/menu-help/about-sql-server-management-studio.md), and in a Windows script file or in [an operating system (Cmd.exe) job step](../../ssms/agent/create-a-cmdexec-job-step.md) of a SQL Server Agent job.
+The [**sqlcmd** utility](sqlcmd-utility.md) lets you enter Transact-SQL statements, system procedures, and script files at the command prompt, in [SQLCMD mode](edit-sqlcmd-scripts-query-editor.md) in [SQL Server Management Studio](../../ssms/menu-help/about-sql-server-management-studio.md), and in a Windows script file or in [an operating system (Cmd.exe) job step](../../ssms/agent/create-a-cmdexec-job-step.md) of a SQL Server Agent job.
 
 > [!NOTE]  
 > Windows Authentication is the default authentication mode for **sqlcmd**. To use SQL Server Authentication, you must specify a user name and password by using the **-U** and **-P** options.
 
 > [!NOTE]  
-> By default, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] installs as the named instance **sqlexpress**.
+> By default, [!INCLUDE [ssExpress](../../includes/ssexpress-md.md)] installs as the named instance **sqlexpress**.
 
 ## Start the sqlcmd utility and connect to a default instance of SQL Server
 
-1. On the Start menu, select **Run**. In the **Open** box type **cmd**, and then select **OK** to open a Command Prompt window. (If you haven't connected to this instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] before, you may have to configure SQL Server to accept connections.)
+1. On the Start menu, select **Run**. In the **Open** box type **cmd**, and then select **OK** to open a Command Prompt window. (If you haven't connected to this instance of the [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)] before, you may have to configure SQL Server to accept connections.)
 
 1. At the command prompt, type **sqlcmd**.
 
@@ -43,10 +42,10 @@ The [Sqlcmd utility](sqlcmd-utility.md) lets you enter Transact\-SQL statements,
 
 1. Press ENTER.
 
-     The **sqlcmd** prompt (1>) indicates that you are connected to the specified instance of SQL Server.
+     The **sqlcmd** prompt (`1>`) indicates that you are connected to the specified instance of SQL Server.
 
     > [!NOTE]  
-    >  Entered Transact\-SQL statements are stored in a buffer. They are executed as a batch when the `GO` command is encountered.
+    > Entered Transact-SQL statements are stored in a buffer. They are executed as a batch when the `GO` command is encountered.
 
 ## Next steps
 

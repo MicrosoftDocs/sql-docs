@@ -70,9 +70,9 @@ EXEC msdb.dbo.sysmail_delete_account_sp
 
 ## See also
 
-- [Database Mail](../../relational-databases/database-mail/database-mail.md)
-- [Create a Database Mail Account](../../relational-databases/database-mail/create-a-database-mail-account.md)
-- [Database Mail Configuration Objects](../../relational-databases/database-mail/database-mail-configuration-objects.md)
+- [Database Mail](../database-mail/database-mail.md)
+- [Create a Database Mail Account](../database-mail/create-a-database-mail-account.md)
+- [Database Mail Configuration Objects](../database-mail/database-mail-configuration-objects.md)
 - [sysmail_add_account_sp (Transact-SQL)](sysmail-add-account-sp-transact-sql.md)
 - [sysmail_delete_profile_sp (Transact-SQL)](sysmail-delete-profile-sp-transact-sql.md)
 - [sysmail_delete_profileaccount_sp (Transact-SQL)](sysmail-delete-profileaccount-sp-transact-sql.md)

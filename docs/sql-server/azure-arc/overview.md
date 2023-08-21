@@ -4,12 +4,13 @@ description: Manage instances of Azure Arc-enabled SQL Server
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 10/12/2022
-ms.service: sql
+ms.date: 08/17/2022
 ms.topic: conceptual
 ---
 
 # Azure Arc-enabled SQL Server
+
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
 Azure Arc-enabled SQL Server extends Azure services to SQL Server instances hosted outside of Azure: in your data center, in edge site locations like retail stores, or any public cloud or hosting provider.
 
@@ -55,6 +56,10 @@ Azure Arc-enabled SQL Server powers some of the Microsoft Purview features such 
 
 Now, with Azure Arc-enabled SQL Servers connected to Azure, you have the option of purchasing SQL Server using a 'pay-as-you-go' model instead of purchasing licenses.  This model is a great alternative if you are looking to save costs on SQL Servers that have variable demand for compute capacity over time such as when you can turn off a SQL Server at night or on weekends, or even just scale down the number of cores used during less busy times.  It's also a great option if you only plan to use a SQL Server for a short period of time and then won't need it anymore. Pay-as-you-go, billed through Azure, is now available for all versions of SQL Server from 2012 to 2022.
 
+## Extended Security Updates
+
+Once [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] has reached the end of its support lifecycle, you can sign up for an Extended Security Update (ESU) subscription for your servers and remain protected for up to three years. When you upgrade to a newer version of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], your ESU subscription is automatically canceled. When you [migrate to Azure SQL](/azure/azure-sql/migration-guides/), the ESU charges automatically stop but you continue to have access to the ESUs.
+
 ## Architecture
 
 The SQL Server instance that you want to enable with Azure Arc can be installed in a virtual or physical machine running Windows or Linux.  The [Azure Connected Machine agent](/azure/azure-arc/servers/agent-overview) and the Azure Extension for SQL Server securely connect to Azure to establish communication channels with multiple Azure services using only outbound HTTPS traffic on TCP port 443 using SSL. The Azure Connected Machine agent can communicate through a configurable HTTPS proxy server over Azure Express Route, Azure Private Link or over the Internet. Review the [overview](/azure/azure-arc/servers/agent-overview), [network requirements](/azure/azure-arc/servers/network-requirements) and [prerequisites](/azure/azure-arc/servers/prerequisites) for the Azure Connected Machine agent.
@@ -77,7 +82,7 @@ The following diagram illustrates the architecture of Azure Arc-enabled SQL Serv
 
 | Feature | 2012 | 2014 | 2016 | 2017 | 2019 | 2022 |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| [Azure pay-as-you-go billing](manage-license-type.md) | Yes | Yes | Yes | Yes | Yes | Yes |
+| [Azure pay-as-you-go billing](manage-configuration.md) | Yes | Yes | Yes | Yes | Yes | Yes |
 | [Best practices assessment](assess.md) | Yes | Yes | Yes | Yes | Yes | Yes |
 | [Detailed database inventory](view-databases.md#inventory-databases) | Yes | Yes | Yes | Yes | Yes | Yes |
 | [Azure Active Directory authentication for SQL Server](../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md) | No | No | No | No | No | Yes |
@@ -91,7 +96,7 @@ The following diagram illustrates the architecture of Azure Arc-enabled SQL Serv
 
 |Feature | Enterprise | Standard | Web | Express | Developer | Evaluation |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| [Azure pay-as-you-go billing](manage-license-type.md) | Yes | Yes | Yes | Yes | Yes | Yes |
+| [Azure pay-as-you-go billing](manage-configuration.md) | Yes | Yes | Yes | Yes | Yes | Yes |
 | [Best practices assessment](assess.md) | Yes | Yes | Yes | Yes | Yes | Yes |
 | [Detailed database inventory](view-databases.md#inventory-databases) | Yes | Yes | Yes | Yes | Yes | Yes |
 | [Azure Active Directory authentication](../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md) | Yes | Yes | Yes | Yes | Yes | Yes |
@@ -107,5 +112,6 @@ The following diagram illustrates the architecture of Azure Arc-enabled SQL Serv
 ## Next steps
 
 - [Learn about the prerequisites to connect your SQL Server to Azure Arc](prerequisites.md)
+- [Automatically connect your SQL Server to Azure Arc](automatically-connect.md)
 - [Learn more about Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-sql-usage)
 - [Lean more about Microsoft Purview](/azure/purview/register-scan-azure-arc-enabled-sql-server)

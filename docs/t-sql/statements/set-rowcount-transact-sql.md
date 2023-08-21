@@ -64,7 +64,7 @@ SET ROWCOUNT { number | @number_var }
  SET ROWCOUNT stops processing after the specified number of rows. In the following example, note that over 500 rows meet the criteria of `Quantity` less than `300`. However, after applying SET ROWCOUNT, you can see that not all rows were returned.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT count(*) AS Count  
 FROM Production.ProductInventory  

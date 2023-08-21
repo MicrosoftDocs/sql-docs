@@ -11,7 +11,7 @@ ms.topic: article
 ---
 # Connection modules for Microsoft SQL Database
 
-This article provides download links to connection modules or *drivers* that your client programs can use for interacting with [Microsoft SQL Server](../relational-databases/databases/databases.md, [Azure SQL Database](/azure/sql-database/), and Azure SQL Managed Instance. Drivers are available for a variety of programming languages, running on the following operating systems:
+This article provides download links to connection modules or *drivers* that your client programs can use for interacting with [Microsoft SQL Server](../relational-databases/databases/databases.md), [Azure SQL Database](/azure/sql-database/), and Azure SQL Managed Instance. Drivers are available for a variety of programming languages, running on the following operating systems:
 
 - Linux
 - macOS

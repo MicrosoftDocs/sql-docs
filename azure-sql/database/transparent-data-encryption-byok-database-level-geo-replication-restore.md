@@ -149,7 +149,7 @@ Use a [Custom deployment in the Azure portal](https://portal.azure.com/#create/M
 - Prepopulate the list of current keys in use by the primary database using the following REST API request:
 
     ```rest
-    GET https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}?api-version=2022-08-01-preview&$expand=keys($filter=pointInTime(‘current’))
+    GET https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}?api-version=2022-08-01-preview&$expand=keys($filter=pointInTime('current'))
     ```
 
 - Select the user-assigned managed identity (and federated client ID if configuring cross tenant access).

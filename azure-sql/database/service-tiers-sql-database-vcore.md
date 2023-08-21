@@ -295,16 +295,22 @@ Hyperscale service tier premium-series and premium-series memory optimized hardw
 - Canada Central
 - Central India
 - Central US
+- East Asia
 - East US
 - East US 2
 - Japan East
-- North Europe
+- Japan West*
 - North Central US
+- North Europe
+- Southeast Asia
 - South Central US
 - UK South
 - West Europe
 - West US 1
 - West US 2
+- West US 3
+
+* Premium-series memory optimized hardware is not currently available.
 
 #### Fsv2-series
 

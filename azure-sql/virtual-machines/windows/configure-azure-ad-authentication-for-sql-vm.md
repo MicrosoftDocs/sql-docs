@@ -7,6 +7,7 @@ ms.reviewer: mathoma
 ms.date: 04/30/2023
 ms.service: virtual-machines-sql
 ms.subservice: security
+ms.custom: has-azure-ad-ps-ref
 ms.topic: how-to
 ---
 # Enable Azure AD authentication for SQL Server on Azure VMs

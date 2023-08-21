@@ -8,7 +8,7 @@ ms.date: 12/15/2021
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: tutorial
-ms.custom: azure-synapse
+ms.custom: azure-synapse, has-azure-ad-ps-ref
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 

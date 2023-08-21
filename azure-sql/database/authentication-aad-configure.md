@@ -9,7 +9,12 @@ ms.date: 04/09/2022
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: how-to
-ms.custom: azure-synapse, has-adal-ref, sqldbrb=2, devx-track-azurepowershell, has-azure-ad-ps-ref
+ms.custom:
+- azure-synapse
+- has-adal-ref
+- sqldbrb=2
+- devx-track-azurepowershell
+- has-azure-ad-ps-ref
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 

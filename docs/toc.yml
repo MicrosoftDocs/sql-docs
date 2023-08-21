@@ -6175,11 +6175,11 @@ items:
       items:
       - name: Overview
         href: relational-databases/data-compression/data-compression.md
-      - name: Row Compression
+      - name: Row compression
         href: relational-databases/data-compression/row-compression-implementation.md
-      - name: Page Compression
+      - name: Page compression
         href: relational-databases/data-compression/page-compression-implementation.md
-      - name: Unicode Compression
+      - name: Unicode compression
         href: relational-databases/data-compression/unicode-compression-implementation.md
       - name: Enable
         href: relational-databases/data-compression/enable-compression-on-a-table-or-index.md

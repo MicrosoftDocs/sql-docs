@@ -81,7 +81,7 @@ Restoring a point-in-time restore backup across subscriptions has the following 
 - Both subscriptions must be in the same tenant.
 - The subscription type must be either Enterprise Agreement, Cloud Solution Provider, Microsoft Certified Partner, or pay-as-you-go.
 - You can use the restore action only on the primary instance.
-- Geo-replicated backups currently aren't supported for cross-subscription point-in-time restore.
+- You can only restore a backup from the primary region. Restoring a database from the geo-replicated secondary region is not supported for cross-subscription point-in-time restore.
 - The user who takes the restore action must either have the [SQL Managed Instance Contributor](/azure/role-based-access-control/built-in-roles#sql-managed-instance-contributor) role assignment or have these explicit permissions:
     - **Microsoft.Sql/managedInstances/databases/readBackups/action** on the source SQL managed instance. 
     - **Microsoft.Sql/managedInstances/crossSubscriptionPITR/action** on the target SQL managed instance.

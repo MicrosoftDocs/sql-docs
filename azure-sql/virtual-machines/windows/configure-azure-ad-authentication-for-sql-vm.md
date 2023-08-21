@@ -104,7 +104,7 @@ You can use [Azure PowerShell](/powershell/azure/install-azure-powershell) to gr
 1. Retrieve the managed identity: 
 
    ```powershell
-   $MI = Get-AzureADServicePrincipal -Filter "DisplayName eq '<your managed identity display name>'"
+   $MSI = Get-AzureADServicePrincipal -Filter "DisplayName eq '<your managed identity display name>'"
    ```
 
 1. Assign the `User.Read.All` role to the identity: 
@@ -135,6 +135,7 @@ You can validate permissions were assigned to the managed identity by doing the 
 
 1. Go to **Azure Active Directory** in the [Azure portal](https://portal.azure.com). 
 1. Choose **Enterprise applications** and then select **All applications** under **Manage**. 
+1. Filter the **Application type** by `Managed identities`. 
 1. Select the managed identity and then choose **Permissions** under **Security**. You should see the following permissions: `User.Read.All`, `GroupMember.Read.All`, `Application.Read.All`. 
 
 ## Enable outbound communication

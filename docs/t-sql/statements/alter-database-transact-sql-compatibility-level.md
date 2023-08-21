@@ -55,18 +55,18 @@ The version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with wh
 
 | Product | Database Engine version | Default compatibility level designation | Supported compatibility level values |
 | --- | --- | --- | --- |
-| [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] | 16 | 160 | 160, 150, 140, 130, 120, 110, 100 |
-| [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] | 15 | 150 | 150, 140, 130, 120, 110, 100 |
-| [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] | 14 | 140 | 140, 130, 120, 110, 100 |
-| [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] | 12 | 150 | 150, 140, 130, 120, 110, 100 |
-| [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] | 12 | 150 | 150, 140, 130, 120, 110, 100 |
-| [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] | 13 | 130 | 130, 120, 110, 100 |
-| [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)] | 12 | 120 | 120, 110, 100 |
-| [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)] | 11 | 110 | 110, 100, 90 |
-| [!INCLUDE[sql2008r2-md](../../includes/sql2008r2-md.md)] | 10.5 | 100 | 100, 90, 80 |
-| [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] | 10 | 100 | 100, 90, 80 |
-| [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] | 9 | 90 | 90, 80 |
-| [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] | 8 | 80 | 80 |
+| [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] | 16 | 160 | 160, 150, 140, 130, 120, 110, 100 |
+| [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)] | 16 | 160 | 160, 150, 140, 130, 120, 110, 100 |
+| [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] | 16 | 160 | 160, 150, 140, 130, 120, 110, 100 |
+| [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] | 15 | 150 | 150, 140, 130, 120, 110, 100 |
+| [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] | 14 | 140 | 140, 130, 120, 110, 100 |
+| [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] | 13 | 130 | 130, 120, 110, 100 |
+| [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] | 12 | 120 | 120, 110, 100 |
+| [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)] | 11 | 110 | 110, 100, 90 |
+| [!INCLUDE [sql2008r2-md](../../includes/sql2008r2-md.md)] | 10.5 | 100 | 100, 90, 80 |
+| [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] | 10 | 100 | 100, 90, 80 |
+| [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)] | 9 | 90 | 90, 80 |
+| [!INCLUDE [ssVersion2000](../../includes/ssversion2000-md.md)] | 8 | 80 | 80 |
 
 > [!IMPORTANT]  
 > The database engine version numbers for SQL Server and Azure SQL Database are not comparable with each other, and rather are internal build numbers for these separate products. The database engine for Azure SQL Database is based on the same code base as the SQL Server database engine. Most importantly, the database engine in Azure SQL Database always has the newest SQL database engine bits. Version 12 of Azure SQL Database is newer than version 15 of SQL Server.
@@ -104,9 +104,9 @@ To determine the current compatibility level, query the `compatibility_level` co
 SELECT name, compatibility_level FROM sys.databases;
 ```
 
-### Remarks for Azure SQL Database
+### Remarks for Azure SQL 
 
-As of **November 2019**, in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the default compatibility level is 150 for newly created databases. [!INCLUDE[msCoName](../../includes/msconame-md.md)] doesn't update database compatibility level for existing databases. It is up to customers to do at their own discretion. [!INCLUDE[msCoName](../../includes/msconame-md.md)] highly recommends that customers plan to upgrade to the latest compatibility level in order to use the latest query optimization improvements.
+As of **November 2022** the default compatibility level for newly created databases in  [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)]. [!INCLUDE [msCoName](../../includes/msconame-md.md)] doesn't update database compatibility level for existing databases. It is up to customers to do at their own discretion. [!INCLUDE [msCoName](../../includes/msconame-md.md)] highly recommends that customers plan to upgrade to the latest compatibility level in order to use the latest query optimization improvements.
 
 For details about how to assess the performance differences of your most important queries between two different compatibility levels on [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], see [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](https://techcommunity.microsoft.com/t5/azure-sql-blog/improved-query-performance-with-compatibility-level-130-in-azure/ba-p/386100). This article refers to compatibility level 130 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], but the same methodology applies for upgrades to 140 or higher levels in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 

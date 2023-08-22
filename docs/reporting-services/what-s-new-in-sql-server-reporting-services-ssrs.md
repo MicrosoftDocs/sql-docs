@@ -158,9 +158,9 @@ You create KPIs directly in the [!INCLUDE[ssRSWebPortal-Non-Markdown](../include
 
 For more information, see [Working with KPIs in the web portal](./working-with-kpis-in-reporting-services.md)
 
-### Mobile Reports
+### Mobile reports
 
-Reporting Services mobile reports are dedicated reports optimized for a wide variety of form factors and provide an optimal experience for users accessing reports on mobile devices. Mobile reports feature an assortment of visualizations, from time, category, and comparison charts, to tree maps and custom maps. Connect your mobile reports to a range of data sources, including on-premises SQL Server Analysis Services multidimensional and tabular data. You can place fields for mobile reports on a design surface with adjusting grid rows and columns. The flexible mobile report elements automatically scale to fit any screen size. You save the mobile reports to a Reporting Service server, and can view and interact with them in a browser, or the Power BI mobile app. Devices supported include:
+Reporting Services mobile reports are dedicated reports optimized for a wide variety of form factors. They provide an optimal experience for users accessing reports on mobile devices. Mobile reports feature an assortment of visualizations, from time, category, and comparison charts, to tree maps and custom maps. Connect your mobile reports to a range of data sources, including on-premises SQL Server Analysis Services multidimensional and tabular data. You can place fields for mobile reports on a design surface with adjusting grid rows and columns. The flexible mobile report elements automatically scale to fit any screen size. You save the mobile reports to a Reporting Service server, and can view and interact with them in a browser, or the Power BI mobile app. Devices supported include:
 
 - iPad
 - iPhones
@@ -266,7 +266,7 @@ The new release of SSDT includes the project templates for [!INCLUDE[ssRSCurrent
 
 ![Parameter list in Report Data pane and in parameters pane](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "Parameter list in Report Data pane and in parameters pane")  
 
-**High DPI Support:** [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] supports High DPI (Dots Per Inch) scaling and devices.  For more information on High DPI, see the following:  
+**High DPI Support:** [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] supports High DPI (Dots Per Inch) scaling and devices.  For more information on High DPI, see the following sources:  
 
 - [Windows 8.1 DPI Scaling Enhancements](https://blogs.windows.com/windowsexperience/2013/07/15/windows-8-1-dpi-scaling-enhancements/)  
 

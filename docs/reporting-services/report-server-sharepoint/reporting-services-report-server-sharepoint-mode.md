@@ -3,7 +3,7 @@ title: "Reporting Services Report Server (SharePoint Mode)"
 description: A Reporting Services report server with SharePoint Mode can run in SharePoint to use collaboration and management features for Reporting Services content types.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 09/26/2017
+ms.date: 08/21/2023
 ms.service: reporting-services
 ms.subservice: report-server-sharepoint
 ms.topic: conceptual
@@ -20,7 +20,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
   A Reporting Services report server configured for **SharePoint Mode** can run within a deployment of a SharePoint product. A report server in SharePoint mode can use the collaboration and management features of SharePoint for reports and other [!INCLUDE[ssRSnfoversion_md](../../includes/ssrsnoversion-md.md)] content types. SharePoint mode requires installing the appropriate version of the Reporting Services add-in for SharePoint products on your SharePoint Web Front Ends.  
   
 > [!NOTE]
-> Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
+> Reporting Services integration with SharePoint is no longer available after SQL Server 2016. To add Reporting Services reports to SharePoint, use the [Report Viewer web part](report-viewer-web-part-sharepoint-site.md).
 
  For more information on installing and configuring, see the following:  
   
@@ -88,7 +88,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
   
 > [!NOTE]  
 >  The correct version of the Reporting Services add-in must be used with the corresponding version of SharePoint Products.  
-  
+
 ## Components that provide integration
 
  To combine the servers in a single deployment, you integrate an installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Reporting Services with an instance of SharePoint products  
@@ -97,7 +97,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
   
 > [!TIP]  
 >  Not all features are supported in all combinations of report server, Reporting Services add-in for SharePoint, and SharePoint Products. For more information see, [Supported combinations of SharePoint and Reporting Services Server and add-in](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md).  
-  
+
 -   On SharePoint, the Reporting Services Add-in provides the ReportServer proxy endpoint, a Report Viewer web part, and application pages so that you can view, store, and manage report server content on a SharePoint site or farm.  
   
 -   On Reporting Services provides updated program files, a SOAP endpoint, and custom security and delivery extensions. The report server must be configured to run in SharePoint integrated mode, dedicated exclusively to supporting report access and delivery through your SharePoint site.  
@@ -136,3 +136,4 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
 [Report Viewer web part on a SharePoint site](./report-viewer-web-part-sharepoint-site.md)
 
 More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)
+

@@ -12,7 +12,10 @@ ms.topic: how-to
 
 # Step 1: Configure development environment for pymssql Python development
 
-You need to configure your development environment with the prerequisites in order to develop an application using the Python Driver for SQL Server. The Python SQL Drivers use the TDS protocol, which is enabled by default in SQL Server and Azure SQL Database.  No extra configuration is required.
+You need to configure your development environment with the prerequisites in order to develop an application using the pymssql Python driver for SQL Server.
+
+> [!NOTE]
+> This driver uses the TDS protocol, which is enabled by default in SQL Server and Azure SQL Database.  No extra configuration is required.
 
 ## Prerequisites
 

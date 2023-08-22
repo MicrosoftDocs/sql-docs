@@ -32,6 +32,14 @@ Connect to a database using your credentials.
 
 1. Create a new file named **app.py**.
 
+1. Add a module docstring.
+
+    ```python
+    """
+    Connects to a SQL database using pymssql
+    """
+    ```
+
 1. Import the `pymssql` package.
 
     ```python
@@ -81,7 +89,7 @@ Use an SQL query string to execute a query and parse the results.
     ```
 
     > [!NOTE]
-    > This function essentially accepts any query and returns a result set, which can be iterated over with the use of [cursor.fetchone()](https://pypi.org/project/pymssql/).
+    > This function essentially accepts any query and returns a result set, which can be iterated over with the use of [cursor.fetchone()]().
 
 1. Use [`cursor.fetchall`](https://pymssql.readthedocs.io/en/latest/ref/pymssql.html#pymssql.Cursor.fetchall) with a `foreach` loop to get all the records from the database. Then print the records.
 
@@ -91,7 +99,9 @@ Use an SQL query string to execute a query and parse the results.
         print(f"{r['CustomerID']}\t{r['OrderCount']}\t{r['CompanyName']}")
     ```
 
-1. Test the application.
+1. **Save** the **app.py** file.
+
+1. Open a terminal and test the application.
 
     ```bash
     python app.py
@@ -121,7 +131,7 @@ In this example, you execute an [`INSERT`](../../../t-sql/statements/insert-tran
     productNumber = randrange(1000)
     ```
 
-    > [!INFORMATION]
+    > [!TIP]
     > Generating a random product number here ensures that you can run this sample multiple times.
 
 1. Create a SQL statement string.
@@ -161,12 +171,25 @@ In this example, you execute an [`INSERT`](../../../t-sql/statements/insert-tran
     conn.commit()
     ```
 
+    > [!TIP]
+    > Optionally, you can use [`connection.rollback`](https://pymssql.readthedocs.io/en/latest/ref/pymssql.html#pymssql.Connection.rollback) to rollback the transaction.
+
+1. Close the cursor and connection using [`cursor.close`](https://pymssql.readthedocs.io/en/latest/ref/pymssql.html#pymssql.Cursor.close) and [`connection.close`](https://pymssql.readthedocs.io/en/latest/ref/pymssql.html#pymssql.Connection.close).
+
+    ```python
+    cursor.close()
+    conn.close()
+    ```
+
+1. **Save** the **app.py** file and test the application again
+
+    ```bash
+    python app.py
+    ```
+
     ```output
     Inserted Product ID : 1001
     ```
-
-    > [!TIP]
-    > Optionally, you can use [`connection.rollback`](https://pymssql.readthedocs.io/en/latest/ref/pymssql.html#pymssql.Connection.rollback) to rollback the transaction.
 
 ## Next steps
 

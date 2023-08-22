@@ -1,9 +1,9 @@
 ---
-title: "Python driver for SQL Server"
-description: "Connect to a SQL Database using Python on Windows, Linux, or macOS."
+title: Python driver for SQL Server
+description: Connect to a SQL Database using one of the available Python drivers on your preferred operating system.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: "03/24/2022"
+ms.date: 08/22/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -31,13 +31,18 @@ For documentation, see [Python documentation at Python.org](https://www.python.o
 * [Azure Python Developer Center](https://azure.microsoft.com/develop/python/)  
 * [python.org Community](https://www.python.org/community/)  
   
-## Next steps
+## Samples
 
-Explore samples that use Python to connect to a SQL database in the following articles:
- 
+Explore samples that use Python to connect to an SQL database in the following articles:
+
 * [Create a Python app in Azure App Service on Linux](/azure/app-service/containers/quickstart-python?tabs=bash)
 * [Getting Started with Python on Windows](https://www.microsoft.com/sql-server/developer-get-started/python/windows/)
 * [Getting Started with Python on macOS](https://www.microsoft.com/sql-server/developer-get-started/python/mac/)
 * [Getting Started with Python on Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/python/ubuntu/)
 * [Getting Started with Python on Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/python/rhel/)
 * [Getting Started with Python on SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/python/sles/)
+
+## Next steps
+
+> [!div class="nextstepaction"]
+> [pyodbc driver](pyodbc/python-sql-driver-pyodbc.md)

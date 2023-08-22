@@ -3,7 +3,7 @@ title: "Subqueries (SQL Server)"
 description: Look at an example of a subquery, which is a query that is nested in a SELECT, INSERT, UPDATE, or DELETE statement, or inside another subquery in SQL Server.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 07/25/2022
+ms.date: 08/21/2023
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
@@ -125,7 +125,7 @@ WHERE BusinessEntityID NOT IN
 GO
 ```
 
-The general rule is that column names in a statement are implicitly qualified by the table referenced in the `FROM` clause at the same level. If a column doesn't exist in the table referenced in the `FROM` clause of a subquery, it is implicitly qualified by the table referenced in the `FROM` clause of the outer query.
+The general rule is that column names in a statement are implicitly qualified by the table referenced in the `FROM` clause at the same level. If a column doesn't exist in the table referenced in the `FROM` clause of a subquery, it's implicitly qualified by the table referenced in the `FROM` clause of the outer query.
 
 Here's what the query looks like with these implicit assumptions specified:
 
@@ -263,7 +263,7 @@ WHERE 5000 IN (0.00);
 GO
 ```
 
-Because this is false, the row for `Syed Abbas` isn't included in the results of the previous sample query with the correlated subquery. Go through the same procedure with the row for `Pamela Ansman-Wolfe`. You'll see that this row is included in the results, because `WHERE 5000 IN (5000)` includes results.
+Because this is false, the row for `Syed Abbas` isn't included in the results of the previous sample query with the correlated subquery. Go through the same procedure with the row for `Pamela Ansman-Wolfe`. You see that this row is included in the results, because `WHERE 5000 IN (5000)` includes results.
 
 Correlated subqueries can also include table-valued functions in the `FROM` clause by referencing columns from a table in the outer query as an argument of the table-valued function. In this case, for each row of the outer query, the table-valued function is evaluated according to the subquery.
 
@@ -271,14 +271,14 @@ Correlated subqueries can also include table-valued functions in the `FROM` clau
 
 Subqueries can be specified in many places:
 
-- With aliases. For more information, see [Subqueries with Aliases](#aliases).
+- With aliases. For more information, see [Subqueries with table aliases](#aliases).
 - With `IN` or `NOT IN`. For more information, see [Subqueries with IN](#in) and [Subqueries with NOT IN](#notin).
 - In `UPDATE`, `DELETE`, and `INSERT` statements. For more information, see [Subqueries in UPDATE, DELETE, and INSERT Statements](#upsert).
-- With comparison operators. For more information, see [Subqueries with Comparison Operators](#comparison).
-- With `ANY`, `SOME`, or `ALL`. For more information, see [Comparison Operators Modified by ANY, SOME, or ALL](#comparison_modified).
+- With comparison operators. For more information, see [Subqueries with comparison operators](#comparison).
+- With `ANY`, `SOME`, or `ALL`. For more information, see [Comparison operators modified by ANY, SOME, or ALL](#comparison_modified).
 - With `IS [NOT] DISTINCT FROM`. For more information, see [IS [NOT] DISTINCT FROM (Transact-SQL)](../../t-sql/queries/is-distinct-from-transact-sql.md).
 - With `EXISTS` or `NOT EXISTS`. For more information, see [Subqueries with EXISTS](#exists) and [Subqueries with NOT EXISTS](#notexists).
-- In place of an expression. For more information, see [Subqueries used in place of an Expression](#expression).
+- In place of an expression. For more information, see [Subqueries used in place of an expression](#expression).
 
 ### <a id="aliases"></a> Subqueries with table aliases
 
@@ -520,7 +520,7 @@ WHERE ProductID IN
 GO
 ```
 
-Here is an equivalent `UPDATE` statement using a join:
+Here's an equivalent `UPDATE` statement using a join:
 
 ```sql
 USE AdventureWorks2022;
@@ -624,7 +624,7 @@ WHERE ListPrice >= ANY
 GO
 ```
 
-For each Product subcategory, the inner query finds the maximum list price. The outer query looks at all of these values and determines which individual product's list prices are greater than or equal to any product subcategory's maximum list price. If `ANY` is changed to `ALL`, the query will return only those products whose list price is greater than or equal to all the list prices returned in the inner query.
+For each Product subcategory, the inner query finds the maximum list price. The outer query looks at all of these values and determines which individual product's list prices are greater than or equal to any product subcategory's maximum list price. If `ANY` is changed to `ALL`, the query returns only those products whose list price is greater than or equal to all the list prices returned in the inner query.
 
 If the subquery doesn't return any values, the entire query fails to return any values.
 
@@ -754,9 +754,9 @@ To understand the results of this query, consider the name of each product in tu
 Notice that subqueries that are introduced with EXISTS are a bit different from other subqueries in the following ways:
 
 - The keyword `EXISTS` isn't preceded by a column name, constant, or other expression.
-- The select list of a subquery introduced by `EXISTS` almost always consists of an asterisk (*). There is no reason to list column names because you're just testing whether rows that meet the conditions specified in the subquery exist.
+- The select list of a subquery introduced by `EXISTS` almost always consists of an asterisk (*). There's no reason to list column names because you're just testing whether rows that meet the conditions specified in the subquery exist.
 
-The `EXISTS` keyword is important because frequently there is no alternative formulation without subqueries. Although some queries that are created with EXISTS can't be expressed any other way, many queries can use `IN` or a comparison operator modified by `ANY` or `ALL` to achieve similar results.
+The `EXISTS` keyword is important because frequently there's no alternative formulation without subqueries. Although some queries that are created with EXISTS can't be expressed any other way, many queries can use `IN` or a comparison operator modified by `ANY` or `ALL` to achieve similar results.
 
 For example, the preceding query can be expressed by using `IN`:
 
@@ -774,7 +774,7 @@ GO
 
 ### <a id="notexists"></a> Subqueries with `NOT EXISTS`
 
-`NOT EXISTS` works like `EXISTS`, except the `WHERE` clause in which it is used is satisfied if no rows are returned by the subquery.
+`NOT EXISTS` works like `EXISTS`, except the `WHERE` clause in which it's used is satisfied if no rows are returned by the subquery.
 
 For example, to find the names of products that aren't in the wheels subcategory:
 

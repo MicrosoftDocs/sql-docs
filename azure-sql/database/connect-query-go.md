@@ -5,7 +5,7 @@ description: Use Go to create a program that connects to a database in Azure SQL
 author: dlevy-msft
 ms.author: dlevy
 ms.reviewer: wiassaf, mathoma
-ms.date: 07/26/2023
+ms.date: 08/22/2023
 ms.service: sql-database
 ms.subservice: connect
 ms.topic: quickstart
@@ -59,19 +59,12 @@ Get the connection information you need to connect to the database. You'll need 
 > [!NOTE]
 > For connection information for SQL Server on Azure VM, see [Connect to a SQL Server instance](../virtual-machines/windows/sql-vm-create-portal-quickstart.md#connect-to-sql-server).
 
-## Create Golang project and dependencies
+## Create a new folder for the Golang project and dependencies
 
 1. From the terminal, create a new project folder called **SqlServerSample**. 
 
    ```bash
    mkdir SqlServerSample
-   ```
-
-2. Navigate to **SqlServerSample** and install the SQL Server driver for Go.
-
-   ```bash
-   cd SqlServerSample
-   go get github.com/microsoft/go-mssqldb
    ```
 
 ## Create sample data
@@ -306,15 +299,23 @@ Get the connection information you need to connect to the database. You'll need 
    }
    ```
 
-## Run the code
+## Get Golang project dependencies and run the code
 
-1. At the command prompt, run the following command.
+1. At the command prompt, navigate to **SqlServerSample** and install the SQL Server driver for Go by running the following commands.
+
+   ```bash
+   cd SqlServerSample
+   go mod init SqlServerSample
+   go mod tidy
+   ```
+
+2. At the command prompt, run the following command.
 
    ```bash
    go run sample.go
    ```
 
-2. Verify the output.
+3. Verify the output.
 
    ```text
    Connected!

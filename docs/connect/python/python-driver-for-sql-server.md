@@ -11,8 +11,6 @@ ms.topic: conceptual
 
 # Python SQL driver
 
-:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Install SQL driver for Python](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
-
 You can connect to a SQL Database using Python on Windows, Linux, or macOS.  
   
 ## Getting started

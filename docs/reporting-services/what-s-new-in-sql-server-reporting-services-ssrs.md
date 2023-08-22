@@ -115,13 +115,19 @@ Read more on the [Reporting Services blog](/archive/blogs/sqlrsteamblog/query-de
 
 > [!NOTE]
 > You can only use the query designer for DAX with SSAS tabular data sources built in SQL Server 2016+.
+
+### SharePoint integrated mode is deprecated
+
+SharePoint integrated mode is deprecated after SQL Server 2016. To add Reporting Services reports to SharePoint, use the [Report Viewer web part](report-viewer-web-part-sharepoint-site.md).
+
 ::: moniker-end
 
 ## SSRS 2016
 
 ### Reporting Services [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]  
 
-A new [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] is available. The updated web portal includes
+A new [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] is available. The updated web portal includes:
+
 - KPIs
 - Mobile Reports
 - Paginated Reports

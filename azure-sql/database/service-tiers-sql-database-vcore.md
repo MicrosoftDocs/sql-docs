@@ -4,7 +4,7 @@ description: The vCore purchasing model lets you independently scale compute and
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: sashan, moslake, mathoma, dfurman
-ms.date: 07/26/2023
+ms.date: 08/21/2023
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: conceptual
@@ -310,7 +310,7 @@ Hyperscale service tier premium-series and premium-series memory optimized hardw
 - West US 2
 - West US 3
 
-* Premium-series memory optimized hardware is not currently available.
+\* Premium-series memory optimized hardware is not currently available.
 
 #### Fsv2-series
 

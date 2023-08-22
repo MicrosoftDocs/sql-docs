@@ -4,7 +4,7 @@ description: "Create Foreign Key Relationships"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: vanto, randolphwest
-ms.date: 07/25/2022
+ms.date: 08/21/2023
 ms.service: sql
 ms.subservice: table-view-index
 ms.topic: conceptual

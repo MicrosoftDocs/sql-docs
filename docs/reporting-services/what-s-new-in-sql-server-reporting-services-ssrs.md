@@ -118,7 +118,7 @@ Read more on the [Reporting Services blog](/archive/blogs/sqlrsteamblog/query-de
 
 ### SharePoint integrated mode is deprecated
 
-SharePoint integrated mode is deprecated after SQL Server 2016. To add Reporting Services reports to SharePoint, use the [Report Viewer web part](../report-server-sharepoint/report-viewer-web-part-sharepoint-site.md).
+SharePoint integrated mode is deprecated after SQL Server 2016. To add Reporting Services reports to SharePoint, use the [Report Viewer web part](../reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site.md).
 
 ::: moniker-end
 

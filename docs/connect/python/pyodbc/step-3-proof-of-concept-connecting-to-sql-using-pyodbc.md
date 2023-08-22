@@ -98,7 +98,7 @@ Use an SQL query string to execute a query and parse the results.
     ```
 
     > [!NOTE]
-    > This function essentially accepts any query and returns a result set, which can be iterated over with the use of [cursor.fetchone()]().
+    > This function essentially accepts any query and returns a result set, which can be iterated over with the use of [cursor.fetchone()](https://github.com/mkleehammer/pyodbc/wiki/Cursor#fetchone).
 
 1. Use [`cursor.fetchall`](https://github.com/mkleehammer/pyodbc/wiki/Cursor#fetchall) with a `foreach` loop to get all the records from the database. Then print the records.
 

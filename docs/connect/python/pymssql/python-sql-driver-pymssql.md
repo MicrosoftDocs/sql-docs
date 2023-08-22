@@ -1,9 +1,9 @@
 ---
-title: "Python SQL Driver - pymssql"
-description: "This guide describes installing Python, the ODBC Driver for SQL Server, and pymssql. Sample code shows how to connect to and interact with a SQL database."
+title: Python SQL Driver - pymssql
+description: This guide describes installing Python, the ODBC Driver for SQL Server, and pymssql. The corresponding sample code shows how to connect to and interact with an SQL database.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: "10/06/2020"
+ms.date: 08/22/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -15,7 +15,7 @@ ms.topic: conceptual
 ## Get started
 
 * [Step 1: Configure development environment for pymssql Python development](step-1-configure-development-environment-for-pymssql-python-development.md)  
-* [Step 2: Create a SQL database for pymssql Python development](step-2-create-a-sql-database-for-pymssql-python-development.md)  
+* [Step 2: Create an SQL database for pymssql Python development](step-2-create-a-sql-database-for-pymssql-python-development.md)  
 * [Step 3: Proof of concept connecting to SQL using pymssql](step-3-proof-of-concept-connecting-to-sql-using-pymssql.md)  
 
 ## Documentation
@@ -31,4 +31,9 @@ To get help, file an [issue in the pymssql GitHub repository](https://github.com
 ## Community resources
 
 * [Azure Python Developer Center](https://azure.microsoft.com/develop/python/)  
-* [python.org Community](https://www.python.org/community/)  
+* [python.org Community](https://www.python.org/community/)
+
+## Next steps
+
+> [!div class="nextstepaction"]
+> [Step 1: Configure development environment for pymssql Python development](step-1-configure-development-environment-for-pymssql-python-development.md)

@@ -4,7 +4,7 @@ description: This article describes the Hyperscale service tier in the vCore-bas
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma, oslake
-ms.date: 06/15/2023
+ms.date: 08/21/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -175,6 +175,7 @@ These are the current limitations of the Hyperscale service tier.  We're activel
 | Elastic Jobs | Using a Hyperscale database as the Job database isn't supported. However, elastic jobs can target Hyperscale databases in the same way as any other database in Azure SQL Database. |
 |Data Sync| Using a Hyperscale database as a Hub or Sync Metadata database isn't supported. However, a Hyperscale database can be a member database in a Data Sync topology. |
 | Hyperscale service tier premium-series hardware | Premium-series and memory optimized premium-series hardware doesn't currently support:<br/><br/>- Zone redundancy<BR/><BR/>- Serverless compute tier.| 
+| Regional availability | Hyperscale service tier premium-series and premium-series memory optimized hardware is available in limited Azure regions. For a list, see [Hyperscale premium-series availability](service-tiers-sql-database-vcore.md#hyperscale-premium-series-availability).|
 
 ## Next steps
 

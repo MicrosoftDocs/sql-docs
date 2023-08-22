@@ -20,7 +20,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
   A Reporting Services report server configured for **SharePoint Mode** can run within a deployment of a SharePoint product. A report server in SharePoint mode can use the collaboration and management features of SharePoint for reports and other [!INCLUDE[ssRSnfoversion_md](../../includes/ssrsnoversion-md.md)] content types. SharePoint mode requires installing the appropriate version of the Reporting Services add-in for SharePoint products on your SharePoint Web Front Ends.  
   
 > [!NOTE]
-> Reporting Services integration with SharePoint is no longer available after SQL Server 2016. To add Reporting Services reports to SharePoint, use the [Report Viewer web part](report-viewer-web-part-sharepoint-site.md).
+> Reporting Services integration with SharePoint is deprecated after SQL Server 2016. To add Reporting Services reports to SharePoint, use the [Report Viewer web part](report-viewer-web-part-sharepoint-site.md).
 
  For more information on installing and configuring, see the following:  
   

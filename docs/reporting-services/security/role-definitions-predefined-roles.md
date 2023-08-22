@@ -167,7 +167,7 @@ helpviewer_keywords:
 |Manage individual subscriptions|Create, view, modify, and delete subscriptions for reports and linked reports.|  
 |Manage report history|Create, view, and delete report history, view report history properties, and view, and modify settings that determine snapshot history limits and how caching works.|  
 |Manage reports|Add and delete reports, modify report parameters, view, and modify report properties, view and modify data sources that provide content to the report, view and modify report definitions, and set security policies at the report level.|  
-|Manage resources|Create, modify, and delete resources, and view. and modify resource properties.|  
+|Manage resources|Create, modify, and delete resources, and view and modify resource properties.|  
 |View data sources|View shared data source items in the folder hierarchy.|  
 |View folders|View folder contents.|  
 |View reports|Run reports that are stored in the user's My Reports folder and view report properties.|  

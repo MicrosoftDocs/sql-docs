@@ -4,7 +4,7 @@ description: The vCore purchasing model lets you independently scale compute and
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: sashan, moslake, mathoma, dfurman
-ms.date: 07/26/2023
+ms.date: 08/21/2023
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: conceptual
@@ -295,16 +295,22 @@ Hyperscale service tier premium-series and premium-series memory optimized hardw
 - Canada Central
 - Central India
 - Central US
+- East Asia
 - East US
 - East US 2
 - Japan East
-- North Europe
+- Japan West*
 - North Central US
+- North Europe
+- Southeast Asia
 - South Central US
 - UK South
 - West Europe
 - West US 1
 - West US 2
+- West US 3
+
+\* Premium-series memory optimized hardware is not currently available.
 
 #### Fsv2-series
 

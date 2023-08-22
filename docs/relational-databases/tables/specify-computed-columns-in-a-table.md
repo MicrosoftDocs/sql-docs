@@ -3,7 +3,7 @@ title: "Specify Computed Columns in a Table"
 description: "Specify Computed Columns in a Table"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "10/21/2021"
+ms.date: "08/22/2023"
 ms.service: sql
 ms.subservice: table-view-index
 ms.topic: conceptual
@@ -15,13 +15,13 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-A computed column is a virtual column that is not physically stored in the table, unless the column is marked PERSISTED. A computed column expression can use data from other columns to calculate a value for the column to which it belongs. You can specify an expression for a computed column in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].
+A computed column is a virtual column that isn't physically stored in the table, unless the column is marked PERSISTED. A computed column expression can use data from other columns to calculate a value for the column to which it belongs. You can specify an expression for a computed column in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) or [!INCLUDE[tsql](../../includes/tsql-md.md)] (T-SQL).
 
 ## <a name="Limitations"></a> Limitations and Restrictions
 
-- A computed column cannot be used as a DEFAULT or FOREIGN KEY constraint definition or with a NOT NULL constraint definition. However, if the computed column value is defined by a deterministic expression and the data type of the result is allowed in index columns, a computed column can be used as a key column in an index or as part of any PRIMARY KEY or UNIQUE constraint. For example, if the table has integer columns a and b, the computed column a + b may be indexed, but computed column a + DATEPART(dd, GETDATE()) cannot be indexed, because the value might change in subsequent invocations.
-- A computed column cannot be the target of an INSERT or UPDATE statement.
-- `SET QUOTED_IDENTIFIER` must be ON when you are creating or changing indexes on computed columns or indexed views. For more information, see [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
+- A computed column can't be used as a DEFAULT or FOREIGN KEY constraint definition or with a NOT NULL constraint definition. However, if the computed column value is defined by a deterministic expression and the data type of the result is allowed in index columns, a computed column can be used as a key column in an index or as part of any PRIMARY KEY or UNIQUE constraint. For example, if the table has integer columns a and b, the computed column a + b may be indexed, but computed column a + DATEPART(dd, GETDATE()) can't be indexed, because the value might change in subsequent invocations.
+- A computed column can't be the target of an INSERT or UPDATE statement.
+- `SET QUOTED_IDENTIFIER` must be ON when you're creating or changing indexes on computed columns or indexed views. For more information, see [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
 
 ## <a name="Security"></a><a name="Permissions"></a> Permissions
 
@@ -37,7 +37,7 @@ Requires ALTER permission on the table.
 4. In the **(Formula)** child property, enter the expression for this column in the grid cell to the right. For example, in a `SalesTotal` column, the formula you enter might be `SubTotal+TaxAmt+Freight`, which adds the value in these columns for each row in the table.
 
    > [!IMPORTANT]
-   > When a formula combines two expressions of different data types, the rules for data type precedence specify that the data type with the lower precedence is converted to the data type with the higher precedence. If the conversion is not a supported implicit conversion, the error "`Error validating the formula for column column_name.`" is returned. Use the CAST or CONVERT function to resolve the data type conflict. For example, if a column of type **nvarchar** is combined with a column of type **int**, the integer type must be converted to **nvarchar** as shown in this formula `('Prod'+CONVERT(nvarchar(23),ProductID))`. For more information, see [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).
+   > When a formula combines two expressions of different data types, the rules for data type precedence specify that the data type with the lower precedence is converted to the data type with the higher precedence. If the conversion is not a supported implicit conversion, the error `Error validating the formula for column column_name.` is returned. Use the CAST or CONVERT function to resolve the data type conflict. For example, if a column of type **nvarchar** is combined with a column of type **int**, the integer type must be converted to **nvarchar** as shown in this formula `('Prod'+CONVERT(nvarchar(23),ProductID))`. For more information, see [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).
 
 5. Indicate whether the data is persisted by choosing **Yes** or **No** from the drop-down for the **Is Persisted** child property.
 

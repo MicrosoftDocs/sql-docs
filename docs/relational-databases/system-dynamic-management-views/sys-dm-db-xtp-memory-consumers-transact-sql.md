@@ -42,7 +42,6 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-curren
 |min_sizeclass|**int**|Internal use only.|  
 |max_sizeclass|**int**|Internal use only.|  
 |memory_consumer_address|**varbinary**|Internal address of the consumer. For internal use only.|  
-|xtp_object_id|**bigint**|The [!INCLUDE[inmemory](../../includes/inmemory-md.md)] object ID that corresponds to the memory-optimized table.|  
   
 ## Remarks  
  In the output, the allocators at database levels refer to user tables, indexes, and system tables. VARHEAP with `object_id` = `NULL` refers to memory allocated to tables with variable length columns.  

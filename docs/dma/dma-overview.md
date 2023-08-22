@@ -19,7 +19,7 @@ The Data Migration Assistant (DMA) helps you upgrade to a modern data platform b
 
 > [!NOTE]
 > - For SQL Server large migrations (in terms of number and size of databases) to Azure, we recommend that you use the [Azure Database Migration Service](/azure/dms/dms-overview), which can migrate databases at scale.
-> - DMA does not support database migrations to [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview). Use the [Azure SQL migration extension for Azure Data Studio](/azure/dms/migration-using-azure-data-studio) instea, which supports both online and offline database migrations to Azure SQL Managed Instance.
+> - DMA does not support database migrations to [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview). Use the [Azure SQL migration extension for Azure Data Studio](/azure/dms/migration-using-azure-data-studio) instead, which supports both online and offline database migrations to Azure SQL Managed Instance.
   
 ## Get Data Migration Assistant
 
@@ -62,7 +62,7 @@ Migrate an on-premises SQL Server instance to a modern SQL Server instance host
   - Server roles
   - SQL Server and Windows logins
 
-#### Assess on-premesis SSIS packages migration to Azure
+#### Assess on-premises SSIS packages migration to Azure
 
 Assess on-premises SQL Server Integration Services (SSIS) package(s) migrating to Azure SQL Database or Azure SQL Managed Instance. The assessment helps to discover issues that can affect the migration. These are described as compatibility issues and are organized in the following categories:
 
@@ -117,5 +117,5 @@ DMA replaces all previous versions of SQL Server Upgrade Advisor and should be u
 
 - [Assess your SQL Server Migration](../dma/dma-assesssqlonprem.md)
 - [Data Migration Assistant: Configuration settings](../dma/dma-configurationsettings.md)
-- [Migrate On-Premises SQL Server using Data Migration Assistant](../dma/dma-migrateonpremsql.md)
+- [Migrate on-premises SQL Server using Data Migration Assistant](../dma/dma-migrateonpremsql.md)
 - [Data Migration Assistant: Best Practices](../dma/dma-bestpractices.md)

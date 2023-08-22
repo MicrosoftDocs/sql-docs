@@ -8,6 +8,7 @@ ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
 ---
+
 # Python SQL Driver - pymssql
 
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]

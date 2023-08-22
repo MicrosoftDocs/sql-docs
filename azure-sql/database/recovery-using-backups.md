@@ -5,7 +5,7 @@ description: Learn about point-in-time restore, which enables you to roll back a
 author: SudhirRaparla
 ms.author: nvraparl
 ms.reviewer: wiassaf, mathoma, danil
-ms.date: 07/20/2022
+ms.date: 08/21/2023
 ms.service: sql-database
 ms.subservice: backup-restore
 ms.topic: how-to
@@ -96,7 +96,7 @@ You generally restore a database to an earlier point for recovery purposes. You 
 
   If you plan to retrieve data from the restored database to recover from a user or application error, you need to write and run a data recovery script that extracts data from the restored database and applies to the original database. Although the restore operation might take a long time to complete, the restoring database is visible in the database list throughout the restore process. 
   
-  If you delete the database during the restore, the restore operation will be canceled. You won't be charged for the database that did not complete the restore.
+  If you delete the database during the restore, the restore operation will be canceled. You won't be charged for the database that didn't complete the restore.
 
 ### [Azure portal](#tab/azure-portal)
 
@@ -138,7 +138,7 @@ To restore a database by using the REST API:
 
 ## Long-term backup restore
 
-To perform a restore operation on a long-term backup, you can use the Azure portal, the Azure CLI, Azure PowerShell, or the REST API. For more information, see [Restore a long-term backup](long-term-backup-retention-configure.md#view-backups-and-restore-from-a-backup). Long-term retention is not applicable to Hyperscale databases. 
+To perform a restore operation on a long-term backup, you can use the Azure portal, the Azure CLI, Azure PowerShell, or the REST API. For more information, see [Restore a long-term backup](long-term-backup-retention-configure.md#view-backups-and-restore-from-a-backup). Long-term retention isn't applicable to Hyperscale databases. 
 
 ### [Azure portal](#tab/azure-portal)
 
@@ -283,7 +283,7 @@ For more information on using geo-restore, see [Recovery using Geo-restore](reco
 > [!NOTE]
 > For detailed information about recover from an outage, see [Azure SQL Database disaster recovery guidance](disaster-recovery-guidance.md) and the [Azure SQL Database high availability and disaster recovery checklist](high-availability-disaster-recovery-checklist.md). 
 
-Geo-restore is the most basic disaster-recovery solution available in SQL Database. It relies on automatically created geo-replicated backups with a recovery point objective (RPO) of up to 1 hour and an estimated recovery time objective (RTO) of up to 12 hours. It doesn't guarantee that the target region will have the capacity to restore your databases after a regional outage, because a sharp increase of demand is likely. If your application uses relatively small databases and is not critical to the business, geo-restore is an appropriate disaster-recovery solution. 
+Geo-restore is the most basic disaster-recovery solution available in SQL Database. It relies on automatically created geo-replicated backups with a recovery point objective (RPO) of up to 1 hour and an estimated recovery time objective (RTO) of up to 12 hours. It doesn't guarantee that the target region will have the capacity to restore your databases after a regional outage, because a sharp increase of demand is likely. If your application uses relatively small databases and isn't critical to the business, geo-restore is an appropriate disaster-recovery solution. 
 
 For business-critical applications that require large databases and must ensure business continuity, use [auto-failover groups](auto-failover-group-sql-db.md). That feature offers a much lower RPO and RTO, and the capacity is always guaranteed. 
 

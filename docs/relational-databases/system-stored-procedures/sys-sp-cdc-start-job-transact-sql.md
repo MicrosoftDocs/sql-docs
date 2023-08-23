@@ -60,7 +60,7 @@ Requires membership in the **db_owner** fixed database role.
 
 ### A. Start a capture job
 
-The following example starts the capture job for the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database. Specifying a value for *@job_type* is not required because the default job type is `capture`.
+The following example starts the capture job for the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database. Specifying a value for *@job_type* isn't required because the default job type is `capture`.
 
 ```sql
 USE AdventureWorks2022;

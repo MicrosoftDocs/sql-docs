@@ -81,18 +81,6 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | Fixed error with stored procedures and zero result `metaQuery` return | Fixed an issue where, if `metaQuery` returned no result after execution of a stored procedure, this would return a "Parameter {...} was not defined" error. [GitHub Issue #2063](https://github.com/microsoft/mssql-jdbc/issues/2063).|
 | Fixed XA error handling to rethrow XAER_RMFAIL instead of XAER_RMERR | Fixed an issue where, the driver would return XAException with error code XAER_RMERR in case of failover of SQL Server from primary node to standby node while committing an XA Transaction. [GitHub Issue #1432](https://github.com/microsoft/mssql-jdbc/issues/1432).|
 
-### Fixes in 12.4
-
-| Fix | Details |
-| :---------- | :----------- |
-| Fixed performance and memory issues present with BigDecimal | Reverts all changes, since the 12.2 release, regarding BigDecimal. This fix addresses the performance issues that were observed. Users need to take care when using BigDecimal to avoid the truncation issues that were previously addressed. [GitHub Issue #2176](https://github.com/microsoft/mssql-jdbc/issues/2176).|
-| Fixed server certificate validation for encrypt=strict | Fix to ensure the server certificate is properly validated in cases where `encrypt` is set to `strict`. [GitHub Issue #2174](https://github.com/microsoft/mssql-jdbc/issues/2174).|
-| Fixed lockTimeout not taking effect when redirect mode is set in Azure DB | Fixed when `lockTimeout` is set, as it should only apply to connections from outside Azure, and not from within Azure, as was previously. [GitHub Issue #2110](https://github.com/microsoft/mssql-jdbc/issues/2110).|
-| Fixed high thread count when using findSocketUsingThreading | Fixes an issue where an uncaught exception led to interruption in sleep calls upstream, causing retries to happen too quickly. [GitHub Issue #2104](https://github.com/microsoft/mssql-jdbc/issues/2104).|
-| Fixed shared timer race condition | Fixed a potential race condition in the `SharedTimer` class. [GitHub Issue #2085](https://github.com/microsoft/mssql-jdbc/issues/2085).|
-| Fixed invalid batch inserts when columns provided in insert differs in order from table schema | Fixed an issue where usage of `useBulkCopyForBatchInsert=true` can lead to column mix-up and invalid data. [GitHub Issue #1992](https://github.com/microsoft/mssql-jdbc/issues/1992).|
-| Fixes to Activity ID and Client ID behavior to maintain consistency with JDBC specification | Fixed Activity ID behavior to stay the same for the life of the process, always send Activity ID in `PRELOGIN`, and increment sequence for each new connection. Also fixed client ID to persist for the life of the process. |
-
 ## Previous releases
 
 ## <a id="122"></a> 12.2

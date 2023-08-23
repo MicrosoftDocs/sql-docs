@@ -1626,6 +1626,8 @@
           href: virtual-machines/windows/storage-configuration.md
         - name: Azure AD authentication
           href: virtual-machines/windows/configure-azure-ad-authentication-for-sql-vm.md
+        - name: Azure Update Manager
+          href: virtual-machines/azure-update-manager-sql-vm.md
         - name: Automated Patching
           href: virtual-machines/windows/automated-patching.md
         - name: SQL best practices assessment

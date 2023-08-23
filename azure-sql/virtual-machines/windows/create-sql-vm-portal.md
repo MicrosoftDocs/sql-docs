@@ -210,11 +210,11 @@ If you chose a free license image, such as the developer edition, the **SQL Serv
 
 ### Automated patching
 
-**Automated patching** is enabled by default. Automated patching allows Azure to automatically apply SQL Server and operating system security updates. Specify a day of the week, time, and duration for a maintenance window. Azure performs patching in this maintenance window. The maintenance window schedule uses the VM locale. If you do not want Azure to automatically patch SQL Server and the operating system, select **Disable**.  
+**Automated patching** is enabled by default. [Automated Patching](automated-patching.md) allows Azure to automatically apply SQL Server and operating system security updates. Specify a day of the week, time, and duration for a maintenance window. Azure performs patching in this maintenance window. The maintenance window schedule uses the VM locale. If you do not want Azure to automatically patch SQL Server and the operating system, select **Disable**.  
 
 ![SQL VM automated patching](./media/create-sql-vm-portal/azure-sqlvm-automated-patching.png)
 
-For more information, see [Automated Patching for SQL Server in Azure Virtual Machines](automated-patching.md).
+For improved patching management, which also includes Cumulative Updates, try the integrated [Azure Update Manager](../azure-update-manager-sql-vm.md) experience after your SQL Server VM finishes deployment. 
 
 ### Automated backup
 

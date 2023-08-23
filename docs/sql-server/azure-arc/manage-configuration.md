@@ -1,5 +1,5 @@
 ---
-title: Manage SQL Server configuration
+title: Configure Azure Arc-enabled SQL Server
 titleSuffix: Azure Arc-enabled SQL Server
 description: Explains how to manage SQL Server licensing options. Also demonstrates how Azure Arc-enabled SQL Server can be billed from Microsoft Azure. Use to enable pay as you go licensing.
 author: anosov1960
@@ -8,11 +8,11 @@ ms.reviewer: mikeray, randolphwest
 ms.date: 08/17/2023
 ms.topic: conceptual
 ---
-# SQL Server Configuration
+# Configure Azure Arc-enabled SQL Server
 
-Each Arc-enabled server includes a set of properties that apply to all SQL Server instances installed in that server. These properties can be configured once the Azure extension for SQL Server is installed on the machine, but they only take effect if a SQL Server instance or instances are installed. The Arc-enabled SQL Server overview blade will reflect how the SQL Server Configuration effects a particular instance. 
+Each Azure Arc-enabled server includes a set of properties that apply to all SQL Server instances installed in that server. You can configure these properties after the Azure extension for SQL Server is installed on the machine. However, the properties only take effect if a SQL Server instance or instances are installed. The Arc-enabled SQL Server overview blade reflects how the SQL Server Configuration effects a particular instance.
 
-SQL Server Configuration allows you to perform the following management tasks:
+Azure portal SQL Server Configuration allows you to perform the following management tasks:
 
 1. Configure SQL Server license type
 1. Subscribe to Extended Security Updates
